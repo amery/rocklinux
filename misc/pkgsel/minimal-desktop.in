@@ -121,9 +121,10 @@ pkgfilter sed '
 / ghostscript /			{ p; d; };
 / ghostscript-fonts /		{ p; d; };
 / kdevelop /			{ s/^X /O / ; p; d; };
-/ quanta /			{ s/^X /O / ; p; d; };
+/ kdesdk /			{ s/^X /O / ; p; d; };
+/ kdewebdev /			{ s/^X /O / ; p; d; };
 / kdeedu /			{ s/^X /O / ; p; d; };
-/ kdegames /			{ s/^X /O / ; p; d; };
+/ kdebindings /			{ s/^X /O / ; p; d; };
 / kde-i18n-fr /			{ s/^X /O / ; p; d; };
 / kde-i18n-es /			{ s/^X /O / ; p; d; };
 / kde-i18n-it /			{ s/^X /O / ; p; d; };

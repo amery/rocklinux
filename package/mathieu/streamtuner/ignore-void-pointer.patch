@@ -1,0 +1,13 @@
+--- ./src/plugins/local/local.c.orig	2004-12-18 06:28:45.956675320 +0100
++++ ./src/plugins/local/local.c	2004-12-18 06:29:02.772118984 +0100
+@@ -838,9 +838,7 @@
+ 	    }
+ 	}
+ 
+-      status = taglib_file_save(file);
+-      if (! status)
+-	g_set_error(err, 0, 0, _("unable to save file"));
++      taglib_file_save(file);
+     }
+   else
+     {

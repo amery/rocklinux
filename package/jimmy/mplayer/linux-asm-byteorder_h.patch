@@ -1,0 +1,64 @@
+diff -dur MPlayer-1.0pre5/libmpdemux/cddb.c MPlayer-1.0pre5-p/libmpdemux/cddb.c
+--- MPlayer-1.0pre5/libmpdemux/cddb.c	2004-04-26 11:33:35.000000000 +0200
++++ MPlayer-1.0pre5-p/libmpdemux/cddb.c	2004-11-06 05:57:35.118682456 +0100
+@@ -11,6 +11,17 @@
+  *	 Code release under GPL
+  *
+  */
++#ifdef __CHECKER__
++#define __bitwise __attribute__((bitwise))
++#else
++#define __bitwise
++#endif
++#define __le16 __bitwise __u16
++#define __be16 __bitwise __u16
++#define __le32 __bitwise __u32
++#define __be32 __bitwise __u32
++#define __le64 __bitwise __u64
++#define __be64 __bitwise __u64
+ 
+ #include "config.h"
+ 
+diff -dur MPlayer-1.0pre5/libmpdemux/stream_vcd.c MPlayer-1.0pre5-p/libmpdemux/stream_vcd.c
+--- MPlayer-1.0pre5/libmpdemux/stream_vcd.c	2004-07-12 00:23:57.000000000 +0200
++++ MPlayer-1.0pre5-p/libmpdemux/stream_vcd.c	2004-11-06 05:55:26.123292736 +0100
+@@ -1,4 +1,16 @@
+ 
++#ifdef __CHECKER__
++#define __bitwise __attribute__((bitwise))
++#else
++#define __bitwise
++#endif
++#define __le16 __bitwise __u16
++#define __be16 __bitwise __u16
++#define __le32 __bitwise __u32
++#define __be32 __bitwise __u32
++#define __le64 __bitwise __u64
++#define __be64 __bitwise __u64
++
+ #include "config.h"
+ 
+ #ifdef HAVE_VCD
+--- MPlayer-1.0pre5/osdep/kerneltwosix.h	2004-01-10 10:48:15.000000000 +0100
++++ MPlayer-1.0pre5-p/osdep/kerneltwosix.h	2004-11-06 06:57:15.776339752 +0100
+@@ -1,5 +1,20 @@
+ #include <linux/version.h>
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,5,70)
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,9)
++
++#ifdef __CHECKER__
++#define __bitwise __attribute__((bitwise))
++#else
++#define __bitwise
++#endif
++#define __le16 __bitwise __u16
++#define __be16 __bitwise __u16
++#define __le32 __bitwise __u32
++#define __be32 __bitwise __u32
++#define __le64 __bitwise __u64
++#define __be64 __bitwise __u64
++
++#endif
+ #define __KERNEL__
+ #include <linux/thread_info.h>
+ #include <linux/list.h>

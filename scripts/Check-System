@@ -22,8 +22,8 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-if [ "$1" ] ; then
-	echo "Usage: $0"
+if [ -n "$1" -a "$1" != "-paranoia" ] ; then
+	echo "Usage: $0 [ -paranoia ]"
 	echo
 	echo " Check the build system for and warn about various conditions that will likely"
 	echo " cause ROCK to not work properly."
@@ -32,32 +32,55 @@ if [ "$1" ] ; then
 fi
 
 found_error=0
+paranoia=""
 
-if [ ! -w / -o "$(id -u)" != 0 -a "$(id -g)" != 0 ] ; then
+if [ "$1" = "-paranoia" ]; then
+	paranoia=1
+fi
+
+if [ -n "$paranoia" ] && \
+   [ ! -w / -o "$(id -u)" != 0 -a "$(id -g)" != 0 ] ; then
 	echo
 	echo "Paranoia Check: You are trying to build as non-root!"
 	echo "Building ROCK Linux requires root privileges."
+	echo
+	echo "You can disable the Paranoia Checks in the Config tool"
+	echo "on your own risk!"
 	found_error=1
 fi
 
-if [ "`date '+%Y'`" -lt 1990 ] ; then
+if [ -n "$paranoia" -a "`date '+%Y'`" -lt 1990 ] ; then
 	echo
 	echo "Paranoia Check: Your clock is not set!"
 	echo "Set you clock using the command:  date MMDDhhmm[[CC]YY][.ss]"
+	echo
+	echo "You can disable the Paranoia Checks in the Config tool"
+	echo "on your own risk!"
 	found_error=1
 fi
 
-if [ -z "`grep '^/' < /proc/swaps`" ] ; then
+if [ -n "$paranoia" -a -z "`grep '^/' < /proc/swaps`" ] ; then
 	echo
 	echo "Paranoia Check: No active swap partition found!"
 	echo "That can cause the build scripts to hang your system!. Activate"
 	echo "a swap partition using the 'swapon' command and try again."
+	echo
+	echo "You can disable the Paranoia Checks in the Config tool"
+	echo "on your own risk!"
+	found_error=1
+fi
+
+if [ ! -L /dev/fd/0 ] ; then
+	echo
+	echo "System Check: It seams like you don't have a functional"
+	echo "/dev/fd symlink! A symlink from /dev/fd to /proc/self/fd"
+	echo "and a mounted /proc is needed."
 	found_error=1
 fi
 
 if [ -z "`type -p curl`" ] ; then
 	echo
-	echo "Paranoia Check: Program 'curl' not found!"
+	echo "System Check: Program 'curl' not found!"
 	echo "The curl utility is needed for Downloading the package"
 	echo "source tars. Install the latest curl version."
 	found_error=1
@@ -65,18 +88,29 @@ fi
 
 if [ -z "`type -p bzip2`" ] ; then
 	echo
-	echo "Paranoia Check: Program 'bzip2' not found!"
+	echo "System Check: Program 'bzip2' not found!"
 	echo "The bzip2 utility is needed for extracting the package"
 	echo "source tars. Install the latest bzip2 version."
 	found_error=1
 fi
 
-if [ -z "`type -p makeinfo`" ] ; then
+if [ -z "`type -p gawk`" ] ; then
+	echo
+	echo "System Check: Program 'gawk' not found!"
+	echo "The gawk utility is needed for extracting the package"
+	echo "source tars. Install the latest gawk version."
+	found_error=1
+fi
+
+if [ -n "$paranoia" -a -z "`type -p makeinfo`" ] ; then
 	echo
 	echo "Paranoia Check: Program 'makeinfo' not found!"
 	echo "The makeinfo program is needed for translating Texinfo"
 	echo "documents. Please make sure that a current version of the"
 	echo "texinfo package (including makeinfo) is installed on your system."
+	echo
+	echo "You can disable the Paranoia Checks in the Config tool"
+	echo "on your own risk!"
 	found_error=1
 fi
 
@@ -91,7 +125,7 @@ esac
 x="`mktemp -p /tmp 2> /dev/null`"
 if [ -z "$x" -o ! -f "$x" ] ; then
 	echo
-	echo "Paranoia Check: Program 'mktemp' not found or too old!"
+	echo "System Check: Program 'mktemp' not found or too old!"
 	echo "You need an 'mktemp' installed which does know about the -p"
 	echo "option. Install the latest mktemp version."
 	found_error=1
@@ -103,7 +137,7 @@ tmpfile=`mktemp`
 if [ -z "`type -p sed`" ] || ! sed -i s/a/b/ $tmpfile 2> /dev/null
 then
 	echo
-	echo "Paranoia Check: Program 'sed' not found or too old!"
+	echo "System Check: Program 'sed' not found or too old!"
 	echo "You need a 'sed' installed which does know about the -i option"
 	echo "(GNU/sed since 2001-09-25). Install the latest sed version."
 	found_error=1
@@ -112,9 +146,7 @@ rm -f $tmpfile
 
 if [ $found_error -ne 0 ] ; then
 	echo
-	echo "Paranoia Check found errors -> not doing anything."
-	echo "You can disable the Paranoia Checks in the Config tool"
-	echo "on your own risk!"
+	echo "System Check found errors -> not doing anything."
 	echo
 fi
 

@@ -84,6 +84,8 @@ build_logs="$build_rock/logs" ; mkdir -p "${build_logs}"
 build_pkgs="$build_rock/pkgs" ; mkdir -p "${build_root}"
 
 if [ "$ROCKCFG_PARANOIA_CHECK" = 1 ] ; then
+	./scripts/Check-System -paranoia || exit 1
+else
 	./scripts/Check-System || exit 1
 fi
 

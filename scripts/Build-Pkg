@@ -129,6 +129,8 @@ if [ $# = 0 ] ; then
 	help_msg ; exit 1
 fi
 
+./scripts/Check-System || exit 1
+
 . ./scripts/functions
 . ./scripts/parse-config
 

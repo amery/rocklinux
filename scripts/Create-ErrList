@@ -225,7 +225,7 @@ if [ "$1" ] ; then
 	elif [ "$remove" = 1 ] ; then
 		for x ; do  
 			echo "Scheduling package '$x' for rebuild ..."
-			mine -rf -R build/$ROCKCFG_ID $x
+			mine -rf -s -R build/$ROCKCFG_ID $x
 			rm -f build/$ROCKCFG_ID/var/adm/*/?-$x.*
 		done
 	elif [ "$delete" = 1 ] ; then

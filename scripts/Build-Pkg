@@ -678,7 +678,7 @@ if [ $update = 1 ] ; then
 		chmod 700 "$xroot/var/adm/backup"
 		backup_tar="$xroot/var/adm/backup/$(
 			date '+%Y%m%d%H%M%S')_$xpkg.tar.bz2"
-		( cd $xroot/; tar --no-recursion -cf - -T $builddir/`
+		( cd $xroot/; tar --no-recursion --force-local -cf - -T $builddir/`
 			`backup_files.txt || true; ) | bzip2 > $backup_tar
 	else
 		update=0
@@ -1128,7 +1128,7 @@ if [ $update = 1 ] ; then
 		[ -f $xroot/$fn ] && mv $xroot/$fn $xroot/$fn.new
 	done < $builddir/backup_files.txt
 
-	tar --use-compress-program=bzip2 -C $xroot/ -xpf $backup_tar
+	tar --force-local --use-compress-program=bzip2 -C $xroot/ -xpf $backup_tar
 
 	while read fn ; do
 		cmp -s $fn $fn.new && rm -f $fn.new

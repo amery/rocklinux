@@ -50,6 +50,7 @@ pkgfilter sed '
 / yaboot /	{ p; d; };	/ aboot /	{ p; d; };
 / mac-fdisk /	{ p; d; };	/ pdisk /       { p; d; };
 / linux24benh/  { p; d; };	/ syslinux /	{ p; d; };
+/ elftoaout /   { p; d; };
 
 # Disable packages which are not in base or not build in stages 0-4
 / base / !  { s/^X /O /; p; d; };		/^. -----/ { s/^X /O /; p; d; };
@@ -59,7 +60,8 @@ pkgfilter sed '
 / gdbm /	{ s/^X /O /; p; d; };	/ pam /         { s/^X /O /; p; d; };
 / pdksh /	{ s/^X /O /; p; d; };	/ libelf /	{ s/^X /O /; p; d; };
 / prelink /	{ s/^X /O /; p; d; };	/ ccache /	{ s/^X /O /; p; d; };
-/ cracklib /	{ s/^X /O /; p; d; };	/ hotplug /	{ s/^X /O /; p; d; };'
+/ cracklib /	{ s/^X /O /; p; d; };	/ hotplug /	{ s/^X /O /; p; d; };
+/ bash=bash3 /	{ s/^X /O /; p; d; };'
 
 ROCKCFGSET_CREATE_TARBZ2=1
 ROCKCFGSET_CREATE_GEM=0

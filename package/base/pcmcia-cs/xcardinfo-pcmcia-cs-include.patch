@@ -1,0 +1,11 @@
+--- ./cardmgr/xcardinfo.c.orig	2005-01-26 15:53:25.968206912 +0100
++++ ./cardmgr/xcardinfo.c	2005-01-26 15:53:54.293900752 +0100
+@@ -44,7 +44,7 @@
+ #include <pcmcia/config.h>
+ #include <pcmcia/version.h>
+ #include <pcmcia/cs_types.h>
+-#include <pcmcia/cs.h>
++#include "../include/pcmcia/cs.h"
+ #include <pcmcia/cistpl.h>
+ #include <pcmcia/ds.h>
+ 

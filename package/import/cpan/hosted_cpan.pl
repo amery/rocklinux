@@ -44,6 +44,15 @@ while (<F>) {
 
 close F;
 
+my %cksum;
+if ( open(D, "<hosted_cpan.desc") ) {
+	while (<D>) {
+		next unless /^.D. (\d+) (\S+)/;
+		$cksum{$2} = $1;
+	}
+	close D;
+}
+
 open(F, "bzip2 -d < ../../../download/mirror/c/cpan_packages_20041221.txt.bz2 |") || die $!;
 open(D, ">hosted_cpan.desc") || die $!;
 open(S, ">hosted_cpan.sel") || die $!;
@@ -87,9 +96,11 @@ matched:
 
 	print "$key -> $mod -> cpan-$xmod\n";
 
+	my $cksum = defined $cksum{$f} ? $cksum{$f} : 0;
+
 	print D "#if xpkg == cpan-$xmod\n";
 	print D "[V] $ver\n";
-	print D "[D] 0 $f $cpanbase/$d\n";
+	print D "[D] $cksum $f $cpanbase/$d\n";
 	print D "#endif\n\n";
 
 	$f =~ s/\.gz$/.bz2/;

@@ -379,6 +379,27 @@ add_dependency() {
 	done
 }
 
+# This function adds a wrapprer for the currently running build
+#
+# Usage:
+#
+# add_wrapper bin_name <<- 'EOT'
+#	demo-demo-demo-demo
+#	$orig "$@"; rc=$?
+#	demo-demo-demo-demo
+#	exit $rc
+# EOT
+#
+declare -a wrapper_data='()'
+add_wrapper() {
+	local l data="$1"
+	while read l; do
+		data="$data
+$l"
+	done
+	wrapper_data[${#wrapper_data[@]}]="$data"
+}
+
 # This function is used to subsitute some important variables
 # using a D_ prefix thru m4 ...
 rock_substitute() {

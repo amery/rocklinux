@@ -694,6 +694,29 @@ if [ $stagelevel -gt 1 -a "$autoso2a" = 1 ]; then
 	var_insert CXX_WRAPPER_OTHERS ":" "so2a_wrapper"
 fi
 
+i=0
+mkdir -p "$builddir/wrappers"
+for x in "${wrapper_data[@]}"; do
+	echo "$x" | (
+		read n; o="$n"
+		if [ -f "$builddir/wrappers/$n" ]; then
+			mv "$builddir/wrappers/$n" "$builddir/wrappers/$n.$i"
+			o="$n.$i"; (( i++ ))
+		fi
+		{
+			echo '#!/bin/bash'
+			echo 'echo "$PWD: $0 $*" >> "'"$builddir/wrappers.log"'"'
+			echo 'PATH="$PATH_WRBACKUP"'
+			echo "orig='$o'"
+			cat
+		} > "$builddir/wrappers/$n"
+		chmod +x "$builddir/wrappers/$n"
+	)
+done
+export PATH_WRBACKUP="$PATH"
+PATH="$builddir/wrappers:$PATH"
+unset i
+
 hook_eval prepare
 
 # define new abort function for errors while building

@@ -96,13 +96,13 @@ then
 	if [ "$ROCKCFG_PKG_LINUX_CUSTCONFIG" = 1 ] ; then
 	    block_begin 3
 		comment 'The kernel config is stored in:'
-		comment "config/$config/linux.cfg"
+		comment "config/$config.$swpid/linux.cfg"
 		editfile ROCKCFG_PKG_LINUX_CUSTCONFIG_FILE \
-			config/$config/linux.cfg \
+			config/$config.$swpid/linux.cfg \
 			'Linux kernel build config settings'
 	    block_end
 	else
-		rm -f config/$config/linux.cfg
+		rm -f config/$config.$swpid/linux.cfg
 	fi
 
   menu_end

@@ -34,7 +34,7 @@ var_insert() {
         eval "$1=\"$3\$$1\""
 }
 
-# Functions for working with config/$config/packages
+# Functions for working with config/$config.$swpid/packages
 #
 #	pkgenable	package-list
 #	pkgdisable	package-list
@@ -47,8 +47,8 @@ then
 	pkgin() { :; }
 	pkgout() { :; }
 	__pkgfilter() {
-		"$@" < config/$config/packages > config/$config/packages.new
-		mv config/$config/packages.new config/$config/packages
+		"$@" < config/$config.$swpid/packages > config/$config.$swpid/packages.new
+		mv config/$config.$swpid/packages.new config/$config.$swpid/packages
 	}
 	pkgfilter() {
 		bprof pkgfilter start
@@ -92,18 +92,18 @@ then
 	pkgcheck() {
 		bprof pkgcheck start
 		local pattern="$1"; pattern="${pattern//+/\\+}"
-		egrep -q "^$2.*[ =]($pattern) " config/$config/packages; local ret=$?
+		egrep -q "^$2.*[ =]($pattern) " config/$config.$swpid/packages; local ret=$?
 		bprof pkgcheck stop
 		return $ret
 	}
 else
-	pkgin() { cfghlp pkg_in config/$config/packages; }
-	pkgout() { cfghlp pkg_out config/$config/packages ; }
+	pkgin() { cfghlp pkg_in config/$config.$swpid/packages; }
+	pkgout() { cfghlp pkg_out config/$config.$swpid/packages ; }
 	pkgfilter() {
 		bprof pkgfilter start
-		cfghlp pkg_out config/$config/packages.tmp
-		"$@" < config/$config/packages.tmp > config/$config/packages
-		cfghlp pkg_in config/$config/packages
+		cfghlp pkg_out config/$config.$swpid/packages.tmp
+		"$@" < config/$config.$swpid/packages.tmp > config/$config.$swpid/packages
+		cfghlp pkg_in config/$config.$swpid/packages
 		bprof pkgfilter stop
 	}
 	pkgenable() {
@@ -171,7 +171,7 @@ comment() {
 	if [ $ROCKCFG_EXPERT -eq 1 -o $expert -eq 0 ] && \
 	   [ $menu_current = $menu_this ] ; then
 		commentnr=$(( $commentnr + 1 ))
-		echo "COMMENT_$commentnr '$spacer$1'" >> config.dialog
+		echo "COMMENT_$commentnr '$spacer$1'" >> config.dialog.$swpid
 
 		# Hi, esden here, very ill stuff here I save the help
 		# strings here to a temporary file named config.help
@@ -188,7 +188,7 @@ comment_id() {
 	bprof comment_id start
 	if [ $ROCKCFG_EXPERT -eq 1 -o $expert -eq 0 ] &&
 	   [ $menu_current = $menu_this ] ; then
-		echo "$2 '$spacer$1'" >> config.dialog
+		echo "$2 '$spacer$1'" >> config.dialog.$swpid
 
 		# If you do not know what mighty esden
 		# is doing here see comment()
@@ -204,7 +204,7 @@ const() {
 	local q="'"
 	local v="${2//$q/$q\\$q$q}"
 	eval "$1=\"\$2\""
-	echo "export $1='$v'" >> config/$config/config
+	echo "export $1='$v'" >> config/$config.$swpid/config
 	bprof const stop
 }
 
@@ -243,7 +243,7 @@ set_data() {
 	eval "$1=\"\$data\""
 	item="$1"
 
-	echo "export $1='${data//$q/$q\\$q$q}'" >> config/$config/config
+	echo "export $1='${data//$q/$q\\$q$q}'" >> config/$config.$swpid/config
 	bprof set_data stop
 }
 
@@ -267,18 +267,18 @@ choice() {
 	)
 	if [ "$fallback_hack" = 1 ]; then
 		obegin="?"; oend="?"; data="$dfl_data"; eval "$1=\"\$data\""
-		echo "export $1='${data//$q/$q\\$q$q}'" >> config/$config/config
+		echo "export $1='${data//$q/$q\\$q$q}'" >> config/$config.$swpid/config
 	fi
 
 	if [ "$menumode" -gt 0 -a $menu_current = $menu_this ] ; then
 		{ echo -en "$item\tchoice_action '$usr_name' '$usr_data'" ; shift ; shift
 		echo -n " '' 'Reset_this_switch_to_default_value'"
-		for x ; do echo -n " '$x'" ; done ; echo ; } >> config.data
+		for x ; do echo -n " '$x'" ; done ; echo ; } >> config.data.$swpid
 
 		xdata="$obegin$data$oend"
 
 		while [ "$1" -a "$1" != "$data" ] ; do shift ; shift ; done
-		printf "'$item' '$spacer%-${tabspace}s ${2//_/ }'\n" "$xdata" >> config.dialog
+		printf "'$item' '$spacer%-${tabspace}s ${2//_/ }'\n" "$xdata" >> config.dialog.$swpid
 	fi
 
 	bprof choice stop
@@ -315,13 +315,13 @@ text() {
 
 	if [ "$menumode" -gt 0 -a $menu_current = $menu_this ] ; then
 		echo -e "$2\ttext_action '$1' '$usr_name'" \
-				"'${data//$q/$q\\$q$q}'" >> config.data
+				"'${data//$q/$q\\$q$q}'" >> config.data.$swpid
 
 		xdata="${obegin}$( printf "%-${tabspace}s" \
 				"$(echo $data | cut -c1-20)")${oend}"
 
 		printf "'$2' '$spacer%s $1'\n" \
-			"${xdata//$q/$q\\$q$q}" >> config.dialog
+			"${xdata//$q/$q\\$q$q}" >> config.dialog.$swpid
 
 		# If you do not know what mighty esden
 		# is doin here see comment()
@@ -346,9 +346,9 @@ bool() {
 
 	if [ "$menumode" -gt 0 -a $menu_current = $menu_this ] ; then
 		if [ $data -eq 0 ] ; then x="${obegin} ${oend}" ; else x="${obegin}*${oend}" ; fi
-		echo -e "$2\tbool_action '$usr_name' '$usr_data'" >> config.data
+		echo -e "$2\tbool_action '$usr_name' '$usr_data'" >> config.data.$swpid
 
-		printf "$2 '$spacer%-${tabspace}s ${1//_/ }'\n" "$x" >> config.dialog
+		printf "$2 '$spacer%-${tabspace}s ${1//_/ }'\n" "$x" >> config.dialog.$swpid
 
 		# If you do not know what mighty esden is doin here see comment()
 		if [ "$4" != "" ] ; then
@@ -379,10 +379,10 @@ editfile() {
 		line="${line//$q/$q\\$q$q}"
 		if [ $menu_current = $menu_this ] ; then
 			printf "$1:${editfilenr} '$spacer%-${tabspace}s %s'\n" \
-			    `printf "%03d:" $line_nr` "$line" >> config.dialog
+			    `printf "%03d:" $line_nr` "$line" >> config.dialog.$swpid
 
 			echo -e "$1:${editfilenr}\teditfile_action $2" \
-				"$line_nr '$3'" >> config.data
+				"$line_nr '$3'" >> config.data.$swpid
 		fi
 
 		editfilenr=$(( $editfilenr + 1 ))
@@ -391,10 +391,10 @@ editfile() {
 
 	if [ $menu_current = $menu_this ] ; then
 		printf "$1:${editfilenr} '$spacer%-${tabspace}s %s'\n" \
-		       `printf "%03d:" $line_nr` "<add new rule>" >> config.dialog
+		       `printf "%03d:" $line_nr` "<add new rule>" >> config.dialog.$swpid
 
 		echo -e "$1:${editfilenr}\teditfile_action $2" \
-			"$line_nr '$3'" >> config.data
+			"$line_nr '$3'" >> config.data.$swpid
 	fi
 
 	editfilenr=$(( $editfilenr + 1 ))
@@ -428,8 +428,8 @@ startprog() {
 	if [ $ROCKCFG_EXPERT -eq 1 -o $expert -eq 0 ] &&
 	   [ $menu_current = $menu_this ] ; then
 		printf "$1 '$spacer%-${tabspace}s %s'\n" \
-		       "-->" "$2" >> config.dialog
-		echo -e "$1\t$3" >> config.data
+		       "-->" "$2" >> config.dialog.$swpid
+		echo -e "$1\t$3" >> config.data.$swpid
 	fi
 	bprof startprog stop
 }
@@ -469,13 +469,13 @@ menu_begin() {
 	if [ $ROCKCFG_EXPERT -eq 1 -o $expert -eq 0 ] &&
 	   [ $menu_current = $menu_this ] ; then
 		printf "$1 '$spacer%-${tabspace}s %s'\n" \
-			"===>" "$2" >> config.dialog
-		echo -e "$1\tmenu_current=$menu_counter" >> config.data
+			"===>" "$2" >> config.dialog.$swpid
+		echo -e "$1\tmenu_current=$menu_counter" >> config.data.$swpid
 	fi
 	if [ $ROCKCFG_EXPERT -eq 1 -o $expert -eq 0 ] &&
 	   [ $menu_current = $menu_counter ] ; then
-		echo "$1 '===> $2'" >> config.dialog
-		echo -e "$1\tmenu_current=$menu_this" >> config.data
+		echo "$1 '===> $2'" >> config.dialog.$swpid
+		echo -e "$1\tmenu_current=$menu_this" >> config.data.$swpid
 	fi
 
 	if [ $menu_current = $menu_counter ] ; then

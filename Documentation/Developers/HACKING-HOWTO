@@ -732,9 +732,9 @@ Packages.new file and renaming it to Packages. E.g.:
 
 	if [ $ROCKCFG_TRG_GENERIC_BUILDSF != 1 ] ; then
                 awk '$4 != "sourceforge" { print }' \
-			< config/$config/packages \
-			> config/$config/packages.new
-                mv config/$config/packages.new config/$config/packages
+			< config/$config.$swpid/packages \
+			> config/$config.$swpid/packages.new
+                mv config/$config.$swpid/packages.new config/$config.$swpid/packages
         fi
 
 The packages file is blank-separated and easy to parse with grep, sed and awk.
@@ -766,8 +766,8 @@ Because of the 'counter' field, categories and flags are always pre- and
 postfixed with a ' '. So you can e.g. easy remove all not dietlibc-ready
 packages with a command like:
 
-	grep ' DIETLIBC ' < config/$config/packages \
-				> config/$config/packages.new
+	grep ' DIETLIBC ' < config/$config.$swpid/packages \
+				> config/$config.$swpid/packages.new
 
 Read the existing config.in files for details.
 

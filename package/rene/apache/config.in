@@ -36,7 +36,7 @@ then
 			default="$pkg"
 		fi
 		list="$list $pkg Use_${pkg}_($ver)_as_standard_DB"
-	done < <(grep  "^X .* bdb[0-9 ]*" config/$config/packages | \
+	done < <(grep  "^X .* bdb[0-9 ]*" config/$config.$swpid/packages | \
 	         cut -f5,6 -d' ' | sort)
 
 	if [ "$list" ] ; then

@@ -36,7 +36,7 @@ then
 		if [ $ROCKCFG_DIETLIBC_ALL = 0 ]; then
 			block_begin 2
 			pkgout
-			for i in `grep " DIETLIBC " config/$config/packages | \
+			for i in `grep " DIETLIBC " config/$config.$swpid/packages | \
 					cut -f5 -d" " | sort`
 			do
 				x="${i//-/_}" ; x="${x//+/_}"

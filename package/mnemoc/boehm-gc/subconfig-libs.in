@@ -28,6 +28,6 @@ then
 	while read x; do
 		bool "Use it in Objective-C (${x#gcc=})" ROCKCFG_PKG_BOEHMGC_OBJC${x#gcc=gcc} 0
 		bool "Use it in Java (${x#gcc=})" ROCKCFG_PKG_BOEHMGC_JAVA${x#gcc=gcc} 0
-	done < <( grep '^X .* gcc=' config/$config/packages | grep -v cross | cut -d' ' -f 5 )
+	done < <( grep '^X .* gcc=' config/$config.$swpid/packages | grep -v cross | cut -d' ' -f 5 )
 
 fi

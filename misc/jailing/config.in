@@ -32,7 +32,7 @@ menu_begin MENU_JAILING 'Chroot-Jailing Options'
 		fi
 		comment "-- Packages --"
 		for y in `grep '^X.* JAIL ' \
-				config/$config/packages | cut -d' ' -f5`
+				config/$config.$swpid/packages | cut -d' ' -f5`
 		do
 			bool "Enable jailing in package $y" \
 						ROCKCFG_JAILING_$y 1

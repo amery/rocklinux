@@ -212,22 +212,22 @@ expert_begin
 	menu_begin MENU_PKGSEL_RULES 'Edit package selection rules'
 		# Active error checking: explicitly show an annoying popup
 		filter=`printf "^[-xXoO][ \t]\+[a-zA-Z0-9_/*+.-]"`
-		if grep -lvq "$filter" config/$config/pkgsel 2> /dev/null && \
+		if grep -lvq "$filter" config/$config.$swpid/pkgsel 2> /dev/null && \
 			./src/rockdialog.bin --title "Build Config" --yesno \
 			"Invalid line(s) in package rule set. Remove?" 5 50
 		then
-			grep "$filter" < config/$config/pkgsel \
-				> config/$config/pkgsel.new
-			mv config/$config/pkgsel.new config/$config/pkgsel
+			grep "$filter" < config/$config.$swpid/pkgsel \
+				> config/$config.$swpid/pkgsel.new
+			mv config/$config.$swpid/pkgsel.new config/$config.$swpid/pkgsel
 		fi
 		unset filter
 
-		editfile ROCKCFG_PKGSEL_FILE config/$config/pkgsel \
+		editfile ROCKCFG_PKGSEL_FILE config/$config.$swpid/pkgsel \
 		         'Package selection rules'
 
 # Create an awk program from the list of package selection rules stored in 
-# config/$config/pkgsel which is applied to the list of packages stored in 
-# config/$config/packages.
+# config/$config.$swpid/pkgsel which is applied to the list of packages stored in 
+# config/$config.$swpid/packages.
 # Syntax for package selection rules is:
 # <action> <patternlist>
 # <action> is a single character: x or X enables the packages matching 
@@ -242,7 +242,7 @@ expert_begin
 # such a <pattern> will duplicate the line of the <base-pkg> and substitute its
 # package name with the name of the pkgforked package, that is, the <pattern>.
 
-		echo "# created from 'pkgsel'" > config/$config/pkgsel.awk
+		echo "# created from 'pkgsel'" > config/$config.$swpid/pkgsel.awk
 		while read action patternlist ; do
 			case "$action" in
 			    [xX])
@@ -271,28 +271,28 @@ expert_begin
 				fi
 			done < <( echo "$patternlist" | tr '\t ' '\n\n' )
 			echo "$address ) { $action; }"
-		done < config/$config/pkgsel >> config/$config/pkgsel.awk
-		echo '{ print; }' >> config/$config/pkgsel.awk
+		done < config/$config.$swpid/pkgsel >> config/$config.$swpid/pkgsel.awk
+		echo '{ print; }' >> config/$config.$swpid/pkgsel.awk
 
 		pkgout
-		gawk -f config/$config/pkgsel.awk < config/$config/packages \
-				> config/$config/packages.new 2> /dev/null
-		if [ -s config/$config/packages.new ] ; then
-			mv config/$config/packages.new config/$config/packages
+		gawk -f config/$config.$swpid/pkgsel.awk < config/$config.$swpid/packages \
+				> config/$config.$swpid/packages.new 2> /dev/null
+		if [ -s config/$config.$swpid/packages.new ] ; then
+			mv config/$config.$swpid/packages.new config/$config.$swpid/packages
 		else
-			rm -f config/$config/packages.new
+			rm -f config/$config.$swpid/packages.new
 			comment '----    Syntax error(s) in rule set!'
 		fi
 		pkgin
 	menu_end
       else
-	rm -f config/$config/pkgsel
-	rm -f config/$config/pkgsel.awk
+	rm -f config/$config.$swpid/pkgsel
+	rm -f config/$config.$swpid/pkgsel.awk
       fi
       startprog ROCKCFG_SHOW_PKGLIST 'Show the current package list' \
               "./src/rockdialog.bin --title 'ROCK Linux Config - Package List' \
                         --backtitle 'ROCK Linux $rockver Configuration' \
-                        --textbox config/$config/packages.txt \
+                        --textbox config/$config.$swpid/packages.txt \
                         $(( $lines - 4 )) $(( $columns - 5 ))"
     block_end
 
@@ -302,11 +302,11 @@ expert_begin
     comment ' '
     comment '- Additional GNU Configure Options'
     block_begin 5
-	editfile ROCKCFG_CONFOPT_FILE config/$config/confopt \
+	editfile ROCKCFG_CONFOPT_FILE config/$config.$swpid/confopt \
 	                              'GNU Configure Options'
-	if [ -f config/$config/confopt ] ; then
+	if [ -f config/$config.$swpid/confopt ] ; then
 		const ROCKCFG_CONFIGURE_OPTS "`tr '\n' ' ' \
-					< config/$config/confopt`"
+					< config/$config.$swpid/confopt`"
 	else
 		const ROCKCFG_CONFIGURE_OPTS ""
 	fi

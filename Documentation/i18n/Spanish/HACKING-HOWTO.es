@@ -762,9 +762,9 @@ ejemplo:
 
 	if [ $ROCKCFG_TRG_GENERIC_BUILDSF != 1 ] ; then
                 awk '$4 != "sourceforge" { print }' \
-			< config/$config/packages \
-			> config/$config/packages.new
-                mv config/$config/packages.new config/$config/packages
+			< config/$config.$swpid/packages \
+			> config/$config.$swpid/packages.new
+                mv config/$config.$swpid/packages.new config/$config.$swpid/packages
         fi
 
 EL fichero de paquetes esta separado por blancos y es facil de analizar con 
@@ -800,8 +800,8 @@ Cómo el campo 'counter', las categorías u las banderas son siempre seguidas y
 precedidas de un ' ', puedes de forma sencilla borrar todos los paquetes menos
 dietlibc-ready con un comando como:
 
-	grep ' DIETLIBC ' < config/$config/packages \
-				> config/$config/packages.new
+	grep ' DIETLIBC ' < config/$config.$swpid/packages \
+				> config/$config.$swpid/packages.new
 
 Leete los ficheros config.in que hay para más detalles.
 

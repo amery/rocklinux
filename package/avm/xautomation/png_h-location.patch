@@ -1,0 +1,12 @@
+diff -ruN xautomation-0.96/image.c xautomation-0.96-new/image.c
+--- xautomation-0.96/image.c	2003-12-15 19:44:01.000000000 +0100
++++ xautomation-0.96-new/image.c	2004-12-06 19:45:46.798031352 +0100
+@@ -22,7 +22,7 @@
+ #include <stdlib.h>
+ 
+ #include <X11/XWDFile.h>
+-#include <png.h>
++#include <libpng/png.h>
+ 
+ #include "image.h"
+ #include "debug.h"

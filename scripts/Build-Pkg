@@ -537,7 +537,7 @@ parse_desc $confdir/$pkg.desc
 
 ver="`echo "$desc_V" | tail -n 1 | cut -f1 -d' '`"
 extraver="`echo "$desc_V" | tail -n 1 | cut -s -f2- -d' '`"
-[ -z "$extraver" ] && extraver="${rockver//DEV-*/DEV}"
+[ -z "$extraver" ] && extraver="0"
 
 if [ "$pkg" = "$xpkg" ]; then
 	echo_pkg_start $stagelevel $repository $xpkg $ver $extraver

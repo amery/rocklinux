@@ -30,6 +30,10 @@ while [ "$1" ]; do
     case "$1" in
 	-override)   override=1 ; shift ;;
 	-repository) files="$files `echo package/$2/*/*.desc`" ; shift ; shift ;;
+	-all)
+		files="$files $( egrep -l '^\[D\] +0+ ' package/*/*/*.desc )"
+		files="$files $( egrep -l '^0+ ' target/*/download.txt target/*/*/download.txt )"
+		shift ;;
 	-*)
 	    echo "Usage:"
 	    echo "./scripts/Create-CkSumPatch [options] <package-name(s)> <target-file(s)> \\"

@@ -30,6 +30,8 @@ include(`kernel-scsi.conf')
 include(`kernel-net.conf')
 include(`kernel-fs.conf')
 
+CONFIG_HFS_FS=y
+
 dnl macs need a special RTC ... (this need to be fixed in the kernel so we
 dnl can have generic support for the rs6k and mac support at the same time)
 dnl

@@ -42,7 +42,7 @@ else
 	BASE=/lib/lvm2
 fi 
 
-NAME="`basename $0`"
+NAME=${0##*/}
 
 [ ! -e "$BASE" ] &&
 	die "utils for $VERSION are not available. did you miss to install them?"

@@ -1,0 +1,20 @@
+--- ./tools/find_sts_main.c.orig	2002-12-26 18:18:30.000000000 +0100
++++ ./tools/find_sts_main.c	2004-08-03 17:41:07.686245736 +0200
+@@ -93,14 +93,14 @@
+ 			lpc->frames[i],lpc->num_channels,
+ 			resd,
+ 			size);
+-	sts[i].size = size;
++	*(int*)(&sts[i].size) = size;
+ 	sts[i].frame = cst_alloc(unsigned short,lpc->num_channels-1);
+ 	for (j=1; j < lpc->num_channels; j++)
+-	    sts[i].frame[j-1] = (unsigned short)
++	    *(unsigned short*)(&sts[i].frame[j-1]) = (unsigned short)
+ 		(((lpc->frames[i][j]-lpc_min)/lpc_range)*65535);
+ 	sts[i].residual = cst_alloc(unsigned char,size);
+ 	for (j=0; j < size; j++)
+-	    sts[i].residual[j] = cst_short_to_ulaw((short)resd[j]);
++	    *(int*)(&sts[i].residual[j]) = cst_short_to_ulaw((short)resd[j]);
+ 	start = end;
+     }
+ 

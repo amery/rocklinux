@@ -43,10 +43,11 @@ else
 fi
 
 echo "Creating cksum.patch ..." >&2
+tempdesc=`mktemp`
+temppatch=`mktemp`
 
 ./scripts/Download -list-cksums | grep '^00* ' | \
 while read cksum gzfile ; do
-
    bzfile="`echo "$gzfile" | sed 's,\.\(t\?\)\(gz\|Z\)$,.\1bz2,'`"
 
    if [ -f "$bzfile" ]
@@ -78,32 +79,34 @@ while read cksum gzfile ; do
 
 	if [ -d package/$rep ] ; then
 		if [ -f $descfile ] ; then
+			if [ ! -s $tempdesc ] ; then 
+				cat $descfile > $tempdesc
+			fi
 			sedscript="s,\[D\]  *00*  *$xfile,[D] $cksum $xfile,"
-			sed "$sedscript" -i /tmp/$$
-			if cmp -s ./$descfile /tmp/$$ ; then
+			sed "$sedscript" -i $tempdesc
+			if cmp -s ./$descfile $tempdesc ; then
 				echo "!!! SED script didn't change anything:" >&2
 				echo "!!! $sedscript" >&2
 			else
-				{ echo "diff -u -U 0 ./$descfile /tmp/$$"
-				diff -u -U 0 ./$descfile /tmp/$$ ; }
+				diff -u -U 0 ./$descfile $tempdesc >$temppatch
 			fi
-			rm -f /tmp/$$
 		else
 			echo "!!! No Desc File for $gzfile" >&2
 			echo "!!! (My guess was $descfile)" >&2
 		fi
 	elif [ -d target/$rep -o "$rep" = misc ] ; then
 		if [ -f $descfile ] ; then
+			if [ ! -s $tempdesc ] ; then 
+				cat $descfile > $tempdesc
+			fi
 			sedscript="s,^00*  *$xfile,$cksum $xfile,"
-			sed "$sedscript" < $descfile > /tmp/$$
-			if cmp -s ./$descfile /tmp/$$ ; then
+			sed "$sedscript" -i $tempdesc
+			if cmp -s ./$descfile $tempdesc ; then
 				echo "!!! SED script didn't change anything:" >&2
 				echo "!!! $sedscript" >&2
 			else
-				{ echo "diff -u -U 0 ./$descfile /tmp/$$"
-				diff -u -U 0 ./$descfile /tmp/$$ ; }
+				diff -u -U 0 ./$descfile $tempdesc > $temppatch
 			fi
-			rm -f /tmp/$$
 		else
 			echo "!!! No Desc File for $gzfile" >&2
 			echo "!!! (My guess was $descfile)" >&2
@@ -114,3 +117,6 @@ while read cksum gzfile ; do
 	fi
    fi
 done
+
+[ -f $temppatch ] && cat $temppatch
+rm -f $temppatch $tempdesc

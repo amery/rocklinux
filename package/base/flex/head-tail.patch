@@ -1,0 +1,24 @@
+diff -dur flex-2.5.31/configure flex-2.5.31-p/configure
+--- flex-2.5.31/configure	2003-04-01 18:32:25.000000000 +0200
++++ flex-2.5.31-p/configure	2004-11-04 18:57:48.007085480 +0100
+@@ -5825,7 +5825,7 @@
+ if test "$INDENT" != indent ; then
+    echo "$as_me:$LINENO: checking if $INDENT is GNU indent" >&5
+ echo $ECHO_N "checking if $INDENT is GNU indent... $ECHO_C" >&6
+-   if $INDENT --version 2>/dev/null | head -1|grep "GNU indent" > /dev/null ; then
++   if $INDENT --version 2>/dev/null | head -n1|grep "GNU indent" > /dev/null ; then
+       echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6
+    else
+diff -dur flex-2.5.31/configure.in flex-2.5.31-p/configure.in
+--- flex-2.5.31/configure.in	2003-04-01 18:17:51.000000000 +0200
++++ flex-2.5.31-p/configure.in	2004-11-04 18:57:39.858324280 +0100
+@@ -48,7 +48,7 @@
+ dnl if INDENT is set to 'indent' then we didn't find indent
+ if test "$INDENT" != indent ; then
+    AC_MSG_CHECKING(if $INDENT is GNU indent)
+-   if $INDENT --version 2>/dev/null | head -1|grep "GNU indent" > /dev/null ; then
++   if $INDENT --version 2>/dev/null | head -n1|grep "GNU indent" > /dev/null ; then
+       AC_MSG_RESULT(yes)
+    else
+       AC_MSG_RESULT(no)

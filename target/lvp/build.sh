@@ -1,21 +1,21 @@
 
-lvp_ver="0.4.1"
+lvp_ver="0.4.2"
 rootdir="${base}/build/${ROCKCFG_ID}"
 ROCKdir="${rootdir}/ROCK"
 releasedir="${ROCKdir}/lvp_${lvp_ver}_${ROCKCFG_X86_OPT}"
 syslinux_ver="`sed -n 's,.*syslinux-\(.*\).tar.*,\1,p' ${base}/target/${target}/download.txt`"
-kernelversion="`grep '\[V\]' ${base}/package/base/linux24/linux24.desc | cut -f2 -d' '`"
+kernelversion="`grep '\[V\]' ${base}/package/base/linux/linux.desc | head -n 2 | tail -n 1 | cut -f2 -d' '`"
 
 pkgloop
 
 . scripts/parse-config
-PATH="${base}/build/${ROCKCFG_ID}/${toolsdir}/diet-bin:${PATH}"
+PATH="${rootdir}/${toolsdir}/diet-bin:${PATH}"
 
 echo_header "Creating LVP ..."
 
 echo_header "Checking for *.err files ..."
 if [ `find "${rootdir}/var/adm/logs/" -name '*err' 2>/dev/null | wc -l` -gt 0 ] ; then
-	echo_status "Found some. This is bad :-("
+	echo_error "Found some. This is bad :-("
 else
 	echo_status "None found. Good :-)"
 
@@ -38,11 +38,11 @@ else
 	ln -sf . usr
 	cd etc
 	ln -sf /proc/mounts mtab
-	ln -sf /proc/mounts fstab
 	cd ..
 	
 	echo_status "Copying programs"
 	for x in \
+		bin/bash2 \
 		bin/bash \
 		bin/cat \
 		bin/grep \
@@ -56,7 +56,7 @@ else
 		bin/find \
 		bin/gawk \
 		bin/loadkeys \
-		lib/modules/${kernelversion}-rock/block \
+		lib/modules/${kernelversion}-rock \
 		sbin/agetty \
 		sbin/hwscan \
 		usr/bin/eject \
@@ -85,15 +85,12 @@ else
 		ln -sf /sbin/insmod ${releasedir}/initrd/sbin/${x}
 	done
 
-	echo_status "Copying kernel modules to initrd"
-	cd ${releasedir}/initrd
-	tar --use-compress-program=bzip2 -xf ${ROCKdir}/pkgs/linux24.tar.bz2 lib/
-
 	echo_status "Creating the livesystem"
 	echo_status "Creating directory structure"
 	mkdir -p ${releasedir}/livesystem
 	cd ${releasedir}/livesystem
 	tar --use-compress-program=bzip2 -xf ${ROCKdir}/pkgs/00-dirtree.tar.bz2
+	rm -rf var/adm
 	cd usr/
 	rm -rf X11 X11R6
 	mkdir X11R6
@@ -103,6 +100,7 @@ else
 	echo_status "Copying programs"
 
 	for x in \
+		bin/bash2 \
 		bin/bash \
 		bin/cat \
 		bin/find \
@@ -130,6 +128,7 @@ else
 		usr/bin/tail \
 		usr/sbin/lspci \
 		sbin/losetup \
+		sbin/mdadm \
 		; do
 
 		mkdir -p ${x%/*}
@@ -143,6 +142,7 @@ else
 
 	cd etc/
 	ln -sf /proc/mounts mtab
+	ln -sf /proc/mounts fstab
 	cd ../usr/share/mplayer
 	mv font-arial-24-iso-8859-1 font
 	cd ../../..
@@ -167,16 +167,16 @@ else
 	echo "LVP v${lvp_ver}" >>${releasedir}/livesystem/etc/VERSION
 
 	echo_status "Compressing binaries ... "
-	${rootdir}/usr/bin/upx --best --crp-ms=999999 --nrv2d `find ${releasedir}/livesystem -type f | xargs file | grep "statically linked" | grep -v bin/bash | grep -v bin/mount | cut -f1 -d:` `find ${releasedir}/initrd -type f | xargs file | grep "statically linked" | grep -v bin/bash | grep -v bin/mount | cut -f1 -d:` >/proc/$$/fd/1 2>/proc/$$/fd/2 </proc/$$/fd/0
+	${rootdir}/usr/bin/upx --best --crp-ms=999999 --nrv2d `find ${releasedir}/livesystem -type f | xargs file | grep "statically linked" | grep -v bin/bash | grep -v bin/mount | cut -f1 -d:` `find ${releasedir}/initrd -type f | xargs file | grep "statically linked" | grep -v bin/bash | grep -v bin/mount | cut -f1 -d:` >/proc/${$}/fd/1 2>/proc/${$}/fd/2 </proc/${$}/fd/0
 
 	echo_status "Creating initrd.img"
-	dd if=/dev/zero of=${releasedir}/isolinux/initrd bs=1k count=8192
+	dd if=/dev/zero of=${releasedir}/isolinux/initrd bs=1k count=8192 >/dev/null 2>&1
 	mkfs.ext2 -m 0 -F ${releasedir}/isolinux/initrd >/dev/null 2>&1
-	mkdir ${releasedir}/initrd.tmp.$$
-	mount -o loop ${releasedir}/isolinux/initrd ${releasedir}/initrd.tmp.$$
-	mv ${releasedir}/initrd/* ${releasedir}/initrd.tmp.$$
-	umount -d ${releasedir}/initrd.tmp.$$
-	rm -rf ${releasedir}/initrd.tmp.$$ ${releasedir}/initrd
+	mkdir ${releasedir}/initrd.tmp.${$}
+	mount -o loop ${releasedir}/isolinux/initrd ${releasedir}/initrd.tmp.${$}
+	mv ${releasedir}/initrd/* ${releasedir}/initrd.tmp.${$}
+	umount ${releasedir}/initrd.tmp.${$}
+	rm -rf ${releasedir}/initrd.tmp.${$} ${releasedir}/initrd
 
 	echo_status "LVP v${lvp_ver} built for ${ROCKCFG_X86_OPT} is now ready in ${releasedir}."
 fi

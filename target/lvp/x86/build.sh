@@ -34,7 +34,7 @@ find ${releasedir} -name .svn -exec rm -rf {} \; 2>/dev/null
 echo_status "Extracting isolinux boot loader."
 mkdir -p isolinux
 tar --use-compress-program=bzip2 \
-    -xf ${base}/download/${target}/syslinux-${syslinux_ver}.tar.bz2 \
+    -xf ${base}/download/mirror/s/syslinux-${syslinux_ver}.tar.bz2 \
     syslinux-${syslinux_ver}/isolinux.bin -O > ${releasedir}/isolinux/isolinux.bin
 
 echo_status "Creating isolinux config file."

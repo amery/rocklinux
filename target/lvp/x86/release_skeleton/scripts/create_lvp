@@ -4,7 +4,7 @@
 
 if [ ! -e .config ] ; then
 	echo "${bold}${red}No configuration found!${normal}"
-	echo "run ./config.sh first!"
+	echo "Run ./config.sh first!"
 	exit 1
 fi
 
@@ -14,7 +14,7 @@ for x in create_lvpxml encrypted plain ; do
 	. scripts/${x}
 done
 
-moviefiles="/tmp/lvp_moviefiles.$$"
+moviefiles="/tmp/lvp_moviefiles.${$}"
 
 trap "rm -f ${moviefiles}" EXIT
 trap "exit 1" INT
@@ -53,26 +53,6 @@ if [ ${error} -gt 0 ] ; then
 	echo "Couldn't find ${error} file(s)."
 	confirm "Continue without those files"
 	[ ${?} -eq 1 ] && exit 1
-fi
-
-for module in twofish blowfish serpent ; do
-	eval "encryption_${module}=0"
-	modprobe loop_${module} >/dev/null 2>&1 && eval "encryption_${module}=1"
-done
-
-encryption_available=0
-[ ${encryption_twofish} -eq 1 -o ${encryption_blowfish} -eq 1 -o ${encryption_serpent} -eq 1 ] && encryption_available=1
-
-if [ ${encryption_available} -eq 0 ] ; then
-	echo "Sorry, you do not have loop-aes on your system. Please have a look at"
-	echo "http://loop-aes.sourceforge.net"
-	exit 1
-fi
-
-eval "avail=\${encryption_${LVP_ENCRYPTION}}"
-if [ "${avail}" == "0" ] ; then
-	echo "Sorry, ${LVP_ENCRYPTION} is not available on your system."
-	exit 1
 fi
 
 eval "process_${LVP_TYPE}"

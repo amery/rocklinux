@@ -28,8 +28,8 @@ EOF
 
 ttydevs="vc/2 vc/3"
 
-for x in $ttydevs  ; do
-	( ( while : ; do agetty -i 38400 $x -n -l /bin/login-shell ; done ) & )
+for x in ${ttydevs}  ; do
+	( ( while : ; do agetty -i 38400 ${x} -n -l /bin/login-shell ; done ) & )
 done
 
 /bin/keymap

@@ -31,13 +31,21 @@ detect_card_old() {
 	return 0
 }
 
-if [ `grep -c oldxconfig /proc/cmdline` -eq 1 ] ; then
-	echo "Running old X-Config"
-	detect_card_old
-	cat /etc/X11/XF86Config | sed "s,LVPDEVICE,${driver},g" >/tmp/XF86Config
-else
-	echo -n "Running integrated XFree86-Autoconfiguration ... "
-	HOME="/tmp" /usr/X11/bin/X -configure -logfile /dev/null >/dev/null 2>&1
-	mv /tmp/XF86Config.new /tmp/XF86Config
-	echo "done"
-fi
+xf86config_start(){
+	if [ `grep -c oldxconfig /proc/cmdline` -eq 1 ] ; then
+		echo "Running old X-Config"
+		detect_card_old
+		cat /etc/X11/XF86Config | sed "s,LVPDEVICE,${driver},g" >/tmp/XF86Config
+	else
+		echo -n "Running integrated XFree86-Autoconfiguration ... "
+		HOME="/tmp" /usr/X11/bin/X -configure -logfile /dev/null >/dev/null 2>&1
+		mv /tmp/XF86Config.new /tmp/XF86Config
+		echo "done"
+	fi
+}
+
+xf86config_stop(){
+	echo -n
+}
+
+eval "xf86config_${1}"

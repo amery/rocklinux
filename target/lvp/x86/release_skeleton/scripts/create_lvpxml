@@ -7,13 +7,13 @@ usage_create_lvpxml() {
 process_create_lvpxml() {
 	unset files
 	unset title
+	unset titleold
+	offset=0
+
 	for x in `printenv | grep ^file_ | cut -f1 -d=` ; do
 		[ ! -z "${files}" ] && files="${files}\n"
 		files="${files}${x}"
-		[ -z "${title}" ] && eval "title=\${${x}}"
 	done
-	title=${title##*/}
-	title=${title%% -*}
 
 	files=`echo -e ${files} | sort`
 
@@ -21,38 +21,50 @@ process_create_lvpxml() {
 	touch ${lvpxml}
 
 	echo "Creating lvp.xml file"
-	read -p "Enter title of this LVP [${title}]: " tmp
-	[ ! -z "${tmp}" ] && title="${tmp}"
-
-	cat > ${lvpxml} << EOF
-<lvp>
-	<item type="text">
-		<position x="0" y="90">
-		<size w="5" h="5">
-		<text>${title}</text>
-	</item>
-EOF
-
+	echo "<lvp>" >${lvpxml}
 	item=0
 	for file in ${files} ; do
 		eval "file=\${${file}}" # dereference the variable to get the real file
+
+		title=${file##*/}
+		title=${title%% -*}
+		if [ "${title}" != "${titleold}" ] ; then
+			titleold=${title}
+			echo "Found possible new title \"${title}\""
+			confirm "Do you want to start a new headline?"
+			if [ ${?} -eq 0 ] ; then
+				[ ${offset} -gt 0 ] && offset=$(( ${offset} + 2 ))
+				[ $(( ${item} % 4 )) -gt 0 ] && item=$(( ${item} + ( 4 - ( ${item} % 4 ) ) ))
+				read -p "Please enter new title [${title}]: " tmp
+				[ ! -z "${tmp}" ] && title="${tmp}"
+				cat >> ${lvpxml} <<-EOF
+				<item type="text">
+					<position x="0" y="$(( 95 - ((${item} - (${item} % 4)) / 4) * 15 - ${offset} ))">
+					<size w="5" h="5">
+					<text>${title}</text>
+				</item>
+				EOF
+				offset=$(( ${offset} + 10 ))
+			fi
+		fi
+
 		button_text=${file%.*}
 		button_text=${button_text##*- }
 		read -p "Enter button text for ${file} [${button_text}]: " tmp
 		[ ! -z "${tmp}" ] && button_text=${tmp}
 		cat >> ${lvpxml} << EOF
 	<item type="button">
-		<position x="$(( (${item} % 4) * 50 - 75 ))" y="$(( 80 - ((${item} - (${item} % 4)) / 4) * 15))" />
+		<position x="$(( (${item} % 4) * 50 - 75 ))" y="$(( 95 - ((${item} - (${item} % 4)) / 4) * 15 - ${offset} ))" />
 		<action>/usr/bin/mplayer -fs -zoom ${mplayer_param} '${file}'</action>
 		<size w="40" h="10" />
 		<text>${button_text}</text>
 	</item>
 EOF
 # a little "special" for multi-language anime
-#if [ "${file##*.}" == "ogm" ] ; then
+#if [ "${file##*.}" == "avi" ] ; then
 #cat >> ${lvpxml} << EOF
 #<item type="button">
-#<position x="$(( (${item} % 4) * 50 - 75 ))" y="$(( 80 - ((${item} - (${item} % 4)) / 4) * 15 - 7))" />
+#<position x="$(( (${item} % 4) * 50 - 75 ))" y="$(( 95 - ((${item} - (${item} % 4)) / 4) * 15 - 7 - ${offset} ))" />
 #<action>/usr/bin/mplayer -aid 2 -sid 3 -fs -zoom '${file}'</action>
 #<size w="40" h="4" />
 #<text>jap</text>

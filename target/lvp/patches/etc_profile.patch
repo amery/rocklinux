@@ -8,6 +8,6 @@ we don't want to source that one
  #
  for x in /etc/profile.d/* /etc/conf/profile ; do
 +	[ "${x##*/}" = "TRANS.TBL" ] && continue
- 	[ -f $x ] && . $x
+ 	[ -f ${x} ] && . ${x}
  done
  unset x

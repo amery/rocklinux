@@ -47,7 +47,7 @@ menu_init () {
 # {{{ block_start
 block_start () {
 	block_level=$(( ${block_level} + 2 ))
-	echo "$@"
+	echo "${@}"
 }
 # }}}
 # {{{ block_end

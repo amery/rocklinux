@@ -4,7 +4,7 @@ type_plain="plain"
 
 usage_plain(){
 	cat >&2 <<EOF
-Usage: $0 -type plain
+Usage: ${0} -type plain
 	This will save the files in plain view on the medium.
 	This way you can view the content on any OS without the
 	need to boot the LVP. Of course, you can still do so :)
@@ -45,11 +45,11 @@ process_plain(){
 	echo -n "Checking Livesystem size ... "
 	livesize=`du -sb ${target} | cut -f1`
 	echo "`human_readable ${livesize}`"
-	filesize=$(( $filesize + $livesize ))
+	filesize=$(( ${filesize} + ${livesize} ))
 	echo
 	echo "Total space needed: $(( ${filesize} / 1024 / 1024 )) MB"
 
-	if [ $(( ${filesize} / 1024 / 1024 )) -gt $size ] ; then
+	if [ $(( ${filesize} / 1024 / 1024 )) -gt ${size} ] ; then
 		echo
 		echo "This may be more than fits onto your medium."
 		echo "You specified ${size} MB to fit onto your medium."

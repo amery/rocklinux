@@ -17,18 +17,19 @@ exec < /dev/console > /dev/console 2> /dev/console ; cd /
 export PATH="/sbin:/bin:/usr/sbin:/usr/bin"
 
 for x in /etc/lvp/*.sh ; do
-   if [ -f "$x" ] ; then
-      echo ; echo "Running $x ..." ; sh $x
-      echo "Setup script $x finished."
+   if [ -f "${x}" ] ; then
+      echo ; echo "Starting ${x##*/} ..." ; sh ${x} start
+      echo "Setup script ${x##*/} finished."
    fi
 done
 
 /sbin/startlvp
 
-exec 2>/dev/null
-for x in /mnt* ; do
-	umount ${x}
-	losetup -d /dev/loop/${x#/mnt}
+for x in /etc/lvp/*.sh ; do
+   if [ -f "${x}" ] ; then
+      echo ; echo "Stopping ${x##*/} ..." ; sh ${x} stop
+      echo "Setup script ${x##*/} finished."
+   fi
 done
 
 umount /proc

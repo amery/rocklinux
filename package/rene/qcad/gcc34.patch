@@ -1,0 +1,33 @@
+--- ./qcadlib/src/filters/rs_filtercxf.h.orig	2004-09-11 05:17:51.961336120 +0200
++++ ./qcadlib/src/filters/rs_filtercxf.h	2004-09-11 05:14:22.931113544 +0200
+@@ -28,6 +28,8 @@
+ #ifndef RS_FILTERCXF_H
+ #define RS_FILTERCXF_H
+ 
++#undef min
++#undef max
+ #include <fstream>
+ 
+ #include "rs_filterinterface.h"
+--- ./qcadlib/src/filters/rs_filterdxf.h.orig	2004-09-11 05:17:36.443695160 +0200
++++ ./qcadlib/src/filters/rs_filterdxf.h	2004-09-11 05:13:50.997968120 +0200
+@@ -44,6 +44,8 @@
+ #include "rs_image.h"
+ 
+ #include "dl_creationinterface.h"
++#undef min
++#undef max
+ #include "dl_dxf.h"
+ 
+ 
+--- ./qcad/src/qc_applicationwindow.cpp.orig	2004-09-11 05:39:43.001027792 +0200
++++ ./qcad/src/qc_applicationwindow.cpp	2004-09-11 05:40:19.329505024 +0200
+@@ -26,6 +26,8 @@
+ 
+ #include "qc_applicationwindow.h"
+ 
++#undef min
++#undef max
+ #include <fstream>
+ 
+ #include <qaccel.h>

@@ -1,0 +1,11 @@
+--- ./po/Makefile.in.in.orig	2004-12-09 23:29:33.783069128 +0100
++++ ./po/Makefile.in.in	2004-12-09 23:29:52.996148296 +0100
+@@ -31,7 +31,7 @@
+ INSTALL = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
+ MKINSTALLDIRS = @MKINSTALLDIRS@
+-mkinstalldirs = `if test ! -z "$(mkdir_p)"; then echo "$(mkdir_p)"; else case "$(MKINSTALLDIRS)" in /*) echo "$(MKINSTALLDIRS)" ;; *) echo "$(top_srcdir)/$(MKINSTALLDIRS)" ;; esac; fi`
++mkinstalldirs = ../mkinstalldirs
+ 
+ CC = @CC@
+ GMSGFMT = @GMSGFMT@

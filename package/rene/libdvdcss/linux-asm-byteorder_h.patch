@@ -1,0 +1,23 @@
+diff -dur libdvdcss-1.2.8/src/ioctl.c libdvdcss-1.2.8-p/src/ioctl.c
+--- libdvdcss-1.2.8/src/ioctl.c	2003-03-09 23:34:10.000000000 +0000
++++ libdvdcss-1.2.8-p/src/ioctl.c	2004-10-24 07:27:16.613239464 +0000
+@@ -60,6 +60,19 @@
+ #   include <sys/dvdio.h>
+ #endif
+ #ifdef DVD_STRUCT_IN_LINUX_CDROM_H
++
++#   ifdef __CHECKER__
++#   define __bitwise __attribute__((bitwise))
++#   else
++#   define __bitwise
++#   endif
++#   define __le16 __bitwise __u16
++#   define __be16 __bitwise __u16
++#   define __le32 __bitwise __u32
++#   define __be32 __bitwise __u32
++#   define __le64 __bitwise __u64
++#   define __be64 __bitwise __u64
++
+ #   include <linux/cdrom.h>
+ #endif
+ #ifdef DVD_STRUCT_IN_DVD_H

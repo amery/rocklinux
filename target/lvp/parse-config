@@ -22,7 +22,7 @@
 
 static=0
 
-for x in upx gzip sed kbd mplayer pciutils grep coreutils libgli lvp gawk findutils eject xfree86 flex ; do
+for x in upx gzip sed kbd mplayer pciutils grep coreutils libgli lvp gawk findutils eject xfree86 flex module-init-tools strace gdb ; do
 	[ "${pkg}" == "${x}" ] && static=1
 done
 
@@ -42,10 +42,10 @@ if [ "${pkg}" == "util-linux" ] ; then
 	hook_add postinstall 4 "unset LDFLAGS"
 fi
 
-if [ "${pkg}" == "modutils" ] ; then
-	echo_status "Building this package statically for LVP"
-	var_append confopt " " "--enable-combined"
-fi
+#if [ "${pkg}" == "module-init-tools" ] ; the
+#echo_status "Building this package statically for LVP"
+#var_append confopt " " "--enable-combined"
+#fi
 
 if [ "${pkg}" == "mdadm" ] ; then
 	echo_status "Building this package statically for LVP"

@@ -3,5 +3,5 @@
 exec < /dev/console > /dev/console 2> /dev/console ; cd /
 
 export HOME="/tmp"
-/usr/X11/bin/startx -- -xf86config /tmp/XF86Config -logfile /tmp/X >/dev/null 2>&1
+/usr/X11/bin/startx -- -logfile /tmp/X >/dev/null 2>&1
 

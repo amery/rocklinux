@@ -3,6 +3,7 @@
 mount -t proc none /proc
 mount -t tmpfs none /tmp
 mount -t devfs none /dev
+mount -t devpts none /dev/pts
 
 cd /dev ; rm -f fd
 ln -sf /proc/kcore      core
@@ -18,7 +19,7 @@ export PATH="/sbin:/bin:/usr/sbin:/usr/bin"
 
 for x in /etc/lvp/*.sh ; do
    if [ -f "${x}" ] ; then
-      echo ; echo "Starting ${x##*/} ..." ; sh ${x} start
+      echo ; echo "Starting ${x##*/} ..." ; bash ${x} start
       echo "Setup script ${x##*/} finished."
    fi
 done
@@ -27,11 +28,12 @@ done
 
 for x in /etc/lvp/*.sh ; do
    if [ -f "${x}" ] ; then
-      echo ; echo "Stopping ${x##*/} ..." ; sh ${x} stop
+      echo ; echo "Stopping ${x##*/} ..." ; bash ${x} stop
       echo "Setup script ${x##*/} finished."
    fi
 done
 
+umount /dev/pts
+umount /dev
 umount /proc
 umount /tmp
-umount /dev

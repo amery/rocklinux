@@ -26,9 +26,28 @@ human_readable() {
 	echo "${size}"
 }
 # }}}
+# {{{ lvp_read
+function lvp_read {
+	var=$1
+	shift
+	default=${1}
+	shift
+	if [ ${LVP_USE_DEFAULTS} -eq 1 ] ; then
+		echo "${@} ${default} (batch mode)"
+		eval "${var}=\"${default}\""
+		return
+	fi
+	eval "read -p \"${@}\" ${var}"
+	return
+}
+# }}}
 # {{{ confirm
 function confirm {
 	unset yesno
+	if [ ${LVP_USE_DEFAULTS} -eq 1 ] ; then
+		echo "${@} [yes|no] ? yes (batch mode)"
+		yesno="yes"
+	fi
 	while [ "${yesno}" != "yes" -a "${yesno}" != "no" ] ; do
 		echo -n "${@} [yes|no] ? "
 		read yesno
@@ -207,7 +226,7 @@ get () {
 			;;
 		bool)
 			eval "value=\${${option}}"
-			if [ "${value}" == "1" ] ; then
+			if [ ${value} -eq 1 ] ; then
 				eval "${option}=0"
 			else
 				eval "${option}=1"

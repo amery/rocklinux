@@ -11,7 +11,7 @@ for x in livesystem/* ; do
 	done
 	[ ${found} -eq 1 ] && continue
 	echo -n "removing ${x#livesystem/} ... "
-	rm -rf livesystem/${x#livesystem/}
+	rm -rf "livesystem/${x#livesystem/}"
 	echo "done"
 done
 

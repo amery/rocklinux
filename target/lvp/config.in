@@ -26,7 +26,7 @@ pkgfilter sed '
 
 / 00-dirtree / { p; d; };
 / autoconf / { p; d; };
-/ automake=automake18 / { p; d; };
+/ automake=automake19 / { p; d; };
 / bash / { p; d; };
 / bin86 / { p; d; };
 / binutils / { p; d; };
@@ -41,6 +41,7 @@ pkgfilter sed '
 / findutils / { p; d; };
 / flex / { p; d; };
 / freeglut / { p; d; };
+/ freetype / { p; d; };
 / gawk / { p; d; };
 / gcc / { p; d; };
 / glibc / { p; d; };
@@ -64,7 +65,7 @@ pkgfilter sed '
 / make / { p; d; };
 / mdadm / { p; d; };
 / mktemp / { p; d; };
-/ modutils / { p; d; };
+/ module-init-tools / { p; d; };
 / mplayer / { p; d; };
 / nasm / { p; d; };
 / ncurses / { p; d; };
@@ -87,6 +88,8 @@ pkgfilter sed '
 # Disable all other packages
 /.*/	{ s/^X /O /p; d; };'
 
+# Disable perl5 in stage 7
+pkgfilter sed '/ perl5 / { s/^\([^7]*\)7\(.*\)perl5/\1-\2perl5/; }'
 ROCKCFGSET_CREATE_TARBZ2=1
 ROCKCFGSET_CREATE_GEM=0
 ROCKCFGSET_PKGFILE_VER=0
@@ -99,8 +102,8 @@ ROCKCFGSET_PKG_GCC34_NO_JAVA=1
 ROCKCFGSET_PKG_BASH_PROGCOMP=0
 ROCKCFGSET_PKG_BASH_INST_RLL=0
 ROCKCFGSET_PKG_BASH_DEFAULT='bash2'
-ROCKCFGSET_PKG_LINUX_SRC26=0
-ROCKCFGSET_PKG_LINUX_IMG26=0
+ROCKCFGSET_PKG_LINUX_SRC26=1
+ROCKCFGSET_PKG_LINUX_IMG26=1
 ROCKCFGSET_SPLIT_DOC=0
 ROCKCFGSET_SPLIT_DEV=0
 

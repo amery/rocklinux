@@ -29,7 +29,8 @@ encryption_start() {
 
 		exec 2>/dev/null
 		while [ ! -e /mnt1/lvp.xml ] ; do
-			read -p "Please enter passphrase: " -s passphrase
+			echo -n "Please enter passphrase: "
+			read -s passphrase
 			echo
 			for x in /lvp.data* ; do
 				echo "${passphrase}" | losetup -e ${thisenc} -p 0 /dev/loop/${x#/lvp.data} ${x} 
@@ -49,13 +50,11 @@ encryption_start() {
 }
 
 encryption_stop(){
-	exec 2>/dev/null
 	umount /mnt1
-	mdadm /dev/md/0 -S
+	mdadm -S /dev/md/0
 	for x in /lvp.data* ; do
 		losetup -d /dev/loop/${x#/lvp.data}
 	done
-	exec 2>&1
 }
 
 encryption_(){

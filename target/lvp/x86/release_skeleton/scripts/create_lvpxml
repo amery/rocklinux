@@ -4,15 +4,37 @@ usage_create_lvpxml() {
 	echo -n
 }
 
+create_thumbnail() {
+	tmp="`mktemp`"
+	rm -f $tmp
+	file="$1"
+	item=$2
+	time=$3
+
+	mplayer -nosound -vo png -ss $time -frames 2 "livesystem/$file" >/dev/null 2>&1
+	orig="00000002.png"
+	[ ! -f "${orig}" ] && orig="00000001.png"
+	[ ! -f "${orig}" ] && return 1
+	convert -resize '128x128!' ${orig} SGI:$tmp
+	convert -depth 8 -size 128x128 SGI:$tmp gray:$tmp.tmp
+	convert -depth 8 -size 128x128 gray:$tmp.tmp SGI:$tmp.gray
+	mv $tmp $item.color.rgb
+	mv $tmp.gray $item.gray.rgb
+	rm -f $tmp*
+	rm -f 000*
+	return 0
+}
+
 process_create_lvpxml() {
 	unset files
 	unset title
 	unset titleold
+	time="00:02:00"
 	offset=0
 
-	for x in `printenv | grep ^file_ | cut -f1 -d=` ; do
-		[ ! -z "${files}" ] && files="${files}\n"
-		files="${files}${x}"
+	for x in ${!file_*} ; do
+		[ -z "${files}" ] || files="${files}\n"
+		files="${files}${x}"	# note: we're not dereferencing the variables here to keep the order the user specified
 	done
 
 	files=`echo -e ${files} | sort`
@@ -35,42 +57,77 @@ process_create_lvpxml() {
 			if [ ${?} -eq 0 ] ; then
 				[ ${offset} -gt 0 ] && offset=$(( ${offset} + 2 ))
 				[ $(( ${item} % 4 )) -gt 0 ] && item=$(( ${item} + ( 4 - ( ${item} % 4 ) ) ))
-				read -p "Please enter new title [${title}]: " tmp
-				[ ! -z "${tmp}" ] && title="${tmp}"
+				lvp_read tmp "${title}" Please enter new title [${title}]:
+				[ -z "${tmp}" ] || title="${tmp}"
 				cat >> ${lvpxml} <<-EOF
-				<item type="text">
-					<position x="0" y="$(( 95 - ((${item} - (${item} % 4)) / 4) * 15 - ${offset} ))">
-					<size w="5" h="5">
-					<text>${title}</text>
-				</item>
+					<item type="text">
+						<position x="0" y="$(( 95 - ((${item} - (${item} % 4)) / 4) * 50 - ${offset} ))">
+						<size w="5" h="5">
+						<text>${title}</text>
+					</item>
 				EOF
 				offset=$(( ${offset} + 10 ))
 			fi
 		fi
 
+		echo "File is ${file##*/}"
+		lvp_read tmp "${time}" Time to get thumbnail from [${time}]:
+		[ -n "${tmp}" ] && time="${tmp}"
+		echo -n "Creating thumbnail ... "
+		if create_thumbnail "$file" $item "$time" ; then
+			mv $item.color.rgb livesystem/${file%/*}/
+			mv $item.gray.rgb livesystem/${file%/*}/
+			echo "done"
+		else
+			echo "failed"
+			echo "Using traditional display."
+		fi
+		
 		button_text=${file%.*}
 		button_text=${button_text##*- }
-		read -p "Enter button text for ${file} [${button_text}]: " tmp
-		[ ! -z "${tmp}" ] && button_text=${tmp}
-		cat >> ${lvpxml} << EOF
-	<item type="button">
-		<position x="$(( (${item} % 4) * 50 - 75 ))" y="$(( 95 - ((${item} - (${item} % 4)) / 4) * 15 - ${offset} ))" />
-		<action>/usr/bin/mplayer -fs -zoom ${mplayer_param} '${file}'</action>
-		<size w="40" h="10" />
-		<text>${button_text}</text>
-	</item>
-EOF
-# a little "special" for multi-language anime
-#if [ "${file##*.}" == "avi" ] ; then
-#cat >> ${lvpxml} << EOF
-#<item type="button">
-#<position x="$(( (${item} % 4) * 50 - 75 ))" y="$(( 95 - ((${item} - (${item} % 4)) / 4) * 15 - 7 - ${offset} ))" />
-#<action>/usr/bin/mplayer -aid 2 -sid 3 -fs -zoom '${file}'</action>
-#<size w="40" h="4" />
-#<text>jap</text>
-#</item>
-#EOF
-#fi
+		lvp_read tmp "${button_text}" Enter button text for ${file} [${button_text}]:
+		[ -z "${tmp}" ] || button_text=${tmp}
+		if [ -e livesystem/${file%/*}/$item.color.rgb ] ; then
+			cat >> ${lvpxml} <<-EOF
+				<item type="buttontexture">
+					<texture normal=".${file%/*}/$item.gray.rgb" over=".${file%/*}/$item.color.rgb" pressed=".${file%/*}/$item.color.rgb" />
+					<position x="$(( (${item} % 4) * 50 - 75 ))" y="$(( 75 - ((${item} - (${item} % 4)) / 4) * 50 - ${offset} ))" />
+					<action>/usr/bin/mplayer -fs -zoom -alang en ${mplayer_param} '${file}'</action>
+					<size w="40" h="40" />
+				</item>
+				<item type="text">
+					<position x="$(( (${item} % 4) * 50 - 75 ))" y="$(( 75 - ((${item} - (${item} % 4)) / 4) * 50 - ${offset} - 25))"
+					<size w="5" h="5">
+					<text>${button_text}</text>
+				</item>
+			EOF
+		else
+			cat >> ${lvpxml} <<-EOF
+				<item type="button">
+					<position x="$(( (${item} % 4) * 50 - 75 ))" y="$(( 75 - ((${item} - (${item} % 4)) / 4) * 50 - ${offset} ))" />
+					<action>/usr/bin/mplayer -fs -zoom ${mplayer_param} '${file}'</action>
+					<size w="40" h="40" />
+					<text>${button_text}</text>
+				</item>
+			EOF
+		fi
+#a little "special" for multi-language anime
+		if [ "${file##*.}" == "mkv" -o "${file##*.}" == "ogm" ] ; then
+			echo "This looks like a multi-languaged file."
+			confirm "Do you want to add a small button with a second language?"
+			if [ ${?} -eq 0 ] ; then
+				lvp_read alang "ja" Audio language [ja]:
+				lvp_read slang "en" Sub language [en]:
+				cat >> ${lvpxml} <<-EOF
+					<item type="button">
+					<position x="$(( (${item} % 4) * 50 - 75 ))" y="$(( 75 - ((${item} - (${item} % 4)) / 4) * 50 - 22 - ${offset} ))" />
+					<action>/usr/bin/mplayer -alang ${alang} -slang ${slang} -fs -zoom ${mplayer_param} '${file}'</action>
+					<size w="40" h="4" />
+					<text>jap</text>
+					</item>
+				EOF
+			fi
+		fi
 		item=$(( ${item} + 1 ))
 	done
 	echo "</lvp>" >> ${lvpxml}

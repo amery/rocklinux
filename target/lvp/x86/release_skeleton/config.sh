@@ -29,7 +29,7 @@ while [ "${quit}" == "0" ] ; do
 			scripts/cleanup
 			;;
 		i)
-			scripts/create-iso
+			scripts/create_iso
 			;;
 		*)
 			get ${choice}

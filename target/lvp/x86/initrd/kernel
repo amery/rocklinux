@@ -1,5 +1,5 @@
 #!/bin/bash
 
-for x in /lib/modules/*/block/loop_*.o ; do
+for x in /lib/modules/*/block/loop_* ; do
 	insmod ${x} >/dev/null 2>&1 
 done

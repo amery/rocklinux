@@ -1,15 +1,14 @@
 
-lvp_ver="0.4.3"
+lvp_ver="0.4.4-dev"
 rootdir="${base}/build/${ROCKCFG_ID}"
 ROCKdir="${rootdir}/ROCK"
 releasedir="${ROCKdir}/lvp_${lvp_ver}_${ROCKCFG_X86_OPT}"
 syslinux_ver="`sed -n 's,.*syslinux-\(.*\).tar.*,\1,p' ${base}/target/${target}/download.txt`"
-kernelversion="`grep '\[V\]' ${base}/package/base/linux/linux.desc | head -n 2 | tail -n 1 | cut -f2 -d' '`"
+kernelversion="`grep '\[V\]' ${base}/package/base/linux/linux.desc | tail -n 1 | cut -f2 -d' '`"
 
 pkgloop
 
 . scripts/parse-config
-PATH="${rootdir}/${toolsdir}/diet-bin:${PATH}"
 
 echo_header "Creating LVP ..."
 
@@ -59,9 +58,15 @@ else
 		lib/modules/${kernelversion}-rock \
 		sbin/agetty \
 		sbin/hwscan \
+		sbin/rmmod \
+		sbin/modprobe \
+		sbin/insmod \
 		usr/bin/eject \
+		usr/bin/lsmod \
 		usr/sbin/lspci \
-		usr/share/kbd/keymaps ; do
+		usr/share/kbd/keymaps \
+		usr/share/pci.ids
+		do
 
 		mkdir -p ${x%/*}
 		cp -ar ${rootdir}/${x} ${x}
@@ -79,11 +84,6 @@ else
 	ln -sf gzip gzcat
 	cd ..
 	mv bin/linuxrc .
-
-	cp ${rootdir}/sbin/insmod.static ${releasedir}/initrd/sbin/insmod
-	for x in kallsyms ksyms lsmod modprobe rmmod ; do
-		ln -sf /sbin/insmod ${releasedir}/initrd/sbin/${x}
-	done
 
 	echo_status "Creating the livesystem"
 	echo_status "Creating directory structure"
@@ -128,8 +128,8 @@ else
 		usr/bin/tail \
 		usr/sbin/lspci \
 		sbin/losetup \
-		sbin/mdadm \
-		; do
+		sbin/mdadm
+		do
 
 		mkdir -p ${x%/*}
 		cp -ar ${rootdir}/${x} ${x}
@@ -151,9 +151,9 @@ else
 	cp ${base}/target/${target}/${arch}/livesystem/linuxrc ${releasedir}/livesystem/linuxrc ; chmod +x ${releasedir}/livesystem/linuxrc
 	echo_status "Copying startlvp script ..."
 	cp ${base}/target/${target}/${arch}/livesystem/startlvp ${releasedir}/livesystem/sbin/; chmod +x ${releasedir}/livesystem/sbin/startlvp
-	echo_status "Copying XF86Config ..."
+	echo_status "Creating xorg.conf symlink"
 	mkdir -p ${releasedir}/livesystem/etc/X11
-	cp ${base}/target/${target}/${arch}/livesystem/XF86Config ${releasedir}/livesystem/etc/X11/XF86Config
+	ln -sf /tmp/xorg.conf ${releasedir}/livesystem/etc/X11/xorg.conf
 	echo_status "Copying xinitrc ..."
 	mkdir -p ${releasedir}/livesystem/usr/X11R6/lib/X11/xinit
 	cp ${base}/target/${target}/${arch}/livesystem/xinitrc ${releasedir}/livesystem/usr/X11R6/lib/X11/xinit/xinitrc
@@ -176,6 +176,8 @@ else
 	mount -o loop ${releasedir}/isolinux/initrd ${releasedir}/initrd.tmp.${$}
 	mv ${releasedir}/initrd/* ${releasedir}/initrd.tmp.${$}
 	umount ${releasedir}/initrd.tmp.${$}
+
+	echo_status "Cleaning up ..."
 	rm -rf ${releasedir}/initrd.tmp.${$} ${releasedir}/initrd
 
 	echo_status "LVP v${lvp_ver} built for ${ROCKCFG_X86_OPT} is now ready in ${releasedir}."

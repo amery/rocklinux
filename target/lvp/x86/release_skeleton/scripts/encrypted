@@ -8,7 +8,7 @@ process_encrypted(){
 
 	for module in twofish blowfish serpent ; do
 		eval "encryption_${module}=0"
-		modprobe loop_${module} >/dev/null 2>&1 # fails for kernel >= 2.5.48 if module already loaded
+		[ `lsmod | grep -c "loop_${module}"` -eq 0 ] && modprobe loop_${module} >/dev/null 2>&1 # fails for kernel >= 2.5.48 if module already loaded
 		[ `lsmod | grep -c "loop_${module}"` -eq 1 ] && eval "encryption_${module}=1"
 	done
 
@@ -30,7 +30,7 @@ process_encrypted(){
 	fi
 
 	echo "Loading kernel module for linear mode"
-	modprobe linear 2>&1 >/dev/null || true
+	grep -q linear /proc/mdstat || modprobe linear
 	if ! grep -q linear /proc/mdstat ; then
 		echo "Sorry, you don't have linear RAID support in your kernel."
 		echo "Since V0.4.2 this is required for encrypted LVPs to use"
@@ -94,9 +94,9 @@ process_encrypted(){
 
 	echo "Okay, Now creating files that will hold the pseudo filesystems"
 	unset ddparam
-	[ `dd --help | grep -c stat` -eq 1 ] && ddparam="conv=stat"
 	unset cpparam
-	cp -D ${moviefiles} /dev/null 2>&1 >/dev/null && cpparam="-D"
+	[ `dd --help | grep -c stat` -eq 1 ] && ddparam="conv=stat"
+	[ `cp --help | grep -c "print copyprogress"` -eq 1 ] && cpparam="-D"
 
 	if [ -e ${target}/lvp.data1 ] ; then
 		for x in ${target}/lvp.data* ; do
@@ -114,10 +114,10 @@ process_encrypted(){
 		file="${target}/lvp.data${filesystem}"
 
 		if [ ${filesystem} -lt ${needed_pseudofs} ] ; then
-			size=2147481600
+			size=2147481600 # iso9660 limitation
 		else
 			size=$(( ${filesize} - ( ${filesystem} - 1 ) * 2147481600 ))
-			size=$(( ( ${size} / 2048 ) * 2048 ))
+			size=$(( ( ${size} / 2048 ) * 2048 )) # so we have a round number
 		fi
 
 		if [ -f ${file} ] ; then
@@ -130,8 +130,7 @@ process_encrypted(){
 			fi
 		fi
 		[ -f ${target}/lvp.data${filesystem} ] && continue
-		dd if=/dev/${entrosource} of=${target}/lvp.data${filesystem} \
-			bs=2k count=$(( ${size} / 2048 )) ${ddparam}
+		dd if=/dev/${entrosource} of=${target}/lvp.data${filesystem} bs=2k count=$(( ${size} / 2048 )) ${ddparam}
 	done
 
 	echo "Creating mountpoint"
@@ -222,7 +221,7 @@ process_encrypted(){
 	echo "Umounting filesystem ${mddev}"
 	umount ${mddev}
 	echo "Shutting down ${mddev}"
-	mdadm ${mddev} -S
+	mdadm -S ${mddev}
 
 	lvpdata=${needed_pseudofs}
 	while [ ${lvpdata} -ge 1 ] ; do

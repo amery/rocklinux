@@ -44,6 +44,7 @@ process_plain(){
 
 	echo -n "Checking Livesystem size ... "
 	livesize=`du -sb ${target} | cut -f1`
+	livesize=$(( ${livesize} + `du -sb isolinux | cut -f1` ))
 	echo "`human_readable ${livesize}`"
 	filesize=$(( ${filesize} + ${livesize} ))
 	echo
@@ -81,6 +82,6 @@ process_plain(){
 		eval "export file_${environment##*/}=\"/${file##*/}\""
 	done < ${moviefiles}
 
-	lvpxml=livesystem/lvp.xml
+	lvpxml=${target}/lvp.xml
 	process_create_lvpxml
 }

@@ -2,7 +2,8 @@
 
 echo "Trying to autodetect hardware..."
 
-/bin/hwscan >/tmp/hardware
+read a b version c < /proc/version
+/bin/hwscan -k ${version} >/tmp/hardware
 
 if [ `grep -c '^# ' /tmp/hardware` -gt 0 ] ; then
 	echo 'Found the following:'
@@ -18,7 +19,7 @@ fi
 if [ ! -s /tmp/hardware ] ; then
 	echo "EEP! hwscan screwed up!"
 	echo -n "Trying emergency module loading ... "
-	for x in `find /lib/modules/ -name '*.o'` ; do
+	for x in `find /lib/modules/ -name '*.ko'` ; do
 		insmod ${x} >/dev/null 2>&1
 	done
 	echo "done"
@@ -31,6 +32,10 @@ if [ ! -e /dev/sound/dsp ] ; then
 	echo
 	echo 'Press -<Enter>- when done to continue ...'
 	read
+fi
+
+if [ ! -e /dev/sound/dsp ] ; then
+	echo "Still no sound. Continuing anyway"
 fi
 
 exit 0

@@ -76,10 +76,14 @@ fallback 1
 title  ROCK Linux
 kernel $bootdrive$bootpath/vmlinuz root=$rootdev ro
 initrd $bootdrive$bootpath/initrd.img
+EOT
+	if [ -f /boot/memtest86.bin ] ; then
+	cat << EOT >> /boot/grub/menu.lst
 
 title  MemTest86 (SGI memory tester)
 kernel $bootdrive$bootpath/memtest86.bin
 EOT
+	fi
 
 	gui_message "This is the new /boot/grub/menu.lst file:
 

@@ -1,0 +1,636 @@
+--- ./sysdeps/unix/sysv/linux/mips/Makefile	2003-09-03 05:16:54.000000000 +0200
++++ ./sysdeps/unix/sysv/linux/mips/Makefile	2004-07-20 18:37:41.000000000 +0200
+@@ -21,20 +21,25 @@
+ 	 echo '# error "Never use <bits/syscall.h> directly; include <sys/syscall.h> instead."'; \
+ 	 echo '#endif'; \
+ 	 echo ''; \
++	 echo '#include <sgidefs.h>'; \
+ 	 rm -f $(@:.d=.h).newt; \
+ 	 $(CC) -E -MD -MP -MF $(@:.h=.d)-t -MT '$(@:.d=.h) $(@:.h=.d)' \
+-	       -x c -I $(common-objdir) $(sysincludes) $< -D_LIBC -dM | \
++	       -x c $(+includes) $(sysincludes) $< -D_LIBC -dM | \
+ 	 sed -n 's@^#define __NR_\([^ ]*\) .*$$@#define SYS_\1 __NR_\1@p' \
+ 	     > $(@:.d=.h).newt; \
+ 	 if grep SYS_O32_ $(@:.d=.h).newt > /dev/null; then \
+-	   echo '#if defined _ABI64 && _MIPS_SIM == _ABI64'; \
+-	   sed -n 's/^\(#define SYS_\)N64_/\1/p' < $(@:.d=.h).newt; \
+-	   echo '#elif defined _ABIN32 && _MIPS_SIM == _ABIN32'; \
+-	   sed -n 's/^\(#define SYS_\)N32_/\1/p' < $(@:.d=.h).newt; \
++	   echo '#if _MIPS_SIM == _MIPS_SIM_NABI32'; \
++	   sed -n 's/^\(#define SYS_\)N32_/\1/p' < $(@:.d=.h).newt | \
++		LC_ALL=C sort; \
++	   echo '#elif _MIPS_SIM == _MIPS_SIM_ABI64'; \
++	   sed -n 's/^\(#define SYS_\)N64_/\1/p' < $(@:.d=.h).newt | \
++		LC_ALL=C sort; \
+ 	   echo '#else'; \
+-	   sed -n 's/^\(#define SYS_\)O32_/\1/p' < $(@:.d=.h).newt; \
++	   sed -n 's/^\(#define SYS_\)O32_/\1/p' < $(@:.d=.h).newt | \
++		LC_ALL=C sort; \
+ 	   echo '#endif'; \
+-	   sed -n '/^#define SYS_\([ON]32\|N64\)_/p' < $(@:.d=.h).newt; \
++	   sed -n '/^#define SYS_\([ON]32\|N64\)_/p' < $(@:.d=.h).newt | \
++		LC_ALL=C sort +1.8; \
+ 	 else \
+ 	   cat $(@:.d=.h).newt; \
+ 	 fi; \
+--- ./sysdeps/unix/sysv/linux/mips/bits/fcntl.h	2003-04-04 07:12:00.000000000 +0200
++++ ./sysdeps/unix/sysv/linux/mips/bits/fcntl.h	2004-07-20 18:35:29.000000000 +0200
+@@ -1,5 +1,5 @@
+ /* O_*, F_*, FD_* bit values for Linux.
+-   Copyright (C) 1995, 1996, 1997, 1998, 2000, 2002, 2003
++   Copyright (C) 1995, 1996, 1997, 1998, 2000, 2002, 2003, 2004
+ 	Free Software Foundation, Inc.
+    This file is part of the GNU C Library.
+ 
+@@ -23,7 +23,7 @@
+ #endif
+ 
+ #include <sys/types.h>
+-
++#include <sgidefs.h>
+ 
+ /* open/fcntl - O_SYNC is only implemented on blocks devices and on files
+    located on an ext2 file system */
+@@ -81,7 +81,7 @@
+ #define F_SETLK64	34	/* Set record locking info (non-blocking).  */
+ #define F_SETLKW64	35	/* Set record locking info (blocking).	*/
+ 
+-#if defined __USE_BSD || defined __USE_XOPEN2K
++#if defined __USE_BSD || defined __USE_UNIX98
+ # define F_SETOWN	24	/* Get owner of socket (receiver of SIGIO).  */
+ # define F_GETOWN	23	/* Set owner of socket (receiver of SIGIO).  */
+ #endif
+@@ -143,7 +143,7 @@
+ #ifndef __USE_FILE_OFFSET64
+     __off_t l_start;	/* Offset where the lock begins.  */
+     __off_t l_len;	/* Size of the locked area; zero means until EOF.  */
+-#if ! (defined _ABI64 && _MIPS_SIM == _ABI64)
++#if _MIPS_SIM != _MIPS_SIM_ABI64
+     /* The 64-bit flock structure, used by the n64 ABI, and for 64-bit
+        fcntls in o32 and n32, never has this field.  */
+     long int l_sysid;
+@@ -153,7 +153,7 @@
+     __off64_t l_len;	/* Size of the locked area; zero means until EOF.  */
+ #endif
+     __pid_t l_pid;	/* Process holding the lock.  */
+-#if ! defined __USE_FILE_OFFSET64 && ! (defined _ABI64 && _MIPS_SIM == _ABI64)
++#if ! defined __USE_FILE_OFFSET64 && _MIPS_SIM != _MIPS_SIM_ABI64
+     /* The 64-bit flock structure, used by the n64 ABI, and for 64-bit
+        flock in o32 and n32, never has this field.  */
+     long int pad[4];
+--- ./sysdeps/unix/sysv/linux/mips/bits/sigcontext.h	2003-04-13 13:36:32.000000000 +0200
++++ ./sysdeps/unix/sysv/linux/mips/bits/sigcontext.h	2004-07-20 18:35:29.000000000 +0200
+@@ -1,4 +1,4 @@
+-/* Copyright (C) 1996, 1997, 1998, 2003 Free Software Foundation, Inc.
++/* Copyright (C) 1996, 1997, 1998, 2003, 2004 Free Software Foundation, Inc.
+    This file is part of the GNU C Library.
+ 
+    The GNU C Library is free software; you can redistribute it and/or
+@@ -20,6 +20,8 @@
+ # error "Never use <bits/sigcontext.h> directly; include <signal.h> instead."
+ #endif
+ 
++#include <sgidefs.h>
++
+ #ifndef sigcontext_struct
+ /* Kernel headers before 2.1.1 define a struct sigcontext_struct, but
+    we need sigcontext.  */
+--- ./sysdeps/unix/sysv/linux/mips/bits/stat.h	2003-04-05 21:57:35.000000000 +0200
++++ ./sysdeps/unix/sysv/linux/mips/bits/stat.h	2004-07-20 18:35:28.000000000 +0200
+@@ -1,4 +1,4 @@
+-/* Copyright (C) 1992, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2003
++/* Copyright (C) 1992, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2003, 2004
+ 	Free Software Foundation, Inc.
+    This file is part of the GNU C Library.
+ 
+@@ -21,6 +21,8 @@
+ # error "Never include <bits/stat.h> directly; use <sys/stat.h> instead."
+ #endif
+ 
++#include <sgidefs.h>
++
+ /* Versions of the `struct stat' data structure.  */
+ #define _STAT_VER_LINUX_OLD	1
+ #define _STAT_VER_KERNEL	1
+--- ./sysdeps/unix/sysv/linux/mips/configure	2003-03-28 07:11:03.000000000 +0100
++++ ./sysdeps/unix/sysv/linux/mips/configure	2004-07-20 18:35:29.000000000 +0200
+@@ -30,6 +30,7 @@
+ 	-e 's,__NR_N64_N32_,__NR_N32_,g' \
+ 	-e 's,__NR_N64_N64_,__NR_N64_,g' \
+     | awk > asm-unistd.h '
++BEGIN { print "#include <sgidefs.h>"; }
+ /^#define __NR.*unused/ { print; next; }
+ /^#define __NR_N64__exit __NR_N64_exit/ {
+ 	print "#define __NR__exit __NR_exit";
+@@ -50,7 +51,7 @@
+ 	name = $2;
+ 	sub (/_N32_/, "_", name);
+ 	print;
+-	print "#if defined _ABIN32 && _MIPS_SIM == _ABIN32";
++	print "#if _MIPS_SIM == _MIPS_SIM_NABI32";
+ 	print "# define " name " " $2;
+ 	print "#endif";
+ 	next;
+@@ -59,7 +60,7 @@
+ 	name = $2;
+ 	sub (/_N64_/, "_", name);
+ 	print;
+-	print "#if defined _ABI64 && _MIPS_SIM == _ABI64";
++	print "#if _MIPS_SIM == _MIPS_SIM_ABI64";
+ 	print "# define " name " " $2;
+ 	print "#endif";
+ 	next;
+--- ./sysdeps/unix/sysv/linux/mips/configure.in	2003-03-17 16:50:05.000000000 +0100
++++ ./sysdeps/unix/sysv/linux/mips/configure.in	2004-07-20 18:35:29.000000000 +0200
+@@ -30,6 +30,7 @@
+ 	-e 's,__NR_N64_N32_,__NR_N32_,g' \
+ 	-e 's,__NR_N64_N64_,__NR_N64_,g' \
+     | awk > asm-unistd.h '
++BEGIN { print "#include <sgidefs.h>"; }
+ /^#define __NR.*unused/ { print; next; }
+ /^#define __NR_N64__exit __NR_N64_exit/ {
+ 	print "#define __NR__exit __NR_exit";
+@@ -50,7 +51,7 @@
+ 	name = $2;
+ 	sub (/_N32_/, "_", name);
+ 	print;
+-	print "#if defined _ABIN32 && _MIPS_SIM == _ABIN32";
++	print "#if _MIPS_SIM == _MIPS_SIM_NABI32";
+ 	print "# define " name " " $2;
+ 	print "#endif";
+ 	next;
+@@ -59,7 +60,7 @@
+ 	name = $2;
+ 	sub (/_N64_/, "_", name);
+ 	print;
+-	print "#if defined _ABI64 && _MIPS_SIM == _ABI64";
++	print "#if _MIPS_SIM == _MIPS_SIM_ABI64";
+ 	print "# define " name " " $2;
+ 	print "#endif";
+ 	next;
+--- ./sysdeps/unix/sysv/linux/mips/kernel_stat.h	2003-04-05 21:57:35.000000000 +0200
++++ ./sysdeps/unix/sysv/linux/mips/kernel_stat.h	2004-07-20 18:35:29.000000000 +0200
+@@ -1,3 +1,4 @@
++#include <sgidefs.h>
+ /* As tempting as it is to define XSTAT_IS_XSTAT64 for n64, the
+    userland data structures are not identical, because of different
+    padding.  */
+--- ./sysdeps/unix/sysv/linux/mips/mips64/syscalls.list	2003-09-03 05:16:25.000000000 +0200
++++ ./sysdeps/unix/sysv/linux/mips/mips64/syscalls.list	2004-07-21 08:13:15.000000000 +0200
+@@ -16,5 +16,6 @@
+ shmdt		-	shmdt		i:s	__shmdt		shmdt
+ shmget		-	shmget		i:iii	__shmget	shmget
+ semop		-	semop		i:ipi	__semop		semop
++semtimedop	-	semtimedop	i:ipip	semtimedop
+ semget		-	semget		i:iii	__semget	semget
+ semctl		-	semctl		i:iiii	__semctl	semctl
+--- ./sysdeps/unix/sysv/linux/mips/pread.c	2003-09-11 01:38:52.000000000 +0200
++++ ./sysdeps/unix/sysv/linux/mips/pread.c	2004-07-20 18:35:29.000000000 +0200
+@@ -1,4 +1,5 @@
+-/* Copyright (C) 1997, 1998, 2000, 2002, 2003 Free Software Foundation, Inc.
++/* Copyright (C) 1997, 1998, 2000, 2002, 2003, 2004
++   Free Software Foundation, Inc.
+    This file is part of the GNU C Library.
+    Contributed by Ulrich Drepper <drepper@cygnus.com>, 1997.
+ 
+@@ -27,6 +28,7 @@
+ #include <bp-checks.h>
+ 
+ #include <kernel-features.h>
++#include <sgidefs.h>
+ 
+ #ifdef __NR_pread64             /* Newer kernels renamed but it's the same.  */
+ # ifdef __NR_pread
+@@ -51,14 +53,14 @@
+ {
+   ssize_t result;
+ 
+-#if (defined _ABI64 && _MIPS_SIM != _ABI64)
++#if _MIPS_SIM != _MIPS_SIM_ABI64
+   assert (sizeof (offset) == 4);
+ #endif
+ 
+   if (SINGLE_THREAD_P)
+     {
+       /* First try the syscall.  */
+-#if (defined _ABIN32 && _MIPS_SIM == _ABIN32) || (defined _ABI64 && _MIPS_SIM == _ABI64)
++#if _MIPS_SIM == _MIPS_SIM_NABI32 || _MIPS_SIM == _MIPS_SIM_ABI64
+       result = INLINE_SYSCALL (pread, 4, fd, CHECK_N (buf, count), count,
+ 			       offset);
+ #else
+@@ -76,7 +78,7 @@
+   int oldtype = LIBC_CANCEL_ASYNC ();
+ 
+   /* First try the syscall.  */
+-#if (defined _ABIN32 && _MIPS_SIM == _ABIN32) || (defined _ABI64 && _MIPS_SIM == _ABI64)
++#if _MIPS_SIM == _MIPS_SIM_NABI32 || _MIPS_SIM_ABI64
+   result = INLINE_SYSCALL (pread, 4, fd, CHECK_N (buf, count), count, offset);
+ #else
+   result = INLINE_SYSCALL (pread, 6, fd, CHECK_N (buf, count), count, 0,
+--- ./sysdeps/unix/sysv/linux/mips/pread64.c	2003-09-11 01:38:52.000000000 +0200
++++ ./sysdeps/unix/sysv/linux/mips/pread64.c	2004-07-20 18:35:29.000000000 +0200
+@@ -1,4 +1,5 @@
+-/* Copyright (C) 1997, 1998, 2000, 2002, 2003 Free Software Foundation, Inc.
++/* Copyright (C) 1997, 1998, 2000, 2002, 2003, 2004
++   Free Software Foundation, Inc.
+    This file is part of the GNU C Library.
+    Contributed by Ulrich Drepper <drepper@cygnus.com>, 1997.
+ 
+@@ -26,6 +27,7 @@
+ #include <bp-checks.h>
+ 
+ #include <kernel-features.h>
++#include <sgidefs.h>
+ 
+ #ifdef __NR_pread64             /* Newer kernels renamed but it's the same.  */
+ # ifdef __NR_pread
+@@ -54,7 +56,7 @@
+   if (SINGLE_THREAD_P)
+     {
+      /* First try the syscall.  */
+-#if (defined _ABIN32 && _MIPS_SIM == _ABIN32) || (defined _ABI64 && _MIPS_SIM == _ABI64)
++#if _MIPS_SIM == _MIPS_SIM_NABI32 || _MIPS_SIM == _MIPS_SIM_ABI64
+       result = INLINE_SYSCALL (pread, 4, fd, CHECK_N (buf, count), count,
+ 			       offset);
+ #else
+@@ -73,7 +75,7 @@
+   int oldtype = LIBC_CANCEL_ASYNC ();
+ 
+   /* First try the syscall.  */
+-#if (defined _ABIN32 && _MIPS_SIM == _ABIN32) || (defined _ABI64 && _MIPS_SIM == _ABI64)
++#if _MIPS_SIM == _MIPS_SIM_NABI32 || _MIPS_SIM == _MIPS_SIM_ABI64
+   result = INLINE_SYSCALL (pread, 4, fd, CHECK_N (buf, count), count, offset);
+ #else
+   result = INLINE_SYSCALL (pread, 6, fd, CHECK_N (buf, count), count, 0,
+--- ./sysdeps/unix/sysv/linux/mips/ptrace.c	2003-09-03 05:21:27.000000000 +0200
++++ ./sysdeps/unix/sysv/linux/mips/ptrace.c	2004-07-20 18:35:29.000000000 +0200
+@@ -1,4 +1,4 @@
+-/* Copyright (C) 1995, 1996, 1997, 1998, 2000, 2002, 2003
++/* Copyright (C) 1995, 1996, 1997, 1998, 2000, 2002, 2003, 2004
+ 	Free Software Foundation, Inc.
+    This file is part of the GNU C Library.
+ 
+@@ -26,8 +26,9 @@
+ #include <sysdep.h>
+ #include <sys/syscall.h>
+ #include <bp-checks.h>
++#include <sgidefs.h>
+ 
+-#if defined _ABIN32 && _MIPS_SIM == _ABIN32
++#if  _MIPS_SIM == _MIPS_SIM_NABI32
+ __extension__ typedef long long int reg_type;
+ #else
+ typedef long int reg_type;
+--- ./sysdeps/unix/sysv/linux/mips/pwrite.c	2003-09-11 01:38:52.000000000 +0200
++++ ./sysdeps/unix/sysv/linux/mips/pwrite.c	2004-07-20 18:35:29.000000000 +0200
+@@ -1,4 +1,5 @@
+-/* Copyright (C) 1997, 1998, 2000, 2002, 2003 Free Software Foundation, Inc.
++/* Copyright (C) 1997, 1998, 2000, 2002, 2003, 2004
++   Free Software Foundation, Inc.
+    This file is part of the GNU C Library.
+    Contributed by Ulrich Drepper <drepper@cygnus.com>, 1997.
+ 
+@@ -27,6 +28,7 @@
+ #include <bp-checks.h>
+ 
+ #include <kernel-features.h>
++#include <sgidefs.h>
+ 
+ #ifdef __NR_pwrite64            /* Newer kernels renamed but it's the same.  */
+ # ifdef __NR_pwrite
+@@ -51,14 +53,14 @@
+ {
+   ssize_t result;
+ 
+-#if (defined _ABI64 && _MIPS_SIM != _ABI64)
++#if _MIPS_SIM == _MIPS_SIM_ABI64
+   assert (sizeof (offset) == 4);
+ #endif
+ 
+   if (SINGLE_THREAD_P)
+     {
+       /* First try the syscall.  */
+-#if (defined _ABIN32 && _MIPS_SIM == _ABIN32) || (defined _ABI64 && _MIPS_SIM == _ABI64)
++#if _MIPS_SIM == _MIPS_SIM_NABI32 || _MIPS_SIM == _MIPS_SIM_ABI64
+       result = INLINE_SYSCALL (pwrite, 4, fd, CHECK_N (buf, count), count,
+ 			       offset);
+ #else
+@@ -76,7 +78,7 @@
+   int oldtype = LIBC_CANCEL_ASYNC ();
+ 
+   /* First try the syscall.  */
+-#if (defined _ABIN32 && _MIPS_SIM == _ABIN32) || (defined _ABI64 && _MIPS_SIM == _ABI64)
++#if _MIPS_SIM == _MIPS_SIM_NABI32 || _MIPS_SIM == _MIPS_SIM_ABI64
+   result = INLINE_SYSCALL (pwrite, 4, fd, CHECK_N (buf, count), count, offset);
+ #else
+   result = INLINE_SYSCALL (pwrite, 6, fd, CHECK_N (buf, count), count, 0,
+--- ./sysdeps/unix/sysv/linux/mips/pwrite64.c	2003-09-11 01:38:52.000000000 +0200
++++ ./sysdeps/unix/sysv/linux/mips/pwrite64.c	2004-07-20 18:35:29.000000000 +0200
+@@ -1,4 +1,5 @@
+-/* Copyright (C) 1997, 1998, 2000, 2002, 2003 Free Software Foundation, Inc.
++/* Copyright (C) 1997, 1998, 2000, 2002, 2003, 2004
++   Free Software Foundation, Inc.
+    This file is part of the GNU C Library.
+    Contributed by Ralf Baechle <ralf@gnu.org>, 1998.
+ 
+@@ -53,7 +54,7 @@
+   if (SINGLE_THREAD_P)
+     {
+      /* First try the syscall.  */
+-#if (defined _ABIN32 && _MIPS_SIM == _ABIN32) || (defined _ABI64 && _MIPS_SIM == _ABI64)
++#if _MIPS_SIM == _MIPS_SIM_NABI32 || _MIPS_SIM == _MIPS_SIM_ABI64
+       result = INLINE_SYSCALL (pwrite, 4, fd, CHECK_N (buf, count), count,
+ 			       offset);
+ #else
+@@ -73,7 +74,7 @@
+   int oldtype = LIBC_CANCEL_ASYNC ();
+ 
+   /* First try the syscall.  */
+-#if (defined _ABIN32 && _MIPS_SIM == _ABIN32) || (defined _ABI64 && _MIPS_SIM == _ABI64)
++#if _MIPS_SIM == _MIPS_SIM_NABI32 || _MIPS_SIM == _MIPS_SIM_ABI64
+   result = INLINE_SYSCALL (pwrite, 4, fd, CHECK_N (buf, count), count, offset);
+ #else
+   result = INLINE_SYSCALL (pwrite, 6, fd, CHECK_N (buf, count), count, 0,
+--- ./sysdeps/unix/sysv/linux/mips/sigaction.c	2003-09-03 05:21:27.000000000 +0200
++++ ./sysdeps/unix/sysv/linux/mips/sigaction.c	2004-07-20 18:35:29.000000000 +0200
+@@ -1,4 +1,5 @@
+-/* Copyright (C) 1997,1998,1999,2000,2002,2003 Free Software Foundation, Inc.
++/* Copyright (C) 1997,1998,1999,2000,2002,2003, 2004
++   Free Software Foundation, Inc.
+    This file is part of the GNU C Library.
+ 
+    The GNU C Library is free software; you can redistribute it and/or
+@@ -23,6 +24,8 @@
+ #include <sysdep.h>
+ #include <sys/syscall.h>
+ 
++#include <sgidefs.h>
++
+ #include "kernel-features.h"
+ 
+ /* The difference here is that the sigaction structure used in the
+--- ./sysdeps/unix/sysv/linux/mips/sigcontextinfo.h	2003-04-13 13:36:32.000000000 +0200
++++ ./sysdeps/unix/sysv/linux/mips/sigcontextinfo.h	2004-07-20 18:35:29.000000000 +0200
+@@ -1,4 +1,4 @@
+-/* Copyright (C) 2000, 2001, 2003 Free Software Foundation, Inc.
++/* Copyright (C) 2000, 2001, 2003, 2004 Free Software Foundation, Inc.
+    This file is part of the GNU C Library.
+    Contributed by Andreas Jaeger <aj@suse.de>, 2000.
+ 
+@@ -18,6 +18,8 @@
+    02111-1307 USA.  */
+ 
+ 
++#include <sgidefs.h>
++
+ #if _MIPS_SIM == _MIPS_SIM_ABI32
+ 
+ #define SIGCONTEXT unsigned long _code, struct sigcontext *
+--- ./sysdeps/unix/sysv/linux/mips/sys/procfs.h	2003-03-17 16:47:13.000000000 +0100
++++ ./sysdeps/unix/sysv/linux/mips/sys/procfs.h	2004-07-20 18:35:28.000000000 +0200
+@@ -1,4 +1,4 @@
+-/* Copyright (C) 1996, 1997, 1999, 2000, 2002, 2003
++/* Copyright (C) 1996, 1997, 1999, 2000, 2002, 2003, 2004
+ 	Free Software Foundation, Inc.
+    This file is part of the GNU C Library.
+ 
+@@ -28,12 +28,13 @@
+ #include <sys/time.h>
+ #include <sys/types.h>
+ #include <sys/user.h>
++#include <sgidefs.h>
+ 
+ /* ELF register definitions */
+ #define ELF_NGREG	45
+ #define ELF_NFPREG	33
+ 
+-#if defined _ABIN32 && _MIPS_SIM == _ABIN32
++#if _MIPS_SIM == _MIPS_SIM_NABI32
+ __extension__ typedef unsigned long long elf_greg_t;
+ #else
+ typedef unsigned long elf_greg_t;
+@@ -64,7 +65,7 @@
+   {
+     struct elf_siginfo pr_info;		/* Info associated with signal.  */
+     short int pr_cursig;		/* Current signal.  */
+-#if defined _ABIN32 && _MIPS_SIM == _ABIN32
++#if _MIPS_SIM == _MIPS_SIM_NABI32
+     __extension__ unsigned long long int pr_sigpend;
+     __extension__ unsigned long long int pr_sighold;
+ #else
+@@ -92,7 +93,7 @@
+     char pr_sname;			/* Char for pr_state.  */
+     char pr_zomb;			/* Zombie.  */
+     char pr_nice;			/* Nice val.  */
+-#if defined _ABIN32 && _MIPS_SIM == _ABIN32
++#if _MIPS_SIM == _MIPS_SIM_NABI32
+     __extension__ unsigned long long int pr_flag;
+ #else
+     unsigned long int pr_flag;		/* Flags.  */
+--- ./sysdeps/unix/sysv/linux/mips/sys/ptrace.h	2003-03-17 16:48:52.000000000 +0100
++++ ./sysdeps/unix/sysv/linux/mips/sys/ptrace.h	2004-07-20 18:35:28.000000000 +0200
+@@ -1,5 +1,5 @@
+ /* `ptrace' debugger support interface.  Linux version.
+-   Copyright (C) 1996, 1997, 1998, 1999, 2000, 2002, 2003
++   Copyright (C) 1996, 1997, 1998, 1999, 2000, 2002, 2003, 2004
+ 	Free Software Foundation, Inc.
+    This file is part of the GNU C Library.
+ 
+@@ -22,6 +22,7 @@
+ #define _SYS_PTRACE_H	1
+ 
+ #include <features.h>
++#include <sgidefs.h>
+ 
+ __BEGIN_DECLS
+ 
+@@ -123,7 +124,7 @@
+    appear (those that are used for the particular request) as:
+      pid_t PID, void *ADDR, int DATA, void *ADDR2
+    after REQUEST.  */
+-#if defined _ABIN32 && _MIPS_SIM == _ABIN32
++#if _MIPS_SIM == _MIPS_SIM_NABI32
+ __extension__ extern long long int ptrace
+   (enum __ptrace_request __request, ...) __THROW;
+ #else
+--- ./sysdeps/unix/sysv/linux/mips/sys/tas.h	2003-03-14 08:03:36.000000000 +0100
++++ ./sysdeps/unix/sysv/linux/mips/sys/tas.h	2004-07-20 18:35:28.000000000 +0200
+@@ -1,4 +1,4 @@
+-/* Copyright (C) 2000, 2002, 2003 Free Software Foundation, Inc.
++/* Copyright (C) 2000, 2002, 2003, 2004 Free Software Foundation, Inc.
+    This file is part of the GNU C Library.
+    Contributed by Maciej W. Rozycki <macro@ds2.pg.gda.pl>, 2000.
+ 
+@@ -22,6 +22,8 @@
+ 
+ #include <features.h>
+ 
++#include <sgidefs.h>
++
+ __BEGIN_DECLS
+ 
+ extern int _test_and_set (int *p, int v) __THROW;
+--- ./sysdeps/unix/sysv/linux/mips/sys/ucontext.h	2003-05-01 01:22:09.000000000 +0200
++++ ./sysdeps/unix/sysv/linux/mips/sys/ucontext.h	2004-07-20 18:35:28.000000000 +0200
+@@ -1,4 +1,4 @@
+-/* Copyright (C) 1997, 1998, 2000, 2003 Free Software Foundation, Inc.
++/* Copyright (C) 1997, 1998, 2000, 2003, 2004 Free Software Foundation, Inc.
+    This file is part of the GNU C Library.
+ 
+    The GNU C Library is free software; you can redistribute it and/or
+@@ -28,6 +28,7 @@
+    included in <signal.h>.  */
+ #include <bits/sigcontext.h>
+ 
++#include <sgidefs.h>
+ 
+ /* Type for general register.  Even in o32 we assume 64-bit registers,
+    like the kernel.  */
+--- ./sysdeps/unix/sysv/linux/mips/sys/user.h	2003-04-13 13:36:32.000000000 +0200
++++ ./sysdeps/unix/sysv/linux/mips/sys/user.h	2004-07-20 18:35:28.000000000 +0200
+@@ -1,4 +1,4 @@
+-/* Copyright (C) 2002, 2003 Free Software Foundation, Inc.
++/* Copyright (C) 2002, 2003, 2004 Free Software Foundation, Inc.
+    This file is part of the GNU C Library.
+ 
+    The GNU C Library is free software; you can redistribute it and/or
+@@ -19,6 +19,8 @@
+ #ifndef _SYS_USER_H
+ #define _SYS_USER_H	1
+ 
++#include <sgidefs.h>
++
+ /* The whole purpose of this file is for GDB and GDB only.  Don't read
+    too much into it.  Don't use it for anything other than GDB unless
+    you know what you are doing.  */
+--- libc/sysdeps/mips/machine-gmon.h	2003/03/17 15:53:37	1.7
++++ libc/sysdeps/mips/machine-gmon.h	2004/07/20 16:35:31	1.8
+@@ -18,6 +18,8 @@
+    Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
+    02111-1307 USA.  */
+ 
++#include <sgidefs.h>
++
+ #define _MCOUNT_DECL(frompc,selfpc) \
+ static void __attribute_used__ __mcount (u_long frompc, u_long selfpc)
+ 
+@@ -81,10 +83,10 @@
+ # define CPRETURN
+ #endif
+ 
+-#if defined _ABIN32 && _MIPS_SIM == _ABIN32
++#if _MIPS_SIM == _MIPS_SIM_NABI32
+ # define PTR_ADDU_STRING "add" /* no u */
+ # define PTR_SUBU_STRING "sub" /* no u */
+-#elif defined _ABI64 && _MIPS_SIM == _ABI64
++#elif _MIPS_SIM == _MIPS_SIM_ABI64
+ # define PTR_ADDU_STRING "daddu"
+ # define PTR_SUBU_STRING "dsubu"
+ #else
+
+--- ./sysdeps/mips/atomicity.h.orig	2004-07-30 19:08:54.638252096 +0200
++++ ./sysdeps/mips/atomicity.h	2004-07-30 19:10:20.967128112 +0200
+@@ -21,6 +21,7 @@
+ #define _MIPS_ATOMICITY_H    1
+ 
+ #include <inttypes.h>
++#include <sgidefs.h>
+ 
+ static inline int
+ __attribute__ ((unused))
+@@ -85,7 +86,7 @@
+ #if _MIPS_SIM == _MIPS_SIM_ABI32
+      ".set	mips2\n\t"
+ #endif
+-#if defined _ABI64 && _MIPS_SIM == _ABI64
++#if _MIPS_SIM == _MIPS_SIM_ABI64
+      "lld	%1,%5\n\t"
+ #else
+      "ll	%1,%5\n\t"
+@@ -93,7 +94,7 @@
+      "move	%0,$0\n\t"
+      "bne	%1,%3,2f\n\t"
+      "move	%0,%4\n\t"
+-#if defined _ABI64 && _MIPS_SIM == _ABI64
++#if _MIPS_SIM == _MIPS_SIM_ABI64
+      "scd	%0,%2\n\t"
+ #else
+      "sc	%0,%2\n\t"
+--- ./sysdeps/mips/dl-machine.h	2004/04/15 14:08:16	1.71
++++ ./sysdeps/mips/dl-machine.h	2004/07/20 16:35:32	1.74
+@@ -130,7 +130,7 @@
+ }
+ 
+ /* The MSB of got[1] of a gnu object is set to identify gnu objects.  */
+-#if defined _ABI64 && _MIPS_SIM == _ABI64
++#if _MIPS_SIM == _MIPS_SIM_ABI64
+ # define ELF_MIPS_GNU_GOT1_MASK	0x8000000000000000L
+ #else
+ # define ELF_MIPS_GNU_GOT1_MASK	0x80000000L
+@@ -254,7 +254,7 @@
+ 	}
+     }
+ 
+-  INTUSE (_dl_signal_error) (0, NULL, NULL, "cannot find runtime link map");
++  _dl_signal_error (0, NULL, NULL, "cannot find runtime link map");
+   return NULL;
+ }
+ 
+@@ -281,26 +281,30 @@
+ 
+ #else /* _MIPS_SIM == _MIPS_SIM_NABI32 || _MIPS_SIM == _MIPS_SIM_ABI64 */
+ 
+-#define ELF_DL_FRAME_SIZE 64
++#define ELF_DL_FRAME_SIZE 80
+ 
+ #define ELF_DL_SAVE_ARG_REGS "\
+-	sd	$15, 56($29)\n						      \
++	sd	$15, 72($29)\n						      \
+ 	sd	$4, 8($29)\n						      \
+ 	sd	$5, 16($29)\n						      \
+ 	sd	$6, 24($29)\n						      \
+ 	sd	$7, 32($29)\n						      \
+ 	sd	$8, 40($29)\n						      \
+ 	sd	$9, 48($29)\n						      \
++	sd	$10, 56($29)\n						      \
++	sd	$11, 64($29)\n						      \
+ "
+ 
+ #define ELF_DL_RESTORE_ARG_REGS "\
+-	ld	$31, 56($29)\n						      \
++	ld	$31, 72($29)\n						      \
+ 	ld	$4, 8($29)\n						      \
+ 	ld	$5, 16($29)\n						      \
+ 	ld	$6, 24($29)\n						      \
+ 	ld	$7, 32($29)\n						      \
+ 	ld	$8, 40($29)\n						      \
+ 	ld	$9, 48($29)\n						      \
++	ld	$10, 56($29)\n						      \
++	ld	$11, 64($29)\n						      \
+ "
+ 
+ #define IFABIO32(X)
+@@ -362,17 +366,17 @@
+ 									      \
+ 	    if (version->hash != 0)					      \
+ 	      {								      \
+-		value = _dl_lookup_versioned_symbol(strtab + sym->st_name, l, \
+-						    &sym, l->l_scope, version,\
+-						    ELF_RTYPE_CLASS_PLT, 0);  \
++		value = _dl_lookup_symbol_x (strtab + sym->st_name, l, 	      \
++					     &sym, l->l_scope, version,	      \
++					     ELF_RTYPE_CLASS_PLT, 0, 0);      \
+ 		break;							      \
+ 	      }								      \
+ 	    /* Fall through.  */					      \
+ 	  }								      \
+ 	case 0:								      \
+-	  value = _dl_lookup_symbol (strtab + sym->st_name, l, &sym,	      \
+-				     l->l_scope, ELF_RTYPE_CLASS_PLT,	      \
+-				     DL_LOOKUP_ADD_DEPENDENCY);		      \
++	  value = _dl_lookup_symbol_x (strtab + sym->st_name, l, &sym,	      \
++				       l->l_scope, 0, ELF_RTYPE_CLASS_PLT,    \
++				       DL_LOOKUP_ADD_DEPENDENCY, 0);	      \
+ 	}								      \
+ 									      \
+       /* Currently value contains the base load address of the object	      \

@@ -94,3 +94,25 @@
  echo "${ECHO_T}yes" >&6
  else
    echo "$as_me: failed program was:" >&5
+--- ./plugins/irmc_sync/src/Makefile.am.orig	2004-09-06 22:35:03.136190448 +0200
++++ ./plugins/irmc_sync/src/Makefile.am	2004-09-06 22:35:15.150364016 +0200
+@@ -21,7 +21,7 @@
+ libirmc_bluetooth_la_SOURCES = \
+ 	irmc_bluetooth.c irmc_bluetooth.h
+ 
+-libirmc_bluetooth_la_LIBADD = -lbluetooth -lsdp -lpthread
++libirmc_bluetooth_la_LIBADD = -lbluetooth -lpthread
+ 
+ libirmc_sync_la_SOURCES = \
+ 	interface.c interface.h \
+--- ./plugins/irmc_sync/src/Makefile.in.orig	2004-09-06 22:35:07.207571504 +0200
++++ ./plugins/irmc_sync/src/Makefile.in	2004-09-06 22:35:23.023167168 +0200
+@@ -109,7 +109,7 @@
+ 	irmc_bluetooth.c irmc_bluetooth.h
+ 
+ 
+-libirmc_bluetooth_la_LIBADD = -lbluetooth -lsdp -lpthread
++libirmc_bluetooth_la_LIBADD = -lbluetooth -lpthread
+ 
+ libirmc_sync_la_SOURCES = \
+ 	interface.c interface.h \

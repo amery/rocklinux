@@ -1,0 +1,10 @@
+--- ./src/modules/audio-phone.c.orig	2004-12-02 02:32:42.335616832 +0100
++++ ./src/modules/audio-phone.c	2004-12-02 02:32:59.888948320 +0100
+@@ -26,6 +26,7 @@
+ #include <sys/ioctl.h>
+ #include <linux/telephony.h>
+ #ifdef IXJ_ENHANCED
++#include <linux/compiler.h>
+ #include <linux/ixjuser.h>
+ #endif
+ #include <sys/stat.h>

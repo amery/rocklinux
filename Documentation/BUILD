@@ -7,8 +7,8 @@
 	===============
 
 For building ROCK Linux you need a good internet connection for downloading the
-sources, a lot of disk space, a fast computer and some time. Depending on the
-configuration you are going to choose and your hardware, a build of ROCK Linux
+sources, a lot of disk space, a fast computer and some time. Depending on your
+hardware and the configuration you are going to choose, a build of ROCK Linux
 can take some days to complete. You also need root permissions to build ROCK
 Linux.
 
@@ -17,7 +17,7 @@ It is also possible to build ROCK Linux on other distributions, but don't expect
 it to work without some hacking ...
 
 If you are building on older ROCK Linux versions (1.4/1.6) you should at least
-make sure to upgrade/install the packages "Curl" "mktemp" and "coreutils".
+make sure to upgrade/install the packages "curl", "mktemp" and "coreutils".
 
 
 	2. Extracting the sources
@@ -25,7 +25,8 @@ make sure to upgrade/install the packages "Curl" "mktemp" and "coreutils".
 
 Download the ROCK Linux sources (a tar.bz2 file of a few MB) from
 www.rocklinux.org and extract it somewhere as root. The resulting directory
-is the ROCK Linux 'base' directory.
+is the ROCK Linux 'base' directory. Change to this directory for the following
+steps.
 
 
 	3. Configure the build
@@ -36,14 +37,14 @@ your configuration (or simply leave the default values untouched). You need to
 start the Config tool - even if you don't want to change anything.
 
 It's also possible to have multiple configurations. Use the command
-'./scripts/Config -cfg config-name' (where config-name can be any text not
+'./scripts/Config -cfg <config-name>' (where <config-name> can be any text not
 containing whitespaces or any special characters). If you have choosen a name
-for your configuration, you need to pass the '-cfg config-name' option as
+for your configuration, you need to pass the '-cfg <config-name>' option as
 first parameter to all the other scripts too - so they know which
 configuration to read.
 
 The default configuration name (when no -cfg option is passed) is 'default'.
-The configuration is stored in the 'config/config-name' directory.
+The configuration is stored in the 'config/<config-name>' directory.
 
 
 	4. Downloading the package sources
@@ -51,7 +52,7 @@ The configuration is stored in the 'config/config-name' directory.
 
 Now you need to download the sources for the packages which are build in the
 configuration you have choosen. Simply type: 
-'./scripts/Download -cfg config-name -required'
+'./scripts/Download -cfg <config-name> -required'
 If you want to download the sources for all packages (regardless if they are
 required for your configuration), type './scripts/Download -all'.
 
@@ -59,16 +60,28 @@ required for your configuration), type './scripts/Download -all'.
 	5. Building the distribution
 	============================
 
-Type './scripts/Build-Target -cfg config-name'. As mentioned already, it may 
+Type './scripts/Build-Target -cfg <config-name>'. As mentioned already, it may 
 take multiple days for the build to complete.
 
 The resulting distribution is stored in the build/ directory.
 
 
-	6. Creating CD Images
-	=====================
+	6. Creating bootable floppy images
+	==================================
 
-To create a CD-Image to install from you can use './scripts/Create-ISO'.
+Bootable floppy images are created along with each 'bootdisk' target, and are
+stored in build/<config-id>/ROCK/bootdisk/, where <config-id> corresponds to
+the configuration you choose.
+
+The images are named floppy1.img, etc. and can be copied to floppy disks e.g.
+with 'dd'. Simply type: 'dd if=floppy1.img of=/dev/floppy/0 bs=512' for every
+image.
+
+
+	7. Creating CD/DVD images
+	=========================
+
+To create CD images to install from you can use './scripts/Create-ISO'.
 Create-ISO takes at least two arguments: a name used as prefix for the
 filename of the ISO images and the name of the configuration you
 just built (usually 'default' or whatever you choose after -cfg).
@@ -78,7 +91,7 @@ Another optional parameter is -mkdebug which will create a VMWare-Config
 to be used with your newly created iso.
 
 The iso will, however, not be bootable, unless you configured and built
-a 'bootdisk'-Target. This configuraton has to be the first configuration to
+a 'bootdisk' target. This configuraton has to be the first configuration to
 be passed to './scripts/Create-ISO'.
 
 So, a complete call might look like this:
@@ -97,7 +110,7 @@ If you have a DVD-Writer, you could also pass '-size 4300' and write that iso
 on a DVD. That would make approx. 5 to 6 builds on one DVD.
 
 
-	7. Cleaning up the source tree
+	8. Cleaning up the source tree
 	==============================
 
 Simply type './scripts/Cleanup' to remove the src* directories. DO NOT REMOVE

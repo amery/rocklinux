@@ -7,7 +7,7 @@ Please use the tags in the same order as they are listed in this file. Add
 a blank line wherever a '--' is found here and use the X-* flags after all
 the other tags. "./scripts/Create-DescPatch" can help you here.
 
-All tags marked with (*) are required. And should be present in every .desc
+All tags marked with (*) are required and should be present in every .desc
 file.
 
  - Clifford and Rene 
@@ -67,7 +67,7 @@ file.
 
   Format:  [R] + intel
   Format:  [R] - sparc powerpc
-  Usually a packge is built on all architectures. If you are using [R]
+  Usually a package is built on all architectures. If you are using [R]
   with '+' the package will only be built for the given architectures.
   If you use it with '-' it will be built for all except the given
   architectures.

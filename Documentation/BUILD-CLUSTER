@@ -21,7 +21,7 @@ ROCK Linux has it's own job scheduler to distribute jobs over the cluster
 nodes. But you can also use any job scheduler you have already installed on
 your cluster to do the job.
 
-When building ROCK Linux in parallel (cluster) mode, the build scripts simple
+When building ROCK Linux in parallel (cluster) mode, the build scripts simply
 decide based on the package dependencies which packages might be build in
 parallel and builds them parallel (instead of serial, which is the default
 behavior).
@@ -35,7 +35,7 @@ config option is not available when making a parallel (cluster) build.
 	===============
 
 In a famous paper Amdahl observed that one must consider an entire application
-when consider the level of available parallelism. If only one percent of a
+when considering the level of available parallelism. If only one percent of a
 problem fails to parallelize, then no matter how much parallelism is available
 for the rest, the problem can never be solved more than one hundred times
 faster than in the sequential case.
@@ -49,7 +49,7 @@ after the base packages have been built).
 
 The tool './scripts/Create-ParaSim' can be used to "simulate" a parallel build.
 Just configure your build and run './scripts/Create-ParaSim'. The output is a
-graph showing how many paralell jobs are available for building in which phase
+graph showing how many parallel jobs are available for building in which phase
 of the Build. It looks like this:
 
   ----+----------------------------------------------------------------------+
@@ -76,12 +76,12 @@ of the Build. It looks like this:
 You can see that the build doesn't parallelize very well in the early phase
 but soon reaches a state where over 100 jobs can be built at the same time.
 
-That the number of available jobs going down in the right side of the graph
+That the number of available jobs is going down in the right side of the graph
 is normal. When E.g. 400 of 424 jobs are already built, there are only 24
 jobs left and so it's not possible anymore to have 100 parallel jobs.
 
 Note that the X-axis is the number of jobs built already - and not the time.
-so that graph is telling you somethign about the level of parallelism which
+so that graph is telling you something about the level of parallelism which
 is possible in your selected configuration in general - but it does not provide
 exact numbers how much faster the build would be e.g. on a 16 node cluster.
 
@@ -89,7 +89,7 @@ You can pass the option '-jobs N' to ./scripts/Create-ParaSim to get a
 simulation of the build on a cluster with N nodes. The script assumes that the
 cluster nodes are as fast as the system which has done the reference build. If
 your cluster nodes are e.g. about 20% faster, your build will be about 20%
-sooner compleated as printed in the stat. You can even compare builds - e.g.
+sooner completed as printed in the stat. You can even compare builds - e.g.
 "-jobs 1,2,8" would compare a "normal" single-node build with a build on a
 2-node cluster and an 8-node cluster:
 
@@ -117,7 +117,7 @@ sooner compleated as printed in the stat. You can even compare builds - e.g.
 If you have 'gnuplot' installed and $DISPLAY set, you can also pass the option
 '-x11' to ./scripts/Create-ParaSim so it will use the program 'gnuplot' to
 graph the results. A screenshot of the '-x11' mode of ./scripts/Create-ParaSim
-can be found at http://www.rocklinux.org/pics/screenshot_parasim.jpg.
+can be found at http://www.rocklinux.net/pics/screenshot_parasim.jpg.
 
 
 	3. Setting up the master
@@ -170,14 +170,14 @@ Now your cluster is ready for building ROCK Linux.
 	5. Building with the built-in job scheduler
 	===========================================
 
-Run './scripts/Build-Target' in /home/rock-master the master. Instead of
+Run './scripts/Build-Target' in /home/rock-master on the master. Instead of
 building the packages the master will create a job queue and add those
 packages to the queue which can be built next.
 
 Run './scripts/Build-Job -daemon' in /scratch/rock-node on the nodes. Again,
 you might want to use 'prsh' to do this on all nodes. If you want to build
 multiple packages parallel on one cluster node (e.g. because they have two
-CPUs) you need to run './scripts/Build-Job -daemon' as often as many jobs
+CPUs) you need to run './scripts/Build-Job -daemon' as often as how many jobs
 you want to run on the node at the same time.
 
 "Build-Target" on the master will show you what's going on. You can view
@@ -215,19 +215,19 @@ config option 'Command for adding jobs' to the value
 
     addjob 'cd /scratch/rock-node ; {}'
 
-The text {} will automatically replaced with the Build-Job invocation for
+The text {} will automatically be replaced with the Build-Job invocation for
 building the package and always has the form of:
 
     ./scripts/Build-Job -cfg <config-name> <stagelevel>-<package-name>
 
-So if you want to make some inteligent job scheduling (e.g. build large
+So if you want to make some intelligent job scheduling (e.g. build large
 packages on a faster node) you can also pass {} to another script and
 have the command in $*, the config name in $3 and the stagelevel and
 package name in $4.
 
 If not all jobs can be executed, the job scheduler should prefer those jobs
-which have been submitted first. This is importand to make sure that it always
-is possible that multiple packages can be build in parallel.
+which have been submitted first. This is important to make sure it is always
+possible that multiple packages can be build in parallel.
 
 Note that './scripts/Build-Job -daemon' does not work if the 'Command for
 adding jobs' config option is set. The './scripts/Create-ParaStatus' script

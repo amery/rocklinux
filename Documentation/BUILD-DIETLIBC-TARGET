@@ -14,14 +14,14 @@ Index
 
 Hi, this here is a small howto build the dietlibc target. I hope that it
 will be some time no more needed because the target will be so
-strateforward. Currently it is more a draft for a howto but who cares it
+straightforward. Currently it is more a draft for a howto but who cares it
 is more then nothing, right ? ;-)
 
 Some pretty internal stuff is in Documentation/Developers/TODO . There
 are also current problems and bugs put together so even if you are not a
 developer you probably would like to read it. 
 
-The target is currently experimental, so be carefull because it can kill
+The target is currently experimental, so be careful because it can kill
 your pet, make your mother angry, make you sleepless or simply not work
 and/or compile.
 
@@ -52,7 +52,7 @@ with prepended diet wrapper. For this run this commands:
 # mv /usr/bin/cc /usr/bin/cc.bak
 # vi /usr/bin/cc
 
-And insert the following code it the file:
+And insert the following code in the file:
 
 #!/bin/sh
 exec diet gcc "$@"
@@ -67,7 +67,7 @@ dietlibc target.
 4) Build
 ~~~~~~~~
 
-Do the same what is described in Documentation/Build apropriatly
+Do the same what is described in Documentation/Build appropriately
 selecting dietlibc target in scripts/Config .
 
 Please disable the "Create cache files after packages have been built"

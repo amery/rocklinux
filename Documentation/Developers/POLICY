@@ -41,16 +41,16 @@ which can't be done by the build scripts would break rule 1.
 
 4. Patches
 
-  A patch should always be submitted to the package maintainer if it could
+  A patch should always be submitted to the package author if it could
 be useful to the rest of the world - a bug should always be reported to the
-package maintainer, if possible.
+package author, if possible.
   It's useless to fix a bug only for ROCK Linux and not letting the rest
 of the community profit from the patch ...
 
 5. System start up
 
-  A service/daemon should be only started on default if it's absolute
-necessary. A fresh installed system should not open any network port or
+  A service/daemon should be only started on default if it's absolutely
+necessary. A freshly installed system should not open any network port or
 configure a network interface. If the administrator needs it, he/she will
 enable it!
 

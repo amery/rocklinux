@@ -168,13 +168,13 @@ packages together. All packages with a repository do belong to the same
 maintainer or maintainer-team.
 
 Within the repository-directory, every package has it's own subdirectory.
-E.g. the 'gcc3' package can be found in "package/base/gcc3/".
+E.g. the 'gcc' package can be found in "package/base/gcc/".
 
 1.3.1. package/base/
 --------------------
 
 The "base" repository contains the most important core-packages. Stuff like
-the compiler, the kernel and the standard unix command-packages (fileutils, ..).
+the compiler, the kernel and the standard unix command-packages (coreutils, ..).
 
 The "base" packages are maintained by Clifford Wolf <clifford@rocklinux.org>.
 
@@ -242,14 +242,17 @@ the config/ tree. Every configuration has it's own subdirectory there.
 	2. Build- and other scripts
 	===========================
 
+Most scripts print a help text, containing a description of syntax and
+options, when started with the '-help' option.
+
 2.1. ./scripts/Config
 =====================
 
-./scripts/Config is the main configuration script. If no config-name is
-specified via the option -cfg config-name the name default is used.
+./scripts/Config is the main configuration script. If no configuration name
+is specified via the option -cfg <config-name> the name 'default' is used.
 It parses the metaconfig files described in chapter 3 and creates the files
-in config/<config-name>/. If an config-name is specified it also has do
-been passed to the other scripts, too.
+in config/<config-name>/. If a config-name is specified it also has to
+be passed to the other scripts, too.
 
 2.2. ./scripts/Download
 =======================
@@ -327,10 +330,10 @@ build (cluster) mode.
 ==========================
 
 2.4.1. ./scripts/Cleanup
------------------------
+------------------------
 
 The Cleanup script can be used to remove the src* and build* directories which
-are created by the build scripts. Never remove this directories manually!!!
+are created by the build scripts. Never remove these directories manually!!!
 
 On default ./scripts/Cleanup only removes the src* directories. the build*
 directories are only removed when the -full option is passed.
@@ -360,14 +363,14 @@ packages file.
 Creates a list of packages which could be built next. The first parameter is
 the maximum number of packages to print (0=no limit) and the 2nd parameter is
 the root directory where the script can find the /var/adm/... information it
-need. E.g.:
+needs. E.g.:
 
      # ./scripts/Create-PkgQueue 3 build/1.7.0-DEV-intel-generic/root
      2 X --2------9 010.050 base strace 4.4 / development/tool 159
      2 X --2------9 010.052 base ltrace 0.3.10 / development/tool 85
      2 X --2-4----9 010.055 base perl5 5.6.1 / development/interpreter 125
 
-The script is primary used by ./scripts/Build-Target.
+The script is primarily used by ./scripts/Build-Target.
 
 2.4.5. ./scripts/Create-SrcTar
 ------------------------------
@@ -437,13 +440,6 @@ Update (re-build) all packages on the local system for which newer versions
 are available. Create-UpdList is used to generate the list of packages which
 do need an update.
 
-2.4.13. ./scripts/Puzzle
-------------------------
-
-Some files in the ROCK Linux source tree are automatically created. This
-script recreates all of them and should be called whenever one of the source
-files have been changed.
-
 2.4.14. ./scripts/Help
 ----------------------
 
@@ -501,7 +497,7 @@ package dependencies.
 ---------------------------
 
 Update the source tree with rsync from www.rocklinux.org.
-Warning: This will remove the changes you made to the source tree.
+Warning: This will remove the changes you have made to the source tree.
 
 
 	3. Configuration System
@@ -527,7 +523,7 @@ including which other files.
 
 Whenever the menu is displayed (i.e. after starting ./scripts/Config and
 whenever a change has been made), scripts/config.in is executed and is using
-he following special commands to write the 'config' file and add items to the
+the following special commands to write the 'config' file and add items to the
 menu.
 
 3.2.1. comment 'Description' ["Help"]
@@ -676,7 +672,7 @@ ROCKCFG_EXPERT	If set to '0', config items between expert_begin and
 
 The ROCKCFGSET_* variables can be used to preset an option (e.g. in a target).
 If e.g. ROCKCFGSET_STRIP is set to 1, ROCKCFG_STRIP will have the value 1 and
-the user would not be able to change this setting.
+the user will not be able to change this setting.
 
 3.3.3. CFGTEMP_*
 ----------------
@@ -764,7 +760,7 @@ Cat.	Package categories (always lower case, contain at least one /)
 
 Flags	Package flags (always upper case)
 
-Counter	Simply ignore that filed
+Counter	Simply ignore that field
 
 Because of the 'counter' field, categories and flags are always pre- and
 postfixed with a ' '. So you can e.g. easy remove all not dietlibc-ready
@@ -853,7 +849,7 @@ with e.g.:
 
 If the checksum is simply '0', this means that no checksum has been created so
 far. The script ./scripts/Create-CkSumPatch can be used for creating a patch
-which fills in thos checksums.
+which fills in those checksums.
 
 For files which should not have a checksum for one or another reason (e.g.
 because the content on the original site is changing often), a checksum-string
@@ -862,7 +858,7 @@ consisting of only 'X' characters can be used. E.g.:
 	[D] XXXXXXXXXX RFCs3001-latest.tar.gz ftp://ftp.rfc-editor.org/in-notes/tar/
 
 The 2nd field is the filename. Files with the postfix *.gz or *.tgz are
-automaticallt converted to *.bz2 or *.tbz2 files by the ./scripts/Download
+automatically converted to *.bz2 or *.tbz2 files by the ./scripts/Download
 script.
 
 The 3rd parameter is the download URL without the filename part. If the local
@@ -926,7 +922,7 @@ package selection, force some special configuration to be used, supply
 additional patches to each package, modify any build aspect of a package and
 more.
 
-The most important file of a target is the 'preconfig.in' file where there
+The most important file of a target is the 'preconfig.in' file where the
 target needs to register itself via:
 
 	CFGTEMP_TARGETLIST="$CFGTEMP_TARGETLIST target_name Long_Visible_Name"
@@ -940,25 +936,25 @@ called:
 
 	pkgloop
 
-or to also generate some databse files for the install-cd the generic
+or to also generate some database files for the install-cd the generic
 build.sh can be reused:
 
 	. target/generic/build.sh
 
-A target specific .conf file or patch for a package may be easily be added
+A target specific .conf file or patch for a package may easily be added
 by placing it under the name pkg_$pkg.conf or pkg_$pkg.patch in the target's
 directory. Where $pkg is the name of the respective package.
 
-Some package mmight have target specifig hooks, like the linux* package use
-a kernel.conf.sh in the target's directory to perform additional config
+Some packages might have target specific hooks, like the linux* package which
+uses a kernel.conf.sh in the target's directory to perform additional config
 work on the kernel's .config file. 
 
 	6. Architectures
 	================
 
-Aside from the fact that each arcitecture needs at least to register itself
+Aside from the fact that each architecture needs at least to register itself
 to the ROCK Linux build system, it might provide patches and kernel
-configuartion to work properly.
+configuration to work properly.
 
 The registering works via the preconfig.in file - just like for the targets:
 
@@ -969,10 +965,10 @@ introduce new options (just like the config.in in several other places).
 
 The file gcc-options controls additional options passed to GCC.
 
-The files kernel{$treever,}.conf{m4,sh,} and  kernel-disable{treever,}.lsl
+The files kernel{$treever,}.conf{m4,sh,} and  kernel-disable{treever,}.lst
 are used to control the options used for the linux kernel build.
 
-As already mentioned in the explaination of packages, architecture specific
+As already mentioned in the explanation of packages, architecture specific
 patches are added to the respective package with a patch.$arch suffix.
 
 A archtest.out or archtest.sh file should be present to define some constants

@@ -1,0 +1,38 @@
+--- ./emu.c.orig	2004-09-13 02:50:10.642433736 +0200
++++ ./emu.c	2004-09-13 02:52:00.656709024 +0200
+@@ -890,7 +890,7 @@
+       len = strlen(palfile) + 1;
+       if (! (buffer = malloc(len)))
+ 	{
+-	  perror (__FUNCTION__ ": malloc");
++	  perror ("loadpal 893: malloc");
+ 	  return;
+ 	}
+       memcpy (buffer, palfile, len);
+@@ -912,7 +912,7 @@
+       len = strlen(filename) + 1;
+       if (! (buffer = malloc(len)))
+ 	{
+-	  perror (__FUNCTION__ ": malloc");
++	  perror ("loadpal 915: malloc");
+ 	  return;
+ 	}
+       memcpy (buffer, filename, len);
+@@ -924,7 +924,7 @@
+ 	return;
+       if (!(palfile = malloc ((len = strlen (filename)) + 11)))
+         {
+-          perror (__FUNCTION__ ": malloc");
++          perror ("loadpal 927 : malloc");
+           return;
+         }
+       strcpy (palfile, filename);
+@@ -1602,7 +1602,7 @@
+ 
+     if (! (basefilename = malloc(baseend - basestart + 1)))
+       {
+-        perror (__FUNCTION__ ": malloc");
++        perror ("main 1605: malloc");
+         exit (1);
+       }
+ 

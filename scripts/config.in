@@ -81,8 +81,20 @@ block_begin 7
 	then . architecture/$ROCKCFG_ARCH/config.in ; fi
 	bool 'This is a cross-build between architectures' ROCKCFG_CROSSBUILD 0
 	if [ "$ROCKCFG_CROSSBUILD" = 1 ] ; then
-		pkgfilter sed -e 's,^\(. ..\)[^ ]*,\1--------,'
+	    block_begin
+		bool 'Test-build the packages which are not known to cross build' ROCKCFG_CROSS_TESTALL 0
+		if [ $ROCKCFG_CROSS_TESTALL = 1 ]; then
+			comment '-- WARNING: Test-building packages which are not known to cross build'
+			comment '-- might cause damage on your build system if it is not read-only. So'
+			comment '-- only run this if your /{bin,lib,usr,..} is somehow write-protected.'
+			pkgfilter sed -e 's,^\(. .\)[1X?][^ ]*,\11--------,; s,\(. .\)[-][^ ]*,\1---------,;'
+		else
+			pkgfilter sed -e 's,^\(. .\)[1X][^ ]*,\11--------,; s,\(. .\)[?-][^ ]*,\1---------,;'
+		fi
 		ROCKCFG_ID="$ROCKCFG_ID-cross" ; ROCKCFGSET_USE_CROSSCC=1
+	    block_end
+	else
+		pkgfilter sed -e 's,\(. .\)[?X],\1-,;'
 	fi
 block_end
 

@@ -22,11 +22,11 @@
 
 
 install_setmailer() {
-	sed "s,@mailer@,$1,g" > /usr/sbin/setmailer_$1 \
+	sed "s,@mailer@,$1,g" > $root/usr/sbin/setmailer_$1 \
 		< $base/package/base/sendmail/setmailer.sh
-	chmod +x /usr/sbin/setmailer_$1
+	chmod +x $root/usr/sbin/setmailer_$1
 
-	if [ "$ROCKCFG_DEFAULT_MTA" = "$1" ] ; then
+	if [ "$ROCKCFG_DEFAULT_MTA" = "$1" -a $stagelevel -gt 1 ] ; then
 		/usr/sbin/setmailer_$1
 	fi
 }

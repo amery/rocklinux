@@ -47,7 +47,7 @@ struct builtin {
 struct package;
 struct package {
 	int status;
-	int stages[10];
+	char stages[10];
 	char *prio;
 	char *repository;
 	char *name;
@@ -89,7 +89,7 @@ int read_pkg_list(const char *file) {
 
 		tok = strtok(0, " ");
 		for (i=0; i<10; i++)
-			pkg_tmp->stages[i] = tok[i] != '-';
+			pkg_tmp->stages[i] = tok[i] != '-' ? tok[i] : 0;
 
 		tok = strtok(0, " ");
 		pkg_tmp->prio = strdup(tok);
@@ -130,7 +130,7 @@ int write_pkg_list(const char *file) {
 	while (pkg) {
 		fprintf(f, "%c ", pkg->status ? 'X' : 'O');
 		for (i=0; i<10; i++)
-			fprintf(f, "%c", pkg->stages[i] ? '0'+i : '-');
+			fprintf(f, "%c", pkg->stages[i] ? pkg->stages[i] : '-');
 		fprintf(f, " %s %s %s", pkg->prio, pkg->repository, pkg->name);
 		if (strcmp(pkg->name, pkg->alias))
 			fprintf(f, "=%s", pkg->alias);

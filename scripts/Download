@@ -565,11 +565,11 @@ download_file_now() {
 		rm -rf ${tmp}
 		dir=${bzfile%.tar.bz2}
 		dir="`basename ${dir}`"
-		mkdir -p ${tmp}/${dir}
-		cd ${tmp}/${dir}
+		mkdir -p ${tmp}
+		cd ${tmp}
 		echo SVN ${username} ${password} ${rev} ${mode}://${url}
-		{ echo svn co ${username} ${password} ${rev} ${mode}://${url} .
-		  if ! svn co ${username} ${password} ${rev} ${mode}://${url} .
+		{ echo svn export ${username} ${password} ${rev} ${mode}://${url} ${dir}
+		  if ! svn export ${username} ${password} ${rev} ${mode}://${url} ${dir}
 		  then touch .svn_error ; fi
 		} &> .svn_output &
 		while fuser .svn_output &> /dev/null ; do
@@ -581,17 +581,15 @@ download_file_now() {
 			'SVN archive (download finished).'
 		if [ ! -f .svn_error ] ; then
 			rm -f .svn_output
-			cd ..
 			tar --owner root --group root \
 			    --use-compress-program=bzip2 \
 			    -cf ${dir}.tar.bz2 ${dir}
 			mv ${dir}.tar.bz2 ${old}/${bzfile}
-
 			cd ${old} ; rm -rf ${tmp}
 		else
 			cat .svn_output
 			cd $old ; rm -rf $tmp
-			echo ERROR: SVN co ${username} ${password} ${mode}://${url} . \
+			echo ERROR: SVN export ${username} ${password} ${mode}://${url} ${dir} \
 			            returned an error.
 			echo "0 $gzfile $urlorig" >> src/Download-Errors
 		fi

@@ -1,0 +1,15 @@
+
+As far as I can see, XFT 2.1.0 is also fine and xfree86 doesn't
+have a newer version of xft...
+
+--- ./configure.orig	2005-03-05 20:00:28.000000000 +0100
++++ ./configure	2005-03-05 20:08:39.335836904 +0100
+@@ -24059,7 +24059,7 @@
+         exit 1
+ fi
+ 
+-minXFT="2.1.2"
++minXFT="2.1.0"
+ goodxft="no"
+ 
+ 

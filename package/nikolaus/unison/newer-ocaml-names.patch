@@ -1,0 +1,13 @@
+--- ./ubase/uprintf.ml.orig	2004-09-15 23:48:34.495893484 +0200
++++ ./ubase/uprintf.ml	2004-09-15 23:54:25.937505754 +0200
+@@ -10,8 +10,8 @@
+ (*                                                                     *)
+ (***********************************************************************)
+ 
+-external format_int: string -> int -> string = "format_int"
+-external format_float: string -> float -> string = "format_float"
++external format_int: string -> int -> string = "caml_format_int"
++external format_float: string -> float -> string = "caml_format_float"
+ 
+ let fprintf outchan doafter format =
+   let format = (Obj.magic format : string) in

@@ -126,6 +126,8 @@ block_begin 7
 	then . target/$ROCKCFG_TARGET/config.in ; fi
 block_end
 
+echo "## BUILDENV_SETTINGS_BEGIN" >> config/$config.$swpid/config
+
 comment ' '
 comment_id '- Build System Configuration' COMMENT_BUILD_SYS_CONF
 block_begin 3
@@ -173,6 +175,8 @@ block_begin 3
 block_end
 
 %include misc/*/noexpertconfig.in
+
+echo "## BUILDENV_SETTINGS_END" >> config/$config.$swpid/config
 
 comment ' '
 block_begin 3

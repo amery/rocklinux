@@ -17,60 +17,95 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
---- ./devices.h.orig	Sun Mar 12 17:49:46 2000
-+++ ./devices.h	Sun Mar 12 17:50:06 2000
-@@ -13,7 +13,12 @@
+diff -Nur ../mtools-3.9.9-orig/devices.h ./devices.h
+--- ../mtools-3.9.9-orig/devices.h	2004-11-11 20:54:27.772707216 +0100
++++ ./devices.h	2004-11-11 22:50:38.459001824 +0100
+@@ -13,7 +13,15 @@
  #endif  /* MINOR not defined */
  
  #else
-  
+- 
++
++#include <linux/version.h>
++#if (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,9))
 +#define _LINUX_STRING_H_ 
 +#define __KERNEL__
 +#  include <linux/kdev_t.h>
 +#  include <linux/list.h>
 +#undef __KERNEL__
++#endif /* only for kernel before 2.6.9 */
  #include <linux/fs.h>        /* get MAJOR/MINOR from Linux kernel */
  #ifndef major
  #define major(x) MAJOR(x)
---- ./mformat.c.orig	Sun Mar 12 17:49:46 2000
-+++ ./mformat.c	Sun Mar 12 17:50:27 2000
-@@ -24,6 +24,11 @@
+diff -Nur ../mtools-3.9.9-orig/mformat.c ./mformat.c
+--- ../mtools-3.9.9-orig/mformat.c	2004-11-11 20:54:27.818700224 +0100
++++ ./mformat.c	2004-11-11 22:48:59.010120352 +0100
+@@ -27,11 +27,23 @@
  #endif
  
  #ifdef OS_linux
++#include <linux/version.h>
++#if (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,9))
 +#define _LINUX_STRING_H_
 +#define __KERNEL__
 +#  include <linux/kdev_t.h>
 +#  include <linux/list.h>
 +#undef __KERNEL__
++#endif /* only for kernel before 2.6.9 */
  #include "linux/hdreg.h"
+ 
+ #define _LINUX_STRING_H_
+ #define kdev_t int
++#if (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,9))
  #include "linux/fs.h"
++#else
++#define BLKGETSIZE _IO(0x12,96) /* return device size /512 (long *arg) */
++#endif /* including fs.h only works for kernel before 2.6.9 */
+ #undef _LINUX_STRING_H_
+ 
  #endif
---- ./mpartition.c.orig	Sun Mar 12 17:49:46 2000
-+++ ./mpartition.c	Sun Mar 12 17:49:57 2000
-@@ -16,6 +16,11 @@
+diff -Nur ../mtools-3.9.9-orig/mpartition.c ./mpartition.c
+--- ../mtools-3.9.9-orig/mpartition.c	2004-11-11 20:54:27.811701288 +0100
++++ ./mpartition.c	2004-11-11 22:49:18.027229312 +0100
+@@ -16,11 +16,23 @@
  #include "partition.h"
  
  #ifdef OS_linux
++#include <linux/version.h>
++#if (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,9))
 +#define _LINUX_STRING_H_
 +#define __KERNEL__
 +#  include <linux/kdev_t.h>
 +#  include <linux/list.h>
 +#undef __KERNEL__
++#endif /* only for kernel before 2.6.9 */
  #include "linux/hdreg.h"
+ 
+ #define _LINUX_STRING_H_
+ #define kdev_t int
++#if (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,9))
  #include "linux/fs.h"
++#else
++#define BLKGETSIZE _IO(0x12,96) /* return device size /512 (long *arg) */
++#endif /* including fs.h only works for kernel before 2.6.9 */
+ #undef _LINUX_STRING_H_
+ 
  #endif
---- ./mzip.c.orig	Sun Mar 12 17:49:46 2000
-+++ ./mzip.c	Sun Mar 12 17:50:18 2000
-@@ -30,6 +30,11 @@
+diff -Nur ../mtools-3.9.9-orig/mzip.c ./mzip.c
+--- ../mtools-3.9.9-orig/mzip.c	2004-11-11 20:54:27.807701896 +0100
++++ ./mzip.c	2004-11-11 22:49:44.624185960 +0100
+@@ -30,6 +30,14 @@
  #include <sys/mount.h>
  #else
  #define _LINUX_KDEV_T_H 1  /* don't redefine MAJOR/MINOR */
++#include <linux/version.h>
++#if (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,9))
 +#define _LINUX_STRING_H_
 +#define __KERNEL__
 +#  include <linux/kdev_t.h>
 +#  include <linux/list.h>
 +#undef __KERNEL__
++#endif /* only for kernel before 2.6.9 */
  #include <linux/fs.h>
  #endif
  

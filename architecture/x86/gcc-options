@@ -4,7 +4,6 @@ case "$ROCKCFG_X86_OPT" in
     via-c3)
 	var_append GCC3_WRAPPER_INSERT " " "-march=k62" ;;
     via-c3-improved)
-	#var_append GCC3_WRAPPER_INSERT " " "-s -O3 -march=i686 -fomit-frame-pointer -falign-functions=4 -funroll-loops -fexpensive-optimizations -malign-double -fschedule-insns2" ;;
 	var_append GCC3_WRAPPER_INSERT " " "-march=i686" ;;
     via-c3-2)
 	var_append GCC3_WRAPPER_INSERT " " "-march=pentium-mmx" ;;
@@ -32,4 +31,7 @@ case "$ROCKCFG_X86_OPT" in
     via-c3-improved)
  	var_append GCC2_WRAPPER_INSERT " " "-march=i686" ;;
 esac
+
+# remove other -march and -mcpu options from the argument list
+var_insert GCC_WRAPPER_REMOVE " " "-march=* -mcpu=*"
 

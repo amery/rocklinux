@@ -1,0 +1,21 @@
+--- ./_imagingft.c.vanilla	2005-03-01 15:36:02.557307912 +0100
++++ ./_imagingft.c	2005-03-01 15:36:12.027868168 +0100
+@@ -15,6 +15,7 @@
+ #include "Python.h"
+ #include "Imaging.h"
+ 
++#include <ft2build.h>
+ #include <freetype/freetype.h>
+ 
+ #if PY_VERSION_HEX < 0x01060000
+--- ./setup.py.vanilla	2005-03-01 15:10:13.111859424 +0100
++++ ./setup.py	2005-03-01 15:29:12.846593408 +0100
+@@ -25,7 +25,7 @@
+ # include files in the directories below.  tweak as necessary.
+ JPEGDIR = "../../kits/jpeg-6b"
+ ZLIBDIR = "../../kits/zlib-1.1.4"
+-FREETYPEDIR = "../../kits/freetype-2.0"
++FREETYPEDIR = ""
+ 
+ # on Windows, the following is used to control how and where to search
+ # for Tcl/Tk files.  None enables automatic searching; to override, set

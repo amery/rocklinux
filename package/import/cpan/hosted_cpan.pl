@@ -82,7 +82,6 @@ matched:
 	$ymod =~ s/::/_/g;
 
 	print "$key -> $mod -> cpan-$xmod\n";
-	delete $hosted{$key};
 
 	print D "#if xpkg == cpan-$xmod\n";
 	print D "[V] $ver\n";
@@ -98,7 +97,9 @@ matched:
 	print S "\t\t;;\n";
 
 	print C "bool 'Building package $mod (cpan-$xmod)' ROCKCFG_PKG_CPAN_$ymod 1\n";
-	print C "if [ \$ROCKCFG_PKG_CPAN_$ymod  = 1 ]; then pkgfork cpan cpan-$xmod priority $hosted{$mod}; fi\n\n";
+	print C "if [ \$ROCKCFG_PKG_CPAN_$ymod  = 1 ]; then pkgfork cpan cpan-$xmod priority $hosted{$key}; fi\n\n";
+
+	delete $hosted{$key};
 }
 
 print S "esac\n\n";

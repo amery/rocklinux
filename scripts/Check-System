@@ -33,6 +33,13 @@ fi
 
 found_error=0
 
+if [ ! -w / -o "$(id -u)" != 0 -a "$(id -g)" != 0 ] ; then
+	echo
+	echo "Paranoia Check: You are trying to build as non-root!"
+	echo "Building ROCK Linux requires root privileges."
+	found_error=1
+fi
+
 if [ "`date '+%Y'`" -lt 1990 ] ; then
 	echo
 	echo "Paranoia Check: Your clock is not set!"

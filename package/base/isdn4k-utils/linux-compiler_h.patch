@@ -1,0 +1,10 @@
+--- isdn4k-utils/capi20/capidyn.c	2001-06-21 16:34:45.000000000 +0000
++++ isdn4k-utils-p/capi20/capidyn.c	2004-10-24 06:14:05.790745944 +0000
+@@ -13,6 +13,7 @@
+  */
+ 
+ #include <sys/types.h>
++#include <linux/compiler.h>
+ #include <linux/capi.h>
+ #include <string.h>
+ #include "capi20.h"

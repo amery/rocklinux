@@ -1,0 +1,145 @@
+diff -dur isdn4k-utils/avmb1/avmcapictrl.c isdn4k-utils-p/avmb1/avmcapictrl.c
+--- isdn4k-utils/avmb1/avmcapictrl.c	2001-06-21 16:34:45.000000000 +0000
++++ isdn4k-utils-p/avmb1/avmcapictrl.c	2004-10-24 06:29:08.938446624 +0000
+@@ -82,6 +82,7 @@
+ #include <sys/stat.h>
+ #include <linux/isdn.h>
+ #include <linux/b1lli.h>
++#include <linux/compiler.h>
+ #include <linux/capi.h>
+ /* new ioctls */
+ #include <linux/kernelcapi.h>
+diff -dur isdn4k-utils/capi20/capi20.c isdn4k-utils-p/capi20/capi20.c
+--- isdn4k-utils/capi20/capi20.c	2001-06-21 16:34:45.000000000 +0000
++++ isdn4k-utils-p/capi20/capi20.c	2004-10-24 06:27:34.496803936 +0000
+@@ -78,6 +78,7 @@
+ #include <string.h>
+ #include <unistd.h>
+ #include <stdio.h>
++#include <linux/compiler.h>
+ #include <linux/capi.h>
+ #include "capi20.h"
+ 
+diff -dur isdn4k-utils/capiinfo/capiinfo.c isdn4k-utils-p/capiinfo/capiinfo.c
+--- isdn4k-utils/capiinfo/capiinfo.c	2002-07-18 00:00:27.000000000 +0000
++++ isdn4k-utils-p/capiinfo/capiinfo.c	2004-10-24 06:28:25.795005424 +0000
+@@ -39,6 +39,7 @@
+ #include <stdio.h>
+ #include <string.h>
+ #include <errno.h>
++#include <linux/compiler.h>
+ #include <capi20.h>
+ #include <linux/capi.h>
+ 
+diff -dur isdn4k-utils/ipppd/ipppd.h isdn4k-utils-p/ipppd/ipppd.h
+--- isdn4k-utils/ipppd/ipppd.h	2002-07-06 00:34:08.000000000 +0000
++++ isdn4k-utils-p/ipppd/ipppd.h	2004-10-24 06:36:40.879741104 +0000
+@@ -35,6 +35,9 @@
+ #include <sys/types.h>		/* for u_int32_t, if defined */
+ #include <sys/bitypes.h>
+ #if defined __GLIBC__ && __GLIBC__ >= 2
++#include <linux/types.h>
++typedef		__u8		uint8_t;
++typedef		__u16		uint16_t;
+ # include <net/ppp_defs.h>
+ # include <linux/isdn_ppp.h>
+ #else
+diff -dur isdn4k-utils/ipppstats/ipppstats.c isdn4k-utils-p/ipppstats/ipppstats.c
+--- isdn4k-utils/ipppstats/ipppstats.c	1998-04-28 08:34:15.000000000 +0000
++++ isdn4k-utils-p/ipppstats/ipppstats.c	2004-10-24 06:34:40.410055280 +0000
+@@ -54,6 +54,9 @@
+ #include <sys/ioctl.h>
+ 
+ #if defined __GLIBC__ && __GLIBC__ >= 2
++#include <linux/types.h>
++typedef		__u8		uint8_t;
++typedef		__u16		uint16_t;
+ # include </usr/include/net/ppp_defs.h>
+ # include </usr/include/net/if.h>
+ #else
+--- isdn4k-utils/capifax/capi.c	1998-10-23 12:50:46.000000000 +0000
++++ isdn4k-utils-p/capifax/capi.c	2004-10-24 06:51:09.322717704 +0000
+@@ -23,6 +23,7 @@
+  */
+ #include <stdio.h>
+ #include <sys/time.h>
++#include <linux/compiler.h>
+ #include <linux/capi.h>
+ #include <capi20.h>
+ 
+--- isdn4k-utils/capifax/connect.c	1998-10-23 12:50:49.000000000 +0000
++++ isdn4k-utils-p/capifax/connect.c	2004-10-24 06:57:01.825129192 +0000
+@@ -23,6 +23,7 @@
+ #include <malloc.h>
+ #include <assert.h>
+ #include <sys/time.h>
++#include <linux/compiler.h>
+ #include <linux/capi.h>
+ #include <capi20.h>
+ 
+diff -dur isdn4k-utils/capifax/capifax.c isdn4k-utils-p/capifax/capifax.c
+--- isdn4k-utils/capifax/capifax.c	1998-10-23 12:50:47.000000000 +0000
++++ isdn4k-utils-p/capifax/capifax.c	2004-10-24 07:06:22.139948392 +0000
+@@ -26,6 +26,7 @@
+ #include <assert.h>
+ #include <errno.h>
+ #include <unistd.h>
++#include <linux/compiler.h>
+ #include <linux/capi.h>
+ #include <capi20.h>
+ 
+diff -dur isdn4k-utils/capifax/capifaxrcvd.c isdn4k-utils-p/capifax/capifaxrcvd.c
+--- isdn4k-utils/capifax/capifaxrcvd.c	1998-10-23 12:50:48.000000000 +0000
++++ isdn4k-utils-p/capifax/capifaxrcvd.c	2004-10-24 07:06:39.993234280 +0000
+@@ -29,6 +29,7 @@
+ #include <syslog.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
++#include <linux/compiler.h>
+ #include <linux/capi.h>
+ #include <capi20.h>
+ 
+diff -dur isdn4k-utils/capifax/contr.c isdn4k-utils-p/capifax/contr.c
+--- isdn4k-utils/capifax/contr.c	1998-10-23 12:50:51.000000000 +0000
++++ isdn4k-utils-p/capifax/contr.c	2004-10-24 07:06:45.291428832 +0000
+@@ -21,6 +21,7 @@
+  */
+ #include <assert.h>
+ #include <sys/time.h>
++#include <linux/compiler.h>
+ #include <linux/capi.h>
+ #include <capi20.h>
+ 
+diff -dur isdn4k-utils/capifax/data.c isdn4k-utils-p/capifax/data.c
+--- isdn4k-utils/capifax/data.c	2001-06-21 16:34:45.000000000 +0000
++++ isdn4k-utils-p/capifax/data.c	2004-10-24 07:06:00.219280840 +0000
+@@ -26,6 +26,7 @@
+  */
+ #include <assert.h>
+ #include <sys/time.h>
++#include <linux/compiler.h>
+ #include <linux/capi.h>
+ #include <capi20.h>
+ 
+diff -dur isdn4k-utils/capifax/init.c isdn4k-utils-p/capifax/init.c
+--- isdn4k-utils/capifax/init.c	1999-09-10 17:20:34.000000000 +0000
++++ isdn4k-utils-p/capifax/init.c	2004-10-24 07:05:44.028742176 +0000
+@@ -27,6 +27,7 @@
+ #include <stdio.h>
+ #include <malloc.h>
+ #include <sys/time.h>
++#include <linux/compiler.h>
+ #include <linux/capi.h>
+ #include <capi20.h>
+ 
+diff -dur isdn4k-utils/capifax/msg.c isdn4k-utils-p/capifax/msg.c
+--- isdn4k-utils/capifax/msg.c	1998-10-23 12:50:58.000000000 +0000
++++ isdn4k-utils-p/capifax/msg.c	2004-10-24 07:06:33.711189296 +0000
+@@ -25,6 +25,7 @@
+ #include <stdarg.h>
+ #include <ctype.h>
+ 
++#include <linux/compiler.h>
+ #include <linux/capi.h>
+ #include "capi20.h"
+ 

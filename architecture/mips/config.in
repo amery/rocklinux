@@ -20,29 +20,48 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
+choice ROCKCFG_MIPS_ABI 32 \
+	32	"Build with -mabi=32" \
+	n32	"Build with -mabi=n32" \
+	64	"Build with -mabi=64" 
+
+ROCKCFG_ID="$ROCKCFG_ID-$ROCKCFG_MIPS_ABI"
+
 choice ROCKCFG_MIPS_ENDIANESS EB \
 	EB	"Build for big endian machines"	\
 	EL	"Build for little endian machines"
 
 ROCKCFG_ID="$ROCKCFG_ID-$ROCKCFG_MIPS_ENDIANESS"
 
-choice ROCKCFG_MIPS_OPT generic   \
-	generic	"No special optimisation"	\
-	R2000	"Build for R2000 CPU"		\
-	R3000	"Build for R3000 CPU"		\
-	R3900	"Build for R3900 CPU"		\
-	R4000	"Build for R4000 CPU"		\
-	R4100	"Build for R4100 CPU"		\
-	R4300	"Build for R4300 CPU"		\
-	R4400	"Build for R4400 CPU"		\
-	R4600	"Build for R4600 CPU"		\
-	R4650	"Build for R4650 CPU"		\
-	R5000	"Build for R5000 CPU"		\
-	R6000	"Build for R6000 CPU"		\
-	R8000	"Build for R8000 CPU"		\
+choice ROCKCFG_MIPS_OPT from-abi   \
+	from-abi "No special optimisation"	\
+	r2000	"Build for R2000 CPU"		\
+	r3000	"Build for R3000 CPU"		\
+	r3900	"Build for R3900 CPU"		\
+	r4000	"Build for R4000 CPU"		\
+	4kc	"Build for 4KC CPU"		\
+	4kp	"Build for 4KP CPU"		\
+	m4k	"Build for m4k CPU"		\
+	r4400	"Build for R4400 CPU"		\
+	r4600	"Build for R4600 CPU"		\
+	r4650	"Build for R4650 CPU"		\
+	5kc	"Build for 5KC CPU"		\
+	r6000	"Build for R6000 CPU"		\
+	r8000	"Build for R8000 CPU"		\
+	rm7000	"Build for RM7000 CPU"		\
+	rm9000	"Build for RM9000 CPU"		\
+	20kc	"Build for 20kc CPU"		\
+	sb1	"Build for sb1 CPU"		\
+	vr4100	"Build for vr4100 CPU"		\
+	vr4111	"Build for vr4111 CPU"		\
+	vr4120	"Build for vr4120 CPU"		\
+	vr4300	"Build for vr4300 CPU"		\
+	vr5000	"Build for vr5000 CPU"		\
+	vr5400	"Build for vr5400 CPU"		\
+	vr5500	"Build for vr5500 CPU"		\
 	orion	"Build for Orion CPU" 
 
-if [ $ROCKCFG_MIPS_OPT != generic ] ; then
+if [ $ROCKCFG_MIPS_OPT != from-abi ] ; then
 	ROCKCFG_ID="$ROCKCFG_ID-$ROCKCFG_MIPS_OPT"
 fi
 

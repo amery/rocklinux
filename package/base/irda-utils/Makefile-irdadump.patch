@@ -1,0 +1,11 @@
+--- ./Makefile	2004-11-10 18:35:54.911504944 +0100
++++ Makefile-p	2004-11-10 18:38:24.441772888 +0100
+@@ -33,7 +33,7 @@
+ 	mkdir -p $(RPM_BUILD_ROOT)/usr/bin $(RPM_BUILD_ROOT)/usr/X11R6/bin
+ ## Red-Hat specific, not available on Debian
+ ##	mkdir -p $(RPM_BUILD_ROOT)/etc/rc.d/init.d
+-	cd irdadump;CFLAGS="$(CFLAGS)" CXXFLAGS="$(CFLAGS)" ./autogen.sh --prefix=$(RPM_BUILD_ROOT)/usr
++	cd irdadump;./configure --prefix=/usr --bindir=/usr/sbin
+ 	for i in $(DIRS); do \
+                 cd $$i;make all; cd ..; \
+         done

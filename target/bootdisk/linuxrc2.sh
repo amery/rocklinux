@@ -10,6 +10,7 @@ else
 	done
 fi
 grep -v "^rootfs " /proc/mounts > /etc/mtab
+mount -t sysfs none /sys
 freeramdisk /dev/rd/* 2> /dev/null
 
 mkdir -p /lib/modules/$( uname -r )

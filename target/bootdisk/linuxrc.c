@@ -611,9 +611,6 @@ int main()
 	if ( mount("none", "/dev", "devfs", 0, NULL) && errno != EBUSY )
 		perror("Can't mount /dev");
 
-	if ( mount("none", "/sys", "sysfs", 0, NULL) && errno != EBUSY )
-		perror("Can't mount /sys (not fatal)");
-
 	if ( mount("none", "/proc", "proc", 0, NULL) && errno != EBUSY )
 		perror("Can't mount /proc");
 

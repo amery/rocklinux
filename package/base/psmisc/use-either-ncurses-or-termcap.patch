@@ -1,0 +1,16 @@
+--- ./src/pstree.c.orig	2004-08-29 17:20:07.000000000 +0200
++++ ./src/pstree.c	2004-08-29 17:11:26.000000000 +0200
+@@ -16,9 +16,12 @@
+ #include <pwd.h>
+ #include <dirent.h>
+ #include <curses.h>
+-#include <term.h>
+ #include <termios.h>
++#ifdef HAVE_TERMCAP_H
+ #include <termcap.h>
++#else
++#include <term.h>
++#endif
+ #include <langinfo.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>

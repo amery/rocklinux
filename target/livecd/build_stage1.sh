@@ -1,7 +1,7 @@
 
 echo_header "Creating initrd data:"
 rm -rf $disksdir/initrd
-mkdir -p $disksdir/initrd/{dev,proc,tmp,bin-static,mnt/{cdrom,floppy,stick},ramdisk,etc,ROCK}
+mkdir -p $disksdir/initrd/{dev,sys,proc,tmp,bin-static,mnt/{cdrom,floppy,stick},ramdisk,etc,ROCK}
 cd $disksdir/initrd; ln -s bin-static sbin-static; ln -s . usr
 #
 if [ -x ../../../usr/bin/diet ] ; then

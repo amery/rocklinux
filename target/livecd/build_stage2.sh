@@ -19,8 +19,6 @@ rm -rf ../boot ; mkdir ../boot
 mv boot/* ../boot/
 #
 echo_status "Remove the stuff we do not need ..."
-#rm -rf home usr/{doc,man,info}
-#rm -rf var/adm/* var/adm var/mail 
 rm -rf usr/src
 #
 # TODO finish-package!!

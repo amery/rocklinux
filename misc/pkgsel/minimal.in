@@ -39,6 +39,7 @@ pkgfilter sed '
 / perl5 /		{ p; d; }
 
 / strace /		{ p; d; }
+/ libelf /		{ p; d; }
 / ltrace /		{ p; d; }
 / gdb /			{ p; d; }
 
@@ -63,6 +64,7 @@ pkgfilter sed '
 / texinfo /		{ p; d; }
 / man /			{ p; d; }
 
+/ e2fsprogs /		{ p; d; }
 / mine /		{ p; d; }
 / util-linux /		{ p; d; }
 / iproute2 /		{ p; d; }

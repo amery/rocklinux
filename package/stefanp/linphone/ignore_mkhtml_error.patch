@@ -1,0 +1,12 @@
+--- ./developer-docs/mediastreamer/Makefile.in.orig	2004-09-07 14:40:43.214959624 +0200
++++ ./developer-docs/mediastreamer/Makefile.in	2004-09-07 14:41:22.675960640 +0200
+@@ -414,7 +414,8 @@
+ @ENABLE_GTK_DOC_TRUE@html-build.stamp: sgml.stamp $(DOC_MAIN_SGML_FILE) $(content_files)
+ @ENABLE_GTK_DOC_TRUE@	@echo '*** Building HTML ***'
+ @ENABLE_GTK_DOC_TRUE@	test -d $(srcdir)/html || mkdir $(srcdir)/html
+-@ENABLE_GTK_DOC_TRUE@	cd $(srcdir)/html && gtkdoc-mkhtml $(DOC_MODULE) ../$(DOC_MAIN_SGML_FILE)
++@ENABLE_GTK_DOC_TRUE@	-cd $(srcdir)/html && gtkdoc-mkhtml $(DOC_MODULE) ../$(DOC_MAIN_SGML_FILE)
++@ENABLE_GTK_DOC_TRUE@	touch ./html/index.sgml # if the above command has failed (to make install happy)
+ @ENABLE_GTK_DOC_TRUE@	test "x$(HTML_IMAGES)" = "x" || ( cd $(srcdir) && cp $(HTML_IMAGES) html )
+ @ENABLE_GTK_DOC_TRUE@	@echo '-- Fixing Crossreferences' 
+ @ENABLE_GTK_DOC_TRUE@	cd $(srcdir) && gtkdoc-fixxref --module-dir=html --html-dir=$(HTML_DIR) $(FIXXREF_OPTIONS)

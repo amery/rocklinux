@@ -103,6 +103,12 @@ case "$xpkg" in
 		cpanloc="C/CJ/CJM/Getopt-Mixed-1.008.tar.gz"
 		srctar="Getopt-Mixed-1.008.tar.bz2"
 		;;
+	cpan-html-entities)
+		cpanmod="HTML::Entities"
+		cpanver="1.29"
+		cpanloc="G/GA/GAAS/HTML-Parser-3.43.tar.gz"
+		srctar="HTML-Parser-3.43.tar.bz2"
+		;;
 	cpan-html-linkextractor)
 		cpanmod="HTML::LinkExtractor"
 		cpanver="0.121"
@@ -186,6 +192,12 @@ case "$xpkg" in
 		cpanver="v5.0.1"
 		cpanloc="D/DT/DTOWN/Net-SNMP-5.0.1.tar.gz"
 		srctar="Net-SNMP-5.0.1.tar.bz2"
+		;;
+	cpan-nmap-scanner)
+		cpanmod="Nmap::Scanner"
+		cpanver="0.7"
+		cpanloc="M/MA/MAXSCHUBE/Nmap-Scanner-0.7a.tar.gz"
+		srctar="Nmap-Scanner-0.7a.tar.bz2"
 		;;
 	cpan-perlio-gzip)
 		cpanmod="PerlIO::gzip"

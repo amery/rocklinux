@@ -1,0 +1,20 @@
+--- ./ginsh/ginsh_parser.yy.orig	2005-02-22 13:22:31.395437640 +0100
++++ ./ginsh/ginsh_parser.yy	2005-02-22 13:23:02.008783704 +0100
+@@ -797,7 +797,7 @@
+ 		// For shell commands, revert back to filename completion
+ 		rl_completion_append_character = orig_completion_append_character;
+ 		rl_basic_word_break_characters = orig_basic_word_break_characters;
+-		rl_completer_word_break_characters = rl_basic_word_break_characters;
++		rl_completer_word_break_characters = (char*)rl_basic_word_break_characters;
+ #if (GINAC_RL_VERSION_MAJOR < 4) || (GINAC_RL_VERSION_MAJOR == 4 && GINAC_RL_VERSION_MINOR < 2)
+ 		return completion_matches(const_cast<char *>(text), (CPFunction *)filename_completion_function);
+ #else
+@@ -807,7 +807,7 @@
+ 		// Otherwise, complete function names
+ 		rl_completion_append_character = '(';
+ 		rl_basic_word_break_characters = " \t\n\"#$%&'()*+,-./:;<=>?@[\\]^`{|}~";
+-		rl_completer_word_break_characters = rl_basic_word_break_characters;
++		rl_completer_word_break_characters = (char*)rl_basic_word_break_characters;
+ #if (GINAC_RL_VERSION_MAJOR < 4) || (GINAC_RL_VERSION_MAJOR == 4 && GINAC_RL_VERSION_MINOR < 2)
+ 		return completion_matches(const_cast<char *>(text), (CPFunction *)fcn_generator);
+ #else

@@ -67,7 +67,7 @@ xf_extract_gatos() {
 	echo "Extracting GATOS drivers (For ATI cards with video in/out) ..."
 	tar $taropt $archdir/gatos-ati.$gatos_version.tar.bz2
 	cd gatos-ati.$gatos_version
-	for x in $confdir/gatos-*.diff ; do
+	for x in $confdir/*.patch.gatos ; do
 	  if [ -f $x ] ; then
 		echo "Apply patch $x ..."
 		patch -Nf -p1 < $x

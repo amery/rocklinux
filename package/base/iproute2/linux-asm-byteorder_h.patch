@@ -1,0 +1,94 @@
+diff -dur iproute2-ahu-20021020/ip/ipneigh.c iproute2-ahu-20021020-patch/ip/ipneigh.c
+--- iproute2-ahu-20021020/ip/ipneigh.c	2002-10-19 17:01:12.000000000 +0000
++++ iproute2-ahu-20021020-patch/ip/ipneigh.c	2004-10-23 18:32:35.174492224 +0000
+@@ -24,6 +24,19 @@
+ #include <net/if.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
++
++#ifdef __CHECKER__
++#define __bitwise __attribute__((bitwise))
++#else
++#define __bitwise
++#endif
++#define __le16 __bitwise __u16
++#define __be16 __bitwise __u16
++#define __le32 __bitwise __u32
++#define __be32 __bitwise __u32
++#define __le64 __bitwise __u64
++#define __be64 __bitwise __u64
++
+ #include <netinet/ip.h>
+ 
+ #include "rt_names.h"
+diff -dur iproute2-ahu-20021020/ip/iproute.c iproute2-ahu-20021020-patch/ip/iproute.c
+--- iproute2-ahu-20021020/ip/iproute.c	2002-10-19 17:01:12.000000000 +0000
++++ iproute2-ahu-20021020-patch/ip/iproute.c	2004-10-23 18:26:54.951214024 +0000
+@@ -24,7 +24,20 @@
+ #include <sys/time.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+-#include <netinet/ip.h>
++
++#ifdef __CHECKER__
++#define __bitwise __attribute__((bitwise))
++#else
++#define __bitwise
++#endif
++#define __le16 __bitwise __u16
++#define __be16 __bitwise __u16
++#define __le32 __bitwise __u32
++#define __be32 __bitwise __u32
++#define __le64 __bitwise __u64
++#define __be64 __bitwise __u64
++
++ #include <netinet/ip.h>
+ #include <arpa/inet.h>
+ #include <linux/in_route.h>
+ 
+diff -dur iproute2-ahu-20021020/ip/iprule.c iproute2-ahu-20021020-patch/ip/iprule.c
+--- iproute2-ahu-20021020/ip/iprule.c	2002-10-19 17:01:13.000000000 +0000
++++ iproute2-ahu-20021020-patch/ip/iprule.c	2004-10-23 18:29:46.753096168 +0000
+@@ -21,6 +21,19 @@
+ #include <fcntl.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
++
++#ifdef __CHECKER__
++#define __bitwise __attribute__((bitwise))
++#else
++#define __bitwise
++#endif
++#define __le16 __bitwise __u16
++#define __be16 __bitwise __u16
++#define __le32 __bitwise __u32
++#define __be32 __bitwise __u32
++#define __le64 __bitwise __u64
++#define __be64 __bitwise __u64
++
+ #include <netinet/ip.h>
+ #include <arpa/inet.h>
+ #include <string.h>
+diff -dur iproute2-ahu-20021020/ip/iptunnel.c iproute2-ahu-20021020-patch/ip/iptunnel.c
+--- iproute2-ahu-20021020/ip/iptunnel.c	2002-10-19 17:01:13.000000000 +0000
++++ iproute2-ahu-20021020-patch/ip/iptunnel.c	2004-10-23 18:32:03.606291320 +0000
+@@ -27,6 +27,19 @@
+ #include <linux/if.h>
+ #include <linux/if_arp.h>
+ #include <netinet/in.h>
++
++#ifdef __CHECKER__
++#define __bitwise __attribute__((bitwise))
++#else
++#define __bitwise
++#endif
++#define __le16 __bitwise __u16
++#define __be16 __bitwise __u16
++#define __le32 __bitwise __u32
++#define __be32 __bitwise __u32
++#define __le64 __bitwise __u64
++#define __be64 __bitwise __u64
++
+ #include <netinet/ip.h>
+ #include <arpa/inet.h>
+ #include <linux/if_tunnel.h>

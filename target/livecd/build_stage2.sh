@@ -7,10 +7,11 @@ cd $disksdir/2nd_stage
 mkdir -p mnt/source mnt/target ramdisk
 #
 echo_status "Extracting the packages archives."
-for x in $( ls ../../pkgs/*.tar.bz2 | grep -v -e ':dev.tar.bz2' -e ':doc.tar.bz2' | tr . / | cut -f8 -d/ )
+for x in $( ls ../../pkgs/*.tar.bz2 | \
+		 grep -v -e ':dev.tar.bz2' -e ':doc.tar.bz2' )
 do
-	echo_status "\`- Extracting $x.tar.bz2 ..."
-	tar --use-compress-program=bzip2 -xpf ../../pkgs/$x.tar.bz2
+	echo_status "\`- Extracting ${x##*/} ..."
+	tar --use-compress-program=bzip2 --force-local -xpf $x
 done
 #
 echo_status "Saving boot/* - we do not need this on the 2nd stage ..."

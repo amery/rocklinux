@@ -169,6 +169,8 @@ if expr "`uname -m`" : "i.86"    > /dev/null ; then arch=x86     ; fi
 if expr "`uname -m`" : "alpha"   > /dev/null ; then arch=alpha   ; fi
 if expr "`uname -m`" : "ppc"     > /dev/null ; then arch=powerpc ; fi
 if expr "`uname -m`" : "powerpc" > /dev/null ; then arch=powerpc ; fi
+if expr "`uname -m`" : "sparc"   > /dev/null ; then arch=sparc   ; fi
+if expr "`uname -m`" : "mips"    > /dev/null ; then arch=mips    ; fi
 current="" ; export ROCKCFG_ARCH="$arch" ; export ROCKCFG_EXPERT=0
 menu_this=0 ; menu_current=0 ; menu_counter=0
 menu_stack=x ; menu_back=-1 ; menu_backpos=-1

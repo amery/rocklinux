@@ -297,7 +297,7 @@ expert_begin
     block_end
 
     comment ' '
-%include $( ls {package/*,misc}/*/config{,-*}.in 2>/dev/null | sed 's,\(.*/\)\([^/]*\),\2 \1\2,' | sort | cut -f2 -d' ' )
+%include $( ls {package/*,misc}/*/config{,-*}.in 2>/dev/null | sed 's,\(.*/\)\([^/]*/\)\([^/]*\),\3\2 \1\2\3,' | sort | cut -f2 -d' ' )
 
     comment ' '
     comment '- Additional GNU Configure Options'

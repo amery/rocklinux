@@ -1,0 +1,103 @@
+#!/bin/bash
+
+postflist_desktop_rock2desktop() {
+
+	case "${1}" in
+		base/boot)			echo "Core" ;;
+		base/kernel)			echo "Core" ;;
+		base/setup)			echo "Core" ;;
+		base/tool)			echo "Core" ;;
+		base/development)		echo "Core" ;;
+		base/system)			echo "Core" ;;
+		base/library)			echo "Core" ;;
+		base/x11)			echo "Core" ;;
+		extra/archive)			echo "Archiving" ;;
+		extra/base)			echo "Core" ;;
+		extra/crypto)			echo "System;Security" ;;
+		extra/configuration)		echo "System" ;;
+		extra/database)			echo "Development;Database" ;;
+		extra/desktop/kde)		echo "Core" ;;
+		extra/desktop/enlightenment)	echo "Core" ;;
+		extra/desktop/gnome)		echo "Core" ;;
+		extra/desktop/xfce)		echo "Core" ;;
+		extra/development)		echo "Development" ;;
+		extra/documentation)		echo "Development" ;;
+		extra/editor)			echo "Utility;TextEditor" ;;
+		extra/education)		echo "Education" ;;
+		extra/emulator)			echo "Emulator" ;;
+		extra/filesystem)		echo "System;FileSystem" ;;
+		extra/font)			echo "Core" ;;
+		extra/game)			echo "Game" ;;
+		extra/icon)			echo "Core" ;;
+		extra/login)			echo "Core" ;;
+		extra/multimedia)		echo "AudioVideo" ;;
+		extra/network)			echo "Network" ;;
+		extra/office)			echo "Office" ;;
+		extra/printing)			echo "Office" ;;
+		extra/scientific)		echo "Science" ;;
+		extra/screensaver)		echo "Utility" ;;
+		extra/security)			echo "System;Security" ;;
+		extra/server)			echo "Core" ;;
+		extra/shell)			echo "Shell" ;;
+		extra/text)			echo "Utility;TextEditor" ;;
+		extra/theme)			echo "Core" ;;
+		extra/tool)			echo "Utility" ;;
+		extra/toy)			echo "Amusement" ;;
+		extra/windowmanager)		echo "Core" ;;
+		extra/religion)			echo "Utility" ;;
+		*)				echo "AIEE! postflist_desktop_rock2desktop is out of date!!" >&2 ;
+						echo "I don't know what ${1} maps to!" >&2 ;
+						abort ;;
+	esac
+}
+
+postflist_desktop_process_desktop() {
+
+	file=${1}
+	if ! grep -q "Categories=" "${file}" ; then
+		category="`postflist_desktop_rock2desktop ${desc_C}`"
+		echo "Adding Categories tag (${category})"
+		echo "Categories=${category}" >>"${file}"
+	fi
+	if ! grep -q "X-ROCK-Name=" "${file}" ; then
+		echo "Adding X-ROCK-Name tag (${pkg})"
+		echo "X-ROCK-Name=${pkg}" >>"${file}"
+	fi
+}
+
+postflist_desktop() {
+	tmp=`mktemp`
+
+	grep \.desktop\$ ${builddir}/flist.txt | while read desktop ; do
+		[ "${desktop/opt?kde/}" != "${desktop}" ] && continue
+
+		echo "Checking ${desktop} ... "
+		rm -f "${tmp}"
+		rm -f "${desktop}.new"
+
+		while read line ; do
+			if [ "${line:0:1}" == "[" ] ; then
+				entry=$(( ${entry} + 1 ))
+				if [ ${entry} -gt 1 ] ; then            # this is to support multiple entries in one file
+					if [ -f "${tmp}" ] ; then
+						postflist_desktop_process_desktop "${tmp}"
+						cat "${tmp}" >> "${desktop}.new"
+						rm -f "${tmp}"
+					fi
+				fi
+			fi
+			echo "${line}" >>"${tmp}"
+		done < "${desktop}"
+		if [ -f "${tmp}" ] ; then
+			postflist_desktop_process_desktop "${tmp}"
+			cat "${tmp}" >> "${desktop}.new"
+			rm -f "${tmp}"
+		fi
+
+		rm -f ${desktop}
+		mv "${desktop}.new" "${desktop}"
+	done
+}
+
+hook_add postflist 5 postflist_desktop
+

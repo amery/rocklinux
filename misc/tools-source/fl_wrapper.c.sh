@@ -144,9 +144,6 @@ EOT
 	fi
 }
 
-add_wrapper 'int,   open,    const char* f, int a, int b'
-add_wrapper 'int,   open64,  const char* f, int a, int b'
-
 add_wrapper 'FILE*, fopen,   const char* f, const char* g'
 add_wrapper 'FILE*, fopen64, const char* f, const char* g'
 
@@ -168,6 +165,7 @@ add_wrapper 'int,   execve,  const char* f, char* const a[], char* const e[]'
 
 echo
 cat fl_wrapper_execl.c
+cat fl_wrapper_open.c
 
 echo ; cat << "EOT"
 /* Internal Functions */

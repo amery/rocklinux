@@ -98,6 +98,8 @@ splitapply() {
 			if type "splitdesc_${n}" > /dev/null 2>&1; then
 				echo "Applying package split: $p $1:$n $r"
 				sed -ri "\,$r, s/^[^ ]+/$1:$n:/" $2
+			else
+				echo "Skipping package split: $p $1:$n $r (splitdesc_$n() undefined)"
 			fi
 		fi
 	done < <( echo "$pkgsplits" | tr ',' '\n' | sort; )

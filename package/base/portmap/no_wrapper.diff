@@ -1,0 +1,22 @@
+--- ./Makefile.orig	2004-07-20 19:23:44.000000000 -0400
++++ ./Makefile	2004-07-20 19:28:48.000000000 -0400
+@@ -16,7 +16,7 @@
+ # tables. The local system, since it runs the portmap daemon, is always
+ # treated as an authorized host.
+ 
+-HOSTS_ACCESS= -DHOSTS_ACCESS
++#HOSTS_ACCESS= -DHOSTS_ACCESS
+ 
+ # Comment out if your RPC library does not allocate privileged ports for
+ # requests from processes with root privilege, or the new portmap will
+@@ -75,8 +75,8 @@
+ 
+ all:	portmap pmap_dump pmap_set
+ 
+-portmap: $(OBJECTS) $(WRAP_DIR)/libwrap.a
+-	$(CC) $(CFLAGS) -o $@ $(OBJECTS) $(WRAP_DIR)/libwrap.a $(LIBS)
++portmap: $(OBJECTS) 
++	$(CC) $(CFLAGS) -o $@ $(OBJECTS) $(LIBS)
+ 
+ pmap_dump: pmap_dump.c
+ 	$(CC) $(CFLAGS) -o $@ $? $(LIBS)

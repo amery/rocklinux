@@ -6,7 +6,7 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/mathieu/bitlbee/bitlbee.desc
+[COPY] ROCK Linux: rock-src/package/mathieu/gnutls/gnutls.desc
 [COPY] ROCK Linux is Copyright (C) 1998 - 2004 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
@@ -21,25 +21,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[I] BitlBee: An IRC to other chat networks gateway
+[I] A Transport Layer Security Library implementation.
 
-[T] BitlBee  is  an  IRC daemon that can talk to instant messaging networks
-[T] and acts as a gateway. Users can connect to the server with any  normal
-[T] IRC  client  and see their 'buddy list' in #bitlbee. BitlBee's protocol
-[T] support is based on the gaim protocol plugins. BitlBee  currently  sup-
-[T] ports Oscar (aim and icq), MSN, Jabber and Yahoo.
+[T] GNU Transport Layer Security Library is a library which implements a 
+[T] secure layer over a reliable transport layer such as TCP/IP. It implements 
+[T] the TLS 1.0 and SSL 3.0 protocols, accompanied with authentication methods 
+[T] such as X.509, OpenPGP, and SRP.
 
+[U] http://www.gnu.org/software/gnutls/
 
-[U] http://www.bitlbee.org/
-
-[A] Wilmer van der Gaast <wilmer@gaast.net>
+[A] N. Mavroyanopoulos <nmav@gnutls.org>
 [M] Mathieu Doidy <mdoidy@roulaize.net>
 
-[C] extra/network
+[C] extra/base
 
 [L] GPL
 [S] Stable
-[V] 0.90a
-[P] X -----5---9 802.000
+[V] 1.0.14
+[P] X -----5---9 801.000
 
-[D] 2810411712 bitlbee-0.90a.tar.gz http://get.bitlbee.org/src/
+[SRC] .
+
+[D] 3284167826 opencdk-0.5.5.tar.bz2 ftp://gnutls.hellug.gr/pub/gnutls/opencdk/
+[D] 454063378 gnutls-1.0.14.tar.bz2 ftp://ftp.gnutls.org/pub/gnutls/

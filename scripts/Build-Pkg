@@ -1027,11 +1027,14 @@ $( echo "${desc_D:-None}" | awk '{ print "  " $3 $2; }' )
 EOT
 		{
 		    echo "[CONFIG] ${ROCKCFG_ID#*-}"
-		    while read x ; do
-			if [ "${x#\[}" != "$x" ] ; then
+		    while read x; do
+			if [ "${x#\[}" != "$x" ]; then
 			    x="`echo ${x// /|} | tr -d '[]'`"
 			    y="${x%%|*}" ; x="(${x%|(*)})"
-			    echo "$descfile" | egrep "^\[$x\]" | expand | sed "s,^[^ ]*,[$y],"
+			    case "$y" in
+				V) echo "[V] $ver $extraver" ;;
+				*) echo "$descfile" | egrep "^\[$x\]" | expand | sed "s,^[^ ]*,[$y]," ;;
+			    esac
 			fi
 		    done < $base/Documentation/Developers/PKG-DESC-FORMAT
 		} > var/adm/descs/$spkg

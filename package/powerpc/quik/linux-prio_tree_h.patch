@@ -1,0 +1,16 @@
+--- ./quik/quik.c.orig	2004-12-01 20:51:52.058945872 +0100
++++ ./quik/quik.c	2004-12-01 20:52:16.825180832 +0100
+@@ -27,6 +27,13 @@
+ #include <stdarg.h>
+ #include <string.h>
+ #include <stdlib.h>
++
++/* for linux-2.6.9, from linux/types.h */
++#  include <asm/types.h>
++#  ifndef pgoff_t
++#  define pgoff_t unsigned long
++#  endif
++
+ #include <linux/fs.h>
+ #include "linux/ext2_fs.h"
+ #include <sys/stat.h>

@@ -63,14 +63,15 @@ END {
 }
 
 ( FNR == 1 && pkgtree ) {
-	print_package();
+	if (!ignore) print_package();
 }
 
 FNR == 1 {
 	split(FILENAME, a, /\//);
 	pkgtree=a[2]; package=a[3];
+	ignore = (a[3] ".desc" != a[4]);
 	defset="X"; pri="999.999";
-	stages="-----------";
+	stages="----------";
 	ver="0000"; categories=""
 	ver_dup=0; flags=""
 }

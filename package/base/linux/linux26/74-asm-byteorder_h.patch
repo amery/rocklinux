@@ -22,3 +22,27 @@
  #include <linux/types.h>
  #include <linux/byteorder/swab.h>
  
+--- ./include/linux/byteorder/big_endian.h.orig	2004-11-24 15:49:41.099573896 +0100
++++ ./include/linux/byteorder/big_endian.h	2004-11-24 15:50:46.048700128 +0100
+@@ -8,6 +8,21 @@
+ #define __BIG_ENDIAN_BITFIELD
+ #endif
+ 
++#ifndef __KERNEL__
++/* fix for inclusion from userspace... :( */
++#ifdef __CHECKER__
++#define __bitwise __attribute__((bitwise))
++#else
++#define __bitwise
++#endif
++#define __le16 __bitwise __u16
++#define __be16 __bitwise __u16
++#define __le32 __bitwise __u32
++#define __be32 __bitwise __u32
++#define __le64 __bitwise __u64
++#define __be64 __bitwise __u64
++#endif
++
+ #include <linux/types.h>
+ #include <linux/byteorder/swab.h>
+ 

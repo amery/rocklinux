@@ -1,0 +1,43 @@
+--- ./configure.orig	2004-07-15 00:04:42.000000000 +0200
++++ ./configure	2004-08-12 06:30:02.000000000 +0200
+@@ -513,7 +513,7 @@
+ if test "$_skip_cc_check" != yes ; then
+  for _cc in "$_cc" gcc gcc-3.3 gcc-3.2 gcc-3.1 gcc3 gcc-3.0 cc ; do
+   echocheck "$_cc version"
+-  cc_name=`( $_cc -v ) 2>&1 | tail -1 | cut -d ' ' -f 1`
++  cc_name=`( $_cc -v ) 2>&1 | tail -n1 | cut -d ' ' -f 1`
+   cc_version=`( $_cc -dumpversion ) 2>&1`
+   if test "$?" -gt 0; then
+     cc_version="not found"
+@@ -623,15 +623,15 @@
+   _def_arch="#define ARCH_X86 1"
+   _target_arch="TARGET_ARCH_X86 = yes"
+ 
+-  pname=`$_cpuinfo | grep 'model name' | cut -d ':' -f 2 | head -1`
+-  pvendor=`$_cpuinfo | grep 'vendor_id' | cut -d ':' -f 2  | cut -d ' ' -f 2 | head -1`
+-  pfamily=`$_cpuinfo | grep 'cpu family' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -1`
+-  pmodel=`$_cpuinfo | grep -v 'model name' | grep 'model' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -1`
+-  pstepping=`$_cpuinfo | grep 'stepping' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -1`
++  pname=`$_cpuinfo | grep 'model name' | cut -d ':' -f 2 | head -n1`
++  pvendor=`$_cpuinfo | grep 'vendor_id' | cut -d ':' -f 2  | cut -d ' ' -f 2 | head -n1`
++  pfamily=`$_cpuinfo | grep 'cpu family' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -n1`
++  pmodel=`$_cpuinfo | grep -v 'model name' | grep 'model' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -n1`
++  pstepping=`$_cpuinfo | grep 'stepping' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -n1`
+ 
+-  pparam=`$_cpuinfo | grep 'features' | cut -d ':' -f 2 | head -1`
++  pparam=`$_cpuinfo | grep 'features' | cut -d ':' -f 2 | head -n1`
+   if test -z "$pparam" ; then
+-    pparam=`$_cpuinfo | grep 'flags' | cut -d ':' -f 2 | head -1`
++    pparam=`$_cpuinfo | grep 'flags' | cut -d ':' -f 2 | head -n1`
+   fi
+ 
+   _mmx=no
+@@ -884,7 +884,7 @@
+ 
+     echocheck "CPU type"
+     if linux && test -n "$_cpuinfo"; then
+-	proc=`$_cpuinfo | grep 'cpu' | cut -d ':' -f 2 | cut -d ',' -f 1 | cut -b 2- | head -1`
++	proc=`$_cpuinfo | grep 'cpu' | cut -d ':' -f 2 | cut -d ',' -f 1 | cut -b 2- | head -n1`
+ 	if test -n "`$_cpuinfo | grep altivec`"; then
+ 	    _altivec=yes
+ 	fi

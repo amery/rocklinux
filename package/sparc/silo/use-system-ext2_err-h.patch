@@ -1,0 +1,15 @@
+use the system's ext2_err.h includes, they differ depending on
+wether we have 2.4 or 2.6 kernel includes. note, ext2_err.h gets
+deleted in silo.conf...
+
+--- ./include/ext2fs/ext2fs.h.orig	2004-09-20 13:00:36.000000000 +0200
++++ ./include/ext2fs/ext2fs.h	2004-09-20 13:00:58.000000000 +0200
+@@ -75,7 +75,7 @@
+ #else
+ #include "et/com_err.h"
+ #include "ext2fs/ext2_io.h"
+-#include "ext2fs/ext2_err.h"
++#include <ext2fs/ext2_err.h>
+ #endif
+ 
+ /*

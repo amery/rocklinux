@@ -354,7 +354,7 @@ bool() {
 
 	if [ "$menumode" -gt 0 -a $menu_current = $menu_this ] ; then
 		if [ $data -eq 0 ] ; then x="${obegin} ${oend}" ; else x="${obegin}*${oend}" ; fi
-		echo -e "$2\tbool_action '$usr_name' '$usr_data'" >> config.data.$swpid
+		echo -e "$2\tbool_action '$usr_name' '$usr_data' '$3'" >> config.data.$swpid
 
 		printf "$2 '$spacer%-${tabspace}s ${1//_/ }'\n" "$x" >> config.dialog.$swpid
 
@@ -367,10 +367,20 @@ bool() {
 }
 
 bool_action() {
-	case "$2" in
-		"")	eval "$1=1" ;;
-		1)	eval "$1=0" ;;
-		*)	eval "$1="  ;;
+	local usrvar=$1
+	local origval=$3
+	local usrval
+	eval "usrval=\${$usrvar}"
+	case "$usrval" in
+		"")	[ "$origval" == "0" ] && eval "$usrvar=1"
+			[ "$origval" == "1" ] && eval "$usrvar=0"
+			;;
+		1)	[ "$origval" == "0" ] && eval "$usrvar=0"
+			[ "$origval" == "1" ] && eval "$usrvar="
+			;;
+		0)	[ "$origval" == "0" ] && eval "$usrvar="
+			[ "$origval" == "1" ] && eval "$usrvar=1"
+			;;
 	esac
 }
 

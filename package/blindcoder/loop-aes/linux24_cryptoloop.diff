@@ -17,9 +17,9 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-diff -pruN linux-2.4.27_orig/Documentation/Configure.help linux-2.4.27/Documentation/Configure.help
---- linux-2.4.27_orig/Documentation/Configure.help	2004-08-08 01:26:04.000000000 +0200
-+++ linux-2.4.27/Documentation/Configure.help	2004-10-25 14:20:44.709005688 +0200
+diff -pruN linux-2.4.28_orig/Documentation/Configure.help linux-2.4.28/Documentation/Configure.help
+--- linux-2.4.28_orig/Documentation/Configure.help	2004-11-17 12:54:20.000000000 +0100
++++ linux-2.4.28/Documentation/Configure.help	2005-01-11 09:33:37.470527296 +0100
 @@ -620,6 +620,21 @@ CONFIG_BLK_STATS
  
    If unsure, say N.
@@ -42,9 +42,9 @@ diff -pruN linux-2.4.27_orig/Documentation/Configure.help linux-2.4.27/Documenta
  ATA/IDE/MFM/RLL support
  CONFIG_IDE
    If you say Y here, your kernel will be able to manage low cost mass
-diff -pruN linux-2.4.27_orig/drivers/block/Config.in linux-2.4.27/drivers/block/Config.in
---- linux-2.4.27_orig/drivers/block/Config.in	2004-08-08 01:26:04.000000000 +0200
-+++ linux-2.4.27/drivers/block/Config.in	2004-10-25 14:20:44.711005384 +0200
+diff -pruN linux-2.4.28_orig/drivers/block/Config.in linux-2.4.28/drivers/block/Config.in
+--- linux-2.4.28_orig/drivers/block/Config.in	2004-08-08 01:26:04.000000000 +0200
++++ linux-2.4.28/drivers/block/Config.in	2005-01-11 09:33:37.471527144 +0100
 @@ -42,6 +42,10 @@ dep_tristate 'Micro Memory MM5415 Batter
  dep_tristate 'Promise SATA SX8 support' CONFIG_BLK_DEV_SX8 $CONFIG_PCI
  
@@ -56,9 +56,9 @@ diff -pruN linux-2.4.27_orig/drivers/block/Config.in linux-2.4.27/drivers/block/
  dep_tristate 'Network block device support' CONFIG_BLK_DEV_NBD $CONFIG_NET
  
  tristate 'RAM disk support' CONFIG_BLK_DEV_RAM
-diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loop.c
---- linux-2.4.27_orig/drivers/block/loop.c	2003-08-25 13:44:41.000000000 +0200
-+++ linux-2.4.27/drivers/block/loop.c	2004-10-25 14:20:44.715004776 +0200
+diff -pruN linux-2.4.28_orig/drivers/block/loop.c linux-2.4.28/drivers/block/loop.c
+--- linux-2.4.28_orig/drivers/block/loop.c	2003-08-25 13:44:41.000000000 +0200
++++ linux-2.4.28/drivers/block/loop.c	2005-01-11 09:33:37.475526536 +0100
 @@ -2,7 +2,7 @@
   *  linux/drivers/block/loop.c
   *
@@ -195,7 +195,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
  	return 0;
  }
  
-@@ -134,336 +159,892 @@ static int xor_status(struct loop_device
+@@ -134,336 +159,949 @@ static int xor_status(struct loop_device
  	return 0;
  }
  
@@ -231,10 +231,14 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
 +    aes_context *keyPtr[KEY_ALLOC_COUNT];
 +    unsigned    keyMask;
 +#if CONFIG_BLK_DEV_LOOP_KEYSCRUB
++    u_int32_t   *partialMD5;
++    u_int32_t   partialMD5buf[8];
 +    rwlock_t    rwlock;
 +    unsigned    reversed;
 +    unsigned    blocked;
 +    struct timer_list timer;
++#else
++    u_int32_t   partialMD5[4];
 +#endif
 +} AESmultiKey;
  
@@ -267,7 +271,17 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
 +            y--;
 +        }
 +    }
-+    m->reversed ^= 1;
++
++    x = m->reversed;    /* x is 0 or 4 */
++    m->reversed ^= 4;
++    y = m->reversed;    /* y is 4 or 0 */
++    p = &m->partialMD5buf[x];
++    memcpy(&m->partialMD5buf[y], p, 16);
++    m->partialMD5 = &m->partialMD5buf[y];
++    p[0] ^= 0xFFFFFFFF;
++    p[1] ^= 0xFFFFFFFF;
++    p[2] ^= 0xFFFFFFFF;
++    p[3] ^= 0xFFFFFFFF;
 +
 +    /* try to flush dirty cache data to RAM */
 +#if defined(CONFIG_X86_64) || (defined(CONFIG_X86) && !defined(CONFIG_M386) && !defined(CONFIG_CPU_386))
@@ -399,6 +413,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
 +    if(!m) return 0;
 +    memset(m, 0, sizeof(AESmultiKey));
 +#if CONFIG_BLK_DEV_LOOP_KEYSCRUB
++    m->partialMD5 = &m->partialMD5buf[0];
 +    rwlock_init(&m->rwlock);
 +    init_timer(&m->timer);
 +    again:
@@ -492,17 +507,18 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
 +        x += n;
 +    }
 +
++    memset(m, 0, sizeof(AESmultiKey));
 +    kfree(m);
 +}
 +
-+static int multiKeySetup(struct loop_device *lo, unsigned char *k)
++static int multiKeySetup(struct loop_device *lo, unsigned char *k, int version3)
 +{
 +    AESmultiKey *m;
 +    aes_context *a;
 +    int x, y, n, err = 0;
 +    union {
-+        u_int32_t     w[8]; /* needed for 4 byte alignment for b[] */
-+        unsigned char b[32];
++        u_int32_t     w[16];
++        unsigned char b[64];
 +    } un;
 +
 +    if(lo->lo_key_owner != current->uid && !capable(CAP_SYS_ADMIN))
@@ -552,6 +568,28 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
 +        k += 32;
 +        x++;
 +    }
++
++    m->partialMD5[0] = 0x67452301;
++    m->partialMD5[1] = 0xefcdab89;
++    m->partialMD5[2] = 0x98badcfe;
++    m->partialMD5[3] = 0x10325476;
++    if(version3) {
++        /* only first 128 bits of iv-key is used */
++        if(copy_from_user(&un.b[0], k, 16)) {
++            err = -EFAULT;
++            goto error_out;
++        }
++#if defined(__BIG_ENDIAN)
++        un.w[0] = cpu_to_le32(un.w[0]);
++        un.w[1] = cpu_to_le32(un.w[1]);
++        un.w[2] = cpu_to_le32(un.w[2]);
++        un.w[3] = cpu_to_le32(un.w[3]);
++#endif
++        memset(&un.b[16], 0, 48);
++        md5_transform_CPUbyteorder(&m->partialMD5[0], &un.w[0]);
++        lo->lo_flags |= 0x080000;  /* multi-key-v3 (info exported to user space) */
++    }
++
 +    m->keyMask = 0x3F;          /* range 0...63 */
 +    lo->lo_flags |= 0x100000;   /* multi-key (info exported to user space) */
 +    memset(&un.b[0], 0, 32);
@@ -579,7 +617,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
 -	offset = ((sector % (bs >> 9)) << 9) + lo->lo_offset % bs;
 -	if (offset >= bs)
 -		IV++;
-+void loop_compute_md5_iv(int devSect, u_int32_t *ivout, u_int32_t *data)
++void loop_compute_md5_iv_v3(int devSect, u_int32_t *ivout, u_int32_t *data)
 +{
 +    int         x;
 +#if defined(__BIG_ENDIAN)
@@ -588,11 +626,6 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
 +    u_int32_t   buf[16];
  
 -	return IV;
-+    ivout[0] = 0x67452301;
-+    ivout[1] = 0xefcdab89;
-+    ivout[2] = 0x98badcfe;
-+    ivout[3] = 0x10325476;
-+
 +#if defined(__BIG_ENDIAN)
 +    y = 7;
 +    e = 16;
@@ -643,11 +676,28 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
  }
  
 -static int do_bh_filebacked(struct loop_device *lo, struct buffer_head *bh, int rw)
-+static int transfer_aes(struct loop_device *lo, int cmd, char *raw_buf,
-+          char *loop_buf, int size, int devSect)
++/* this function exists for compatibility with old external cipher modules */
++void loop_compute_md5_iv(int devSect, u_int32_t *ivout, u_int32_t *data)
  {
 -	loff_t pos;
 -	int ret;
++    ivout[0] = 0x67452301;
++    ivout[1] = 0xefcdab89;
++    ivout[2] = 0x98badcfe;
++    ivout[3] = 0x10325476;
++    loop_compute_md5_iv_v3(devSect, ivout, data);
++}
++
++/* Some external modules do not know if md5_transform_CPUbyteorder() */
++/* is asmlinkage or not, so here is C language wrapper for them. */
++void md5_transform_CPUbyteorder_C(u_int32_t *hash, u_int32_t const *in)
++{
++    md5_transform_CPUbyteorder(hash, in);
++}
++
++static int transfer_aes(struct loop_device *lo, int cmd, char *raw_buf,
++          char *loop_buf, int size, int devSect)
++{
 +    aes_context     *a;
 +    AESmultiKey     *m;
 +    int             x;
@@ -683,7 +733,8 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
 +                if(y && !x) {
 +                    raw_buf -= 496;
 +                    loop_buf -= 496;
-+                    loop_compute_md5_iv(devSect, &iv[4], (u_int32_t *)(&loop_buf[16]));
++                    memcpy(&iv[4], &m->partialMD5[0], 16);
++                    loop_compute_md5_iv_v3(devSect, &iv[4], (u_int32_t *)(&loop_buf[16]));
 +                } else {
 +                    raw_buf += 16;
 +                    loop_buf += 16;
@@ -719,7 +770,8 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
 +                /* on 2.4 and later kernels, real raw_buf is not doing */
 +                /* any writes now so it can be used as temp buffer */
 +                memcpy(raw_buf, loop_buf, 512);
-+                loop_compute_md5_iv(devSect, &iv[0], (u_int32_t *)(&raw_buf[16]));
++                memcpy(&iv[0], &m->partialMD5[0], 16);
++                loop_compute_md5_iv_v3(devSect, &iv[0], (u_int32_t *)(&raw_buf[16]));
 +                x = 15;
 +                do {
 +                    iv[0] ^= *((u_int32_t *)(&raw_buf[ 0]));
@@ -811,7 +863,10 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
 +
 +    switch (cmd) {
 +    case LOOP_MULTI_KEY_SETUP:
-+        err = multiKeySetup(lo, (unsigned char *)arg);
++        err = multiKeySetup(lo, (unsigned char *)arg, 0);
++        break;
++    case LOOP_MULTI_KEY_SETUP_V3:
++        err = multiKeySetup(lo, (unsigned char *)arg, 1);
 +        break;
 +    default:
 +        err = -EINVAL;
@@ -828,7 +883,9 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
 +};
 +
 +EXPORT_SYMBOL(loop_compute_sector_iv);
++EXPORT_SYMBOL(loop_compute_md5_iv_v3);
 +EXPORT_SYMBOL(loop_compute_md5_iv);
++EXPORT_SYMBOL(md5_transform_CPUbyteorder_C);
 +#endif /* CONFIG_BLK_DEV_LOOP_AES */
 +
 +/* xfer_funcs[0] is special - its release function is never called */
@@ -839,8 +896,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
 +	[LO_CRYPT_AES] = &funcs_aes,
 +#endif
 +};
- 
--	return ret;
++
 +/*
 + *  First number of 'lo_prealloc' is the default number of RAM pages
 + *  to pre-allocate for each device backed loop. Every (configured)
@@ -868,12 +924,11 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
 +			break;
 +	}
 +	return 1;
- }
++}
 +__setup("lo_prealloc=", lo_prealloc_setup);
 +#endif
  
--static void loop_end_io_transfer(struct buffer_head *bh, int uptodate);
--static void loop_put_buffer(struct buffer_head *bh)
+-	return ret;
 +/*
 + * This is loop helper thread nice value in range
 + * from 0 (low priority) to -20 (high priority).
@@ -889,17 +944,13 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
 +MODULE_PARM_DESC(lo_nice, "Loop thread scheduler nice (0 ... -20)");
 +#else
 +static int __init lo_nice_setup(char *str)
- {
--	/*
--	 * check b_end_io, may just be a remapped bh and not an allocated one
--	 */
--	if (bh && bh->b_end_io == loop_end_io_transfer) {
++{
 +	int y;
 +
 +	if (get_option(&str, &y) == 1)
 +		lo_nice = y;
 +	return 1;
-+}
+ }
 +__setup("lo_nice=", lo_nice_setup);
 +#endif
 +
@@ -911,9 +962,15 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
 +	int			x1;
 +	int			x2;
 +} que_look_up_table;
-+
+ 
+-static void loop_end_io_transfer(struct buffer_head *bh, int uptodate);
+-static void loop_put_buffer(struct buffer_head *bh)
 +static void loop_prealloc_cleanup(struct loop_device *lo)
-+{
+ {
+-	/*
+-	 * check b_end_io, may just be a remapped bh and not an allocated one
+-	 */
+-	if (bh && bh->b_end_io == loop_end_io_transfer) {
 +	struct buffer_head *bh;
 +
 +	while ((bh = lo->lo_bh_free)) {
@@ -1322,7 +1379,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
  	if (!buffer_locked(rbh))
  		BUG();
  
-@@ -483,45 +1064,55 @@ static int loop_make_request(request_que
+@@ -483,45 +1121,55 @@ static int loop_make_request(request_que
  	} else if (rw == READA) {
  		rw = READ;
  	} else if (rw != READ) {
@@ -1397,7 +1454,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
  out:
  	buffer_IO_error(rbh);
  	return 0;
-@@ -530,30 +1121,6 @@ inactive:
+@@ -530,30 +1178,6 @@ inactive:
  	goto out;
  }
  
@@ -1428,7 +1485,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
  /*
   * worker thread that handles reads/writes to file backed loop devices,
   * to avoid blocking in our make_request_fn. it also does loop decrypting
-@@ -563,8 +1130,20 @@ static inline void loop_handle_bh(struct
+@@ -563,8 +1187,20 @@ static inline void loop_handle_bh(struct
  static int loop_thread(void *data)
  {
  	struct loop_device *lo = data;
@@ -1450,7 +1507,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
  	daemonize();
  	exit_files(current);
  	reparent_to_init();
-@@ -576,12 +1155,30 @@ static int loop_thread(void *data)
+@@ -576,12 +1212,30 @@ static int loop_thread(void *data)
  	flush_signals(current);
  	spin_unlock_irq(&current->sigmask_lock);
  
@@ -1481,7 +1538,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
  
  	/*
  	 * up sem, we are running
-@@ -589,23 +1186,120 @@ static int loop_thread(void *data)
+@@ -589,23 +1243,120 @@ static int loop_thread(void *data)
  	up(&lo->lo_sem);
  
  	for (;;) {
@@ -1609,7 +1666,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
  		 * will hit zero then
  		 */
  		if (atomic_dec_and_test(&lo->lo_pending))
-@@ -616,15 +1310,34 @@ static int loop_thread(void *data)
+@@ -616,15 +1367,34 @@ static int loop_thread(void *data)
  	return 0;
  }
  
@@ -1646,7 +1703,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
  
  	MOD_INC_USE_COUNT;
  
-@@ -643,33 +1356,49 @@ static int loop_set_fd(struct loop_devic
+@@ -643,33 +1413,49 @@ static int loop_set_fd(struct loop_devic
  	if (!(file->f_mode & FMODE_WRITE))
  		lo_flags |= LO_FLAGS_READ_ONLY;
  
@@ -1700,7 +1757,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
  	    || !(lo_file->f_mode & FMODE_WRITE))
  		lo_flags |= LO_FLAGS_READ_ONLY;
  
-@@ -677,28 +1406,40 @@ static int loop_set_fd(struct loop_devic
+@@ -677,28 +1463,40 @@ static int loop_set_fd(struct loop_devic
  
  	lo->lo_device = lo_device;
  	lo->lo_flags = lo_flags;
@@ -1754,7 +1811,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
   out_putf:
  	fput(file);
   out:
-@@ -708,13 +1449,14 @@ static int loop_set_fd(struct loop_devic
+@@ -708,13 +1506,14 @@ static int loop_set_fd(struct loop_devic
  
  static int loop_release_xfer(struct loop_device *lo)
  {
@@ -1773,7 +1830,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
  		lo->lo_encrypt_type = 0;
  	}
  	return err;
-@@ -722,19 +1464,19 @@ static int loop_release_xfer(struct loop
+@@ -722,19 +1521,19 @@ static int loop_release_xfer(struct loop
  
  static int loop_init_xfer(struct loop_device *lo, int type,struct loop_info *i)
  {
@@ -1797,7 +1854,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
  
  static int loop_clr_fd(struct loop_device *lo, struct block_device *bdev)
  {
-@@ -751,11 +1493,12 @@ static int loop_clr_fd(struct loop_devic
+@@ -751,11 +1550,12 @@ static int loop_clr_fd(struct loop_devic
  	spin_lock_irq(&lo->lo_lock);
  	lo->lo_state = Lo_rundown;
  	if (atomic_dec_and_test(&lo->lo_pending))
@@ -1811,7 +1868,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
  	lo->lo_backing_file = NULL;
  
  	loop_release_xfer(lo);
-@@ -763,87 +1506,219 @@ static int loop_clr_fd(struct loop_devic
+@@ -763,87 +1563,219 @@ static int loop_clr_fd(struct loop_devic
  	lo->ioctl = NULL;
  	lo->lo_device = 0;
  	lo->lo_encrypt_type = 0;
@@ -2070,7 +2127,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
  }
  
  static int lo_ioctl(struct inode * inode, struct file * file,
-@@ -872,10 +1747,16 @@ static int lo_ioctl(struct inode * inode
+@@ -872,10 +1804,16 @@ static int lo_ioctl(struct inode * inode
  		err = loop_clr_fd(lo, inode->i_bdev);
  		break;
  	case LOOP_SET_STATUS:
@@ -2089,7 +2146,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
  		break;
  	case BLKGETSIZE:
  		if (lo->lo_state != Lo_bound) {
-@@ -894,6 +1775,8 @@ static int lo_ioctl(struct inode * inode
+@@ -894,6 +1832,8 @@ static int lo_ioctl(struct inode * inode
  	case BLKBSZGET:
  	case BLKBSZSET:
  	case BLKSSZGET:
@@ -2098,7 +2155,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
  		err = blk_ioctl(inode->i_rdev, cmd, arg);
  		break;
  	default:
-@@ -906,7 +1789,7 @@ static int lo_ioctl(struct inode * inode
+@@ -906,7 +1846,7 @@ static int lo_ioctl(struct inode * inode
  static int lo_open(struct inode *inode, struct file *file)
  {
  	struct loop_device *lo;
@@ -2107,7 +2164,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
  
  	if (!inode)
  		return -EINVAL;
-@@ -921,10 +1804,6 @@ static int lo_open(struct inode *inode, 
+@@ -921,10 +1861,6 @@ static int lo_open(struct inode *inode, 
  	lo = &loop_dev[dev];
  	MOD_INC_USE_COUNT;
  	down(&lo->lo_ctl_mutex);
@@ -2118,7 +2175,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
  	lo->lo_refcnt++;
  	up(&lo->lo_ctl_mutex);
  	return 0;
-@@ -933,7 +1812,7 @@ static int lo_open(struct inode *inode, 
+@@ -933,7 +1869,7 @@ static int lo_open(struct inode *inode, 
  static int lo_release(struct inode *inode, struct file *file)
  {
  	struct loop_device *lo;
@@ -2127,7 +2184,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
  
  	if (!inode)
  		return 0;
-@@ -948,11 +1827,7 @@ static int lo_release(struct inode *inod
+@@ -948,11 +1884,7 @@ static int lo_release(struct inode *inod
  
  	lo = &loop_dev[dev];
  	down(&lo->lo_ctl_mutex);
@@ -2139,7 +2196,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
  	up(&lo->lo_ctl_mutex);
  	MOD_DEC_USE_COUNT;
  	return 0;
-@@ -974,34 +1849,32 @@ MODULE_LICENSE("GPL");
+@@ -974,34 +1906,32 @@ MODULE_LICENSE("GPL");
  
  int loop_register_transfer(struct loop_func_table *funcs)
  {
@@ -2184,7 +2241,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
  {
  	int	i;
  
-@@ -1017,10 +1890,9 @@ int __init loop_init(void) 
+@@ -1017,10 +1947,9 @@ int __init loop_init(void) 
  		return -EIO;
  	}
  
@@ -2196,7 +2253,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
  
  	loop_sizes = kmalloc(max_loop * sizeof(int), GFP_KERNEL);
  	if (!loop_sizes)
-@@ -1030,6 +1902,10 @@ int __init loop_init(void) 
+@@ -1030,6 +1959,10 @@ int __init loop_init(void) 
  	if (!loop_blksizes)
  		goto out_blksizes;
  
@@ -2207,7 +2264,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
  	blk_queue_make_request(BLK_DEFAULT_QUEUE(MAJOR_NR), loop_make_request);
  
  	for (i = 0; i < max_loop; i++) {
-@@ -1037,45 +1913,84 @@ int __init loop_init(void) 
+@@ -1037,45 +1970,86 @@ int __init loop_init(void) 
  		memset(lo, 0, sizeof(struct loop_device));
  		init_MUTEX(&lo->lo_ctl_mutex);
  		init_MUTEX_LOCKED(&lo->lo_sem);
@@ -2239,6 +2296,7 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
 +	register_ioctl32_conversion(LOOP_SET_STATUS64, IOCTL32_COMPATIBLE_PTR);
 +	register_ioctl32_conversion(LOOP_GET_STATUS64, IOCTL32_COMPATIBLE_PTR);
 +	register_ioctl32_conversion(LOOP_MULTI_KEY_SETUP, IOCTL32_COMPATIBLE_PTR);
++	register_ioctl32_conversion(LOOP_MULTI_KEY_SETUP_V3, IOCTL32_COMPATIBLE_PTR);
 +	unlock_kernel();
 +#endif
 +
@@ -2289,12 +2347,13 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
 +	unregister_ioctl32_conversion(LOOP_SET_STATUS64);
 +	unregister_ioctl32_conversion(LOOP_GET_STATUS64);
 +	unregister_ioctl32_conversion(LOOP_MULTI_KEY_SETUP);
++	unregister_ioctl32_conversion(LOOP_MULTI_KEY_SETUP_V3);
 +	unlock_kernel();
 +#endif
  }
  
  module_init(loop_init);
-@@ -1090,3 +2005,14 @@ static int __init max_loop_setup(char *s
+@@ -1090,3 +2064,14 @@ static int __init max_loop_setup(char *s
  
  __setup("max_loop=", max_loop_setup);
  #endif
@@ -2309,9 +2368,9 @@ diff -pruN linux-2.4.27_orig/drivers/block/loop.c linux-2.4.27/drivers/block/loo
 +}
 +EXPORT_SYMBOL(loop_add_keyscrub_fn);
 +#endif
-diff -pruN linux-2.4.27_orig/drivers/misc/Makefile linux-2.4.27/drivers/misc/Makefile
---- linux-2.4.27_orig/drivers/misc/Makefile	2000-12-29 23:07:22.000000000 +0100
-+++ linux-2.4.27/drivers/misc/Makefile	2004-10-25 14:20:44.716004624 +0200
+diff -pruN linux-2.4.28_orig/drivers/misc/Makefile linux-2.4.28/drivers/misc/Makefile
+--- linux-2.4.28_orig/drivers/misc/Makefile	2000-12-29 23:07:22.000000000 +0100
++++ linux-2.4.28/drivers/misc/Makefile	2005-01-11 09:33:37.476526384 +0100
 @@ -9,8 +9,35 @@
  # parent makes..
  #
@@ -2348,9 +2407,9 @@ diff -pruN linux-2.4.27_orig/drivers/misc/Makefile linux-2.4.27/drivers/misc/Mak
  include $(TOPDIR)/Rules.make
  
  fastdep:
-diff -pruN linux-2.4.27_orig/drivers/misc/aes-amd64.S linux-2.4.27/drivers/misc/aes-amd64.S
---- linux-2.4.27_orig/drivers/misc/aes-amd64.S	1970-01-01 01:00:00.000000000 +0100
-+++ linux-2.4.27/drivers/misc/aes-amd64.S	2004-10-25 14:20:44.718004320 +0200
+diff -pruN linux-2.4.28_orig/drivers/misc/aes-amd64.S linux-2.4.28/drivers/misc/aes-amd64.S
+--- linux-2.4.28_orig/drivers/misc/aes-amd64.S	1970-01-01 01:00:00.000000000 +0100
++++ linux-2.4.28/drivers/misc/aes-amd64.S	2005-01-11 09:33:37.478526080 +0100
 @@ -0,0 +1,893 @@
 +//
 +// Copyright (c) 2001, Dr Brian Gladman <brg@gladman.uk.net>, Worcester, UK.
@@ -3245,9 +3304,9 @@ diff -pruN linux-2.4.27_orig/drivers/misc/aes-amd64.S linux-2.4.27/drivers/misc/
 +	im_data5(v3)
 +	im_data6(v3)
 +	im_data7(v3)
-diff -pruN linux-2.4.27_orig/drivers/misc/aes-x86.S linux-2.4.27/drivers/misc/aes-x86.S
---- linux-2.4.27_orig/drivers/misc/aes-x86.S	1970-01-01 01:00:00.000000000 +0100
-+++ linux-2.4.27/drivers/misc/aes-x86.S	2004-10-25 14:20:44.725003256 +0200
+diff -pruN linux-2.4.28_orig/drivers/misc/aes-x86.S linux-2.4.28/drivers/misc/aes-x86.S
+--- linux-2.4.28_orig/drivers/misc/aes-x86.S	1970-01-01 01:00:00.000000000 +0100
++++ linux-2.4.28/drivers/misc/aes-x86.S	2005-01-11 09:33:37.480525776 +0100
 @@ -0,0 +1,922 @@
 +//
 +// Copyright (c) 2001, Dr Brian Gladman <brg@gladman.uk.net>, Worcester, UK.
@@ -4171,9 +4230,9 @@ diff -pruN linux-2.4.27_orig/drivers/misc/aes-x86.S linux-2.4.27/drivers/misc/ae
 +	im_data5(v3)
 +	im_data6(v3)
 +	im_data7(v3)
-diff -pruN linux-2.4.27_orig/drivers/misc/aes.c linux-2.4.27/drivers/misc/aes.c
---- linux-2.4.27_orig/drivers/misc/aes.c	1970-01-01 01:00:00.000000000 +0100
-+++ linux-2.4.27/drivers/misc/aes.c	2004-10-25 14:20:44.730002496 +0200
+diff -pruN linux-2.4.28_orig/drivers/misc/aes.c linux-2.4.28/drivers/misc/aes.c
+--- linux-2.4.28_orig/drivers/misc/aes.c	1970-01-01 01:00:00.000000000 +0100
++++ linux-2.4.28/drivers/misc/aes.c	2005-01-11 09:33:37.484525168 +0100
 @@ -0,0 +1,1479 @@
 +// I retain copyright in this code but I encourage its free use provided
 +// that I don't carry any responsibility for the results. I am especially 
@@ -5654,9 +5713,9 @@ diff -pruN linux-2.4.27_orig/drivers/misc/aes.c linux-2.4.27/drivers/misc/aes.c
 +
 +    state_out(out_blk, b0);
 +}
-diff -pruN linux-2.4.27_orig/drivers/misc/aes.h linux-2.4.27/drivers/misc/aes.h
---- linux-2.4.27_orig/drivers/misc/aes.h	1970-01-01 01:00:00.000000000 +0100
-+++ linux-2.4.27/drivers/misc/aes.h	2004-10-25 14:20:44.731002344 +0200
+diff -pruN linux-2.4.28_orig/drivers/misc/aes.h linux-2.4.28/drivers/misc/aes.h
+--- linux-2.4.28_orig/drivers/misc/aes.h	1970-01-01 01:00:00.000000000 +0100
++++ linux-2.4.28/drivers/misc/aes.h	2005-01-11 09:33:37.485525016 +0100
 @@ -0,0 +1,113 @@
 +// I retain copyright in this code but I encourage its free use provided
 +// that I don't carry any responsibility for the results. I am especially 
@@ -5771,9 +5830,9 @@ diff -pruN linux-2.4.27_orig/drivers/misc/aes.h linux-2.4.27/drivers/misc/aes.h
 +// if their parameters have not changed.
 +
 +#endif  // _AES_H
-diff -pruN linux-2.4.27_orig/drivers/misc/crypto-ksym.c linux-2.4.27/drivers/misc/crypto-ksym.c
---- linux-2.4.27_orig/drivers/misc/crypto-ksym.c	1970-01-01 01:00:00.000000000 +0100
-+++ linux-2.4.27/drivers/misc/crypto-ksym.c	2004-10-25 14:20:44.731002344 +0200
+diff -pruN linux-2.4.28_orig/drivers/misc/crypto-ksym.c linux-2.4.28/drivers/misc/crypto-ksym.c
+--- linux-2.4.28_orig/drivers/misc/crypto-ksym.c	1970-01-01 01:00:00.000000000 +0100
++++ linux-2.4.28/drivers/misc/crypto-ksym.c	2005-01-11 09:33:37.485525016 +0100
 @@ -0,0 +1,7 @@
 +#include <linux/module.h>
 +#include "aes.h"
@@ -5782,9 +5841,9 @@ diff -pruN linux-2.4.27_orig/drivers/misc/crypto-ksym.c linux-2.4.27/drivers/mis
 +EXPORT_SYMBOL_NOVERS(aes_encrypt);
 +EXPORT_SYMBOL_NOVERS(aes_decrypt);
 +EXPORT_SYMBOL_NOVERS(md5_transform_CPUbyteorder);
-diff -pruN linux-2.4.27_orig/drivers/misc/md5-amd64.S linux-2.4.27/drivers/misc/md5-amd64.S
---- linux-2.4.27_orig/drivers/misc/md5-amd64.S	1970-01-01 01:00:00.000000000 +0100
-+++ linux-2.4.27/drivers/misc/md5-amd64.S	2004-10-25 14:20:44.732002192 +0200
+diff -pruN linux-2.4.28_orig/drivers/misc/md5-amd64.S linux-2.4.28/drivers/misc/md5-amd64.S
+--- linux-2.4.28_orig/drivers/misc/md5-amd64.S	1970-01-01 01:00:00.000000000 +0100
++++ linux-2.4.28/drivers/misc/md5-amd64.S	2005-01-11 09:33:37.486524864 +0100
 @@ -0,0 +1,200 @@
 +//
 +//  md5-amd64.S
@@ -5986,9 +6045,9 @@ diff -pruN linux-2.4.27_orig/drivers/misc/md5-amd64.S linux-2.4.27/drivers/misc/
 +	addl	%ecx,8(%rdi)
 +	addl	%edx,12(%rdi)
 +	ret
-diff -pruN linux-2.4.27_orig/drivers/misc/md5-x86.S linux-2.4.27/drivers/misc/md5-x86.S
---- linux-2.4.27_orig/drivers/misc/md5-x86.S	1970-01-01 01:00:00.000000000 +0100
-+++ linux-2.4.27/drivers/misc/md5-x86.S	2004-10-25 14:20:44.733002040 +0200
+diff -pruN linux-2.4.28_orig/drivers/misc/md5-x86.S linux-2.4.28/drivers/misc/md5-x86.S
+--- linux-2.4.28_orig/drivers/misc/md5-x86.S	1970-01-01 01:00:00.000000000 +0100
++++ linux-2.4.28/drivers/misc/md5-x86.S	2005-01-11 09:33:37.486524864 +0100
 @@ -0,0 +1,207 @@
 +//
 +//  md5-x86.S
@@ -6197,9 +6256,9 @@ diff -pruN linux-2.4.27_orig/drivers/misc/md5-x86.S linux-2.4.27/drivers/misc/md
 +	pop	%ebx
 +	pop	%ebp
 +	ret
-diff -pruN linux-2.4.27_orig/drivers/misc/md5.c linux-2.4.27/drivers/misc/md5.c
---- linux-2.4.27_orig/drivers/misc/md5.c	1970-01-01 01:00:00.000000000 +0100
-+++ linux-2.4.27/drivers/misc/md5.c	2004-10-25 14:20:44.743000520 +0200
+diff -pruN linux-2.4.28_orig/drivers/misc/md5.c linux-2.4.28/drivers/misc/md5.c
+--- linux-2.4.28_orig/drivers/misc/md5.c	1970-01-01 01:00:00.000000000 +0100
++++ linux-2.4.28/drivers/misc/md5.c	2005-01-11 09:33:37.487524712 +0100
 @@ -0,0 +1,106 @@
 +/*
 + * MD5 Message Digest Algorithm (RFC1321).
@@ -6307,9 +6366,9 @@ diff -pruN linux-2.4.27_orig/drivers/misc/md5.c linux-2.4.27/drivers/misc/md5.c
 +    hash[2] += c;
 +    hash[3] += d;
 +}
-diff -pruN linux-2.4.27_orig/drivers/misc/md5.h linux-2.4.27/drivers/misc/md5.h
---- linux-2.4.27_orig/drivers/misc/md5.h	1970-01-01 01:00:00.000000000 +0100
-+++ linux-2.4.27/drivers/misc/md5.h	2004-10-25 14:20:44.743000520 +0200
+diff -pruN linux-2.4.28_orig/drivers/misc/md5.h linux-2.4.28/drivers/misc/md5.h
+--- linux-2.4.28_orig/drivers/misc/md5.h	1970-01-01 01:00:00.000000000 +0100
++++ linux-2.4.28/drivers/misc/md5.h	2005-01-11 09:33:37.487524712 +0100
 @@ -0,0 +1,11 @@
 +/* md5.h */
 +
@@ -6322,9 +6381,9 @@ diff -pruN linux-2.4.27_orig/drivers/misc/md5.h linux-2.4.27/drivers/misc/md5.h
 + asmlinkage
 +#endif
 +extern void md5_transform_CPUbyteorder(u_int32_t *, u_int32_t const *);
-diff -pruN linux-2.4.27_orig/include/linux/loop.h linux-2.4.27/include/linux/loop.h
---- linux-2.4.27_orig/include/linux/loop.h	2001-09-17 22:16:30.000000000 +0200
-+++ linux-2.4.27/include/linux/loop.h	2004-10-25 14:20:44.744000368 +0200
+diff -pruN linux-2.4.28_orig/include/linux/loop.h linux-2.4.28/include/linux/loop.h
+--- linux-2.4.28_orig/include/linux/loop.h	2001-09-17 22:16:30.000000000 +0200
++++ linux-2.4.28/include/linux/loop.h	2005-01-11 09:33:37.488524560 +0100
 @@ -17,6 +17,11 @@
  
  #ifdef __KERNEL__
@@ -6478,13 +6537,14 @@ diff -pruN linux-2.4.27_orig/include/linux/loop.h linux-2.4.27/include/linux/loo
  
  #endif
  /*
-@@ -151,5 +185,9 @@ int loop_unregister_transfer(int number)
+@@ -151,5 +185,10 @@ int loop_unregister_transfer(int number)
  #define LOOP_CLR_FD	0x4C01
  #define LOOP_SET_STATUS	0x4C02
  #define LOOP_GET_STATUS	0x4C03
 +#define LOOP_SET_STATUS64 0x4C04
 +#define LOOP_GET_STATUS64 0x4C05
 +
-+#define LOOP_MULTI_KEY_SETUP 0x4C4D
++#define LOOP_MULTI_KEY_SETUP     0x4C4D
++#define LOOP_MULTI_KEY_SETUP_V3  0x4C4E
  
  #endif

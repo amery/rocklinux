@@ -1,0 +1,24 @@
+diff -dur usbutils-0.11/libusb/access.c usbutils-0.11-p/libusb/access.c
+--- usbutils-0.11/libusb/access.c	1999-12-22 15:14:16.000000000 +0000
++++ usbutils-0.11-p/libusb/access.c	2004-10-27 18:08:16.175682408 +0000
+@@ -31,6 +31,8 @@
+ #include "libusb.h"
+ 
+ #ifdef HAVE_LINUX_USB_H
++#include <linux/types.h>
++typedef unsigned long kernel_ulong_t;
+ #include <linux/usb.h>
+ #else
+ #include "usb.h"
+diff -dur usbutils-0.11/libusb/descparse.c usbutils-0.11-p/libusb/descparse.c
+--- usbutils-0.11/libusb/descparse.c	1999-12-22 15:14:16.000000000 +0000
++++ usbutils-0.11-p/libusb/descparse.c	2004-10-27 18:08:54.696826304 +0000
+@@ -31,6 +31,8 @@
+ #include "libusb.h"
+ 
+ #ifdef HAVE_LINUX_USB_H
++#include <linux/types.h>
++typedef unsigned long kernel_ulong_t;
+ #include <linux/usb.h>
+ #else
+ #include "usb.h"

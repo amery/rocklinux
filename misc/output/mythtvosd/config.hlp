@@ -1,0 +1,94 @@
+
+ROCKCFG_OUTPUT_MYTHTVOSD_BIN
+  Please supply the absolute location of your mythtvosd  executable.
+  (rock package: mythtv)
+ 
+ROCKCFG_OUTPUT_MYTHTVOSD_ENABLE_HEADER
+  This class of messages looks like, for example:
+  
+  	"Building cross binutils and cc for ${arch_target} ..."
+	
+  and would be written out exactly like this.
+
+ROCKCFG_OUTPUT_MYTHTVOSD_ENABLE_STATUS
+  This class of messages looks like, for exmaple:
+  
+  	"writing build log to src.cross.$id/binutils.log."
+	
+  and would be written out exactly like this. 
+
+ROCKCFG_OUTPUT_MYTHTVOSD_ENABLE_ERROR
+  This class of messages looks like, for example:
+  
+  	"Detected a problem with the flist wrapper lib on your system"
+	
+  and would be written out exactly like this. 
+
+ROCKCFG_OUTPUT_MYTHTVOSD_ENABLE_PKG_DENY
+  This class of message is issued when a package build is categorically 
+  denied before even the tarball is touched. Common examples are trying
+  to build e17 without imlib2 having compiled. The hook for this class 
+  of messages provides 3 arguments:
+  
+  	$1	the current stagelevel
+	$2	the current package-name
+	$3	the reason why this package got refused
+
+  You can use these in the free configurable text, as shown in the 
+  example text. 
+
+ROCKCFG_OUTPUT_MYTHTVOSD_TXT_PKG_DENY
+  Please have a look at the help of the above option.
+
+ROCKCFG_OUTPUT_MYTHTVOSD_ENABLE_PKG_START
+  This class of message is issued when a package build is started.
+  The hook for this class of messages provides 5 arguments:
+  
+  	$1	the current stagelevel
+	$2	the current package's repository
+	$3	the current package-name
+	$4	the ROCK Linux version, for example 2.0.0
+	$5	the ROCK Linux extraversion, e.g. -rc1
+
+  You can use these in the free configurable text, as shown in the 
+  example text.
+
+ROCKCFG_OUTPUT_MYTHTVOSD_TXT_PKG_START
+  Please have a look at the help of the above option.
+
+ROCKCFG_OUTPUT_MYTHTVOSD_ENABLE_PKG_FINISH
+  This class of message is issued when a package build is finished.
+  The hook for this class of messages provides 3 arguments:
+  
+  	$1	the current stagelevel
+	$2	the current package's repository
+	$3	the current package-name
+
+  You can use these in the free configurable text, as shown in the 
+  example text.
+
+ROCKCFG_OUTPUT_MYTHTVOSD_TXT_PKG_FINISH
+  Please have a look at the help of the above option.
+
+ROCKCFG_OUTPUT_MYTHTVOSD_ENABLE_PKG_ABORT
+  This class of message is issued when a package build is aborted.
+  The hook for this class of messages provides 3 arguments:
+  
+  	$1	the current stagelevel
+	$2	the current package's repository
+	$3	the current package-name
+
+  You can use these in the free configurable text, as shown in the 
+  example text.
+
+ROCKCFG_OUTPUT_MYTHTVOSD_TXT_PKG_ABORT
+  Please have a look at the help of the above option.
+
+ROCKCFG_OUTPUT_MYTHTVOSD_ENABLE_ERRORQUOTE
+  This class of message is usually used to quote the last few lines of a
+  logfile to let you probably guess the reason of a failed build without
+  the need to open the logfile. (use $*, if you want it sent).
+
+ROCKCFG_OUTPUT_MYTHTVOSD_TXT_ERRORQUOTE
+  Please have a look at the help of the above option.
+

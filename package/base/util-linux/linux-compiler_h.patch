@@ -53,3 +53,13 @@ diff -dur util-linux-2.12h/partx/partx.c util-linux-2.12h-patch/partx/partx.c
  #include <linux/hdreg.h>        /* HDIO_GETGEO */
  #include <linux/blkpg.h>
  #define BLKGETSIZE _IO(0x12,96)    /* return device size */
+--- util-linux-2.12h/sys-utils/cytune.c.orig	2004-11-13 17:28:02.949147420 +0100
++++ util-linux-2.12h/sys-utils/cytune.c	2004-11-13 17:28:25.514481234 +0100
+@@ -58,6 +58,7 @@
+ #include <linux/tqueue.h>	/* required for old kernels (for struct tq_struct) */
+ 				/* compilation errors on other kernels */
+ #endif
++#include <linux/compiler.h>
+ #include <linux/cyclades.h>
+ 
+ #if 0

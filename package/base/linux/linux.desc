@@ -43,10 +43,8 @@
 [P] X -?---5---9 101.500
 
 #if xpkg == linux24.*
-[V] 2.4.27
-[O] var_append patchfiles " " "gcc34-fixes-v2.4.27.patch"
-[D] 3224398821 linux-2.4.27.tar.bz2 ftp://ftp.kernel.org/pub/linux/kernel/v2.4/
-[D] 3677506958 gcc34-fixes-v2.4.27.patch http://www.rocklinux.net/people/fake/linux24/
+[V] 2.4.28
+[D] 83818766 linux-2.4.28.tar.bz2 http://www.kernel.org/pub/linux/kernel/v2.4/
 #endif
 
 #if xpkg == linux26.*

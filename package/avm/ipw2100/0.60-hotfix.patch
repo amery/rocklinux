@@ -1,0 +1,21 @@
+diff -ruN ipw2100-0.60/ipw2100.c ipw2100-0.60-new/ipw2100.c
+--- ipw2100-0.60/ipw2100.c	2004-11-05 10:23:37.000000000 +0100
++++ ipw2100-0.60-new/ipw2100.c	2004-11-06 19:54:16.905202256 +0100
+@@ -8088,7 +8088,7 @@
+ #include <linux/moduleparam.h>
+ module_param(firmware, charp, 0);
+ 
+-MODULE_PARM_DEC(firmware, "complete path to firmware file");
++MODULE_PARM_DESC(firmware, "complete path to firmware file");
+ 
+ #endif /* CONFIG_IPW2100_LEGACY_FW_LOAD */
+ 
+@@ -8354,7 +8354,7 @@
+ 
+ 	if (!firmware) {
+ 		switch (priv->ieee->iw_mode) {
+-		case IW_MDOE_ADHOC:
++		case IW_MODE_ADHOC:
+ 			fw_name = "/etc/firmware/" IPW2100_FW_NAME("-i");
+ 			break;
+ #ifdef CONFIG_IPW2100_PROMISC

@@ -20,16 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087350648 Wed Jun 16 03:50:48 2004
+[TIMESTAMP] 1093191911 Sun Aug 22 18:25:11 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-bridge-utils.log 9-bridge-utils.log
 
-[BUILDTIME] 2602 (9)
-[SIZE] 0.11 MB, 25 files
+[BUILDTIME] 2119 (9)
+[SIZE] 0.04 MB, 8 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils diffutils findutils
-[DEP] gcc3 glibc23 grep linux24-header linux24-src make mktemp net-tools
-[DEP] sed sysfiles tar util-linux
+[DEP] 00-dirtree bash binutils bzip2 coreutils diffutils findutils gcc32
+[DEP] gcc32:dev glibc23 glibc23:dev grep linux24-header:dev linux24-source
+[DEP] linux24-source:dev make mktemp net-tools sed sysfiles sysfsutils
+[DEP] sysfsutils:dev tar util-linux
 

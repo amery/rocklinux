@@ -20,16 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087458132 Thu Jun 17 09:42:12 2004
+[TIMESTAMP] 1093297827 Mon Aug 23 23:50:27 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-snort.log 9-snort.log
 
-[BUILDTIME] 8197 (9)
-[SIZE] 7.38 MB, 2171 files
+[BUILDTIME] 6861 (9)
+[SIZE] 1.40 MB, 83 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils diffutils findutils
-[DEP] gcc3 glibc23 grep libpcap linux24-header m4 make mktemp mysql
-[DEP] net-tools openssl pcre postgresql sed sysfiles tar util-linux zlib
+[DEP] 00-dirtree bash binutils bzip2 coreutils diffutils findutils gcc32
+[DEP] gcc32:dev glibc23 glibc23:dev grep libpcap:dev linux24-header:dev
+[DEP] m4 make mktemp mysql mysql:dev net-tools openssl pcre pcre:dev
+[DEP] postgresql postgresql:dev sed sysfiles tar util-linux zlib:dev
 

@@ -20,15 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087401208 Wed Jun 16 17:53:28 2004
+[TIMESTAMP] 1093246801 Mon Aug 23 09:40:01 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-procinfo.log 9-procinfo.log
 
-[BUILDTIME] 2071 (9)
-[SIZE] 0.10 MB, 16 files
+[BUILDTIME] 1563 (9)
+[SIZE] 0.08 MB, 12 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils findutils gcc3
-[DEP] glibc23 grep linux24-header make ncurses sed sysfiles tar
+[DEP] 00-dirtree bash binutils bzip2 coreutils findutils gcc32 gcc32:dev
+[DEP] glibc23 glibc23:dev grep linux24-header:dev make ncurses:dev sed
+[DEP] sysfiles tar
 

@@ -20,111 +20,111 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087482369 Thu Jun 17 16:26:09 2004
+[TIMESTAMP] 1093142996 Sun Aug 22 04:49:56 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-libbonobomm.err 9-libbonobomm.err
 
-[5-ERROR] Bonobo-cpp-common.cc:8665: no matching function for call to `
-[5-ERROR]    _orbitcpp::CompoundUnboundedSeq<CORBA::TypeCode, int>::CompoundUnboundedSeq(
-[5-ERROR]    )'
-[5-ERROR] /opt/gnome26/include/orbitcpp-2.0/orbitcpp/orb-cpp/orbitcpp_compound_seq.h:129: candidates
-[5-ERROR]    are: _orbitcpp::CompoundUnboundedSeq<CORBA::TypeCode, 
-[5-ERROR]    int>::CompoundUnboundedSeq(const 
-[5-ERROR]    _orbitcpp::CompoundUnboundedSeq<CORBA::TypeCode, int>&)
-[5-ERROR] Bonobo-cpp-common.cc: In constructor 
-[5-ERROR]    `Bonobo::Application::MessageDesc::MessageDesc(const 
-[5-ERROR]    Bonobo_Application_MessageDesc&)':
-[5-ERROR] Bonobo-cpp-common.cc:8669: no matching function for call to `
-[5-ERROR]    _orbitcpp::CompoundUnboundedSeq<CORBA::TypeCode, int>::CompoundUnboundedSeq(
-[5-ERROR]    )'
-[5-ERROR] /opt/gnome26/include/orbitcpp-2.0/orbitcpp/orb-cpp/orbitcpp_compound_seq.h:129: candidates
-[5-ERROR]    are: _orbitcpp::CompoundUnboundedSeq<CORBA::TypeCode, 
-[5-ERROR]    int>::CompoundUnboundedSeq(const 
-[5-ERROR]    _orbitcpp::CompoundUnboundedSeq<CORBA::TypeCode, int>&)
-[5-ERROR] Bonobo-cpp-common.cc: In member function `void 
-[5-ERROR]    Bonobo::Application::MessageDesc::_orbitcpp_pack(Bonobo_Application_MessageDesc&)
-[5-ERROR]    const':
-[5-ERROR] Bonobo-cpp-common.cc:8686: no matching function for call to `
-[5-ERROR]    _orbitcpp::CompoundUnboundedSeq<CORBA::TypeCode, int>::_orbitcpp_pack(
-[5-ERROR]    CORBA_sequence_CORBA_TypeCode&) const'
-[5-ERROR] Bonobo-cpp-common.cc:8687: `return_type' undeclared (first use this function)
-[5-ERROR] Bonobo-cpp-common.cc:8687: (Each undeclared identifier is reported only once 
-[5-ERROR]    for each function it appears in.)
-[5-ERROR] Bonobo-cpp-common.cc: In member function `void 
-[5-ERROR]    Bonobo::Application::MessageDesc::_orbitcpp_unpack(const 
-[5-ERROR]    Bonobo_Application_MessageDesc&)':
-[5-ERROR] Bonobo-cpp-common.cc:8695: no matching function for call to `
-[5-ERROR]    _orbitcpp::CompoundUnboundedSeq<CORBA::TypeCode, int>::_orbitcpp_unpack(
-[5-ERROR]    const CORBA_sequence_CORBA_TypeCode&)'
-[5-ERROR] make[4]: *** [Bonobo-cpp-common.lo] Error 1
-[5-ERROR] make[4]: Leaving directory `/ROCK/src.libbonobomm.1087475992.30230.1358268654/libbonobomm-1.3.8/bonobomm/generated'
-[5-ERROR] make[3]: *** [all] Error 2
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.libbonobomm.1087475992.30230.1358268654/libbonobomm-1.3.8/bonobomm/generated'
-[5-ERROR] make[2]: *** [all-recursive] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.libbonobomm.1087475992.30230.1358268654/libbonobomm-1.3.8/bonobomm'
-[5-ERROR] make[1]: *** [all] Error 2
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.libbonobomm.1087475992.30230.1358268654/libbonobomm-1.3.8/bonobomm'
-[5-ERROR] make: *** [all-recursive] Error 1
+[5-ERROR] checking for inttypes.h... yes
+[5-ERROR] checking for stdint.h... yes
+[5-ERROR] checking for unistd.h... yes
+[5-ERROR] checking dlfcn.h usability... yes
+[5-ERROR] checking dlfcn.h presence... yes
+[5-ERROR] checking for dlfcn.h... yes
+[5-ERROR] checking for i386-unknown-linux-gnu-ranlib... ranlib
+[5-ERROR] checking for i386-unknown-linux-gnu-strip... strip
+[5-ERROR] checking for objdir... .libs
+[5-ERROR] checking for gcc-32 option to produce PIC... -fPIC
+[5-ERROR] checking if gcc-32 PIC flag -fPIC works... yes
+[5-ERROR] checking if gcc-32 static flag -static works... yes
+[5-ERROR] checking if gcc-32 supports -c -o file.o... yes
+[5-ERROR] checking if gcc-32 supports -c -o file.lo... yes
+[5-ERROR] checking if gcc-32 supports -fno-rtti -fno-exceptions... yes
+[5-ERROR] checking whether the linker (ld) supports shared libraries... yes
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] checking whether stripping libraries is possible... yes
+[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[5-ERROR] checking if libtool supports shared libraries... yes
+[5-ERROR] checking whether to build shared libraries... yes
+[5-ERROR] checking whether to build static libraries... no
+[5-ERROR] checking whether -lc should be explicitly linked in... no
+[5-ERROR] creating libtool
+[5-ERROR] checking for gm4... no
+[5-ERROR] checking for m4... m4
+[5-ERROR] checking whether m4 is GNU m4... yes
+[5-ERROR] checking whether make is GNU Make... yes
+[5-ERROR] checking for pkg-config... /usr/bin/pkg-config
+[5-ERROR] checking for gtkmm-2.0 >= 2.0.0 libbonobo-2.0 >= 2.0.0 ORBit-2.0-cpp >= 1.3.8... Package gtkmm-2.0 was not found in the pkg-config search path.
+[5-ERROR] Perhaps you should add the directory containing `gtkmm-2.0.pc'
+[5-ERROR] to the PKG_CONFIG_PATH environment variable
+[5-ERROR] No package 'gtkmm-2.0' found
+[5-ERROR] 
+[5-ERROR] configure: error: Library requirements (gtkmm-2.0 >= 2.0.0 libbonobo-2.0 >= 2.0.0 ORBit-2.0-cpp >= 1.3.8) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them.
 [5-ERROR] --- BUILD ERROR ---
 [5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] processing static lib corrections ...
-[5-ERROR] Found 7 files for this package.
-[5-ERROR] Clear (old) md5sums and cksums ...
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 1 files for this package.
+[5-ERROR] Applying package split: 40 libbonobomm:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 libbonobomm:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 libbonobomm:doc /share/doc/
 [5-ERROR] Calculating package dependencies ...
-[5-ERROR] Creating md5sum and cksum files ... done.
-[5-ERROR] Creating package description ...
+[5-ERROR] <libbonobomm> Creating flist file ...
+[5-ERROR] <libbonobomm> Creating package dependencies file ...
+[5-ERROR] <libbonobomm> Creating md5sum and cksum files ...
+[5-ERROR] <libbonobomm> Creating package description ...
 [5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building libbonobomm=libbonobomm.
 
-[9-ERROR] Bonobo-cpp-common.cc:8665: no matching function for call to `
-[9-ERROR]    _orbitcpp::CompoundUnboundedSeq<CORBA::TypeCode, int>::CompoundUnboundedSeq(
-[9-ERROR]    )'
-[9-ERROR] /opt/gnome26/include/orbitcpp-2.0/orbitcpp/orb-cpp/orbitcpp_compound_seq.h:129: candidates
-[9-ERROR]    are: _orbitcpp::CompoundUnboundedSeq<CORBA::TypeCode, 
-[9-ERROR]    int>::CompoundUnboundedSeq(const 
-[9-ERROR]    _orbitcpp::CompoundUnboundedSeq<CORBA::TypeCode, int>&)
-[9-ERROR] Bonobo-cpp-common.cc: In constructor 
-[9-ERROR]    `Bonobo::Application::MessageDesc::MessageDesc(const 
-[9-ERROR]    Bonobo_Application_MessageDesc&)':
-[9-ERROR] Bonobo-cpp-common.cc:8669: no matching function for call to `
-[9-ERROR]    _orbitcpp::CompoundUnboundedSeq<CORBA::TypeCode, int>::CompoundUnboundedSeq(
-[9-ERROR]    )'
-[9-ERROR] /opt/gnome26/include/orbitcpp-2.0/orbitcpp/orb-cpp/orbitcpp_compound_seq.h:129: candidates
-[9-ERROR]    are: _orbitcpp::CompoundUnboundedSeq<CORBA::TypeCode, 
-[9-ERROR]    int>::CompoundUnboundedSeq(const 
-[9-ERROR]    _orbitcpp::CompoundUnboundedSeq<CORBA::TypeCode, int>&)
-[9-ERROR] Bonobo-cpp-common.cc: In member function `void 
-[9-ERROR]    Bonobo::Application::MessageDesc::_orbitcpp_pack(Bonobo_Application_MessageDesc&)
-[9-ERROR]    const':
-[9-ERROR] Bonobo-cpp-common.cc:8686: no matching function for call to `
-[9-ERROR]    _orbitcpp::CompoundUnboundedSeq<CORBA::TypeCode, int>::_orbitcpp_pack(
-[9-ERROR]    CORBA_sequence_CORBA_TypeCode&) const'
-[9-ERROR] Bonobo-cpp-common.cc:8687: `return_type' undeclared (first use this function)
-[9-ERROR] Bonobo-cpp-common.cc:8687: (Each undeclared identifier is reported only once 
-[9-ERROR]    for each function it appears in.)
-[9-ERROR] Bonobo-cpp-common.cc: In member function `void 
-[9-ERROR]    Bonobo::Application::MessageDesc::_orbitcpp_unpack(const 
-[9-ERROR]    Bonobo_Application_MessageDesc&)':
-[9-ERROR] Bonobo-cpp-common.cc:8695: no matching function for call to `
-[9-ERROR]    _orbitcpp::CompoundUnboundedSeq<CORBA::TypeCode, int>::_orbitcpp_unpack(
-[9-ERROR]    const CORBA_sequence_CORBA_TypeCode&)'
-[9-ERROR] make[4]: *** [Bonobo-cpp-common.lo] Error 1
-[9-ERROR] make[4]: Leaving directory `/ROCK/src.libbonobomm.1087482326.7987.702003791/libbonobomm-1.3.8/bonobomm/generated'
-[9-ERROR] make[3]: *** [all] Error 2
-[9-ERROR] make[3]: Leaving directory `/ROCK/src.libbonobomm.1087482326.7987.702003791/libbonobomm-1.3.8/bonobomm/generated'
-[9-ERROR] make[2]: *** [all-recursive] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.libbonobomm.1087482326.7987.702003791/libbonobomm-1.3.8/bonobomm'
-[9-ERROR] make[1]: *** [all] Error 2
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.libbonobomm.1087482326.7987.702003791/libbonobomm-1.3.8/bonobomm'
-[9-ERROR] make: *** [all-recursive] Error 1
+[9-ERROR] checking dlfcn.h presence... yes
+[9-ERROR] checking for dlfcn.h... yes
+[9-ERROR] checking for i386-unknown-linux-gnu-ranlib... ranlib
+[9-ERROR] checking for i386-unknown-linux-gnu-strip... strip
+[9-ERROR] checking for objdir... .libs
+[9-ERROR] checking for gcc-32 option to produce PIC... -fPIC
+[9-ERROR] checking if gcc-32 PIC flag -fPIC works... yes
+[9-ERROR] checking if gcc-32 static flag -static works... yes
+[9-ERROR] checking if gcc-32 supports -c -o file.o... yes
+[9-ERROR] checking if gcc-32 supports -c -o file.lo... yes
+[9-ERROR] checking if gcc-32 supports -fno-rtti -fno-exceptions... yes
+[9-ERROR] checking whether the linker (ld) supports shared libraries... yes
+[9-ERROR] checking how to hardcode library paths into programs... immediate
+[9-ERROR] checking whether stripping libraries is possible... yes
+[9-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[9-ERROR] checking if libtool supports shared libraries... yes
+[9-ERROR] checking whether to build shared libraries... yes
+[9-ERROR] checking whether to build static libraries... no
+[9-ERROR] checking whether -lc should be explicitly linked in... no
+[9-ERROR] creating libtool
+[9-ERROR] checking for gm4... no
+[9-ERROR] checking for m4... m4
+[9-ERROR] checking whether m4 is GNU m4... yes
+[9-ERROR] checking whether make is GNU Make... yes
+[9-ERROR] checking for pkg-config... /usr/bin/pkg-config
+[9-ERROR] checking for gtkmm-2.0 >= 2.0.0 libbonobo-2.0 >= 2.0.0 ORBit-2.0-cpp >= 1.3.8... Package gtkmm-2.0 was not found in the pkg-config search path.
+[9-ERROR] Perhaps you should add the directory containing `gtkmm-2.0.pc'
+[9-ERROR] to the PKG_CONFIG_PATH environment variable
+[9-ERROR] No package 'gtkmm-2.0' found
+[9-ERROR] 
+[9-ERROR] configure: error: Library requirements (gtkmm-2.0 >= 2.0.0 libbonobo-2.0 >= 2.0.0 ORBit-2.0-cpp >= 1.3.8) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them.
 [9-ERROR] --- BUILD ERROR ---
 [9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] processing static lib corrections ...
-[9-ERROR] Found 7 files for this package.
-[9-ERROR] Clear (old) md5sums and cksums ...
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 2 files for this package.
+[9-ERROR] Applying package split: 40 libbonobomm:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 libbonobomm:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 libbonobomm:doc /share/doc/
 [9-ERROR] Calculating package dependencies ...
-[9-ERROR] Creating md5sum and cksum files ... done.
-[9-ERROR] Creating package description ...
+[9-ERROR] <libbonobomm> Creating flist file ...
+[9-ERROR] <libbonobomm> Creating package dependencies file ...
+[9-ERROR] <libbonobomm> Creating md5sum and cksum files ...
+[9-ERROR] <libbonobomm> Creating package description ...
+[9-ERROR] <libbonobomm:doc> Creating flist file ...
+[9-ERROR] <libbonobomm:doc> Creating package dependencies file ...
+[9-ERROR] <libbonobomm:doc> Creating md5sum and cksum files ...
+[9-ERROR] <libbonobomm:doc> Creating package description ...
 [9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building libbonobomm=libbonobomm.
 

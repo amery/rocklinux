@@ -20,15 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087256860 Tue Jun 15 01:47:40 2004
+[TIMESTAMP] 1093123285 Sat Aug 21 23:21:25 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-ploticus.log 9-ploticus.log
 
-[BUILDTIME] 4558 (9)
-[SIZE] 0.56 MB, 38 files
+[BUILDTIME] 3746 (9)
+[SIZE] 0.56 MB, 36 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils findutils gcc3
-[DEP] glibc23 grep libpng make patch sed sysfiles tar xfree86 zlib
+[DEP] 00-dirtree bash binutils bzip2 coreutils findutils gcc32 gcc32:dev
+[DEP] glibc23 glibc23:dev grep libpng libpng:dev make patch sed sysfiles
+[DEP] tar xfree86 xfree86:dev zlib:dev
 

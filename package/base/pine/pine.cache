@@ -20,16 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087224225 Mon Jun 14 16:43:45 2004
+[TIMESTAMP] 1093093868 Sat Aug 21 15:11:08 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-pine.log 9-pine.log
 
-[BUILDTIME] 16951 (9)
-[SIZE] 11.34 MB, 172 files
+[BUILDTIME] 16197 (9)
+[SIZE] 7.85 MB, 20 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils findutils gawk
-[DEP] gcc3 glibc23 grep linux24-header make ncurses net-tools openssl
-[DEP] pam patch sed sysfiles tar
+[DEP] 00-dirtree bash binutils bzip2 coreutils findutils gawk gcc32
+[DEP] gcc32:dev glibc23 glibc23:dev grep linux24-header:dev make
+[DEP] ncurses:dev net-tools openssl openssl:dev pam pam:dev patch sed
+[DEP] sysfiles tar
 

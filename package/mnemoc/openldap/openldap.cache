@@ -20,17 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087385906 Wed Jun 16 13:38:26 2004
+[TIMESTAMP] 1093095156 Sat Aug 21 15:32:36 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-openldap.log 9-openldap.log
 
-[BUILDTIME] 28457 (9)
-[SIZE] 4.17 MB, 263 files
+[BUILDTIME] 24378 (9)
+[SIZE] 4.05 MB, 426 files
 
-[DEP] 00-dirtree autoconf automake bash bdb41 bdb42 binutils bzip2 ccache
-[DEP] coreutils cyrus-sasl2 diffutils findutils gawk gcc3 glibc23 grep
-[DEP] linux24-header m4 make mktemp ncurses net-tools openssl patch perl5
-[DEP] readline sed sysfiles tar tcp_wrappers texinfo
+[DEP] 00-dirtree autoconf automake18 bash bdb41:dev bdb42 binutils bzip2
+[DEP] coreutils cyrus-sasl2:dev diffutils findutils gawk gcc32 gcc32:dev
+[DEP] glibc23 glibc23:dev grep linux24-header:dev m4 make mktemp ncurses
+[DEP] ncurses:dev net-tools openssl openssl:dev patch perl5 readline
+[DEP] readline:dev sed sysfiles tar tcp_wrappers:dev texinfo
 

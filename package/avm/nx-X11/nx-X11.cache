@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087407702 Wed Jun 16 19:41:42 2004
+[TIMESTAMP] 1093179929 Sun Aug 22 15:05:29 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-nx-X11.log 9-nx-X11.log
 
-[BUILDTIME] 87044 (9)
-[SIZE] 20.65 MB, 1804 files
+[BUILDTIME] 81049 (9)
+[SIZE] 5.67 MB, 208 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils diffutils ed expat
-[DEP] findutils gawk gcc3 glibc23 grep libjpeg libpng linux24-header make
-[DEP] mktemp net-tools patch sed sysfiles tar util-linux xfree86 zlib
+[DEP] 00-dirtree bash binutils bzip2 coreutils diffutils ed expat
+[DEP] expat:dev findutils gawk gcc32 gcc32:dev glibc23 glibc23:dev
+[DEP] grep libjpeg libjpeg:dev libpng libpng:dev linux24-header:dev
+[DEP] make mktemp net-tools patch sed sysfiles tar util-linux xfree86
+[DEP] xfree86:dev zlib:dev
 

@@ -20,15 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087401970 Wed Jun 16 18:06:10 2004
+[TIMESTAMP] 1093248179 Mon Aug 23 10:02:59 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 3-sysklogd.log 9-sysklogd.log
 
-[BUILDTIME] 2191 (9)
-[SIZE] 0.16 MB, 33 files
+[BUILDTIME] 1712 (9)
+[SIZE] 0.12 MB, 24 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils findutils gcc3
-[DEP] glibc23 grep linux24-header m4 make patch sed sysfiles tar
+[DEP] 00-dirtree bash binutils bzip2 coreutils findutils gcc32 gcc32:dev
+[DEP] glibc23 glibc23:dev grep linux24-header:dev m4 make patch sed
+[DEP] sysfiles tar
 

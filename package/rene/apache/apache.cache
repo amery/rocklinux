@@ -20,16 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087285240 Tue Jun 15 09:40:40 2004
+[TIMESTAMP] 1093144706 Sun Aug 22 05:18:26 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-apache.log 9-apache.log
 
-[BUILDTIME] 29933 (9)
-[SIZE] 24.82 MB, 2888 files
+[BUILDTIME] 29377 (9)
+[SIZE] 13.51 MB, 1508 files
 
-[DEP] 00-dirtree bash bdb42 binutils bzip2 ccache coreutils diffutils
-[DEP] expat findutils gawk gcc3 gdbm glibc23 grep linux24-header m4 make
-[DEP] mktemp net-tools openssl sed sysfiles tar util-linux zlib
+[DEP] 00-dirtree bash bdb42 bdb42:dev binutils bzip2 coreutils diffutils
+[DEP] expat expat:dev findutils gawk gcc32 gcc32:dev gdbm gdbm:dev glibc23
+[DEP] glibc23:dev grep linux24-header:dev m4 make mktemp net-tools openssl
+[DEP] openssl:dev sed sysfiles tar util-linux zlib:dev
 

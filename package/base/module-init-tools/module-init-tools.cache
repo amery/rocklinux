@@ -20,16 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087401391 Wed Jun 16 17:56:31 2004
+[TIMESTAMP] 1093247412 Mon Aug 23 09:50:12 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 1-module-init-tools.log 3-module-init-tools.log 9-module-init-tools.log
 
-[BUILDTIME] 2668 (9)
-[SIZE] 0.56 MB, 40 files
+[BUILDTIME] 2200 (9)
+[SIZE] 0.46 MB, 25 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils diffutils findutils
-[DEP] gcc3 glibc23 grep linux24-src make mktemp net-tools sed sysfiles
-[DEP] tar util-linux
+[DEP] 00-dirtree bash binutils bzip2 coreutils diffutils findutils gcc32
+[DEP] gcc32:dev glibc23 glibc23:dev grep linux24-source linux24-source:dev
+[DEP] make mktemp net-tools sed sysfiles tar util-linux
 

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087480524 Thu Jun 17 15:55:24 2004
+[TIMESTAMP] 1093250867 Mon Aug 23 10:47:47 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-dsniff.log 9-dsniff.log
 
-[BUILDTIME] 4407 (9)
-[SIZE] 1.18 MB, 39 files
+[BUILDTIME] 3501 (9)
+[SIZE] 2.60 MB, 32 files
 
-[DEP] 00-dirtree bash bdb41 binutils bzip2 ccache coreutils diffutils
-[DEP] findutils gcc3 glibc23 grep libnet libnids libpcap linux24-header
-[DEP] make mktemp net-tools openssl sed sysfiles tar util-linux xfree86
+[DEP] 00-dirtree bash bdb41:dev bdb42:dev binutils bzip2 coreutils
+[DEP] diffutils findutils gcc32 gcc32:dev glibc23 glibc23:dev grep
+[DEP] libnet:dev libnids:dev libpcap:dev linux24-header:dev make mktemp
+[DEP] net-tools openssl openssl:dev sed sysfiles tar util-linux xfree86
+[DEP] xfree86:dev
 

@@ -20,19 +20,111 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087274880 Tue Jun 15 06:48:00 2004
+[TIMESTAMP] 1093184739 Sun Aug 22 16:25:39 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-alleyoop.log 9-alleyoop.log
+[LOGS] 5-alleyoop.err 9-alleyoop.err
 
-[BUILDTIME] 5141 (9)
-[SIZE] 0.71 MB, 38 files
+[5-ERROR]   -c -o vgsearchbar.o `test -f 'vgsearchbar.c' || echo './'`vgsearchbar.c; \
+[5-ERROR] then mv -f ".deps/vgsearchbar.Tpo" ".deps/vgsearchbar.Po"; \
+[5-ERROR] else rm -f ".deps/vgsearchbar.Tpo"; exit 1; \
+[5-ERROR] fi
+[5-ERROR] if gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -DPACKAGE_DATA_DIR=\""/opt/gnome26/share"\" -DPACKAGE_LOCALE_DIR=\""/opt/gnome26/share/locale"\" -DPACKAGE_GLADE_DIR=\"""\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/usr/include/freetype2      -g -O2 -MT vgskinprefs.o -MD -MP -MF ".deps/vgskinprefs.Tpo" \
+[5-ERROR]   -c -o vgskinprefs.o `test -f 'vgskinprefs.c' || echo './'`vgskinprefs.c; \
+[5-ERROR] then mv -f ".deps/vgskinprefs.Tpo" ".deps/vgskinprefs.Po"; \
+[5-ERROR] else rm -f ".deps/vgskinprefs.Tpo"; exit 1; \
+[5-ERROR] fi
+[5-ERROR] if gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -DPACKAGE_DATA_DIR=\""/opt/gnome26/share"\" -DPACKAGE_LOCALE_DIR=\""/opt/gnome26/share/locale"\" -DPACKAGE_GLADE_DIR=\"""\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/usr/include/freetype2      -g -O2 -MT vgskinview.o -MD -MP -MF ".deps/vgskinview.Tpo" \
+[5-ERROR]   -c -o vgskinview.o `test -f 'vgskinview.c' || echo './'`vgskinview.c; \
+[5-ERROR] then mv -f ".deps/vgskinview.Tpo" ".deps/vgskinview.Po"; \
+[5-ERROR] else rm -f ".deps/vgskinview.Tpo"; exit 1; \
+[5-ERROR] fi
+[5-ERROR] if gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -DPACKAGE_DATA_DIR=\""/opt/gnome26/share"\" -DPACKAGE_LOCALE_DIR=\""/opt/gnome26/share/locale"\" -DPACKAGE_GLADE_DIR=\"""\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/usr/include/freetype2      -g -O2 -MT vgstrpool.o -MD -MP -MF ".deps/vgstrpool.Tpo" \
+[5-ERROR]   -c -o vgstrpool.o `test -f 'vgstrpool.c' || echo './'`vgstrpool.c; \
+[5-ERROR] then mv -f ".deps/vgstrpool.Tpo" ".deps/vgstrpool.Po"; \
+[5-ERROR] else rm -f ".deps/vgstrpool.Tpo"; exit 1; \
+[5-ERROR] fi
+[5-ERROR] if gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -DPACKAGE_DATA_DIR=\""/opt/gnome26/share"\" -DPACKAGE_LOCALE_DIR=\""/opt/gnome26/share/locale"\" -DPACKAGE_GLADE_DIR=\"""\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/usr/include/freetype2      -g -O2 -MT main.o -MD -MP -MF ".deps/main.Tpo" \
+[5-ERROR]   -c -o main.o `test -f 'main.c' || echo './'`main.c; \
+[5-ERROR] then mv -f ".deps/main.Tpo" ".deps/main.Po"; \
+[5-ERROR] else rm -f ".deps/main.Tpo"; exit 1; \
+[5-ERROR] fi
+[5-ERROR] gcc-32  -g -O2   -o alleyoop  alleyoop.o ldd.o legolas.o list.o menu-utils.o parser.o prefs.o process.o symtab.o vgcachegrindprefs.o vgdefaultview.o vgerror.o vggeneralprefs.o vghelgrindprefs.o vgio.o vgmarshal.o vgmemcheckprefs.o vgrule.o vgrule-editor.o vgrule-list.o vgrulepattern.o vgsearchbar.o vgskinprefs.o vgskinview.o vgstrpool.o main.o -Wl,--export-dynamic -L/opt/gnome26/lib -L/usr/X11R6/lib -lglade-2.0 -lgnomeui-2 -lSM -lICE -lbonoboui-2 -lxml2 -lz -lgnomecanvas-2 -lgnome-2 -lpopt -lart_lgpl_2 -lpangoft2-1.0 -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lpangoxft-1.0 -lpangox-1.0 -lpango-1.0 -lgobject-2.0 -lbonobo-2 -lgnomevfs-2 -lbonobo-activation -lgconf-2 -lORBit-2 -lm -lgmodule-2.0 -ldl -lgthread-2.0 -lpthread -lglib-2.0    -Wl,-Bstatic -lbfd -liberty -Wl,-Bdynamic
+[5-ERROR] symtab.o(.text+0x124): In function `symtab_map_new':
+[5-ERROR] : undefined reference to `bfd_get_section_size_before_reloc'
+[5-ERROR] collect2: ld returned 1 exit status
+[5-ERROR] make[3]: *** [alleyoop] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/src.alleyoop.1092953819.16899.53073382/alleyoop-0.8.2/src'
+[5-ERROR] make[2]: *** [all] Error 2
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.alleyoop.1092953819.16899.53073382/alleyoop-0.8.2/src'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.alleyoop.1092953819.16899.53073382/alleyoop-0.8.2'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 1 files for this package.
+[5-ERROR] Applying package split: 40 alleyoop:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 alleyoop:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 alleyoop:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <alleyoop:doc> Creating flist file ...
+[5-ERROR] <alleyoop:doc> Creating package dependencies file ...
+[5-ERROR] <alleyoop:doc> Creating md5sum and cksum files ...
+[5-ERROR] <alleyoop:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building alleyoop=alleyoop.
 
-[DEP] 00-dirtree alsa atk audiofile bash binutils bzip2 ccache coreutils
-[DEP] diffutils esound expat findutils freetype gcc3 gconf gettext glib
-[DEP] glibc23 gnome-keyring gnome-vfs grep gtk+ libart_lgpl23 libbonobo
-[DEP] libbonoboui libglade libgnome libgnomecanvas libgnomeui libjpeg
-[DEP] libxml2 linux24-header make mktemp net-tools openssl orbit2 pango
-[DEP] pkgconfig popt sed sysfiles tar util-linux xfree86 zlib
+[9-ERROR]   -c -o vgsearchbar.o `test -f 'vgsearchbar.c' || echo './'`vgsearchbar.c; \
+[9-ERROR] then mv -f ".deps/vgsearchbar.Tpo" ".deps/vgsearchbar.Po"; \
+[9-ERROR] else rm -f ".deps/vgsearchbar.Tpo"; exit 1; \
+[9-ERROR] fi
+[9-ERROR] if gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -DPACKAGE_DATA_DIR=\""/opt/gnome26/share"\" -DPACKAGE_LOCALE_DIR=\""/opt/gnome26/share/locale"\" -DPACKAGE_GLADE_DIR=\"""\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/usr/include/freetype2      -g -O2 -MT vgskinprefs.o -MD -MP -MF ".deps/vgskinprefs.Tpo" \
+[9-ERROR]   -c -o vgskinprefs.o `test -f 'vgskinprefs.c' || echo './'`vgskinprefs.c; \
+[9-ERROR] then mv -f ".deps/vgskinprefs.Tpo" ".deps/vgskinprefs.Po"; \
+[9-ERROR] else rm -f ".deps/vgskinprefs.Tpo"; exit 1; \
+[9-ERROR] fi
+[9-ERROR] if gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -DPACKAGE_DATA_DIR=\""/opt/gnome26/share"\" -DPACKAGE_LOCALE_DIR=\""/opt/gnome26/share/locale"\" -DPACKAGE_GLADE_DIR=\"""\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/usr/include/freetype2      -g -O2 -MT vgskinview.o -MD -MP -MF ".deps/vgskinview.Tpo" \
+[9-ERROR]   -c -o vgskinview.o `test -f 'vgskinview.c' || echo './'`vgskinview.c; \
+[9-ERROR] then mv -f ".deps/vgskinview.Tpo" ".deps/vgskinview.Po"; \
+[9-ERROR] else rm -f ".deps/vgskinview.Tpo"; exit 1; \
+[9-ERROR] fi
+[9-ERROR] if gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -DPACKAGE_DATA_DIR=\""/opt/gnome26/share"\" -DPACKAGE_LOCALE_DIR=\""/opt/gnome26/share/locale"\" -DPACKAGE_GLADE_DIR=\"""\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/usr/include/freetype2      -g -O2 -MT vgstrpool.o -MD -MP -MF ".deps/vgstrpool.Tpo" \
+[9-ERROR]   -c -o vgstrpool.o `test -f 'vgstrpool.c' || echo './'`vgstrpool.c; \
+[9-ERROR] then mv -f ".deps/vgstrpool.Tpo" ".deps/vgstrpool.Po"; \
+[9-ERROR] else rm -f ".deps/vgstrpool.Tpo"; exit 1; \
+[9-ERROR] fi
+[9-ERROR] if gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -DPACKAGE_DATA_DIR=\""/opt/gnome26/share"\" -DPACKAGE_LOCALE_DIR=\""/opt/gnome26/share/locale"\" -DPACKAGE_GLADE_DIR=\"""\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/usr/include/freetype2      -g -O2 -MT main.o -MD -MP -MF ".deps/main.Tpo" \
+[9-ERROR]   -c -o main.o `test -f 'main.c' || echo './'`main.c; \
+[9-ERROR] then mv -f ".deps/main.Tpo" ".deps/main.Po"; \
+[9-ERROR] else rm -f ".deps/main.Tpo"; exit 1; \
+[9-ERROR] fi
+[9-ERROR] gcc-32  -g -O2   -o alleyoop  alleyoop.o ldd.o legolas.o list.o menu-utils.o parser.o prefs.o process.o symtab.o vgcachegrindprefs.o vgdefaultview.o vgerror.o vggeneralprefs.o vghelgrindprefs.o vgio.o vgmarshal.o vgmemcheckprefs.o vgrule.o vgrule-editor.o vgrule-list.o vgrulepattern.o vgsearchbar.o vgskinprefs.o vgskinview.o vgstrpool.o main.o -Wl,--export-dynamic -L/opt/gnome26/lib -L/usr/X11R6/lib -lglade-2.0 -lgnomeui-2 -lSM -lICE -lbonoboui-2 -lxml2 -lz -lgnomecanvas-2 -lgnome-2 -lpopt -lart_lgpl_2 -lpangoft2-1.0 -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lpangoxft-1.0 -lpangox-1.0 -lpango-1.0 -lgobject-2.0 -lbonobo-2 -lgnomevfs-2 -lbonobo-activation -lgconf-2 -lORBit-2 -lm -lgmodule-2.0 -ldl -lgthread-2.0 -lpthread -lglib-2.0    -Wl,-Bstatic -lbfd -liberty -Wl,-Bdynamic
+[9-ERROR] symtab.o(.text+0x124): In function `symtab_map_new':
+[9-ERROR] : undefined reference to `bfd_get_section_size_before_reloc'
+[9-ERROR] collect2: ld returned 1 exit status
+[9-ERROR] make[3]: *** [alleyoop] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/src.alleyoop.1093184687.3805.2496152356/alleyoop-0.8.2/src'
+[9-ERROR] make[2]: *** [all] Error 2
+[9-ERROR] make[2]: Leaving directory `/ROCK/src.alleyoop.1093184687.3805.2496152356/alleyoop-0.8.2/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/src.alleyoop.1093184687.3805.2496152356/alleyoop-0.8.2'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 1 files for this package.
+[9-ERROR] Applying package split: 40 alleyoop:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 alleyoop:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 alleyoop:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <alleyoop:doc> Creating flist file ...
+[9-ERROR] <alleyoop:doc> Creating package dependencies file ...
+[9-ERROR] <alleyoop:doc> Creating md5sum and cksum files ...
+[9-ERROR] <alleyoop:doc> Creating package description ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building alleyoop=alleyoop.
 

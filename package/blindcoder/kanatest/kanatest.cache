@@ -20,17 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087423914 Thu Jun 17 00:11:54 2004
+[TIMESTAMP] 1093265365 Mon Aug 23 14:49:25 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-kanatest.log 9-kanatest.log
 
-[BUILDTIME] 4493 (9)
-[SIZE] 0.88 MB, 334 files
+[BUILDTIME] 4220 (9)
+[SIZE] 0.86 MB, 327 files
 
-[DEP] 00-dirtree atk bash binutils bzip2 ccache coreutils diffutils expat
-[DEP] findutils freetype gcc3 gettext glib glibc23 grep gtk+ linux24-header
-[DEP] make mktemp net-tools pango pkgconfig sed sysfiles tar util-linux
+[DEP] 00-dirtree atk atk:dev bash binutils bzip2 coreutils diffutils expat
+[DEP] findutils freetype gcc32 gcc32:dev gettext glib glib:dev glibc23
+[DEP] glibc23:dev grep gtk+ gtk+:dev linux24-header:dev make mktemp
+[DEP] net-tools pango pango:dev pkgconfig sed sysfiles tar util-linux
 [DEP] xfree86 xmule
 

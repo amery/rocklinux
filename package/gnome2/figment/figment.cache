@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087285561 Tue Jun 15 09:46:01 2004
+[TIMESTAMP] 1093145473 Sun Aug 22 05:31:13 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-figment.log 9-figment.log
 
-[BUILDTIME] 3040 (9)
-[SIZE] 0.09 MB, 20 files
+[BUILDTIME] 2570 (9)
+[SIZE] 0.06 MB, 13 files
 
-[DEP] 00-dirtree atk autoconf bash binutils bzip2 ccache coreutils
-[DEP] diffutils expat findutils freetype gcc3 gconf-editor gettext glib
-[DEP] glibc23 grep gtk+ libxml2 linux24-header make mktemp net-tools pango
-[DEP] perl5 pkgconfig sed sysfiles tar texinfo util-linux xfree86 zlib
+[DEP] 00-dirtree atk atk:dev autoconf bash binutils bzip2 coreutils
+[DEP] diffutils expat findutils freetype gcc32 gcc32:dev gconf-editor
+[DEP] gettext glib glib:dev glibc23 glibc23:dev glibmm grep gtk+ gtk+:dev
+[DEP] libxml2 libxml2:dev linux24-header:dev make mktemp net-tools pango
+[DEP] pango:dev perl5 pkgconfig sed sysfiles tar texinfo util-linux
+[DEP] xfree86 zlib:dev
 

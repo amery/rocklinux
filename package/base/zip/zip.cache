@@ -20,15 +20,66 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087220841 Mon Jun 14 15:47:21 2004
+[TIMESTAMP] 1093087207 Sat Aug 21 13:20:07 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-zip.log 9-zip.log
+[LOGS] 5-zip.log 9-zip.err
 
-[BUILDTIME] 2689 (9)
+[BUILDTIME] 2052 (5)
 [SIZE] 0.16 MB, 11 files
 
-[DEP] 00-dirtree bash binutils ccache coreutils findutils gcc3 glibc23
-[DEP] grep linux24-header make sed sysfiles unzip
+[DEP] 00-dirtree bash binutils coreutils findutils gcc32 gcc32:dev glibc23
+[DEP] glibc23:dev grep linux24-header:dev make sed sysfiles unzip
+
+[9-ERROR] rm -f util_.c; ln -s util.c util_.c
+[9-ERROR] gcc-32 -c -O2 -I. -DUNIX -DASMV -DASM_CRC -DNO_STRCHR -DNO_STRRCHR -DHAVE_DIRENT_H -DHAVE_TERMIOS_H -DUTIL util_.c
+[9-ERROR] rm -f util_.c
+[9-ERROR] rm -f unix_.c; ln -s unix/unix.c unix_.c
+[9-ERROR] gcc-32 -c -O2 -I. -DUNIX -DASMV -DASM_CRC -DNO_STRCHR -DNO_STRRCHR -DHAVE_DIRENT_H -DHAVE_TERMIOS_H -DUTIL unix_.c
+[9-ERROR] rm -f unix_.c
+[9-ERROR] gcc-32 -o zipnote -s zipnote.o  zipfile_.o fileio_.o util_.o globals.o unix_.o 
+[9-ERROR] fileio_.o(.text+0x1e5): In function `tempname':
+[9-ERROR] : warning: the use of `mktemp' is dangerous, better use `mkstemp'
+[9-ERROR] gcc-32 -c -O2 -I. -DUNIX -DASMV -DASM_CRC -DNO_STRCHR -DNO_STRRCHR -DHAVE_DIRENT_H -DHAVE_TERMIOS_H zipsplit.c
+[9-ERROR] gcc-32 -o zipsplit -s zipsplit.o zipfile_.o fileio_.o util_.o globals.o unix_.o 
+[9-ERROR] fileio_.o(.text+0x1e5): In function `tempname':
+[9-ERROR] : warning: the use of `mktemp' is dangerous, better use `mkstemp'
+[9-ERROR] gcc-32 -c -O2 -I. -DUNIX -DASMV -DASM_CRC -DNO_STRCHR -DNO_STRRCHR -DHAVE_DIRENT_H -DHAVE_TERMIOS_H zipcloak.c
+[9-ERROR] rm -f crypt_.c; ln -s crypt.c crypt_.c
+[9-ERROR] gcc-32 -c -O2 -I. -DUNIX -DASMV -DASM_CRC -DNO_STRCHR -DNO_STRRCHR -DHAVE_DIRENT_H -DHAVE_TERMIOS_H -DUTIL crypt_.c
+[9-ERROR] rm -f crypt_.c
+[9-ERROR] gcc-32 -o zipcloak -s zipcloak.o zipfile_.o fileio_.o util_.o globals.o unix_.o crctab.o crypt_.o ttyio.o 
+[9-ERROR] fileio_.o(.text+0x1e5): In function `tempname':
+[9-ERROR] : warning: the use of `mktemp' is dangerous, better use `mkstemp'
+[9-ERROR] make[1]: Leaving directory `/ROCK/src.zip.1093087178.26221.813305199/zip-23'
+[9-ERROR] mkdir -p /usr/bin
+[9-ERROR] cp zip zipnote zipsplit zipcloak /usr/bin
+[9-ERROR] cd /usr/bin; chmod 555 zip zipnote zipsplit zipcloak
+[9-ERROR] mkdir -p /usr/man/man1
+[9-ERROR] cp man/zip.1 /usr/man/man1/zip.1
+[9-ERROR] chmod 444 /usr/man/man1/zip.1
+[9-ERROR] Hook preconf is still marked as dirty ...
+[9-ERROR] Hook premake is still marked as dirty ...
+[9-ERROR] Hook inmake is still marked as dirty ...
+[9-ERROR] Hook postmake is still marked as dirty ...
+[9-ERROR] Trying to copy the default documentation ...
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 5 files for this package.
+[9-ERROR] Applying package split: 40 zip:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 zip:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 zip:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <zip> Creating flist file ...
+[9-ERROR] <zip> Creating package dependencies file ...
+[9-ERROR] <zip> Creating md5sum and cksum files ...
+[9-ERROR] <zip> Creating package description ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] usr/share/man/man1/zip.1: zip zip:doc
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] removed `/var/adm/logs/9-zip.log'
+[9-ERROR] Finished building zip=zip.
 

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087458249 Thu Jun 17 09:44:09 2004
+[TIMESTAMP] 1093297930 Mon Aug 23 23:52:10 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-gtk-xfce-engine2.log 9-gtk-xfce-engine2.log
 
-[BUILDTIME] 4617 (9)
-[SIZE] 0.15 MB, 75 files
+[BUILDTIME] 4075 (9)
+[SIZE] 0.12 MB, 67 files
 
-[DEP] 00-dirtree atk bash binutils bzip2 ccache coreutils diffutils
-[DEP] findutils gcc3 glib glibc23 grep gtk+ gtk-engines linux24-header make
-[DEP] mktemp net-tools pango pkgconfig sed sysfiles tar util-linux xfree86
+[DEP] 00-dirtree atk atk:dev bash binutils bzip2 coreutils diffutils
+[DEP] findutils gcc32 gcc32:dev glib glib:dev glibc23 glibc23:dev glibmm
+[DEP] grep gtk+ gtk+:dev gtk-engines linux24-header:dev make mktemp
+[DEP] net-tools pango pango:dev pkgconfig sed sysfiles tar util-linux
+[DEP] xfree86
 

@@ -20,16 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087378114 Wed Jun 16 11:28:34 2004
+[TIMESTAMP] 1093217509 Mon Aug 23 01:31:49 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-calltree.log 9-calltree.log
 
-[BUILDTIME] 6932 (9)
-[SIZE] 0.15 MB, 24 files
+[BUILDTIME] 5829 (9)
+[SIZE] 0.05 MB, 8 files
 
-[DEP] 00-dirtree acl attr bash binutils bzip2 ccache coreutils diffutils
-[DEP] findutils gawk gcc3 glibc23 grep linux24-header linux24-src make
-[DEP] net-tools sed sysfiles tar util-linux
+[DEP] 00-dirtree acl acl:dev attr bash binutils bzip2 coreutils
+[DEP] diffutils findutils gawk gcc32 gcc32:dev glibc23 glibc23:dev grep
+[DEP] linux24-header:dev linux24-source linux24-source:dev make net-tools
+[DEP] sed sysfiles tar util-linux
 

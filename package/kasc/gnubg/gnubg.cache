@@ -1,68 +1,20 @@
 
-[TIMESTAMP] 1087484592 Thu Jun 17 17:03:12 2004
+[TIMESTAMP] 1093282561 Mon Aug 23 19:36:01 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnubg.log 9-gnubg.err
+[LOGS] 5-gnubg.log 9-gnubg.log
 
-[BUILDTIME] 17907 (5)
-[SIZE] 15.34 MB, 121 files
+[BUILDTIME] 16755 (9)
+[SIZE] 14.04 MB, 79 files
 
-[DEP] 00-dirtree alsa arts atk audiofile bash binutils bison bzip2 ccache
-[DEP] coreutils cups diffutils esound expat findutils flex freetype gawk
-[DEP] gcc3 gdbm gettext glib glib12 glibc23 gmp gnome-libs14 grep gtk+
-[DEP] guile libpng libxml2 linux24-header m4 make mktemp ncurses net-tools
-[DEP] numpy pango patch pkgconfig popt python readline sed sysfiles tar
-[DEP] texinfo util-linux xfree86 zlib
-
-[9-ERROR] : undefined reference to `Tcl_GetThreadData'
-[9-ERROR] /usr/lib/python2.3/config/libpython2.3.a(_tkinter.o)(.text+0x3617): In function `Tkapp_Dealloc':
-[9-ERROR] : undefined reference to `Tcl_GetThreadData'
-[9-ERROR] /usr/lib/python2.3/config/libpython2.3.a(_tkinter.o)(.text+0x3621): In function `Tkapp_Dealloc':
-[9-ERROR] : undefined reference to `Tcl_DeleteInterp'
-[9-ERROR] /usr/lib/python2.3/config/libpython2.3.a(_tkinter.o)(.text+0x362d): In function `Tkapp_Dealloc':
-[9-ERROR] : undefined reference to `Tcl_GetThreadData'
-[9-ERROR] /usr/lib/python2.3/config/libpython2.3.a(_tkinter.o)(.text+0x3aa3): In function `EventHook':
-[9-ERROR] : undefined reference to `Tcl_CreateFileHandler'
-[9-ERROR] /usr/lib/python2.3/config/libpython2.3.a(_tkinter.o)(.text+0x3abe): In function `EventHook':
-[9-ERROR] : undefined reference to `Tcl_DeleteFileHandler'
-[9-ERROR] /usr/lib/python2.3/config/libpython2.3.a(_tkinter.o)(.text+0x3b40): In function `EventHook':
-[9-ERROR] : undefined reference to `Tcl_GetThreadData'
-[9-ERROR] /usr/lib/python2.3/config/libpython2.3.a(_tkinter.o)(.text+0x3b4f): In function `EventHook':
-[9-ERROR] : undefined reference to `Tcl_DoOneEvent'
-[9-ERROR] /usr/lib/python2.3/config/libpython2.3.a(_tkinter.o)(.text+0x3b5d): In function `EventHook':
-[9-ERROR] : undefined reference to `Tcl_GetThreadData'
-[9-ERROR] /usr/lib/python2.3/config/libpython2.3.a(_tkinter.o)(.text+0x3bef): In function `DisableEventHook':
-[9-ERROR] : undefined reference to `Tk_GetNumMainWindows'
-[9-ERROR] /usr/lib/python2.3/config/libpython2.3.a(_tkinter.o)(.text+0x3dce): In function `init_tkinter':
-[9-ERROR] : undefined reference to `Tcl_FindExecutable'
-[9-ERROR] /usr/lib/python2.3/config/libpython2.3.a(_tkinter.o)(.text+0x909): In function `PyTclObject_TclString':
-[9-ERROR] : undefined reference to `Tcl_GetString'
-[9-ERROR] /usr/lib/python2.3/config/libpython2.3.a(_tkinter.o)(.text+0xbe6): In function `AsObj':
-[9-ERROR] : undefined reference to `Tcl_NewLongObj'
-[9-ERROR] /usr/lib/python2.3/config/libpython2.3.a(_tkinter.o)(.text+0xbfc): In function `AsObj':
-[9-ERROR] : undefined reference to `Tcl_NewBooleanObj'
-[9-ERROR] /usr/lib/python2.3/config/libpython2.3.a(_tkinter.o)(.text+0xdf1): In function `Tkapp_CallDeallocArgs':
-[9-ERROR] : undefined reference to `Tcl_Free'
-[9-ERROR] /usr/lib/python2.3/config/libpython2.3.a(tkappinit.o)(.text+0x9): In function `Tcl_AppInit':
-[9-ERROR] : undefined reference to `Tcl_Init'
-[9-ERROR] /usr/lib/python2.3/config/libpython2.3.a(tkappinit.o)(.text+0x18): In function `Tcl_AppInit':
-[9-ERROR] : undefined reference to `Tk_Init'
-[9-ERROR] /usr/lib/python2.3/config/libpython2.3.a(tkappinit.o)(.text+0x27): In function `Tcl_AppInit':
-[9-ERROR] : undefined reference to `Tk_MainWindow'
-[9-ERROR] collect2: ld returned 1 exit status
-[9-ERROR] make[2]: *** [gnubg] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.gnubg.1087484390.10016.4082348943/gnubg-0.14.3'
-[9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.gnubg.1087484390.10016.4082348943/gnubg-0.14.3'
-[9-ERROR] make: *** [all] Error 2
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] processing static lib corrections ...
-[9-ERROR] Found 121 files for this package.
-[9-ERROR] Clear (old) md5sums and cksums ...
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] Creating md5sum and cksum files ... done.
-[9-ERROR] Creating package description ...
-[9-ERROR] Making post-install adaptions.
+[DEP] 00-dirtree alsa arts arts:dev atk atk:dev audiofile audiofile:dev
+[DEP] bash binutils bison bzip2 coreutils diffutils esound esound:dev expat
+[DEP] findutils flex flex:dev freetype freetype:dev gawk gcc32 gcc32:dev
+[DEP] gdbm gdbm:dev gettext glib glib12 glib:dev glibc23 glibc23:dev gmp
+[DEP] gmp:dev gnome-libs14 gnome-libs14:dev grep gtk+ gtk+:dev guile
+[DEP] guile:dev libpng libxml2 libxml2:dev linux24-header:dev m4 make
+[DEP] mktemp ncurses:dev net-tools numpy pango pango:dev patch pkgconfig
+[DEP] python python:dev readline readline:dev sed sysfiles tar texinfo
+[DEP] util-linux xfree86 xfree86:dev zlib:dev
 

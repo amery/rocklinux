@@ -20,15 +20,67 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087217437 Mon Jun 14 14:50:37 2004
+[TIMESTAMP] 1093084843 Sat Aug 21 12:40:43 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ash.log 9-ash.log
+[LOGS] 5-ash.log 9-ash.err
 
-[BUILDTIME] 2488 (9)
-[SIZE] 0.14 MB, 12 files
+[BUILDTIME] 1516 (5)
+[SIZE] 0.11 MB, 8 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils findutils gawk gcc3
-[DEP] glibc23 grep linux24-header make patch sed sysfiles tar
+[DEP] 00-dirtree bash binutils bzip2 coreutils findutils gawk gcc32
+[DEP] gcc32:dev glibc23 glibc23:dev grep linux24-header:dev make patch
+[DEP] sed sysfiles tar
+
+[9-ERROR] init.c:121: stray '\277' in program
+[9-ERROR] init.c:121: stray '\377' in program
+[9-ERROR] init.c:121: stray '\377' in program
+[9-ERROR] init.c:121: stray '\277' in program
+[9-ERROR] init.c:121: stray '\377' in program
+[9-ERROR] init.c:121: stray '\377' in program
+[9-ERROR] init.c:121: stray '\277' in program
+[9-ERROR] init.c:121: stray '\377' in program
+[9-ERROR] init.c:121: stray '\377' in program
+[9-ERROR] init.c:121: stray '\277' in program
+[9-ERROR] init.c:121: stray '\230' in program
+[9-ERROR] init.c:121: stray '\377' in program
+[9-ERROR] init.c:121: stray '\377' in program
+[9-ERROR] init.c:121: stray '\277' in program
+[9-ERROR] init.c:121: stray '\257' in program
+[9-ERROR] init.c:121: stray '\377' in program
+[9-ERROR] init.c:121: stray '\377' in program
+[9-ERROR] init.c:121: stray '\277' in program
+[9-ERROR] init.c:121: stray '\315' in program
+[9-ERROR] init.c:121: stray '\377' in program
+[9-ERROR] init.c:121: stray '\377' in program
+[9-ERROR] init.c:121: stray '\277' in program
+[9-ERROR] init.c:121: stray '\347' in program
+[9-ERROR] init.c:121: stray '\377' in program
+[9-ERROR] init.c:121: stray '\377' in program
+[9-ERROR] init.c:121: stray '\277' in program
+[9-ERROR] init.c: In function `reset':
+[9-ERROR] init.c:191: `tokpushback' undeclared (first use in this function)
+[9-ERROR] init.c:191: (Each undeclared identifier is reported only once
+[9-ERROR] init.c:191: for each function it appears in.)
+[9-ERROR] make: *** [init.c] Error 1
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 6 files for this package.
+[9-ERROR] Applying package split: 40 ash:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 ash:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 ash:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <ash> Creating flist file ...
+[9-ERROR] <ash> Creating package dependencies file ...
+[9-ERROR] <ash> Creating md5sum and cksum files ...
+[9-ERROR] <ash> Creating package description ...
+[9-ERROR] <ash:doc> Creating flist file ...
+[9-ERROR] <ash:doc> Creating package dependencies file ...
+[9-ERROR] <ash:doc> Creating md5sum and cksum files ...
+[9-ERROR] <ash:doc> Creating package description ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building ash=ash.
 

@@ -20,18 +20,12 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087484389 Thu Jun 17 16:59:49 2004
+[TIMESTAMP] 1093277785 Mon Aug 23 18:16:25 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-linphone.err 9-linphone.err
 
-[5-ERROR] ms_sync_attach ()
-[5-ERROR] ms_sync_attachint         ms_sync_attach                  (MSSync *sync,
-[5-ERROR]                                              MSFilter *f);
-[5-ERROR] Attach a chain of filters to a synchronisation source sync. Filter f must be the first filter of the processing chain.
-[5-ERROR]  In order to be run, each chain of filter must be attached to a synchronisation source, that will be responsible for scheduling
-[5-ERROR]  the processing. Multiple chains can be attached to a single synchronisation.
 [5-ERROR] sync:
 [5-ERROR]   A MSSync object.
 [5-ERROR] f:
@@ -61,28 +55,28 @@
 [5-ERROR] 
 [5-ERROR] Synopsis
 [5-ERROR] make[3]: *** [html-build.stamp] Error 1
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.linphone.1087481232.5174.1731968881/linphone-0.12.2/developer-docs/mediastreamer'
+[5-ERROR] make[3]: Leaving directory `/ROCK/src.linphone.1093037693.5404.3605830551/linphone-0.12.2/developer-docs/mediastreamer'
 [5-ERROR] make[2]: *** [all-recursive] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.linphone.1087481232.5174.1731968881/linphone-0.12.2/developer-docs'
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.linphone.1093037693.5404.3605830551/linphone-0.12.2/developer-docs'
 [5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.linphone.1087481232.5174.1731968881/linphone-0.12.2'
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.linphone.1093037693.5404.3605830551/linphone-0.12.2'
 [5-ERROR] make: *** [all] Error 2
 [5-ERROR] --- BUILD ERROR ---
 [5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] processing static lib corrections ...
-[5-ERROR] Found 7 files for this package.
-[5-ERROR] Clear (old) md5sums and cksums ...
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 1 files for this package.
+[5-ERROR] Applying package split: 40 linphone:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 linphone:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 linphone:doc /share/doc/
 [5-ERROR] Calculating package dependencies ...
-[5-ERROR] Creating md5sum and cksum files ... done.
-[5-ERROR] Creating package description ...
+[5-ERROR] <linphone:doc> Creating flist file ...
+[5-ERROR] <linphone:doc> Creating package dependencies file ...
+[5-ERROR] <linphone:doc> Creating md5sum and cksum files ...
+[5-ERROR] <linphone:doc> Creating package description ...
 [5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building linphone=linphone.
 
-[9-ERROR] ms_sync_attach ()
-[9-ERROR] ms_sync_attachint         ms_sync_attach                  (MSSync *sync,
-[9-ERROR]                                              MSFilter *f);
-[9-ERROR] Attach a chain of filters to a synchronisation source sync. Filter f must be the first filter of the processing chain.
-[9-ERROR]  In order to be run, each chain of filter must be attached to a synchronisation source, that will be responsible for scheduling
-[9-ERROR]  the processing. Multiple chains can be attached to a single synchronisation.
 [9-ERROR] sync:
 [9-ERROR]   A MSSync object.
 [9-ERROR] f:
@@ -112,19 +106,25 @@
 [9-ERROR] 
 [9-ERROR] Synopsis
 [9-ERROR] make[3]: *** [html-build.stamp] Error 1
-[9-ERROR] make[3]: Leaving directory `/ROCK/src.linphone.1087484157.22571.2856080031/linphone-0.12.2/developer-docs/mediastreamer'
+[9-ERROR] make[3]: Leaving directory `/ROCK/src.linphone.1093277484.4297.791733276/linphone-0.12.2/developer-docs/mediastreamer'
 [9-ERROR] make[2]: *** [all-recursive] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.linphone.1087484157.22571.2856080031/linphone-0.12.2/developer-docs'
+[9-ERROR] make[2]: Leaving directory `/ROCK/src.linphone.1093277484.4297.791733276/linphone-0.12.2/developer-docs'
 [9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.linphone.1087484157.22571.2856080031/linphone-0.12.2'
+[9-ERROR] make[1]: Leaving directory `/ROCK/src.linphone.1093277484.4297.791733276/linphone-0.12.2'
 [9-ERROR] make: *** [all] Error 2
 [9-ERROR] --- BUILD ERROR ---
 [9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] processing static lib corrections ...
-[9-ERROR] Found 7 files for this package.
-[9-ERROR] Clear (old) md5sums and cksums ...
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 1 files for this package.
+[9-ERROR] Applying package split: 40 linphone:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 linphone:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 linphone:doc /share/doc/
 [9-ERROR] Calculating package dependencies ...
-[9-ERROR] Creating md5sum and cksum files ... done.
-[9-ERROR] Creating package description ...
+[9-ERROR] <linphone:doc> Creating flist file ...
+[9-ERROR] <linphone:doc> Creating package dependencies file ...
+[9-ERROR] <linphone:doc> Creating md5sum and cksum files ...
+[9-ERROR] <linphone:doc> Creating package description ...
 [9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building linphone=linphone.
 

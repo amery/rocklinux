@@ -20,17 +20,69 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087241380 Mon Jun 14 21:29:40 2004
+[TIMESTAMP] 1093101120 Sat Aug 21 17:12:00 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gtk+12.log 9-gtk+12.log
+[LOGS] 5-gtk+12.log 9-gtk+12.err
 
-[BUILDTIME] 21576 (9)
-[SIZE] 8.84 MB, 458 files
+[BUILDTIME] 19996 (5)
+[SIZE] 7.04 MB, 263 files
 
-[DEP] 00-dirtree autoconf automake bash binutils bzip2 ccache coreutils
-[DEP] diffutils file findutils gawk gcc3 gettext glib12 glibc23 grep
-[DEP] linux24-header make mktemp net-tools patch perl5 sed sysfiles tar
-[DEP] texinfo xfree86
+[DEP] 00-dirtree autoconf automake18 bash binutils bzip2 coreutils
+[DEP] diffutils file findutils gcc32 gcc32:dev gettext glib12 glib12:dev
+[DEP] glibc23 glibc23:dev gnome-libs14 grep gtkhtml10 linux24-header:dev
+[DEP] make mktemp net-tools orbit10 patch perl5 sed sysfiles tar texinfo
+[DEP] xfree86 xfree86:dev
+
+[9-ERROR] `./docs/html/gtk_tut_table.gif' -> `/opt/gnome/share/doc/gtk+12/html/gtk_tut_table.gif'
+[9-ERROR] `./docs/macros.texi' -> `/opt/gnome/share/doc/gtk+12/macros.texi'
+[9-ERROR] `./docs/refcounting.txt' -> `/opt/gnome/share/doc/gtk+12/refcounting.txt'
+[9-ERROR] `./docs/styles.txt' -> `/opt/gnome/share/doc/gtk+12/styles.txt'
+[9-ERROR] `./docs/texinfo.tex' -> `/opt/gnome/share/doc/gtk+12/texinfo.tex'
+[9-ERROR] `./docs/text' -> `/opt/gnome/share/doc/gtk+12/text'
+[9-ERROR] `./docs/text/gtk_tut_fr.txt' -> `/opt/gnome/share/doc/gtk+12/text/gtk_tut_fr.txt'
+[9-ERROR] `./docs/text/gtk_tut_it.txt' -> `/opt/gnome/share/doc/gtk+12/text/gtk_tut_it.txt'
+[9-ERROR] `./docs/text/gtkfaq.txt' -> `/opt/gnome/share/doc/gtk+12/text/gtkfaq.txt'
+[9-ERROR] `./docs/text/gtk_tut.txt' -> `/opt/gnome/share/doc/gtk+12/text/gtk_tut.txt'
+[9-ERROR] `./docs/text_widget.txt' -> `/opt/gnome/share/doc/gtk+12/text_widget.txt'
+[9-ERROR] `./docs/widget_system.txt' -> `/opt/gnome/share/doc/gtk+12/widget_system.txt'
+[9-ERROR] `ABOUT-NLS' -> `/opt/gnome/share/doc/gtk+12/ABOUT-NLS'
+[9-ERROR] `AUTHORS' -> `/opt/gnome/share/doc/gtk+12/AUTHORS'
+[9-ERROR] `COPYING' -> `/opt/gnome/share/doc/gtk+12/COPYING'
+[9-ERROR] `HACKING' -> `/opt/gnome/share/doc/gtk+12/HACKING'
+[9-ERROR] `INSTALL' -> `/opt/gnome/share/doc/gtk+12/INSTALL'
+[9-ERROR] `NEWS' -> `/opt/gnome/share/doc/gtk+12/NEWS'
+[9-ERROR] `NEWS.pre-1-0' -> `/opt/gnome/share/doc/gtk+12/NEWS.pre-1-0'
+[9-ERROR] `README' -> `/opt/gnome/share/doc/gtk+12/README'
+[9-ERROR] `README.cvs-commits' -> `/opt/gnome/share/doc/gtk+12/README.cvs-commits'
+[9-ERROR] `TODO' -> `/opt/gnome/share/doc/gtk+12/TODO'
+[9-ERROR] `ChangeLog' -> `/opt/gnome/share/doc/gtk+12/ChangeLog'
+[9-ERROR] `ChangeLog.pre-1-0' -> `/opt/gnome/share/doc/gtk+12/ChangeLog.pre-1-0'
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 520 files for this package.
+[9-ERROR] Applying package split: 40 gtk+12:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 gtk+12:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 gtk+12:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <gtk+12> Creating flist file ...
+[9-ERROR] <gtk+12> Creating package dependencies file ...
+[9-ERROR] <gtk+12> Creating md5sum and cksum files ...
+[9-ERROR] <gtk+12> Creating package description ...
+[9-ERROR] <gtk+12:dev> Creating flist file ...
+[9-ERROR] <gtk+12:dev> Creating package dependencies file ...
+[9-ERROR] <gtk+12:dev> Creating md5sum and cksum files ...
+[9-ERROR] <gtk+12:dev> Creating package description ...
+[9-ERROR] <gtk+12:doc> Creating flist file ...
+[9-ERROR] <gtk+12:doc> Creating package dependencies file ...
+[9-ERROR] <gtk+12:doc> Creating md5sum and cksum files ...
+[9-ERROR] <gtk+12:doc> Creating package description ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] opt/gnome/share/info/dir: glib12 gtk+12 orbit10
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] removed `/var/adm/logs/9-gtk+12.log'
+[9-ERROR] Finished building gtk+12=gtk+12.
 

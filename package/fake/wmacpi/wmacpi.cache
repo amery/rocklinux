@@ -20,15 +20,67 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087351787 Wed Jun 16 04:09:47 2004
+[TIMESTAMP] 1093192773 Sun Aug 22 18:39:33 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-wmacpi.log 9-wmacpi.log
+[LOGS] 5-wmacpi.log 9-wmacpi.err
 
-[BUILDTIME] 1966 (9)
-[SIZE] 0.06 MB, 13 files
+[BUILDTIME] 1616 (5)
+[SIZE] 0.07 MB, 10 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils findutils gcc3
-[DEP] glibc23 grep make patch sed sysfiles tar xfree86
+[DEP] 00-dirtree acpi bash binutils bzip2 coreutils findutils gcc32
+[DEP] gcc32:dev glibc23 glibc23:dev grep linux24-header:dev make sed
+[DEP] sysfiles tar xfree86 xfree86:dev
+
+[9-ERROR] Extracting wmacpi-1.99r6.tar.bz2 (--use-compress-program=bzip2 -xf) ... 
+[9-ERROR] Fixing ownership and permissions ...
+[9-ERROR] Removing CVS and .svn directories ...
+[9-ERROR] Changeing into /ROCK/src.wmacpi.1093192748.26841.1094919503/wmacpi-1.99r6 ...
+[9-ERROR] Creating /usr/<..> if required ...
+[9-ERROR] Makefile:37: wmacpi.d: No such file or directory
+[9-ERROR] Makefile:37: libacpi.d: No such file or directory
+[9-ERROR] Makefile:47: acpi.d: No such file or directory
+[9-ERROR] Makefile:47: libacpi.d: No such file or directory
+[9-ERROR] gcc -MM -O2  -Wall -W -g -ansi -I/usr/X11R6/include libacpi.c > libacpi.d
+[9-ERROR] gcc -MM -O2  -Wall -W -g -ansi -I/usr/X11R6/include acpi.c > acpi.d
+[9-ERROR] gcc -MM -O2  -Wall -W -g -ansi -I/usr/X11R6/include wmacpi.c > wmacpi.d
+[9-ERROR] gcc-32 -O2  -Wall -W -g -ansi -I/usr/X11R6/include   -c -o wmacpi.o wmacpi.c
+[9-ERROR] gcc-32 -O2  -Wall -W -g -ansi -I/usr/X11R6/include   -c -o libacpi.o libacpi.c
+[9-ERROR] gcc-32 -O2  -L/usr/X11R6/lib -lX11 -lXpm -lXext -o wmacpi wmacpi.o libacpi.o
+[9-ERROR] gcc-32 -O2  -Wall -W -g -ansi -I/usr/X11R6/include   -c -o acpi.o acpi.c
+[9-ERROR] gcc-32 -O2  -L/usr/X11R6/lib -lX11 -lXpm -lXext -o acpi acpi.o libacpi.o
+[9-ERROR] install -d /usr/bin/
+[9-ERROR] install -pc wmacpi acpi /usr/bin/
+[9-ERROR] install -d /usr/man/man1/
+[9-ERROR] install -pc wmacpi.1 acpi.1 /usr/man/man1/
+[9-ERROR] Trying to copy the default documentation ...
+[9-ERROR] `AUTHORS' -> `/usr/share/doc/wmacpi/AUTHORS'
+[9-ERROR] `COPYING' -> `/usr/share/doc/wmacpi/COPYING'
+[9-ERROR] `INSTALL' -> `/usr/share/doc/wmacpi/INSTALL'
+[9-ERROR] `README' -> `/usr/share/doc/wmacpi/README'
+[9-ERROR] `TODO' -> `/usr/share/doc/wmacpi/TODO'
+[9-ERROR] `ChangeLog' -> `/usr/share/doc/wmacpi/ChangeLog'
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 11 files for this package.
+[9-ERROR] Applying package split: 40 wmacpi:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 wmacpi:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 wmacpi:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <wmacpi> Creating flist file ...
+[9-ERROR] <wmacpi> Creating package dependencies file ...
+[9-ERROR] <wmacpi> Creating md5sum and cksum files ...
+[9-ERROR] <wmacpi> Creating package description ...
+[9-ERROR] <wmacpi:doc> Creating flist file ...
+[9-ERROR] <wmacpi:doc> Creating package dependencies file ...
+[9-ERROR] <wmacpi:doc> Creating md5sum and cksum files ...
+[9-ERROR] <wmacpi:doc> Creating package description ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] usr/bin/acpi: acpi wmacpi
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] removed `/var/adm/logs/9-wmacpi.log'
+[9-ERROR] Finished building wmacpi=wmacpi.
 

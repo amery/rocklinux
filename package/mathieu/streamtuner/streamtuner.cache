@@ -20,18 +20,76 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087410558 Wed Jun 16 20:29:18 2004
+[TIMESTAMP] 1093269897 Mon Aug 23 16:04:57 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-streamtuner.log 9-streamtuner.log
+[LOGS] 5-streamtuner.log 9-streamtuner.err
 
-[BUILDTIME] 15618 (9)
-[SIZE] 1.22 MB, 67 files
+[BUILDTIME] 28409 (5)
+[SIZE] 4.08 MB, 905 files
 
-[DEP] 00-dirtree atk bash binutils bzip2 ccache coreutils curl diffutils
-[DEP] docbookx expat findutils freetype gawk gcc3 gettext glib glibc23
-[DEP] grep gtk+ gtkam libglade linux24-header mad make mgt mktemp net-tools
-[DEP] ogg-vorbis openssl pango pkgconfig rep-gtk scrollkeeper sed sysfiles
-[DEP] tar util-linux xfree86 xmule zlib
+[DEP] 00-dirtree anjuta atk atk:dev balsa bash battfink binutils bug-buddy
+[DEP] bzip2 coreutils curl curl:dev diffutils docbookx eog evolution expat
+[DEP] file-roller findutils freetype gawk gcalctool gcc32 gcc32:dev gdm
+[DEP] gedit gettext ggv ghex gjiten glabels glade glib glib:dev glibc23
+[DEP] glibc23:dev gnome-applets gnome-games gnome-media gnome-panel
+[DEP] gnome-pilot gnome-system-monitor gnome-system-tools gnome-terminal
+[DEP] gnome-utils gnome2-user-docs gnomeicu gnomemeeting gnopernicus
+[DEP] gok gpdf grep gst-editor gthumb gtk+ gtk+:dev gucharmap libglade
+[DEP] linux24-header:dev lock-keys-applet mad mad:dev make mergeant mgt
+[DEP] mktemp net-tools netspeed_applet ogg-vorbis ogg-vorbis:dev openssl
+[DEP] pango pango:dev perl5 pkgconfig pybliographer scrollkeeper sed
+[DEP] sound-juicer sysfiles tar util-linux xfree86 xmule zapping zlib:dev
+
+[9-ERROR] Applying package split: 42 streamtuner:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 streamtuner:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <streamtuner> Creating flist file ...
+[9-ERROR] <streamtuner> Creating package dependencies file ...
+[9-ERROR] <streamtuner> Creating md5sum and cksum files ...
+[9-ERROR] <streamtuner> Creating package description ...
+[9-ERROR] <streamtuner:dev> Creating flist file ...
+[9-ERROR] <streamtuner:dev> Creating package dependencies file ...
+[9-ERROR] <streamtuner:dev> Creating md5sum and cksum files ...
+[9-ERROR] <streamtuner:dev> Creating package description ...
+[9-ERROR] <streamtuner:doc> Creating flist file ...
+[9-ERROR] <streamtuner:doc> Creating package dependencies file ...
+[9-ERROR] <streamtuner:doc> Creating md5sum and cksum files ...
+[9-ERROR] <streamtuner:doc> Creating package description ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] var/scrollkeeper/C/scrollkeeper_cl.xml: mgt streamtuner zapping
+[9-ERROR] var/scrollkeeper/C/scrollkeeper_extended_cl.xml: mgt streamtuner zapping
+[9-ERROR] var/scrollkeeper/cs/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/cs/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/de/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/de/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/es/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/es/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/fr/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/fr/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/it/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/it/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/ja/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/ja/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/ko/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/ko/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/ro/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/ro/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/ru/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/ru/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/sr/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/sr/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/sv/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/sv/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/uk/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/uk/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/zh_CN/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/zh_CN/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/zh_TW/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/zh_TW/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] removed `/var/adm/logs/9-streamtuner.log'
+[9-ERROR] Finished building streamtuner=streamtuner.
 

@@ -20,16 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087256803 Tue Jun 15 01:46:43 2004
+[TIMESTAMP] 1093123237 Sat Aug 21 23:20:37 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-xsteak.log 9-xsteak.log
 
-[BUILDTIME] 2829 (9)
-[SIZE] 5.40 MB, 39 files
+[BUILDTIME] 1993 (9)
+[SIZE] 5.38 MB, 32 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils findutils gawk gcc3
-[DEP] glib12 glibc23 grep gtk+12 linux24-header make patch sed sysfiles
-[DEP] tar xfree86
+[DEP] 00-dirtree bash binutils bzip2 coreutils findutils gawk gcc32
+[DEP] gcc32:dev glib12 glib12:dev glibc23 glibc23:dev grep gtk+12
+[DEP] gtk+12:dev linux24-header:dev make patch sed sysfiles tar xfree86
+[DEP] xfree86:dev
 

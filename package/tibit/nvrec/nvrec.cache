@@ -20,18 +20,111 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087386052 Wed Jun 16 13:40:52 2004
+[TIMESTAMP] 1093226775 Mon Aug 23 04:06:15 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-nvrec.log 9-nvrec.log
+[LOGS] 5-nvrec.err 9-nvrec.err
 
-[BUILDTIME] 4400 (9)
-[SIZE] 0.21 MB, 26 files
+[5-ERROR] rm -f libnuvfile_core.a
+[5-ERROR] ar cru libnuvfile_core.a RTjpegN.o minilzo.o nuvfile_core.o 
+[5-ERROR] ranlib libnuvfile_core.a
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.nvrec.1092995662.26496.3480304799/nvrec-20030316/nuv'
+[5-ERROR] Making all in tools
+[5-ERROR] make[2]: Entering directory `/ROCK/src.nvrec.1092995662.26496.3480304799/nvrec-20030316/tools'
+[5-ERROR] make[3]: Entering directory `/ROCK/src.nvrec.1092995662.26496.3480304799/nvrec-20030316/tools'
+[5-ERROR] if gcc-32 -DHAVE_CONFIG_H -I. -I. -I..    -O3  -pthread -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -Wall -O3  -pthread -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -Wall -MT timer.o -MD -MP -MF ".deps/timer.Tpo" -c -o timer.o timer.c; \
+[5-ERROR] then mv -f ".deps/timer.Tpo" ".deps/timer.Po"; else rm -f ".deps/timer.Tpo"; exit 1; fi
+[5-ERROR] gcc-32 -O3  -pthread -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -Wall -O3  -pthread -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -Wall   -o timer  timer.o  
+[5-ERROR] make[3]: Leaving directory `/ROCK/src.nvrec.1092995662.26496.3480304799/nvrec-20030316/tools'
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.nvrec.1092995662.26496.3480304799/nvrec-20030316/tools'
+[5-ERROR] Making all in divx4
+[5-ERROR] make[2]: Entering directory `/ROCK/src.nvrec.1092995662.26496.3480304799/nvrec-20030316/divx4'
+[5-ERROR] if gcc-32 -DHAVE_CONFIG_H -I. -I. -I..    -O3  -pthread -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -Wall -O3  -pthread -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -Wall -MT mcs.o -MD -MP -MF ".deps/mcs.Tpo" -c -o mcs.o mcs.c; \
+[5-ERROR] then mv -f ".deps/mcs.Tpo" ".deps/mcs.Po"; else rm -f ".deps/mcs.Tpo"; exit 1; fi
+[5-ERROR] if gcc-32 -DHAVE_CONFIG_H -I. -I. -I..    -O3  -pthread -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -Wall -O3  -pthread -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -Wall -MT divx4file_core.o -MD -MP -MF ".deps/divx4file_core.Tpo" -c -o divx4file_core.o divx4file_core.c; \
+[5-ERROR] then mv -f ".deps/divx4file_core.Tpo" ".deps/divx4file_core.Po"; else rm -f ".deps/divx4file_core.Tpo"; exit 1; fi
+[5-ERROR] divx4file_core.c: In function `divx4file_core_video':
+[5-ERROR] divx4file_core.c:232: structure has no member named `colorspace'
+[5-ERROR] divx4file_core.c:244: structure has no member named `is_key_frame'
+[5-ERROR] divx4file_core.c: In function `divx4file_core_init':
+[5-ERROR] divx4file_core.c:350: `ENC_PARAM' undeclared (first use in this function)
+[5-ERROR] divx4file_core.c:350: (Each undeclared identifier is reported only once
+[5-ERROR] divx4file_core.c:350: for each function it appears in.)
+[5-ERROR] divx4file_core.c:350: syntax error before "enc_param"
+[5-ERROR] divx4file_core.c:380: `ENC_CSP_RGB24' undeclared (first use in this function)
+[5-ERROR] divx4file_core.c:381: `ENC_CSP_I420' undeclared (first use in this function)
+[5-ERROR] divx4file_core.c:382: `ENC_CSP_YUY2' undeclared (first use in this function)
+[5-ERROR] divx4file_core.c:387: `enc_param' undeclared (first use in this function)
+[5-ERROR] make[2]: *** [divx4file_core.o] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.nvrec.1092995662.26496.3480304799/nvrec-20030316/divx4'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.nvrec.1092995662.26496.3480304799/nvrec-20030316'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 1 files for this package.
+[5-ERROR] Applying package split: 40 nvrec:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 nvrec:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 nvrec:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <nvrec:doc> Creating flist file ...
+[5-ERROR] <nvrec:doc> Creating package dependencies file ...
+[5-ERROR] <nvrec:doc> Creating md5sum and cksum files ...
+[5-ERROR] <nvrec:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building nvrec=nvrec.
 
-[DEP] 00-dirtree alsa arts audiofile autoconf automake avifile bash
-[DEP] binutils bzip2 ccache coreutils diffutils divx4linux esound expat
-[DEP] findutils freetype gcc3 glib glibc23 grep lame libsdl linux24-header
-[DEP] m4 mad make mktemp nas net-tools perl5 sed sysfiles tar util-linux
-[DEP] xfree86 xvid
+[9-ERROR] rm -f libnuvfile_core.a
+[9-ERROR] ar cru libnuvfile_core.a RTjpegN.o minilzo.o nuvfile_core.o 
+[9-ERROR] ranlib libnuvfile_core.a
+[9-ERROR] make[2]: Leaving directory `/ROCK/src.nvrec.1093226730.31570.1746441723/nvrec-20030316/nuv'
+[9-ERROR] Making all in tools
+[9-ERROR] make[2]: Entering directory `/ROCK/src.nvrec.1093226730.31570.1746441723/nvrec-20030316/tools'
+[9-ERROR] make[3]: Entering directory `/ROCK/src.nvrec.1093226730.31570.1746441723/nvrec-20030316/tools'
+[9-ERROR] if gcc-32 -DHAVE_CONFIG_H -I. -I. -I..    -O3  -pthread -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -Wall -O3  -pthread -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -Wall -MT timer.o -MD -MP -MF ".deps/timer.Tpo" -c -o timer.o timer.c; \
+[9-ERROR] then mv -f ".deps/timer.Tpo" ".deps/timer.Po"; else rm -f ".deps/timer.Tpo"; exit 1; fi
+[9-ERROR] gcc-32 -O3  -pthread -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -Wall -O3  -pthread -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -Wall   -o timer  timer.o  
+[9-ERROR] make[3]: Leaving directory `/ROCK/src.nvrec.1093226730.31570.1746441723/nvrec-20030316/tools'
+[9-ERROR] make[2]: Leaving directory `/ROCK/src.nvrec.1093226730.31570.1746441723/nvrec-20030316/tools'
+[9-ERROR] Making all in divx4
+[9-ERROR] make[2]: Entering directory `/ROCK/src.nvrec.1093226730.31570.1746441723/nvrec-20030316/divx4'
+[9-ERROR] if gcc-32 -DHAVE_CONFIG_H -I. -I. -I..    -O3  -pthread -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -Wall -O3  -pthread -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -Wall -MT mcs.o -MD -MP -MF ".deps/mcs.Tpo" -c -o mcs.o mcs.c; \
+[9-ERROR] then mv -f ".deps/mcs.Tpo" ".deps/mcs.Po"; else rm -f ".deps/mcs.Tpo"; exit 1; fi
+[9-ERROR] if gcc-32 -DHAVE_CONFIG_H -I. -I. -I..    -O3  -pthread -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -Wall -O3  -pthread -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -Wall -MT divx4file_core.o -MD -MP -MF ".deps/divx4file_core.Tpo" -c -o divx4file_core.o divx4file_core.c; \
+[9-ERROR] then mv -f ".deps/divx4file_core.Tpo" ".deps/divx4file_core.Po"; else rm -f ".deps/divx4file_core.Tpo"; exit 1; fi
+[9-ERROR] divx4file_core.c: In function `divx4file_core_video':
+[9-ERROR] divx4file_core.c:232: structure has no member named `colorspace'
+[9-ERROR] divx4file_core.c:244: structure has no member named `is_key_frame'
+[9-ERROR] divx4file_core.c: In function `divx4file_core_init':
+[9-ERROR] divx4file_core.c:350: `ENC_PARAM' undeclared (first use in this function)
+[9-ERROR] divx4file_core.c:350: (Each undeclared identifier is reported only once
+[9-ERROR] divx4file_core.c:350: for each function it appears in.)
+[9-ERROR] divx4file_core.c:350: syntax error before "enc_param"
+[9-ERROR] divx4file_core.c:380: `ENC_CSP_RGB24' undeclared (first use in this function)
+[9-ERROR] divx4file_core.c:381: `ENC_CSP_I420' undeclared (first use in this function)
+[9-ERROR] divx4file_core.c:382: `ENC_CSP_YUY2' undeclared (first use in this function)
+[9-ERROR] divx4file_core.c:387: `enc_param' undeclared (first use in this function)
+[9-ERROR] make[2]: *** [divx4file_core.o] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/src.nvrec.1093226730.31570.1746441723/nvrec-20030316/divx4'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/src.nvrec.1093226730.31570.1746441723/nvrec-20030316'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 1 files for this package.
+[9-ERROR] Applying package split: 40 nvrec:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 nvrec:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 nvrec:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <nvrec:doc> Creating flist file ...
+[9-ERROR] <nvrec:doc> Creating package dependencies file ...
+[9-ERROR] <nvrec:doc> Creating md5sum and cksum files ...
+[9-ERROR] <nvrec:doc> Creating package description ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building nvrec=nvrec.
 

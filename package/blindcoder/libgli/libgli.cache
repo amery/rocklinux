@@ -20,15 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087420002 Wed Jun 16 23:06:42 2004
+[TIMESTAMP] 1093262532 Mon Aug 23 14:02:12 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-libgli.log 9-libgli.log
 
-[BUILDTIME] 2500 (9)
-[SIZE] 0.47 MB, 39 files
+[BUILDTIME] 2052 (9)
+[SIZE] 0.13 MB, 13 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils findutils gcc3
-[DEP] glibc23 grep linux24-header make patch sed sysfiles tar xfree86
+[DEP] 00-dirtree bash binutils bzip2 coreutils findutils gcc32 gcc32:dev
+[DEP] glibc23 glibc23:dev grep linux24-header:dev make patch sed sysfiles
+[DEP] tar xfree86 xfree86:dev
 

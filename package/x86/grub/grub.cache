@@ -20,16 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087417541 Wed Jun 16 22:25:41 2004
+[TIMESTAMP] 1093260647 Mon Aug 23 13:30:47 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-grub.log 9-grub.log
 
-[BUILDTIME] 18613 (9)
-[SIZE] 2.82 MB, 82 files
+[BUILDTIME] 10770 (9)
+[SIZE] 2.02 MB, 55 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils diffutils findutils
-[DEP] gawk gcc3 glibc23 grep linux24-header make mktemp ncurses net-tools
-[DEP] patch sed sysfiles tar texinfo util-linux
+[DEP] 00-dirtree bash binutils bzip2 coreutils diffutils findutils
+[DEP] gawk gcc32 gcc32:dev glibc23 glibc23:dev grep linux24-header:dev
+[DEP] make mktemp ncurses:dev net-tools patch sed sysfiles tar texinfo
+[DEP] util-linux
 

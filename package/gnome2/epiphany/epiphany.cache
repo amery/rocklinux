@@ -20,22 +20,111 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087303486 Tue Jun 15 14:44:46 2004
+[TIMESTAMP] 1093165221 Sun Aug 22 11:00:21 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-epiphany.log 9-epiphany.log
+[LOGS] 5-epiphany.err 9-epiphany.err
 
-[BUILDTIME] 25938 (9)
-[SIZE] 6.46 MB, 215 files
+[5-ERROR] checking for gcc-32 option to accept ANSI C... (cached) none needed
+[5-ERROR] checking dependency style of gcc-32... (cached) gcc3
+[5-ERROR] checking for i386-unknown-linux-gnu-g++... (cached) g++-32
+[5-ERROR] checking whether we are using the GNU C++ compiler... (cached) yes
+[5-ERROR] checking whether g++-32 accepts -g... (cached) yes
+[5-ERROR] checking dependency style of g++-32... (cached) gcc3
+[5-ERROR] checking for gcc-32 option to accept ANSI C... none needed
+[5-ERROR] checking for ANSI C header files... (cached) yes
+[5-ERROR] checking for perl... (cached) /usr/bin/perl
+[5-ERROR] checking for glib-genmarshal... /opt/gnome26/bin/glib-genmarshal
+[5-ERROR] checking whether gcc understands -Wno-sign-compare... yes
+[5-ERROR] checking what warning flags to pass to the C compiler... -Wall -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wno-sign-compare -Werror
+[5-ERROR] checking what language compliance flags to pass to the C compiler... 
+[5-ERROR] checking if NautilusView Epiphany component is wanted... yes
+[5-ERROR] checking for pkg-config... /usr/bin/pkg-config
+[5-ERROR] checking for libnautilus >= 2.5... yes
+[5-ERROR] checking NAUTILUS_DEPENDENCY_CFLAGS... -D_REENTRANT -DORBIT2=1 -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include -I/opt/gnome26/include/eel-2 -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/gail-1.0 -I/opt/gnome26/include/libglade-2.0 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/usr/include/freetype2  
+[5-ERROR] checking NAUTILUS_DEPENDENCY_LIBS... -Wl,--export-dynamic -L/opt/gnome26/lib -L/usr/X11R6/lib -lnautilus -leel-2 -lgnomeui-2 -lSM -lICE -lgailutil -lglade-2.0 -lbonoboui-2 -lxml2 -lz -lgnomecanvas-2 -lgnome-2 -lpopt -lart_lgpl_2 -lpangoft2-1.0 -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lpangoxft-1.0 -lpangox-1.0 -lpango-1.0 -lgobject-2.0 -lbonobo-2 -lgconf-2 -lgnomevfs-2 -lbonobo-activation -lORBit-2 -lm -lgmodule-2.0 -ldl -lgthread-2.0 -lpthread -lglib-2.0  
+[5-ERROR] checking for 		  glib-2.0 >= 2.4.1 		  gtk+-2.0 >= 2.4.0 		  libxml-2.0 >= 2.6.6 		  libgnomeui-2.0 libglade-2.0 		  bonobo-activation-2.0 		  libbonoboui-2.0 >= 2.1.1 		  ORBit-2.0 		  libglade-2.0 >= 2.3.1 		  gnome-vfs-2.0 >= 2.3.1 		  gnome-vfs-module-2.0 		  gconf-2.0 		 ... yes
+[5-ERROR] checking EPIPHANY_DEPENDENCY_CFLAGS... -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/usr/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -I/opt/gnome26/include/gnome-vfs-module-2.0  
+[5-ERROR] checking EPIPHANY_DEPENDENCY_LIBS... -Wl,--export-dynamic -L/opt/gnome26/lib -L/usr/X11R6/lib -lgnomeui-2 -lSM -lICE -lbonoboui-2 -lgnomecanvas-2 -lgnome-2 -lpopt -lart_lgpl_2 -lpangoft2-1.0 -lbonobo-2 -lglade-2.0 -lgtk-x11-2.0 -lxml2 -lz -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lpangoxft-1.0 -lpangox-1.0 -lpango-1.0 -lgobject-2.0 -lgnomevfs-2 -lbonobo-activation -lgconf-2 -lORBit-2 -lm -lgmodule-2.0 -ldl -lgthread-2.0 -lpthread -lglib-2.0  
+[5-ERROR] checking for mozilla-gtkmozembed mozilla-xpcom... yes
+[5-ERROR] checking MOZILLA_COMPONENT_CFLAGS... -I/usr/include/mozilla-1.7.1/gtkembedmoz -I/usr/include/mozilla-1.7.1/xpcom -I/usr/include/mozilla-1.7.1/string -I/usr/include/mozilla-1.7.1/nspr  
+[5-ERROR] checking MOZILLA_COMPONENT_LIBS... -L/usr/lib/mozilla-1.7.1 -lgtkembedmoz -lxpcom -lplds4 -lplc4 -lnspr4 -lpthread -ldl  
+[5-ERROR] checking for gconftool-2... /opt/gnome26/bin/gconftool-2
+[5-ERROR] Using config source xml::/etc/opt/gnome26/gconf/gconf.xml.defaults for schema installation
+[5-ERROR] Using $(sysconfdir)/gconf/schemas/ as install directory for schema files
+[5-ERROR] checking for mkdtemp... yes
+[5-ERROR] checking for compiler -fshort-wchar option... yes
+[5-ERROR] checking for mozilla version... 1.7.1
+[5-ERROR] configure: error:
+[5-ERROR] *****************************************************************************
+[5-ERROR] Epiphany can be built using Mozilla 1.4, 1.4.1, 1.4.2, 1.5, 1.6 or 1.7,
+[5-ERROR] but the version available is 1.7.1.
+[5-ERROR] *****************************************************************************
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 1 files for this package.
+[5-ERROR] Applying package split: 40 epiphany:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 epiphany:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 epiphany:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <epiphany:doc> Creating flist file ...
+[5-ERROR] <epiphany:doc> Creating package dependencies file ...
+[5-ERROR] <epiphany:doc> Creating md5sum and cksum files ...
+[5-ERROR] <epiphany:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building epiphany=epiphany.
 
-[DEP] 00-dirtree alsa atk audiofile bash binutils bzip2 ccache coreutils
-[DEP] diffutils docbookx eel esound expat findutils freetype gail gawk
-[DEP] gcc3 gconf gconf-editor gdm gettext glib glibc23 gnome-keyring
-[DEP] gnome-mime-data gnome-vfs gok gpdf grep gtk+ indent libart_lgpl23
-[DEP] libbonobo libbonoboui libglade libgnome libgnomecanvas libgnomeui
-[DEP] libjpeg libxml2 linux24-header make mktemp mozilla nautilus
-[DEP] net-tools openssl orbit2 pango patch perl-libxml perl-xml-parser
-[DEP] perl5 pkgconfig popt rep-gtk scrollkeeper sed sysfiles tar util-linux
-[DEP] xfree86 zlib
+[9-ERROR] checking for gcc-32 option to accept ANSI C... (cached) none needed
+[9-ERROR] checking dependency style of gcc-32... (cached) gcc3
+[9-ERROR] checking for i386-unknown-linux-gnu-g++... (cached) g++-32
+[9-ERROR] checking whether we are using the GNU C++ compiler... (cached) yes
+[9-ERROR] checking whether g++-32 accepts -g... (cached) yes
+[9-ERROR] checking dependency style of g++-32... (cached) gcc3
+[9-ERROR] checking for gcc-32 option to accept ANSI C... none needed
+[9-ERROR] checking for ANSI C header files... (cached) yes
+[9-ERROR] checking for perl... (cached) /usr/bin/perl
+[9-ERROR] checking for glib-genmarshal... /opt/gnome26/bin/glib-genmarshal
+[9-ERROR] checking whether gcc understands -Wno-sign-compare... yes
+[9-ERROR] checking what warning flags to pass to the C compiler... -Wall -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wno-sign-compare -Werror
+[9-ERROR] checking what language compliance flags to pass to the C compiler... 
+[9-ERROR] checking if NautilusView Epiphany component is wanted... yes
+[9-ERROR] checking for pkg-config... /usr/bin/pkg-config
+[9-ERROR] checking for libnautilus >= 2.5... yes
+[9-ERROR] checking NAUTILUS_DEPENDENCY_CFLAGS... -D_REENTRANT -DORBIT2=1 -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include -I/opt/gnome26/include/eel-2 -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/gail-1.0 -I/opt/gnome26/include/libglade-2.0 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/usr/include/freetype2  
+[9-ERROR] checking NAUTILUS_DEPENDENCY_LIBS... -Wl,--export-dynamic -L/opt/gnome26/lib -L/usr/X11R6/lib -lnautilus -leel-2 -lgnomeui-2 -lSM -lICE -lgailutil -lglade-2.0 -lbonoboui-2 -lxml2 -lz -lgnomecanvas-2 -lgnome-2 -lpopt -lart_lgpl_2 -lpangoft2-1.0 -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lpangoxft-1.0 -lpangox-1.0 -lpango-1.0 -lgobject-2.0 -lbonobo-2 -lgconf-2 -lgnomevfs-2 -lbonobo-activation -lORBit-2 -lm -lgmodule-2.0 -ldl -lgthread-2.0 -lpthread -lglib-2.0  
+[9-ERROR] checking for 		  glib-2.0 >= 2.4.1 		  gtk+-2.0 >= 2.4.0 		  libxml-2.0 >= 2.6.6 		  libgnomeui-2.0 libglade-2.0 		  bonobo-activation-2.0 		  libbonoboui-2.0 >= 2.1.1 		  ORBit-2.0 		  libglade-2.0 >= 2.3.1 		  gnome-vfs-2.0 >= 2.3.1 		  gnome-vfs-module-2.0 		  gconf-2.0 		 ... yes
+[9-ERROR] checking EPIPHANY_DEPENDENCY_CFLAGS... -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/usr/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -I/opt/gnome26/include/gnome-vfs-module-2.0  
+[9-ERROR] checking EPIPHANY_DEPENDENCY_LIBS... -Wl,--export-dynamic -L/opt/gnome26/lib -L/usr/X11R6/lib -lgnomeui-2 -lSM -lICE -lbonoboui-2 -lgnomecanvas-2 -lgnome-2 -lpopt -lart_lgpl_2 -lpangoft2-1.0 -lbonobo-2 -lglade-2.0 -lgtk-x11-2.0 -lxml2 -lz -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lpangoxft-1.0 -lpangox-1.0 -lpango-1.0 -lgobject-2.0 -lgnomevfs-2 -lbonobo-activation -lgconf-2 -lORBit-2 -lm -lgmodule-2.0 -ldl -lgthread-2.0 -lpthread -lglib-2.0  
+[9-ERROR] checking for mozilla-gtkmozembed mozilla-xpcom... yes
+[9-ERROR] checking MOZILLA_COMPONENT_CFLAGS... -I/usr/include/mozilla-1.7.1/gtkembedmoz -I/usr/include/mozilla-1.7.1/xpcom -I/usr/include/mozilla-1.7.1/string -I/usr/include/mozilla-1.7.1/nspr  
+[9-ERROR] checking MOZILLA_COMPONENT_LIBS... -L/usr/lib/mozilla-1.7.1 -lgtkembedmoz -lxpcom -lplds4 -lplc4 -lnspr4 -lpthread -ldl  
+[9-ERROR] checking for gconftool-2... /opt/gnome26/bin/gconftool-2
+[9-ERROR] Using config source xml::/etc/opt/gnome26/gconf/gconf.xml.defaults for schema installation
+[9-ERROR] Using $(sysconfdir)/gconf/schemas/ as install directory for schema files
+[9-ERROR] checking for mkdtemp... yes
+[9-ERROR] checking for compiler -fshort-wchar option... yes
+[9-ERROR] checking for mozilla version... 1.7.1
+[9-ERROR] configure: error:
+[9-ERROR] *****************************************************************************
+[9-ERROR] Epiphany can be built using Mozilla 1.4, 1.4.1, 1.4.2, 1.5, 1.6 or 1.7,
+[9-ERROR] but the version available is 1.7.1.
+[9-ERROR] *****************************************************************************
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 1 files for this package.
+[9-ERROR] Applying package split: 40 epiphany:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 epiphany:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 epiphany:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <epiphany:doc> Creating flist file ...
+[9-ERROR] <epiphany:doc> Creating package dependencies file ...
+[9-ERROR] <epiphany:doc> Creating md5sum and cksum files ...
+[9-ERROR] <epiphany:doc> Creating package description ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building epiphany=epiphany.
 

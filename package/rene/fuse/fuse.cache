@@ -20,16 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087258551 Tue Jun 15 02:15:51 2004
+[TIMESTAMP] 1093126819 Sun Aug 22 00:20:19 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-fuse.log 9-fuse.log
 
-[BUILDTIME] 2738 (9)
-[SIZE] 0.15 MB, 23 files
+[BUILDTIME] 2295 (9)
+[SIZE] 0.05 MB, 9 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache cloop coreutils diffutils
-[DEP] findutils gcc3 glibc23 grep linux24-header linux24-src make mktemp
-[DEP] net-tools patch sed svgalib sysfiles tar util-linux
+[DEP] 00-dirtree bash binutils bzip2 coreutils diffutils findutils gcc32
+[DEP] gcc32:dev glibc23 glibc23:dev grep linux24 linux24-header:dev
+[DEP] linux24-source linux24-source:dev make mktemp net-tools patch sed
+[DEP] sysfiles tar util-linux
 

@@ -20,16 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087224478 Mon Jun 14 16:47:58 2004
+[TIMESTAMP] 1093094088 Sat Aug 21 15:14:48 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 3-zebra.log 5-zebra.log 9-zebra.log
 
-[BUILDTIME] 12308 (9)
-[SIZE] 3.23 MB, 84 files
+[BUILDTIME] 10712 (9)
+[SIZE] 2.69 MB, 42 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils diffutils findutils
-[DEP] gawk gcc3 glibc23 grep linux24-header m4 make mktemp ncurses
-[DEP] net-tools pam patch readline sed sysfiles tar texinfo util-linux
+[DEP] 00-dirtree bash binutils bzip2 coreutils diffutils findutils gcc32
+[DEP] gcc32:dev glibc23 glibc23:dev grep linux24-header:dev m4 make mktemp
+[DEP] ncurses:dev net-tools pam pam:dev patch readline readline:dev sed
+[DEP] sysfiles tar texinfo util-linux
 

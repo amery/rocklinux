@@ -20,16 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087223137 Mon Jun 14 16:25:37 2004
+[TIMESTAMP] 1093092830 Sat Aug 21 14:53:50 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-cyrus-sasl2.log 9-cyrus-sasl2.log
 
-[BUILDTIME] 8026 (9)
-[SIZE] 1.63 MB, 143 files
+[BUILDTIME] 7036 (9)
+[SIZE] 0.45 MB, 75 files
 
-[DEP] 00-dirtree bash bdb41 bdb42 binutils bzip2 ccache coreutils diffutils
-[DEP] findutils gcc3 glibc23 grep linux24-header make mktemp net-tools
-[DEP] openssl pam patch sed sysfiles tar util-linux
+[DEP] 00-dirtree bash bdb41:dev bdb42 binutils bzip2 coreutils diffutils
+[DEP] findutils gcc32 gcc32:dev glibc23 glibc23:dev grep linux24-header:dev
+[DEP] make mktemp net-tools openssl openssl:dev pam pam:dev patch sed
+[DEP] sysfiles tar util-linux
 

@@ -20,16 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087402175 Wed Jun 16 18:09:35 2004
+[TIMESTAMP] 1093248364 Mon Aug 23 10:06:04 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-quota.log 9-quota.log
 
-[BUILDTIME] 3327 (9)
-[SIZE] 0.88 MB, 43 files
+[BUILDTIME] 2725 (9)
+[SIZE] 0.66 MB, 35 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils diffutils e2fsprogs
-[DEP] findutils gcc3 gettext glibc23 grep linux24-header make net-tools
-[DEP] sed sysfiles tar tcp_wrappers
+[DEP] 00-dirtree bash binutils bzip2 coreutils diffutils e2fsprogs:dev
+[DEP] findutils gcc32 gcc32:dev gettext glibc23 glibc23:dev grep
+[DEP] linux24-header:dev make net-tools sed sysfiles tar tcp_wrappers:dev
 

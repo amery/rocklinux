@@ -20,15 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087428422 Thu Jun 17 01:27:02 2004
+[TIMESTAMP] 1093344227 Tue Aug 24 12:43:47 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-bitlbee.log 9-bitlbee.log
 
-[BUILDTIME] 4506 (9)
-[SIZE] 0.45 MB, 30 files
+[BUILDTIME] 4413 (9)
+[SIZE] 0.38 MB, 14 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils findutils gcc3 glib
-[DEP] glibc23 grep linux24-header make pkgconfig sed sysfiles tar
+[DEP] 00-dirtree bash binutils bzip2 coreutils findutils gcc32 gcc32:dev
+[DEP] glib glib:dev glibc23 glibc23:dev gnutls gnutls:dev grep libgcrypt
+[DEP] libgpg-error linux24-header:dev make pkgconfig sed sysfiles tar
+[DEP] zlib:dev
 

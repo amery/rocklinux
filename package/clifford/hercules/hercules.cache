@@ -20,16 +20,68 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087247356 Mon Jun 14 23:09:16 2004
+[TIMESTAMP] 1093108926 Sat Aug 21 19:22:06 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-hercules.log 9-hercules.log
+[LOGS] 5-hercules.log 9-hercules.err
 
-[BUILDTIME] 30330 (9)
-[SIZE] 3.98 MB, 160 files
+[BUILDTIME] 4614 (5)
+[SIZE] 3.76 MB, 131 files
 
-[DEP] 00-dirtree bash binutils bison bzip2 ccache coreutils diffutils
-[DEP] findutils gawk gcc3 gettext glibc23 grep linux24-header make mktemp
-[DEP] net-tools sed sysfiles tar util-linux zlib
+[DEP] 00-dirtree bash binutils bison bzip2 bzip2:dev coreutils diffutils
+[DEP] findutils gcc32 gcc32:dev gettext glibc23 glibc23:dev grep libgcrypt
+[DEP] libgcrypt:dev libgpg-error libgpg-error:dev linux24-header:dev make
+[DEP] mktemp net-tools sed sysfiles tar util-linux zlib:dev
+
+[9-ERROR] dyncrypt.c:955: warning: `GCRY_CIPHER_HD' is deprecated (declared at /usr/include/gcrypt.h:701)
+[9-ERROR] dyncrypt.c:976: warning: passing arg 1 of `gcry_cipher_open' makes pointer from integer without a cast
+[9-ERROR] dyncrypt.c:976: too few arguments to function `gcry_cipher_open'
+[9-ERROR] dyncrypt.c:976: warning: assignment makes pointer from integer without a cast
+[9-ERROR] In file included from dyncrypt.c:1635:
+[9-ERROR] dyncrypt.c: In function `z900_kmc_dea':
+[9-ERROR] dyncrypt.c:1073: warning: `GCRY_CIPHER_HD' is deprecated (declared at /usr/include/gcrypt.h:701)
+[9-ERROR] dyncrypt.c:1092: warning: passing arg 1 of `gcry_cipher_open' makes pointer from integer without a cast
+[9-ERROR] dyncrypt.c:1092: too few arguments to function `gcry_cipher_open'
+[9-ERROR] dyncrypt.c:1092: warning: assignment makes pointer from integer without a cast
+[9-ERROR] In file included from dyncrypt.c:1635:
+[9-ERROR] dyncrypt.c: In function `z900_kmc_tdea_128':
+[9-ERROR] dyncrypt.c:1193: warning: `GCRY_CIPHER_HD' is deprecated (declared at /usr/include/gcrypt.h:701)
+[9-ERROR] dyncrypt.c:1212: warning: passing arg 1 of `gcry_cipher_open' makes pointer from integer without a cast
+[9-ERROR] dyncrypt.c:1212: too few arguments to function `gcry_cipher_open'
+[9-ERROR] dyncrypt.c:1212: warning: assignment makes pointer from integer without a cast
+[9-ERROR] In file included from dyncrypt.c:1635:
+[9-ERROR] dyncrypt.c: In function `z900_kmc_tdea_192':
+[9-ERROR] dyncrypt.c:1317: warning: `GCRY_CIPHER_HD' is deprecated (declared at /usr/include/gcrypt.h:701)
+[9-ERROR] dyncrypt.c:1336: warning: passing arg 1 of `gcry_cipher_open' makes pointer from integer without a cast
+[9-ERROR] dyncrypt.c:1336: too few arguments to function `gcry_cipher_open'
+[9-ERROR] dyncrypt.c:1336: warning: assignment makes pointer from integer without a cast
+[9-ERROR] make[2]: *** [dyncrypt.lo] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/src.hercules.1093108870.19017.1013504027/hercules-3.01/crypto'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/src.hercules.1093108870.19017.1013504027/hercules-3.01'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 151 files for this package.
+[9-ERROR] Applying package split: 40 hercules:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 hercules:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 hercules:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <hercules> Creating flist file ...
+[9-ERROR] <hercules> Creating package dependencies file ...
+[9-ERROR] <hercules> Creating md5sum and cksum files ...
+[9-ERROR] <hercules> Creating package description ...
+[9-ERROR] <hercules:dev> Creating flist file ...
+[9-ERROR] <hercules:dev> Creating package dependencies file ...
+[9-ERROR] <hercules:dev> Creating md5sum and cksum files ...
+[9-ERROR] <hercules:dev> Creating package description ...
+[9-ERROR] <hercules:doc> Creating flist file ...
+[9-ERROR] <hercules:doc> Creating package dependencies file ...
+[9-ERROR] <hercules:doc> Creating md5sum and cksum files ...
+[9-ERROR] <hercules:doc> Creating package description ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building hercules=hercules.
 

@@ -20,18 +20,12 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087482441 Thu Jun 17 16:27:21 2004
+[TIMESTAMP] 1093147733 Sun Aug 22 06:08:53 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-gnome-spell.err 9-gnome-spell.err
 
-[5-ERROR]                  from Spell-stubs.c:7:
-[5-ERROR] /opt/gnome26/include/orbit-2.0/orbit/orb-core/corba-defs.h:8:1: warning: "ORBIT_IDL_SERIAL" redefined
-[5-ERROR] In file included from Spell-stubs.c:7:
-[5-ERROR] Spell.h:8:1: warning: this is the location of the previous definition
-[5-ERROR] Spell-stubs.c: In function `GNOME_Spell_Dictionary_getLanguages':
-[5-ERROR] Spell-stubs.c:24: warning: passing arg 1 of pointer to function makes pointer from integer without a cast
 [5-ERROR] Spell-stubs.c: In function `GNOME_Spell_Dictionary_setLanguage':
 [5-ERROR] Spell-stubs.c:49: warning: passing arg 1 of pointer to function makes pointer from integer without a cast
 [5-ERROR] Spell-stubs.c: In function `GNOME_Spell_Dictionary_checkWord':
@@ -44,17 +38,17 @@
 [5-ERROR] Spell-stubs.c:163: warning: passing arg 1 of pointer to function makes pointer from integer without a cast
 [5-ERROR] Spell-stubs.c: In function `GNOME_Spell_Dictionary_setCorrection':
 [5-ERROR] Spell-stubs.c:193: warning: passing arg 1 of pointer to function makes pointer from integer without a cast
-[5-ERROR] gcc-3 -DHAVE_CONFIG_H -I. -I. -I.. -I. -I/usr/include -DGNOMEDATADIR=\"/opt/gnome26/share\" -DGNOMELOCALEDIR=\"/opt/gnome26/share/locale\" -DGLADE_DATADIR=\"/opt/gnome26/share/gnome-spell-1.0.5\" -DPLUGIN_DIR=\"/opt/gnome26/lib/bonobo/plugin\" -DGTK_DISABLE_DEPRECATED=1 -DASPELL_DICT=\"/usr/lib/aspell\" -DORBIT2=1 -pthread -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include -I/usr/include/freetype2 -I/opt/gnome26/lib/gtk-2.0/include -I/opt/gnome26/include/atk-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -g -O2 -c Spell-stubs.c -o Spell-stubs.o >/dev/null 2>&1
+[5-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -I. -I/usr/include -DGNOMEDATADIR=\"/opt/gnome26/share\" -DGNOMELOCALEDIR=\"/opt/gnome26/share/locale\" -DGLADE_DATADIR=\"/opt/gnome26/share/gnome-spell-1.0.5\" -DPLUGIN_DIR=\"/opt/gnome26/lib/bonobo/plugin\" -DGTK_DISABLE_DEPRECATED=1 -DASPELL_DICT=\"/usr/lib/aspell\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include -I/usr/include/freetype2 -I/opt/gnome26/lib/gtk-2.0/include -I/opt/gnome26/include/atk-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -g -O2 -c Spell-stubs.c -o Spell-stubs.o >/dev/null 2>&1
 [5-ERROR] mv -f .libs/Spell-stubs.lo Spell-stubs.lo
-[5-ERROR] /bin/sh ../libtool --mode=link gcc-3  -g -O2 -L/usr/lib  -o libgnome-spell-idl.la   Spell-common.lo Spell-skels.lo Spell-stubs.lo  -laspell 
+[5-ERROR] /bin/sh ../libtool --mode=link gcc-32  -g -O2 -L/usr/lib  -o libgnome-spell-idl.la   Spell-common.lo Spell-skels.lo Spell-stubs.lo  -laspell 
 [5-ERROR] rm -fr .libs/libgnome-spell-idl.la .libs/libgnome-spell-idl.* .libs/libgnome-spell-idl.*
 [5-ERROR] ar cru .libs/libgnome-spell-idl.al Spell-common.lo Spell-skels.lo Spell-stubs.lo
 [5-ERROR] ranlib .libs/libgnome-spell-idl.al
 [5-ERROR] creating libgnome-spell-idl.la
 [5-ERROR] (cd .libs && rm -f libgnome-spell-idl.la && ln -s ../libgnome-spell-idl.la libgnome-spell-idl.la)
-[5-ERROR] /bin/sh ../libtool --mode=compile gcc-3 -DHAVE_CONFIG_H -I. -I. -I.. -I. -I/usr/include -DGNOMEDATADIR=\""/opt/gnome26/share"\" -DGNOMELOCALEDIR=\""/opt/gnome26/share/locale"\" -DGLADE_DATADIR=\"/opt/gnome26/share/gnome-spell-1.0.5\" -DPLUGIN_DIR=\""/opt/gnome26/lib/bonobo/plugin"\" -DGTK_DISABLE_DEPRECATED=1 -DASPELL_DICT=\""/usr/lib/aspell"\" -DORBIT2=1 -pthread -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include -I/usr/include/freetype2 -I/opt/gnome26/lib/gtk-2.0/include -I/opt/gnome26/include/atk-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/libglade-2.0       -g -O2 -c control.c
+[5-ERROR] /bin/sh ../libtool --mode=compile gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -I. -I/usr/include -DGNOMEDATADIR=\""/opt/gnome26/share"\" -DGNOMELOCALEDIR=\""/opt/gnome26/share/locale"\" -DGLADE_DATADIR=\"/opt/gnome26/share/gnome-spell-1.0.5\" -DPLUGIN_DIR=\""/opt/gnome26/lib/bonobo/plugin"\" -DGTK_DISABLE_DEPRECATED=1 -DASPELL_DICT=\""/usr/lib/aspell"\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include -I/usr/include/freetype2 -I/opt/gnome26/lib/gtk-2.0/include -I/opt/gnome26/include/atk-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/libglade-2.0       -g -O2 -c control.c
 [5-ERROR] rm -f .libs/control.lo
-[5-ERROR] gcc-3 -DHAVE_CONFIG_H -I. -I. -I.. -I. -I/usr/include -DGNOMEDATADIR=\"/opt/gnome26/share\" -DGNOMELOCALEDIR=\"/opt/gnome26/share/locale\" -DGLADE_DATADIR=\"/opt/gnome26/share/gnome-spell-1.0.5\" -DPLUGIN_DIR=\"/opt/gnome26/lib/bonobo/plugin\" -DGTK_DISABLE_DEPRECATED=1 -DASPELL_DICT=\"/usr/lib/aspell\" -DORBIT2=1 -pthread -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include -I/usr/include/freetype2 -I/opt/gnome26/lib/gtk-2.0/include -I/opt/gnome26/include/atk-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -g -O2 -c control.c  -fPIC -DPIC -o .libs/control.lo
+[5-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -I. -I/usr/include -DGNOMEDATADIR=\"/opt/gnome26/share\" -DGNOMELOCALEDIR=\"/opt/gnome26/share/locale\" -DGLADE_DATADIR=\"/opt/gnome26/share/gnome-spell-1.0.5\" -DPLUGIN_DIR=\"/opt/gnome26/lib/bonobo/plugin\" -DGTK_DISABLE_DEPRECATED=1 -DASPELL_DICT=\"/usr/lib/aspell\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include -I/usr/include/freetype2 -I/opt/gnome26/lib/gtk-2.0/include -I/opt/gnome26/include/atk-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -g -O2 -c control.c  -fPIC -DPIC -o .libs/control.lo
 [5-ERROR] In file included from control.c:37:
 [5-ERROR] /opt/gnome26/include/libgnomeui-2.0/libgnomeui/gnome-entry.h:63: syntax error before "GtkCombo"
 [5-ERROR] /opt/gnome26/include/libgnomeui-2.0/libgnomeui/gnome-entry.h:63: warning: no semicolon at end of struct or union
@@ -63,26 +57,26 @@
 [5-ERROR] /opt/gnome26/include/libgnomeui-2.0/libgnomeui/gnome-entry.h:70: warning: no semicolon at end of struct or union
 [5-ERROR] /opt/gnome26/include/libgnomeui-2.0/libgnomeui/gnome-entry.h:78: syntax error before '}' token
 [5-ERROR] make[2]: *** [control.lo] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.gnome-spell.1087476731.15530.2299914423/gnome-spell-1.0.5/gnome-spell'
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.gnome-spell.1092921248.2971.3427576823/gnome-spell-1.0.5/gnome-spell'
 [5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.gnome-spell.1087476731.15530.2299914423/gnome-spell-1.0.5'
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.gnome-spell.1092921248.2971.3427576823/gnome-spell-1.0.5'
 [5-ERROR] make: *** [all-recursive-am] Error 2
 [5-ERROR] --- BUILD ERROR ---
 [5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] processing static lib corrections ...
-[5-ERROR] Found 7 files for this package.
-[5-ERROR] Clear (old) md5sums and cksums ...
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 1 files for this package.
+[5-ERROR] Applying package split: 40 gnome-spell:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 gnome-spell:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 gnome-spell:doc /share/doc/
 [5-ERROR] Calculating package dependencies ...
-[5-ERROR] Creating md5sum and cksum files ... done.
-[5-ERROR] Creating package description ...
+[5-ERROR] <gnome-spell:doc> Creating flist file ...
+[5-ERROR] <gnome-spell:doc> Creating package dependencies file ...
+[5-ERROR] <gnome-spell:doc> Creating md5sum and cksum files ...
+[5-ERROR] <gnome-spell:doc> Creating package description ...
 [5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building gnome-spell=gnome-spell.
 
-[9-ERROR]                  from Spell-stubs.c:7:
-[9-ERROR] /opt/gnome26/include/orbit-2.0/orbit/orb-core/corba-defs.h:8:1: warning: "ORBIT_IDL_SERIAL" redefined
-[9-ERROR] In file included from Spell-stubs.c:7:
-[9-ERROR] Spell.h:8:1: warning: this is the location of the previous definition
-[9-ERROR] Spell-stubs.c: In function `GNOME_Spell_Dictionary_getLanguages':
-[9-ERROR] Spell-stubs.c:24: warning: passing arg 1 of pointer to function makes pointer from integer without a cast
 [9-ERROR] Spell-stubs.c: In function `GNOME_Spell_Dictionary_setLanguage':
 [9-ERROR] Spell-stubs.c:49: warning: passing arg 1 of pointer to function makes pointer from integer without a cast
 [9-ERROR] Spell-stubs.c: In function `GNOME_Spell_Dictionary_checkWord':
@@ -95,17 +89,17 @@
 [9-ERROR] Spell-stubs.c:163: warning: passing arg 1 of pointer to function makes pointer from integer without a cast
 [9-ERROR] Spell-stubs.c: In function `GNOME_Spell_Dictionary_setCorrection':
 [9-ERROR] Spell-stubs.c:193: warning: passing arg 1 of pointer to function makes pointer from integer without a cast
-[9-ERROR] gcc-3 -DHAVE_CONFIG_H -I. -I. -I.. -I. -I/usr/include -DGNOMEDATADIR=\"/opt/gnome26/share\" -DGNOMELOCALEDIR=\"/opt/gnome26/share/locale\" -DGLADE_DATADIR=\"/opt/gnome26/share/gnome-spell-1.0.5\" -DPLUGIN_DIR=\"/opt/gnome26/lib/bonobo/plugin\" -DGTK_DISABLE_DEPRECATED=1 -DASPELL_DICT=\"/usr/lib/aspell\" -DORBIT2=1 -pthread -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include -I/usr/include/freetype2 -I/opt/gnome26/lib/gtk-2.0/include -I/opt/gnome26/include/atk-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -g -O2 -c Spell-stubs.c -o Spell-stubs.o >/dev/null 2>&1
+[9-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -I. -I/usr/include -DGNOMEDATADIR=\"/opt/gnome26/share\" -DGNOMELOCALEDIR=\"/opt/gnome26/share/locale\" -DGLADE_DATADIR=\"/opt/gnome26/share/gnome-spell-1.0.5\" -DPLUGIN_DIR=\"/opt/gnome26/lib/bonobo/plugin\" -DGTK_DISABLE_DEPRECATED=1 -DASPELL_DICT=\"/usr/lib/aspell\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include -I/usr/include/freetype2 -I/opt/gnome26/lib/gtk-2.0/include -I/opt/gnome26/include/atk-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -g -O2 -c Spell-stubs.c -o Spell-stubs.o >/dev/null 2>&1
 [9-ERROR] mv -f .libs/Spell-stubs.lo Spell-stubs.lo
-[9-ERROR] /bin/sh ../libtool --mode=link gcc-3  -g -O2 -L/usr/lib  -o libgnome-spell-idl.la   Spell-common.lo Spell-skels.lo Spell-stubs.lo  -laspell 
+[9-ERROR] /bin/sh ../libtool --mode=link gcc-32  -g -O2 -L/usr/lib  -o libgnome-spell-idl.la   Spell-common.lo Spell-skels.lo Spell-stubs.lo  -laspell 
 [9-ERROR] rm -fr .libs/libgnome-spell-idl.la .libs/libgnome-spell-idl.* .libs/libgnome-spell-idl.*
 [9-ERROR] ar cru .libs/libgnome-spell-idl.al Spell-common.lo Spell-skels.lo Spell-stubs.lo
 [9-ERROR] ranlib .libs/libgnome-spell-idl.al
 [9-ERROR] creating libgnome-spell-idl.la
 [9-ERROR] (cd .libs && rm -f libgnome-spell-idl.la && ln -s ../libgnome-spell-idl.la libgnome-spell-idl.la)
-[9-ERROR] /bin/sh ../libtool --mode=compile gcc-3 -DHAVE_CONFIG_H -I. -I. -I.. -I. -I/usr/include -DGNOMEDATADIR=\""/opt/gnome26/share"\" -DGNOMELOCALEDIR=\""/opt/gnome26/share/locale"\" -DGLADE_DATADIR=\"/opt/gnome26/share/gnome-spell-1.0.5\" -DPLUGIN_DIR=\""/opt/gnome26/lib/bonobo/plugin"\" -DGTK_DISABLE_DEPRECATED=1 -DASPELL_DICT=\""/usr/lib/aspell"\" -DORBIT2=1 -pthread -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include -I/usr/include/freetype2 -I/opt/gnome26/lib/gtk-2.0/include -I/opt/gnome26/include/atk-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/libglade-2.0       -g -O2 -c control.c
+[9-ERROR] /bin/sh ../libtool --mode=compile gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -I. -I/usr/include -DGNOMEDATADIR=\""/opt/gnome26/share"\" -DGNOMELOCALEDIR=\""/opt/gnome26/share/locale"\" -DGLADE_DATADIR=\"/opt/gnome26/share/gnome-spell-1.0.5\" -DPLUGIN_DIR=\""/opt/gnome26/lib/bonobo/plugin"\" -DGTK_DISABLE_DEPRECATED=1 -DASPELL_DICT=\""/usr/lib/aspell"\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include -I/usr/include/freetype2 -I/opt/gnome26/lib/gtk-2.0/include -I/opt/gnome26/include/atk-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/libglade-2.0       -g -O2 -c control.c
 [9-ERROR] rm -f .libs/control.lo
-[9-ERROR] gcc-3 -DHAVE_CONFIG_H -I. -I. -I.. -I. -I/usr/include -DGNOMEDATADIR=\"/opt/gnome26/share\" -DGNOMELOCALEDIR=\"/opt/gnome26/share/locale\" -DGLADE_DATADIR=\"/opt/gnome26/share/gnome-spell-1.0.5\" -DPLUGIN_DIR=\"/opt/gnome26/lib/bonobo/plugin\" -DGTK_DISABLE_DEPRECATED=1 -DASPELL_DICT=\"/usr/lib/aspell\" -DORBIT2=1 -pthread -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include -I/usr/include/freetype2 -I/opt/gnome26/lib/gtk-2.0/include -I/opt/gnome26/include/atk-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -g -O2 -c control.c  -fPIC -DPIC -o .libs/control.lo
+[9-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -I. -I/usr/include -DGNOMEDATADIR=\"/opt/gnome26/share\" -DGNOMELOCALEDIR=\"/opt/gnome26/share/locale\" -DGLADE_DATADIR=\"/opt/gnome26/share/gnome-spell-1.0.5\" -DPLUGIN_DIR=\"/opt/gnome26/lib/bonobo/plugin\" -DGTK_DISABLE_DEPRECATED=1 -DASPELL_DICT=\"/usr/lib/aspell\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include -I/usr/include/freetype2 -I/opt/gnome26/lib/gtk-2.0/include -I/opt/gnome26/include/atk-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -g -O2 -c control.c  -fPIC -DPIC -o .libs/control.lo
 [9-ERROR] In file included from control.c:37:
 [9-ERROR] /opt/gnome26/include/libgnomeui-2.0/libgnomeui/gnome-entry.h:63: syntax error before "GtkCombo"
 [9-ERROR] /opt/gnome26/include/libgnomeui-2.0/libgnomeui/gnome-entry.h:63: warning: no semicolon at end of struct or union
@@ -114,17 +108,23 @@
 [9-ERROR] /opt/gnome26/include/libgnomeui-2.0/libgnomeui/gnome-entry.h:70: warning: no semicolon at end of struct or union
 [9-ERROR] /opt/gnome26/include/libgnomeui-2.0/libgnomeui/gnome-entry.h:78: syntax error before '}' token
 [9-ERROR] make[2]: *** [control.lo] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.gnome-spell.1087482400.19376.1826218418/gnome-spell-1.0.5/gnome-spell'
+[9-ERROR] make[2]: Leaving directory `/ROCK/src.gnome-spell.1093147662.15374.1219266764/gnome-spell-1.0.5/gnome-spell'
 [9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.gnome-spell.1087482400.19376.1826218418/gnome-spell-1.0.5'
+[9-ERROR] make[1]: Leaving directory `/ROCK/src.gnome-spell.1093147662.15374.1219266764/gnome-spell-1.0.5'
 [9-ERROR] make: *** [all-recursive-am] Error 2
 [9-ERROR] --- BUILD ERROR ---
 [9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] processing static lib corrections ...
-[9-ERROR] Found 7 files for this package.
-[9-ERROR] Clear (old) md5sums and cksums ...
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 1 files for this package.
+[9-ERROR] Applying package split: 40 gnome-spell:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 gnome-spell:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 gnome-spell:doc /share/doc/
 [9-ERROR] Calculating package dependencies ...
-[9-ERROR] Creating md5sum and cksum files ... done.
-[9-ERROR] Creating package description ...
+[9-ERROR] <gnome-spell:doc> Creating flist file ...
+[9-ERROR] <gnome-spell:doc> Creating package dependencies file ...
+[9-ERROR] <gnome-spell:doc> Creating md5sum and cksum files ...
+[9-ERROR] <gnome-spell:doc> Creating package description ...
 [9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building gnome-spell=gnome-spell.
 

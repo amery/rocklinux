@@ -20,17 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087449656 Thu Jun 17 07:20:56 2004
+[TIMESTAMP] 1093290617 Mon Aug 23 21:50:17 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-qtparted.log 9-qtparted.log
 
-[BUILDTIME] 13771 (9)
-[SIZE] 0.41 MB, 36 files
+[BUILDTIME] 13103 (9)
+[SIZE] 0.38 MB, 25 files
 
-[DEP] 00-dirtree apollon bash binutils bzip2 ccache coreutils diffutils
-[DEP] e2fsprogs expat file findutils freetype gcc3 glibc23 grep libjpeg
-[DEP] libpng linux24-header make mktemp net-tools parted qt sed sysfiles
-[DEP] tar util-linux xfree86 xmule zlib
+[DEP] 00-dirtree apollon bash binutils bzip2 coreutils diffutils
+[DEP] e2fsprogs:dev expat file findutils freetype freetype:dev gcc32
+[DEP] gcc32:dev glibc23 glibc23:dev grep libjpeg libpng libpng:dev
+[DEP] linux24-header:dev make mktemp net-tools parted parted:dev qt qt:dev
+[DEP] sed sysfiles tar util-linux xfree86 xfree86:dev xmule zlib:dev
 

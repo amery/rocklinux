@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087318134 Tue Jun 15 18:48:54 2004
+[TIMESTAMP] 1093175845 Sun Aug 22 13:57:25 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-gsmp.log 9-gsmp.log
 
-[BUILDTIME] 35731 (9)
-[SIZE] 3.31 MB, 43 files
+[BUILDTIME] 33989 (9)
+[SIZE] 3.27 MB, 34 files
 
-[DEP] 00-dirtree alsa bash binutils bzip2 ccache coreutils diffutils
-[DEP] findutils freetype gawk gcc3 glib12 glibc23 grep gtk+12 gtkmm12
-[DEP] libsigc++1 linux24-header mad make mktemp net-tools ogg-vorbis sed
-[DEP] sysfiles tar util-linux xfree86 zlib
+[DEP] 00-dirtree alsa alsa:dev bash binutils bzip2 coreutils diffutils
+[DEP] findutils freetype gawk gcc32 gcc32:dev glib12 glib12:dev glibc23
+[DEP] glibc23:dev grep gtk+12 gtk+12:dev gtkmm12 gtkmm12:dev libsigc++1
+[DEP] libsigc++1:dev linux24-header:dev mad mad:dev make mktemp net-tools
+[DEP] ogg-vorbis ogg-vorbis:dev sed sysfiles tar util-linux xfree86
+[DEP] zlib:dev
 

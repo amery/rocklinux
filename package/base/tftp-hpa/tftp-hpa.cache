@@ -20,16 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087402542 Wed Jun 16 18:15:42 2004
+[TIMESTAMP] 1093248685 Mon Aug 23 10:11:25 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-tftp-hpa.log 9-tftp-hpa.log
 
-[BUILDTIME] 3229 (9)
-[SIZE] 0.14 MB, 20 files
+[BUILDTIME] 2846 (9)
+[SIZE] 0.11 MB, 11 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils diffutils findutils
-[DEP] gcc3 glibc23 grep linux24-header make mktemp ncurses net-tools
-[DEP] readline sed sysfiles tar tcp_wrappers util-linux
+[DEP] 00-dirtree bash binutils binutils:dev bzip2 coreutils diffutils
+[DEP] findutils gcc32 gcc32:dev glibc23 glibc23:dev grep linux24-header:dev
+[DEP] make mktemp ncurses:dev net-tools readline readline:dev sed sysfiles
+[DEP] tar tcp_wrappers:dev util-linux
 

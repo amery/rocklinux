@@ -1,14 +1,109 @@
 
-[TIMESTAMP] 1087437029 Thu Jun 17 03:50:29 2004
+[TIMESTAMP] 1093280454 Mon Aug 23 19:00:54 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-flightgear.log 9-flightgear.log
+[LOGS] 5-flightgear.err 9-flightgear.err
 
-[BUILDTIME] 101237 (9)
-[SIZE] 4.79 MB, 28 files
+[5-ERROR]                  from splash.cxx:37:
+[5-ERROR] /usr/X11R6/include/GL/gl.h:90:1: warning: this is the location of the previous definition
+[5-ERROR] source='util.cxx' object='util.o' libtool=no \
+[5-ERROR] depfile='.deps/util.Po' tmpdepfile='.deps/util.TPo' \
+[5-ERROR] depmode=gcc3 /bin/sh ../../depcomp \
+[5-ERROR] g++-32 -DHAVE_CONFIG_H -I. -I. -I../../src/Include -I../.. -I../../src  -I/usr/X11R6/include -DPKGLIBDIR=\"/usr/lib/FlightGear\" -g -O2 -c -o util.o `test -f util.cxx || echo './'`util.cxx
+[5-ERROR] source='viewer.cxx' object='viewer.o' libtool=no \
+[5-ERROR] depfile='.deps/viewer.Po' tmpdepfile='.deps/viewer.TPo' \
+[5-ERROR] depmode=gcc3 /bin/sh ../../depcomp \
+[5-ERROR] g++-32 -DHAVE_CONFIG_H -I. -I. -I../../src/Include -I../.. -I../../src  -I/usr/X11R6/include -DPKGLIBDIR=\"/usr/lib/FlightGear\" -g -O2 -c -o viewer.o `test -f viewer.cxx || echo './'`viewer.cxx
+[5-ERROR] source='viewmgr.cxx' object='viewmgr.o' libtool=no \
+[5-ERROR] depfile='.deps/viewmgr.Po' tmpdepfile='.deps/viewmgr.TPo' \
+[5-ERROR] depmode=gcc3 /bin/sh ../../depcomp \
+[5-ERROR] g++-32 -DHAVE_CONFIG_H -I. -I. -I../../src/Include -I../.. -I../../src  -I/usr/X11R6/include -DPKGLIBDIR=\"/usr/lib/FlightGear\" -g -O2 -c -o viewmgr.o `test -f viewmgr.cxx || echo './'`viewmgr.cxx
+[5-ERROR] rm -f libMain.a
+[5-ERROR] ar cru libMain.a main.o fg_commands.o fg_init.o fg_io.o fg_props.o globals.o logger.o options.o splash.o util.o viewer.o viewmgr.o 
+[5-ERROR] ranlib libMain.a
+[5-ERROR] source='bootstrap.cxx' object='bootstrap.o' libtool=no \
+[5-ERROR] depfile='.deps/bootstrap.Po' tmpdepfile='.deps/bootstrap.TPo' \
+[5-ERROR] depmode=gcc3 /bin/sh ../../depcomp \
+[5-ERROR] g++-32 -DHAVE_CONFIG_H -I. -I. -I../../src/Include -I../.. -I../../src  -I/usr/X11R6/include -DPKGLIBDIR=\"/usr/lib/FlightGear\" -g -O2 -c -o bootstrap.o `test -f bootstrap.cxx || echo './'`bootstrap.cxx
+[5-ERROR] In file included from bootstrap.cxx:51:
+[5-ERROR] /usr/X11R6/include/GL/glut.h:63:1: warning: "APIENTRY" redefined
+[5-ERROR] In file included from /usr/include/simgear/screen/extensions.hxx:39,
+[5-ERROR]                  from main.hxx:5,
+[5-ERROR]                  from bootstrap.cxx:43:
+[5-ERROR] /usr/X11R6/include/GL/gl.h:90:1: warning: this is the location of the previous definition
+[5-ERROR] g++-32 -DPKGLIBDIR=\"/usr/lib/FlightGear\" -g -O2  -L/usr/X11R6/lib -o fgfs  bootstrap.o ../../src/Main/libMain.a ../../src/Aircraft/libAircraft.a ../../src/ATC/libATC.a ../../src/Cockpit/libCockpit.a ../../src/Cockpit/built_in/libBuilt_in.a ../../src/Controls/libControls.a ../../src/FDM/libFlight.a ../../src/FDM/Balloon/libBalloon.a ../../src/FDM/ExternalNet/libExternalNet.a ../../src/FDM/ExternalPipe/libExternalPipe.a ../../src/FDM/JSBSim/libJSBSim.a ../../src/FDM/YASim/libYASim.a ../../src/FDM/JSBSim/filtersjb/libfiltersjb.a ../../src/FDM/LaRCsim/libLaRCsim.a ../../src/FDM/UIUCModel/libUIUCModel.a ../../src/GUI/libGUI.a ../../src/Autopilot/libAutopilot.a ../../src/Input/libInput.a ../../src/Instrumentation/libInstrumentation.a ../../src/Model/libModel.a ../../src/AIModel/libAIModel.a ../../src/Network/libNetwork.a ../../src/Navaids/libNavaids.a ../../src/Scenery/libScenery.a ../../src/Scripting/libScripting.a ../../src/Sound/libSound.a ../../src/Airports/libAirports.a ../../src/MultiPlayer/libMultiPlayer.a ../../src/Replay/libReplay.a ../../src/Systems/libSystems.a ../../src/Time/libTime.a ../../src/Environment/libEnvironment.a -lsgclouds3d -lsgroute -lsgsky -lsgsound -lsgephem -lsgmaterial -lsgtgdb -lsgmodel -lsgtiming -lsgio -lsgscreen -lsgmath -lsgbucket -lsgprops -lsgdebug -lsgmagvar -lsgmisc -lsgnasal -lsgxml -lsgsound -lsgserial -lsgstructure -lsgenvironment  -lplibpu -lplibfnt -lplibjs -lplibnet -lplibssg -lplibsg -lplibul  -lz -lglut -lGLU -lGL -lXmu -lXt -lSM -lICE -lXi -lXext -lX11 -ldl -lm  -lplibsl -lplibsm 
+[5-ERROR] `.gnu.linkonce.t._ZN6JSBSim7FGState9IntegrateINS_15FGColumnVector3EEET_NS0_5iTypeEdRS3_PS3_' referenced in section `.rodata' of ../../src/FDM/JSBSim/libJSBSim.a(FGTranslation.o): defined in discarded section `.gnu.linkonce.t._ZN6JSBSim7FGState9IntegrateINS_15FGColumnVector3EEET_NS0_5iTypeEdRS3_PS3_' of ../../src/FDM/JSBSim/libJSBSim.a(FGTranslation.o)
+[5-ERROR] collect2: ld returned 1 exit status
+[5-ERROR] make[2]: *** [fgfs] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.flightgear.1093039489.4408.2969839115/FlightGear-0.9.4/src/Main'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.flightgear.1093039489.4408.2969839115/FlightGear-0.9.4/src'
+[5-ERROR] make: *** [all-recursive] Error 1
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 1 files for this package.
+[5-ERROR] Applying package split: 40 flightgear:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 flightgear:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 flightgear:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <flightgear:doc> Creating flist file ...
+[5-ERROR] <flightgear:doc> Creating package dependencies file ...
+[5-ERROR] <flightgear:doc> Creating md5sum and cksum files ...
+[5-ERROR] <flightgear:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building flightgear=flightgear.
 
-[DEP] 00-dirtree automake bash binutils bzip2 ccache coreutils diffutils
-[DEP] findutils gawk gcc3 glibc23 glut grep linux24-header make mktemp
-[DEP] net-tools perl5 plib sed simgear sysfiles tar util-linux xfree86 zlib
+[9-ERROR]                  from splash.cxx:37:
+[9-ERROR] /usr/X11R6/include/GL/gl.h:90:1: warning: this is the location of the previous definition
+[9-ERROR] source='util.cxx' object='util.o' libtool=no \
+[9-ERROR] depfile='.deps/util.Po' tmpdepfile='.deps/util.TPo' \
+[9-ERROR] depmode=gcc3 /bin/sh ../../depcomp \
+[9-ERROR] g++-32 -DHAVE_CONFIG_H -I. -I. -I../../src/Include -I../.. -I../../src  -I/usr/X11R6/include -DPKGLIBDIR=\"/usr/lib/FlightGear\" -g -O2 -c -o util.o `test -f util.cxx || echo './'`util.cxx
+[9-ERROR] source='viewer.cxx' object='viewer.o' libtool=no \
+[9-ERROR] depfile='.deps/viewer.Po' tmpdepfile='.deps/viewer.TPo' \
+[9-ERROR] depmode=gcc3 /bin/sh ../../depcomp \
+[9-ERROR] g++-32 -DHAVE_CONFIG_H -I. -I. -I../../src/Include -I../.. -I../../src  -I/usr/X11R6/include -DPKGLIBDIR=\"/usr/lib/FlightGear\" -g -O2 -c -o viewer.o `test -f viewer.cxx || echo './'`viewer.cxx
+[9-ERROR] source='viewmgr.cxx' object='viewmgr.o' libtool=no \
+[9-ERROR] depfile='.deps/viewmgr.Po' tmpdepfile='.deps/viewmgr.TPo' \
+[9-ERROR] depmode=gcc3 /bin/sh ../../depcomp \
+[9-ERROR] g++-32 -DHAVE_CONFIG_H -I. -I. -I../../src/Include -I../.. -I../../src  -I/usr/X11R6/include -DPKGLIBDIR=\"/usr/lib/FlightGear\" -g -O2 -c -o viewmgr.o `test -f viewmgr.cxx || echo './'`viewmgr.cxx
+[9-ERROR] rm -f libMain.a
+[9-ERROR] ar cru libMain.a main.o fg_commands.o fg_init.o fg_io.o fg_props.o globals.o logger.o options.o splash.o util.o viewer.o viewmgr.o 
+[9-ERROR] ranlib libMain.a
+[9-ERROR] source='bootstrap.cxx' object='bootstrap.o' libtool=no \
+[9-ERROR] depfile='.deps/bootstrap.Po' tmpdepfile='.deps/bootstrap.TPo' \
+[9-ERROR] depmode=gcc3 /bin/sh ../../depcomp \
+[9-ERROR] g++-32 -DHAVE_CONFIG_H -I. -I. -I../../src/Include -I../.. -I../../src  -I/usr/X11R6/include -DPKGLIBDIR=\"/usr/lib/FlightGear\" -g -O2 -c -o bootstrap.o `test -f bootstrap.cxx || echo './'`bootstrap.cxx
+[9-ERROR] In file included from bootstrap.cxx:51:
+[9-ERROR] /usr/X11R6/include/GL/glut.h:63:1: warning: "APIENTRY" redefined
+[9-ERROR] In file included from /usr/include/simgear/screen/extensions.hxx:39,
+[9-ERROR]                  from main.hxx:5,
+[9-ERROR]                  from bootstrap.cxx:43:
+[9-ERROR] /usr/X11R6/include/GL/gl.h:90:1: warning: this is the location of the previous definition
+[9-ERROR] g++-32 -DPKGLIBDIR=\"/usr/lib/FlightGear\" -g -O2  -L/usr/X11R6/lib -o fgfs  bootstrap.o ../../src/Main/libMain.a ../../src/Aircraft/libAircraft.a ../../src/ATC/libATC.a ../../src/Cockpit/libCockpit.a ../../src/Cockpit/built_in/libBuilt_in.a ../../src/Controls/libControls.a ../../src/FDM/libFlight.a ../../src/FDM/Balloon/libBalloon.a ../../src/FDM/ExternalNet/libExternalNet.a ../../src/FDM/ExternalPipe/libExternalPipe.a ../../src/FDM/JSBSim/libJSBSim.a ../../src/FDM/YASim/libYASim.a ../../src/FDM/JSBSim/filtersjb/libfiltersjb.a ../../src/FDM/LaRCsim/libLaRCsim.a ../../src/FDM/UIUCModel/libUIUCModel.a ../../src/GUI/libGUI.a ../../src/Autopilot/libAutopilot.a ../../src/Input/libInput.a ../../src/Instrumentation/libInstrumentation.a ../../src/Model/libModel.a ../../src/AIModel/libAIModel.a ../../src/Network/libNetwork.a ../../src/Navaids/libNavaids.a ../../src/Scenery/libScenery.a ../../src/Scripting/libScripting.a ../../src/Sound/libSound.a ../../src/Airports/libAirports.a ../../src/MultiPlayer/libMultiPlayer.a ../../src/Replay/libReplay.a ../../src/Systems/libSystems.a ../../src/Time/libTime.a ../../src/Environment/libEnvironment.a -lsgclouds3d -lsgroute -lsgsky -lsgsound -lsgephem -lsgmaterial -lsgtgdb -lsgmodel -lsgtiming -lsgio -lsgscreen -lsgmath -lsgbucket -lsgprops -lsgdebug -lsgmagvar -lsgmisc -lsgnasal -lsgxml -lsgsound -lsgserial -lsgstructure -lsgenvironment  -lplibpu -lplibfnt -lplibjs -lplibnet -lplibssg -lplibsg -lplibul  -lz -lglut -lGLU -lGL -lXmu -lXt -lSM -lICE -lXi -lXext -lX11 -ldl -lm  -lplibsl -lplibsm 
+[9-ERROR] `.gnu.linkonce.t._ZN6JSBSim7FGState9IntegrateINS_15FGColumnVector3EEET_NS0_5iTypeEdRS3_PS3_' referenced in section `.rodata' of ../../src/FDM/JSBSim/libJSBSim.a(FGTranslation.o): defined in discarded section `.gnu.linkonce.t._ZN6JSBSim7FGState9IntegrateINS_15FGColumnVector3EEET_NS0_5iTypeEdRS3_PS3_' of ../../src/FDM/JSBSim/libJSBSim.a(FGTranslation.o)
+[9-ERROR] collect2: ld returned 1 exit status
+[9-ERROR] make[2]: *** [fgfs] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/src.flightgear.1093279448.3851.4119946864/FlightGear-0.9.4/src/Main'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/src.flightgear.1093279448.3851.4119946864/FlightGear-0.9.4/src'
+[9-ERROR] make: *** [all-recursive] Error 1
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 1 files for this package.
+[9-ERROR] Applying package split: 40 flightgear:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 flightgear:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 flightgear:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <flightgear:doc> Creating flist file ...
+[9-ERROR] <flightgear:doc> Creating package dependencies file ...
+[9-ERROR] <flightgear:doc> Creating md5sum and cksum files ...
+[9-ERROR] <flightgear:doc> Creating package description ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building flightgear=flightgear.
 

@@ -20,16 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087458349 Thu Jun 17 09:45:49 2004
+[TIMESTAMP] 1093298020 Mon Aug 23 23:53:40 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-libxfce4mcs.log 9-libxfce4mcs.log
 
-[BUILDTIME] 4151 (9)
-[SIZE] 0.14 MB, 30 files
+[BUILDTIME] 3672 (9)
+[SIZE] 0.05 MB, 12 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils diffutils findutils
-[DEP] gcc3 glib glibc23 grep libxfce4util linux24-header make mktemp
-[DEP] net-tools pkgconfig sed sysfiles tar util-linux xfree86
+[DEP] 00-dirtree bash binutils bzip2 coreutils diffutils findutils gcc32
+[DEP] gcc32:dev glib glib:dev glibc23 glibc23:dev grep libxfce4util
+[DEP] libxfce4util:dev linux24-header:dev make mktemp net-tools pkgconfig
+[DEP] sed sysfiles tar util-linux xfree86 xfree86:dev
 

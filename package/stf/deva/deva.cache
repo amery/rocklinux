@@ -20,16 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087439625 Thu Jun 17 04:33:45 2004
+[TIMESTAMP] 1093282827 Mon Aug 23 19:40:27 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-deva.log 9-deva.log
 
-[BUILDTIME] 11334 (9)
-[SIZE] 2.34 MB, 209 files
+[BUILDTIME] 10480 (9)
+[SIZE] 2.33 MB, 209 files
 
-[DEP] 00-dirtree bash binutils ccache coreutils cpio findutils gcc3 glibc23
-[DEP] grep gzip linux24-header make maverik ncurses patch perl5 readline
-[DEP] rpm sed sysfiles tar xfree86
+[DEP] 00-dirtree bash binutils coreutils cpio findutils gcc32 gcc32:dev
+[DEP] glibc23 glibc23:dev grep gzip linux24-header:dev make maverik
+[DEP] ncurses:dev patch perl5 readline readline:dev rpm sed sysfiles
+[DEP] tar xfree86
 

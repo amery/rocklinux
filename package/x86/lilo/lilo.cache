@@ -20,15 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087417580 Wed Jun 16 22:26:20 2004
+[TIMESTAMP] 1093260678 Mon Aug 23 13:31:18 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-lilo.log 9-lilo.log
 
-[BUILDTIME] 2890 (9)
-[SIZE] 0.73 MB, 45 files
+[BUILDTIME] 2265 (9)
+[SIZE] 0.25 MB, 15 files
 
-[DEP] 00-dirtree bash bin86 binutils bzip2 ccache coreutils findutils
-[DEP] gcc3 glibc23 grep linux24-header make nasm patch sed sysfiles tar
+[DEP] 00-dirtree bash bin86 binutils bzip2 coreutils findutils gcc32
+[DEP] gcc32:dev glibc23 glibc23:dev grep linux24-header:dev make nasm
+[DEP] patch sed sysfiles tar
 

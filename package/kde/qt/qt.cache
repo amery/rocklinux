@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087237370 Mon Jun 14 20:22:50 2004
+[TIMESTAMP] 1093106056 Sat Aug 21 18:34:16 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-qt.log 9-qt.log
 
-[BUILDTIME] 207871 (9)
-[SIZE] 66.98 MB, 4685 files
+[BUILDTIME] 204010 (9)
+[SIZE] 58.89 MB, 4285 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils cups diffutils expat
-[DEP] findutils gawk gcc3 glibc23 grep libjpeg libmng libpng linux24-header
-[DEP] make mysql nas patch sed sysfiles tar xfree86 zlib
+[DEP] 00-dirtree bash binutils bzip2 coreutils cups:dev diffutils expat
+[DEP] findutils gawk gcc32 gcc32:dev glibc23 glibc23:dev grep libjpeg
+[DEP] libjpeg:dev libmng libmng:dev libpng libpng:dev linux24-header:dev
+[DEP] make mysql mysql:dev nas:dev patch sed sysfiles tar xfree86
+[DEP] xfree86:dev zlib:dev
 

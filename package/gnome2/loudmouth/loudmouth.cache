@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087285775 Tue Jun 15 09:49:35 2004
+[TIMESTAMP] 1093145742 Sun Aug 22 05:35:42 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-loudmouth.log 9-loudmouth.log
 
-[BUILDTIME] 3629 (9)
-[SIZE] 0.21 MB, 42 files
+[BUILDTIME] 3236 (9)
+[SIZE] 0.05 MB, 9 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils diffutils findutils
-[DEP] gcc3 glib glibc23 grep linux24-header make mktemp net-tools pkgconfig
-[DEP] sed sysfiles tar util-linux
+[DEP] 00-dirtree bash binutils bzip2 coreutils diffutils findutils
+[DEP] gcc32 gcc32:dev glib glib:dev glibc23 glibc23:dev glibmm gnutls
+[DEP] gnutls:dev grep libgcrypt libgcrypt:dev libgpg-error libgpg-error:dev
+[DEP] linux24-header:dev make mktemp net-tools pkgconfig sed sysfiles
+[DEP] tar util-linux zlib:dev
 

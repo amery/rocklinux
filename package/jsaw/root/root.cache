@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087456046 Thu Jun 17 09:07:26 2004
+[TIMESTAMP] 1093295624 Mon Aug 23 23:13:44 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-root.log 9-root.log
 
-[BUILDTIME] 204053 (9)
-[SIZE] 35.44 MB, 1741 files
+[BUILDTIME] 224893 (9)
+[SIZE] 29.22 MB, 678 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils diffutils findutils
-[DEP] freetype gawk gcc3 glibc23 grep gzip libjpeg libpng libtiff libungif
-[DEP] linux24-header make mktemp net-tools sed sysfiles tar util-linux
-[DEP] xfree86 zlib
+[DEP] 00-dirtree bash binutils bzip2 coreutils diffutils findutils
+[DEP] freetype:dev gawk gcc32 gcc32:dev glibc23 glibc23:dev grep gzip
+[DEP] libjpeg libjpeg:dev libpng libpng:dev libtiff libtiff:dev libungif
+[DEP] libungif:dev linux24-header:dev make mktemp net-tools openssl
+[DEP] openssl:dev postgresql postgresql:dev python python:dev sed sysfiles
+[DEP] tar util-linux xfree86 xfree86:dev zlib zlib:dev
 

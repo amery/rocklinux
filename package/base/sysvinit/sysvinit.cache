@@ -20,15 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087396338 Wed Jun 16 16:32:18 2004
+[TIMESTAMP] 1093237886 Mon Aug 23 07:11:26 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 1-sysvinit.log 5-sysvinit.log 9-sysvinit.log
 
-[BUILDTIME] 2424 (9)
-[SIZE] 0.19 MB, 46 files
+[BUILDTIME] 1959 (9)
+[SIZE] 0.16 MB, 37 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils findutils gcc3
-[DEP] glibc23 grep linux24-header make patch sed sysfiles tar
+[DEP] 00-dirtree bash binutils bzip2 coreutils findutils gcc32 gcc32:dev
+[DEP] glibc23 glibc23:dev grep linux24-header:dev make patch sed
+[DEP] sysfiles tar
 

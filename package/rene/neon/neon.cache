@@ -20,16 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087255579 Tue Jun 15 01:26:19 2004
+[TIMESTAMP] 1093128242 Sun Aug 22 00:44:02 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-neon.log 9-neon.log
 
-[BUILDTIME] 5391 (9)
-[SIZE] 1.09 MB, 272 files
+[BUILDTIME] 4865 (9)
+[SIZE] 0.13 MB, 85 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils diffutils findutils
-[DEP] gcc3 glibc23 grep libxml2 linux24-header make mktemp net-tools sed
-[DEP] sysfiles tar util-linux zlib
+[DEP] 00-dirtree bash binutils bzip2 coreutils diffutils findutils
+[DEP] gcc32 gcc32:dev glibc23 glibc23:dev grep libxml2 libxml2:dev
+[DEP] linux24-header:dev make mktemp net-tools openssl:dev pkgconfig sed
+[DEP] sysfiles tar util-linux zlib:dev
 

@@ -20,19 +20,72 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087260843 Tue Jun 15 02:54:03 2004
+[TIMESTAMP] 1093135820 Sun Aug 22 02:50:20 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-evidence.log 9-evidence.log
+[LOGS] 5-evidence.log 9-evidence.err
 
-[BUILDTIME] 20154 (9)
-[SIZE] 2.24 MB, 178 files
+[BUILDTIME] 10385 (5)
+[SIZE] 3.14 MB, 304 files
 
-[DEP] 00-dirtree acl arts atk attr bash binutils bzip2 ccache coreutils
-[DEP] curl diffutils directfb edb eet evas expat fam file findutils
-[DEP] freetype gawk gcc3 glib glib12 glibc23 gnome-libs14 grep gtk+ gzip
-[DEP] id3lib imlib2 kdelibs libjpeg libpng linux24-header make mktemp
-[DEP] ncurses net-tools netpbm ogg-vorbis pango pcre pkgconfig readline
-[DEP] sed sysfiles tar texinfo util-linux xfree86 zlib
+[DEP] 00-dirtree acl acl:dev arts attr attr:dev autoconf automake18 bash
+[DEP] binutils bzip2 coreutils curl diffutils edb eet evas evas:dev
+[DEP] fam fam:dev file file:dev findutils freetype freetype:dev gcc32
+[DEP] gcc32:dev glibc23 glibc23:dev grep id3lib imlib2 imlib2:dev kdelibs
+[DEP] libmpeg3:dev libpng libtool libtool:dev linux24-header:dev m4 make
+[DEP] mktemp ncurses:dev net-tools ogg-vorbis ogg-vorbis:dev pcre perl5
+[DEP] pkgconfig readline readline:dev sed sysfiles tar util-linux xfree86
+[DEP] xfree86:dev zlib:dev
+
+[9-ERROR] avifile.cpp:148: invalid conversion from `const char*' to `int'
+[9-ERROR] avifile.cpp:150: syntax error before `return'
+[9-ERROR] avifile.cpp: In function `int thumbnail_plugin_live(thumbnail_plugin*, 
+[9-ERROR]    Evidence_Thumb*, void**)':
+[9-ERROR] avifile.cpp:203: `Imlib_Image' undeclared (first use this function)
+[9-ERROR] avifile.cpp:203: (Each undeclared identifier is reported only once for each 
+[9-ERROR]    function it appears in.)
+[9-ERROR] avifile.cpp:203: syntax error before `=' token
+[9-ERROR] avifile.cpp:204: syntax error before `)' token
+[9-ERROR] avifile.cpp:204: `im' undeclared (first use this function)
+[9-ERROR] avifile.cpp: At global scope:
+[9-ERROR] avifile.cpp:213: syntax error before `}' token
+[9-ERROR] {standard input}: Assembler messages:
+[9-ERROR] {standard input}:65: Error: symbol `ret' is already defined
+[9-ERROR] {standard input}:84: Error: symbol `w' is already defined
+[9-ERROR] {standard input}:90: Error: symbol `h' is already defined
+[9-ERROR] {standard input}:103: Error: symbol `ret' is already defined
+[9-ERROR] {standard input}:136: Error: symbol `index' is already defined
+[9-ERROR] make[4]: *** [avifile.lo] Error 1
+[9-ERROR] make[4]: Leaving directory `/ROCK/src.evidence.1093135701.3658.3621172797/evidence-2004-06-20/src/thumbnailer/avifile'
+[9-ERROR] make[3]: *** [all-recursive] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/src.evidence.1093135701.3658.3621172797/evidence-2004-06-20/src/thumbnailer'
+[9-ERROR] make[2]: *** [all-recursive] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/src.evidence.1093135701.3658.3621172797/evidence-2004-06-20/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/src.evidence.1093135701.3658.3621172797/evidence-2004-06-20'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 403 files for this package.
+[9-ERROR] Applying package split: 40 evidence:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 evidence:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 evidence:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <evidence> Creating flist file ...
+[9-ERROR] <evidence> Creating package dependencies file ...
+[9-ERROR] <evidence> Creating md5sum and cksum files ...
+[9-ERROR] <evidence> Creating package description ...
+[9-ERROR] <evidence:dev> Creating flist file ...
+[9-ERROR] <evidence:dev> Creating package dependencies file ...
+[9-ERROR] <evidence:dev> Creating md5sum and cksum files ...
+[9-ERROR] <evidence:dev> Creating package description ...
+[9-ERROR] <evidence:doc> Creating flist file ...
+[9-ERROR] <evidence:doc> Creating package dependencies file ...
+[9-ERROR] <evidence:doc> Creating md5sum and cksum files ...
+[9-ERROR] <evidence:doc> Creating package description ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building evidence=evidence.
 

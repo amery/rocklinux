@@ -20,18 +20,12 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087484071 Thu Jun 17 16:54:31 2004
+[TIMESTAMP] 1093269962 Mon Aug 23 16:06:02 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-gnucash.err 9-gnucash.err
 
-[5-ERROR] checking for nl_langinfo and D_FMT... yes
-[5-ERROR] checking for perl... /usr/bin/perl
-[5-ERROR] checking for doxygen... /usr/bin/doxygen
-[5-ERROR] checking for dot... /usr/bin/dot
-[5-ERROR] checking for dbopen... no
-[5-ERROR] checking for dbopen in -ldb... no
 [5-ERROR] checking for dbopen in -ldb1... no
 [5-ERROR] checking for __db185_open in -ldb-4.1... yes
 [5-ERROR] checking for db.h... yes
@@ -69,20 +63,20 @@
 [5-ERROR] configure: error: Cannot find gtkhtml-1.1. See the README and config.log for more info.
 [5-ERROR] --- BUILD ERROR ---
 [5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] processing static lib corrections ...
-[5-ERROR] Found 7 files for this package.
-[5-ERROR] Clear (old) md5sums and cksums ...
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 1 files for this package.
+[5-ERROR] Applying package split: 40 gnucash:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 gnucash:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 gnucash:doc /share/doc/
 [5-ERROR] Calculating package dependencies ...
-[5-ERROR] Creating md5sum and cksum files ... done.
-[5-ERROR] Creating package description ...
+[5-ERROR] <gnucash:doc> Creating flist file ...
+[5-ERROR] <gnucash:doc> Creating package dependencies file ...
+[5-ERROR] <gnucash:doc> Creating md5sum and cksum files ...
+[5-ERROR] <gnucash:doc> Creating package description ...
 [5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building gnucash=gnucash.
 
-[9-ERROR] checking for nl_langinfo and D_FMT... yes
-[9-ERROR] checking for perl... /usr/bin/perl
-[9-ERROR] checking for doxygen... /usr/bin/doxygen
-[9-ERROR] checking for dot... /usr/bin/dot
-[9-ERROR] checking for dbopen... no
-[9-ERROR] checking for dbopen in -ldb... no
 [9-ERROR] checking for dbopen in -ldb1... no
 [9-ERROR] checking for __db185_open in -ldb-4.1... yes
 [9-ERROR] checking for db.h... yes
@@ -120,11 +114,17 @@
 [9-ERROR] configure: error: Cannot find gtkhtml-1.1. See the README and config.log for more info.
 [9-ERROR] --- BUILD ERROR ---
 [9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] processing static lib corrections ...
-[9-ERROR] Found 7 files for this package.
-[9-ERROR] Clear (old) md5sums and cksums ...
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 1 files for this package.
+[9-ERROR] Applying package split: 40 gnucash:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 gnucash:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 gnucash:doc /share/doc/
 [9-ERROR] Calculating package dependencies ...
-[9-ERROR] Creating md5sum and cksum files ... done.
-[9-ERROR] Creating package description ...
+[9-ERROR] <gnucash:doc> Creating flist file ...
+[9-ERROR] <gnucash:doc> Creating package dependencies file ...
+[9-ERROR] <gnucash:doc> Creating md5sum and cksum files ...
+[9-ERROR] <gnucash:doc> Creating package description ...
 [9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building gnucash=gnucash.
 

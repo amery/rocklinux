@@ -90,7 +90,7 @@ perl -e '
 				next;
 			}
 			if (/^\[DEP\]/) {
-				@_ = split /\s+/; shift @_;
+				@_ = split /:\S+\s+|\s+/; shift @_;
 				foreach (@_) { $deps{$_} = 1 unless defined $deldeps{$pkg}{$_}; }
 				next;
 			}
@@ -183,7 +183,7 @@ BEGIN {
 {
 	orderdb[$1]=$3; $3=0;
 	database[$1]=$0;
-	if (NF > 102) {
+	if (NF > 120) {
 		printf "\rPackage %s has %d dependencies. I don'\''t " \
 		       "believe this.\n", $1, NF - 3 > "/dev/stderr";
 		ignore[$1] = 1;

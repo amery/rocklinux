@@ -20,22 +20,111 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087449301 Thu Jun 17 07:15:01 2004
+[TIMESTAMP] 1093291905 Mon Aug 23 22:11:45 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-mgt.log 9-mgt.log
+[LOGS] 5-mgt.err 9-mgt.err
 
-[BUILDTIME] 10273 (9)
-[SIZE] 4.95 MB, 355 files
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 1018 files for this package.
+[5-ERROR] Applying package split: 40 mgt:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 mgt:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 mgt:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <mgt> Creating flist file ...
+[5-ERROR] <mgt> Creating package dependencies file ...
+[5-ERROR] <mgt> Creating md5sum and cksum files ...
+[5-ERROR] <mgt> Creating package description ...
+[5-ERROR] <mgt:doc> Creating flist file ...
+[5-ERROR] <mgt:doc> Creating package dependencies file ...
+[5-ERROR] <mgt:doc> Creating md5sum and cksum files ...
+[5-ERROR] <mgt:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Found shared files with other packages:
+[5-ERROR] var/scrollkeeper/C/scrollkeeper_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/C/scrollkeeper_extended_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/cs/scrollkeeper_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/cs/scrollkeeper_extended_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/de/scrollkeeper_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/de/scrollkeeper_extended_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/es/scrollkeeper_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/es/scrollkeeper_extended_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/fr/scrollkeeper_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/fr/scrollkeeper_extended_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/it/scrollkeeper_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/it/scrollkeeper_extended_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/ja/scrollkeeper_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/ja/scrollkeeper_extended_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/ko/scrollkeeper_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/ko/scrollkeeper_extended_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/ro/scrollkeeper_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/ro/scrollkeeper_extended_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/ru/scrollkeeper_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/ru/scrollkeeper_extended_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/sr/scrollkeeper_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/sr/scrollkeeper_extended_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/sv/scrollkeeper_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/sv/scrollkeeper_extended_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/uk/scrollkeeper_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/uk/scrollkeeper_extended_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/zh_CN/scrollkeeper_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/zh_CN/scrollkeeper_extended_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/zh_TW/scrollkeeper_cl.xml: mgt streamtuner
+[5-ERROR] var/scrollkeeper/zh_TW/scrollkeeper_extended_cl.xml: mgt streamtuner
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] removed `/var/adm/logs/5-mgt.log'
+[5-ERROR] Finished building mgt=mgt.
 
-[DEP] 00-dirtree alsa audiofile autoconf bash bdb33 binutils bug-buddy
-[DEP] bzip2 ccache coreutils diffutils docbookx epiphany esound file-roller
-[DEP] findutils flex gawk gcalctool gcc3 gdk-pixbuf10 gdm gedit gettext
-[DEP] ghex12 gjiten glade10 glib glib12 glibc23 gnome-applets gnome-desktop
-[DEP] gnome-libs14 gnome-media gnome-terminal gnome-utils gnomemeeting
-[DEP] gnopernicus gnotepad+ gpdf grep gtk+12 gtkam gucharmap imlib libglade
-[DEP] libglade10 libxml linux24-header m4 make mktemp mozilla net-tools
-[DEP] orbit10 pango perl5 rep-gtk rhythmbox scrollkeeper sed streamtuner
-[DEP] sysfiles tar tcp_wrappers texinfo xfree86 xmule zenity zlib
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 243 files for this package.
+[9-ERROR] Applying package split: 40 mgt:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 mgt:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 mgt:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <mgt> Creating flist file ...
+[9-ERROR] <mgt> Creating package dependencies file ...
+[9-ERROR] <mgt> Creating md5sum and cksum files ...
+[9-ERROR] <mgt> Creating package description ...
+[9-ERROR] <mgt:doc> Creating flist file ...
+[9-ERROR] <mgt:doc> Creating package dependencies file ...
+[9-ERROR] <mgt:doc> Creating md5sum and cksum files ...
+[9-ERROR] <mgt:doc> Creating package description ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] var/scrollkeeper/C/scrollkeeper_cl.xml: mgt streamtuner zapping
+[9-ERROR] var/scrollkeeper/C/scrollkeeper_extended_cl.xml: mgt streamtuner zapping
+[9-ERROR] var/scrollkeeper/cs/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/cs/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/de/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/de/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/es/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/es/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/fr/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/fr/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/it/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/it/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/ja/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/ja/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/ko/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/ko/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/ro/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/ro/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/ru/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/ru/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/scrollkeeper_docs: mgt streamtuner
+[9-ERROR] var/scrollkeeper/sr/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/sr/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/sv/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/sv/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/uk/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/uk/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/zh_CN/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/zh_CN/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/zh_TW/scrollkeeper_cl.xml: mgt streamtuner
+[9-ERROR] var/scrollkeeper/zh_TW/scrollkeeper_extended_cl.xml: mgt streamtuner
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] removed `/var/adm/logs/9-mgt.log'
+[9-ERROR] Finished building mgt=mgt.
 

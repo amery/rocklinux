@@ -20,20 +20,76 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087476730 Thu Jun 17 14:52:10 2004
+[TIMESTAMP] 1093144096 Sun Aug 22 05:08:16 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-at-poke.log 9-at-poke.log
+[LOGS] 5-at-poke.err 9-at-poke.log
 
-[BUILDTIME] 3358 (9)
-[SIZE] 0.24 MB, 18 files
+[BUILDTIME] 3413 (9)
+[SIZE] 0.17 MB, 13 files
 
-[DEP] 00-dirtree alsa at-spi atk audiofile autoconf bash binutils bzip2
-[DEP] ccache coreutils diffutils esound expat findutils freetype gail
-[DEP] gcc3 gconf glib glib12 glibc23 gnome-keyring gnome-libs14 gnome-vfs
-[DEP] grep gtk+ libart_lgpl23 libbonobo libbonoboui libglade libgnome
-[DEP] libgnomecanvas libgnomeui libjpeg libxml2 linux24-header make mktemp
-[DEP] net-tools openssl orbit2 pango perl5 pkgconfig popt sed sysfiles
-[DEP] tar texinfo util-linux xfree86 zlib
+[DEP] 00-dirtree alsa alsa:dev at-spi at-spi:dev atk atk:dev audiofile
+[DEP] audiofile:dev autoconf bash binutils bzip2 coreutils diffutils
+[DEP] esound esound:dev expat findutils freetype gail gail:dev gcc32
+[DEP] gcc32:dev gconf gconf:dev glib glib:dev glibc23 glibc23:dev
+[DEP] glibmm gnome-keyring gnome-keyring:dev gnome-vfs gnome-vfs:dev
+[DEP] grep gtk+ gtk+:dev libart_lgpl23 libart_lgpl23:dev libbonobo
+[DEP] libbonobo:dev libbonoboui libbonoboui:dev libglade libglade:dev
+[DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev
+[DEP] libgnomeui libgnomeui:dev libjpeg libjpeg:dev libxml2 libxml2:dev
+[DEP] linux24-header:dev make mktemp net-tools openssl orbit2 orbit2:dev
+[DEP] pango pango:dev perl5 pkgconfig popt popt:dev sed sysfiles tar
+[DEP] texinfo util-linux xfree86 xfree86:dev zlib:dev
+
+[5-ERROR] checking whether the g++-32 linker (ld) supports shared libraries... yes
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] checking whether stripping libraries is possible... yes
+[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[5-ERROR] appending configuration tag "F77" to libtool
+[5-ERROR] checking if libtool supports shared libraries... yes
+[5-ERROR] checking whether to build shared libraries... yes
+[5-ERROR] checking whether to build static libraries... no
+[5-ERROR] checking for g77-32 option to produce PIC... -fPIC
+[5-ERROR] checking if g77-32 PIC flag -fPIC works... yes
+[5-ERROR] checking if g77-32 supports -c -o file.o... yes
+[5-ERROR] checking whether the g77-32 linker (ld) supports shared libraries... yes
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] checking whether stripping libraries is possible... yes
+[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[5-ERROR] checking for
+[5-ERROR] 	libglade-2.0
+[5-ERROR] 	cspi-1.0 >= 1.3.12
+[5-ERROR] 	gtk+-2.0 >= 2.0.0
+[5-ERROR] 	libgnomeui-2.0
+[5-ERROR] 	libgail-gnome ... Package libgail-gnome was not found in the pkg-config search path.
+[5-ERROR] Perhaps you should add the directory containing `libgail-gnome.pc'
+[5-ERROR] to the PKG_CONFIG_PATH environment variable
+[5-ERROR] No package 'libgail-gnome' found
+[5-ERROR] 
+[5-ERROR] configure: error: Library requirements (
+[5-ERROR] 	libglade-2.0
+[5-ERROR] 	cspi-1.0 >= 1.3.12
+[5-ERROR] 	gtk+-2.0 >= 2.0.0
+[5-ERROR] 	libgnomeui-2.0
+[5-ERROR] 	libgail-gnome ) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them.
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 5 files for this package.
+[5-ERROR] Applying package split: 40 at-poke:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 at-poke:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 at-poke:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <at-poke> Creating flist file ...
+[5-ERROR] <at-poke> Creating package dependencies file ...
+[5-ERROR] <at-poke> Creating md5sum and cksum files ...
+[5-ERROR] <at-poke> Creating package description ...
+[5-ERROR] <at-poke:doc> Creating flist file ...
+[5-ERROR] <at-poke:doc> Creating package dependencies file ...
+[5-ERROR] <at-poke:doc> Creating md5sum and cksum files ...
+[5-ERROR] <at-poke:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building at-poke=at-poke.
 

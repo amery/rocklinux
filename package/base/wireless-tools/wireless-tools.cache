@@ -20,15 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087400282 Wed Jun 16 17:38:02 2004
+[TIMESTAMP] 1093245565 Mon Aug 23 09:19:25 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 1-wireless-tools.log 5-wireless-tools.log 9-wireless-tools.log
 
-[BUILDTIME] 2436 (9)
-[SIZE] 0.26 MB, 30 files
+[BUILDTIME] 1979 (9)
+[SIZE] 0.18 MB, 22 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils findutils gcc3
-[DEP] glibc23 grep linux24-header make sed sysfiles tar
+[DEP] 00-dirtree bash binutils bzip2 coreutils findutils gcc32 gcc32:dev
+[DEP] glibc23 glibc23:dev grep linux24-header:dev make patch sed
+[DEP] sysfiles tar
 

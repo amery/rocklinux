@@ -20,28 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087483670 Thu Jun 17 16:47:50 2004
+[TIMESTAMP] 1093259048 Mon Aug 23 13:04:08 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-john.log 9-john.err
 
-[BUILDTIME] 10622 (5)
-[SIZE] 0.74 MB, 30 files
+[BUILDTIME] 10230 (5)
+[SIZE] 0.69 MB, 18 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils findutils gcc3
-[DEP] glibc23 grep linux24-header make patch sed sysfiles tar
+[DEP] 00-dirtree bash binutils bzip2 coreutils findutils gcc32 gcc32:dev
+[DEP] glibc23 glibc23:dev grep linux24-header:dev make patch sed
+[DEP] sysfiles tar
 
-[9-ERROR] ln -s generic.h arch.h
-[9-ERROR] make ../run/john ../run/unshadow ../run/unafs ../run/unique \
-[9-ERROR] JOHN_OBJS="DES_bs.o DES_bs_b.o DES_fmt.o DES_std.o BSDI_fmt.o MD5_fmt.o MD5_std.o BF_fmt.o BF_std.o AFS_fmt.o LM_fmt.o batch.o bench.o charset.o common.o compiler.o config.o cracker.o external.o formats.o getopt.o idle.o inc.o john.o list.o loader.o logger.o math.o memory.o misc.o options.o params.o path.o recovery.o rpp.o rules.o signals.o single.o status.o tty.o wordlist.o unshadow.o unafs.o unique.o"
-[9-ERROR] make[1]: Entering directory `/ROCK/src.john.1087483556.23647.78326948/john-1.6/src'
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops DES_fmt.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops DES_std.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops BSDI_fmt.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops MD5_std.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops BF_std.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops AFS_fmt.c
 [9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops LM_fmt.c
 [9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops batch.c
 [9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops charset.c
@@ -70,16 +61,26 @@
 [9-ERROR] ln -s john ../run/unshadow
 [9-ERROR] ln -s john ../run/unafs
 [9-ERROR] ln -s john ../run/unique
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.john.1087483556.23647.78326948/john-1.6/src'
-[9-ERROR] make: Leaving directory `/ROCK/src.john.1087483556.23647.78326948/john-1.6/src'
+[9-ERROR] make[1]: Leaving directory `/ROCK/src.john.1093258939.25235.830770497/john-1.6/src'
+[9-ERROR] make: Leaving directory `/ROCK/src.john.1093258939.25235.830770497/john-1.6/src'
 [9-ERROR] ln: `/usr/bin/unafs': File exists
 [9-ERROR] --- BUILD ERROR ---
 [9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] processing static lib corrections ...
-[9-ERROR] Found 30 files for this package.
-[9-ERROR] Clear (old) md5sums and cksums ...
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 24 files for this package.
+[9-ERROR] Applying package split: 40 john:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 john:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 john:doc /share/doc/
 [9-ERROR] Calculating package dependencies ...
-[9-ERROR] Creating md5sum and cksum files ... done.
-[9-ERROR] Creating package description ...
+[9-ERROR] <john> Creating flist file ...
+[9-ERROR] <john> Creating package dependencies file ...
+[9-ERROR] <john> Creating md5sum and cksum files ...
+[9-ERROR] <john> Creating package description ...
+[9-ERROR] <john:doc> Creating flist file ...
+[9-ERROR] <john:doc> Creating package dependencies file ...
+[9-ERROR] <john:doc> Creating md5sum and cksum files ...
+[9-ERROR] <john:doc> Creating package description ...
 [9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building john=john.
 

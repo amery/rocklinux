@@ -20,16 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087305333 Tue Jun 15 15:15:33 2004
+[TIMESTAMP] 1093160281 Sun Aug 22 09:38:01 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-mc.log 9-mc.log
 
-[BUILDTIME] 8093 (9)
-[SIZE] 2.21 MB, 169 files
+[BUILDTIME] 6478 (9)
+[SIZE] 1.80 MB, 144 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils diffutils e2fsprogs
-[DEP] file findutils gawk gcc3 gettext glibc23 grep groff linux24-header
-[DEP] make net-tools pam patch sed shadow slang sysfiles tar xfree86
+[DEP] 00-dirtree bash binutils bzip2 coreutils diffutils e2fsprogs:dev
+[DEP] file findutils gawk gcc32 gcc32:dev gettext glibc23 glibc23:dev
+[DEP] grep groff linux24-header:dev make net-tools pam pam:dev patch sed
+[DEP] shadow:dev slang slang:dev sysfiles tar xfree86
 

@@ -6,7 +6,7 @@
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
 [COPY] ROCK Linux: rock-src/package/mnemoc/links/links.cache
-[COPY] ROCK Linux is Copyright (C) 1998 - 2003 Clifford Wolf
+[COPY] ROCK Linux is Copyright (C) 1998 - 2004 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
 [COPY] it under the terms of the GNU General Public License as published by
@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087413174 Wed Jun 16 21:12:54 2004
+[TIMESTAMP] 1093257354 Mon Aug 23 12:35:54 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-links.log 9-links.log
 
-[BUILDTIME] 12460 (9)
-[SIZE] 2.84 MB, 30 files
+[BUILDTIME] 11512 (9)
+[SIZE] 2.75 MB, 8 files
 
-[DEP] 00-dirtree autoconf automake bash binutils bzip2 ccache coreutils
-[DEP] diffutils directfb findutils gcc3 glibc23 gpm grep libjpeg libpng
-[DEP] libtiff linux24-header make mktemp net-tools openssl perl5 sed
-[DEP] svgalib sysfiles tar texinfo xfree86 zlib
+[DEP] 00-dirtree autoconf automake18 bash binutils bzip2 coreutils
+[DEP] diffutils directfb directfb:dev findutils gcc32 gcc32:dev glibc23
+[DEP] glibc23:dev gpm gpm:dev grep libjpeg libjpeg:dev libpng libpng:dev
+[DEP] libtiff libtiff:dev linux24-header:dev make mktemp net-tools openssl
+[DEP] openssl:dev perl5 pkgconfig sed svgalib svgalib:dev sysfiles tar
+[DEP] texinfo xfree86 xfree86:dev zlib:dev
 

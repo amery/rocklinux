@@ -20,15 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087408905 Wed Jun 16 20:01:45 2004
+[TIMESTAMP] 1093252698 Mon Aug 23 11:18:18 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-upx.log 9-upx.log
 
-[BUILDTIME] 3904 (9)
-[SIZE] 0.25 MB, 8 files
+[BUILDTIME] 3093 (9)
+[SIZE] 0.24 MB, 8 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils findutils gcc3
-[DEP] glibc23 grep linux24-header make patch perl5 sed sysfiles tar ucl
+[DEP] 00-dirtree bash binutils bzip2 coreutils findutils gcc32 gcc32:dev
+[DEP] glibc23 glibc23:dev grep linux24-header:dev make perl5 sed sysfiles
+[DEP] tar ucl:dev
 

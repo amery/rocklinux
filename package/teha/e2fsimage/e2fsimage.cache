@@ -20,15 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087413839 Wed Jun 16 21:23:59 2004
+[TIMESTAMP] 1093257951 Mon Aug 23 12:45:51 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-e2fsimage.log 9-e2fsimage.log
 
-[BUILDTIME] 2036 (9)
-[SIZE] 0.08 MB, 13 files
+[BUILDTIME] 1674 (9)
+[SIZE] 0.07 MB, 8 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils e2fsprogs findutils
-[DEP] gcc3 glibc23 grep gzip linux24-header make sed sysfiles tar
+[DEP] 00-dirtree bash binutils bzip2 coreutils e2fsprogs:dev findutils
+[DEP] gcc32 gcc32:dev glibc23 glibc23:dev grep gzip linux24-header:dev
+[DEP] make sed sysfiles tar
 

@@ -20,16 +20,111 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087430627 Thu Jun 17 02:03:47 2004
+[TIMESTAMP] 1093275266 Mon Aug 23 17:34:26 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libosip2.log 9-libosip2.log
+[LOGS] 5-libosip2.err 9-libosip2.err
 
-[BUILDTIME] 9726 (9)
-[SIZE] 0.73 MB, 70 files
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.libosip2.1093035718.8835.3668279265/libosip2-2.0.7/platform'
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.libosip2.1093035718.8835.3668279265/libosip2-2.0.7/platform'
+[5-ERROR] Making install in debian
+[5-ERROR] make[1]: Entering directory `/ROCK/src.libosip2.1093035718.8835.3668279265/libosip2-2.0.7/debian'
+[5-ERROR] make[2]: Entering directory `/ROCK/src.libosip2.1093035718.8835.3668279265/libosip2-2.0.7/debian'
+[5-ERROR] make[2]: Nothing to be done for `install-exec-am'.
+[5-ERROR] make[2]: Nothing to be done for `install-data-am'.
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.libosip2.1093035718.8835.3668279265/libosip2-2.0.7/debian'
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.libosip2.1093035718.8835.3668279265/libosip2-2.0.7/debian'
+[5-ERROR] make[1]: Entering directory `/ROCK/src.libosip2.1093035718.8835.3668279265/libosip2-2.0.7'
+[5-ERROR] make[2]: Entering directory `/ROCK/src.libosip2.1093035718.8835.3668279265/libosip2-2.0.7'
+[5-ERROR] make[2]: Nothing to be done for `install-exec-am'.
+[5-ERROR] make[2]: Nothing to be done for `install-data-am'.
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.libosip2.1093035718.8835.3668279265/libosip2-2.0.7'
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.libosip2.1093035718.8835.3668279265/libosip2-2.0.7'
+[5-ERROR] Trying to copy the default documentation ...
+[5-ERROR] `AUTHORS' -> `/usr/share/doc/libosip2/AUTHORS'
+[5-ERROR] `BUGS' -> `/usr/share/doc/libosip2/BUGS'
+[5-ERROR] `COPYING' -> `/usr/share/doc/libosip2/COPYING'
+[5-ERROR] `INSTALL' -> `/usr/share/doc/libosip2/INSTALL'
+[5-ERROR] `NEWS' -> `/usr/share/doc/libosip2/NEWS'
+[5-ERROR] `README' -> `/usr/share/doc/libosip2/README'
+[5-ERROR] `TODO' -> `/usr/share/doc/libosip2/TODO'
+[5-ERROR] `ChangeLog' -> `/usr/share/doc/libosip2/ChangeLog'
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 64 files for this package.
+[5-ERROR] Applying package split: 40 libosip2:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 libosip2:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 libosip2:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <libosip2> Creating flist file ...
+[5-ERROR] <libosip2> Creating package dependencies file ...
+[5-ERROR] <libosip2> Creating md5sum and cksum files ...
+[5-ERROR] <libosip2> Creating package description ...
+[5-ERROR] <libosip2:dev> Creating flist file ...
+[5-ERROR] <libosip2:dev> Creating package dependencies file ...
+[5-ERROR] <libosip2:dev> Creating md5sum and cksum files ...
+[5-ERROR] <libosip2:dev> Creating package description ...
+[5-ERROR] <libosip2:doc> Creating flist file ...
+[5-ERROR] <libosip2:doc> Creating package dependencies file ...
+[5-ERROR] <libosip2:doc> Creating md5sum and cksum files ...
+[5-ERROR] <libosip2:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Found shared files with other packages:
+[5-ERROR] usr/share/man/man1/osip.1: libosip libosip2
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] removed `/var/adm/logs/5-libosip2.log'
+[5-ERROR] Finished building libosip2=libosip2.
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils diffutils findutils
-[DEP] gcc3 glibc23 grep linux24-header make mktemp net-tools sed sysfiles
-[DEP] tar util-linux
+[9-ERROR] make[2]: Leaving directory `/ROCK/src.libosip2.1093275161.6787.3212965156/libosip2-2.0.7/platform'
+[9-ERROR] make[1]: Leaving directory `/ROCK/src.libosip2.1093275161.6787.3212965156/libosip2-2.0.7/platform'
+[9-ERROR] Making install in debian
+[9-ERROR] make[1]: Entering directory `/ROCK/src.libosip2.1093275161.6787.3212965156/libosip2-2.0.7/debian'
+[9-ERROR] make[2]: Entering directory `/ROCK/src.libosip2.1093275161.6787.3212965156/libosip2-2.0.7/debian'
+[9-ERROR] make[2]: Nothing to be done for `install-exec-am'.
+[9-ERROR] make[2]: Nothing to be done for `install-data-am'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/src.libosip2.1093275161.6787.3212965156/libosip2-2.0.7/debian'
+[9-ERROR] make[1]: Leaving directory `/ROCK/src.libosip2.1093275161.6787.3212965156/libosip2-2.0.7/debian'
+[9-ERROR] make[1]: Entering directory `/ROCK/src.libosip2.1093275161.6787.3212965156/libosip2-2.0.7'
+[9-ERROR] make[2]: Entering directory `/ROCK/src.libosip2.1093275161.6787.3212965156/libosip2-2.0.7'
+[9-ERROR] make[2]: Nothing to be done for `install-exec-am'.
+[9-ERROR] make[2]: Nothing to be done for `install-data-am'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/src.libosip2.1093275161.6787.3212965156/libosip2-2.0.7'
+[9-ERROR] make[1]: Leaving directory `/ROCK/src.libosip2.1093275161.6787.3212965156/libosip2-2.0.7'
+[9-ERROR] Trying to copy the default documentation ...
+[9-ERROR] `AUTHORS' -> `/usr/share/doc/libosip2/AUTHORS'
+[9-ERROR] `BUGS' -> `/usr/share/doc/libosip2/BUGS'
+[9-ERROR] `COPYING' -> `/usr/share/doc/libosip2/COPYING'
+[9-ERROR] `INSTALL' -> `/usr/share/doc/libosip2/INSTALL'
+[9-ERROR] `NEWS' -> `/usr/share/doc/libosip2/NEWS'
+[9-ERROR] `README' -> `/usr/share/doc/libosip2/README'
+[9-ERROR] `TODO' -> `/usr/share/doc/libosip2/TODO'
+[9-ERROR] `ChangeLog' -> `/usr/share/doc/libosip2/ChangeLog'
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 64 files for this package.
+[9-ERROR] Applying package split: 40 libosip2:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 libosip2:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 libosip2:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <libosip2> Creating flist file ...
+[9-ERROR] <libosip2> Creating package dependencies file ...
+[9-ERROR] <libosip2> Creating md5sum and cksum files ...
+[9-ERROR] <libosip2> Creating package description ...
+[9-ERROR] <libosip2:dev> Creating flist file ...
+[9-ERROR] <libosip2:dev> Creating package dependencies file ...
+[9-ERROR] <libosip2:dev> Creating md5sum and cksum files ...
+[9-ERROR] <libosip2:dev> Creating package description ...
+[9-ERROR] <libosip2:doc> Creating flist file ...
+[9-ERROR] <libosip2:doc> Creating package dependencies file ...
+[9-ERROR] <libosip2:doc> Creating md5sum and cksum files ...
+[9-ERROR] <libosip2:doc> Creating package description ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] usr/share/man/man1/osip.1: libosip libosip2
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] removed `/var/adm/logs/9-libosip2.log'
+[9-ERROR] Finished building libosip2=libosip2.
 

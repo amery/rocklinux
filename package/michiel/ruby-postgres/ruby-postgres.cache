@@ -20,15 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087395949 Wed Jun 16 16:25:49 2004
+[TIMESTAMP] 1093236749 Mon Aug 23 06:52:29 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-ruby-postgres.log 9-ruby-postgres.log
 
-[BUILDTIME] 2097 (9)
-[SIZE] 0.08 MB, 14 files
+[BUILDTIME] 1635 (9)
+[SIZE] 0.04 MB, 7 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils findutils gcc3
-[DEP] glibc23 grep linux24-header make postgresql ruby sed sysfiles tar
+[DEP] 00-dirtree bash binutils bzip2 coreutils findutils gcc32 gcc32:dev
+[DEP] glibc23 glibc23:dev grep linux24-header:dev make openssl postgresql
+[DEP] postgresql:dev ruby sed sysfiles tar
 

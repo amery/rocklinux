@@ -20,15 +20,67 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087222729 Mon Jun 14 16:18:49 2004
+[TIMESTAMP] 1093092464 Sat Aug 21 14:47:44 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-perl-digest-nilsimsa.log 9-perl-digest-nilsimsa.log
+[LOGS] 5-perl-digest-nilsimsa.log 9-perl-digest-nilsimsa.err
 
-[BUILDTIME] 2121 (9)
-[SIZE] 0.07 MB, 16 files
+[BUILDTIME] 1686 (5)
+[SIZE] 0.04 MB, 12 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils findutils gcc3
-[DEP] glibc23 grep linux24-header make perl5 sed sysfiles tar
+[DEP] 00-dirtree bash binutils bzip2 coreutils findutils gcc32 gcc32:dev
+[DEP] glibc23 glibc23:dev grep linux24-header:dev make perl5 sed
+[DEP] sysfiles tar
+
+[9-ERROR] Extracting Digest-Nilsimsa-0.06.tar.bz2 (--use-compress-program=bzip2 -xf) ... 
+[9-ERROR] Fixing ownership and permissions ...
+[9-ERROR] Removing CVS and .svn directories ...
+[9-ERROR] Changeing into /ROCK/src.perl-digest-nilsimsa.1093092440.30822.1947025376/Digest-Nilsimsa-0.06 ...
+[9-ERROR] Creating /usr/<..> if required ...
+[9-ERROR] Checking if your kit is complete...
+[9-ERROR] Looks good
+[9-ERROR] Writing Makefile for Digest::Nilsimsa
+[9-ERROR] cp Nilsimsa.pm blib/lib/Digest/Nilsimsa.pm
+[9-ERROR] gcc-32 -c   -fno-strict-aliasing -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -O2   -DVERSION=\"0.06\" -DXS_VERSION=\"0.06\" -fpic "-I/usr/lib/perl5/5.8.5/i386-unknown-linux-gnu/CORE"   _nilsimsa.c
+[9-ERROR] /usr/bin/perl /usr/lib/perl5/5.8.5/ExtUtils/xsubpp  -typemap /usr/lib/perl5/5.8.5/ExtUtils/typemap -typemap typemap  Nilsimsa.xs > Nilsimsa.xsc && mv Nilsimsa.xsc Nilsimsa.c
+[9-ERROR] gcc-32 -c   -fno-strict-aliasing -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -O2   -DVERSION=\"0.06\" -DXS_VERSION=\"0.06\" -fpic "-I/usr/lib/perl5/5.8.5/i386-unknown-linux-gnu/CORE"   Nilsimsa.c
+[9-ERROR] Running Mkbootstrap for Digest::Nilsimsa ()
+[9-ERROR] chmod 644 Nilsimsa.bs
+[9-ERROR] rm -f blib/arch/auto/Digest/Nilsimsa/Nilsimsa.so
+[9-ERROR] LD_RUN_PATH="" gcc  -shared -L/usr/local/lib _nilsimsa.o Nilsimsa.o  -o blib/arch/auto/Digest/Nilsimsa/Nilsimsa.so      
+[9-ERROR] chmod 755 blib/arch/auto/Digest/Nilsimsa/Nilsimsa.so
+[9-ERROR] cp Nilsimsa.bs blib/arch/auto/Digest/Nilsimsa/Nilsimsa.bs
+[9-ERROR] chmod 644 blib/arch/auto/Digest/Nilsimsa/Nilsimsa.bs
+[9-ERROR] Manifying blib/man3/Digest::Nilsimsa.3
+[9-ERROR] Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+[9-ERROR] Installing /usr/share/man/man3/Digest::Nilsimsa.3
+[9-ERROR] Writing /usr/lib/perl5/5.8.5/i386-unknown-linux-gnu/auto/Digest/Nilsimsa/.packlist
+[9-ERROR] Appending installation info to /usr/lib/perl5/5.8.5/i386-unknown-linux-gnu/perllocal.pod
+[9-ERROR] Trying to copy the default documentation ...
+[9-ERROR] `COPYING' -> `/usr/share/doc/perl-digest-nilsimsa/COPYING'
+[9-ERROR] `MANIFEST' -> `/usr/share/doc/perl-digest-nilsimsa/MANIFEST'
+[9-ERROR] `README' -> `/usr/share/doc/perl-digest-nilsimsa/README'
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 10 files for this package.
+[9-ERROR] Applying package split: 40 perl-digest-nilsimsa:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 perl-digest-nilsimsa:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 perl-digest-nilsimsa:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <perl-digest-nilsimsa> Creating flist file ...
+[9-ERROR] <perl-digest-nilsimsa> Creating package dependencies file ...
+[9-ERROR] <perl-digest-nilsimsa> Creating md5sum and cksum files ...
+[9-ERROR] <perl-digest-nilsimsa> Creating package description ...
+[9-ERROR] <perl-digest-nilsimsa:doc> Creating flist file ...
+[9-ERROR] <perl-digest-nilsimsa:doc> Creating package dependencies file ...
+[9-ERROR] <perl-digest-nilsimsa:doc> Creating md5sum and cksum files ...
+[9-ERROR] <perl-digest-nilsimsa:doc> Creating package description ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] usr/lib/perl5/5.8.5/i386-unknown-linux-gnu/auto/Digest/Nilsimsa: perl-digest-nilsimsa perl-digest-nilsimsa:dev
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] removed `/var/adm/logs/9-perl-digest-nilsimsa.log'
+[9-ERROR] Finished building perl-digest-nilsimsa=perl-digest-nilsimsa.
 

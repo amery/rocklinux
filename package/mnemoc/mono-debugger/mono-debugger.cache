@@ -20,41 +20,31 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087484156 Thu Jun 17 16:55:56 2004
+[TIMESTAMP] 1093273364 Mon Aug 23 17:02:44 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-mono-debugger.err 9-mono-debugger.err
 
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.mono-debugger.1087481098.20034.1281122003/mono-debugger-0.5/backends/ptrace'
-[5-ERROR] Making all in mono-csharp
-[5-ERROR] make[3]: Entering directory `/ROCK/src.mono-debugger.1087481098.20034.1281122003/mono-debugger-0.5/backends/mono-csharp'
-[5-ERROR] make[3]: Nothing to be done for `all'.
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.mono-debugger.1087481098.20034.1281122003/mono-debugger-0.5/backends/mono-csharp'
-[5-ERROR] Making all in native
-[5-ERROR] make[3]: Entering directory `/ROCK/src.mono-debugger.1087481098.20034.1281122003/mono-debugger-0.5/backends/native'
-[5-ERROR] make[3]: Nothing to be done for `all'.
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.mono-debugger.1087481098.20034.1281122003/mono-debugger-0.5/backends/native'
-[5-ERROR] make[3]: Entering directory `/ROCK/src.mono-debugger.1087481098.20034.1281122003/mono-debugger-0.5/backends'
 [5-ERROR] make[3]: Nothing to be done for `all-am'.
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.mono-debugger.1087481098.20034.1281122003/mono-debugger-0.5/backends'
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.mono-debugger.1087481098.20034.1281122003/mono-debugger-0.5/backends'
+[5-ERROR] make[3]: Leaving directory `/ROCK/src.mono-debugger.1093033948.7376.849469935/mono-debugger-0.5/backends'
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.mono-debugger.1093033948.7376.849469935/mono-debugger-0.5/backends'
 [5-ERROR] Making all in frontends
-[5-ERROR] make[2]: Entering directory `/ROCK/src.mono-debugger.1087481098.20034.1281122003/mono-debugger-0.5/frontends'
+[5-ERROR] make[2]: Entering directory `/ROCK/src.mono-debugger.1093033948.7376.849469935/mono-debugger-0.5/frontends'
 [5-ERROR] Making all in scripting
-[5-ERROR] make[3]: Entering directory `/ROCK/src.mono-debugger.1087481098.20034.1281122003/mono-debugger-0.5/frontends/scripting'
+[5-ERROR] make[3]: Entering directory `/ROCK/src.mono-debugger.1093033948.7376.849469935/mono-debugger-0.5/frontends/scripting'
 [5-ERROR] make[3]: Nothing to be done for `all'.
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.mono-debugger.1087481098.20034.1281122003/mono-debugger-0.5/frontends/scripting'
+[5-ERROR] make[3]: Leaving directory `/ROCK/src.mono-debugger.1093033948.7376.849469935/mono-debugger-0.5/frontends/scripting'
 [5-ERROR] Making all in command-line
-[5-ERROR] make[3]: Entering directory `/ROCK/src.mono-debugger.1087481098.20034.1281122003/mono-debugger-0.5/frontends/command-line'
+[5-ERROR] make[3]: Entering directory `/ROCK/src.mono-debugger.1093033948.7376.849469935/mono-debugger-0.5/frontends/command-line'
 [5-ERROR] make[3]: Nothing to be done for `all'.
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.mono-debugger.1087481098.20034.1281122003/mono-debugger-0.5/frontends/command-line'
-[5-ERROR] make[3]: Entering directory `/ROCK/src.mono-debugger.1087481098.20034.1281122003/mono-debugger-0.5/frontends'
+[5-ERROR] make[3]: Leaving directory `/ROCK/src.mono-debugger.1093033948.7376.849469935/mono-debugger-0.5/frontends/command-line'
+[5-ERROR] make[3]: Entering directory `/ROCK/src.mono-debugger.1093033948.7376.849469935/mono-debugger-0.5/frontends'
 [5-ERROR] make[3]: Nothing to be done for `all-am'.
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.mono-debugger.1087481098.20034.1281122003/mono-debugger-0.5/frontends'
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.mono-debugger.1087481098.20034.1281122003/mono-debugger-0.5/frontends'
+[5-ERROR] make[3]: Leaving directory `/ROCK/src.mono-debugger.1093033948.7376.849469935/mono-debugger-0.5/frontends'
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.mono-debugger.1093033948.7376.849469935/mono-debugger-0.5/frontends'
 [5-ERROR] Making all in lib
-[5-ERROR] make[2]: Entering directory `/ROCK/src.mono-debugger.1087481098.20034.1281122003/mono-debugger-0.5/lib'
+[5-ERROR] make[2]: Entering directory `/ROCK/src.mono-debugger.1093033948.7376.849469935/mono-debugger-0.5/lib'
 [5-ERROR] /opt/mono/bin/mcs /target:library /out:Mono.Debugger.dll -g -r Mono.CSharp.Debugger ../interfaces/*.cs				../classes/*.cs
 [5-ERROR] ../classes/TargetAddress.cs(20) warning CS0660: `Mono.Debugger.TargetAddress' defines operator == or operator != but does not override Object.Equals (object o)
 [5-ERROR] ../classes/TargetAddress.cs(20) warning CS0661: `Mono.Debugger.TargetAddress' defines operator == or operator != but does not override Object.GetHashCode ()
@@ -63,49 +53,49 @@
 [5-ERROR] ../backends/Process.cs(46) error CS0051: Inconsistent accessibility: parameter type `Mono.Debugger.Architecture.BfdContainer' is less accessible than method `Process'
 [5-ERROR] Compilation failed: 1 error(s), 0 warnings
 [5-ERROR] make[2]: *** [Mono.Debugger.Backend.dll] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.mono-debugger.1087481098.20034.1281122003/mono-debugger-0.5/lib'
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.mono-debugger.1093033948.7376.849469935/mono-debugger-0.5/lib'
 [5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.mono-debugger.1087481098.20034.1281122003/mono-debugger-0.5'
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.mono-debugger.1093033948.7376.849469935/mono-debugger-0.5'
 [5-ERROR] make: *** [all-recursive-am] Error 2
 [5-ERROR] --- BUILD ERROR ---
 [5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] processing static lib corrections ...
-[5-ERROR] Found 8 files for this package.
-[5-ERROR] Clear (old) md5sums and cksums ...
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 5 files for this package.
+[5-ERROR] Applying package split: 40 mono-debugger:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 mono-debugger:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 mono-debugger:doc /share/doc/
 [5-ERROR] Calculating package dependencies ...
-[5-ERROR] Creating md5sum and cksum files ... done.
-[5-ERROR] Creating package description ...
+[5-ERROR] <mono-debugger> Creating flist file ...
+[5-ERROR] <mono-debugger> Creating package dependencies file ...
+[5-ERROR] <mono-debugger> Creating md5sum and cksum files ...
+[5-ERROR] <mono-debugger> Creating package description ...
+[5-ERROR] <mono-debugger:doc> Creating flist file ...
+[5-ERROR] <mono-debugger:doc> Creating package dependencies file ...
+[5-ERROR] <mono-debugger:doc> Creating md5sum and cksum files ...
+[5-ERROR] <mono-debugger:doc> Creating package description ...
 [5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building mono-debugger=mono-debugger.
 
-[9-ERROR] make[3]: Leaving directory `/ROCK/src.mono-debugger.1087484072.5577.1800923707/mono-debugger-0.5/backends/ptrace'
-[9-ERROR] Making all in mono-csharp
-[9-ERROR] make[3]: Entering directory `/ROCK/src.mono-debugger.1087484072.5577.1800923707/mono-debugger-0.5/backends/mono-csharp'
-[9-ERROR] make[3]: Nothing to be done for `all'.
-[9-ERROR] make[3]: Leaving directory `/ROCK/src.mono-debugger.1087484072.5577.1800923707/mono-debugger-0.5/backends/mono-csharp'
-[9-ERROR] Making all in native
-[9-ERROR] make[3]: Entering directory `/ROCK/src.mono-debugger.1087484072.5577.1800923707/mono-debugger-0.5/backends/native'
-[9-ERROR] make[3]: Nothing to be done for `all'.
-[9-ERROR] make[3]: Leaving directory `/ROCK/src.mono-debugger.1087484072.5577.1800923707/mono-debugger-0.5/backends/native'
-[9-ERROR] make[3]: Entering directory `/ROCK/src.mono-debugger.1087484072.5577.1800923707/mono-debugger-0.5/backends'
 [9-ERROR] make[3]: Nothing to be done for `all-am'.
-[9-ERROR] make[3]: Leaving directory `/ROCK/src.mono-debugger.1087484072.5577.1800923707/mono-debugger-0.5/backends'
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.mono-debugger.1087484072.5577.1800923707/mono-debugger-0.5/backends'
+[9-ERROR] make[3]: Leaving directory `/ROCK/src.mono-debugger.1093273242.4928.622899236/mono-debugger-0.5/backends'
+[9-ERROR] make[2]: Leaving directory `/ROCK/src.mono-debugger.1093273242.4928.622899236/mono-debugger-0.5/backends'
 [9-ERROR] Making all in frontends
-[9-ERROR] make[2]: Entering directory `/ROCK/src.mono-debugger.1087484072.5577.1800923707/mono-debugger-0.5/frontends'
+[9-ERROR] make[2]: Entering directory `/ROCK/src.mono-debugger.1093273242.4928.622899236/mono-debugger-0.5/frontends'
 [9-ERROR] Making all in scripting
-[9-ERROR] make[3]: Entering directory `/ROCK/src.mono-debugger.1087484072.5577.1800923707/mono-debugger-0.5/frontends/scripting'
+[9-ERROR] make[3]: Entering directory `/ROCK/src.mono-debugger.1093273242.4928.622899236/mono-debugger-0.5/frontends/scripting'
 [9-ERROR] make[3]: Nothing to be done for `all'.
-[9-ERROR] make[3]: Leaving directory `/ROCK/src.mono-debugger.1087484072.5577.1800923707/mono-debugger-0.5/frontends/scripting'
+[9-ERROR] make[3]: Leaving directory `/ROCK/src.mono-debugger.1093273242.4928.622899236/mono-debugger-0.5/frontends/scripting'
 [9-ERROR] Making all in command-line
-[9-ERROR] make[3]: Entering directory `/ROCK/src.mono-debugger.1087484072.5577.1800923707/mono-debugger-0.5/frontends/command-line'
+[9-ERROR] make[3]: Entering directory `/ROCK/src.mono-debugger.1093273242.4928.622899236/mono-debugger-0.5/frontends/command-line'
 [9-ERROR] make[3]: Nothing to be done for `all'.
-[9-ERROR] make[3]: Leaving directory `/ROCK/src.mono-debugger.1087484072.5577.1800923707/mono-debugger-0.5/frontends/command-line'
-[9-ERROR] make[3]: Entering directory `/ROCK/src.mono-debugger.1087484072.5577.1800923707/mono-debugger-0.5/frontends'
+[9-ERROR] make[3]: Leaving directory `/ROCK/src.mono-debugger.1093273242.4928.622899236/mono-debugger-0.5/frontends/command-line'
+[9-ERROR] make[3]: Entering directory `/ROCK/src.mono-debugger.1093273242.4928.622899236/mono-debugger-0.5/frontends'
 [9-ERROR] make[3]: Nothing to be done for `all-am'.
-[9-ERROR] make[3]: Leaving directory `/ROCK/src.mono-debugger.1087484072.5577.1800923707/mono-debugger-0.5/frontends'
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.mono-debugger.1087484072.5577.1800923707/mono-debugger-0.5/frontends'
+[9-ERROR] make[3]: Leaving directory `/ROCK/src.mono-debugger.1093273242.4928.622899236/mono-debugger-0.5/frontends'
+[9-ERROR] make[2]: Leaving directory `/ROCK/src.mono-debugger.1093273242.4928.622899236/mono-debugger-0.5/frontends'
 [9-ERROR] Making all in lib
-[9-ERROR] make[2]: Entering directory `/ROCK/src.mono-debugger.1087484072.5577.1800923707/mono-debugger-0.5/lib'
+[9-ERROR] make[2]: Entering directory `/ROCK/src.mono-debugger.1093273242.4928.622899236/mono-debugger-0.5/lib'
 [9-ERROR] /opt/mono/bin/mcs /target:library /out:Mono.Debugger.dll -g -r Mono.CSharp.Debugger ../interfaces/*.cs				../classes/*.cs
 [9-ERROR] ../classes/TargetAddress.cs(20) warning CS0660: `Mono.Debugger.TargetAddress' defines operator == or operator != but does not override Object.Equals (object o)
 [9-ERROR] ../classes/TargetAddress.cs(20) warning CS0661: `Mono.Debugger.TargetAddress' defines operator == or operator != but does not override Object.GetHashCode ()
@@ -114,17 +104,27 @@
 [9-ERROR] ../backends/Process.cs(46) error CS0051: Inconsistent accessibility: parameter type `Mono.Debugger.Architecture.BfdContainer' is less accessible than method `Process'
 [9-ERROR] Compilation failed: 1 error(s), 0 warnings
 [9-ERROR] make[2]: *** [Mono.Debugger.Backend.dll] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.mono-debugger.1087484072.5577.1800923707/mono-debugger-0.5/lib'
+[9-ERROR] make[2]: Leaving directory `/ROCK/src.mono-debugger.1093273242.4928.622899236/mono-debugger-0.5/lib'
 [9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.mono-debugger.1087484072.5577.1800923707/mono-debugger-0.5'
+[9-ERROR] make[1]: Leaving directory `/ROCK/src.mono-debugger.1093273242.4928.622899236/mono-debugger-0.5'
 [9-ERROR] make: *** [all-recursive-am] Error 2
 [9-ERROR] --- BUILD ERROR ---
 [9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] processing static lib corrections ...
-[9-ERROR] Found 8 files for this package.
-[9-ERROR] Clear (old) md5sums and cksums ...
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 5 files for this package.
+[9-ERROR] Applying package split: 40 mono-debugger:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 mono-debugger:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 mono-debugger:doc /share/doc/
 [9-ERROR] Calculating package dependencies ...
-[9-ERROR] Creating md5sum and cksum files ... done.
-[9-ERROR] Creating package description ...
+[9-ERROR] <mono-debugger> Creating flist file ...
+[9-ERROR] <mono-debugger> Creating package dependencies file ...
+[9-ERROR] <mono-debugger> Creating md5sum and cksum files ...
+[9-ERROR] <mono-debugger> Creating package description ...
+[9-ERROR] <mono-debugger:doc> Creating flist file ...
+[9-ERROR] <mono-debugger:doc> Creating package dependencies file ...
+[9-ERROR] <mono-debugger:doc> Creating md5sum and cksum files ...
+[9-ERROR] <mono-debugger:doc> Creating package description ...
 [9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building mono-debugger=mono-debugger.
 

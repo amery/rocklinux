@@ -20,16 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087413007 Wed Jun 16 21:10:07 2004
+[TIMESTAMP] 1093257201 Mon Aug 23 12:33:21 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-dante.log 9-dante.log
 
-[BUILDTIME] 19131 (9)
-[SIZE] 1.03 MB, 46 files
+[BUILDTIME] 17145 (9)
+[SIZE] 0.47 MB, 17 files
 
-[DEP] 00-dirtree autoconf bash binutils bzip2 ccache coreutils diffutils
-[DEP] findutils flex gawk gcc3 glibc23 grep linux24-header m4 make mktemp
-[DEP] net-tools pam perl5 sed sysfiles tar tcp_wrappers util-linux
+[DEP] 00-dirtree autoconf bash binutils bzip2 coreutils diffutils
+[DEP] findutils flex flex:dev gawk gcc32 gcc32:dev glibc23 glibc23:dev
+[DEP] grep linux24-header:dev m4 make mktemp net-tools pam pam:dev perl5
+[DEP] perl5:dev sed sysfiles tar tcp_wrappers:dev util-linux
 

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087351353 Wed Jun 16 04:02:33 2004
+[TIMESTAMP] 1093192290 Sun Aug 22 18:31:30 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-pcmcia-cs.log 9-pcmcia-cs.log
 
-[BUILDTIME] 5690 (9)
-[SIZE] 1.61 MB, 114 files
+[BUILDTIME] 4745 (9)
+[SIZE] 0.43 MB, 102 files
 
-[DEP] 00-dirtree alien bash binutils bzip2 ccache coreutils diffutils
-[DEP] findutils gcc3 glib12 glibc23 grep gtk+12 linux24-header linux24-src
-[DEP] make man patch sed sysfiles tar xfree86
+[DEP] 00-dirtree alien bash binutils bzip2 coreutils coreutils:doc
+[DEP] diffutils findutils gcc32 gcc32:dev glib12 glib12:dev glibc23
+[DEP] glibc23:dev grep gtk+12 gtk+12:dev linux24-header:dev linux24-source
+[DEP] linux24-source:dev make man patch sed sysfiles tar xfree86
+[DEP] xfree86:dev
 

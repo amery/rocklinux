@@ -20,18 +20,111 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087260610 Tue Jun 15 02:50:10 2004
+[TIMESTAMP] 1093128396 Sun Aug 22 00:46:36 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-entrance.log 9-entrance.log
+[LOGS] 5-entrance.err 9-entrance.err
 
-[BUILDTIME] 5925 (9)
-[SIZE] 4.60 MB, 84 files
+[5-ERROR]   Output file is 2.6% the size of the raw input data
+[5-ERROR]   Saved 7389270 bytes (7216Kb)
+[5-ERROR] make[3]: Leaving directory `/ROCK/src.entrance.1092904459.6753.2324441616/entrance-2004-06-24/data/themes/Nebulous'
+[5-ERROR] Making all in taillights
+[5-ERROR] make[3]: Entering directory `/ROCK/src.entrance.1092904459.6753.2324441616/entrance-2004-06-24/data/themes/taillights'
+[5-ERROR] Making all in parts
+[5-ERROR] make[4]: Entering directory `/ROCK/src.entrance.1092904459.6753.2324441616/entrance-2004-06-24/data/themes/taillights/parts'
+[5-ERROR] make[4]: Nothing to be done for `all'.
+[5-ERROR] make[4]: Leaving directory `/ROCK/src.entrance.1092904459.6753.2324441616/entrance-2004-06-24/data/themes/taillights/parts'
+[5-ERROR] Making all in programs
+[5-ERROR] make[4]: Entering directory `/ROCK/src.entrance.1092904459.6753.2324441616/entrance-2004-06-24/data/themes/taillights/programs'
+[5-ERROR] make[4]: Nothing to be done for `all'.
+[5-ERROR] make[4]: Leaving directory `/ROCK/src.entrance.1092904459.6753.2324441616/entrance-2004-06-24/data/themes/taillights/programs'
+[5-ERROR] Making all in fonts
+[5-ERROR] make[4]: Entering directory `/ROCK/src.entrance.1092904459.6753.2324441616/entrance-2004-06-24/data/themes/taillights/fonts'
+[5-ERROR] make[4]: Nothing to be done for `all'.
+[5-ERROR] make[4]: Leaving directory `/ROCK/src.entrance.1092904459.6753.2324441616/entrance-2004-06-24/data/themes/taillights/fonts'
+[5-ERROR] Making all in images
+[5-ERROR] make[4]: Entering directory `/ROCK/src.entrance.1092904459.6753.2324441616/entrance-2004-06-24/data/themes/taillights/images'
+[5-ERROR] make[4]: Nothing to be done for `all'.
+[5-ERROR] make[4]: Leaving directory `/ROCK/src.entrance.1092904459.6753.2324441616/entrance-2004-06-24/data/themes/taillights/images'
+[5-ERROR] make[4]: Entering directory `/ROCK/src.entrance.1092904459.6753.2324441616/entrance-2004-06-24/data/themes/taillights'
+[5-ERROR] gcc-32 -v -id ./images -fd ./fonts taillights.edc taillights.eet
+[5-ERROR] gcc-32: taillights.eet: No such file or directory
+[5-ERROR] Reading specs from /usr/lib/gcc-lib/i386-unknown-linux-gnu/3.2.3/specs
+[5-ERROR] Configured with: ../configure --prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --libdir=/usr/lib --datadir=/usr/share --includedir=/usr/include --infodir=/usr/info --mandir=/usr/man --sysconfdir=/etc --localstatedir=/var --disable-debug --with-libpam --with-pam --enable-libpam --enable-pam --build=i386-unknown-linux-gnu --host=i386-unknown-linux-gnu --disable-multilib --enable-languages=c,c++,objc,f77 --enable-__cxa_atexit --enable-shared=yes --with-gnu-as --enable-version-specific-runtime-libs --with-gnu-ld --enable-threads=posix
+[5-ERROR] Thread model: posix
+[5-ERROR] gcc version 3.2.3
+[5-ERROR] make[4]: *** [taillights.eet] Error 1
+[5-ERROR] make[4]: Leaving directory `/ROCK/src.entrance.1092904459.6753.2324441616/entrance-2004-06-24/data/themes/taillights'
+[5-ERROR] make[3]: *** [all-recursive] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/src.entrance.1092904459.6753.2324441616/entrance-2004-06-24/data/themes/taillights'
+[5-ERROR] make[2]: *** [all-recursive] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.entrance.1092904459.6753.2324441616/entrance-2004-06-24/data/themes'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.entrance.1092904459.6753.2324441616/entrance-2004-06-24/data'
+[5-ERROR] make: *** [all-recursive] Error 1
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 3 files for this package.
+[5-ERROR] Applying package split: 40 entrance:dev (/lib/.*.a)$|/include/
+[5-ERROR] Applying package split: 60 entrance:doc /share/(doc|man|info)/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <entrance> Creating flist file ...
+[5-ERROR] <entrance> Creating package dependencies file ...
+[5-ERROR] <entrance> Creating md5sum and cksum files ...
+[5-ERROR] <entrance> Creating package description ...
+[5-ERROR] Making post-install adaptions.
 
-[DEP] 00-dirtree autoconf automake bash binutils bzip2 ccache coreutils
-[DEP] diffutils directfb ecore edb edje eet epsilon esmart evas findutils
-[DEP] freetype gcc3 glibc23 grep imlib2 imlib2_loaders libjpeg libpng
-[DEP] linux24-header m4 make mktemp net-tools pam perl5 sed sysfiles tar
-[DEP] util-linux xfree86 zlib
+[9-ERROR] make[4]: Entering directory `/ROCK/src.entrance.1093128343.23167.2840211292/entrance-2004-06-24/data/themes/taillights/parts'
+[9-ERROR] make[4]: Nothing to be done for `all'.
+[9-ERROR] make[4]: Leaving directory `/ROCK/src.entrance.1093128343.23167.2840211292/entrance-2004-06-24/data/themes/taillights/parts'
+[9-ERROR] Making all in programs
+[9-ERROR] make[4]: Entering directory `/ROCK/src.entrance.1093128343.23167.2840211292/entrance-2004-06-24/data/themes/taillights/programs'
+[9-ERROR] make[4]: Nothing to be done for `all'.
+[9-ERROR] make[4]: Leaving directory `/ROCK/src.entrance.1093128343.23167.2840211292/entrance-2004-06-24/data/themes/taillights/programs'
+[9-ERROR] Making all in fonts
+[9-ERROR] make[4]: Entering directory `/ROCK/src.entrance.1093128343.23167.2840211292/entrance-2004-06-24/data/themes/taillights/fonts'
+[9-ERROR] make[4]: Nothing to be done for `all'.
+[9-ERROR] make[4]: Leaving directory `/ROCK/src.entrance.1093128343.23167.2840211292/entrance-2004-06-24/data/themes/taillights/fonts'
+[9-ERROR] Making all in images
+[9-ERROR] make[4]: Entering directory `/ROCK/src.entrance.1093128343.23167.2840211292/entrance-2004-06-24/data/themes/taillights/images'
+[9-ERROR] make[4]: Nothing to be done for `all'.
+[9-ERROR] make[4]: Leaving directory `/ROCK/src.entrance.1093128343.23167.2840211292/entrance-2004-06-24/data/themes/taillights/images'
+[9-ERROR] make[4]: Entering directory `/ROCK/src.entrance.1093128343.23167.2840211292/entrance-2004-06-24/data/themes/taillights'
+[9-ERROR] gcc-32 -v -id ./images -fd ./fonts taillights.edc taillights.eet
+[9-ERROR] gcc-32: taillights.eet: No such file or directory
+[9-ERROR] Reading specs from /usr/lib/gcc-lib/i386-unknown-linux-gnu/3.2.3/specs
+[9-ERROR] Configured with: ../configure --prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --libdir=/usr/lib --datadir=/usr/share --includedir=/usr/include --infodir=/usr/share/info --mandir=/usr/share/man --sysconfdir=/etc --localstatedir=/var --disable-debug --with-mysql-lib=/opt/mysql/lib/mysql --with-mysql-include=/opt/mysql/include/mysql --with-libpam --with-pam --enable-libpam --enable-pam --build=i386-unknown-linux-gnu --host=i386-unknown-linux-gnu --disable-multilib --enable-languages=c,c++,objc,f77 --enable-__cxa_atexit --enable-shared=yes --with-gnu-as --enable-version-specific-runtime-libs --with-gnu-ld --enable-threads=posix
+[9-ERROR] Thread model: posix
+[9-ERROR] gcc version 3.2.3
+[9-ERROR] make[4]: *** [taillights.eet] Error 1
+[9-ERROR] make[4]: Leaving directory `/ROCK/src.entrance.1093128343.23167.2840211292/entrance-2004-06-24/data/themes/taillights'
+[9-ERROR] make[3]: *** [all-recursive] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/src.entrance.1093128343.23167.2840211292/entrance-2004-06-24/data/themes/taillights'
+[9-ERROR] make[2]: *** [all-recursive] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/src.entrance.1093128343.23167.2840211292/entrance-2004-06-24/data/themes'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/src.entrance.1093128343.23167.2840211292/entrance-2004-06-24/data'
+[9-ERROR] make: *** [all-recursive] Error 1
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 7 files for this package.
+[9-ERROR] Applying package split: 40 entrance:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 entrance:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 entrance:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <entrance> Creating flist file ...
+[9-ERROR] <entrance> Creating package dependencies file ...
+[9-ERROR] <entrance> Creating md5sum and cksum files ...
+[9-ERROR] <entrance> Creating package description ...
+[9-ERROR] <entrance:doc> Creating flist file ...
+[9-ERROR] <entrance:doc> Creating package dependencies file ...
+[9-ERROR] <entrance:doc> Creating md5sum and cksum files ...
+[9-ERROR] <entrance:doc> Creating package description ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building entrance=entrance.
 

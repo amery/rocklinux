@@ -20,17 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087416757 Wed Jun 16 22:12:37 2004
+[TIMESTAMP] 1093260004 Mon Aug 23 13:20:04 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-asterisk.log 9-asterisk.log
 
-[BUILDTIME] 14832 (9)
-[SIZE] 3.67 MB, 419 files
+[BUILDTIME] 13401 (9)
+[SIZE] 3.34 MB, 346 files
 
-[DEP] 00-dirtree alien alsa bash binutils bison bzip2 ccache coreutils
-[DEP] diffutils findutils gawk gcc3 glib12 glibc23 grep gtk+12
-[DEP] linux24-header m4 make ncurses net-tools openssl patch sed sysfiles
+[DEP] 00-dirtree alien alsa alsa:dev bash binutils bison bzip2 coreutils
+[DEP] diffutils findutils gawk gcc32 gcc32:dev glib12 glib12:dev glibc23
+[DEP] glibc23:dev grep gtk+12 gtk+12:dev linux24-header:dev m4 make
+[DEP] ncurses:dev net-tools openssl openssl:dev patch sed sysfiles
 [DEP] tar xfree86
 

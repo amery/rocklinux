@@ -20,17 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087460327 Thu Jun 17 10:18:47 2004
+[TIMESTAMP] 1093299905 Tue Aug 24 00:25:05 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-libgnomecups.log 9-libgnomecups.log
 
-[BUILDTIME] 3432 (9)
-[SIZE] 0.20 MB, 28 files
+[BUILDTIME] 3698 (9)
+[SIZE] 0.16 MB, 30 files
 
-[DEP] 00-dirtree autoconf bash binutils bzip2 ccache coreutils
-[DEP] cups diffutils findutils gawk gcc3 gettext glib glibc23 grep
-[DEP] linux24-header make mktemp net-tools openssl perl5 pkgconfig sed
-[DEP] sysfiles tar texinfo util-linux
+[DEP] 00-dirtree autoconf bash binutils bzip2 coreutils cups cups:dev
+[DEP] diffutils findutils gawk gcc32 gcc32:dev gettext glib glib:dev
+[DEP] glibc23 glibc23:dev glibmm grep linux24-header:dev make mktemp
+[DEP] net-tools openssl perl-xml-parser perl5 pkgconfig sed sysfiles tar
+[DEP] texinfo util-linux
 

@@ -6,7 +6,7 @@
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
 [COPY] ROCK Linux: rock-src/package/base/smartmontools/smartmontools.cache
-[COPY] ROCK Linux is Copyright (C) 1998 - 2003 Clifford Wolf
+[COPY] ROCK Linux is Copyright (C) 1998 - 2004 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
 [COPY] it under the terms of the GNU General Public License as published by
@@ -20,16 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087400323 Wed Jun 16 17:38:43 2004
+[TIMESTAMP] 1093245602 Mon Aug 23 09:20:02 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-smartmontools.log 9-smartmontools.log
 
-[BUILDTIME] 3113 (9)
-[SIZE] 0.50 MB, 27 files
+[BUILDTIME] 2647 (9)
+[SIZE] 0.47 MB, 12 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils diffutils findutils
-[DEP] gcc3 glibc23 grep linux24-header make mktemp net-tools patch sed
-[DEP] sysfiles tar util-linux
+[DEP] 00-dirtree bash binutils bzip2 coreutils diffutils findutils gcc32
+[DEP] gcc32:dev glibc23 glibc23:dev grep linux24-header:dev make mktemp
+[DEP] net-tools patch sed sysfiles tar util-linux
 

@@ -20,22 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087483555 Thu Jun 17 16:45:55 2004
+[TIMESTAMP] 1093252577 Mon Aug 23 11:16:17 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-rox-filer.err 9-rox-filer.err
 
-[5-ERROR] gcc-3  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o tasklist.o tasklist.c
-[5-ERROR] gcc-3  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o toolbar.o toolbar.c
-[5-ERROR] gcc-3  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o type.o type.c
-[5-ERROR] gcc-3  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o usericons.o usericons.c
-[5-ERROR] gcc-3  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o view_collection.o view_collection.c
-[5-ERROR] gcc-3  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o view_details.o view_details.c
-[5-ERROR] gcc-3  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o view_iface.o view_iface.c
-[5-ERROR] gcc-3  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o wrapped.o wrapped.c
-[5-ERROR] gcc-3  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o xml.o xml.c
-[5-ERROR] gcc-3 -o ../Linux-ix86/ROX-Filer abox.o action.o appinfo.o appmenu.o bind.o bookmarks.o cell_icon.o choices.o collection.o dir.o diritem.o display.o dnd.o dropbox.o filer.o find.o fscache.o gtksavebox.o gui_support.o i18n.o icon.o infobox.o main.o menu.o minibuffer.o modechange.o mount.o options.o panel.o pinboard.o pixmaps.o remote.o rox_gettext.o run.o sc.o session.o support.o tasklist.o toolbar.o type.o usericons.o view_collection.o view_details.o view_iface.o wrapped.o xml.o   -L/usr/X11R6/lib -lX11   -lICE -lSM `pkg-config --libs gtk+-2.0 libxml-2.0`
+[5-ERROR] gcc-32  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o view_iface.o view_iface.c
+[5-ERROR] gcc-32  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o wrapped.o wrapped.c
+[5-ERROR] gcc-32  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o xml.o xml.c
+[5-ERROR] gcc-32 -o ../Linux-ix86/ROX-Filer abox.o action.o appinfo.o appmenu.o bind.o bookmarks.o cell_icon.o choices.o collection.o dir.o diritem.o display.o dnd.o dropbox.o filer.o find.o fscache.o gtksavebox.o gui_support.o i18n.o icon.o infobox.o main.o menu.o minibuffer.o modechange.o mount.o options.o panel.o pinboard.o pixmaps.o remote.o rox_gettext.o run.o sc.o session.o support.o tasklist.o toolbar.o type.o usericons.o view_collection.o view_details.o view_iface.o wrapped.o xml.o   -L/usr/X11R6/lib -lX11   -lICE -lSM `pkg-config --libs gtk+-2.0 libxml-2.0`
 [5-ERROR] Done
 [5-ERROR] ROX-Filer 2.0.1
 [5-ERROR] Copyright (C) 2003 Thomas Leonard.
@@ -45,8 +39,8 @@
 [5-ERROR] under the terms of the GNU General Public License.
 [5-ERROR] For more information about these matters, see the file named COPYING.
 [5-ERROR] 
-[5-ERROR] Compiled with GTK version 2.4.0
-[5-ERROR] Running with GTK version 2.4.0
+[5-ERROR] Compiled with GTK version 2.4.7
+[5-ERROR] Running with GTK version 2.4.7
 [5-ERROR] 
 [5-ERROR] -- features set at compile time --
 [5-ERROR] 
@@ -69,24 +63,24 @@
 [5-ERROR] Aborting...
 [5-ERROR] --- BUILD ERROR ---
 [5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] processing static lib corrections ...
-[5-ERROR] Found 7 files for this package.
-[5-ERROR] Clear (old) md5sums and cksums ...
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 1 files for this package.
+[5-ERROR] Applying package split: 40 rox-filer:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 rox-filer:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 rox-filer:doc /share/doc/
 [5-ERROR] Calculating package dependencies ...
-[5-ERROR] Creating md5sum and cksum files ... done.
-[5-ERROR] Creating package description ...
+[5-ERROR] <rox-filer:doc> Creating flist file ...
+[5-ERROR] <rox-filer:doc> Creating package dependencies file ...
+[5-ERROR] <rox-filer:doc> Creating md5sum and cksum files ...
+[5-ERROR] <rox-filer:doc> Creating package description ...
 [5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building rox-filer=rox-filer.
 
-[9-ERROR] gcc-3  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o tasklist.o tasklist.c
-[9-ERROR] gcc-3  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o toolbar.o toolbar.c
-[9-ERROR] gcc-3  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o type.o type.c
-[9-ERROR] gcc-3  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o usericons.o usericons.c
-[9-ERROR] gcc-3  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o view_collection.o view_collection.c
-[9-ERROR] gcc-3  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o view_details.o view_details.c
-[9-ERROR] gcc-3  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o view_iface.o view_iface.c
-[9-ERROR] gcc-3  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o wrapped.o wrapped.c
-[9-ERROR] gcc-3  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o xml.o xml.c
-[9-ERROR] gcc-3 -o ../Linux-ix86/ROX-Filer abox.o action.o appinfo.o appmenu.o bind.o bookmarks.o cell_icon.o choices.o collection.o dir.o diritem.o display.o dnd.o dropbox.o filer.o find.o fscache.o gtksavebox.o gui_support.o i18n.o icon.o infobox.o main.o menu.o minibuffer.o modechange.o mount.o options.o panel.o pinboard.o pixmaps.o remote.o rox_gettext.o run.o sc.o session.o support.o tasklist.o toolbar.o type.o usericons.o view_collection.o view_details.o view_iface.o wrapped.o xml.o   -L/usr/X11R6/lib -lX11   -lICE -lSM `pkg-config --libs gtk+-2.0 libxml-2.0`
+[9-ERROR] gcc-32  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o view_iface.o view_iface.c
+[9-ERROR] gcc-32  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o wrapped.o wrapped.c
+[9-ERROR] gcc-32  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o xml.o xml.c
+[9-ERROR] gcc-32 -o ../Linux-ix86/ROX-Filer abox.o action.o appinfo.o appmenu.o bind.o bookmarks.o cell_icon.o choices.o collection.o dir.o diritem.o display.o dnd.o dropbox.o filer.o find.o fscache.o gtksavebox.o gui_support.o i18n.o icon.o infobox.o main.o menu.o minibuffer.o modechange.o mount.o options.o panel.o pinboard.o pixmaps.o remote.o rox_gettext.o run.o sc.o session.o support.o tasklist.o toolbar.o type.o usericons.o view_collection.o view_details.o view_iface.o wrapped.o xml.o   -L/usr/X11R6/lib -lX11   -lICE -lSM `pkg-config --libs gtk+-2.0 libxml-2.0`
 [9-ERROR] Done
 [9-ERROR] ROX-Filer 2.0.1
 [9-ERROR] Copyright (C) 2003 Thomas Leonard.
@@ -96,8 +90,8 @@
 [9-ERROR] under the terms of the GNU General Public License.
 [9-ERROR] For more information about these matters, see the file named COPYING.
 [9-ERROR] 
-[9-ERROR] Compiled with GTK version 2.4.0
-[9-ERROR] Running with GTK version 2.4.0
+[9-ERROR] Compiled with GTK version 2.4.7
+[9-ERROR] Running with GTK version 2.4.7
 [9-ERROR] 
 [9-ERROR] -- features set at compile time --
 [9-ERROR] 
@@ -120,11 +114,17 @@
 [9-ERROR] Aborting...
 [9-ERROR] --- BUILD ERROR ---
 [9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] processing static lib corrections ...
-[9-ERROR] Found 7 files for this package.
-[9-ERROR] Clear (old) md5sums and cksums ...
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 1 files for this package.
+[9-ERROR] Applying package split: 40 rox-filer:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 rox-filer:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 rox-filer:doc /share/doc/
 [9-ERROR] Calculating package dependencies ...
-[9-ERROR] Creating md5sum and cksum files ... done.
-[9-ERROR] Creating package description ...
+[9-ERROR] <rox-filer:doc> Creating flist file ...
+[9-ERROR] <rox-filer:doc> Creating package dependencies file ...
+[9-ERROR] <rox-filer:doc> Creating md5sum and cksum files ...
+[9-ERROR] <rox-filer:doc> Creating package description ...
 [9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building rox-filer=rox-filer.
 

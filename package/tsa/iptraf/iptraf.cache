@@ -20,15 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087250106 Mon Jun 14 23:55:06 2004
+[TIMESTAMP] 1093116745 Sat Aug 21 21:32:25 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-iptraf.log 9-iptraf.log
 
-[BUILDTIME] 3134 (9)
-[SIZE] 0.86 MB, 108 files
+[BUILDTIME] 2489 (9)
+[SIZE] 0.21 MB, 13 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils findutils gcc3
-[DEP] glibc23 grep linux24-header make ncurses patch sed sysfiles tar
+[DEP] 00-dirtree bash binutils bzip2 coreutils findutils gcc32 gcc32:dev
+[DEP] glibc23 glibc23:dev grep linux24-header:dev make ncurses ncurses:dev
+[DEP] patch sed sysfiles tar
 

@@ -20,15 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087439907 Thu Jun 17 04:38:27 2004
+[TIMESTAMP] 1093283067 Mon Aug 23 19:44:27 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-pegasus.log 9-pegasus.log
 
-[BUILDTIME] 9729 (9)
-[SIZE] 46.89 MB, 2549 files
+[BUILDTIME] 8231 (9)
+[SIZE] 41.89 MB, 2358 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils findutils gawk gcc3
-[DEP] glibc23 grep linux24-header make sed sysfiles tar
+[DEP] 00-dirtree bash binutils bzip2 coreutils findutils gawk gcc32
+[DEP] gcc32:dev glibc23 glibc23:dev grep linux24-header:dev make patch
+[DEP] sed sysfiles tar
 

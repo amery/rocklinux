@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087275551 Tue Jun 15 06:59:11 2004
+[TIMESTAMP] 1093137622 Sun Aug 22 03:20:22 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-gail.log 9-gail.log
 
-[BUILDTIME] 19178 (9)
-[SIZE] 0.99 MB, 102 files
+[BUILDTIME] 18043 (9)
+[SIZE] 1.04 MB, 104 files
 
-[DEP] 00-dirtree atk bash binutils bzip2 ccache coreutils diffutils
-[DEP] findutils gawk gcc3 gettext glib glibc23 grep gtk+ libart_lgpl23
-[DEP] libgnomecanvas linux24-header make mktemp net-tools pango pkgconfig
-[DEP] sed sysfiles tar util-linux xfree86
+[DEP] 00-dirtree atk atk:dev bash binutils bzip2 coreutils diffutils
+[DEP] findutils gawk gcc32 gcc32:dev gettext glib glib:dev glibc23
+[DEP] glibc23:dev glibmm grep gtk+ gtk+:dev libart_lgpl23 libart_lgpl23:dev
+[DEP] libgnomecanvas libgnomecanvas:dev linux24-header:dev make mktemp
+[DEP] net-tools pango pango:dev pkgconfig sed sysfiles tar util-linux
+[DEP] xfree86 xfree86:dev
 

@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087327344 Tue Jun 15 21:22:24 2004
+[TIMESTAMP] 1093160147 Sun Aug 22 09:35:47 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-samba.log 9-samba.log
 
-[BUILDTIME] 106292 (9)
-[SIZE] 30.59 MB, 571 files
+[BUILDTIME] 100333 (9)
+[SIZE] 29.33 MB, 560 files
 
-[DEP] 00-dirtree acl attr bash binutils bzip2 ccache coreutils cups
-[DEP] diffutils findutils gawk gcc3 glibc23 grep libcap linux24-header
-[DEP] m4 make mktemp ncurses net-tools openldap openssl pam popt readline
-[DEP] sed sysfiles tar util-linux valgrind
+[DEP] 00-dirtree acl acl:dev attr attr:dev bash binutils bzip2 coreutils
+[DEP] cups cups:dev diffutils findutils gawk gcc32 gcc32:dev glibc23
+[DEP] glibc23:dev grep libcap:dev linux24-header:dev m4 make mktemp
+[DEP] ncurses:dev net-tools openldap openldap:dev openssl pam pam:dev
+[DEP] popt popt:dev readline readline:dev sed sysfiles tar util-linux
+[DEP] valgrind:dev
 

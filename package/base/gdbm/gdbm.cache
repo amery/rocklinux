@@ -20,15 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087215752 Mon Jun 14 14:22:32 2004
+[TIMESTAMP] 1093083521 Sat Aug 21 12:18:41 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 3-gdbm.log 9-gdbm.log
 
-[BUILDTIME] 4211 (9)
-[SIZE] 0.18 MB, 27 files
+[BUILDTIME] 3446 (9)
+[SIZE] 0.08 MB, 14 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils diffutils findutils
-[DEP] gcc3 glibc23 grep make mktemp net-tools sed sysfiles tar util-linux
+[DEP] 00-dirtree bash binutils bzip2 coreutils diffutils findutils gcc32
+[DEP] gcc32:dev glibc23 glibc23:dev grep make mktemp net-tools sed sysfiles
+[DEP] tar util-linux
 

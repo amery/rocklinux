@@ -20,17 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087432447 Thu Jun 17 02:34:07 2004
+[TIMESTAMP] 1093277099 Mon Aug 23 18:04:59 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-dvgrab.log 9-dvgrab.log
 
-[BUILDTIME] 4922 (9)
-[SIZE] 0.21 MB, 16 files
+[BUILDTIME] 4246 (9)
+[SIZE] 0.16 MB, 8 files
 
-[DEP] 00-dirtree a52dec bash binutils bzip2 ccache coreutils diffutils
-[DEP] findutils gcc3 glibc23 grep libavc1394 libdv libjpeg libpng
-[DEP] libraw1394 linux24-header make mktemp net-tools ogg-vorbis patch
-[DEP] sed sysfiles tar util-linux
+[DEP] 00-dirtree a52dec:dev bash binutils bzip2 coreutils diffutils
+[DEP] findutils gcc32 gcc32:dev glibc23 glibc23:dev grep libavc1394
+[DEP] libavc1394:dev libdv libdv:dev libjpeg libjpeg:dev libmpeg3:dev
+[DEP] libpng libraw1394 libraw1394:dev linux24-header:dev make mktemp
+[DEP] net-tools ogg-vorbis patch sed sysfiles tar util-linux
 

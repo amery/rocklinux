@@ -20,17 +20,69 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087242827 Mon Jun 14 21:53:47 2004
+[TIMESTAMP] 1093099551 Sat Aug 21 16:45:51 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-orbit10.log 9-orbit10.log
+[LOGS] 5-orbit10.log 9-orbit10.err
 
-[BUILDTIME] 16217 (9)
-[SIZE] 2.26 MB, 146 files
+[BUILDTIME] 15022 (5)
+[SIZE] 1.06 MB, 70 files
 
-[DEP] 00-dirtree autoconf automake bash binutils bison bzip2 ccache
-[DEP] coreutils diffutils findutils flex gawk gcc3 gettext glib12 glibc23
-[DEP] grep indent linux24-header m4 make mktemp net-tools perl5 sed
-[DEP] sysfiles tar tcp_wrappers texinfo util-linux
+[DEP] 00-dirtree autoconf automake18 bash binutils bison bzip2 coreutils
+[DEP] diffutils findutils flex flex:dev gawk gcc32 gcc32:dev gettext glib12
+[DEP] glib12:dev glibc23 glibc23:dev gnome-libs14 grep gtkhtml10 indent
+[DEP] linux24-header:dev m4 make mktemp net-tools perl5 sed sysfiles tar
+[DEP] tcp_wrappers:dev texinfo util-linux
+
+[9-ERROR] `./docs/CONVENTIONS.txt' -> `/opt/gnome/share/doc/orbit10/CONVENTIONS.txt'
+[9-ERROR] `./docs/IDEA1' -> `/opt/gnome/share/doc/orbit10/IDEA1'
+[9-ERROR] `./docs/POA.txt' -> `/opt/gnome/share/doc/orbit10/POA.txt'
+[9-ERROR] `./docs/Using-POA.txt' -> `/opt/gnome/share/doc/orbit10/Using-POA.txt'
+[9-ERROR] `./docs/idl/orb.idl' -> `/opt/gnome/share/doc/orbit10/idl/orb.idl'
+[9-ERROR] `./docs/idl/dynany.idl' -> `/opt/gnome/share/doc/orbit10/idl/dynany.idl'
+[9-ERROR] `./docs/idl/iop.idl' -> `/opt/gnome/share/doc/orbit10/idl/iop.idl'
+[9-ERROR] `./docs/idl/poa.idl' -> `/opt/gnome/share/doc/orbit10/idl/poa.idl'
+[9-ERROR] `./docs/idl-compiler-2.txt' -> `/opt/gnome/share/doc/orbit10/idl-compiler-2.txt'
+[9-ERROR] `./docs/idl-compiler.txt' -> `/opt/gnome/share/doc/orbit10/idl-compiler.txt'
+[9-ERROR] `./docs/omg-tags.txt' -> `/opt/gnome/share/doc/orbit10/omg-tags.txt'
+[9-ERROR] `./docs/orbit-mem.txt' -> `/opt/gnome/share/doc/orbit10/orbit-mem.txt'
+[9-ERROR] `AUTHORS' -> `/opt/gnome/share/doc/orbit10/AUTHORS'
+[9-ERROR] `COPYING' -> `/opt/gnome/share/doc/orbit10/COPYING'
+[9-ERROR] `INSTALL' -> `/opt/gnome/share/doc/orbit10/INSTALL'
+[9-ERROR] `NEWS' -> `/opt/gnome/share/doc/orbit10/NEWS'
+[9-ERROR] `ORBit.m4' -> `/opt/gnome/share/doc/orbit10/ORBit.m4'
+[9-ERROR] `ORBit.pc' -> `/opt/gnome/share/doc/orbit10/ORBit.pc'
+[9-ERROR] `ORBit.pc.in' -> `/opt/gnome/share/doc/orbit10/ORBit.pc.in'
+[9-ERROR] `ORBit.spec' -> `/opt/gnome/share/doc/orbit10/ORBit.spec'
+[9-ERROR] `ORBit.spec.in' -> `/opt/gnome/share/doc/orbit10/ORBit.spec.in'
+[9-ERROR] `README' -> `/opt/gnome/share/doc/orbit10/README'
+[9-ERROR] `TODO' -> `/opt/gnome/share/doc/orbit10/TODO'
+[9-ERROR] `ChangeLog' -> `/opt/gnome/share/doc/orbit10/ChangeLog'
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 168 files for this package.
+[9-ERROR] Applying package split: 40 orbit10:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 orbit10:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 orbit10:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <orbit10> Creating flist file ...
+[9-ERROR] <orbit10> Creating package dependencies file ...
+[9-ERROR] <orbit10> Creating md5sum and cksum files ...
+[9-ERROR] <orbit10> Creating package description ...
+[9-ERROR] <orbit10:dev> Creating flist file ...
+[9-ERROR] <orbit10:dev> Creating package dependencies file ...
+[9-ERROR] <orbit10:dev> Creating md5sum and cksum files ...
+[9-ERROR] <orbit10:dev> Creating package description ...
+[9-ERROR] <orbit10:doc> Creating flist file ...
+[9-ERROR] <orbit10:doc> Creating package dependencies file ...
+[9-ERROR] <orbit10:doc> Creating md5sum and cksum files ...
+[9-ERROR] <orbit10:doc> Creating package description ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] opt/gnome/share/info/dir: glib12 orbit10
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] removed `/var/adm/logs/9-orbit10.log'
+[9-ERROR] Finished building orbit10=orbit10.
 

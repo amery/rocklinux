@@ -20,18 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087279142 Tue Jun 15 07:59:02 2004
+[TIMESTAMP] 1093140027 Sun Aug 22 04:00:27 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-libwnck.log 9-libwnck.log
 
-[BUILDTIME] 9505 (9)
-[SIZE] 0.63 MB, 96 files
+[BUILDTIME] 8926 (9)
+[SIZE] 0.39 MB, 79 files
 
-[DEP] 00-dirtree atk autoconf bash binutils bzip2 ccache coreutils
-[DEP] diffutils expat findutils freetype gcc3 gconf-editor gettext glib
-[DEP] glibc23 grep gtk+ linux24-header make mktemp net-tools pango perl5
-[DEP] pkgconfig sed startup-notification sysfiles tar texinfo util-linux
-[DEP] xfree86
+[DEP] 00-dirtree atk atk:dev autoconf bash binutils bzip2 coreutils
+[DEP] diffutils expat findutils freetype gcc32 gcc32:dev gettext
+[DEP] glib glib:dev glibc23 glibc23:dev glibmm grep gtk+ gtk+:dev
+[DEP] linux24-header:dev make mktemp net-tools pango pango:dev perl5
+[DEP] pkgconfig sed startup-notification startup-notification:dev sysfiles
+[DEP] tar texinfo util-linux xfree86 xfree86:dev
 

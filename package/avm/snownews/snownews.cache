@@ -20,16 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087407932 Wed Jun 16 19:45:32 2004
+[TIMESTAMP] 1093251821 Mon Aug 23 11:03:41 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-snownews.log 9-snownews.log
 
-[BUILDTIME] 2644 (9)
-[SIZE] 0.29 MB, 42 files
+[BUILDTIME] 2132 (9)
+[SIZE] 0.21 MB, 21 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils findutils gcc3
-[DEP] gettext glibc23 grep libxml2 linux24-header make man ncurses sed
-[DEP] sysfiles tar util-linux zlib
+[DEP] 00-dirtree bash binutils bzip2 coreutils findutils gcc32
+[DEP] gcc32:dev gettext glibc23 glibc23:dev grep libxml2 libxml2:dev
+[DEP] linux24-header:dev make man:doc ncurses ncurses:dev sed sysfiles
+[DEP] tar zlib zlib:dev
 

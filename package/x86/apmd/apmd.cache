@@ -20,15 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087282346 Tue Jun 15 08:52:26 2004
+[TIMESTAMP] 1093142296 Sun Aug 22 04:38:16 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-apmd.log 9-apmd.log
 
-[BUILDTIME] 2122 (9)
-[SIZE] 0.19 MB, 30 files
+[BUILDTIME] 1725 (9)
+[SIZE] 0.12 MB, 18 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils findutils gcc3
-[DEP] glibc23 grep linux24-src make man patch sed sysfiles tar xfree86
+[DEP] 00-dirtree bash binutils bzip2 coreutils findutils gcc32 gcc32:dev
+[DEP] glibc23 glibc23:dev grep linux24-source linux24-source:dev make
+[DEP] patch sed sysfiles tar xfree86 xfree86:dev
 

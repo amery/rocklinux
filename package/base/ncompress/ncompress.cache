@@ -20,15 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087220763 Mon Jun 14 15:46:03 2004
+[TIMESTAMP] 1093087146 Sat Aug 21 13:19:06 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-ncompress.log 9-ncompress.log
 
-[BUILDTIME] 2062 (9)
-[SIZE] 0.05 MB, 13 files
+[BUILDTIME] 1583 (9)
+[SIZE] 0.04 MB, 9 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils findutils gcc3
-[DEP] glibc23 grep linux24-header make ncurses patch sed sysfiles tar
+[DEP] 00-dirtree bash binutils bzip2 coreutils findutils gcc32 gcc32:dev
+[DEP] glibc23 glibc23:dev grep linux24-header:dev make ncurses patch sed
+[DEP] sysfiles tar
 

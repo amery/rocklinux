@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087262730 Tue Jun 15 03:25:30 2004
+[TIMESTAMP] 1093131077 Sun Aug 22 01:31:17 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-libglade.log 9-libglade.log
 
-[BUILDTIME] 4828 (9)
-[SIZE] 0.84 MB, 87 files
+[BUILDTIME] 4671 (9)
+[SIZE] 0.73 MB, 77 files
 
-[DEP] 00-dirtree atk bash binutils bzip2 ccache coreutils diffutils
-[DEP] docbookx expat findutils freetype gcc3 gettext glib glibc23 grep gtk+
-[DEP] libxml2 linux24-header make mktemp net-tools numpy pango pkgconfig
-[DEP] python sed sysfiles tar util-linux xfree86 zlib
+[DEP] 00-dirtree atk atk:dev bash binutils bzip2 coreutils diffutils
+[DEP] docbookx expat findutils freetype gcc32 gcc32:dev gettext glib
+[DEP] glib:dev glibc23 glibc23:dev glibmm grep gtk+ gtk+:dev libxml2
+[DEP] libxml2:dev linux24-header:dev make mktemp net-tools numpy pango
+[DEP] pango:dev pkgconfig python sed sysfiles tar util-linux xfree86
+[DEP] zlib:dev
 

@@ -20,16 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087449014 Thu Jun 17 07:10:14 2004
+[TIMESTAMP] 1093289969 Mon Aug 23 21:39:29 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 3-parted.log 9-parted.log
 
-[BUILDTIME] 9229 (9)
-[SIZE] 2.22 MB, 73 files
+[BUILDTIME] 8489 (9)
+[SIZE] 1.16 MB, 35 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils diffutils e2fsprogs
-[DEP] findutils gcc3 gettext glibc23 grep linux24-header make mktemp
-[DEP] ncurses net-tools readline sed shadow sysfiles tar texinfo util-linux
+[DEP] 00-dirtree bash binutils bzip2 coreutils diffutils e2fsprogs:dev
+[DEP] findutils gcc32 gcc32:dev gettext glibc23 glibc23:dev grep
+[DEP] linux24-header:dev make mktemp ncurses:dev net-tools readline
+[DEP] readline:dev sed sysfiles tar texinfo util-linux
 

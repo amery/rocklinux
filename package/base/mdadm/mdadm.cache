@@ -20,15 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1087408202 Wed Jun 16 19:50:02 2004
+[TIMESTAMP] 1093252042 Mon Aug 23 11:07:22 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-mdadm.log 9-mdadm.log
 
-[BUILDTIME] 2343 (9)
-[SIZE] 0.16 MB, 15 files
+[BUILDTIME] 1814 (9)
+[SIZE] 0.12 MB, 10 files
 
-[DEP] 00-dirtree bash binutils bzip2 ccache coreutils findutils gcc3
-[DEP] glibc23 grep groff linux24-header make sed sysfiles tar
+[DEP] 00-dirtree bash binutils bzip2 coreutils findutils gcc32 gcc32:dev
+[DEP] glibc23 glibc23:dev grep groff linux24-header:dev make sed
+[DEP] sysfiles tar
 

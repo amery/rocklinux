@@ -99,7 +99,8 @@ else
 	rm -f "$x"
 fi
 
-if [ -z "`type -p sed`" ] || ! sed -i s/a/b/ < /dev/null 2> /dev/null
+tmpfile=`mktemp`
+if [ -z "`type -p sed`" ] || ! sed -i s/a/b/ $tmpfile 2> /dev/null
 then
 	echo
 	echo "Paranoia Check: Program 'sed' not found or too old!"
@@ -107,6 +108,7 @@ then
 	echo "(GNU/sed since 2001-09-25). Install the latest sed version."
 	found_error=1
 fi
+rm -f $tmpfile
 
 if [ $found_error -ne 0 ] ; then
 	echo

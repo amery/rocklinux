@@ -39,7 +39,7 @@ then
 			for i in `grep " DIETLIBC " config/$config.$swpid/packages | \
 					cut -f5 -d" " | sort`
 			do
-				x="${i//-/_}" ; x="${x//+/_}"
+				x="${i//-/_}" ; x="${x//+/_}" ; x="${x#*=}"
 				bool "Build package with dietlibc: $i" \
 				     "ROCKCFG_DIETLIBC_${x}" 0
 			done

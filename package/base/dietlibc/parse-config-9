@@ -49,7 +49,7 @@ function add_lib () {
 if [ "$ROCKCFG_DIETLIBC_ALL" = 1 -o "$pkg" = "dietlibc" ]; then
 	pkg_dietlibc_useit=1
 else
-	x="${pkg//-/_}" ; x="${x//+/_}"
+	x="${pkg//-/_}" ; x="${x//+/_}" ; x="${x#*=}"
 	eval "pkg_dietlibc_useit=\$ROCKCFG_DIETLIBC_${x}"
 fi
 [ "$pkg_dietlibc_useit" != 1 ] && pkg_dietlibc_useit=0

@@ -1,0 +1,38 @@
+--- ./configure.ac.orig	2004-12-13 15:52:30.369565408 +0100
++++ ./configure.ac	2004-12-13 15:53:04.141431304 +0100
+@@ -723,7 +723,7 @@
+   SASL_INCLUDED=1
+ else
+   AC_MSG_RESULT(no)
+-  AC_MSG_CHECKING([if <sasl/sasl.h> works])
++  AC_MSG_CHECKING([if <sasl2/sasl.h> works])
+   AC_COMPILE_IFELSE([[#include <sasl/sasl.h>
+   int main(int argc,char **argv){ int v = SASL_LOG_PASS; }]],P_HAS_SASL_SASL_H=1)
+   if test "${P_HAS_SASL_SASL_H}x" != "x" ; then
+--- ./configure.orig	2004-12-13 15:52:23.727575144 +0100
++++ ./configure	2004-12-13 15:53:36.228553320 +0100
+@@ -5138,10 +5138,10 @@
+ else
+   echo "$as_me:$LINENO: result: no" >&5
+ echo "${ECHO_T}no" >&6
+-  echo "$as_me:$LINENO: checking if <sasl/sasl.h> works" >&5
+-echo $ECHO_N "checking if <sasl/sasl.h> works... $ECHO_C" >&6
++  echo "$as_me:$LINENO: checking if <sasl2/sasl.h> works" >&5
++echo $ECHO_N "checking if <sasl2/sasl.h> works... $ECHO_C" >&6
+   cat >conftest.$ac_ext <<_ACEOF
+-#include <sasl/sasl.h>
++#include <sasl2/sasl.h>
+   int main(int argc,char **argv){ int v = SASL_LOG_PASS; }
+ _ACEOF
+ rm -f conftest.$ac_objext
+--- ./src/ptclib/psasl.cxx.orig	2004-12-13 16:21:32.500721216 +0100
++++ ./src/ptclib/psasl.cxx	2004-12-13 16:21:41.794308376 +0100
+@@ -58,7 +58,7 @@
+ extern "C" {
+ 
+ #if P_HAS_SASL_SASL_H
+-#include <sasl/sasl.h>
++#include <sasl2/sasl.h>
+ #else
+ #include <sasl.h>
+ #endif

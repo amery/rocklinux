@@ -1,10 +1,11 @@
 #!/bin/sh
 
-prefix=/opt/kde3/share/config/kdm/
+confprefix=/opt/kde3/share/config/kdm/
+sessprefix=/opt/kde3/share/apps/kdm/sessions/
 
 echo "Creating kdm session scripts from ROCK wm registry ..."
 
-cat $prefix/Xsession.pre > $prefix/Xsession 
+cat $confprefix/Xsession.pre > $confprefix/Xsession 
 
 sessions="default,failsafe"
 
@@ -12,19 +13,33 @@ for x in /usr/share/rock-registry/wm/* ; do
 	. $x
 
 	short="`basename $x`"
-	echo "  $name ($short) ..."
+	echo -n "  $name ($short) ..."
 
 	sessions="$sessions,$short"
 
 	# adding the case entry ... damn kdm ...
 	echo -e "    $short)\n	exec $exec\n	;;" \
-		>> $prefix/Xsession
+		>> $confprefix/Xsession
+	
+	# Session Types are now outside kdmrc as .desktop files
+	if [ -z "$(grep -R $(basename $exec) $sessprefix 2>/dev/null)" ] ; then
+			cat >$sessprefix/$short.desktop <<EOS
+[Desktop Entry]
+Type=XSession
+Exec=$exec
+TryExec=$exec
+Name=$name
+EOS
+	 	 echo " $short.desktop ..."
+     else
+		 echo
+	 fi
 done
 
-cat $prefix/Xsession.post >> $prefix/Xsession
-chmod +x $prefix/Xsession
+cat $confprefix/Xsession.post >> $confprefix/Xsession
+chmod +x $confprefix/Xsession
 
-echo "Adapting the kdmrc ..."
-sed "s/SessionTypes=.*/SessionTypes=$sessions/" $prefix/kdmrc > $prefix/kdmrc.new
-mv $prefix/kdmrc.new $prefix/kdmrc
+#echo "Adapting the kdmrc ..."
+#sed "s/SessionTypes=.*/SessionTypes=$sessions/" $confprefix/kdmrc > $confprefix/kdmrc.new
+#mv $confprefix/kdmrc.new $confprefix/kdmrc
  

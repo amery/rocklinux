@@ -296,11 +296,11 @@ choice_action() {
 		else command="$command '$1' '${2//_/ }' OFF" ; fi
 		shift ; shift
 	done
-	eval "$command" 2> config.out
+	eval "$command" 2> config.out.$swpid
 
 	case "$?" in
 		0|6)
-			eval "$item='`cat config.out`'"
+			eval "$item='`cat config.out.$swpid`'"
 			;;
 		1|255) return 0 ;;
 		2) echo "No help." ; sleep 1 ;;
@@ -335,8 +335,8 @@ text() {
 text_action() {
 	./src/rockdialog.bin --title 'Build Config' \
 		--backtitle "$configtitle" \
-		--inputbox "$1" 9 $(( $columns - 5 )) "$3" 2> config.out
-	[ "$?" -eq 0 -o "$?" -eq 1 ] && eval "$2=\"\$(cat config.out)\""
+		--inputbox "$1" 9 $(( $columns - 5 )) "$3" 2> config.out.$swpid
+	[ "$?" -eq 0 -o "$?" -eq 1 ] && eval "$2=\"\$(cat config.out.$swpid)\""
 }
 
 bool() {
@@ -414,10 +414,10 @@ editfile_action() {
 	./src/rockdialog.bin --title 'Build Config' \
 		--backtitle "$configtitle" \
 		--inputbox "$3 - Line $3"  \
-		9 $(( $columns - 5 )) "$line" 2> config.out
+		9 $(( $columns - 5 )) "$line" 2> config.out.$swpid
 
 	head -n $(( $2 - 1 )) $1 > $1.new
-	[ -s config.out ] && echo "`cat config.out`" >> $1.new
+	[ -s config.out.$swpid ] && echo "`cat config.out.$swpid`" >> $1.new
 	tail -n +$(( $2 + 1 )) $1 >> $1.new
 
 	mv $1.new $1

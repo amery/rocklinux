@@ -1,0 +1,1439 @@
+diff -u -p -r -b ipw2100-0.55.orig/ieee80211_crypt.c ipw2100-0.55/ieee80211_crypt.c
+--- ipw2100-0.55.orig/ieee80211_crypt.c	2004-09-27 19:29:17.000000000 +0200
++++ ipw2100-0.55/ieee80211_crypt.c	2004-09-28 21:10:53.000000000 +0200
+@@ -55,7 +55,9 @@ void ieee80211_crypt_deinit_entries(stru
+ 
+ 		if (entry->ops) {
+ 			entry->ops->deinit(entry->priv);
++#if LINUX_VERSION_CODE > KERNEL_VERSION(2,6,0)
+ 			module_put(entry->ops->owner);
++#endif
+ 		}
+ 		kfree(entry);
+ 	}
+diff -u -p -r -b ipw2100-0.55.orig/ieee80211_module.c ipw2100-0.55/ieee80211_module.c
+--- ipw2100-0.55.orig/ieee80211_module.c	2004-09-27 19:29:17.000000000 +0200
++++ ipw2100-0.55/ieee80211_module.c	2004-09-28 21:10:53.000000000 +0200
+@@ -157,7 +157,9 @@ void ieee80211_free(struct ieee80211_dev
+ 		if (crypt) {
+ 			if (crypt->ops) {
+ 				crypt->ops->deinit(crypt->priv);
++#if LINUX_VERSION_CODE > KERNEL_VERSION(2,6,0)
+ 				module_put(crypt->ops->owner);
++#endif
+ 			}
+ 			kfree(crypt);
+ 			ieee->crypt[i] = NULL;
+diff -u -p -r -b ipw2100-0.55.orig/ieee80211_wx.c ipw2100-0.55/ieee80211_wx.c
+--- ipw2100-0.55.orig/ieee80211_wx.c	2004-09-27 19:29:17.000000000 +0200
++++ ipw2100-0.55/ieee80211_wx.c	2004-09-28 21:10:53.000000000 +0200
+@@ -237,7 +237,11 @@ int ieee80211_wx_set_encode(struct ieee8
+ 			new_crypt->ops = ieee80211_get_crypto_ops("WEP");
+ 		}
+ 
++#if LINUX_VERSION_CODE > KERNEL_VERSION(2,6,0)
+ 		if (new_crypt->ops && try_module_get(new_crypt->ops->owner)) 
++#else
++		if (new_crypt->ops)
++#endif
+ 			new_crypt->priv = new_crypt->ops->init(key);
+ 
+ 		if (!new_crypt->ops || !new_crypt->priv) {
+diff -u -p -r -b ipw2100-0.55.orig/ipw2100.c ipw2100-0.55/ipw2100.c
+--- ipw2100-0.55.orig/ipw2100.c	2004-09-27 19:29:17.000000000 +0200
++++ ipw2100-0.55/ipw2100.c	2004-09-28 21:10:53.000000000 +0200
+@@ -358,6 +358,10 @@ static void ipw2100_queues_initialize(st
+ static void ipw2100_queues_free(struct ipw2100_priv *priv);
+ static int ipw2100_queues_allocate(struct ipw2100_priv *priv);
+ 
++static void ipw2100_proc_cleanup(void);
++static void ipw2100_proc_dev_cleanup(struct ipw2100_priv *priv);
++static int ipw2100_proc_dev_init(struct ipw2100_priv *priv);
++
+ static inline int ipw2100_hw_is_adapter_in_system(struct net_device *dev)
+ {
+ 	return (dev->base_addr && 
+@@ -3064,26 +3068,35 @@ static void ipw2100_msg_free(struct ipw2
+ 	priv->msg_buffers = NULL;
+ }
+ 
+-static ssize_t show_pci(struct device *d, char *buf)
++static struct proc_dir_entry *ipw2100_proc = NULL;
++
++static int proc_get_pci(char *page, char **start,
++		       off_t offset, int count,
++		       int *eof, void *data)
+ {
+-	struct pci_dev *pdev = container_of(d, struct pci_dev, dev);
+-	char * out = buf;
+-	int i, j;
++	struct net_device *dev = data;
++	struct ipw2100_priv *priv = ipw2100_netdev(dev);
++	struct pci_dev *pdev = priv->pdev;
++	int i, j, len;
+ 	u32 val;
+ 
+-	out += sprintf(out, "PCI Configuration Data\n");
++	
++	len = 0;
++
++	len += snprintf(page + len, count - len, "PCI Configuration Data\n");
++	
+ 	for (i = 0; i < 16; i++) {
+-		out += sprintf(out, "[%08X] ", i * 16);
++		len += snprintf(page + len, count - len, "[%08X] ", i * 16);
+ 		for (j = 0; j < 16; j += 4) {
+ 			pci_read_config_dword(pdev, i * 16 + j, &val); 
+-			out += sprintf(out, "%08X ", val);
++			len += snprintf(page + len, count - len, "%08X ", val);
+ 		}
+-		out += sprintf(out, "\n");
++		len += snprintf(page + len, count - len, "\n");
+ 	}
+ 
+-	return out - buf;
++	*eof = 1;
++	return len;
+ }
+-static DEVICE_ATTR(pci, S_IRUGO, show_pci, NULL);
+ 
+ 
+ #define IPW2100_REG(x) { IPW_ ##x, #x }
+@@ -3263,37 +3276,48 @@ const struct {
+ };
+ 
+ 
+-static ssize_t show_registers(struct device *d, char *buf)
++static int proc_get_registers(char *page, char **start,
++		       off_t offset, int count,
++		       int *eof, void *data)
+ {
++	struct net_device *dev = data;
+ 	int i;
+-	struct ipw2100_priv *priv = dev_get_drvdata(d);
+-	struct net_device *dev = priv->ndev;
+-	char * out = buf;
++	int len = 0;
+ 	u32 val = 0;
+ 
+-	out += sprintf(out, "%30s [Address ] : Hex\n", "Register");
++	len += snprintf(page + len, count - len, 
++			"%30s [Address ] : Hex\n", "Register");
+ 	
+-	for (i = 0; i < (sizeof(hw_data) / sizeof(*hw_data)); i++) {
++	for (i = 0; 
++	     i < (sizeof(hw_data) / sizeof(*hw_data)); 
++	     i++) {
+ 		read_register(dev, hw_data[i].addr, &val);
+-		out += sprintf(out, "%30s [%08X] : %08X\n",
+-			       hw_data[i].name, hw_data[i].addr, val);
++
++		len += snprintf(page + len, count - len, 
++				"%30s [%08X] : %08X\n",
++				hw_data[i].name, hw_data[i].addr,
++				val);
+ 	}
+ 
+-	return out - buf;
++	*eof = 1;
++	return len;
+ }
+-static DEVICE_ATTR(registers, S_IRUGO, show_registers, NULL);
+ 
+ 
+-static ssize_t show_hardware(struct device *d, char *buf)
++static int proc_get_hw(char *page, char **start,
++		       off_t offset, int count,
++		       int *eof, void *data)
+ {
+-	struct ipw2100_priv *priv = dev_get_drvdata(d);
+-	struct net_device *dev = priv->ndev;
+-	char * out = buf;
++	struct net_device *dev = data;
+ 	int i;
++	int len = 0;
+ 
+-	out += sprintf(out, "%30s [Address ] : Hex\n", "NIC entry");
++	len += snprintf(page + len, count - len, 
++			"%30s [Address ] : Hex\n", "NIC entry");
+ 	
+-	for (i = 0; i < (sizeof(nic_data) / sizeof(*nic_data)); i++) {
++	for (i = 0; 
++	     i < (sizeof(nic_data) / sizeof(*nic_data)); 
++	     i++) {
+ 		u8 tmp8;
+ 		u16 tmp16;
+ 		u32 tmp32;
+@@ -3301,163 +3325,213 @@ static ssize_t show_hardware(struct devi
+ 		switch (nic_data[i].size) {
+ 		case 1:
+ 			read_nic_byte(dev, nic_data[i].addr, &tmp8);
+-			out += sprintf(out, "%30s [%08X] : %02X\n",
++			len += snprintf(page + len, count - len, 
++					"%30s [%08X] : %02X\n",
+ 				       nic_data[i].name, nic_data[i].addr,
+ 				       tmp8);
+ 			break;
+ 		case 2:
+ 			read_nic_word(dev, nic_data[i].addr, &tmp16);
+-			out += sprintf(out, "%30s [%08X] : %04X\n",
++			len += snprintf(page + len, count - len, 
++					"%30s [%08X] : %04X\n",
+ 				       nic_data[i].name, nic_data[i].addr,
+ 				       tmp16);
+ 			break;
+ 		case 4:
+ 			read_nic_dword(dev, nic_data[i].addr, &tmp32);
+-			out += sprintf(out, "%30s [%08X] : %08X\n",
++			len += snprintf(page + len, count - len, 
++					"%30s [%08X] : %08X\n",
+ 				       nic_data[i].name, nic_data[i].addr,
+ 				       tmp32);
+ 			break;
+ 		}
+ 	}
+-	return out - buf;
++	*eof = 1;
++	return len;
+ }
+-static DEVICE_ATTR(hardware, S_IRUGO, show_hardware, NULL);
+ 
+ 
+-static ssize_t show_memory(struct device *d, char *buf)
++static int proc_set_memory(struct file *file, const char *buffer,
++			   unsigned long count, void *data)
+ {
+-	struct ipw2100_priv *priv = dev_get_drvdata(d);
+-	struct net_device *dev = priv->ndev;
+-	static unsigned long loop = 0;
++	struct net_device *dev = data;
++	struct ipw2100_priv *priv = ipw2100_netdev(dev);
++	char buf[] = "0000";
++	unsigned long len = (sizeof(buf) - 1) > count ? count : 
++		sizeof(buf) - 1;
++	char *p = buf;
++
++	if (copy_from_user(buf, buffer, len)) {
++		IPW_DEBUG_INFO("can't copy data from userspace\n");
++                /* stupid? yes, but how do I signal an error here? */
++		return count;	
++	} else
++		buf[len] = 0;
++	
++	if (p[0] == '1' || (tolower(p[0]) == 'o' && tolower(p[1] == 'n'))) {
++		printk(KERN_INFO "%s: Setting memory dump to RAW mode.\n",
++		       dev->name);
++		priv->dump_raw = 1;
++	} else if (p[0] == '0' || 
++		   (tolower(p[0]) == 'o' && tolower(p[1] == 'f'))) {
++		printk(KERN_INFO "%s: Setting memory dump to HEX mode.\n",
++		       dev->name);
++		priv->dump_raw = 0;
++	} else if (tolower(p[0]) == 'r') {
++		printk(KERN_INFO "%s: Resetting firmware snapshot.\n",
++		       dev->name);
++		ipw2100_snapshot_free(priv);
++	} else 
++		printk(KERN_INFO "%s: Usage: 0|on = HEX, 1|off = RAW, "
++		       "reset = clear memory snapshot\n",
++		       dev->name);
++
++	return count;
++}
++
++static int proc_get_memory(char *page, char **start,
++			   off_t offset, int count,
++			   int *eof, void *data)
++{
++	struct net_device *dev = data;
++	struct ipw2100_priv *priv = ipw2100_netdev(dev);
+ 	int len = 0;
+-	u32 buffer[4];
++	static unsigned long loop = 0;
++	u32 buf[4];
+ 	int i;
+ 	char line[81];
+ 
+-	if (loop >= 0x30000)
++	if (offset == 0)
+ 		loop = 0;
+ 
+-	/* sysfs provides us PAGE_SIZE buffer */
+-	while (len < PAGE_SIZE - 128 && loop < 0x30000) {
++	/* If we've reached EOF or the user is cutting is short, then
++	 * restart the counter and return 0 bytes */
++	if (loop >= 0x30000) {
++		*start = NULL;
++		*eof = 1;
++		return 0;
++	}
++
++	/* Return around 2k per pass... */
++	while (count - len > 256 && 
++	       len < 2048 && 
++	       loop < 0x30000) {
+ 
+ 		if (priv->snapshot[0]) for (i = 0; i < 4; i++) 
+-			buffer[i] = *(u32 *)SNAPSHOT_ADDR(loop + i * 4);
++			buf[i] = *(u32 *)SNAPSHOT_ADDR(loop + i * 4);
+ 		else for (i = 0; i < 4; i++) 
+-			read_nic_dword(dev, loop + i * 4, &buffer[i]);
++			read_nic_dword(dev, loop + i * 4, &buf[i]);
+ 		
+ 		if (priv->dump_raw) 
+-			len += sprintf(buf + len,
++			len += snprintf(page + len, count - len, 
+ 				       "%c%c%c%c"
+ 				       "%c%c%c%c"
+ 				       "%c%c%c%c"
+ 				       "%c%c%c%c",
+-				       ((u8*)buffer)[0x0], 
+-				       ((u8*)buffer)[0x1], 
+-				       ((u8*)buffer)[0x2], 
+-				       ((u8*)buffer)[0x3], 
+-				       ((u8*)buffer)[0x4], 
+-				       ((u8*)buffer)[0x5], 
+-				       ((u8*)buffer)[0x6], 
+-				       ((u8*)buffer)[0x7], 
+-				       ((u8*)buffer)[0x8], 
+-				       ((u8*)buffer)[0x9], 
+-				       ((u8*)buffer)[0xa], 
+-				       ((u8*)buffer)[0xb], 
+-				       ((u8*)buffer)[0xc], 
+-				       ((u8*)buffer)[0xd], 
+-				       ((u8*)buffer)[0xe], 
+-				       ((u8*)buffer)[0xf]);
++					((u8*)buf)[0x0], 
++					((u8*)buf)[0x1], 
++					((u8*)buf)[0x2], 
++					((u8*)buf)[0x3], 
++					((u8*)buf)[0x4], 
++					((u8*)buf)[0x5], 
++					((u8*)buf)[0x6], 
++					((u8*)buf)[0x7], 
++					((u8*)buf)[0x8], 
++					((u8*)buf)[0x9], 
++					((u8*)buf)[0xa], 
++					((u8*)buf)[0xb], 
++					((u8*)buf)[0xc], 
++					((u8*)buf)[0xd], 
++					((u8*)buf)[0xe], 
++					((u8*)buf)[0xf]);
+ 		else
+-			len += sprintf(buf + len, "%s\n",
+-				       snprint_line(line, sizeof(line),
+-						    (u8*)buffer, 16, loop));
++			len += snprintf(page + len, count - len, "%s\n",
++					snprint_line(
++						line, sizeof(line), (u8*)buf, 
++						16, loop));
++
+ 		loop += 16;
+ 	}
+ 	
+-	return len;
+-}
+-
+-static ssize_t store_memory(struct device *d, const char *buf, size_t count)
+-{
+-	struct ipw2100_priv *priv = dev_get_drvdata(d);
+-	struct net_device *dev = priv->ndev;
+-	const char *p = buf;
+-
+-	if (count < 1)
+-		return count;
+-
+-	if (p[0] == '1' || 
+-	    (count >= 2 && tolower(p[0]) == 'o' && tolower(p[1]) == 'n')) {
+-		printk(KERN_INFO "%s: Setting memory dump to RAW mode.\n",
+-		       dev->name);
+-		priv->dump_raw = 1;
+-
+-	} else if (p[0] == '0' || (count >= 2 && tolower(p[0]) == 'o' &&
+-				  tolower(p[1]) == 'f')) {
+-		printk(KERN_INFO "%s: Setting memory dump to HEX mode.\n",
+-		       dev->name);
+-		priv->dump_raw = 0;
+-
+-	} else if (tolower(p[0]) == 'r') {
+-		printk(KERN_INFO "%s: Resetting firmware snapshot.\n",
+-		       dev->name);
+-		ipw2100_snapshot_free(priv);
+-
+-	} else 
+-		printk(KERN_INFO "%s: Usage: 0|on = HEX, 1|off = RAW, "
+-		       "reset = clear memory snapshot\n",
+-		       dev->name);
++	/* see comment in fs/proc/generic.c proc_file_read */
++	if (len) 
++		*start = (char*)len; 
++	else
++		*eof = 1;
+ 
+-	return count;
++	return len;
+ }
+-static DEVICE_ATTR(memory, S_IWUSR|S_IRUGO, show_memory, store_memory);
+ 
+ 
+-static ssize_t show_ordinals(struct device *d, char *buf)
++static int proc_get_ordinals(char *page, char **start,
++			     off_t offset, int count,
++			     int *eof, void *data)
+ {
+-	struct ipw2100_priv *priv = dev_get_drvdata(d);
+-	u32 val = 0;
++	struct net_device *dev = data;
++	struct ipw2100_priv *priv = ipw2100_netdev(dev);
+ 	int len = 0;
+ 	u32 val_len;
++	u32 val = 0;
+ 	static int loop = 0;
+ 
+-	if (loop >= sizeof(ord_data) / sizeof(*ord_data))
++	if (offset == 0)
+ 		loop = 0;
+ 
+-	/* sysfs provides us PAGE_SIZE buffer */
+-	while (len < PAGE_SIZE - 128 &&
++	/* If we've reached EOF or the user is cutting is short, then
++	 * restart the counter and return 0 bytes */
++	if (loop >= (sizeof(ord_data) / sizeof(*ord_data))) {
++		*start = NULL;
++		*eof = 1;
++		return 0;
++	}
++
++	/* Return around 2k per pass... */
++	while (count - len > 256 && 
++	       len < 2048 && 
+ 	       loop < (sizeof(ord_data) / sizeof(*ord_data))) {
+ 		
+ 		val_len = sizeof(u32);
+ 
+ 		if (ipw2100_get_ordinal(priv, ord_data[loop].index, &val, 
+ 					&val_len)) 
+-			len += sprintf(buf + len, "[0x%02X] = ERROR    %s\n",
++			len += snprintf(page + len, count - len,
++					"[0x%02X] = ERROR    %s\n",
+ 				       ord_data[loop].index,
+ 				       ord_data[loop].desc);
+ 		else
+-			len += sprintf(buf + len, "[0x%02X] = 0x%08X %s\n",
+-				       ord_data[loop].index, val,
+-				       ord_data[loop].desc);
++			len += snprintf(page + len, count - len,
++					"[0x%02X] = 0x%08X %s\n",
++					ord_data[loop].index, 
++					val, ord_data[loop].desc);
++
+ 		loop++;
+ 	}
+ 
++	/* see comment in fs/proc/generic.c proc_file_read */
++	if (len) 
++		*start = (char*)len; 
++	else
++		*eof = 1;
++
+ 	return len;
+ }
+-static DEVICE_ATTR(ordinals, S_IRUGO, show_ordinals, NULL);
+-
+ 
+-static ssize_t show_version(struct device *d, char *buf)
++static int proc_get_version(char *page, char **start,
++			    off_t offset, int count,
++			    int *eof, void *data)
+ {
+-	struct ipw2100_priv *priv = dev_get_drvdata(d);
+-	char * out = buf;
+-	char tmp[MAX_FW_VERSION_LEN];
++	struct net_device *dev = data;
++	struct ipw2100_priv *priv = ipw2100_netdev(dev);
+ 	int err;
++	int len = 0;
++	char tmp[MAX_FW_VERSION_LEN];
+ 
+-	out += sprintf(out, "hardware     : 0x%04X\n", 
++	len += snprintf(page + len, count - len, 
++			"hardware     : 0x%04X\n", 
+ 		       priv->pdev->subsystem_device);
+ 
+-	out += sprintf(out, "driver       : " DRV_VERSION " ["
++	len += snprintf(page + len, count - len, 
++			"driver       : " DRV_VERSION " ["
+ #ifdef CONFIG_IEEE80211_NOWEP
+ 		       " !WEP"
+ #else
+@@ -3470,53 +3544,66 @@ static ssize_t show_version(struct devic
+ #endif
+ 		       " ]\n");
+ 
+-	out += sprintf(out, "build date   : " __DATE__ "\n");
+-	out += sprintf(out, "build time   : " __TIME__ "\n");
+-	out += sprintf(out, "eeprom       : %d\n", priv->eeprom_version);
++	len += snprintf(page + len, count - len,
++			"build date   : " __DATE__ "\n");
+ 
++	len += snprintf(page + len, count - len,
++			"build time   : " __TIME__ "\n");
++
++	len += snprintf(page + len, count - len,
++			"eeprom       : %d\n", priv->eeprom_version);
+ 	err = ipw2100_get_ucodeversion(priv, tmp, sizeof(tmp));
+ 	if (err < 0) 
+-		out += sprintf(out, "ucode        : error\n");
++		len += snprintf(page + len, count - len,
++				"ucode        : error\n");
+ 	else 
+-		out += sprintf(out, "ucode        : %s\n", tmp);
+-
++		len += snprintf(page + len, count - len,
++				"ucode        : %s\n", tmp);
+ 	err = ipw2100_get_fwversion(priv, tmp, sizeof(tmp));
+ 	if (err < 0) 
+-		out += sprintf(out, "firmware     : error\n");
++		len += snprintf(page + len, count - len,
++				"firmware     : error\n");
+ 	else 
+-		out += sprintf(out, "firmware     : %s\n", tmp);
++		len += snprintf(page + len, count - len,
++				"firmware     : %s\n", tmp);
+ 
+-	out += sprintf(out, "firmware img : 0x%04X\n",
+-		       priv->firmware_version);
++	len += snprintf(page + len, count - len,
++			"firmware img : 0x%04X\n", priv->firmware_version);
+ 
+-	out += sprintf(out, "firmware mode: %s\n",
++	len += snprintf(page + len, count - len,
++			"firmware mode: %s\n",
+ 		       priv->ctx->port_type == MONITOR ? "RFMON" :
+ 		       priv->ctx->port_type == IBSS ? "IBSS" : "BSS");
+ 
+-	return out - buf;
++	*eof = 1;
++	return len;
+ }
+-static DEVICE_ATTR(version, S_IRUGO, show_version, NULL);
+ 
+-
+-static ssize_t show_stats(struct device *d, char *buf)
++static int proc_get_stats(char *page, char **start,
++			  off_t offset, int count,
++			  int *eof, void *data)
+ {
+-	struct ipw2100_priv *priv = dev_get_drvdata(d);
+-	char * out = buf;
++	struct net_device *dev = data;
++	struct ipw2100_priv *priv = ipw2100_netdev(dev);
++	int len = 0;
+ 
+-	out += sprintf(out, "interrupts: %d {tx: %d, rx: %d, other: %d}\n",
++	len += snprintf(page + len, count - len,
++			"interrupts: %d {tx: %d, rx: %d, other: %d}\n", 
+ 		       priv->interrupts, priv->tx_interrupts,
+ 		       priv->rx_interrupts, priv->inta_other);
+-	out += sprintf(out, "firmware resets: %d\n", priv->resets);
+-	out += sprintf(out, "firmware hangs: %d\n", priv->hangs);
++	len += snprintf(page + len, count - len,
++			"firmware resets: %d\n", priv->resets);
++	len += snprintf(page + len, count - len,
++			"firmware hangs: %d\n", priv->hangs);
+ #ifdef CONFIG_IPW_DEBUG
+-	out += sprintf(out, "packet mismatch image: %s\n",
++	len += snprintf(page + len, count - len,
++			"packet mismatch image: %s\n",
+ 		       priv->snapshot[0] ? "YES" : "NO");
+ #endif
+ 
+-	return out - buf;
++	*eof = 1;
++	return len;
+ }
+-static DEVICE_ATTR(stats, S_IRUGO, show_stats, NULL);
+-
+ 
+ #ifdef CONFIG_IPW2100_PROMISC
+ int ipw2100_enable_monitor(struct ipw2100_priv *priv, u32 channel)
+@@ -3614,12 +3701,17 @@ int ipw2100_switch_mode(struct ipw2100_p
+ 	return 0;
+ }
+ 
+-static ssize_t show_internals(struct device *d, char *buf)
++static int proc_get_internals(char *page, char **start,
++			      off_t offset, int count,
++			      int *eof, void *data)
+ {
+-	struct ipw2100_priv *priv = dev_get_drvdata(d);
++	struct net_device *dev = data;
++	struct ipw2100_priv *priv = ipw2100_netdev(dev);
+ 	int len = 0;
+ 
+-#define DUMP_VAR(x,y) len += sprintf(buf + len, # x ": %" # y "\n", priv-> x)
++#define DUMP_VAR(x,y) \
++	len += snprintf(page + len, count - len, \
++			# x ": %" # y "\n", priv-> x)
+ 
+ 	DUMP_VAR(connected, d);
+ 	DUMP_VAR(connected ? get_seconds() - priv->connect_start : 0, lu);
+@@ -3660,20 +3752,23 @@ static ssize_t show_internals(struct dev
+ 	DUMP_VAR(ieee->scans, d);
+ 	DUMP_VAR(reset_backoff, d);
+ 
++	*eof = 1;
+ 	return len;
+ }
+-static DEVICE_ATTR(internals, S_IRUGO, show_internals, NULL);
+-
+ 
+-static ssize_t show_bssinfo(struct device *d, char *buf)
++static int proc_get_bssinfo(char *page,
++			    char **start,
++			    off_t offset,
++			    int count, int *eof, void *data)
+ {
+-	struct ipw2100_priv *priv = dev_get_drvdata(d);
++	int len = 0;
++	struct net_device *dev = data;
++	struct ipw2100_priv *priv = ipw2100_netdev(dev);
++	int ret;
++	int length;
+ 	char essid[IW_ESSID_MAX_SIZE + 1];
+ 	u8 bssid[ETH_ALEN];
+ 	u32 chan = 0;
+-	char * out = buf;
+-	int length;
+-	int ret;
+ 
+ 	memset(essid, 0, sizeof(essid));
+ 	memset(bssid, 0, sizeof(bssid));
+@@ -3697,23 +3792,26 @@ static ssize_t show_bssinfo(struct devic
+ 		IPW_DEBUG_INFO("failed querying ordinals at line %d\n", 
+ 				   __LINE__);
+ 
+-	out += sprintf(out, "ESSID: %s\n", essid);
+-	out += sprintf(out, "BSSID:   %02x:%02x:%02x:%02x:%02x:%02x\n",
++	len += snprintf(page + len, count - len, "ESSID: %s\n", essid);
++	len += snprintf(page + len, count - len,
++			"BSSID:   %02x:%02x:%02x:%02x:%02x:%02x\n",
+ 		       bssid[0], bssid[1], bssid[2],
+ 		       bssid[3], bssid[4], bssid[5]);
+-	out += sprintf(out, "Channel: %d\n", chan);
++	len += snprintf(page + len, count - len, "Channel: %d\n", chan);
+ 
+-	return out - buf;
++	*eof = 1;
++	return len;
+ }
+-static DEVICE_ATTR(bssinfo, S_IRUGO, show_bssinfo, NULL);
+-
+ 
+-static ssize_t show_txqueue(struct device *d, char *buf)
++static int proc_get_txqueue(char *page,
++			    char **start,
++			    off_t offset,
++			    int count, int *eof, void *data)
+ {
+-	struct ipw2100_priv *priv = dev_get_drvdata(d);
+-	struct net_device *dev = priv->ndev;
+-	char * out = buf;
++	int len = 0;
+ 	u32 tbdr_r, tbdr_w;
++	struct net_device *dev = data;
++	struct ipw2100_priv *priv = ipw2100_netdev(dev);
+ 
+ 	IPW_DEBUG_INFO("enter\n");
+ 
+@@ -3724,25 +3822,29 @@ static ssize_t show_txqueue(struct devic
+ 
+ 	IPW_DEBUG_INFO("after register read\n");
+ 
+-	out += sprintf(out,
++	len += snprintf(page, count,
+ 		       "Tx Queue\nnic:\n\tread  index=%d\n\twrite index=%d\n",
+ 		       tbdr_r, tbdr_w);
+-	out += sprintf(out, "drv:\n\tread index=%d\n\twrite index=%d\n",
++	len += snprintf(page + len, count - len,
++			"drv:\n\tread index=%d\n\twrite index=%d\n",
+ 		       priv->tx_queue.oldest,
+ 		       priv->tx_queue.next);
++	*eof = 1;
+ 
+ 	IPW_DEBUG_INFO("exit\n");
+-	return out - buf;
+-}
+-static DEVICE_ATTR(txqueue, S_IRUGO, show_txqueue, NULL);
+ 
++	return len;
++}
+ 
+-static ssize_t show_rxqueue(struct device *d, char *buf)
++static int proc_get_rxqueue(char *page,
++			    char **start,
++			    off_t offset,
++			    int count, int *eof, void *data)
+ {
+-	struct ipw2100_priv *priv = dev_get_drvdata(d);
+-	struct net_device *dev = priv->ndev;
+-	char * out = buf;
++	int len = 0;
+ 	u32 rbdr_r, rbdr_w;
++	struct net_device *dev = data;
++	struct ipw2100_priv *priv = ipw2100_netdev(dev);
+ 
+ 	IPW_DEBUG_INFO("enter\n");
+ 
+@@ -3751,33 +3853,37 @@ static ssize_t show_rxqueue(struct devic
+ 
+ 	IPW_DEBUG_INFO("after register read\n");
+ 
+-	out += sprintf(out,
++	len += snprintf(page, count,
+ 		       "Rx Queue\nnic:\n\tread  index=%d\n\twrite index=%d\n",
+ 		       rbdr_r, rbdr_w);
+-	out += sprintf(out,
++	len += snprintf(page + len, count - len,
+ 		       "drv:\n\tread  index=NOT USED\n\twrite index=%d\n",
+ 		       priv->rx_queue.next);
+ 
++	*eof = 1;
++
+ 	IPW_DEBUG_INFO("exit\n");
+-	return out - buf;
++
++	return len;
+ }
+-static DEVICE_ATTR(rxqueue, S_IRUGO, show_rxqueue, NULL);
+ 
+ 
+-#ifdef CONFIG_IPW_DEBUG
+-static ssize_t show_debug_level(struct device_driver *d, char *buf)
++static int proc_get_debug_level(char *page, char **start, off_t offset,
++				int count, int *eof, void *data)
+ {
+-	char * out = buf;
++	int len = 0;
+ 	int i;
+ 
+ 	if (!IPW_DEBUG_ENABLED)
+ 		return 0;
+ 	
+-	out += sprintf(out, "%-25s\tHex        SET Decimal\n", "Description");
++	len += snprintf(page + len, count - len, 
++			"%-25s\tHex        SET Decimal\n",
++			"Description");
+ 	for (i = 0; i < sizeof(ipw2100_debug_levels) / 
+ 	     sizeof(struct ipw2100_dl); i++) {
+-		out += sprintf(
+-		       out, "%-25s\t0x%08lX [%c] %lu\n",
++		len += snprintf(
++			page + len, count - len, "%-25s\t0x%08lX [%c] %lu\n",
+ 		       ipw2100_debug_levels[i].name,
+ 		       ipw2100_debug_levels[i].value,
+ 		       (ipw2100_debug_level & ipw2100_debug_levels[i].value) ?
+@@ -3785,14 +3891,16 @@ static ssize_t show_debug_level(struct d
+ 		       ipw2100_debug_levels[i].value);
+ 	}
+ 	
+-	out += sprintf(out, "debug_level = 0x%08lX (* = enabled)\n", 
++	len += snprintf(page + len, count - len, 
++			"debug_level = 0x%08lX (* = enabled)\n", 
+ 		       ipw2100_debug_level);
+ 
+-	return out - buf;
++	*eof = 1;
++	return len;
+ }
+ 
+-static ssize_t store_debug_level(struct device_driver *d, const char *buf,
+-				 size_t count)
++static int proc_set_debug_level(struct file *file, const char *buf,
++				unsigned long count, void *data)
+ {
+ 	char buffer[] = "0x00000000";
+ 	unsigned long len =
+@@ -3804,7 +3912,10 @@ static ssize_t store_debug_level(struct 
+ 	if (!IPW_DEBUG_ENABLED)
+ 		return 0;
+ 
+-	strncpy(buffer, buf, len);
++	if (copy_from_user(buffer, buf, len)) {
++		IPW_DEBUG_INFO("can't copy data from userspace\n");
++		return count;	
++	} else
+ 	buffer[len] = 0;
+ 
+ 	if (p[1] == 'x' || p[1] == 'X' || p[0] == 'x' || p[0] == 'X') {
+@@ -3835,25 +3946,25 @@ static ssize_t store_debug_level(struct 
+ 		}
+ 	}
+ 
+-	return len;
++	return count;
+ }
+-static DRIVER_ATTR(debug_level, S_IWUSR | S_IRUGO, show_debug_level,
+-		   store_debug_level);
+-#endif /* CONFIG_IPW_DEBUG */
+ 
+ 
+-static ssize_t show_fatal_error(struct device *d, char *buf)
++static int proc_get_fatal_error(char *page, char **start, off_t offset,
++				int count, int *eof, void *data)
+ {
+-	struct ipw2100_priv *priv = dev_get_drvdata(d);
+-	char * out = buf;
+-	int errors = 0;
++	struct net_device *dev = data;
++	struct ipw2100_priv *priv = ipw2100_netdev(dev);
++	int len = 0;
+ 	int i;
++	int errors = 0;
+ 
+ 	if (priv->fatal_error) 
+-		out += sprintf(out, "Current error: 0x%08X\n",
+-			       priv->fatal_error);
++		len += snprintf(page + len, count - len,
++				"Current error: 0x%08X\n", priv->fatal_error);
+ 	else 
+-		out += sprintf(out, "No current error condition.\n");
++		len += snprintf(page + len, count - len,
++				"No current error condition.\n");
+ 
+ 	for (i = 1; i <= IPW2100_ERROR_QUEUE; i++) {
+ 		if (!priv->fatal_errors[(priv->fatal_index - i) % 
+@@ -3861,59 +3972,70 @@ static ssize_t show_fatal_error(struct d
+ 			continue;
+ 
+ 		if (!errors)
+-			out += sprintf(out, "Up to last %d errors:\n",
++			len += snprintf(page + len, count - len,
++					"Up to last %d errors:\n",
+ 				       IPW2100_ERROR_QUEUE);
+-		out += sprintf(out, "%d. Error: 0x%08X\n", i,
++		len += snprintf(page + len, count - len,
++				"%d. Error: 0x%08X\n", i,
+ 			       priv->fatal_errors[(priv->fatal_index - i) %
+ 						  IPW2100_ERROR_QUEUE]);
+ 		errors++;
+ 	}
+ 
+ 	if (!errors)
+-		out += sprintf(out, "No errors encountered.\n");
++		len += snprintf(page + len, count - len,
++				"No errors encountered.\n");
+ 
+ #ifdef CONFIG_IPW_DEBUG
+-	out += sprintf(out, "Packet mismatch image: %s\n",
++	len += snprintf(page + len, count - len,
++			"Packet mismatch image: %s\n",
+ 		       priv->snapshot[0] ? "YES" : "NO");
+ #endif
+ 
+ 	if (priv->fatal_error)
+-		out += sprintf(out,
++		len += snprintf(page + len, count - len,
+ 			       "`echo 0 > fatal_error` to force firmware "
+-			       "restart and clear current error condition.\n");
++				"restart and clear current error "
++				"condition.\n");
+ 
+-	return out - buf;
++	*eof = 1;
++	return len;
+ }
+ 
+-static ssize_t store_fatal_error(struct device *d, const char *buf,
+-				 size_t count)
++static int proc_set_fatal_error(struct file *file, const char *buffer,
++				unsigned long count, void *data)
+ {
+-	struct ipw2100_priv *priv = dev_get_drvdata(d);
++	struct net_device *dev = data;
++	struct ipw2100_priv *priv = ipw2100_netdev(dev);
+ 	schedule_reset(priv);
+ 	return count;
+ }
+-static DEVICE_ATTR(fatal_error, S_IWUSR|S_IRUGO, show_fatal_error, store_fatal_error);
+-
+ 
+-static ssize_t show_cardmem(struct device *d, char *buf)
++static int proc_get_cardmem(char *page,
++			    char **start,
++			    off_t offset,
++			    int count, int *eof, void *data)
+ {
+-	struct ipw2100_priv *priv = dev_get_drvdata(d);
+-	struct net_device *dev = priv->ndev;
+-	char * out = buf;
+-	u32 dword;
++	int len = 0;
++	struct net_device *dev = data;
++	struct ipw2100_priv *priv = ipw2100_netdev(dev);
++	u32 d;
+ 
+-	read_nic_dword(dev, priv->proc_cardmemaddr, &dword);
++	read_nic_dword(dev, priv->proc_cardmemaddr, &d);
+ 
+-	out += sprintf(out, "cardmem addr[0x%08x] = 0x%08x (%d)\n",
+-		       priv->proc_cardmemaddr, dword, dword);
++	len += snprintf(page, count,
++			"cardmem addr[0x%08x] = 0x%08x (%d)\n",
++			priv->proc_cardmemaddr, d, d);
+ 
+-	return out - buf;
++	*eof = 1;
++	return len;
+ }
+ 
+-static ssize_t store_cardmem(struct device *d, const char *buf, size_t count)
++static int proc_set_cardmemaddr(struct file *file, const char *buf,
++				unsigned long count, void *data)
+ {
+-	struct ipw2100_priv *priv = dev_get_drvdata(d);
+-	struct net_device *dev = priv->ndev;
++	struct net_device *dev = data;
++	struct ipw2100_priv *priv = ipw2100_netdev(dev);
+ 	char buffer[] = "00000000";
+ 	unsigned long len =
+ 	    (sizeof(buffer) - 1) > count ? count : sizeof(buffer) - 1;
+@@ -3922,7 +4044,11 @@ static ssize_t store_cardmem(struct devi
+ 
+ 	IPW_DEBUG_INFO("enter\n");
+ 
+-	strncpy(buffer, buf, len);
++	if (copy_from_user(buffer, buf, len)) {
++		IPW_DEBUG_INFO("can't copy data from userspace\n");
++                /* stupid? yes, but how do I signal an error here? */
++		return count;	
++	} else
+ 	buffer[len] = 0;
+ 
+ 	if (p[1] == 'x' || p[1] == 'X' || p[0] == 'x' || p[0] == 'X') {
+@@ -3942,24 +4068,32 @@ static ssize_t store_cardmem(struct devi
+ 	}
+ 	
+ 	IPW_DEBUG_INFO("exit\n");
+-	return len;
++	return count;
+ }
+-static DEVICE_ATTR(cardmem, S_IWUSR | S_IRUGO, show_cardmem, store_cardmem);
+-
+ 
+-static ssize_t show_scan_age(struct device *d, char *buf)
++static int proc_get_scan_age(char *page,
++			    char **start,
++			    off_t offset,
++			    int count, int *eof, void *data)
+ {
+-	struct ipw2100_priv *priv = dev_get_drvdata(d);
++	int len = 0;
++	struct net_device *dev = (struct net_device *) data;
++	struct ipw2100_priv *priv = ipw2100_netdev(dev);
+ 
+-	return sprintf(buf, "Scan entries will expire after %u missed scans. "
++	len += snprintf(page, count,
++			"Scan entries will expire after %u missed scans. "
+ 		       "(default is %u, 0 = never expire)\n",
+ 		       priv->ieee->scan_age, DEFAULT_MAX_SCAN_AGE);
++
++	*eof = 1;
++	return len;
+ }
+ 
+-static ssize_t store_scan_age(struct device *d, const char *buf, size_t count)
++static int proc_set_scan_age(struct file *file, const char *buf,
++			     unsigned long count, void *data)
+ {
+-	struct ipw2100_priv *priv = dev_get_drvdata(d);
+-	struct net_device *dev = priv->ndev;
++	struct net_device *dev = (struct net_device *) data;
++	struct ipw2100_priv *priv = ipw2100_netdev(dev);
+ 	char buffer[] = "00000000";
+ 	unsigned long len =
+ 	    (sizeof(buffer) - 1) > count ? count : sizeof(buffer) - 1;
+@@ -3968,7 +4102,11 @@ static ssize_t store_scan_age(struct dev
+ 
+ 	IPW_DEBUG_INFO("enter\n");
+ 
+-	strncpy(buffer, buf, len);
++	if (copy_from_user(buffer, buf, len)) {
++		IPW_DEBUG_INFO("can't copy data from userspace\n");
++                /* stupid? yes, but how do I signal an error here? */
++		return count;	
++	} else
+ 	buffer[len] = 0;
+ 
+ 	if (p[1] == 'x' || p[1] == 'X' || p[0] == 'x' || p[0] == 'X') {
+@@ -3987,37 +4125,24 @@ static ssize_t store_scan_age(struct dev
+ 	}
+ 	
+ 	IPW_DEBUG_INFO("exit\n");
+-	return len;
+-}
+-static DEVICE_ATTR(scan_age, S_IWUSR | S_IRUGO, show_scan_age, store_scan_age);
+-
+-
+-static ssize_t show_rf_kill(struct device *d, char *buf)
+-{
+-	struct ipw2100_priv *priv = dev_get_drvdata(d);
+-	char * out = buf;
+-	
+-	if (priv->manual_disable) 
+-		out += sprintf(out, "Radio disabled by manual switch.\n");
+-	else if (priv->hw_features & HW_FEATURE_RFKILL) 
+-		out += sprintf(out, "Radio is %s by RF switch\n",
+-			       ipw2100_get_rf_switch(priv) ? 
+-			       "disabled" : "enabled");
+-	else
+-		out += sprintf(out,
+-			       "Your hardware does not have an RF switch\n");
+-	
+-	return out - buf;
++	return count;
+ }
+ 
+-static ssize_t store_rf_kill(struct device *d, const char *buf, size_t count)
++static int proc_set_state(struct file *file, const char *buf,
++			  unsigned long count, void *data)
+ {
+-	struct ipw2100_priv *priv = dev_get_drvdata(d);
+-	int state;
++	struct net_device *dev = (struct net_device *) data;
++	struct ipw2100_priv *priv = ipw2100_netdev(dev);
++	char state;
+ 
+ 	IPW_DEBUG_INFO("enter\n");
+ 
+-	sscanf(buf, "%d", &state);
++	if (copy_from_user(&state, buf, 1)) {
++		IPW_DEBUG_INFO("can't copy data from userspace\n");
++                /* stupid? yes, but how do I signal an error here? */
++		return count;	
++	} 
++	
+ 	switch (state) {
+ 	case 0: /* Turn off Manual Disable */
+ 		if (priv->manual_disable) {
+@@ -4052,31 +4177,323 @@ static ssize_t store_rf_kill(struct devi
+ 	IPW_DEBUG_INFO("exit\n");
+ 	return count;
+ }
+-static DEVICE_ATTR(rf_kill, S_IWUSR|S_IRUGO, show_rf_kill, store_rf_kill);
+ 
++static int proc_get_state(char *page,
++			  char **start,
++			  off_t offset,
++			  int count, int *eof, void *data)
++{
++	int len = 0;
++	struct net_device *dev = data;
++	struct ipw2100_priv *priv = ipw2100_netdev(dev);
+ 
+-static struct attribute *ipw2100_sysfs_entries[] = {
+-	&dev_attr_hardware.attr,
+-	&dev_attr_registers.attr,
+-	&dev_attr_ordinals.attr,
+-	&dev_attr_pci.attr,
+-	&dev_attr_version.attr,
+-	&dev_attr_stats.attr,
+-	&dev_attr_internals.attr,
+-	&dev_attr_txqueue.attr,
+-	&dev_attr_rxqueue.attr,
+-	&dev_attr_bssinfo.attr,
+-	&dev_attr_memory.attr,
+-	&dev_attr_cardmem.attr,
+-	&dev_attr_scan_age.attr,
+-	&dev_attr_fatal_error.attr,
+-	&dev_attr_rf_kill.attr,
+-	NULL,
+-};
++	if (priv->manual_disable) 
++		len += snprintf(page, count, 
++				"Radio disabled by manual switch.\n");
++	else if (priv->hw_features & HW_FEATURE_RFKILL) 
++		len += snprintf(page, count, "Radio is %s by RF switch\n",
++				ipw2100_get_rf_switch(priv) ? 
++				"disabled" : "enabled");
++	else
++		len += snprintf(page, count, 
++				"Your hardware does not have an RF switch\n");
+ 
+-static struct attribute_group ipw2100_attribute_group = {
+-	.attrs = ipw2100_sysfs_entries,
+-};
++	*eof = 1;
++	return len;
++}
++
++
++int ipw2100_proc_dev_init(struct ipw2100_priv *priv)
++{
++	struct proc_dir_entry *e;
++
++	IPW_DEBUG_INFO("enter %s\n", priv->ndev->name);
++
++	priv->dir_dev = create_proc_entry(priv->ndev->name, 
++					  S_IFDIR | S_IRUGO | S_IXUGO, 
++					  ipw2100_proc);
++	if (!priv->dir_dev) {
++		printk(KERN_ERR
++		       "Unable to initialize /proc/net/ipw2100/%s\n",
++		       priv->ndev->name);
++		goto fail;
++	}
++
++	e = create_proc_read_entry("hw", S_IFREG | S_IRUGO,
++				   priv->dir_dev, proc_get_hw, priv->ndev);
++	if (!e) {
++		printk(KERN_ERR
++		       "Unable to initialize "
++		       "/proc/net/ipw2100/%s/hw\n",
++		       priv->ndev->name);
++		goto fail;
++	}
++
++	e = create_proc_read_entry("registers", S_IFREG | S_IRUGO,
++				   priv->dir_dev, proc_get_registers, priv->ndev);
++	if (!e) {
++		printk(KERN_ERR
++		       "Unable to initialize "
++		       "/proc/net/ipw2100/%s/registers\n",
++		       priv->ndev->name);
++		goto fail;
++	}
++
++	e = create_proc_read_entry("ordinals", S_IFREG | S_IRUGO,
++				   priv->dir_dev, proc_get_ordinals, priv->ndev);
++	if (!e) {
++		printk(KERN_ERR
++		       "Unable to initialize "
++		       "/proc/net/ipw2100/%s/ordinals\n",
++		       priv->ndev->name);
++		goto fail;
++	}
++
++	e = create_proc_read_entry("pci", S_IFREG | S_IRUGO,
++				   priv->dir_dev, proc_get_pci, priv->ndev);
++	if (!e) {
++		printk(KERN_ERR
++		       "Unable to initialize "
++		       "/proc/net/ipw2100/%s/pci\n",
++		       priv->ndev->name);
++		goto fail;
++	}
++
++	e = create_proc_read_entry("version", S_IFREG | S_IRUGO,
++				   priv->dir_dev, proc_get_version, priv->ndev);
++	if (!e) {
++		printk(KERN_ERR
++		       "Unable to initialize "
++		       "/proc/net/ipw2100/%s/version\n",
++		       priv->ndev->name);
++		goto fail;
++	}
++
++	e = create_proc_read_entry("stats", S_IFREG | S_IRUGO,
++				   priv->dir_dev, proc_get_stats, priv->ndev);
++	if (!e) {
++		printk(KERN_ERR
++		       "Unable to initialize "
++		       "/proc/net/ipw2100/%s/stats\n",
++		       priv->ndev->name);
++		goto fail;
++	}
++
++	e = create_proc_read_entry("internals", S_IFREG | S_IRUGO,
++				   priv->dir_dev, proc_get_internals, priv->ndev);
++	if (!e) {
++		printk(KERN_ERR
++		       "Unable to initialize "
++		       "/proc/net/ipw2100/%s/internals\n",
++		       priv->ndev->name);
++		goto fail;
++	}
++
++	e = create_proc_read_entry("txqueue", S_IFREG | S_IRUGO,
++				   priv->dir_dev, proc_get_txqueue, priv->ndev);
++	if (!e) {
++		printk(KERN_ERR
++		       "Unable to initialize "
++		       "/proc/net/ipw2100/%s/txqueue\n",
++		       priv->ndev->name);
++		goto fail;
++	}
++
++	e = create_proc_read_entry("rxqueue", S_IFREG | S_IRUGO,
++				   priv->dir_dev, proc_get_rxqueue, priv->ndev);
++	if (!e) {
++		printk(KERN_ERR
++		       "Unable to initialize "
++		       "/proc/net/ipw2100/%s/rxqueue\n",
++		       priv->ndev->name);
++		goto fail;
++	}
++
++	e = create_proc_read_entry("bssinfo", S_IFREG | S_IRUGO,
++				   priv->dir_dev, proc_get_bssinfo, priv->ndev);
++	if (!e) {
++		printk(KERN_ERR
++		       "Unable to initialize "
++		       "/proc/net/ipw2100/%s/bssinfo\n",
++		       priv->ndev->name);
++		goto fail;
++	}
++
++	e = create_proc_entry("memory", S_IFREG | S_IRUGO | S_IWUSR,
++			      priv->dir_dev);
++	if (e) {
++		e->read_proc = proc_get_memory;
++		e->write_proc = proc_set_memory;
++		e->data = priv->ndev;
++	} else {
++		printk(KERN_ERR
++		       "Unable to initialize "
++		       "/proc/net/ipw2100/%s/memory\n",
++		       priv->ndev->name);
++		goto fail;
++	}
++
++	e = create_proc_entry("cardmem", S_IFREG | S_IRUGO | S_IWUSR, 
++			      priv->dir_dev);
++	if (e) {
++		e->read_proc = proc_get_cardmem;
++		e->write_proc = proc_set_cardmemaddr;
++		e->data = priv->ndev;
++	} else {
++		printk(KERN_ERR
++		       "Unable to initialize "
++		       "/proc/net/ipw2100/%s/cardmem\n",
++		       priv->ndev->name);
++		goto fail;
++	}
++
++	e = create_proc_entry("scan_age", S_IFREG | S_IRUGO | S_IWUSR, 
++			      priv->dir_dev);
++	if (e) {
++		e->read_proc = proc_get_scan_age;
++		e->write_proc = proc_set_scan_age;
++		e->data = priv->ndev;
++	} else {
++		printk(KERN_ERR
++		       "Unable to initialize "
++		       "/proc/net/ipw2100/%s/scan_age\n",
++		       priv->ndev->name);
++		goto fail;
++	}
++
++	e = create_proc_entry("fatal_error", S_IFREG | S_IRUGO | S_IWUSR, 
++			      priv->dir_dev);
++	if (e) {
++		e->read_proc = proc_get_fatal_error;
++		e->write_proc = proc_set_fatal_error;
++		e->data = priv->ndev;
++	} else {
++		printk(KERN_ERR
++		       "Unable to initialize "
++		       "/proc/net/ipw2100/%s/fatal_error\n",
++		       priv->ndev->name);
++		goto fail;
++	}
++
++	e = create_proc_entry("state", S_IFREG | S_IRUGO | S_IWUSR,
++			      priv->dir_dev);
++	if (e) {
++		e->read_proc = proc_get_state;
++		e->write_proc = proc_set_state;
++		e->data = priv->ndev;
++	} else {
++		printk(KERN_ERR
++		       "Unable to initialize "
++		       "/proc/net/ipw2100/%s/state\n",
++		       priv->ndev->name);
++		goto fail;
++	}
++
++	IPW_DEBUG_INFO("exit %s\n", priv->ndev->name);
++
++	return 0;
++
++ fail:
++	ipw2100_proc_dev_cleanup(priv);
++	IPW_DEBUG_INFO("exit on fail %s\n", priv->ndev->name);
++	
++	return -ENOMEM;
++}
++
++void ipw2100_proc_dev_cleanup(struct ipw2100_priv *priv)
++{
++	IPW_DEBUG_INFO("enter %s\n", priv->ndev->name);
++
++	if (priv->dir_dev) {
++		remove_proc_entry("stats", priv->dir_dev);
++		remove_proc_entry("internals", priv->dir_dev);
++		remove_proc_entry("txqueue", priv->dir_dev);
++		remove_proc_entry("rxqueue", priv->dir_dev);
++		remove_proc_entry("cardmem", priv->dir_dev);
++		remove_proc_entry("scan_age", priv->dir_dev);
++		remove_proc_entry("bssinfo", priv->dir_dev);
++		remove_proc_entry("state", priv->dir_dev);
++		remove_proc_entry("version", priv->dir_dev);
++		remove_proc_entry("hw", priv->dir_dev);
++		remove_proc_entry("registers", priv->dir_dev);
++		remove_proc_entry("memory", priv->dir_dev);
++		remove_proc_entry("ordinals", priv->dir_dev);
++		remove_proc_entry("pci", priv->dir_dev);
++		remove_proc_entry("fatal_error", priv->dir_dev);
++		remove_proc_entry(priv->ndev->name, ipw2100_proc);
++		priv->dir_dev = NULL;
++	}
++
++	IPW_DEBUG_INFO("exit %s\n", priv->ndev->name);
++}
++
++
++/**
++ * Initialize ipw2100 proc filesystem's entry.
++ *
++ * @returns 0 if ok, < 0 errno code on error [-ENOMEM].
++ * 
++ * On error, it takes care of cleaning up as if nothing had been
++ * done.
++ */
++static
++int ipw2100_proc_init(void)
++{	
++	struct proc_dir_entry *e;
++	
++	IPW_DEBUG_INFO("enter\n");
++
++	ipw2100_proc = create_proc_entry(DRV_NAME, S_IFDIR, proc_net);
++	if (ipw2100_proc == NULL)
++		goto fail_ipw2100;
++
++	/* Next we create only if we compiled in debug support */
++	if (!IPW_DEBUG_ENABLED)
++		goto skip_debug;
++
++	e = create_proc_entry("debug_level", S_IFREG | S_IRUGO | S_IWUSR, 
++			      ipw2100_proc);
++	if (e == NULL)
++		goto fail_debug;
++	e->read_proc = proc_get_debug_level;
++	e->write_proc = proc_set_debug_level;
++	e->data = NULL;
++
++skip_debug:
++	IPW_DEBUG_INFO("exit\n");
++	return 0;
++
++fail_debug:
++	printk(KERN_ERR DRV_NAME ": Unable to initialize "
++	       "/proc/net/" DRV_NAME "/debug_level\n");
++	remove_proc_entry(DRV_NAME, proc_net);
++	ipw2100_proc = NULL;
++	goto fail;
++	
++fail_ipw2100:
++	printk(KERN_ERR DRV_NAME ": Unable to initialize /proc/net/" 
++	       DRV_NAME "\n");
++
++fail:
++	IPW_DEBUG_INFO("exit on fail\n");	
++	return -ENOMEM;
++}
++
++
++/**
++ * Releases /proc filesystem entries.
++ *
++ * Assumes all went ok when allocating them.
++ */
++static void ipw2100_proc_cleanup(void)
++{
++	IPW_DEBUG_INFO("enter\n");
++
++	if (IPW_DEBUG_ENABLED && ipw2100_proc)
++		remove_proc_entry("debug_level", ipw2100_proc);
++	remove_proc_entry(DRV_NAME, proc_net);
++	IPW_DEBUG_INFO("exit\n");
++}
+ 
+ 
+ static int status_queue_allocate(struct ipw2100_priv *priv, int entries)
+@@ -6647,8 +7064,17 @@ static int ipw2100_pci_init_one(struct p
+ 
+ 	printk(KERN_INFO "%s: Bound to %s\n", dev->name, pci_name(pdev));
+ 
+-	/* perform this after register_netdev so that dev->name is set */
+-	sysfs_create_group(&pdev->dev.kobj, &ipw2100_attribute_group);
++	/* perform this after register_netdev so that dev->name is
++	 * set */
++	err = ipw2100_proc_dev_init(priv);
++	if (err) {
++		printk(KERN_ERR
++		       "%s: Failed to create /proc node\n",
++		       dev->name);
++		err = -EIO;
++		goto fail;
++	}
++
+ 	netif_carrier_off(dev);
+ 	
+ 	/* If the RF Kill switch is disabled, go ahead and complete the
+@@ -6698,7 +7124,7 @@ static int ipw2100_pci_init_one(struct p
+ 
+ 		/* These are safe to call even if they weren't allocated */
+ 		ipw2100_queues_free(priv);
+-		sysfs_remove_group(&pdev->dev.kobj, &ipw2100_attribute_group);
++		ipw2100_proc_dev_cleanup(priv);
+ 
+ 		free_netdev(dev);
+ 		pci_set_drvdata(pdev, NULL);
+@@ -6720,7 +7146,7 @@ static void __devexit ipw2100_pci_remove
+ 
+ 	if (priv) {
+ 		dev = priv->ndev;
+-		sysfs_remove_group(&pdev->dev.kobj, &ipw2100_attribute_group);
++		ipw2100_proc_dev_cleanup(priv);
+ 
+ #ifdef CONFIG_PM
+ 		if (ipw2100_firmware.version)
+@@ -6912,17 +7338,16 @@ static int __init ipw2100_init(void)
+ 	printk(KERN_INFO DRV_NAME ": Compiled with LEGACY FW load.\n");
+ #endif
+ 
+-	ret = pci_module_init(&ipw2100_pci_driver);
+-
+ 	/* If debug module parameter declared, set debug_level to that */
+ 	if (debug != -1)
+ 		ipw2100_debug_level = debug;
+ 
+-#ifdef CONFIG_IPW_DEBUG
+-	driver_create_file(&ipw2100_pci_driver.driver,
+-			   &driver_attr_debug_level);
+-#endif
+-
++	ret = ipw2100_proc_init();
++	if (!ret) {
++		ret = pci_module_init(&ipw2100_pci_driver);
++		if (ret)
++			ipw2100_proc_cleanup();
++	}
+ 	return ret;
+ }
+ 
+@@ -6933,11 +7358,8 @@ static int __init ipw2100_init(void)
+ static void __exit ipw2100_exit(void)
+ {
+ 	/* FIXME: IPG: check that we have no instances of the devices open */
+-#ifdef CONFIG_IPW_DEBUG
+-	driver_remove_file(&ipw2100_pci_driver.driver,
+-			   &driver_attr_debug_level);
+-#endif
+ 	pci_unregister_driver(&ipw2100_pci_driver);
++	ipw2100_proc_cleanup();
+ }
+ 
+ module_init(ipw2100_init);

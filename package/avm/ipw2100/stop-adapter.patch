@@ -1,0 +1,14 @@
+diff -urp ipw2100-0.54/ipw2100.c ipw2100-0.54-test/ipw2100_main.c
+--- ipw2100-0.54/ipw2100.c	2004-09-15 13:11:28.000000000 +0800
++++ ipw2100-0.54-test/ipw2100_main.c	2004-09-16 10:17:51.166570568 +0800
+@@ -6567,6 +6567,10 @@ static int ipw2100_pci_init_one(struct p
+ 			printk(KERN_ERR 
+ 			       "%s: failed in call to enable adapter.\n",
+ 			       priv->ndev->name);
++			if (ipw2100_hw_stop_adapter(priv)) 
++				printk(KERN_ERR "%s: Error stopping adapter.\n",
++				       priv->ndev->name);
++
+ 			err = -EIO;
+ 			goto fail;
+ 		}

@@ -5,7 +5,7 @@ if [ ! "$1" -o ! "$2" ] ; then
 	exit -1
 fi
 
-for x in kde* quanta* ; do
+for x in kde* ; do
 	echo "Updateing $x ..."
 	sed 	-e s,$1,$2,g \
 		-e "s/\[D\] [0-9]* /\[D\] 0 /" $x/$x.desc > $x/$x.desc.new

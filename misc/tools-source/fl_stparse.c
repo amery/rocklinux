@@ -145,6 +145,7 @@ int main(int argc, char ** argv) {
 		}
 
 		if ( sscanf(line, "%d _exit(%d", &pid, &newpid) == 2 ||
+	             sscanf(line, "%d exit(%d", &pid, &newpid) == 2 ||
 		     sscanf(line, "%d exit_group(%d", &pid, &newpid) == 2 ) {
 			freeproc(pid);
 			continue;

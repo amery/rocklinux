@@ -16,9 +16,15 @@ fi
 pkg=$1; shift
 slog=`mktemp` wlog=`mktemp` flog=`mktemp`
 
+if [ "$(uname -m)" = "ppc" ]; then
+	SYSEXIT="exit"
+else
+	SYSEXIT="_exit"
+fi
+
 strace -o $slog -F -f -q -e open,creat,`
 	`mkdir,mknod,link,symlink,rename,utime,chdir,`
-	`execve,fork,vfork,_exit,exit_group -p $$ &
+	`execve,fork,vfork,$SYSEXIT,exit_group -p $$ &
 strace_pid=$!; sleep 1; cd $PWD
 
 "$@"

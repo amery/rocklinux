@@ -1,0 +1,67 @@
+--- ./src/menu.c.orig	2004-09-12 08:38:43.843375072 +0200
++++ ./src/menu.c	2004-09-12 08:39:11.352193096 +0200
+@@ -132,36 +132,36 @@
+   return gtk_item_factory_get_widget (item_factory, "<main>");
+ }
+ 
+-static char *help_commands = "
+-  Squaroid Help
+-  == == == == == == =
+-  Available chatroom commands
+-  * /exit, /quit, /part
+-  Disconnect from server, and reopen the Connect Dialog
+-  * /disconnect
+-  Disconnect from server, and DO NOT reopen the Connect Dialog
+-  * /score < nickname >
+-  Get the scores for player called < nickname >
+-  */allscores
+-  Get scores for all players currently on this channel.
+-  * /solo Start a solo game.This is one of three ways to start a solo game;)
+-  * /msg < nickname > <message > |/notice < nickname > <message >
+-    Send a private < message > to < nickname >
+-    The score commands only work if the SquaroidHost bot
++static char *help_commands = "\
++  Squaroid Help\
++  == == == == == == =\
++  Available chatroom commands\
++  * /exit, /quit, /part\
++  Disconnect from server, and reopen the Connect Dialog\
++  * /disconnect\
++  Disconnect from server, and DO NOT reopen the Connect Dialog\
++  * /score < nickname >\
++  Get the scores for player called < nickname >\
++  */allscores\
++  Get scores for all players currently on this channel.\
++  * /solo Start a solo game.This is one of three ways to start a solo game;)\
++  * /msg < nickname > <message > |/notice < nickname > <message >\
++    Send a private < message > to < nickname >\
++    The score commands only work if the SquaroidHost bot\
+     is also logged in with the nickname `Squaroid'.";
+ 
+-static char *help_options = "
+-  Available Options
+-  * Skip MOTD
+-  Skip the Message Of The Day that each IRC server sends
+-  you.
+-  * Auto Decline
+-  This automatically declines every game challenge you
+-  might receive.I.e.if you are playing a game and
+-do
+-    not
+-    want to be disturbed this option is for you
+-    * Save Settings on Exit
++static char *help_options = "\
++  Available Options\
++  * Skip MOTD\
++  Skip the Message Of The Day that each IRC server sends\
++  you.\
++  * Auto Decline\
++  This automatically declines every game challenge you\
++  might receive.I.e.if you are playing a game and\
++do\
++    not\
++    want to be disturbed this option is for you\
++    * Save Settings on Exit\
+     I think this is self explanatory ! ";  
+     void menucallback_help (GtkWidget * w, gpointer data)
+     {

@@ -1,0 +1,11 @@
+--- ./plug-ins/psd/psd.c.orig    2004-02-07 00:20:23.000000000 +0100
++++ ./plug-ins/psd/psd.c       2004-07-10 14:32:37.772325057 +0200
+@@ -299,7 +299,7 @@
+                           gint    *nreturn_vals,
+                           GimpParam **return_vals);
+ 
+-static GImageType  psd_type_to_gimp_type      (psd_imagetype  psdtype);
++static GDrawableType  psd_type_to_gimp_type   (psd_imagetype  psdtype);
+ static GImageType  psd_type_to_gimp_base_type (psd_imagetype  psdtype);
+ static GLayerMode  psd_lmode_to_gimp_lmode    (gchar          modekey[4]);
+ static GimpUnit    psd_unit_to_gimp_unit      (gint           psdunit);

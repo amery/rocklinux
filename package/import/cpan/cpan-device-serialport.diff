@@ -1,0 +1,17 @@
+diff -ruN Device-SerialPort-1.002/Makefile.PL Device-SerialPort-1.002-new/Makefile.PL
+--- Device-SerialPort-1.002/Makefile.PL	2004-04-06 18:14:42.000000000 +0200
++++ Device-SerialPort-1.002-new/Makefile.PL	2005-01-04 10:49:38.003585616 +0100
+@@ -83,9 +83,11 @@
+ }
+ 
+ if (!defined($file)) {
+-    die "Could not find a serial port to use for testing.\n".
++    warn "Could not find a serial port to use for testing.\n".
+         "Please specify one on the 'perl Makefile.PL' command line, like so:\n".
+-	"\tperl Makefile.PL /dev/ttyS0\n";
++	"\tperl Makefile.PL /dev/ttyS0\n".
++	"ROCKLinux will now set the file to test to /dev/null\n";
++	$file = "/dev/null";
+ }
+ 
+ my $dfile = "t/DefaultPort.pm";

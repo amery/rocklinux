@@ -274,8 +274,8 @@ fi
 		fi
 	done
 	for dir in build/$ROCKCFG_ID/var/adm/{cache,cksums,dependencies,descs,flists,md5sums,packages} ; do
-		for file in $( ls $dir | cut -f1 -d: ) ; do
-			if [ $ROCKCFG_PKGFILE_VER = 1 ] ; then x="$file-.*"; else x="$file"; fi	
+		for file in $( ls $dir ) ; do
+			if [ $ROCKCFG_PKGFILE_VER = 1 ] ; then x="${file%:*}-.*"; else x="${file%:*}"; fi	
 			if ! grep -xq "$x" $pkglst ; then
 				echo_error "$dir/$file should not be present (now in src/invalid-files.lst)!"
 				mkdir -p src; echo "$dir/$file" >> src/invalid-files.lst

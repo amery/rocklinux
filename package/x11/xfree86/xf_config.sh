@@ -56,10 +56,35 @@ xf_extract_hallib() {
 		echo "Enabling Matrox HALlib (since this is x86) ..."
 		cat >> config/cf/host.def << EOT
 
-/* Additinal TC/DVI support since this is x86 */
+/* Additional TV/DVI support since this is x86 */
 #define         HaveMatroxHal           YES
 EOT
 	fi
+}
+
+# extract the GATOS drivers
+xf_extract_gatos() {
+	echo "Extracting GATOS drivers (For ATI cards with video in/out) ..."
+	tar $taropt $archdir/gatos-ati.$gatos_version.tar.bz2
+	cd gatos-ati.$gatos_version
+	for x in $confdir/gatos-*.diff ; do
+	  if [ -f $x ] ; then
+		echo "Apply patch $x ..."
+		patch -Nf -p1 < $x
+	fi
+	done
+	cd ..
+}
+
+# build and install the GATOS drivers
+xf_build_install_gatos() {
+	cd gatos-ati.$gatos_version
+	# imake has to be in the path for xmkmf
+	PATH="$PATH:/usr/X11/bin"
+	../config/util/xmkmf ..
+	eval $MAKE
+	eval $MAKE install
+	cd ..
 }
 
 # apply the patches
@@ -148,7 +173,7 @@ xf_config() {
 /* Less warnings with recent gccs ... */
 #define		DefaultCCOptions	-ansi GccWarningOptions
 
-/* Make sure config files are allways installed ... */
+/* Make sure config files are always installed ... */
 #define		InstallXinitConfig	YES
 #define		InstallXdmConfig	YES
 #define		InstallFSConfig		YES
@@ -162,7 +187,7 @@ EOT
 	        echo "Enabling Matrox HALlib (since this is x86) ..."
 		cat >> config/cf/host.def << EOT
 
-/* Additinal TV/DVI support since this is x86 */
+/* Additional TV/DVI support since this is x86 */
 #define		HaveMatroxHal		YES
 EOT
 	fi

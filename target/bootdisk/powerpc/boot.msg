@@ -5,11 +5,6 @@
             |_| \_\ ___/ \___|_|\_\ |____|_|_| |_|\___/|_/\_|
          [============> http://www.rocklinux.org/ <============]
 
-ROCK Linux on Apple, PReP and IBM RS/6k PowerPC was brought to you by
-Rene Rebe - ROCK Linux Consulting (Germany).
-
-  http://www.rocklinux-consulting.de
-
 So you are going to install ROCK Linux ...
 
 Possible choices are:

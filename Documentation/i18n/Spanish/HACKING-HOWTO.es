@@ -191,8 +191,6 @@ El contenedor "x11" incluye los paquetes de x11, gnome y kde. Todo lo que
 necesitas para configurar una estación gráfica incluyendo las herramientas más
 importantes.
 
-Los paquetes "x11" son mantenidos por Rene Rebe <rene@exactcode.de>.
-
 1.3.3. package/<architecture>/
 -------------------
 

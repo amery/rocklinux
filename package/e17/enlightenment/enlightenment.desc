@@ -6,7 +6,7 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/e17/evas/evas.desc
+[COPY] ROCK Linux: rock-src/package/e17/enlightenment/enlightenment.desc
 [COPY] ROCK Linux is Copyright (C) 1998 - 2005 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
@@ -21,26 +21,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[I] A high performance canvas library
+[I] Windowmanager based on the Enlightenment Foundation Libraries
 
-[T] Evas is a hardware-accelerated canvas API for X-Windows that can draw
-[T] anti-aliased text, smooth super and sub-sampled images, alpha-blend,
-[T] as well as drop down to using normal X11 primitives such as pixmaps,
-[T] lines and rectangles for speed if your CPU or graphics hardware are
-[T] too slow.
+[T] Enlightenment is a completely themeable, highly configurable Window
+[T] Manager for the X Window System, traditionally used in Unix
+[T] environments. The 17th Development Release (DR17) of the Enlightenment 
+[T] Window Manager brings together more than 3 years of development on its 
+[T] underlying technology: the Enlightenment Foundation Libraries
 
 [U] http://www.enlightenment.org
 
 [A] Rasterman <raster@rasterman.com>
 [M] Mathieu Doidy <mdoidy@roulaize.net>
 
-[C] extra/desktop/enlightenment
-[C] extra/multimedia
+[C] extra/windowmanager
 
-[L] GPL
+[L] BSD
 [S] Beta
-[V] 2005-01-01
-[P] X -?---5---9 137.000
+[V] 2005-01-08
+[P] X -?---5---9 216.800
 
-[D] X evas-2005-01-01.tar.bz2 cvs://pserver:anonymous@cvs.sourceforge.net:/cvsroot/enlightenment::e17/libs/evas/!2005-01-01/
+[D] X enlightenment-2005-01-08.tar.bz2 cvs://pserver:anonymous@cvs.sourceforge.net:/cvsroot/enlightenment::e17/apps/e/!2005-01-08/
 

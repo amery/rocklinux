@@ -1,0 +1,15 @@
+--- ./include/asm-ppc/byteorder.h.orig	2004-12-02 21:08:03.100528624 +0100
++++ ./include/asm-ppc/byteorder.h	2004-12-02 21:08:53.274900960 +0100
+@@ -64,10 +64,8 @@
+ 
+ #endif /* __KERNEL__ */
+ 
+-#if !defined(__STRICT_ANSI__) || defined(__KERNEL__)
+-#  define __BYTEORDER_HAS_U64__
+-#  define __SWAB_64_THRU_32__
+-#endif
++#define __BYTEORDER_HAS_U64__
++#define __SWAB_64_THRU_32__
+ 
+ #endif /* __GNUC__ */
+ 

@@ -8,5 +8,9 @@ if [ "$ROCKCFG_SPARC_OPT" != "generic" ] ; then
 		v9) tune=ultrasparc ;;
 	esac
 	[ "$tune" ] && var_append GCC_WRAPPER_INSERT " " "-mtune=$tune" 
+
+	if [ $ROCKCFG_SPARC_BITS == 64 ] ; then
+		var_append GCC_WRAPPER_INSERT " " "-Wa,-Av9a -mno-app-regs"
+	fi
 fi
 

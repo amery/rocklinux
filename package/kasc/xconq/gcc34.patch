@@ -1,0 +1,10 @@
+--- ./tcltk/tkmain.c.orig	2004-09-13 02:43:00.284858032 +0200
++++ ./tcltk/tkmain.c	2004-09-13 02:43:13.710816976 +0200
+@@ -1381,6 +1381,7 @@
+ 	  return TRUE;
+       case 1:
+       default:
++	;
+     }
+     return FALSE;
+ }

@@ -40,6 +40,7 @@ if [ "$1" = '-help' ] ; then
 	echo " ./scripts/Download [ options ] [ <Package(s)> ]"
 	echo " ./scripts/Download [ options ] [ <Desc file(s)> ]"
 	echo " ./scripts/Download [ options ] -repository <Repositories>"
+	echo " ./scripts/Download [ options ] -sm <SM-PATCH-ID(s)>"
 	echo " ./scripts/Download [ options ] { -all | -required }"
 	echo 
 	echo " Download files required for given packages, package description files, package"
@@ -271,17 +272,17 @@ detect_mirror() {
 	mirror="`cat download/Mirror`"
 	if [ -z "$mirror" -o "$mirror" = "none" ] ; then
 		echo "INFO: Found download/Mirror: none" \
-			"(use the original download locations)"
+			"(use the original download locations)" 1>&2
 	else
-		echo "INFO: Found cached mirror URL in download/Mirror:"
-		echo "INFO: $mirror"
+		echo "INFO: Found cached mirror URL in download/Mirror:" 1>&2
+		echo "INFO: $mirror" 1>&2
 	fi
-	echo "INFO: To force a new mirror auto-detection, remove download/Mirror."
+	echo "INFO: To force a new mirror auto-detection, remove download/Mirror." 1>&2
     else
-	echo "INFO: Auto-detecting best mirror ..."
+	echo "INFO: Auto-detecting best mirror ..." 1>&2
 	eval "$(egrep '^(rockver)=' scripts/parse-config)"
 
-	echo "INFO: Downloading mirror-list from www.rocklinux.net."
+	echo "INFO: Downloading mirror-list from www.rocklinux.net." 1>&2
 	curl -s -S $curl_options -o src/Download-Mirror-List \
 		"http://www.rocklinux.net/mirrors.cgi?$rockver"
 
@@ -291,7 +292,7 @@ detect_mirror() {
 		mirror_name="${mirror_name#= }"
 		mirror_name="${mirror_name% =}"
 		read mirror_url
-		echo -n "INFO: Testing <$mirror_name> ..."
+		echo -n "INFO: Testing <$mirror_name> ..." 1>&2
 		val="$(curl -s $curl_options -m 20 "${mirror_url%/}/DOWNTEST" \
 			-w "ok %{speed_download}" -o /dev/null)"
 		if [ "$val" = "${val#ok }" -o "$val" = "ok 0.000" ] ; then
@@ -306,7 +307,7 @@ detect_mirror() {
 	  fi
 	done < src/Download-Mirror-List
 	echo $mirror > download/Mirror
-	echo "INFO: $result"
+	echo "INFO: $result" 1>&2
     fi
 }
 
@@ -450,7 +451,7 @@ download_file() {
 			# try to use mirror
 
 			if ! download_file_now "!$mirror/${bzfile#download/mirror/}" $bzfile $bzfile; then
-				echo "INFO: download from mirror failed, trying original URL."
+				echo "INFO: download from mirror failed, trying original URL." 1>&2
 				download_file_now $location $gzfile $bzfile
 			else
 				gzfile="$bzfile"
@@ -596,7 +597,7 @@ download_file_now() {
 		fi
 	else
 		if [ -s "$gzfile.incomplete" ] ; then
-		    echo "INFO: Trying to resume previous download .."
+		    echo "INFO: Trying to resume previous download .." 1>&2
 		    resume="-C -"
 		else
 		    resume=""
@@ -608,7 +609,7 @@ download_file_now() {
 		if [ "$resume" ] && \
 		   [ $curlret -eq 33 -o $curlret -eq 36 ] ; then
 		    echo "INFO: Resuming download not possible. ->" \
-		         "Overwriting old file."
+		         "Overwriting old file." 1>&2
 		    rm -f "$gzfile.incomplete"
 		    curl -w '\rFinished downloading %{size_download} bytes in %{time_total} seconds (%{speed_download} bytes/sec). \n' -f --progress-bar $curl_options "$url" -o "$gzfile.incomplete"
 		    curlret="$?"
@@ -721,6 +722,21 @@ repository() {
 	for repository ; do
 		packages `echo package/$repository/*/*.desc`
 	done
+}
+
+smpatches() {
+	submaster_url="http://www.rocklinux.net/submaster"
+	id2url="s#\([0-9]\{4,4\}\)\([0-9]\{2,2\}\)\([0-9]*\)#$submaster_url/data/\1/\2/\3.patch#"
+
+	{
+	while [ -n "$1" ]
+	do
+		# convert $1 (smid) via $id2url to submaster url;
+		# convert url to curl input for -K (url = "XXX")
+		echo "$1" | sed "/[0-9]\{10\}/ {$id2url ; s/^\(.*\)$/url = \"\1\"/; p; }; d;  "
+		shift
+	done
+	} | curl --progress-bar $curl_options -K -
 }
 
 required() {
@@ -839,7 +855,7 @@ if [ "${1:0:5}" != "-list" -a $checkonly = 0 ]; then
 		if [ "$proxy" ]; then
 			curl_options="$curl_options --proxy $proxy"
 		else
-			echo "INFO: No proxy information... removing download/Proxy."
+			echo "INFO: No proxy information... removing download/Proxy." 1>&2
 			rm download/Proxy
 		fi
 	fi
@@ -848,7 +864,7 @@ if [ "${1:0:5}" != "-list" -a $checkonly = 0 ]; then
 		if [ "$proxyauth" ]; then
 			curl_options="$curl_options --proxy-user $proxyauth"
 		else
-			echo "INFO: No proxy-auth information... removing download/Proxy-auth."
+			echo "INFO: No proxy-auth information... removing download/Proxy-auth." 1>&2
 			rm download/Proxy-auth
  		fi
  	fi
@@ -859,10 +875,10 @@ if [ "${1:0:5}" != "-list" -a $checkonly = 0 ]; then
 		# am i using a proxy?
 		# -- say i'm doing it even when i already did ;-)
 		if [ "$proxy" ]; then
-			echo "INFO: Setting proxy to $proxy."
+			echo "INFO: Setting proxy to $proxy." 1>&2
 		fi
 		if [ "$proxyauth" ]; then
-			echo "INFO: Setting proxy authentication information."
+			echo "INFO: Setting proxy authentication information." 1>&2
 		fi
 
 		# do mirror detection
@@ -881,6 +897,8 @@ case "$1" in
 	-all)		all ;;
 
 	-repository)	shift ; repository "$@" ;;
+
+	-sm) shift ; smpatches "$@" ;;
 
 	-*|"")		exec $0 --help ;;
 

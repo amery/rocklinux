@@ -51,7 +51,8 @@ if [ "$ROCKCFG_X86_BITS" = 32 ] ; then
 else
   choice ROCKCFG_X86_OPT generic   \
 	generic         "No special optimisation"               \
-	athlon          "Optimised for AMD Athlon"
+	athlon          "Optimised for AMD Athlon64"		\
+	intel           "Optimised for Intel EMT64 (Nocona)"
 fi
 
 if [ $ROCKCFG_X86_OPT != generic ] ; then

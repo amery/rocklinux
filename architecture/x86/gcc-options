@@ -37,6 +37,10 @@ else
 
 	case "$ROCKCFG_X86_OPT" in
 	    generic) ;;
+	    intel)
+		var_append GCC2_WRAPPER_INSERT " " "-march=x86_64"
+		var_append GCC3_WRAPPER_INSERT " " "-march=nocona"
+		;;
 	    athlon)
 		var_append GCC2_WRAPPER_INSERT " " "-march=x86_64"
 		var_append GCC3_WRAPPER_INSERT " " "-march=k8"

@@ -8,41 +8,51 @@
 		CONFIG_X86_GENERIC=y
 	EOT
 
-	linux_arch=486
-	for x in "i386		386"		\
-		 "i486		486"		\
-		 "via-c3	MCYRIXIII"	\
-		 "via-c3-2	MVIAC3_2"	\
-		 "pentium	586"		\
-		 "pentium-mmx	586MMX"		\
-		 "pentiumpro	686"		\
-		 "pentium2	PENTIUMII"	\
-		 "pentium3	PENTIUMIII"	\
-		 "pentium4	PENTIUM4"	\
-		 "k6		K6"		\
-		 "k6-2		K6"		\
-		 "k6-3		K6"		\
-		 "athlon	K7"		\
-		 "athlon-tbird	K7"		\
-		 "athlon4	K7"		\
-		 "athlon-xp	K7"		\
-		 "athlon-mp	K7"
-	do
-		set $x
-		[ "$1" = "$ROCKCFG_X86_OPT" ] && linux_arch=$2
-	done
+	if [ "$ROCKCFG_X86_BITS" = 32 ] ; then
+		linux_arch="M486"
+		for x in "i386		M386"		\
+			 "i486		M486"		\
+			 "via-c3	MCYRIXIII"	\
+			 "via-c3-2	MVIAC3_2"	\
+			 "pentium	M586"		\
+			 "pentium-mmx	M586MMX"	\
+			 "pentiumpro	M686"		\
+			 "pentium2	MPENTIUMII"	\
+			 "pentium3	MPENTIUMIII"	\
+			 "pentium4	MPENTIUM4"	\
+			 "k6		MK6"		\
+			 "k6-2		MK6"		\
+			 "k6-3		MK6"		\
+			 "athlon	MK7"		\
+			 "athlon-tbird	MK7"		\
+			 "athlon4	MK7"		\
+			 "athlon-xp	MK7"		\
+			 "athlon-mp	MK7"
+		do
+			set $x
+			[ "$1" = "$ROCKCFG_X86_OPT" ] && linux_arch=$2
+		done
+	else
+		linux_arch="GENERIC_CPU"
+		for x in "athlon	MK8"		\
+			 "intel		MPSC"
+		do
+			set $x
+			[ "$1" = "$ROCKCFG_X86_OPT" ] && linux_arch=$2
+		done
+	fi
 
 	# echo `grep -A 20 'Processor family' \
 	#	/usr/src/linux/arch/i386/config.in | expand | \
 	#	cut -c 57- | cut -f1 -d' ' | tr -d '"'`
 	#
-	for x in 386 486 586 586TSC 586MMX 686 PENTIUMIII PENTIUM4 \
-	         K6 K7 K8 ELAN CRUSOE WINCHIPC6 WINCHIP2 WINCHIP3D \
-	         CYRIXIII VIAC3_2
+	for x in M386 M486 M586 M586TSC M586MMX M686 MPENTIUMIII MPENTIUM4 \
+	         MK6 MK7 MK8 MELAN MCRUSOE MWINCHIPC6 MWINCHIP2 MWINCHIP3D \
+	         MCYRIXIII MVIAC3_2 MPSC GENERIC_CPU
 	do
 		if [ "$linux_arch" != "$x" ]
-		then echo "# CONFIG_M$x is not set"
-		else echo "CONFIG_M$x=y" ; fi
+		then echo "# CONFIG_$x is not set"
+		else echo "CONFIG_$x=y" ; fi
 	done
 
 	echo

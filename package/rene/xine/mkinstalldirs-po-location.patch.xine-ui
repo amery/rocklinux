@@ -5,7 +5,7 @@
  INSTALL_DATA = @INSTALL_DATA@
  MKINSTALLDIRS = @MKINSTALLDIRS@
 -mkinstalldirs = `if test ! -z "$(mkdir_p)"; then echo "$(mkdir_p)"; else case "$(MKINSTALLDIRS)" in /*) echo "$(MKINSTALLDIRS)" ;; *) echo "$(top_srcdir)/$(MKINSTALLDIRS)" ;; esac; fi`
-+mkinstalldirs = $(MKINSTALLDIRS)
++mkinstalldirs = ../mkinstalldirs
  
  CC = @CC@
  GMSGFMT = @GMSGFMT@

@@ -1,0 +1,21 @@
+--- ./components/Makefile.am.orig	2005-01-05 11:33:31.827128456 +0100
++++ ./components/Makefile.am	2005-01-05 11:33:34.858667592 +0100
+@@ -7,7 +7,6 @@
+ 	text 					\
+ 	throbber 				\
+ 	emblem					\
+-	image_properties			\
+ 	$(NULL)
+ 
+ #	loser 					\
+--- ./components/Makefile.in.orig	2005-01-05 11:33:40.843757720 +0100
++++ ./components/Makefile.in	2005-01-05 11:33:48.130649944 +0100
+@@ -170,7 +170,7 @@
+ 
+ NULL = 
+ 
+-SUBDIRS =  	adapter                                 	history 					notes 						text 						throbber 					emblem						image_properties				$(NULL)
++SUBDIRS =  	adapter                                 	history 					notes 						text 						throbber 					emblem						$(NULL)
+ 
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../config.h

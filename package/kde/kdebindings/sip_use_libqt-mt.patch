@@ -1,0 +1,22 @@
+--- kdebindings-3.3.0/python/Makefile.am	2004-08-05 20:58:06.000000000 +0200
++++ src.kdebindings.1094394624.26020.3134666954/kdebindings-3.3.0/python/Makefile.am	2004-09-05 17:16:08.000000000 +0200
+@@ -21,7 +21,7 @@
+ 	@(cd pykde && $(MAKE))
+ 
+ sipdone:
+-	cd sip && export QTDIR=${qt_dir} && @PYTHON@ configure.py -b @bindir@ -d ${site_packages} -e ${python_inc_dir} -v ${sip_dir}
++	cd sip && export QTDIR=${qt_dir} && @PYTHON@ configure.py -b @bindir@ -d ${site_packages} -e ${python_inc_dir} -v ${sip_dir} -lqt-mt
+ 	@(cd sip && $(MAKE))
+ 	echo "" > sipdone
+ 
+--- kdebindings-3.3.0/python/Makefile.in	2004-08-14 01:47:27.000000000 +0200
++++ src.kdebindings.1094394624.26020.3134666954/kdebindings-3.3.0/python/Makefile.in	2004-09-05 17:14:40.000000000 +0200
+@@ -549,7 +549,7 @@
+ 	@(cd pykde && $(MAKE))
+ 
+ sipdone:
+-	cd sip && export QTDIR=${qt_dir} && @PYTHON@ configure.py -b @bindir@ -d ${site_packages} -e ${python_inc_dir} -v ${sip_dir}
++	cd sip && export QTDIR=${qt_dir} && @PYTHON@ configure.py -b @bindir@ -d ${site_packages} -e ${python_inc_dir} -v ${sip_dir} -lqt-mt
+ 	@(cd sip && $(MAKE))
+ 	echo "" > sipdone
+ 

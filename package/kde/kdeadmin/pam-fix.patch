@@ -33,14 +33,14 @@ We need libpam and libpam_misc for kuser.
        use_pam=yes
  
              if test "$pam_header" = "pam/pam_appl.h"; then
---- kdeadmin-3.2.0/kuser/Makefile.in.orig	2004-01-25 19:58:43.000000000 +0100
-+++ kdeadmin-3.2.0/kuser/Makefile.in	2004-03-02 21:59:14.000000000 +0100
-@@ -289,7 +289,7 @@
- AM_CXXFLAGS = $(KU_NIS) $(KU_QUOTA) $(QUOTACTL) -D_KU_DEBUG -D_SVID_SOURCE -D_GNU_SOURCE -DQT_NO_ASCII_CAST -DQT_NO_CAST_ASCII
- 
+--- ./kuser/Makefile.in.orig	2004-09-01 05:42:07.355495936 +0200
++++ ./kuser/Makefile.in	2004-09-01 05:42:38.739724808 +0200
+@@ -393,7 +393,7 @@
+ # May be -D_XU_QUOTA -D_XU_SHADOW
+ #AM_CXXFLAGS = 	$(KU_NIS) $(KU_QUOTA) $(QUOTACTL) -D_KU_DEBUG
  kuser_LDFLAGS = $(all_libraries) $(KDE_RPATH)
--kuser_LDADD = $(LIB_KDEUI) $(LIBCRYPT) $(LIBSHADOW) $(LIBGEN)
-+kuser_LDADD = $(LIB_KDEUI) $(LIBCRYPT) $(LIBSHADOW) $(PAMLIBS) $(LIBGEN)
- 
+-kuser_LDADD = $(LIB_KDEUI) $(LIBCRYPT) $(LIBSHADOW) $(LIBGEN) $(LIB_KABC)
++kuser_LDADD = $(LIB_KDEUI) $(LIBCRYPT) $(LIBSHADOW) $(PAMLIBS) $(LIBGEN) $(LIB_KABC)
  
  ####### Files
+ #>- kuser_SOURCES = \

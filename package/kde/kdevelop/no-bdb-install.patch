@@ -1,0 +1,11 @@
+--- kdevelop-3.1.0/bdb/Makefile.in	2004-08-14 02:06:59.000000000 +0200
++++ kdevelop-3.1.0/bdb/Makefile.in.patch	2004-09-06 17:44:02.000000000 +0200
+@@ -596,7 +596,7 @@
+ all-am: Makefile
+ installdirs: installdirs-recursive
+ installdirs-am:
+-install: install-recursive
++install:
+ install-exec: install-exec-recursive
+ install-data: install-data-recursive
+ uninstall: uninstall-recursive

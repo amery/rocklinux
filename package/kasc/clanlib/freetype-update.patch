@@ -1,0 +1,12 @@
+--- ./Sources/TTF/font_ttf.cpp.orig	2004-12-20 23:03:25.353627688 +0100
++++ ./Sources/TTF/font_ttf.cpp	2004-12-20 23:04:00.824235336 +0100
+@@ -21,7 +21,8 @@
+ #include <malloc.h>
+ #include "Display/Font/font_generic.h"
+ 
+-#include <freetype/freetype.h>
++#include <ft2build.h>
++#include FT_FREETYPE_H
+ 
+ #include "font_ttf.h"
+ 

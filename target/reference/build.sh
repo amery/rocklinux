@@ -35,7 +35,7 @@ echo_status "Copying error logs and rock-debug data."
 mkdir -p $build_result/{errors,rock-debug,dep-debug}
 cp $build_root/var/adm/rock-debug/* $build_result/rock-debug/
 cp $build_root/var/adm/dep-debug/* $build_result/dep-debug/
-cp $build_root/var/adm/logs/*.err $build_result/errors/
+cp $build_root/var/adm/logs/*.err $build_result/errors/ 2> /dev/null
 
 echo_status "Creating package database ..."
 admdir="build/${ROCKCFG_ID}/var/adm"

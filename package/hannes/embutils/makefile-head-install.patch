@@ -1,0 +1,19 @@
+--- ./Makefile.orig	2003-08-14 16:36:38.000000000 +0200
++++ ./Makefile	2004-09-13 02:06:46.132798432 +0200
+@@ -68,7 +68,7 @@
+ clean:
+ 	rm -rf *.o bin-* $(PRGS)
+ 
+-VERSION=embutils-$(shell head -1 CHANGES|sed 's/://')
++VERSION=embutils-$(shell head -n 1 CHANGES|sed 's/://')
+ CURNAME=$(notdir $(shell pwd))
+ 
+ rename:
+@@ -89,6 +89,7 @@
+ .PHONY: install
+ 
+ install: $(TARGETS)
++	mkdir -p $(DESTDIR)$(prefix)/bin
+ 	$(INSTALL) $(TARGETS) $(DESTDIR)$(prefix)/bin
+ 
+ uninstall:

@@ -1,0 +1,11 @@
+--- ./error.h.orig	2004-09-12 02:16:50.166525080 +0200
++++ ./error.h	2004-09-12 02:17:03.818449672 +0200
+@@ -1,6 +1,8 @@
+ #ifndef ERROR_H
+ #define ERROR_H
+ 
++#include <errno.h>
++
+ extern int errno;
+ 
+ extern int error_intr;

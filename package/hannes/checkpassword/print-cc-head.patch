@@ -1,0 +1,8 @@
+--- ./print-cc.sh.orig	2004-09-12 02:13:40.931293208 +0200
++++ ./print-cc.sh	2004-09-12 02:14:12.149547312 +0200
+@@ -1,4 +1,4 @@
+-cc="`head -1 conf-cc`"
++cc="`head -n 1 conf-cc`"
+ systype="`cat systype`"
+ 
+ cat warn-auto.sh

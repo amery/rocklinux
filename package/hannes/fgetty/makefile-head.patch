@@ -1,0 +1,11 @@
+--- ./Makefile.orig	2004-09-12 02:53:24.459941776 +0200
++++ ./Makefile	2004-09-12 02:53:33.201612840 +0200
+@@ -46,7 +46,7 @@
+ %.sig: %
+ 	gpg --detach-sign $<
+ 
+-VERSION=fgetty-$(shell head -1 CHANGES|sed 's/://')
++VERSION=fgetty-$(shell head -n 1 CHANGES|sed 's/://')
+ CURNAME=$(notdir $(shell pwd))
+ 
+ tar: clean rename

@@ -1,0 +1,29 @@
+--- ./Makefile.orig	2004-09-12 02:09:44.268271456 +0200
++++ ./Makefile	2004-09-12 02:10:01.125708736 +0200
+@@ -22,7 +22,7 @@
+ 
+ auto_home.c: \
+ auto-str conf-home
+-	./auto-str auto_home `head -1 conf-home` > auto_home.c
++	./auto-str auto_home `head -n 1 conf-home` > auto_home.c
+ 
+ auto_home.o: \
+ compile auto_home.c
+@@ -91,7 +91,7 @@
+ choose: \
+ warn-auto.sh choose.sh conf-home
+ 	cat warn-auto.sh choose.sh \
+-	| sed s}HOME}"`head -1 conf-home`"}g \
++	| sed s}HOME}"`head -n 1 conf-home`"}g \
+ 	> choose
+ 	chmod 755 choose
+ 
+@@ -166,7 +166,7 @@
+ warn-auto.sh conf-ld
+ 	( cat warn-auto.sh; \
+ 	echo 'main="$$1"; shift'; \
+-	echo exec "`head -1 conf-ld`" \
++	echo exec "`head -n 1 conf-ld`" \
+ 	'-o "$$main" "$$main".o $${1+"$$@"}' \
+ 	) > load
+ 	chmod 755 load

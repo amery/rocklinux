@@ -34,7 +34,7 @@ mv -v initrd.gz boot/
 echo_status "Copy more config files."
 cp -v $base/target/$target/powerpc/mapping .
 #
-datadir="build/${ROCKCFG_ID}/ROCK/bootdisk"
+datadir="build/${ROCKCFG_ID}/ROCK/livecd"
 cat > ../isofs_arch.txt <<- EOT
 	BOOT	-hfs -part -map $datadir/mapping -hfs-volid "ROCK_Linux_CD"
 	BOOTx	-hfs-bless boot -sysid PPC -l -L -r -T -chrp-boot

@@ -690,10 +690,11 @@ list_cksums() {
 
 list() {
 	trap '' INT
-	list_dtags | awk '{print $3;}' | \
-	while read ft; do 
-		echo "download/mirror/${ft:0:1}/$ft"
-	done
+
+	list_dtags | sed \
+			-e "s,^$D2re[ ].*\($NODISTre\).*$,\2 download/nodist/\4/\3,;" \
+			-e "s,^$D2re$,\2 download/mirror/\4/\3,;" | awk '{print $2;}'
+
 	trap INT
 }
 
@@ -789,7 +790,7 @@ all() {
 	done < <(descparser package/$repo/$pkg/$pkg.desc | grep '^\[D\] ')
     done
     
-    for each in target/*/download.txt; do
+    for each in target/*/download.txt target/*/*/download.txt; do
 	target="`echo $each | cut -f2 -d/`"
 
 	while read cksum file url flags ; do
@@ -915,7 +916,7 @@ case "$1" in
 
 	-sm) shift ; smpatches "$@" ;;
 
-	-*|"")		exec $0 --help ;;
+	-*|"")		exec $0 -help ;;
 
 	*)		mapped_packages "$@" ;;
 esac

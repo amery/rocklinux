@@ -38,7 +38,7 @@ mv boot/* ../boot/
 echo_status "Remove the stuff we do not need ..."
 rm -rf home usr/{doc,man,info}
 rm -rf var/adm/* var/adm var/mail 
-rm -rf usr/{include,src} usr/*-linux-gnu {,usr/}lib/*.{a,la,o} opt/*/lib/*.{a,la,o}
+rm -rf usr/{include,src} usr/*-linux-gnu {,usr/}lib/*.{a,o} opt/*/lib/*.{a,o}
 #for x in usr/lib/*/; do rm -rf ${x%/}; done
 #
 echo_status "Installing some terminfo databases ..."

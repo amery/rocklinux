@@ -145,7 +145,7 @@ void doboot()
 	else {
 		/* not sure why, but i get 'bad address' if i don't wait a bit here... */
 		sleep(1);
-		execlp("/sbin/init","init");
+		execlp("/sbin/init","init",NULL);
 		perror("execlp /sbin/init failed");
 	}
 	DEBUG("doboot returning - bad!");
@@ -295,7 +295,7 @@ int getdevice(char* devstr, int devlen)
 	}
 
 	if (!nr) {
-		printf("could not find a suitable cdrom device!\n");
+		DEBUG("could not find a suitable cdrom device!\n");
 		return -2;
 	}
 	
@@ -507,20 +507,18 @@ void load_ramdisk_file() {
 
 	strcpy(filename, STAGE_2_IMAGE);
 	DEBUG("set stage 2 filename to %s",filename);
-	
-	ret = getdevice(devicefile, 100);
-	if (ret == -1) {
-		DEBUG("getdevice failed: no cd with image found...");
-		return;
-	/* this is needed for my firewire (sbp2) cd drive ... */
-	} else if (ret == -2) {
-		DEBUG("getdevice failed - no cdrom drive?! - sleeping and retrying...");
-		sleep(2);
-		if(getdevice(devicefile, 100) != 0) {
-			DEBUG("second try still did no good. giving up...");
+
+	/* this is retry stuff is needed for my firewire (sbp2) cd drive ... */
+	do {	
+		ret = getdevice(devicefile, 100);
+		if (ret == -1) {
+			printf("getdevice failed: no cd with image found...\n");
 			return;
+		} else if (ret == -2) {
+			sleep(2);
+			printf("no cdrom drive found - retrying...\n");
 		}
-	}
+	} while( ret != 0 );
 	
 	snprintf(text, 120, "/mnt/cdrom/%s", filename);
 

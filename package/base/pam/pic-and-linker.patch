@@ -17,10 +17,10 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-diff -durN Linux-PAM-0.77-orig/configure Linux-PAM-0.77/configure
---- Linux-PAM-0.77-orig/configure	2002-07-09 08:17:13.000000000 +0200
-+++ Linux-PAM-0.77/configure	2004-11-19 11:22:20.616688200 +0100
-@@ -2479,8 +2479,9 @@
+diff -durN Linux-PAM-0.77-orig/configure.in Linux-PAM-0.77/configure.in
+--- Linux-PAM-0.77-orig/configure.in	2002-07-09 08:17:13.000000000 +0200
++++ Linux-PAM-0.77/configure.in	2004-11-19 11:22:20.614688504 +0100
+@@ -309,8 +309,9 @@
  		WARNINGS="$GCC_WARNINGS"
  		PIC="-fPIC"
  		DYNTYPE=so
@@ -32,10 +32,10 @@ diff -durN Linux-PAM-0.77-orig/configure Linux-PAM-0.77/configure
  		RANLIB=ranlib
  		STRIP=strip
  		CC_STATIC="-Xlinker -export-dynamic"
-diff -durN Linux-PAM-0.77-orig/configure.in Linux-PAM-0.77/configure.in
---- Linux-PAM-0.77-orig/configure.in	2002-07-09 08:17:13.000000000 +0200
-+++ Linux-PAM-0.77/configure.in	2004-11-19 11:22:20.614688504 +0100
-@@ -309,8 +309,9 @@
+diff -durN Linux-PAM-0.77-orig/configure Linux-PAM-0.77/configure
+--- Linux-PAM-0.77-orig/configure	2002-07-09 08:17:13.000000000 +0200
++++ Linux-PAM-0.77/configure	2004-11-19 11:22:20.616688200 +0100
+@@ -2479,8 +2479,9 @@
  		WARNINGS="$GCC_WARNINGS"
  		PIC="-fPIC"
  		DYNTYPE=so

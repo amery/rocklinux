@@ -2,10 +2,10 @@
 
 echo
 echo "# IP-Tables configuration"
-while read line; do
+iptables-save | while read line; do
 	[ -z "${line##\**}" ] && table="${line#\*}"
 	[ -z "${line##-A*}" ] && echo iptables -t $table $line
-done < <( iptables-save )
+done
 
 echo
 echo "# Link Configuration"

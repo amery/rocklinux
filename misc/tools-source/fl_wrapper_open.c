@@ -7,8 +7,8 @@
  * the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
  * the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
  * 
- * ROCK Linux: rock-src/misc/tools-source/fl_wrapper.c.sh
- * ROCK Linux is Copyright (C) 1998 - 2004 Clifford Wolf
+ * ROCK Linux: rock-src/misc/tools-source/fl_wrapper_open.c
+ * ROCK Linux is Copyright (C) 1998 - 2005 Clifford Wolf
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

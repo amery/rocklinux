@@ -9,7 +9,7 @@ dnl the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 dnl the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 dnl 
 dnl ROCK Linux: rock-src/package/base/sysvinit/init_macros.m4
-dnl ROCK Linux is Copyright (C) 1998 - 2004 Clifford Wolf
+dnl ROCK Linux is Copyright (C) 1998 - 2005 Clifford Wolf
 dnl 
 dnl This program is free software; you can redistribute it and/or modify
 dnl it under the terms of the GNU General Public License as published by

@@ -1,0 +1,12 @@
+diff -ruN slmodem-2.9.10/Makefile slmodem-2.9.10-new/Makefile
+--- slmodem-2.9.10/Makefile	2004-08-08 15:27:51.000000000 +0200
++++ slmodem-2.9.10-new/Makefile	2005-01-04 12:36:01.202191928 +0100
+@@ -34,7 +34,7 @@
+ 	$(RM) -rf ${DESTDIR}/var/lib/slmodem
+ 
+ drivers:
+-	$(MAKE) -C drivers KERNEL_DIR=$(KERNEL_DIR)
++	$(MAKE) -C drivers KERNEL_VER=$(KERNEL_VER)
+ 
+ install-drivers: drivers
+ 	$(MAKE) install -C drivers KERNEL_DIR=$(KERNEL_DIR)

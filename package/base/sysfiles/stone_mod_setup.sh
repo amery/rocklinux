@@ -26,7 +26,7 @@ make_fstab() {
 	tmp1=`mktemp` ; tmp2=`mktemp`
 
 	cat <<- EOT > $tmp2
-/dev/root / auto defaults 0 0
+/dev/root / auto defaults 0 1
 none /proc proc defaults 0 0
 none /proc/bus/usb usbfs defaults 0 0
 none /dev devfs defaults 0 0
@@ -69,8 +69,8 @@ ARGIND == 2 {
     printf "%s\n",\$NF;
 }
 EOT
-	gawk -f $tmp2 $tmp1 $tmp1 | \
-		sed 's,\( ext[23] .*\) 0  0$,\1 0  1,' > /etc/fstab
+	fsregex="$( echo -n $( ls /sbin/fsck.* | cut -f2- -d. ) | sed 's, ,\\|,g' )"
+	gawk -f $tmp2 $tmp1 $tmp1 | sed "/ \($fsregex\) / s, 0$, 1," > /etc/fstab
 
 	while read a b c d e f ; do
 		printf "%-60s %s\n" "$(

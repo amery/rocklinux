@@ -1,0 +1,134 @@
+diff -dur cdparanoia-III-alpha9.8/interface/common_interface.c cdparanoia-III-alpha9.8-p/interface/common_interface.c
+--- cdparanoia-III-alpha9.8/interface/common_interface.c	2000-04-19 22:41:04.000000000 +0000
++++ cdparanoia-III-alpha9.8-p/interface/common_interface.c	2004-10-24 05:35:57.879561312 +0000
+@@ -9,6 +9,19 @@
+  ******************************************************************/
+ 
+ #include <math.h>
++
++#ifdef __CHECKER__
++#define __bitwise __attribute__((bitwise))
++#else
++#define __bitwise
++#endif
++#define __le16 __bitwise __u16
++#define __be16 __bitwise __u16
++#define __le32 __bitwise __u32
++#define __be32 __bitwise __u32
++#define __le64 __bitwise __u64
++#define __be64 __bitwise __u64
++
+ #include "low_interface.h"
+ #include "utils.h"
+ #include "smallft.h"
+diff -dur cdparanoia-III-alpha9.8/interface/cooked_interface.c cdparanoia-III-alpha9.8-p/interface/cooked_interface.c
+--- cdparanoia-III-alpha9.8/interface/cooked_interface.c	2000-04-19 22:41:04.000000000 +0000
++++ cdparanoia-III-alpha9.8-p/interface/cooked_interface.c	2004-10-24 05:36:30.088664784 +0000
+@@ -6,6 +6,18 @@
+  *
+  ******************************************************************/
+ 
++#ifdef __CHECKER__
++#define __bitwise __attribute__((bitwise))
++#else
++#define __bitwise
++#endif
++#define __le16 __bitwise __u16
++#define __be16 __bitwise __u16
++#define __le32 __bitwise __u32
++#define __be32 __bitwise __u32
++#define __le64 __bitwise __u64
++#define __be64 __bitwise __u64
++
+ #include "low_interface.h"
+ #include "common_interface.h"
+ #include "utils.h"
+diff -dur cdparanoia-III-alpha9.8/interface/interface.c cdparanoia-III-alpha9.8-p/interface/interface.c
+--- cdparanoia-III-alpha9.8/interface/interface.c	2000-04-19 22:41:04.000000000 +0000
++++ cdparanoia-III-alpha9.8-p/interface/interface.c	2004-10-24 05:36:43.356647744 +0000
+@@ -9,6 +9,18 @@
+  *
+  ******************************************************************/
+ 
++#ifdef __CHECKER__
++#define __bitwise __attribute__((bitwise))
++#else
++#define __bitwise
++#endif
++#define __le16 __bitwise __u16
++#define __be16 __bitwise __u16
++#define __le32 __bitwise __u32
++#define __be32 __bitwise __u32
++#define __le64 __bitwise __u64
++#define __be64 __bitwise __u64
++
+ #include "low_interface.h"
+ #include "common_interface.h"
+ #include "utils.h"
+diff -dur cdparanoia-III-alpha9.8/interface/scan_devices.c cdparanoia-III-alpha9.8-p/interface/scan_devices.c
+--- cdparanoia-III-alpha9.8/interface/scan_devices.c	2001-03-26 05:44:01.000000000 +0000
++++ cdparanoia-III-alpha9.8-p/interface/scan_devices.c	2004-10-24 05:35:20.858189416 +0000
+@@ -15,6 +15,19 @@
+ #include <sys/stat.h>
+ #include <sys/types.h>
+ #include "cdda_interface.h"
++
++#ifdef __CHECKER__
++#define __bitwise __attribute__((bitwise))
++#else
++#define __bitwise
++#endif
++#define __le16 __bitwise __u16
++#define __be16 __bitwise __u16
++#define __le32 __bitwise __u32
++#define __be32 __bitwise __u32
++#define __le64 __bitwise __u64
++#define __be64 __bitwise __u64
++
+ #include "low_interface.h"
+ #include "common_interface.h"
+ #include "utils.h"
+diff -dur cdparanoia-III-alpha9.8/interface/scsi_interface.c cdparanoia-III-alpha9.8-p/interface/scsi_interface.c
+--- cdparanoia-III-alpha9.8/interface/scsi_interface.c	2001-03-24 01:15:46.000000000 +0000
++++ cdparanoia-III-alpha9.8-p/interface/scsi_interface.c	2004-10-24 05:36:56.068715216 +0000
+@@ -8,6 +8,18 @@
+  *
+  ******************************************************************/
+ 
++#ifdef __CHECKER__
++#define __bitwise __attribute__((bitwise))
++#else
++#define __bitwise
++#endif
++#define __le16 __bitwise __u16
++#define __be16 __bitwise __u16
++#define __le32 __bitwise __u32
++#define __be32 __bitwise __u32
++#define __le64 __bitwise __u64
++#define __be64 __bitwise __u64
++
+ #include "low_interface.h"
+ #include "common_interface.h"
+ #include "utils.h"
+diff -dur cdparanoia-III-alpha9.8/interface/toc.c cdparanoia-III-alpha9.8-p/interface/toc.c
+--- cdparanoia-III-alpha9.8/interface/toc.c	1999-08-15 22:32:32.000000000 +0000
++++ cdparanoia-III-alpha9.8-p/interface/toc.c	2004-10-24 05:37:10.818472912 +0000
+@@ -7,6 +7,18 @@
+  *
+  ******************************************************************/
+ 
++#ifdef __CHECKER__
++#define __bitwise __attribute__((bitwise))
++#else
++#define __bitwise
++#endif
++#define __le16 __bitwise __u16
++#define __be16 __bitwise __u16
++#define __le32 __bitwise __u32
++#define __be32 __bitwise __u32
++#define __le64 __bitwise __u64
++#define __be64 __bitwise __u64
++
+ #include "low_interface.h"
+ #include "utils.h"
+ 

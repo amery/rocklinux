@@ -1,3 +1,6 @@
+Hotfix needed for new binutils (bug is in gcc)
+(see http://gcc.gnu.org/bugzilla/show_bug.cgi?id=16625)
+
 --- ./src/Gfx.h.orig	2004-10-10 10:50:57.000000000 +0200
 +++ ./src/Gfx.h	2004-10-10 11:04:57.000000000 +0200
 @@ -763,6 +763,8 @@

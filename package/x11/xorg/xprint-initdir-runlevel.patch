@@ -1,0 +1,110 @@
+diff -Nur xc-vanilla/programs/Xserver/Xprint/etc/init.d/Imakefile xc/programs/Xserver/Xprint/etc/init.d/Imakefile
+--- xc-vanilla/programs/Xserver/Xprint/etc/init.d/Imakefile	2004-10-05 22:36:18.482470000 +0200
++++ xc/programs/Xserver/Xprint/etc/init.d/Imakefile	2004-10-06 17:20:02.070718976 +0200
+@@ -25,7 +25,7 @@
+ #if NothingOutsideProjectRoot
+ #define EtcDir ProjectRoot/etc
+ #else
+-#define EtcDir /etc
++#define EtcDir /etc/rc.d
+ #endif
+ 
+ ETCDIR = EtcDir
+@@ -62,17 +62,18 @@
+ XCOMM SuSE Linux(-like)
+ 
+ #define InstallStartupLink(rcdir,script,linkname) \
+-	MakeDir($(DESTDIR)$(ETCDIR)/rc.d/rcdir) ; \
+-	ln -sf ../script $(DESTDIR)$(ETCDIR)/rc.d/rcdir/linkname
++	MakeDir($(DESTDIR)$(ETCDIR)/rcdir) ; \
++	ln -sf ../script $(DESTDIR)$(ETCDIR)/rcdir/linkname
+ 
+ install::
+ 	echo "# Installing /etc/init.d links for SuSE Linux(-like)"
+-	InstallStartupLink(rc2.d,xprint,K21xprint)
+-	InstallStartupLink(rc2.d,xprint,S21xprint)
+-	InstallStartupLink(rc3.d,xprint,K21xprint)
+-	InstallStartupLink(rc3.d,xprint,S21xprint)
+-	InstallStartupLink(rc5.d,xprint,K21xprint)
+-	InstallStartupLink(rc5.d,xprint,S21xprint)
++## only install for runlevel 5 because the others has no X
++#	InstallStartupLink(rc2.d,xprint,K65xprint)
++#	InstallStartupLink(rc2.d,xprint,S35xprint)
++#	InstallStartupLink(rc3.d,xprint,K65xprint)
++#	InstallStartupLink(rc3.d,xprint,S35xprint)
++	InstallStartupLink(rc5.d,xprint,K65xprint)
++	InstallStartupLink(rc5.d,xprint,S35xprint)
+ # elif LinuxDistribution == LinuxRedHat
+ XCOMM RedHat Linux(-like)
+ 
+diff -Nur xc-vanilla/programs/Xserver/Xprint/etc/init.d/xprint.cpp xc/programs/Xserver/Xprint/etc/init.d/xprint.cpp
+--- xc-vanilla/programs/Xserver/Xprint/etc/init.d/xprint.cpp	2004-10-05 22:36:18.500467264 +0200
++++ xc/programs/Xserver/Xprint/etc/init.d/xprint.cpp	2004-10-06 17:26:46.970164904 +0200
+@@ -25,6 +25,13 @@
+ XCOMM Description: Startup/shutdown script for Xprint server(s)
+ XCOMM## END INIT INFO
+ 
++XCOMM# This is the ROCK Linux INIT information
++XCOMM ROCK Linux /etc/rc.d/init.d/xprint
++XCOMM
++XCOMM Desc: Startup/shutdown script for Xprint server(s)
++XCOMM Runlevel: 35 rcX
++XCOMM
++
+ #undef sun
+ #undef unix
+ 
+@@ -42,21 +49,21 @@
+ XCOMM
+ XCOMM Usage:
+ XCOMM - Start Xprint server(s) manually:
+-XCOMM   % /etc/init.d/xprint start
++XCOMM   % /etc/rc.d/init.d/xprint start
+ XCOMM
+ XCOMM - Stop Xprint server(s) manually:
+-XCOMM   % /etc/init.d/xprint stop
++XCOMM   % /etc/rc.d/init.d/xprint stop
+ XCOMM
+ XCOMM - Populate $XPSERVERLIST env var (for example as part of a global
+ XCOMM   login script like /etc/profile or per-user login scripts like
+ XCOMM   $HOME/.profile (sh/ksh/bash))
+-XCOMM   % XPSERVERLIST="`/etc/init.d/xprint get_xpserverlist`"
++XCOMM   % XPSERVERLIST="`/etc/rc.d/init.d/xprint get_xpserverlist`"
+ XCOMM   % export XPSERVERLIST
+ XCOMM
+ XCOMM Installation:
+-XCOMM   Copy this script to /etc/init.d/xprint and make sure that it is
++XCOMM   Copy this script to /etc/rc.d/init.d/xprint and make sure that it is
+ XCOMM   executable. If your installation is LSB-compliant, then run
+-XCOMM   % /usr/lib/lsb/install_initd /etc/init.d/xprint
++XCOMM   % /usr/lib/lsb/install_initd /etc/rc.d/init.d/xprint
+ XCOMM   to start the service on startup. Otherwise, manually create links
+ XCOMM   to the matching run levels.
+ XCOMM   Examples:
+@@ -680,7 +687,7 @@
+                   echo "Xprint server pid=${server_pid} done, exitcode=$?."
+                   
+                   # Remove the dead server from the registry
+-                  # (only if the registry still exists - if /etc/init.d/xprint stop" gets called the registry
++                  # (only if the registry still exists - if /etc/rc.d/init.d/xprint stop" gets called the registry
+                   # will be removed - and we should not re-create it afterwards...)
+                   lock_server_registry
+                   if [ -f "${XP_SERVERS}" ] ; then
+@@ -745,7 +752,7 @@
+     else 
+         # Continue in the background if there is no spooler running yet (that
+         # we don't hold off the boot process nor run in a possible race-condition
+-        # when /etc/init.d/lpd was not called yet but the runlevel script waits
++        # when /etc/rc.d/init.d/lpd was not called yet but the runlevel script waits
+         # for us to finish first ...
+         if is_spooler_running ; then
+             msg "Starting Xprint servers: Xprt."
+@@ -1095,7 +1102,7 @@
+         # done with setting the config for per-user Xprt instances
+         return 0;
+     else
+-        # Use /etc/init.d/xprint's builtin config
++        # Use /etc/rc.d/init.d/xprint's builtin config
+         # Each entry should start with |setup_config_defaults| to pull the
+         # platform defaults and finish with |num_xpstart=$(($num_xpstart + 1))|
+         # to end the entry

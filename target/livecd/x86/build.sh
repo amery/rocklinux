@@ -1,6 +1,6 @@
 
 syslinux_ver="`sed -n 's,.*syslinux-\(.*\).tar.*,\1,p' \
-               $base/target/livecd/download.txt`"
+               $base/target/livecd/$arch/download.txt`"
 
 cd $disksdir
 

@@ -1,0 +1,67 @@
+Submitted By: Uwe Düffert (lfs at uwe-dueffert dot de)
+Date: 2004-05-16
+Initial Package Version: 3.75.0
+Origin: self-created, http://www.uwe-dueffert.de/lfs/ownpatches/wvstreams-3.75.0-gcc34-1.patch
+Upstream Status: not reported
+Description: fix compilation with gcc34
+ 
+diff -Naur wvstreams-3.75.0.orig/include/uniconftree.h wvstreams-3.75.0/include/uniconftree.h
+--- wvstreams-3.75.0.orig/include/uniconftree.h	2004-05-16 14:22:42.665940696 +0000
++++ wvstreams-3.75.0/include/uniconftree.h	2004-05-16 14:22:53.992218840 +0000
+@@ -48,7 +48,7 @@
+ 
+     /** Returns a pointer to the parent node, or NULL if there is none. */
+     Sub *parent() const
+-        { return static_cast<Sub*>(xparent); }
++        { return static_cast<Sub*>(Base::xparent); }
+ 
+     /** Reparents this node. */
+     void setparent(Sub *parent)
+@@ -93,13 +93,13 @@
+     /** Removes and deletes all children of this node. */
+     void zap()
+     {
+-        if (!xchildren)
++        if (!Base::xchildren)
+             return;
+         // set xchildren to NULL first so that the zap() will happen faster
+         // otherwise, each child will attempt to unlink itself uselessly
+ 
+-        typename Base::Container *oldchildren = xchildren;
+-        xchildren = NULL;
++        typename Base::Container *oldchildren = Base::xchildren;
++        Base::xchildren = NULL;
+ 
+         // delete all children
+         typename Base::Container::Iter i(*oldchildren);
+diff -Naur wvstreams-3.75.0.orig/include/wvsorter.h wvstreams-3.75.0/include/wvsorter.h
+--- wvstreams-3.75.0.orig/include/wvsorter.h	2004-05-16 14:22:42.587952552 +0000
++++ wvstreams-3.75.0/include/wvsorter.h	2004-05-16 14:22:53.993218688 +0000
+@@ -90,7 +90,7 @@
+     for (i.rewind(); i.next(); )
+ 	n++;
+     
+-    array = new (void *) [n+2];
++    array = new void*[n+2];
+     void **aptr = array;
+ 
+     *aptr++ = NULL; // initial link is NULL, to act like a normal iterator
+diff -Naur wvstreams-3.75.0.orig/utils/wvbuffer.cc wvstreams-3.75.0/utils/wvbuffer.cc
+--- wvstreams-3.75.0.orig/utils/wvbuffer.cc	2004-05-16 14:22:42.433975960 +0000
++++ wvstreams-3.75.0/utils/wvbuffer.cc	2004-05-16 14:22:53.993218688 +0000
+@@ -9,6 +9,7 @@
+ /***** Specialization for raw memory buffers *****/
+ 
+ // Instantiate some commonly used templates
++/*
+ template WvBufBaseCommonImpl<unsigned char>;
+ template WvInPlaceBufBase<unsigned char>;
+ template WvConstInPlaceBufBase<unsigned char>;
+@@ -16,6 +17,7 @@
+ template WvDynBufBase<unsigned char>;
+ template WvNullBufBase<unsigned char>;
+ template WvBufCursorBase<unsigned char>;
++*/
+ 
+ void WvBufBase<unsigned char>::putstr(WvStringParm str)
+ {

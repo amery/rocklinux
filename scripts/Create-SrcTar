@@ -29,6 +29,7 @@ echo -n 'Creating source tar ... '
 # Create temp source base dir
 #
 src="`mktemp -d -p $PWD src.srctar.XXXXXXXXXX`"
+base=${base:-${PWD}}
 rm -rf $src/rock-src-$rockver
 mkdir -p $src/rock-src-$rockver
 #
@@ -41,8 +42,7 @@ done
 #
 cd $src
 tar --use-compress-program=bzip2 --owner root --group root \
-    --exclude .svn --exclude CVS -cf ${1:-rock-src-$rockver.tar.bz2} rock-src-$rockver/*/*
-
+    --exclude .svn --exclude CVS -cf ${1:-${base}/rock-src-$rockver.tar.bz2} rock-src-$rockver/*/*
 # Done.
 #
 cd $base

@@ -1,0 +1,10 @@
+--- ./src/local.c.orig	2004-09-12 05:26:32.856351552 +0200
++++ ./src/local.c	2004-09-12 05:27:08.615915272 +0200
+@@ -614,6 +614,7 @@
+ 	case LOCAL_TYPE_OGG:	local_vc_read(stream); 		break;
+ #endif
+ 	default:		/* nop */
++		;
+ 	}
+       
+       *streams = g_list_append(*streams, stream);

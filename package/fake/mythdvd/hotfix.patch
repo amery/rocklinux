@@ -1,0 +1,11 @@
+--- mythdvd-2005-01-06/mtd/mtd.cpp.orig	2005-03-03 21:16:33.887003952 +0100
++++ mythdvd-2005-01-06/mtd/mtd.cpp	2005-03-03 21:16:42.988620296 +0100
+@@ -8,6 +8,8 @@
+ 
+ */
+ 
++#include <time.h>
++
+ #include <qstringlist.h>
+ #include <qregexp.h>
+ #include <qdir.h>

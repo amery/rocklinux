@@ -1,0 +1,11 @@
+--- bash-3.0/Makefile.in	2004-08-25 22:53:21.000000000 +0200
++++ bash-3.0/Makefile.in.patch	2004-08-25 22:51:33.000000000 +0200
+@@ -511,7 +511,7 @@
+ 
+ $(Program):  .build $(OBJECTS) $(BUILTINS_DEP) $(LIBDEP)
+ 	$(RM) $@
+-	$(PURIFY) $(CC) $(BUILTINS_LDFLAGS) $(LIBRARY_LDFLAGS) $(LDFLAGS) -o $(Program) $(OBJECTS) $(LIBS)
++	$(PURIFY) $(CC) $(BUILTINS_LDFLAGS) $(LIBRARY_LDFLAGS) $(LDFLAGS) -o $(Program) $(OBJECTS) $(LIBS) $(READLINE_LIBRARY)
+ 	ls -l $(Program)
+ 
+ .build:	$(SOURCES) config.h Makefile version.h $(VERSPROG)

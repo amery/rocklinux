@@ -143,3 +143,13 @@ diff -dur isdn4k-utils/capifax/msg.c isdn4k-utils-p/capifax/msg.c
  #include <linux/capi.h>
  #include "capi20.h"
  
+--- ./capiinit/capiinit.c.orig	2004-11-24 16:30:22.497425008 +0100
++++ ./capiinit/capiinit.c	2004-11-24 16:30:34.660575928 +0100
+@@ -52,6 +52,7 @@
+ #include <sys/stat.h>
+ #include <sys/ioctl.h>
+ #include <signal.h>
++#include <linux/compiler.h>
+ #include <linux/isdn.h>
+ #include <linux/b1lli.h>
+ #include <linux/capi.h>

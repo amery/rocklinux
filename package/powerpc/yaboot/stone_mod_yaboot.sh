@@ -75,7 +75,7 @@ EOT
 
 
 	create_kernel_list
-	gui_message "This is the new /etc/yaboot.conf file:
+	[ -n "$1" ] && gui_message "This is the new /etc/yaboot.conf file:
 
 $( cat /etc/yaboot.conf )"
 }
@@ -129,8 +129,7 @@ realpath() {
 	echo $dir/$file
 }
 
-main() {
-    while
+yaboot_init() {
         bootstrappart="`pdisk -l /dev/discs/disc0/disc | \
                        grep Apple_Bootstrap | sed -e "s/:.*//" -e "s/ //g"`"
 	bootstrapdev="`realpath /dev/discs/disc0/part$bootstrappart`"
@@ -148,6 +147,18 @@ main() {
 	if [ "$rootdev" = "$yabootdev" ]
 	then yabootpath=/usr ; else yabootpath="" ; fi
 	yabootpart="`echo $yabootdev | sed s/.*part//`"
+}
+
+yaboot_setup() {
+	if gui_yesno "Do you want to install the yaboot bootloader now?"; then
+		yaboot_init; create_yaboot_conf
+		yaboot_init; yaboot_install
+	fi
+}
+
+main() {
+    while
+	yaboot_init
 
         gui_menu yaboot 'Yaboot Boot Loader Setup' \
 		"Bootstrap Device ...... $bootstrapdev" "" \
@@ -156,7 +167,7 @@ main() {
 		"Boot Device ........... $bootdev" "" \
 		"MacOS X partition ..... $macosxdev" "" \
 		'' '' \
-		'(Re-)Create default /etc/yaboot.conf' 'create_yaboot_conf' \
+		'(Re-)Create default /etc/yaboot.conf' 'create_yaboot_conf 1' \
 		'(Re-)Install the yaboot boot chrp script and binary' 'yaboot_install' \
 		'' '' \
 		"Edit /etc/yaboot.conf (Config file)" \

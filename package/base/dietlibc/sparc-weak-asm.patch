@@ -1,0 +1,22 @@
+--- ./sparc/strcmp.S.orig	2004-09-19 14:32:02.524790856 +0200
++++ ./sparc/strcmp.S	2004-09-19 14:32:29.443698560 +0200
+@@ -11,6 +11,8 @@
+ 
+ .text
+ .globl strcmp
++.weak strcoll
++strcoll:
+ strcmp:
+ 	clr %o4
+ .Lloop:
+--- ./sparc/strchr.S.orig	2004-09-19 14:30:12.402531984 +0200
++++ ./sparc/strchr.S	2004-09-19 14:31:56.704675648 +0200
+@@ -11,6 +11,8 @@
+ 
+ .text
+ .globl strchr
++.weak index
++index:
+ strchr:
+ 	ldub [%o0], %o2
+ 	cmp %o2, %o1

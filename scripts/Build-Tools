@@ -223,7 +223,9 @@ EOT
 	ln -sf install_wrapper build/$ROCKCFG_ID/ROCK/$toolsdir/wrapper/cp
 	ln -sf install_wrapper build/$ROCKCFG_ID/ROCK/$toolsdir/wrapper/ln
 	ln -sf install_wrapper build/$ROCKCFG_ID/ROCK/$toolsdir/wrapper/mv
-	wrappers="$wrappers install_wrapper install cp ln mv"
+	ln -sf install_wrapper build/$ROCKCFG_ID/ROCK/$toolsdir/wrapper/chmod
+	ln -sf install_wrapper build/$ROCKCFG_ID/ROCK/$toolsdir/wrapper/chown
+	wrappers="$wrappers install_wrapper install cp ln mv chmod chown"
 	#
 	for x in $( ls build/$ROCKCFG_ID/ROCK/$toolsdir/wrapper/ )
 	do

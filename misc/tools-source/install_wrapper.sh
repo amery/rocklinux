@@ -20,16 +20,44 @@ logfile="${INSTALL_WRAPPER_LOGFILE:-/dev/null}"
 [ -z "${logfile##*/*}" -a ! -d "${logfile%/*}" ] && logfile=/dev/null
 
 command="${0##*/}"
-destination=""
-declare -a sources
-newcommand="$command"
-sources_counter=0
 error=0
 
 echo ""						>> $logfile
 echo "$PWD:"					>> $logfile
 echo "* ${INSTALL_WRAPPER_FILTER:-No Filter.}"	>> $logfile
 echo "- $command $*"				>> $logfile
+
+case "$command" in
+	chmod|chown)
+		declare -a newparams
+		newparams[0]="$command"
+		actually_got_file_params=0
+		newparams_c=0
+		for p; do
+			case "$p" in
+				-*) newparams[newparams_c++]="$p" ;;
+				*)  f="$( eval "echo \"$p\" | tr -s '/' $filter" )"
+				    if [ -n "$f" ]; then
+					newparams[newparams_c++]="$f"
+					if [ -f "$f" -o -z "${f##*/*}" ]; then
+						actually_got_file_params=1
+					fi
+				    fi ;;
+			esac
+		done
+		if [ $actually_got_file_params = 1 ]; then
+			echo "+ $command ${newparams[*]}" >> $logfile
+			$command "${newparams[@]}" || error=$?
+		fi
+		echo "===> Returncode: $error" >> $logfile
+		exit $error
+		;;
+esac
+
+destination=""
+declare -a sources
+newcommand="$command"
+sources_counter=0
 
 if [ "${*/--target-directory//}" != "$*" ]; then
 	echo "= $command $*" >> $logfile

@@ -48,24 +48,28 @@ pgsql_initdb() {
 	fi
 
 	gui_cmd "Initializing PostgreSQL Database (locale: $locale)" \
-			"su postgres -c \"D_prefix/bin/initdb --locale=$locale --encoding=$encoding\""
+			"echo \"D_prefix/bin/initdb --locale=$locale --encoding=$encoding\" | su - postgres"
 }
 
 pgsql_create_user() {
+	createdb="--no-createdb"
+	adduser="--no-adduser"
 	gui_input "User to create: " "$username" "username"
 
-	if ! grep "^$username:" /etc/passwd > /dev/null 2>&1 ; then
-		gui_message "$username is not a valid system user!" ;
-	else
+	if getent passwd $username > /dev/null 2>&1 ; then
+		gui_yesno "should the user be able to create databases?" && createdb="--createdb"
+		gui_yesno "should the user be able to add users?" && adduser="--adduser"
 		gui_cmd "Creating ProstgreSQL User $username" \
-			"su postgres -c \"D_prefix/bin/createuser $username\""
+			"echo \"D_prefix/bin/createuser $createdb $adduser $username\" | su - postgres"
+	else
+		gui_message "$username is not a valid system user!" ;
 	fi
 }
 
 pgsql_user_menu() {
 	function=$1
 	umenu="gui_menu pgsql_users 'Please select user:'"
-	for uname in `su postgres -c "D_prefix/bin/psql -c '\du' template1" | tail -n+4 | head -n-2 \
+	for uname in `echo "D_prefix/bin/psql -c '\du' template1" | su - postgres | tail -n+4 | head -n-2 \
 		      | awk -F'|' '{ print $1 ; }' | tr -d ' '| grep -v postgres`; do
 		umenu="$umenu '$uname' '$function $uname'"
 	done;
@@ -77,7 +81,7 @@ pgsql_db_menu() {
 	user=$1
 	function=$2
 	dmenu="gui_menu pgsql_dbs 'Please select database:'"
-	for db in `su postgres -c "D_prefix/bin/psql -l" | tail -n+4 | head -n-2 | grep " | $user.[ ]*|" \
+	for db in `echo "D_prefix/bin/psql -l" | su - postgres | tail -n+4 | head -n-2 | grep " | $user.[ ]*|" \
 			|awk -F'|' '{ print $1 ; }' | tr -d ' '| grep -v template` ; do
 		dmenu="$dmenu '$db' '$function $db'"
 	done;
@@ -91,9 +95,9 @@ pgsql_drop_user() {
     else 
 	uname=$1
 	if gui_yesno "are you sure you want to drop the user '$uname' ?" ; then
-		gui_cmd "Dropping User $uname" "su postgres -c \"D_prefix/bin/dropuser $uname\""
+		gui_cmd "Dropping User $uname" "echo \"D_prefix/bin/dropuser $uname\" | su - postgres"
 	else
-		gui_message "hey, know what? i already deleted the account. just kidding ;-)"
+		gui_message "user deletion aborted"
 	fi
 	unset uname
     fi
@@ -111,7 +115,7 @@ pgsql_create_db() {
 	[ -z "$dbname" ] && return;
 
 	gui_cmd "Creating database $dbname for user $uname" \
-		"su $uname -c \"D_prefix/bin/createdb $dbname\""
+		"echo \"D_prefix/bin/createdb $dbname\" | su - $uname"
 
 	unset dbname uname 
 }
@@ -133,15 +137,15 @@ pgsql_drop_db() {
 
 	if gui_yesno "Are you sure you want to drop $uname's database $dbname?" ; then
 		gui_cmd "Dropping database $dbname for user $uname" \
-			"su $uname -c \"D_prefix/bin/dropdb $dbname\""
+			"echo \"D_prefix/bin/dropdb $dbname\" | su - $uname"
 	fi
 
 	unset dbname uname
 }
 
 pgsql_gen_menu () {
-    eval `su postgres -c "D_prefix/bin/initdb --show" 2>&1 | grep PGDATA`
-    PGPID="`su postgres -c "D_prefix/bin/pg_ctl status" | grep -o 'PID: .[^)]*' | tr -d 'PID: '`"
+    eval `echo "D_prefix/bin/initdb --show" 2>&1 | su - postgres | grep PGDATA`
+    PGPID="`echo "D_prefix/bin/pg_ctl status" | su - postgres | grep -o 'PID: .[^)]*' | tr -d 'PID: '`"
 
     echo "gui_menu pgsql 'PostgresQL Database Setup'"
     # initialisation is needed once, so we note if it seems done

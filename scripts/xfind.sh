@@ -14,7 +14,7 @@ do
 	shift
 done
 
-[ $# -eq 0 ] || set -- -true
+[ $# -eq 0 ] && set -- -true
 
 find $dirs \( -name .svn -o -name CVS \) -prune -false -o \
 	! -name .svn ! -name CVS \( "$@" \)

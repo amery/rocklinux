@@ -1,8 +1,8 @@
 
 cd $disksdir
 
-echo_header "Creating cleaning boot directory:"
-rm -rfv boot/*-rock boot/System.map boot/kconfig*
+echo_header "Cleaning boot directory:"
+rm -rfv boot/*-rock boot/System.map boot/kconfig* boot/initrd*img boot/*.b
 
 echo_header "Creating silo setup:"
 #
@@ -20,8 +20,9 @@ echo_status "Moving image (initrd) to boot directory."
 mv -v initrd.gz boot/
 #
 buildroot="build/${ROCKCFG_ID}"
-datadir="build/${ROCKCFG_ID}/ROCK/bootdisk"
+datadir="build/${ROCKCFG_ID}/ROCK/livecd"
 cat > ../isofs_arch.txt <<- EOT
 	BOOT	-G $buildroot/boot/isofs.b -B ...
-	DISK1	$datdir/boot/ boot/
+	DISK1	$datadir/boot/ boot/
 EOT
+

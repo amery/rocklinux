@@ -20,16 +20,62 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1097039320 Wed Oct  6 07:08:40 2004
+[TIMESTAMP] 1101739742 Mon Nov 29 15:49:02 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-chrony.log
+[LOGS] 5-chrony.err
 
-[BUILDTIME] 2049 (5)
-[SIZE] 0.17 MB, 19 files
+[BUILDTIME] 2319 (5)
 
-[DEP] 00-dirtree alien bash2 binutils bzip2 coreutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux24-header:dev m4 make
-[DEP] ncurses:dev patch readline readline:dev sed sysfiles tar
+[5-ERROR] gcc-34  -O2 -g  -DLINUX -DHAS_SPINLOCK_H -DHAS_STDINT_H -DHAS_INTTYPES_H -c sources.c
+[5-ERROR] gcc-34  -O2 -g  -DLINUX -DHAS_SPINLOCK_H -DHAS_STDINT_H -DHAS_INTTYPES_H -c sourcestats.c
+[5-ERROR] gcc-34  -O2 -g  -DLINUX -DHAS_SPINLOCK_H -DHAS_STDINT_H -DHAS_INTTYPES_H -c reference.c
+[5-ERROR] gcc-34  -O2 -g  -DLINUX -DHAS_SPINLOCK_H -DHAS_STDINT_H -DHAS_INTTYPES_H -c logging.c
+[5-ERROR] gcc-34  -O2 -g  -DLINUX -DHAS_SPINLOCK_H -DHAS_STDINT_H -DHAS_INTTYPES_H -c conf.c
+[5-ERROR] gcc-34  -O2 -g  -DLINUX -DHAS_SPINLOCK_H -DHAS_STDINT_H -DHAS_INTTYPES_H -c cmdmon.c
+[5-ERROR] gcc-34  -O2 -g  -DLINUX -DHAS_SPINLOCK_H -DHAS_STDINT_H -DHAS_INTTYPES_H -c md5.c
+[5-ERROR] gcc-34  -O2 -g  -DLINUX -DHAS_SPINLOCK_H -DHAS_STDINT_H -DHAS_INTTYPES_H -c keys.c
+[5-ERROR] gcc-34  -O2 -g  -DLINUX -DHAS_SPINLOCK_H -DHAS_STDINT_H -DHAS_INTTYPES_H -c nameserv.c
+[5-ERROR] gcc-34  -O2 -g  -DLINUX -DHAS_SPINLOCK_H -DHAS_STDINT_H -DHAS_INTTYPES_H -c acquire.c
+[5-ERROR] gcc-34  -O2 -g  -DLINUX -DHAS_SPINLOCK_H -DHAS_STDINT_H -DHAS_INTTYPES_H -c manual.c
+[5-ERROR] gcc-34  -O2 -g  -DLINUX -DHAS_SPINLOCK_H -DHAS_STDINT_H -DHAS_INTTYPES_H -c addrfilt.c
+[5-ERROR] gcc-34  -O2 -g  -DLINUX -DHAS_SPINLOCK_H -DHAS_STDINT_H -DHAS_INTTYPES_H -c cmdparse.c
+[5-ERROR] gcc-34  -O2 -g  -DLINUX -DHAS_SPINLOCK_H -DHAS_STDINT_H -DHAS_INTTYPES_H -c mkdirpp.c
+[5-ERROR] gcc-34  -O2 -g  -DLINUX -DHAS_SPINLOCK_H -DHAS_STDINT_H -DHAS_INTTYPES_H -c rtc.c
+[5-ERROR] gcc-34  -O2 -g  -DLINUX -DHAS_SPINLOCK_H -DHAS_STDINT_H -DHAS_INTTYPES_H -c pktlength.c
+[5-ERROR] gcc-34  -O2 -g  -DLINUX -DHAS_SPINLOCK_H -DHAS_STDINT_H -DHAS_INTTYPES_H -c clientlog.c
+[5-ERROR] gcc-34  -O2 -g  -DLINUX -DHAS_SPINLOCK_H -DHAS_STDINT_H -DHAS_INTTYPES_H -c broadcast.c
+[5-ERROR] gcc-34  -O2 -g  -DLINUX -DHAS_SPINLOCK_H -DHAS_STDINT_H -DHAS_INTTYPES_H -c sys_linux.c
+[5-ERROR] sys_linux.c:101: warning: conflicting types for built-in function 'round'
+[5-ERROR] gcc-34  -O2 -g  -DLINUX -DHAS_SPINLOCK_H -DHAS_STDINT_H -DHAS_INTTYPES_H -c wrap_adjtimex.c
+[5-ERROR] gcc-34  -O2 -g  -DLINUX -DHAS_SPINLOCK_H -DHAS_STDINT_H -DHAS_INTTYPES_H -c rtc_linux.c
+[5-ERROR] In file included from rtc_linux.c:47:
+[5-ERROR] /usr/include/linux/spinlock.h: In function `bit_spin_lock':
+[5-ERROR] /usr/include/linux/spinlock.h:479: error: invalid type argument of `->'
+[5-ERROR] /usr/include/linux/spinlock.h: In function `bit_spin_trylock':
+[5-ERROR] /usr/include/linux/spinlock.h:496: error: invalid type argument of `->'
+[5-ERROR] /usr/include/linux/spinlock.h:499: error: invalid type argument of `->'
+[5-ERROR] /usr/include/linux/spinlock.h:499: error: `TIF_NEED_RESCHED' undeclared (first use in this function)
+[5-ERROR] /usr/include/linux/spinlock.h:499: error: (Each undeclared identifier is reported only once
+[5-ERROR] /usr/include/linux/spinlock.h:499: error: for each function it appears in.)
+[5-ERROR] /usr/include/linux/spinlock.h: In function `bit_spin_unlock':
+[5-ERROR] /usr/include/linux/spinlock.h:517: error: invalid type argument of `->'
+[5-ERROR] /usr/include/linux/spinlock.h:517: error: `TIF_NEED_RESCHED' undeclared (first use in this function)
+[5-ERROR] make: *** [rtc_linux.o] Error 1
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 1 files for this package.
+[5-ERROR] Applying package split: 40 chrony:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 chrony:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 chrony:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <chrony:doc> Creating flist file ...
+[5-ERROR] <chrony:doc> Creating package dependencies file ...
+[5-ERROR] <chrony:doc> Creating md5sum and cksum files ...
+[5-ERROR] <chrony:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building chrony=chrony.
 

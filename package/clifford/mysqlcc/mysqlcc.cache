@@ -20,18 +20,68 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1097127561 Thu Oct  7 07:39:21 2004
+[TIMESTAMP] 1101742327 Mon Nov 29 16:32:07 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-mysqlcc.log
+[LOGS] 5-mysqlcc.err
 
-[BUILDTIME] 38384 (5)
-[SIZE] 3.42 MB, 28 files
+[BUILDTIME] 27386 (5)
+[SIZE] 0.02 MB, 9 files
 
-[DEP] 00-dirtree autoconf automake18 bash2 binutils bzip2 coreutils
-[DEP] diffutils expat findutils freetype gawk gcc34 gcc34:dev glibc23
-[DEP] glibc23:dev grep libpng libtool linux24-header:dev m4 make mktemp
-[DEP] mysql mysql:dev net-tools openssl patch perl5 qt qt:dev sed sysfiles
-[DEP] tar util-linux xfree86 zlib:dev
+[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
+[DEP] diffutils findutils gcc34 gcc34:dev glibc23 glibc23:dev grep libtool
+[DEP] linux26-header:dev m4 make mktemp mysql mysql:dev net-tools openssl
+[DEP] patch perl5 qt qt:dev sed sysfiles tar util-linux zlib:dev
+
+[5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/CTableSpecific.o src/CTableSpecific.cpp
+[5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/CTableTools.o src/CTableTools.cpp
+[5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/CTableWindow.o src/CTableWindow.cpp
+[5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/CTablesListBox.o src/CTablesListBox.cpp
+[5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/CTextDialog.o src/CTextDialog.cpp
+[5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/CTextFieldEditor.o src/CTextFieldEditor.cpp
+[5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/CToolBar.o src/CToolBar.cpp
+[5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/CUserAdminItem.o src/CUserAdminItem.cpp
+[5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/CUserAdminWindow.o src/CUserAdminWindow.cpp
+[5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/CUserItem.o src/CUserItem.cpp
+[5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/globals.o src/globals.cpp
+[5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/main.o src/main.cpp
+[5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/mysqlcc_main.o src/mysqlcc_main.cpp
+[5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/panels.o src/panels.cpp
+[5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/shared_menus.o src/shared_menus.cpp
+[5-ERROR] src/shared_menus.cpp: In member function `void CPluginsMenu::Activated(const CPlugin&)':
+[5-ERROR] src/shared_menus.cpp:79: warning: enumeration value `NO_TYPE' not handled in switch
+[5-ERROR] src/shared_menus.cpp:79: warning: enumeration value `QUERY_PARSER' not handled in switch
+[5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/CSqlEditor.o src/CSqlEditor/CSqlEditor.cpp
+[5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/completion.o src/CSqlEditor/completion.cpp
+[5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/editor.o src/CSqlEditor/editor.cpp
+[5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/parenmatcher.o src/CSqlEditor/parenmatcher.cpp
+[5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/sqlcompletion.o src/CSqlEditor/sqlcompletion.cpp
+[5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/syntaxhighliter_sql.o src/CSqlEditor/syntaxhighliter_sql.cpp
+[5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/CAction.o shared/src/CAction.cpp
+[5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/CConfig.o shared/src/CConfig.cpp
+[5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/CMySQL.o shared/src/CMySQL.cpp
+[5-ERROR] shared/src/CMySQL.cpp: In member function `bool CMySQL::mysqlShutdown()':
+[5-ERROR] /opt/mysql/include/mysql/mysql.h:458: error: too few arguments to function `int mysql_shutdown(MYSQL*, mysql_enum_shutdown_level)'
+[5-ERROR] shared/src/CMySQL.cpp:454: error: at this point in file
+[5-ERROR] make: *** [tmp/CMySQL.o] Error 1
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 4 files for this package.
+[5-ERROR] Applying package split: 40 mysqlcc:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 mysqlcc:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 mysqlcc:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <mysqlcc> Creating flist file ...
+[5-ERROR] <mysqlcc> Creating package dependencies file ...
+[5-ERROR] <mysqlcc> Creating md5sum and cksum files ...
+[5-ERROR] <mysqlcc> Creating package description ...
+[5-ERROR] <mysqlcc:doc> Creating flist file ...
+[5-ERROR] <mysqlcc:doc> Creating package dependencies file ...
+[5-ERROR] <mysqlcc:doc> Creating md5sum and cksum files ...
+[5-ERROR] <mysqlcc:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building mysqlcc=mysqlcc.
 

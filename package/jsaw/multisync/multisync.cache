@@ -20,30 +20,75 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1097238188 Fri Oct  8 14:23:08 2004
+[TIMESTAMP] 1101745335 Mon Nov 29 17:22:15 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-multisync.log
+[LOGS] 5-multisync.err
 
-[BUILDTIME] 24772 (5)
-[SIZE] 0.67 MB, 40 files
+[BUILDTIME] 6260 (5)
+[SIZE] 0.18 MB, 19 files
 
-[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
-[DEP] autoconf bash2 binutils bluez-libs bluez-libs:dev bzip2 coreutils
-[DEP] curl curl:dev cyrus-sasl2:dev diffutils esound esound:dev
-[DEP] evolution evolution:dev expat expat:dev figment findutils
-[DEP] freetype gal gal:dev gawk gcc34 gcc34:dev gconf gconf:dev glib
-[DEP] glib:dev glibc23 glibc23:dev gnome-keyring gnome-keyring:dev
-[DEP] gnome-vfs gnome-vfs:dev gnutls:dev grep gtk+ gtk+:dev libart_lgpl23
-[DEP] libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui libbonoboui:dev
-[DEP] libgcrypt:dev libglade libglade:dev libgnome libgnome:dev
-[DEP] libgnomecanvas libgnomecanvas:dev libgnomeprint libgnomeprint:dev
-[DEP] libgnomeprintui:dev libgnomeui libgnomeui:dev libgpg-error:dev
-[DEP] libjpeg libjpeg:dev libsoup:dev libwbxml2 libwbxml2:dev libxml2
-[DEP] libxml2:dev linux24-header:dev m4 make mktemp net-tools openldap
-[DEP] openldap:dev openobex openobex:dev openssl openssl:dev orbit2
-[DEP] orbit2:dev pango pango:dev patch perl5 pilot-link pilot-link:dev
-[DEP] pkgconfig popt popt:dev sed sysfiles tar util-linux xfree86
-[DEP] xfree86:dev zlib:dev
+[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
+[DEP] binutils bzip2 coreutils diffutils esound esound:dev expat figment
+[DEP] findutils freetype gcc34 gcc34:dev gconf gconf:dev glib glib:dev
+[DEP] glibc23 glibc23:dev gnome-keyring gnome-keyring:dev gnome-vfs
+[DEP] gnome-vfs:dev grep gtk+ gtk+:dev libart_lgpl23 libart_lgpl23:dev
+[DEP] libbonobo libbonobo:dev libbonoboui libbonoboui:dev libgnome
+[DEP] libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeui
+[DEP] libgnomeui:dev libjpeg libjpeg:dev libxml2 libxml2:dev
+[DEP] linux26-header:dev make mktemp net-tools openssl orbit2 orbit2:dev
+[DEP] pango pango:dev patch pkgconfig popt popt:dev sed sysfiles tar
+[DEP] util-linux xfree86 xfree86:dev zlib:dev
+
+[5-ERROR] checking for gawk... gawk
+[5-ERROR] checking whether make sets $(MAKE)... yes
+[5-ERROR] checking for style of include used by make... GNU
+[5-ERROR] checking for i386-unknown-linux-gnu-gcc... gcc-34
+[5-ERROR] checking for C compiler default output... a.out
+[5-ERROR] checking whether the C compiler works... yes
+[5-ERROR] checking whether we are cross compiling... no
+[5-ERROR] checking for suffix of executables... 
+[5-ERROR] checking for suffix of object files... o
+[5-ERROR] checking whether we are using the GNU C compiler... yes
+[5-ERROR] checking whether gcc-34 accepts -g... yes
+[5-ERROR] checking for gcc-34 option to accept ANSI C... none needed
+[5-ERROR] checking dependency style of gcc-34... gcc3
+[5-ERROR] checking for strerror in -lcposix... no
+[5-ERROR] checking for i386-unknown-linux-gnu-gcc... (cached) gcc-34
+[5-ERROR] checking whether we are using the GNU C compiler... (cached) yes
+[5-ERROR] checking whether gcc-34 accepts -g... (cached) yes
+[5-ERROR] checking for gcc-34 option to accept ANSI C... (cached) none needed
+[5-ERROR] checking dependency style of gcc-34... (cached) gcc3
+[5-ERROR] checking for gcc-34 option to accept ANSI C... none needed
+[5-ERROR] checking how to run the C preprocessor... gcc-34 -E
+[5-ERROR] checking for egrep... grep -E
+[5-ERROR] checking for ANSI C header files... yes
+[5-ERROR] ./configure: line 1: evolution: command not found
+[5-ERROR] configure: error: This version of the Evolution plugin (and MultiSync) does only work with Evolution >= 1.4.
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Checking opt/gnome26/share/applications/multisync.desktop ... 
+[5-ERROR] Adding X-ROCK-Name tag (multisync)
+[5-ERROR] Found 18 files for this package.
+[5-ERROR] Applying package split: 40 multisync:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 multisync:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 multisync:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <multisync> Creating flist file ...
+[5-ERROR] <multisync> Creating package dependencies file ...
+[5-ERROR] <multisync> Creating md5sum and cksum files ...
+[5-ERROR] <multisync> Creating package description ...
+[5-ERROR] <multisync:dev> Creating flist file ...
+[5-ERROR] <multisync:dev> Creating package dependencies file ...
+[5-ERROR] <multisync:dev> Creating md5sum and cksum files ...
+[5-ERROR] <multisync:dev> Creating package description ...
+[5-ERROR] <multisync:doc> Creating flist file ...
+[5-ERROR] <multisync:doc> Creating package dependencies file ...
+[5-ERROR] <multisync:doc> Creating md5sum and cksum files ...
+[5-ERROR] <multisync:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building multisync=multisync.
 

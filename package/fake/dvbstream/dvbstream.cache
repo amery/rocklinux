@@ -20,62 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1097404923 Sun Oct 10 12:42:03 2004
+[TIMESTAMP] 1101597388 Sun Nov 28 00:16:28 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-dvbstream.err
+[LOGS] 5-dvbstream.log
 
-[BUILDTIME] 1605 (5)
+[BUILDTIME] 1664 (5)
+[SIZE] 0.10 MB, 10 files
 
-[5-ERROR] tune.c:166: error: `FE_HAS_VITERBI' undeclared (first use in this function)
-[5-ERROR] tune.c:167: error: `FE_HAS_SYNC' undeclared (first use in this function)
-[5-ERROR] tune.c: At top level:
-[5-ERROR] tune.c:173: error: field `cmd' has incomplete type
-[5-ERROR] tune.c:177: error: parse error before "fe_sec_voltage_t"
-[5-ERROR] tune.c: In function `diseqc_send_msg':
-[5-ERROR] tune.c:180: error: `fd' undeclared (first use in this function)
-[5-ERROR] tune.c:180: error: `FE_SET_TONE' undeclared (first use in this function)
-[5-ERROR] tune.c:180: error: `SEC_TONE_OFF' undeclared (first use in this function)
-[5-ERROR] tune.c:181: error: `FE_SET_VOLTAGE' undeclared (first use in this function)
-[5-ERROR] tune.c:181: error: `v' undeclared (first use in this function)
-[5-ERROR] tune.c:183: error: `FE_DISEQC_SEND_MASTER_CMD' undeclared (first use in this function)
-[5-ERROR] tune.c:183: error: `cmd' undeclared (first use in this function)
-[5-ERROR] tune.c:186: error: `FE_DISEQC_SEND_BURST' undeclared (first use in this function)
-[5-ERROR] tune.c:186: error: `b' undeclared (first use in this function)
-[5-ERROR] tune.c:188: error: `t' undeclared (first use in this function)
-[5-ERROR] tune.c: In function `do_diseqc':
-[5-ERROR] tune.c:200: warning: braces around scalar initializer
-[5-ERROR] tune.c:200: warning: (near initialization for `cmd.cmd')
-[5-ERROR] tune.c:200: warning: braces around scalar initializer
-[5-ERROR] tune.c:200: warning: (near initialization for `cmd.cmd')
-[5-ERROR] tune.c:200: warning: excess elements in scalar initializer
-[5-ERROR] tune.c:200: warning: (near initialization for `cmd.cmd')
-[5-ERROR] tune.c:200: warning: excess elements in scalar initializer
-[5-ERROR] tune.c:200: warning: (near initialization for `cmd.cmd')
-[5-ERROR] tune.c:200: warning: excess elements in scalar initializer
-[5-ERROR] tune.c:200: warning: (near initialization for `cmd.cmd')
-[5-ERROR] tune.c:200: warning: excess elements in scalar initializer
-[5-ERROR] tune.c:200: warning: (near initialization for `cmd.cmd')
-[5-ERROR] tune.c:200: warning: excess elements in scalar initializer
-[5-ERROR] tune.c:200: warning: (near initialization for `cmd.cmd')
-[5-ERROR] tune.c:200: warning: excess elements in scalar initializer
-[5-ERROR] tune.c:200: warning: (near initialization for `cmd.cmd')
-[5-ERROR] tune.c:200: confused by earlier errors, bailing out
-[5-ERROR] make: *** [tune.o] Error 1
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 dvbstream:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 dvbstream:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 dvbstream:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <dvbstream:doc> Creating flist file ...
-[5-ERROR] <dvbstream:doc> Creating package dependencies file ...
-[5-ERROR] <dvbstream:doc> Creating md5sum and cksum files ...
-[5-ERROR] <dvbstream:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building dvbstream=dvbstream.
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
+[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp sed
+[DEP] sysfiles tar
 

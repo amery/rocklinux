@@ -20,28 +20,62 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1097114358 Thu Oct  7 03:59:18 2004
+[TIMESTAMP] 1101741951 Mon Nov 29 16:25:51 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnome-applets.log
+[LOGS] 5-gnome-applets.err
 
-[BUILDTIME] 34787 (5)
-[SIZE] 16.59 MB, 1994 files
+[BUILDTIME] 15236 (5)
 
-[DEP] 00-dirtree alsa alsa:dev apmd:dev atk atk:dev audiofile audiofile:dev
-[DEP] bash2 battfink binutils bzip2 coreutils cpan-xml-parser diffutils
-[DEP] docbookx esound esound:dev expat figment findutils freetype gail
-[DEP] gail:dev gawk gcc34 gcc34:dev gconf gconf:dev gettext gftp glib
-[DEP] glib:dev glibc23 glibc23:dev gnome-blog gnome-desktop gnome-keyring
-[DEP] gnome-keyring:dev gnome-panel gnome-panel:dev gnome-vfs gnome-vfs:dev
-[DEP] grep gst-plugins gst-plugins:dev gstreamer gstreamer:dev gtk+
-[DEP] gtk+:dev gtkdoc libart_lgpl23 libart_lgpl23:dev libbonobo
-[DEP] libbonobo:dev libbonoboui libbonoboui:dev libglade libglade:dev
-[DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeui
-[DEP] libgnomeui:dev libgtop libgtop:dev libjpeg libjpeg:dev libxklavier
-[DEP] libxklavier:dev libxml2 libxml2:dev linux24-header:dev make mktemp
-[DEP] net-tools openssl orbit2 orbit2:dev pango pango:dev perl5 pkgconfig
-[DEP] popt popt:dev scrollkeeper sed sysfiles tar util-linux xfree86
-[DEP] xfree86:dev zlib:dev
+[5-ERROR]   scrollkeeper-preinstall /opt/gnome26/share/gnome/help/modemlights/eu/modemlights.xml ./$file $file.out; \
+[5-ERROR] done; \
+[5-ERROR] touch omf_timestamp
+[5-ERROR] make[4]: Leaving directory `/ROCK/src.gnome-applets.1101741759.30503.1279710277/gnome-applets-2.6.2/modemlights/docs/eu'
+[5-ERROR] make[4]: Entering directory `/ROCK/src.gnome-applets.1101741759.30503.1279710277/gnome-applets-2.6.2/modemlights/docs'
+[5-ERROR] make[4]: Nothing to be done for `all-am'.
+[5-ERROR] make[4]: Leaving directory `/ROCK/src.gnome-applets.1101741759.30503.1279710277/gnome-applets-2.6.2/modemlights/docs'
+[5-ERROR] make[3]: Leaving directory `/ROCK/src.gnome-applets.1101741759.30503.1279710277/gnome-applets-2.6.2/modemlights/docs'
+[5-ERROR] make[3]: Entering directory `/ROCK/src.gnome-applets.1101741759.30503.1279710277/gnome-applets-2.6.2/modemlights'
+[5-ERROR] if gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I. -I. -I../screen-exec -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/panel-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/usr/include/freetype2   -DGNOMELOCALEDIR=\""/opt/gnome26/share/locale"\" -DVERSION=\""2.6.2"\"    -g -O2 -MT modemlights.o -MD -MP -MF ".deps/modemlights.Tpo" \
+[5-ERROR]   -c -o modemlights.o `test -f 'modemlights.c' || echo './'`modemlights.c; \
+[5-ERROR] then mv -f ".deps/modemlights.Tpo" ".deps/modemlights.Po"; \
+[5-ERROR] else rm -f ".deps/modemlights.Tpo"; exit 1; \
+[5-ERROR] fi
+[5-ERROR] In file included from /usr/include/linux/ppp_defs.h:45,
+[5-ERROR]                  from /usr/include/net/ppp_defs.h:8,
+[5-ERROR]                  from modemlights.h:28,
+[5-ERROR]                  from modemlights.c:28:
+[5-ERROR] /usr/include/linux/crc-ccitt.h:6: error: syntax error before "const"
+[5-ERROR] /usr/include/linux/crc-ccitt.h:8: error: parse error before "crc_ccitt"
+[5-ERROR] /usr/include/linux/crc-ccitt.h:8: error: parse error before "crc"
+[5-ERROR] /usr/include/linux/crc-ccitt.h:10: error: parse error before "crc_ccitt_byte"
+[5-ERROR] /usr/include/linux/crc-ccitt.h:10: error: parse error before "crc"
+[5-ERROR] /usr/include/linux/crc-ccitt.h: In function `crc_ccitt_byte':
+[5-ERROR] /usr/include/linux/crc-ccitt.h:12: error: `crc' undeclared (first use in this function)
+[5-ERROR] /usr/include/linux/crc-ccitt.h:12: error: (Each undeclared identifier is reported only once
+[5-ERROR] /usr/include/linux/crc-ccitt.h:12: error: for each function it appears in.)
+[5-ERROR] /usr/include/linux/crc-ccitt.h:12: error: `c' undeclared (first use in this function)
+[5-ERROR] make[3]: *** [modemlights.o] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/src.gnome-applets.1101741759.30503.1279710277/gnome-applets-2.6.2/modemlights'
+[5-ERROR] make[2]: *** [all-recursive] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.gnome-applets.1101741759.30503.1279710277/gnome-applets-2.6.2/modemlights'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.gnome-applets.1101741759.30503.1279710277/gnome-applets-2.6.2'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 1 files for this package.
+[5-ERROR] Applying package split: 40 gnome-applets:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 gnome-applets:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 gnome-applets:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <gnome-applets:doc> Creating flist file ...
+[5-ERROR] <gnome-applets:doc> Creating package dependencies file ...
+[5-ERROR] <gnome-applets:doc> Creating md5sum and cksum files ...
+[5-ERROR] <gnome-applets:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building gnome-applets=gnome-applets.
 

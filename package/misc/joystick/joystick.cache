@@ -20,15 +20,62 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1097092821 Wed Oct  6 22:00:21 2004
+[TIMESTAMP] 1101741707 Mon Nov 29 16:21:47 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-joystick.log
+[LOGS] 5-joystick.err
 
-[BUILDTIME] 1387 (5)
-[SIZE] 0.03 MB, 9 files
+[BUILDTIME] 1653 (5)
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux24-header:dev make sed sysfiles tar
+[5-ERROR] /usr/include/linux/pid.h: At top level:
+[5-ERROR] /usr/include/linux/pid.h:17: error: field `pid_chain' has incomplete type
+[5-ERROR] /usr/include/linux/pid.h:19: error: field `pid_list' has incomplete type
+[5-ERROR] In file included from /usr/include/linux/sched.h:101,
+[5-ERROR]                  from /usr/include/linux/module.h:10,
+[5-ERROR]                  from ./linux/joystick.h:31,
+[5-ERROR]                  from jscal.c:42:
+[5-ERROR] /usr/include/linux/timer.h:12: error: field `entry' has incomplete type
+[5-ERROR] In file included from ./linux/joystick.h:31,
+[5-ERROR]                  from jscal.c:42:
+[5-ERROR] /usr/include/linux/module.h:214: error: field `attr' has incomplete type
+[5-ERROR] /usr/include/linux/module.h:221: error: field `kobj' has incomplete type
+[5-ERROR] /usr/include/linux/module.h:232: error: field `attr' has incomplete type
+[5-ERROR] /usr/include/linux/module.h:239: error: field `kobj' has incomplete type
+[5-ERROR] /usr/include/linux/module.h:249: error: field `list' has incomplete type
+[5-ERROR] /usr/include/linux/module.h:300: error: field `modules_which_use_me' has incomplete type
+[5-ERROR] /usr/include/linux/module.h: In function `__module_get':
+[5-ERROR] /usr/include/linux/module.h:370: error: invalid type argument of `->'
+[5-ERROR] /usr/include/linux/module.h:370: error: invalid type argument of `->'
+[5-ERROR] /usr/include/linux/module.h:371: error: invalid type argument of `->'
+[5-ERROR] /usr/include/linux/module.h:371: error: `TIF_NEED_RESCHED' undeclared (first use in this function)
+[5-ERROR] /usr/include/linux/module.h: In function `try_module_get':
+[5-ERROR] /usr/include/linux/module.h:380: error: invalid type argument of `->'
+[5-ERROR] /usr/include/linux/module.h:380: error: invalid type argument of `->'
+[5-ERROR] /usr/include/linux/module.h:385: error: invalid type argument of `->'
+[5-ERROR] /usr/include/linux/module.h:385: error: `TIF_NEED_RESCHED' undeclared (first use in this function)
+[5-ERROR] /usr/include/linux/module.h: In function `module_put':
+[5-ERROR] /usr/include/linux/module.h:393: error: invalid type argument of `->'
+[5-ERROR] /usr/include/linux/module.h:393: error: invalid type argument of `->'
+[5-ERROR] /usr/include/linux/module.h:398: error: invalid type argument of `->'
+[5-ERROR] /usr/include/linux/module.h:398: error: `TIF_NEED_RESCHED' undeclared (first use in this function)
+[5-ERROR] jscal.c: At top level:
+[5-ERROR] /usr/include/asm/smp.h:37: warning: array 'cpu_sibling_map' assumed to have one element
+[5-ERROR] /usr/include/asm/smp.h:46: warning: array 'x86_cpu_to_apicid' assumed to have one element
+[5-ERROR] make: *** [jscal.o] Error 1
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 1 files for this package.
+[5-ERROR] Applying package split: 40 joystick:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 joystick:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 joystick:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <joystick:doc> Creating flist file ...
+[5-ERROR] <joystick:doc> Creating package dependencies file ...
+[5-ERROR] <joystick:doc> Creating md5sum and cksum files ...
+[5-ERROR] <joystick:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building joystick=joystick.
 

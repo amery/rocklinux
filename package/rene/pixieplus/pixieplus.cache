@@ -20,21 +20,70 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1097108714 Thu Oct  7 02:25:14 2004
+[TIMESTAMP] 1101741758 Mon Nov 29 16:22:38 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-pixieplus.log
+[LOGS] 5-pixieplus.err
 
-[BUILDTIME] 23860 (5)
-[SIZE] 2.74 MB, 257 files
+[BUILDTIME] 3619 (5)
+[SIZE] 0.02 MB, 12 files
 
-[DEP] 00-dirtree arts bash2 binutils bzip2 bzip2:dev coreutils diffutils
-[DEP] expat fam fam:dev file findutils freetype freetype:dev gawk
-[DEP] gcc34 gcc34:dev gettext glibc23 glibc23:dev grep imagemagick
-[DEP] imagemagick:dev kdebase kdeedu kdelibs kdelibs:dev kdepim
-[DEP] kdeutils kdewebdev koffice libart_lgpl23 libart_lgpl23:dev libjpeg
-[DEP] libjpeg:dev libpng libpng:dev libtiff libtiff:dev libungif:dev
-[DEP] linux24-header:dev make mktemp net-tools patch perl5 qt qt:dev sed
-[DEP] sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+[DEP] 00-dirtree arts bash2 binutils bzip2 coreutils expat file
+[DEP] findutils freetype gcc34 gcc34:dev gettext glibc23 glibc23:dev
+[DEP] grep imagemagick:dev kdelibs libjpeg libjpeg:dev libpng libpng:dev
+[DEP] libtiff:dev libungif:dev linux26-header:dev make mktemp net-tools
+[DEP] patch qt qt:dev sed sysfiles tar util-linux xfree86 xfree86:dev
+[DEP] zlib:dev
+
+[5-ERROR] checking for extra includes... no
+[5-ERROR] checking for extra libs... no
+[5-ERROR] checking for libz... -lz
+[5-ERROR] checking for libpng... -lpng -lz -lm
+[5-ERROR] checking for libjpeg6b... no
+[5-ERROR] checking for libjpeg... -ljpeg
+[5-ERROR] checking for Qt... libraries /opt/qt33/lib, headers /opt/qt33/include using -mt
+[5-ERROR] checking for moc... /opt/qt33/bin/moc
+[5-ERROR] checking for uic... /opt/qt33/bin/uic
+[5-ERROR] checking whether uic supports -L ... yes
+[5-ERROR] checking whether uic supports -nounload ... yes
+[5-ERROR] checking if Qt needs -ljpeg... no
+[5-ERROR] checking for rpath... yes
+[5-ERROR] checking for KDE... libraries /opt/kde3/lib, headers /opt/kde3/include
+[5-ERROR] checking for KDE paths... defaults
+[5-ERROR] checking for dcopidl... /opt/kde3/bin/dcopidl
+[5-ERROR] checking for dcopidl2cpp... /opt/kde3/bin/dcopidl2cpp
+[5-ERROR] checking for mcopidl... /opt/kde3/bin/mcopidl
+[5-ERROR] checking for artsc-config... /opt/kde3/bin/artsc-config
+[5-ERROR] checking for kde-config... /opt/kde3/bin/kde-config
+[5-ERROR] checking for meinproc... /opt/kde3/bin/meinproc
+[5-ERROR] checking for setenv... yes
+[5-ERROR] checking for unsetenv... yes
+[5-ERROR] checking for png.h... yes
+[5-ERROR] checking for tiff.h... yes
+[5-ERROR] checking for jpeglib.h... yes
+[5-ERROR] checking for gif_lib.h... yes
+[5-ERROR] checking for magick/magick.h... yes
+[5-ERROR] checking for magick/resource.h... no
+[5-ERROR] configure: error: Old ImageMagick headers found. You must have ImageMagick 5.5.0 or above. Read INSTALL.README!
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 7 files for this package.
+[5-ERROR] Applying package split: 40 pixieplus:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 pixieplus:dev /pkgconfig/
+[5-ERROR] Applying package split: 45 pixieplus /.*\.la$
+[5-ERROR] Applying package split: 60 pixieplus:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <pixieplus> Creating flist file ...
+[5-ERROR] <pixieplus> Creating package dependencies file ...
+[5-ERROR] <pixieplus> Creating md5sum and cksum files ...
+[5-ERROR] <pixieplus> Creating package description ...
+[5-ERROR] <pixieplus:doc> Creating flist file ...
+[5-ERROR] <pixieplus:doc> Creating package dependencies file ...
+[5-ERROR] <pixieplus:doc> Creating md5sum and cksum files ...
+[5-ERROR] <pixieplus:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building pixieplus=pixieplus.
 

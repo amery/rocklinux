@@ -20,15 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1097405733 Sun Oct 10 12:55:33 2004
+[TIMESTAMP] 1101745569 Mon Nov 29 17:26:09 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-slmodem.err
 
-[BUILDTIME] 2049 (5)
+[BUILDTIME] 2034 (5)
 
-[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_cmdline.o -c modem_cmdline.c
 [5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem.o -c modem.c
 [5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_datafile.o -c modem_datafile.c
 [5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_at.o -c modem_at.c
@@ -48,20 +47,21 @@
 [5-ERROR] gcc-34 -o slmodemd modem_main.o modem_cmdline.o modem.o modem_datafile.o modem_at.o modem_timer.o modem_pack.o modem_ec.o modem_comp.o modem_param.o modem_debug.o homolog_data.o dp_sinus.o dp_dummy.o dsplibs.o sysdep_common.o
 [5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_test.o -c modem_test.c
 [5-ERROR] gcc-34 -o modem_test modem_test.o modem_cmdline.o modem.o modem_datafile.o modem_at.o modem_timer.o modem_pack.o modem_ec.o modem_comp.o modem_param.o modem_debug.o homolog_data.o dp_sinus.o dp_dummy.o dsplibs.o sysdep_common.o
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.slmodem.1097405702.2918.3259890186/slmodem-2.9.8/modem'
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.slmodem.1101745535.8544.2274487286/slmodem-2.9.10/modem'
+[5-ERROR] make -C modem all
+[5-ERROR] make[1]: Entering directory `/ROCK/src.slmodem.1101745535.8544.2274487286/slmodem-2.9.10/modem'
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.slmodem.1101745535.8544.2274487286/slmodem-2.9.10/modem'
 [5-ERROR] make -C drivers KERNEL_DIR=/lib/modules/2.4.25-rock/build
-[5-ERROR] make[1]: Entering directory `/ROCK/src.slmodem.1097405702.2918.3259890186/slmodem-2.9.8/drivers'
+[5-ERROR] make[1]: Entering directory `/ROCK/src.slmodem.1101745535.8544.2274487286/slmodem-2.9.10/drivers'
 [5-ERROR] gcc-34 -I/lib/modules/2.4.25-rock/build/include -o kernel-ver kernel-ver.c
-[5-ERROR] make all KERNEL_VER=2.4.27-rock
-[5-ERROR] make[2]: Entering directory `/ROCK/src.slmodem.1097405702.2918.3259890186/slmodem-2.9.8/drivers'
-[5-ERROR] gcc-34 -Wall -pipe -O3 -fomit-frame-pointer -D__KERNEL__ -DMODULE -DEXPORT_SYMTAB -DMODVERSIONS --include /lib/modules/2.4.25-rock/build/include/linux/modversions.h -I/lib/modules/2.4.25-rock/build/include -I. -I./../modem  -o amrmo_init.o -c amrmo_init.c
-[5-ERROR] cc1: /lib/modules/2.4.25-rock/build/include/linux/modversions.h: No such file or directory
-[5-ERROR] amrmo_init.c: In function `amrmo_vprintf':
-[5-ERROR] amrmo_init.c:293: warning: use of cast expressions as lvalues is deprecated
-[5-ERROR] make[2]: *** [amrmo_init.o] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.slmodem.1097405702.2918.3259890186/slmodem-2.9.8/drivers'
+[5-ERROR] make all KERNEL_VER=2.6.9-rock
+[5-ERROR] make[2]: Entering directory `/ROCK/src.slmodem.1101745535.8544.2274487286/slmodem-2.9.10/drivers'
+[5-ERROR] make modules -C /lib/modules/2.4.25-rock/build SUBDIRS=/ROCK/src.slmodem.1101745535.8544.2274487286/slmodem-2.9.10/drivers
+[5-ERROR] make: *** /lib/modules/2.4.25-rock/build: No such file or directory.  Stop.
+[5-ERROR] make: Entering an unknown directorymake: Leaving an unknown directorymake[2]: *** [all] Error 2
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.slmodem.1101745535.8544.2274487286/slmodem-2.9.10/drivers'
 [5-ERROR] make[1]: *** [all] Error 2
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.slmodem.1097405702.2918.3259890186/slmodem-2.9.8/drivers'
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.slmodem.1101745535.8544.2274487286/slmodem-2.9.10/drivers'
 [5-ERROR] make: *** [drivers] Error 2
 [5-ERROR] --- BUILD ERROR ---
 [5-ERROR] Creating file list and doing final adaptions ... 

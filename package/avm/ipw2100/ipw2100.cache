@@ -20,60 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1097405702 Sun Oct 10 12:55:02 2004
+[TIMESTAMP] 1101713235 Mon Nov 29 08:27:15 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ipw2100.err
+[LOGS] 5-ipw2100.log
 
-[BUILDTIME] 1588 (5)
+[BUILDTIME] 3845 (5)
+[SIZE] 0.21 MB, 11 files
 
-[5-ERROR] Command Wrapper Debug: running 'gcc-34 --version' ..
-[5-ERROR] gcc-34 is /ROCK/build/ref1005-2.1.0-DEV-x86-reference-expert/ROCK/tools.chroot/wrapper/gcc-34
-[5-ERROR] Old Command: gcc-34 --version
-[5-ERROR] ENVPREFIX = 'CMD'
-[5-ERROR] APPEND_PO = ''
-[5-ERROR] OTHERS = ''
-[5-ERROR] INSERT = '-Os -pipe'
-[5-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
-[5-ERROR] APPEND = '-s'
-[5-ERROR] FILTER = ''
-[5-ERROR] Old PATH: /ROCK/build/ref1005-2.1.0-DEV-x86-reference-expert/ROCK/tools.chroot/wrapper:/ROCK/build/ref1005-2.1.0-DEV-x86-reference-expert/ROCK/tools.chroot/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/X11/bin:/usr/games:/opt/apache/sbin:/opt/coda/sbin:/opt/e17/sbin:/opt/gnome/sbin:/opt/gnome26/sbin:/opt/kde3/sbin:/opt/mono/sbin:/opt/openldap/sbin:/opt/pdnsd/sbin:/opt/samba/sbin:/opt/squid/sbin:/opt/validator/sbin:/opt/wwwoffle/sbin:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clip/bin:/opt/coda/bin:/opt/dcc/bin:/opt/e16/bin:/opt/e17/bin:/opt/firefox/bin:/opt/flexlm/bin:/opt/gnome/bin:/opt/gnome26/bin:/opt/kde3/bin:/opt/mono/bin:/opt/mysql/bin:/opt/mythtv/bin:/opt/nx/bin:/opt/openldap/bin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/root/bin:/opt/samba/bin:/opt/snort/bin:/opt/squid/bin:/opt/thunderbird/bin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/xfce4/bin:/opt/xjdic/bin:/opt/kde3/bin:/opt/root/bin
-[5-ERROR] New PATH: /ROCK/build/ref1005-2.1.0-DEV-x86-reference-expert/ROCK/tools.chroot/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/X11/bin:/usr/games:/opt/apache/sbin:/opt/coda/sbin:/opt/e17/sbin:/opt/gnome/sbin:/opt/gnome26/sbin:/opt/kde3/sbin:/opt/mono/sbin:/opt/openldap/sbin:/opt/pdnsd/sbin:/opt/samba/sbin:/opt/squid/sbin:/opt/validator/sbin:/opt/wwwoffle/sbin:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clip/bin:/opt/coda/bin:/opt/dcc/bin:/opt/e16/bin:/opt/e17/bin:/opt/firefox/bin:/opt/flexlm/bin:/opt/gnome/bin:/opt/gnome26/bin:/opt/kde3/bin:/opt/mono/bin:/opt/mysql/bin:/opt/mythtv/bin:/opt/nx/bin:/opt/openldap/bin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/root/bin:/opt/samba/bin:/opt/snort/bin:/opt/squid/bin:/opt/thunderbird/bin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/xfce4/bin:/opt/xjdic/bin:/opt/kde3/bin:/opt/root/bin
-[5-ERROR] Insert: -Os
-[5-ERROR] Insert: -pipe
-[5-ERROR] Copy:   --version
-[5-ERROR] Append: -s
-[5-ERROR] New Command: gcc-34 -Os -pipe --version -s
-[5-ERROR] gcc-34 (GCC) 3.4.2
-[5-ERROR] Copyright (C) 2004 Free Software Foundation, Inc.
-[5-ERROR] This is free software; see the source for copying conditions.  There is NO
-[5-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-[5-ERROR] 
-[5-ERROR] [ writing debug log to /ROCK/src.ipw2100.1097405679.30873.998629789/cmd_wrapper.log ]
-[5-ERROR] create symbolic link `/ROCK/src.ipw2100.1097405679.30873.998629789/archdir/ipw2100-0.54.tbz2' to `/ROCK/download/mirror/i/ipw2100-0.54.tbz2'
-[5-ERROR] Running main build function 'build_this_package' ...
-[5-ERROR] Extracting ipw2100-0.54.tbz2 (--use-compress-program=bzip2 -xf) ... 
-[5-ERROR] Fixing ownership and permissions ...
-[5-ERROR] Removing CVS and .svn directories ...
-[5-ERROR] Changeing into /ROCK/src.ipw2100.1097405679.30873.998629789/ipw2100-0.54 ...
-[5-ERROR] Creating /usr/<..> if required ...
-[5-ERROR] make -C /lib/modules/2.4.25-rock/build SUBDIRS=/ROCK/src.ipw2100.1097405679.30873.998629789/ipw2100-0.54 MODVERDIR=/ROCK/src.ipw2100.1097405679.30873.998629789/ipw2100-0.54 modules
-[5-ERROR] make: *** /lib/modules/2.4.25-rock/build: No such file or directory.  Stop.
-[5-ERROR] make: *** [modules] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 ipw2100:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 ipw2100:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 ipw2100:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <ipw2100:doc> Creating flist file ...
-[5-ERROR] <ipw2100:doc> Creating package dependencies file ...
-[5-ERROR] <ipw2100:doc> Creating md5sum and cksum files ...
-[5-ERROR] <ipw2100:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building ipw2100=ipw2100.
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
+[DEP] glibc23 grep linux26 linux26-source linux26-source:dev make mktemp
+[DEP] sed sysfiles tar
 

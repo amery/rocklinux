@@ -20,15 +20,62 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1097030708 Wed Oct  6 04:45:08 2004
+[TIMESTAMP] 1101739507 Mon Nov 29 15:45:07 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gatos-km.log
+[LOGS] 5-gatos-km.err
 
-[BUILDTIME] 1296 (5)
-[SIZE] 0.06 MB, 10 files
+[BUILDTIME] 1688 (5)
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 grep linux24-source linux24-source:dev make sed sysfiles tar
+[5-ERROR] km.c:938: error: (near initialization for `km_pci_tbl[64]')
+[5-ERROR] km.c:940: error: initializer element is not constant
+[5-ERROR] km.c:940: error: (near initialization for `km_pci_tbl[65]')
+[5-ERROR] km.c:942: error: initializer element is not constant
+[5-ERROR] km.c:942: error: (near initialization for `km_pci_tbl[66]')
+[5-ERROR] km.c:944: error: initializer element is not constant
+[5-ERROR] km.c:944: error: (near initialization for `km_pci_tbl[67]')
+[5-ERROR] km.c:946: error: initializer element is not constant
+[5-ERROR] km.c:946: error: (near initialization for `km_pci_tbl[68]')
+[5-ERROR] km.c:948: error: initializer element is not constant
+[5-ERROR] km.c:948: error: (near initialization for `km_pci_tbl[69]')
+[5-ERROR] km.c:950: error: initializer element is not constant
+[5-ERROR] km.c:950: error: (near initialization for `km_pci_tbl[70]')
+[5-ERROR] km.c:952: error: initializer element is not constant
+[5-ERROR] km.c:952: error: (near initialization for `km_pci_tbl[71]')
+[5-ERROR] km.c:954: error: initializer element is not constant
+[5-ERROR] km.c:954: error: (near initialization for `km_pci_tbl[72]')
+[5-ERROR] km.c:956: error: initializer element is not constant
+[5-ERROR] km.c:956: error: (near initialization for `km_pci_tbl[73]')
+[5-ERROR] km.c:959: error: initializer element is not constant
+[5-ERROR] km.c:959: error: (near initialization for `km_pci_tbl[74]')
+[5-ERROR] km.c:961: error: initializer element is not constant
+[5-ERROR] km.c:961: error: (near initialization for `km_pci_tbl[75]')
+[5-ERROR] km.c:962: error: initializer element is not constant
+[5-ERROR] km.c:962: error: (near initialization for `km_pci_tbl[76]')
+[5-ERROR] km.c:978: warning: static declaration of 'init_module' follows non-static declaration
+[5-ERROR] /usr/src/linux/include/linux/module.h:48: warning: previous declaration of 'init_module' was here
+[5-ERROR] km.c: In function `init_module':
+[5-ERROR] km.c:991: warning: implicit declaration of function `pci_for_each_dev'
+[5-ERROR] km.c:991: error: parse error before '{' token
+[5-ERROR] km.c:981: warning: unused variable `pdid'
+[5-ERROR] km.c: At top level:
+[5-ERROR] km.c:978: warning: 'init_module' defined but not used
+[5-ERROR] km.c:558: warning: 'km_probe' defined but not used
+[5-ERROR] make: *** [km.o] Error 1
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 1 files for this package.
+[5-ERROR] Applying package split: 40 gatos-km:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 gatos-km:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 gatos-km:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <gatos-km:doc> Creating flist file ...
+[5-ERROR] <gatos-km:doc> Creating package dependencies file ...
+[5-ERROR] <gatos-km:doc> Creating md5sum and cksum files ...
+[5-ERROR] <gatos-km:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building gatos-km=gatos-km.
 

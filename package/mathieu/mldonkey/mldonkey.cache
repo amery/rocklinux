@@ -20,62 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1097405428 Sun Oct 10 12:50:28 2004
+[TIMESTAMP] 1101670315 Sun Nov 28 20:31:55 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-mldonkey.err
+[LOGS] 5-mldonkey.log
 
-[BUILDTIME] 2058 (5)
+[BUILDTIME] 13137 (5)
+[SIZE] 18.50 MB, 22 files
 
-[5-ERROR] Removing unsupported '--with-libpam' from configure option string.
-[5-ERROR] Removing unsupported '--with-pam' from configure option string.
-[5-ERROR] Removing unsupported '--enable-libpam' from configure option string.
-[5-ERROR] Removing unsupported '--enable-pam' from configure option string.
-[5-ERROR] Running  bash ./configure --prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --libdir=/usr/lib --datadir=/usr/share --includedir=/usr/include --infodir=/usr/share/info --mandir=/usr/share/man --sysconfdir=/etc --localstatedir=/var --build=i386-unknown-linux-gnu --host=i386-unknown-linux-gnu
-[5-ERROR] creating cache ./config.cache
-[5-ERROR] Arguments: --prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --libdir=/usr/lib --datadir=/usr/share --includedir=/usr/include --infodir=/usr/share/info --mandir=/usr/share/man --sysconfdir=/etc --localstatedir=/var --build=i386-unknown-linux-gnu --host=i386-unknown-linux-gnu
-[5-ERROR] --prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --libdir=/usr/lib --datadir=/usr/share --includedir=/usr/include --infodir=/usr/share/info --mandir=/usr/share/man --sysconfdir=/etc --localstatedir=/var --build=i386-unknown-linux-gnu --host=i386-unknown-linux-gnu
-[5-ERROR] checking host system type... i386-unknown-linux-gnu
-[5-ERROR] checking for gcc3... gcc-34
-[5-ERROR] checking for gcc... (cached) gcc-34
-[5-ERROR] checking whether the C compiler (gcc-34  ) works... yes
-[5-ERROR] checking whether the C compiler (gcc-34  ) is a cross-compiler... no
-[5-ERROR] checking whether we are using GNU C... yes
-[5-ERROR] checking whether gcc-34 accepts -g... yes
-[5-ERROR] checking for Cygwin environment... no
-[5-ERROR] checking for mingw32 environment... no
-[5-ERROR] checking for executable suffix... no
-[5-ERROR] checking how to run the C preprocessor... gcc-34 -E
-[5-ERROR] checking for ranlib... ranlib
-[5-ERROR] checking for gmake... gmake
-[5-ERROR] checking for make... (cached) gmake
-[5-ERROR] checking for ocamlc.opt... /usr/bin/ocamlc.opt
-[5-ERROR] checking for ocamlc... /usr/bin/ocamlc.opt
-[5-ERROR] i386-unknown-linux-gnu
-[5-ERROR] Testing ocaml version
-[5-ERROR] Need build
-[5-ERROR] checking for /ROCK/src.mldonkey.1097405397.30529.4227888479/mldonkey-2.5.22/patches/local/bin/ocamlc.opt... no
-[5-ERROR] checking for rpmbuild... rpmbuild
-[5-ERROR] checking for rpm... (cached) rpmbuild
-[5-ERROR] checking for wget... wget
-[5-ERROR] ********  Objective-Caml 3.07 is required  *********
-[5-ERROR] *******  Check http://caml.inria.fr/  ********
-[5-ERROR] Do you want this script to try to download and install ocaml
-[5-ERROR] LOCALLY in mldonkey directory ?
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 mldonkey:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 mldonkey:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 mldonkey:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <mldonkey:doc> Creating flist file ...
-[5-ERROR] <mldonkey:doc> Creating package dependencies file ...
-[5-ERROR] <mldonkey:doc> Creating md5sum and cksum files ...
-[5-ERROR] <mldonkey:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building mldonkey=mldonkey.
+[DEP] 00-dirtree alsa autoconf bash2 binutils bzip2 coreutils diffutils
+[DEP] findutils gawk gcc34 gcc34:dev glib12 glibc23 glibc23:dev grep
+[DEP] gtk+12 gzip lablgtk lablgtk:dev linux26-header:dev m4 make mktemp
+[DEP] ncurses:dev net-tools ocaml ocaml:dev patch perl5 sed sysfiles tar
+[DEP] util-linux xfree86 zlib:dev
 

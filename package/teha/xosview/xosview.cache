@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1097404953 Sun Oct 10 12:42:33 2004
+[TIMESTAMP] 1101743485 Mon Nov 29 16:51:25 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-xosview.err
 
-[BUILDTIME] 1888 (5)
+[BUILDTIME] 1893 (5)
 
 [5-ERROR] disabled automatic dependencies by default
 [5-ERROR] checking for snprintf... yes
@@ -44,16 +44,16 @@
 [5-ERROR] creating Xdefaults
 [5-ERROR] creating linux/memstat/Makefile
 [5-ERROR] cd ./linux && make
-[5-ERROR] make[1]: Entering directory `/ROCK/src.xosview.1097404924.22766.3460651787/xosview-1.8.0/linux'
-[5-ERROR] g++-34  -Wall -O4 -pipe -I/usr/X11R6/include -DXOSVIEW_VERSION=\"1.8.0\" -I/ROCK/src.xosview.1097404924.22766.3460651787/xosview-1.8.0 -I/ROCK/src.xosview.1097404924.22766.3460651787/xosview-1.8.0/linux  -DHAVE_BOOL=1 -DLONG_LONG=long\ long -DHAVE_SNPRINTF=1 -DHAVE_XPM=1 -DGNULIBC=1 -DUSESYSCALLS=1 -DHAVE_USLEEP=1  -I.. -c cpumeter.cc -o cpumeter.o
-[5-ERROR] In file included from /usr/lib/gcc/i386-unknown-linux-gnu/3.4.2/include/c++/backward/iostream.h:31,
-[5-ERROR]                  from /ROCK/src.xosview.1097404924.22766.3460651787/xosview-1.8.0/xwin.h:12,
-[5-ERROR]                  from /ROCK/src.xosview.1097404924.22766.3460651787/xosview-1.8.0/xosview.h:14,
-[5-ERROR]                  from /ROCK/src.xosview.1097404924.22766.3460651787/xosview-1.8.0/meter.h:15,
-[5-ERROR]                  from /ROCK/src.xosview.1097404924.22766.3460651787/xosview-1.8.0/fieldmetergraph.h:17,
+[5-ERROR] make[1]: Entering directory `/ROCK/src.xosview.1101743456.4610.2940304643/xosview-1.8.0/linux'
+[5-ERROR] g++-34  -Wall -O4 -pipe -I/usr/X11R6/include -DXOSVIEW_VERSION=\"1.8.0\" -I/ROCK/src.xosview.1101743456.4610.2940304643/xosview-1.8.0 -I/ROCK/src.xosview.1101743456.4610.2940304643/xosview-1.8.0/linux  -DHAVE_BOOL=1 -DLONG_LONG=long\ long -DHAVE_SNPRINTF=1 -DHAVE_XPM=1 -DGNULIBC=1 -DUSESYSCALLS=1 -DHAVE_USLEEP=1  -I.. -c cpumeter.cc -o cpumeter.o
+[5-ERROR] In file included from /usr/lib/gcc/i386-unknown-linux-gnu/3.4.3/include/c++/backward/iostream.h:31,
+[5-ERROR]                  from /ROCK/src.xosview.1101743456.4610.2940304643/xosview-1.8.0/xwin.h:12,
+[5-ERROR]                  from /ROCK/src.xosview.1101743456.4610.2940304643/xosview-1.8.0/xosview.h:14,
+[5-ERROR]                  from /ROCK/src.xosview.1101743456.4610.2940304643/xosview-1.8.0/meter.h:15,
+[5-ERROR]                  from /ROCK/src.xosview.1101743456.4610.2940304643/xosview-1.8.0/fieldmetergraph.h:17,
 [5-ERROR]                  from cpumeter.h:12,
 [5-ERROR]                  from cpumeter.cc:9:
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/3.4.2/include/c++/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated.
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/3.4.3/include/c++/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated.
 [5-ERROR] cpumeter.cc:14:23: strstream.h: No such file or directory
 [5-ERROR] cpumeter.cc: In static member function `static const char* CPUMeter::cpuStr(int)':
 [5-ERROR] cpumeter.cc:129: error: `ostrstream' undeclared (first use this function)
@@ -61,7 +61,7 @@
 [5-ERROR] cpumeter.cc:129: error: expected `;' before "str"
 [5-ERROR] cpumeter.cc:131: error: `str' undeclared (first use this function)
 [5-ERROR] make[1]: *** [cpumeter.o] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.xosview.1097404924.22766.3460651787/xosview-1.8.0/linux'
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.xosview.1101743456.4610.2940304643/xosview-1.8.0/linux'
 [5-ERROR] make: *** [meterlib] Error 2
 [5-ERROR] --- BUILD ERROR ---
 [5-ERROR] Creating file list and doing final adaptions ... 

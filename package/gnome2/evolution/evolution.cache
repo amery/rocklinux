@@ -20,31 +20,62 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1097234657 Fri Oct  8 13:24:17 2004
+[TIMESTAMP] 1101740251 Mon Nov 29 15:57:31 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-evolution.log
+[LOGS] 5-evolution.err
 
-[BUILDTIME] 147414 (5)
-[SIZE] 23.33 MB, 1004 files
+[BUILDTIME] 8449 (5)
 
-[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
-[DEP] autoconf bash2 battfink binutils bzip2 coreutils cpan-xml-parser
-[DEP] diffutils docbookx esound esound:dev expat figment findutils flex
-[DEP] flex:dev freetype freetype:dev gail gail:dev gal gal:dev gawk
-[DEP] gcc34 gcc34:dev gconf gconf:dev gettext gftp glib glib:dev glibc23
-[DEP] glibc23:dev gnome-blog gnome-desktop gnome-keyring gnome-keyring:dev
-[DEP] gnome-mime-data gnome-pilot gnome-pilot:dev gnome-vfs gnome-vfs:dev
-[DEP] gnutls gnutls:dev grep gtk+ gtk+:dev gtkdoc gtkhtml gtkhtml:dev
-[DEP] indent libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev
-[DEP] libbonoboui libbonoboui:dev libgcrypt libgcrypt:dev libglade
-[DEP] libglade:dev libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev
-[DEP] libgnomeprint libgnomeprint:dev libgnomeprintui libgnomeprintui:dev
-[DEP] libgnomeui libgnomeui:dev libgpg-error libgpg-error:dev
-[DEP] libjpeg libjpeg:dev libsoup libsoup:dev libxml2 libxml2:dev
-[DEP] linux24-header:dev m4 make mktemp mozilla mozilla:dev net-tools
-[DEP] openldap openldap:dev openssl orbit2 orbit2:dev pango pango:dev patch
-[DEP] perl5 pilot-link pilot-link:dev pkgconfig popt popt:dev scrollkeeper
-[DEP] sed sysfiles tar texinfo util-linux xfree86 xfree86:dev zlib:dev
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] checking whether stripping libraries is possible... yes
+[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[5-ERROR] checking if libtool supports shared libraries... yes
+[5-ERROR] checking whether to build shared libraries... yes
+[5-ERROR] checking whether to build static libraries... yes
+[5-ERROR] checking whether -lc should be explicitly linked in... no
+[5-ERROR] creating libtool
+[5-ERROR] checking alloca.h usability... yes
+[5-ERROR] checking alloca.h presence... yes
+[5-ERROR] checking for alloca.h... yes
+[5-ERROR] checking for socklen_t... yes
+[5-ERROR] checking for purify... impure
+[5-ERROR] checking for sendmail... /usr/sbin/sendmail
+[5-ERROR] checking system mail directory... /var/mail, world writable
+[5-ERROR] checking for tm_gmtoff in struct tm... yes
+[5-ERROR] checking for mkstemp... yes
+[5-ERROR] checking for mkdtemp... yes
+[5-ERROR] checking for isblank... yes
+[5-ERROR] checking if ctime_r wants three arguments... no
+[5-ERROR] checking for gethostbyname_r... yes
+[5-ERROR] checking if gethostbyname_r wants five arguments... no
+[5-ERROR] checking for gethostbyaddr_r... yes
+[5-ERROR] checking if gethostbyaddr_r wants seven arguments... no
+[5-ERROR] checking if system has necessary structs and functions for IPv6 support... yes
+[5-ERROR] checking for db3 compiler flags... -I/ROCK/src.evolution.1101740145.32448.1683526695/evolution-1.4.6/db-3.1.17/build_unix
+[5-ERROR] checking db.h usability... yes
+[5-ERROR] checking db.h presence... yes
+[5-ERROR] checking for db.h... yes
+[5-ERROR] checking db3 header version... 3.1.17
+[5-ERROR] checking for db3 library name... /ROCK/src.evolution.1101740145.32448.1683526695/evolution-1.4.6/db-3.1.17/build_unix/libdb.a
+[5-ERROR] checking that db3 library version matches header version... yes
+[5-ERROR] checking for OpenLDAP... /
+[5-ERROR] checking if OpenLDAP is version 2.x... no
+[5-ERROR] configure: error: evolution requires OpenLDAP version >= 2
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 1 files for this package.
+[5-ERROR] Applying package split: 40 evolution:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 evolution:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 evolution:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <evolution:doc> Creating flist file ...
+[5-ERROR] <evolution:doc> Creating package dependencies file ...
+[5-ERROR] <evolution:doc> Creating md5sum and cksum files ...
+[5-ERROR] <evolution:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building evolution=evolution.
 

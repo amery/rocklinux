@@ -20,18 +20,62 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1097127835 Thu Oct  7 07:43:55 2004
+[TIMESTAMP] 1101742449 Mon Nov 29 16:34:09 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-nvrec.log
+[LOGS] 5-nvrec.err
 
-[BUILDTIME] 3758 (5)
-[SIZE] 0.13 MB, 13 files
+[BUILDTIME] 3968 (5)
 
-[DEP] 00-dirtree alsa arts audiofile autoconf automake18 avifile
-[DEP] avifile:dev bash2 binutils bzip2 coreutils diffutils esound expat
-[DEP] findutils freetype gcc34 gcc34:dev glib glibc23 glibc23:dev grep
-[DEP] lame lame:dev libsdl linux24-header:dev m4 mad mad:dev make mktemp
-[DEP] nas net-tools perl5 sed sysfiles tar util-linux xfree86
+[5-ERROR] rm -f libnvrec_cores.a
+[5-ERROR] ar cru libnvrec_cores.a nvrec_core.o oss_core.o v4l1_core.o v4l2_core.o v4lgen_core.o 
+[5-ERROR] ranlib libnvrec_cores.a
+[5-ERROR] if gcc-34 -DHAVE_CONFIG_H -I. -I. -I.     -O3  -pthread -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -Wall -MT libconvert_a-convert.o -MD -MP -MF ".deps/libconvert_a-convert.Tpo" -c -o libconvert_a-convert.o `test -f 'convert.c' || echo './'`convert.c; \
+[5-ERROR] then mv -f ".deps/libconvert_a-convert.Tpo" ".deps/libconvert_a-convert.Po"; else rm -f ".deps/libconvert_a-convert.Tpo"; exit 1; fi
+[5-ERROR] convert.c:196:2: warning: #warning NO CONVERSION FUNCTIONS AVAILABLE
+[5-ERROR] rm -f libconvert.a
+[5-ERROR] ar cru libconvert.a libconvert_a-convert.o 
+[5-ERROR] ranlib libconvert.a
+[5-ERROR] if gcc-34 -DHAVE_CONFIG_H -I. -I. -I.    -DDIVX -I/usr/include/avifile-0.7 -O3  -pthread -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -Wall -MT divxrec-nvrec.o -MD -MP -MF ".deps/divxrec-nvrec.Tpo" -c -o divxrec-nvrec.o `test -f 'nvrec.c' || echo './'`nvrec.c; \
+[5-ERROR] then mv -f ".deps/divxrec-nvrec.Tpo" ".deps/divxrec-nvrec.Po"; else rm -f ".deps/divxrec-nvrec.Tpo"; exit 1; fi
+[5-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I.    -DDIVX -I/usr/include/avifile-0.7  -g -O2 -MT divxrec-divxfile_core.o -MD -MP -MF ".deps/divxrec-divxfile_core.Tpo" -c -o divxrec-divxfile_core.o `test -f 'divxfile_core.cpp' || echo './'`divxfile_core.cpp; \
+[5-ERROR] then mv -f ".deps/divxrec-divxfile_core.Tpo" ".deps/divxrec-divxfile_core.Po"; else rm -f ".deps/divxrec-divxfile_core.Tpo"; exit 1; fi
+[5-ERROR] In file included from divxfile_core.cpp:36:
+[5-ERROR] /usr/include/avifile-0.7/fourcc.h:4:2: warning: #warning Use #include "avm_fourcc.h" instead
+[5-ERROR] In file included from divxfile_core.cpp:37:
+[5-ERROR] /usr/include/avifile-0.7/creators.h:4:2: warning: #warning Use #include "avm_creators.h" instead
+[5-ERROR] g++-34 -g -O2 -g -O2   -o divxrec  divxrec-nvrec.o divxrec-divxfile_core.o libnvrec_cores.a cpu_features/libcpu_features.a  -Wl,-rpath,/usr/lib -laviplay  
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/3.4.3/../../../../i386-unknown-linux-gnu/bin/ld: warning: libartsc.so.0, needed by /usr/lib/gcc/i386-unknown-linux-gnu/3.4.3/../../../libaviplay.so, not found (try using -rpath or -rpath-link)
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/3.4.3/../../../../i386-unknown-linux-gnu/bin/ld: warning: libgmodule-2.0.so.0, needed by /usr/lib/gcc/i386-unknown-linux-gnu/3.4.3/../../../libaviplay.so, not found (try using -rpath or -rpath-link)
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/3.4.3/../../../../i386-unknown-linux-gnu/bin/ld: warning: libgthread-2.0.so.0, needed by /usr/lib/gcc/i386-unknown-linux-gnu/3.4.3/../../../libaviplay.so, not found (try using -rpath or -rpath-link)
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/3.4.3/../../../../i386-unknown-linux-gnu/bin/ld: warning: libglib-2.0.so.0, needed by /usr/lib/gcc/i386-unknown-linux-gnu/3.4.3/../../../libaviplay.so, not found (try using -rpath or -rpath-link)
+[5-ERROR] /usr/lib/libSDL-1.2.so.0: undefined reference to `arts_free'
+[5-ERROR] /usr/lib/libSDL-1.2.so.0: undefined reference to `arts_stream_get'
+[5-ERROR] /usr/lib/libSDL-1.2.so.0: undefined reference to `arts_init'
+[5-ERROR] /usr/lib/libSDL-1.2.so.0: undefined reference to `arts_play_stream'
+[5-ERROR] /usr/lib/libSDL-1.2.so.0: undefined reference to `arts_stream_set'
+[5-ERROR] /usr/lib/libSDL-1.2.so.0: undefined reference to `arts_close_stream'
+[5-ERROR] /usr/lib/libSDL-1.2.so.0: undefined reference to `arts_write'
+[5-ERROR] collect2: ld returned 1 exit status
+[5-ERROR] make[2]: *** [divxrec] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.nvrec.1101742392.23515.609276168/nvrec-20030316'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.nvrec.1101742392.23515.609276168/nvrec-20030316'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 1 files for this package.
+[5-ERROR] Applying package split: 40 nvrec:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 nvrec:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 nvrec:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <nvrec:doc> Creating flist file ...
+[5-ERROR] <nvrec:doc> Creating package dependencies file ...
+[5-ERROR] <nvrec:doc> Creating md5sum and cksum files ...
+[5-ERROR] <nvrec:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building nvrec=nvrec.
 

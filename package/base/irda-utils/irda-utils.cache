@@ -20,18 +20,62 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1097147114 Thu Oct  7 13:05:14 2004
+[TIMESTAMP] 1101743105 Mon Nov 29 16:45:05 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-irda-utils.log
+[LOGS] 5-irda-utils.err
 
-[BUILDTIME] 2905 (5)
-[SIZE] 0.09 MB, 18 files
+[BUILDTIME] 1564 (5)
 
-[DEP] 00-dirtree autoconf automake18 bash2 binutils bzip2 coreutils
-[DEP] diffutils file findutils gcc34 gcc34:dev glib12 glib12:dev glibc23
-[DEP] glibc23:dev grep gzip libtool linux24-header:dev linux24-source
-[DEP] linux24-source:dev m4 make mktemp net-tools perl5 sed sysfiles tar
-[DEP] texinfo util-linux
+[5-ERROR] Old Command: gcc-34 --version
+[5-ERROR] ENVPREFIX = 'CMD'
+[5-ERROR] APPEND_PO = ''
+[5-ERROR] OTHERS = ''
+[5-ERROR] INSERT = '-Os -pipe'
+[5-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
+[5-ERROR] APPEND = '-s'
+[5-ERROR] FILTER = ''
+[5-ERROR] Old PATH: /ROCK/src.irda-utils.1101743078.17803.1772092501/wrappers:/ROCK/build/ref1126-2.1.0-DEV-x86-reference-expert/ROCK/tools.chroot/wrapper:/ROCK/build/ref1126-2.1.0-DEV-x86-reference-expert/ROCK/tools.chroot/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/X11/bin:/usr/games:/opt/apache/sbin:/opt/coda/sbin:/opt/e17/sbin:/opt/gnome/sbin:/opt/gnome26/sbin:/opt/kde3/sbin:/opt/mono/sbin:/opt/mysql/sbin:/opt/openldap/sbin:/opt/pdnsd/sbin:/opt/samba/sbin:/opt/squid/sbin:/opt/validator/sbin:/opt/wwwoffle/sbin:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clip/bin:/opt/coda/bin:/opt/dcc/bin:/opt/e16/bin:/opt/e17/bin:/opt/firefox/bin:/opt/flexlm/bin:/opt/gnome/bin:/opt/gnome26/bin:/opt/kde3/bin:/opt/mono/bin:/opt/mysql/bin:/opt/mythtv/bin:/opt/openldap/bin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/root/bin:/opt/samba/bin:/opt/snort/bin:/opt/squid/bin:/opt/thunderbird/bin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/xfce4/bin:/opt/xjdic/bin:/opt/kde3/bin:/opt/root/bin
+[5-ERROR] New PATH: /ROCK/src.irda-utils.1101743078.17803.1772092501/wrappers:/ROCK/build/ref1126-2.1.0-DEV-x86-reference-expert/ROCK/tools.chroot/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/X11/bin:/usr/games:/opt/apache/sbin:/opt/coda/sbin:/opt/e17/sbin:/opt/gnome/sbin:/opt/gnome26/sbin:/opt/kde3/sbin:/opt/mono/sbin:/opt/mysql/sbin:/opt/openldap/sbin:/opt/pdnsd/sbin:/opt/samba/sbin:/opt/squid/sbin:/opt/validator/sbin:/opt/wwwoffle/sbin:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clip/bin:/opt/coda/bin:/opt/dcc/bin:/opt/e16/bin:/opt/e17/bin:/opt/firefox/bin:/opt/flexlm/bin:/opt/gnome/bin:/opt/gnome26/bin:/opt/kde3/bin:/opt/mono/bin:/opt/mysql/bin:/opt/mythtv/bin:/opt/openldap/bin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/root/bin:/opt/samba/bin:/opt/snort/bin:/opt/squid/bin:/opt/thunderbird/bin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/xfce4/bin:/opt/xjdic/bin:/opt/kde3/bin:/opt/root/bin
+[5-ERROR] Insert: -Os
+[5-ERROR] Insert: -pipe
+[5-ERROR] Copy:   --version
+[5-ERROR] Append: -s
+[5-ERROR] New Command: gcc-34 -Os -pipe --version -s
+[5-ERROR] gcc-34 (GCC) 3.4.3
+[5-ERROR] Copyright (C) 2004 Free Software Foundation, Inc.
+[5-ERROR] This is free software; see the source for copying conditions.  There is NO
+[5-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[5-ERROR] 
+[5-ERROR] [ writing debug log to /ROCK/src.irda-utils.1101743078.17803.1772092501/cmd_wrapper.log ]
+[5-ERROR] create symbolic link `/ROCK/src.irda-utils.1101743078.17803.1772092501/archdir/irda-utils-0.9.16.tar.bz2' to `/ROCK/download/mirror/i/irda-utils-0.9.16.tar.bz2'
+[5-ERROR] Running main build function 'build_this_package' ...
+[5-ERROR] Extracting irda-utils-0.9.16.tar.bz2 (--use-compress-program=bzip2 -xf) ... 
+[5-ERROR] Fixing ownership and permissions ...
+[5-ERROR] Removing CVS and .svn directories ...
+[5-ERROR] Changeing into /ROCK/src.irda-utils.1101743078.17803.1772092501/irda-utils-0.9.16 ...
+[5-ERROR] Apply patch /ROCK/package/base/irda-utils/Makefile-irdadump.patch ...
+[5-ERROR] missing header for unified diff at line 3 of patch
+[5-ERROR] patching file Makefile
+[5-ERROR] Apply patch /ROCK/package/base/irda-utils/gcc-__func__.patch ...
+[5-ERROR] patching file tekram/irkbd.c
+[5-ERROR] Hunk #1 succeeded at 286 (offset -12 lines).
+[5-ERROR] Apply patch /ROCK/package/base/irda-utils/linux-asm-byteorder_h.patch ...
+[5-ERROR] patching file irattach/dongle_attach.c
+[5-ERROR] patching file irdaping/irdaping.c
+[5-ERROR] Hunk #1 FAILED at 32.
+[5-ERROR] 1 out of 1 hunk FAILED -- saving rejects to file irdaping/irdaping.c.rej
+[5-ERROR] patching file tekram/irkbd.c
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 0 files for this package.
+[5-ERROR] Applying package split: 40 irda-utils:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 irda-utils:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 irda-utils:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building irda-utils=irda-utils.
 

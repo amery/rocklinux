@@ -20,17 +20,68 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1097146873 Thu Oct  7 13:01:13 2004
+[TIMESTAMP] 1101743078 Mon Nov 29 16:44:38 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-coda.log
+[LOGS] 5-coda.err
 
-[BUILDTIME] 34638 (5)
-[SIZE] 4.15 MB, 123 files
+[BUILDTIME] 28189 (5)
+[SIZE] 0.67 MB, 56 files
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils
-[DEP] findutils flex flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev
-[DEP] grep linux24-header:dev m4 make mktemp ncurses:dev net-tools patch
-[DEP] perl5 readline readline:dev sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
+[DEP] flex flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
+[DEP] linux26-header:dev m4 make mktemp ncurses:dev net-tools patch perl5
+[DEP] readline readline:dev sed sysfiles tar util-linux
+
+[5-ERROR] venusutil.cc:390: error: `__invalid_size_argument_for_IOC' cannot appear in a constant-expression
+[5-ERROR] venusutil.cc:391: error: `__invalid_size_argument_for_IOC' cannot appear in a constant-expression
+[5-ERROR] venusutil.cc:392: error: `__invalid_size_argument_for_IOC' cannot appear in a constant-expression
+[5-ERROR] venusutil.cc:393: error: `__invalid_size_argument_for_IOC' cannot appear in a constant-expression
+[5-ERROR] venusutil.cc:394: error: `__invalid_size_argument_for_IOC' cannot appear in a constant-expression
+[5-ERROR] venusutil.cc:395: error: `__invalid_size_argument_for_IOC' cannot appear in a constant-expression
+[5-ERROR] venusutil.cc:396: error: `__invalid_size_argument_for_IOC' cannot appear in a constant-expression
+[5-ERROR] venusutil.cc:397: error: `__invalid_size_argument_for_IOC' cannot appear in a constant-expression
+[5-ERROR] venusutil.cc:398: error: `__invalid_size_argument_for_IOC' cannot appear in a constant-expression
+[5-ERROR] venusutil.cc:399: error: `__invalid_size_argument_for_IOC' cannot appear in a constant-expression
+[5-ERROR] venusutil.cc:400: error: `__invalid_size_argument_for_IOC' cannot appear in a constant-expression
+[5-ERROR] venusutil.cc:401: error: `__invalid_size_argument_for_IOC' cannot appear in a constant-expression
+[5-ERROR] venusutil.cc:402: error: `__invalid_size_argument_for_IOC' cannot appear in a constant-expression
+[5-ERROR] venusutil.cc:403: error: `__invalid_size_argument_for_IOC' cannot appear in a constant-expression
+[5-ERROR] venusutil.cc:404: error: `__invalid_size_argument_for_IOC' cannot appear in a constant-expression
+[5-ERROR] venusutil.cc:405: error: `__invalid_size_argument_for_IOC' cannot appear in a constant-expression
+[5-ERROR] venusutil.cc:406: error: `__invalid_size_argument_for_IOC' cannot appear in a constant-expression
+[5-ERROR] venusutil.cc:407: error: `__invalid_size_argument_for_IOC' cannot appear in a constant-expression
+[5-ERROR] venusutil.cc:408: error: `__invalid_size_argument_for_IOC' cannot appear in a constant-expression
+[5-ERROR] make[2]: *** [venusutil.o] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.coda.1101742759.9519.3210793142/coda-6.0.6/coda-src/venus'
+[5-ERROR] make[1]: *** [venus] Error 2
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.coda.1101742759.9519.3210793142/coda-6.0.6/coda-src'
+[5-ERROR] make: *** [coda-src] Error 2
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Install SysV Init script 'coda-utils' (30/70):  rcX done.
+[5-ERROR] Install SysV Init script 'coda-server' (32/68):  rcX done.
+[5-ERROR] Install SysV Init script 'coda-client' (35/65):  rcX done.
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 95 files for this package.
+[5-ERROR] Applying package split: 40 coda:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 coda:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 coda:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <coda> Creating flist file ...
+[5-ERROR] <coda> Creating package dependencies file ...
+[5-ERROR] <coda> Creating md5sum and cksum files ...
+[5-ERROR] <coda> Creating package description ...
+[5-ERROR] <coda:dev> Creating flist file ...
+[5-ERROR] <coda:dev> Creating package dependencies file ...
+[5-ERROR] <coda:dev> Creating md5sum and cksum files ...
+[5-ERROR] <coda:dev> Creating package description ...
+[5-ERROR] <coda:doc> Creating flist file ...
+[5-ERROR] <coda:doc> Creating package dependencies file ...
+[5-ERROR] <coda:doc> Creating md5sum and cksum files ...
+[5-ERROR] <coda:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building coda=coda.
 

@@ -84,7 +84,7 @@ function check_package() {
 		if ( getline dummy < outfile != -1 )
 					build_this_package = 0;
 
-		if ( index(not_present, " " package " ") ) {
+		if ( index(not_present, " " xpackage " ") ) {
 			if (debug && build_this_package)
 				print "DEBUG: Not building " stagelevel "-" \
 				      package ": earlier stages not done " \
@@ -92,13 +92,13 @@ function check_package() {
 			build_this_package = 0;
 		}
 
-		if ( build_this_package && (package in database) ) {
-			split(database[package], a);
+		if ( build_this_package && (xpackage in database) ) {
+			split(database[xpackage], a);
 			buildtime = a[2];
 			priority = a[3];
 
 			for (c in a) {
-				# if ( a[c] == package  ) continue;
+				# if ( a[c] == xpackage  ) continue;
 				# if ( strtonum(c) <= 3 ) continue;
 				if (debug && 0)
 					print "DEBUG: Checking " stagelevel \
@@ -158,14 +158,14 @@ function check_package() {
 			if (single) exit 0;
 		}
 
-		not_present = not_present " " package " ";
+		not_present = not_present " " xpackage " ";
 	}
 	else
 	if ( nobrokendeps )
 	{
 		close(errfile);
 		if ( (getline dummy < errfile != -1) ) {
-			not_present = not_present " " package " ";
+			not_present = not_present " " xpackage " ";
 		}
 	}
 

@@ -78,6 +78,7 @@ perl -e '
 	foreach my $c (<'$cachedir'/*/*/*.cache>) {
 		my ($pri, $time) = (1, 1);
 		my $pkg = $c; $pkg=~s,^.*/([^/]*)/[^/]*$,$1,; 
+		my $found_dep_entries = 0;
 		my %deps = ();
 
 		$deps{$_} = 1 foreach (keys %{$adddeps{$pkg}});
@@ -92,10 +93,14 @@ perl -e '
 			if (/^\[DEP\]/) {
 				@_ = split /:\S+\s+|\s+/; shift @_;
 				foreach (@_) { $deps{$_} = 1 unless defined $deldeps{$pkg}{$_}; }
+				$found_dep_entries = 1;
 				next;
 			}
 		}
 		close F;
+
+		# no dep_db entry if this package failed in ref build
+		next unless $found_dep_entries;
 
 		$c =~ s/\.cache$/.desc/;
 		open(F, "$c") or die "$!: $c";

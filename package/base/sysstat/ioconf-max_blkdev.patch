@@ -1,0 +1,11 @@
+--- ./ioconf.c.orig	2004-11-24 15:55:02.129278032 +0100
++++ ./ioconf.c	2004-11-24 15:55:12.279734928 +0100
+@@ -37,6 +37,8 @@
+ #define _(string) (string)
+ #endif
+ 
++#define MAX_BLKDEV     255
++
+ static unsigned int ioc_parsed = 0;
+ static struct ioc_entry *ioconf[MAX_BLKDEV+1];
+ 

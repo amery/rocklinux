@@ -1,0 +1,10 @@
+--- ./libs/libmythtv/dvbdiseqc.cpp.orig	2004-09-14 08:25:11.763437808 +0200
++++ ./libs/libmythtv/dvbdiseqc.cpp	2004-09-14 08:25:26.146251288 +0200
+@@ -30,6 +30,7 @@
+  */
+ 
+ #include <iostream>
++#include <math.h>
+ #include "pthread.h"
+ #include "qsqldatabase.h"
+ 

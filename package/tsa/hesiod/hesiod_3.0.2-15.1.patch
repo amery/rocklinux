@@ -5847,7 +5847,7 @@
  	${RANLIB} ${DESTDIR}${libdir}/libhesiod.a
  	chmod u-w ${DESTDIR}${libdir}/libhesiod.a
 +	${INSTALL} -c -m 644 libhesiod.so ${DESTDIR}${libdir}/libhesiod.so.0
-+	ln -s libhesiod.so.0 ${DESTDIR}${libdir}/libhesiod.so
++	ln -sf libhesiod.so.0 ${DESTDIR}${libdir}/libhesiod.so
  	${INSTALL_PROGRAM} -c -m 555 hesinfo ${DESTDIR}${lbindir}
  	${INSTALL} -c -m 444 ${srcdir}/hesiod.h ${DESTDIR}${includedir}
  	${INSTALL} -c -m 444 ${srcdir}/hesinfo.1 ${DESTDIR}${mandir}/man1

@@ -279,7 +279,7 @@ function eval_config_command() {
 		export cache_file=config.cache
 	fi
 
-	config_command="$configprefix $configscript"
+	config_command="$configprefix bash $configscript"
 	sub_scripts="$( find $( dirname $configscript ) -name configure )"
 
 	# remove unsupported config script options

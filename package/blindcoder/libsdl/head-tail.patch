@@ -1,0 +1,65 @@
+diff -dur SDL-1.2.7/configure SDL-1.2.7-p/configure
+--- SDL-1.2.7/configure	2004-11-08 21:45:34.792141160 +0100
++++ SDL-1.2.7-p/configure	2004-11-08 21:44:53.429429248 +0100
+@@ -22083,7 +22083,7 @@
+   enable_esd_shared=yes
+ fi;
+             esd_lib_spec=`echo $ESD_LIBS | sed 's/.*-L\([^ ]*\).*/\1\/libesd.so.*/'`
+-            esd_lib=`ls $esd_lib_spec | head -1 | sed 's/.*\/\(.*\)/\1/'`
++            esd_lib=`ls $esd_lib_spec | head -n1 | sed 's/.*\/\(.*\)/\1/'`
+             echo "-- $esd_lib_spec -> $esd_lib"
+             if test x$use_dlopen != xyes && \
+                test x$enable_esd_shared = xyes; then
+@@ -22227,7 +22227,7 @@
+   enable_arts_shared=yes
+ fi;
+                 arts_lib_spec="$ARTSC_PREFIX/lib/libartsc.so.*"
+-                arts_lib=`ls $arts_lib_spec | head -1 | sed 's/.*\/\(.*\)/\1/'`
++                arts_lib=`ls $arts_lib_spec | head -n1 | sed 's/.*\/\(.*\)/\1/'`
+                 echo "-- $arts_lib_spec -> $arts_lib"
+                 if test x$use_dlopen != xyes && \
+                    test x$enable_arts_shared = xyes; then
+Nur in SDL-1.2.7-p/: configure~.
+diff -dur SDL-1.2.7/configure.in SDL-1.2.7-p/configure.in
+--- SDL-1.2.7/configure.in	2004-02-22 22:31:47.000000000 +0100
++++ SDL-1.2.7-p/configure.in	2004-11-08 21:42:50.051185592 +0100
+@@ -342,7 +342,7 @@
+ [  --enable-esd-shared     dynamically load ESD audio support [default=yes]],
+                           , enable_esd_shared=yes)
+             esd_lib_spec=`echo $ESD_LIBS | sed 's/.*-L\([[^ ]]*\).*/\1\/libesd.so.*/'`
+-            esd_lib=`ls $esd_lib_spec | head -1 | sed 's/.*\/\(.*\)/\1/'`
++            esd_lib=`ls $esd_lib_spec | head -n1 | sed 's/.*\/\(.*\)/\1/'`
+             echo "-- $esd_lib_spec -> $esd_lib"
+             if test x$use_dlopen != xyes && \
+                test x$enable_esd_shared = xyes; then
+@@ -392,7 +392,7 @@
+ [  --enable-arts-shared    dynamically load aRts audio support [default=yes]],
+                               , enable_arts_shared=yes)
+                 arts_lib_spec=`echo $ARTSC_LIBS | sed 's/.*-L\([[^ ]]*\).*/\1\/libartsc.so.*/'`
+-                arts_lib=`ls $arts_lib_spec | head -1 | sed 's/.*\/\(.*\)/\1/'`
++                arts_lib=`ls $arts_lib_spec | head -n1 | sed 's/.*\/\(.*\)/\1/'`
+                 echo "-- $arts_lib_spec -> $arts_lib"
+                 if test x$use_dlopen != xyes && \
+                    test x$enable_arts_shared = xyes; then
+Nur in SDL-1.2.7-p/: configure.rej.
+diff -dur SDL-1.2.7/test/config.guess SDL-1.2.7-p/test/config.guess
+--- SDL-1.2.7/test/config.guess	2001-06-10 20:20:23.000000000 +0200
++++ SDL-1.2.7-p/test/config.guess	2004-11-08 21:42:50.053185288 +0100
+@@ -314,7 +314,7 @@
+ 	echo m68k-sun-sunos${UNAME_RELEASE}
+ 	exit 0 ;;
+     sun*:*:4.2BSD:*)
+-	UNAME_RELEASE=`(head -1 /etc/motd | awk '{print substr($5,1,3)}') 2>/dev/null`
++	UNAME_RELEASE=`(head -n1 /etc/motd | awk '{print substr($5,1,3)}') 2>/dev/null`
+ 	test "x${UNAME_RELEASE}" = "x" && UNAME_RELEASE=3
+ 	case "`/bin/arch`" in
+ 	    sun3)
+@@ -493,7 +493,7 @@
+ 	fi
+ 	exit 0 ;;
+     *:AIX:*:[45])
+-	IBM_CPU_ID=`/usr/sbin/lsdev -C -c processor -S available | head -1 | awk '{ print $1 }'`
++	IBM_CPU_ID=`/usr/sbin/lsdev -C -c processor -S available | head -n1 | awk '{ print $1 }'`
+ 	if /usr/sbin/lsattr -El ${IBM_CPU_ID} | grep ' POWER' >/dev/null 2>&1; then
+ 		IBM_ARCH=rs6000
+ 	else

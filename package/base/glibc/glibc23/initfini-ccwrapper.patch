@@ -20,27 +20,24 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-
 Make sure that the ROCK Linux CC Wrapper is not removing the CFLAGS
 stored in CFLAGS-initfini.s and CFLAGS-pt-initfini.s.
 
 --- ./csu/Makefile.orig	2001-07-23 20:53:37.000000000 +0300
 +++ ./csu/Makefile	2002-06-23 09:25:47.000000000 +0300
-@@ -98,5 +98,6 @@
+@@ -98,5 +98,5 @@
  
  $(objpfx)initfini.s: initfini.c
 -	$(compile.c) -S $(CFLAGS-initfini.s) -finhibit-size-directive \
-+	CC_WRAPPER_APPEND="$$CC_WRAPPER_APPEND $(CFLAGS-initfini.s)" \
-+		$(compile.c) -S -finhibit-size-directive \
++	CMD_WRAPPER_BYPASS=1 $(compile.c) -O -S $(CFLAGS-initfini.s) -finhibit-size-directive \
  		$(patsubst -f%,-fno-%,$(exceptions)) -o $@
  
 --- ./linuxthreads/Makefile.orig	2002-01-21 05:21:14.000000000 +0200
 +++ ./linuxthreads/Makefile	2002-06-23 12:25:10.000000000 +0300
-@@ -105,5 +105,6 @@
+@@ -105,5 +105,5 @@
  
  $(objpfx)pt-initfini.s: pt-initfini.c
 -	$(compile.c) -S $(CFLAGS-pt-initfini.s) -finhibit-size-directive \
-+	CC_WRAPPER_APPEND="$$CC_WRAPPER_APPEND $(CFLAGS-pt-initfini.s)" \
-+		$(compile.c) -S -finhibit-size-directive \
++	CMD_WRAPPER_BYPASS=1 $(compile.c) -O -S $(CFLAGS-pt-initfini.s) -finhibit-size-directive \
   		$(patsubst -f%,-fno-%,$(exceptions)) -o $@
  

@@ -43,8 +43,18 @@ then
 		choice ROCKCFG_PKG_APACHE_BDB $default $list
 	fi
 
+	comment ' '
+
 	bool "Enable info"		ROCKCFG_PKG_APACHE_INFO        0 
 	bool "Enable Auth Digest"	ROCKCFG_PKG_APACHE_AUTH_DIGEST 0 
+
+	bool "Enable suEXEC"		ROCKCFG_PKG_APACHE_SUEXEC      0
+	if [ "$ROCKCFG_PKG_APACHE_SUEXEC" == "1" ]; then
+		text 'suEXEC document root' \
+			ROCKCFG_PKG_APACHE_DOCROOT "lib/htdocs"
+#		text 'suEXEC user directory' \
+#			ROCKCFG_PKG_APACHE_USERDIR "public_html"
+	fi
 
 	menu_end
 fi

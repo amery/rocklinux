@@ -1,0 +1,22 @@
+--- ./configure.in.orig	2004-12-23 14:03:29.000000000 +0100
++++ ./configure.in	2004-12-23 14:03:44.000000000 +0100
+@@ -309,7 +309,7 @@
+               FT_Get_Name_Index, freetype/freetype.h, -lm)
+ if test x"$freetype2_LIBS" = x; then
+   smr_CHECK_LIB(freetype2, freetype, [FreeType2 font rasterizer - version 2.0.5+],
+-                FT_Get_Name_Index, freetype.h, -lm)
++                FT_Get_Name_Index, ft2build.h, -lm)
+ fi
+ AC_SUBST(freetype2_LIBS)
+ AC_SUBST(freetype2_CFLAGS)
+--- ./configure.orig	2004-12-23 14:03:22.000000000 +0100
++++ ./configure	2004-12-23 14:04:51.434172736 +0100
+@@ -9460,7 +9460,7 @@
+   CPPFLAGS="$CPPFLAGS $freetype2_CFLAGS "
+ 
+ 
+-for ac_header in freetype.h
++for ac_header in ft2build.h
+ do
+ as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ if eval "test \"\${$as_ac_Header+set}\" = set"; then

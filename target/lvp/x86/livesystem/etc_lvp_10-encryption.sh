@@ -34,7 +34,7 @@ encryption_start() {
 			for x in /lvp.data* ; do
 				echo "${passphrase}" | losetup -e ${thisenc} -p 0 /dev/loop/${x#/lvp.data} ${x} 
 			done
-			mdadm --build /dev/md/0 -l linear -n ${numfiles} ${files} 
+			mdadm --build /dev/md/0 -l linear --force -n ${numfiles} ${files} 
 			mount /dev/md/0 /mnt1
 			if [ ! -e /mnt1/lvp.xml ] ; then
 				echo "Wrong Passphrase!"

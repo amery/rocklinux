@@ -182,7 +182,7 @@ process_encrypted(){
 		eval "mdloopdevs=\"\${mdloopdevs} \${loopdevice_${lvpdata}}\""
 		lvpdata=$(( ${lvpdata} + 1 ))
 	done
-	${target}/sbin/mdadm --build ${mddev} -l linear -n ${needed_pseudofs} ${mdloopdevs}
+	${target}/sbin/mdadm --build ${mddev} -l linear --force -n ${needed_pseudofs} ${mdloopdevs}
 
 	echo "Creating filesystem on ${mddev}"
 	mkfs.ext2 -m 0 ${mddev} >/dev/null 2>&1

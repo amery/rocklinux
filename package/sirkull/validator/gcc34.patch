@@ -1,0 +1,12 @@
+--- ./include/RangeMap.h.orig	2005-02-25 19:06:21.234835880 +0100
++++ ./include/RangeMap.h	2005-02-25 19:27:06.715494040 +0100
+@@ -54,7 +54,8 @@
+   }
+ private:
+   size_t count_;
+-  typename Vector<RangeMapRange<From,To> >::const_iterator ptr_;
++  const RangeMapRange<From,To> *ptr_;
++  // typename Vector<RangeMapRange<From,To> >::const_iterator ptr_;
+ };
+ 
+ #ifdef SP_NAMESPACE

@@ -1,0 +1,12 @@
+diff -Nur crystality-plugin-0.92.orig/Makefile crystality-plugin-0.92/Makefile
+--- crystality-plugin-0.92.orig/Makefile	2001-08-13 01:41:14.000000000 +0200
++++ crystality-plugin-0.92/Makefile	2004-10-23 19:14:05.000000000 +0200
+@@ -7,7 +7,7 @@
+ STDIO_PLUGIN=	crystality-stdio
+ STDIO_LIBS=	-lpthread $(shell gtk-config --libs)
+ 
+-CFLAGS= -s -mpentium -O6 -Wall -ffast-math -fomit-frame-pointer -finline-functions -fexpensive-optimizations $(GTK_CFLAGS)
++CFLAGS= -s -Wall -ffast-math -fomit-frame-pointer -finline-functions -fexpensive-optimizations $(GTK_CFLAGS)
+ 
+ 
+ TARGETS=	$(XMMS_PLUGIN) $(STDIO_PLUGIN)

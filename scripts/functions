@@ -726,10 +726,10 @@ build_this_package() {
 	
 			echo -n "Install desktop file '$file': "
 
-			mkdir -p $root/usr/share/rock-registry/app
+			mkdir -p $root/usr/share/applications
 
 			rock_substitute $file > \
-			  $root/usr/share/rock-registry/app/`basename $file`
+			  $root/usr/share/applications/`basename $file`
 		done
 
 		if [ "$createdocs" = 1 ]; then

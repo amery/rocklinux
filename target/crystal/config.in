@@ -26,6 +26,7 @@ bool 'Also build the add-on packages for network install' \
 if [ $ROCKCFG_TARGET_CRYSTAL_BUILDADDONS = 1 ]
 then
 	pkgfilter sed \
+		-e '/ xfree86 / d' \
 		-e '/CORE/ s/^\(. .........\)./\1-/' \
 		-e '/CORE/ ! s/^\(.\) .........\(.\)/\1 ---------\2/'
 else

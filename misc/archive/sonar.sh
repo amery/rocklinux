@@ -50,7 +50,7 @@ commit(){
 		echo "Description : ${description}"
 		echo "Comment     : ${comment}"
 
-		if confirm "Are these values correct?" ; then
+		if ! confirm "Do you want to change these information?" ; then
 			finished=1
 			continue
 		fi
@@ -89,7 +89,7 @@ commit(){
 	echo "done"
 }
 
-config="default"
+[ -z "$1" ] && usage
 while [ -n "${1}" ] ; do
 	config="${1#config/}"
 

@@ -17,8 +17,11 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
---- ./keepalived/Makefile.in.orig	2004-04-05 03:39:58.000000000 +0200
-+++ ./keepalived/Makefile.in	2004-07-27 10:51:36.000000000 +0200
+init.d dir is inside rc.d/, and we don't want samples on $sysconfdir
+Alejandro
+
+--- ./keepalived/Makefile.in.orig	2004-11-24 23:39:09.000000000 -0300
++++ ./keepalived/Makefile.in	2004-11-24 23:41:16.000000000 -0300
 @@ -96,11 +96,10 @@
  install:
  	install -d $(DESTDIR)$(sbindir)
@@ -26,9 +29,9 @@
 -	install -d $(DESTDIR)$(sysconfdir)/init.d
 -	install -m 755 $(init_script) $(DESTDIR)$(sysconfdir)/init.d/keepalived
 -	install -d $(DESTDIR)$(sysconfdir)/keepalived/samples
-+	install -d $(sysconfdir)/rc.d/init.d
-+	install -m 755 $(init_script) $(sysconfdir)/rc.d/init.d/keepalived
-+	install -d $(sysconfdir)/keepalived
++	install -d $(DESTDIR)$(sysconfdir)/rc.d/init.d
++	install -m 755 $(init_script) $(DESTDIR)$(sysconfdir)/rc.d/init.d/keepalived
++	install -d $(DESTDIR)$(sysconfdir)/keepalived/
  	install -m 644 $(conf_file) $(DESTDIR)$(sysconfdir)/keepalived/
 -	install -m 644 ../doc/samples/* $(DESTDIR)$(sysconfdir)/keepalived/samples/
  	install -d $(DESTDIR)$(prefix)/man/man5

@@ -1,0 +1,97 @@
+--- ./capplet/main.c.orig	2004-09-07 03:06:36.943155280 +0200
++++ ./capplet/main.c	2004-09-07 03:08:57.265822992 +0200
+@@ -22,7 +22,7 @@
+ 
+ #include <config.h>
+ #include <gnome.h>
+-#include <capplet-widget.h>
++// #include <capplet-widget.h>
+ #include <gtkhtml-properties.h>
+ #include <glade/glade.h>
+ #include "gnome-bindings-prop.h"
+@@ -33,7 +33,7 @@
+ #define XEMACS_KEYMAP_NAME "XEmacs like"
+ #define MS_KEYMAP_NAME "MS like"
+ 
+-static GtkWidget *capplet, *variable, *variable_print, *fixed, *fixed_print, *anim_check;
++static GtkWidget *variable, *variable_print, *fixed, *fixed_print, *anim_check;
+ static GtkWidget *bi, *live_spell_check, *live_spell_frame, *magic_links_check, *magic_smileys_check, *button_cfg_spell;
+ 
+ static gboolean active = FALSE;
+@@ -202,8 +202,8 @@
+ static void
+ changed (GtkWidget *widget, gpointer null)
+ {
+-	if (active)
+-		capplet_widget_state_changed (CAPPLET_WIDGET (capplet), TRUE);
++	// if (active)
++	//	capplet_widget_state_changed (CAPPLET_WIDGET (capplet), TRUE);
+ }
+ 
+ static void
+@@ -255,7 +255,7 @@
+ 	glade_xml_signal_connect (xml, "changed", GTK_SIGNAL_FUNC (changed));
+ 	glade_xml_signal_connect (xml, "live_changed", GTK_SIGNAL_FUNC (live_changed));
+ 
+-        capplet = capplet_widget_new();
++        // capplet = capplet_widget_new();
+ 	vbox    = glade_xml_get_widget (xml, "prefs_widget");
+ 
+ 	variable         = glade_xml_get_widget (xml, "screen_variable");
+@@ -315,8 +315,8 @@
+ 	ebox = glade_xml_get_widget (xml, "bindings_ebox");
+ 	gtk_container_add (GTK_CONTAINER (ebox), bi);
+ 
+-        gtk_container_add (GTK_CONTAINER (capplet), vbox);
+-        gtk_widget_show_all (capplet);
++        // gtk_container_add (GTK_CONTAINER (capplet), vbox);
++        // gtk_widget_show_all (capplet);
+ 
+ 	set_ui ();
+ }
+@@ -327,7 +327,7 @@
+         bindtextdomain (PACKAGE, GNOMELOCALEDIR);
+         textdomain (PACKAGE);
+ 
+-        if (gnome_capplet_init ("gtkhtml-properties", VERSION, argc, argv, NULL, 0, NULL) < 0)
++        // if (gnome_capplet_init ("gtkhtml-properties", VERSION, argc, argv, NULL, 0, NULL) < 0)
+ 		return 1;
+ 
+ #ifdef GTKHTML_HAVE_GCONF
+@@ -354,16 +354,16 @@
+         setup ();
+ 
+ 	/* connect signals */
+-        gtk_signal_connect (GTK_OBJECT (capplet), "try",
+-                            GTK_SIGNAL_FUNC (apply), NULL);
+-        gtk_signal_connect (GTK_OBJECT (capplet), "revert",
+-                            GTK_SIGNAL_FUNC (revert), NULL);
+-        gtk_signal_connect (GTK_OBJECT (capplet), "ok",
+-                            GTK_SIGNAL_FUNC (apply), NULL);
+-        gtk_signal_connect (GTK_OBJECT (capplet), "cancel",
+-                            GTK_SIGNAL_FUNC (revert), NULL);
++        // gtk_signal_connect (GTK_OBJECT (capplet), "try",
++        //                  GTK_SIGNAL_FUNC (apply), NULL);
++        // gtk_signal_connect (GTK_OBJECT (capplet), "revert",
++        //                  GTK_SIGNAL_FUNC (revert), NULL);
++        // gtk_signal_connect (GTK_OBJECT (capplet), "ok",
++        //                  GTK_SIGNAL_FUNC (apply), NULL);
++        // gtk_signal_connect (GTK_OBJECT (capplet), "cancel",
++        //                  GTK_SIGNAL_FUNC (revert), NULL);
+ 
+-        capplet_gtk_main ();
++        // capplet_gtk_main ();
+ 
+ 	/* g_free (home_rcfile); */
+ 
+--- ./configure.orig	2004-09-07 02:52:30.873777376 +0200
++++ ./configure	2004-09-07 02:52:57.504728856 +0200
+@@ -7665,7 +7665,7 @@
+ 
+   pkgvers=`echo $pkgvers | awk -F. '{ print $1 * 1000000 + $2 * 10000 + $3 * 100 + $4;}'`
+ 
+-  if test "$pkgvers" -lt $cmpvers; then
++  if false && test "$pkgvers" -lt $cmpvers; then
+     { echo "configure: error: 
+ ""
+ "You need $dispname $dispvers or later to build $PACKAGE."" 1>&2; exit 1; }

@@ -191,16 +191,16 @@ set_confopt() {
 		datadir="$root/usr/share"
 		includedir="$root/usr/include"
 
-		docdir="$root/usr/doc/$xpkg"
-		infodir="$root/usr/info"
-		mandir="$root/usr/man"
+		docdir="$root/usr/share/doc/$xpkg"
+		infodir="$root/usr/share/info"
+		mandir="$root/usr/share/man"
 	else
 		datadir="$root/$prefix/share"
 		includedir="$root/$prefix/include"
 
-		docdir="$root/$prefix/doc/$xpkg"
-		infodir="$root/$prefix/info"
-		mandir="$root/$prefix/man"
+		docdir="$root/$prefix/share/doc/$xpkg"
+		infodir="$root/$prefix/share/info"
+		mandir="$root/$prefix/share/man"
 	fi
 	confopt="$confopt --datadir=\$datadir"
 	confopt="$confopt --includedir=\$includedir"
@@ -648,14 +648,22 @@ build_this_package() {
 
 		if [ "$createprefix" = 1 ]; then
 			echo "Creating $root/$prefix/<..> if required ..."
-			for x in $docdir $root/$prefix/bin $root/$prefix/lib \
-				 $root/$prefix/share $sysconfdir $localstatedir
+			for x in $root/$prefix $bindir $sbindir $libdir $datadir $includedir \
+			         $docdir $infodir $mandir $sysconfdir $localstatedir
 			do
 				if [ ! -e $x ]; then
 					mkdir -p $x
-					rmemptydir="$rmemptydir $x"
+					rmemptydir="$x $rmemptydir"
 				fi
 			done
+			if [ ! -e $root/$prefix/man ]; then
+				ln -s ${mandir#$root} $root/$prefix/man
+				rmemptydir="$rmemptydir $root/$prefix/man"
+			fi
+			if [ ! -e $root/$prefix/info ]; then
+				ln -s ${infodir#$root} $root/$prefix/info
+				rmemptydir="$rmemptydir $root/$prefix/info"
+			fi
 		fi
 		
 		if [ ".$custmain" = "." ]
@@ -758,9 +766,10 @@ build_this_package() {
 		patchfiles="$saved_patchfiles"
 	done
   
-	if [ "$rmemptydir" ]; then
-		rmdir $rmemptydir 2> /dev/null || true
-	fi
+	for x in $rmemptydir; do
+		rmdir $x 2> /dev/null || true
+		[ -e $x ] || rm $x 2> /dev/null || true
+	done
 
 	return 0
 }

@@ -1,0 +1,22 @@
+diff -dur devfsd/GNUmakefile devfsd-p/GNUmakefile
+--- devfsd/GNUmakefile	2002-02-19 07:06:43.000000000 +0100
++++ devfsd-p/GNUmakefile	2004-11-04 20:02:02.042183088 +0100
+@@ -10,7 +10,7 @@
+ 
+ nsl_libs := $(wildcard /lib/libnsl.so.*)
+ ifneq ($(nsl_libs),)
+-LIBNSL      = $(shell for file in /lib/libnsl.so.[0-9]* ; do echo $$file ; done | sort -t . -n -k 2 | head -1)
++LIBNSL      = $(shell for file in /lib/libnsl.so.[0-9]* ; do echo $$file ; done | sort -t . -n -k 2 | head -n1)
+ DEFINES     += -DLIBNSL="\"$(LIBNSL)\""
+ endif
+ 
+@@ -45,7 +45,7 @@
+ 
+ rpm.spec:	version.h
+ 	echo "%define version `grep '#define DEVFSD_VERSION' version.h | cut -d'"' -f 2`" > rpm.new
+-	tail +2 rpm.spec >> rpm.new
++	tail -n+2 rpm.spec >> rpm.new
+ 	mv rpm.new rpm.spec
+ 
+ 
+Nur in devfsd-p/: GNUmakefile~.

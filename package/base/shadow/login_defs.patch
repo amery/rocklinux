@@ -22,6 +22,15 @@
 
 --- ./etc/login.defs.linux.orig	Fri Jan  5 15:33:49 2001
 +++ ./etc/login.defs.linux	Fri Jan  5 15:38:52 2001
+@@ -230,7 +230,7 @@
+ #
+ # If compiled with cracklib support, where are the dictionaries
+ #
+-CRACKLIB_DICTPATH	/var/cache/cracklib/cracklib_dict
++CRACKLIB_DICTPATH	/usr/share/dict/cracklib_dict
+ 
+ #
+ # Min/max values for automatic uid selection in useradd
 @@ -299,7 +299,7 @@
  # Set to "no" if you need to copy encrypted passwords to other systems
  # which don't understand the new algorithm.  Default is "no".

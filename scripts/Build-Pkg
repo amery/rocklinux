@@ -262,13 +262,13 @@ if [ "$chroot" = 1 ] ; then
 
 	if [ ! -e ROCK/loop/scripts ]; then
 		mkdir -p ROCK/{loop,config,download}
-		mount --bind $realbase ROCK/loop
-		mount --bind $realconf ROCK/config
-		mount --bind $realdown ROCK/download
+		mount --bind $realbase $PWD/ROCK/loop
+		mount --bind $realconf $PWD/ROCK/config
+		mount --bind $realdown $PWD/ROCK/download
 	fi
 
 	if [ ! -f proc/mounts ]; then
-		mount -t proc none proc
+		mount -t proc none $PWD/proc
 	fi
 
 	for x in Documentation architecture misc package scripts target; do

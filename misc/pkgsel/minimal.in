@@ -24,41 +24,54 @@
 
 pkgfilter sed '
 
-# Disable packages
-/ a2ps /		{ s/^X /O /; p; d; };
-/ alsa /		{ s/^X /O /; p; d; };
-/ alsa-driver /		{ s/^X /O /; p; d; };
-/ biff+comsat /		{ s/^X /O /; p; d; };
-/ bsd-finger /		{ s/^X /O /; p; d; };
-/ bind /		{ s/^X /O /; p; d; };
-/ gpm /			{ s/^X /O /; p; d; };
-/ howtos /		{ s/^X /O /; p; d; };
-/ ifhp /		{ s/^X /O /; p; d; };
-/ ircii /		{ s/^X /O /; p; d; };
-/ irda-utils /		{ s/^X /O /; p; d; };
-/ joe /			{ s/^X /O /; p; d; };
-/ lprng /		{ s/^X /O /; p; d; };
-/ mutt /		{ s/^X /O /; p; d; };
-/ net-snmp /		{ s/^X /O /; p; d; };
-/ pine /		{ s/^X /O /; p; d; };
-/ procmail /		{ s/^X /O /; p; d; };
-/ rfc /			{ s/^X /O /; p; d; };
-/ rpm /			{ s/^X /O /; p; d; };
-/ sendmail /		{ s/^X /O /; p; d; };
-/ wu-ftpd /		{ s/^X /O /; p; d; };
+/ 00-dirtree /		{ p; d; }
 
-# Select repositories
-/ base /		{ p; d; };
-/ alpha /		{ p; d; };
-/ mips /		{ p; d; };
-/ powerpc /		{ p; d; };
-/ sparc /		{ p; d; };
-/ x86 /			{ p; d; };
+/ linux /		{ p; d; }
+/ glibc /		{ p; d; }
 
-# Enable packages
-/ subversion-static /	{ p; d; };
-/ expat /		{ p; d; };
+/ gcc /			{ p; d; }
+/ binutils /		{ p; d; }
 
-# Disable the rest
-/.*/			{ s/^X /O / ; p; d; };'
+/ make /		{ p; d; }
+/ gawk /		{ p; d; }
+/ flex /		{ p; d; }
+/ bison /		{ p; d; }
+/ perl5 /		{ p; d; }
+
+/ strace /		{ p; d; }
+/ ltrace /		{ p; d; }
+/ gdb /			{ p; d; }
+
+/ gzip /		{ p; d; }
+/ readline /		{ p; d; }
+/ ncurses /		{ p; d; }
+/ dialog /		{ p; d; }
+/ m4 /			{ p; d; }
+/ time /		{ p; d; }
+/ gettext /		{ p; d; }
+/ zlib /		{ p; d; }
+/ bash=bash2 /		{ p; d; }
+/ coreutils /		{ p; d; }
+/ findutils /		{ p; d; }
+/ diffutils /		{ p; d; }
+/ mktemp /		{ p; d; }
+/ patch /		{ p; d; }
+/ grep /		{ p; d; }
+/ sed /			{ p; d; }
+/ tar /			{ p; d; }
+/ bzip2 /		{ p; d; }
+/ texinfo /		{ p; d; }
+/ man /			{ p; d; }
+
+/ mine /		{ p; d; }
+/ util-linux /		{ p; d; }
+/ iproute2 /		{ p; d; }
+/ net-tools /		{ p; d; }
+/ module-init-tools /	{ p; d; }
+/ modutils /		{ p; d; }
+/ sysfiles /		{ p; d; }
+
+s/^X /O /;
+
+'
 

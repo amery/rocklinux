@@ -720,6 +720,10 @@ export PATH_WRBACKUP="$PATH"
 PATH="$builddir/wrappers:$PATH"
 unset i
 
+# make sure we don't create an flist with just an
+# empty docdir in it if the package build fails..
+flistdel="$flistdel|${docdir#$root/}"
+
 hook_eval prepare
 
 # define new abort function for errors while building

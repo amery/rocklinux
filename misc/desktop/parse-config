@@ -69,6 +69,7 @@ postflist_desktop() {
 	tmp=`mktemp`
 
 	grep \.desktop\$ ${builddir}/flist.txt | while read desktop ; do
+		[ ! -f "${desktop}" ] && continue
 		[ "${desktop/opt?kde/}" != "${desktop}" ] && continue
 
 		echo "Checking ${desktop} ... "

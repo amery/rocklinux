@@ -28,6 +28,7 @@ make_fstab() {
 	cat <<- EOT > $tmp2
 /dev/root / auto defaults 0 0
 none /proc proc defaults 0 0
+none /proc/bus/usb usbfs defaults 0 0
 none /dev devfs defaults 0 0
 none /dev/pts devpts defaults 0 0
 none /dev/shm ramfs defaults 0 0

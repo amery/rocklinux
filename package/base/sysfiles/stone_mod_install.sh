@@ -212,8 +212,10 @@ This dialog allows you to modify your discs parition layout and to create filesy
 #!/bin/sh
 mount -v -t devfs none /dev
 mount -v -t proc none /proc
+mount -v -t sysfs none /sys
 . /etc/profile
 stone setup
+umount -v /sys
 umount -v /dev
 umount -v /proc
 EOT
@@ -224,6 +226,7 @@ EOT
 		rm -fv ./tmp/stone_postinst.sh
 		if gui_yesno "Do you want to un-mount the filesystems and reboot now?"
 		then
+			umount -adrv 
 			shutdown -r now
 		else
 			echo

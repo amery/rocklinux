@@ -1,0 +1,11 @@
+--- ./src/CryptoXMpp.cpp.orig	2004-08-31 16:56:05.166810688 +0200
++++ ./src/CryptoXMpp.cpp	2004-08-31 16:56:18.009858248 +0200
+@@ -3147,7 +3147,7 @@
+         SqrCleanup
+         :
+         : "D" (Y), "S" (X)
+-        : "eax", "ecx", "edx", "ebp", "memory"
++        : "eax", "ecx", "edx", "memory"
+         );
+     }
+ #define MulStartup \

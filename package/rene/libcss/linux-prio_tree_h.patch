@@ -1,0 +1,16 @@
+--- ./src/css_cat.c.orig	2004-12-05 06:21:37.364185640 +0100
++++ ./src/css_cat.c	2004-12-05 06:22:23.249210056 +0100
+@@ -208,6 +208,13 @@
+  *
+  */
+ 
++
++/* for linux-2.6.9, from linux/types.h */
++#  include <asm/types.h>
++#  ifndef pgoff_t
++#  define pgoff_t unsigned long
++#  endif
++
+ #include <linux/fs.h>
+ 
+ int path_to_lba (char *p)

@@ -1,0 +1,12 @@
+diff -ruN Device-SerialPort-1.000002/Makefile.PL Device-SerialPort-1.000002-new/Makefile.PL
+--- Device-SerialPort-1.000002/Makefile.PL	2004-12-06 21:26:14.586668192 +0100
++++ Device-SerialPort-1.000002-new/Makefile.PL	2004-12-06 21:26:39.887821832 +0100
+@@ -26,7 +26,7 @@
+ print "Trying to find a serial port for testing...\n";
+ unless (@SERIALS) {
+ 	@SERIALS=( "/dev/ttyS1", "/dev/cua01", "/dev/cua/b", "/dev/tty1",
+-		   "/dev/tty.modem" );
++		   "/dev/tty.modem", "/dev/tts/0" );
+ 	print "(use 'perl Makefile.PL TESTPORT=<DEVICE>' to override this search)\n";
+ }
+ 

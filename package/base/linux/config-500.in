@@ -24,7 +24,7 @@ if pkgcheck linux X
 then
   menu_begin MENU_PKG_LINUX 'Linux Kernel Options'
 
-	choice ROCKCFG_PKG_LINUX_HEADERS linux24 \
+	choice ROCKCFG_PKG_LINUX_HEADERS linux26 \
 		linux24 'Use linux kernel 2.4.x headers in /usr/include' \
 		linux26 'Use linux kernel 2.6.x headers in /usr/include'
 
@@ -69,7 +69,7 @@ then
 		const ROCKCFG_PKG_LINUX_DEFAULT linux24
 		;;
 	    *)
-		choice ROCKCFG_PKG_LINUX_DEFAULT linux24 \
+		choice ROCKCFG_PKG_LINUX_DEFAULT linux26 \
 			linux24 'Use linux kernel 2.4.x as default kernel' \
 			linux26 'Use linux kernel 2.6.x as default kernel'
 		;;

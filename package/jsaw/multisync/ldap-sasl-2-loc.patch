@@ -17,104 +17,6 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
---- ./plugins/ldap_plugin/configure.orig	2004-08-25 20:36:29.566175336 +0200
-+++ ./plugins/ldap_plugin/configure	2004-08-25 20:41:52.658057904 +0200
-@@ -8815,8 +8815,8 @@
- fi
- 
- if test "${ac_cv_header_sasl_sasl_h+set}" = set; then
--  echo "$as_me:$LINENO: checking for sasl/sasl.h" >&5
--echo $ECHO_N "checking for sasl/sasl.h... $ECHO_C" >&6
-+  echo "$as_me:$LINENO: checking for sasl2/sasl.h" >&5
-+echo $ECHO_N "checking for sasl2/sasl.h... $ECHO_C" >&6
- if test "${ac_cv_header_sasl_sasl_h+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- fi
-@@ -8824,8 +8824,8 @@
- echo "${ECHO_T}$ac_cv_header_sasl_sasl_h" >&6
- else
-   # Is the header compilable?
--echo "$as_me:$LINENO: checking sasl/sasl.h usability" >&5
--echo $ECHO_N "checking sasl/sasl.h usability... $ECHO_C" >&6
-+echo "$as_me:$LINENO: checking sasl2/sasl.h usability" >&5
-+echo $ECHO_N "checking sasl2/sasl.h usability... $ECHO_C" >&6
- cat >conftest.$ac_ext <<_ACEOF
- #line $LINENO "configure"
- /* confdefs.h.  */
-@@ -8834,7 +8834,7 @@
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
- $ac_includes_default
--#include <sasl/sasl.h>
-+#include <sasl2/sasl.h>
- _ACEOF
- rm -f conftest.$ac_objext
- if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
-@@ -8860,8 +8860,8 @@
- echo "${ECHO_T}$ac_header_compiler" >&6
- 
- # Is the header present?
--echo "$as_me:$LINENO: checking sasl/sasl.h presence" >&5
--echo $ECHO_N "checking sasl/sasl.h presence... $ECHO_C" >&6
-+echo "$as_me:$LINENO: checking sasl2/sasl.h presence" >&5
-+echo $ECHO_N "checking sasl2/sasl.h presence... $ECHO_C" >&6
- cat >conftest.$ac_ext <<_ACEOF
- #line $LINENO "configure"
- /* confdefs.h.  */
-@@ -8869,7 +8869,7 @@
- cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
--#include <sasl/sasl.h>
-+#include <sasl2/sasl.h>
- _ACEOF
- if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
-   (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
-@@ -8902,10 +8902,10 @@
- # So?  What about this header?
- case $ac_header_compiler:$ac_header_preproc in
-   yes:no )
--    { echo "$as_me:$LINENO: WARNING: sasl/sasl.h: accepted by the compiler, rejected by the preprocessor!" >&5
--echo "$as_me: WARNING: sasl/sasl.h: accepted by the compiler, rejected by the preprocessor!" >&2;}
--    { echo "$as_me:$LINENO: WARNING: sasl/sasl.h: proceeding with the preprocessor's result" >&5
--echo "$as_me: WARNING: sasl/sasl.h: proceeding with the preprocessor's result" >&2;}
-+    { echo "$as_me:$LINENO: WARNING: sasl2/sasl.h: accepted by the compiler, rejected by the preprocessor!" >&5
-+echo "$as_me: WARNING: sasl2/sasl.h: accepted by the compiler, rejected by the preprocessor!" >&2;}
-+    { echo "$as_me:$LINENO: WARNING: sasl2/sasl.h: proceeding with the preprocessor's result" >&5
-+echo "$as_me: WARNING: sasl2/sasl.h: proceeding with the preprocessor's result" >&2;}
-     (
-       cat <<\_ASBOX
- ## ------------------------------------ ##
-@@ -8916,12 +8916,12 @@
-       sed "s/^/$as_me: WARNING:     /" >&2
-     ;;
-   no:yes )
--    { echo "$as_me:$LINENO: WARNING: sasl/sasl.h: present but cannot be compiled" >&5
--echo "$as_me: WARNING: sasl/sasl.h: present but cannot be compiled" >&2;}
--    { echo "$as_me:$LINENO: WARNING: sasl/sasl.h: check for missing prerequisite headers?" >&5
--echo "$as_me: WARNING: sasl/sasl.h: check for missing prerequisite headers?" >&2;}
--    { echo "$as_me:$LINENO: WARNING: sasl/sasl.h: proceeding with the preprocessor's result" >&5
--echo "$as_me: WARNING: sasl/sasl.h: proceeding with the preprocessor's result" >&2;}
-+    { echo "$as_me:$LINENO: WARNING: sasl2/sasl.h: present but cannot be compiled" >&5
-+echo "$as_me: WARNING: sasl2/sasl.h: present but cannot be compiled" >&2;}
-+    { echo "$as_me:$LINENO: WARNING: sasl2/sasl.h: check for missing prerequisite headers?" >&5
-+echo "$as_me: WARNING: sasl2/sasl.h: check for missing prerequisite headers?" >&2;}
-+    { echo "$as_me:$LINENO: WARNING: sasl2/sasl.h: proceeding with the preprocessor's result" >&5
-+echo "$as_me: WARNING: sasl2/sasl.h: proceeding with the preprocessor's result" >&2;}
-     (
-       cat <<\_ASBOX
- ## ------------------------------------ ##
-@@ -8932,8 +8932,8 @@
-       sed "s/^/$as_me: WARNING:     /" >&2
-     ;;
- esac
--echo "$as_me:$LINENO: checking for sasl/sasl.h" >&5
--echo $ECHO_N "checking for sasl/sasl.h... $ECHO_C" >&6
-+echo "$as_me:$LINENO: checking for sasl2/sasl.h" >&5
-+echo $ECHO_N "checking for sasl2/sasl.h... $ECHO_C" >&6
- if test "${ac_cv_header_sasl_sasl_h+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
 --- ./plugins/ldap_plugin/configure.in.orig	2004-08-25 20:36:19.699675272 +0200
 +++ ./plugins/ldap_plugin/configure.in	2004-08-25 20:37:11.541794072 +0200
 @@ -17,7 +17,7 @@
@@ -135,3 +37,108 @@
  
  int lutil_sasl_interact(
          LDAP *ld,
+--- ./plugins/ldap_plugin/configure.orig	2004-12-18 09:27:21.466670192 +0100
++++ ./plugins/ldap_plugin/configure	2004-12-18 09:28:05.211020040 +0100
+@@ -20172,8 +20172,8 @@
+ fi
+ 
+ if test "${ac_cv_header_sasl_sasl_h+set}" = set; then
+-  echo "$as_me:$LINENO: checking for sasl/sasl.h" >&5
+-echo $ECHO_N "checking for sasl/sasl.h... $ECHO_C" >&6
++  echo "$as_me:$LINENO: checking for sasl2/sasl.h" >&5
++echo $ECHO_N "checking for sasl2/sasl.h... $ECHO_C" >&6
+ if test "${ac_cv_header_sasl_sasl_h+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ fi
+@@ -20181,8 +20181,8 @@
+ echo "${ECHO_T}$ac_cv_header_sasl_sasl_h" >&6
+ else
+   # Is the header compilable?
+-echo "$as_me:$LINENO: checking sasl/sasl.h usability" >&5
+-echo $ECHO_N "checking sasl/sasl.h usability... $ECHO_C" >&6
++echo "$as_me:$LINENO: checking sasl2/sasl.h usability" >&5
++echo $ECHO_N "checking sasl2/sasl.h usability... $ECHO_C" >&6
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -20190,7 +20190,7 @@
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ $ac_includes_default
+-#include <sasl/sasl.h>
++#include <sasl2/sasl.h>
+ _ACEOF
+ rm -f conftest.$ac_objext
+ if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+@@ -20225,15 +20225,15 @@
+ echo "${ECHO_T}$ac_header_compiler" >&6
+ 
+ # Is the header present?
+-echo "$as_me:$LINENO: checking sasl/sasl.h presence" >&5
+-echo $ECHO_N "checking sasl/sasl.h presence... $ECHO_C" >&6
++echo "$as_me:$LINENO: checking sasl2/sasl.h presence" >&5
++echo $ECHO_N "checking sasl2/sasl.h presence... $ECHO_C" >&6
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+-#include <sasl/sasl.h>
++#include <sasl2/sasl.h>
+ _ACEOF
+ if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
+   (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
+@@ -20267,25 +20267,25 @@
+ # So?  What about this header?
+ case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
+   yes:no: )
+-    { echo "$as_me:$LINENO: WARNING: sasl/sasl.h: accepted by the compiler, rejected by the preprocessor!" >&5
+-echo "$as_me: WARNING: sasl/sasl.h: accepted by the compiler, rejected by the preprocessor!" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: sasl/sasl.h: proceeding with the compiler's result" >&5
+-echo "$as_me: WARNING: sasl/sasl.h: proceeding with the compiler's result" >&2;}
++    { echo "$as_me:$LINENO: WARNING: sasl2/sasl.h: accepted by the compiler, rejected by the preprocessor!" >&5
++echo "$as_me: WARNING: sasl2/sasl.h: accepted by the compiler, rejected by the preprocessor!" >&2;}
++    { echo "$as_me:$LINENO: WARNING: sasl2/sasl.h: proceeding with the compiler's result" >&5
++echo "$as_me: WARNING: sasl2/sasl.h: proceeding with the compiler's result" >&2;}
+     ac_header_preproc=yes
+     ;;
+   no:yes:* )
+-    { echo "$as_me:$LINENO: WARNING: sasl/sasl.h: present but cannot be compiled" >&5
+-echo "$as_me: WARNING: sasl/sasl.h: present but cannot be compiled" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: sasl/sasl.h:     check for missing prerequisite headers?" >&5
+-echo "$as_me: WARNING: sasl/sasl.h:     check for missing prerequisite headers?" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: sasl/sasl.h: see the Autoconf documentation" >&5
+-echo "$as_me: WARNING: sasl/sasl.h: see the Autoconf documentation" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: sasl/sasl.h:     section \"Present But Cannot Be Compiled\"" >&5
+-echo "$as_me: WARNING: sasl/sasl.h:     section \"Present But Cannot Be Compiled\"" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: sasl/sasl.h: proceeding with the preprocessor's result" >&5
+-echo "$as_me: WARNING: sasl/sasl.h: proceeding with the preprocessor's result" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: sasl/sasl.h: in the future, the compiler will take precedence" >&5
+-echo "$as_me: WARNING: sasl/sasl.h: in the future, the compiler will take precedence" >&2;}
++    { echo "$as_me:$LINENO: WARNING: sasl2/sasl.h: present but cannot be compiled" >&5
++echo "$as_me: WARNING: sasl2/sasl.h: present but cannot be compiled" >&2;}
++    { echo "$as_me:$LINENO: WARNING: sasl2/sasl.h:     check for missing prerequisite headers?" >&5
++echo "$as_me: WARNING: sasl2/sasl.h:     check for missing prerequisite headers?" >&2;}
++    { echo "$as_me:$LINENO: WARNING: sasl2/sasl.h: see the Autoconf documentation" >&5
++echo "$as_me: WARNING: sasl2/sasl.h: see the Autoconf documentation" >&2;}
++    { echo "$as_me:$LINENO: WARNING: sasl2/sasl.h:     section \"Present But Cannot Be Compiled\"" >&5
++echo "$as_me: WARNING: sasl2/sasl.h:     section \"Present But Cannot Be Compiled\"" >&2;}
++    { echo "$as_me:$LINENO: WARNING: sasl2/sasl.h: proceeding with the preprocessor's result" >&5
++echo "$as_me: WARNING: sasl2/sasl.h: proceeding with the preprocessor's result" >&2;}
++    { echo "$as_me:$LINENO: WARNING: sasl2/sasl.h: in the future, the compiler will take precedence" >&5
++echo "$as_me: WARNING: sasl2/sasl.h: in the future, the compiler will take precedence" >&2;}
+     (
+       cat <<\_ASBOX
+ ## ------------------------------------------ ##
+@@ -20296,8 +20296,8 @@
+       sed "s/^/$as_me: WARNING:     /" >&2
+     ;;
+ esac
+-echo "$as_me:$LINENO: checking for sasl/sasl.h" >&5
+-echo $ECHO_N "checking for sasl/sasl.h... $ECHO_C" >&6
++echo "$as_me:$LINENO: checking for sasl2/sasl.h" >&5
++echo $ECHO_N "checking for sasl2/sasl.h... $ECHO_C" >&6
+ if test "${ac_cv_header_sasl_sasl_h+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else

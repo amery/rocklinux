@@ -160,10 +160,6 @@ case "$1" in
 	fi
     	status
 
-	title "Running ldconfig."
-		/sbin/ldconfig >/dev/null 2>&1 || error=$?
-	status
-
 	title "Setting mixer devices Master and PCM to 65%."
 		/usr/bin/amixer sset PCM 20 >/dev/null 2>&1 || error=$?
 		/usr/bin/amixer sset PCM unmute >/dev/null 2>&1 || error=$?

@@ -1,0 +1,23 @@
+--- ./syslogd.c.orig	2004-12-24 02:26:01.673668736 +0100
++++ ./syslogd.c	2004-12-24 02:26:55.203530960 +0100
+@@ -890,11 +890,11 @@
+ 		dprintf("Checking pidfile.\n");
+ 		if (!check_pid(PidFile))
+ 		{
++			void *old_sigterm_hdl = signal (SIGTERM, doexit);
+ 			if (fork()) {
+ 				/*
+ 				 * Parent process
+ 				 */
+-				signal (SIGTERM, doexit);
+ 				sleep(300);
+ 				/*
+ 				 * Not reached unless something major went wrong.  5
+@@ -906,6 +906,7 @@
+ 				 */
+ 				exit(1);
+ 			}
++			signal (SIGTERM, old_sigterm_hdl);
+ 			num_fds = getdtablesize();
+ 			for (i= 0; i < num_fds; i++)
+ 				(void) close(i);

@@ -26,6 +26,7 @@
 #
 
 fullclean=0
+umount=0
 nocheck=0
 
 while [ "$1" ] ; do
@@ -34,8 +35,11 @@ while [ "$1" ] ; do
 		fullclean=1 ; shift ;;
 	    -nocheck)
 		nocheck=1   ; shift ;;
+	    -umount)
+		fullclean=1 ; nocheck=1
+		umount=1    ; shift ;;
 	    -*)
-		echo "Usage: $0 [ -full ] [ -nocheck ] [ <dir(s)> ]"
+		echo "Usage: $0 [ -full ] [ -nocheck ] [ -umount ] [ <dir(s)> ]"
 		echo
 		echo " Cleanup the build environment, deleting the directories src, src.*,"
 		echo " build/*/ROCK/src.* and various temporary/backup files."
@@ -48,8 +52,12 @@ while [ "$1" ] ; do
 		echo
 		echo "	-full			delete full build directories, "
 		echo "				e.g. build/desktop-*"
+		echo
 		echo "	-nocheck		don't delete temporary/backup files and don't"
 		echo "				check for old liggering files" 
+		echo
+		echo "  -umount			don't remove anything, just umount all the"
+		echo "				liggering mounts, implies '-full' and '-nocheck'"
  		echo
 		exit 1 ;;
 	    *)
@@ -59,7 +67,8 @@ done
 
 # Remove src*
 #
-for x in src src.* build/*/ROCK/src.*; do
+if [ $umount = 0 ]; then
+  for x in src src.* build/*/ROCK/src.*; do
     if [ -d "$x" -o -L "$x" ] ; then
 	if [ "$#" != 0 ] ; then
 		delme=0
@@ -77,12 +86,13 @@ for x in src src.* build/*/ROCK/src.*; do
 		fi
 	done
 
-	if [ $delme = 1 ] ; then
+	if [ $delme = 1 ]; then
 		echo "removing $x .."
 		rm -rf "$x"
 	fi
     fi
-done
+  done
+fi
 
 # Remove build/*
 #
@@ -98,13 +108,15 @@ for x in build/* ; do
 		for y in proc ROCK/loop ROCK/config ROCK/download; do
 			umount -d -f    "$x/$y" > /dev/null 2>&1
 			umount -d -f -l "$x/$y" > /dev/null 2>&1
-			rmdir  "$x/$y" > /dev/null 2>&1
-			if [ -d "$x/$y" ] ; then
-				echo "Found $y in $x: Not removing!"
-				delme=0
+			if [ $umount = 0 ]; then
+				rmdir  "$x/$y" > /dev/null 2>&1
+				if [ -d "$x/$y" ] ; then
+					echo "Found $y in $x: Not removing!"
+					delme=0
+				fi
 			fi
 		done
-		if [ "$delme" != 0 ] ; then
+		if [ "$delme" != 0 -a $umount = 0 ] ; then
 			echo "removing $x .."
 			rm -rf "$x"
 		fi

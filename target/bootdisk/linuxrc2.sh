@@ -46,6 +46,13 @@ echo "Enter the names of all terminal devices (e.g. 'vc/1' or 'tts/0')."
 echo -n "An empty text stands for vc/1 - vc/6: "  ;  read ttydevs
 [ -z "$ttydevs" ] && ttydevs="vc/1 vc/2 vc/3 vc/4 vc/5 vc/6"
 
+if [[ "$ttydevs" = tts/* ]] ; then
+	echo -n "Connection speed in Baud (default: 9600): " ; read baud
+	[ -z "$baud" ] && baud=9600
+else
+	baud=38400
+fi
+
 echo
 echo 'Just type "stone" now if you want to make a normal installation of a ROCK'
 echo -n 'Linux build '
@@ -59,7 +66,7 @@ echo -e '#!/bin/sh\ncd ; exec /bin/sh --login' > /sbin/login-shell
 chmod +x /sbin/login-shell
 
 for x in $ttydevs ; do
-   ( ( while : ; do agetty -i 38400 $x -n -l /sbin/login-shell ; done ) & )
+   ( ( while : ; do agetty -i $baud $x -n -l /sbin/login-shell ; done ) & )
 done
 
 exec < /dev/null > /dev/null 2>&1

@@ -281,12 +281,12 @@ for x in $disks ; do
 	bootoptions=""
 
 	if [ "$scripts" ] ; then
-		echo "$spacer Running post-processing scripts on image ..."
+		date "+  [%X] Running post-processing scripts on image ..."
 		eval $scripts $x ${isoprefix}_cd$x.iso
 	fi
 
-	if [ "$implantisomd5" = 1 -a -x ./misc/isomd5sum/implantisomd5 ] ; then
-		echo "$spacer Calculating and implanting MD5 checksum ..."
+	if [ "$implantisomd5" = 1 -a -x ./src/isomd5sum/implantisomd5 ] ; then
+		date "+  [%X] Calculating and implanting MD5 checksum ..."
 		./src/isomd5sum/implantisomd5 ${isoprefix}_cd$x.iso >/dev/null
 	fi
 

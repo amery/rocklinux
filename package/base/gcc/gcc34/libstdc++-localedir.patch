@@ -1,0 +1,22 @@
+pass the install location for locales (datadir) to subdirectories
+
+--- gcc-3.4.2/libstdc++-v3/Makefile.in	2004-03-18 18:35:12.000000000 +0100
++++ gcc-3.4.2/libstdc++-v3/Makefile.in-p	2004-11-04 01:40:40.864092240 +0100
+@@ -220,6 +220,8 @@
+ AM_CPPFLAGS = $(GLIBCXX_INCLUDES)
+ @GLIBCXX_HOSTED_TRUE@hosted_source = src po
+ SUBDIRS = include libmath libsupc++ $(hosted_source) testsuite
++SUBDIR_FLAGS_TO_PASS = \
++	"datadir=$(datadir)"
+ 
+ # Multilib support.
+ MAKEOVERRIDES = 
+@@ -370,7 +372,7 @@
+ 	  else \
+ 	    local_target="$$target"; \
+ 	  fi; \
+-	  (cd $$subdir && $(MAKE) $(AM_MAKEFLAGS) $$local_target) \
++	  (cd $$subdir && $(MAKE) $(AM_MAKEFLAGS) $(SUBDIR_FLAGS_TO_PASS) $$local_target) \
+ 	   || case "$$amf" in *=*) exit 1;; *k*) fail=yes;; *) exit 1;; esac; \
+ 	done; \
+ 	if test "$$dot_seen" = "no"; then \

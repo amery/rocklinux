@@ -85,3 +85,5 @@ dnl
 # CONFIG_GMAC is not set
 CONFIG_SUNGEM=y
 
+dnl input event debugging is activated by default - very annoying
+CONFIG_INPUT_EVBUG=m

@@ -1,0 +1,8 @@
+
+# Move the /pkgconfig/ files to :dev packages
+# (won't be used if splitdesc_dev is not defined)
+splitreg 42 dev '/pkgconfig/'
+
+# Never assume a dependency just because of reading a .pc file
+var_append flistrfilter "|" '.*/pkgconfig/.*\.pc'
+

@@ -459,16 +459,19 @@ fi
 #
 
 flistroot="bin boot etc lib sbin usr var opt"
-flistrfilter="ldconfig\..*:	.*|.*:	/var/adm/.*|.*/pkgconfig/.*\.pc"
+flistrfilter="ldconfig\..*:	.*|.*:	/var/adm/.*"
 flistdel="etc/ld.so.cache|var/tmp/.*|usr/tmp/.*|var/adm/logs/.*|.*\\.old"
 
 pkgsplits=""
 if [ "$ROCKCFG_SPLIT_DEV" != 0 ]; then
-	splitreg 40 dev '(/lib/.*\.a)$|/include/'
+	# this doesn't affect files in /lib, just /.../lib
+	# so there mustn't be an exception for linux kernel modules
+	splitreg 40 dev '(/lib/.*\.(la|a|o)$|/include/)'
 	splitdesc_dev() { desc_I="$desc_I (development files)"; }
 fi
 if [ "$ROCKCFG_SPLIT_DOC" != 0 ]; then
-	splitreg 60 doc '/share/(doc|man|info)/'
+	# only move doc/ to :doc, not man and info pages
+	splitreg 60 doc '/share/doc/'
 	splitdesc_doc() { desc_I="$desc_I (documentation)"; }
 fi
 
@@ -1063,6 +1066,8 @@ EOT
 
 		[ $found_errors != 0 ] && abort
 	fi
+
+	echo "Finished building $pkg=$xpkg."
 
 } 2>&1 | {
 

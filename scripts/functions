@@ -90,7 +90,7 @@ splitreg() {
 splitapply() {
 	local p n r
 	sed -i "s/^[^ ]+/$1:/" $2
-	while read p n r; do
+	while read -r p n r; do
 		if [ "$n" = "." ]; then
 			echo "Applying package split: $p $1 $r"
 			sed -ri "\,$r, s/^[^ ]+/$1:/" $2

@@ -39,7 +39,7 @@ package_map='       +00-dirtree         +glibc22            +glibc23
 +netkit-base        +netkit-ftp         +netkit-telnet      +netkit-tftp
 +sysfiles           +libpcap            +iptables           +tcp_wrappers
 -kiss               +kbd		-syslinux           +ntfsprogs
--ethtool -uml_utilities'
+-ethtool	    -uml_utilities	+ddrescue'
 
 if [ -f ../../pkgs/bize.tar.bz2 -a ! -f ../../pkgs/mine.tar.bz2 ] ; then
 	packager=bize

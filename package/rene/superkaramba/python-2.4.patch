@@ -1,0 +1,65 @@
+--- ./admin/acinclude.m4.in.orig	2004-12-13 16:00:11.000000000 +0100
++++ ./admin/acinclude.m4.in	2004-12-13 16:00:59.000000000 +0100
+@@ -4068,13 +4068,15 @@
+ [
+ 
+ 
+-  KDE_CHECK_PYTHON_INTERN("2.3", 
+-   [KDE_CHECK_PYTHON_INTERN("2.2", 
+-     [KDE_CHECK_PYTHON_INTERN("2.1", 
+-       [KDE_CHECK_PYTHON_INTERN("2.0", 
+-         [KDE_CHECK_PYTHON_INTERN($1, $2) ])
+-       ])
+-     ])
++  KDE_CHECK_PYTHON_INTERN("2.4", 
++   [KDE_CHECK_PYTHON_INTERN("2.3", 
++    [KDE_CHECK_PYTHON_INTERN("2.2", 
++      [KDE_CHECK_PYTHON_INTERN("2.1", 
++        [KDE_CHECK_PYTHON_INTERN("2.0", 
++          [KDE_CHECK_PYTHON_INTERN($1, $2) ])
++        ])
++      ])
++    ])
+    ])
+ 
+ #  KDE_CHECK_PYTHON_INTERN("2.2", 
+--- ./acinclude.m4.orig	2004-12-13 16:00:11.000000000 +0100
++++ ./acinclude.m4	2004-12-13 16:00:59.000000000 +0100
+@@ -4068,13 +4068,15 @@
+ [
+ 
+ 
+-  KDE_CHECK_PYTHON_INTERN("2.3", 
+-   [KDE_CHECK_PYTHON_INTERN("2.2", 
+-     [KDE_CHECK_PYTHON_INTERN("2.1", 
+-       [KDE_CHECK_PYTHON_INTERN("2.0", 
+-         [KDE_CHECK_PYTHON_INTERN($1, $2) ])
+-       ])
+-     ])
++  KDE_CHECK_PYTHON_INTERN("2.4", 
++   [KDE_CHECK_PYTHON_INTERN("2.3", 
++    [KDE_CHECK_PYTHON_INTERN("2.2", 
++      [KDE_CHECK_PYTHON_INTERN("2.1", 
++        [KDE_CHECK_PYTHON_INTERN("2.0", 
++          [KDE_CHECK_PYTHON_INTERN($1, $2) ])
++        ])
++      ])
++    ])
+    ])
+ 
+ #  KDE_CHECK_PYTHON_INTERN("2.2", 
+--- ./configure.orig	2004-11-16 06:12:48.000000000 +0100
++++ ./configure	2004-12-13 16:27:45.000000000 +0100
+@@ -25886,10 +25886,10 @@
+ 
+ 
+ 
+-if test -z ""2.3""; then
++if test -z ""2.4""; then
+   version="1.5"
+ else
+-  version=""2.3""
++  version=""2.4""
+ fi
+ 
+ echo "$as_me:$LINENO: checking for Python$version" >&5

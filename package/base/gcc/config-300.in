@@ -25,8 +25,8 @@ then
   menu_begin MENU_COMPILER 'GCC Compiler Options'
 
 	bool 'Building gcc 2.x package'   ROCKCFG_PKG_GCC_GCC2  0
-	bool 'Building gcc 3.2.x package' ROCKCFG_PKG_GCC_GCC32 0
-	bool 'Building gcc 3.3.x package' ROCKCFG_PKG_GCC_GCC33 1
+	bool 'Building gcc 3.2.x package' ROCKCFG_PKG_GCC_GCC32 1
+	bool 'Building gcc 3.3.x package' ROCKCFG_PKG_GCC_GCC33 0
 	bool 'Building gcc 3.4.x package' ROCKCFG_PKG_GCC_GCC34 0
 
 	l=""
@@ -38,9 +38,9 @@ then
 
 	d="none"
 	if [ $ROCKCFG_PKG_GCC_GCC2  = 1 ]; then d="gcc2";  fi
+	if [ $ROCKCFG_PKG_GCC_GCC33 = 1 ]; then d="gcc33"; fi
 	if [ $ROCKCFG_PKG_GCC_GCC34 = 1 ]; then d="gcc34"; fi
 	if [ $ROCKCFG_PKG_GCC_GCC32 = 1 ]; then d="gcc32"; fi
-	if [ $ROCKCFG_PKG_GCC_GCC33 = 1 ]; then d="gcc33"; fi
 
 	k=""; for x in $l; do
 		k="$k $x Use_${x}_as_standard_C_compiler"

@@ -353,7 +353,7 @@ EOT
 			if [ "$ROCKCFG_PKGFILE_VER" = 1 ]
 			then
 				v="-$( grep '^Package Name and Version:' \
-					${build_root}/var/adm/packages/$spkg | cut -f6 -d' ' )"
+					${build_root}/var/adm/packages/$spkg | cut -f6,7 -d' ' | tr ' ' - )"
 			else
 				v=""
 			fi

@@ -1,0 +1,44 @@
+--- ./readdb.c	(revision 53)
++++ ./readdb.c	(working copy)
+@@ -115,7 +115,7 @@
+ 	struct dependency *dep;
+ 	char line[1024], *t;
+ 	char filename[PATH_MAX];
+-	int line_length;
++	int line_length, i;
+ 	FILE *f = dbf;
+ 
+ 	if ( !dbf ) {
+@@ -151,8 +151,15 @@
+ 		if ( line[line_length-1] == '\n' ) line[--line_length] = 0;
+ 
+ 		if ( !strncmp(line, "[V] ", 4) ) {
++#ifdef ROCK20
+ 			p->version = malloc(line_length-3);
+ 			sscanf(line+4, "%s", p->version);
++#else
++			p->version = strdup(line+4);
++			for (i=0; p->version[i]; i++)
++				if (p->version[i] == ' ')
++					p->version[i] = '-';
++#endif
+ 			continue;
+ 		}
+ 
+@@ -217,8 +224,15 @@
+ 						line[--line_length] = 0;
+ 
+ 			if ( !strncmp(line, "[V] ", 4) ) {
++#ifdef ROCK20
+ 				p->installed_version = malloc(line_length-3);
+-				strcpy(p->installed_version, line+4);
++				sscanf(line+4, "%s", p->installed_version);
++#else
++				p->installed_version = strdup(line+4);
++				for (i=0; p->installed_version[i]; i++)
++					if (p->installed_version[i] == ' ')
++						p->installed_version[i] = '-';
++#endif
+ 				continue;
+ 			}
+ 		}

@@ -23,7 +23,7 @@
 # This function returns a "uniqe id" as output
 #
 get_unique() {
-	date "+%s.$$.`/sbin/ifconfig -a | cksum | cut -f1 -d' '`"
+	date "+%s.$$.`{ /sbin/ifconfig -a; /sbin/ip a; } 2>&1 | cksum | cut -f1 -d' '`"
 }
 
 # Hook variables

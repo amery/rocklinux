@@ -77,12 +77,12 @@ perl -e '
 
 	foreach my $c (<'$cachedir'/*/*/*.cache>) {
 		my ($pri, $time) = (1, 1);
-		my $pkg = $c; $pkg=~s,^.*/([^/]*)/[^/]*$,$1,; 
+		my $pkg = $c; $pkg=~s,^.*/([^/]*)\.cache$,$1,; 
 		my $found_dep_entries = 0;
 		my %deps = ();
 		my $d = $c;
 
-		$d =~ s/\.cache$/.desc/;
+		$d =~ s,([^/]*)/[^/]*\.cache$,$1/$1.desc,;
 		$d =~ s,^'$cachedir','$descdir',;
 		if ( ! -f $d ) {
 			print STDERR "WARNING: Can'\''t find $d -> skipping $c.\n";

@@ -4,6 +4,55 @@
 # dependencies and by scripts/Build-Pkg to dump additional debug info
 # for this dependencies.
 
+# additional false deps added manually (2004-08-24)
+mysql		del	mysqlcc
+mono		del	mod_mono mono-xsp
+glib12		del	gnome-libs14
+imlib		del	gnome-libs14
+gtk+12		del	gnome-libs14 orbit10
+orbit10		del	gnome-libs14
+edb		del	imlib2 evas
+eet		del	imlib2 evas
+eval		del	imlib2
+imlib2		del	evas
+evolution	del	scrollkeeper
+firefox		del	mplayerplug-in
+mozilla		del	mplayerplug-in
+arts		del	kdelibs
+libgda		del	gnumeric
+glade		del	streamtuner
+ggv		del	streamtuner
+battfink	del	gpdf
+glib		del	librsvg glibmm
+pango		del	librsvg
+gtk+		del	librsvg
+gnome-desktop	del	gpdf
+glade10		del	streamtuner
+gconf		del	librsvg
+libbonobo	del	librsvg
+file-roller	del	gpdf
+scrollkeeper	del	libgda
+scrollkeeper	del	evolution
+scrollkeeper	del	gnomesword
+scrollkeeper	del	gnome-system-tools
+libgda		del	mrproject
+libgda		del	zenity
+libgda		del	streamtuner
+gnome-panel	del	gpdf
+glib		del	at-poke
+librsvg		del     at-poke
+pango		del     at-poke
+gtk+		del     at-poke
+gconf		del     at-poke
+libidl		del     at-poke
+libbonobo	del     at-poke
+gconf-editor	del     at-poke
+gnome-system-tools del	gpdf
+glade10		del	libgda
+ggv		del	gnome-applets
+streamtuner	del	ghex
+streamtuner	del	mergeant
+
 # this deps have been proven to be false or
 # optional in a ref. build without stage 9
 # -> misc/archive/depfeedback.sh

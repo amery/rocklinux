@@ -4,14 +4,24 @@ rm -rf $disksdir/initrd
 mkdir -p $disksdir/initrd/{dev,proc,sys,tmp,scsi,net,bin}
 cd $disksdir/initrd; ln -s bin sbin; ln -s . usr
 #
+if [ -x ../../../usr/bin/diet ] ; then
+	export DIETHOME="../../../usr/dietlibc"
+	LXRCCC="../../../usr/bin/diet $CC";
+elif [ -x /usr/bin/diet ] ; then
+	echo_status "using host's diet - did the target's dietlibc build fail?"
+	LXRCCC="/usr/bin/diet $CC";
+else
+	echo_status "diet not found - using glibc -static - initrd may be too big..."
+	LXRCCC="$CC -static"
+fi
 echo_status "Create linuxrc binary."
-diet $CC -c $base/misc/isomd5sum/md5.c -Wall -o md5.o
-diet $CC -c $base/misc/isomd5sum/libcheckisomd5.c -Wall -o libcheckisomd5.o
-diet $CC -c $base/target/$target/linuxrc.c -Wall -I $base/misc/isomd5sum/ \
+$LXRCCC -c $base/misc/isomd5sum/md5.c -Wall -o md5.o
+$LXRCCC -c $base/misc/isomd5sum/libcheckisomd5.c -Wall -o libcheckisomd5.o
+$LXRCCC -c $base/target/$target/linuxrc.c -Wall -I $base/misc/isomd5sum/ \
 	-DSTAGE_2_BIG_IMAGE="\"${ROCKCFG_SHORTID}/2nd_stage.tar.gz\"" \
 	-DSTAGE_2_SMALL_IMAGE="\"${ROCKCFG_SHORTID}/2nd_stage_small.tar.gz\"" \
 	-o linuxrc.o
-diet $CC linuxrc.o md5.o libcheckisomd5.o -o linuxrc
+$LXRCCC linuxrc.o md5.o libcheckisomd5.o -o linuxrc
 rm -f linuxrc.o md5.o libcheckisomd5.o
 #
 echo_status "Copy various helper applications."

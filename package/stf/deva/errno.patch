@@ -1,0 +1,19 @@
+--- ./src/kernel/DEVA_utils.cxx.orig	2005-02-22 15:32:19.278499456 +0100
++++ ./src/kernel/DEVA_utils.cxx	2005-02-22 15:32:36.492882472 +0100
+@@ -11,6 +11,7 @@
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+ #include <netdb.h>
++#include <errno.h>
+ 
+ char *DEVA_utils::hostname= NULL;
+ char *DEVA_utils::path= NULL;
+@@ -206,8 +207,6 @@
+     return DEVA_utils::hostname;
+ }
+ 
+-extern int errno;
+-
+ char *DEVA_utils::perror()
+ {
+     return strerror(errno);

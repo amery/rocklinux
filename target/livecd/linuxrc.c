@@ -41,21 +41,39 @@
 #include <fcntl.h>
 #include <errno.h>
 #include <stdarg.h>
-
-#ifndef MS_MOVE
-#  define MS_MOVE	8192
-#endif
+#include <sys/ioctl.h>
+/* this is actually a file included in dietlibc! */
+#include <linux/loop.h>
 
 #ifndef STAGE_2_IMAGE
 #  define STAGE_2_IMAGE "2nd_stage.img.z"
 #endif
 
+#define DEBUG(F...) debug(__LINE__,F)
+
 char mod_loader[50];
 char mod_dir[255];
 char mod_suffix[3];
 int  mod_suffix_len=0;
+int  do_debug=0;
 
-void mod_load_info(char *mod_loader, char *mod_dir, char *mod_suffix) {
+void debug(int line, const char* format, ...) 
+{
+	if(do_debug == 0) return;
+
+        va_list ap;
+        char string[128];
+
+        va_start(ap, format);
+        vsnprintf(string, sizeof(string), format, ap);
+	fprintf(stderr,"%i: %s\n", line, string);
+        va_end(ap);
+
+        return;
+}
+
+void mod_load_info(char *mod_loader, char *mod_dir, char *mod_suffix) 
+{
 	struct utsname uts_name;
 
 	if(uname(&uts_name) < 0) {
@@ -80,21 +98,68 @@ void mod_load_info(char *mod_loader, char *mod_dir, char *mod_suffix) {
 	return;
 }
 
+int loop_mount(const char *device, const char* file) 
+{
+	DEBUG("loop mounting %s on %s", device, file);
+	struct loop_info loopinfo;
+	int fd, ffd;
+	
+	if ((ffd = open(file, O_RDONLY)) < 0) {
+		perror(file);
+		return 1;
+	}
+	if ((fd = open(device, O_RDONLY)) < 0) {
+		perror(device);
+		return 1;
+	}
+	
+	memset(&loopinfo, 0, sizeof(loopinfo));
+	snprintf(loopinfo.lo_name, LO_NAME_SIZE, "%s", file);
+
+	loopinfo.lo_offset = 0;
+	loopinfo.lo_encrypt_key_size = 0;
+	loopinfo.lo_encrypt_type = LO_CRYPT_NONE;
+
+	if (ioctl(fd, LOOP_SET_FD, ffd) < 0) {
+		perror("ioctl: LOOP_SET_FD");
+		return 1;
+	}
+	close(ffd);
+	
+	if(ioctl(fd, LOOP_SET_STATUS, &loopinfo) < 0) {
+		perror("ioctl: LOOP_SET_STATUS");
+		(void) ioctl(fd, LOOP_CLR_FD, 0);
+		close(fd);
+		return 1;
+	}
+	close(fd);
+	
+	DEBUG("loop mount worked like a charm.");
+	return 0;
+}
+
 void doboot()
 {
+	DEBUG("doboot starting...");
 	if ( access("/sbin/init", R_OK) ) { perror("Can't find /sbin/init"); }
 	else {
-		execlp("/sbin/init","/sbin/init");
+		/* not sure why, but i get 'bad address' if i don't wait a bit here... */
+		sleep(1);
+		execlp("/sbin/init","init");
+		perror("execlp /sbin/init failed");
 	}
+	DEBUG("doboot returning - bad!");
 }
 
 int trymount (const char* source, const char* target)
 {
-	return	mount(source, target, "iso9660", MS_RDONLY, NULL) &&
-		mount(source, target, "ext3",    MS_RDONLY, NULL) &&
-		mount(source, target, "ext2",    MS_RDONLY, NULL) &&
-		mount(source, target, "minix",   MS_RDONLY, NULL) &&
-		mount(source, target, "vfat",    MS_RDONLY, NULL);
+	DEBUG("trying to mount %s on %s...", source, target);
+	if(mount(source, target, "iso9660", MS_RDONLY, NULL) != 0) {
+		DEBUG("try failed");
+		return 1;
+	} 
+	DEBUG("mount succeeded.");
+	return 0;
 }
 
 void trywait(pid)
@@ -103,27 +168,17 @@ void trywait(pid)
 	else waitpid(pid, NULL, 0);
 }
 
-#define tryexeclp(file, arg, ...) ( { \
-	int pid; \
-\
-	if ( (pid = fork()) == 0 ) { \
-		execlp(file, arg, __VA_ARGS__); \
-		perror(file); \
-		exit(1); \
-	} \
-\
-	trywait(pid); \
-} )
-
 /* check wether a file is a directory */
-int is_dir(const struct dirent *entry) {
+int is_dir(const struct dirent *entry) 
+{
 	struct stat tmpstat;
 	lstat(entry->d_name, &tmpstat);
 	return S_ISDIR(tmpstat.st_mode);
 }
 
 /* this is used in the module loading system for sorting dirs before files */
-int dirs_first_sort(const struct dirent **a, const struct dirent **b) {
+int dirs_first_sort(const struct dirent **a, const struct dirent **b) 
+{
 	if(is_dir(*a)) {
 		if(is_dir(*b)) return 0;
 		else return 1;
@@ -133,14 +188,16 @@ int dirs_first_sort(const struct dirent **a, const struct dirent **b) {
 }
 
 /* this is used in the rm -r implementation */
-int no_dot_dirs_filter(const struct dirent *entry) {
+int no_dot_dirs_filter(const struct dirent *entry) 
+{
 	if( is_dir(entry) && (!strcmp(entry->d_name,".") || !strcmp(entry->d_name,"..")) )  return 0;
 	else return 1;
 }
 
 
 /* my own rm -r implementation - :P */
-int rm_recursive(char* directory) {
+int rm_recursive(char* directory) 
+{
 	struct dirent **namelist;
 	char oldcwd[256];
 	int n, ret=0;
@@ -181,7 +238,8 @@ int rm_recursive(char* directory) {
 }
 
 /* symlink most files in /etc */
-int make_etc_symlinks() {
+int make_etc_symlinks() 
+{
 	struct dirent **namelist;
 	char source[256], target[256], oldcwd[100];
 	int n, ret=0;
@@ -198,7 +256,9 @@ int make_etc_symlinks() {
 		snprintf(source, 256, "/ROCK/etc/%s",namelist[n]->d_name);
 		snprintf(target, 256, "/etc/%s",namelist[n]->d_name);
 
-		if (symlink(source, target) != 0) {
+		if (access(target, R_OK) == 0) {
+			printf("shyly skipping symlink for %s - already exists!\n", target);
+		} else if (symlink(source, target) != 0) {
 			printf("error in symlinking %s -> %s\n",source,target);
 			ret = -1;
 		}
@@ -222,25 +282,37 @@ int getdevice(char* devstr, int devlen)
 
 	for (tmp_nr = 0; tmp_nr < 10; ++tmp_nr) {
 		snprintf(devicefile, 100, devicebase, tmp_nr);
+		DEBUG("checking if %s is still a valid device", devicefile);
 
-		if ( access (devicefile, R_OK) ) break; 
+		if ( access (devicefile, R_OK) ) {
+			DEBUG("%s first unvalid device, break search", devicefile);
+			break; 
+		} else {
+			DEBUG("%s still valid",devicefile);
+		}
 
 		devn[nr++] = strdup (devicefile);
 	}
 
 	if (!nr) {
 		printf("could not find a suitable cdrom device!\n");
-		return -1;
+		return -2;
 	}
 	
 	devn[nr] = NULL;
 
 	snprintf(filename,100,"/mnt/cdrom/%s",STAGE_2_IMAGE);
+	DEBUG("looking for %s on valid devices",STAGE_2_IMAGE);
 
 	for (nr=0; devn[nr]; nr++) {
-		if(trymount(devn[nr],"/mnt/cdrom") == 0) { 
-			if( access(filename, R_OK) ) continue;
+		if(trymount(devn[nr], "/mnt/cdrom") == 0) { 
+			if( access(filename, R_OK) ) {
+				DEBUG("mounted %s, but could not access %s! continuing\n", devn[nr], filename);
+				if(umount("/mnt/cdrom") != 0) { perror("umount wrong cdrom failed"); break; }
+				continue;
+			}
 			strncpy(devstr, devn[nr], devlen);
+			DEBUG("found 2nd stage image on %s", devstr);
 			return 0;
 		}
 	}
@@ -255,34 +327,42 @@ int prepare_root() {
 	/* we need to set umask to 00 so we can set 777 perms */
 	umask(00);
 
+	DEBUG("symlinking /bin, /sbin, /boot, /opt");
 	/* simple symlinking */
 	if(symlink("/ROCK/bin","/bin") != 0) { perror("/bin symlink FAILED"); ret=-1; }
 	if(symlink("/ROCK/sbin","/sbin") != 0) { perror("/sbin symlink FAILED"); ret=-1; }
 	if(symlink("/ROCK/boot","/boot") != 0) { perror("/boot symlink FAILED"); ret=-1; }
 	if(symlink("/ROCK/opt","/opt") != 0) { perror("/opt symlink FAILED"); ret=-1; }
 
+	DEBUG("creating /tmp");
 	/* if /tmp isn't empty, this is gonna blow... */	
 	if(rmdir("/tmp") != 0) { perror("unable to remove old /tmp"); ret=-1; }
 	if(mkdir("/ramdisk/tmp", 0777) != 0) { perror("unable to create /ramdisk/tmp"); ret=-1; }
 	if(symlink("/ramdisk/tmp", "/tmp") != 0) { perror("/tmp symlink FAILED"); ret=-1; }
 
+	DEBUG("creating /home");
 	if(mkdir("/ramdisk/home", 0755) != 0) { perror("unable to create /ramdisk/home"); ret=-1; }
 	if(symlink("/ramdisk/home", "/home") != 0) { perror("/home symlink FAILED"); ret=-1; }
 
+	DEBUG("symlinking /usr");
 	/* usr is just a symlink to / , that's why it works */
 	if(unlink("/usr") != 0) { perror("unable to remove old /usr"); ret=-1; }
 	if(symlink("/ROCK/usr","/usr") != 0) { perror("/usr symlink FAILED"); ret=-1; }
-
+	
+	DEBUG("symlinking /var");
 	if(mkdir("/ramdisk/var", 0755) != 0) { perror("unable to create /ramdisk/var"); ret=-1; }
 	if(symlink("/ramdisk/var", "/var") != 0) { perror("/var symlink FAILED"); ret=-1; }
 
+	DEBUG("removing and symlinking /lib");
 	if(rm_recursive("/lib") != 0) { printf("removal of /lib FAILED\n"); ret=-1; }
 	if(symlink("/ROCK/lib", "/lib") != 0) { perror("/lib symlink FAILED"); ret=-1; }
 
+	DEBUG("removing /sbin-static and /bin-static");
 	if(unlink("/sbin-static") != 0) { perror("error removing /sbin-static"); ret=-1; }
 	if(rm_recursive("/bin-static") != 0) { printf("removal of /bin-static FAILED\n"); ret=-1; }
 	fflush(stdout);
 
+	DEBUG("preparing /etc");
 	/* the /etc directory is a bit special */
 	if(make_etc_symlinks() != 0) { printf("error while symlinking individual files in /etc!\n"); ret=-1; }
 	/* remove some files that either need to be writable or need to be replaced */
@@ -300,6 +380,7 @@ int prepare_root() {
 	FILE* mod = fopen("/etc/mtab","w");
 	char buf[256];
 
+	DEBUG("modifying /etc/mtab");
 	while(fgets(buf, 256, orig) != NULL) {
 		if(memcmp(buf,"rootfs",6) == 0) continue;
 		else fputs(buf, mod);
@@ -307,6 +388,7 @@ int prepare_root() {
 	fclose(orig); fclose(mod); buf[1]=0;
 
 	/* add rocker to /etc/passwd and change root's home to /home/root */
+	DEBUG("modifying /etc/passwd");
 	orig = fopen("/ROCK/etc/passwd","r");
 	mod = fopen("/etc/passwd","w");
         while(fgets(buf, 256, orig) != NULL) {
@@ -318,6 +400,7 @@ int prepare_root() {
 
         /* add rocker to /etc/shadow */
 	umask(066);
+	DEBUG("modifying /etc/shadow");
         orig = fopen("/ROCK/etc/shadow","r");
         mod = fopen("/etc/shadow","w");
         while(fgets(buf, 256, orig) != NULL) {
@@ -330,6 +413,7 @@ int prepare_root() {
         /* add rocker to group 'sound' */
 	int fnd = 0;
 	umask(022);
+	DEBUG("modifying /etc/group");
         orig = fopen("/ROCK/etc/group","r");
         mod = fopen("/etc/group","w");
         while(fgets(buf, 256, orig) != NULL) {
@@ -343,12 +427,14 @@ int prepare_root() {
         fclose(orig); fclose(mod); buf[1]=0;
 
 	/* copy over XF86Config */
+	DEBUG("modifying /etc/X11/XF86Config");
 	orig = fopen("/ROCK/etc/X11/XF86Config","r");
         mod = fopen("/etc/X11/XF86Config","w");
         while(fgets(buf, 256, orig) != NULL) fputs(buf, mod);
 	fclose(orig); fclose(mod); buf[1]=0;
 
 	/* copy over resolv.conf */
+	DEBUG("modifying /etc/resolv.conf");
 	unlink("/etc/resolv.conf");
 	orig = fopen("/ROCK/etc/resolv.conf","r");
         mod = fopen("/etc/resolv.conf","w");
@@ -356,6 +442,7 @@ int prepare_root() {
 	fclose(orig); fclose(mod); buf[1]=0;
 
 	/* change modules.conf to place it's modules.dep in /etc */
+	DEBUG("modifying /etc/modules.conf");
 	unlink("/etc/modules.conf");
 	orig = fopen("/ROCK/etc/modules.conf","r");
         mod = fopen("/etc/modules.conf","w");
@@ -372,6 +459,7 @@ int prepare_root() {
 	umask(00);
 
 	/* we need to fix some things in /dev */
+	DEBUG("preparing /dev");
 	if(chdir("/dev") != 0) { perror("could not chdir to /dev!"); ret=-1; }
 	unlink("fd"); /*no problem if this fails*/
 	if(symlink("/proc/kcore","core") != 0) { perror("could not symlink /proc/kcore to /dev/core"); ret=-1; }
@@ -382,13 +470,17 @@ int prepare_root() {
 	if(chdir("/") != 0) { perror("could not chdir to /!"); ret=-1; }
 
 	/* create needed directories in /var */
+	DEBUG("preparing /var");
 	if(mkdir("/var/run",0755) != 0 ) { perror("could not create /var/run"); ret=-1; }
 	if(mkdir("/var/lock",0755) != 0 ) { perror("could not create /var/lock"); ret=-1; }
 	if(mkdir("/var/tmp",0777) != 0 ) { perror("could not create /var/tmp"); ret=-1; }
 	if(mkdir("/var/log",0755) != 0 ) { perror("could not create /var/log"); ret=-1; }
 	if(mkdir("/var/lib",0755) != 0 ) { perror("could not create /var/lib"); ret=-1; }
 	if(mkdir("/var/lib/xkb",0755) != 0 ) { perror("could not create /var/lib/xkb"); ret=-1; }
-	if(symlink("/var/lib/xkb","/etc/X11/xkb/compiled")!=0) { perror("could not symlink /var/lib/xkb to /etc/X11/xkb/compiled"); ret=-1; }
+	if(symlink("/var/lib/xkb","/etc/X11/xkb/compiled")!=0) 
+		{ perror("could not symlink /var/lib/xkb to /etc/X11/xkb/compiled"); ret=-1; }
+	if(mkdir("/var/state",0755) != 0 ) { perror("could not create /var/state"); ret=-1; }
+	if(mkdir("/var/state/dhcp",0755) != 0 ) { perror("could not create /var/state/dhcp"); ret=-1; }
 	if(mkdir("/var/rockplug",0755) != 0 ) { perror("could not create /var/rockplug"); ret=-1; }
 	if(mkdir("/var/rockplug/ieee1394",0755) != 0 ) { perror("could not create /var/rockplug/ieee1394"); ret=-1; }
 	if(mkdir("/var/rockplug/isapnp",0755) != 0 ) { perror("could not create /var/rockplug/isapnp"); ret=-1; }
@@ -396,7 +488,9 @@ int prepare_root() {
 	if(mkdir("/var/rockplug/pci",0755) != 0 ) { perror("could not create /var/rockplug/pci"); ret=-1; }
 	if(mkdir("/var/rockplug/scsi",0755) != 0 ) { perror("could not create /var/rockplug/scsi"); ret=-1; }
 	if(mkdir("/var/rockplug/usb",0755) != 0 ) { perror("could not create /var/rockplug/usb"); ret=-1; }
+	
 	/* add rocker's home, change owner */
+	DEBUG("creating homes");
 	if(mkdir("/home/rocker",0755) != 0 ) { perror("could not create /home/rocker"); ret=-1; }
 	if(chown("/home/rocker",1000,100) != 0) { perror("could not chown /home/rocker to rocker:users"); ret=-1; }
 	/* root's home */
@@ -409,28 +503,38 @@ int prepare_root() {
 void load_ramdisk_file() {
 	char text[120], devicefile[100];
 	char filename[100];
-	int pid;
+	int ret = 0;
 
 	strcpy(filename, STAGE_2_IMAGE);
-
-	if (getdevice(devicefile, 100) < 0)
-		return;
+	DEBUG("set stage 2 filename to %s",filename);
 	
-	snprintf(text, 120, "file=/mnt/cdrom/%s", filename);
-	if ( (pid = fork()) == 0 ) {
-		printf("loading cloop...");
-		execlp(mod_loader, mod_loader, "/lib/modules/misc/cloop.o", text);
-		perror("can't insmod cloop from");
-		exit(1);
+	ret = getdevice(devicefile, 100);
+	if (ret == -1) {
+		DEBUG("getdevice failed: no cd with image found...");
+		return;
+	/* this is needed for my firewire (sbp2) cd drive ... */
+	} else if (ret == -2) {
+		DEBUG("getdevice failed - no cdrom drive?! - sleeping and retrying...");
+		sleep(2);
+		if(getdevice(devicefile, 100) != 0) {
+			DEBUG("second try still did no good. giving up...");
+			return;
+		}
 	}
-	trywait(pid);
+	
+	snprintf(text, 120, "/mnt/cdrom/%s", filename);
 
-	if( access("/dev/cloop/0", R_OK) )
-		{ perror("can't access /dev/cloop/0, check if cloop insmod was succesfull!"); return; }
+	DEBUG("setting up loop device...");
+	if(loop_mount("/dev/loop/0",text) != 0) {
+		DEBUG("loop device setup failed ... :(");
+		return;
+	}
 
-	if( mount("/dev/cloop/0", "/ROCK", "iso9660", MS_RDONLY, NULL) ) 
-		{ perror("Can't mount /dev/cloop/0 on /ROCK!"); return; }
+	DEBUG("mounting loop device on /ROCK ... ");
+	if( mount("/dev/loop/0", "/ROCK", "squashfs", MS_RDONLY, NULL) ) 
+		{ perror("Can't mount squashfs on /ROCK!"); return; }
 
+	DEBUG("mounting tmpfs on /ramdisk");	
 	if ( mount("none", "/ramdisk", "tmpfs", 0, NULL) )
 		{ perror("Can't mount /ramdisk"); return; }
 
@@ -444,6 +548,7 @@ void load_ramdisk_file() {
 
 void autoload_modules()
 {
+	DEBUG("autoload modules starting");
 	char line[200], cmd[200], module[200];
 	int fd[2], rc;
 	FILE *f;
@@ -490,8 +595,18 @@ void exec_sh()
 	trywait(rc);
 }
 
-int main()
+int main(int argc, char** argv)
 {
+	int args;
+
+	if (argc > 1) {
+		do_debug = 1;
+		DEBUG("got an argument, switching debug mode on!");
+		for(args=1; args<argc; args++) {
+			DEBUG("Arg%d:%s",args,argv[args]);
+		}
+	}
+
 	if ( mount("none", "/dev", "devfs", 0, NULL) && errno != EBUSY )
 		perror("Can't mount /dev");
 
@@ -516,12 +631,14 @@ the first of this two stages and if everything goes right you will not\n\
 spend much time here. I will just try to load some drivers (if needed)\n\
 so the 2nd stage boot system can be loaded.\n");
 
+	DEBUG("load_ramdisk_file starting...");
 	load_ramdisk_file();
+	DEBUG("load_ramdisk_file returned. bad. bad bad bad :((");
 	
 	sleep(1);
 
 	printf("\n\nYou are still here. that means i couldn't complete the automatic boot of\n");
-	printf("stage2. Please refer to the errors reported above, you will now be dumped into a");
+	printf("stage2. Please refer to the errors reported above, you will now be dumped into a\n");
 	printf("minimalistic static shell so you can have a look at what went wrong...\n");
 
 	if(access("/bin/kiss",R_OK) == 0) execl("/bin/kiss", "/bin/kiss", NULL);

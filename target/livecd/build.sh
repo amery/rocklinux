@@ -1,8 +1,8 @@
 
 disksdir="$build_rock/livecd"
 
-if [ -z "`which create_compressed_fs`" ] ; then
-	echo "Please make sure create_compressed_fs is installed! Rock Package: fake/cloop"
+if [ -z "`which mksquashfs`" ] ; then
+	echo "Please make sure mksquashfs is installed! Rock Package: fake/squashfs-tools"
 	exit 1;
 fi ;
 

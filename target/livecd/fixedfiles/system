@@ -46,7 +46,7 @@ status() {
 case "$1" in
     start)
 	title "Runnind depmod ..."
-	/sbin/depmod -a || error=$?
+	/sbin/depmod -a -n > /etc/modules.dep || error=$?
 	status
 
 	title "Mounting /sys, /dev/shm and /dev/pts."

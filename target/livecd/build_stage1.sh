@@ -4,8 +4,12 @@ rm -rf $disksdir/initrd
 mkdir -p $disksdir/initrd/{dev,proc,tmp,bin-static,mnt/cdrom,ramdisk,etc,ROCK}
 cd $disksdir/initrd; ln -s bin-static sbin-static; ln -s . usr
 #
+if [ ! -x ../../../usr/bin/diet ] ; then
+	echo_error "can not find the target's diet binary - did dietlibc build?";
+	exit 1;
+fi
 echo_status "Create linuxrc binary."
-diet $CC $base/target/$target/linuxrc.c -Wall \
+../../../usr/bin/diet $CC $base/target/$target/linuxrc.c -Wall \
 	-DSTAGE_2_IMAGE="\"${ROCKCFG_SHORTID}/2nd_stage.img.z\"" \
 	-o linuxrc 
 #
@@ -27,8 +31,9 @@ do
 	fi
 done
 #
-echo_status "Copy scsi and network kernel modules."
-for x in ../2nd_stage/lib/modules/*/kernel/drivers/net/*.{ko,o} ../2nd_stage/lib/modules/*/misc/cloop.{ko,o} ; do
+echo_status "Copy kernel modules."
+for x in ../2nd_stage/lib/modules/*/kernel/drivers/{scsi,cdrom,ide,ide/pci,ide/legacy}/*.{ko,o} \
+	../2nd_stage/lib/modules/*/misc/cloop.{ko,o} ; do
 	# this test is needed in case there are only .o or only .ko files
 	if [ -f $x ]; then
 		xx=${x#../2nd_stage/}
@@ -41,7 +46,7 @@ for x in ../2nd_stage/lib/modules/*/modules.{dep,pcimap,isapnpmap} ; do
 	cp $x ${x#../2nd_stage/} || echo "not found: $x" ;
 done
 #
-for x in lib/modules/*/kernel/drivers/net lib/modules/*/misc; do
+for x in lib/modules/*/kernel/drivers/* lib/modules/*/misc; do
 	ln -s ${x#lib/modules/} lib/modules/
 done
 rm -f lib/modules/[0-9]*/kernel/drivers/net/{dummy,ppp*}.{o,ko}
@@ -52,7 +57,7 @@ cd ..
 
 echo_header "Creating initrd filesystem image: "
 
-ramdisk_size=4096
+ramdisk_size=8139
 
 echo_status "Creating temporary files."
 tmpdir=initrd_$$.dir; mkdir -p $disksdir/$tmpdir; cd $disksdir

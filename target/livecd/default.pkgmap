@@ -18,7 +18,7 @@ package_map='
 +bzip2
 +cracklib
 -cron
-+cloop
++squashfs-tools
 +cpio
 +cpuburn
 +cpuid
@@ -36,10 +36,13 @@ package_map='
 -flex
 +fbset
 +gawk
-+gcc
++gcc32
++gcc33
++gcc34
 -gettext
 +genromfs
-+glibc
++glibc22
++glibc23
 +grep
 -groff
 +grub
@@ -162,6 +165,7 @@ package_map='
 -nasm
 +readline
 +bdb33
++bdb40
 +bdb41
 +bdb42
 +gdbm

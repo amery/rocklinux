@@ -1,0 +1,46 @@
+diff -dur SDL-1.2.7/include/SDL_endian.h SDL-1.2.7-p/include/SDL_endian.h
+--- SDL-1.2.7/include/SDL_endian.h	2004-02-18 17:21:57.000000000 +0000
++++ SDL-1.2.7-p/include/SDL_endian.h	2004-10-24 19:30:37.893242008 +0000
+@@ -57,6 +57,19 @@
+ /* The macros used to swap values */
+ /* Try to use superfast macros on systems that support them */
+ #ifdef linux
++
++#ifdef __CHECKER__
++#define __bitwise __attribute__((bitwise))
++#else
++#define __bitwise
++#endif
++#define __le16 __bitwise __u16
++#define __be16 __bitwise __u16
++#define __le32 __bitwise __u32
++#define __be32 __bitwise __u32
++#define __le64 __bitwise __u64
++#define __be64 __bitwise __u64
++
+ #include <asm/byteorder.h>
+ #ifdef __arch__swab16
+ #define SDL_Swap16  __arch__swab16
+diff -dur SDL-1.2.7/src/cdrom/linux/SDL_syscdrom.c SDL-1.2.7-p/src/cdrom/linux/SDL_syscdrom.c
+--- SDL-1.2.7/src/cdrom/linux/SDL_syscdrom.c	2004-02-18 17:21:59.000000000 +0000
++++ SDL-1.2.7-p/src/cdrom/linux/SDL_syscdrom.c	2004-10-24 19:33:13.528581840 +0000
+@@ -37,6 +37,19 @@
+ #include <errno.h>
+ #include <unistd.h>
+ #ifdef __linux__
++
++#ifdef __CHECKER__
++#define __bitwise __attribute__((bitwise))
++#else
++#define __bitwise
++#endif
++#define __le16 __bitwise __u16
++#define __be16 __bitwise __u16
++#define __le32 __bitwise __u32
++#define __be32 __bitwise __u32
++#define __le64 __bitwise __u64
++#define __be64 __bitwise __u64
++
+ #include <linux/cdrom.h>
+ #endif
+ #ifdef __SVR4

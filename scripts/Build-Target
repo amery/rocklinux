@@ -296,6 +296,20 @@ pkgloop_package() {
 	# Execute action handler
 	pkgloop_action || [ "$ROCKCFG_ABORT_ON_ERROR" != 1 ] || exit 1
 
+	if [ -f ${build_root}/var/adm/logs/$stagelevel-$pkg_name.err -a \
+	     "$ROCKCFG_SENDMAIL" = 1 ]
+	then
+		{
+			cat << EOT
+Subject: [ROCK Build-Target] $stagelevel-$pkg_name in $config failed
+
+Building package $pkg_name failed in stage $stagelevel:
+----
+EOT
+			echo; tail -n 200 ${build_root}/var/adm/logs/$stagelevel-$pkg_name.err; echo
+		} | $ROCKCFG_SENDMAIL_BIN $ROCKCFG_SENDMAIL_TO
+	fi
+
 	if [ ! -f ${build_root}/var/adm/logs/$stagelevel-$pkg_name.log -a \
 	     ! -f ${build_root}/var/adm/logs/$stagelevel-$pkg_name.err ]
 	then
@@ -388,4 +402,12 @@ trap 'umount_chroot' EXIT
 	. ./target/$ROCKCFG_TARGET/build.sh
 } 2>&1 201>> "${build_logs}/build_target_$$.log" | \
 	tee -a "${build_logs}/build_target_$$.log"
+
+if [ "$ROCKCFG_SENDMAIL" = 1 ]; then
+	$ROCKCFG_SENDMAIL_BIN $ROCKCFG_SENDMAIL_TO << EOT
+Subject: [ROCK Build-Target] $config finished.
+
+Finished building $config.
+EOT
+fi
 

@@ -137,6 +137,14 @@ block_begin 3
 					ROCKCFG_SRC_TMPFS_LOG 0
 	    block_end
 	fi
+
+	bool 'Send emails on special events' ROCKCFG_SENDMAIL 0
+	if [ "$ROCKCFG_SENDMAIL" = 1 ] ; then
+	    block_begin
+		text 'Sendmail program' ROCKCFG_SENDMAIL_BIN 'sendmail'
+		text 'Recipient address' ROCKCFG_SENDMAIL_TO 'root'
+	    block_end
+	fi
 block_end
 
 %include misc/*/noexpertconfig.in

@@ -1,0 +1,34 @@
+diff -dur raidtools-1.00.3/detect_multipath.c raidtools-1.00.3-p/detect_multipath.c
+--- raidtools-1.00.3/detect_multipath.c	2003-01-15 09:58:25.000000000 +0100
++++ raidtools-1.00.3-p/detect_multipath.c	2004-11-05 15:42:16.441758008 +0100
+@@ -34,6 +34,13 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <fcntl.h>
++
++/* for linux-2.6.9, from linux/types.h */
++#  include <asm/types.h>
++#  ifndef pgoff_t
++#  define pgoff_t unsigned long
++#  endif
++
+ #include <linux/fs.h>
+ 
+ #include <errno.h>
+diff -dur raidtools-1.00.3/lsraid.c raidtools-1.00.3-p/lsraid.c
+--- raidtools-1.00.3/lsraid.c	2003-01-15 09:58:25.000000000 +0100
++++ raidtools-1.00.3-p/lsraid.c	2004-11-05 15:41:44.078677944 +0100
+@@ -42,6 +42,13 @@
+ 
+ #include <linux/types.h>
+ #include <linux/major.h>
++
++/* for linux-2.6.9, from linux/types.h */
++#  include <asm/types.h>
++#  ifndef pgoff_t
++#  define pgoff_t unsigned long
++#  endif
++
+ #include <linux/fs.h>
+ #include <linux/raid/md_u.h>
+ #include <linux/raid/md_p.h>

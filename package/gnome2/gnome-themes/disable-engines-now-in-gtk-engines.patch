@@ -1,0 +1,32 @@
+--- ./gtk-engines/Makefile.am.orig	2005-01-05 10:30:49.514086976 +0100
++++ ./gtk-engines/Makefile.am	2005-01-05 10:31:30.316884008 +0100
+@@ -1 +1 @@
+-SUBDIRS=Smooth hc-engine thinice
++SUBDIRS=
+--- ./gtk-engines/Makefile.in.orig	2005-01-05 10:31:34.050316440 +0100
++++ ./gtk-engines/Makefile.in	2005-01-05 10:31:38.398655392 +0100
+@@ -184,7 +184,7 @@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-SUBDIRS = Smooth hc-engine thinice
++SUBDIRS = 
+ subdir = gtk-engines
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+--- ./gtk-themes/Makefile.am.orig	2005-01-05 10:59:46.243064040 +0100
++++ ./gtk-themes/Makefile.am	2005-01-05 11:00:25.706064752 +0100
+@@ -1 +1 @@
+-SUBDIRS=Crux Glider Grand-Canyon LightHouseBlue Mist Simple Smokey-Blue ThinIce
++SUBDIRS=Glider Grand-Canyon Simple Smokey-Blue
+--- ./gtk-themes/Makefile.in.orig	2005-01-05 10:59:55.693627336 +0100
++++ ./gtk-themes/Makefile.in	2005-01-05 11:00:42.831461296 +0100
+@@ -184,7 +184,7 @@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-SUBDIRS = Crux Glider Grand-Canyon LightHouseBlue Mist Simple Smokey-Blue ThinIce
++SUBDIRS = Glider Grand-Canyon Simple Smokey-Blue
+ subdir = gtk-themes
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs

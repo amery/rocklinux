@@ -31,6 +31,7 @@ delete=0
 remove=0
 fulldelete=0
 newdelete=0
+dryrun=0
 onlyupdated=0
 
 repository=""
@@ -96,6 +97,9 @@ while [ "$1" ] ; do
 	    -fulldelete)
 		fulldelete=1  ; shift ;;
 
+	    -dry-run)
+	        dryrun=1     ; shift ;;
+
 	    -newdelete)
 		newdelete=1  ; shift ;;
 
@@ -135,8 +139,10 @@ if [ "$newdelete" = 1 ]; then
 			  grep -v '\.cache$' | md5sum | cut -f1 -d' ' )
 		if [ "$cksum1" != "$cksum2" ]; then
 			echo "Scheduling package '$xpkg' for rebuild ..."
-			mine -rf -R build/$ROCKCFG_ID $xpkg
-			rm -f build/$ROCKCFG_ID/var/adm/*/?-$xpkg.*
+			if [ "$dryrun" = 0 ]; then
+			    mine -rf -R build/$ROCKCFG_ID $xpkg
+			    rm -f build/$ROCKCFG_ID/var/adm/*/?-$xpkg.*
+			fi
 		fi
 	done < <(
 		grep '^ROCK Linux Package Source Checksum: ' \

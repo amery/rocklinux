@@ -1,0 +1,62 @@
+Index: mine/selector.c
+===================================================================
+--- mine/selector.c	(revision 58)
++++ mine/selector.c	(working copy)
+@@ -111,6 +111,10 @@
+ 				fullname = "Base Packages";
+ 			if ( !blanks && !strcmp(fullname, "extra") )
+ 				fullname = "Additional Packages";
++			if ( !blanks && !strcmp(fullname, "dev") )
++				fullname = "Development Packages";
++			if ( !blanks && !strcmp(fullname, "doc") )
++				fullname = "Documentation Packages";
+ 
+                         snprintf(tmpstring1, 512,
+ 			        "%*s(%c) %s/", blanks, "",
+Index: mine/readdb.c
+===================================================================
+--- mine/readdb.c	(revision 58)
++++ mine/readdb.c	(working copy)
+@@ -145,6 +145,20 @@
+ 	e->next = d->list; d->list = e; e->content.pkg = p;
+ 	directory_entry_count++;
+ 
++	if ( strlen(packagename) > 4 && !strcmp(packagename+strlen(packagename)-4, ":dev") ) {
++		d = get_create_directory(rootdir, "dev");
++		e = calloc(1, sizeof(struct directory_entry));
++		e->next = d->list; d->list = e; e->content.pkg = p;
++		directory_entry_count++;
++	}
++
++	if ( strlen(packagename) > 4 && !strcmp(packagename+strlen(packagename)-4, ":doc") ) {
++		d = get_create_directory(rootdir, "doc");
++		e = calloc(1, sizeof(struct directory_entry));
++		e->next = d->list; d->list = e; e->content.pkg = p;
++		directory_entry_count++;
++	}
++
+ 	/* read basic info like V and C tags */ 
+ 	while ( fgets(line, 1024, f) != NULL && strcmp(line,"\027\n") ) {
+ 		if ( (line_length = strlen(line)) < 3 ) continue;
+@@ -283,9 +297,11 @@
+ }
+ 
+ char *root_order[] = {
+-	"all"
++	"all",
+ 	"base",
+ 	"extra",
++	"dev",
++	"doc",
+ 	NULL
+ };
+ 
+@@ -298,7 +314,7 @@
+ 	}
+ 
+ 	if ( v1 == v2 ) return strcmp(n1, n2);
+-	return v1 == v2 ? 0 : v1 > v2 ? -1 : 1;
++	return v1 == v2 ? 0 : v1 > v2 ? +1 : -1;
+ }
+ 
+ void sort_directory(struct directory *d)

@@ -34,6 +34,12 @@ mv -v initrd.gz boot/
 echo_status "Copy more config files."
 cp -v $base/target/$target/powerpc/mapping .
 #
+echo_status "Copying oldworld pmac support files..."
+rm -rf oldworld
+mkdir -p oldworld
+cp -v $base/download/mirror/B/BootX_1.2.2.sit oldworld/
+cp -v $base/target/$target/powerpc/oldworld-readme.txt oldworld/README.txt
+#
 datadir="build/${ROCKCFG_ID}/ROCK/livecd"
 cat > ../isofs_arch.txt <<- EOT
 	BOOT	-hfs -part -map $datadir/mapping -hfs-volid "ROCK_Linux_CD"
@@ -41,6 +47,7 @@ cat > ../isofs_arch.txt <<- EOT
 	BOOTx   -prep-boot install.bin
 	DISK1	$datadir/boot/ boot/
 	DISK1	$datadir/etc/ etc/
+	DISK1	$datadir/oldworld/ oldworld/
 	DISK1	$datadir/install.bin install.bin
 EOT
 

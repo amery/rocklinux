@@ -75,6 +75,11 @@ if [ "$pkg_dietlibc_useit" = 1 ]; then
 
 	echo_status "Preparing configuration to build this package with dietlibc ("${diet_dynamic_static}"ally)."
 
+	# dietlibc-sparc32 depends on -msupersparc output
+	if [ "$arch" = "sparc" -a "$ROCKCFG_SPARC_BITS" -eq 32 ] ; then
+		var_append GCC_WRAPPER_INSERT " " "-mcpu=supersparc" ;
+	fi ;
+		
 	if [ "$stagelevel" -gt 1 ]; then
 		var_remove CC_WRAPPER_INSERT " " "-pipe" ;
 		var_append CC_WRAPPER_REMOVE " " "-pipe" ;

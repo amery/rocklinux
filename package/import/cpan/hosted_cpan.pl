@@ -97,7 +97,8 @@ matched:
 	print S "\t\t;;\n";
 
 	print C "bool 'Building package $mod (cpan-$xmod)' ROCKCFG_PKG_CPAN_$ymod 1\n";
-	print C "if [ \$ROCKCFG_PKG_CPAN_$ymod  = 1 ]; then pkgfork cpan cpan-$xmod priority $hosted{$key}; fi\n\n";
+	print C "if [ \"\$ROCKCFG_PKG_CPAN_$ymod\" = 1 ]; then pkgfork cpan cpan-$xmod ".
+			"status X priority $hosted{$key}; fi\n\n";
 
 	delete $hosted{$key};
 }

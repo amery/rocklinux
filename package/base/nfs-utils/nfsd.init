@@ -38,7 +38,7 @@ main_begin
 
     block_begin(stop, `Stopping kernel nfsd.')
 	check(`killall -15 D_prefix/sbin/rpc.mountd')
-	check(`killall -9  D_prefix/sbin/nfsd')
+	check(`killall -9  D_prefix/sbin/rpc.nfsd')
 	check(`killall -9  D_prefix/sbin/rpc.rquotad')
 	check(`D_prefix/sbin/exportfs -u -a')
     block_end

@@ -263,7 +263,6 @@ void load_modules(char* directory){
 	int loader_res=0;
 	char filename[256], input[256];
 	char *execargs[100];
-	int pid;
 
 	printf("module loading shell\n\n");
 	printf("you can navigate through the filestem with 'cd'. for loading a module\n");
@@ -356,7 +355,7 @@ void load_modules(char* directory){
 	return;
 }
 
-int getdevice(char* devstr, int devlen, int cdroms, int floppies)
+int getdevice(char* devstr, int devlen, int cdroms, int floppies, int autoboot)
 {
 	char *devicelists[2] = { "/dev/cdroms/cdrom%d", "/dev/floppy/%d" };
 	char *devicenames[2] =
@@ -395,9 +394,15 @@ int getdevice(char* devstr, int devlen, int cdroms, int floppies)
 	printf("\nEnter number or device file name (default=0): ");
 	fflush(stdout);
 
-	trygets(text, 100);
+	if ( !autoboot ) {
+		trygets(text, 100);
+	} else {
+		printf("0\n");
+		strcpy(text, "0");
+	}
+
 	if (text[0] == 0)
-		strcpy (text, "0");
+		strcpy(text, "0");
 
 	while (1) {
 		if ( ! access(text, R_OK) ) {
@@ -419,7 +424,7 @@ int getdevice(char* devstr, int devlen, int cdroms, int floppies)
 	return 1;
 }
 
-void load_ramdisk_file()
+void load_ramdisk_file(int autoboot)
 {
 	char text[100], devicefile[100];
 	char filename[100];
@@ -427,7 +432,7 @@ void load_ramdisk_file()
 
 	printf("Select a device for loading the 2nd stage system from: \n\n");
 
-	if (getdevice(devicefile, 100, 1, 1) <= 0)
+	if (getdevice(devicefile, 100, 1, 1, autoboot) <= 0)
 			return;
 	
 	printf("Select a stage 2 image file:\n\n"
@@ -435,7 +440,13 @@ void load_ramdisk_file()
 	       "Enter number or image file name (default=1): ",
 	       STAGE_2_BIG_IMAGE, STAGE_2_SMALL_IMAGE);
 
-	trygets(text, 100);
+	if ( !autoboot ) {
+		trygets(text, 100);
+	} else {
+		printf("1\n");
+		strcpy(text, "1");
+	}
+
 	if (text[0] == 0) strcpy(filename, STAGE_2_BIG_IMAGE);
 	else if (! strcmp(text, "1")) strcpy(filename, STAGE_2_BIG_IMAGE);
 	else if (! strcmp(text, "2")) strcpy(filename, STAGE_2_SMALL_IMAGE);
@@ -584,7 +595,7 @@ void checkisomd5()
 
 	printf("Select a device for checking: \n\n");
 	
-	if (getdevice(devicefile, 100, 1, 0) <= 0)
+	if (getdevice(devicefile, 100, 1, 0, 0) <= 0)
 		return;
 
 	mediaCheckFile(devicefile, 0);
@@ -610,6 +621,9 @@ int main()
 	mod_suffix_len = strlen(mod_suffix);
 
 	autoload_modules();
+	if ( getenv("autoboot") ) {
+		load_ramdisk_file(1);
+	}
 
 	printf("\n\
      ============================================\n\
@@ -642,7 +656,7 @@ What do you want to do [0-8] (default=0)? ");
 		
 		switch (input) {
 		case 0:
-		  load_ramdisk_file();
+		  load_ramdisk_file(0);
 		  break;
 		
 		case 1:

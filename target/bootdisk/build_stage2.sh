@@ -8,8 +8,8 @@ cd $disksdir/2nd_stage
 mkdir -p mnt/source mnt/target
 #
 package_map='       +00-dirtree         +glibc22            +glibc23
--gcc2               -gcc3               -gcc33              -gccx
--linux24-source        -linux26-source        -linux24benh-src
+-automake17         -automake18         -automake19         -gcc34
+-linux24-source     -linux26-source     -linux24benh-src
 -linux24-header     -linux26-header     -linux24benh-header
 -linux24            -linux26            -linux24benh
 -binutils           -bin86              -nasm               -dietlibc
@@ -52,7 +52,11 @@ package_map="+$ROCKCFG_PKG_LINUX_DEFAULT +$packager $package_map"
 echo_status "Extracting the packages archives."
 for x in $( ls ../../pkgs/*.tar.bz2 | tr . / | cut -f8 -d/ )
 do
-	if echo "" $package_map "" | grep -q " +$x "
+	if [ -z "${x##*:dev*}" -o -z "${x##*:doc*}" ]
+	then
+		# simply ignore :dev and :doc packages
+		true
+	elif echo "" $package_map "" | grep -q " +$x "
 	then
 		echo_status "\`- Extracting $x.tar.bz2 ..."
 		tar --use-compress-program=bzip2 -xpf ../../pkgs/$x.tar.bz2

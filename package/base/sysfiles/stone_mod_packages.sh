@@ -102,6 +102,11 @@ Note: You can install, update and remove packages (as well as query
 package information) with the command-line tool \"mine\". This is just
 a simple frontend for the \"mine\" program.'"
 
+		type -p gasgui > /dev/null &&
+			cmd="$cmd 'Start gasgui Package Manager (recommended)' 'startgas=1'"
+		cmd="$cmd 'Start gastone Package manager (minimal)'  'startgas=2'"
+		cmd="$cmd '' ''"
+
 		cmd="$cmd 'Mount Options:  $opt'"
 		cmd="$cmd 'gui_input \"Mount Options (e.g. -s -o sync) \" \"\$opt\" opt'"
 
@@ -116,11 +121,6 @@ a simple frontend for the \"mine\" program.'"
 		cmd="$cmd \"\$ROCKCFG_SHORTID\" ROCKCFG_SHORTID'"
 
 		read_ids
-
-		cmd="$cmd '' ''"
-		type -p gasgui > /dev/null &&
-			cmd="$cmd 'Start gasgui Package Manager (recommended)' 'startgas=1'"
-		cmd="$cmd 'Start gastone Package manager (minimal)'  'startgas=2'"
 
 		if eval "$cmd" ; then
 			if [ $startgas != 0 ]; then

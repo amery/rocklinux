@@ -151,13 +151,13 @@ de-activate it.\" ''"
 
 disk_add() {
 	local x y=0
-	cmd="$cmd 'Partition table of $1:' 'disk_action $1'"
+	cmd="$cmd 'Edit partition table of $1' 'disk_action $1'"
 	for x in $( cd /dev/$1 ; ls part* 2> /dev/null )
 	do
 		part_add $1 $x ; y=1
 	done
 	if [ $y = 0 ]; then
-		cmd="$cmd 'Partition table is empty.' ''"
+		cmd="$cmd 'This disks partition table is empty.' ''"
 	fi
 	cmd="$cmd '' ''"
 }

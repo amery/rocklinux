@@ -42,9 +42,16 @@ for x in /etc/setup-*.sh /setup/setup.sh ; do
 done
 
 echo
-echo "Enter the names of all terminal devices (e.g. 'vc/1' or 'tts/0')."
-echo -n "An empty text stands for vc/1 - vc/6: "  ;  read ttydevs
-[ -z "$ttydevs" ] && ttydevs="vc/1 vc/2 vc/3 vc/4 vc/5 vc/6"
+ttydevs=""
+
+if [ -z "$autoboot" ]; then
+	echo "Enter the names of all terminal devices (e.g. 'vc/1' or 'tts/0')."
+	echo -n "An empty text stands for vc/1 - vc/6: "; read ttydevs
+fi
+
+if [ -z "$ttydevs" ]; then
+	ttydevs="vc/1 vc/2 vc/3 vc/4 vc/5 vc/6"
+fi
 
 if [[ "$ttydevs" = tts/* ]] ; then
 	echo -n "Connection speed in Baud (default: 9600): " ; read baud
@@ -62,7 +69,23 @@ else
 	echo '(only the text interface is available).'
 fi
 
-echo -e '#!/bin/sh\ncd ; exec /bin/sh --login' > /sbin/login-shell
+if [ -z "$autoboot" ]; then
+	echo -e '#!/bin/sh\ncd ; exec /bin/sh --login' > /sbin/login-shell
+else
+	cat <<- EOT > /sbin/login-shell
+		#!/bin/bash
+		case "\$( tty )" in
+		  /dev/vc/1)
+		    echo "Running 'stone' now.."
+		    /bin/sh --login -c "stone"
+		    echo -e '#!/bin/sh\\ncd ; exec /bin/sh --login' > /sbin/login-shell
+		    exit 0
+		    ;;
+		  *)
+		    exec /bin/sh --login
+		esac
+	EOT
+fi
 chmod +x /sbin/login-shell
 
 for x in $ttydevs ; do

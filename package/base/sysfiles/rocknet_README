@@ -35,7 +35,9 @@ Or another /etc/network/config:
 
 	interface eth0
 		dhcp
-		script dyndns.sh		# update dyndns
+		dyndns				# update dyndns
+						# requires ezipudate
+						# and setup in stone
 		allow ip 10.10.0.0/24		# office
 		allow ip 192.168.0.0/24		# home
 		allow tcp 80			# webserver is open

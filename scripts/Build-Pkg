@@ -817,11 +817,11 @@ abort() {
 		if [ "$stagelevel" -le 1 ]
 		then
 			xbase="$( cd $xroot/ 2> /dev/null ; pwd -P )"
-			if egrep -qv "[	 ]($base|$xbase|/tmp|/proc|/dev)(/|$)" \
+			if egrep -qv "[	 ]($base|$xbase|/tmp|/usr/tmp|/var/tmp|/proc|/dev)(/|$)" \
 						$builddir/fl_wrapper.wlog
 			then
 				x="Created file outside basedir: "
-				egrep -v "[ 	]($base|$xbase|/tmp|/proc|/dev)(/|$)" \
+				egrep -v "[ 	]($base|$xbase|/tmp|/usr/tmp|/var/tmp|/proc|/dev)(/|$)" \
 					$builddir/fl_wrapper.wlog | \
 					cut -f2- | sort -u | sed "s,^,$x,"
 				echo "base #1: $base"

@@ -1,0 +1,11 @@
+--- ./configure.orig	2004-09-18 07:23:18.600218296 +0200
++++ ./configure	2004-09-18 07:23:36.692467856 +0200
+@@ -1909,7 +1909,7 @@
+ 		if test $mips_config_abi != $mips_cc_abi; then
+ 		  # This won't make it to config.make, but we want to
+ 		  # set this in case configure tests depend on it.
+-		  CPPFLAGS="$CPPFLAGS -mabi=$mips_config_abi"
++		  echo "i am not setting -mabi as you are crosscompiling headers."
+ 		fi
+ 		;;
+ mips*)		base_machine=mips machine=mips/mips32/$machine ;;

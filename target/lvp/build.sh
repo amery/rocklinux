@@ -1,5 +1,5 @@
 
-lvp_ver="0.4.2"
+lvp_ver="0.4.3"
 rootdir="${base}/build/${ROCKCFG_ID}"
 ROCKdir="${rootdir}/ROCK"
 releasedir="${ROCKdir}/lvp_${lvp_ver}_${ROCKCFG_X86_OPT}"

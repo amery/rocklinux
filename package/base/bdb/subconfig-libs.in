@@ -22,7 +22,8 @@
 
 if pkgcheck bdb=bdb33 X || pkgcheck bdb=bdb40 X || pkgcheck bdb=bdb41 X || pkgcheck bdb=bdb42 X
 then
-	comment '- BerkleyDB default selection'
+	menu_begin MENU_PKG_BDB 'BerkleyDB Options'
+	block_begin 4
 
 	# we choose to select the newest bdb availible as default
 	if pkgcheck bdb=bdb33 X ; then
@@ -44,5 +45,7 @@ then
 
 	eval "choice ROCKCFG_PKG_BDB_DEFAULT $bdbdefault $bdbdefselect"
 
-	pkgremove bdb
+	block_end
+	menu_end
 fi
+

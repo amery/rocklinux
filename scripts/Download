@@ -236,11 +236,17 @@ curl_options="$curl_options -k"
 
 # build descparser if needed and run it
 descparser() {
+        local var
 	if [ ! -f src/descparser ]; then
 		mkdir -p src
 		cc -o src/descparser misc/tools-source/descparser.c
 	fi
-	cat "$@" | descparser_ign_xpkg=1 src/descparser
+        if [ "$ignore_xpkg" == "0" ]; then
+             var=""
+        else
+             var="descparser_ign_xpkg=1"
+        fi
+	cat "$@" | eval $var src/descparser
 }
 
 # cksum_chk filename cksum origfile
@@ -907,7 +913,7 @@ mapped_packages() {
 			-printf '%f\t%p\n' | sort | awk '{ $1="."; print; }' > src/pkgmapper
 	fi
 	for pkg; do
-		xpkg=$pkg
+		export xpkg=$pkg
 		. src/pkgmapper
 		packages $pkg
 	done

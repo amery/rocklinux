@@ -23,11 +23,11 @@
 # [MAIN] 50 xorg X11/X.Org (Graphical User Interface)
 
 set_wm() {
-	echo "export WINDOWMANAGER=$1" > /etc/profile.d/windowmanager
+	echo "export WINDOWMANAGER=\"$1\"" > /etc/profile.d/windowmanager
 }
 
 set_xdm() {
-	echo "export XDM=$1" > /etc/conf/xdm
+	echo "export XDM=\"$1\"" > /etc/conf/xdm
 }
 
 main() {
@@ -65,7 +65,7 @@ main() {
 
 			cmd="$cmd
 			    '$pre Use $name in runlevel 5'
-			    'set_xdm $exec'"
+			    'set_xdm \"$exec\"'"
 		  fi
 		done
 
@@ -81,7 +81,7 @@ main() {
 
 			cmd="$cmd
 			    '$pre Use $name as default Windowmanager'
-			    'set_wm $exec'"
+			    'set_wm \"$exec\"'"
 		  fi
 		done
 

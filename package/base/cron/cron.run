@@ -38,6 +38,6 @@ for x in /etc/cron.daily/*
 do
 	echo "-- $x"
 	echo
-	nice -19 $x
+	nice -n19 $x
 done
 

@@ -1,0 +1,23 @@
+--- ./src/openhbci/tree.h.orig	2004-06-25 14:52:53.729307602 +0200
++++ ./src/openhbci/tree.h	2004-06-25 14:53:01.057222682 +0200
+@@ -695,16 +695,16 @@
+    * Returns an iterator that points to the root of the tree.
+    * @author Martin Preuss<martin@aquamaniac.de>
+    */
+-  Tree<T>::iterator root() {
+-      return Tree<T>::iterator(&_root);
++  iterator root() {
++      return iterator(&_root);
+   };
+ 
+   /**
+    * Returns an const_iterator that points to the root of the tree.
+    * @author Martin Preuss<martin@aquamaniac.de>
+    */
+-  Tree<T>::const_iterator const_root() const {
+-      return Tree<T>::const_iterator(&_root);
++  const_iterator const_root() const {
++      return const_iterator(&_root);
+   };
+ 
+   /**

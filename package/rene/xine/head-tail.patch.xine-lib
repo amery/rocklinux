@@ -1,0 +1,37 @@
+diff -dur xine-lib-1-rc6a/configure xine-lib-1-rc6a-p/configure
+--- xine-lib-1-rc6a/configure	2004-09-16 17:14:46.000000000 +0200
++++ xine-lib-1-rc6a-p/configure	2004-11-04 19:42:29.611419656 +0100
+@@ -42456,7 +42456,7 @@
+ 
+ 
+ 
+-XINE_BUILD_CC="`$CC -v 2>&1 | tail -1`"
++XINE_BUILD_CC="`$CC -v 2>&1 | tail -n1`"
+ XINE_BUILD_OS="`uname -s -r -m`"
+ XINE_BUILD_DATE="`date \"+%a %d %b %Y %T\"`"
+ 
+Nur in xine-lib-1-rc6a-p/: configure~.
+diff -dur xine-lib-1-rc6a/configure.ac xine-lib-1-rc6a-p/configure.ac
+--- xine-lib-1-rc6a/configure.ac	2004-09-16 17:10:45.000000000 +0200
++++ xine-lib-1-rc6a-p/configure.ac	2004-11-04 19:42:03.004464528 +0100
+@@ -1910,7 +1910,7 @@
+ dnl Some informations about xine-lib compilation
+ dnl ---------------------------------------------
+ 
+-XINE_BUILD_CC="`$CC -v 2>&1 | tail -1`"
++XINE_BUILD_CC="`$CC -v 2>&1 | tail -n1`"
+ XINE_BUILD_OS="`uname -s -r -m`"
+ XINE_BUILD_DATE="`date \"+%a %d %b %Y %T\"`"
+ AC_SUBST(XINE_BUILD_CC)
+Nur in xine-lib-1-rc6a-p/: configure.ac~.
+diff -dur xine-lib-1-rc6a/po/POTFILES.in xine-lib-1-rc6a-p/po/POTFILES.in
+--- xine-lib-1-rc6a/po/POTFILES.in	2004-09-16 17:17:02.000000000 +0200
++++ xine-lib-1-rc6a-p/po/POTFILES.in	2004-11-04 19:41:41.175782992 +0100
+@@ -1,5 +1,5 @@
+ # For updating this file, look at the result of:
+-#  head -3 po/POTFILES.in > /tmp/POTFILES.in && find src -name "*.[chy]" | xargs grep -l '[^A-Za-z_]_(' | grep -v src/xine-engine/xineintl.h >> /tmp/POTFILES.in && cp /tmp/POTFILES.in po/
++#  head -n3 po/POTFILES.in > /tmp/POTFILES.in && find src -name "*.[chy]" | xargs grep -l '[^A-Za-z_]_(' | grep -v src/xine-engine/xineintl.h >> /tmp/POTFILES.in && cp /tmp/POTFILES.in po/
+ 
+ src/audio_out/audio_alsa_out.c
+ src/audio_out/audio_arts_out.c
+Nur in xine-lib-1-rc6a-p/po: POTFILES.in~.

@@ -1,0 +1,31 @@
+--- ./install.sh.orig	2004-09-07 05:44:33.771458392 +0200
++++ ./install.sh	2004-09-07 05:47:11.450487536 +0200
+@@ -94,10 +94,10 @@
+ 	     MANDIR=
+ 	   fi
+ 	   ;;
+-	3) APPDIR=/usr/apps
+-	   BINDIR=/usr/bin
++	3) BINDIR=/usr/bin
+ 	   SHAREDIR=/usr/share
+-	   CHOICESDIR=${SHAREDIR}/Choices
++	   CHOICESDIR=${SHAREDIR}/ROX-Filer/Choices
++	   APPDIR=${SHAREDIR}/ROX-Filer/apps
+ 	   MANDIR=${SHAREDIR}/man
+ 	   ;;
+ 	4) echo "Where should the ROX-Filer application go?"
+--- ./install.sh.orig	2003-04-29 12:56:22.000000000 +0200
++++ ./install.sh	2004-09-07 06:15:35.003508112 +0200
+@@ -194,9 +194,9 @@
+ endir "$MIMEDIR"
+ endir "$MIMEDIR/packages"
+ cp rox.xml "$MIMEINFO" || die "Failed to create $MIMEINFO"
+-update-mime-database "$MIMEDIR" || die "update-mime-database failed
+-Make sure you have installed the shared MIME database from:
+-http://www.freedesktop.org/standards/shared-mime-info.html"
++# update-mime-database "$MIMEDIR" || die "update-mime-database failed
++# Make sure you have installed the shared MIME database from:
++# http://www.freedesktop.org/standards/shared-mime-info.html"
+ 
+ echo "Installing application..."
+ endir "$APPDIR"

@@ -34,17 +34,19 @@
 
 config=default
 build_only_this_job=
+stages=0123456789
 daemon_mode=0
 options="$*"
 
 while [ "$1" ] ; do
 	case "$1" in
 		-cfg)		config=$2 ; shift ; shift ;;
+		-stages)	stages=$2 ; shift ; shift ;;
 		-job)		build_only_this_job=$2 ; shift ; shift ;;
 		-daemon)	daemon_mode=1 ; shift ;;
 		-nodaemon)	daemon_mode=0 ; shift ;;
 		*)		echo "Usage: $0 [ -daemon ] [ -cfg <config> ]" \
-				     "[ -job <stage>-<package> ]" 
+				     "[ -stages <list> ] [ -job <stage>-<package> ]" 
 				echo
 				echo " Compile/build all packages for a given configuration and store them as tar"
 				echo " balls suitable for distribution."
@@ -55,6 +57,7 @@ while [ "$1" ] ; do
 				echo
 				echo "	-cfg <config>	the build configuration to use; defaults to 'default'"
 				echo "	-daemon		run as daemon in the background"
+				echo "  -stages <list>	only build the stages listed in the parameter"
 				echo "	-job <stage>-<package>	build only one job: the given package"
 				echo "				in the given stage" 
 				exit 1 ;;
@@ -162,7 +165,8 @@ in the right way, the nodes will automatically start building the jobs.
 			done
 
 			if [ "$newqueue" = 1 ] ; then
-				./scripts/Create-PkgQueue -cfg $config \
+				./scripts/Create-PkgQueue \
+					-cfg $config -stages $stages \
 					$nobrokendeps | sort -r -n -k2 | \
 					if [ $ROCKCFG_PARALLEL_MAX -gt 0 ]
 					then head -n $ROCKCFG_PARALLEL_MAX
@@ -217,7 +221,7 @@ fi
 	    else
 		while
 		    next="`./scripts/Create-PkgQueue \
-				-cfg "$config" -single $nobrokendeps`"
+				-cfg "$config" -stages $stages -single $nobrokendeps`"
 		    [ "$next" ]
 		do
 		    pkgloop_package $next

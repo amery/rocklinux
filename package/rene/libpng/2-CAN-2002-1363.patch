@@ -1,0 +1,24 @@
+--- ./pngrtran.c	9 Jan 2004 18:22:43 -0000	1.1
++++ ./pngrtran.c	3 May 2004 08:19:51 -0000	1.2
+@@ -1965,8 +1965,8 @@
+          /* This changes the data from RRGGBB to RRGGBBXX */
+          if (flags & PNG_FLAG_FILLER_AFTER)
+          {
+-            png_bytep sp = row + (png_size_t)row_width * 3;
+-            png_bytep dp = sp  + (png_size_t)row_width;
++            png_bytep sp = row + (png_size_t)row_width * 6;
++            png_bytep dp = sp  + (png_size_t)row_width * 2;
+             for (i = 1; i < row_width; i++)
+             {
+                *(--dp) = hi_filler;
+@@ -1987,8 +1987,8 @@
+          /* This changes the data from RRGGBB to XXRRGGBB */
+          else
+          {
+-            png_bytep sp = row + (png_size_t)row_width * 3;
+-            png_bytep dp = sp  + (png_size_t)row_width;
++            png_bytep sp = row + (png_size_t)row_width * 6;
++            png_bytep dp = sp  + (png_size_t)row_width * 2;
+             for (i = 0; i < row_width; i++)
+             {
+                *(--dp) = *(--sp);

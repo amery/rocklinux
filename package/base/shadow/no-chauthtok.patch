@@ -1,0 +1,191 @@
+--- ./src/chage.c.orig	2004-12-22 17:32:12.194686152 +0100
++++ ./src/chage.c	2004-12-22 17:34:47.019149256 +0100
+@@ -748,21 +748,6 @@
+ 	SYSLOG ((LOG_INFO, "changed password expiry for %s", name));
+ 
+ #ifdef USE_PAM
+-	if (!lflg) {
+-		if (retval == PAM_SUCCESS) {
+-			retval = pam_chauthtok (pamh, 0);
+-			if (retval != PAM_SUCCESS) {
+-				pam_end (pamh, retval);
+-			}
+-		}
+-
+-		if (retval != PAM_SUCCESS) {
+-			fprintf (stderr, _("%s: PAM chauthtok failed\n"),
+-				 Prog);
+-			exit (1);
+-		}
+-	}
+-
+ 	if (retval == PAM_SUCCESS)
+ 		pam_end (pamh, PAM_SUCCESS);
+ 
+--- ./src/chpasswd.c.orig	2004-12-22 17:35:32.017308496 +0100
++++ ./src/chpasswd.c	2004-12-22 17:34:59.981178728 +0100
+@@ -325,18 +325,6 @@
+ 	pw_unlock ();
+ 
+ #ifdef USE_PAM
+-	if (retval == PAM_SUCCESS) {
+-		retval = pam_chauthtok (pamh, 0);
+-		if (retval != PAM_SUCCESS) {
+-			pam_end (pamh, retval);
+-		}
+-	}
+-
+-	if (retval != PAM_SUCCESS) {
+-		fprintf (stderr, _("%s: PAM chauthtok failed\n"), Prog);
+-		exit (1);
+-	}
+-
+ 	if (retval == PAM_SUCCESS)
+ 		pam_end (pamh, PAM_SUCCESS);
+ #endif				/* USE_PAM */
+--- ./src/groupadd.c.orig	2004-12-22 17:35:52.601179272 +0100
++++ ./src/groupadd.c	2004-12-22 17:35:57.214477944 +0100
+@@ -584,18 +584,6 @@
+ 	close_files ();
+ 
+ #ifdef USE_PAM
+-	if (retval == PAM_SUCCESS) {
+-		retval = pam_chauthtok (pamh, 0);
+-		if (retval != PAM_SUCCESS) {
+-			pam_end (pamh, retval);
+-		}
+-	}
+-
+-	if (retval != PAM_SUCCESS) {
+-		fprintf (stderr, _("%s: PAM chauthtok failed\n"), Prog);
+-		exit (1);
+-	}
+-
+ 	if (retval == PAM_SUCCESS)
+ 		pam_end (pamh, PAM_SUCCESS);
+ #endif				/* USE_PAM */
+--- ./src/groupdel.c.orig	2004-12-22 17:36:03.971450728 +0100
++++ ./src/groupdel.c	2004-12-22 17:36:08.384779800 +0100
+@@ -402,18 +402,6 @@
+ 	close_files ();
+ 
+ #ifdef USE_PAM
+-	if (retval == PAM_SUCCESS) {
+-		retval = pam_chauthtok (pamh, 0);
+-		if (retval != PAM_SUCCESS) {
+-			pam_end (pamh, retval);
+-		}
+-	}
+-
+-	if (retval != PAM_SUCCESS) {
+-		fprintf (stderr, _("%s: PAM chauthtok failed\n"), Prog);
+-		exit (1);
+-	}
+-
+ 	if (retval == PAM_SUCCESS)
+ 		pam_end (pamh, PAM_SUCCESS);
+ #endif				/* USE_PAM */
+--- ./src/groupmod.c.orig	2004-12-22 17:36:16.650523216 +0100
++++ ./src/groupmod.c	2004-12-22 17:36:20.521934672 +0100
+@@ -596,18 +596,6 @@
+ 	close_files ();
+ 
+ #ifdef USE_PAM
+-	if (retval == PAM_SUCCESS) {
+-		retval = pam_chauthtok (pamh, 0);
+-		if (retval != PAM_SUCCESS) {
+-			pam_end (pamh, retval);
+-		}
+-	}
+-
+-	if (retval != PAM_SUCCESS) {
+-		fprintf (stderr, _("%s: PAM chauthtok failed\n"), Prog);
+-		exit (1);
+-	}
+-
+ 	if (retval == PAM_SUCCESS)
+ 		pam_end (pamh, PAM_SUCCESS);
+ #endif				/* USE_PAM */
+--- ./src/newusers.c.orig	2004-12-22 17:36:27.011948040 +0100
++++ ./src/newusers.c	2004-12-22 17:36:31.626246560 +0100
+@@ -598,18 +598,6 @@
+ 	(void) pw_unlock ();
+ 
+ #ifdef USE_PAM
+-	if (retval == PAM_SUCCESS) {
+-		retval = pam_chauthtok (pamh, 0);
+-		if (retval != PAM_SUCCESS) {
+-			pam_end (pamh, retval);
+-		}
+-	}
+-
+-	if (retval != PAM_SUCCESS) {
+-		fprintf (stderr, _("%s: PAM chauthtok failed\n"), Prog);
+-		exit (1);
+-	}
+-
+ 	if (retval == PAM_SUCCESS)
+ 		pam_end (pamh, PAM_SUCCESS);
+ #endif				/* USE_PAM */
+--- ./src/useradd.c.orig	2004-12-22 17:36:37.990279080 +0100
++++ ./src/useradd.c	2004-12-22 17:36:41.877688104 +0100
+@@ -1776,18 +1776,6 @@
+ 	close_files ();
+ 
+ #ifdef USE_PAM
+-	if (retval == PAM_SUCCESS) {
+-		retval = pam_chauthtok (pamh, 0);
+-		if (retval != PAM_SUCCESS) {
+-			pam_end (pamh, retval);
+-		}
+-	}
+-
+-	if (retval != PAM_SUCCESS) {
+-		fprintf (stderr, _("%s: PAM chauthtok failed\n"), Prog);
+-		exit (1);
+-	}
+-
+ 	if (retval == PAM_SUCCESS)
+ 		pam_end (pamh, PAM_SUCCESS);
+ #endif				/* USE_PAM */
+--- ./src/userdel.c.orig	2004-12-22 17:36:45.031208696 +0100
++++ ./src/userdel.c	2004-12-22 17:36:48.645659216 +0100
+@@ -807,17 +807,6 @@
+ 	user_cancel (user_name);
+ 	close_files ();
+ #ifdef USE_PAM
+-	if (retval == PAM_SUCCESS) {
+-		retval = pam_chauthtok (pamh, 0);
+-		if (retval != PAM_SUCCESS)
+-			pam_end (pamh, retval);
+-	}
+-
+-	if (retval != PAM_SUCCESS) {
+-		fprintf (stderr, _("%s: PAM chauthtok failed\n"), Prog);
+-		exit (E_PW_UPDATE);
+-	}
+-
+ 	if (retval == PAM_SUCCESS)
+ 		pam_end (pamh, PAM_SUCCESS);
+ #endif				/* USE_PAM */
+--- ./src/usermod.c.orig	2004-12-22 17:36:51.806178744 +0100
++++ ./src/usermod.c	2004-12-22 17:36:55.669591416 +0100
+@@ -1487,18 +1487,6 @@
+ 		exit (E_GRP_UPDATE);
+ 
+ #ifdef USE_PAM
+-	if (retval == PAM_SUCCESS) {
+-		retval = pam_chauthtok (pamh, 0);
+-		if (retval != PAM_SUCCESS) {
+-			pam_end (pamh, retval);
+-		}
+-	}
+-
+-	if (retval != PAM_SUCCESS) {
+-		fprintf (stderr, _("%s: PAM chauthtok failed\n"), Prog);
+-		exit (1);
+-	}
+-
+ 	if (retval == PAM_SUCCESS)
+ 		pam_end (pamh, PAM_SUCCESS);
+ #endif				/* USE_PAM */

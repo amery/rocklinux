@@ -23,12 +23,13 @@
 if pkgcheck apache X
 then
  	menu_begin MENU_PKG_APACHE 'Apache Package Options'
-	text 'Install prefix for apache packages' \
+	text 'Install prefix for Apache packages' \
 	     ROCKCFG_PKG_APACHE_PREFIX "opt/apache"
 
 	pkgout
 	list="" ; default=""
 	while read pkg ver ; do
+		pkg=${pkg#bdb=}
 		if [ "$pkg" = "bdb42" ] ; then
 			default="$pkg"
 		elif [ "$default" = "" ] ; then

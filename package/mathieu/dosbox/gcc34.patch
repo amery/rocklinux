@@ -1,0 +1,51 @@
+--- dosbox-0.61-orig/include/dos_inc.h	2004-01-10 15:03:33.000000000 +0100
++++ dosbox-0.61/include/dos_inc.h	2004-06-08 17:52:39.958890112 +0200
+@@ -215,22 +215,22 @@
+ 
+ class MemStruct {
+ public:
+-	INLINE Bit8u GetIt(Bit8u&,PhysPt addr) {
++	INLINE Bit8u GetIt(Bit8u,PhysPt addr) {
+ 		return mem_readb(pt+addr);
+ 	}
+-	INLINE Bit16u GetIt(Bit16u&,PhysPt addr) {
++	INLINE Bit16u GetIt(Bit16u,PhysPt addr) {
+ 		return mem_readw(pt+addr);
+ 	}
+-	INLINE Bit32u GetIt(Bit32u&,PhysPt addr) {
++	INLINE Bit32u GetIt(Bit32u,PhysPt addr) {
+ 		return mem_readd(pt+addr);
+ 	}
+-	INLINE void SaveIt(Bit8u&,PhysPt addr,Bit8u val) {
++	INLINE void SaveIt(Bit8u,PhysPt addr,Bit8u val) {
+ 		mem_writeb(pt+addr,val);
+ 	}
+-	INLINE void SaveIt(Bit16u&,PhysPt addr,Bit16u val) {
++	INLINE void SaveIt(Bit16u,PhysPt addr,Bit16u val) {
+ 		mem_writew(pt+addr,val);
+ 	}
+-	INLINE void SaveIt(Bit32u&,PhysPt addr,Bit32u val) {
++	INLINE void SaveIt(Bit32u,PhysPt addr,Bit32u val) {
+ 		mem_writed(pt+addr,val);
+ 	}
+ 	INLINE void SetPt(Bit16u seg) { pt=PhysMake(seg,0);}
+--- dosbox-0.61-orig/src/dos/dos_classes.cpp	2004-01-10 15:03:34.000000000 +0100
++++ dosbox-0.61/src/dos/dos_classes.cpp	2004-06-08 17:56:50.869745864 +0200
+@@ -121,7 +121,7 @@
+ 	/* FCBs are filled with 0 */
+ 	// ....
+ 	/* Init file pointer and max_files */
+-	sSave(sPSP,file_table,RealMake(seg,offsetof(sPSP,files[0])));
++	sSave(sPSP,file_table,RealMake(seg,offsetof(sPSP,files)));
+ 	sSave(sPSP,max_files,20);
+ 	for (i=0;i<20;i++) SetFileHandle(i,0xff);
+ 
+@@ -218,7 +218,7 @@
+ 		MEM_BlockCopy(pt+offsetof(sPSP,cmdtail),Real2Phys(src),128);
+ 	} else {	// empty
+ 		sSave(sPSP,cmdtail.count,0x00);
+-		mem_writeb(pt+offsetof(sPSP,cmdtail.buffer[0]),0x0d);
++		mem_writeb(pt+offsetof(sPSP,cmdtail.buffer),0x0d);
+ 	};
+ };
+ 

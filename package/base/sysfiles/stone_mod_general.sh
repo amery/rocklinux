@@ -28,13 +28,13 @@ set_keymap() {
 
 	case "`uname -m`" in
 	  i*86|x86_64)
-		mapdir="`echo /usr/share/kbd/keymaps/i386`"
+		mapdir="/usr/share/kbd/keymaps/i386"
 		;;
 	  ppc)
-		mapdir="`echo /usr/share/kbd/keymaps/mac`" # ppc is a symlink
+		mapdir="/usr/share/kbd/keymaps/mac" # ppc is a symlink
 		;;
 	  sparc*)
-		mapdir="`echo /usr/share/kbd/keymaps/sun`"
+		mapdir="/usr/share/kbd/keymaps/sun"
 		;;
 	  *)
 		gui_message "Can't auto-detect your architecture and so I can't find the right /usr/share/kbd/keymaps sub-directory for your system. Sorry."

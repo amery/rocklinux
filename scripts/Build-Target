@@ -133,7 +133,7 @@ pkgloop() {
 				echo "
 Job Queue for parallel (cluster) build created.
 
-You have not configuread a command for adding jobs. So you need to use the
+You have not configured a command for adding jobs. So you need to use the
 ROCK Linux built-in job queue. To do so, you need to login to your build
 nodes and execute the command:
 
@@ -155,7 +155,7 @@ Parallel (cluster) build running...
 			echo "
 Job Queue for parallel (cluster) build created.
 
-You have configuread a command for adding jobs. So if everything is configured
+You have configured a command for adding jobs. So if everything is configured
 in the right way, the nodes will automatically start building the jobs.
 "
 			rm -f $qdir/use_build_job_daemon
@@ -387,21 +387,15 @@ EOT
 					`${spkg}${v}.gem"
 				mine -C "$build_root/var/adm" \
 				     "${build_pkgs}/${spkg}${v}.tar.bz2.tmp" \
-				     $spkg "$build_pkgs/${spkg}${v}.gem.tmp"
+				     $spkg "$build_pkgs/${spkg}${v}.gem"
 			fi
 
 			if [ "$ROCKCFG_CREATE_TARBZ2" = 1 ] ; then
 				mv "$build_pkgs/${spkg}${v}.tar.bz2.tmp" \
 				   "$build_pkgs/${spkg}${v}.tar.bz2"
-				if [ "$ROCKCFG_CREATE_GEM" = 1 ] ; then
-					mv "$build_pkgs/${spkg}${v}.gem.tmp" \
-					   "$build_pkgs/${spkg}${v}.gem"
-				fi
 			else
 				echo_status "Removing temporary tar.bz2."
 				rm -f "$build_pkgs/${spkg}${v}.tar.bz2.tmp"
-				mv "$build_pkgs/${spkg}${v}.gem.tmp" \
-				   "$build_pkgs/${spkg}${v}.gem"
 			fi
 		  done
 		fi

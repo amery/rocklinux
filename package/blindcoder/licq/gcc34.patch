@@ -1,0 +1,32 @@
+--- ./src/socket.cpp.orig	2003-06-16 19:09:46.000000000 +0200
++++ ./src/socket.cpp	2004-07-14 18:13:25.755288679 +0200
+@@ -1078,7 +1078,7 @@
+ bool TCPSocket::SecureConnect()
+ {
+   pthread_mutex_init(&mutex_ssl, NULL);
+-  m_pSSL = SSL_new(gSSL_CTX);
++  m_p_SSL = SSL_new(gSSL_CTX);
+ #ifdef SSL_DEBUG
+   m_pSSL->debug = 1;
+ #endif
+@@ -1111,7 +1111,7 @@
+ {
+   pthread_mutex_init(&mutex_ssl, NULL);
+ 
+-  m_pSSL = SSL_new(gSSL_CTX);
++  m_p_SSL = SSL_new(gSSL_CTX);
+   SSL_set_session(m_pSSL, NULL);
+   SSL_set_fd(m_pSSL, m_nDescriptor);
+   int i = SSL_accept(m_pSSL);
+--- ./src/user.cpp.orig	2003-06-16 19:09:46.000000000 +0200
++++ ./src/user.cpp	2004-07-14 18:16:41.356402533 +0200
+@@ -3184,7 +3184,9 @@
+   m_fConf.ReadBool("HideIP", m_bHideIp, false);
+   m_fConf.ReadNum("RCG", m_nRandomChatGroup, ICQ_RANDOMxCHATxGROUP_NONE);
+   m_fConf.ReadStr("AutoResponse", szTemp, "");
+-  m_fConf.ReadNum("SSTime", (unsigned long)m_nSSTime, 0L);
++  long unsigned int t = m_nSSTime;
++  m_fConf.ReadNum("SSTime", t, 0L);
++  m_nSSTime = t;
+   m_fConf.ReadNum("SSCount", m_nSSCount, 0);
+   SetAutoResponse(szTemp);

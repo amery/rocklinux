@@ -426,10 +426,10 @@ int prepare_root() {
 	if(!fnd) fputs("sound:x:17:rocker\n",mod);
         fclose(orig); fclose(mod); buf[1]=0;
 
-	/* copy over XF86Config */
-	DEBUG("modifying /etc/X11/XF86Config");
-	orig = fopen("/ROCK/etc/X11/XF86Config","r");
-        mod = fopen("/etc/X11/XF86Config","w");
+	/* copy over xorg.conf */
+	DEBUG("modifying /etc/X11/xorg.conf");
+	orig = fopen("/ROCK/etc/X11/xorg.conf","r");
+        mod = fopen("/etc/X11/xorg.conf","w");
         while(fgets(buf, 256, orig) != NULL) fputs(buf, mod);
 	fclose(orig); fclose(mod); buf[1]=0;
 

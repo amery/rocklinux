@@ -31,7 +31,7 @@ cp -f $base/target/$target/fixedfiles/login-shell sbin/login-shell
 # this got drop once, so we ensure it's +xed.
 chmod 0755 sbin/login-shell
 cp -f $base/target/$target/fixedfiles/system etc/rc.d/init.d/system
-cp -f $base/target/$target/fixedfiles/XF86Config etc/X11/XF86Config
+cp -f $base/target/$target/fixedfiles/xorg.conf etc/X11/xorg.conf
 #
 echo_status "Creating 2nd_stage.img.z image... (this takes some time)... "
 cd .. ; mksquashfs 2nd_stage 2nd_stage.img.z -noappend > /dev/null 2>&1

@@ -52,7 +52,7 @@ xf_extract_hallib() {
 	  programs/Xserver/hw/xfree86/drivers/mga/HALlib/mgaHALlib.a
 	rm -rf mgadrivers-$mga_version-src 
 
-	if [ $arch == "x86" && $arch_machine != "x86_64" ] ; then
+	if [[ $arch == "x86" && $arch_machine != "x86_64" ]] ; then
 		echo "Enabling Matrox HALlib (since this is x86) ..."
 		cat >> config/cf/host.def << EOT
 
@@ -183,7 +183,7 @@ xf_config() {
 
 EOT
 	
-	if [ $arch == "x86" && $arch_machine != "x86_64" ] ; then
+	if [[ $arch == "x86" && $arch_machine != "x86_64" ]] ; then
 	        echo "Enabling Matrox HALlib (since this is x86) ..."
 		cat >> config/cf/host.def << EOT
 

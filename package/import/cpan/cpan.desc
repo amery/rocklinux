@@ -38,5 +38,8 @@
 
 [D] X 02packages.details.txt.gz http://www.cpan.org/modules/
 
+[CD] <COPY> rm $confdir/*.cache
+[CD] <COPY> cp $cachedir/*.cache $confdir/
+
 #include package/import/cpan/hosted_cpan.desc
 

@@ -57,12 +57,7 @@ EOT
 
 echo_header "Reference build finished."
 
-cat <<- EOT > build/${ROCKCFG_ID}/ROCK/result/copy-cache.sh
-	#!/bin/sh
-	find package -type f -name '*.cache' | while read fn
-	do [ -f \$1/\${fn%.cache}.desc ] && cp -v \$fn \$1/\$fn; done
-	cd \$1; ./scripts/Create-DepDB > scripts/dep_db.txt
-EOT
+cp misc/tools-source/copy-cache.sh build/${ROCKCFG_ID}/ROCK/result/copy-cache.sh
 chmod +x build/${ROCKCFG_ID}/ROCK/result/copy-cache.sh
 
 echo_status "Results are stored in the directory"

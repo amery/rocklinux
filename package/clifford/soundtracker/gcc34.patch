@@ -1,0 +1,10 @@
+--- ./app/keys.c.orig	2004-09-11 07:20:04.865565232 +0200
++++ ./app/keys.c	2004-09-11 07:20:18.889433280 +0200
+@@ -765,6 +765,7 @@
+ 	gnome_warning_dialog(_("The keyboard configuration file is defective.\nPlease use the Keyboard Configuration dialog."));
+ 	return 0;
+       break2:
++	;
+     }
+     r = 1;
+ 

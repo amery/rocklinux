@@ -1,0 +1,40 @@
+--- ./doc/xslt/Makefile.in.orig	2005-03-24 18:42:07.000000000 +0100
++++ ./doc/xslt/Makefile.in	2005-03-24 18:43:02.000000000 +0100
+@@ -755,7 +755,6 @@
+ 	  echo "$(INSTALL_DATA) $$omf $(DESTDIR)$(OMF_DIR)/$(DOC_MODULE)/$$omf"; \
+ 	  $(INSTALL_DATA) $$omf $(DESTDIR)$(OMF_DIR)/$(DOC_MODULE)/$$omf; \
+ 	done
+-	-scrollkeeper-update -p "$(_sklocalstatedir)" -o "$(DESTDIR)$(OMF_DIR)/$(DOC_MODULE)"
+ 
+ install-dsk:
+ 	echo install-dsk
+--- ./doc/gnome-doc-make/Makefile.in.orig	2005-03-24 18:42:17.000000000 +0100
++++ ./doc/gnome-doc-make/Makefile.in	2005-03-24 18:43:16.000000000 +0100
+@@ -746,7 +746,6 @@
+ 	  echo "$(INSTALL_DATA) $$omf $(DESTDIR)$(OMF_DIR)/$(DOC_MODULE)/$$omf"; \
+ 	  $(INSTALL_DATA) $$omf $(DESTDIR)$(OMF_DIR)/$(DOC_MODULE)/$$omf; \
+ 	done
+-	-scrollkeeper-update -p "$(_sklocalstatedir)" -o "$(DESTDIR)$(OMF_DIR)/$(DOC_MODULE)"
+ 
+ install-dsk:
+ 	echo install-dsk
+--- ./Makefile.in.orig	2005-03-24 18:41:59.000000000 +0100
++++ ./Makefile.in	2005-03-24 18:43:38.000000000 +0100
+@@ -1072,7 +1072,6 @@
+ 	  echo "$(INSTALL_DATA) $$omf $(DESTDIR)$(OMF_DIR)/$(DOC_MODULE)/$$omf"; \
+ 	  $(INSTALL_DATA) $$omf $(DESTDIR)$(OMF_DIR)/$(DOC_MODULE)/$$omf; \
+ 	done
+-	-scrollkeeper-update -p "$(_sklocalstatedir)" -o "$(DESTDIR)$(OMF_DIR)/$(DOC_MODULE)"
+ 
+ install-dsk:
+ 	echo install-dsk
+--- ./gnome-doc-utils.make.orig	2005-03-24 18:42:31.000000000 +0100
++++ ./gnome-doc-utils.make	2005-03-24 18:43:50.000000000 +0100
+@@ -569,7 +569,6 @@
+ 	  echo "$(INSTALL_DATA) $$omf $(DESTDIR)$(OMF_DIR)/$(DOC_MODULE)/$$omf"; \
+ 	  $(INSTALL_DATA) $$omf $(DESTDIR)$(OMF_DIR)/$(DOC_MODULE)/$$omf; \
+ 	done
+-	-scrollkeeper-update -p "$(_sklocalstatedir)" -o "$(DESTDIR)$(OMF_DIR)/$(DOC_MODULE)"
+ 
+ install-dsk:
+ 	echo install-dsk

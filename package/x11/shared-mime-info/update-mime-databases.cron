@@ -1,0 +1,27 @@
+#!/bin/sh
+
+PREFIX="D_prefix"
+echo "Updating mime database(s)"
+
+for i in /opt/*/share/mime /usr/share/mime /usr/local/share/mime ; do
+	if [ -d $i -a -d $i/packages ] ; then
+		xdg_dir="`dirname $i`"
+		if ! grep "$xdg_dir" /etc/profile.d/xdg > /dev/null 2>&1 ; then
+
+			XDG_DATA_DIRS=""
+			[ -f /etc/profile.d/xdg ] && . /etc/profile.d/xdg
+
+			if [ -n "$XDG_DATA_DIRS" ] ; then
+				XDG_DATA_DIRS="$XDG_DATA_DIRS:$xdg_dir"
+			else
+				XDG_DATA_DIRS="$xdg_dir"
+			fi
+			echo XDG_DATA_DIRS="$XDG_DATA_DIRS" > /etc/profile.d/xdg
+
+			export XDG_DATA_DIRS
+		fi
+
+		/$PREFIX/bin/update-mime-database $i
+	fi
+done
+

@@ -1,0 +1,44 @@
+--- ./vfs-methods/fontilus/Makefile.am.orig	2005-03-24 19:31:23.000000000 +0100
++++ ./vfs-methods/fontilus/Makefile.am	2005-03-24 19:32:14.000000000 +0100
+@@ -50,7 +50,7 @@
+ endif
+ 
+ install-desktop-database: install-desktopDATA
+-	update-desktop-database $(DESTDIR)$(desktopdir)
++	true $(DESTDIR)$(desktopdir)
+ 
+ uninstall-local:
+ 	rm -f $(DESTDIR)$(desktopdir)/mimeinfo.cache
+--- ./vfs-methods/themus/Makefile.am.orig	2005-03-24 19:31:35.000000000 +0100
++++ ./vfs-methods/themus/Makefile.am	2005-03-24 19:32:44.000000000 +0100
+@@ -71,7 +71,7 @@
+ endif
+ 
+ install-desktop-database: install-desktopDATA
+-	update-desktop-database $(DESTDIR)$(desktopdir)
++	true $(DESTDIR)$(desktopdir)
+ 
+ distclean-local:
+ 	rm -f $(DESTDIR)$(desktopdir)/mimeinfo.cache
+--- ./vfs-methods/fontilus/Makefile.in.orig	2005-03-24 19:31:17.000000000 +0100
++++ ./vfs-methods/fontilus/Makefile.in	2005-03-24 19:31:57.000000000 +0100
+@@ -813,7 +813,7 @@
+ @GCONF_SCHEMAS_INSTALL_FALSE@install-gconf-schemas:
+ 
+ install-desktop-database: install-desktopDATA
+-	update-desktop-database $(DESTDIR)$(desktopdir)
++	true $(DESTDIR)$(desktopdir)
+ 
+ uninstall-local:
+ 	rm -f $(DESTDIR)$(desktopdir)/mimeinfo.cache
+--- ./vfs-methods/themus/Makefile.in.orig	2005-03-24 19:31:29.000000000 +0100
++++ ./vfs-methods/themus/Makefile.in	2005-03-24 19:32:35.000000000 +0100
+@@ -868,7 +868,7 @@
+ @GCONF_SCHEMAS_INSTALL_FALSE@install-gconf-schemas:
+ 
+ install-desktop-database: install-desktopDATA
+-	update-desktop-database $(DESTDIR)$(desktopdir)
++	true $(DESTDIR)$(desktopdir)
+ 
+ distclean-local:
+ 	rm -f $(DESTDIR)$(desktopdir)/mimeinfo.cache

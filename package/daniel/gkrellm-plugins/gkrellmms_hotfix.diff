@@ -1,0 +1,11 @@
+--- ./gkrellmms.c.orig	2004-09-07 13:42:50.228933752 +0200
++++ ./gkrellmms.c	2004-09-07 13:45:13.870096976 +0200
+@@ -672,7 +672,7 @@
+ 		y = y * gkrellm_get_theme_scale();
+ #endif
+ 		if (text)
+-			y -= decal->y_baseline;
++			y -= decal->y_ink;
+ 		gkrellm_move_decal(control_panel, decal, x, y);
+ 		}
+ 	}

@@ -29,9 +29,22 @@
 main_begin
 
     block_begin(start, `Setting up network devices.')
-	[ -x /etc/network/getprofile ] && /etc/network/getprofile
-	profile="$(cat /etc/network/profile 2>/dev/null)"
-	profile=${profile:-default}
+	oldprof="$(cat /etc/network/profile 2>/dev/null)"
+	oldprof=${oldprof:-default}
+	if [ -n "$2" ]; then
+		echo $2 > /etc/network/profile
+		profile="$(cat /etc/network/profile 2>/dev/null)"
+		profile=${profile:-default}
+		echo "Active network profile is now $profile (was: $oldprof)."
+	elif [ -x /etc/network/getprofile ]; then
+		echo "Running network profile autodetection ..."
+		/etc/network/getprofile
+		profile="$(cat /etc/network/profile 2>/dev/null)"
+		profile=${profile:-default}
+		echo "Active network profile is now $profile (was: $oldprof)."
+	else
+		profile="$oldprof"
+	fi
 	check(`/etc/network/rocknet $profile auto up')
     block_end
 
@@ -39,6 +52,11 @@ main_begin
 	profile="$(cat /etc/network/profile 2>/dev/null)"
 	profile=${profile:-default}
 	check(`/etc/network/rocknet $profile auto down')
+    block_end
+
+    block_begin(restart, `Reconfiguring network devices.')
+	check(`$0 stop')
+	check(`$0 start $2')
     block_end
 
 main_end

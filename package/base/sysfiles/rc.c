@@ -76,7 +76,7 @@ int main(int argc, char ** argv) {
 	char command[1024];
 	int use_btee = 1;
 	int btee_pipe[2];
-	int i;
+	int i, cmd_space;
 
 	/* Copy some environment variables to the new environment if set */
 	if ( getenv("PREVLEVEL") )
@@ -93,13 +93,13 @@ int main(int argc, char ** argv) {
 	}
 
 	/* Display help message */
-	if ( argc != 3 ) {
+	if ( argc < 3 ) {
 		fprintf(stderr,
 "\n"
 "  Run SystemV Init-Scripts with a clean environment and detached from\n"
 "  the terminal.\n"
 "\n"
-"  Usage: rc [ --nobtee ] <service> { start | stop | ... | help }\n"
+"  Usage: rc [ --nobtee ] <service> { start | stop | ... | help } [ args ]\n"
 "\n"
 "  <service> might be one of:\n"
 "\n");
@@ -178,10 +178,14 @@ int main(int argc, char ** argv) {
 	/* Run the command in a (non-interactive) login shell (i.e. read
 	 * /etc/profile) and send \004 after running the script if we are
 	 * using btee. */
-	snprintf(command, 1024, "%s%s %s </dev/null 2>&1%s",
-	         strchr(argv[1], '/') ? "" : "/etc/rc.d/init.d/",
-	         argv[1], argv[2], use_btee ? "; echo -ne '\004'" : "");
-	execle("/bin/bash", "-bash", "-l", "-c", command, NULL, clean_env);
+	cmd_space = snprintf(command, 1024, "%s%s",
+			strchr(argv[1], '/') ? "" : "/etc/rc.d/init.d/", argv[1]);
+	for (i=2; i<argc; i++)
+		cmd_space += snprintf(command+cmd_space, 1024-cmd_space, " %s", argv[i]);
+	cmd_space += snprintf(command+cmd_space, 1024-cmd_space, " </dev/null 2>&1%s",
+			use_btee ? "; echo -ne '\004'" : "");
+	if ( cmd_space < 1000 )
+		execle("/bin/bash", "-bash", "-l", "-c", command, NULL, clean_env);
 
 	/* Oups! Can't exec the shell. */
 	if ( use_btee ) write(1, "\004", 1);

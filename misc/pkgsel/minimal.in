@@ -65,6 +65,7 @@ pkgfilter sed '
 / man /			{ p; d; }
 
 / e2fsprogs /		{ p; d; }
+/ file /		{ p; d; }
 / mine /		{ p; d; }
 / util-linux /		{ p; d; }
 / iproute2 /		{ p; d; }
@@ -72,6 +73,21 @@ pkgfilter sed '
 / module-init-tools /	{ p; d; }
 / modutils /		{ p; d; }
 / sysfiles /		{ p; d; }
+
+/ autoconf /		{ p; d; }
+/ automake=automake19 /	{ p; d; }
+/ cracklib /		{ p; d; }
+/ libtool /		{ p; d; }
+/ pam /			{ p; d; }
+/ shadow /		{ p; d; }
+/ sysvinit /		{ p; d; }
+
+/ grub /		{ p; d; }
+/ silo /		{ p; d; }
+/ yaboot /		{ p; d; }
+
+/ ed /			{ p; d; }
+/ vim /			{ p; d; }
 
 s/^X /O /;
 

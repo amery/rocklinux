@@ -1,0 +1,38 @@
+diff -ruN lphdisk-0.9.1/lphdisk.c lphdisk-0.9.1-new/lphdisk.c
+--- lphdisk-0.9.1/lphdisk.c	2002-02-12 12:04:27.000000000 +0100
++++ lphdisk-0.9.1-new/lphdisk.c	2004-07-27 17:36:39.772379624 +0200
+@@ -719,20 +719,20 @@
+ {0,0,0,0}};
+ 
+ const char usage_string[] = "\
+-Usage: %1$s [options] [device]
+-Prepare a hibernation partition for APM suspend-to-disk.
+-
+-options:
+-  -h, --help       Display brief usage and option information (this screen)
+-  -p, --probeonly  Only calculate and display required size, do not format
+-  -q, --quiet      Turn off informational messages, useful for scripts
+-  -d, --debug      Turn on (verbose) debugging messages
+-  -n, --nowrite    Do not actually write to the disk
+-  -f, --force      **DANGEROUS**  Format without regard to potential problems
+-
+-'device' should be a raw disk device (not a partition).  The default device
+-is /dev/hda.
+-
++Usage: %1$s [options] [device]\n\
++Prepare a hibernation partition for APM suspend-to-disk.\n\
++\n\
++options:\n\
++  -h, --help       Display brief usage and option information (this screen)\n\
++  -p, --probeonly  Only calculate and display required size, do not format\n\
++  -q, --quiet      Turn off informational messages, useful for scripts\n\
++  -d, --debug      Turn on (verbose) debugging messages\n\
++  -n, --nowrite    Do not actually write to the disk\n\
++  -f, --force      **DANGEROUS**  Format without regard to potential problems\n\
++\n\
++'device' should be a raw disk device (not a partition).  The default device\n\
++is /dev/hda.\n\
++\n\
+ (%2$s)\n\n";
+ 
+ void print_usage (void) {

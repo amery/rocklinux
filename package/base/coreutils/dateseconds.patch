@@ -1,0 +1,10 @@
+--- ./lib/getdate.y	10 Sep 2003 08:37:15 -0000	1.80
++++ ./lib/getdate.y	15 Mar 2004 08:30:57 -0000
+@@ -220,6 +220,7 @@ time:
+       {
+ 	PC.hour = $1.value;
+ 	PC.minutes = $3.value;
++	PC.seconds = 0;
+ 	PC.meridian = MER24;
+ 	PC.zones_seen++;
+ 	PC.time_zone = $4.value % 100 + ($4.value / 100) * 60;

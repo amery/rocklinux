@@ -79,6 +79,11 @@ if [ $delete_mode = 1 ] ; then
 	exit $?
 fi
 
+# hook for third-party targets that need to insert additional packages before config runs, for example.
+for precnf in target/*/preconfig.sh ; do
+	[ -f $precnf ] && . $precnf 
+done
+
 if [ $do_config_cycle = 0 ]
 then
 	export swpid=swp$$

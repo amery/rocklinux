@@ -33,6 +33,7 @@ fi
 
 eval "`grep -A 10 '\[BEGIN\]' scripts/parse-config | grep -B 10 '\[END\]'`"
 
+base=${base:-${PWD}}
 filename="$base/rock-src-$rockver.tar.bz2"
 [ -z "$1" ] || filename="$1"
 
@@ -44,7 +45,6 @@ echo -n 'Creating source tar ... '
 # Create temp source base dir
 #
 src="`mktemp -d -p $PWD src.srctar.XXXXXXXXXX`"
-base=${base:-${PWD}}
 rm -rf $src/$topld
 mkdir -p $src/$topld
 #

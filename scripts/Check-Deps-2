@@ -184,7 +184,7 @@ sub patchfile($$$$) {
 		print "ERROR: Can't patch $descfile!\n";
 		print "ERROR: Regex was s/$re1/$re2/\n";
 	}
-	system("diff -u0 ./$descfile $tmpfile >> dependencies.patch");
+	system("diff -U 0 ./$descfile $tmpfile >> dependencies.patch");
 }
 
 sub setpri($$$$$$) {

@@ -20,29 +20,28 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-if pkgcheck bdb X
+if pkgcheck bdb=bdb33 X
 then
 	menu_begin MENU_PKG_BDB 'BerkleyDB Options'
 	block_begin 4
 		bool 'Build v3.3' ROCKCFG_PKG_BDB33 1
-		[ "$ROCKCFG_PKG_BDB33" = 1 ] && pkgfork bdb bdb33
+		[ "$ROCKCFG_PKG_BDB33" = 1 ] && pkgenable bdb=bdb33 || pkgdisable bdb=bdb33
 		[ "$ROCKCFG_PKG_BDB33" = 1 ] && bdbdefselect="$bdbdefselect bdb33 'Using v3.3 as default'"
 
 		bool 'Build v4.0' ROCKCFG_PKG_BDB40 1
-		[ "$ROCKCFG_PKG_BDB40" = 1 ] && pkgfork bdb bdb40
+		[ "$ROCKCFG_PKG_BDB40" = 1 ] && pkgenable bdb=bdb40 || pkgdisable bdb=bdb40
 		[ "$ROCKCFG_PKG_BDB40" = 1 ] && bdbdefselect="$bdbdefselect bdb40 'Using v4.0 as default'"
 
 		bool 'Build v4.1' ROCKCFG_PKG_BDB41 1
-		[ "$ROCKCFG_PKG_BDB41" = 1 ] && pkgfork bdb bdb41
+		[ "$ROCKCFG_PKG_BDB41" = 1 ] && pkgenable bdb=bdb41 || pkgdisable bdb=bdb41
 		[ "$ROCKCFG_PKG_BDB41" = 1 ] && bdbdefselect="$bdbdefselect bdb41 'Using v4.1 as default'"
 
 		bool 'Build v4.2' ROCKCFG_PKG_BDB42 1
-		[ "$ROCKCFG_PKG_BDB42" = 1 ] && pkgfork bdb bdb42
+		[ "$ROCKCFG_PKG_BDB42" = 1 ] && pkgenable bdb=bdb42 || pkgdisable bdb=bdb42
 		[ "$ROCKCFG_PKG_BDB42" = 1 ] && bdbdefselect="$bdbdefselect bdb42 'Using v4.2 as default'"
 
 		eval "choice ROCKCFG_PKG_BDB_DEFAULT bdb41 $bdbdefselect"
-	
-      		block_end
+	block_end
 	menu_end
 	pkgremove bdb
 fi

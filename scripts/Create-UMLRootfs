@@ -29,9 +29,10 @@ eval `grep rockver scripts/parse-config`
 
 if [ $# -eq 0 ] ; then
 	echo
-	echo "Usage: $0 [ -size MB ] [ -mkdebug ] [-prefix FS-Prefix] [-fs filesystem] Config"
+	echo "Usage: $0 [-size MB] [-debug] [-verbose] [-full]"
+	echo "     [-prefix FS-Prefix] [-fs filesystem] Config"
 	echo
-	echo "E.g.: $0  -prefix my myconfig"
+	echo "E.g.: $0 -full -prefix my myconfig"
 	echo "this will leave you with a file 'my_linux' (the kernel) and a file"
 	echo "'my_rootfs' (the file system). Just start it with ./linux"
 	echo
@@ -45,8 +46,10 @@ while true ; do
 	case "$1" in
 		-size)
 			fssize=$2 ; shift ; shift ;;
-		-mkdebug)
-			mkdebug=1 ; shift ;;
+		-debug)
+			debug=1 ; shift ;;
+		-verbose)
+			verbose=1 ; shift ;;
 		-fs)
 			filesystem=$2; shift; shift ;;
 		-prefix)
@@ -130,13 +133,35 @@ mount -t $filesystem $loopdevice $mountpoint
 # install all
 echo "Installing files, may take some time..."
 if [ $full = 1 ]; then
-	for i in build/$buildid/*; do 
-		if [ $i = "build/$buildid/ROCK" ]; then continue; fi
-		cp -rp $i $mountpoint
+# 	for i in build/$buildid/*; do 
+# 		if [ $i = "build/$buildid/ROCK" ]; then continue; fi
+# 		cp -rp $i $mountpoint
+# 	done
+	for i in build/$buildid/ROCK/pkgs/*gem; do
+		if [ 'x1' = "x$verbose" ]; then
+				echo "Installing ${i/*\//}"
+		fi
+		mine -i -R $mountpoint $i
 	done
 fi
 
+# call the update script and some other tweaks
+echo "Doing post-install adoptions"
+chroot $mountpoint bash /etc/cron.d/00-updates
+sed -i -e 's,vc/1,vc/0,'  -e 's,^\([2-6]:\),#\1,' $mountpoint/etc/inittab
+cat >$mountpoint/etc/fstab <<EOF
+/dev/root           /                     auto            defaults   0   1
+none                /proc                 proc            defaults   0   0
+none                /dev                  devfs           defaults   0   0
+none                /dev/pts              devpts          defaults   0   0
+none                /dev/shm              ramfs           defaults   0   0
+none                /sys                  sysfs           defaults   0   0
+#none               /tmp                  tmpfs           defaults   0   0
+EOF
 
 # Copy the executable kernel
 cp $mountpoint/boot/linux ${fsprefix}linux
 
+# Finished.
+echo "Finished. You may now run"
+echo " ./${fsprefix}linux ubd0=${fsprefix}rootfs"

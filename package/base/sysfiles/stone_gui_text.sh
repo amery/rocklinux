@@ -6,7 +6,7 @@
 # the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 # 
 # ROCK Linux: rock-src/package/base/sysfiles/stone_gui_text.sh
-# ROCK Linux is Copyright (C) 1998 - 2003 Clifford Wolf
+# ROCK Linux is Copyright (C) 1998 - 2004 Clifford Wolf
 # 
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by

@@ -5,7 +5,7 @@
 # the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 # the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 # 
-# ROCK Linux: rock-src/package/ccls/dictd/mod_dictd.sh
+# ROCK Linux: rock-src/package/misc/dictd/mod_dictd.sh
 # ROCK Linux is Copyright (C) 1998 - 2004 Clifford Wolf
 # 
 # This program is free software; you can redistribute it and/or modify

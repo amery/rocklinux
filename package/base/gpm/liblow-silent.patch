@@ -1,0 +1,22 @@
+--- ./src/lib/liblow.c.orig	2004-10-02 06:30:04.602331640 +0200
++++ ./src/lib/liblow.c	2004-10-02 06:30:57.756251016 +0200
+@@ -201,7 +201,9 @@
+ 
+    option.consolename = NULL;
+ 
++#if 0
+    gpm_report(GPM_PR_DEBUG,"VC: %d",flag);
++#endif
+ 
+    /*....................................... First of all, check xterm */
+ 
+@@ -369,7 +371,9 @@
+ 
+   /*....................................... Error: free all memory */
+    err:
++#if 0
+    gpm_report(GPM_PR_ERR,"Oh, oh, it's an error! possibly I die! ");
++#endif
+    do {
+       new=gpm_stack->next;
+       free(gpm_stack);

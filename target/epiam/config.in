@@ -154,7 +154,7 @@ pkgfilter sed '
 # Disable the rest
 /.*/		{ s/^X /O / ; p; d; };'
 
-ROCKCFG_X86_OPT='via-c3-improved'
+ROCKCFGSET_X86_OPT='via-c3-improved'
 ROCKCFGSET_CREATE_TARBZ2=0
 ROCKCFGSET_CREATE_GEM=1
 
@@ -164,4 +164,9 @@ ROCKCFGSET_DO_REBUILD_STAGE=0
 ROCKCFGSET_CREATE_DOCS=1
 ROCKCFGSET_DISABLE_NLS=0
 
-ROCKCFG_PKG_MPLAYER_RUN_CPUDETECT=0
+ROCKCFGSET_KERNEL_BOOTSPLASH='1'
+ROCKCFGSET_PKG_LINUX_CUSTCONFIG='1'
+# export CFLAGS="-s -O3 -march=i686 -fomit-frame-pointer -falign-functions=4 -funroll-loops -fexpensive-optimizations -malign-double -fschedule-insns2"
+
+ROCKCFGSET_PKG_MPLAYER_RUN_CPUDETECT=0
+

@@ -5,14 +5,16 @@
             |_| \_\ ___/ \___|_|\_\ |____|_|_| |_|\___/|_/\_|
          [============> http://www.rocklinux.org/ <============]
 
-ROCK Linux 2.x on SPARC and Ultra SPARC was brought to you by Rene Rebe -
-ROCK Linux Consulting (Germany). Based on former work by Armijn Hemel,
-Jan Veninga and Stefan Koerner!
+Help Screens:
+-------------
 
-  http://www.rocklinux-consulting.de
+      <1>                      Installation overview
+      <0>                      This help-text
 
-So you are going to install ROCK Linux ...
+Actions:
+--------
 
-Possible choices are:
-  install ........... normal CD boot 
+      <ENTER>                  Start installation
+      install options <Enter>  Start install with the given kernel options
+      help                     Show SILO's help
 

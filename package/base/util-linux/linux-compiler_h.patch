@@ -1,0 +1,55 @@
+diff -dur util-linux-2.12h/partx/addpart.c util-linux-2.12h-comp/partx/addpart.c
+--- util-linux-2.12h/partx/addpart.c	1999-07-09 02:56:36.000000000 +0000
++++ util-linux-2.12h-comp/partx/addpart.c	2004-10-23 08:41:37.998802256 +0000
+@@ -3,6 +3,7 @@
+ #include <fcntl.h>
+ #include <stdlib.h>
+ #include <sys/ioctl.h>
++#include <linux/compiler.h>
+ #include <linux/blkpg.h>
+ 
+ int
+diff -dur util-linux-2.12h/disk-utils/fdformat.c util-linux-2.12h-patch/disk-utils/fdformat.c
+--- util-linux-2.12h/disk-utils/fdformat.c	2002-07-07 12:38:24.000000000 +0000
++++ util-linux-2.12h-patch/disk-utils/fdformat.c	2004-10-23 03:07:43.330621624 +0000
+@@ -14,6 +14,7 @@
+ #include <stdlib.h>
+ #include <sys/stat.h>
+ #include <sys/ioctl.h>
++#include <linux/compiler.h>
+ #include <linux/fd.h>
+ 
+ #include "nls.h"
+diff -dur util-linux-2.12h/disk-utils/setfdprm.c util-linux-2.12h-patch/disk-utils/setfdprm.c
+--- util-linux-2.12h/disk-utils/setfdprm.c	2001-10-21 10:32:27.000000000 +0000
++++ util-linux-2.12h-patch/disk-utils/setfdprm.c	2004-10-23 03:07:43.331621472 +0000
+@@ -13,6 +13,7 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <sys/ioctl.h>
++#include <linux/compiler.h>
+ #include <linux/fd.h>
+ #include "nls.h"
+ 
+diff -dur util-linux-2.12h/partx/delpart.c util-linux-2.12h-patch/partx/delpart.c
+--- util-linux-2.12h/partx/delpart.c	1999-07-09 02:56:36.000000000 +0000
++++ util-linux-2.12h-patch/partx/delpart.c	2004-10-23 03:07:43.331621472 +0000
+@@ -3,6 +3,7 @@
+ #include <fcntl.h>
+ #include <stdlib.h>
+ #include <sys/ioctl.h>
++#include <linux/compiler.h>
+ #include <linux/blkpg.h>
+ 
+ int
+diff -dur util-linux-2.12h/partx/partx.c util-linux-2.12h-patch/partx/partx.c
+--- util-linux-2.12h/partx/partx.c	2004-08-23 20:13:27.000000000 +0000
++++ util-linux-2.12h-patch/partx/partx.c	2004-10-23 03:07:43.332621320 +0000
+@@ -37,6 +37,7 @@
+ #include <getopt.h>
+ #include <unistd.h>
+ #include <sys/ioctl.h>
++#include <linux/compiler.h>
+ #include <linux/hdreg.h>        /* HDIO_GETGEO */
+ #include <linux/blkpg.h>
+ #define BLKGETSIZE _IO(0x12,96)    /* return device size */

@@ -130,6 +130,7 @@ if [ $# = 0 ] ; then
 fi
 
 ./scripts/Check-System || exit 1
+export ROCK_CHECK_SYSTEM_OK=1
 
 . ./scripts/functions
 . ./scripts/parse-config

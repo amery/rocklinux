@@ -34,6 +34,10 @@ fi
 found_error=0
 paranoia=""
 
+if [ "$ROCK_CHECK_SYSTEM_OK" = 1 ]; then
+	exit 0
+fi
+
 if [ "$1" = "-paranoia" ]; then
 	paranoia=1
 fi
@@ -151,3 +155,4 @@ if [ $found_error -ne 0 ] ; then
 fi
 
 exit $found_error
+

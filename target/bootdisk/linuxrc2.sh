@@ -23,6 +23,8 @@ ln -sf fd/1             stdout
 ln -sf fd/2             stderr
 cd /
 
+setterm -blank 0 -powersave off -powerdown 0
+
 echo
 echo '  ******************************************************************'
 echo '  *         Welcome to the ROCK Linux 2nd stage boot disk.         *'

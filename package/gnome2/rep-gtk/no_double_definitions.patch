@@ -1,0 +1,42 @@
+diff -dur rep-gtk-0.18/gtk-compat.c src.rep-gtk.1100023779.22603.1788690224/rep-gtk-0.18/gtk-compat.c
+--- rep-gtk-0.18/gtk-compat.c	2002-07-12 06:19:22.000000000 +0200
++++ src.rep-gtk.1100023779.22603.1788690224/rep-gtk-0.18/gtk-compat.c	2004-11-09 19:26:34.955192600 +0100
+@@ -63,22 +63,6 @@
+ }
+ 
+ GtkWidget*
+-gtk_radio_menu_item_new_with_label_from_widget (GtkRadioMenuItem *group,
+-						gchar            *label)
+-{
+-  GSList *g = group? gtk_radio_menu_item_group (group) : NULL;
+-  return gtk_radio_menu_item_new_with_label (g, label);
+-}
+-
+-GtkWidget*
+-gtk_radio_menu_item_new_with_mnemonic_from_widget (GtkRadioMenuItem *group,
+-						   gchar            *label)
+-{
+-  GSList *g = group? gtk_radio_menu_item_group (group) : NULL;
+-  return gtk_radio_menu_item_new_with_mnemonic (g, label);
+-}
+-
+-GtkWidget*
+ gtk_radio_menu_item_new_from_widget (GtkRadioMenuItem *group)
+ {
+   GSList *g = group? gtk_radio_menu_item_group (group) : NULL;
+diff -dur rep-gtk-0.18/rep-gtk.h src.rep-gtk.1100023779.22603.1788690224/rep-gtk-0.18/rep-gtk.h
+--- rep-gtk-0.18/rep-gtk.h	2003-02-12 09:51:45.000000000 +0100
++++ src.rep-gtk.1100023779.22603.1788690224/rep-gtk-0.18/rep-gtk.h	2004-11-09 19:24:21.553472744 +0100
+@@ -289,12 +289,6 @@
+ 			    guint32 activate_time,
+ 			    repv position);
+ 
+-GtkWidget*
+-gtk_radio_menu_item_new_with_label_from_widget (GtkRadioMenuItem *group,
+-						gchar            *label);
+-GtkWidget*
+-gtk_radio_menu_item_new_with_mnemonic_from_widget (GtkRadioMenuItem *group,
+-						   gchar            *label);
+ GtkWidget* gtk_radio_menu_item_new_from_widget (GtkRadioMenuItem *group);
+ GtkWidget* gtk_pixmap_new_interp (char *file, GtkWidget *intended_parent);
+ 

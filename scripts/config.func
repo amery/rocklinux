@@ -212,55 +212,73 @@ const() {
 #
 set_data() {
 	bprof set_data start
-	local q="'" set_name="ROCKCFGSET_${1#ROCKCFG_}"
+	local q="'"
 
-	if eval "[ \"\$$set_name\" ]" ; then
+	set_name="ROCKCFGSET_${1#ROCKCFG_}"
+	usr_name="ROCKCFGUSR_${1#ROCKCFG_}"
+	eval "usr_data=\"\$$usr_name\""
+
+	menumode=0
+	data="$2"
+
+	if eval "[ \"\$$set_name\" ]"; then
 		eval "data=\"\$$set_name\""
-		eval "$1=\"\$data\""
-		if [ $ROCKCFG_EXPERT -eq 1 -o $expert -eq 0 ]
-		then menumode=2 ; else menumode=0 ; fi
+	fi
+	dfl_data="$data"
 
-	elif [ $ROCKCFG_EXPERT -eq 1 -o $expert -eq 0 ] ; then
-		eval "data=\"\${$1:-$2}\""
-		eval "$1=\"\$data\""
-		menumode=1
-	else
-		data="$2" ; eval "$1=\"\$data\""
-		menumode=0
+	if [ $ROCKCFG_EXPERT -eq 1 -o $expert -eq 0 ]; then
+		menumode=2
+		if [ $nousrconfig -eq 1 ] && eval "[ -n \"\$$1\" -a \"\$$1\" != \"\$data\" ]"; then
+			eval "$usr_name=\"\$$1\""
+			eval "usr_data=\"\$$1\""
+		fi
+		if [ -n "$usr_data" ]; then
+			data="$usr_data"
+			obegin="<" oend=">" menumode=1
+		else
+			unset $usr_name
+		fi
 	fi
 
+	eval "$1=\"\$data\""
 	item="$1"
+
 	echo "export $1='${data//$q/$q\\$q$q}'" >> config/$config/config
 	bprof set_data stop
 }
 
 choice() {
 	bprof choice start
-
-	# reset to default if current value is not in list
-	#
-	eval $(
-		eval "value=\$$1" ; name=$1 ; shift ; shift
-		while [ "$#" != 0 ] ; do
-			[ "$value" = "$1" ] && name="" ; shift ; shift
-		done
-		[ "$name" ] && echo "unset $name"
-	)
+	local obegin="(" oend=")"
+	local q="'"
 
 	set_data "$1" "$2"
 
-	if [ "$menumode" -eq 1 -a $menu_current = $menu_this ] ; then
-		{ echo -en "$item\tchoice_action '$1' '$data'" ; shift ; shift
-		for x ; do echo -n " '$x'" ; done ; echo ; } >> config.data
+	# if data is not in list, leave usr_data unmodified
+	# but set the current value to the default
+	local fallback_hack=0
+	eval $(
+		shift; shift
+		while [ "$#" != 0 ] ; do
+			[ "$data" = "$1" ] && exit
+			shift; shift
+		done
+		echo "fallback_hack=1"
+	)
+	if [ "$fallback_hack" = 1 ]; then
+		obegin="?"; oend="?"; data="$dfl_data"; eval "$1=\"\$data\""
+		echo "export $1='${data//$q/$q\\$q$q}'" >> config/$config/config
 	fi
 
 	if [ "$menumode" -gt 0 -a $menu_current = $menu_this ] ; then
-		if [ "$menumode" -eq 1 ] ; then xdata="($data)"
-		else xdata="=$data=" ; fi
+		{ echo -en "$item\tchoice_action '$usr_name' '$usr_data'" ; shift ; shift
+		echo -n " '' 'Reset_this_switch_to_default_value'"
+		for x ; do echo -n " '$x'" ; done ; echo ; } >> config.data
+
+		xdata="$obegin$data$oend"
 
 		while [ "$1" -a "$1" != "$data" ] ; do shift ; shift ; done
-		printf "'$item' '$spacer%-${tabspace}s ${2//_/ }'\n" \
-		       "$xdata" >> config.dialog
+		printf "'$item' '$spacer%-${tabspace}s ${2//_/ }'\n" "$xdata" >> config.dialog
 	fi
 
 	bprof choice stop
@@ -272,7 +290,7 @@ choice_action() {
 		--radiolist 'Arrow keys navigate the menu.  Press <Enter> to activate menu items.  Highlighted letters are hotkeys.' \
 		$(( $lines - 4 )) $(( $columns - 5 )) $(( $lines - 12 ))"
 	default=$2 ; item=$1 ; shift ; shift
-	while [ "$1" ] ; do
+	while [ "$#" -gt 1 ] ; do
 		if [ "$1" = "$default" ]
 		then command="$command '$1' '${2//_/ }' ON"
 		else command="$command '$1' '${2//_/ }' OFF" ; fi
@@ -292,19 +310,15 @@ choice_action() {
 
 text() {
 	bprof text start
-	local q="'"
+	local q="'" obegin="(" oend=")"
 	set_data "$2" "$3"
 
-	if [ "$menumode" -eq 1 -a $menu_current = $menu_this ] ; then
-		echo -e "$2\ttext_action '$1' '$2'" \
-				"'${data//$q/$q\\$q$q}'" >> config.data
-	fi
-
 	if [ "$menumode" -gt 0 -a $menu_current = $menu_this ] ; then
-		xdata="$( printf "%-${tabspace}s" \
-				"$(echo $data | cut -c1-20)")"
-		if [ "$menumode" -eq 1 ] ; then xdata="($xdata)"
-		else xdata="=$xdata=" ; fi
+		echo -e "$2\ttext_action '$1' '$usr_name'" \
+				"'${data//$q/$q\\$q$q}'" >> config.data
+
+		xdata="${obegin}$( printf "%-${tabspace}s" \
+				"$(echo $data | cut -c1-20)")${oend}"
 
 		printf "'$2' '$spacer%s $1'\n" \
 			"${xdata//$q/$q\\$q$q}" >> config.dialog
@@ -327,21 +341,14 @@ text_action() {
 
 bool() {
 	bprof bool start
-	local x
+	local x obegin="[" oend="]"
 	set_data "$2" "$3"
 
-	if [ "$menumode" -eq 1 -a $menu_current = $menu_this ] ; then
-		echo -e "$2\tbool_action '$1' '$2' '$data'" >> config.data
-	fi
-
 	if [ "$menumode" -gt 0 -a $menu_current = $menu_this ] ; then
-		if [ "$menumode" -eq 1 ] ; then
-			if [ $data -eq 0 ] ; then x='[ ]' ; else x='[*]' ; fi
-		else
-			if [ $data -eq 0 ] ; then x='= =' ; else x='=*=' ; fi
-		fi
-		printf "$2 '$spacer%-${tabspace}s ${1//_/ }'\n" \
-		       "$x" >> config.dialog
+		if [ $data -eq 0 ] ; then x="${obegin} ${oend}" ; else x="${obegin}*${oend}" ; fi
+		echo -e "$2\tbool_action '$usr_name' '$usr_data'" >> config.data
+
+		printf "$2 '$spacer%-${tabspace}s ${1//_/ }'\n" "$x" >> config.dialog
 
 		# If you do not know what mighty esden is doin here see comment()
 		if [ "$4" != "" ] ; then
@@ -352,8 +359,11 @@ bool() {
 }
 
 bool_action() {
-	if [ $3 -eq 0 ] ; then eval "$2=1"
-	else eval "$2=0" ; fi
+	case "$2" in
+		"")	eval "$1=1" ;;
+		1)	eval "$1=0" ;;
+		*)	eval "$1="  ;;
+	esac
 }
 
 editfile() {
@@ -497,11 +507,30 @@ set_help() {
 
 get_help() {
 	bprof get_help start
+
+	cat << EOT
+
+This is the ROCK Linux $rockver Configuration Tool.
+
+Config option types:
+	[*] [ ]		Unmodified bool value (set and unset)
+	<*> < >		User-modified bool value (set and unset)
+	(foobar)	Unmodified selection or text field
+	<foobar>	User-modified selection or text field
+
+Note that e.g. bool value are in fact tristate options:
+user set, user unset and and the unmodified default value
+
+This is because one option might change the default value
+of another option. You might need a while to get used to
+the concept, but in the end it really makes sense.
+
+-----
+EOT
+
 	# Create standard help output ...
 	default_text="
 There is no help on '$1' available.
-
-This is the ROCK Linux $rockver Configuration Tool.
 
 Please read the build Documentation (Documentation/BUILD)
 before building ROCK Linux.

@@ -25,10 +25,9 @@ then
 	comment '--- Boehm-Demers-Weiser conservative garbage collector'
 
 	pkgout
-	while read x y; do
-		bool "Use it in Objective-C (gcc-$y)" ROCKCFG_PKG_BOEHMGC_OBJC${x#gcc} 0
-		bool "Use it in Java (gcc-$y)" ROCKCFG_PKG_BOEHMGC_JAVA${x#gcc} 0
-		#comment ' '
-	done < <( grep '^X .* gcc.* ' config/$config/packages | grep -v cross | cut -d' ' -f 5,6 )
+	while read x; do
+		bool "Use it in Objective-C (${x#gcc=})" ROCKCFG_PKG_BOEHMGC_OBJC${x#gcc=gcc} 0
+		bool "Use it in Java (${x#gcc=})" ROCKCFG_PKG_BOEHMGC_JAVA${x#gcc=gcc} 0
+	done < <( grep '^X .* gcc=' config/$config/packages | grep -v cross | cut -d' ' -f 5 )
 
 fi

@@ -93,7 +93,7 @@ if [ $do_config_cycle = 0 ] ; then
 	fi
 
 	echo "Creating configuration script."
-	cat << "EOT" > src/rockconfig.awk.$$
+	cat << EOT > src/rockconfig.awk.$$
 #!/usr/bin/awk -f
 
 FNR == 1 {
@@ -108,13 +108,13 @@ END {
         print "### END of " FILENAME;
 }
 
-$1 == "%include" {
-        $1 = "awk -f src/rockconfig.awk";
-        system($0);
+\$1 == "%include" {
+        \$1 = "awk -f src/rockconfig.awk";
+        system(\$0);
         next;
 }
 
-$1 == "#" { next; }
+\$1 == "#" { next; }
 { print; }
 EOT
 	mv src/rockconfig.awk.$$ src/rockconfig.awk
@@ -173,7 +173,8 @@ menu_this=0 ; menu_current=0 ; menu_counter=0
 menu_stack=x ; menu_back=-1 ; menu_backpos=-1
 
 mkdir -p config/$config
-touch config/$config/config config/$config/packages
+touch config/$config/config
+touch config/$config/packages
 
 configtitle="$(printf ' %-50s %6s active packages ]' \
 	"ROCK Linux $rockver Configuration - $config" \
@@ -181,11 +182,18 @@ configtitle="$(printf ' %-50s %6s active packages ]' \
 
 bprof main stop
 . ./config/$config/config
+if [ -f config/$config/config_usr ]; then
+	nousrconfig=0
+	. ./config/$config/config_usr
+else
+	nousrconfig=1
+fi
 bprof main start
 
 rm -f config.dialog config.data config.help
 touch config.dialog config.data config.help
 echo -e "#\n# ROCK Linux $rockver Config File\n#" > config/$config/config
+echo -e "#\n# ROCK Linux $rockver User Config File\n#" > config/$config/config_usr
 spacer="" ; expert=0 ; tabspace="5" ; tabspace_list=""
 commentnr=0 ; editfilenr=0
 
@@ -208,6 +216,10 @@ rm -f config/$config/*.tmp
 
 cut -f1,2,4,5,8- -d' ' config/$config/packages | sed 's, [^ ]*$,,' | \
 tr ' ' '\t' | expand -t2,15,35, > config/$config/packages.txt
+
+for x in ${!ROCKCFGUSR_*}; do
+	eval "echo \"$x='\$$x'\""
+done >> config/$config/config_usr
 
 configtitle="$(printf ' %-50s %6s active packages ]' \
 	"ROCK Linux $rockver Configuration - $config" \
@@ -236,12 +248,12 @@ case "$returncode" in
 		{ echo -e "\n# Remember menu position:\ncurrent='$item'"
 		echo -e "\n# Remember sub-menu:\nmenu_current='$menu_current'"
 		echo -e "\n# Execute this config command:\n$command"
-		} >> config/$config/config
+		} >> config/$config/config_usr
 		;;
 	menu-back)
 		{ echo -e "\n# New menu position:\ncurrent='$menu_backpos'"
 		echo -e "\n# New sub-menu:\nmenu_current='$menu_back'"
-		} >> config/$config/config
+		} >> config/$config/config_usr
 		;;
 	1|255)
 		rm -f config.data config.dialog config.out config.help
@@ -257,7 +269,7 @@ case "$returncode" in
 		item=$(echo $item | cut -f1 -d' ')  # dialog(1) bug?
 		{ echo -e "\n# Remember menu position:\ncurrent='$item'"
 		echo -e "\n# Remember sub-menu:\nmenu_current='$menu_current'"
-		} >> config/$config/config
+		} >> config/$config/config_usr
 
 		get_help $item > config.dialog
 

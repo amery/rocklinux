@@ -521,6 +521,9 @@ if [ -z "$prefix" -o "${prefix#usr}" != "$prefix" ] ; then
 		flistdel="$flistdel|usr/share/locale/..[/_].*"
 		flistdel="$flistdel|usr/share/man/..[/_].*"
 	fi
+	if [ $stagelevel = 0 ] ; then
+		flistdel="${flistdel//usr\//}|${flistdel//usr\/share\//}"
+	fi
 else
 	flistdel="$flistdel|$prefix/info/(dir|standards.info)"
 	if [ "$ROCKCFG_DISABLE_NLS" = 1 ] ; then

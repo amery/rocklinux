@@ -1,15 +1,6 @@
-diff -dur util-linux-2.12h/mount/lomount.c util-linux-2.12h-patch/mount/lomount.c
---- util-linux-2.12h/mount/lomount.c	2004-09-22 18:26:02.000000000 +0000
-+++ util-linux-2.12h-patch/mount/lomount.c	2004-10-23 03:37:44.541795904 +0000
-@@ -10,7 +10,6 @@
-  * 2000-09-24 Marc Mutz <Marc@Mutz.com>
-  * - added -p option to pass passphrases via fd's to losetup/mount.
-  *   Used for encryption in non-interactive environments.
-- *   The idea behind xgetpass() is stolen from GnuPG, v.1.0.3.
-  */
- 
- #define LOOPMAJOR	7
-@@ -24,12 +23,16 @@
+--- ./mount/lomount.c.orig	2004-12-30 18:03:18.851539264 +0100
++++ ./mount/lomount.c	2004-12-30 18:17:14.617483528 +0100
+@@ -11,12 +11,16 @@
  #include <ctype.h>
  #include <fcntl.h>
  #include <errno.h>
@@ -26,15 +17,15 @@ diff -dur util-linux-2.12h/mount/lomount.c util-linux-2.12h-patch/mount/lomount.
  
  #include "loop.h"
  #include "lomount.h"
-@@ -38,6 +41,7 @@
- 
+@@ -26,6 +30,7 @@
  extern int verbose;
+ extern char *progname;
  extern char *xstrdup (const char *s);	/* not: #include "sundries.h" */
 +extern void *xmalloc (size_t size);		/* idem */
  extern void error (const char *fmt, ...);	/* idem */
  
  #ifdef LOOP_SET_FD
-@@ -198,43 +202,113 @@
+@@ -190,44 +195,115 @@
  	return 0;
  }
  
@@ -105,16 +96,17 @@ diff -dur util-linux-2.12h/mount/lomount.c util-linux-2.12h-patch/mount/lomount.
 +			sscanf(s, "min keysize : %d", &min_size);
 +			sscanf(s, "max keysize : %d", &max_size);
  		}
--		if (read(pfd, pass+i, 1) != 1 || pass[i] == '\n')
+-		if (read(pfd, pass+i, 1) != 1 ||
+-		    pass[i] == '\n' || pass[i] == 0)
 -			break;
  	}
+ 
 -	if (pass == NULL)
 -		return "";
--	else {
--		pass[i] = 0;
--		return pass;
 +	fclose(fp);
-+
+ 
+-	pass[i] = 0;
+-	return pass;
 +	if (!cipher_found) {
 +		fprintf(stderr, _("Invalid cipher \"%s\"\n"), cipher_name);
 +		retval = 0;
@@ -125,7 +117,8 @@ diff -dur util-linux-2.12h/mount/lomount.c util-linux-2.12h-patch/mount/lomount.
 +			loopinfo64->lo_encrypt_key_size, cipher_name);
 +		retval = 0;
 +		goto end;
- 	}
++	}
++
 +
 +	retval = 1;
 +end:
@@ -179,7 +172,7 @@ diff -dur util-linux-2.12h/mount/lomount.c util-linux-2.12h-patch/mount/lomount.
  }
  
  static int
-@@ -275,9 +349,40 @@
+@@ -268,9 +344,40 @@
  		if (digits_only(encryption)) {
  			loopinfo64.lo_encrypt_type = atoi(encryption);
  		} else {
@@ -221,19 +214,16 @@ diff -dur util-linux-2.12h/mount/lomount.c util-linux-2.12h-patch/mount/lomount.
  		}
  	}
  
-@@ -308,10 +413,26 @@
- 			strlen(loopinfo64.lo_encrypt_key);
- 		break;
+@@ -297,7 +404,27 @@
+ 		pass = getpass(_("Password: "));
+ 		goto gotpass;
  	default:
 -		pass = xgetpass(pfd, _("Password: "));
--		xstrncpy(loopinfo64.lo_encrypt_key, pass, LO_KEY_SIZE);
--		memset(pass, 0, strlen(pass));
--		loopinfo64.lo_encrypt_key_size = LO_KEY_SIZE;
-+ 		if (pfd == -1) {
-+ 			pass = getpass(_("Password: "));
-+ 			xstrncpy(loopinfo64.lo_encrypt_key, pass, LO_KEY_SIZE);
++		if (pfd == -1) {
++			pass = getpass(_("Password: "));
++			xstrncpy(loopinfo64.lo_encrypt_key, pass, LO_KEY_SIZE);
 +			memset(pass, 0, strlen(pass));
-+ 		} else {
++		} else {
 + 			/* If we're reading from an extenral program,	*
 + 			 * odds are good that a SIGCHLD will interrupt	*
 + 			 * this read(), and ruin our whole day. So we	*
@@ -249,10 +239,11 @@ diff -dur util-linux-2.12h/mount/lomount.c util-linux-2.12h-patch/mount/lomount.
 + 			}
 + 			sigprocmask(SIG_SETMASK, &oss, NULL);
 + 		}
- 	}
- 
- 	if (ioctl(fd, LOOP_SET_FD, ffd) < 0) {
-@@ -325,20 +446,44 @@
++		break;
+ 	gotpass:
+ 		memset(loopinfo64.lo_encrypt_key, 0, LO_KEY_SIZE);
+ 		xstrncpy(loopinfo64.lo_encrypt_key, pass, LO_KEY_SIZE);
+@@ -316,20 +443,45 @@
  		struct loop_info loopinfo;
  		int errsv = errno;
  
@@ -265,6 +256,7 @@ diff -dur util-linux-2.12h/mount/lomount.c util-linux-2.12h-patch/mount/lomount.
 + 			}
 + 
 +
++ 		i = loop_info64_to_old(&loopinfo64, &loopinfo);
  		i = loop_info64_to_old(&loopinfo64, &loopinfo);
  		if (i) {
  			errno = errsv;
@@ -298,7 +290,7 @@ diff -dur util-linux-2.12h/mount/lomount.c util-linux-2.12h-patch/mount/lomount.
  		ioctl (fd, LOOP_CLR_FD, 0);
  		close (fd);
  		return 1;
-@@ -420,6 +563,22 @@
+@@ -412,6 +564,22 @@
  	exit(1);
  }
  
@@ -321,22 +313,19 @@ diff -dur util-linux-2.12h/mount/lomount.c util-linux-2.12h-patch/mount/lomount.
  char *
  xstrdup (const char *s) {
  	char *t;
-Nur in util-linux-2.12h-patch/mount: lomount.c~.
-diff -dur util-linux-2.12h/mount/mount.8 util-linux-2.12h-patch/mount/mount.8
---- util-linux-2.12h/mount/mount.8	2004-09-19 20:00:49.000000000 +0000
-+++ util-linux-2.12h-patch/mount/mount.8	2004-10-23 03:36:52.385724832 +0000
-@@ -1759,6 +1759,11 @@
- .BR loop ", " offset " and " encryption ,
- that are really options to
- .BR losetup (8).
+--- ./mount/mount.8.orig	2004-12-30 18:03:25.645506424 +0100
++++ ./mount/mount.8	2004-12-30 18:18:04.469904808 +0100
+@@ -1847,6 +1847,10 @@
+ .BR \%losetup (8).
+ (These options can be used in addition to those specific
+ to the filesystem type.)
 +You can also use the
 +.BR keygen
 +option to have mount call an external program from, which it will read the
 +encryption key. Arguments to this program can be given, separated by semicolons.
-+
+ 
  If no explicit loop device is mentioned
  (but just an option `\fB\-o loop\fP' is given), then
- .B mount
 diff -dur util-linux-2.12h/mount/mount.c util-linux-2.12h-patch/mount/mount.c
 --- util-linux-2.12h/mount/mount.c	2004-10-13 20:54:39.000000000 +0000
 +++ util-linux-2.12h-patch/mount/mount.c	2004-10-23 03:36:52.386724680 +0000

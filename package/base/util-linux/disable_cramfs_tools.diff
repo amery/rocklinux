@@ -1,6 +1,5 @@
-diff -dur util-linux-2.12h/disk-utils/Makefile util-linux-2.12h-patch/disk-utils/Makefile
---- util-linux-2.12h/disk-utils/Makefile	2002-11-02 13:52:47.000000000 +0000
-+++ util-linux-2.12h-patch/disk-utils/Makefile	2004-10-23 03:13:08.329214328 +0000
+--- ./disk-utils/Makefile.orig	2004-12-30 17:55:07.774194368 +0100
++++ ./disk-utils/Makefile	2004-12-30 17:56:04.443579312 +0100
 @@ -20,7 +20,7 @@
  
  ETC=	fdprm
@@ -10,7 +9,7 @@ diff -dur util-linux-2.12h/disk-utils/Makefile util-linux-2.12h-patch/disk-utils
  
  ifneq "$(HAVE_FDUTILS)" "yes"
  USRBIN:=$(USRBIN) setfdprm
-@@ -32,22 +32,8 @@
+@@ -32,26 +32,12 @@
  MAN8:=$(MAN8) raw.8
  endif
  
@@ -18,6 +17,10 @@ diff -dur util-linux-2.12h/disk-utils/Makefile util-linux-2.12h-patch/disk-utils
 -SBIN:=$(SBIN) fsck.cramfs mkfs.cramfs
 -endif
 -
+ ifeq "$(HAVE_UUID)" "yes"
+ MKSWAP_LIBS=-luuid
+ endif
+ 
  all: $(SBIN) $(USRBIN)
  
 -fsck.cramfs: fsck.cramfs.o
@@ -32,7 +35,4 @@ diff -dur util-linux-2.12h/disk-utils/Makefile util-linux-2.12h-patch/disk-utils
 -
  fsck.minix.o mkfs.minix.o: bitops.h minix.h
  
- install: all
-Nur in util-linux-2.12h-patch/disk-utils: Makefile~.
-Nur in util-linux-2.12h-patch/: Makefile~.
-Nur in util-linux-2.12h-patch/: Makefile.rej.
+ mkswap: mkswap.o $(LIB)/xstrncpy.o

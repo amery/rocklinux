@@ -1,0 +1,10 @@
+--- ./libs/libmythtv/channel.cpp.orig	2005-01-08 01:54:41.000000000 +0100
++++ ./libs/libmythtv/channel.cpp	2005-01-08 01:55:01.000000000 +0100
+@@ -2,6 +2,7 @@
+ #include <cstdlib>
+ #include <unistd.h>
+ #include <fcntl.h>
++#include <errno.h>
+ #include <sys/ioctl.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>

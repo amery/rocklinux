@@ -1,0 +1,16 @@
+diff -dur LVM2.2.00.25/lib/device/dev-io.c src.lvm2.1104330759.23110.469340415/LVM2.2.00.25/lib/device/dev-io.c
+--- LVM2.2.00.25/lib/device/dev-io.c	2004-09-14 22:23:23.000000000 +0000
++++ src.lvm2.1104330759.23110.469340415/LVM2.2.00.25/lib/device/dev-io.c	2004-12-29 14:42:55.934962456 +0000
+@@ -31,7 +31,11 @@
+ #  define u64 uint64_t		/* Missing without __KERNEL__ */
+ #  undef WNOHANG		/* Avoid redefinition */
+ #  undef WUNTRACED		/* Avoid redefinition */
+-#  include <linux/fs.h>		/* For block ioctl definitions */
++/* copied from: <linux/fs.h> */	/* For block ioctl definitions */
++#  define BLKBSZGET  _IOR(0x12,112,size_t)
++#  define BLKSSZGET  _IO(0x12,104)/* get block device sector size */
++#  define BLKFLSBUF  _IO(0x12,97)	/* flush buffer cache */
++
+ #  define BLKSIZE_SHIFT SECTOR_SHIFT
+ #  ifndef BLKGETSIZE64		/* fs.h out-of-date */
+ #    define BLKGETSIZE64 _IOR(0x12, 114, size_t)

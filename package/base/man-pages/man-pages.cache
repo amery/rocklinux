@@ -20,15 +20,66 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1096013531 Fri Sep 24 10:12:11 2004
+[TIMESTAMP] 1097406252 Sun Oct 10 13:04:12 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 7-man-pages.log
+[LOGS] 7-man-pages.err
 
-[BUILDTIME] 15606 (7)
-[SIZE] 3.97 MB, 1571 files
+[BUILDTIME] 30494 (7)
+[SIZE] 10.70 MB, 2982 files
 
-[DEP] 00-dirtree bash2 bzip2 coreutils findutils gawk gcc34 grep make
-[DEP] patch sed sysfiles tar
+[DEP] 00-dirtree attr bash2 bzip2 coreutils diffutils findutils gawk
+[DEP] gcc34 grep libcap make quota sed shadow sysfiles tar
+
+[7-ERROR] Fixing ownership and permissions ...
+[7-ERROR] Removing CVS and .svn directories ...
+[7-ERROR] Changeing into /ROCK/src.man-pages.1097405935.28819.4240703883/man-pages-1.67 ...
+[7-ERROR] Creating /usr/<..> if required ...
+[7-ERROR] mkdir not_installed
+[7-ERROR] for i in man?/*; do \
+[7-ERROR] 	if [ /usr/share/man/"$i" -nt "$i" ]; then \
+[7-ERROR] 		cmp -s /usr/share/man/"$i" "$i" > /dev/null 2>&1; \
+[7-ERROR] 		if [ "$?" != 0 ]; then mv "$i" not_installed; fi; \
+[7-ERROR] 	fi; \
+[7-ERROR] done
+[7-ERROR] for i in man? man??; do \
+[7-ERROR] 	install -d -m 755 /usr/share/man/"$i"; \
+[7-ERROR] 	install -m 644 "$i"/* /usr/share/man/"$i"; \
+[7-ERROR] done; \
+[7-ERROR] rm -f /usr/share/man/man1/README /usr/share/man/man1/README.gz /usr/share/man/man1/README.bz2
+[7-ERROR] Hook preconf is still marked as dirty ...
+[7-ERROR] Hook premake is still marked as dirty ...
+[7-ERROR] Hook inmake is still marked as dirty ...
+[7-ERROR] Hook postmake is still marked as dirty ...
+[7-ERROR] Trying to copy the default documentation ...
+[7-ERROR] `POSIX-COPYRIGHT' -> `/usr/share/doc/man-pages/POSIX-COPYRIGHT'
+[7-ERROR] `README' -> `/usr/share/doc/man-pages/README'
+[7-ERROR] `man-pages-1.67.lsm' -> `/usr/share/doc/man-pages/man-pages-1.67.lsm'
+[7-ERROR] Creating file list and doing final adaptions ... 
+[7-ERROR] Processing static lib corrections ...
+[7-ERROR] Verifing the .la files ...
+[7-ERROR] Found 2980 files for this package.
+[7-ERROR] Applying package split: 40 man-pages:dev (/lib/.*\.(la|a|o)$|/include/)
+[7-ERROR] Applying package split: 42 man-pages:dev /pkgconfig/
+[7-ERROR] Applying package split: 60 man-pages:doc /share/doc/
+[7-ERROR] Calculating package dependencies ...
+[7-ERROR] <man-pages> Creating flist file ...
+[7-ERROR] <man-pages> Creating package dependencies file ...
+[7-ERROR] <man-pages> Creating md5sum and cksum files ...
+[7-ERROR] <man-pages> Creating package description ...
+[7-ERROR] <man-pages:doc> Creating flist file ...
+[7-ERROR] <man-pages:doc> Creating package dependencies file ...
+[7-ERROR] <man-pages:doc> Creating md5sum and cksum files ...
+[7-ERROR] <man-pages:doc> Creating package description ...
+[7-ERROR] Making post-install adaptions.
+[7-ERROR] Found shared files with other packages:
+[7-ERROR] usr/share/man/man2/capset.2: libcap man-pages
+[7-ERROR] usr/share/man/man2/getxattr.2: attr man-pages
+[7-ERROR] usr/share/man/man2/listxattr.2: attr man-pages
+[7-ERROR] usr/share/man/man2/removexattr.2: attr man-pages
+[7-ERROR] usr/share/man/man2/setxattr.2: attr man-pages
+[7-ERROR] --- BUILD ERROR ---
+[7-ERROR] removed `/var/adm/logs/7-man-pages.log'
+[7-ERROR] Finished building man-pages=man-pages.
 

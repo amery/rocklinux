@@ -58,4 +58,5 @@
 [D] 1467293591 QtCurve-0.22.tar.gz http://www.cpdrummond.freeuk.com/
 
 [O] . $base/package/*/*/kde-32.conf
+[O] postmake="install -m 644 $confdir/QtCurve.kcsrc $root/$ROCKCFG_PKG_KDE32_CORE_PREFIX/share/apps/kdisplay/color-schemes/"
 

@@ -1,0 +1,32 @@
+--- joystick-1.2.14/Makefile	1999-03-05 20:37:56.000000000 +0100
++++ joystick-1.2.14/Makefile	2005-03-04 10:10:03.510668744 +0100
+@@ -28,6 +28,7 @@
+ CC		= gcc
+ 
+ CPPFLAGS	= -I.#						# for joystick.h
++CPPFLAGS	+= -I /usr/include/linux24
+ 
+ CFLAGS		= -O2 -Wall -pipe -m486 -fomit-frame-pointer#	# i386
+ # CFLAGS	= -O2 -Wall -pipe -m68020 -ffixed-a2#		# m68k
+@@ -60,16 +61,13 @@
+ JOYOPRE		:= $(shell if [ -f .prerelease ]; then cat .prerelease; else echo 0; fi)
+ JOYPRE		:= $(shell expr $(JOYOPRE) + 1)
+ 
+-compile: joystick.o $(DRIVERS) $(PROGRAMS)
++compile: $(PROGRAMS)
+ 
+ install: compile
+-	mkdir -p $(MODDIR)
+-	rm -f $(MODDIR)/joy*.o
+-	cp joy*.o $(MODDIR)
+-	/sbin/depmod -a
+-	install -m 644 joystick.h /usr/include/linux
+-	install -m 755 jscal /usr/local/bin
+-	install -m 755 jstest /usr/local/bin
++	install -m 755 jscal /usr/bin
++	install -m 755 jstest /usr/bin
++	install -m 755 jsattach /usr/bin
++	cp *.txt /usr/share/doc/joystick/
+ 
+ joystick.o: joystick.c joystick.h
+ 	$(CC) $(CFLAGS) $(CPPFLAGS) $(MODFLAGS) -c joystick.c -o joystick.o

@@ -30,6 +30,13 @@ then
 
 	pkgfork linux ${ROCKCFG_PKG_LINUX_HEADERS}-header stages 01-------9
 
+	if [ "$ROCKCFG_PKG_LINUX_HEADERS" = linux24 ]; then
+		pkgfork linux linux26-header stages ---3-----9
+	fi
+	if [ "$ROCKCFG_PKG_LINUX_HEADERS" = linux26 ]; then
+		pkgfork linux linux24-header stages ---3-----9
+	fi
+
 	bool 'Place linux24 sources in /usr/src' \
 		ROCKCFG_PKG_LINUX_SRC24 0
 

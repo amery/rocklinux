@@ -35,8 +35,7 @@ fi
 
 # Enable cross compiler if a 64bit kernel is requested
 if [ "$ROCKCFG_SPARC_64BIT_KERNEL" = 1 ] ; then
-  ROCKCFGSET_PKG_CROSSCC=1
-  ROCKCFGSET_PKG_CROSSCC_ARCH_TARGET="sparc64-linux-gnu"
+  ROCKCFGSET_PKG_CROSSTOOL_sparc64=1
 fi 
 
 # Now the optimisations that result from the options above

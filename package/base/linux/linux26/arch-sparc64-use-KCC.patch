@@ -1,0 +1,11 @@
+--- ./arch/sparc64/Makefile.orig	2004-09-18 07:51:04.000000000 +0200
++++ ./arch/sparc64/Makefile	2004-09-18 07:51:32.000000000 +0200
+@@ -12,7 +12,7 @@
+ 
+ AFLAGS_vmlinux.lds.o += -Usparc
+ 
+-CC		:= $(shell if $(CC) -m64 -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then echo $(CC); else echo sparc64-linux-gcc; fi )
++CC		:= $(KCC)
+ 
+ NEW_GCC := $(shell if $(CC) -m64 -mcmodel=medlow -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then echo y; else echo n; fi; )
+ NEW_GAS := $(shell if $(LD) -V 2>&1 | grep 'elf64_sparc' > /dev/null; then echo y; else echo n; fi)

@@ -1,0 +1,28 @@
+--- ./file_media.c.orig	2004-11-26 17:40:27.315376952 +0100
++++ ./file_media.c	2004-11-26 17:41:09.681936256 +0100
+@@ -40,6 +40,11 @@
+ 
+ #ifdef __linux__
+ #include <sys/ioctl.h>
++/* for linux-2.6.9, from linux/types.h */
++#  include <asm/types.h>
++#  ifndef pgoff_t
++#  define pgoff_t unsigned long
++#  endif
+ #include <linux/fs.h>
+ #include <linux/hdreg.h>
+ #include <sys/stat.h>
+--- ./pdisk.c.orig	2004-11-26 17:39:02.005346048 +0100
++++ ./pdisk.c	2004-11-26 17:39:53.121575200 +0100
+@@ -51,6 +51,11 @@
+ 
+ #ifdef __linux__
+ #include <sys/ioctl.h>
++/* for linux-2.6.9, from linux/types.h */
++#  include <asm/types.h>
++#  ifndef pgoff_t
++#  define pgoff_t unsigned long
++#  endif
+ #include <linux/fs.h>
+ #include <linux/hdreg.h>
+ #endif

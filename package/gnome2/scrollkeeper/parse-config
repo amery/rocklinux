@@ -1,0 +1,4 @@
+
+# don't package the output of scrollkeeper-update
+var_append flistdel "|" "var/scrollkeeper/.*"
+

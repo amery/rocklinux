@@ -59,10 +59,9 @@ echo_header "Reference build finished."
 
 cat <<- EOT > build/${ROCKCFG_ID}/ROCK/result/copy-cache.sh
 	#!/bin/sh
-	cd $base/build/${ROCKCFG_ID}/ROCK/result
-	find package -type f | while read fn
-	do [ -f ../../../\${fn%.cache}.desc ] && cp -v \$fn ../../../\$fn; done
-	cd ../../..; ./scripts/Create-DepDB > scripts/dep_db.txt
+	find package -type f -name '*.cache' | while read fn
+	do [ -f \$1/\${fn%.cache}.desc ] && cp -v \$fn \$1/\$fn; done
+	cd \$1; ./scripts/Create-DepDB > scripts/dep_db.txt
 EOT
 chmod +x build/${ROCKCFG_ID}/ROCK/result/copy-cache.sh
 

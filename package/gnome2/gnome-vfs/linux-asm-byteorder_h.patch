@@ -1,0 +1,22 @@
+--- gnome-vfs-2.6.1.1/libgnomevfs/gnome-vfs-cdrom.c	2004-02-14 12:40:14.000000000 +0000
++++ gnome-vfs-2.6.1.1/libgnomevfs/gnome-vfs-cdrom.c	2004-10-25 00:12:11.179072200 +0000
+@@ -36,6 +36,19 @@
+ #include <libgnomevfs/gnome-vfs-i18n.h>
+ 
+ #ifdef __linux__
++
++#ifdef __CHECKER__
++#define __bitwise __attribute__((bitwise))
++#else
++#define __bitwise
++#endif
++#define __le16 __bitwise __u16
++#define __be16 __bitwise __u16
++#define __le32 __bitwise __u32
++#define __be32 __bitwise __u32
++#define __le64 __bitwise __u64
++#define __be64 __bitwise __u64
++
+ #include <linux/cdrom.h>
+ #endif
+ 

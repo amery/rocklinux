@@ -24,7 +24,7 @@
 
 if [ "$1" == -help ] ; then
 	echo
-	echo "Usage: ./scripts/Create-SrcTar"
+	echo "Usage: ./scripts/Create-SrcTar [tar-bz2-filename]"
 	echo
 	echo " Create a .tar.bz2 file containing the ROCK Linux sources. This script is"
 	echo " used by the ROCK Linux core developers when releasing snapshots or releases."
@@ -33,28 +33,34 @@ fi
 
 eval "`grep -A 10 '\[BEGIN\]' scripts/parse-config | grep -B 10 '\[END\]'`"
 
+filename="$base/rock-src-$rockver.tar.bz2"
+[ -z "$1" ] || filename="$1"
+
+topld=$( basename $filename )
+topld=${topld%.tar.bz2}
+
 echo -n 'Creating source tar ... '
 
 # Create temp source base dir
 #
 src="`mktemp -d -p $PWD src.srctar.XXXXXXXXXX`"
 base=${base:-${PWD}}
-rm -rf $src/rock-src-$rockver
-mkdir -p $src/rock-src-$rockver
+rm -rf $src/$topld
+mkdir -p $src/$topld
 #
 for x in scripts target misc package architecture Documentation
 do
-	ln -s ../../$x $src/rock-src-$rockver/$x
+	ln -s ../../$x $src/$topld/$x
 done
 
 # Create tar file
 #
 cd $src
 tar --use-compress-program=bzip2 --owner root --group root \
-    --exclude .svn --exclude CVS -cf ${1:-${base}/rock-src-$rockver.tar.bz2} rock-src-$rockver/*/*
+    --exclude .svn --exclude CVS -cf $filename $topld/*/*
 # Done.
 #
 cd $base
 rm -rf $src/
-du -sh ${1:-rock-src-$rockver.tar.bz2} | tr '\t' ' '
+du -sh $filename | tr '\t' ' '
 

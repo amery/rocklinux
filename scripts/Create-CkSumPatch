@@ -32,14 +32,24 @@ while [ "$1" ]; do
 	-repository) files="$files `echo package/$2/*/*.desc`" ; shift ; shift ;;
 	-*)
 	    echo "Usage:"
-	    echo "./scripts/Create-CkSumPatch [options] <package-name>"
-	    echo "./scripts/Create-CkSumPatch [options] <target-name>"
-	    echo "./scripts/Create-CkSumPatch [options] <file-path>"
-	    echo "./scripts/Create-CkSumPatch [options] -repository <repo-name>"
-	    echo " "
+	    echo "./scripts/Create-CkSumPatch [options] <package-name(s)> <target-file(s)> \\"
+	    echo "                            <desc-file(s)> -repository <repository>"
+	    echo 
+	    echo " Compute checksums for (source) files mentioned in .desc files and output"
+	    echo " a patch which can be applied to the ROCK sources to update the checksums."
+	    echo " Only checksums for files that have the checksum set to 0 will be computed."	    	
+	    echo " Process single packages, a single repository, single .desc files or files"
+	    echo " from a target directory (e.g. target/bootdisk/download.txt)."
+	    echo
 	    echo "Options:"
-	    echo "    -override        Create new cksum if old one should be valid."
-	    echo "    -help            This."
+	    echo "	-override	create new checksums even if old ones are not equal 0;"
+	    echo "			checksums set to X are not changed anyhow"			  	
+	    echo "	-help		show this help text"
+	    echo
+	    echo "Example: create a cksum patch and apply it"
+	    echo " ./scripts/Create-CkSumPatch gcc -repository stf target/bootdisk/download.txt \\"
+	    echo " package/base/dietlibc/dietlibc.desc | patch -p0" 	
+	    echo
 	    exit
 	    ;;
 	target/*)    files="$files $1" ; shift ;;
@@ -101,7 +111,7 @@ cksum_file() {
     rm -f /tmp/$$
 }
 
-echo "Creating cksum.patch ..." >&2
+echo "Creating checksum patch ..." >&2
 
 for f in $files; do
     cksum_file $f

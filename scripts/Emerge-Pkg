@@ -46,11 +46,27 @@ help_msg() {
 	echo "Usage: ./scripts/Emerge-Pkg" \
 	             "[ -cfg <config> ] [ -dep ] [ -dry-run ]"
 	echo "$spacer [ -noupdate ] [ -ignore-chksum ] [ -norebuild ]"
-	echo "$spacer [ -repository repository-name ] [ -debug ]"
+	echo "$spacer [ -repository <repository-name> ] [ -debug ]"
 	echo "$spacer [ pkg-name(s) ]"
-	echo "pkg-name(s) are only optional if a repository is specified!"
 	echo
-	echo "Type './scripts/Help Emerge-Pkg' for details."
+	echo " Compile/build single packages or whole repositories on the host system. By"
+	echo " default only new/updated packages will be built. Modified files of packages"
+	echo " (e.g. configuration files) to build will be backed up before and restored"
+	echo " after each build."
+	echo
+	echo "	-cfg <config>	the configuration to use"
+	echo "	-dep		also build packages specified packages depend on" 
+	echo "	-dry-run	don't actually build packages; just print what"
+	echo "			would happen"
+	echo "	-noupdate	don't backup/restore modified package files"
+	echo "	-ignore-chksum	ignore checksums on package source directories (i.e."
+	echo "			package/base/*/) when looking for updated packages"
+	echo "	-norebuild	don't build a package if its previous build failed"	
+	echo "	-repository <repository-name>"
+	echo "			build all packages in the specified repository"
+	echo "	-debug		print various debug information"
+	echo
+	echo " pkg-name(s) are only optional if a repository is specified!"
 	echo
 }
 

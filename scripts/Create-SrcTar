@@ -22,6 +22,15 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
+if [ $1 == -help ] ; then
+	echo
+	echo "Usage: ./scripts/Create-SrcTar"
+	echo
+	echo " Create a .tar.bz2 file containing the ROCK Linux sources. This script is"
+	echo " used by the ROCK Linux core developers when releasing snapshots or releases."
+	echo ; exit 
+fi
+
 eval "`grep -A 10 '\[BEGIN\]' scripts/parse-config | grep -B 10 '\[END\]'`"
 
 echo -n 'Creating source tar ... '

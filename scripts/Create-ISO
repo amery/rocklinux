@@ -23,8 +23,21 @@ eval `grep rockver scripts/parse-config`
 
 if [ $# -eq 0 ] ; then
 	echo
-	echo "Usage: $0 [ -size MB ] [ -source ] [ -mkdebug ] [ -nomd5 ] ISO-Prefix \\"
-	echo "       ${0//?/ } Config [ Config [ .. ] ]"
+	echo "Usage: $0 [ -size <MB> ] [ -source ] [ -mkdebug ] [ -nomd5 ] \\"
+	echo "       ${0//?/ } <ISO-Prefix> <Config> [ <Config> [ .. ] ]"
+	echo
+	echo " Create ISO images ready to burn on CD/DVD from one or more target builds." 
+	echo " Targets have to be built using ./scripts/Build-Target before you can create"
+	echo " ISO images from them."
+	echo
+	echo "	-size  <MB>	limit the size of images to <MB> MB; default is 600"
+	echo "	-source		include package sources on the images"
+	echo "	-mkdebug	create a small debug script for every image"
+	echo "	-nomd5		don't add md5 checksums to images"
+	echo
+	echo "	<ISO-Prefix> 	the name of the resulting images"
+	echo "	<Config>  	the target builds to include; the first has to be a"
+	echo "			bootdisk target for the first image to be bootable" 
 	echo
 	echo "E.g.: $0 mycdset install generic"
 	echo
@@ -282,7 +295,9 @@ if [ "\$1" -a -z "\${1//[0-9]/}" ] ; then
 	losetup /dev/loop/\$1 ${isoprefix}_cd$x.iso
 	[ "\$2" ] && mount /dev/loop/\$1 \$2
 else
-	echo "Usage: \$0 loopback-dev-nr [ mount-point ]"
+	echo "Usage: \$0 <loopback-dev-nr> [ <mount-point> ]"
+	echo " Mount the corresponding ISO image at the given mount point using the given"
+	echo " loopback device. If no mount point is given, the mount step is skipped."
 	exit 1
 fi
 EOT

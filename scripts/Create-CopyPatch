@@ -45,6 +45,25 @@ EOT
 
 echo "Creating copy.patch (this may take a while) ..." >&2
 
+if [ $1 == -help ] ; then
+	echo 
+	echo "Usage: ./scripts/Create-CopyPatch [ <directories> ]"
+	echo
+	echo " Update copyright notes in files that already contain such a note."
+	echo " The first and last line of ROCK copyright notes are marked by the"
+	echo " --- ROCK-COPYRIGHT-NOTE-BEGIN ---"
+	echo " and"
+	echo " --- ROCK-COPYRIGHT-NOTE-END ---"
+	echo " respectively."
+	echo " Files that contain the line"
+	echo " --- NO-ROCK-COPYRIGHT-NOTE ---"
+	echo " are not updated."
+	echo " If no directories are given, process Documentation, architecture,"
+	echo " misc, package, scripts and target."  
+	echo
+	exit
+fi
+
 [ $# = 0 ] && set Documentation/. architecture/. misc/. \
                   package/. scripts/. target/.
 

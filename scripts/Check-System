@@ -23,7 +23,12 @@
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
 if [ "$1" ] ; then
-	echo "Usage: $0" ; exit 1
+	echo "Usage: $0"
+	echo
+	echo " Check the build system for and warn about various conditions that will likely"
+	echo " cause ROCK to not work properly."
+	echo
+	exit 1
 fi
 
 found_error=0

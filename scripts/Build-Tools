@@ -31,8 +31,15 @@ while [ "$1" ] ; do
 	-cleanup)  cleanup=1 ; shift ;;
 	-cfg)      config=$2 ; shift ; shift ;;
 	-[0-9])    options="$options $1" ; stagelevel=${1#-} ; shift ;;
-	*)         echo "Usage: $0 [ -cfg config ] [ -0 | -9 ] \\"
-	           echo "       ${0//?/ } [ -cleanup ]" ; exit 1 ;;
+	*)         echo ; echo "Usage: $0 [ -cfg <config> ] [ -0 | -1 | ... |  -9 ] \\"
+	           echo "       ${0//?/ } [ -cleanup ]"
+                   echo 
+		   echo " Create various helper applications needed by Build-Pkg and other scripts."
+		   echo
+		   echo "	-cfg <config>	the configuration to use"
+                   echo "	-0 to -9	set stagelevel"
+		   echo "	-cleanup	force a rebuild of files"
+	           echo ; exit 1 ;;
     esac
 done
 

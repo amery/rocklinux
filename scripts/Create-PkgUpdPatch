@@ -26,12 +26,14 @@ if [ "$1" != "${1#-}" ] ; then
 	cat << EOT >&2
 
 $0:
-Script for automatically creating package-update patches
+Automatically create package-update patches.
 
 Input format (e.g.): automake-1.5, bind-9.2.0rc3, binutils-2.11.90.0.31,
                      gettext-0.10.40, gnome-applets-1.4.0.4
 
 Output format: unified diff for the .desc files
+
+Type ./scripts/Help Create-PkgUpdPatch for details."
 
 EOT
 	exit 1

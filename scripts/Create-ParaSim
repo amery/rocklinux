@@ -30,8 +30,18 @@ while [ "$1" ] ; do
                 -cfg)   config=$2 ; shift ; shift ;;
                 -jobs)  jobs=$2   ; shift ; shift ;;
                 -x11)   x11=1     ; shift ;;
-                *)      echo "Usage: $0 [ -cfg config ] [ -x11 ]" \
-			     "[ -jobs 1,4,8 ]"
+                *)      echo "Usage: $0 [ -cfg <config> ] [ -x11 ]" \
+			     "[ -jobs <N>[,<N>[,...]]]"
+			echo
+			echo " \"Simulate\" a parallel build and output a graph showing how many parallel"
+			echo " jobs are available for building in which phase of the build."
+			echo
+			echo "	-cfg <config>		the configuration to use"
+			echo "	-x11			graph the results with 'gnuplot'"
+			echo "	-jobs <N>[,<N>[,...]]]  compare the reference build to cluster builds"
+			echo "				with N nodes"
+			echo
+			echo " For details, see Documentation/BUILD-CLUSTER."
 			exit 1 ;;
         esac
 done    

@@ -27,7 +27,10 @@ temp="`mktemp`"
 
 if [ -z "$1" ] ; then
 	echo
-	echo "Usage: $0 {command} {file1} [ {file2} [ .. ] ]"
+	echo "Usage: $0 <command> <file1> [ <file2> [ .. ] ]"
+	echo
+	echo "Evaluate the command with each file as input, and return differences"
+	echo "between original files and evaluation output."
 	echo
 	echo "Example: ./scripts/Create-AutoPatch \\"
 	echo "         'sed s,clifford@clifford.at,clifford@rocklinux.org,' \\"

@@ -52,7 +52,18 @@ while [ "$1" ] ; do
 	    *)
 		echo
 		echo "Usage: $0 [ -delete | -oldconfig ] [ -cfg <config> ]"
+		echo " Create and modify build configurations for the other"
+		echo " scripts, e.g. Download, Build-Target, and Emerge-Pkg."
 		echo
+		echo "	-cfg <config>	use <config> as the configuration name. If this option"
+		echo "			is not set the name 'default' is used. If no"
+		echo "			configuration by this name exists, one with default"
+		echo "			settings is created."
+		echo "	-delete		delete the specified configuration"
+		echo "	-oldconfig	run without a menu-based interface; changes to settings"
+		echo "			in configuration files have to be made manually before"
+		echo "			./scripts/Config recreates the whole configuration"
+		echo  
 		echo "Other options:"
 		echo "	-profile	create a config.profile with profiling data"
 		echo "	-nobashmod	don't use the bash config helper plugin"

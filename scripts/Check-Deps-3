@@ -46,6 +46,8 @@ BEGIN {
 	if ( ! ARGV[3] ) {
 		print "Usage: ./scripts/Check-Dep-3 " \
 			"<stagelevel> <package-name> <pkg-list-file>";
+		print " Show packages in the package list file that depend on";
+		print " the given package, using dependencies from scripts/dep_db.txt.";
 		exit 1;
 	}
 

@@ -32,7 +32,17 @@ while [ "$1" ] ; do
 	    -ignore-chksum)
 		ignore_chksum=1 ; shift ;;
             *)
-                echo "Usage: $0 [ -cfg config ] [ -ignore-chksum ]" ; exit 1 ;;
+                echo ; echo "Usage: $0 [ -cfg <config> ] [ -ignore-chksum ]"
+		echo
+		echo " Create a list of packages which are active in the current configuration and"
+		echo " have changed since the binaries installed on the local system have been"
+		echo " generated. The compare is done using the package source checksums stored"
+		echo " in /var/adm/packages/<package-name>."
+		echo
+		echo "	-cfg <config>	only packages active in this configuration are checked"
+		echo "	-ignore-chksum	ignore checksums on package source directories when"
+		echo "			determining changed packages"
+		echo ; exit 1 ;;   
         esac
 done
 

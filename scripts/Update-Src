@@ -30,14 +30,15 @@ srcroot="rsync://www.rocklinux.org/rock-2.1"
 
 help_msg() {
 	echo
-	echo "$0 can be used to update the entire ROCK Linux tree"
-	echo "to the current development snapshot using 'rsync'."
+	echo "Usage: $0 [ -srcroot <URL> ]"
 	echo
-	echo "Warning: It may remove changes you have made!"
+	echo " Update the entire ROCK Linux tree to the current development snapshot using"
+	echo " 'rsync'. It does not update your tar balls, that is you still have to run"
+	echo " ./scripts/Download for updated packages."
 	echo
-	echo "Usage: $0 [ -srcroot URL ]"
+	echo " Warning: It will remove changes you have made to the source tree!"
 	echo
-	echo "The default for -srcroot is '$srcroot'."
+	echo " The default for -srcroot is '$srcroot'."
 	echo
 	exit 1
 }

@@ -40,6 +40,10 @@ if [ "$1" != "${1#-}" -o $# -eq 0 ] ; then
 	echo "Usage: $0 <package-names>"
 	echo "or     $0 -repository <repository-names>"
 	echo "or     $0 -all"
+	echo
+	echo " Do a few very simple tests to auto-detect errors in the package *.desc and"
+	echo " *.conf files."
+	echo " Run tests on single packages, repositories, or all packages."
 	exit 1
 fi
 

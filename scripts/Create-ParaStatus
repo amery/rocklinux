@@ -27,7 +27,14 @@ config=default
 while [ "$1" ] ; do
         case "$1" in
                 -cfg)   config=$2 ; shift ; shift ;;
-                *)      echo "Usage: $0 [ -cfg config ]" ; exit 1 ;;
+                *)      echo
+			echo "Usage: $0 [ -cfg <config> ]"
+			echo
+			echo " Show the current status of a parallel build."
+			echo
+			echo "	-cfg <config>	the configuration to use"
+			echo
+			exit 1 ;;
         esac
 done    
 

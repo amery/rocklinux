@@ -31,9 +31,22 @@ while [ "$1" ] ; do
 	    -ignore-chksum)
 		options="$options -ignore-chksum" ; shift ;;
             *)
-                echo "Usage: $0 [ -cfg config ] [ -ignore-chksum ] " ; exit 1 ;;
+		echo
+                echo "Usage: $0 [ -cfg config ] [ -ignore-chksum ] " 
+		echo
+		echo " Update (re-build) all packages on the local system for which newer versions"
+		echo " are available."
+		echo " Warning: this script is unusable at the moment and explicitly disabled!"
+		echo
+		echo "	-cfg config	the build configuration to use"
+		echo "	-ignore-chksum	ignore checksums on package source directories"
+		echo "			(e.g. package/base/glibc/) when looking for new packages"
+		echo
+		exit 1 ;;
         esac
 done
+
+exit 1
 
 . scripts/parse-config
 

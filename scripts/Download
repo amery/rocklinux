@@ -33,30 +33,67 @@ umask 022
 
 . scripts/functions
 
-if [ "$1" = '--help' ] ; then
+if [ "$1" = '-help' ] ; then
 	{ echo
 	echo "Usage:"
 	echo
-	echo " ./scripts/Download [options] [ Package(s) ]"
-	echo " ./scripts/Download [options] [ Desc file(s) ]"
-	echo " ./scripts/Download [options] -repository Repositories"
-	echo " ./scripts/Download [options] { -all | -required }"
+	echo " ./scripts/Download [ options ] [ <Package(s)> ]"
+	echo " ./scripts/Download [ options ] [ <Desc file(s)> ]"
+	echo " ./scripts/Download [ options ] -repository <Repositories>"
+	echo " ./scripts/Download [ options ] { -all | -required }"
+	echo 
+	echo " Download files required for given packages, package description files, package"
+	echo " repositories, or build configurations."
+ 	echo " On default, this script auto-detects the best ROCK Linux mirror."
+	echo " See '-mirror none' output for help on bypassing the official mirrors."
 	echo
-	echo " Where [options] is an alias for:"
-	echo "    [ -cfg <config> ] [ -nock ]  [ -alt-dir <AlternativeDirectory> ]"
-	echo "    [ -mirror <URL> | -check ]  [ -try-questionable ]  [ -notimeout ]"
-	echo "    [ -longtimeout ]  [ -curl-opt <curl-option>[:<curl-option>[:..]] ]"
+	echo "	-all		download all files for a build configuration"
+	echo "	-required	download only files for packages that will be built in"
+	echo "			the given configuration" 
+	echo
+	echo " Where [ options ] is an alias for:"
+	echo "    [ -cfg <config> ] [ -nock ] [ -alt-dir <AlternativeDirectory> ]"
+	echo "    [ -mirror <URL> | -check ] [ -try-questionable ]  [ -notimeout ]"
+	echo "    [ -longtimeout ] [ -curl-opt <curl-option>[:<curl-option>[:..]] ]"
 	echo "    [ -proxy <server>[:<port>] ] [ -proxy-auth <username>[:<password>] ]"
 	echo "    [ -copy ] [ -move ]"
 	echo
-	echo " On default, this script auto-detects the best ROCK Linux mirror."
+	echo "	-cfg <config>	download files for the given configuration"
+	echo "	-nock		skip checksum checks (don't use lightly)"
+	echo "	-alt-dir <AlternativeDirectory>"
+	echo "			check for files to download also in the given directory"
+	echo "	-mirror <URL>	set the download mirror to use"
+	echo "			Mirrors can also be local directories in the form"
+	echo "			of 'file:///<dir>'"
+	echo "	-check		check checksums only; don't download files"
+	echo "	-try-questionable	also try to download from URLs marked as"
+	echo "				questionable"
+	echo "	-notimeout	don't apply timeout settings to curl"
+	echo "	-longtimeout	apply long timeout settings"
+	echo " 			By default, timeouts for connection and speed-limit"
+	echo "			are set"
+	echo "	-curl-opt <curl-option>		pass option(s) to curl"
+	echo "	-proxy <server>[:<port>]"
+	echo "	-proxy-auth <username>[:<password>]" 
+	echo "			pass proxy and proxy authentication to curl"
+	echo " 			Warning: authentication can be seen with ps!"    
+	echo "	-copy		copy files from the old download directory layout,"
+	echo "			if existent"
+	echo "	-move		move files instead"
+	echo "			Default is to link files, if existent, from the old"
+	echo "			layout to the new one"
 	echo
-	echo " Mirrors can also be a local directories in the form of 'file:///<dir>'."
-	echo
-	echo " ./scripts/Download -mk-cksum Filename(s)"
+	echo " ./scripts/Download -mk-cksum <Filename(s)>"
 	echo " ./scripts/Download [ -list | -list-unknown | -list-missing | -list-cksums ]"
 	echo
-	echo "See '-mirror none' output for help on bypassing the official mirrors."
+	echo "	-mk-cksum <Filenames>	calculate checksums on files as used in package"
+	echo "				descriptions"
+	echo "	-list		all files a complete download directory would contain"
+	echo "	-list-cksums	as -list, with an checksum for each file"
+	echo "	-list-unknown	files in the download directory that are not in any"
+	echo "			package description, e.g. old files"
+	echo "	-list-missing	files in package descriptions that are not"
+	echo "			downloaded (yet)" 
 	echo ; } >&2
 	exit 1
 fi

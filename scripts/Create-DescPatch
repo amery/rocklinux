@@ -30,8 +30,16 @@ if [ "$1" = "-repository" ] ; then
 fi
 
 if [ "$1" != "${1#-}" -o $# -eq 0 ] ; then
-	echo "Usage: $0 <package-names>"
-	echo "or     $0 -repository <repository-names>"
+	echo
+	echo "Usage: $0 <package(s)>"
+	echo "or     $0 -repository <repositories>"
+	echo
+	echo " \"Normalize\" package .desc files for single packages or repositories:"
+	echo " group tags as described in Documentation/Developers/PKG-DESC-FORMAT,"
+	echo " and remove extra empty lines and commented out tags."
+	echo " The files are not modified directly, instead a patch is ouput that"
+	echo " can be used to apply changes."
+	echo 
 	exit 1
 fi
 

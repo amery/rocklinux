@@ -35,7 +35,22 @@ while [ "$1" ] ; do
 	    -nocheck)
 		nocheck=1   ; shift ;;
 	    -*)
-		echo "Usage: $0 [ -full ] [ -nocheck ] [ dir(s) ]"
+		echo "Usage: $0 [ -full ] [ -nocheck ] [ <dir(s)> ]"
+		echo
+		echo " Cleanup the build environment, deleting the directories src, src.*,"
+		echo " build/*/ROCK/src.* and various temporary/backup files."
+		echo " Also check for old liggering files."
+		echo " Without options, remove src and all src.* and build/*/ROCK/src.*"
+		echo " directories, and all temporary/backup files, and perform checks for old"
+		echo " liggering files."
+		echo " If directories are given, delete only them. Directories used by ROCK scripts"
+		echo " at the moment are recognized and not deleted."
+		echo
+		echo "	-full			delete full build directories, "
+		echo "				e.g. build/desktop-*"
+		echo "	-nocheck		don't delete temporary/backup files and don't"
+		echo "				check for old liggering files" 
+ 		echo
 		exit 1 ;;
 	    *)
 		break ;;

@@ -108,10 +108,47 @@ while [ "$1" ] ; do
 
 	    -*)
 x="${0//?/ }" ; x="${x#         }"
-echo "Usage: $0 [ -cfg config ] [ -repository repository ]  \\"
-echo "  $x [ -copydir copydir | -movedir movedir ] [ -repstat ]      \\"
-echo "  $x [ -stage stage ] [ -logdir logdir ] [ -[full|new]delete ] \\"
-echo "  $x [ -updated ] [ -showerr [ -showtree ] [ -showdepc ] | <package> ]"
+echo "Usage: $0 [ -newdelete ] [ -dry-run ]"
+echo "       $0 [ -repstat ]"
+echo "       $0 [ -[full]delete ] [ -remove ] <package(s)>"
+echo "       $0 [ -cfg <config> ] [ -dry-run ] \\"
+echo "  $x [ -repository <repositories> ] [ -copydir <copydir> ] \\" 
+echo "  $x [ -movedir <movedir> ] [ -logdir <logdir> ] \\"
+echo "  $x [ -stage <stage(s)> ] [ -[full]delete ] \\"
+echo "  $x [ -updated ] [ -showdepc ] [ -showerr [ -showtree ] ]"
+echo 
+echo " Create summaries of package builds, print statistics or schedule packages"
+echo " for a rebuild"
+echo
+echo "	-newdelete		schedule updated packages for a rebuild"
+echo "	-dry-run		don't delete anything; just print what"
+echo "				would happen"
+echo "	-repstat		print some build statistics on repositories"
+echo "	-delete			delete logs of failed builds"
+echo "				(for given packages)"
+echo "	-fulldelete		delete all build logs and log directory entries"
+echo "				(for given packages)"
+echo "	-remove			schedule given packages for a rebuild"
+echo "	-cfg <config>		check this target build for errors;"
+echo "				defaults to 'default'"
+echo "	-repository <repositories>	check only packages from the given"
+echo "					repositories"
+echo "	-copydir <copydir>	copy logs of failed builds to this directory"
+echo "	-movedir <movedir>	move logs of failed builds to this directory"
+echo "	-logdir <logdir>	the log directory to use; defaults to "
+echo "				build/<ROCKCFG-ID>/var/adm/logs"
+echo "	-stage <stage>		process package builds from the given stages;"
+echo "				defaults to '0123456789' (all stages)"
+echo "	-updated		process updated instead of failed packages"
+echo "	-showerr		show the last build log lines for each"
+echo "				processed package"
+echo "	-showtree		show a dependency tree"
+echo "	-showdepc		show the number of packages that depend on a"
+echo "				processed package"
+echo
+echo " If packages are given without additional options, logs of failed builds are"
+echo " opened with 'less'."
+echo
 		exit 1 ;;
 
 	    *)

@@ -1,0 +1,9 @@
+diff -Nur xc-vanilla/programs/Xserver/Xprint/etc/profile.d/Imakefile xc/programs/Xserver/Xprint/etc/profile.d/Imakefile
+--- xc-vanilla/programs/Xserver/Xprint/etc/profile.d/Imakefile	2004-10-05 22:36:18.508466048 +0200
++++ xc/programs/Xserver/Xprint/etc/profile.d/Imakefile	2004-10-06 14:57:25.016588936 +0200
+@@ -10,5 +10,4 @@
+ 
+ all::
+ 
+-InstallNamedProg(xprint.csh,xprint.csh,$(ETCDIR)/profile.d)
+ InstallNamedProg(xprint.sh,xprint.sh,$(ETCDIR)/profile.d)

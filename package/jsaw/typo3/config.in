@@ -1,0 +1,21 @@
+if pkgcheck typo3 X
+then
+	pkgfork typo3 typo3-src
+
+	menu_begin MENU_PKG_TYPO3 'TYPO3 Options'
+		bool 'Create dummy package (empty site)' \
+			ROCKCFG_PKG_TYPO3_DUMMY 0
+		[ "$ROCKCFG_PKG_TYPO3_DUMMY" = 1 ] && pkgfork typo3 typo3-dummy
+
+		bool 'Create quickstart package (tutorial site)' \
+			ROCKCFG_PKG_TYPO3_QUICKSTART 1
+		[ "$ROCKCFG_PKG_TYPO3_QUICKSTART" = 1 ] && pkgfork typo3 typo3-quickstart
+
+		bool 'Create test site package (advanced test site)' \
+			ROCKCFG_PKG_TYPO3_TESTSITE 0
+		[ "$ROCKCFG_PKG_TYPO3_TESTSITE" = 1 ] && pkgfork typo3 typo3-testsite
+	menu_end
+
+	pkgremove typo3
+fi
+

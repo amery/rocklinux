@@ -123,9 +123,9 @@ pkgloop() {
 		qdir="$base/build/$ROCKCFG_ID/ROCK/queue"
 		mkdir -p $qdir; rm -f $qdir/*
 
+
 		newqueue=1 ; printstatus=1 ; printstatus_counter=30
-		finished=0 ; trap 'rm -f $qdir/queue.txt ; exit 130' SIGINT
-		touch $qdir/queue.txt
+		finished=0 ; touch $qdir/queue.txt
 
 		if [ -z "$ROCKCFG_PARALLEL_ADDJOB" ] ; then
 			touch $qdir/use_build_job_daemon
@@ -225,7 +225,7 @@ fi
 		done
 
 		echo "All packages build."
-		sleep 2 ; rm -rf $qdir ; trap - SIGINT
+		sleep 2; rm -rf $qdir
 	else
 	    if [ "$build_only_this_job" ] ; then
 		rm -f "${build_root}"/var/adm/logs/${build_only_this_job}.log"
@@ -418,24 +418,36 @@ pkgloop_action() {
 # Try to umount any directories mounted by Build-Pkg -chroot
 # if we are the last process using them.
 #
-umount_chroot() {
+build_target_exit() {
 	exec 201> /dev/null
-	if [ -z "$( fuser ${build_logs}/*.log )" ]; then
-		umount -d -f    $build_rock/{loop,config,download} 2> /dev/null
-		umount -d -f -l $build_rock/{loop,config,download} 2> /dev/null
-		umount -d -f    $build_root/proc 2> /dev/null
-		umount -d -f -l $build_root/proc 2> /dev/null
-	fi
+	exec 1>&0 2>&0
+
+	echo_header "Running Build-Target cleanup procedure"
+
+	echo_status "Killing liggering processes and removing parallel build queue."
+	rm -rf $build_rock/queue
+	fuser -k ${build_logs}/*.log
+	sleep 2
+
+	echo_status "Umounting liggering mounts in build/$ROCKCFG_ID."
+	umount -d -f    $build_rock/{loop,config,download} 2> /dev/null
+	umount -d -f -l $build_rock/{loop,config,download} 2> /dev/null
+	umount -d -f    $build_root/proc 2> /dev/null
+	umount -d -f -l $build_root/proc 2> /dev/null
+
+	echo_status "READY."
+	echo
 }
 
 # must trap outside the group command
-trap 'umount_chroot' EXIT
+trap 'build_target_exit' EXIT
 
 {
 	ln -sf build_target_$$.log ${build_logs}/build_target.log
 	./scripts/Build-Tools -1 -cfg $config
 	. ./target/$ROCKCFG_TARGET/build.sh
 	echo_header "Finished building this target."
+	echo_status "Going to run cleanup procedure now.."
 } 2>&1 201>> "${build_logs}/build_target_$$.log" | \
 	tee -a "${build_logs}/build_target_$$.log"
 

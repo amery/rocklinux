@@ -468,6 +468,7 @@ dump_env() {
 	            ${!Q*} ${!R*} ${!S*} ${!T*} ${!U*} ${!V*} ${!W*} ${!X*} \
 	            ${!Y*} ${!Z*} ${!_*}
 	do
+		[ $name = IFS ] && continue
 		[ $name = base ] && continue
 		if declare -p $name | head -n 1 | grep -qv '^declare -[a-z]*r'
 		then

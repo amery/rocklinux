@@ -12,7 +12,7 @@
 +#  define pgoff_t unsigned long
 +#  endif
 +
-+/* #include <net/if.h>       /* for struct ifreq et al */
++/* #include <net/if.h> */ /* for struct ifreq et al */
  #include <net/if_arp.h>   /* for struct arpreq */
  #include <net/route.h>    /* for struct rtentry */
  #ifdef HAVE_LINUX_COMPILER_H

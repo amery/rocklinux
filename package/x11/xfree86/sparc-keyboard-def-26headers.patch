@@ -1,0 +1,22 @@
+--- xc/programs/Xserver/hw/xfree86/os-support/linux/lnx_kbd.c~	2004-08-21 16:22:07.000000000 +0200
++++ xc/programs/Xserver/hw/xfree86/os-support/linux/lnx_kbd.c	2004-08-21 19:54:02.000000000 +0200
+@@ -102,7 +102,7 @@
+ 
+ /* Deal with spurious kernel header change */
+ #if defined(LINUX_VERSION_CODE) && defined(KERNEL_VERSION)
+-# if LINUX_VERSION_CODE >= KERNEL_VERSION(2,5,42)
++# if LINUX_VERSION_CODE >= KERNEL_VERSION(2,5,42) && !defined(__sparc__)
+ #  define rate period
+ # endif
+ #endif
+--- xc/programs/Xserver/hw/xfree86/os-support/linux/lnx_io.c~	2004-08-21 16:22:07.000000000 +0200
++++ xc/programs/Xserver/hw/xfree86/os-support/linux/lnx_io.c	2004-08-21 19:53:22.000000000 +0200
+@@ -75,7 +75,7 @@
+ 
+ /* Deal with spurious kernel header change */
+ #if defined(LINUX_VERSION_CODE) && defined(KERNEL_VERSION)
+-# if LINUX_VERSION_CODE >= KERNEL_VERSION(2,5,42)
++# if LINUX_VERSION_CODE >= KERNEL_VERSION(2,5,42) && !defined(__sparc__)
+ #  define rate period
+ # endif
+ #endif

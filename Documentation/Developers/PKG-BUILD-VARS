@@ -3,13 +3,13 @@ Variables used in the package build scripts
 ===========================================
 
 config ........ Name of the active configuration ($base/config/$config/..)
-extraver ...... version text after the first whitespace, or $rockver
 rockver ....... ROCK Linux Version (including rel. date for snapshots)
 
 pkg ........... base name part of the package we are building 
 xpkg .......... derived name part of the package we are building
                 if a package is not pkgfork'd, pkg == xpkg
 ver ........... package Version (from *.desc - until first whitespace)
+extraver ...... version text after the first whitespace, or $rockver
 desc_[A-Z] .... Data from the *.desc file
 
 id ............ unique ID for this Build-Pkg invocation

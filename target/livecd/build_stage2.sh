@@ -7,7 +7,7 @@ cd $disksdir/2nd_stage
 mkdir -p mnt/source mnt/target ramdisk
 #
 echo_status "Extracting the packages archives."
-for x in $( ls ../../pkgs/*.tar.bz2 | tr . / | cut -f8 -d/ )
+for x in $( ls ../../pkgs/*.tar.bz2 | grep -v -e ':dev.tar.bz2' -e ':doc.tar.bz2' | tr . / | cut -f8 -d/ )
 do
 	echo_status "\`- Extracting $x.tar.bz2 ..."
 	tar --use-compress-program=bzip2 -xpf ../../pkgs/$x.tar.bz2
@@ -18,9 +18,9 @@ rm -rf ../boot ; mkdir ../boot
 mv boot/* ../boot/
 #
 echo_status "Remove the stuff we do not need ..."
-rm -rf home usr/{doc,man,info}
-rm -rf var/adm/* var/adm var/mail 
-rm -rf usr/{include,src} usr/*-linux-gnu {,usr/}lib/*.{a,o} opt/*/lib/*.{a,o}
+#rm -rf home usr/{doc,man,info}
+#rm -rf var/adm/* var/adm var/mail 
+rm -rf usr/src usr/*-linux-gnu 
 #
 # TODO finish-package!!
 echo_status "Running ldconfig to create links ..."

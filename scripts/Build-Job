@@ -115,7 +115,7 @@ for qid ; do
 		date "+%H:%M ${HOSTNAME}:%tbuilding job '$qid' ($PPID) .." \
 							>> $qdir/6_$qid.msg
 		pkgloop_package $next
-		if [ -f "${build_root}/var/adm/logs/$qid.log" ] ; then
+		if [ -f "${build_root}/var/adm/logs/${qid/[^0-9]*=/-}.log" ] ; then
 			date "+%H:%M ${HOSTNAME}:%tfinished job '$qid' `
 					`(ok)" >> $qdir/3_$qid.msg
 		else

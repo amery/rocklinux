@@ -21,8 +21,6 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[I] The GNU Bourne Again shell (bash)
-
 [T] Bash is a Unix command interpreter (shell).  It is an implementation of
 [T] the Posix 1003.2 shell standard, and resembles the Korn and System V
 [T] shells.
@@ -45,9 +43,19 @@
 
 [L] GPL
 [S] Stable
-[V] 3.0
 [P] X X1-3-----9 106.500
 
+#if xpkg == bash2
+[V] 2.05b
+[I] The GNU Bourne Again shell (bash) 2.x
+[D] 3731831200 bash-2.05b.tar.gz     ftp://ftp.gnu.org/pub/gnu/bash/
+[D] 4042888190 bash-doc-2.05b.tar.gz ftp://ftp.gnu.org/pub/gnu/bash/
+#endif
+
+#if xpkg == bash3
+[V] 3.0
+[I] The GNU Bourne Again shell (bash) 3.x
 [D] 3577823490 bash-3.0.tar.gz     ftp://ftp.gnu.org/pub/gnu/bash/
 [D] 2834434668 bash-doc-3.0.tar.gz ftp://ftp.gnu.org/pub/gnu/bash/
+#endif
 

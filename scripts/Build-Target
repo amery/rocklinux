@@ -418,6 +418,7 @@ trap 'umount_chroot' EXIT
 	ln -sf build_target_$$.log ${build_logs}/build_target.log
 	./scripts/Build-Tools -1 -cfg $config
 	. ./target/$ROCKCFG_TARGET/build.sh
+	echo_header "Finished building this target."
 } 2>&1 201>> "${build_logs}/build_target_$$.log" | \
 	tee -a "${build_logs}/build_target_$$.log"
 

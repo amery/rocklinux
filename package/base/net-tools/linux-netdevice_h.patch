@@ -1,0 +1,10 @@
+--- ./lib/fddi.c	2000-03-05 11:26:02.000000000 +0000
++++ ./lib/fddi.c	2004-10-23 18:00:10.810080544 +0000
+@@ -26,6 +26,7 @@
+ #error "No FDDI Support in your current Kernelsource Tree."
+ #error "Disable HW Type FDDI"
+ #endif
++#include <linux/netdevice.h>
+ #if __GLIBC__ >= 2
+ #include <netinet/if_fddi.h>
+ #else

@@ -1,10 +1,10 @@
---- valgrind-2.2.0/coregrind/vg_unsafe.h	2004-08-29 21:02:28.000000000 +0000
-+++ valgrind-2.2.0-p/coregrind/vg_unsafe.h	2004-10-24 08:47:50.959307152 +0000
-@@ -47,7 +47,14 @@
+diff -dur valgrind-2.2.0/coregrind/vg_unsafe.h valgrind-2.2.0-p/coregrind/vg_unsafe.h
+--- valgrind-2.2.0/coregrind/vg_unsafe.h	2004-11-02 22:03:17.000000000 +0100
++++ valgrind-2.2.0-p/coregrind/vg_unsafe.h	2004-11-02 20:49:06.000000000 +0100
+@@ -47,7 +47,17 @@
  #include <sys/socket.h>   /* for struct msghdr */
  #include <linux/sockios.h>/* for SIOCOUTQ */
  #include <sys/un.h>       /* for sockaddr_un */
--#include <net/if.h>       /* for struct ifreq et al */
 +
 +/* for linux-2.6.9, from linux/types.h */
 +#  include <asm/types.h>
@@ -12,7 +12,10 @@
 +#  define pgoff_t unsigned long
 +#  endif
 +
-+/* #include <net/if.h> */ /* for struct ifreq et al */
++#include <linux/version.h>
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,9)
+ #include <net/if.h>       /* for struct ifreq et al */
++#endif
  #include <net/if_arp.h>   /* for struct arpreq */
  #include <net/route.h>    /* for struct rtentry */
  #ifdef HAVE_LINUX_COMPILER_H

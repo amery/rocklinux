@@ -1,0 +1,31 @@
+--- ./src/Config.h.orig	2005-02-25 20:01:13.323362352 +0100
++++ ./src/Config.h	2005-02-25 20:05:58.288041136 +0100
+@@ -67,7 +67,7 @@
+ 
+ #define CONFIG_PROP_T(name, cfgName, defName, cfgType)\
+   cfgType Get##name(bool def = false)\
+-  { return def ? defName : cfg->Read(cfgName, defName); }\
++  { return def ? defName : cfg->Read(cfgName, (cfgType&)defName); }\
+   void Set##name(cfgType value)\
+   {\
+     wxLogNull log;\
+--- ./wxVillaLib/imagjpg.cpp.orig	2005-02-25 19:45:01.000000000 +0100
++++ ./wxVillaLib/imagjpg.cpp	2005-02-25 20:08:56.000024808 +0100
+@@ -115,7 +115,7 @@
+ 
+ #define OUTPUT_BUF_SIZE  4096    /* choose an efficiently fwrite'able size */
+ 
+-#if !wxCHECK_VERSION(2,5,0)
++// #if !wxCHECK_VERSION(2,5,0)
+ #define wx_init_source my_init_sources
+ #define wx_fill_input_buffer my_fill_input_buffer
+ #define wx_skip_input_data my_skip_input_data
+@@ -124,7 +124,7 @@
+ #define wx_init_destination init_destination
+ #define wx_empty_output_buffer empty_output_buffer
+ #define wx_term_destination term_destination
+-#endif
++// #endif
+ 
+ 
+ #ifdef JPEG_METHOD_LINKAGE

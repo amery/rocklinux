@@ -234,12 +234,7 @@ expert_begin
 						-e 's,[/\.\+],\\&,g' \
 						-e 's,\*,[^ ]*,g' )"
 					[ "$pattern" ] || continue
-# check if pattern describes a pkgforked package
-					if [ "$pattern" != "${pattern%=*}" ] ; then
-						action="print; $action; \$5=\"$pattern\""
-						pattern=${pattern%=*}
-					fi
-					address="$address$first / $pattern /"
+					address="$address$first /[ =]$pattern[ =]/"
 					first=" $others"
 				fi
 			done < <( echo "$patternlist" | tr '\t ' '\n\n' )

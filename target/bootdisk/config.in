@@ -59,10 +59,9 @@ pkgfilter sed '
 # Disable even more packages we do not need
 / gcc2 /	{ s/^X /O /; p; d; };	/ joe /		{ s/^X /O /; p; d; };
 / gdbm /	{ s/^X /O /; p; d; };	/ pam /         { s/^X /O /; p; d; };
-/ pdksh /	{ s/^X /O /; p; d; };	/ libelf /	{ s/^X /O /; p; d; };
 / prelink /	{ s/^X /O /; p; d; };	/ ccache /	{ s/^X /O /; p; d; };
 / cracklib /	{ s/^X /O /; p; d; };	/ hotplug /	{ s/^X /O /; p; d; };
-/ bash=bash3 /	{ s/^X /O /; p; d; };'
+/ bash=bash3 /	{ s/^X /O /; p; d; };	/ pdksh /	{ s/^X /O /; p; d; };'
 
 ROCKCFGSET_CREATE_TARBZ2=1
 ROCKCFGSET_CREATE_GEM=0

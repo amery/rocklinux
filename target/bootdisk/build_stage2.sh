@@ -16,9 +16,9 @@ package_map='       +00-dirtree         +glibc22            +glibc23
 +grub               +lilo               +yaboot             +aboot
 +silo               +parted             +mac-fdisk          +pdisk
 +xfsprogs           +mkdosfs            +jfsutils	    +hfsutils
-+e2fsprogs          +reiserfsprogs      +genromfs           +lvm
-+popt               +raidtools          +mdadm
-+dump               +eject              +disktype
++e2fsprogs          +reiserfsprogs      +genromfs           +device-mapper
++popt               +raidtools          +mdadm              +lvm2
++dump               +eject              +disktype           +lvm-wrapper
 +hdparm             +memtest86          +cpuburn            +bonnie++
 -mine               -bize               -termcap            +ncurses
 +readline           -strace             -ltrace             -perl5
@@ -39,7 +39,7 @@ package_map='       +00-dirtree         +glibc22            +glibc23
 +netkit-base        +netkit-ftp         +netkit-telnet      +netkit-tftp
 +sysfiles           +libpcap            +iptables           +tcp_wrappers
 -kiss               +kbd		-syslinux           +ntfsprogs
--ethtool	    -uml_utilities	+ddrescue'
+-ethtool	    -uml_utilities	+ddrescue           +libelf'
 
 if [ -f ../../pkgs/bize.tar.bz2 -a ! -f ../../pkgs/mine.tar.bz2 ] ; then
 	packager=bize

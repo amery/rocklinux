@@ -35,6 +35,7 @@ then
 	   -D"D_datadir=$datadir" -D"D_infodir=$infodir" \
 	   -D"D_bindir=$bindir"   -D"D_sbindir=$sbindir" \
 	   -D"D_libdir=$libdir"   -D"D_mandir=$mandir" \
+	   -D"D_xpkg=$xpkg" \
 	   $base/package/base/sysvinit/init_macros.m4 \
 	   $file > $initdir/init.d/$name
 	chmod +x $initdir/init.d/$name

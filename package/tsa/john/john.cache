@@ -20,67 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093259048 Mon Aug 23 13:04:08 2004
+[TIMESTAMP] 1095367660 Thu Sep 16 22:47:40 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-john.log 9-john.err
+[LOGS] 5-john.log
 
-[BUILDTIME] 10230 (5)
-[SIZE] 0.69 MB, 18 files
+[BUILDTIME] 10099 (5)
+[SIZE] 0.68 MB, 18 files
 
-[DEP] 00-dirtree bash binutils bzip2 coreutils findutils gcc32 gcc32:dev
-[DEP] glibc23 glibc23:dev grep linux24-header:dev make patch sed
-[DEP] sysfiles tar
-
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops LM_fmt.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops batch.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops charset.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops compiler.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops cracker.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops external.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops getopt.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops idle.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops inc.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops john.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops list.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops loader.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops logger.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops math.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops options.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops recovery.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops rpp.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops rules.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops single.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops status.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops wordlist.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops unshadow.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops unafs.c
-[9-ERROR] gcc -c -Wall -O2 -fomit-frame-pointer -funroll-loops unique.c
-[9-ERROR] gcc -s DES_bs.o DES_bs_b.o DES_fmt.o DES_std.o BSDI_fmt.o MD5_fmt.o MD5_std.o BF_fmt.o BF_std.o AFS_fmt.o LM_fmt.o batch.o bench.o charset.o common.o compiler.o config.o cracker.o external.o formats.o getopt.o idle.o inc.o john.o list.o loader.o logger.o math.o memory.o misc.o options.o params.o path.o recovery.o rpp.o rules.o signals.o single.o status.o tty.o wordlist.o unshadow.o unafs.o unique.o -o ../run/john
-[9-ERROR] ln -s john ../run/unshadow
-[9-ERROR] ln -s john ../run/unafs
-[9-ERROR] ln -s john ../run/unique
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.john.1093258939.25235.830770497/john-1.6/src'
-[9-ERROR] make: Leaving directory `/ROCK/src.john.1093258939.25235.830770497/john-1.6/src'
-[9-ERROR] ln: `/usr/bin/unafs': File exists
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 24 files for this package.
-[9-ERROR] Applying package split: 40 john:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 john:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 john:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <john> Creating flist file ...
-[9-ERROR] <john> Creating package dependencies file ...
-[9-ERROR] <john> Creating md5sum and cksum files ...
-[9-ERROR] <john> Creating package description ...
-[9-ERROR] <john:doc> Creating flist file ...
-[9-ERROR] <john:doc> Creating package dependencies file ...
-[9-ERROR] <john:doc> Creating md5sum and cksum files ...
-[9-ERROR] <john:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building john=john.
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc32
+[DEP] gcc32:dev glibc23 glibc23:dev grep linux24-header:dev make patch
+[DEP] sed sysfiles tar
 

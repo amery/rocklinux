@@ -20,111 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093300777 Tue Aug 24 00:39:37 2004
+[TIMESTAMP] 1095427951 Fri Sep 17 15:32:31 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-rte.err 9-rte.err
+[LOGS] 5-rte.log
 
-[5-ERROR] checking for shared library run path origin... done
-[5-ERROR] checking whether NLS is requested... yes
-[5-ERROR] checking for GNU gettext in libc... yes
-[5-ERROR] checking whether to use NLS... yes
-[5-ERROR] checking where the gettext function comes from... libc
-[5-ERROR] checking for doxygen... yes
-[5-ERROR] configure: creating ./config.status
-[5-ERROR] 
-[5-ERROR] 	Backend                 Build
-[5-ERROR]         -------                 -----
-[5-ERROR]         mp1e                    yes
-[5-ERROR]         ffmpeg                  yes
-[5-ERROR]         divx4linux              yes
-[5-ERROR] 
-[5-ERROR] cd . && /bin/sh ./config.status Makefile 
-[5-ERROR] config.status: creating Makefile
-[5-ERROR] cd . && /bin/sh /ROCK/src.rte.1093061618.6929.55671388/rte-0.5.2/missing --run autoheader
-[5-ERROR] touch ./config.h.in
-[5-ERROR] cd . && /bin/sh ./config.status config.h
-[5-ERROR] config.status: creating config.h
-[5-ERROR] config.status: config.h is unchanged
-[5-ERROR] make  all-recursive
-[5-ERROR] make[1]: Entering directory `/ROCK/src.rte.1093061618.6929.55671388/rte-0.5.2'
-[5-ERROR] Making all in mp1e
-[5-ERROR] make[2]: Entering directory `/ROCK/src.rte.1093061618.6929.55671388/rte-0.5.2/mp1e'
-[5-ERROR] cd .. && 	  /bin/sh /ROCK/src.rte.1093061618.6929.55671388/rte-0.5.2/missing --run automake-1.7 --gnu  mp1e/Makefile
-[5-ERROR] mp1e/Makefile.am:25: required directory mp1e/macros does not exist
-[5-ERROR] mp1e/Makefile.am:25: required directory mp1e/vbi does not exist
-[5-ERROR] mp1e/Makefile.am:25: required directory mp1e/devices does not exist
-[5-ERROR] mp1e/Makefile.am:25: required directory mp1e/test does not exist
-[5-ERROR] make[2]: *** [Makefile.in] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.rte.1093061618.6929.55671388/rte-0.5.2/mp1e'
-[5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.rte.1093061618.6929.55671388/rte-0.5.2'
-[5-ERROR] make: *** [all] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 rte:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 rte:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 rte:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <rte:doc> Creating flist file ...
-[5-ERROR] <rte:doc> Creating package dependencies file ...
-[5-ERROR] <rte:doc> Creating md5sum and cksum files ...
-[5-ERROR] <rte:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building rte=rte.
+[BUILDTIME] 17596 (5)
+[SIZE] 0.79 MB, 15 files
 
-[9-ERROR] checking for shared library run path origin... done
-[9-ERROR] checking whether NLS is requested... yes
-[9-ERROR] checking for GNU gettext in libc... yes
-[9-ERROR] checking whether to use NLS... yes
-[9-ERROR] checking where the gettext function comes from... libc
-[9-ERROR] checking for doxygen... yes
-[9-ERROR] configure: creating ./config.status
-[9-ERROR] 
-[9-ERROR] 	Backend                 Build
-[9-ERROR]         -------                 -----
-[9-ERROR]         mp1e                    yes
-[9-ERROR]         ffmpeg                  yes
-[9-ERROR]         divx4linux              yes
-[9-ERROR] 
-[9-ERROR] cd . && /bin/sh ./config.status Makefile 
-[9-ERROR] config.status: creating Makefile
-[9-ERROR] cd . && /bin/sh /ROCK/src.rte.1093300719.23112.1037298392/rte-0.5.2/missing --run autoheader
-[9-ERROR] touch ./config.h.in
-[9-ERROR] cd . && /bin/sh ./config.status config.h
-[9-ERROR] config.status: creating config.h
-[9-ERROR] config.status: config.h is unchanged
-[9-ERROR] make  all-recursive
-[9-ERROR] make[1]: Entering directory `/ROCK/src.rte.1093300719.23112.1037298392/rte-0.5.2'
-[9-ERROR] Making all in mp1e
-[9-ERROR] make[2]: Entering directory `/ROCK/src.rte.1093300719.23112.1037298392/rte-0.5.2/mp1e'
-[9-ERROR] cd .. && 	  /bin/sh /ROCK/src.rte.1093300719.23112.1037298392/rte-0.5.2/missing --run automake-1.7 --gnu  mp1e/Makefile
-[9-ERROR] mp1e/Makefile.am:25: required directory mp1e/macros does not exist
-[9-ERROR] mp1e/Makefile.am:25: required directory mp1e/vbi does not exist
-[9-ERROR] mp1e/Makefile.am:25: required directory mp1e/devices does not exist
-[9-ERROR] mp1e/Makefile.am:25: required directory mp1e/test does not exist
-[9-ERROR] make[2]: *** [Makefile.in] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.rte.1093300719.23112.1037298392/rte-0.5.2/mp1e'
-[9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.rte.1093300719.23112.1037298392/rte-0.5.2'
-[9-ERROR] make: *** [all] Error 2
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 1 files for this package.
-[9-ERROR] Applying package split: 40 rte:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 rte:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 rte:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <rte:doc> Creating flist file ...
-[9-ERROR] <rte:doc> Creating package dependencies file ...
-[9-ERROR] <rte:doc> Creating md5sum and cksum files ...
-[9-ERROR] <rte:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building rte=rte.
+[DEP] 00-dirtree autoconf automake17 bash2 binutils bzip2 coreutils
+[DEP] diffutils divx4linux:dev doxygen findutils gawk gcc32 gcc32:dev
+[DEP] gettext glibc23 glibc23:dev grep linux24-header:dev m4 make mktemp
+[DEP] net-tools patch perl5 sed sysfiles tar util-linux
 

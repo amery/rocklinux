@@ -20,16 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093128522 Sun Aug 22 00:48:42 2004
+[TIMESTAMP] 1095208826 Wed Sep 15 02:40:26 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-iconbar.err 9-iconbar.log
+[LOGS] 5-iconbar.log
 
-[BUILDTIME] 4835 (9)
-[SIZE] 0.20 MB, 46 files
+[BUILDTIME] 4301 (5)
+[SIZE] 0.20 MB, 45 files
 
-[DEP] 00-dirtree autoconf automake18 bash binutils bzip2 coreutils
+[DEP] 00-dirtree autoconf automake18 bash2 binutils bzip2 coreutils
 [DEP] diffutils directfb directfb:dev ecore ecore:dev edb edb:dev edje
 [DEP] edje:dev eet eet:dev embryo embryo:dev esmart esmart:dev etox
 [DEP] etox:dev evas evas:dev ewl ewl:dev findutils freetype freetype:dev
@@ -37,55 +37,4 @@
 [DEP] libjpeg:dev libpng libtool libtool:dev linux24-header:dev m4 make
 [DEP] mktemp net-tools openssl perl5 sed sysfiles tar util-linux xfree86
 [DEP] zlib:dev
-
-[5-ERROR] checking whether stripping libraries is possible... yes
-[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
-[5-ERROR] checking if libtool supports shared libraries... yes
-[5-ERROR] checking whether to build shared libraries... yes
-[5-ERROR] checking whether to build static libraries... yes
-[5-ERROR] configure: creating libtool
-[5-ERROR] appending configuration tag "CXX" to libtool
-[5-ERROR] checking for ld used by g++-32... ld
-[5-ERROR] checking if the linker (ld) is GNU ld... yes
-[5-ERROR] checking whether the g++-32 linker (ld) supports shared libraries... yes
-[5-ERROR] checking for g++-32 option to produce PIC... -fPIC
-[5-ERROR] checking if g++-32 PIC flag -fPIC works... yes
-[5-ERROR] checking if g++-32 supports -c -o file.o... yes
-[5-ERROR] checking whether the g++-32 linker (ld) supports shared libraries... yes
-[5-ERROR] checking how to hardcode library paths into programs... immediate
-[5-ERROR] checking whether stripping libraries is possible... yes
-[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
-[5-ERROR] appending configuration tag "F77" to libtool
-[5-ERROR] checking if libtool supports shared libraries... yes
-[5-ERROR] checking whether to build shared libraries... yes
-[5-ERROR] checking whether to build static libraries... yes
-[5-ERROR] checking for g77-32 option to produce PIC... -fPIC
-[5-ERROR] checking if g77-32 PIC flag -fPIC works... yes
-[5-ERROR] checking if g77-32 supports -c -o file.o... yes
-[5-ERROR] checking whether the g77-32 linker (ld) supports shared libraries... yes
-[5-ERROR] checking how to hardcode library paths into programs... immediate
-[5-ERROR] checking whether stripping libraries is possible... yes
-[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
-[5-ERROR] checking for esmart-config... /opt/e17/bin/esmart-config
-[5-ERROR] checking for evas-config... /opt/e17/bin/evas-config
-[5-ERROR] checking for edb-config... /opt/e17/bin/edb-config
-[5-ERROR] checking for ecore-config... /opt/e17/bin/ecore-config
-[5-ERROR] checking for edje-config... /opt/e17/bin/edje-config
-[5-ERROR] checking for ewl-config... no
-[5-ERROR] ewl-config  is not in your $PATH. Please ensure it is.
-[5-ERROR] Read the manual page for you shell as to how to extend your path.
-[5-ERROR] FATAL ERROR. ABORT.
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 iconbar:dev (/lib/.*.a)$|/include/
-[5-ERROR] Applying package split: 60 iconbar:doc /share/(doc|man|info)/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <iconbar> Creating flist file ...
-[5-ERROR] <iconbar> Creating package dependencies file ...
-[5-ERROR] <iconbar> Creating md5sum and cksum files ...
-[5-ERROR] <iconbar> Creating package description ...
-[5-ERROR] Making post-install adaptions.
 

@@ -20,68 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093096934 Sat Aug 21 16:02:14 2004
+[TIMESTAMP] 1095186162 Tue Sep 14 20:22:42 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-xfig.log 9-xfig.err
+[LOGS] 5-xfig.log
 
-[BUILDTIME] 16294 (5)
+[BUILDTIME] 12859 (5)
 [SIZE] 6.28 MB, 1524 files
 
-[DEP] 00-dirtree bash binutils bzip2 coreutils findutils gawk gcc32
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc32
 [DEP] gcc32:dev glibc23 glibc23:dev grep libjpeg libjpeg:dev libpng
 [DEP] libpng:dev linux24-header:dev make sed sysfiles tar xaw3d:dev
 [DEP] xfree86 xfree86:dev zlib:dev
-
-[9-ERROR]   Copying Maps library files to /usr/X11R6/lib/X11/xfig/Libraries/Maps
-[9-ERROR]   Copying Mechanical_DIN library files to /usr/X11R6/lib/X11/xfig/Libraries/Mechanical_DIN
-[9-ERROR]   Copying Miscellaneous library files to /usr/X11R6/lib/X11/xfig/Libraries/Miscellaneous
-[9-ERROR]   Copying Music library files to /usr/X11R6/lib/X11/xfig/Libraries/Music
-[9-ERROR]   Copying Networks library files to /usr/X11R6/lib/X11/xfig/Libraries/Networks
-[9-ERROR]   Copying OfficeEquip library files to /usr/X11R6/lib/X11/xfig/Libraries/OfficeEquip
-[9-ERROR]   Copying Optics library files to /usr/X11R6/lib/X11/xfig/Libraries/Optics
-[9-ERROR]   Copying ProcessFlowsheet library files to /usr/X11R6/lib/X11/xfig/Libraries/ProcessFlowsheet
-[9-ERROR]   Copying Structural_Analysis library files to /usr/X11R6/lib/X11/xfig/Libraries/Structural_Analysis
-[9-ERROR]   Copying UML library files to /usr/X11R6/lib/X11/xfig/Libraries/UML
-[9-ERROR]   Copying Welding library files to /usr/X11R6/lib/X11/xfig/Libraries/Welding
-[9-ERROR] Trying to copy the default documentation ...
-[9-ERROR] `CHANGES' -> `/usr/share/doc/xfig/CHANGES'
-[9-ERROR] `FIGAPPS' -> `/usr/share/doc/xfig/FIGAPPS'
-[9-ERROR] `LATEX.AND.XFIG' -> `/usr/share/doc/xfig/LATEX.AND.XFIG'
-[9-ERROR] `LATEX.AND.XFIG.zh_CN' -> `/usr/share/doc/xfig/LATEX.AND.XFIG.zh_CN'
-[9-ERROR] `LATEX.AND.XFIG.zh_TW' -> `/usr/share/doc/xfig/LATEX.AND.XFIG.zh_TW'
-[9-ERROR] `README' -> `/usr/share/doc/xfig/README'
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 1525 files for this package.
-[9-ERROR] Applying package split: 40 xfig:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 xfig:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 xfig:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <xfig> Creating flist file ...
-[9-ERROR] <xfig> Creating package dependencies file ...
-[9-ERROR] <xfig> Creating md5sum and cksum files ...
-[9-ERROR] <xfig> Creating package description ...
-[9-ERROR] <xfig:doc> Creating flist file ...
-[9-ERROR] <xfig:doc> Creating package dependencies file ...
-[9-ERROR] <xfig:doc> Creating md5sum and cksum files ...
-[9-ERROR] <xfig:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Found shared files with other packages:
-[9-ERROR] usr/X11R6/lib/X11/xfig/Libraries/Flags/Africa: xfig xfig:dev
-[9-ERROR] usr/X11R6/lib/X11/xfig/Libraries/Flags/Asia: xfig xfig:dev
-[9-ERROR] usr/X11R6/lib/X11/xfig/Libraries/Flags/CentralAmerica: xfig xfig:dev
-[9-ERROR] usr/X11R6/lib/X11/xfig/Libraries/Flags/NorthAmerica: xfig xfig:dev
-[9-ERROR] usr/X11R6/lib/X11/xfig/Libraries/Flags/Oceania: xfig xfig:dev
-[9-ERROR] usr/X11R6/lib/X11/xfig/Libraries/Flags/SouthAmerica: xfig xfig:dev
-[9-ERROR] usr/X11R6/lib/X11/xfig/Libraries/Maps/Africa: xfig xfig:dev
-[9-ERROR] usr/X11R6/lib/X11/xfig/Libraries/Maps/Asia: xfig xfig:dev
-[9-ERROR] usr/X11R6/lib/X11/xfig/Libraries/Maps/Canada: xfig xfig:dev
-[9-ERROR] usr/X11R6/lib/X11/xfig/Libraries/Maps/CentralAmerica: xfig xfig:dev
-[9-ERROR] usr/X11R6/lib/X11/xfig/Libraries/Maps/SouthAmerica: xfig xfig:dev
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] removed `/var/adm/logs/9-xfig.log'
-[9-ERROR] Finished building xfig=xfig.
 

@@ -20,111 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093239974 Mon Aug 23 07:46:14 2004
+[TIMESTAMP] 1095342412 Thu Sep 16 15:46:52 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-avview.err 9-avview.err
+[LOGS] 5-avview.log
 
-[5-ERROR] checking for select... yes
-[5-ERROR] checking for strcasecmp... yes
-[5-ERROR] checking for strdup... yes
-[5-ERROR] checking for strerror... yes
-[5-ERROR] checking for dlopen in -ldl... yes
-[5-ERROR] checking for uncompress in -lz... yes
-[5-ERROR] checking for sin in -lm... yes
-[5-ERROR] checking for pthread_create in -lpthread... yes
-[5-ERROR] checking for vbi_capture_v4l_new in -lzvbi... yes
-[5-ERROR] checking for snd_card_get_name in -lasound... yes
-[5-ERROR] The libraries mp3lame, ogg, vorbis and vorbisenc might be required by ffmpeg
-[5-ERROR] checking for lame_encode_buffer in -lmp3lame... yes
-[5-ERROR] checking for oggpack_write in -logg... yes
-[5-ERROR] checking for vorbis_book_init_encode in -lvorbis... yes
-[5-ERROR] checking for vorbis_encode_init in -lvorbisenc... yes
-[5-ERROR] checking linux/videodev.h usability... yes
-[5-ERROR] checking linux/videodev.h presence... yes
-[5-ERROR] checking for linux/videodev.h... yes
-[5-ERROR] checking libzvbi.h usability... yes
-[5-ERROR] checking libzvbi.h presence... yes
-[5-ERROR] checking for libzvbi.h... yes
-[5-ERROR] checking for X11/extensions/Xinerama.h... yes
-[5-ERROR] checking for XCreateSimpleWindow in -lX11... yes
-[5-ERROR] checking for XInitExtension in -lXext... yes
-[5-ERROR] checking for XvPutVideo in -lXv... yes
-[5-ERROR] checking for XineramaIsActive in -lXinerama... yes
-[5-ERROR] checking for Tcl configuration... found /usr/lib/tclConfig.sh
-[5-ERROR] checking for Tk configuration... found /usr/lib/tkConfig.sh
-[5-ERROR] checking for existence of /usr/lib/tclConfig.sh... loading
-[5-ERROR] checking for existence of /usr/lib/tkConfig.sh... loading
-[5-ERROR] checking ffmpeg version...
-[5-ERROR] 
-[5-ERROR] *** AVview requires ffmpeg 0.4.8
-[5-ERROR] If you are sure you are using correct version of ffmpeg check config.log for details
-[5-ERROR] make: *** No targets specified and no makefile found.  Stop.
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 avview:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 avview:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 avview:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <avview:doc> Creating flist file ...
-[5-ERROR] <avview:doc> Creating package dependencies file ...
-[5-ERROR] <avview:doc> Creating md5sum and cksum files ...
-[5-ERROR] <avview:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building avview=avview.
+[BUILDTIME] 3007 (5)
+[SIZE] 2.13 MB, 34 files
 
-[9-ERROR] checking for select... yes
-[9-ERROR] checking for strcasecmp... yes
-[9-ERROR] checking for strdup... yes
-[9-ERROR] checking for strerror... yes
-[9-ERROR] checking for dlopen in -ldl... yes
-[9-ERROR] checking for uncompress in -lz... yes
-[9-ERROR] checking for sin in -lm... yes
-[9-ERROR] checking for pthread_create in -lpthread... yes
-[9-ERROR] checking for vbi_capture_v4l_new in -lzvbi... yes
-[9-ERROR] checking for snd_card_get_name in -lasound... yes
-[9-ERROR] The libraries mp3lame, ogg, vorbis and vorbisenc might be required by ffmpeg
-[9-ERROR] checking for lame_encode_buffer in -lmp3lame... yes
-[9-ERROR] checking for oggpack_write in -logg... yes
-[9-ERROR] checking for vorbis_book_init_encode in -lvorbis... yes
-[9-ERROR] checking for vorbis_encode_init in -lvorbisenc... yes
-[9-ERROR] checking linux/videodev.h usability... yes
-[9-ERROR] checking linux/videodev.h presence... yes
-[9-ERROR] checking for linux/videodev.h... yes
-[9-ERROR] checking libzvbi.h usability... yes
-[9-ERROR] checking libzvbi.h presence... yes
-[9-ERROR] checking for libzvbi.h... yes
-[9-ERROR] checking for X11/extensions/Xinerama.h... yes
-[9-ERROR] checking for XCreateSimpleWindow in -lX11... yes
-[9-ERROR] checking for XInitExtension in -lXext... yes
-[9-ERROR] checking for XvPutVideo in -lXv... yes
-[9-ERROR] checking for XineramaIsActive in -lXinerama... yes
-[9-ERROR] checking for Tcl configuration... found /usr/lib/tclConfig.sh
-[9-ERROR] checking for Tk configuration... found /usr/lib/tkConfig.sh
-[9-ERROR] checking for existence of /usr/lib/tclConfig.sh... loading
-[9-ERROR] checking for existence of /usr/lib/tkConfig.sh... loading
-[9-ERROR] checking ffmpeg version...
-[9-ERROR] 
-[9-ERROR] *** AVview requires ffmpeg 0.4.8
-[9-ERROR] If you are sure you are using correct version of ffmpeg check config.log for details
-[9-ERROR] make: *** No targets specified and no makefile found.  Stop.
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 1 files for this package.
-[9-ERROR] Applying package split: 40 avview:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 avview:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 avview:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <avview:doc> Creating flist file ...
-[9-ERROR] <avview:doc> Creating package dependencies file ...
-[9-ERROR] <avview:doc> Creating md5sum and cksum files ...
-[9-ERROR] <avview:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building avview=avview.
+[DEP] 00-dirtree alsa alsa:dev arts bash2 binutils bzip2 coreutils
+[DEP] diffutils ffmpeg-compiled-source findutils gcc32 gcc32:dev glibc23
+[DEP] glibc23:dev grep k3b kdebase lame libpng libzvbi libzvbi:dev
+[DEP] linux24-header:dev make mktemp net-tools ogg-vorbis patch sed
+[DEP] sysfiles tar tcl tcl:dev tk tk:dev util-linux xfree86 xfree86:dev
+[DEP] zlib:dev
 

@@ -20,111 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093252073 Mon Aug 23 11:07:53 2004
+[TIMESTAMP] 1095290009 Thu Sep 16 01:13:29 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-sysstat.err 9-sysstat.err
+[LOGS] 5-sysstat.log
 
-[5-ERROR] mkdir -p /usr/share/locale/af/LC_MESSAGES
-[5-ERROR] mkdir -p /usr/share/locale/nb_NO/LC_MESSAGES
-[5-ERROR] mkdir -p /usr/share/locale/nn_NO/LC_MESSAGES
-[5-ERROR] mkdir -p /usr/share/locale/it/LC_MESSAGES
-[5-ERROR] mkdir -p /usr/share/locale/ru/LC_MESSAGES
-[5-ERROR] mkdir -p /usr/share/locale/ro/LC_MESSAGES
-[5-ERROR] mkdir -p /usr/share/locale/pl/LC_MESSAGES
-[5-ERROR] mkdir -p /usr/share/locale/sk/LC_MESSAGES
-[5-ERROR] install -m 644 nls/fr/sysstat.mo /usr/share/locale/fr/LC_MESSAGES
-[5-ERROR] install -m 644 nls/de/sysstat.mo /usr/share/locale/de/LC_MESSAGES
-[5-ERROR] install -m 644 nls/es/sysstat.mo /usr/share/locale/es/LC_MESSAGES
-[5-ERROR] install -m 644 nls/pt/sysstat.mo /usr/share/locale/pt/LC_MESSAGES
-[5-ERROR] install -m 644 nls/af/sysstat.mo /usr/share/locale/af/LC_MESSAGES
-[5-ERROR] install -m 644 nls/nb_NO/sysstat.mo /usr/share/locale/nb_NO/LC_MESSAGES
-[5-ERROR] install -m 644 nls/nn_NO/sysstat.mo /usr/share/locale/nn_NO/LC_MESSAGES
-[5-ERROR] install -m 644 nls/it/sysstat.mo /usr/share/locale/it/LC_MESSAGES
-[5-ERROR] install -m 644 nls/ru/sysstat.mo /usr/share/locale/ru/LC_MESSAGES
-[5-ERROR] install -m 644 nls/ro/sysstat.mo /usr/share/locale/ro/LC_MESSAGES
-[5-ERROR] install -m 644 nls/pl/sysstat.mo /usr/share/locale/pl/LC_MESSAGES
-[5-ERROR] install -m 644 nls/sk/sysstat.mo /usr/share/locale/sk/LC_MESSAGES
-[5-ERROR] Trying to copy the default documentation ...
-[5-ERROR] `CHANGES' -> `/usr/share/doc/sysstat/CHANGES'
-[5-ERROR] `COPYING' -> `/usr/share/doc/sysstat/COPYING'
-[5-ERROR] `CREDITS' -> `/usr/share/doc/sysstat/CREDITS'
-[5-ERROR] `FAQ' -> `/usr/share/doc/sysstat/FAQ'
-[5-ERROR] `README' -> `/usr/share/doc/sysstat/README'
-[5-ERROR] `TODO' -> `/usr/share/doc/sysstat/TODO'
-[5-ERROR] `sysstat-5.0.3.lsm' -> `/usr/share/doc/sysstat/sysstat-5.0.3.lsm'
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 43 files for this package.
-[5-ERROR] Applying package split: 40 sysstat:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 sysstat:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 sysstat:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <sysstat> Creating flist file ...
-[5-ERROR] <sysstat> Creating package dependencies file ...
-[5-ERROR] <sysstat> Creating md5sum and cksum files ...
-[5-ERROR] <sysstat> Creating package description ...
-[5-ERROR] <sysstat:doc> Creating flist file ...
-[5-ERROR] <sysstat:doc> Creating package dependencies file ...
-[5-ERROR] <sysstat:doc> Creating md5sum and cksum files ...
-[5-ERROR] <sysstat:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Found shared files with other packages:
-[5-ERROR] usr/bin/iostat: iostat sysstat
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] removed `/var/adm/logs/5-sysstat.log'
-[5-ERROR] Finished building sysstat=sysstat.
+[BUILDTIME] 1707 (5)
+[SIZE] 0.25 MB, 32 files
 
-[9-ERROR] mkdir -p /usr/share/locale/af/LC_MESSAGES
-[9-ERROR] mkdir -p /usr/share/locale/nb_NO/LC_MESSAGES
-[9-ERROR] mkdir -p /usr/share/locale/nn_NO/LC_MESSAGES
-[9-ERROR] mkdir -p /usr/share/locale/it/LC_MESSAGES
-[9-ERROR] mkdir -p /usr/share/locale/ru/LC_MESSAGES
-[9-ERROR] mkdir -p /usr/share/locale/ro/LC_MESSAGES
-[9-ERROR] mkdir -p /usr/share/locale/pl/LC_MESSAGES
-[9-ERROR] mkdir -p /usr/share/locale/sk/LC_MESSAGES
-[9-ERROR] install -m 644 nls/fr/sysstat.mo /usr/share/locale/fr/LC_MESSAGES
-[9-ERROR] install -m 644 nls/de/sysstat.mo /usr/share/locale/de/LC_MESSAGES
-[9-ERROR] install -m 644 nls/es/sysstat.mo /usr/share/locale/es/LC_MESSAGES
-[9-ERROR] install -m 644 nls/pt/sysstat.mo /usr/share/locale/pt/LC_MESSAGES
-[9-ERROR] install -m 644 nls/af/sysstat.mo /usr/share/locale/af/LC_MESSAGES
-[9-ERROR] install -m 644 nls/nb_NO/sysstat.mo /usr/share/locale/nb_NO/LC_MESSAGES
-[9-ERROR] install -m 644 nls/nn_NO/sysstat.mo /usr/share/locale/nn_NO/LC_MESSAGES
-[9-ERROR] install -m 644 nls/it/sysstat.mo /usr/share/locale/it/LC_MESSAGES
-[9-ERROR] install -m 644 nls/ru/sysstat.mo /usr/share/locale/ru/LC_MESSAGES
-[9-ERROR] install -m 644 nls/ro/sysstat.mo /usr/share/locale/ro/LC_MESSAGES
-[9-ERROR] install -m 644 nls/pl/sysstat.mo /usr/share/locale/pl/LC_MESSAGES
-[9-ERROR] install -m 644 nls/sk/sysstat.mo /usr/share/locale/sk/LC_MESSAGES
-[9-ERROR] Trying to copy the default documentation ...
-[9-ERROR] `CHANGES' -> `/usr/share/doc/sysstat/CHANGES'
-[9-ERROR] `COPYING' -> `/usr/share/doc/sysstat/COPYING'
-[9-ERROR] `CREDITS' -> `/usr/share/doc/sysstat/CREDITS'
-[9-ERROR] `FAQ' -> `/usr/share/doc/sysstat/FAQ'
-[9-ERROR] `README' -> `/usr/share/doc/sysstat/README'
-[9-ERROR] `TODO' -> `/usr/share/doc/sysstat/TODO'
-[9-ERROR] `sysstat-5.0.3.lsm' -> `/usr/share/doc/sysstat/sysstat-5.0.3.lsm'
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 43 files for this package.
-[9-ERROR] Applying package split: 40 sysstat:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 sysstat:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 sysstat:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <sysstat> Creating flist file ...
-[9-ERROR] <sysstat> Creating package dependencies file ...
-[9-ERROR] <sysstat> Creating md5sum and cksum files ...
-[9-ERROR] <sysstat> Creating package description ...
-[9-ERROR] <sysstat:doc> Creating flist file ...
-[9-ERROR] <sysstat:doc> Creating package dependencies file ...
-[9-ERROR] <sysstat:doc> Creating md5sum and cksum files ...
-[9-ERROR] <sysstat:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Found shared files with other packages:
-[9-ERROR] usr/bin/iostat: iostat sysstat
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] removed `/var/adm/logs/9-sysstat.log'
-[9-ERROR] Finished building sysstat=sysstat.
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc32 gcc32:dev
+[DEP] gettext glibc23 glibc23:dev grep linux24-header:dev make patch sed
+[DEP] sysfiles tar
 

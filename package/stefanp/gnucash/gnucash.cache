@@ -20,111 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093269962 Mon Aug 23 16:06:02 2004
+[TIMESTAMP] 1095427681 Fri Sep 17 15:28:01 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnucash.err 9-gnucash.err
+[LOGS] 5-gnucash.log
 
-[5-ERROR] checking for dbopen in -ldb1... no
-[5-ERROR] checking for __db185_open in -ldb-4.1... yes
-[5-ERROR] checking for db.h... yes
-[5-ERROR] checking for db_185.h... yes
-[5-ERROR] checking for db1/db.h... no
-[5-ERROR] checking for db4/db_185.h... yes
-[5-ERROR] checking for poptStrippedArgv in -lpopt... yes
-[5-ERROR] checking for gnome-config... (cached) /opt/gnome/bin/gnome-config
-[5-ERROR] checking if /opt/gnome/bin/gnome-config works... yes
-[5-ERROR] checking for orbit-config... /opt/gnome/bin/orbit-config
-[5-ERROR] checking for orbit-idl... /opt/gnome/bin/orbit-idl
-[5-ERROR] checking for working ORBit environment... yes
-[5-ERROR] checking for gnorba libraries... yes
-[5-ERROR] checking what warning flags to pass to the C compiler... -Wall -Wunused
-[5-ERROR] checking what language compliance flags to pass to the C compiler... 
-[5-ERROR] checking for gdk-pixbuf-config... /opt/gnome/bin/gdk-pixbuf-config
-[5-ERROR] checking for GDK_PIXBUF - version >= 0.2.5... yes
-[5-ERROR] checking for gnome-config... (cached) /opt/gnome/bin/gnome-config
-[5-ERROR] checking for GNOME-PRINT - version >= 0.21... found 0.35
-[5-ERROR] checking for libglade-config... /opt/gnome/bin/libglade-config
-[5-ERROR] checking for libglade... yes
-[5-ERROR] checking for main in -lgal... yes
-[5-ERROR] checking for gtkhtml < 1.1... Unknown library `gtkhtml'
-[5-ERROR] Unknown library `gtkhtml'
-[5-ERROR] checking for pkg-config... /usr/bin/pkg-config
-[5-ERROR] Package gtkhtml-1.1 was not found in the pkg-config search path.
-[5-ERROR] Perhaps you should add the directory containing `gtkhtml-1.1.pc'
-[5-ERROR] to the PKG_CONFIG_PATH environment variable
-[5-ERROR] No package 'gtkhtml-1.1' found
-[5-ERROR] Package gtkhtml-1.1 was not found in the pkg-config search path.
-[5-ERROR] Perhaps you should add the directory containing `gtkhtml-1.1.pc'
-[5-ERROR] to the PKG_CONFIG_PATH environment variable
-[5-ERROR] No package 'gtkhtml-1.1' found
-[5-ERROR] checking for gtkhtml >= 1.1... checking for gtk_html_new in -lgtkhtml-1.1... no
-[5-ERROR] configure: error: Cannot find gtkhtml-1.1. See the README and config.log for more info.
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 gnucash:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 gnucash:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 gnucash:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <gnucash:doc> Creating flist file ...
-[5-ERROR] <gnucash:doc> Creating package dependencies file ...
-[5-ERROR] <gnucash:doc> Creating md5sum and cksum files ...
-[5-ERROR] <gnucash:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building gnucash=gnucash.
+[BUILDTIME] 82423 (5)
+[SIZE] 12.53 MB, 653 files
 
-[9-ERROR] checking for dbopen in -ldb1... no
-[9-ERROR] checking for __db185_open in -ldb-4.1... yes
-[9-ERROR] checking for db.h... yes
-[9-ERROR] checking for db_185.h... yes
-[9-ERROR] checking for db1/db.h... no
-[9-ERROR] checking for db4/db_185.h... yes
-[9-ERROR] checking for poptStrippedArgv in -lpopt... yes
-[9-ERROR] checking for gnome-config... (cached) /opt/gnome/bin/gnome-config
-[9-ERROR] checking if /opt/gnome/bin/gnome-config works... yes
-[9-ERROR] checking for orbit-config... /opt/gnome/bin/orbit-config
-[9-ERROR] checking for orbit-idl... /opt/gnome/bin/orbit-idl
-[9-ERROR] checking for working ORBit environment... yes
-[9-ERROR] checking for gnorba libraries... yes
-[9-ERROR] checking what warning flags to pass to the C compiler... -Wall -Wunused
-[9-ERROR] checking what language compliance flags to pass to the C compiler... 
-[9-ERROR] checking for gdk-pixbuf-config... /opt/gnome/bin/gdk-pixbuf-config
-[9-ERROR] checking for GDK_PIXBUF - version >= 0.2.5... yes
-[9-ERROR] checking for gnome-config... (cached) /opt/gnome/bin/gnome-config
-[9-ERROR] checking for GNOME-PRINT - version >= 0.21... found 0.35
-[9-ERROR] checking for libglade-config... /opt/gnome/bin/libglade-config
-[9-ERROR] checking for libglade... yes
-[9-ERROR] checking for main in -lgal... yes
-[9-ERROR] checking for gtkhtml < 1.1... Unknown library `gtkhtml'
-[9-ERROR] Unknown library `gtkhtml'
-[9-ERROR] checking for pkg-config... /usr/bin/pkg-config
-[9-ERROR] Package gtkhtml-1.1 was not found in the pkg-config search path.
-[9-ERROR] Perhaps you should add the directory containing `gtkhtml-1.1.pc'
-[9-ERROR] to the PKG_CONFIG_PATH environment variable
-[9-ERROR] No package 'gtkhtml-1.1' found
-[9-ERROR] Package gtkhtml-1.1 was not found in the pkg-config search path.
-[9-ERROR] Perhaps you should add the directory containing `gtkhtml-1.1.pc'
-[9-ERROR] to the PKG_CONFIG_PATH environment variable
-[9-ERROR] No package 'gtkhtml-1.1' found
-[9-ERROR] checking for gtkhtml >= 1.1... checking for gtk_html_new in -lgtkhtml-1.1... no
-[9-ERROR] configure: error: Cannot find gtkhtml-1.1. See the README and config.log for more info.
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 1 files for this package.
-[9-ERROR] Applying package split: 40 gnucash:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 gnucash:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 gnucash:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <gnucash:doc> Creating flist file ...
-[9-ERROR] <gnucash:doc> Creating package dependencies file ...
-[9-ERROR] <gnucash:doc> Creating md5sum and cksum files ...
-[9-ERROR] <gnucash:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building gnucash=gnucash.
+[DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev autoconf
+[DEP] automake18 bash2 bdb33 bdb41 bdb41:dev binutils bison bonobo10
+[DEP] bonobo10:dev bzip2 coreutils diffutils esound esound:dev findutils
+[DEP] freetype freetype:dev g-wrap g-wrap:dev gal01 gal01:dev gawk gcc32
+[DEP] gcc32:dev gconf110 gconf110:dev gdk-pixbuf10 gdk-pixbuf10:dev gettext
+[DEP] ghex12 glade10 glib12 glib12:dev glibc23 glibc23:dev gnome-libs14
+[DEP] gnome-libs14:dev gnome-print10 gnome-print10:dev grep gtk+12
+[DEP] gtk+12:dev gtkhtml1 gtkhtml1:dev guile guile:dev guppi guppi:dev
+[DEP] imlib imlib:dev libghttp10 libghttp10:dev libglade10 libglade10:dev
+[DEP] libtool libtool:dev libxml libxml:dev linux24-header:dev make mktemp
+[DEP] ncurses:dev net-tools oaf10 oaf10:dev openhbci openhbci:dev openssl
+[DEP] orbit10 orbit10:dev patch perl5 pkgconfig popt popt:dev readline
+[DEP] sed sysfiles tar texinfo xfree86 xfree86:dev zlib:dev
 

@@ -20,111 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093260965 Mon Aug 23 13:36:05 2004
+[TIMESTAMP] 1095374252 Fri Sep 17 00:37:32 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ucspi-unix.err 9-ucspi-unix.err
+[LOGS] 5-ucspi-unix.log
 
-[5-ERROR] Copy:   --version
-[5-ERROR] Append: -s
-[5-ERROR] New Command: gcc-32 -Os -pipe --version -s
-[5-ERROR] gcc-32 (GCC) 3.2.3
-[5-ERROR] Copyright (C) 2002 Free Software Foundation, Inc.
-[5-ERROR] This is free software; see the source for copying conditions.  There is NO
-[5-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-[5-ERROR] 
-[5-ERROR] [ writing debug log to /ROCK/src.ucspi-unix.1093022623.24387.3101627639/cmd_wrapper.log ]
-[5-ERROR] create symbolic link `/ROCK/src.ucspi-unix.1093022623.24387.3101627639/archdir/ucspi-unix-0.36.tar.bz2' to `/ROCK/download/mirror/u/ucspi-unix-0.36.tar.bz2'
-[5-ERROR] Running main build function 'build_this_package' ...
-[5-ERROR] Extracting ucspi-unix-0.36.tar.bz2 (--use-compress-program=bzip2 -xf) ... 
-[5-ERROR] Fixing ownership and permissions ...
-[5-ERROR] Removing CVS and .svn directories ...
-[5-ERROR] Changeing into /ROCK/src.ucspi-unix.1093022623.24387.3101627639/ucspi-unix-0.36 ...
-[5-ERROR] Creating /usr/<..> if required ...
-[5-ERROR] ( echo '#!/bin/sh';\
-[5-ERROR]   echo 'main="$1"; shift';\
-[5-ERROR]   echo exec `head -1 conf-ld` '-o "$main" "$main.o" ${1+"$@"}' -lsysdeps;\
-[5-ERROR] ) >load
-[5-ERROR] head: `-1' option is obsolete; use `-n 1'
-[5-ERROR] Try `head --help' for more information.
-[5-ERROR] chmod 755 load
-[5-ERROR] ( echo '#!/bin/sh'; \
-[5-ERROR]   echo 'source=$1; shift'; \
-[5-ERROR]   echo 'base=`echo "$source" | sed -e s:\\\\.c$::`'; \
-[5-ERROR]   echo exec `head -1 conf-cc` '-I. -o ${base}.o -c $source ${1+"$@"}'; \
-[5-ERROR] ) >compile
-[5-ERROR] head: `-1' option is obsolete; use `-n 1'
-[5-ERROR] Try `head --help' for more information.
-[5-ERROR] chmod 755 compile
-[5-ERROR] ./compile unixclient.c
-[5-ERROR] ./compile: line 4: exec: -I: invalid option
-[5-ERROR] exec: usage: exec [-cl] [-a name] file [redirection ...]
-[5-ERROR] make: *** [unixclient.o] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 ucspi-unix:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 ucspi-unix:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 ucspi-unix:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <ucspi-unix:doc> Creating flist file ...
-[5-ERROR] <ucspi-unix:doc> Creating package dependencies file ...
-[5-ERROR] <ucspi-unix:doc> Creating md5sum and cksum files ...
-[5-ERROR] <ucspi-unix:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building ucspi-unix=ucspi-unix.
+[BUILDTIME] 1473 (5)
+[SIZE] 0.03 MB, 11 files
 
-[9-ERROR] Copy:   --version
-[9-ERROR] Append: -s
-[9-ERROR] New Command: gcc-32 -Os -pipe --version -s
-[9-ERROR] gcc-32 (GCC) 3.2.3
-[9-ERROR] Copyright (C) 2002 Free Software Foundation, Inc.
-[9-ERROR] This is free software; see the source for copying conditions.  There is NO
-[9-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-[9-ERROR] 
-[9-ERROR] [ writing debug log to /ROCK/src.ucspi-unix.1093260944.17095.1770785246/cmd_wrapper.log ]
-[9-ERROR] create symbolic link `/ROCK/src.ucspi-unix.1093260944.17095.1770785246/archdir/ucspi-unix-0.36.tar.bz2' to `/ROCK/download/mirror/u/ucspi-unix-0.36.tar.bz2'
-[9-ERROR] Running main build function 'build_this_package' ...
-[9-ERROR] Extracting ucspi-unix-0.36.tar.bz2 (--use-compress-program=bzip2 -xf) ... 
-[9-ERROR] Fixing ownership and permissions ...
-[9-ERROR] Removing CVS and .svn directories ...
-[9-ERROR] Changeing into /ROCK/src.ucspi-unix.1093260944.17095.1770785246/ucspi-unix-0.36 ...
-[9-ERROR] Creating /usr/<..> if required ...
-[9-ERROR] ( echo '#!/bin/sh';\
-[9-ERROR]   echo 'main="$1"; shift';\
-[9-ERROR]   echo exec `head -1 conf-ld` '-o "$main" "$main.o" ${1+"$@"}' -lsysdeps;\
-[9-ERROR] ) >load
-[9-ERROR] head: `-1' option is obsolete; use `-n 1'
-[9-ERROR] Try `head --help' for more information.
-[9-ERROR] chmod 755 load
-[9-ERROR] ( echo '#!/bin/sh'; \
-[9-ERROR]   echo 'source=$1; shift'; \
-[9-ERROR]   echo 'base=`echo "$source" | sed -e s:\\\\.c$::`'; \
-[9-ERROR]   echo exec `head -1 conf-cc` '-I. -o ${base}.o -c $source ${1+"$@"}'; \
-[9-ERROR] ) >compile
-[9-ERROR] head: `-1' option is obsolete; use `-n 1'
-[9-ERROR] Try `head --help' for more information.
-[9-ERROR] chmod 755 compile
-[9-ERROR] ./compile unixclient.c
-[9-ERROR] ./compile: line 4: exec: -I: invalid option
-[9-ERROR] exec: usage: exec [-cl] [-a name] file [redirection ...]
-[9-ERROR] make: *** [unixclient.o] Error 2
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 1 files for this package.
-[9-ERROR] Applying package split: 40 ucspi-unix:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 ucspi-unix:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 ucspi-unix:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <ucspi-unix:doc> Creating flist file ...
-[9-ERROR] <ucspi-unix:doc> Creating package dependencies file ...
-[9-ERROR] <ucspi-unix:doc> Creating md5sum and cksum files ...
-[9-ERROR] <ucspi-unix:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building ucspi-unix=ucspi-unix.
+[DEP] 00-dirtree bash2 bglibs bglibs:dev binutils bzip2 coreutils findutils
+[DEP] gcc32 gcc32:dev glibc23 glibc23:dev grep linux24-header:dev make
+[DEP] patch sed sysfiles tar
 

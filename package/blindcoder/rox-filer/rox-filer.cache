@@ -20,111 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093252577 Mon Aug 23 11:16:17 2004
+[TIMESTAMP] 1095360434 Thu Sep 16 20:47:14 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-rox-filer.err 9-rox-filer.err
+[LOGS] 5-rox-filer.log
 
-[5-ERROR] gcc-32  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o view_iface.o view_iface.c
-[5-ERROR] gcc-32  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o wrapped.o wrapped.c
-[5-ERROR] gcc-32  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o xml.o xml.c
-[5-ERROR] gcc-32 -o ../Linux-ix86/ROX-Filer abox.o action.o appinfo.o appmenu.o bind.o bookmarks.o cell_icon.o choices.o collection.o dir.o diritem.o display.o dnd.o dropbox.o filer.o find.o fscache.o gtksavebox.o gui_support.o i18n.o icon.o infobox.o main.o menu.o minibuffer.o modechange.o mount.o options.o panel.o pinboard.o pixmaps.o remote.o rox_gettext.o run.o sc.o session.o support.o tasklist.o toolbar.o type.o usericons.o view_collection.o view_details.o view_iface.o wrapped.o xml.o   -L/usr/X11R6/lib -lX11   -lICE -lSM `pkg-config --libs gtk+-2.0 libxml-2.0`
-[5-ERROR] Done
-[5-ERROR] ROX-Filer 2.0.1
-[5-ERROR] Copyright (C) 2003 Thomas Leonard.
-[5-ERROR] ROX-Filer comes with ABSOLUTELY NO WARRANTY,
-[5-ERROR] to the extent permitted by law.
-[5-ERROR] You may redistribute copies of ROX-Filer
-[5-ERROR] under the terms of the GNU General Public License.
-[5-ERROR] For more information about these matters, see the file named COPYING.
-[5-ERROR] 
-[5-ERROR] Compiled with GTK version 2.4.7
-[5-ERROR] Running with GTK version 2.4.7
-[5-ERROR] 
-[5-ERROR] -- features set at compile time --
-[5-ERROR] 
-[5-ERROR] Large File Support... Yes
-[5-ERROR] Dnotify support... Yes
-[5-ERROR] 
-[5-ERROR] **************************************************************************
-[5-ERROR] 
-[5-ERROR] Where would you like to install the filer?
-[5-ERROR] Normally, you should choose (1) if you have root access, or (2) if not.
-[5-ERROR] 
-[5-ERROR] 1) Inside /usr/local
-[5-ERROR] 2) Inside my home directory
-[5-ERROR] 3) Inside /usr
-[5-ERROR] 4) Specify paths manually
-[5-ERROR] 
-[5-ERROR] Enter 1, 2, 3 or 4:
-[5-ERROR] >>> 
-[5-ERROR] Invalid choice!
-[5-ERROR] Aborting...
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 rox-filer:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 rox-filer:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 rox-filer:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <rox-filer:doc> Creating flist file ...
-[5-ERROR] <rox-filer:doc> Creating package dependencies file ...
-[5-ERROR] <rox-filer:doc> Creating md5sum and cksum files ...
-[5-ERROR] <rox-filer:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building rox-filer=rox-filer.
+[BUILDTIME] 8824 (5)
+[SIZE] 4.78 MB, 278 files
 
-[9-ERROR] gcc-32  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o view_iface.o view_iface.c
-[9-ERROR] gcc-32  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o wrapped.o wrapped.c
-[9-ERROR] gcc-32  -g -O2 -Wall -Wmissing-prototypes  -I/usr/X11R6/include -D_FILE_OFFSET_BITS=64 `pkg-config --cflags gtk+-2.0 libxml-2.0`   -c -o xml.o xml.c
-[9-ERROR] gcc-32 -o ../Linux-ix86/ROX-Filer abox.o action.o appinfo.o appmenu.o bind.o bookmarks.o cell_icon.o choices.o collection.o dir.o diritem.o display.o dnd.o dropbox.o filer.o find.o fscache.o gtksavebox.o gui_support.o i18n.o icon.o infobox.o main.o menu.o minibuffer.o modechange.o mount.o options.o panel.o pinboard.o pixmaps.o remote.o rox_gettext.o run.o sc.o session.o support.o tasklist.o toolbar.o type.o usericons.o view_collection.o view_details.o view_iface.o wrapped.o xml.o   -L/usr/X11R6/lib -lX11   -lICE -lSM `pkg-config --libs gtk+-2.0 libxml-2.0`
-[9-ERROR] Done
-[9-ERROR] ROX-Filer 2.0.1
-[9-ERROR] Copyright (C) 2003 Thomas Leonard.
-[9-ERROR] ROX-Filer comes with ABSOLUTELY NO WARRANTY,
-[9-ERROR] to the extent permitted by law.
-[9-ERROR] You may redistribute copies of ROX-Filer
-[9-ERROR] under the terms of the GNU General Public License.
-[9-ERROR] For more information about these matters, see the file named COPYING.
-[9-ERROR] 
-[9-ERROR] Compiled with GTK version 2.4.7
-[9-ERROR] Running with GTK version 2.4.7
-[9-ERROR] 
-[9-ERROR] -- features set at compile time --
-[9-ERROR] 
-[9-ERROR] Large File Support... Yes
-[9-ERROR] Dnotify support... Yes
-[9-ERROR] 
-[9-ERROR] **************************************************************************
-[9-ERROR] 
-[9-ERROR] Where would you like to install the filer?
-[9-ERROR] Normally, you should choose (1) if you have root access, or (2) if not.
-[9-ERROR] 
-[9-ERROR] 1) Inside /usr/local
-[9-ERROR] 2) Inside my home directory
-[9-ERROR] 3) Inside /usr
-[9-ERROR] 4) Specify paths manually
-[9-ERROR] 
-[9-ERROR] Enter 1, 2, 3 or 4:
-[9-ERROR] >>> 
-[9-ERROR] Invalid choice!
-[9-ERROR] Aborting...
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 1 files for this package.
-[9-ERROR] Applying package split: 40 rox-filer:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 rox-filer:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 rox-filer:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <rox-filer:doc> Creating flist file ...
-[9-ERROR] <rox-filer:doc> Creating package dependencies file ...
-[9-ERROR] <rox-filer:doc> Creating md5sum and cksum files ...
-[9-ERROR] <rox-filer:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building rox-filer=rox-filer.
+[DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils diffutils
+[DEP] expat file findutils freetype gcc32 gcc32:dev glib glib:dev glibc23
+[DEP] glibc23:dev grep gtk+ gtk+:dev libxml2 libxml2:dev linux24-header:dev
+[DEP] make net-tools pango pango:dev patch pkgconfig sed sysfiles tar
+[DEP] xfree86 xfree86:dev zlib:dev
 

@@ -20,69 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093252154 Mon Aug 23 11:09:14 2004
+[TIMESTAMP] 1095360095 Thu Sep 16 20:41:35 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-dovecot.log 9-dovecot.err
+[LOGS] 5-dovecot.log
 
-[BUILDTIME] 6543 (5)
-[SIZE] 0.83 MB, 16 files
+[BUILDTIME] 7537 (5)
+[SIZE] 0.84 MB, 16 files
 
-[DEP] 00-dirtree autoconf bash binutils bzip2 coreutils diffutils findutils
-[DEP] gawk gcc32 gcc32:dev glibc23 glibc23:dev gnutls gnutls:dev
+[DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils diffutils
+[DEP] findutils gcc32 gcc32:dev glibc23 glibc23:dev gnutls gnutls:dev
 [DEP] grep libgcrypt libgcrypt:dev libgpg-error libgpg-error:dev
-[DEP] linux24-header:dev m4 make mktemp net-tools openssl openssl:dev pam
-[DEP] pam:dev perl5 pkgconfig sed sysfiles tar texinfo util-linux zlib:dev
-
-[9-ERROR] Making all in login-common
-[9-ERROR] make[3]: Entering directory `/ROCK/src.dovecot.1093252078.918.2230796069/dovecot-0.99.10.5/src/login-common'
-[9-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src/lib 	-DPKG_RUNDIR=\""/var/run/dovecot"\" 	-DSBINDIR=\""/usr/sbin"\"    -g -O2 -Wall -W -Wmissing-prototypes -Wmissing-declarations -Wpointer-arith -Wchar-subscripts -Wformat=2 -Wbad-function-cast  -c auth-common.c
-[9-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src/lib 	-DPKG_RUNDIR=\""/var/run/dovecot"\" 	-DSBINDIR=\""/usr/sbin"\"    -g -O2 -Wall -W -Wmissing-prototypes -Wmissing-declarations -Wpointer-arith -Wchar-subscripts -Wformat=2 -Wbad-function-cast  -c auth-connection.c
-[9-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src/lib 	-DPKG_RUNDIR=\""/var/run/dovecot"\" 	-DSBINDIR=\""/usr/sbin"\"    -g -O2 -Wall -W -Wmissing-prototypes -Wmissing-declarations -Wpointer-arith -Wchar-subscripts -Wformat=2 -Wbad-function-cast  -c main.c
-[9-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src/lib 	-DPKG_RUNDIR=\""/var/run/dovecot"\" 	-DSBINDIR=\""/usr/sbin"\"    -g -O2 -Wall -W -Wmissing-prototypes -Wmissing-declarations -Wpointer-arith -Wchar-subscripts -Wformat=2 -Wbad-function-cast  -c master.c
-[9-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src/lib 	-DPKG_RUNDIR=\""/var/run/dovecot"\" 	-DSBINDIR=\""/usr/sbin"\"    -g -O2 -Wall -W -Wmissing-prototypes -Wmissing-declarations -Wpointer-arith -Wchar-subscripts -Wformat=2 -Wbad-function-cast  -c ssl-proxy.c
-[9-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src/lib 	-DPKG_RUNDIR=\""/var/run/dovecot"\" 	-DSBINDIR=\""/usr/sbin"\"    -g -O2 -Wall -W -Wmissing-prototypes -Wmissing-declarations -Wpointer-arith -Wchar-subscripts -Wformat=2 -Wbad-function-cast  -c ssl-proxy-gnutls.c
-[9-ERROR] ssl-proxy-gnutls.c: In function `ssl_handshake':
-[9-ERROR] ssl-proxy-gnutls.c:279: warning: implicit declaration of function `gnutls_handshake_get_direction'
-[9-ERROR] ssl-proxy-gnutls.c: In function `initialize_state':
-[9-ERROR] ssl-proxy-gnutls.c:301: warning: implicit declaration of function `gnutls_cert_type_set_priority'
-[9-ERROR] ssl-proxy-gnutls.c: In function `ssl_proxy_new':
-[9-ERROR] ssl-proxy-gnutls.c:317: warning: passing arg 2 of `gnutls_transport_set_ptr' makes pointer from integer without a cast
-[9-ERROR] ssl-proxy-gnutls.c: In function `read_dh_parameters':
-[9-ERROR] ssl-proxy-gnutls.c:415: warning: `gnutls_dh_params_set' is deprecated (declared at /usr/include/gnutls/compat8.h:82)
-[9-ERROR] ssl-proxy-gnutls.c: In function `read_rsa_parameters':
-[9-ERROR] ssl-proxy-gnutls.c:441: warning: `gnutls_rsa_params_set' is deprecated (declared at /usr/include/gnutls/compat8.h:77)
-[9-ERROR] ssl-proxy-gnutls.c: In function `ssl_proxy_init':
-[9-ERROR] ssl-proxy-gnutls.c:507: warning: implicit declaration of function `gnutls_certificate_allocate_cred'
-[9-ERROR] ssl-proxy-gnutls.c:519: void value not ignored as it ought to be
-[9-ERROR] ssl-proxy-gnutls.c:522: void value not ignored as it ought to be
-[9-ERROR] ssl-proxy-gnutls.c: In function `ssl_proxy_deinit':
-[9-ERROR] ssl-proxy-gnutls.c:544: warning: implicit declaration of function `gnutls_certificate_free_cred'
-[9-ERROR] make[3]: *** [ssl-proxy-gnutls.o] Error 1
-[9-ERROR] make[3]: Leaving directory `/ROCK/src.dovecot.1093252078.918.2230796069/dovecot-0.99.10.5/src/login-common'
-[9-ERROR] make[2]: *** [all-recursive] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.dovecot.1093252078.918.2230796069/dovecot-0.99.10.5/src'
-[9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.dovecot.1093252078.918.2230796069/dovecot-0.99.10.5'
-[9-ERROR] make: *** [all-recursive-am] Error 2
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 32 files for this package.
-[9-ERROR] Applying package split: 40 dovecot:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 dovecot:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 dovecot:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <dovecot> Creating flist file ...
-[9-ERROR] <dovecot> Creating package dependencies file ...
-[9-ERROR] <dovecot> Creating md5sum and cksum files ...
-[9-ERROR] <dovecot> Creating package description ...
-[9-ERROR] <dovecot:doc> Creating flist file ...
-[9-ERROR] <dovecot:doc> Creating package dependencies file ...
-[9-ERROR] <dovecot:doc> Creating md5sum and cksum files ...
-[9-ERROR] <dovecot:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building dovecot=dovecot.
+[DEP] linux24-header:dev m4 make mktemp net-tools openssl openssl:dev
+[DEP] pam pam:dev patch perl5 sed sysfiles tar texinfo util-linux zlib:dev
 

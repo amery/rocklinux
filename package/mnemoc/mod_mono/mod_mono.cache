@@ -20,16 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093234538 Mon Aug 23 06:15:38 2004
+[TIMESTAMP] 1095339925 Thu Sep 16 15:05:25 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-mod_mono.log 9-mod_mono.log
+[LOGS] 5-mod_mono.log
 
-[BUILDTIME] 2337 (9)
-[SIZE] 0.05 MB, 9 files
+[BUILDTIME] 2258 (5)
+[SIZE] 0.07 MB, 11 files
 
-[DEP] 00-dirtree apache apache:dev bash binutils bzip2 coreutils diffutils
+[DEP] 00-dirtree apache apache:dev bash2 binutils bzip2 coreutils diffutils
 [DEP] findutils gcc32 gcc32:dev glibc23 glibc23:dev grep linux24-header:dev
-[DEP] make mktemp mono net-tools perl5 sed sysfiles tar util-linux
+[DEP] make mktemp mono net-tools patch perl5 pkgconfig sed sysfiles
+[DEP] tar util-linux
 

@@ -20,111 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093157927 Sun Aug 22 08:58:47 2004
+[TIMESTAMP] 1095274094 Wed Sep 15 20:48:14 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-pkgview.err 9-pkgview.err
+[LOGS] 5-pkgview.log
 
-[5-ERROR] config.status: creating config.h
-[5-ERROR] config.status: executing default-1 commands
-[5-ERROR] config.status: executing default-2 commands
-[5-ERROR] config.status: executing default-3 commands
-[5-ERROR] make  all-recursive
-[5-ERROR] make[1]: Entering directory `/ROCK/src.pkgview.1092928765.18782.3151348904/gnome-pkgview-1.0.5'
-[5-ERROR] Making all in po
-[5-ERROR] make[2]: Entering directory `/ROCK/src.pkgview.1092928765.18782.3151348904/gnome-pkgview-1.0.5/po'
-[5-ERROR] make[2]: Nothing to be done for `all'.
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.pkgview.1092928765.18782.3151348904/gnome-pkgview-1.0.5/po'
-[5-ERROR] Making all in src
-[5-ERROR] make[2]: Entering directory `/ROCK/src.pkgview.1092928765.18782.3151348904/gnome-pkgview-1.0.5/src'
-[5-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -Wall -Wmissing-prototypes  -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/usr/include/freetype2 -DG_LOG_DOMAIN=\"gnome-pkgview\" -DGNOMELOCALEDIR=\""/opt/gnome26/share/locale"\"    -g -O2 -c main.c
-[5-ERROR] main.c: In function `create_list_view':
-[5-ERROR] main.c:179: warning: assignment from incompatible pointer type
-[5-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -Wall -Wmissing-prototypes  -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/usr/include/freetype2 -DG_LOG_DOMAIN=\"gnome-pkgview\" -DGNOMELOCALEDIR=\""/opt/gnome26/share/locale"\"    -g -O2 -c desktop-version.c
-[5-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -Wall -Wmissing-prototypes  -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/usr/include/freetype2 -DG_LOG_DOMAIN=\"gnome-pkgview\" -DGNOMELOCALEDIR=\""/opt/gnome26/share/locale"\"    -g -O2 -c pkg-config.c
-[5-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -Wall -Wmissing-prototypes  -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/usr/include/freetype2 -DG_LOG_DOMAIN=\"gnome-pkgview\" -DGNOMELOCALEDIR=\""/opt/gnome26/share/locale"\"    -g -O2 -c config-path.c
-[5-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -Wall -Wmissing-prototypes  -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/usr/include/freetype2 -DG_LOG_DOMAIN=\"gnome-pkgview\" -DGNOMELOCALEDIR=\""/opt/gnome26/share/locale"\"    -g -O2 -c about-box.c
-[5-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -Wall -Wmissing-prototypes  -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/usr/include/freetype2 -DG_LOG_DOMAIN=\"gnome-pkgview\" -DGNOMELOCALEDIR=\""/opt/gnome26/share/locale"\"    -g -O2 -c pkgview-cursor-utils.c
-[5-ERROR] gcc-32  -g -O2  -o gnome-pkgview  main.o desktop-version.o pkg-config.o config-path.o about-box.o pkgview-cursor-utils.o -Wl,--export-dynamic -L/opt/gnome26/lib -L/usr/X11R6/lib -lgnomeui-2 -lSM -lICE -lbonoboui-2 -lxml2 -lz -lgnomecanvas-2 -lgnome-2 -lpopt -lart_lgpl_2 -lpangoft2-1.0 -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lpangoxft-1.0 -lpangox-1.0 -lpango-1.0 -lgobject-2.0 -lbonobo-2 -lgnomevfs-2 -lbonobo-activation -lgconf-2 -lORBit-2 -lm -lgmodule-2.0 -ldl -lgthread-2.0 -lpthread -lglib-2.0   
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.pkgview.1092928765.18782.3151348904/gnome-pkgview-1.0.5/src'
-[5-ERROR] Making all in pixmaps
-[5-ERROR] make[2]: Entering directory `/ROCK/src.pkgview.1092928765.18782.3151348904/gnome-pkgview-1.0.5/pixmaps'
-[5-ERROR] make[2]: Nothing to be done for `all'.
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.pkgview.1092928765.18782.3151348904/gnome-pkgview-1.0.5/pixmaps'
-[5-ERROR] make[2]: Entering directory `/ROCK/src.pkgview.1092928765.18782.3151348904/gnome-pkgview-1.0.5'
-[5-ERROR] LC_ALL=C ./intltool-merge ./po gnome-pkgview.desktop.in gnome-pkgview.desktop -d -u -c ./po/.intltool-merge-cache
-[5-ERROR] The OrigTree module doesn't seem to be properly installed ./intltool-merge
-[5-ERROR] 
-[5-ERROR] make[2]: *** [gnome-pkgview.desktop] Error 2
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.pkgview.1092928765.18782.3151348904/gnome-pkgview-1.0.5'
-[5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.pkgview.1092928765.18782.3151348904/gnome-pkgview-1.0.5'
-[5-ERROR] make: *** [all-recursive-am] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 pkgview:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 pkgview:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 pkgview:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <pkgview:doc> Creating flist file ...
-[5-ERROR] <pkgview:doc> Creating package dependencies file ...
-[5-ERROR] <pkgview:doc> Creating md5sum and cksum files ...
-[5-ERROR] <pkgview:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building pkgview=pkgview.
+[BUILDTIME] 2751 (5)
+[SIZE] 0.20 MB, 57 files
 
-[9-ERROR] config.status: creating config.h
-[9-ERROR] config.status: executing default-1 commands
-[9-ERROR] config.status: executing default-2 commands
-[9-ERROR] config.status: executing default-3 commands
-[9-ERROR] make  all-recursive
-[9-ERROR] make[1]: Entering directory `/ROCK/src.pkgview.1093157888.1228.3515236010/gnome-pkgview-1.0.5'
-[9-ERROR] Making all in po
-[9-ERROR] make[2]: Entering directory `/ROCK/src.pkgview.1093157888.1228.3515236010/gnome-pkgview-1.0.5/po'
-[9-ERROR] make[2]: Nothing to be done for `all'.
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.pkgview.1093157888.1228.3515236010/gnome-pkgview-1.0.5/po'
-[9-ERROR] Making all in src
-[9-ERROR] make[2]: Entering directory `/ROCK/src.pkgview.1093157888.1228.3515236010/gnome-pkgview-1.0.5/src'
-[9-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -Wall -Wmissing-prototypes  -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/usr/include/freetype2 -DG_LOG_DOMAIN=\"gnome-pkgview\" -DGNOMELOCALEDIR=\""/opt/gnome26/share/locale"\"    -g -O2 -c main.c
-[9-ERROR] main.c: In function `create_list_view':
-[9-ERROR] main.c:179: warning: assignment from incompatible pointer type
-[9-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -Wall -Wmissing-prototypes  -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/usr/include/freetype2 -DG_LOG_DOMAIN=\"gnome-pkgview\" -DGNOMELOCALEDIR=\""/opt/gnome26/share/locale"\"    -g -O2 -c desktop-version.c
-[9-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -Wall -Wmissing-prototypes  -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/usr/include/freetype2 -DG_LOG_DOMAIN=\"gnome-pkgview\" -DGNOMELOCALEDIR=\""/opt/gnome26/share/locale"\"    -g -O2 -c pkg-config.c
-[9-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -Wall -Wmissing-prototypes  -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/usr/include/freetype2 -DG_LOG_DOMAIN=\"gnome-pkgview\" -DGNOMELOCALEDIR=\""/opt/gnome26/share/locale"\"    -g -O2 -c config-path.c
-[9-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -Wall -Wmissing-prototypes  -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/usr/include/freetype2 -DG_LOG_DOMAIN=\"gnome-pkgview\" -DGNOMELOCALEDIR=\""/opt/gnome26/share/locale"\"    -g -O2 -c about-box.c
-[9-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -Wall -Wmissing-prototypes  -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/usr/include/freetype2 -DG_LOG_DOMAIN=\"gnome-pkgview\" -DGNOMELOCALEDIR=\""/opt/gnome26/share/locale"\"    -g -O2 -c pkgview-cursor-utils.c
-[9-ERROR] gcc-32  -g -O2  -o gnome-pkgview  main.o desktop-version.o pkg-config.o config-path.o about-box.o pkgview-cursor-utils.o -Wl,--export-dynamic -L/opt/gnome26/lib -L/usr/X11R6/lib -lgnomeui-2 -lSM -lICE -lbonoboui-2 -lxml2 -lz -lgnomecanvas-2 -lgnome-2 -lpopt -lart_lgpl_2 -lpangoft2-1.0 -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lpangoxft-1.0 -lpangox-1.0 -lpango-1.0 -lgobject-2.0 -lbonobo-2 -lgnomevfs-2 -lbonobo-activation -lgconf-2 -lORBit-2 -lm -lgmodule-2.0 -ldl -lgthread-2.0 -lpthread -lglib-2.0   
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.pkgview.1093157888.1228.3515236010/gnome-pkgview-1.0.5/src'
-[9-ERROR] Making all in pixmaps
-[9-ERROR] make[2]: Entering directory `/ROCK/src.pkgview.1093157888.1228.3515236010/gnome-pkgview-1.0.5/pixmaps'
-[9-ERROR] make[2]: Nothing to be done for `all'.
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.pkgview.1093157888.1228.3515236010/gnome-pkgview-1.0.5/pixmaps'
-[9-ERROR] make[2]: Entering directory `/ROCK/src.pkgview.1093157888.1228.3515236010/gnome-pkgview-1.0.5'
-[9-ERROR] LC_ALL=C ./intltool-merge ./po gnome-pkgview.desktop.in gnome-pkgview.desktop -d -u -c ./po/.intltool-merge-cache
-[9-ERROR] The OrigTree module doesn't seem to be properly installed ./intltool-merge
-[9-ERROR] 
-[9-ERROR] make[2]: *** [gnome-pkgview.desktop] Error 2
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.pkgview.1093157888.1228.3515236010/gnome-pkgview-1.0.5'
-[9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.pkgview.1093157888.1228.3515236010/gnome-pkgview-1.0.5'
-[9-ERROR] make: *** [all-recursive-am] Error 2
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 1 files for this package.
-[9-ERROR] Applying package split: 40 pkgview:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 pkgview:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 pkgview:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <pkgview:doc> Creating flist file ...
-[9-ERROR] <pkgview:doc> Creating package dependencies file ...
-[9-ERROR] <pkgview:doc> Creating md5sum and cksum files ...
-[9-ERROR] <pkgview:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building pkgview=pkgview.
+[DEP] 00-dirtree alsa atk atk:dev audiofile autoconf bash2 binutils bzip2
+[DEP] coreutils cpan-xml-parser diffutils esound expat figment findutils
+[DEP] freetype gcc32 gcc32:dev gconf gconf:dev gettext glib glib:dev
+[DEP] glibc23 glibc23:dev gnome-blog gnome-keyring gnome-vfs gnome-vfs:dev
+[DEP] grep gtk+ gtk+:dev libart_lgpl23 libart_lgpl23:dev libbonobo
+[DEP] libbonobo:dev libbonoboui libbonoboui:dev libgnome libgnome:dev
+[DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev libjpeg
+[DEP] libxml2 libxml2:dev linux24-header:dev make mktemp net-tools openssl
+[DEP] orbit2 pango pango:dev perl5 pkgconfig popt popt:dev sed sysfiles
+[DEP] tar texinfo util-linux xfree86 zlib:dev
 

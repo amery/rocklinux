@@ -5,7 +5,7 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/gnome14/gtkhtml10/gtkhtml10.cache
+[COPY] ROCK Linux: rock-src/package/gnome14/gtkhtml10/gtkhtml10.desc
 [COPY] ROCK Linux is Copyright (C) 1998 - 2003 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
@@ -20,111 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093218329 Mon Aug 23 01:45:29 2004
+[TIMESTAMP] 1095334995 Thu Sep 16 13:43:15 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gtkhtml10.err 9-gtkhtml10.err
+[LOGS] 5-gtkhtml1.log
 
-[5-ERROR] checking for nl_types.h... yes
-[5-ERROR] checking for malloc.h... yes
-[5-ERROR] checking for string.h... (cached) yes
-[5-ERROR] checking for unistd.h... (cached) yes
-[5-ERROR] checking for sys/param.h... yes
-[5-ERROR] checking for getcwd... yes
-[5-ERROR] checking for munmap... yes
-[5-ERROR] checking for putenv... yes
-[5-ERROR] checking for setenv... yes
-[5-ERROR] checking for setlocale... yes
-[5-ERROR] checking for strchr... yes
-[5-ERROR] checking for strcasecmp... yes
-[5-ERROR] checking for strdup... yes
-[5-ERROR] checking for __argz_count... yes
-[5-ERROR] checking for __argz_stringify... yes
-[5-ERROR] checking for __argz_next... yes
-[5-ERROR] checking for stpcpy... yes
-[5-ERROR] checking for LC_MESSAGES... yes
-[5-ERROR] checking whether NLS is requested... yes
-[5-ERROR] checking for libintl.h... yes
-[5-ERROR] checking for gettext in libc... yes
-[5-ERROR] checking for msgfmt... /usr/bin/msgfmt
-[5-ERROR] checking for dcgettext... yes
-[5-ERROR] checking for gmsgfmt... /usr/bin/msgfmt
-[5-ERROR] checking for xgettext... /usr/bin/xgettext
-[5-ERROR] checking for catalogs to be installed...  az cs da de el es eu fi fr gl hu it ja ko lt lv nl nn no pl pt pt_BR ru sk sl sv tr uk zh_CN zh_TW
-[5-ERROR] sed: can't read ./intl/po2tbl.sed.in: No such file or directory
-[5-ERROR] checking for Gnome App libraries (GAL) >= 0.15.99.9... not found
-[5-ERROR] configure: error:
-[5-ERROR] ""
-[5-ERROR] "You need Gnome App libraries (GAL) 0.15.99.9 or later to build gtkhtml."
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 4 files for this package.
-[5-ERROR] Applying package split: 40 gtkhtml10:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 gtkhtml10:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 gtkhtml10:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <gtkhtml10> Creating flist file ...
-[5-ERROR] <gtkhtml10> Creating package dependencies file ...
-[5-ERROR] <gtkhtml10> Creating md5sum and cksum files ...
-[5-ERROR] <gtkhtml10> Creating package description ...
-[5-ERROR] <gtkhtml10:doc> Creating flist file ...
-[5-ERROR] <gtkhtml10:doc> Creating package dependencies file ...
-[5-ERROR] <gtkhtml10:doc> Creating md5sum and cksum files ...
-[5-ERROR] <gtkhtml10:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building gtkhtml10=gtkhtml10.
+[BUILDTIME] 27833 (5)
+[SIZE] 1.66 MB, 120 files
 
-[9-ERROR] checking for string.h... (cached) yes
-[9-ERROR] checking for unistd.h... (cached) yes
-[9-ERROR] checking for sys/param.h... yes
-[9-ERROR] checking for getcwd... yes
-[9-ERROR] checking for munmap... yes
-[9-ERROR] checking for putenv... yes
-[9-ERROR] checking for setenv... yes
-[9-ERROR] checking for setlocale... yes
-[9-ERROR] checking for strchr... yes
-[9-ERROR] checking for strcasecmp... yes
-[9-ERROR] checking for strdup... yes
-[9-ERROR] checking for __argz_count... yes
-[9-ERROR] checking for __argz_stringify... yes
-[9-ERROR] checking for __argz_next... yes
-[9-ERROR] checking for stpcpy... yes
-[9-ERROR] checking for LC_MESSAGES... yes
-[9-ERROR] checking whether NLS is requested... yes
-[9-ERROR] checking for libintl.h... yes
-[9-ERROR] checking for gettext in libc... yes
-[9-ERROR] checking for msgfmt... /usr/bin/msgfmt
-[9-ERROR] checking for dcgettext... yes
-[9-ERROR] checking for gmsgfmt... /usr/bin/msgfmt
-[9-ERROR] checking for xgettext... /usr/bin/xgettext
-[9-ERROR] checking for catalogs to be installed...  az cs da de el es eu fi fr gl hu it ja ko lt lv nl nn no pl pt pt_BR ru sk sl sv tr uk zh_CN zh_TW
-[9-ERROR] sed: can't read ./intl/po2tbl.sed.in: No such file or directory
-[9-ERROR] checking for Gnome App libraries (GAL) >= 0.15.99.9... 0.22 found
-[9-ERROR] checking for Gnome configuration applet libraries >= 1.0.0... not found
-[9-ERROR] configure: error:
-[9-ERROR] ""
-[9-ERROR] "You need Gnome configuration applet libraries 1.0.0 or later to build gtkhtml."
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] ln: `/opt/gnome/lib/libgtkhtml.so': File exists
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 4 files for this package.
-[9-ERROR] Applying package split: 40 gtkhtml10:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 gtkhtml10:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 gtkhtml10:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <gtkhtml10> Creating flist file ...
-[9-ERROR] <gtkhtml10> Creating package dependencies file ...
-[9-ERROR] <gtkhtml10> Creating md5sum and cksum files ...
-[9-ERROR] <gtkhtml10> Creating package description ...
-[9-ERROR] <gtkhtml10:doc> Creating flist file ...
-[9-ERROR] <gtkhtml10:doc> Creating package dependencies file ...
-[9-ERROR] <gtkhtml10:doc> Creating md5sum and cksum files ...
-[9-ERROR] <gtkhtml10:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building gtkhtml10=gtkhtml10.
+[DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev autoconf bash2 bdb33
+[DEP] binutils bonobo10 bonobo10:dev bzip2 coreutils diffutils esound
+[DEP] esound:dev findutils freetype freetype:dev gal01 gal01:dev gawk
+[DEP] gcc32 gcc32:dev gconf110 gconf110:dev gdk-pixbuf10 gdk-pixbuf10:dev
+[DEP] gettext glade10 glib12 glib12:dev glibc23 glibc23:dev gnome-libs14
+[DEP] gnome-libs14:dev gnome-print10 gnome-print10:dev grep gtk+12
+[DEP] gtk+12:dev imlib imlib:dev libghttp10 libghttp10:dev libglade10
+[DEP] libglade10:dev libxml libxml:dev linux24-header:dev make mktemp
+[DEP] net-tools oaf10 oaf10:dev orbit10 orbit10:dev patch perl5 popt
+[DEP] popt:dev sed soup soup:dev sysfiles tar texinfo xfree86 xfree86:dev
+[DEP] zlib:dev
 

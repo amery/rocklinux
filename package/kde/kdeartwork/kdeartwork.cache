@@ -20,19 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093193850 Sun Aug 22 18:57:30 2004
+[TIMESTAMP] 1095291191 Thu Sep 16 01:33:11 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-kdeartwork.log 9-kdeartwork.log
+[LOGS] 5-kdeartwork.log
 
-[BUILDTIME] 63883 (9)
-[SIZE] 25.15 MB, 7691 files
+[BUILDTIME] 58538 (5)
+[SIZE] 25.92 MB, 7933 files
 
-[DEP] 00-dirtree arts bash binutils bzip2 coreutils diffutils expat
+[DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev
+[DEP] bash2 binutils bzip2 coreutils diffutils esound esound:dev expat
 [DEP] fam fam:dev findutils freetype freetype:dev gawk gcc32 gcc32:dev
-[DEP] gettext glibc23 glibc23:dev grep kdebase kdebase:dev kdelibs
-[DEP] kdelibs:dev libart_lgpl23 libart_lgpl23:dev libjpeg libpng libpng:dev
-[DEP] linux24-header:dev make mktemp net-tools perl5 qt qt:dev sed sysfiles
-[DEP] tar util-linux xfree86 xfree86:dev zlib:dev
+[DEP] gettext glib glib:dev glibc23 glibc23:dev grep kdebase kdebase:dev
+[DEP] kdelibs kdelibs:dev libart_lgpl23 libart_lgpl23:dev libjpeg libpng
+[DEP] libpng:dev linux24-header:dev mad mad:dev make mktemp nas net-tools
+[DEP] ogg-vorbis ogg-vorbis:dev perl5 qt qt:dev sed sysfiles tar util-linux
+[DEP] xfree86 xfree86:dev zlib:dev
 

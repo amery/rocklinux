@@ -20,111 +20,28 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093250270 Mon Aug 23 10:37:50 2004
+[TIMESTAMP] 1095358387 Thu Sep 16 20:13:07 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-totem.err 9-totem.err
+[LOGS] 5-totem.log
 
-[5-ERROR] checking whether to build shared libraries... yes
-[5-ERROR] checking whether to build static libraries... yes
-[5-ERROR] configure: creating libtool
-[5-ERROR] appending configuration tag "CXX" to libtool
-[5-ERROR] checking for ld used by g++-32... ld
-[5-ERROR] checking if the linker (ld) is GNU ld... yes
-[5-ERROR] checking whether the g++-32 linker (ld) supports shared libraries... yes
-[5-ERROR] checking for g++-32 option to produce PIC... -fPIC
-[5-ERROR] checking if g++-32 PIC flag -fPIC works... yes
-[5-ERROR] checking if g++-32 supports -c -o file.o... yes
-[5-ERROR] checking whether the g++-32 linker (ld) supports shared libraries... yes
-[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
-[5-ERROR] checking how to hardcode library paths into programs... immediate
-[5-ERROR] checking whether stripping libraries is possible... yes
-[5-ERROR] appending configuration tag "F77" to libtool
-[5-ERROR] checking if libtool supports shared libraries... yes
-[5-ERROR] checking whether to build shared libraries... yes
-[5-ERROR] checking whether to build static libraries... yes
-[5-ERROR] checking for g77-32 option to produce PIC... -fPIC
-[5-ERROR] checking if g77-32 PIC flag -fPIC works... yes
-[5-ERROR] checking if g77-32 supports -c -o file.o... yes
-[5-ERROR] checking whether the g77-32 linker (ld) supports shared libraries... yes
-[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
-[5-ERROR] checking how to hardcode library paths into programs... immediate
-[5-ERROR] checking whether stripping libraries is possible... yes
-[5-ERROR] checking for intltool >= 0.20... 0.30 found
-[5-ERROR] checking for perl... /usr/bin/perl
-[5-ERROR] checking for cam_open_spec_device in -lcam... no
-[5-ERROR] checking for pkg-config... /usr/bin/pkg-config
-[5-ERROR] checking for nvtvsimple >= 0.4.5... Package nvtvsimple was not found in the pkg-config search path.
-[5-ERROR] Perhaps you should add the directory containing `nvtvsimple.pc'
-[5-ERROR] to the PKG_CONFIG_PATH environment variable
-[5-ERROR] No package 'nvtvsimple' found
-[5-ERROR] checking for backend libraries... xine
-[5-ERROR] configure: error: you need at least xine-lib 1.0rc3c installed !
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 totem:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 totem:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 totem:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <totem:doc> Creating flist file ...
-[5-ERROR] <totem:doc> Creating package dependencies file ...
-[5-ERROR] <totem:doc> Creating md5sum and cksum files ...
-[5-ERROR] <totem:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building totem=totem.
+[BUILDTIME] 7784 (5)
+[SIZE] 2.00 MB, 132 files
 
-[9-ERROR] checking whether to build shared libraries... yes
-[9-ERROR] checking whether to build static libraries... yes
-[9-ERROR] configure: creating libtool
-[9-ERROR] appending configuration tag "CXX" to libtool
-[9-ERROR] checking for ld used by g++-32... ld
-[9-ERROR] checking if the linker (ld) is GNU ld... yes
-[9-ERROR] checking whether the g++-32 linker (ld) supports shared libraries... yes
-[9-ERROR] checking for g++-32 option to produce PIC... -fPIC
-[9-ERROR] checking if g++-32 PIC flag -fPIC works... yes
-[9-ERROR] checking if g++-32 supports -c -o file.o... yes
-[9-ERROR] checking whether the g++-32 linker (ld) supports shared libraries... yes
-[9-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
-[9-ERROR] checking how to hardcode library paths into programs... immediate
-[9-ERROR] checking whether stripping libraries is possible... yes
-[9-ERROR] appending configuration tag "F77" to libtool
-[9-ERROR] checking if libtool supports shared libraries... yes
-[9-ERROR] checking whether to build shared libraries... yes
-[9-ERROR] checking whether to build static libraries... yes
-[9-ERROR] checking for g77-32 option to produce PIC... -fPIC
-[9-ERROR] checking if g77-32 PIC flag -fPIC works... yes
-[9-ERROR] checking if g77-32 supports -c -o file.o... yes
-[9-ERROR] checking whether the g77-32 linker (ld) supports shared libraries... yes
-[9-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
-[9-ERROR] checking how to hardcode library paths into programs... immediate
-[9-ERROR] checking whether stripping libraries is possible... yes
-[9-ERROR] checking for intltool >= 0.20... 0.30 found
-[9-ERROR] checking for perl... /usr/bin/perl
-[9-ERROR] checking for cam_open_spec_device in -lcam... no
-[9-ERROR] checking for pkg-config... /usr/bin/pkg-config
-[9-ERROR] checking for nvtvsimple >= 0.4.5... Package nvtvsimple was not found in the pkg-config search path.
-[9-ERROR] Perhaps you should add the directory containing `nvtvsimple.pc'
-[9-ERROR] to the PKG_CONFIG_PATH environment variable
-[9-ERROR] No package 'nvtvsimple' found
-[9-ERROR] checking for backend libraries... xine
-[9-ERROR] configure: error: you need at least xine-lib 1.0rc3c installed !
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 1 files for this package.
-[9-ERROR] Applying package split: 40 totem:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 totem:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 totem:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <totem:doc> Creating flist file ...
-[9-ERROR] <totem:doc> Creating package dependencies file ...
-[9-ERROR] <totem:doc> Creating md5sum and cksum files ...
-[9-ERROR] <totem:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building totem=totem.
+[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
+[DEP] autoconf bash2 binutils bzip2 coreutils cpan-xml-parser diffutils
+[DEP] docbookx esound esound:dev expat figment findutils freetype
+[DEP] freetype:dev gawk gcc32 gcc32:dev gconf gconf:dev gettext gftp
+[DEP] glib glib12 glib:dev glibc23 glibc23:dev gnome-blog gnome-desktop
+[DEP] gnome-desktop:dev gnome-keyring gnome-keyring:dev gnome-libs14
+[DEP] gnome-mime-data gnome-vfs gnome-vfs:dev grep gtk+ gtk+:dev gtkdoc
+[DEP] libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui
+[DEP] libbonoboui:dev libglade libglade:dev libgnome libgnome:dev
+[DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev libjpeg
+[DEP] libjpeg:dev libxml2 libxml2:dev linux24-header:dev lirc lirc:dev
+[DEP] make mktemp net-tools openssl orbit2 orbit2:dev pango pango:dev
+[DEP] perl5 pkgconfig popt popt:dev scrollkeeper sed startup-notification
+[DEP] startup-notification:dev sysfiles tar texinfo util-linux xfree86
+[DEP] xfree86:dev xine xine:dev zlib:dev
 

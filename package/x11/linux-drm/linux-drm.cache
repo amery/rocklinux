@@ -20,111 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093096100 Sat Aug 21 15:48:20 2004
+[TIMESTAMP] 1095185599 Tue Sep 14 20:13:19 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-linux-drm.err 9-linux-drm.err
+[LOGS] 5-linux-drm.log
 
-[5-ERROR] + ln -s shared/mach64_drv.h mach64_drv.h
-[5-ERROR] + ln -s shared/mach64_drm.h mach64_drm.h
-[5-ERROR] + ln -s shared/mach64_dma.c mach64_dma.c
-[5-ERROR] + ln -s shared/mach64_irq.c mach64_irq.c
-[5-ERROR] + ln -s shared/mach64_state.c mach64_state.c
-[5-ERROR] + ln -s shared/i915.h i915.h
-[5-ERROR] + ln -s shared/i915_drv.h i915_drv.h
-[5-ERROR] + ln -s shared/i915_drm.h i915_drm.h
-[5-ERROR] + ln -s shared/i915_irq.c i915_irq.c
-[5-ERROR] + ln -s shared/i915_mem.c i915_mem.c
-[5-ERROR] + ln -s shared/i915_dma.c i915_dma.c
-[5-ERROR] sh scripts/create_linux_pci_lists.sh < shared/drm_pciids.txt
-[5-ERROR] rm -f linux
-[5-ERROR] ln -s . linux
-[5-ERROR] make -C /lib/modules/2.4.26-rock/build  SUBDIRS=`pwd` DRMSRCDIR=`pwd` modules
-[5-ERROR] make[1]: Entering directory `/usr/src/linux-2.4.26-rock'
-[5-ERROR] gcc -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -o scripts/split-include scripts/split-include.c
-[5-ERROR] scripts/split-include include/linux/autoconf.h include/config
-[5-ERROR] make -C  /ROCK/src.linux-drm.1092874432.1091.1374302095/drm-4.4-2004-07-18 CFLAGS="-D__KERNEL__ -I/usr/src/linux-2.4.26-rock/include -Wall -Wstrict-prototypes -Wno-trigraphs -O2 -fno-strict-aliasing -fno-common -fomit-frame-pointer -pipe -mpreferred-stack-boundary=2 -march=i386  -DMODULE" MAKING_MODULES=1 modules
-[5-ERROR] make[2]: Entering directory `/ROCK/src.linux-drm.1092874432.1091.1374302095/drm-4.4-2004-07-18'
-[5-ERROR] Makefile:284: *** CONFIG_X86_CMPXCHG needs to be enabled in the kernel.  Stop.
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.linux-drm.1092874432.1091.1374302095/drm-4.4-2004-07-18'
-[5-ERROR] make[1]: *** [_mod_/ROCK/src.linux-drm.1092874432.1091.1374302095/drm-4.4-2004-07-18] Error 2
-[5-ERROR] make[1]: Leaving directory `/usr/src/linux-2.4.26-rock'
-[5-ERROR] make: *** [modules] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1168 files for this package.
-[5-ERROR] Applying package split: 40 linux-drm:dev (/lib/.*.a)$|/include/
-[5-ERROR] Applying package split: 60 linux-drm:doc /share/(doc|man|info)/
-[5-ERROR] <linux-drm> Creating flist file ...
-[5-ERROR] <linux-drm> Clear (old) md5sums and cksums ...
-[5-ERROR] <linux-drm> Calculating package dependencies ...
-[5-ERROR] <linux-drm> Creating md5sum and cksum files ... done.
-[5-ERROR] <linux-drm> Creating package description ...
-[5-ERROR] <linux-drm:dev> Creating split-package description ...
-[5-ERROR] <linux-drm:dev> Creating flist file ...
-[5-ERROR] <linux-drm:dev> Clear (old) md5sums and cksums ...
-[5-ERROR] <linux-drm:dev> Calculating package dependencies ...
-[5-ERROR] <linux-drm:dev> Creating md5sum and cksum files ... done.
-[5-ERROR] <linux-drm:dev> Creating package description ...
-[5-ERROR] <linux-drm:doc> Creating split-package description ...
-[5-ERROR] <linux-drm:doc> Creating flist file ...
-[5-ERROR] <linux-drm:doc> Clear (old) md5sums and cksums ...
-[5-ERROR] <linux-drm:doc> Calculating package dependencies ...
-[5-ERROR] <linux-drm:doc> Creating md5sum and cksum files ... done.
-[5-ERROR] <linux-drm:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
+[BUILDTIME] 6859 (5)
+[SIZE] 2.51 MB, 154 files
 
-[9-ERROR] + ln -s shared/via_mm.c via_mm.c
-[9-ERROR] + ln -s shared/mach64.h mach64.h
-[9-ERROR] + ln -s shared/mach64_drv.h mach64_drv.h
-[9-ERROR] + ln -s shared/mach64_drm.h mach64_drm.h
-[9-ERROR] + ln -s shared/mach64_dma.c mach64_dma.c
-[9-ERROR] + ln -s shared/mach64_irq.c mach64_irq.c
-[9-ERROR] + ln -s shared/mach64_state.c mach64_state.c
-[9-ERROR] + ln -s shared/i915.h i915.h
-[9-ERROR] + ln -s shared/i915_drv.h i915_drv.h
-[9-ERROR] + ln -s shared/i915_drm.h i915_drm.h
-[9-ERROR] + ln -s shared/i915_irq.c i915_irq.c
-[9-ERROR] + ln -s shared/i915_mem.c i915_mem.c
-[9-ERROR] + ln -s shared/i915_dma.c i915_dma.c
-[9-ERROR] sh scripts/create_linux_pci_lists.sh < shared/drm_pciids.txt
-[9-ERROR] rm -f linux
-[9-ERROR] ln -s . linux
-[9-ERROR] make -C /lib/modules/2.4.26-rock/build  SUBDIRS=`pwd` DRMSRCDIR=`pwd` modules
-[9-ERROR] make[1]: Entering directory `/usr/src/linux-2.4.26-rock'
-[9-ERROR] gcc -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -o scripts/split-include scripts/split-include.c
-[9-ERROR] scripts/split-include include/linux/autoconf.h include/config
-[9-ERROR] make -C  /ROCK/src.linux-drm.1093096074.17920.1369246104/drm-4.4-2004-07-18 CFLAGS="-D__KERNEL__ -I/usr/src/linux-2.4.26-rock/include -Wall -Wstrict-prototypes -Wno-trigraphs -O2 -fno-strict-aliasing -fno-common -fomit-frame-pointer -pipe -mpreferred-stack-boundary=2 -march=i386  -DMODULE" MAKING_MODULES=1 modules
-[9-ERROR] make[2]: Entering directory `/ROCK/src.linux-drm.1093096074.17920.1369246104/drm-4.4-2004-07-18'
-[9-ERROR] Makefile:284: *** CONFIG_X86_CMPXCHG needs to be enabled in the kernel.  Stop.
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.linux-drm.1093096074.17920.1369246104/drm-4.4-2004-07-18'
-[9-ERROR] make[1]: *** [_mod_/ROCK/src.linux-drm.1093096074.17920.1369246104/drm-4.4-2004-07-18] Error 2
-[9-ERROR] make[1]: Leaving directory `/usr/src/linux-2.4.26-rock'
-[9-ERROR] make: *** [modules] Error 2
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 1168 files for this package.
-[9-ERROR] Applying package split: 40 linux-drm:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 linux-drm:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 linux-drm:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <linux-drm> Creating flist file ...
-[9-ERROR] <linux-drm> Creating package dependencies file ...
-[9-ERROR] <linux-drm> Creating md5sum and cksum files ...
-[9-ERROR] <linux-drm> Creating package description ...
-[9-ERROR] <linux-drm:dev> Creating flist file ...
-[9-ERROR] <linux-drm:dev> Creating package dependencies file ...
-[9-ERROR] <linux-drm:dev> Creating md5sum and cksum files ...
-[9-ERROR] <linux-drm:dev> Creating package description ...
-[9-ERROR] <linux-drm:doc> Creating flist file ...
-[9-ERROR] <linux-drm:doc> Creating package dependencies file ...
-[9-ERROR] <linux-drm:doc> Creating md5sum and cksum files ...
-[9-ERROR] <linux-drm:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building linux-drm=linux-drm.
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
+[DEP] gcc32 gcc32:dev glibc23 glibc23:dev grep linux24 linux24-header:dev
+[DEP] linux24-source linux24-source:dev make sed sysfiles tar
 

@@ -20,111 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093177109 Sun Aug 22 14:18:29 2004
+[TIMESTAMP] 1095281340 Wed Sep 15 22:49:00 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-memprof.err 9-memprof.err
+[LOGS] 5-memprof.log
 
-[5-ERROR] depfile='.deps/memintercept-utils.Plo' tmpdepfile='.deps/memintercept-utils.TPlo' \
-[5-ERROR] depmode=gcc3 /bin/sh ./depcomp \
-[5-ERROR] /bin/sh ./libtool --mode=compile gcc-32 -DHAVE_CONFIG_H -I. -I. -I. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/usr/include/freetype2 -I/opt/gnome26/include/libglade-2.0   -DDATADIR=\"/opt/gnome26/share/memprof\" -DLIBDIR=\"/opt/gnome26/lib\" -DGNOMELOCALEDIR=\""/opt/gnome26/share/locale"\"    -g -O2 -Wall -c -o memintercept-utils.lo `test -f 'memintercept-utils.c' || echo './'`memintercept-utils.c
-[5-ERROR] rm -f .libs/memintercept-utils.lo
-[5-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/usr/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -DDATADIR=\"/opt/gnome26/share/memprof\" -DLIBDIR=\"/opt/gnome26/lib\" -DGNOMELOCALEDIR=\"/opt/gnome26/share/locale\" -g -O2 -Wall -c memintercept-utils.c -MT memintercept-utils.lo -MD -MP -MF .deps/memintercept-utils.TPlo  -fPIC -DPIC -o memintercept-utils.o
-[5-ERROR] mv -f memintercept-utils.o .libs/memintercept-utils.lo
-[5-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/usr/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -DDATADIR=\"/opt/gnome26/share/memprof\" -DLIBDIR=\"/opt/gnome26/lib\" -DGNOMELOCALEDIR=\"/opt/gnome26/share/locale\" -g -O2 -Wall -c memintercept-utils.c -MT memintercept-utils.lo -MD -MP -MF .deps/memintercept-utils.TPlo -o memintercept-utils.o >/dev/null 2>&1
-[5-ERROR] mv -f .libs/memintercept-utils.lo memintercept-utils.lo
-[5-ERROR] source='stack-frame.c' object='stack-frame.lo' libtool=yes \
-[5-ERROR] depfile='.deps/stack-frame.Plo' tmpdepfile='.deps/stack-frame.TPlo' \
-[5-ERROR] depmode=gcc3 /bin/sh ./depcomp \
-[5-ERROR] /bin/sh ./libtool --mode=compile gcc-32 -DHAVE_CONFIG_H -I. -I. -I. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/usr/include/freetype2 -I/opt/gnome26/include/libglade-2.0   -DDATADIR=\"/opt/gnome26/share/memprof\" -DLIBDIR=\"/opt/gnome26/lib\" -DGNOMELOCALEDIR=\""/opt/gnome26/share/locale"\"    -g -O2 -Wall -c -o stack-frame.lo `test -f 'stack-frame.c' || echo './'`stack-frame.c
-[5-ERROR] rm -f .libs/stack-frame.lo
-[5-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/usr/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -DDATADIR=\"/opt/gnome26/share/memprof\" -DLIBDIR=\"/opt/gnome26/lib\" -DGNOMELOCALEDIR=\"/opt/gnome26/share/locale\" -g -O2 -Wall -c stack-frame.c -MT stack-frame.lo -MD -MP -MF .deps/stack-frame.TPlo  -fPIC -DPIC -o stack-frame.o
-[5-ERROR] mv -f stack-frame.o .libs/stack-frame.lo
-[5-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/usr/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -DDATADIR=\"/opt/gnome26/share/memprof\" -DLIBDIR=\"/opt/gnome26/lib\" -DGNOMELOCALEDIR=\"/opt/gnome26/share/locale\" -g -O2 -Wall -c stack-frame.c -MT stack-frame.lo -MD -MP -MF .deps/stack-frame.TPlo -o stack-frame.o >/dev/null 2>&1
-[5-ERROR] mv -f .libs/stack-frame.lo stack-frame.lo
-[5-ERROR] /bin/sh ./libtool --mode=link gcc-32  -g -O2 -Wall   -o libmemintercept.la -rpath /opt/gnome26/lib -module -avoid-version memintercept.lo memintercept-utils.lo stack-frame.lo -ldl 
-[5-ERROR] rm -fr .libs/libmemintercept.la .libs/libmemintercept.* .libs/libmemintercept.*
-[5-ERROR] gcc-32 -shared  memintercept.lo memintercept-utils.lo stack-frame.lo  -ldl  -Wl,-soname -Wl,libmemintercept.so -o .libs/libmemintercept.so
-[5-ERROR] ar cru .libs/libmemintercept.a  memintercept.o memintercept-utils.o stack-frame.o 
-[5-ERROR] ranlib .libs/libmemintercept.a
-[5-ERROR] creating libmemintercept.la
-[5-ERROR] (cd .libs && rm -f libmemintercept.la && ln -s ../libmemintercept.la libmemintercept.la)
-[5-ERROR] source='bfdutils.c' object='bfdutils.o' libtool=no \
-[5-ERROR] depfile='.deps/bfdutils.Po' tmpdepfile='.deps/bfdutils.TPo' \
-[5-ERROR] depmode=gcc3 /bin/sh ./depcomp \
-[5-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/usr/include/freetype2 -I/opt/gnome26/include/libglade-2.0   -DDATADIR=\"/opt/gnome26/share/memprof\" -DLIBDIR=\"/opt/gnome26/lib\" -DGNOMELOCALEDIR=\""/opt/gnome26/share/locale"\"    -g -O2 -Wall -c `test -f 'bfdutils.c' || echo './'`bfdutils.c
-[5-ERROR] bfdutils.c: In function `process_map_sections':
-[5-ERROR] bfdutils.c:167: structure has no member named `_cooked_size'
-[5-ERROR] make[2]: *** [bfdutils.o] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.memprof.1092946620.22225.858791757/memprof-0.5.1'
-[5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.memprof.1092946620.22225.858791757/memprof-0.5.1'
-[5-ERROR] make: *** [all] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 memprof:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 memprof:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 memprof:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <memprof:doc> Creating flist file ...
-[5-ERROR] <memprof:doc> Creating package dependencies file ...
-[5-ERROR] <memprof:doc> Creating md5sum and cksum files ...
-[5-ERROR] <memprof:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building memprof=memprof.
+[BUILDTIME] 3674 (5)
+[SIZE] 0.72 MB, 41 files
 
-[9-ERROR] depfile='.deps/memintercept-utils.Plo' tmpdepfile='.deps/memintercept-utils.TPlo' \
-[9-ERROR] depmode=gcc3 /bin/sh ./depcomp \
-[9-ERROR] /bin/sh ./libtool --mode=compile gcc-32 -DHAVE_CONFIG_H -I. -I. -I. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/usr/include/freetype2 -I/opt/gnome26/include/libglade-2.0   -DDATADIR=\"/opt/gnome26/share/memprof\" -DLIBDIR=\"/opt/gnome26/lib\" -DGNOMELOCALEDIR=\""/opt/gnome26/share/locale"\"    -g -O2 -Wall -c -o memintercept-utils.lo `test -f 'memintercept-utils.c' || echo './'`memintercept-utils.c
-[9-ERROR] rm -f .libs/memintercept-utils.lo
-[9-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/usr/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -DDATADIR=\"/opt/gnome26/share/memprof\" -DLIBDIR=\"/opt/gnome26/lib\" -DGNOMELOCALEDIR=\"/opt/gnome26/share/locale\" -g -O2 -Wall -c memintercept-utils.c -MT memintercept-utils.lo -MD -MP -MF .deps/memintercept-utils.TPlo  -fPIC -DPIC -o memintercept-utils.o
-[9-ERROR] mv -f memintercept-utils.o .libs/memintercept-utils.lo
-[9-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/usr/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -DDATADIR=\"/opt/gnome26/share/memprof\" -DLIBDIR=\"/opt/gnome26/lib\" -DGNOMELOCALEDIR=\"/opt/gnome26/share/locale\" -g -O2 -Wall -c memintercept-utils.c -MT memintercept-utils.lo -MD -MP -MF .deps/memintercept-utils.TPlo -o memintercept-utils.o >/dev/null 2>&1
-[9-ERROR] mv -f .libs/memintercept-utils.lo memintercept-utils.lo
-[9-ERROR] source='stack-frame.c' object='stack-frame.lo' libtool=yes \
-[9-ERROR] depfile='.deps/stack-frame.Plo' tmpdepfile='.deps/stack-frame.TPlo' \
-[9-ERROR] depmode=gcc3 /bin/sh ./depcomp \
-[9-ERROR] /bin/sh ./libtool --mode=compile gcc-32 -DHAVE_CONFIG_H -I. -I. -I. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/usr/include/freetype2 -I/opt/gnome26/include/libglade-2.0   -DDATADIR=\"/opt/gnome26/share/memprof\" -DLIBDIR=\"/opt/gnome26/lib\" -DGNOMELOCALEDIR=\""/opt/gnome26/share/locale"\"    -g -O2 -Wall -c -o stack-frame.lo `test -f 'stack-frame.c' || echo './'`stack-frame.c
-[9-ERROR] rm -f .libs/stack-frame.lo
-[9-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/usr/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -DDATADIR=\"/opt/gnome26/share/memprof\" -DLIBDIR=\"/opt/gnome26/lib\" -DGNOMELOCALEDIR=\"/opt/gnome26/share/locale\" -g -O2 -Wall -c stack-frame.c -MT stack-frame.lo -MD -MP -MF .deps/stack-frame.TPlo  -fPIC -DPIC -o stack-frame.o
-[9-ERROR] mv -f stack-frame.o .libs/stack-frame.lo
-[9-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/usr/include/freetype2 -I/opt/gnome26/include/libglade-2.0 -DDATADIR=\"/opt/gnome26/share/memprof\" -DLIBDIR=\"/opt/gnome26/lib\" -DGNOMELOCALEDIR=\"/opt/gnome26/share/locale\" -g -O2 -Wall -c stack-frame.c -MT stack-frame.lo -MD -MP -MF .deps/stack-frame.TPlo -o stack-frame.o >/dev/null 2>&1
-[9-ERROR] mv -f .libs/stack-frame.lo stack-frame.lo
-[9-ERROR] /bin/sh ./libtool --mode=link gcc-32  -g -O2 -Wall   -o libmemintercept.la -rpath /opt/gnome26/lib -module -avoid-version memintercept.lo memintercept-utils.lo stack-frame.lo -ldl 
-[9-ERROR] rm -fr .libs/libmemintercept.la .libs/libmemintercept.* .libs/libmemintercept.*
-[9-ERROR] gcc-32 -shared  memintercept.lo memintercept-utils.lo stack-frame.lo  -ldl  -Wl,-soname -Wl,libmemintercept.so -o .libs/libmemintercept.so
-[9-ERROR] ar cru .libs/libmemintercept.a  memintercept.o memintercept-utils.o stack-frame.o 
-[9-ERROR] ranlib .libs/libmemintercept.a
-[9-ERROR] creating libmemintercept.la
-[9-ERROR] (cd .libs && rm -f libmemintercept.la && ln -s ../libmemintercept.la libmemintercept.la)
-[9-ERROR] source='bfdutils.c' object='bfdutils.o' libtool=no \
-[9-ERROR] depfile='.deps/bfdutils.Po' tmpdepfile='.deps/bfdutils.TPo' \
-[9-ERROR] depmode=gcc3 /bin/sh ./depcomp \
-[9-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome26/include/gtk-2.0 -I/opt/gnome26/lib/gtk-2.0/include -I/usr/X11R6/include -I/opt/gnome26/include/atk-1.0 -I/opt/gnome26/include/pango-1.0 -I/usr/X11R6/include/freetype2 -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -I/opt/gnome26/include/gconf/2 -I/opt/gnome26/include/orbit-2.0 -I/opt/gnome26/include/libgnomeui-2.0 -I/opt/gnome26/include/libgnome-2.0 -I/opt/gnome26/include/libgnomecanvas-2.0 -I/opt/gnome26/include/libbonoboui-2.0 -I/opt/gnome26/include/libbonobo-2.0 -I/opt/gnome26/include/gnome-vfs-2.0 -I/opt/gnome26/lib/gnome-vfs-2.0/include -I/opt/gnome26/include/bonobo-activation-2.0 -I/usr/include/freetype2 -I/opt/gnome26/include/libglade-2.0   -DDATADIR=\"/opt/gnome26/share/memprof\" -DLIBDIR=\"/opt/gnome26/lib\" -DGNOMELOCALEDIR=\""/opt/gnome26/share/locale"\"    -g -O2 -Wall -c `test -f 'bfdutils.c' || echo './'`bfdutils.c
-[9-ERROR] bfdutils.c: In function `process_map_sections':
-[9-ERROR] bfdutils.c:167: structure has no member named `_cooked_size'
-[9-ERROR] make[2]: *** [bfdutils.o] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.memprof.1093177072.8210.2764499923/memprof-0.5.1'
-[9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.memprof.1093177072.8210.2764499923/memprof-0.5.1'
-[9-ERROR] make: *** [all] Error 2
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 1 files for this package.
-[9-ERROR] Applying package split: 40 memprof:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 memprof:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 memprof:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <memprof:doc> Creating flist file ...
-[9-ERROR] <memprof:doc> Creating package dependencies file ...
-[9-ERROR] <memprof:doc> Creating md5sum and cksum files ...
-[9-ERROR] <memprof:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building memprof=memprof.
+[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
+[DEP] binutils binutils:dev bzip2 coreutils diffutils esound esound:dev
+[DEP] expat figment findutils freetype gawk gcc32 gcc32:dev gconf gconf:dev
+[DEP] gettext glib glib:dev glibc23 glibc23:dev gnome-blog gnome-keyring
+[DEP] gnome-keyring:dev gnome-vfs gnome-vfs:dev grep gtk+ gtk+:dev
+[DEP] libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui
+[DEP] libbonoboui:dev libglade libglade:dev libgnome libgnome:dev
+[DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev libjpeg
+[DEP] libjpeg:dev libxml2 libxml2:dev linux24-header:dev make mktemp
+[DEP] net-tools openssl orbit2 orbit2:dev pango pango:dev patch perl5
+[DEP] pkgconfig popt popt:dev sed sysfiles tar util-linux xfree86 zlib:dev
 

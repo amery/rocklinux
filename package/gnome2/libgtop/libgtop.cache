@@ -20,69 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093130096 Sun Aug 22 01:14:56 2004
+[TIMESTAMP] 1095232405 Wed Sep 15 09:13:25 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libgtop.log 9-libgtop.err
+[LOGS] 5-libgtop.log
 
-[BUILDTIME] 10979 (5)
-[SIZE] 1.72 MB, 86 files
+[BUILDTIME] 10197 (5)
+[SIZE] 1.29 MB, 64 files
 
-[DEP] 00-dirtree at-poke autoconf bash binutils bzip2 coreutils diffutils
+[DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils diffutils
 [DEP] findutils gawk gcc32 gcc32:dev gettext glib glib:dev glibc23
-[DEP] glibc23:dev glibmm grep libidl linux24-header:dev make mktemp
-[DEP] net-tools perl5 pkgconfig popt popt:dev sed sysfiles tar texinfo
-[DEP] util-linux xfree86 xfree86:dev
-
-[9-ERROR] `./doc/ChangeLog' -> `/opt/gnome26/share/doc/libgtop/ChangeLog'
-[9-ERROR] `./doc/Makefile' -> `/opt/gnome26/share/doc/libgtop/Makefile'
-[9-ERROR] `./doc/Makefile.am' -> `/opt/gnome26/share/doc/libgtop/Makefile.am'
-[9-ERROR] `./doc/Makefile.in' -> `/opt/gnome26/share/doc/libgtop/Makefile.in'
-[9-ERROR] `./doc/about.texi' -> `/opt/gnome26/share/doc/libgtop/about.texi'
-[9-ERROR] `./doc/auto-macros.texi' -> `/opt/gnome26/share/doc/libgtop/auto-macros.texi'
-[9-ERROR] `./doc/auto-macros.texi.in' -> `/opt/gnome26/share/doc/libgtop/auto-macros.texi.in'
-[9-ERROR] `./doc/libgtop2.info' -> `/opt/gnome26/share/doc/libgtop/libgtop2.info'
-[9-ERROR] `./doc/libgtop2.texi' -> `/opt/gnome26/share/doc/libgtop/libgtop2.texi'
-[9-ERROR] `./doc/main.texi' -> `/opt/gnome26/share/doc/libgtop/main.texi'
-[9-ERROR] `./doc/mdate-sh' -> `/opt/gnome26/share/doc/libgtop/mdate-sh'
-[9-ERROR] `./doc/reference.texi' -> `/opt/gnome26/share/doc/libgtop/reference.texi'
-[9-ERROR] `./doc/stamp-vti' -> `/opt/gnome26/share/doc/libgtop/stamp-vti'
-[9-ERROR] `./doc/texinfo.tex' -> `/opt/gnome26/share/doc/libgtop/texinfo.tex'
-[9-ERROR] `./doc/version.texi' -> `/opt/gnome26/share/doc/libgtop/version.texi'
-[9-ERROR] `./doc/white-paper.texi' -> `/opt/gnome26/share/doc/libgtop/white-paper.texi'
-[9-ERROR] `AUTHORS' -> `/opt/gnome26/share/doc/libgtop/AUTHORS'
-[9-ERROR] `COPYING' -> `/opt/gnome26/share/doc/libgtop/COPYING'
-[9-ERROR] `INSTALL' -> `/opt/gnome26/share/doc/libgtop/INSTALL'
-[9-ERROR] `LIBGTOP-VERSION' -> `/opt/gnome26/share/doc/libgtop/LIBGTOP-VERSION'
-[9-ERROR] `NEWS' -> `/opt/gnome26/share/doc/libgtop/NEWS'
-[9-ERROR] `README' -> `/opt/gnome26/share/doc/libgtop/README'
-[9-ERROR] `TODO' -> `/opt/gnome26/share/doc/libgtop/TODO'
-[9-ERROR] `ChangeLog' -> `/opt/gnome26/share/doc/libgtop/ChangeLog'
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 147 files for this package.
-[9-ERROR] Applying package split: 40 libgtop:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 libgtop:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 libgtop:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <libgtop> Creating flist file ...
-[9-ERROR] <libgtop> Creating package dependencies file ...
-[9-ERROR] <libgtop> Creating md5sum and cksum files ...
-[9-ERROR] <libgtop> Creating package description ...
-[9-ERROR] <libgtop:dev> Creating flist file ...
-[9-ERROR] <libgtop:dev> Creating package dependencies file ...
-[9-ERROR] <libgtop:dev> Creating md5sum and cksum files ...
-[9-ERROR] <libgtop:dev> Creating package description ...
-[9-ERROR] <libgtop:doc> Creating flist file ...
-[9-ERROR] <libgtop:doc> Creating package dependencies file ...
-[9-ERROR] <libgtop:doc> Creating md5sum and cksum files ...
-[9-ERROR] <libgtop:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Found shared files with other packages:
-[9-ERROR] opt/gnome26/share/info/dir: libgtop libidl
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] removed `/var/adm/logs/9-libgtop.log'
-[9-ERROR] Finished building libgtop=libgtop.
+[DEP] glibc23:dev grep gtkdoc linux24-header:dev make mktemp net-tools
+[DEP] perl5 pkgconfig popt popt:dev sed sysfiles tar texinfo util-linux
+[DEP] xfree86 xfree86:dev
 

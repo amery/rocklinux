@@ -20,111 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093140679 Sun Aug 22 04:11:19 2004
+[TIMESTAMP] 1095228631 Wed Sep 15 08:10:31 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-alsaplayer.err 9-alsaplayer.err
+[LOGS] 5-alsaplayer.log
 
-[5-ERROR] nas.c:240: request for member `freq' in something not a structure or union
-[5-ERROR] nas.c:244: `AuTrue' undeclared (first use in this function)
-[5-ERROR] nas.c:251: warning: implicit declaration of function `AuMakeElementExportDevice'
-[5-ERROR] nas.c:254: request for member `freq' in something not a structure or union
-[5-ERROR] nas.c:256: `AuUnlimitedSamples' undeclared (first use in this function)
-[5-ERROR] nas.c:259: warning: implicit declaration of function `AuSetElements'
-[5-ERROR] nas.c:259: request for member `aud' in something not a structure or union
-[5-ERROR] nas.c:260: request for member `flow' in something not a structure or union
-[5-ERROR] nas.c:266: warning: implicit declaration of function `AuRegisterEventHandler'
-[5-ERROR] nas.c:266: request for member `aud' in something not a structure or union
-[5-ERROR] nas.c:267: `AuEventHandlerIDMask' undeclared (first use in this function)
-[5-ERROR] nas.c:269: request for member `flow' in something not a structure or union
-[5-ERROR] nas.c:271: `AuPointer' undeclared (first use in this function)
-[5-ERROR] nas.c:273: request for member `buf_size' in something not a structure or union
-[5-ERROR] nas.c:273: warning: implicit declaration of function `AuSizeofFormat'
-[5-ERROR] nas.c:274: request for member `buf' in something not a structure or union
-[5-ERROR] nas.c:274: request for member `buf_size' in something not a structure or union
-[5-ERROR] nas.c:275: request for member `buf' in something not a structure or union
-[5-ERROR] nas.c:277: request for member `buf_size' in something not a structure or union
-[5-ERROR] nas.c:280: request for member `buf_cnt' in something not a structure or union
-[5-ERROR] nas.c:281: request for member `data_sent' in something not a structure or union
-[5-ERROR] nas.c:281: `AuFalse' undeclared (first use in this function)
-[5-ERROR] nas.c:282: request for member `finished' in something not a structure or union
-[5-ERROR] nas.c:284: warning: implicit declaration of function `AuStartFlow'
-[5-ERROR] nas.c:284: request for member `aud' in something not a structure or union
-[5-ERROR] nas.c:285: request for member `flow' in something not a structure or union
-[5-ERROR] nas.c: In function `nas_set_sample_rate':
-[5-ERROR] nas.c:294: request for member `freq' in something not a structure or union
-[5-ERROR] make[3]: *** [nas.lo] Error 1
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.alsaplayer.1092915826.5727.2367480213/alsaplayer-0.99.76/output/nas'
-[5-ERROR] make[2]: *** [all-recursive] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.alsaplayer.1092915826.5727.2367480213/alsaplayer-0.99.76/output'
-[5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.alsaplayer.1092915826.5727.2367480213/alsaplayer-0.99.76'
-[5-ERROR] make: *** [all] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 alsaplayer:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 alsaplayer:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 alsaplayer:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <alsaplayer:doc> Creating flist file ...
-[5-ERROR] <alsaplayer:doc> Creating package dependencies file ...
-[5-ERROR] <alsaplayer:doc> Creating md5sum and cksum files ...
-[5-ERROR] <alsaplayer:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building alsaplayer=alsaplayer.
+[BUILDTIME] 11951 (5)
+[SIZE] 0.55 MB, 44 files
 
-[9-ERROR] nas.c:240: request for member `freq' in something not a structure or union
-[9-ERROR] nas.c:244: `AuTrue' undeclared (first use in this function)
-[9-ERROR] nas.c:251: warning: implicit declaration of function `AuMakeElementExportDevice'
-[9-ERROR] nas.c:254: request for member `freq' in something not a structure or union
-[9-ERROR] nas.c:256: `AuUnlimitedSamples' undeclared (first use in this function)
-[9-ERROR] nas.c:259: warning: implicit declaration of function `AuSetElements'
-[9-ERROR] nas.c:259: request for member `aud' in something not a structure or union
-[9-ERROR] nas.c:260: request for member `flow' in something not a structure or union
-[9-ERROR] nas.c:266: warning: implicit declaration of function `AuRegisterEventHandler'
-[9-ERROR] nas.c:266: request for member `aud' in something not a structure or union
-[9-ERROR] nas.c:267: `AuEventHandlerIDMask' undeclared (first use in this function)
-[9-ERROR] nas.c:269: request for member `flow' in something not a structure or union
-[9-ERROR] nas.c:271: `AuPointer' undeclared (first use in this function)
-[9-ERROR] nas.c:273: request for member `buf_size' in something not a structure or union
-[9-ERROR] nas.c:273: warning: implicit declaration of function `AuSizeofFormat'
-[9-ERROR] nas.c:274: request for member `buf' in something not a structure or union
-[9-ERROR] nas.c:274: request for member `buf_size' in something not a structure or union
-[9-ERROR] nas.c:275: request for member `buf' in something not a structure or union
-[9-ERROR] nas.c:277: request for member `buf_size' in something not a structure or union
-[9-ERROR] nas.c:280: request for member `buf_cnt' in something not a structure or union
-[9-ERROR] nas.c:281: request for member `data_sent' in something not a structure or union
-[9-ERROR] nas.c:281: `AuFalse' undeclared (first use in this function)
-[9-ERROR] nas.c:282: request for member `finished' in something not a structure or union
-[9-ERROR] nas.c:284: warning: implicit declaration of function `AuStartFlow'
-[9-ERROR] nas.c:284: request for member `aud' in something not a structure or union
-[9-ERROR] nas.c:285: request for member `flow' in something not a structure or union
-[9-ERROR] nas.c: In function `nas_set_sample_rate':
-[9-ERROR] nas.c:294: request for member `freq' in something not a structure or union
-[9-ERROR] make[3]: *** [nas.lo] Error 1
-[9-ERROR] make[3]: Leaving directory `/ROCK/src.alsaplayer.1093140604.32396.4220360245/alsaplayer-0.99.76/output/nas'
-[9-ERROR] make[2]: *** [all-recursive] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.alsaplayer.1093140604.32396.4220360245/alsaplayer-0.99.76/output'
-[9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.alsaplayer.1093140604.32396.4220360245/alsaplayer-0.99.76'
-[9-ERROR] make: *** [all] Error 2
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 1 files for this package.
-[9-ERROR] Applying package split: 40 alsaplayer:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 alsaplayer:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 alsaplayer:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <alsaplayer:doc> Creating flist file ...
-[9-ERROR] <alsaplayer:doc> Creating package dependencies file ...
-[9-ERROR] <alsaplayer:doc> Creating md5sum and cksum files ...
-[9-ERROR] <alsaplayer:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building alsaplayer=alsaplayer.
+[DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev bash2 binutils
+[DEP] bzip2 coreutils diffutils doxygen esound esound:dev findutils flac
+[DEP] flac:dev gcc32 gcc32:dev glib12 glib12:dev glibc23 glibc23:dev grep
+[DEP] gtk+12 gtk+12:dev jack jack:dev libmikmod libmikmod:dev libsndfile
+[DEP] libsndfile:dev linux24-header:dev mad mad:dev make mktemp nas
+[DEP] nas:dev net-tools ogg-vorbis ogg-vorbis:dev pkgconfig sed sysfiles
+[DEP] tar util-linux xfree86 xfree86:dev xosd xosd:dev zlib:dev
 

@@ -20,111 +20,11 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093138809 Sun Aug 22 03:40:09 2004
+[TIMESTAMP] 1095226877 Wed Sep 15 07:41:17 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-boost.err 9-boost.err
+[LOGS] 5-boost.log
 
-[5-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-single/unit_test_log.o
-[5-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-single/unit_test_monitor.o
-[5-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-single/unit_test_result.o
-[5-ERROR] libs/test/src/unit_test_result.cpp: In member function `void 
-[5-ERROR]    boost::unit_test_framework::unit_test_result::report(const std::string&, 
-[5-ERROR]    std::ostream&)':
-[5-ERROR] libs/test/src/unit_test_result.cpp:493: warning: `
-[5-ERROR]    boost::unit_test_framework::report_level rl' might be used uninitialized in 
-[5-ERROR]    this function
-[5-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-single/unit_test_suite.o
-[5-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-single/unit_test_main.o
-[5-ERROR] gcc-Link-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-single/libboost_unit_test_framework.so
-[5-ERROR] Chmod1 libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-single/libboost_unit_test_framework.so
-[5-ERROR] MkDir1 libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi
-[5-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi/execution_monitor.o
-[5-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi/test_tools.o
-[5-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi/unit_test_parameters.o
-[5-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi/unit_test_log.o
-[5-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi/unit_test_monitor.o
-[5-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi/unit_test_result.o
-[5-ERROR] libs/test/src/unit_test_result.cpp: In member function `void 
-[5-ERROR]    boost::unit_test_framework::unit_test_result::report(const std::string&, 
-[5-ERROR]    std::ostream&)':
-[5-ERROR] libs/test/src/unit_test_result.cpp:493: warning: `
-[5-ERROR]    boost::unit_test_framework::report_level rl' might be used uninitialized in 
-[5-ERROR]    this function
-[5-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi/unit_test_suite.o
-[5-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi/unit_test_main.o
-[5-ERROR] gcc-Link-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi/libboost_unit_test_framework.so
-[5-ERROR] Chmod1 libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi/libboost_unit_test_framework.so
-[5-ERROR] gcc-Link-action libs/thread/build/bin/libboost_thread.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi/libboost_thread.so
-[5-ERROR] Chmod1 libs/thread/build/bin/libboost_thread.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi/libboost_thread.so
-[5-ERROR] ...failed updating 5 targets...
-[5-ERROR] ...skipped 2 targets...
-[5-ERROR] ...updated 418 targets...
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 boost:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 boost:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 boost:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <boost:doc> Creating flist file ...
-[5-ERROR] <boost:doc> Creating package dependencies file ...
-[5-ERROR] <boost:doc> Creating md5sum and cksum files ...
-[5-ERROR] <boost:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building boost=boost.
-
-[9-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-single/unit_test_log.o
-[9-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-single/unit_test_monitor.o
-[9-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-single/unit_test_result.o
-[9-ERROR] libs/test/src/unit_test_result.cpp: In member function `void 
-[9-ERROR]    boost::unit_test_framework::unit_test_result::report(const std::string&, 
-[9-ERROR]    std::ostream&)':
-[9-ERROR] libs/test/src/unit_test_result.cpp:493: warning: `
-[9-ERROR]    boost::unit_test_framework::report_level rl' might be used uninitialized in 
-[9-ERROR]    this function
-[9-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-single/unit_test_suite.o
-[9-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-single/unit_test_main.o
-[9-ERROR] gcc-Link-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-single/libboost_unit_test_framework.so
-[9-ERROR] Chmod1 libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-single/libboost_unit_test_framework.so
-[9-ERROR] MkDir1 libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi
-[9-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi/execution_monitor.o
-[9-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi/test_tools.o
-[9-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi/unit_test_parameters.o
-[9-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi/unit_test_log.o
-[9-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi/unit_test_monitor.o
-[9-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi/unit_test_result.o
-[9-ERROR] libs/test/src/unit_test_result.cpp: In member function `void 
-[9-ERROR]    boost::unit_test_framework::unit_test_result::report(const std::string&, 
-[9-ERROR]    std::ostream&)':
-[9-ERROR] libs/test/src/unit_test_result.cpp:493: warning: `
-[9-ERROR]    boost::unit_test_framework::report_level rl' might be used uninitialized in 
-[9-ERROR]    this function
-[9-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi/unit_test_suite.o
-[9-ERROR] gcc-C++-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi/unit_test_main.o
-[9-ERROR] gcc-Link-action libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi/libboost_unit_test_framework.so
-[9-ERROR] Chmod1 libs/test/build/bin/libboost_unit_test_framework.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi/libboost_unit_test_framework.so
-[9-ERROR] gcc-Link-action libs/thread/build/bin/libboost_thread.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi/libboost_thread.so
-[9-ERROR] Chmod1 libs/thread/build/bin/libboost_thread.so/gcc/debug/runtime-link-dynamic/shared-linkable-true/threading-multi/libboost_thread.so
-[9-ERROR] ...failed updating 5 targets...
-[9-ERROR] ...skipped 2 targets...
-[9-ERROR] ...updated 418 targets...
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 1 files for this package.
-[9-ERROR] Applying package split: 40 boost:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 boost:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 boost:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <boost:doc> Creating flist file ...
-[9-ERROR] <boost:doc> Creating package dependencies file ...
-[9-ERROR] <boost:doc> Creating md5sum and cksum files ...
-[9-ERROR] <boost:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building boost=boost.
+[BUILDTIME] 92060 (5)
 

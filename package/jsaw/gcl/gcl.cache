@@ -20,111 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093338582 Tue Aug 24 11:09:42 2004
+[TIMESTAMP] 1095433647 Fri Sep 17 17:07:27 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gcl.err 9-gcl.err
+[LOGS] 5-gcl.log
 
-[5-ERROR] print.d:2024: warning: `pp' defined but not used
-[5-ERROR] rm print.c
-[5-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093066989.5262.649929559/gcl-2.6.3/o -I../h -I../gcl-tk format.c  
-[5-ERROR] ../bin/dpp pathname
-[5-ERROR] dpp: pathname.d -> pathname.c
-[5-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093066989.5262.649929559/gcl-2.6.3/o -I../h -I../gcl-tk pathname.c 
-[5-ERROR] rm pathname.c
-[5-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093066989.5262.649929559/gcl-2.6.3/o -I../h -I../gcl-tk unixfsys.c  
-[5-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093066989.5262.649929559/gcl-2.6.3/o -I../h -I../gcl-tk unixfasl.c  
-[5-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093066989.5262.649929559/gcl-2.6.3/o -I../h -I../gcl-tk error.c  
-[5-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093066989.5262.649929559/gcl-2.6.3/o -I../h -I../gcl-tk unixtime.c  
-[5-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093066989.5262.649929559/gcl-2.6.3/o -I../h -I../gcl-tk unixsys.c  
-[5-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093066989.5262.649929559/gcl-2.6.3/o -I../h -I../gcl-tk unixsave.c  
-[5-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093066989.5262.649929559/gcl-2.6.3/o -I../h -I../gcl-tk funlink.c  
-[5-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093066989.5262.649929559/gcl-2.6.3/o -I../h -I../gcl-tk plt.c  
-[5-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093066989.5262.649929559/gcl-2.6.3/o -I../h -I../gcl-tk fat_string.c  
-[5-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093066989.5262.649929559/gcl-2.6.3/o -I../h -I../gcl-tk run_process.c  
-[5-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093066989.5262.649929559/gcl-2.6.3/o -I../h -I../gcl-tk nfunlink.c  
-[5-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093066989.5262.649929559/gcl-2.6.3/o -I../h -I../gcl-tk usig.c  
-[5-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093066989.5262.649929559/gcl-2.6.3/o -I../h -I../gcl-tk usig2.c  
-[5-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093066989.5262.649929559/gcl-2.6.3/o -I../h -I../gcl-tk utils.c  
-[5-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093066989.5262.649929559/gcl-2.6.3/o -I../h -I../gcl-tk makefun.c  
-[5-ERROR] gcc-32 -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093066989.5262.649929559/gcl-2.6.3/o -I../h -I../gcl-tk -I/usr/X11R6/include  -c  sockets.c
-[5-ERROR] gcc-32 -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093066989.5262.649929559/gcl-2.6.3/o -I../h -I../gcl-tk -I/usr/X11R6/include  -c  clxsocket.c
-[5-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093066989.5262.649929559/gcl-2.6.3/o -I../h -I../gcl-tk init_pari.c  
-[5-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093066989.5262.649929559/gcl-2.6.3/o -I../h -I../gcl-tk nsocket.c  
-[5-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093066989.5262.649929559/gcl-2.6.3/o -I../h -I../gcl-tk sfasl.c  
-[5-ERROR] In file included from sfasl.c:40:
-[5-ERROR] sfaslbfd.c: In function `fasload':
-[5-ERROR] sfaslbfd.c:266: structure has no member named `_raw_size'
-[5-ERROR] sfaslbfd.c:291: structure has no member named `_raw_size'
-[5-ERROR] sfaslbfd.c:356: structure has no member named `_raw_size'
-[5-ERROR] make[1]: *** [sfasl.o] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.gcl.1093066989.5262.649929559/gcl-2.6.3/o'
-[5-ERROR] make: *** [unixport/saved_pre_gcl] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 gcl:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 gcl:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 gcl:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <gcl:doc> Creating flist file ...
-[5-ERROR] <gcl:doc> Creating package dependencies file ...
-[5-ERROR] <gcl:doc> Creating md5sum and cksum files ...
-[5-ERROR] <gcl:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building gcl=gcl.
+[BUILDTIME] 28251 (5)
+[SIZE] 7.46 MB, 77 files
 
-[9-ERROR] print.d:2024: warning: `pp' defined but not used
-[9-ERROR] rm print.c
-[9-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093338007.21782.1711902545/gcl-2.6.3/o -I../h -I../gcl-tk format.c  
-[9-ERROR] ../bin/dpp pathname
-[9-ERROR] dpp: pathname.d -> pathname.c
-[9-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093338007.21782.1711902545/gcl-2.6.3/o -I../h -I../gcl-tk pathname.c 
-[9-ERROR] rm pathname.c
-[9-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093338007.21782.1711902545/gcl-2.6.3/o -I../h -I../gcl-tk unixfsys.c  
-[9-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093338007.21782.1711902545/gcl-2.6.3/o -I../h -I../gcl-tk unixfasl.c  
-[9-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093338007.21782.1711902545/gcl-2.6.3/o -I../h -I../gcl-tk error.c  
-[9-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093338007.21782.1711902545/gcl-2.6.3/o -I../h -I../gcl-tk unixtime.c  
-[9-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093338007.21782.1711902545/gcl-2.6.3/o -I../h -I../gcl-tk unixsys.c  
-[9-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093338007.21782.1711902545/gcl-2.6.3/o -I../h -I../gcl-tk unixsave.c  
-[9-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093338007.21782.1711902545/gcl-2.6.3/o -I../h -I../gcl-tk funlink.c  
-[9-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093338007.21782.1711902545/gcl-2.6.3/o -I../h -I../gcl-tk plt.c  
-[9-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093338007.21782.1711902545/gcl-2.6.3/o -I../h -I../gcl-tk fat_string.c  
-[9-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093338007.21782.1711902545/gcl-2.6.3/o -I../h -I../gcl-tk run_process.c  
-[9-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093338007.21782.1711902545/gcl-2.6.3/o -I../h -I../gcl-tk nfunlink.c  
-[9-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093338007.21782.1711902545/gcl-2.6.3/o -I../h -I../gcl-tk usig.c  
-[9-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093338007.21782.1711902545/gcl-2.6.3/o -I../h -I../gcl-tk usig2.c  
-[9-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093338007.21782.1711902545/gcl-2.6.3/o -I../h -I../gcl-tk utils.c  
-[9-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093338007.21782.1711902545/gcl-2.6.3/o -I../h -I../gcl-tk makefun.c  
-[9-ERROR] gcc-32 -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093338007.21782.1711902545/gcl-2.6.3/o -I../h -I../gcl-tk -I/usr/X11R6/include  -c  sockets.c
-[9-ERROR] gcc-32 -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093338007.21782.1711902545/gcl-2.6.3/o -I../h -I../gcl-tk -I/usr/X11R6/include  -c  clxsocket.c
-[9-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093338007.21782.1711902545/gcl-2.6.3/o -I../h -I../gcl-tk init_pari.c  
-[9-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093338007.21782.1711902545/gcl-2.6.3/o -I../h -I../gcl-tk nsocket.c  
-[9-ERROR] gcc-32 -c -Wall -DVOL=volatile -fsigned-char -pipe -O3 -fomit-frame-pointer  -I/ROCK/src.gcl.1093338007.21782.1711902545/gcl-2.6.3/o -I../h -I../gcl-tk sfasl.c  
-[9-ERROR] In file included from sfasl.c:40:
-[9-ERROR] sfaslbfd.c: In function `fasload':
-[9-ERROR] sfaslbfd.c:266: structure has no member named `_raw_size'
-[9-ERROR] sfaslbfd.c:291: structure has no member named `_raw_size'
-[9-ERROR] sfaslbfd.c:356: structure has no member named `_raw_size'
-[9-ERROR] make[1]: *** [sfasl.o] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.gcl.1093338007.21782.1711902545/gcl-2.6.3/o'
-[9-ERROR] make: *** [unixport/saved_pre_gcl] Error 2
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 1 files for this package.
-[9-ERROR] Applying package split: 40 gcl:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 gcl:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 gcl:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <gcl:doc> Creating flist file ...
-[9-ERROR] <gcl:doc> Creating package dependencies file ...
-[9-ERROR] <gcl:doc> Creating md5sum and cksum files ...
-[9-ERROR] <gcl:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building gcl=gcl.
+[DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils diffutils emacs
+[DEP] findutils gawk gcc32 gcc32:dev gettext glibc23 glibc23:dev gmp
+[DEP] gmp:dev grep linux24-header:dev make mktemp ncurses:dev net-tools
+[DEP] perl5 readline readline:dev sed sysfiles tar tcl tcl:dev tetex
+[DEP] texinfo tk tk:dev xfree86 xfree86:dev
 

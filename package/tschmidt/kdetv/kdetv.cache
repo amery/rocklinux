@@ -20,20 +20,60 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093342825 Tue Aug 24 12:20:25 2004
+[TIMESTAMP] 1095535361 Sat Sep 18 21:22:41 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-kdetv.log 9-kdetv.log
+[LOGS] 5-kdetv.err
 
-[BUILDTIME] 34615 (9)
-[SIZE] 1.91 MB, 105 files
-
-[DEP] 00-dirtree alsa alsa:dev arts bash binutils bzip2 coreutils
-[DEP] diffutils expat fam fam:dev findutils freetype freetype:dev
-[DEP] gawk gcc32 gcc32:dev gettext glibc23 glibc23:dev grep k3b kdebase
-[DEP] kdelibs kdelibs:dev kdeutils libart_lgpl23 libart_lgpl23:dev libjpeg
-[DEP] libjpeg:dev libpng libpng:dev libzvbi libzvbi:dev linux24-header:dev
-[DEP] make mktemp net-tools pcre pcre:dev perl5 qt qt:dev sed sysfiles
-[DEP] tar util-linux xfree86 xfree86:dev zlib:dev
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.kdetv.1095534971.27442.2139328979/kdetv-0.8.0'
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.kdetv.1095534971.27442.2139328979/kdetv-0.8.0'
+[5-ERROR] Trying to copy the default documentation ...
+[5-ERROR] `AUTHORS' -> `/opt/kde3/share/doc/kdetv/AUTHORS'
+[5-ERROR] `COPYING' -> `/opt/kde3/share/doc/kdetv/COPYING'
+[5-ERROR] `COPYING.LIB' -> `/opt/kde3/share/doc/kdetv/COPYING.LIB'
+[5-ERROR] `INSTALL' -> `/opt/kde3/share/doc/kdetv/INSTALL'
+[5-ERROR] `README' -> `/opt/kde3/share/doc/kdetv/README'
+[5-ERROR] `TODO' -> `/opt/kde3/share/doc/kdetv/TODO'
+[5-ERROR] `VERSION' -> `/opt/kde3/share/doc/kdetv/VERSION'
+[5-ERROR] `ChangeLog' -> `/opt/kde3/share/doc/kdetv/ChangeLog'
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 252 files for this package.
+[5-ERROR] Applying package split: 40 kdetv:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 kdetv:dev /pkgconfig/
+[5-ERROR] Applying package split: 45 kdetv /.*\.la$
+[5-ERROR] Applying package split: 60 kdetv:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <kdetv> Creating flist file ...
+[5-ERROR] <kdetv> Creating package dependencies file ...
+[5-ERROR] <kdetv> Creating md5sum and cksum files ...
+[5-ERROR] <kdetv> Creating package description ...
+[5-ERROR] <kdetv:doc> Creating flist file ...
+[5-ERROR] <kdetv:doc> Creating package dependencies file ...
+[5-ERROR] <kdetv:doc> Creating md5sum and cksum files ...
+[5-ERROR] <kdetv:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Found shared files with other packages:
+[5-ERROR] usr/bin/kv4lsetup: avifile kdetv
+[5-ERROR] usr/lib/kde3/kdetv_alsa.la: kdetv kdetv:dev
+[5-ERROR] usr/lib/kde3/kdetv_csvchannels.la: kdetv kdetv:dev
+[5-ERROR] usr/lib/kde3/kdetv_elegant.la: kdetv kdetv:dev
+[5-ERROR] usr/lib/kde3/kdetv_haze.la: kdetv kdetv:dev
+[5-ERROR] usr/lib/kde3/kdetv_kwintvchannels.la: kdetv kdetv:dev
+[5-ERROR] usr/lib/kde3/kdetv_libzvbidecoder.la: kdetv kdetv:dev
+[5-ERROR] usr/lib/kde3/kdetv_oss.la: kdetv kdetv:dev
+[5-ERROR] usr/lib/kde3/kdetv_simon.la: kdetv kdetv:dev
+[5-ERROR] usr/lib/kde3/kdetv_telex.la: kdetv kdetv:dev
+[5-ERROR] usr/lib/kde3/kdetv_v4l.la: kdetv kdetv:dev
+[5-ERROR] usr/lib/kde3/kdetv_xawtvchannels.la: kdetv kdetv:dev
+[5-ERROR] usr/lib/kde3/kdetv_xmlchannels.la: kdetv kdetv:dev
+[5-ERROR] usr/lib/kde3/kdetv_xv.la: kdetv kdetv:dev
+[5-ERROR] usr/lib/kde3/kdetv_zappingchannels.la: kdetv kdetv:dev
+[5-ERROR] usr/lib/libkdetv.la: kdetv kdetv:dev
+[5-ERROR] usr/lib/libkvideoio.la: kdetv kdetv:dev
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] removed `/var/adm/logs/5-kdetv.log'
+[5-ERROR] Finished building kdetv=kdetv.
 

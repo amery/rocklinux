@@ -20,111 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093301188 Tue Aug 24 00:46:28 2004
+[TIMESTAMP] 1095271149 Wed Sep 15 19:59:09 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-zapping.err 9-zapping.err
+[LOGS] 5-zapping.log
 
-[5-ERROR] /ROCK/build/ref0818-2.1.0-DEV-x86-reference-expert/ROCK/tools.chroot/wrapper/install -c  zapping /usr/bin
-[5-ERROR] make[2]: Nothing to be done for `install-data-am'.
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.zapping.1093061726.22677.2181230183/zapping-0.7cvs8/src'
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.zapping.1093061726.22677.2181230183/zapping-0.7cvs8/src'
-[5-ERROR] make[1]: Entering directory `/ROCK/src.zapping.1093061726.22677.2181230183/zapping-0.7cvs8'
-[5-ERROR] make[2]: Entering directory `/ROCK/src.zapping.1093061726.22677.2181230183/zapping-0.7cvs8'
-[5-ERROR] make[2]: Nothing to be done for `install-exec-am'.
-[5-ERROR] /bin/sh ./mkinstalldirs /usr/share/gnome/apps/Multimedia
-[5-ERROR]  /ROCK/build/ref0818-2.1.0-DEV-x86-reference-expert/ROCK/tools.chroot/wrapper/install -c -m 644 ./zapping.desktop /usr/share/gnome/apps/Multimedia/zapping.desktop
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.zapping.1093061726.22677.2181230183/zapping-0.7cvs8'
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.zapping.1093061726.22677.2181230183/zapping-0.7cvs8'
-[5-ERROR] Trying to copy the default documentation ...
-[5-ERROR] `ABOUT-NLS' -> `/usr/share/doc/zapping/ABOUT-NLS'
-[5-ERROR] `AUTHORS' -> `/usr/share/doc/zapping/AUTHORS'
-[5-ERROR] `BUGS' -> `/usr/share/doc/zapping/BUGS'
-[5-ERROR] `COPYING' -> `/usr/share/doc/zapping/COPYING'
-[5-ERROR] `INSTALL' -> `/usr/share/doc/zapping/INSTALL'
-[5-ERROR] `NEWS' -> `/usr/share/doc/zapping/NEWS'
-[5-ERROR] `README' -> `/usr/share/doc/zapping/README'
-[5-ERROR] `README.plugins' -> `/usr/share/doc/zapping/README.plugins'
-[5-ERROR] `THANKS' -> `/usr/share/doc/zapping/THANKS'
-[5-ERROR] `TODO' -> `/usr/share/doc/zapping/TODO'
-[5-ERROR] `ChangeLog' -> `/usr/share/doc/zapping/ChangeLog'
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 79 files for this package.
-[5-ERROR] Applying package split: 40 zapping:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 zapping:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 zapping:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <zapping> Creating flist file ...
-[5-ERROR] <zapping> Creating package dependencies file ...
-[5-ERROR] <zapping> Creating md5sum and cksum files ...
-[5-ERROR] <zapping> Creating package description ...
-[5-ERROR] <zapping:dev> Creating flist file ...
-[5-ERROR] <zapping:dev> Creating package dependencies file ...
-[5-ERROR] <zapping:dev> Creating md5sum and cksum files ...
-[5-ERROR] <zapping:dev> Creating package description ...
-[5-ERROR] <zapping:doc> Creating flist file ...
-[5-ERROR] <zapping:doc> Creating package dependencies file ...
-[5-ERROR] <zapping:doc> Creating md5sum and cksum files ...
-[5-ERROR] <zapping:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Found shared files with other packages:
-[5-ERROR] var/scrollkeeper/C/scrollkeeper_cl.xml: mgt streamtuner zapping
-[5-ERROR] var/scrollkeeper/C/scrollkeeper_extended_cl.xml: mgt streamtuner zapping
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] removed `/var/adm/logs/5-zapping.log'
-[5-ERROR] Finished building zapping=zapping.
+[BUILDTIME] 15421 (5)
+[SIZE] 1.97 MB, 69 files
 
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.zapping.1093300992.6435.918379580/zapping-0.7cvs8/src'
-[9-ERROR] make[1]: Entering directory `/ROCK/src.zapping.1093300992.6435.918379580/zapping-0.7cvs8'
-[9-ERROR] make[2]: Entering directory `/ROCK/src.zapping.1093300992.6435.918379580/zapping-0.7cvs8'
-[9-ERROR] make[2]: Nothing to be done for `install-exec-am'.
-[9-ERROR] /bin/sh ./mkinstalldirs /usr/share/gnome/apps/Multimedia
-[9-ERROR]  /ROCK/build/ref0818-2.1.0-DEV-x86-reference-expert/ROCK/tools.chroot/wrapper/install -c -m 644 ./zapping.desktop /usr/share/gnome/apps/Multimedia/zapping.desktop
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.zapping.1093300992.6435.918379580/zapping-0.7cvs8'
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.zapping.1093300992.6435.918379580/zapping-0.7cvs8'
-[9-ERROR] Trying to copy the default documentation ...
-[9-ERROR] `ABOUT-NLS' -> `/usr/share/doc/zapping/ABOUT-NLS'
-[9-ERROR] `AUTHORS' -> `/usr/share/doc/zapping/AUTHORS'
-[9-ERROR] `BUGS' -> `/usr/share/doc/zapping/BUGS'
-[9-ERROR] `COPYING' -> `/usr/share/doc/zapping/COPYING'
-[9-ERROR] `INSTALL' -> `/usr/share/doc/zapping/INSTALL'
-[9-ERROR] `NEWS' -> `/usr/share/doc/zapping/NEWS'
-[9-ERROR] `README' -> `/usr/share/doc/zapping/README'
-[9-ERROR] `README.plugins' -> `/usr/share/doc/zapping/README.plugins'
-[9-ERROR] `THANKS' -> `/usr/share/doc/zapping/THANKS'
-[9-ERROR] `TODO' -> `/usr/share/doc/zapping/TODO'
-[9-ERROR] `ChangeLog' -> `/usr/share/doc/zapping/ChangeLog'
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 86 files for this package.
-[9-ERROR] Applying package split: 40 zapping:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 zapping:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 zapping:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <zapping> Creating flist file ...
-[9-ERROR] <zapping> Creating package dependencies file ...
-[9-ERROR] <zapping> Creating md5sum and cksum files ...
-[9-ERROR] <zapping> Creating package description ...
-[9-ERROR] <zapping:dev> Creating flist file ...
-[9-ERROR] <zapping:dev> Creating package dependencies file ...
-[9-ERROR] <zapping:dev> Creating md5sum and cksum files ...
-[9-ERROR] <zapping:dev> Creating package description ...
-[9-ERROR] <zapping:doc> Creating flist file ...
-[9-ERROR] <zapping:doc> Creating package dependencies file ...
-[9-ERROR] <zapping:doc> Creating md5sum and cksum files ...
-[9-ERROR] <zapping:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Found shared files with other packages:
-[9-ERROR] var/scrollkeeper/C/scrollkeeper_cl.xml: mgt streamtuner zapping
-[9-ERROR] var/scrollkeeper/C/scrollkeeper_extended_cl.xml: mgt streamtuner zapping
-[9-ERROR] var/scrollkeeper/fr/scrollkeeper_cl.xml: mgt streamtuner zapping
-[9-ERROR] var/scrollkeeper/fr/scrollkeeper_extended_cl.xml: mgt streamtuner zapping
-[9-ERROR] var/scrollkeeper/scrollkeeper_docs: mgt streamtuner zapping
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] removed `/var/adm/logs/9-zapping.log'
-[9-ERROR] Finished building zapping=zapping.
+[DEP] 00-dirtree alsa alsa:dev arts arts:dev atk atk:dev audiofile
+[DEP] audiofile:dev autoconf automake18 bash2 binutils bzip2 coreutils
+[DEP] cpan-xml-parser diffutils docbookx esound esound:dev expat findutils
+[DEP] freetype gawk gcc32 gcc32:dev gconf gconf:dev gettext glib glib:dev
+[DEP] glibc23 glibc23:dev gnome-keyring gnome-keyring:dev gnome-vfs
+[DEP] gnome-vfs:dev gnotepad+ grep gtk+ gtk+:dev gtkdoc libart_lgpl23
+[DEP] libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui libbonoboui:dev
+[DEP] libglade libglade:dev libgnome libgnome:dev libgnomecanvas
+[DEP] libgnomecanvas:dev libgnomeui libgnomeui:dev libjpeg libjpeg:dev
+[DEP] libpng libxml2 libxml2:dev linux24-header:dev make mktemp net-tools
+[DEP] numpy openssl orbit2 orbit2:dev pango pango:dev perl5 pkgconfig
+[DEP] popt popt:dev python python:dev scrollkeeper sed sysfiles tar tcl
+[DEP] texinfo tk util-linux xfree86 xfree86:dev xmule zlib:dev
 

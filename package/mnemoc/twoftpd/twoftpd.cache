@@ -20,111 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093260938 Mon Aug 23 13:35:38 2004
+[TIMESTAMP] 1095374231 Fri Sep 17 00:37:11 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-twoftpd.err 9-twoftpd.err
+[LOGS] 5-twoftpd.log
 
-[5-ERROR] ( echo '#!/bin/sh'; \
-[5-ERROR]   echo 'main="$1"; shift';\
-[5-ERROR]   echo 'rm -f "$main"';\
-[5-ERROR]   echo 'ar cr "$main" ${1+"$@"}';\
-[5-ERROR]   echo 'ranlib "$main"';\
-[5-ERROR] ) >makelib
-[5-ERROR] chmod 755 makelib
-[5-ERROR] ./compile backend.c
-[5-ERROR] ./compile list.c
-[5-ERROR] list.c: In function `handle_listing':
-[5-ERROR] list.c:266: warning: signed and unsigned type in conditional expression
-[5-ERROR] ./compile messagefile.c
-[5-ERROR] ./compile path.c
-[5-ERROR] ./compile retr.c
-[5-ERROR] ./compile socket.c
-[5-ERROR] ./compile stat.c
-[5-ERROR] ./compile state.c
-[5-ERROR] ./compile store.c
-[5-ERROR] ./makelib backend.a backend.o list.o messagefile.o path.o retr.o socket.o stat.o state.o store.o
-[5-ERROR] ./compile banner.c
-[5-ERROR] ./compile log.c
-[5-ERROR] ./compile main.c
-[5-ERROR] main.c: In function `handle_alrm':
-[5-ERROR] main.c:192: warning: unused parameter `ignored'
-[5-ERROR] ./compile respond.c
-[5-ERROR] ./compile responses.c
-[5-ERROR] ./compile strtou.c
-[5-ERROR] ./makelib main.a banner.o log.o main.o respond.o responses.o strtou.o
-[5-ERROR] ( ( ./compile trylib.c && ./load trylib -lsocket -lnsl ) >/dev/null 2>&1 \
-[5-ERROR]   && echo -lsocket -lnsl || exit 0 ) >socket.lib
-[5-ERROR] rm -f trylib.o trylib
-[5-ERROR] ./load twoftpd-anon backend.a main.a `cat socket.lib` -lbg-path -lbg-iobuf -lbg-net -lbg-unix -lbg-str
-[5-ERROR] ./load: line 3: exec: -L: invalid option
-[5-ERROR] exec: usage: exec [-cl] [-a name] file [redirection ...]
-[5-ERROR] make: *** [twoftpd-anon] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 twoftpd:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 twoftpd:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 twoftpd:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <twoftpd:doc> Creating flist file ...
-[5-ERROR] <twoftpd:doc> Creating package dependencies file ...
-[5-ERROR] <twoftpd:doc> Creating md5sum and cksum files ...
-[5-ERROR] <twoftpd:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building twoftpd=twoftpd.
+[BUILDTIME] 1746 (5)
+[SIZE] 0.12 MB, 14 files
 
-[9-ERROR] ( echo '#!/bin/sh'; \
-[9-ERROR]   echo 'main="$1"; shift';\
-[9-ERROR]   echo 'rm -f "$main"';\
-[9-ERROR]   echo 'ar cr "$main" ${1+"$@"}';\
-[9-ERROR]   echo 'ranlib "$main"';\
-[9-ERROR] ) >makelib
-[9-ERROR] chmod 755 makelib
-[9-ERROR] ./compile backend.c
-[9-ERROR] ./compile list.c
-[9-ERROR] list.c: In function `handle_listing':
-[9-ERROR] list.c:266: warning: signed and unsigned type in conditional expression
-[9-ERROR] ./compile messagefile.c
-[9-ERROR] ./compile path.c
-[9-ERROR] ./compile retr.c
-[9-ERROR] ./compile socket.c
-[9-ERROR] ./compile stat.c
-[9-ERROR] ./compile state.c
-[9-ERROR] ./compile store.c
-[9-ERROR] ./makelib backend.a backend.o list.o messagefile.o path.o retr.o socket.o stat.o state.o store.o
-[9-ERROR] ./compile banner.c
-[9-ERROR] ./compile log.c
-[9-ERROR] ./compile main.c
-[9-ERROR] main.c: In function `handle_alrm':
-[9-ERROR] main.c:192: warning: unused parameter `ignored'
-[9-ERROR] ./compile respond.c
-[9-ERROR] ./compile responses.c
-[9-ERROR] ./compile strtou.c
-[9-ERROR] ./makelib main.a banner.o log.o main.o respond.o responses.o strtou.o
-[9-ERROR] ( ( ./compile trylib.c && ./load trylib -lsocket -lnsl ) >/dev/null 2>&1 \
-[9-ERROR]   && echo -lsocket -lnsl || exit 0 ) >socket.lib
-[9-ERROR] rm -f trylib.o trylib
-[9-ERROR] ./load twoftpd-anon backend.a main.a `cat socket.lib` -lbg-path -lbg-iobuf -lbg-net -lbg-unix -lbg-str
-[9-ERROR] ./load: line 3: exec: -L: invalid option
-[9-ERROR] exec: usage: exec [-cl] [-a name] file [redirection ...]
-[9-ERROR] make: *** [twoftpd-anon] Error 2
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 1 files for this package.
-[9-ERROR] Applying package split: 40 twoftpd:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 twoftpd:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 twoftpd:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <twoftpd:doc> Creating flist file ...
-[9-ERROR] <twoftpd:doc> Creating package dependencies file ...
-[9-ERROR] <twoftpd:doc> Creating md5sum and cksum files ...
-[9-ERROR] <twoftpd:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building twoftpd=twoftpd.
+[DEP] 00-dirtree bash2 bglibs bglibs:dev binutils bzip2 coreutils cvm:dev
+[DEP] findutils gcc32 gcc32:dev glibc23 glibc23:dev grep linux24-header:dev
+[DEP] make patch sed sysfiles tar
 

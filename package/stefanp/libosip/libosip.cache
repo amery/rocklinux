@@ -20,67 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093275149 Mon Aug 23 17:32:29 2004
+[TIMESTAMP] 1095390233 Fri Sep 17 05:03:53 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libosip.log 9-libosip.err
+[LOGS] 5-libosip.log
 
-[BUILDTIME] 7238 (5)
+[BUILDTIME] 7112 (5)
 [SIZE] 0.16 MB, 13 files
 
-[DEP] 00-dirtree bash binutils bzip2 coreutils diffutils findutils gcc32
-[DEP] gcc32:dev glibc23 glibc23:dev grep libosip2 linux24-header:dev make
-[DEP] mktemp net-tools sed sysfiles tar util-linux
-
-[9-ERROR] make[2]: Nothing to be done for `install-exec-am'.
-[9-ERROR] make[2]: Nothing to be done for `install-data-am'.
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.libosip.1093275066.24581.3451017065/libosip-0.9.7/windows'
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.libosip.1093275066.24581.3451017065/libosip-0.9.7/windows'
-[9-ERROR] make[1]: Entering directory `/ROCK/src.libosip.1093275066.24581.3451017065/libosip-0.9.7'
-[9-ERROR] make[2]: Entering directory `/ROCK/src.libosip.1093275066.24581.3451017065/libosip-0.9.7'
-[9-ERROR] make[2]: Nothing to be done for `install-exec-am'.
-[9-ERROR] make[2]: Nothing to be done for `install-data-am'.
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.libosip.1093275066.24581.3451017065/libosip-0.9.7'
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.libosip.1093275066.24581.3451017065/libosip-0.9.7'
-[9-ERROR] Trying to copy the default documentation ...
-[9-ERROR] `./doc/Makefile' -> `/usr/share/doc/libosip/Makefile'
-[9-ERROR] `./doc/Makefile.am' -> `/usr/share/doc/libosip/Makefile.am'
-[9-ERROR] `./doc/Makefile.in' -> `/usr/share/doc/libosip/Makefile.in'
-[9-ERROR] `./doc/osip.1' -> `/usr/share/doc/libosip/osip.1'
-[9-ERROR] `./doc/osip.sgml' -> `/usr/share/doc/libosip/osip.sgml'
-[9-ERROR] `AUTHORS' -> `/usr/share/doc/libosip/AUTHORS'
-[9-ERROR] `BUGS' -> `/usr/share/doc/libosip/BUGS'
-[9-ERROR] `COPYING' -> `/usr/share/doc/libosip/COPYING'
-[9-ERROR] `INSTALL' -> `/usr/share/doc/libosip/INSTALL'
-[9-ERROR] `NEWS' -> `/usr/share/doc/libosip/NEWS'
-[9-ERROR] `README' -> `/usr/share/doc/libosip/README'
-[9-ERROR] `TODO' -> `/usr/share/doc/libosip/TODO'
-[9-ERROR] `ChangeLog' -> `/usr/share/doc/libosip/ChangeLog'
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 37 files for this package.
-[9-ERROR] Applying package split: 40 libosip:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 libosip:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 libosip:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <libosip> Creating flist file ...
-[9-ERROR] <libosip> Creating package dependencies file ...
-[9-ERROR] <libosip> Creating md5sum and cksum files ...
-[9-ERROR] <libosip> Creating package description ...
-[9-ERROR] <libosip:dev> Creating flist file ...
-[9-ERROR] <libosip:dev> Creating package dependencies file ...
-[9-ERROR] <libosip:dev> Creating md5sum and cksum files ...
-[9-ERROR] <libosip:dev> Creating package description ...
-[9-ERROR] <libosip:doc> Creating flist file ...
-[9-ERROR] <libosip:doc> Creating package dependencies file ...
-[9-ERROR] <libosip:doc> Creating md5sum and cksum files ...
-[9-ERROR] <libosip:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Found shared files with other packages:
-[9-ERROR] usr/share/man/man1/osip.1: libosip libosip2
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] removed `/var/adm/logs/9-libosip.log'
-[9-ERROR] Finished building libosip=libosip.
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc32
+[DEP] gcc32:dev glibc23 glibc23:dev grep linux24-header:dev make mktemp
+[DEP] net-tools sed sysfiles tar util-linux
 

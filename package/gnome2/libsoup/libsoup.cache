@@ -20,68 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093147017 Sun Aug 22 05:56:57 2004
+[TIMESTAMP] 1095233417 Wed Sep 15 09:30:17 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libsoup.log 9-libsoup.err
+[LOGS] 5-libsoup.log
 
-[BUILDTIME] 2812 (5)
-[SIZE] 0.11 MB, 10 files
+[BUILDTIME] 3865 (5)
+[SIZE] 0.10 MB, 9 files
 
-[DEP] 00-dirtree bash binutils bzip2 coreutils diffutils findutils
-[DEP] gcc32 gcc32:dev glib glib:dev glibc23 glibc23:dev gnutls:dev grep
-[DEP] linux24-header:dev make mktemp net-tools pkgconfig sed sysfiles
-[DEP] tar util-linux
-
-[9-ERROR] depfile='.deps/soup-error.Plo' tmpdepfile='.deps/soup-error.TPlo' \
-[9-ERROR] depmode=gcc3 /bin/sh ../depcomp \
-[9-ERROR] /bin/sh ../libtool --mode=compile gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -DG_LOG_DOMAIN=\"SOUP\" -DSYSCONFDIR=\"/etc/opt/gnome26\" -DLIBEXECDIR=\"/opt/gnome26/libexec\" -I.. -DG_DISABLE_ASSERT -DG_DISABLE_CHECKS -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include        -g -O2 		-Wall -Wstrict-prototypes -Wmissing-declarations 		-Wmissing-prototypes -Wnested-externs -Wpointer-arith -D_REENTRANT -c -o soup-error.lo `test -f 'soup-error.c' || echo './'`soup-error.c
-[9-ERROR] rm -f .libs/soup-error.lo
-[9-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -DG_LOG_DOMAIN=\"SOUP\" -DSYSCONFDIR=\"/etc/opt/gnome26\" -DLIBEXECDIR=\"/opt/gnome26/libexec\" -I.. -DG_DISABLE_ASSERT -DG_DISABLE_CHECKS -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -g -O2 -Wall -Wstrict-prototypes -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -D_REENTRANT -c soup-error.c -MT soup-error.lo -MD -MP -MF .deps/soup-error.TPlo  -fPIC -DPIC -o .libs/soup-error.lo
-[9-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -DG_LOG_DOMAIN=\"SOUP\" -DSYSCONFDIR=\"/etc/opt/gnome26\" -DLIBEXECDIR=\"/opt/gnome26/libexec\" -I.. -DG_DISABLE_ASSERT -DG_DISABLE_CHECKS -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -g -O2 -Wall -Wstrict-prototypes -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -D_REENTRANT -c soup-error.c -MT soup-error.lo -MD -MP -MF .deps/soup-error.TPlo -o soup-error.o >/dev/null 2>&1
-[9-ERROR] mv -f .libs/soup-error.lo soup-error.lo
-[9-ERROR] source='soup-gnutls.c' object='soup-gnutls.lo' libtool=yes \
-[9-ERROR] depfile='.deps/soup-gnutls.Plo' tmpdepfile='.deps/soup-gnutls.TPlo' \
-[9-ERROR] depmode=gcc3 /bin/sh ../depcomp \
-[9-ERROR] /bin/sh ../libtool --mode=compile gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -DG_LOG_DOMAIN=\"SOUP\" -DSYSCONFDIR=\"/etc/opt/gnome26\" -DLIBEXECDIR=\"/opt/gnome26/libexec\" -I.. -DG_DISABLE_ASSERT -DG_DISABLE_CHECKS -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include        -g -O2 		-Wall -Wstrict-prototypes -Wmissing-declarations 		-Wmissing-prototypes -Wnested-externs -Wpointer-arith -D_REENTRANT -c -o soup-gnutls.lo `test -f 'soup-gnutls.c' || echo './'`soup-gnutls.c
-[9-ERROR] rm -f .libs/soup-gnutls.lo
-[9-ERROR] gcc-32 -DHAVE_CONFIG_H -I. -I. -I.. -DG_LOG_DOMAIN=\"SOUP\" -DSYSCONFDIR=\"/etc/opt/gnome26\" -DLIBEXECDIR=\"/opt/gnome26/libexec\" -I.. -DG_DISABLE_ASSERT -DG_DISABLE_CHECKS -I/opt/gnome26/include/glib-2.0 -I/opt/gnome26/lib/glib-2.0/include -g -O2 -Wall -Wstrict-prototypes -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -D_REENTRANT -c soup-gnutls.c -MT soup-gnutls.lo -MD -MP -MF .deps/soup-gnutls.TPlo  -fPIC -DPIC -o .libs/soup-gnutls.lo
-[9-ERROR] soup-gnutls.c: In function `verify_certificate':
-[9-ERROR] soup-gnutls.c:80: `GNUTLS_CERT_CORRUPTED' undeclared (first use in this function)
-[9-ERROR] soup-gnutls.c:80: (Each undeclared identifier is reported only once
-[9-ERROR] soup-gnutls.c:80: for each function it appears in.)
-[9-ERROR] soup-gnutls.c: In function `init_dh_params':
-[9-ERROR] soup-gnutls.c:336: warning: `gnutls_dh_params_generate' is deprecated (declared at /usr/include/gnutls/compat8.h:83)
-[9-ERROR] soup-gnutls.c:339: warning: `gnutls_dh_params_set' is deprecated (declared at /usr/include/gnutls/compat8.h:82)
-[9-ERROR] soup-gnutls.c: In function `soup_gnutls_get_iochannel':
-[9-ERROR] soup-gnutls.c:501: warning: passing arg 2 of `gnutls_transport_set_ptr' makes pointer from integer without a cast
-[9-ERROR] make[2]: *** [soup-gnutls.lo] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.libsoup.1093146968.29371.2627837574/libsoup-1.99.28/libsoup'
-[9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.libsoup.1093146968.29371.2627837574/libsoup-1.99.28'
-[9-ERROR] make: *** [all] Error 2
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 30 files for this package.
-[9-ERROR] Applying package split: 40 libsoup:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 libsoup:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 libsoup:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <libsoup> Creating flist file ...
-[9-ERROR] <libsoup> Creating package dependencies file ...
-[9-ERROR] <libsoup> Creating md5sum and cksum files ...
-[9-ERROR] <libsoup> Creating package description ...
-[9-ERROR] <libsoup:dev> Creating flist file ...
-[9-ERROR] <libsoup:dev> Creating package dependencies file ...
-[9-ERROR] <libsoup:dev> Creating md5sum and cksum files ...
-[9-ERROR] <libsoup:dev> Creating package description ...
-[9-ERROR] <libsoup:doc> Creating flist file ...
-[9-ERROR] <libsoup:doc> Creating package dependencies file ...
-[9-ERROR] <libsoup:doc> Creating md5sum and cksum files ...
-[9-ERROR] <libsoup:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building libsoup=libsoup.
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc32
+[DEP] gcc32:dev glib glib:dev glibc23 glibc23:dev gnutls gnutls:dev
+[DEP] grep libgcrypt libgcrypt:dev libgpg-error libgpg-error:dev
+[DEP] linux24-header:dev make mktemp net-tools patch pkgconfig sed sysfiles
+[DEP] tar util-linux zlib:dev
 

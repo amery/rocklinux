@@ -20,111 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093191814 Sun Aug 22 18:23:34 2004
+[TIMESTAMP] 1095289273 Thu Sep 16 01:01:13 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-xine.err 9-xine.err
+[LOGS] 5-xine.log
 
-[5-ERROR] then mv -f ".deps/lines.Tpo" ".deps/lines.Plo"; \
-[5-ERROR] else rm -f ".deps/lines.Tpo"; exit 1; \
-[5-ERROR] fi
-[5-ERROR]  gcc-32 -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../.. -I../../../include -I../../../include -I../../../src -I../../../src/xine-engine -I../../../src/xine-engine -I../../../src/xine-utils -I../../../src/input -I../../../src/input -DHAVE_MMX -mcpu=i386 -O3 -pipe -falign-functions=4 -falign-loops=4 -falign-jumps=4 -mpreferred-stack-boundary=2 -fexpensive-optimizations -fschedule-insns2 -fno-strict-aliasing -ffast-math -funroll-loops -finline-functions -Wall -DNDEBUG -D_REENTRANT -D_FILE_OFFSET_BITS=64 -DXINE_COMPILE -Wpointer-arith -Wnested-externs -Wcast-align -Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes -MT lines.lo -MD -MP -MF .deps/lines.Tpo -c lines.c -o .libs/lines.o
-[5-ERROR] In file included from lines.c:10:
-[5-ERROR] drawmethods.h:79:9: warning: "/*" within comment
-[5-ERROR] drawmethods.h:90:9: warning: "/*" within comment
-[5-ERROR] drawmethods.h:101:9: warning: "/*" within comment
-[5-ERROR] lines.c:52: warning: no previous prototype for `genline'
-[5-ERROR] lines.c:85: warning: no previous prototype for `getcouleur'
-[5-ERROR] lines.c:121: warning: no previous prototype for `goom_lines_move'
-[5-ERROR] {standard input}: Assembler messages:
-[5-ERROR] {standard input}:654: Error: suffix or operands invalid for `paddusb'
-[5-ERROR] {standard input}:700: Error: suffix or operands invalid for `paddusb'
-[5-ERROR] {standard input}:724: Error: suffix or operands invalid for `paddusb'
-[5-ERROR] {standard input}:744: Error: suffix or operands invalid for `paddusb'
-[5-ERROR] {standard input}:777: Error: suffix or operands invalid for `paddusb'
-[5-ERROR] {standard input}:806: Error: suffix or operands invalid for `paddusb'
-[5-ERROR] {standard input}:841: Error: suffix or operands invalid for `paddusb'
-[5-ERROR] {standard input}:877: Error: suffix or operands invalid for `paddusb'
-[5-ERROR] {standard input}:893: Error: suffix or operands invalid for `paddusb'
-[5-ERROR] {standard input}:904: Error: suffix or operands invalid for `paddusb'
-[5-ERROR] {standard input}:915: Error: suffix or operands invalid for `paddusb'
-[5-ERROR] {standard input}:926: Error: suffix or operands invalid for `paddusb'
-[5-ERROR] {standard input}:949: Error: suffix or operands invalid for `paddusb'
-[5-ERROR] {standard input}:963: Error: suffix or operands invalid for `paddusb'
-[5-ERROR] make[4]: *** [lines.lo] Error 1
-[5-ERROR] make[4]: Leaving directory `/ROCK/src.xine.1092960046.12592.2069497395/xine-lib-1-rc5/src/post/goom'
-[5-ERROR] make[3]: *** [all-recursive] Error 1
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.xine.1092960046.12592.2069497395/xine-lib-1-rc5/src/post'
-[5-ERROR] make[2]: *** [all-recursive] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.xine.1092960046.12592.2069497395/xine-lib-1-rc5/src'
-[5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.xine.1092960046.12592.2069497395/xine-lib-1-rc5'
-[5-ERROR] make: *** [all] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 xine:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 xine:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 xine:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <xine:doc> Creating flist file ...
-[5-ERROR] <xine:doc> Creating package dependencies file ...
-[5-ERROR] <xine:doc> Creating md5sum and cksum files ...
-[5-ERROR] <xine:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building xine=xine.
+[BUILDTIME] 92523 (5)
+[SIZE] 9.85 MB, 276 files
 
-[9-ERROR] then mv -f ".deps/lines.Tpo" ".deps/lines.Plo"; \
-[9-ERROR] else rm -f ".deps/lines.Tpo"; exit 1; \
-[9-ERROR] fi
-[9-ERROR]  gcc-32 -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../.. -I../../../include -I../../../include -I../../../src -I../../../src/xine-engine -I../../../src/xine-engine -I../../../src/xine-utils -I../../../src/input -I../../../src/input -DHAVE_MMX -mcpu=i386 -O3 -pipe -falign-functions=4 -falign-loops=4 -falign-jumps=4 -mpreferred-stack-boundary=2 -fexpensive-optimizations -fschedule-insns2 -fno-strict-aliasing -ffast-math -funroll-loops -finline-functions -Wall -DNDEBUG -D_REENTRANT -D_FILE_OFFSET_BITS=64 -DXINE_COMPILE -Wpointer-arith -Wnested-externs -Wcast-align -Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes -MT lines.lo -MD -MP -MF .deps/lines.Tpo -c lines.c -o .libs/lines.o
-[9-ERROR] In file included from lines.c:10:
-[9-ERROR] drawmethods.h:79:9: warning: "/*" within comment
-[9-ERROR] drawmethods.h:90:9: warning: "/*" within comment
-[9-ERROR] drawmethods.h:101:9: warning: "/*" within comment
-[9-ERROR] lines.c:52: warning: no previous prototype for `genline'
-[9-ERROR] lines.c:85: warning: no previous prototype for `getcouleur'
-[9-ERROR] lines.c:121: warning: no previous prototype for `goom_lines_move'
-[9-ERROR] {standard input}: Assembler messages:
-[9-ERROR] {standard input}:654: Error: suffix or operands invalid for `paddusb'
-[9-ERROR] {standard input}:700: Error: suffix or operands invalid for `paddusb'
-[9-ERROR] {standard input}:724: Error: suffix or operands invalid for `paddusb'
-[9-ERROR] {standard input}:744: Error: suffix or operands invalid for `paddusb'
-[9-ERROR] {standard input}:777: Error: suffix or operands invalid for `paddusb'
-[9-ERROR] {standard input}:806: Error: suffix or operands invalid for `paddusb'
-[9-ERROR] {standard input}:841: Error: suffix or operands invalid for `paddusb'
-[9-ERROR] {standard input}:877: Error: suffix or operands invalid for `paddusb'
-[9-ERROR] {standard input}:893: Error: suffix or operands invalid for `paddusb'
-[9-ERROR] {standard input}:904: Error: suffix or operands invalid for `paddusb'
-[9-ERROR] {standard input}:915: Error: suffix or operands invalid for `paddusb'
-[9-ERROR] {standard input}:926: Error: suffix or operands invalid for `paddusb'
-[9-ERROR] {standard input}:949: Error: suffix or operands invalid for `paddusb'
-[9-ERROR] {standard input}:963: Error: suffix or operands invalid for `paddusb'
-[9-ERROR] make[4]: *** [lines.lo] Error 1
-[9-ERROR] make[4]: Leaving directory `/ROCK/src.xine.1093191119.3313.1476170071/xine-lib-1-rc5/src/post/goom'
-[9-ERROR] make[3]: *** [all-recursive] Error 1
-[9-ERROR] make[3]: Leaving directory `/ROCK/src.xine.1093191119.3313.1476170071/xine-lib-1-rc5/src/post'
-[9-ERROR] make[2]: *** [all-recursive] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.xine.1093191119.3313.1476170071/xine-lib-1-rc5/src'
-[9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.xine.1093191119.3313.1476170071/xine-lib-1-rc5'
-[9-ERROR] make: *** [all] Error 2
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 1 files for this package.
-[9-ERROR] Applying package split: 40 xine:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 xine:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 xine:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <xine:doc> Creating flist file ...
-[9-ERROR] <xine:doc> Creating package dependencies file ...
-[9-ERROR] <xine:doc> Creating md5sum and cksum files ...
-[9-ERROR] <xine:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building xine=xine.
+[DEP] 00-dirtree aalib aalib:dev alsa alsa:dev arts arts:dev audiofile
+[DEP] audiofile:dev bash2 binutils bison bzip2 coreutils curl curl:dev
+[DEP] diffutils esound esound:dev expat file findutils flac flac:dev
+[DEP] freetype freetype:dev gawk gcc32 gcc32:dev gconf:dev gettext glib
+[DEP] glib12 glib:dev glibc23 glibc23:dev glut gnome-libs14 gnome-vfs
+[DEP] gnome-vfs:dev gpm grep libbonobo libbonobo:dev libjpeg libjpeg:dev
+[DEP] libmng libmng:dev libpng libpng:dev libsdl libsdl:dev libxml2:dev
+[DEP] linux24-header:dev make mktemp nas ncurses:dev net-tools ogg-vorbis
+[DEP] ogg-vorbis:dev openssl orbit2 orbit2:dev patch pkgconfig popt:dev
+[DEP] readline readline:dev sed slang sysfiles tar util-linux xfree86
+[DEP] xfree86:dev xmule zlib:dev
 

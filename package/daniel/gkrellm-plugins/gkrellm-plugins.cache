@@ -20,111 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093228746 Mon Aug 23 04:39:06 2004
+[TIMESTAMP] 1095335740 Thu Sep 16 13:55:40 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gkrellm-plugins.err 9-gkrellm-plugins.err
+[LOGS] 5-gkrellm-plugins.log
 
-[5-ERROR] create symbolic link `/ROCK/src.gkrellm-plugins.1092997481.31997.2248811956/archdir/Matrix_Green.gkrellm.tar.bz2' to `/ROCK/download/mirror/M/Matrix_Green.gkrellm.tar.bz2'
-[5-ERROR] create symbolic link `/ROCK/src.gkrellm-plugins.1092997481.31997.2248811956/archdir/get-E-blue.gkrellm.tar.bz2' to `/ROCK/download/mirror/g/get-E-blue.gkrellm.tar.bz2'
-[5-ERROR] create symbolic link `/ROCK/src.gkrellm-plugins.1092997481.31997.2248811956/archdir/BlueCyrus.tar.bz2' to `/ROCK/download/mirror/B/BlueCyrus.tar.bz2'
-[5-ERROR] Running main build function 'build_this_package' ...
-[5-ERROR] Creating /opt/gnome26/<..> if required ...
-[5-ERROR] Extracting sources ...
-[5-ERROR] gcc  -O2 -Wall -fPIC `pkg-config gtk+-2.0 --cflags`  -I/opt/gnome26/include -DPACKAGE="\"gkrellm-volume\""     -c -o volume.o volume.c
-[5-ERROR] gcc  -O2 -Wall -fPIC `pkg-config gtk+-2.0 --cflags`  -I/opt/gnome26/include -DPACKAGE="\"gkrellm-volume\""     -c -o unix_mixer.o unix_mixer.c
-[5-ERROR] gcc  -O2 -Wall -fPIC `pkg-config gtk+-2.0 --cflags`  -I/opt/gnome26/include -DPACKAGE="\"gkrellm-volume\""     -c -o common_mixer.o common_mixer.c
-[5-ERROR] gcc  -O2 -Wall -fPIC `pkg-config gtk+-2.0 --cflags`  -I/opt/gnome26/include -DPACKAGE="\"gkrellm-volume\""  volume.o unix_mixer.o common_mixer.o -o volume.so `pkg-config gtk+-2.0 --libs` -shared
-[5-ERROR] (cd po && make all )
-[5-ERROR] make[1]: Entering directory `/ROCK/src.gkrellm-plugins.1092997481.31997.2248811956/gkrellm-volume/po'
-[5-ERROR] make[1]: Nothing to be done for `all'.
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.gkrellm-plugins.1092997481.31997.2248811956/gkrellm-volume/po'
-[5-ERROR] (cd po && make install)
-[5-ERROR] make[1]: Entering directory `/ROCK/src.gkrellm-plugins.1092997481.31997.2248811956/gkrellm-volume/po'
-[5-ERROR] make[1]: Nothing to be done for `install'.
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.gkrellm-plugins.1092997481.31997.2248811956/gkrellm-volume/po'
-[5-ERROR] install -c -s volume.so //opt/gnome26/lib/gkrellm/plugins
-[5-ERROR] gcc-32 -I//opt/gnome26/include -O2 -Wall -fPIC `pkg-config gtk+-2.0 --cflags`  `xmms-config --cflags` -DPACKAGE="\"gkrellmms\""  -I//opt/gnome26/include   -c -o gkrellmms.o gkrellmms.c
-[5-ERROR] gkrellmms.c: In function `update_gkrellmms':
-[5-ERROR] gkrellmms.c:233: warning: passing arg 1 of `gdk_string_width' from incompatible pointer type
-[5-ERROR] gkrellmms.c:235: warning: passing arg 1 of `gdk_string_width' from incompatible pointer type
-[5-ERROR] gkrellmms.c: In function `scroll_bar_motion':
-[5-ERROR] gkrellmms.c:536: warning: passing arg 1 of `gdk_string_width' from incompatible pointer type
-[5-ERROR] gkrellmms.c:537: warning: passing arg 1 of `gdk_string_width' from incompatible pointer type
-[5-ERROR] gkrellmms.c: In function `decal_position':
-[5-ERROR] gkrellmms.c:675: structure has no member named `y_baseline'
-[5-ERROR] gkrellmms.c: In function `create_gkrellmms':
-[5-ERROR] gkrellmms.c:860: warning: passing arg 1 of `gdk_string_width' from incompatible pointer type
-[5-ERROR] make: *** [gkrellmms.o] Error 1
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 4 files for this package.
-[5-ERROR] Applying package split: 40 gkrellm-plugins:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 gkrellm-plugins:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 gkrellm-plugins:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <gkrellm-plugins> Creating flist file ...
-[5-ERROR] <gkrellm-plugins> Creating package dependencies file ...
-[5-ERROR] <gkrellm-plugins> Creating md5sum and cksum files ...
-[5-ERROR] <gkrellm-plugins> Creating package description ...
-[5-ERROR] <gkrellm-plugins:doc> Creating flist file ...
-[5-ERROR] <gkrellm-plugins:doc> Creating package dependencies file ...
-[5-ERROR] <gkrellm-plugins:doc> Creating md5sum and cksum files ...
-[5-ERROR] <gkrellm-plugins:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building gkrellm-plugins=gkrellm-plugins.
+[BUILDTIME] 2000 (5)
+[SIZE] 0.66 MB, 259 files
 
-[9-ERROR] create symbolic link `/ROCK/src.gkrellm-plugins.1093228720.5558.3252786232/archdir/Matrix_Green.gkrellm.tar.bz2' to `/ROCK/download/mirror/M/Matrix_Green.gkrellm.tar.bz2'
-[9-ERROR] create symbolic link `/ROCK/src.gkrellm-plugins.1093228720.5558.3252786232/archdir/get-E-blue.gkrellm.tar.bz2' to `/ROCK/download/mirror/g/get-E-blue.gkrellm.tar.bz2'
-[9-ERROR] create symbolic link `/ROCK/src.gkrellm-plugins.1093228720.5558.3252786232/archdir/BlueCyrus.tar.bz2' to `/ROCK/download/mirror/B/BlueCyrus.tar.bz2'
-[9-ERROR] Running main build function 'build_this_package' ...
-[9-ERROR] Creating /opt/gnome26/<..> if required ...
-[9-ERROR] Extracting sources ...
-[9-ERROR] gcc  -O2 -Wall -fPIC `pkg-config gtk+-2.0 --cflags`  -I/opt/gnome26/include -DPACKAGE="\"gkrellm-volume\""     -c -o volume.o volume.c
-[9-ERROR] gcc  -O2 -Wall -fPIC `pkg-config gtk+-2.0 --cflags`  -I/opt/gnome26/include -DPACKAGE="\"gkrellm-volume\""     -c -o unix_mixer.o unix_mixer.c
-[9-ERROR] gcc  -O2 -Wall -fPIC `pkg-config gtk+-2.0 --cflags`  -I/opt/gnome26/include -DPACKAGE="\"gkrellm-volume\""     -c -o common_mixer.o common_mixer.c
-[9-ERROR] gcc  -O2 -Wall -fPIC `pkg-config gtk+-2.0 --cflags`  -I/opt/gnome26/include -DPACKAGE="\"gkrellm-volume\""  volume.o unix_mixer.o common_mixer.o -o volume.so `pkg-config gtk+-2.0 --libs` -shared
-[9-ERROR] (cd po && make all )
-[9-ERROR] make[1]: Entering directory `/ROCK/src.gkrellm-plugins.1093228720.5558.3252786232/gkrellm-volume/po'
-[9-ERROR] make[1]: Nothing to be done for `all'.
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.gkrellm-plugins.1093228720.5558.3252786232/gkrellm-volume/po'
-[9-ERROR] (cd po && make install)
-[9-ERROR] make[1]: Entering directory `/ROCK/src.gkrellm-plugins.1093228720.5558.3252786232/gkrellm-volume/po'
-[9-ERROR] make[1]: Nothing to be done for `install'.
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.gkrellm-plugins.1093228720.5558.3252786232/gkrellm-volume/po'
-[9-ERROR] install -c -s volume.so //opt/gnome26/lib/gkrellm/plugins
-[9-ERROR] gcc-32 -I//opt/gnome26/include -O2 -Wall -fPIC `pkg-config gtk+-2.0 --cflags`  `xmms-config --cflags` -DPACKAGE="\"gkrellmms\""  -I//opt/gnome26/include   -c -o gkrellmms.o gkrellmms.c
-[9-ERROR] gkrellmms.c: In function `update_gkrellmms':
-[9-ERROR] gkrellmms.c:233: warning: passing arg 1 of `gdk_string_width' from incompatible pointer type
-[9-ERROR] gkrellmms.c:235: warning: passing arg 1 of `gdk_string_width' from incompatible pointer type
-[9-ERROR] gkrellmms.c: In function `scroll_bar_motion':
-[9-ERROR] gkrellmms.c:536: warning: passing arg 1 of `gdk_string_width' from incompatible pointer type
-[9-ERROR] gkrellmms.c:537: warning: passing arg 1 of `gdk_string_width' from incompatible pointer type
-[9-ERROR] gkrellmms.c: In function `decal_position':
-[9-ERROR] gkrellmms.c:675: structure has no member named `y_baseline'
-[9-ERROR] gkrellmms.c: In function `create_gkrellmms':
-[9-ERROR] gkrellmms.c:860: warning: passing arg 1 of `gdk_string_width' from incompatible pointer type
-[9-ERROR] make: *** [gkrellmms.o] Error 1
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 4 files for this package.
-[9-ERROR] Applying package split: 40 gkrellm-plugins:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 gkrellm-plugins:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 gkrellm-plugins:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <gkrellm-plugins> Creating flist file ...
-[9-ERROR] <gkrellm-plugins> Creating package dependencies file ...
-[9-ERROR] <gkrellm-plugins> Creating md5sum and cksum files ...
-[9-ERROR] <gkrellm-plugins> Creating package description ...
-[9-ERROR] <gkrellm-plugins:doc> Creating flist file ...
-[9-ERROR] <gkrellm-plugins:doc> Creating package dependencies file ...
-[9-ERROR] <gkrellm-plugins:doc> Creating md5sum and cksum files ...
-[9-ERROR] <gkrellm-plugins:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building gkrellm-plugins=gkrellm-plugins.
+[DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils findutils
+[DEP] gcc32 gcc32:dev gkrellm gkrellm:dev glib glib12 glib:dev glibc23
+[DEP] glibc23:dev grep gtk+ gtk+12 gtk+:dev linux24-header:dev make pango
+[DEP] pango:dev patch pkgconfig sed sysfiles tar xfree86 xmms xmms:dev
 

@@ -20,111 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093264083 Mon Aug 23 14:28:03 2004
+[TIMESTAMP] 1095378840 Fri Sep 17 01:54:00 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-vlc.err 9-vlc.err
+[LOGS] 5-vlc.log
 
-[5-ERROR] mkv.cpp:1191: previous declaration of `int InformationsCreate'
-[5-ERROR] mkv.cpp:1191: previous non-function declaration `int InformationsCreate'
-[5-ERROR] mkv.cpp:2166: conflicts with function declaration `void 
-[5-ERROR]    InformationsCreate(input_thread_t*)'
-[5-ERROR] mkv.cpp: In function `void IndexAppendCluster(input_thread_t*, 
-[5-ERROR]    libmatroska::KaxCluster*)':
-[5-ERROR] mkv.cpp:2253: `void IndexAppendCluster(input_thread_t*, 
-[5-ERROR]    libmatroska::KaxCluster*)' redeclared as different kind of symbol
-[5-ERROR] mkv.cpp:973: previous declaration of `int IndexAppendCluster'
-[5-ERROR] mkv.cpp:973: previous non-function declaration `int IndexAppendCluster'
-[5-ERROR] mkv.cpp:2253: conflicts with function declaration `void 
-[5-ERROR]    IndexAppendCluster(input_thread_t*, libmatroska::KaxCluster*)'
-[5-ERROR] /usr/include/matroska/KaxCues.h: At top level:
-[5-ERROR] mkv.cpp:165: warning: `vlc_fourcc_t __GetFOURCC(uint8_t*)' defined but not used
-[5-ERROR] mkv.cpp:260: warning: `void IndexAppendCluster(input_thread_t*, 
-[5-ERROR]    libmatroska::KaxCluster*)' declared `static' but never defined
-[5-ERROR] mkv.cpp:1935: warning: `void LoadCues(input_thread_t*)' defined but not used
-[5-ERROR] mkv.cpp:263: warning: `void InformationsCreate(input_thread_t*)' declared 
-[5-ERROR]    `static' but never defined
-[5-ERROR] mkv.cpp:1106: warning: `unsigned int i_sample_rates[16]' defined but not used
-[5-ERROR] mkv.cpp:2166: warning: `void InformationsCreate(input_thread_t*)' defined but 
-[5-ERROR]    not used
-[5-ERROR] mkv.cpp:2253: warning: `void IndexAppendCluster(input_thread_t*, 
-[5-ERROR]    libmatroska::KaxCluster*)' defined but not used
-[5-ERROR] {standard input}: Assembler messages:
-[5-ERROR] {standard input}:423: Error: symbol `memcpy' is already defined
-[5-ERROR] make[4]: *** [libmkv_plugin_a-mkv.o] Error 1
-[5-ERROR] make[4]: Leaving directory `/ROCK/src.vlc.1093025462.32380.1973991615/vlc-0.7.0/modules/demux'
-[5-ERROR] make[3]: *** [all-modules] Error 1
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.vlc.1093025462.32380.1973991615/vlc-0.7.0/modules/demux'
-[5-ERROR] make[2]: *** [all-recursive] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.vlc.1093025462.32380.1973991615/vlc-0.7.0/modules'
-[5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.vlc.1093025462.32380.1973991615/vlc-0.7.0'
-[5-ERROR] make: *** [all] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 vlc:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 vlc:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 vlc:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <vlc:doc> Creating flist file ...
-[5-ERROR] <vlc:doc> Creating package dependencies file ...
-[5-ERROR] <vlc:doc> Creating md5sum and cksum files ...
-[5-ERROR] <vlc:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building vlc=vlc.
+[BUILDTIME] 81270 (5)
+[SIZE] 6.55 MB, 373 files
 
-[9-ERROR] mkv.cpp:1191: previous declaration of `int InformationsCreate'
-[9-ERROR] mkv.cpp:1191: previous non-function declaration `int InformationsCreate'
-[9-ERROR] mkv.cpp:2166: conflicts with function declaration `void 
-[9-ERROR]    InformationsCreate(input_thread_t*)'
-[9-ERROR] mkv.cpp: In function `void IndexAppendCluster(input_thread_t*, 
-[9-ERROR]    libmatroska::KaxCluster*)':
-[9-ERROR] mkv.cpp:2253: `void IndexAppendCluster(input_thread_t*, 
-[9-ERROR]    libmatroska::KaxCluster*)' redeclared as different kind of symbol
-[9-ERROR] mkv.cpp:973: previous declaration of `int IndexAppendCluster'
-[9-ERROR] mkv.cpp:973: previous non-function declaration `int IndexAppendCluster'
-[9-ERROR] mkv.cpp:2253: conflicts with function declaration `void 
-[9-ERROR]    IndexAppendCluster(input_thread_t*, libmatroska::KaxCluster*)'
-[9-ERROR] /usr/include/matroska/KaxCues.h: At top level:
-[9-ERROR] mkv.cpp:165: warning: `vlc_fourcc_t __GetFOURCC(uint8_t*)' defined but not used
-[9-ERROR] mkv.cpp:260: warning: `void IndexAppendCluster(input_thread_t*, 
-[9-ERROR]    libmatroska::KaxCluster*)' declared `static' but never defined
-[9-ERROR] mkv.cpp:1935: warning: `void LoadCues(input_thread_t*)' defined but not used
-[9-ERROR] mkv.cpp:263: warning: `void InformationsCreate(input_thread_t*)' declared 
-[9-ERROR]    `static' but never defined
-[9-ERROR] mkv.cpp:1106: warning: `unsigned int i_sample_rates[16]' defined but not used
-[9-ERROR] mkv.cpp:2166: warning: `void InformationsCreate(input_thread_t*)' defined but 
-[9-ERROR]    not used
-[9-ERROR] mkv.cpp:2253: warning: `void IndexAppendCluster(input_thread_t*, 
-[9-ERROR]    libmatroska::KaxCluster*)' defined but not used
-[9-ERROR] {standard input}: Assembler messages:
-[9-ERROR] {standard input}:423: Error: symbol `memcpy' is already defined
-[9-ERROR] make[4]: *** [libmkv_plugin_a-mkv.o] Error 1
-[9-ERROR] make[4]: Leaving directory `/ROCK/src.vlc.1093263919.25597.312639906/vlc-0.7.0/modules/demux'
-[9-ERROR] make[3]: *** [all-modules] Error 1
-[9-ERROR] make[3]: Leaving directory `/ROCK/src.vlc.1093263919.25597.312639906/vlc-0.7.0/modules/demux'
-[9-ERROR] make[2]: *** [all-recursive] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.vlc.1093263919.25597.312639906/vlc-0.7.0/modules'
-[9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.vlc.1093263919.25597.312639906/vlc-0.7.0'
-[9-ERROR] make: *** [all] Error 2
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 1 files for this package.
-[9-ERROR] Applying package split: 40 vlc:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 vlc:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 vlc:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <vlc:doc> Creating flist file ...
-[9-ERROR] <vlc:doc> Creating package dependencies file ...
-[9-ERROR] <vlc:doc> Creating md5sum and cksum files ...
-[9-ERROR] <vlc:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building vlc=vlc.
+[DEP] 00-dirtree a52dec:dev bash2 binutils bison bzip2 coreutils diffutils
+[DEP] ffmpeg ffmpeg:dev findutils freetype freetype:dev fribidi fribidi:dev
+[DEP] gawk gcc32 gcc32:dev gettext glib glib12 glib12:dev glibc23
+[DEP] glibc23:dev gnome-libs14 grep gtk+12 gtk+12:dev lame libcdio
+[DEP] libcdio:dev libdvbpsi3 libdvbpsi3:dev libdvdcss libdvdcss:dev
+[DEP] libdvdnav libdvdnav:dev libdvdplay libdvdplay:dev libdvdread
+[DEP] libdvdread:dev libebml:dev libjpeg libmatroska:dev libmpeg2:dev
+[DEP] libpng libpng:dev libsdl libsdl:dev libtiff libxml2 libxml2:dev
+[DEP] linux24-header:dev mad mad:dev make mktemp mplayer:dev net-tools
+[DEP] ogg-vorbis ogg-vorbis:dev openslp openslp:dev pkgconfig sed sysfiles
+[DEP] sysfsutils sysfsutils:dev tar util-linux wxwidgets wxwidgets:dev
+[DEP] xfree86 xfree86:dev zlib:dev
 

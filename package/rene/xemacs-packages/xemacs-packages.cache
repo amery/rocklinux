@@ -20,66 +20,15 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093121397 Sat Aug 21 22:49:57 2004
+[TIMESTAMP] 1095203840 Wed Sep 15 01:17:20 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-xemacs-packages.log 9-xemacs-packages.err
+[LOGS] 5-xemacs-packages.log
 
-[BUILDTIME] 8546 (5)
-[SIZE] 99.64 MB, 5791 files
+[BUILDTIME] 5283 (5)
+[SIZE] 99.63 MB, 5791 files
 
-[DEP] 00-dirtree bash bzip2 coreutils findutils gcc32 grep sed sysfiles
-[DEP] tar xemacs
-
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/debugger/expr/Token.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/debugger/expr/TokenMgrError.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/debugger/spec/AccessWatchpointSpec.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/debugger/spec/BreakpointSpec.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/debugger/spec/EventRequestSpec.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/debugger/spec/EventRequestSpecList.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/debugger/spec/ExceptionSpec.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/debugger/spec/LineBreakpointSpec.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/debugger/spec/MethodBreakpointSpec.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/debugger/spec/ModificationWatchpointSpec.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/debugger/spec/PatternReferenceTypeSpec.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/debugger/spec/ReferenceTypeSpec.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/debugger/spec/SourceNameReferenceTypeSpec.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/debugger/spec/WatchpointSpec.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/util/AntServer.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/util/ClassInfo.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/util/ClassPathDir.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/util/ClassPathEntry.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/util/ClassPathZip.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/util/CompileServer.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/util/Completion.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/util/DynamicClassLoader.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/util/ImmutableClassPathEntry.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/util/JdeUtilities.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/util/MultiValueMap.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/util/ProjectClasses.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/wizards/AbstractClassFactory.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/wizards/ClassRegistry.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/wizards/DefaultNameFactory.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/wizards/DelegateFactory.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/wizards/ImportWizard.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/wizards/InterfaceFactory.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/wizards/MethodFactory.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/wizards/MethodOverrideFactory.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/wizards/NameFactory.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/jde/java/src/jde/wizards/Signature.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/psgml-dtds/ISO_8879-1986/entities/ISOamsa: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/psgml-dtds/ISO_8879-1986/entities/ISOdia: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/xslt-process/java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/xslt-process/java/xslt/Cocoon1.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/xslt-process/java/xslt/Saxon.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/xslt-process/java/xslt/TrAX.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/etc/xslt-process/java/xslt/Xalan1.java: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/lisp/ada: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/lisp/apel/README.ja: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/lisp/ilisp/extra: xemacs-packages xemacs-packages:dev
-[9-ERROR] usr/lib/xemacs/xemacs-packages/pkginfo/MANIFEST.ada: xemacs-packages xemacs-packages:dev
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] removed `/var/adm/logs/9-xemacs-packages.log'
-[9-ERROR] Finished building xemacs-packages=xemacs-packages.
+[DEP] 00-dirtree bash2 bzip2 coreutils findutils gawk gcc32 grep sed
+[DEP] sysfiles tar xemacs
 

@@ -20,16 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093129257 Sun Aug 22 01:00:57 2004
+[TIMESTAMP] 1095209493 Wed Sep 15 02:51:33 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-engage.err 9-engage.log
+[LOGS] 5-engage.log
 
-[BUILDTIME] 4798 (9)
-[SIZE] 0.07 MB, 13 files
+[BUILDTIME] 4312 (5)
+[SIZE] 0.07 MB, 12 files
 
-[DEP] 00-dirtree autoconf automake18 bash binutils bzip2 coreutils
+[DEP] 00-dirtree autoconf automake18 bash2 binutils bzip2 coreutils
 [DEP] diffutils directfb directfb:dev ecore ecore:dev edb edb:dev
 [DEP] edje edje:dev eet eet:dev embryo embryo:dev esmart esmart:dev
 [DEP] etox etox:dev evas evas:dev ewl ewl:dev findutils freetype
@@ -37,55 +37,4 @@
 [DEP] imlib2:dev imlib2_loaders:dev libjpeg libjpeg:dev libpng libtool
 [DEP] libtool:dev linux24-header:dev m4 make mktemp net-tools openssl
 [DEP] perl5 sed sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
-
-[5-ERROR] checking if g++-32 supports -c -o file.o... yes
-[5-ERROR] checking whether the g++-32 linker (ld) supports shared libraries... yes
-[5-ERROR] checking how to hardcode library paths into programs... immediate
-[5-ERROR] checking whether stripping libraries is possible... yes
-[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
-[5-ERROR] appending configuration tag "F77" to libtool
-[5-ERROR] checking if libtool supports shared libraries... yes
-[5-ERROR] checking whether to build shared libraries... yes
-[5-ERROR] checking whether to build static libraries... yes
-[5-ERROR] checking for g77-32 option to produce PIC... -fPIC
-[5-ERROR] checking if g77-32 PIC flag -fPIC works... yes
-[5-ERROR] checking if g77-32 supports -c -o file.o... yes
-[5-ERROR] checking whether the g77-32 linker (ld) supports shared libraries... yes
-[5-ERROR] checking how to hardcode library paths into programs... immediate
-[5-ERROR] checking whether stripping libraries is possible... yes
-[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
-[5-ERROR] checking for fmemopen... yes
-[5-ERROR] checking for open_memstream... yes
-[5-ERROR] checking for esmart-config... /opt/e17/bin/esmart-config
-[5-ERROR] checking for esmart - version >= 0.0.2... yes
-[5-ERROR] checking for imlib2-config... /opt/e17/bin/imlib2-config
-[5-ERROR] checking for imlib2 - version >= 1.1.1... yes
-[5-ERROR] checking for edje-config... /opt/e17/bin/edje-config
-[5-ERROR] checking for edje - version >= 0.5.0... yes
-[5-ERROR] checking for ecore-config... /opt/e17/bin/ecore-config
-[5-ERROR] checking for ecore - version >= 1.0.0... ./configure: line 21589: test: 1_pre7: integer expression expected
-[5-ERROR] yes
-[5-ERROR] checking for evas-config... /opt/e17/bin/evas-config
-[5-ERROR] checking for evas - version >= 1.0.0... ./configure: line 21749: test: 1_pre13: integer expression expected
-[5-ERROR] yes
-[5-ERROR] checking for ewl-config... no
-[5-ERROR] checking for ewl - version >= 0.0.1... no
-[5-ERROR] *** The ewl-config script installed by ewl could not be found
-[5-ERROR] *** If ewl was installed in PREFIX, make sure PREFIX/bin is in
-[5-ERROR] *** your path, or set the EWL_CONFIG environment variable to the
-[5-ERROR] *** full path to ewl-config.
-[5-ERROR] configure: error: Cannot find ewl: Is ewl-config in path?
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 engage:dev (/lib/.*.a)$|/include/
-[5-ERROR] Applying package split: 60 engage:doc /share/(doc|man|info)/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <engage> Creating flist file ...
-[5-ERROR] <engage> Creating package dependencies file ...
-[5-ERROR] <engage> Creating md5sum and cksum files ...
-[5-ERROR] <engage> Creating package description ...
-[5-ERROR] Making post-install adaptions.
 

@@ -20,70 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1093134962 Sun Aug 22 02:36:02 2004
+[TIMESTAMP] 1095204455 Wed Sep 15 01:27:35 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gimp-print42.log 9-gimp-print42.err
+[LOGS] 5-gimp-print42.log
 
-[BUILDTIME] 28625 (5)
-[SIZE] 41.24 MB, 4627 files
+[BUILDTIME] 19924 (5)
+[SIZE] 36.53 MB, 4409 files
 
-[DEP] 00-dirtree autoconf automake18 bash binutils bison bzip2 coreutils
+[DEP] 00-dirtree autoconf automake18 bash2 binutils bison bzip2 coreutils
 [DEP] cups cups:dev diffutils findutils flex flex:dev gawk gcc32 gcc32:dev
-[DEP] gettext glib12 glibc23 glibc23:dev gnome-libs14 grep gtk+12 gtkhtml10
-[DEP] libjpeg libjpeg:dev libpng libtiff linux24-header:dev m4 make mktemp
-[DEP] ncurses:dev net-tools openssl orbit10 perl5 readline readline:dev
-[DEP] sed sysfiles tar texinfo zlib:dev
-
-[9-ERROR] `./doc/users_guide/figures/gimp-print-print-color-adjust.eps' -> `/opt/gnome/share/doc/gimp-print42/users_guide/figures/gimp-print-print-color-adjust.eps'
-[9-ERROR] `./doc/users_guide/figures/gimp-print-print-color-adjust.png' -> `/opt/gnome/share/doc/gimp-print42/users_guide/figures/gimp-print-print-color-adjust.png'
-[9-ERROR] `./doc/users_guide/figures/gimp-print-gui.eps' -> `/opt/gnome/share/doc/gimp-print42/users_guide/figures/gimp-print-gui.eps'
-[9-ERROR] `./doc/users_guide/figures/gimp-print-gui.png' -> `/opt/gnome/share/doc/gimp-print42/users_guide/figures/gimp-print-gui.png'
-[9-ERROR] `./doc/users_guide/figures/gimp_image.eps' -> `/opt/gnome/share/doc/gimp-print42/users_guide/figures/gimp_image.eps'
-[9-ERROR] `./doc/users_guide/figures/gimp_image.png' -> `/opt/gnome/share/doc/gimp-print42/users_guide/figures/gimp_image.png'
-[9-ERROR] `./doc/users_guide/Makefile.am' -> `/opt/gnome/share/doc/gimp-print42/users_guide/Makefile.am'
-[9-ERROR] `./doc/users_guide/Makefile.in' -> `/opt/gnome/share/doc/gimp-print42/users_guide/Makefile.in'
-[9-ERROR] `./doc/users_guide/users-guide.sgml' -> `/opt/gnome/share/doc/gimp-print42/users_guide/users-guide.sgml'
-[9-ERROR] `./doc/users_guide/gfdl.sgml' -> `/opt/gnome/share/doc/gimp-print42/users_guide/gfdl.sgml'
-[9-ERROR] `./doc/users_guide/title.sgml' -> `/opt/gnome/share/doc/gimp-print42/users_guide/title.sgml'
-[9-ERROR] `./doc/users_guide/gimp.sgml' -> `/opt/gnome/share/doc/gimp-print42/users_guide/gimp.sgml'
-[9-ERROR] `./doc/users_guide/utils.sgml' -> `/opt/gnome/share/doc/gimp-print42/users_guide/utils.sgml'
-[9-ERROR] `./doc/users_guide/history.sgml' -> `/opt/gnome/share/doc/gimp-print42/users_guide/history.sgml'
-[9-ERROR] `./doc/using.texi' -> `/opt/gnome/share/doc/gimp-print42/using.texi'
-[9-ERROR] `./doc/version.texi' -> `/opt/gnome/share/doc/gimp-print42/version.texi'
-[9-ERROR] `./doc/weave.texi' -> `/opt/gnome/share/doc/gimp-print42/weave.texi'
-[9-ERROR] `ABOUT-NLS' -> `/opt/gnome/share/doc/gimp-print42/ABOUT-NLS'
-[9-ERROR] `AUTHORS' -> `/opt/gnome/share/doc/gimp-print42/AUTHORS'
-[9-ERROR] `COPYING' -> `/opt/gnome/share/doc/gimp-print42/COPYING'
-[9-ERROR] `INSTALL' -> `/opt/gnome/share/doc/gimp-print42/INSTALL'
-[9-ERROR] `NEWS' -> `/opt/gnome/share/doc/gimp-print42/NEWS'
-[9-ERROR] `README' -> `/opt/gnome/share/doc/gimp-print42/README'
-[9-ERROR] `ChangeLog' -> `/opt/gnome/share/doc/gimp-print42/ChangeLog'
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 4819 files for this package.
-[9-ERROR] Applying package split: 40 gimp-print42:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 gimp-print42:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 gimp-print42:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <gimp-print42> Creating flist file ...
-[9-ERROR] <gimp-print42> Creating package dependencies file ...
-[9-ERROR] <gimp-print42> Creating md5sum and cksum files ...
-[9-ERROR] <gimp-print42> Creating package description ...
-[9-ERROR] <gimp-print42:dev> Creating flist file ...
-[9-ERROR] <gimp-print42:dev> Creating package dependencies file ...
-[9-ERROR] <gimp-print42:dev> Creating md5sum and cksum files ...
-[9-ERROR] <gimp-print42:dev> Creating package description ...
-[9-ERROR] <gimp-print42:doc> Creating flist file ...
-[9-ERROR] <gimp-print42:doc> Creating package dependencies file ...
-[9-ERROR] <gimp-print42:doc> Creating md5sum and cksum files ...
-[9-ERROR] <gimp-print42:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Found shared files with other packages:
-[9-ERROR] opt/gnome/share/info/dir: gimp-print42 glib12 gtk+12 orbit10
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] removed `/var/adm/logs/9-gimp-print42.log'
-[9-ERROR] Finished building gimp-print42=gimp-print42.
+[DEP] gettext glib12 glibc23 glibc23:dev grep gtk+12 libjpeg libjpeg:dev
+[DEP] libpng libtiff linux24-header:dev m4 make mktemp ncurses:dev
+[DEP] net-tools openssl perl5 readline readline:dev sed sysfiles tar
+[DEP] texinfo zlib:dev
 

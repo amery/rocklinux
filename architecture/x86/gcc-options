@@ -1,36 +1,49 @@
 
-case "$ROCKCFG_X86_OPT" in
-    generic) ;;
-    via-c3)
-	var_append GCC3_WRAPPER_INSERT " " "-march=k62" ;;
-    via-c3-improved)
-	var_append GCC3_WRAPPER_INSERT " " "-march=i686" ;;
-    via-c3-2)
-	var_append GCC3_WRAPPER_INSERT " " "-march=pentium-mmx" ;;
-    k6*)
-	var_append GCC3_WRAPPER_INSERT " " "-march=$ROCKCFG_X86_OPT"
-	# workaround and should be removed when gcc 3.x got fixed ...
-	var_append GCC3_WRAPPER_INSERT " " "-fno-branch-count-reg"
-	;;
-    *)
-	var_append GCC3_WRAPPER_INSERT " " "-march=$ROCKCFG_X86_OPT" ;;
-esac
+if [ "$ROCKCFG_X86_BITS" = 32 ] ; then
+	case "$ROCKCFG_X86_OPT" in
+	    generic) ;;
+	    via-c3)
+		var_append GCC3_WRAPPER_INSERT " " "-march=k62" ;;
+	    via-c3-improved)
+		var_append GCC3_WRAPPER_INSERT " " "-march=i686" ;;
+	    via-c3-2)
+		var_append GCC3_WRAPPER_INSERT " " "-march=pentium-mmx" ;;
+	    k6*)
+		var_append GCC3_WRAPPER_INSERT " " "-march=$ROCKCFG_X86_OPT"
+		# workaround and should be removed when gcc 3.x got fixed ...
+		var_append GCC3_WRAPPER_INSERT " " "-fno-branch-count-reg"
+		;;
+	    *)
+		var_append GCC3_WRAPPER_INSERT " " "-march=$ROCKCFG_X86_OPT" ;;
+	esac
 
-case "$ROCKCFG_X86_OPT" in
-    i386|i486)
-	var_append GCC2_WRAPPER_INSERT " " "-march=$ROCKCFG_X86_OPT" ;;
-    
-    pentium|pentium-mmx)
-	var_append GCC2_WRAPPER_INSERT " " "-march=pentium" ;;
-    
-    pentium*|via-c3-2)
-	var_append GCC2_WRAPPER_INSERT " " "-march=pentiumpro" ;;
+	case "$ROCKCFG_X86_OPT" in
+	    i386|i486)
+		var_append GCC2_WRAPPER_INSERT " " "-march=$ROCKCFG_X86_OPT" ;;
+	    
+	    pentium|pentium-mmx)
+		var_append GCC2_WRAPPER_INSERT " " "-march=pentium" ;;
+	    
+	    pentium*|via-c3-2)
+		var_append GCC2_WRAPPER_INSERT " " "-march=pentiumpro" ;;
 
-    k6*|athlon*|via-c3)
-	var_append GCC2_WRAPPER_INSERT " " "-march=k6" ;;
-    via-c3-improved)
- 	var_append GCC2_WRAPPER_INSERT " " "-march=i686" ;;
-esac
+	    k6*|athlon*|via-c3)
+		var_append GCC2_WRAPPER_INSERT " " "-march=k6" ;;
+	    via-c3-improved)
+		var_append GCC2_WRAPPER_INSERT " " "-march=i686" ;;
+	esac
+
+else
+
+	case "$ROCKCFG_X86_OPT" in
+	    generic) ;;
+	    athlon)
+		var_append GCC2_WRAPPER_INSERT " " "-march=x86_64"
+		var_append GCC3_WRAPPER_INSERT " " "-march=k8"
+		;;
+	esac
+
+fi
 
 # remove other -march and -mcpu options from the argument list
 var_insert GCC_WRAPPER_REMOVE " " "-march=* -mcpu=*"

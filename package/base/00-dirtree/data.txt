@@ -125,7 +125,11 @@ l usr/var ../var
 l var/spool/mail ../mail
 l var/state/pkgtool ../adm
 
+l64 lib64 lib
+l64 usr/lib64 lib
+
 chmod 0700 root
 chmod ugo=rwxt tmp
 chmod ugo=rwxt var/mail
 chmod ugo=rwxt var/tmp
+

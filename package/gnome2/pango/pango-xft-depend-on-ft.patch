@@ -1,0 +1,10 @@
+--- ./pangoxft.pc.in.orig	2004-12-04 05:03:51.405315696 +0100
++++ ./pangoxft.pc.in	2004-12-04 05:04:07.299899352 +0100
+@@ -6,6 +6,6 @@
+ Name: Pango Xft
+ Description: Xft font support for Pango
+ Version: @VERSION@
+-Requires: pango
++Requires: pango,pangoft2
+ Libs: -L${libdir} -lpangoxft-@PANGO_API_VERSION@ @PKGCONFIG_XFT_LIBS@
+ Cflags: -I${includedir}/pango-1.0 @XFT_CFLAGS@

@@ -1,0 +1,22 @@
+--- ./configure.ac.orig	2004-12-04 23:25:59.663292424 +0100
++++ ./configure.ac	2004-12-04 23:28:30.555353344 +0100
+@@ -179,7 +179,7 @@
+ 	   [dash_pthread=""
+ 	   AC_MSG_RESULT(no)])
+ 	])
+-  LIBS="$gnet_save_LIBS $dash_pthread"
++  LIBS="$gnet_save_LIBS"
+ 
+   if test "x$dash_pthread" == "x"; then
+     AC_CHECK_LIB([pthread],
+--- ./configure.orig	2004-12-04 23:28:38.815097672 +0100
++++ ./configure	2004-12-04 23:29:17.616199008 +0100
+@@ -4834,7 +4834,7 @@
+ 
+ fi
+ rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
+-  LIBS="$gnet_save_LIBS $dash_pthread"
++  LIBS="$gnet_save_LIBS"
+ 
+   if test "x$dash_pthread" == "x"; then
+     echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5

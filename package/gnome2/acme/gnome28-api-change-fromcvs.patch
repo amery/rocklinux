@@ -1,0 +1,70 @@
+--- ./src/acme.c.orig	2004-12-04 23:42:11.283583688 +0100
++++ ./src/acme.c	2004-12-04 23:44:15.366720184 +0100
+@@ -51,6 +51,10 @@
+ 	guint dialog_timeout;
+ 	WnckScreen *screen;
+ 
++	/* The Event */
++	GdkEvent *event;
++	GdkXEvent *xevent;
++
+ 	/* Multihead stuff */
+ 	GdkDisplay *display;
+ 	GdkScreen *current_screen;
+@@ -801,8 +805,14 @@
+ 		}
+ 	}
+ 
++	/* Since libwnck 2.6.2.1 you need to give a timestamp */
+ 	if (focused != NULL)
+-		wnck_window_close (focused);
++	{
++		if (acme->event)
++			wnck_window_close (focused, acme->event->key.time);
++		else
++			wnck_window_close (focused, GDK_CURRENT_TIME);
++	}
+ }
+ 
+ static void
+@@ -1171,6 +1181,10 @@
+ 	GList *l;
+ 	int i;
+ 
++	/* Store the event */
++	acme->event = event;
++	acme->xevent = xevent;
++
+ 	/* Look for which screen we're receiving events */
+ 	for (l = acme->screens; (l != NULL) && (event_screen == NULL);
+ 			l = l->next)
+--- ./src/eggcellrendererkeys.c.orig	2003-07-18 01:12:02.000000000 +0200
++++ ./src/eggcellrendererkeys.c	2004-12-04 23:47:04.379026408 +0100
+@@ -581,10 +581,9 @@
+   return GTK_CELL_EDITABLE (keys->edit_widget);
+ }
+ 
+-void
+-egg_cell_renderer_keys_set_accelerator (EggCellRendererKeys *keys,
+-                                        guint                keyval,
+-                                        GdkModifierType      mask)
++void egg_cell_renderer_keys_set_accelerator (EggCellRendererKeys     *keys,
++                                             guint                   keyval,
++                                             EggVirtualModifierType  mask)
+ {
+   char *text;
+   gboolean changed;
+@@ -623,10 +622,9 @@
+   
+ }
+ 
+-void
+-egg_cell_renderer_keys_get_accelerator (EggCellRendererKeys *keys,
+-                                        guint               *keyval,
+-                                        GdkModifierType     *mask)
++void egg_cell_renderer_keys_get_accelerator (EggCellRendererKeys     *keys,
++                                            guint                   *keyval,
++                                            EggVirtualModifierType  *mask)
+ {
+   g_return_if_fail (EGG_IS_CELL_RENDERER_KEYS (keys));
+ 

@@ -1,0 +1,11 @@
+--- ./libwnck-1.0.pc.in.orig	2004-12-04 22:46:08.542797992 +0100
++++ ./libwnck-1.0.pc.in	2004-12-04 22:46:40.737903592 +0100
+@@ -6,7 +6,7 @@
+ Name: libwnck
+ Description: Window Navigator Construction Kit library
+ Version: @VERSION@
+-Requires: gtk+-2.0
++Requires: gtk+-2.0 libstartup-notification-1.0
+ Libs: -L${libdir} -lwnck-1
+ Cflags: -I${includedir}/libwnck-1.0
+ 

@@ -1,0 +1,10 @@
+--- ./librsvg-2.0.pc.in.orig	2004-12-04 19:39:28.818414896 +0100
++++ ./librsvg-2.0.pc.in	2004-12-04 19:44:15.204877536 +0100
+@@ -6,6 +6,6 @@
+ Name: librsvg
+ Description: library that renders svg files
+ Version: @VERSION@
+-Requires: glib-2.0 gdk-pixbuf-2.0
++Requires: glib-2.0 gdk-pixbuf-2.0 libgsf-1 libcroco-0.6 gnome-vfs-2.0
+ Libs: -L${libdir} -lrsvg-2
+ Cflags: -I${includedir}/librsvg-2

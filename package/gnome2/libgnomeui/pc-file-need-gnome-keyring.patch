@@ -1,0 +1,11 @@
+--- ./libgnomeui/libgnomeui-2.0.pc.in.orig	2004-12-04 21:11:03.097157568 +0100
++++ ./libgnomeui/libgnomeui-2.0.pc.in	2004-12-04 21:11:17.713935480 +0100
+@@ -6,7 +6,7 @@
+ 
+ Name: libgnomeui
+ Description: libgnomeui
+-Requires: libgnome-2.0 libgnomecanvas-2.0 gtk+-2.0 gdk-pixbuf-2.0 libart-2.0 gconf-2.0 libbonoboui-2.0
++Requires: libgnome-2.0 libgnomecanvas-2.0 gtk+-2.0 gdk-pixbuf-2.0 libart-2.0 gconf-2.0 libbonoboui-2.0 gnome-keyring-1
+ Version: @VERSION@
+ Libs: -L${libdir} -lgnomeui-2 @SM_LIBS@
+ Cflags: -I${includedir}/libgnomeui-2.0

@@ -1,0 +1,11 @@
+--- ./libmergeant-orig/mg-query.c	2004-12-06 03:40:38.485761864 +0100
++++ ./libmergeant/mg-query.c	2004-12-06 03:41:48.337142840 +0100
+@@ -44,7 +44,7 @@
+ #include "mg-server-aggregate.h"
+ #include "mg-data-handler.h"
+ 
+-#include <libgda/sql/sql_parser.h>
++#include <sql/sql_parser.h>
+ #include "mg-qf-func.h"
+ 
+ /* 

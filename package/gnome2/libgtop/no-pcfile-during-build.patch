@@ -1,0 +1,11 @@
+--- ./examples/Makefile.in.orig	2004-12-04 21:33:52.452983840 +0100
++++ ./examples/Makefile.in	2004-12-04 21:36:44.784785424 +0100
+@@ -253,7 +253,7 @@
+ 
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+-LIBS = @LIBS@
++LIBS = @LIBS@ $(GLIB_LIBS)
+ X_CFLAGS = @X_CFLAGS@
+ X_LIBS = @X_LIBS@
+ X_EXTRA_LIBS = @X_EXTRA_LIBS@

@@ -1,0 +1,25 @@
+--- mine-0.20/selector.c	2004-11-04 10:53:31.000000000 +0100
++++ mine-0.20-p/selector.c	2004-11-08 04:32:45.206956448 +0100
+@@ -21,6 +21,7 @@
+ #include <dialog.h>
+ #include <limits.h>
+ #include <sys/ioctl.h>
++#include <stdio.h>
+ 
+ int screensize_x = 70;
+ int screensize_y = 19;
+@@ -535,12 +536,12 @@
+ 		screensize_y = ws.ws_row - 3;
+ 	}
+ 
+-	init_dialog();
++	init_dialog(stdin, stdout);
+ 
+ 	/* Yup - that's a label for goto.... */
+ main_loop:
+ 	while (1) {
+-		put_backtitle();
++		dlg_put_backtitle();
+ 
+ 		for (p=packages; p != NULL; p = p->next) {
+ 			p->is_dependency=0;

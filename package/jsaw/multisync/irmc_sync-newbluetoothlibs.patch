@@ -1,0 +1,96 @@
+--- ./plugins/irmc_sync/configure.in.orig	2004-08-26 16:10:55.663700216 +0200
++++ ./plugins/irmc_sync/configure.in	2004-08-26 16:22:42.186292456 +0200
+@@ -23,12 +23,12 @@
+ CPPFLAGS="${PACKAGE_CFLAGS}"
+ AC_CHECK_LIB(bluetooth,baswap,BLUETOOTH=1,BLUETOOTH=0)
+ SDP=0
+-AC_CHECK_LIB(sdp,sdp_list_free,SDP=1,BLUETOOTH=0)
++dnl AC_CHECK_LIB(sdp,sdp_record_alloc,SDP=1,BLUETOOTH=0)
+ AC_MSG_CHECKING(for correct SDP lib version)
+ AC_TRY_COMPILE([
+ #include <bluetooth/sdp.h>
+ #include <bluetooth/sdp_lib.h>
+-],[sdp_record_t t;],AC_MSG_RESULT(yes),BLUETOOTH=0;AC_MSG_RESULT(no))
++],[sdp_record_t t;],AC_MSG_RESULT(yes),SDP=1,BLUETOOTH=0;AC_MSG_RESULT(no))
+ AM_CONDITIONAL(BLUETOOTH,test "${BLUETOOTH}" = "1")
+ if test "x${BLUETOOTH}" = "x0"; then
+   echo "Bluetooth is DISABLED. You must have bluez-libs and bluez-kernel >= 2.3 and bluez-sdp >= 1.0-pre1."
+--- ./plugins/irmc_sync/configure.orig	2004-08-26 16:10:46.630073536 +0200
++++ ./plugins/irmc_sync/configure	2004-08-26 16:26:08.325954464 +0200
+@@ -4307,67 +4307,6 @@
+   BLUETOOTH=0
+ fi
+ 
+-SDP=0
+-echo "$as_me:$LINENO: checking for sdp_list_free in -lsdp" >&5
+-echo $ECHO_N "checking for sdp_list_free in -lsdp... $ECHO_C" >&6
+-if test "${ac_cv_lib_sdp_sdp_list_free+set}" = set; then
+-  echo $ECHO_N "(cached) $ECHO_C" >&6
+-else
+-  ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lsdp  $LIBS"
+-cat >conftest.$ac_ext <<_ACEOF
+-#line $LINENO "configure"
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+-
+-/* Override any gcc2 internal prototype to avoid an error.  */
+-#ifdef __cplusplus
+-extern "C"
+-#endif
+-/* We use char because int might match the return type of a gcc2
+-   builtin and then its argument prototype would still apply.  */
+-char sdp_list_free ();
+-int
+-main ()
+-{
+-sdp_list_free ();
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-rm -f conftest.$ac_objext conftest$ac_exeext
+-if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
+-  (eval $ac_link) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-         { ac_try='test -s conftest$ac_exeext'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
+-  ac_cv_lib_sdp_sdp_list_free=yes
+-else
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
+-ac_cv_lib_sdp_sdp_list_free=no
+-fi
+-rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
+-LIBS=$ac_check_lib_save_LIBS
+-fi
+-echo "$as_me:$LINENO: result: $ac_cv_lib_sdp_sdp_list_free" >&5
+-echo "${ECHO_T}$ac_cv_lib_sdp_sdp_list_free" >&6
+-if test $ac_cv_lib_sdp_sdp_list_free = yes; then
+-  SDP=1
+-else
+-  BLUETOOTH=0
+-fi
+-
+ echo "$as_me:$LINENO: checking for correct SDP lib version" >&5
+ echo $ECHO_N "checking for correct SDP lib version... $ECHO_C" >&6
+ cat >conftest.$ac_ext <<_ACEOF
+@@ -4401,7 +4340,7 @@
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+-  echo "$as_me:$LINENO: result: yes" >&5
++  SDP=1 ; echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6
+ else
+   echo "$as_me: failed program was:" >&5

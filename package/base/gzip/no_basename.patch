@@ -22,9 +22,20 @@ That's not a nice but working patch to let gzip compile with glibc.
 
  - Clifford
 
-diff -ruN ../gzip-1.2.4/gzip.h ./gzip.h
---- ./../gzip-1.2.4/gzip.h	Fri Aug 13 14:35:33 1993
-+++ ./gzip.h	Thu May 28 00:01:01 1998
+diff -urN gzip-1.2.4a-orig/gzip.c gzip-1.2.4a/gzip.c
+--- gzip-1.2.4a-orig/gzip.c	1993-08-19 15:39:43.000000000 +0200
++++ gzip-1.2.4a/gzip.c	2004-11-19 01:20:54.656587992 +0100
+@@ -53,6 +53,7 @@
+ #include <signal.h>
+ #include <sys/stat.h>
+ #include <errno.h>
++#include <libgen.h>
+ 
+ #include "tailor.h"
+ #include "gzip.h"
+diff -urN gzip-1.2.4a-orig/gzip.h gzip-1.2.4a/gzip.h
+--- gzip-1.2.4a-orig/gzip.h	1993-08-13 14:35:33.000000000 +0200
++++ gzip-1.2.4a/gzip.h	2004-11-19 01:20:15.383558400 +0100
 @@ -301,7 +301,7 @@
  extern void flush_window  OF((void));
  extern void write_buf     OF((int fd, voidp buf, unsigned cnt));
@@ -34,9 +45,9 @@ diff -ruN ../gzip-1.2.4/gzip.h ./gzip.h
  extern void make_simple_name OF((char *name));
  extern char *add_envopt   OF((int *argcp, char ***argvp, char *env));
  extern void error         OF((char *m));
-diff -ruN ../gzip-1.2.4/util.c ./util.c
---- ./../gzip-1.2.4/util.c	Fri Aug 13 14:35:40 1993
-+++ ./util.c	Thu May 28 00:01:40 1998
+diff -urN gzip-1.2.4a-orig/util.c gzip-1.2.4a/util.c
+--- gzip-1.2.4a-orig/util.c	1993-08-13 14:35:40.000000000 +0200
++++ gzip-1.2.4a/util.c	2004-11-19 01:20:15.384558248 +0100
 @@ -178,7 +178,7 @@
   * any version suffix). For systems with file names that are not
   * case sensitive, force the base name to lower case.
@@ -46,3 +57,14 @@ diff -ruN ../gzip-1.2.4/util.c ./util.c
      char *fname;
  {
      char *p;
+diff -urN gzip-1.2.4a-orig/zip.c gzip-1.2.4a/zip.c
+--- gzip-1.2.4a-orig/zip.c	1993-08-13 14:35:40.000000000 +0200
++++ gzip-1.2.4a/zip.c	2004-11-19 01:21:21.653483840 +0100
+@@ -10,6 +10,7 @@
+ 
+ #include <ctype.h>
+ #include <sys/types.h>
++#include <libgen.h>
+ 
+ #include "tailor.h"
+ #include "gzip.h"

@@ -29,7 +29,7 @@ get_pm_desc()
 }
 
 {
-	get_pm_desc NAME | perl -pe 's,^.*?- *,[I] ,' | head -1
+	get_pm_desc NAME | perl -pe 's,^.*?- *,[I] ,' | head -n 1
 	get_pm_desc DESCRIPTION | fmt | perl -pe 's,^,[T] ,'
 	get_pm_desc AUTHORS | perl -pe 's,^,[A] ,'
 } | perl -pe 's/<lt>/</ig; s/<gt>/>/ig;'

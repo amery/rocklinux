@@ -73,7 +73,6 @@ function check_package() {
 	gsub("<log>", "err", errfile);
 	gsub("<log>", "out", outfile);
 
-	
 	if ( (getline dummy < logfile == -1) &&
 	     (getline dummy < errfile == -1) ) {
 		build_this_package = 1;
@@ -141,7 +140,7 @@ function check_package() {
 		if ( stagelevel < 9 )
 			stage9_no_deps = "x";
 
-		# A packages without dependencies automatically depend
+		# Packages without dependencies automatically depend
 		# on all packages build before it
 		if (found_dependencies == 0 && not_present != "" &&
 		    stagelevel != stage9_no_deps)

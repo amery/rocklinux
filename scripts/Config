@@ -220,6 +220,9 @@ export ROCKCFG_ID="$rockver"; pkgin; . src/rockconfig.in; pkgout
 echo "export ROCKCFG_ID='$ROCKCFG_ID'" >> config/$config.$swpid/config
 rm -f config/$config.$swpid/*.tmp
 
+sort -k3 config/$config.$swpid/packages > config/$config.$swpid/packages.sorted
+mv -f config/$config.$swpid/packages.sorted config/$config.$swpid/packages
+
 cut -f1,2,4,5,8- -d' ' config/$config.$swpid/packages | sed 's, [^ ]*$,,' | \
 tr ' ' '\t' | expand -t2,15,35, > config/$config.$swpid/packages.txt
 

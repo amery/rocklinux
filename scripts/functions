@@ -729,6 +729,10 @@ Dre='\([^:]*\):\([^ ]*\)[ ]\([^ ]*\)[ ]\(\([^ ]\)[^ ]*\)[ ]\([^ ]*\)'
 # \1: package-desc-path                 \2: '[D]'
 # \3: cksum                             \4: archive-file
 # \5: first-letter-of-archive-file      \6: download-url
+D2re='\([^ ]*\)[ ]\([^ ]*\)[ ]\(\([^ ]\)[^ ]*\)[ ]\([^ ]*\)'
+# \1: '[D]'                             \2: cksum 
+# \3: archive-file                      \4: first-letter-of-archive-file
+# \5: download-url
 
 # NODIST flag regex:
 NODISTre='[nN][oO][dD][iI][sS][tT]'

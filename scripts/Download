@@ -633,7 +633,7 @@ download_file_now() {
 list_dtags() {
 	{ 
 		descparser package/*/*/*.desc | grep '^\[D\] '
-		grep -h '^[X0-9]' target/*/download.txt | sed 's,^,[D] ,'
+		grep -h '^[X0-9]' target/*/download.txt | sed 's,^,[D] ,' 
 	} | column_clean
 }
 
@@ -641,8 +641,8 @@ list_cksums() {
 	trap '' INT
 
 	list_dtags | sed \
-			-e "s,^$Dre[ ].*\($NODISTre\).*$,\3 download/nodist/\5/\4,;" \
-			-e "s,^$Dre$,\3 download/mirror/\5/\4,;" \
+			-e "s,^$D2re[ ].*\($NODISTre\).*$,\2 download/nodist/\4/\3,;" \
+			-e "s,^$D2re$,\2 download/mirror/\4/\3,;" \
 		| sed 's,^\(.*/\)[^/:]*:[^ ]* \([X0-9]*\) ,\2 \1,;' | cut -f1,2 -d' '
 
 	trap INT
@@ -835,6 +835,7 @@ fi
 
 case "$1" in
 	-list)		list ;;
+	-list-dtags)	list_dtags ;;
 	-list-unknown)	list_unknown ;;
 	-list-missing)	list_missing ;;
 	-list-cksums)	list_cksums ;;

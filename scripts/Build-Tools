@@ -87,7 +87,13 @@ if [ "$x" ] ; then
 			echo_header Re-running configuration:
 			while read line ; do
 				echo_status $line
-			done < <( ./scripts/Config -cfg $config -oldconfig )
+			done < <(
+				if [ "$ROCKCFG_PSEUDONATIVE" = 1 ]; then
+					./scripts/Config -cfg $config -oldconfig -nobashmod
+				else
+					./scripts/Config -cfg $config -oldconfig
+				fi
+			)
 		fi
 	fi
 fi

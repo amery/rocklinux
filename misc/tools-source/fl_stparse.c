@@ -128,6 +128,8 @@ int main(int argc, char ** argv) {
 	}
 
 	do {
+		// ignore this line if syscall returned error
+		if ( strstr(line, " = -1 E") ) continue;
 
 		if ( sscanf(line, "%d fork() = %d", &pid, &newpid) == 2 ||
 		     sscanf(line, "%d vfork() = %d", &pid, &newpid) == 2 ||

@@ -20,6 +20,10 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
+if [ $stagelevel -gt 0 ]
+then
+# ---- NOT IN STAGE 0 ---
+
 # Use the GCC-[23] stack protector patch
 #
 if [ $pkg != glibc23 -a $pkg != glibc22 -a \
@@ -123,3 +127,17 @@ if [ -f architecture/$arch/gcc-options ] ; then
 	. architecture/$arch/gcc-options
 fi
 
+# Use our cross specs file for stage 1
+#
+if [ $stagelevel -eq 1 ]; then
+	var_insert GCC_WRAPPER_INSERT " " "--specs=specs.cross"
+fi
+
+# Use our chroot specs file for pseudonative
+#
+if [ $stagelevel -gt 1 -a "$ROCKCFG_PSEUDONATIVE" = 1 ]; then
+	var_insert GCC_WRAPPER_INSERT " " "--specs=specs.chroot"
+fi
+
+# ---- NOT IN STAGE 0 ---
+fi

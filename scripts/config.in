@@ -87,14 +87,27 @@ block_begin 7
 			comment '-- WARNING: Test-building packages which are not known to cross build'
 			comment '-- might cause damage on your build system if it is not read-only. So'
 			comment '-- only run this if your /{bin,lib,usr,..} is somehow write-protected.'
-			pkgfilter sed -e 's,^\(. .\)[1X?][^ ]*,\11--------,; s,\(. .\)[-][^ ]*,\1---------,;'
+			pkgfilter sed -e 's,^\(. ..\)[^ ]*,\1--------,; s,^\(. .\)[1X?],\11,; s,^\(. \)X,\1-,;'
 		else
-			pkgfilter sed -e 's,^\(. .\)[1X][^ ]*,\11--------,; s,\(. .\)[?-][^ ]*,\1---------,;'
+			pkgfilter sed -e 's,^\(. ..\)[^ ]*,\1--------,; s,^\(. .\)[1X],\11,; s,^\(. .\)?,\1-,; s,^\(. \)X,\1-,;'
 		fi
 		ROCKCFG_ID="$ROCKCFG_ID-cross" ; ROCKCFGSET_USE_CROSSCC=1
+		const ROCKCFG_PSEUDONATIVE 0
 	    block_end
 	else
-		pkgfilter sed -e 's,\(. .\)[?X],\1-,;'
+		bool 'This is a pseudo-native cross-build' ROCKCFG_PSEUDONATIVE 0
+		if [ "$ROCKCFG_PSEUDONATIVE" = 1 ] ; then
+			comment '-- WARNING: Doing pseudo native builds is a tricky thing.'
+			comment '-- Better write the documentation first...  ;-)'
+
+			text 'IP of native host for command forwarding' ROCKCFG_PSEUDONATIVE_NATIVEHOST ''
+			text 'NFSROOT to be mounted on native host' ROCKCFG_PSEUDONATIVE_NFSROOT "$HOSTNAME:$PWD"
+
+			pkgfilter sed -e 's,^\(. .\)[?X],\1-,; s,^\(. \)X,\10,;'
+			ROCKCFG_ID="$ROCKCFG_ID-pseudonative" ; ROCKCFGSET_USE_CROSSCC=1
+		else
+			pkgfilter sed -e 's,^\(. .\)[?X],\1-,; s,^\(. \)X,\1-,;'
+		fi
 	fi
 block_end
 
@@ -311,6 +324,9 @@ break packages!'
 		flwrapper 'Use the flist wrapper library for flist creation' \
 		strace    'Use strace to get the file list'                  \
 		find      'Use find on timestamp-file for flist creation'
+	if [ "$ROCKCFG_FLIST" = strace ]; then
+		pkgenable strace
+	fi
     block_end
 
     comment ' '

@@ -27,6 +27,7 @@ fi
 
 if [ -f $confdir/postsysfiles.in -a $stagelevel -gt 1 ] ; then
 	var_append flistdel "|" "etc/passwd"
+	var_append flistdel "|" "etc/group"
 	var_append flistdel "|" "etc/shadow"
 	var_append flistdel "|" "etc/gshadow"
 	hook_add preconf 2 ". $confdir/postsysfiles.in"

@@ -142,3 +142,7 @@ export NM="${archprefix}nm"	KCC="${archprefix}kcc"
 export F77="${archprefix}f77"	MAKE="make"
 export AWK="gawk"		SED="sed"
 
+if [ $stagelevel -le 1 -a "$ROCKCFG_PSEUDONATIVE" = 1 ]; then
+	export BUILDCC="$BUILDCC -static" BUILDLD="$BUILDLD -static"
+fi
+

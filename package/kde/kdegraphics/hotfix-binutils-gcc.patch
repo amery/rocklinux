@@ -1,0 +1,45 @@
+Hotfix needed for new binutils (bug is in gcc)
+(see http://gcc.gnu.org/bugzilla/show_bug.cgi?id=16625)
+
+--- ./kpovmodeler/pmmetaobject.h.orig	2004-09-06 21:19:35.784452528 +0200
++++ ./kpovmodeler/pmmetaobject.h	2004-09-06 21:20:56.917118488 +0200
+@@ -247,6 +247,9 @@
+          case PMVariant::Bool: \
+             ( o->*( m_setFunction.setBool ) )( v.boolData( ) ); \
+             break; \
++      } \
++      switch( type( ) ) \
++      { \
+          case PMVariant::ThreeState: \
+             ( o->*( m_setFunction.setThreeState ) )( v.threeStateData( ) ); \
+             break; \
+@@ -256,6 +259,9 @@
+          case PMVariant::Vector: \
+             ( o->*( m_setFunction.setVector ) )( v.vectorData( ) ); \
+             break; \
++      } \
++      switch( type( ) ) \
++      { \
+          case PMVariant::Color: \
+             ( o->*( m_setFunction.setColor ) )( v.colorData( ) ); \
+             break; \
+@@ -287,6 +293,9 @@
+          case PMVariant::Bool: \
+             result.setBool( ( o->*( m_getFunction.getBool ) )( ) ); \
+             break; \
++      } \
++      switch( type( ) ) \
++      { \
+          case PMVariant::ThreeState: \
+             result.setThreeState( ( o->*( m_getFunction.getThreeState ) )( ) ); \
+             break; \
+@@ -296,6 +305,9 @@
+          case PMVariant::Vector: \
+             result.setVector( ( o->*( m_getFunction.getVector ) )( ) ); \
+             break; \
++      } \
++      switch( type( ) ) \
++      { \
+          case PMVariant::Color: \
+             result.setColor( ( o->*( m_getFunction.getColor ) )( ) ); \
+             break; \

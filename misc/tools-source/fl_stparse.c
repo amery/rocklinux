@@ -130,10 +130,16 @@ int main(int argc, char ** argv) {
 	do {
 		// ignore this line if syscall returned error
 		if ( strstr(line, " = -1 E") ) continue;
-
 		if ( sscanf(line, "%d fork() = %d", &pid, &newpid) == 2 ||
+		     sscanf(line, "%d clone(%[^)]) = %d", &pid, buf1,
+                                                        &newpid) == 3 ||
 		     sscanf(line, "%d vfork() = %d", &pid, &newpid) == 2 ||
 		     sscanf(line, "%d <... fork resumed> ) = %d",
+							&pid, &newpid) == 2 ||
+		     sscanf(line, "%d <... clone resumed> %[^)]) = %d",
+                                                        &pid, buf1,
+                                                        &newpid) == 3 ||
+		     sscanf(line, "%d <... clone resumed> ) = %d",
 							&pid, &newpid) == 2 ||
 		     sscanf(line, "%d <... vfork resumed> ) = %d",
 							&pid, &newpid) == 2) {
@@ -159,7 +165,6 @@ int main(int argc, char ** argv) {
 
 		if ( sscanf(line, "%d open(\"%[^\"]\", %s",
 						&pid, buf1, buf2) == 3 ) {
-
 			if (strstr(buf2, "O_RDONLY") == NULL) logfile = wlog;
 			else logfile = rlog;
 

@@ -799,8 +799,9 @@ abort() {
 			SYSEXIT="_exit"
 		fi
 		strace -o $builddir/strace.out -F -f -q -e open,creat,mkdir,`
-		       `mknod,link,symlink,rename,utime,chdir,execve,fork,`
-                       `vfork,$SYSEXIT,exit_group -p `cat $builddir/build.pid` &
+		       `mknod,link,symlink,rename,utime,chdir,execve,`
+                       `fork,clone,vfork,`
+                       `$SYSEXIT,exit_group -p `cat $builddir/build.pid` &
                  strace_pid=$! ; sleep 1 ; cd $base
 	fi
 

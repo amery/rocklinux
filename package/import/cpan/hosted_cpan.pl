@@ -44,7 +44,7 @@ while (<F>) {
 
 close F;
 
-open(F, "bzip2 -d < ../../../download/mirror/0/02packages.details.txt.bz2 |") || die $!;
+open(F, "bzip2 -d < ../../../download/mirror/c/cpan_packages_20041221.txt.bz2 |") || die $!;
 open(D, ">hosted_cpan.desc") || die $!;
 open(S, ">hosted_cpan.sel") || die $!;
 open(C, ">hosted_cpan.cfg") || die $!;

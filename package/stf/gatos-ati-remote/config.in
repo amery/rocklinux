@@ -1,0 +1,5 @@
+if pkgcheck gatos-ati-remote X; then
+	if [ $ROCKCFG_PKG_LINUX_IMG24 == 0 ]; then
+		pkgdisable gatos-ati-remote
+	fi
+fi

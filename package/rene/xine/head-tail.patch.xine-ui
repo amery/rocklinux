@@ -1,3 +1,15 @@
+diff -dur xine-ui-0.99.2/configure.ac xine-ui-0.99.2-p/configure.ac
+--- xine-ui-0.99.2/configure.ac	2004-07-04 17:51:02.000000000 +0200
++++ xine-ui-0.99.2-p/configure.ac	2004-11-04 19:58:17.541312408 +0100
+@@ -580,7 +580,7 @@
+ dnl
+ dnl
+ dnl
+-BUILD_CC="`$CC -v 2>&1 | tail -1`"
++BUILD_CC="`$CC -v 2>&1 | tail -n1`"
+ BUILD_OS="`uname -s -r -m`"
+ BUILD_DATE="`date \"+%a %d %b %Y %T\"`"
+ AC_SUBST(BUILD_CC)
 diff -dur xine-ui-0.99.2/configure xine-ui-0.99.2-p/configure
 --- xine-ui-0.99.2/configure	2004-07-04 18:26:08.000000000 +0200
 +++ xine-ui-0.99.2-p/configure	2004-11-04 19:58:35.301612432 +0100
@@ -16,18 +28,6 @@ diff -dur xine-ui-0.99.2/configure xine-ui-0.99.2-p/configure
  BUILD_OS="`uname -s -r -m`"
  BUILD_DATE="`date \"+%a %d %b %Y %T\"`"
  
-diff -dur xine-ui-0.99.2/configure.ac xine-ui-0.99.2-p/configure.ac
---- xine-ui-0.99.2/configure.ac	2004-07-04 17:51:02.000000000 +0200
-+++ xine-ui-0.99.2-p/configure.ac	2004-11-04 19:58:17.541312408 +0100
-@@ -580,7 +580,7 @@
- dnl
- dnl
- dnl
--BUILD_CC="`$CC -v 2>&1 | tail -1`"
-+BUILD_CC="`$CC -v 2>&1 | tail -n1`"
- BUILD_OS="`uname -s -r -m`"
- BUILD_DATE="`date \"+%a %d %b %Y %T\"`"
- AC_SUBST(BUILD_CC)
 diff -dur xine-ui-0.99.2/misc/xine-bugreport xine-ui-0.99.2-p/misc/xine-bugreport
 --- xine-ui-0.99.2/misc/xine-bugreport	2004-07-04 18:26:48.000000000 +0200
 +++ xine-ui-0.99.2-p/misc/xine-bugreport	2004-11-04 19:46:59.925325696 +0100

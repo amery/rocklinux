@@ -17,6 +17,17 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
+--- ./configure.ac.orig	2004-12-10 00:40:11.003913648 +0100
++++ ./configure.ac	2004-12-10 00:46:52.890817552 +0100
+@@ -490,7 +490,7 @@
+ dnl static linking is preferred!
+ dnl but only dynamic linking is possible when using libtool < 1.4.0
+ 
+-AC_PREREQ_LIBTOOL(1.4.0, xv_lib="libXv.a", xv_lib="libXv.so")
++AC_PREREQ_LIBTOOL(1.4.0, xv_lib="libXv.so", xv_lib="libXv.so")
+ 
+ host_or_hostalias="$host"
+ if test "$host_or_hostalias" = ""; then
 --- xine-lib-1-rc2//configure.orig	2004-03-22 07:32:29.000000000 +0100
 +++ xine-lib-1-rc2//configure	2004-03-22 07:32:45.000000000 +0100
 @@ -25026,7 +25026,7 @@

@@ -234,33 +234,30 @@ fi
 	grep "^X" config/$config/packages | cut -d' ' -f5 | sed 's,.*=,,' |
 	if [ $ROCKCFG_PKGFILE_VER = 1 ] ; then
 		while read p; do
-			v=$( grep '^Package Name and Version:' \
-				build/$ROCKCFG_ID/var/adm/packages/$p | cut -f6 -d' ' )
+			v=$( grep -h '^Package Name and Version:' build/$ROCKCFG_ID/var/adm/packages/$p:* \
+				build/$ROCKCFG_ID/var/adm/packages/$p 2> /dev/null | cut -f6 -d' ' | head -n1 )
 			echo "$p-$v"
 		done
 	else
 		cat
 	fi > $pkglst
 	for file in $( ls build/$ROCKCFG_ID/ROCK/pkgs/ ) ; do
-		x="$file"
+		x="$file"; [ "$x" = packages.db ] && continue
 		[ $ROCKCFG_CREATE_GEM = 0 ] || x=${x%.gem}
 		[ $ROCKCFG_CREATE_TARBZ2 = 0 ] || x=${x%.tar.bz2}
-		if ! grep -qx "$x" $pkglst && ! test "$x" = packages.db ; then
+		y=$( echo $x | sed 's,:[^-]*,,' )
+		if ! grep -qx "$y" $pkglst; then
 			file="build/$ROCKCFG_ID/ROCK/pkgs/$file"
-			echo_error "$file should not be present" \
+			echo_error "$file [$x $y] should not be present" \
 			           "(now in src/invalid-files.lst)!"
 			mkdir -p src; echo "$file" >> src/invalid-files.lst
 			errors=1
 		fi
 	done
 	for dir in build/$ROCKCFG_ID/var/adm/{cache,cksums,dependencies,descs,flists,md5sums,packages} ; do
-		for file in $( ls $dir ) ; do
-			if [ $ROCKCFG_PKGFILE_VER = 1 ] ; then
-				x="$file-"
-			else 
-				x="$file"
-			fi	
-			if ! grep -q "$x" $pkglst ; then
+		for file in $( ls $dir | cut -f1 -d: ) ; do
+			if [ $ROCKCFG_PKGFILE_VER = 1 ] ; then x="$file-.*"; else x="$file"; fi	
+			if ! grep -xq "$x" $pkglst ; then
 				echo_error "$dir/$file should not be present (now in src/invalid-files.lst)!"
 				mkdir -p src; echo "$dir/$file" >> src/invalid-files.lst
 				errors=1
@@ -268,14 +265,10 @@ fi
 		done
 	done
 	for file in $( ls build/$ROCKCFG_ID/var/adm/logs/ ) ; do
-			x="`echo $file | sed -e 's/^.-//' -e 's/\.log//' -e 's/\.err//' -e s'/\.out//'`"
-			if [ $ROCKCFG_PKGFILE_VER = 1 ] ; then
-				x=$x-
-			else
-				x=$x
-			fi
+		x="`echo $file | sed -e 's/^.-//' -e 's/\.log//' -e 's/\.err//' -e s'/\.out//'`"
+		if [ $ROCKCFG_PKGFILE_VER = 1 ] ; then x="$x-.*"; else x="$x"; fi
 
-		if ! grep -q "$x" $pkglst ; then
+		if ! grep -xq "$x" $pkglst ; then
 			file="build/$ROCKCFG_ID/var/adm/logs/$file"
 			echo_error "$file should not be present (now in src/invalid-files.lst)!"
 			mkdir -p src; echo "$file" >> src/invalid-files.lst
@@ -350,45 +343,48 @@ EOT
 		     echo_error "because the package was not successfully"
 		     echo_error "built in (at least) the current stage."
 		else	
-			echo_header "Creating binary package file for ${pkg_name}."
+		  for spkg in $( cd ${build_root}/var/adm/packages/; ls ${pkg_name} ${pkg_name}:* 2>/dev/null )
+		  do
+			echo_header "Creating binary package file for ${spkg}."
 			mkdir -p "${build_pkgs}"
 
 			if [ "$ROCKCFG_PKGFILE_VER" = 1 ]
 			then
 				v="-$( grep '^Package Name and Version:' \
-					${build_root}/var/adm/packages/$pkg_name | cut -f6 -d' ' )"
+					${build_root}/var/adm/packages/$spkg | cut -f6 -d' ' )"
 			else
 				v=""
 			fi
 
 			echo_status "Building build/.../pkgs/`
-					`${pkg_name}${v}.tar.bz2"
+					`${spkg}${v}.tar.bz2"
 			( cd "$build_root/"
-			  cut -f2- -d' ' var/adm/flists/$pkg_name | \
+			  cut -f2- -d' ' var/adm/flists/$spkg | \
 			  tar -cf- --no-recursion --files-from=- | bzip2
-			) > "${build_pkgs}/${pkg_name}${v}.tar.bz2.tmp"
+			) > "${build_pkgs}/${spkg}${v}.tar.bz2.tmp"
 
 			if [ "$ROCKCFG_CREATE_GEM" = 1 ] ; then
 				echo_status "Building build/.../pkgs/`
-					`${pkg_name}${v}.gem"
+					`${spkg}${v}.gem"
 				mine -C "$build_root/var/adm" \
-				     "${build_pkgs}/${pkg_name}${v}.tar.bz2.tmp" \
-				     $pkg_name "$build_pkgs/${pkg_name}${v}.gem.tmp"
+				     "${build_pkgs}/${spkg}${v}.tar.bz2.tmp" \
+				     $spkg "$build_pkgs/${spkg}${v}.gem.tmp"
 			fi
 
 			if [ "$ROCKCFG_CREATE_TARBZ2" = 1 ] ; then
-				mv "$build_pkgs/${pkg_name}${v}.tar.bz2.tmp" \
-				   "$build_pkgs/${pkg_name}${v}.tar.bz2"
+				mv "$build_pkgs/${spkg}${v}.tar.bz2.tmp" \
+				   "$build_pkgs/${spkg}${v}.tar.bz2"
 				if [ "$ROCKCFG_CREATE_GEM" = 1 ] ; then
-					mv "$build_pkgs/${pkg_name}${v}.gem.tmp" \
-					   "$build_pkgs/${pkg_name}${v}.gem"
+					mv "$build_pkgs/${spkg}${v}.gem.tmp" \
+					   "$build_pkgs/${spkg}${v}.gem"
 				fi
 			else
 				echo_status "Removing temporary tar.bz2."
-				rm -f "$build_pkgs/${pkg_name}${v}.tar.bz2.tmp"
-				mv "$build_pkgs/${pkg_name}${v}.gem.tmp" \
-				   "$build_pkgs/${pkg_name}${v}.gem"
+				rm -f "$build_pkgs/${spkg}${v}.tar.bz2.tmp"
+				mv "$build_pkgs/${spkg}${v}.gem.tmp" \
+				   "$build_pkgs/${spkg}${v}.gem"
 			fi
+		  done
 		fi
 	fi
 }

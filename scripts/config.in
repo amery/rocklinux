@@ -193,6 +193,13 @@ expert_begin
     block_end
 
     comment ' '
+    comment '- Package splitting'
+    block_begin 3
+	bool 'Create extra *:doc packages' ROCKCFG_SPLIT_DOC 1
+	bool 'Create extra *:dev packages' ROCKCFG_SPLIT_DEV 1
+    block_end
+
+    comment ' '
     comment '- Additional Package Selection'
     block_begin 3
       choice ROCKCFG_PKGSEL_TPL none none 'No package preselection template' \

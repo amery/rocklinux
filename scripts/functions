@@ -75,6 +75,29 @@ hook_dump() {
 	echo
 }
 
+# This function register a split package
+#
+# splitreg prio name regex
+#
+splitreg() {
+	var_append pkgsplits "," "$1 $2 $3"
+}
+
+# This function modifies an flist file according to the registered splits
+#
+# splitapply pkg-name flist-file
+#
+splitapply() {
+	local p n r
+	sed -i "s/^[^ ]+/$1:/" $2
+	while read p n r; do
+		if type "splitdesc_${n}" > /dev/null 2>&1; then
+			echo "Applying package split: $p $1:$n $r"
+			sed -ri "\,$r, s/^[^ ]+/$1:$n:/" $2
+		fi
+	done < <( echo "$pkgsplits" | tr ',' '\n' | sort; )
+}
+
 # This functions append, insert or remove values in variables:
 #
 #	var_append PATH ":" "$HOME/bin"

@@ -1,0 +1,11 @@
+--- ./qcadlib/src/filters/rs_filterdxf.cpp.orig	2005-03-18 10:56:35.485734958 +0100
++++ ./qcadlib/src/filters/rs_filterdxf.cpp	2005-03-18 11:07:21.593857587 +0100
+@@ -509,7 +509,7 @@
+         lss = RS2::Exact;
+     }
+ 
+-	mtext+=data.text;
++	mtext+=data.text.c_str();
+ 
+     RS_String locallyEncoded = mtext;
+     RS_String enc = RS_System::getEncoding(

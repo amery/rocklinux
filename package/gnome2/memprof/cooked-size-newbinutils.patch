@@ -1,0 +1,11 @@
+--- ./bfdutils.c.orig	2004-09-07 18:10:27.670831536 +0200
++++ ./bfdutils.c	2004-09-07 18:10:39.396049032 +0200
+@@ -164,7 +164,7 @@
+ 				 * into the internals instead. :-(
+ 				 */
+ 				/* (*func) (addr, bfd_section_size (map->abfd, section), user_data); */
+-				(*func) (addr, section->_cooked_size, user_data);
++				(*func) (addr, section->size, user_data);
+ 			}
+ 		}
+ }

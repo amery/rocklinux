@@ -34,21 +34,21 @@ while [ "$1" ]; do
 	    echo "Usage:"
 	    echo "./scripts/Create-CkSumPatch [options] <package-name(s)> <target-file(s)> \\"
 	    echo "                            <desc-file(s)> -repository <repository>"
-	    echo 
+	    echo
 	    echo " Compute checksums for (source) files mentioned in .desc files and output"
 	    echo " a patch which can be applied to the ROCK sources to update the checksums."
-	    echo " Only checksums for files that have the checksum set to 0 will be computed."	    	
+	    echo " Only checksums for files that have the checksum set to 0 will be computed."
 	    echo " Process single packages, a single repository, single .desc files or files"
 	    echo " from a target directory (e.g. target/bootdisk/download.txt)."
 	    echo
 	    echo "Options:"
 	    echo "	-override	create new checksums even if old ones are not equal 0;"
-	    echo "			checksums set to X are not changed anyhow"			  	
+	    echo "			checksums set to X are not changed anyhow"
 	    echo "	-help		show this help text"
 	    echo
 	    echo "Example: create a cksum patch and apply it"
 	    echo " ./scripts/Create-CkSumPatch gcc -repository stf target/bootdisk/download.txt \\"
-	    echo " package/base/dietlibc/dietlibc.desc | patch -p0" 	
+	    echo " package/base/dietlibc/dietlibc.desc | patch -p1"
 	    echo
 	    exit
 	    ;;
@@ -66,7 +66,7 @@ cksum_file() {
 	    sedscript='s,^[0-9]*  *$file,$newcksum $file,'
 	    ;;
 	*.desc)
-	    has_D='fgrep "[D]" | sed "s/[[]D[^ ]*//"' 
+	    has_D='fgrep "[D]" | sed "s/[[]D[^ ]*//"'
 	    sedscript='s,\[D\]  *[0-9]*  *$file,[D] $newcksum $file,'
 	    ;;
 	*)
@@ -107,7 +107,7 @@ cksum_file() {
 	eval "sed \"$sedscript\" -i /tmp/$$"
     done
 
-    diff -u $1 /tmp/$$
+    diff -u ./$1 /tmp/$$ | sed -e "s,^+++ /tmp/$$,+++ ./$1,g"
     rm -f /tmp/$$
 }
 

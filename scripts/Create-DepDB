@@ -41,7 +41,7 @@ while [ "$1" ] ; do
 	esac
 done
 
-echo -n "Creating dependency database ..." >&2
+echo "Reading *.cache and *.desc files ..." >&2
 
 perl1="" perl2=""
 while read package command args; do
@@ -80,6 +80,14 @@ perl -e '
 		my $pkg = $c; $pkg=~s,^.*/([^/]*)/[^/]*$,$1,; 
 		my $found_dep_entries = 0;
 		my %deps = ();
+		my $d = $c;
+
+		$d =~ s/\.cache$/.desc/;
+		$d =~ s,^'$cachedir','$descdir',;
+		if ( ! -f $d ) {
+			print STDERR "WARNING: Can'\''t find $d -> skipping $c.\n";
+			next;
+		}
 
 		$deps{$_} = 1 foreach (keys %{$adddeps{$pkg}});
 
@@ -102,8 +110,7 @@ perl -e '
 		# no dep_db entry if this package failed in ref build
 		next unless $found_dep_entries;
 
-		$c =~ s/\.cache$/.desc/;
-		open(F, "$c") or die "$!: $c";
+		open(F, "$d") or die "$!: $d";
 		while (<F>) {
 			if (/^\[(P|PRI|PRIORITY)\]/) {
 				@_ = split /\s+/;

@@ -31,7 +31,7 @@ then
 	pkgfork linux ${ROCKCFG_PKG_LINUX_HEADERS}-header stages 01-------9
 
 	bool 'Place linux24 sources in /usr/src' \
-		ROCKCFG_PKG_LINUX_SRC24 1
+		ROCKCFG_PKG_LINUX_SRC24 0
 
 	if [ "$ROCKCFG_PKG_LINUX_SRC24" = 1 ]; then
 		pkgfork linux linux24-source
@@ -45,7 +45,7 @@ then
 	fi
 
 	bool 'Build and install a linux24 kernel' \
-		ROCKCFG_PKG_LINUX_IMG24 1
+		ROCKCFG_PKG_LINUX_IMG24 0
 
 	if [ "$ROCKCFG_PKG_LINUX_IMG24" = 1 ]; then
 		pkgfork linux linux24

@@ -19,12 +19,13 @@
 
 --- ./Makefile.orig	2004-03-03 01:13:39.952071248 +0100
 +++ ./Makefile	2004-03-03 01:14:44.590244752 +0100
-@@ -21,6 +21,9 @@
+@@ -21,6 +21,10 @@
  $(TARGET): $(OBJS)
  	$(CC) -o $(TARGET) $(OBJS) $(LDLIBS)
  
 +install:
 +	install $(TARGET) /usr/bin/$(TARGET)
++	cp pspresent.1 /usr/man/man1/
 +
  clean:
  	rm $(TARGET) $(OBJS)

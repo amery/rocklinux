@@ -37,15 +37,17 @@ build_only_this_job=
 stages=0123456789
 daemon_mode=0
 options="$*"
+tasks=0
 
 while [ "$1" ] ; do
 	case "$1" in
 		-cfg)		config=$2 ; shift ; shift ;;
 		-stages)	stages=$2 ; shift ; shift ;;
+		-tasks)		tasks=$2  ; shift ; shift ;;
 		-job)		build_only_this_job=$2 ; shift ; shift ;;
 		-daemon)	daemon_mode=1 ; shift ;;
 		-nodaemon)	daemon_mode=0 ; shift ;;
-		*)		echo "Usage: $0 [ -daemon ] [ -cfg <config> ]" \
+		*)		echo "Usage: $0 [ -daemon ] [ -tasks <N> ] [ -cfg <config> ]" \
 				     "[ -stages <list> ] [ -job <stage>-<package> ]" 
 				echo
 				echo " Compile/build all packages for a given configuration and store them as tar"
@@ -56,6 +58,7 @@ while [ "$1" ] ; do
 				echo " running the ./scripts/Config and ./scripts/Download commands."
 				echo
 				echo "	-cfg <config>	the build configuration to use; defaults to 'default'"
+				echo "	-tasks <N>	run <N> Build-Job daemons (for cluster builds)"
 				echo "	-daemon		run as daemon in the background"
 				echo "  -stages <list>	only build the stages listed in the parameter"
 				echo "	-job <stage>-<package>	build only one job: the given package"
@@ -118,10 +121,16 @@ pkgloop() {
 	if [ "$ROCKCFG_PARALLEL" = 1 -a -z "$build_only_this_job" ]
 	then
 		qdir="$base/build/$ROCKCFG_ID/ROCK/queue"
-		mkdir -p $qdir
+		mkdir -p $qdir; rm -f $qdir/*
+
+		newqueue=1 ; printstatus=1 ; printstatus_counter=30
+		finished=0 ; trap 'rm -f $qdir/queue.txt ; exit 130' SIGINT
+		touch $qdir/queue.txt
 
 		if [ -z "$ROCKCFG_PARALLEL_ADDJOB" ] ; then
-			echo "
+			touch $qdir/use_build_job_daemon
+			if [ $tasks = 0 ]; then
+				echo "
 Job Queue for parallel (cluster) build created.
 
 You have not configuread a command for adding jobs. So you need to use the
@@ -130,7 +139,18 @@ nodes and execute the command:
 
 	./scripts/Build-Job -cfg $config -daemon
 "
-			touch $qdir/use_build_job_daemon
+			else
+				echo "
+Job Queue for parallel (cluster) build created. Now creating worker tasks..
+"
+				for ((n=0; n<tasks; n++)); do
+					echo -n "[$n] "
+					./scripts/Build-Job -cfg $config -daemon
+				done
+				echo "
+Parallel (cluster) build running...
+"
+			fi
 		else
 			echo "
 Job Queue for parallel (cluster) build created.
@@ -140,9 +160,6 @@ in the right way, the nodes will automatically start building the jobs.
 "
 			rm -f $qdir/use_build_job_daemon
 		fi
-
-		newqueue=1 ; printstatus=1 ; printstatus_counter=30
-		finished=0 ; trap 'rm -f $qdir/queue.txt ; exit 130' SIGINT
 
 		while
 			if [ -f $qdir/print_status ] ; then

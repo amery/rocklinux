@@ -1,0 +1,22 @@
+--- eject-2.0.13/eject.c	2002-12-09 22:28:08.000000000 +0000
++++ eject-2.0.13-p/eject.c	2004-10-27 00:58:23.480599936 +0000
+@@ -59,6 +59,19 @@
+ #include <sys/wait.h>
+ #include <sys/mtio.h>
+ #include <linux/types.h>
++
++#ifdef __CHECKER__
++#define __bitwise __attribute__((bitwise))
++#else
++#define __bitwise
++#endif
++#define __le16 __bitwise __u16
++#define __be16 __bitwise __u16
++#define __le32 __bitwise __u32
++#define __be32 __bitwise __u32
++#define __le64 __bitwise __u64
++#define __be64 __bitwise __u64
++
+ #include <linux/cdrom.h>
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2,1,0)
+ #include <linux/ucdrom.h>

@@ -56,6 +56,7 @@ char mod_dir[255];
 char mod_suffix[3];
 int  mod_suffix_len=0;
 int  do_debug=0;
+char init2[32] = "/sbin/init";
 
 void debug(int line, const char* format, ...) 
 {
@@ -140,15 +141,15 @@ int loop_mount(const char *device, const char* file)
 
 void doboot()
 {
-	DEBUG("doboot starting...");
-	if ( access("/sbin/init", R_OK) ) { perror("Can't find /sbin/init"); }
+	DEBUG("doboot starting - trying to exec %s",init2);
+	if ( access(init2, R_OK) ) { perror("Can't access 2nd stage init"); }
 	else {
-		/* not sure why, but i get 'bad address' if i don't wait a bit here... */
+		/* i get 'bad address' if i don't wait a bit here... */
 		sleep(1);
-		execlp("/sbin/init","init",NULL);
-		perror("execlp /sbin/init failed");
+		execlp(init2,init2,NULL);
+		perror("execlp init2 failed");
 	}
-	DEBUG("doboot returning - bad!");
+	DEBUG("doboot returning - oops!");
 }
 
 int trymount (const char* source, const char* target)
@@ -442,11 +443,13 @@ int main(int argc, char** argv)
 {
 	int args;
 
+	if(getenv("stage2init") != NULL) 
+		snprintf(init2, 31, "%s", getenv("stage2init"));
+
 	if (argc > 1) {
-		do_debug = 1;
-		DEBUG("got an argument, switching debug mode on!");
-		for(args=1; args<argc; args++) {
-			DEBUG("Arg%d:%s",args,argv[args]);
+		for (args=1; args<argc; args++) {
+			if (strstr(argv[args],"linuxrc_debug") != NULL)
+				do_debug = 1;
 		}
 	}
 
@@ -459,8 +462,17 @@ int main(int argc, char** argv)
 	if ( mount("none", "/proc", "proc", 0, NULL) && errno != EBUSY )
 		perror("Can't mount /proc");
 
+	if ( mount("none", "/dev/pts", "devpts", 0, NULL) && errno != EBUSY )
+		perror("Can't mount /dev/pts (not too fatal)");
+
+	if ( mount("none", "/dev/shm", "ramfs", 0, NULL) && errno != EBUSY )
+		perror("Can't mount /dev/shm (not fatal)");
+
 	/* Only print important stuff to console */
-	klogctl(8, NULL, 3);
+	if(do_debug == 0) 
+		klogctl(8, NULL, 3);
+	else
+		klogctl(8, NULL, 7);
 
 	mod_load_info(mod_loader, mod_dir, mod_suffix);
 	mod_suffix_len = strlen(mod_suffix);

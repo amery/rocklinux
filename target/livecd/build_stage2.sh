@@ -24,6 +24,8 @@ rm -rf usr/src
 # TODO finish-package!!
 echo_status "Running ldconfig to create links ..."
 ldconfig -r .
+echo_status "Running depmod for target system ..."
+depmod -b $PWD -F ../boot/System.map `ls ../boot/vmlinuz_* | sed -e 's,\.\./boot/vmlinuz_,,'`
 #
 echo_status "replacing some vital files for live useage ..."
 cp -f $base/target/$target/fixedfiles/inittab etc/inittab

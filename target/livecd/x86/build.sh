@@ -16,7 +16,6 @@ cp $base/target/$target/x86/isolinux.cfg isolinux/
 cp $base/target/$target/x86/help?.txt isolinux/
 #
 echo_status "Copy images to isolinux directory."
-cp boot/memtest86.bin isolinux/memtest86
 cp initrd.gz boot/vmlinuz isolinux/
 #
 cat > ../isofs_arch.txt <<- EOT

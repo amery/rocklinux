@@ -11,6 +11,11 @@ for d in etc home bin sbin opt usr tmp var lib ; do
 	ln -s /mnt/cowfs_ro/$d mnt/cowfs_rw/$d
 done
 #
+if [ -L $disksdir/2nd_stage/lib64 ] ; then
+	ln -s /mnt/cowfs_rw/lib64 lib64
+	ln -s /mnt/cowfs_ro/lib64 mnt/cowfs_rw/lib64
+fi
+#
 if [ -x ../../../usr/bin/diet ] ; then
 	export DIETHOME="../../../usr/dietlibc"
 	LXRCCC="../../../usr/bin/diet $CC";

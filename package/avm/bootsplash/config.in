@@ -24,8 +24,8 @@ if pkgcheck bootsplash X
 then
 	menu_begin MENU_PKG_BOOTSPLASH 'BOOTSPLASH Options'
 	bool 'Patch the kernel with the bootsplash patch' ROCKCFG_KERNEL_BOOTSPLASH 0
-	comment 'Please also activate the "Apply custom kernel build configuration settings'
-	comment ' (you find it under Linux Kernel Options)'
+	comment 'Please also activate the "Apply custom kernel build configuration"'
+	comment 'setting (you find it under Linux Kernel Options)'
 		
 		if [ $ROCKCFG_KERNEL_BOOTSPLASH == '1' ]; then
 			for x in CONFIG_FBCON_SPLASHSCREEN ; do

@@ -22,9 +22,9 @@
 
 if pkgcheck kdelibs X ; then
  	menu_begin MENU_PKG_KDE32 'KDE 3.2 Package Options'
-		text 'Install prefix for KDE 3.2 Packages' \
+		text 'Install prefix for KDE 3.2 packages' \
 			ROCKCFG_PKG_KDE32_CORE_PREFIX "opt/kde32"
-		bool 'Generate KDE Library Documentation' \
+		bool 'Generate KDE library documentation' \
 		ROCKCFG_PKG_KDE32_APIDOX 0
 	menu_end
 fi

@@ -29,11 +29,11 @@ COMMENT_TARGET
   to use.
 
 COMMENT_BUILD_SYS_CONF
-  Here you can set some basic options for our beautifull distribution
+  Here you can set some basic options for our beautiful distribution
   build system.
 
 ROCKCFG_ARCH
-  This options controls the target architecture like alpha, ia64, mips,
+  This option controls the target architecture like alpha, ia64, mips,
   ppc, sparc or x86.
 
 ROCKCFG_CROSSBUILD
@@ -55,8 +55,15 @@ ROCKCFG_TARGET
 	A distribution using Diet LibC instead of GLibC. DietLibC is
 	a light-weight C-Library useful for embedded systems and other
 	low-memory devices.
+   - Epiam ROCK Linux:
+	A distribution specially for VIA Epiam processors.
    - Generic ROCK Linux:
 	A generic, all-purpose distribution that has simply everything.
+   - ROCK Linux LiveCD:
+	A system that can boot and run directly from CD without the need
+	to install anything on a hard disk.
+   - ROCK Linux Video Player (lvp):
+	A distribution that works as a video player and boots from CD.
    - Minimal ROCK Linux:
 	A basic system that has only minimally more than a LFS.
    - Reference-Build for creating *.cache files:
@@ -65,6 +72,9 @@ ROCKCFG_TARGET
         and consolidate its various information.
    - ROCK Router Linux:
 	This is a _very_ minimal system with only routing-capabilities.
+   - ROCK Linux Server:
+	This target is intended to build a not blown up server distribution
+	to install web-, mail-, fileserver or similar.
 
 ROCKCFG_PARALLEL
   Select this option if you want to perform a parallel build on several
@@ -101,7 +111,7 @@ ROCKCFG_XTRACE
   log-files.
 
 ROCKCFG_SRC_TMPFS
-  Check here if you want package buids to use tmpfs instead of the regular
+  Check here if you want package builds to use tmpfs instead of the regular
   filesystem on which ROCK resides.
 
 ROCKCFG_SRC_TMPFS_OPT
@@ -121,7 +131,7 @@ ROCKCFG_SRC_TMPFS_OPT
   else your system might crash or start swapping.
 
 ROCKCFG_SRC_TMPFS_LOG
-  Please enter the path to the tmpfs-logfile.
+  Please enter the path to the tmpfs logfile.
 
 ROCKCFG_EXPERT
   This button will enable a lot of additional configuration options.
@@ -171,18 +181,18 @@ ROCKCFG_CONFOPT_FILE:0
   Use "--without-option" to disable a feature
   Use "--option[=value]" to specify a custom option
 
-  The Build-Syste will always check whether the configure script supports
+  The Build-System will always check whether the configure script supports
   the options before the options is really passed as argument.
 
 COMMENT_FLIST
-  Please see the help for the choice-menu.
+  Please see the help for the choice menu.
 
 ROCKCFG_FLIST
   This help is taken from Rolling ROCK Issue #2 2003
 
   The ROCK Linux build scripts auto-detect which files are created
   by a package build and use this information to create the package
-  file-list. There are three techniques which can be used to auto-detect
+  file list. There are three techniques which can be used to auto-detect
   this file list
 
     * flist-wrapper
@@ -220,16 +230,16 @@ ROCKCFG_FLIST
   if no other system for creating the file list can be used.
 
 ROCKCFG_USE_CROSSCC
-  This option controls whether to use a pseudo-cross-compiler even
-  for native (non cross) builds. This is needed when the host and
+  This option controls whether to use a pseudo-cross compiler even
+  for native (non-cross) builds. This is needed when the host and
   target gcc or glibc differ in the ABI.
   THIS IS STRONGLY RECOMMENDED!
 
 ROCKCFG_DO_REBUILD_STAGE
   This options controls whether to rebuild all packages in the final
-  rebuild-stage.
-  Each and every package is rebuilt in Stage 9 once more and only then
-  are the binary-packages created. This has the advantage that
+  rebuild stage.
+  Each and every package is rebuilt in stage 9 once more and only then
+  are the binary packages created. This has the advantage that
   circular dependencies are resolved, but it also almost doubles the
   build time.
   In former times this was recommended - but nowadays this is only a

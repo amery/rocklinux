@@ -126,12 +126,12 @@ block_begin 3
 						ROCKCFG_ALWAYS_CLEAN 0
 	bool 'Create debug information (xtrace) for builds' ROCKCFG_XTRACE 0
 
-	bool 'Use TMPFS for building packages' ROCKCFG_SRC_TMPFS 0
+	bool 'Use tmpfs for building packages' ROCKCFG_SRC_TMPFS 0
 	if [ "$ROCKCFG_SRC_TMPFS" = 1 ] ; then
 	    block_begin
 		comment '! WARNING: This feature can hang your system, if'
 		comment '! you do not have enough virtual memory!'
-		text 'TMPFS mount options' ROCKCFG_SRC_TMPFS_OPT \
+		text 'tmpfs mount options' ROCKCFG_SRC_TMPFS_OPT \
 		                           'size=800M,nr_inodes=100k'
 		bool 'Write tmpfs log to var/adm/rock-debug/tmpfslog.txt' \
 					ROCKCFG_SRC_TMPFS_LOG 0
@@ -320,7 +320,7 @@ break packages!'
 	fi
 
 	choice ROCKCFG_OPT size \
-		smart	'Smart optimisiation using a profile database'	\
+		smart	'Smart optimisation using a profile database'	\
 		bizarre	'Inverse smart optimisation (this is bizarre)'	\
 		speed	'Hard optimise for speed (often pretty slow)'	\
 		size	'Hard optimise for size (recommended)'		\
@@ -330,7 +330,7 @@ break packages!'
 	bool 'Create statically linked binaries' ROCKCFG_STATIC 0
 
 	bool 'Disable exceptions and rtti in C++' ROCKCFG_LIMITCXX 0
-	bool 'Enable c-compiler multilib support' ROCKCFG_MULTILIB 0
+	bool 'Enable C compiler multilib support' ROCKCFG_MULTILIB 0
 
 	bool 'Disable National Language Support' ROCKCFG_DISABLE_NLS 0
 	if [ "$ROCKCFG_DISABLE_NLS" = 1 ] ; then

@@ -27,7 +27,7 @@ menu_begin MENU_JAILING 'Chroot-Jailing Options'
 		block_begin 2
 		text 'Base directory for jail' ROCKCFG_BASEJAIL jail
 		if pkgcheck libsafe X ; then
-			bool 'Install and Enable libsafe in jails' \
+			bool 'Install and enable libsafe in jails' \
 					ROCKCFG_JAILING_LIBSAFE 1
 		fi
 		comment "-- Packages --"

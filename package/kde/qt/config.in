@@ -23,7 +23,7 @@
 if pkgcheck qt X
 then
 	menu_begin MENU_PKG_QT 'Qt widget library Options'
-		bool 'Build static qt libraries (see help)' \
+		bool 'Build static Qt libraries (see help)' \
 			ROCKCFG_PKG_QT_STATIC 0
 	menu_end
 fi

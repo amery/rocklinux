@@ -20,17 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104648333 Sun Jan  2 07:45:33 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110127023 Sun Mar  6 17:37:03 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-esound.log
+[LOGS] 5-esound.log 9-esound.log
 
-[BUILDTIME] 3225 (5)
-[SIZE] 0.21 MB, 36 files
+[BUILDTIME] 3899 (9)
+[SIZE] 0.22 MB, 36 files
 
-[DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev bash2 binutils bzip2
-[DEP] coreutils diffutils file findutils gawk gcc34 gcc34:dev glibc23
-[DEP] glibc23:dev grep linux26-header:dev make mktemp sed sysfiles tar
-[DEP] tcp_wrappers:dev util-linux
+[DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev bash2 binutils
+[DEP] bzip2 coreutils diffutils file findutils gawk gcc34 gcc34:dev
+[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp net-tools
+[DEP] sed sysfiles tar tcp_wrappers:dev util-linux
+
+[PROVIDES] esd esd-config esdcat esdctl esddsp esdfilt esdloop esdmon
+[PROVIDES] esdplay esdrec esdsample libesd.a libesd.so libesddsp.a
+[PROVIDES] libesddsp.so
 

@@ -5,7 +5,7 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/import/cpan/cpan-html-entities.cache
+[COPY] ROCK Linux: rock-src/package/import/cpan/cpan.cache
 [COPY] ROCK Linux is Copyright (C) 1998 - 2005 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
@@ -20,68 +20,12 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104912773 Wed Jan  5 09:12:53 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110315209 Tue Mar  8 21:53:29 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-cpan-html-entities.err
+[LOGS] 5-cpan-html-entities.log 9-cpan-html-entities.log
 
-[BUILDTIME] 1566 (5)
-[SIZE] 0.02 MB, 7 files
+[BUILDTIME] 1559 (9)
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils cpan-html-parser
-[DEP] cpan-html-tagset cpan-lwp findutils gawk gcc34 gcc34:dev glibc23
-[DEP] glibc23:dev grep linux26-header:dev make mktemp perl5 sed sysfiles
-[DEP] tar
-
-[5-ERROR] Checking if your kit is complete...
-[5-ERROR] Looks good
-[5-ERROR] Writing Makefile for HTML::Parser
-[5-ERROR] cp lib/HTML/PullParser.pm blib/lib/HTML/PullParser.pm
-[5-ERROR] cp Parser.pm blib/lib/HTML/Parser.pm
-[5-ERROR] cp lib/HTML/Entities.pm blib/lib/HTML/Entities.pm
-[5-ERROR] cp lib/HTML/TokeParser.pm blib/lib/HTML/TokeParser.pm
-[5-ERROR] cp lib/HTML/LinkExtor.pm blib/lib/HTML/LinkExtor.pm
-[5-ERROR] cp lib/HTML/Filter.pm blib/lib/HTML/Filter.pm
-[5-ERROR] cp lib/HTML/HeadParser.pm blib/lib/HTML/HeadParser.pm
-[5-ERROR] /usr/bin/perl /usr/lib/perl5/5.8.5/ExtUtils/xsubpp  -typemap /usr/lib/perl5/5.8.5/ExtUtils/typemap -typemap typemap  Parser.xs > Parser.xsc && mv Parser.xsc Parser.c
-[5-ERROR] /usr/bin/perl mkhctype >hctype.h
-[5-ERROR] /usr/bin/perl mkpfunc >pfunc.h
-[5-ERROR] gcc-34 -c   -fno-strict-aliasing -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -O2   -DVERSION=\"3.43\" -DXS_VERSION=\"3.43\" -fpic "-I/usr/lib/perl5/5.8.5/i386-unknown-linux-gnu/CORE"  -DMARKED_SECTION Parser.c
-[5-ERROR] Running Mkbootstrap for HTML::Parser ()
-[5-ERROR] chmod 644 Parser.bs
-[5-ERROR] rm -f blib/arch/auto/HTML/Parser/Parser.so
-[5-ERROR] LD_RUN_PATH="" gcc  -shared -L/usr/local/lib Parser.o  -o blib/arch/auto/HTML/Parser/Parser.so      
-[5-ERROR] chmod 755 blib/arch/auto/HTML/Parser/Parser.so
-[5-ERROR] cp Parser.bs blib/arch/auto/HTML/Parser/Parser.bs
-[5-ERROR] chmod 644 blib/arch/auto/HTML/Parser/Parser.bs
-[5-ERROR] Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
-[5-ERROR] Writing /usr/lib/perl5/5.8.5/i386-unknown-linux-gnu/auto/HTML/Parser/.packlist
-[5-ERROR] Appending installation info to /usr/lib/perl5/5.8.5/i386-unknown-linux-gnu/perllocal.pod
-[5-ERROR] Trying to copy the default documentation ...
-[5-ERROR] `MANIFEST' -> `/usr/share/doc/cpan-html-entities/MANIFEST'
-[5-ERROR] `README' -> `/usr/share/doc/cpan-html-entities/README'
-[5-ERROR] `TODO' -> `/usr/share/doc/cpan-html-entities/TODO'
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 5 files for this package.
-[5-ERROR] Applying package split: 40 cpan-html-entities:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 cpan-html-entities:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 cpan-html-entities:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <cpan-html-entities> Creating flist file ...
-[5-ERROR] <cpan-html-entities> Creating package dependencies file ...
-[5-ERROR] <cpan-html-entities> Creating md5sum and cksum files ...
-[5-ERROR] <cpan-html-entities> Creating package description ...
-[5-ERROR] <cpan-html-entities:doc> Creating flist file ...
-[5-ERROR] <cpan-html-entities:doc> Creating package dependencies file ...
-[5-ERROR] <cpan-html-entities:doc> Creating md5sum and cksum files ...
-[5-ERROR] <cpan-html-entities:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Found shared files with other packages:
-[5-ERROR] usr/lib/perl5/5.8.5/i386-unknown-linux-gnu/auto/HTML/Parser/.packlist: cpan-html-entities cpan-html-parser
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] removed `/var/adm/logs/5-cpan-html-entities.log'
-[5-ERROR] Finished building cpan=cpan-html-entities.
 

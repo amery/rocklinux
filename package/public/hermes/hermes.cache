@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104671276 Sun Jan  2 14:07:56 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110154664 Mon Mar  7 01:17:44 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-hermes.log
+[LOGS] 5-hermes.log 9-hermes.log
 
-[BUILDTIME] 2535 (5)
-[SIZE] 0.10 MB, 9 files
+[BUILDTIME] 3019 (9)
+[SIZE] 0.11 MB, 9 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils file findutils gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] make mktemp perl5 sed sysfiles tar texinfo
+[DEP] make mktemp net-tools perl5 sed sysfiles tar texinfo
+
+[PROVIDES] libHermes.a libHermes.so
 

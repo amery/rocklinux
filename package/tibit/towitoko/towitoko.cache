@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104734909 Mon Jan  3 07:48:29 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110227183 Mon Mar  7 21:26:23 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-towitoko.log
+[LOGS] 5-towitoko.log 9-towitoko.log
 
-[BUILDTIME] 2424 (5)
-[SIZE] 0.10 MB, 16 files
+[BUILDTIME] 2696 (9)
+[SIZE] 0.11 MB, 16 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp patch sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
+[DEP] net-tools patch sed sysfiles tar util-linux
+
+[PROVIDES] libtowitoko.so tester
 

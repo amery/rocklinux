@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104711505 Mon Jan  3 01:18:25 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110200884 Mon Mar  7 14:08:04 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-bluez-hcidump.log
+[LOGS] 5-bluez-hcidump.log 9-bluez-hcidump.log
 
-[BUILDTIME] 1629 (5)
-[SIZE] 0.08 MB, 8 files
+[BUILDTIME] 1959 (9)
+[SIZE] 0.09 MB, 8 files
 
 [DEP] 00-dirtree bash2 binutils bluez-libs bluez-libs:dev bzip2 coreutils
 [DEP] diffutils findutils gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp sed sysfiles tar util-linux
+[DEP] linux26-header:dev make mktemp net-tools sed sysfiles tar util-linux
+
+[PROVIDES] hcidump
 

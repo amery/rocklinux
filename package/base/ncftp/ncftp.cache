@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104648528 Sun Jan  2 07:48:48 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110127342 Sun Mar  6 17:42:22 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ncftp.log
+[LOGS] 5-ncftp.log 9-ncftp.log
 
-[BUILDTIME] 4069 (5)
+[BUILDTIME] 4701 (9)
 [SIZE] 0.93 MB, 19 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp ncurses:dev perl5 sed sysfiles tar
+[DEP] mktemp ncurses:dev net-tools perl5 sed sysfiles tar
+
+[PROVIDES] ncftp ncftpbatch ncftpbookmarks ncftpget ncftpls ncftpput
+[PROVIDES] ncftpspooler
 

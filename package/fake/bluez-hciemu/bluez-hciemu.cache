@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104711522 Mon Jan  3 01:18:42 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110200908 Mon Mar  7 14:08:28 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-bluez-hciemu.log
+[LOGS] 5-bluez-hciemu.log 9-bluez-hciemu.log
 
-[BUILDTIME] 1310 (5)
-[SIZE] 0.02 MB, 7 files
+[BUILDTIME] 1630 (9)
+[SIZE] 0.03 MB, 7 files
 
 [DEP] 00-dirtree bash2 binutils bluez-libs bluez-libs:dev bzip2 coreutils
 [DEP] diffutils findutils gcc34 gcc34:dev glib12 glib12:dev glibc23
-[DEP] glibc23:dev grep linux26-header:dev make mktemp sed sysfiles tar
-[DEP] util-linux
+[DEP] glibc23:dev grep linux26-header:dev make mktemp net-tools sed
+[DEP] sysfiles tar util-linux
+
+[PROVIDES] hciemu
 

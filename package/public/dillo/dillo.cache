@@ -20,18 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104696429 Sun Jan  2 21:07:09 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110184190 Mon Mar  7 09:29:50 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-dillo.log
+[LOGS] 5-dillo.log 9-dillo.log
 
-[BUILDTIME] 3578 (5)
+[BUILDTIME] 3960 (9)
 [SIZE] 0.39 MB, 25 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glib12 glib12:dev glibc23 glibc23:dev grep gtk+12
 [DEP] gtk+12:dev libjpeg libjpeg:dev libpng libpng:dev linux26-header:dev
-[DEP] make mktemp openssl openssl:dev sed sysfiles tar util-linux xfree86
-[DEP] zlib:dev
+[DEP] make mktemp net-tools openssl openssl:dev sed sysfiles tar util-linux
+[DEP] xfree86 zlib:dev
+
+[PROVIDES] dillo dpid dpidc
 

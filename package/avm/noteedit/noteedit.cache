@@ -20,22 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104790243 Mon Jan  3 23:10:43 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110660715 Sat Mar 12 21:51:55 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-noteedit.log
+[LOGS] 5-noteedit.log 9-noteedit.log
 
-[BUILDTIME] 30420 (5)
+[BUILDTIME] 62078 (9)
 [SIZE] 3.91 MB, 657 files
 
 [DEP] 00-dirtree alsa alsa:dev arts audiofile audiofile:dev autoconf
 [DEP] bash2 binutils bison bzip2 coreutils diffutils esound esound:dev
 [DEP] expat fam fam:dev findutils flex flex:dev freetype freetype:dev
 [DEP] gawk gcc34 gcc34:dev gettext glib glib:dev glibc23 glibc23:dev
-[DEP] grep kde-i18n-de:doc kdebase kdelibs kdelibs:dev kdelibs:doc
-[DEP] kdemultimedia libart_lgpl23 libart_lgpl23:dev libjpeg libpng
-[DEP] libpng:dev libxml2 linux26-header:dev m4 mad mad:dev make mktemp
-[DEP] nas net-tools ogg-vorbis ogg-vorbis:dev perl5 qt qt:dev sed sysfiles
-[DEP] tar texinfo tse3 tse3:dev vim xfree86 xfree86:dev zlib:dev
+[DEP] grep jack jack:dev kde-i18n-de:doc kdebase kdelibs kdelibs:dev
+[DEP] kdelibs:doc kdemultimedia libart_lgpl23 libart_lgpl23:dev libjpeg
+[DEP] libpng libpng:dev libxml2 linux26-header:dev m4 mad mad:dev make
+[DEP] mktemp nas net-tools ogg-vorbis ogg-vorbis:dev perl5 qt qt:dev sed
+[DEP] sysfiles tar texinfo tse3 tse3:dev vim xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] libnoteedit.so noteedit
 

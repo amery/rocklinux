@@ -20,17 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104656638 Sun Jan  2 10:03:58 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110137277 Sun Mar  6 20:27:57 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-wwwoffle.log
+[LOGS] 5-wwwoffle.log 9-wwwoffle.log
 
-[BUILDTIME] 3636 (5)
-[SIZE] 4.35 MB, 881 files
+[BUILDTIME] 4272 (9)
+[SIZE] 4.48 MB, 908 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] flex flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev m4 make mktemp perl5 sed sysfiles tar util-linux
-[DEP] zlib:dev
+[DEP] linux26-header:dev m4 make mktemp net-tools perl5 sed sysfiles tar
+[DEP] util-linux zlib:dev
+
+[PROVIDES] wwwoffle wwwoffle-hash wwwoffle-ls wwwoffle-mv wwwoffle-read
+[PROVIDES] wwwoffle-rm wwwoffle-tools wwwoffle-write wwwoffled
 

@@ -20,17 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104652661 Sun Jan  2 08:57:41 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110131989 Sun Mar  6 18:59:49 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-quagga.log
+[LOGS] 5-quagga.log 9-quagga.log
 
-[BUILDTIME] 13006 (5)
+[BUILDTIME] 13840 (9)
 [SIZE] 2.32 MB, 52 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev m4 make
-[DEP] mktemp ncurses:dev pam pam:dev readline readline:dev sed sysfiles
-[DEP] tar texinfo util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
+[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libcap libcap:dev
+[DEP] linux26-header:dev m4 make mktemp ncurses:dev net-tools pam pam:dev
+[DEP] readline readline:dev sed sysfiles tar texinfo util-linux
+
+[PROVIDES] bgpd libospf.a libospf.so libospfapiclient.a libospfapiclient.so
+[PROVIDES] libzebra.a libzebra.so ospf6d ospfclient ospfd ripd ripngd
+[PROVIDES] vtysh zebra
 

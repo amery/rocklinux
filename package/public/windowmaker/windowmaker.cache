@@ -20,68 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104912683 Wed Jan  5 09:11:23 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110227868 Mon Mar  7 21:37:48 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-windowmaker.err
+[LOGS] 5-windowmaker.log 9-windowmaker.log
 
-[BUILDTIME] 2904 (5)
-[SIZE] 0.02 MB, 7 files
+[BUILDTIME] 10819 (9)
+[SIZE] 2.67 MB, 299 files
 
-[DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils findutils gawk
-[DEP] gcc34 gcc34:dev gettext glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp net-tools perl5 pkgconfig sed sysfiles tar texinfo
-[DEP] util-linux xfree86 xfree86:dev
+[DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils diffutils expat
+[DEP] findutils freetype freetype:dev gawk gcc34 gcc34:dev gettext
+[DEP] glibc23 glibc23:dev grep libjpeg libjpeg:dev libpng libpng:dev
+[DEP] libtiff libtiff:dev libungif libungif:dev linux26-header:dev make
+[DEP] mktemp net-tools patch perl5 pkgconfig sed sysfiles tar texinfo
+[DEP] util-linux xfree86 xfree86:dev zlib:dev
 
-[5-ERROR] checking ctype.h usability... yes
-[5-ERROR] checking ctype.h presence... yes
-[5-ERROR] checking for ctype.h... yes
-[5-ERROR] checking for string.h... (cached) yes
-[5-ERROR] checking for strings.h... (cached) yes
-[5-ERROR] checking whether sys_siglist is declared... yes
-[5-ERROR] checking for an ANSI C-conforming const... yes
-[5-ERROR] checking return type of signal handlers... void
-[5-ERROR] checking whether gcc supports MMX(tm) inline asm... yes
-[5-ERROR] checking for pkg-config... pkg-config
-[5-ERROR] checking for gettext... yes
-[5-ERROR] checking for xgettext... xgettext
-[5-ERROR] checking for connect... yes
-[5-ERROR] checking for gethostbyname... yes
-[5-ERROR] checking for inet_aton... yes
-[5-ERROR] checking for X... libraries /usr/X11R6/lib, headers /usr/X11R6/include
-[5-ERROR] checking for gethostbyname... (cached) yes
-[5-ERROR] checking for connect... (cached) yes
-[5-ERROR] checking for remove... yes
-[5-ERROR] checking for shmat... yes
-[5-ERROR] checking for IceConnectionNumber in -lICE... yes
-[5-ERROR] checking for _Xsetlocale in -lX11... no
-[5-ERROR] checking for XInternAtoms in -lX11... yes
-[5-ERROR] checking for XConvertCase in -lX11... yes
-[5-ERROR] checking for XShapeSelectInput in -lXext... yes
-[5-ERROR] checking for the Xft2 library... found
-[5-ERROR] checking whether libXft is at least version 2.1.2... no
-[5-ERROR] 
-[5-ERROR] ERROR!!! libXft on this system is an old version.
-[5-ERROR]          Please consider upgrading to at least version 2.1.2.
-[5-ERROR] 
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 2 files for this package.
-[5-ERROR] Applying package split: 40 windowmaker:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 windowmaker:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 windowmaker:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <windowmaker> Creating flist file ...
-[5-ERROR] <windowmaker> Creating package dependencies file ...
-[5-ERROR] <windowmaker> Creating md5sum and cksum files ...
-[5-ERROR] <windowmaker> Creating package description ...
-[5-ERROR] <windowmaker:doc> Creating flist file ...
-[5-ERROR] <windowmaker:doc> Creating package dependencies file ...
-[5-ERROR] <windowmaker:doc> Creating md5sum and cksum files ...
-[5-ERROR] <windowmaker:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building windowmaker=windowmaker.
+[PROVIDES] convertfonts get-wings-flags get-wraster-flags get-wutil-flags
+[PROVIDES] geticonset getstyle libExtraWINGs.a libWINGs.a libWMaker.a
+[PROVIDES] libWUtil.a libwraster.a libwraster.so seticons setstyle wdread
+[PROVIDES] wdwrite wkdemenu.pl wm-oldmenu2new wmagnify wmaker wmaker.inst
+[PROVIDES] wmsetbg wmsetup wxcopy wxpaste
 

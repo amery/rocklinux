@@ -20,19 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104728315 Mon Jan  3 05:58:35 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110219172 Mon Mar  7 19:12:52 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-kdeaccessibility.log
+[LOGS] 5-kdeaccessibility.log 9-kdeaccessibility.log
 
-[BUILDTIME] 11776 (5)
+[BUILDTIME] 12082 (9)
 [SIZE] 0.65 MB, 124 files
 
 [DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils expat fam
 [DEP] fam:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev gettext
 [DEP] glibc23 glibc23:dev grep kdebase kdelibs kdelibs:dev kdelibs:doc
 [DEP] kdepim kdeutils koffice libart_lgpl23 libart_lgpl23:dev libjpeg
-[DEP] libpng libpng:dev linux26-header:dev make mktemp perl5 qt qt:dev
-[DEP] sed sysfiles tar util-linux vim xfree86 xfree86:dev zlib:dev
+[DEP] libpng libpng:dev linux26-header:dev make mktemp net-tools perl5 qt
+[DEP] qt:dev sed sysfiles tar util-linux vim xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] kmag kmousetool kmouth
 

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104785121 Mon Jan  3 21:45:21 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110400190 Wed Mar  9 21:29:50 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-rdesktop.log
+[LOGS] 5-rdesktop.log 9-rdesktop.log
 
-[BUILDTIME] 1703 (5)
-[SIZE] 0.11 MB, 41 files
+[BUILDTIME] 3614 (9)
+[SIZE] 0.18 MB, 41 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp openssl
-[DEP] openssl:dev sed sysfiles tar xfree86 xfree86:dev
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
+[DEP] openssl openssl:dev patch sed sysfiles tar xfree86 xfree86:dev
+
+[PROVIDES] rdesktop
 

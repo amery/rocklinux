@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104695441 Sun Jan  2 20:50:41 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110182881 Mon Mar  7 09:08:01 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnome-utils.log
+[LOGS] 5-gnome-utils.log 9-gnome-utils.log
 
-[BUILDTIME] 5389 (5)
+[BUILDTIME] 5827 (9)
 [SIZE] 3.22 MB, 226 files
 
 [DEP] 00-dirtree alsa atk atk:dev audiofile bash2 battfink binutils bzip2
@@ -37,8 +37,10 @@
 [DEP] gnome-vfs:dev grep gtk+ gtk+:dev libart_lgpl23 libart_lgpl23:dev
 [DEP] libbonobo libbonobo:dev libbonoboui libbonoboui:dev libglade
 [DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeui
-[DEP] libgnomeui:dev libjpeg libxml2 linux26-header:dev make mktemp openssl
-[DEP] orbit2 orbit2:dev pango pango:dev perl5 pkgconfig popt popt:dev
-[DEP] scrollkeeper sed startup-notification sysfiles tar util-linux
-[DEP] xfree86 zapping zlib:dev
+[DEP] libgnomeui:dev libjpeg libxml2 linux26-header:dev make mktemp
+[DEP] net-tools openssl orbit2 orbit2:dev pango pango:dev perl5 pkgconfig
+[DEP] popt popt:dev scrollkeeper sed startup-notification sysfiles tar
+[DEP] util-linux xfree86 zapping zlib:dev
+
+[PROVIDES] gnome-dictionary gnome-search-tool gnome-system-log
 

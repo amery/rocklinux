@@ -20,18 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104734029 Mon Jan  3 07:33:49 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110226044 Mon Mar  7 21:07:24 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ifhp.log
+[LOGS] 5-ifhp.log 9-ifhp.log
 
-[BUILDTIME] 3904 (5)
-[SIZE] 0.92 MB, 42 files
+[BUILDTIME] 4246 (9)
+[SIZE] 1.19 MB, 43 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils cpan-net-snmp
 [DEP] diffutils file findutils gawk gcc34 gcc34:dev gettext
 [DEP] ghostscript ghostscript-fonts glibc23 glibc23:dev grep libelf:dev
-[DEP] linux26-header:dev lprng make mktemp ncurses:dev perl5 sed sysfiles
-[DEP] tar util-linux
+[DEP] linux26-header:dev lprng make mktemp ncurses:dev net-tools perl5
+[DEP] sed sysfiles tar util-linux
+
+[PROVIDES] extract_pjl snmp_printer_status
 

@@ -20,26 +20,28 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104738740 Mon Jan  3 08:52:20 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110231989 Mon Mar  7 22:46:29 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-mplayer.log
+[LOGS] 5-mplayer.log 9-mplayer.log
 
-[BUILDTIME] 28800 (5)
-[SIZE] 12.17 MB, 98 files
+[BUILDTIME] 29280 (9)
+[SIZE] 12.24 MB, 99 files
 
 [DEP] 00-dirtree aalib aalib:dev alsa alsa:dev arts arts:dev audiofile
 [DEP] audiofile:dev bash2 binutils bitstream-vera-fonts bzip2 cdparanoia
 [DEP] cdparanoia:dev cheapskatefonts coreutils directfb directfb:dev
 [DEP] divx4linux divx4linux:dev esound esound:dev expat findutils freefonts
 [DEP] freetype freetype:dev gawk gcc34 gcc34:dev glib glib12 glib12:dev
-[DEP] glibc23 glibc23:dev gnome-libs14 gnome-print10 gpl-fonts grep
-[DEP] gtk+12 gtk+12:dev jack ladspa:dev lame lame:dev libdockapp libdv
-[DEP] libdv:dev libjpeg libjpeg:dev libpng libpng:dev libsdl libsdl:dev
-[DEP] libungif libungif:dev linux26-header:dev linux26-source lzo:dev mad
-[DEP] mad:dev magicpoint make mktemp nas nas:dev ncurses:dev ogg-vorbis
-[DEP] ogg-vorbis:dev patch pkgconfig rtsp rtsp:dev sed slang svgalib:dev
-[DEP] sysfiles tar terminus-font tex-ttf xfree86 xfree86-cyrillic-fonts
-[DEP] xfree86:dev xmms xvid:dev zapping zlib:dev
+[DEP] glibc23 glibc23:dev gnome-libs14 gnome-print10 gpl-fonts grep gtk+12
+[DEP] gtk+12:dev jack ladspa:dev lame lame:dev libdockapp libdv libdv:dev
+[DEP] libjpeg libjpeg:dev libpng libpng:dev libsdl libsdl:dev libungif
+[DEP] libungif:dev linux26-header:dev lzo:dev mad mad:dev magicpoint
+[DEP] make mktemp mplayer-fonts nas nas:dev ncurses:dev ogg-vorbis
+[DEP] ogg-vorbis:dev patch pkgconfig rtsp rtsp:dev sed slang sysfiles tar
+[DEP] terminus-font tex-ttf xfree86 xfree86-cyrillic-fonts xfree86:dev
+[DEP] xmms xvid:dev zapping zlib:dev
+
+[PROVIDES] gmplayer libpostproc.so mencoder mplayer
 

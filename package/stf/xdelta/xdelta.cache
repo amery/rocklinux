@@ -20,17 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104664391 Sun Jan  2 12:13:11 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110146217 Sun Mar  6 22:56:57 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-xdelta.log
+[LOGS] 5-xdelta.log 9-xdelta.log
 
-[BUILDTIME] 2240 (5)
+[BUILDTIME] 2787 (9)
 [SIZE] 0.18 MB, 16 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils file findutils gcc34 gcc34:dev glib12 glib12:dev glibc23
-[DEP] glibc23:dev grep linux26-header:dev make mktemp perl5 sed sysfiles
-[DEP] tar texinfo zlib:dev
+[DEP] glibc23:dev grep linux26-header:dev make mktemp net-tools perl5
+[DEP] sed sysfiles tar texinfo zlib:dev
+
+[PROVIDES] libedsio.a libedsio.so libxdelta.a libxdelta.so xdelta
+[PROVIDES] xdelta-config
 

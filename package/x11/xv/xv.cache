@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104670669 Sun Jan  2 13:57:49 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110153918 Mon Mar  7 01:05:18 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-xv.log
+[LOGS] 5-xv.log 9-xv.log
 
-[BUILDTIME] 3274 (5)
+[BUILDTIME] 3738 (9)
 [SIZE] 4.31 MB, 17 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep libjpeg libjpeg:dev libpng libpng:dev
-[DEP] libtiff libtiff:dev linux26-header:dev make mktemp patch sed sysfiles
-[DEP] tar xfree86 xfree86:dev zlib:dev
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep libjpeg libjpeg:dev libpng
+[DEP] libpng:dev libtiff libtiff:dev linux26-header:dev make mktemp patch
+[DEP] sed sysfiles tar xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] bggen vdcomp xcmap xv xvpictoppm
 

@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104921670 Wed Jan  5 11:41:10 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110182626 Mon Mar  7 09:03:46 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-nautilus-cd-burner.log
+[LOGS] 5-nautilus-cd-burner.log 9-nautilus-cd-burner.log
 
-[BUILDTIME] 4666 (5)
+[BUILDTIME] 4710 (9)
 [SIZE] 0.78 MB, 85 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
@@ -42,4 +42,6 @@
 [DEP] nautilus:dev net-tools openssl orbit2 orbit2:dev pango pango:dev
 [DEP] perl5 pkgconfig popt popt:dev sed sysfiles tar util-linux xfree86
 [DEP] zapping zlib:dev
+
+[PROVIDES] libnautilus-burn.so nautilus-cd-burner
 

@@ -20,17 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104740455 Mon Jan  3 09:20:55 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110234166 Mon Mar  7 23:22:46 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-qjackctl.log
+[LOGS] 5-qjackctl.log 9-qjackctl.log
 
-[BUILDTIME] 10417 (5)
-[SIZE] 0.69 MB, 8 files
+[BUILDTIME] 10758 (9)
+[SIZE] 0.70 MB, 8 files
 
 [DEP] 00-dirtree alsa alsa:dev arts bash2 binutils bzip2 coreutils
 [DEP] diffutils expat findutils freetype gcc34 gcc34:dev glibc23
 [DEP] glibc23:dev grep jack jack:dev kdelibs libpng linux26-header:dev
-[DEP] make mktemp qt qt:dev sed sysfiles tar util-linux xfree86 xfree86:dev
+[DEP] make mktemp net-tools qt qt:dev sed sysfiles tar util-linux xfree86
+[DEP] xfree86:dev
+
+[PROVIDES] qjackctl
 

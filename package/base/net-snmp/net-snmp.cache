@@ -20,17 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104669763 Sun Jan  2 13:42:43 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110152888 Mon Mar  7 00:48:08 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-net-snmp.log
+[LOGS] 5-net-snmp.log 9-net-snmp.log
 
-[BUILDTIME] 22402 (5)
+[BUILDTIME] 23001 (9)
 [SIZE] 2.93 MB, 242 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libelf libelf:dev
-[DEP] linux26-header:dev make mktemp openssl openssl:dev patch perl5
-[DEP] procps sed sysfiles tar tcp_wrappers:dev util-linux
+[DEP] linux26-header:dev make mktemp net-tools openssl openssl:dev patch
+[DEP] perl5 procps sed sysfiles tar tcp_wrappers:dev util-linux
+
+[PROVIDES] encode_keychange fixproc ipf-mod.pl libnetsnmp.a libnetsnmp.so
+[PROVIDES] libnetsnmpagent.a libnetsnmpagent.so libnetsnmphelpers.a
+[PROVIDES] libnetsnmphelpers.so libnetsnmpmibs.a libnetsnmpmibs.so
+[PROVIDES] libnetsnmptrapd.a libnetsnmptrapd.so mib2c net-snmp-config
+[PROVIDES] snmpbulkget snmpbulkwalk snmpcheck snmpconf snmpd snmpdelta
+[PROVIDES] snmpdf snmpget snmpgetnext snmpinform snmpnetstat snmpset
+[PROVIDES] snmpstatus snmptable snmptest snmptranslate snmptrap snmptrapd
+[PROVIDES] snmpusm snmpvacm snmpwalk tkmib traptoemail
 

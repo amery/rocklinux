@@ -20,62 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104912830 Wed Jan  5 09:13:50 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110334876 Wed Mar  9 03:21:16 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gphoto.err
+[LOGS] 5-gphoto.log 9-gphoto.log
 
-[BUILDTIME] 2309 (5)
+[BUILDTIME] 2863 (9)
+[SIZE] 0.54 MB, 30 files
 
-[5-ERROR] make[2]: Entering directory `/ROCK/src.gphoto.1104912801.11133.82899671/gphoto2-2.1.4/intl'
-[5-ERROR] make[2]: Nothing to be done for `all'.
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.gphoto.1104912801.11133.82899671/gphoto2-2.1.4/intl'
-[5-ERROR] Making all in m4
-[5-ERROR] make[2]: Entering directory `/ROCK/src.gphoto.1104912801.11133.82899671/gphoto2-2.1.4/m4'
-[5-ERROR] make[2]: Nothing to be done for `all'.
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.gphoto.1104912801.11133.82899671/gphoto2-2.1.4/m4'
-[5-ERROR] Making all in doc
-[5-ERROR] make[2]: Entering directory `/ROCK/src.gphoto.1104912801.11133.82899671/gphoto2-2.1.4/doc'
-[5-ERROR] make[2]: Nothing to be done for `all'.
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.gphoto.1104912801.11133.82899671/gphoto2-2.1.4/doc'
-[5-ERROR] Making all in gphoto2
-[5-ERROR] make[2]: Entering directory `/ROCK/src.gphoto.1104912801.11133.82899671/gphoto2-2.1.4/gphoto2'
-[5-ERROR] if gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -DGPHOTO2_LOCALEDIR=\""/usr/share/locale"\" -I.. -I../intl -I../gphoto2 -I/usr/local/include -I/usr/include/gphoto2   -I/usr/include -I/usr/include/libexif        -g -O2 -g -Wall -Wmissing-declarations -Wmissing-prototypes -MT gphoto2-cmd-capture.o -MD -MP -MF ".deps/gphoto2-cmd-capture.Tpo" \
-[5-ERROR]   -c -o gphoto2-cmd-capture.o `test -f 'gphoto2-cmd-capture.c' || echo './'`gphoto2-cmd-capture.c; \
-[5-ERROR] then mv -f ".deps/gphoto2-cmd-capture.Tpo" ".deps/gphoto2-cmd-capture.Po"; \
-[5-ERROR] else rm -f ".deps/gphoto2-cmd-capture.Tpo"; exit 1; \
-[5-ERROR] fi
-[5-ERROR] if gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -DGPHOTO2_LOCALEDIR=\""/usr/share/locale"\" -I.. -I../intl -I../gphoto2 -I/usr/local/include -I/usr/include/gphoto2   -I/usr/include -I/usr/include/libexif        -g -O2 -g -Wall -Wmissing-declarations -Wmissing-prototypes -MT gphoto2-cmd-config.o -MD -MP -MF ".deps/gphoto2-cmd-config.Tpo" \
-[5-ERROR]   -c -o gphoto2-cmd-config.o `test -f 'gphoto2-cmd-config.c' || echo './'`gphoto2-cmd-config.c; \
-[5-ERROR] then mv -f ".deps/gphoto2-cmd-config.Tpo" ".deps/gphoto2-cmd-config.Po"; \
-[5-ERROR] else rm -f ".deps/gphoto2-cmd-config.Tpo"; exit 1; \
-[5-ERROR] fi
-[5-ERROR] if gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -DGPHOTO2_LOCALEDIR=\""/usr/share/locale"\" -I.. -I../intl -I../gphoto2 -I/usr/local/include -I/usr/include/gphoto2   -I/usr/include -I/usr/include/libexif        -g -O2 -g -Wall -Wmissing-declarations -Wmissing-prototypes -MT actions.o -MD -MP -MF ".deps/actions.Tpo" \
-[5-ERROR]   -c -o actions.o `test -f 'actions.c' || echo './'`actions.c; \
-[5-ERROR] then mv -f ".deps/actions.Tpo" ".deps/actions.Po"; \
-[5-ERROR] else rm -f ".deps/actions.Tpo"; exit 1; \
-[5-ERROR] fi
-[5-ERROR] actions.c: In function `show_ifd':
-[5-ERROR] actions.c:354: error: too few arguments to function `exif_entry_get_value'
-[5-ERROR] make[2]: *** [actions.o] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.gphoto.1104912801.11133.82899671/gphoto2-2.1.4/gphoto2'
-[5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.gphoto.1104912801.11133.82899671/gphoto2-2.1.4'
-[5-ERROR] make: *** [all] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 gphoto:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 gphoto:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 gphoto:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <gphoto:doc> Creating flist file ...
-[5-ERROR] <gphoto:doc> Creating package dependencies file ...
-[5-ERROR] <gphoto:doc> Creating md5sum and cksum files ...
-[5-ERROR] <gphoto:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building gphoto=gphoto.
+[DEP] 00-dirtree aalib aalib:dev bash2 binutils bison bzip2 coreutils
+[DEP] diffutils findutils gcc34 gcc34:dev gettext glibc23 glibc23:dev gpm
+[DEP] grep libcdk:dev libexif libexif:dev libgphoto libgphoto:dev libjpeg
+[DEP] libjpeg:dev linux26-header:dev make mktemp ncurses:dev net-tools
+[DEP] pkgconfig popt popt:dev readline readline:dev sed slang sysfiles
+[DEP] tar util-linux xfree86
+
+[PROVIDES] gphoto2
 

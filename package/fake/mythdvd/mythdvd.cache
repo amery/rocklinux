@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104663955 Sun Jan  2 12:05:55 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110145688 Sun Mar  6 22:48:08 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-mythdvd.log
+[LOGS] 5-mythdvd.log 9-mythdvd.log
 
-[BUILDTIME] 5821 (5)
+[BUILDTIME] 6414 (9)
 [SIZE] 0.69 MB, 50 files
 
 [DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils expat findutils
 [DEP] freetype gcc34 gcc34:dev glibc23 glibc23:dev grep libdvdread
 [DEP] libdvdread:dev libpng linux26-header:dev lirc make mktemp mythtv
-[DEP] mythtv:dev qt qt:dev sed sysfiles tar xfree86
+[DEP] mythtv:dev patch qt qt:dev sed sysfiles tar xfree86
+
+[PROVIDES] mtd
 

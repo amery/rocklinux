@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104747664 Mon Jan  3 11:21:04 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110304836 Tue Mar  8 19:00:36 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-setserial.log
+[LOGS] 5-setserial.log 9-setserial.log
 
-[BUILDTIME] 1173 (5)
+[BUILDTIME] 1455 (9)
 [SIZE] 0.05 MB, 8 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep groff linux26-header:dev
 [DEP] make mktemp net-tools patch sed sysfiles tar
+
+[PROVIDES] setserial
 

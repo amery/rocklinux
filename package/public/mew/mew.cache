@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104671085 Sun Jan  2 14:04:45 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110154424 Mon Mar  7 01:13:44 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-mew.log
+[LOGS] 5-mew.log 9-mew.log
 
-[BUILDTIME] 2167 (5)
+[BUILDTIME] 2644 (9)
 [SIZE] 2.93 MB, 182 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] patch sed sysfiles tar texinfo util-linux xemacs xemacs-packages
-[DEP] zlib:dev
+[DEP] 00-dirtree auctex bash2 binutils bzip2 coreutils diffutils findutils
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
+[DEP] mktemp net-tools patch sed sysfiles tar texinfo util-linux xemacs
+[DEP] xemacs-packages zlib:dev
+
+[PROVIDES] incm mewcat mewdecode mewencode mewinc mewls
 

@@ -20,18 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104697494 Sun Jan  2 21:24:54 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110185452 Mon Mar  7 09:50:52 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libgphoto.log
+[LOGS] 5-libgphoto.log 9-libgphoto.log
 
-[BUILDTIME] 19037 (5)
-[SIZE] 2.34 MB, 108 files
+[BUILDTIME] 22405 (9)
+[SIZE] 2.42 MB, 112 files
 
 [DEP] 00-dirtree alien bash2 binutils bison bzip2 coreutils diffutils
 [DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev
 [DEP] grep libexif libexif:dev libjpeg libjpeg:dev libusb libusb:dev
-[DEP] linux26-header:dev make mktemp pkgconfig rpm sed sysfiles tar
-[DEP] util-linux xscreensaver
+[DEP] linux26-header:dev make mktemp net-tools pkgconfig rpm sed sysfiles
+[DEP] tar util-linux xscreensaver
+
+[PROVIDES] gphoto2-config gphoto2-port-config libgphoto2.a libgphoto2.so
+[PROVIDES] libgphoto2_port.a libgphoto2_port.so
 

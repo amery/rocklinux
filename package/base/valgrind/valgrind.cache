@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104658766 Sun Jan  2 10:39:26 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110139956 Sun Mar  6 21:12:36 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-valgrind.log
+[LOGS] 5-valgrind.log 9-valgrind.log
 
-[BUILDTIME] 5650 (5)
+[BUILDTIME] 6237 (9)
 [SIZE] 1.62 MB, 34 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] patch perl5 sed sysfiles tar util-linux xfree86 xfree86:dev
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
+[DEP] mktemp net-tools patch perl5 sed sysfiles tar util-linux xfree86
+[DEP] xfree86:dev
+
+[PROVIDES] cg_annotate valgrind valgrind-listener
 

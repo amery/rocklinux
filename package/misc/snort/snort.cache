@@ -20,69 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104913597 Wed Jan  5 09:26:37 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110659462 Sat Mar 12 21:31:02 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-snort.err
+[LOGS] 5-snort.log 9-snort.log
 
-[BUILDTIME] 4744 (5)
-[SIZE] 0.02 MB, 19 files
+[BUILDTIME] 10855 (9)
+[SIZE] 1.84 MB, 90 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libpcap:dev
-[DEP] linux26-header:dev make mktemp mysql mysql:dev net-tools openssl
+[DEP] linux26-header:dev m4 make mktemp mysql mysql:dev net-tools openssl
 [DEP] pcre pcre:dev postgresql postgresql:dev sed sysfiles tar util-linux
 [DEP] zlib:dev
 
-[5-ERROR] gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../src -I../src/sfutil -I/usr/include/pcap -I../src/output-plugins -I../src/detection-plugins -I../src/preprocessors -I../src/preprocessors/flow -I../src/preprocessors/portscan  -I../src/preprocessors/flow/int-snort  -I../src/preprocessors/HttpInspect/include  -I/opt/mysql/include/mysql -DENABLE_MYSQL -I/opt/postgresql/include -DENABLE_POSTGRESQL  -O0 -DDEBUG -g -c `test -f 'snprintf.c' || echo './'`snprintf.c
-[5-ERROR] gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../src -I../src/sfutil -I/usr/include/pcap -I../src/output-plugins -I../src/detection-plugins -I../src/preprocessors -I../src/preprocessors/flow -I../src/preprocessors/portscan  -I../src/preprocessors/flow/int-snort  -I../src/preprocessors/HttpInspect/include  -I/opt/mysql/include/mysql -DENABLE_MYSQL -I/opt/postgresql/include -DENABLE_POSTGRESQL  -O0 -DDEBUG -g -c `test -f 'strlcatu.c' || echo './'`strlcatu.c
-[5-ERROR] gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../src -I../src/sfutil -I/usr/include/pcap -I../src/output-plugins -I../src/detection-plugins -I../src/preprocessors -I../src/preprocessors/flow -I../src/preprocessors/portscan  -I../src/preprocessors/flow/int-snort  -I../src/preprocessors/HttpInspect/include  -I/opt/mysql/include/mysql -DENABLE_MYSQL -I/opt/postgresql/include -DENABLE_POSTGRESQL  -O0 -DDEBUG -g -c `test -f 'strlcpyu.c' || echo './'`strlcpyu.c
-[5-ERROR] gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../src -I../src/sfutil -I/usr/include/pcap -I../src/output-plugins -I../src/detection-plugins -I../src/preprocessors -I../src/preprocessors/flow -I../src/preprocessors/portscan  -I../src/preprocessors/flow/int-snort  -I../src/preprocessors/HttpInspect/include  -I/opt/mysql/include/mysql -DENABLE_MYSQL -I/opt/postgresql/include -DENABLE_POSTGRESQL  -O0 -DDEBUG -g -c `test -f 'tag.c' || echo './'`tag.c
-[5-ERROR] gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../src -I../src/sfutil -I/usr/include/pcap -I../src/output-plugins -I../src/detection-plugins -I../src/preprocessors -I../src/preprocessors/flow -I../src/preprocessors/portscan  -I../src/preprocessors/flow/int-snort  -I../src/preprocessors/HttpInspect/include  -I/opt/mysql/include/mysql -DENABLE_MYSQL -I/opt/postgresql/include -DENABLE_POSTGRESQL  -O0 -DDEBUG -g -c `test -f 'ubi_BinTree.c' || echo './'`ubi_BinTree.c
-[5-ERROR] gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../src -I../src/sfutil -I/usr/include/pcap -I../src/output-plugins -I../src/detection-plugins -I../src/preprocessors -I../src/preprocessors/flow -I../src/preprocessors/portscan  -I../src/preprocessors/flow/int-snort  -I../src/preprocessors/HttpInspect/include  -I/opt/mysql/include/mysql -DENABLE_MYSQL -I/opt/postgresql/include -DENABLE_POSTGRESQL  -O0 -DDEBUG -g -c `test -f 'ubi_SplayTree.c' || echo './'`ubi_SplayTree.c
-[5-ERROR] gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../src -I../src/sfutil -I/usr/include/pcap -I../src/output-plugins -I../src/detection-plugins -I../src/preprocessors -I../src/preprocessors/flow -I../src/preprocessors/portscan  -I../src/preprocessors/flow/int-snort  -I../src/preprocessors/HttpInspect/include  -I/opt/mysql/include/mysql -DENABLE_MYSQL -I/opt/postgresql/include -DENABLE_POSTGRESQL  -O0 -DDEBUG -g -c `test -f 'util.c' || echo './'`util.c
-[5-ERROR] gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../src -I../src/sfutil -I/usr/include/pcap -I../src/output-plugins -I../src/detection-plugins -I../src/preprocessors -I../src/preprocessors/flow -I../src/preprocessors/portscan  -I../src/preprocessors/flow/int-snort  -I../src/preprocessors/HttpInspect/include  -I/opt/mysql/include/mysql -DENABLE_MYSQL -I/opt/postgresql/include -DENABLE_POSTGRESQL  -O0 -DDEBUG -g -c `test -f 'detect.c' || echo './'`detect.c
-[5-ERROR] gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../src -I../src/sfutil -I/usr/include/pcap -I../src/output-plugins -I../src/detection-plugins -I../src/preprocessors -I../src/preprocessors/flow -I../src/preprocessors/portscan  -I../src/preprocessors/flow/int-snort  -I../src/preprocessors/HttpInspect/include  -I/opt/mysql/include/mysql -DENABLE_MYSQL -I/opt/postgresql/include -DENABLE_POSTGRESQL  -O0 -DDEBUG -g -c `test -f 'signature.c' || echo './'`signature.c
-[5-ERROR] gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../src -I../src/sfutil -I/usr/include/pcap -I../src/output-plugins -I../src/detection-plugins -I../src/preprocessors -I../src/preprocessors/flow -I../src/preprocessors/portscan  -I../src/preprocessors/flow/int-snort  -I../src/preprocessors/HttpInspect/include  -I/opt/mysql/include/mysql -DENABLE_MYSQL -I/opt/postgresql/include -DENABLE_POSTGRESQL  -O0 -DDEBUG -g -c `test -f 'mempool.c' || echo './'`mempool.c
-[5-ERROR] gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../src -I../src/sfutil -I/usr/include/pcap -I../src/output-plugins -I../src/detection-plugins -I../src/preprocessors -I../src/preprocessors/flow -I../src/preprocessors/portscan  -I../src/preprocessors/flow/int-snort  -I../src/preprocessors/HttpInspect/include  -I/opt/mysql/include/mysql -DENABLE_MYSQL -I/opt/postgresql/include -DENABLE_POSTGRESQL  -O0 -DDEBUG -g -c `test -f 'sf_sdlist.c' || echo './'`sf_sdlist.c
-[5-ERROR] gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../src -I../src/sfutil -I/usr/include/pcap -I../src/output-plugins -I../src/detection-plugins -I../src/preprocessors -I../src/preprocessors/flow -I../src/preprocessors/portscan  -I../src/preprocessors/flow/int-snort  -I../src/preprocessors/HttpInspect/include  -I/opt/mysql/include/mysql -DENABLE_MYSQL -I/opt/postgresql/include -DENABLE_POSTGRESQL  -O0 -DDEBUG -g -c `test -f 'fpcreate.c' || echo './'`fpcreate.c
-[5-ERROR] gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../src -I../src/sfutil -I/usr/include/pcap -I../src/output-plugins -I../src/detection-plugins -I../src/preprocessors -I../src/preprocessors/flow -I../src/preprocessors/portscan  -I../src/preprocessors/flow/int-snort  -I../src/preprocessors/HttpInspect/include  -I/opt/mysql/include/mysql -DENABLE_MYSQL -I/opt/postgresql/include -DENABLE_POSTGRESQL  -O0 -DDEBUG -g -c `test -f 'fpdetect.c' || echo './'`fpdetect.c
-[5-ERROR] gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../src -I../src/sfutil -I/usr/include/pcap -I../src/output-plugins -I../src/detection-plugins -I../src/preprocessors -I../src/preprocessors/flow -I../src/preprocessors/portscan  -I../src/preprocessors/flow/int-snort  -I../src/preprocessors/HttpInspect/include  -I/opt/mysql/include/mysql -DENABLE_MYSQL -I/opt/postgresql/include -DENABLE_POSTGRESQL  -O0 -DDEBUG -g -c `test -f 'pcrm.c' || echo './'`pcrm.c
-[5-ERROR] gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../src -I../src/sfutil -I/usr/include/pcap -I../src/output-plugins -I../src/detection-plugins -I../src/preprocessors -I../src/preprocessors/flow -I../src/preprocessors/portscan  -I../src/preprocessors/flow/int-snort  -I../src/preprocessors/HttpInspect/include  -I/opt/mysql/include/mysql -DENABLE_MYSQL -I/opt/postgresql/include -DENABLE_POSTGRESQL  -O0 -DDEBUG -g -c `test -f 'byte_extract.c' || echo './'`byte_extract.c
-[5-ERROR] gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../src -I../src/sfutil -I/usr/include/pcap -I../src/output-plugins -I../src/detection-plugins -I../src/preprocessors -I../src/preprocessors/flow -I../src/preprocessors/portscan  -I../src/preprocessors/flow/int-snort  -I../src/preprocessors/HttpInspect/include  -I/opt/mysql/include/mysql -DENABLE_MYSQL -I/opt/postgresql/include -DENABLE_POSTGRESQL  -O0 -DDEBUG -g -c `test -f 'sfthreshold.c' || echo './'`sfthreshold.c
-[5-ERROR] gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../src -I../src/sfutil -I/usr/include/pcap -I../src/output-plugins -I../src/detection-plugins -I../src/preprocessors -I../src/preprocessors/flow -I../src/preprocessors/portscan  -I../src/preprocessors/flow/int-snort  -I../src/preprocessors/HttpInspect/include  -I/opt/mysql/include/mysql -DENABLE_MYSQL -I/opt/postgresql/include -DENABLE_POSTGRESQL  -O0 -DDEBUG -g -c `test -f 'packet_time.c' || echo './'`packet_time.c
-[5-ERROR] gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../src -I../src/sfutil -I/usr/include/pcap -I../src/output-plugins -I../src/detection-plugins -I../src/preprocessors -I../src/preprocessors/flow -I../src/preprocessors/portscan  -I../src/preprocessors/flow/int-snort  -I../src/preprocessors/HttpInspect/include  -I/opt/mysql/include/mysql -DENABLE_MYSQL -I/opt/postgresql/include -DENABLE_POSTGRESQL  -O0 -DDEBUG -g -c `test -f 'event_wrapper.c' || echo './'`event_wrapper.c
-[5-ERROR] gcc-34  -O0 -DDEBUG -g  -L/usr/lib -lpcre -L/opt/mysql/lib -L/opt/postgresql/lib -o snort  codes.o debug.o decode.o log.o mstring.o parser.o plugbase.o snort.o snprintf.o strlcatu.o strlcpyu.o tag.o ubi_BinTree.o ubi_SplayTree.o util.o detect.o signature.o mempool.o sf_sdlist.o fpcreate.o fpdetect.o pcrm.o byte_extract.o sfthreshold.o packet_time.o event_wrapper.o output-plugins/libspo.a detection-plugins/libspd.a preprocessors/libspp.a preprocessors/flow/portscan/libportscan.a preprocessors/flow/libflow.a parser/libparser.a preprocessors/HttpInspect/libhttp_inspect.a sfutil/libsfutil.a -lz -lpcre -lpcap -lm -lnsl  -lmysqlclient -lpq
-[5-ERROR] /opt/mysql/lib/libmysqlclient.a(my_compress.o)(.text+0x39): In function `my_compress_alloc':
-[5-ERROR] my_compress.c: undefined reference to `compress'
-[5-ERROR] /opt/mysql/lib/libmysqlclient.a(my_compress.o)(.text+0xed): In function `my_uncompress':
-[5-ERROR] my_compress.c: undefined reference to `uncompress'
-[5-ERROR] collect2: ld returned 1 exit status
-[5-ERROR] make[3]: *** [snort] Error 1
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.snort.1104913538.29155.3928443646/snort-2.1.1/src'
-[5-ERROR] make[2]: *** [all-recursive] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.snort.1104913538.29155.3928443646/snort-2.1.1/src'
-[5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.snort.1104913538.29155.3928443646/snort-2.1.1'
-[5-ERROR] make: *** [all] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 14 files for this package.
-[5-ERROR] Applying package split: 40 snort:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 snort:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 snort:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <snort> Creating flist file ...
-[5-ERROR] <snort> Creating package dependencies file ...
-[5-ERROR] <snort> Creating md5sum and cksum files ...
-[5-ERROR] <snort> Creating package description ...
-[5-ERROR] <snort:doc> Creating flist file ...
-[5-ERROR] <snort:doc> Creating package dependencies file ...
-[5-ERROR] <snort:doc> Creating md5sum and cksum files ...
-[5-ERROR] <snort:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building snort=snort.
+[PROVIDES] snort
 

@@ -20,21 +20,30 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104665837 Sun Jan  2 12:37:17 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110148137 Sun Mar  6 23:28:57 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnome-libs14.log
+[LOGS] 5-gnome-libs14.log 9-gnome-libs14.log
 
-[BUILDTIME] 23598 (5)
+[BUILDTIME] 24224 (9)
 [SIZE] 6.10 MB, 434 files
 
 [DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev autoconf automake19
-[DEP] bash2 bdb33 bdb33:dev bdb41 bdb41:dev binutils bzip2 coreutils
+[DEP] bash2 bdb33 bdb33:dev bdb42 bdb42:dev binutils bzip2 coreutils
 [DEP] diffutils esound esound:dev findutils gawk gcc34 gcc34:dev gettext
 [DEP] glib glib12 glib12:dev glibc23 glibc23:dev grep gtk+12 gtk+12:dev
 [DEP] gtkdoc imlib imlib:dev libjpeg libjpeg:dev libpng libpng:dev libtiff
 [DEP] libtiff:dev libungif libungif:dev linux26-header:dev make mktemp
-[DEP] orbit10 orbit10:dev patch perl5 sed sysfiles tar texinfo xfree86
-[DEP] xfree86:dev zlib:dev
+[DEP] net-tools orbit10 orbit10:dev patch perl5 sed sysfiles tar texinfo
+[DEP] xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] dns-helper gconfigger gnome-bug gnome-config gnome-dump-metadata
+[PROVIDES] gnome-gen-mimedb gnome-moz-remote gnome-name-service
+[PROVIDES] gnome-pty-helper gnome_segv goad-browser libart-config
+[PROVIDES] libart_lgpl.a libart_lgpl.so libgnome.a libgnome.so
+[PROVIDES] libgnomesupport.a libgnomesupport.so libgnomeui.a libgnomeui.so
+[PROVIDES] libgnorba.a libgnorba.so libgnorbagtk.a libgnorbagtk.so
+[PROVIDES] libgtkxmhtml.a libgtkxmhtml.so libzvt.a libzvt.so loadshlib
+[PROVIDES] new-object
 

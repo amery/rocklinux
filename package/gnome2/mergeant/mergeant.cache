@@ -20,25 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104771324 Mon Jan  3 17:55:24 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110331836 Wed Mar  9 02:30:36 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-mergeant.log
+[LOGS] 5-mergeant.log 9-mergeant.log
 
-[BUILDTIME] 28887 (5)
+[BUILDTIME] 24608 (9)
 [SIZE] 3.63 MB, 237 files
 
 [DEP] 00-dirtree alsa alsa:dev anjuta atk atk:dev audiofile audiofile:dev
 [DEP] balsa bash2 binutils bug-buddy bzip2 coreutils cpan-xml-parser
 [DEP] diffutils docbookx eog epiphany esound esound:dev evolution expat
-[DEP] figment file-roller findutils gawk gcalctool gcc34 gcc34:dev
-[DEP] gconf gconf:dev gdm gedit gettext ggv ghex gjiten glabels glade
+[DEP] figment file-roller findutils gawk gcalctool gcc34 gcc34:dev gconf
+[DEP] gconf:dev gdm gedit gettext ggv ghex ghex12 gjiten glabels glade
 [DEP] glade10 glib glib12 glib:dev glibc23 glibc23:dev gnome-applets
 [DEP] gnome-blog gnome-desktop gnome-keyring gnome-keyring:dev gnome-media
 [DEP] gnome-mime-data gnome-netstatus gnome-pilot gnome-system-monitor
 [DEP] gnome-system-tools gnome-terminal gnome-utils gnome-vfs gnome-vfs:dev
-[DEP] gnome2-user-docs gnomemeeting gnopernicus gnotepad+ gok grep
+[DEP] gnome2-user-docs gnomemeeting gnopernicus gnotepad+ gnumeric gok grep
 [DEP] gst-editor gthumb gtk+ gtk+:dev gtkam gtksourceview gtksourceview:dev
 [DEP] gucharmap libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev
 [DEP] libbonoboui libbonoboui:dev libgda libgda:dev libglade libglade:dev
@@ -46,8 +46,14 @@
 [DEP] libgnomedb:dev libgnomeprint libgnomeprint:dev libgnomeprintui
 [DEP] libgnomeprintui:dev libgnomeui libgnomeui:dev libjpeg libjpeg:dev
 [DEP] libxml2 libxml2:dev libxslt libxslt:dev linux26-header:dev make
-[DEP] mktemp net-tools openssl openssl:dev orbit2 orbit2:dev pango
+[DEP] mgt mktemp net-tools openssl openssl:dev orbit2 orbit2:dev pango
 [DEP] pango:dev patch perl5 pkgconfig popt popt:dev pybliographer
-[DEP] quick-lounge-applet scrollkeeper sed sound-juicer streamtuner
-[DEP] sysfiles tar util-linux xfree86 zapping zenity zlib:dev
+[DEP] quick-lounge-applet scrollkeeper seahorse sed sound-juicer
+[DEP] streamtuner sysfiles tar util-linux xfree86 zapping zenity zlib:dev
+
+[PROVIDES] libmergeant-2.a libmergeant-2.so libmergeant_graph-2.a
+[PROVIDES] libmergeant_graph-2.so libmergeant_handlers-2.a
+[PROVIDES] libmergeant_handlers-2.so mergeant mg-db-browser mg-test-dyn
+[PROVIDES] mg-test-graph mg-test-grapher mg-test-handlers mg-test-selector
+[PROVIDES] mg-test-sqlquery mg-test1 mg-test2 mg-test3 mg-verify-file
 

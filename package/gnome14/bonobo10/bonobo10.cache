@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104697238 Sun Jan  2 21:20:38 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110185135 Mon Mar  7 09:45:35 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-bonobo10.log
+[LOGS] 5-bonobo10.log 9-bonobo10.log
 
-[BUILDTIME] 25511 (5)
-[SIZE] 3.70 MB, 196 files
+[BUILDTIME] 25990 (9)
+[SIZE] 3.71 MB, 196 files
 
 [DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev autoconf automake19
 [DEP] bash2 bdb33 binutils bzip2 coreutils diffutils esound esound:dev
@@ -35,7 +35,16 @@
 [DEP] gdk-pixbuf10:dev gettext glib glib12 glib12:dev glibc23 glibc23:dev
 [DEP] gnome-libs14 gnome-libs14:dev gnome-print10 gnome-print10:dev grep
 [DEP] gtk+12 gtk+12:dev gtkdoc imlib imlib:dev indent libxml libxml:dev
-[DEP] linux26-header:dev make mktemp oaf10 oaf10:dev orbit10 orbit10:dev
-[DEP] perl5 popt popt:dev sed sysfiles tar texinfo util-linux xfree86
-[DEP] xfree86:dev zlib:dev
+[DEP] linux26-header:dev make mktemp net-tools oaf10 oaf10:dev orbit10
+[DEP] orbit10:dev perl5 popt popt:dev sed sysfiles tar texinfo util-linux
+[DEP] xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] bonobo-application-x-mines bonobo-audio-ulaw
+[PROVIDES] bonobo-echo bonobo-moniker-gunzip bonobo-moniker-http
+[PROVIDES] bonobo-sample-canvas-item bonobo-sample-controls
+[PROVIDES] bonobo-sample-hello bonobo-sample-paint bonobo-selector
+[PROVIDES] bonobo-text-plain echo-client efstool gshell libbonobo-print.a
+[PROVIDES] libbonobo-print.so libbonobo.a libbonobo.so libbonobox.a
+[PROVIDES] libbonobox.so libefs-config libefs.a libefs.so moniker-test
+[PROVIDES] sample-container sample-control-container
 

@@ -20,16 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104712075 Mon Jan  3 01:27:55 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110201606 Mon Mar  7 14:20:06 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-xjdic.log
+[LOGS] 5-xjdic.log 9-xjdic.log
 
-[BUILDTIME] 1502 (5)
-[SIZE] 9.54 MB, 30 files
+[BUILDTIME] 1839 (9)
+[SIZE] 9.55 MB, 30 files
 
 [DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils findutils gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
 [DEP] patch sed sysfiles tar
+
+[PROVIDES] edict edict.xjdx exjdxgen gnu_licence kanjidic kanjidic.xjdx
+[PROVIDES] kanjstroke radicals.tm radkfile romkana.cnv vconj xjdic
+[PROVIDES] xjdic_cl xjdic_client xjdic_indexgen xjdic_sa xjdic_server
+[PROVIDES] xjdserver xjdxgen
 

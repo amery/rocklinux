@@ -20,18 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104654543 Sun Jan  2 09:29:03 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110134567 Sun Mar  6 19:42:47 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-isdn4k-utils.log
+[LOGS] 5-isdn4k-utils.log 9-isdn4k-utils.log
 
-[BUILDTIME] 14681 (5)
-[SIZE] 2.37 MB, 119 files
+[BUILDTIME] 15385 (9)
+[SIZE] 2.40 MB, 127 files
 
 [DEP] 00-dirtree autoconf automake17 automake19 bash2 binutils bzip2
 [DEP] coreutils diffutils findutils gawk gcc34 gcc34:dev glibc23
 [DEP] glibc23:dev grep libtool linux26-header:dev m4 make mktemp
-[DEP] ncurses:dev patch perl5 procps sed sysfiles tar tcl tcl:dev texinfo
-[DEP] util-linux xfree86 xfree86:dev
+[DEP] ncurses:dev net-tools patch perl5 procps sed sysfiles tar tcl
+[DEP] tcl:dev texinfo util-linux xfree86 xfree86:dev
+
+[PROVIDES] autovbox avmcapictrl capifax capifaxrcvd capiinfo capiinit
+[PROVIDES] hisaxctrl icnctrl imon imontty ipppd ipppstats iprofd isdnconf
+[PROVIDES] isdnctrl isdnlog isdnrate isdnrep libcapi20.a libcapi20.so
+[PROVIDES] libcapi20dyn.a loopctrl mkzonedb pcbitctl rcapid rmdtovbox vbox
+[PROVIDES] vboxbeep vboxcnvt vboxctrl vboxd vboxgetty vboxmail vboxmode
+[PROVIDES] vboxplay vboxputty vboxtoau xisdnload xmonisdn
 

@@ -20,16 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104640466 Sun Jan  2 05:34:26 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110122148 Sun Mar  6 16:15:48 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 3-perl5.log
+[LOGS] 3-perl5.log 9-perl5.log
 
-[BUILDTIME] 23855 (3)
-[SIZE] 25.62 MB, 1619 files
+[BUILDTIME] 29510 (9)
+[SIZE] 36.34 MB, 2127 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 bdb42 bdb42:dev binutils bzip2 coreutils diffutils
+[DEP] findutils gawk gcc34 gcc34:dev gdbm gdbm:dev glibc23 glibc23:dev
+[DEP] grep linux26-header:dev make mktemp sed sysfiles tar tcsh util-linux
+
+[PROVIDES] a2p c2ph cpan dprofpp enc2xs find2perl h2ph h2xs instmodsh
+[PROVIDES] libnetcfg perl perl5.8.5 perlbug perlcc perldoc perlivp
+[PROVIDES] piconv pl2pm pod2html pod2latex pod2man pod2text pod2usage
+[PROVIDES] podchecker podselect prove psed pstruct s2p sperl5.8.5 splain
+[PROVIDES] suidperl xsubpp
 

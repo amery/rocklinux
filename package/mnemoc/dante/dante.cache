@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104756113 Mon Jan  3 13:41:53 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110314279 Tue Mar  8 21:37:59 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-dante.log
+[LOGS] 5-dante.log 9-dante.log
 
-[BUILDTIME] 12784 (5)
+[BUILDTIME] 13172 (9)
 [SIZE] 0.44 MB, 17 files
 
 [DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils diffutils
 [DEP] findutils flex flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev
 [DEP] grep linux26-header:dev m4 make mktemp net-tools pam pam:dev perl5
 [DEP] sed sysfiles tar tcp_wrappers:dev util-linux
+
+[PROVIDES] libdsocks.so libsocks.a libsocks.so sockd socksify
 

@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104748161 Mon Jan  3 11:29:21 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110305485 Tue Mar  8 19:11:25 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-nfs-utils.log
+[LOGS] 5-nfs-utils.log 9-nfs-utils.log
 
-[BUILDTIME] 2768 (5)
+[BUILDTIME] 2996 (9)
 [SIZE] 0.26 MB, 44 files
 
 [DEP] 00-dirtree alien bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev m4 make
 [DEP] mktemp net-tools sed sysfiles tar tcp_wrappers:dev
+
+[PROVIDES] exportfs nfsstat nhfsgraph nhfsnums nhfsrun nhfsstone rpc.lockd
+[PROVIDES] rpc.mountd rpc.nfsd rpc.statd showmount
 

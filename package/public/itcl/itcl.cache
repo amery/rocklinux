@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104797773 Tue Jan  4 01:16:13 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110898018 Tue Mar 15 15:46:58 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-itcl.log
+[LOGS] 5-itcl.log 9-itcl.log
 
-[BUILDTIME] 3646 (5)
-[SIZE] 0.27 MB, 37 files
+[BUILDTIME] 3657 (9)
+[SIZE] 0.28 MB, 37 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
 [DEP] net-tools sed sysfiles tar tcl tcl:dev tk:dev xfree86 xfree86:dev
+
+[PROVIDES] libitcl3.2.so libitclstub3.2.a libitk3.2.so libitkstub3.2.a
 

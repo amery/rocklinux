@@ -20,17 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104790853 Mon Jan  3 23:20:53 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110661423 Sat Mar 12 22:03:43 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnucash.log
+[LOGS] 5-gnucash.log 9-gnucash.log
 
-[BUILDTIME] 54824 (5)
+[BUILDTIME] 68424 (9)
 [SIZE] 12.42 MB, 653 files
 
 [DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev autoconf
-[DEP] automake19 bash2 bdb33 bdb41 bdb41:dev binutils bison bonobo10
+[DEP] automake19 bash2 bdb33 bdb41 bdb42:dev binutils bison bonobo10
 [DEP] bonobo10:dev bzip2 coreutils diffutils esound esound:dev findutils
 [DEP] freetype freetype:dev g-wrap g-wrap:dev gal01 gal01:dev gawk gcc34
 [DEP] gcc34:dev gconf110 gconf110:dev gdk-pixbuf10 gdk-pixbuf10:dev gettext
@@ -42,4 +42,10 @@
 [DEP] ncurses:dev net-tools oaf10 oaf10:dev openhbci openhbci:dev openssl
 [DEP] orbit10 orbit10:dev patch perl5 pkgconfig popt popt:dev readline
 [DEP] sed sysfiles tar texinfo xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] dump-finance-quote gnc-prices gnc-test-env gnucash
+[PROVIDES] gnucash-config gnucash-env gnucash-make-guids gnucash-run-script
+[PROVIDES] libcore-utils.so libgnc-app-file-gnome.so libgncgnome.so
+[PROVIDES] libgncmodule.so libgw-core-utils.so libgw-gnc.so
+[PROVIDES] update-finance-quote
 

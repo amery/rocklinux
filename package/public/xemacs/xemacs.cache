@@ -20,18 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104669405 Sun Jan  2 13:36:45 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110152445 Mon Mar  7 00:40:45 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-xemacs.log
+[LOGS] 5-xemacs.log 9-xemacs.log
 
-[BUILDTIME] 11664 (5)
-[SIZE] 21.26 MB, 940 files
+[BUILDTIME] 12437 (9)
+[SIZE] 23.22 MB, 941 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev gpm gpm:dev grep libelf:dev
-[DEP] libjpeg libjpeg:dev libpng libpng:dev libtiff libtiff:dev
-[DEP] linux26-header:dev make mktemp nas nas:dev ncurses:dev openmotif
-[DEP] openmotif:dev patch sed sysfiles tar xfree86 xfree86:dev zlib:dev
+[DEP] 00-dirtree auctex bash2 binutils bzip2 coreutils diffutils
+[DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev gpm gpm:dev grep
+[DEP] libelf:dev libjpeg libjpeg:dev libpng libpng:dev libtiff libtiff:dev
+[DEP] linux26-header:dev make mew mktemp nas nas:dev ncurses:dev net-tools
+[DEP] openmotif openmotif:dev patch sed sysfiles tar xemacs-packages
+[DEP] xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] xemacs xemacs-21.4.15 xemacs-21.4.15-422328b6.dmp
+[PROVIDES] xemacs-21.4.15-4226657a.dmp
 

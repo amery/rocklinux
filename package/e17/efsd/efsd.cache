@@ -20,62 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104912000 Wed Jan  5 09:00:00 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110157761 Mon Mar  7 02:09:21 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-efsd.err
+[LOGS] 5-efsd.log 9-efsd.log
 
-[BUILDTIME] 3599 (5)
+[BUILDTIME] 6183 (9)
+[SIZE] 0.46 MB, 16 files
 
-[5-ERROR] checking whether to build static libraries... yes
-[5-ERROR] checking for g77-34 option to produce PIC... -fPIC
-[5-ERROR] checking if g77-34 PIC flag -fPIC works... yes
-[5-ERROR] checking if g77-34 supports -c -o file.o... yes
-[5-ERROR] checking whether the g77-34 linker (ld) supports shared libraries... yes
-[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
-[5-ERROR] checking how to hardcode library paths into programs... immediate
-[5-ERROR] checking whether stripping libraries is possible... yes
-[5-ERROR] checking whether byte ordering is bigendian... no
-[5-ERROR] checking for struct stat.st_blksize... yes
-[5-ERROR] checking for struct stat.st_blocks... yes
-[5-ERROR] checking for readdir_r... yes
-[5-ERROR] checking for ctime_r... yes
-[5-ERROR] checking for statfs... yes
-[5-ERROR] checking fam.h usability... yes
-[5-ERROR] checking fam.h presence... yes
-[5-ERROR] checking for fam.h... yes
-[5-ERROR] checking for main in -lfam... yes
-[5-ERROR] checking pthread.h usability... yes
-[5-ERROR] checking pthread.h presence... yes
-[5-ERROR] checking for pthread.h... yes
-[5-ERROR] checking for main in -lpthread... yes
-[5-ERROR] checking for edb-config... /opt/e17/bin/edb-config
-[5-ERROR] checking for edb - version >= 1.0.2... yes
-[5-ERROR] checking for xml2-config... /usr/bin/xml2-config
-[5-ERROR] checking for xml2 - version >= 2.3.10... yes
-[5-ERROR] checking for perl... /usr/bin/perl
-[5-ERROR] checking for dbx... no
-[5-ERROR] checking for gdb... /usr/bin/gdb
-[5-ERROR] checking for pstack... no
-[5-ERROR] checking for U_STACK_TRACE in -lcl... no
-[5-ERROR] checking for jade... no
-[5-ERROR] configure: creating ./config.status
-[5-ERROR] config.status: creating Makefile
-[5-ERROR] config.status: error: cannot find input file: Makefile.in
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 efsd:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 efsd:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 efsd:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <efsd:doc> Creating flist file ...
-[5-ERROR] <efsd:doc> Creating package dependencies file ...
-[5-ERROR] <efsd:doc> Creating md5sum and cksum files ...
-[5-ERROR] <efsd:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building efsd=efsd.
+[DEP] 00-dirtree autoconf automake18 automake19 bash2 binutils bzip2
+[DEP] coreutils diffutils edb edb:dev fam fam:dev findutils gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep imlib2 libtool libxml2 libxml2:dev
+[DEP] linux26-header:dev m4 make mktemp net-tools patch perl5 sed sysfiles
+[DEP] tar util-linux zlib:dev
+
+[PROVIDES] efsd efsd-config efsdsh libefsd.a libefsd.so
 

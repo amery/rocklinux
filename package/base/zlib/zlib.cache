@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104640723 Sun Jan  2 05:38:43 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110124022 Sun Mar  6 16:47:02 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 1-zlib.log 3-zlib.log
+[LOGS] 1-zlib.log 3-zlib.log 9-zlib.log
 
-[BUILDTIME] 98 (3)
+[BUILDTIME] 1721 (9)
 [SIZE] 0.07 MB, 10 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
 [DEP] sed sysfiles tar
+
+[PROVIDES] libz.a libz.so
 

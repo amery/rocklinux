@@ -20,23 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104717725 Mon Jan  3 03:02:05 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110207692 Mon Mar  7 16:01:32 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-guppi.log
+[LOGS] 5-guppi.log 9-guppi.log
 
-[BUILDTIME] 25444 (5)
-[SIZE] 1.33 MB, 183 files
+[BUILDTIME] 25675 (9)
+[SIZE] 1.34 MB, 183 files
 
-[DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev autoconf
-[DEP] automake19 bash2 bdb33 binutils bonobo10 bonobo10:dev bzip2
-[DEP] coreutils diffutils esound esound:dev findutils flex flex:dev
-[DEP] freetype freetype:dev gawk gcc34 gcc34:dev gdk-pixbuf10
-[DEP] gdk-pixbuf10:dev gettext glib12 glib12:dev glibc23 glibc23:dev
-[DEP] gnome-libs14 gnome-libs14:dev gnome-print10 gnome-print10:dev grep
-[DEP] gtk+12 gtk+12:dev imlib imlib:dev libglade10 libglade10:dev libxml
-[DEP] libxml:dev linux26-header:dev m4 make mktemp oaf10 oaf10:dev orbit10
-[DEP] orbit10:dev patch perl5 popt sed sysfiles tar texinfo util-linux
-[DEP] xfree86 xfree86:dev zlib:dev
+[DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev autoconf automake19
+[DEP] bash2 bdb33 binutils bonobo10 bonobo10:dev bzip2 coreutils
+[DEP] diffutils esound esound:dev findutils flex flex:dev freetype
+[DEP] freetype:dev gawk gcc34 gcc34:dev gdk-pixbuf10 gdk-pixbuf10:dev
+[DEP] gettext glib12 glib12:dev glibc23 glibc23:dev gnome-libs14
+[DEP] gnome-libs14:dev gnome-print10 gnome-print10:dev grep gtk+12
+[DEP] gtk+12:dev imlib imlib:dev libglade10 libglade10:dev libxml
+[DEP] libxml:dev linux26-header:dev m4 make mktemp net-tools oaf10
+[DEP] oaf10:dev orbit10 orbit10:dev patch perl5 popt sed sysfiles tar
+[DEP] texinfo util-linux xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] libguppi.so libguppitank.so
 

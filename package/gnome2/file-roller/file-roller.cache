@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104688108 Sun Jan  2 18:48:28 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110174467 Mon Mar  7 06:47:47 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-file-roller.log
+[LOGS] 5-file-roller.log 9-file-roller.log
 
-[BUILDTIME] 6547 (5)
+[BUILDTIME] 7050 (9)
 [SIZE] 3.11 MB, 177 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
@@ -39,7 +39,9 @@
 [DEP] libbonoboui:dev libglade libglade:dev libgnome libgnome:dev
 [DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev
 [DEP] libjpeg libjpeg:dev libxml2 libxml2:dev linux26-header:dev make
-[DEP] mktemp openssl orbit2 orbit2:dev pango pango:dev perl5 pkgconfig
-[DEP] popt popt:dev scrollkeeper sed sysfiles tar util-linux xfree86
-[DEP] zapping zlib:dev
+[DEP] mktemp net-tools openssl orbit2 orbit2:dev pango pango:dev perl5
+[DEP] pkgconfig popt popt:dev scrollkeeper sed sysfiles tar util-linux
+[DEP] xfree86 zapping zlib:dev
+
+[PROVIDES] file-roller
 

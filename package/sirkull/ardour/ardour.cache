@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104741388 Mon Jan  3 09:36:28 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110235154 Mon Mar  7 23:39:14 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ardour.log
+[LOGS] 5-ardour.log 9-ardour.log
 
-[BUILDTIME] 87322 (5)
+[BUILDTIME] 88200 (9)
 [SIZE] 11.19 MB, 55 files
 
 [DEP] 00-dirtree alsa alsa:dev bash2 binutils bison bzip2 coreutils curl
@@ -35,7 +35,9 @@
 [DEP] gnome-libs14 grep gtk+12 gtk+12:dev jack jack:dev libart_lgpl23
 [DEP] libart_lgpl23:dev liblrdf liblrdf:dev libpng libpng:dev libsamplerate
 [DEP] libsamplerate:dev libsndfile libsndfile:dev libtool libxml2
-[DEP] libxml2:dev linux26-header:dev m4 make mktemp ncurses:dev openssl
-[DEP] patch perl5 pkgconfig raptor raptor:dev sed sysfiles tar util-linux
-[DEP] xfree86 xfree86:dev zlib:dev
+[DEP] libxml2:dev linux26-header:dev m4 make mktemp ncurses:dev net-tools
+[DEP] openssl patch perl5 pkgconfig raptor raptor:dev sed sysfiles tar
+[DEP] util-linux xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] ardour ksi remote_kbd
 

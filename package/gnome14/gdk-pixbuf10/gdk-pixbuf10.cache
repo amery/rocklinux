@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104668926 Sun Jan  2 13:28:46 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110151896 Mon Mar  7 00:31:36 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gdk-pixbuf10.log
+[LOGS] 5-gdk-pixbuf10.log 9-gdk-pixbuf10.log
 
-[BUILDTIME] 6570 (5)
+[BUILDTIME] 7073 (9)
 [SIZE] 0.62 MB, 56 files
 
 [DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev autoconf automake19
@@ -34,6 +34,10 @@
 [DEP] findutils gawk gcc34 gcc34:dev glib glib12 glib12:dev glibc23
 [DEP] glibc23:dev gnome-libs14 gnome-libs14:dev grep gtk+12 gtk+12:dev
 [DEP] gtkdoc imlib imlib:dev libjpeg libjpeg:dev libpng libpng:dev libtiff
-[DEP] libtiff:dev linux26-header:dev make mktemp perl5 sed sysfiles tar
-[DEP] texinfo util-linux xfree86 xfree86:dev zlib:dev
+[DEP] libtiff:dev linux26-header:dev make mktemp net-tools perl5 sed
+[DEP] sysfiles tar texinfo util-linux xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] gdk-pixbuf-config libgdk_pixbuf.a libgdk_pixbuf.so
+[PROVIDES] libgdk_pixbuf_xlib.a libgdk_pixbuf_xlib.so
+[PROVIDES] libgnomecanvaspixbuf.a libgnomecanvaspixbuf.so
 

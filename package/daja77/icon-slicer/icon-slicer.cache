@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104666335 Sun Jan  2 12:45:35 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110148764 Sun Mar  6 23:39:24 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-icon-slicer.log
+[LOGS] 5-icon-slicer.log 9-icon-slicer.log
 
-[BUILDTIME] 1106 (5)
+[BUILDTIME] 1648 (9)
 [SIZE] 0.03 MB, 7 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
 [DEP] gcc34:dev glib glib:dev glibc23 glibc23:dev grep gtk+ gtk+:dev
-[DEP] linux26-header:dev make mktemp pango pkgconfig popt popt:dev sed
-[DEP] sysfiles tar util-linux xfree86
+[DEP] linux26-header:dev make mktemp net-tools pango pkgconfig popt
+[DEP] popt:dev sed sysfiles tar util-linux xfree86
+
+[PROVIDES] icon-slicer
 

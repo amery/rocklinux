@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104789014 Mon Jan  3 22:50:14 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110405444 Wed Mar  9 22:57:24 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-dvdrip.log
+[LOGS] 5-dvdrip.log 9-dvdrip.log
 
-[BUILDTIME] 1480 (5)
-[SIZE] 0.86 MB, 116 files
+[BUILDTIME] 3359 (9)
+[SIZE] 1.12 MB, 134 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep gtk-perl10 make mktemp perl5 sed sysfiles
-[DEP] tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cpan-locale-messages
+[DEP] findutils gcc34 gcc34:dev glibc23 glibc23:dev grep gtk-perl10 make
+[DEP] mktemp perl5 sed sysfiles tar
+
+[PROVIDES] dr_exec dr_progress dr_splitpipe dvdrip dvdrip-master
 

@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104641833 Sun Jan  2 05:57:13 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110304161 Tue Mar  8 18:49:21 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 3-module-init-tools.log
+[LOGS] 3-module-init-tools.log 9-module-init-tools.log
 
-[BUILDTIME] 1223 (3)
+[BUILDTIME] 1822 (9)
 [SIZE] 0.44 MB, 25 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
+[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
+[DEP] linux26-source make mktemp net-tools sed sysfiles tar util-linux
+
+[PROVIDES] depmod generate-modprobe.conf insmod insmod.static lsmod
+[PROVIDES] modinfo modprobe rmmod
 

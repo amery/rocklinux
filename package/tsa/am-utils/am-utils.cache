@@ -20,17 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104749664 Mon Jan  3 11:54:24 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110307275 Tue Mar  8 19:41:15 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-am-utils.log
+[LOGS] 5-am-utils.log 9-am-utils.log
 
-[BUILDTIME] 14082 (5)
+[BUILDTIME] 14465 (9)
 [SIZE] 0.79 MB, 42 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils findutils
 [DEP] flex flex:dev gawk gcc34 gcc34:dev gdbm:dev glibc23 glibc23:dev
 [DEP] grep hesiod hesiod:dev linux26-header:dev m4 make mktemp net-tools
 [DEP] sed sysfiles tar tcp_wrappers:dev texinfo util-linux
+
+[PROVIDES] am-eject amd amd2ldif amd2sun amq automount2amd ctl-amd
+[PROVIDES] ctl-hlfsd expn fix-amd-map fixmount fixrmtab fsinfo hlfsd
+[PROVIDES] libamu.a lostaltmail mk-amd-map pawd wait4amd wait4amd2die
+[PROVIDES] wire-test
 

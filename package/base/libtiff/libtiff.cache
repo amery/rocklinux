@@ -20,17 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104653821 Sun Jan  2 09:17:01 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110133544 Sun Mar  6 19:25:44 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libtiff.log
+[LOGS] 5-libtiff.log 9-libtiff.log
 
-[BUILDTIME] 8705 (5)
-[SIZE] 0.89 MB, 94 files
+[BUILDTIME] 9705 (9)
+[SIZE] 0.91 MB, 95 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep libjpeg libjpeg:dev libtool
-[DEP] linux26-header:dev make mktemp sed sysfiles tar util-linux xfree86
-[DEP] xfree86:dev zlib:dev
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev glut glut:dev grep libjpeg
+[DEP] libjpeg:dev libtool linux26-header:dev make mktemp net-tools sed
+[DEP] sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] bmp2tiff fax2ps fax2tiff gif2tiff libtiff.a libtiff.so pal2rgb
+[PROVIDES] ppm2tiff ras2tiff raw2tiff rgb2ycbcr thumbnail tiff2bw tiff2pdf
+[PROVIDES] tiff2ps tiff2rgba tiffcmp tiffcp tiffdither tiffdump tiffgt
+[PROVIDES] tiffinfo tiffmedian tiffset tiffsplit
 

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104641819 Sun Jan  2 05:56:59 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110304136 Tue Mar  8 18:48:56 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 3-psmisc.log
+[LOGS] 3-psmisc.log 9-psmisc.log
 
-[BUILDTIME] 2074 (3)
+[BUILDTIME] 2694 (9)
 [SIZE] 0.17 MB, 19 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev gettext glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp ncurses:dev patch sed sysfiles tar util-linux
+[DEP] make mktemp ncurses:dev net-tools patch sed sysfiles tar util-linux
+
+[PROVIDES] fuser killall pstree pstree.x11
 

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104641911 Sun Jan  2 05:58:31 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110304751 Tue Mar  8 18:59:11 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 3-devfsd.log
+[LOGS] 3-devfsd.log 9-devfsd.log
 
-[BUILDTIME] 828 (3)
+[BUILDTIME] 1425 (9)
 [SIZE] 0.08 MB, 27 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp modutils
-[DEP] patch sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev linux26-source
+[DEP] m4 make mktemp modutils patch sed sysfiles tar
+
+[PROVIDES] devfsd
 

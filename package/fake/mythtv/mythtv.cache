@@ -20,18 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104663456 Sun Jan  2 11:57:36 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110145147 Sun Mar  6 22:39:07 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-mythtv.log
+[LOGS] 5-mythtv.log 9-mythtv.log
 
-[BUILDTIME] 108210 (5)
-[SIZE] 24.13 MB, 669 files
+[BUILDTIME] 110836 (9)
+[SIZE] 24.87 MB, 676 files
 
 [DEP] 00-dirtree alsa alsa:dev bash2 binutils bzip2 coreutils diffutils
 [DEP] expat findutils freetype freetype:dev gawk gcc34 gcc34:dev glibc23
 [DEP] glibc23:dev grep lame lame:dev libpng linux26-header:dev lirc
-[DEP] lirc:dev make mktemp patch qt qt:dev sed sysfiles tar xfree86
-[DEP] xfree86:dev zlib:dev
+[DEP] lirc:dev make mktemp patch perl5 qt qt:dev sed sysfiles tar tetex
+[DEP] xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] libmyth-0.16.so libmythavcodec-0.16.so libmythavformat-0.16.so
+[PROVIDES] libmythsamplerate-0.16.a libmythsoundtouch-0.16.a
+[PROVIDES] libmythtv-0.16.so mythbackend mythcommflag mythepg
+[PROVIDES] mythfilldatabase mythfrontend mythjobqueue mythprogfind
+[PROVIDES] mythsetup mythtranscode mythtv mythtvosd
 

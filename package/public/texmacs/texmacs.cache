@@ -20,18 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104796021 Tue Jan  4 00:47:01 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110896615 Tue Mar 15 15:23:35 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-texmacs.log
+[LOGS] 5-texmacs.log 9-texmacs.log
 
-[BUILDTIME] 46560 (5)
-[SIZE] 11.88 MB, 2002 files
+[BUILDTIME] 47013 (9)
+[SIZE] 11.89 MB, 2002 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] freetype freetype:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
 [DEP] guile guile:dev gzip libtool libtool:dev linux26-header:dev make
 [DEP] mktemp net-tools sed sysfiles tar util-linux xfree86 xfree86:dev
 [DEP] zlib:dev
+
+[PROVIDES] fig2ps maple_filter maple_in_filter maxima_detect maxima_filter
+[PROVIDES] reduce_filter reduce_setup texmacs texmacs.bin tm_axiom
+[PROVIDES] tm_eukleides tm_gnuplot tm_graphviz tm_gs tm_lisp tm_lush
+[PROVIDES] tm_maple tm_matlab tm_maxima tm_mupad tm_mupad_help tm_octave
+[PROVIDES] tm_python tm_r tm_reduce tm_shell
 

@@ -20,18 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104699915 Sun Jan  2 22:05:15 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110188147 Mon Mar  7 10:35:47 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gkrellm.log
+[LOGS] 5-gkrellm.log 9-gkrellm.log
 
-[BUILDTIME] 3397 (5)
-[SIZE] 1.41 MB, 25 files
+[BUILDTIME] 3760 (9)
+[SIZE] 1.42 MB, 25 files
 
 [DEP] 00-dirtree alsa atk atk:dev bash2 binutils bzip2 coreutils expat
-[DEP] findutils freetype gcc34 gcc34:dev gettext glib glib:dev glibc23
-[DEP] glibc23:dev grep gtk+ gtk+:dev linux26-header:dev make mktemp
-[DEP] openssl openssl:dev pango pango:dev pkgconfig sed sysfiles tar
-[DEP] xfree86 xfree86:dev
+[DEP] findutils freetype gawk gcc34 gcc34:dev gettext glib glib:dev
+[DEP] glibc23 glibc23:dev grep gtk+ gtk+:dev linux26-header:dev make
+[DEP] mktemp openssl openssl:dev pango pango:dev pkgconfig sed sysfiles
+[DEP] tar xfree86 xfree86:dev
+
+[PROVIDES] gkrellm gkrellmd
 

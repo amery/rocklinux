@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104666281 Sun Jan  2 12:44:41 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110148686 Sun Mar  6 23:38:06 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-aide.log
+[LOGS] 5-aide.log 9-aide.log
 
-[BUILDTIME] 1906 (5)
+[BUILDTIME] 2398 (9)
 [SIZE] 0.74 MB, 10 files
 
 [DEP] 00-dirtree autoconf bash2 binutils bison bzip2 coreutils diffutils
 [DEP] findutils flex flex:dev gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] libmhash:dev linux26-header:dev m4 make mktemp perl5 sed sysfiles
-[DEP] tar texinfo zlib:dev
+[DEP] libmhash:dev linux26-header:dev m4 make mktemp net-tools perl5 sed
+[DEP] sysfiles tar texinfo zlib:dev
+
+[PROVIDES] aide
 

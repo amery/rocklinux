@@ -20,62 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104911603 Wed Jan  5 08:53:23 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110300717 Tue Mar  8 17:51:57 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 3-lvm.err
+[LOGS] 3-lvm.log 9-lvm.log
 
-[BUILDTIME] 1538 (3)
+[BUILDTIME] 5540 (9)
+[SIZE] 0.56 MB, 46 files
 
-[3-ERROR] ../tools/lib/liblvm.h: At top level:
-[3-ERROR] ../tools/lib/liblvm.h:833: error: parse error before "pv_t"
-[3-ERROR] ../tools/lib/liblvm.h: In function `get_pe_from_offset':
-[3-ERROR] ../tools/lib/liblvm.h:835: error: `offset' undeclared (first use in this function)
-[3-ERROR] ../tools/lib/liblvm.h:835: error: `pv' undeclared (first use in this function)
-[3-ERROR] ../tools/lib/liblvm.h: At top level:
-[3-ERROR] ../tools/lib/liblvm.h:838: error: parse error before '*' token
-[3-ERROR] ../tools/lib/liblvm.h: In function `lvm_pv_check_version':
-[3-ERROR] ../tools/lib/liblvm.h:840: error: `pv' undeclared (first use in this function)
-[3-ERROR] ../tools/lib/liblvm.h: At top level:
-[3-ERROR] ../tools/lib/liblvm.h:844: error: parse error before '*' token
-[3-ERROR] ../tools/lib/liblvm.h: In function `_find_unused_pv_number':
-[3-ERROR] ../tools/lib/liblvm.h:846: error: `pp' undeclared (first use in this function)
-[3-ERROR] ../tools/lib/liblvm.h:848: error: `vg' undeclared (first use in this function)
-[3-ERROR] e2fsadm.c: In function `main':
-[3-ERROR] e2fsadm.c:158: error: invalid operands to binary *
-[3-ERROR] e2fsadm.c:159: error: `vg' undeclared (first use in this function)
-[3-ERROR] e2fsadm.c:452: error: request for member `lv_size' in something not a structure or union
-[3-ERROR] e2fsadm.c: At top level:
-[3-ERROR] /usr/include/asm/smp.h:37: warning: array 'cpu_sibling_map' assumed to have one element
-[3-ERROR] /usr/include/asm/smp.h:46: warning: array 'x86_cpu_to_apicid' assumed to have one element
-[3-ERROR] /usr/include/linux/device.h:371: error: storage size of `dev' isn't known
-[3-ERROR] make[2]: *** [e2fsadm.o] Error 1
-[3-ERROR] make[2]: Leaving directory `/ROCK/src.lvm.1104911545.30330.3002870432/LVM/1.0.8/tools'
-[3-ERROR] make[1]: *** [all] Error 2
-[3-ERROR] make[1]: Leaving directory `/ROCK/src.lvm.1104911545.30330.3002870432/LVM/1.0.8/tools'
-[3-ERROR] make[1]: Entering directory `/ROCK/src.lvm.1104911545.30330.3002870432/LVM/1.0.8'
-[3-ERROR] 
-[3-ERROR] **********************************
-[3-ERROR] There were errors in your compile.
-[3-ERROR] **********************************
-[3-ERROR] 
-[3-ERROR] make[1]: *** [.touchbuilt] Error 1
-[3-ERROR] make[1]: Leaving directory `/ROCK/src.lvm.1104911545.30330.3002870432/LVM/1.0.8'
-[3-ERROR] make: *** [all] Error 2
-[3-ERROR] --- BUILD ERROR ---
-[3-ERROR] Creating file list and doing final adaptions ... 
-[3-ERROR] Processing static lib corrections ...
-[3-ERROR] Verifing the .la files ...
-[3-ERROR] Found 1 files for this package.
-[3-ERROR] Applying package split: 40 lvm:dev (/lib/.*\.(la|a|o)$|/include/)
-[3-ERROR] Applying package split: 42 lvm:dev /pkgconfig/
-[3-ERROR] Applying package split: 60 lvm:doc /share/doc/
-[3-ERROR] Calculating package dependencies ...
-[3-ERROR] <lvm:doc> Creating flist file ...
-[3-ERROR] <lvm:doc> Creating package dependencies file ...
-[3-ERROR] <lvm:doc> Creating md5sum and cksum files ...
-[3-ERROR] <lvm:doc> Creating package description ...
-[3-ERROR] Making post-install adaptions.
-[3-ERROR] Finished building lvm=lvm.
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
+[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux24-header:dev
+[DEP] linux26-source make mktemp net-tools patch sed sysfiles tar
+
+[PROVIDES] liblvm-10.a liblvm-10.so
 

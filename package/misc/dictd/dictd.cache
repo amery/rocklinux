@@ -20,17 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104790981 Mon Jan  3 23:23:01 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110661662 Sat Mar 12 22:07:42 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-dictd.log
+[LOGS] 5-dictd.log 9-dictd.log
 
-[BUILDTIME] 4756 (5)
-[SIZE] 0.44 MB, 30 files
+[BUILDTIME] 9847 (9)
+[SIZE] 0.45 MB, 30 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils
 [DEP] findutils flex flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev
 [DEP] grep linux26-header:dev m4 make mktemp net-tools sed sysfiles tar
 [DEP] util-linux zlib:dev
+
+[PROVIDES] colorit dict dictd dictdplugin-config dictfmt
+[PROVIDES] dictfmt_index2suffix dictfmt_index2word dictfmt_plugin
+[PROVIDES] dictfmt_virtual dictl dictunformat dictzip
 

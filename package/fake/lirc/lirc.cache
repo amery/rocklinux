@@ -20,17 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104662184 Sun Jan  2 11:36:24 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110143782 Sun Mar  6 22:16:22 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-lirc.log
+[LOGS] 5-lirc.log 9-lirc.log
 
-[BUILDTIME] 3361 (5)
-[SIZE] 0.26 MB, 35 files
+[BUILDTIME] 3998 (9)
+[SIZE] 0.27 MB, 37 files
 
-[DEP] 00-dirtree alsa alsa:dev bash2 binutils bzip2 coreutils diffutils
-[DEP] findutils gcc34 gcc34:dev glibc23 glibc23:dev grep linux26
-[DEP] linux26-header:dev linux26-source make mktemp sed svgalib:dev
-[DEP] sysfiles tar xfree86 xfree86:dev
+[DEP] 00-dirtree alsa alsa:dev bash2 binutils bzip2 coreutils
+[DEP] diffutils findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
+[DEP] linux26-header:dev linux26-source make mktemp net-tools sed svgalib
+[DEP] svgalib:dev sysfiles tar xfree86 xfree86:dev
+
+[PROVIDES] ircat irexec irpty irrecord irsend irw irxevent liblirc_client.a
+[PROVIDES] liblirc_client.so lircd lircmd mode2 smode2 xmode2
 

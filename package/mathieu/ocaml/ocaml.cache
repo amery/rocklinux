@@ -20,17 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104749424 Mon Jan  3 11:50:24 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110306992 Tue Mar  8 19:36:32 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ocaml.log
+[LOGS] 5-ocaml.log 9-ocaml.log
 
-[BUILDTIME] 26665 (5)
+[BUILDTIME] 27033 (9)
 [SIZE] 29.52 MB, 941 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
 [DEP] gcc34:dev gdbm gdbm:dev glibc23 glibc23:dev grep linux26-header:dev
 [DEP] make mktemp ncurses:dev sed sysfiles tar tcl tcl:dev tk tk:dev
 [DEP] xfree86 xfree86:dev
+
+[PROVIDES] camlp4 camlp4o camlp4o.opt camlp4r camlp4r.opt labltk mkcamlp4
+[PROVIDES] ocaml ocamlbrowser ocamlc ocamlc.opt ocamlcp ocamldebug ocamldep
+[PROVIDES] ocamldep.opt ocamldoc ocamldoc.opt ocamllex ocamllex.opt
+[PROVIDES] ocamlmklib ocamlmktop ocamlopt ocamlopt.opt ocamlprof ocamlrun
+[PROVIDES] ocamlyacc ocpp
 

@@ -20,19 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104725183 Mon Jan  3 05:06:23 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110215542 Mon Mar  7 18:12:22 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-kooldock.log
+[LOGS] 5-kooldock.log 9-kooldock.log
 
-[BUILDTIME] 5768 (5)
+[BUILDTIME] 6157 (9)
 [SIZE] 0.67 MB, 50 files
 
 [DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils expat
 [DEP] fam fam:dev file findutils freetype freetype:dev gcc34 gcc34:dev
 [DEP] gettext glibc23 glibc23:dev grep kdelibs kdelibs:dev libart_lgpl23
 [DEP] libart_lgpl23:dev libjpeg libpng libpng:dev linux26-header:dev
-[DEP] make mktemp perl5 qt qt:dev sed sysfiles tar util-linux xfree86
-[DEP] xfree86:dev zlib:dev
+[DEP] make mktemp net-tools perl5 qt qt:dev sed sysfiles tar util-linux
+[DEP] xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] kooldock
 

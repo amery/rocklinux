@@ -20,17 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104676923 Sun Jan  2 15:42:03 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110161428 Mon Mar  7 03:10:28 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libmpeg2.log
+[LOGS] 5-libmpeg2.log 9-libmpeg2.log
 
-[BUILDTIME] 4025 (5)
+[BUILDTIME] 4551 (9)
 [SIZE] 0.15 MB, 11 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep libsdl libsdl:dev
-[DEP] linux26-header:dev make mktemp nas sed sysfiles tar util-linux
-[DEP] xfree86 xfree86:dev
+[DEP] linux26-header:dev make mktemp nas net-tools sed sysfiles tar
+[DEP] util-linux xfree86 xfree86:dev
+
+[PROVIDES] corrupt_mpeg2 extract_mpeg2 libmpeg2.a libmpeg2convert.a
+[PROVIDES] mpeg2dec
 

@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104760978 Mon Jan  3 15:02:58 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110319770 Tue Mar  8 23:09:30 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-dhcp.log
+[LOGS] 5-dhcp.log 9-dhcp.log
 
-[BUILDTIME] 4359 (5)
+[BUILDTIME] 4554 (9)
 [SIZE] 1.39 MB, 35 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep groff linux26-header:dev m4 make
 [DEP] mktemp patch sed sysfiles tar
+
+[PROVIDES] dhclient dhclient-script dhcpd dhcrelay libdhcpctl.a libomapi.a
+[PROVIDES] omshell
 

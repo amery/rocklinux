@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104737990 Mon Jan  3 08:39:50 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110230717 Mon Mar  7 22:25:17 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gaim.log
+[LOGS] 5-gaim.log 9-gaim.log
 
-[BUILDTIME] 22098 (5)
-[SIZE] 8.60 MB, 366 files
+[BUILDTIME] 22733 (9)
+[SIZE] 9.39 MB, 370 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
 [DEP] bash2 binutils bison bzip2 coreutils diffutils esound:dev
@@ -37,9 +37,11 @@
 [DEP] gnutls gnutls:dev grep gtk+ gtk+:dev libbonobo libbonobo:dev
 [DEP] libgcrypt libgcrypt:dev libgnome libgnome:dev libgpg-error
 [DEP] libgpg-error:dev libxml2 libxml2:dev linux26-header:dev make mktemp
-[DEP] mozilla mozilla:dev ogg-vorbis ogg-vorbis:dev orbit2 orbit2:dev
-[DEP] pango pango:dev perl5 perl5:dev pkgconfig popt popt:dev sed
-[DEP] startup-notification startup-notification:dev sysfiles tar tcl
-[DEP] tcl:dev tk tk:dev util-linux xfree86 xfree86:dev xmms zapping
+[DEP] mozilla mozilla:dev net-tools ogg-vorbis ogg-vorbis:dev orbit2
+[DEP] orbit2:dev pango pango:dev perl5 perl5:dev pkgconfig popt popt:dev
+[DEP] sed startup-notification startup-notification:dev sysfiles tar
+[DEP] tcl tcl:dev tk tk:dev util-linux xfree86 xfree86:dev xmms zapping
 [DEP] zlib:dev
+
+[PROVIDES] gaim gaim-remote libgaim-remote.so
 

@@ -20,16 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104674458 Sun Jan  2 15:00:58 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110158619 Mon Mar  7 02:23:39 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-maildrop.log
+[LOGS] 5-maildrop.log 9-maildrop.log
 
-[BUILDTIME] 10709 (5)
+[BUILDTIME] 11396 (9)
 [SIZE] 0.78 MB, 47 files
 
-[DEP] 00-dirtree bash2 bdb41 binutils bzip2 coreutils diffutils fam fam:dev
+[DEP] 00-dirtree bash2 bdb42 binutils bzip2 coreutils diffutils fam fam:dev
 [DEP] findutils gawk gcc34 gcc34:dev gdbm gdbm:dev glibc23 glibc23:dev
-[DEP] grep linux26-header:dev make mktemp perl5 sed sysfiles tar util-linux
+[DEP] grep linux26-header:dev make mktemp net-tools perl5 sed sysfiles
+[DEP] tar util-linux
+
+[PROVIDES] deliverquota_maildrop librfc2045.a librfc822.a lockmail mailbot
+[PROVIDES] maildirmake maildrop makemime reformail reformime
 

@@ -20,18 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104671195 Sun Jan  2 14:06:35 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110154548 Mon Mar  7 01:15:48 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ffmpeg.log
+[LOGS] 5-ffmpeg.log 9-ffmpeg.log
 
-[BUILDTIME] 10627 (5)
-[SIZE] 2.11 MB, 18 files
+[BUILDTIME] 11374 (9)
+[SIZE] 2.15 MB, 21 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] freetype freetype:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
 [DEP] lame lame:dev libsdl libsdl:dev linux26-header:dev make mktemp
 [DEP] nas ogg-vorbis ogg-vorbis:dev patch perl5 sed sysfiles tar tetex
 [DEP] xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] ffmpeg ffplay ffserver libavcodec-0.4.9-pre1.so libavcodec.so
+[PROVIDES] libavformat-0.4.9-pre1.so libavformat.so
 

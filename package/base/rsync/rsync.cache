@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104653728 Sun Jan  2 09:15:28 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110133435 Sun Mar  6 19:23:55 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-rsync.log
+[LOGS] 5-rsync.log 9-rsync.log
 
-[BUILDTIME] 3156 (5)
+[BUILDTIME] 3721 (9)
 [SIZE] 0.26 MB, 9 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp popt popt:dev sed sysfiles tar util-linux
+[DEP] mktemp net-tools popt popt:dev sed sysfiles tar util-linux
+
+[PROVIDES] rsync
 

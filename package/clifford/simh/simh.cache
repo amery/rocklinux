@@ -20,15 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104731182 Mon Jan  3 06:46:22 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110222313 Mon Mar  7 20:05:13 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-simh.log
+[LOGS] 5-simh.log 9-simh.log
 
-[BUILDTIME] 14498 (5)
+[BUILDTIME] 14800 (9)
 [SIZE] 2.75 MB, 30 files
 
 [DEP] 00-dirtree bash2 binutils coreutils findutils gawk gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp sed unzip
+
+[PROVIDES] altair altairz80 eclipse gri h316 hp2100 i1401 i1620 ibm1130
+[PROVIDES] id16 id32 lgp nova pdp1 pdp10 pdp11 pdp15 pdp4 pdp7 pdp8 pdp9
+[PROVIDES] s3 sds vax
 

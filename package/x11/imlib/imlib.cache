@@ -20,19 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104658653 Sun Jan  2 10:37:33 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110139818 Sun Mar  6 21:10:18 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-imlib.log
+[LOGS] 5-imlib.log 9-imlib.log
 
-[BUILDTIME] 5922 (5)
+[BUILDTIME] 6470 (9)
 [SIZE] 0.67 MB, 29 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils findutils gawk gcc34 gcc34:dev glib12 glib12:dev
-[DEP] glibc23 glibc23:dev grep gtk+12 gtk+12:dev libjpeg libjpeg:dev
+[DEP] diffutils findutils gcc34 gcc34:dev glib12 glib12:dev glibc23
+[DEP] glibc23:dev grep gtk+12 gtk+12:dev libjpeg libjpeg:dev
 [DEP] libpng libpng:dev libtiff libtiff:dev libungif libungif:dev
-[DEP] linux26-header:dev make mktemp perl5 sed sysfiles tar texinfo
-[DEP] xfree86 xfree86:dev zlib:dev
+[DEP] linux26-header:dev make mktemp net-tools perl5 sed sysfiles tar
+[DEP] texinfo xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] imlib-config imlib_config libImlib.a libImlib.so libgdk_imlib.a
+[PROVIDES] libgdk_imlib.so libimlib-bmp.a libimlib-bmp.so libimlib-gif.a
+[PROVIDES] libimlib-gif.so libimlib-jpeg.a libimlib-jpeg.so libimlib-png.a
+[PROVIDES] libimlib-png.so libimlib-ppm.a libimlib-ppm.so libimlib-ps.a
+[PROVIDES] libimlib-ps.so libimlib-tiff.a libimlib-tiff.so libimlib-xpm.a
+[PROVIDES] libimlib-xpm.so
 

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104792749 Mon Jan  3 23:52:29 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110664348 Sat Mar 12 22:52:28 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-log4cpp.log
+[LOGS] 5-log4cpp.log 9-log4cpp.log
 
-[BUILDTIME] 10868 (5)
+[BUILDTIME] 24002 (9)
 [SIZE] 0.40 MB, 63 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils doxygen
 [DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev graphviz grep
 [DEP] linux26-header:dev make mktemp net-tools sed sysfiles tar util-linux
+
+[PROVIDES] liblog4cpp.a liblog4cpp.so log4cpp-config
 

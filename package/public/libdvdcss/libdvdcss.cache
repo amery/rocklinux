@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104655416 Sun Jan  2 09:43:36 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110135745 Sun Mar  6 20:02:25 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libdvdcss.log
+[LOGS] 5-libdvdcss.log 9-libdvdcss.log
 
-[BUILDTIME] 1801 (5)
+[BUILDTIME] 2378 (9)
 [SIZE] 0.04 MB, 9 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] sed sysfiles tar util-linux
+[DEP] net-tools sed sysfiles tar util-linux
+
+[PROVIDES] libdvdcss.a libdvdcss.so
 

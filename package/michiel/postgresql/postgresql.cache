@@ -20,18 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1101814959 Tue Nov 30 12:42:39 2004
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110151802 Mon Mar  7 00:30:02 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-postgresql.log
+[LOGS] 5-postgresql.log 9-postgresql.log
 
-[BUILDTIME] 27181 (5)
-[SIZE] 13.97 MB, 815 files
+[BUILDTIME] 25687 (9)
+[SIZE] 15.69 MB, 1445 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils
 [DEP] findutils flex gawk gcc34 gcc34:dev glibc23 glibc23:dev grep gzip
 [DEP] linux26-header:dev m4 make mktemp ncurses:dev net-tools openjade
 [DEP] openssl openssl:dev pam pam:dev patch perl5 perl5:dev readline
 [DEP] readline:dev sed sysfiles tar util-linux zlib:dev
+
+[PROVIDES] clusterdb createdb createlang createuser dropdb droplang
+[PROVIDES] dropuser ecpg initdb ipcclean libecpg.a libecpg.so
+[PROVIDES] libecpg_compat.a libecpg_compat.so libpgport.a libpgtypes.a
+[PROVIDES] libpgtypes.so libpq.a libpq.so pg_config pg_controldata pg_ctl
+[PROVIDES] pg_dump pg_dumpall pg_resetxlog pg_restore postgres postmaster
+[PROVIDES] psql vacuumdb
 

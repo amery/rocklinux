@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104645448 Sun Jan  2 06:57:28 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110139407 Sun Mar  6 21:03:27 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-syslinux.log
+[LOGS] 5-syslinux.log 9-syslinux.log
 
-[BUILDTIME] 1567 (5)
-[SIZE] 0.14 MB, 22 files
+[BUILDTIME] 3054 (9)
+[SIZE] 0.20 MB, 25 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] nasm perl5 sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
+[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp nasm perl5
+[DEP] sed sysfiles tar
+
+[PROVIDES] extlinux gethostip lss16toppm ppmtolss16 syslinux
 

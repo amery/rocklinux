@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104691318 Sun Jan  2 19:41:58 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110178214 Mon Mar  7 07:50:14 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gtkhtml.log
+[LOGS] 5-gtkhtml.log 9-gtkhtml.log
 
-[BUILDTIME] 20297 (5)
+[BUILDTIME] 20794 (9)
 [SIZE] 2.09 MB, 133 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
@@ -41,6 +41,9 @@
 [DEP] libgnomeprint:dev libgnomeprintui libgnomeprintui:dev libgnomeui
 [DEP] libgnomeui:dev libgpg-error libgpg-error:dev libjpeg libjpeg:dev
 [DEP] libsoup libsoup:dev libxml2 libxml2:dev linux26-header:dev make
-[DEP] mktemp openssl orbit2 orbit2:dev pango pango:dev perl5 pkgconfig popt
-[DEP] popt:dev sed sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+[DEP] mktemp net-tools openssl orbit2 orbit2:dev pango pango:dev perl5
+[DEP] pkgconfig popt popt:dev sed sysfiles tar util-linux xfree86
+[DEP] xfree86:dev zlib:dev
+
+[PROVIDES] libgtkhtml-3.1.a libgtkhtml-3.1.so
 

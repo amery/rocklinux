@@ -20,18 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104669072 Sun Jan  2 13:31:12 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110152073 Mon Mar  7 00:34:33 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-emacs-xemacs-shared.log
+[LOGS] 5-emacs-xemacs-shared.log 9-emacs-xemacs-shared.log
 
-[BUILDTIME] 4397 (5)
+[BUILDTIME] 4944 (9)
 [SIZE] 0.10 MB, 13 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev gpm gpm:dev grep libelf:dev
 [DEP] libjpeg libjpeg:dev libpng libpng:dev libtiff libtiff:dev
-[DEP] linux26-header:dev make mktemp nas nas:dev ncurses:dev openmotif
-[DEP] openmotif:dev patch sed sysfiles tar xfree86 xfree86:dev zlib:dev
+[DEP] linux26-header:dev make mktemp nas nas:dev ncurses:dev net-tools
+[DEP] openmotif openmotif:dev patch sed sysfiles tar xfree86 xfree86:dev
+[DEP] zlib:dev
+
+[PROVIDES] b2m ellcc gnuattach gnuclient gnudoit ootags rcs-checkin
 

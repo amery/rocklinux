@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104792616 Mon Jan  3 23:50:16 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110664060 Sat Mar 12 22:47:40 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-irmanager.log
+[LOGS] 5-irmanager.log 9-irmanager.log
 
-[BUILDTIME] 1628 (5)
+[BUILDTIME] 3451 (9)
 [SIZE] 0.09 MB, 10 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils findutils flex flex:dev gcc34 gcc34:dev glibc23 glibc23:dev
-[DEP] grep linux26-header:dev m4 make mktemp ncurses:dev net-tools perl5
-[DEP] sed sysfiles tar texinfo
+[DEP] diffutils findutils flex flex:dev gawk gcc34 gcc34:dev glibc23
+[DEP] glibc23:dev grep linux26-header:dev m4 make mktemp ncurses:dev
+[DEP] net-tools perl5 sed sysfiles tar texinfo
+
+[PROVIDES] irmanager irmanager-signalconf untee
 

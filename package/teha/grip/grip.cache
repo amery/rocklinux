@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104796975 Tue Jan  4 01:02:55 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110897521 Tue Mar 15 15:38:41 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-grip.log
+[LOGS] 5-grip.log 9-grip.log
 
-[BUILDTIME] 3839 (5)
-[SIZE] 0.77 MB, 73 files
+[BUILDTIME] 3840 (9)
+[SIZE] 0.78 MB, 73 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
 [DEP] bash2 binutils bzip2 cdparanoia cdparanoia:dev coreutils curl
@@ -42,4 +42,6 @@
 [DEP] net-tools openssl orbit2 orbit2:dev pango pango:dev pkgconfig popt
 [DEP] popt:dev sed sysfiles tar util-linux vte vte:dev xfree86 xfree86:dev
 [DEP] zapping zlib:dev
+
+[PROVIDES] grip
 

@@ -20,20 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104740167 Mon Jan  3 09:16:07 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110233811 Mon Mar  7 23:16:51 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-audacity.log
+[LOGS] 5-audacity.log 9-audacity.log
 
-[BUILDTIME] 33549 (5)
+[BUILDTIME] 33831 (9)
 [SIZE] 3.60 MB, 60 files
 
-[DEP] 00-dirtree atk bash2 binutils bzip2 coreutils diffutils
-[DEP] expat findutils flac flac:dev freetype gawk gcc34 gcc34:dev
-[DEP] gettext glib glibc23 glibc23:dev grep gtk+ gzip libjpeg libpng
-[DEP] libsamplerate libsamplerate:dev libsdl libsndfile libsndfile:dev
-[DEP] libtiff linux26-header:dev mad mad:dev make mktemp nas ogg-vorbis
+[DEP] 00-dirtree atk bash2 binutils bzip2 coreutils diffutils expat
+[DEP] findutils flac flac:dev freetype gawk gcc34 gcc34:dev gettext glib
+[DEP] glibc23 glibc23:dev grep gtk+ gzip libjpeg libpng libsamplerate
+[DEP] libsamplerate:dev libsdl libsndfile libsndfile:dev libtiff
+[DEP] linux26-header:dev mad mad:dev make mktemp nas net-tools ogg-vorbis
 [DEP] ogg-vorbis:dev pango pkgconfig sed sysfiles tar util-linux wxwidgets
 [DEP] wxwidgets:dev xfree86 zip zlib:dev
+
+[PROVIDES] audacity
 

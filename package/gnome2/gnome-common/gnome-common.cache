@@ -20,15 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104691600 Sun Jan  2 19:46:40 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110178619 Mon Mar  7 07:56:59 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnome-common.log
+[LOGS] 5-gnome-common.log 9-gnome-common.log
 
-[BUILDTIME] 1039 (5)
+[BUILDTIME] 1500 (9)
 [SIZE] 0.04 MB, 14 files
 
-[DEP] 00-dirtree bash2 bzip2 coreutils diffutils findutils gcc34 glib
-[DEP] grep make mktemp sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 bzip2 coreutils diffutils findutils gawk gcc34
+[DEP] glib grep make mktemp net-tools sed sysfiles tar util-linux
+
+[PROVIDES] gnome-autogen.sh gnome-doc-common
 

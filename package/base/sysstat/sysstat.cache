@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104711563 Mon Jan  3 01:19:23 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110200968 Mon Mar  7 14:09:28 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-sysstat.log
+[LOGS] 5-sysstat.log 9-sysstat.log
 
-[BUILDTIME] 1444 (5)
+[BUILDTIME] 1767 (9)
 [SIZE] 0.31 MB, 37 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] gettext glibc23 glibc23:dev grep linux26-header:dev make mktemp
 [DEP] patch sed sysfiles tar
+
+[PROVIDES] iostat mpstat sadf sar
 

@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104673007 Sun Jan  2 14:36:47 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110156840 Mon Mar  7 01:54:00 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libxml.log
+[LOGS] 5-libxml.log 9-libxml.log
 
-[BUILDTIME] 5248 (5)
+[BUILDTIME] 5696 (9)
 [SIZE] 1.33 MB, 38 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils gcc34 gcc34:dev glib glibc23 glibc23:dev grep
-[DEP] gtkdoc linux26-header:dev make mktemp ncurses:dev perl5 readline
-[DEP] readline:dev sed sysfiles tar texinfo zlib:dev
+[DEP] gtkdoc linux26-header:dev make mktemp ncurses:dev net-tools perl5
+[DEP] readline readline:dev sed sysfiles tar texinfo zlib:dev
+
+[PROVIDES] libxml.a libxml.so xml-config
 

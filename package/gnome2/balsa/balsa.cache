@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104700090 Sun Jan  2 22:08:10 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110188343 Mon Mar  7 10:39:03 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-balsa.log
+[LOGS] 5-balsa.log 9-balsa.log
 
-[BUILDTIME] 9209 (5)
+[BUILDTIME] 9635 (9)
 [SIZE] 4.28 MB, 96 files
 
 [DEP] 00-dirtree alsa alsa:dev aspell aspell:dev atk atk:dev audiofile
@@ -41,7 +41,9 @@
 [DEP] libgnomecanvas libgnomecanvas:dev libgnomeprint libgnomeprint:dev
 [DEP] libgnomeprintui libgnomeprintui:dev libgnomeui libgnomeui:dev
 [DEP] libjpeg libjpeg:dev libtool libtool:dev libxml2 libxml2:dev
-[DEP] linux26-header:dev make mktemp openssl orbit2 orbit2:dev pango
-[DEP] pango:dev pcre pcre:dev perl5 pkgconfig popt popt:dev scrollkeeper
-[DEP] sed sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+[DEP] linux26-header:dev make mktemp net-tools openssl orbit2 orbit2:dev
+[DEP] pango pango:dev pcre pcre:dev perl5 pkgconfig popt popt:dev
+[DEP] scrollkeeper sed sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] balsa balsa-ab
 

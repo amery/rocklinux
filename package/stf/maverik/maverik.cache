@@ -20,16 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104775619 Mon Jan  3 19:06:59 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110336715 Wed Mar  9 03:51:55 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-maverik.log
+[LOGS] 5-maverik.log 9-maverik.log
 
-[BUILDTIME] 6151 (5)
+[BUILDTIME] 6307 (9)
 [SIZE] 33.03 MB, 2632 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep make mktemp sed sysfiles tar
 [DEP] xfree86 xfree86:dev
+
+[PROVIDES] libmav_avatar.so libmav_callbacks.so libmav_collide.so
+[PROVIDES] libmav_ffnav.so libmav_gfx.so libmav_gfxNone.so
+[PROVIDES] libmav_gfxOpenGLX11.so libmav_hud.so libmav_kernel.so
+[PROVIDES] libmav_lwo.so libmav_navigation.so libmav_objects.so
+[PROVIDES] libmav_sms.so libmav_sr-dummy.so libmav_sr.so libmav_tdm.so
+[PROVIDES] libmav_tr.so libmav_vrad.so libmav_vrml97-dummy.so
+[PROVIDES] libmav_vrml97.so libmav_windows.so libmaverik.so
+[PROVIDES] libmaverikNone.so libmaverikOpenGLX11.so longranger.dat
 

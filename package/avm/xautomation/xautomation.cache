@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104794225 Tue Jan  4 00:17:05 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110893739 Tue Mar 15 14:35:39 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-xautomation.log
+[LOGS] 5-xautomation.log 9-xautomation.log
 
-[BUILDTIME] 1678 (5)
+[BUILDTIME] 1714 (9)
 [SIZE] 0.07 MB, 12 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep libpng libpng:dev
 [DEP] linux26-header:dev make mktemp net-tools patch sed sysfiles tar
 [DEP] util-linux xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] pat2ppm patextract png2pat rgb2pat visgrep xte
 

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104648245 Sun Jan  2 07:44:05 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110126900 Sun Mar  6 17:35:00 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-cvs.log
+[LOGS] 5-cvs.log 9-cvs.log
 
-[BUILDTIME] 5165 (5)
-[SIZE] 1.27 MB, 47 files
+[BUILDTIME] 5844 (9)
+[SIZE] 1.29 MB, 47 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev gdbm:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp sed sysfiles tar texinfo util-linux
+[DEP] make mktemp net-tools sed sysfiles tar texinfo util-linux
+
+[PROVIDES] cvs cvsbug rcs2log
 

@@ -20,16 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104784714 Mon Jan  3 21:38:34 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110399398 Wed Mar  9 21:16:38 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnupod.log
+[LOGS] 5-gnupod.log 9-gnupod.log
 
-[BUILDTIME] 1358 (5)
+[BUILDTIME] 2976 (9)
 [SIZE] 0.22 MB, 30 files
 
 [DEP] 00-dirtree bash2 bzip2 coreutils cpan-mp3-info cpan-unicode-string
-[DEP] cpan-xml-parser diffutils findutils gcc34 grep gzip make mktemp
+[DEP] cpan-xml-parser diffutils findutils gawk gcc34 grep gzip make mktemp
 [DEP] net-tools perl5 sed sysfiles tar texinfo util-linux
+
+[PROVIDES] gnupod_INIT.pl gnupod_addsong.pl gnupod_check.pl
+[PROVIDES] gnupod_convert_FLAC.pl gnupod_convert_MIDI.pl
+[PROVIDES] gnupod_convert_OGG.pl gnupod_otgsync.pl gnupod_search.pl
+[PROVIDES] mktunes.pl tunes2pod.pl
 

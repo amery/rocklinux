@@ -20,17 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104748915 Mon Jan  3 11:41:55 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110306327 Tue Mar  8 19:25:27 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-bind.log
+[LOGS] 5-bind.log 9-bind.log
 
-[BUILDTIME] 11633 (5)
-[SIZE] 9.24 MB, 122 files
+[BUILDTIME] 13616 (9)
+[SIZE] 9.58 MB, 120 files
 
-[DEP] 00-dirtree bash2 bdb41:dev binutils bzip2 coreutils ctags
-[DEP] diffutils findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev
-[DEP] grep linux26-header:dev m4 make mktemp net-tools sed sysfiles
-[DEP] tar util-linux
+[DEP] 00-dirtree bash2 bdb42:dev binutils bzip2 coreutils ctags
+[DEP] diffutils findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
+[DEP] linux26-header:dev m4 make mktemp net-tools openssl openssl:dev
+[DEP] sed sysfiles tar util-linux
+
+[PROVIDES] dig dnssec-keygen dnssec-signzone host isc-config.sh libbind9.a
+[PROVIDES] libdns.a libisc.a libisccc.a libisccfg.a liblwres.a lwresd
+[PROVIDES] named named-checkconf named-checkzone nslookup nsupdate rndc
+[PROVIDES] rndc-confgen
 

@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104648297 Sun Jan  2 07:44:57 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110126975 Sun Mar  6 17:36:15 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-indent.log
+[LOGS] 5-indent.log 9-indent.log
 
-[BUILDTIME] 2007 (5)
+[BUILDTIME] 2614 (9)
 [SIZE] 0.28 MB, 30 files
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils findutils
-[DEP] gcc34 gcc34:dev gettext glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp sed sysfiles tar texinfo util-linux
+[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils
+[DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
+[DEP] linux26-header:dev make mktemp net-tools sed sysfiles tar texinfo
+[DEP] util-linux
+
+[PROVIDES] indent texinfo2man
 

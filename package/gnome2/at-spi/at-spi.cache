@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104682324 Sun Jan  2 17:12:04 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110167390 Mon Mar  7 04:49:50 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-at-spi.log
+[LOGS] 5-at-spi.log 9-at-spi.log
 
-[BUILDTIME] 9831 (5)
+[BUILDTIME] 10355 (9)
 [SIZE] 0.49 MB, 43 files
 
 [DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils cpan-xml-parser
@@ -34,6 +34,8 @@
 [DEP] gconf glib glib:dev glibc23 glibc23:dev gnome-blog grep gtk+ gtk+:dev
 [DEP] indent libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev
 [DEP] libgnomecanvas libgnomecanvas:dev linux26-header:dev make mktemp
-[DEP] orbit2 orbit2:dev pango pango:dev perl5 pkgconfig popt popt:dev
-[DEP] sed sysfiles tar util-linux xfree86 xfree86:dev
+[DEP] net-tools orbit2 orbit2:dev pango pango:dev perl5 pkgconfig popt
+[DEP] popt:dev sed sysfiles tar util-linux xfree86 xfree86:dev
+
+[PROVIDES] libcspi.so libloginhelper.so libspi.so
 

@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104700446 Sun Jan  2 22:14:06 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110188824 Mon Mar  7 10:47:04 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gthumb.log
+[LOGS] 5-gthumb.log 9-gthumb.log
 
-[BUILDTIME] 15684 (5)
-[SIZE] 4.68 MB, 194 files
+[BUILDTIME] 16163 (9)
+[SIZE] 4.69 MB, 194 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
 [DEP] battfink binutils bzip2 coreutils cpan-xml-parser diffutils docbookx
@@ -41,7 +41,9 @@
 [DEP] libgnomeprint:dev libgnomeprintui libgnomeprintui:dev libgnomeui
 [DEP] libgnomeui:dev libgphoto libgphoto:dev libjpeg libjpeg:dev libpng
 [DEP] libpng:dev libtiff libtiff:dev libxml2 libxml2:dev linux26-header:dev
-[DEP] m4 make mktemp openssl orbit2 orbit2:dev pango pango:dev perl5
-[DEP] pkgconfig popt popt:dev scrollkeeper sed sysfiles tar util-linux
-[DEP] xfree86 xfree86:dev zapping zlib:dev
+[DEP] m4 make mktemp net-tools openssl orbit2 orbit2:dev pango pango:dev
+[DEP] perl5 pkgconfig popt popt:dev scrollkeeper sed sysfiles tar
+[DEP] util-linux xfree86 xfree86:dev zapping zlib:dev
+
+[PROVIDES] gthumb
 

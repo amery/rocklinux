@@ -20,16 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104795244 Tue Jan  4 00:34:04 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110895847 Tue Mar 15 15:10:47 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-expect.log
+[LOGS] 5-expect.log 9-expect.log
 
-[BUILDTIME] 4629 (5)
+[BUILDTIME] 4648 (9)
 [SIZE] 0.44 MB, 46 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
 [DEP] mktemp net-tools sed sysfiles tar tcl tk xfree86 xfree86:dev
+
+[PROVIDES] autoexpect autopasswd cryptdir decryptdir dislocate expect
+[PROVIDES] expectk ftp-rfc kibitz libexpect5.42.a libexpect5.42.so
+[PROVIDES] lpunlock mkpasswd multixterm passmass rftp rlogin-cwd timed-read
+[PROVIDES] timed-run tknewsbiff tkpasswd unbuffer weather xkibitz xpstat
 

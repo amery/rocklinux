@@ -20,21 +20,29 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104713645 Mon Jan  3 01:54:05 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110203295 Mon Mar  7 14:48:15 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-kdegames.log
+[LOGS] 5-kdegames.log 9-kdegames.log
 
-[BUILDTIME] 103440 (5)
+[BUILDTIME] 104126 (9)
 [SIZE] 15.39 MB, 2254 files
 
 [DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev
 [DEP] bash2 binutils bzip2 coreutils diffutils esound esound:dev expat
 [DEP] fam fam:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev
-[DEP] gettext glib glib:dev glibc23 glibc23:dev grep kdebase kdelibs
-[DEP] kdelibs:dev kdelibs:doc libart_lgpl23 libart_lgpl23:dev libjpeg
-[DEP] libpng libpng:dev linux26-header:dev mad mad:dev make mktemp nas
-[DEP] ogg-vorbis ogg-vorbis:dev patch perl5 qt qt:dev sed sysfiles tar
-[DEP] util-linux vim xfree86 xfree86:dev zlib:dev
+[DEP] gettext glib glib:dev glibc23 glibc23:dev grep jack jack:dev kdebase
+[DEP] kdelibs kdelibs:dev kdelibs:doc libart_lgpl23 libart_lgpl23:dev
+[DEP] libjpeg libpng libpng:dev linux26-header:dev mad mad:dev make mktemp
+[DEP] nas net-tools ogg-vorbis ogg-vorbis:dev patch perl5 qt qt:dev sed
+[DEP] sysfiles tar util-linux vim xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] atlantik kasteroids katomic kbackgammon kbattleship kblackbox
+[PROVIDES] kbounce kenolaba kfouleggs kgoldrunner kjumpingcube klickety
+[PROVIDES] klines kmahjongg kmines kolf konquest kpat kpoker kreversi ksame
+[PROVIDES] kshisen ksirtet ksmiletris ksnake ksokoban kspaceduel ktron
+[PROVIDES] ktuberling kwin4 kwin4proc libatlantic.so libatlantikclient.so
+[PROVIDES] libatlantikui.so libkdegames.so libkdeinit_kolf.so libkolf.so
+[PROVIDES] lskat lskatproc
 

@@ -20,19 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104698784 Sun Jan  2 21:46:24 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110186909 Mon Mar  7 10:15:09 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-straw.log
+[LOGS] 5-straw.log 9-straw.log
 
-[BUILDTIME] 1213 (5)
+[BUILDTIME] 1495 (9)
 [SIZE] 1.24 MB, 117 files
 
-[DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils figment
-[DEP] findutils gcc34 gcc34:dev gconf glib glib:dev glibc23 glibc23:dev
-[DEP] gnome-python gnome-vfs gnome-vfs-extras grep gtk+ gtk+:dev intltool
-[DEP] linux26-header:dev mktemp numpy pango pango:dev perl5 pkgconfig
-[DEP] pygtk pygtk:dev pyorbit python python:dev sed sysfiles tar wxpython
-[DEP] xfree86 xfree86:dev zapping
+[DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 control-center
+[DEP] coreutils figment findutils gcc34 gcc34:dev gconf glib glib:dev
+[DEP] glibc23 glibc23:dev gnome-python gnome-vfs gnome-vfs-extras grep
+[DEP] gtk+ gtk+:dev intltool linux26-header:dev mktemp nautilus-cd-burner
+[DEP] numpy pango pango:dev perl5 pkgconfig pygtk pygtk:dev pyorbit python
+[DEP] python:dev sed sysfiles tar wxpython xfree86 xfree86:dev zapping
+
+[PROVIDES] straw
 

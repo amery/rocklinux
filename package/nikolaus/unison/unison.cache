@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104785348 Mon Jan  3 21:49:08 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110400635 Wed Mar  9 21:37:15 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-unison.log
+[LOGS] 5-unison.log 9-unison.log
 
-[BUILDTIME] 3576 (5)
+[BUILDTIME] 7409 (9)
 [SIZE] 2.78 MB, 8 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glib12 glibc23 glibc23:dev grep gtk+12 lablgtk lablgtk:dev make
-[DEP] mktemp net-tools ocaml ocaml:dev patch sed sysfiles tar xfree86
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
+[DEP] gcc34:dev glib12 glibc23 glibc23:dev grep gtk+12 lablgtk lablgtk:dev
+[DEP] make mktemp net-tools ocaml ocaml:dev patch sed sysfiles tar xfree86
+
+[PROVIDES] unison-gtk unison-text
 

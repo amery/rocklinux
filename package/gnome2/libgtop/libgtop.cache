@@ -20,18 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104688032 Sun Jan  2 18:47:12 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110174376 Mon Mar  7 06:46:16 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libgtop.log
+[LOGS] 5-libgtop.log 9-libgtop.log
 
-[BUILDTIME] 8321 (5)
+[BUILDTIME] 8836 (9)
 [SIZE] 1.59 MB, 73 files
 
 [DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils diffutils
 [DEP] findutils gawk gcc34 gcc34:dev gettext glib glib:dev glibc23
-[DEP] glibc23:dev grep libidl linux26-header:dev make mktemp patch perl5
-[DEP] pkgconfig popt popt:dev sed sysfiles tar texinfo util-linux xfree86
-[DEP] xfree86:dev
+[DEP] glibc23:dev grep libidl linux26-header:dev make mktemp net-tools
+[DEP] patch perl5 pkgconfig popt popt:dev sed sysfiles tar texinfo
+[DEP] util-linux xfree86 xfree86:dev
+
+[PROVIDES] libgtop-2.0.a libgtop-2.0.so libgtop_daemon2
 

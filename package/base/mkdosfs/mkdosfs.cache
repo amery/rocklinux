@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104641685 Sun Jan  2 05:54:45 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110232289 Mon Mar  7 22:51:29 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 3-mkdosfs.log
+[LOGS] 3-mkdosfs.log 9-mkdosfs.log
 
-[BUILDTIME] 855 (3)
+[BUILDTIME] 1505 (9)
 [SIZE] 0.03 MB, 10 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp patch sed sysfiles tar
+[DEP] mktemp net-tools patch sed sysfiles tar
+
+[PROVIDES] mkdosfs mkfs.msdos
 

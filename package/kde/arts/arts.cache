@@ -20,19 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104663807 Sun Jan  2 12:03:27 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110145512 Sun Mar  6 22:45:12 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-arts.log
+[LOGS] 5-arts.log 9-arts.log
 
-[BUILDTIME] 32028 (5)
-[SIZE] 3.86 MB, 113 files
+[BUILDTIME] 33043 (9)
+[SIZE] 3.87 MB, 113 files
 
-[DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev bash2 binutils
-[DEP] bzip2 coreutils diffutils esound esound:dev expat findutils freetype
-[DEP] gawk gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev grep libjpeg
-[DEP] libpng libpng:dev linux26-header:dev mad mad:dev make mktemp nas
-[DEP] nas:dev ogg-vorbis ogg-vorbis:dev perl5 pkgconfig qt qt:dev sed
-[DEP] sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+[DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev bash2 binutils bzip2
+[DEP] coreutils diffutils esound esound:dev expat findutils freetype gawk
+[DEP] gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev grep jack jack:dev
+[DEP] libjpeg libpng libpng:dev linux26-header:dev mad mad:dev make mktemp
+[DEP] nas nas:dev net-tools ogg-vorbis ogg-vorbis:dev perl5 pkgconfig qt
+[DEP] qt:dev sed sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] artsc-config artscat artsd artsdsp artsplay artsrec artsshell
+[PROVIDES] artswrapper libartsc.so libartscbackend.so libartsdsp.so
+[PROVIDES] libartsdsp_st.so libartsflow.so libartsflow_idl.so
+[PROVIDES] libartsgslplayobject.so libartswavplayobject.so libgmcop.so
+[PROVIDES] libkmedia2.so libkmedia2_idl.so libmcop.so libmcop_mt.so
+[PROVIDES] libqtmcop.so libsoundserver_idl.so libx11globalcomm.so mcopidl
 

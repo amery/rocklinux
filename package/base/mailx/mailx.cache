@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104652084 Sun Jan  2 08:48:04 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110131234 Sun Mar  6 18:47:14 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-mailx.log
+[LOGS] 5-mailx.log 9-mailx.log
 
-[BUILDTIME] 1009 (5)
+[BUILDTIME] 1582 (9)
 [SIZE] 0.10 MB, 11 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep liblockfile:dev linux26-header:dev
-[DEP] make mktemp patch sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
+[DEP] glibc23 glibc23:dev grep liblockfile:dev linux26-header:dev make
+[DEP] mktemp patch sed sysfiles tar
+
+[PROVIDES] mail
 

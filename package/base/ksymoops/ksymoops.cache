@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104747410 Mon Jan  3 11:16:50 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110304360 Tue Mar  8 18:52:40 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ksymoops.log
+[LOGS] 5-ksymoops.log 9-ksymoops.log
 
-[BUILDTIME] 1284 (5)
+[BUILDTIME] 1494 (9)
 [SIZE] 0.41 MB, 8 files
 
 [DEP] 00-dirtree bash2 binutils binutils:dev bzip2 coreutils findutils
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
 [DEP] mktemp sed sysfiles tar
+
+[PROVIDES] ksymoops
 

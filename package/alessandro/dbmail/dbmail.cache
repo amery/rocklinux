@@ -20,17 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104766002 Mon Jan  3 16:26:42 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110325304 Wed Mar  9 00:41:44 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-dbmail.log
+[LOGS] 5-dbmail.log 9-dbmail.log
 
-[BUILDTIME] 4792 (5)
-[SIZE] 0.63 MB, 31 files
+[BUILDTIME] 4958 (9)
+[SIZE] 0.34 MB, 31 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils findutils gcc34 gcc34:dev glibc23 glibc23:dev grep
+[DEP] diffutils findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
 [DEP] linux26-header:dev make mktemp mysql mysql:dev net-tools openssl
 [DEP] perl5 sed sysfiles tar texinfo util-linux zlib:dev
+
+[PROVIDES] dbmail-imapd dbmail-lmtpd dbmail-pop3d dbmail-smtp dbmail-users
+[PROVIDES] dbmail-util libdbmail.a libdbmail.so
 

@@ -20,17 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104766344 Mon Jan  3 16:32:24 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110325795 Wed Mar  9 00:49:55 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-bzflag.log
+[LOGS] 5-bzflag.log 9-bzflag.log
 
-[BUILDTIME] 22131 (5)
-[SIZE] 5.24 MB, 120 files
+[BUILDTIME] 33735 (9)
+[SIZE] 10.09 MB, 173 files
 
-[DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp ncurses:dev net-tools perl5 sed sysfiles tar util-linux
-[DEP] xfree86 xfree86:dev
+[DEP] 00-dirtree alsa autoconf automake19 bash2 bc binutils bzip2 ccache
+[DEP] coreutils curl curl:dev diffutils findutils gawk gcc34 gcc34:dev
+[DEP] glibc23 glibc23:dev grep libsdl libsdl:dev linux26-header:dev make
+[DEP] mktemp nas ncurses:dev net-tools openssl perl5 sed sysfiles tar
+[DEP] texinfo xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] bzadmin bzflag bzflag.bin bzfs
 

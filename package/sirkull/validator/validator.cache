@@ -20,67 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104913729 Wed Jan  5 09:28:49 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110898527 Tue Mar 15 15:55:27 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-validator.err
+[LOGS] 5-validator.log 9-validator.log
 
-[BUILDTIME] 1386 (5)
-[SIZE] 1.73 MB, 146 files
+[BUILDTIME] 8602 (9)
+[SIZE] 2.80 MB, 138 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp sed
-[DEP] sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
+[DEP] patch sed sysfiles tar
 
-[5-ERROR] 
-[5-ERROR] [ writing debug log to /ROCK/src.validator.1104913709.31538.1115021943/cmd_wrapper.log ]
-[5-ERROR] create symbolic link `/ROCK/src.validator.1104913709.31538.1115021943/archdir/lq-sp-1.3.4.10.tar.bz2' to `/ROCK/download/mirror/l/lq-sp-1.3.4.10.tar.bz2'
-[5-ERROR] create symbolic link `/ROCK/src.validator.1104913709.31538.1115021943/archdir/wdg-sgml-lib-1.1.3.tar.bz2' to `/ROCK/download/mirror/w/wdg-sgml-lib-1.1.3.tar.bz2'
-[5-ERROR] create symbolic link `/ROCK/src.validator.1104913709.31538.1115021943/archdir/validate-1.2' to `/ROCK/download/mirror/v/validate-1.2'
-[5-ERROR] Running main build function 'build_this_package' ...
-[5-ERROR] Extracting lq-sp-1.3.4.10.tar.bz2 (--use-compress-program=bzip2 -xf) ... 
-[5-ERROR] Fixing ownership and permissions ...
-[5-ERROR] Removing CVS and .svn directories ...
-[5-ERROR] Changeing into /ROCK/src.validator.1104913709.31538.1115021943/lq-sp-1.3.4.10 ...
-[5-ERROR] Creating /opt/validator/<..> if required ...
-[5-ERROR] make[1]: Entering directory `/ROCK/src.validator.1104913709.31538.1115021943/lq-sp-1.3.4.10'
-[5-ERROR] make[2]: Entering directory `/ROCK/src.validator.1104913709.31538.1115021943/lq-sp-1.3.4.10/lib'
-[5-ERROR] g++-34 -ansi   -I. -I./../include -I./../generic -DSP_HAVE_BOOL -DSP_ANSI_CLASS_INST -DSP_MULTI_BYTE -DSP_HAVE_SOCKET  -c Allocator.cxx
-[5-ERROR] g++-34 -ansi   -I. -I./../include -I./../generic -DSP_HAVE_BOOL -DSP_ANSI_CLASS_INST -DSP_MULTI_BYTE -DSP_HAVE_SOCKET  -c Link.cxx
-[5-ERROR] g++-34 -ansi   -I. -I./../include -I./../generic -DSP_HAVE_BOOL -DSP_ANSI_CLASS_INST -DSP_MULTI_BYTE -DSP_HAVE_SOCKET  -c IListBase.cxx
-[5-ERROR] g++-34 -ansi   -I. -I./../include -I./../generic -DSP_HAVE_BOOL -DSP_ANSI_CLASS_INST -DSP_MULTI_BYTE -DSP_HAVE_SOCKET  -c TypeId.cxx
-[5-ERROR] g++-34 -ansi   -I. -I./../include -I./../generic -DSP_HAVE_BOOL -DSP_ANSI_CLASS_INST -DSP_MULTI_BYTE -DSP_HAVE_SOCKET  -c assert.cxx
-[5-ERROR] g++-34 -ansi   -I. -I./../include -I./../generic -DSP_HAVE_BOOL -DSP_ANSI_CLASS_INST -DSP_MULTI_BYTE -DSP_HAVE_SOCKET  -c CharsetInfo.cxx
-[5-ERROR] In file included from ./../include/UnivCharsetDesc.h:13,
-[5-ERROR]                  from ./../include/CharsetInfo.h:11,
-[5-ERROR]                  from CharsetInfo.cxx:8:
-[5-ERROR] ./../include/RangeMap.h:57: error: expected `;' before "ptr_"
-[5-ERROR] ./../include/RangeMap.h: In member function `Boolean RangeMapIter<From, To>::next(From&, From&, To&)':
-[5-ERROR] ./../include/RangeMap.h:47: error: `ptr_' undeclared (first use this function)
-[5-ERROR] ./../include/RangeMap.h:47: error: (Each undeclared identifier is reported only once for each function it appears in.)
-[5-ERROR] make[2]: *** [CharsetInfo.o] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.validator.1104913709.31538.1115021943/lq-sp-1.3.4.10/lib'
-[5-ERROR] make[1]: *** [lib] Error 2
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.validator.1104913709.31538.1115021943/lq-sp-1.3.4.10'
-[5-ERROR] make: *** [all] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 141 files for this package.
-[5-ERROR] Applying package split: 40 validator:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 validator:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 validator:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <validator> Creating flist file ...
-[5-ERROR] <validator> Creating package dependencies file ...
-[5-ERROR] <validator> Creating md5sum and cksum files ...
-[5-ERROR] <validator> Creating package description ...
-[5-ERROR] <validator:doc> Creating flist file ...
-[5-ERROR] <validator:doc> Creating package dependencies file ...
-[5-ERROR] <validator:doc> Creating md5sum and cksum files ...
-[5-ERROR] <validator:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building validator=validator.
+[PROVIDES] lq-nsgmls validate
 

@@ -20,17 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104652513 Sun Jan  2 08:55:13 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110131769 Sun Mar  6 18:56:09 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-dpkg.log
+[LOGS] 5-dpkg.log 9-dpkg.log
 
-[BUILDTIME] 3188 (5)
+[BUILDTIME] 3814 (9)
 [SIZE] 2.61 MB, 98 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils
 [DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp ncurses:dev patch perl5 sed sysfiles
-[DEP] tar zlib:dev
+[DEP] linux26-header:dev make mktemp ncurses:dev net-tools patch perl5
+[DEP] sed sysfiles tar zlib:dev
+
+[PROVIDES] 822-date dpkg dpkg-architecture dpkg-buildpackage
+[PROVIDES] dpkg-checkbuilddeps dpkg-deb dpkg-distaddfile dpkg-divert
+[PROVIDES] dpkg-genchanges dpkg-gencontrol dpkg-name dpkg-parsechangelog
+[PROVIDES] dpkg-scanpackages dpkg-scansources dpkg-shlibdeps dpkg-source
+[PROVIDES] dpkg-split dpkg-statoverride dselect
 

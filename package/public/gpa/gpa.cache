@@ -20,19 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104700276 Sun Jan  2 22:11:16 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110188633 Mon Mar  7 10:43:53 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gpa.log
+[LOGS] 5-gpa.log 9-gpa.log
 
-[BUILDTIME] 4314 (5)
+[BUILDTIME] 4691 (9)
 [SIZE] 0.66 MB, 19 files
 
 [DEP] 00-dirtree atk atk:dev bash2 binutils bison bzip2 coreutils
 [DEP] diffutils expat findutils freetype gawk gcc34 gcc34:dev gettext
 [DEP] glib glib12 glib:dev glibc23 glibc23:dev gpgme gpgme:dev grep gtk+
 [DEP] gtk+12 gtk+:dev libgpg-error libgpg-error:dev linux26-header:dev
-[DEP] make mktemp pango pango:dev pkgconfig sed sysfiles tar util-linux
-[DEP] xfree86 zlib:dev
+[DEP] make mktemp net-tools pango pango:dev pkgconfig sed sysfiles tar
+[DEP] util-linux xfree86 zlib:dev
+
+[PROVIDES] gpa
 

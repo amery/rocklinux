@@ -5,7 +5,7 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/import/cpan/cpan-dbd-mysql.cache
+[COPY] ROCK Linux: rock-src/package/import/cpan/cpan.cache
 [COPY] ROCK Linux is Copyright (C) 1998 - 2005 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104734932 Mon Jan  3 07:48:52 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110227010 Mon Mar  7 21:23:30 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-cpan-dbd-mysql.log
+[LOGS] 5-cpan-dbd-mysql.log 9-cpan-dbd-mysql.log
 
-[BUILDTIME] 1422 (5)
-[SIZE] 0.48 MB, 20 files
+[BUILDTIME] 1748 (9)
+[SIZE] 0.28 MB, 22 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils cpan-dbi findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp mysql mysql:dev openssl perl5 sed sysfiles tar zlib:dev
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cpan-dbd-pg cpan-dbi
+[DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
+[DEP] linux26-header:dev make mktemp mysql mysql:dev openssl perl5 sed
+[DEP] sysfiles tar zlib:dev
+
 

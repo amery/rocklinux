@@ -20,19 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104734164 Mon Jan  3 07:36:04 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110226241 Mon Mar  7 21:10:41 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-xawtv.log
+[LOGS] 5-xawtv.log 9-xawtv.log
 
-[BUILDTIME] 4409 (5)
+[BUILDTIME] 4703 (9)
 [SIZE] 1.95 MB, 124 files
 
 [DEP] 00-dirtree aalib aalib:dev alsa alsa:dev bash2 binutils bzip2
 [DEP] coreutils diffutils expat findutils gawk gcc34 gcc34:dev glib12
 [DEP] glibc23 glibc23:dev gpm grep libdv libdv:dev libjpeg libjpeg:dev
 [DEP] libpng libzvbi libzvbi:dev linux26-header:dev lirc lirc:dev make
-[DEP] mktemp ncurses:dev openmotif openmotif:dev perl5 pkgconfig sed
-[DEP] slang sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+[DEP] mktemp ncurses:dev net-tools openmotif openmotif:dev perl5 pkgconfig
+[DEP] sed slang sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] alevtd dump-mixers fbtv motv mtt ntsc-cc pia propwatch radio
+[PROVIDES] record rootv scantv showqt showriff streamer subtitles ttv
+[PROVIDES] v4l-conf v4l-info v4lctl webcam xawtv xawtv-remote
 

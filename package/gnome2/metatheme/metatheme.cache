@@ -20,25 +20,27 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104690319 Sun Jan  2 19:25:19 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110176995 Mon Mar  7 07:29:55 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-metatheme.log
+[LOGS] 5-metatheme.log 9-metatheme.log
 
-[BUILDTIME] 6123 (5)
+[BUILDTIME] 6511 (9)
 [SIZE] 0.43 MB, 67 files
 
-[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
-[DEP] autoconf automake19 bash2 binutils bzip2 coreutils diffutils esound
-[DEP] esound:dev expat figment findutils freetype gawk gcc34 gcc34:dev
-[DEP] gconf gconf:dev gettext glib glib:dev glibc23 glibc23:dev
-[DEP] gnome-keyring gnome-keyring:dev gnome-mime-data gnome-vfs
-[DEP] gnome-vfs:dev grep gtk+ gtk+:dev libart_lgpl23 libart_lgpl23:dev
-[DEP] libbonobo libbonobo:dev libbonoboui libbonoboui:dev libglade
-[DEP] libglade:dev libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev
-[DEP] libgnomeui libgnomeui:dev libjpeg libjpeg:dev libpng libpng:dev
-[DEP] libxml2 libxml2:dev linux26-header:dev make mktemp openssl orbit2
+[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev autoconf
+[DEP] automake19 bash2 binutils bzip2 coreutils diffutils esound esound:dev
+[DEP] expat figment findutils freetype gawk gcc34 gcc34:dev gconf
+[DEP] gconf:dev gettext glib glib:dev glibc23 glibc23:dev gnome-keyring
+[DEP] gnome-keyring:dev gnome-mime-data gnome-vfs gnome-vfs:dev
+[DEP] grep gtk+ gtk+:dev libart_lgpl23 libart_lgpl23:dev libbonobo
+[DEP] libbonobo:dev libbonoboui libbonoboui:dev libglade libglade:dev
+[DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeui
+[DEP] libgnomeui:dev libjpeg libjpeg:dev libpng libpng:dev libxml2
+[DEP] libxml2:dev linux26-header:dev make mktemp net-tools openssl orbit2
 [DEP] orbit2:dev pango pango:dev perl5 pkgconfig popt popt:dev sed sysfiles
 [DEP] tar texinfo util-linux xfree86 xfree86:dev xscreensaver zlib:dev
+
+[PROVIDES] libmtm.a libmtm.so metatheme-edit metatheme_selector_capplet
 

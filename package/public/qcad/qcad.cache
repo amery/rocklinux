@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104722546 Mon Jan  3 04:22:26 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110212716 Mon Mar  7 17:25:16 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-qcad.log
+[LOGS] 5-qcad.log 9-qcad.log
 
-[BUILDTIME] 91377 (5)
-[SIZE] 11.44 MB, 197 files
+[BUILDTIME] 92365 (9)
+[SIZE] 11.45 MB, 197 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils expat findutils
 [DEP] freetype gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libpng
-[DEP] linux26-header:dev make mktemp patch qt qt:dev sed sysfiles tar
-[DEP] util-linux xfree86 zlib:dev
+[DEP] linux26-header:dev make mktemp net-tools patch qt qt:dev sed sysfiles
+[DEP] tar util-linux xfree86 zlib:dev
+
+[PROVIDES] qcad
 

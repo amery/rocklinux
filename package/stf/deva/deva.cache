@@ -20,62 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104913028 Wed Jan  5 09:17:08 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110339621 Wed Mar  9 04:40:21 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-deva.err
+[LOGS] 5-deva.log 9-deva.log
 
-[BUILDTIME] 4013 (5)
+[BUILDTIME] 8170 (9)
+[SIZE] 2.42 MB, 209 files
 
-[5-ERROR] Written Viewer_client.cxx
-[5-ERROR] g++ -Wno-deprecated -I/ROCK/src.deva.1104912983.26065.1284709252/Deva/incl -I//opt/maverik/incl -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math   \
-[5-ERROR] -shared -o /ROCK/src.deva.1104912983.26065.1284709252/Deva/drc/Viewer_client.drc Viewer_client.cxx -L//opt/maverik/lib -lmaverik
-[5-ERROR] /ROCK/src.deva.1104912983.26065.1284709252/Deva/bin/dpp TheVoid.cmp
-[5-ERROR] Written TheVoid_object.cxx
-[5-ERROR] g++ -Wno-deprecated -I/ROCK/src.deva.1104912983.26065.1284709252/Deva/incl -I//opt/maverik/incl -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math   \
-[5-ERROR] -shared -o /ROCK/src.deva.1104912983.26065.1284709252/Deva/drc/TheVoid_object.drc TheVoid_object.cxx -L//opt/maverik/lib -lmaverik
-[5-ERROR] /ROCK/src.deva.1104912983.26065.1284709252/Deva/bin/dpp TestObj.cmp
-[5-ERROR] Written TestObj_object.cxx
-[5-ERROR] g++ -Wno-deprecated -I/ROCK/src.deva.1104912983.26065.1284709252/Deva/incl -I//opt/maverik/incl -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math   \
-[5-ERROR] -shared -o /ROCK/src.deva.1104912983.26065.1284709252/Deva/drc/TestObj_object.drc TestObj_object.cxx -L//opt/maverik/lib -lmaverik
-[5-ERROR] /ROCK/src.deva.1104912983.26065.1284709252/Deva/bin/dpp TestObj2.cmp
-[5-ERROR] Written TestObj2_object.cxx
-[5-ERROR] g++ -Wno-deprecated -I/ROCK/src.deva.1104912983.26065.1284709252/Deva/incl -I//opt/maverik/incl -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math   \
-[5-ERROR] -shared -o /ROCK/src.deva.1104912983.26065.1284709252/Deva/drc/TestObj2_object.drc TestObj2_object.cxx -L//opt/maverik/lib -lmaverik
-[5-ERROR] /ROCK/src.deva.1104912983.26065.1284709252/Deva/bin/dpp TestEnv.cmp
-[5-ERROR] Written TestEnv_object.cxx
-[5-ERROR] g++ -Wno-deprecated -I/ROCK/src.deva.1104912983.26065.1284709252/Deva/incl -I//opt/maverik/incl -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math   \
-[5-ERROR] -shared -o /ROCK/src.deva.1104912983.26065.1284709252/Deva/drc/TestEnv_object.drc TestEnv_object.cxx -L//opt/maverik/lib -lmaverik
-[5-ERROR] /ROCK/src.deva.1104912983.26065.1284709252/Deva/bin/dpp ConsoleBasic.cmp
-[5-ERROR] Written ConsoleBasic_client.cxx
-[5-ERROR] g++ -Wno-deprecated -I/ROCK/src.deva.1104912983.26065.1284709252/Deva/incl -I//opt/maverik/incl -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math   \
-[5-ERROR] -shared -o /ROCK/src.deva.1104912983.26065.1284709252/Deva/drc/ConsoleBasic_client.drc ConsoleBasic_client.cxx -L//opt/maverik/lib -lmaverik
-[5-ERROR] /ROCK/src.deva.1104912983.26065.1284709252/Deva/bin/dpp Console.cmp
-[5-ERROR] Written Console_client.cxx
-[5-ERROR] g++ -Wno-deprecated -DOLDREADLINE=1 -I/ROCK/src.deva.1104912983.26065.1284709252/Deva/incl -I//opt/maverik/incl  -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math   \
-[5-ERROR] -shared -o /ROCK/src.deva.1104912983.26065.1284709252/Deva/drc/Console_client.drc Console_client.cxx  -lreadline -lcurses
-[5-ERROR] Console_client.cxx: In member function `DEVA_message* DEVA_clientConsole_obj::activity(DEVA_message*)':
-[5-ERROR] Console_client.cxx:196: error: invalid conversion from `void (*)()' to `void (*)(char*)'
-[5-ERROR] Console_client.cxx:196: error:   initializing argument 2 of `void rl_callback_handler_install(const char*, void (*)(char*))'
-[5-ERROR] make[2]: *** [/ROCK/src.deva.1104912983.26065.1284709252/Deva/drc/Console_client.drc] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.deva.1104912983.26065.1284709252/Deva/components'
-[5-ERROR] make[1]: *** [comps] Error 2
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.deva.1104912983.26065.1284709252/Deva'
-[5-ERROR] make: *** [plat] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 deva:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 deva:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 deva:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <deva:doc> Creating flist file ...
-[5-ERROR] <deva:doc> Creating package dependencies file ...
-[5-ERROR] <deva:doc> Creating md5sum and cksum files ...
-[5-ERROR] <deva:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building deva=deva.
+[DEP] 00-dirtree bash2 binutils coreutils cpio findutils gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep gzip linux26-header:dev make
+[DEP] maverik mktemp ncurses:dev patch perl5 readline readline:dev rpm
+[DEP] sed sysfiles tar xfree86
+
+[PROVIDES] DEVA_CRCtest DEVA_client DEVA_dictionaryTest DEVA_listTest
+[PROVIDES] DEVA_msgTest DEVA_nameTest DEVA_paramsTest DEVA_pathTest
+[PROVIDES] DEVA_server DEVA_threadListTest dcmd deva_bash_functions
+[PROVIDES] deva_gpanel_kill deva_gpanel_start devad devag devalite
+[PROVIDES] dpp libdeva_client.so libdeva_comms.so libdeva_kernel.so
+[PROVIDES] libdeva_server.so libdeva_viewer.so testscript
 

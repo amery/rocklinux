@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104652923 Sun Jan  2 09:02:03 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110132417 Sun Mar  6 19:06:57 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-lsof.log
+[LOGS] 5-lsof.log 9-lsof.log
 
-[BUILDTIME] 1267 (5)
+[BUILDTIME] 1841 (9)
 [SIZE] 0.20 MB, 8 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
 [DEP] sed sysfiles tar
+
+[PROVIDES] lsof
 

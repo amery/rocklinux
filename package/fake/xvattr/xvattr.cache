@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104711703 Mon Jan  3 01:21:43 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110201141 Mon Mar  7 14:12:21 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-xvattr.log
+[LOGS] 5-xvattr.log 9-xvattr.log
 
-[BUILDTIME] 1334 (5)
+[BUILDTIME] 1655 (9)
 [SIZE] 0.04 MB, 9 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gcc34 gcc34:dev glib12 glib12:dev glibc23 glibc23:dev grep gtk+12
-[DEP] gtk+12:dev linux26-header:dev make mktemp perl5 sed sysfiles tar
-[DEP] util-linux xfree86 xfree86:dev
+[DEP] gtk+12:dev linux26-header:dev make mktemp net-tools perl5 sed
+[DEP] sysfiles tar util-linux xfree86 xfree86:dev
+
+[PROVIDES] gxvattr xvattr
 

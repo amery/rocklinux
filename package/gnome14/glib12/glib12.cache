@@ -20,16 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104655211 Sun Jan  2 09:40:11 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110135432 Sun Mar  6 19:57:12 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-glib12.log
+[LOGS] 5-glib12.log 9-glib12.log
 
-[BUILDTIME] 3781 (5)
-[SIZE] 0.15 MB, 34 files
+[BUILDTIME] 4373 (9)
+[SIZE] 0.16 MB, 34 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils file findutils gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp patch perl5 sed sysfiles tar texinfo
+[DEP] linux26-header:dev make mktemp net-tools patch perl5 sed sysfiles
+[DEP] tar texinfo
+
+[PROVIDES] glib-config libglib.a libglib.so libgmodule.a libgmodule.so
+[PROVIDES] libgthread.a libgthread.so
 

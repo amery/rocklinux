@@ -20,18 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104752689 Mon Jan  3 12:44:49 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110310538 Tue Mar  8 20:35:38 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gpsdrive.log
+[LOGS] 5-gpsdrive.log 9-gpsdrive.log
 
-[BUILDTIME] 4951 (5)
-[SIZE] 1.83 MB, 72 files
+[BUILDTIME] 5189 (9)
+[SIZE] 1.84 MB, 72 files
 
 [DEP] 00-dirtree alsa atk atk:dev bash2 binutils bzip2 coreutils diffutils
 [DEP] expat file findutils freetype gawk gcc34 gcc34:dev gettext glib
 [DEP] glib:dev glibc23 glibc23:dev grep gtk+ gtk+:dev linux26-header:dev
 [DEP] make mktemp net-tools pango pango:dev pcre pcre:dev pkgconfig sed
 [DEP] sysfiles tar util-linux xfree86 xfree86:dev zapping
+
+[PROVIDES] friendsd2 garble geo-code geo-nearest geocache2way gpsd
+[PROVIDES] gpsdrive gpsfetchmap.pl gpspoint2gpsdrive.pl gpsreplay
+[PROVIDES] gpssmswatch gpssql_backup.sh gpssql_restore.sh libfly.a
+[PROVIDES] libfly.so libnautic.a libnautic.so wpcvt wpget
 

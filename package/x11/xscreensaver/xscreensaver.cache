@@ -20,20 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1101836600 Tue Nov 30 18:43:20 2004
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110171037 Mon Mar  7 05:50:37 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-xscreensaver.log
+[LOGS] 5-xscreensaver.log 9-xscreensaver.log
 
-[BUILDTIME] 20316 (5)
-[SIZE] 13.99 MB, 638 files
+[BUILDTIME] 16777 (9)
+[SIZE] 14.33 MB, 656 files
 
 [DEP] 00-dirtree alien atk atk:dev bash2 bc binutils bsd-games bzip2
 [DEP] coreutils diffutils expat figment findutils freetype gawk gcc34
-[DEP] gcc34:dev gettext gle gle:dev glib glib:dev glibc23 glibc23:dev
-[DEP] grep gtk+ gtk+:dev libglade libglade:dev libjpeg libjpeg:dev
-[DEP] libxml2 libxml2:dev linux26-header:dev make mktemp net-tools pam
-[DEP] pam:dev pango pango:dev patch perl5 pkgconfig rpm sed sysfiles tar
+[DEP] gcc34:dev gettext gle gle:dev glib glib:dev glibc23 glibc23:dev grep
+[DEP] gtk+ gtk+:dev libglade libglade:dev libjpeg libjpeg:dev libxml2
+[DEP] libxml2:dev linux26-header:dev make mktemp net-tools pam pam:dev
+[DEP] pango pango:dev patch perl5 pkgconfig rpm sed shadow sysfiles tar
 [DEP] util-linux xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] screensaver-properties-capplet xscreensaver
+[PROVIDES] xscreensaver-command xscreensaver-demo xscreensaver-getimage
+[PROVIDES] xscreensaver-getimage-file xscreensaver-getimage-video
+[PROVIDES] xscreensaver-gl-helper
 

@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104681954 Sun Jan  2 17:05:54 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110166963 Mon Mar  7 04:42:43 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-jack.log
+[LOGS] 5-jack.log 9-jack.log
 
-[BUILDTIME] 3626 (5)
-[SIZE] 0.59 MB, 59 files
+[BUILDTIME] 4258 (9)
+[SIZE] 0.61 MB, 61 files
 
 [DEP] 00-dirtree alsa alsa:dev bash2 binutils bzip2 coreutils diffutils
-[DEP] doxygen findutils gawk gcc34 gcc34:dev ghostscript glibc23
-[DEP] glibc23:dev grep linux26-header:dev make mktemp ncurses:dev patch
-[DEP] perl5 pkgconfig readline sed sysfiles tar tetex util-linux
+[DEP] doxygen file findutils gawk gcc34 gcc34:dev ghostscript glibc23
+[DEP] glibc23:dev grep linux26-header:dev make mktemp ncurses:dev net-tools
+[DEP] patch perl5 pkgconfig readline sed sysfiles tar tetex util-linux
+
+[PROVIDES] jackd libjack.so
 

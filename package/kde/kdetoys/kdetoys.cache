@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104752260 Mon Jan  3 12:37:40 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110309961 Tue Mar  8 20:26:01 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-kdetoys.log
+[LOGS] 5-kdetoys.log 9-kdetoys.log
 
-[BUILDTIME] 18030 (5)
+[BUILDTIME] 18423 (9)
 [SIZE] 3.64 MB, 575 files
 
 [DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils expat fam
@@ -36,4 +36,7 @@
 [DEP] libpng libpng:dev linux26-header:dev make mktemp net-tools pcre
 [DEP] pcre:dev perl5 qt qt:dev sed sysfiles tar util-linux vim xfree86
 [DEP] xfree86:dev zlib:dev
+
+[PROVIDES] amor kodo kteatime ktux kweatherreport kweatherservice
+[PROVIDES] kworldclock libkdeinit_kweatherreport.so
 

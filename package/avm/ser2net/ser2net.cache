@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104752348 Mon Jan  3 12:39:08 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110310074 Tue Mar  8 20:27:54 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ser2net.log
+[LOGS] 5-ser2net.log 9-ser2net.log
 
-[BUILDTIME] 1535 (5)
+[BUILDTIME] 1739 (9)
 [SIZE] 0.07 MB, 8 files
 
 [DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils diffutils file
 [DEP] findutils gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
 [DEP] make mktemp net-tools perl5 sed sysfiles tar tcp_wrappers:dev texinfo
+
+[PROVIDES] ser2net
 

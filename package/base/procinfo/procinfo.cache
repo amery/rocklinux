@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104745202 Mon Jan  3 10:40:02 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110302024 Tue Mar  8 18:13:44 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-procinfo.log
+[LOGS] 5-procinfo.log 9-procinfo.log
 
-[BUILDTIME] 1162 (5)
+[BUILDTIME] 1394 (9)
 [SIZE] 0.08 MB, 12 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp ncurses:dev
 [DEP] sed sysfiles tar
+
+[PROVIDES] lsdev procinfo socklist
 

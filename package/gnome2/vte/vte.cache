@@ -20,20 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104684285 Sun Jan  2 17:44:45 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110169589 Mon Mar  7 05:26:29 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-vte.log
+[LOGS] 5-vte.log 9-vte.log
 
-[BUILDTIME] 10693 (5)
+[BUILDTIME] 11195 (9)
 [SIZE] 1.45 MB, 86 files
 
 [DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils diffutils
 [DEP] expat findutils freetype freetype:dev gawk gcc34 gcc34:dev gconf
 [DEP] gettext glib glib:dev glibc23 glibc23:dev grep gtk+ gtk+:dev gtkdoc
 [DEP] libart_lgpl23 libart_lgpl23:dev libzvt libzvt:dev linux26-header:dev
-[DEP] make mktemp ncurses:dev numpy pango pango:dev perl5 pkgconfig pygtk
-[DEP] pygtk:dev python python:dev sed sysfiles tar util-linux xfree86
-[DEP] xfree86:dev zlib:dev
+[DEP] make mktemp ncurses:dev net-tools numpy pango pango:dev perl5
+[DEP] pkgconfig pygtk pygtk:dev python python:dev sed sysfiles tar
+[DEP] util-linux wxpython xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] libvte.a libvte.so vte
 

@@ -20,27 +20,35 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104701194 Sun Jan  2 22:26:34 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110189647 Mon Mar  7 11:00:47 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gstreamer.log
+[LOGS] 5-gstreamer.log 9-gstreamer.log
 
-[BUILDTIME] 26762 (5)
+[BUILDTIME] 27409 (9)
 [SIZE] 3.78 MB, 154 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
 [DEP] binutils bison bzip2 coreutils diffutils docbookx epiphany esound
-[DEP] esound:dev evolution-data-server expat findutils flex freetype
-[DEP] gail gawk gcc34 gcc34:dev gconf gconf:dev gettext gimp glib
-[DEP] glib:dev glibc23 glibc23:dev gmime gnome-keyring gnome-keyring:dev
-[DEP] gnome-panel gnome-vfs gnome-vfs:dev grep gtk+ gtk+:dev gtkdoc
-[DEP] gtksourceview libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev
-[DEP] libbonoboui libbonoboui:dev libgda libglade libgnome libgnome:dev
-[DEP] libgnomecanvas libgnomecanvas:dev libgnomeprint libgnomeprintui
-[DEP] libgnomeui libgnomeui:dev libgsf libjpeg libjpeg:dev libmrproject
-[DEP] libsoup libwnck libxml2 libxml2:dev libxslt linux26-header:dev m4
-[DEP] make mktemp numpy openssl orbit2 orbit2:dev pango pango:dev perl5
-[DEP] pkgconfig popt popt:dev python scrollkeeper sed sysfiles tar transfig
-[DEP] util-linux wxpython xfree86 zlib:dev
+[DEP] esound:dev evolution-data-server expat findutils flex freetype gail
+[DEP] gawk gcc34 gcc34:dev gconf gconf:dev gettext gimp glib glib:dev
+[DEP] glibc23 glibc23:dev gmime gnome-keyring gnome-keyring:dev gnome-panel
+[DEP] gnome-vfs gnome-vfs:dev grep gtk+ gtk+:dev gtkdoc gtksourceview
+[DEP] libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui
+[DEP] libbonoboui:dev libgda libglade libgnome libgnome:dev libgnomecanvas
+[DEP] libgnomecanvas:dev libgnomeprint libgnomeprintui libgnomeui
+[DEP] libgnomeui:dev libgsf libjpeg libjpeg:dev libmrproject libsoup
+[DEP] libwnck libxml2 libxml2:dev libxslt linphone linux26-header:dev
+[DEP] m4 make mergeant mktemp net-tools numpy openssl orbit2 orbit2:dev
+[DEP] pango pango:dev perl5 pkgconfig popt popt:dev python scrollkeeper
+[DEP] sed sysfiles tar transfig util-linux wxpython xfree86 zlib:dev
+
+[PROVIDES] gst-complete gst-complete-0.8 gst-compprep gst-compprep-0.8
+[PROVIDES] gst-feedback gst-feedback-0.8 gst-inspect gst-inspect-0.8
+[PROVIDES] gst-launch gst-launch-0.8 gst-md5sum gst-md5sum-0.8 gst-register
+[PROVIDES] gst-register-0.8 gst-typefind gst-typefind-0.8 gst-xmlinspect
+[PROVIDES] gst-xmlinspect-0.8 gst-xmllaunch gst-xmllaunch-0.8
+[PROVIDES] libgstcontrol-0.8.a libgstcontrol-0.8.so libgstreamer-0.8.a
+[PROVIDES] libgstreamer-0.8.so
 

@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104662144 Sun Jan  2 11:35:44 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110143732 Sun Mar  6 22:15:32 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-aalib.log
+[LOGS] 5-aalib.log 9-aalib.log
 
-[BUILDTIME] 3517 (5)
+[BUILDTIME] 4134 (9)
 [SIZE] 0.39 MB, 83 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev gpm
-[DEP] gpm:dev grep linux26-header:dev make mktemp perl5 sed slang slang:dev
-[DEP] sysfiles tar texinfo xfree86 xfree86:dev
+[DEP] gpm:dev grep linux26-header:dev make mktemp net-tools perl5 sed
+[DEP] slang slang:dev sysfiles tar texinfo xfree86 xfree86:dev
+
+[PROVIDES] aafire aainfo aalib-config aasavefont aatest libaa.a libaa.so
 

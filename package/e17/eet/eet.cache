@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104671678 Sun Jan  2 14:14:38 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110155103 Mon Mar  7 01:25:03 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-eet.log
+[LOGS] 5-eet.log 9-eet.log
 
-[BUILDTIME] 3490 (5)
-[SIZE] 0.08 MB, 11 files
+[BUILDTIME] 5141 (9)
+[SIZE] 0.09 MB, 11 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils findutils gcc34 gcc34:dev glibc23 glibc23:dev grep imlib2
-[DEP] libjpeg libjpeg:dev libtool linux26-header:dev m4 make mktemp perl5
-[DEP] sed sysfiles tar util-linux zlib:dev
+[DEP] diffutils findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
+[DEP] imlib2 libjpeg libjpeg:dev libtool linux26-header:dev m4 make mktemp
+[DEP] net-tools perl5 sed sysfiles tar util-linux zlib:dev
+
+[PROVIDES] eet eet-config libeet.a libeet.so
 

@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104698562 Sun Jan  2 21:42:42 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110186617 Mon Mar  7 10:10:17 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-evolution.log
+[LOGS] 5-evolution.log 9-evolution.log
 
-[BUILDTIME] 84097 (5)
+[BUILDTIME] 84245 (9)
 [SIZE] 25.02 MB, 346 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
@@ -44,7 +44,9 @@
 [DEP] libgnomeprintui:dev libgnomeui libgnomeui:dev libgpg-error
 [DEP] libgpg-error:dev libjpeg libjpeg:dev libsoup libsoup:dev libxml2
 [DEP] libxml2:dev linux26-header:dev m4 make mktemp mozilla mozilla:dev
-[DEP] openldap openldap:dev openssl orbit2 orbit2:dev pango pango:dev perl5
-[DEP] pkgconfig popt popt:dev scrollkeeper sed sysfiles tar util-linux
-[DEP] xfree86 xfree86:dev zapping zlib:dev
+[DEP] net-tools openldap openldap:dev openssl orbit2 orbit2:dev pango
+[DEP] pango:dev perl5 pkgconfig popt popt:dev scrollkeeper sed sysfiles
+[DEP] tar util-linux xfree86 xfree86:dev zapping zlib:dev
+
+[PROVIDES] evolution-2.0
 

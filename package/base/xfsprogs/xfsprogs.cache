@@ -20,18 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104744033 Mon Jan  3 10:20:33 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110300584 Tue Mar  8 17:49:44 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-xfsprogs.log
+[LOGS] 5-xfsprogs.log 9-xfsprogs.log
 
-[BUILDTIME] 11009 (5)
+[BUILDTIME] 11383 (9)
 [SIZE] 2.02 MB, 53 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils e2fsprogs:dev findutils gawk gcc34 gcc34:dev glibc23
 [DEP] glibc23:dev grep gzip libtool linux26-header:dev m4 make mktemp
-[DEP] ncurses:dev patch perl5 readline readline:dev rpm sed sysfiles
-[DEP] tar util-linux
+[DEP] ncurses:dev net-tools patch perl5 readline readline:dev rpm sed
+[DEP] sysfiles tar util-linux
+
+[PROVIDES] fsck.xfs libdisk.a libhandle.a libhandle.so libxfs.a libxlog.a
+[PROVIDES] mkfs.xfs xfs_admin xfs_bmap xfs_check xfs_copy xfs_db xfs_freeze
+[PROVIDES] xfs_growfs xfs_info xfs_io xfs_logprint xfs_mkfile xfs_ncheck
+[PROVIDES] xfs_repair xfs_rtcp
 

@@ -20,19 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104727917 Mon Jan  3 05:51:57 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110218765 Mon Mar  7 19:06:05 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-dvdauthor.log
+[LOGS] 5-dvdauthor.log 9-dvdauthor.log
 
-[BUILDTIME] 2258 (5)
+[BUILDTIME] 2537 (9)
 [SIZE] 0.23 MB, 15 files
 
 [DEP] 00-dirtree alsa bash2 binutils bison bzip2 bzip2:dev coreutils
 [DEP] diffutils findutils flex freetype freetype:dev fribidi fribidi:dev
-[DEP] gawk gcc34 gcc34:dev glib glibc23 glibc23:dev grep imagemagick
+[DEP] gcc34 gcc34:dev glib glibc23 glibc23:dev grep imagemagick
 [DEP] imagemagick:dev lcms libdvdread libdvdread:dev libjpeg libpng
 [DEP] libpng:dev libtiff libtool libxml2 libxml2:dev linux26-header:dev
-[DEP] m4 make mktemp patch sed sysfiles tar util-linux xfree86 zlib:dev
+[DEP] m4 make mktemp net-tools patch sed sysfiles tar util-linux xfree86
+[DEP] zlib:dev
+
+[PROVIDES] dvdauthor dvddirdel dvdunauthor mpeg2desc spumux spuunmux
 

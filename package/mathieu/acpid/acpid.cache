@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104754067 Mon Jan  3 13:07:47 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110312025 Tue Mar  8 21:00:25 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-acpid.log
+[LOGS] 5-acpid.log 9-acpid.log
 
-[BUILDTIME] 1129 (5)
+[BUILDTIME] 1348 (9)
 [SIZE] 0.05 MB, 17 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep gzip linux26-header:dev m4 make mktemp
 [DEP] sed sysfiles tar
+
+[PROVIDES] acpi_listen acpid
 

@@ -20,17 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104752315 Mon Jan  3 12:38:35 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110310031 Tue Mar  8 20:27:11 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ripperx.log
+[LOGS] 5-ripperx.log 9-ripperx.log
 
-[BUILDTIME] 1896 (5)
+[BUILDTIME] 2204 (9)
 [SIZE] 0.23 MB, 19 files
 
 [DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gawk gcc34 gcc34:dev glib12 glib12:dev glibc23 glibc23:dev grep
 [DEP] gtk+12 gtk+12:dev linux26-header:dev make mktemp net-tools sed
 [DEP] sysfiles tar xfree86
+
+[PROVIDES] ripperX ripperX_plugin-8hz-mp3 ripperX_plugin-bladeenc
+[PROVIDES] ripperX_plugin-cdparanoia ripperX_plugin-encode
+[PROVIDES] ripperX_plugin-flac ripperX_plugin-gogo ripperX_plugin-l3enc
+[PROVIDES] ripperX_plugin-lame ripperX_plugin-mp3enc ripperX_plugin-oggenc
+[PROVIDES] ripperX_plugin-xingmp3enc
 

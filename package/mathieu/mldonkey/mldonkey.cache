@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104762340 Mon Jan  3 15:25:40 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110321371 Tue Mar  8 23:36:11 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-mldonkey.log
+[LOGS] 5-mldonkey.log 9-mldonkey.log
 
-[BUILDTIME] 10028 (5)
+[BUILDTIME] 10264 (9)
 [SIZE] 18.50 MB, 22 files
 
 [DEP] 00-dirtree alsa autoconf bash2 binutils bzip2 coreutils diffutils
@@ -34,4 +34,7 @@
 [DEP] gtk+12 gzip lablgtk lablgtk:dev linux26-header:dev m4 make mktemp
 [DEP] ncurses:dev net-tools ocaml ocaml:dev patch perl5 sed sysfiles tar
 [DEP] util-linux xfree86 zlib:dev
+
+[PROVIDES] mlbt mlbt+gui mldc mldc+gui mldonkey mldonkey+gui mldonkey_gui
+[PROVIDES] mlgnut mlgnut+gui mlgui mlim mlnet mlnet+gui mlslsk mlslsk+gui
 

@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104749745 Mon Jan  3 11:55:45 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110307369 Tue Mar  8 19:42:49 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-netperf.log
+[LOGS] 5-netperf.log 9-netperf.log
 
-[BUILDTIME] 1355 (5)
+[BUILDTIME] 1573 (9)
 [SIZE] 0.16 MB, 14 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp sed
 [DEP] sysfiles tar
+
+[PROVIDES] netperf netserver snapshot_script tcp_range_script tcp_rr_script
+[PROVIDES] tcp_stream_script udp_rr_script udp_stream_script
 

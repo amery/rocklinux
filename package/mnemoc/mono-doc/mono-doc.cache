@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104775282 Mon Jan  3 19:01:22 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110336358 Wed Mar  9 03:45:58 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-mono-doc.log
+[LOGS] 5-mono-doc.log 9-mono-doc.log
 
-[BUILDTIME] 3353 (5)
-[SIZE] 8.95 MB, 53 files
+[BUILDTIME] 3593 (9)
+[SIZE] 8.96 MB, 53 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gcc34 gcc34:dev gettext glibc23 glibc23:dev grep gtk-sharp
 [DEP] linux26-header:dev make mktemp mono net-tools pkgconfig sed sysfiles
 [DEP] tar util-linux
+
+[PROVIDES] mod monodoc
 

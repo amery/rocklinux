@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104732562 Mon Jan  3 07:09:22 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110224144 Mon Mar  7 20:35:44 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-motor.log
+[LOGS] 5-motor.log 9-motor.log
 
-[BUILDTIME] 11115 (5)
+[BUILDTIME] 11505 (9)
 [SIZE] 0.92 MB, 65 files
 
 [DEP] 00-dirtree autoconf bash2 binutils bison bzip2 coreutils diffutils
 [DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
-[DEP] gzip linux26-header:dev make mktemp ncurses:dev patch perl5 sed
-[DEP] sysfiles tar texinfo
+[DEP] gzip linux26-header:dev make mktemp ncurses:dev net-tools patch
+[DEP] perl5 sed sysfiles tar texinfo
+
+[PROVIDES] motor motorsync
 

@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104765245 Mon Jan  3 16:14:05 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110324402 Wed Mar  9 00:26:42 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-kdegraphics.log
+[LOGS] 5-kdegraphics.log 9-kdegraphics.log
 
-[BUILDTIME] 203726 (5)
+[BUILDTIME] 203963 (9)
 [SIZE] 13.99 MB, 804 files
 
 [DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils djvulibre
@@ -40,4 +40,11 @@
 [DEP] net-tools patch pcre pcre:dev perl5 pkgconfig qt qt:dev sane-backends
 [DEP] sane-backends:dev sed sysfiles tar tetex util-linux vim xfree86
 [DEP] xfree86:dev xpdf xpdf:dev zlib:dev
+
+[PROVIDES] kcolorchooser kcoloredit kdvi kfax kghostview kiconedit
+[PROVIDES] kolourpaint kooka kpdf kpovmodeler kruler ksnapshot kuickshow
+[PROVIDES] kview kviewshell libkdeinit_kuickshow.so libkdeinit_kview.so
+[PROVIDES] libkdeinit_mrmlsearch.so libkghostviewlib.so libkimageviewer.so
+[PROVIDES] libkmultipage.so libkpovmodeler.so libkscan.so libksvg.so
+[PROVIDES] libtext2path.so mrmlsearch printnodetest svgdisplay xf86gammacfg
 

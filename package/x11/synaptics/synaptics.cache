@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104760856 Mon Jan  3 15:00:56 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110319632 Tue Mar  8 23:07:12 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-synaptics.log
+[LOGS] 5-synaptics.log 9-synaptics.log
 
-[BUILDTIME] 1346 (5)
+[BUILDTIME] 1525 (9)
 [SIZE] 0.03 MB, 10 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp sed sysfiles
 [DEP] tar xfree86 xfree86:dev
+
+[PROVIDES] synclient syndaemon
 

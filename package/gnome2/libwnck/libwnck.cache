@@ -20,18 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104684516 Sun Jan  2 17:48:36 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110170124 Mon Mar  7 05:35:24 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libwnck.log
+[LOGS] 5-libwnck.log 9-libwnck.log
 
-[BUILDTIME] 4850 (5)
+[BUILDTIME] 5320 (9)
 [SIZE] 0.59 MB, 106 files
 
 [DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils diffutils
 [DEP] expat findutils freetype gawk gcc34 gcc34:dev gettext glib glib:dev
-[DEP] glibc23 glibc23:dev grep gtk+ gtk+:dev linux26-header:dev make
-[DEP] mktemp pango pango:dev patch pkgconfig sed startup-notification
+[DEP] glibc23 glibc23:dev grep gtk+ gtk+:dev linux26-header:dev make mktemp
+[DEP] net-tools pango pango:dev patch pkgconfig sed startup-notification
 [DEP] startup-notification:dev sysfiles tar util-linux xfree86 xfree86:dev
+
+[PROVIDES] libwnck-1.a libwnck-1.so
 

@@ -20,17 +20,33 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104748445 Mon Jan  3 11:34:05 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110305774 Tue Mar  8 19:16:14 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-coda.log
+[LOGS] 5-coda.log 9-coda.log
 
-[BUILDTIME] 26386 (5)
+[BUILDTIME] 26888 (9)
 [SIZE] 4.11 MB, 146 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils findutils
 [DEP] flex flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
 [DEP] linux26-header:dev m4 make mktemp ncurses:dev net-tools perl5
 [DEP] readline readline:dev sed sysfiles tar util-linux
+
+[PROVIDES] au auth2 backup backup.sh bldvldb.sh cfs clog cmon
+[PROVIDES] coda-client-logrotate coda-server-logrotate coda-setup-ports
+[PROVIDES] coda_replay codacon codaconfedit codadump2tar codasrv codastart
+[PROVIDES] cpasswd createvol_rep ctokens cunlog filcon filerepair
+[PROVIDES] getvolinfo hoard initpw inoder libfail.a libfail.so liblwp.a
+[PROVIDES] liblwp.so librds.a librds.so librdslwp.a librdslwp.so librpc2.a
+[PROVIDES] librpc2.so librvm.a librvm.so librvmlwp.a librvmlwp.so
+[PROVIDES] libse.a libse.so libseg.a libseg.so merge mklka norton
+[PROVIDES] norton-reinit parser parserecdump partial-reinit.sh pdbtool
+[PROVIDES] printvrdb purgevol_rep rdsinit readdump reinit removeinc
+[PROVIDES] repair rp2gen rpc2ping rpc2portmap rvmsizer rvmutl sidekick
+[PROVIDES] smon2 spy startserver tape.pl updateclnt updatefetch updatesrv
+[PROVIDES] venus venus-setup vice-killvolumes vice-setup vice-setup-rvm
+[PROVIDES] vice-setup-scm vice-setup-srvdir vice-setup-user volmunge
+[PROVIDES] volutil vutil xaskuser xfrepair
 

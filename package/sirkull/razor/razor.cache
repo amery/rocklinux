@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104651784 Sun Jan  2 08:43:04 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110130800 Sun Mar  6 18:40:00 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-razor.log
+[LOGS] 5-razor.log 9-razor.log
 
-[BUILDTIME] 1026 (5)
-[SIZE] 0.25 MB, 44 files
+[BUILDTIME] 1664 (9)
+[SIZE] 0.31 MB, 51 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils cpan-digest-sha1
-[DEP] cpan-net-dns cpan-uri findutils gcc34 gcc34:dev glibc23 glibc23:dev
-[DEP] grep linux26-header:dev make mktemp perl5 sed sysfiles tar
+[DEP] cpan-net-dns cpan-uri findutils gawk gcc34 gcc34:dev glibc23
+[DEP] glibc23:dev grep linux26-header:dev make mktemp perl5 sed sysfiles
+[DEP] tar
+
+[PROVIDES] razor-client
 

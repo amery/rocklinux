@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104689140 Sun Jan  2 19:05:40 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110175712 Mon Mar  7 07:08:32 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-bug-buddy.log
+[LOGS] 5-bug-buddy.log 9-bug-buddy.log
 
-[BUILDTIME] 2504 (5)
+[BUILDTIME] 2844 (9)
 [SIZE] 1.81 MB, 101 files
 
 [DEP] 00-dirtree alsa atk atk:dev audiofile autoconf bash2 battfink
@@ -38,8 +38,10 @@
 [DEP] libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui libbonoboui:dev
 [DEP] libglade libglade:dev libgnome libgnome:dev libgnomecanvas
 [DEP] libgnomecanvas:dev libgnomeui libgnomeui:dev libjpeg libxml2
-[DEP] libxml2:dev linux26-header:dev make mktemp openssl orbit2 orbit2:dev
-[DEP] pango pango:dev perl5 pkgconfig popt popt:dev scrollkeeper sed
-[DEP] startup-notification sysfiles tar texinfo util-linux xfree86
+[DEP] libxml2:dev linux26-header:dev make mktemp net-tools openssl orbit2
+[DEP] orbit2:dev pango pango:dev perl5 pkgconfig popt popt:dev scrollkeeper
+[DEP] sed startup-notification sysfiles tar texinfo util-linux xfree86
 [DEP] zapping zlib:dev
+
+[PROVIDES] bug-buddy
 

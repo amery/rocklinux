@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104641702 Sun Jan  2 05:55:02 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110300612 Tue Mar  8 17:50:12 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 3-device-mapper.log
+[LOGS] 3-device-mapper.log 9-device-mapper.log
 
-[BUILDTIME] 1539 (3)
+[BUILDTIME] 2131 (9)
 [SIZE] 0.05 MB, 10 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp sed sysfiles tar util-linux
+[DEP] mktemp net-tools sed sysfiles tar util-linux
+
+[PROVIDES] dmsetup libdevmapper.so
 

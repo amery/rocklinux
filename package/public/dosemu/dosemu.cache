@@ -20,17 +20,28 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104736008 Mon Jan  3 08:06:48 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110228391 Mon Mar  7 21:46:31 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-dosemu.log
+[LOGS] 5-dosemu.log 9-dosemu.log
 
-[BUILDTIME] 9513 (5)
+[BUILDTIME] 9913 (9)
 [SIZE] 4.27 MB, 477 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils findutils
 [DEP] flex flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev gpm gpm:dev
-[DEP] grep gzip linux26-header:dev m4 make mktemp sed slang slang:dev
-[DEP] sysfiles tar util-linux xfree86 xfree86:dev
+[DEP] grep gzip linux26-header:dev m4 make mktemp net-tools sed slang
+[DEP] slang:dev sysfiles tar util-linux xfree86 xfree86:dev
+
+[PROVIDES] assign.com attrib.com bwbasic.exe choice.exe command.com
+[PROVIDES] comp.com debug.com deltree.com deltree2.com diskcomp.com
+[PROVIDES] diskcopy.exe diskcopy.ini display.com dosdebug dosemu
+[PROVIDES] dosemu.bin du.exe edit.exe edit.hlp edlin.exe exe2bin.com
+[PROVIDES] exe2bin.txt fc.exe find.com format.exe help.exe join.exe
+[PROVIDES] kssf.com label.exe lib.exe loadhi.com mem.exe midid mkfatimage
+[PROVIDES] mkfatimage16 mode.com more.exe move.exe nansi.sys replace.exe
+[PROVIDES] rerror.com share.exe shsucdx.exe sort.com subst.exe swsubst.exe
+[PROVIDES] sys.com tee.com touch.com tree.com vol.com vspawn.com wcd.exe
+[PROVIDES] xcopy.exe xdosemu
 

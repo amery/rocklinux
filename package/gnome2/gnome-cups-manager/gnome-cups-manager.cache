@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104789373 Mon Jan  3 22:56:13 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110660078 Sat Mar 12 21:41:18 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnome-cups-manager.log
+[LOGS] 5-gnome-cups-manager.log 9-gnome-cups-manager.log
 
-[BUILDTIME] 7030 (5)
+[BUILDTIME] 14280 (9)
 [SIZE] 1.11 MB, 61 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
@@ -42,4 +42,7 @@
 [DEP] net-tools openssl orbit2 orbit2:dev pango pango:dev perl5 pkgconfig
 [DEP] popt popt:dev sed spheres-and-crystals sysfiles tar util-linux
 [DEP] xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] gnome-cups-add gnome-cups-icon gnome-cups-manager
+[PROVIDES] gnome-cups-switch libgnomecupsui-1.0.a libgnomecupsui-1.0.so
 

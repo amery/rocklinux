@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104774719 Mon Jan  3 18:51:59 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110335610 Wed Mar  9 03:33:30 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-duplicity.log
+[LOGS] 5-duplicity.log 9-duplicity.log
 
-[BUILDTIME] 1215 (5)
+[BUILDTIME] 1364 (9)
 [SIZE] 0.65 MB, 58 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep librsync librsync:dev linux26-header:dev
 [DEP] mktemp numpy python python:dev sed sysfiles tar wxpython
+
+[PROVIDES] duplicity rdiffdir
 

@@ -20,16 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104738309 Mon Jan  3 08:45:09 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110231435 Mon Mar  7 22:37:15 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-embutils.log
+[LOGS] 5-embutils.log 9-embutils.log
 
-[BUILDTIME] 2268 (5)
+[BUILDTIME] 3026 (9)
 [SIZE] 0.22 MB, 74 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils dietlibc dietlibc:dev
 [DEP] findutils gcc34 gcc34:dev glibc23 grep linux26-header:dev make
 [DEP] mktemp patch sed sysfiles tar
+
+[PROVIDES] allinone arch basename cat chgrp chmod chown chroot chvt clear
+[PROVIDES] cmp cp dd df dirname dmesg domainname du echo env false head
+[PROVIDES] hostname id install kill ln ls md5sum mesg mkdir mkfifo mknod
+[PROVIDES] mktemp mv nice nohup pwd rm rmdir sleep sleep2 soscp sosln
+[PROVIDES] soslns sosmv sosrm strings sync tail tar tee test touch tr
+[PROVIDES] true truncate tty uname uniq uudecode uuencode wc which whoami
+[PROVIDES] write yes
 

@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104656511 Sun Jan  2 10:01:51 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110137123 Sun Mar  6 20:25:23 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-pdnsd.log
+[LOGS] 5-pdnsd.log 9-pdnsd.log
 
-[BUILDTIME] 3521 (5)
+[BUILDTIME] 4093 (9)
 [SIZE] 0.14 MB, 22 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils flex flex:dev gawk gcc34 gcc34:dev glibc23
-[DEP] glibc23:dev grep linux26-header:dev m4 make mktemp patch perl5 sed
-[DEP] sysfiles tar texinfo util-linux
+[DEP] glibc23:dev grep linux26-header:dev m4 make mktemp net-tools patch
+[DEP] perl5 sed sysfiles tar texinfo util-linux
+
+[PROVIDES] pdnsd pdnsd-ctl
 

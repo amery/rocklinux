@@ -5,7 +5,7 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/import/cpan/cpan-xml-sax.cache
+[COPY] ROCK Linux: rock-src/package/import/cpan/cpan.cache
 [COPY] ROCK Linux is Copyright (C) 1998 - 2005 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
@@ -20,16 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104675198 Sun Jan  2 15:13:18 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110159582 Mon Mar  7 02:39:42 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-cpan-xml-sax.log
+[LOGS] 5-cpan-xml-sax.log 9-cpan-xml-sax.log
 
-[BUILDTIME] 1036 (5)
-[SIZE] 0.25 MB, 35 files
+[BUILDTIME] 1575 (9)
+[SIZE] 0.32 MB, 41 files
 
-[DEP] 00-dirtree bash2 bzip2 coreutils cpan-xml-namespacesupport
-[DEP] cpan-xml-parser findutils gawk gcc34 grep make mktemp perl5 sed
-[DEP] sysfiles tar
+[DEP] 00-dirtree bash2 bzip2 coreutils cpan-xml-libxml
+[DEP] cpan-xml-namespacesupport cpan-xml-parser findutils gawk gcc34 grep
+[DEP] make mktemp perl5 sed sysfiles tar
+
 

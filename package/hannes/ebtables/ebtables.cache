@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104738283 Mon Jan  3 08:44:43 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110231396 Mon Mar  7 22:36:36 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ebtables.log
+[LOGS] 5-ebtables.log 9-ebtables.log
 
-[BUILDTIME] 1373 (5)
+[BUILDTIME] 1597 (9)
 [SIZE] 0.10 MB, 9 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp patch sed
 [DEP] sysfiles tar
+
+[PROVIDES] ebtables
 

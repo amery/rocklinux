@@ -20,19 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104669920 Sun Jan  2 13:45:20 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110153067 Mon Mar  7 00:51:07 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gimp-print42.log
+[LOGS] 5-gimp-print42.log 9-gimp-print42.log
 
-[BUILDTIME] 14688 (5)
+[BUILDTIME] 16100 (9)
 [SIZE] 36.84 MB, 4409 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bison bzip2 coreutils
 [DEP] cups cups:dev diffutils findutils flex flex:dev gawk gcc34 gcc34:dev
 [DEP] gettext glib12 glibc23 glibc23:dev grep gtk+12 libjpeg libjpeg:dev
 [DEP] libpng libpng:dev libtiff libtiff:dev linux26-header:dev m4 make
-[DEP] mktemp ncurses:dev openssl perl5 readline readline:dev sed sysfiles
-[DEP] tar texinfo zlib:dev
+[DEP] mktemp ncurses:dev net-tools openssl perl5 readline readline:dev
+[DEP] sed sysfiles tar texinfo zlib:dev
+
+[PROVIDES] cups-calibrate escputil gimpprint-config libgimpprint.a
+[PROVIDES] libgimpprint.so
 

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104763079 Mon Jan  3 15:37:59 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110322213 Tue Mar  8 23:50:13 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libgli.log
+[LOGS] 5-libgli.log 9-libgli.log
 
-[BUILDTIME] 1552 (5)
+[BUILDTIME] 1724 (9)
 [SIZE] 0.13 MB, 13 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp patch sed
 [DEP] sysfiles tar xfree86 xfree86:dev
+
+[PROVIDES] libgli-0.4.so libgli.a libgli.so
 

@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104701768 Sun Jan  2 22:36:08 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110190250 Mon Mar  7 11:10:50 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gst-plugins.log
+[LOGS] 5-gst-plugins.log 9-gst-plugins.log
 
-[BUILDTIME] 51999 (5)
-[SIZE] 3.94 MB, 171 files
+[BUILDTIME] 53347 (9)
+[SIZE] 3.97 MB, 173 files
 
 [DEP] 00-dirtree a52dec:dev aalib aalib:dev alsa alsa:dev arts arts:dev
 [DEP] atk atk:dev audiofile audiofile:dev bash2 binutils bzip2 cdparanoia
@@ -37,13 +37,18 @@
 [DEP] glib12:dev glib:dev glibc23 glibc23:dev gnome-blog gnome-libs14
 [DEP] gnome-vfs gnome-vfs:dev gpm grep gsm:dev gstreamer gstreamer:dev gtk+
 [DEP] gtk+12 gtk+12:dev gtk+:dev hermes hermes:dev jack jack:dev ladspa:dev
-[DEP] lame lame:dev libbonobo libbonobo:dev libcdaudio libcdaudio:dev libdv
-[DEP] libdv:dev libdvdnav libdvdnav:dev libdvdread libdvdread:dev libjpeg
+[DEP] lame lame:dev lcms lcms:dev libavc1394 libavc1394:dev libbonobo
+[DEP] libbonobo:dev libcdaudio libcdaudio:dev libdv libdv:dev libdvdnav
+[DEP] libdvdnav:dev libdvdread libdvdread:dev libfame libfame:dev libjpeg
 [DEP] libjpeg:dev libmikmod libmikmod:dev libmng libmng:dev libmusicbrainz
 [DEP] libmusicbrainz:dev libpng libpng:dev libraw1394 libraw1394:dev
-[DEP] libsdl libsdl:dev libsndfile libsndfile:dev libxml2 libxml2:dev
-[DEP] linux26-header:dev mad mad:dev make mjpegtools mjpegtools:dev
-[DEP] mktemp nas nas:dev ogg-vorbis ogg-vorbis:dev orbit2 orbit2:dev
-[DEP] pango pango:dev patch pkgconfig popt popt:dev sed slang sysfiles
-[DEP] tar util-linux xfree86 xfree86:dev xvid:dev zlib:dev
+[DEP] libsdl libsdl:dev libshout libshout:dev libsndfile libsndfile:dev
+[DEP] libxml2 libxml2:dev linux26-header:dev mad mad:dev make mjpegtools
+[DEP] mjpegtools:dev mktemp nas nas:dev net-tools ogg-vorbis ogg-vorbis:dev
+[DEP] orbit2 orbit2:dev pango pango:dev patch pkgconfig popt popt:dev sed
+[DEP] slang sysfiles tar util-linux xfree86 xfree86:dev xvid:dev zlib:dev
+
+[PROVIDES] gst-launch-ext-0.8 gst-visualise-0.8 libgstgconf-0.8.so
+[PROVIDES] libgstinterfaces-0.8.so libgstmedia-info-0.8.so
+[PROVIDES] libgstplay-0.8.so
 

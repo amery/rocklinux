@@ -20,18 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104653354 Sun Jan  2 09:09:14 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110132966 Sun Mar  6 19:16:06 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-openldap.log
+[LOGS] 5-openldap.log 9-openldap.log
 
-[BUILDTIME] 19230 (5)
+[BUILDTIME] 20342 (9)
 [SIZE] 2.61 MB, 271 files
 
-[DEP] 00-dirtree autoconf automake19 bash2 bdb42 bdb42:dev binutils bzip2
-[DEP] coreutils cyrus-sasl2:dev diffutils findutils gawk gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep libtool:dev linux26-header:dev m4 make
-[DEP] mktemp ncurses openssl openssl:dev patch perl5 sed sysfiles tar
-[DEP] tcp_wrappers:dev texinfo
+[DEP] 00-dirtree autoconf automake19 bash2 bdb42 bdb42:dev binutils
+[DEP] bzip2 coreutils cyrus-sasl2:dev diffutils findutils gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep libtool:dev linux26-header:dev
+[DEP] m4 make mktemp ncurses net-tools openssl openssl:dev patch perl5
+[DEP] sed sysfiles tar tcp_wrappers:dev texinfo
+
+[PROVIDES] ldapadd ldapcompare ldapdelete ldapmodify ldapmodrdn ldappasswd
+[PROVIDES] ldapsearch ldapwhoami liblber.a liblber.so libldap.a libldap.so
+[PROVIDES] libldap_r.a libldap_r.so slapadd slapcat slapdn slapindex
+[PROVIDES] slappasswd slaptest
 

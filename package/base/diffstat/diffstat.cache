@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104657083 Sun Jan  2 10:11:23 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110137812 Sun Mar  6 20:36:52 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-diffstat.log
+[LOGS] 5-diffstat.log 9-diffstat.log
 
-[BUILDTIME] 1026 (5)
+[BUILDTIME] 1554 (9)
 [SIZE] 0.03 MB, 8 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep make mktemp sed sysfiles
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep make mktemp net-tools sed sysfiles
 [DEP] tar util-linux
+
+[PROVIDES] diffstat
 

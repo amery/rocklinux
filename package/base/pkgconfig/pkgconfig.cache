@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104654333 Sun Jan  2 09:25:33 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110134344 Sun Mar  6 19:39:04 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-pkgconfig.log
+[LOGS] 5-pkgconfig.log 9-pkgconfig.log
 
-[BUILDTIME] 3713 (5)
+[BUILDTIME] 4304 (9)
 [SIZE] 0.09 MB, 9 files
 
-[DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils diffutils file
-[DEP] findutils gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp perl5 sed sysfiles tar texinfo
+[DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils diffutils
+[DEP] file findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
+[DEP] linux26-header:dev make mktemp net-tools perl5 sed sysfiles tar
+[DEP] texinfo
+
+[PROVIDES] pkg-config
 

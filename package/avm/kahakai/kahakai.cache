@@ -20,19 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104775494 Mon Jan  3 19:04:54 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110336577 Wed Mar  9 03:49:37 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-kahakai.log
+[LOGS] 5-kahakai.log 9-kahakai.log
 
-[BUILDTIME] 16644 (5)
+[BUILDTIME] 16863 (9)
 [SIZE] 3.11 MB, 42 files
 
 [DEP] 00-dirtree bash2 binutils boost:dev bzip2 coreutils diffutils
-[DEP] expat findutils freetype freetype:dev gawk gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep imlib2 imlib2:dev libtool libtool:dev
-[DEP] linux26-header:dev make mktemp net-tools numpy patch perl5 pkgconfig
-[DEP] python python:dev sed swig sysfiles tar tcl tk util-linux wxpython
-[DEP] xfree86 xfree86:dev zlib:dev
+[DEP] expat findutils freetype freetype:dev gawk gcc34 gcc34:dev glibc23
+[DEP] glibc23:dev grep imlib2 imlib2:dev linux26-header:dev make mktemp
+[DEP] net-tools numpy patch perl5 pkgconfig python python:dev sed swig
+[DEP] sysfiles tar tcl tk util-linux wxpython xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] hsetroot kahakai
 

@@ -20,16 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104652287 Sun Jan  2 08:51:27 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110188518 Mon Mar  7 10:41:58 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-exim.log
+[LOGS] 5-exim.log 9-exim.log
 
-[BUILDTIME] 4498 (5)
-[SIZE] 0.71 MB, 32 files
+[BUILDTIME] 5634 (9)
+[SIZE] 0.99 MB, 46 files
 
-[DEP] 00-dirtree bash2 bdb41 bdb41:dev binutils bzip2 coreutils findutils
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] m4 make mktemp patch sed sysfiles tar
+[DEP] 00-dirtree bash2 bdb42 bdb42:dev binutils bzip2 coreutils findutils
+[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev gnutls gnutls:dev grep
+[DEP] libgcrypt libgpg-error linux26-header:dev m4 make mktemp patch sed
+[DEP] sysfiles tar
+
+[PROVIDES] exicyclog exicyclog.O exigrep exigrep.O exim exim-4.44-1
+[PROVIDES] exim_checkaccess exim_checkaccess.O exim_dbmbuild
+[PROVIDES] exim_dbmbuild.O exim_dumpdb exim_dumpdb.O exim_fixdb
+[PROVIDES] exim_fixdb.O exim_lock exim_lock.O exim_tidydb exim_tidydb.O
+[PROVIDES] eximstats eximstats.O exinext exinext.O exipick exipick.O
+[PROVIDES] exiqgrep exiqgrep.O exiqsumm exiqsumm.O exiwhat exiwhat.O
+[PROVIDES] mail_exim mailq_exim sendmail_exim setmailer_exim
 

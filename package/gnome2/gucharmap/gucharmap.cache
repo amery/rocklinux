@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104738392 Mon Jan  3 08:46:32 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110231557 Mon Mar  7 22:39:17 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gucharmap.log
+[LOGS] 5-gucharmap.log 9-gucharmap.log
 
-[BUILDTIME] 5222 (5)
+[BUILDTIME] 5491 (9)
 [SIZE] 4.75 MB, 135 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
@@ -38,7 +38,9 @@
 [DEP] libbonobo libbonobo:dev libbonoboui libbonoboui:dev libglade
 [DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev
 [DEP] libgnomeui libgnomeui:dev libjpeg libjpeg:dev libxml2 libxml2:dev
-[DEP] linux26-header:dev make mktemp openssl orbit2 orbit2:dev pango
-[DEP] pango:dev perl5 pkgconfig popt popt:dev scrollkeeper sed sysfiles
-[DEP] tar util-linux xfree86 zlib:dev
+[DEP] linux26-header:dev make mktemp net-tools openssl orbit2 orbit2:dev
+[DEP] pango pango:dev perl5 pkgconfig popt popt:dev scrollkeeper sed
+[DEP] sysfiles tar util-linux xfree86 zlib:dev
+
+[PROVIDES] charmap gnome-character-map gucharmap libgucharmap.so
 

@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104797669 Tue Jan  4 01:14:29 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110897793 Tue Mar 15 15:43:13 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnophone.log
+[LOGS] 5-gnophone.log 9-gnophone.log
 
-[BUILDTIME] 2523 (5)
+[BUILDTIME] 2526 (9)
 [SIZE] 0.66 MB, 15 files
 
 [DEP] 00-dirtree alsa audiofile audiofile:dev autoconf automake19 bash2
@@ -34,4 +34,6 @@
 [DEP] gcc34:dev glib12 glib12:dev glibc23 glibc23:dev grep gsm:dev gtk+12
 [DEP] gtk+12:dev iax iax:dev imlib imlib:dev linux26-header:dev make mktemp
 [DEP] mozilla net-tools patch perl5 sed sox sysfiles tar texinfo xfree86
+
+[PROVIDES] gnophone gnophone.bin
 

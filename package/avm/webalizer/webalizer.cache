@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104752520 Mon Jan  3 12:42:00 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110310299 Tue Mar  8 20:31:39 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-webalizer.log
+[LOGS] 5-webalizer.log 9-webalizer.log
 
-[BUILDTIME] 1501 (5)
-[SIZE] 0.16 MB, 10 files
+[BUILDTIME] 1773 (9)
+[SIZE] 0.17 MB, 10 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils expat findutils
-[DEP] freetype gcc34 gcc34:dev glibc23 glibc23:dev grep libgd libgd:dev
-[DEP] libjpeg libpng make mktemp net-tools sed sysfiles tar xfree86
-[DEP] zlib:dev
+[DEP] 00-dirtree bash2 bdb42 bdb42:dev binutils bzip2 coreutils diffutils
+[DEP] expat findutils freetype gcc34 gcc34:dev glibc23 glibc23:dev grep
+[DEP] libgd libgd:dev libjpeg libpng linux26-header:dev make mktemp
+[DEP] net-tools sed sysfiles tar xfree86 zlib:dev
+
+[PROVIDES] webalizer webazolver
 

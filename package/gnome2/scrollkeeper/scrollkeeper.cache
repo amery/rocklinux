@@ -20,18 +20,37 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104686687 Sun Jan  2 18:24:47 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110172653 Mon Mar  7 06:17:33 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-scrollkeeper.log
+[LOGS] 5-scrollkeeper.log 9-scrollkeeper.log
 
-[BUILDTIME] 4349 (5)
-[SIZE] 3.14 MB, 253 files
+[BUILDTIME] 14165 (9)
+[SIZE] 5.53 MB, 1099 files
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils cpan-xml-parser
-[DEP] diffutils docbookx findutils gawk gcc34 gcc34:dev gettext gimp
-[DEP] glib glibc23 glibc23:dev grep libglade libxml2 libxml2:dev libxslt
-[DEP] libxslt:dev linux26-header:dev make mktemp pango perl5 sed sysfiles
-[DEP] tar util-linux zlib:dev
+[DEP] 00-dirtree anjuta balsa bash2 battfink binutils bison bug-buddy bzip2
+[DEP] coreutils cpan-xml-parser diffutils docbookx eog epiphany evolution
+[DEP] file-roller findutils gawk gcalctool gcc34 gcc34:dev gconf-editor
+[DEP] gdm gedit gettext ggv ghex ghex12 gimp gjiten glabels glade
+[DEP] glade10 glib glib12 glibc23 glibc23:dev gnome-applets gnome-desktop
+[DEP] gnome-doc-utils gnome-games gnome-media gnome-netstatus gnome-panel
+[DEP] gnome-pilot gnome-system-monitor gnome-system-tools gnome-terminal
+[DEP] gnome-utils gnome2-user-docs gnomeicu gnomemeeting gnopernicus
+[DEP] gnotepad+ gok gpdf grep gst-editor gthumb gtkam gucharmap libgda
+[DEP] libglade libxml2 libxml2:dev libxslt libxslt:dev linux26-header:dev
+[DEP] lock-keys-applet make mergeant mgt mktemp mrproject net-tools
+[DEP] netspeed_applet pango perl5 pybliographer quick-lounge-applet
+[DEP] rhythmbox seahorse sed sound-juicer streamtuner sysfiles tar totem
+[DEP] util-linux zapping zenity zlib:dev
+
+[PROVIDES] libscrollkeeper.a libscrollkeeper.so scrollkeeper-config
+[PROVIDES] scrollkeeper-extract scrollkeeper-gen-seriesid
+[PROVIDES] scrollkeeper-get-cl scrollkeeper-get-content-list
+[PROVIDES] scrollkeeper-get-extended-content-list
+[PROVIDES] scrollkeeper-get-index-from-docpath
+[PROVIDES] scrollkeeper-get-toc-from-docpath scrollkeeper-get-toc-from-id
+[PROVIDES] scrollkeeper-install scrollkeeper-preinstall
+[PROVIDES] scrollkeeper-rebuilddb scrollkeeper-uninstall
+[PROVIDES] scrollkeeper-update
 

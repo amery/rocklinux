@@ -20,19 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104689296 Sun Jan  2 19:08:16 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110175900 Mon Mar  7 07:11:40 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libgnomeprintui.log
+[LOGS] 5-libgnomeprintui.log 9-libgnomeprintui.log
 
-[BUILDTIME] 5240 (5)
+[BUILDTIME] 5675 (9)
 [SIZE] 0.83 MB, 93 files
 
 [DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils diffutils
 [DEP] findutils gawk gcc34 gcc34:dev gettext glib glib:dev glibc23
 [DEP] glibc23:dev grep gtk+ gtk+:dev libart_lgpl23 libart_lgpl23:dev
 [DEP] libgnomecanvas libgnomecanvas:dev libgnomeprint libgnomeprint:dev
-[DEP] libxml2 libxml2:dev linux26-header:dev make mktemp pango pango:dev
-[DEP] pkgconfig sed sysfiles tar util-linux zlib:dev
+[DEP] libxml2 libxml2:dev linux26-header:dev make mktemp net-tools pango
+[DEP] pango:dev pkgconfig sed sysfiles tar util-linux zlib:dev
+
+[PROVIDES] libgnomeprintui-2-2.a libgnomeprintui-2-2.so
 

@@ -20,19 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104700225 Sun Jan  2 22:10:25 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110188577 Mon Mar  7 10:42:57 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gqview.log
+[LOGS] 5-gqview.log 9-gqview.log
 
-[BUILDTIME] 4516 (5)
-[SIZE] 1.35 MB, 39 files
+[BUILDTIME] 4910 (9)
+[SIZE] 1.36 MB, 37 files
 
 [DEP] 00-dirtree alsa atk atk:dev bash2 binutils bison bzip2 coreutils
-[DEP] diffutils expat findutils freetype gawk gcc34 gcc34:dev gettext
-[DEP] glib glib:dev glibc23 glibc23:dev gnotepad+ grep gtk+ gtk+:dev
-[DEP] libpng libpng:dev linux26-header:dev make mktemp pango pango:dev
-[DEP] patch pkgconfig sed sysfiles tar util-linux xfree86 xfree86:dev
-[DEP] zapping zlib:dev
+[DEP] diffutils expat findutils freetype gawk gcc34 gcc34:dev gettext glib
+[DEP] glib:dev glibc23 glibc23:dev grep gtk+ gtk+:dev libpng libpng:dev
+[DEP] linux26-header:dev make mktemp net-tools pango pango:dev patch
+[DEP] pkgconfig sed sysfiles tar util-linux xfree86 zapping zlib:dev
+
+[PROVIDES] gqview
 

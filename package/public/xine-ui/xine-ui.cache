@@ -20,20 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104727716 Mon Jan  3 05:48:36 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110218339 Mon Mar  7 18:58:59 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-xine-ui.log
+[LOGS] 5-xine-ui.log 9-xine-ui.log
 
-[BUILDTIME] 16057 (5)
+[BUILDTIME] 16378 (9)
 [SIZE] 2.60 MB, 122 files
 
 [DEP] 00-dirtree aalib aalib:dev autoconf automake17 bash2 binutils bison
 [DEP] bzip2 coreutils curl curl:dev diffutils expat findutils freetype
 [DEP] freetype:dev gawk gcc34 gcc34:dev gettext glib12 glibc23 glibc23:dev
 [DEP] gnome-libs14 gpm grep libpng libpng:dev linux26-header:dev lirc
-[DEP] lirc:dev m4 make mktemp ncurses:dev openssl patch perl5 pkgconfig
-[DEP] readline readline:dev sed slang sysfiles tar util-linux xfree86
-[DEP] xfree86:dev xine-lib xine-lib:dev zapping zlib:dev
+[DEP] lirc:dev m4 make mktemp ncurses:dev net-tools openssl patch perl5
+[DEP] pkgconfig readline readline:dev sed slang sysfiles tar util-linux
+[DEP] xfree86 xfree86:dev xine-lib xine-lib:dev zapping zlib:dev
+
+[PROVIDES] aaxine fbxine xine xine-bugreport xine-check xine-remote
 

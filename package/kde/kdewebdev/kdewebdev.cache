@@ -20,21 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104716910 Mon Jan  3 02:48:30 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110206767 Mon Mar  7 15:46:07 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-kdewebdev.log
+[LOGS] 5-kdewebdev.log 9-kdewebdev.log
 
-[BUILDTIME] 121226 (5)
-[SIZE] 10.26 MB, 1457 files
+[BUILDTIME] 123001 (9)
+[SIZE] 10.28 MB, 1457 files
 
 [DEP] 00-dirtree arts bash2 binutils binutils:dev bzip2 coreutils
-[DEP] diffutils expat fam fam:dev findutils freetype freetype:dev gawk
-[DEP] gcc34 gcc34:dev gettext glibc23 glibc23:dev grep kdebase kdelibs
-[DEP] kdelibs:dev kdelibs:doc kdeutils libart_lgpl23 libart_lgpl23:dev
-[DEP] libgcrypt libgcrypt:dev libgpg-error libgpg-error:dev libjpeg
-[DEP] libjpeg:dev libpng libpng:dev libxml2 libxml2:dev libxslt libxslt:dev
-[DEP] linux26-header:dev make mktemp pcre pcre:dev perl5 qt qt:dev sed
-[DEP] sysfiles tar util-linux vim xfree86 xfree86:dev zlib:dev
+[DEP] diffutils expat fam fam:dev findutils freetype freetype:dev
+[DEP] gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep kdebase
+[DEP] kdelibs kdelibs:dev kdelibs:doc kdesdk kdesdk:dev kdeutils
+[DEP] libart_lgpl23 libart_lgpl23:dev libgcrypt libgcrypt:dev libgpg-error
+[DEP] libgpg-error:dev libjpeg libjpeg:dev libpng libpng:dev libxml2
+[DEP] libxml2:dev libxslt libxslt:dev linux26-header:dev make mktemp
+[DEP] net-tools pcre pcre:dev perl5 qt qt:dev sed sysfiles tar util-linux
+[DEP] vim xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] kimagemapeditor klinkstatus kmdr-editor kmdr-executor
+[PROVIDES] kmdr-plugins kxsldbg libkommanderplugin.so libkommanderwidget.so
+[PROVIDES] libkommanderwidgets.so quanta xsldbg
 

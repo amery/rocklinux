@@ -20,17 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104673686 Sun Jan  2 14:48:06 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110157642 Mon Mar  7 02:07:22 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-rpm.log
+[LOGS] 5-rpm.log 9-rpm.log
 
-[BUILDTIME] 35772 (5)
+[BUILDTIME] 36463 (9)
 [SIZE] 4.07 MB, 141 files
 
 [DEP] 00-dirtree alien bash2 binutils bison bzip2 bzip2:dev coreutils
 [DEP] diffutils doxygen findutils gawk gcc34 gcc34:dev gettext glibc23
 [DEP] glibc23:dev grep libelf libelf:dev linux26-header:dev make mktemp
-[DEP] patch python python:dev sed sysfiles tar util-linux zlib:dev
+[DEP] net-tools patch python python:dev sed sysfiles tar util-linux
+[DEP] zlib:dev
+
+[PROVIDES] gendiff libbeecrypt.a libbeecrypt.so librpm-4.1.so librpm.a
+[PROVIDES] librpm.so librpmbuild-4.1.so librpmbuild.a librpmbuild.so
+[PROVIDES] librpmdb-4.1.so librpmdb.a librpmdb.so librpmio-4.1.so
+[PROVIDES] librpmio.a librpmio.so rpm rpm2cpio rpmbuild rpmdb rpme rpmgraph
+[PROVIDES] rpmi rpmquery rpmsign rpmu rpmverify
 

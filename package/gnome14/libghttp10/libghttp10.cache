@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1101822870 Tue Nov 30 14:54:30 2004
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110159091 Mon Mar  7 02:31:31 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libghttp10.log
+[LOGS] 5-libghttp10.log 9-libghttp10.log
 
-[BUILDTIME] 2105 (5)
+[BUILDTIME] 2026 (9)
 [SIZE] 0.04 MB, 10 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils gcc34 gcc34:dev glib12 glibc23 glibc23:dev
 [DEP] grep linux26-header:dev make mktemp net-tools perl5 sed sysfiles
 [DEP] tar texinfo
+
+[PROVIDES] libghttp.a libghttp.so
 

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104646936 Sun Jan  2 07:22:16 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110124107 Sun Mar  6 16:48:27 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-pdksh.log
+[LOGS] 5-pdksh.log 9-pdksh.log
 
-[BUILDTIME] 2146 (5)
+[BUILDTIME] 2762 (9)
 [SIZE] 0.28 MB, 8 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp patch sed sysfiles tar
+[DEP] mktemp net-tools patch sed sysfiles tar
+
+[PROVIDES] pdksh
 

@@ -20,18 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104657904 Sun Jan  2 10:25:04 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110138838 Sun Mar  6 20:53:58 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ruby.log
+[LOGS] 5-ruby.log 9-ruby.log
 
-[BUILDTIME] 11028 (5)
+[BUILDTIME] 11524 (9)
 [SIZE] 6.04 MB, 953 files
 
-[DEP] 00-dirtree bash2 bdb41 bdb41:dev binutils bzip2 coreutils diffutils
+[DEP] 00-dirtree bash2 bdb42 bdb42:dev binutils bzip2 coreutils diffutils
 [DEP] findutils gawk gcc34 gcc34:dev gdbm gdbm:dev glibc23 glibc23:dev
-[DEP] grep groff linux26-header:dev make mktemp ncurses:dev openssl
-[DEP] openssl:dev readline readline:dev sed sysfiles tar tcl tcl:dev tk
-[DEP] tk:dev util-linux xfree86 xfree86:dev zlib:dev
+[DEP] grep groff linux26-header:dev make mktemp ncurses:dev net-tools
+[DEP] openssl openssl:dev readline readline:dev sed sysfiles tar tcl
+[DEP] tcl:dev tk tk:dev util-linux xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] erb irb libruby-static.a libruby.so rdoc ri ruby testrb
 

@@ -20,18 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104794727 Tue Jan  4 00:25:27 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110895131 Tue Mar 15 14:58:51 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-hercules.log
+[LOGS] 5-hercules.log 9-hercules.log
 
-[BUILDTIME] 22931 (5)
-[SIZE] 3.46 MB, 135 files
+[BUILDTIME] 22983 (9)
+[SIZE] 3.47 MB, 135 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 bzip2:dev coreutils diffutils
 [DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev
 [DEP] grep libgcrypt libgcrypt:dev libgpg-error libgpg-error:dev
 [DEP] linux26-header:dev make mktemp net-tools patch sed sysfiles tar
 [DEP] util-linux zlib:dev
+
+[PROVIDES] cckd2ckd cckdcdsk cckdcomp cckddiag cckdswap cfba2fba ckd2cckd
+[PROVIDES] dasdcat dasdcopy dasdinit dasdisup dasdlist dasdload dasdls
+[PROVIDES] dasdpdsu dasdseq dmap2hrc fba2cfba hercifc hercules hetget
+[PROVIDES] hetinit hetmap hetupd libherc.so libhercs.so tapecopy tapemap
+[PROVIDES] tapesplt
 

@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104662347 Sun Jan  2 11:39:07 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110143976 Sun Mar  6 22:19:36 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libxml2.log
+[LOGS] 5-libxml2.log 9-libxml2.log
 
-[BUILDTIME] 15659 (5)
+[BUILDTIME] 17626 (9)
 [SIZE] 1.45 MB, 21 files
 
-[DEP] 00-dirtree bash2 binutils binutils:dev bzip2 coreutils
-[DEP] diffutils findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp python python:dev sed sysfiles tar
-[DEP] util-linux zlib:dev
+[DEP] 00-dirtree bash2 binutils binutils:dev bzip2 coreutils diffutils
+[DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libxslt
+[DEP] linux26-header:dev make mktemp net-tools numpy python python:dev
+[DEP] sed sysfiles tar util-linux wxpython zlib:dev
+
+[PROVIDES] libxml2.a libxml2.so xml2-config xmlcatalog xmllint
 

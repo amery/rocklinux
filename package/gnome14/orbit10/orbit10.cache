@@ -20,17 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104656470 Sun Jan  2 10:01:10 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110137066 Sun Mar  6 20:24:26 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-orbit10.log
+[LOGS] 5-orbit10.log 9-orbit10.log
 
-[BUILDTIME] 10335 (5)
-[SIZE] 0.87 MB, 42 files
+[BUILDTIME] 10890 (9)
+[SIZE] 0.88 MB, 42 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bison bzip2 coreutils
-[DEP] diffutils findutils flex flex:dev gawk gcc34 gcc34:dev gettext glib12
-[DEP] glib12:dev glibc23 glibc23:dev grep indent linux26-header:dev m4 make
-[DEP] mktemp perl5 sed sysfiles tar tcp_wrappers:dev texinfo util-linux
+[DEP] diffutils findutils flex flex:dev gawk gcc34 gcc34:dev gettext
+[DEP] glib12 glib12:dev glibc23 glibc23:dev grep indent linux26-header:dev
+[DEP] m4 make mktemp net-tools perl5 sed sysfiles tar tcp_wrappers:dev
+[DEP] texinfo util-linux
+
+[PROVIDES] ior-decode libIDL-config libIDL.a libIDL.so libIIOP.a
+[PROVIDES] libIIOP.so libORBit.a libORBit.so libORBitCosNaming.a
+[PROVIDES] libORBitCosNaming.so libORBitutil.a libORBitutil.so
+[PROVIDES] libname-server.a liborbit-c-backend.a name-client
+[PROVIDES] old-name-server orbit-config orbit-event-server orbit-idl
+[PROVIDES] orbit-ird orbit-name-server
 

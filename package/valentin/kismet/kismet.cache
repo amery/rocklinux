@@ -20,19 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104760829 Mon Jan  3 15:00:29 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110319569 Tue Mar  8 23:06:09 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-kismet.log
+[LOGS] 5-kismet.log 9-kismet.log
 
-[BUILDTIME] 14033 (5)
+[BUILDTIME] 14279 (9)
 [SIZE] 1.94 MB, 31 files
 
 [DEP] 00-dirtree alsa autoconf bash2 binutils bzip2 bzip2:dev
 [DEP] coreutils diffutils expat expat:dev findutils freetype gawk
 [DEP] gcc34 gcc34:dev glib12 glibc23 glibc23:dev gmp gmp:dev grep
-[DEP] imagemagick imagemagick:dev lcms libjpeg libpcap:dev libtiff
-[DEP] libtool linux26-header:dev linux26-source m4 make mktemp ncurses:dev
-[DEP] net-tools patch perl5 sed sysfiles tar util-linux xfree86 zlib:dev
+[DEP] imagemagick imagemagick:dev lcms libjpeg libpcap:dev libtiff libtool
+[DEP] linux26-header:dev m4 make mktemp ncurses:dev net-tools patch perl5
+[DEP] sed sysfiles tar util-linux xfree86 zlib:dev
+
+[PROVIDES] gpsmap gpsmap-helper-earthamaps kismet kismet_client
+[PROVIDES] kismet_drone kismet_server
 

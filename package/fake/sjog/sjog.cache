@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104711673 Mon Jan  3 01:21:13 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110201101 Mon Mar  7 14:11:41 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-sjog.log
+[LOGS] 5-sjog.log 9-sjog.log
 
-[BUILDTIME] 1652 (5)
+[BUILDTIME] 1982 (9)
 [SIZE] 0.13 MB, 14 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
 [DEP] gcc34:dev gdk-pixbuf10 gdk-pixbuf10:dev glib12 glib12:dev glibc23
 [DEP] glibc23:dev grep gtk+12 gtk+12:dev linux26-header:dev make mktemp
-[DEP] patch sed sysfiles tar util-linux xfree86 xfree86:dev
+[DEP] net-tools patch sed sysfiles tar util-linux xfree86 xfree86:dev
+
+[PROVIDES] setbrightness sjog
 

@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104748674 Mon Jan  3 11:37:54 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110306045 Tue Mar  8 19:20:45 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-slrn.log
+[LOGS] 5-slrn.log 9-slrn.log
 
-[BUILDTIME] 3465 (5)
-[SIZE] 1.45 MB, 39 files
+[BUILDTIME] 3719 (9)
+[SIZE] 1.46 MB, 39 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev gettext glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp net-tools patch sed slang slang:dev sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
+[DEP] gcc34 gcc34:dev gettext glibc23 glibc23:dev grep linux26-header:dev
+[DEP] make mktemp net-tools patch sed slang slang:dev sysfiles tar
+[DEP] util-linux
+
+[PROVIDES] slrn slrnpull
 

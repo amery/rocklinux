@@ -20,18 +20,29 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104684681 Sun Jan  2 17:51:21 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110170319 Mon Mar  7 05:38:39 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-pilot-link.log
+[LOGS] 5-pilot-link.log 9-pilot-link.log
 
-[BUILDTIME] 10408 (5)
+[BUILDTIME] 11016 (9)
 [SIZE] 0.89 MB, 102 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev
 [DEP] grep libpng libpng:dev libtool linux26-header:dev m4 make mktemp
-[DEP] ncurses:dev numpy patch perl5 python python:dev readline sed sysfiles
-[DEP] tar tcl tcl:dev tk util-linux xfree86 zlib:dev
+[DEP] ncurses:dev net-tools numpy patch perl5 python python:dev readline
+[DEP] sed sysfiles tar tcl tcl:dev tk util-linux wxpython xfree86 zlib:dev
+
+[PROVIDES] addresses ccexample debugsh dlpsh hinotes ietf2datebook
+[PROVIDES] install-datebook install-expenses install-hinote install-memo
+[PROVIDES] install-netsync install-todo install-todos install-user
+[PROVIDES] libpisock++.a libpisock++.so libpisock.a libpisock.so
+[PROVIDES] libpisync.a libpisync.so memos money2qif pi-csd pi-getram
+[PROVIDES] pi-getrom pi-getromtoken pi-nredir pilot-addresses pilot-archive
+[PROVIDES] pilot-clip pilot-datebook pilot-debug pilot-dedupe pilot-file
+[PROVIDES] pilot-prc pilot-schlep pilot-undelete pilot-xfer read-expenses
+[PROVIDES] read-ical read-notepad read-palmpix read-todos reminders
+[PROVIDES] sync-plan
 

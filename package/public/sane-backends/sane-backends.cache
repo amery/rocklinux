@@ -20,18 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104717338 Mon Jan  3 02:55:38 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110207215 Mon Mar  7 15:53:35 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-sane-backends.log
+[LOGS] 5-sane-backends.log 9-sane-backends.log
 
-[BUILDTIME] 20389 (5)
-[SIZE] 4.61 MB, 322 files
+[BUILDTIME] 20939 (9)
+[SIZE] 4.62 MB, 322 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep libexif
 [DEP] libexif:dev libgphoto libgphoto:dev libjpeg libjpeg:dev libusb
-[DEP] libusb:dev linux26-header:dev linux26-source make mktemp pkgconfig
-[DEP] sed sysfiles tar tetex util-linux
+[DEP] libusb:dev linux26-header:dev linux26-source make mktemp net-tools
+[DEP] pkgconfig sed sysfiles tar tetex util-linux
+
+[PROVIDES] gamma4scanimage libsane.so sane-config sane-find-scanner
+[PROVIDES] saned scanimage
 

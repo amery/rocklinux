@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104641020 Sun Jan  2 05:43:40 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110125549 Sun Mar  6 17:12:29 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 3-less.log
+[LOGS] 3-less.log 9-less.log
 
-[BUILDTIME] 1868 (3)
+[BUILDTIME] 2455 (9)
 [SIZE] 0.20 MB, 13 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp ncurses:dev sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
+[DEP] ncurses:dev net-tools sed sysfiles tar util-linux
+
+[PROVIDES] less lessecho lesskey lesspipe
 

@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104675384 Sun Jan  2 15:16:24 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110159688 Mon Mar  7 02:41:28 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gmime.log
+[LOGS] 5-gmime.log 9-gmime.log
 
-[BUILDTIME] 6825 (5)
+[BUILDTIME] 7381 (9)
 [SIZE] 1.51 MB, 92 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gawk gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp pkgconfig sed sysfiles tar util-linux
-[DEP] zlib:dev
+[DEP] linux26-header:dev make mktemp net-tools pkgconfig sed sysfiles
+[DEP] tar util-linux zlib:dev
+
+[PROVIDES] gmime-config libgmime-2.0.a libgmime-2.0.so uudecode uuencode
 

@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104697540 Sun Jan  2 21:25:40 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110185508 Mon Mar  7 09:51:48 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnet.log
+[LOGS] 5-gnet.log 9-gnet.log
 
-[BUILDTIME] 3738 (5)
+[BUILDTIME] 4128 (9)
 [SIZE] 0.09 MB, 12 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils file
-[DEP] findutils gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp patch pkgconfig sed sysfiles tar
-[DEP] util-linux
+[DEP] findutils gawk gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev
+[DEP] grep linux26-header:dev make mktemp net-tools patch pkgconfig sed
+[DEP] sysfiles tar util-linux
+
+[PROVIDES] libgnet-2.0.a libgnet-2.0.so
 

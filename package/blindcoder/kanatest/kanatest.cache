@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104766521 Mon Jan  3 16:35:21 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110326021 Wed Mar  9 00:53:41 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-kanatest.log
+[LOGS] 5-kanatest.log 9-kanatest.log
 
-[BUILDTIME] 2485 (5)
+[BUILDTIME] 2735 (9)
 [SIZE] 0.85 MB, 328 files
 
 [DEP] 00-dirtree alsa atk atk:dev bash2 binutils bzip2 coreutils
@@ -34,4 +34,6 @@
 [DEP] glib:dev glibc23 glibc23:dev grep gtk+ gtk+:dev linux26-header:dev
 [DEP] make mktemp net-tools pango pango:dev pkgconfig sed sysfiles tar
 [DEP] util-linux xfree86 zapping
+
+[PROVIDES] kanatest
 

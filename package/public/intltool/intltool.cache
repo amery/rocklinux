@@ -20,15 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104673828 Sun Jan  2 14:50:28 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110157861 Mon Mar  7 02:11:01 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-intltool.log
+[LOGS] 5-intltool.log 9-intltool.log
 
-[BUILDTIME] 1076 (5)
+[BUILDTIME] 1526 (9)
 [SIZE] 0.21 MB, 22 files
 
 [DEP] 00-dirtree bash2 bzip2 coreutils cpan-xml-parser diffutils findutils
-[DEP] gcc34 grep make mktemp perl5 sed sysfiles tar util-linux
+[DEP] gcc34 grep make mktemp net-tools perl5 sed sysfiles tar util-linux
+
+[PROVIDES] intltool-extract intltool-merge intltool-prepare intltool-update
+[PROVIDES] intltoolize
 

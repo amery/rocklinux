@@ -20,18 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104670849 Sun Jan  2 14:00:49 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110154132 Mon Mar  7 01:08:52 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-povray35.log
+[LOGS] 5-povray35.log 9-povray35.log
 
-[BUILDTIME] 10782 (5)
-[SIZE] 4.66 MB, 577 files
+[BUILDTIME] 11601 (9)
+[SIZE] 4.67 MB, 577 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev
 [DEP] grep libjpeg libjpeg:dev libpng libpng:dev libtiff libtiff:dev
-[DEP] linux26-header:dev make mktemp patch perl5 sed sysfiles tar texinfo
-[DEP] xfree86 xfree86:dev zlib:dev
+[DEP] linux26-header:dev make mktemp net-tools patch perl5 sed svgalib
+[DEP] svgalib:dev sysfiles tar texinfo xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] povray
 

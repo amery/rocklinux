@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104761806 Mon Jan  3 15:16:46 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110320770 Tue Mar  8 23:26:10 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-twoftpd.log
+[LOGS] 5-twoftpd.log 9-twoftpd.log
 
-[BUILDTIME] 1416 (5)
-[SIZE] 0.12 MB, 14 files
+[BUILDTIME] 1626 (9)
+[SIZE] 0.16 MB, 17 files
 
 [DEP] 00-dirtree bash2 bglibs bglibs:dev binutils bzip2 coreutils cvm:dev
 [DEP] findutils gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp patch sed sysfiles tar
+[DEP] make mktemp sed sysfiles tar
+
+[PROVIDES] twoftpd-anon twoftpd-anon-conf twoftpd-auth twoftpd-bind-port
+[PROVIDES] twoftpd-conf twoftpd-drop twoftpd-switch twoftpd-xfer
 

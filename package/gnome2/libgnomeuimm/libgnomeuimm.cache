@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104745003 Mon Jan  3 10:36:43 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110301732 Tue Mar  8 18:08:52 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libgnomeuimm.log
+[LOGS] 5-libgnomeuimm.log 9-libgnomeuimm.log
 
-[BUILDTIME] 18473 (5)
+[BUILDTIME] 18810 (9)
 [SIZE] 0.42 MB, 15 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
@@ -43,4 +43,6 @@
 [DEP] libxml2 libxml2:dev linux26-header:dev m4 make mktemp net-tools
 [DEP] openssl orbit2 orbit2:dev pango pango:dev pkgconfig popt popt:dev
 [DEP] sed sysfiles tar util-linux xfree86 zlib:dev
+
+[PROVIDES] libgnomeuimm-2.6.so
 

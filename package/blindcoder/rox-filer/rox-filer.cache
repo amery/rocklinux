@@ -20,18 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104696316 Sun Jan  2 21:05:16 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110183921 Mon Mar  7 09:25:21 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-rox-filer.log
+[LOGS] 5-rox-filer.log 9-rox-filer.log
 
-[BUILDTIME] 3690 (5)
+[BUILDTIME] 3961 (9)
 [SIZE] 4.76 MB, 279 files
 
 [DEP] 00-dirtree alsa atk atk:dev bash2 binutils bzip2 coreutils
 [DEP] diffutils expat file findutils freetype gawk gcc34 gcc34:dev glib
 [DEP] glib:dev glibc23 glibc23:dev grep gtk+ gtk+:dev libxml2 libxml2:dev
-[DEP] linux26-header:dev make mktemp pango pango:dev patch pkgconfig sed
-[DEP] sysfiles tar xfree86 xfree86:dev zlib:dev
+[DEP] linux26-header:dev make mktemp net-tools pango pango:dev patch
+[DEP] pkgconfig sed sysfiles tar xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] rox
 

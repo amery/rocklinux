@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104666998 Sun Jan  2 12:56:38 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110149516 Sun Mar  6 23:51:56 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-wxwidgets.log
+[LOGS] 5-wxwidgets.log 9-wxwidgets.log
 
-[BUILDTIME] 52566 (5)
+[BUILDTIME] 53247 (9)
 [SIZE] 7.39 MB, 78 files
 
 [DEP] 00-dirtree alsa atk atk:dev audiofile audiofile:dev bash2 binutils
@@ -34,6 +34,9 @@
 [DEP] freetype gawk gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev
 [DEP] grep gtk+ gtk+:dev libjpeg libjpeg:dev libpng libpng:dev libsdl
 [DEP] libsdl:dev libtiff libtiff:dev linux26-header:dev make mktemp nas
-[DEP] pango pango:dev patch pkgconfig sed sysfiles tar util-linux xfree86
-[DEP] xfree86:dev zlib:dev
+[DEP] net-tools pango pango:dev patch pkgconfig sed sysfiles tar util-linux
+[DEP] xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] libwx_gtk2-2.5.so libwx_gtk2_gizmos-2.5.so libwx_gtk2_gl-2.5.so
+[PROVIDES] libwx_gtk2_ogl-2.5.so libwx_gtk2_stc-2.5.so wx-config
 

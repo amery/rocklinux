@@ -20,15 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104641284 Sun Jan  2 05:48:04 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110126739 Sun Mar  6 17:32:19 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 3-automake18.log
+[LOGS] 3-automake18.log 9-automake18.log
 
-[BUILDTIME] 1334 (3)
+[BUILDTIME] 2047 (9)
 [SIZE] 1.10 MB, 120 files
 
-[DEP] 00-dirtree autoconf bash2 bzip2 coreutils diffutils findutils gcc34
-[DEP] grep m4 make mktemp perl5 sed sysfiles tar texinfo util-linux
+[DEP] 00-dirtree autoconf bash2 bzip2 coreutils diffutils findutils gawk
+[DEP] gcc34 grep m4 make mktemp net-tools perl5 sed sysfiles tar texinfo
+[DEP] util-linux
+
+[PROVIDES] aclocal-1.8 automake-1.8
 

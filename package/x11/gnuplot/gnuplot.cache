@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104798718 Tue Jan  4 01:31:58 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110153181 Mon Mar  7 00:53:01 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnuplot.log 7-gnuplot.log
+[LOGS] 5-gnuplot.log 7-gnuplot.log 9-gnuplot.log
 
-[BUILDTIME] 5884 (7)
+[BUILDTIME] 5912 (9)
 [SIZE] 2.16 MB, 21 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils emacs findutils
@@ -34,4 +34,6 @@
 [DEP] libpng libpng:dev linux26-header:dev make mktemp ncurses:dev
 [DEP] net-tools patch readline readline:dev sed sysfiles tar tetex texinfo
 [DEP] util-linux xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] gnuplot
 

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104711753 Mon Jan  3 01:22:33 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110201212 Mon Mar  7 14:13:32 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-dvbstream.log
+[LOGS] 5-dvbstream.log 9-dvbstream.log
 
-[BUILDTIME] 1254 (5)
+[BUILDTIME] 1584 (9)
 [SIZE] 0.10 MB, 10 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp sed
 [DEP] sysfiles tar
+
+[PROVIDES] dumprtp dvbstream rtpfeed ts_filter
 

@@ -20,16 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104672295 Sun Jan  2 14:24:55 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110155878 Mon Mar  7 01:37:58 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gsmlib.log
+[LOGS] 5-gsmlib.log 9-gsmlib.log
 
-[BUILDTIME] 12228 (5)
+[BUILDTIME] 12769 (9)
 [SIZE] 0.78 MB, 26 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils
 [DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp patch sed sysfiles tar util-linux
+[DEP] linux26-header:dev make mktemp net-tools patch sed sysfiles tar
+[DEP] util-linux
+
+[PROVIDES] gsmctl gsmpb gsmsendsms gsmsiectl gsmsiexfer gsmsmsd gsmsmsstore
+[PROVIDES] libgsmext.a libgsmext.so libgsmme.a libgsmme.so
 

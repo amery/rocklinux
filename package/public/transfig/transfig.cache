@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104654768 Sun Jan  2 09:32:48 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110134849 Sun Mar  6 19:47:29 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-transfig.log
+[LOGS] 5-transfig.log 9-transfig.log
 
-[BUILDTIME] 2430 (5)
+[BUILDTIME] 3004 (9)
 [SIZE] 0.48 MB, 88 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep libpng libpng:dev linux26-header:dev make
-[DEP] mktemp patch sed sysfiles tar xfig xfree86 zlib:dev
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep libpng libpng:dev
+[DEP] linux26-header:dev make mktemp patch sed sysfiles tar xfig xfree86
+[DEP] zlib:dev
+
+[PROVIDES] fig2dev fig2ps2tex fig2ps2tex.sh pic2tpic transfig
 

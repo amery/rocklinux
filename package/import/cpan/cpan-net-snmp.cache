@@ -5,7 +5,7 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/import/cpan/cpan-net-snmp.cache
+[COPY] ROCK Linux: rock-src/package/import/cpan/cpan.cache
 [COPY] ROCK Linux is Copyright (C) 1998 - 2005 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
@@ -20,15 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104733709 Mon Jan  3 07:28:29 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110224518 Mon Mar  7 20:41:58 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-cpan-net-snmp.log
+[LOGS] 5-cpan-net-snmp.log 9-cpan-net-snmp.log
 
-[BUILDTIME] 1176 (5)
-[SIZE] 0.32 MB, 25 files
+[BUILDTIME] 1505 (9)
+[SIZE] 0.40 MB, 26 files
 
 [DEP] 00-dirtree bash2 bzip2 coreutils cpan-digest-sha1 cpan-net-dns
 [DEP] findutils gawk gcc34 grep make mktemp perl5 sed sysfiles tar
+
+[PROVIDES] snmpkey
 

@@ -20,17 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104784975 Mon Jan  3 21:42:55 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110399900 Wed Mar  9 21:25:00 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ntfsprogs.log
+[LOGS] 5-ntfsprogs.log 9-ntfsprogs.log
 
-[BUILDTIME] 5365 (5)
+[BUILDTIME] 11094 (9)
 [SIZE] 0.39 MB, 31 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gawk gcc34 gcc34:dev glib12 glibc23 glibc23:dev gnome-libs14 grep
 [DEP] linux26-header:dev make mktemp net-tools pkgconfig sed sysfiles
 [DEP] tar util-linux
+
+[PROVIDES] libntfs.a libntfs.so mkntfs ntfscat ntfsclone ntfscluster
+[PROVIDES] ntfsfix ntfsinfo ntfslabel ntfsls ntfsresize ntfsundelete
 

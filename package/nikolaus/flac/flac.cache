@@ -20,17 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104658412 Sun Jan  2 10:33:32 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110139546 Sun Mar  6 21:05:46 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-flac.log
+[LOGS] 5-flac.log 9-flac.log
 
-[BUILDTIME] 11558 (5)
+[BUILDTIME] 12227 (9)
 [SIZE] 0.79 MB, 27 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] gawk gcc34 gcc34:dev glib12 glib12:dev glibc23 glibc23:dev grep
-[DEP] gtk+12 gtk+12:dev linux26-header:dev make mktemp nasm ogg-vorbis
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
+[DEP] gcc34 gcc34:dev glib12 glib12:dev glibc23 glibc23:dev grep gtk+12
+[DEP] gtk+12:dev linux26-header:dev make mktemp nasm net-tools ogg-vorbis
 [DEP] ogg-vorbis:dev sed sysfiles tar util-linux xfree86 xmms xmms:dev
+
+[PROVIDES] flac libFLAC++.a libFLAC++.so libFLAC.a libFLAC.so
+[PROVIDES] libOggFLAC++.a libOggFLAC++.so libOggFLAC.a libOggFLAC.so
+[PROVIDES] metaflac
 

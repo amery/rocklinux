@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104687430 Sun Jan  2 18:37:10 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110172851 Mon Mar  7 06:20:51 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-zapping.log
+[LOGS] 5-zapping.log 9-zapping.log
 
-[BUILDTIME] 7681 (5)
-[SIZE] 1.30 MB, 99 files
+[BUILDTIME] 9291 (9)
+[SIZE] 1.44 MB, 102 files
 
 [DEP] 00-dirtree alsa alsa:dev arts arts:dev atk atk:dev audiofile
 [DEP] audiofile:dev bash2 binutils bzip2 coreutils cpan-xml-parser
@@ -37,9 +37,12 @@
 [DEP] gnotepad+ grep gtk+ gtk+:dev libart_lgpl23 libart_lgpl23:dev
 [DEP] libbonobo libbonobo:dev libbonoboui libbonoboui:dev libglade
 [DEP] libglade:dev libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev
-[DEP] libgnomeui libgnomeui:dev libjpeg libjpeg:dev libpng libxml2
-[DEP] libxml2:dev linux26-header:dev lirc lirc:dev make mktemp numpy
-[DEP] openssl orbit2 orbit2:dev pango pango:dev perl5 pkgconfig popt
-[DEP] popt:dev python python:dev scrollkeeper sed sysfiles tar tcl tk
-[DEP] util-linux wxpython xfree86 xfree86:dev zlib:dev
+[DEP] libgnomeui libgnomeui:dev libjpeg libjpeg:dev libpng libpng:dev
+[DEP] libxml2 libxml2:dev libzvbi libzvbi:dev linux26-header:dev lirc
+[DEP] lirc:dev make mktemp net-tools numpy openssl orbit2 orbit2:dev
+[DEP] pango pango:dev perl5 pkgconfig popt popt:dev python python:dev rte
+[DEP] rte:dev scrollkeeper sed sysfiles tar tcl tk util-linux wxpython
+[DEP] xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] zapping zapping_fix_overlay zapping_setup_fb
 

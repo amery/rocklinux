@@ -20,16 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104652145 Sun Jan  2 08:49:05 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110131308 Sun Mar  6 18:48:28 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-sendmail.log
+[LOGS] 5-sendmail.log 9-sendmail.log
 
-[BUILDTIME] 5156 (5)
+[BUILDTIME] 5961 (9)
 [SIZE] 1.84 MB, 232 files
 
-[DEP] 00-dirtree bash2 bdb41 bdb41:dev binutils bzip2 coreutils
+[DEP] 00-dirtree bash2 bdb42 bdb42:dev binutils bzip2 coreutils
 [DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep groff
-[DEP] linux26-header:dev m4 make mktemp patch sed sysfiles tar
+[DEP] linux26-header:dev m4 make mktemp net-tools patch sed sysfiles tar
+
+[PROVIDES] editmap hoststat mailq mailq_sendmail mailstats makemap
+[PROVIDES] newaliases newaliases_sendmail praliases purgestat rmail
+[PROVIDES] sendmail sendmail_sendmail setmailer_sendmail smrsh vacation
 

@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104689320 Sun Jan  2 19:08:40 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110175933 Mon Mar  7 07:12:13 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libole.log
+[LOGS] 5-libole.log 9-libole.log
 
-[BUILDTIME] 1828 (5)
+[BUILDTIME] 2202 (9)
 [SIZE] 0.05 MB, 9 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev
-[DEP] grep linux26-header:dev make mktemp perl5 pkgconfig sed sysfiles
-[DEP] tar texinfo
+[DEP] grep linux26-header:dev make mktemp net-tools perl5 pkgconfig sed
+[DEP] sysfiles tar texinfo
+
+[PROVIDES] libgnomeole2.a libgnomeole2.so
 

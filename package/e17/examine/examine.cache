@@ -20,21 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104687342 Sun Jan  2 18:35:42 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110173536 Mon Mar  7 06:32:16 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-examine.log
+[LOGS] 5-examine.log 9-examine.log
 
-[BUILDTIME] 3573 (5)
+[BUILDTIME] 5064 (9)
 [SIZE] 0.07 MB, 8 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils directfb directfb:dev ecore ecore:dev edb edb:dev edje
-[DEP] edje:dev eet eet:dev embryo embryo:dev etox etox:dev evas evas:dev
-[DEP] ewl ewl:dev findutils freetype freetype:dev gcc34 gcc34:dev glibc23
-[DEP] glibc23:dev grep imlib2 libjpeg libjpeg:dev libpng libpng:dev
-[DEP] libtool linux26-header:dev m4 make mktemp ncurses:dev openssl
-[DEP] openssl:dev patch perl5 readline readline:dev sed sysfiles tar
-[DEP] util-linux xfree86 zlib:dev
+[DEP] diffutils directfb directfb:dev ecore ecore:dev edb edb:dev
+[DEP] edje edje:dev eet eet:dev embryo embryo:dev etox etox:dev evas
+[DEP] evas:dev ewl ewl:dev findutils freetype freetype:dev gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep imlib2 libjpeg libjpeg:dev libpng
+[DEP] libpng:dev libtool linux26-header:dev m4 make mktemp ncurses:dev
+[DEP] net-tools openssl patch perl5 readline readline:dev sed sysfiles
+[DEP] tar util-linux xfree86 zlib:dev
+
+[PROVIDES] examine exsh
 

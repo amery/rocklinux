@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104747475 Mon Jan  3 11:17:55 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110304434 Tue Mar  8 18:53:54 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnome-session.log
+[LOGS] 5-gnome-session.log 9-gnome-session.log
 
-[BUILDTIME] 5552 (5)
+[BUILDTIME] 5834 (9)
 [SIZE] 1.16 MB, 95 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
@@ -41,4 +41,7 @@
 [DEP] net-tools openssl orbit2 orbit2:dev pango pango:dev perl5 pkgconfig
 [DEP] popt popt:dev sed sysfiles tar tcp_wrappers:dev util-linux xfree86
 [DEP] xfree86:dev xscreensaver zapping zlib:dev
+
+[PROVIDES] gnome-session gnome-session-properties gnome-session-remove
+[PROVIDES] gnome-session-save gnome-smproxy gnome-wm
 

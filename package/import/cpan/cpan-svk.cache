@@ -5,7 +5,7 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/import/cpan/cpan-svk.cache
+[COPY] ROCK Linux: rock-src/package/import/cpan/cpan.cache
 [COPY] ROCK Linux is Copyright (C) 1998 - 2005 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
@@ -20,18 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104795174 Tue Jan  4 00:32:54 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110899631 Tue Mar 15 16:13:51 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-cpan-svk.log
+[LOGS] 5-cpan-svk.log 9-cpan-svk.log
 
-[BUILDTIME] 1491 (5)
-[SIZE] 0.53 MB, 94 files
+[BUILDTIME] 1877 (9)
+[SIZE] 0.85 MB, 152 files
 
 [DEP] 00-dirtree bash2 bzip2 coreutils cpan-clone cpan-data-hierarchy
 [DEP] cpan-perlio-via-dynamic cpan-pod-escapes cpan-pod-simple
 [DEP] cpan-regexp-shellish cpan-svn-mirror cpan-svn-simple cpan-uri
 [DEP] cpan-yaml findutils gawk gcc34 grep make mktemp perl5 sed subversion
 [DEP] sysfiles tar
+
+[PROVIDES] svk
 

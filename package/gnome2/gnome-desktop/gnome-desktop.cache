@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104687936 Sun Jan  2 18:45:36 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110173661 Mon Mar  7 06:34:21 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnome-desktop.log
+[LOGS] 5-gnome-desktop.log 9-gnome-desktop.log
 
-[BUILDTIME] 5113 (5)
+[BUILDTIME] 5675 (9)
 [SIZE] 1.53 MB, 226 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
@@ -37,9 +37,11 @@
 [DEP] gtk+:dev libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev
 [DEP] libbonoboui libbonoboui:dev libglade libgnome libgnome:dev
 [DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev
-[DEP] libjpeg libjpeg:dev libxml2 libxml2:dev linux26-header:dev
-[DEP] make mktemp openssl orbit2 orbit2:dev pango pango:dev perl5
+[DEP] libjpeg libjpeg:dev libxml2 libxml2:dev linux26-header:dev make
+[DEP] mktemp net-tools openssl orbit2 orbit2:dev pango pango:dev perl5
 [DEP] pkgconfig popt popt:dev scrollkeeper sed startup-notification
 [DEP] startup-notification:dev sysfiles tar util-linux xfree86 xfree86:dev
 [DEP] zlib:dev
+
+[PROVIDES] gnome-about libgnome-desktop-2.a libgnome-desktop-2.so
 

@@ -20,19 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104783776 Mon Jan  3 21:22:56 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110396163 Wed Mar  9 20:22:43 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-epplets-extra16.log
+[LOGS] 5-epplets-extra16.log 9-epplets-extra16.log
 
-[BUILDTIME] 1973 (5)
+[BUILDTIME] 4213 (9)
 [SIZE] 0.45 MB, 28 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils enlightenment16 epplets-16 epplets-16:dev file findutils
-[DEP] fnlib gcc34 gcc34:dev glib12 glib12:dev glibc23 glibc23:dev grep
+[DEP] fnlib gawk gcc34 gcc34:dev glib12 glib12:dev glibc23 glibc23:dev grep
 [DEP] gtk+12 gtk+12:dev imlib imlib:dev libjpeg libpng libtiff libungif
 [DEP] linux26-header:dev make mktemp net-tools patch perl5 sed sysfiles
 [DEP] tar texinfo xfree86 xfree86:dev xmms xmms:dev zlib:dev
+
+[PROVIDES] E-CPU2.epplet E-Dial.epplet E-Mount.epplet E-Xmms.epplet
 

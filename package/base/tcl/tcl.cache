@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104654150 Sun Jan  2 09:22:30 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110133955 Sun Mar  6 19:32:35 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-tcl.log
+[LOGS] 5-tcl.log 9-tcl.log
 
-[BUILDTIME] 8192 (5)
-[SIZE] 13.96 MB, 728 files
+[BUILDTIME] 9501 (9)
+[SIZE] 13.97 MB, 728 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp sed sysfiles tar
+[DEP] mktemp net-tools sed sysfiles tar
+
+[PROVIDES] libtcl.so libtcl8.4.so libtclstub8.4.a tclsh tclsh8.4
 

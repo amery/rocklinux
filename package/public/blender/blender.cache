@@ -20,18 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104759226 Mon Jan  3 14:33:46 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110317851 Tue Mar  8 22:37:31 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-blender.log
+[LOGS] 5-blender.log 9-blender.log
 
-[BUILDTIME] 44892 (5)
+[BUILDTIME] 45505 (9)
 [SIZE] 9.33 MB, 8 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils freetype:dev
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep libcdaudio:dev libjpeg
+[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libcdaudio:dev libjpeg
 [DEP] libjpeg:dev libpng libpng:dev libsdl libsdl:dev linux26-header:dev
 [DEP] mktemp numpy patch pkgconfig pth:dev python python:dev scons sed
 [DEP] sysfiles tar wxpython xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] blender blenderplayer
 

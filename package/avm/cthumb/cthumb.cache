@@ -20,15 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104696060 Sun Jan  2 21:01:00 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110183613 Mon Mar  7 09:20:13 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-cthumb.log
+[LOGS] 5-cthumb.log 9-cthumb.log
 
-[BUILDTIME] 1041 (5)
+[BUILDTIME] 1390 (9)
 [SIZE] 0.57 MB, 266 files
 
 [DEP] 00-dirtree bash2 bzip2 coreutils diffutils findutils gcc34 grep
-[DEP] make mktemp patch rsync sed sysfiles tar
+[DEP] make mktemp net-tools patch rsync sed sysfiles tar
+
+[PROVIDES] cthumb
 

@@ -20,16 +20,47 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104683673 Sun Jan  2 17:34:33 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110168892 Mon Mar  7 05:14:52 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-boost.log
+[LOGS] 5-boost.log 9-boost.log
 
-[BUILDTIME] 82899 (5)
+[BUILDTIME] 85317 (9)
 [SIZE] 5.96 MB, 56 files
 
 [DEP] 00-dirtree bash2 binutils boost-jam bzip2 coreutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev mktemp
 [DEP] python python:dev sed sysfiles tar unzip
+
+[PROVIDES] libboost_date_time-gcc-1_31.a libboost_date_time-gcc-d-1_31.a
+[PROVIDES] libboost_date_time-gcc-mt-1_31.a
+[PROVIDES] libboost_date_time-gcc-mt-d-1_31.a libboost_date_time.a
+[PROVIDES] libboost_date_time.so libboost_filesystem-gcc-1_31.a
+[PROVIDES] libboost_filesystem-gcc-d-1_31.a
+[PROVIDES] libboost_filesystem-gcc-mt-1_31.a
+[PROVIDES] libboost_filesystem-gcc-mt-d-1_31.a libboost_filesystem.a
+[PROVIDES] libboost_filesystem.so libboost_prg_exec_monitor-gcc-1_31.a
+[PROVIDES] libboost_prg_exec_monitor-gcc-d-1_31.a
+[PROVIDES] libboost_prg_exec_monitor-gcc-mt-1_31.a
+[PROVIDES] libboost_prg_exec_monitor-gcc-mt-d-1_31.a
+[PROVIDES] libboost_prg_exec_monitor.a libboost_prg_exec_monitor.so
+[PROVIDES] libboost_python-gcc-1_31.a libboost_python-gcc-d-1_31.a
+[PROVIDES] libboost_python-gcc-mt-1_31.a libboost_python-gcc-mt-d-1_31.a
+[PROVIDES] libboost_python.a libboost_python.so libboost_regex-gcc-1_31.a
+[PROVIDES] libboost_regex-gcc-d-1_31.a libboost_regex-gcc-mt-1_31.a
+[PROVIDES] libboost_regex-gcc-mt-d-1_31.a libboost_regex.a
+[PROVIDES] libboost_regex.so libboost_signals-gcc-1_31.a
+[PROVIDES] libboost_signals-gcc-d-1_31.a libboost_signals-gcc-mt-1_31.a
+[PROVIDES] libboost_signals-gcc-mt-d-1_31.a libboost_signals.a
+[PROVIDES] libboost_signals.so libboost_test_exec_monitor-gcc-1_31.a
+[PROVIDES] libboost_test_exec_monitor-gcc-d-1_31.a
+[PROVIDES] libboost_test_exec_monitor-gcc-mt-1_31.a
+[PROVIDES] libboost_test_exec_monitor-gcc-mt-d-1_31.a
+[PROVIDES] libboost_test_exec_monitor.a libboost_test_exec_monitor.so
+[PROVIDES] libboost_unit_test_framework-gcc-1_31.a
+[PROVIDES] libboost_unit_test_framework-gcc-d-1_31.a
+[PROVIDES] libboost_unit_test_framework-gcc-mt-1_31.a
+[PROVIDES] libboost_unit_test_framework-gcc-mt-d-1_31.a
+[PROVIDES] libboost_unit_test_framework.a libboost_unit_test_framework.so
 

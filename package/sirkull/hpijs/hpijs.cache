@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104657537 Sun Jan  2 10:18:57 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110138381 Sun Mar  6 20:46:21 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-hpijs.log
+[LOGS] 5-hpijs.log 9-hpijs.log
 
-[BUILDTIME] 3119 (5)
+[BUILDTIME] 3748 (9)
 [SIZE] 1.95 MB, 329 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils cups diffutils findutils
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep gzip linux26-header:dev
-[DEP] make mktemp sed sysfiles tar util-linux
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep gzip linux26-header:dev
+[DEP] make mktemp net-tools sed sysfiles tar util-linux
+
+[PROVIDES] foomatic-rip hpijs
 

@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104796202 Tue Jan  4 00:50:02 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110896801 Tue Mar 15 15:26:41 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gammu.log
+[LOGS] 5-gammu.log 9-gammu.log
 
-[BUILDTIME] 5036 (5)
+[BUILDTIME] 5316 (9)
 [SIZE] 1.18 MB, 17 files
 
 [DEP] 00-dirtree autoconf bash2 binutils bluez-libs bluez-libs:dev
 [DEP] bzip2 coreutils diffutils findutils gawk gcc34 gcc34:dev glibc23
 [DEP] glibc23:dev grep linux26-header:dev m4 make mktemp net-tools perl5
 [DEP] pkgconfig rpm sed sysfiles tar util-linux
+
+[PROVIDES] gammu libGammu.a libGammu.so
 

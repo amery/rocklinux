@@ -20,20 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104681907 Sun Jan  2 17:05:07 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110166904 Mon Mar  7 04:41:44 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gconf110.log
+[LOGS] 5-gconf110.log 9-gconf110.log
 
-[BUILDTIME] 6141 (5)
+[BUILDTIME] 6650 (9)
 [SIZE] 1.32 MB, 61 files
 
-[DEP] 00-dirtree autoconf automake19 bash2 bdb33 bdb33:dev bdb41:dev
+[DEP] 00-dirtree autoconf automake19 bash2 bdb33 bdb33:dev bdb42:dev
 [DEP] binutils bzip2 coreutils diffutils findutils gawk gcc34 gcc34:dev
 [DEP] gdk-pixbuf10:doc gettext glib glib12 glib12:dev glibc23 glibc23:dev
 [DEP] gnome-libs14 gnome-libs14:doc grep gtk+12 gtk+12:dev gtkdoc guile
-[DEP] indent libxml libxml:dev linux26-header:dev make mktemp oaf10
-[DEP] oaf10:dev orbit10 orbit10:dev perl5 popt popt:dev sed sysfiles tar
-[DEP] texinfo util-linux xfree86 zlib:dev
+[DEP] indent libxml libxml:dev linux26-header:dev make mktemp net-tools
+[DEP] oaf10 oaf10:dev orbit10 orbit10:dev perl5 popt popt:dev sed sysfiles
+[DEP] tar texinfo util-linux xfree86 zlib:dev
+
+[PROVIDES] gconf-config gconf-config-1 gconf-sanity-check-1
+[PROVIDES] gconfd-1 gconftool gconftool-1 libgconf-1.a libgconf-1.so
+[PROVIDES] libgconf-gtk-1.a libgconf-gtk-1.so
 

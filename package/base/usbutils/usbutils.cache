@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104747580 Mon Jan  3 11:19:40 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110304577 Tue Mar  8 18:56:17 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-usbutils.log
+[LOGS] 5-usbutils.log 9-usbutils.log
 
-[BUILDTIME] 1755 (5)
+[BUILDTIME] 1989 (9)
 [SIZE] 0.14 MB, 11 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils file findutils gcc34 gcc34:dev glibc23 glibc23:dev grep
 [DEP] linux26-header:dev make mktemp net-tools patch perl5 sed sysfiles
 [DEP] tar texinfo
+
+[PROVIDES] lsusb usbmodules
 

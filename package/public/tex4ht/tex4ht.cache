@@ -20,15 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104667781 Sun Jan  2 13:09:41 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110150563 Mon Mar  7 00:09:23 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-tex4ht.log
+[LOGS] 5-tex4ht.log 9-tex4ht.log
 
-[BUILDTIME] 1632 (5)
+[BUILDTIME] 2138 (9)
 [SIZE] 6.44 MB, 2571 files
 
-[DEP] 00-dirtree bash2 binutils coreutils findutils gcc34 gcc34:dev
+[DEP] 00-dirtree bash2 binutils coreutils findutils gawk gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep linux26-header:dev mktemp sed tetex unzip
+
+[PROVIDES] dblatex dbmlatex dbmtex dbmtexi dbtex dbtexi ht htlatex httex
+[PROVIDES] httexi mzlatex mztex mztexi oolatex ootex ootexi t4ht teilatex
+[PROVIDES] teimlatex teimtex teimtexi teitex teitexi tex4ht xhlatex
+[PROVIDES] xhmlatex xhmtex xhmtexi xhtex xhtexi
 

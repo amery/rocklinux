@@ -20,16 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104639824 Sun Jan  2 05:23:44 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110121126 Sun Mar  6 15:58:46 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 0-gcc34.log 1-gcc34.log 2-gcc34.log
+[LOGS] 0-gcc34.log 1-gcc34.log 2-gcc34.log 9-gcc34.log
 
-[BUILDTIME] 136385 (2)
-[SIZE] 45.85 MB, 117 files
+[BUILDTIME] 133981 (9)
+[SIZE] 45.87 MB, 121 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils findutils
 [DEP] gawk gettext glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] patch sed sysfiles tar texinfo util-linux
+[DEP] net-tools patch perl5 sed sysfiles tar texinfo util-linux
+
+[PROVIDES] c++ c++-34 cc cpp cpp-34 f77 g++ g++-34 g77 g77-34
+[PROVIDES] gcc gcc-34 gcov gcov-34 i386-unknown-linux-gnu-c++
+[PROVIDES] i386-unknown-linux-gnu-c++-34 i386-unknown-linux-gnu-g++
+[PROVIDES] i386-unknown-linux-gnu-g++-34 i386-unknown-linux-gnu-gcc
+[PROVIDES] i386-unknown-linux-gnu-gcc-34 kcc kcc-34 libgcc_s.so
 

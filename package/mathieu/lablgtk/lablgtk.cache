@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104762226 Mon Jan  3 15:23:46 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110321221 Tue Mar  8 23:33:41 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-lablgtk.log
+[LOGS] 5-lablgtk.log 9-lablgtk.log
 
-[BUILDTIME] 2420 (5)
+[BUILDTIME] 2597 (9)
 [SIZE] 4.65 MB, 178 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glib12 glib12:dev glibc23 glibc23:dev grep gtk+12
-[DEP] gtk+12:dev linux26-header:dev make mktemp ocaml sed sysfiles tar
-[DEP] xfree86 xfree86:dev
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
+[DEP] glib12 glib12:dev glibc23 glibc23:dev grep gtk+12 gtk+12:dev
+[DEP] linux26-header:dev make mktemp ocaml sed sysfiles tar xfree86
+[DEP] xfree86:dev
+
+[PROVIDES] lablgtk
 

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104657262 Sun Jan  2 10:14:22 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110138032 Sun Mar  6 20:40:32 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-alsa-driver.log
+[LOGS] 5-alsa-driver.log 9-alsa-driver.log
 
-[BUILDTIME] 16866 (5)
-[SIZE] 3.12 MB, 182 files
+[BUILDTIME] 19368 (9)
+[SIZE] 3.52 MB, 200 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26 linux26-header:dev
-[DEP] linux26-source make mktemp patch sed sysfiles tar util-linux
+[DEP] linux26-source make mktemp net-tools patch sed sysfiles tar
+[DEP] util-linux
+
 

@@ -20,21 +20,37 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104724658 Mon Jan  3 04:57:38 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110214975 Mon Mar  7 18:02:55 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-kdesdk.log
+[LOGS] 5-kdesdk.log 9-kdesdk.log
 
-[BUILDTIME] 139575 (5)
-[SIZE] 11.17 MB, 746 files
+[BUILDTIME] 140411 (9)
+[SIZE] 11.17 MB, 748 files
 
-[DEP] 00-dirtree arts bash2 bdb41 bdb41:dev binutils binutils:dev bzip2
+[DEP] 00-dirtree arts bash2 bdb42 bdb42:dev binutils binutils:dev bzip2
 [DEP] coreutils diffutils expat fam fam:dev findutils flex flex:dev
 [DEP] freetype freetype:dev gawk gcc34 gcc34:dev gettext glibc23
 [DEP] glibc23:dev grep kdebase kdelibs kdelibs:dev kdelibs:doc kdepim
 [DEP] kdepim:dev libart_lgpl23 libart_lgpl23:dev libjpeg libjpeg:dev
-[DEP] libpng libpng:dev linux26-header:dev m4 make mktemp pcre pcre:dev
-[DEP] perl5 pixieplus qt qt:dev sed sysfiles tar util-linux vim xfree86
+[DEP] libpng libpng:dev linux26-header:dev m4 make mktemp net-tools pcre
+[DEP] pcre:dev perl5 qt qt:dev sed sysfiles tar util-linux vim xfree86
 [DEP] xfree86:dev zlib:dev
+
+[PROVIDES] adddebug build-progress.sh catalogmanager cervisia cheatmake
+[PROVIDES] create_cvsignore create_makefile create_makefiles cvs-clean
+[PROVIDES] cvs2dist cvsaskpass cvsbackport cvsblame cvscheck cvsforwardport
+[PROVIDES] cvslastchange cvslastlog cvsrevertlast cvsservice cvsversion
+[PROVIDES] cxxmetric demangle dprof2calltree extend_dmalloc extractrc
+[PROVIDES] findmissingcrystal fixkdeincludes fixuifiles hotshot2calltree
+[PROVIDES] includemocs kapptemplate kbabel kbabeldict kbugbuster
+[PROVIDES] kcachegrind kde-build kdedoc kdekillall kdelnk2desktop.py
+[PROVIDES] kdemangen.pl kminspector kmmatch kmtrace kompare kuiviewer
+[PROVIDES] libcvsservice.so libkbabelcommon.so libkbabeldictplugin.so
+[PROVIDES] libkompareinterface.so libkspy.so libktrace.so libktrace_s.a
+[PROVIDES] licensecheck makeobj memprof2calltree mkinstalldirs noncvslist
+[PROVIDES] op2calltree package_crystalsvg png2mng.pl po2xml pprof2calltree
+[PROVIDES] pruneemptydirs qtdoc split2po swappo transxx umbrello xml2pot
+[PROVIDES] zonetab2pot.py
 

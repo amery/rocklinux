@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104772843 Mon Jan  3 18:20:43 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110333474 Wed Mar  9 02:57:54 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gtk-sharp.log
+[LOGS] 5-gtk-sharp.log 9-gtk-sharp.log
 
-[BUILDTIME] 11707 (5)
+[BUILDTIME] 12039 (9)
 [SIZE] 3.55 MB, 99 files
 
 [DEP] 00-dirtree alsa:dev atk atk:dev audiofile:dev bash2 binutils bzip2
@@ -40,4 +40,12 @@
 [DEP] libgnomeui:dev libjpeg:dev libxml2 libxml2:dev linux26-header:dev
 [DEP] make mktemp mono net-tools orbit2 orbit2:dev pango pango:dev
 [DEP] pkgconfig popt popt:dev sed sysfiles tar util-linux xfree86 zlib:dev
+
+[PROVIDES] gapi-codegen gapi-fixup gapi-fixup.exe gapi-parser gapi.pl
+[PROVIDES] gapi2xml.pl gapi_codegen.exe gapi_format_xml gapi_pp.pl
+[PROVIDES] gconfsharp-schemagen gconfsharp-schemagen.exe libgdksharpglue.a
+[PROVIDES] libgdksharpglue.so libgladesharpglue.a libgladesharpglue.so
+[PROVIDES] libglibsharpglue.a libglibsharpglue.so libgnomesharpglue.a
+[PROVIDES] libgnomesharpglue.so libgtksharpglue.a libgtksharpglue.so
+[PROVIDES] libpangosharpglue.a libpangosharpglue.so
 

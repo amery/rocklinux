@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104761971 Mon Jan  3 15:19:31 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110320945 Tue Mar  8 23:29:05 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-apollon.log
+[LOGS] 5-apollon.log 9-apollon.log
 
-[BUILDTIME] 13602 (5)
+[BUILDTIME] 13779 (9)
 [SIZE] 1.13 MB, 57 files
 
 [DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils expat fam
@@ -36,4 +36,6 @@
 [DEP] libpng libpng:dev libxml2 linux26-header:dev make mktemp net-tools
 [DEP] perl5 qt qt:dev sed sysfiles tar util-linux vim xfree86 xfree86:dev
 [DEP] zlib:dev
+
+[PROVIDES] apollon libapollon.so
 

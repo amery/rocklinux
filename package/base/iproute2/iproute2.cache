@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104748547 Mon Jan  3 11:35:47 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110305900 Tue Mar  8 19:18:20 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-iproute2.log
+[LOGS] 5-iproute2.log 9-iproute2.log
 
-[BUILDTIME] 2346 (5)
-[SIZE] 0.35 MB, 38 files
+[BUILDTIME] 3032 (9)
+[SIZE] 0.57 MB, 49 files
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp
-[DEP] patch sed sysfiles tar
+[DEP] 00-dirtree bash2 bdb42 bdb42:dev binutils bison bzip2 coreutils
+[DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
+[DEP] linux26-header:dev m4 make mktemp patch sed sysfiles tar
+
+[PROVIDES] arpd ctstat dumpnetcfg ifcfg ifstat ip ipnm2nwbc lnstat nstat
+[PROVIDES] rtacct rtmon rtpr rtstat ss tc
 

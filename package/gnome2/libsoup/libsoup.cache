@@ -20,18 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104689474 Sun Jan  2 19:11:14 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110176117 Mon Mar  7 07:15:17 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libsoup.log
+[LOGS] 5-libsoup.log 9-libsoup.log
 
-[BUILDTIME] 4815 (5)
+[BUILDTIME] 5223 (9)
 [SIZE] 0.60 MB, 42 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev gnutls gnutls:dev
 [DEP] grep libgcrypt libgcrypt:dev libgpg-error libgpg-error:dev libxml2
-[DEP] libxml2:dev linux26-header:dev make mktemp pkgconfig sed sysfiles
-[DEP] tar util-linux zlib:dev
+[DEP] libxml2:dev linux26-header:dev make mktemp net-tools pkgconfig sed
+[DEP] sysfiles tar util-linux zlib:dev
+
+[PROVIDES] libsoup-2.2.a libsoup-2.2.so
 

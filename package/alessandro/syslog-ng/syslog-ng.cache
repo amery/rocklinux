@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104641891 Sun Jan  2 05:58:11 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110304687 Tue Mar  8 18:58:07 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 3-syslog-ng.log
+[LOGS] 3-syslog-ng.log 9-syslog-ng.log
 
-[BUILDTIME] 1955 (3)
-[SIZE] 0.10 MB, 12 files
+[BUILDTIME] 2583 (9)
+[SIZE] 0.10 MB, 13 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] flex flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] libol libol:dev linux26-header:dev m4 make mktemp sed sysfiles
-[DEP] tar util-linux
+[DEP] flex flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libol
+[DEP] libol:dev linux26-header:dev m4 make mktemp net-tools sed sysfiles
+[DEP] sysklogd tar tcp_wrappers:dev util-linux
+
+[PROVIDES] syslog-ng
 

@@ -20,18 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104687876 Sun Jan  2 18:44:36 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110174160 Mon Mar  7 06:42:40 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gftp.log
+[LOGS] 5-gftp.log 9-gftp.log
 
-[BUILDTIME] 4497 (5)
-[SIZE] 2.50 MB, 85 files
+[BUILDTIME] 5176 (9)
+[SIZE] 2.56 MB, 85 files
 
 [DEP] 00-dirtree atk atk:dev bash2 binutils bison bzip2 coreutils diffutils
 [DEP] expat figment findutils freetype gawk gcc34 gcc34:dev gettext glib
 [DEP] glib:dev glibc23 glibc23:dev grep gtk+ gtk+:dev linux26-header:dev
-[DEP] make mktemp ncurses:dev openssl openssl:dev pango pango:dev pkgconfig
-[DEP] readline readline:dev sed sysfiles tar util-linux xfree86
+[DEP] make mktemp ncurses:dev net-tools openssl openssl:dev pango pango:dev
+[DEP] pkgconfig readline readline:dev sed sysfiles tar util-linux xfree86
+
+[PROVIDES] gftp gftp-gtk gftp-text
 

@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104656325 Sun Jan  2 09:58:45 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110136897 Sun Mar  6 20:21:37 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libmng.log
+[LOGS] 5-libmng.log 9-libmng.log
 
-[BUILDTIME] 3710 (5)
-[SIZE] 0.34 MB, 9 files
+[BUILDTIME] 4358 (9)
+[SIZE] 0.35 MB, 9 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] libjpeg libjpeg:dev linux26-header:dev make mktemp perl5 sed sysfiles
-[DEP] tar texinfo zlib:dev
+[DEP] diffutils findutils gcc34 gcc34:dev glibc23 glibc23:dev grep lcms
+[DEP] lcms:dev libjpeg libjpeg:dev linux26-header:dev make mktemp net-tools
+[DEP] perl5 sed sysfiles tar texinfo zlib:dev
+
+[PROVIDES] libmng.a libmng.so
 

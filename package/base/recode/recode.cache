@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104652022 Sun Jan  2 08:47:02 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110131142 Sun Mar  6 18:45:42 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-recode.log
+[LOGS] 5-recode.log 9-recode.log
 
-[BUILDTIME] 5712 (5)
+[BUILDTIME] 6318 (9)
 [SIZE] 1.64 MB, 31 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils file findutils flex flex:dev gawk gcc34 gcc34:dev glibc23
-[DEP] glibc23:dev grep linux26-header:dev m4 make mktemp patch perl5 sed
-[DEP] sysfiles tar texinfo
+[DEP] glibc23:dev grep linux26-header:dev m4 make mktemp net-tools patch
+[DEP] perl5 sed sysfiles tar texinfo
+
+[PROVIDES] librecode.a librecode.so recode
 

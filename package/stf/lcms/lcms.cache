@@ -20,17 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104665892 Sun Jan  2 12:38:12 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110148204 Sun Mar  6 23:30:04 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-lcms.log
+[LOGS] 5-lcms.log 9-lcms.log
 
-[BUILDTIME] 4516 (5)
+[BUILDTIME] 5092 (9)
 [SIZE] 0.24 MB, 20 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libjpeg libjpeg:dev
-[DEP] libtiff libtiff:dev linux26-header:dev make mktemp sed sysfiles
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep libjpeg libjpeg:dev libtiff
+[DEP] libtiff:dev linux26-header:dev make mktemp net-tools sed sysfiles
 [DEP] tar util-linux zlib:dev
+
+[PROVIDES] icc2ps icclink icctrans jpegicc liblcms.a liblcms.so tifficc
+[PROVIDES] wtpt
 

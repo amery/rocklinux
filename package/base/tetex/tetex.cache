@@ -20,17 +20,35 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104667654 Sun Jan  2 13:07:34 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110150361 Mon Mar  7 00:06:01 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-tetex.log
+[LOGS] 5-tetex.log 9-tetex.log
 
-[BUILDTIME] 34521 (5)
-[SIZE] 219.62 MB, 15843 files
+[BUILDTIME] 38304 (9)
+[SIZE] 240.31 MB, 15546 files
 
-[DEP] 00-dirtree autoconf automake19 bash2 binutils bison bzip2 coreutils
-[DEP] diffutils ed file findutils flex flex:dev gawk gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp
-[DEP] ncurses:dev patch perl5 sed sysfiles tar texinfo xfree86 xfree86:dev
+[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils ed
+[DEP] findutils flex flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
+[DEP] linux26-header:dev m4 make mktemp net-tools openmotif openmotif:dev
+[DEP] patch perl5 sed sysfiles tar texinfo util-linux xfree86 xfree86:dev
+
+[PROVIDES] a2ping afm2tfm aleph allcm allec allneeded bibtex ctangle ctie
+[PROVIDES] cweave dmp dvi2fax dvicopy dvigif dvihp dvilj dvilj2p dvilj4
+[PROVIDES] dvilj4l dvilj6 dvipdfm dvipdft dvipng dvips dvired dvitomp
+[PROVIDES] dvitype e2pall ebb epstopdf etex fdf2tan fdf2tex fmtutil
+[PROVIDES] fmtutil-sys fontinst gftodvi gftopk gftype gsftopk kpseaccess
+[PROVIDES] kpsepath kpsereadlink kpsestat kpsetool kpsewhere kpsewhich
+[PROVIDES] kpsexpand lambda lamed latex libkpathsea.a mag makeindex
+[PROVIDES] makempx makempy mf mf-nowin mft mkindex mkocp mkofm mktexfmt
+[PROVIDES] mktexlsr mktexmf mktexpk mktextfm mpost mpto mptopdf newer
+[PROVIDES] odvicopy odvips odvitype ofm2opl omega omfonts opl2ofm otangle
+[PROVIDES] otp2ocp outocp ovf2ovp ovp2ovf oxdvi patgen pdfcrop pdfetex
+[PROVIDES] pdflatex pdftex pdfxtex pfb2pfa pk2bm pktogf pktype pltotf
+[PROVIDES] pooltype ps2frag ps2pk ps4pdf pslatex rubibtex rumakeindex
+[PROVIDES] tangle tex texconfig texconfig-dialog texconfig-sys texdoc
+[PROVIDES] texdoctk texexec texfind texfont texhash texi2html texlinks
+[PROVIDES] texshow texutil tftopl thumbpdf tie ttf2afm uniqleaf updmap
+[PROVIDES] updmap-sys vftovp vptovf weave xdvi xdvi-motif.bin xdvizilla
 

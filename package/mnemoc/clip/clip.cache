@@ -20,21 +20,39 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104755917 Mon Jan  3 13:38:37 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110314089 Tue Mar  8 21:34:49 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-clip.log
+[LOGS] 5-clip.log 9-clip.log
 
-[BUILDTIME] 20755 (5)
-[SIZE] 8.11 MB, 460 files
+[BUILDTIME] 21524 (9)
+[SIZE] 8.24 MB, 453 files
 
-[DEP] 00-dirtree atk atk:dev bash2 binutils bison bzip2 bzip2:dev coreutils
-[DEP] cpio diffutils findutils flex gawk gcc34 gcc34:dev gdk-pixbuf10
-[DEP] gdk-pixbuf10:dev gettext glib glib12 glib12:dev glib:dev glibc23
-[DEP] glibc23:dev gpm gpm:dev grep gtk+ gtk+12 gtk+12:dev gtk+:dev
-[DEP] gtk+extra10 gtk+extra10:dev libjpeg:dev libpng:dev linux26-header:dev
-[DEP] lynx make mktemp ncurses:dev net-tools openssl openssl:dev pango
-[DEP] pango:dev patch pkgconfig postgresql postgresql:dev readline
-[DEP] readline:dev sed sysfiles tar xfree86 xfree86:dev zlib:dev
+[DEP] 00-dirtree atk atk:dev bash2 binutils bison bonobo-conf10:dev
+[DEP] bonobo10:dev bzip2 bzip2:dev coreutils cpio diffutils findutils
+[DEP] flex gal01:dev gawk gcc34 gcc34:dev gconf110:dev gdk-pixbuf10
+[DEP] gdk-pixbuf10:dev gettext gimp-print42:dev glib glib12 glib12:dev
+[DEP] glib:dev glibc23 glibc23:dev gnome-libs14:dev gnome-print10:dev
+[DEP] gnomemm12:dev gnucash:dev gpm gpm:dev grep gtk+ gtk+12 gtk+12:dev
+[DEP] gtk+:dev gtk+extra10 gtk+extra10:dev gtkhtml1:dev gtkmm12:dev
+[DEP] guppi:dev libglade10:dev libjpeg:dev libpng:dev linux26-header:dev
+[DEP] lynx make mktemp ncurses:dev net-tools oaf10:dev openssl openssl:dev
+[DEP] orbit10:dev pango pango:dev patch pkgconfig postgresql postgresql:dev
+[DEP] readline readline:dev sed soup:dev sysfiles tar xfree86 xfree86:dev
+[DEP] zlib:dev
+
+[PROVIDES] add_meta_tag clip clip_bug clip_conv clip_cp clip_dbg
+[PROVIDES] clip_hashextract clip_makelib clip_makeslib clip_msgfmt
+[PROVIDES] clip_msgmerge clip_trans clipar cliphash gen_tbl joinlib.sh
+[PROVIDES] libclip-bzip2.a libclip-bzip2.so libclip-codb.a libclip-codb.so
+[PROVIDES] libclip-com.a libclip-com.so libclip-crypto.a libclip-crypto.so
+[PROVIDES] libclip-cti.a libclip-cti.so libclip-fw.a libclip-fw.so
+[PROVIDES] libclip-gtk.a libclip-gtk.so libclip-gtk2.a libclip-gtk2.so
+[PROVIDES] libclip-gtkextra.a libclip-gtkextra.so libclip-gzip.a
+[PROVIDES] libclip-gzip.so libclip-nanfor.a libclip-nanfor.so
+[PROVIDES] libclip-netto.a libclip-netto.so libclip-postgres.a
+[PROVIDES] libclip-postgres.so libclip-r2d2.a libclip-r2d2.so libclip-rtf.a
+[PROVIDES] libclip-rtf.so libclip.a libclip.so lowname po_compat po_extr
+[PROVIDES] po_subst tconv xclip
 

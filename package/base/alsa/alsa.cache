@@ -20,16 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104648057 Sun Jan  2 07:40:57 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110126474 Sun Mar  6 17:27:54 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-alsa.log
+[LOGS] 5-alsa.log 9-alsa.log
 
-[BUILDTIME] 10163 (5)
-[SIZE] 1.11 MB, 110 files
+[BUILDTIME] 11282 (9)
+[SIZE] 1.15 MB, 116 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils devfsd diffutils findutils
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] m4 make mktemp ncurses:dev patch sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils devfsd diffutils
+[DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
+[DEP] linux26-header:dev m4 make mktemp ncurses:dev net-tools sed sysfiles
+[DEP] tar util-linux
+
+[PROVIDES] aconnect alsaconf alsactl alsalisp alsamixer amidi amixer aoss
+[PROVIDES] aplay aplaymidi arecord arecordmidi aseqnet aserver iecset
+[PROVIDES] libalsatoss.a libalsatoss.so libaoss.a libaoss.so libasound.a
+[PROVIDES] libasound.so libossredir.a speaker-test
 

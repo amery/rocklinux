@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104652875 Sun Jan  2 09:01:15 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110132345 Sun Mar  6 19:05:45 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-uucp.log
+[LOGS] 5-uucp.log 9-uucp.log
 
-[BUILDTIME] 6525 (5)
-[SIZE] 1.15 MB, 44 files
+[BUILDTIME] 7213 (9)
+[SIZE] 1.16 MB, 44 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp patch sed sysfiles tar texinfo
+[DEP] mktemp net-tools patch sed sysfiles tar texinfo
+
+[PROVIDES] cu uuchk uucico uuconv uucp uulog uuname uupick uusched uustat
+[PROVIDES] uuto uux uuxqt
 

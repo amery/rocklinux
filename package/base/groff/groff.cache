@@ -20,16 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104641113 Sun Jan  2 05:45:13 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110125666 Sun Mar  6 17:14:26 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 3-groff.log
+[LOGS] 3-groff.log 9-groff.log
 
-[BUILDTIME] 8150 (3)
+[BUILDTIME] 10620 (9)
 [SIZE] 6.48 MB, 454 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp sed sysfiles tar texinfo util-linux
+[DEP] gcc34 gcc34:dev ghostscript ghostscript-fonts glibc23 glibc23:dev
+[DEP] grep linux26-header:dev make mktemp net-tools netpbm psutils sed
+[DEP] sysfiles tar tcsh texinfo util-linux
+
+[PROVIDES] addftinfo afmtodit eqn eqn2graph grap2graph grn grodvi groff
+[PROVIDES] groffer grog grolbp grolj4 grops grotty hpftodit indxbib lkbib
+[PROVIDES] lookbib mmroff neqn nroff pfbtops pic pic2graph post-grohtml
+[PROVIDES] pre-grohtml refer soelim tbl tfmtodit troff zsoelim
 

@@ -20,15 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104799382 Tue Jan  4 01:43:02 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110319976 Tue Mar  8 23:12:56 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 1-sysfiles.log 3-sysfiles.log 7-sysfiles.log
+[LOGS] 1-sysfiles.log 3-sysfiles.log 7-sysfiles.log 9-sysfiles.log
 
-[BUILDTIME] 6163 (7)
-[SIZE] 1.07 MB, 101 files
+[BUILDTIME] 6493 (9)
+[SIZE] 1.11 MB, 100 files
 
 [DEP] 00-dirtree bash2 binutils coreutils findutils gawk gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep linux26-header:dev m4 mktemp sed
+
+[PROVIDES] btee hwscan ifdown ifup mkpkg rc stone sysnote
 

@@ -20,17 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104661690 Sun Jan  2 11:28:10 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110143244 Sun Mar  6 22:07:24 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-pango.log
+[LOGS] 5-pango.log 9-pango.log
 
-[BUILDTIME] 8436 (5)
+[BUILDTIME] 9085 (9)
 [SIZE] 1.60 MB, 73 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils expat findutils
 [DEP] freetype freetype:dev gawk gcc34 gcc34:dev glib glib:dev glibc23
-[DEP] glibc23:dev grep linux26-header:dev make mktemp patch perl5 pkgconfig
-[DEP] sed sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+[DEP] glibc23:dev grep linux26-header:dev make mktemp net-tools patch perl5
+[DEP] pkgconfig sed sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] libpango-1.0.so libpangoft2-1.0.so libpangox-1.0.so
+[PROVIDES] libpangoxft-1.0.so pango-querymodules
 

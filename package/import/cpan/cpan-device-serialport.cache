@@ -5,7 +5,7 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/import/cpan/cpan-device-serialport.cache
+[COPY] ROCK Linux: rock-src/package/import/cpan/cpan.cache
 [COPY] ROCK Linux is Copyright (C) 1998 - 2005 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104922764 Wed Jan  5 11:59:24 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110315188 Tue Mar  8 21:53:08 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-cpan-device-serialport.log
+[LOGS] 5-cpan-device-serialport.log 9-cpan-device-serialport.log
 
-[BUILDTIME] 3218 (5)
-[SIZE] 0.13 MB, 13 files
+[BUILDTIME] 3269 (9)
+[SIZE] 0.18 MB, 14 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils
 [DEP] cpan-device-ericsson-accessorymenu diffutils findutils gawk gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
 [DEP] net-tools patch perl5 sed sysfiles tar util-linux
+
+[PROVIDES] modemtest
 

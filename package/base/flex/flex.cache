@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104647711 Sun Jan  2 07:35:11 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110125440 Sun Mar  6 17:10:40 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 1-flex.log 5-flex.log
+[LOGS] 1-flex.log 5-flex.log 9-flex.log
 
-[BUILDTIME] 7849 (5)
+[BUILDTIME] 8527 (9)
 [SIZE] 0.69 MB, 28 files
 
 [DEP] 00-dirtree autoconf automake17 bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev
-[DEP] grep linux26-header:dev m4 make mktemp patch perl5 sed sysfiles
-[DEP] tar texinfo util-linux
+[DEP] grep indent linux26-header:dev m4 make mktemp net-tools patch perl5
+[DEP] sed sysfiles tar texinfo util-linux
+
+[PROVIDES] flex lex libfl.a
 

@@ -20,16 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104641857 Sun Jan  2 05:57:37 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110304195 Tue Mar  8 18:49:55 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 3-modutils.log
+[LOGS] 3-modutils.log 9-modutils.log
 
-[BUILDTIME] 2174 (3)
-[SIZE] 0.83 MB, 41 files
+[BUILDTIME] 2784 (9)
+[SIZE] 0.84 MB, 41 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils findutils
-[DEP] flex gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] m4 make mktemp patch sed sysfiles tar util-linux
+[DEP] flex gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
+[DEP] m4 make mktemp net-tools patch sed sysfiles tar util-linux
+
+[PROVIDES] depmod.old genksyms genksyms.old insmod.old insmod.static.old
+[PROVIDES] insmod_ksymoops_clean.old kallsyms.old kallsyms.static.old
+[PROVIDES] kernelversion.old ksyms.old ksyms.static.old lsmod.old
+[PROVIDES] lsmod.static.old modinfo.old modprobe.old modprobe.static.old
+[PROVIDES] rmmod.old rmmod.static.old
 

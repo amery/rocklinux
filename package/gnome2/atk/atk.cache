@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104661582 Sun Jan  2 11:26:22 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110143112 Sun Mar  6 22:05:12 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-atk.log
+[LOGS] 5-atk.log 9-atk.log
 
-[BUILDTIME] 3347 (5)
+[BUILDTIME] 3938 (9)
 [SIZE] 1.05 MB, 110 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] gcc34 gcc34:dev gettext glib glib:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp perl5 pkgconfig sed sysfiles tar
-[DEP] util-linux
+[DEP] gawk gcc34 gcc34:dev gettext glib glib:dev glibc23 glibc23:dev
+[DEP] grep linux26-header:dev make mktemp net-tools perl5 pkgconfig sed
+[DEP] sysfiles tar util-linux
+
+[PROVIDES] libatk-1.0.so
 

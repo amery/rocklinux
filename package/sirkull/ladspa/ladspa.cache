@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104696074 Sun Jan  2 21:01:14 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110183636 Mon Mar  7 09:20:36 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ladspa.log
+[LOGS] 5-ladspa.log 9-ladspa.log
 
-[BUILDTIME] 1080 (5)
+[BUILDTIME] 1553 (9)
 [SIZE] 0.07 MB, 15 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp patch sed
 [DEP] sysfiles tar time xfree86
+
+[PROVIDES] analyseplugin applyplugin listplugins
 

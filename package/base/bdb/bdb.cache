@@ -20,16 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104646313 Sun Jan  2 07:11:53 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110123049 Sun Mar  6 16:30:49 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-bdb42.log
+[LOGS] 5-bdb42.log 9-bdb42.log
 
-[BUILDTIME] 15864 (5)
-[SIZE] 1.30 MB, 19 files
+[BUILDTIME] 16589 (9)
+[SIZE] 1.31 MB, 21 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp patch sed sysfiles tar util-linux
+[DEP] mktemp net-tools patch sed sysfiles tar util-linux
+
+[PROVIDES] db_archive db_checkpoint db_deadlock db_dump db_load db_printlog
+[PROVIDES] db_recover db_stat db_upgrade db_verify libdb-4.2.a libdb-4.2.so
+[PROVIDES] libdb.a libdb.so libdb4.a libdb4.so libdb42.a libdb42.so
+[PROVIDES] libdb_cxx-4.2.a libdb_cxx-4.2.so
 

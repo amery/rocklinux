@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104784777 Mon Jan  3 21:39:37 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110399525 Wed Mar  9 21:18:45 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-linesrv.log
+[LOGS] 5-linesrv.log 9-linesrv.log
 
-[BUILDTIME] 2125 (5)
+[BUILDTIME] 4446 (9)
 [SIZE] 0.08 MB, 9 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] net-tools pam pam:dev sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
+[DEP] mktemp net-tools pam pam:dev sed sysfiles tar util-linux
+
+[PROVIDES] htmlstatus lclog linesrv
 

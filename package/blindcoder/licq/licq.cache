@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104762923 Mon Jan  3 15:35:23 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110322018 Tue Mar  8 23:46:58 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-licq.log
+[LOGS] 5-licq.log 9-licq.log
 
-[BUILDTIME] 43685 (5)
+[BUILDTIME] 43997 (9)
 [SIZE] 5.89 MB, 562 files
 
 [DEP] 00-dirtree alsa arts bash2 binutils bzip2 coreutils diffutils expat
@@ -35,4 +35,7 @@
 [DEP] libpng:dev linux26-header:dev make mktemp ncurses:dev net-tools
 [DEP] openssl openssl:dev qt qt:dev sed sysfiles tar util-linux vim
 [DEP] xfree86 xfree86:dev xosd xosd:dev
+
+[PROVIDES] licq viewurl-lynx.sh viewurl-mozilla.sh viewurl-ncftp.sh
+[PROVIDES] viewurl-netscape.sh viewurl-opera.sh viewurl-w3m.sh
 

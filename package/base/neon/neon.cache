@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104673047 Sun Jan  2 14:37:27 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110156890 Mon Mar  7 01:54:50 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-neon.log
+[LOGS] 5-neon.log 9-neon.log
 
-[BUILDTIME] 3473 (5)
+[BUILDTIME] 4059 (9)
 [SIZE] 0.13 MB, 85 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libxml2 libxml2:dev
-[DEP] linux26-header:dev make mktemp openssl:dev pkgconfig sed sysfiles
-[DEP] tar util-linux zlib:dev
+[DEP] linux26-header:dev make mktemp net-tools openssl:dev pkgconfig sed
+[DEP] sysfiles tar util-linux zlib:dev
+
+[PROVIDES] libneon.a neon-config
 

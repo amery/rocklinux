@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104747824 Mon Jan  3 11:23:44 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110305034 Tue Mar  8 19:03:54 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-netkit-routed.log
+[LOGS] 5-netkit-routed.log 9-netkit-routed.log
 
-[BUILDTIME] 1275 (5)
+[BUILDTIME] 1500 (9)
 [SIZE] 0.06 MB, 10 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp sed
 [DEP] sysfiles tar
+
+[PROVIDES] ripquery routed
 

@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104798423 Tue Jan  4 01:27:03 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110127196 Sun Mar  6 17:39:56 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-curl.log 7-curl.log
+[LOGS] 5-curl.log 7-curl.log 9-curl.log
 
-[BUILDTIME] 7895 (7)
+[BUILDTIME] 7961 (9)
 [SIZE] 0.75 MB, 57 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep groff linux26-header:dev
 [DEP] make mktemp net-tools openssl openssl:dev pkgconfig sed sysfiles
 [DEP] tar util-linux zlib:dev
+
+[PROVIDES] curl curl-config libcurl.a libcurl.so
 

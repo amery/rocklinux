@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104686206 Sun Jan  2 18:16:46 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110172091 Mon Mar  7 06:08:11 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gimp.log
+[LOGS] 5-gimp.log 9-gimp.log
 
-[BUILDTIME] 82583 (5)
-[SIZE] 26.15 MB, 1710 files
+[BUILDTIME] 84024 (9)
+[SIZE] 26.21 MB, 1710 files
 
 [DEP] 00-dirtree aalib aalib:dev alsa alsa:dev atk atk:dev bash2 binutils
 [DEP] bzip2 coreutils cpan-xml-parser diffutils expat figment findutils
@@ -39,7 +39,12 @@
 [DEP] libgnomecanvas libgsf libgsf:dev libgtkhtml libgtkhtml:dev libjpeg
 [DEP] libjpeg:dev libmng libmng:dev libpng libpng:dev librsvg librsvg:dev
 [DEP] libtiff libtiff:dev libxml2 libxml2:dev linux26-header:dev make
-[DEP] mktemp openssl orbit2 orbit2:dev pango pango:dev patch perl5
-[DEP] pkgconfig popt sed slang sysfiles tar util-linux xfree86 xfree86:dev
-[DEP] zlib:dev
+[DEP] mktemp net-tools openssl orbit2 orbit2:dev pango pango:dev patch
+[DEP] perl5 pkgconfig popt sed slang sysfiles tar util-linux xfree86
+[DEP] xfree86:dev zlib:dev
+
+[PROVIDES] gimp gimp-2.2 gimp-remote gimp-remote-2.2 gimptool-2.0
+[PROVIDES] libgimp-2.0.so libgimpbase-2.0.so libgimpcolor-2.0.so
+[PROVIDES] libgimpmath-2.0.so libgimpmodule-2.0.so libgimpthumb-2.0.so
+[PROVIDES] libgimpui-2.0.so libgimpwidgets-2.0.so
 

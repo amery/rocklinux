@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104773901 Mon Jan  3 18:38:21 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110334680 Wed Mar  9 03:18:00 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-psi.log
+[LOGS] 5-psi.log 9-psi.log
 
-[BUILDTIME] 48191 (5)
-[SIZE] 4.93 MB, 233 files
+[BUILDTIME] 53154 (9)
+[SIZE] 5.88 MB, 263 files
 
 [DEP] 00-dirtree arts bash2 binutils bzip2 coreutils expat findutils
 [DEP] freetype gawk gcc34 gcc34:dev glibc23 glibc23:dev grep kdebase
-[DEP] kdelibs libpng linux26-header:dev make mktemp mmv qt qt:dev sed
-[DEP] sysfiles tar vim xfree86 xfree86:dev zlib:dev
+[DEP] kdelibs libpng linux26-header:dev make mktemp qca qca:dev qt qt:dev
+[DEP] sed sysfiles tar vim xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] psi
 

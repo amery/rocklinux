@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104732615 Mon Jan  3 07:10:15 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110224253 Mon Mar  7 20:37:33 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ppp.log
+[LOGS] 5-ppp.log 9-ppp.log
 
-[BUILDTIME] 2607 (5)
-[SIZE] 0.59 MB, 34 files
+[BUILDTIME] 2854 (9)
+[SIZE] 0.60 MB, 34 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep libpcap:dev linux26-header:dev
 [DEP] make mktemp sed sysfiles tar
+
+[PROVIDES] chat pppd pppdump pppoe-discovery pppstats
 

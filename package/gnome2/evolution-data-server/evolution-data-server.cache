@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104689863 Sun Jan  2 19:17:43 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110176515 Mon Mar  7 07:21:55 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-evolution-data-server.log
+[LOGS] 5-evolution-data-server.log 9-evolution-data-server.log
 
-[BUILDTIME] 34120 (5)
-[SIZE] 3.53 MB, 520 files
+[BUILDTIME] 34683 (9)
+[SIZE] 3.54 MB, 520 files
 
 [DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev bash2 binutils bzip2
 [DEP] coreutils cpan-xml-parser diffutils esound esound:dev findutils
@@ -35,7 +35,10 @@
 [DEP] glib:dev glibc23 glibc23:dev gnome-blog gnome-vfs gnome-vfs:dev
 [DEP] gnutls gnutls:dev grep indent libbonobo libbonobo:dev libgcrypt
 [DEP] libgcrypt:dev libgnome libgnome:dev libgpg-error libgpg-error:dev
-[DEP] libsoup libsoup:dev libxml2 libxml2:dev linux26-header:dev m4
-[DEP] make mktemp openldap openldap:dev openssl orbit2 orbit2:dev perl5
-[DEP] pkgconfig popt popt:dev sed sysfiles tar util-linux zlib:dev
+[DEP] libsoup libsoup:dev libxml2 libxml2:dev linux26-header:dev m4 make
+[DEP] mktemp net-tools openldap openldap:dev openssl orbit2 orbit2:dev
+[DEP] perl5 pkgconfig popt popt:dev sed sysfiles tar util-linux zlib:dev
+
+[PROVIDES] libebook.so libecal.so libedata-book.so libedata-cal.so
+[PROVIDES] libedataserver.so libegroupwise.so
 

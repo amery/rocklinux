@@ -20,17 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104652736 Sun Jan  2 08:58:56 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110132162 Sun Mar  6 19:02:42 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-mutt.log
+[LOGS] 5-mutt.log 9-mutt.log
 
-[BUILDTIME] 4815 (5)
+[BUILDTIME] 5426 (9)
 [SIZE] 2.41 MB, 47 files
 
 [DEP] 00-dirtree alsa autoconf bash2 binutils bison bzip2 coreutils
 [DEP] cyrus-sasl cyrus-sasl:dev diffutils findutils gawk gcc34 gcc34:dev
-[DEP] gdbm gettext glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] ncurses:dev openssl openssl:dev perl5 sed sysfiles tar texinfo
+[DEP] gdbm gettext glibc23 glibc23:dev grep linux26-header:dev make
+[DEP] mktemp ncurses:dev net-tools openssl openssl:dev perl5 sed sysfiles
+[DEP] tar texinfo
+
+[PROVIDES] flea mutt muttbug pgpewrap pgpring
 

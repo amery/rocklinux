@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104685134 Sun Jan  2 17:58:54 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110170839 Mon Mar  7 05:47:19 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libgtkhtml.log
+[LOGS] 5-libgtkhtml.log 9-libgtkhtml.log
 
-[BUILDTIME] 12891 (5)
+[BUILDTIME] 13353 (9)
 [SIZE] 0.32 MB, 9 files
 
 [DEP] 00-dirtree atk atk:dev autoconf bash2 binutils bzip2 coreutils
@@ -34,7 +34,9 @@
 [DEP] gcc34:dev gconf gconf:dev glib glib:dev glibc23 glibc23:dev gnome-vfs
 [DEP] gnome-vfs:dev grep gtk+ gtk+:dev libart_lgpl23 libart_lgpl23:dev
 [DEP] libbonobo libbonobo:dev libgnomecanvas libgnomecanvas:dev libxml2
-[DEP] libxml2:dev linux26-header:dev make mktemp openssl orbit2 orbit2:dev
-[DEP] pango pango:dev perl5 pkgconfig popt popt:dev sed sysfiles tar
-[DEP] texinfo util-linux xfree86 zlib:dev
+[DEP] libxml2:dev linux26-header:dev make mktemp net-tools openssl orbit2
+[DEP] orbit2:dev pango pango:dev perl5 pkgconfig popt popt:dev sed sysfiles
+[DEP] tar texinfo util-linux xfree86 zlib:dev
+
+[PROVIDES] libgtkhtml-2.a libgtkhtml-2.so
 

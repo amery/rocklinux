@@ -20,18 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1101903554 Wed Dec  1 13:19:14 2004
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110225581 Mon Mar  7 20:59:41 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-courier-imap.log
+[LOGS] 5-courier-imap.log 9-courier-imap.log
 
-[BUILDTIME] 23779 (5)
-[SIZE] 0.86 MB, 89 files
+[BUILDTIME] 27977 (9)
+[SIZE] 0.56 MB, 48 files
 
-[DEP] 00-dirtree bash2 bdb41 binutils bzip2 coreutils diffutils fam fam:dev
-[DEP] findutils gawk gcc34 gcc34:dev gdbm gdbm:dev glibc23 glibc23:dev
-[DEP] grep linux26 linux26-header:dev make mktemp mysql mysql:dev net-tools
-[DEP] openssl openssl:dev pam pam:dev patch perl5 postgresql postgresql:dev
-[DEP] procps sed shadow:dev sysfiles tar util-linux zlib:dev
+[DEP] 00-dirtree bash2 bdb42 binutils bzip2 coreutils courier-authlib
+[DEP] courier-authlib:dev dante:dev diffutils fam fam:dev findutils
+[DEP] gawk gcc34 gcc34:dev gdbm gdbm:dev glibc23 glibc23:dev grep
+[DEP] linux26-header:dev make mktemp net-tools openssl openssl:dev pam
+[DEP] patch perl5 procps sed sysfiles tar util-linux
+
+[PROVIDES] couriertls deliverquota imapd_courier imaplogin maildiracl
+[PROVIDES] maildirkw mkimapdcert mkpop3dcert pop3d pop3login
+[PROVIDES] sharedindexinstall sharedindexsplit
 

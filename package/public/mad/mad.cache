@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104655733 Sun Jan  2 09:48:53 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110136133 Sun Mar  6 20:08:53 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-mad.log
+[LOGS] 5-mad.log 9-mad.log
 
-[BUILDTIME] 6704 (5)
+[BUILDTIME] 7469 (9)
 [SIZE] 0.30 MB, 21 files
 
 [DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev bash2 binutils
 [DEP] bison bzip2 coreutils diffutils esound esound:dev findutils gawk
 [DEP] gcc34 gcc34:dev gettext glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp sed sysfiles tar util-linux zlib:dev
+[DEP] make mktemp net-tools sed sysfiles tar util-linux zlib:dev
+
+[PROVIDES] abxtest libid3tag.a libid3tag.so libmad.a libmad.so madplay
 

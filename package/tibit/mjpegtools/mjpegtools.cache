@@ -20,18 +20,30 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104696564 Sun Jan  2 21:09:24 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110184335 Mon Mar  7 09:32:15 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-mjpegtools.log
+[LOGS] 5-mjpegtools.log 9-mjpegtools.log
 
-[BUILDTIME] 12273 (5)
+[BUILDTIME] 12750 (9)
 [SIZE] 1.55 MB, 97 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glib12 glib12:dev glibc23 glibc23:dev grep gtk+12
 [DEP] gtk+12:dev libdv libdv:dev libjpeg libjpeg:dev libpng libpng:dev
-[DEP] libsdl libsdl:dev linux26-header:dev make mktemp nas nasm patch
-[DEP] sed sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+[DEP] libsdl libsdl:dev linux26-header:dev make mktemp nas nasm net-tools
+[DEP] patch sed sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] glav jpeg2yuv lav2avi.sh lav2mpeg lav2wav lav2yuv lavaddwav
+[PROVIDES] lavinfo lavpipe lavplay lavrec lavtrans lavvideo liblavfile.a
+[PROVIDES] liblavfile.so liblavjpeg.a liblavjpeg.so liblavplay.a
+[PROVIDES] liblavplay.so liblavrec.a liblavrec.so libmjpegutils.a
+[PROVIDES] libmpeg2encpp.a libmpeg2encpp.so libmplex2.a libmplex2.so
+[PROVIDES] matteblend.flt mjpegtools-config mp2enc mpeg2enc mpegtranscode
+[PROVIDES] mplex multiblend.flt pgmtoy4m png2yuv ppmtoy4m testrec
+[PROVIDES] transist.flt y4mblack y4mcolorbars y4mshift y4mtoppm y4mtoyuv
+[PROVIDES] ypipe yuv2lav yuv4mpeg yuvcorrect yuvcorrect_tune yuvdenoise
+[PROVIDES] yuvfps yuvinactive yuvkineco yuvmedianfilter yuvplay yuvscaler
+[PROVIDES] yuvycsnoise
 

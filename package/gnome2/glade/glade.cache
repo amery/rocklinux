@@ -20,27 +20,32 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104725895 Mon Jan  3 05:18:15 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110216378 Mon Mar  7 18:26:18 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-glade.log
+[LOGS] 5-glade.log 9-glade.log
 
-[BUILDTIME] 8150 (5)
-[SIZE] 3.39 MB, 84 files
+[BUILDTIME] 10256 (9)
+[SIZE] 4.08 MB, 88 files
 
-[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
-[DEP] battfink binutils bug-buddy bzip2 coreutils diffutils docbookx eog
-[DEP] epiphany esound esound:dev expat figment file-roller findutils
-[DEP] freetype gawk gcalctool gcc34 gcc34:dev gconf gconf:dev gdm
-[DEP] gedit gettext glade10 glib glib12 glib:dev glibc23 glibc23:dev
-[DEP] gnome-applets gnome-desktop gnome-keyring gnome-keyring:dev
-[DEP] gnome-libs14 gnome-utils gnome-vfs gnome-vfs:dev grep gtk+ gtk+:dev
+[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
+[DEP] bash2 battfink binutils bug-buddy bzip2 coreutils cpan-xml-parser
+[DEP] diffutils docbookx eog epiphany esound esound:dev expat figment
+[DEP] file-roller findutils freetype gawk gcalctool gcc34 gcc34:dev gconf
+[DEP] gconf:dev gdm gedit gettext ghex12 glade10 glib glib12 glib:dev
+[DEP] glibc23 glibc23:dev gnome-applets gnome-desktop gnome-keyring
+[DEP] gnome-keyring:dev gnome-libs14 gnome-netstatus gnome-utils gnome-vfs
+[DEP] gnome-vfs:dev grep gtk+ gtk+:dev gtksourceview gtksourceview:dev
 [DEP] libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui
-[DEP] libbonoboui:dev libglade libgnome libgnome:dev libgnomecanvas
-[DEP] libgnomecanvas:dev libgnomeui libgnomeui:dev libjpeg libjpeg:dev
-[DEP] libxml2 libxml2:dev linux26-header:dev make mktemp openssl
+[DEP] libbonoboui:dev libgda libgda:dev libglade libglade:dev libgnome
+[DEP] libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomedb
+[DEP] libgnomedb:dev libgnomeprint libgnomeprint:dev libgnomeui
+[DEP] libgnomeui:dev libjpeg libjpeg:dev libxml2 libxml2:dev libxslt
+[DEP] libxslt:dev linux26-header:dev make mgt mktemp net-tools openssl
 [DEP] orbit2 orbit2:dev pango pango:dev perl5 pkgconfig popt popt:dev
-[DEP] quick-lounge-applet scrollkeeper sed sysfiles tar util-linux
-[DEP] xfree86 zlib:dev
+[DEP] quick-lounge-applet scrollkeeper sed sysfiles tar util-linux xfree86
+[DEP] zapping zlib:dev
+
+[PROVIDES] glade-2
 

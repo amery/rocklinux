@@ -20,16 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104654568 Sun Jan  2 09:29:28 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110134605 Sun Mar  6 19:43:25 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-kbd.log
+[LOGS] 5-kbd.log 9-kbd.log
 
-[BUILDTIME] 2043 (5)
+[BUILDTIME] 2722 (9)
 [SIZE] 2.11 MB, 580 files
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils
-[DEP] findutils flex gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
-[DEP] gzip linux26-header:dev m4 make mktemp patch sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils findutils
+[DEP] flex gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep gzip
+[DEP] linux26-header:dev m4 make mktemp patch sed sysfiles tar
+
+[PROVIDES] chvt deallocvt dumpkeys fgconsole getkeycodes kbd_mode kbdrate
+[PROVIDES] loadkeys loadunimap mapscrn openvt psfaddtable psfgettable
+[PROVIDES] psfstriptable psfxtable resizecons setfont setkeycodes setleds
+[PROVIDES] setmetamode showconsolefont showkey unicode_start unicode_stop
 

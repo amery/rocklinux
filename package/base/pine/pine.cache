@@ -20,16 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104652464 Sun Jan  2 08:54:24 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110131685 Sun Mar  6 18:54:45 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-pine.log
+[LOGS] 5-pine.log 9-pine.log
 
-[BUILDTIME] 10331 (5)
-[SIZE] 7.24 MB, 20 files
+[BUILDTIME] 11517 (9)
+[SIZE] 7.63 MB, 20 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] ncurses:dev openssl openssl:dev pam pam:dev patch sed sysfiles tar
+[DEP] ncurses:dev net-tools openssl openssl:dev pam pam:dev sed sysfiles
+[DEP] tar
+
+[PROVIDES] imapd_pine_pine ipop2d ipop3d libc-client.a mailutil mtest
+[PROVIDES] pico pilot pine rpdump rpload
 

@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104641461 Sun Jan  2 05:51:01 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110230932 Mon Mar  7 22:28:52 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 3-pam.log
+[LOGS] 3-pam.log 9-pam.log
 
-[BUILDTIME] 3284 (3)
+[BUILDTIME] 4058 (9)
 [SIZE] 0.48 MB, 77 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils cracklib:dev diffutils
-[DEP] findutils flex flex:dev gawk gcc34 gcc34:dev gdbm:dev glibc23
-[DEP] glibc23:dev grep linux26-header:dev m4 make mktemp sed sysfiles
-[DEP] tar util-linux
+[DEP] 00-dirtree bash2 bdb42 bdb42:dev binutils bzip2 coreutils
+[DEP] cracklib:dev diffutils findutils flex flex:dev gawk gcc34 gcc34:dev
+[DEP] gdbm:dev glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp
+[DEP] net-tools sed sysfiles tar util-linux
+
+[PROVIDES] libpam.so libpam_misc.so libpamc.so pam_tally unix_chkpwd
 

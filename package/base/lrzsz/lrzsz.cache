@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104652908 Sun Jan  2 09:01:48 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110132391 Sun Mar  6 19:06:31 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-lrzsz.log
+[LOGS] 5-lrzsz.log 9-lrzsz.log
 
-[BUILDTIME] 2900 (5)
+[BUILDTIME] 3512 (9)
 [SIZE] 0.35 MB, 21 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils findutils gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp patch perl5 sed sysfiles tar texinfo
+[DEP] diffutils findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev
+[DEP] grep linux26-header:dev make mktemp net-tools patch perl5 sed
+[DEP] sysfiles tar texinfo
+
+[PROVIDES] lrb lrx lrz lsb lsx lsz rb rx rz sb sx sz
 

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104648111 Sun Jan  2 07:41:51 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110126542 Sun Mar  6 17:29:02 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-audiofile.log
+[LOGS] 5-audiofile.log 9-audiofile.log
 
-[BUILDTIME] 4924 (5)
+[BUILDTIME] 5605 (9)
 [SIZE] 0.16 MB, 13 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp sed sysfiles tar util-linux
+[DEP] mktemp net-tools sed sysfiles tar util-linux
+
+[PROVIDES] audiofile-config libaudiofile.a libaudiofile.so sfconvert sfinfo
 

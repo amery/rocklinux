@@ -20,19 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104675310 Sun Jan  2 15:15:10 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110159540 Mon Mar  7 02:39:00 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ettercap.log
+[LOGS] 5-ettercap.log 9-ettercap.log
 
-[BUILDTIME] 10641 (5)
-[SIZE] 1.24 MB, 61 files
+[BUILDTIME] 11244 (9)
+[SIZE] 1.25 MB, 61 files
 
 [DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils diffutils
 [DEP] expat file findutils flex flex:dev freetype gawk gcc34 gcc34:dev
 [DEP] glib glib:dev glibc23 glibc23:dev grep gtk+ gtk+:dev libnet:dev
 [DEP] libpcap:dev libtool libtool:dev linux26-header:dev m4 make mktemp
-[DEP] ncurses ncurses:dev openssl openssl:dev pango pango:dev pcre pcre:dev
-[DEP] pkgconfig sed sysfiles tar util-linux xfree86 zlib zlib:dev
+[DEP] ncurses ncurses:dev net-tools openssl openssl:dev pango pango:dev
+[DEP] pcre pcre:dev pkgconfig sed sysfiles tar util-linux xfree86 zlib
+[DEP] zlib:dev
+
+[PROVIDES] ettercap etterfilter etterlog
 

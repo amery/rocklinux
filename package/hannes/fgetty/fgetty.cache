@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104724707 Mon Jan  3 04:58:27 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110215030 Mon Mar  7 18:03:50 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-fgetty.log
+[LOGS] 5-fgetty.log 9-fgetty.log
 
-[BUILDTIME] 1057 (5)
+[BUILDTIME] 1378 (9)
 [SIZE] 0.04 MB, 11 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils dietlibc dietlibc:dev
 [DEP] findutils gcc34 gcc34:dev glibc23 grep make mktemp patch sed
 [DEP] sysfiles tar
+
+[PROVIDES] checkpassword.login fgetty login1 login2
 

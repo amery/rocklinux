@@ -5,7 +5,7 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/import/cpan/cpan-xml-twig.cache
+[COPY] ROCK Linux: rock-src/package/import/cpan/cpan.cache
 [COPY] ROCK Linux is Copyright (C) 1998 - 2005 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104757705 Mon Jan  3 14:08:25 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110314965 Tue Mar  8 21:49:25 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-cpan-xml-twig.log
+[LOGS] 5-cpan-xml-twig.log 9-cpan-xml-twig.log
 
-[BUILDTIME] 1322 (5)
-[SIZE] 0.38 MB, 14 files
+[BUILDTIME] 1679 (9)
+[SIZE] 0.55 MB, 17 files
 
 [DEP] 00-dirtree bash2 bzip2 coreutils cpan-xml-namespacesupport
 [DEP] cpan-xml-parser findutils gawk gcc34 grep make mktemp perl5 sed
 [DEP] sysfiles tar
+
+[PROVIDES] xml_grep xml_pp xml_spellcheck
 

@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104753949 Mon Jan  3 13:05:49 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110311891 Tue Mar  8 20:58:11 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-autotrace.log
+[LOGS] 5-autotrace.log 9-autotrace.log
 
-[BUILDTIME] 3876 (5)
+[BUILDTIME] 4116 (9)
 [SIZE] 0.20 MB, 13 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 bzip2:dev coreutils diffutils
@@ -35,4 +35,6 @@
 [DEP] libpng libpng:dev libtiff libtiff:dev libtool libtool:dev
 [DEP] linux26-header:dev make mktemp net-tools sed sysfiles tar util-linux
 [DEP] xfree86 zlib:dev
+
+[PROVIDES] autotrace autotrace-config libautotrace.a libautotrace.so
 

@@ -20,18 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104653531 Sun Jan  2 09:12:11 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110133182 Sun Mar  6 19:19:42 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnupg.log
+[LOGS] 5-gnupg.log 9-gnupg.log
 
-[BUILDTIME] 7476 (5)
-[SIZE] 3.72 MB, 55 files
+[BUILDTIME] 8198 (9)
+[SIZE] 3.75 MB, 55 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bison bzip2 bzip2:dev
-[DEP] coreutils diffutils findutils gawk gcc34 gcc34:dev gettext
-[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp openldap
-[DEP] openldap:dev openssl perl5 readline readline:dev sed sysfiles tar
-[DEP] texinfo util-linux zlib:dev
+[DEP] coreutils diffutils findutils gawk gcc34 gcc34:dev gettext glibc23
+[DEP] glibc23:dev grep libusb:dev linux26-header:dev make mktemp net-tools
+[DEP] openldap openldap:dev openssl perl5 readline readline:dev sed
+[DEP] sysfiles tar texinfo util-linux zlib:dev
+
+[PROVIDES] gpg gpgsplit gpgv pgp pgpgpg
 

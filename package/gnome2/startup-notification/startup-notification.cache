@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104677254 Sun Jan  2 15:47:34 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110161825 Mon Mar  7 03:17:05 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-startup-notification.log
+[LOGS] 5-startup-notification.log 9-startup-notification.log
 
-[BUILDTIME] 2559 (5)
+[BUILDTIME] 3024 (9)
 [SIZE] 0.04 MB, 9 files
 
 [DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils diffutils
-[DEP] findutils gcc34 gcc34:dev glib glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp perl5 sed sysfiles tar texinfo
-[DEP] util-linux xfree86 xfree86:dev
+[DEP] findutils gawk gcc34 gcc34:dev glib glibc23 glibc23:dev grep
+[DEP] linux26-header:dev make mktemp net-tools perl5 sed sysfiles tar
+[DEP] texinfo util-linux xfree86 xfree86:dev
+
+[PROVIDES] libstartup-notification-1.a libstartup-notification-1.so
 

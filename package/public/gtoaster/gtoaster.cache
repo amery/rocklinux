@@ -20,19 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104699321 Sun Jan  2 21:55:21 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110187480 Mon Mar  7 10:24:40 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gtoaster.log
+[LOGS] 5-gtoaster.log 9-gtoaster.log
 
-[BUILDTIME] 4125 (5)
-[SIZE] 0.37 MB, 7 files
+[BUILDTIME] 4461 (9)
+[SIZE] 0.38 MB, 7 files
 
 [DEP] 00-dirtree alsa audiofile audiofile:dev autoconf automake19 bash2
 [DEP] bdb33 binutils bison bzip2 coreutils diffutils esound esound:dev
 [DEP] findutils gawk gcc34 gcc34:dev gettext glib12 glib12:dev glibc23
 [DEP] glibc23:dev gnome-libs14 gnome-libs14:dev grep gtk+12 gtk+12:dev
-[DEP] imlib imlib:dev linux26-header:dev make mktemp orbit10 patch perl5
-[DEP] sed sysfiles tar texinfo util-linux xfree86
+[DEP] imlib imlib:dev linux26-header:dev make mktemp net-tools orbit10
+[DEP] patch perl5 sed sysfiles tar texinfo util-linux xfree86
+
+[PROVIDES] gtoaster
 

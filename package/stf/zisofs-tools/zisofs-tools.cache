@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1101794603 Tue Nov 30 07:03:23 2004
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110300870 Tue Mar  8 17:54:30 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-zisofs-tools.log
+[LOGS] 5-zisofs-tools.log 9-zisofs-tools.log
 
-[BUILDTIME] 1379 (5)
+[BUILDTIME] 1905 (9)
 [SIZE] 0.07 MB, 8 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] net-tools sed sysfiles tar zlib:dev
+[DEP] net-tools sed sysfiles tar util-linux zlib:dev
+
+[PROVIDES] mkzftree
 

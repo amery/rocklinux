@@ -20,17 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104653969 Sun Jan  2 09:19:29 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110133719 Sun Mar  6 19:28:39 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-lprng.log
+[LOGS] 5-lprng.log 9-lprng.log
 
-[BUILDTIME] 6301 (5)
+[BUILDTIME] 6930 (9)
 [SIZE] 2.84 MB, 60 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep libelf:dev
-[DEP] linux26-header:dev m4 make mktemp ncurses:dev openssl openssl:dev
-[DEP] patch procps sed sysfiles tar util-linux
+[DEP] linux26-header:dev m4 make mktemp ncurses:dev net-tools openssl
+[DEP] openssl:dev patch procps sed sysfiles tar util-linux
+
+[PROVIDES] cancel cancel_lprng checkpc liblpr.a lp lp_lprng lpc lpc_lprng
+[PROVIDES] lpd lpq lpq_lprng lpr lpr_lprng lprm lprm_lprng lprng_certs
+[PROVIDES] lprng_index_certs lpstat lpstat_lprng setprinter_lprng
 

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104655169 Sun Jan  2 09:39:29 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110135382 Sun Mar  6 19:56:22 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-fbset.log
+[LOGS] 5-fbset.log 9-fbset.log
 
-[BUILDTIME] 807 (5)
+[BUILDTIME] 1469 (9)
 [SIZE] 0.08 MB, 11 files
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils findutils flex gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp
-[DEP] patch sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils findutils flex gawk
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev m4 make
+[DEP] mktemp patch sed sysfiles tar
+
+[PROVIDES] fbset modeline2fb
 

@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104757207 Mon Jan  3 14:00:07 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110316365 Tue Mar  8 22:12:45 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-xfsdump.log
+[LOGS] 5-xfsdump.log 9-xfsdump.log
 
-[BUILDTIME] 5710 (5)
+[BUILDTIME] 5934 (9)
 [SIZE] 0.74 MB, 22 files
 
 [DEP] 00-dirtree attr attr:dev bash2 binutils bzip2 coreutils diffutils
@@ -34,4 +34,6 @@
 [DEP] glibc23 glibc23:dev grep gzip libtool linux26-header:dev make
 [DEP] mktemp ncurses:dev net-tools rpm sed sysfiles tar util-linux
 [DEP] xfsprogs xfsprogs:dev
+
+[PROVIDES] xfs_estimate xfs_fsr xfsdq xfsdump xfsinvutil xfsrestore xfsrq
 

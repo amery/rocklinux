@@ -20,19 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104697655 Sun Jan  2 21:27:35 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110185643 Mon Mar  7 09:54:03 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-pan.log
+[LOGS] 5-pan.log 9-pan.log
 
-[BUILDTIME] 7083 (5)
+[BUILDTIME] 7438 (9)
 [SIZE] 2.49 MB, 43 files
 
 [DEP] 00-dirtree atk atk:dev autoconf bash2 binutils bzip2 coreutils
 [DEP] diffutils expat figment findutils firestarter freetype gawk gcc34
 [DEP] gcc34:dev gettext glib glib12 glib:dev glibc23 glibc23:dev gnet
 [DEP] gnet:dev gnome-desktop gnome-libs14 grep gtk+ gtk+:dev libxml2
-[DEP] libxml2:dev linux26-header:dev make mktemp pango pango:dev perl5
-[DEP] pkgconfig sed sysfiles tar texinfo util-linux xfree86 zlib:dev
+[DEP] libxml2:dev linux26-header:dev make mktemp net-tools pango pango:dev
+[DEP] perl5 pkgconfig sed sysfiles tar texinfo util-linux xfree86 zlib:dev
+
+[PROVIDES] pan
 

@@ -20,17 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104748004 Mon Jan  3 11:26:44 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110305246 Tue Mar  8 19:07:26 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ntp.log
+[LOGS] 5-ntp.log 9-ntp.log
 
-[BUILDTIME] 7713 (5)
+[BUILDTIME] 7988 (9)
 [SIZE] 0.53 MB, 18 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libelf libelf:dev
 [DEP] linux26-header:dev m4 make mktemp ncurses:dev net-tools openssl
 [DEP] openssl:dev patch readline readline:dev sed sysfiles tar util-linux
+
+[PROVIDES] monl mvstats ntp-keygen ntp-wait ntpd ntpdate ntpdc ntpq
+[PROVIDES] ntptime ntptrace sntp tickadj
 

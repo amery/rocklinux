@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104641796 Sun Jan  2 05:56:36 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110304103 Tue Mar  8 18:48:23 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 3-procps.log
+[LOGS] 3-procps.log 9-procps.log
 
-[BUILDTIME] 1862 (3)
+[BUILDTIME] 2495 (9)
 [SIZE] 0.57 MB, 42 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
 [DEP] ncurses:dev sed sysfiles tar
+
+[PROVIDES] free kill libproc-3.2.4.so pgrep pkill pmap ps pwdx skill
+[PROVIDES] slabtop snice sysctl tload top uptime vmstat w watch
 

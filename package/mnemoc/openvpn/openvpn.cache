@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104747631 Mon Jan  3 11:20:31 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110304634 Tue Mar  8 18:57:14 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-openvpn.log
+[LOGS] 5-openvpn.log 9-openvpn.log
 
-[BUILDTIME] 4403 (5)
-[SIZE] 0.40 MB, 8 files
+[BUILDTIME] 4784 (9)
+[SIZE] 0.41 MB, 8 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev lzo:dev
 [DEP] make mktemp net-tools openssl openssl:dev pkgconfig sed sysfiles
 [DEP] tar util-linux
+
+[PROVIDES] openvpn
 

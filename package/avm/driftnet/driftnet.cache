@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104749074 Mon Jan  3 11:44:34 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110306648 Tue Mar  8 19:30:48 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-driftnet.log
+[LOGS] 5-driftnet.log 9-driftnet.log
 
-[BUILDTIME] 1242 (5)
+[BUILDTIME] 1457 (9)
 [SIZE] 0.15 MB, 8 files
 
 [DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils findutils gcc34
 [DEP] gcc34:dev glib12 glib12:dev glibc23 glibc23:dev grep gtk+12
 [DEP] gtk+12:dev libjpeg libjpeg:dev libpcap:dev libungif libungif:dev
 [DEP] linux26-header:dev make mktemp sed sysfiles tar xfree86 xfree86:dev
+
+[PROVIDES] driftnet
 

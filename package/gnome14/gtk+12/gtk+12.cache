@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104656281 Sun Jan  2 09:58:01 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110136809 Sun Mar  6 20:20:09 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gtk+12.log
+[LOGS] 5-gtk+12.log 9-gtk+12.log
 
-[BUILDTIME] 13138 (5)
-[SIZE] 1.45 MB, 119 files
+[BUILDTIME] 13722 (9)
+[SIZE] 1.46 MB, 119 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils file findutils gawk gcc34 gcc34:dev gettext glib12
 [DEP] glib12:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] patch perl5 sed sysfiles tar texinfo xfree86 xfree86:dev
+[DEP] net-tools patch perl5 sed sysfiles tar texinfo xfree86 xfree86:dev
+
+[PROVIDES] gtk-config libgdk.a libgdk.so libgtk.a libgtk.so
 

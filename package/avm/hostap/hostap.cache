@@ -20,16 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104792561 Mon Jan  3 23:49:21 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110663952 Sat Mar 12 22:45:52 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-hostap.log
+[LOGS] 5-hostap.log 9-hostap.log
 
-[BUILDTIME] 2715 (5)
-[SIZE] 0.42 MB, 20 files
+[BUILDTIME] 7225 (9)
+[SIZE] 0.59 MB, 24 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26 linux26-header:dev linux26-source
-[DEP] make mktemp patch pcmcia-cs sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26 linux26-header:dev
+[DEP] linux26-source make mktemp openssl openssl:dev patch pcmcia-cs sed
+[DEP] sysfiles tar
+
+[PROVIDES] hostap_crypt_conf hostap_diag hostap_fw_load hostap_io_debug
+[PROVIDES] hostap_rid hostapd hostapd_cli prism2_param prism2_srec
+[PROVIDES] split_combined_hex
 

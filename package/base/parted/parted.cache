@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104642073 Sun Jan  2 06:01:13 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110399323 Wed Mar  9 21:15:23 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 3-parted.log
+[LOGS] 3-parted.log 9-parted.log
 
-[BUILDTIME] 6221 (3)
+[BUILDTIME] 13934 (9)
 [SIZE] 1.08 MB, 35 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils e2fsprogs:dev
 [DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp ncurses:dev readline readline:dev
-[DEP] sed sysfiles tar texinfo util-linux
+[DEP] linux26-header:dev make mktemp ncurses:dev net-tools readline
+[DEP] readline:dev sed sysfiles tar texinfo util-linux
+
+[PROVIDES] libparted.a libparted.so parted partprobe
 

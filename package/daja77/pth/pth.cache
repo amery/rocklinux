@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104653635 Sun Jan  2 09:13:55 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110133318 Sun Mar  6 19:21:58 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-pth.log
+[LOGS] 5-pth.log 9-pth.log
 
-[BUILDTIME] 3814 (5)
+[BUILDTIME] 4480 (9)
 [SIZE] 0.17 MB, 10 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp ncurses patch sed sysfiles tar util-linux
+[DEP] mktemp ncurses net-tools patch sed sysfiles tar util-linux
+
+[PROVIDES] libpth.a pth-config
 

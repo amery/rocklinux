@@ -20,15 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104792631 Mon Jan  3 23:50:31 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110664093 Sat Mar 12 22:48:13 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-laptop-mode-tools.log
+[LOGS] 5-laptop-mode-tools.log 9-laptop-mode-tools.log
 
-[BUILDTIME] 1243 (5)
+[BUILDTIME] 2660 (9)
 [SIZE] 0.05 MB, 19 files
 
 [DEP] 00-dirtree acpid bash2 bzip2 coreutils findutils gawk gcc34 grep
-[DEP] make mktemp sed sysfiles tar
+[DEP] hdparm make mktemp sed sysfiles tar
+
+[PROVIDES] laptop_mode lm-syslog-setup
 

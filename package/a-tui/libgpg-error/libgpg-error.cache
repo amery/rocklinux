@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104653375 Sun Jan  2 09:09:35 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110132999 Sun Mar  6 19:16:39 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libgpg-error.log
+[LOGS] 5-libgpg-error.log 9-libgpg-error.log
 
-[BUILDTIME] 1643 (5)
+[BUILDTIME] 2246 (9)
 [SIZE] 0.07 MB, 14 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev gettext glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp sed sysfiles tar util-linux
+[DEP] make mktemp net-tools sed sysfiles tar util-linux
+
+[PROVIDES] gpg-error gpg-error-config libgpg-error.a libgpg-error.so
 

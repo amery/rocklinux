@@ -20,18 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104656915 Sun Jan  2 10:08:35 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110137606 Sun Mar  6 20:33:26 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-python.log
+[LOGS] 5-python.log 9-python.log
 
-[BUILDTIME] 14877 (5)
-[SIZE] 30.69 MB, 2813 files
+[BUILDTIME] 16366 (9)
+[SIZE] 39.20 MB, 3407 files
 
-[DEP] 00-dirtree bash2 bdb41:dev bdb42 binutils bzip2 bzip2:dev coreutils
-[DEP] diffutils findutils gawk gcc34 gcc34:dev gdbm gdbm:dev glibc23
-[DEP] glibc23:dev grep linux26-header:dev make mktemp ncurses:dev openssl
-[DEP] openssl:dev patch readline readline:dev sed sysfiles tar tcl tcl:dev
-[DEP] tk tk:dev util-linux xfree86 xfree86:dev zlib:dev
+[DEP] 00-dirtree bash2 bdb42 bdb42:dev binutils bluez-libs:dev bzip2
+[DEP] bzip2:dev coreutils diffutils findutils gawk gcc34 gcc34:dev
+[DEP] gdbm gdbm:dev glibc23 glibc23:dev grep linux26-header:dev make
+[DEP] mktemp ncurses:dev net-tools openssl openssl:dev patch readline
+[DEP] readline:dev sed sysfiles tar tcl tcl:dev tk tk:dev util-linux
+[DEP] xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] idle libpython2.4.so pydoc python python2.4 smtpd.py
 

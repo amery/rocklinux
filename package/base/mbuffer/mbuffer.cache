@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104794380 Tue Jan  4 00:19:40 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110894693 Tue Mar 15 14:51:33 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-mbuffer.log
+[LOGS] 5-mbuffer.log 9-mbuffer.log
 
-[BUILDTIME] 2017 (5)
+[BUILDTIME] 2053 (9)
 [SIZE] 0.05 MB, 9 files
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils findutils
-[DEP] gcc34 gcc34:dev gettext glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp net-tools sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils
+[DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
+[DEP] linux26-header:dev make mktemp net-tools sed sysfiles tar util-linux
+
+[PROVIDES] mbuffer
 

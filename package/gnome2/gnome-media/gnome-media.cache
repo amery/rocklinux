@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104733435 Mon Jan  3 07:23:55 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110225218 Mon Mar  7 20:53:38 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnome-media.log
+[LOGS] 5-gnome-media.log 9-gnome-media.log
 
-[BUILDTIME] 12871 (5)
+[BUILDTIME] 13279 (9)
 [SIZE] 5.08 MB, 529 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
@@ -39,7 +39,13 @@
 [DEP] libbonobo libbonobo:dev libbonoboui libbonoboui:dev libglade
 [DEP] libglade:dev libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev
 [DEP] libgnomeui libgnomeui:dev libjpeg libjpeg:dev libxml2 libxml2:dev
-[DEP] linux26-header:dev make mktemp openssl orbit2 orbit2:dev pango
-[DEP] pango:dev perl5 pkgconfig popt popt:dev scrollkeeper sed sysfiles
-[DEP] tar util-linux xfree86 xfree86:dev xscreensaver zapping zlib:dev
+[DEP] linux26-header:dev make mktemp net-tools openssl orbit2 orbit2:dev
+[DEP] pango pango:dev perl5 pkgconfig popt popt:dev scrollkeeper sed
+[DEP] sysfiles tar util-linux xfree86 xfree86:dev xscreensaver zapping
+[DEP] zlib:dev
+
+[PROVIDES] cddb-slave2-properties gnome-audio-profiles-properties gnome-cd
+[PROVIDES] gnome-sound-recorder gnome-volume-control gstreamer-properties
+[PROVIDES] libcddb-slave2.a libcddb-slave2.so libgnome-media-profiles.a
+[PROVIDES] libgnome-media-profiles.so vumeter
 

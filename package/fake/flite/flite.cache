@@ -20,16 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104686828 Sun Jan  2 18:27:08 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110172986 Mon Mar  7 06:23:06 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-flite.log
+[LOGS] 5-flite.log 9-flite.log
 
-[BUILDTIME] 9619 (5)
+[BUILDTIME] 10160 (9)
 [SIZE] 8.21 MB, 8 files
 
 [DEP] 00-dirtree alsa:dev bash2 binutils bzip2 coreutils diffutils
 [DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp patch sed sysfiles tar
+[DEP] linux26-header:dev make mktemp net-tools patch sed sysfiles tar
+
+[PROVIDES] flite flite_time libflite.a libflite_cmu_time_awb.a
+[PROVIDES] libflite_cmu_us_kal.a libflite_cmu_us_kal16.a libflite_cmulex.a
+[PROVIDES] libflite_usenglish.a
 

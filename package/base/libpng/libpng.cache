@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104648615 Sun Jan  2 07:50:15 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110127456 Sun Mar  6 17:44:16 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libpng.log
+[LOGS] 5-libpng.log 9-libpng.log
 
-[BUILDTIME] 2728 (5)
+[BUILDTIME] 3353 (9)
 [SIZE] 0.51 MB, 17 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp sed sysfiles tar util-linux zlib:dev
+[DEP] mktemp net-tools sed sysfiles tar util-linux xfree86 zlib:dev
+
+[PROVIDES] libpng-config libpng.a libpng.so libpng12-config libpng12.a
+[PROVIDES] libpng12.so
 

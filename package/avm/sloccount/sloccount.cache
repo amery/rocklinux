@@ -20,15 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104752363 Mon Jan  3 12:39:23 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110310094 Tue Mar  8 20:28:14 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-sloccount.log
+[LOGS] 5-sloccount.log 9-sloccount.log
 
-[BUILDTIME] 1188 (5)
+[BUILDTIME] 1398 (9)
 [SIZE] 0.18 MB, 47 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep gzip make mktemp sed sysfiles tar
+
+[PROVIDES] ada_count asm_count awk_count break_filelist c_count cobol_count
+[PROVIDES] compute_all compute_sloc_lang count_extensions count_unknown_ext
+[PROVIDES] csh_count exp_count f90_count fortran_count generic_count
+[PROVIDES] get_sloc get_sloc_details haskell_count java_count jsp_count
+[PROVIDES] lex_count lexcount1 lisp_count make_filelists makefile_count
+[PROVIDES] ml_count modula3_count objc_count pascal_count perl_count
+[PROVIDES] php_count print_sum python_count ruby_count sed_count sh_count
+[PROVIDES] show_filecount sloccount sql_count tcl_count
 

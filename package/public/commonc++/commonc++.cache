@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104675030 Sun Jan  2 15:10:30 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110159278 Mon Mar  7 02:34:38 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-commonc++.log
+[LOGS] 5-commonc++.log 9-commonc++.log
 
-[BUILDTIME] 9706 (5)
+[BUILDTIME] 10289 (9)
 [SIZE] 0.53 MB, 18 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libxml2 libxml2:dev
-[DEP] linux26-header:dev make mktemp patch sed sysfiles tar texinfo
-[DEP] util-linux zlib:dev
+[DEP] linux26-header:dev make mktemp net-tools patch sed sysfiles tar
+[DEP] texinfo util-linux zlib:dev
+
+[PROVIDES] ccgnu2-config libccext2.a libccext2.so libccgnu2.a libccgnu2.so
 

@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104797728 Tue Jan  4 01:15:28 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110897977 Tue Mar 15 15:46:17 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gossip.log
+[LOGS] 5-gossip.log 9-gossip.log
 
-[BUILDTIME] 4662 (5)
+[BUILDTIME] 4656 (9)
 [SIZE] 1.37 MB, 80 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
@@ -43,4 +43,6 @@
 [DEP] make mktemp net-tools openssl orbit2 orbit2:dev pango pango:dev
 [DEP] perl5 pkgconfig popt popt:dev sed sysfiles tar util-linux xfree86
 [DEP] xfree86:dev zapping zlib:dev
+
+[PROVIDES] gossip
 

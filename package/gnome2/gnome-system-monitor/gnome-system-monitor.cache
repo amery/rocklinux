@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104726479 Mon Jan  3 05:27:59 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110217145 Mon Mar  7 18:39:05 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnome-system-monitor.log
+[LOGS] 5-gnome-system-monitor.log 9-gnome-system-monitor.log
 
-[BUILDTIME] 2580 (5)
+[BUILDTIME] 2865 (9)
 [SIZE] 1.03 MB, 89 files
 
 [DEP] 00-dirtree alsa atk atk:dev audiofile autoconf bash2 battfink
@@ -38,7 +38,9 @@
 [DEP] libbonoboui libbonoboui:dev libglade libgnome libgnome:dev
 [DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev libgtop
 [DEP] libgtop:dev libjpeg libwnck libwnck:dev libxml2 linux26-header:dev
-[DEP] make mktemp openssl orbit2 pango pango:dev perl5 pkgconfig popt
-[DEP] popt:dev scrollkeeper sed startup-notification sysfiles tar texinfo
-[DEP] util-linux xfree86 xfree86:dev zapping zlib:dev
+[DEP] make mktemp net-tools openssl orbit2 pango pango:dev perl5 pkgconfig
+[DEP] popt popt:dev scrollkeeper sed startup-notification sysfiles tar
+[DEP] texinfo util-linux xfree86 xfree86:dev zapping zlib:dev
+
+[PROVIDES] gnome-system-monitor
 

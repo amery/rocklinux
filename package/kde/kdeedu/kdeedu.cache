@@ -20,20 +20,28 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104715405 Mon Jan  3 02:23:25 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110205134 Mon Mar  7 15:18:54 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-kdeedu.log
+[LOGS] 5-kdeedu.log 9-kdeedu.log
 
-[BUILDTIME] 153389 (5)
+[BUILDTIME] 154669 (9)
 [SIZE] 33.73 MB, 1431 files
 
 [DEP] 00-dirtree arts bash2 binutils boost:dev bzip2 coreutils diffutils
 [DEP] expat fam fam:dev findutils freetype freetype:dev gawk gcc34
-[DEP] gcc34:dev gettext glibc23 glibc23:dev grep kdebase kdegames kdelibs
-[DEP] kdelibs:dev kdelibs:doc libart_lgpl23 libart_lgpl23:dev libjpeg
-[DEP] libjpeg:dev libpng libpng:dev linux26-header:dev make mktemp pcre
-[DEP] pcre:dev perl5 qt qt:dev sed sysfiles tar util-linux vim xfree86
-[DEP] xfree86:dev zlib:dev
+[DEP] gcc34:dev gettext glibc23 glibc23:dev grep kdebase kdegames
+[DEP] kdelibs kdelibs:dev kdelibs:doc libart_lgpl23 libart_lgpl23:dev
+[DEP] libjpeg libjpeg:dev libpng libpng:dev linux26-header:dev make mktemp
+[DEP] net-tools pcre pcre:dev perl5 qt qt:dev sed sysfiles tar util-linux
+[DEP] vim xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] celestrongps fliccd indiserver kalzium kbruch keduca
+[PROVIDES] keducabuilder khangman kig kiten kitengen klatin klettres
+[PROVIDES] kmessedwords kmplot kpercentage kstars ktouch kturtle kverbos
+[PROVIDES] kvoctrain kwordquiz langen2kvtml libextdate.so libkdeeducore.so
+[PROVIDES] libkdeeduplot.so libkdeeduui.so lx200_16 lx200autostar
+[PROVIDES] lx200classic lx200generic lx200gps spotlight2kvtml test_extdate
+[PROVIDES] test_extdatepicker v4ldriver v4lphilips
 

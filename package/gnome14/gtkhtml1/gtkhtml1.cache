@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104734328 Mon Jan  3 07:38:48 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110226413 Mon Mar  7 21:13:33 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gtkhtml1.log
+[LOGS] 5-gtkhtml1.log 9-gtkhtml1.log
 
-[BUILDTIME] 15051 (5)
+[BUILDTIME] 15285 (9)
 [SIZE] 1.63 MB, 120 files
 
 [DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev autoconf bash2 bdb33
@@ -37,6 +37,10 @@
 [DEP] gnome-libs14:dev gnome-print10 gnome-print10:dev grep gtk+12
 [DEP] gtk+12:dev imlib imlib:dev libghttp10 libghttp10:dev libglade10
 [DEP] libglade10:dev libxml libxml:dev linux26-header:dev make mktemp
-[DEP] oaf10 oaf10:dev orbit10 orbit10:dev patch perl5 popt popt:dev sed
-[DEP] soup soup:dev sysfiles tar texinfo xfree86 xfree86:dev zlib:dev
+[DEP] net-tools oaf10 oaf10:dev orbit10 orbit10:dev patch perl5 popt
+[DEP] popt:dev sed soup soup:dev sysfiles tar texinfo xfree86 xfree86:dev
+[DEP] zlib:dev
+
+[PROVIDES] ebrowser gnome-gtkhtml-editor-1.1 gtkhtml-properties-capplet
+[PROVIDES] libgtkhtml-1.1.a libgtkhtml-1.1.so libgtkhtml.so
 

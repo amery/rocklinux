@@ -20,17 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104691791 Sun Jan  2 19:49:51 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110178832 Mon Mar  7 08:00:32 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-sword.log
+[LOGS] 5-sword.log 9-sword.log
 
-[BUILDTIME] 17929 (5)
+[BUILDTIME] 18739 (9)
 [SIZE] 1.19 MB, 53 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils curl curl:dev
 [DEP] diffutils findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp openssl patch pkgconfig sed sysfiles
-[DEP] tar util-linux zlib:dev
+[DEP] linux26-header:dev make mktemp net-tools openssl patch pkgconfig
+[DEP] sed sysfiles tar util-linux zlib:dev
+
+[PROVIDES] addld diatheke imp2ld imp2vs installmgr libsword.a libsword.so
+[PROVIDES] mod2imp mod2osis mod2vpl mod2zmod osis2mod vpl2mod vs2osisref
 

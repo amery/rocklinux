@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104726410 Mon Jan  3 05:26:50 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110217059 Mon Mar  7 18:37:39 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libdockapp.log
+[LOGS] 5-libdockapp.log 9-libdockapp.log
 
-[BUILDTIME] 2072 (5)
+[BUILDTIME] 2352 (9)
 [SIZE] 0.04 MB, 12 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils file findutils gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] m4 make mktemp patch perl5 sed sysfiles tar util-linux xfree86
-[DEP] xfree86:dev
+[DEP] m4 make mktemp net-tools patch perl5 sed sysfiles tar util-linux
+[DEP] xfree86 xfree86:dev
+
+[PROVIDES] libdockapp.a libdockapp.so
 

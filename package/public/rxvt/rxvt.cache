@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104730467 Mon Jan  3 06:34:27 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110221493 Mon Mar  7 19:51:33 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-rxvt.log
+[LOGS] 5-rxvt.log 9-rxvt.log
 
-[BUILDTIME] 2469 (5)
-[SIZE] 0.14 MB, 10 files
+[BUILDTIME] 2742 (9)
+[SIZE] 0.15 MB, 10 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep groff linux26-header:dev make
-[DEP] mktemp sed shadow sysfiles tar xfree86 xfree86:dev
+[DEP] mktemp net-tools sed shadow sysfiles tar xfree86 xfree86:dev
+
+[PROVIDES] rclock rxvt-2.7.9
 

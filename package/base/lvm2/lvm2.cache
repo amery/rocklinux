@@ -20,17 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104641776 Sun Jan  2 05:56:16 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110300781 Tue Mar  8 17:53:01 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 3-lvm2.log
+[LOGS] 3-lvm2.log 9-lvm2.log
 
-[BUILDTIME] 4770 (3)
-[SIZE] 0.46 MB, 89 files
+[BUILDTIME] 5487 (9)
+[SIZE] 0.48 MB, 89 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils device-mapper
 [DEP] device-mapper:dev diffutils findutils gawk gcc34 gcc34:dev glibc23
-[DEP] glibc23:dev grep linux26-header:dev make mktemp patch sed sysfiles
-[DEP] tar util-linux
+[DEP] glibc23:dev grep linux26-header:dev make mktemp net-tools patch
+[DEP] sed sysfiles tar util-linux
+
 

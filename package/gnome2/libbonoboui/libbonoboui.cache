@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104682761 Sun Jan  2 17:19:21 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110167949 Mon Mar  7 04:59:09 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libbonoboui.log
+[LOGS] 5-libbonoboui.log 9-libbonoboui.log
 
-[BUILDTIME] 14507 (5)
+[BUILDTIME] 14995 (9)
 [SIZE] 1.61 MB, 120 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
@@ -36,7 +36,9 @@
 [DEP] gnome-blog gnome-libs14 gnome-vfs gnome-vfs:dev grep gtk+ gtk+:dev
 [DEP] libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev libglade
 [DEP] libglade:dev libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev
-[DEP] libxml2 libxml2:dev linux26-header:dev make mktemp openssl orbit2
-[DEP] orbit2:dev pango pango:dev perl5 pkgconfig popt popt:dev sed sysfiles
-[DEP] tar util-linux xfree86 xfree86:dev zlib:dev
+[DEP] libxml2 libxml2:dev linux26-header:dev make mktemp net-tools openssl
+[DEP] orbit2 orbit2:dev pango pango:dev perl5 pkgconfig popt popt:dev
+[DEP] sed sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] libbonoboui-2.a libbonoboui-2.so test-moniker
 

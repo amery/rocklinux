@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104676657 Sun Jan  2 15:37:37 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110161177 Mon Mar  7 03:06:17 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-acl.log
+[LOGS] 5-acl.log 9-acl.log
 
-[BUILDTIME] 3879 (5)
+[BUILDTIME] 4435 (9)
 [SIZE] 0.25 MB, 57 files
 
 [DEP] 00-dirtree attr attr:dev bash2 binutils bzip2 coreutils diffutils
 [DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
-[DEP] gzip libtool linux26-header:dev make mktemp patch rpm sed sysfiles
-[DEP] tar util-linux
+[DEP] gzip libtool linux26-header:dev make mktemp net-tools patch rpm
+[DEP] sed sysfiles tar util-linux
+
+[PROVIDES] chacl getfacl libacl.a libacl.so setfacl
 

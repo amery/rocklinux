@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104667804 Sun Jan  2 13:10:04 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110150604 Mon Mar  7 00:10:04 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-shadowfs.log
+[LOGS] 5-shadowfs.log 9-shadowfs.log
 
-[BUILDTIME] 898 (5)
-[SIZE] 0.03 MB, 8 files
+[BUILDTIME] 1390 (9)
+[SIZE] 0.04 MB, 8 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp sed
 [DEP] sysfiles tar
+
+[PROVIDES] libcowfs.so liblogfs.so
 

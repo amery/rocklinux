@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104641234 Sun Jan  2 05:47:14 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110125991 Sun Mar  6 17:19:51 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 1-bison.log 3-bison.log
+[LOGS] 1-bison.log 3-bison.log 9-bison.log
 
-[BUILDTIME] 3304 (3)
+[BUILDTIME] 3908 (9)
 [SIZE] 0.80 MB, 39 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils flex
 [DEP] flex:dev gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
-[DEP] linux26-header:dev m4 make mktemp patch sed sysfiles tar texinfo
-[DEP] util-linux
+[DEP] linux26-header:dev m4 make mktemp net-tools patch sed sysfiles tar
+[DEP] texinfo util-linux
+
+[PROVIDES] bison liby.a yacc
 

@@ -20,20 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104706900 Mon Jan  3 00:01:40 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110196004 Mon Mar  7 12:46:44 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-kdeadmin.log
+[LOGS] 5-kdeadmin.log 9-kdeadmin.log
 
-[BUILDTIME] 37268 (5)
-[SIZE] 1.98 MB, 158 files
+[BUILDTIME] 41317 (9)
+[SIZE] 2.17 MB, 161 files
 
 [DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils expat
 [DEP] fam fam:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev
 [DEP] gettext glibc23 glibc23:dev grep kdebase kdelibs kdelibs:dev
 [DEP] kdelibs:doc libart_lgpl23 libart_lgpl23:dev libjpeg libjpeg:dev
-[DEP] libpng libpng:dev linux26-header:dev make mktemp pam pam:dev patch
-[DEP] pcre pcre:dev perl5 qt qt:dev sed shadow shadow:dev sysfiles tar
-[DEP] util-linux xfree86 xfree86:dev zlib:dev
+[DEP] libpng libpng:dev linux26-header:dev make mktemp net-tools pam
+[DEP] pam:dev patch pcre pcre:dev perl5 qt qt:dev sed shadow shadow:dev
+[DEP] sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] kcron kdat kpackage ksysv kuser secpolicy
 

@@ -20,25 +20,34 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104721558 Mon Jan  3 04:05:58 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110211642 Mon Mar  7 17:07:22 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-koffice.log
+[LOGS] 5-koffice.log 9-koffice.log
 
-[BUILDTIME] 360087 (5)
-[SIZE] 29.87 MB, 2798 files
+[BUILDTIME] 361617 (9)
+[SIZE] 29.88 MB, 2798 files
 
 [DEP] 00-dirtree alsa alsa:dev arts arts:dev aspell aspell:dev audiofile
 [DEP] audiofile:dev bash2 binutils bzip2 bzip2:dev coreutils diffutils
 [DEP] esound esound:dev expat fam fam:dev findutils freetype freetype:dev
 [DEP] gawk gcc34 gcc34:dev gettext glib glib:dev glibc23 glibc23:dev
-[DEP] grep imagemagick imagemagick:dev kdebase kdelibs kdelibs:dev
-[DEP] kdelibs:doc lcms lcms:dev libart_lgpl23 libart_lgpl23:dev libgsf
-[DEP] libgsf:dev libjpeg libjpeg:dev libpng libpng:dev libtiff libtiff:dev
-[DEP] libtool libtool:dev libxml2 libxml2:dev libxslt libxslt:dev
-[DEP] linux26-header:dev mad mad:dev make mktemp nas ogg-vorbis
-[DEP] ogg-vorbis:dev patch pcre pcre:dev perl5 pkgconfig python qt
-[DEP] qt:dev sed sysfiles tar tcl tk util-linux vim wv2 wv2:dev xfree86
+[DEP] grep imagemagick imagemagick:dev jack jack:dev kdebase kdelibs
+[DEP] kdelibs:dev kdelibs:doc lcms lcms:dev libart_lgpl23 libart_lgpl23:dev
+[DEP] libgsf libgsf:dev libjpeg libjpeg:dev libpng libpng:dev libtiff
+[DEP] libtiff:dev libtool libtool:dev libxml2 libxml2:dev libxslt
+[DEP] libxslt:dev linux26-header:dev mad mad:dev make mktemp nas net-tools
+[DEP] ogg-vorbis ogg-vorbis:dev patch pcre pcre:dev perl5 pkgconfig python
+[DEP] qt qt:dev sed sysfiles tar tcl tk util-linux vim wv2 wv2:dev xfree86
 [DEP] xfree86:dev zlib:dev
+
+[PROVIDES] karbon kchart kformula kivio koconverter koscript koshell
+[PROVIDES] kprconverter.pl kpresenter kspread kthesaurus kudesigner kugar
+[PROVIDES] kword libkdchart.so libkformula.so libkivioconnectortool.so
+[PROVIDES] libkivioselecttool.so libkiviotexttool.so libkiviozoomtool.so
+[PROVIDES] libkochart.so libkofficecore.so libkofficeui.so
+[PROVIDES] libkopainter.so libkoscript.so libkospell.so libkotext.so
+[PROVIDES] libkowmf.so libkstore.so libkudesignercore.so libkugar.so
+[PROVIDES] libkwmailmerge_interface.so libkwmf.so libkwordexportfilters.so
 

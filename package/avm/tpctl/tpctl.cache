@@ -20,67 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104913630 Wed Jan  5 09:27:10 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110893663 Tue Mar 15 14:34:23 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-tpctl.err
+[LOGS] 5-tpctl.log 9-tpctl.log
 
-[BUILDTIME] 1670 (5)
-[SIZE] 0.23 MB, 13 files
+[BUILDTIME] 3635 (9)
+[SIZE] 0.44 MB, 35 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev linux26-source make
-[DEP] mktemp ncurses:dev sed sysfiles tar
+[DEP] 00-dirtree alsa atk atk:dev audiofile bash2 binutils bzip2
+[DEP] coreutils diffutils esound expat findutils freetype gawk
+[DEP] gcc34 gcc34:dev gconf gconf:dev gettext glib glib:dev glibc23
+[DEP] glibc23:dev gnome-keyring gnome-vfs gnome-vfs:dev grep gtk+
+[DEP] gtk+:dev libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev
+[DEP] libbonoboui libbonoboui:dev libgnome libgnome:dev libgnomecanvas
+[DEP] libgnomecanvas:dev libgnomeui libgnomeui:dev libjpeg libxml2 linux26
+[DEP] linux26-header:dev linux26-source make mktemp module-init-tools
+[DEP] ncurses:dev net-tools openssl orbit2 orbit2:dev pango pango:dev
+[DEP] pkgconfig popt popt:dev sed sysfiles tar util-linux xfree86 zapping
+[DEP] zlib:dev
 
-[5-ERROR] install -m 755 -o 0 -g 0 tpctl/tpctl /usr/bin/tpctl
-[5-ERROR] install -m 755 -o 0 -g 0 ntpctl/ntpctl /usr/bin/ntpctl
-[5-ERROR] if [ -e tpctlir/tpctlir ]; then install -m 755 -o 0 -g 0 tpctlir/tpctlir /usr/sbin/tpctlir ; fi
-[5-ERROR] if [ ! -d /usr/sbin/ ]; then mkdir -p -m 755 /usr/sbin/ ; fi
-[5-ERROR] install -m 755 -o 0 -g 0 apmiser/apmiser /usr/sbin/apmiser
-[5-ERROR] if [ ! -d /usr/share/man/man1 ]; then mkdir -p -m 755 /usr/share/man/man1 ; fi
-[5-ERROR] install -m 644 -o 0 -g 0 man/tpctl.1 /usr/share/man/man1/tpctl.1
-[5-ERROR] install -m 644 -o 0 -g 0 man/ntpctl.1 /usr/share/man/man1/ntpctl.1
-[5-ERROR] Trying to copy the default documentation ...
-[5-ERROR] `AUTHORS' -> `/usr/share/doc/tpctl/AUTHORS'
-[5-ERROR] `COPYING' -> `/usr/share/doc/tpctl/COPYING'
-[5-ERROR] `README' -> `/usr/share/doc/tpctl/README'
-[5-ERROR] `SUPPORTED-MODELS' -> `/usr/share/doc/tpctl/SUPPORTED-MODELS'
-[5-ERROR] `TROUBLESHOOTING' -> `/usr/share/doc/tpctl/TROUBLESHOOTING'
-[5-ERROR] `VGA-MODES' -> `/usr/share/doc/tpctl/VGA-MODES'
-[5-ERROR] `ChangeLog' -> `/usr/share/doc/tpctl/ChangeLog'
-[5-ERROR] Extracting thinkpad_5.6.tar.bz2 (--use-compress-program=bzip2 -xf) ... 
-[5-ERROR] Fixing ownership and permissions ...
-[5-ERROR] Removing CVS and .svn directories ...
-[5-ERROR] Changeing into /ROCK/src.tpctl.1104913598.4843.3053923506/thinkpad-5.6 ...
-[5-ERROR] Creating /usr/<..> if required ...
-[5-ERROR] make -C 2.6/drivers
-[5-ERROR] make[1]: Entering directory `/ROCK/src.tpctl.1104913598.4843.3053923506/thinkpad-5.6/2.6/drivers'
-[5-ERROR] make -C /lib/modules/2.6.9-rock/build SUBDIRS=/ROCK/src.tpctl.1104913598.4843.3053923506/thinkpad-5.6/2.6/drivers modules
-[5-ERROR] make[2]: Entering directory `/usr/src/linux-2.6.9-rock'
-[5-ERROR] Makefile:502: /usr/src/linux-2.6.9-rock/arch/Linux/Makefile: No such file or directory
-[5-ERROR] make[2]: *** No rule to make target `/usr/src/linux-2.6.9-rock/arch/Linux/Makefile'.  Stop.
-[5-ERROR] make[2]: Leaving directory `/usr/src/linux-2.6.9-rock'
-[5-ERROR] make[1]: *** [default] Error 2
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.tpctl.1104913598.4843.3053923506/thinkpad-5.6/2.6/drivers'
-[5-ERROR] make: *** [all] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 15 files for this package.
-[5-ERROR] Applying package split: 40 tpctl:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 tpctl:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 tpctl:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <tpctl> Creating flist file ...
-[5-ERROR] <tpctl> Creating package dependencies file ...
-[5-ERROR] <tpctl> Creating md5sum and cksum files ...
-[5-ERROR] <tpctl> Creating package description ...
-[5-ERROR] <tpctl:doc> Creating flist file ...
-[5-ERROR] <tpctl:doc> Creating package dependencies file ...
-[5-ERROR] <tpctl:doc> Creating md5sum and cksum files ...
-[5-ERROR] <tpctl:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building tpctl=tpctl.
+[PROVIDES] apmiser configure-thinkpad configure-trackpoint ntpctl tpctl
 

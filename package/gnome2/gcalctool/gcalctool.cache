@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104690671 Sun Jan  2 19:31:11 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110177529 Mon Mar  7 07:38:49 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gcalctool.log
+[LOGS] 5-gcalctool.log 9-gcalctool.log
 
-[BUILDTIME] 3785 (5)
+[BUILDTIME] 4252 (9)
 [SIZE] 3.06 MB, 170 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
@@ -38,7 +38,9 @@
 [DEP] libbonobo libbonobo:dev libbonoboui libbonoboui:dev libglade
 [DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev
 [DEP] libgnomeui libgnomeui:dev libjpeg libjpeg:dev libxml2 libxml2:dev
-[DEP] linux26-header:dev make mktemp openssl orbit2 orbit2:dev pango
-[DEP] pango:dev perl5 pkgconfig popt popt:dev scrollkeeper sed sysfiles
-[DEP] tar util-linux xfree86 xfree86:dev zapping zlib:dev
+[DEP] linux26-header:dev make mktemp net-tools openssl orbit2 orbit2:dev
+[DEP] pango pango:dev perl5 pkgconfig popt popt:dev scrollkeeper sed
+[DEP] sysfiles tar util-linux xfree86 xfree86:dev zapping zlib:dev
+
+[PROVIDES] gcalctool gnome-calculator
 

@@ -20,17 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104748614 Mon Jan  3 11:36:54 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110305978 Tue Mar  8 19:19:38 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-irda-utils.log
+[LOGS] 5-irda-utils.log 9-irda-utils.log
 
-[BUILDTIME] 1854 (5)
-[SIZE] 0.14 MB, 27 files
+[BUILDTIME] 2099 (9)
+[SIZE] 0.13 MB, 26 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils gcc34 gcc34:dev glib12 glib12:dev glibc23
 [DEP] glibc23:dev grep gzip linux26-header:dev linux26-source m4 make
 [DEP] mktemp net-tools patch perl5 sed sysfiles sysstat tar texinfo
+
+[PROVIDES] dongle_attach findchip irattach irdadump irdaping irnetd
+[PROVIDES] irpsion5
 

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104752632 Mon Jan  3 12:43:52 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110310474 Tue Mar  8 20:34:34 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-figlet.log
+[LOGS] 5-figlet.log 9-figlet.log
 
-[BUILDTIME] 1221 (5)
+[BUILDTIME] 1432 (9)
 [SIZE] 0.65 MB, 70 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp sed
 [DEP] sysfiles tar
+
+[PROVIDES] chkfont figlet figlist showfigfonts
 

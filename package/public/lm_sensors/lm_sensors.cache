@@ -20,17 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104657489 Sun Jan  2 10:18:09 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110138316 Sun Mar  6 20:45:16 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-lm_sensors.log
+[LOGS] 5-lm_sensors.log 9-lm_sensors.log
 
-[BUILDTIME] 1982 (5)
+[BUILDTIME] 2590 (9)
 [SIZE] 0.66 MB, 35 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 coreutils findutils flex
 [DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
 [DEP] linux26-source m4 make mktemp patch rrdtool rrdtool:dev sed
 [DEP] sysfiles tar
+
+[PROVIDES] decode-dimms.pl decode-edid.pl decode-vaio.pl decode-xeon.pl
+[PROVIDES] fancontrol fancontrol.pl i2cdetect i2cdump i2cset isadump
+[PROVIDES] isaset libsensors.a libsensors.so pwmconfig sensord sensors
+[PROVIDES] sensors-detect
 

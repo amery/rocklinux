@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104769484 Mon Jan  3 17:24:44 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110328995 Wed Mar  9 01:43:15 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-kdevelop.log
+[LOGS] 5-kdevelop.log 9-kdevelop.log
 
-[BUILDTIME] 262193 (5)
+[BUILDTIME] 262539 (9)
 [SIZE] 27.64 MB, 1153 files
 
 [DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils expat
@@ -37,4 +37,12 @@
 [DEP] libpng:dev linux26-header:dev m4 make mktemp net-tools patch pcre
 [DEP] pcre:dev perl5 qt qt:dev sed sysfiles tar util-linux vim xfree86
 [DEP] xfree86:dev zlib:dev
+
+[PROVIDES] kdevassistant kdevdesigner kdevelop kdevelop-htdig
+[PROVIDES] kdevprj2kdevelop libdocchmplugin.so libdocdevhelpplugin.so
+[PROVIDES] libdocdoxygenplugin.so libdockdevtocplugin.so
+[PROVIDES] libkdevcatalog.so libkdevcppparser.so libkdevcustomimporter.so
+[PROVIDES] libkdevelop.so libkdeveloplgpl.so libkdevgenericproject.so
+[PROVIDES] libkdevkdelibsimporter.so libkdevpropertyeditor.so
+[PROVIDES] libkdevqtimporter.so libkinterfacedesigner.so r++
 

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104638215 Sun Jan  2 04:56:55 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110119260 Sun Mar  6 15:27:40 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 2-boehm-gc.log
+[LOGS] 2-boehm-gc.log 9-boehm-gc.log
 
-[BUILDTIME] 3236 (2)
+[BUILDTIME] 3801 (9)
 [SIZE] 0.12 MB, 9 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp patch sed sysfiles tar util-linux
+[DEP] mktemp net-tools patch sed sysfiles tar util-linux
+
+[PROVIDES] libgc.a libgc.so
 

@@ -20,17 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104684894 Sun Jan  2 17:54:54 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110170552 Mon Mar  7 05:42:32 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnome-speech.log
+[LOGS] 5-gnome-speech.log 9-gnome-speech.log
 
-[BUILDTIME] 2925 (5)
+[BUILDTIME] 3426 (9)
 [SIZE] 0.08 MB, 18 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glib glib:dev glibc23 glibc23:dev gnome-blog grep indent
-[DEP] libbonobo libbonobo:dev linux26-header:dev make mktemp orbit2
-[DEP] orbit2:dev pkgconfig popt popt:dev sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
+[DEP] gawk gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev gnome-blog
+[DEP] grep indent libbonobo libbonobo:dev linux26-header:dev make mktemp
+[DEP] net-tools orbit2 orbit2:dev pkgconfig popt popt:dev sed sysfiles
+[DEP] tar util-linux
+
+[PROVIDES] festival-synthesis-driver libgnomespeech.so test-speech
 

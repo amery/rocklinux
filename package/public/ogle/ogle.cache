@@ -20,19 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104699417 Sun Jan  2 21:56:57 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110187597 Mon Mar  7 10:26:37 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ogle.log
+[LOGS] 5-ogle.log 9-ogle.log
 
-[BUILDTIME] 5969 (5)
+[BUILDTIME] 6309 (9)
 [SIZE] 0.68 MB, 58 files
 
 [DEP] 00-dirtree a52dec:dev alsa:dev bash2 binutils bison bzip2 coreutils
 [DEP] diffutils findutils gawk gcc34 gcc34:dev gettext glib12 glib12:dev
 [DEP] glibc23 glibc23:dev grep gtk+12 gtk+12:dev libdvdread libdvdread:dev
 [DEP] libglade10 libglade10:dev libjpeg libjpeg:dev libxml2 libxml2:dev
-[DEP] linux26-header:dev mad mad:dev make mktemp sed sysfiles tar
-[DEP] util-linux xfree86 xfree86:dev zlib:dev
+[DEP] linux26-header:dev mad mad:dev make mktemp net-tools sed sysfiles
+[DEP] tar util-linux xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] ifo_dump ogle
 

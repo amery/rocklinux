@@ -20,18 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104702121 Sun Jan  2 22:42:01 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110190663 Mon Mar  7 11:17:43 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-icewm.log
+[LOGS] 5-icewm.log 9-icewm.log
 
-[BUILDTIME] 8000 (5)
+[BUILDTIME] 8462 (9)
 [SIZE] 2.26 MB, 363 files
 
 [DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils expat
 [DEP] findutils gawk gcc34 gcc34:dev gettext glib12 glibc23 glibc23:dev
 [DEP] grep imlib imlib:dev kdelibs libjpeg libpng libtiff libungif
-[DEP] linux26-header:dev make mktemp procps sed sysfiles tar util-linux
-[DEP] xfree86 xfree86:dev zlib:dev
+[DEP] linux26-header:dev make mktemp net-tools procps sed sysfiles tar
+[DEP] util-linux xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] icehelp icesh icewm icewm-session icewmbg icewmhint icewmtray
 

@@ -20,15 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104640170 Sun Jan  2 05:29:30 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110121766 Sun Mar  6 16:09:26 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 3-libelf.log
+[LOGS] 3-libelf.log 9-libelf.log
 
-[BUILDTIME] 2377 (3)
+[BUILDTIME] 3031 (9)
 [SIZE] 0.09 MB, 10 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep make mktemp sed sysfiles tar
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep make mktemp net-tools sed
+[DEP] sysfiles tar
+
+[PROVIDES] libelf.a libelf.so
 

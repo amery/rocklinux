@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104646346 Sun Jan  2 07:12:26 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110123127 Sun Mar  6 16:32:07 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-file.log
+[LOGS] 5-file.log 9-file.log
 
-[BUILDTIME] 2324 (5)
-[SIZE] 1.33 MB, 18 files
+[BUILDTIME] 2932 (9)
+[SIZE] 1.37 MB, 18 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp sed sysfiles tar util-linux zlib:dev
+[DEP] mktemp net-tools sed sysfiles tar util-linux zlib:dev
+
+[PROVIDES] file libmagic.a libmagic.so
 

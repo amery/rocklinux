@@ -20,18 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104733888 Mon Jan  3 07:31:28 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110225872 Mon Mar  7 21:04:32 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-nvrec.log
+[LOGS] 5-nvrec.log 9-nvrec.log
 
-[BUILDTIME] 2867 (5)
-[SIZE] 0.14 MB, 13 files
+[BUILDTIME] 3240 (9)
+[SIZE] 0.15 MB, 13 files
 
-[DEP] 00-dirtree autoconf automake19 avifile avifile:dev bash2
-[DEP] binutils bzip2 coreutils diffutils expat findutils freetype gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep lame lame:dev libsdl
-[DEP] linux26-header:dev m4 mad mad:dev make mktemp nas perl5 rte rte:dev
-[DEP] sed sysfiles tar util-linux xfree86
+[DEP] 00-dirtree autoconf automake19 avifile avifile:dev bash2 binutils
+[DEP] bzip2 coreutils diffutils expat findutils freetype gcc34 gcc34:dev
+[DEP] glibc23 glibc23:dev grep lame lame:dev libsdl linux26-header:dev
+[DEP] m4 mad mad:dev make mktemp nas net-tools perl5 rte rte:dev sed
+[DEP] sysfiles tar util-linux xfree86
+
+[PROVIDES] divxrec nuppelrec timer
 

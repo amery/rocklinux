@@ -20,18 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104690343 Sun Jan  2 19:25:43 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110177048 Mon Mar  7 07:30:48 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnome-doc-utils.log
+[LOGS] 5-gnome-doc-utils.log 9-gnome-doc-utils.log
 
-[BUILDTIME] 1775 (5)
+[BUILDTIME] 3635 (9)
 [SIZE] 0.65 MB, 101 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils cpan-xml-parser
-[DEP] diffutils docbookx findutils gcc34 gcc34:dev gettext glib glib12
-[DEP] glibc23 glibc23:dev gnome-libs14 gnotepad+ grep libglade libxslt
-[DEP] linux26-header:dev make mktemp numpy pango perl5 pkgconfig python
-[DEP] scrollkeeper sed sysfiles tar util-linux wxpython zapping
+[DEP] 00-dirtree bash2 battfink binutils bzip2 coreutils cpan-xml-parser
+[DEP] diffutils docbookx file-roller findutils gawk gcc34 gcc34:dev
+[DEP] gconf-editor gettext glib glib12 glibc23 glibc23:dev gnome-desktop
+[DEP] gnome-libs14 gnome-panel gnopernicus gnotepad+ gpdf grep libglade
+[DEP] libxslt linux26-header:dev make mktemp net-tools numpy pango perl5
+[DEP] pkgconfig python scrollkeeper sed sysfiles tar util-linux wxpython
+[DEP] zapping
+
+[PROVIDES] xml2po
 

@@ -20,16 +20,27 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104641586 Sun Jan  2 05:53:06 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110231338 Mon Mar  7 22:35:38 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 1-util-linux.log 3-util-linux.log
+[LOGS] 1-util-linux.log 3-util-linux.log 9-util-linux.log
 
-[BUILDTIME] 3953 (3)
-[SIZE] 4.05 MB, 160 files
+[BUILDTIME] 4721 (9)
+[SIZE] 4.09 MB, 164 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev gettext glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp ncurses:dev patch sed sysfiles tar zlib:dev
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils e2fsprogs:dev
+[DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
+[DEP] linux26-header:dev make mktemp ncurses:dev patch sed sysfiles
+[DEP] tar zlib:dev
+
+[PROVIDES] addpart agetty arch blockdev cal cfdisk chkdupexe col colcrt
+[PROVIDES] colrm column ctrlaltdel cytune ddate delpart dmesg elvtune
+[PROVIDES] fdformat fdisk flock freeramdisk fsck.cramfs fsck.minix getopt
+[PROVIDES] hexdump hwclock ipcrm ipcs isosize line logger look losetup
+[PROVIDES] mcookie mkfs mkfs.bfs mkfs.cramfs mkfs.minix mkswap more mount
+[PROVIDES] namei partx pg pivot_root ramsize raw rdev readprofile rename
+[PROVIDES] renice replay rev rootflags script scriptreplay.pl setfdprm
+[PROVIDES] setsid setterm sfdisk swapoff swapon tailf tunelp ul umount
+[PROVIDES] vidmode whereis write
 

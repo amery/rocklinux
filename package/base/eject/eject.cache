@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104738787 Mon Jan  3 08:53:07 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110232110 Mon Mar  7 22:48:30 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-eject.log
+[LOGS] 5-eject.log 9-eject.log
 
-[BUILDTIME] 1780 (5)
-[SIZE] 0.07 MB, 14 files
+[BUILDTIME] 2023 (9)
+[SIZE] 0.08 MB, 14 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils gcc34 gcc34:dev gettext glibc23 glibc23:dev
-[DEP] grep linux26-header:dev m4 make mktemp patch perl5 sed sysfiles
-[DEP] tar util-linux
+[DEP] grep linux26-header:dev m4 make mktemp net-tools patch perl5 sed
+[DEP] sysfiles tar util-linux
+
+[PROVIDES] eject volname
 

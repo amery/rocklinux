@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104655477 Sun Jan  2 09:44:37 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110135823 Sun Mar  6 20:03:43 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libdvdread.log
+[LOGS] 5-libdvdread.log 9-libdvdread.log
 
-[BUILDTIME] 2300 (5)
+[BUILDTIME] 2847 (9)
 [SIZE] 0.10 MB, 9 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] sed sysfiles tar util-linux
+[DEP] net-tools sed sysfiles tar util-linux
+
+[PROVIDES] libdvdread.a libdvdread.so
 

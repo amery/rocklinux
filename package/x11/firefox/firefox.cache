@@ -20,21 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104747236 Mon Jan  3 11:13:56 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110304010 Tue Mar  8 18:46:50 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-firefox.log
+[LOGS] 5-firefox.log 9-firefox.log
 
-[BUILDTIME] 181051 (5)
-[SIZE] 26.24 MB, 1546 files
+[BUILDTIME] 181613 (9)
+[SIZE] 26.37 MB, 1549 files
 
-[DEP] 00-dirtree alsa atk atk:dev bash2 binutils bzip2 coreutils
-[DEP] diffutils expat findutils freetype freetype:dev gawk gcc34
-[DEP] gcc34:dev gconf gconf:dev glib glib:dev glibc23 glibc23:dev
+[DEP] 00-dirtree alsa atk atk:dev bash2 binutils bzip2 control-center
+[DEP] coreutils diffutils expat findutils freetype freetype:dev gawk
+[DEP] gcc34 gcc34:dev gconf gconf:dev glib glib:dev glibc23 glibc23:dev
 [DEP] gnome-vfs gnome-vfs-extras gnome-vfs:dev grep gtk+ gtk+:dev
 [DEP] libbonobo libbonobo:dev libgnome libgnome:dev libidl libidl:dev
-[DEP] linux26-header:dev make mktemp net-tools orbit2 orbit2:dev pango
-[DEP] pango:dev patch perl5 pkgconfig popt sed sysfiles tar xfree86
-[DEP] xfree86:dev zip zlib:dev
+[DEP] linux26-header:dev make mktemp mplayerplug-in nautilus-cd-burner
+[DEP] net-tools orbit2 orbit2:dev pango pango:dev patch perl5 pkgconfig
+[DEP] popt sed sysfiles tar xfree86 xfree86:dev zip zlib:dev
+
+[PROVIDES] defaults firefox firefox-config gtk2xtbin.h gtkxtbin.h
 

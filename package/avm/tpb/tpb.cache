@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104794125 Tue Jan  4 00:15:25 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110893616 Tue Mar 15 14:33:36 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-tpb.log
+[LOGS] 5-tpb.log 9-tpb.log
 
-[BUILDTIME] 2390 (5)
+[BUILDTIME] 2382 (9)
 [SIZE] 0.10 MB, 12 files
 
 [DEP] 00-dirtree autoconf bash2 binutils bison bzip2 coreutils diffutils
-[DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
+[DEP] findutils gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
 [DEP] linux26-header:dev make mktemp net-tools perl5 sed sysfiles tar
 [DEP] texinfo util-linux xfree86 xfree86:dev xosd xosd:dev
+
+[PROVIDES] tpb
 

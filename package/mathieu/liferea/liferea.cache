@@ -20,21 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104754524 Mon Jan  3 13:15:24 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110312579 Tue Mar  8 21:09:39 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-liferea.log
+[LOGS] 5-liferea.log 9-liferea.log
 
-[BUILDTIME] 6003 (5)
-[SIZE] 1.00 MB, 59 files
+[BUILDTIME] 5717 (9)
+[SIZE] 1.00 MB, 60 files
 
-[DEP] 00-dirtree alsa atk atk:dev bash2 binutils bzip2 coreutils
+[DEP] 00-dirtree alsa atk atk:dev autoconf bash2 binutils bzip2 coreutils
 [DEP] diffutils expat findutils freetype gail:dev gawk gcc34 gcc34:dev
 [DEP] gconf gconf:dev gettext glib glib:dev glibc23 glibc23:dev grep
 [DEP] gtk+ gtk+:dev libart_lgpl23:dev libgnomecanvas:dev libgtkhtml
 [DEP] libgtkhtml:dev libxml2 libxml2:dev linux26-header:dev make mktemp
 [DEP] mozilla mozilla:dev net-tools orbit2 orbit2:dev pango pango:dev
-[DEP] pkgconfig popt popt:dev sed sysfiles tar util-linux xfree86
-[DEP] xfree86:dev zapping zlib:dev
+[DEP] perl5 pkgconfig popt popt:dev sed sysfiles tar texinfo util-linux
+[DEP] xfree86 xfree86:dev zapping zlib:dev
+
+[PROVIDES] liferea liferea-bin
 

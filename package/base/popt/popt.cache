@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104653061 Sun Jan  2 09:04:21 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110132599 Sun Mar  6 19:09:59 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-popt.log
+[LOGS] 5-popt.log 9-popt.log
 
-[BUILDTIME] 2294 (5)
+[BUILDTIME] 2895 (9)
 [SIZE] 0.11 MB, 39 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils
 [DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp patch sed sysfiles tar util-linux
+[DEP] linux26-header:dev make mktemp net-tools patch sed sysfiles tar
+[DEP] util-linux
+
+[PROVIDES] libpopt.a libpopt.so
 

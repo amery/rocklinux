@@ -20,16 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104654065 Sun Jan  2 09:21:05 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110133854 Sun Mar  6 19:30:54 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-mtools.log
+[LOGS] 5-mtools.log 9-mtools.log
 
-[BUILDTIME] 3064 (5)
+[BUILDTIME] 3720 (9)
 [SIZE] 0.43 MB, 67 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp patch sed sysfiles tar texinfo util-linux xfree86 xfree86:dev
+[DEP] mktemp net-tools patch sed sysfiles tar texinfo util-linux xfree86
+[DEP] xfree86:dev
+
+[PROVIDES] floppyd floppyd_installtest lz mattrib mbadblocks mcat
+[PROVIDES] mcd mcheck mcomp mcopy mdel mdeltree mdir mdu mformat minfo
+[PROVIDES] mkmanifest mlabel mmd mmount mmove mpartition mrd mren mshowfat
+[PROVIDES] mtools mtoolstest mtype mxtar mzip tgz uz
 

@@ -20,21 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104673789 Sun Jan  2 14:49:49 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110157823 Mon Mar  7 02:10:23 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-engage.log
+[LOGS] 5-engage.log 9-engage.log
 
-[BUILDTIME] 3492 (5)
-[SIZE] 0.07 MB, 12 files
+[BUILDTIME] 5167 (9)
+[SIZE] 0.16 MB, 13 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils directfb directfb:dev ecore ecore:dev edb edb:dev edje
 [DEP] edje:dev eet eet:dev embryo embryo:dev esmart esmart:dev etox
 [DEP] etox:dev evas evas:dev ewl ewl:dev findutils freetype freetype:dev
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep imlib2 imlib2:dev
-[DEP] imlib2_loaders:dev libjpeg libjpeg:dev libpng libpng:dev libtool
-[DEP] libtool:dev linux26-header:dev m4 make mktemp openssl perl5 sed
-[DEP] sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep imlib2 imlib2:dev
+[DEP] libjpeg libjpeg:dev libpng libpng:dev libtool linux26-header:dev
+[DEP] m4 make mktemp net-tools openssl perl5 sed sysfiles tar util-linux
+[DEP] xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] engage
 

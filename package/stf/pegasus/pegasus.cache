@@ -20,16 +20,68 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104779074 Mon Jan  3 20:04:34 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110339799 Wed Mar  9 04:43:19 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-pegasus.log
+[LOGS] 5-pegasus.log 9-pegasus.log
 
-[BUILDTIME] 62264 (5)
+[BUILDTIME] 5625 (9)
 [SIZE] 40.96 MB, 2358 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
 [DEP] patch sed sysfiles tar
+
+[PROVIDES] AssocTable AuthorizationHandler CGIClient CLI
+[PROVIDES] CSProviderTestClient ClassDeclRep Client CompAssoc
+[PROVIDES] CreateFilters CreateHandlers CreateInstance CreateSubscriptions
+[PROVIDES] DeleteInstance DeleteNamespace EnumInstNames EnumInstances
+[PROVIDES] EnumerateClassNames EnumerateInstanceNames EnumerateInstances
+[PROVIDES] GetInstance IPC IPTestClient IndicationProcess InheritanceTree
+[PROVIDES] Inst InvokeMethod InvokeMethod2 NameSpace OSTestClient
+[PROVIDES] ProcessProviderTestClient ProcessorProviderTestClient
+[PROVIDES] QualifierDeclRep Repository Repository2 Socket
+[PROVIDES] TestAbstract TestArray TestAuthenticationManager TestBase64
+[PROVIDES] TestBasicAuthenticationHandler TestCGIQueryString TestClassDecl
+[PROVIDES] TestClient TestCompare TestConfig TestConfigFileHandler
+[PROVIDES] TestConfigManager TestDateTime TestDir TestDisableEnable
+[PROVIDES] TestDisableEnable2 TestDynLoad TestDynamicLibrary TestFileSystem
+[PROVIDES] TestFlavor TestFormatter TestGetInstance TestHashTable
+[PROVIDES] TestInstanceDecl TestL10N TestListener TestLocalAuthFile
+[PROVIDES] TestLocalAuthenticationHandler TestLogger TestMethod TestObject
+[PROVIDES] TestOperationContext TestParamValue TestParameter TestProperty
+[PROVIDES] TestQualifier TestQualifierDecl TestQualifierList TestQueue
+[PROVIDES] TestReference TestResolve TestResponseHandler TestScope
+[PROVIDES] TestStack TestStopwatch TestStrToInstName TestString
+[PROVIDES] TestTimeValue TestToMof TestValidateClass TestValue
+[PROVIDES] TestXmlDump TestXmlParser TestXmlPrint Thread ThreadPool
+[PROVIDES] TracerTest UserManagerTest WebClient benchmarkTest
+[PROVIDES] cimauth cimconfig cimmof cimmofl cimprovider cimserver
+[PROVIDES] cimuser cnv2rootbundle createInstances createRegistration
+[PROVIDES] deleteInstances g11ntest ipinfo libAlertIndicationProvider.so
+[PROVIDES] libCIMxmlIndicationHandler.so libComputerSystemProvider.so
+[PROVIDES] libConfigSettingProvider.so libDisplayConsumer.so
+[PROVIDES] libDynLib.so libIBM_CIMOMStatDataProvider.so
+[PROVIDES] libIPProviderModule.so libNamespaceProvider.so
+[PROVIDES] libOSProvider.so libOperatingSystemProvider.so
+[PROVIDES] libPG_DefaultInstanceProvider.so libPG_TestPropertyTypes.so
+[PROVIDES] libProcessIndicationProvider.so libProcessProvider.so
+[PROVIDES] libProcessorProviderModule.so libProviderRegistrationProvider.so
+[PROVIDES] libRT_IndicationConsumer.so libRT_IndicationProvider.so
+[PROVIDES] libSampleFamilyProvider.so libSampleIndicationProvider.so
+[PROVIDES] libSampleInstanceProvider.so libSampleLocalizedProvider.so
+[PROVIDES] libSampleMethodProvider.so libSimpleDisplayConsumer.so
+[PROVIDES] libTestClientProvider.so libUserAuthProvider.so
+[PROVIDES] libbenchmarkDefinition.so libbenchmarkProviderModule.so
+[PROVIDES] libnsatrap.so libpegCLIClientLib.so libpegauthentication.so
+[PROVIDES] libpegclient.so libpegcliutils.so libpegcommon.so
+[PROVIDES] libpegcompiler.so libpegconfig.so libpegexportclient.so
+[PROVIDES] libpegexportserver.so libpeggetoopt.so libpeghandlerservice.so
+[PROVIDES] libpegindicationservice.so libpeglistener.so
+[PROVIDES] libpegprm.so libpegprovider.so libpegprovidermanager.so
+[PROVIDES] libpegrepository.so libpegserver.so libpeguser.so libpegwql.so
+[PROVIDES] libsendmailIndicationHandler.so libsnmpIndicationHandler.so
+[PROVIDES] lookupInstanceProvider lookupMethodProvider modifyInstances
+[PROVIDES] modifyRegistration osinfo stripcrs target tomof wbemexec
 

@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104645750 Sun Jan  2 07:02:30 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110122408 Sun Mar  6 16:20:08 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-openssl.log
+[LOGS] 5-openssl.log 9-openssl.log
 
-[BUILDTIME] 17103 (5)
+[BUILDTIME] 17896 (9)
 [SIZE] 1.28 MB, 33 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
 [DEP] perl5 sed sysfiles tar
+
+[PROVIDES] c_rehash libcrypto.a libcrypto.so libfips.so libssl.a libssl.so
+[PROVIDES] openssl openssl_fips_fingerprint
 

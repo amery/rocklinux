@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104647800 Sun Jan  2 07:36:40 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110126113 Sun Mar  6 17:21:53 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-sharutils.log
+[LOGS] 5-sharutils.log 9-sharutils.log
 
-[BUILDTIME] 1461 (5)
-[SIZE] 0.24 MB, 21 files
+[BUILDTIME] 2090 (9)
+[SIZE] 0.25 MB, 21 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
 [DEP] gcc34:dev gettext glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp patch sed sysfiles tar
+[DEP] mktemp net-tools patch sed sysfiles tar
+
+[PROVIDES] mail-files mailshar remsync shar unshar uudecode uuencode
 

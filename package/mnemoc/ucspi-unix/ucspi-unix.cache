@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104761821 Mon Jan  3 15:17:01 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110320789 Tue Mar  8 23:26:29 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ucspi-unix.log
+[LOGS] 5-ucspi-unix.log 9-ucspi-unix.log
 
-[BUILDTIME] 1219 (5)
+[BUILDTIME] 1378 (9)
 [SIZE] 0.03 MB, 11 files
 
 [DEP] 00-dirtree bash2 bglibs bglibs:dev binutils bzip2 coreutils findutils
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
 [DEP] mktemp patch sed sysfiles tar
+
+[PROVIDES] unixcat unixclient unixserver
 

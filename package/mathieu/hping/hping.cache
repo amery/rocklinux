@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104754441 Mon Jan  3 13:14:01 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110312493 Tue Mar  8 21:08:13 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-hping.log
+[LOGS] 5-hping.log 9-hping.log
 
-[BUILDTIME] 1544 (5)
-[SIZE] 0.09 MB, 9 files
+[BUILDTIME] 1746 (9)
+[SIZE] 0.07 MB, 8 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp sed
 [DEP] sysfiles tar
+
+[PROVIDES] hping hping2
 

@@ -20,18 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104653694 Sun Jan  2 09:14:54 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110133391 Sun Mar  6 19:23:11 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnupg2.log
+[LOGS] 5-gnupg2.log 9-gnupg2.log
 
-[BUILDTIME] 5318 (5)
-[SIZE] 0.89 MB, 20 files
+[BUILDTIME] 5998 (9)
+[SIZE] 0.87 MB, 20 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils findutils
 [DEP] gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep libassuan
 [DEP] libassuan:dev libgcrypt libgcrypt:dev libgpg-error libgpg-error:dev
-[DEP] libksba libksba:dev linux26-header:dev make mktemp pth pth:dev sed
-[DEP] sysfiles tar texinfo util-linux zlib:dev
+[DEP] libksba libksba:dev libusb:dev linux26-header:dev make mktemp
+[DEP] net-tools openct opensc opensc:dev openssl pcsc-lite pth pth:dev
+[DEP] sed sysfiles tar texinfo util-linux zlib:dev
+
+[PROVIDES] addgnupghome gpg-agent gpgconf gpgsm gpgsm-gencert.sh kbxutil
+[PROVIDES] sc-copykeys scdaemon watchgnupg
 

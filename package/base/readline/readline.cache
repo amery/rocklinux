@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104645534 Sun Jan  2 06:58:54 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110121728 Sun Mar  6 16:08:48 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 1-readline.log 5-readline.log
+[LOGS] 1-readline.log 5-readline.log 9-readline.log
 
-[BUILDTIME] 2883 (5)
+[BUILDTIME] 3530 (9)
 [SIZE] 0.53 MB, 17 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp ncurses:dev sed sysfiles tar texinfo util-linux
+[DEP] mktemp ncurses:dev net-tools sed sysfiles tar texinfo util-linux
+
+[PROVIDES] libhistory.a libhistory.so libreadline.a libreadline.so
 

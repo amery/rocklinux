@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104700133 Sun Jan  2 22:08:53 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110188403 Mon Mar  7 10:40:03 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gamix.log
+[LOGS] 5-gamix.log 9-gamix.log
 
-[BUILDTIME] 2278 (5)
+[BUILDTIME] 2641 (9)
 [SIZE] 0.07 MB, 9 files
 
 [DEP] 00-dirtree alsa alsa:dev bash2 binutils bison bzip2 coreutils
-[DEP] diffutils findutils gcc34 gcc34:dev gettext glib12 glib12:dev glibc23
-[DEP] glibc23:dev grep gtk+12 gtk+12:dev linux26-header:dev make mktemp
-[DEP] pkgconfig sed sysfiles tar util-linux xfree86
+[DEP] diffutils findutils gawk gcc34 gcc34:dev gettext glib12 glib12:dev
+[DEP] glibc23 glibc23:dev grep gtk+12 gtk+12:dev linux26-header:dev make
+[DEP] mktemp net-tools pkgconfig sed sysfiles tar util-linux xfree86
+
+[PROVIDES] gamix
 

@@ -20,17 +20,32 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104668456 Sun Jan  2 13:20:56 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110151325 Mon Mar  7 00:22:05 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-mono.log
+[LOGS] 5-mono.log 9-mono.log
 
-[BUILDTIME] 48086 (5)
-[SIZE] 30.52 MB, 303 files
+[BUILDTIME] 49793 (9)
+[SIZE] 30.67 MB, 305 files
 
-[DEP] 00-dirtree bash2 binutils bison boehm-gc boehm-gc:dev bzip2 coreutils
-[DEP] diffutils findutils gawk gcc34 gcc34:dev glib glib:dev glibc23
-[DEP] glibc23:dev grep linux26-header:dev m4 make mktemp pkgconfig sed
-[DEP] sysfiles tar util-linux valgrind:dev
+[DEP] 00-dirtree bash2 binutils bison boehm-gc boehm-gc:dev bzip2
+[DEP] coreutils diffutils findutils gawk gcc34 gcc34:dev glib glib:dev
+[DEP] glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp net-tools
+[DEP] pkgconfig sed sysfiles tar util-linux valgrind:dev
+
+[PROVIDES] CorCompare.exe EnumCheck.exe GenerateDelegate.exe IFaceDisco.exe
+[PROVIDES] MakeCert.exe al al.exe browsercaps-updater.exe cert2spc
+[PROVIDES] cert2spc.exe certmgr certmgr.exe chktrust chktrust.exe
+[PROVIDES] cilc cilc.exe disco disco.exe gacutil gacutil.exe
+[PROVIDES] genxs genxs.exe gmcs ictool.exe ilasm ilasm.exe jay
+[PROVIDES] libMonoPosixHelper.a libMonoPosixHelper.so libmint.a libmint.so
+[PROVIDES] libmono-profiler-cov.a libmono-profiler-cov.so libmono.a
+[PROVIDES] libmono.so makecert mbas mcs mint mono mono-api-diff.exe
+[PROVIDES] mono-api-info.exe mono-find-provides mono-find-provides.exe
+[PROVIDES] mono-find-requires mono-find-requires.exe monodis monograph
+[PROVIDES] monop monop.exe monoresgen monoresgen.exe monostyle.exe
+[PROVIDES] nunit-console.exe pedump resgen secutil secutil.exe setreg
+[PROVIDES] setreg.exe signcode signcode.exe sn sn.exe soapsuds soapsuds.exe
+[PROVIDES] sqlsharp sqlsharp.exe wsdl wsdl.exe xsd xsd.exe
 

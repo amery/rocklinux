@@ -5,7 +5,7 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/import/cpan/cpan-http-dav.cache
+[COPY] ROCK Linux: rock-src/package/import/cpan/cpan.cache
 [COPY] ROCK Linux is Copyright (C) 1998 - 2005 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
@@ -20,15 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104757374 Mon Jan  3 14:02:54 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110314515 Tue Mar  8 21:41:55 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-cpan-http-dav.log
+[LOGS] 5-cpan-http-dav.log 9-cpan-http-dav.log
 
-[BUILDTIME] 1234 (5)
-[SIZE] 0.21 MB, 17 files
+[BUILDTIME] 1518 (9)
+[SIZE] 0.30 MB, 21 files
 
 [DEP] 00-dirtree bash2 bzip2 coreutils cpan-http-cache-transparent cpan-lwp
 [DEP] cpan-uri findutils gawk gcc34 grep make mktemp perl5 sed sysfiles tar
+
+[PROVIDES] dave
 

@@ -20,18 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104695969 Sun Jan  2 20:59:29 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110183500 Mon Mar  7 09:18:20 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-soup.log
+[LOGS] 5-soup.log 9-soup.log
 
-[BUILDTIME] 4447 (5)
+[BUILDTIME] 4948 (9)
 [SIZE] 0.21 MB, 21 files
 
 [DEP] 00-dirtree apache apache:apr apache:dev autoconf automake19 bash2
 [DEP] binutils bzip2 coreutils diffutils findutils gawk gcc34 gcc34:dev
 [DEP] glib12 glib12:dev glibc23 glibc23:dev gnome-libs14 grep libxml
-[DEP] libxml:dev linux26-header:dev make mktemp openssl openssl:dev patch
-[DEP] perl5 popt popt:dev sed sysfiles tar texinfo util-linux zlib:dev
+[DEP] libxml:dev linux26-header:dev make mktemp net-tools openssl
+[DEP] openssl:dev patch perl5 popt popt:dev sed sysfiles tar texinfo
+[DEP] util-linux zlib:dev
+
+[PROVIDES] libsoup.a libsoup.so libwsdl.a libwsdl.so soup-config soup-httpd
+[PROVIDES] soup-ssl-proxy soup-wsdl
 

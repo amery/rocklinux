@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104789773 Mon Jan  3 23:02:53 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110406683 Wed Mar  9 23:18:03 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-wmi.log
+[LOGS] 5-wmi.log 9-wmi.log
 
-[BUILDTIME] 8502 (5)
+[BUILDTIME] 17555 (9)
 [SIZE] 0.51 MB, 15 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils expat findutils
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
 [DEP] mktemp net-tools pkgconfig sed sysfiles tar util-linux xfree86
 [DEP] xfree86:dev
+
+[PROVIDES] wmi wmiremote
 

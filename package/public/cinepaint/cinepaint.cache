@@ -20,19 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104669278 Sun Jan  2 13:34:38 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110152299 Mon Mar  7 00:38:19 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-cinepaint.log
+[LOGS] 5-cinepaint.log 9-cinepaint.log
 
-[BUILDTIME] 19678 (5)
-[SIZE] 10.28 MB, 412 files
+[BUILDTIME] 20423 (9)
+[SIZE] 10.29 MB, 412 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils file findutils
 [DEP] flex flex:dev gawk gcc34 gcc34:dev glib12 glib12:dev glibc23
 [DEP] glibc23:dev grep gtk+12 gtk+12:dev libjpeg libjpeg:dev libpng
 [DEP] libpng:dev libtiff libtiff:dev linux26-header:dev m4 make mktemp
-[DEP] numpy patch python sed sysfiles tar util-linux xfree86 xfree86:dev
-[DEP] zlib:dev
+[DEP] net-tools numpy patch python sed sysfiles tar util-linux wxpython
+[DEP] xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] cinepaint cinepainttool libcinepaint.a libcinepaint.so
 

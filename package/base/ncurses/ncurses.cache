@@ -20,16 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104640142 Sun Jan  2 05:29:02 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110121683 Sun Mar  6 16:08:03 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 3-ncurses.log
+[LOGS] 3-ncurses.log 9-ncurses.log
 
-[BUILDTIME] 16172 (3)
+[BUILDTIME] 16814 (9)
 [SIZE] 4.92 MB, 2868 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp sed sysfiles tar util-linux
+[DEP] mktemp net-tools sed sysfiles tar util-linux
+
+[PROVIDES] captoinfo clear infocmp infotocap libcurses.a libcurses.so
+[PROVIDES] libform.a libform.so libform_g.a libmenu.a libmenu.so
+[PROVIDES] libmenu_g.a libncurses++.a libncurses.a libncurses.so
+[PROVIDES] libncurses_g.a libpanel.a libpanel.so libpanel_g.a libtermcap.a
+[PROVIDES] libtermcap.so reset tack tic toe tput tset
 

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104647934 Sun Jan  2 07:38:54 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110126318 Sun Mar  6 17:25:18 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-unzip.log
+[LOGS] 5-unzip.log 9-unzip.log
 
-[BUILDTIME] 1505 (5)
+[BUILDTIME] 2093 (9)
 [SIZE] 0.33 MB, 16 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
+[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp sed
+[DEP] sysfiles tar
+
+[PROVIDES] funzip unzip unzipsfx zipgrep zipinfo
 

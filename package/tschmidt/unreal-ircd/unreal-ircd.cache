@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104760470 Mon Jan  3 14:54:30 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110319179 Tue Mar  8 22:59:39 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-unreal-ircd.log
+[LOGS] 5-unreal-ircd.log 9-unreal-ircd.log
 
-[BUILDTIME] 8208 (5)
-[SIZE] 1.46 MB, 164 files
+[BUILDTIME] 9084 (9)
+[SIZE] 1.53 MB, 167 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep gzip
 [DEP] linux26-header:dev m4 make mktemp net-tools patch pkgconfig sed
 [DEP] sysfiles tar util-linux zlib:dev
+
+[PROVIDES] ircd
 

@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104692340 Sun Jan  2 19:59:00 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110179454 Mon Mar  7 08:10:54 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnome-games.log
+[LOGS] 5-gnome-games.log 9-gnome-games.log
 
-[BUILDTIME] 18495 (5)
+[BUILDTIME] 19107 (9)
 [SIZE] 11.90 MB, 715 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
@@ -40,7 +40,11 @@
 [DEP] libglade:dev libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev
 [DEP] libgnomeui libgnomeui:dev libgsf libgsf:dev libjpeg libjpeg:dev
 [DEP] librsvg librsvg:dev libxml2 libxml2:dev linux26-header:dev make
-[DEP] mktemp ncurses:dev openssl orbit2 orbit2:dev pango pango:dev perl5
-[DEP] pkgconfig popt popt:dev readline scrollkeeper sed sysfiles tar
-[DEP] util-linux xfree86 xfree86:dev zapping zlib:dev
+[DEP] mktemp ncurses:dev net-tools openssl orbit2 orbit2:dev pango
+[DEP] pango:dev perl5 pkgconfig popt popt:dev readline scrollkeeper sed
+[DEP] sysfiles tar util-linux xfree86 xfree86:dev zapping zlib:dev
+
+[PROVIDES] blackjack gataxx glines gnect gnibbles gnobots2 gnome-stones
+[PROVIDES] gnometris gnomine gnotravex gnotski gtali iagno mahjongg
+[PROVIDES] same-gnome sol
 

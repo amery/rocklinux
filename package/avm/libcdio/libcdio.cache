@@ -20,17 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104670634 Sun Jan  2 13:57:14 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110153873 Mon Mar  7 01:04:33 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libcdio.log
+[LOGS] 5-libcdio.log 9-libcdio.log
 
-[BUILDTIME] 5094 (5)
+[BUILDTIME] 5656 (9)
 [SIZE] 0.29 MB, 18 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] gawk gcc34 gcc34:dev glib12 glibc23 glibc23:dev gnome-libs14 grep
-[DEP] linux26-header:dev make mktemp pkgconfig popt popt:dev sed sysfiles
-[DEP] tar texinfo util-linux
+[DEP] gcc34 gcc34:dev glib12 glibc23 glibc23:dev gnome-libs14 grep
+[DEP] linux26-header:dev make mktemp net-tools pkgconfig popt popt:dev
+[DEP] sed sysfiles tar texinfo util-linux
+
+[PROVIDES] cd-drive cd-info cd-read iso-info iso-read libcdio.a libcdio.so
+[PROVIDES] libiso9660.a libiso9660.so
 

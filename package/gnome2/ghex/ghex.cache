@@ -20,20 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104770961 Mon Jan  3 17:49:21 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110331514 Wed Mar  9 02:25:14 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ghex.log
+[LOGS] 5-ghex.log 9-ghex.log
 
-[BUILDTIME] 5336 (5)
+[BUILDTIME] 5197 (9)
 [SIZE] 1.47 MB, 136 files
 
 [DEP] 00-dirtree alsa atk atk:dev audiofile autoconf bash2 battfink
 [DEP] binutils bug-buddy bzip2 coreutils cpan-xml-parser diffutils
 [DEP] docbookx eog epiphany esound expat figment file-roller findutils
 [DEP] freetype gail gail:dev gawk gcalctool gcc34 gcc34:dev gconf
-[DEP] gconf:dev gdm gedit gettext glade10 glib glib12 glib:dev
+[DEP] gconf:dev gdm gedit gettext ghex12 glade10 glib glib12 glib:dev
 [DEP] glibc23 glibc23:dev gnome-applets gnome-blog gnome-desktop
 [DEP] gnome-keyring gnome-keyring:dev gnome-netstatus gnome-utils
 [DEP] gnome-vfs gnome-vfs:dev gnomeicu gnotepad+ grep gtk+ gtk+:dev gtkam
@@ -41,8 +41,10 @@
 [DEP] libbonoboui:dev libglade libgnome libgnome:dev libgnomecanvas
 [DEP] libgnomecanvas:dev libgnomeprint libgnomeprint:dev libgnomeprintui
 [DEP] libgnomeprintui:dev libgnomeui libgnomeui:dev libjpeg libxml2
-[DEP] libxml2:dev linux26-header:dev make mktemp net-tools openssl orbit2
-[DEP] orbit2:dev pango pango:dev patch perl5 pkgconfig popt popt:dev
+[DEP] libxml2:dev linux26-header:dev make mgt mktemp net-tools openssl
+[DEP] orbit2 orbit2:dev pango pango:dev patch perl5 pkgconfig popt popt:dev
 [DEP] quick-lounge-applet rhythmbox scrollkeeper sed streamtuner sysfiles
-[DEP] tar texinfo util-linux xfree86 zapping zlib:dev
+[DEP] tar texinfo totem util-linux xfree86 zapping zlib:dev
+
+[PROVIDES] ghex2 libgtkhex.a libgtkhex.so
 

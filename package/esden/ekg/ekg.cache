@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104706936 Mon Jan  3 00:02:16 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110196050 Mon Mar  7 12:47:30 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ekg.log
+[LOGS] 5-ekg.log 9-ekg.log
 
-[BUILDTIME] 2994 (5)
+[BUILDTIME] 3325 (9)
 [SIZE] 0.54 MB, 28 files
 
 [DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils diffutils
 [DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep gsm:dev
-[DEP] linux26-header:dev make mktemp ncurses:dev openssl openssl:dev
-[DEP] pkgconfig sed sysfiles tar util-linux zlib:dev
+[DEP] linux26-header:dev make mktemp ncurses:dev net-tools openssl
+[DEP] openssl:dev pkgconfig sed sysfiles tar util-linux zlib:dev
+
+[PROVIDES] ekg libgadu.a
 

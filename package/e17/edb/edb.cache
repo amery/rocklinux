@@ -20,17 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104671639 Sun Jan  2 14:13:59 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110155042 Mon Mar  7 01:24:02 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-edb.log
+[LOGS] 5-edb.log 9-edb.log
 
-[BUILDTIME] 10896 (5)
-[SIZE] 0.36 MB, 13 files
+[BUILDTIME] 11356 (9)
+[SIZE] 0.37 MB, 13 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils gawk gcc34 gcc34:dev glib12 glib12:dev glibc23
 [DEP] glibc23:dev grep gtk+12 gtk+12:dev imlib2 libtool linux26-header:dev
-[DEP] m4 make mktemp ncurses:dev perl5 sed sysfiles tar util-linux xfree86
+[DEP] m4 make mktemp ncurses:dev net-tools perl5 sed sysfiles tar
+[DEP] util-linux xfree86 zlib:dev
+
+[PROVIDES] edb-config edb_ed edb_gtk_ed edb_vt_ed libedb.a libedb.so
 

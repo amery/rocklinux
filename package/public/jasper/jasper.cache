@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104657315 Sun Jan  2 10:15:15 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110138096 Sun Mar  6 20:41:36 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-jasper.log
+[LOGS] 5-jasper.log 9-jasper.log
 
-[BUILDTIME] 4754 (5)
+[BUILDTIME] 5304 (9)
 [SIZE] 0.73 MB, 10 files
 
 [DEP] 00-dirtree bash2 binutils coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev glut glut:dev grep libjpeg
-[DEP] libjpeg:dev linux26-header:dev make mktemp sed sysfiles unzip
-[DEP] util-linux xfree86 xfree86:dev
+[DEP] libjpeg:dev linux26-header:dev make mktemp net-tools sed sysfiles
+[DEP] unzip util-linux xfree86 xfree86:dev
+
+[PROVIDES] imgcmp imginfo jasper jiv libjasper.a
 

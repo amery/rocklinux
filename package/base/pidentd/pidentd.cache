@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104748633 Mon Jan  3 11:37:13 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110306001 Tue Mar  8 19:20:01 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-pidentd.log
+[LOGS] 5-pidentd.log 9-pidentd.log
 
-[BUILDTIME] 1587 (5)
+[BUILDTIME] 1796 (9)
 [SIZE] 0.05 MB, 9 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep libelf:dev linux26-header:dev
 [DEP] make mktemp net-tools sed sysfiles tar
+
+[PROVIDES] ibench identd
 

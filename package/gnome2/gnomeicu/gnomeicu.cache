@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104754652 Mon Jan  3 13:17:32 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110312740 Tue Mar  8 21:12:20 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnomeicu.log
+[LOGS] 5-gnomeicu.log 9-gnomeicu.log
 
-[BUILDTIME] 6212 (5)
+[BUILDTIME] 6509 (9)
 [SIZE] 3.67 MB, 309 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
@@ -34,12 +34,15 @@
 [DEP] esound:dev expat figment file findutils freetype gawk gcc34 gcc34:dev
 [DEP] gconf gconf:dev gdbm gdbm:dev gettext glib glib12 glib:dev glibc23
 [DEP] glibc23:dev gnome-blog gnome-desktop gnome-games gnome-keyring
-[DEP] gnome-keyring:dev gnome-libs14 gnome-panel gnome-panel:dev gnome-vfs
-[DEP] gnome-vfs:dev grep gtk+ gtk+:dev libart_lgpl23 libart_lgpl23:dev
-[DEP] libbonobo libbonobo:dev libbonoboui libbonoboui:dev libglade
-[DEP] libglade:dev libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev
-[DEP] libgnomeui libgnomeui:dev libjpeg libjpeg:dev libxml2 libxml2:dev
-[DEP] linux26-header:dev make mktemp net-tools openssl orbit2 orbit2:dev
-[DEP] pango pango:dev perl5 pkgconfig popt popt:dev scrollkeeper sed
-[DEP] sysfiles tar util-linux xfree86 xfree86:dev zapping zlib:dev
+[DEP] gnome-keyring:dev gnome-libs14 gnome-panel gnome-panel:dev
+[DEP] gnome-vfs gnome-vfs:dev gnotepad+ grep gtk+ gtk+:dev gtkam
+[DEP] libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui
+[DEP] libbonoboui:dev libglade libglade:dev libgnome libgnome:dev
+[DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev
+[DEP] libjpeg libjpeg:dev libxml2 libxml2:dev linux26-header:dev make
+[DEP] mktemp net-tools openssl orbit2 orbit2:dev pango pango:dev perl5
+[DEP] pkgconfig popt popt:dev scrollkeeper sed sysfiles tar util-linux
+[DEP] xfree86 xfree86:dev zapping zlib:dev
+
+[PROVIDES] gnomeicu gnomeicu-client
 

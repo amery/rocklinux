@@ -20,25 +20,27 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104690440 Sun Jan  2 19:27:20 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110177164 Mon Mar  7 07:32:44 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-eog.log
+[LOGS] 5-eog.log 9-eog.log
 
-[BUILDTIME] 3926 (5)
+[BUILDTIME] 4339 (9)
 [SIZE] 1.66 MB, 164 files
 
 [DEP] 00-dirtree alsa atk atk:dev audiofile autoconf bash2 battfink
 [DEP] binutils bzip2 coreutils cpan-xml-parser diffutils docbookx esound
-[DEP] expat figment findutils freetype gawk gcc34 gcc34:dev gconf
-[DEP] gconf:dev gettext glib glib:dev glibc23 glibc23:dev gnome-blog
-[DEP] gnome-desktop gnome-keyring gnome-vfs gnome-vfs:dev grep gtk+
+[DEP] expat figment findutils freetype gawk gcc34 gcc34:dev gconf gconf:dev
+[DEP] gettext glib glib:dev glibc23 glibc23:dev gnome-blog gnome-desktop
+[DEP] gnome-doc-utils gnome-keyring gnome-vfs gnome-vfs:dev grep gtk+
 [DEP] gtk+:dev libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev
 [DEP] libbonoboui libbonoboui:dev libexif libexif:dev libglade libglade:dev
 [DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeui
 [DEP] libgnomeui:dev libjpeg libjpeg:dev libxml2 linux26-header:dev make
-[DEP] mktemp openssl orbit2 pango pango:dev perl5 pkgconfig popt popt:dev
-[DEP] scrollkeeper sed sysfiles tar texinfo util-linux xfree86 xfree86:dev
-[DEP] zapping zlib:dev
+[DEP] mktemp net-tools openssl orbit2 pango pango:dev perl5 pkgconfig
+[DEP] popt popt:dev scrollkeeper sed sysfiles tar texinfo util-linux
+[DEP] xfree86 xfree86:dev zapping zlib:dev
+
+[PROVIDES] eog
 

@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104735900 Mon Jan  3 08:05:00 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110228272 Mon Mar  7 21:44:32 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-hdf5.log
+[LOGS] 5-hdf5.log 9-hdf5.log
 
-[BUILDTIME] 37882 (5)
+[BUILDTIME] 38364 (9)
 [SIZE] 1.08 MB, 21 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp openssl perl5 sed sysfiles tar util-linux zlib:dev
+[DEP] mktemp net-tools openssl perl5 sed sysfiles tar util-linux zlib:dev
+
+[PROVIDES] gif2h5 h52gif h5c++ h5cc h5debug h5diff h5dump h5import h5ls
+[PROVIDES] h5redeploy h5repart libhdf5.a libhdf5.so libhdf5_cpp.a
 

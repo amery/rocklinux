@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104688530 Sun Jan  2 18:55:30 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110175005 Mon Mar  7 06:56:45 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gconf-editor.log
+[LOGS] 5-gconf-editor.log 9-gconf-editor.log
 
-[BUILDTIME] 3021 (5)
+[BUILDTIME] 3461 (9)
 [SIZE] 0.63 MB, 99 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev autoconf
@@ -38,7 +38,10 @@
 [DEP] libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui
 [DEP] libbonoboui:dev libglade libgnome libgnome:dev libgnomecanvas
 [DEP] libgnomecanvas:dev libgnomeui libgnomeui:dev libjpeg libjpeg:dev
-[DEP] libxml2 libxml2:dev linux26-header:dev make mktemp openssl orbit2
-[DEP] orbit2:dev pango pango:dev perl5 pkgconfig popt popt:dev scrollkeeper
-[DEP] sed sysfiles tar texinfo util-linux xfree86 zapping zlib:dev
+[DEP] libxml2 libxml2:dev linux26-header:dev make mktemp net-tools
+[DEP] openssl orbit2 orbit2:dev pango pango:dev perl5 pkgconfig popt
+[DEP] popt:dev scrollkeeper sed sysfiles tar texinfo util-linux xfree86
+[DEP] zapping zlib:dev
+
+[PROVIDES] gconf-editor
 

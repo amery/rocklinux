@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104653032 Sun Jan  2 09:03:52 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110132558 Sun Mar  6 19:09:18 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-bsd-games.log
+[LOGS] 5-bsd-games.log 9-bsd-games.log
 
-[BUILDTIME] 8614 (5)
+[BUILDTIME] 9632 (9)
 [SIZE] 6.38 MB, 211 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 coreutils findutils flex
 [DEP] flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep gzip
 [DEP] linux26-header:dev m4 make miscfiles mktemp ncurses:dev openssl
 [DEP] openssl:dev patch sed sysfiles tar
+
+[PROVIDES] strfile
 

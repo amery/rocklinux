@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104691901 Sun Jan  2 19:51:41 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110178960 Mon Mar  7 08:02:40 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gdm.log
+[LOGS] 5-gdm.log 9-gdm.log
 
-[BUILDTIME] 9470 (5)
-[SIZE] 7.25 MB, 237 files
+[BUILDTIME] 9878 (9)
+[SIZE] 7.29 MB, 244 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev autoconf
 [DEP] bash2 battfink binutils bzip2 bzip2:dev coreutils cpan-xml-parser
@@ -40,7 +40,12 @@
 [DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeui
 [DEP] libgnomeui:dev libgsf libgsf:dev libjpeg libjpeg:dev librsvg
 [DEP] librsvg:dev libxml2 libxml2:dev linux26-header:dev make mktemp
-[DEP] openssl orbit2 orbit2:dev pam pam:dev pango pango:dev perl5 pkgconfig
-[DEP] popt popt:dev scrollkeeper sed spheres-and-crystals sysfiles tar
-[DEP] tcp_wrappers:dev texinfo util-linux xfree86 xfree86:dev zlib:dev
+[DEP] net-tools openssl orbit2 orbit2:dev pam pam:dev pango pango:dev
+[DEP] perl5 pkgconfig popt popt:dev scrollkeeper sed spheres-and-crystals
+[DEP] sysfiles tar tcp_wrappers:dev texinfo util-linux xfree86 xfree86:dev
+[DEP] zlib:dev
+
+[PROVIDES] gdm gdm-binary gdm-restart gdm-safe-restart gdm-stop gdmXnest
+[PROVIDES] gdmXnestchooser gdmchooser gdmconfig gdmflexiserver gdmgreeter
+[PROVIDES] gdmlogin gdmphotosetup gdmsetup gdmthemetester
 

@@ -20,17 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104713802 Mon Jan  3 01:56:42 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110203458 Mon Mar  7 14:50:58 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-cdrtools.log
+[LOGS] 5-cdrtools.log 9-cdrtools.log
 
-[BUILDTIME] 11275 (5)
+[BUILDTIME] 11661 (9)
 [SIZE] 2.14 MB, 29 files
 
 [DEP] 00-dirtree acl acl:dev alsa:dev attr attr:dev bash2 binutils
 [DEP] bzip2 coreutils diffutils findutils gawk gcc34 gcc34:dev glibc23
 [DEP] glibc23:dev grep linux26-header:dev linux26-source make mktemp
-[DEP] patch sed sysfiles tar util-linux
+[DEP] net-tools patch sed sysfiles tar util-linux
+
+[PROVIDES] cdda2wav cdrecord devdump isodebug isodump isoinfo isovfy
+[PROVIDES] libdeflt.a libedc_ecc.a libfile.a libhfs.a libparanoia.a
+[PROVIDES] librscg.a libscg.a libschily.a libunls.a mkhybrid mkisofs
+[PROVIDES] readcd rscsi scgcheck skel
 

@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104789623 Mon Jan  3 23:00:23 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110406380 Wed Mar  9 23:13:00 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-glademm.log
+[LOGS] 5-glademm.log 9-glademm.log
 
-[BUILDTIME] 20776 (5)
+[BUILDTIME] 42902 (9)
 [SIZE] 1.09 MB, 8 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gawk gcc34 gcc34:dev glib glib12 glibc23 glibc23:dev gnome-libs14
 [DEP] gnomemm12 grep gtk+12 gtkmm12 libsigc++1 linux26-header:dev make
 [DEP] mktemp net-tools pkgconfig sed sysfiles tar util-linux
+
+[PROVIDES] glade-- glademm-embed
 

@@ -20,16 +20,36 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104645337 Sun Jan  2 06:55:37 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110119171 Sun Mar  6 15:26:11 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 0-glibc23.log 1-glibc23.log 5-glibc23.log
+[LOGS] 0-glibc23.log 1-glibc23.log 5-glibc23.log 9-glibc23.log
 
-[BUILDTIME] 136827 (5)
-[SIZE] 44.76 MB, 2506 files
+[BUILDTIME] 138221 (9)
+[SIZE] 44.79 MB, 2508 files
 
-[DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils diffutils
-[DEP] findutils gawk gcc34 gcc34:dev gettext grep gzip linux26-header:dev
-[DEP] m4 make mktemp patch perl5 sed sysfiles tar texinfo util-linux
+[DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils diffutils expat
+[DEP] findutils freetype gawk gcc34 gcc34:dev gettext grep gzip libjpeg
+[DEP] libpng linux26-header:dev m4 make mktemp net-tools patch perl5 sed
+[DEP] sysfiles tar texinfo util-linux xfree86 zlib:dev
+
+[PROVIDES] catchsegv gencat getconf getent glibcbug iconv iconvconfig
+[PROVIDES] ldconfig ldd lddlibc4 libBrokenLocale-2.3.3.so libBrokenLocale.a
+[PROVIDES] libBrokenLocale.so libSegFault.so libanl-2.3.3.so libanl.a
+[PROVIDES] libanl.so libbsd-compat.a libbsd.a libc-2.3.3.so libc.a libc.so
+[PROVIDES] libc_nonshared.a libcrypt-2.3.3.so libcrypt.a libcrypt.so
+[PROVIDES] libdl-2.3.3.so libdl.a libdl.so libg.a libieee.a libm-2.3.3.so
+[PROVIDES] libm.a libm.so libmcheck.a libmemusage.so libnsl-2.3.3.so
+[PROVIDES] libnsl.a libnsl.so libnss_compat-2.3.3.so libnss_compat.so
+[PROVIDES] libnss_dns-2.3.3.so libnss_dns.so libnss_files-2.3.3.so
+[PROVIDES] libnss_files.so libnss_hesiod-2.3.3.so libnss_hesiod.so
+[PROVIDES] libnss_nis-2.3.3.so libnss_nis.so libnss_nisplus-2.3.3.so
+[PROVIDES] libnss_nisplus.so libpcprofile.so libpthread-0.10.so
+[PROVIDES] libpthread.a libpthread.so libpthread_nonshared.a
+[PROVIDES] libresolv-2.3.3.so libresolv.a libresolv.so librpcsvc.a
+[PROVIDES] librt-2.3.3.so librt.a librt.so libthread_db-1.0.so
+[PROVIDES] libthread_db.so libutil-2.3.3.so libutil.a libutil.so locale
+[PROVIDES] localedef memusage memusagestat mtrace nscd nscd_nischeck
+[PROVIDES] pcprofiledump rpcgen rpcinfo sln sprof tzselect xtrace zdump zic
 

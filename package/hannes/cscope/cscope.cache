@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104738266 Mon Jan  3 08:44:26 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110231376 Mon Mar  7 22:36:16 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-cscope.log
+[LOGS] 5-cscope.log 9-cscope.log
 
-[BUILDTIME] 2340 (5)
+[BUILDTIME] 2589 (9)
 [SIZE] 0.37 MB, 9 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils
 [DEP] findutils flex flex:dev gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev m4 make mktemp ncurses:dev pkgconfig sed sysfiles
-[DEP] tar util-linux
+[DEP] linux26-header:dev m4 make mktemp ncurses:dev net-tools pkgconfig
+[DEP] sed sysfiles tar util-linux
+
+[PROVIDES] cscope ocs
 

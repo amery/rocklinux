@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104921581 Wed Jan  5 11:39:41 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110179811 Mon Mar  7 08:16:51 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-nautilus.log
+[LOGS] 5-nautilus.log 9-nautilus.log
 
-[BUILDTIME] 24872 (5)
+[BUILDTIME] 24825 (9)
 [SIZE] 11.16 MB, 199 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev autoconf
@@ -45,4 +45,8 @@
 [DEP] patch perl5 pkgconfig popt popt:dev sed startup-notification
 [DEP] startup-notification:dev sysfiles tar texinfo util-linux xfree86
 [DEP] xfree86:dev xscreensaver zapping zlib:dev
+
+[PROVIDES] libnautilus-adapter.so libnautilus-extension.so
+[PROVIDES] libnautilus-private.so libnautilus.so nautilus
+[PROVIDES] nautilus-file-management-properties
 

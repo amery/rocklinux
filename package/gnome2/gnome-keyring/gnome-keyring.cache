@@ -20,17 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104675096 Sun Jan  2 15:11:36 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110159364 Mon Mar  7 02:36:04 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnome-keyring.log
+[LOGS] 5-gnome-keyring.log 9-gnome-keyring.log
 
-[BUILDTIME] 3036 (5)
+[BUILDTIME] 3536 (9)
 [SIZE] 0.51 MB, 58 files
 
 [DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils diffutils
-[DEP] expat findutils freetype gcc34 gcc34:dev gconf gettext glib glib:dev
-[DEP] glibc23 glibc23:dev grep gtk+ gtk+:dev linux26-header:dev make
-[DEP] mktemp pango pango:dev pkgconfig sed sysfiles tar util-linux xfree86
+[DEP] expat findutils freetype gcc34 gcc34:dev gconf gettext glib
+[DEP] glib:dev glibc23 glibc23:dev grep gtk+ gtk+:dev linux26-header:dev
+[DEP] make mktemp net-tools pango pango:dev pkgconfig sed sysfiles tar
+[DEP] util-linux xfree86
+
+[PROVIDES] gnome-keyring-daemon libgnome-keyring.so
 

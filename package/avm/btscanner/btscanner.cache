@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104791251 Mon Jan  3 23:27:31 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110662314 Sat Mar 12 22:18:34 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-btscanner.log
+[LOGS] 5-btscanner.log 9-btscanner.log
 
-[BUILDTIME] 1998 (5)
-[SIZE] 1.13 MB, 8 files
+[BUILDTIME] 4152 (9)
+[SIZE] 1.14 MB, 8 files
 
 [DEP] 00-dirtree arpwatch autoconf automake19 bash2 binutils bluez-libs
 [DEP] bluez-libs:dev bzip2 coreutils diffutils findutils gcc34 gcc34:dev
 [DEP] gdbm gdbm:dev glibc23 glibc23:dev grep linux26-header:dev m4 make
 [DEP] mktemp ncurses:dev net-tools patch perl5 sed sysfiles tar util-linux
+
+[PROVIDES] btscanner
 

@@ -20,16 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104743877 Mon Jan  3 10:17:57 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110300418 Tue Mar  8 17:46:58 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-reiserfsprogs.log
+[LOGS] 5-reiserfsprogs.log 9-reiserfsprogs.log
 
-[BUILDTIME] 3316 (5)
+[BUILDTIME] 3573 (9)
 [SIZE] 0.77 MB, 18 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils e2fsprogs:dev
 [DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp patch sed sysfiles tar util-linux
+[DEP] linux26-header:dev make mktemp net-tools patch sed sysfiles tar
+[DEP] util-linux
+
+[PROVIDES] debugreiserfs fsck.reiserfs mkfs.reiserfs mkreiserfs reiserfsck
+[PROVIDES] reiserfstune resize_reiserfs
 

@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104762196 Mon Jan  3 15:23:16 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110321188 Tue Mar  8 23:33:08 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-stunnel.log
+[LOGS] 5-stunnel.log 9-stunnel.log
 
-[BUILDTIME] 2508 (5)
+[BUILDTIME] 2689 (9)
 [SIZE] 0.15 MB, 13 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils gcc34 gcc34:dev glibc23 glibc23:dev grep
 [DEP] linux26-header:dev make mktemp net-tools openssl openssl:dev perl5
 [DEP] sed sysfiles tar tcp_wrappers:dev texinfo util-linux
+
+[PROVIDES] libstunnel.so stunnel
 

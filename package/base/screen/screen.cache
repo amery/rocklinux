@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104648366 Sun Jan  2 07:46:06 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110127067 Sun Mar  6 17:37:47 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-screen.log
+[LOGS] 5-screen.log 9-screen.log
 
-[BUILDTIME] 2870 (5)
-[SIZE] 0.88 MB, 35 files
+[BUILDTIME] 3479 (9)
+[SIZE] 0.89 MB, 35 files
 
 [DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils diffutils
 [DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libelf
-[DEP] linux26-header:dev make mktemp ncurses:dev pam pam:dev patch sed
-[DEP] shadow:dev sysfiles tar texinfo util-linux
+[DEP] linux26-header:dev make mktemp ncurses:dev net-tools pam pam:dev
+[DEP] patch sed shadow:dev sysfiles tar texinfo util-linux xfree86
+
+[PROVIDES] screen screen-4.0.2
 

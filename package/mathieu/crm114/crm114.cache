@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104754149 Mon Jan  3 13:09:09 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110312121 Tue Mar  8 21:02:01 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-crm114.log
+[LOGS] 5-crm114.log 9-crm114.log
 
-[BUILDTIME] 4744 (5)
-[SIZE] 1.61 MB, 61 files
+[BUILDTIME] 5341 (9)
+[SIZE] 1.99 MB, 63 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
 [DEP] gcc34:dev gettext glibc23 glibc23:dev grep linux26-header:dev make
 [DEP] mktemp net-tools sed sysfiles tar util-linux
+
+[PROVIDES] agrep crm cssdiff cssmerge cssutil libtre.a libtre.so osbf-util
 

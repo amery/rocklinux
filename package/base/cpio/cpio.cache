@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104647756 Sun Jan  2 07:35:56 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110126041 Sun Mar  6 17:20:41 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-cpio.log
+[LOGS] 5-cpio.log 9-cpio.log
 
-[BUILDTIME] 1216 (5)
+[BUILDTIME] 1800 (9)
 [SIZE] 0.10 MB, 11 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] patch sed sysfiles tar texinfo
+[DEP] net-tools patch sed sysfiles tar texinfo
+
+[PROVIDES] cpio mt
 

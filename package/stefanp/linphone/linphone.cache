@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104774973 Mon Jan  3 18:56:13 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110335875 Wed Mar  9 03:37:55 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-linphone.log
+[LOGS] 5-linphone.log 9-linphone.log
 
-[BUILDTIME] 19349 (5)
+[BUILDTIME] 19567 (9)
 [SIZE] 2.03 MB, 146 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
@@ -45,4 +45,10 @@
 [DEP] ogg-vorbis ogg-vorbis:dev openjade openssl orbit2 orbit2:dev pango
 [DEP] pango:dev patch perl5 pkgconfig popt popt:dev sed sysfiles tar
 [DEP] util-linux xfree86 zlib:dev
+
+[PROVIDES] liblinphone.a liblinphone.so liblinphonegnome.a
+[PROVIDES] liblinphonegnome.so libmediastreamer.a libmediastreamer.so
+[PROVIDES] libmsspeex.a libmsspeex.so libortp.a libortp.so libosipalloc.a
+[PROVIDES] libosipalloc.so libosipua.a libosipua.so libspeex.a libspeex.so
+[PROVIDES] linphone linphonec sipomatic speexdec speexenc
 

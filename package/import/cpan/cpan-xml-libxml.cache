@@ -5,7 +5,7 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/import/cpan/cpan-xml-libxml.cache
+[COPY] ROCK Linux: rock-src/package/import/cpan/cpan.cache
 [COPY] ROCK Linux is Copyright (C) 1998 - 2005 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
@@ -20,68 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104912059 Wed Jan  5 09:00:59 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110159720 Mon Mar  7 02:42:00 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-cpan-xml-libxml.err
+[LOGS] 5-cpan-xml-libxml.log 9-cpan-xml-libxml.log
 
-[BUILDTIME] 2217 (5)
-[SIZE] 0.35 MB, 38 files
+[BUILDTIME] 2391 (9)
+[SIZE] 0.55 MB, 56 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils cpan-xml-libxml-common
 [DEP] cpan-xml-namespacesupport cpan-xml-parser cpan-xml-sax findutils
 [DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libxml2 libxml2:dev
 [DEP] linux26-header:dev make mktemp perl5 sed sysfiles tar zlib:dev
 
-[5-ERROR] cp lib/XML/LibXML/Text.pod blib/lib/XML/LibXML/Text.pod
-[5-ERROR] cp lib/XML/LibXML/Boolean.pm blib/lib/XML/LibXML/Boolean.pm
-[5-ERROR] cp lib/XML/LibXML/PI.pod blib/lib/XML/LibXML/PI.pod
-[5-ERROR] cp lib/XML/LibXML/NodeList.pm blib/lib/XML/LibXML/NodeList.pm
-[5-ERROR] cp lib/XML/LibXML/Comment.pod blib/lib/XML/LibXML/Comment.pod
-[5-ERROR] cp lib/XML/LibXML/Dtd.pod blib/lib/XML/LibXML/Dtd.pod
-[5-ERROR] /usr/bin/perl /usr/lib/perl5/5.8.5/ExtUtils/xsubpp  -typemap /usr/lib/perl5/5.8.5/ExtUtils/typemap -typemap typemap  LibXML.xs > LibXML.xsc && mv LibXML.xsc LibXML.c
-[5-ERROR] gcc-34 -c  -I/usr/include/libxml2 -fno-strict-aliasing -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -O2   -DVERSION=\"1.58\" -DXS_VERSION=\"1.58\" -fpic "-I/usr/lib/perl5/5.8.5/i386-unknown-linux-gnu/CORE"  -DHAVE_UTF8 -DHAVE_BLANK LibXML.c
-[5-ERROR] In file included from LibXML.xs:32:
-[5-ERROR] /usr/include/libxml2/libxml/DOCBparser.h:22:2: warning: #warning "The DOCBparser module has been deprecated in libxml2-2.6.0"
-[5-ERROR] gcc-34 -c  -I/usr/include/libxml2 -fno-strict-aliasing -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -O2   -DVERSION=\"1.58\" -DXS_VERSION=\"1.58\" -fpic "-I/usr/lib/perl5/5.8.5/i386-unknown-linux-gnu/CORE"  -DHAVE_UTF8 -DHAVE_BLANK dom.c
-[5-ERROR] gcc-34 -c  -I/usr/include/libxml2 -fno-strict-aliasing -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -O2   -DVERSION=\"1.58\" -DXS_VERSION=\"1.58\" -fpic "-I/usr/lib/perl5/5.8.5/i386-unknown-linux-gnu/CORE"  -DHAVE_UTF8 -DHAVE_BLANK perl-libxml-mm.c
-[5-ERROR] gcc-34 -c  -I/usr/include/libxml2 -fno-strict-aliasing -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -O2   -DVERSION=\"1.58\" -DXS_VERSION=\"1.58\" -fpic "-I/usr/lib/perl5/5.8.5/i386-unknown-linux-gnu/CORE"  -DHAVE_UTF8 -DHAVE_BLANK perl-libxml-sax.c
-[5-ERROR] gcc-34 -c  -I/usr/include/libxml2 -fno-strict-aliasing -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -O2   -DVERSION=\"1.58\" -DXS_VERSION=\"1.58\" -fpic "-I/usr/lib/perl5/5.8.5/i386-unknown-linux-gnu/CORE"  -DHAVE_UTF8 -DHAVE_BLANK xpath.c
-[5-ERROR] Running Mkbootstrap for XML::LibXML ()
-[5-ERROR] chmod 644 LibXML.bs
-[5-ERROR] rm -f blib/arch/auto/XML/LibXML/LibXML.so
-[5-ERROR] LD_RUN_PATH="/usr/lib" gcc  -shared -L/usr/local/lib LibXML.o dom.o perl-libxml-mm.o perl-libxml-sax.o xpath.o  -o blib/arch/auto/XML/LibXML/LibXML.so   -L/usr/lib -lxml2 -lz -lpthread -lm   
-[5-ERROR] chmod 755 blib/arch/auto/XML/LibXML/LibXML.so
-[5-ERROR] cp LibXML.bs blib/arch/auto/XML/LibXML/LibXML.bs
-[5-ERROR] chmod 644 blib/arch/auto/XML/LibXML/LibXML.bs
-[5-ERROR] Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
-[5-ERROR] Writing /usr/lib/perl5/5.8.5/i386-unknown-linux-gnu/auto/XML/LibXML/.packlist
-[5-ERROR] Appending installation info to /usr/lib/perl5/5.8.5/i386-unknown-linux-gnu/perllocal.pod
-[5-ERROR] Trying to copy the default documentation ...
-[5-ERROR] `LICENSE' -> `/usr/share/doc/cpan-xml-libxml/LICENSE'
-[5-ERROR] `MANIFEST' -> `/usr/share/doc/cpan-xml-libxml/MANIFEST'
-[5-ERROR] `README' -> `/usr/share/doc/cpan-xml-libxml/README'
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 36 files for this package.
-[5-ERROR] Applying package split: 40 cpan-xml-libxml:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 cpan-xml-libxml:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 cpan-xml-libxml:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <cpan-xml-libxml> Creating flist file ...
-[5-ERROR] <cpan-xml-libxml> Creating package dependencies file ...
-[5-ERROR] <cpan-xml-libxml> Creating md5sum and cksum files ...
-[5-ERROR] <cpan-xml-libxml> Creating package description ...
-[5-ERROR] <cpan-xml-libxml:doc> Creating flist file ...
-[5-ERROR] <cpan-xml-libxml:doc> Creating package dependencies file ...
-[5-ERROR] <cpan-xml-libxml:doc> Creating md5sum and cksum files ...
-[5-ERROR] <cpan-xml-libxml:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Found shared files with other packages:
-[5-ERROR] usr/lib/perl5/5.8.5/XML/SAX/ParserDetails.ini: cpan-xml-libxml cpan-xml-sax
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] removed `/var/adm/logs/5-cpan-xml-libxml.log'
-[5-ERROR] Finished building cpan=cpan-xml-libxml.
 

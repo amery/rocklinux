@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104652684 Sun Jan  2 08:58:04 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110132057 Sun Mar  6 19:00:57 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-nano.log
+[LOGS] 5-nano.log 9-nano.log
 
-[BUILDTIME] 1788 (5)
+[BUILDTIME] 2408 (9)
 [SIZE] 0.84 MB, 34 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
 [DEP] gcc34:dev gettext glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp ncurses:dev sed sysfiles tar texinfo util-linux
+[DEP] mktemp ncurses:dev net-tools sed sysfiles tar texinfo util-linux
+
+[PROVIDES] nano
 

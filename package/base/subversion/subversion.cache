@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104761424 Mon Jan  3 15:10:24 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110320292 Tue Mar  8 23:18:12 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-subversion.log
+[LOGS] 5-subversion.log 9-subversion.log
 
-[BUILDTIME] 29450 (5)
-[SIZE] 3.74 MB, 150 files
+[BUILDTIME] 29389 (9)
+[SIZE] 3.85 MB, 158 files
 
 [DEP] 00-dirtree apache apache:apr apache:dev bash2 bdb42 bdb42:dev
 [DEP] binutils bzip2 coreutils diffutils expat expat:dev findutils
@@ -36,4 +36,16 @@
 [DEP] neon:dev net-tools numpy openssl patch perl5 python python:dev
 [DEP] sed ssleay-perlmod swig swig:dev sysfiles tar texinfo util-linux
 [DEP] wxpython zlib:dev
+
+[PROVIDES] libsvn_client-1.a libsvn_client-1.so libsvn_delta-1.a
+[PROVIDES] libsvn_delta-1.so libsvn_diff-1.a libsvn_diff-1.so libsvn_fs-1.a
+[PROVIDES] libsvn_fs-1.so libsvn_fs_base-1.a libsvn_fs_base-1.so
+[PROVIDES] libsvn_fs_fs-1.a libsvn_fs_fs-1.so libsvn_ra-1.a libsvn_ra-1.so
+[PROVIDES] libsvn_ra_dav-1.a libsvn_ra_dav-1.so libsvn_ra_local-1.a
+[PROVIDES] libsvn_ra_local-1.so libsvn_ra_svn-1.a libsvn_ra_svn-1.so
+[PROVIDES] libsvn_repos-1.a libsvn_repos-1.so libsvn_subr-1.a
+[PROVIDES] libsvn_subr-1.so libsvn_swig_perl-1.a libsvn_swig_perl-1.so
+[PROVIDES] libsvn_swig_py-1.a libsvn_swig_py-1.so libsvn_wc-1.a
+[PROVIDES] libsvn_wc-1.so run-fop.sh svn svnadmin svndumpfilter svnlook
+[PROVIDES] svnserve svnversion
 

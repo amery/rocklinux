@@ -20,19 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104695491 Sun Jan  2 20:51:31 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110182947 Mon Mar  7 09:09:07 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-devilspie.log
+[LOGS] 5-devilspie.log 9-devilspie.log
 
-[BUILDTIME] 1771 (5)
+[BUILDTIME] 2135 (9)
 [SIZE] 0.05 MB, 9 files
 
 [DEP] 00-dirtree atk atk:dev autoconf bash2 binutils bzip2 coreutils
 [DEP] cpan-xml-parser diffutils expat findutils freetype gawk gcc34
 [DEP] gcc34:dev gettext glib glib:dev glibc23 glibc23:dev gob grep gtk+
 [DEP] gtk+:dev libglade libwnck libwnck:dev libxml2 linux26-header:dev
-[DEP] make mktemp pango pango:dev perl5 pkgconfig sed startup-notification
-[DEP] sysfiles tar texinfo util-linux xfree86 xfree86:dev zlib:dev
+[DEP] make mktemp net-tools pango pango:dev perl5 pkgconfig sed
+[DEP] startup-notification sysfiles tar texinfo util-linux xfree86
+[DEP] xfree86:dev zlib:dev
+
+[PROVIDES] devilspie
 

@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104725787 Mon Jan  3 05:16:27 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110216241 Mon Mar  7 18:24:01 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnome-applets.log
+[LOGS] 5-gnome-applets.log 9-gnome-applets.log
 
-[BUILDTIME] 27544 (5)
+[BUILDTIME] 28595 (9)
 [SIZE] 23.20 MB, 2002 files
 
 [DEP] 00-dirtree alsa apmd:dev atk atk:dev audiofile bash2 battfink
@@ -38,10 +38,12 @@
 [DEP] gst-plugins gst-plugins:dev gstreamer gstreamer:dev gtk+ gtk+:dev
 [DEP] libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui
 [DEP] libbonoboui:dev libglade libglade:dev libgnome libgnome:dev
-[DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev
-[DEP] libgtop libgtop:dev libjpeg libxklavier libxklavier:dev libxml2
-[DEP] libxml2:dev linux26-header:dev make mktemp openssl orbit2 orbit2:dev
+[DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev libgtop
+[DEP] libgtop:dev libjpeg libxklavier libxklavier:dev libxml2 libxml2:dev
+[DEP] linux26-header:dev make mktemp net-tools openssl orbit2 orbit2:dev
 [DEP] pango pango:dev perl5 pkgconfig popt popt:dev scrollkeeper sed
 [DEP] spheres-and-crystals sysfiles tar util-linux xfree86 xfree86:dev
 [DEP] zapping zlib:dev
+
+[PROVIDES] gkb_xmmap gnome-keyboard-layout gswitchit-plugins-capplet
 

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104726144 Mon Jan  3 05:22:24 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110216747 Mon Mar  7 18:32:27 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-bacterium.log
+[LOGS] 5-bacterium.log 9-bacterium.log
 
-[BUILDTIME] 1341 (5)
+[BUILDTIME] 1628 (9)
 [SIZE] 0.13 MB, 9 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] ncurses:dev patch sed sysfiles tar util-linux
+[DEP] ncurses:dev net-tools patch sed sysfiles tar util-linux
+
+[PROVIDES] BacteriuM bacterium_ffd bacterium_gui
 

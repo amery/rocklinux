@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104794095 Tue Jan  4 00:14:55 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110893587 Tue Mar 15 14:33:07 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-slmodem.log
+[LOGS] 5-slmodem.log 9-slmodem.log
 
-[BUILDTIME] 1779 (5)
-[SIZE] 1.43 MB, 11 files
+[BUILDTIME] 1850 (9)
+[SIZE] 1.43 MB, 10 files
 
-[DEP] 00-dirtree alien bash2 binutils bzip2 coreutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26 linux26-header:dev
+[DEP] 00-dirtree alien bash2 binutils bzip2 coreutils findutils gatos-km
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26 linux26-header:dev
 [DEP] linux26-source make mktemp patch sed sysfiles tar
+
+[PROVIDES] slmodemd
 

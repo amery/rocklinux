@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104641946 Sun Jan  2 05:59:06 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110304815 Tue Mar  8 19:00:15 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 3-udev.log
+[LOGS] 3-udev.log 9-udev.log
 
-[BUILDTIME] 1412 (3)
+[BUILDTIME] 2047 (9)
 [SIZE] 0.19 MB, 33 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep hotplug linux26-header:dev make
 [DEP] mktemp psmisc sed sysfiles tar
+
+[PROVIDES] udev udevd udevinfo udevsend udevstart udevtest
 

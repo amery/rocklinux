@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104689418 Sun Jan  2 19:10:18 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110176049 Mon Mar  7 07:14:09 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gpdf.log
+[LOGS] 5-gpdf.log 9-gpdf.log
 
-[BUILDTIME] 8607 (5)
+[BUILDTIME] 9019 (9)
 [SIZE] 1.99 MB, 113 files
 
 [DEP] 00-dirtree alsa atk atk:dev audiofile bash2 battfink binutils
@@ -38,8 +38,10 @@
 [DEP] libbonoboui libbonoboui:dev libglade libglade:dev libgnome
 [DEP] libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeprint
 [DEP] libgnomeprint:dev libgnomeprintui libgnomeprintui:dev libgnomeui
-[DEP] libgnomeui:dev libjpeg libxml2 libxml2:dev linux26-header:dev make
-[DEP] mktemp openssl orbit2 orbit2:dev pango pango:dev perl5 pkgconfig
-[DEP] popt popt:dev scrollkeeper sed sysfiles tar tetex util-linux xfree86
-[DEP] xfree86:dev zapping zlib:dev
+[DEP] libgnomeui:dev libjpeg libxml2 libxml2:dev linux26-header:dev
+[DEP] make mktemp net-tools openssl orbit2 orbit2:dev pango pango:dev
+[DEP] perl5 pkgconfig popt popt:dev scrollkeeper sed sysfiles tar tetex
+[DEP] util-linux xfree86 xfree86:dev zapping zlib:dev
+
+[PROVIDES] gpdf
 

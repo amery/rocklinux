@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104677198 Sun Jan  2 15:46:38 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110161723 Mon Mar  7 03:15:23 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnome-blog.log
+[LOGS] 5-gnome-blog.log 9-gnome-blog.log
 
-[BUILDTIME] 1423 (5)
-[SIZE] 0.21 MB, 70 files
+[BUILDTIME] 1839 (9)
+[SIZE] 0.22 MB, 70 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils figment findutils
 [DEP] gawk gcc34 gcc34:dev gconf gettext glib glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp numpy pango perl5 pkgconfig pygtk
-[DEP] python sed sysfiles tar util-linux
+[DEP] linux26-header:dev make mktemp net-tools numpy pango perl5 pkgconfig
+[DEP] pygtk python sed sysfiles tar util-linux wxpython
+
+[PROVIDES] blog_applet.py gnome-blog-poster
 

@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104774479 Mon Jan  3 18:47:59 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110335360 Wed Mar  9 03:29:20 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-xsane.log
+[LOGS] 5-xsane.log 9-xsane.log
 
-[BUILDTIME] 4495 (5)
+[BUILDTIME] 4677 (9)
 [SIZE] 4.00 MB, 154 files
 
 [DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils diffutils expat
@@ -36,4 +36,6 @@
 [DEP] libusb:dev linux26-header:dev make mktemp net-tools pango pango:dev
 [DEP] pkgconfig sane-backends sane-backends:dev sed sysfiles tar util-linux
 [DEP] xfree86 zlib:dev
+
+[PROVIDES] xsane
 

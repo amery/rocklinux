@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104666361 Sun Jan  2 12:46:01 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110148803 Sun Mar  6 23:40:03 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libdvdnav.log
+[LOGS] 5-libdvdnav.log 9-libdvdnav.log
 
-[BUILDTIME] 2294 (5)
+[BUILDTIME] 2862 (9)
 [SIZE] 0.13 MB, 11 files
 
 [DEP] 00-dirtree automake17 automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp perl5 sed sysfiles tar util-linux
+[DEP] linux26-header:dev make mktemp net-tools perl5 sed sysfiles tar
+[DEP] util-linux
+
+[PROVIDES] dvdnav-config libdvdnav.so
 

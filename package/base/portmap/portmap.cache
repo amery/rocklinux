@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104748130 Mon Jan  3 11:28:50 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110305450 Tue Mar  8 19:10:50 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-portmap.log
+[LOGS] 5-portmap.log 9-portmap.log
 
-[BUILDTIME] 1120 (5)
-[SIZE] 0.03 MB, 11 files
+[BUILDTIME] 1338 (9)
+[SIZE] 0.04 MB, 11 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp patch
 [DEP] sed sysfiles tar
+
+[PROVIDES] pmap_dump pmap_set portmap
 

@@ -20,23 +20,43 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104752042 Mon Jan  3 12:34:02 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110309685 Tue Mar  8 20:21:25 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-kdemultimedia.log
+[LOGS] 5-kdemultimedia.log 9-kdemultimedia.log
 
-[BUILDTIME] 215511 (5)
-[SIZE] 18.46 MB, 1019 files
+[BUILDTIME] 217511 (9)
+[SIZE] 18.47 MB, 1019 files
 
 [DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev
-[DEP] bash2 binutils bzip2 cdparanoia cdparanoia:dev coreutils diffutils
-[DEP] esound esound:dev expat fam fam:dev findutils flac flac:dev
-[DEP] freetype freetype:dev gawk gcc34 gcc34:dev gettext glib glib:dev
-[DEP] glibc23 glibc23:dev grep kdebase kdebase:doc kdelibs kdelibs:dev
-[DEP] kdelibs:doc kdeutils lame lame:dev libart_lgpl23 libart_lgpl23:dev
-[DEP] libcdaudio libjpeg libpng libpng:dev libsamplerate libsamplerate:dev
-[DEP] linux26-header:dev mad mad:dev make mktemp nas net-tools ogg-vorbis
-[DEP] ogg-vorbis:dev perl5 qt qt:dev sed sysfiles taglib taglib:dev tar
-[DEP] util-linux xfree86 xfree86:dev xine-lib xine-lib:dev zlib:dev
+[DEP] bash2 binutils bzip2 cdparanoia cdparanoia:dev coreutils
+[DEP] diffutils esound esound:dev expat fam fam:dev findutils flac
+[DEP] flac:dev freetype freetype:dev gawk gcc34 gcc34:dev gettext glib
+[DEP] glib:dev glibc23 glibc23:dev grep jack jack:dev kdebase kdebase:doc
+[DEP] kdelibs kdelibs:dev kdelibs:doc kdeutils lame lame:dev libart_lgpl23
+[DEP] libart_lgpl23:dev libcdaudio libjpeg libpng libpng:dev libsamplerate
+[DEP] libsamplerate:dev linux26-header:dev mad mad:dev make mktemp nas
+[DEP] net-tools ogg-vorbis ogg-vorbis:dev perl5 qt qt:dev sed sysfiles
+[DEP] taglib taglib:dev tar util-linux xfree86 xfree86:dev xine-lib
+[DEP] xine-lib:dev zlib:dev
+
+[PROVIDES] artsbuilder artscontrol juk kaboodle kaudiocreator kmid kmix
+[PROVIDES] kmixctrl krec kscd libakode.so libakode_mpc_decoder.so
+[PROVIDES] libakode_mpeg_decoder.so libakode_src_resampler.so
+[PROVIDES] libakode_xiph_decoder.so libarts_akode.so libarts_mpeglib.so
+[PROVIDES] libarts_splay.so libarts_xine.so libartsbuilder.so
+[PROVIDES] libartscontrolapplet.so libartscontrolsupport.so
+[PROVIDES] libartseffects.so libartsgui.so libartsgui_idl.so
+[PROVIDES] libartsgui_kde.so libartsmidi.so libartsmidi_idl.so
+[PROVIDES] libartsmodules.so libartsmodulescommon.so
+[PROVIDES] libartsmoduleseffects.so libartsmodulesmixers.so
+[PROVIDES] libartsmodulessynth.so libaudiocdplugins.so libaudiofilearts.so
+[PROVIDES] libkcddb.so libkdeinit_kmix.so libkdeinit_kmixctrl.so
+[PROVIDES] libkdeinit_krec.so libkdeinit_noatun.so libkmidlib.so
+[PROVIDES] libmpeg-0.3.0.so libmpeg.so libnoatun.so libnoatunarts.so
+[PROVIDES] libnoatuncontrols.so libnoatuntags.so libwinskinvis.so
+[PROVIDES] libyafcore.so libyafxplayer.so midisend mpeglibartsplay noatun
+[PROVIDES] workman2cddb.pl yaf-cdda yaf-mpgplay yaf-splay yaf-tplay
+[PROVIDES] yaf-vorbis yaf-yuv
 

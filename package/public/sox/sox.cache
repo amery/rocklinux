@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104702010 Sun Jan  2 22:40:10 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110190538 Mon Mar  7 11:15:38 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-sox.log
+[LOGS] 5-sox.log 9-sox.log
 
-[BUILDTIME] 3018 (5)
+[BUILDTIME] 3343 (9)
 [SIZE] 0.52 MB, 13 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep lame lame:dev
-[DEP] linux26-header:dev linux26-source mad mad:dev make mktemp ogg-vorbis
+[DEP] 00-dirtree alsa-driver:dev bash2 binutils bzip2 coreutils diffutils
+[DEP] findutils gcc34 gcc34:dev glibc23 glibc23:dev grep lame lame:dev
+[DEP] linux26-header:dev mad mad:dev make mktemp net-tools ogg-vorbis
 [DEP] ogg-vorbis:dev sed sysfiles tar util-linux
+
+[PROVIDES] play rec sox soxmix
 

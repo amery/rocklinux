@@ -20,15 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104651938 Sun Jan  2 08:45:38 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110131028 Sun Mar  6 18:43:48 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-anomy-mailtools.log
+[LOGS] 5-anomy-mailtools.log 9-anomy-mailtools.log
 
-[BUILDTIME] 752 (5)
-[SIZE] 0.55 MB, 88 files
+[BUILDTIME] 1400 (9)
+[SIZE] 0.56 MB, 88 files
 
-[DEP] 00-dirtree bash2 bzip2 coreutils findutils gcc34 grep mktemp patch
-[DEP] sed sysfiles tar
+[DEP] 00-dirtree bash2 bzip2 coreutils findutils gawk gcc34 grep mktemp
+[DEP] patch sed sysfiles tar
+
+[PROVIDES] Anomy check_for_virus sanitizer.pl simplify.pl
 

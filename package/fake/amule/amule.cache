@@ -20,20 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104687820 Sun Jan  2 18:43:40 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110174089 Mon Mar  7 06:41:29 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-amule.log
+[LOGS] 5-amule.log 9-amule.log
 
-[BUILDTIME] 35070 (5)
+[BUILDTIME] 35945 (9)
 [SIZE] 5.06 MB, 51 files
 
 [DEP] 00-dirtree alsa atk atk:dev bash2 bc binutils bison bzip2 coreutils
 [DEP] curl curl:dev diffutils expat findutils freetype gawk gcc34 gcc34:dev
 [DEP] gettext glib glib:dev glibc23 glibc23:dev grep gtk+ gtk+:dev libgd
 [DEP] libgd:dev libjpeg libpng libsdl libtiff linux26-header:dev make
-[DEP] mktemp nas ncurses:dev openssl pango pango:dev pkgconfig readline
-[DEP] readline:dev sed sysfiles tar util-linux wxwidgets wxwidgets:dev
-[DEP] xfree86 xfree86:dev zapping zlib:dev
+[DEP] mktemp nas ncurses:dev net-tools openssl pango pango:dev pkgconfig
+[DEP] readline readline:dev sed sysfiles tar util-linux wxwidgets
+[DEP] wxwidgets:dev xfree86 xfree86:dev zapping zlib:dev
+
+[PROVIDES] alc alcc amule cas ed2k wxcas
 

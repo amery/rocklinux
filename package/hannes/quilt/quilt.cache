@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104738330 Mon Jan  3 08:45:30 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110231463 Mon Mar  7 22:37:43 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-quilt.log
+[LOGS] 5-quilt.log 9-quilt.log
 
-[BUILDTIME] 1748 (5)
+[BUILDTIME] 1992 (9)
 [SIZE] 0.19 MB, 47 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
 [DEP] gcc34:dev gettext glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp patch perl5 sed sysfiles tar util-linux
+[DEP] mktemp net-tools patch perl5 sed sysfiles tar util-linux
+
+[PROVIDES] guards quilt
 

@@ -20,14 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104642082 Sun Jan  2 06:01:22 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110406926 Wed Mar  9 23:22:06 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 3-lvm-wrapper.log
+[LOGS] 3-lvm-wrapper.log 9-lvm-wrapper.log
 
-[BUILDTIME] 665 (3)
+[BUILDTIME] 2621 (9)
 [SIZE] 0.04 MB, 51 files
 
-[DEP] 00-dirtree bash2 coreutils findutils gcc34 grep mktemp sed
+[DEP] 00-dirtree bash2 coreutils findutils gawk gcc34 grep mktemp sed
+
+[PROVIDES] e2fsadm lvchange lvcreate lvdisplay lvextend lvm lvm-wrapper
+[PROVIDES] lvmchange lvmcreate_initrd lvmdiskscan lvmsadc lvmsar lvreduce
+[PROVIDES] lvremove lvrename lvresize lvs lvscan pvchange pvcreate pvdata
+[PROVIDES] pvdisplay pvmove pvremove pvresize pvs pvscan vgcfgbackup
+[PROVIDES] vgcfgrestore vgchange vgck vgconvert vgcreate vgdisplay vgexport
+[PROVIDES] vgextend vgimport vgmerge vgmknodes vgreduce vgremove vgrename
+[PROVIDES] vgs vgscan vgsplit
 

@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104754565 Mon Jan  3 13:16:05 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110312624 Tue Mar  8 21:10:24 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-mpd.log
+[LOGS] 5-mpd.log 9-mpd.log
 
-[BUILDTIME] 3369 (5)
+[BUILDTIME] 3606 (9)
 [SIZE] 0.15 MB, 8 files
 
 [DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev bash2 binutils bzip2
@@ -34,4 +34,6 @@
 [DEP] glibc23 glibc23:dev grep libmikmod libmikmod:dev linux26-header:dev
 [DEP] mad mad:dev make mktemp net-tools ogg-vorbis ogg-vorbis:dev sed
 [DEP] sysfiles tar util-linux zlib:dev
+
+[PROVIDES] mpd
 

@@ -20,21 +20,28 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104737046 Mon Jan  3 08:24:06 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110229492 Mon Mar  7 22:04:52 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-wine.log
+[LOGS] 5-wine.log 9-wine.log
 
-[BUILDTIME] 83611 (5)
-[SIZE] 33.57 MB, 423 files
+[BUILDTIME] 85049 (9)
+[SIZE] 33.88 MB, 423 files
 
 [DEP] 00-dirtree alsa alsa:dev arts arts:dev bash2 binutils bison bzip2
 [DEP] coreutils cups cups:dev diffutils findutils flex flex:dev freetype
 [DEP] freetype:dev gawk gcc34 gcc34:dev glib glibc23 glibc23:dev glut
 [DEP] grep isdn4k-utils isdn4k-utils:dev jack:dev lcms lcms:dev libexif
 [DEP] libgphoto libjpeg libjpeg:dev libungif libungif:dev libusb libusb:dev
-[DEP] linux26-header:dev m4 make mktemp nas nas:dev ncurses:dev openssl
-[DEP] openssl:dev patch sane-backends sane-backends:dev sed sysfiles tar
-[DEP] util-linux valgrind:dev xfree86 xfree86:dev zlib:dev
+[DEP] linux26-header:dev m4 make mktemp nas nas:dev ncurses:dev net-tools
+[DEP] openssl openssl:dev patch sane-backends sane-backends:dev sed
+[DEP] sysfiles tar util-linux valgrind:dev xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] function_grep.pl libwine.so libwine_unicode.so notepad progman
+[PROVIDES] regedit regsvr32 uninstaller wcmd widl wine wine-kthread
+[PROVIDES] wine-preloader wine-pthread wineboot winebrowser winebuild
+[PROVIDES] winecfg wineconsole winecpp winedbg winedump winefile
+[PROVIDES] wineg++ winegcc winelauncher winemaker winemine winepath
+[PROVIDES] wineprefixcreate wineserver wineshelllink winhelp wmc wrc
 

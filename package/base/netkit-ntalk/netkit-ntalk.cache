@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104747809 Mon Jan  3 11:23:29 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110305013 Tue Mar  8 19:03:33 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-netkit-ntalk.log
+[LOGS] 5-netkit-ntalk.log 9-netkit-ntalk.log
 
-[BUILDTIME] 1316 (5)
+[BUILDTIME] 1532 (9)
 [SIZE] 0.13 MB, 14 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp ncurses:dev
 [DEP] patch sed sysfiles tar
+
+[PROVIDES] in.ntalkd in.talkd talk
 

@@ -20,17 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104686993 Sun Jan  2 18:29:53 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110173182 Mon Mar  7 06:26:22 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-musicbrainz-trm.log
+[LOGS] 5-musicbrainz-trm.log 9-musicbrainz-trm.log
 
-[BUILDTIME] 1361 (5)
+[BUILDTIME] 1768 (9)
 [SIZE] 0.08 MB, 7 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils expat
-[DEP] findutils gcc34 gcc34:dev glibc23 glibc23:dev grep id3lib id3lib:dev
-[DEP] libmusicbrainz libmusicbrainz:dev linux26-header:dev mad mad:dev make
-[DEP] mktemp ogg-vorbis ogg-vorbis:dev sed sysfiles tar util-linux zlib:dev
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils expat findutils
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep id3lib id3lib:dev
+[DEP] libmusicbrainz libmusicbrainz:dev linux26-header:dev mad mad:dev
+[DEP] make mktemp net-tools ogg-vorbis ogg-vorbis:dev sed sysfiles tar
+[DEP] util-linux zlib:dev
+
+[PROVIDES] trm
 

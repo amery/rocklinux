@@ -20,21 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104673144 Sun Jan  2 14:39:04 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110157007 Mon Mar  7 01:56:47 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-elicit.log
+[LOGS] 5-elicit.log 9-elicit.log
 
-[BUILDTIME] 4374 (5)
-[SIZE] 0.28 MB, 11 files
+[BUILDTIME] 5020 (9)
+[SIZE] 0.25 MB, 11 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils directfb directfb:dev ecore ecore:dev edb edb:dev edje
 [DEP] edje:dev eet eet:dev embryo embryo:dev esmart esmart:dev evas
 [DEP] evas:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep imlib2 imlib2:dev imlib2_loaders:dev libjpeg
-[DEP] libjpeg:dev libpng libpng:dev libtool libtool:dev linux26-header:dev
-[DEP] m4 make mktemp openssl perl5 sed sysfiles tar util-linux xfree86
+[DEP] glibc23 glibc23:dev grep imlib2 imlib2:dev libjpeg libjpeg:dev
+[DEP] libpng libpng:dev libtool libtool:dev linux26-header:dev m4 make
+[DEP] mktemp net-tools openssl perl5 sed sysfiles tar util-linux xfree86
 [DEP] xfree86:dev zlib:dev
+
+[PROVIDES] elicit
 

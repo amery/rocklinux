@@ -20,62 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104912697 Wed Jan  5 09:11:37 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110300823 Tue Mar  8 17:53:43 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-softdog.err
+[LOGS] 5-softdog.log 9-softdog.log
 
-[BUILDTIME] 1215 (5)
+[BUILDTIME] 1299 (9)
+[SIZE] 0.03 MB, 10 files
 
-[5-ERROR] /usr/include/linux/byteorder/little_endian.h: At top level:
-[5-ERROR] /usr/include/linux/byteorder/little_endian.h:94: error: parse error before '*' token
-[5-ERROR] /usr/include/linux/byteorder/little_endian.h: In function `__be32_to_cpup':
-[5-ERROR] /usr/include/linux/byteorder/little_endian.h:96: error: `p' undeclared (first use in this function)
-[5-ERROR] /usr/include/linux/byteorder/little_endian.h: At top level:
-[5-ERROR] /usr/include/linux/byteorder/little_endian.h:98: error: parse error before "__cpu_to_be16p"
-[5-ERROR] /usr/include/linux/byteorder/little_endian.h: In function `__cpu_to_be16p':
-[5-ERROR] /usr/include/linux/byteorder/little_endian.h:100: error: `__be16' undeclared (first use in this function)
-[5-ERROR] /usr/include/linux/byteorder/little_endian.h:100: error: parse error before "__swab16p"
-[5-ERROR] /usr/include/linux/byteorder/little_endian.h: At top level:
-[5-ERROR] /usr/include/linux/byteorder/little_endian.h:102: error: parse error before '*' token
-[5-ERROR] /usr/include/linux/byteorder/little_endian.h: In function `__be16_to_cpup':
-[5-ERROR] /usr/include/linux/byteorder/little_endian.h:104: error: `p' undeclared (first use in this function)
-[5-ERROR] In file included from /usr/include/linux/byteorder/little_endian.h:119,
-[5-ERROR]                  from /usr/include/asm/byteorder.h:57,
-[5-ERROR]                  from /usr/include/linux/kernel.h:16,
-[5-ERROR]                  from /usr/include/asm/system.h:5,
-[5-ERROR]                  from /usr/include/asm/processor.h:18,
-[5-ERROR]                  from /usr/include/linux/prefetch.h:14,
-[5-ERROR]                  from /usr/include/linux/list.h:7,
-[5-ERROR]                  from softdog.c:33:
-[5-ERROR] /usr/include/linux/byteorder/generic.h: At top level:
-[5-ERROR] /usr/include/linux/byteorder/generic.h:151: error: parse error before "htonl"
-[5-ERROR] /usr/include/linux/byteorder/generic.h:153: error: parse error before "htons"
-[5-ERROR] In file included from /usr/include/linux/fs.h:19,
-[5-ERROR]                  from softdog.c:35:
-[5-ERROR] /usr/include/linux/prio_tree.h:22: error: parse error before "pgoff_t"
-[5-ERROR] /usr/include/linux/prio_tree.h:27: error: parse error before "pgoff_t"
-[5-ERROR] /usr/include/linux/prio_tree.h: In function `prio_tree_iter_init':
-[5-ERROR] /usr/include/linux/prio_tree.h:29: error: `iter' undeclared (first use in this function)
-[5-ERROR] /usr/include/linux/prio_tree.h:29: error: `root' undeclared (first use in this function)
-[5-ERROR] /usr/include/linux/prio_tree.h:30: error: `r_index' undeclared (first use in this function)
-[5-ERROR] softdog.c: In function `proc_misc_check_device':
-[5-ERROR] softdog.c:288: warning: implicit declaration of function `strcmp'
-[5-ERROR] make: *** [softdog.o] Error 1
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 softdog:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 softdog:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 softdog:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <softdog:doc> Creating flist file ...
-[5-ERROR] <softdog:doc> Creating package dependencies file ...
-[5-ERROR] <softdog:doc> Creating md5sum and cksum files ...
-[5-ERROR] <softdog:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building softdog=softdog.
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
+[DEP] glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp patch
+[DEP] sed sysfiles tar
+
+[PROVIDES] softdog
 

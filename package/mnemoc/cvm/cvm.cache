@@ -20,16 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104761789 Mon Jan  3 15:16:29 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110320748 Tue Mar  8 23:25:48 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-cvm.log
+[LOGS] 5-cvm.log 9-cvm.log
 
-[BUILDTIME] 1642 (5)
+[BUILDTIME] 1807 (9)
 [SIZE] 0.15 MB, 15 files
 
 [DEP] 00-dirtree bash2 bglibs bglibs:dev binutils bzip2 coreutils findutils
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
 [DEP] mktemp sed shadow:dev sysfiles tar
+
+[PROVIDES] cvm-benchclient cvm-checkpassword cvm-pwfile cvm-qmail
+[PROVIDES] cvm-testclient cvm-unix cvm-vmailmgr cvm-vmailmgr-local
+[PROVIDES] cvm-vmailmgr-udp libcvm-client.a libcvm-command.a libcvm-local.a
+[PROVIDES] libcvm-module.a libcvm-sasl.a libcvm-udp.a
 

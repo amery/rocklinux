@@ -20,18 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104786866 Mon Jan  3 22:14:26 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110403850 Wed Mar  9 22:30:50 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gcombust.log
+[LOGS] 5-gcombust.log 9-gcombust.log
 
-[BUILDTIME] 2980 (5)
+[BUILDTIME] 6199 (9)
 [SIZE] 0.73 MB, 27 files
 
 [DEP] 00-dirtree alsa autoconf bash2 binutils bison bzip2 coreutils
-[DEP] diffutils findutils gcc34 gcc34:dev gettext glib12 glib12:dev glibc23
-[DEP] glibc23:dev gnome-libs14 grep gtk+12 gtk+12:dev linux26-header:dev
-[DEP] make mktemp net-tools perl5 sed sysfiles tar texinfo util-linux
-[DEP] xfree86
+[DEP] diffutils findutils gawk gcc34 gcc34:dev gettext glib12
+[DEP] glib12:dev glibc23 glibc23:dev gnome-libs14 grep gtk+12 gtk+12:dev
+[DEP] linux26-header:dev make mktemp net-tools perl5 sed sysfiles tar
+[DEP] texinfo util-linux xfree86
+
+[PROVIDES] gcombust
 

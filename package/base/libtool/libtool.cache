@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104641352 Sun Jan  2 05:49:12 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110126831 Sun Mar  6 17:33:51 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 3-libtool.log
+[LOGS] 3-libtool.log 9-libtool.log
 
-[BUILDTIME] 4609 (3)
-[SIZE] 2.35 MB, 35 files
+[BUILDTIME] 5284 (9)
+[SIZE] 2.38 MB, 36 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev m4 make mktemp perl5 sed sysfiles tar texinfo
-[DEP] util-linux
+[DEP] linux26-header:dev m4 make mktemp net-tools perl5 sed sysfiles tar
+[DEP] texinfo util-linux
+
+[PROVIDES] libltdl.a libltdl.so libtool libtoolize
 

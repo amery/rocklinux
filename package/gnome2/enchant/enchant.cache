@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104696963 Sun Jan  2 21:16:03 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110184839 Mon Mar  7 09:40:39 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-enchant.log
+[LOGS] 5-enchant.log 9-enchant.log
 
-[BUILDTIME] 4403 (5)
+[BUILDTIME] 4843 (9)
 [SIZE] 0.15 MB, 22 files
 
 [DEP] 00-dirtree aspell aspell:dev bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils gawk gcc34 gcc34:dev glib glib12 glib:dev
 [DEP] glibc23 glibc23:dev gnome-libs14 grep linux26-header:dev make mktemp
-[DEP] pkgconfig sed sysfiles tar util-linux
+[DEP] net-tools pkgconfig sed sysfiles tar util-linux
+
+[PROVIDES] enchant enchant-lsmod libenchant.a libenchant.so
 

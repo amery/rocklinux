@@ -20,19 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104671381 Sun Jan  2 14:09:41 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110154783 Mon Mar  7 01:19:43 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-fvwm.log
+[LOGS] 5-fvwm.log 9-fvwm.log
 
-[BUILDTIME] 9857 (5)
-[SIZE] 2.69 MB, 134 files
+[BUILDTIME] 10463 (9)
+[SIZE] 2.70 MB, 134 files
 
 [DEP] 00-dirtree alsa audiofile bash2 bdb33 binutils bzip2 coreutils
 [DEP] diffutils esound findutils gawk gcc34 gcc34:dev glib12 glib12:dev
 [DEP] glibc23 glibc23:dev gnome-libs14 gnome-libs14:dev grep gtk+12
 [DEP] gtk+12:dev imlib imlib:dev libstroke libstroke:dev linux26-header:dev
-[DEP] make mktemp ncurses:dev perl5 readline readline:dev sed sysfiles
-[DEP] tar util-linux xfree86 xfree86:dev
+[DEP] make mktemp ncurses:dev net-tools perl5 readline readline:dev sed
+[DEP] sysfiles tar util-linux xfree86 xfree86:dev
+
+[PROVIDES] FvwmCommand fvwm fvwm-config fvwm-menu-desktop
+[PROVIDES] fvwm-menu-directory fvwm-menu-headlines fvwm-menu-xlock
+[PROVIDES] fvwm-root fvwm2 fvwm24_convert fvwmbug xpmroot
 

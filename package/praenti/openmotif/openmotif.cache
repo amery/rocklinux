@@ -20,16 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104665047 Sun Jan  2 12:24:07 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110147208 Sun Mar  6 23:13:28 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-openmotif.log
+[LOGS] 5-openmotif.log 9-openmotif.log
 
-[BUILDTIME] 21375 (5)
-[SIZE] 4.97 MB, 600 files
+[BUILDTIME] 41995 (9)
+[SIZE] 9.45 MB, 953 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils flex flex:dev
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] m4 make mktemp patch sed sysfiles tar xfree86 xfree86:dev
+[DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils diffutils file
+[DEP] findutils flex flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev
+[DEP] grep linux26-header:dev m4 make mktemp net-tools perl5 sed sysfiles
+[DEP] tar texinfo xfree86 xfree86:dev
+
+[PROVIDES] DNDDemo airport autopopups bboxdemo colordemo column draw
+[PROVIDES] dropdown earth filemanager fileview fontsel getsubres helloint
+[PROVIDES] hellomotif i18ninput iconbuttondemo libMrm.a libMrm.so libUil.a
+[PROVIDES] libUil.so libXm.a libXm.so multilist mwm outline paned panner
+[PROVIDES] periodic piano sampler2_0 setDate simpledrop tabstack todo
+[PROVIDES] tooltips tree uil wsm xmanimate xmbind
 

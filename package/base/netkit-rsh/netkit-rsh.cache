@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104747842 Mon Jan  3 11:24:02 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110305057 Tue Mar  8 19:04:17 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-netkit-rsh.log
+[LOGS] 5-netkit-rsh.log 9-netkit-rsh.log
 
-[BUILDTIME] 1468 (5)
+[BUILDTIME] 1698 (9)
 [SIZE] 0.13 MB, 23 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp ncurses:dev
 [DEP] pam pam:dev sed sysfiles tar
+
+[PROVIDES] in.rexecd in.rlogind in.rshd rcp rexec rlogin rsh
 

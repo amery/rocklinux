@@ -20,18 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104760646 Mon Jan  3 14:57:26 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110319364 Tue Mar  8 23:02:44 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-asterisk.log
+[LOGS] 5-asterisk.log 9-asterisk.log
 
-[BUILDTIME] 11783 (5)
-[SIZE] 10.11 MB, 494 files
+[BUILDTIME] 12112 (9)
+[SIZE] 10.13 MB, 495 files
 
 [DEP] 00-dirtree alien alsa alsa:dev bash2 binutils bison bzip2 coreutils
 [DEP] diffutils findutils gawk gcc34 gcc34:dev glib12 glib12:dev glibc23
 [DEP] glibc23:dev grep gtk+12 gtk+12:dev gzip linux26-header:dev m4 make
-[DEP] mktemp ncurses:dev net-tools openssl openssl:dev patch sed sqlite
-[DEP] sqlite:dev sysfiles tar xfree86
+[DEP] mktemp mpg321 ncurses:dev net-tools openssl openssl:dev patch sed
+[DEP] sqlite sqlite:dev sysfiles tar xfree86
+
+[PROVIDES] agi-test.agi asterisk astgenkey eagi-sphinx-test eagi-test
+[PROVIDES] safe_asterisk
 

@@ -20,15 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104645431 Sun Jan  2 06:57:11 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110121411 Sun Mar  6 16:03:31 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-memtest86.log
+[LOGS] 5-memtest86.log 9-memtest86.log
 
-[BUILDTIME] 702 (5)
-[SIZE] 0.09 MB, 8 files
+[BUILDTIME] 1280 (9)
+[SIZE] 0.10 MB, 8 files
 
-[DEP] 00-dirtree bash2 bzip2 coreutils findutils gawk gcc34 grep mktemp
-[DEP] patch sed sysfiles tar
+[DEP] 00-dirtree bash2 bzip2 coreutils findutils gcc34 grep mktemp patch
+[DEP] sed sysfiles tar
+
+[PROVIDES] memtest86_install
 

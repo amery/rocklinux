@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104664739 Sun Jan  2 12:18:59 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110146653 Sun Mar  6 23:04:13 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-hfsutils.log
+[LOGS] 5-hfsutils.log 9-hfsutils.log
 
-[BUILDTIME] 1655 (5)
+[BUILDTIME] 2295 (9)
 [SIZE] 1.05 MB, 35 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] sed sysfiles tar
+[DEP] net-tools sed sysfiles tar
+
+[PROVIDES] hattrib hcd hcopy hdel hdir hformat hls hmkdir hmount hpwd
+[PROVIDES] hrename hrmdir humount hvol
 

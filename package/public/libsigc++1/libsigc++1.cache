@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104655657 Sun Jan  2 09:47:37 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110136043 Sun Mar  6 20:07:23 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libsigc++1.log
+[LOGS] 5-libsigc++1.log 9-libsigc++1.log
 
-[BUILDTIME] 3029 (5)
+[BUILDTIME] 3633 (9)
 [SIZE] 0.06 MB, 13 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp perl5 sed sysfiles tar texinfo
+[DEP] linux26-header:dev make mktemp net-tools perl5 sed sysfiles tar
+[DEP] texinfo
+
+[PROVIDES] libsigc.a libsigc.so sigc-config
 

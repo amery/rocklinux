@@ -20,17 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104747775 Mon Jan  3 11:22:55 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110304969 Tue Mar  8 19:02:49 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-g-wrap.log
+[LOGS] 5-g-wrap.log 9-g-wrap.log
 
-[BUILDTIME] 3229 (5)
+[BUILDTIME] 3498 (9)
 [SIZE] 1.33 MB, 175 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gcc34 gcc34:dev glib12 glib12:dev glibc23 glibc23:dev grep guile
 [DEP] guile:dev linux26-header:dev make mktemp net-tools sed sysfiles
 [DEP] tar texinfo util-linux
+
+[PROVIDES] g-wrap-config libgw-glib.a libgw-glib.so libgw-standard.a
+[PROVIDES] libgw-standard.so libgw-wct.a libgw-wct.so libgwrap-glib.a
+[PROVIDES] libgwrap-glib.so libgwrap-wct.a libgwrap-wct.so
 

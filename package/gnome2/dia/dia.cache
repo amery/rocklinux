@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104733281 Mon Jan  3 07:21:21 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110225055 Mon Mar  7 20:50:55 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-dia.log
+[LOGS] 5-dia.log 9-dia.log
 
-[BUILDTIME] 30159 (5)
+[BUILDTIME] 30548 (9)
 [SIZE] 9.22 MB, 1426 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
@@ -38,8 +38,10 @@
 [DEP] libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui libbonoboui:dev
 [DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeui
 [DEP] libgnomeui:dev libjpeg libjpeg:dev libpng libpng:dev libxml2
-[DEP] libxml2:dev libxslt libxslt:dev linux26-header:dev make mktemp numpy
-[DEP] openssl orbit2 orbit2:dev pango pango:dev patch perl5 pkgconfig
-[DEP] popt popt:dev pygtk python python:dev scrollkeeper sed sysfiles
-[DEP] tar tcl tk util-linux wxpython xfree86 xfree86:dev zlib:dev
+[DEP] libxml2:dev libxslt libxslt:dev linux26-header:dev make mktemp
+[DEP] net-tools numpy openssl orbit2 orbit2:dev pango pango:dev patch perl5
+[DEP] pkgconfig popt popt:dev pygtk python python:dev scrollkeeper sed
+[DEP] sysfiles tar tcl tk util-linux wxpython xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] dia
 

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104654976 Sun Jan  2 09:36:16 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110135100 Sun Mar  6 19:51:40 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-taglib.log
+[LOGS] 5-taglib.log 9-taglib.log
 
-[BUILDTIME] 5708 (5)
+[BUILDTIME] 6478 (9)
 [SIZE] 0.20 MB, 13 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils file findutils
 [DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp perl5 sed sysfiles tar util-linux
+[DEP] make mktemp net-tools perl5 sed sysfiles tar util-linux
+
+[PROVIDES] libtag.so libtag_c.so taglib-config
 

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104647484 Sun Jan  2 07:31:24 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110125154 Sun Mar  6 17:05:54 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 1-grep.log 5-grep.log
+[LOGS] 1-grep.log 5-grep.log 9-grep.log
 
-[BUILDTIME] 2349 (5)
+[BUILDTIME] 3052 (9)
 [SIZE] 0.39 MB, 33 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils findutils
 [DEP] gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev linux26-header:dev
-[DEP] make mktemp sed sysfiles tar texinfo util-linux
+[DEP] make mktemp net-tools sed sysfiles tar texinfo util-linux
+
+[PROVIDES] egrep fgrep grep
 

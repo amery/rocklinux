@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104661397 Sun Jan  2 11:23:17 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110142883 Sun Mar  6 22:01:23 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libart_lgpl23.log
+[LOGS] 5-libart_lgpl23.log 9-libart_lgpl23.log
 
-[BUILDTIME] 3426 (5)
-[SIZE] 0.08 MB, 10 files
+[BUILDTIME] 4001 (9)
+[SIZE] 0.09 MB, 10 files
 
 [DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils diffutils
 [DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp perl5 sed sysfiles tar texinfo
-[DEP] util-linux
+[DEP] linux26-header:dev make mktemp net-tools perl5 sed sysfiles tar
+[DEP] texinfo util-linux
+
+[PROVIDES] libart2-config libart_lgpl_2.a libart_lgpl_2.so
 

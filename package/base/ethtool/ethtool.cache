@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104744107 Mon Jan  3 10:21:47 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110300847 Tue Mar  8 17:54:07 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ethtool.log
+[LOGS] 5-ethtool.log 9-ethtool.log
 
-[BUILDTIME] 1380 (5)
-[SIZE] 0.08 MB, 8 files
+[BUILDTIME] 1614 (9)
+[SIZE] 0.09 MB, 8 files
 
 [DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils diffutils
 [DEP] findutils gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp perl5 sed sysfiles tar texinfo
+[DEP] make mktemp net-tools perl5 sed sysfiles tar texinfo
+
+[PROVIDES] ethtool
 

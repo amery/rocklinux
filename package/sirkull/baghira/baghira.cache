@@ -20,19 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104725333 Mon Jan  3 05:08:53 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110215685 Mon Mar  7 18:14:45 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-baghira.log
+[LOGS] 5-baghira.log 9-baghira.log
 
-[BUILDTIME] 12547 (5)
+[BUILDTIME] 12835 (9)
 [SIZE] 0.93 MB, 36 files
 
 [DEP] 00-dirtree arts autoconf bash2 binutils bzip2 coreutils diffutils
 [DEP] expat findutils freetype freetype:dev gawk gcc34 gcc34:dev gettext
 [DEP] glibc23 glibc23:dev grep kdebase kdebase:dev kdelibs kdelibs:dev
 [DEP] libart_lgpl23 libart_lgpl23:dev libjpeg libpng libpng:dev
-[DEP] linux26-header:dev m4 make mktemp perl5 qt qt:dev sed sysfiles tar
-[DEP] util-linux xfree86 xfree86:dev zlib:dev
+[DEP] linux26-header:dev m4 make mktemp net-tools perl5 qt qt:dev sed
+[DEP] sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] bab
 

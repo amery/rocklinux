@@ -20,16 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104652356 Sun Jan  2 08:52:36 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110131536 Sun Mar  6 18:52:16 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-postfix.log
+[LOGS] 5-postfix.log 9-postfix.log
 
-[BUILDTIME] 6203 (5)
+[BUILDTIME] 6771 (9)
 [SIZE] 3.47 MB, 127 files
 
-[DEP] 00-dirtree bash2 bdb41 bdb41:dev binutils bzip2 coreutils
+[DEP] 00-dirtree bash2 bdb42 bdb42:dev binutils bzip2 coreutils
 [DEP] diffutils findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
 [DEP] linux26-header:dev m4 make mktemp pcre sed sysfiles tar
+
+[PROVIDES] mailq_postfix newaliases_postfix postalias postcat postconf
+[PROVIDES] postdrop postfix postkick postlock postlog postmap postqueue
+[PROVIDES] postsuper sendmail_postfix setmailer_postfix
 

@@ -20,20 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104682201 Sun Jan  2 17:10:01 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110167244 Mon Mar  7 04:47:24 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnome-vfs.log
+[LOGS] 5-gnome-vfs.log 9-gnome-vfs.log
 
-[BUILDTIME] 22747 (5)
-[SIZE] 4.33 MB, 187 files
+[BUILDTIME] 23367 (9)
+[SIZE] 4.34 MB, 187 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 bzip2:dev cdparanoia cdparanoia:dev
 [DEP] coreutils cpan-xml-parser diffutils fam fam:dev findutils gawk
 [DEP] gcc34 gcc34:dev gconf gconf:dev gettext glib glib12 glib:dev
 [DEP] glibc23 glibc23:dev gnome-blog gnome-libs14 grep indent libbonobo
 [DEP] libbonobo:dev libxml2 libxml2:dev linux26-header:dev make mktemp
-[DEP] openssl openssl:dev orbit2 orbit2:dev pango patch perl5 pkgconfig
-[DEP] popt popt:dev sed sysfiles tar util-linux zlib:dev
+[DEP] net-tools openssl openssl:dev orbit2 orbit2:dev pango patch perl5
+[DEP] pkgconfig popt popt:dev sed sysfiles tar util-linux zlib:dev
+
+[PROVIDES] gnomevfs-cat gnomevfs-copy gnomevfs-info gnomevfs-ls
+[PROVIDES] gnomevfs-mkdir gnomevfs-rm libgnomevfs-2.a libgnomevfs-2.so
 

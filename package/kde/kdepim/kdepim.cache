@@ -20,24 +20,45 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104710981 Mon Jan  3 01:09:41 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110200206 Mon Mar  7 13:56:46 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-kdepim.log
+[LOGS] 5-kdepim.log 9-kdepim.log
 
-[BUILDTIME] 367951 (5)
-[SIZE] 23.70 MB, 1214 files
+[BUILDTIME] 369413 (9)
+[SIZE] 23.71 MB, 1214 files
 
-[DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev
-[DEP] bash2 binutils bison bluez-libs bluez-libs:dev bzip2 coreutils
-[DEP] diffutils esound esound:dev expat fam fam:dev findutils flex
-[DEP] flex:dev freetype freetype:dev gawk gcc34 gcc34:dev gettext glib
-[DEP] glib:dev glibc23 glibc23:dev gnokii gnokii:dev gpgme gpgme:dev grep
+[DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev bash2
+[DEP] binutils bison bluez-libs bluez-libs:dev bzip2 coreutils diffutils
+[DEP] esound esound:dev expat fam fam:dev findutils flex flex:dev freetype
+[DEP] freetype:dev gawk gcc34 gcc34:dev gettext glib glib:dev glibc23
+[DEP] glibc23:dev gnokii gnokii:dev gpgme gpgme:dev grep jack jack:dev
 [DEP] kdebase kdebase:doc kdelibs kdelibs:dev kdelibs:doc libart_lgpl23
 [DEP] libart_lgpl23:dev libassuan:dev libgpg-error libgpg-error:dev libjpeg
 [DEP] libjpeg:dev libpng libpng:dev linux26-header:dev m4 mad mad:dev make
-[DEP] mktemp nas ncurses:dev ogg-vorbis ogg-vorbis:dev openssl openssl:dev
-[DEP] pcre pcre:dev perl5 pilot-link pilot-link:dev qt qt:dev sed sysfiles
-[DEP] tar util-linux vim xfree86 xfree86:dev zlib:dev
+[DEP] mktemp nas ncurses:dev net-tools ogg-vorbis ogg-vorbis:dev openssl
+[DEP] openssl:dev pcre pcre:dev perl5 pilot-link pilot-link:dev qt qt:dev
+[DEP] sed sysfiles tar util-linux vim xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] egroupwarewizard groupwarewizard ical2vcal kabc2mutt
+[PROVIDES] kaddressbook kalarm kalarmd kandy kandy_client karm
+[PROVIDES] kitchensync kleopatra kmail kmail_antivir.sh kmail_clamav.sh
+[PROVIDES] kmail_fprot.sh kmail_sav.sh kmailcvt knode knotes kolabwizard
+[PROVIDES] konsolekalendar kontact korgac korganizer korganizerIn
+[PROVIDES] korn kpalmdoc kpilot kpilotDaemon ksync ktnef kwatchgnupg
+[PROVIDES] libdummykonnector.so libgpgme++.so libkabc_imap.so
+[PROVIDES] libkabc_slox.so libkabc_xmlrpc.so libkabckonnector.so
+[PROVIDES] libkabinterfaces.so libkaddressbook.so libkalarmd.so
+[PROVIDES] libkcal.so libkcal_imap.so libkcal_resourceremote.so
+[PROVIDES] libkcal_slox.so libkcal_xmlrpc.so libkcalkonnector.so
+[PROVIDES] libkdenetwork.so libkdepim.so libkgantt.so libkitchensyncui.so
+[PROVIDES] libkleopatra.so libkmailprivate.so libknodecommon.so
+[PROVIDES] libknotes_imap.so libknotes_xmlrpc.so libkonnector.so
+[PROVIDES] libkontact.so libkorganizer.so libkorganizer_calendar.so
+[PROVIDES] libkorganizer_eventviewer.so libkpilot.so libkpimexchange.so
+[PROVIDES] libkpimidentities.so libkpinterfaces.so libksharedfile.so
+[PROVIDES] libksieve.so libkslox.so libksync.so libksync2.so
+[PROVIDES] libktnef.so liblocalkonnector.so libmimelib.so libqgpgme.so
+[PROVIDES] libqtopiakonnector.so libremotekonnector.so sloxwizard
 

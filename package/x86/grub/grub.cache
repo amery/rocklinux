@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104761082 Mon Jan  3 15:04:42 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110319877 Tue Mar  8 23:11:17 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-grub.log
+[LOGS] 5-grub.log 9-grub.log
 
-[BUILDTIME] 8733 (5)
-[SIZE] 2.19 MB, 62 files
+[BUILDTIME] 8974 (9)
+[SIZE] 2.22 MB, 63 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] ncurses:dev net-tools sed sysfiles tar texinfo util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
+[DEP] mktemp ncurses:dev net-tools sed sysfiles tar texinfo util-linux
+
+[PROVIDES] grub grub-install grub-md5-crypt grub-set-default grub-terminfo
+[PROVIDES] mbchk
 

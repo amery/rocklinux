@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104652186 Sun Jan  2 08:49:46 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110131358 Sun Mar  6 18:49:18 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-dcc.log
+[LOGS] 5-dcc.log 9-dcc.log
 
-[BUILDTIME] 3622 (5)
-[SIZE] 1.48 MB, 70 files
+[BUILDTIME] 4244 (9)
+[SIZE] 1.50 MB, 71 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp procps sed sysfiles tar
+[DEP] mktemp net-tools procps sed sysfiles tar
+
+[PROVIDES] README cdcc chgpasswd common dccproc edit-whiteclnt http2https
+[PROVIDES] list-log list-msg webuser-notify
 

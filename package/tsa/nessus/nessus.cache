@@ -20,18 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104666249 Sun Jan  2 12:44:09 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110148642 Sun Mar  6 23:37:22 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-nessus.log
+[LOGS] 5-nessus.log 9-nessus.log
 
-[BUILDTIME] 23829 (5)
-[SIZE] 18.03 MB, 5530 files
+[BUILDTIME] 26375 (9)
+[SIZE] 18.04 MB, 5530 files
 
 [DEP] 00-dirtree atk atk:dev bash2 binutils bison bzip2 coreutils diffutils
 [DEP] expat findutils flex flex:dev freetype gawk gcc34 gcc34:dev glib
 [DEP] glib12 glib:dev glibc23 glibc23:dev grep gtk+ gtk+12 gtk+:dev
-[DEP] libnet:dev linux26-header:dev m4 make mktemp openssl openssl:dev
-[DEP] pango pango:dev pkgconfig sed sysfiles tar xfree86
+[DEP] libnet:dev linux26-header:dev m4 make mktemp net-tools openssl
+[DEP] openssl:dev pango pango:dev pkgconfig sed sysfiles tar xfree86
+
+[PROVIDES] libhosts_gatherer.a libhosts_gatherer.so libnasl.a libnasl.so
+[PROVIDES] libnessus.a libnessus.so libpcap-nessus.a libpcap-nessus.so
+[PROVIDES] nasl nasl-config nessus nessus-adduser nessus-build
+[PROVIDES] nessus-check-signature nessus-config nessus-mkcert
+[PROVIDES] nessus-mkcert-client nessus-mkrand nessus-rmuser
+[PROVIDES] nessus-update-plugins nessusd uninstall-nessus
 

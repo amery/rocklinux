@@ -20,19 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104674530 Sun Jan  2 15:02:10 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110158707 Mon Mar  7 02:25:07 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gconf.log
+[LOGS] 5-gconf.log 9-gconf.log
 
-[BUILDTIME] 6327 (5)
+[BUILDTIME] 6865 (9)
 [SIZE] 4.12 MB, 108 files
 
 [DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils diffutils expat
 [DEP] findutils freetype gawk gcc34 gcc34:dev gettext glib glib:dev glibc23
 [DEP] glibc23:dev grep gtk+ gtk+:dev gtkdoc indent libxml2 libxml2:dev
-[DEP] linux26-header:dev make mktemp orbit2 orbit2:dev pango pango:dev
-[DEP] perl5 pkgconfig popt popt:dev sed sysfiles tar util-linux xfree86
-[DEP] zlib:dev
+[DEP] linux26-header:dev make mktemp net-tools orbit2 orbit2:dev pango
+[DEP] pango:dev perl5 pkgconfig popt popt:dev sed sysfiles tar util-linux
+[DEP] xfree86 zlib:dev
+
+[PROVIDES] gconf-merge-tree gconftool-2 libgconf-2.a libgconf-2.so
 

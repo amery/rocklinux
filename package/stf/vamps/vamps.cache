@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104790924 Mon Jan  3 23:22:04 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110661556 Sat Mar 12 22:05:56 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-vamps.log
+[LOGS] 5-vamps.log 9-vamps.log
 
-[BUILDTIME] 1443 (5)
-[SIZE] 0.05 MB, 8 files
+[BUILDTIME] 3085 (9)
+[SIZE] 0.06 MB, 8 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep libdvdread libdvdread:dev linux26-header:dev
 [DEP] make mktemp patch sed sysfiles tar
+
+[PROVIDES] vamps vamps-play_title
 

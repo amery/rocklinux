@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104696252 Sun Jan  2 21:04:12 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110183843 Mon Mar  7 09:24:03 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnome-pilot.log
+[LOGS] 5-gnome-pilot.log 9-gnome-pilot.log
 
-[BUILDTIME] 9001 (5)
+[BUILDTIME] 9447 (9)
 [SIZE] 1.50 MB, 94 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
@@ -39,8 +39,13 @@
 [DEP] libbonobo libbonobo:dev libbonoboui libbonoboui:dev libglade
 [DEP] libglade:dev libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev
 [DEP] libgnomeui libgnomeui:dev libjpeg libjpeg:dev libxml2 libxml2:dev
-[DEP] linux26-header:dev make mktemp ncurses:dev openssl orbit2 orbit2:dev
-[DEP] pango pango:dev perl5 pilot-link pilot-link:dev pkgconfig popt
-[DEP] popt:dev scrollkeeper sed sysfiles tar texinfo util-linux xfree86
-[DEP] xscreensaver zapping zlib:dev
+[DEP] linux26-header:dev make mktemp ncurses:dev net-tools openssl orbit2
+[DEP] orbit2:dev pango pango:dev perl5 pilot-link pilot-link:dev pkgconfig
+[DEP] popt popt:dev scrollkeeper sed sysfiles tar texinfo util-linux
+[DEP] xfree86 xscreensaver zapping zlib:dev
+
+[PROVIDES] gnome-pilot-make-password gpilot-install-file
+[PROVIDES] gpilotd-control-applet gpilotd-session-wrapper libgpilotd.a
+[PROVIDES] libgpilotd.so libgpilotdcm.a libgpilotdcm.so libgpilotdconduit.a
+[PROVIDES] libgpilotdconduit.so
 

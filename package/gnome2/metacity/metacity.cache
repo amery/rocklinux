@@ -20,21 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104690245 Sun Jan  2 19:24:05 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110174266 Mon Mar  7 06:44:26 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-metacity.log
+[LOGS] 5-metacity.log 9-metacity.log
 
-[BUILDTIME] 8378 (5)
+[BUILDTIME] 8833 (9)
 [SIZE] 7.14 MB, 191 files
 
 [DEP] 00-dirtree atk atk:dev autoconf bash2 binutils bzip2 coreutils
 [DEP] cpan-xml-parser diffutils expat figment findutils freetype gawk
-[DEP] gcc34 gcc34:dev gconf gconf:dev gettext glib glib12 glib:dev
-[DEP] glibc23 glibc23:dev gnome-blog gnome-desktop gnome-libs14 grep gtk+
-[DEP] gtk+:dev linux26-header:dev make mktemp orbit2 orbit2:dev pango
+[DEP] gcc34 gcc34:dev gconf gconf:dev gettext glib glib12 glib:dev glibc23
+[DEP] glibc23:dev gnome-blog gnome-desktop gnome-libs14 grep gtk+ gtk+:dev
+[DEP] linux26-header:dev make mktemp net-tools orbit2 orbit2:dev pango
 [DEP] pango:dev perl5 pkgconfig popt popt:dev sed startup-notification
 [DEP] startup-notification:dev sysfiles tar texinfo util-linux xfree86
 [DEP] xfree86:dev zapping
+
+[PROVIDES] libmetacity-private.a libmetacity-private.so metacity
+[PROVIDES] metacity-message metacity-theme-viewer metacity-window-demo
 

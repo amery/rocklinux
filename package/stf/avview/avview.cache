@@ -20,19 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104738974 Mon Jan  3 08:56:14 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110232426 Mon Mar  7 22:53:46 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-avview.log
+[LOGS] 5-avview.log 9-avview.log
 
-[BUILDTIME] 12040 (5)
-[SIZE] 1.97 MB, 34 files
+[BUILDTIME] 12328 (9)
+[SIZE] 1.93 MB, 34 files
 
 [DEP] 00-dirtree alsa alsa:dev arts bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils freetype freetype:dev gawk gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep kaffeine lame lame:dev libpng libsdl
-[DEP] libsdl:dev libzvbi libzvbi:dev linux26-header:dev make mktemp nas
-[DEP] ogg-vorbis ogg-vorbis:dev patch perl5 sed sysfiles tar tcl tcl:dev
-[DEP] tetex tk tk:dev util-linux vim xfree86 xfree86:dev zlib:dev
+[DEP] glibc23 glibc23:dev grep kaffeine lame libpng libsdl libsdl:dev
+[DEP] libzvbi libzvbi:dev linux26-header:dev make mktemp nas net-tools
+[DEP] ogg-vorbis patch perl5 sed sysfiles tar tcl tcl:dev tetex tk tk:dev
+[DEP] util-linux vim xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] avview_shell start_avview
 

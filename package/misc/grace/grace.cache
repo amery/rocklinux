@@ -20,18 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104778270 Mon Jan  3 19:51:10 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110339529 Wed Mar  9 04:38:49 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-grace.log
+[LOGS] 5-grace.log 9-grace.log
 
-[BUILDTIME] 7571 (5)
-[SIZE] 4.51 MB, 147 files
+[BUILDTIME] 7723 (9)
+[SIZE] 4.52 MB, 149 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils fftw:dev
 [DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libjpeg
 [DEP] libjpeg:dev libpng libpng:dev libtiff libtiff:dev linux26-header:dev
 [DEP] make mktemp net-tools openmotif openmotif:dev sed sysfiles tar
 [DEP] xfree86 xfree86:dev xpdf xpdf:dev zlib:dev
+
+[PROVIDES] convcal fdf2fit gracebat grconvert libgrace_np.a xmgrace
 

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104761106 Mon Jan  3 15:05:06 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110319905 Tue Mar  8 23:11:45 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-lilo.log
+[LOGS] 5-lilo.log 9-lilo.log
 
-[BUILDTIME] 1793 (5)
-[SIZE] 0.24 MB, 15 files
+[BUILDTIME] 1968 (9)
+[SIZE] 0.25 MB, 15 files
 
 [DEP] 00-dirtree bash2 bin86 binutils bzip2 coreutils findutils gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
 [DEP] patch sed sysfiles tar
+
+[PROVIDES] keytab-lilo.pl lilo mkrescue
 

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104640196 Sun Jan  2 05:29:56 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110121803 Sun Mar  6 16:10:03 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 1-strace.log 3-strace.log
+[LOGS] 1-strace.log 3-strace.log 9-strace.log
 
-[BUILDTIME] 2339 (3)
+[BUILDTIME] 2997 (9)
 [SIZE] 0.18 MB, 9 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp patch sed sysfiles tar util-linux
+[DEP] 00-dirtree acl:dev bash2 binutils bzip2 coreutils diffutils findutils
+[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
+[DEP] make mktemp net-tools patch sed sysfiles tar util-linux
+
+[PROVIDES] strace strace-graph
 

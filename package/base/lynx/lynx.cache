@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104653900 Sun Jan  2 09:18:20 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110133638 Sun Mar  6 19:27:18 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-lynx.log
+[LOGS] 5-lynx.log 9-lynx.log
 
-[BUILDTIME] 7419 (5)
-[SIZE] 2.66 MB, 101 files
+[BUILDTIME] 8139 (9)
+[SIZE] 2.67 MB, 101 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp ncurses ncurses:dev openssl openssl:dev sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
+[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
+[DEP] make mktemp ncurses ncurses:dev net-tools openssl openssl:dev sed
+[DEP] sysfiles tar
+
+[PROVIDES] lynx
 

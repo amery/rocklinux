@@ -20,15 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104651949 Sun Jan  2 08:45:49 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110131048 Sun Mar  6 18:44:08 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-mailscanner.log
+[LOGS] 5-mailscanner.log 9-mailscanner.log
 
-[BUILDTIME] 841 (5)
+[BUILDTIME] 1404 (9)
 [SIZE] 3.20 MB, 576 files
 
-[DEP] 00-dirtree bash2 bzip2 coreutils findutils gawk gcc34 grep mktemp
-[DEP] sed sysfiles tar
+[DEP] 00-dirtree bash2 bzip2 coreutils findutils gcc34 grep mktemp sed
+[DEP] sysfiles tar
+
+[PROVIDES] CheckModuleVersion MailScanner Sophos.install
+[PROVIDES] Sophos.install.linux Sophos.install.solaris check_mailscanner
+[PROVIDES] check_mailscanner.linux check_mailscanner.solaris
+[PROVIDES] check_mailscanner.tru64 d2mbox df2mbox old tnef
+[PROVIDES] tnef-1.1.4+sizelimit.tar.gz tnef.linux tnef.solaris
+[PROVIDES] update_virus_scanners upgrade_MailScanner_conf wrappers
 

@@ -20,20 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104687209 Sun Jan  2 18:33:29 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110173371 Mon Mar  7 06:29:31 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libgnomemm.log
+[LOGS] 5-libgnomemm.log 9-libgnomemm.log
 
-[BUILDTIME] 3136 (5)
+[BUILDTIME] 3615 (9)
 [SIZE] 0.04 MB, 15 files
 
-[DEP] 00-dirtree alsa:dev atk atk:dev audiofile:dev bash2 binutils
-[DEP] bzip2 coreutils diffutils esound:dev findutils gcc34 gcc34:dev
+[DEP] 00-dirtree alsa:dev atk atk:dev audiofile:dev bash2 binutils bzip2
+[DEP] coreutils diffutils esound:dev findutils gawk gcc34 gcc34:dev
 [DEP] gconf gconf:dev glib glib:dev glibc23 glibc23:dev glibmm glibmm:dev
 [DEP] gnome-vfs gnome-vfs:dev grep gtk+ gtk+:dev gtkmm gtkmm:dev libbonobo
 [DEP] libbonobo:dev libgnome libgnome:dev libsigc++ libsigc++:dev
-[DEP] libxml2:dev linux26-header:dev m4 make mktemp orbit2 orbit2:dev
-[DEP] pango pango:dev pkgconfig popt popt:dev sed sysfiles tar util-linux
+[DEP] libxml2:dev linux26-header:dev m4 make mktemp net-tools orbit2
+[DEP] orbit2:dev pango pango:dev pkgconfig popt popt:dev sed sysfiles
+[DEP] tar util-linux
+
+[PROVIDES] libgnomemm-2.6.so
 

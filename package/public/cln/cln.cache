@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104786827 Mon Jan  3 22:13:47 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110508760 Fri Mar 11 03:39:20 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-cln.log
+[LOGS] 5-cln.log 9-cln.log
 
-[BUILDTIME] 84081 (5)
-[SIZE] 1.19 MB, 13 files
+[BUILDTIME] 172065 (9)
+[SIZE] 1.81 MB, 35 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev gmp gmp:dev grep
 [DEP] linux26-header:dev make mktemp net-tools sed sysfiles tar util-linux
+
+[PROVIDES] cln-config libcln.a libcln.so
 

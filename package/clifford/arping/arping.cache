@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104666448 Sun Jan  2 12:47:28 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110148912 Sun Mar  6 23:41:52 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-arping.log
+[LOGS] 5-arping.log 9-arping.log
 
-[BUILDTIME] 825 (5)
+[BUILDTIME] 1313 (9)
 [SIZE] 0.15 MB, 8 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep libnet:dev libpcap:dev linux26-header:dev
 [DEP] make mktemp patch sed sysfiles tar
+
+[PROVIDES] arping
 

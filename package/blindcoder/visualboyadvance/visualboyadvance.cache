@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104794487 Tue Jan  4 00:21:27 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110894881 Tue Mar 15 14:54:41 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-visualboyadvance.log
+[LOGS] 5-visualboyadvance.log 9-visualboyadvance.log
 
-[BUILDTIME] 7566 (5)
+[BUILDTIME] 7589 (9)
 [SIZE] 0.66 MB, 8 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] flex flex:dev gcc34 gcc34:dev glibc23 glibc23:dev grep libpng
+[DEP] flex flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libpng
 [DEP] libpng:dev libsdl libsdl:dev linux26-header:dev m4 make mktemp nas
 [DEP] nasm net-tools patch sed sysfiles tar util-linux xfree86 zlib:dev
+
+[PROVIDES] VisualBoyAdvance
 

@@ -20,17 +20,60 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104667264 Sun Jan  2 13:01:04 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110149852 Sun Mar  6 23:57:32 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-netpbm.log
+[LOGS] 5-netpbm.log 9-netpbm.log
 
-[BUILDTIME] 12841 (5)
-[SIZE] 2.91 MB, 531 files
+[BUILDTIME] 14786 (9)
+[SIZE] 2.92 MB, 533 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils flex gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep libjpeg libjpeg:dev libpng
 [DEP] libpng:dev libtiff libtiff:dev linux26-header:dev m4 make mktemp
-[DEP] patch perl5 sed sysfiles tar zlib:dev
+[DEP] patch perl5 sed svgalib svgalib:dev sysfiles tar zlib:dev
+
+[PROVIDES] 411toppm anytopnm asciitopgm atktopbm bioradtopgm bmptopnm
+[PROVIDES] bmptoppm brushtopbm cmuwmtopbm doc.url eyuvtoppm fiascotopnm
+[PROVIDES] fitstopnm fstopgm g3topbm gemtopbm gemtopnm giftopnm gouldtoppm
+[PROVIDES] hdifftopam hipstopgm hpcdtoppm icontopbm ilbmtoppm imgtoppm
+[PROVIDES] jbigtopnm jpegtopnm leaftoppm libnetpbm.a libnetpbm.so
+[PROVIDES] lispmtopgm macptopbm manweb mdatopbm mgrtopbm mtvtoppm neotoppm
+[PROVIDES] palmtopnm pamarith pamchannel pamcut pamdeinterlace pamdice
+[PROVIDES] pamendian pamfile pamfunc pamoil pamseq pamslice pamstack
+[PROVIDES] pamstretch pamstretch-gen pamtohdiff pamtopnm pamtotga pamtouil
+[PROVIDES] pbmclean pbmlife pbmmake pbmmask pbmpage pbmpscale pbmreduce
+[PROVIDES] pbmtext pbmtextps pbmto10x pbmto4425 pbmtoascii pbmtoatk
+[PROVIDES] pbmtobbnbg pbmtocmuwm pbmtoepsi pbmtoepson pbmtog3 pbmtogem
+[PROVIDES] pbmtogo pbmtoicon pbmtolj pbmtoln03 pbmtolps pbmtomacp pbmtomda
+[PROVIDES] pbmtomgr pbmtonokia pbmtopgm pbmtopi3 pbmtopk pbmtoplot pbmtoppa
+[PROVIDES] pbmtopsg3 pbmtoptx pbmtowbmp pbmtox10bm pbmtoxbm pbmtoybm
+[PROVIDES] pbmtozinc pbmupc pcdovtoppm pcxtoppm pgmabel pgmbentley
+[PROVIDES] pgmcrater pgmedge pgmenhance pgmhist pgmkernel pgmminkowski
+[PROVIDES] pgmmorphconv pgmnoise pgmnorm pgmoil pgmramp pgmslice pgmtexture
+[PROVIDES] pgmtofs pgmtolispm pgmtopbm pgmtopgm pgmtoppm pi1toppm pi3topbm
+[PROVIDES] picttoppm pjtoppm pktopbm pngtopnm pnmalias pnmarith pnmcat
+[PROVIDES] pnmcolormap pnmcomp pnmconvol pnmcrop pnmcut pnmdepth pnmenlarge
+[PROVIDES] pnmfile pnmflip pnmgamma pnmhisteq pnmhistmap pnmindex pnminterp
+[PROVIDES] pnminvert pnmmargin pnmmontage pnmnlfilt pnmnoraw pnmnorm
+[PROVIDES] pnmpad pnmpaste pnmpsnr pnmquant pnmremap pnmrotate pnmscale
+[PROVIDES] pnmscalefixed pnmshear pnmsmooth pnmsplit pnmstitch pnmtile
+[PROVIDES] pnmtoddif pnmtofiasco pnmtofits pnmtojbig pnmtojpeg pnmtopalm
+[PROVIDES] pnmtopclxl pnmtoplainpnm pnmtopng pnmtops pnmtorast pnmtorle
+[PROVIDES] pnmtosgi pnmtosir pnmtotiff pnmtotiffcmyk pnmtoxwd ppm3d
+[PROVIDES] ppmbrighten ppmchange ppmcie ppmcolormask ppmcolors ppmdim
+[PROVIDES] ppmdist ppmdither ppmfade ppmflash ppmforge ppmhist ppmlabel
+[PROVIDES] ppmmake ppmmix ppmnorm ppmntsc ppmpat ppmquant ppmquantall
+[PROVIDES] ppmrainbow ppmrelief ppmrough ppmshadow ppmshift ppmspread
+[PROVIDES] ppmsvgalib ppmtoacad ppmtobmp ppmtoeyuv ppmtogif ppmtoicr
+[PROVIDES] ppmtoilbm ppmtojpeg ppmtoleaf ppmtolj ppmtomap ppmtomitsu
+[PROVIDES] ppmtompeg ppmtoneo ppmtopcx ppmtopgm ppmtopi1 ppmtopict
+[PROVIDES] ppmtopj ppmtopjxl ppmtoppm ppmtopuzz ppmtorgb3 ppmtosixel
+[PROVIDES] ppmtoterm ppmtouil ppmtowinicon ppmtoxpm ppmtoyuv ppmtoyuvsplit
+[PROVIDES] ppmtv psidtopgm pstopnm qrttoppm rasttopnm rawtopgm rawtoppm
+[PROVIDES] rgb3toppm rletopnm sbigtopgm sgitopnm sirtopnm sldtoppm spctoppm
+[PROVIDES] spottopgm sputoppm tgatoppm thinkjettopbm tifftopnm wbmptopbm
+[PROVIDES] winicontoppm xbmtopbm ximtoppm xpmtoppm xvminitoppm xwdtopnm
+[PROVIDES] ybmtopbm yuvsplittoppm yuvtoppm zeisstopnm
 

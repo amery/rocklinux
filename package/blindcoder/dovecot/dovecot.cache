@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104752617 Mon Jan  3 12:43:37 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110310410 Tue Mar  8 20:33:30 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-dovecot.log
+[LOGS] 5-dovecot.log 9-dovecot.log
 
-[BUILDTIME] 6940 (5)
+[BUILDTIME] 7187 (9)
 [SIZE] 0.79 MB, 16 files
 
 [DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils diffutils
@@ -34,4 +34,6 @@
 [DEP] grep libgcrypt libgcrypt:dev libgpg-error libgpg-error:dev
 [DEP] linux26-header:dev m4 make mktemp net-tools openssl openssl:dev
 [DEP] pam pam:dev patch perl5 sed sysfiles tar texinfo util-linux zlib:dev
+
+[PROVIDES] dovecot
 

@@ -20,16 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104655329 Sun Jan  2 09:42:09 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110135562 Sun Mar  6 19:59:22 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-aspell.log
+[LOGS] 5-aspell.log 9-aspell.log
 
-[BUILDTIME] 11317 (5)
+[BUILDTIME] 12115 (9)
 [SIZE] 2.85 MB, 121 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev gettext glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp ncurses:dev perl5 sed sysfiles tar texinfo util-linux
+[DEP] make mktemp ncurses:dev net-tools perl5 sed sysfiles tar texinfo
+[DEP] util-linux
+
+[PROVIDES] aspell aspell-import libaspell.so libpspell.so precat
+[PROVIDES] preunzip prezip prezip-bin pspell-config run-with-aspell
+[PROVIDES] word-list-compress
 

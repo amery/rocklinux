@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104799314 Tue Jan  4 01:41:54 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110218732 Mon Mar  7 19:05:32 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 7-swi-prolog.log
+[LOGS] 7-swi-prolog.log 9-swi-prolog.log
 
-[BUILDTIME] 6191 (7)
+[BUILDTIME] 6372 (9)
 [SIZE] 1.77 MB, 90 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
 [DEP] mktemp ncurses:dev net-tools readline readline:dev sed sysfiles
 [DEP] tar util-linux
+
+[PROVIDES] i386-linux-gnu pl plld plrc swipl
 

@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104647130 Sun Jan  2 07:25:30 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110124418 Sun Mar  6 16:53:38 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-zsh.log
+[LOGS] 5-zsh.log 9-zsh.log
 
-[BUILDTIME] 9574 (5)
+[BUILDTIME] 10433 (9)
 [SIZE] 4.09 MB, 591 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp ncurses ncurses:dev sed sysfiles tar util-linux yp-tools
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
+[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libcap:dev
+[DEP] linux26-header:dev make mktemp ncurses ncurses:dev net-tools pcre:dev
+[DEP] sed sysfiles tar util-linux yp-tools
+
+[PROVIDES] zsh zsh-4.2.1
 

@@ -20,20 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104700627 Sun Jan  2 22:17:07 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110189019 Mon Mar  7 10:50:19 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-vim.log
+[LOGS] 5-vim.log 9-vim.log
 
-[BUILDTIME] 16924 (5)
+[BUILDTIME] 17281 (9)
 [SIZE] 14.25 MB, 1040 files
 
 [DEP] 00-dirtree acl acl:dev arts attr bash2 binutils bzip2 coreutils
 [DEP] ctags diffutils expat fam findutils freetype gawk gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev gpm gpm:dev grep hicolor-icon-theme kdelibs
-[DEP] kdelibs:dev libart_lgpl23 libelf libpng linux26-header:dev make
-[DEP] man mktemp ncurses ncurses:dev numpy patch perl5 perl5:dev python
-[DEP] python:dev qt qt:dev ruby sed sysfiles tar tcl tk util-linux wxpython
-[DEP] xfree86 xfree86:dev
+[DEP] glibc23 glibc23:dev gpm gpm:dev grep groff hicolor-icon-theme kdelibs
+[DEP] kdelibs:dev less libart_lgpl23 libelf libpng linux26-header:dev
+[DEP] make man man-pages mktemp ncurses ncurses:dev net-tools numpy patch
+[DEP] perl5 perl5:dev python python:dev qt qt:dev ruby sed sysfiles tar
+[DEP] tcl tk util-linux wxpython xfree86 xfree86:dev
+
+[PROVIDES] eview evim ex gvim gvimdiff kview kvim kvimdiff rgvim rkview
+[PROVIDES] rkvim rview rvim vi view vim vimdiff vimtutor xxd
 

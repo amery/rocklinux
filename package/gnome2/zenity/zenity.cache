@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104770870 Mon Jan  3 17:47:50 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110331418 Wed Mar  9 02:23:38 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-zenity.log
+[LOGS] 5-zenity.log 9-zenity.log
 
-[BUILDTIME] 2432 (5)
+[BUILDTIME] 2632 (9)
 [SIZE] 1.10 MB, 119 files
 
 [DEP] 00-dirtree atk atk:dev bash2 battfink binutils bzip2 coreutils
@@ -37,4 +37,6 @@
 [DEP] linux26-header:dev make mktemp net-tools pango pango:dev perl5
 [DEP] pkgconfig popt popt:dev scrollkeeper sed sysfiles tar util-linux
 [DEP] xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] gdialog zenity
 

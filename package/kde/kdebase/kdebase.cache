@@ -20,24 +20,56 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104705488 Sun Jan  2 23:38:08 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110194394 Mon Mar  7 12:19:54 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-kdebase.log
+[LOGS] 5-kdebase.log 9-kdebase.log
 
-[BUILDTIME] 317756 (5)
-[SIZE] 41.89 MB, 3733 files
+[BUILDTIME] 319069 (9)
+[SIZE] 41.91 MB, 3735 files
 
 [DEP] 00-dirtree alien alsa alsa:dev arts arts:dev audiofile audiofile:dev
 [DEP] bash2 binutils bzip2 bzip2:dev coreutils cyrus-sasl:dev diffutils
 [DEP] esound esound:dev expat fam fam:dev findutils freetype freetype:dev
-[DEP] gawk gcc34 gcc34:dev gettext glib glib:dev glibc23 glibc23:dev grep
-[DEP] kdelibs kdelibs:dev kdelibs:doc libart_lgpl23 libart_lgpl23:dev
-[DEP] libjpeg libjpeg:dev libpng libpng:dev libraw1394 libraw1394:dev
-[DEP] libxml2 linux26-header:dev lm_sensors lm_sensors:dev mad mad:dev
-[DEP] make mktemp nas ncurses:dev ogg-vorbis ogg-vorbis:dev openldap
-[DEP] openldap:dev openssl openssl:dev pam pam:dev patch pcre pcre:dev
-[DEP] perl5 pkgconfig qt qt:dev samba samba:dev sed shadow shadow:dev
-[DEP] sysfiles tar util-linux vim xfree86 xfree86:dev zlib:dev
+[DEP] gawk gcc34 gcc34:dev gettext glib glib:dev glibc23 glibc23:dev
+[DEP] grep jack jack:dev kdelibs kdelibs:dev kdelibs:doc libart_lgpl23
+[DEP] libart_lgpl23:dev libjpeg libjpeg:dev libpng libpng:dev libraw1394
+[DEP] libraw1394:dev libxml2 linux26-header:dev lm_sensors lm_sensors:dev
+[DEP] mad mad:dev make mktemp nas ncurses:dev net-tools ogg-vorbis
+[DEP] ogg-vorbis:dev openldap openldap:dev openssl openssl:dev pam pam:dev
+[DEP] patch pcre pcre:dev perl5 pkgconfig qt qt:dev samba samba:dev sed
+[DEP] shadow shadow:dev sysfiles tar util-linux vim xfree86 xfree86:dev
+[DEP] zlib:dev
+
+[PROVIDES] appletproxy drkonqi extensionproxy genkdmconf kaccess
+[PROVIDES] kappfinder kate kblankscrn.kss kcheckpass kcminit
+[PROVIDES] kcmshell kcontrol kcontroledit kdcop kdebugdialog kdeeject
+[PROVIDES] kdeinstallktheme kdepasswd kdeprintfax kdesktop kdesktop_lock
+[PROVIDES] kdesu kdesud kdialog kdm kdm_config kdm_greet kdmctl
+[PROVIDES] keditbookmarks keditfiletype kfind kfmclient kfontinst
+[PROVIDES] khc_indexbuilder khelpcenter khotkeys khotkeys_update
+[PROVIDES] kicker kinfocenter kio_devices_mounthelper kjobviewer klipper
+[PROVIDES] klocaldomainurifilterhelper kmenuedit konqueror konsole kpager
+[PROVIDES] kpersonalizer kpm kprinter krandom.kss krandrinithack krandrtray
+[PROVIDES] krdb kreadconfig krootimage ksmserver ksplash kstart ksysguard
+[PROVIDES] ksysguardd ksystraycmd ktip kwebdesktop kwin kwin_killer_helper
+[PROVIDES] kwin_rules_dialog kwin_update_window_settings kwrite
+[PROVIDES] kwriteconfig kxkb libkateinterfaces.so libkateutils.so
+[PROVIDES] libkdecorations.so libkdeinit_appletproxy.so
+[PROVIDES] libkdeinit_extensionproxy.so libkdeinit_kaccess.so
+[PROVIDES] libkdeinit_kate.so libkdeinit_kcminit.so libkdeinit_kcmshell.so
+[PROVIDES] libkdeinit_kcontrol.so libkdeinit_kcontroledit.so
+[PROVIDES] libkdeinit_kdesktop.so libkdeinit_keditbookmarks.so
+[PROVIDES] libkdeinit_kfmclient.so libkdeinit_khelpcenter.so
+[PROVIDES] libkdeinit_khotkeys.so libkdeinit_kicker.so
+[PROVIDES] libkdeinit_kjobviewer.so libkdeinit_klipper.so
+[PROVIDES] libkdeinit_kmenuedit.so libkdeinit_konqueror.so
+[PROVIDES] libkdeinit_konsole.so libkdeinit_kprinter.so
+[PROVIDES] libkdeinit_krandrinithack.so libkdeinit_ksmserver.so
+[PROVIDES] libkdeinit_kwin.so libkdeinit_kwin_rules_dialog.so
+[PROVIDES] libkdeinit_kwrite.so libkdeinit_kxkb.so libkfontinst.so
+[PROVIDES] libkickermain.so libkonq.so libkonqsidebarplugin.so libksgrd.so
+[PROVIDES] libksplashthemes.so libtaskbar.so libtaskmanager.so nspluginscan
+[PROVIDES] nspluginviewer startkde
 

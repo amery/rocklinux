@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104699347 Sun Jan  2 21:55:47 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110187516 Mon Mar  7 10:25:16 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-acme.log
+[LOGS] 5-acme.log 9-acme.log
 
-[BUILDTIME] 2073 (5)
-[SIZE] 0.91 MB, 71 files
+[BUILDTIME] 2576 (9)
+[SIZE] 0.92 MB, 71 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile autoconf bash2
 [DEP] binutils bzip2 coreutils diffutils esound expat findutils freetype
@@ -37,7 +37,9 @@
 [DEP] libbonobo:dev libbonoboui libbonoboui:dev libglade libglade:dev
 [DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeui
 [DEP] libgnomeui:dev libjpeg libwnck libwnck:dev libxml2 linux26-header:dev
-[DEP] make mktemp openssl orbit2 orbit2:dev pango pango:dev patch perl5
-[DEP] pkgconfig popt popt:dev sed startup-notification sysfiles tar
+[DEP] make mktemp net-tools openssl orbit2 orbit2:dev pango pango:dev patch
+[DEP] perl5 pkgconfig popt popt:dev sed startup-notification sysfiles tar
 [DEP] texinfo util-linux xfree86 xfree86:dev xscreensaver zapping zlib:dev
+
+[PROVIDES] acme acme-properties
 

@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104788147 Mon Jan  3 22:35:47 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110657677 Sat Mar 12 21:01:17 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-root.log
+[LOGS] 5-root.log 9-root.log
 
-[BUILDTIME] 122885 (5)
-[SIZE] 27.78 MB, 674 files
+[BUILDTIME] 170308 (9)
+[SIZE] 27.78 MB, 681 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] freetype:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep gzip
@@ -35,4 +35,15 @@
 [DEP] libungif:dev linux26-header:dev make mktemp net-tools openssl
 [DEP] openssl:dev postgresql postgresql:dev sed sysfiles tar util-linux
 [DEP] xfree86 xfree86:dev zlib zlib:dev
+
+[PROVIDES] cint hadd libASImage.so libAfterImage.a libCint.so libCore.so
+[PROVIDES] libEG.so libFumili.so libGX11.so libGX11TTF.so libGed.so
+[PROVIDES] libGedOld.so libGeom.so libGeomPainter.so libGpad.so libGraf.so
+[PROVIDES] libGraf3d.so libGui.so libHist.so libHistPainter.so libHtml.so
+[PROVIDES] libMLP.so libMatrix.so libMinuit.so libNew.so libPgSQL.so
+[PROVIDES] libPhysics.so libPostscript.so libProof.so libProofGui.so
+[PROVIDES] libQuadp.so libRGL.so libRint.so libThread.so libTree.so
+[PROVIDES] libTreePlayer.so libTreeViewer.so libVMC.so libX3d.so
+[PROVIDES] libfreetype.a makecint memprobe proofd proofserv rmkdepend
+[PROVIDES] root root-config root.exe rootcint rootd rootn.exe ssh2rpd
 

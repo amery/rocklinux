@@ -20,15 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104641427 Sun Jan  2 05:50:27 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110230880 Mon Mar  7 22:28:00 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 3-cracklib.log
+[LOGS] 3-cracklib.log 9-cracklib.log
 
-[BUILDTIME] 830 (3)
-[SIZE] 0.02 MB, 9 files
+[BUILDTIME] 1489 (9)
+[SIZE] 1.32 MB, 9 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep make mktemp patch sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep make miscfiles mktemp patch sed
+[DEP] sysfiles tar
+
+[PROVIDES] libcrack.a
 

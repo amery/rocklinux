@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104738208 Mon Jan  3 08:43:28 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110231136 Mon Mar  7 22:32:16 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-sysvinit.log
+[LOGS] 5-sysvinit.log 9-sysvinit.log
 
-[BUILDTIME] 1518 (5)
+[BUILDTIME] 1750 (9)
 [SIZE] 0.18 MB, 41 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp patch sed
 [DEP] sysfiles tar
+
+[PROVIDES] bootlogd halt init killall5 last lastb mesg mountpoint pidof
+[PROVIDES] poweroff reboot runlevel shutdown sulogin telinit wall
 

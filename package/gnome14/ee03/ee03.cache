@@ -20,19 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104789407 Mon Jan  3 22:56:47 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110405940 Wed Mar  9 23:05:40 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ee03.log
+[LOGS] 5-ee03.log 9-ee03.log
 
-[BUILDTIME] 2601 (5)
+[BUILDTIME] 5482 (9)
 [SIZE] 0.57 MB, 42 files
 
-[DEP] 00-dirtree alsa audiofile autoconf automake19 bash2 bdb33
-[DEP] binutils bzip2 coreutils diffutils esound file findutils gcc34
+[DEP] 00-dirtree alsa audiofile autoconf automake19 bash2 bdb33 binutils
+[DEP] bzip2 coreutils diffutils esound file findutils gawk gcc34
 [DEP] gcc34:dev gettext glade10 glib12 glib12:dev glibc23 glibc23:dev
 [DEP] gnome-libs14 gnome-libs14:dev grep gtk+12 gtk+12:dev imlib imlib:dev
 [DEP] linux26-header:dev make mktemp net-tools orbit10 perl5 sed sysfiles
 [DEP] tar texinfo xfree86 xfree86:dev
+
+[PROVIDES] ee
 

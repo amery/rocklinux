@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104797514 Tue Jan  4 01:11:54 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110897763 Tue Mar 15 15:42:43 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-scanlogd.log
+[LOGS] 5-scanlogd.log 9-scanlogd.log
 
-[BUILDTIME] 1219 (5)
-[SIZE] 0.15 MB, 9 files
+[BUILDTIME] 1248 (9)
+[SIZE] 0.16 MB, 9 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep libnet:dev libnids:dev libpcap:dev
 [DEP] linux26-header:dev m4 make mktemp patch sed sysfiles tar
+
+[PROVIDES] scanlogd
 

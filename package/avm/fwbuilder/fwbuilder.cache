@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104792527 Mon Jan  3 23:48:47 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110663871 Sat Mar 12 22:44:31 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-fwbuilder.log
+[LOGS] 5-fwbuilder.log 9-fwbuilder.log
 
-[BUILDTIME] 68673 (5)
+[BUILDTIME] 71895 (9)
 [SIZE] 5.19 MB, 89 files
 
 [DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils diffutils expat
@@ -35,4 +35,8 @@
 [DEP] linux26-header:dev make mktemp net-snmp net-snmp:dev net-tools
 [DEP] openssl openssl:dev patch qt qt:dev sed sysfiles tar util-linux
 [DEP] xfree86 zlib:dev
+
+[PROVIDES] fwb_compile_all fwb_install fwb_ipf fwb_ipfw fwb_ipt
+[PROVIDES] fwb_pf fwbedit fwblookup fwbuilder libfwbuilder-config-2
+[PROVIDES] libfwbuilder.so libfwcompiler.so
 

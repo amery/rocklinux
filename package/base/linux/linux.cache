@@ -20,17 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104643703 Sun Jan  2 06:28:23 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110117138 Sun Mar  6 14:52:18 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-linux26.log
+[LOGS] 5-linux26.log 9-linux26.log
 
-[BUILDTIME] 153461 (5)
-[SIZE] 29.35 MB, 1249 files
+[BUILDTIME] 158457 (9)
+[SIZE] 30.20 MB, 1280 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils e2fsprogs
-[DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep gzip
-[DEP] linux26-header:dev m4 make mktemp module-init-tools modutils patch
-[DEP] perl5 sed sysfiles tar util-linux
+[DEP] 00-dirtree alsa-driver bash2 binutils btsco bzip2 coreutils
+[DEP] diffutils e2fsprogs findutils gatos-km gawk gcc34 gcc34:dev glibc23
+[DEP] glibc23:dev grep gzip linux-drm linux26-header:dev m4 make mktemp
+[DEP] module-init-tools modutils net-tools patch perl5 rivatv sed slmodem
+[DEP] sysfiles tar tpctl util-linux
+
+[PROVIDES] mkinitrd
 

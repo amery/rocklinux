@@ -20,15 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104651593 Sun Jan  2 08:39:53 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110130648 Sun Mar  6 18:37:28 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libjpeg.log
+[LOGS] 5-libjpeg.log 9-libjpeg.log
 
-[BUILDTIME] 3351 (5)
+[BUILDTIME] 3956 (9)
 [SIZE] 0.21 MB, 19 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep make mktemp sed sysfiles tar
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep make mktemp net-tools sed
+[DEP] sysfiles tar
+
+[PROVIDES] cjpeg djpeg jpegtran libjpeg.a libjpeg.so rdjpgcom wrjpgcom
 

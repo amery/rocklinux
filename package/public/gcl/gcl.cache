@@ -20,18 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104795499 Tue Jan  4 00:38:19 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110896096 Tue Mar 15 15:14:56 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gcl.log
+[LOGS] 5-gcl.log 9-gcl.log
 
-[BUILDTIME] 21597 (5)
-[SIZE] 7.62 MB, 77 files
+[BUILDTIME] 21617 (9)
+[SIZE] 7.62 MB, 78 files
 
 [DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils diffutils emacs
 [DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev gmp
 [DEP] gmp:dev grep linux26-header:dev make mktemp ncurses:dev net-tools
 [DEP] perl5 readline readline:dev sed sysfiles tar tcl tcl:dev tetex
 [DEP] texinfo tk tk:dev xfree86 xfree86:dev
+
+[PROVIDES] gcl
 

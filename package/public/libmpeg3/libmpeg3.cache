@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104671700 Sun Jan  2 14:15:00 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110155135 Mon Mar  7 01:25:35 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libmpeg3.log
+[LOGS] 5-libmpeg3.log 9-libmpeg3.log
 
-[BUILDTIME] 1905 (5)
+[BUILDTIME] 2373 (9)
 [SIZE] 0.47 MB, 9 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp nasm patch
 [DEP] sed sysfiles tar
+
+[PROVIDES] libmpeg3.a mpeg3cat mpeg3dump mpeg3toc
 

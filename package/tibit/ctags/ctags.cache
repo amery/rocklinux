@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104657780 Sun Jan  2 10:23:00 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110138687 Sun Mar  6 20:51:27 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ctags.log
+[LOGS] 5-ctags.log 9-ctags.log
 
-[BUILDTIME] 1727 (5)
+[BUILDTIME] 2258 (9)
 [SIZE] 0.16 MB, 10 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] sed sysfiles tar
+[DEP] net-tools sed sysfiles tar
+
+[PROVIDES] ctags etags
 

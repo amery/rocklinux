@@ -20,19 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104672637 Sun Jan  2 14:30:37 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110156332 Mon Mar  7 01:45:32 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ecore.log
+[LOGS] 5-ecore.log 9-ecore.log
 
-[BUILDTIME] 8822 (5)
-[SIZE] 1.01 MB, 67 files
+[BUILDTIME] 11952 (9)
+[SIZE] 1.05 MB, 66 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils directfb directfb:dev edb edb:dev eet eet:dev evas
 [DEP] evas:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev glibc23
 [DEP] glibc23:dev grep imlib2 libjpeg libjpeg:dev libpng libpng:dev libtool
-[DEP] linux26-header:dev m4 make mktemp openssl openssl:dev perl5 pkgconfig
-[DEP] sed sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+[DEP] linux26-header:dev m4 make mktemp net-tools openssl openssl:dev perl5
+[DEP] pkgconfig sed sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] ecore-config ecore_evas_test ecore_test libecore.a
+[PROVIDES] libecore.so libecore_con.a libecore_con.so libecore_config.a
+[PROVIDES] libecore_config.so libecore_evas.a libecore_evas.so
+[PROVIDES] libecore_fb.a libecore_fb.so libecore_ipc.a libecore_ipc.so
+[PROVIDES] libecore_job.a libecore_job.so libecore_txt.a libecore_txt.so
+[PROVIDES] libecore_x.a libecore_x.so
 

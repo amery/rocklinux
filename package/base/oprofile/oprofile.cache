@@ -20,17 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104684428 Sun Jan  2 17:47:08 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110169908 Mon Mar  7 05:31:48 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-oprofile.log
+[LOGS] 5-oprofile.log 9-oprofile.log
 
-[BUILDTIME] 11074 (5)
-[SIZE] 3.60 MB, 90 files
+[BUILDTIME] 11679 (9)
+[SIZE] 3.61 MB, 90 files
 
 [DEP] 00-dirtree bash2 binutils binutils:dev bzip2 coreutils diffutils
 [DEP] docbookx expat findutils freetype gawk gcc34 gcc34:dev glibc23
 [DEP] glibc23:dev grep libpng libxslt linux26-header:dev make mktemp
-[DEP] patch popt popt:dev qt qt:dev sed sysfiles tar util-linux xfree86
+[DEP] net-tools patch popt popt:dev qt qt:dev sed sysfiles tar util-linux
+[DEP] xfree86
+
+[PROVIDES] op_help opannotate oparchive opcontrol opgprof opreport
+[PROVIDES] oprof_start oprofiled opstack pulpstonec pulpstoned pulpstoner
 

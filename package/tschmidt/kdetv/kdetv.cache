@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104797482 Tue Jan  4 01:11:22 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110898768 Tue Mar 15 15:59:28 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-kdetv.log
+[LOGS] 5-kdetv.log 9-kdetv.log
 
-[BUILDTIME] 22742 (5)
+[BUILDTIME] 22668 (9)
 [SIZE] 1.92 MB, 121 files
 
 [DEP] 00-dirtree alsa alsa:dev arts bash2 binutils bzip2 coreutils
@@ -36,4 +36,6 @@
 [DEP] libjpeg:dev libpng libpng:dev libzvbi libzvbi:dev linux26-header:dev
 [DEP] make mktemp net-tools pcre pcre:dev perl5 qt qt:dev sed sysfiles
 [DEP] tar util-linux vim xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] kdetv kv4lsetup libkdetv.so libkvideoio.so
 

@@ -20,19 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104717026 Mon Jan  3 02:50:26 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110206882 Mon Mar  7 15:48:02 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-kiosktool.log
+[LOGS] 5-kiosktool.log 9-kiosktool.log
 
-[BUILDTIME] 9124 (5)
+[BUILDTIME] 9494 (9)
 [SIZE] 1.00 MB, 43 files
 
 [DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils expat fam
-[DEP] fam:dev findutils freetype freetype:dev gcc34 gcc34:dev gettext
+[DEP] fam:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev gettext
 [DEP] glibc23 glibc23:dev grep kdebase kdelibs kdelibs:dev libart_lgpl23
-[DEP] libart_lgpl23:dev libjpeg libpng libpng:dev linux26-header:dev
-[DEP] make mktemp perl5 qt qt:dev sed sysfiles tar util-linux vim xfree86
-[DEP] xfree86:dev zlib:dev
+[DEP] libart_lgpl23:dev libjpeg libpng libpng:dev linux26-header:dev make
+[DEP] mktemp net-tools perl5 qt qt:dev sed sysfiles tar util-linux vim
+[DEP] xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] kiosktool kiosktool-kdedirs
 

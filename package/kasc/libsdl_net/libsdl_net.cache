@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104692124 Sun Jan  2 19:55:24 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110179227 Mon Mar  7 08:07:07 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libsdl_net.log
+[LOGS] 5-libsdl_net.log 9-libsdl_net.log
 
-[BUILDTIME] 1452 (5)
-[SIZE] 0.02 MB, 9 files
+[BUILDTIME] 1808 (9)
+[SIZE] 0.03 MB, 9 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils gcc34 gcc34:dev glibc23 glibc23:dev grep libsdl
-[DEP] libsdl:dev linux26-header:dev make mktemp nas perl5 sed sysfiles
-[DEP] tar texinfo xfree86
+[DEP] libsdl:dev linux26-header:dev make mktemp nas net-tools perl5 sed
+[DEP] sysfiles tar texinfo xfree86
+
+[PROVIDES] libSDL_net.a libSDL_net.so
 

@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104791203 Mon Jan  3 23:26:43 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110662086 Sat Mar 12 22:14:46 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-opensc.log
+[LOGS] 5-opensc.log 9-opensc.log
 
-[BUILDTIME] 13897 (5)
+[BUILDTIME] 28414 (9)
 [SIZE] 0.93 MB, 81 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
@@ -35,4 +35,10 @@
 [DEP] mozilla ncurses:dev net-tools openct openct:dev openldap openldap:dev
 [DEP] openssl openssl:dev pam pam:dev pcsc-lite pcsc-lite:dev pkgconfig
 [DEP] readline readline:dev sed sysfiles tar util-linux xfree86 xfree86:dev
+
+[PROVIDES] cardos-info cryptoflex-tool libopensc.a libopensc.so
+[PROVIDES] libpkcs15init.a libpkcs15init.so libscam.a libscam.so
+[PROVIDES] libscconf.a libscconf.so libscldap.a libscldap.so opensc-config
+[PROVIDES] opensc-explorer opensc-tool pkcs11-tool pkcs15-crypt pkcs15-init
+[PROVIDES] pkcs15-tool
 

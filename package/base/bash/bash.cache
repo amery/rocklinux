@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104640788 Sun Jan  2 05:39:48 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110124206 Sun Mar  6 16:50:06 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 1-bash2.log 3-bash2.log
+[LOGS] 1-bash2.log 3-bash2.log 9-bash2.log
 
-[BUILDTIME] 5853 (3)
+[BUILDTIME] 6456 (9)
 [SIZE] 1.05 MB, 14 files
 
 [DEP] 00-dirtree binutils bzip2 coreutils diffutils findutils gawk gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] ncurses:dev patch sed sysfiles tar texinfo util-linux
+[DEP] ncurses:dev net-tools patch sed sysfiles tar texinfo util-linux
+
+[PROVIDES] bash bash2 bashbug sh which
 

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104666435 Sun Jan  2 12:47:15 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110148891 Sun Mar  6 23:41:31 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-procmail.log
+[LOGS] 5-procmail.log 9-procmail.log
 
-[BUILDTIME] 1942 (5)
+[BUILDTIME] 2536 (9)
 [SIZE] 0.22 MB, 16 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep libnet:dev linux26-header:dev make mktemp
 [DEP] sed sendmail sysfiles tar
+
+[PROVIDES] formail lockfile mailstat procmail
 

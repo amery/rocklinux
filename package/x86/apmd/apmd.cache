@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104686557 Sun Jan  2 18:22:37 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110161746 Mon Mar  7 03:15:46 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-apmd.log
+[LOGS] 5-apmd.log 9-apmd.log
 
-[BUILDTIME] 1061 (5)
-[SIZE] 0.10 MB, 17 files
+[BUILDTIME] 1459 (9)
+[SIZE] 0.12 MB, 18 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp patch sed
 [DEP] sysfiles tar xfree86 xfree86:dev
+
+[PROVIDES] apm apmd apmsleep libapm.a on_ac_power xapm
 

@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104661540 Sun Jan  2 11:25:40 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110143054 Sun Mar  6 22:04:14 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-glibmm.log
+[LOGS] 5-glibmm.log 9-glibmm.log
 
-[BUILDTIME] 9988 (5)
+[BUILDTIME] 10763 (9)
 [SIZE] 0.54 MB, 60 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev grep libsigc++
-[DEP] libsigc++:dev linux26-header:dev m4 make mktemp perl5 pkgconfig
-[DEP] sed sysfiles tar util-linux
+[DEP] libsigc++:dev linux26-header:dev m4 make mktemp net-tools perl5
+[DEP] pkgconfig sed sysfiles tar util-linux
+
+[PROVIDES] libglibmm-2.4.so libglibmm_generate_extra_defs-2.4.so
 

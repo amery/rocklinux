@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104747861 Mon Jan  3 11:24:21 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110305082 Tue Mar  8 19:04:42 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-netkit-telnet.log
+[LOGS] 5-netkit-telnet.log 9-netkit-telnet.log
 
-[BUILDTIME] 1704 (5)
-[SIZE] 0.16 MB, 12 files
+[BUILDTIME] 1930 (9)
+[SIZE] 0.17 MB, 12 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp ncurses:dev
 [DEP] patch sed sysfiles tar
+
+[PROVIDES] in.telnetd telnet
 

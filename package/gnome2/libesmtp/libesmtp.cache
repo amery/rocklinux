@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104688495 Sun Jan  2 18:54:55 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110174960 Mon Mar  7 06:56:00 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libesmtp.log
+[LOGS] 5-libesmtp.log 9-libesmtp.log
 
-[BUILDTIME] 3220 (5)
+[BUILDTIME] 3626 (9)
 [SIZE] 0.08 MB, 14 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
 [DEP] gcc34:dev glib glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp openssl openssl:dev sed sysfiles tar util-linux
+[DEP] mktemp net-tools openssl openssl:dev sed sysfiles tar util-linux
+
+[PROVIDES] libesmtp-config libesmtp.a libesmtp.so
 

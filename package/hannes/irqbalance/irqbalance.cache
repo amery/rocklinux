@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104738848 Mon Jan  3 08:54:08 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110232184 Mon Mar  7 22:49:44 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-irqbalance.log
+[LOGS] 5-irqbalance.log 9-irqbalance.log
 
-[BUILDTIME] 1071 (5)
+[BUILDTIME] 1293 (9)
 [SIZE] 0.03 MB, 11 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp sed
 [DEP] sysfiles tar
+
+[PROVIDES] irqbalance
 

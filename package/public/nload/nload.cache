@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104728162 Mon Jan  3 05:56:02 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110219034 Mon Mar  7 19:10:34 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-nload.log
+[LOGS] 5-nload.log 9-nload.log
 
-[BUILDTIME] 2280 (5)
+[BUILDTIME] 2549 (9)
 [SIZE] 0.15 MB, 8 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep gzip linux26-header:dev make
-[DEP] mktemp ncurses:dev patch sed sysfiles tar util-linux
+[DEP] mktemp ncurses:dev net-tools patch sed sysfiles tar util-linux
+
+[PROVIDES] nload
 

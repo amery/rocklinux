@@ -20,18 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104671962 Sun Jan  2 14:19:22 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110155453 Mon Mar  7 01:30:53 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-graphviz.log
+[LOGS] 5-graphviz.log 9-graphviz.log
 
-[BUILDTIME] 24855 (5)
+[BUILDTIME] 25711 (9)
 [SIZE] 3.88 MB, 375 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils expat expat:dev
 [DEP] findutils flex flex:dev freetype freetype:dev gawk gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep libgd libgd:dev libjpeg libjpeg:dev libpng
-[DEP] libpng:dev linux26-header:dev m4 make mktemp sed sysfiles tar tcl
-[DEP] tcl:dev tk tk:dev util-linux xfree86 xfree86:dev zlib:dev
+[DEP] libpng:dev linux26-header:dev m4 make mktemp net-tools sed sysfiles
+[DEP] tar tcl tcl:dev tk tk:dev util-linux xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] acyclic bcomps ccomps circo dijkstra dot dot2gxl dotneato-config
+[PROVIDES] dotty fdp gc gvcolor gvpack gvpr gxl2dot lefty lneato neato
+[PROVIDES] nop prune sccmap tred twopi unflatten
 

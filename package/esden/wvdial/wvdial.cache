@@ -20,62 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104912607 Wed Jan  5 09:10:07 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110224498 Mon Mar  7 20:41:38 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-wvdial.err
+[LOGS] 5-wvdial.log 9-wvdial.log
 
-[BUILDTIME] 1245 (5)
+[BUILDTIME] 2086 (9)
+[SIZE] 0.19 MB, 15 files
 
-[5-ERROR] wvdialer.cc:1227: error: 'struct WvDialer::<anonymous>' has no member named 'where_pppd'
-[5-ERROR] wvdialer.cc:1234: error: 'struct WvDialer::<anonymous>' has no member named 'dialmessage1'
-[5-ERROR] wvdialer.cc:1234: error: 'struct WvDialer::<anonymous>' has no member named 'dialmessage2'
-[5-ERROR] wvdialer.cc:1236: error: `WvLog' has not been declared
-[5-ERROR] wvdialer.cc:1236: error: `Notice' undeclared (first use this function)
-[5-ERROR] wvdialer.cc:1236: error: `log' undeclared (first use this function)
-[5-ERROR] wvdialer.cc:1238: error: `WvLog' has not been declared
-[5-ERROR] wvdialer.cc:1238: error: 'struct WvDialer::<anonymous>' has no member named 'dialmessage1'
-[5-ERROR] wvdialer.cc:1239: error: 'struct WvDialer::<anonymous>' has no member named 'dialmessage2'
-[5-ERROR] wvdialer.cc:1240: error: `WvLog' has not been declared
-[5-ERROR] wvdialer.cc:1240: error: 'struct WvDialer::<anonymous>' has no member named 'dialmessage2'
-[5-ERROR] wvdialer.cc:1241: error: `WvLog' has not been declared
-[5-ERROR] wvdialer.cc:1243: error: 'struct WvDialer::<anonymous>' has no member named 'homepage'
-[5-ERROR] wvdialer.cc:1244: error: `WvLog' has not been declared
-[5-ERROR] wvdialer.cc:1245: error: 'struct WvDialer::<anonymous>' has no member named 'provider'
-[5-ERROR] wvdialer.cc:1245: error: 'struct WvDialer::<anonymous>' has no member named 'provider'
-[5-ERROR] wvdialer.cc:1246: error: 'struct WvDialer::<anonymous>' has no member named 'homepage'
-[5-ERROR] wvdialer.cc:1251: error: `WvLog' has not been declared
-[5-ERROR] wvdialer.cc:1256: error: 'struct WvDialer::<anonymous>' has no member named 'login'
-[5-ERROR] wvdialer.cc:1256: error: 'struct WvDialer::<anonymous>' has no member named 'password'
-[5-ERROR] wvdialer.cc:1256: error: 'struct WvDialer::<anonymous>' has no member named 'remote'
-[5-ERROR] wvdialer.cc:1270: error: `ppp_pipe' undeclared (first use this function)
-[5-ERROR] wvdialer.cc:1270: error: `WvPipe' has not been declared
-[5-ERROR] wvdialer.cc:1271: error: `modem' undeclared (first use this function)
-[5-ERROR] wvdialer.cc:1273: error: `WvLog' has not been declared
-[5-ERROR] wvdialer.cc: In member function `void WvDialer::async_waitprompt()':
-[5-ERROR] wvdialer.cc:1288: error: `modem' undeclared (first use this function)
-[5-ERROR] wvdialer.cc:1290: error: `err' undeclared (first use this function)
-[5-ERROR] wvdialer.cc:1300: error: `log' undeclared (first use this function)
-[5-ERROR] wvdialer.cc: In member function `int WvDialer::wait_for_modem(char**, int, bool, bool)':
-[5-ERROR] wvdialer.cc:1342: error: `modem' undeclared (first use this function)
-[5-ERROR] wvdialer.cc:1358: error: `replace_char' undeclared (first use this function)
-[5-ERROR] wvdialer.cc:1363: error: `modemrx' undeclared (first use this function)
-[5-ERROR] wvdialer.cc:1365: error: `strlwr' undeclared (first use this function)
-[5-ERROR] make: *** [wvdialer.o] Error 1
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 wvdial:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 wvdial:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 wvdial:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <wvdial:doc> Creating flist file ...
-[5-ERROR] <wvdial:doc> Creating package dependencies file ...
-[5-ERROR] <wvdial:doc> Creating md5sum and cksum files ...
-[5-ERROR] <wvdial:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building wvdial=wvdial.
+[DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils fam findutils gawk
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
+[DEP] mktemp openslp openssl ppp sed sysfiles tar wvstreams wvstreams:dev
+[DEP] zlib
+
+[PROVIDES] wvdial wvdialconf
 

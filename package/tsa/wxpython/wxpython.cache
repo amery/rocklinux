@@ -20,18 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104686518 Sun Jan  2 18:21:58 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110172452 Mon Mar  7 06:14:12 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-wxpython.log
+[LOGS] 5-wxpython.log 9-wxpython.log
 
-[BUILDTIME] 27232 (5)
+[BUILDTIME] 27255 (9)
 [SIZE] 13.98 MB, 545 files
 
 [DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils findutils
-[DEP] gawk gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev grep gtk+
-[DEP] gtk+:dev libjpeg libpng libtiff libxml2 libxslt linux26-header:dev
-[DEP] mktemp numpy pango pango:dev pkgconfig python python:dev sed sysfiles
-[DEP] tar wxwidgets wxwidgets:dev xfree86 xfree86:dev zlib:dev
+[DEP] gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev grep gtk+ gtk+:dev
+[DEP] libjpeg libpng libtiff libxml2 libxslt linux26-header:dev mktemp
+[DEP] numpy pango pango:dev pkgconfig python python:dev sed sysfiles tar
+[DEP] wxwidgets wxwidgets:dev xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] helpviewer img2png img2py img2xpm pyalacarte pyalamode pycrust
+[PROVIDES] pyshell pywrap pywxrc xrced
 

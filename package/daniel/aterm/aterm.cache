@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104664674 Sun Jan  2 12:17:54 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110146571 Sun Mar  6 23:02:51 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-aterm.log
+[LOGS] 5-aterm.log 9-aterm.log
 
-[BUILDTIME] 1761 (5)
-[SIZE] 0.14 MB, 8 files
+[BUILDTIME] 2280 (9)
+[SIZE] 0.15 MB, 8 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep libjpeg libjpeg:dev libpng
-[DEP] libpng:dev linux26-header:dev make mktemp sed sysfiles tar xfree86
-[DEP] xfree86:dev zlib:dev
+[DEP] libpng:dev linux26-header:dev make mktemp net-tools sed sysfiles
+[DEP] tar xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] aterm
 

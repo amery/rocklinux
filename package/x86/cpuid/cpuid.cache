@@ -20,15 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104645495 Sun Jan  2 06:58:15 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110121485 Sun Mar  6 16:04:45 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-cpuid.log
+[LOGS] 5-cpuid.log 9-cpuid.log
 
-[BUILDTIME] 650 (5)
+[BUILDTIME] 1254 (9)
 [SIZE] 0.03 MB, 7 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep make mktemp sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep make mktemp sed sysfiles tar
+
+[PROVIDES] cpuid
 

@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104724693 Mon Jan  3 04:58:13 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110215011 Mon Mar  7 18:03:31 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-dvd+rwtools.log
+[LOGS] 5-dvd+rwtools.log 9-dvd+rwtools.log
 
-[BUILDTIME] 1800 (5)
+[BUILDTIME] 2086 (9)
 [SIZE] 0.16 MB, 12 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp sed
 [DEP] sysfiles tar
+
+[PROVIDES] dvd+rw-booktype dvd+rw-format dvd+rw-mediainfo dvd-ram-control
+[PROVIDES] growisofs
 

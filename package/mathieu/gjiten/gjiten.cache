@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104700867 Sun Jan  2 22:21:07 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110189291 Mon Mar  7 10:54:51 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gjiten.log
+[LOGS] 5-gjiten.log 9-gjiten.log
 
-[BUILDTIME] 3065 (5)
+[BUILDTIME] 3451 (9)
 [SIZE] 7.29 MB, 30 files
 
 [DEP] 00-dirtree alsa atk atk:dev audiofile bash2 battfink binutils bzip2
@@ -38,6 +38,9 @@
 [DEP] libbonobo:dev libbonoboui libbonoboui:dev libglade libglade:dev
 [DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeui
 [DEP] libgnomeui:dev libjpeg libxml2 libxml2:dev linux26-header:dev make
-[DEP] mktemp openssl orbit2 orbit2:dev pango pango:dev perl5 pkgconfig popt
-[DEP] popt:dev scrollkeeper sed sysfiles tar util-linux xfree86 zlib:dev
+[DEP] mktemp net-tools openssl orbit2 orbit2:dev pango pango:dev perl5
+[DEP] pkgconfig popt popt:dev scrollkeeper sed sysfiles tar util-linux
+[DEP] xfree86 zlib:dev
+
+[PROVIDES] gjiten
 

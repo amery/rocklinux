@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104726127 Mon Jan  3 05:22:07 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110216683 Mon Mar  7 18:31:23 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-rte.log
+[LOGS] 5-rte.log 9-rte.log
 
-[BUILDTIME] 12851 (5)
+[BUILDTIME] 13272 (9)
 [SIZE] 0.69 MB, 15 files
 
 [DEP] 00-dirtree autoconf automake17 bash2 binutils bzip2 coreutils
-[DEP] diffutils divx4linux:dev doxygen findutils gcc34 gcc34:dev gettext
-[DEP] glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp patch
-[DEP] perl5 sed sysfiles tar util-linux
+[DEP] diffutils divx4linux:dev doxygen findutils gawk gcc34 gcc34:dev
+[DEP] gettext glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp
+[DEP] net-tools patch perl5 sed sysfiles tar util-linux
+
+[PROVIDES] librte.a librte.so
 

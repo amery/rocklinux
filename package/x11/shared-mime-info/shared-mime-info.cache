@@ -20,18 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104752827 Mon Jan  3 12:47:07 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110184032 Mon Mar  7 09:27:12 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-shared-mime-info.log
+[LOGS] 5-shared-mime-info.log 9-shared-mime-info.log
 
-[BUILDTIME] 1758 (5)
+[BUILDTIME] 1977 (9)
 [SIZE] 1.03 MB, 418 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils cpan-xml-parser
-[DEP] diffutils findutils gawk gcc34 gcc34:dev gettext glib glib:dev
-[DEP] glibc23 glibc23:dev grep libxml2 libxml2:dev linux26-header:dev
-[DEP] make mktemp net-tools perl5 pkgconfig rox-filer sed sysfiles tar
-[DEP] util-linux zlib:dev
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cpan-xml-parser diffutils
+[DEP] findutils gcc34 gcc34:dev gettext glib glib:dev glibc23 glibc23:dev
+[DEP] grep libxml2 libxml2:dev linux26-header:dev make mktemp net-tools
+[DEP] perl5 pkgconfig rox-filer sed sysfiles tar util-linux zlib:dev
+
+[PROVIDES] update-mime-database
 

@@ -20,22 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104732440 Mon Jan  3 07:07:20 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110223668 Mon Mar  7 20:27:48 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-k3b.log
+[LOGS] 5-k3b.log 9-k3b.log
 
-[BUILDTIME] 69942 (5)
-[SIZE] 5.76 MB, 145 files
+[BUILDTIME] 70359 (9)
+[SIZE] 5.77 MB, 145 files
 
-[DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev bash2
-[DEP] binutils bzip2 coreutils diffutils esound esound:dev expat fam
-[DEP] fam:dev findutils flac flac:dev freetype freetype:dev gawk gcc34
-[DEP] gcc34:dev gettext glib glib:dev glibc23 glibc23:dev grep id3lib
-[DEP] id3lib:dev kaffeine kdebase kdelibs kdelibs:dev kdelibs:doc
-[DEP] libart_lgpl23 libart_lgpl23:dev libjpeg libpng libpng:dev
+[DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev
+[DEP] bash2 binutils bzip2 coreutils diffutils esound esound:dev expat
+[DEP] fam fam:dev findutils flac flac:dev freetype freetype:dev gawk
+[DEP] gcc34 gcc34:dev gettext glib glib:dev glibc23 glibc23:dev grep
+[DEP] id3lib id3lib:dev jack jack:dev kaffeine kdebase kdelibs kdelibs:dev
+[DEP] kdelibs:doc libart_lgpl23 libart_lgpl23:dev libjpeg libpng libpng:dev
 [DEP] libsamplerate libsamplerate:dev libxml2 linux26-header:dev mad
-[DEP] mad:dev make mktemp nas ogg-vorbis ogg-vorbis:dev perl5 qt qt:dev
-[DEP] sed sysfiles tar util-linux vim xfree86 xfree86:dev zlib:dev
+[DEP] mad:dev make mktemp nas net-tools ogg-vorbis ogg-vorbis:dev perl5 qt
+[DEP] qt:dev sed sysfiles tar util-linux vim xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] k3b k3bsetup libk3baudiometainforenamerplugin.so libk3bcore.so
+[PROVIDES] libk3bdevice.so libk3bplugin.so libk3bproject.so libk3btools.so
 

@@ -20,18 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104656089 Sun Jan  2 09:54:49 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110136569 Sun Mar  6 20:16:09 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-cups.log
+[LOGS] 5-cups.log 9-cups.log
 
-[BUILDTIME] 9788 (5)
-[SIZE] 2.91 MB, 460 files
+[BUILDTIME] 10654 (9)
+[SIZE] 2.96 MB, 466 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep groff libjpeg libjpeg:dev
 [DEP] libpng libpng:dev libtiff libtiff:dev linux26-header:dev m4 make
-[DEP] mktemp openslp openslp:dev openssl openssl:dev pam pam:dev patch
-[DEP] sed sysfiles tar util-linux zlib:dev
+[DEP] mktemp net-tools openslp openslp:dev openssl openssl:dev pam pam:dev
+[DEP] patch sed sysfiles tar util-linux zlib:dev
+
+[PROVIDES] accept_cups admin.cgi cancel_cups classes.cgi cups-config
+[PROVIDES] cupsaddsmb cupsd cupstestppd disable_cups enable_cups jobs.cgi
+[PROVIDES] libcups.a libcups.so libcupsimage.a libcupsimage.so lp_cups
+[PROVIDES] lpadmin_cups lpc_cups lpinfo_cups lpoptions_cups lppasswd_cups
+[PROVIDES] lpq_cups lpr_cups lpremove_cups lprm_cups lpstat_cups
+[PROVIDES] printers.cgi reject_cups
 

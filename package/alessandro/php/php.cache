@@ -20,17 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104737744 Mon Jan  3 08:35:44 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110230416 Mon Mar  7 22:20:16 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-php.log
+[LOGS] 5-php.log 9-php.log
 
-[BUILDTIME] 17186 (5)
-[SIZE] 3.82 MB, 169 files
+[BUILDTIME] 19147 (9)
+[SIZE] 5.31 MB, 169 files
 
-[DEP] 00-dirtree apache apache:apr apache:dev bash2 binutils bison bzip2
-[DEP] bzip2:dev coreutils diffutils findutils flex flex:dev gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp
-[DEP] ncurses ncurses:dev patch perl5 sed sysfiles tar zlib:dev
+[DEP] 00-dirtree apache apache:apr apache:dev bash2 binutils bison
+[DEP] bzip2 bzip2:dev coreutils diffutils expat findutils flex flex:dev
+[DEP] freetype gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libpng libxml2
+[DEP] libxml2:dev libxslt libxslt:dev linux26-header:dev m4 make mktemp
+[DEP] ncurses ncurses:dev net-tools openssl pam patch perl5 pine:dev qt
+[DEP] qt:dev sed sysfiles tar xfree86 zlib:dev
+
+[PROVIDES] pear php php-config phpextdist phpize
 

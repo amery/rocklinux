@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104780740 Mon Jan  3 20:32:20 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110390986 Wed Mar  9 18:56:26 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-fnlib.log
+[LOGS] 5-fnlib.log 9-fnlib.log
 
-[BUILDTIME] 2520 (5)
+[BUILDTIME] 5371 (9)
 [SIZE] 0.51 MB, 264 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
@@ -35,4 +35,6 @@
 [DEP] libtiff:dev libungif libungif:dev linux26-header:dev make mktemp
 [DEP] net-tools perl5 sed sysfiles tar texinfo xfree86 xfree86:dev zlib
 [DEP] zlib:dev
+
+[PROVIDES] libFnlib.a libFnlib.so
 

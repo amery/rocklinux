@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104691586 Sun Jan  2 19:46:26 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110178597 Mon Mar  7 07:56:37 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-pkgview.log
+[LOGS] 5-pkgview.log 9-pkgview.log
 
-[BUILDTIME] 1814 (5)
+[BUILDTIME] 2194 (9)
 [SIZE] 0.20 MB, 57 files
 
 [DEP] 00-dirtree alsa atk atk:dev audiofile autoconf bash2 binutils bzip2
@@ -36,7 +36,9 @@
 [DEP] grep gtk+ gtk+:dev libart_lgpl23 libart_lgpl23:dev libbonobo
 [DEP] libbonobo:dev libbonoboui libbonoboui:dev libgnome libgnome:dev
 [DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev libjpeg
-[DEP] libxml2 libxml2:dev linux26-header:dev make mktemp openssl orbit2
-[DEP] pango pango:dev perl5 pkgconfig popt popt:dev sed sysfiles tar
-[DEP] texinfo util-linux xfree86 zapping zlib:dev
+[DEP] libxml2 libxml2:dev linux26-header:dev make mktemp net-tools openssl
+[DEP] orbit2 pango pango:dev perl5 pkgconfig popt popt:dev sed sysfiles
+[DEP] tar texinfo util-linux xfree86 zapping zlib:dev
+
+[PROVIDES] gnome-pkgview
 

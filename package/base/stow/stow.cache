@@ -20,15 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104648452 Sun Jan  2 07:47:32 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110127242 Sun Mar  6 17:40:42 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-stow.log
+[LOGS] 5-stow.log 9-stow.log
 
-[BUILDTIME] 757 (5)
+[BUILDTIME] 1358 (9)
 [SIZE] 0.09 MB, 9 files
 
-[DEP] 00-dirtree bash2 bzip2 coreutils diffutils findutils gcc34 grep
-[DEP] make mktemp sed sysfiles tar texinfo
+[DEP] 00-dirtree bash2 bzip2 coreutils diffutils findutils gawk gcc34
+[DEP] grep make mktemp net-tools sed sysfiles tar texinfo
+
+[PROVIDES] stow
 

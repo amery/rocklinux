@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104760882 Mon Jan  3 15:01:22 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110319665 Tue Mar  8 23:07:45 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-nssdb.log
+[LOGS] 5-nssdb.log 9-nssdb.log
 
-[BUILDTIME] 2177 (5)
+[BUILDTIME] 2370 (9)
 [SIZE] 0.73 MB, 14 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 bdb33:dev binutils bison bzip2
 [DEP] coreutils diffutils findutils gcc34 gcc34:dev gettext glibc23
 [DEP] glibc23:dev grep linux26-header:dev make mktemp net-tools patch
 [DEP] perl5 sed sysfiles tar texinfo
+
+[PROVIDES] libnss_db-2.2.3.so libnss_db.so makedb
 

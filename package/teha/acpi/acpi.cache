@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104711836 Mon Jan  3 01:23:56 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110201311 Mon Mar  7 14:15:11 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-acpi.log
+[LOGS] 5-acpi.log 9-acpi.log
 
-[BUILDTIME] 1193 (5)
+[BUILDTIME] 1518 (9)
 [SIZE] 0.02 MB, 7 files
 
 [DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils diffutils
 [DEP] findutils gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp perl5 sed sysfiles tar texinfo util-linux
+[DEP] make mktemp net-tools perl5 sed sysfiles tar texinfo util-linux
+
+[PROVIDES] acpi
 

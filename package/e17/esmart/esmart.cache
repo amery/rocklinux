@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104672949 Sun Jan  2 14:35:49 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110156775 Mon Mar  7 01:52:55 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-esmart.log
+[LOGS] 5-esmart.log 9-esmart.log
 
-[BUILDTIME] 5684 (5)
-[SIZE] 0.16 MB, 34 files
+[BUILDTIME] 7406 (9)
+[SIZE] 0.17 MB, 34 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils directfb directfb:dev ecore ecore:dev edb edb:dev edje
@@ -35,6 +35,13 @@
 [DEP] evas:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep imlib2 imlib2:dev libjpeg libjpeg:dev
 [DEP] libpng libpng:dev libtool libtool:dev linux26-header:dev m4 make
-[DEP] mktemp openssl perl5 sed sysfiles tar util-linux xfree86 xfree86:dev
-[DEP] zlib:dev
+[DEP] mktemp net-tools openssl perl5 sed sysfiles tar util-linux xfree86
+[DEP] xfree86:dev zlib:dev
+
+[PROVIDES] esmart-config esmart_file_dialog_test esmart_test
+[PROVIDES] libesmart_container.a libesmart_container.so
+[PROVIDES] libesmart_draggies.a libesmart_draggies.so
+[PROVIDES] libesmart_file_dialog.a libesmart_file_dialog.so
+[PROVIDES] libesmart_text_entry.a libesmart_text_entry.so libesmart_thumb.a
+[PROVIDES] libesmart_thumb.so libesmart_trans_x11.a libesmart_trans_x11.so
 

@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104752382 Mon Jan  3 12:39:42 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110310117 Tue Mar  8 20:28:37 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-snownews.log
+[LOGS] 5-snownews.log 9-snownews.log
 
-[BUILDTIME] 1537 (5)
+[BUILDTIME] 1850 (9)
 [SIZE] 0.21 MB, 21 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34
 [DEP] gcc34:dev gettext glibc23 glibc23:dev grep libxml2 libxml2:dev
 [DEP] linux26-header:dev make mktemp ncurses ncurses:dev sed sysfiles
 [DEP] tar zlib zlib:dev
+
+[PROVIDES] opml2snow snownews
 

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104697282 Sun Jan  2 21:21:22 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110185192 Mon Mar  7 09:46:32 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-xvid.log
+[LOGS] 5-xvid.log 9-xvid.log
 
-[BUILDTIME] 3639 (5)
-[SIZE] 0.54 MB, 7 files
+[BUILDTIME] 4002 (9)
+[SIZE] 0.55 MB, 7 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] nasm sed sysfiles tar util-linux
+[DEP] nasm net-tools sed sysfiles tar util-linux
+
+[PROVIDES] libxvidcore.a
 

@@ -20,21 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104760221 Mon Jan  3 14:50:21 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110318877 Tue Mar  8 22:54:37 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-kdebindings.log
+[LOGS] 5-kdebindings.log 9-kdebindings.log
 
-[BUILDTIME] 91823 (5)
-[SIZE] 16.87 MB, 71 files
+[BUILDTIME] 92331 (9)
+[SIZE] 16.88 MB, 72 files
 
-[DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils expat fam
-[DEP] fam:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev gettext
-[DEP] glib12 glib12:dev glibc23 glibc23:dev grep gtk+12 gtk+12:dev
-[DEP] kdelibs kdelibs:dev kdesdk libart_lgpl23 libart_lgpl23:dev
-[DEP] libjpeg libjpeg:dev libpng libpng:dev linux26-header:dev make
-[DEP] mktemp net-tools openssl:dev patch pcre pcre:dev perl5 pixieplus
-[DEP] qt qt:dev ruby sed ssleay-perlmod sysfiles tar util-linux xfree86
-[DEP] xfree86:dev zlib:dev
+[DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils expat
+[DEP] fam fam:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev
+[DEP] gettext glib12 glib12:dev glibc23 glibc23:dev grep gtk+12 gtk+12:dev
+[DEP] kdelibs kdelibs:dev kdesdk libart_lgpl23 libart_lgpl23:dev libjpeg
+[DEP] libjpeg:dev libpng libpng:dev linux26-header:dev make mktemp
+[DEP] net-tools openssl:dev patch pcre pcre:dev perl5 qt qt:dev ruby sed
+[DEP] ssleay-perlmod sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+
+[PROVIDES] jsaccess kjscmd krubyinit libkjsembed.so libsmokekde.so
+[PROVIDES] libsmokeqt.so qtrubyinit rbkdeapi rbkdesh rbqtapi rbqtsh rbuic
 

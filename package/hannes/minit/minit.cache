@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104738223 Mon Jan  3 08:43:43 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110231156 Mon Mar  7 22:32:36 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-minit.log
+[LOGS] 5-minit.log 9-minit.log
 
-[BUILDTIME] 1192 (5)
+[BUILDTIME] 1414 (9)
 [SIZE] 0.07 MB, 75 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils dietlibc dietlibc:dev
 [DEP] findutils gcc34 gcc34:dev glibc23 glibc23:dev grep make mktemp
 [DEP] patch sed sysfiles tar
+
+[PROVIDES] hard-reboot minit msvc pidfilehack write_proc
 

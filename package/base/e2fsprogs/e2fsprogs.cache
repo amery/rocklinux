@@ -20,16 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104641674 Sun Jan  2 05:54:34 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110232267 Mon Mar  7 22:51:07 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 3-e2fsprogs.log
+[LOGS] 3-e2fsprogs.log 9-e2fsprogs.log
 
-[BUILDTIME] 6448 (3)
-[SIZE] 2.64 MB, 101 files
+[BUILDTIME] 7359 (9)
+[SIZE] 2.65 MB, 101 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils
 [DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
-[DEP] gzip linux26-header:dev make mktemp patch sed sysfiles tar texinfo
+[DEP] gzip linux26-header:dev make mktemp net-tools patch sed sysfiles
+[DEP] tar texinfo
+
+[PROVIDES] badblocks blkid chattr compile_et debugfs dumpe2fs e2fsck
+[PROVIDES] e2image e2label filefrag findfs fsck fsck.ext2 fsck.ext3
+[PROVIDES] libblkid.a libblkid.so libcom_err.a libcom_err.so libe2p.a
+[PROVIDES] libe2p.so libext2fs.a libext2fs.so libss.a libss.so libuuid.a
+[PROVIDES] libuuid.so logsave lsattr mk_cmds mke2fs mkfs.ext2 mkfs.ext3
+[PROVIDES] mklost+found resize2fs tune2fs uuidgen
 

@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104652768 Sun Jan  2 08:59:28 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110132206 Sun Mar  6 19:03:26 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-minicom.log
+[LOGS] 5-minicom.log 9-minicom.log
 
-[BUILDTIME] 2649 (5)
+[BUILDTIME] 3258 (9)
 [SIZE] 0.52 MB, 24 files
 
 [DEP] 00-dirtree alsa autoconf bash2 binutils bison bzip2 coreutils
 [DEP] diffutils findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev
-[DEP] grep linux26-header:dev make mktemp ncurses:dev patch perl5 sed
-[DEP] sysfiles tar texinfo util-linux
+[DEP] grep linux26-header:dev make mktemp ncurses:dev net-tools patch
+[DEP] perl5 sed sysfiles tar texinfo util-linux
+
+[PROVIDES] ascii-xfr minicom runscript xminicom
 

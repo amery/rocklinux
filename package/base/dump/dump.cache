@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104747689 Mon Jan  3 11:21:29 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110304865 Tue Mar  8 19:01:05 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-dump.log
+[LOGS] 5-dump.log 9-dump.log
 
-[BUILDTIME] 2081 (5)
-[SIZE] 1.54 MB, 16 files
+[BUILDTIME] 2342 (9)
+[SIZE] 1.55 MB, 16 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 bzip2:dev coreutils diffutils
 [DEP] e2fsprogs:dev findutils gcc34 gcc34:dev glibc23 glibc23:dev grep
 [DEP] linux26-header:dev make mktemp ncurses:dev net-tools patch readline
 [DEP] readline:dev sed sysfiles tar util-linux zlib:dev
+
+[PROVIDES] dump rdump restore rmt rrestore
 

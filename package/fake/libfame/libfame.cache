@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104711042 Mon Jan  3 01:10:42 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110200313 Mon Mar  7 13:58:33 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libfame.log
+[LOGS] 5-libfame.log 9-libfame.log
 
-[BUILDTIME] 3604 (5)
+[BUILDTIME] 3979 (9)
 [SIZE] 0.28 MB, 21 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils file findutils
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep make mktemp sed sysfiles
-[DEP] tar util-linux
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep make mktemp net-tools sed
+[DEP] sysfiles tar util-linux
+
+[PROVIDES] libfame-config libfame.a libfame.so
 

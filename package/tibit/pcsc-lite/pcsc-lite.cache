@@ -20,17 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104734981 Mon Jan  3 07:49:41 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110227222 Mon Mar  7 21:27:02 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-pcsc-lite.log
+[LOGS] 5-pcsc-lite.log 9-pcsc-lite.log
 
-[BUILDTIME] 2688 (5)
+[BUILDTIME] 3069 (9)
 [SIZE] 0.13 MB, 18 files
 
-[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] devfsd diffutils file findutils flex flex:dev gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp patch
+[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils devfsd
+[DEP] diffutils file findutils flex flex:dev gcc34 gcc34:dev glibc23
+[DEP] glibc23:dev grep linux26-header:dev m4 make mktemp net-tools patch
 [DEP] perl5 sed sysfiles tar texinfo
+
+[PROVIDES] bundleTool formaticc installifd libpcsclite.a libpcsclite.so
+[PROVIDES] pcscd
 

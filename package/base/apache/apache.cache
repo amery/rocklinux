@@ -20,17 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104688349 Sun Jan  2 18:52:29 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110174782 Mon Mar  7 06:53:02 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-apache.log
+[LOGS] 5-apache.log 9-apache.log
 
-[BUILDTIME] 21197 (5)
-[SIZE] 14.09 MB, 1547 files
+[BUILDTIME] 26458 (9)
+[SIZE] 14.83 MB, 1590 files
 
 [DEP] 00-dirtree bash2 bdb42 bdb42:dev binutils bzip2 coreutils diffutils
-[DEP] expat expat:dev findutils gawk gcc34 gcc34:dev gdbm gdbm:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp openssl
+[DEP] expat expat:dev findutils gawk gcc34 gcc34:dev gdbm gdbm:dev glibc23
+[DEP] glibc23:dev grep linux26-header:dev m4 make mktemp net-tools openssl
 [DEP] openssl:dev pkgconfig sed sysfiles tar util-linux zlib:dev
+
+[PROVIDES] ab apachectl apr-config apu-config apxs checkgid dbmmanage
+[PROVIDES] envvars envvars-std htdbm htdigest htpasswd httpd libapr-0.a
+[PROVIDES] libapr-0.so libaprutil-0.a libaprutil-0.so logresolve printenv
+[PROVIDES] rotatelogs test-cgi
 

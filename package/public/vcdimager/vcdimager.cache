@@ -20,17 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104749502 Mon Jan  3 11:51:42 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110307108 Tue Mar  8 19:38:28 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-vcdimager.log
+[LOGS] 5-vcdimager.log 9-vcdimager.log
 
-[BUILDTIME] 4968 (5)
+[BUILDTIME] 5247 (9)
 [SIZE] 1.00 MB, 26 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep libcdio libcdio:dev libxml2
 [DEP] libxml2:dev linux26-header:dev make mktemp net-tools patch pkgconfig
 [DEP] popt popt:dev sed sysfiles tar texinfo util-linux zlib:dev
+
+[PROVIDES] cdxa2mpeg libvcdinfo.a libvcdinfo.so vcd-info vcdimager
+[PROVIDES] vcdxbuild vcdxgen vcdxminfo vcdxrip
 

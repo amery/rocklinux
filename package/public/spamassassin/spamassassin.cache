@@ -20,18 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104651928 Sun Jan  2 08:45:28 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110131005 Sun Mar  6 18:43:25 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-spamassassin.log
+[LOGS] 5-spamassassin.log 9-spamassassin.log
 
-[BUILDTIME] 1932 (5)
-[SIZE] 1.61 MB, 98 files
+[BUILDTIME] 2779 (9)
+[SIZE] 1.99 MB, 125 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils cpan-digest-sha1
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cpan-dbi cpan-digest-sha1
 [DEP] cpan-html-parser cpan-net-dns cpan-uri diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev m4 make
-[DEP] mktemp openssl openssl:dev perl5 razor sed ssleay-perlmod sysfiles
-[DEP] tar util-linux
+[DEP] mktemp net-tools openssl openssl:dev perl5 razor sed ssleay-perlmod
+[DEP] sysfiles tar util-linux
+
+[PROVIDES] sa-learn spamassassin spamc spamd
 

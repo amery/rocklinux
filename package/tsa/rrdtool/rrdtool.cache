@@ -20,16 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104657466 Sun Jan  2 10:17:46 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110138280 Sun Mar  6 20:44:40 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-rrdtool.log
+[LOGS] 5-rrdtool.log 9-rrdtool.log
 
-[BUILDTIME] 8625 (5)
-[SIZE] 1.89 MB, 84 files
+[BUILDTIME] 9364 (9)
+[SIZE] 1.90 MB, 86 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep groff linux26-header:dev
-[DEP] make mktemp perl5 sed ssleay-perlmod sysfiles tar util-linux
+[DEP] make mktemp net-tools perl5 sed ssleay-perlmod sysfiles tar
+[DEP] util-linux
+
+[PROVIDES] librrd.a librrd.so rrdcgi rrdtool rrdupdate trytime
 

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104666320 Sun Jan  2 12:45:20 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
+[TIMESTAMP] 1110148742 Sun Mar  6 23:39:02 2005
+[CONFIG-ID] 2.1.0-DEV-x86-reference
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-xinetd.log
+[LOGS] 5-xinetd.log 9-xinetd.log
 
-[BUILDTIME] 2557 (5)
+[BUILDTIME] 3183 (9)
 [SIZE] 0.20 MB, 17 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp
-[DEP] sed sysfiles tar tcp_wrappers:dev util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev m4 make
+[DEP] mktemp net-tools sed sysfiles tar tcp_wrappers:dev util-linux
+
+[PROVIDES] itox xconv.pl xinetd
 

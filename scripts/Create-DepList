@@ -122,12 +122,14 @@ sub showdeps($$)
 	print " (duplicate)" if $is_dup;
 	print "\n";
 
-	return if $is_dup;
-	return if $is_inst;
+	if ( $_[0] > 0 ) {
+		return if $is_dup;
+		return if $is_inst;
+	}
 
 	foreach (@{$deps{$p}}) {
 		showdeps($_[0]+1, $_)
-			if defined $deps{$_};
+			if defined $_ and defined $deps{$_};
 	}
 }
 

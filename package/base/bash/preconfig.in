@@ -20,11 +20,10 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-
 if pkgcheck bash X
 then
         pkgfork bash bash2
-        pkgfork bash bash3
+        pkgfork bash bash3 stages "-----5---9"
         pkgremove bash
 fi
 

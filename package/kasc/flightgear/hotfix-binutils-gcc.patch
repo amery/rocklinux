@@ -1,0 +1,14 @@
+Hotfix needed for new binutils (bug is in gcc)
+(see http://gcc.gnu.org/bugzilla/show_bug.cgi?id=16625)
+
+--- ./src/FDM/JSBSim/FGState.h.orig	2004-09-05 15:36:43.760672000 +0200
++++ ./src/FDM/JSBSim/FGState.h	2004-09-05 15:37:01.976902712 +0200
+@@ -258,6 +258,8 @@
+       vLastArray[1] = vLastArray[0];
+       vLastArray[0] = vTDeriv;
+       break;
++    }
++    switch (type) {
+     case AM3:
+       vResult = (delta_t/12.0)*(  5.0 * vTDeriv
+                                 + 8.0 * vLastArray[0]

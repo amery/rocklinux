@@ -1,0 +1,69 @@
+diff -dur alsa-lib-1.0.6/src/instr/fm.c alsa-lib-1.0.6-patch/src/instr/fm.c
+--- alsa-lib-1.0.6/src/instr/fm.c	2002-02-04 11:18:40.000000000 +0000
++++ alsa-lib-1.0.6-patch/src/instr/fm.c	2004-10-24 02:46:15.498518520 +0000
+@@ -30,6 +30,19 @@
+ #include <sys/stat.h>
+ #include <stdio.h>
+ #include "local.h"
++
++#ifdef __CHECKER__
++#define __bitwise __attribute__((bitwise))
++#else
++#define __bitwise
++#endif
++#define __le16 __bitwise __u16
++#define __be16 __bitwise __u16
++#define __le32 __bitwise __u32
++#define __be32 __bitwise __u32
++#define __le64 __bitwise __u64
++#define __be64 __bitwise __u64
++
+ #include <asm/byteorder.h>
+ #include <sound/ainstr_fm.h>
+ 
+diff -dur alsa-lib-1.0.6/src/instr/iwffff.c alsa-lib-1.0.6-patch/src/instr/iwffff.c
+--- alsa-lib-1.0.6/src/instr/iwffff.c	2004-04-20 13:42:48.000000000 +0000
++++ alsa-lib-1.0.6-patch/src/instr/iwffff.c	2004-10-24 02:47:55.470320496 +0000
+@@ -31,6 +31,19 @@
+ #include <sys/stat.h>
+ #include <stdio.h>
+ #include "local.h"
++
++#ifdef __CHECKER__
++#define __bitwise __attribute__((bitwise))
++#else
++#define __bitwise
++#endif
++#define __le16 __bitwise __u16
++#define __be16 __bitwise __u16
++#define __le32 __bitwise __u32
++#define __be32 __bitwise __u32
++#define __le64 __bitwise __u64
++#define __be64 __bitwise __u64
++
+ #include <sound/ainstr_iw.h>
+ 
+ /*
+diff -dur alsa-lib-1.0.6/src/instr/simple.c alsa-lib-1.0.6-patch/src/instr/simple.c
+--- alsa-lib-1.0.6/src/instr/simple.c	2002-02-04 11:18:40.000000000 +0000
++++ alsa-lib-1.0.6-patch/src/instr/simple.c	2004-10-24 02:46:41.286598136 +0000
+@@ -31,6 +31,19 @@
+ #include <sys/stat.h>
+ #include <stdio.h>
+ #include "local.h"
++
++#ifdef __CHECKER__
++#define __bitwise __attribute__((bitwise))
++#else
++#define __bitwise
++#endif
++#define __le16 __bitwise __u16
++#define __be16 __bitwise __u16
++#define __le32 __bitwise __u32
++#define __be32 __bitwise __u32
++#define __le64 __bitwise __u64
++#define __be64 __bitwise __u64
++
+ #include <asm/byteorder.h>
+ #include <sound/ainstr_simple.h>
+ 

@@ -1,0 +1,20 @@
+--- openh323/include/gkserver.h	2004-02-15 03:36:30.000000000 +0000
++++ openh323-patch/include/gkserver.h	2004-07-17 18:44:40.000000000 +0000
+@@ -427,7 +427,7 @@
+     H225_RegistrationConfirm & rcf;
+     H225_RegistrationReject  & rrj;
+ 
+-  protected:
++//  protected:
+     virtual Response OnHandlePDU();
+ };
+ 
+@@ -491,7 +491,7 @@
+ 
+     PString alternateSecurityID;
+ 
+-  protected:
++//  protected:
+     virtual Response OnHandlePDU();
+ };
+ 

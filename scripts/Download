@@ -672,6 +672,7 @@ list_dtags() {
 	{ 
 		descparser package/*/*/*.desc | grep '^\[D\] '
 		grep -h '^[X0-9]' target/*/download.txt | sed 's,^,[D] ,' 
+		grep -h '^[X0-9]' target/*/*/download.txt | sed 's,^,[D] ,' 
 	} | column_clean
 }
 
@@ -763,11 +764,16 @@ required() {
 
     target=`grep '^export ROCKCFG_TARGET=' config/$config/config | \
 						cut -f2 -d= | tr -d "'"`
-    if [ -f target/$target/download.txt ] ; then
-	while read cksum file url flags ; do
-	    download_file "`source_file cksum $file url $flags`" "$url" "$cksum" "$target"
-	done < target/$target/download.txt
-    fi
+
+    arch=`grep '^export ROCKCFG_ARCH=' config/$config/config | \
+						cut -f2 -d= | tr -d "'"`
+    for targetdl in target/$target/{,$arch/}download.txt ; do
+        if [ -f $targetdl ] ; then
+            while read cksum file url flags ; do
+                download_file "`source_file cksum $file url $flags`" "$url" "$cksum" "$target"
+            done < $targetdl
+        fi
+    done
 }
 
 all() {

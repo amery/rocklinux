@@ -27,10 +27,9 @@
 #
 
 main_begin
-    block_begin(start, `Mounting /dev, /proc, /sys and /dev/shm.')
-	check(`[ -e /dev/.devfsd ] || mount -n /dev')
-	check(`mount -n /proc')
-	mount -n /sys 2> /dev/null
+    block_begin(start, `Mounting /proc, /sys, /dev/shm and /dev/pts.')
+	mount -n /proc 2> /dev/null
+	mount -n /sys  2> /dev/null
 	check(`mount -n /dev/shm')
 	mount -n /dev/pts 2> /dev/null
 dnl
@@ -71,21 +70,44 @@ dnl
 dnl
     block_split(`Mounting local file systems.')
 	check(`mount -n -o remount,rw /')
-	rootdev="/dev/$(ls -l /dev/root | sed 's,.* -> ,,')"
+	rootdev="/dev/$(ls -l /dev/root 2> /dev/null | sed 's,.* -> ,,')"
+	if [ "$rootdev" = "/dev/" ]; then
+		rootdev="$( sed 's, ,\n,g' < /proc/cmdline | \
+				grep ^root= | cut -f2- -d= )"
+		[ -z "$rootdev" ] && rootdev="/dev/root"
+	fi
 	check(`grep -v "^rootfs " /proc/mounts | \
 		sed "s,^/dev/root ,$rootdev ," > /etc/mtab')
 	check(`mount -a -t nocoda,nfs,devfs,proc,sysfs')
 dnl
-    if [ "$HARDWARE_SETUP" = rockplug ]; then
+    block_split(`Refresh utmp, delete lock and tmp files and other stuff.')
+	find /var/lock /var/run /tmp -mindepth 1 -print0 2> /dev/null | xargs --null rm -rf
+	rm -f /etc/nologin /nologin /fastboot ; touch /var/run/utmp
+	chmod 664 /var/run/utmp ; chown root:tty /var/run/utmp
+	mkdir /tmp/.ICE-unix /var/lock/subsys
+	chmod 1777 /tmp/.ICE-unix
+dnl
+    case "$HARDWARE_SETUP" in
+      rockplug)
 	block_split(`Configuring hardware by activating rockplug.')
 	    echo "/sbin/rockplug" > /proc/sys/kernel/hotplug
-	    for file in /etc/rockplug/*.init ; do
+	    for file in /etc/rockplug/*.init; do
 		[ -f $file ] && $file start
 	    done
-    else
+	    ;;
+      hotplug)
+	block_split(`Configuring hardware by activating hotplug.')
+	    echo "/sbin/hotplug" > /proc/sys/kernel/hotplug
+            for RC in /etc/hotplug/*.rc; do
+		echo -n "[$( basename ${RC%.rc} )] "
+		check(`$RC start');
+	    done; echo
+	    touch /var/lock/subsys/hotplug
+	    ;;
+      *) 
 	block_split(`Loading kernel modules and configuring the kernel.')
 	    check(`sh /etc/conf/kernel')
-    fi
+    esac
 dnl
     [ -f /etc/conf/clock ] && . /etc/conf/clock
     if [ "$clock_tz" = localtime ] ; then
@@ -103,13 +125,6 @@ dnl
 dnl
     block_split(`Setting hostname to $(cat /etc/HOSTNAME).')
 	check(`hostname "$(cat /etc/HOSTNAME)"')
-dnl
-    block_split(`Refresh utmp, delete lock and tmp files and other stuff.')
-	find /var/lock /var/run /tmp -mindepth 1 -print0 2> /dev/null | xargs --null rm -rf
-	rm -f /etc/nologin /nologin /fastboot ; touch /var/run/utmp
-	chmod 664 /var/run/utmp ; chown root:tty /var/run/utmp
-	mkdir /tmp/.ICE-unix
-	chmod 1777 /tmp/.ICE-unix
 dnl
     block_split(`Writing /var/log/boot.msg.')
 	check(`dmesg > /var/log/boot.msg')
@@ -172,6 +187,23 @@ dnl
 	else check(`reboot -w') ; fi
     block_split(`Saving kernel random seed.')
 	dd if=/dev/urandom of=/var/state/random-seed count=1 2> /dev/null
+dnl
+    case "$HARDWARE_SETUP" in
+      rockplug)
+	block_split(`Unconfiguring hardware by de-activating rockplug.')
+	    for file in /etc/rockplug/*.init; do
+		[ -f $file ] && $file stop
+	    done
+	    ;;
+      hotplug)
+	block_split(`Unconfiguring hardware by de-activating hotplug.')
+            for RC in /etc/hotplug/*.rc; do
+		echo -n "[$( basename ${RC%.rc} )] "
+		check(`$RC stop');
+	    done; echo
+	    rm -f /var/lock/subsys/hotplug
+	    ;;
+    esac
 dnl
     block_split(`Sending all processes a SIGTERM (15).')
 	check(`killall5 -15') ; sleep 5 

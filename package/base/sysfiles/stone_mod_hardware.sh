@@ -22,6 +22,10 @@
 #
 # [MAIN] 20 hardware Kernel Drivers and Hardware Configuration
 
+set_dev_setup() {
+    echo "devtype=$1" > /etc/conf/devtype
+}
+
 set_hw_setup() {
     echo "HARDWARE_SETUP=$1" > /etc/conf/hardware
 }
@@ -98,17 +102,15 @@ set_rtc() {
 
 main() {
     while
-        HARDWARE_SETUP=rockplug
+	devtype=devfs
+	if [ -f /etc/conf/devtype ]; then
+	    . /etc/conf/devtype
+	fi
+
+        HARDWARE_SETUP=hotplug
 	if [ -f /etc/conf/hardware ]; then
 	    . /etc/conf/hardware
 	fi
-	for x in hwscan rockplug; do
-	    if [ "$HARDWARE_SETUP" = $x ]; then
-		eval "hw_$x='<*>'"
-	    else
-		eval "hw_$x='< >'"
-	    fi
-	done
 
 	clock_tz=utc
 	clock_rtc="`cat /proc/sys/dev/rtc/max-user-freq 2> /dev/null`"
@@ -117,28 +119,43 @@ main() {
 	fi
 
 	cmd="gui_menu hw 'Kernel Drivers and Hardware Configuration'"
+
+	for x in devfs udev static; do
+	    if [ "$devtype" = $x ]; then
+	        cmd="$cmd \"<*> Use $x /dev filesystem.\""
+	    else
+	        cmd="$cmd \"< > Use $x /dev filesystem.\""
+	    fi
+	    cmd="$cmd \"set_dev_setup $x\"";
+	done
+	cmd="$cmd '' ''";
+
+	for x in hwscan hotplug rockplug; do
+	    [ -x /sbin/$x ] || continue
+	    if [ "$HARDWARE_SETUP" = $x ]; then
+	        cmd="$cmd \"<*> Use $x to configure hardware.\""
+	    else
+	        cmd="$cmd \"< > Use $x to configure hardware.\""
+	    fi
+	    cmd="$cmd \"set_hw_setup $x\"";
+	done
+	cmd="$cmd '' ''";
+
 	if [ "$HARDWARE_SETUP" = rockplug ]; then
-	    cmd="$cmd \"$hw_rockplug Use ROCKPLUG to configure hardware.\""
-	    cmd="$cmd \"set_hw_setup rockplug\"";
-	    cmd="$cmd \"$hw_hwscan Use hwscan to configure hardware.\""
-	    cmd="$cmd \"set_hw_setup hwscan\"";
-	    cmd="$cmd \"\" \"\"";
 	    cmd="$cmd 'Edit/View PCI configuration'";
 	    cmd="$cmd \"gui_edit PCI /etc/conf/pci\""
 	    cmd="$cmd 'Edit/View USB configuration'";
 	    cmd="$cmd \"gui_edit USB /etc/conf/usb\""
-	    cmd="$cmd \"\" \"\"";
+	    cmd="$cmd '' ''";
 	    
-	    #@FIXME single shot menu?
+	    cmd="$cmd 'ROCK-Plug/Drivers Configuration'"
+	    cmd="$cmd 'stone rockplug' '' ''"
 
 	    cmd="$cmd 'Re-create initrd image (mkinitrd, `uname -r`)'"
 	    cmd="$cmd 'gui_cmd mkinitrd mkinitrd' '' ''"
 	fi
 	    
 	if [ "$HARDWARE_SETUP" = hwscan ]; then
-	    cmd="$cmd \"$hw_rockplug Use ROCKPLUG to configure hardware.\" \"set_hw_setup rockplug\"";
-	    cmd="$cmd \"$hw_hwscan Use hwscan to configure hardware.\" \"set_hw_setup hwscan\"";
-	    cmd="$cmd \"\" \"\"";
 	    cmd="$cmd 'Edit /etc/conf/kernel (kernel drivers config file)'"
 	    cmd="$cmd \"gui_edit 'Kernel Drivers Config File' /etc/conf/kernel\""
 	    cmd="$cmd 'Re-create initrd image (mkinitrd, `uname -r`)'"

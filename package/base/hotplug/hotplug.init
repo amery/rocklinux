@@ -23,24 +23,23 @@
 # --- ROCK-COPYRIGHT-NOTE-END ---
 #
 # Desc: User space part of the Linux Kernel hotplug support.
-# Runlevel: 13 rcX rc2 rc3 rc4 rc5
+# Runlevel: 13 rcX
 #
 
 main_begin
-    block_begin(start, `Starting hotplug.')
-	for RC in /etc/hotplug/*.rc
-	do
+    block_begin(start, `Configuring hardware by activating hotplug.')
+	for RC in /etc/hotplug/*.rc; do
+		echo -n "[$( basename ${RC%.rc} )] "
 		check(`$RC start')
-		[[ $error = 0 ]] || break
-	done
-	[[ $error = 0 ]] && touch /var/lock/subsys/hotplug
+	done; echo
+	touch /var/lock/subsys/hotplug
     block_end
 
-    block_begin(stop, `Stopping hotplug.')
-	for RC in /etc/hotplug/*.rc
-	do
+    block_begin(stop, `Unconfiguring hardware by de-activating hotplug.')
+	for RC in /etc/hotplug/*.rc; do
+		echo -n "[$( basename ${RC%.rc} )] "
 		check(`$RC stop')
-	done
+	done; echo
 	rm -f /var/lock/subsys/hotplug
     block_end
 main_end

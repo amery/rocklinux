@@ -26,6 +26,9 @@
 # Runlevel: 13 rcX rc2 rc3 rc4 rc5
 #
 
+# if /dev isn't devfs, exit shyly
+[ ! -e /dev/.devfsd ] && exit 0
+
 main_begin
 
     block_begin(start, `Starting devfsd.')

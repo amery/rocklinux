@@ -27,12 +27,56 @@ ulimit -c 2097151
 PATH=/bin:/sbin:/usr/bin:/usr/sbin
 export PATH
 
-# Make sure we have a /dev/console
+# Do the dev filesystem magic
 #
-if ! [ -e /dev/.devfsd ] ; then
-	mount -v -n -t devfs none /dev
-	echo "Mounted /dev (devfs) from /etc/initscript." > /dev/console
+if [ -z "$devtype" ]; then
+	devtype=devfs
+	if [ -f /etc/conf/devtype ]; then
+		. /etc/conf/devtype
+	fi
 fi
+case "$devtype" in
+    devfs)
+	if ! [ -e /dev/.devfsd ] ; then
+		mount -v -n -t devfs none /dev
+		exec > /dev/console 2>&1 < /dev/console
+		echo "Mounted /dev (devfs) from /etc/initscript."
+	fi
+	;;
+
+    udev)
+	if ! [ -e /dev/.udevdb ] ; then
+		if [ -e /dev/.devfsd ]; then
+			mount --move /dev /etc/udev
+			mount -t ramfs none /dev
+			mkdir /dev/devfs
+			mount --move /etc/udev /dev/devfs
+		else
+			mount -t ramfs none /dev
+		fi
+		mount -n /sys; mount -n /proc
+		mkdir -p /dev/pts /dev/shm
+		/sbin/udevstart
+		exec > /dev/console 2>&1 < /dev/console
+		echo "Mounted /dev (udev) from /etc/initscript."
+	fi
+	;;
+    static)
+	if ! [ -e /dev/.devfsd ] ; then
+		umount -l -n /dev
+		echo "Umounted /dev (devfs) from /etc/initscript."
+	fi
+	;;
+    *)
+	if ! [ -e /dev/console ]; then
+		mount -t ramfs none /dev
+		mknod -m 600 /dev/console c 5 1
+	fi
+	exec > /dev/console 2>&1 < /dev/console
+	echo "Unrecognized devtype=$devtype option caught in /etc/initscript."
+	;;
+esac
+unset devtype
 
 # Execute the program.
 #

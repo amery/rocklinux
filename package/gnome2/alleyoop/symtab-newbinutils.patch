@@ -1,0 +1,11 @@
+--- ./src/symtab.c.orig	2004-09-07 00:09:57.175564888 +0200
++++ ./src/symtab.c	2004-09-07 00:10:11.678360128 +0200
+@@ -115,7 +115,7 @@
+ 	
+ 	map->text_section = section;
+ 	map->text_start = load_addr + bfd_section_vma (map->abfd, section);
+-	map->text_end = map->text_start + bfd_get_section_size_before_reloc (section);
++	map->text_end = map->text_start + bfd_get_section_size (section);
+ 	
+ 	map->filename = g_strdup (filename);
+ 	map->libname = g_strdup (libname);

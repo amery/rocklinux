@@ -1,0 +1,16 @@
+--- ./include/linux/mc146818rtc.h.orig	2004-11-19 14:30:45.047279312 +0100
++++ ./include/linux/mc146818rtc.h	2004-11-19 14:32:04.137255808 +0100
+@@ -13,10 +13,12 @@
+ 
+ #include <asm/io.h>
+ #include <linux/rtc.h>			/* get the user-level API */
+-#include <linux/spinlock.h>		/* spinlock_t */
+ #include <asm/mc146818rtc.h>		/* register access macros */
+ 
++#ifdef __KERNEL__
++#include <linux/spinlock.h>		/* spinlock_t */
+ extern spinlock_t rtc_lock;		/* serialize CMOS RAM access */
++#endif
+ 
+ /**********************************************************************
+  * register summary

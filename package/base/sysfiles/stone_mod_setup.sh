@@ -28,8 +28,6 @@ make_fstab() {
 	cat <<- EOT > $tmp2
 /dev/root / auto defaults 0 1
 none /proc proc defaults 0 0
-none /proc/bus/usb usbfs defaults 0 0
-none /dev devfs defaults 0 0
 none /dev/pts devpts defaults 0 0
 none /dev/shm ramfs defaults 0 0
 none /sys sysfs defaults 0 0
@@ -60,27 +58,14 @@ EOT
 	cut -f2 -d' ' < $tmp2 | sort -u | while read dn ; do
 		grep " $dn " $tmp2 | tail -n 1; done > $tmp1
 
-	cat << EOT > $tmp2
-ARGIND == 1 {
-    for (c=1; c<=NF; c++) if (ss[c] < length(\$c)) ss[c]=length(\$c);
-}
-ARGIND == 2 {
-    for (c=1; c<NF; c++) printf "%-*s",ss[c]+2,\$c;
-    printf "%s\n",\$NF;
-}
-EOT
-	fsregex="$( echo -n $( ls /sbin/fsck.* | cut -f2- -d. ) | sed 's, ,\\|,g' )"
-	gawk -f $tmp2 $tmp1 $tmp1 | sed "/ \($fsregex\) / s, 0$, 1," > /etc/fstab
-
-	while read a b c d e f ; do
-		printf "%-60s %s\n" "$(
-			printf "%-50s %s" "$(
-				printf "%-40s %s" "$(
-					printf "%-25s %s" "$a" "$b"
-				)" $c
-			)" "$d"
-		)" "$e $f"
-	done < /etc/fstab | tr ' ' '\240' > $tmp1
+	fsregex="$( echo -n $( ls /sbin/fsck.* | \
+			cut -f2- -d. ) | sed 's, ,\\|,g' )"
+	gawk '{ printf("%-58s %d %d\n",
+			sprintf("%-45s ", sprintf("%-35s ",
+			sprintf("%-20s ", $1) $2) $3) $4,
+			$5, $6); }' < $tmp1 | \
+		sed "/ \($fsregex\) / s, 0$, 1," > /etc/fstab
+	tr ' ' '\240' < /etc/fstab > $tmp1
 
 	gui_message $'Auto-created /etc/fstab file:\n\n'"$( cat $tmp1 )"
 	rm -f $tmp1 $tmp2

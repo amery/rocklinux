@@ -1,0 +1,33 @@
+--- ./include/asm-i386/system.h	2004-12-29 20:54:20.072258656 +0000
++++ ./include/asm-i386/system.h-p	2004-12-29 21:11:17.462591816 +0000
+@@ -244,26 +244,26 @@
+ #endif
+ 
+ static inline unsigned long __cmpxchg(volatile void *ptr, unsigned long old,
+-				      unsigned long new, int size)
++				      unsigned long ulnew, int size)
+ {
+ 	unsigned long prev;
+ 	switch (size) {
+ 	case 1:
+ 		__asm__ __volatile__(LOCK_PREFIX "cmpxchgb %b1,%2"
+ 				     : "=a"(prev)
+-				     : "q"(new), "m"(*__xg(ptr)), "0"(old)
++				     : "q"(ulnew), "m"(*__xg(ptr)), "0"(old)
+ 				     : "memory");
+ 		return prev;
+ 	case 2:
+ 		__asm__ __volatile__(LOCK_PREFIX "cmpxchgw %w1,%2"
+ 				     : "=a"(prev)
+-				     : "q"(new), "m"(*__xg(ptr)), "0"(old)
++				     : "q"(ulnew), "m"(*__xg(ptr)), "0"(old)
+ 				     : "memory");
+ 		return prev;
+ 	case 4:
+ 		__asm__ __volatile__(LOCK_PREFIX "cmpxchgl %1,%2"
+ 				     : "=a"(prev)
+-				     : "q"(new), "m"(*__xg(ptr)), "0"(old)
++				     : "q"(ulnew), "m"(*__xg(ptr)), "0"(old)
+ 				     : "memory");
+ 		return prev;
+ 	}

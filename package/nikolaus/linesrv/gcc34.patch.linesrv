@@ -1,0 +1,73 @@
+--- ./server/html_status.c.orig	2004-09-24 13:25:35.000000000 +0200
++++ ./server/html_status.c	2004-09-24 13:21:17.000000000 +0200
+@@ -16,16 +16,16 @@
+ 
+ void print_html_header(FILE* where)
+ {
+-    fprintf(where, "<html><head><style type=\"text/css\">\n\
+-p, table, br { align: center; font-family: Arial, Helvetica }\n\
+-body, td { font-family: Arial, Helvetica }\n\
+-A { text-decoration: none;\n\
+-font-style: italic;\n\
+-font-family: Arial, Helvetica }\n\
+-</style></head><body bgcolor=\"#ffffff\" text=\"000080\">\n");
+-    fprintf(where, "<center><p><a href=\"http://homepage.swissonline.ch/allenfuchs/stefan/lc/\">\
+-<img src=\"/lclog/lc-logo-01.gif\" width=\"246\" height=\"53\" border=\"0\"></a></p>\n\
+-<table width=\""TABLE_WIDTH"\" cellspacing=\"1\" cellpadding=\"2\" border=\"0\">\n");
++    fprintf(where, "<html><head><style type=\"text/css\">\n"
++"p, table, br { align: center; font-family: Arial, Helvetica }\n"
++"body, td { font-family: Arial, Helvetica }\r\n"
++"A { text-decoration: none;\r\n"
++"font-style: italic;\r\n"
++"font-family: Arial, Helvetica }\r\n"
++"</style></head><body bgcolor=\"#ffffff\" text=\"000080\">\n");
++    fprintf(where, "<center><p><a href=\"http://homepage.swissonline.ch/allenfuchs/stefan/lc/\">"
++"<img src=\"/lclog/lc-logo-01.gif\" width=\"246\" height=\"53\" border=\"0\"></a></p>\n"
++"<table width=\""TABLE_WIDTH"\" cellspacing=\"1\" cellpadding=\"2\" border=\"0\">\n");
+ }
+ 
+ void print_html_footer(FILE* where)
+--- ./server/user_pam.c.orig	2004-09-24 13:22:40.000000000 +0200
++++ ./server/user_pam.c	2004-09-24 13:22:44.000000000 +0200
+@@ -30,7 +30,7 @@
+ 	    case PAM_TEXT_INFO:
+ 		rsp[i].resp = strdup("!!");
+ 		break;
+-	    default:
++	    default:;
+ 	}
+ 	rsp[i].resp_retcode = PAM_SUCCESS;
+     }
+--- ./server/cfg.c.orig	2004-09-24 12:32:07.000000000 +0200
++++ ./server/cfg.c	2004-09-24 12:33:50.000000000 +0200
+@@ -660,7 +660,7 @@
+ 		    else list_del(&shtdn_ipl, (struct list_hdr_t*)iplentry);
+ 		}
+ 		break;
+-	    default:
++	    default:;
+ 	}
+     }
+  }
+--- ./server/proc_lcp3.c.orig	2004-09-24 13:21:52.000000000 +0200
++++ ./server/proc_lcp3.c	2004-09-24 13:21:59.000000000 +0200
+@@ -158,7 +158,7 @@
+ 			    }
+ 			    who->status = CLT_OFFLINE;
+ 			    break;
+-			default:
++			default:;
+ 			    // uh... don't dial -> status would be incorrect
+ 	    }
+ 	    lcp3_cmd_queue(CMD3_CLIENTSTAT, who, NULL, 0);
+--- ./server/proc.c.orig	2004-09-24 13:21:35.000000000 +0200
++++ ./server/proc.c	2004-09-24 13:21:42.000000000 +0200
+@@ -223,7 +223,7 @@
+ 		         exec_dont_care_param(line->client_online, inet_ntoa(from->sin_addr));
+ 		 }
+ 	         break;
+-	     default:
++	     default:;
+ 	     // uh... don't dial -> status would be incorrect
+ 	 }
+ 	 if ( who->status == CLT_ONLINE )

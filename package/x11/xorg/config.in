@@ -20,8 +20,9 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-if pkgcheck xfree86 X || pkgcheck xorg X; then
-menu_begin MENU_PKG_XORG 'X.Org Options'
+if pkgcheck xfree86 X && pkgcheck xorg X
+then
+  menu_begin MENU_PKG_XORG 'X.Org Options'
 #	bool 'Use a CVS checkout instead of last stable release' \
 #		ROCKCFG_PKG_XFREE86_CVS 0
 
@@ -40,13 +41,22 @@ menu_begin MENU_PKG_XORG 'X.Org Options'
 		bool 'Enable Xinerama support globally' \
 			ROCKCFG_PKG_XFREE86_XINERAMA 1
 
-# Enable X.Org packages and disable xfree86 ones				
+		# Enable X.Org packages and disable xfree86 ones				
 		pkgremove xfree86
-		pkgremove xfree86-cyrillic-fonts
-		pkgremove xfree86-doc
-		pkgenable xorg
+	else
+		pkgremove xorg
 	fi
 
-menu_end
+  menu_end
+fi
+
+if ! pkgcheck xfree86 X; then
+	pkgremove xfree86
+	pkgremove xfree86-cyrillic-fonts
+	pkgremove xfree86-doc
+fi
+
+if ! pkgcheck xorg X; then
+	pkgremove xorg
 fi
 

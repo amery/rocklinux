@@ -855,11 +855,80 @@ abort() {
 	echo Found `wc -l < $builddir/flist.split` "files for this package."
 	splitapply $xpkg $builddir/flist.split
 
+	if [ "$ROCKCFG_FLIST" = "flwrapper" -o \
+	     "$ROCKCFG_FLIST" = "strace" ] && [ $stagelevel -gt 1 ] ; then
+		echo "Calculating package dependencies ..."
+
+		! egrep -v "^($flistrfilter)\$" $builddir/fl_wrapper.[rw]log |
+		sort -u | fl_wrparse -D -s -r "$xroot/" -p '' | \
+		grep -v ' var/adm/' | awk '
+			ARGIND < ARGC-1 {
+			    if ( index($1, "'$xpkg':") != 1 )
+				f[$2] = $1 " " f[$2];
+			}
+			ARGIND == ARGC-1 {
+			    file = $2;
+			    while ( file != "" ) {
+				if ( f[file] ) {
+				    split(f[file], a);
+				    for (i in a)
+					if (! d[a[i] " " file]) {
+					    d[a[i] " " file] = 1;
+					    print a[i] " " file;
+					}
+				}
+				sub("/?[^/]*$", "", file)
+			    }
+			}
+		' var/adm/flists/* - > $builddir/dependencies.debug
+
+		awk 'BEGIN { FS=": "; } { print "'$xpkg': " $1; }' \
+			<  $builddir/dependencies.debug > $builddir/dependencies.txt
+
+		if [ -f var/adm/dep-debug/$xpkg ] ; then
+			cat var/adm/dep-debug/$xpkg >> $builddir/dependencies.debug
+		fi
+		sort -u $builddir/dependencies.debug > var/adm/dep-debug/$xpkg
+
+		# add debug info for known false positives
+		if egrep -q "^[^#].*[   ]$spkg([        ]|$)" $base/scripts/dep_fixes.txt; then
+			echo "---  $spkg [$stagelevel] ---" >> $root/var/adm/rock-debug/falsedeps.txt
+		fi
+		while read x; do
+			grep "^$x: " $builddir/dependencies.debug | sort -u | \
+				sed "s,:, -> $spkg [$stagelevel]:," >> $root/var/adm/rock-debug/falsedeps.txt
+		done < <( egrep "^$spkg[        ]+del[  ]+" $base/scripts/dep_fixes.txt | \
+				tr ' ' '\t' | tr -s '\t' | cut -f3- | tr '\t' '\n' )
+
+		# merge the dependencies defined by the package
+		for x in `echo "$desc_E" | egrep '^add ' | sed 's/^add //' ` ; do
+			echo "Adding dependency: $x ..."
+			echo "$xpkg: $x" >> $builddir/dependencies.txt
+		done
+
+		# remove dependencies as requested by the package
+		# TODO: goups are not used yet (and it is not easy here)
+		del_pattern=""
+		for x in `echo "$desc_E" | egrep '^del ' | sed 's/^del //' ` ; do
+			del_pattern="$del_pattern -e \".*: $x(:.*|)\$\""  
+		done
+		if [ -n "$del_pattern" ] ; then
+			echo "Deleting dependencies, pattern: $del_pattern ..."
+			eval "egrep -v $del_pattern $builddir/dependencies.txt" > $builddir/dependencies.txt.new
+			mv $builddir/dependencies.txt.new $builddir/dependencies.txt
+		fi
+
+		if [ -f var/adm/dependencies/$xpkg ] ; then
+			cat var/adm/dependencies/$xpkg >> $builddir/dependencies.txt
+		fi
+		sort -u $builddir/dependencies.txt > $builddir/dependencies.txt.new
+		mv $builddir/dependencies.txt.new $builddir/dependencies.txt
+	fi
+
 	for spkg in $( sed 's,: .*,,' < $builddir/flist.split | sort -u )
 	do
 	  (
 		if [ -z "${spkg##*:*}" ]; then
-			echo "<$spkg> Creating split-package description ..."
 			splitdesc_${spkg#*:}
 		fi
 
@@ -875,80 +944,10 @@ abort() {
 			done
 		} | sort -u > var/adm/flists/$spkg
 
-		echo "<$spkg> Clear (old) md5sums and cksums ..."
-		cat /dev/null > var/adm/md5sums/$spkg
-		cat /dev/null > var/adm/cksums/$spkg
+		echo "<$spkg> Creating package dependencies file ..."
+		sed "s,^[^ ]*,$spkg:," < $builddir/dependencies.txt > var/adm/dependencies/$spkg
 
-		if [ "$ROCKCFG_FLIST" = "flwrapper" -o \
-		     "$ROCKCFG_FLIST" = "strace" ] && [ $stagelevel -gt 1 ] ; then
-			echo "<$spkg> Calculating package dependencies ..."
-
-			! egrep -v "^($flistrfilter)\$" $builddir/fl_wrapper.[rw]log |
-			sort -u | fl_wrparse -D -s -r "$xroot/" -p '' | \
-			grep -v ' var/adm/' | awk '
-				ARGIND < ARGC-1 {
-				    if ( index($1, "'$xpkg':") != 1 )
-					f[$2] = $1 " " f[$2];
-				}
-				ARGIND == ARGC-1 {
-				    file = $2;
-				    while ( file != "" ) {
-					if ( f[file] ) {
-					    split(f[file], a);
-					    for (i in a)
-						if (! d[a[i] " " file]) {
-						    d[a[i] " " file] = 1;
-						    print a[i] " " file;
-						}
-					}
-					sub("/?[^/]*$", "", file)
-				    }
-				}
-			' var/adm/flists/* - > $builddir/dependencies.debug
-
-			awk 'BEGIN { FS=": "; } { print "'$spkg': " $1; }' \
-				<  $builddir/dependencies.debug > $builddir/dependencies.txt
-
-			if [ -f var/adm/dep-debug/$spkg ] ; then
-				cat var/adm/dep-debug/$spkg >> $builddir/dependencies.debug
-			fi
-			sort -u $builddir/dependencies.debug > var/adm/dep-debug/$spkg
-
-			# add debug info for known false positives
-			if egrep -q "^[^#].*[ 	]$spkg([ 	]|$)" $base/scripts/dep_fixes.txt; then
-				echo "---  $spkg [$stagelevel] ---" >> $root/var/adm/rock-debug/falsedeps.txt
-			fi
-			while read x; do
-				grep "^$x: " $builddir/dependencies.debug | sort -u | \
-					sed "s,:, -> $spkg [$stagelevel]:," >> $root/var/adm/rock-debug/falsedeps.txt
-			done < <( egrep "^$spkg[ 	]+del[ 	]+" $base/scripts/dep_fixes.txt | \
-					tr ' ' '\t' | tr -s '\t' | cut -f3- | tr '\t' '\n' )
-
-			# merge the dependencies defined by the package
-			for x in `echo "$desc_E" | egrep '^add ' | sed 's/^add //' ` ; do
-				echo "<$spkg> Adding dependency: $x ..."
-				echo "$spkg: $x" >> $builddir/dependencies.txt
-			done
-
-			# remove dependencies as requested by the package
-			# TODO: goups are not used yet (and it is not easy here)
-			del_pattern=""
-			for x in `echo "$desc_E" | egrep '^del ' | sed 's/^del //' ` ; do
-				del_pattern="$del_pattern -e \".*: $x\$\""  
-			done
-			if [ -n "$del_pattern" ] ; then
-				echo "<$spkg> Deleting dependencies, pattern: $del_pattern ..."
-				eval egrep -v $del_pattern $builddir/dependencies.txt > $builddir/dependencies.txt.new
-				mv $builddir/dependencies.txt.new $builddir/dependencies.txt
-			fi
-
-			if [ -f var/adm/dependencies/$spkg ] ; then
-				cat var/adm/dependencies/$spkg >> $builddir/dependencies.txt
-			fi
-			sort -u $builddir/dependencies.txt > var/adm/dependencies/$spkg
-		fi
-
-		echo -n "<$spkg> Creating md5sum and cksum files ..."
+		echo "<$spkg> Creating md5sum and cksum files ..."
 		getfiles < var/adm/flists/$spkg > $builddir/files.lst
 		if [ -s $builddir/files.lst ] ; then
 			cat $builddir/files.lst | \
@@ -957,8 +956,10 @@ abort() {
 			cat $builddir/files.lst | \
 				grep -v '^var/adm/' | sed -e 's/ /\\ /g' | \
 				xargs -r cksum > var/adm/cksums/$spkg
+		else
+			cat /dev/null > var/adm/md5sums/$spkg
+			cat /dev/null > var/adm/cksums/$spkg
 		fi
-		echo ' done.'
 
 		echo "<$spkg> Creating package description ..."
 		#

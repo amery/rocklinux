@@ -20,11 +20,11 @@
 --- ./src/init.c.orig	Thu Jul 20 12:18:50 2000
 +++ ./src/init.c	Thu Jul 20 12:19:02 2000
 @@ -92,7 +92,7 @@
-   "~~",
-   "S",
-   3,
--  "/sbin/sulogin",
-+  "/etc/initscript - - - /sbin/sulogin",
-   NULL,
-   NULL
+ 	"~~",
+ 	"S",
+ 	3,
+-	"/sbin/sulogin",
++	"/etc/initscript - - - /sbin/sulogin",
+ 	NULL,
+ 	NULL
  };

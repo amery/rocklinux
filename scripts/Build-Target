@@ -224,7 +224,7 @@ fi
 			sleep 1
 		done
 
-		echo "All packages build."
+		echo "All packages built."
 		sleep 2; rm -rf $qdir
 	else
 	    if [ "$build_only_this_job" ] ; then
@@ -254,7 +254,7 @@ fi
 	if [ $ROCKCFG_PKGFILE_VER = 1 ] ; then
 		while read p; do
 			v=$( grep -h '^Package Name and Version:' build/$ROCKCFG_ID/var/adm/packages/$p:* \
-				build/$ROCKCFG_ID/var/adm/packages/$p 2> /dev/null | cut -f6 -d' ' | head -n1 )
+				build/$ROCKCFG_ID/var/adm/packages/$p 2> /dev/null | cut -f6,7 -d' ' | tr ' ' - | head -n1 )
 			echo "$p-$v"
 		done
 	else
@@ -426,7 +426,7 @@ build_target_exit() {
 
 	echo_status "Killing liggering processes and removing parallel build queue."
 	rm -rf $build_rock/queue
-	fuser -k ${build_logs}/*.log
+	fuser -k ${build_logs}/*.log &> /dev/null
 	sleep 2
 
 	echo_status "Umounting liggering mounts in build/$ROCKCFG_ID."

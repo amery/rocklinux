@@ -1,0 +1,9 @@
+--- ./util/Makefile.orig	2004-12-17 20:24:46.181958488 +0100
++++ ./util/Makefile	2004-12-17 20:24:53.519842960 +0100
+@@ -8,6 +8,5 @@
+ 	$(MAKE) -C dvbdate $(MAKECMDGOALS)
+ 	$(MAKE) -C dvbtraffic $(MAKECMDGOALS)
+ 	$(MAKE) -C av7110_loadkeys $(MAKECMDGOALS)
+-	$(MAKE) -C ttusb_dec_reset $(MAKECMDGOALS)
+ 
+ FORCE:

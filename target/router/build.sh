@@ -73,7 +73,7 @@ dd if=/dev/zero of=initrd.img count=16384 bs=1024 2>/dev/null
 mke2fs -qF initrd.img 2>/dev/null
 mount -o loop initrd.img initrd.mnt
 cp -a initrd/* initrd.mnt/
-umount initrd.mnt/
+umount -d initrd.mnt/
 gzip -9 initrd.img
 mv initrd.img.gz initrd.img
 

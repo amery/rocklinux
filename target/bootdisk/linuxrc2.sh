@@ -2,7 +2,7 @@
 
 export PATH="/sbin:/bin:/usr/sbin:/usr/bin"
 if type -p gzip > /dev/null ; then
-	umount /old_root ; rmdir /old_root
+	umount -d /old_root ; rmdir /old_root
 else
 	PATH="$PATH:/old_root/bin"
 	for x in /old_root/* ; do

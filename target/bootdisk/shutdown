@@ -14,7 +14,7 @@ swapoff -a || error=$?
 sync ; sleep 1
 
 echo "Unmounting filesystems."
-umount -avf || error=$?
+umount -advf || error=$?
 
 echo "Reboot ..."
 reboot -f

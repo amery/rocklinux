@@ -230,7 +230,7 @@ EOT
 			echo "You might want to umount all filesystems now and reboot"
 			echo "the system now using the commands:"
 			echo
-			echo "	umount -arv"
+			echo "	umount -adrv"
 			echo "	reboot -f"
 			echo
 			echo "Or by executing 'shutdown -r now' which will run the above commands."

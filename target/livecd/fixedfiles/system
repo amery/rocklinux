@@ -217,14 +217,14 @@ case "$1" in
 		echo "Umounting $dev on $dir ($fs)."
 		mount -o remount,sync $dir
 		mount -o remount,ro $dir
-		umount $dir
+		umount -d $dir
 	done
     	status
 
 	title "Unmounting remaining file systems."
 	grep -E -v '^none (/|[a-z]+:) ' /proc/mounts > /etc/mtab
 	sync ; sleep 1 ; sync
-	umount -vnra -t nodevfs,proc,sysfs,shm
+	umount -vdnra -t nodevfs,proc,sysfs,shm
 	mount -vn -o remount,sync /
 	mount -vn -o remount,ro /
 	sleep 1 ; sync ; sleep 1

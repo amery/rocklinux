@@ -76,7 +76,7 @@ else
 	mount -o loop /boot/initrd-${kernel}.img.tmp $mntpoint
 	rmdir $mntpoint/lost+found/
 	cp -a $tmpdir/* $mntpoint/
-	umount $mntpoint
+	umount -d $mntpoint
 	rmdir $mntpoint
 fi
 gzip < /boot/initrd-${kernel}.img.tmp > /boot/initrd-${kernel}.img

@@ -175,7 +175,7 @@ else
 	mkdir ${releasedir}/initrd.tmp.$$
 	mount -o loop ${releasedir}/isolinux/initrd ${releasedir}/initrd.tmp.$$
 	mv ${releasedir}/initrd/* ${releasedir}/initrd.tmp.$$
-	umount ${releasedir}/initrd.tmp.$$
+	umount -d ${releasedir}/initrd.tmp.$$
 	rm -rf ${releasedir}/initrd.tmp.$$ ${releasedir}/initrd
 
 	echo_status "LVP v${lvp_ver} built for ${ROCKCFG_X86_OPT} is now ready in ${releasedir}."

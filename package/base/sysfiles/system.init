@@ -57,14 +57,14 @@ dnl
 		echo " ** Please repair the broken disk(s) manually."
 		echo " **"
 		sulogin -t 600 /dev/console
-		umount -arv ; /sbin/reboot -d -f
+		umount -adrv ; /sbin/reboot -d -f
 		while true ; do sleep 1 ; done
 	elif [ $(( $fsckrc &  2 )) != 0 ] ; then
 		for x in 10 9 8 7 6 5 4 3 2 ; do  
 			echo -en "\rSystem reboot in $x seconds ... "
 			sleep 1
 		done ; echo -e "\rSystem reboot now!                 "
-		umount -arv ; /sbin/reboot -d -f
+		umount -adrv ; /sbin/reboot -d -f
 		while true ; do sleep 1 ; done
 	fi
 dnl
@@ -193,13 +193,13 @@ dnl
 		echo "Umounting $dev on $dir ($fs)."
 		mount -o remount,sync $dir
 		mount -o remount,ro $dir
-		umount $dir
+		umount -d $dir
 	done
 dnl
     block_split(`Unmounting remaining file systems.')
 	grep -E -v '^none (/|[a-z]+:) ' /proc/mounts > /etc/mtab
 	sync ; sleep 1 ; sync
-	umount -vnra -t nodevfs,proc,sysfs,shm
+	umount -vdnra -t nodevfs,proc,sysfs,shm
 	mount -vn -o remount,sync /
 	mount -vn -o remount,ro /
 	sleep 1 ; sync ; sleep 1

@@ -1,0 +1,77 @@
+--- ./configure.orig	2005-03-21 12:35:09.000000000 +0100
++++ ./configure	2005-03-21 12:36:27.000000000 +0100
+@@ -48988,7 +48988,7 @@
+ 
+ 
+ 
+-for ac_header in sasl/sasl.h
++for ac_header in sasl2/sasl.h
+ do
+ as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ if eval "test \"\${$as_ac_Header+set}\" = set"; then
+--- ./configure.in.orig	2005-03-21 12:35:40.000000000 +0100
++++ ./configure.in	2005-03-04 14:11:05.000000000 +0100
+@@ -1177,7 +1177,7 @@
+ SASL2_LIBS=""
+ 
+ KDE_CHECK_HEADERS(sasl.h)dnl SASL1 header is enough for kio_ldap
+-KDE_CHECK_HEADERS(sasl/sasl.h, sasl2_header="yes")
++KDE_CHECK_HEADERS(sasl2/sasl.h, sasl2_header="yes")
+ if test "$sasl2_header" = "yes" ; then
+   KDE_CHECK_LIB(sasl2, sasl_client_init, SASL2_LIBS="-lsasl2")
+ fi
+--- ./kioslave/configure.in.in.orig	2004-09-30 00:30:49.000000000 +0200
++++ ./kioslave/configure.in.in	2005-03-22 14:33:43.000000000 +0100
+@@ -4,7 +4,7 @@
+ SASL2_LIBS=""
+ 
+ KDE_CHECK_HEADERS(sasl.h)dnl SASL1 header is enough for kio_ldap
+-KDE_CHECK_HEADERS(sasl/sasl.h, sasl2_header="yes")
++KDE_CHECK_HEADERS(sasl2/sasl.h, sasl2_header="yes")
+ if test "$sasl2_header" = "yes" ; then
+   KDE_CHECK_LIB(sasl2, sasl_client_init, SASL2_LIBS="-lsasl2")
+ fi
+--- ./kioslave/ldap/kio_ldap.cpp.orig	2005-03-22 14:35:20.000000000 +0100
++++ ./kioslave/ldap/kio_ldap.cpp	2005-03-22 14:36:19.000000000 +0100
+@@ -22,7 +22,7 @@
+ #include <klocale.h>
+ 
+ #ifdef HAVE_SASL_SASL_H //prefer libsasl2
+-#include <sasl/sasl.h>
++#include <sasl2/sasl.h>
+ #else
+ #ifdef HAVE_SASL_H
+ #include <sasl.h>
+--- ./kioslave/pop3/pop3.cc.orig	2005-03-22 12:08:08.000000000 +0100
++++ ./kioslave/pop3/pop3.cc	2005-03-22 12:08:23.000000000 +0100
+@@ -43,7 +43,7 @@
+ 
+ #ifdef HAVE_LIBSASL2
+ extern "C" {
+-#include <sasl/sasl.h>
++#include <sasl2/sasl.h>
+ }
+ #endif
+ 
+--- ./kioslave/smtp/command.h.orig	2005-03-22 14:35:48.000000000 +0100
++++ ./kioslave/smtp/command.h	2005-03-22 14:36:33.000000000 +0100
+@@ -38,7 +38,7 @@
+ 
+ #ifdef HAVE_LIBSASL2
+ extern "C" {
+-#include <sasl/sasl.h>
++#include <sasl2/sasl.h>
+ }
+ #endif
+ 
+--- ./kioslave/smtp/smtp.cc.orig	2005-03-22 14:35:56.000000000 +0100
++++ ./kioslave/smtp/smtp.cc	2005-03-22 14:36:50.000000000 +0100
+@@ -32,7 +32,7 @@
+ 
+ #ifdef HAVE_LIBSASL2
+ extern "C" {
+-#include <sasl/sasl.h>
++#include <sasl2/sasl.h>
+ }
+ #endif
+ 

@@ -85,6 +85,11 @@ xf_install() {
 	echo "Create /etc/X11 (if it's not already there) ..."
 	mkdir -p $root/etc/X11
 
+	if [ "$arch_sizeof_char_p" = 8 ] ; then
+		mkdir -p $root/usr/X11R6/lib
+		ln -s lib $root/usr/X11R6/lib64
+	fi
+
 	eval $MAKE install
 	eval $MAKE install.man
 	cd nls ; eval $MAKE install ; cd ..

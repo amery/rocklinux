@@ -110,6 +110,10 @@ xf_dirtree() {
 	mkdir -p $root/etc/X11
 	mkdir -p $root/usr/X11R6/lib/X11/fonts/TrueType
 
+	if [ "$arch_sizeof_char_p" = 8 ] ; then
+		ln -s lib $root/usr/X11R6/lib64
+	fi
+
 	rm -fv $root/usr/X11
 	rm -fv $root/usr/bin/X11
 	rm -fv $root/usr/lib/X11

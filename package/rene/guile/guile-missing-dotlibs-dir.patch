@@ -1,0 +1,19 @@
+--- ./pre-inst-guile.in.orig	2004-11-09 17:16:44.000000000 +0100
++++ ./pre-inst-guile.in	2004-12-16 14:15:17.347930016 +0100
+@@ -36,7 +36,7 @@
+ # Code:
+ 
+ # config
+-subdirs_with_ltlibs="libguile-ltdl srfi guile-readline"       # maintain me
++subdirs_with_ltlibs="libguile-ltdl libguile-ltdl/.libs srfi guile-readline"       # maintain me
+ 
+ # env (set by configure)
+ top_srcdir="@top_srcdir_absolute@"
+@@ -74,6 +74,7 @@
+ done
+ LTDL_LIBRARY_PATH="${ltdl_prefix}$LTDL_LIBRARY_PATH"
+ export LTDL_LIBRARY_PATH
++export LD_LIBRARY_PATH="$LTDL_LIBRARY_PATH:$LD_LIBRARY_PATH"
+ 
+ # set GUILE (clobber)
+ GUILE=${top_builddir}/libguile/guile

@@ -3,10 +3,10 @@
 / acl / { p; d; }
 / attr / { p; d; }
 / autoconf / { p; d; }
-/ automake / { p; d; }
-/ bash / { p; d; }
-/ bdb33 / { p; d; }
-/ bdb41 / { p; d; }
+/ automake=automake18 / { p; d; }
+/ bash=bash2 / { p; d; }
+/ bdb=bdb33 / { p; d; }
+/ bdb=bdb41 / { p; d; }
 / binutils / { p; d; }
 / bison / { p; d; }
 / bzip2 / { p; d; }

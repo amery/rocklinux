@@ -23,7 +23,7 @@ package_map='       +00-dirtree         +glibc22            +glibc23
 -mine               -bize               -termcap            +ncurses
 +readline           -strace             -ltrace             -perl5
 -m4                 -time               -gettext            -zlib
-+bash               +attr               +acl                +findutils
++bash2              +attr               +acl                +findutils
 +mktemp             +coreutils          -diffutils          -patch
 -make               +grep               +sed                +gzip
 +tar                +gawk               -flex               +bzip2

@@ -38,7 +38,7 @@ package_map='       +00-dirtree         +glibc22            +glibc23
 +sysfiles           +libpcap            +iptables           +tcp_wrappers
 -kiss               +kbd                -syslinux           -rescue-stage1-init
 +device-mapper      +lvm2               +mdadm              +dhcpcd
-+smartmontools      +ntfsprogs
++smartmontools      +ntfsprogs          +lvm-wrapper
 '
 
 if [[ $rockver = 2.0* ]] ; then
@@ -95,9 +95,6 @@ find usr/share/kbd -name '*dvo*' -o -name '*az*' -o -name '*fgG*' | \
 echo_status "Installing lvm-cycle-script ..."
 cp -v $base/target/$target/contrib/init-boot-cycle sbin/init-lvm-cycle
 chmod 755 sbin/init-lvm-cycle
-
-echo_status "Installing lvm2 wrapper ..."
-cp -v $base/target/$target/contrib/lvm2wrap etc/conf/lvm2wrap
 
 echo_status "Creating init."
 cp -v $rootdir/usr/bin/busybox sbin/init

@@ -5,7 +5,7 @@
 # the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 # the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 # 
-# ROCK Linux: rock-src/package/base/lvm2/lvm2.conf
+# ROCK Linux: rock-src/package/base/lvm-wrapper/config.in
 # ROCK Linux is Copyright (C) 1998 - 2004 Clifford Wolf
 # 
 # This program is free software; you can redistribute it and/or modify
@@ -20,12 +20,15 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-srcdir="LVM2.$ver"
-var_append confopt " " "--sbindir=$root/lib/lvm2"
-var_append confopt " " "--bindir=$root/lib/lvm2"
-var_append confopt " " "--libdir=$root/lib"
-
-if [ "$ROCKCFG_LVM_MANPAGES" != "lvm2" ] ; then
-	var_append confopt " " "--mandir=$builddir/trash/man"
-	var_append confopt " " "--infodir=$builddir/trash/info"
+if pkgcheck lvm X || pkgcheck lvm2 X
+then
+	# if ! pkgcheck lvm-wrapper X ; then
+	# 	comment "WARNING! You should really select the lvm-wrapper package when using lvm or lvm2."
+	# fi
+	default=lvm
+	pkgcheck lvm2 X && default=lvm2
+	choice ROCKCFG_LVM_MANPAGES $default \
+		"none" "Dont install any man-pages regarding LVM" \
+		"lvm"  "Install util man-pages for native LVM of linux-2.4" \
+		"lvm2" "Install util man-pages for LVM2 based on device-mapper"
 fi

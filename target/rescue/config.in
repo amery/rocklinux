@@ -42,6 +42,7 @@ pkgfilter sed '
 
 # Select some packages explicitely (base)
 / lvm /		{ s/^[OX] /X /p; d; };
+/ lvm-wrapper /		{ s/^[OX] /X /p; d; };
 / mdadm /	{ s/^[OX] /X /p; d; };
 / dhcpcd /	{ s/^[OX] /X /p; d; };
 / lvm2 /	{ s/^[OX] /X /p; d; };

@@ -185,6 +185,11 @@ echo "$spacer parsing for SPLIT disk."
 while read type from to ; do
 	if [ $type = SPLIT ] ; then
 		find $from -type f -printf '%P\n' | sort > $index
+		grep ':dev' $index > ${index}_dev
+		grep ':doc' $index > ${index}_doc
+		grep -v ':dev' $index | grep -v ':doc' >${index}_new
+		cat ${index}_new ${index}_doc ${index}_dev >$index
+		rm ${index}_{dev,doc,new}
 		while read p ; do
 			add $from$p $to$p
 		done < $index

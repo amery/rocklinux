@@ -23,16 +23,18 @@
 if pkgcheck php X ; then
 	menu_begin MENU_PKG_PHP 'PHP Package Options'
 		bool 'Force usage of shared modules' ROCKCFG_PKG_PHP_FORCESHARED 0
-		bool 'Build PHP with Mysql support' ROCKCFG_PKG_PHP_mysql 0
-		for xpkg in postgresql openldap openssl ; do
+		for xpkg in postgresql openssl mysql libgd ; do
 		  if pkgcheck $xpkg X ; then
-		    bool "Build PHP with $xpkg support" ROCKCFG_PKG_PHP_$xpkg 0
+		  	bool "Build PHP with $xpkg support" ROCKCFG_PKG_PHP_$xpkg 1
 		  fi
 		done
 
+		if pkgcheck pine X ; then
+		  bool "Build PHP with imap support" ROCKCFG_PKG_PHP_imap 1
+		fi
+
 		bool "Build PHP with mcrypt support" ROCKCFG_PKG_PHP_mcrypt 0
 		bool "Build PHP with mhash support" ROCKCFG_PKG_PHP_mhash 0
-		bool "Build PHP with gd support"     ROCKCFG_PKG_PHP_gd 0
 
 	menu_end
 fi

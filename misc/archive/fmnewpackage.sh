@@ -47,7 +47,7 @@ get_download() {
     download_url=""
     for arg; do
 	if curl -s -I -f "$arg" -o "header.log"; then
-	    location="`grep Location: header.log | sed 's,Location:[ ]\([.0-9A-Za-z-:/% ]*\).*,\1,'`"
+	    location="`grep Location: header.log | sed -e 's,Location:[ ]\([.0-9A-Za-z:/% -]*\).*,\1,' -e 's,prdownloads.sourceforge.net,dl.sourceforge.net,'`"
 	    download_file="`basename $location`"
 	    download_url="`dirname $location`/"
 	    rm -f header.log
@@ -92,21 +92,21 @@ read_fm_config() {
 # download package fm-page and grep for the author
 	html="http://freshmeat.net/projects/$fmname/"
 	curl -I -s "$html" -o "header.log"
-	html_new="`grep Location: header.log | sed 's,Location:[ ]\([.0-9A-Za-z-:/%?_= ]*\).*,\1,'`"
-	[ ! -z html_new ] && html="$html_new"
+	html_new="`grep Location: header.log | sed 's,Location:[ ]\([.0-9A-Za-z:/%?_= -]*\).*,\1,'`"
+	[ ! -z "$html_new" ] && html="$html_new"
 	unset html_new
 	rm -f header.log
 	curl -s "$html" -o "$fmname.html"
 	dev_name="`grep 'contact developer' "$fmname.html" | sed 's,^[[:blank:]]*\(.*\)[[:blank:]]<a.*$,\1,' | sed 's, *$,,g'`"
 	dev_mail="<`grep 'contact developer' "$fmname.html" | sed 's,^.*<a href=\"mailto:\(.*\)\">.*$,\1,'`>"
-	echo "__at__ @" >subst
-	echo "__dot__ ." >>subst
-	echo "|at| @" >>subst
-	echo "|dot| ." >>subst
-	echo "\\[at\\] @" >>subst
-	echo "\\[dot\\] ." >>subst
-	echo "(at) @" >>subst
-	echo "(dot) ." >>subst
+	echo '__at__ @' >subst
+	echo '__dot__ .' >>subst
+	echo '|at| @' >>subst
+	echo '|dot| .' >>subst
+	echo '[at] @' >>subst
+	echo '[dot] .' >>subst
+	echo '(at) @' >>subst
+	echo '(dot) .' >>subst
 
 	echo -n "$dev_mail" >dev_mail
 # for some strange reason, this doesn't work:
@@ -116,7 +116,7 @@ read_fm_config() {
 # dev_mail will have the same value as before
 	cat subst | while read from to ; do 
 		dev_mail="`cat dev_mail`"
-		dev_mail="${dev_mail// $from /$to}"
+		dev_mail="${dev_mail// ${from} /${to}}"
 		echo -n "$dev_mail" >dev_mail
 	done
 	dev_mail="`cat dev_mail`"

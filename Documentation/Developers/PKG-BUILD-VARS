@@ -9,7 +9,7 @@ pkg ........... base name part of the package we are building
 xpkg .......... derived name part of the package we are building
                 if a package is not pkgfork'd, pkg == xpkg
 ver ........... package Version (from *.desc - until first whitespace)
-extraver ...... version text after the first whitespace, or $rockver
+extraver ...... version text after the first whitespace, defaults to "0"
 desc_[A-Z] .... Data from the *.desc file
 
 id ............ unique ID for this Build-Pkg invocation

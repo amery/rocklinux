@@ -8,7 +8,7 @@ mkdir -p mnt/source mnt/target ramdisk
 #
 echo_status "Extracting the packages archives."
 for x in $( ls ../../pkgs/*.tar.bz2 | \
-		 grep -v -e ':dev.tar.bz2' -e ':doc.tar.bz2' )
+		 grep -v ':doc.tar.bz2' )
 do
 	echo_status "\`- Extracting ${x##*/} ..."
 	tar --use-compress-program=bzip2 --force-local -xpf $x
@@ -21,7 +21,7 @@ mv boot/* ../boot/
 echo_status "Remove the stuff we do not need ..."
 #rm -rf home usr/{doc,man,info}
 #rm -rf var/adm/* var/adm var/mail 
-rm -rf usr/src usr/*-linux-gnu 
+rm -rf usr/src
 #
 # TODO finish-package!!
 echo_status "Running ldconfig to create links ..."

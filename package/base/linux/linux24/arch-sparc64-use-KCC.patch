@@ -32,7 +32,7 @@ diff -ruN linux-2.4.22/arch/sparc64/Makefile linux-2.4.22.new/arch/sparc64/Makef
  # line...
  SHELL  =/bin/bash
  
--CC		:= $(shell if gcc -m64 -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then echo gcc; else echo sparc64-linux-gcc; fi )
+-CC		:= $(shell if $(CC) -m64 -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then echo $(CC); else echo sparc64-linux-gcc; fi )
 +CC		:= $(KCC)
  
  NEW_GCC := $(shell if $(CC) -m64 -mcmodel=medlow -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then echo y; else echo n; fi; )

@@ -20,46 +20,48 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1095534604 Sat Sep 18 21:10:04 2004
+[TIMESTAMP] 1096027062 Fri Sep 24 13:57:42 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-slmodem.err
 
-[5-ERROR] make -C modem all
-[5-ERROR] make[1]: Entering directory `/ROCK/src.slmodem.1095534575.32490.4162371156/slmodem-2.9.8/modem'
-[5-ERROR] rebuild profile...
-[5-ERROR] gcc-32 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_main.o -c modem_main.c
-[5-ERROR] gcc-32 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_cmdline.o -c modem_cmdline.c
-[5-ERROR] gcc-32 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem.o -c modem.c
-[5-ERROR] gcc-32 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_datafile.o -c modem_datafile.c
-[5-ERROR] gcc-32 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_at.o -c modem_at.c
-[5-ERROR] gcc-32 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_timer.o -c modem_timer.c
-[5-ERROR] gcc-32 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_pack.o -c modem_pack.c
-[5-ERROR] gcc-32 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_ec.o -c modem_ec.c
-[5-ERROR] modem_ec.c:689: warning: `t403_timeout' defined but not used
-[5-ERROR] gcc-32 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_comp.o -c modem_comp.c
-[5-ERROR] gcc-32 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_param.o -c modem_param.c
-[5-ERROR] gcc-32 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_debug.o -c modem_debug.c
-[5-ERROR] gcc-32 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o homolog_data.o -c homolog_data.c
-[5-ERROR] gcc-32 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o dp_sinus.o -c dp_sinus.c
-[5-ERROR] gcc-32 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o dp_dummy.o -c dp_dummy.c
-[5-ERROR] gcc-32 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o sysdep_common.o -c sysdep_common.c
-[5-ERROR] gcc-32 -o slmodemd modem_main.o modem_cmdline.o modem.o modem_datafile.o modem_at.o modem_timer.o modem_pack.o modem_ec.o modem_comp.o modem_param.o modem_debug.o homolog_data.o dp_sinus.o dp_dummy.o dsplibs.o sysdep_common.o
-[5-ERROR] gcc-32 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_test.o -c modem_test.c
-[5-ERROR] gcc-32 -o modem_test modem_test.o modem_cmdline.o modem.o modem_datafile.o modem_at.o modem_timer.o modem_pack.o modem_ec.o modem_comp.o modem_param.o modem_debug.o homolog_data.o dp_sinus.o dp_dummy.o dsplibs.o sysdep_common.o
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.slmodem.1095534575.32490.4162371156/slmodem-2.9.8/modem'
+[BUILDTIME] 2029 (5)
+
+[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_cmdline.o -c modem_cmdline.c
+[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem.o -c modem.c
+[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_datafile.o -c modem_datafile.c
+[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_at.o -c modem_at.c
+[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_timer.o -c modem_timer.c
+[5-ERROR] modem_timer.c: In function `timer_del':
+[5-ERROR] modem_timer.c:165: warning: dereferencing type-punned pointer will break strict-aliasing rules
+[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_pack.o -c modem_pack.c
+[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_ec.o -c modem_ec.c
+[5-ERROR] modem_ec.c:689: warning: 't403_timeout' defined but not used
+[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_comp.o -c modem_comp.c
+[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_param.o -c modem_param.c
+[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_debug.o -c modem_debug.c
+[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o homolog_data.o -c homolog_data.c
+[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o dp_sinus.o -c dp_sinus.c
+[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o dp_dummy.o -c dp_dummy.c
+[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o sysdep_common.o -c sysdep_common.c
+[5-ERROR] gcc-34 -o slmodemd modem_main.o modem_cmdline.o modem.o modem_datafile.o modem_at.o modem_timer.o modem_pack.o modem_ec.o modem_comp.o modem_param.o modem_debug.o homolog_data.o dp_sinus.o dp_dummy.o dsplibs.o sysdep_common.o
+[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_test.o -c modem_test.c
+[5-ERROR] gcc-34 -o modem_test modem_test.o modem_cmdline.o modem.o modem_datafile.o modem_at.o modem_timer.o modem_pack.o modem_ec.o modem_comp.o modem_param.o modem_debug.o homolog_data.o dp_sinus.o dp_dummy.o dsplibs.o sysdep_common.o
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.slmodem.1096027018.20625.2239835623/slmodem-2.9.8/modem'
 [5-ERROR] make -C drivers KERNEL_DIR=/lib/modules/2.4.25-rock/build
-[5-ERROR] make[1]: Entering directory `/ROCK/src.slmodem.1095534575.32490.4162371156/slmodem-2.9.8/drivers'
-[5-ERROR] gcc-32 -I/lib/modules/2.4.25-rock/build/include -o kernel-ver kernel-ver.c
+[5-ERROR] make[1]: Entering directory `/ROCK/src.slmodem.1096027018.20625.2239835623/slmodem-2.9.8/drivers'
+[5-ERROR] gcc-34 -I/lib/modules/2.4.25-rock/build/include -o kernel-ver kernel-ver.c
 [5-ERROR] make all KERNEL_VER=2.4.27-rock
-[5-ERROR] make[2]: Entering directory `/ROCK/src.slmodem.1095534575.32490.4162371156/slmodem-2.9.8/drivers'
-[5-ERROR] gcc-32 -Wall -pipe -O3 -fomit-frame-pointer -D__KERNEL__ -DMODULE -DEXPORT_SYMTAB -DMODVERSIONS --include /lib/modules/2.4.25-rock/build/include/linux/modversions.h -I/lib/modules/2.4.25-rock/build/include -I. -I./../modem  -o amrmo_init.o -c amrmo_init.c
-[5-ERROR] amrmo_init.c: /lib/modules/2.4.25-rock/build/include/linux/modversions.h: No such file or directory
+[5-ERROR] make[2]: Entering directory `/ROCK/src.slmodem.1096027018.20625.2239835623/slmodem-2.9.8/drivers'
+[5-ERROR] gcc-34 -Wall -pipe -O3 -fomit-frame-pointer -D__KERNEL__ -DMODULE -DEXPORT_SYMTAB -DMODVERSIONS --include /lib/modules/2.4.25-rock/build/include/linux/modversions.h -I/lib/modules/2.4.25-rock/build/include -I. -I./../modem  -o amrmo_init.o -c amrmo_init.c
+[5-ERROR] cc1: /lib/modules/2.4.25-rock/build/include/linux/modversions.h: No such file or directory
+[5-ERROR] amrmo_init.c: In function `amrmo_vprintf':
+[5-ERROR] amrmo_init.c:293: warning: use of cast expressions as lvalues is deprecated
 [5-ERROR] make[2]: *** [amrmo_init.o] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.slmodem.1095534575.32490.4162371156/slmodem-2.9.8/drivers'
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.slmodem.1096027018.20625.2239835623/slmodem-2.9.8/drivers'
 [5-ERROR] make[1]: *** [all] Error 2
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.slmodem.1095534575.32490.4162371156/slmodem-2.9.8/drivers'
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.slmodem.1096027018.20625.2239835623/slmodem-2.9.8/drivers'
 [5-ERROR] make: *** [drivers] Error 2
 [5-ERROR] --- BUILD ERROR ---
 [5-ERROR] Creating file list and doing final adaptions ... 

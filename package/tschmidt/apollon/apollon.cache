@@ -20,20 +20,62 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1095374460 Fri Sep 17 00:41:00 2004
+[TIMESTAMP] 1096026593 Fri Sep 24 13:49:53 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-apollon.log
+[LOGS] 5-apollon.err
 
-[BUILDTIME] 19199 (5)
-[SIZE] 0.98 MB, 61 files
+[BUILDTIME] 5546 (5)
 
-[DEP] 00-dirtree arts baghira bash2 binutils bzip2 coreutils diffutils
-[DEP] expat fam fam:dev findutils freetype freetype:dev gcc32 gcc32:dev
-[DEP] gettext glibc23 glibc23:dev grep hicolor-icon-theme kdelibs
-[DEP] kdelibs:dev kiosktool libart_lgpl23 libart_lgpl23:dev libgift
-[DEP] libgift:dev libjpeg libpng libpng:dev libxml2 linux24-header:dev
-[DEP] make mktemp net-tools perl5 qt qt:dev sed superkaramba:doc sysfiles
-[DEP] tar util-linux xfree86 xfree86:dev zlib:dev
+[5-ERROR] kircfunctors.h:176: error: `m_obj' undeclared (first use this function)
+[5-ERROR] kircfunctors.h: In member function `virtual bool KIRCMethodFunctor_S_Suffix<TClass>::operator()(const KIRCMessage&)':
+[5-ERROR] kircfunctors.h:196: error: there are no arguments to `isValid' that depend on a template parameter, so a declaration of `isValid' must be available
+[5-ERROR] kircfunctors.h:198: error: `m_method' undeclared (first use this function)
+[5-ERROR] kircfunctors.h:199: error: `m_obj' undeclared (first use this function)
+[5-ERROR] kircfunctors.h: In member function `virtual bool KIRCMethodFunctor_SS<TClass, argindex>::operator()(const KIRCMessage&)':
+[5-ERROR] kircfunctors.h:219: error: there are no arguments to `isValid' that depend on a template parameter, so a declaration of `isValid' must be available
+[5-ERROR] kircfunctors.h:221: error: `m_method' undeclared (first use this function)
+[5-ERROR] kircfunctors.h:222: error: `m_obj' undeclared (first use this function)
+[5-ERROR] kircfunctors.h:222: error: `type' undeclared (first use this function)
+[5-ERROR] kircfunctors.h: In member function `virtual bool KIRCMethodFunctor_SS_Prefix<TClass, argindex>::operator()(const KIRCMessage&)':
+[5-ERROR] kircfunctors.h:242: error: there are no arguments to `isValid' that depend on a template parameter, so a declaration of `isValid' must be available
+[5-ERROR] kircfunctors.h:244: error: `m_method' undeclared (first use this function)
+[5-ERROR] kircfunctors.h:245: error: `m_obj' undeclared (first use this function)
+[5-ERROR] kircfunctors.h: In member function `virtual bool KIRCMethodFunctor_SS_Suffix<TClass, argindex>::operator()(const KIRCMessage&)':
+[5-ERROR] kircfunctors.h:265: error: there are no arguments to `isValid' that depend on a template parameter, so a declaration of `isValid' must be available
+[5-ERROR] kircfunctors.h:267: error: `m_method' undeclared (first use this function)
+[5-ERROR] kircfunctors.h:268: error: `m_obj' undeclared (first use this function)
+[5-ERROR] kircfunctors.h: In member function `virtual bool KIRCMethodFunctor_SS_PrefixSuffix<TClass>::operator()(const KIRCMessage&)':
+[5-ERROR] kircfunctors.h:288: error: there are no arguments to `isValid' that depend on a template parameter, so a declaration of `isValid' must be available
+[5-ERROR] kircfunctors.h:290: error: `m_method' undeclared (first use this function)
+[5-ERROR] kircfunctors.h:291: error: `m_obj' undeclared (first use this function)
+[5-ERROR] kirc.cpp: At global scope:
+[5-ERROR] kirc.cpp:1626: warning: unused parameter 'msg'
+[5-ERROR] kirc.cpp:1261: warning: unused parameter 'msg'
+[5-ERROR] kirc.cpp:1255: warning: unused parameter 'msg'
+[5-ERROR] kirc.cpp:1121: warning: unused parameter 'msg'
+[5-ERROR] kirc.cpp:1116: warning: unused parameter 'msg'
+[5-ERROR] make[3]: *** [kirc.lo] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/src.apollon.1096026514.29597.3116254935/apollon-1.0b1/apollon/libkirc'
+[5-ERROR] make[2]: *** [all-recursive] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.apollon.1096026514.29597.3116254935/apollon-1.0b1/apollon'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.apollon.1096026514.29597.3116254935/apollon-1.0b1'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 1 files for this package.
+[5-ERROR] Applying package split: 40 apollon:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 apollon:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 apollon:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <apollon:doc> Creating flist file ...
+[5-ERROR] <apollon:doc> Creating package dependencies file ...
+[5-ERROR] <apollon:doc> Creating md5sum and cksum files ...
+[5-ERROR] <apollon:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building apollon=apollon.
 

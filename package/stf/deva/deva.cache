@@ -20,17 +20,62 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1095408707 Fri Sep 17 10:11:47 2004
+[TIMESTAMP] 1096026768 Fri Sep 24 13:52:48 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-deva.log
+[LOGS] 5-deva.err
 
-[BUILDTIME] 10283 (5)
-[SIZE] 2.33 MB, 209 files
+[BUILDTIME] 7619 (5)
 
-[DEP] 00-dirtree bash2 binutils coreutils cpio findutils gcc32 gcc32:dev
-[DEP] glibc23 glibc23:dev grep gzip linux24-header:dev make maverik
-[DEP] ncurses:dev patch perl5 readline readline:dev rpm sed sysfiles
-[DEP] tar xfree86
+[5-ERROR] /ROCK/src.deva.1096026674.19186.3788648976/Deva/bin/dpp Solidity.cmp
+[5-ERROR] Written Solidity_object.cxx
+[5-ERROR] Written Solidity_subject.cxx
+[5-ERROR] g++ -Wno-deprecated -I/ROCK/src.deva.1096026674.19186.3788648976/Deva/incl -I//opt/maverik/incl -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math   \
+[5-ERROR] -shared -o /ROCK/src.deva.1096026674.19186.3788648976/Deva/drc/Solidity_object.drc Solidity_object.cxx -L//opt/maverik/lib -lmaverik
+[5-ERROR] g++ -Wno-deprecated -I/ROCK/src.deva.1096026674.19186.3788648976/Deva/incl -I//opt/maverik/incl -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math   \
+[5-ERROR] -shared -o /ROCK/src.deva.1096026674.19186.3788648976/Deva/drc/Solidity_subject.drc Solidity_subject.cxx -L//opt/maverik/lib -lmaverik
+[5-ERROR] /ROCK/src.deva.1096026674.19186.3788648976/Deva/bin/dpp DragEnv.cmp
+[5-ERROR] Written DragEnv_object.cxx
+[5-ERROR] Written DragEnv_subject.cxx
+[5-ERROR] g++ -Wno-deprecated -I/ROCK/src.deva.1096026674.19186.3788648976/Deva/incl -I//opt/maverik/incl -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math   \
+[5-ERROR] -shared -o /ROCK/src.deva.1096026674.19186.3788648976/Deva/drc/DragEnv_object.drc DragEnv_object.cxx -L//opt/maverik/lib -lmaverik
+[5-ERROR] g++ -Wno-deprecated -I/ROCK/src.deva.1096026674.19186.3788648976/Deva/incl -I//opt/maverik/incl -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math   \
+[5-ERROR] -shared -o /ROCK/src.deva.1096026674.19186.3788648976/Deva/drc/DragEnv_subject.drc DragEnv_subject.cxx -L//opt/maverik/lib -lmaverik
+[5-ERROR] g++ -Wno-deprecated -I/ROCK/src.deva.1096026674.19186.3788648976/Deva/incl -I//opt/maverik/incl -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math   \
+[5-ERROR] -shared -o /ROCK/src.deva.1096026674.19186.3788648976/Deva/drc/Authenticate_object.drc Authenticate_object.cxx -L//opt/maverik/lib -lmaverik
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.deva.1096026674.19186.3788648976/Deva/components'
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.deva.1096026674.19186.3788648976/Deva'
+[5-ERROR] make egs \
+[5-ERROR] "CXX= g++ -Wno-deprecated" \
+[5-ERROR] "CXXFLAG= -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math" \
+[5-ERROR] "GNUINCL= " \
+[5-ERROR] "GNULIB= " \
+[5-ERROR] "DYNAMIC= -rdynamic"
+[5-ERROR] make[1]: Entering directory `/ROCK/src.deva.1096026674.19186.3788648976/Deva'
+[5-ERROR] cd examples; make
+[5-ERROR] make[2]: Entering directory `/ROCK/src.deva.1096026674.19186.3788648976/Deva/examples'
+[5-ERROR] g++ -Wno-deprecated -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math -I/ROCK/src.deva.1096026674.19186.3788648976/Deva/incl -I//opt/maverik/incl  -rdynamic -c DEVA_listTest.cxx
+[5-ERROR] g++ -Wno-deprecated -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math DEVA_listTest.o -o /ROCK/src.deva.1096026674.19186.3788648976/Deva/bin/DEVA_listTest -L/ROCK/src.deva.1096026674.19186.3788648976/Deva/lib -L//opt/maverik/lib   -ldeva_kernel /usr/lib/gcc-lib/i386-unknown-linux-gnu/3.2.3/libstdc++.so.5
+[5-ERROR] g++: /usr/lib/gcc-lib/i386-unknown-linux-gnu/3.2.3/libstdc++.so.5: No such file or directory
+[5-ERROR] make[2]: *** [/ROCK/src.deva.1096026674.19186.3788648976/Deva/bin/DEVA_listTest] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.deva.1096026674.19186.3788648976/Deva/examples'
+[5-ERROR] make[1]: *** [egs] Error 2
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.deva.1096026674.19186.3788648976/Deva'
+[5-ERROR] make: *** [plat] Error 2
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 1 files for this package.
+[5-ERROR] Applying package split: 40 deva:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 deva:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 deva:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <deva:doc> Creating flist file ...
+[5-ERROR] <deva:doc> Creating package dependencies file ...
+[5-ERROR] <deva:doc> Creating md5sum and cksum files ...
+[5-ERROR] <deva:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building deva=deva.
 

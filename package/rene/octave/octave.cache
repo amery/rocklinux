@@ -20,18 +20,62 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1095415104 Fri Sep 17 11:58:24 2004
+[TIMESTAMP] 1096026945 Fri Sep 24 13:55:45 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-octave.log
+[LOGS] 5-octave.err
 
-[BUILDTIME] 137867 (5)
-[SIZE] 7.22 MB, 678 files
+[BUILDTIME] 14994 (5)
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils fftw:dev
-[DEP] findutils flex flex:dev gawk gcc32 gcc32:dev glibc23 glibc23:dev
-[DEP] gnuplot gperf grep hdf5 hdf5:dev libsndfile linux24-header:dev m4
-[DEP] make mktemp ncurses:dev net-tools openssl perl5 readline readline:dev
-[DEP] sed sysfiles tar tetex texinfo util-linux zlib:dev
+[5-ERROR] Array2.h: In constructor `Array2<T>::Array2(int, int, const T&)':
+[5-ERROR] Array2.h:85: error: there are no arguments to `set_max_indices' that depend on a template parameter, so a declaration of `set_max_indices' must be available
+[5-ERROR] Array2.h: In copy constructor `Array2<T>::Array2(const Array2<T>&)':
+[5-ERROR] Array2.h:92: error: there are no arguments to `set_max_indices' that depend on a template parameter, so a declaration of `set_max_indices' must be available
+[5-ERROR] Array2.h: In constructor `Array2<T>::Array2(const Array<LT>&, int, int)':
+[5-ERROR] Array2.h:99: error: there are no arguments to `set_max_indices' that depend on a template parameter, so a declaration of `set_max_indices' must be available
+[5-ERROR] In file included from MDiagArray2.h:31,
+[5-ERROR]                  from dMatrix.h:31,
+[5-ERROR]                  from CollocWt.h:32,
+[5-ERROR]                  from CollocWt.cc:33:
+[5-ERROR] DiagArray2.h: In constructor `DiagArray2<T>::DiagArray2(T*, int, int)':
+[5-ERROR] DiagArray2.h:120: error: there are no arguments to `set_max_indices' that depend on a template parameter, so a declaration of `set_max_indices' must be available
+[5-ERROR] DiagArray2.h: In constructor `DiagArray2<T>::DiagArray2()':
+[5-ERROR] DiagArray2.h:129: error: there are no arguments to `set_max_indices' that depend on a template parameter, so a declaration of `set_max_indices' must be available
+[5-ERROR] DiagArray2.h: In constructor `DiagArray2<T>::DiagArray2(int, int)':
+[5-ERROR] DiagArray2.h:136: error: there are no arguments to `set_max_indices' that depend on a template parameter, so a declaration of `set_max_indices' must be available
+[5-ERROR] DiagArray2.h: In constructor `DiagArray2<T>::DiagArray2(int, int, const T&)':
+[5-ERROR] DiagArray2.h:143: error: there are no arguments to `set_max_indices' that depend on a template parameter, so a declaration of `set_max_indices' must be available
+[5-ERROR] DiagArray2.h: In constructor `DiagArray2<T>::DiagArray2(const Array<LT>&)':
+[5-ERROR] DiagArray2.h:149: error: there are no arguments to `set_max_indices' that depend on a template parameter, so a declaration of `set_max_indices' must be available
+[5-ERROR] DiagArray2.h: In copy constructor `DiagArray2<T>::DiagArray2(const DiagArray2<T>&)':
+[5-ERROR] DiagArray2.h:156: error: there are no arguments to `set_max_indices' that depend on a template parameter, so a declaration of `set_max_indices' must be available
+[5-ERROR] In file included from dMatrix.h:31,
+[5-ERROR]                  from CollocWt.h:32,
+[5-ERROR]                  from CollocWt.cc:33:
+[5-ERROR] MDiagArray2.h: In member function `MDiagArray2<T>::operator MArray2<T>() const':
+[5-ERROR] MDiagArray2.h:74: error: `nr' undeclared (first use this function)
+[5-ERROR] MDiagArray2.h:74: error: (Each undeclared identifier is reported only once for each function it appears in.)
+[5-ERROR] MDiagArray2.h:74: error: `nc' undeclared (first use this function)
+[5-ERROR] MDiagArray2.h:79: error: there are no arguments to `xelem' that depend on a template parameter, so a declaration of `xelem' must be available
+[5-ERROR] make[2]: *** [CollocWt.o] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.octave.1096026769.23729.3092185611/octave-2.1.44/liboctave'
+[5-ERROR] make[1]: *** [liboctave] Error 2
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.octave.1096026769.23729.3092185611/octave-2.1.44'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 1 files for this package.
+[5-ERROR] Applying package split: 40 octave:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 octave:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 octave:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <octave:doc> Creating flist file ...
+[5-ERROR] <octave:doc> Creating package dependencies file ...
+[5-ERROR] <octave:doc> Creating md5sum and cksum files ...
+[5-ERROR] <octave:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building octave=octave.
 

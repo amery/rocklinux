@@ -1,16 +1,60 @@
 
-[TIMESTAMP] 1095415957 Fri Sep 17 12:12:37 2004
+[TIMESTAMP] 1096026985 Fri Sep 24 13:56:25 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-xarchon.log
+[LOGS] 5-xarchon.err
 
-[BUILDTIME] 5081 (5)
-[SIZE] 1.17 MB, 526 files
+[BUILDTIME] 2651 (5)
 
-[DEP] 00-dirtree alsa audiofile audiofile:dev autoconf automake18 bash2
-[DEP] binutils bzip2 coreutils diffutils esound esound:dev findutils
-[DEP] gcc32 gcc32:dev glib12 glib12:dev glibc23 glibc23:dev grep gtk+12
-[DEP] gtk+12:dev linux24-header:dev make mktemp net-tools perl5 sed
-[DEP] sysfiles tar texinfo xfree86 xfree86:dev
+[5-ERROR] In file included from Xarchon_Problem.hpp:15,
+[5-ERROR]                  from Xarchon_Problem.cpp:1:
+[5-ERROR] Problem.hpp: In member function `virtual G Minimax_Goal_Test<G, T>::Goal_Value(T*)':
+[5-ERROR] Problem.hpp:309: error: `tester' undeclared (first use this function)
+[5-ERROR] Problem.hpp:309: error: (Each undeclared identifier is reported only once for each function it appears in.)
+[5-ERROR] Problem.hpp:312: error: `generator' undeclared (first use this function)
+[5-ERROR] Problem.hpp:312: error: `goal_acc' undeclared (first use this function)
+[5-ERROR] Problem.hpp:316: error: `next' undeclared (first use this function)
+[5-ERROR] Problem.hpp: In member function `virtual G Multi_Minimax_Goal_Test<G, T>::Goal_Value(T*)':
+[5-ERROR] Problem.hpp:343: error: `goal_acc' undeclared (first use this function)
+[5-ERROR] Problem.hpp:350: error: `d' undeclared (first use this function)
+[5-ERROR] Problem.hpp:350: error: `b' undeclared (first use this function)
+[5-ERROR] Problem.hpp:350: error: `gen' undeclared (first use this function)
+[5-ERROR] Problem.hpp:350: error: `tester' undeclared (first use this function)
+[5-ERROR] Problem.hpp:352: error: `accumulator' undeclared (first use this function)
+[5-ERROR] Problem.hpp:352: error: `acc' undeclared (first use this function)
+[5-ERROR] In file included from Xarchon_Genetic.hpp:6,
+[5-ERROR]                  from Xarchon_Interface.hpp:6,
+[5-ERROR]                  from Xarchon_Problem.cpp:2:
+[5-ERROR] Genetic.hpp: In member function `virtual Genetic_Operator<T>* Genetic_Generation<T>::Choose_Operator()':
+[5-ERROR] Genetic.hpp:219: error: expected `;' before "start"
+[5-ERROR] Genetic.hpp:220: error: expected `;' before "end"
+[5-ERROR] Genetic.hpp:221: error: expected `;' before "iter"
+[5-ERROR] Genetic.hpp:224: error: `iter' undeclared (first use this function)
+[5-ERROR] Genetic.hpp:224: error: `start' undeclared (first use this function)
+[5-ERROR] Genetic.hpp:224: error: `end' undeclared (first use this function)
+[5-ERROR] Genetic.hpp: In member function `virtual Genetic_Population<T>* Genetic_Generation_a<T>::Operate(Genetic_Population<T>*)':
+[5-ERROR] Genetic.hpp:252: error: there are no arguments to `Choose_Operator' that depend on a template parameter, so a declaration of `Choose_Operator' must be available
+[5-ERROR] Genetic.hpp:252: error: (if you use `-fpermissive', G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+[5-ERROR] Genetic.hpp:267: error: `fit_func' undeclared (first use this function)
+[5-ERROR] make[2]: *** [Xarchon_Problem.o] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.xarchon.1096026945.11151.194430558/xarchon-0.50/src'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.xarchon.1096026945.11151.194430558/xarchon-0.50'
+[5-ERROR] make: *** [all-recursive-am] Error 2
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 1 files for this package.
+[5-ERROR] Applying package split: 40 xarchon:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 xarchon:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 xarchon:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <xarchon:doc> Creating flist file ...
+[5-ERROR] <xarchon:doc> Creating package dependencies file ...
+[5-ERROR] <xarchon:doc> Creating md5sum and cksum files ...
+[5-ERROR] <xarchon:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building xarchon=xarchon.
 

@@ -20,16 +20,62 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1095416676 Fri Sep 17 12:24:36 2004
+[TIMESTAMP] 1096020872 Fri Sep 24 12:14:32 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-linesrv.log
+[LOGS] 5-linesrv.err
 
-[BUILDTIME] 2662 (5)
-[SIZE] 0.08 MB, 9 files
+[BUILDTIME] 2018 (5)
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc32
-[DEP] gcc32:dev glibc23 glibc23:dev grep linux24-header:dev make mktemp
-[DEP] net-tools pam pam:dev sed sysfiles tar util-linux
+[5-ERROR] checking for pam_start in -lpam... yes
+[5-ERROR] configure: creating ./config.status
+[5-ERROR] config.status: creating Makefile
+[5-ERROR] config.status: creating server/Makefile
+[5-ERROR] config.status: creating lclog/Makefile
+[5-ERROR] config.status: creating htmlstatus/Makefile
+[5-ERROR] config.status: creating config.h
+[5-ERROR] config.status: executing depfiles commands
+[5-ERROR] -----------------
+[5-ERROR] shutdown support enabled
+[5-ERROR] using pam for authentication
+[5-ERROR] -----------------
+[5-ERROR] Don't do 'make install'!
+[5-ERROR] It has been generated but doesn't work as you would expect.
+[5-ERROR] Read ./server/INSTALL instead.
+[5-ERROR] Now go on with 'make' to compile linesrv and its tools...
+[5-ERROR] make  all-recursive
+[5-ERROR] make[1]: Entering directory `/ROCK/src.linesrv.1096020843.30634.3397197666/linesrv-2.1'
+[5-ERROR] Making all in .
+[5-ERROR] make[2]: Entering directory `/ROCK/src.linesrv.1096020843.30634.3397197666/linesrv-2.1'
+[5-ERROR] make[2]: Nothing to be done for `all-am'.
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.linesrv.1096020843.30634.3397197666/linesrv-2.1'
+[5-ERROR] Making all in server
+[5-ERROR] make[2]: Entering directory `/ROCK/src.linesrv.1096020843.30634.3397197666/linesrv-2.1/server'
+[5-ERROR] source='cfg.c' object='cfg.o' libtool=no \
+[5-ERROR] depfile='.deps/cfg.Po' tmpdepfile='.deps/cfg.TPo' \
+[5-ERROR] depmode=gcc3 /bin/sh ../depcomp \
+[5-ERROR] gcc-34 -DHAVE_CONFIG_H -I. -I. -I..     -Wall -O2 -c `test -f 'cfg.c' || echo './'`cfg.c
+[5-ERROR] cfg.c: In function `read_config':
+[5-ERROR] cfg.c:664: error: label at end of compound statement
+[5-ERROR] make[2]: *** [cfg.o] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.linesrv.1096020843.30634.3397197666/linesrv-2.1/server'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.linesrv.1096020843.30634.3397197666/linesrv-2.1'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 1 files for this package.
+[5-ERROR] Applying package split: 40 linesrv:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 linesrv:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 linesrv:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <linesrv:doc> Creating flist file ...
+[5-ERROR] <linesrv:doc> Creating package dependencies file ...
+[5-ERROR] <linesrv:doc> Creating md5sum and cksum files ...
+[5-ERROR] <linesrv:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building linesrv=linesrv.
 

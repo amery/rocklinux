@@ -78,6 +78,7 @@ patchopt ...... options passed to the patch program
 preconf ....... command to execute before running configure
 runconf ....... set to '0' if you want to skip running configure
 autogen ....... set to '1' if you want to run the autogen script
+automakever ... automake version prefix (e.g. "-1.7") for $autogen
 confopt ....... options for GNU autoconf './configure'
 extraconfopt .. options which should be appended to $confopt by set_confopt()
 configprefix .. variable declarations only for GNU autoconf './configure'

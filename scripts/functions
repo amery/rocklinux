@@ -237,9 +237,10 @@ function eval_config_command() {
 			sh autogen.sh
 		else
 			echo "Running builtin autogen script."
-			libtoolize --force --automake ; aclocal
+			libtoolize --force --automake
+			aclocal$automakever
 			if grep AM_INIT_AUTOMAKE configure.[ia][nc]
-				then automake ; fi
+				then automake$automakever ; fi
 			autoconf
 		fi
 	fi

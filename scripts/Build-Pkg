@@ -503,7 +503,7 @@ finish=""	; hook_add finish	5 'eval "$finish"'
 [ "$ROCKCFG_DO_CHECK" = 1 ] && hook_add inmake 6 'run_check'
 hook_add postflist 3 'postflist_static_lib'
 
-configprefix=""	; autogen=0
+configprefix="" ; autogen=0 ; automakever=""
 configscript="./configure" ; extraconfopt=""
 
 srcdir=auto ; srctar=auto

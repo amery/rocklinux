@@ -20,8 +20,10 @@ chmod 700 $outdir
 cd $outdir
 
 echo_status "Copying program binaries."
-for x in bash modprobe modprobe.old lsmod lsmod.old uname awk lspci find \
-         sysctl mount umount sshd ssh-keygen agetty sleep cat ls ps ln strace
+for x in bash modprobe lsmod uname gawk lspci find openvpn killall sync dhclient \
+         sysctl mount umount sshd ssh-keygen agetty sleep cat ls ps ln strace \
+	 swapon swapoff mkdir killall5 reboot sed sort dhclient-script ifconfig \
+	 expr hostname route nvi ez-ipupdate pptp rm scp
 do
 	for y in bin sbin usr/bin usr/sbin; do
 		[ -f $build_root/$y/$x ] && cp $build_root/$y/$x initrd/bin/
@@ -30,7 +32,7 @@ do
 		echo_error "Did not find program binary for '$x'."
 done
 
-for x in iproute2 iptables
+for x in iproute2 iptables grub pppd
 do
 	echo_status "Copy entire $x package."
 	while read dummy fn
@@ -51,14 +53,32 @@ do
 					"cd /; ldd \`type -p $x\`"; )
 done
 
+echo_status "Copying shutdown script."
+cp $base/target/$target/shutdown initrd/bin/
+chmod +x initrd/bin/shutdown
+echo_status "Copying rocknet scripts."
+cp -r $build_root/etc/network initrd/etc/
+cp -r $build_root/etc/services initrd/etc/
+cp $build_root/sbin/if{up,down} initrd/bin/
+echo_status "Copying some terminfo database entries."
+mkdir -p initrd/share/terminfo/{v,x,l}
+cp -r $build_root/usr/share/terminfo/v/vt100 initrd/share/terminfo/v/
+cp -r $build_root/usr/share/terminfo/l/linux initrd/share/terminfo/l/
+cp -r $build_root/usr/share/terminfo/x/xterm initrd/share/terminfo/x/
+echo_status "deleting manpages and other stuff."
+rm -rf initrd/share/man
+rm -rf initrd/var/adm
+
 echo_status "Copying kernel modules."
 cp -a $build_root/lib/modules initrd/lib/
 cd initrd/lib/modules/*/
-rm -rf pcmcia kernel/fs kernel/drivers/{bluetooth,cdrom,pcmcia,scsi,sound,usb}
+rm -rf pcmcia kernel/fs kernel/drivers/{bluetooth,cdrom,pcmcia,scsi,sound,usb} 
+rm -rf kernel/sound
 rm -rf kernel/net/{8021q,appletalk,bluetooth,irda,khttpd,decnet,econet,ipx}
-rm -rf kernel/drivers/{video,telephony,mtd,message,media,md,input,ide,i2c}
+rm -rf kernel/drivers/{video,telephony,mtd,message,media,md,input,ide,i2c,ieee1394}
 rm -rf kernel/drivers/{hotplug,char,block}
 cd $outdir
+
 
 echo_status "Create init script."
 echo -e '#!/bin/bash\ncd; exec /bin/bash --login' > initrd/bin/login-shell
@@ -82,8 +102,8 @@ cp $build_root/boot/vmlinuz .
 
 echo_status "Create isolinux setup."
 tar --use-compress-program=bzip2 \
-	-xf $base/download/router/syslinux-2.11.tar.bz2 \
-	syslinux-2.11/isolinux.bin -O > isolinux.bin
+	-xOf $base/download/mirror/s/syslinux-3.07.tar.bz2 \
+	syslinux-3.07/isolinux.bin > isolinux.bin
 cp $base/target/$target/isolinux.cfg .
 
 echo_status "Create iso description."

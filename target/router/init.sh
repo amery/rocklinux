@@ -2,6 +2,7 @@
 
 mount -n -t proc none /proc
 mount -n -t tmpfs none /tmp
+mount -n -t devpts none /dev/pts
 cat /proc/mounts > /etc/fstab
 cat /proc/mounts > /etc/mtab
 
@@ -21,10 +22,12 @@ echo "                     **    http://www.rocklinux.org/    **"
 echo "                     *************************************"
 echo
 
-for x in vc/{1,2,3,4,5,6} ; do
+for x in vc/{1,2,3,4,5,6} tts/0 ; do
    ( ( while : ; do agetty -i 38400 $x -n -l /bin/login-shell ; done ) & )
 done
-                                                                                
+
+[ -x /etc/network/rocknet ] && /etc/network/rocknet default auto up
+
 exec < /dev/null > /dev/null 2>&1
 while : ; do sleep 1 ; done
 

@@ -182,8 +182,8 @@ if [ "$newdelete" = 1 ]; then
 			fi
 		fi
 	done < <(
-		grep '^ROCK Linux Package Source Checksum: ' \
-		     build/$ROCKCFG_ID/var/adm/packages/* |
+		grep -R '^ROCK Linux Package Source Checksum: ' \
+		     build/$ROCKCFG_ID/var/adm/packages |
 		tr '/:' '  ' | cut -f6,13 -d' '
 	)
 	exit 0

@@ -8,9 +8,8 @@ echo_header "Creating isolinux setup:"
 #
 echo_status "Extracting isolinux boot loader."
 mkdir -p isolinux
-tar --use-compress-program=bzip2 \
-    -xf $base/download/mirror/s/syslinux-$syslinux_ver.tar.bz2 \
-    syslinux-$syslinux_ver/isolinux.bin -O > isolinux/isolinux.bin
+tar -O $taropt $base/download/mirror/s/syslinux-$syslinux_ver.tar.bz2 \
+    syslinux-$syslinux_ver/isolinux.bin > isolinux/isolinux.bin
 #
 echo_status "Creating isolinux config file."
 cp $base/target/$target/x86/isolinux.cfg isolinux/

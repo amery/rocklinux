@@ -18,8 +18,7 @@ chmod +x makeimages.sh
 
 if [ $use_mdlbl -eq 1 ]
 then
-	tar --use-compress-program=bzip2 \
-	    -xf $base/download/mirror/m/mdlbl-$mdlbl_ver.tar.bz2
+	tar $taropt $base/download/mirror/m/mdlbl-$mdlbl_ver.tar.bz2
 	cd mdlbl-$mdlbl_ver
 	cp ../boot/vmlinuz .; cp ../initrd.gz initrd; ./makedisks.sh
 	for x in disk*.img; do mv $x ../floppy${x#disk}; done; cd ..
@@ -43,9 +42,8 @@ then
 	#
 	echo_status "Extracting isolinux boot loader."
 	mkdir -p isolinux
-	tar --use-compress-program=bzip2 \
-	    -xf $base/download/mirror/s/syslinux-$syslinux_ver.tar.bz2 \
-	    syslinux-$syslinux_ver/isolinux.bin -O > isolinux/isolinux.bin
+	tar -O $taropt $base/download/mirror/s/syslinux-$syslinux_ver.tar.bz2 \
+	    syslinux-$syslinux_ver/isolinux.bin > isolinux/isolinux.bin
 	#
 	echo_status "Creating isolinux config file."
 	cp $base/target/$target/x86/isolinux.cfg isolinux/

@@ -1,0 +1,8 @@
+--- ./etc/pam.d/userdel.orig	2004-12-22 20:15:47.894472968 +0100
++++ ./etc/pam.d/userdel	2004-12-22 20:15:23.889122336 +0100
+@@ -0,0 +1,5 @@
++#%PAM-1.0 
++# /etc/pam.d/userdel
++auth		sufficient	pam_rootok.so
++auth		required	pam_unix.so
++account		required	pam_permit.so

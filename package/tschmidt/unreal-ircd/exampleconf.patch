@@ -17,13 +17,17 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
---- Unreal3.2/doc/example.conf
-+++ Unreal3.2/doc/example.conf 
-32c32
-< loadmodule "src/modules/commands.so";
----
-> loadmodule "modules/commands.so";
-45c45
-< include "spamfilter.conf";
----
-> 
+diff -ruN Unreal3.2/doc/example.conf Unreal3.2-new/doc/example.conf
+--- Unreal3.2/doc/example.conf	2004-10-27 20:45:03.000000000 +0200
++++ Unreal3.2-new/doc/example.conf	2005-01-26 18:29:36.459092216 +0100
+@@ -31,8 +31,8 @@
+  */
+ 
+ /* FOR *NIX, uncomment the following 2lines: */
+-//loadmodule "src/modules/commands.so";
+-//loadmodule "src/modules/cloak.so";
++loadmodule "modules/commands.so";
++loadmodule "modules/cloak.so";
+ 
+ /* FOR Windows, uncomment the following 2 lines: */
+ //loadmodule "modules/commands.dll";

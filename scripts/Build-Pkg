@@ -455,7 +455,7 @@ fi
 
 flistroot="bin boot etc lib sbin usr var opt"
 flistrfilter="ldconfig\..*:	.*|.*:	/var/adm/.*"
-flistdel="etc/ld.so.cache|var/tmp/.*|usr/tmp/.*|var/adm/logs/.*|.*\\.old"
+flistdel="etc/ld.so.cache|var/tmp/.*|var/lock/.*|var/run/.*|usr/tmp/.*|var/adm/logs/.*|.*\\.old"
 
 pkgsplits=""
 if [ "$ROCKCFG_SPLIT_DEV" != 0 ]; then

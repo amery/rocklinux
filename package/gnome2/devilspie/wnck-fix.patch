@@ -1,0 +1,19 @@
+--- ./src/devilspie-action-resize.gob.orig	2005-03-11 10:16:42.000000000 -0500
++++ ./src/devilspie-action-resize.gob	2005-03-11 10:15:27.000000000 -0500
+@@ -45,6 +45,7 @@
+ 
+   override (DevilsPie:Action) gboolean run(DevilsPie:Action *self (check null type), Wnck:Window *window (check null type)) {
+     DevilsPieActionResize *a = (DevilsPieActionResize*)self;
++    guint32 timestamp;
+     /* Assume that a true/false tristate in a boolean context is correct */
+     /* Assume the user is not totally stupid and has not set both
+     maximize and minimize */
+@@ -72,7 +71,7 @@
+     if (a->minimized == TRI_TRUE)
+       wnck_window_minimize(window);
+     else if (a->minimized == TRI_FALSE)
+-      wnck_window_unminimize(window);
++      wnck_window_unminimize(window, timestamp);
+     /* Handle full screen */
+     if (a->fullscreen != TRI_UNSET) {
+         g_print("fullscreen\n");

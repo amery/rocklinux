@@ -65,7 +65,7 @@ main() {
             "" "" \
             'Append Bootsplash Image to initrd' \
                 'gui_cmd "Appending Bootsplash Image 1024x68 to initrd" \
-                "$SPLASH -s -f /etc/bootsplash/$BOOTSPLASH_THEME/config/$BOOTSPLASH_CFGFILE >> $INITRD"'
+                "$SPLASH -s -f /etc/bootsplash/themes/$BOOTSPLASH_THEME/config/$BOOTSPLASH_CFGFILE >> $INITRD"'
     do : ; done
 }
 

@@ -30,9 +30,9 @@
 +	    inode->i_mode |= S_ISUID;
 +    }
 +#endif
+     DQUOT_INIT(inode);
      return 0 ;
  }
- 
 --- ./fs/Kconfig.orig	2003-01-13 10:00:39.000000000 +0100
 +++ ./fs/Kconfig	2003-01-13 10:04:55.000000000 +0100
 @@ -252,6 +252,35 @@

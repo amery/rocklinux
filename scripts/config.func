@@ -138,6 +138,8 @@ fi
 #	priority	115.000
 #	version		0.9.26
 #	prefix		/opt/foobar
+#	flag		CORE
+#	unflag		CORE
 #
 pkgfork() {
 	local script="\$5==\"$1\" {print;\$5=\"$1=$2\";"
@@ -158,6 +160,12 @@ pkgfork() {
 				;;
 			prefix)
 				script="$script \$7=\"$2\";"
+				;;
+			flag)
+				script="$script sub(\" 0\$\", \" $2 0\");"
+				;;
+			unflag)
+				script="$script sub(\" $2 \", \" \");"
 				;;
 		esac
 		shift; shift;

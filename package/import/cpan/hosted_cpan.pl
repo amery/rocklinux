@@ -28,14 +28,18 @@
 my $cpanbase="http://www.cpan.org/modules/by-authors/id";
 
 my %hosted;
+my %flags;
 
 open(F, "hosted_cpan.txt") || die $!;
 
 while (<F>) {
 	chomp;
 	next if /^#/ or /^\s*$/;
-	my ($p, $m) = split /\s+/;
+	die unless /^(\S+)\s+(\S+)(\s+.*\S|)/;
+	my ($p, $m, $f) = ($1, $2, $3);
+	$f =~ s/(\S+)/flag $1/g;
 	$hosted{$m} = $p;
+	$flags{$m} = $f;
 }
 
 close F;
@@ -96,9 +100,7 @@ matched:
 	print S "\t\tsrctar=\"$f\"\n";
 	print S "\t\t;;\n";
 
-	print C "bool 'Building package $mod (cpan-$xmod)' ROCKCFG_PKG_CPAN_$ymod 1\n";
-	print C "if [ \"\$ROCKCFG_PKG_CPAN_$ymod\" = 1 ]; then pkgfork cpan cpan-$xmod ".
-			"status X priority $hosted{$key}; fi\n\n";
+	print C "pkgfork cpan cpan-$xmod status X priority $hosted{$key}$flags{$key}\n";
 
 	delete $hosted{$key};
 }

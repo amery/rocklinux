@@ -40,7 +40,6 @@ if [ "$1" = '-help' ] ; then
 	echo " ./scripts/Download [ options ] [ <Package(s)> ]"
 	echo " ./scripts/Download [ options ] [ <Desc file(s)> ]"
 	echo " ./scripts/Download [ options ] -repository <Repositories>"
-	echo " ./scripts/Download [ options ] -import <package(s)>"
 	echo " ./scripts/Download [ options ] -sm <SM-PATCH-ID(s)>"
 	echo " ./scripts/Download [ options ] { -all | -required }"
 	echo 
@@ -859,14 +858,6 @@ all() {
     done
 }
 
-import() {
-    local import
-    for import ; do
-       mapped_packages $( grep '#if ' package/import/$import/*.desc | \
-           column_clean | cut -d' ' -f4)
-    done
-}
-
 packages() {
 	local descfile
 	for arg; do
@@ -971,7 +962,6 @@ case "$1" in
 
 	-required)	required ;;
 	-all)		all ;;
-        -import)        shift ; import "$@" ;;
 	-repository)	shift ; repository "$@" ;;
 
 	-sm) shift ; smpatches "$@" ;;

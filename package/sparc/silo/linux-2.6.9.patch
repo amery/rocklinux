@@ -1,0 +1,66 @@
+--- ./silo/silo.c.orig	2004-11-24 20:02:18.884240368 +0100
++++ ./silo/silo.c	2004-11-24 20:02:44.857291864 +0100
+@@ -49,6 +49,11 @@
+ #  define _LINUX_STRING_H_
+ #endif
+ #ifdef __linux__
++/* for linux-2.6.9, from linux/types.h */
++#  include <asm/types.h>
++#  ifndef pgoff_t
++#   define pgoff_t unsigned long
++#  endif
+ #  include <linux/fs.h>
+ #  include <ext2fs/ext2_fs.h>
+ #  include <ext2fs/ext2fs.h>
+--- ./silo/silocheck.c.orig	2004-11-24 20:03:04.171355680 +0100
++++ ./silo/silocheck.c	2004-11-24 20:03:21.014795088 +0100
+@@ -35,6 +35,11 @@
+ #  define _LINUX_STRING_H_
+ #endif
+ #ifdef __linux__
++/* for linux-2.6.9, from linux/types.h */
++#  include <asm/types.h>
++#  ifndef pgoff_t
++#   define pgoff_t unsigned long
++#  endif
+ #  include <linux/fs.h>
+ #  include <ext2fs/ext2_fs.h>
+ #  include <ext2fs/ext2fs.h>
+--- ./second/fs/romfs.c.orig	2004-11-24 19:59:31.633666320 +0100
++++ ./second/fs/romfs.c	2004-11-24 19:59:42.377033080 +0100
+@@ -25,6 +25,20 @@
+ #include <silo.h>
+ #include <file.h>
+ #include <stringops.h>
++
++#ifdef __CHECKER__
++#define __bitwise __attribute__((bitwise))
++#else
++#define __bitwise
++#endif
++
++typedef __u16 __bitwise __le16;
++typedef __u16 __bitwise __be16;
++typedef __u32 __bitwise __le32;
++typedef __u32 __bitwise __be32;
++typedef __u64 __bitwise __le64;
++typedef __u64 __bitwise __be64;
++
+ #include <linux/romfs_fs.h>
+ 
+ /* Reuse and abuse */
+--- ./second/fs/ufs.c.orig	2004-11-24 20:01:10.061702984 +0100
++++ ./second/fs/ufs.c	2004-11-24 20:01:34.434997680 +0100
+@@ -33,6 +33,12 @@
+ 
+ struct inode { unsigned int blah; };
+ 
++/* for linux-2.6.9, from linux/types.h */
++#include <asm/types.h>
++#ifndef pgoff_t
++#define pgoff_t unsigned long
++#endif
++
+ #include <linux/ufs_fs.h>
+ 
+ /* Reuse and abuse */

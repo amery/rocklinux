@@ -43,7 +43,7 @@ while [ $# -gt 0 ]; do
 			shift 1
 			;;
 		-s|--strip)
-			if [[ "$ROCKCFG_DEBUG" = 0 || $command != *install ]]
+			if [ "$ROCKCFG_DEBUG" = 0 -a "$STRIP" = "strip" ] || [[ $command != *install ]]
 			then
 				newcommand="$newcommand $1"
 			fi

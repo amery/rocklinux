@@ -63,6 +63,7 @@ pkgfilter sed '
 / xfsprogs /	{ p; d; };
 / kbd /		{ p; d; };	/ eject /	{ p; d; };
 / openssl /	{ p; d; };	/ openssh /	{ p; d; };
+/ ntfsprogs / { p; d; };
 
 # Select some packages explicitely (architectures)
 / bin86 /	{ p; d; };

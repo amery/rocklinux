@@ -36,9 +36,9 @@ package_map='       +00-dirtree         +glibc22            +glibc23
 -sysklogd           -devfsd             +setserial          +iproute2
 +netkit-base        +netkit-ftp         +netkit-telnet      +netkit-tftp
 +sysfiles           +libpcap            +iptables           +tcp_wrappers
--kiss               +kbd		-syslinux           -rescue-stage1-init
+-kiss               +kbd                -syslinux           -rescue-stage1-init
 +device-mapper      +lvm2               +mdadm              +dhcpcd
-+smartmontools
++smartmontools      +ntfsprogs
 '
 
 if [[ $rockver = 2.0* ]] ; then

@@ -82,8 +82,8 @@ cp $build_root/boot/vmlinuz .
 
 echo_status "Create isolinux setup."
 tar --use-compress-program=bzip2 \
-	-xf $base/download/router/syslinux-2.02.tar.bz2 \
-	syslinux-2.02/isolinux.bin -O > isolinux.bin
+	-xf $base/download/router/syslinux-2.11.tar.bz2 \
+	syslinux-2.11/isolinux.bin -O > isolinux.bin
 cp $base/target/$target/isolinux.cfg .
 
 echo_status "Create iso description."

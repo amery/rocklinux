@@ -191,8 +191,8 @@ if [ "$chroot" = 1 ] ; then
 		ln -snf ../.. "ROCK/build/$ROCKCFG_ID"
 	fi
 
-	mkdir -p "ROCK/src.$pkg.$id"
-	ln -s "$PWD/ROCK/src.$pkg.$id" "$builddir"
+	mkdir -p "ROCK/src.$xpkg.$id"
+	ln -s "$PWD/ROCK/src.$xpkg.$id" "$builddir"
 
 	cat > $builddir/chroot.sh <<- EOT
 		export ROCK_THIS_IS_CHROOT=1; cd /ROCK
@@ -202,7 +202,7 @@ if [ "$chroot" = 1 ] ; then
 	cat > $builddir/debug.sh <<- EOT
 		#!/bin/bash
 		export ROCK_THIS_IS_CHROOT=1
-		chroot "$xroot" /bin/bash ROCK/src.$pkg.$id/debug_x.sh
+		chroot "$xroot" /bin/bash ROCK/src.$xpkg.$id/debug_x.sh
 	EOT
 	chmod +x $builddir/debug.sh
 
@@ -220,7 +220,7 @@ if [ "$chroot" = 1 ] ; then
 		fi
 	fi
 
-	TZ="/ROCK/localtime" chroot . bin/bash ROCK/src.$pkg.$id/chroot.sh
+	TZ="/ROCK/localtime" chroot . bin/bash ROCK/src.$xpkg.$id/chroot.sh
 	returncode=$?
 
 	if [ ! -d "$builddir/." ]; then

@@ -1,0 +1,33 @@
+Index: mine/rocket.sh
+===================================================================
+--- mine/rocket.sh	(revision 58)
++++ mine/rocket.sh	(working copy)
+@@ -43,7 +43,7 @@
+ chunk == 2 { print > "/var/adm/rocket/dependencies/" pkg; }
+ chunk == 3 { print > "/var/adm/rocket/cksums/" pkg; }
+ 
+-chunk == 1 && $1 == "[V]" { ver=$2; }
++chunk == 1 && $1 == "[V]" { ver = $2 "-" $3; }
+ 
+ ' < <( curl -s "$1/packages.db" | gunzip; )
+ }
+@@ -69,7 +69,8 @@
+     create_gem)
+ 	shift
+ 	for pkg; do
+-		v="$(grep '^Package Name and Version' /var/adm/packages/$pkg | cut -f6 -d' ')"
++		v="$(grep '^Package Name and Version' /var/adm/packages/$pkg | \
++				cut -f6,7 -d' ' | tr ' ' - )"
+ 		mine -T /var/adm / "$pkg" "$pkg-$v.tar.bz2"
+ 		mine -C /var/adm "$pkg-$v.tar.bz2" "$pkg" "$pkg-$v.gem"
+ 	done
+@@ -93,7 +94,8 @@
+     install)
+ 	shift
+ 	for x; do
+-		url="$( grep "^$x " /var/adm/rocket/locations.txt | cut -f2 -d' ' | tail -1; )"
++		url="$( grep "^$x " /var/adm/rocket/locations.txt | \
++				cut -f2 -d' ' | tail -n1; )"
+ 		if [ -z "$url" ]; then
+ 			echo "Package $x not found - maybe you need to add the archive"
+ 			echo "to /etc/rocket.conf and run 'rocket update' first."

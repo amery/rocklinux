@@ -1,0 +1,22 @@
+--- ./include/linux/types.h.orig	2005-01-26 16:40:09.000000000 +0100
++++ ./include/linux/types.h	2005-01-26 16:40:37.000000000 +0100
+@@ -3,4 +3,19 @@
+ 
+ #include <asm/types.h>
+ 
++#ifdef __CHECKER__
++#define __bitwise __attribute__((bitwise))
++#else
++#define __bitwise
++#endif
++
++typedef __u16 __bitwise __le16;
++typedef __u16 __bitwise __be16;
++typedef __u32 __bitwise __le32;
++typedef __u32 __bitwise __be32;
++#if defined(__GNUC__) && !defined(__STRICT_ANSI__)
++typedef __u64 __bitwise __le64;
++typedef __u64 __bitwise __be64;
++#endif
++
+ #endif

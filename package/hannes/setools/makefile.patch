@@ -1,0 +1,11 @@
+--- ./Makefile.orig	2004-12-02 22:46:22.524886160 +0100
++++ ./Makefile	2004-12-02 22:46:40.170203664 +0100
+@@ -51,7 +51,7 @@
+ # -DCONFIG_SECURITY_SELINUX_MLS 
+ #		compiles library to be compatible with MLS 
+ ##		in the policy (experimental, see Readme)
+-CC_DEFINES	=
++CC_DEFINES	= -DCONFIG_SECURITY_SELINUX_MLS
+ 
+ ifeq ($(USE_LIBSELINUX), 1)
+ CC_DEFINES += -DLIBSELINUX

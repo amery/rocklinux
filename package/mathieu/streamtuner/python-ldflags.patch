@@ -1,0 +1,22 @@
+--- ./src/plugins/python/Makefile.am.orig	2004-12-25 16:05:02.267366488 +0100
++++ ./src/plugins/python/Makefile.am	2004-12-25 16:05:50.106093896 +0100
+@@ -19,7 +19,7 @@
+ 	pst-stream.h		\
+ 	pst-transfer-session.c	\
+ 	pst-transfer-session.h
+-python_la_LDFLAGS = -avoid-version -module $(EMBEDDED_PYTHON_LIBS) $(PYGTK_LIBS)
++python_la_LDFLAGS = -avoid-version -module $(EMBEDDED_PYTHON_LIBS) $(PYGTK_LIBS) -ltcl8.4 -ltk8.4
+ 
+ scriptsdir = $(pkgdatadir)/python/scripts
+ iconsdir = $(pkgdatadir)/python/icons
+--- ./src/plugins/python/Makefile.in.orig	2004-12-25 16:05:07.634550552 +0100
++++ ./src/plugins/python/Makefile.in	2004-12-25 16:06:37.507887728 +0100
+@@ -300,7 +300,7 @@
+ 	pst-transfer-session.c	\
+ 	pst-transfer-session.h
+ 
+-python_la_LDFLAGS = -avoid-version -module $(EMBEDDED_PYTHON_LIBS) $(PYGTK_LIBS)
++python_la_LDFLAGS = -avoid-version -module $(EMBEDDED_PYTHON_LIBS) $(PYGTK_LIBS) -ltcl8.4 -ltk8.4
+ scriptsdir = $(pkgdatadir)/python/scripts
+ iconsdir = $(pkgdatadir)/python/icons
+ AM_CPPFLAGS = $(WARN_CFLAGS) $(ST_CFLAGS) $(EMBEDDED_PYTHON_CFLAGS) $(PYGTK_CFLAGS) \

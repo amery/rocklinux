@@ -23,6 +23,9 @@
 # --- FUNCTIONS-BEGIN ---
 function set_wrapper_and_misc () {
 	var_append CC_WRAPPER_INSERT " " "-idirafter $root/usr/include"
+	hook_add preconf 8 'echo ac_cv_header_wchar_h=no >> config.cache'
+	hook_add preconf 8 'echo ac_cv_header_wctype_h=no >> config.cache'
+	hook_add preconf 8 'echo ac_cv_func_clock_gettime=no >> config.cache'
 	if [ "$stagelevel" -le 1 -o "$ROCKCFG_DIETLIBC_ALL" -ne 1 ] ; then
 		var_append CC_WRAPPER_INSERT " " "-nostdinc"
 		# all dietlibc pathes are redirected into the build system

@@ -1,0 +1,10 @@
+--- ./src/thumbnailer/id3/id3.cpp.orig	2004-09-07 17:51:22.414936896 +0200
++++ ./src/thumbnailer/id3/id3.cpp	2004-09-07 17:51:47.356145256 +0200
+@@ -26,6 +26,7 @@
+ 
+ #include <stdio.h>
+ #include <ctype.h>
++#include <unistd.h>
+ 
+ #ifndef TRUE
+ #  define FALSE (0)

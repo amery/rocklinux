@@ -1,0 +1,11 @@
+--- ./SConstruct.orig	2004-12-18 04:32:59.000000000 +0100
++++ ./SConstruct	2004-12-18 04:45:58.000000000 +0100
+@@ -113,7 +113,7 @@
+ 	python_lib = ['python%d.%d' % sys.version_info[0:2]]
+ 	python_libpath = [sysconfig.get_python_lib (0, 1) + '/config']
+ 	python_include = [sysconfig.get_python_inc ()]
+-	python_linkflags = Split (sysconfig.get_config_var('LINKFORSHARED'))
++	python_linkflags = Split ("-ltcl8.4 -ltk8.4 "+sysconfig.get_config_var('LINKFORSHARED'))
+ 	# International support information
+ 	ftgl_lib = ['ftgl']
+ 	ftgl_libpath = ['#../lib/linux-glibc2.2.5-i386/ftgl/lib']

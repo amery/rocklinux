@@ -59,6 +59,9 @@ fi
 . scripts/parse-config
 . scripts/functions
 
+# so we can disable stuff not available in Build-Target
+export ROCK_BUILD_TARGET=1
+
 build_root="$base/build/$ROCKCFG_ID"
 build_rock="$base/build/$ROCKCFG_ID/ROCK"
 build_logs="$build_rock/logs" ; mkdir -p "${build_logs}"

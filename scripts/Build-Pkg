@@ -533,7 +533,7 @@ fi
 # ----  Build Package
 #
 
-echo_status "Preparing build in src.$pkg.$id"
+echo_status "Preparing build in src.$xpkg.$id"
 
 if [ $clear_src = 1 ] ; then
 	mkdir -p $builddir; chmod 700 $builddir

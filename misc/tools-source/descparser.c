@@ -37,6 +37,11 @@ int check_condition(const char *cond)
 	char *right = strtok(0, " \t\n");
 	int retcode = 0;
 
+	if ( !strcmp(left, "xpkg") && getenv("descparser_ign_xpkg") ) {
+		free(t);
+		return 1;
+	}
+
 	if ( !strcmp(op, "==") ) {
 		char regex[strlen(right)+3];
 		char *text = getenv(left);
@@ -60,14 +65,16 @@ int check_condition(const char *cond)
 	return retcode;
 }
 
-int main()
-{
-	char line[4096];
-	int condstack[128];
-	int condcount = -1;
-	int falselevel = 0;
+char line[4096];
+int condstack[128];
+int condcount = -1;
+int falselevel = 0;
 
-	while ( fgets(line, 4096, stdin) ) {
+void parse_file(FILE *f);
+
+void parse_file(FILE *f)
+{
+	while ( fgets(line, 4096, f) ) {
 		if (line[0] == '#') {
 			if ( !strncmp(line, "#if ", 4) ) {
 				condstack[++condcount] = check_condition(line+4);
@@ -86,12 +93,26 @@ int main()
 			} else
 			if ( !strncmp(line, "#endif", 6) ) {
 				if ( !condstack[condcount--] ) falselevel--;
+			} else
+			if ( !strncmp(line, "#include ", 9) ) {
+				FILE *i;
+				if (strchr(line, '\n')) *strchr(line, '\n') = 0;
+				i = fopen(line+9, "r");
+				if (i) {
+					parse_file(i);
+					fclose(i);
+				} else
+					fprintf(stderr, "Can't #include '%s'.\n", line+9);
 			}
 		} else
 			if ( !falselevel )
 				fputs(line, stdout);
 	}
+}
 
+int main()
+{
+	parse_file(stdin);
 	return 0;
 }
 

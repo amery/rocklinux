@@ -291,10 +291,8 @@ EOT
 
 	# Create pkgmapper script
 	#
-	bash scripts/xfind.sh \
-	     architecture/$arch/. package/. target/$target/. misc/ -type f \
-	     -name 'pkgmapper.in' \
-	     -printf '%f\t%p\n' | sort | awk '{ $1="."; print; }' \
+	bash scripts/xfind.sh package/. -type f -name 'pkgmapper.in' \
+		-printf '%f\t%p\n' | sort | awk '{ $1="."; print; }' \
 			> build/$ROCKCFG_ID/ROCK/$toolsdir/lib/pkgmapper.$$
 	mv build/$ROCKCFG_ID/ROCK/$toolsdir/lib/pkgmapper.$$ \
 	   build/$ROCKCFG_ID/ROCK/$toolsdir/lib/pkgmapper

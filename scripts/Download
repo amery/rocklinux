@@ -196,6 +196,15 @@ fi
 #Disable checking for certificates on https downloads 
 curl_options="$curl_options -k"
 
+# build descparser if needed and run it
+descparser() {
+	if [ ! -f src/descparser ]; then
+		mkdir -p src
+		cc -o src/descparser misc/tools-source/descparser.c
+	fi
+	cat "$@" | descparser_ign_xpkg=1 src/descparser
+}
+
 # cksum_chk filename cksum origfile
 #
 # This function verifies the checksum. If it fails it renames the file
@@ -623,8 +632,8 @@ download_file_now() {
 
 list_dtags() {
 	{ 
-		grep -H '^\[D\] ' package/*/*/*.desc
-		grep -H '^[X0-9]' target/*/download.txt | sed 's,:,:[D] ,'
+		descparser package/*/*/*.desc | grep '^\[D\] '
+		grep -h '^[X0-9]' target/*/download.txt | sed 's,^,[D] ,'
 	} | column_clean
 }
 
@@ -689,7 +698,7 @@ required() {
 	[ "$forkedpkg" = "$pkg" ] || pkg=$forkedpkg
 
 	if [ "$on" = "X" ] ; then
-	    grep -H '^\[D\] ' package/$repo/$pkg/$pkg.desc > src/down.$$.lst
+	    descparser package/$repo/$pkg/$pkg.desc | grep '^\[D\] ' > src/down.$$.lst
 	    while read tag cksum file url flags ; do
 		download_file "`source_file cksum $file url $flags`" "$url" "$cksum" "$repo" "$pkg"
 	    done < src/down.$$.lst ; rm -f src/down.$$.lst
@@ -714,7 +723,7 @@ all() {
 
 	while read tag cksum file url flags ; do
 	    download_file "`source_file cksum $file url $flags`" "$url" "$cksum" "$repo" "$pkg"
-	done < <(grep -H '^\[D\] ' package/$repo/$pkg/$pkg.desc)
+	done < <(descparser package/$repo/$pkg/$pkg.desc | grep '^\[D\] ')
     done
     
     for each in target/*/download.txt; do
@@ -761,9 +770,23 @@ packages() {
 			while read tag cksum file url flags ; do
 			    download_file "`source_file cksum $file url $flags`" \
 				"$url" "$cksum" "$repo" "$pkg"
-			done < <(grep -H '^\[D\] ' package/$repo/$pkg/$pkg.desc)
+			done < <(descparser package/$repo/$pkg/$pkg.desc | grep '^\[D\] ')
 			;;
 		esac
+	done
+}
+
+mapped_packages() {
+	if [ ! -f src/pkgmapper ]
+	then
+		mkdir -p src
+		bash scripts/xfind.sh package/. -type f -name 'pkgmapper.in' \
+			-printf '%f\t%p\n' | sort | awk '{ $1="."; print; }' > src/pkgmapper
+	fi
+	for pkg; do
+		xpkg=$pkg
+		. src/pkgmapper
+		packages $pkg
 	done
 }
 
@@ -820,7 +843,7 @@ case "$1" in
 
 	-*|"")		exec $0 --help ;;
 
-	*)		packages "$@" ;;
+	*)		mapped_packages "$@" ;;
 esac
 
 exit 0

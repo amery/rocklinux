@@ -1,5 +1,8 @@
 
-if [ "$ROCKCFG_SPARC_OPT" != "generic" ] ; then
-	var_append GCC_WRAPPER_INSERT " " "-mcpu=$ROCKCFG_SPARC_OPT"
+if [ "$ROCKCFG_HPPA_BITS" == "32" ] ; then
+	var_append GCC_WRAPPER_INSERT " " "-march=1.1"
 fi
 
+if [ "$ROCKCFG_HPPA_BITS" == "64" ] ; then
+	var_append GCC_WRAPPER_INSERT " " "-march=2.0"
+fi

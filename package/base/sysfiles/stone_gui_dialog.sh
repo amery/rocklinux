@@ -150,7 +150,7 @@ gui_input() {
 # Use: gui_message "Text"
 #
 gui_message() {
-	local headlines="$( echo "$1" | fmt -$gui_dialog_s62 )"
+	local headlines="$( echo "$1" | fold -w $gui_dialog_s62 )"
 	gui_dialog --msgbox "$headlines" \
 		$(( $( echo "$headlines" | wc -l ) + 5 )) $gui_dialog_s70
 }

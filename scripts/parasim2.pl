@@ -63,6 +63,7 @@ while (1) {
 	while ($_=<Q> and $freejobs > 0) { 
 		@_ = split /\s+/; $qid="$_[0]-$_[5]";
 		s/^.*\s(\S+)\s*$/$1/; $_++;
+		$qid=~s/-.*?=/-/g;
 		printf LOG "%10d: Creating new job $qid " .
 		           "(pri $_[1], tm $_).\n", $now;
 		system("rm -f $logdir/logs_$id/$qid.* ; " .

@@ -10,21 +10,27 @@ echo_header "Finishing build."
 echo_status "Selecting bin packages ..."
 rm -rf build/${ROCKCFG_ID}/ROCK/pkgs_sel
 mkdir -p build/${ROCKCFG_ID}/ROCK/pkgs_sel
-ln build/${ROCKCFG_ID}/ROCK/pkgs/* build/${ROCKCFG_ID}/ROCK/pkgs_sel/
+(cd build/${ROCKCFG_ID}/ROCK/pkgs/;
+	ls | xargs ln --target-directory="../pkgs_sel";)
 
 # :doc packages are nice but in most cases never used
-rm -f build/${ROCKCFG_ID}/ROCK/pkgs_sel/*:doc{-*,}.gem
+(cd build/${ROCKCFG_ID}/ROCK/pkgs_sel/; rm -f *:doc{-*,}.gem;)
 
 # remove packages which haven't been built in stages 0-8
 if [ "$ROCKCFG_TARGET_CRYSTAL_BUILDADDONS" = 1 ]; then
 	for gemfile in build/${ROCKCFG_ID}/ROCK/pkgs_sel/*.gem; do
-		if ! mine -k descs $gemfile | grep '^\[P\]' | cut -f3 -d' ' | grep -q '[0-8]'; then
+		if ! mine -k packages $gemfile | grep -q '^Build \[[0-8]\] at '; then
 			rm -f $gemfile
 		fi
 	done
 fi
 
-echo_status "Creating package database ..."
+echo_status "Creating package database (everything) ..."
+admdir="build/${ROCKCFG_ID}/var/adm"
+create_package_db $admdir build/${ROCKCFG_ID}/ROCK/pkgs \
+                  build/${ROCKCFG_ID}/ROCK/pkgs/packages.db
+
+echo_status "Creating package database (install media) ..."
 admdir="build/${ROCKCFG_ID}/var/adm"
 create_package_db $admdir build/${ROCKCFG_ID}/ROCK/pkgs_sel \
                   build/${ROCKCFG_ID}/ROCK/pkgs_sel/packages.db

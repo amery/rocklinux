@@ -518,6 +518,7 @@ hook_add postflist 3 'postflist_static_lib'
 
 configprefix="" ; autogen=0 ; automakever=""
 configscript="./configure" ; extraconfopt=""
+configexec="bash"
 
 srcdir=auto ; srctar=auto
 taropt="--use-compress-program=bzip2 -xf"

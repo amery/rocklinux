@@ -1,0 +1,31 @@
+
+This fix is for passing -auxbase or -auxbase-strip thru the "gcc" driver
+programs (e.g. 'gcc') to the backend compilers (e.g. 'cc1'). We will need
+this for supporting feedback compilation using the ROCK toolchain...
+
+ - Clifford <clifford@clifford.at>
+
+--- ./gcc/gcc.h.orig	2004-09-24 15:42:27.000000000 +0200
++++ ./gcc/gcc.h	2004-09-24 15:43:24.000000000 +0200
+@@ -46,6 +46,7 @@
+  (!strcmp (STR, "Tdata") || !strcmp (STR, "Ttext")	\
+   || !strcmp (STR, "Tbss") || !strcmp (STR, "include")	\
+   || !strcmp (STR, "imacros") || !strcmp (STR, "aux-info") \
++  || !strcmp (STR, "auxbase") || !strcmp (STR, "auxbase-strip") \
+   || !strcmp (STR, "idirafter") || !strcmp (STR, "iprefix") \
+   || !strcmp (STR, "iwithprefix") || !strcmp (STR, "iwithprefixbefore") \
+   || !strcmp (STR, "isystem") || !strcmp (STR, "-param") \
+--- ./gcc/gcc.c.orig	2004-09-24 15:44:36.000000000 +0200
++++ ./gcc/gcc.c	2004-09-24 15:48:48.000000000 +0200
+@@ -765,9 +765,9 @@
+ /* NB: This is shared amongst all front-ends.  */
+ static const char *cc1_options =
+ "%{pg:%{fomit-frame-pointer:%e-pg and -fomit-frame-pointer are incompatible}}\
+- %1 %{!Q:-quiet} -dumpbase %B %{d*} %{m*} %{a*}\
++ %1 %{!Q:-quiet} -dumpbase %B %{d*} %{m*}\
+  %{c|S:%{o*:-auxbase-strip %*}%{!o*:-auxbase %b}}%{!c:%{!S:-auxbase %b}}\
+- %{g*} %{O*} %{W*&pedantic*} %{w} %{std*} %{ansi}\
++ %{a*} %{g*} %{O*} %{W*&pedantic*} %{w} %{std*} %{ansi}\
+  %{v:-version} %{pg:-p} %{p} %{f*} %{undef}\
+  %{Qn:-fno-ident} %{--help:--help}\
+  %{--target-help:--target-help}\

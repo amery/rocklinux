@@ -533,7 +533,68 @@ download_file_now() {
 
 	# Download
 	#
-	if [[ $url = cvs://* ]] ; then
+	if [[ $url = svn://* ]] ; then
+		# svn://mode:[login[:password]@]server[:port]:/path::revision/
+		urlorig=${url}
+		url="${url#svn://}"; url="${url%/}"
+		mode="${url%%:*}"
+		url="${url#*:}"
+		if [ "${url%@*}" = "${url}" ] ; then
+			username=""
+			password=""
+		else
+			username="${url%%@*}"
+			if [ "${username%:*}" != "${username}" ] ; then
+				password="--password ${username#*:}"
+				username="${username%%:*}"
+			fi
+			username="--username ${username}"
+		fi
+		url="${url##*@}"
+		rev="${url##*::}"
+		if [ -z "${rev}" -o "${rev}" == "${url}" ] ; then
+			rev=""
+		else
+			rev="-r ${rev}"
+		fi
+		url="${url%::*}"
+		
+		old=${PWD}
+		tmp="`mktemp`"
+		rm -rf ${tmp}
+		dir=${bzfile%.tar.bz2}
+		dir="`basename ${dir}`"
+		mkdir -p ${tmp}/${dir}
+		cd ${tmp}/${dir}
+		echo SVN ${username} ${password} ${rev} ${mode}://${url}
+		{ echo svn co ${username} ${password} ${rev} ${mode}://${url} .
+		  if ! svn co ${username} ${password} ${rev} ${mode}://${url} .
+		  then touch .svn_error ; fi
+		} &> .svn_output &
+		while fuser .svn_output &> /dev/null ; do
+			echo -ne `nice du -sh 2> /dev/null | cut -f1` 'downloaded from' \
+				'SVN archive so far...\r'
+			sleep 3
+		done
+		echo `du -sh 2> /dev/null | cut -f1` 'downloaded from' \
+			'SVN archive (download finished).'
+		if [ ! -f .svn_error ] ; then
+			rm -f .svn_output
+			cd ..
+			tar --owner root --group root \
+			    --use-compress-program=bzip2 \
+			    -cf ${dir}.tar.bz2 ${dir}
+			mv ${dir}.tar.bz2 ${old}/${bzfile}
+
+			cd ${old} ; rm -rf ${tmp}
+		else
+			cat .svn_output
+			cd $old ; rm -rf $tmp
+			echo ERROR: SVN co ${username} ${password} ${mode}://${url} . \
+			            returned an error.
+			echo "0 $gzfile $urlorig" >> src/Download-Errors
+		fi
+	elif [[ $url = cvs://* ]] ; then
 
 		# cvs://mode:[login[:password]@]server[:port]:/path::module!revision/
 		# btw, at least current cvs supports password at CVSROOT.

@@ -461,7 +461,7 @@ declare -a badfiles_desc
 # ---- Read various config files
 #
 
-parse_desc $pkg
+parse_desc $confdir/$pkg.desc
 
 ver="`echo "$desc_V" | tail -n 1 | cut -f1 -d' '`"
 extraver="`echo "$desc_V" | tail -n 1 | cut -s -f2- -d' '`"

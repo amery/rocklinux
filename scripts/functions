@@ -319,12 +319,14 @@ postflist_static_lib() {
 parse_desc() {
 	tag="`grep '^\[' $base/Documentation/Developers/PKG-DESC-FORMAT | \
 	      sed 's, (\*),,; s,\] \[,|,g; s,\[,,; s,\],,;'`"
-	descfile="$( pkg="$pkg" xpkg="$xpkg" descparser < $confdir/$1.desc )"
+	descfile="$( pkg="$pkg" xpkg="$xpkg" descparser < $1 )"
 	for tag in $tag ; do
 		tagdata="`echo "$descfile" | egrep "^\[($tag)\]" | \
-		          cut -f2- -d']' | sed 's,^ ,,'`"
+			  cut -f2- -d']' | sed 's,^ ,,'`"
 		tag="`echo $tag | cut -f1 -d'|' | tr - _`"
-		eval "desc_$tag=\"\$tagdata\""
+		if eval "[ -z \"\$desc_$tag\" ]"; then
+			eval "desc_$tag=\"\$tagdata\""
+		fi
 	done
 }
 

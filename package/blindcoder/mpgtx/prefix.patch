@@ -1,0 +1,12 @@
+diff -pruN mpgtx-1.3/configure mpgtx-1.3_new/configure
+--- mpgtx-1.3/configure	2002-08-30 18:03:12.000000000 +0200
++++ mpgtx-1.3_new/configure	2005-01-02 17:15:22.188347080 +0100
+@@ -75,7 +75,7 @@ do 
+ 	 -no-LFS | --no-LFS | -no-lfs | --no-lfs) LFS="no";;
+ 	 -stat | -static | --stat | --static) static="yes";;
+ 	 -par | -parachute | --par | --parachute) parachute="yes";;
+-	 -prefix=* | --prefix=*) prefix=`echo "$option" | sed 's/[-_a-zA-Z0-9]*=//'` ;;
++	 -prefix=* | --prefix=*) prefix=`echo "$option" | sed 's/[-_a-zA-Z0-9]*=//'` ; manprefix=$prefix ;;
+ 	 -dist | dist | --distrib | -distrib) rm -f Makefile && cat << EOF >makefile && exit 0;;
+ # Dummy Makefile, please run ./configure	 
+ default:

@@ -3,6 +3,8 @@
 # This is a contributed script to create a bootable ISO image from your
 # rescue target build.
 #
+# It uses grub with fd-emu to create a bootable image.
+#
 # (C) 2004 Tobias Hintze
 #
 
@@ -12,19 +14,28 @@ set -e
 usage() {
 	echo "Usage:"
 	echo "  $0 ISODIR FDDIR"
-	echo "       creates the iso from iso-dir and fd-dir"
+	echo "       creates the iso image from iso-dir and fd-dir"
 	echo
 	echo "  $0 -c KERNEL INITRD[.gz] SYSTEM [OVERLAY]"
 	echo "       creates iso-dir and fd-dir"
 	echo
 	echo "  $0 -C KERNEL INITRD[.gz] SYSTEM [OVERLAY]"
-	echo "       creates the iso from kernel, initrd and system tarball"
+	echo "       creates the iso image from kernel, initrd and system tarball"
 	echo ""
-	echo "initrd.img and system.tar.bz2 are generated during the"
-	echo "rescue-target build."
+	echo "Example usage (most commonly used):"
+	echo "(You get an iso image with default configuration and given files.)"
 	echo ""
-	echo "the kernel must have support for devfs and initrd."
+	echo "$0 -C vmlinuz initrd.img system.tar.bz2"
 	echo ""
+	echo "Using the -C option is like using the -c option except that after creating"
+	echo "the temporary directories the script calls itself to create the image from them"
+	echo "(first usage option). The directories are deleted on success afterwards."
+	echo ""
+	echo "* initrd.img and system.tar.bz2 are generated during the rescue-target build."
+	echo "* kernel must have support for devfs"
+	echo "* kernel must have support for initrd"
+	echo "* kernel must have support for iso9660"
+	echo "* kernel must be small to fit on 2880KB (minus initrd and grub stages)"
 	exit 1
 }
 
@@ -33,15 +44,41 @@ die() {
 	exit 2
 }
 
-test -z "$1" && usage
+check_reqs() {
+	[ -z "`type -p e2fsimage`" ] && \
+		die "You need e2fsimage to create an image with this script."
+	[ -z "`type -p mkisofs`" ] && \
+		die "You need mkisofs to create an image with this script."
+	[ -z "`type -p grub`" ] && \
+		die "You need grub to create an image with this script."
+	echo "requirements ok."
+}
 
-if [ "$1" == "-c" ] ; then
-	CREATEDIRS=1
-fi
-if [ "$1" == "-C" ] ; then
-	CREATEDIRS=2
-fi
-if [ ! -z "$CREATEDIRS" ]
+test -z "$1" && usage
+case "$1" in
+	-c|-C)
+		CREATEDIRS=1
+		[[ "$1" == "-C" ]] && CREATEDIRS=2
+		[[ $# == 4 || $# == 5 ]] || usage
+		[ -r $2 ] || exec echo "failed to read kernel image $2"
+		[ -r $3 ] || exec echo "failed to read initrd image $3"
+		[ -r $4 ] || exec echo "failed to read system $4"
+		[[ $# == 5 ]] && {
+			[ -r $5 ] || exec echo "failed to read overlay $5"
+		}
+		;;
+	*)
+		[[ $# == 2 ]] || usage
+		[ -r $1 ] || exec echo "failed to read iso-dir $1"
+		[ -r $2 ] || exec echo "failed to read fd-dir $2"
+		;;
+esac
+
+[[ "$CREATEDIRS" != 1 ]] && [ -e iso ] && die "file \"iso\" is in my way."
+
+check_reqs
+
+if [ -n "$CREATEDIRS" ]
 then
 	shift
 	TMPDIR=/var/tmp/rescue.$$
@@ -141,10 +178,10 @@ EOF
 rm -fv $ISODIR/device.map-$$
 
 
-create_fdemu_image() {
+create_iso_image() {
 	test -e iso && die "file \"iso\" is in my way."
 	mkisofs -b fdemu.img -r -l -d -c boot.catalog \
 		-allow-multidot -allow-lowercase -o iso $ISODIR
 }
 
-create_fdemu_image
+create_iso_image

@@ -192,7 +192,7 @@ EndSection
 Section "InputDevice"
 
     Identifier	"Keyboard1"
-    Driver	"Keyboard"
+    Driver	"kbd"
 
 # For most OSs the protocol can be omitted (it defaults to "Standard").
 # When using XQUEUE (only for SVR3 and SVR4, but not Solaris),
@@ -254,8 +254,9 @@ Section "InputDevice"
 
     Identifier  "Mouse1"
     Driver      "mouse"
-    Option "Protocol"    "Auto"
-    Option "Device"      "/dev/mouse"
+    Option "Protocol"    "ImPS/2"
+    Option "Device"      "/dev/input/mice"
+    Option "ZaxisMapping" "4 5"
 
     #Option "Emulate3Buttons" "true" # for a two button touch-pad
 EndSection

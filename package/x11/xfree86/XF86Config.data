@@ -232,8 +232,9 @@ Section "InputDevice"
 
     Identifier  "Mouse1"
     Driver      "mouse"
-    Option "Protocol"    "Auto"
-    Option "Device"      "/dev/mouse"
+    Option "Protocol"    "ImPS/2"
+    Option "Device"      "/dev/input/mice"
+    Option "ZaxisMapping" "4 5"
 
     #Option "Emulate3Buttons" "true" # for a two button touch-pad
 EndSection

@@ -18,12 +18,12 @@ a normal LAN (ethernet, etc). No low-latency or high-bandwith network is needed
 to build ROCK Linux on a cluster with good performance.
 
 ROCK Linux has it's own job scheduler to distribute jobs over the cluster
-nodes. But you can also use any job scheduler you have already installed on
+nodes, but you can also use any job scheduler you have already installed on
 your cluster to do the job.
 
 When building ROCK Linux in parallel (cluster) mode, the build scripts simply
-decide based on the package dependencies which packages might be build in
-parallel and builds them parallel (instead of serial, which is the default
+decide, based on the package dependencies, which packages may be built in
+parallel and does so if applicable (instead of serial, which is the default
 behavior).
 
 For building ROCK Linux you always have to be root. That doesn't change
@@ -42,9 +42,9 @@ faster than in the sequential case.
 
 Almost every package in ROCK Linux depends on a few very basic packages like
 the C-library, the C-compiler and the shell. So it's not possible to make use
-of the power of your cluster in the early phase of the build where this
+of the power of your cluster in the early phase of the build where these
 essential packages are build. Later in the build there are almost always a few
-more packages which can be build in parallel (than 100 packages is very common
+more packages which can be built in parallel (100 packages is very common
 after the base packages have been built).
 
 The tool './scripts/Create-ParaSim' can be used to "simulate" a parallel build.
@@ -88,8 +88,8 @@ exact numbers how much faster the build would be e.g. on a 16 node cluster.
 You can pass the option '-jobs N' to ./scripts/Create-ParaSim to get a
 simulation of the build on a cluster with N nodes. The script assumes that the
 cluster nodes are as fast as the system which has done the reference build. If
-your cluster nodes are e.g. about 20% faster, your build will be about 20%
-sooner completed as printed in the stat. You can even compare builds - e.g.
+your cluster nodes are e.g. about 20% faster, your build will be completed about
+20% sooner as printed in the stat. You can even compare builds - e.g.
 "-jobs 1,2,8" would compare a "normal" single-node build with a build on a
 2-node cluster and an 8-node cluster:
 
@@ -142,7 +142,7 @@ You also might want to enable the 'Always clean up src dirs (even on pkg
 fail)' option so the local disks of your cluster nodes are not filled up
 with the src dirs of broken packages.
 
-Download the required source packages as usual (if you don't have them already
+Download the required source packages as usual (if you don't already have them
 all downloaded).
 
 
@@ -150,8 +150,9 @@ all downloaded).
 	=======================
 
 The following has to be done on every node. If you have many nodes in your
-cluster you might mant to use 'prsh' from http://www.cacr.caltech.edu/beowulf/
-to perform the following steps on all nodes.
+cluster you might mant to use 'prsh' from http://www.cacr.caltech.edu/beowulf/,
+the "Send input to all tabs" feature of KDE-Konsole, or even multissh, which
+is availible at oss.linbit.at, to perform the following steps on all nodes.
 
 You need to create a local build directory on every cluster node (building
 the packages on the NFS share would cost too much performance). In many cases
@@ -175,14 +176,14 @@ building the packages the master will create a job queue and add those
 packages to the queue which can be built next.
 
 Run './scripts/Build-Job -daemon' in /scratch/rock-node on the nodes. Again,
-you might want to use 'prsh' to do this on all nodes. If you want to build
-multiple packages parallel on one cluster node (e.g. because they have two
-CPUs) you need to run './scripts/Build-Job -daemon' as often as how many jobs
-you want to run on the node at the same time.
+you might want to use 'prsh'/'multissh' to do this on all nodes. If you want to
+build multiple packages parallel on one cluster node (e.g. because they have 
+two CPUs) you need to run './scripts/Build-Job -daemon' as often as how many 
+jobs you want to run on the node at the same time.
 
 "Build-Target" on the master will show you what's going on. You can view
 the current status of your build from every console using the tool
-'./scripts/Create-ParaStatus'. The output of the script looks like:
+'./scripts/Create-ParaStatus'. The output of the script looks like this:
 
    18:41 2002-05-08:   --- current status ---
    Build-Job (daemon mode)       running on node01 with PID 18452
@@ -200,34 +201,34 @@ the current status of your build from every console using the tool
    Job 3-kdeaddons               waiting in the job queue (priority 0)
    18:41 2002-05-08:   ----------------------
 
-"Build-Job -daemon" on the nodes forkes in the background and only prints a one
-line message containing the filename of the logfile which contains the output
-of the script. This logfile is in the build/ directory, which is shared between
-all nodes so you can view all logs from the master node.
+"Build-Job -daemon" on the nodes forks into background, only printing a one
+line message with the filename of the logfile which contains the output of the
+script. This logfile is in the build/ directory, which is shared between all
+nodes so you can view all logs from the master node.
 
 
 	6. Building with an external job scheduler
 	==========================================
 
 Let's say the command for adding jobs in your job scheduler is 'addjob' and
-has only one parameter, which is the command to execute. You would set the
-config option 'Command for adding jobs' to the value
+it takes only one parameter: the command to execute. You would set the config
+option 'Command for adding jobs' to the value
 
     addjob 'cd /scratch/rock-node ; {}'
 
 The text {} will automatically be replaced with the Build-Job invocation for
-building the package and always has the form of:
+building the package and is always in the form:
 
     ./scripts/Build-Job -cfg <config-name> <stagelevel>-<package-name>
 
-So if you want to make some intelligent job scheduling (e.g. build large
+So if you want to make some intelligent job scheduling (e.g. building large
 packages on a faster node) you can also pass {} to another script and
 have the command in $*, the config name in $3 and the stagelevel and
 package name in $4.
 
 If not all jobs can be executed, the job scheduler should prefer those jobs
 which have been submitted first. This is important to make sure it is always
-possible that multiple packages can be build in parallel.
+possible that multiple packages can be built in parallel.
 
 Note that './scripts/Build-Job -daemon' does not work if the 'Command for
 adding jobs' config option is set. The './scripts/Create-ParaStatus' script

@@ -1,0 +1,40 @@
+--- ./configure.in.orig	2004-01-05 21:58:52.000000000 +0100
++++ ./configure.in	2004-08-28 23:05:28.000000000 +0200
+@@ -152,7 +152,7 @@
+ 		#error "FFMPEG libraries mismatch"
+ 	#endif
+ 	
+-	#if LIBAVCODEC_VERSION_INT != 0x000408
++	#if LIBAVCODEC_VERSION_INT < 0x000408
+ 		#error "AVview now requires ffmpeg 0.4.8"
+ 	#endif
+ 	
+@@ -203,7 +203,7 @@
+ 	AC_MSG_ERROR([can not find X11])
+ fi
+ 
+-if ! test "$TCL_VERSION $TK_VERSION" = "8.4 8.4" ; then
++if ! test "${TCL_VERSION:0:3} ${TK_VERSION:0:3}" = "8.4 8.4" ; then
+ 	AC_MSG_ERROR([AVview requires Tcl/Tk 8.4.x])
+ fi
+ 
+--- ./configure	2004-08-28 23:30:05.000000000 +0200
++++ ./configure.patch	2004-08-28 23:31:50.000000000 +0200
+@@ -7605,7 +7605,7 @@
+ 		#error "FFMPEG libraries mismatch"
+ 	#endif
+ 
+-	#if LIBAVCODEC_VERSION_INT != 0x000408
++	#if LIBAVCODEC_VERSION_INT < 0x000408
+ 		#error "AVview now requires ffmpeg 0.4.8"
+ 	#endif
+ 
+@@ -9555,7 +9555,7 @@
+    { (exit 1); exit 1; }; }
+ fi
+ 
+-if ! test "$TCL_VERSION $TK_VERSION" = "8.4 8.4" ; then
++if ! test "${TCL_VERSION:0:3} ${TK_VERSION:0:3}" = "8.4 8.4" ; then
+ 	{ { echo "$as_me:$LINENO: error: AVview requires Tcl/Tk 8.4.x" >&5
+ echo "$as_me: error: AVview requires Tcl/Tk 8.4.x" >&2;}
+    { (exit 1); exit 1; }; }

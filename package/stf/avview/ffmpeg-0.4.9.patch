@@ -1,0 +1,54 @@
+--- avview-0.80.3/ffmpeg.c	2004-01-03 19:17:46.000000000 +0100
++++ ./ffmpeg.c	2004-08-29 00:42:55.000000000 +0200
+@@ -578,7 +578,8 @@
+ 
+ enc->frame_rate_base=FFMPEG_FRAME_RATE_BASE;
+ enc->max_qdiff=3;
+-enc->aspect_ratio=0.0; /* guess assuming square pixels */
++enc->sample_aspect_ratio.num=1; /* guess assuming square pixels */
++enc->sample_aspect_ratio.den=1;
+ enc->me_method=ME_FULL;
+ enc->qblur=0.5;
+ enc->qcompress=0.5;
+@@ -826,7 +826,7 @@
+ 	sdata->format_context.pb.write_flag=1;
+ 	sdata->format_context.pb.max_packet_size=0;
+ 	sdata->format_context.oformat->flags=AVFMT_NOFILE;
+-	sdata->format_context.flags=AVFMT_NOFILE;
++	sdata->format_context.ctx_flags=AVFMT_NOFILE;
+ 	strcpy(sdata->format_context.title, arg_filename);
+ 	/* no way to extract these from TV signal */
+ 	sdata->format_context.title[0]=0;
+diff -dur avview-0.80.3/ffmpeg.c avview-0.80.3-patch/ffmpeg.c
+--- avview-0.80.3/ffmpeg.c	2004-08-29 01:13:34.000000000 +0200
++++ avview-0.80.3-patch/ffmpeg.c	2004-08-29 01:11:16.000000000 +0200
+@@ -193,7 +193,13 @@
+ 			while(ob_written<ob_free){
+ 				pthread_mutex_lock(&(sdata->format_context_mutex));
+ 				if(sdata->format_context.oformat!=NULL){
+-					sdata->format_context.oformat->write_packet(&(sdata->format_context),sdata->video_stream_num, output_buf+ob_written, ob_free-ob_written, make_pts(start_ts, f->timestamp));
++					AVPacket packet;
++					packet.pts = make_pts(start_ts, f->timestamp);
++					packet.data = (uint8_t) output_buf;
++					packet.size = ob_size;
++					packet.duration = 0;
++					packet.stream_index = sdata->video_stream_num;
++                               		sdata->format_context.oformat->write_packet(&(sdata->format_context), &packet);
+ 					i=ob_free-ob_written;
+ 					} else {
+ 					i=write(sdata->fd_out, output_buf+ob_written, ob_free-ob_written);
+@@ -324,7 +330,13 @@
+                        	/* write output buffer */
+                        	if(sdata->format_context.oformat!=NULL){
+                                	/* write using libavcodec format output */
+-                               	sdata->format_context.oformat->write_packet(&(sdata->format_context),sdata->audio_stream_num, out_buf, ob_free, make_pts(start_ts, f->timestamp));
++				AVPacket packet;
++				packet.pts = make_pts(start_ts, f->timestamp);
++				packet.data = (uint8_t) out_buf;
++				packet.size = ob_size;
++				packet.duration = 0;
++				packet.stream_index = sdata->audio_stream_num;
++                               	sdata->format_context.oformat->write_packet(&(sdata->format_context), &packet);
+                                	} else {
+                                	/* write using os function */
+                                	os_write_packet(sdata->fd_out, out_buf, ob_free);

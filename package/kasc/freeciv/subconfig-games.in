@@ -44,9 +44,5 @@ if pkgcheck freeciv X ; then
           bool 'zlib support' ROCKCFG_PKG_FREECIV_ZLIB 1 "
             use zlib to (un)compress savegames transparently"
         fi
-        if pkgcheck electricfence X ; then
-          bool 'efence support' ROCKCFG_PKG_FREECIV_EFENCE 0 "
-            use Electric Fence, malloc debugger"
-        fi
       menu_end
 fi

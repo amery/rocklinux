@@ -34,7 +34,17 @@
  
  E-Mount.epplet : E-Mount.c
 -	${GCC} ${GCCOPTS}  E-Mount.c -o E-Mount.epplet -lepplet ${IMLIB_LIBS} ${IMLIB_CFLAGS}
-+	${GCC} ${GCCOPTS}  E-Mount.c -o E-Mount.epplet -L$(E16)/lib -lepplet ${IMLIB_LIBS} ${IMLIB_CFLAGS}
++	${GCC} ${GCCOPTS}  E-Mount.c -o E-Mount.epplet -L$(E16)/lib -lepplet ${IMLIB_LIBS} ${IMLIB_CFLAGS} -lGL
  
  install : E-Mount.epplet
  	install -m 755 E-Mount.epplet ${EBIN}/E-Mount.epplet
+--- E-Mount_0.3/E-Mount.c.orig	2004-09-13 10:10:10.875988192 +0200
++++ E-Mount_0.3/E-Mount.c	2004-09-13 10:10:24.083980272 +0200
+@@ -225,6 +225,7 @@
+ 			changelabel = 0;
+ 			break;
+ 		default:
++			;
+ 	}
+ 
+ 	updatefsinfo ((*pointertocurrentlistitem)->mountpoint, changelabel);

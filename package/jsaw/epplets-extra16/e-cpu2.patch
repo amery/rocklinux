@@ -28,8 +28,8 @@
  
 -echo $CC $CFLAGS `imlib-config --cflags` -o $EPPLET.epplet $EPPLET.o `imlib-config --libs` -lepplet
 -$CC $CFLAGS `imlib-config --cflags` -o $EPPLET.epplet $EPPLET.o  `imlib-config --libs` -lepplet
-+echo $CC $CFLAGS `imlib-config --cflags` -o $EPPLET.epplet $EPPLET.o `imlib-config --libs` -L$E16/lib -lepplet
-+$CC $CFLAGS `imlib-config --cflags` -o $EPPLET.epplet $EPPLET.o  `imlib-config --libs` -L$E16/lib -lepplet
++echo $CC $CFLAGS `imlib-config --cflags` -o $EPPLET.epplet $EPPLET.o `imlib-config --libs` -L$E16/lib -lepplet -lGL
++$CC $CFLAGS `imlib-config --cflags` -o $EPPLET.epplet $EPPLET.o  `imlib-config --libs` -L$E16/lib -lepplet -lGL
  
  # Install E-NetFlame to the Enlightenment /bin dir
  echo install -m 755 ./$EPPLET.epplet $EBIN/$EPPLET.epplet

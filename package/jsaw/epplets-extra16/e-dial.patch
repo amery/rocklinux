@@ -27,7 +27,7 @@
  
  NAME=E-Dial
 -cc edial.c epplet.c -o $NAME.epplet -O2 `imlib-config --libs --cflags`
-+$CC $CFLAGS edial.c epplet.c -o $NAME.epplet -O2 `imlib-config --libs --cflags` -L$E16/lib -lepplet
++$CC $CFLAGS edial.c epplet.c -o $NAME.epplet -O2 `imlib-config --libs --cflags` -L$E16/lib -lepplet -lGL
  cp -f $NAME.epplet $EBIN/$NAME.epplet
  chmod a+x $EBIN/$NAME.epplet
  

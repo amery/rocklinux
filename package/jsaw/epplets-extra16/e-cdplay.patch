@@ -26,7 +26,7 @@
  #!/bin/sh
  
 -cc ecdplay.c epplet.c -o ecdplay.epplet `imlib-config --libs` `imlib-config --cflags` -lcdaudio
-+$CC $CFLAGS ecdplay.c epplet.c -o ecdplay.epplet `imlib-config --libs` `imlib-config --cflags` -L$E16/lib -lepplet -lcdaudio
++$CC $CFLAGS ecdplay.c epplet.c -o ecdplay.epplet `imlib-config --libs` `imlib-config --cflags` -L$E16/lib -lepplet -lcdaudio -lGL
  
  cp -f ecdplay.epplet $EBIN/ecdplay.epplet
  chmod a+x $EBIN/ecdplay.epplet

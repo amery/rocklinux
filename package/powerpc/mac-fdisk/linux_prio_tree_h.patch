@@ -1,0 +1,42 @@
+--- ./pdisk.c.orig	2004-11-25 21:54:35.597082272 +0100
++++ ./pdisk.c	2004-11-25 21:56:29.799720832 +0100
+@@ -40,6 +40,11 @@
+ 
+ #ifdef __linux__
+ #include <sys/ioctl.h>
++/* for linux-2.6.9, from linux/types.h */
++#  include <asm/types.h>
++#  ifndef pgoff_t
++#  define pgoff_t unsigned long
++#  endif
+ #include <linux/fs.h>
+ #include <linux/hdreg.h>
+ #endif
+--- ./partition_map.c.orig	2004-11-25 21:59:50.462215496 +0100
++++ ./partition_map.c	2004-11-25 22:00:14.971489520 +0100
+@@ -35,6 +35,11 @@
+ #include <fcntl.h>
+ #ifdef __linux__
+ #include <sys/ioctl.h>
++/* for linux-2.6.9, from linux/types.h */
++#  include <asm/types.h>
++#  ifndef pgoff_t
++#  define pgoff_t unsigned long
++#  endif
+ #include <linux/fs.h>
+ #include <linux/hdreg.h>
+ #include <sys/stat.h>
+--- ./fdisklabel.c.orig	2004-11-25 22:01:17.735947872 +0100
++++ ./fdisklabel.c	2004-11-25 22:01:45.738690808 +0100
+@@ -47,6 +47,11 @@
+ #include <sys/param.h>
+ 
+ #include <linux/hdreg.h>
++/* for linux-2.6.9, from linux/types.h */
++#  include <asm/types.h>
++#  ifndef pgoff_t
++#  define pgoff_t unsigned long
++#  endif
+ #include <linux/fs.h>
+ 
+ #include "fdisk.h"

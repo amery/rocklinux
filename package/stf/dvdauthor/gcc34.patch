@@ -1,0 +1,20 @@
+diff -dur dvdauthor-0.6.10/src/dvdvob.c dvdauthor-0.6.10-patch/src/dvdvob.c
+--- dvdauthor-0.6.10/src/dvdvob.c	2004-03-14 21:13:26.000000000 +0000
++++ dvdauthor-0.6.10-patch/src/dvdvob.c	2004-07-12 23:24:43.000000000 +0000
+@@ -1,4 +1,4 @@
+-/*
++/*
+  * Copyright (C) 2002 Scott Smith (trckjunky@users.sourceforge.net)
+  *
+  * This program is free software; you can redistribute it and/or modify
+@@ -1148,8 +1148,8 @@
+                         printpts(pts1);
+                         fprintf(stderr,"\n");
+                         ach->audpts[ach->numaudpts-1].pts[1]=pts0;
+-                    noshow:
+                     }
++                    noshow:
+                     ach->audpts[ach->numaudpts].pts[0]=pts0;
+                     ach->audpts[ach->numaudpts].pts[1]=pts1;
+                     ach->audpts[ach->numaudpts].sect=cursect;
+Nur in dvdauthor-0.6.10-patch/src: dvdvob.c~.

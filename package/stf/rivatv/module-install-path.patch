@@ -1,0 +1,16 @@
+--- ./Makefile.in	2004-03-15 21:21:17.000000000 +0100
++++ ./Makefile.in.patch	2004-08-02 12:08:40.000000000 +0200
+@@ -17,11 +17,11 @@
+ 
+ 
+ # Location of your module tree
+-MODULES	     = /lib/modules/@UTS_RELEASE@/kernel
++MODULES	     = /lib/modules/@UTS_RELEASE@
+ 
+ 
+ # Destination directory of the built modules within $(MODULES).
+-MOD_DEST     = /drivers/media/video
++MOD_DEST     = /rivatv
+ 
+ #=============================================================================
+ #

@@ -1,0 +1,11 @@
+--- rivatv-0.8.5/configure	2004-05-28 12:38:27.000000000 +0000
++++ rivatv-0.8.5-patch/configure	2004-07-16 00:14:10.000000000 +0000
+@@ -229,7 +229,7 @@
+ 	echo "*** If you are going to use the running kernel (compiled with"
+ 	echo "*** gcc version $kgcc) with RivaTV (will be compiled"
+ 	echo "*** with gcc version $bgcc) you may experience system crashes."
+-	WARNINGS=`expr $WARNINGS + 1`
++#	WARNINGS=`expr $WARNINGS + 1`
+ fi
+ 
+ # Check for write access to kernel sources

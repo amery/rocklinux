@@ -1,0 +1,28 @@
+diff -dur avview-0.80.3/alsa.c avview-0.80.3-patch/alsa.c
+--- avview-0.80.3/alsa.c	2004-01-03 18:17:58.000000000 +0000
++++ avview-0.80.3-patch/alsa.c	2004-07-12 23:32:34.000000000 +0000
+@@ -297,7 +297,6 @@
+ 				}
+ 			Tcl_ListObjAppendElement(interp,list,list2);
+ 			break;
+-		default:
+ 		}
+ 	Tcl_ListObjAppendElement(interp, ans, list);
+ 	j++;
+Nur in avview-0.80.3-patch: alsa.c~.
+diff -dur avview-0.80.3/vbi.c avview-0.80.3-patch/vbi.c
+--- avview-0.80.3/vbi.c	2004-01-03 18:18:03.000000000 +0000
++++ avview-0.80.3-patch/vbi.c	2004-07-15 23:37:56.000000000 +0000
+@@ -98,10 +98,10 @@
+ 				Tcl_VarEval(data->interp, data->event_command, " aspect {}", NULL);
+ 				break;
+ 			
+-			default:
++
+ 			}
+ 		break;
+-	default:
++
+ 	}
+ }
+ 

@@ -75,6 +75,7 @@ if [ -z "$autoboot" ]; then
 else
 	cat <<- EOT > /sbin/login-shell
 		#!/bin/bash
+		cd
 		case "\$( tty )" in
 		  /dev/vc/1)
 		    echo "Running 'stone' now.."

@@ -5,7 +5,7 @@
 # the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 # the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 # 
-# ROCK Linux: rock-src/misc/output/speech
+# ROCK Linux: rock-src/misc/output/tts/functions.sh
 # ROCK Linux is Copyright (C) 1998 - 2003 Clifford Wolf
 # 
 # This program is free software; you can redistribute it and/or modify
@@ -21,48 +21,63 @@
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
 # first we will construct a universal 'say' function
+function say_proc() {
+	while read line
+	do
+		while read -t1 subline; do
+			line="$( echo -e "${line%.}.\\n$subline" | tail -n10 )"
+		done
+
+		case "$ROCKCFG_OUTPUT_TTS_SYSTEM" in
+		ownscript)
+			echo "${line%.}." | ($ROCKCFG_OUTPUT_TTS_SAYPROG 2>&1) > /dev/null ;;
+		festival)
+			echo "${line%.}." | $ROCKCFG_OUTPUT_TTS_FESTIVAL --tts - ;;
+		mbrola)
+			echo "${line%.}." | $ROCKCFG_OUTPUT_TTS_TXT2PHO \
+				| $ROCKCFG_OUTPUT_TTS_MBROLA \
+					$ROCKCFG_OUTPUT_TTS_VOICEFILE - -.wav \
+				| $ROCKCFG_OUTPUT_TTS_PLAY ;;
+		flite)
+			$ROCKCFG_OUTPUT_TTS_FLITE -t "${line%.}." 2>&1 > /dev/null ;;
+		esac
+	done
+}
 function say() {
-	if [  $ROCKCFG_OUTPUT_SPEECH_OWNSCRIPT -eq 1 ] ; then
-		echo $* | ($ROCKCFG_OUTPUT_SPEECH_SAYPROG 2>&1) > /dev/null
-	else 
-		if [ $ROCKCFG_OUTPUT_SPEECH_USEFESTIVAL -eq 1 ] ; then
-		
-			echo $* | $ROCKCFG_OUTPUT_SPEECH_FESTIVAL --tts - ;
-		else
-			echo $* | $ROCKCFG_OUTPUT_SPEECH_TXT2PHO \
-				| $ROCKCFG_OUTPUT_SPEECH_MBROLA $ROCKCFG_OUTPUT_SPEECH_VOICEFILE - -.wav \
-				| $ROCKCFG_OUTPUT_SPEECH_PLAY ;
-		fi ;
-	fi ;
+	if [ -z "$ROCK_OUPUT_PLUGIN_TTS_PROC_ACTIVE" ]; then
+		export ROCK_OUPUT_PLUGIN_TTS_PROC_ACTIVE=1
+		exec 198> >( say_proc )
+	fi
+	echo "$*" >&198
 }
 
 # A free-form header at start of a section usually followed by calls to
 # echo_status_terminal().
 #
-echo_header_speech() {
-	[ $ROCKCFG_OUTPUT_SPEECH_ENABLE_HEADER -eq 1 ] && say "$*"
+echo_header_tts() {
+	[ $ROCKCFG_OUTPUT_TTS_ENABLE_HEADER -eq 1 ] && say "$*"
 }
 
 # A free-form status message informaing the user of what is happening just
 # now.
 #
-echo_status_speech() {
-	[ $ROCKCFG_OUTPUT_SPEECH_ENABLE_STATUS -eq 1 ] && say "$*"
+echo_status_tts() {
+	[ $ROCKCFG_OUTPUT_TTS_ENABLE_STATUS -eq 1 ] && say "$*"
 }
 
 # A free-form error or warning message if something fails.
 #
-echo_error_speech() {
-	[ $ROCKCFG_OUTPUT_SPEECH_ENABLE_ERROR -eq 1 ] && say "$*"
+echo_error_tts() {
+	[ $ROCKCFG_OUTPUT_TTS_ENABLE_ERROR -eq 1 ] && say "$*"
 }
 
 # We deny to build a package for some reason.
 #
 # Usage: echo_pkg_deny <stagelevel> <package-name> <reason>
 #
-echo_pkg_deny_speech() {
-	[ $ROCKCFG_OUTPUT_SPEECH_ENABLE_PKG_DENY -eq 1 ] && 
-		say `eval echo "$ROCKCFG_OUTPUT_SPEECH_TXT_PKG_DENY"` 
+echo_pkg_deny_tts() {
+	[ $ROCKCFG_OUTPUT_TTS_ENABLE_PKG_DENY -eq 1 ] && 
+		say `eval echo "$ROCKCFG_OUTPUT_TTS_TXT_PKG_DENY"` 
 }
 
 # We start building a package.
@@ -70,34 +85,34 @@ echo_pkg_deny_speech() {
 # Usage: echo_pkg_start <stagelevel> <repository> <package-name> \
 #                       <ver> <extraver>
 #
-echo_pkg_start_speech() {
-	[ $ROCKCFG_OUTPUT_SPEECH_ENABLE_PKG_START -eq 1 ] && 
-		say `eval echo "$ROCKCFG_OUTPUT_SPEECH_TXT_PKG_START"`
+echo_pkg_start_tts() {
+	[ $ROCKCFG_OUTPUT_TTS_ENABLE_PKG_START -eq 1 ] && 
+		say `eval echo "$ROCKCFG_OUTPUT_TTS_TXT_PKG_START"`
 }
 
 # We finished building a package.
 #
 # Usage: echo_pkg_finish <stagelevel> <repository> <package-name>
 #
-echo_pkg_finish_speech() {
-	[ $ROCKCFG_OUTPUT_SPEECH_ENABLE_PKG_FINISH -eq 1 ] && 
-		say `eval echo "$ROCKCFG_OUTPUT_SPEECH_TXT_PKG_FINISH"`
+echo_pkg_finish_tts() {
+	[ $ROCKCFG_OUTPUT_TTS_ENABLE_PKG_FINISH -eq 1 ] && 
+		say `eval echo "$ROCKCFG_OUTPUT_TTS_TXT_PKG_FINISH"`
 }
 
 # We aborted building a package.
 #
 # Usage: echo_pkg_abort <stagelevel> <repository> <package-name>
 #
-echo_pkg_abort_speech() {
-	[ $ROCKCFG_OUTPUT_SPEECH_ENABLE_PKG_ABORT -eq 1 ] && 
-		say `eval echo "$ROCKCFG_OUTPUT_SPEECH_TXT_PKG_ABORT"`
+echo_pkg_abort_tts() {
+	[ $ROCKCFG_OUTPUT_TTS_ENABLE_PKG_ABORT -eq 1 ] && 
+		say `eval echo "$ROCKCFG_OUTPUT_TTS_TXT_PKG_ABORT"`
 }
 
 # Whenever the tail of error logs are printed, this function is used for
 # that. The parameter may contain newlines.
 #
-echo_errorquote_speech() {
-	[ $ROCKCFG_OUTPUT_SPEECH_ENABLE_ERRORQUOTE -eq 1 ] && 
-		say `eval echo "$ROCKCFG_OUTPUT_SPEECH_TXT_ERRORQUOTE"`
+echo_errorquote_tts() {
+	[ $ROCKCFG_OUTPUT_TTS_ENABLE_ERRORQUOTE -eq 1 ] && 
+		say `eval echo "$ROCKCFG_OUTPUT_TTS_TXT_ERRORQUOTE"`
 }
 

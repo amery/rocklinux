@@ -84,7 +84,7 @@ void mod_load_info(char *mod_loader, char *mod_dir, char *mod_suffix)
 		return;
 	}
 
-	strcpy(mod_loader, "/bin-static/insmod");
+	strcpy(mod_loader, "/bin/insmod");
 	strcpy(mod_dir, "/lib/modules/");
 	strcat(mod_dir, uts_name.release);
 
@@ -229,45 +229,10 @@ int rm_recursive(char* directory)
 	free(namelist);
 
 	chdir(oldcwd);
-	if(rmdir(directory) != 0) {
+	if(strcmp(directory,".") && rmdir(directory) != 0) {
 		perror("could not delete just-left meant-to-be-empty directory");
 		ret = -1;
 	}
-
-	return ret;
-}
-
-/* symlink most files in /etc */
-int make_etc_symlinks() 
-{
-	struct dirent **namelist;
-	char source[256], target[256], oldcwd[100];
-	int n, ret=0;
-
-	getcwd(oldcwd, 100);
-	chdir("/ROCK/etc");
-
-	n = scandir(".", &namelist, no_dot_dirs_filter, NULL);
-	if (n < 0) {
-		perror("scandir"); ret = -1;
-	}
-
-	while(n--) {
-		snprintf(source, 256, "/ROCK/etc/%s",namelist[n]->d_name);
-		snprintf(target, 256, "/etc/%s",namelist[n]->d_name);
-
-		if (access(target, R_OK) == 0) {
-			printf("shyly skipping symlink for %s - already exists!\n", target);
-		} else if (symlink(source, target) != 0) {
-			printf("error in symlinking %s -> %s\n",source,target);
-			ret = -1;
-		}
-
-		free(namelist[n]);
-	}
-	free(namelist);
-
-	chdir(oldcwd);
 
 	return ret;
 }
@@ -323,140 +288,9 @@ int getdevice(char* devstr, int devlen)
 }
 
 int prepare_root() {
-	int ret = 0;
-	/* we need to set umask to 00 so we can set 777 perms */
-	umask(00);
-
-	DEBUG("symlinking /bin, /sbin, /boot, /opt");
-	/* simple symlinking */
-	if(symlink("/ROCK/bin","/bin") != 0) { perror("/bin symlink FAILED"); ret=-1; }
-	if(symlink("/ROCK/sbin","/sbin") != 0) { perror("/sbin symlink FAILED"); ret=-1; }
-	if(symlink("/ROCK/boot","/boot") != 0) { perror("/boot symlink FAILED"); ret=-1; }
-	if(symlink("/ROCK/opt","/opt") != 0) { perror("/opt symlink FAILED"); ret=-1; }
-
-	DEBUG("creating /tmp");
-	/* if /tmp isn't empty, this is gonna blow... */	
-	if(rmdir("/tmp") != 0) { perror("unable to remove old /tmp"); ret=-1; }
-	if(mkdir("/ramdisk/tmp", 0777) != 0) { perror("unable to create /ramdisk/tmp"); ret=-1; }
-	if(symlink("/ramdisk/tmp", "/tmp") != 0) { perror("/tmp symlink FAILED"); ret=-1; }
-
-	DEBUG("creating /home");
-	if(mkdir("/ramdisk/home", 0755) != 0) { perror("unable to create /ramdisk/home"); ret=-1; }
-	if(symlink("/ramdisk/home", "/home") != 0) { perror("/home symlink FAILED"); ret=-1; }
-
-	DEBUG("symlinking /usr");
-	/* usr is just a symlink to / , that's why it works */
-	if(unlink("/usr") != 0) { perror("unable to remove old /usr"); ret=-1; }
-	if(symlink("/ROCK/usr","/usr") != 0) { perror("/usr symlink FAILED"); ret=-1; }
-	
-	DEBUG("symlinking /var");
-	if(mkdir("/ramdisk/var", 0755) != 0) { perror("unable to create /ramdisk/var"); ret=-1; }
-	if(symlink("/ramdisk/var", "/var") != 0) { perror("/var symlink FAILED"); ret=-1; }
-
-	DEBUG("removing and symlinking /lib");
-	if(rm_recursive("/lib") != 0) { printf("removal of /lib FAILED\n"); ret=-1; }
-	if(symlink("/ROCK/lib", "/lib") != 0) { perror("/lib symlink FAILED"); ret=-1; }
-
-	DEBUG("removing /sbin-static and /bin-static");
-	if(unlink("/sbin-static") != 0) { perror("error removing /sbin-static"); ret=-1; }
-	if(rm_recursive("/bin-static") != 0) { printf("removal of /bin-static FAILED\n"); ret=-1; }
-	fflush(stdout);
-
-	DEBUG("preparing /etc");
-	/* the /etc directory is a bit special */
-	if(make_etc_symlinks() != 0) { printf("error while symlinking individual files in /etc!\n"); ret=-1; }
-	/* remove some files that either need to be writable or need to be replaced */
-	if(unlink("/etc/mtab") != 0) { perror("unable to remove /etc/mtab!"); ret=-1; }
-	if(unlink("/etc/passwd") != 0) { perror("unable to remove /etc/passwd!"); ret=-1; }
-	if(unlink("/etc/group") != 0) { perror("unable to remove /etc/group!"); ret=-1; }
-	if(unlink("/etc/shadow") != 0) { perror("unable to remove /etc/shadow!"); ret=-1; }
-	if(unlink("/etc/X11") != 0) { perror("unable to remove /etc/X11 symlink!"); ret=-1; }
-	if(mkdir("/etc/X11",0755) != 0) { perror("unable to create /etc/X11!"); ret=-1; }
-	if(mkdir("/etc/X11/xkb",0755) != 0) { perror("unable to create /etc/X11/xkb!"); ret=-1; }
-
-	/* etc/mtab must not contain a duplicate rootfs entry*/
-	umask(022);
-	FILE* orig = fopen("/proc/mounts","r");
-	FILE* mod = fopen("/etc/mtab","w");
-	char buf[256];
-
-	DEBUG("modifying /etc/mtab");
-	while(fgets(buf, 256, orig) != NULL) {
-		if(memcmp(buf,"rootfs",6) == 0) continue;
-		else fputs(buf, mod);
-	}
-	fclose(orig); fclose(mod); buf[1]=0;
-
-	/* add rocker to /etc/passwd and change root's home to /home/root */
-	DEBUG("modifying /etc/passwd");
-	orig = fopen("/ROCK/etc/passwd","r");
-	mod = fopen("/etc/passwd","w");
-        while(fgets(buf, 256, orig) != NULL) {
-                if(memcmp(buf,"root",4) != 0) fputs(buf, mod);
-                else fputs("root:x:0:0:root:/home/root:/bin/bash\n",mod);
-        }
-        fputs("rocker:x:1000:100:ROCK Live CD User:/home/rocker:/bin/bash\n",mod);
-        fclose(orig); fclose(mod); buf[1]=0;
-
-        /* add rocker to /etc/shadow */
-	umask(066);
-	DEBUG("modifying /etc/shadow");
-        orig = fopen("/ROCK/etc/shadow","r");
-        mod = fopen("/etc/shadow","w");
-        while(fgets(buf, 256, orig) != NULL) {
-		if(memcmp(buf,"root",4) != 0) fputs(buf, mod);
-		else fputs("root:$1$1YssESn0$Y9LvBGGXpsZhjNKZ0x8OM/:12548::::::\n",mod);
-	}
-        fputs("rocker:$1$//TuI8QD$kTxVesUbGLNKuxILuK2UN/:12548:0:99999:7:::\n",mod);
-        fclose(orig); fclose(mod); buf[1]=0;
-
-        /* add rocker to group 'sound' */
-	int fnd = 0;
-	umask(022);
-	DEBUG("modifying /etc/group");
-        orig = fopen("/ROCK/etc/group","r");
-        mod = fopen("/etc/group","w");
-        while(fgets(buf, 256, orig) != NULL) {
-                if(memcmp(buf,"sound",5) != 0) fputs(buf, mod);
-                else {
-			fputs("sound:x:17:rocker\n",mod);
-			fnd = 1;
-		}
-        }
-	if(!fnd) fputs("sound:x:17:rocker\n",mod);
-        fclose(orig); fclose(mod); buf[1]=0;
-
-	/* copy over xorg.conf */
-	DEBUG("modifying /etc/X11/xorg.conf");
-	orig = fopen("/ROCK/etc/X11/xorg.conf","r");
-        mod = fopen("/etc/X11/xorg.conf","w");
-        while(fgets(buf, 256, orig) != NULL) fputs(buf, mod);
-	fclose(orig); fclose(mod); buf[1]=0;
-
-	/* copy over resolv.conf */
-	DEBUG("modifying /etc/resolv.conf");
-	unlink("/etc/resolv.conf");
-	orig = fopen("/ROCK/etc/resolv.conf","r");
-        mod = fopen("/etc/resolv.conf","w");
-        while(fgets(buf, 256, orig) != NULL) fputs(buf, mod);
-	fclose(orig); fclose(mod); buf[1]=0;
-
-	/* change modules.conf to place it's modules.dep in /etc */
-	DEBUG("modifying /etc/modules.conf");
-	unlink("/etc/modules.conf");
-	orig = fopen("/ROCK/etc/modules.conf","r");
-        mod = fopen("/etc/modules.conf","w");
-        while(fgets(buf, 256, orig) != NULL) fputs(buf, mod);
-	fputs("depfile=/etc/modules.dep\n",mod);
-	fputs("generic_stringfile=/etc/modules.generic_string\n",mod);
-	fputs("pcimapfile=/etc/modules.pcimap\n",mod);
-	fputs("isapnpmapfile=/etc/modules.isapnpmap\n",mod);
-	fputs("usbmapfile=/etc/modules.usbmap\n",mod);
-	fputs("parportmapfile=/etc/modules.parportmap\n",mod);
-	fputs("ieee1394mapfile=/etc/modules.ieee1394map\n",mod);
-	fputs("pnpbiosmapfile=/etc/modules.pnpbiosmap\n",mod);
-	fclose(orig); fclose(mod); buf[1]=0;
-	umask(00);
+	struct dirent **namelist;
+	char source[256], target[256];
+	int n, ret=0;
 
 	/* we need to fix some things in /dev */
 	DEBUG("preparing /dev");
@@ -469,35 +303,38 @@ int prepare_root() {
 	if(symlink("fd/2","stderr") != 0) { perror("could not symlink /dev/fd/2 to /dev/stderr"); ret=-1; }
 	if(chdir("/") != 0) { perror("could not chdir to /!"); ret=-1; }
 
-	/* create needed directories in /var */
-	DEBUG("preparing /var");
-	if(mkdir("/var/run",0755) != 0 ) { perror("could not create /var/run"); ret=-1; }
-	if(mkdir("/var/spool",0755) != 0 ) { perror("could not create /var/spool"); ret=-1; }
-	if(mkdir("/var/lock",0755) != 0 ) { perror("could not create /var/lock"); ret=-1; }
-	if(mkdir("/var/tmp",0777) != 0 ) { perror("could not create /var/tmp"); ret=-1; }
-	if(mkdir("/var/log",0755) != 0 ) { perror("could not create /var/log"); ret=-1; }
-	if(mkdir("/var/lib",0755) != 0 ) { perror("could not create /var/lib"); ret=-1; }
-	if(mkdir("/var/lib/xkb",0755) != 0 ) { perror("could not create /var/lib/xkb"); ret=-1; }
-	if(symlink("/var/lib/xkb","/etc/X11/xkb/compiled")!=0) 
-		{ perror("could not symlink /var/lib/xkb to /etc/X11/xkb/compiled"); ret=-1; }
-	if(mkdir("/var/state",0755) != 0 ) { perror("could not create /var/state"); ret=-1; }
-	if(mkdir("/var/state/dhcp",0755) != 0 ) { perror("could not create /var/state/dhcp"); ret=-1; }
-	if(mkdir("/var/rockplug",0755) != 0 ) { perror("could not create /var/rockplug"); ret=-1; }
-	if(mkdir("/var/rockplug/ieee1394",0755) != 0 ) { perror("could not create /var/rockplug/ieee1394"); ret=-1; }
-	if(mkdir("/var/rockplug/isapnp",0755) != 0 ) { perror("could not create /var/rockplug/isapnp"); ret=-1; }
-	if(mkdir("/var/rockplug/net",0755) != 0 ) { perror("could not create /var/rockplug/net"); ret=-1; }
-	if(mkdir("/var/rockplug/pci",0755) != 0 ) { perror("could not create /var/rockplug/pci"); ret=-1; }
-	if(mkdir("/var/rockplug/scsi",0755) != 0 ) { perror("could not create /var/rockplug/scsi"); ret=-1; }
-	if(mkdir("/var/rockplug/usb",0755) != 0 ) { perror("could not create /var/rockplug/usb"); ret=-1; }
-	
-	/* add rocker's home, change owner */
-	DEBUG("creating homes");
-	if(mkdir("/home/rocker",0755) != 0 ) { perror("could not create /home/rocker"); ret=-1; }
-	if(chown("/home/rocker",1000,100) != 0) { perror("could not chown /home/rocker to rocker:users"); ret=-1; }
-	/* root's home */
-	if(mkdir("/home/root",0700) != 0 ) { perror("could not create /home/root"); ret=-1; }
+	/* now create symlinks to the ro dir in the ramdisk */
+	chdir("/mnt/cowfs_ro");
+	n = scandir(".", &namelist, no_dot_dirs_filter, NULL);
+	if (n < 0) {
+		perror("scandir"); ret = -1;
+	}
 
+	while(n--) {
+		snprintf(source, 256, "/mnt/cowfs_ro/%s",namelist[n]->d_name);
+		snprintf(target, 256, "/mnt/cowfs_rw/%s",namelist[n]->d_name);
+
+		if (symlink(source, target) != 0) {
+			printf("error in symlinking %s -> %s\n",source,target);
+			ret = -1;
+		} 
+		free(namelist[n]);
+	}
+	free(namelist);
+	chdir("/");
+	
+	umask(00);
+	unlink("/mnt/cowfs_rw/home");
+	unlink("/mnt/cowfs_rw/tmp");
+	mkdir("/mnt/cowfs_rw/home",0755);
+	mkdir("/mnt/cowfs_rw/tmp",0777);
+	mkdir("/mnt/cowfs_rw/home/rocker",0755);
+	mkdir("/mnt/cowfs_rw/home/root",0700);
+	if(chown("/mnt/cowfs_rw/home/rocker",1000,100) != 0) { 
+		perror("could not chown /mnt/cowfs_rw/home/rocker to rocker:users"); ret=-1; 
+	}
 	umask(022);
+
 	return ret;
 }
 
@@ -505,6 +342,7 @@ void load_ramdisk_file() {
 	char text[120], devicefile[100];
 	char filename[100];
 	int ret = 0;
+	int ro_fd;
 
 	strcpy(filename, STAGE_2_IMAGE);
 	DEBUG("set stage 2 filename to %s",filename);
@@ -529,13 +367,19 @@ void load_ramdisk_file() {
 		return;
 	}
 
-	DEBUG("mounting loop device on /ROCK ... ");
-	if( mount("/dev/loop/0", "/ROCK", "squashfs", MS_RDONLY, NULL) ) 
-		{ perror("Can't mount squashfs on /ROCK!"); return; }
+	DEBUG("saving filedescriptor of /mnt/cowfs_ro");
+	ro_fd = open("/mnt/cowfs_ro",O_RDONLY); if(ro_fd < 0) { perror("open"); return; }
 
-	DEBUG("mounting tmpfs on /ramdisk");	
-	if ( mount("none", "/ramdisk", "tmpfs", 0, NULL) )
-		{ perror("Can't mount /ramdisk"); return; }
+	chdir("/mnt/cowfs_ro");
+	if(rm_recursive(".") != 0) return;
+
+	DEBUG("mounting loop device on /mnt/cowfs_ro ... ");
+	if( mount("/dev/loop/0", "/mnt/cowfs_ro", "squashfs", MS_RDONLY, NULL) ) 
+		{ perror("Can't mount squashfs on /mnt/cowfs_ro!"); return; }
+
+	DEBUG("mounting tmpfs on /mnt/cowfs_rw");	
+	if ( mount("none", "/mnt/cowfs_rw", "tmpfs", 0, NULL) )
+		{ perror("Can't mount /mnt/cowfs_rw"); return; }
 
 	/* create symlinks for needed directories, create special files */
 	if(prepare_root() == 0) doboot();
@@ -558,7 +402,7 @@ void autoload_modules()
 
 	if ( (pid = fork()) == 0 ) {
 		dup2(fd[1],1); close(fd[0]); close(fd[1]);
-		execlp("gawk", "gawk", "-f", "/bin-static/hwscan", NULL);
+		execlp("gawk", "gawk", "-f", "/bin/hwscan", NULL);
 		printf("Can't start >>hwscan<< program with gawk!\n");
 		exit(1);
 	}
@@ -587,7 +431,7 @@ void exec_sh()
 
 	printf ("Quit the shell to return to the stage 1 loader!\n");
 	if ( (rc = fork()) == 0 ) {
-	        execl("/bin-static/kiss", "kiss", "-E", NULL);
+	        execl("/bin/kiss", "kiss", "-E", NULL);
 		perror("kiss");
 		_exit(1);
 	}
@@ -644,7 +488,6 @@ so the 2nd stage boot system can be loaded.\n");
 	printf("minimalistic static shell so you can have a look at what went wrong...\n");
 
 	if(access("/bin/kiss",R_OK) == 0) execl("/bin/kiss", "/bin/kiss", NULL);
-	if(access("/bin-static/kiss",R_OK) == 0) execl("/bin-static/kiss", "/bin-static/kiss", NULL);
 
 	printf("\nCan't start a shell!!\n\nPlease send a bug report with your configuration to fake@rocklinux.org\n\n");
 	return 0;

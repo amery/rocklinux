@@ -1,8 +1,15 @@
 
 echo_header "Creating initrd data:"
 rm -rf $disksdir/initrd
-mkdir -p $disksdir/initrd/{dev,sys,proc,tmp,bin-static,mnt/{cdrom,floppy,stick},ramdisk,etc,ROCK}
-cd $disksdir/initrd; ln -s bin-static sbin-static; ln -s . usr
+mkdir -p $disksdir/initrd/{dev,sys,proc,mnt/{cdrom,floppy,stick,}}
+mkdir -p $disksdir/initrd/mnt/{cowfs_ro/{bin,lib},cowfs_rw}
+cd $disksdir/initrd; ln -s mnt/cowfs_ro/bin mnt/cowfs_ro/sbin; 
+#
+echo_status "Creating read-only symlinks..."
+for d in etc home bin sbin opt usr tmp var lib ; do
+	ln -s /mnt/cowfs_rw/$d $d
+	ln -s /mnt/cowfs_ro/$d mnt/cowfs_rw/$d
+done
 #
 if [ -x ../../../usr/bin/diet ] ; then
 	export DIETHOME="../../../usr/dietlibc"
@@ -20,45 +27,41 @@ $LXRCCC $base/target/$target/linuxrc.c -Wall \
 	-o linuxrc
 #
 echo_status "Copy various helper applications."
-cp ../2nd_stage/bin/{tar,gzip} bin-static/
-cp ../2nd_stage/sbin/hwscan bin-static/
-cp ../2nd_stage/usr/bin/gawk bin-static/
+cp ../2nd_stage/bin/{tar,gzip} mnt/cowfs_ro/bin/
+cp ../2nd_stage/sbin/hwscan mnt/cowfs_ro/bin/
+cp ../2nd_stage/usr/bin/gawk mnt/cowfs_ro/bin/
 for x in modprobe.static modprobe.static.old \
          insmod.static insmod.static.old
 do
 	if [ -f ../2nd_stage/sbin/${x/.static/} ]; then
-		rm -f bin-static/${x/.static/}
-		cp -a ../2nd_stage/sbin/${x/.static/} bin-static/
+		rm -f mnt/cowfs_ro/bin/${x/.static/}
+		cp -a ../2nd_stage/sbin/${x/.static/} mnt/cowfs_ro/bin/
 	fi
 	if [ -f ../2nd_stage/sbin/$x ]; then
-		rm -f bin-static/$x bin-static/${x/.static/}
-		cp -a ../2nd_stage/sbin/$x bin-static/
-		ln -sf $x bin-static/${x/.static/}
+		rm -f mnt/cowfs_ro/bin/$x mnt/cowfs_ro/bin/${x/.static/}
+		cp -a ../2nd_stage/sbin/$x mnt/cowfs_ro/bin/
+		ln -sf $x mnt/cowfs_ro/bin/${x/.static/}
 	fi
 done
 #
 echo_status "Copy kernel modules."
-for x in ../2nd_stage/lib/modules/*/kernel/drivers/{scsi,cdrom,ide,ide/pci,ide/legacy}/*.{ko,o} \
-	../2nd_stage/lib/modules/*/misc/cloop.{ko,o} ; do
+for x in ../2nd_stage/lib/modules/*/kernel/drivers/{scsi,cdrom,ide,ide/pci,ide/legacy}/*.{ko,o} ; do
 	# this test is needed in case there are only .o or only .ko files
 	if [ -f $x ]; then
-		xx=${x#../2nd_stage/}
+		xx=mnt/cowfs_ro/${x#../2nd_stage/}
 		mkdir -p $( dirname $xx ) ; cp $x $xx
 		strip --strip-debug $xx 
 	fi
 done
 #
 for x in ../2nd_stage/lib/modules/*/modules.{dep,pcimap,isapnpmap} ; do
-	cp $x ${x#../2nd_stage/} || echo "not found: $x" ;
+	cp $x mnt/cowfs_ro/${x#../2nd_stage/} || echo "not found: $x" ;
 done
 #
-for x in lib/modules/*/kernel/drivers/* lib/modules/*/misc; do
-	ln -s ${x#lib/modules/} lib/modules/
-done
-rm -f lib/modules/[0-9]*/kernel/drivers/net/{dummy,ppp*}.{o,ko}
+rm -f mnt/cowfs_ro/lib/modules/[0-9]*/kernel/drivers/net/{dummy,ppp*}.{o,ko}
 #
 echo_status "Adding kiss shell for expert use of the initrd image."
-cp $build_root/bin/kiss bin-static/
+cp $build_root/bin/kiss mnt/cowfs_ro/bin/
 cd ..
 
 echo_header "Creating initrd filesystem image: "

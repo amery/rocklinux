@@ -45,6 +45,10 @@ status() {
 
 case "$1" in
     start)
+	title "Creating valid /etc/mtab ..."
+	grep -v "^rootfs " /proc/mounts > /etc/mtab || error=$?
+	status
+
 	title "Running depmod ..."
 	/sbin/depmod -a -n > /etc/modules.dep || error=$?
 	status

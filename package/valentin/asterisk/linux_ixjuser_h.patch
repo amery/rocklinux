@@ -1,0 +1,10 @@
+--- ./channels/chan_phone.c.orig	2004-11-28 13:39:33.005340536 +0100
++++ ./channels/chan_phone.c	2004-11-28 13:39:57.254654080 +0100
+@@ -32,6 +32,7 @@
+ #include <fcntl.h>
+ #include <sys/ioctl.h>
+ #include <linux/telephony.h>
++#include <linux/compiler.h>
+ /* Still use some IXJ specific stuff */
+ #include <linux/ixjuser.h>
+ #include "DialTone.h"

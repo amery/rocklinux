@@ -152,7 +152,7 @@ gui_input() {
 gui_message() {
 	local headlines="$( echo "$1" | fmt -$gui_dialog_s62 )"
 	gui_dialog --msgbox "$headlines" \
-		$(( $( echo "$headlines" | wc -l ) + 4 )) $gui_dialog_s70
+		$(( $( echo "$headlines" | wc -l ) + 5 )) $gui_dialog_s70
 }
 
 # Use: gui_yesno "Text"

@@ -226,6 +226,8 @@ EOT
 		rm -fv ./tmp/stone_postinst.sh
 		if gui_yesno "Do you want to un-mount the filesystems and reboot now?"
 		then
+			cd /
+			sync
 			umount -adrv 
 			shutdown -r now
 		else

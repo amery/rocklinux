@@ -529,9 +529,6 @@ create_package_db() {
 
 			  echo -e "\004"
 			) >> $3.tmp
-		else
-			echo_error "Binary file for $bfile not present." \
-			           "Skipped in package database."
 		fi
 	done
 	gzip -c $3.tmp > $3 ; rm -f $3.tmp

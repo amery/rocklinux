@@ -30,7 +30,7 @@ if [ $# -eq 0 ] ; then
 	echo " Targets have to be built using ./scripts/Build-Target before you can create"
 	echo " ISO images from them."
 	echo
-	echo "	-size  <MB>	limit the size of images to <MB> MB; default is 600"
+	echo "	-size  <MB>	limit the size of images to <MB> MB; default is 680"
 	echo "	-source		include package sources on the images"
 	echo "	-mkdebug	create a small debug script for every image"
 	echo "	-nomd5		don't add md5 checksums to images"
@@ -44,8 +44,8 @@ if [ $# -eq 0 ] ; then
 	exit 1
 fi
 
-# default disk-size is 600 MB
-dsize=$(( 600 * 1024 ))
+# default disk-size is 680 MB
+dsize=$(( 680 * 1024 ))
 src=0; mkdebug=0; implantisomd5=1
 
 while true ; do

@@ -90,8 +90,7 @@ grub_install() {
 	gui_cmd 'Installing GRUB' "echo -e 'root $bootdrive\\nsetup (hd0)\\nquit' | grub --batch --device-map=/boot/grub/device.map"
 }
 
-main() {
-    while
+grub_init() {
 	rootdev="`grep ' / ' /proc/mounts | tail -n 1 | \
 				awk '/\/dev\// { print $1; }'`"
 	bootdev="`grep ' /boot ' /proc/mounts | tail -n 1 | \
@@ -126,6 +125,19 @@ main() {
 
 	if [ "$rootdrive" = "$bootdrive" ]
 	then bootpath="/boot" ; else bootpath="" ; fi
+}
+
+grub_setup() {
+	if gui_yesno "Do you want to install the GRUB bootloader in MBR now?"; then
+		grub_init; create_device_map
+		grub_init; create_boot_menu
+		grub_init; grub_install
+	fi
+}
+
+main() {
+    while
+	grub_init
 
         gui_menu grub 'GRUB Boot Loader Setup' \
 		'(Re-)Create GRUB Device Map' 'create_device_map' \

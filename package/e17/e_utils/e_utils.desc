@@ -6,7 +6,7 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/e17/edje/edje.desc
+[COPY] ROCK Linux: rock-src/package/e17/e_utils/e_utils.desc
 [COPY] ROCK Linux is Copyright (C) 1998 - 2005 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
@@ -21,27 +21,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[I] A complex graphical design & layout library
+[I] collection of utils for enlightenment 0.17
 
-[T] Edje should serve all the purposes of creating visual elements (borders
-[T] of windows, scrollbars, etc.) and allow the designer the ability to
-[T] animate, layout and control the look and feel of any program using Edje
-[T] as its basic GUI constructor. This library allows for multiple collections
-[T] of Layouts in one file, sharing the same image database and thus allowing
-[T] a whole theme to be conveneintly packaged into 1 file and shipped around.
+[T] The e_utils package contains all those little things that 
+[T] enlightenment 0.17 needs but not wanted in the main source tree
 
 [U] http://www.enlightenment.org
 
-[A] Rasterman <raster@rasterman.com>
+[A] Andrew Elcock <aje@codewordt.co.uk>
 [M] Mathieu Doidy <mdoidy@roulaize.net>
 
-[C] extra/desktop/enlightenment
-[C] extra/multimedia
+[C] extra/tool
 
 [L] GPL
 [S] Alpha
 [V] 2005-01-23
-[P] X -?---5---9 138.000
+[P] X -----5---9 800.000
 
-[D] X edje-2005-01-23.tar.bz2 cvs://pserver:anonymous@cvs.sourceforge.net:/cvsroot/enlightenment::e17/libs/edje/!2005-01-23/
+[D] X e_utils-2005-01-23.tar.bz2 cvs://pserver:anonymous@cvs.sourceforge.net:/cvsroot/enlightenment::e17/apps/e_utils/!2005-01-23
 

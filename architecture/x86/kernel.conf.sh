@@ -5,9 +5,10 @@
 		
 		dnl CPU configuration
 		dnl
+		CONFIG_X86_GENERIC=y
 	EOT
 
-	linux_arch=386
+	linux_arch=486
 	for x in "i386		386"		\
 		 "i486		486"		\
 		 "via-c3	MCYRIXIII"	\

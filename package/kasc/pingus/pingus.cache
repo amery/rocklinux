@@ -1,17 +1,60 @@
 
-[TIMESTAMP] 1101959051 Thu Dec  2 04:44:11 2004
+[TIMESTAMP] 1104913096 Wed Jan  5 09:18:16 2005
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-pingus.log
+[LOGS] 5-pingus.err
 
-[BUILDTIME] 47446 (5)
-[SIZE] 17.93 MB, 1229 files
+[BUILDTIME] 2775 (5)
 
-[DEP] 00-dirtree alsa bash2 binutils bison bzip2 clanlib clanlib:dev
-[DEP] coreutils diffutils findutils gawk gcc34 gcc34:dev gettext glibc23
-[DEP] glibc23:dev grep hermes hermes:dev libjpeg libmikmod libmikmod:dev
-[DEP] libpng libpng:dev libxml2 libxml2:dev linux26-header:dev make
-[DEP] mktemp net-tools ogg-vorbis patch sed sysfiles tar util-linux
-[DEP] xfree86 xfree86:dev zlib:dev
+[5-ERROR] checking for getc_unlocked... yes
+[5-ERROR] checking for getcwd... yes
+[5-ERROR] checking for getegid... yes
+[5-ERROR] checking for geteuid... yes
+[5-ERROR] checking for getgid... yes
+[5-ERROR] checking for getuid... yes
+[5-ERROR] checking for mempcpy... yes
+[5-ERROR] checking for munmap... yes
+[5-ERROR] checking for putenv... no
+[5-ERROR] checking for setenv... no
+[5-ERROR] checking for setlocale... yes
+[5-ERROR] checking for stpcpy... yes
+[5-ERROR] checking for strcasecmp... yes
+[5-ERROR] checking for strdup... yes
+[5-ERROR] checking for strtoul... no
+[5-ERROR] checking for tsearch... yes
+[5-ERROR] checking for __argz_count... yes
+[5-ERROR] checking for __argz_stringify... yes
+[5-ERROR] checking for __argz_next... yes
+[5-ERROR] checking for iconv... (cached) yes
+[5-ERROR] checking for iconv declaration... (cached) 
+[5-ERROR]          extern size_t iconv (iconv_t cd, char * *inbuf, size_t *inbytesleft, char * *outbuf, size_t *outbytesleft);
+[5-ERROR] checking for nl_langinfo and CODESET... yes
+[5-ERROR] checking for LC_MESSAGES... yes
+[5-ERROR] checking for bison... bison
+[5-ERROR] checking version of bison... 1.875, ok
+[5-ERROR] checking whether NLS is requested... yes
+[5-ERROR] checking whether included gettext is requested... no
+[5-ERROR] checking for GNU gettext in libc... yes
+[5-ERROR] checking for i386-unknown-linux-gnu-ranlib... (cached) ranlib
+[5-ERROR] checking ClanLib/core.h usability... no
+[5-ERROR] checking ClanLib/core.h presence... no
+[5-ERROR] checking for ClanLib/core.h... no
+[5-ERROR] Please get ClanLib from http://www.clanlib.org
+[5-ERROR] make: *** No targets specified and no makefile found.  Stop.
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 1 files for this package.
+[5-ERROR] Applying package split: 40 pingus:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 pingus:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 pingus:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <pingus:doc> Creating flist file ...
+[5-ERROR] <pingus:doc> Creating package dependencies file ...
+[5-ERROR] <pingus:doc> Creating md5sum and cksum files ...
+[5-ERROR] <pingus:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building pingus=pingus.
 

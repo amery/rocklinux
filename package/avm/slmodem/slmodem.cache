@@ -20,62 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1102112186 Fri Dec  3 23:16:26 2004
+[TIMESTAMP] 1104794095 Tue Jan  4 00:14:55 2005
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-slmodem.err
+[LOGS] 5-slmodem.log
 
-[BUILDTIME] 2030 (5)
+[BUILDTIME] 1779 (5)
+[SIZE] 1.43 MB, 11 files
 
-[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem.o -c modem.c
-[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_datafile.o -c modem_datafile.c
-[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_at.o -c modem_at.c
-[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_timer.o -c modem_timer.c
-[5-ERROR] modem_timer.c: In function `timer_del':
-[5-ERROR] modem_timer.c:165: warning: dereferencing type-punned pointer will break strict-aliasing rules
-[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_pack.o -c modem_pack.c
-[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_ec.o -c modem_ec.c
-[5-ERROR] modem_ec.c:689: warning: 't403_timeout' defined but not used
-[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_comp.o -c modem_comp.c
-[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_param.o -c modem_param.c
-[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_debug.o -c modem_debug.c
-[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o homolog_data.o -c homolog_data.c
-[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o dp_sinus.o -c dp_sinus.c
-[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o dp_dummy.o -c dp_dummy.c
-[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o sysdep_common.o -c sysdep_common.c
-[5-ERROR] gcc-34 -o slmodemd modem_main.o modem_cmdline.o modem.o modem_datafile.o modem_at.o modem_timer.o modem_pack.o modem_ec.o modem_comp.o modem_param.o modem_debug.o homolog_data.o dp_sinus.o dp_dummy.o dsplibs.o sysdep_common.o
-[5-ERROR] gcc-34 -Wall -g -O -I. -DCONFIG_DEBUG_MODEM   -o modem_test.o -c modem_test.c
-[5-ERROR] gcc-34 -o modem_test modem_test.o modem_cmdline.o modem.o modem_datafile.o modem_at.o modem_timer.o modem_pack.o modem_ec.o modem_comp.o modem_param.o modem_debug.o homolog_data.o dp_sinus.o dp_dummy.o dsplibs.o sysdep_common.o
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.slmodem.1102112155.10472.2033615749/slmodem-2.9.10/modem'
-[5-ERROR] make -C modem all
-[5-ERROR] make[1]: Entering directory `/ROCK/src.slmodem.1102112155.10472.2033615749/slmodem-2.9.10/modem'
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.slmodem.1102112155.10472.2033615749/slmodem-2.9.10/modem'
-[5-ERROR] make -C drivers KERNEL_DIR=/lib/modules/2.4.25-rock/build
-[5-ERROR] make[1]: Entering directory `/ROCK/src.slmodem.1102112155.10472.2033615749/slmodem-2.9.10/drivers'
-[5-ERROR] gcc-34 -I/lib/modules/2.4.25-rock/build/include -o kernel-ver kernel-ver.c
-[5-ERROR] make all KERNEL_VER=2.6.9-rock
-[5-ERROR] make[2]: Entering directory `/ROCK/src.slmodem.1102112155.10472.2033615749/slmodem-2.9.10/drivers'
-[5-ERROR] make modules -C /lib/modules/2.4.25-rock/build SUBDIRS=/ROCK/src.slmodem.1102112155.10472.2033615749/slmodem-2.9.10/drivers
-[5-ERROR] make: *** /lib/modules/2.4.25-rock/build: No such file or directory.  Stop.
-[5-ERROR] make: Entering an unknown directorymake: Leaving an unknown directorymake[2]: *** [all] Error 2
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.slmodem.1102112155.10472.2033615749/slmodem-2.9.10/drivers'
-[5-ERROR] make[1]: *** [all] Error 2
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.slmodem.1102112155.10472.2033615749/slmodem-2.9.10/drivers'
-[5-ERROR] make: *** [drivers] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 slmodem:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 slmodem:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 slmodem:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <slmodem:doc> Creating flist file ...
-[5-ERROR] <slmodem:doc> Creating package dependencies file ...
-[5-ERROR] <slmodem:doc> Creating md5sum and cksum files ...
-[5-ERROR] <slmodem:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building slmodem=slmodem.
+[DEP] 00-dirtree alien bash2 binutils bzip2 coreutils findutils gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26 linux26-header:dev
+[DEP] linux26-source make mktemp patch sed sysfiles tar
 

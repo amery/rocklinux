@@ -20,62 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1102106841 Fri Dec  3 21:47:21 2004
+[TIMESTAMP] 1104670849 Sun Jan  2 14:00:49 2005
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-povray35.err
+[LOGS] 5-povray35.log
 
-[BUILDTIME] 10483 (5)
+[BUILDTIME] 10782 (5)
+[SIZE] 4.66 MB, 577 files
 
-[5-ERROR] g++-34 -DPREFIX=\"/usr\" -DPOV_LIB_DIR=\"/usr/share/povray-3.5\" -DCOMPILER_VER=\".Linux.gcc-34\" -DSYSCONFDIR=\"/etc\" -DUSE_IO_RESTRICTIONS=\"\"     `if [ "Xgcc-34" = "Xgcc" ]; then echo "-Wno-multichar"; fi ` -O3 -finline-functions -ffast-math -fomit-frame-pointer -funroll-loops -fexpensive-optimizations -malign-double -foptimize-sibling-calls -minline-all-stringops -Wno-multichar -c prism.cpp
-[5-ERROR] g++-34 -DPREFIX=\"/usr\" -DPOV_LIB_DIR=\"/usr/share/povray-3.5\" -DCOMPILER_VER=\".Linux.gcc-34\" -DSYSCONFDIR=\"/etc\" -DUSE_IO_RESTRICTIONS=\"\"     `if [ "Xgcc-34" = "Xgcc" ]; then echo "-Wno-multichar"; fi ` -O3 -finline-functions -ffast-math -fomit-frame-pointer -funroll-loops -fexpensive-optimizations -malign-double -foptimize-sibling-calls -minline-all-stringops -Wno-multichar -c quadrics.cpp
-[5-ERROR] g++-34 -DPREFIX=\"/usr\" -DPOV_LIB_DIR=\"/usr/share/povray-3.5\" -DCOMPILER_VER=\".Linux.gcc-34\" -DSYSCONFDIR=\"/etc\" -DUSE_IO_RESTRICTIONS=\"\"     `if [ "Xgcc-34" = "Xgcc" ]; then echo "-Wno-multichar"; fi ` -O3 -finline-functions -ffast-math -fomit-frame-pointer -funroll-loops -fexpensive-optimizations -malign-double -foptimize-sibling-calls -minline-all-stringops -Wno-multichar -c quatern.cpp
-[5-ERROR] g++-34 -DPREFIX=\"/usr\" -DPOV_LIB_DIR=\"/usr/share/povray-3.5\" -DCOMPILER_VER=\".Linux.gcc-34\" -DSYSCONFDIR=\"/etc\" -DUSE_IO_RESTRICTIONS=\"\"     `if [ "Xgcc-34" = "Xgcc" ]; then echo "-Wno-multichar"; fi ` -O3 -finline-functions -ffast-math -fomit-frame-pointer -funroll-loops -fexpensive-optimizations -malign-double -foptimize-sibling-calls -minline-all-stringops -Wno-multichar -c rad_data.cpp
-[5-ERROR] g++-34 -DPREFIX=\"/usr\" -DPOV_LIB_DIR=\"/usr/share/povray-3.5\" -DCOMPILER_VER=\".Linux.gcc-34\" -DSYSCONFDIR=\"/etc\" -DUSE_IO_RESTRICTIONS=\"\"     `if [ "Xgcc-34" = "Xgcc" ]; then echo "-Wno-multichar"; fi ` -O3 -finline-functions -ffast-math -fomit-frame-pointer -funroll-loops -fexpensive-optimizations -malign-double -foptimize-sibling-calls -minline-all-stringops -Wno-multichar -c radiosit.cpp
-[5-ERROR] g++-34 -DPREFIX=\"/usr\" -DPOV_LIB_DIR=\"/usr/share/povray-3.5\" -DCOMPILER_VER=\".Linux.gcc-34\" -DSYSCONFDIR=\"/etc\" -DUSE_IO_RESTRICTIONS=\"\"     `if [ "Xgcc-34" = "Xgcc" ]; then echo "-Wno-multichar"; fi ` -O3 -finline-functions -ffast-math -fomit-frame-pointer -funroll-loops -fexpensive-optimizations -malign-double -foptimize-sibling-calls -minline-all-stringops -Wno-multichar -c ray.cpp
-[5-ERROR] g++-34 -DPREFIX=\"/usr\" -DPOV_LIB_DIR=\"/usr/share/povray-3.5\" -DCOMPILER_VER=\".Linux.gcc-34\" -DSYSCONFDIR=\"/etc\" -DUSE_IO_RESTRICTIONS=\"\"     `if [ "Xgcc-34" = "Xgcc" ]; then echo "-Wno-multichar"; fi ` -O3 -finline-functions -ffast-math -fomit-frame-pointer -funroll-loops -fexpensive-optimizations -malign-double -foptimize-sibling-calls -minline-all-stringops -Wno-multichar -c render.cpp
-[5-ERROR] render.cpp: In function `void Start_Tracing_Radiosity_Preview(int, int)':
-[5-ERROR] render.cpp:983: warning: converting to `int' from `double'
-[5-ERROR] render.cpp:984: warning: converting to `int' from `double'
-[5-ERROR] g++-34 -DPREFIX=\"/usr\" -DPOV_LIB_DIR=\"/usr/share/povray-3.5\" -DCOMPILER_VER=\".Linux.gcc-34\" -DSYSCONFDIR=\"/etc\" -DUSE_IO_RESTRICTIONS=\"\"     `if [ "Xgcc-34" = "Xgcc" ]; then echo "-Wno-multichar"; fi ` -O3 -finline-functions -ffast-math -fomit-frame-pointer -funroll-loops -fexpensive-optimizations -malign-double -foptimize-sibling-calls -minline-all-stringops -Wno-multichar -c renderio.cpp
-[5-ERROR] g++-34 -DPREFIX=\"/usr\" -DPOV_LIB_DIR=\"/usr/share/povray-3.5\" -DCOMPILER_VER=\".Linux.gcc-34\" -DSYSCONFDIR=\"/etc\" -DUSE_IO_RESTRICTIONS=\"\"     `if [ "Xgcc-34" = "Xgcc" ]; then echo "-Wno-multichar"; fi ` -O3 -finline-functions -ffast-math -fomit-frame-pointer -funroll-loops -fexpensive-optimizations -malign-double -foptimize-sibling-calls -minline-all-stringops -Wno-multichar -c sor.cpp
-[5-ERROR] g++-34 -DPREFIX=\"/usr\" -DPOV_LIB_DIR=\"/usr/share/povray-3.5\" -DCOMPILER_VER=\".Linux.gcc-34\" -DSYSCONFDIR=\"/etc\" -DUSE_IO_RESTRICTIONS=\"\"     `if [ "Xgcc-34" = "Xgcc" ]; then echo "-Wno-multichar"; fi ` -O3 -finline-functions -ffast-math -fomit-frame-pointer -funroll-loops -fexpensive-optimizations -malign-double -foptimize-sibling-calls -minline-all-stringops -Wno-multichar -c spheres.cpp
-[5-ERROR] g++-34 -DPREFIX=\"/usr\" -DPOV_LIB_DIR=\"/usr/share/povray-3.5\" -DCOMPILER_VER=\".Linux.gcc-34\" -DSYSCONFDIR=\"/etc\" -DUSE_IO_RESTRICTIONS=\"\"     `if [ "Xgcc-34" = "Xgcc" ]; then echo "-Wno-multichar"; fi ` -O3 -finline-functions -ffast-math -fomit-frame-pointer -funroll-loops -fexpensive-optimizations -malign-double -foptimize-sibling-calls -minline-all-stringops -Wno-multichar -c sphsweep.cpp
-[5-ERROR] g++-34 -DPREFIX=\"/usr\" -DPOV_LIB_DIR=\"/usr/share/povray-3.5\" -DCOMPILER_VER=\".Linux.gcc-34\" -DSYSCONFDIR=\"/etc\" -DUSE_IO_RESTRICTIONS=\"\"     `if [ "Xgcc-34" = "Xgcc" ]; then echo "-Wno-multichar"; fi ` -O3 -finline-functions -ffast-math -fomit-frame-pointer -funroll-loops -fexpensive-optimizations -malign-double -foptimize-sibling-calls -minline-all-stringops -Wno-multichar -c splines.cpp
-[5-ERROR] g++-34 -DPREFIX=\"/usr\" -DPOV_LIB_DIR=\"/usr/share/povray-3.5\" -DCOMPILER_VER=\".Linux.gcc-34\" -DSYSCONFDIR=\"/etc\" -DUSE_IO_RESTRICTIONS=\"\"     `if [ "Xgcc-34" = "Xgcc" ]; then echo "-Wno-multichar"; fi ` -O3 -finline-functions -ffast-math -fomit-frame-pointer -funroll-loops -fexpensive-optimizations -malign-double -foptimize-sibling-calls -minline-all-stringops -Wno-multichar -c statspov.cpp
-[5-ERROR] statspov.cpp: In function `void check_stats(int, int, int)':
-[5-ERROR] statspov.cpp:455: warning: passing `double' for converting 3 of `int Send_RenderTime(int, int, int)'
-[5-ERROR] g++-34 -DPREFIX=\"/usr\" -DPOV_LIB_DIR=\"/usr/share/povray-3.5\" -DCOMPILER_VER=\".Linux.gcc-34\" -DSYSCONFDIR=\"/etc\" -DUSE_IO_RESTRICTIONS=\"\"     `if [ "Xgcc-34" = "Xgcc" ]; then echo "-Wno-multichar"; fi ` -O3 -finline-functions -ffast-math -fomit-frame-pointer -funroll-loops -fexpensive-optimizations -malign-double -foptimize-sibling-calls -minline-all-stringops -Wno-multichar -c super.cpp
-[5-ERROR] g++-34 -DPREFIX=\"/usr\" -DPOV_LIB_DIR=\"/usr/share/povray-3.5\" -DCOMPILER_VER=\".Linux.gcc-34\" -DSYSCONFDIR=\"/etc\" -DUSE_IO_RESTRICTIONS=\"\"     `if [ "Xgcc-34" = "Xgcc" ]; then echo "-Wno-multichar"; fi ` -O3 -finline-functions -ffast-math -fomit-frame-pointer -funroll-loops -fexpensive-optimizations -malign-double -foptimize-sibling-calls -minline-all-stringops -Wno-multichar -c targa.cpp
-[5-ERROR] targa.cpp: In member function `void Targa_Image::Write_Pixel(double, double, double, double)':
-[5-ERROR] targa.cpp:371: warning: converting to `unsigned int' from `double'
-[5-ERROR] g++-34 -DPREFIX=\"/usr\" -DPOV_LIB_DIR=\"/usr/share/povray-3.5\" -DCOMPILER_VER=\".Linux.gcc-34\" -DSYSCONFDIR=\"/etc\" -DUSE_IO_RESTRICTIONS=\"\"     `if [ "Xgcc-34" = "Xgcc" ]; then echo "-Wno-multichar"; fi ` -O3 -finline-functions -ffast-math -fomit-frame-pointer -funroll-loops -fexpensive-optimizations -malign-double -foptimize-sibling-calls -minline-all-stringops -Wno-multichar -c texture.cpp
-[5-ERROR] g++-34 -DPREFIX=\"/usr\" -DPOV_LIB_DIR=\"/usr/share/povray-3.5\" -DCOMPILER_VER=\".Linux.gcc-34\" -DSYSCONFDIR=\"/etc\" -DUSE_IO_RESTRICTIONS=\"\"     `if [ "Xgcc-34" = "Xgcc" ]; then echo "-Wno-multichar"; fi ` -O3 -finline-functions -ffast-math -fomit-frame-pointer -funroll-loops -fexpensive-optimizations -malign-double -foptimize-sibling-calls -minline-all-stringops -Wno-multichar -c tiff_pov.cpp
-[5-ERROR] In file included from /usr/include/tiffio.h:33,
-[5-ERROR]                  from tiff_pov.cpp:46:
-[5-ERROR] /usr/include/tiff.h:82: error: conflicting declaration 'typedef int int32'
-[5-ERROR] frame.h:52: error: 'int32' has a previous declaration as `typedef long int int32'
-[5-ERROR] /usr/include/tiff.h:82: error: declaration of `typedef int int32'
-[5-ERROR] frame.h:52: error: conflicts with previous declaration `typedef long int int32'
-[5-ERROR] /usr/include/tiff.h:82: error: declaration of `typedef int int32'
-[5-ERROR] frame.h:52: error: conflicts with previous declaration `typedef long int int32'
-[5-ERROR] make[1]: *** [tiff_pov.o] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.povray35.1102106719.22853.3013422058/povray-3.50c/src'
-[5-ERROR] make: *** [all-recursive] Error 1
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 povray35:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 povray35:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 povray35:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <povray35:doc> Creating flist file ...
-[5-ERROR] <povray35:doc> Creating package dependencies file ...
-[5-ERROR] <povray35:doc> Creating md5sum and cksum files ...
-[5-ERROR] <povray35:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building povray35=povray35.
+[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
+[DEP] diffutils findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev
+[DEP] grep libjpeg libjpeg:dev libpng libpng:dev libtiff libtiff:dev
+[DEP] linux26-header:dev make mktemp patch perl5 sed sysfiles tar texinfo
+[DEP] xfree86 xfree86:dev zlib:dev
 

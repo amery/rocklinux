@@ -20,62 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1102109973 Fri Dec  3 22:39:33 2004
+[TIMESTAMP] 1104756615 Mon Jan  3 13:50:15 2005
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-wmacpi.err
+[LOGS] 5-wmacpi.log
 
-[BUILDTIME] 1629 (5)
+[BUILDTIME] 1169 (5)
+[SIZE] 0.07 MB, 10 files
 
-[5-ERROR] APPEND_PO = ''
-[5-ERROR] OTHERS = ''
-[5-ERROR] INSERT = '-Os -pipe'
-[5-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
-[5-ERROR] APPEND = '-s'
-[5-ERROR] FILTER = ''
-[5-ERROR] Old PATH: /ROCK/src.wmacpi.1102109949.32148.894117921/wrappers:/ROCK/build/ref1129-2.1.0-DEV-x86-reference-expert/ROCK/tools.chroot/wrapper:/ROCK/build/ref1129-2.1.0-DEV-x86-reference-expert/ROCK/tools.chroot/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/X11/bin:/usr/games:/opt/apache/sbin:/opt/coda/sbin:/opt/e17/sbin:/opt/gnome/sbin:/opt/gnome26/sbin:/opt/kde3/sbin:/opt/mono/sbin:/opt/mysql/sbin:/opt/openldap/sbin:/opt/pdnsd/sbin:/opt/samba/sbin:/opt/squid/sbin:/opt/validator/sbin:/opt/wwwoffle/sbin:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clip/bin:/opt/coda/bin:/opt/dcc/bin:/opt/e16/bin:/opt/e17/bin:/opt/firefox/bin:/opt/flexlm/bin:/opt/gnome/bin:/opt/gnome26/bin:/opt/kde3/bin:/opt/mono/bin:/opt/mysql/bin:/opt/mythtv/bin:/opt/openldap/bin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/root/bin:/opt/samba/bin:/opt/snort/bin:/opt/squid/bin:/opt/thunderbird/bin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/xfce4/bin:/opt/xjdic/bin:/opt/kde3/bin:/opt/root/bin
-[5-ERROR] New PATH: /ROCK/src.wmacpi.1102109949.32148.894117921/wrappers:/ROCK/build/ref1129-2.1.0-DEV-x86-reference-expert/ROCK/tools.chroot/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/X11/bin:/usr/games:/opt/apache/sbin:/opt/coda/sbin:/opt/e17/sbin:/opt/gnome/sbin:/opt/gnome26/sbin:/opt/kde3/sbin:/opt/mono/sbin:/opt/mysql/sbin:/opt/openldap/sbin:/opt/pdnsd/sbin:/opt/samba/sbin:/opt/squid/sbin:/opt/validator/sbin:/opt/wwwoffle/sbin:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clip/bin:/opt/coda/bin:/opt/dcc/bin:/opt/e16/bin:/opt/e17/bin:/opt/firefox/bin:/opt/flexlm/bin:/opt/gnome/bin:/opt/gnome26/bin:/opt/kde3/bin:/opt/mono/bin:/opt/mysql/bin:/opt/mythtv/bin:/opt/openldap/bin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/root/bin:/opt/samba/bin:/opt/snort/bin:/opt/squid/bin:/opt/thunderbird/bin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/xfce4/bin:/opt/xjdic/bin:/opt/kde3/bin:/opt/root/bin
-[5-ERROR] Insert: -Os
-[5-ERROR] Insert: -pipe
-[5-ERROR] Copy:   --version
-[5-ERROR] Append: -s
-[5-ERROR] New Command: gcc-34 -Os -pipe --version -s
-[5-ERROR] gcc-34 (GCC) 3.4.3
-[5-ERROR] Copyright (C) 2004 Free Software Foundation, Inc.
-[5-ERROR] This is free software; see the source for copying conditions.  There is NO
-[5-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-[5-ERROR] 
-[5-ERROR] [ writing debug log to /ROCK/src.wmacpi.1102109949.32148.894117921/cmd_wrapper.log ]
-[5-ERROR] create symbolic link `/ROCK/src.wmacpi.1102109949.32148.894117921/archdir/wmacpi-2.0.tar.bz2' to `/ROCK/download/mirror/w/wmacpi-2.0.tar.bz2'
-[5-ERROR] Running main build function 'build_this_package' ...
-[5-ERROR] Extracting wmacpi-2.0.tar.bz2 (--use-compress-program=bzip2 -xf) ... 
-[5-ERROR] Fixing ownership and permissions ...
-[5-ERROR] Removing CVS and .svn directories ...
-[5-ERROR] Changeing into /ROCK/src.wmacpi.1102109949.32148.894117921/wmacpi-2.0 ...
-[5-ERROR] Creating /usr/<..> if required ...
-[5-ERROR] Makefile:37: wmacpi.d: No such file or directory
-[5-ERROR] Makefile:37: libacpi.d: No such file or directory
-[5-ERROR] Makefile:47: acpi.d: No such file or directory
-[5-ERROR] Makefile:47: libacpi.d: No such file or directory
-[5-ERROR] gcc -MM -O2  -Wall -W -g -ansi -I/usr/X11R6/include libacpi.c > libacpi.d
-[5-ERROR] gcc -MM -O2  -Wall -W -g -ansi -I/usr/X11R6/include acpi.c > acpi.d
-[5-ERROR] gcc -MM -O2  -Wall -W -g -ansi -I/usr/X11R6/include wmacpi.c > wmacpi.d
-[5-ERROR] wmacpi.c:21:21: dockapp.h: No such file or directory
-[5-ERROR] make: *** [wmacpi.d] Error 1
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 wmacpi:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 wmacpi:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 wmacpi:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <wmacpi:doc> Creating flist file ...
-[5-ERROR] <wmacpi:doc> Creating package dependencies file ...
-[5-ERROR] <wmacpi:doc> Creating md5sum and cksum files ...
-[5-ERROR] <wmacpi:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building wmacpi=wmacpi.
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
+[DEP] glibc23 glibc23:dev grep libdockapp libdockapp:dev linux26-header:dev
+[DEP] make mktemp sed sysfiles tar xfree86 xfree86:dev
 

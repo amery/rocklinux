@@ -20,62 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1102112347 Fri Dec  3 23:19:07 2004
+[TIMESTAMP] 1104798176 Tue Jan  4 01:22:56 2005
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-briquolo.err
+[LOGS] 5-briquolo.log
 
-[BUILDTIME] 3553 (5)
+[BUILDTIME] 13868 (5)
+[SIZE] 4.40 MB, 113 files
 
-[5-ERROR] make[3]: Entering directory `/ROCK/src.briquolo.1102112303.1901.3166879527/briquolo-0.4.2/src/MOGL'
-[5-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I../.. -DSRCTOPDIR=\"/ROCK/src.briquolo.1102112303.1901.3166879527/briquolo-0.4.2\"  -DDATADIR=\"/usr/share/briquolo\"  -I/usr/X11R6/include  -g -Wall  -I/usr/include/libpng12 -I/usr/include/SDL -D_REENTRANT -MT MOGL_Action.o -MD -MP -MF ".deps/MOGL_Action.Tpo" \
-[5-ERROR]   -c -o MOGL_Action.o `test -f 'MOGL_Action.cpp' || echo './'`MOGL_Action.cpp; \
-[5-ERROR] then mv -f ".deps/MOGL_Action.Tpo" ".deps/MOGL_Action.Po"; \
-[5-ERROR] else rm -f ".deps/MOGL_Action.Tpo"; exit 1; \
-[5-ERROR] fi
-[5-ERROR] In file included from MOGL_Action.cpp:23:
-[5-ERROR] MOGL_Signal.h: In constructor `MOGL_Signal1<TypeParam1>::MOGL_Connexion<TypeClasse>::MOGL_Connexion(TypeClasse*, void (TypeClasse::*)(TypeParam1))':
-[5-ERROR] MOGL_Signal.h:172: error: `_Objet' undeclared (first use this function)
-[5-ERROR] MOGL_Signal.h:172: error: (Each undeclared identifier is reported only once for each function it appears in.)
-[5-ERROR] MOGL_Signal.h: In member function `void MOGL_Signal1<TypeParam1>::MOGL_Connexion<TypeClasse>::Emettre(TypeParam1)':
-[5-ERROR] MOGL_Signal.h:178: error: `_Objet' undeclared (first use this function)
-[5-ERROR] MOGL_Signal.h: In constructor `MOGL_Signal2<TypeParam1, TypeParam2>::MOGL_Connexion<TypeClasse>::MOGL_Connexion(TypeClasse*, void (TypeClasse::*)(TypeParam1, TypeParam2))':
-[5-ERROR] MOGL_Signal.h:267: error: `_Objet' undeclared (first use this function)
-[5-ERROR] MOGL_Signal.h: In member function `void MOGL_Signal2<TypeParam1, TypeParam2>::MOGL_Connexion<TypeClasse>::Emettre(TypeParam1, TypeParam2)':
-[5-ERROR] MOGL_Signal.h:273: error: `_Objet' undeclared (first use this function)
-[5-ERROR] MOGL_Signal.h: In constructor `MOGL_Signal3<TypeParam1, TypeParam2, TypeParam3>::MOGL_Connexion<TypeClasse>::MOGL_Connexion(TypeClasse*, void (TypeClasse::*)(TypeParam1, TypeParam2, TypeParam3))':
-[5-ERROR] MOGL_Signal.h:362: error: `_Objet' undeclared (first use this function)
-[5-ERROR] MOGL_Signal.h: In member function `void MOGL_Signal3<TypeParam1, TypeParam2, TypeParam3>::MOGL_Connexion<TypeClasse>::Emettre(TypeParam1, TypeParam2, TypeParam3)':
-[5-ERROR] MOGL_Signal.h:368: error: `_Objet' undeclared (first use this function)
-[5-ERROR] MOGL_Signal.h: In constructor `MOGL_Signal4<TypeParam1, TypeParam2, TypeParam3, TypeParam4>::MOGL_Connexion<TypeClasse>::MOGL_Connexion(TypeClasse*, void (TypeClasse::*)(TypeParam1, TypeParam2, TypeParam3, TypeParam4))':
-[5-ERROR] MOGL_Signal.h:457: error: `_Objet' undeclared (first use this function)
-[5-ERROR] MOGL_Signal.h: In member function `void MOGL_Signal4<TypeParam1, TypeParam2, TypeParam3, TypeParam4>::MOGL_Connexion<TypeClasse>::Emettre(TypeParam1, TypeParam2, TypeParam3, TypeParam4)':
-[5-ERROR] MOGL_Signal.h:463: error: `_Objet' undeclared (first use this function)
-[5-ERROR] MOGL_Signal.h: In constructor `MOGL_Signal5<TypeParam1, TypeParam2, TypeParam3, TypeParam4, TypeParam5>::MOGL_Connexion<TypeClasse>::MOGL_Connexion(TypeClasse*, void (TypeClasse::*)(TypeParam1, TypeParam2, TypeParam3, TypeParam4, TypeParam5))':
-[5-ERROR] MOGL_Signal.h:552: error: `_Objet' undeclared (first use this function)
-[5-ERROR] MOGL_Signal.h: In member function `void MOGL_Signal5<TypeParam1, TypeParam2, TypeParam3, TypeParam4, TypeParam5>::MOGL_Connexion<TypeClasse>::Emettre(TypeParam1, TypeParam2, TypeParam3, TypeParam4, TypeParam5)':
-[5-ERROR] MOGL_Signal.h:558: error: `_Objet' undeclared (first use this function)
-[5-ERROR] make[3]: *** [MOGL_Action.o] Error 1
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.briquolo.1102112303.1901.3166879527/briquolo-0.4.2/src/MOGL'
-[5-ERROR] make[2]: *** [all-recursive] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.briquolo.1102112303.1901.3166879527/briquolo-0.4.2/src'
-[5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.briquolo.1102112303.1901.3166879527/briquolo-0.4.2'
-[5-ERROR] make: *** [all] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 briquolo:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 briquolo:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 briquolo:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <briquolo:doc> Creating flist file ...
-[5-ERROR] <briquolo:doc> Creating package dependencies file ...
-[5-ERROR] <briquolo:doc> Creating md5sum and cksum files ...
-[5-ERROR] <briquolo:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building briquolo=briquolo.
+[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils
+[DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
+[DEP] libpng libpng:dev libsdl libsdl:dev libsdl_mixer libsdl_mixer:dev
+[DEP] linux26-header:dev make mktemp nas net-tools ogg-vorbis sed sysfiles
+[DEP] tar util-linux xfree86 xfree86:dev zlib:dev
 

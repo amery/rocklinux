@@ -20,62 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1102111249 Fri Dec  3 23:00:49 2004
+[TIMESTAMP] 1104760829 Mon Jan  3 15:00:29 2005
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-kismet.err
+[LOGS] 5-kismet.log
 
-[BUILDTIME] 16644 (5)
+[BUILDTIME] 14033 (5)
+[SIZE] 1.94 MB, 31 files
 
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c airsnortdump.cc -o airsnortdump.o 
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c fifodump.cc -o fifodump.o 
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c gpsd.cc -o gpsd.o 
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c manuf.cc -o manuf.o 
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c packetracker.cc -o packetracker.o 
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c timetracker.cc -o timetracker.o 
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c alertracker.cc -o alertracker.o 
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c finitestate.cc -o finitestate.o 
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c getopt.cc -o getopt.o 
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c tcpserver.cc -o tcpserver.o 
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c server_protocols.cc -o server_protocols.o 
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c server_globals.cc -o server_globals.o 
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c kismet_server.cc -o kismet_server.o 
-[5-ERROR] g++-34  -o kismet_server util.o configfile.o speech.o ifcontrol.o packet.o pcapsource.o prism2source.o wtapfilesource.o wsp100source.o dronesource.o vihasource.o packetsourcetracker.o kis_packsources.o wtapdump.o wtaplocaldump.o gpsdump.o airsnortdump.o fifodump.o gpsd.o manuf.o packetracker.o timetracker.o alertracker.o finitestate.o getopt.o tcpserver.o server_protocols.o server_globals.o kismet_server.o   -lz -lstdc++ -lpcap
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c tcpstreamer.cc -o tcpstreamer.o 
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c kismet_drone.cc -o kismet_drone.o 
-[5-ERROR] g++-34  -o kismet_drone util.o configfile.o getopt.o ifcontrol.o packet.o tcpstreamer.o prism2source.o pcapsource.o wtapfilesource.o wsp100source.o dronesource.o vihasource.o packetsourcetracker.o kis_packsources.o timetracker.o gpsd.o server_globals.o kismet_drone.o  -lz -lstdc++ -lpcap
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c tcpclient.cc -o tcpclient.o 
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c frontend.cc -o frontend.o 
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c cursesfront.cc -o cursesfront.o 
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c panelfront.cc -o panelfront.o 
-[5-ERROR] panelfront.cc: In member function `virtual int PanelFront::DrawDisplay()':
-[5-ERROR] panelfront.cc:906: warning: array subscript has type `char'
-[5-ERROR] panelfront.cc:906: warning: array subscript has type `char'
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c panelfront_display.cc -o panelfront_display.o 
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c panelfront_input.cc -o panelfront_input.o 
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c kismet_client.cc -o kismet_client.o 
-[5-ERROR] g++-34  -o kismet_client util.o configfile.o speech.o manuf.o tcpclient.o frontend.o cursesfront.o panelfront.o panelfront_display.o panelfront_input.o gpsd.o getopt.o kismet_client.o  -lz -lstdc++ -lpanel -lncurses
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c expat.cc -o expat.o 
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c gpsmap_cache.cc -o gpsmap_cache.o 
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c gpsmap_samples.cc -o gpsmap_samples.o 
-[5-ERROR] g++-34 -I/lib/modules/`uname -r`/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2004\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -pthread -c gpsmap.cc -o gpsmap.o 
-[5-ERROR] gpsmap.cc: In function `int DrawLegendComposite(std::vector<gps_network*, std::allocator<gps_network*> >, Image**, DrawInfo**)':
-[5-ERROR] gpsmap.cc:2815: error: invalid conversion from `int' to `MagickBooleanType'
-[5-ERROR] make: *** [gpsmap.o] Error 1
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 kismet:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 kismet:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 kismet:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <kismet:doc> Creating flist file ...
-[5-ERROR] <kismet:doc> Creating package dependencies file ...
-[5-ERROR] <kismet:doc> Creating md5sum and cksum files ...
-[5-ERROR] <kismet:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building kismet=kismet.
+[DEP] 00-dirtree alsa autoconf bash2 binutils bzip2 bzip2:dev
+[DEP] coreutils diffutils expat expat:dev findutils freetype gawk
+[DEP] gcc34 gcc34:dev glib12 glibc23 glibc23:dev gmp gmp:dev grep
+[DEP] imagemagick imagemagick:dev lcms libjpeg libpcap:dev libtiff
+[DEP] libtool linux26-header:dev linux26-source m4 make mktemp ncurses:dev
+[DEP] net-tools patch perl5 sed sysfiles tar util-linux xfree86 zlib:dev
 

@@ -20,62 +20,31 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1102107196 Fri Dec  3 21:53:16 2004
+[TIMESTAMP] 1104698562 Sun Jan  2 21:42:42 2005
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-evolution.err
+[LOGS] 5-evolution.log
 
-[BUILDTIME] 8418 (5)
+[BUILDTIME] 84097 (5)
+[SIZE] 25.02 MB, 346 files
 
-[5-ERROR] checking how to hardcode library paths into programs... immediate
-[5-ERROR] checking whether stripping libraries is possible... yes
-[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
-[5-ERROR] checking if libtool supports shared libraries... yes
-[5-ERROR] checking whether to build shared libraries... yes
-[5-ERROR] checking whether to build static libraries... yes
-[5-ERROR] checking whether -lc should be explicitly linked in... no
-[5-ERROR] creating libtool
-[5-ERROR] checking alloca.h usability... yes
-[5-ERROR] checking alloca.h presence... yes
-[5-ERROR] checking for alloca.h... yes
-[5-ERROR] checking for socklen_t... yes
-[5-ERROR] checking for purify... impure
-[5-ERROR] checking for sendmail... /usr/sbin/sendmail
-[5-ERROR] checking system mail directory... /var/mail, world writable
-[5-ERROR] checking for tm_gmtoff in struct tm... yes
-[5-ERROR] checking for mkstemp... yes
-[5-ERROR] checking for mkdtemp... yes
-[5-ERROR] checking for isblank... yes
-[5-ERROR] checking if ctime_r wants three arguments... no
-[5-ERROR] checking for gethostbyname_r... yes
-[5-ERROR] checking if gethostbyname_r wants five arguments... no
-[5-ERROR] checking for gethostbyaddr_r... yes
-[5-ERROR] checking if gethostbyaddr_r wants seven arguments... no
-[5-ERROR] checking if system has necessary structs and functions for IPv6 support... yes
-[5-ERROR] checking for db3 compiler flags... -I/ROCK/src.evolution.1102107100.7422.3335769073/evolution-1.4.6/db-3.1.17/build_unix
-[5-ERROR] checking db.h usability... yes
-[5-ERROR] checking db.h presence... yes
-[5-ERROR] checking for db.h... yes
-[5-ERROR] checking db3 header version... 3.1.17
-[5-ERROR] checking for db3 library name... /ROCK/src.evolution.1102107100.7422.3335769073/evolution-1.4.6/db-3.1.17/build_unix/libdb.a
-[5-ERROR] checking that db3 library version matches header version... yes
-[5-ERROR] checking for OpenLDAP... /
-[5-ERROR] checking if OpenLDAP is version 2.x... no
-[5-ERROR] configure: error: evolution requires OpenLDAP version >= 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 evolution:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 evolution:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 evolution:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <evolution:doc> Creating flist file ...
-[5-ERROR] <evolution:doc> Creating package dependencies file ...
-[5-ERROR] <evolution:doc> Creating md5sum and cksum files ...
-[5-ERROR] <evolution:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building evolution=evolution.
+[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
+[DEP] bash2 battfink binutils bzip2 coreutils cpan-xml-parser diffutils
+[DEP] docbookx e2fsprogs:dev esound esound:dev evolution-data-server
+[DEP] evolution-data-server:dev expat figment findutils flex flex:dev
+[DEP] freetype gail gail:dev gal gal:dev gawk gcc34 gcc34:dev gconf
+[DEP] gconf:dev gettext glib glib:dev glibc23 glibc23:dev gnome-blog
+[DEP] gnome-desktop gnome-keyring gnome-keyring:dev gnome-mime-data
+[DEP] gnome-vfs gnome-vfs:dev gnutls gnutls:dev grep gtk+ gtk+:dev gtkdoc
+[DEP] gtkhtml gtkhtml:dev indent libart_lgpl23 libart_lgpl23:dev libbonobo
+[DEP] libbonobo:dev libbonoboui libbonoboui:dev libgcrypt libgcrypt:dev
+[DEP] libglade libglade:dev libgnome libgnome:dev libgnomecanvas
+[DEP] libgnomecanvas:dev libgnomeprint libgnomeprint:dev libgnomeprintui
+[DEP] libgnomeprintui:dev libgnomeui libgnomeui:dev libgpg-error
+[DEP] libgpg-error:dev libjpeg libjpeg:dev libsoup libsoup:dev libxml2
+[DEP] libxml2:dev linux26-header:dev m4 make mktemp mozilla mozilla:dev
+[DEP] openldap openldap:dev openssl orbit2 orbit2:dev pango pango:dev perl5
+[DEP] pkgconfig popt popt:dev scrollkeeper sed sysfiles tar util-linux
+[DEP] xfree86 xfree86:dev zapping zlib:dev
 

@@ -20,17 +20,62 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1101973854 Thu Dec  2 08:50:54 2004
+[TIMESTAMP] 1104913536 Wed Jan  5 09:25:36 2005
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-ginac.log
+[LOGS] 5-ginac.err
 
-[BUILDTIME] 49584 (5)
-[SIZE] 2.34 MB, 17 files
+[BUILDTIME] 36853 (5)
 
-[DEP] 00-dirtree bash2 binutils bzip2 cln cln:dev coreutils diffutils
-[DEP] findutils flex flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev
-[DEP] gmp gmp:dev grep linux26-header:dev m4 make mktemp ncurses:dev
-[DEP] net-tools readline readline:dev sed sysfiles tar texinfo util-linux
+[5-ERROR] then mv -f ".deps/input_lexer.Tpo" ".deps/input_lexer.Plo"; \
+[5-ERROR] else rm -f ".deps/input_lexer.Tpo"; exit 1; \
+[5-ERROR] fi
+[5-ERROR]  g++-34 -DHAVE_CONFIG_H -I. -I. -I.. -g -O2 -MT input_lexer.lo -MD -MP -MF .deps/input_lexer.Tpo -c input_lexer.cc  -fPIC -DPIC -o .libs/input_lexer.o
+[5-ERROR]  g++-34 -DHAVE_CONFIG_H -I. -I. -I.. -g -O2 -MT input_lexer.lo -MD -MP -MF .deps/input_lexer.Tpo -c input_lexer.cc -o input_lexer.o >/dev/null 2>&1
+[5-ERROR] /bin/sh ../libtool --mode=link g++-34  -g -O2   -o libginac.la -rpath /usr/lib -version-info 0:1:0 -release 1.2 add.lo archive.lo basic.lo clifford.lo color.lo constant.lo ex.lo expair.lo expairseq.lo exprseq.lo fail.lo fderivative.lo function.lo idx.lo indexed.lo inifcns.lo inifcns_trans.lo inifcns_gamma.lo inifcns_nstdsums.lo lst.lo matrix.lo mul.lo ncmul.lo normal.lo numeric.lo operators.lo power.lo registrar.lo relational.lo remember.lo pseries.lo print.lo structure.lo symbol.lo symmetry.lo tensor.lo utils.lo wildcard.lo input_parser.lo input_lexer.lo  -L/usr/lib -lcln -lgmp
+[5-ERROR] g++-34 -shared -nostdlib /usr/lib/gcc/i386-unknown-linux-gnu/3.4.3/../../../../i386-unknown-linux-gnu/lib/crti.o /usr/lib/gcc/i386-unknown-linux-gnu/3.4.3/crtbeginS.o  .libs/add.o .libs/archive.o .libs/basic.o .libs/clifford.o .libs/color.o .libs/constant.o .libs/ex.o .libs/expair.o .libs/expairseq.o .libs/exprseq.o .libs/fail.o .libs/fderivative.o .libs/function.o .libs/idx.o .libs/indexed.o .libs/inifcns.o .libs/inifcns_trans.o .libs/inifcns_gamma.o .libs/inifcns_nstdsums.o .libs/lst.o .libs/matrix.o .libs/mul.o .libs/ncmul.o .libs/normal.o .libs/numeric.o .libs/operators.o .libs/power.o .libs/registrar.o .libs/relational.o .libs/remember.o .libs/pseries.o .libs/print.o .libs/structure.o .libs/symbol.o .libs/symmetry.o .libs/tensor.o .libs/utils.o .libs/wildcard.o .libs/input_parser.o .libs/input_lexer.o  -Wl,--rpath -Wl,/usr/lib/gcc/i386-unknown-linux-gnu/3.4.3 -Wl,--rpath -Wl,/usr/lib/gcc/i386-unknown-linux-gnu/3.4.3 -L/usr/i386-unknown-linux-gnu/lib -L/usr/i386-unknown-linux-gnu/bin -L/ROCK/src.gcc34.1104638433.25361.695475075/gcc-3.4.3/objdir/gcc -L/ROCK/src.gcc34.1104638433.25361.695475075/gcc-3.4.3/objdir/i386-unknown-linux-gnu/libstdc++-v3/src/.libs -L/ROCK/src.gcc34.1104638433.25361.695475075/gcc-3.4.3/objdir/i386-unknown-linux-gnu/libstdc++-v3/src -L/usr/lib /usr/lib/libcln.so /usr/lib/libgmp.so -L/usr/lib/gcc/i386-unknown-linux-gnu/3.4.3 -L/usr/lib/gcc/i386-unknown-linux-gnu/3.4.3/../../../../i386-unknown-linux-gnu/lib -L/usr/lib/gcc/i386-unknown-linux-gnu/3.4.3/../../.. /usr/lib/gcc/i386-unknown-linux-gnu/3.4.3/libstdc++.so -lm -lc -lgcc_s /usr/lib/gcc/i386-unknown-linux-gnu/3.4.3/crtendS.o /usr/lib/gcc/i386-unknown-linux-gnu/3.4.3/../../../../i386-unknown-linux-gnu/lib/crtn.o  -Wl,-soname -Wl,libginac-1.2.so.0 -o .libs/libginac-1.2.so.0.0.1
+[5-ERROR] (cd .libs && rm -f libginac-1.2.so.0 && ln -s libginac-1.2.so.0.0.1 libginac-1.2.so.0)
+[5-ERROR] (cd .libs && rm -f libginac.so && ln -s libginac-1.2.so.0.0.1 libginac.so)
+[5-ERROR] ar cru .libs/libginac.a  add.o archive.o basic.o clifford.o color.o constant.o ex.o expair.o expairseq.o exprseq.o fail.o fderivative.o function.o idx.o indexed.o inifcns.o inifcns_trans.o inifcns_gamma.o inifcns_nstdsums.o lst.o matrix.o mul.o ncmul.o normal.o numeric.o operators.o power.o registrar.o relational.o remember.o pseries.o print.o structure.o symbol.o symmetry.o tensor.o utils.o wildcard.o input_parser.o input_lexer.o
+[5-ERROR] ranlib .libs/libginac.a
+[5-ERROR] creating libginac.la
+[5-ERROR] (cd .libs && rm -f libginac.la && ln -s ../libginac.la libginac.la)
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.ginac.1104913125.15636.1297297952/GiNaC-1.2.1/ginac'
+[5-ERROR] Making all in check
+[5-ERROR] make[2]: Entering directory `/ROCK/src.ginac.1104913125.15636.1297297952/GiNaC-1.2.1/check'
+[5-ERROR] make[2]: Nothing to be done for `all'.
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.ginac.1104913125.15636.1297297952/GiNaC-1.2.1/check'
+[5-ERROR] Making all in ginsh
+[5-ERROR] make[2]: Entering directory `/ROCK/src.ginac.1104913125.15636.1297297952/GiNaC-1.2.1/ginsh'
+[5-ERROR] sed -n -f ./ginsh_fcn_help.sed <ginsh.1 >ginsh_fcn_help.h
+[5-ERROR] sed -n -f ./ginsh_op_help.sed <ginsh.1 >ginsh_op_help.h
+[5-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I.. -I./../ginac -I../ginac -DIN_GINAC    -g -O2 -MT ginsh_parser.o -MD -MP -MF ".deps/ginsh_parser.Tpo" \
+[5-ERROR]   -c -o ginsh_parser.o `test -f 'ginsh_parser.cc' || echo './'`ginsh_parser.cc; \
+[5-ERROR] then mv -f ".deps/ginsh_parser.Tpo" ".deps/ginsh_parser.Po"; \
+[5-ERROR] else rm -f ".deps/ginsh_parser.Tpo"; exit 1; \
+[5-ERROR] fi
+[5-ERROR] /home/cbauer/projects/GiNaC-1.2/ginsh/ginsh_parser.yy: In function `char** fcn_completion(const char*, int, int)':
+[5-ERROR] /home/cbauer/projects/GiNaC-1.2/ginsh/ginsh_parser.yy:800: error: invalid conversion from `const char*' to `char*'
+[5-ERROR] /home/cbauer/projects/GiNaC-1.2/ginsh/ginsh_parser.yy:810: error: invalid conversion from `const char*' to `char*'
+[5-ERROR] make[2]: *** [ginsh_parser.o] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.ginac.1104913125.15636.1297297952/GiNaC-1.2.1/ginsh'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.ginac.1104913125.15636.1297297952/GiNaC-1.2.1'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 1 files for this package.
+[5-ERROR] Applying package split: 40 ginac:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 ginac:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 ginac:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <ginac:doc> Creating flist file ...
+[5-ERROR] <ginac:doc> Creating package dependencies file ...
+[5-ERROR] <ginac:doc> Creating md5sum and cksum files ...
+[5-ERROR] <ginac:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building ginac=ginac.
 

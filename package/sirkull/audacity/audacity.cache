@@ -20,62 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1102109556 Fri Dec  3 22:32:36 2004
+[TIMESTAMP] 1104740167 Mon Jan  3 09:16:07 2005
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-audacity.err
+[LOGS] 5-audacity.log
 
-[BUILDTIME] 20539 (5)
+[BUILDTIME] 33549 (5)
+[SIZE] 3.60 MB, 60 files
 
-[5-ERROR] /usr/include/wx-2.5/wx/ffile.h:98: error: expected `;' before '&' token
-[5-ERROR] /usr/include/wx-2.5/wx/ffile.h:101: error: expected `;' before '~' token
-[5-ERROR] /usr/include/wx-2.5/wx/ffile.h:112: error: `wxString' does not name a type
-[5-ERROR] /usr/include/wx-2.5/wx/ffile.h:81: error: `wxFromStart' was not declared in this scope
-[5-ERROR] /usr/include/wx-2.5/wx/ffile.h: In member function `void wxFFile::Attach(FILE*, int)':
-[5-ERROR] /usr/include/wx-2.5/wx/ffile.h:57: error: `m_name' undeclared (first use this function)
-[5-ERROR] /usr/include/wx-2.5/wx/ffile.h:57: error: (Each undeclared identifier is reported only once for each function it appears in.)
-[5-ERROR] /usr/include/wx-2.5/wx/ffile.h:57: error: `name' undeclared (first use this function)
-[5-ERROR] /usr/include/wx-2.5/wx/ffile.h: In member function `bool wxFFile::Write(int)':
-[5-ERROR] /usr/include/wx-2.5/wx/ffile.h:72: error: `wxWX2MBbuf' does not name a type
-[5-ERROR] /usr/include/wx-2.5/wx/ffile.h:73: error: `buf' undeclared (first use this function)
-[5-ERROR] /usr/include/wx-2.5/wx/ffile.h: In member function `bool wxFFile::SeekEnd(long int)':
-[5-ERROR] /usr/include/wx-2.5/wx/ffile.h:83: error: `wxFromEnd' undeclared (first use this function)
-[5-ERROR] In file included from /usr/include/wx-2.5/wx/utils.h:32,
-[5-ERROR]                  from blockfile/LegacyBlockFile.cpp:22:
-[5-ERROR] /usr/include/wx-2.5/wx/filefn.h: At global scope:
-[5-ERROR] /usr/include/wx-2.5/wx/filefn.h:123: error: `wxFromEnd' used prior to declaration
-[5-ERROR] blockfile/LegacyBlockFile.cpp: In member function `virtual void LegacyBlockFile::SaveXML(int, wxFFile&)':
-[5-ERROR] blockfile/LegacyBlockFile.cpp:236: error: invalid conversion from `const char*' to `int'
-[5-ERROR] blockfile/LegacyBlockFile.cpp:236: error:   initializing argument 1 of `bool wxFFile::Write(int)'
-[5-ERROR] blockfile/LegacyBlockFile.cpp:237: error: invalid conversion from `const char*' to `int'
-[5-ERROR] blockfile/LegacyBlockFile.cpp:237: error:   initializing argument 1 of `bool wxFFile::Write(int)'
-[5-ERROR] blockfile/LegacyBlockFile.cpp:239: error: invalid conversion from `const wxChar*' to `int'
-[5-ERROR] blockfile/LegacyBlockFile.cpp:239: error:   initializing argument 1 of `bool wxFFile::Write(int)'
-[5-ERROR] blockfile/LegacyBlockFile.cpp:240: error: invalid conversion from `const wxChar*' to `int'
-[5-ERROR] blockfile/LegacyBlockFile.cpp:240: error:   initializing argument 1 of `bool wxFFile::Write(int)'
-[5-ERROR] blockfile/LegacyBlockFile.cpp:242: error: invalid conversion from `const wxChar*' to `int'
-[5-ERROR] blockfile/LegacyBlockFile.cpp:242: error:   initializing argument 1 of `bool wxFFile::Write(int)'
-[5-ERROR] blockfile/LegacyBlockFile.cpp:243: error: invalid conversion from `const wxChar*' to `int'
-[5-ERROR] blockfile/LegacyBlockFile.cpp:243: error:   initializing argument 1 of `bool wxFFile::Write(int)'
-[5-ERROR] blockfile/LegacyBlockFile.cpp:244: error: invalid conversion from `const char*' to `int'
-[5-ERROR] blockfile/LegacyBlockFile.cpp:244: error:   initializing argument 1 of `bool wxFFile::Write(int)'
-[5-ERROR] make[1]: *** [obj/blockfile/LegacyBlockFile.o] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.audacity.1102109329.9994.1026866704/audacity-src-1.2.3/src'
-[5-ERROR] make: *** [audacity] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 audacity:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 audacity:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 audacity:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <audacity:doc> Creating flist file ...
-[5-ERROR] <audacity:doc> Creating package dependencies file ...
-[5-ERROR] <audacity:doc> Creating md5sum and cksum files ...
-[5-ERROR] <audacity:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building audacity=audacity.
+[DEP] 00-dirtree atk bash2 binutils bzip2 coreutils diffutils
+[DEP] expat findutils flac flac:dev freetype gawk gcc34 gcc34:dev
+[DEP] gettext glib glibc23 glibc23:dev grep gtk+ gzip libjpeg libpng
+[DEP] libsamplerate libsamplerate:dev libsdl libsndfile libsndfile:dev
+[DEP] libtiff linux26-header:dev mad mad:dev make mktemp nas ogg-vorbis
+[DEP] ogg-vorbis:dev pango pkgconfig sed sysfiles tar util-linux wxwidgets
+[DEP] wxwidgets:dev xfree86 zip zlib:dev
 

@@ -20,62 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1102108865 Fri Dec  3 22:21:05 2004
+[TIMESTAMP] 1104730349 Mon Jan  3 06:32:29 2005
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-libcss.err
+[LOGS] 5-libcss.log
 
-[BUILDTIME] 2584 (5)
+[BUILDTIME] 1863 (5)
+[SIZE] 0.06 MB, 13 files
 
-[5-ERROR] rm -fr .libs/libcss.la .libs/libcss.* .libs/libcss.*
-[5-ERROR] gcc-34 -shared  css_descramble.lo css_auth.lo css.lo css_dvd.lo  -lc  -Wl,-soname -Wl,libcss.so.0 -o .libs/libcss.so.0.1.0
-[5-ERROR] (cd .libs && rm -f libcss.so.0 && ln -s libcss.so.0.1.0 libcss.so.0)
-[5-ERROR] (cd .libs && rm -f libcss.so && ln -s libcss.so.0.1.0 libcss.so)
-[5-ERROR] ar cru .libs/libcss.a  css_descramble.o css_auth.o css.o css_dvd.o 
-[5-ERROR] ranlib .libs/libcss.a
-[5-ERROR] creating libcss.la
-[5-ERROR] (cd .libs && rm -f libcss.la && ln -s ../libcss.la libcss.la)
-[5-ERROR] gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I/usr/src/linux/include    -g -O2 -pipe -Wall -O6 -fomit-frame-pointer -funroll-all-loops -D__OPTIMIZE__ -D__USE_STRING_INLINES -c tstdvd.c
-[5-ERROR] /bin/sh ../libtool --mode=link gcc-34  -g -O2 -pipe -Wall -O6 -fomit-frame-pointer -funroll-all-loops -D__OPTIMIZE__ -D__USE_STRING_INLINES  -o tstdvd  tstdvd.o libcss.la -ldl 
-[5-ERROR] gcc-34 -g -O2 -pipe -Wall -O6 -fomit-frame-pointer -funroll-all-loops -D__OPTIMIZE__ -D__USE_STRING_INLINES -o .libs/tstdvd tstdvd.o .libs/libcss.so -ldl
-[5-ERROR] creating tstdvd
-[5-ERROR] gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I/usr/src/linux/include    -g -O2 -pipe -Wall -O6 -fomit-frame-pointer -funroll-all-loops -D__OPTIMIZE__ -D__USE_STRING_INLINES -c dvdinfo.c
-[5-ERROR] /bin/sh ../libtool --mode=link gcc-34  -g -O2 -pipe -Wall -O6 -fomit-frame-pointer -funroll-all-loops -D__OPTIMIZE__ -D__USE_STRING_INLINES  -o dvdinfo  dvdinfo.o libcss.la -ldl 
-[5-ERROR] gcc-34 -g -O2 -pipe -Wall -O6 -fomit-frame-pointer -funroll-all-loops -D__OPTIMIZE__ -D__USE_STRING_INLINES -o .libs/dvdinfo dvdinfo.o .libs/libcss.so -ldl
-[5-ERROR] creating dvdinfo
-[5-ERROR] gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I/usr/src/linux/include    -g -O2 -pipe -Wall -O6 -fomit-frame-pointer -funroll-all-loops -D__OPTIMIZE__ -D__USE_STRING_INLINES -c reset_dvd.c
-[5-ERROR] /bin/sh ../libtool --mode=link gcc-34  -g -O2 -pipe -Wall -O6 -fomit-frame-pointer -funroll-all-loops -D__OPTIMIZE__ -D__USE_STRING_INLINES  -o reset_dvd  reset_dvd.o  
-[5-ERROR] gcc-34 -g -O2 -pipe -Wall -O6 -fomit-frame-pointer -funroll-all-loops -D__OPTIMIZE__ -D__USE_STRING_INLINES -o reset_dvd reset_dvd.o
-[5-ERROR] gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I/usr/src/linux/include    -g -O2 -pipe -Wall -O6 -fomit-frame-pointer -funroll-all-loops -D__OPTIMIZE__ -D__USE_STRING_INLINES -c css_cat.c
-[5-ERROR] In file included from /usr/include/linux/fs.h:19,
-[5-ERROR]                  from css_cat.c:211:
-[5-ERROR] /usr/include/linux/prio_tree.h:22: error: parse error before "pgoff_t"
-[5-ERROR] /usr/include/linux/prio_tree.h:27: error: parse error before "pgoff_t"
-[5-ERROR] /usr/include/linux/prio_tree.h: In function `prio_tree_iter_init':
-[5-ERROR] /usr/include/linux/prio_tree.h:29: error: `iter' undeclared (first use in this function)
-[5-ERROR] /usr/include/linux/prio_tree.h:29: error: (Each undeclared identifier is reported only once
-[5-ERROR] /usr/include/linux/prio_tree.h:29: error: for each function it appears in.)
-[5-ERROR] /usr/include/linux/prio_tree.h:29: error: `root' undeclared (first use in this function)
-[5-ERROR] /usr/include/linux/prio_tree.h:30: error: `r_index' undeclared (first use in this function)
-[5-ERROR] make[2]: *** [css_cat.o] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.libcss.1102108829.1236.1205837156/libcss-0.1.0/src'
-[5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.libcss.1102108829.1236.1205837156/libcss-0.1.0'
-[5-ERROR] make: *** [all-recursive-am] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 libcss:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 libcss:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 libcss:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <libcss:doc> Creating flist file ...
-[5-ERROR] <libcss:doc> Creating package dependencies file ...
-[5-ERROR] <libcss:doc> Creating md5sum and cksum files ...
-[5-ERROR] <libcss:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building libcss=libcss.
+[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
+[DEP] diffutils findutils gcc34 gcc34:dev glibc23 glibc23:dev grep
+[DEP] linux26-header:dev make mktemp patch perl5 sed sysfiles tar texinfo
 

@@ -20,62 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1102111655 Fri Dec  3 23:07:35 2004
+[TIMESTAMP] 1104761971 Mon Jan  3 15:19:31 2005
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-apollon.err
+[LOGS] 5-apollon.log
 
-[BUILDTIME] 5795 (5)
+[BUILDTIME] 13602 (5)
+[SIZE] 1.13 MB, 57 files
 
-[5-ERROR] kircfunctors.h:176: error: `m_obj' undeclared (first use this function)
-[5-ERROR] kircfunctors.h: In member function `virtual bool KIRCMethodFunctor_S_Suffix<TClass>::operator()(const KIRCMessage&)':
-[5-ERROR] kircfunctors.h:196: error: there are no arguments to `isValid' that depend on a template parameter, so a declaration of `isValid' must be available
-[5-ERROR] kircfunctors.h:198: error: `m_method' undeclared (first use this function)
-[5-ERROR] kircfunctors.h:199: error: `m_obj' undeclared (first use this function)
-[5-ERROR] kircfunctors.h: In member function `virtual bool KIRCMethodFunctor_SS<TClass, argindex>::operator()(const KIRCMessage&)':
-[5-ERROR] kircfunctors.h:219: error: there are no arguments to `isValid' that depend on a template parameter, so a declaration of `isValid' must be available
-[5-ERROR] kircfunctors.h:221: error: `m_method' undeclared (first use this function)
-[5-ERROR] kircfunctors.h:222: error: `m_obj' undeclared (first use this function)
-[5-ERROR] kircfunctors.h:222: error: `type' undeclared (first use this function)
-[5-ERROR] kircfunctors.h: In member function `virtual bool KIRCMethodFunctor_SS_Prefix<TClass, argindex>::operator()(const KIRCMessage&)':
-[5-ERROR] kircfunctors.h:242: error: there are no arguments to `isValid' that depend on a template parameter, so a declaration of `isValid' must be available
-[5-ERROR] kircfunctors.h:244: error: `m_method' undeclared (first use this function)
-[5-ERROR] kircfunctors.h:245: error: `m_obj' undeclared (first use this function)
-[5-ERROR] kircfunctors.h: In member function `virtual bool KIRCMethodFunctor_SS_Suffix<TClass, argindex>::operator()(const KIRCMessage&)':
-[5-ERROR] kircfunctors.h:265: error: there are no arguments to `isValid' that depend on a template parameter, so a declaration of `isValid' must be available
-[5-ERROR] kircfunctors.h:267: error: `m_method' undeclared (first use this function)
-[5-ERROR] kircfunctors.h:268: error: `m_obj' undeclared (first use this function)
-[5-ERROR] kircfunctors.h: In member function `virtual bool KIRCMethodFunctor_SS_PrefixSuffix<TClass>::operator()(const KIRCMessage&)':
-[5-ERROR] kircfunctors.h:288: error: there are no arguments to `isValid' that depend on a template parameter, so a declaration of `isValid' must be available
-[5-ERROR] kircfunctors.h:290: error: `m_method' undeclared (first use this function)
-[5-ERROR] kircfunctors.h:291: error: `m_obj' undeclared (first use this function)
-[5-ERROR] kirc.cpp: At global scope:
-[5-ERROR] kirc.cpp:1626: warning: unused parameter 'msg'
-[5-ERROR] kirc.cpp:1261: warning: unused parameter 'msg'
-[5-ERROR] kirc.cpp:1255: warning: unused parameter 'msg'
-[5-ERROR] kirc.cpp:1121: warning: unused parameter 'msg'
-[5-ERROR] kirc.cpp:1116: warning: unused parameter 'msg'
-[5-ERROR] make[3]: *** [kirc.lo] Error 1
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.apollon.1102111578.31821.294888819/apollon-1.0b1/apollon/libkirc'
-[5-ERROR] make[2]: *** [all-recursive] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.apollon.1102111578.31821.294888819/apollon-1.0b1/apollon'
-[5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.apollon.1102111578.31821.294888819/apollon-1.0b1'
-[5-ERROR] make: *** [all] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 apollon:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 apollon:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 apollon:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <apollon:doc> Creating flist file ...
-[5-ERROR] <apollon:doc> Creating package dependencies file ...
-[5-ERROR] <apollon:doc> Creating md5sum and cksum files ...
-[5-ERROR] <apollon:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building apollon=apollon.
+[DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils expat fam
+[DEP] fam:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev gettext
+[DEP] glibc23 glibc23:dev grep kdebase kdelibs kdelibs:dev kdelibs:doc
+[DEP] kdepim libart_lgpl23 libart_lgpl23:dev libgift libgift:dev libjpeg
+[DEP] libpng libpng:dev libxml2 linux26-header:dev make mktemp net-tools
+[DEP] perl5 qt qt:dev sed sysfiles tar util-linux vim xfree86 xfree86:dev
+[DEP] zlib:dev
 

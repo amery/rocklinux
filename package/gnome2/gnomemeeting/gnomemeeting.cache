@@ -1,60 +1,25 @@
 
-[TIMESTAMP] 1102109610 Fri Dec  3 22:33:30 2004
+[TIMESTAMP] 1104745170 Mon Jan  3 10:39:30 2005
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gnomemeeting.err
+[LOGS] 5-gnomemeeting.log
 
-[BUILDTIME] 2032 (5)
+[BUILDTIME] 14769 (5)
+[SIZE] 6.95 MB, 119 files
 
-[5-ERROR] [ writing debug log to /ROCK/src.gnomemeeting.1102109581.14496.373363047/cmd_wrapper.log ]
-[5-ERROR] create symbolic link `/ROCK/src.gnomemeeting.1102109581.14496.373363047/archdir/gnomemeeting-1.0.2.tar.bz2' to `/ROCK/download/mirror/g/gnomemeeting-1.0.2.tar.bz2'
-[5-ERROR] Running main build function 'build_this_package' ...
-[5-ERROR] Extracting gnomemeeting-1.0.2.tar.bz2 (--use-compress-program=bzip2 -xf) ... 
-[5-ERROR] Fixing ownership and permissions ...
-[5-ERROR] Removing CVS and .svn directories ...
-[5-ERROR] Changeing into /ROCK/src.gnomemeeting.1102109581.14496.373363047/gnomemeeting-1.0.2 ...
-[5-ERROR] Creating /opt/gnome26/<..> if required ...
-[5-ERROR] Autodetection for option impossible:  --disable-debug passed thru.
-[5-ERROR] Removing unsupported '--with-mysql-lib=/opt/mysql/lib/mysql' from configure option string.
-[5-ERROR] Removing unsupported '--with-mysql-include=/opt/mysql/include/mysql' from configure option string.
-[5-ERROR] Removing unsupported '--with-libpam' from configure option string.
-[5-ERROR] Removing unsupported '--with-pam' from configure option string.
-[5-ERROR] Autodetection for option impossible:  --enable-libpam passed thru.
-[5-ERROR] Autodetection for option impossible:  --enable-pam passed thru.
-[5-ERROR] Autodetection for option impossible:  --disable-gtk-doc passed thru.
-[5-ERROR] Autodetection for option impossible:  --disable-gtktest passed thru.
-[5-ERROR] Running LDFLAGS="-L${pkg_openldap_prefix}/lib -lldap" bash ./configure --prefix=/opt/gnome26 --bindir=/opt/gnome26/bin --sbindir=/opt/gnome26/sbin --libdir=/opt/gnome26/lib --datadir=/opt/gnome26/share --includedir=/opt/gnome26/include --infodir=/opt/gnome26/share/info --mandir=/opt/gnome26/share/man --sysconfdir=/etc/opt/gnome26 --localstatedir=/var/opt/gnome26 --disable-debug --enable-libpam --enable-pam --build=i386-unknown-linux-gnu --host=i386-unknown-linux-gnu --disable-gtk-doc --disable-gtktest --with-ldap-dir=
-[5-ERROR] checking build system type... i386-unknown-linux-gnu
-[5-ERROR] checking host system type... i386-unknown-linux-gnu
-[5-ERROR] checking target system type... i386-unknown-linux-gnu
-[5-ERROR] checking for a BSD-compatible install... /ROCK/build/ref1129-2.1.0-DEV-x86-reference-expert/ROCK/tools.chroot/wrapper/install -c
-[5-ERROR] checking whether build environment is sane... yes
-[5-ERROR] checking whether make sets $(MAKE)... yes
-[5-ERROR] checking for working aclocal-1.4... missing
-[5-ERROR] checking for working autoconf... found
-[5-ERROR] checking for working automake-1.4... missing
-[5-ERROR] checking for working autoheader... found
-[5-ERROR] checking for working makeinfo... found
-[5-ERROR] checking whether to enable maintainer-specific portions of Makefiles... no
-[5-ERROR] checking for intltool >= 0.20... 0.30 found
-[5-ERROR] checking for perl... /usr/bin/perl
-[5-ERROR] checking for i386-unknown-linux-gnu-gcc... gcc-34
-[5-ERROR] checking for C compiler default output file name... configure: error: C compiler cannot create executables
-[5-ERROR] See `config.log' for more details.
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 gnomemeeting:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 gnomemeeting:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 gnomemeeting:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <gnomemeeting:doc> Creating flist file ...
-[5-ERROR] <gnomemeeting:doc> Creating package dependencies file ...
-[5-ERROR] <gnomemeeting:doc> Creating md5sum and cksum files ...
-[5-ERROR] <gnomemeeting:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building gnomemeeting=gnomemeeting.
+[DEP] 00-dirtree alsa atk atk:dev audiofile audiofile:dev bash2
+[DEP] battfink binutils bzip2 coreutils cpan-xml-parser cyrus-sasl2
+[DEP] diffutils docbookx esound esound:dev evolution-data-server
+[DEP] evolution-data-server:dev expat figment file findutils freetype
+[DEP] gawk gcc34 gcc34:dev gconf gconf:dev gettext glib glib:dev glibc23
+[DEP] glibc23:dev gnome-blog gnome-desktop gnome-games gnome-keyring
+[DEP] gnome-keyring:dev gnome-vfs gnome-vfs:dev grep gtk+ gtk+:dev
+[DEP] libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui
+[DEP] libbonoboui:dev libglade libgnome libgnome:dev libgnomecanvas
+[DEP] libgnomecanvas:dev libgnomeui libgnomeui:dev libjpeg libsdl
+[DEP] libsdl:dev libxml2 libxml2:dev linux26-header:dev make mktemp nas
+[DEP] net-tools openh323 openh323:dev openldap openldap:dev openssl orbit2
+[DEP] orbit2:dev pango pango:dev perl5 pkgconfig popt popt:dev scrollkeeper
+[DEP] sed sysfiles tar util-linux xfree86 xfree86:dev zapping zlib:dev
 

@@ -1,16 +1,67 @@
 
-[TIMESTAMP] 1101958274 Thu Dec  2 04:31:14 2004
+[TIMESTAMP] 1104913062 Wed Jan  5 09:17:42 2005
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-lgeneral.log
+[LOGS] 5-lgeneral.err
 
-[BUILDTIME] 4164 (5)
-[SIZE] 10.45 MB, 225 files
+[BUILDTIME] 2633 (5)
+[SIZE] 1.78 MB, 79 files
 
-[DEP] 00-dirtree alsa arts autoconf automake19 bash2 binutils bzip2
-[DEP] coreutils diffutils findutils gcc34 gcc34:dev glib glibc23
-[DEP] glibc23:dev grep libsdl libsdl:dev libsdl_mixer libsdl_mixer:dev
-[DEP] linux26-header:dev make mktemp nas net-tools ogg-vorbis perl5 sed
-[DEP] sysfiles tar texinfo xfree86
+[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
+[DEP] diffutils findutils gcc34 gcc34:dev glibc23 glibc23:dev grep libsdl
+[DEP] libsdl:dev libsdl_mixer libsdl_mixer:dev linux26-header:dev make
+[DEP] mktemp nas net-tools ogg-vorbis perl5 sed sysfiles tar texinfo
+[DEP] xfree86
+
+[5-ERROR] make[3]: Nothing to be done for `install-exec-am'.
+[5-ERROR] /bin/sh ../../mkinstalldirs /usr/share/games/lgeneral/scenarios
+[5-ERROR] make[3]: Leaving directory `/ROCK/src.lgeneral.1104913029.30447.245582748/lgeneral-1.2beta-2/src/scenarios'
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.lgeneral.1104913029.30447.245582748/lgeneral-1.2beta-2/src/scenarios'
+[5-ERROR] Making install in ai_modules
+[5-ERROR] make[2]: Entering directory `/ROCK/src.lgeneral.1104913029.30447.245582748/lgeneral-1.2beta-2/src/ai_modules'
+[5-ERROR] make[3]: Entering directory `/ROCK/src.lgeneral.1104913029.30447.245582748/lgeneral-1.2beta-2/src/ai_modules'
+[5-ERROR] make[3]: Nothing to be done for `install-exec-am'.
+[5-ERROR] /bin/sh ../../mkinstalldirs /usr/share/games/lgeneral/ai_modules
+[5-ERROR] make[3]: Leaving directory `/ROCK/src.lgeneral.1104913029.30447.245582748/lgeneral-1.2beta-2/src/ai_modules'
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.lgeneral.1104913029.30447.245582748/lgeneral-1.2beta-2/src/ai_modules'
+[5-ERROR] make[2]: Entering directory `/ROCK/src.lgeneral.1104913029.30447.245582748/lgeneral-1.2beta-2/src'
+[5-ERROR] make[3]: Entering directory `/ROCK/src.lgeneral.1104913029.30447.245582748/lgeneral-1.2beta-2/src'
+[5-ERROR] /bin/sh ../mkinstalldirs /usr/games
+[5-ERROR]   /ROCK/build/default-2.1.0-DEV-x86-reference-expert/ROCK/tools.chroot/wrapper/install -c  lgeneral /usr/games/lgeneral
+[5-ERROR] make  install-man6
+[5-ERROR] make[4]: Entering directory `/ROCK/src.lgeneral.1104913029.30447.245582748/lgeneral-1.2beta-2/src'
+[5-ERROR] /bin/sh ../mkinstalldirs /usr/share/man/man6
+[5-ERROR]  /ROCK/build/default-2.1.0-DEV-x86-reference-expert/ROCK/tools.chroot/wrapper/install -c -m 644 ./lgeneral.6 /usr/share/man/man6/lgeneral.6
+[5-ERROR] make[4]: Leaving directory `/ROCK/src.lgeneral.1104913029.30447.245582748/lgeneral-1.2beta-2/src'
+[5-ERROR] /bin/sh ../mkinstalldirs /usr/share/games/lgeneral
+[5-ERROR] make[3]: Leaving directory `/ROCK/src.lgeneral.1104913029.30447.245582748/lgeneral-1.2beta-2/src'
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.lgeneral.1104913029.30447.245582748/lgeneral-1.2beta-2/src'
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.lgeneral.1104913029.30447.245582748/lgeneral-1.2beta-2/src'
+[5-ERROR] make[1]: Entering directory `/ROCK/src.lgeneral.1104913029.30447.245582748/lgeneral-1.2beta-2'
+[5-ERROR] make[2]: Entering directory `/ROCK/src.lgeneral.1104913029.30447.245582748/lgeneral-1.2beta-2'
+[5-ERROR] make[2]: Nothing to be done for `install-exec-am'.
+[5-ERROR] make[2]: Nothing to be done for `install-data-am'.
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.lgeneral.1104913029.30447.245582748/lgeneral-1.2beta-2'
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.lgeneral.1104913029.30447.245582748/lgeneral-1.2beta-2'
+[5-ERROR] ./scripts/Build-Pkg: line 1:  3179 Segmentation fault      (core dumped) $bindir/lgc-pg -s pg-data -d $datadir/lgeneral
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 74 files for this package.
+[5-ERROR] Applying package split: 40 lgeneral:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 lgeneral:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 lgeneral:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <lgeneral> Creating flist file ...
+[5-ERROR] <lgeneral> Creating package dependencies file ...
+[5-ERROR] <lgeneral> Creating md5sum and cksum files ...
+[5-ERROR] <lgeneral> Creating package description ...
+[5-ERROR] <lgeneral:doc> Creating flist file ...
+[5-ERROR] <lgeneral:doc> Creating package dependencies file ...
+[5-ERROR] <lgeneral:doc> Creating md5sum and cksum files ...
+[5-ERROR] <lgeneral:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building lgeneral=lgeneral.
 

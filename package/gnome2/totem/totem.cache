@@ -20,28 +20,62 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1101924121 Wed Dec  1 19:02:01 2004
+[TIMESTAMP] 1104912727 Wed Jan  5 09:12:07 2005
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-totem.log
+[LOGS] 5-totem.err
 
-[BUILDTIME] 6484 (5)
-[SIZE] 1.98 MB, 132 files
+[BUILDTIME] 2210 (5)
 
-[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
-[DEP] autoconf bash2 binutils bzip2 coreutils cpan-xml-parser diffutils
-[DEP] docbookx esound esound:dev expat figment findutils freetype
-[DEP] freetype:dev gawk gcc34 gcc34:dev gconf gconf:dev gettext gftp
-[DEP] glib glib12 glib:dev glibc23 glibc23:dev gnome-blog gnome-desktop
-[DEP] gnome-desktop:dev gnome-keyring gnome-keyring:dev gnome-libs14
-[DEP] gnome-mime-data gnome-vfs gnome-vfs:dev grep gtk+ gtk+:dev
-[DEP] libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui
-[DEP] libbonoboui:dev libglade libglade:dev libgnome libgnome:dev
-[DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev libjpeg
-[DEP] libjpeg:dev libxml2 libxml2:dev linux26-header:dev lirc lirc:dev
-[DEP] make mktemp net-tools openssl orbit2 orbit2:dev pango pango:dev
-[DEP] perl5 pkgconfig popt popt:dev scrollkeeper sed startup-notification
-[DEP] startup-notification:dev sysfiles tar texinfo util-linux xfree86
-[DEP] xfree86:dev xine xine:dev zlib:dev
+[5-ERROR] checking for g++-34 option to produce PIC... -fPIC
+[5-ERROR] checking if g++-34 PIC flag -fPIC works... yes
+[5-ERROR] checking if g++-34 supports -c -o file.o... yes
+[5-ERROR] checking whether the g++-34 linker (ld) supports shared libraries... yes
+[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] checking whether stripping libraries is possible... yes
+[5-ERROR] appending configuration tag "F77" to libtool
+[5-ERROR] checking if libtool supports shared libraries... yes
+[5-ERROR] checking whether to build shared libraries... yes
+[5-ERROR] checking whether to build static libraries... yes
+[5-ERROR] checking for g77-34 option to produce PIC... -fPIC
+[5-ERROR] checking if g77-34 PIC flag -fPIC works... yes
+[5-ERROR] checking if g77-34 supports -c -o file.o... yes
+[5-ERROR] checking whether the g77-34 linker (ld) supports shared libraries... yes
+[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] checking whether stripping libraries is possible... yes
+[5-ERROR] checking for intltool >= 0.20... 0.30 found
+[5-ERROR] checking for perl... /usr/bin/perl
+[5-ERROR] checking for cam_open_spec_device in -lcam... no
+[5-ERROR] checking for pkg-config... /usr/bin/pkg-config
+[5-ERROR] checking for nvtvsimple >= 0.4.5... Package nvtvsimple was not found in the pkg-config search path.
+[5-ERROR] Perhaps you should add the directory containing `nvtvsimple.pc'
+[5-ERROR] to the PKG_CONFIG_PATH environment variable
+[5-ERROR] No package 'nvtvsimple' found
+[5-ERROR] checking for backend libraries... xine
+[5-ERROR] checking for Linux... yes
+[5-ERROR] checking whether to compile vanity... no
+[5-ERROR] checking for glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libgnomeui-2.0 >= 2.3.3 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 gnome-desktop-2.0 >= 2.1.5 libnautilus-burn >= 2.8.1 libxine >= 1.0.0 gconf-2.0... Package libnautilus-burn was not found in the pkg-config search path.
+[5-ERROR] Perhaps you should add the directory containing `libnautilus-burn.pc'
+[5-ERROR] to the PKG_CONFIG_PATH environment variable
+[5-ERROR] No package 'libnautilus-burn' found
+[5-ERROR] 
+[5-ERROR] configure: error: Library requirements (glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libgnomeui-2.0 >= 2.3.3 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 gnome-desktop-2.0 >= 2.1.5 libnautilus-burn >= 2.8.1 libxine >= 1.0.0 gconf-2.0) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them.
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 1 files for this package.
+[5-ERROR] Applying package split: 40 totem:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 totem:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 totem:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <totem:doc> Creating flist file ...
+[5-ERROR] <totem:doc> Creating package dependencies file ...
+[5-ERROR] <totem:doc> Creating md5sum and cksum files ...
+[5-ERROR] <totem:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building totem=totem.
 

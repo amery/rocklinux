@@ -20,62 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1102108541 Fri Dec  3 22:15:41 2004
+[TIMESTAMP] 1104711737 Mon Jan  3 01:22:17 2005
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-dvb-apps.err
+[LOGS] 5-dvb-apps.log
 
-[BUILDTIME] 2175 (5)
+[BUILDTIME] 1710 (5)
+[SIZE] 0.23 MB, 162 files
 
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.dvb-apps.1102108510.14483.1670127164/linuxtv-dvb-apps-1.1.1-2004-09-14/util/dvbtraffic'
-[5-ERROR] make -C av7110_loadkeys 
-[5-ERROR] make[2]: Entering directory `/ROCK/src.dvb-apps.1102108510.14483.1670127164/linuxtv-dvb-apps-1.1.1-2004-09-14/util/av7110_loadkeys'
-[5-ERROR] generate input_keynames.h...
-[5-ERROR] gcc-34 -g -Wall -O2  '-DDATADIR="/usr/share"'  -c -o av7110_loadkeys.o av7110_loadkeys.c
-[5-ERROR] gcc-34   av7110_loadkeys.o   -o av7110_loadkeys
-[5-ERROR] gcc-34 -g -Wall -O2  '-DDATADIR="/usr/share"'  -c -o evtest.o evtest.c
-[5-ERROR] gcc-34   evtest.o   -o evtest
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.dvb-apps.1102108510.14483.1670127164/linuxtv-dvb-apps-1.1.1-2004-09-14/util/av7110_loadkeys'
-[5-ERROR] make -C ttusb_dec_reset 
-[5-ERROR] make[2]: Entering directory `/ROCK/src.dvb-apps.1102108510.14483.1670127164/linuxtv-dvb-apps-1.1.1-2004-09-14/util/ttusb_dec_reset'
-[5-ERROR] gcc-34 -g -Wall -O2  -c ttusb_dec_reset.c -o ttusb_dec_reset.o
-[5-ERROR] gcc-34 -g -Wall -lusb -o ttusb_dec_reset ttusb_dec_reset.o
-[5-ERROR] ttusb_dec_reset.o(.text+0x1f): In function `dec_reset':
-[5-ERROR] : undefined reference to `usb_open'
-[5-ERROR] ttusb_dec_reset.o(.text+0x39): In function `dec_reset':
-[5-ERROR] : undefined reference to `usb_claim_interface'
-[5-ERROR] ttusb_dec_reset.o(.text+0x5c): In function `dec_reset':
-[5-ERROR] : undefined reference to `usb_bulk_write'
-[5-ERROR] ttusb_dec_reset.o(.text+0x8a): In function `dec_reset':
-[5-ERROR] : undefined reference to `usb_close'
-[5-ERROR] ttusb_dec_reset.o(.text+0x9a): In function `main':
-[5-ERROR] : undefined reference to `usb_init'
-[5-ERROR] ttusb_dec_reset.o(.text+0x9f): In function `main':
-[5-ERROR] : undefined reference to `usb_find_busses'
-[5-ERROR] ttusb_dec_reset.o(.text+0xa4): In function `main':
-[5-ERROR] : undefined reference to `usb_find_devices'
-[5-ERROR] ttusb_dec_reset.o(.text+0xa9): In function `main':
-[5-ERROR] : undefined reference to `usb_get_busses'
-[5-ERROR] collect2: ld returned 1 exit status
-[5-ERROR] make[2]: *** [ttusb_dec_reset] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.dvb-apps.1102108510.14483.1670127164/linuxtv-dvb-apps-1.1.1-2004-09-14/util/ttusb_dec_reset'
-[5-ERROR] make[1]: *** [Makefile] Error 2
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.dvb-apps.1102108510.14483.1670127164/linuxtv-dvb-apps-1.1.1-2004-09-14/util'
-[5-ERROR] make: *** [all] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 dvb-apps:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 dvb-apps:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 dvb-apps:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <dvb-apps:doc> Creating flist file ...
-[5-ERROR] <dvb-apps:doc> Creating package dependencies file ...
-[5-ERROR] <dvb-apps:doc> Creating md5sum and cksum files ...
-[5-ERROR] <dvb-apps:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building dvb-apps=dvb-apps.
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
+[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp patch sed
+[DEP] sysfiles tar
 

@@ -20,16 +20,62 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1101802542 Tue Nov 30 09:15:42 2004
+[TIMESTAMP] 1104911642 Wed Jan  5 08:54:02 2005
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-svgalib.log
+[LOGS] 5-svgalib.err
 
-[BUILDTIME] 6809 (5)
-[SIZE] 1.18 MB, 260 files
+[BUILDTIME] 3218 (5)
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep gzip linux26 linux26-header:dev
-[DEP] linux26-source linux26-source:dev make mktemp patch sed sysfiles tar
+[5-ERROR] {standard input}:2342: Warning: using `%cx' instead of `%ecx' due to `w' suffix
+[5-ERROR] {standard input}:2417: Warning: using `%ax' instead of `%eax' due to `w' suffix
+[5-ERROR] {standard input}:2419: Warning: using `%ax' instead of `%eax' due to `w' suffix
+[5-ERROR] {standard input}:2486: Warning: using `%ax' instead of `%eax' due to `w' suffix
+[5-ERROR] {standard input}:2488: Warning: using `%ax' instead of `%eax' due to `w' suffix
+[5-ERROR] {standard input}:2520: Warning: using `%ax' instead of `%eax' due to `w' suffix
+[5-ERROR] {standard input}:2522: Warning: using `%ax' instead of `%eax' due to `w' suffix
+[5-ERROR] {standard input}:2550: Error: suffix or operands invalid for `movzbl'
+[5-ERROR] {standard input}:2668: Warning: using `%dx' instead of `%edx' due to `w' suffix
+[5-ERROR] {standard input}:2670: Warning: using `%dx' instead of `%edx' due to `w' suffix
+[5-ERROR] {standard input}:2918: Warning: using `%ax' instead of `%eax' due to `w' suffix
+[5-ERROR] {standard input}:2920: Warning: using `%ax' instead of `%eax' due to `w' suffix
+[5-ERROR] {standard input}:2952: Error: suffix or operands invalid for `movzbl'
+[5-ERROR] {standard input}:3082: Warning: using `%cx' instead of `%ecx' due to `w' suffix
+[5-ERROR] {standard input}:3084: Warning: using `%cx' instead of `%ecx' due to `w' suffix
+[5-ERROR] {standard input}:3143: Error: suffix or operands invalid for `movzbl'
+[5-ERROR] {standard input}:3175: Error: suffix or operands invalid for `movzbl'
+[5-ERROR] {standard input}:3210: Error: suffix or operands invalid for `movzbl'
+[5-ERROR] {standard input}:4360: Warning: using `%ax' instead of `%eax' due to `w' suffix
+[5-ERROR] {standard input}:4362: Warning: using `%ax' instead of `%eax' due to `w' suffix
+[5-ERROR] {standard input}:4377: Warning: using `%ax' instead of `%eax' due to `w' suffix
+[5-ERROR] {standard input}:4379: Warning: using `%ax' instead of `%eax' due to `w' suffix
+[5-ERROR] {standard input}:4394: Warning: using `%ax' instead of `%eax' due to `w' suffix
+[5-ERROR] {standard input}:4396: Warning: using `%ax' instead of `%eax' due to `w' suffix
+[5-ERROR] {standard input}:4411: Warning: using `%ax' instead of `%eax' due to `w' suffix
+[5-ERROR] {standard input}:4413: Warning: using `%ax' instead of `%eax' due to `w' suffix
+[5-ERROR] {standard input}:4434: Warning: using `%ax' instead of `%eax' due to `w' suffix
+[5-ERROR] {standard input}:4436: Warning: using `%ax' instead of `%eax' due to `w' suffix
+[5-ERROR] make[1]: *** [driver.o] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.svgalib.1104911605.2887.3866567270/svgalib-1.9.19/sharedlib'
+[5-ERROR] make: *** [sharedlib/libvgagl.so.1.9.19] Error 2
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 6 files for this package.
+[5-ERROR] Applying package split: 40 svgalib:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 svgalib:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 svgalib:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <svgalib:dev> Creating flist file ...
+[5-ERROR] <svgalib:dev> Creating package dependencies file ...
+[5-ERROR] <svgalib:dev> Creating md5sum and cksum files ...
+[5-ERROR] <svgalib:dev> Creating package description ...
+[5-ERROR] <svgalib:doc> Creating flist file ...
+[5-ERROR] <svgalib:doc> Creating package dependencies file ...
+[5-ERROR] <svgalib:doc> Creating md5sum and cksum files ...
+[5-ERROR] <svgalib:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building svgalib=svgalib.
 

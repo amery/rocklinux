@@ -20,17 +20,62 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1101904818 Wed Dec  1 13:40:18 2004
+[TIMESTAMP] 1104912641 Wed Jan  5 09:10:41 2005
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-zgv.log
+[LOGS] 5-zgv.err
 
-[BUILDTIME] 2575 (5)
-[SIZE] 0.51 MB, 14 files
+[BUILDTIME] 2071 (5)
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep libjpeg libjpeg:dev libpng
-[DEP] libpng:dev libtiff libtiff:dev linux26-header:dev make mktemp patch
-[DEP] sed svgalib svgalib:dev sysfiles tar zlib:dev
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o mousecur.o mousecur.c
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o readnbkey.o readnbkey.c
+[5-ERROR] awk -f mkopts.awk <options.src
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o rcfile.o rcfile.c
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o helppage.o helppage.c
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o gnuhelp.o gnuhelp.c
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o magic.o magic.c
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o resizepic.o resizepic.c
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o copymove.o copymove.c
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o scrollbar.o scrollbar.c
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o rbmenu.o rbmenu.c
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o readgif.o readgif.c
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o readjpeg.o readjpeg.c
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o readpnm.o readpnm.c
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o readbmp.o readbmp.c
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o readtga.o readtga.c
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o readpng.o readpng.c
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o readpcx.o readpcx.c
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o readxvpic.o readxvpic.c
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o readmrf.o readmrf.c
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o readxbm.o readxbm.c
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o readxpm.o readxpm.c
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o modesel.o modesel.c
+[5-ERROR] modesel.c: In function `cma_abort':
+[5-ERROR] modesel.c:122: warning: implicit declaration of function `exit'
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o readpcd.o readpcd.c
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o readtiff.o readtiff.c
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o readprf.o readprf.c
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\"   -c -o zgv_io.o zgv_io.c
+[5-ERROR] gcc-34 -O2 -Wall -fomit-frame-pointer -finline-functions -I/usr/local/include -DBACKEND_SVGALIB -DRGB_DB_FILE=\"/usr/X11R6/lib/X11/rgb.txt\" -DETC_RCFILE=\"/etc/zgv.conf\" -o zgv zgv.o vgadisp.o font.o 3deffects.o mousecur.o readnbkey.o rcfile.o helppage.o gnuhelp.o magic.o resizepic.o copymove.o scrollbar.o rbmenu.o readgif.o readjpeg.o readpnm.o readbmp.o readtga.o readpng.o readpcx.o readxvpic.o readmrf.o readxbm.o readxpm.o modesel.o readpcd.o readtiff.o readprf.o zgv_io.o -L/usr/local/lib -lvgagl -lvga -ljpeg -lpng -ltiff -lz -lm
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/3.4.3/../../../../i386-unknown-linux-gnu/bin/ld: cannot find -lvgagl
+[5-ERROR] collect2: ld returned 1 exit status
+[5-ERROR] make[1]: *** [zgv] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.zgv.1104912608.23940.2368165720/zgv-5.8/src'
+[5-ERROR] make: *** [zgv] Error 2
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 1 files for this package.
+[5-ERROR] Applying package split: 40 zgv:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 zgv:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 zgv:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <zgv:doc> Creating flist file ...
+[5-ERROR] <zgv:doc> Creating package dependencies file ...
+[5-ERROR] <zgv:doc> Creating md5sum and cksum files ...
+[5-ERROR] <zgv:doc> Creating package description ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building zgv=zgv.
 

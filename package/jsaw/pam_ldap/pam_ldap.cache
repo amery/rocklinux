@@ -20,62 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1102112274 Fri Dec  3 23:17:54 2004
+[TIMESTAMP] 1104795544 Tue Jan  4 00:39:04 2005
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-pam_ldap.err
+[LOGS] 5-pam_ldap.log
 
-[BUILDTIME] 1796 (5)
+[BUILDTIME] 1803 (5)
+[SIZE] 0.05 MB, 8 files
 
-[5-ERROR] Running  bash ./configure --prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --libdir=/usr/lib --datadir=/usr/share --includedir=/usr/include --infodir=/usr/share/info --mandir=/usr/share/man --sysconfdir=/etc --localstatedir=/var --disable-debug --enable-libpam --enable-pam --build=i386-unknown-linux-gnu --host=i386-unknown-linux-gnu --with-ldap-dir=/
-[5-ERROR] creating cache ./config.cache
-[5-ERROR] checking host system type... i386-unknown-linux-gnu
-[5-ERROR] checking target system type... i386-unknown-linux-gnu
-[5-ERROR] checking build system type... i386-unknown-linux-gnu
-[5-ERROR] checking for a BSD compatible install... /ROCK/build/ref1129-2.1.0-DEV-x86-reference-expert/ROCK/tools.chroot/wrapper/install -c
-[5-ERROR] checking whether build environment is sane... yes
-[5-ERROR] checking for mawk... gawk
-[5-ERROR] checking whether make sets ${MAKE}... yes
-[5-ERROR] checking for working aclocal... found
-[5-ERROR] checking for working autoconf... found
-[5-ERROR] checking for working automake... found
-[5-ERROR] checking for working autoheader... found
-[5-ERROR] checking for working makeinfo... found
-[5-ERROR] checking for gnutar... no
-[5-ERROR] checking for gtar... no
-[5-ERROR] checking for tar... tar
-[5-ERROR] checking for gcc... gcc-34
-[5-ERROR] checking whether the C compiler (gcc-34   ) works... yes
-[5-ERROR] checking whether the C compiler (gcc-34   ) is a cross-compiler... no
-[5-ERROR] checking whether we are using GNU C... yes
-[5-ERROR] checking whether gcc-34 accepts -g... yes
-[5-ERROR] checking how to run the C preprocessor... gcc-34 -E
-[5-ERROR] checking for a BSD compatible install... /ROCK/build/ref1129-2.1.0-DEV-x86-reference-expert/ROCK/tools.chroot/wrapper/install -c
-[5-ERROR] checking for security/pam_appl.h... yes
-[5-ERROR] checking for security/pam_misc.h... yes
-[5-ERROR] checking for security/pam_modules.h... yes
-[5-ERROR] checking for pam/pam_appl.h... no
-[5-ERROR] checking for pam/pam_misc.h... no
-[5-ERROR] checking for pam/pam_modules.h... no
-[5-ERROR] checking for des.h... no
-[5-ERROR] checking for crypt.h... yes
-[5-ERROR] checking for lber.h... no
-[5-ERROR] checking for ldap.h... no
-[5-ERROR] configure: error: could not locate <ldap.h>
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 pam_ldap:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 pam_ldap:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 pam_ldap:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <pam_ldap:doc> Creating flist file ...
-[5-ERROR] <pam_ldap:doc> Creating package dependencies file ...
-[5-ERROR] <pam_ldap:doc> Creating md5sum and cksum files ...
-[5-ERROR] <pam_ldap:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building pam_ldap=pam_ldap.
+[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
+[DEP] diffutils findutils gcc34 gcc34:dev glibc23 glibc23:dev grep
+[DEP] linux26-header:dev make mktemp net-tools openldap openldap:dev
+[DEP] opensc openssl pam pam:dev perl5 sed sysfiles tar texinfo
 

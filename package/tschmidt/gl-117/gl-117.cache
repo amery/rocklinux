@@ -20,62 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1102111831 Fri Dec  3 23:10:31 2004
+[TIMESTAMP] 1104769827 Mon Jan  3 17:30:27 2005
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-gl-117.err
+[LOGS] 5-gl-117.log
 
-[BUILDTIME] 3157 (5)
+[BUILDTIME] 4106 (5)
+[SIZE] 5.85 MB, 175 files
 
-[5-ERROR] checking SDL/SDL_mixer.h usability... yes
-[5-ERROR] checking SDL/SDL_mixer.h presence... yes
-[5-ERROR] checking for SDL/SDL_mixer.h... yes
-[5-ERROR] checking for glEnable in -lGL... no
-[5-ERROR] configure: WARNING: GL not found - please install GL or MesaGL
-[5-ERROR] checking for gluPerspective in -lGLU... no
-[5-ERROR] configure: WARNING: GLU not found - please install GLU or MesaGLU
-[5-ERROR] checking for glutMainLoop in -lglut... no
-[5-ERROR] configure: WARNING: GLUT not found - please install GLUT or MesaGLUT
-[5-ERROR] checking for SDL_Init in -lSDL... no
-[5-ERROR] configure: WARNING: SDL not found - please install SDL
-[5-ERROR] checking for Mix_LoadMUS in -lSDL_mixer... no
-[5-ERROR] configure: WARNING: SDL_mixer not found - please install SDL_mixer
-[5-ERROR] configure: creating ./config.status
-[5-ERROR] config.status: creating Makefile
-[5-ERROR] config.status: creating src/Makefile
-[5-ERROR] config.status: creating config.h
-[5-ERROR] config.status: executing depfiles commands
-[5-ERROR] make  all-recursive
-[5-ERROR] make[1]: Entering directory `/ROCK/src.gl-117.1102111788.26086.1414969349/gl-117-1.3-src'
-[5-ERROR] Making all in src
-[5-ERROR] make[2]: Entering directory `/ROCK/src.gl-117.1102111788.26086.1414969349/gl-117-1.3-src/src'
-[5-ERROR] if g++-34 -I. -I.. -I. -I. -I..   -DDATADIR='"/usr/share"' -Wall -pedantic  -g -O2 -I/usr/include -I/usr/include -MT main.o -MD -MP -MF ".deps/main.Tpo" -c -o main.o main.cpp; \
-[5-ERROR] then mv -f ".deps/main.Tpo" ".deps/main.Po"; else rm -f ".deps/main.Tpo"; exit 1; fi
-[5-ERROR] main.cpp:5154: warning: 'void myIdleFunc()' defined but not used
-[5-ERROR] if g++-34 -I. -I.. -I. -I. -I..   -DDATADIR='"/usr/share"' -Wall -pedantic  -g -O2 -I/usr/include -I/usr/include -MT gl.o -MD -MP -MF ".deps/gl.Tpo" -c -o gl.o gl.cpp; \
-[5-ERROR] then mv -f ".deps/gl.Tpo" ".deps/gl.Po"; else rm -f ".deps/gl.Tpo"; exit 1; fi
-[5-ERROR] if g++-34 -I. -I.. -I. -I. -I..   -DDATADIR='"/usr/share"' -Wall -pedantic  -g -O2 -I/usr/include -I/usr/include -MT model.o -MD -MP -MF ".deps/model.Tpo" -c -o model.o model.cpp; \
-[5-ERROR] then mv -f ".deps/model.Tpo" ".deps/model.Po"; else rm -f ".deps/model.Tpo"; exit 1; fi
-[5-ERROR] model.cpp:60: error: extra `;'
-[5-ERROR] make[2]: *** [model.o] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.gl-117.1102111788.26086.1414969349/gl-117-1.3-src/src'
-[5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.gl-117.1102111788.26086.1414969349/gl-117-1.3-src'
-[5-ERROR] make: *** [all] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 gl-117:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 gl-117:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 gl-117:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <gl-117:doc> Creating flist file ...
-[5-ERROR] <gl-117:doc> Creating package dependencies file ...
-[5-ERROR] <gl-117:doc> Creating md5sum and cksum files ...
-[5-ERROR] <gl-117:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building gl-117=gl-117.
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
+[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev glut glut:dev grep libsdl
+[DEP] libsdl:dev libsdl_mixer libsdl_mixer:dev linux26-header:dev make
+[DEP] mktemp nas net-tools ogg-vorbis sed sysfiles tar util-linux xfree86
+[DEP] xfree86:dev
 

@@ -20,41 +20,41 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1102107100 Fri Dec  3 21:51:40 2004
+[TIMESTAMP] 1104912059 Wed Jan  5 09:00:59 2005
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-cpan-xml-libxml.err
 
-[BUILDTIME] 3128 (5)
-[SIZE] 0.55 MB, 59 files
+[BUILDTIME] 2217 (5)
+[SIZE] 0.35 MB, 38 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils cpan-xml-libxml-common
 [DEP] cpan-xml-namespacesupport cpan-xml-parser cpan-xml-sax findutils
 [DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libxml2 libxml2:dev
 [DEP] linux26-header:dev make mktemp perl5 sed sysfiles tar zlib:dev
 
-[5-ERROR] Manifying blib/man3/XML::LibXML::Number.3
-[5-ERROR] Manifying blib/man3/XML::LibXML::DOM.3
-[5-ERROR] Manifying blib/man3/XML::LibXML::Literal.3
-[5-ERROR] Manifying blib/man3/XML::LibXML::Node.3
-[5-ERROR] Manifying blib/man3/XML::LibXML::Parser.3
-[5-ERROR] Manifying blib/man3/XML::LibXML::DocumentFragment.3
-[5-ERROR] Manifying blib/man3/XML::LibXML::Element.3
-[5-ERROR] Manifying blib/man3/XML::LibXML::SAX::Builder.3
-[5-ERROR] Manifying blib/man3/XML::LibXML::Namespace.3
-[5-ERROR] Manifying blib/man3/XML::LibXML::Document.3
-[5-ERROR] Manifying blib/man3/XML::LibXML::Attr.3
-[5-ERROR] Manifying blib/man3/XML::LibXML::SAX::Generator.3
-[5-ERROR] Manifying blib/man3/XML::LibXML::CDATASection.3
-[5-ERROR] Manifying blib/man3/XML::LibXML.3
-[5-ERROR] Manifying blib/man3/XML::LibXML::SAX.3
-[5-ERROR] Manifying blib/man3/XML::LibXML::Text.3
-[5-ERROR] Manifying blib/man3/XML::LibXML::Boolean.3
-[5-ERROR] Manifying blib/man3/XML::LibXML::PI.3
-[5-ERROR] Manifying blib/man3/XML::LibXML::NodeList.3
-[5-ERROR] Manifying blib/man3/XML::LibXML::Comment.3
-[5-ERROR] Manifying blib/man3/XML::LibXML::Dtd.3
+[5-ERROR] cp lib/XML/LibXML/Text.pod blib/lib/XML/LibXML/Text.pod
+[5-ERROR] cp lib/XML/LibXML/Boolean.pm blib/lib/XML/LibXML/Boolean.pm
+[5-ERROR] cp lib/XML/LibXML/PI.pod blib/lib/XML/LibXML/PI.pod
+[5-ERROR] cp lib/XML/LibXML/NodeList.pm blib/lib/XML/LibXML/NodeList.pm
+[5-ERROR] cp lib/XML/LibXML/Comment.pod blib/lib/XML/LibXML/Comment.pod
+[5-ERROR] cp lib/XML/LibXML/Dtd.pod blib/lib/XML/LibXML/Dtd.pod
+[5-ERROR] /usr/bin/perl /usr/lib/perl5/5.8.5/ExtUtils/xsubpp  -typemap /usr/lib/perl5/5.8.5/ExtUtils/typemap -typemap typemap  LibXML.xs > LibXML.xsc && mv LibXML.xsc LibXML.c
+[5-ERROR] gcc-34 -c  -I/usr/include/libxml2 -fno-strict-aliasing -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -O2   -DVERSION=\"1.58\" -DXS_VERSION=\"1.58\" -fpic "-I/usr/lib/perl5/5.8.5/i386-unknown-linux-gnu/CORE"  -DHAVE_UTF8 -DHAVE_BLANK LibXML.c
+[5-ERROR] In file included from LibXML.xs:32:
+[5-ERROR] /usr/include/libxml2/libxml/DOCBparser.h:22:2: warning: #warning "The DOCBparser module has been deprecated in libxml2-2.6.0"
+[5-ERROR] gcc-34 -c  -I/usr/include/libxml2 -fno-strict-aliasing -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -O2   -DVERSION=\"1.58\" -DXS_VERSION=\"1.58\" -fpic "-I/usr/lib/perl5/5.8.5/i386-unknown-linux-gnu/CORE"  -DHAVE_UTF8 -DHAVE_BLANK dom.c
+[5-ERROR] gcc-34 -c  -I/usr/include/libxml2 -fno-strict-aliasing -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -O2   -DVERSION=\"1.58\" -DXS_VERSION=\"1.58\" -fpic "-I/usr/lib/perl5/5.8.5/i386-unknown-linux-gnu/CORE"  -DHAVE_UTF8 -DHAVE_BLANK perl-libxml-mm.c
+[5-ERROR] gcc-34 -c  -I/usr/include/libxml2 -fno-strict-aliasing -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -O2   -DVERSION=\"1.58\" -DXS_VERSION=\"1.58\" -fpic "-I/usr/lib/perl5/5.8.5/i386-unknown-linux-gnu/CORE"  -DHAVE_UTF8 -DHAVE_BLANK perl-libxml-sax.c
+[5-ERROR] gcc-34 -c  -I/usr/include/libxml2 -fno-strict-aliasing -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -O2   -DVERSION=\"1.58\" -DXS_VERSION=\"1.58\" -fpic "-I/usr/lib/perl5/5.8.5/i386-unknown-linux-gnu/CORE"  -DHAVE_UTF8 -DHAVE_BLANK xpath.c
+[5-ERROR] Running Mkbootstrap for XML::LibXML ()
+[5-ERROR] chmod 644 LibXML.bs
+[5-ERROR] rm -f blib/arch/auto/XML/LibXML/LibXML.so
+[5-ERROR] LD_RUN_PATH="/usr/lib" gcc  -shared -L/usr/local/lib LibXML.o dom.o perl-libxml-mm.o perl-libxml-sax.o xpath.o  -o blib/arch/auto/XML/LibXML/LibXML.so   -L/usr/lib -lxml2 -lz -lpthread -lm   
+[5-ERROR] chmod 755 blib/arch/auto/XML/LibXML/LibXML.so
+[5-ERROR] cp LibXML.bs blib/arch/auto/XML/LibXML/LibXML.bs
+[5-ERROR] chmod 644 blib/arch/auto/XML/LibXML/LibXML.bs
 [5-ERROR] Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
 [5-ERROR] Writing /usr/lib/perl5/5.8.5/i386-unknown-linux-gnu/auto/XML/LibXML/.packlist
 [5-ERROR] Appending installation info to /usr/lib/perl5/5.8.5/i386-unknown-linux-gnu/perllocal.pod
@@ -65,7 +65,7 @@
 [5-ERROR] Creating file list and doing final adaptions ... 
 [5-ERROR] Processing static lib corrections ...
 [5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 57 files for this package.
+[5-ERROR] Found 36 files for this package.
 [5-ERROR] Applying package split: 40 cpan-xml-libxml:dev (/lib/.*\.(la|a|o)$|/include/)
 [5-ERROR] Applying package split: 42 cpan-xml-libxml:dev /pkgconfig/
 [5-ERROR] Applying package split: 60 cpan-xml-libxml:doc /share/doc/

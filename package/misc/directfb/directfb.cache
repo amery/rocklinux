@@ -1,60 +1,16 @@
 
-[TIMESTAMP] 1102106951 Fri Dec  3 21:49:11 2004
+[TIMESTAMP] 1104672103 Sun Jan  2 14:21:43 2005
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-directfb.err
+[LOGS] 5-directfb.log
 
-[BUILDTIME] 9200 (5)
+[BUILDTIME] 13038 (5)
+[SIZE] 0.85 MB, 66 files
 
-[5-ERROR] /bin/sh ../../libtool --mode=compile gcc-34 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../include 	-I../../src    -D_REENTRANT -Wall -O3 -ffast-math -pipe   -DFUSION_FAKE -Werror-implicit-function-declaration -c cyber5k_alpha.c
-[5-ERROR]  gcc-34 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../include -I../../src -D_REENTRANT -Wall -O3 -ffast-math -pipe -DFUSION_FAKE -Werror-implicit-function-declaration -c cyber5k_alpha.c  -fPIC -DPIC -o .libs/cyber5k_alpha.o
-[5-ERROR] /bin/sh ../../libtool --mode=link gcc-34  -D_REENTRANT -Wall -O3 -ffast-math -pipe   -DFUSION_FAKE -Werror-implicit-function-declaration  -o libdirectfb_cyber5k.la -rpath /usr/lib/directfb-0.9.20/gfxdrivers -export-dynamic			-avoid-version			 cyber5k.lo cyber5k_overlay.lo cyber5k_underlay.lo cyber5k_alpha.lo  -ldl -lpthread 
-[5-ERROR] gcc-34 -shared  .libs/cyber5k.o .libs/cyber5k_overlay.o .libs/cyber5k_underlay.o .libs/cyber5k_alpha.o  -ldl -lpthread  -Wl,-soname -Wl,libdirectfb_cyber5k.so -o .libs/libdirectfb_cyber5k.so
-[5-ERROR] creating libdirectfb_cyber5k.la
-[5-ERROR] (cd .libs && rm -f libdirectfb_cyber5k.la && ln -s ../libdirectfb_cyber5k.la libdirectfb_cyber5k.la)
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.directfb.1102106841.30544.1021323229/DirectFB-0.9.20/gfxdrivers/cyber5k'
-[5-ERROR] Making all in matrox
-[5-ERROR] make[3]: Entering directory `/ROCK/src.directfb.1102106841.30544.1021323229/DirectFB-0.9.20/gfxdrivers/matrox'
-[5-ERROR] /bin/sh ../../libtool --mode=compile gcc-34 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../include		-I../../src    -D_REENTRANT -Wall -O3 -ffast-math -pipe   -DFUSION_FAKE -Werror-implicit-function-declaration -c matrox.c
-[5-ERROR] mkdir .libs
-[5-ERROR]  gcc-34 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../include -I../../src -D_REENTRANT -Wall -O3 -ffast-math -pipe -DFUSION_FAKE -Werror-implicit-function-declaration -c matrox.c  -fPIC -DPIC -o .libs/matrox.o
-[5-ERROR] /bin/sh ../../libtool --mode=compile gcc-34 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../include		-I../../src    -D_REENTRANT -Wall -O3 -ffast-math -pipe   -DFUSION_FAKE -Werror-implicit-function-declaration -c matrox_bes.c
-[5-ERROR]  gcc-34 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../include -I../../src -D_REENTRANT -Wall -O3 -ffast-math -pipe -DFUSION_FAKE -Werror-implicit-function-declaration -c matrox_bes.c  -fPIC -DPIC -o .libs/matrox_bes.o
-[5-ERROR] /bin/sh ../../libtool --mode=compile gcc-34 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../include		-I../../src    -D_REENTRANT -Wall -O3 -ffast-math -pipe   -DFUSION_FAKE -Werror-implicit-function-declaration -c matrox_crtc2.c
-[5-ERROR]  gcc-34 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../include -I../../src -D_REENTRANT -Wall -O3 -ffast-math -pipe -DFUSION_FAKE -Werror-implicit-function-declaration -c matrox_crtc2.c  -fPIC -DPIC -o .libs/matrox_crtc2.o
-[5-ERROR] /bin/sh ../../libtool --mode=compile gcc-34 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../include		-I../../src    -D_REENTRANT -Wall -O3 -ffast-math -pipe   -DFUSION_FAKE -Werror-implicit-function-declaration -c matrox_maven.c
-[5-ERROR]  gcc-34 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../include -I../../src -D_REENTRANT -Wall -O3 -ffast-math -pipe -DFUSION_FAKE -Werror-implicit-function-declaration -c matrox_maven.c  -fPIC -DPIC -o .libs/matrox_maven.o
-[5-ERROR] matrox_maven.c: In function `maven_write_byte':
-[5-ERROR] matrox_maven.c:63: error: implicit declaration of function `i2c_smbus_write_byte_data'
-[5-ERROR] matrox_maven.c: In function `maven_write_word':
-[5-ERROR] matrox_maven.c:80: error: implicit declaration of function `i2c_smbus_write_word_data'
-[5-ERROR] matrox_maven.c: In function `maven_open':
-[5-ERROR] matrox_maven.c:311: error: `I2C_SLAVE' undeclared (first use in this function)
-[5-ERROR] matrox_maven.c:311: error: (Each undeclared identifier is reported only once
-[5-ERROR] matrox_maven.c:311: error: for each function it appears in.)
-[5-ERROR] matrox_maven.c: In function `maven_init':
-[5-ERROR] matrox_maven.c:450: error: `I2C_SLAVE' undeclared (first use in this function)
-[5-ERROR] make[3]: *** [matrox_maven.lo] Error 1
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.directfb.1102106841.30544.1021323229/DirectFB-0.9.20/gfxdrivers/matrox'
-[5-ERROR] make[2]: *** [all-recursive] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.directfb.1102106841.30544.1021323229/DirectFB-0.9.20/gfxdrivers'
-[5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.directfb.1102106841.30544.1021323229/DirectFB-0.9.20'
-[5-ERROR] make: *** [all-recursive-am] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 directfb:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 directfb:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 directfb:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <directfb:doc> Creating flist file ...
-[5-ERROR] <directfb:doc> Creating package dependencies file ...
-[5-ERROR] <directfb:doc> Creating md5sum and cksum files ...
-[5-ERROR] <directfb:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building directfb=directfb.
+[DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils diffutils
+[DEP] findutils freetype freetype:dev gawk gcc34 gcc34:dev glibc23
+[DEP] glibc23:dev grep libjpeg libjpeg:dev libpng libpng:dev libsdl
+[DEP] libsdl:dev linux26-header:dev make man mktemp perl5 sed sysfiles
+[DEP] tar texinfo util-linux zlib:dev
 

@@ -20,62 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1102109223 Fri Dec  3 22:27:03 2004
+[TIMESTAMP] 1104733799 Mon Jan  3 07:29:59 2005
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-sylpheed.err
+[LOGS] 5-sylpheed.log
 
-[BUILDTIME] 4722 (5)
+[BUILDTIME] 8219 (5)
+[SIZE] 3.75 MB, 107 files
 
-[5-ERROR] GnuPG         : yes
-[5-ERROR] JPilot        : no
-[5-ERROR] LDAP          : no
-[5-ERROR] OpenSSL       : yes
-[5-ERROR] iconv         : yes
-[5-ERROR] compface      : no
-[5-ERROR] IPv6          : no
-[5-ERROR] 
-[5-ERROR] The binary will be installed in /opt/gnome/bin
-[5-ERROR] 
-[5-ERROR] Configure finished, type 'make' to build.
-[5-ERROR] make  all-recursive
-[5-ERROR] make[1]: Entering directory `/ROCK/src.sylpheed.1102109162.13956.2796349358/sylpheed-0.9.7'
-[5-ERROR] Making all in ac
-[5-ERROR] make[2]: Entering directory `/ROCK/src.sylpheed.1102109162.13956.2796349358/sylpheed-0.9.7/ac'
-[5-ERROR] make[2]: Nothing to be done for `all'.
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.sylpheed.1102109162.13956.2796349358/sylpheed-0.9.7/ac'
-[5-ERROR] Making all in po
-[5-ERROR] make[2]: Entering directory `/ROCK/src.sylpheed.1102109162.13956.2796349358/sylpheed-0.9.7/po'
-[5-ERROR] make[2]: Nothing to be done for `all'.
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.sylpheed.1102109162.13956.2796349358/sylpheed-0.9.7/po'
-[5-ERROR] Making all in intl
-[5-ERROR] make[2]: Entering directory `/ROCK/src.sylpheed.1102109162.13956.2796349358/sylpheed-0.9.7/intl'
-[5-ERROR] make[2]: Nothing to be done for `all'.
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.sylpheed.1102109162.13956.2796349358/sylpheed-0.9.7/intl'
-[5-ERROR] Making all in src
-[5-ERROR] make[2]: Entering directory `/ROCK/src.sylpheed.1102109162.13956.2796349358/sylpheed-0.9.7/src'
-[5-ERROR] gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -DG_LOG_DOMAIN=\"Sylpheed\" 	-I../intl 	-I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R6/include 	 	-I/opt/gnome/include/gdk-pixbuf-1.0 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R6/include 	 	-I/opt/gnome/include  -DLOCALEDIR=\""/opt/gnome/share/locale"\" 	-DMANUALDIR=\""/opt/gnome/share/sylpheed/manual"\" 	-DFAQDIR=\""/opt/gnome/share/sylpheed/faq"\" 	-DTARGET_ALIAS=\""i386-unknown-linux-gnu"\" 	-DSYSCONFDIR=\""/etc/opt/gnome"\"  -g -O2 -c main.c
-[5-ERROR] main.c: In function `main':
-[5-ERROR] main.c:241: error: too few arguments to function `gpgme_get_engine_info'
-[5-ERROR] make[2]: *** [main.o] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.sylpheed.1102109162.13956.2796349358/sylpheed-0.9.7/src'
-[5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.sylpheed.1102109162.13956.2796349358/sylpheed-0.9.7'
-[5-ERROR] make: *** [all-recursive-am] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 sylpheed:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 sylpheed:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 sylpheed:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <sylpheed:doc> Creating flist file ...
-[5-ERROR] <sylpheed:doc> Creating package dependencies file ...
-[5-ERROR] <sylpheed:doc> Creating md5sum and cksum files ...
-[5-ERROR] <sylpheed:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building sylpheed=sylpheed.
+[DEP] 00-dirtree autoconf bash2 binutils bison bzip2 coreutils diffutils
+[DEP] findutils flex flex:dev gawk gcc34 gcc34:dev gdk-pixbuf10
+[DEP] gdk-pixbuf10:dev gettext glib12 glib12:dev glibc23 glibc23:dev
+[DEP] grep gtk+12 gtk+12:dev linux26-header:dev m4 make mktemp openssl
+[DEP] openssl:dev perl5 sed sysfiles tar texinfo util-linux xfree86
+[DEP] xfree86:dev
 

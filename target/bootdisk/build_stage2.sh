@@ -15,7 +15,7 @@ package_map='       +00-dirtree         +glibc22            +glibc23
 -binutils           -bin86              -nasm               -dietlibc
 +grub               +lilo               +yaboot             +aboot
 +silo               +parted             +mac-fdisk          +pdisk
-+xfsprogs           +mkdosfs            +jfsutils
++xfsprogs           +mkdosfs            +jfsutils	    +hfsutils
 +e2fsprogs          +reiserfsprogs      +genromfs           +lvm
 +popt               +raidtools          +mdadm
 +dump               +eject              +disktype

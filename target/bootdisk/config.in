@@ -50,7 +50,8 @@ pkgfilter sed '
 / yaboot /	{ p; d; };	/ aboot /	{ p; d; };
 / mac-fdisk /	{ p; d; };	/ pdisk /       { p; d; };
 / linux24benh/  { p; d; };	/ syslinux /	{ p; d; };
-/ elftoaout /   { p; d; };
+/ elftoaout /   { p; d; };	/ hfsutils /    { p; d; };
+/ pdisk /       { p; d; };
 
 # Disable packages which are not in base or not build in stages 0-4
 / base / !  { s/^X /O /; p; d; };		/^. -----/ { s/^X /O /; p; d; };

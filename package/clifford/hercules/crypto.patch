@@ -1,0 +1,164 @@
+--- ./crypto/dyncrypt.c.orig	2004-09-06 00:46:26.897473048 +0200
++++ ./crypto/dyncrypt.c	2004-09-06 00:56:58.905393240 +0200
+@@ -439,7 +439,7 @@
+ {
+   BYTE buffer[8];
+   int crypted;
+-  GCRY_CIPHER_HD hd;
++  gcry_cipher_hd_t hd;
+   BYTE k[8];
+ 
+ #ifdef OPTION_KM_DEBUG
+@@ -458,7 +458,7 @@
+   }
+ 
+   /* Open a cipher handle */
+-  if(!(hd = gcry_cipher_open(GCRY_CIPHER_DES, GCRY_CIPHER_MODE_ECB, 0)))
++  if(gcry_cipher_open(&hd, GCRY_CIPHER_DES, GCRY_CIPHER_MODE_ECB, 0))
+   {
+     logmsg("  %s(%d): gcry_cypher_open(): %s\n", __FILE__, __LINE__, gcry_strerror(-1));
+     return;
+@@ -535,7 +535,7 @@
+ {
+   BYTE buffer[8];
+   int crypted;
+-  GCRY_CIPHER_HD hd;
++  gcry_cipher_hd_t hd;
+   BYTE k[24];
+ 
+ #ifdef OPTION_KM_DEBUG
+@@ -554,7 +554,7 @@
+   }
+ 
+   /* Open the cipher handle */
+-  if(!(hd = gcry_cipher_open(GCRY_CIPHER_3DES, GCRY_CIPHER_MODE_ECB, 0)))
++  if(gcry_cipher_open(&hd, GCRY_CIPHER_3DES, GCRY_CIPHER_MODE_ECB, 0))
+   {
+     logmsg("  %s(%d): gcry_cypher_open(): %s\n", __FILE__, __LINE__, gcry_strerror(-1));
+     return;
+@@ -635,7 +635,7 @@
+ {
+   BYTE buffer[8];
+   int crypted;
+-  GCRY_CIPHER_HD hd;
++  gcry_cipher_hd_t hd;
+   BYTE k[24];
+ 
+ #ifdef OPTION_KM_DEBUG
+@@ -654,7 +654,7 @@
+   }
+ 
+   /* Open the cipher handle */
+-  if(!(hd = gcry_cipher_open(GCRY_CIPHER_3DES, GCRY_CIPHER_MODE_ECB, 0)))
++  if(gcry_cipher_open(&hd, GCRY_CIPHER_3DES, GCRY_CIPHER_MODE_ECB, 0))
+   {
+     logmsg("  %s(%d): gcry_cypher_open(): %s\n", __FILE__, __LINE__, gcry_strerror(-1));
+     return;
+@@ -756,7 +756,7 @@
+   BYTE buffer[8];
+   int crypted;
+   BYTE cv[8];
+-  GCRY_CIPHER_HD hd;
++  gcry_cipher_hd_t hd;
+   BYTE k[8];
+ 
+   UNREFERENCED(r1);
+@@ -777,7 +777,7 @@
+   }
+ 
+   /* Open a cipher handle */
+-  if(!(hd = gcry_cipher_open(GCRY_CIPHER_DES, GCRY_CIPHER_MODE_CBC, 0)))
++  if(gcry_cipher_open(&hd, GCRY_CIPHER_DES, GCRY_CIPHER_MODE_CBC, 0))
+   {
+     logmsg("  %s(%d): gcry_cypher_open(): %s\n", __FILE__, __LINE__, gcry_strerror(-1));
+     return;
+@@ -852,7 +852,7 @@
+   BYTE buffer[8];
+   int crypted;
+   BYTE cv[8];
+-  GCRY_CIPHER_HD hd;
++  gcry_cipher_hd_t hd;
+   BYTE k[24];
+ 
+   UNREFERENCED(r1);
+@@ -873,7 +873,7 @@
+   }
+ 
+   /* Open a cipher handle */
+-  if(!(hd = gcry_cipher_open(GCRY_CIPHER_3DES, GCRY_CIPHER_MODE_CBC, 0)))
++  if(gcry_cipher_open(&hd, GCRY_CIPHER_3DES, GCRY_CIPHER_MODE_CBC, 0))
+   {
+     logmsg("  %s(%d): gcry_cypher_open(): %s\n", __FILE__, __LINE__, gcry_strerror(-1));
+     return;
+@@ -952,7 +952,7 @@
+   BYTE buffer[8];
+   int crypted;
+   BYTE cv[8];
+-  GCRY_CIPHER_HD hd;
++  gcry_cipher_hd_t hd;
+   BYTE k[24];
+ 
+   UNREFERENCED(r1);
+@@ -973,7 +973,7 @@
+   }
+ 
+   /* Open a cipher handle */
+-  if(!(hd = gcry_cipher_open(GCRY_CIPHER_3DES, GCRY_CIPHER_MODE_CBC, 0)))
++  if(gcry_cipher_open(&hd, GCRY_CIPHER_3DES, GCRY_CIPHER_MODE_CBC, 0))
+   {
+     logmsg("  %s(%d): gcry_cypher_open(): %s\n", __FILE__, __LINE__, gcry_strerror(-1));
+     return;
+@@ -1070,7 +1070,7 @@
+   BYTE buffer[8];
+   int crypted;
+   BYTE cv[8];
+-  GCRY_CIPHER_HD hd;
++  gcry_cipher_hd_t hd;
+   BYTE k[8];
+ 
+ #ifdef OPTION_KMC_DEBUG
+@@ -1089,7 +1089,7 @@
+   }
+ 
+   /* Open a cipher handle */
+-  if(!(hd = gcry_cipher_open(GCRY_CIPHER_DES, GCRY_CIPHER_MODE_CBC, 0)))
++  if(gcry_cipher_open(&hd, GCRY_CIPHER_DES, GCRY_CIPHER_MODE_CBC, 0))
+   {
+     logmsg("  %s(%d): gcry_cypher_open(): %s\n", __FILE__, __LINE__, gcry_strerror(-1));
+     return;
+@@ -1190,7 +1190,7 @@
+   BYTE buffer[8];
+   int crypted;
+   BYTE cv[8];
+-  GCRY_CIPHER_HD hd;
++  gcry_cipher_hd_t hd;
+   BYTE k[24];
+ 
+ #ifdef OPTION_KMC_DEBUG
+@@ -1209,7 +1209,7 @@
+   }
+ 
+   /* Open a cipher handle */
+-  if(!(hd = gcry_cipher_open(GCRY_CIPHER_3DES, GCRY_CIPHER_MODE_CBC, 0)))
++  if(gcry_cipher_open(&hd, GCRY_CIPHER_3DES, GCRY_CIPHER_MODE_CBC, 0))
+   {
+     logmsg("  %s(%d): gcry_cypher_open(): %s\n", __FILE__, __LINE__, gcry_strerror(-1));
+     return;
+@@ -1314,7 +1314,7 @@
+   BYTE buffer[8];
+   int crypted;
+   BYTE cv[8];
+-  GCRY_CIPHER_HD hd;
++  gcry_cipher_hd_t hd;
+   BYTE k[24];
+ 
+ #ifdef OPTION_KMC_DEBUG
+@@ -1333,7 +1333,7 @@
+   }
+ 
+   /* Open a cipher handle */
+-  if(!(hd = gcry_cipher_open(GCRY_CIPHER_3DES, GCRY_CIPHER_MODE_CBC, 0)))
++  if(gcry_cipher_open(&hd, GCRY_CIPHER_3DES, GCRY_CIPHER_MODE_CBC, 0))
+   {
+     logmsg("  %s(%d): gcry_cypher_open(): %s\n", __FILE__, __LINE__, gcry_strerror(-1));
+     return;

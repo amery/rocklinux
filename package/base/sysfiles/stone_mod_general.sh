@@ -27,7 +27,7 @@ set_keymap() {
 	[ -z "$keymap" ] && keymap="none" ; keymap="${keymap%.map.gz}"
 
 	case "`uname -m`" in
-	  i*86)
+	  i*86|x86_64)
 		mapdir="`echo /usr/share/kbd/keymaps/i386`"
 		;;
 	  ppc)

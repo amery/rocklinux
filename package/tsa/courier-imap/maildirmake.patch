@@ -17,30 +17,30 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-diff -ruN courier-imap-3.0.8/Makefile.am courier-imap-3.0.8-new/Makefile.am
---- courier-imap-3.0.8/Makefile.am	2004-08-29 21:03:28.000000000 +0200
-+++ courier-imap-3.0.8-new/Makefile.am	2004-10-13 21:41:38.837692912 +0200
-@@ -21,7 +21,7 @@
+diff -ruN courier-imap-4.0.1/Makefile.am courier-imap-4.0.1-new/Makefile.am
+--- courier-imap-4.0.1/Makefile.am	2004-12-09 03:06:49.000000000 +0100
++++ courier-imap-4.0.1-new/Makefile.am	2005-01-26 15:40:41.685811944 +0100
+@@ -22,7 +22,7 @@
  databindir=$(datadir)
- databin_SCRIPTS=mkimapdcert mkpop3dcert vchkpw2userdb makeuserdb pw2userdb
+ databin_SCRIPTS=mkimapdcert mkpop3dcert
  
 -binPROGRAMS=imapd pop3d maildirmake maildiracl deliverquota maildirkw
 +binPROGRAMS=imapd pop3d maildiracl deliverquota maildirkw
- sbinPROGRAMS=authenumerate imaplogin pop3login userdbpw courierlogger
+ sbinPROGRAMS=imaplogin pop3login
  libexecPROGRAMS=makedatprog couriertcpd
  
-@@ -31,7 +31,7 @@
+@@ -32,7 +32,7 @@
  
  EXTRA_PROGRAMS=
  
--man_MANS=makeuserdb.8 userdb.8 userdbpw.8 couriertcpd.1 courierlogger.1 deliverquota.8 maildirmake.1 maildiracl.1 imapd.8 mkimapdcert.8 mkpop3dcert.8 maildirkw.1
-+man_MANS=makeuserdb.8 userdb.8 userdbpw.8 couriertcpd.1 courierlogger.1 deliverquota.8 maildiracl.1 imapd.8 mkimapdcert.8 mkpop3dcert.8 maildirkw.1
+-man_MANS=couriertcpd.1 deliverquota.8 maildirmake.1 maildiracl.1 imapd.8 mkimapdcert.8 mkpop3dcert.8 maildirkw.1
++man_MANS=couriertcpd.1 deliverquota.8 maildiracl.1 imapd.8 mkimapdcert.8 mkpop3dcert.8 maildirkw.1
  EXTRA_DIST=00README.NOW.OR.SUFFER README README.cygwin automake.fix \
  	COPYING.GPL NEWS.html $(TEMPLFILES)
  
-@@ -89,9 +89,6 @@
- vchkpw2userdb: userdb/vchkpw2userdb
- 	cp userdb/vchkpw2userdb vchkpw2userdb
+@@ -72,9 +72,6 @@
+ couriertcpd$(EXEEXT): tcpd/couriertcpd$(EXEEXT)
+ 	cp tcpd/couriertcpd$(EXEEXT) .
  
 -maildirmake$(EXEEXT): maildir/maildirmake$(EXEEXT)
 -	cp maildir/maildirmake$(EXEEXT) .
@@ -48,7 +48,7 @@ diff -ruN courier-imap-3.0.8/Makefile.am courier-imap-3.0.8-new/Makefile.am
  maildiracl$(EXEEXT): maildir/maildiracl$(EXEEXT)
  	cp maildir/maildiracl$(EXEEXT) .
  
-@@ -128,9 +125,6 @@
+@@ -99,9 +96,6 @@
  deliverquota.8: maildir/deliverquota.8
  	cp maildir/deliverquota.8 .
  
@@ -58,25 +58,25 @@ diff -ruN courier-imap-3.0.8/Makefile.am courier-imap-3.0.8-new/Makefile.am
  maildiracl.1: maildir/maildiracl.1
  	cp maildir/maildiracl.1 .
  
-diff -ruN courier-imap-3.0.8/Makefile.in courier-imap-3.0.8-new/Makefile.in
---- courier-imap-3.0.8/Makefile.in	2004-09-18 20:49:13.000000000 +0200
-+++ courier-imap-3.0.8-new/Makefile.in	2004-10-13 21:42:16.521964032 +0200
-@@ -203,10 +203,10 @@
+diff -ruN courier-imap-4.0.1/Makefile.in courier-imap-4.0.1-new/Makefile.in
+--- courier-imap-4.0.1/Makefile.in	2005-01-05 01:57:19.000000000 +0100
++++ courier-imap-4.0.1-new/Makefile.in	2005-01-26 15:41:06.651016656 +0100
+@@ -233,10 +233,10 @@
  CLEANFILES = $(databin_SCRIPTS) $(man_MANS) $(sysconf_DATA) $(sbin_SCRIPTS)
  databindir = $(datadir)
- databin_SCRIPTS = mkimapdcert mkpop3dcert vchkpw2userdb makeuserdb pw2userdb
+ databin_SCRIPTS = mkimapdcert mkpop3dcert
 -binPROGRAMS = imapd pop3d maildirmake maildiracl deliverquota maildirkw
 +binPROGRAMS = imapd pop3d maildiracl deliverquota maildirkw
- sbinPROGRAMS = authenumerate imaplogin pop3login userdbpw courierlogger
+ sbinPROGRAMS = imaplogin pop3login
  libexecPROGRAMS = makedatprog couriertcpd
--man_MANS = makeuserdb.8 userdb.8 userdbpw.8 couriertcpd.1 courierlogger.1 deliverquota.8 maildirmake.1 maildiracl.1 imapd.8 mkimapdcert.8 mkpop3dcert.8 maildirkw.1
-+man_MANS = makeuserdb.8 userdb.8 userdbpw.8 couriertcpd.1 courierlogger.1 deliverquota.8 maildiracl.1 imapd.8 mkimapdcert.8 mkpop3dcert.8 maildirkw.1
+-man_MANS = couriertcpd.1 deliverquota.8 maildirmake.1 maildiracl.1 imapd.8 mkimapdcert.8 mkpop3dcert.8 maildirkw.1
++man_MANS = couriertcpd.1 deliverquota.8 maildiracl.1 imapd.8 mkimapdcert.8 mkpop3dcert.8 maildirkw.1
  
- # Added by sysconftoolize: $Id: Makefile.am,v 1.96 2004/08/29 19:03:28 mrsam Exp $
+ # Added by sysconftoolize: $Id: Makefile.am,v 1.101 2004/12/09 02:06:49 mrsam Exp $
  
-@@ -948,9 +948,6 @@
- vchkpw2userdb: userdb/vchkpw2userdb
- 	cp userdb/vchkpw2userdb vchkpw2userdb
+@@ -1006,9 +1006,6 @@
+ couriertcpd$(EXEEXT): tcpd/couriertcpd$(EXEEXT)
+ 	cp tcpd/couriertcpd$(EXEEXT) .
  
 -maildirmake$(EXEEXT): maildir/maildirmake$(EXEEXT)
 -	cp maildir/maildirmake$(EXEEXT) .
@@ -84,7 +84,7 @@ diff -ruN courier-imap-3.0.8/Makefile.in courier-imap-3.0.8-new/Makefile.in
  maildiracl$(EXEEXT): maildir/maildiracl$(EXEEXT)
  	cp maildir/maildiracl$(EXEEXT) .
  
-@@ -987,9 +984,6 @@
+@@ -1033,9 +1030,6 @@
  deliverquota.8: maildir/deliverquota.8
  	cp maildir/deliverquota.8 .
  

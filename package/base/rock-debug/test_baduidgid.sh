@@ -28,6 +28,7 @@
 # File-Name <Tab> UID:GID
 # ...
 
-find * \( -nouser -o -nogroup \) -printf '%p\t%u:%g\n'
+find bin boot etc home lib mnt opt root sbin usr var \
+	\( -nouser -o -nogroup \) -printf '%p\t%u:%g\n'
 
 exit 0

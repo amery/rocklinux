@@ -525,7 +525,7 @@ taropt="--use-compress-program=bzip2 -xf"
 mainfunction="build_this_package"
 runconf=1 ; runxmkmf=1 ; runmkpl=1 ; runpysetup=1 ; autopatch=1
 autoextract=1 ; chownsrcdir=1 ; nocvsinsrcdir=1; patchopt="-bfp1 -z .orig"
-createprefix=1 ; createdocs="" ; rmemptydir=""
+createprefix=1 ; createdocs="" ; rmemptydir="" ; autoso2a=0
 
 check_shared=1
 check_usrlocal=1
@@ -692,6 +692,13 @@ elif [ "$ROCKCFG_FLIST" = "find" ] ; then
 	sleep 2
 fi
 
+if [ $stagelevel -gt 1 -a "$autoso2a" = 1 ]; then
+	export AUTOSO2A_DIR="$builddir/autoso2a"
+	export AUTOSO2A_AR="$AR" AUTOSO2A_RANLIB="$RANLIB"
+	var_insert CC_WRAPPER_OTHERS ":" "so2a_wrapper"
+	var_insert CXX_WRAPPER_OTHERS ":" "so2a_wrapper"
+fi
+
 hook_eval prepare
 
 # define new abort function for errors while building
@@ -843,13 +850,33 @@ abort() {
 		then : ; fi
 	fi
 
+	# evaluate flistdel (1/2)
+	egrep -v "^($flistdel|var/adm/.*)\$" $builddir/flist.txt | sort -u > $builddir/flist.txt.new
+	mv $builddir/flist.txt.new $builddir/flist.txt
+
+	# copy over missing *.a files
+	if [ "$autoso2a" = 1 ]; then
+		echo "Checking for missing .a files ..."
+		while read d s; do
+			grep -q "/${s%.so}.a$" $builddir/flist.txt && continue
+			[ "$d" = "lib" ] && d="usr/lib"
+			if [ -f "$AUTOSO2A_DIR/${s%.so}.a" ]; then
+				echo "Installing automatically created $d/${s%.so}.a."
+				cp "$AUTOSO2A_DIR/${s%.so}.a" "$root/$d/${s%.so}.a"
+				add_flist "$root/$d/${s%.so}.a"
+			else
+				echo "Not found: $AUTOSO2A_DIR/${s%.so}.a"
+			fi
+		done < <( egrep '(^|/)lib/[^/]*\.so$' $builddir/flist.txt | sed 's,\(.*\)/,\1 ,' )
+	fi
+
 	# merge flist of previous build
 	for x in var/adm/flists/$xpkg var/adm/flists/$xpkg:*; do
 		[ -f $x ] && cut -f2- -d' ' $x >> $builddir/flist.txt
 	done
 
-	# evaluate flistdel
-	egrep -v "^($flistdel|var/adm/.*)\$" $builddir/flist.txt > $builddir/flist.txt.new
+	# evaluate flistdel (2/2)
+	egrep -v "^($flistdel|var/adm/.*)\$" $builddir/flist.txt | sort -u > $builddir/flist.txt.new
 	mv $builddir/flist.txt.new $builddir/flist.txt
 
 	hook_eval postflist

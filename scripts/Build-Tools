@@ -238,6 +238,10 @@ EOT
 
 	# Various small tools
 	#
+	echo_status "Building $toolsdir/bin/so2a_wrapper."
+	cp misc/tools-source/so2a_wrapper.sh build/$ROCKCFG_ID/ROCK/$toolsdir/bin/so2a_wrapper
+	chmod +x build/$ROCKCFG_ID/ROCK/$toolsdir/bin/so2a_wrapper
+	#
 	for x in getdu getfiles fl_wrparse fl_stparse descparser; do
 		echo_status "Building $toolsdir/bin/$x."
 		$BUILDCC -Wall -O2 misc/tools-source/$x.c \

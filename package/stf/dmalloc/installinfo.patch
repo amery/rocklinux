@@ -1,0 +1,14 @@
+--- ./Makefile.in	2004-09-06 20:39:53.200660320 +0200
++++ ./Makefile.in	2004-09-06 20:41:19.444549256 +0200
+@@ -222,9 +222,9 @@
+ #	@echo "Enter 'make installcxx' to install the C++ library"
+ 	@echo "Enter 'make installth' to install thread library"
+ 
+-installinfo : $(srcdir)/$(INFOFILE)
++installinfo : $(srcdir)/docs/$(INFOFILE)
+ 	$(srcdir)/mkinstalldirs $(infodir)
+-	$(INSTALL_DATA) $(srcdir)/$(INFOFILE) $(infodir)
++	$(INSTALL_DATA) $(srcdir)/docs/$(INFOFILE) $(infodir)
+ 
+ installdocs : $(srcdir)/docs/$(HTMLFILE) $(srcdir)/docs/$(TEXIFILE)
+ 	$(srcdir)/mkinstalldirs $(docdir)

@@ -1,8 +1,8 @@
 
 cd $disksdir
 
-echo_header "Creating cleaning boot directory:"
-rm -rfv boot/*-rock boot/System.map boot/kconfig*
+echo_header "Cleaning boot directory:"
+rm -rfv boot/*-rock boot/System.map boot/kconfig* boot/initrd*.img boot/*.b boot/second
 
 echo_header "Creating yaboot setup:"
 #
@@ -14,7 +14,7 @@ tar --use-compress-program=bzip2 \
 tar --use-compress-program=bzip2 \
     -xf $base/build/${ROCKCFG_ID}/ROCK/pkgs/yaboot.tar.bz2 \
     usr/lib/yaboot/yaboot.rs6k -O > boot/yaboot.rs6k
-cp boot/yaboot.rs6k install.bin
+mv boot/yaboot.rs6k install.bin
 #
 echo_status "Creating yaboot config files."
 cp -v $base/target/$target/powerpc/{boot.msg,ofboot.b} \
@@ -38,7 +38,7 @@ datadir="build/${ROCKCFG_ID}/ROCK/livecd"
 cat > ../isofs_arch.txt <<- EOT
 	BOOT	-hfs -part -map $datadir/mapping -hfs-volid "ROCK_Linux_CD"
 	BOOTx	-hfs-bless boot -sysid PPC -l -L -r -T -chrp-boot
-	BOOTx   --prep-boot install.bin
+	BOOTx   -prep-boot install.bin
 	DISK1	$datadir/boot/ boot/
 	DISK1	$datadir/etc/ etc/
 	DISK1	$datadir/install.bin install.bin

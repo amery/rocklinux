@@ -1,14 +1,14 @@
 <CHRP-BOOT>
 <COMPATIBLE>
-MacRISC MacRISC3
+MacRISC MacRISC3 MacRISC4
 </COMPATIBLE>
 <DESCRIPTION>
-GNU/Linux PPC bootloader
+ROCK Linux Live CD Bootloader
 </DESCRIPTION>
 <BOOT-SCRIPT>
 " screen" output
 load-base release-load-area
-boot cd:,\\yaboot
+boot cd:,\boot\yaboot
 </BOOT-SCRIPT>
 <OS-BADGE-ICONS>
 1010

@@ -1,0 +1,22 @@
+--- ./misc/run_tic.in.orig	2004-09-21 00:08:05.106683264 +0200
++++ ./misc/run_tic.in	2004-09-21 00:08:35.937996192 +0200
+@@ -66,6 +66,10 @@
+ *) PATH=../progs:${DESTDIR}$bindir:$PATH ;;
+ esac
+ export PATH
++SHLIB=$srcdir/shlib
++else
++# Cross-compiling, so don't set PATH or run shlib.
++SHLIB=
+ fi
+ 
+ #
+@@ -111,7 +115,7 @@
+ 	problems for older ncurses applications.
+ 
+ EOF
+-if ( $srcdir/shlib tic$suffix -s -o $TERMINFO $source )
++if ( $SHLIB tic$suffix -s -o $TERMINFO $source )
+ then
+ 	echo '** built new '$TERMINFO
+ else

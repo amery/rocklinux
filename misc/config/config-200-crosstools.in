@@ -31,19 +31,25 @@ menu_begin MENU_CROSSTOOLS 'Cross Toolchain Creation'
 		[ "$crosstarget-unknown-linux-gnu" == "$arch_target" ] && continue ;
 		bool "Build $crosstarget cross toolchain" ROCKCFG_PKG_CROSSTOOL_$crosstarget 0
 
+		if [ "$ROCKCFG_CROSSBUILD" = "0" ] ; then
+			stages="-----5---9"
+		else
+			stages="-1--------"
+		fi
+
 		if [ "$( eval echo \$ROCKCFG_PKG_CROSSTOOL_$crosstarget )" == 1 ] ; then
-			pkgfork binutils binutils-cross-$crosstarget stages -----5---9
+			pkgfork binutils binutils-cross-$crosstarget stages $stages
 
 			pkgfork linux $ROCKCFG_PKG_LINUX_HEADERS-header-cross-$crosstarget \
-				stages -----5---9
+				stages $stages
 
 			if [ "$ROCKCFG_PKG_GLIBC22_USEIT" = 1 ] ; then
-				pkgfork glibc glibc22-cross-$crosstarget stages -----5---9
+				pkgfork glibc glibc22-cross-$crosstarget stages $stages
 			else
-				pkgfork glibc glibc23-cross-$crosstarget stages -----5---9
+				pkgfork glibc glibc23-cross-$crosstarget stages $stages
 			fi
 
-			pkgfork gcc $ROCKCFG_DEFAULT_CC-cross-$crosstarget stages -----5---9
+			pkgfork gcc $ROCKCFG_DEFAULT_CC-cross-$crosstarget stages $stages
 		fi
 	done
 menu_end

@@ -1,0 +1,10 @@
+--- ./components/html-editor/popup.c.orig	2004-09-10 23:17:22.412527344 +0200
++++ ./components/html-editor/popup.c	2004-09-10 23:17:33.422853520 +0200
+@@ -496,6 +496,7 @@
+ 			ADD_PROP (PARAGRAPH);
+ 			break;
+ 		default:
++			;
+ 		}
+ 		if (obj->parent && obj->parent->parent && HTML_IS_TABLE_CELL (obj->parent->parent)) {
+ 			if (cd->format_html) {

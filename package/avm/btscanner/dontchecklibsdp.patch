@@ -1,0 +1,12 @@
+diff -ruN btscanner-1.0/configure.in btscanner-1.0-new/configure.in
+--- btscanner-1.0/configure.in	2003-10-14 13:01:20.000000000 +0200
++++ btscanner-1.0-new/configure.in	2004-12-29 10:30:06.770321632 +0100
+@@ -12,7 +12,7 @@
+ # Checks for libraries.
+ AC_HAVE_LIBRARY(curses,,[AC_MSG_ERROR([Curses not found])])
+ AC_HAVE_LIBRARY(bluetooth,,[AC_MSG_ERROR([Bluetooth not found])])
+-AC_HAVE_LIBRARY(sdp,,[AC_MSG_ERROR([SDP not found])])
++# AC_HAVE_LIBRARY(sdp,,[AC_MSG_ERROR([SDP not found])])
+ AC_HAVE_LIBRARY(pthread,,[AC_MSG_ERROR([Pthreads not found])])
+ AC_HAVE_LIBRARY(gdbm,,[AC_MSG_ERROR([GDBM not found])])
+ 

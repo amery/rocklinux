@@ -484,14 +484,6 @@ register_wm() {
 	echo -e "name=\"$2\"\nexec=\"$3\"\n" > $root/usr/share/rock-registry/wm/$1
 }
 
-# Register an application
-#
-register_application() {
-	[ -e /usr/share/rock-registry/app ] \
-		|| mkdir -p /usr/share/rock-registry/app
-	echo -e "name=\"$2\"\nexec=\"$3\"\n" > /usr/share/rock-registry/app/$1
-}
-
 # Register a xdm - display manager
 #
 register_xdm() {

@@ -472,6 +472,7 @@ int prepare_root() {
 	/* create needed directories in /var */
 	DEBUG("preparing /var");
 	if(mkdir("/var/run",0755) != 0 ) { perror("could not create /var/run"); ret=-1; }
+	if(mkdir("/var/spool",0755) != 0 ) { perror("could not create /var/spool"); ret=-1; }
 	if(mkdir("/var/lock",0755) != 0 ) { perror("could not create /var/lock"); ret=-1; }
 	if(mkdir("/var/tmp",0777) != 0 ) { perror("could not create /var/tmp"); ret=-1; }
 	if(mkdir("/var/log",0755) != 0 ) { perror("could not create /var/log"); ret=-1; }

@@ -4,14 +4,20 @@ rm -rf $disksdir/initrd
 mkdir -p $disksdir/initrd/{dev,proc,tmp,bin-static,mnt/{cdrom,floppy,stick},ramdisk,etc,ROCK}
 cd $disksdir/initrd; ln -s bin-static sbin-static; ln -s . usr
 #
-if [ ! -x ../../../usr/bin/diet ] ; then
-	echo_error "can not find the target's diet binary - did dietlibc build?";
-	exit 1;
+if [ -x ../../../usr/bin/diet ] ; then
+	export DIETHOME="../../../usr/dietlibc"
+	LXRCCC="../../../usr/bin/diet $CC";
+elif [ -x /usr/bin/diet ] ; then
+	echo_status "using host's diet - did the target's dietlibc build fail?"
+	LXRCCC="/usr/bin/diet $CC";
+else
+	echo_status "diet not found - using glibc -static - initrd may be too big..."
+	LXRCCC="$CC -static"
 fi
 echo_status "Create linuxrc binary."
-../../../usr/bin/diet $CC $base/target/$target/linuxrc.c -Wall \
+$LXRCCC $base/target/$target/linuxrc.c -Wall \
 	-DSTAGE_2_IMAGE="\"${ROCKCFG_SHORTID}/2nd_stage.img.z\"" \
-	-o linuxrc 
+	-o linuxrc
 #
 echo_status "Copy various helper applications."
 cp ../2nd_stage/bin/{tar,gzip} bin-static/

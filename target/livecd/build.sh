@@ -6,11 +6,6 @@ if [ -z "`which mksquashfs`" ] ; then
 	exit 1;
 fi ;
 
-if [ -z "`which mkisofs`" ] ; then
-	echo "Please make mkisofs is installed! Rock Package: base/cdrtools"
-	exit 1;
-fi;
-
 pkgloop
 rm -rf $disksdir; mkdir -p $disksdir; chmod 700 $disksdir
 

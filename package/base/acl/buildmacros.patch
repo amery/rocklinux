@@ -1,0 +1,11 @@
+--- ./include/buildmacros.orig	2004-12-05 09:33:13.219446632 +0100
++++ ./include/buildmacros	2004-12-05 09:33:26.831377304 +0100
+@@ -102,8 +102,6 @@
+ 	../$(INSTALL) -m 644 $(LIBNAME).lai $(PKG_DEVLIB_DIR)/$(LIBNAME).la ; \
+ 	../$(INSTALL) -m 755 -d $(PKG_LIB_DIR); \
+ 	../$(INSTALL) -T so_base $(LIBNAME).lai $(PKG_LIB_DIR); \
+-	../$(INSTALL) -S $(PKG_DEVLIB_DIR)/$(LIBNAME).a $(PKG_LIB_DIR)/$(LIBNAME).a; \
+-	../$(INSTALL) -S $(PKG_DEVLIB_DIR)/$(LIBNAME).la $(PKG_LIB_DIR)/$(LIBNAME).la; \
+ 	../$(INSTALL) -S $(PKG_LIB_DIR)/$(LIBNAME).so $(PKG_DEVLIB_DIR)/$(LIBNAME).so
+ else
+ INSTALL_LTLIB_DEV = $(INSTALL_LTLIB_STATIC)

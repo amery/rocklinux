@@ -1,0 +1,13 @@
+diff -Nur ../apmd-orig/Makefile ./Makefile
+--- ../apmd-orig/Makefile	2004-11-17 15:39:40.257616840 +0100
++++ ./Makefile	2004-11-17 15:41:42.929967808 +0100
+@@ -37,8 +37,7 @@
+ 
+ CC=gcc
+ CFLAGS=-O -g
+-XTRACFLAGS=-Wall -pipe -I. -I/usr/src/linux/include \
+-		-I/usr/src/linux-2.2/include -I /usr/src/linux-2.0/include \
++XTRACFLAGS=-Wall -pipe -I. -I/usr/include \
+ 		-DVERSION=\"$(VERSION)\" \
+ 		-DAPMD_PROXY_NAME=\"$(APMD_PROXY_DIR)/apmd_proxy\"
+ LDFLAGS=

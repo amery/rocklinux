@@ -536,6 +536,7 @@ download_file_now() {
 	if [[ $url = svn://* ]] ; then
 		# svn://mode:[login[:password]@]server[:port]:/path::revision/
 		urlorig=${url}
+		url=${location#!}
 		url="${url#svn://}"; url="${url%/}"
 		mode="${url%%:*}"
 		url="${url#*:}"

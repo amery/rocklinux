@@ -1,0 +1,17 @@
+--- ./src/Makefile.in.orig	2004-09-06 22:51:30.293119784 +0200
++++ ./src/Makefile.in	2004-09-06 22:52:34.686330528 +0200
+@@ -379,10 +379,10 @@
+ 
+ 
+ install: $(lib_LTLIBRARIES)
+-@APACHE2_TRUE@	$(APXS) -i -a -n mono libmod_mono.la
+-@APACHE2_TRUE@@BUILD_OLD_MODULE_TRUE@	$(APXS) -i -a -n mono_old libmod_mono_old.la
+-@APACHE2_FALSE@	$(APXS) -i -a -n mono .libs/libmod_mono.so
+-@APACHE2_FALSE@@BUILD_OLD_MODULE_TRUE@	$(APXS) -i -a -n mono_old .libs/libmod_mono_old.so
++@APACHE2_TRUE@	$(APXS) -i -n mono libmod_mono.la
++@APACHE2_TRUE@@BUILD_OLD_MODULE_TRUE@	$(APXS) -i -n mono_old libmod_mono_old.la
++@APACHE2_FALSE@	$(APXS) -i -n mono .libs/libmod_mono.so
++@APACHE2_FALSE@@BUILD_OLD_MODULE_TRUE@	$(APXS) -i -n mono_old .libs/libmod_mono_old.so
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:

@@ -118,19 +118,10 @@ read_fm_config() {
 	echo '(at) @' >>subst
 	echo '(dot) .' >>subst
 
-	echo -n "$dev_mail" >dev_mail
-# for some strange reason, this doesn't work:
-# cat subst | while read from to ; do 
-#         export dev_mail="${dev_mail// $from /$to}"
-# done
-# dev_mail will have the same value as before
-	cat subst | while read from to ; do 
-		dev_mail="`cat dev_mail`"
-		dev_mail="${dev_mail// ${from} /${to}}"
-		echo -n "$dev_mail" >dev_mail
-	done
-	dev_mail="`cat dev_mail`"
-	rm -f subst $fmname.html dev_mail
+	while read from to ; do
+		dev_mail=${dev_mail// ${from} /${to}}
+	done < subst
+	rm -f subst $fmname.html
 
 	if [ -z "$dev_mail" -o -z "$dev_name" ] ; then
 		dev_name="TODO: "
@@ -252,7 +243,7 @@ cat >>$package.desc <<EEE
 
 [U] ${url:-TODO: URL}
 
-[A] $dev_name $dev_mail
+[A] $dev_name <$dev_mail>
 [M] ${maintainer:-TODO: Maintainer}
 
 [C] TODO: Category

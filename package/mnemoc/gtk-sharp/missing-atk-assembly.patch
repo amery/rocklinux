@@ -1,0 +1,11 @@
+--- ./sample/rsvg/Makefile.in.orig	2004-09-12 06:00:13.607150736 +0200
++++ ./sample/rsvg/Makefile.in	2004-09-12 06:00:46.096211648 +0200
+@@ -119,7 +119,7 @@
+ am__include = @am__include@
+ am__quote = @am__quote@
+ install_sh = @install_sh@
+-assemblies = ../../glib/glib-sharp.dll ../../pango/pango-sharp.dll ../../atk/atk-sharp.dll ../../gdk/gdk-sharp.dll ../../gtk/gtk-sharp.dll ../../rsvg/rsvg-sharp.dll
++assemblies = ../../glib/glib-sharp.dll ../../pango/pango-sharp.dll ../../atk/atk-sharp.dll ../../art/art-sharp.dll ../../gdk/gdk-sharp.dll ../../gtk/gtk-sharp.dll ../../rsvg/rsvg-sharp.dll
+ references = $(addprefix /r:, $(assemblies))
+ 
+ @ENABLE_RSVG_TRUE@TARGETS = svghelloworld.exe

@@ -1,0 +1,11 @@
+--- ./Makeconfig	2003-09-17 10:36:10.000000000 +0200
++++ ./Makeconfig.patch	2004-09-06 17:52:29.000000000 +0200
+@@ -511,7 +511,7 @@
+ link-extra-libs-bounded = $(foreach lib,$(LDLIBS-$(@F:%-bp=%)),$(common-objpfx)$(lib)_b.a)
+ 
+ ifndef gnulib
+-gnulib := -lgcc -lgcc_eh
++gnulib := -lgcc
+ endif
+ ifeq ($(elf),yes)
+ +preinit = $(addprefix $(csu-objpfx),crti.o)

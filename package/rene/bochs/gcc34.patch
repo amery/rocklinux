@@ -1,0 +1,11 @@
+--- ./fpu/reg_ld_str.c.orig	2004-09-11 11:16:18.645823112 +0200
++++ ./fpu/reg_ld_str.c	2004-09-11 11:19:38.679413384 +0200
+@@ -315,7 +315,7 @@
+ 
+ 
+ /* Get a short from user memory */
+-int  BX_CPP_AttrRegparmN(1)
++int  BX_CPP_AttrRegparmN(2)
+ FPU_load_int16(bx_address _s, FPU_REG *loaded_data)
+ {
+   s16 s, negative;

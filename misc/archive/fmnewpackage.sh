@@ -97,8 +97,18 @@ read_fm_config() {
 	unset html_new
 	rm -f header.log
 	curl -s "$html" -o "$fmname.html"
-	dev_name="`grep 'contact developer' "$fmname.html" | sed 's,^[[:blank:]]*\(.*\)[[:blank:]]<a.*$,\1,' | sed 's, *$,,g'`"
-	dev_mail="<`grep 'contact developer' "$fmname.html" | sed 's,^.*<a href=\"mailto:\(.*\)\">.*$,\1,'`>"
+	found=0
+	while read line ; do
+		if [ ${found} -eq 1 ] ; then
+			dev_name="`echo ${line} | sed 's,^ *,,g' | cut -f1,2 -d' '`"
+		fi
+		if [ "${line//Author:/}" != "${line}" ] ; then
+			found=1
+		else
+			found=0
+		fi
+	done < ${fmname}.html
+	dev_mail="`grep 'contact developer' "$fmname.html" | sed 's,^.*mailto:\(.*\)".*$,\1,'`"
 	echo '__at__ @' >subst
 	echo '__dot__ .' >>subst
 	echo '|at| @' >>subst

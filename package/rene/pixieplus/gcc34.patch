@@ -1,0 +1,97 @@
+--- ./misc/qxcfi.cpp.orig	2004-09-11 04:07:59.151740064 +0200
++++ ./misc/qxcfi.cpp	2004-09-11 04:08:05.571764072 +0200
+@@ -1342,7 +1342,7 @@
+ bool XCFImageFormat::loadProperty ( QDataStream& xcf_io, PropType& type,
+ 				    QByteArray& bytes )
+ {
+-  xcf_io >> (Q_UINT32)type;
++  xcf_io >> (Q_UINT32&)type;
+ 
+   if ( xcf_io.device()->status() != IO_Ok ) {
+     qDebug( "XCF: read failure on property type" );
+--- ./app/batch.cpp.orig	2004-09-11 04:12:22.211748864 +0200
++++ ./app/batch.cpp	2004-09-11 04:13:43.471395520 +0200
+@@ -196,7 +196,7 @@
+     connect(bbox->addButton(i18n("Cancel")), SIGNAL(clicked()), this,
+             SLOT(reject()));
+     layout->addWidget(bbox);
+-};
++}
+ 
+ KIFShadeDialog::KIFShadeDialog(QWidget *parent, const char *name)
+     : QDialog(parent, name, true)
+@@ -228,7 +228,7 @@
+     connect(bbox->addButton(i18n("Cancel")), SIGNAL(clicked()), this,
+             SLOT(reject()));
+     layout->addWidget(bbox);
+-};
++}
+ 
+ KIFTextDialog::KIFTextDialog(QWidget *parent, const char *name)
+     : QDialog(parent, name, true)
+--- ./app/batch.h.orig	2004-09-11 04:12:32.822135840 +0200
++++ ./app/batch.h	2004-09-11 04:12:50.375467328 +0200
+@@ -17,7 +17,7 @@
+ #define off_t long long
+ extern "C"{
+ #include <api.h>
+-};
++}
+ 
+ class KProgress;
+ class QLabel;
+--- ./app/ifapp.h.orig	2004-09-11 04:12:37.881366720 +0200
++++ ./app/ifapp.h	2004-09-11 04:13:18.392208136 +0200
+@@ -14,7 +14,7 @@
+ #define off_t long long
+ extern "C"{
+ #include <api.h>
+-};
++}
+ 
+ class KIFFileList;
+ class KIFImage;
+--- ./app/imageutils.cpp.orig	2004-09-11 04:17:17.323885000 +0200
++++ ./app/imageutils.cpp	2004-09-11 04:17:24.803747888 +0200
+@@ -23,7 +23,7 @@
+ #define off_t long long
+ extern "C"{
+ #include <api.h>
+-};
++}
+ 
+ // in compressedgif.cpp
+ unsigned int WriteCompressedGIFImage(const ImageInfo *image_info,
+--- ./app/main.cpp.orig	2004-09-11 04:17:51.949621088 +0200
++++ ./app/main.cpp	2004-09-11 04:17:59.114531856 +0200
+@@ -21,7 +21,7 @@
+ #define off_t long long
+ extern "C"{
+ #include <api.h>
+-};
++}
+ 
+ 
+ /* Signal handlers. We install them for pretty much everything that can
+--- ./app/rightclick.cpp.orig	2004-09-11 04:15:50.851030872 +0200
++++ ./app/rightclick.cpp	2004-09-11 04:16:31.609834592 +0200
+@@ -220,7 +220,7 @@
+             idx = -1;
+     }
+     if(idx != -1){
+-        QStringList itemList(view->itemCatagories(&itemList[idx]));
++        QStringList itemList(view->itemCatagories((Thumbnail *)&itemList[idx]));
+         for(it=catList.begin(), i=1000; it != catList.end(); ++it, ++i){
+             if(itemList.findIndex((*it)) == -1)
+                 addMnu->insertItem((*it), i);
+--- ./app/screengrab.cpp.orig	2004-09-11 04:14:32.614924568 +0200
++++ ./app/screengrab.cpp	2004-09-11 04:14:39.452885040 +0200
+@@ -125,7 +125,7 @@
+     while(inLoop)
+         kapp->processEvents();
+     delete this;
+-};
++}
+ 
+ void KIFScreenGrab::slotCheckIfDelay()
+ {

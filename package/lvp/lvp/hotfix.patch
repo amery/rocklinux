@@ -1,0 +1,18 @@
+This hotfixes a bug in xfree? freeglut? one of those.
+If no Window Manager is loaded, the initial Reshape is not called
+resulting in no output on the screen.
+
+How did this work before? No idea...
+
+
+diff -pruN lvp_0.3.2/src/lvp.cpp lvp_0.3.2_patched/src/lvp.cpp
+--- lvp_0.3.2/src/lvp.cpp	2004-03-03 16:59:48.000000000 +0100
++++ lvp_0.3.2_patched/src/lvp.cpp	2004-09-28 09:06:12.415815920 +0200
+@@ -967,6 +967,7 @@ int main(int argc, char *argv[]){ // {{{
+ 	window.AddObject(&no);
+ 
+ 	glutFullScreen();
++	Reshape(WindW, WindH);
+ 	glEnable(GL_DEPTH_TEST);
+ 	glEnable(GL_TEXTURE_2D);
+ 	glutMainLoop();

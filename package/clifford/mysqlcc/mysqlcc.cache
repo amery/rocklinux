@@ -20,19 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1101742327 Mon Nov 29 16:32:07 2004
+[TIMESTAMP] 1102109161 Fri Dec  3 22:26:01 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-mysqlcc.err
 
-[BUILDTIME] 27386 (5)
+[BUILDTIME] 27363 (5)
 [SIZE] 0.02 MB, 9 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils findutils gcc34 gcc34:dev glibc23 glibc23:dev grep libtool
-[DEP] linux26-header:dev m4 make mktemp mysql mysql:dev net-tools openssl
-[DEP] patch perl5 qt qt:dev sed sysfiles tar util-linux zlib:dev
+[DEP] diffutils findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
+[DEP] libtool linux26-header:dev m4 make mktemp mysql mysql:dev net-tools
+[DEP] openssl patch perl5 qt qt:dev sed sysfiles tar util-linux zlib:dev
 
 [5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/CTableSpecific.o src/CTableSpecific.cpp
 [5-ERROR] g++-34 -c -pipe -Wall -W -O2 -D_REENTRANT  -DQT_DLL -DHAVE_MYSQLCC_CONFIG -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/linux-g++ -I. -Iinclude -Ishared/include -Iinclude/CSqlEditor -I/opt/mysql/include/mysql -I/opt/qt33/include -I/usr/X11R6/include -Imoc/ -o tmp/CTableTools.o src/CTableTools.cpp

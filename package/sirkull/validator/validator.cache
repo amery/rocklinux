@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1101745670 Mon Nov 29 17:27:50 2004
+[TIMESTAMP] 1102112300 Fri Dec  3 23:18:20 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-validator.err
 
-[BUILDTIME] 1857 (5)
+[BUILDTIME] 1842 (5)
 [SIZE] 1.73 MB, 146 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
@@ -34,18 +34,18 @@
 [DEP] sysfiles tar
 
 [5-ERROR] 
-[5-ERROR] [ writing debug log to /ROCK/src.validator.1101745637.23155.4269258640/cmd_wrapper.log ]
-[5-ERROR] create symbolic link `/ROCK/src.validator.1101745637.23155.4269258640/archdir/lq-sp-1.3.4.10.tar.bz2' to `/ROCK/download/mirror/l/lq-sp-1.3.4.10.tar.bz2'
-[5-ERROR] create symbolic link `/ROCK/src.validator.1101745637.23155.4269258640/archdir/wdg-sgml-lib-1.1.3.tar.bz2' to `/ROCK/download/mirror/w/wdg-sgml-lib-1.1.3.tar.bz2'
-[5-ERROR] create symbolic link `/ROCK/src.validator.1101745637.23155.4269258640/archdir/validate-1.2' to `/ROCK/download/mirror/v/validate-1.2'
+[5-ERROR] [ writing debug log to /ROCK/src.validator.1102112275.29569.2110231433/cmd_wrapper.log ]
+[5-ERROR] create symbolic link `/ROCK/src.validator.1102112275.29569.2110231433/archdir/lq-sp-1.3.4.10.tar.bz2' to `/ROCK/download/mirror/l/lq-sp-1.3.4.10.tar.bz2'
+[5-ERROR] create symbolic link `/ROCK/src.validator.1102112275.29569.2110231433/archdir/wdg-sgml-lib-1.1.3.tar.bz2' to `/ROCK/download/mirror/w/wdg-sgml-lib-1.1.3.tar.bz2'
+[5-ERROR] create symbolic link `/ROCK/src.validator.1102112275.29569.2110231433/archdir/validate-1.2' to `/ROCK/download/mirror/v/validate-1.2'
 [5-ERROR] Running main build function 'build_this_package' ...
 [5-ERROR] Extracting lq-sp-1.3.4.10.tar.bz2 (--use-compress-program=bzip2 -xf) ... 
 [5-ERROR] Fixing ownership and permissions ...
 [5-ERROR] Removing CVS and .svn directories ...
-[5-ERROR] Changeing into /ROCK/src.validator.1101745637.23155.4269258640/lq-sp-1.3.4.10 ...
+[5-ERROR] Changeing into /ROCK/src.validator.1102112275.29569.2110231433/lq-sp-1.3.4.10 ...
 [5-ERROR] Creating /opt/validator/<..> if required ...
-[5-ERROR] make[1]: Entering directory `/ROCK/src.validator.1101745637.23155.4269258640/lq-sp-1.3.4.10'
-[5-ERROR] make[2]: Entering directory `/ROCK/src.validator.1101745637.23155.4269258640/lq-sp-1.3.4.10/lib'
+[5-ERROR] make[1]: Entering directory `/ROCK/src.validator.1102112275.29569.2110231433/lq-sp-1.3.4.10'
+[5-ERROR] make[2]: Entering directory `/ROCK/src.validator.1102112275.29569.2110231433/lq-sp-1.3.4.10/lib'
 [5-ERROR] g++-34 -ansi   -I. -I./../include -I./../generic -DSP_HAVE_BOOL -DSP_ANSI_CLASS_INST -DSP_MULTI_BYTE -DSP_HAVE_SOCKET  -c Allocator.cxx
 [5-ERROR] g++-34 -ansi   -I. -I./../include -I./../generic -DSP_HAVE_BOOL -DSP_ANSI_CLASS_INST -DSP_MULTI_BYTE -DSP_HAVE_SOCKET  -c Link.cxx
 [5-ERROR] g++-34 -ansi   -I. -I./../include -I./../generic -DSP_HAVE_BOOL -DSP_ANSI_CLASS_INST -DSP_MULTI_BYTE -DSP_HAVE_SOCKET  -c IListBase.cxx
@@ -60,9 +60,9 @@
 [5-ERROR] ./../include/RangeMap.h:47: error: `ptr_' undeclared (first use this function)
 [5-ERROR] ./../include/RangeMap.h:47: error: (Each undeclared identifier is reported only once for each function it appears in.)
 [5-ERROR] make[2]: *** [CharsetInfo.o] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.validator.1101745637.23155.4269258640/lq-sp-1.3.4.10/lib'
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.validator.1102112275.29569.2110231433/lq-sp-1.3.4.10/lib'
 [5-ERROR] make[1]: *** [lib] Error 2
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.validator.1101745637.23155.4269258640/lq-sp-1.3.4.10'
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.validator.1102112275.29569.2110231433/lq-sp-1.3.4.10'
 [5-ERROR] make: *** [all] Error 2
 [5-ERROR] --- BUILD ERROR ---
 [5-ERROR] Creating file list and doing final adaptions ... 

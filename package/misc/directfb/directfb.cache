@@ -1,11 +1,11 @@
 
-[TIMESTAMP] 1101739984 Mon Nov 29 15:53:04 2004
+[TIMESTAMP] 1102106951 Fri Dec  3 21:49:11 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-directfb.err
 
-[BUILDTIME] 9213 (5)
+[BUILDTIME] 9200 (5)
 
 [5-ERROR] /bin/sh ../../libtool --mode=compile gcc-34 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../include 	-I../../src    -D_REENTRANT -Wall -O3 -ffast-math -pipe   -DFUSION_FAKE -Werror-implicit-function-declaration -c cyber5k_alpha.c
 [5-ERROR]  gcc-34 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../include -I../../src -D_REENTRANT -Wall -O3 -ffast-math -pipe -DFUSION_FAKE -Werror-implicit-function-declaration -c cyber5k_alpha.c  -fPIC -DPIC -o .libs/cyber5k_alpha.o
@@ -13,9 +13,9 @@
 [5-ERROR] gcc-34 -shared  .libs/cyber5k.o .libs/cyber5k_overlay.o .libs/cyber5k_underlay.o .libs/cyber5k_alpha.o  -ldl -lpthread  -Wl,-soname -Wl,libdirectfb_cyber5k.so -o .libs/libdirectfb_cyber5k.so
 [5-ERROR] creating libdirectfb_cyber5k.la
 [5-ERROR] (cd .libs && rm -f libdirectfb_cyber5k.la && ln -s ../libdirectfb_cyber5k.la libdirectfb_cyber5k.la)
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.directfb.1101739870.23108.3440815243/DirectFB-0.9.20/gfxdrivers/cyber5k'
+[5-ERROR] make[3]: Leaving directory `/ROCK/src.directfb.1102106841.30544.1021323229/DirectFB-0.9.20/gfxdrivers/cyber5k'
 [5-ERROR] Making all in matrox
-[5-ERROR] make[3]: Entering directory `/ROCK/src.directfb.1101739870.23108.3440815243/DirectFB-0.9.20/gfxdrivers/matrox'
+[5-ERROR] make[3]: Entering directory `/ROCK/src.directfb.1102106841.30544.1021323229/DirectFB-0.9.20/gfxdrivers/matrox'
 [5-ERROR] /bin/sh ../../libtool --mode=compile gcc-34 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../include		-I../../src    -D_REENTRANT -Wall -O3 -ffast-math -pipe   -DFUSION_FAKE -Werror-implicit-function-declaration -c matrox.c
 [5-ERROR] mkdir .libs
 [5-ERROR]  gcc-34 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../include -I../../src -D_REENTRANT -Wall -O3 -ffast-math -pipe -DFUSION_FAKE -Werror-implicit-function-declaration -c matrox.c  -fPIC -DPIC -o .libs/matrox.o
@@ -36,11 +36,11 @@
 [5-ERROR] matrox_maven.c: In function `maven_init':
 [5-ERROR] matrox_maven.c:450: error: `I2C_SLAVE' undeclared (first use in this function)
 [5-ERROR] make[3]: *** [matrox_maven.lo] Error 1
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.directfb.1101739870.23108.3440815243/DirectFB-0.9.20/gfxdrivers/matrox'
+[5-ERROR] make[3]: Leaving directory `/ROCK/src.directfb.1102106841.30544.1021323229/DirectFB-0.9.20/gfxdrivers/matrox'
 [5-ERROR] make[2]: *** [all-recursive] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.directfb.1101739870.23108.3440815243/DirectFB-0.9.20/gfxdrivers'
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.directfb.1102106841.30544.1021323229/DirectFB-0.9.20/gfxdrivers'
 [5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.directfb.1101739870.23108.3440815243/DirectFB-0.9.20'
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.directfb.1102106841.30544.1021323229/DirectFB-0.9.20'
 [5-ERROR] make: *** [all-recursive-am] Error 2
 [5-ERROR] --- BUILD ERROR ---
 [5-ERROR] Creating file list and doing final adaptions ... 

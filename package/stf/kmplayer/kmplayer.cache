@@ -20,15 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1101745673 Mon Nov 29 17:27:53 2004
+[TIMESTAMP] 1101982866 Thu Dec  2 11:21:06 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-kmplayer.err
+[LOGS] 5-kmplayer.log
 
-[BUILDTIME] 129 (5)
+[BUILDTIME] 15741 (5)
+[SIZE] 0.97 MB, 45 files
 
-[5-ERROR] The package build aborted with the following config error:
-[5-ERROR] kmplayer: Unknown package status: Unstable
-[5-ERROR] Disable the 'Paranoia Check' config option to ignore such errors.
+[DEP] 00-dirtree alsa arts bash2 binutils bzip2 coreutils diffutils expat
+[DEP] fam fam:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev
+[DEP] gettext glibc23 glibc23:dev grep hicolor-icon-theme kdelibs
+[DEP] kdelibs:dev kile koffice:dev kphone libart_lgpl23 libart_lgpl23:dev
+[DEP] libjpeg libpng libpng:dev linux26-header:dev make mktemp net-tools
+[DEP] perl5 qt qt:dev sed sysfiles tar util-linux xfree86 xfree86:dev
+[DEP] xine xine:dev zlib:dev
 

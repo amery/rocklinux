@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1101745106 Mon Nov 29 17:18:26 2004
+[TIMESTAMP] 1102111759 Fri Dec  3 23:09:19 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-licq.err
 
-[BUILDTIME] 8731 (5)
+[BUILDTIME] 8665 (5)
 
 [5-ERROR] if g++-34 -DLOCALEDIR=\"/usr/share/locale\" -DHAVE_CONFIG_H -I. -I. -I..  -Wall -I../include -DINSTALL_PREFIX=\"/usr\"  -Wno-deprecated -fPIC -DPIC -D_REENTRANT  -O2 -fno-exceptions -fno-check-new -MT gpg.o -MD -MP -MF ".deps/gpg.Tpo" \
 [5-ERROR]   -c -o gpg.o `test -f 'gpg.cpp' || echo './'`gpg.cpp; \
@@ -59,9 +59,9 @@
 [5-ERROR] gpg.cpp:149: error: invalid conversion from `const char*(*)(void*, const char*, void**)' to `gpgme_error_t (*)(void*, const char*, const char*, int, int)'
 [5-ERROR] gpg.cpp:149: error:   initializing argument 2 of `void gpgme_set_passphrase_cb(gpgme_context*, gpgme_error_t (*)(void*, const char*, const char*, int, int), void*)'
 [5-ERROR] make[2]: *** [gpg.o] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.licq.1101745003.9193.2942904318/licq-1.3.0/src'
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.licq.1102111656.11171.2544412389/licq-1.3.0/src'
 [5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.licq.1101745003.9193.2942904318/licq-1.3.0'
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.licq.1102111656.11171.2544412389/licq-1.3.0'
 [5-ERROR] make: *** [all] Error 2
 [5-ERROR] --- BUILD ERROR ---
 [5-ERROR] Creating file list and doing final adaptions ... 

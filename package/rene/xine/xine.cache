@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1101741597 Mon Nov 29 16:19:57 2004
+[TIMESTAMP] 1102108510 Fri Dec  3 22:15:10 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-xine.err
 
-[BUILDTIME] 117499 (5)
+[BUILDTIME] 117200 (5)
 [SIZE] 8.11 MB, 177 files
 
 [DEP] 00-dirtree aalib aalib:dev alsa alsa:dev arts arts:dev audiofile
@@ -44,14 +44,14 @@
 
 [5-ERROR]   dists="Makefile.in config.charset locale.alias ref-add.sin ref-del.sin gettext.h gettextP.h hash-string.h libgnuintl.h libgettext.h loadinfo.h bindtextdom.c dcgettext.c dgettext.c gettext.c finddomain.c loadmsgcat.c localealias.c textdomain.c l10nflist.c explodename.c dcigettext.c dcngettext.c dngettext.c ngettext.c plural.y localcharset.c intl-compat.c"; \
 [5-ERROR]   for file in $dists; do \
-[5-ERROR]     /ROCK/build/ref1126-2.1.0-DEV-x86-reference-expert/ROCK/tools.chroot/wrapper/install -c -m 644 ./$file \
+[5-ERROR]     /ROCK/build/ref1129-2.1.0-DEV-x86-reference-expert/ROCK/tools.chroot/wrapper/install -c -m 644 ./$file \
 [5-ERROR] 		    /usr/share/gettext/intl/$file; \
 [5-ERROR]   done; \
 [5-ERROR]   chmod a+x /usr/share/gettext/intl/config.charset; \
 [5-ERROR]   dists="plural.c"; \
 [5-ERROR]   for file in $dists; do \
 [5-ERROR]     if test -f $file; then dir=.; else dir=.; fi; \
-[5-ERROR]     /ROCK/build/ref1126-2.1.0-DEV-x86-reference-expert/ROCK/tools.chroot/wrapper/install -c -m 644 $dir/$file \
+[5-ERROR]     /ROCK/build/ref1129-2.1.0-DEV-x86-reference-expert/ROCK/tools.chroot/wrapper/install -c -m 644 $dir/$file \
 [5-ERROR] 		    /usr/share/gettext/intl/$file; \
 [5-ERROR]   done; \
 [5-ERROR]   dists="xopen-msg.sed linux-msg.sed po2tbl.sed.in cat-compat.c"; \
@@ -61,13 +61,13 @@
 [5-ERROR] else \
 [5-ERROR]   : ; \
 [5-ERROR] fi
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.xine.1101740301.16430.3357706203/xine-ui-0.99.2/intl'
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.xine.1102107244.23827.1380057988/xine-ui-0.99.2/intl'
 [5-ERROR] Making install in po
-[5-ERROR] make[1]: Entering directory `/ROCK/src.xine.1101740301.16430.3357706203/xine-ui-0.99.2/po'
+[5-ERROR] make[1]: Entering directory `/ROCK/src.xine.1102107244.23827.1380057988/xine-ui-0.99.2/po'
 [5-ERROR] `if test ! -z ""; then echo ""; else case ".././mkinstalldirs" in /*) echo ".././mkinstalldirs" ;; *) echo "../.././mkinstalldirs" ;; esac; fi` /usr/share
 [5-ERROR] /bin/sh: line 1: ../.././mkinstalldirs: No such file or directory
 [5-ERROR] make[1]: *** [install-data-yes] Error 127
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.xine.1101740301.16430.3357706203/xine-ui-0.99.2/po'
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.xine.1102107244.23827.1380057988/xine-ui-0.99.2/po'
 [5-ERROR] make: *** [install-recursive] Error 1
 [5-ERROR] --- BUILD ERROR ---
 [5-ERROR] Creating file list and doing final adaptions ... 

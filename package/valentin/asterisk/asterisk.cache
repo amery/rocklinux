@@ -20,62 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1101744386 Mon Nov 29 17:06:26 2004
+[TIMESTAMP] 1101938017 Wed Dec  1 22:53:37 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
-[LOGS] 5-asterisk.err
+[LOGS] 5-asterisk.log
 
-[BUILDTIME] 9687 (5)
+[BUILDTIME] 15569 (5)
+[SIZE] 10.11 MB, 494 files
 
-[5-ERROR] gcc-34 -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686     -DASTERISK_VERSION=\"1.0.0\" -DINSTALL_PREFIX=\"\" -DASTETCDIR=\"/etc/asterisk\" -DASTLIBDIR=\"/usr/lib/asterisk\" -DASTVARLIBDIR=\"/var/lib/asterisk\" -DASTVARRUNDIR=\"/var/run\" -DASTSPOOLDIR=\"/var/spool/asterisk\" -DASTLOGDIR=\"/var/log/asterisk\" -DASTCONFPATH=\"/etc/asterisk/asterisk.conf\" -DASTMODDIR=\"/usr/lib/asterisk/modules\" -DASTAGIDIR=\"/var/lib/asterisk/agi-bin\"     -DBUSYDETECT_MARTIN      -Wno-missing-prototypes -Wno-missing-declarations        -DCRYPTO -fPIC    -c -o chan_mgcp.o chan_mgcp.c
-[5-ERROR] gcc-34 -shared -Xlinker -x -o chan_mgcp.so chan_mgcp.o
-[5-ERROR] gcc-34 -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686     -DASTERISK_VERSION=\"1.0.0\" -DINSTALL_PREFIX=\"\" -DASTETCDIR=\"/etc/asterisk\" -DASTLIBDIR=\"/usr/lib/asterisk\" -DASTVARLIBDIR=\"/var/lib/asterisk\" -DASTVARRUNDIR=\"/var/run\" -DASTSPOOLDIR=\"/var/spool/asterisk\" -DASTLOGDIR=\"/var/log/asterisk\" -DASTCONFPATH=\"/etc/asterisk/asterisk.conf\" -DASTMODDIR=\"/usr/lib/asterisk/modules\" -DASTAGIDIR=\"/var/lib/asterisk/agi-bin\"     -DBUSYDETECT_MARTIN      -Wno-missing-prototypes -Wno-missing-declarations        -DCRYPTO -fPIC    -c -o chan_iax2.o chan_iax2.c
-[5-ERROR] chan_iax2.c: In function `__send_command':
-[5-ERROR] chan_iax2.c:3532: warning: assignment discards qualifiers from pointer target type
-[5-ERROR] gcc-34 -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686     -DASTERISK_VERSION=\"1.0.0\" -DINSTALL_PREFIX=\"\" -DASTETCDIR=\"/etc/asterisk\" -DASTLIBDIR=\"/usr/lib/asterisk\" -DASTVARLIBDIR=\"/var/lib/asterisk\" -DASTVARRUNDIR=\"/var/run\" -DASTSPOOLDIR=\"/var/spool/asterisk\" -DASTLOGDIR=\"/var/log/asterisk\" -DASTCONFPATH=\"/etc/asterisk/asterisk.conf\" -DASTMODDIR=\"/usr/lib/asterisk/modules\" -DASTAGIDIR=\"/var/lib/asterisk/agi-bin\"     -DBUSYDETECT_MARTIN      -Wno-missing-prototypes -Wno-missing-declarations        -DCRYPTO -fPIC    -c -o iax2-parser.o iax2-parser.c
-[5-ERROR] gcc-34 -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686     -DASTERISK_VERSION=\"1.0.0\" -DINSTALL_PREFIX=\"\" -DASTETCDIR=\"/etc/asterisk\" -DASTLIBDIR=\"/usr/lib/asterisk\" -DASTVARLIBDIR=\"/var/lib/asterisk\" -DASTVARRUNDIR=\"/var/run\" -DASTSPOOLDIR=\"/var/spool/asterisk\" -DASTLOGDIR=\"/var/log/asterisk\" -DASTCONFPATH=\"/etc/asterisk/asterisk.conf\" -DASTMODDIR=\"/usr/lib/asterisk/modules\" -DASTAGIDIR=\"/var/lib/asterisk/agi-bin\"     -DBUSYDETECT_MARTIN      -Wno-missing-prototypes -Wno-missing-declarations        -DCRYPTO -fPIC    -c -o iax2-provision.o iax2-provision.c
-[5-ERROR] gcc-34 -shared -Xlinker -x -o chan_iax2.so chan_iax2.o iax2-parser.o iax2-provision.o
-[5-ERROR] gcc-34 -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686     -DASTERISK_VERSION=\"1.0.0\" -DINSTALL_PREFIX=\"\" -DASTETCDIR=\"/etc/asterisk\" -DASTLIBDIR=\"/usr/lib/asterisk\" -DASTVARLIBDIR=\"/var/lib/asterisk\" -DASTVARRUNDIR=\"/var/run\" -DASTSPOOLDIR=\"/var/spool/asterisk\" -DASTLOGDIR=\"/var/log/asterisk\" -DASTCONFPATH=\"/etc/asterisk/asterisk.conf\" -DASTMODDIR=\"/usr/lib/asterisk/modules\" -DASTAGIDIR=\"/var/lib/asterisk/agi-bin\"     -DBUSYDETECT_MARTIN      -Wno-missing-prototypes -Wno-missing-declarations        -DCRYPTO -fPIC    -c -o chan_local.o chan_local.c
-[5-ERROR] gcc-34 -shared -Xlinker -x -o chan_local.so chan_local.o
-[5-ERROR] gcc-34 -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686     -DASTERISK_VERSION=\"1.0.0\" -DINSTALL_PREFIX=\"\" -DASTETCDIR=\"/etc/asterisk\" -DASTLIBDIR=\"/usr/lib/asterisk\" -DASTVARLIBDIR=\"/var/lib/asterisk\" -DASTVARRUNDIR=\"/var/run\" -DASTSPOOLDIR=\"/var/spool/asterisk\" -DASTLOGDIR=\"/var/log/asterisk\" -DASTCONFPATH=\"/etc/asterisk/asterisk.conf\" -DASTMODDIR=\"/usr/lib/asterisk/modules\" -DASTAGIDIR=\"/var/lib/asterisk/agi-bin\"     -DBUSYDETECT_MARTIN      -Wno-missing-prototypes -Wno-missing-declarations        -DCRYPTO -fPIC    -c -o chan_skinny.o chan_skinny.c
-[5-ERROR] gcc-34 -shared -Xlinker -x -o chan_skinny.so chan_skinny.o
-[5-ERROR] gcc-34 -o gentone gentone.c -lm
-[5-ERROR] ./gentone busy 480 620
-[5-ERROR] Wavelength 1 (in samples):   16.66667
-[5-ERROR] Minimum samples (1): 50 (3.000000.3 wavelengths)
-[5-ERROR] Wavelength 1 (in samples):   12.90323
-[5-ERROR] Minimum samples (1): 400 (31.000000.3 wavelengths)
-[5-ERROR] Need 400 samples
-[5-ERROR] Wrote busy.h
-[5-ERROR] ./gentone ringtone 440 480
-[5-ERROR] Wavelength 1 (in samples):   18.18182
-[5-ERROR] Minimum samples (1): 200 (11.000000.3 wavelengths)
-[5-ERROR] Wavelength 1 (in samples):   16.66667
-[5-ERROR] Minimum samples (1): 50 (3.000000.3 wavelengths)
-[5-ERROR] Need 200 samples
-[5-ERROR] Wrote ringtone.h
-[5-ERROR] gcc-34 -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686     -DASTERISK_VERSION=\"1.0.0\" -DINSTALL_PREFIX=\"\" -DASTETCDIR=\"/etc/asterisk\" -DASTLIBDIR=\"/usr/lib/asterisk\" -DASTVARLIBDIR=\"/var/lib/asterisk\" -DASTVARRUNDIR=\"/var/run\" -DASTSPOOLDIR=\"/var/spool/asterisk\" -DASTLOGDIR=\"/var/log/asterisk\" -DASTCONFPATH=\"/etc/asterisk/asterisk.conf\" -DASTMODDIR=\"/usr/lib/asterisk/modules\" -DASTAGIDIR=\"/var/lib/asterisk/agi-bin\"     -DBUSYDETECT_MARTIN      -Wno-missing-prototypes -Wno-missing-declarations        -DCRYPTO -fPIC    -c -o chan_oss.o chan_oss.c
-[5-ERROR] gcc-34 -shared -Xlinker -x -o chan_oss.so chan_oss.o
-[5-ERROR] gcc-34 -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686     -DASTERISK_VERSION=\"1.0.0\" -DINSTALL_PREFIX=\"\" -DASTETCDIR=\"/etc/asterisk\" -DASTLIBDIR=\"/usr/lib/asterisk\" -DASTVARLIBDIR=\"/var/lib/asterisk\" -DASTVARRUNDIR=\"/var/run\" -DASTSPOOLDIR=\"/var/spool/asterisk\" -DASTLOGDIR=\"/var/log/asterisk\" -DASTCONFPATH=\"/etc/asterisk/asterisk.conf\" -DASTMODDIR=\"/usr/lib/asterisk/modules\" -DASTAGIDIR=\"/var/lib/asterisk/agi-bin\"     -DBUSYDETECT_MARTIN      -Wno-missing-prototypes -Wno-missing-declarations        -DCRYPTO -fPIC    -c -o chan_phone.o chan_phone.c
-[5-ERROR] In file included from chan_phone.c:36:
-[5-ERROR] /usr/include/linux/ixjuser.h:353: error: parse error before '*' token
-[5-ERROR] make[1]: *** [chan_phone.o] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.asterisk.1101744269.29224.342546489/asterisk-1.0.0/channels'
-[5-ERROR] make: *** [subdirs] Error 1
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1 files for this package.
-[5-ERROR] Applying package split: 40 asterisk:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 asterisk:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 asterisk:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <asterisk:doc> Creating flist file ...
-[5-ERROR] <asterisk:doc> Creating package dependencies file ...
-[5-ERROR] <asterisk:doc> Creating md5sum and cksum files ...
-[5-ERROR] <asterisk:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building asterisk=asterisk.
+[DEP] 00-dirtree alien alsa alsa:dev bash2 binutils bison bzip2 coreutils
+[DEP] diffutils findutils gawk gcc34 gcc34:dev glib12 glib12:dev glibc23
+[DEP] glibc23:dev grep gtk+12 gtk+12:dev gzip linux26-header:dev m4 make
+[DEP] mktemp ncurses:dev net-tools openssl openssl:dev patch sed sqlite
+[DEP] sqlite:dev sysfiles tar xfree86
 

@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1101742023 Mon Nov 29 16:27:03 2004
+[TIMESTAMP] 1102108865 Fri Dec  3 22:21:05 2004
 [CONFIG-ID] 2.1.0-DEV-x86-reference-expert
 [ROCKVER] 2.1.0-DEV
 
 [LOGS] 5-libcss.err
 
-[BUILDTIME] 2564 (5)
+[BUILDTIME] 2584 (5)
 
 [5-ERROR] rm -fr .libs/libcss.la .libs/libcss.* .libs/libcss.*
 [5-ERROR] gcc-34 -shared  css_descramble.lo css_auth.lo css.lo css_dvd.lo  -lc  -Wl,-soname -Wl,libcss.so.0 -o .libs/libcss.so.0.1.0
@@ -59,9 +59,9 @@
 [5-ERROR] /usr/include/linux/prio_tree.h:29: error: `root' undeclared (first use in this function)
 [5-ERROR] /usr/include/linux/prio_tree.h:30: error: `r_index' undeclared (first use in this function)
 [5-ERROR] make[2]: *** [css_cat.o] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.libcss.1101741981.31838.510014201/libcss-0.1.0/src'
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.libcss.1102108829.1236.1205837156/libcss-0.1.0/src'
 [5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.libcss.1101741981.31838.510014201/libcss-0.1.0'
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.libcss.1102108829.1236.1205837156/libcss-0.1.0'
 [5-ERROR] make: *** [all-recursive-am] Error 2
 [5-ERROR] --- BUILD ERROR ---
 [5-ERROR] Creating file list and doing final adaptions ... 

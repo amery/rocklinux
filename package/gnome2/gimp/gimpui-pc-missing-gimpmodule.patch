@@ -1,0 +1,9 @@
+--- ./gimpui.pc.in.orig	2004-12-08 21:54:58.961259360 +0100
++++ ./gimpui.pc.in	2004-12-08 21:55:48.952659512 +0100
+@@ -7,5 +7,5 @@
+ Description: GIMP User Interface Library
+ Version: @GIMP_REAL_VERSION@
+ Requires: gimp-@GIMP_PKGCONFIG_VERSION@ gtk+-2.0 >= 2.2.0
+-Libs: -L${libdir} -lgimpui-@GIMP_API_VERSION@ -lgimpwidgets-@GIMP_API_VERSION@
++Libs: -L${libdir} -lgimpui-@GIMP_API_VERSION@ -lgimpwidgets-@GIMP_API_VERSION@ -lgimpmodule-@GIMP_API_VERSION@
+ Cflags: -I${includedir}/gimp-@GIMP_API_VERSION@

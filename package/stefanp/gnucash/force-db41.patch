@@ -20,9 +20,8 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-diff -urN gnucash-1.8.7/configure gnucash-1.8.7-stefanp/configure
---- gnucash-1.8.7/configure	2003-09-15 03:32:52.000000000 +0200
-+++ gnucash-1.8.7-stefanp/configure	2003-09-21 15:41:25.182982992 +0200
+--- ./configure.orig	2004-09-07 03:16:09.662088768 +0200
++++ ./configure	2004-09-07 03:24:43.796928392 +0200
 @@ -12265,14 +12265,14 @@
    DB_LIBS="-ldb"
  else
@@ -51,37 +50,36 @@ diff -urN gnucash-1.8.7/configure gnucash-1.8.7-stefanp/configure
  else
    echo "$ac_t""no" 1>&6
  echo $ac_n "checking for __db185_open in -ldb-4.0""... $ac_c" 1>&6
-@@ -12472,14 +12472,14 @@
-   DB_LIBS="-ldb1"
+@@ -12478,14 +12478,14 @@
+ fi
+ 
  else
-   echo "$ac_t""no" 1>&6
--echo $ac_n "checking for __db185_open in -ldb-3""... $ac_c" 1>&6
--echo "configure:12477: checking for __db185_open in -ldb-3" >&5
--ac_lib_var=`echo db-3'_'__db185_open | sed 'y%./+-%__p_%'`
-+echo $ac_n "checking for __db185_open in -ldb-4.1""... $ac_c" 1>&6
-+echo "configure:12477: checking for __db185_open in -ldb-4.1" >&5
-+ac_lib_var=`echo db-4.1'_'__db185_open | sed 'y%./+-%__p_%'`
+- echo $ac_n "checking for dbopen in -ldb""... $ac_c" 1>&6
+-echo "configure:12483: checking for dbopen in -ldb" >&5
+-ac_lib_var=`echo db'_'dbopen | sed 'y%./+-%__p_%'`
++ echo $ac_n "checking for dbopen in -ldb-4.1""... $ac_c" 1>&6
++echo "configure:12483: checking for dbopen in -ldb-4.1" >&5
++ac_lib_var=`echo db-4.1'_'dbopen | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    ac_save_LIBS="$LIBS"
--LIBS="-ldb-3  $LIBS"
+-LIBS="-ldb  $LIBS"
 +LIBS="-ldb-4.1  $LIBS"
  cat > conftest.$ac_ext <<EOF
- #line 12485 "configure"
+ #line 12491 "configure"
  #include "confdefs.h"
-@@ -12507,7 +12507,7 @@
+@@ -12513,7 +12513,7 @@
  fi
  if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
    echo "$ac_t""yes" 1>&6
--  DB_LIBS="-ldb-3"
+-  DB_LIBS="-ldb"
 +  DB_LIBS="-ldb-4.1"
  else
    echo "$ac_t""no" 1>&6
- echo $ac_n "checking for __db185_open in -ldb-4.0""... $ac_c" 1>&6
-diff -urN gnucash-1.8.7/configure.in gnucash-1.8.7-stefanp/configure.in
---- gnucash-1.8.7/configure.in	2003-09-15 03:18:17.000000000 +0200
-+++ gnucash-1.8.7-stefanp/configure.in	2003-09-21 15:40:20.791771944 +0200
+ echo $ac_n "checking for dbopen in -ldb1""... $ac_c" 1>&6
+--- ./configure.in.orig	2004-09-07 03:16:19.715560408 +0200
++++ ./configure.in	2004-09-07 03:26:30.021779760 +0200
 @@ -700,7 +700,7 @@
  if test "$prefer_db1" = "yes"; then
   AC_CHECK_LIB(db1, dbopen, DB_LIBS="-ldb1",
@@ -90,8 +88,8 @@ diff -urN gnucash-1.8.7/configure.in gnucash-1.8.7-stefanp/configure.in
 +   AC_CHECK_LIB(db-4.1, __db185_open, DB_LIBS="-ldb-4.1",
      AC_CHECK_LIB(db-4.0, __db185_open, DB_LIBS="-ldb-4.0",
       AC_CHECK_LIB(db-4.1, __db185_open, DB_LIBS="-ldb-4.1",
-       AC_MSG_ERROR([Your db library is missing db 1.85 compatibility mode])
-@@ -712,7 +712,7 @@
+       AC_CHECK_LIB(db-4.2, __db185_open, DB_LIBS="-ldb-4.2",
+@@ -716,7 +716,7 @@
  else
   AC_CHECK_LIB(db, dbopen, DB_LIBS="-ldb",
    AC_CHECK_LIB(db1, dbopen, DB_LIBS="-ldb1",
@@ -99,10 +97,9 @@ diff -urN gnucash-1.8.7/configure.in gnucash-1.8.7-stefanp/configure.in
 +   AC_CHECK_LIB(db-4.1, __db185_open, DB_LIBS="-ldb-4.1",
      AC_CHECK_LIB(db-4.0, __db185_open, DB_LIBS="-ldb-4.0",
       AC_CHECK_LIB(db-4.1, __db185_open, DB_LIBS="-ldb-4.1",
-       AC_MSG_ERROR([Your db library is missing db 1.85 compatibility mode])
-diff -urN gnucash-1.8.7/src/gnome-utils/window-help.c gnucash-1.8.7-stefanp/src/gnome-utils/window-help.c
---- gnucash-1.8.7/src/gnome-utils/window-help.c	2003-01-04 09:11:01.000000000 +0100
-+++ gnucash-1.8.7-stefanp/src/gnome-utils/window-help.c	2003-09-21 15:40:20.792771792 +0200
+       AC_CHECK_LIB(db-4.2, __db185_open, DB_LIBS="-ldb-4.2",
+--- ./src/gnome-utils/window-help.c	2003-01-04 09:11:01.000000000 +0100
++++ ./src/gnome-utils/window-help.c	2003-09-21 15:40:20.792771792 +0200
 @@ -53,13 +53,17 @@
  # endif
  #endif

@@ -1,0 +1,11 @@
+--- ./scaffold.c.orig	2004-07-30 14:33:50.000000000 +0200
++++ ./scaffold.c	2004-07-30 14:34:00.000000000 +0200
+@@ -25,8 +25,6 @@
+ #define	INADDR_NONE	(-1)		/* XXX should be 0xffffffff */
+ #endif
+ 
+-extern char *malloc();
+-
+ /* Application-specific. */
+ 
+ #include "tcpd.h"

@@ -70,7 +70,7 @@ echo_status "Creating temporary files."
 tmpdir=initrd_$$.dir; mkdir -p $disksdir/$tmpdir; cd $disksdir
 dd if=/dev/zero of=initrd.img bs=1024 count=$ramdisk_size &> /dev/null
 tmpdev=""
-for x in /dev/loop/* ; do
+for x in /dev/loop/* /dev/loop[0-9] ; do
         if losetup $x initrd.img 2> /dev/null ; then
                 tmpdev=$x ; break
         fi

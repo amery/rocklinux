@@ -32,7 +32,7 @@ More flexible root application startup. Kind of ROCK Linux specific.
 +	WINDOWMANAGER="${WINDOWMANAGER:-startkde}"
 +	[ "$WINDOWMANAGER" =  "gnome" ] && WINDOWMANAGER="gnome-session"
 +	[ "$WINDOWMANAGER" =  "kde"   ] && WINDOWMANAGER="startkde"
-+	[ "$WINDOWMANAGER" != "twm"   ] && exec $WINDOWMANAGER
++	[ "$WINDOWMANAGER" != "twm" -a -n "$(type -p ${WINDOWMANAGER%% *})" ] && exec $WINDOWMANAGER
 +	xsetroot -solid darkcyan ; exec twm ; exec xterm
  	exec xsm
  fi
@@ -60,5 +60,5 @@ More flexible root application startup. Kind of ROCK Linux specific.
 +WINDOWMANAGER="${WINDOWMANAGER:-startkde}"
 +[ "$WINDOWMANAGER" =  "gnome" ] && WINDOWMANAGER="gnome-session"
 +[ "$WINDOWMANAGER" =  "kde"   ] && WINDOWMANAGER="startkde"
-+[ "$WINDOWMANAGER" != "twm"   ] && exec $WINDOWMANAGER
++[ "$WINDOWMANAGER" != "twm" -a -n "$(type -p ${WINDOWMANAGER%% *})" ] && exec $WINDOWMANAGER
 +xsetroot -solid darkcyan ; exec twm ; exec xterm

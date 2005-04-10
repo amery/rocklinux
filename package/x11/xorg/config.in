@@ -35,7 +35,7 @@ then
 #	fi
 
 	bool 'Build X.Org instead of Xfree86' \
-		ROCKCFG_PKG_XORG_BUILD 0
+		ROCKCFG_PKG_XORG_BUILD 1
 
 	if [ $ROCKCFG_PKG_XORG_BUILD = 1 ] ; then
 		bool 'Enable Xinerama support globally' \

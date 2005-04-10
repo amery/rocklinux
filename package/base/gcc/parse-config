@@ -101,7 +101,17 @@ case "$ROCKCFG_OPT" in
         	var_insert GCC_WRAPPER_INSERT " " "-Os -pipe"
 		;;
 	lazy)
-        	var_insert GCC_WRAPPER_INSERT " " "-O -pipe"
+        	var_insert GCC_WRAPPER_INSERT " " "-O1 -pipe"
+		;;
+	test)
+		case "$pkg" in
+			gcc*|glibc*|binutils*|make|bzip2|gzip|coreutils|bash*|gawk|sed)
+				var_insert GCC_WRAPPER_INSERT " " "-Os -pipe"
+				;;
+			*)
+				var_insert GCC_WRAPPER_INSERT " " "-O1 -pipe"
+				;;
+		esac
 		;;
 esac
 

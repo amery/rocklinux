@@ -1,0 +1,14 @@
+--- ./etc/Makefile.in.orig	2005-03-31 15:13:22.869867688 +0200
++++ ./etc/Makefile.in	2005-03-31 15:14:15.398882064 +0200
+@@ -160,9 +160,9 @@
+ target_alias = @target_alias@
+ usbdropdir = @usbdropdir@
+ 
+-sysconf_DATA = reader.conf
++sysconf_DATA = 
+ 
+-EXTRA_DIST = reader.conf StartupParameters.plist SmartcardServices pcscd.startup
++EXTRA_DIST = reader.conf StartupParameters.plist SmartcardServices
+ subdir = etc
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs

@@ -580,7 +580,7 @@ if [ $stagelevel -eq 0 ]; then
 fi
 
 if [ -f $confdir/$pkg.cache ]; then
-	if ! egrep -q '^\[PROVIDES].*\.so( |$)' $confdir/$pkg.cache; then
+	if ! egrep -q '^\[PROVIDES].*\.(so|a)( |$)' $confdir/$pkg.cache; then
 		forcefpic="0"
 	fi
 fi

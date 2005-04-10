@@ -70,5 +70,17 @@
 [D] 870641564 protector-3.4-2.tar.gz http://www.research.ibm.com/trl/projects/security/ssp/gcc3_4/
 #endif
 
+#if xpkg == gcc40
+[V] 4.0-20050319
+[D] 449602379 gcc-4.0-20050319.tar.bz2 ftp://gcc.gnu.org/pub/gcc/snapshots/4.0-20050319/
+# [D] 870641564 protector-3.4-2.tar.gz http://www.research.ibm.com/trl/projects/security/ssp/gcc3_4/
+#endif
+
+#if xpkg == gcc41
+[V] 4.1-20050320
+[D] 4264714789 gcc-4.1-20050320.tar.bz2 ftp://gcc.gnu.org/pub/gcc/snapshots/4.1-20050320/
+# [D] 870641564 protector-3.4-2.tar.gz http://www.research.ibm.com/trl/projects/security/ssp/gcc3_4/
+#endif
+
 [CD] <COPY> for x in $cachedir/*.cache; do cp $x $confdir/$pkg.cache; done
 

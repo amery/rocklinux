@@ -28,12 +28,16 @@ then
 	bool 'Building gcc 3.2.x package' ROCKCFG_PKG_GCC_GCC32 0
 	bool 'Building gcc 3.3.x package' ROCKCFG_PKG_GCC_GCC33 0
 	bool 'Building gcc 3.4.x package' ROCKCFG_PKG_GCC_GCC34 1
+	bool 'Building gcc 4.0.x package' ROCKCFG_PKG_GCC_GCC40 0
+	bool 'Building gcc 4.1.x package' ROCKCFG_PKG_GCC_GCC41 0
 
 	l=""
 	if [ $ROCKCFG_PKG_GCC_GCC2  = 1 ]; then pkgfork gcc gcc2;  l="$l gcc2";  fi
 	if [ $ROCKCFG_PKG_GCC_GCC32 = 1 ]; then pkgfork gcc gcc32; l="$l gcc32"; fi
 	if [ $ROCKCFG_PKG_GCC_GCC33 = 1 ]; then pkgfork gcc gcc33; l="$l gcc33"; fi
 	if [ $ROCKCFG_PKG_GCC_GCC34 = 1 ]; then pkgfork gcc gcc34; l="$l gcc34"; fi
+	if [ $ROCKCFG_PKG_GCC_GCC40 = 1 ]; then pkgfork gcc gcc40; l="$l gcc40"; fi
+	if [ $ROCKCFG_PKG_GCC_GCC41 = 1 ]; then pkgfork gcc gcc41; l="$l gcc41"; fi
 	pkgremove gcc
 
 	d="none"
@@ -41,6 +45,8 @@ then
 	if [ $ROCKCFG_PKG_GCC_GCC33 = 1 ]; then d="gcc33"; fi
 	if [ $ROCKCFG_PKG_GCC_GCC32 = 1 ]; then d="gcc32"; fi
 	if [ $ROCKCFG_PKG_GCC_GCC34 = 1 ]; then d="gcc34"; fi
+	if [ $ROCKCFG_PKG_GCC_GCC40 = 1 ]; then d="gcc40"; fi
+	if [ $ROCKCFG_PKG_GCC_GCC41 = 1 ]; then d="gcc41"; fi
 
 	k=""; for x in $l; do
 		k="$k $x Use_${x}_as_standard_C_compiler"
@@ -62,7 +68,7 @@ then
 	done
 	choice ROCKCFG_DEFAULT_F77 $d $k
 
-	k=""; for x in gcc2 gcc32 gcc33 gcc34; do
+	k=""; for x in gcc2 gcc32 gcc33 gcc34 gcc40 gcc41; do
 		if [ "$ROCKCFG_DEFAULT_CC" != "$x" ]; then
 			if [ "$ROCKCFG_DEFAULT_CXX" != "$x" ]; then
 				k="$k / gcc=$x / s/^\(..\).../\1---/;"
@@ -106,6 +112,24 @@ then
 		bool 'Do profiled bootstrap' \
 				ROCKCFG_PKG_GCC34_PROFILED 1
 		%include package/*/*/subconfig-gcc34.in
+	fi
+	if pkgcheck gcc=gcc40 X; then
+		comment ' '
+		comment '--- GCC 4.0.x options'
+		bool 'Do not build JAVA compiler' \
+				ROCKCFG_PKG_GCC40_NO_JAVA 1
+		bool 'Do profiled bootstrap' \
+				ROCKCFG_PKG_GCC40_PROFILED 1
+		%include package/*/*/subconfig-gcc40.in
+	fi
+	if pkgcheck gcc=gcc41 X; then
+		comment ' '
+		comment '--- GCC 4.1.x options'
+		bool 'Do not build JAVA compiler' \
+				ROCKCFG_PKG_GCC41_NO_JAVA 1
+		bool 'Do profiled bootstrap' \
+				ROCKCFG_PKG_GCC41_PROFILED 1
+		%include package/*/*/subconfig-gcc41.in
 	fi
 
   menu_end

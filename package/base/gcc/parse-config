@@ -32,6 +32,7 @@ then
 	if [ "$ROCKCFG_PKG_GCC_STACKPRO" = 1 ] ; then
 		var_append GCC2_WRAPPER_INSERT " " "-fstack-protector"
 		var_append GCC3_WRAPPER_INSERT " " "-fstack-protector"
+		var_append GCC4_WRAPPER_INSERT " " "-fstack-protector"
 	fi
 fi
 
@@ -123,6 +124,9 @@ fi
 #
 var_insert GCC3_WRAPPER_REMOVE " " "-I/usr/include"
 var_insert GCC3_WRAPPER_REMOVE " " "-I/usr/local/include"
+#
+var_insert GCC4_WRAPPER_REMOVE " " "-I/usr/include"
+var_insert GCC4_WRAPPER_REMOVE " " "-I/usr/local/include"
 
 # Add the architecture gcc optimisation options
 #

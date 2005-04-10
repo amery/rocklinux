@@ -1,0 +1,23 @@
+diff -ruN gscanbus-0.7.1/gscanbus.c gscanbus-0.7.1-new/gscanbus.c
+--- gscanbus-0.7.1/gscanbus.c	2001-07-11 12:53:51.000000000 +0200
++++ gscanbus-0.7.1-new/gscanbus.c	2005-03-19 00:53:33.303914611 +0100
+@@ -109,13 +109,13 @@
+ 
+ static GdkPixmap *pixmap = NULL;
+ 
+-const char not_compatible[] = "\
+-This libraw1394 does not work with your version of Linux. You need a different
+-version that matches your kernel (see kernel help text for the raw1394 option to
+-find out which is the correct version).\n";
++const char not_compatible[] = 
++"This libraw1394 does not work with your version of Linux. You need a different\
++version that matches your kernel (see kernel help text for the raw1394 option \
++to find out which is the correct version).\n";
+ 
+-const char not_loaded[] = "\
+-This probably means that you don't have raw1394 support in the kernel or that
++const char not_loaded[] = 
++"This probably means that you don't have raw1394 support in the kernel or that \
+ you haven't loaded the raw1394 module.\n";
+ 
+ /*---------------------------------------------------------------------------

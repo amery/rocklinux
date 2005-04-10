@@ -67,6 +67,7 @@ taropt ........ tar options for extracting
 createprefix .. '0' = skip creation for directory skeleton for $prefix
 createdocs .... '0' = skip automatic copying of documentation files
 autoso2a ...... '1' = automatically create *.a files for all *.so files
+forcefpic ..... set to '0' to disable the force -fPIC mechanism
 custmain ...... command to execute instead of 'configure, make, make install'
 mainfunction .. alternate main function instead of build_this_package()
 

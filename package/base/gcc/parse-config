@@ -142,5 +142,14 @@ if [ $stagelevel -gt 1 -a "$ROCKCFG_PSEUDONATIVE" = 1 ]; then
 	var_insert GCC_WRAPPER_INSERT " " "--specs=specs.chroot"
 fi
 
+# register the forcefpic handler
+gcc_force_fpic_handler() {
+	if [ "$forcefpic" = 1 ]; then
+		# echo_status "Enabling force -fPIC mechanism for gcc."
+		var_insert GCC_WRAPPER_INSERT " " "-fPIC"
+	fi
+}
+hook_add prepare 7 'gcc_force_fpic_handler'
+
 # ---- NOT IN STAGE 0 ---
 fi

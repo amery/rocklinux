@@ -528,7 +528,7 @@ taropt="--use-compress-program=bzip2 -xf"
 mainfunction="build_this_package"
 runconf=1 ; runxmkmf=1 ; runmkpl=1 ; runpysetup=1 ; autopatch=1
 autoextract=1 ; chownsrcdir=1 ; nocvsinsrcdir=1; patchopt="-bfp1 -z .orig"
-createprefix=1 ; createdocs="" ; rmemptydir="" ; autoso2a=0
+createprefix=1 ; createdocs="" ; rmemptydir="" ; autoso2a=0 ; forcefpic=""
 
 check_shared=1
 check_usrlocal=1
@@ -574,6 +574,12 @@ if [ $stagelevel -eq 0 ]; then
 	flistroot="$flistroot include share doc info man"
 	flistroot="$flistroot crosscc wrapper $arch_target"
 	createdocs=0
+fi
+
+if [ -f $confdir/$pkg.cache ]; then
+	if ! egrep -q '^\[PROVIDES].*\.so( |$)' $confdir/$pkg.cache; then
+		forcefpic="0"
+	fi
 fi
 
 if [ $stagelevel -gt 1 ]; then

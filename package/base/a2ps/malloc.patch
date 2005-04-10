@@ -1,0 +1,11 @@
+--- ./lib/path-concat.c.orig	2005-04-10 00:27:25.607854272 +0200
++++ ./lib/path-concat.c	2005-04-10 00:27:40.049658784 +0200
+@@ -31,7 +31,7 @@
+ #endif
+ #include <sys/types.h>
+ 
+-char *malloc ();
++// char *malloc ();
+ 
+ #ifndef DIRECTORY_SEPARATOR
+ # define DIRECTORY_SEPARATOR '/'

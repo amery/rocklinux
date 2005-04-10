@@ -1,0 +1,24 @@
+--- ./button.c.orig	2005-04-10 00:30:30.676719528 +0200
++++ ./button.c	2005-04-10 00:31:05.481428408 +0200
+@@ -41,7 +41,7 @@
+ #include "error.h"
+ #include "menu.h"
+ 
+-extern char *malloc();
++/* extern char *malloc(); */
+ 
+ extern void DoSecureKeyboard();
+ 
+--- ./charproc.c.orig	2005-04-10 00:31:27.290112984 +0200
++++ ./charproc.c	2005-04-10 00:31:49.660712136 +0200
+@@ -102,8 +102,8 @@
+ extern XtAppContext app_con;
+ extern Widget toplevel;
+ extern void exit();
+-extern char *malloc();
+-extern char *realloc();
++/* extern char *malloc();  */
++/* extern char *realloc(); */
+ extern fd_set Select_mask;
+ extern fd_set X_mask;
+ extern fd_set pty_mask;

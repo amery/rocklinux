@@ -37,6 +37,7 @@ make_tar=''
 prefix="usr"
 prefix_auto=1
 pkgdir=""
+download=0
 verbose=0
 xtrace=0
 debug=0
@@ -90,6 +91,7 @@ help_msg() {
 	echo "	-id <id>	use the given build id"
 	echo "	-debug		enable debug mode: setup everything and exit before"
 	echo "			the actual build"
+	echo "  -download	download missing source files"
 	echo
 	echo "Type './scripts/Help Build-Pkg' for details."
 	echo
@@ -118,6 +120,7 @@ while [ "$1" ] ; do
 		-pkgdir)  options="$options $1 $2" ; pkgdir="$2"   ; shift ;;
 		-noclearsrc) options="$options $1" ; clear_src=0   ;;
 		-norebuild)  options="$options $1" ; norebuild=1   ;;
+		-download)   options="$options $1" ; download=1    ;;
 		-*) help_msg ; exit 1 ;;
 		*)  break ;;
 	esac
@@ -736,6 +739,25 @@ unset i
 flistdel="$flistdel|${docdir#$root/}"
 
 hook_eval prepare
+
+if [ "$download" = 1 ]
+then
+	download=0
+	while read l_cksum l_srctar l_url l_flags ; do
+		[ -z "$l_cksum" ] && continue 
+		x=`source_file l_cksum $l_srctar l_url $l_flags`
+		if [ ! -f $x ]; then
+			echo_status "File not found: ${x#$base/}"
+			download=1
+		fi
+	done < <( echo "$desc_D" | column_clean )
+	if [ "$download" = 1 ]; then
+		echo_status "Running ./scripts/Download for this package..."
+		echo_status "----- DOWNLOAD LOG -----"
+		echo; ./scripts/Download $pkg; echo
+		echo_status "------------------------"
+	fi
+fi
 
 # define new abort function for errors while building
 #

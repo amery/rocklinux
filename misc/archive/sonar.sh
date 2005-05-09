@@ -81,7 +81,7 @@ commit(){
 	tar --use-compress-program=bzip2 -cf varadm.tar.bz2 adm/{dependencies,descs,flists}
 	echo "done"
 	echo -n "Uploading to ROCK Sonar ... "
-	curl -k -F "v=${rockver}" -F "r=${revision}" -F "t=${target}" -F "d=${description}" -F "c=${comment}" -F "action=add" -F "f=@varadm.tar.bz2" http://scavenger.homeip.net/ROCK/sonar/search.pl
+	curl -k -F "v=${rockver}" -F "r=${revision}" -F "t=${target}" -F "d=${description}" -F "c=${comment}" -F "action=add" -F "f=@varadm.tar.bz2" http://sonar.rocklinux.org/
 	echo "done"
 	echo -n "Cleaning up ... "
 	rm -f varadm.tar.bz2

@@ -1,0 +1,11 @@
+--- ./include/pgbutton.h.orig	2005-05-09 23:40:53.000000000 +0200
++++ ./include/pgbutton.h	2005-05-09 23:42:23.000000000 +0200
+@@ -201,7 +201,7 @@
+ 
+ 	// 1.0.1 versions (surface)
+-#ifndef SWIG
++#if !defined SWIGRUBY && !defined SWIGPYTHON
+	bool SetIcon(SDL_Surface* icon_up, SDL_Surface* icon_down = NULL);
+ #endif
+ 
+ 	SDL_Surface* GetIcon(Uint8 num);	

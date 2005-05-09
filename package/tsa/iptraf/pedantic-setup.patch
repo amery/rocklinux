@@ -1,0 +1,22 @@
+--- ./Setup.orig	2005-05-09 23:10:54.000000000 +0200
++++ ./Setup	2005-05-09 23:11:32.000000000 +0200
+@@ -26,9 +26,9 @@
+     if [ -f src/iptraf.c ]; then
+         echo ">>>>>> COMPILING IPTRAF $VERSION FROM SUPPLIED SOURCE CODE"
+         echo
+-        /usr/bin/make -C src clean
+-        /usr/bin/make -C support clean
+-        /usr/bin/make -C src all
++        /usr/bin/make -C src clean	|| exit 1
++        /usr/bin/make -C support clean	|| exit 1
++        /usr/bin/make -C src all	|| exit 1
+     else
+         echo "*** ERROR: Unable to locate source files."
+         echo "*** If this is a binary-only distribution of IPTraf, try running $0"
+@@ -40,5 +40,5 @@
+     fi
+ fi
+ 
+-/usr/bin/make -C src install
++/usr/bin/make -C src install || exit 1
+ 

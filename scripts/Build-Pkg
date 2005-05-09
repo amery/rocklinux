@@ -438,7 +438,7 @@ if [ $this_is_the_2nd_run = 0 ] ; then
 			fi
 
 			cat $root/var/adm/flists/$xpkg{,:*} 2> /dev/null | \
-				sed -r '\,(bin/[^/]+|lib/lib[^/]+\.(so|a))$, { s,.*/,,; p; };d' | \
+				sed -r '\,(bin/[^/]+|lib/.+\.(so|a))$, { s,.*/,,; p; };d' | \
 				sort -u | fmt -w65 | sed 's,^,[PROVIDES] ,'
 			echo
 

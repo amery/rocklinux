@@ -27,8 +27,9 @@ for filename in `find /var/log -type f ! -name '*.gz'` ; do
 	kilobytes=`du -k $filename | cut -f1`
 	if [ $kilobytes -gt 4096 ] ; then
 		echo -e "$kilobytes\t$filename\t(rotate, sending sighup)"
-		[ -f "$filename-2.gz" ] && mv "$filename-2.gz" "$filename-3.gz"
-		[ -f "$filename-1.gz" ] && mv "$filename-1.gz" "$filename-2.gz"
+		for num in `seq 3 1` ; do
+			[ -f "$filename-$num.gz" ] && mv "$filename-$num.gz" "$filename-$(( $num + 1 )).gz"
+		done
 		mv "$filename" "$filename-1" ; fuser -s -k -HUP "$filename-1"
 		sleep 5 ; gzip "$filename-1"
 	else

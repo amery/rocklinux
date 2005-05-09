@@ -1,0 +1,12 @@
+--- ./client/mysqltest.c	2005-05-01 08:53:22.012954280 +0200
++++ ./client/mysqltest.c	2005-05-01 08:55:04.275408024 +0200
+@@ -3901,6 +3901,9 @@
+   uint len;
+ } FOLLOWS;
+ 
++// avoid conflict with asm/bitops.h
++#define set_bit my_set_bit
++#define clear_bit my_clear_bit
+ 
+ static int init_sets(REP_SETS *sets,uint states);
+ static REP_SET *make_new_set(REP_SETS *sets);

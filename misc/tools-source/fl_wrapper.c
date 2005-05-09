@@ -8,7 +8,7 @@
  * the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
  * 
  * ROCK Linux: rock-src/misc/tools-source/fl_wrapper.c.sh
- * ROCK Linux is Copyright (C) 1998 - 2004 Clifford Wolf
+ * ROCK Linux is Copyright (C) 1998 - 2005 Clifford Wolf
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,6 +21,8 @@
  * file for details.
  * 
  * --- ROCK-COPYRIGHT-NOTE-END ---
+ *
+ * Copyright (C) 2004-2005 The T2 SDE Project
  *
  * gcc -Wall -O2 -ldl -shared -o fl_wrapper.so fl_wrapper.c
  *
@@ -45,6 +47,9 @@
 #define open64 xxx_open64
 #define mknod  xxx_mknod
 
+#define _LARGEFILE_SOURCE
+#define _LARGEFILE64_SOURCE
+
 #  include <dlfcn.h>
 #  include <errno.h>
 #  include <fcntl.h>
@@ -56,6 +61,9 @@
 #  include <unistd.h>
 #  include <utime.h>
 #  include <stdarg.h>
+
+#undef _LARGEFILE64_SOURCE
+#undef _LARGEFILE_SOURCE
 
 #undef mknod
 #undef open
@@ -708,8 +716,8 @@ execvp (file, argv)
  * the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
  * the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
  * 
- * ROCK Linux: rock-src/misc/tools-source/fl_wrapper.c.sh
- * ROCK Linux is Copyright (C) 1998 - 2004 Clifford Wolf
+ * ROCK Linux: rock-src/misc/tools-source/fl_wrapper_open.c
+ * ROCK Linux is Copyright (C) 1998 - 2005 Clifford Wolf
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -959,7 +967,12 @@ static void handle_file_access_after(const char * func, const char * file,
 	else { logfile = rlog; }
 
 	if ( logfile == 0 ) return;
+#ifdef __USE_LARGEFILE
+	fd=open64(logfile,O_APPEND|O_WRONLY|O_LARGEFILE,0);
+#else
+#warning "The wrapper library will not work properly for large logs!"
 	fd=open(logfile,O_APPEND|O_WRONLY,0);
+#endif
 	if (fd == -1) return;
 
 	if (file[0] == '/') {

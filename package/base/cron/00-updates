@@ -26,7 +26,7 @@ exec 2>&1
 
 kver=$(uname -r)
 echo "Running depmod ($kver) ..."
-depmod -a -F /boot/System.map_$kver $kver
+depmod -a -F /boot/System.map-$kver $kver
 
 echo "Running ldconfig ..."
 ldconfig

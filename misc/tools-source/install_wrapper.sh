@@ -65,29 +65,40 @@ if [ "${*/--target-directory//}" != "$*" ]; then
 fi
 
 while [ $# -gt 0 ]; do
-	case "$1" in
+	# Ignore any verbose option
+	if [ "${1:0:1}" == "-" -a "${1:0:2}" != "--" ]; then
+		if [ "$1" == "-v" ]; then shift; continue; fi
+		param="${1//v/}"
+	else
+		param="$1"
+	fi	
+
+	case "$param" in  
+		--verbose)
+			;;	
 		-g|-m|-o|-S|--group|--mode|--owner|--suffix)
-			newcommand="$newcommand $1 $2"
+			newcommand="$newcommand $param $2"
 			shift 1
 			;;
 		-s|--strip)
 			if [ "$ROCKCFG_DEBUG" = 0 -a "$STRIP" = "strip" ] || [[ $command != *install ]]
 			then
-				newcommand="$newcommand $1"
+				newcommand="$newcommand $param"
 			fi
 			;;
 		-*)
-			newcommand="$newcommand $1"
+			newcommand="$newcommand $param"
 			;;
 		*)
 			if [ -n "$destination" ]; then
 				sources[sources_counter++]="$destination"
 			fi
-			destination="$1"
+			destination="$param"
 			;;
 	esac
 	shift 1
 done
+unset param
 
 [ -z "${destination##/*}" ] || destination="$PWD/$destination"
 

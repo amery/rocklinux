@@ -22,6 +22,7 @@
 
 if pkgcheck lvm X || pkgcheck lvm2 X
 then
+  menu_begin MENU_COMPILER 'LVM / LVM2 Related Options'
 	# if ! pkgcheck lvm-wrapper X ; then
 	# 	comment "WARNING! You should really select the lvm-wrapper package when using lvm or lvm2."
 	# fi
@@ -31,4 +32,5 @@ then
 		"none" "Dont install any man-pages regarding LVM" \
 		"lvm"  "Install util man-pages for native LVM of linux-2.4" \
 		"lvm2" "Install util man-pages for LVM2 based on device-mapper"
+  menu_end
 fi

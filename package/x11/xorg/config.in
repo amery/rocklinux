@@ -20,33 +20,31 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-if pkgcheck xfree86 X && pkgcheck xorg X
+if pkgcheck xfree86 X || pkgcheck xorg X
 then
-  menu_begin MENU_PKG_XORG 'X.Org Options'
-#	bool 'Use a CVS checkout instead of last stable release' \
-#		ROCKCFG_PKG_XFREE86_CVS 0
+  menu_begin MENU_PKG_XORG 'X.Org / XFree86 Options'
 
-#	if [ "$ROCKCFG_PKG_XFREE86_CVS" = 1 ] ; then
-#		pkgenable xfree86-cvs
-#		pkgremove xfree86
-#	else
-#		pkgenable xfree86
-#		pkgremove xfree86-cvs
-#	fi
+	if pkgcheck xfree86 X && pkgcheck xorg X
+	then
+		bool 'Build X.Org (instead of Xfree86)' \
+			ROCKCFG_PKG_XORG_BUILD 1
 
-	bool 'Build X.Org instead of Xfree86' \
-		ROCKCFG_PKG_XORG_BUILD 1
-
-	if [ $ROCKCFG_PKG_XORG_BUILD = 1 ] ; then
-		bool 'Enable Xinerama support globally' \
-			ROCKCFG_PKG_XFREE86_XINERAMA 1
-
-		# Enable X.Org packages and disable xfree86 ones				
-		pkgremove xfree86
+		if [ $ROCKCFG_PKG_XORG_BUILD = 1 ] ; then
+			pkgremove xfree86
+		else
+			pkgremove xorg
+		fi
 	else
-		pkgremove xorg
+		if pkgcheck xfree86 X; then
+			comment 'Using XFree86 (xorg already disabled)'
+		fi
+		if pkgcheck xorg X; then
+			comment 'Using X.Org (xfree86 already disabled)'
+		fi
 	fi
 
+	bool 'Enable Xinerama support globally' \
+		ROCKCFG_PKG_XORG_XINERAMA 1
   menu_end
 fi
 

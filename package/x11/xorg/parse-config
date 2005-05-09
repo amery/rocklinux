@@ -20,7 +20,7 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-if [ "$ROCKCFG_PKG_XFREE86_XINERAMA" = 1 ] ; then
+if [ "$ROCKCFG_PKG_XORG_XINERAMA" = 1 ] ; then
 	var_append confopt " " "--with-xinerama"
 fi
 

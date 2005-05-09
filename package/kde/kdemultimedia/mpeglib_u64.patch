@@ -1,0 +1,23 @@
+Fix for mpeglib on AMD64 from http://bugs.kde.org/show_bug.cgi?id=97179
+
+diff -uNr kdemultimedia-3.4.0-orig/mpeglib/lib/input/cdromAccess.cpp kdemultimedia-3.4.0/mpeglib/lib/input/cdromAccess.cpp
+--- kdemultimedia-3.4.0-orig/mpeglib/lib/input/cdromAccess.cpp	2005-01-03 15:53:36.000000000 +0100
++++ kdemultimedia-3.4.0/mpeglib/lib/input/cdromAccess.cpp	2005-04-06 16:18:24.721199472 +0200
+@@ -27,6 +27,9 @@
+   #include <sys/types.h>
+   #ifndef __u64
+   #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,5,70)
++  #ifdef __x86_64__
++  typedef unsigned long long __u64;
++  #else
+   #include <bits/wordsize.h>
+   #if __WORDSIZE == 64
+   typedef unsigned long __u64;
+@@ -35,6 +38,7 @@
+   #endif 
+   #endif
+   #endif
++  #endif
+   #include "cdromAccess_Linux.cpp"
+ #endif
+ 

@@ -394,6 +394,10 @@ expert_end
 %include architecture/*/postconfig.in
 %include target/*/postconfig.in
 
+if [ "$ROCKCFG_CROSSBUILD" = 1 ] ; then
+	pkgfilter sed -e 's,^\(. ..\)[^ ]*,\1--------,;'
+fi
+
 pkgfilter sed '/^[XO] --* / d;'
 
 [ $ROCKCFG_EXPERT = 1 ] ||

@@ -162,6 +162,8 @@ for $iteration (1..99) {
 	}
 	close F;
 
+	system("dot -Tps dependencies.dot -o dependencies.ps");
+
 	last;
   }
   $lop{$looplog} = $iteration;

@@ -20,31 +20,36 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110339203 Wed Mar  9 04:33:23 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115547452 Sun May  8 12:17:32 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-multisync.log 9-multisync.log
 
-[BUILDTIME] 28823 (9)
-[SIZE] 0.68 MB, 39 files
+[BUILDTIME] 31461 (9)
+[SIZE] 0.76 MB, 39 files
 
 [DEP] 00-dirtree alsa alsa:dev arts atk atk:dev audiofile audiofile:dev
 [DEP] autoconf automake17 bash2 binutils bison bluez-libs bluez-libs:dev
 [DEP] bzip2 coreutils curl curl:dev cyrus-sasl2:dev diffutils esound
-[DEP] esound:dev evolution-data-server evolution-data-server:dev
-[DEP] expat expat:dev fam:dev figment file findutils freetype gawk
-[DEP] gcc34 gcc34:dev gconf gconf:dev glib glib:dev glibc23 glibc23:dev
-[DEP] gnome-keyring gnome-keyring:dev gnome-vfs gnome-vfs:dev grep gtk+
-[DEP] gtk+:dev kdelibs kdelibs:dev libart_lgpl23 libart_lgpl23:dev
-[DEP] libbonobo libbonobo:dev libbonoboui libbonoboui:dev libgnome
-[DEP] libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeui
+[DEP] esound:dev evolution-data-server evolution-data-server:dev expat
+[DEP] expat:dev fam:dev figment file findutils freetype freetype:dev
+[DEP] gawk gcc34 gcc34:dev gconf gconf:dev glib glib12 glib:dev glibc23
+[DEP] glibc23:dev gnome-keyring gnome-keyring:dev gnome-libs14 gnome-vfs
+[DEP] gnome-vfs:dev grep gtk+ gtk+:dev kdelibs kdelibs:dev libart_lgpl23
+[DEP] libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui libbonoboui:dev
+[DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeui
 [DEP] libgnomeui:dev libjpeg libjpeg:dev libpng libpng:dev libwbxml2
 [DEP] libwbxml2:dev libxml2 libxml2:dev linux26-header:dev m4 make mktemp
 [DEP] net-tools openldap openldap:dev openobex openobex:dev openssl
 [DEP] openssl:dev orbit2 orbit2:dev pango pango:dev patch perl5 pilot-link
 [DEP] pilot-link:dev pkgconfig popt popt:dev qt qt:dev sed sysfiles tar
-[DEP] util-linux xfree86 xfree86:dev zlib:dev
+[DEP] util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] multisync
+[PROVIDES] libbackup_plugin.a libbackup_plugin.so libevolution2_sync.a
+[PROVIDES] libevolution2_sync.so libirmc_bluetooth.a libirmc_bluetooth.so
+[PROVIDES] libirmc_sync.a libirmc_sync.so libkdepim_sync.a
+[PROVIDES] libkdepim_sync.so libldap_plugin.so libopie_sync.a
+[PROVIDES] libopie_sync.so libpalm_sync.so libsyncml_plugin.a
+[PROVIDES] libsyncml_plugin.so multisync
 

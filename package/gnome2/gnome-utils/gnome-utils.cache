@@ -20,27 +20,30 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110182881 Mon Mar  7 09:08:01 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115425054 Sat May  7 02:17:34 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-gnome-utils.log 9-gnome-utils.log
 
-[BUILDTIME] 5827 (9)
-[SIZE] 3.22 MB, 226 files
+[BUILDTIME] 7525 (5)
+[SIZE] 3.95 MB, 251 files
 
-[DEP] 00-dirtree alsa atk atk:dev audiofile bash2 battfink binutils bzip2
-[DEP] coreutils cpan-xml-parser diffutils docbookx e2fsprogs:dev esound
-[DEP] expat figment findutils freetype gawk gcc34 gcc34:dev gconf gconf:dev
-[DEP] gettext glib glib:dev glibc23 glibc23:dev gnome-blog gnome-desktop
-[DEP] gnome-desktop:dev gnome-keyring gnome-panel gnome-panel:dev gnome-vfs
-[DEP] gnome-vfs:dev grep gtk+ gtk+:dev libart_lgpl23 libart_lgpl23:dev
-[DEP] libbonobo libbonobo:dev libbonoboui libbonoboui:dev libglade
-[DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeui
+[DEP] 00-dirtree alsa atk atk:dev audiofile bash2 battfink binutils
+[DEP] bzip2 coreutils cpan-xml-parser diffutils docbookx e2fsprogs:dev
+[DEP] esound expat figment findutils freetype gawk gcc34 gcc34:dev
+[DEP] gconf gconf:dev gettext glib glib12 glib:dev glibc23 glibc23:dev
+[DEP] gnome-blog gnome-desktop gnome-desktop:dev gnome-keyring gnome-libs14
+[DEP] gnome-panel gnome-panel:dev gnome-vfs gnome-vfs:dev grep gtk+
+[DEP] gtk+:dev libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev
+[DEP] libbonoboui libbonoboui:dev libglade libglade:dev libgnome
+[DEP] libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeprint
+[DEP] libgnomeprint:dev libgnomeprintui libgnomeprintui:dev libgnomeui
 [DEP] libgnomeui:dev libjpeg libxml2 linux26-header:dev make mktemp
 [DEP] net-tools openssl orbit2 orbit2:dev pango pango:dev perl5 pkgconfig
 [DEP] popt popt:dev scrollkeeper sed startup-notification sysfiles tar
-[DEP] util-linux xfree86 zapping zlib:dev
+[DEP] util-linux xorg xorg:dev zapping zlib:dev
 
-[PROVIDES] gnome-dictionary gnome-search-tool gnome-system-log
+[PROVIDES] gnome-dictionary gnome-panel-screenshot gnome-screenshot
+[PROVIDES] gnome-search-tool gnome-system-log
 

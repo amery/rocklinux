@@ -20,21 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110217382 Mon Mar  7 18:43:02 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115385619 Fri May  6 15:20:19 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-sweep.log 9-sweep.log
 
-[BUILDTIME] 4802 (9)
-[SIZE] 0.85 MB, 40 files
+[BUILDTIME] 5458 (9)
+[SIZE] 0.91 MB, 40 files
 
 [DEP] 00-dirtree alsa autoconf bash2 binutils bison bzip2 coreutils
 [DEP] diffutils findutils gawk gcc34 gcc34:dev gettext glib12 glib12:dev
 [DEP] glibc23 glibc23:dev gnotepad+ grep gtk+12 gtk+12:dev libsamplerate
 [DEP] libsamplerate:dev libsndfile libsndfile:dev linux26-header:dev
 [DEP] mad mad:dev make mktemp net-tools ogg-vorbis ogg-vorbis:dev perl5
-[DEP] pkgconfig sed sysfiles tar tdb tdb:dev texinfo xfree86 zapping
+[DEP] pkgconfig sed speex speex:dev sysfiles tar tdb tdb:dev texinfo
+[DEP] xorg zapping
 
-[PROVIDES] sweep
+[PROVIDES] libbyenergy.a libbyenergy.so libecho.a libecho.so libfade.a
+[PROVIDES] libfade.so libladspameta.a libladspameta.so libnormalise.a
+[PROVIDES] libnormalise.so libreverse.a libreverse.so sweep
 

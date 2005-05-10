@@ -20,20 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110170514 Mon Mar  7 05:41:54 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115273120 Thu May  5 08:05:20 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-xosd.log 9-xosd.log
 
-[BUILDTIME] 3438 (9)
-[SIZE] 0.12 MB, 40 files
+[BUILDTIME] 3828 (9)
+[SIZE] 0.13 MB, 40 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev gdk-pixbuf10 gdk-pixbuf10:dev glib12 glib12:dev
-[DEP] glibc23 glibc23:dev grep gtk+12 gtk+12:dev linux26-header:dev make
-[DEP] mktemp net-tools sed sysfiles tar util-linux xfree86 xfree86:dev
-[DEP] xmms xmms:dev
+[DEP] glibc23 glibc23:dev grep gtk+12 gtk+12:dev linux26-header:dev
+[DEP] make mktemp net-tools sed sysfiles tar util-linux xmms xmms:dev
+[DEP] xorg xorg:dev
 
-[PROVIDES] libxosd.a libxosd.so osd_cat xosd-config
+[PROVIDES] libxmms_osd.so libxosd.a libxosd.so osd_cat xosd-config
 

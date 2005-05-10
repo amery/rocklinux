@@ -20,18 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110201189 Mon Mar  7 14:13:09 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115342185 Fri May  6 03:16:25 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-dvb-apps.log 9-dvb-apps.log
 
-[BUILDTIME] 2065 (9)
-[SIZE] 0.24 MB, 162 files
+[BUILDTIME] 2379 (9)
+[SIZE] 0.24 MB, 164 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp patch sed
-[DEP] sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
+[DEP] patch sed sysfiles tar
 
 [PROVIDES] av7110_loadkeys czap dvbdate dvbnet dvbscan dvbtraffic femon
 [PROVIDES] szap tzap

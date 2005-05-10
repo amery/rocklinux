@@ -20,17 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110301246 Tue Mar  8 18:00:46 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115449806 Sat May  7 09:10:06 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-mono-xsp.log 9-mono-xsp.log
 
-[BUILDTIME] 2028 (9)
+[BUILDTIME] 2723 (9)
 [SIZE] 0.22 MB, 20 files
 
-[DEP] 00-dirtree bash2 bzip2 coreutils diffutils findutils gcc34 glibc23
-[DEP] grep make mktemp mono net-tools sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 bzip2 coreutils diffutils findutils gawk gcc34
+[DEP] glibc23 grep make mktemp mono net-tools patch sed sysfiles tar
+[DEP] util-linux
 
 [PROVIDES] asp-state codebehind1.dll dbsessmgr extensions.dll
 [PROVIDES] mod-mono-server tabcontrol.dll tabcontrol2.dll typedesc.dll xsp

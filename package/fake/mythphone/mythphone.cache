@@ -20,17 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110166637 Mon Mar  7 04:37:17 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115268467 Thu May  5 06:47:47 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-mythphone.log 9-mythphone.log
 
-[BUILDTIME] 9409 (9)
-[SIZE] 1.05 MB, 45 files
+[BUILDTIME] 9059 (9)
+[SIZE] 1.08 MB, 48 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp mythdvd
-[DEP] mythtv mythtv:dev qt qt:dev sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
+[DEP] mythtv mythtv:dev patch qt qt:dev sed sysfiles tar
 
+[PROVIDES] libmythphone.so
 

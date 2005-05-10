@@ -20,27 +20,29 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110202106 Mon Mar  7 14:28:26 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115343553 Fri May  6 03:39:13 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-kdeartwork.log 9-kdeartwork.log
 
-[BUILDTIME] 40853 (9)
-[SIZE] 26.23 MB, 7935 files
+[BUILDTIME] 43114 (9)
+[SIZE] 26.51 MB, 8070 files
 
-[DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev
-[DEP] bash2 binutils bzip2 coreutils diffutils esound esound:dev expat
-[DEP] fam fam:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev
-[DEP] gettext glib glib:dev glibc23 glibc23:dev grep jack jack:dev kdebase
-[DEP] kdebase:dev kdelibs kdelibs:dev libart_lgpl23 libart_lgpl23:dev
-[DEP] libjpeg libpng libpng:dev linux26-header:dev mad mad:dev make mktemp
-[DEP] nas net-tools ogg-vorbis ogg-vorbis:dev perl5 qt qt:dev sed sysfiles
-[DEP] tar util-linux vim xfree86 xfree86:dev zlib:dev
+[DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils expat fam
+[DEP] fam:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev gettext
+[DEP] glibc23 glibc23:dev grep kdebase kdebase:dev kdelibs kdelibs:dev
+[DEP] kdepim libart_lgpl23 libart_lgpl23:dev libjpeg libpng libpng:dev
+[DEP] linux26-header:dev make mktemp net-tools perl5 qt qt:dev sed sysfiles
+[DEP] tar util-linux vim xorg xorg:dev zlib:dev
 
-[PROVIDES] kbanner.kss kblob.kss kclock.kss keuphoria.kss kfiresaver.kss
+[PROVIDES] dotnet.so kbanner.kss kblob.kss kclock.kss keuphoria.kss
 [PROVIDES] kflux.kss kfountain.kss kgravity.kss klines.kss klorenz.kss
 [PROVIDES] kpartsaver.kss kpendulum.kss kpolygon.kss krotation.kss
 [PROVIDES] kscience.kss kslideshow.kss ksolarwinds.kss kspace.kss
-[PROVIDES] kswarm.kss kvm.kss kwave.kss kxsconfig kxsrun
+[PROVIDES] kstyle_phase_config.so kswarm.kss kvm.kss kwave.kss
+[PROVIDES] kwin3_cde.so kwin3_glow.so kwin3_icewm.so kwin3_kde1.so
+[PROVIDES] kwin3_kstep.so kwin3_openlook.so kwin3_riscos.so kwin3_system.so
+[PROVIDES] kwin_cde_config.so kwin_glow_config.so kwin_icewm_config.so
+[PROVIDES] kxsconfig kxsrun phasestyle.so
 

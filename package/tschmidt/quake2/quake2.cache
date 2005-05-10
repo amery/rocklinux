@@ -20,19 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110659919 Sat Mar 12 21:38:39 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115580338 Sun May  8 21:25:38 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-quake2.log 9-quake2.log
 
-[BUILDTIME] 43739 (9)
-[SIZE] 2.16 MB, 24 files
+[BUILDTIME] 22427 (9)
+[SIZE] 2.38 MB, 24 files
 
 [DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libsdl libsdl:dev
 [DEP] linux26-header:dev make mktemp nas net-tools sed svgalib svgalib:dev
-[DEP] sysfiles tar util-linux xfree86 xfree86:dev
+[DEP] sysfiles tar util-linux xorg xorg:dev
 
-[PROVIDES] quake2
+[PROVIDES] game.a game.so quake2 ref_glx.a ref_glx.so ref_sdlgl.a
+[PROVIDES] ref_sdlgl.so ref_soft.a ref_soft.so ref_softsdl.a ref_softsdl.so
+[PROVIDES] ref_softx.a ref_softx.so ref_tdfx.a ref_tdfx.so
 

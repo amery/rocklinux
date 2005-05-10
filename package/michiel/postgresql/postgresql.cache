@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110151802 Mon Mar  7 00:30:02 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115215849 Wed May  4 16:10:49 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-postgresql.log 9-postgresql.log
 
-[BUILDTIME] 25687 (9)
-[SIZE] 15.69 MB, 1445 files
+[BUILDTIME] 27112 (9)
+[SIZE] 16.32 MB, 1446 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils
 [DEP] findutils flex gawk gcc34 gcc34:dev glibc23 glibc23:dev grep gzip
@@ -35,10 +35,19 @@
 [DEP] openssl openssl:dev pam pam:dev patch perl5 perl5:dev readline
 [DEP] readline:dev sed sysfiles tar util-linux zlib:dev
 
-[PROVIDES] clusterdb createdb createlang createuser dropdb droplang
-[PROVIDES] dropuser ecpg initdb ipcclean libecpg.a libecpg.so
-[PROVIDES] libecpg_compat.a libecpg_compat.so libpgport.a libpgtypes.a
-[PROVIDES] libpgtypes.so libpq.a libpq.so pg_config pg_controldata pg_ctl
-[PROVIDES] pg_dump pg_dumpall pg_resetxlog pg_restore postgres postmaster
-[PROVIDES] psql vacuumdb
+[PROVIDES] ascii_and_mic.so clusterdb createdb createlang createuser
+[PROVIDES] cyrillic_and_mic.so dropdb droplang dropuser ecpg
+[PROVIDES] euc_cn_and_mic.so euc_jp_and_sjis.so euc_kr_and_mic.so
+[PROVIDES] euc_tw_and_big5.so initdb ipcclean latin2_and_win1250.so
+[PROVIDES] latin_and_mic.so libecpg.a libecpg.so libecpg_compat.a
+[PROVIDES] libecpg_compat.so libpgport.a libpgtypes.a libpgtypes.so
+[PROVIDES] libpq.a libpq.so pg_config pg_controldata pg_ctl pg_dump
+[PROVIDES] pg_dumpall pg_resetxlog pg_restore plperl.so plpgsql.so
+[PROVIDES] postgres postmaster psql utf8_and_ascii.so utf8_and_big5.so
+[PROVIDES] utf8_and_cyrillic.so utf8_and_euc_cn.so utf8_and_euc_jp.so
+[PROVIDES] utf8_and_euc_kr.so utf8_and_euc_tw.so utf8_and_gb18030.so
+[PROVIDES] utf8_and_gbk.so utf8_and_iso8859.so utf8_and_iso8859_1.so
+[PROVIDES] utf8_and_johab.so utf8_and_sjis.so utf8_and_tcvn.so
+[PROVIDES] utf8_and_uhc.so utf8_and_win1250.so utf8_and_win1256.so
+[PROVIDES] utf8_and_win874.so vacuumdb
 

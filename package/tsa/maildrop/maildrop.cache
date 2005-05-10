@@ -20,16 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110158619 Mon Mar  7 02:23:39 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115243208 Wed May  4 23:46:48 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-maildrop.log 9-maildrop.log
 
-[BUILDTIME] 11396 (9)
-[SIZE] 0.78 MB, 47 files
+[BUILDTIME] 20877 (9)
+[SIZE] 0.85 MB, 47 files
 
-[DEP] 00-dirtree bash2 bdb42 binutils bzip2 coreutils diffutils fam fam:dev
+[DEP] 00-dirtree bash2 bdb42 bdb42:dev binutils bzip2 coreutils
+[DEP] courier-authlib courier-authlib:dev diffutils fam fam:dev
 [DEP] findutils gawk gcc34 gcc34:dev gdbm gdbm:dev glibc23 glibc23:dev
 [DEP] grep linux26-header:dev make mktemp net-tools perl5 sed sysfiles
 [DEP] tar util-linux

@@ -20,16 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104686977 Sun Jan  2 18:29:37 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115276148 Thu May  5 08:55:48 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
-[LOGS] 5-libmusicbrainz.log
+[LOGS] 5-libmusicbrainz.log 9-libmusicbrainz.log
 
-[BUILDTIME] 5716 (5)
-[SIZE] 0.17 MB, 9 files
+[BUILDTIME] 6282 (9)
+[SIZE] 0.24 MB, 9 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils expat expat:dev
-[DEP] findutils gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils expat
+[DEP] expat:dev findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
+[DEP] linux26-header:dev make mktemp net-tools sed sysfiles tar util-linux
+
+[PROVIDES] libmusicbrainz.a libmusicbrainz.so
 

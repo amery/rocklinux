@@ -20,19 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110305950 Tue Mar  8 19:19:10 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115458541 Sat May  7 11:35:41 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-keepalived.log 9-keepalived.log
 
-[BUILDTIME] 2733 (9)
-[SIZE] 0.14 MB, 14 files
+[BUILDTIME] 3139 (9)
+[SIZE] 0.15 MB, 14 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev linux26-source
-[DEP] make mktemp net-tools openssl openssl:dev patch popt popt:dev sed
-[DEP] sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
+[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
+[DEP] linux26-source make mktemp net-tools openssl openssl:dev patch popt
+[DEP] popt:dev sed sysfiles tar util-linux
 
 [PROVIDES] genhash keepalived
 

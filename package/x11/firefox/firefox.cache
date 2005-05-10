@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110304010 Tue Mar  8 18:46:50 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115455050 Sat May  7 10:37:30 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-firefox.log 9-firefox.log
 
-[BUILDTIME] 181613 (9)
-[SIZE] 26.37 MB, 1549 files
+[BUILDTIME] 319447 (9)
+[SIZE] 29.14 MB, 1547 files
 
 [DEP] 00-dirtree alsa atk atk:dev bash2 binutils bzip2 control-center
 [DEP] coreutils diffutils expat findutils freetype freetype:dev gawk
@@ -36,7 +36,25 @@
 [DEP] libbonobo libbonobo:dev libgnome libgnome:dev libidl libidl:dev
 [DEP] linux26-header:dev make mktemp mplayerplug-in nautilus-cd-burner
 [DEP] net-tools orbit2 orbit2:dev pango pango:dev patch perl5 pkgconfig
-[DEP] popt sed sysfiles tar xfree86 xfree86:dev zip zlib:dev
+[DEP] popt sed sysfiles tar xorg xorg:dev zip zlib:dev
 
-[PROVIDES] defaults firefox firefox-config gtk2xtbin.h gtkxtbin.h
+[PROVIDES] firefox firefox-config gtk2xtbin.h gtkxtbin.h
+[PROVIDES] libaccessibility.so libappcomps.so libautoconfig.so
+[PROVIDES] libbrowsercomps.so libcaps.so libchrome.so libcomposer.so
+[PROVIDES] libcookie.so libdocshell.so libeditor.so libembedcomponents.so
+[PROVIDES] libfileview.so libgfx_gtk.so libgfxps.so libgfxxprint.so
+[PROVIDES] libgkgfx.so libgklayout.so libgkplugin.so libgtkembedmoz.so
+[PROVIDES] libgtkxtbin.so libhtmlpars.so libi18n.so libimglib2.so
+[PROVIDES] libinspector.so libjar50.so libjsd.so libjsj.so libmork.so
+[PROVIDES] libmozfind.so libmozgnome.so libmozjs.so libmozz.so
+[PROVIDES] libnecko.so libnecko2.so libnkgnomevfs.so libnsappshell.so
+[PROVIDES] libnspr4.so libnss3.so libnssckbi.so libnullplugin.so liboji.so
+[PROVIDES] libpipboot.so libpipnss.so libpippki.so libplc4.so libplds4.so
+[PROVIDES] libpref.so librdf.so libsmime3.so libsoftokn3.so libssl3.so
+[PROVIDES] libsystem-pref.so libtoolkitcomps.so libtransformiix.so
+[PROVIDES] libtxmgr.so libuconv.so libucvmath.so libuniversalchardet.so
+[PROVIDES] libwebbrwsr.so libwebsrvcs.so libwidget_gtk2.so
+[PROVIDES] libxlibrgb.so libxmlextras.so libxpcom.so libxpcom_compat.so
+[PROVIDES] libxpcom_compat_c.so libxpconnect.so libxpinstall.so
+[PROVIDES] libxpistub.so libxremote_client.so libxremoteservice.so
 

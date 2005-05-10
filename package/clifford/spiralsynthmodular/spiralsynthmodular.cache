@@ -20,19 +20,30 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110217278 Mon Mar  7 18:41:18 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115385101 Fri May  6 15:11:41 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-spiralsynthmodular.log 9-spiralsynthmodular.log
 
-[BUILDTIME] 11768 (9)
-[SIZE] 8.20 MB, 44 files
+[BUILDTIME] 12368 (9)
+[SIZE] 9.35 MB, 44 files
 
 [DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] fltk fltk:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libpng
 [DEP] libpng:dev linux26-header:dev make mktemp net-tools patch sed
-[DEP] sysfiles tar xfree86 xfree86:dev zlib:dev
+[DEP] sysfiles tar xorg xorg:dev zlib:dev
 
-[PROVIDES] SpiralSynthModular
+[PROVIDES] AmpPlugin.so ComplexEnvelopePlugin.so ControllerPlugin.so
+[PROVIDES] DelayPlugin.so DistributorPlugin.so EchoPlugin.so
+[PROVIDES] EnvFollowerPlugin.so EnvelopePlugin.so FilterPlugin.so
+[PROVIDES] JoystickPlugin.so LADSPAPlugin.so LFOPlugin.so MeterPlugin.so
+[PROVIDES] MidiPlugin.so MixerPlugin.so MoogFilterPlugin.so
+[PROVIDES] NoteSnapPlugin.so OscillatorPlugin.so OutputPlugin.so
+[PROVIDES] PoshSamplerPlugin.so RingModPlugin.so SVFilterPlugin.so
+[PROVIDES] SampleHoldPlugin.so SamplerPlugin.so ScopePlugin.so SeqPlugin.so
+[PROVIDES] SeqSelectorPlugin.so SmoothPlugin.so SpiralLoopPlugin.so
+[PROVIDES] SpiralSynthModular SplitterPlugin.so StereoMixerPlugin.so
+[PROVIDES] StreamPlugin.so WaveShaperPlugin.so WaveTablePlugin.so
+[PROVIDES] XFadePlugin.so
 

@@ -20,27 +20,29 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104737144 Mon Jan  3 08:25:44 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115438072 Sat May  7 05:54:32 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
-[LOGS] 5-gnome-terminal.log
+[LOGS] 5-gnome-terminal.log 9-gnome-terminal.log
 
-[BUILDTIME] 6021 (5)
-[SIZE] 6.50 MB, 167 files
+[BUILDTIME] 6881 (9)
+[SIZE] 6.78 MB, 175 files
 
-[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
-[DEP] autoconf bash2 battfink binutils bzip2 coreutils cpan-xml-parser
-[DEP] diffutils docbookx esound esound:dev expat figment findutils
+[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
+[DEP] battfink binutils bzip2 coreutils cpan-xml-parser diffutils docbookx
+[DEP] esound esound:dev expat figment findutils freetype freetype:dev
 [DEP] gawk gcc34 gcc34:dev gconf gconf:dev gettext glib glib:dev glibc23
 [DEP] glibc23:dev gnome-blog gnome-desktop gnome-keyring gnome-keyring:dev
 [DEP] gnome-mime-data gnome-vfs gnome-vfs:dev grep gtk+ gtk+:dev
 [DEP] libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui
 [DEP] libbonoboui:dev libglade libglade:dev libgnome libgnome:dev
-[DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev
-[DEP] libjpeg libjpeg:dev libxml2 libxml2:dev linux26-header:dev make
-[DEP] mktemp ncurses:dev openssl orbit2 orbit2:dev pango pango:dev
+[DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev libjpeg
+[DEP] libjpeg:dev libxml2 libxml2:dev linux26-header:dev make mktemp
+[DEP] ncurses:dev net-tools openssl orbit2 orbit2:dev pango pango:dev
 [DEP] perl5 pkgconfig popt popt:dev scrollkeeper sed startup-notification
-[DEP] startup-notification:dev sysfiles tar texinfo util-linux vte vte:dev
-[DEP] xfree86 xfree86:dev zapping zlib:dev
+[DEP] startup-notification:dev sysfiles tar util-linux vte vte:dev xorg
+[DEP] xorg:dev zapping zlib:dev
+
+[PROVIDES] gnome-terminal
 

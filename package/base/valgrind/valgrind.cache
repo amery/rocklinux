@@ -20,19 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110139956 Sun Mar  6 21:12:36 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115187793 Wed May  4 08:23:13 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-valgrind.log 9-valgrind.log
 
-[BUILDTIME] 6237 (9)
-[SIZE] 1.62 MB, 34 files
+[BUILDTIME] 5870 (9)
+[SIZE] 1.69 MB, 34 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp net-tools patch perl5 sed sysfiles tar util-linux xfree86
-[DEP] xfree86:dev
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
+[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
+[DEP] make mktemp net-tools patch perl5 sed sysfiles tar util-linux
+[DEP] xorg xorg:dev
 
-[PROVIDES] cg_annotate valgrind valgrind-listener
+[PROVIDES] cg_annotate libpthread.so valgrind valgrind-listener
+[PROVIDES] vg_inject.so vgpreload_addrcheck.so vgpreload_helgrind.so
+[PROVIDES] vgpreload_massif.so vgpreload_memcheck.so vgskin_addrcheck.so
+[PROVIDES] vgskin_cachegrind.so vgskin_corecheck.so vgskin_helgrind.so
+[PROVIDES] vgskin_lackey.so vgskin_massif.so vgskin_memcheck.so
+[PROVIDES] vgskin_none.so
 

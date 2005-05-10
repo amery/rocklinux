@@ -20,21 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110158707 Mon Mar  7 02:25:07 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115243580 Wed May  4 23:53:00 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-gconf.log 9-gconf.log
 
-[BUILDTIME] 6865 (9)
-[SIZE] 4.12 MB, 108 files
+[BUILDTIME] 7876 (9)
+[SIZE] 4.23 MB, 110 files
 
-[DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils diffutils expat
-[DEP] findutils freetype gawk gcc34 gcc34:dev gettext glib glib:dev glibc23
-[DEP] glibc23:dev grep gtk+ gtk+:dev gtkdoc indent libxml2 libxml2:dev
+[DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils diffutils
+[DEP] expat findutils freetype gawk gcc34 gcc34:dev gettext glib glib:dev
+[DEP] glibc23 glibc23:dev grep gtk+ gtk+:dev gtkdoc libxml2 libxml2:dev
 [DEP] linux26-header:dev make mktemp net-tools orbit2 orbit2:dev pango
 [DEP] pango:dev perl5 pkgconfig popt popt:dev sed sysfiles tar util-linux
-[DEP] xfree86 zlib:dev
+[DEP] xorg zlib:dev
 
 [PROVIDES] gconf-merge-tree gconftool-2 libgconf-2.a libgconf-2.so
+[PROVIDES] libgconfbackend-oldxml.a libgconfbackend-oldxml.so
+[PROVIDES] libgconfbackend-xml.a libgconfbackend-xml.so
 

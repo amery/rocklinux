@@ -20,30 +20,34 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110179150 Mon Mar  7 08:05:50 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115423430 Sat May  7 01:50:30 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-gedit.log 9-gedit.log
 
-[BUILDTIME] 11372 (9)
-[SIZE] 7.04 MB, 228 files
+[BUILDTIME] 12892 (5)
+[SIZE] 11.61 MB, 228 files
 
-[DEP] 00-dirtree alsa alsa:dev aspell aspell:dev atk atk:dev
-[DEP] audiofile audiofile:dev bash2 battfink binutils bzip2 coreutils
+[DEP] 00-dirtree alsa alsa:dev aspell aspell:dev atk atk:dev audiofile
+[DEP] audiofile:dev bash2 battfink binutils bug-buddy bzip2 coreutils
 [DEP] cpan-xml-parser diffutils docbookx eel eel:dev esound esound:dev
-[DEP] expat figment findutils gail gail:dev gawk gcc34 gcc34:dev gconf
-[DEP] gconf:dev gettext glib glib:dev glibc23 glibc23:dev gnome-blog
-[DEP] gnome-desktop gnome-keyring gnome-keyring:dev gnome-mime-data
-[DEP] gnome-vfs gnome-vfs:dev grep gtk+ gtk+:dev gtksourceview
-[DEP] gtksourceview:dev indent libart_lgpl23 libart_lgpl23:dev
+[DEP] expat figment findutils freetype freetype:dev gail gail:dev
+[DEP] gawk gcc34 gcc34:dev gconf gconf:dev gettext glib glib:dev
+[DEP] glibc23 glibc23:dev gnome-blog gnome-desktop gnome-desktop:dev
+[DEP] gnome-keyring gnome-keyring:dev gnome-menus gnome-menus:dev
+[DEP] gnome-mime-data gnome-vfs gnome-vfs:dev grep gtk+ gtk+:dev
+[DEP] gtksourceview gtksourceview:dev libart_lgpl23 libart_lgpl23:dev
 [DEP] libbonobo libbonobo:dev libbonoboui libbonoboui:dev libglade
 [DEP] libglade:dev libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev
 [DEP] libgnomeprint libgnomeprint:dev libgnomeprintui libgnomeprintui:dev
 [DEP] libgnomeui libgnomeui:dev libjpeg libjpeg:dev libxml2 libxml2:dev
 [DEP] linux26-header:dev make mktemp net-tools openssl orbit2 orbit2:dev
 [DEP] pango pango:dev perl5 pkgconfig popt popt:dev scrollkeeper sed
-[DEP] sysfiles tar util-linux xfree86 zapping zlib:dev
+[DEP] startup-notification startup-notification:dev sysfiles tar util-linux
+[DEP] xorg zapping zlib:dev
 
-[PROVIDES] gedit gnome-text-editor
+[PROVIDES] gedit gnome-text-editor libchangecase.so libdocinfo.so
+[PROVIDES] libindent.so libsample.so libsavecopy.so libshell_output.so
+[PROVIDES] libsort.so libspell.so libtaglist.so libtime.so
 

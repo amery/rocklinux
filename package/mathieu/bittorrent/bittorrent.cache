@@ -20,21 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110312060 Tue Mar  8 21:01:00 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115481691 Sat May  7 18:01:31 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-bittorrent.log 9-bittorrent.log
 
-[BUILDTIME] 1255 (9)
-[SIZE] 0.52 MB, 73 files
+[BUILDTIME] 1669 (9)
+[SIZE] 0.84 MB, 111 files
 
-[DEP] 00-dirtree bash2 coreutils findutils gcc34 grep mktemp numpy python
-[DEP] sed unzip wxpython
+[DEP] 00-dirtree bash2 bzip2 coreutils findutils gcc34 grep mktemp numpy
+[DEP] pil python sed sysfiles tar wxpython zapping
 
-[PROVIDES] btcompletedir.py btcompletedirgui.py btdownloadcurses.py
-[PROVIDES] btdownloadgui.py btdownloadheadless.py btdownloadlibrary.py
-[PROVIDES] btlaunchmany.py btlaunchmanycurses.py btmakemetafile.py
-[PROVIDES] btreannounce.py btrename.py btshowmetainfo.py bttest.py
-[PROVIDES] bttrack.py
+[PROVIDES] btdownloadcurses.py btdownloadgui.py btdownloadheadless.py
+[PROVIDES] btlaunchmany.py btlaunchmanycurses.py btmaketorrent.py
+[PROVIDES] btmaketorrentgui.py btreannounce.py btrename.py
+[PROVIDES] btshowmetainfo.py bttest.py bttrack.py
 

@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110170319 Mon Mar  7 05:38:39 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115272852 Thu May  5 08:00:52 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-pilot-link.log 9-pilot-link.log
 
-[BUILDTIME] 11016 (9)
-[SIZE] 0.89 MB, 102 files
+[BUILDTIME] 11550 (9)
+[SIZE] 0.95 MB, 102 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev
 [DEP] grep libpng libpng:dev libtool linux26-header:dev m4 make mktemp
-[DEP] ncurses:dev net-tools numpy patch perl5 python python:dev readline
-[DEP] sed sysfiles tar tcl tcl:dev tk util-linux wxpython xfree86 zlib:dev
+[DEP] ncurses:dev net-tools numpy patch perl5 pil python python:dev
+[DEP] readline sed sysfiles tar tcl tcl:dev tk util-linux wxpython xorg
+[DEP] zlib:dev
 
-[PROVIDES] addresses ccexample debugsh dlpsh hinotes ietf2datebook
+[PROVIDES] Pilot.so addresses ccexample debugsh dlpsh hinotes ietf2datebook
 [PROVIDES] install-datebook install-expenses install-hinote install-memo
 [PROVIDES] install-netsync install-todo install-todos install-user
 [PROVIDES] libpisock++.a libpisock++.so libpisock.a libpisock.so

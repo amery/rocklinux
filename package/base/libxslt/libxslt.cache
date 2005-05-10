@@ -20,20 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110146737 Sun Mar  6 23:05:37 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115198683 Wed May  4 11:24:43 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-libxslt.log 9-libxslt.log
 
-[BUILDTIME] 7067 (9)
-[SIZE] 0.73 MB, 22 files
+[BUILDTIME] 7620 (9)
+[SIZE] 0.77 MB, 22 files
 
 [DEP] 00-dirtree bash2 binutils binutils:dev bzip2 coreutils diffutils
 [DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libgcrypt
 [DEP] libgcrypt:dev libgpg-error libgpg-error:dev libxml2 libxml2:dev
-[DEP] linux26-header:dev make mktemp net-tools numpy python python:dev
+[DEP] linux26-header:dev make mktemp net-tools numpy pil python python:dev
 [DEP] sed sysfiles tar util-linux wxpython zlib:dev
 
-[PROVIDES] libexslt.a libexslt.so libxslt.a libxslt.so xslt-config xsltproc
+[PROVIDES] libexslt.a libexslt.so libxslt.a libxslt.so libxsltmod.a
+[PROVIDES] libxsltmod.so xslt-config xsltproc
 

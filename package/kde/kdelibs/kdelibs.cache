@@ -20,52 +20,74 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110166400 Mon Mar  7 04:33:20 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115268210 Thu May  5 06:43:30 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-kdelibs.log 9-kdelibs.log
 
-[BUILDTIME] 398029 (9)
-[SIZE] 28.90 MB, 4237 files
+[BUILDTIME] 638974 (9)
+[SIZE] 36.08 MB, 4761 files
 
 [DEP] 00-dirtree alsa alsa:dev arts arts:dev aspell aspell:dev audiofile
 [DEP] audiofile:dev autoconf bash2 binutils bzip2 bzip2:dev coreutils
 [DEP] cups cups:dev diffutils doxygen esound esound:dev expat fam fam:dev
 [DEP] findutils freetype freetype:dev gawk gcc34 gcc34:dev gettext glib
 [DEP] glib12 glib:dev glibc23 glibc23:dev gnome-libs14 graphviz grep
-[DEP] jack jack:dev jasper:dev libart_lgpl23 libart_lgpl23:dev libjpeg
-[DEP] libjpeg:dev libpng libpng:dev libtiff libtiff:dev libxml2 libxml2:dev
-[DEP] libxslt libxslt:dev linux26-header:dev m4 mad mad:dev make mktemp
-[DEP] nas net-tools ogg-vorbis ogg-vorbis:dev openssl openssl:dev patch
-[DEP] pcre pcre:dev perl5 pkgconfig qt qt:dev sed sysfiles tar util-linux
-[DEP] xfree86 xfree86:dev zlib:dev
+[DEP] jack jack:dev jasper:dev libart_lgpl23 libart_lgpl23:dev libdockapp
+[DEP] libjpeg libjpeg:dev libpng libpng:dev libtiff libtiff:dev libxml2
+[DEP] libxml2:dev libxslt libxslt:dev linux26-header:dev m4 mad mad:dev
+[DEP] make mktemp nas net-tools ogg-vorbis ogg-vorbis:dev openssl
+[DEP] openssl:dev pcre pcre:dev perl5 pkgconfig qt qt:dev sed sysfiles
+[DEP] tar terminus-font util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] artsmessage checkXML cupsdconf cupsdoprint dcop dcopclient
-[PROVIDES] dcopfind dcopidl dcopidl2cpp dcopidlng dcopobject dcopquit
-[PROVIDES] dcopref dcopserver dcopserver_shutdown dcopstart filesharelist
-[PROVIDES] fileshareset ghns imagetops kab2kabc kaddprinterwizard
-[PROVIDES] kbuildsycoca kconf_update kconfig_compiler kcookiejar
-[PROVIDES] kde-config kde-menu kded kdeinit kdeinit_shutdown
-[PROVIDES] kdeinit_wrapper kdesu_stub kdontchangethehostname kfile
-[PROVIDES] kfmexec kgrantpty khotnewstuff kimage_concat kinstalltheme
-[PROVIDES] kio_http_cache_cleaner kio_uiserver kioexec kioslave
-[PROVIDES] klauncher kmailservice kpac_dhcp_helper ksendbugmail kshell
-[PROVIDES] ksvgtopng ktelnetservice ktradertest kwrapper libDCOP.so
-[PROVIDES] libartskde.so libkabc.so libkabc_dir.so libkabc_file.so
-[PROVIDES] libkabc_ldapkio.so libkabc_net.so libkatepartinterfaces.so
+[PROVIDES] artsmessage checkXML cupsdconf cupsdconf.so cupsdoprint
+[PROVIDES] dcop dcopclient dcopfind dcopidl dcopidl2cpp dcopidlng
+[PROVIDES] dcopobject dcopquit dcopref dcopserver dcopserver.so
+[PROVIDES] dcopserver_shutdown dcopstart filesharelist fileshareset
+[PROVIDES] highcolor.so highcontrast.so imagetops kab2kabc kabc_dir.so
+[PROVIDES] kabc_file.so kabc_ldapkio.so kabc_net.so kabcformat_binary.so
+[PROVIDES] kaddprinterwizard kaddprinterwizard.so kbuildsycoca
+[PROVIDES] kbuildsycoca.so kbzip2filter.so kcm_kresources.so kcmshell
+[PROVIDES] kcmshell.so kconf_update kconf_update.so kconfig_compiler
+[PROVIDES] kcookiejar kcookiejar.so kde-config kde-menu kded kded.so
+[PROVIDES] kded_kcookiejar.so kded_kdeprintd.so kded_kdetrayproxy.so
+[PROVIDES] kded_kpasswdserver.so kded_kssld.so kded_kwalletd.so
+[PROVIDES] kded_proxyscout.so kdeinit kdeinit_shutdown kdeinit_wrapper
+[PROVIDES] kdeprint_cups.so kdeprint_ext.so kdeprint_lpdunix.so
+[PROVIDES] kdeprint_lpr.so kdeprint_rlpr.so kdeprint_tool_escputil.so
+[PROVIDES] kdesu_stub kdewidgets.so kdontchangethehostname keramik.so
+[PROVIDES] kfile kfileaudiopreview.so kfmexec kgrantpty kgzipfilter.so
+[PROVIDES] khotnewstuff khtmlimagepart.so kimage_concat kimg_dds.so
+[PROVIDES] kimg_eps.so kimg_ico.so kimg_jp2.so kimg_pcx.so kimg_psd.so
+[PROVIDES] kimg_rgb.so kimg_tga.so kimg_tiff.so kimg_xcf.so kimg_xview.so
+[PROVIDES] kinstalltheme kio_file.so kio_ftp.so kio_ghelp.so kio_help.so
+[PROVIDES] kio_http.so kio_http_cache_cleaner kio_http_cache_cleaner.so
+[PROVIDES] kio_metainfo.so kio_uiserver kio_uiserver.so kioexec
+[PROVIDES] kioslave kjavaappletviewer.so klauncher klauncher.so
+[PROVIDES] kmailservice knotify.so kpac_dhcp_helper ksendbugmail kshell
+[PROVIDES] kspell_aspell.so kspell_ispell.so kstyle_plastik_config.so
+[PROVIDES] ksvgtopng ktelnetservice ktexteditor_docwordcompletion.so
+[PROVIDES] ktexteditor_insertfile.so ktexteditor_isearch.so
+[PROVIDES] ktexteditor_kdatatool.so kthemestyle.so ktradertest kwrapper
+[PROVIDES] libDCOP.so libartskde.so libkabc.so libkabc_dir.so
+[PROVIDES] libkabc_file.so libkabc_ldapkio.so libkabc_net.so
+[PROVIDES] libkatepart.so libkatepartinterfaces.so libkcertpart.so
 [PROVIDES] libkdecore.so libkdefakes.so libkdefakes_nonpic.a
 [PROVIDES] libkdefx.so libkdeinit_cupsdconf.so libkdeinit_dcopserver.so
 [PROVIDES] libkdeinit_kaddprinterwizard.so libkdeinit_kbuildsycoca.so
-[PROVIDES] libkdeinit_kconf_update.so libkdeinit_kcookiejar.so
-[PROVIDES] libkdeinit_kded.so libkdeinit_kio_http_cache_cleaner.so
-[PROVIDES] libkdeinit_kio_uiserver.so libkdeinit_klauncher.so
-[PROVIDES] libkdeprint.so libkdeprint_management.so libkdesasl.so
-[PROVIDES] libkdesu.so libkdeui.so libkhtml.so libkimproxy.so libkio.so
-[PROVIDES] libkjava.so libkjs.so libkmdi.so libkmediaplayer.so libkmid.so
-[PROVIDES] libknewstuff.so libkparts.so libkresources.so libkscreensaver.so
-[PROVIDES] libkscript.so libkspell.so libkspell2.so libktexteditor.so
-[PROVIDES] libkutils.so libkwalletbackend.so libkwalletclient.so
-[PROVIDES] libvcard.so lnusertemp make_driver_db_cups make_driver_db_lpr
-[PROVIDES] makekdewidgets meinproc preparetips
+[PROVIDES] libkdeinit_kcmshell.so libkdeinit_kconf_update.so
+[PROVIDES] libkdeinit_kcookiejar.so libkdeinit_kded.so
+[PROVIDES] libkdeinit_kio_http_cache_cleaner.so libkdeinit_kio_uiserver.so
+[PROVIDES] libkdeinit_klauncher.so libkdeprint.so libkdeprint_management.so
+[PROVIDES] libkdeprint_management_module.so libkdesasl.so libkdesu.so
+[PROVIDES] libkdeui.so libkdnssd.so libkhtml.so libkhtmlpart.so
+[PROVIDES] libkimproxy.so libkio.so libkjava.so libkjs.so libkmdi.so
+[PROVIDES] libkmdi2.so libkmediaplayer.so libkmid.so libkmultipart.so
+[PROVIDES] libknewstuff.so libkntlm.so libkparts.so libkresources.so
+[PROVIDES] libkscreensaver.so libkscript.so libkspell.so libkspell2.so
+[PROVIDES] libktexteditor.so libkutils.so libkwalletbackend.so
+[PROVIDES] libkwalletclient.so libshellscript.so libvcard.so light.so
+[PROVIDES] lnusertemp make_driver_db_cups make_driver_db_lpr makekdewidgets
+[PROVIDES] meinproc plastik.so preparetips
 

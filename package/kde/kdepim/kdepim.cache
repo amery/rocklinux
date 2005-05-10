@@ -20,45 +20,98 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110200206 Mon Mar  7 13:56:46 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115340309 Fri May  6 02:45:09 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-kdepim.log 9-kdepim.log
 
-[BUILDTIME] 369413 (9)
-[SIZE] 23.71 MB, 1214 files
+[BUILDTIME] 487631 (9)
+[SIZE] 37.62 MB, 1427 files
 
-[DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev bash2
-[DEP] binutils bison bluez-libs bluez-libs:dev bzip2 coreutils diffutils
+[DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev
+[DEP] autoconf automake19 bash2 binutils bison bluez-libs bluez-libs:dev
+[DEP] bzip2 coreutils cyrus-sasl2 cyrus-sasl2:dev cyrus-sasl:dev diffutils
 [DEP] esound esound:dev expat fam fam:dev findutils flex flex:dev freetype
 [DEP] freetype:dev gawk gcc34 gcc34:dev gettext glib glib:dev glibc23
 [DEP] glibc23:dev gnokii gnokii:dev gpgme gpgme:dev grep jack jack:dev
-[DEP] kdebase kdebase:doc kdelibs kdelibs:dev kdelibs:doc libart_lgpl23
+[DEP] kdebase kdelibs kdelibs:dev kdelibs:doc kdeutils libart_lgpl23
 [DEP] libart_lgpl23:dev libassuan:dev libgpg-error libgpg-error:dev libjpeg
 [DEP] libjpeg:dev libpng libpng:dev linux26-header:dev m4 mad mad:dev make
 [DEP] mktemp nas ncurses:dev net-tools ogg-vorbis ogg-vorbis:dev openssl
-[DEP] openssl:dev pcre pcre:dev perl5 pilot-link pilot-link:dev qt qt:dev
-[DEP] sed sysfiles tar util-linux vim xfree86 xfree86:dev zlib:dev
+[DEP] openssl:dev patch pcre pcre:dev perl5 pilot-link pilot-link:dev qt
+[DEP] qt:dev sed sysfiles tar util-linux vim xorg xorg:dev zlib:dev
 
-[PROVIDES] egroupwarewizard groupwarewizard ical2vcal kabc2mutt
-[PROVIDES] kaddressbook kalarm kalarmd kandy kandy_client karm
-[PROVIDES] kitchensync kleopatra kmail kmail_antivir.sh kmail_clamav.sh
-[PROVIDES] kmail_fprot.sh kmail_sav.sh kmailcvt knode knotes kolabwizard
-[PROVIDES] konsolekalendar kontact korgac korganizer korganizerIn
-[PROVIDES] korn kpalmdoc kpilot kpilotDaemon ksync ktnef kwatchgnupg
-[PROVIDES] libdummykonnector.so libgpgme++.so libkabc_imap.so
-[PROVIDES] libkabc_slox.so libkabc_xmlrpc.so libkabckonnector.so
-[PROVIDES] libkabinterfaces.so libkaddressbook.so libkalarmd.so
-[PROVIDES] libkcal.so libkcal_imap.so libkcal_resourceremote.so
-[PROVIDES] libkcal_slox.so libkcal_xmlrpc.so libkcalkonnector.so
-[PROVIDES] libkdenetwork.so libkdepim.so libkgantt.so libkitchensyncui.so
-[PROVIDES] libkleopatra.so libkmailprivate.so libknodecommon.so
-[PROVIDES] libknotes_imap.so libknotes_xmlrpc.so libkonnector.so
-[PROVIDES] libkontact.so libkorganizer.so libkorganizer_calendar.so
-[PROVIDES] libkorganizer_eventviewer.so libkpilot.so libkpimexchange.so
-[PROVIDES] libkpimidentities.so libkpinterfaces.so libksharedfile.so
-[PROVIDES] libksieve.so libkslox.so libksync.so libksync2.so
-[PROVIDES] libktnef.so liblocalkonnector.so libmimelib.so libqgpgme.so
-[PROVIDES] libqtopiakonnector.so libremotekonnector.so sloxwizard
+[PROVIDES] akregator conduit_address.so conduit_doc.so
+[PROVIDES] conduit_knotes.so conduit_memofile.so conduit_notepad.so
+[PROVIDES] conduit_popmail.so conduit_sysinfo.so conduit_time.so
+[PROVIDES] conduit_todo.so conduit_vcal.so egroupwarewizard
+[PROVIDES] exchangewizard groupwarewizard groupwisewizard ical2vcal
+[PROVIDES] kabc2mutt kabc_groupdav.so kabc_groupwise.so kabc_kolab.so
+[PROVIDES] kabc_newexchange.so kabc_slox.so kabc_xmlrpc.so kaddressbook
+[PROVIDES] kalarm kalarmd kandy kandy_client karm kcal_blogging.so
+[PROVIDES] kcal_groupdav.so kcal_groupwise.so kcal_kabc.so kcal_kolab.so
+[PROVIDES] kcal_local.so kcal_localdir.so kcal_newexchange.so
+[PROVIDES] kcal_remote.so kcal_resourcefeatureplan.so kcal_slox.so
+[PROVIDES] kcal_xmlrpc.so kcm_kabconfig.so kcm_kabcustomfields.so
+[PROVIDES] kcm_kabldapconfig.so kcm_kabsummary.so kcm_kleopatra.so
+[PROVIDES] kcm_kmail.so kcm_kmailsummary.so kcm_knode.so kcm_kontact.so
+[PROVIDES] kcm_kontactknt.so kcm_kontactsummary.so kcm_korganizer.so
+[PROVIDES] kcm_korgsummary.so kcm_kpilot.so kcm_sdsummary.so
+[PROVIDES] kded_networkstatus.so kdepimwidgets.so kfile_ics.so
+[PROVIDES] kfile_palm.so kfile_vcf.so kio_groupwise.so kio_imap4.so
+[PROVIDES] kio_mbox.so kio_sieve.so kitchensync kleopatra kmail
+[PROVIDES] kmail_antivir.sh kmail_clamav.sh kmail_fprot.sh kmail_sav.sh
+[PROVIDES] kmailcvt knode knotes knotes_kolab.so knotes_local.so
+[PROVIDES] knotes_xmlrpc.so kode kolabwizard konsolekalendar kontact
+[PROVIDES] korgac korganizer korganizerIn korn korn-3-4-config_change
+[PROVIDES] kpalmdoc kpartsdesignerplugin.so kpilot kpilotDaemon ksync
+[PROVIDES] ktnef kwatchgnupg kxml_compiler ldifvcardthumbnail.so
+[PROVIDES] libakregatorpart.so libakregatorprivate.so
+[PROVIDES] libegroupwarewizard.so libexchangewizard.so
+[PROVIDES] libgpgme++.so libgroupwisewizard.so libkabc_groupdav.so
+[PROVIDES] libkabc_groupwise.so libkabc_newexchange.so libkabc_slox.so
+[PROVIDES] libkabc_xmlrpc.so libkabckolab.so libkabckonnector.so
+[PROVIDES] libkabinterfaces.so libkaddrbk_bookmark_xxport.so
+[PROVIDES] libkaddrbk_cardview.so libkaddrbk_cryptosettings.so
+[PROVIDES] libkaddrbk_csv_xxport.so libkaddrbk_distributionlist.so
+[PROVIDES] libkaddrbk_eudora_xxport.so libkaddrbk_gnokii_xxport.so
+[PROVIDES] libkaddrbk_iconview.so libkaddrbk_kde2_xxport.so
+[PROVIDES] libkaddrbk_ldif_xxport.so libkaddrbk_opera_xxport.so
+[PROVIDES] libkaddrbk_pab_xxport.so libkaddrbk_resourceselection.so
+[PROVIDES] libkaddrbk_tableview.so libkaddrbk_vcard_xxport.so
+[PROVIDES] libkaddressbook.so libkaddressbookpart.so libkcal.so
+[PROVIDES] libkcal_blogging.so libkcal_groupdav.so libkcal_groupwise.so
+[PROVIDES] libkcal_newexchange.so libkcal_resourcefeatureplan.so
+[PROVIDES] libkcal_resourceremote.so libkcal_slox.so libkcal_xmlrpc.so
+[PROVIDES] libkcalkolab.so libkcalkonnector.so libkdepim.so libkgantt.so
+[PROVIDES] libkgroupwarebase.so libkgroupwaredav.so libkholidays.so
+[PROVIDES] libkitchensyncpart.so libkitchensyncui.so libkleopatra.so
+[PROVIDES] libkmail_bodypartformatter_application_octetstream.so
+[PROVIDES] libkmail_bodypartformatter_text_calendar.so
+[PROVIDES] libkmail_bodypartformatter_text_vcard.so
+[PROVIDES] libkmail_bodypartformatter_text_xdiff.so libkmailpart.so
+[PROVIDES] libkmailprivate.so libkmime.so libknodecommon.so libknodepart.so
+[PROVIDES] libknotes_xmlrpc.so libknoteskolab.so libkocorehelper.so
+[PROVIDES] libkode.so libkolabwizard.so libkonnector.so libkontact.so
+[PROVIDES] libkontact_akregator.so libkontact_journalplugin.so
+[PROVIDES] libkontact_kaddressbookplugin.so libkontact_kmailplugin.so
+[PROVIDES] libkontact_knodeplugin.so libkontact_knotesplugin.so
+[PROVIDES] libkontact_korganizerplugin.so libkontact_kpilotplugin.so
+[PROVIDES] libkontact_multisynk.so libkontact_newstickerplugin.so
+[PROVIDES] libkontact_specialdatesplugin.so libkontact_summaryplugin.so
+[PROVIDES] libkontact_todoplugin.so libkontact_weatherplugin.so
+[PROVIDES] libkorg_datenums.so libkorg_exchange.so libkorg_hebrew.so
+[PROVIDES] libkorg_journalprint.so libkorg_stdprinting.so libkorganizer.so
+[PROVIDES] libkorganizer_calendar.so libkorganizer_eventviewer.so
+[PROVIDES] libkorganizerpart.so libkpgp.so libkpilot.so libkpimexchange.so
+[PROVIDES] libkpimidentities.so libkpinterfaces.so libksieve.so
+[PROVIDES] libkslox.so libksync.so libksync2.so libksync_backup.so
+[PROVIDES] libksync_debugger.so libksync_pluckerpart.so libksync_restore.so
+[PROVIDES] libksync_syncerpart.so libksync_viewer.so libktnef.so
+[PROVIDES] liblocalkonnector.so libmimelib.so libmultisynk.so
+[PROVIDES] libmultisynkpart.so liboverviewpart.so libqgpgme.so
+[PROVIDES] libqtopiakonnector.so libremotekonnector.so libsloxwizard.so
+[PROVIDES] multisynk networkstatustestservice resourcecalendarexchange.so
+[PROVIDES] sloxwizard
 

@@ -20,19 +20,114 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110662314 Sat Mar 12 22:18:34 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115684314 Tue May 10 02:18:34 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
-[LOGS] 5-btscanner.log 9-btscanner.log
+[LOGS] 5-btscanner.err 9-btscanner.err
 
-[BUILDTIME] 4152 (9)
-[SIZE] 1.14 MB, 8 files
+[BUILDTIME] 2400 (9)
 
-[DEP] 00-dirtree arpwatch autoconf automake19 bash2 binutils bluez-libs
-[DEP] bluez-libs:dev bzip2 coreutils diffutils findutils gcc34 gcc34:dev
-[DEP] gdbm gdbm:dev glibc23 glibc23:dev grep linux26-header:dev m4 make
-[DEP] mktemp ncurses:dev net-tools patch perl5 sed sysfiles tar util-linux
 
-[PROVIDES] btscanner
+[5-ERROR] checking sys/ioctl.h presence... yes
+[5-ERROR] checking for sys/ioctl.h... yes
+[5-ERROR] checking sys/socket.h usability... yes
+[5-ERROR] checking sys/socket.h presence... yes
+[5-ERROR] checking for sys/socket.h... yes
+[5-ERROR] checking for unistd.h... (cached) yes
+[5-ERROR] checking bluetooth/bluetooth.h usability... yes
+[5-ERROR] checking bluetooth/bluetooth.h presence... yes
+[5-ERROR] checking for bluetooth/bluetooth.h... yes
+[5-ERROR] checking bluetooth/sdp.h usability... yes
+[5-ERROR] checking bluetooth/sdp.h presence... yes
+[5-ERROR] checking for bluetooth/sdp.h... yes
+[5-ERROR] checking gdbm.h usability... yes
+[5-ERROR] checking gdbm.h presence... yes
+[5-ERROR] checking for gdbm.h... yes
+[5-ERROR] checking for an ANSI C-conforming const... yes
+[5-ERROR] checking for size_t... yes
+[5-ERROR] checking whether gcc-34 needs -traditional... no
+[5-ERROR] checking for stdlib.h... (cached) yes
+[5-ERROR] checking for GNU libc compatible malloc... yes
+[5-ERROR] checking return type of signal handlers... void
+[5-ERROR] checking for memset... yes
+[5-ERROR] checking for strerror... yes
+[5-ERROR] configure: creating ./config.status
+[5-ERROR] config.status: creating Makefile
+[5-ERROR] config.status: creating btscanner.h
+[5-ERROR] gcc-34 -g -O2 -c btscanner.c
+[5-ERROR] gcc-34 -g -O2 -c bs_scan.c
+[5-ERROR] gcc-34 -g -O2 -c bs_screen.c
+[5-ERROR] gcc-34 -g -O2 -c bs_info.c
+[5-ERROR] bs_info.c: In function `bs_get_info':
+[5-ERROR] bs_info.c:163: error: `get_link_quality_rp' undeclared (first use in this function)
+[5-ERROR] bs_info.c:163: error: (Each undeclared identifier is reported only once
+[5-ERROR] bs_info.c:163: error: for each function it appears in.)
+[5-ERROR] bs_info.c:163: error: parse error before "rp_lq"
+[5-ERROR] bs_info.c:293: error: `rp_lq' undeclared (first use in this function)
+[5-ERROR] bs_info.c:295: error: `OCF_GET_LINK_QUALITY' undeclared (first use in this function)
+[5-ERROR] bs_info.c:299: error: `GET_LINK_QUALITY_RP_SIZE' undeclared (first use in this function)
+[5-ERROR] make: *** [bs_info.o] Error 1
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 0 files for this package.
+[5-ERROR] Applying package split: 40 btscanner:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 btscanner:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 btscanner:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building btscanner=btscanner.
+
+[9-ERROR] checking sys/ioctl.h presence... yes
+[9-ERROR] checking for sys/ioctl.h... yes
+[9-ERROR] checking sys/socket.h usability... yes
+[9-ERROR] checking sys/socket.h presence... yes
+[9-ERROR] checking for sys/socket.h... yes
+[9-ERROR] checking for unistd.h... (cached) yes
+[9-ERROR] checking bluetooth/bluetooth.h usability... yes
+[9-ERROR] checking bluetooth/bluetooth.h presence... yes
+[9-ERROR] checking for bluetooth/bluetooth.h... yes
+[9-ERROR] checking bluetooth/sdp.h usability... yes
+[9-ERROR] checking bluetooth/sdp.h presence... yes
+[9-ERROR] checking for bluetooth/sdp.h... yes
+[9-ERROR] checking gdbm.h usability... yes
+[9-ERROR] checking gdbm.h presence... yes
+[9-ERROR] checking for gdbm.h... yes
+[9-ERROR] checking for an ANSI C-conforming const... yes
+[9-ERROR] checking for size_t... yes
+[9-ERROR] checking whether gcc-34 needs -traditional... no
+[9-ERROR] checking for stdlib.h... (cached) yes
+[9-ERROR] checking for GNU libc compatible malloc... yes
+[9-ERROR] checking return type of signal handlers... void
+[9-ERROR] checking for memset... yes
+[9-ERROR] checking for strerror... yes
+[9-ERROR] configure: creating ./config.status
+[9-ERROR] config.status: creating Makefile
+[9-ERROR] config.status: creating btscanner.h
+[9-ERROR] gcc-34 -g -O2 -c btscanner.c
+[9-ERROR] gcc-34 -g -O2 -c bs_scan.c
+[9-ERROR] gcc-34 -g -O2 -c bs_screen.c
+[9-ERROR] gcc-34 -g -O2 -c bs_info.c
+[9-ERROR] bs_info.c: In function `bs_get_info':
+[9-ERROR] bs_info.c:163: error: `get_link_quality_rp' undeclared (first use in this function)
+[9-ERROR] bs_info.c:163: error: (Each undeclared identifier is reported only once
+[9-ERROR] bs_info.c:163: error: for each function it appears in.)
+[9-ERROR] bs_info.c:163: error: parse error before "rp_lq"
+[9-ERROR] bs_info.c:293: error: `rp_lq' undeclared (first use in this function)
+[9-ERROR] bs_info.c:295: error: `OCF_GET_LINK_QUALITY' undeclared (first use in this function)
+[9-ERROR] bs_info.c:299: error: `GET_LINK_QUALITY_RP_SIZE' undeclared (first use in this function)
+[9-ERROR] make: *** [bs_info.o] Error 1
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 0 files for this package.
+[9-ERROR] Applying package split: 40 btscanner:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 btscanner:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 btscanner:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building btscanner=btscanner.
 

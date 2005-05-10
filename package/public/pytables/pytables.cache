@@ -20,19 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110396426 Wed Mar  9 20:27:06 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115560118 Sun May  8 15:48:38 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-pytables.log 9-pytables.log
 
-[BUILDTIME] 5436 (9)
-[SIZE] 0.63 MB, 34 files
+[BUILDTIME] 2404 (9)
+[SIZE] 0.67 MB, 34 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep hdf5 hdf5:dev linux26-header:dev lzo:dev
-[DEP] mktemp numpy pynumarray pynumarray:dev python python:dev sed sysfiles
-[DEP] tar ucl:dev wxpython
+[DEP] mktemp numpy pil pynumarray pynumarray:dev python python:dev sed
+[DEP] sysfiles tar ucl:dev wxpython
 
-[PROVIDES] ptdump ptrepack
+[PROVIDES] hdf5Extension.so ptdump ptrepack
 

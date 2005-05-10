@@ -20,31 +20,32 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110175666 Mon Mar  7 07:07:46 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115422495 Sat May  7 01:34:55 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-gnome-panel.log 9-gnome-panel.log
 
-[BUILDTIME] 15382 (9)
-[SIZE] 8.21 MB, 447 files
+[BUILDTIME] 15944 (5)
+[SIZE] 8.23 MB, 458 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
 [DEP] battfink binutils bzip2 coreutils cpan-xml-parser diffutils docbookx
 [DEP] esound esound:dev evolution-data-server evolution-data-server:dev
-[DEP] expat figment findutils freetype gawk gcc34 gcc34:dev gconf gconf:dev
-[DEP] gettext glib glib12 glib:dev glibc23 glibc23:dev gnome-blog
+[DEP] expat findutils freetype gawk gcc34 gcc34:dev gconf gconf-editor
+[DEP] gconf:dev gettext glib glib:dev glibc23 glibc23:dev gnome-blog
 [DEP] gnome-desktop gnome-desktop:dev gnome-keyring gnome-keyring:dev
-[DEP] gnome-libs14 gnome-vfs gnome-vfs:dev grep gtk+ gtk+:dev indent
-[DEP] libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui
-[DEP] libbonoboui:dev libglade libglade:dev libgnome libgnome:dev
-[DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev libjpeg
-[DEP] libjpeg:dev libpng libpng:dev libwnck libwnck:dev libxml2 libxml2:dev
-[DEP] linux26-header:dev make mktemp net-tools openssl orbit2 orbit2:dev
-[DEP] pango pango:dev perl5 pkgconfig popt popt:dev scrollkeeper sed
-[DEP] startup-notification startup-notification:dev sysfiles tar util-linux
-[DEP] xfree86 xfree86:dev zapping zlib:dev
+[DEP] gnome-menus gnome-menus:dev gnome-vfs gnome-vfs:dev grep gtk+
+[DEP] gtk+:dev libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev
+[DEP] libbonoboui libbonoboui:dev libglade libglade:dev libgnome
+[DEP] libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeui
+[DEP] libgnomeui:dev libjpeg libjpeg:dev libwnck libwnck:dev libxml2
+[DEP] libxml2:dev linux26-header:dev make mktemp mozilla net-tools
+[DEP] openssl orbit2 orbit2:dev pango pango:dev perl5 pkgconfig popt
+[DEP] popt:dev scrollkeeper sed spheres-and-crystals startup-notification
+[DEP] startup-notification:dev sysfiles tar util-linux xorg xorg:dev
+[DEP] zapping zlib:dev
 
-[PROVIDES] gnome-desktop-item-edit gnome-panel gnome-panel-screenshot
-[PROVIDES] libpanel-applet-2.a libpanel-applet-2.so panel-test-applets
+[PROVIDES] gnome-desktop-item-edit gnome-panel libpanel-applet-2.a
+[PROVIDES] libpanel-applet-2.so panel-test-applets
 

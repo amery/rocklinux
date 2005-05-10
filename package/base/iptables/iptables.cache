@@ -20,18 +20,39 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110305862 Tue Mar  8 19:17:42 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115458383 Sat May  7 11:33:03 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-iptables.log 9-iptables.log
 
-[BUILDTIME] 3626 (9)
-[SIZE] 0.59 MB, 84 files
+[BUILDTIME] 4123 (9)
+[SIZE] 0.65 MB, 87 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
 [DEP] sed sysfiles tar
 
 [PROVIDES] ip6tables iptables iptables-restore iptables-save
+[PROVIDES] libip6t_HL.so libip6t_LOG.so libip6t_MARK.so libip6t_TRACE.so
+[PROVIDES] libip6t_eui64.so libip6t_hl.so libip6t_icmpv6.so
+[PROVIDES] libip6t_length.so libip6t_limit.so libip6t_mac.so
+[PROVIDES] libip6t_mark.so libip6t_multiport.so libip6t_owner.so
+[PROVIDES] libip6t_physdev.so libip6t_standard.so libip6t_tcp.so
+[PROVIDES] libip6t_udp.so libipt_CLASSIFY.so libipt_CONNMARK.so
+[PROVIDES] libipt_DNAT.so libipt_DSCP.so libipt_ECN.so libipt_LOG.so
+[PROVIDES] libipt_MARK.so libipt_MASQUERADE.so libipt_MIRROR.so
+[PROVIDES] libipt_NETMAP.so libipt_NOTRACK.so libipt_REDIRECT.so
+[PROVIDES] libipt_REJECT.so libipt_SAME.so libipt_SNAT.so libipt_TARPIT.so
+[PROVIDES] libipt_TCPMSS.so libipt_TOS.so libipt_TRACE.so libipt_TTL.so
+[PROVIDES] libipt_ULOG.so libipt_addrtype.so libipt_ah.so libipt_comment.so
+[PROVIDES] libipt_connlimit.so libipt_connmark.so libipt_conntrack.so
+[PROVIDES] libipt_dscp.so libipt_ecn.so libipt_esp.so libipt_hashlimit.so
+[PROVIDES] libipt_helper.so libipt_icmp.so libipt_iprange.so
+[PROVIDES] libipt_length.so libipt_limit.so libipt_mac.so libipt_mark.so
+[PROVIDES] libipt_multiport.so libipt_owner.so libipt_physdev.so
+[PROVIDES] libipt_pkttype.so libipt_realm.so libipt_recent.so libipt_rpc.so
+[PROVIDES] libipt_sctp.so libipt_standard.so libipt_state.so libipt_tcp.so
+[PROVIDES] libipt_tcpmss.so libipt_tos.so libipt_ttl.so libipt_udp.so
+[PROVIDES] libipt_unclean.so
 

@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110187421 Mon Mar  7 10:23:41 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115305608 Thu May  5 17:06:48 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-avifile.log 9-avifile.log
 
-[BUILDTIME] 46842 (9)
-[SIZE] 4.95 MB, 108 files
+[BUILDTIME] 46805 (9)
+[SIZE] 6.17 MB, 109 files
 
 [DEP] 00-dirtree a52dec:dev autoconf bash2 binutils bzip2 coreutils
 [DEP] diffutils divx4linux divx4linux:dev expat findutils freetype
@@ -35,10 +35,14 @@
 [DEP] lame libjpeg libjpeg:dev libpng libsdl libsdl:dev libtool
 [DEP] linux26-header:dev m4 make mktemp nas net-tools ogg-vorbis
 [DEP] ogg-vorbis:dev patch perl5 pkgconfig qt qt:dev sed sysfiles tar
-[DEP] texinfo util-linux xfree86 xfree86:dev xvid:dev zlib:dev
+[DEP] texinfo util-linux xorg xorg:dev xvid:dev zlib:dev
 
-[PROVIDES] avibench avicap avicat avifile-config avimake aviplay
-[PROVIDES] avirec avirecompress avitype kv4lsetup libaviplay.so
-[PROVIDES] libaviplayavcodec.so libaviplayavformat.so libaviplaydha.so
-[PROVIDES] libaviplayvidix.so libqavm.so
+[PROVIDES] ac3pass.so audiodec.so avibench avicap avicat avifile-config
+[PROVIDES] avimake aviplay avirec avirecompress avitype divx4.so
+[PROVIDES] ffmpeg.so kv4lsetup libaviplay.so libaviplayavcodec.so
+[PROVIDES] libaviplayavformat.so libaviplaydha.so libaviplayvidix.so
+[PROVIDES] libgenfb.so libmach64.so libmga.so libmga_crtc2.so libpm3.so
+[PROVIDES] libqavm.so libradeon.so librage128.so mad_audiodec.so
+[PROVIDES] mp3lame_audioenc.so mp3lamebin_audioenc.so mpeg_audiodec.so
+[PROVIDES] osmjpeg.so vorbis_audio.so win32.so xvid4.so
 

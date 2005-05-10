@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110188226 Mon Mar  7 10:37:06 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115308377 Thu May  5 17:52:57 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-xchat.log 9-xchat.log
 
-[BUILDTIME] 6481 (9)
-[SIZE] 4.38 MB, 49 files
+[BUILDTIME] 7172 (9)
+[SIZE] 4.68 MB, 49 files
 
 [DEP] 00-dirtree alsa atk atk:dev bash2 binutils bison bzip2 coreutils
 [DEP] diffutils expat figment findutils freetype gawk gcc34 gcc34:dev
 [DEP] gettext glib glib:dev glibc23 glibc23:dev grep gtk+ gtk+:dev
 [DEP] linux26-header:dev make mktemp net-tools numpy openssl openssl:dev
-[DEP] pango pango:dev perl5 perl5:dev pkgconfig python python:dev sed
-[DEP] sysfiles tar tcl tcl:dev util-linux wxpython xfree86 xfree86:dev
+[DEP] pango pango:dev perl5 perl5:dev pil pkgconfig python python:dev
+[DEP] sed sysfiles tar tcl tcl:dev util-linux wxpython xorg xorg:dev
 
-[PROVIDES] xchat
+[PROVIDES] perl.so python.so tcl.so xchat
 

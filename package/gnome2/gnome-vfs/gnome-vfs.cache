@@ -20,23 +20,31 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110167244 Mon Mar  7 04:47:24 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115269257 Thu May  5 07:00:57 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-gnome-vfs.log 9-gnome-vfs.log
 
-[BUILDTIME] 23367 (9)
-[SIZE] 4.34 MB, 187 files
+[BUILDTIME] 23738 (9)
+[SIZE] 4.15 MB, 183 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 bzip2:dev cdparanoia cdparanoia:dev
 [DEP] coreutils cpan-xml-parser diffutils fam fam:dev findutils gawk
 [DEP] gcc34 gcc34:dev gconf gconf:dev gettext glib glib12 glib:dev
-[DEP] glibc23 glibc23:dev gnome-blog gnome-libs14 grep indent libbonobo
+[DEP] glibc23 glibc23:dev gnome-blog gnome-libs14 grep gtk+ libbonobo
 [DEP] libbonobo:dev libxml2 libxml2:dev linux26-header:dev make mktemp
 [DEP] net-tools openssl openssl:dev orbit2 orbit2:dev pango patch perl5
 [DEP] pkgconfig popt popt:dev sed sysfiles tar util-linux zlib:dev
 
 [PROVIDES] gnomevfs-cat gnomevfs-copy gnomevfs-info gnomevfs-ls
-[PROVIDES] gnomevfs-mkdir gnomevfs-rm libgnomevfs-2.a libgnomevfs-2.so
+[PROVIDES] gnomevfs-mkdir gnomevfs-mv gnomevfs-rm libbzip2.a libbzip2.so
+[PROVIDES] libcdda.a libcdda.so libcomputer.a libcomputer.so
+[PROVIDES] libdns-sd.a libdns-sd.so libfile.a libfile.so libftp.a
+[PROVIDES] libftp.so libgnomevfs-2.a libgnomevfs-2.so libgzip.a
+[PROVIDES] libgzip.so libhttp.a libhttp.so libmoniker_gnome_vfs_std.a
+[PROVIDES] libmoniker_gnome_vfs_std.so libnetwork.a libnetwork.so libnntp.a
+[PROVIDES] libnntp.so libsftp.a libsftp.so libtar.a libtar.so libvfs-pipe.a
+[PROVIDES] libvfs-pipe.so libvfs-test.a libvfs-test.so libvfs-translate.a
+[PROVIDES] libvfs-translate.so
 

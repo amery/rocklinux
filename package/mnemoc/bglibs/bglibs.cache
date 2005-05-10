@@ -20,23 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110229748 Mon Mar  7 22:09:08 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115438314 Sat May  7 05:58:34 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-bglibs.log 9-bglibs.log
 
-[BUILDTIME] 5712 (9)
+[BUILDTIME] 6406 (9)
 [SIZE] 0.03 MB, 26 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
 [DEP] mktemp sed sysfiles tar zlib:dev
 
+[PROVIDES] base64.a cdb.a cli.a client.a dict.a hex.a iobuf.a ipv4.a iter.a
 [PROVIDES] libbg-adt.a libbg-base64.a libbg-cdb.a libbg-cli.a libbg-crc.a
 [PROVIDES] libbg-crypto.a libbg-dict.a libbg-fmt.a libbg-installer.a
 [PROVIDES] libbg-instcheck.a libbg-instshow.a libbg-iobuf.a libbg-misc.a
 [PROVIDES] libbg-msg.a libbg-net.a libbg-path.a libbg-str.a libbg-sysdeps.a
 [PROVIDES] libbg-unix.a libbg.a libinstaller.a libinstcheck.a libinstshow.a
-[PROVIDES] libpwcmp-module.a libpwcmp.a libsysdeps.a libvmailmgr.a
+[PROVIDES] libpwcmp-module.a libpwcmp.a libsysdeps.a libvmailmgr.a load.a
+[PROVIDES] make.a md5.a misc.a module.a msg.a nonblock.a path.a resolve.a
+[PROVIDES] sha1.a sha256.a sha512a.a sig.a socket.a str.a vpwentry.a wrap.a
 

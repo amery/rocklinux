@@ -20,34 +20,45 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110333167 Wed Mar  9 02:52:47 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115536599 Sun May  8 09:16:39 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-abiword.log 9-abiword.log
 
-[BUILDTIME] 69718 (9)
-[SIZE] 10.82 MB, 329 files
+[BUILDTIME] 65836 (9)
+[SIZE] 11.40 MB, 329 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
-[DEP] bash2 binutils bzip2 bzip2:dev coreutils diffutils eel eel:dev
-[DEP] enchant enchant:dev esound esound:dev expat figment findutils
-[DEP] freetype freetype:dev fribidi fribidi:dev gail gail:dev gawk
-[DEP] gcc34 gcc34:dev gconf gconf:dev glib glib12 glib:dev glibc23
-[DEP] glibc23:dev gnome-keyring gnome-keyring:dev gnome-libs14 gnome-vfs
-[DEP] gnome-vfs:dev grep gtk+ gtk+:dev gtksourceview:dev gucharmap
-[DEP] gucharmap:dev imagemagick imagemagick:dev lcms lcms:dev libart_lgpl23
-[DEP] libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui libbonoboui:dev
-[DEP] libcroco libcroco:dev libgda libgda:dev libglade libglade:dev
-[DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomedb
+[DEP] bash2 binutils bzip2 bzip2:dev coreutils diffutils enchant
+[DEP] enchant:dev esound esound:dev expat figment findutils freetype
+[DEP] freetype:dev fribidi fribidi:dev gawk gcc34 gcc34:dev gconf
+[DEP] gconf:dev glib glib12 glib:dev glibc23 glibc23:dev gnome-keyring
+[DEP] gnome-keyring:dev gnome-libs14 gnome-vfs gnome-vfs:dev grep gtk+
+[DEP] gtk+:dev gtksourceview:dev gucharmap gucharmap:dev imagemagick
+[DEP] imagemagick:dev lcms lcms:dev libart_lgpl23 libart_lgpl23:dev
+[DEP] libbonobo libbonobo:dev libbonoboui libbonoboui:dev libcroco
+[DEP] libcroco:dev libgda libgda:dev libglade libglade:dev libgnome
+[DEP] libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomedb
 [DEP] libgnomedb:dev libgnomeprint libgnomeprint:dev libgnomeprintui
 [DEP] libgnomeprintui:dev libgnomeui libgnomeui:dev libgsf libgsf:dev
 [DEP] libjpeg libjpeg:dev libpng libpng:dev librsvg librsvg:dev libtiff
 [DEP] libtiff:dev libtool:dev libxml2 libxml2:dev libxslt libxslt:dev
-[DEP] linux26-header:dev make mktemp nautilus nautilus:dev ncurses:dev
-[DEP] net-tools openssl orbit2 orbit2:dev pango pango:dev pkgconfig popt
-[DEP] popt:dev readline readline:dev sed spheres-and-crystals sysfiles
-[DEP] tar util-linux xfree86 xfree86:dev zlib:dev
+[DEP] linux26-header:dev make mktemp ncurses:dev net-tools openssl
+[DEP] orbit2 orbit2:dev pango pango:dev pkgconfig popt popt:dev readline
+[DEP] readline:dev sed spheres-and-crystals sysfiles tar util-linux xorg
+[DEP] xorg:dev zlib:dev
 
-[PROVIDES] AbiWord-2.2 abiword ttfadmin.sh ttftool
+[PROVIDES] AbiWord-2.2 abiword libAbiApplix.so libAbiBMP.so libAbiBZ2.so
+[PROVIDES] libAbiBabelfish.so libAbiCAPI.so libAbiClarisWorks.so
+[PROVIDES] libAbiCommand.so libAbiDash.so libAbiDocBook.so libAbiEML.so
+[PROVIDES] libAbiFreeTranslation.so libAbiGDA.so libAbiGdict.so
+[PROVIDES] libAbiGdkPixbuf.so libAbiGimp.so libAbiGoogle.so libAbiHRText.so
+[PROVIDES] libAbiHancom.so libAbiISCII.so libAbiJPEG.so libAbiKWord.so
+[PROVIDES] libAbiLaTeX.so libAbiMIF.so libAbiMSWrite.so libAbiMagick.so
+[PROVIDES] libAbiNroff.so libAbiOpenWriter.so libAbiPalmDoc.so
+[PROVIDES] libAbiPassepartout.so libAbiRSVG.so libAbiReferee.so
+[PROVIDES] libAbiSDW.so libAbiScriptHappy.so libAbiT602.so libAbiURLDict.so
+[PROVIDES] libAbiWML.so libAbiWikipedia.so libAbiXHTML.so libAbiXSLFO.so
+[PROVIDES] ttfadmin.sh ttftool
 

@@ -20,20 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110307404 Tue Mar  8 19:43:24 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115463838 Sat May  7 13:03:58 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-normalize.log 9-normalize.log
 
-[BUILDTIME] 2915 (9)
-[SIZE] 0.13 MB, 14 files
+[BUILDTIME] 3542 (9)
+[SIZE] 0.15 MB, 14 files
 
 [DEP] 00-dirtree audiofile audiofile:dev bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils gawk gcc34 gcc34:dev gettext glib12 glib12:dev
 [DEP] glibc23 glibc23:dev grep gtk+12 gtk+12:dev linux26-header:dev mad
-[DEP] mad:dev make mktemp net-tools sed sysfiles tar util-linux xfree86
-[DEP] xmms xmms:dev
+[DEP] mad:dev make mktemp net-tools sed sysfiles tar util-linux xmms
+[DEP] xmms:dev xorg
 
-[PROVIDES] normalize normalize-mp3 normalize-ogg
+[PROVIDES] librva.so normalize normalize-mp3 normalize-ogg
 

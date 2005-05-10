@@ -20,19 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110178960 Mon Mar  7 08:02:40 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115284102 Thu May  5 11:08:22 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-gdm.log 9-gdm.log
 
-[BUILDTIME] 9878 (9)
-[SIZE] 7.29 MB, 244 files
+[BUILDTIME] 11011 (9)
+[SIZE] 7.61 MB, 246 files
 
-[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev autoconf
-[DEP] bash2 battfink binutils bzip2 bzip2:dev coreutils cpan-xml-parser
-[DEP] diffutils docbookx esound esound:dev expat figment findutils freetype
-[DEP] gail gawk gcc34 gcc34:dev gconf gconf:dev gettext glib glib:dev
+[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
+[DEP] battfink binutils bzip2 bzip2:dev coreutils cpan-xml-parser diffutils
+[DEP] docbookx esound esound:dev expat figment findutils freetype gail gawk
+[DEP] gcc34 gcc34:dev gconf gconf-editor gconf:dev gettext glib glib:dev
 [DEP] glibc23 glibc23:dev gnome-desktop gnome-icon-theme gnome-keyring
 [DEP] gnome-keyring:dev gnome-vfs gnome-vfs:dev grep gtk+ gtk+:dev
 [DEP] libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui
@@ -42,10 +42,11 @@
 [DEP] librsvg:dev libxml2 libxml2:dev linux26-header:dev make mktemp
 [DEP] net-tools openssl orbit2 orbit2:dev pam pam:dev pango pango:dev
 [DEP] perl5 pkgconfig popt popt:dev scrollkeeper sed spheres-and-crystals
-[DEP] sysfiles tar tcp_wrappers:dev texinfo util-linux xfree86 xfree86:dev
-[DEP] zlib:dev
+[DEP] sysfiles tar tcp_wrappers:dev util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] gdm gdm-binary gdm-restart gdm-safe-restart gdm-stop gdmXnest
-[PROVIDES] gdmXnestchooser gdmchooser gdmconfig gdmflexiserver gdmgreeter
-[PROVIDES] gdmlogin gdmphotosetup gdmsetup gdmthemetester
+[PROVIDES] gdm gdm-binary gdm-restart gdm-safe-restart gdm-stop
+[PROVIDES] gdmXnest gdmXnestchooser gdmchooser gdmconfig gdmflexiserver
+[PROVIDES] gdmgreeter gdmlogin gdmphotosetup gdmsetup gdmthemetester
+[PROVIDES] libdwellmouselistener.a libdwellmouselistener.so
+[PROVIDES] libkeymouselistener.a libkeymouselistener.so
 

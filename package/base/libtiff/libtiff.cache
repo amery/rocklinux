@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110133544 Sun Mar  6 19:25:44 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115178528 Wed May  4 05:48:48 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-libtiff.log 9-libtiff.log
 
-[BUILDTIME] 9705 (9)
-[SIZE] 0.91 MB, 95 files
+[BUILDTIME] 9711 (9)
+[SIZE] 1.29 MB, 99 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev glut glut:dev grep libjpeg
 [DEP] libjpeg:dev libtool linux26-header:dev make mktemp net-tools sed
-[DEP] sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+[DEP] sysfiles tar util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] bmp2tiff fax2ps fax2tiff gif2tiff libtiff.a libtiff.so pal2rgb
-[PROVIDES] ppm2tiff ras2tiff raw2tiff rgb2ycbcr thumbnail tiff2bw tiff2pdf
-[PROVIDES] tiff2ps tiff2rgba tiffcmp tiffcp tiffdither tiffdump tiffgt
-[PROVIDES] tiffinfo tiffmedian tiffset tiffsplit
+[PROVIDES] bmp2tiff fax2ps fax2tiff gif2tiff libtiff.a libtiff.so
+[PROVIDES] libtiffxx.a libtiffxx.so pal2rgb ppm2tiff ras2tiff raw2tiff
+[PROVIDES] rgb2ycbcr thumbnail tiff2bw tiff2pdf tiff2ps tiff2rgba tiffcmp
+[PROVIDES] tiffcp tiffdither tiffdump tiffgt tiffinfo tiffmedian tiffset
+[PROVIDES] tiffsplit
 

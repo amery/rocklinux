@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110230416 Mon Mar  7 22:20:16 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115439084 Sat May  7 06:11:24 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-php.log 9-php.log
 
-[BUILDTIME] 19147 (9)
-[SIZE] 5.31 MB, 169 files
+[BUILDTIME] 18848 (9)
+[SIZE] 6.28 MB, 179 files
 
-[DEP] 00-dirtree apache apache:apr apache:dev bash2 binutils bison
-[DEP] bzip2 bzip2:dev coreutils diffutils expat findutils flex flex:dev
-[DEP] freetype gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libpng libxml2
-[DEP] libxml2:dev libxslt libxslt:dev linux26-header:dev m4 make mktemp
-[DEP] ncurses ncurses:dev net-tools openssl pam patch perl5 pine:dev qt
-[DEP] qt:dev sed sysfiles tar xfree86 zlib:dev
+[DEP] 00-dirtree apache apache:apr apache:dev bash2 binutils bison bzip2
+[DEP] bzip2:dev coreutils diffutils expat findutils flex flex:dev freetype
+[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libpng libpng:dev
+[DEP] libxml2 libxml2:dev libxslt libxslt:dev linux26-header:dev m4 make
+[DEP] mktemp mysql mysql:dev ncurses net-tools openssl openssl:dev pam
+[DEP] patch perl5 pine:dev pkgconfig postgresql postgresql:dev qt qt:dev
+[DEP] sed sysfiles tar xorg zlib:dev
 
 [PROVIDES] pear php php-config phpextdist phpize
 

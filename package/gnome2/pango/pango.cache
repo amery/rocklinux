@@ -20,20 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110143244 Sun Mar  6 22:07:24 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115191602 Wed May  4 09:26:42 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-pango.log 9-pango.log
 
-[BUILDTIME] 9085 (9)
-[SIZE] 1.60 MB, 73 files
+[BUILDTIME] 9764 (9)
+[SIZE] 1.64 MB, 72 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils expat findutils
 [DEP] freetype freetype:dev gawk gcc34 gcc34:dev glib glib:dev glibc23
-[DEP] glibc23:dev grep linux26-header:dev make mktemp net-tools patch perl5
-[DEP] pkgconfig sed sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+[DEP] glibc23:dev grep linux26-header:dev make mktemp net-tools patch
+[DEP] perl5 pkgconfig sed sysfiles tar util-linux xorg xorg:dev zlib:dev
 
 [PROVIDES] libpango-1.0.so libpangoft2-1.0.so libpangox-1.0.so
-[PROVIDES] libpangoxft-1.0.so pango-querymodules
+[PROVIDES] libpangoxft-1.0.so pango-arabic-fc.so pango-basic-fc.so
+[PROVIDES] pango-basic-x.so pango-hangul-fc.so pango-hebrew-fc.so
+[PROVIDES] pango-indic-fc.so pango-querymodules pango-syriac-fc.so
+[PROVIDES] pango-thai-fc.so pango-tibetan-fc.so
 

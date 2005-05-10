@@ -20,22 +20,30 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110159540 Mon Mar  7 02:39:00 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115246713 Thu May  5 00:45:13 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-ettercap.log 9-ettercap.log
 
-[BUILDTIME] 11244 (9)
-[SIZE] 1.25 MB, 61 files
+[BUILDTIME] 12799 (9)
+[SIZE] 1.33 MB, 61 files
 
 [DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils diffutils
 [DEP] expat file findutils flex flex:dev freetype gawk gcc34 gcc34:dev
 [DEP] glib glib:dev glibc23 glibc23:dev grep gtk+ gtk+:dev libnet:dev
 [DEP] libpcap:dev libtool libtool:dev linux26-header:dev m4 make mktemp
 [DEP] ncurses ncurses:dev net-tools openssl openssl:dev pango pango:dev
-[DEP] pcre pcre:dev pkgconfig sed sysfiles tar util-linux xfree86 zlib
+[DEP] pcre pcre:dev pkgconfig sed sysfiles tar util-linux xorg zlib
 [DEP] zlib:dev
 
-[PROVIDES] ettercap etterfilter etterlog
+[PROVIDES] ec_arp_cop.so ec_autoadd.so ec_chk_poison.so ec_dns_spoof.so
+[PROVIDES] ec_dos_attack.so ec_dummy.so ec_find_conn.so ec_find_ettercap.so
+[PROVIDES] ec_find_ip.so ec_finger.so ec_finger_submit.so ec_gre_relay.so
+[PROVIDES] ec_gw_discover.so ec_isolate.so ec_link_type.so
+[PROVIDES] ec_pptp_chapms1.so ec_pptp_clear.so ec_pptp_pap.so
+[PROVIDES] ec_pptp_reneg.so ec_rand_flood.so ec_remote_browser.so
+[PROVIDES] ec_reply_arp.so ec_repoison_arp.so ec_scan_poisoner.so
+[PROVIDES] ec_search_promisc.so ec_smb_clear.so ec_smb_down.so
+[PROVIDES] ec_stp_mangler.so ettercap etterfilter etterlog
 

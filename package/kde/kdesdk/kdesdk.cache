@@ -20,37 +20,52 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110214975 Mon Mar  7 18:02:55 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115377201 Fri May  6 13:00:01 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-kdesdk.log 9-kdesdk.log
 
-[BUILDTIME] 140411 (9)
-[SIZE] 11.17 MB, 748 files
+[BUILDTIME] 155105 (9)
+[SIZE] 13.46 MB, 779 files
 
-[DEP] 00-dirtree arts bash2 bdb42 bdb42:dev binutils binutils:dev bzip2
-[DEP] coreutils diffutils expat fam fam:dev findutils flex flex:dev
-[DEP] freetype freetype:dev gawk gcc34 gcc34:dev gettext glibc23
-[DEP] glibc23:dev grep kdebase kdelibs kdelibs:dev kdelibs:doc kdepim
-[DEP] kdepim:dev libart_lgpl23 libart_lgpl23:dev libjpeg libjpeg:dev
-[DEP] libpng libpng:dev linux26-header:dev m4 make mktemp net-tools pcre
-[DEP] pcre:dev perl5 qt qt:dev sed sysfiles tar util-linux vim xfree86
-[DEP] xfree86:dev zlib:dev
+[DEP] 00-dirtree apache apache:apr apache:dev arts bash2 bdb42 bdb42:dev
+[DEP] binutils binutils:dev bzip2 coreutils diffutils expat expat:dev
+[DEP] fam fam:dev findutils flex flex:dev freetype freetype:dev gawk
+[DEP] gcc34 gcc34:dev gdbm gdbm:dev gettext glibc23 glibc23:dev grep
+[DEP] kdebase kdelibs kdelibs:dev kdelibs:doc kdepim kdepim:dev kdeutils
+[DEP] libart_lgpl23 libart_lgpl23:dev libjpeg libjpeg:dev libpng libpng:dev
+[DEP] libxml2 libxml2:dev linux26-header:dev m4 make mktemp net-tools
+[DEP] openssl pcre pcre:dev perl5 qt qt:dev sed subversion subversion:dev
+[DEP] sysfiles tar util-linux vim xorg xorg:dev zlib:dev
 
 [PROVIDES] adddebug build-progress.sh catalogmanager cervisia cheatmake
 [PROVIDES] create_cvsignore create_makefile create_makefiles cvs-clean
 [PROVIDES] cvs2dist cvsaskpass cvsbackport cvsblame cvscheck cvsforwardport
 [PROVIDES] cvslastchange cvslastlog cvsrevertlast cvsservice cvsversion
-[PROVIDES] cxxmetric demangle dprof2calltree extend_dmalloc extractrc
-[PROVIDES] findmissingcrystal fixkdeincludes fixuifiles hotshot2calltree
-[PROVIDES] includemocs kapptemplate kbabel kbabeldict kbugbuster
-[PROVIDES] kcachegrind kde-build kdedoc kdekillall kdelnk2desktop.py
-[PROVIDES] kdemangen.pl kminspector kmmatch kmtrace kompare kuiviewer
-[PROVIDES] libcvsservice.so libkbabelcommon.so libkbabeldictplugin.so
-[PROVIDES] libkompareinterface.so libkspy.so libktrace.so libktrace_s.a
-[PROVIDES] licensecheck makeobj memprof2calltree mkinstalldirs noncvslist
-[PROVIDES] op2calltree package_crystalsvg png2mng.pl po2xml pprof2calltree
-[PROVIDES] pruneemptydirs qtdoc split2po swappo transxx umbrello xml2pot
-[PROVIDES] zonetab2pot.py
+[PROVIDES] cxxmetric demangle dprof2calltree extend_dmalloc extractattr
+[PROVIDES] extractrc findmissingcrystal fixkdeincludes fixuifiles
+[PROVIDES] hotshot2calltree includemocs kabcformat_kdeaccounts.so
+[PROVIDES] kapptemplate kbabel kbabel_accelstool.so kbabel_argstool.so
+[PROVIDES] kbabel_contexttool.so kbabel_equationstool.so
+[PROVIDES] kbabel_gettextexport.so kbabel_gettextimport.so
+[PROVIDES] kbabel_lengthtool.so kbabel_linguistexport.so
+[PROVIDES] kbabel_linguistimport.so kbabel_nottranslatedtool.so
+[PROVIDES] kbabel_pluraltool.so kbabel_punctuationtool.so
+[PROVIDES] kbabel_setfuzzytool.so kbabel_whitespacetool.so
+[PROVIDES] kbabel_xliffexport.so kbabel_xliffimport.so
+[PROVIDES] kbabel_xmltool.so kbabeldict kbabeldict_dbsearchengine.so
+[PROVIDES] kbabeldict_poauxiliary.so kbabeldict_pocompendium.so
+[PROVIDES] kbabeldict_tmxcompendium.so kbugbuster kcachegrind
+[PROVIDES] kcal_bugzilla.so kde-build kded_ksvnd.so kdedoc kdekillall
+[PROVIDES] kdelnk2desktop.py kdemangen.pl kfile_cpp.so kfile_diff.so
+[PROVIDES] kfile_po.so kfile_ts.so kio_svn.so kminspector kmmatch
+[PROVIDES] kmtrace kompare kuiviewer libcervisiapart.so libcvsservice.so
+[PROVIDES] libkbabelcommon.so libkbabeldictplugin.so libkompareinterface.so
+[PROVIDES] libkomparenavtreepart.so libkomparepart.so libkspy.so
+[PROVIDES] libktrace.so libktrace_s.a libkuiviewerpart.so licensecheck
+[PROVIDES] makeobj memprof2calltree mkinstalldirs noncvslist op2calltree
+[PROVIDES] package_crystalsvg png2mng.pl po2xml pothumbnail.so
+[PROVIDES] pprof2calltree pruneemptydirs qtdoc quithumbnail.so scheck.so
+[PROVIDES] split2po swappo transxx umbrello xml2pot zonetab2pot.py
 

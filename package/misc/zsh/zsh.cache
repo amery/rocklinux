@@ -20,19 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110124418 Sun Mar  6 16:53:38 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115123625 Tue May  3 14:33:45 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-zsh.log 9-zsh.log
 
-[BUILDTIME] 10433 (9)
-[SIZE] 4.09 MB, 591 files
+[BUILDTIME] 10514 (9)
+[SIZE] 4.29 MB, 591 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libcap:dev
 [DEP] linux26-header:dev make mktemp ncurses ncurses:dev net-tools pcre:dev
 [DEP] sed sysfiles tar util-linux yp-tools
 
-[PROVIDES] zsh zsh-4.2.1
+[PROVIDES] cap.so clone.so compctl.so complete.so complist.so computil.so
+[PROVIDES] datetime.so deltochar.so example.so files.so langinfo.so
+[PROVIDES] mapfile.so mathfunc.so parameter.so rlimits.so sched.so
+[PROVIDES] socket.so stat.so system.so tcp.so termcap.so terminfo.so
+[PROVIDES] zftp.so zle.so zleparameter.so zprof.so zpty.so zselect.so
+[PROVIDES] zsh zsh-4.2.1 zutil.so
 

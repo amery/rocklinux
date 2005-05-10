@@ -20,19 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110137338 Sun Mar  6 20:28:58 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115184070 Wed May  4 07:21:10 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-dansguardian.log 9-dansguardian.log
 
-[BUILDTIME] 5071 (9)
-[SIZE] 0.69 MB, 137 files
+[BUILDTIME] 4318 (9)
+[SIZE] 0.73 MB, 143 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep gzip
-[DEP] libelf libelf:dev linux26-header:dev m4 make mktemp sed sysfiles
-[DEP] tar zlib:dev
+[DEP] flex:dev gcc34 gcc34:dev glibc23 glibc23:dev grep gzip libelf
+[DEP] libelf:dev linux26-header:dev m4 make mktemp sed sysfiles tar
+[DEP] zlib:dev
 
 [PROVIDES] dansguardian dansguardian.pl
 

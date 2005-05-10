@@ -20,22 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104911893 Wed Jan  5 08:58:13 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115611475 Mon May  9 06:04:35 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
-[LOGS] 5-redhat-artwork.log
+[LOGS] 5-redhat-artwork.log 9-redhat-artwork.log
 
-[BUILDTIME] 20193 (5)
-[SIZE] 9.81 MB, 7295 files
+[BUILDTIME] 22143 (9)
+[SIZE] 9.83 MB, 7295 files
 
-[DEP] 00-dirtree arts atk atk:dev autoconf bash2 binutils bzip2
-[DEP] coreutils cpan-xml-parser diffutils expat findutils freetype
-[DEP] gawk gcc34 gcc34:dev gdk-pixbuf10 gdk-pixbuf10:dev gettext
-[DEP] glib glib12 glib12:dev glib:dev glibc23 glibc23:dev grep gtk+
+[DEP] 00-dirtree arts atk atk:dev autoconf bash2 binutils bzip2 coreutils
+[DEP] cpan-xml-parser diffutils digikam expat findutils freetype
+[DEP] freetype:dev gawk gcc34 gcc34:dev gdk-pixbuf10 gdk-pixbuf10:dev
+[DEP] gettext glib glib12 glib12:dev glib:dev glibc23 glibc23:dev grep gtk+
 [DEP] gtk+12 gtk+12:dev gtk+:dev hicolor-icon-theme icon-slicer kdebase
-[DEP] kdebase:dev kdelibs kdelibs:dev kmplayer kphone libart_lgpl23:dev
-[DEP] libjpeg libpng libpng:dev linux26-header:dev make mktemp net-tools
-[DEP] openbox pango pango:dev perl5 pkgconfig qt qt:dev sed sysfiles tar
-[DEP] texinfo util-linux xfree86 xfree86:dev xmms zapping zlib:dev
+[DEP] kdebase:dev kdelibs kdelibs:dev kphone libart_lgpl23:dev libjpeg
+[DEP] libpng libpng:dev linux26-header:dev make mktemp net-tools openbox
+[DEP] pango pango:dev perl5 pkgconfig qt qt:dev sed sysfiles tar texinfo
+[DEP] util-linux xmms xorg xorg:dev zapping zlib:dev
+
+[PROVIDES] bluecurve.so kwin3_bluecurve.so libbluecurve.so
 

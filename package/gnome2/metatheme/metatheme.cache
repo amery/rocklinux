@@ -20,27 +20,30 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110176995 Mon Mar  7 07:29:55 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115281676 Thu May  5 10:27:56 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-metatheme.log 9-metatheme.log
 
-[BUILDTIME] 6511 (9)
-[SIZE] 0.43 MB, 67 files
+[BUILDTIME] 7278 (9)
+[SIZE] 0.45 MB, 67 files
 
-[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev autoconf
-[DEP] automake19 bash2 binutils bzip2 coreutils diffutils esound esound:dev
-[DEP] expat figment findutils freetype gawk gcc34 gcc34:dev gconf
-[DEP] gconf:dev gettext glib glib:dev glibc23 glibc23:dev gnome-keyring
-[DEP] gnome-keyring:dev gnome-mime-data gnome-vfs gnome-vfs:dev
-[DEP] grep gtk+ gtk+:dev libart_lgpl23 libart_lgpl23:dev libbonobo
-[DEP] libbonobo:dev libbonoboui libbonoboui:dev libglade libglade:dev
-[DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeui
-[DEP] libgnomeui:dev libjpeg libjpeg:dev libpng libpng:dev libxml2
-[DEP] libxml2:dev linux26-header:dev make mktemp net-tools openssl orbit2
-[DEP] orbit2:dev pango pango:dev perl5 pkgconfig popt popt:dev sed sysfiles
-[DEP] tar texinfo util-linux xfree86 xfree86:dev xscreensaver zlib:dev
+[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
+[DEP] autoconf automake19 bash2 binutils bzip2 coreutils diffutils esound
+[DEP] esound:dev expat figment findutils freetype gawk gcc34 gcc34:dev
+[DEP] gconf gconf:dev gettext glib glib:dev glibc23 glibc23:dev
+[DEP] gnome-keyring gnome-keyring:dev gnome-mime-data gnome-vfs
+[DEP] gnome-vfs:dev grep gtk+ gtk+:dev libart_lgpl23 libart_lgpl23:dev
+[DEP] libbonobo libbonobo:dev libbonoboui libbonoboui:dev libglade
+[DEP] libglade:dev libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev
+[DEP] libgnomeui libgnomeui:dev libjpeg libjpeg:dev libpng libpng:dev
+[DEP] libxml2 libxml2:dev linux26-header:dev make mktemp net-tools openssl
+[DEP] orbit2 orbit2:dev pango pango:dev perl5 pkgconfig popt popt:dev sed
+[DEP] sysfiles tar texinfo util-linux xorg xorg:dev xscreensaver zlib:dev
 
-[PROVIDES] libmtm.a libmtm.so metatheme-edit metatheme_selector_capplet
+[PROVIDES] libbgplugin.a libbgplugin.so libgtkplugin1.a libgtkplugin1.so
+[PROVIDES] libgtkplugin2.a libgtkplugin2.so libmtm.a libmtm.so
+[PROVIDES] libnautilus.a libnautilus.so libsawfish.a libsawfish.so
+[PROVIDES] metatheme-edit metatheme_selector_capplet
 

@@ -20,22 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110317134 Tue Mar  8 22:25:34 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115500333 Sat May  7 23:12:13 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-ethereal.log 9-ethereal.log
 
-[BUILDTIME] 53444 (9)
-[SIZE] 15.55 MB, 79 files
+[BUILDTIME] 56251 (9)
+[SIZE] 16.32 MB, 79 files
 
 [DEP] 00-dirtree alsa atk atk:dev bash2 binutils bzip2 coreutils diffutils
 [DEP] expat file findutils flex flex:dev freetype gawk gcc34 gcc34:dev
 [DEP] glib glib:dev glibc23 glibc23:dev grep gtk+ gtk+:dev libpcap:dev
 [DEP] linux26-header:dev m4 make mktemp net-snmp net-snmp:dev net-tools
 [DEP] pango pango:dev pcre pcre:dev perl5 pkgconfig rpm sed sysfiles tar
-[DEP] util-linux xfree86 zlib:dev
+[DEP] util-linux xorg zlib:dev
 
-[PROVIDES] capinfos dftest editcap ethereal idl2eth libethereal.so
-[PROVIDES] libwiretap.so mergecap tethereal text2pcap
+[PROVIDES] acn.so artnet.so asn1.so capinfos ciscosm.so coseventcomm.so
+[PROVIDES] cosnaming.so dftest docsis.so editcap enttec.so ethereal
+[PROVIDES] gryphon.so idl2eth irda.so libethereal.so libwiretap.so
+[PROVIDES] lwres.so mate.so megaco.so mergecap mgcp.so opsi.so pcli.so
+[PROVIDES] rdm.so rlm.so rtnet.so rudp.so tethereal text2pcap v5ua.so
 

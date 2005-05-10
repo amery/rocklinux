@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110154548 Mon Mar  7 01:15:48 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115225848 Wed May  4 18:57:28 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-ffmpeg.log 9-ffmpeg.log
 
-[BUILDTIME] 11374 (9)
-[SIZE] 2.15 MB, 21 files
+[BUILDTIME] 9186 (9)
+[SIZE] 2.46 MB, 21 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] freetype freetype:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] lame lame:dev libsdl libsdl:dev linux26-header:dev make mktemp
-[DEP] nas ogg-vorbis ogg-vorbis:dev patch perl5 sed sysfiles tar tetex
-[DEP] xfree86 xfree86:dev zlib:dev
+[DEP] lame lame:dev libsdl libsdl:dev linux26-header:dev make mktemp nas
+[DEP] ogg-vorbis ogg-vorbis:dev patch perl5 sed sysfiles tar tetex xorg
+[DEP] xorg:dev zlib:dev
 
-[PROVIDES] ffmpeg ffplay ffserver libavcodec-0.4.9-pre1.so libavcodec.so
-[PROVIDES] libavformat-0.4.9-pre1.so libavformat.so
+[PROVIDES] drawtext.so ffmpeg ffplay ffserver fish.so
+[PROVIDES] libavcodec-0.4.9-pre1.so libavcodec.so libavformat-0.4.9-pre1.so
+[PROVIDES] libavformat.so null.so ppm.so
 

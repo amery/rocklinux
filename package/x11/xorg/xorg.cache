@@ -20,17 +20,61 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1095182108 Tue Sep 14 19:15:08 2004
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115130370 Tue May  3 16:26:10 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
-[LOGS] 5-xorg.log
+[LOGS] 5-xorg.log 9-xorg.log
 
-[BUILDTIME] 332917 (5)
-[SIZE] 103.51 MB, 9590 files
+[BUILDTIME] 231815 (9)
+[SIZE] 116.36 MB, 10563 files
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils ed expat
-[DEP] expat:dev findutils flex flex:dev gawk gcc32 gcc32:dev glibc23
-[DEP] glibc23:dev grep gzip libpng libpng:dev linux24-header:dev m4 make
-[DEP] ncurses:dev patch perl5 sed sysfiles tar zlib:dev
+[DEP] 00-dirtree alien bash2 binutils bison bzip2 coreutils ctwm diffutils
+[DEP] expat expat:dev findutils flex flex:dev freetype freetype:dev gawk
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep gzip isdn4k-utils libpng
+[DEP] libpng:dev linux26-header:dev m4 make mktemp ncurses:dev patch
+[DEP] perl5 root-tail sed sysfiles tar terminus-font transfig xautolock
+[DEP] xfig zlib:dev
+
+[PROVIDES] X X11 Xdmx Xmark Xnest Xorg Xprt Xvfb appres atobm bdftopcf
+[PROVIDES] bdftruncate beforelight bitmap bmtoa ccmakedep cleanlinks
+[PROVIDES] cxpm dga dpsexec dpsinfo editres fc-cache fc-list fslsfonts
+[PROVIDES] fstobdf gamma_dri.so gccmakedep getconfig getconfig.pl glxgears
+[PROVIDES] glxinfo gtf i810_dri.so i915_dri.so iceauth ico imake inb inl
+[PROVIDES] inw ioport lbxproxy libFS.so libGL.so libGLU.so libGLcore.a
+[PROVIDES] libGLw.so libI810XvMC.so libICE.so libOSMesa.a libOSMesa.so
+[PROVIDES] libSM.so libX11.so libXRes.so libXTrap.so libXau.a libXaw.so
+[PROVIDES] libXcomposite.so libXcursor.so libXdamage.so libXdmcp.a
+[PROVIDES] libXevie.so libXext.so libXfixes.so libXfont.a libXfont.so
+[PROVIDES] libXft.so libXi.so libXinerama.so libXmu.so libXmuu.so libXp.so
+[PROVIDES] libXpm.so libXprintAppUtil.a libXprintUtil.a libXrandr.so
+[PROVIDES] libXrender.so libXss.so libXt.so libXtst.so libXv.so libXvMC.so
+[PROVIDES] libXxf86dga.so libXxf86misc.so libXxf86rush.so libXxf86vm.so
+[PROVIDES] libafb.a libbitmap.a libcfb.a libcfb16.a libcfb24.a libcfb32.a
+[PROVIDES] libcw.a libdamage.a libdbe.a libddc.a libdmx.a libdps.so
+[PROVIDES] libdpstk.so libdri.a libdrm.a libextmod.a libfb.a libfbdevhw.a
+[PROVIDES] libfntstubs.a libfontconfig.so libfontenc.so libfreetype.so
+[PROVIDES] libglx.a libi2c.a libint10.a liblayer.a libmfb.a liboldX.a
+[PROVIDES] libpcidata.a libpsres.so librac.a libramdac.a librecord.a
+[PROVIDES] libscanpci.a libshadow.a libshadowfb.a libtype1.a libvbe.a
+[PROVIDES] libvgahw.a libxaa.a libxf1bpp.a libxf24_32bpp.a libxf4bpp.a
+[PROVIDES] libxf86config.a libxf8_16bpp.a libxf8_32bpp.a libxkbfile.so
+[PROVIDES] libxkbui.so libxrx.so libxrxnest.so libxtrap.a listres lndir
+[PROVIDES] luit makedepend makeg makepsres makestrs mergelib mga_dri.so
+[PROVIDES] mkcfm mkdirhier mkfontdir mkfontscale mkhtmlindex mmapr mmapw
+[PROVIDES] oclock outb outl outw pcitweak proxymngr pswrap r128_dri.so
+[PROVIDES] r200_dri.so radeon_dri.so resize revpath rman rstart rstartd
+[PROVIDES] scanpci sessreg setxkbmap showfont showrgb sis_dri.so smproxy
+[PROVIDES] startx startxdm sxpm tdfx_dri.so texteroids twm ucs2any uxterm
+[PROVIDES] viewres x11perf x11perfcomp xauth xbiff xcalc xclipboard
+[PROVIDES] xclock xcmsdb xconsole xcursor-config xcursorgen xcutsel
+[PROVIDES] xditview xdm xdpyinfo xdriinfo xedit xev xeyes xfd xfindproxy
+[PROVIDES] xfontsel xfs xfsinfo xft-config xfwp xgamma xgc xhost xinit
+[PROVIDES] xkbbell xkbcomp xkbevd xkbprint xkbvleds xkbwatch xkill xload
+[PROVIDES] xlogo xlsatoms xlsclients xlsfonts xmag xman xmessage xmh xmkmf
+[PROVIDES] xmodmap xmore xon xorgcfg xorgconfig xphelloworld xplsprinters
+[PROVIDES] xprehashprinterlist xprop xpsimplehelloworld xpxthelloworld
+[PROVIDES] xrandr xrdb xrefresh xrx xset xsetmode xsetpointer xsetroot xsm
+[PROVIDES] xstdcmap xterm xtrapchar xtrapin xtrapinfo xtrapout xtrapproto
+[PROVIDES] xtrapreset xtrapstats xvidtune xvinfo xwd xwininfo xwud
 

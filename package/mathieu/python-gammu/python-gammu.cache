@@ -20,17 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110896920 Tue Mar 15 15:28:40 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115611027 Mon May  9 05:57:07 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-python-gammu.log 9-python-gammu.log
 
-[BUILDTIME] 1842 (9)
-[SIZE] 0.12 MB, 7 files
+[BUILDTIME] 2048 (9)
+[SIZE] 0.14 MB, 7 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gammu gammu:dev
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev mktemp
-[DEP] numpy pkgconfig python python:dev sed sysfiles tar wxpython
+[DEP] numpy pil pkgconfig python python:dev sed sysfiles tar wxpython
 
+[PROVIDES] gammu.so
 

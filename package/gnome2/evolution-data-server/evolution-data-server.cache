@@ -20,25 +20,38 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110176515 Mon Mar  7 07:21:55 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115280964 Thu May  5 10:16:04 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-evolution-data-server.log 9-evolution-data-server.log
 
-[BUILDTIME] 34683 (9)
-[SIZE] 3.54 MB, 520 files
+[BUILDTIME] 55362 (9)
+[SIZE] 8.38 MB, 590 files
 
-[DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev bash2 binutils bzip2
-[DEP] coreutils cpan-xml-parser diffutils esound esound:dev findutils
-[DEP] flex flex:dev gawk gcc34 gcc34:dev gconf gconf:dev gettext glib
-[DEP] glib:dev glibc23 glibc23:dev gnome-blog gnome-vfs gnome-vfs:dev
-[DEP] gnutls gnutls:dev grep indent libbonobo libbonobo:dev libgcrypt
-[DEP] libgcrypt:dev libgnome libgnome:dev libgpg-error libgpg-error:dev
+[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
+[DEP] binutils bzip2 coreutils cpan-xml-parser diffutils e2fsprogs:dev
+[DEP] esound esound:dev expat figment findutils flex flex:dev freetype gawk
+[DEP] gcc34 gcc34:dev gconf gconf:dev gettext glib glib12 glib:dev glibc23
+[DEP] glibc23:dev gnome-blog gnome-keyring gnome-keyring:dev gnome-libs14
+[DEP] gnome-vfs gnome-vfs:dev gnutls gnutls:dev grep gtk+ gtk+:dev
+[DEP] libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui
+[DEP] libbonoboui:dev libgcrypt libgcrypt:dev libglade libglade:dev
+[DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeui
+[DEP] libgnomeui:dev libgpg-error libgpg-error:dev libjpeg libjpeg:dev
 [DEP] libsoup libsoup:dev libxml2 libxml2:dev linux26-header:dev m4 make
-[DEP] mktemp net-tools openldap openldap:dev openssl orbit2 orbit2:dev
-[DEP] perl5 pkgconfig popt popt:dev sed sysfiles tar util-linux zlib:dev
+[DEP] mktemp mozilla mozilla:dev net-tools openldap openldap:dev openssl
+[DEP] orbit2 orbit2:dev pango pango:dev perl5 pkgconfig popt popt:dev
+[DEP] sed sysfiles tar util-linux xorg zlib:dev
 
-[PROVIDES] libebook.so libecal.so libedata-book.so libedata-cal.so
-[PROVIDES] libedataserver.so libegroupwise.so
+[PROVIDES] libcamel-1.2.so libcamel-provider-1.2.so libcamelgroupwise.so
+[PROVIDES] libcamelimap.so libcamelimap4.so libcamellocal.so
+[PROVIDES] libcamelnntp.so libcamelpop3.so libcamelsendmail.so
+[PROVIDES] libcamelsmtp.so libebook-1.2.so libebookbackendfile.so
+[PROVIDES] libebookbackendgroupwise.so libebookbackendldap.so
+[PROVIDES] libebookbackendvcf.so libecal-1.2.so libecalbackendcontacts.so
+[PROVIDES] libecalbackendfile.so libecalbackendgroupwise.so
+[PROVIDES] libecalbackendhttp.so libecalbackendweather.so
+[PROVIDES] libedata-book-1.2.so libedata-cal-1.2.so libedataserver-1.2.so
+[PROVIDES] libedataserverui-1.2.so libegroupwise-1.2.so
 

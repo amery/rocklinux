@@ -20,20 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110146419 Sun Mar  6 23:00:19 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115197303 Wed May  4 11:01:43 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-libsdl.log 9-libsdl.log
 
-[BUILDTIME] 15644 (9)
-[SIZE] 0.65 MB, 185 files
+[BUILDTIME] 17077 (9)
+[SIZE] 0.69 MB, 185 files
 
 [DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev bash2
-[DEP] binutils bzip2 coreutils diffutils esound esound:dev findutils
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp nas nas:dev nasm net-tools sed sysfiles tar util-linux
-[DEP] xfree86 xfree86:dev
+[DEP] binutils bzip2 coreutils diffutils esound esound:dev findutils gawk
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
+[DEP] mktemp nas nas:dev nasm net-tools patch sed sysfiles tar util-linux
+[DEP] xorg xorg:dev
 
 [PROVIDES] libSDL.a libSDL.so libSDLmain.a sdl-config
 

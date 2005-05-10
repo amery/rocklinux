@@ -20,23 +20,27 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110154912 Mon Mar  7 01:21:52 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115227338 Wed May  4 19:22:18 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-imlib2.log 9-imlib2.log
 
-[BUILDTIME] 10910 (9)
-[SIZE] 0.94 MB, 68 files
+[BUILDTIME] 11633 (9)
+[SIZE] 0.96 MB, 68 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 bzip2:dev
 [DEP] coreutils diffutils findutils freetype freetype:dev gawk gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep libjpeg libjpeg:dev libpng
 [DEP] libpng:dev libtiff libtiff:dev libtool libungif libungif:dev
 [DEP] linux26-header:dev m4 make mktemp net-tools perl5 sed sysfiles tar
-[DEP] util-linux xfree86 xfree86:dev zlib:dev
+[DEP] util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] imlib2-config imlib2_bumpmap imlib2_colorspace imlib2_conv
-[PROVIDES] imlib2_poly imlib2_show imlib2_test imlib2_view libImlib2.a
-[PROVIDES] libImlib2.so
+[PROVIDES] argb.a argb.so bmp.a bmp.so bumpmap.a bumpmap.so bz2.a
+[PROVIDES] bz2.so colormod.a colormod.so gif.a gif.so imlib2-config
+[PROVIDES] imlib2_bumpmap imlib2_colorspace imlib2_conv imlib2_poly
+[PROVIDES] imlib2_show imlib2_test imlib2_view jpeg.a jpeg.so lbm.a
+[PROVIDES] lbm.so libImlib2.a libImlib2.so png.a png.so pnm.a pnm.so
+[PROVIDES] testfilter.a testfilter.so tga.a tga.so tiff.a tiff.so xpm.a
+[PROVIDES] xpm.so zlib.a zlib.so
 

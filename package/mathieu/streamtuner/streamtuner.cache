@@ -20,23 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110329924 Wed Mar  9 01:58:44 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115532108 Sun May  8 08:01:48 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-streamtuner.log 9-streamtuner.log
 
-[BUILDTIME] 8115 (9)
-[SIZE] 1.81 MB, 96 files
+[BUILDTIME] 8782 (9)
+[SIZE] 1.96 MB, 96 files
 
-[DEP] 00-dirtree alsa atk atk:dev bash2 binutils bzip2 coreutils
-[DEP] curl curl:dev diffutils docbookx expat findutils freetype gawk
-[DEP] gcc34 gcc34:dev gettext glib glib:dev glibc23 glibc23:dev
-[DEP] gnome-desktop gnomeicu grep gtk+ gtk+:dev libglade libxml2
-[DEP] libxml2:dev linux26-header:dev make mktemp net-tools numpy openssl
-[DEP] pango pango:dev patch perl5 pkgconfig pygtk:dev python python:dev
+[DEP] 00-dirtree alsa atk atk:dev bash2 binutils bzip2 coreutils curl
+[DEP] curl:dev diffutils docbookx expat findutils freetype gawk gcc34
+[DEP] gcc34:dev gettext glib glib:dev glibc23 glibc23:dev gnome-desktop
+[DEP] gnomeicu grep gtk+ gtk+:dev libglade libxml2 libxml2:dev
+[DEP] linux26-header:dev make mktemp net-tools numpy openssl pango
+[DEP] pango:dev patch perl5 pil pkgconfig pygtk:dev python python:dev
 [DEP] scrollkeeper sed sysfiles taglib taglib:dev tar tcl tk util-linux
-[DEP] wxpython xfree86 zapping zlib:dev
+[DEP] wxpython xorg zapping zlib:dev
 
-[PROVIDES] streamtuner
+[PROVIDES] live365.a live365.so local.a local.so python.a python.so
+[PROVIDES] shoutcast.a shoutcast.so streamtuner xiph.a xiph.so
 

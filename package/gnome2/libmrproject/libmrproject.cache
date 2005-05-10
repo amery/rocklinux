@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110183564 Mon Mar  7 09:19:24 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115290117 Thu May  5 12:48:37 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-libmrproject.log 9-libmrproject.log
 
-[BUILDTIME] 4916 (9)
-[SIZE] 0.77 MB, 80 files
+[BUILDTIME] 5395 (9)
+[SIZE] 0.79 MB, 80 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev gettext glib glib:dev glibc23 glibc23:dev grep gtkdoc
 [DEP] libgcrypt:dev libgpg-error:dev libgsf libgsf:dev libxml2 libxml2:dev
 [DEP] libxslt libxslt:dev linux26-header:dev make mktemp net-tools numpy
-[DEP] perl5 pkgconfig postgresql postgresql:dev pygtk pygtk:dev python
+[DEP] perl5 pil pkgconfig postgresql postgresql:dev pygtk pygtk:dev python
 [DEP] python:dev sed sysfiles tar util-linux wxpython zlib:dev
 
-[PROVIDES] libmrproject.so
+[PROVIDES] libmrp-xml.so libmrp-xsl.so libmrproject.so
+[PROVIDES] libstorage-mrproject-1.so libstorage-sql.so mrprojectmodule.so
 

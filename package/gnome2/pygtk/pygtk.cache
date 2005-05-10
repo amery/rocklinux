@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110161123 Mon Mar  7 03:05:23 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115252307 Thu May  5 02:18:27 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-pygtk.log 9-pygtk.log
 
-[BUILDTIME] 7062 (9)
-[SIZE] 2.33 MB, 83 files
+[BUILDTIME] 8778 (9)
+[SIZE] 3.69 MB, 175 files
 
 [DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils diffutils
 [DEP] findutils gawk gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev
 [DEP] grep gtk+ gtk+:dev libglade libglade:dev libxml2 libxml2:dev
 [DEP] linux26-header:dev make mktemp net-tools numpy numpy:dev pango
-[DEP] pango:dev pkgconfig python python:dev sed sysfiles tar util-linux
-[DEP] wxpython xfree86 xfree86:dev zlib:dev
+[DEP] pango:dev pil pkgconfig python python:dev sed sysfiles tar util-linux
+[DEP] wxpython xorg xorg:dev zlib:dev
 
-[PROVIDES] pygtk-codegen-2.0
+[PROVIDES] _gtk.so atk.so glade.so gobject.so pango.so pygtk-codegen-2.0
+[PROVIDES] pygtk-demo
 

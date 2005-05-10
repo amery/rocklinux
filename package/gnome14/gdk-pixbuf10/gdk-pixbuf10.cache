@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110151896 Mon Mar  7 00:31:36 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115216317 Wed May  4 16:18:37 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-gdk-pixbuf10.log 9-gdk-pixbuf10.log
 
-[BUILDTIME] 7073 (9)
-[SIZE] 0.62 MB, 56 files
+[BUILDTIME] 8213 (9)
+[SIZE] 0.64 MB, 56 files
 
 [DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev autoconf automake19
 [DEP] bash2 bdb33 binutils bzip2 coreutils diffutils esound esound:dev
@@ -35,9 +35,19 @@
 [DEP] glibc23:dev gnome-libs14 gnome-libs14:dev grep gtk+12 gtk+12:dev
 [DEP] gtkdoc imlib imlib:dev libjpeg libjpeg:dev libpng libpng:dev libtiff
 [DEP] libtiff:dev linux26-header:dev make mktemp net-tools perl5 sed
-[DEP] sysfiles tar texinfo util-linux xfree86 xfree86:dev zlib:dev
+[DEP] sysfiles tar texinfo util-linux xorg xorg:dev zlib:dev
 
 [PROVIDES] gdk-pixbuf-config libgdk_pixbuf.a libgdk_pixbuf.so
 [PROVIDES] libgdk_pixbuf_xlib.a libgdk_pixbuf_xlib.so
 [PROVIDES] libgnomecanvaspixbuf.a libgnomecanvaspixbuf.so
+[PROVIDES] libpixbufloader-bmp.a libpixbufloader-bmp.so
+[PROVIDES] libpixbufloader-gif.a libpixbufloader-gif.so
+[PROVIDES] libpixbufloader-ico.a libpixbufloader-ico.so
+[PROVIDES] libpixbufloader-jpeg.a libpixbufloader-jpeg.so
+[PROVIDES] libpixbufloader-png.a libpixbufloader-png.so
+[PROVIDES] libpixbufloader-pnm.a libpixbufloader-pnm.so
+[PROVIDES] libpixbufloader-ras.a libpixbufloader-ras.so
+[PROVIDES] libpixbufloader-tiff.a libpixbufloader-tiff.so
+[PROVIDES] libpixbufloader-xbm.a libpixbufloader-xbm.so
+[PROVIDES] libpixbufloader-xpm.a libpixbufloader-xpm.so
 

@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110301206 Tue Mar  8 18:00:06 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115449727 Sat May  7 09:08:47 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-evidence.log 9-evidence.log
 
-[BUILDTIME] 24054 (9)
-[SIZE] 8.16 MB, 574 files
+[BUILDTIME] 25189 (9)
+[SIZE] 8.25 MB, 574 files
 
 [DEP] 00-dirtree acl acl:dev arts atk atk:dev attr attr:dev autoconf
 [DEP] automake19 bash2 binutils bzip2 coreutils curl curl:dev diffutils
@@ -38,9 +38,33 @@
 [DEP] gtk+:dev gzip id3lib id3lib:dev imlib2 imlib2:dev kdelibs libjpeg
 [DEP] libjpeg:dev libpng libpng:dev libtool linux26-header:dev m4 make
 [DEP] mktemp ncurses:dev net-tools netpbm ogg-vorbis ogg-vorbis:dev
-[DEP] openssl pango pango:dev patch pcre pcre:dev perl5 pkgconfig
-[DEP] readline readline:dev sed sysfiles tar util-linux valgrind:dev
-[DEP] xfree86 xfree86:dev xine-lib xine-lib:dev zlib:dev
+[DEP] openssl pango pango:dev patch pcre pcre:dev perl5 pkgconfig readline
+[DEP] readline:dev sed sysfiles tar util-linux valgrind:dev xine-lib
+[DEP] xine-lib:dev xorg xorg:dev zlib:dev
 
-[PROVIDES] evidence evsh
+[PROVIDES] ape.a ape.so backdrop.a backdrop.so bg_ebg.a bg_ebg.so
+[PROVIDES] bg_ebg_trans.a bg_ebg_trans.so bg_edje.a bg_edje.so bg_scale.a
+[PROVIDES] bg_scale.so bg_tile.a bg_tile.so bg_trans.a bg_trans.so
+[PROVIDES] delete.a delete.so epeg.a epeg.so evidence evsh exif.a
+[PROVIDES] exif.so folder.a folder.so fsxs.so ia_basic.a ia_basic.so
+[PROVIDES] ia_colour.a ia_colour.so ia_creepology.a ia_creepology.so
+[PROVIDES] ia_creepy.a ia_creepy.so ia_grey.a ia_grey.so ia_grow.a
+[PROVIDES] ia_grow.so ia_growfade.a ia_growfade.so ia_solid.a ia_solid.so
+[PROVIDES] ia_throb.a ia_throb.so ic_alignbelow.a ic_alignbelow.so
+[PROVIDES] ic_alignright.a ic_alignright.so ic_edje.a ic_edje.so
+[PROVIDES] ic_nautilus.a ic_nautilus.so id3.a id3.so id_bubbles.a
+[PROVIDES] id_bubbles.so id_flutterby.a id_flutterby.so id_lain.a
+[PROVIDES] id_lain.so image.a image.so imlib.a imlib.so info_dial.a
+[PROVIDES] info_dial.so ipc_ecore.a ipc_ecore.so ix_LCARS.a ix_LCARS.so
+[PROVIDES] ix_rephormed.a ix_rephormed.so mkdir.a mkdir.so mp3.a mp3.so
+[PROVIDES] name2tag.a name2tag.so newwindow.a newwindow.so null.a
+[PROVIDES] null.so playlist.a playlist.so posix.so rb_edb.a rb_edb.so
+[PROVIDES] rb_gradient.a rb_gradient.so rb_gradient2.a rb_gradient2.so
+[PROVIDES] rb_nautilus.a rb_nautilus.so rename.a rename.so sb_default.a
+[PROVIDES] sb_default.so sb_edb.a sb_edb.so sb_example.a sb_example.so
+[PROVIDES] sortkey2name.a sortkey2name.so tag2name.a tag2name.so
+[PROVIDES] tb_default.a tb_default.so thumbnail.a thumbnail.so tile.a
+[PROVIDES] tile.so tt_centre.a tt_centre.so tt_diagram.a tt_diagram.so
+[PROVIDES] tt_traditional.a tt_traditional.so tt_wholewindow.a
+[PROVIDES] tt_wholewindow.so ttf.a ttf.so vorbis.a vorbis.so xine.a xine.so
 

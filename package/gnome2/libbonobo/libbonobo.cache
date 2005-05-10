@@ -20,24 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110161974 Mon Mar  7 03:19:34 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115255567 Thu May  5 03:12:47 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-libbonobo.log 9-libbonobo.log
 
-[BUILDTIME] 12377 (9)
-[SIZE] 2.95 MB, 213 files
+[BUILDTIME] 13585 (9)
+[SIZE] 1.46 MB, 122 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 coreutils cpan-xml-parser
-[DEP] diffutils findutils flex flex:dev gawk gcc34 gcc34:dev gconf gettext
-[DEP] glib glib:dev glibc23 glibc23:dev gnome-blog grep indent libxml2
+[DEP] diffutils findutils flex flex:dev gawk gcc34 gcc34:dev gconf
+[DEP] gettext glib glib:dev glibc23 glibc23:dev gnome-blog grep libxml2
 [DEP] libxml2:dev linux26-header:dev m4 make mktemp net-tools orbit2
 [DEP] orbit2:dev pango patch perl5 pkgconfig popt popt:dev procps sed
 [DEP] sysfiles tar util-linux zlib:dev
 
-[PROVIDES] activation-client bonobo-activation-run-query
-[PROVIDES] bonobo-activation-sysconf bonobo-slay echo-client-2
-[PROVIDES] libbonobo-2.a libbonobo-2.so libbonobo-activation.a
-[PROVIDES] libbonobo-activation.so
+[PROVIDES] Bonobo_module.a Bonobo_module.so activation-client
+[PROVIDES] bonobo-activation-run-query bonobo-activation-sysconf
+[PROVIDES] bonobo-slay echo-client-2 libbonobo-2.a libbonobo-2.so
+[PROVIDES] libbonobo-activation.a libbonobo-activation.so
+[PROVIDES] libmoniker_std_2.a libmoniker_std_2.so
 

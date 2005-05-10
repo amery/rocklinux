@@ -20,23 +20,31 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110306992 Tue Mar  8 19:36:32 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115461986 Sat May  7 12:33:06 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-ocaml.log 9-ocaml.log
 
-[BUILDTIME] 27033 (9)
-[SIZE] 29.52 MB, 941 files
+[BUILDTIME] 29452 (9)
+[SIZE] 29.60 MB, 941 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
 [DEP] gcc34:dev gdbm gdbm:dev glibc23 glibc23:dev grep linux26-header:dev
 [DEP] make mktemp ncurses:dev sed sysfiles tar tcl tcl:dev tk tk:dev
-[DEP] xfree86 xfree86:dev
+[DEP] xorg xorg:dev
 
-[PROVIDES] camlp4 camlp4o camlp4o.opt camlp4r camlp4r.opt labltk mkcamlp4
-[PROVIDES] ocaml ocamlbrowser ocamlc ocamlc.opt ocamlcp ocamldebug ocamldep
-[PROVIDES] ocamldep.opt ocamldoc ocamldoc.opt ocamllex ocamllex.opt
-[PROVIDES] ocamlmklib ocamlmktop ocamlopt ocamlopt.opt ocamlprof ocamlrun
-[PROVIDES] ocamlyacc ocpp
+[PROVIDES] bigarray.a camlp4 camlp4.a camlp4o camlp4o.opt camlp4r
+[PROVIDES] camlp4r.opt dbm.a dllbigarray.so dllgraphics.so dlllabltk.so
+[PROVIDES] dllmldbm.so dllnums.so dllstr.so dllthreads.so dlltkanim.so
+[PROVIDES] dllunix.so dllvmthreads.so frxlib.a gramlib.a graphics.a
+[PROVIDES] jpflib.a labltk labltk.a libasmrun.a libasmrunp.a libbigarray.a
+[PROVIDES] libcamlrun.a libgraphics.a liblabltk.a libmldbm.a libnums.a
+[PROVIDES] libstr.a libthreads.a libthreadsnat.a libtkanim.a libunix.a
+[PROVIDES] libvmthreads.a mkcamlp4 nums.a ocaml ocamlbrowser ocamlc
+[PROVIDES] ocamlc.opt ocamlcp ocamldebug ocamldep ocamldep.opt ocamldoc
+[PROVIDES] ocamldoc.opt ocamllex ocamllex.opt ocamlmklib ocamlmktop
+[PROVIDES] ocamlopt ocamlopt.opt ocamlprof ocamlrun ocamlyacc ocpp
+[PROVIDES] odoc_info.a odyl.a stdlib.a stdlib.p.a str.a threads.a
+[PROVIDES] tkanim.a unix.a
 

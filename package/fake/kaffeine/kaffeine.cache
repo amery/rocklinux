@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110222453 Mon Mar  7 20:07:33 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115405209 Fri May  6 20:46:49 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-kaffeine.log 9-kaffeine.log
 
-[BUILDTIME] 11550 (9)
-[SIZE] 1.50 MB, 73 files
+[BUILDTIME] 13067 (9)
+[SIZE] 1.58 MB, 72 files
 
 [DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils expat fam
-[DEP] fam:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev gettext
+[DEP] fam:dev findutils freetype freetype:dev gcc34 gcc34:dev gettext
 [DEP] glibc23 glibc23:dev grep kdebase kdelibs kdelibs:dev kdelibs:doc
 [DEP] kdesdk kdeutils libart_lgpl23 libart_lgpl23:dev libjpeg libpng
-[DEP] libpng:dev libxml2 linux26-header:dev make mktemp net-tools perl5 qt
-[DEP] qt:dev sed sysfiles tar util-linux vim xfree86 xfree86:dev xine-lib
-[DEP] xine-lib:dev zlib:dev
+[DEP] libpng:dev libxml2 linux26-header:dev make mktemp net-tools perl5
+[DEP] qt qt:dev sed sysfiles tar util-linux vim xine-lib xine-lib:dev
+[DEP] xorg xorg:dev zlib:dev
 
-[PROVIDES] kaffeine libkmediapart.so
+[PROVIDES] kaffeine libkaffeinepart.so libkmediapart.so
 

@@ -20,17 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110235226 Mon Mar  7 23:40:26 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115445605 Sat May  7 08:00:05 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-ladspa-tap.log 9-ladspa-tap.log
 
-[BUILDTIME] 1912 (9)
-[SIZE] 0.27 MB, 27 files
+[BUILDTIME] 2157 (9)
+[SIZE] 0.30 MB, 27 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep ladspa ladspa-swh-plugins make mktemp sed
 [DEP] sysfiles tar
 
+[PROVIDES] tap_autopan.so tap_chorusflanger.so tap_deesser.so
+[PROVIDES] tap_doubler.so tap_dynamics_m.so tap_dynamics_st.so tap_echo.so
+[PROVIDES] tap_eq.so tap_eqbw.so tap_limiter.so tap_pinknoise.so
+[PROVIDES] tap_pitch.so tap_reflector.so tap_reverb.so tap_rotspeak.so
+[PROVIDES] tap_sigmoid.so tap_tremolo.so tap_tubewarmth.so tap_vibrato.so
 

@@ -20,25 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110148642 Sun Mar  6 23:37:22 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115206461 Wed May  4 13:34:21 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-nessus.log 9-nessus.log
 
-[BUILDTIME] 26375 (9)
-[SIZE] 18.04 MB, 5530 files
+[BUILDTIME] 21889 (9)
+[SIZE] 9.90 MB, 2286 files
 
 [DEP] 00-dirtree atk atk:dev bash2 binutils bison bzip2 coreutils diffutils
 [DEP] expat findutils flex flex:dev freetype gawk gcc34 gcc34:dev glib
 [DEP] glib12 glib:dev glibc23 glibc23:dev grep gtk+ gtk+12 gtk+:dev
 [DEP] libnet:dev linux26-header:dev m4 make mktemp net-tools openssl
-[DEP] openssl:dev pango pango:dev pkgconfig sed sysfiles tar xfree86
+[DEP] openssl:dev pango pango:dev pkgconfig sed sysfiles tar xorg
 
-[PROVIDES] libhosts_gatherer.a libhosts_gatherer.so libnasl.a libnasl.so
-[PROVIDES] libnessus.a libnessus.so libpcap-nessus.a libpcap-nessus.so
-[PROVIDES] nasl nasl-config nessus nessus-adduser nessus-build
-[PROVIDES] nessus-check-signature nessus-config nessus-mkcert
-[PROVIDES] nessus-mkcert-client nessus-mkrand nessus-rmuser
+[PROVIDES] libhosts_gatherer.a libhosts_gatherer.so libnasl.a
+[PROVIDES] libnasl.so libnessus.a libnessus.so libpcap-nessus.a
+[PROVIDES] libpcap-nessus.so nasl nasl-config nessus nessus-adduser
+[PROVIDES] nessus-build nessus-check-signature nessus-config nessus-fetch
+[PROVIDES] nessus-mkcert nessus-mkcert-client nessus-mkrand nessus-rmuser
 [PROVIDES] nessus-update-plugins nessusd uninstall-nessus
 

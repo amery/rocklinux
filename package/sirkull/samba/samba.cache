@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110177959 Mon Mar  7 07:45:59 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115282752 Thu May  5 10:45:52 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-samba.log 9-samba.log
 
-[BUILDTIME] 39221 (9)
-[SIZE] 28.54 MB, 575 files
+[BUILDTIME] 38538 (9)
+[SIZE] 31.17 MB, 576 files
 
 [DEP] 00-dirtree acl acl:dev attr attr:dev bash2 binutils bzip2 coreutils
 [DEP] cups cups:dev diffutils findutils gawk gcc34 gcc34:dev glibc23
@@ -36,9 +36,12 @@
 [DEP] popt popt:dev readline readline:dev sed sysfiles tar util-linux
 [DEP] valgrind:dev
 
-[PROVIDES] findsmb mount.smbfs net nmbd nmblookup ntlm_auth pdbedit
-[PROVIDES] profiles rpcclient smbadduser smbcacls smbclient smbcontrol
-[PROVIDES] smbcquotas smbd smbmnt smbmount smbpasswd smbspool smbstatus
-[PROVIDES] smbtar smbtree smbumount swat tdbbackup tdbdump tdbtool testparm
-[PROVIDES] testprns wbinfo winbindd
+[PROVIDES] CP437.so CP850.so audit.so cap.so default_quota.so
+[PROVIDES] expand_msdfs.so extd_audit.so fake_perms.so findsmb
+[PROVIDES] full_audit.so libsmbclient.a libsmbclient.so mount.smbfs
+[PROVIDES] net netatalk.so nmbd nmblookup ntlm_auth pdbedit profiles
+[PROVIDES] readonly.so recycle.so rpcclient shadow_copy.so smbadduser
+[PROVIDES] smbcacls smbclient smbcontrol smbcquotas smbd smbmnt smbmount
+[PROVIDES] smbpasswd smbspool smbstatus smbtar smbtree smbumount swat
+[PROVIDES] tdbbackup tdbdump tdbtool testparm testprns wbinfo winbindd
 

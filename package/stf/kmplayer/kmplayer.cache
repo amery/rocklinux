@@ -20,23 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110895259 Tue Mar 15 15:00:59 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115608088 Mon May  9 05:08:08 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-kmplayer.log 9-kmplayer.log
 
-[BUILDTIME] 12002 (9)
-[SIZE] 0.97 MB, 45 files
+[BUILDTIME] 12868 (9)
+[SIZE] 1.08 MB, 43 files
 
-[DEP] 00-dirtree alsa arts bash2 binutils bzip2 coreutils diffutils expat
-[DEP] fam fam:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev
-[DEP] gettext glibc23 glibc23:dev grep hicolor-icon-theme kdelibs
+[DEP] 00-dirtree alsa arts bash2 binutils bzip2 coreutils diffutils
+[DEP] digikam expat fam fam:dev findutils freetype freetype:dev gawk gcc34
+[DEP] gcc34:dev gettext glibc23 glibc23:dev grep hicolor-icon-theme kdelibs
 [DEP] kdelibs:dev kile koffice:dev kphone libart_lgpl23 libart_lgpl23:dev
 [DEP] libjpeg libpng libpng:dev linux26-header:dev make mktemp net-tools
-[DEP] perl5 qt qt:dev sed sysfiles tar util-linux xfree86 xfree86:dev
-[DEP] xine-lib xine-lib:dev zlib:dev
+[DEP] perl5 qt qt:dev sed sysfiles tar util-linux xine-lib xine-lib:dev
+[DEP] xorg xorg:dev zlib:dev
 
-[PROVIDES] kmplayer kxineplayer kxvplayer libkdeinit_kmplayer.so
-[PROVIDES] libkmplayercommon.so
+[PROVIDES] kmplayer kmplayer.so kxineplayer kxvplayer
+[PROVIDES] libkdeinit_kmplayer.so libkmplayercommon.so libkmplayerpart.so
 

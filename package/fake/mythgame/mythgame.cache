@@ -20,17 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110145815 Sun Mar  6 22:50:15 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115194833 Wed May  4 10:20:33 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-mythgame.log 9-mythgame.log
 
-[BUILDTIME] 11987 (9)
-[SIZE] 1.56 MB, 19 files
+[BUILDTIME] 16112 (9)
+[SIZE] 1.54 MB, 19 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp mythdvd
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
 [DEP] mythtv mythtv:dev qt qt:dev sed sysfiles tar zlib:dev
 
+[PROVIDES] libmythgame.so
 

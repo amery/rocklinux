@@ -20,24 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110320292 Tue Mar  8 23:18:12 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115512491 Sun May  8 02:34:51 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-subversion.log 9-subversion.log
 
-[BUILDTIME] 29389 (9)
-[SIZE] 3.85 MB, 158 files
+[BUILDTIME] 33173 (9)
+[SIZE] 4.34 MB, 158 files
 
 [DEP] 00-dirtree apache apache:apr apache:dev bash2 bdb42 bdb42:dev
-[DEP] binutils bzip2 coreutils diffutils expat expat:dev findutils
-[DEP] gawk gcc34 gcc34:dev gdbm gdbm:dev gettext glibc23 glibc23:dev
-[DEP] grep libxml2 libxml2:dev linux26-header:dev m4 make mktemp neon
-[DEP] neon:dev net-tools numpy openssl patch perl5 python python:dev
-[DEP] sed ssleay-perlmod swig swig:dev sysfiles tar texinfo util-linux
-[DEP] wxpython zlib:dev
+[DEP] binutils bzip2 coreutils diffutils expat expat:dev findutils gawk
+[DEP] gcc34 gcc34:dev gdbm gdbm:dev gettext glibc23 glibc23:dev grep
+[DEP] libxml2 libxml2:dev linux26-header:dev m4 make mktemp neon neon:dev
+[DEP] net-tools numpy openssl patch perl5 pil python python:dev sed
+[DEP] ssleay-perlmod swig sysfiles tar texinfo util-linux wxpython zlib:dev
 
-[PROVIDES] libsvn_client-1.a libsvn_client-1.so libsvn_delta-1.a
+[PROVIDES] _Client.so _Core.so _Delta.so _Fs.so _Ra.so _Repos.so
+[PROVIDES] _Wc.so _client.a _client.so _core.a _core.so _delta.a
+[PROVIDES] _delta.so _fs.a _fs.so _ra.a _ra.so _repos.a _repos.so _wc.a
+[PROVIDES] _wc.so libsvn_client-1.a libsvn_client-1.so libsvn_delta-1.a
 [PROVIDES] libsvn_delta-1.so libsvn_diff-1.a libsvn_diff-1.so libsvn_fs-1.a
 [PROVIDES] libsvn_fs-1.so libsvn_fs_base-1.a libsvn_fs_base-1.so
 [PROVIDES] libsvn_fs_fs-1.a libsvn_fs_fs-1.so libsvn_ra-1.a libsvn_ra-1.so

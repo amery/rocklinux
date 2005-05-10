@@ -20,21 +20,50 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110319364 Tue Mar  8 23:02:44 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115508501 Sun May  8 01:28:21 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-asterisk.log 9-asterisk.log
 
-[BUILDTIME] 12112 (9)
-[SIZE] 10.13 MB, 495 files
+[BUILDTIME] 12216 (9)
+[SIZE] 10.30 MB, 496 files
 
 [DEP] 00-dirtree alien alsa alsa:dev bash2 binutils bison bzip2 coreutils
 [DEP] diffutils findutils gawk gcc34 gcc34:dev glib12 glib12:dev glibc23
 [DEP] glibc23:dev grep gtk+12 gtk+12:dev gzip linux26-header:dev m4 make
 [DEP] mktemp mpg321 ncurses:dev net-tools openssl openssl:dev patch sed
-[DEP] sqlite sqlite:dev sysfiles tar xfree86
+[DEP] speex speex:dev sqlite sqlite:dev sysfiles tar xorg
 
-[PROVIDES] agi-test.agi asterisk astgenkey eagi-sphinx-test eagi-test
+[PROVIDES] agi-test.agi app_adsiprog.so app_alarmreceiver.so
+[PROVIDES] app_authenticate.so app_cdr.so app_chanisavail.so
+[PROVIDES] app_controlplayback.so app_cut.so app_db.so app_dial.so
+[PROVIDES] app_directory.so app_disa.so app_echo.so app_enumlookup.so
+[PROVIDES] app_eval.so app_exec.so app_festival.so app_forkcdr.so
+[PROVIDES] app_getcpeid.so app_groupcount.so app_hasnewvoicemail.so
+[PROVIDES] app_ices.so app_image.so app_intercom.so app_lookupblacklist.so
+[PROVIDES] app_lookupcidname.so app_macro.so app_milliwatt.so app_mp3.so
+[PROVIDES] app_nbscat.so app_parkandannounce.so app_playback.so
+[PROVIDES] app_privacy.so app_qcall.so app_queue.so app_random.so
+[PROVIDES] app_read.so app_record.so app_sayunixtime.so app_senddtmf.so
+[PROVIDES] app_sendtext.so app_setcallerid.so app_setcdruserfield.so
+[PROVIDES] app_setcidname.so app_setcidnum.so app_sms.so app_softhangup.so
+[PROVIDES] app_striplsd.so app_substring.so app_system.so app_talkdetect.so
+[PROVIDES] app_test.so app_transfer.so app_txtcidname.so app_url.so
+[PROVIDES] app_userevent.so app_verbose.so app_voicemail.so
+[PROVIDES] app_waitforring.so app_zapateller.so asterisk astgenkey
+[PROVIDES] cdr_csv.so cdr_manager.so cdr_sqlite.so chan_agent.so
+[PROVIDES] chan_alsa.so chan_iax2.so chan_local.so chan_mgcp.so
+[PROVIDES] chan_modem.so chan_modem_aopen.so chan_modem_bestdata.so
+[PROVIDES] chan_modem_i4l.so chan_oss.so chan_phone.so chan_sip.so
+[PROVIDES] chan_skinny.so codec_a_mu.so codec_adpcm.so codec_alaw.so
+[PROVIDES] codec_g726.so codec_gsm.so codec_ilbc.so codec_lpc10.so
+[PROVIDES] codec_speex.so codec_ulaw.so eagi-sphinx-test eagi-test
+[PROVIDES] format_g726.so format_g729.so format_gsm.so format_h263.so
+[PROVIDES] format_ilbc.so format_jpeg.so format_pcm.so format_pcm_alaw.so
+[PROVIDES] format_sln.so format_vox.so format_wav.so format_wav_gsm.so
+[PROVIDES] pbx_config.so pbx_gtkconsole.so pbx_spool.so pbx_wilcalu.so
+[PROVIDES] res_adsi.so res_agi.so res_crypto.so res_features.so
+[PROVIDES] res_indications.so res_monitor.so res_musiconhold.so
 [PROVIDES] safe_asterisk
 

@@ -20,26 +20,35 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110195520 Mon Mar  7 12:38:40 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115333502 Fri May  6 00:51:42 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-kdeutils.log 9-kdeutils.log
 
-[BUILDTIME] 91917 (9)
-[SIZE] 6.69 MB, 429 files
+[BUILDTIME] 97582 (9)
+[SIZE] 7.66 MB, 455 files
 
 [DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils expat fam
 [DEP] fam:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev gettext
 [DEP] glibc23 glibc23:dev grep kdebase kdebase:doc kdelibs kdelibs:dev
-[DEP] kdelibs:doc libart_lgpl23 libart_lgpl23:dev libjpeg libpng libpng:dev
-[DEP] linux26-header:dev make mktemp net-snmp net-snmp:dev net-tools
-[DEP] openssl perl5 qt qt:dev sed sysfiles tar util-linux vim xfree86
-[DEP] xfree86:dev zlib:dev
+[DEP] kdelibs:doc libart_lgpl23 libart_lgpl23:dev libjpeg libpng
+[DEP] libpng:dev linux26-header:dev make mktemp net-snmp net-snmp:dev
+[DEP] net-tools openssl perl5 qt qt:dev sed sysfiles tar util-linux vim
+[DEP] xorg xorg:dev zlib:dev
 
-[PROVIDES] ark irkick kcalc kcharselect kdessh kdf kedit kfloppy kgpg
-[PROVIDES] khexedit kjots klaptop_acpi_helper klaptop_check kregexpeditor
-[PROVIDES] ktimer kwalletmanager kwikdisk libkcmlaptop.so libkdeinit_ark.so
-[PROVIDES] libkdeinit_irkick.so libkdeinit_kcalc.so libkdeinit_kedit.so
-[PROVIDES] libkmilo.so libkregexpeditorcommon.so libksimcore.so
+[PROVIDES] ark ark.so irkick irkick.so kcalc kcalc.so kcharselect
+[PROVIDES] kcharselect_panelapplet.so kcm_kcmlirc.so kcm_kdf.so
+[PROVIDES] kcm_kvaio.so kcm_kwallet.so kcm_laptop.so kcm_thinkpad.so
+[PROVIDES] kded_klaptopdaemon.so kded_kmilod.so kdessh kdf kedit kedit.so
+[PROVIDES] kfloppy kgpg khexedit kjots klaptop_acpi_helper klaptop_check
+[PROVIDES] kmilo_asus.so kmilo_delli8k.so kmilo_generic.so kmilo_kvaio.so
+[PROVIDES] kmilo_thinkpad.so kregexpeditor ksim_cpu.so ksim_disk.so
+[PROVIDES] ksim_filesystem.so ksim_net.so ksim_panelextension.so
+[PROVIDES] ksim_sensors.so ksim_snmp.so ktimer kwalletmanager kwikdisk
+[PROVIDES] libarkpart.so libkbyteseditwidget.so libkcmlaptop.so
+[PROVIDES] libkdeinit_ark.so libkdeinit_irkick.so libkdeinit_kcalc.so
+[PROVIDES] libkdeinit_kedit.so libkhexedit2part.so libkhexeditcommon.so
+[PROVIDES] libkmilo.so libkregexpeditorcommon.so libkregexpeditorgui.so
+[PROVIDES] libksimcore.so
 

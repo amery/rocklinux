@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110215685 Mon Mar  7 18:14:45 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115379435 Fri May  6 13:37:15 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-baghira.log 9-baghira.log
 
-[BUILDTIME] 12835 (9)
-[SIZE] 0.93 MB, 36 files
+[BUILDTIME] 11288 (9)
+[SIZE] 1.01 MB, 41 files
 
-[DEP] 00-dirtree arts autoconf bash2 binutils bzip2 coreutils diffutils
-[DEP] expat findutils freetype freetype:dev gawk gcc34 gcc34:dev gettext
-[DEP] glibc23 glibc23:dev grep kdebase kdebase:dev kdelibs kdelibs:dev
-[DEP] libart_lgpl23 libart_lgpl23:dev libjpeg libpng libpng:dev
-[DEP] linux26-header:dev m4 make mktemp net-tools perl5 qt qt:dev sed
-[DEP] sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+[DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils expat
+[DEP] fam fam:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev
+[DEP] gettext glibc23 glibc23:dev grep kdebase kdebase:dev kdelibs
+[DEP] kdelibs:dev libart_lgpl23 libart_lgpl23:dev libjpeg libpng libpng:dev
+[DEP] linux26-header:dev make mktemp net-tools perl5 qt qt:dev sed sysfiles
+[DEP] tar util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] bab
+[PROVIDES] b_menu_panelapplet.so bab baghira.so kstyle_baghira_config.so
+[PROVIDES] kwin3_baghira.so kwin_baghira_config.so libbaghirastarter.so
 

@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110319050 Tue Mar  8 22:57:30 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115507264 Sun May  8 01:07:44 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-libgift.log 9-libgift.log
 
-[BUILDTIME] 10016 (9)
-[SIZE] 0.55 MB, 31 files
+[BUILDTIME] 11566 (9)
+[SIZE] 0.61 MB, 31 files
 
 [DEP] 00-dirtree bash2 bdb42 bdb42:dev binutils bzip2 bzip2:dev
 [DEP] coreutils diffutils findutils freetype freetype:dev gawk gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep imagemagick imagemagick:dev lcms
 [DEP] lcms:dev libjpeg libjpeg:dev libtiff libtiff:dev libtool libtool:dev
 [DEP] linux26-header:dev make mktemp net-tools ogg-vorbis ogg-vorbis:dev
-[DEP] pkgconfig sed sysfiles tar util-linux xfree86 zlib:dev
+[DEP] pkgconfig sed sysfiles tar util-linux xorg zlib:dev
 
-[PROVIDES] gift-setup giftd libgift.so libgiftproto.so
+[PROVIDES] gift-setup giftd libGnutella.so libOpenFT.so libgift.so
+[PROVIDES] libgiftproto.so
 

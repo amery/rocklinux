@@ -20,18 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110156840 Mon Mar  7 01:54:00 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115235210 Wed May  4 21:33:30 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-libxml.log 9-libxml.log
 
-[BUILDTIME] 5696 (9)
-[SIZE] 1.33 MB, 38 files
+[BUILDTIME] 5504 (9)
+[SIZE] 1.42 MB, 38 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils findutils gcc34 gcc34:dev glib glibc23 glibc23:dev grep
-[DEP] gtkdoc linux26-header:dev make mktemp ncurses:dev net-tools perl5
+[DEP] diffutils epiphany evolution-data-server findutils gail gawk gcc34
+[DEP] gcc34:dev gconf gimp glib glibc23 glibc23:dev gmime gnome-vfs gok
+[DEP] grep gstreamer gtk+ gtkdoc gtksourceview libbonoboui libgda libglade
+[DEP] libgnome libgnomecanvas libgnomeprint libgnomeprintui libgnomeui
+[DEP] libgsf libmrproject librsvg libwnck linphone linux26-header:dev make
+[DEP] mergeant mktemp ncurses:dev net-tools orbit2 pango perl5 pkgconfig
 [DEP] readline readline:dev sed sysfiles tar texinfo zlib:dev
 
 [PROVIDES] libxml.a libxml.so xml-config

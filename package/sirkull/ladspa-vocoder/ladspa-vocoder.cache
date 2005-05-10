@@ -20,17 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110233400 Mon Mar  7 23:10:00 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115443564 Sat May  7 07:26:04 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-ladspa-vocoder.log 9-ladspa-vocoder.log
 
-[BUILDTIME] 1280 (9)
+[BUILDTIME] 1566 (9)
 [SIZE] 0.02 MB, 7 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep ladspa ladspa:dev make mktemp sed sysfiles
-[DEP] tar xfree86
+[DEP] tar xorg
 
+[PROVIDES] vocoder.so
 

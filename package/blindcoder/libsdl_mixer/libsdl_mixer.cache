@@ -20,18 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104752778 Mon Jan  3 12:46:18 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115475798 Sat May  7 16:23:18 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
-[LOGS] 5-libsdl_mixer.log
+[LOGS] 5-libsdl_mixer.log 9-libsdl_mixer.log
 
-[BUILDTIME] 4090 (5)
-[SIZE] 0.20 MB, 9 files
+[BUILDTIME] 4678 (9)
+[SIZE] 0.22 MB, 9 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
 [DEP] libsdl libsdl:dev linux26-header:dev make mktemp nas net-tools
 [DEP] ogg-vorbis ogg-vorbis:dev perl5 sed smpeg smpeg:dev sysfiles tar
-[DEP] texinfo xfree86
+[DEP] texinfo xorg
+
+[PROVIDES] libSDL_mixer.a libSDL_mixer.so
 

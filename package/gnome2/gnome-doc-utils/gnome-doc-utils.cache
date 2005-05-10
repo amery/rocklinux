@@ -20,22 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110177048 Mon Mar  7 07:30:48 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115281733 Thu May  5 10:28:53 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-gnome-doc-utils.log 9-gnome-doc-utils.log
 
-[BUILDTIME] 3635 (9)
-[SIZE] 0.65 MB, 101 files
+[BUILDTIME] 3011 (9)
+[SIZE] 1.08 MB, 105 files
 
-[DEP] 00-dirtree bash2 battfink binutils bzip2 coreutils cpan-xml-parser
-[DEP] diffutils docbookx file-roller findutils gawk gcc34 gcc34:dev
-[DEP] gconf-editor gettext glib glib12 glibc23 glibc23:dev gnome-desktop
-[DEP] gnome-libs14 gnome-panel gnopernicus gnotepad+ gpdf grep libglade
-[DEP] libxslt linux26-header:dev make mktemp net-tools numpy pango perl5
-[DEP] pkgconfig python scrollkeeper sed sysfiles tar util-linux wxpython
-[DEP] zapping
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cpan-xml-parser
+[DEP] diffutils docbookx findutils gawk gcc34 gcc34:dev gettext glib12
+[DEP] glibc23 glibc23:dev gnome-libs14 gnotepad+ grep libxml2 libxslt
+[DEP] linux26-header:dev make mktemp net-tools numpy patch perl5 pil
+[DEP] pkgconfig python sed sysfiles tar util-linux wxpython zapping
 
-[PROVIDES] xml2po
+[PROVIDES] gnome-doc-prepare xml2po
 

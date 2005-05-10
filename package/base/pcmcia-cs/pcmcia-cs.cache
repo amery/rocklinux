@@ -20,20 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110200725 Mon Mar  7 14:05:25 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115341115 Fri May  6 02:58:35 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-pcmcia-cs.log 9-pcmcia-cs.log
 
-[BUILDTIME] 2441 (9)
-[SIZE] 0.42 MB, 102 files
+[BUILDTIME] 2561 (9)
+[SIZE] 0.43 MB, 101 files
 
 [DEP] 00-dirtree alien bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] gcc34 gcc34:dev glib12 glib12:dev glibc23 glibc23:dev grep gtk+12
-[DEP] gtk+12:dev linux26-header:dev linux26-source make man mktemp patch
-[DEP] sed sysfiles tar xfree86 xfree86:dev
+[DEP] gawk gcc34 gcc34:dev glib12 glib12:dev glibc23 glibc23:dev grep
+[DEP] gtk+12 gtk+12:dev linux26-header:dev linux26-source make man mktemp
+[DEP] patch sed sysfiles tar xorg xorg:dev
 
 [PROVIDES] cardctl cardmgr dump_cis ftl_check ftl_format gpccard ide_info
-[PROVIDES] ifport ifuser pack_cis pcinitrd scsi_info xcardinfo
+[PROVIDES] ifport ifuser pack_cis pcinitrd scsi_info
 

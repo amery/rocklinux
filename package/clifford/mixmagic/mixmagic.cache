@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110217027 Mon Mar  7 18:37:07 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115384173 Fri May  6 14:56:13 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-mixmagic.log 9-mixmagic.log
 
-[BUILDTIME] 3332 (9)
-[SIZE] 0.17 MB, 17 files
+[BUILDTIME] 3865 (9)
+[SIZE] 0.18 MB, 17 files
 
 [DEP] 00-dirtree alsa audiofile audiofile:dev autoconf automake19 bash2
 [DEP] bdb33 binutils bzip2 coreutils diffutils esound esound:dev findutils
 [DEP] gawk gcc34 gcc34:dev gettext glib12 glib12:dev glibc23 glibc23:dev
 [DEP] gnome-libs14 gnome-libs14:dev gnotepad+ grep gtk+12 gtk+12:dev
 [DEP] imlib imlib:dev libxml libxml:dev linux26-header:dev make mktemp
-[DEP] net-tools orbit10 patch perl5 sed sysfiles tar texinfo xfree86
-[DEP] xfree86:dev zapping zlib:dev
+[DEP] net-tools orbit10 patch perl5 sed sysfiles tar texinfo xorg xorg:dev
+[DEP] zapping zlib:dev
 
-[PROVIDES] mixmagic
+[PROVIDES] libedit.so libesound.so liboss.so libwavwriter.so mixmagic
 

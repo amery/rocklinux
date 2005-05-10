@@ -20,18 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110125114 Sun Mar  6 17:05:14 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115124395 Tue May  3 14:46:35 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-patchutils.log 9-patchutils.log
 
-[BUILDTIME] 2174 (9)
-[SIZE] 0.16 MB, 34 files
+[BUILDTIME] 2467 (9)
+[SIZE] 0.17 MB, 34 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp net-tools patch sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
+[DEP] net-tools patch sed sysfiles tar util-linux
 
 [PROVIDES] combinediff dehtmldiff editdiff espdiff filterdiff fixcvsdiff
 [PROVIDES] flipdiff grepdiff interdiff lsdiff recountdiff rediff splitdiff

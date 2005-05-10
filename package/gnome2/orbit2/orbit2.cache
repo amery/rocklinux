@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110158062 Mon Mar  7 02:14:22 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115240629 Wed May  4 23:03:49 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-orbit2.log 9-orbit2.log
 
-[BUILDTIME] 12539 (9)
-[SIZE] 0.46 MB, 26 files
+[BUILDTIME] 14394 (9)
+[SIZE] 0.57 MB, 38 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev grep indent libidl
+[DEP] gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev grep libidl
 [DEP] libidl:dev linux26-header:dev make mktemp net-tools openssl:dev
 [DEP] pkgconfig popt popt:dev sed sysfiles tar util-linux
 
-[PROVIDES] ior-decode-2 libORBit-2.a libORBit-2.so libORBit-imodule-2.a
+[PROVIDES] Everything_module.a Everything_module.so ior-decode-2
+[PROVIDES] libORBit-2.a libORBit-2.so libORBit-imodule-2.a
 [PROVIDES] libORBit-imodule-2.so libORBitCosNaming-2.a
 [PROVIDES] libORBitCosNaming-2.so libname-server-2.a linc-cleanup-sockets
 [PROVIDES] orbit-idl-2 orbit2-config typelib-dump

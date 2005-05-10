@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110234048 Mon Mar  7 23:20:48 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115444330 Sat May  7 07:38:50 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-galan.log 9-galan.log
 
-[BUILDTIME] 12496 (9)
-[SIZE] 0.86 MB, 223 files
+[BUILDTIME] 14052 (9)
+[SIZE] 0.89 MB, 223 files
 
 [DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev bash2 binutils bzip2
 [DEP] coreutils curl curl:dev diffutils esound esound:dev findutils gawk
@@ -35,7 +35,29 @@
 [DEP] glibc23 glibc23:dev grep gtk+12 gtk+12:dev liblrdf liblrdf:dev
 [DEP] libsndfile libsndfile:dev libxml2 libxml2:dev linux26-header:dev
 [DEP] make mktemp net-tools ogg-vorbis ogg-vorbis:dev openssl patch
-[DEP] pkgconfig raptor raptor:dev sed sysfiles tar util-linux xfree86
+[DEP] pkgconfig raptor raptor:dev sed sysfiles tar util-linux xorg
 
-[PROVIDES] galan
+[PROVIDES] adsr.a adsr.so alsa_midi.a alsa_midi.so alsa_out.a alsa_out.so
+[PROVIDES] atan.a atan.so balance.a balance.so clock.a clock.so ctrl.a
+[PROVIDES] ctrl.so dcbias.a dcbias.so delay.a delay.so diff.a diff.so
+[PROVIDES] esd_output.a esd_output.so evtabs.a evtabs.so evtadd.a evtadd.so
+[PROVIDES] evtcomp.a evtcomp.so evtdelay.a evtdelay.so evtgate.a evtgate.so
+[PROVIDES] evtinteger.a evtinteger.so evtmul.a evtmul.so evtnotetofreq.a
+[PROVIDES] evtnotetofreq.so evtpower.a evtpower.so evtsettings.a
+[PROVIDES] evtsettings.so evtsgn.a evtsgn.so evtsum.a evtsum.so evttimer.a
+[PROVIDES] evttimer.so filerequester.a filerequester.so gain.a gain.so
+[PROVIDES] galan iir_generic.a iir_generic.so integrate.a integrate.so
+[PROVIDES] joyport.a joyport.so ladspa.a ladspa.so lights.a lights.so
+[PROVIDES] lowpass.a lowpass.so midi_seq_clock.a midi_seq_clock.so
+[PROVIDES] midiclock.a midiclock.so notetofreq.a notetofreq.so ogg_ra.a
+[PROVIDES] ogg_ra.so osc.a osc.so oss_input.a oss_input.so oss_output.a
+[PROVIDES] oss_output.so patloop.a patloop.so patsel.a patsel.so
+[PROVIDES] pcm_out.a pcm_out.so polyrart.a polyrart.so random.a random.so
+[PROVIDES] rart.a rart.so resample.a resample.so reverse.a reverse.so
+[PROVIDES] sampler.a sampler.so scope.a scope.so seqnote.a seqnote.so
+[PROVIDES] seqnum.a seqnum.so sig2evt.a sig2evt.so sigctrl.a sigctrl.so
+[PROVIDES] smooth.a smooth.so sndfile_in.a sndfile_in.so sndfile_out.a
+[PROVIDES] sndfile_out.so sqrt.a sqrt.so strcombo.a strcombo.so trigseq.a
+[PROVIDES] trigseq.so vca.a vca.so vcd.a vcd.so vcf.a vcf.so vco.a vco.so
+[PROVIDES] voice.a voice.so xfade.a xfade.so
 

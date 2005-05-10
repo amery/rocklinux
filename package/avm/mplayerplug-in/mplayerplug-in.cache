@@ -20,19 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110307348 Tue Mar  8 19:42:28 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115463530 Sat May  7 12:58:50 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-mplayerplug-in.log 9-mplayerplug-in.log
 
-[BUILDTIME] 2882 (9)
-[SIZE] 0.42 MB, 10 files
+[BUILDTIME] 3504 (9)
+[SIZE] 0.40 MB, 14 files
 
 [DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils diffutils
-[DEP] findutils firefox gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev
-[DEP] grep gtk+ gtk+:dev linux26-header:dev make mktemp mozilla mozilla:dev
-[DEP] net-tools pango pango:dev pkgconfig sed sysfiles tar util-linux
-[DEP] xfree86 xfree86:dev
+[DEP] findutils firefox gawk gcc34 gcc34:dev gettext glib glib:dev glibc23
+[DEP] glibc23:dev grep gtk+ gtk+:dev linux26-header:dev make mktemp mozilla
+[DEP] mozilla:dev net-tools pango pango:dev pkgconfig sed sysfiles tar
+[DEP] util-linux xorg xorg:dev
 
+[PROVIDES] mplayerplug-in.so
 

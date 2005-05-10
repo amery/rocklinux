@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110174467 Mon Mar  7 06:47:47 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115433161 Sat May  7 04:32:41 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-file-roller.log 9-file-roller.log
 
-[BUILDTIME] 7050 (9)
-[SIZE] 3.11 MB, 177 files
+[BUILDTIME] 8386 (9)
+[SIZE] 3.20 MB, 180 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
 [DEP] bash2 battfink binutils bzip2 coreutils cpan-xml-parser diffutils
@@ -37,11 +37,13 @@
 [DEP] gnome-mime-data gnome-vfs gnome-vfs:dev grep gtk+ gtk+:dev
 [DEP] libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui
 [DEP] libbonoboui:dev libglade libglade:dev libgnome libgnome:dev
-[DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev
-[DEP] libjpeg libjpeg:dev libxml2 libxml2:dev linux26-header:dev make
-[DEP] mktemp net-tools openssl orbit2 orbit2:dev pango pango:dev perl5
-[DEP] pkgconfig popt popt:dev scrollkeeper sed sysfiles tar util-linux
-[DEP] xfree86 zapping zlib:dev
+[DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev libjpeg
+[DEP] libjpeg:dev libxml2 libxml2:dev linux26-header:dev make mktemp
+[DEP] nautilus nautilus:dev net-tools openssl orbit2 orbit2:dev pango
+[DEP] pango:dev perl5 pkgconfig popt popt:dev scrollkeeper sed sysfiles
+[DEP] tar totem util-linux xorg zapping zlib:dev
 
-[PROVIDES] file-roller
+[PROVIDES] file-roller libfile-roller-component.a
+[PROVIDES] libfile-roller-component.so libnautilus-fileroller.a
+[PROVIDES] libnautilus-fileroller.so
 

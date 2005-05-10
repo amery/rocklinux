@@ -20,21 +20,33 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110137606 Sun Mar  6 20:33:26 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115184439 Wed May  4 07:27:19 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-python.log 9-python.log
 
-[BUILDTIME] 16366 (9)
-[SIZE] 39.20 MB, 3407 files
+[BUILDTIME] 16447 (9)
+[SIZE] 40.10 MB, 3507 files
 
 [DEP] 00-dirtree bash2 bdb42 bdb42:dev binutils bluez-libs:dev bzip2
-[DEP] bzip2:dev coreutils diffutils findutils gawk gcc34 gcc34:dev
-[DEP] gdbm gdbm:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp ncurses:dev net-tools openssl openssl:dev patch readline
-[DEP] readline:dev sed sysfiles tar tcl tcl:dev tk tk:dev util-linux
-[DEP] xfree86 xfree86:dev zlib:dev
+[DEP] bzip2:dev coreutils diffutils findutils gawk gcc34 gcc34:dev gdbm
+[DEP] gdbm:dev glibc23 glibc23:dev grep kdebindings linux26-header:dev
+[DEP] make mktemp ncurses:dev net-tools openssl openssl:dev patch readline
+[DEP] readline:dev sed sysfiles tar tcl tcl:dev tk tk:dev util-linux xorg
+[DEP] xorg:dev zlib:dev
 
-[PROVIDES] idle libpython2.4.so pydoc python python2.4 smtpd.py
+[PROVIDES] _bisect.so _bsddb.so _codecs_cn.so _codecs_hk.so
+[PROVIDES] _codecs_iso2022.so _codecs_jp.so _codecs_kr.so _codecs_tw.so
+[PROVIDES] _csv.so _curses.so _curses_panel.so _heapq.so _hotshot.so
+[PROVIDES] _locale.so _multibytecodec.so _random.so _socket.so _ssl.so
+[PROVIDES] _testcapi.so _weakref.so array.so audioop.so binascii.so bz2.so
+[PROVIDES] cPickle.so cStringIO.so cmath.so collections.so cryptmodule.so
+[PROVIDES] datetime.so dbm_failed.so dl.so fcntl.so gdbmmodule.so grp.so
+[PROVIDES] idle imageop.so itertools.so libpython2.4.a libpython2.4.so
+[PROVIDES] linuxaudiodev.so math.so md5.so mmap.so nis.so operator.so
+[PROVIDES] ossaudiodev.so parser.so pwd.so pydoc pyexpat.so python
+[PROVIDES] python2.4 readline.so regex.so resource.so rgbimg.so select.so
+[PROVIDES] sha.so smtpd.py strop.so struct.so syslogmodule.so termios.so
+[PROVIDES] time.so timing.so unicodedata.so xxsubtype.so zlibmodule.so
 

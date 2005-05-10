@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110895131 Tue Mar 15 14:58:51 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115607607 Mon May  9 05:00:07 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-hercules.log 9-hercules.log
 
-[BUILDTIME] 22983 (9)
-[SIZE] 3.47 MB, 135 files
+[BUILDTIME] 23408 (9)
+[SIZE] 4.39 MB, 135 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 bzip2:dev coreutils diffutils
 [DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev
@@ -37,7 +37,8 @@
 
 [PROVIDES] cckd2ckd cckdcdsk cckdcomp cckddiag cckdswap cfba2fba ckd2cckd
 [PROVIDES] dasdcat dasdcopy dasdinit dasdisup dasdlist dasdload dasdls
-[PROVIDES] dasdpdsu dasdseq dmap2hrc fba2cfba hercifc hercules hetget
-[PROVIDES] hetinit hetmap hetupd libherc.so libhercs.so tapecopy tapemap
-[PROVIDES] tapesplt
+[PROVIDES] dasdpdsu dasdseq dmap2hrc dyncrypt.so dyngui.so dyninst.so
+[PROVIDES] fba2cfba hdt1403.so hdt2703.so hdt3088.so hdt3270.so hdt3420.so
+[PROVIDES] hdt3505.so hdt3525.so hdteq.so hercifc hercules hetget hetinit
+[PROVIDES] hetmap hetupd libherc.so libhercs.so tapecopy tapemap tapesplt
 

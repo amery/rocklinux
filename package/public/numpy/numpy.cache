@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110146625 Sun Mar  6 23:03:45 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115198194 Wed May  4 11:16:34 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-numpy.log 9-numpy.log
 
-[BUILDTIME] 4884 (9)
-[SIZE] 1.16 MB, 51 files
+[BUILDTIME] 3960 (9)
+[SIZE] 1.26 MB, 51 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev mktemp patch python
+[DEP] glibc23 glibc23:dev grep linux26-header:dev mktemp patch pil python
 [DEP] python:dev sed sysfiles tar wxpython
 
+[PROVIDES] RNG.so _numpy.so arrayfns.so fftpack.so lapack_lite.so
+[PROVIDES] multiarray.so ranlib.so umath.so
 

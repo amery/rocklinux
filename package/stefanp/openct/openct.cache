@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110661793 Sat Mar 12 22:09:53 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115589356 Sun May  8 23:55:56 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-openct.log 9-openct.log
 
-[BUILDTIME] 12326 (9)
-[SIZE] 0.22 MB, 29 files
+[BUILDTIME] 6890 (9)
+[SIZE] 0.21 MB, 29 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] flex flex:dev gawk gcc34 gcc34:dev glib12 glibc23 glibc23:dev
-[DEP] gnome-libs14 grep hotplug libusb libusb:dev linux26-header:dev m4
-[DEP] make mktemp net-tools pcsc-lite pcsc-lite:dev pkgconfig sed sysfiles
-[DEP] tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils flex
+[DEP] flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep hotplug
+[DEP] libusb libusb:dev linux26-header:dev m4 make mktemp net-tools
+[DEP] pcsc-lite:dev pkgconfig sed sysfiles tar util-linux
 
 [PROVIDES] ifdhandler ifdproxy libifd.a libifd.so libopenct.a libopenct.so
-[PROVIDES] libopenctapi.a libopenctapi.so openct-control openct-tool
+[PROVIDES] libopenctapi.a libopenctapi.so openct-control openct-ifd.a
+[PROVIDES] openct-ifd.so openct-tool
 

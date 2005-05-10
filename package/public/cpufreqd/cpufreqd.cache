@@ -20,18 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110121450 Sun Mar  6 16:04:10 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115120047 Tue May  3 13:34:07 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-cpufreqd.log 9-cpufreqd.log
 
-[BUILDTIME] 3162 (9)
-[SIZE] 0.07 MB, 15 files
+[BUILDTIME] 3560 (9)
+[SIZE] 0.08 MB, 15 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev m4 make
-[DEP] mktemp net-tools patch sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp
+[DEP] net-tools patch sed sysfiles tar util-linux
 
 [PROVIDES] cpufreqd libsys_acpi.so libsys_apm.so libsys_pmu.so
 

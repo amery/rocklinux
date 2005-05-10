@@ -20,24 +20,28 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110145147 Sun Mar  6 22:39:07 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115193695 Wed May  4 10:01:35 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-mythtv.log 9-mythtv.log
 
-[BUILDTIME] 110836 (9)
-[SIZE] 24.87 MB, 676 files
+[BUILDTIME] 104174 (9)
+[SIZE] 19.52 MB, 798 files
 
 [DEP] 00-dirtree alsa alsa:dev bash2 binutils bzip2 coreutils diffutils
 [DEP] expat findutils freetype freetype:dev gawk gcc34 gcc34:dev glibc23
 [DEP] glibc23:dev grep lame lame:dev libpng linux26-header:dev lirc
 [DEP] lirc:dev make mktemp patch perl5 qt qt:dev sed sysfiles tar tetex
-[DEP] xfree86 xfree86:dev zlib:dev
+[DEP] xorg xorg:dev zlib:dev
 
-[PROVIDES] libmyth-0.16.so libmythavcodec-0.16.so libmythavformat-0.16.so
-[PROVIDES] libmythsamplerate-0.16.a libmythsoundtouch-0.16.a
-[PROVIDES] libmythtv-0.16.so mythbackend mythcommflag mythepg
-[PROVIDES] mythfilldatabase mythfrontend mythjobqueue mythprogfind
-[PROVIDES] mythsetup mythtranscode mythtv mythtvosd
+[PROVIDES] libadjust.so libbobdeint.so libconvert.so libcrop.so
+[PROVIDES] libdenoise3d.so libforce.so libinvert.so libkerneldeint.so
+[PROVIDES] liblinearblend.so libmyth-0.17.so libmythavcodec-0.17.so
+[PROVIDES] libmythavformat-0.17.so libmythmpeg2-0.17.a
+[PROVIDES] libmythsamplerate-0.17.a libmythsoundtouch-0.17.a
+[PROVIDES] libmythtv-0.17.so libonefield.so libpostprocess.so
+[PROVIDES] libquickdnr.so mythbackend mythcommflag mythepg mythfilldatabase
+[PROVIDES] mythfrontend mythjobqueue mythprogfind mythsetup mythtranscode
+[PROVIDES] mythtv mythtvosd
 

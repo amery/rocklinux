@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110206767 Mon Mar  7 15:46:07 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115351070 Fri May  6 05:44:30 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-kdewebdev.log 9-kdewebdev.log
 
-[BUILDTIME] 123001 (9)
-[SIZE] 10.28 MB, 1457 files
+[BUILDTIME] 128171 (9)
+[SIZE] 11.95 MB, 1537 files
 
 [DEP] 00-dirtree arts bash2 binutils binutils:dev bzip2 coreutils
 [DEP] diffutils expat fam fam:dev findutils freetype freetype:dev
@@ -37,9 +37,12 @@
 [DEP] libgpg-error:dev libjpeg libjpeg:dev libpng libpng:dev libxml2
 [DEP] libxml2:dev libxslt libxslt:dev linux26-header:dev make mktemp
 [DEP] net-tools pcre pcre:dev perl5 qt qt:dev sed sysfiles tar util-linux
-[DEP] vim xfree86 xfree86:dev zlib:dev
+[DEP] vim xorg xorg:dev zlib:dev
 
-[PROVIDES] kimagemapeditor klinkstatus kmdr-editor kmdr-executor
-[PROVIDES] kmdr-plugins kxsldbg libkommanderplugin.so libkommanderwidget.so
-[PROVIDES] libkommanderwidgets.so quanta xsldbg
+[PROVIDES] kfilereplace kimagemapeditor klinkstatus kmdr-editor
+[PROVIDES] kmdr-executor kmdr-plugins kxsldbg libkfilereplacepart.so
+[PROVIDES] libkimagemapeditor.so libklinkstatuspart.so
+[PROVIDES] libkommanderplugin.so libkommanderwidget.so
+[PROVIDES] libkommanderwidgets.so libkxsldbgpart.so quanta
+[PROVIDES] quantadebuggergubed.so xsldbg
 

@@ -20,24 +20,30 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110304338 Tue Mar  8 18:52:18 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115455630 Sat May  7 10:47:10 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-bonobo-conf10.log 9-bonobo-conf10.log
 
-[BUILDTIME] 8357 (9)
-[SIZE] 0.21 MB, 36 files
+[BUILDTIME] 9303 (9)
+[SIZE] 0.23 MB, 36 files
 
 [DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev autoconf automake19
 [DEP] bash2 bdb33 binutils bison bonobo10 bonobo10:dev bzip2 coreutils
-[DEP] diffutils esound esound:dev findutils gawk gcc34 gcc34:dev gconf110
-[DEP] gconf110:dev gdk-pixbuf10 gdk-pixbuf10:dev gettext glib glib12
-[DEP] glib12:dev glibc23 glibc23:dev gnome-libs14 gnome-libs14:dev
-[DEP] gnome-print10:dev grep gtk+12 gtk+12:dev gtkdoc imlib imlib:dev
-[DEP] indent libxml libxml:dev linux26-header:dev make mktemp net-tools
-[DEP] oaf10 oaf10:dev orbit10 orbit10:dev perl5 popt popt:dev sed sysfiles
-[DEP] tar texinfo xfree86 zlib:dev
+[DEP] diffutils epiphany esound esound:dev evolution-data-server
+[DEP] findutils gail gawk gcc34 gcc34:dev gconf gconf110 gconf110:dev
+[DEP] gdk-pixbuf10 gdk-pixbuf10:dev gettext gimp glib glib12 glib12:dev
+[DEP] glibc23 glibc23:dev gmime gnome-libs14 gnome-libs14:dev gnome-panel
+[DEP] gnome-print10:dev gnome-vfs gok grep gstreamer gtk+ gtk+12 gtk+12:dev
+[DEP] gtkdoc gtksourceview imlib imlib:dev indent libbonoboui libgda
+[DEP] libglade libgnome libgnomecanvas libgnomeprint libgnomeprintui
+[DEP] libgnomeui libgsf libmrproject librsvg libwnck libxml libxml:dev
+[DEP] linphone linux26-header:dev make mergeant mktemp net-tools oaf10
+[DEP] oaf10:dev orbit10 orbit10:dev orbit2 pango perl5 pkgconfig popt
+[DEP] popt:dev sed sysfiles tar texinfo xorg zlib:dev
 
 [PROVIDES] bonobo-moniker-xmldb cedit libbonobo_conf.a libbonobo_conf.so
+[PROVIDES] libmoniker_config.a libmoniker_config.so libmoniker_gconf.a
+[PROVIDES] libmoniker_gconf.so
 

@@ -20,26 +20,27 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110222866 Mon Mar  7 20:14:26 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115406549 Fri May  6 21:09:09 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-kdebluetooth.log 9-kdebluetooth.log
 
-[BUILDTIME] 37666 (9)
-[SIZE] 3.01 MB, 143 files
+[BUILDTIME] 40310 (9)
+[SIZE] 4.72 MB, 134 files
 
-[DEP] 00-dirtree arts arts:dev autoconf automake17 bash2 binutils
-[DEP] bluez-libs bluez-libs:dev bzip2 coreutils diffutils expat fam fam:dev
-[DEP] findutils freetype freetype:dev gawk gcc34 gcc34:dev gettext glib12
-[DEP] glib12:dev glibc23 glibc23:dev grep gtk+12 gtk+12:dev kaffeine
-[DEP] kdebase kdelibs kdelibs:dev libart_lgpl23 libart_lgpl23:dev libjpeg
-[DEP] libpng libpng:dev linux26-header:dev m4 make mktemp net-tools
-[DEP] ogg-vorbis ogg-vorbis:dev openobex openobex:dev perl5 qt qt:dev
-[DEP] sed sysfiles tar util-linux vim xfree86 xfree86:dev xmms xmms:dev
-[DEP] zlib:dev
+[DEP] 00-dirtree arts bash2 binutils bluez-libs bluez-libs:dev
+[DEP] bzip2 coreutils diffutils expat fam fam:dev findutils freetype
+[DEP] freetype:dev gawk gcc34 gcc34:dev gettext glib12 glib12:dev
+[DEP] glibc23 glibc23:dev grep gtk+12 gtk+12:dev kaffeine kdebase
+[DEP] kdelibs kdelibs:dev kdelibs:doc kdepim kdepim:dev kdeutils
+[DEP] libart_lgpl23 libart_lgpl23:dev libjpeg libpng libpng:dev libxml2
+[DEP] linux26-header:dev make mktemp net-tools openobex openobex:dev
+[DEP] perl5 qt qt:dev sed sysfiles tar util-linux vim xmms xmms:dev xorg
+[DEP] xorg:dev zlib:dev
 
-[PROVIDES] kbluelock kbluetoothd kbthandsfree kbtobexclient kbtsearch
-[PROVIDES] kbtserialchat khciconfig kioclient kioobex_start libqobex.so
-[PROVIDES] qobexclient qobexfbssrv
+[PROVIDES] kbluetoothd kbtobexclient kbtsearch kbtserialchat
+[PROVIDES] kcm_btpaired.so kcm_kbluetoothd.so kcm_obex.so khciconfig
+[PROVIDES] kio_bluetooth.so kio_obex.so kio_sdp.so kioclient kioobex_start
+[PROVIDES] libirmcsynckonnector.so libqobex.so qobexclient qobexfbssrv
 

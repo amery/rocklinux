@@ -20,43 +20,60 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110309685 Tue Mar  8 20:21:25 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115471914 Sat May  7 15:18:34 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-kdemultimedia.log 9-kdemultimedia.log
 
-[BUILDTIME] 217511 (9)
-[SIZE] 18.47 MB, 1019 files
+[BUILDTIME] 242736 (9)
+[SIZE] 21.01 MB, 1035 files
 
 [DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev
-[DEP] bash2 binutils bzip2 cdparanoia cdparanoia:dev coreutils
-[DEP] diffutils esound esound:dev expat fam fam:dev findutils flac
-[DEP] flac:dev freetype freetype:dev gawk gcc34 gcc34:dev gettext glib
-[DEP] glib:dev glibc23 glibc23:dev grep jack jack:dev kdebase kdebase:doc
-[DEP] kdelibs kdelibs:dev kdelibs:doc kdeutils lame lame:dev libart_lgpl23
-[DEP] libart_lgpl23:dev libcdaudio libjpeg libpng libpng:dev libsamplerate
-[DEP] libsamplerate:dev linux26-header:dev mad mad:dev make mktemp nas
-[DEP] net-tools ogg-vorbis ogg-vorbis:dev perl5 qt qt:dev sed sysfiles
-[DEP] taglib taglib:dev tar util-linux xfree86 xfree86:dev xine-lib
-[DEP] xine-lib:dev zlib:dev
+[DEP] bash2 binutils bzip2 cdparanoia cdparanoia:dev coreutils diffutils
+[DEP] esound esound:dev expat fam fam:dev findutils flac flac:dev freetype
+[DEP] freetype:dev gawk gcc34 gcc34:dev gettext glib glib12 glib:dev
+[DEP] glibc23 glibc23:dev gnome-libs14 grep gstreamer gstreamer:dev jack
+[DEP] jack:dev kdebase kdebase:doc kdelibs kdelibs:dev kdelibs:doc kdeutils
+[DEP] lame lame:dev libart_lgpl23 libart_lgpl23:dev libcdaudio libjpeg
+[DEP] libjpeg:dev libpng libpng:dev libsamplerate libsamplerate:dev
+[DEP] libtool libtool:dev libxml2 libxml2:dev linux26-header:dev mad
+[DEP] mad:dev make mktemp nas net-tools ogg-vorbis ogg-vorbis:dev patch
+[DEP] pcre pcre:dev perl5 pkgconfig popt popt:dev qt qt:dev sed speex
+[DEP] speex:dev sysfiles taglib taglib:dev tar util-linux xine-lib
+[DEP] xine-lib:dev xorg xorg:dev zlib:dev
 
-[PROVIDES] artsbuilder artscontrol juk kaboodle kaudiocreator kmid kmix
-[PROVIDES] kmixctrl krec kscd libakode.so libakode_mpc_decoder.so
-[PROVIDES] libakode_mpeg_decoder.so libakode_src_resampler.so
-[PROVIDES] libakode_xiph_decoder.so libarts_akode.so libarts_mpeglib.so
-[PROVIDES] libarts_splay.so libarts_xine.so libartsbuilder.so
-[PROVIDES] libartscontrolapplet.so libartscontrolsupport.so
-[PROVIDES] libartseffects.so libartsgui.so libartsgui_idl.so
-[PROVIDES] libartsgui_kde.so libartsmidi.so libartsmidi_idl.so
-[PROVIDES] libartsmodules.so libartsmodulescommon.so
+[PROVIDES] artsbuilder artscontrol juk kaboodle kaudiocreator
+[PROVIDES] kcm_audiocd.so kcm_cddb.so kcm_krec.so kcm_krec_files.so
+[PROVIDES] kfile_au.so kfile_avi.so kfile_flac.so kfile_m3u.so
+[PROVIDES] kfile_mp3.so kfile_mpc.so kfile_ogg.so kfile_sid.so kfile_wav.so
+[PROVIDES] kio_audiocd.so kmid kmix kmix.so kmix_panelapplet.so kmixctrl
+[PROVIDES] kmixctrl.so krec krec.so kscd libakode.so libakode_alsa_sink.so
+[PROVIDES] libakode_jack_sink.so libakode_mpc_decoder.so
+[PROVIDES] libakode_mpeg_decoder.so libakode_oss_sink.so
+[PROVIDES] libakode_src_resampler.so libakode_xiph_decoder.so
+[PROVIDES] libarts_akode.so libarts_mpeglib.so libarts_splay.so
+[PROVIDES] libarts_xine.so libartsbuilder.so libartscontrolapplet.so
+[PROVIDES] libartscontrolsupport.so libartseffects.so libartsgui.so
+[PROVIDES] libartsgui_idl.so libartsgui_kde.so libartsmidi.so
+[PROVIDES] libartsmidi_idl.so libartsmodules.so libartsmodulescommon.so
 [PROVIDES] libartsmoduleseffects.so libartsmodulesmixers.so
-[PROVIDES] libartsmodulessynth.so libaudiocdplugins.so libaudiofilearts.so
-[PROVIDES] libkcddb.so libkdeinit_kmix.so libkdeinit_kmixctrl.so
-[PROVIDES] libkdeinit_krec.so libkdeinit_noatun.so libkmidlib.so
+[PROVIDES] libartsmodulessynth.so libaudiocd_encoder_flac.so
+[PROVIDES] libaudiocd_encoder_lame.so libaudiocd_encoder_vorbis.so
+[PROVIDES] libaudiocd_encoder_wav.so libaudiocdplugins.so
+[PROVIDES] libaudiofilearts.so libkaboodlepart.so libkcddb.so
+[PROVIDES] libkdeinit_kmix.so libkdeinit_kmixctrl.so libkdeinit_krec.so
+[PROVIDES] libkdeinit_noatun.so libkmidlib.so libkmidpart.so
+[PROVIDES] libkrecexport_mp3.so libkrecexport_ogg.so libkrecexport_wave.so
 [PROVIDES] libmpeg-0.3.0.so libmpeg.so libnoatun.so libnoatunarts.so
 [PROVIDES] libnoatuncontrols.so libnoatuntags.so libwinskinvis.so
-[PROVIDES] libyafcore.so libyafxplayer.so midisend mpeglibartsplay noatun
-[PROVIDES] workman2cddb.pl yaf-cdda yaf-mpgplay yaf-splay yaf-tplay
-[PROVIDES] yaf-vorbis yaf-yuv
+[PROVIDES] libyafcore.so libyafxplayer.so midisend mpeglibartsplay
+[PROVIDES] noatun noatun.so noatun_dcopiface.so noatun_excellent.so
+[PROVIDES] noatun_htmlexport.so noatun_infrared.so noatun_kaiman.so
+[PROVIDES] noatun_keyz.so noatun_kjofol.so noatun_marquis.so
+[PROVIDES] noatun_metatag.so noatun_monoscope.so noatun_net.so
+[PROVIDES] noatun_splitplaylist.so noatun_systray.so noatun_ui.so
+[PROVIDES] noatun_voiceprint.so noatun_winskin.so noatunsimple.so
+[PROVIDES] videothumbnail.so workman2cddb.pl yaf-cdda yaf-mpgplay yaf-splay
+[PROVIDES] yaf-tplay yaf-vorbis yaf-yuv
 

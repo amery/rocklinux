@@ -20,18 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110131184 Sun Mar  6 18:46:24 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115175403 Wed May  4 04:56:43 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-libcdaudio.log 9-libcdaudio.log
 
-[BUILDTIME] 3250 (9)
-[SIZE] 0.08 MB, 11 files
+[BUILDTIME] 3601 (9)
+[SIZE] 0.09 MB, 11 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] net-tools sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
+[DEP] mktemp net-tools sed sysfiles tar util-linux
 
 [PROVIDES] libcdaudio-config libcdaudio.a libcdaudio.so
 

@@ -20,19 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110227742 Mon Mar  7 21:35:42 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115435892 Sat May  7 05:18:12 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-openhbci.log 9-openhbci.log
 
-[BUILDTIME] 29794 (9)
-[SIZE] 1.69 MB, 21 files
+[BUILDTIME] 31670 (9)
+[SIZE] 2.96 MB, 21 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep libchipcard libchipcard:dev
 [DEP] linux26-header:dev make mktemp net-tools openssl openssl:dev patch
 [DEP] sed sysfiles tar util-linux
 
-[PROVIDES] libopenhbci.a libopenhbci.so openhbci-config
+[PROVIDES] ddvcard.a ddvcard.so libopenhbci.a libopenhbci.so
+[PROVIDES] openhbci-config rdhfile.a rdhfile.so
 

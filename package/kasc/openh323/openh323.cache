@@ -1,20 +1,25 @@
 
-[TIMESTAMP] 1110233151 Mon Mar  7 23:05:51 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115443001 Sat May  7 07:16:41 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-openh323.log 9-openh323.log
 
-[BUILDTIME] 59348 (9)
-[SIZE] 8.85 MB, 50 files
+[BUILDTIME] 62645 (9)
+[SIZE] 10.71 MB, 50 files
 
 [DEP] 00-dirtree aalib alsa alsa:dev bash2 binutils bison bzip2 coreutils
 [DEP] cyrus-sasl2 cyrus-sasl2:dev diffutils expat expat:dev findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep libavc1394 libavc1394:dev
 [DEP] libdv libdv:dev libraw1394 libraw1394:dev libsdl libsdl:dev
 [DEP] linux26-header:dev m4 make mktemp nas net-tools openldap openldap:dev
-[DEP] openssl openssl:dev patch sed slang sysfiles tar util-linux xfree86
+[DEP] openssl openssl:dev patch perl5 sed slang speex speex:dev sysfiles
+[DEP] tar util-linux xorg
 
-[PROVIDES] libh323_linux_x86_r.so libopenh323.so libpt.so
-[PROVIDES] libpt_linux_x86_r.so ptlib-config
+[PROVIDES] alsa_pwplugin.so avc_pwplugin.so g726_audio_pwplugin.so
+[PROVIDES] gsm0610_audio_pwplugin.so ilbc_audio_pwplugin.so
+[PROVIDES] ima_adpcm_audio_pwplugin.so libh323_linux_x86_r.so
+[PROVIDES] libopenh323.so libpt.so libpt_linux_x86_r.so
+[PROVIDES] lpc10_audio_pwplugin.so oss_pwplugin.so ptlib-config
+[PROVIDES] speex_audio_pwplugin.so v4l_pwplugin.so
 

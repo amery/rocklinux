@@ -20,18 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110894755 Tue Mar 15 14:52:35 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115606062 Mon May  9 04:34:22 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-mpgtx.log 9-mpgtx.log
 
-[BUILDTIME] 1753 (9)
-[SIZE] 0.13 MB, 20 files
+[BUILDTIME] 2067 (9)
+[SIZE] 0.16 MB, 20 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp patch sed
-[DEP] sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
+[DEP] patch sed sysfiles tar
 
 [PROVIDES] mpgcat mpgdemux mpginfo mpgjoin mpgsplit mpgtx tagmp3
 

@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110207215 Mon Mar  7 15:53:35 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115352803 Fri May  6 06:13:23 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-sane-backends.log 9-sane-backends.log
 
-[BUILDTIME] 20939 (9)
-[SIZE] 4.62 MB, 322 files
+[BUILDTIME] 20300 (9)
+[SIZE] 4.99 MB, 322 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep libexif
@@ -35,6 +35,23 @@
 [DEP] libusb:dev linux26-header:dev linux26-source make mktemp net-tools
 [DEP] pkgconfig sed sysfiles tar tetex util-linux
 
-[PROVIDES] gamma4scanimage libsane.so sane-config sane-find-scanner
-[PROVIDES] saned scanimage
+[PROVIDES] gamma4scanimage libsane-abaton.so libsane-agfafocus.so
+[PROVIDES] libsane-apple.so libsane-artec.so libsane-artec_eplus48u.so
+[PROVIDES] libsane-as6e.so libsane-avision.so libsane-bh.so
+[PROVIDES] libsane-canon.so libsane-canon630u.so libsane-coolscan.so
+[PROVIDES] libsane-coolscan2.so libsane-dc210.so libsane-dc240.so
+[PROVIDES] libsane-dc25.so libsane-dll.so libsane-dmc.so libsane-epson.so
+[PROVIDES] libsane-fujitsu.so libsane-gphoto2.so libsane-gt68xx.so
+[PROVIDES] libsane-hp.so libsane-hp5400.so libsane-ibm.so libsane-leo.so
+[PROVIDES] libsane-ma1509.so libsane-matsushita.so libsane-microtek.so
+[PROVIDES] libsane-microtek2.so libsane-mustek.so libsane-mustek_usb.so
+[PROVIDES] libsane-nec.so libsane-net.so libsane-niash.so libsane-pie.so
+[PROVIDES] libsane-plustek.so libsane-plustek_pp.so libsane-qcam.so
+[PROVIDES] libsane-ricoh.so libsane-s9036.so libsane-sceptre.so
+[PROVIDES] libsane-sharp.so libsane-sm3600.so libsane-snapscan.so
+[PROVIDES] libsane-sp15c.so libsane-st400.so libsane-tamarack.so
+[PROVIDES] libsane-teco1.so libsane-teco2.so libsane-teco3.so
+[PROVIDES] libsane-test.so libsane-u12.so libsane-umax.so
+[PROVIDES] libsane-umax1220u.so libsane-umax_pp.so libsane-v4l.so
+[PROVIDES] libsane.so sane-config sane-find-scanner saned scanimage
 

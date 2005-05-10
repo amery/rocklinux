@@ -20,22 +20,29 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110170653 Mon Mar  7 05:44:13 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115273321 Thu May  5 08:08:41 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-alsaplayer.log 9-alsaplayer.log
 
-[BUILDTIME] 9475 (9)
-[SIZE] 0.57 MB, 44 files
+[BUILDTIME] 9954 (9)
+[SIZE] 0.63 MB, 44 files
 
-[DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev bash2 binutils bzip2
-[DEP] coreutils diffutils doxygen esound esound:dev findutils flac flac:dev
-[DEP] gawk gcc34 gcc34:dev glib12 glib12:dev glibc23 glibc23:dev grep
-[DEP] gtk+12 gtk+12:dev jack jack:dev libmikmod libmikmod:dev libsndfile
-[DEP] libsndfile:dev linux26-header:dev mad mad:dev make mktemp nas
-[DEP] nas:dev net-tools ogg-vorbis ogg-vorbis:dev pkgconfig sed sysfiles
-[DEP] tar util-linux xfree86 xfree86:dev xosd xosd:dev zlib:dev
+[DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev bash2 binutils
+[DEP] bzip2 coreutils diffutils doxygen esound esound:dev findutils flac
+[DEP] flac:dev gawk gcc34 gcc34:dev glib12 glib12:dev glibc23 glibc23:dev
+[DEP] grep gtk+12 gtk+12:dev jack jack:dev libmikmod libmikmod:dev
+[DEP] libsndfile libsndfile:dev linux26-header:dev mad mad:dev make
+[DEP] mktemp nas nas:dev net-tools ogg-vorbis ogg-vorbis:dev pkgconfig
+[DEP] sed sysfiles tar util-linux xorg xorg:dev xosd xosd:dev zlib:dev
 
-[PROVIDES] alsaplayer libalsaplayer.so
+[PROVIDES] alsaplayer libaf.so libalsa_out.so libalsaplayer.so
+[PROVIDES] libblurscope.so libcdda.so libdaemon_interface.so
+[PROVIDES] libesound_out.so libfile.so libflac_in.so libgtk_interface.so
+[PROVIDES] libhttp.so libjack_out.so liblevelmeter.so liblogbarfft.so
+[PROVIDES] libmad_in.so libmod.so libmonoscope.so libnas_out.so
+[PROVIDES] libnull_out.so liboglspectrum.so liboss_out.so libsndfile_in.so
+[PROVIDES] libspacescope.so libsynaescope.so libtext_interface.so
+[PROVIDES] libvorbis_in.so libwav.so libxosd_interface.so
 

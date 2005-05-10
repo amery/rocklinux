@@ -20,21 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110172452 Mon Mar  7 06:14:12 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115275186 Thu May  5 08:39:46 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-wxpython.log 9-wxpython.log
 
-[BUILDTIME] 27255 (9)
-[SIZE] 13.98 MB, 545 files
+[BUILDTIME] 22060 (9)
+[SIZE] 14.49 MB, 545 files
 
 [DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils findutils
-[DEP] gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev grep gtk+ gtk+:dev
-[DEP] libjpeg libpng libtiff libxml2 libxslt linux26-header:dev mktemp
-[DEP] numpy pango pango:dev pkgconfig python python:dev sed sysfiles tar
-[DEP] wxwidgets wxwidgets:dev xfree86 xfree86:dev zlib:dev
+[DEP] gawk gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev grep gtk+
+[DEP] gtk+:dev libjpeg libpng libtiff libxml2 libxslt linux26-header:dev
+[DEP] mktemp numpy pango pango:dev pil pkgconfig python python:dev sed
+[DEP] sysfiles tar wxwidgets wxwidgets:dev xorg xorg:dev zlib:dev
 
-[PROVIDES] helpviewer img2png img2py img2xpm pyalacarte pyalamode pycrust
-[PROVIDES] pyshell pywrap pywxrc xrced
+[PROVIDES] _calendar.so _controls_.so _core_.so _gdi_.so _gizmos.so
+[PROVIDES] _grid.so _html.so _misc_.so _ogl.so _stc.so _webkit.so
+[PROVIDES] _windows_.so _wizard.so _xrc.so helpviewer img2png img2py
+[PROVIDES] img2xpm pyalacarte pyalamode pycrust pyshell pywrap pywxrc xrced
 

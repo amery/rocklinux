@@ -1,20 +1,21 @@
 
-[TIMESTAMP] 1110337857 Wed Mar  9 04:10:57 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115682933 Tue May 10 01:55:33 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-paragui.log 9-paragui.log
 
-[BUILDTIME] 19695 (9)
-[SIZE] 1.52 MB, 19 files
+[BUILDTIME] 23064 (9)
+[SIZE] 2.06 MB, 19 files
 
 [DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils diffutils expat
 [DEP] expat:dev file findutils freetype freetype:dev gawk gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep libjpeg libjpeg:dev libpng libpng:dev
 [DEP] libsdl libsdl:dev libsdl_image libsdl_image:dev libtiff libtiff:dev
 [DEP] linux26-header:dev make mktemp nas ncurses:dev net-tools numpy
-[DEP] patch perl5 python python:dev readline readline:dev ruby sed swig
-[DEP] sysfiles tar texinfo wxpython xfree86 zlib:dev
+[DEP] patch perl5 pil python python:dev readline readline:dev ruby sed
+[DEP] swig sysfiles tar texinfo wxpython xorg zlib:dev
 
-[PROVIDES] libparagui.a libparagui.so paragui-config
+[PROVIDES] libparagui.a libparagui.so paragui-config paragui.so
+[PROVIDES] paraguicmodule.so
 

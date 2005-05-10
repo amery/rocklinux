@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110316251 Tue Mar  8 22:10:51 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115496822 Sat May  7 22:13:42 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-pike.log 9-pike.log
 
-[BUILDTIME] 35015 (9)
-[SIZE] 9.36 MB, 652 files
+[BUILDTIME] 34332 (9)
+[SIZE] 9.88 MB, 652 files
 
 [DEP] 00-dirtree alsa audiofile bash2 bdb33 binutils bison bzip2 bzip2:dev
 [DEP] coreutils diffutils esound expat ffmpeg ffmpeg:dev fftw:dev
@@ -42,7 +42,16 @@
 [DEP] mysql mysql:dev nas nasm net-tools nettle:dev ogg-vorbis openssl
 [DEP] openssl:dev orbit10 orbit10:dev orbit2 pango pcre pcre:dev pkgconfig
 [DEP] popt postgresql postgresql:dev sane-backends sane-backends:dev sed
-[DEP] sysfiles tar util-linux valgrind:dev xfree86 xfree86:dev zlib:dev
+[DEP] sysfiles tar util-linux valgrind:dev xorg xorg:dev zlib:dev
 
-[PROVIDES] hilfe pike pike.syms pike76 rsif
+[PROVIDES] Bz2.so CommonLog.so DVB.so GL.so GLUT.so Gdbm.so Gettext.so
+[PROVIDES] Gmp.so HTTPAccept.so Image.so Kerberos.so Msql.so Mysql.so
+[PROVIDES] Nettle.so Odbc.so PDF.so Perl.so Pipe.so Postgres.so
+[PROVIDES] SANE.so SDL.so Shuffler.so Ssleay.so Unicode.so _ADT.so
+[PROVIDES] _Ffmpeg.so _Image_FreeType.so _Image_GIF.so _Image_JPEG.so
+[PROVIDES] _Image_SVG.so _Image_TIFF.so _Image_TTF.so _Image_XFace.so
+[PROVIDES] _Roxen.so ___GTK.so ___Gz.so ___Java.so ___MIME.so ___Math.so
+[PROVIDES] ___Mird.so ___Oracle.so ___Regexp.so ___Yp.so ____Charset.so
+[PROVIDES] ____Regexp_PCRE.so _parser.so hilfe pike pike.syms pike76 rsif
+[PROVIDES] spider.so sybase.so
 

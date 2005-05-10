@@ -20,17 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104762958 Mon Jan  3 15:35:58 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115518498 Sun May  8 04:14:58 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
-[LOGS] 5-gfingerpoken.log
+[LOGS] 5-gfingerpoken.log 9-gfingerpoken.log
 
-[BUILDTIME] 1580 (5)
-[SIZE] 0.34 MB, 8 files
+[BUILDTIME] 2165 (9)
+[SIZE] 0.35 MB, 8 files
 
 [DEP] 00-dirtree alsa autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils gcc34 gcc34:dev glib12 glib12:dev glibc23
 [DEP] glibc23:dev grep gtk+12 gtk+12:dev linux26-header:dev make mktemp
-[DEP] net-tools perl5 sed sysfiles tar texinfo xfree86
+[DEP] net-tools perl5 sed sysfiles tar texinfo xorg
+
+[PROVIDES] gfpoken
 

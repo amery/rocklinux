@@ -20,18 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110136216 Sun Mar  6 20:10:16 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115182484 Wed May  4 06:54:44 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-nas.log 9-nas.log
 
-[BUILDTIME] 7247 (9)
-[SIZE] 0.94 MB, 33 files
+[BUILDTIME] 8837 (9)
+[SIZE] 1.07 MB, 33 files
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils findutils flex gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev m4 make
-[DEP] mktemp sed sysfiles tar xfree86 xfree86:dev
+[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils
+[DEP] findutils flex flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev
+[DEP] grep linux26-header:dev m4 make mktemp net-tools sed sysfiles tar
+[DEP] util-linux xorg xorg:dev zlib:dev
 
 [PROVIDES] auconvert auctl audemo audial auedit auinfo aupanel auphone
 [PROVIDES] auplay aurecord auscope autool auwave checkmail issndfile

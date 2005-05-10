@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110311677 Tue Mar  8 20:54:37 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115479981 Sat May  7 17:33:01 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-kdeaddons.log 9-kdeaddons.log
 
-[BUILDTIME] 78512 (9)
-[SIZE] 6.91 MB, 348 files
+[BUILDTIME] 93621 (9)
+[SIZE] 8.00 MB, 385 files
 
 [DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev
 [DEP] bash2 binutils bzip2 coreutils diffutils esound esound:dev expat
@@ -38,10 +38,37 @@
 [DEP] kdemultimedia:dev kdenetwork kdepim kdepim:dev kdeutils libart_lgpl23
 [DEP] libart_lgpl23:dev libjpeg libjpeg:dev libpng libpng:dev libsdl
 [DEP] libsdl:dev linux26-header:dev mad mad:dev make mktemp nas net-tools
-[DEP] ogg-vorbis ogg-vorbis:dev pcre pcre:dev perl5 qt qt:dev sed sysfiles
-[DEP] tar util-linux vim xfree86 xfree86:dev xmms xmms:dev zlib:dev
+[DEP] ogg-vorbis ogg-vorbis:dev openssl openssl:dev pcre pcre:dev perl5 qt
+[DEP] qt:dev sed sysfiles tar util-linux vim xmms xmms:dev xorg xorg:dev
+[DEP] zlib:dev
 
-[PROVIDES] atlantikdesigner exif.py fsview jpegorient ksig libxvim.so
-[PROVIDES] lnkforward noatunsynaescope.bin noatuntippecanoe.bin
-[PROVIDES] noatuntyler.bin orient.py
+[PROVIDES] atlantikdesigner exif.py fsview jpegorient
+[PROVIDES] katecppsymbolviewerplugin.so katefiletemplates.so
+[PROVIDES] katefll_initplugin.so katefll_plugin.so katehtmltoolsplugin.so
+[PROVIDES] katemodelineplugin.so kateopenheaderplugin.so
+[PROVIDES] katepybrowseplugin.so katesnippetsplugin.so
+[PROVIDES] katetextfilterplugin.so katexmlcheckplugin.so
+[PROVIDES] katexmltoolsplugin.so kbinaryclock_panelapplet.so
+[PROVIDES] kcm_kuick.so kcm_vim.so kfile_cert.so kfile_desktop.so
+[PROVIDES] kfile_folder.so kfile_html.so kfile_lnk.so kfile_mhtml.so
+[PROVIDES] kfile_txt.so kolourpicker_panelapplet.so konq_sidebarnews.so
+[PROVIDES] konqsidebar_mediaplayer.so ksig ktimemon_panelapplet.so
+[PROVIDES] libakregatorkonqfeedicon.so libakregatorkonqplugin.so
+[PROVIDES] libarkplugin.so libautorefresh.so libbabelfishplugin.so
+[PROVIDES] libcrashesplugin.so libdirfilterplugin.so
+[PROVIDES] libdomtreeviewerplugin.so libfsviewpart.so
+[PROVIDES] libkaddrbk_geo_xxport.so libkaddrbk_gmx_xxport.so
+[PROVIDES] libkatetabbarextensionplugin.so libkhtmlsettingsplugin.so
+[PROVIDES] libkimgallery.so libkuickplugin.so libminitoolsplugin.so
+[PROVIDES] librellinksplugin.so librenaudioplugin.so
+[PROVIDES] librenimageplugin.so libsearchbarplugin.so
+[PROVIDES] libuachangerplugin.so libvalidatorsplugin.so
+[PROVIDES] libvimpart.so libwebarchiverplugin.so libxvim.so lnkforward
+[PROVIDES] math_panelapplet.so mediacontrol_panelapplet.so noatun_ffrs.so
+[PROVIDES] noatunalsaplayer.so noatunblurscope.so noatuncharlatan.so
+[PROVIDES] noatundub.so noatunluckytag.so noatunlyrics.so noatunmadness.so
+[PROVIDES] noatunpitchablespeed.so noatunsynaescope.bin noatunsynaescope.so
+[PROVIDES] noatuntippecanoe.bin noatuntippecanoe.so noatuntyler.bin
+[PROVIDES] noatuntyler.so noatunwakeup.so noatunwavecapture.so orient.py
+[PROVIDES] webarchivethumbnail.so
 

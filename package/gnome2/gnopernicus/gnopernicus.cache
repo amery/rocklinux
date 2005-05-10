@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110175202 Mon Mar  7 07:00:02 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115278948 Thu May  5 09:42:28 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-gnopernicus.log 9-gnopernicus.log
 
-[BUILDTIME] 12129 (9)
-[SIZE] 4.58 MB, 153 files
+[BUILDTIME] 13294 (9)
+[SIZE] 5.23 MB, 153 files
 
 [DEP] 00-dirtree alsa alsa:dev at-spi at-spi:dev atk atk:dev audiofile
 [DEP] audiofile:dev bash2 battfink binutils bzip2 coreutils cpan-xml-parser
@@ -42,7 +42,8 @@
 [DEP] libjpeg libjpeg:dev libxml2 libxml2:dev linux26-header:dev make
 [DEP] mktemp net-tools openssl orbit2 orbit2:dev pango pango:dev perl5
 [DEP] pkgconfig popt popt:dev scrollkeeper sed sysfiles tar util-linux
-[DEP] xfree86 xfree86:dev zapping zlib:dev
+[DEP] xorg xorg:dev zapping zlib:dev
 
-[PROVIDES] gnopernicus srcore
+[PROVIDES] gnopernicus libbrl.so libke.so libmag.so libsrconf.so
+[PROVIDES] libsrlow.so libsrs.so libsrutil.so srcore
 

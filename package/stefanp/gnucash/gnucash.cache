@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110661423 Sat Mar 12 22:03:43 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115588323 Sun May  8 23:38:43 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-gnucash.log 9-gnucash.log
 
-[BUILDTIME] 68424 (9)
-[SIZE] 12.42 MB, 653 files
+[BUILDTIME] 83683 (9)
+[SIZE] 12.74 MB, 653 files
 
 [DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev autoconf
 [DEP] automake19 bash2 bdb33 bdb41 bdb42:dev binutils bison bonobo10
@@ -41,11 +41,30 @@
 [DEP] libtool libtool:dev libxml libxml:dev linux26-header:dev make mktemp
 [DEP] ncurses:dev net-tools oaf10 oaf10:dev openhbci openhbci:dev openssl
 [DEP] orbit10 orbit10:dev patch perl5 pkgconfig popt popt:dev readline
-[DEP] sed sysfiles tar texinfo xfree86 xfree86:dev zlib:dev
+[DEP] sed sysfiles tar texinfo xorg xorg:dev zlib:dev
 
 [PROVIDES] dump-finance-quote gnc-prices gnc-test-env gnucash
-[PROVIDES] gnucash-config gnucash-env gnucash-make-guids gnucash-run-script
-[PROVIDES] libcore-utils.so libgnc-app-file-gnome.so libgncgnome.so
-[PROVIDES] libgncmodule.so libgw-core-utils.so libgw-gnc.so
-[PROVIDES] update-finance-quote
+[PROVIDES] gnucash-config gnucash-env gnucash-make-guids
+[PROVIDES] gnucash-run-script libcore-utils.so libgnc-app-file-gnome.so
+[PROVIDES] libgnc-business-ledger.so libgncgnome.so
+[PROVIDES] libgncmod-app-file.so libgncmod-app-utils.so
+[PROVIDES] libgncmod-backend-file.so libgncmod-binary-import.so
+[PROVIDES] libgncmod-business-backend-file.so libgncmod-business-core.so
+[PROVIDES] libgncmod-business-gnome.so libgncmod-business-utils.so
+[PROVIDES] libgncmod-calculation.so libgncmod-dialog-tax-table.so
+[PROVIDES] libgncmod-engine.so libgncmod-generic-import.so
+[PROVIDES] libgncmod-gnome-search.so libgncmod-gnome-utils.so
+[PROVIDES] libgncmod-hbci.so libgncmod-ledger-core.so
+[PROVIDES] libgncmod-locale-reports-us.so libgncmod-log-replay.so
+[PROVIDES] libgncmod-network-utils.so libgncmod-qif-import.so
+[PROVIDES] libgncmod-register-core.so libgncmod-register-gnome.so
+[PROVIDES] libgncmod-report-gnome.so libgncmod-report-system.so
+[PROVIDES] libgncmod-standard-reports.so libgncmod-stylesheets.so
+[PROVIDES] libgncmod-tax-us.so libgncmod-utility-reports.so libgncmodule.so
+[PROVIDES] libgw-app-file.so libgw-app-utils.so libgw-binary-import.so
+[PROVIDES] libgw-business-core.so libgw-business-gnome.so
+[PROVIDES] libgw-core-utils.so libgw-dialog-tax-table.so libgw-engine.so
+[PROVIDES] libgw-gnc-module.so libgw-gnc.so libgw-gnome-search.so
+[PROVIDES] libgw-gnome-utils.so libgw-kvp.so libgw-register-core.so
+[PROVIDES] libgw-report-gnome.so update-finance-quote
 

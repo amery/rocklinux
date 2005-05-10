@@ -20,22 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110322018 Tue Mar  8 23:46:58 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115518363 Sun May  8 04:12:43 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-licq.log 9-licq.log
 
-[BUILDTIME] 43997 (9)
-[SIZE] 5.89 MB, 562 files
+[BUILDTIME] 44831 (9)
+[SIZE] 6.70 MB, 562 files
 
 [DEP] 00-dirtree alsa arts bash2 binutils bzip2 coreutils diffutils expat
-[DEP] fam:dev file findutils freetype gawk gcc34 gcc34:dev gettext glibc23
-[DEP] glibc23:dev grep kdebase kdelibs kdelibs:dev libart_lgpl23:dev libpng
-[DEP] libpng:dev linux26-header:dev make mktemp ncurses:dev net-tools
-[DEP] openssl openssl:dev qt qt:dev sed sysfiles tar util-linux vim
-[DEP] xfree86 xfree86:dev xosd xosd:dev
+[DEP] fam:dev file findutils freetype freetype:dev gawk gcc34 gcc34:dev
+[DEP] gettext glibc23 glibc23:dev grep kdebase kdelibs kdelibs:dev
+[DEP] libart_lgpl23:dev libpng libpng:dev linux26-header:dev make mktemp
+[DEP] ncurses:dev net-tools openssl openssl:dev qt qt:dev sed sysfiles
+[DEP] tar util-linux vim xorg xorg:dev xosd xosd:dev
 
-[PROVIDES] licq viewurl-lynx.sh viewurl-mozilla.sh viewurl-ncftp.sh
-[PROVIDES] viewurl-netscape.sh viewurl-opera.sh viewurl-w3m.sh
+[PROVIDES] licq licq_autoreply.so licq_forwarder.so licq_kde-gui.so
+[PROVIDES] licq_osd.so licq_qt-gui.so viewurl-lynx.sh viewurl-mozilla.sh
+[PROVIDES] viewurl-ncftp.sh viewurl-netscape.sh viewurl-opera.sh
+[PROVIDES] viewurl-w3m.sh
 

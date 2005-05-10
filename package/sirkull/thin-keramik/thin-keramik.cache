@@ -20,20 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110215878 Mon Mar  7 18:17:58 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115380214 Fri May  6 13:50:14 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-thin-keramik.log 9-thin-keramik.log
 
-[BUILDTIME] 6950 (9)
-[SIZE] 0.74 MB, 18 files
+[BUILDTIME] 7531 (9)
+[SIZE] 0.79 MB, 18 files
 
 [DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils expat
-[DEP] fam fam:dev findutils freetype freetype:dev gcc34 gcc34:dev
+[DEP] fam fam:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev
 [DEP] gettext glibc23 glibc23:dev grep kdebase kdebase:dev kdelibs
 [DEP] kdelibs:dev libart_lgpl23 libart_lgpl23:dev libjpeg libpng libpng:dev
 [DEP] linux26-header:dev make mktemp net-tools perl5 qt qt:dev sed sysfiles
-[DEP] tar util-linux xfree86 xfree86:dev zlib:dev
+[DEP] tar util-linux xorg xorg:dev zlib:dev
 
+[PROVIDES] kstyle_thinkeramik_config.so kwin3_thinkeramik.so
+[PROVIDES] kwin_thinkeramik_config.so thinkeramik.so
 

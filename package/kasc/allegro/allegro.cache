@@ -1,20 +1,22 @@
 
-[TIMESTAMP] 1110339324 Wed Mar  9 04:35:24 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115547612 Sun May  8 12:20:12 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-allegro.log 9-allegro.log
 
-[BUILDTIME] 11071 (9)
-[SIZE] 2.19 MB, 31 files
+[BUILDTIME] 11009 (9)
+[SIZE] 2.34 MB, 31 files
 
 [DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev bash2
 [DEP] binutils bzip2 coreutils diffutils esound esound:dev findutils
 [DEP] gawk gcc34 gcc34:dev glib glibc23 glibc23:dev grep jack jack:dev
 [DEP] linux26-header:dev make mktemp net-tools pkgconfig sed svgalib
-[DEP] svgalib:dev sysfiles tar texinfo util-linux xfree86 xfree86:dev
+[DEP] svgalib:dev sysfiles tar texinfo util-linux xorg xorg:dev
 
-[PROVIDES] allegro-config colormap dat dat2c dat2s exedat grabber
-[PROVIDES] liballeg-4.1.17.so liballeg_unsharable.a pack pat2dat rgbmap
-[PROVIDES] textconv
+[PROVIDES] alleg-alsadigi.so alleg-alsamidi.so alleg-artsdigi.so
+[PROVIDES] alleg-dga2.so alleg-esddigi.so alleg-fbcon.so alleg-jackdigi.so
+[PROVIDES] alleg-svgalib.so alleg-vga.so allegro-config colormap dat dat2c
+[PROVIDES] dat2s exedat grabber liballeg-4.1.17.so liballeg_unsharable.a
+[PROVIDES] pack pat2dat rgbmap textconv
 

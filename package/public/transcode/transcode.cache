@@ -20,23 +20,55 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110301520 Tue Mar  8 18:05:20 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115450155 Sat May  7 09:15:55 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-transcode.log 9-transcode.log
 
-[BUILDTIME] 25476 (9)
-[SIZE] 3.89 MB, 154 files
+[BUILDTIME] 25845 (9)
+[SIZE] 4.24 MB, 154 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils divx4linux:dev
 [DEP] ffmpeg ffmpeg:dev findutils freetype freetype:dev gawk gcc34
 [DEP] gcc34:dev glib12 glibc23 glibc23:dev gnome-libs14 grep lame lame:dev
 [DEP] libdvdread libdvdread:dev libjpeg libjpeg:dev linux26-header:dev
 [DEP] make mktemp nasm net-tools ogg-vorbis pkgconfig sed sysfiles tar
-[DEP] util-linux xfree86 xfree86:dev zlib:dev
+[DEP] util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] avifix aviindex avimerge avisplit avisync tccat tcdecode tcdemux
-[PROVIDES] tcextract tcmodinfo tcmp3cut tcmplex tcprobe tcrequant tcscan
-[PROVIDES] tcxmlcheck tcxpm2rgb transcode
+[PROVIDES] af6_decore.so avifix aviindex avimerge avisplit avisync
+[PROVIDES] export_ac3.so export_debugppm.so export_divx4.so
+[PROVIDES] export_divx4raw.so export_divx5.so export_divx5raw.so
+[PROVIDES] export_ffmpeg.so export_jpg.so export_lame.so export_mjpeg.so
+[PROVIDES] export_mp1e.so export_mp2.so export_mpeg.so export_null.so
+[PROVIDES] export_ogg.so export_pcm.so export_ppm.so export_pvn.so
+[PROVIDES] export_raw.so export_toolame.so export_wav.so export_xvid.so
+[PROVIDES] export_xvid2.so export_xvid3.so export_xvid4.so filter_29to23.so
+[PROVIDES] filter_32detect.so filter_32drop.so filter_aclip.so
+[PROVIDES] filter_astat.so filter_clone.so filter_control.so
+[PROVIDES] filter_cpaudio.so filter_cshift.so filter_cut.so
+[PROVIDES] filter_decimate.so filter_denoise3d.so filter_detectclipping.so
+[PROVIDES] filter_detectsilence.so filter_dilyuvmmx.so filter_divxkey.so
+[PROVIDES] filter_dnr.so filter_doublefps.so filter_extsub.so
+[PROVIDES] filter_extsub2.so filter_fieldanalysis.so filter_fields.so
+[PROVIDES] filter_fps.so filter_hqdn3d.so filter_invert.so
+[PROVIDES] filter_ivtc.so filter_levels.so filter_lowpass.so
+[PROVIDES] filter_mask.so filter_modfps.so filter_msharpen.so
+[PROVIDES] filter_nored.so filter_normalize.so filter_null.so filter_pp.so
+[PROVIDES] filter_pv.so filter_resample.so filter_skip.so filter_slowmo.so
+[PROVIDES] filter_smartbob.so filter_smartdeinter.so filter_smartyuv.so
+[PROVIDES] filter_smooth.so filter_subtitler.so filter_tc_audio.so
+[PROVIDES] filter_tc_video.so filter_test.so filter_testframe.so
+[PROVIDES] filter_text.so filter_tomsmocomp.so filter_unsharp.so
+[PROVIDES] filter_videocore.so filter_whitebalance.so filter_xsharpen.so
+[PROVIDES] filter_yuvdenoise.so filter_yuvmedian.so filter_yuy2toyv12.so
+[PROVIDES] import_ac3.so import_avi.so import_divx.so import_dv.so
+[PROVIDES] import_dvd.so import_ffmpeg.so import_fraps.so import_lav.so
+[PROVIDES] import_mp3.so import_mpeg2.so import_mplayer.so import_null.so
+[PROVIDES] import_nuv.so import_nvrec.so import_ogg.so import_pvn.so
+[PROVIDES] import_raw.so import_rawlist.so import_sh.so import_vdrac3.so
+[PROVIDES] import_vnc.so import_vob.so import_xvid.so import_yuv.so
+[PROVIDES] import_yuv4mpeg.so tccat tcdecode tcdemux tcextract tcmodinfo
+[PROVIDES] tcmp3cut tcmplex tcprobe tcrequant tcscan tcxmlcheck tcxpm2rgb
+[PROVIDES] transcode
 

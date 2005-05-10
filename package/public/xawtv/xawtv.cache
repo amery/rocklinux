@@ -20,23 +20,28 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110226241 Mon Mar  7 21:10:41 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115418849 Sat May  7 00:34:09 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-xawtv.log 9-xawtv.log
 
-[BUILDTIME] 4703 (9)
-[SIZE] 1.95 MB, 124 files
+[BUILDTIME] 5288 (9)
+[SIZE] 2.10 MB, 124 files
 
 [DEP] 00-dirtree aalib aalib:dev alsa alsa:dev bash2 binutils bzip2
-[DEP] coreutils diffutils expat findutils gawk gcc34 gcc34:dev glib12
-[DEP] glibc23 glibc23:dev gpm grep libdv libdv:dev libjpeg libjpeg:dev
-[DEP] libpng libzvbi libzvbi:dev linux26-header:dev lirc lirc:dev make
-[DEP] mktemp ncurses:dev net-tools openmotif openmotif:dev perl5 pkgconfig
-[DEP] sed slang sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+[DEP] coreutils diffutils expat findutils freetype freetype:dev gawk gcc34
+[DEP] gcc34:dev glib12 glibc23 glibc23:dev gpm grep libdv libdv:dev libjpeg
+[DEP] libjpeg:dev libpng libzvbi libzvbi:dev linux26-header:dev lirc
+[DEP] lirc:dev make mktemp ncurses:dev net-tools openmotif openmotif:dev
+[DEP] perl5 pkgconfig sed slang sysfiles tar util-linux xorg xorg:dev
+[DEP] zlib:dev
 
-[PROVIDES] alevtd dump-mixers fbtv motv mtt ntsc-cc pia propwatch radio
-[PROVIDES] record rootv scantv showqt showriff streamer subtitles ttv
-[PROVIDES] v4l-conf v4l-info v4lctl webcam xawtv xawtv-remote
+[PROVIDES] alevtd bilinear.so conv-mjpeg.so cubic.so drv0-v4l2-old.so
+[PROVIDES] drv0-v4l2.so drv1-v4l.so dump-mixers fbtv flt-disor.so
+[PROVIDES] flt-gamma.so flt-invert.so flt-smooth.so linear-blend.so
+[PROVIDES] linedoubler.so motv mtt ntsc-cc pia propwatch radio read-avi.so
+[PROVIDES] read-dv.so record rootv scantv showqt showriff snd-oss.so
+[PROVIDES] streamer subtitles ttv v4l-conf v4l-info v4lctl webcam
+[PROVIDES] write-avi.so write-dv.so xawtv xawtv-remote
 

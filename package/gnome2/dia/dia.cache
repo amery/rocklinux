@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110225055 Mon Mar  7 20:50:55 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115413988 Fri May  6 23:13:08 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-dia.log 9-dia.log
 
-[BUILDTIME] 30548 (9)
-[SIZE] 9.22 MB, 1426 files
+[BUILDTIME] 34089 (9)
+[SIZE] 9.45 MB, 1426 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
 [DEP] battfink binutils bzip2 coreutils cpan-xml-parser diffutils esound
@@ -40,8 +40,17 @@
 [DEP] libgnomeui:dev libjpeg libjpeg:dev libpng libpng:dev libxml2
 [DEP] libxml2:dev libxslt libxslt:dev linux26-header:dev make mktemp
 [DEP] net-tools numpy openssl orbit2 orbit2:dev pango pango:dev patch perl5
-[DEP] pkgconfig popt popt:dev pygtk python python:dev scrollkeeper sed
-[DEP] sysfiles tar tcl tk util-linux wxpython xfree86 xfree86:dev zlib:dev
+[DEP] pil pkgconfig popt popt:dev pygtk python python:dev scrollkeeper
+[DEP] sed sysfiles tar tcl tk util-linux wxpython xorg xorg:dev zlib:dev
 
-[PROVIDES] dia
+[PROVIDES] dia libbondgraph_objects.so libcairo_filter.so libcgm_filter.so
+[PROVIDES] libchronogram_objects.so libcustom_objects.so libdia.so
+[PROVIDES] libdxf_filter.so liber_objects.so libflowchart_objects.so
+[PROVIDES] libfs_objects.so libgrafcet_objects.so libhpgl_filter.so
+[PROVIDES] libistar_objects.so libjackson_objects.so libkaos_objects.so
+[PROVIDES] libmetapost_filter.so libmisc_objects.so libnetwork_objects.so
+[PROVIDES] libpixbuf_filter.so libpstricks_filter.so libpython_plugin.so
+[PROVIDES] libsadt_objects.so libshape_filter.so libstandard_objects.so
+[PROVIDES] libsvg_filter.so libuml_objects.so libwmf_filter.so
+[PROVIDES] libwpg_filter.so libxfig_filter.so libxslt_filter.so
 

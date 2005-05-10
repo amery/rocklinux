@@ -20,29 +20,35 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110183248 Mon Mar  7 09:14:08 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115289581 Thu May  5 12:39:41 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-libgda.log 9-libgda.log
 
-[BUILDTIME] 17742 (9)
-[SIZE] 3.46 MB, 197 files
+[BUILDTIME] 17922 (9)
+[SIZE] 3.54 MB, 197 files
 
-[DEP] 00-dirtree bash2 battfink bdb42 bdb42:dev binutils bug-buddy bzip2
-[DEP] coreutils cpan-xml-parser diffutils docbookx eog epiphany file-roller
-[DEP] findutils flex flex:dev gawk gcalctool gcc34 gcc34:dev gconf-editor
-[DEP] gdm gedit gettext ghex12 gimp glade10 glib glib12 glib:dev glibc23
-[DEP] glibc23:dev gnome-applets gnome-desktop gnome-doc-utils gnome-games
-[DEP] gnome-netstatus gnome-panel gnome-utils gnopernicus gnotepad+
-[DEP] gpdf grep libglade libxml2 libxml2:dev libxslt libxslt:dev
-[DEP] linux26-header:dev lock-keys-applet m4 make mgt mktemp mysql
-[DEP] mysql:dev ncurses:dev net-tools netspeed_applet openldap openldap:dev
-[DEP] openssl pango perl5 pkgconfig popt popt:dev postgresql postgresql:dev
-[DEP] quick-lounge-applet readline readline:dev scrollkeeper sed sqlite
-[DEP] sqlite:dev sysfiles tar util-linux zapping zlib:dev
+[DEP] 00-dirtree anjuta balsa bash2 battfink bdb42 bdb42:dev binutils
+[DEP] bzip2 coreutils cpan-xml-parser diffutils docbookx eog epiphany
+[DEP] evolution findutils flex flex:dev gawk gcalctool gcc34 gcc34:dev
+[DEP] gconf-editor gdm gedit gettext ggv ghex ghex12 gimp gjiten glabels
+[DEP] glade glade10 glib glib12 glib:dev glibc23 glibc23:dev gnome-desktop
+[DEP] gnome-doc-utils gnome-games gnome-panel gnome-system-monitor
+[DEP] gnome-terminal gnome-utils gnome2-user-docs gnomemeeting gnopernicus
+[DEP] gnotepad+ gok gpdf grep gst-editor gthumb gtkam gucharmap libglade
+[DEP] libxml2 libxml2:dev libxslt libxslt:dev linux26-header:dev
+[DEP] lock-keys-applet m4 make mgt mktemp mrproject mysql mysql:dev
+[DEP] ncurses:dev net-tools netspeed_applet openldap openldap:dev openssl
+[DEP] pango perl5 pkgconfig popt popt:dev postgresql postgresql:dev
+[DEP] pybliographer quick-lounge-applet readline readline:dev scrollkeeper
+[DEP] sed sqlite sqlite:dev streamtuner sysfiles tar util-linux zapping
+[DEP] zenity zlib:dev
 
 [PROVIDES] gda-config-tool gda-report-test gda-run gda-test libgda-2.a
-[PROVIDES] libgda-2.so libgda-report-2.a libgda-report-2.so libgdasql.a
-[PROVIDES] libgdasql.so
+[PROVIDES] libgda-2.so libgda-bdb.a libgda-bdb.so libgda-ldap.a
+[PROVIDES] libgda-ldap.so libgda-mysql.a libgda-mysql.so libgda-postgres.a
+[PROVIDES] libgda-postgres.so libgda-report-2.a libgda-report-2.so
+[PROVIDES] libgda-sqlite.a libgda-sqlite.so libgda-xml.a libgda-xml.so
+[PROVIDES] libgdasql.a libgdasql.so
 

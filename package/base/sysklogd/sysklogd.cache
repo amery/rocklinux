@@ -20,18 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110304709 Tue Mar  8 18:58:29 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115456333 Sat May  7 10:58:53 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 3-sysklogd.log 9-sysklogd.log
 
-[BUILDTIME] 1459 (9)
-[SIZE] 0.11 MB, 24 files
+[BUILDTIME] 1696 (9)
+[SIZE] 0.12 MB, 24 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp
-[DEP] patch sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
+[DEP] glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp patch
+[DEP] sed sysfiles tar
 
 [PROVIDES] klogd syslogd
 

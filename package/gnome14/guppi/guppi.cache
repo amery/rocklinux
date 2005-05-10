@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110207692 Mon Mar  7 16:01:32 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115355162 Fri May  6 06:52:42 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-guppi.log 9-guppi.log
 
-[BUILDTIME] 25675 (9)
-[SIZE] 1.34 MB, 183 files
+[BUILDTIME] 30614 (9)
+[SIZE] 1.46 MB, 183 files
 
 [DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev autoconf automake19
 [DEP] bash2 bdb33 binutils bonobo10 bonobo10:dev bzip2 coreutils
@@ -38,7 +38,12 @@
 [DEP] gtk+12:dev imlib imlib:dev libglade10 libglade10:dev libxml
 [DEP] libxml:dev linux26-header:dev m4 make mktemp net-tools oaf10
 [DEP] oaf10:dev orbit10 orbit10:dev patch perl5 popt sed sysfiles tar
-[DEP] texinfo util-linux xfree86 xfree86:dev zlib:dev
+[DEP] texinfo util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] libguppi.so libguppitank.so
+[PROVIDES] guppi_axis.so guppi_background.so guppi_barchart.so
+[PROVIDES] guppi_boxplot.so guppi_compass_box.so guppi_frame.so
+[PROVIDES] guppi_image.so guppi_legend.so guppi_linechart.so
+[PROVIDES] guppi_linegraph.so guppi_pie.so guppi_pricebars.so
+[PROVIDES] guppi_scatter.so guppi_text.so guppi_xybox.so libguppi.so
+[PROVIDES] libguppitank.so
 

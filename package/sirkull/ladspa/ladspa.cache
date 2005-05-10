@@ -20,18 +20,70 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110183636 Mon Mar  7 09:20:36 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115682057 Tue May 10 01:40:57 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
-[LOGS] 5-ladspa.log 9-ladspa.log
+[LOGS] 5-ladspa.log 9-ladspa.err
 
-[BUILDTIME] 1553 (9)
+[BUILDTIME] 1800 (9)
 [SIZE] 0.07 MB, 15 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp patch sed
-[DEP] sysfiles tar time xfree86
+[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp nvram-wakeup
+[DEP] patch sed sysfiles tar time xorg
 
-[PROVIDES] analyseplugin applyplugin listplugins
+[PROVIDES] amp.so analyseplugin applyplugin delay.so filter.so listplugins
+[PROVIDES] noise.so sine.so
+
+[9-ERROR] 	"Input (Left)" input, audio
+[9-ERROR] 	"Output (Left)" output, audio
+[9-ERROR] 	"Input (Right)" input, audio
+[9-ERROR] 	"Output (Right)" output, audio
+[9-ERROR] 
+[9-ERROR] ../bin/analyseplugin ../plugins/noise.so
+[9-ERROR] 
+[9-ERROR] Plugin Name: "White Noise Source"
+[9-ERROR] Plugin Label: "noise_white"
+[9-ERROR] Plugin Unique ID: 1050
+[9-ERROR] Maker: "Richard Furse (LADSPA example plugins)"
+[9-ERROR] Copyright: "None"
+[9-ERROR] Must Run Real-Time: No
+[9-ERROR] Has activate() Function: No
+[9-ERROR] Has deativate() Function: No
+[9-ERROR] Has run_adding() Function: Yes
+[9-ERROR] Environment: Normal or Hard Real-Time
+[9-ERROR] Ports:	"Amplitude" input, control, 0 to ..., default 1, logarithmic
+[9-ERROR] 	"Output" output, audio
+[9-ERROR] 
+[9-ERROR] time ../bin/applyplugin	-s 1					\
+[9-ERROR] 			../snd/noise.wav /tmp/test.wav		\
+[9-ERROR] 			../plugins/filter.so lpf 500		\
+[9-ERROR] 			../plugins/filter.so lpf 500		\
+[9-ERROR] 			../plugins/sine.so sine_fcaa 6000	\
+[9-ERROR] 			../plugins/delay.so delay_5s 1 0.1	\
+[9-ERROR] 			../plugins/amp.so amp_mono 4		\
+[9-ERROR] 
+[9-ERROR] Usage: time <time>
+[9-ERROR] where <time> is number of seconds since epoch
+[9-ERROR] make: *** [/tmp/test.wav] Error 1
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 10 files for this package.
+[9-ERROR] Applying package split: 40 ladspa:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 ladspa:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 ladspa:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <ladspa> Creating flist file ...
+[9-ERROR] <ladspa> Creating package dependencies file ...
+[9-ERROR] <ladspa> Creating md5sum and cksum files ...
+[9-ERROR] <ladspa> Creating package description ...
+[9-ERROR] <ladspa:dev> Creating flist file ...
+[9-ERROR] <ladspa:dev> Creating package dependencies file ...
+[9-ERROR] <ladspa:dev> Creating md5sum and cksum files ...
+[9-ERROR] <ladspa:dev> Creating package description ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building ladspa=ladspa.
 

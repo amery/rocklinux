@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110157642 Mon Mar  7 02:07:22 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115238670 Wed May  4 22:31:10 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-rpm.log 9-rpm.log
 
-[BUILDTIME] 36463 (9)
-[SIZE] 4.07 MB, 141 files
+[BUILDTIME] 38947 (9)
+[SIZE] 4.41 MB, 141 files
 
 [DEP] 00-dirtree alien bash2 binutils bison bzip2 bzip2:dev coreutils
 [DEP] diffutils doxygen findutils gawk gcc34 gcc34:dev gettext glibc23
@@ -35,9 +35,10 @@
 [DEP] net-tools patch python python:dev sed sysfiles tar util-linux
 [DEP] zlib:dev
 
-[PROVIDES] gendiff libbeecrypt.a libbeecrypt.so librpm-4.1.so librpm.a
-[PROVIDES] librpm.so librpmbuild-4.1.so librpmbuild.a librpmbuild.so
-[PROVIDES] librpmdb-4.1.so librpmdb.a librpmdb.so librpmio-4.1.so
-[PROVIDES] librpmio.a librpmio.so rpm rpm2cpio rpmbuild rpmdb rpme rpmgraph
-[PROVIDES] rpmi rpmquery rpmsign rpmu rpmverify
+[PROVIDES] _rpmdb.so gendiff libbeecrypt.a libbeecrypt.so librpm-4.1.so
+[PROVIDES] librpm.a librpm.so librpmbuild-4.1.so librpmbuild.a
+[PROVIDES] librpmbuild.so librpmdb-4.1.so librpmdb.a librpmdb.so
+[PROVIDES] librpmio-4.1.so librpmio.a librpmio.so rpm rpm2cpio rpmbuild
+[PROVIDES] rpmdb rpme rpmgraph rpmi rpmmodule.so rpmquery rpmsign rpmu
+[PROVIDES] rpmverify
 

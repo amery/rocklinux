@@ -20,29 +20,65 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110328995 Wed Mar  9 01:43:15 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115530921 Sun May  8 07:42:01 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-kdevelop.log 9-kdevelop.log
 
-[BUILDTIME] 262539 (9)
-[SIZE] 27.64 MB, 1153 files
+[BUILDTIME] 292603 (9)
+[SIZE] 28.41 MB, 1343 files
 
-[DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils expat
-[DEP] fam fam:dev findutils flex flex:dev freetype freetype:dev gawk
-[DEP] gcc34 gcc34:dev gettext glibc23 glibc23:dev grep gzip kaffeine
-[DEP] kdebase kdeedu kdelibs kdelibs:dev kdelibs:doc kdesdk kdesdk:dev
-[DEP] kdewebdev libart_lgpl23 libart_lgpl23:dev libjpeg libjpeg:dev libpng
-[DEP] libpng:dev linux26-header:dev m4 make mktemp net-tools patch pcre
-[DEP] pcre:dev perl5 qt qt:dev sed sysfiles tar util-linux vim xfree86
-[DEP] xfree86:dev zlib:dev
+[DEP] 00-dirtree apache apache:apr arts bash2 binutils bzip2 coreutils
+[DEP] diffutils expat fam fam:dev findutils flex flex:dev freetype
+[DEP] freetype:dev gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
+[DEP] gzip kdebase kdeedu kdelibs kdelibs:dev kdelibs:doc kdesdk kdesdk:dev
+[DEP] kdeutils libart_lgpl23 libart_lgpl23:dev libjpeg libjpeg:dev libpng
+[DEP] libpng:dev linux26-header:dev m4 make mktemp neon net-tools patch
+[DEP] pcre pcre:dev perl5 qt qt:dev sed sysfiles tar util-linux vim xorg
+[DEP] xorg:dev zlib:dev
 
 [PROVIDES] kdevassistant kdevdesigner kdevelop kdevelop-htdig
-[PROVIDES] kdevprj2kdevelop libdocchmplugin.so libdocdevhelpplugin.so
+[PROVIDES] kdevprj2kdevelop kdevprofileeditor kio_chm.so
+[PROVIDES] kio_perldoc.so kio_pydoc.so libclearcaseintegrator.so
+[PROVIDES] libcvsserviceintegrator.so libdesignerintegration.so
+[PROVIDES] libdocchmplugin.so libdoccustomplugin.so libdocdevhelpplugin.so
 [PROVIDES] libdocdoxygenplugin.so libdockdevtocplugin.so
-[PROVIDES] libkdevcatalog.so libkdevcppparser.so libkdevcustomimporter.so
-[PROVIDES] libkdevelop.so libkdeveloplgpl.so libkdevgenericproject.so
-[PROVIDES] libkdevkdelibsimporter.so libkdevpropertyeditor.so
-[PROVIDES] libkdevqtimporter.so libkinterfacedesigner.so r++
+[PROVIDES] libdocqtplugin.so libdocumentation_interfaces.so
+[PROVIDES] libkchmpart.so libkdevabbrev.so libkdevadaproject.so
+[PROVIDES] libkdevadasupport.so libkdevantproject.so libkdevappview.so
+[PROVIDES] libkdevappwizard.so libkdevastyle.so libkdevautomakeimporter.so
+[PROVIDES] libkdevautoproject.so libkdevbashsupport.so libkdevbookmarks.so
+[PROVIDES] libkdevbuildbase.so libkdevbuildtoolswidgets.so
+[PROVIDES] libkdevcatalog.so libkdevclassview.so libkdevclearcase.so
+[PROVIDES] libkdevcppparser.so libkdevcppsupport.so libkdevctags2.so
+[PROVIDES] libkdevcustomimporter.so libkdevcustompcsimporter.so
+[PROVIDES] libkdevcustomproject.so libkdevcvsservice.so
+[PROVIDES] libkdevdccoptions.so libkdevdebugger.so libkdevdesignerpart.so
+[PROVIDES] libkdevdiff.so libkdevdistpart.so libkdevdocumentation.so
+[PROVIDES] libkdevdoxygen.so libkdeveditorchooser.so libkdevelop.so
+[PROVIDES] libkdevextras.so libkdevfilecreate.so libkdevfilegroups.so
+[PROVIDES] libkdevfilelist.so libkdevfileselector.so libkdevfileview.so
+[PROVIDES] libkdevfilter.so libkdevfortransupport.so libkdevfpcoptions.so
+[PROVIDES] libkdevfullscreen.so libkdevgccoptions.so libkdevghcoptions.so
+[PROVIDES] libkdevgrepview.so libkdevhaskellproject.so
+[PROVIDES] libkdevhaskellsupport.so libkdevjavadebugger.so
+[PROVIDES] libkdevjavasupport.so libkdevkdelibsimporter.so
+[PROVIDES] libkdevkonsoleview.so libkdevmakebuilder.so
+[PROVIDES] libkdevmakeview.so libkdevopenwith.so libkdevpartexplorer.so
+[PROVIDES] libkdevpascalproject.so libkdevpascalsupport.so
+[PROVIDES] libkdevperforce.so libkdevperlsupport.so libkdevpgioptions.so
+[PROVIDES] libkdevphpsupport.so libkdevprojectmanager.so
+[PROVIDES] libkdevpropertyeditor.so libkdevpythonsupport.so
+[PROVIDES] libkdevqtimporter.so libkdevquickopen.so libkdevrbdebugger.so
+[PROVIDES] libkdevregexptest.so libkdevreplace.so libkdevrubysupport.so
+[PROVIDES] libkdevscripting.so libkdevscriptproject.so
+[PROVIDES] libkdevshell.so libkdevsnippet.so libkdevsqlsupport.so
+[PROVIDES] libkdevsubversion.so libkdevtexttools.so libkdevtipofday.so
+[PROVIDES] libkdevtools.so libkdevtrollproject.so libkdevuichooser.so
+[PROVIDES] libkdevvalgrind.so libkdevvcsmanager.so libkdevwidgets.so
+[PROVIDES] libkinterfacedesigner.so liblang_debugger.so
+[PROVIDES] liblang_interfaces.so libperforceintegrator.so
+[PROVIDES] libprofileengine.so libprojectmanager_interfaces.so
+[PROVIDES] libqeditorpart.so libsubversionintegrator.so r++
 

@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110184567 Mon Mar  7 09:36:07 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115427482 Sat May  7 02:58:02 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-gnome-pilot-conduits.log 9-gnome-pilot-conduits.log
 
-[BUILDTIME] 7106 (9)
-[SIZE] 0.33 MB, 52 files
+[BUILDTIME] 7953 (5)
+[SIZE] 0.35 MB, 52 files
 
 [DEP] 00-dirtree alsa:dev atk atk:dev audiofile:dev autoconf bash2 binutils
 [DEP] bzip2 coreutils diffutils esound:dev figment findutils gawk gcc34
@@ -39,6 +39,10 @@
 [DEP] libgnomeui:dev libjpeg:dev libxml2 libxml2:dev linux26-header:dev
 [DEP] make mktemp net-tools orbit2 orbit2:dev pango pango:dev perl5
 [DEP] pilot-link pilot-link:dev pkgconfig popt popt:dev sed sysfiles tar
-[DEP] texinfo util-linux xfree86 zlib:dev
+[DEP] texinfo util-linux xorg zlib:dev
 
+[PROVIDES] libemail_conduit.a libemail_conduit.so libexpense_conduit.a
+[PROVIDES] libexpense_conduit.so libmal_conduit.a libmal_conduit.so
+[PROVIDES] libmemo_file_conduit.a libmemo_file_conduit.so libtime_conduit.a
+[PROVIDES] libtime_conduit.so
 

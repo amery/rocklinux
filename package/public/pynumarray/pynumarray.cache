@@ -20,17 +20,27 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110392108 Wed Mar  9 19:15:08 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115551585 Sun May  8 13:26:25 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-pynumarray.log 9-pynumarray.log
 
-[BUILDTIME] 15296 (9)
-[SIZE] 3.78 MB, 193 files
+[BUILDTIME] 6062 (9)
+[SIZE] 3.97 MB, 193 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev mktemp numpy
-[DEP] python python:dev sed sysfiles tar wxpython
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
+[DEP] glibc23 glibc23:dev grep linux26-header:dev mktemp numpy pil python
+[DEP] python:dev sed sysfiles tar wxpython
 
+[PROVIDES] _bytes.so _chararray.so _combine.so _conv.so _converter.so
+[PROVIDES] _correlate.so _lineshape.so _nd_image.so _ndarray.so
+[PROVIDES] _numarray.so _objectarray.so _operator.so _sort.so
+[PROVIDES] _ufunc.so _ufuncBool.so _ufuncComplex32.so _ufuncComplex64.so
+[PROVIDES] _ufuncFloat32.so _ufuncFloat64.so _ufuncInt16.so _ufuncInt32.so
+[PROVIDES] _ufuncInt64.so _ufuncInt8.so _ufuncUInt16.so _ufuncUInt32.so
+[PROVIDES] _ufuncUInt64.so _ufuncUInt8.so element_wise.so fftpack.so
+[PROVIDES] high_level.so lapack_lite2.so libnumarray.so libnumeric.so
+[PROVIDES] memory.so numpy_compat.so one_dimensional.so ranlib2.so
+[PROVIDES] testlite.so
 

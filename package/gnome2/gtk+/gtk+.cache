@@ -20,23 +20,32 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110147778 Sun Mar  6 23:22:58 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115203029 Wed May  4 12:37:09 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-gtk+.log 9-gtk+.log
 
-[BUILDTIME] 47382 (9)
-[SIZE] 23.04 MB, 796 files
+[BUILDTIME] 52606 (9)
+[SIZE] 23.40 MB, 800 files
 
 [DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils diffutils
 [DEP] expat findutils freetype freetype:dev gawk gcc34 gcc34:dev gettext
-[DEP] glib glib12 glib:dev glibc23 glibc23:dev gnome-libs14 grep libjpeg
-[DEP] libjpeg:dev libpng libpng:dev libtiff libtiff:dev linux26-header:dev
-[DEP] make mktemp net-tools pango pango:dev patch perl5 pkgconfig sed
-[DEP] sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+[DEP] glib glib:dev glibc23 glibc23:dev grep libjpeg libjpeg:dev libpng
+[DEP] libpng:dev libtiff libtiff:dev linux26-header:dev make mktemp
+[DEP] net-tools pango pango:dev patch perl5 pkgconfig sed sysfiles tar
+[DEP] util-linux xorg xorg:dev zlib:dev
 
 [PROVIDES] gdk-pixbuf-csource gdk-pixbuf-query-loaders gtk-demo
-[PROVIDES] gtk-query-immodules-2.0 gtk-update-icon-cache libgdk-x11-2.0.so
-[PROVIDES] libgdk_pixbuf-2.0.so libgdk_pixbuf_xlib-2.0.so libgtk-x11-2.0.so
+[PROVIDES] gtk-query-immodules-2.0 gtk-update-icon-cache im-am-et.so
+[PROVIDES] im-cedilla.so im-cyrillic-translit.so im-inuktitut.so im-ipa.so
+[PROVIDES] im-thai-broken.so im-ti-er.so im-ti-et.so im-viqr.so im-xim.so
+[PROVIDES] libgdk-x11-2.0.so libgdk_pixbuf-2.0.so libgdk_pixbuf_xlib-2.0.so
+[PROVIDES] libgtk-x11-2.0.so libpixbufloader-ani.so libpixbufloader-bmp.so
+[PROVIDES] libpixbufloader-gif.so libpixbufloader-ico.so
+[PROVIDES] libpixbufloader-jpeg.so libpixbufloader-pcx.so
+[PROVIDES] libpixbufloader-png.so libpixbufloader-pnm.so
+[PROVIDES] libpixbufloader-ras.so libpixbufloader-tga.so
+[PROVIDES] libpixbufloader-tiff.so libpixbufloader-wbmp.so
+[PROVIDES] libpixbufloader-xbm.so libpixbufloader-xpm.so libpixmap.so
 

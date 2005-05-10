@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110145512 Sun Mar  6 22:45:12 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115194145 Wed May  4 10:09:05 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-arts.log 9-arts.log
 
-[BUILDTIME] 33043 (9)
-[SIZE] 3.87 MB, 113 files
+[BUILDTIME] 34446 (9)
+[SIZE] 4.86 MB, 120 files
 
-[DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev bash2 binutils bzip2
-[DEP] coreutils diffutils esound esound:dev expat findutils freetype gawk
-[DEP] gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev grep jack jack:dev
-[DEP] libjpeg libpng libpng:dev linux26-header:dev mad mad:dev make mktemp
-[DEP] nas nas:dev net-tools ogg-vorbis ogg-vorbis:dev perl5 pkgconfig qt
-[DEP] qt:dev sed sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+[DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev autoconf
+[DEP] bash2 binutils bzip2 coreutils diffutils esound esound:dev expat
+[DEP] findutils freetype freetype:dev gawk gcc34 gcc34:dev glib glib:dev
+[DEP] glibc23 glibc23:dev grep jack jack:dev libjpeg libpng libpng:dev
+[DEP] linux26-header:dev m4 mad mad:dev make mktemp nas nas:dev net-tools
+[DEP] ogg-vorbis ogg-vorbis:dev perl5 pkgconfig qt qt:dev sed sysfiles
+[DEP] tar util-linux xorg xorg:dev zlib:dev
 
 [PROVIDES] artsc-config artscat artsd artsdsp artsplay artsrec artsshell
 [PROVIDES] artswrapper libartsc.so libartscbackend.so libartsdsp.so

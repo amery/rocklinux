@@ -20,26 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110893663 Tue Mar 15 14:34:23 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115600715 Mon May  9 03:05:15 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-tpctl.log 9-tpctl.log
 
-[BUILDTIME] 3635 (9)
-[SIZE] 0.44 MB, 35 files
+[BUILDTIME] 3768 (9)
+[SIZE] 0.44 MB, 31 files
 
 [DEP] 00-dirtree alsa atk atk:dev audiofile bash2 binutils bzip2
-[DEP] coreutils diffutils esound expat findutils freetype gawk
-[DEP] gcc34 gcc34:dev gconf gconf:dev gettext glib glib:dev glibc23
+[DEP] coreutils diffutils esound expat findutils freetype gcc34
+[DEP] gcc34:dev gconf gconf:dev gettext glib glib:dev glibc23
 [DEP] glibc23:dev gnome-keyring gnome-vfs gnome-vfs:dev grep gtk+
 [DEP] gtk+:dev libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev
 [DEP] libbonoboui libbonoboui:dev libgnome libgnome:dev libgnomecanvas
 [DEP] libgnomecanvas:dev libgnomeui libgnomeui:dev libjpeg libxml2 linux26
 [DEP] linux26-header:dev linux26-source make mktemp module-init-tools
 [DEP] ncurses:dev net-tools openssl orbit2 orbit2:dev pango pango:dev
-[DEP] pkgconfig popt popt:dev sed sysfiles tar util-linux xfree86 zapping
+[DEP] pkgconfig popt popt:dev sed sysfiles tar util-linux xorg zapping
 [DEP] zlib:dev
 
-[PROVIDES] apmiser configure-thinkpad configure-trackpoint ntpctl tpctl
+[PROVIDES] apmiser configure-thinkpad ntpctl tpctl
 

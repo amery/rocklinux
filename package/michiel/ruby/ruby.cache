@@ -20,20 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110138838 Sun Mar  6 20:53:58 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115186228 Wed May  4 07:57:08 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-ruby.log 9-ruby.log
 
-[BUILDTIME] 11524 (9)
-[SIZE] 6.04 MB, 953 files
+[BUILDTIME] 11456 (9)
+[SIZE] 6.22 MB, 953 files
 
 [DEP] 00-dirtree bash2 bdb42 bdb42:dev binutils bzip2 coreutils diffutils
 [DEP] findutils gawk gcc34 gcc34:dev gdbm gdbm:dev glibc23 glibc23:dev
 [DEP] grep groff linux26-header:dev make mktemp ncurses:dev net-tools
 [DEP] openssl openssl:dev readline readline:dev sed sysfiles tar tcl
-[DEP] tcl:dev tk tk:dev util-linux xfree86 xfree86:dev zlib:dev
+[DEP] tcl:dev tk tk:dev util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] erb irb libruby-static.a libruby.so rdoc ri ruby testrb
+[PROVIDES] bigdecimal.so cparse.so curses.so dbm.so digest.so dl.so
+[PROVIDES] enumerator.so erb etc.so fcntl.so gdbm.so iconv.so irb
+[PROVIDES] libruby-static.a libruby.so md5.so nkf.so openssl.so pty.so
+[PROVIDES] rdoc readline.so ri rmd160.so ruby sdbm.so sha1.so sha2.so
+[PROVIDES] socket.so stringio.so strscan.so syck.so syslog.so tcltklib.so
+[PROVIDES] testrb tkutil.so wait.so zlib.so
 

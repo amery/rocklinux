@@ -20,19 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110183729 Mon Mar  7 09:22:09 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115290455 Thu May  5 12:54:15 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-libdv.log 9-libdv.log
 
-[BUILDTIME] 4757 (9)
-[SIZE] 0.18 MB, 17 files
+[BUILDTIME] 5266 (9)
+[SIZE] 0.19 MB, 17 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glib12 glib12:dev glibc23 glibc23:dev grep gtk+12
 [DEP] gtk+12:dev linux26-header:dev make mktemp net-tools pkgconfig popt
-[DEP] popt:dev sed sysfiles tar util-linux xfree86 xfree86:dev
+[DEP] popt:dev sed sysfiles tar util-linux xorg xorg:dev
 
 [PROVIDES] dubdv dvconnect encodedv libdv.a libdv.so playdv
 

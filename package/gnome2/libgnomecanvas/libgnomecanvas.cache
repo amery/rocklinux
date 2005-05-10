@@ -20,19 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1104674927 Sun Jan  2 15:08:47 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference-expert
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115245148 Thu May  5 00:19:08 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
-[LOGS] 5-libgnomecanvas.log
+[LOGS] 5-libgnomecanvas.log 9-libgnomecanvas.log
 
-[BUILDTIME] 4654 (5)
-[SIZE] 1.08 MB, 107 files
+[BUILDTIME] 5864 (9)
+[SIZE] 1.08 MB, 111 files
 
-[DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils diffutils expat
-[DEP] findutils freetype gawk gcc34 gcc34:dev gettext glib glib:dev glibc23
-[DEP] glibc23:dev grep gtk+ gtk+:dev libart_lgpl23 libart_lgpl23:dev
-[DEP] libglade libglade:dev libxml2 libxml2:dev linux26-header:dev make
-[DEP] mktemp pango pango:dev perl5 pkgconfig sed sysfiles tar util-linux
-[DEP] xfree86 xfree86:dev zlib:dev
+[DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils diffutils
+[DEP] expat findutils freetype freetype:dev gawk gcc34 gcc34:dev gettext
+[DEP] glib glib:dev glibc23 glibc23:dev grep gtk+ gtk+:dev libart_lgpl23
+[DEP] libart_lgpl23:dev libglade libglade:dev libxml2 libxml2:dev
+[DEP] linux26-header:dev make mktemp net-tools pango pango:dev perl5
+[DEP] pkgconfig sed sysfiles tar util-linux xorg xorg:dev zlib:dev
+
+[PROVIDES] libcanvas.a libcanvas.so libgnomecanvas-2.a libgnomecanvas-2.so
 

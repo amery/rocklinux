@@ -20,18 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110325351 Wed Mar  9 00:42:31 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115526111 Sun May  8 06:21:51 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-jpilot-syncmal.log 9-jpilot-syncmal.log
 
-[BUILDTIME] 3840 (9)
-[SIZE] 0.11 MB, 7 files
+[BUILDTIME] 4376 (9)
+[SIZE] 0.12 MB, 7 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] gawk gcc34 gcc34:dev glib12 glib12:dev glibc23 glibc23:dev grep
-[DEP] gtk+12 gtk+12:dev jpilot linux26-header:dev make mktemp net-tools
-[DEP] pilot-link pilot-link:dev sed sysfiles tar util-linux xfree86
+[DEP] gcc34 gcc34:dev glib12 glib12:dev glibc23 glibc23:dev grep gtk+12
+[DEP] gtk+12:dev jpilot linux26-header:dev make mktemp net-tools pilot-link
+[DEP] pilot-link:dev sed sysfiles tar util-linux xorg
 
+[PROVIDES] libsyncmal.so
 

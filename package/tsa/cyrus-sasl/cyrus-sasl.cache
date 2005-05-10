@@ -20,19 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110130841 Sun Mar  6 18:40:41 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115174957 Wed May  4 04:49:17 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-cyrus-sasl.log 9-cyrus-sasl.log
 
-[BUILDTIME] 3458 (9)
-[SIZE] 0.18 MB, 51 files
+[BUILDTIME] 3823 (9)
+[SIZE] 0.19 MB, 51 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils gawk gcc34 gcc34:dev gdbm gdbm:dev glibc23
 [DEP] glibc23:dev grep linux26-header:dev make mktemp net-tools openssl
 [DEP] pam pam:dev perl5 sed sysfiles tar texinfo
 
+[PROVIDES] libanonymous.so libcrammd5.so libdigestmd5.so libplain.so
 [PROVIDES] libsasl.so sasldblistusers saslpasswd
 

@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110196004 Mon Mar  7 12:46:44 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115334018 Fri May  6 01:00:18 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-kdeadmin.log 9-kdeadmin.log
 
-[BUILDTIME] 41317 (9)
-[SIZE] 2.17 MB, 161 files
+[BUILDTIME] 39665 (9)
+[SIZE] 2.22 MB, 144 files
 
-[DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils expat
-[DEP] fam fam:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev
-[DEP] gettext glibc23 glibc23:dev grep kdebase kdelibs kdelibs:dev
-[DEP] kdelibs:doc libart_lgpl23 libart_lgpl23:dev libjpeg libjpeg:dev
-[DEP] libpng libpng:dev linux26-header:dev make mktemp net-tools pam
-[DEP] pam:dev patch pcre pcre:dev perl5 qt qt:dev sed shadow shadow:dev
-[DEP] sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+[DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils expat fam
+[DEP] fam:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev gettext
+[DEP] glibc23 glibc23:dev grep kdebase kdelibs kdelibs:dev kdelibs:doc
+[DEP] kdeutils libart_lgpl23 libart_lgpl23:dev libjpeg libpng libpng:dev
+[DEP] linux26-header:dev make mktemp net-tools pam pam:dev patch perl5 qt
+[DEP] qt:dev sed shadow shadow:dev sysfiles tar util-linux xorg xorg:dev
+[DEP] zlib:dev
 
-[PROVIDES] kcron kdat kpackage ksysv kuser secpolicy
+[PROVIDES] kcm_lilo.so kcron kdat kfile_deb.so kfile_rpm.so kpackage
+[PROVIDES] ksysv kuser secpolicy
 

@@ -20,18 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110304894 Tue Mar  8 19:01:34 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115456732 Sat May  7 11:05:32 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-quota.log 9-quota.log
 
-[BUILDTIME] 2329 (9)
-[SIZE] 0.65 MB, 37 files
+[BUILDTIME] 2647 (9)
+[SIZE] 0.72 MB, 37 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils e2fsprogs:dev
-[DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev
-[DEP] grep linux26-header:dev make mktemp net-tools sed sysfiles tar
+[DEP] findutils gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
+[DEP] linux26-header:dev make mktemp net-tools sed sysfiles tar
 [DEP] tcp_wrappers:dev
 
 [PROVIDES] convertquota edquota quot quota quotacheck quotaoff quotaon

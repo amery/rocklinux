@@ -20,21 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110138986 Sun Mar  6 20:56:26 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115186445 Wed May  4 08:00:45 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-xmms.log 9-xmms.log
 
-[BUILDTIME] 12502 (9)
-[SIZE] 4.87 MB, 99 files
+[BUILDTIME] 13437 (9)
+[SIZE] 4.96 MB, 99 files
 
 [DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev bash2 binutils
 [DEP] bison bzip2 coreutils diffutils esound esound:dev findutils gawk
 [DEP] gcc34 gcc34:dev gettext glib12 glib12:dev glibc23 glibc23:dev grep
 [DEP] gtk+12 gtk+12:dev libmikmod libmikmod:dev linux26-header:dev make
 [DEP] mktemp net-tools ogg-vorbis ogg-vorbis:dev patch sed sysfiles tar
-[DEP] util-linux xfree86 xfree86:dev zlib:dev
+[DEP] util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] libxmms.a libxmms.so wmxmms xmms xmms-config
+[PROVIDES] libALSA.so libOSS.so libbscope.so libcdaudio.so
+[PROVIDES] libdisk_writer.so libecho.so libesdout.so libir.so libjoy.so
+[PROVIDES] libmikmod.so libmpg123.so libogl_spectrum.so libsanalyzer.so
+[PROVIDES] libsong_change.so libstereo.so libtonegen.so libvoice.so
+[PROVIDES] libvorbis.so libwav.so libxmms.a libxmms.so wmxmms xmms
+[PROVIDES] xmms-config
 

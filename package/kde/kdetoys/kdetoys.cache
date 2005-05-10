@@ -20,23 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110309961 Tue Mar  8 20:26:01 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115472808 Sat May  7 15:33:28 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-kdetoys.log 9-kdetoys.log
 
-[BUILDTIME] 18423 (9)
-[SIZE] 3.64 MB, 575 files
+[BUILDTIME] 20395 (9)
+[SIZE] 4.17 MB, 603 files
 
-[DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils expat fam
-[DEP] fam:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev gettext
-[DEP] glibc23 glibc23:dev grep kdeartwork kdebase kdelibs kdelibs:dev
-[DEP] kdelibs:doc libart_lgpl23 libart_lgpl23:dev libjpeg libjpeg:dev
-[DEP] libpng libpng:dev linux26-header:dev make mktemp net-tools pcre
-[DEP] pcre:dev perl5 qt qt:dev sed sysfiles tar util-linux vim xfree86
-[DEP] xfree86:dev zlib:dev
+[DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils expat
+[DEP] fam fam:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev
+[DEP] gettext glibc23 glibc23:dev grep kdeartwork kdebase kdelibs
+[DEP] kdelibs:dev kdelibs:doc kdeutils libart_lgpl23 libart_lgpl23:dev
+[DEP] libjpeg libjpeg:dev libpng libpng:dev linux26-header:dev make mktemp
+[DEP] net-tools pcre pcre:dev perl5 qt qt:dev sed sysfiles tar util-linux
+[DEP] vim xorg xorg:dev zlib:dev
 
-[PROVIDES] amor kodo kteatime ktux kweatherreport kweatherservice
-[PROVIDES] kworldclock libkdeinit_kweatherreport.so
+[PROVIDES] amor eyes_panelapplet.so fifteen_panelapplet.so kcm_weather.so
+[PROVIDES] kcm_weatherservice.so kmoon_panelapplet.so kodo kteatime ktux
+[PROVIDES] kweatherreport kweatherreport.so kweatherservice kworldclock
+[PROVIDES] libkdeinit_kweatherreport.so weather_panelapplet.so
+[PROVIDES] ww_panelapplet.so
 

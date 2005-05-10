@@ -20,25 +20,28 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110662086 Sat Mar 12 22:14:46 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115590029 Mon May  9 00:07:09 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-opensc.log 9-opensc.log
 
-[BUILDTIME] 28414 (9)
-[SIZE] 0.93 MB, 81 files
+[BUILDTIME] 14661 (9)
+[SIZE] 1.00 MB, 81 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] flex flex:dev gawk gcc34 gcc34:dev glib12 glibc23 glibc23:dev
-[DEP] gnome-libs14 grep libassuan:dev linux26-header:dev m4 make mktemp
-[DEP] mozilla ncurses:dev net-tools openct openct:dev openldap openldap:dev
-[DEP] openssl openssl:dev pam pam:dev pcsc-lite pcsc-lite:dev pkgconfig
-[DEP] readline readline:dev sed sysfiles tar util-linux xfree86 xfree86:dev
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils flex
+[DEP] flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libassuan:dev
+[DEP] linux26-header:dev m4 make mktemp mozilla ncurses:dev net-tools
+[DEP] openct openct:dev openldap openldap:dev openssl openssl:dev pam
+[DEP] pam:dev pcsc-lite pcsc-lite:dev pkgconfig readline readline:dev
+[DEP] sed sysfiles tar util-linux xorg xorg:dev
 
-[PROVIDES] cardos-info cryptoflex-tool libopensc.a libopensc.so
-[PROVIDES] libpkcs15init.a libpkcs15init.so libscam.a libscam.so
-[PROVIDES] libscconf.a libscconf.so libscldap.a libscldap.so opensc-config
-[PROVIDES] opensc-explorer opensc-tool pkcs11-tool pkcs15-crypt pkcs15-init
-[PROVIDES] pkcs15-tool
+[PROVIDES] cardos-info cryptoflex-tool engine_opensc.a engine_opensc.so
+[PROVIDES] engine_pkcs11.a engine_pkcs11.so libopensc.a libopensc.so
+[PROVIDES] libpkcs11.a libpkcs11.so libpkcs15init.a libpkcs15init.so
+[PROVIDES] libscam.a libscam.so libscconf.a libscconf.so libscldap.a
+[PROVIDES] libscldap.so opensc-config opensc-explorer opensc-pkcs11.a
+[PROVIDES] opensc-pkcs11.so opensc-signer.a opensc-signer.so opensc-tool
+[PROVIDES] pam_opensc.a pam_opensc.so pkcs11-spy.a pkcs11-spy.so
+[PROVIDES] pkcs11-tool pkcs15-crypt pkcs15-init pkcs15-tool
 

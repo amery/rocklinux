@@ -20,33 +20,56 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110221269 Mon Mar  7 19:47:49 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115401890 Fri May  6 19:51:30 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-kdenetwork.log 9-kdenetwork.log
 
-[BUILDTIME] 192719 (9)
-[SIZE] 16.89 MB, 1874 files
+[BUILDTIME] 238726 (9)
+[SIZE] 20.00 MB, 1728 files
 
 [DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev bash2
 [DEP] binutils bzip2 coreutils diffutils ekg:dev esound esound:dev expat
 [DEP] fam fam:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev
 [DEP] gettext glib glib12 glib12:dev glib:dev glibc23 glibc23:dev
-[DEP] grep gtk+12 gtk+12:dev jack jack:dev kdebase kdebase:doc kdelibs
-[DEP] kdelibs:dev kdelibs:doc libart_lgpl23 libart_lgpl23:dev libjpeg
-[DEP] libjpeg:dev libpng libpng:dev libxml2 libxml2:dev libxslt libxslt:dev
-[DEP] linux26-header:dev mad mad:dev make mktemp nas net-tools ogg-vorbis
-[DEP] ogg-vorbis:dev openslp openslp:dev openssl openssl:dev pcre
-[DEP] pcre:dev perl5 qt qt:dev sed sysfiles tar util-linux valgrind:dev
-[DEP] vim wireless-tools wireless-tools:dev xfree86 xfree86:dev xmms
-[DEP] xmms:dev zlib:dev
+[DEP] grep gtk+12 gtk+12:dev jack jack:dev kdebase kdebase:doc
+[DEP] kdegames kdelibs kdelibs:dev kdelibs:doc kdeutils libart_lgpl23
+[DEP] libart_lgpl23:dev libjpeg libjpeg:dev libpng libpng:dev libxml2
+[DEP] libxml2:dev libxslt libxslt:dev linux26-header:dev mad mad:dev make
+[DEP] mktemp nas net-tools ogg-vorbis ogg-vorbis:dev openslp openslp:dev
+[DEP] openssl openssl:dev pcre pcre:dev perl5 qt qt:dev sed sysfiles tar
+[DEP] util-linux valgrind:dev vim wireless-tools wireless-tools:dev xmms
+[DEP] xmms:dev xorg xorg:dev zlib:dev
 
-[PROVIDES] dsirc feedbrowser kdict kget knewstickerstub kopete
-[PROVIDES] kopete-account-kconf_update kopete-pluginloader2-kconf_update
-[PROVIDES] kopete_latexconvert.sh kppp kppplogview krdc krfb krfb_httpd
-[PROVIDES] ksirc ktalkd ktalkdlg kwifimanager libkdeinit_ksirc.so
-[PROVIDES] libkopete.so libkopete_msn_shared.so libkopete_oscar.so
-[PROVIDES] libkwireless.so librss.so lisa mail.local reslisa rssclient
-[PROVIDES] rssservice
+[PROVIDES] dsirc feedbrowser fileshare_propsdlgplugin.so kcm_fileshare.so
+[PROVIDES] kcm_kopete_accountconfig.so kcm_kopete_addbookmarks.so
+[PROVIDES] kcm_kopete_alias.so kcm_kopete_appearanceconfig.so
+[PROVIDES] kcm_kopete_autoreplace.so kcm_kopete_behaviorconfig.so
+[PROVIDES] kcm_kopete_cryptography.so kcm_kopete_highlight.so
+[PROVIDES] kcm_kopete_history.so kcm_kopete_latex.so kcm_kopete_msn.so
+[PROVIDES] kcm_kopete_netmeeting.so kcm_kopete_nowlistening.so
+[PROVIDES] kcm_kopete_texteffect.so kcm_kopete_translator.so
+[PROVIDES] kcm_kopete_webpresence.so kcm_krfb.so kcm_ktalkd.so
+[PROVIDES] kcm_lanbrowser.so kcm_wifi.so kded_dnssdwatcher.so
+[PROVIDES] kded_kinetd.so kdict kdict_panelapplet.so kfile_torrent.so
+[PROVIDES] kget khtml_kget.so kio_lan.so kio_zeroconf.so
+[PROVIDES] knewsticker_panelapplet.so knewstickerstub kopete
+[PROVIDES] kopete-account-kconf_update kopete-nameTracking-kconf_update
+[PROVIDES] kopete-pluginloader2-kconf_update kopete_addbookmarks.so
+[PROVIDES] kopete_aim.so kopete_alias.so kopete_autoreplace.so
+[PROVIDES] kopete_chatwindow.so kopete_connectionstatus.so
+[PROVIDES] kopete_contactnotes.so kopete_cryptography.so
+[PROVIDES] kopete_emailwindow.so kopete_gadu.so kopete_groupwise.so
+[PROVIDES] kopete_highlight.so kopete_history.so kopete_icq.so
+[PROVIDES] kopete_irc.so kopete_latex.so kopete_latexconvert.sh
+[PROVIDES] kopete_msn.so kopete_netmeeting.so kopete_nowlistening.so
+[PROVIDES] kopete_sms.so kopete_statistics.so kopete_texteffect.so
+[PROVIDES] kopete_translator.so kopete_webpresence.so kopete_yahoo.so
+[PROVIDES] kpf_panelapplet.so kpfpropertiesdialog.so kppp kppplogview
+[PROVIDES] krdc krfb krfb_httpd ksirc ksirc.so ktalkd ktalkdlg
+[PROVIDES] kwifimanager libkcm_kcmsambaconf.so libkdeinit_ksirc.so
+[PROVIDES] libkntsrcfilepropsdlg.so libkopete.so libkopete_msn_shared.so
+[PROVIDES] libkopete_oscar.so libkrichtexteditpart.so libkwireless.so
+[PROVIDES] librss.so lisa mail.local reslisa rssclient rssservice
 

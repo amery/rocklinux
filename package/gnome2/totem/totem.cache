@@ -20,35 +20,33 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110306626 Tue Mar  8 19:30:26 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115460823 Sat May  7 12:13:43 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-totem.log 9-totem.log
 
-[BUILDTIME] 11377 (9)
-[SIZE] 2.15 MB, 136 files
+[BUILDTIME] 10045 (9)
+[SIZE] 2.67 MB, 152 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
-[DEP] autoconf balsa bash2 binutils bzip2 coreutils cpan-xml-parser
-[DEP] diffutils docbookx esound esound:dev evolution expat figment
-[DEP] findutils freetype freetype:dev gawk gcc34 gcc34:dev gconf
-[DEP] gconf:dev gettext ggv gjiten glabels glade glib glib12 glib:dev
-[DEP] glibc23 glibc23:dev gnome-applets gnome-blog gnome-desktop
-[DEP] gnome-desktop:dev gnome-keyring gnome-keyring:dev gnome-libs14
-[DEP] gnome-media gnome-mime-data gnome-pilot gnome-system-monitor
-[DEP] gnome-system-tools gnome-terminal gnome-vfs gnome-vfs:dev
-[DEP] gnome2-user-docs gnomemeeting gok grep gst-editor gthumb gtk+
-[DEP] gtk+:dev gucharmap libart_lgpl23 libart_lgpl23:dev libbonobo
-[DEP] libbonobo:dev libbonoboui libbonoboui:dev libglade libglade:dev
-[DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev
-[DEP] libgnomeui libgnomeui:dev libjpeg libjpeg:dev libxml2 libxml2:dev
-[DEP] linux26-header:dev lirc lirc:dev make mktemp nautilus-cd-burner
-[DEP] nautilus-cd-burner:dev net-tools openssl orbit2 orbit2:dev
-[DEP] pango pango:dev perl5 pkgconfig popt popt:dev pybliographer
-[DEP] scrollkeeper seahorse sed sound-juicer startup-notification
-[DEP] startup-notification:dev sysfiles tar texinfo util-linux xfree86
-[DEP] xfree86:dev xine-lib xine-lib:dev zapping zlib:dev
+[DEP] bash2 binutils bzip2 coreutils cpan-xml-parser diffutils docbookx
+[DEP] esound esound:dev expat figment findutils freetype freetype:dev
+[DEP] gawk gcc34 gcc34:dev gconf gconf:dev gettext glib glib12 glib:dev
+[DEP] glibc23 glibc23:dev gnome-blog gnome-desktop gnome-desktop:dev
+[DEP] gnome-keyring gnome-keyring:dev gnome-libs14 gnome-terminal
+[DEP] gnome-vfs gnome-vfs:dev gnomemeeting grep gtk+ gtk+:dev gucharmap
+[DEP] libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui
+[DEP] libbonoboui:dev libglade libglade:dev libgnome libgnome:dev
+[DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev libjpeg
+[DEP] libjpeg:dev libxml2 libxml2:dev linux26-header:dev lirc lirc:dev
+[DEP] make mktemp nautilus nautilus-cd-burner nautilus-cd-burner:dev
+[DEP] nautilus:dev net-tools openssl orbit2 orbit2:dev pango pango:dev
+[DEP] perl5 pkgconfig popt popt:dev scrollkeeper sed startup-notification
+[DEP] startup-notification:dev sysfiles tar util-linux xine-lib
+[DEP] xine-lib:dev xorg xorg:dev zapping zlib:dev
 
-[PROVIDES] totem totem-video-thumbnailer
+[PROVIDES] libtotem-plparser.a libtotem-plparser.so
+[PROVIDES] libtotem-properties-page.a libtotem-properties-page.so totem
+[PROVIDES] totem-video-thumbnailer
 

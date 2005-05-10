@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110189336 Mon Mar  7 10:55:36 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115312606 Thu May  5 19:03:26 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-memprof.log 9-memprof.log
 
-[BUILDTIME] 3069 (9)
-[SIZE] 0.69 MB, 41 files
+[BUILDTIME] 3836 (9)
+[SIZE] 0.70 MB, 41 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
 [DEP] binutils binutils:dev bzip2 coreutils diffutils esound esound:dev
@@ -36,11 +36,11 @@
 [DEP] gnome-keyring:dev gnome-vfs gnome-vfs:dev grep gtk+ gtk+:dev
 [DEP] libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui
 [DEP] libbonoboui:dev libglade libglade:dev libgnome libgnome:dev
-[DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev
-[DEP] libjpeg libjpeg:dev libxml2 libxml2:dev linux26-header:dev make
-[DEP] mktemp net-tools openssl orbit2 orbit2:dev pango pango:dev patch
-[DEP] perl5 pkgconfig popt popt:dev sed sysfiles tar util-linux xfree86
-[DEP] zapping zlib:dev
+[DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev libjpeg
+[DEP] libjpeg:dev libxml2 libxml2:dev linux26-header:dev make mktemp
+[DEP] net-tools openssl orbit2 orbit2:dev pango pango:dev patch perl5
+[DEP] pkgconfig popt popt:dev sed sysfiles tar util-linux xorg zapping
+[DEP] zlib:dev
 
 [PROVIDES] libmemintercept.a libmemintercept.so memprof
 

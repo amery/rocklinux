@@ -20,19 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110137790 Sun Mar  6 20:36:30 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115184705 Wed May  4 07:31:45 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-libmikmod.log 9-libmikmod.log
 
-[BUILDTIME] 5028 (9)
-[SIZE] 0.36 MB, 13 files
+[BUILDTIME] 5123 (9)
+[SIZE] 0.40 MB, 13 files
 
-[DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev autoconf automake19
-[DEP] bash2 binutils bzip2 coreutils diffutils esound esound:dev file
-[DEP] findutils gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp net-tools perl5 sed sysfiles tar texinfo
+[DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev autoconf
+[DEP] automake19 bash2 binutils bzip2 coreutils diffutils esound
+[DEP] esound:dev file findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev
+[DEP] grep linux26-header:dev make mktemp net-tools perl5 sed sysfiles
+[DEP] tar texinfo
 
 [PROVIDES] libmikmod-config libmikmod.a libmikmod.so
 

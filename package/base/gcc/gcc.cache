@@ -20,13 +20,13 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110121126 Sun Mar  6 15:58:46 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115119767 Tue May  3 13:29:27 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 0-gcc34.log 1-gcc34.log 2-gcc34.log 9-gcc34.log
 
-[BUILDTIME] 133981 (9)
+[BUILDTIME] 143056 (9)
 [SIZE] 45.87 MB, 121 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils findutils
@@ -37,5 +37,7 @@
 [PROVIDES] gcc gcc-34 gcov gcov-34 i386-unknown-linux-gnu-c++
 [PROVIDES] i386-unknown-linux-gnu-c++-34 i386-unknown-linux-gnu-g++
 [PROVIDES] i386-unknown-linux-gnu-g++-34 i386-unknown-linux-gnu-gcc
-[PROVIDES] i386-unknown-linux-gnu-gcc-34 kcc kcc-34 libgcc_s.so
+[PROVIDES] i386-unknown-linux-gnu-gcc-34 kcc kcc-34 libfrtbegin.a libg2c.a
+[PROVIDES] libg2c.so libgcc.a libgcc_eh.a libgcc_s.so libgcov.a libobjc.a
+[PROVIDES] libobjc.so libstdc++.a libstdc++.so libsupc++.a
 

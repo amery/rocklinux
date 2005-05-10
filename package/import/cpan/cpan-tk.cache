@@ -20,19 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110314902 Tue Mar  8 21:48:22 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115491580 Sat May  7 20:46:20 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-cpan-tk.log 9-cpan-tk.log
 
-[BUILDTIME] 16345 (9)
-[SIZE] 7.20 MB, 808 files
+[BUILDTIME] 16971 (9)
+[SIZE] 7.35 MB, 808 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep libjpeg libjpeg:dev libpng
 [DEP] libpng:dev linux26-header:dev make mktemp perl5 sed sysfiles tar
-[DEP] xfree86 xfree86:dev zlib:dev
+[DEP] xorg xorg:dev zlib:dev
 
-[PROVIDES] gedi ptked ptksh tkjpeg widget
+[PROVIDES] Canvas.so Compound.so Entry.so Event.so HList.so IO.so InputO.so
+[PROVIDES] JPEG.so Listbox.so Menubutton.so Mwm.so NBFrame.so PNG.so
+[PROVIDES] Pixmap.so Scale.so Scrollbar.so TList.so Text.so TixGrid.so
+[PROVIDES] Tk.so WinPhoto.so X.so Xlib.so gedi ptked ptksh tkjpeg widget
 

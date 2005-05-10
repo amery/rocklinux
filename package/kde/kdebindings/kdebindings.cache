@@ -20,23 +20,32 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110318877 Tue Mar  8 22:54:37 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115506627 Sun May  8 00:57:07 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-kdebindings.log 9-kdebindings.log
 
-[BUILDTIME] 92331 (9)
-[SIZE] 16.88 MB, 72 files
+[BUILDTIME] 191091 (9)
+[SIZE] 55.70 MB, 787 files
 
 [DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils expat
 [DEP] fam fam:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev
 [DEP] gettext glib12 glib12:dev glibc23 glibc23:dev grep gtk+12 gtk+12:dev
-[DEP] kdelibs kdelibs:dev kdesdk libart_lgpl23 libart_lgpl23:dev libjpeg
-[DEP] libjpeg:dev libpng libpng:dev linux26-header:dev make mktemp
-[DEP] net-tools openssl:dev patch pcre pcre:dev perl5 qt qt:dev ruby sed
-[DEP] ssleay-perlmod sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+[DEP] kdebase kdelibs kdelibs:dev kdesdk libart_lgpl23 libart_lgpl23:dev
+[DEP] libjpeg libjpeg:dev libpng libpng:dev linux26-header:dev make mktemp
+[DEP] net-tools numpy openssl:dev patch pcre pcre:dev perl5 pil python
+[DEP] python:dev qt qt:dev ruby sed ssleay-perlmod sysfiles tar tcl tk
+[DEP] util-linux vim wxpython xorg xorg:dev zlib:dev
 
-[PROVIDES] jsaccess kjscmd krubyinit libkjsembed.so libsmokekde.so
-[PROVIDES] libsmokeqt.so qtrubyinit rbkdeapi rbkdesh rbqtapi rbqtsh rbuic
+[PROVIDES] DCOP.so dcop.so embedjs jsaccess kdecore.so kdefx.so
+[PROVIDES] kdeprint.so kdesu.so kdeui.so kfile.so khtml.so kio.so
+[PROVIDES] kjscmd kmdi.so korundum.so kparts.so krubyinit kspell.so
+[PROVIDES] kutils.so libcustomobjectplugin.so libcustomqobjectplugin.so
+[PROVIDES] libfileitemplugin.so libimagefxplugin.so libjavascript.so
+[PROVIDES] libjsconsoleplugin.so libkjsembed.so libqprocessplugin.so
+[PROVIDES] libsmokekde.so libsmokeqt.so pcop.so pylupdate pyuic qt.so
+[PROVIDES] qtcanvas.so qtgl.so qtnetwork.so qtruby.so qtrubyinit qtsql.so
+[PROVIDES] qttable.so qtui.so qtxml.so qui.so rbkconfig_compiler rbkdeapi
+[PROVIDES] rbkdesh rbqtapi rbqtsh rbuic sip sip.so
 

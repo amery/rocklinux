@@ -20,25 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110167949 Mon Mar  7 04:59:09 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115270186 Thu May  5 07:16:26 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-libbonoboui.log 9-libbonoboui.log
 
-[BUILDTIME] 14995 (9)
-[SIZE] 1.61 MB, 120 files
+[BUILDTIME] 17436 (9)
+[SIZE] 1.71 MB, 126 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
 [DEP] binutils bzip2 coreutils cpan-xml-parser diffutils esound esound:dev
-[DEP] expat findutils freetype gawk gcc34 gcc34:dev gconf gconf:dev
+[DEP] expat figment findutils freetype gawk gcc34 gcc34:dev gconf gconf:dev
 [DEP] gdk-pixbuf10 gettext glib glib12 glib:dev glibc23 glibc23:dev
 [DEP] gnome-blog gnome-libs14 gnome-vfs gnome-vfs:dev grep gtk+ gtk+:dev
 [DEP] libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev libglade
 [DEP] libglade:dev libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev
 [DEP] libxml2 libxml2:dev linux26-header:dev make mktemp net-tools openssl
 [DEP] orbit2 orbit2:dev pango pango:dev perl5 pkgconfig popt popt:dev
-[DEP] sed sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+[DEP] sed sysfiles tar util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] libbonoboui-2.a libbonoboui-2.so test-moniker
+[PROVIDES] bonobo-browser libbonobo.a libbonobo.so libbonoboui-2.a
+[PROVIDES] libbonoboui-2.so test-moniker
 

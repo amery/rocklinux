@@ -20,18 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110896138 Tue Mar 15 15:15:38 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115609778 Mon May  9 05:36:18 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-pam_ldap.log 9-pam_ldap.log
 
-[BUILDTIME] 1841 (9)
-[SIZE] 0.05 MB, 8 files
+[BUILDTIME] 2149 (9)
+[SIZE] 0.06 MB, 8 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils gcc34 gcc34:dev glibc23 glibc23:dev grep
 [DEP] linux26-header:dev make mktemp net-tools openldap openldap:dev
 [DEP] opensc openssl pam pam:dev perl5 sed sysfiles tar texinfo
 
+[PROVIDES] pam_ldap.so
 

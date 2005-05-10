@@ -20,34 +20,55 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110894590 Tue Mar 15 14:49:50 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115605197 Mon May  9 04:19:57 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-xfce4.log 9-xfce4.log
 
-[BUILDTIME] 80086 (9)
-[SIZE] 25.37 MB, 7057 files
+[BUILDTIME] 92886 (9)
+[SIZE] 25.55 MB, 7057 files
 
 [DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils cups cups:dev
 [DEP] diffutils expat findutils freetype gawk gcc34 gcc34:dev gettext
 [DEP] glib glib:dev glibc23 glibc23:dev grep gtk+ gtk+:dev gzip libxml2
 [DEP] libxml2:dev linux26-header:dev make mktemp net-tools openssl pango
 [DEP] pango:dev pkgconfig sed startup-notification startup-notification:dev
-[DEP] sysfiles tar util-linux xfree86 xfree86:dev zlib:dev
+[DEP] sysfiles tar util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] fgr libdbh.a libdbh.so libxfce4mcs-client.a
-[PROVIDES] libxfce4mcs-client.so libxfce4mcs-manager.a
-[PROVIDES] libxfce4mcs-manager.so libxfce4util.a libxfce4util.so
-[PROVIDES] libxfcegui4.a libxfcegui4.so libxffm_actions.so libxffm_basic.so
-[PROVIDES] libxffm_calls.so libxffm_cpy.so libxffm_on_demand.so
-[PROVIDES] libxffm_secondary.so libxffm_tubo.so libxfsm-4.2.a
-[PROVIDES] libxfsm-4.2.so scramble startxfce4 xfbook xfbook4 xfcalendar
-[PROVIDES] xfce-mcs-manager xfce-setting-show xfce4-about xfce4-appfinder
-[PROVIDES] xfce4-iconbox xfce4-kiosk-query xfce4-menueditor xfce4-mixer
-[PROVIDES] xfce4-panel xfce4-session xfce4-session-logout xfce4-tips
-[PROVIDES] xfdesktop xfdiff4 xffm xffrequent xffrequent4 xffstab xffstab4
-[PROVIDES] xfglob4 xfhelp4 xflock4 xfmime-edit xfmountdev4 xfprint-manager
-[PROVIDES] xfprint4 xfrecent xfrecent4 xfrun4 xfsamba4 xftaskbar4 xfterm4
-[PROVIDES] xftrash4 xftree4 xfwm4
+[PROVIDES] backdrop_settings.a backdrop_settings.so bsdlpr_plugin.a
+[PROVIDES] bsdlpr_plugin.so cups_plugin.a cups_plugin.so
+[PROVIDES] display_plugin.a display_plugin.so fgr file_plugin.a
+[PROVIDES] file_plugin.so keyboard_plugin.a keyboard_plugin.so libbalou.a
+[PROVIDES] libbalou.so libclock.so libdbh.a libdbh.so libdesktopmenu.a
+[PROVIDES] libdesktopmenu.so libeyes.a libeyes.so libmailcheck.so libmice.a
+[PROVIDES] libmice.so libmixer.so libpager.so libseparator.so libsimple.a
+[PROVIDES] libsimple.so libswitcher.so libsystembuttons.so libsystray.a
+[PROVIDES] libsystray.so libtriggerlauncher.a libtriggerlauncher.so
+[PROVIDES] libxfce.so libxfce4_combo.a libxfce4_combo.so libxfce4_mime.a
+[PROVIDES] libxfce4_mime.so libxfce4_mime_icons.a libxfce4_mime_icons.so
+[PROVIDES] libxfce4mcs-client.a libxfce4mcs-client.so libxfce4mcs-manager.a
+[PROVIDES] libxfce4mcs-manager.so libxfce4mixer.so libxfce4settings.so
+[PROVIDES] libxfce4util.a libxfce4util.so libxfcegui4.a libxfcegui4.so
+[PROVIDES] libxffm_actions.so libxffm_basic.so libxffm_book.so
+[PROVIDES] libxffm_calls.so libxffm_cpy.so libxffm_find.so libxffm_fstab.so
+[PROVIDES] libxffm_on_demand.so libxffm_prop.so libxffm_recent.so
+[PROVIDES] libxffm_secondary.so libxffm_smb.so libxffm_trash.so
+[PROVIDES] libxffm_tubo.so libxffmsettings.so libxfsm-4.2.a
+[PROVIDES] libxfsm-4.2.so mouse_plugin.a mouse_plugin.so scramble
+[PROVIDES] screensaver_plugin.a screensaver_plugin.so session_settings.a
+[PROVIDES] session_settings.so sound_settings.so splash_settings.a
+[PROVIDES] splash_settings.so startxfce4 ui_plugin.a ui_plugin.so
+[PROVIDES] workspaces_plugin.a workspaces_plugin.so xfbook xfbook4
+[PROVIDES] xfcalendar xfcalendar_plugin.a xfcalendar_plugin.so
+[PROVIDES] xfce-mcs-manager xfce-setting-show xfce4-about
+[PROVIDES] xfce4-appfinder xfce4-iconbox xfce4-iconbox_settings.a
+[PROVIDES] xfce4-iconbox_settings.so xfce4-kiosk-query xfce4-menueditor
+[PROVIDES] xfce4-mixer xfce4-panel xfce4-session xfce4-session-logout
+[PROVIDES] xfce4-tips xfce4_desktop_menu.a xfce4_desktop_menu.so xfdesktop
+[PROVIDES] xfdiff4 xffm xffrequent xffrequent4 xffstab xffstab4 xfglob4
+[PROVIDES] xfhelp4 xflock4 xfmime-edit xfmountdev4 xfprint-manager xfprint4
+[PROVIDES] xfprint_plugin.a xfprint_plugin.so xfrecent xfrecent4 xfrun4
+[PROVIDES] xfsamba4 xftaskbar4 xftaskbar_plugin.a xftaskbar_plugin.so
+[PROVIDES] xfterm4 xftrash4 xftree4 xfwm4 xfwm4_plugin.a xfwm4_plugin.so
 

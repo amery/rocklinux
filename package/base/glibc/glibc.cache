@@ -20,24 +20,62 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110119171 Sun Mar  6 15:26:11 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115117498 Tue May  3 12:51:38 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 0-glibc23.log 1-glibc23.log 5-glibc23.log 9-glibc23.log
 
-[BUILDTIME] 138221 (9)
+[BUILDTIME] 148044 (9)
 [SIZE] 44.79 MB, 2508 files
 
 [DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils diffutils expat
 [DEP] findutils freetype gawk gcc34 gcc34:dev gettext grep gzip libjpeg
 [DEP] libpng linux26-header:dev m4 make mktemp net-tools patch perl5 sed
-[DEP] sysfiles tar texinfo util-linux xfree86 zlib:dev
+[DEP] sysfiles tar texinfo util-linux xorg zlib:dev
 
-[PROVIDES] catchsegv gencat getconf getent glibcbug iconv iconvconfig
-[PROVIDES] ldconfig ldd lddlibc4 libBrokenLocale-2.3.3.so libBrokenLocale.a
-[PROVIDES] libBrokenLocale.so libSegFault.so libanl-2.3.3.so libanl.a
-[PROVIDES] libanl.so libbsd-compat.a libbsd.a libc-2.3.3.so libc.a libc.so
+[PROVIDES] ANSI_X3.110.so ARMSCII-8.so ASMO_449.so BIG5.so
+[PROVIDES] BIG5HKSCS.so CP10007.so CP1125.so CP1250.so CP1251.so
+[PROVIDES] CP1252.so CP1253.so CP1254.so CP1255.so CP1256.so CP1257.so
+[PROVIDES] CP1258.so CP737.so CP775.so CP932.so CSN_369103.so CWI.so
+[PROVIDES] DEC-MCS.so EBCDIC-AT-DE-A.so EBCDIC-AT-DE.so EBCDIC-CA-FR.so
+[PROVIDES] EBCDIC-DK-NO-A.so EBCDIC-DK-NO.so EBCDIC-ES-A.so EBCDIC-ES-S.so
+[PROVIDES] EBCDIC-ES.so EBCDIC-FI-SE-A.so EBCDIC-FI-SE.so EBCDIC-FR.so
+[PROVIDES] EBCDIC-IS-FRISS.so EBCDIC-IT.so EBCDIC-PT.so EBCDIC-UK.so
+[PROVIDES] EBCDIC-US.so ECMA-CYRILLIC.so EUC-CN.so EUC-JISX0213.so
+[PROVIDES] EUC-JP-MS.so EUC-JP.so EUC-KR.so EUC-TW.so GB18030.so
+[PROVIDES] GBBIG5.so GBGBK.so GBK.so GEORGIAN-ACADEMY.so GEORGIAN-PS.so
+[PROVIDES] GOST_19768-74.so GREEK-CCITT.so GREEK7-OLD.so GREEK7.so
+[PROVIDES] HP-ROMAN8.so IBM037.so IBM038.so IBM1004.so IBM1026.so
+[PROVIDES] IBM1046.so IBM1047.so IBM1124.so IBM1129.so IBM1132.so
+[PROVIDES] IBM1133.so IBM1160.so IBM1161.so IBM1162.so IBM1163.so
+[PROVIDES] IBM1164.so IBM256.so IBM273.so IBM274.so IBM275.so IBM277.so
+[PROVIDES] IBM278.so IBM280.so IBM281.so IBM284.so IBM285.so IBM290.so
+[PROVIDES] IBM297.so IBM420.so IBM423.so IBM424.so IBM437.so IBM500.so
+[PROVIDES] IBM850.so IBM851.so IBM852.so IBM855.so IBM856.so IBM857.so
+[PROVIDES] IBM860.so IBM861.so IBM862.so IBM863.so IBM864.so IBM865.so
+[PROVIDES] IBM866.so IBM866NAV.so IBM868.so IBM869.so IBM870.so IBM871.so
+[PROVIDES] IBM874.so IBM875.so IBM880.so IBM891.so IBM903.so IBM904.so
+[PROVIDES] IBM905.so IBM918.so IBM922.so IBM930.so IBM932.so IBM933.so
+[PROVIDES] IBM935.so IBM937.so IBM939.so IBM943.so IEC_P27-1.so INIS-8.so
+[PROVIDES] INIS-CYRILLIC.so INIS.so ISIRI-3342.so ISO-2022-CN-EXT.so
+[PROVIDES] ISO-2022-CN.so ISO-2022-JP-3.so ISO-2022-JP.so ISO-2022-KR.so
+[PROVIDES] ISO-IR-197.so ISO-IR-209.so ISO646.so ISO8859-1.so ISO8859-10.so
+[PROVIDES] ISO8859-11.so ISO8859-13.so ISO8859-14.so ISO8859-15.so
+[PROVIDES] ISO8859-16.so ISO8859-2.so ISO8859-3.so ISO8859-4.so
+[PROVIDES] ISO8859-5.so ISO8859-6.so ISO8859-7.so ISO8859-8.so ISO8859-9.so
+[PROVIDES] ISO_10367-BOX.so ISO_2033.so ISO_5427-EXT.so ISO_5427.so
+[PROVIDES] ISO_5428.so ISO_6937-2.so ISO_6937.so JOHAB.so KOI-8.so
+[PROVIDES] KOI8-R.so KOI8-T.so KOI8-U.so LATIN-GREEK-1.so LATIN-GREEK.so
+[PROVIDES] MAC-IS.so MAC-SAMI.so MAC-UK.so MACINTOSH.so NATS-DANO.so
+[PROVIDES] NATS-SEFI.so SAMI-WS2.so SHIFT_JISX0213.so SJIS.so T.61.so
+[PROVIDES] TCVN5712-1.so TIS-620.so TSCII.so UHC.so UNICODE.so UTF-16.so
+[PROVIDES] UTF-32.so UTF-7.so VISCII.so catchsegv gencat getconf getent
+[PROVIDES] glibcbug iconv iconvconfig ld-2.3.3.so ldconfig ldd lddlibc4
+[PROVIDES] libBrokenLocale-2.3.3.so libBrokenLocale.a libBrokenLocale.so
+[PROVIDES] libCNS.so libGB.so libISOIR165.so libJIS.so libJISX0213.so
+[PROVIDES] libKSC.so libSegFault.so libanl-2.3.3.so libanl.a libanl.so
+[PROVIDES] libbsd-compat.a libbsd.a libc-2.3.3.so libc.a libc.so
 [PROVIDES] libc_nonshared.a libcrypt-2.3.3.so libcrypt.a libcrypt.so
 [PROVIDES] libdl-2.3.3.so libdl.a libdl.so libg.a libieee.a libm-2.3.3.so
 [PROVIDES] libm.a libm.so libmcheck.a libmemusage.so libnsl-2.3.3.so

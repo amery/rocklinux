@@ -20,32 +20,35 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110184138 Mon Mar  7 09:28:58 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115427081 Sat May  7 02:51:21 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-seahorse.log 9-seahorse.log
 
-[BUILDTIME] 8735 (9)
-[SIZE] 1.48 MB, 102 files
+[BUILDTIME] 11709 (5)
+[SIZE] 1.69 MB, 109 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
-[DEP] autoconf bash2 battfink binutils bzip2 coreutils cpan-xml-parser
-[DEP] diffutils docbookx eel eel:dev esound esound:dev expat figment
-[DEP] findutils freetype gail gail:dev gawk gcc34 gcc34:dev gconf
-[DEP] gconf:dev gdesklets gedit gedit:dev gettext glabels glib glib:dev
-[DEP] glibc23 glibc23:dev gnome-blog gnome-desktop gnome-keyring
-[DEP] gnome-keyring:dev gnome-mime-data gnome-vfs gnome-vfs:dev gpgme
-[DEP] gpgme:dev grep gtk+ gtk+:dev gtksourceview:dev libart_lgpl23
-[DEP] libart_lgpl23:dev libassuan:dev libbonobo libbonobo:dev libbonoboui
-[DEP] libbonoboui:dev libglade libglade:dev libgnome libgnome:dev
-[DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev
-[DEP] libgpg-error libgpg-error:dev libjpeg libjpeg:dev libxml2 libxml2:dev
-[DEP] linux26-header:dev make mktemp net-tools openssl orbit2 orbit2:dev
-[DEP] pango pango:dev patch perl5 pkgconfig popt popt:dev scrollkeeper sed
-[DEP] shared-mime-info sysfiles tar texinfo util-linux xfree86 xfree86:dev
-[DEP] xscreensaver zapping zlib:dev
+[DEP] bash2 battfink binutils bzip2 coreutils cpan-xml-parser diffutils
+[DEP] docbookx eel eel:dev esound esound:dev expat figment findutils
+[DEP] freetype gail gail:dev gawk gcc34 gcc34:dev gconf gconf:dev
+[DEP] gdesklets gedit gedit:dev gettext glabels glib glib:dev glibc23
+[DEP] glibc23:dev gnome-blog gnome-desktop gnome-desktop:dev gnome-keyring
+[DEP] gnome-keyring:dev gnome-menus gnome-menus:dev gnome-mime-data
+[DEP] gnome-vfs gnome-vfs:dev gpgme gpgme:dev grep gtk+ gtk+:dev
+[DEP] gtksourceview:dev libart_lgpl23 libart_lgpl23:dev libassuan:dev
+[DEP] libbonobo libbonobo:dev libbonoboui libbonoboui:dev libglade
+[DEP] libglade:dev libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev
+[DEP] libgnomeui libgnomeui:dev libgpg-error libgpg-error:dev libjpeg
+[DEP] libjpeg:dev libxml2 libxml2:dev linux26-header:dev make mktemp
+[DEP] net-tools openssl orbit2 orbit2:dev pango pango:dev patch
+[DEP] perl5 pkgconfig popt popt:dev scrollkeeper sed shared-mime-info
+[DEP] startup-notification startup-notification:dev sysfiles tar util-linux
+[DEP] xorg xorg:dev xscreensaver zapping zlib:dev
 
-[PROVIDES] libseahorse-internal.a libseahorse-internal.so seahorse
-[PROVIDES] seahorse-agent seahorse-pgp-preferences
+[PROVIDES] libseahorse-internal.a libseahorse-internal.so
+[PROVIDES] libseahorse-pgp-file-listener.a libseahorse-pgp-file-listener.so
+[PROVIDES] libseahorse-pgp.a libseahorse-pgp.so seahorse seahorse-agent
+[PROVIDES] seahorse-pgp-preferences
 

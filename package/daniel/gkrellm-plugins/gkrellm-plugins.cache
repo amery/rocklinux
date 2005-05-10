@@ -20,19 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110227150 Mon Mar  7 21:25:50 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115434562 Sat May  7 04:56:02 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-gkrellm-plugins.log 9-gkrellm-plugins.log
 
-[BUILDTIME] 1605 (9)
+[BUILDTIME] 1968 (9)
 [SIZE] 0.66 MB, 259 files
 
 [DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils findutils
 [DEP] gcc34 gcc34:dev gkrellm gkrellm:dev glib glib12 glib:dev glibc23
-[DEP] glibc23:dev grep gtk+ gtk+12 gtk+:dev linux26-header:dev make
-[DEP] mktemp pango pango:dev patch pkgconfig sed sysfiles tar xfree86
-[DEP] xmms xmms:dev
+[DEP] glibc23:dev grep gtk+ gtk+12 gtk+:dev linux26-header:dev make mktemp
+[DEP] pango pango:dev patch pkgconfig sed sysfiles tar xmms xmms:dev xorg
 
+[PROVIDES] gkrellmms.so volume.so
 

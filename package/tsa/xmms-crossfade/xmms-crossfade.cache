@@ -20,19 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110170168 Mon Mar  7 05:36:08 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115272644 Thu May  5 07:57:24 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-xmms-crossfade.log 9-xmms-crossfade.log
 
-[BUILDTIME] 3865 (9)
-[SIZE] 0.16 MB, 7 files
+[BUILDTIME] 3840 (9)
+[SIZE] 0.18 MB, 7 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils file findutils
 [DEP] gawk gcc34 gcc34:dev glib12 glib12:dev glibc23 glibc23:dev grep
 [DEP] gtk+12 gtk+12:dev libsamplerate libsamplerate:dev linux26-header:dev
-[DEP] make mktemp net-tools sed sysfiles tar util-linux xfree86 xmms
-[DEP] xmms:dev
+[DEP] make mktemp net-tools sed sysfiles tar util-linux xmms xmms:dev xorg
 
+[PROVIDES] libcrossfade.so
 

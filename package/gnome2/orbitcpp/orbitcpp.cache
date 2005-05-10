@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110159051 Mon Mar  7 02:30:51 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115244716 Thu May  5 00:11:56 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-orbitcpp.log 9-orbitcpp.log
 
-[BUILDTIME] 31948 (9)
-[SIZE] 0.91 MB, 16 files
+[BUILDTIME] 33893 (9)
+[SIZE] 1.26 MB, 16 files
 
 [DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils diffutils
-[DEP] findutils gawk gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev
-[DEP] grep indent libidl:dev linux26-header:dev make mktemp net-tools
-[DEP] orbit2 orbit2:dev perl5 pkgconfig popt popt:dev sed sysfiles tar
-[DEP] texinfo util-linux
+[DEP] findutils gawk gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev grep
+[DEP] libidl:dev linux26-header:dev make mktemp net-tools orbit2 orbit2:dev
+[DEP] perl5 pkgconfig popt popt:dev sed sysfiles tar texinfo util-linux
 
-[PROVIDES] libORBit-2-cpp.a libORBit-2-cpp.so libORBitCosNaming-2-cpp.a
+[PROVIDES] libORBit-2-cpp.a libORBit-2-cpp.so libORBit-idl-backend-cpp.a
+[PROVIDES] libORBit-idl-backend-cpp.so libORBitCosNaming-2-cpp.a
 [PROVIDES] libORBitCosNaming-2-cpp.so
 

@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110325245 Wed Mar  9 00:40:45 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115525905 Sun May  8 06:18:25 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-jpilot.log 9-jpilot.log
 
-[BUILDTIME] 5998 (9)
-[SIZE] 1.06 MB, 55 files
+[BUILDTIME] 6417 (9)
+[SIZE] 1.12 MB, 55 files
 
 [DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils diffutils
 [DEP] expat findutils freetype gawk gcc34 gcc34:dev gettext glib glib:dev
 [DEP] glibc23 glibc23:dev gnotepad+ grep gtk+ gtk+:dev linux26-header:dev
 [DEP] make mktemp ncurses:dev net-tools openssl openssl:dev pango pango:dev
 [DEP] perl5 pilot-link pilot-link:dev pkgconfig sed sysfiles tar util-linux
-[DEP] xfree86 xfree86:dev
+[DEP] xorg xorg:dev
 
-[PROVIDES] jpilot jpilot-dial jpilot-dump jpilot-sync
+[PROVIDES] jpilot jpilot-dial jpilot-dump jpilot-sync libexpense.so
+[PROVIDES] libkeyring.so libsynctime.so
 

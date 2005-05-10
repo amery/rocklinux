@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110141330 Sun Mar  6 21:35:30 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115189375 Wed May  4 08:49:35 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-mysql.log 9-mysql.log
 
-[BUILDTIME] 117931 (9)
-[SIZE] 32.35 MB, 1080 files
+[BUILDTIME] 120761 (9)
+[SIZE] 44.21 MB, 1110 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils gawk gcc34 gcc34:dev glib12 glibc23 glibc23:dev
@@ -35,22 +35,23 @@
 [DEP] openssl openssl:dev orbit10 patch perl5 procps sed sysfiles tar
 [DEP] texinfo util-linux zlib:dev
 
-[PROVIDES] client_test comp_err isamchk isamlog libdbug.a libheap.a
-[PROVIDES] libmerge.a libmyisam.a libmyisammrg.a libmysqlclient.a
-[PROVIDES] libmysqlclient.so libmysqld.a libmystrings.a libmysys.a
-[PROVIDES] libndbclient.a libndbclient.so libnisam.a libvio.a
-[PROVIDES] make_win_binary_distribution make_win_src_distribution
-[PROVIDES] msql2mysql my_print_defaults myisam_ftdump myisamchk myisamlog
-[PROVIDES] myisampack mysql mysql_config mysql_convert_table_format
-[PROVIDES] mysql_create_system_tables mysql_explain_log mysql_find_rows
-[PROVIDES] mysql_fix_extensions mysql_fix_privilege_tables mysql_install_db
+[PROVIDES] comp_err isamchk isamlog libdbug.a libheap.a libmerge.a
+[PROVIDES] libmyisam.a libmyisammrg.a libmysqlclient.a libmysqlclient.so
+[PROVIDES] libmysqld.a libmystrings.a libmysys.a libndbclient.a
+[PROVIDES] libndbclient.so libnisam.a libvio.a make_win_binary_distribution
+[PROVIDES] make_win_src_distribution msql2mysql my_print_defaults
+[PROVIDES] myisam_ftdump myisamchk myisamlog myisampack mysql
+[PROVIDES] mysql_client_test mysql_client_test_embedded mysql_config
+[PROVIDES] mysql_convert_table_format mysql_create_system_tables
+[PROVIDES] mysql_explain_log mysql_find_rows mysql_fix_extensions
+[PROVIDES] mysql_fix_privilege_tables mysql_install_db
 [PROVIDES] mysql_secure_installation mysql_setpermission mysql_tableinfo
 [PROVIDES] mysql_tzinfo_to_sql mysql_waitpid mysql_zap mysqlaccess
 [PROVIDES] mysqladmin mysqlbinlog mysqlbug mysqlcheck mysqld_multi
 [PROVIDES] mysqld_safe mysqldump mysqldumpslow mysqlhotcopy mysqlimport
 [PROVIDES] mysqlmanager-pwgen mysqlmanagerc mysqlshow mysqltest
-[PROVIDES] ndb_delete_all ndb_desc ndb_drop_index ndb_drop_table ndb_mgm
-[PROVIDES] ndb_restore ndb_select_all ndb_select_count ndb_show_tables
-[PROVIDES] ndb_test_platform ndb_waiter pack_isam perror replace
-[PROVIDES] resolve_stack_dump resolveip
+[PROVIDES] mysqltest_embedded ndb_delete_all ndb_desc ndb_drop_index
+[PROVIDES] ndb_drop_table ndb_mgm ndb_restore ndb_select_all
+[PROVIDES] ndb_select_count ndb_show_tables ndb_test_platform ndb_waiter
+[PROVIDES] pack_isam perror replace resolve_stack_dump resolveip
 

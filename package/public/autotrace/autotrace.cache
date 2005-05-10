@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110311891 Tue Mar  8 20:58:11 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115480807 Sat May  7 17:46:47 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-autotrace.log 9-autotrace.log
 
-[BUILDTIME] 4116 (9)
-[SIZE] 0.20 MB, 13 files
+[BUILDTIME] 4508 (9)
+[SIZE] 0.23 MB, 13 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 bzip2:dev coreutils diffutils
-[DEP] findutils freetype freetype:dev gcc34 gcc34:dev glibc23 glibc23:dev
-[DEP] grep imagemagick imagemagick:dev lcms lcms:dev libjpeg libjpeg:dev
-[DEP] libpng libpng:dev libtiff libtiff:dev libtool libtool:dev
+[DEP] findutils freetype freetype:dev gawk gcc34 gcc34:dev glibc23
+[DEP] glibc23:dev grep imagemagick imagemagick:dev lcms lcms:dev libjpeg
+[DEP] libjpeg:dev libpng libpng:dev libtiff libtiff:dev libtool libtool:dev
 [DEP] linux26-header:dev make mktemp net-tools sed sysfiles tar util-linux
-[DEP] xfree86 zlib:dev
+[DEP] xorg zlib:dev
 
 [PROVIDES] autotrace autotrace-config libautotrace.a libautotrace.so
 

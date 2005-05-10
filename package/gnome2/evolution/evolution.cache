@@ -20,33 +20,62 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110186617 Mon Mar  7 10:10:17 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115302760 Thu May  5 16:19:20 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-evolution.log 9-evolution.log
 
-[BUILDTIME] 84245 (9)
-[SIZE] 25.02 MB, 346 files
+[BUILDTIME] 88120 (9)
+[SIZE] 21.66 MB, 425 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
 [DEP] bash2 battfink binutils bzip2 coreutils cpan-xml-parser diffutils
 [DEP] docbookx e2fsprogs:dev esound esound:dev evolution-data-server
 [DEP] evolution-data-server:dev expat figment findutils flex flex:dev
-[DEP] freetype gail gail:dev gal gal:dev gawk gcc34 gcc34:dev gconf
-[DEP] gconf:dev gettext glib glib:dev glibc23 glibc23:dev gnome-blog
-[DEP] gnome-desktop gnome-keyring gnome-keyring:dev gnome-mime-data
-[DEP] gnome-vfs gnome-vfs:dev gnutls gnutls:dev grep gtk+ gtk+:dev gtkdoc
-[DEP] gtkhtml gtkhtml:dev indent libart_lgpl23 libart_lgpl23:dev libbonobo
-[DEP] libbonobo:dev libbonoboui libbonoboui:dev libgcrypt libgcrypt:dev
-[DEP] libglade libglade:dev libgnome libgnome:dev libgnomecanvas
-[DEP] libgnomecanvas:dev libgnomeprint libgnomeprint:dev libgnomeprintui
-[DEP] libgnomeprintui:dev libgnomeui libgnomeui:dev libgpg-error
-[DEP] libgpg-error:dev libjpeg libjpeg:dev libsoup libsoup:dev libxml2
-[DEP] libxml2:dev linux26-header:dev m4 make mktemp mozilla mozilla:dev
-[DEP] net-tools openldap openldap:dev openssl orbit2 orbit2:dev pango
-[DEP] pango:dev perl5 pkgconfig popt popt:dev scrollkeeper sed sysfiles
-[DEP] tar util-linux xfree86 xfree86:dev zapping zlib:dev
+[DEP] freetype freetype:dev gail gail:dev gal gal:dev gawk gcc34 gcc34:dev
+[DEP] gconf gconf:dev gettext glib glib12 glib:dev glibc23 glibc23:dev
+[DEP] gnome-blog gnome-desktop gnome-keyring gnome-keyring:dev gnome-libs14
+[DEP] gnome-mime-data gnome-vfs gnome-vfs:dev gnutls gnutls:dev grep
+[DEP] gstreamer gstreamer:dev gtk+ gtk+:dev gtkdoc gtkhtml gtkhtml:dev
+[DEP] libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui
+[DEP] libbonoboui:dev libgcrypt libgcrypt:dev libglade libglade:dev
+[DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeprint
+[DEP] libgnomeprint:dev libgnomeprintui libgnomeprintui:dev libgnomeui
+[DEP] libgnomeui:dev libgpg-error libgpg-error:dev libjpeg libjpeg:dev
+[DEP] libsoup libsoup:dev libxml2 libxml2:dev linux26-header:dev m4
+[DEP] make mktemp mozilla mozilla:dev net-tools openldap openldap:dev
+[DEP] openssl orbit2 orbit2:dev pango pango:dev perl5 pkgconfig popt
+[DEP] popt:dev scrollkeeper sed sysfiles tar util-linux xorg xorg:dev
+[DEP] zapping zlib:dev
 
-[PROVIDES] evolution-2.0
+[PROVIDES] evolution-2.2 libeabutil.so libeconduit.so libecontacteditor.so
+[PROVIDES] libecontactlisteditor.so libefilterbar.so libemiscwidgets.so
+[PROVIDES] libeshell.so libessmime.so libetimezonedialog.so libeutil.so
+[PROVIDES] libevolution-a11y.so libevolution-addressbook-a11y.so
+[PROVIDES] libevolution-addressbook-ldif-importer.so
+[PROVIDES] libevolution-addressbook-vcard-importer.so
+[PROVIDES] libevolution-addressbook.so libevolution-calendar-a11y.so
+[PROVIDES] libevolution-calendar-importers.so libevolution-calendar.so
+[PROVIDES] libevolution-importer.so libevolution-mail-importers.so
+[PROVIDES] libevolution-mail.so libevolution-smime.so
+[PROVIDES] libevolution-widgets-a11y.so libfilter.so
+[PROVIDES] libmenus.so liborg-gnome-addressbook-file.so
+[PROVIDES] liborg-gnome-addressbook-groupwise.so
+[PROVIDES] liborg-gnome-audio-inline.so liborg-gnome-calendar-file.so
+[PROVIDES] liborg-gnome-calendar-http.so liborg-gnome-calendar-weather.so
+[PROVIDES] liborg-gnome-compose-send-options.so liborg-gnome-copy-tool.so
+[PROVIDES] liborg-gnome-default-source.so liborg-gnome-evolution-bbdb.so
+[PROVIDES] liborg-gnome-evolution-startup-wizard.so
+[PROVIDES] liborg-gnome-exchange-account-settings.so
+[PROVIDES] liborg-gnome-gw-account-setup.so liborg-gnome-itip-formatter.so
+[PROVIDES] liborg-gnome-mail-folder-unsubscribe.so
+[PROVIDES] liborg-gnome-mail-to-task.so
+[PROVIDES] liborg-gnome-mailing-list-actions.so
+[PROVIDES] liborg-gnome-mark-calendar-offline.so
+[PROVIDES] liborg-gnome-plugin-manager.so liborg-gnome-prefer-plain.so
+[PROVIDES] liborg-gnome-save-attachments.so liborg-gnome-save-calendar.so
+[PROVIDES] liborg-gnome-select-one-source.so liborg-gnome-send-options.so
+[PROVIDES] liborg-gnome-shared-folder.so liborg-gnome-status-track.so
+[PROVIDES] liborg-gnome-subject-thread.so
 

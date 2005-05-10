@@ -20,19 +20,28 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110230932 Mon Mar  7 22:28:52 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115439794 Sat May  7 06:23:14 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 3-pam.log 9-pam.log
 
-[BUILDTIME] 4058 (9)
-[SIZE] 0.48 MB, 77 files
+[BUILDTIME] 4443 (9)
+[SIZE] 0.49 MB, 77 files
 
 [DEP] 00-dirtree bash2 bdb42 bdb42:dev binutils bzip2 coreutils
 [DEP] cracklib:dev diffutils findutils flex flex:dev gawk gcc34 gcc34:dev
 [DEP] gdbm:dev glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp
 [DEP] net-tools sed sysfiles tar util-linux
 
-[PROVIDES] libpam.so libpam_misc.so libpamc.so pam_tally unix_chkpwd
+[PROVIDES] libpam.so libpam_misc.so libpamc.so pam_access.so
+[PROVIDES] pam_cracklib.so pam_debug.so pam_deny.so pam_env.so
+[PROVIDES] pam_filter.so pam_ftp.so pam_group.so pam_issue.so
+[PROVIDES] pam_lastlog.so pam_limits.so pam_listfile.so pam_localuser.so
+[PROVIDES] pam_mail.so pam_mkhomedir.so pam_motd.so pam_nologin.so
+[PROVIDES] pam_permit.so pam_rhosts_auth.so pam_rootok.so pam_securetty.so
+[PROVIDES] pam_shells.so pam_stress.so pam_succeed_if.so pam_tally
+[PROVIDES] pam_tally.so pam_time.so pam_unix.so pam_unix_acct.so
+[PROVIDES] pam_unix_auth.so pam_unix_passwd.so pam_unix_session.so
+[PROVIDES] pam_userdb.so pam_warn.so pam_wheel.so pam_xauth.so unix_chkpwd
 

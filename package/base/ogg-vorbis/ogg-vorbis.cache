@@ -20,23 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110136355 Sun Mar  6 20:12:35 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115182699 Wed May  4 06:58:19 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-ogg-vorbis.log 9-ogg-vorbis.log
 
-[BUILDTIME] 11824 (9)
-[SIZE] 1.73 MB, 56 files
+[BUILDTIME] 13255 (9)
+[SIZE] 1.74 MB, 56 files
 
 [DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev
-[DEP] bash2 binutils bison bzip2 coreutils curl curl:dev diffutils esound
-[DEP] esound:dev file findutils flac flac:dev gawk gcc34 gcc34:dev gettext
-[DEP] glib glib:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp nas nas:dev net-tools openssl perl5 pkgconfig sed sysfiles
-[DEP] tar util-linux xfree86 xfree86:dev zlib:dev
+[DEP] bash2 binutils bison bzip2 coreutils curl curl:dev diffutils
+[DEP] esound esound:dev file findutils flac flac:dev gawk gcc34 gcc34:dev
+[DEP] gettext glib glib:dev glibc23 glibc23:dev grep linux26-header:dev
+[DEP] make mktemp nas nas:dev net-tools openssl perl5 pkgconfig sed speex
+[DEP] speex:dev sysfiles tar util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] libao.so libogg.a libogg.so libvorbis.a libvorbis.so
-[PROVIDES] libvorbisenc.a libvorbisenc.so libvorbisfile.a libvorbisfile.so
-[PROVIDES] ogg123 oggdec oggenc ogginfo vcut vorbiscomment vorbisinfo
+[PROVIDES] libalsa09.so libao.so libarts.so libesd.so libnas.so libogg.a
+[PROVIDES] libogg.so liboss.so libvorbis.a libvorbis.so libvorbisenc.a
+[PROVIDES] libvorbisenc.so libvorbisfile.a libvorbisfile.so ogg123 oggdec
+[PROVIDES] oggenc ogginfo vcut vorbiscomment vorbisinfo
 

@@ -20,30 +20,33 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110188824 Mon Mar  7 10:47:04 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115310581 Thu May  5 18:29:41 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-gthumb.log 9-gthumb.log
 
-[BUILDTIME] 16163 (9)
-[SIZE] 4.69 MB, 194 files
+[BUILDTIME] 17426 (9)
+[SIZE] 5.96 MB, 194 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
 [DEP] battfink binutils bzip2 coreutils cpan-xml-parser diffutils docbookx
 [DEP] esound esound:dev expat figment findutils flex flex:dev freetype
-[DEP] gawk gcc34 gcc34:dev gconf gconf:dev gettext glib glib:dev glibc23
-[DEP] glibc23:dev gnome-blog gnome-desktop gnome-keyring gnome-keyring:dev
-[DEP] gnome-mime-data gnome-vfs gnome-vfs:dev grep gtk+ gtk+:dev indent
-[DEP] libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui
-[DEP] libbonoboui:dev libexif libexif:dev libglade libglade:dev libgnome
-[DEP] libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeprint
+[DEP] freetype:dev gawk gcc34 gcc34:dev gconf gconf:dev gettext glib
+[DEP] glib:dev glibc23 glibc23:dev gnome-blog gnome-desktop gnome-keyring
+[DEP] gnome-keyring:dev gnome-mime-data gnome-vfs gnome-vfs:dev grep gtk+
+[DEP] gtk+:dev libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev
+[DEP] libbonoboui libbonoboui:dev libexif libexif:dev libglade libglade:dev
+[DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeprint
 [DEP] libgnomeprint:dev libgnomeprintui libgnomeprintui:dev libgnomeui
 [DEP] libgnomeui:dev libgphoto libgphoto:dev libjpeg libjpeg:dev libpng
 [DEP] libpng:dev libtiff libtiff:dev libxml2 libxml2:dev linux26-header:dev
 [DEP] m4 make mktemp net-tools openssl orbit2 orbit2:dev pango pango:dev
 [DEP] perl5 pkgconfig popt popt:dev scrollkeeper sed sysfiles tar
-[DEP] util-linux xfree86 xfree86:dev zapping zlib:dev
+[DEP] util-linux xorg xorg:dev zapping zlib:dev
 
-[PROVIDES] gthumb
+[PROVIDES] gthumb libduplicates.a libduplicates.so libgthumb.a
+[PROVIDES] libgthumb.so libjpegtran.a libjpegtran.so libphotoimporter.a
+[PROVIDES] libphotoimporter.so libpngexporter.a libpngexporter.so
+[PROVIDES] libsearch.a libsearch.so libwebexporter.a libwebexporter.so
 

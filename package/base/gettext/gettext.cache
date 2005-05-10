@@ -20,24 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110123994 Sun Mar  6 16:46:34 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115123095 Tue May  3 14:24:55 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 1-gettext.log 3-gettext.log 9-gettext.log
 
-[BUILDTIME] 20773 (9)
-[SIZE] 4.63 MB, 272 files
+[BUILDTIME] 22272 (9)
+[SIZE] 4.70 MB, 270 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils emacs
 [DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep jikes
 [DEP] linux26-header:dev make mktemp mono net-tools sed sysfiles tar
-[DEP] texinfo util-linux xfree86
+[DEP] texinfo util-linux xorg
 
 [PROVIDES] autopoint envsubst gettext gettext.sh gettextize libasprintf.a
 [PROVIDES] libasprintf.so libgettextlib-0.14.1.so libgettextlib.so
 [PROVIDES] libgettextpo.a libgettextpo.so libgettextsrc-0.14.1.so
 [PROVIDES] libgettextsrc.so msgattrib msgcat msgcmp msgcomm msgconv msgen
 [PROVIDES] msgexec msgfilter msgfmt msggrep msginit msgmerge msgunfmt
-[PROVIDES] msguniq ngettext xgettext
+[PROVIDES] msguniq ngettext preloadable_libintl.so xgettext
 

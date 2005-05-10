@@ -20,17 +20,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110167978 Mon Mar  7 04:59:38 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115270236 Thu May  5 07:17:16 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-boost-jam.log 9-boost-jam.log
 
-[BUILDTIME] 2198 (9)
-[SIZE] 0.23 MB, 10 files
+[BUILDTIME] 2349 (9)
+[SIZE] 0.26 MB, 10 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev mktemp sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev mktemp sed
+[DEP] sysfiles tar
 
 [PROVIDES] bjam jam mkjambase yyacc
 

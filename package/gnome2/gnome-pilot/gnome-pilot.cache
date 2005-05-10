@@ -20,14 +20,14 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1110183843 Mon Mar  7 09:24:03 2005
-[CONFIG-ID] 2.1.0-DEV-x86-reference
-[ROCKVER] 2.1.0-DEV
+[TIMESTAMP] 1115426552 Sat May  7 02:42:32 2005
+[CONFIG-ID] TRUNK-x86-reference-expert
+[ROCKVER] TRUNK
 
 [LOGS] 5-gnome-pilot.log 9-gnome-pilot.log
 
-[BUILDTIME] 9447 (9)
-[SIZE] 1.50 MB, 94 files
+[BUILDTIME] 10672 (5)
+[SIZE] 1.54 MB, 94 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
 [DEP] autoconf bash2 battfink binutils bzip2 coreutils cpan-xml-parser
@@ -35,17 +35,19 @@
 [DEP] gawk gcc34 gcc34:dev gconf gconf:dev gettext glib glib:dev glibc23
 [DEP] glibc23:dev gnome-blog gnome-desktop gnome-keyring gnome-keyring:dev
 [DEP] gnome-mime-data gnome-panel gnome-panel:dev gnome-vfs gnome-vfs:dev
-[DEP] gob grep gtk+ gtk+:dev indent libart_lgpl23 libart_lgpl23:dev
-[DEP] libbonobo libbonobo:dev libbonoboui libbonoboui:dev libglade
-[DEP] libglade:dev libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev
+[DEP] gob grep gtk+ gtk+:dev libart_lgpl23 libart_lgpl23:dev libbonobo
+[DEP] libbonobo:dev libbonoboui libbonoboui:dev libglade libglade:dev
+[DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev
 [DEP] libgnomeui libgnomeui:dev libjpeg libjpeg:dev libxml2 libxml2:dev
 [DEP] linux26-header:dev make mktemp ncurses:dev net-tools openssl orbit2
 [DEP] orbit2:dev pango pango:dev perl5 pilot-link pilot-link:dev pkgconfig
-[DEP] popt popt:dev scrollkeeper sed sysfiles tar texinfo util-linux
-[DEP] xfree86 xscreensaver zapping zlib:dev
+[DEP] popt popt:dev scrollkeeper sed sysfiles tar texinfo util-linux xorg
+[DEP] xscreensaver zapping zlib:dev
 
 [PROVIDES] gnome-pilot-make-password gpilot-install-file
-[PROVIDES] gpilotd-control-applet gpilotd-session-wrapper libgpilotd.a
-[PROVIDES] libgpilotd.so libgpilotdcm.a libgpilotdcm.so libgpilotdconduit.a
-[PROVIDES] libgpilotdconduit.so
+[PROVIDES] gpilotd-control-applet gpilotd-session-wrapper
+[PROVIDES] libbackup_conduit.a libbackup_conduit.so libfile_conduit.a
+[PROVIDES] libfile_conduit.so libgpilotd.a libgpilotd.so libgpilotdcm.a
+[PROVIDES] libgpilotdcm.so libgpilotdconduit.a libgpilotdconduit.so
+[PROVIDES] libtest_conduit.a libtest_conduit.so
 

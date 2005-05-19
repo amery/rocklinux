@@ -1,0 +1,33 @@
+diff -Naur chrony-1.20.orig/configure chrony-1.20/configure
+--- chrony-1.20.orig/configure	2003-09-22 22:53:57.000000000 +0100
++++ chrony-1.20/configure	2005-04-10 09:13:06.000000000 +0100
+@@ -241,12 +241,6 @@
+         EXTRA_OBJECTS="sys_linux.o wrap_adjtimex.o rtc_linux.o"
+         SYSDEFS="-DLINUX"
+         echo "Configuring for " $SYSTEM
+-        if [ -r /usr/include/linux/spinlock.h ]; then
+-            SYSDEFS="$SYSDEFS -DHAS_SPINLOCK_H"
+-            echo "The system has <spinlock.h>, using that"
+-        else
+-            echo "The system does not have <spinlock.h>, using private definition for spinlock_t"
+-        fi
+ 	if [ "${MACHINE}" = "alpha" ]; then
+ 	   echo "Enabling -mieee"
+ 	   # FIXME: Should really test for GCC
+diff -Naur chrony-1.20.orig/rtc_linux.c chrony-1.20/rtc_linux.c
+--- chrony-1.20.orig/rtc_linux.c	2003-09-22 22:22:30.000000000 +0100
++++ chrony-1.20/rtc_linux.c	2005-04-10 09:13:20.000000000 +0100
+@@ -43,13 +43,6 @@
+ #include <sys/time.h>
+ #include <sys/types.h>
+ 
+-#ifdef HAS_SPINLOCK_H
+-#include <linux/spinlock.h>
+-#else
+-/* Include dummy definition of spinlock_t to cope with earlier kernels. */
+-typedef int spinlock_t;
+-#endif
+-
+ /* This is a complete hack since the alpha sys/io.h needs these types
+  * but does not arrange them to be defined.  This is almost certainly
+  * not how one should do these things.  -- broonie

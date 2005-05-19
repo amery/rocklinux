@@ -20,18 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1115531702 Sun May  8 07:55:02 2005
+[TIMESTAMP] 1115983355 Fri May 13 13:22:35 2005 (5)
+[TIMESTAMP] 1116428414 Wed May 18 17:00:14 2005 (9)
+
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 5-qemu.log 9-qemu.log
 
-[BUILDTIME] 3834 (9)
-[SIZE] 1.38 MB, 17 files
+[BUILDTIME] 14512 (5)
+[BUILDTIME] 15176 (9)
+[SIZE] 5.67 MB, 61 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep libsdl libsdl:dev linux26-header:dev make
-[DEP] mktemp nas sed sysfiles tar xorg zlib:dev
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep libsdl libsdl:dev
+[DEP] linux26-header:dev make mktemp nas sed sysfiles tar xorg zlib:dev
 
-[PROVIDES] qemu qemu-img
+[PROVIDES] qemu qemu-arm qemu-armeb qemu-i386 qemu-img qemu-ppc qemu-sparc
+[PROVIDES] qemu-system-ppc qemu-system-sparc qemu-system-x86_64
 

@@ -20,19 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1115232097 Wed May  4 20:41:37 2005
+[TIMESTAMP] 1115822785 Wed May 11 16:46:25 2005 (5)
+[TIMESTAMP] 1116130948 Sun May 15 06:22:28 2005 (9)
+
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 5-openobex.log 9-openobex.log
 
-[BUILDTIME] 2689 (9)
+[BUILDTIME] 1857 (5)
+[BUILDTIME] 2515 (9)
 [SIZE] 0.05 MB, 11 files
 
-[DEP] 00-dirtree autoconf automake19 bash2 binutils bluez-libs:dev bzip2
-[DEP] coreutils diffutils findutils gcc34 gcc34:dev glibc23 glibc23:dev
-[DEP] grep linux26-header:dev make mktemp net-tools perl5 sed sysfiles
-[DEP] tar texinfo
+[DEP] 00-dirtree autoconf automake19 bash2 binutils bluez-libs:dev
+[DEP] bzip2 coreutils diffutils findutils gawk gcc34 gcc34:dev glibc23
+[DEP] glibc23:dev grep linux26-header:dev make mktemp net-tools perl5
+[DEP] sed sysfiles tar texinfo
 
 [PROVIDES] libopenobex.a libopenobex.so openobex-config
 

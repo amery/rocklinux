@@ -20,19 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1115175090 Wed May  4 04:51:30 2005
+[TIMESTAMP] 1115798921 Wed May 11 10:08:41 2005 (5)
+[TIMESTAMP] 1116060902 Sat May 14 10:55:02 2005 (9)
+
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 0-mine.log 1-mine.log 5-mine.log 9-mine.log
 
-[BUILDTIME] 3002 (9)
+[BUILDTIME] 2274 (5)
+[BUILDTIME] 3011 (9)
 [SIZE] 0.27 MB, 11 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils dialog:dev diffutils
-[DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp ncurses:dev net-tools sed sysfiles
-[DEP] tar util-linux
+[DEP] findutils gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
+[DEP] make mktemp ncurses:dev net-tools patch sed sysfiles tar util-linux
 
 [PROVIDES] gasgui mine rocket tarbz2gem
 

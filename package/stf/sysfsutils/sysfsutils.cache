@@ -20,18 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1115340645 Fri May  6 02:50:45 2005
+[TIMESTAMP] 1115873533 Thu May 12 06:52:13 2005 (5)
+[TIMESTAMP] 1116226260 Mon May 16 08:51:00 2005 (9)
+
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 5-sysfsutils.log 9-sysfsutils.log
 
-[BUILDTIME] 3558 (9)
+[BUILDTIME] 3035 (5)
+[BUILDTIME] 3522 (9)
 [SIZE] 0.16 MB, 19 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp net-tools sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
+[DEP] net-tools sed sysfiles tar util-linux
 
 [PROVIDES] dlist_test get_bus_devices_list get_class_dev
 [PROVIDES] get_classdev_parent get_device get_driver libsysfs.a libsysfs.so

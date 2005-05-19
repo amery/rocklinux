@@ -20,18 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1115615047 Mon May  9 07:04:07 2005
+[TIMESTAMP] 1116029306 Sat May 14 02:08:26 2005 (5)
+[TIMESTAMP] 1116540392 Fri May 20 00:06:32 2005 (9)
+
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 5-tidy.log 9-tidy.log
 
-[BUILDTIME] 2296 (9)
+[BUILDTIME] 2242 (5)
+[BUILDTIME] 2264 (9)
 [SIZE] 0.22 MB, 8 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
+[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp sed
+[DEP] sysfiles tar
 
 [PROVIDES] libtidy.a tab2space tidy
 

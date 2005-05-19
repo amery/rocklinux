@@ -20,18 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1115448997 Sat May  7 08:56:37 2005
+[TIMESTAMP] 1115787404 Wed May 11 06:56:44 2005 (3)
+[TIMESTAMP] 1116321754 Tue May 17 11:22:34 2005 (9)
+
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 3-genromfs.log 9-genromfs.log
 
-[BUILDTIME] 1546 (9)
+[BUILDTIME] 777 (3)
+[BUILDTIME] 1664 (9)
 [SIZE] 0.03 MB, 8 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp sed
-[DEP] sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
+[DEP] sed sysfiles tar
 
 [PROVIDES] genromfs
 

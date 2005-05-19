@@ -20,18 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1115449223 Sat May  7 09:00:23 2005
+[TIMESTAMP] 1115943363 Fri May 13 02:16:03 2005 (5)
+[TIMESTAMP] 1116322378 Tue May 17 11:32:58 2005 (9)
+
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 5-raidtools.log 9-raidtools.log
 
-[BUILDTIME] 2125 (9)
+[BUILDTIME] 1884 (5)
+[BUILDTIME] 2246 (9)
 [SIZE] 0.43 MB, 27 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp net-tools patch popt:dev sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
+[DEP] net-tools patch popt:dev sed sysfiles tar util-linux
 
 [PROVIDES] arytst detect_multipath lsraid mkraid raid0run raidhotadd
 [PROVIDES] raidhotremove raidreconf raidsetfaulty raidstart raidstop

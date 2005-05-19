@@ -20,18 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1115122143 Tue May  3 14:09:03 2005
+[TIMESTAMP] 1115793257 Wed May 11 08:34:17 2005 (5)
+[TIMESTAMP] 1116051444 Sat May 14 08:17:24 2005 (9)
+
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 5-bonnie++.log 9-bonnie++.log
 
-[BUILDTIME] 2361 (9)
+[BUILDTIME] 1566 (5)
+[BUILDTIME] 2343 (9)
 [SIZE] 0.08 MB, 14 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp net-tools sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
+[DEP] net-tools sed sysfiles tar util-linux
 
 [PROVIDES] bon_csv2html bon_csv2txt bonnie++ zcav
 

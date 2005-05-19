@@ -20,18 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1115458302 Sat May  7 11:31:42 2005
+[TIMESTAMP] 1115953815 Fri May 13 05:10:15 2005 (5)
+[TIMESTAMP] 1116340925 Tue May 17 16:42:05 2005 (9)
+
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 5-traceroute.log 9-traceroute.log
 
-[BUILDTIME] 1757 (9)
+[BUILDTIME] 1429 (5)
+[BUILDTIME] 1893 (9)
 [SIZE] 0.05 MB, 8 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] net-tools patch sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
+[DEP] mktemp net-tools patch sed sysfiles tar
 
 [PROVIDES] traceroute
 

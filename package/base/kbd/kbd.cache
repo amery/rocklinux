@@ -20,18 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1115179958 Wed May  4 06:12:38 2005
+[TIMESTAMP] 1115802098 Wed May 11 11:01:38 2005 (5)
+[TIMESTAMP] 1116065846 Sat May 14 12:17:26 2005 (9)
+
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 5-kbd.log 9-kbd.log
 
-[BUILDTIME] 3066 (9)
+[BUILDTIME] 2246 (5)
+[BUILDTIME] 3011 (9)
 [SIZE] 2.13 MB, 580 files
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils
-[DEP] findutils flex gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
-[DEP] gzip linux26-header:dev m4 make mktemp patch sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils findutils
+[DEP] flex gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep gzip
+[DEP] linux26-header:dev m4 make mktemp patch sed sysfiles tar
 
 [PROVIDES] chvt deallocvt dumpkeys fgconsole getkeycodes kbd_mode kbdrate
 [PROVIDES] loadkeys loadunimap mapscrn openvt psfaddtable psfgettable

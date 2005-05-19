@@ -20,18 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1115448733 Sat May  7 08:52:13 2005
+[TIMESTAMP] 1115942731 Fri May 13 02:05:31 2005 (5)
+[TIMESTAMP] 1116320876 Tue May 17 11:07:56 2005 (9)
+
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 5-jfsutils.log 9-jfsutils.log
 
-[BUILDTIME] 3644 (9)
+[BUILDTIME] 3434 (5)
+[BUILDTIME] 3847 (9)
 [SIZE] 1.37 MB, 22 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils e2fsprogs:dev
-[DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp net-tools sed sysfiles tar util-linux
+[DEP] findutils gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
+[DEP] make mktemp net-tools sed sysfiles tar util-linux
 
 [PROVIDES] fsck.jfs jfs_debugfs jfs_fsck jfs_fscklog jfs_logdump jfs_mkfs
 [PROVIDES] jfs_tune mkfs.jfs

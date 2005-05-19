@@ -20,18 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1115126860 Tue May  3 15:27:40 2005
+[TIMESTAMP] 1115795498 Wed May 11 09:11:38 2005 (5)
+[TIMESTAMP] 1116056626 Sat May 14 09:43:46 2005 (9)
+
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 5-rcs.log 9-rcs.log
 
-[BUILDTIME] 3015 (9)
+[BUILDTIME] 2213 (5)
+[BUILDTIME] 2985 (9)
 [SIZE] 0.52 MB, 26 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] net-tools patch sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
+[DEP] mktemp net-tools patch sed sysfiles tar
 
 [PROVIDES] ci co ident merge rcs rcsclean rcsdiff rcsmerge rlog
 

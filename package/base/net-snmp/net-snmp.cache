@@ -20,14 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1115219927 Wed May  4 17:18:47 2005
+[TIMESTAMP] 1115819763 Wed May 11 15:56:03 2005 (5)
+[TIMESTAMP] 1116124185 Sun May 15 04:29:45 2005 (9)
+
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 5-net-snmp.log 9-net-snmp.log
 
-[BUILDTIME] 25192 (9)
-[SIZE] 3.08 MB, 242 files
+[BUILDTIME] 25293 (5)
+[BUILDTIME] 28054 (9)
+[SIZE] 3.76 MB, 318 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libelf libelf:dev
@@ -37,9 +40,9 @@
 [PROVIDES] encode_keychange fixproc ipf-mod.pl libnetsnmp.a libnetsnmp.so
 [PROVIDES] libnetsnmpagent.a libnetsnmpagent.so libnetsnmphelpers.a
 [PROVIDES] libnetsnmphelpers.so libnetsnmpmibs.a libnetsnmpmibs.so
-[PROVIDES] libnetsnmptrapd.a libnetsnmptrapd.so mib2c net-snmp-config
-[PROVIDES] snmpbulkget snmpbulkwalk snmpcheck snmpconf snmpd snmpdelta
-[PROVIDES] snmpdf snmpget snmpgetnext snmpinform snmpnetstat snmpset
-[PROVIDES] snmpstatus snmptable snmptest snmptranslate snmptrap snmptrapd
-[PROVIDES] snmpusm snmpvacm snmpwalk tkmib traptoemail
+[PROVIDES] libnetsnmptrapd.a libnetsnmptrapd.so mib2c mib2c-update
+[PROVIDES] net-snmp-config snmpbulkget snmpbulkwalk snmpcheck snmpconf
+[PROVIDES] snmpd snmpdelta snmpdf snmpget snmpgetnext snmpinform
+[PROVIDES] snmpnetstat snmpset snmpstatus snmptable snmptest snmptranslate
+[PROVIDES] snmptrap snmptrapd snmpusm snmpvacm snmpwalk tkmib traptoemail
 

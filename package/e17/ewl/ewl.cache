@@ -20,23 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1115236737 Wed May  4 21:58:57 2005
+[TIMESTAMP] 1115823774 Wed May 11 17:02:54 2005 (5)
+[TIMESTAMP] 1116132661 Sun May 15 06:51:01 2005 (9)
+
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 5-ewl.log 9-ewl.log
 
-[BUILDTIME] 11093 (9)
-[SIZE] 0.76 MB, 50 files
+[BUILDTIME] 8811 (5)
+[BUILDTIME] 10341 (9)
+[SIZE] 1.05 MB, 53 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils directfb directfb:dev ecore ecore:dev edb edb:dev edje
-[DEP] edje:dev eet eet:dev embryo embryo:dev etox etox:dev evas evas:dev
-[DEP] findutils freetype freetype:dev gawk gcc34 gcc34:dev glibc23
-[DEP] glibc23:dev grep imlib2 libjpeg libjpeg:dev libpng libpng:dev
+[DEP] edje:dev eet eet:dev embryo embryo:dev emotion emotion:dev evas
+[DEP] evas:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev
+[DEP] glibc23 glibc23:dev grep imlib2 libjpeg libjpeg:dev libpng libpng:dev
 [DEP] libtool linux26-header:dev m4 make mktemp net-tools openssl perl5
 [DEP] sed sysfiles tar util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] ewl-config ewl_edb_ed ewl_embed_test ewl_simple_test ewl_test
-[PROVIDES] libewl.a libewl.so
+[PROVIDES] ewl-config ewl_edb_ed ewl_embed_test ewl_media_test
+[PROVIDES] ewl_simple_test ewl_test libewl.a libewl.so
 

@@ -20,18 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1115230528 Wed May  4 20:15:28 2005
+[TIMESTAMP] 1115822412 Wed May 11 16:40:12 2005 (5)
+[TIMESTAMP] 1116130342 Sun May 15 06:12:22 2005 (9)
+
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 5-gocr.log 9-gocr.log
 
-[BUILDTIME] 3124 (9)
+[BUILDTIME] 2348 (5)
+[BUILDTIME] 2982 (9)
 [SIZE] 0.30 MB, 8 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] net-tools netpbm netpbm:dev patch sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
+[DEP] mktemp net-tools netpbm netpbm:dev patch sed sysfiles tar util-linux
 
 [PROVIDES] gocr libPgm2asc.a
 

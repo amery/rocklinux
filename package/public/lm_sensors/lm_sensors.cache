@@ -20,19 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1115185481 Wed May  4 07:44:41 2005
+[TIMESTAMP] 1115805372 Wed May 11 11:56:12 2005 (5)
+[TIMESTAMP] 1116074970 Sat May 14 14:49:30 2005 (9)
+[TIMESTAMP] 1116559153 Fri May 20 05:19:13 2005 (5)
+
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 5-lm_sensors.log 9-lm_sensors.log
 
-[BUILDTIME] 2775 (9)
+[BUILDTIME] 1028 (5)
+[BUILDTIME] 2919 (9)
+[BUILDTIME] 2927 (5)
 [SIZE] 0.68 MB, 35 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 coreutils findutils flex
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] linux26-source m4 make mktemp patch rrdtool rrdtool:dev sed
-[DEP] sysfiles tar
+[DEP] freetype gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libart_lgpl23
+[DEP] libpng linux26-header:dev linux26-source m4 make mktemp patch
+[DEP] rrdtool rrdtool:dev sed sysfiles tar
 
 [PROVIDES] decode-dimms.pl decode-edid.pl decode-vaio.pl decode-xeon.pl
 [PROVIDES] fancontrol fancontrol.pl i2cdetect i2cdump i2cset isadump

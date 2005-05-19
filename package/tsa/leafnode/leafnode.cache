@@ -20,18 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1115613685 Mon May  9 06:41:25 2005
+[TIMESTAMP] 1116026823 Sat May 14 01:27:03 2005 (5)
+[TIMESTAMP] 1116537703 Thu May 19 23:21:43 2005 (9)
+
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 5-leafnode.log 9-leafnode.log
 
-[BUILDTIME] 3553 (9)
+[BUILDTIME] 3651 (5)
+[BUILDTIME] 3690 (9)
 [SIZE] 0.45 MB, 35 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp net-tools pcre pcre:dev sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
+[DEP] net-tools pcre pcre:dev sed sysfiles tar util-linux
 
 [PROVIDES] applyfilter checkgroups fetchnews leafnode leafnode-version
 [PROVIDES] newsq texpire

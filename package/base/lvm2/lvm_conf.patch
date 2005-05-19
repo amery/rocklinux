@@ -19,8 +19,7 @@
 
 Tobias Hintze <th@rocklinux.org>:
 	small fix for LVM2:
-	prevent inappropriate scanning of /dev/discs/ (devfs);
-	only scan /dev/ide and /dev/scsi by default
+	don't scan nbd's by default
 
 --- ./doc/example.conf	2004-04-16 18:11:34.000000000 +0200
 +++ ./doc/example.conf	2005-01-17 15:10:59.320475111 +0100

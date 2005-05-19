@@ -23,13 +23,18 @@
 
 MENU_PKG_EXIM
    Because some SMTP-server allow only plain text authentification, you can 
-   configure here the authentification methods for exim.
+   configure here the authentification methods for exim and set the content 
+   scan feature.
 
-ROCK_CFG_EXIM_CRAM_MD5
+ROCKCFG_PKG_EXIM_CRAM_MD5
    The more secure standard authentification.
 
-ROCK_CFG_EXIM_PLAINTEXT
+ROCKCFG_PKG_EXIM_PLAINTEXT
    Authentification without cryptographic technology.
 
-ROCK_CFG_EXIM_SPA
+ROCKCFG_PKG_EXIM_SPA
    Sorry, no help available for this option.
+
+ROCKCFG_PKG_EXIM_CONTENT_SCAN
+   Enables the former exiscan features. Provides a interface for
+   antivirus and malware scaner and spam detection.

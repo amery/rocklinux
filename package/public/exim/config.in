@@ -27,5 +27,6 @@ then
          bool 'Use MD5 auth' ROCKCFG_PKG_EXIM_CRAM_MD5 1
          bool 'Use plain text auth' ROCKCFG_PKG_EXIM_PLAIN_TEXT 0
          bool 'SPA authentification' ROCKCFG_PKG_EXIM_SPA 0
+         bool 'Enable content scan' ROCKCFG_PKG_EXIM_CONTENT_SCAN 1
       menu_end
 fi

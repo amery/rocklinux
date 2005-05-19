@@ -34,7 +34,7 @@ int main(int argc, char ** argv) {
 	while ( fgets(buf, 512, stdin) != NULL &&
 					(fn = strchr(buf, ' ')) != NULL ) {
 		if ( (n = strchr(++fn, '\n')) != NULL ) *n = '\0';
-		if ( !lstat(fn,&st) && S_ISREG(st.st_mode) )
+		if ( !stat(fn,&st) && S_ISREG(st.st_mode) )
 			puts(fn);
 	}
 	return 0;

@@ -395,7 +395,7 @@ if [ $this_is_the_2nd_run = 0 ] ; then
 	if [ "$ROCKCFG_CREATE_CACHE" = 1 -a $stagelevel -gt 1 ] ; then
 
 		mkdir -p $root/var/adm/cache
-		rm -f $root/var/adm/cache/$xpkg
+		touch $root/var/adm/cache/$xpkg
 		rm -f $root/var/adm/cache/$xpkg.tm
 
 		/usr/bin/time -o "$root/var/adm/cache/$xpkg.tm" \
@@ -413,7 +413,11 @@ if [ $this_is_the_2nd_run = 0 ] ; then
 					sed "s,/$pkg.desc\$,/$pkg.cache,"
 			fi
 
-			date '+%n[TIMESTAMP] %s %c'
+			echo
+			grep '^\[TIMESTAMP\]' $root/var/adm/cache/$xpkg
+			date "+[TIMESTAMP] %s %c ($stagelevel)"
+
+			echo
 			echo "[CONFIG-ID] ${ROCKCFG_ID#*-}"
 			echo -e "[ROCKVER] $rockver\n"
 
@@ -421,6 +425,7 @@ if [ $this_is_the_2nd_run = 0 ] ; then
 					 ls ?-$xpkg.* 2> /dev/null )
 			echo
 
+			grep '^\[BUILDTIME\]' $root/var/adm/cache/$xpkg
 			echo "[BUILDTIME] $buildtime ($stagelevel)"
 
 			x="$root/var/adm/packages/$xpkg"
@@ -450,7 +455,8 @@ if [ $this_is_the_2nd_run = 0 ] ; then
 					echo
 				fi
 			done
-		} > $root/var/adm/cache/$xpkg
+		} > $root/var/adm/cache/$xpkg.new
+		mv $root/var/adm/cache/$xpkg.new $root/var/adm/cache/$xpkg
 
 		exit $returncode
 	else

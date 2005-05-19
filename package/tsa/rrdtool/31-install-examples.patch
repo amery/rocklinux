@@ -1,0 +1,11 @@
+--- rrdtool-1.2.0/examples/Makefile.old	2005-04-26 14:04:00.000000000 +0200
++++ rrdtool-1.2.0/examples/Makefile.in	2005-04-26 14:05:20.000000000 +0200
+@@ -194,7 +194,7 @@
+ EXTRA_DIST = cgi-demo.cgi.in piped-demo.pl.in shared-demo.pl.in \
+ 	stripes.pl.in bigtops.pl.in minmax.pl.in 4charts.pl.in
+ 
+-examplesdir = $(prefix)/examples
++examplesdir = $(prefix)/doc/rrdtool/examples
+ examples_SCRIPTS = cgi-demo.cgi piped-demo.pl shared-demo.pl \
+ 	stripes.pl bigtops.pl minmax.pl 4charts.pl
+ 

@@ -1,0 +1,10 @@
+--- libcgiupl-0.1/cgiupl.c.old	1998-05-12 04:55:54.000000000 +0200
++++ libcgiupl-0.1/cgiupl.c	2005-04-26 15:23:12.000000000 +0200
+@@ -31,6 +31,7 @@
+ #include <sys/stat.h>
+ #include <string.h>
+ #include <ctype.h>
++#include <errno.h>
+ 
+ #include <cgiupl.h>
+ 

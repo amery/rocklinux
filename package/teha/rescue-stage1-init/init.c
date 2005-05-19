@@ -146,16 +146,16 @@ int untarbz2(const char *arch, const char *trg_dir) {
 
 void die() {
 	printf("Aieee. I lost all hope. Take that shell!\n\n");
-	execl("/bin/kiss", "kiss", 0);
-	perror("kiss");
+	execl("/bin/sh", "sh", 0);
+	perror("sh");
 	_exit(1);
 }
 
 void shell() {
 	printf("Quit the shell to continue in stage 1 loader!\n");
 	if (!fork()) {
-		execl("/bin/kiss", "kiss", 0);
-		perror("kiss");
+		execl("/bin/sh", "sh", 0);
+		perror("sh");
 		_exit(1);
 	}
 	wait(0);

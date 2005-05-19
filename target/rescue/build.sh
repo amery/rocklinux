@@ -13,7 +13,9 @@ if [ "$ROCK_DEBUG_RESCUE_NOSTAGE2" != 1 -a \
      "$ROCK_DEBUG_RESCUE_NOSTAGE1" != 1 ]
 then
 	pkgloop
-	rm -rf $disksdir; mkdir -p $disksdir; chmod 700 $disksdir
+	rm -rf $disksdir
+	mkdir -p $disksdir
+	chmod 700 $disksdir
 fi
 
 # Re-evaluate CC and other variables (as we have built the cross cc now)
@@ -35,7 +37,9 @@ fi
 
 
 echo_header "Creating ISO filesystem description."
-cd $disksdir; rm -rf isofs; mkdir -p isofs
+cd $disksdir
+rm -rf isofs
+mkdir -p isofs
 
 echo_status "Creating rescue/isofs directory.."
 ln system.tar.bz2 isofs/

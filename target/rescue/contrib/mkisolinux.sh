@@ -119,7 +119,7 @@ then
 	fi
 
 	cp -v $SYSTEM $TMPDIR/iso/rescue/system.tb2
-	[ -n "$OVERLAY" ] && cp -v $OVERLAY $TMPDIR/iso/rescue/overlay.tar.bz2
+	[ -n "$OVERLAY" ] && cp -v $OVERLAY $TMPDIR/iso/rescue/overlay.tb2
 
 	#
 	# create grub fd
@@ -158,7 +158,7 @@ DISPLAY display.txt
 
 LABEL rescue
 	KERNEL krescue
-	APPEND initrd=rdrescue.gz root=/dev/ram boot=iso9660:/dev/cdroms/cdrom0 system=/mnt_boot/rescue/system.tb2 panic=60
+	APPEND initrd=rdrescue.gz root=/dev/ram boot=iso9660:/dev/cdroms/cdrom0 system=/mnt_boot/rescue/system.tb2 overlay=/mnt_boot/rescue/overlay.tb2 panic=60
 
 LABEL grub
 	KERNEL memdisk

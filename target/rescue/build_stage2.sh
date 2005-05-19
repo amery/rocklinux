@@ -10,11 +10,11 @@ package_map='       +00-dirtree         +glibc22            +glibc23
 -linux24-src        -linux26-src        -linux24benh-src
 -linux24-source
 -linux24-header     -linux26-header     -linux24benh-header
--linux24            -linux26            -linux24benh
--binutils           -bin86              -nasm
+-linux24            -linux26            -linux24benh        +attr
+-binutils           -bin86              -nasm               +dmapi
 +grub               +lilo               +yaboot             +aboot
 +silo               +parted             +mac-fdisk          +pdisk
-+xfsprogs           +mkdosfs            +jfsutils
++xfsprogs           +mkdosfs            +jfsutils           +xfsdump
 +e2fsprogs          +reiserfsprogs      +genromfs           +lvm
 +raidtools          +dump               +eject              +disktype
 +hdparm             -memtest86          +openssl            +openssh
@@ -38,7 +38,7 @@ package_map='       +00-dirtree         +glibc22            +glibc23
 +sysfiles           +libpcap            +iptables           +tcp_wrappers
 -kiss               +kbd                -syslinux           -rescue-stage1-init
 +device-mapper      +lvm2               +mdadm              +dhcpcd
-+smartmontools      +ntfsprogs          +lvm-wrapper
++smartmontools      +ntfsprogs          +lvm-wrapper        -man-pages
 '
 
 if [[ $rockver = 2.0* ]] ; then
@@ -81,8 +81,11 @@ tar $taropt $pkgsdir/ncurses.tar.bz2	\
 #
 echo_status "Installing some keymaps ..."
 tar $taropt $pkgsdir/kbd.tar.bz2 \
-	usr/share/kbd/keymaps/amiga	usr/share/kbd/keymaps/i386/qwerty \
-	usr/share/kbd/keymaps/atari	usr/share/kbd/keymaps/i386/qwertz \
+	usr/share/kbd/keymaps/amiga \
+	usr/share/kbd/keymaps/atari \
+	usr/share/kbd/keymaps/i386/qwerty \
+	usr/share/kbd/keymaps/i386/qwertz \
+	usr/share/kbd/keymaps/i386/include \
 	usr/share/kbd/keymaps/sun
 find usr/share/kbd -name '*dvo*' -o -name '*az*' -o -name '*fgG*' | \
 	xargs rm -f
@@ -141,6 +144,7 @@ EOF
 [ -f /proc/mounts ] || mount -t proc none /proc
 [ -d /mnt/boot ] || mkdir -p /mnt/boot
 [ -d /dev/pts ] && mount /dev/pts
+rm -f /dev/fd ; ln -s /proc/self/fd /dev/fd
 grep -q '/mnt_boot' /proc/mounts && mount --move /old_root/mnt_boot /mnt/boot
 grep -q '/old_root' /proc/mounts && umount -n /old_root
 grep -v ^rootfs /proc/mounts > /etc/mtab

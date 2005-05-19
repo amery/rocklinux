@@ -16,24 +16,25 @@ cp -a $rootdir/lib/ld-*.so \
 	$rootdir/lib/libc.* \
 	$rootdir/lib/libc.* \
 	$rootdir/lib/libresolv* \
+	$rootdir/lib/librt* \
+	$rootdir/lib/libpthread* \
 	lib/
-
-if [[ $rockver != 2.0* ]] ; then
-	echo_status "Copy some additional libs for tar."
-	cp -a $rootdir/lib/lib{pthread,rt}{.,-}* \
-	lib/
-fi
 
 echo_status "Copy various helper applications."
 cp $rootdir/bin/{tar,gzip,bzip2} bin/
 cp $rootdir/sbin/{insmod,ip} bin/
 cp $rootdir/usr/bin/wget bin/
+cp $rootdir/usr/bin/busybox bin/
 
-#
-if [ "$ROCKCFG_RESCUE_INITRD_USEKISS" = 1 ]; then
-	echo_status "Adding kiss shell for expert use of the initrd image."
-	cp $rootdir/bin/kiss bin/
-fi
+
+while read x 
+do
+	X="${x##*/}"
+	[ -e "bin/$X" ] && continue
+	echo -n "providing $X by busybox: "
+	ln -v bin/busybox bin/$X
+done < $rootdir/usr/share/doc/busybox/busybox.links
+
 cd ..
 
 echo_header "Creating initrd filesystem image: "

@@ -22,8 +22,6 @@
 
 block_begin 0
 
-bool 'Include the kiss shell into the initrd' ROCKCFG_RESCUE_INITRD_USEKISS 1
-
 choice ROCKCFG_RESCUE_ACTION_SYSTEM_FAILURE "shell" \
 	"reboot" "reboot if system fails to extract." \
 	"panic" "panic if system fails to extract."  \
@@ -61,6 +59,8 @@ pkgfilter sed '
 / setserial /	{ p; d; };	/ tcpdump /	{ p; d; };
 / libpcap /	{ p; d; };	/ tcp_wrappers / { p; d; };
 / iptables /	{ p; d; };	/ jfsutils /	{ p; d; };
+/ attr /	{ p; d; };
+/ dmapi /	{ p; d; };
 / xfsprogs /	{ p; d; };
 / kbd /		{ p; d; };	/ eject /	{ p; d; };
 / openssl /	{ p; d; };	/ openssh /	{ p; d; };
@@ -90,9 +90,11 @@ pkgfilter sed '
 / sysvinit /	{ s/^X /O /p; d; };
 / uml_utilities /	{ s/^X /O /p; d; };
 / python /    { s/^X /O /p; d; };
+/ dmapi /    { s/^X /O /p; d; };
 '
 if [[ $rockver = 2.0* ]] ; then
        pkgfilter sed '
+               / linux24 / { s/^[XO] .......... /X -?-------- /p; d; };
                / KERNEL /      { s/^X /O /p; d; };
                / linux26-src / { s/^X /O /p; d; };
        '

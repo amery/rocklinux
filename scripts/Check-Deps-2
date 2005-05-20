@@ -12,6 +12,16 @@ my $config = "";
 while ($_ = shift @ARGV) {
 	if ( $_ eq "-cfg" ) {
 		$config = shift @ARGV;
+	} elsif ( /^-/ ) {
+		print "\n";
+		print "Usgage: scripts/Check-Deps-2 [ -cfg config-name ]\n";
+		print "\n";
+		print "This script does some dependency checking and suggests\n";
+		print "package priority reorderings (if neccessary).\n";
+		print "\n";
+		print "The data from scripts/dep_db.txt and scripts/dep_fixes.txt\n";
+		print "is used for the dependency analysis.\n";
+		print "\n";
 	} else {
 		$ign{$_} = 1;
 	}

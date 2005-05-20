@@ -408,6 +408,11 @@ if [ $this_is_the_2nd_run = 0 ] ; then
 		rm -f $root/var/adm/cache/$xpkg.tm
 
 		{
+			errortag=""
+			if [ -f "$root/var/adm/logs/$stagelevel-$xpkg.err" ] ; then
+				errortag=" ERROR"
+			fi
+
 			if [ -f $confdir/$pkg.desc ] ; then
 				grep '^\[COPY\] ' $confdir/$pkg.desc | \
 					sed "s,/$pkg.desc\$,/$pkg.cache,"
@@ -415,7 +420,7 @@ if [ $this_is_the_2nd_run = 0 ] ; then
 
 			echo
 			grep '^\[TIMESTAMP\]' $root/var/adm/cache/$xpkg
-			date "+[TIMESTAMP] %s %c ($stagelevel)"
+			date "+[TIMESTAMP] %s %c ($stagelevel)$errortag"
 
 			echo
 			echo "[CONFIG-ID] ${ROCKCFG_ID#*-}"
@@ -426,7 +431,7 @@ if [ $this_is_the_2nd_run = 0 ] ; then
 			echo
 
 			grep '^\[BUILDTIME\]' $root/var/adm/cache/$xpkg
-			echo "[BUILDTIME] $buildtime ($stagelevel)"
+			echo "[BUILDTIME] $buildtime ($stagelevel)$errortag"
 
 			x="$root/var/adm/packages/$xpkg"
 			if [ -f $x ]; then

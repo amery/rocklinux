@@ -4,9 +4,24 @@ use English;
 use strict;
 
 if (not defined $ARGV[0] or not chdir $ARGV[0]) {
-	print "\nUsage: $0 rootdir\n\n";
+	print "\nUsage: $0 rootdir [min-pkgcount] [dir-regex]\n\n";
 	print "E.g.: $0 build/ref0818-2.1.0-DEV-x86-reference-expert\n\n";
 	exit 1;
+}
+
+shift @ARGV;
+
+my $minpkgcount = 0;
+my $dirregex;
+
+if (defined $ARGV[0] and $ARGV[0] =~ /^[0-9]+$/) {
+	$minpkgcount = $ARGV[0];
+	shift @ARGV;
+}
+
+if (defined $ARGV[0]) {
+	$dirregex = $ARGV[0];
+	shift @ARGV;
 }
 
 my %baddirs;
@@ -19,11 +34,17 @@ while (<var/adm/dep-debug/*>) {
 	my %dirdep;
 	my %filedep;
 
+	next if $p eq "rock-debug";
+
 	open P, $_ or die $!;
 	while (<P>) {
 		chomp;
 		my ($d, $f) = split /: /;
 		next if $d =~ /-dirtree$/;
+
+		if ($dirregex ne "") {
+			next if $f !~ /$dirregex/;
+		}
 
 		if (-d $f) {
 			$dirdep{$d}{$f} = 1;
@@ -47,6 +68,7 @@ while (<var/adm/dep-debug/*>) {
 }
 
 foreach my $d (keys %badcount) {
+	next if $badcount{$d} < $minpkgcount;
 	print "\nFound pure dir dependencies to $d ($badcount{$d}):\n";
 	foreach (keys %{$badpkgs{$d}}) {
 		print "\tpkg\t$badpkgs{$d}{$_}\t$_\n";

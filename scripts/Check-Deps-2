@@ -22,6 +22,7 @@ while ($_ = shift @ARGV) {
 		print "The data from scripts/dep_db.txt and scripts/dep_fixes.txt\n";
 		print "is used for the dependency analysis.\n";
 		print "\n";
+		exit 1;
 	} else {
 		$ign{$_} = 1;
 	}

@@ -256,7 +256,7 @@ descparser() {
 		*) descfiles="$arg $descfiles";;
 		esac
 	done
-	cat "${descfiles% }" | eval $var src/descparser
+	cat $descfiles | eval $var src/descparser
 }
 
 # cksum_chk filename cksum origfile

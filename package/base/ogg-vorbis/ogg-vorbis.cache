@@ -20,24 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1115803713 Wed May 11 11:28:33 2005 (5)
-[TIMESTAMP] 1116068444 Sat May 14 13:00:44 2005 (9)
+[TIMESTAMP] 1116676615 Sat May 21 13:56:55 2005 (5)
+[TIMESTAMP] 1116831328 Mon May 23 08:55:28 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 5-ogg-vorbis.log 9-ogg-vorbis.log
 
-[BUILDTIME] 11641 (5)
-[BUILDTIME] 13132 (9)
-[SIZE] 1.74 MB, 56 files
+[BUILDTIME] 13401 (5)
+[BUILDTIME] 13174 (9)
+[SIZE] 1.74 MB, 54 files
 
 [DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev
-[DEP] bash2 binutils bison bzip2 coreutils curl curl:dev diffutils
-[DEP] esound esound:dev file findutils flac flac:dev gawk gcc34 gcc34:dev
-[DEP] gettext glib glib:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp nas nas:dev net-tools openssl perl5 pkgconfig sed speex
-[DEP] speex:dev sysfiles tar util-linux xorg xorg:dev zlib:dev
+[DEP] bash2 binutils bison bzip2 coreutils curl curl:dev diffutils esound
+[DEP] esound:dev file findutils flac flac:dev gawk gcc34 gcc34:dev
+[DEP] gettext glib glib:dev glibc23 glibc23:dev gnome2-dirtree grep
+[DEP] linux26-header:dev make mktemp nas nas:dev net-tools openssl perl5
+[DEP] pkgconfig sed speex speex:dev sysfiles tar util-linux xorg xorg:dev
+[DEP] zlib:dev
 
 [PROVIDES] libalsa09.so libao.so libarts.so libesd.so libnas.so libogg.a
 [PROVIDES] libogg.so liboss.so libvorbis.a libvorbis.so libvorbisenc.a

@@ -24,6 +24,8 @@
 [TIMESTAMP] 1116065204 Sat May 14 12:06:44 2005 (9)
 [TIMESTAMP] 1116559009 Fri May 20 05:16:49 2005 (5)
 [TIMESTAMP] 1116571286 Fri May 20 08:41:26 2005 (9)
+[TIMESTAMP] 1117530308 Tue May 31 11:05:08 2005 (5) ERROR
+[TIMESTAMP] 1117534740 Tue May 31 12:19:00 2005 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
@@ -34,6 +36,8 @@
 [BUILDTIME] 1898 (9)
 [BUILDTIME] 2059 (5)
 [BUILDTIME] 2064 (9)
+[BUILDTIME] 1953 (5) ERROR
+[BUILDTIME] 1946 (9) ERROR
 [SIZE] 1.62 MB, 140 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
@@ -41,39 +45,39 @@
 [DEP] sysfiles tar
 
 
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_agpsupport.h:407: error: (Each undeclared identifier is reported only once
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_agpsupport.h:407: error: for each function it appears in.)
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_agpsupport.h:407: error: parse error before ')' token
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_agpsupport.h:412: error: request for member `copy_info' in something not a structure or union
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_agpsupport.h: In function `gamma_agp_uninit':
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_agpsupport.h:436: warning: `inter_module_put' is deprecated (declared at include/linux/module.h:578)
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_agpsupport.h: In function `gamma_agp_allocate_memory':
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_agpsupport.h:443: error: request for member `allocate_memory' in something not a structure or union
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_agpsupport.h:445: error: request for member `allocate_memory' in something not a structure or union
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_agpsupport.h: In function `gamma_agp_free_memory':
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_agpsupport.h:451: error: request for member `free_memory' in something not a structure or union
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_agpsupport.h:453: error: request for member `free_memory' in something not a structure or union
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_agpsupport.h: In function `gamma_agp_bind_memory':
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_agpsupport.h:460: error: request for member `bind_memory' in something not a structure or union
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_agpsupport.h:462: error: request for member `bind_memory' in something not a structure or union
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_agpsupport.h: In function `gamma_agp_unbind_memory':
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_agpsupport.h:468: error: request for member `unbind_memory' in something not a structure or union
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_agpsupport.h:470: error: request for member `unbind_memory' in something not a structure or union
-[5-ERROR] In file included from /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/gamma_drv.c:55:
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_memory.h: In function `drm_follow_page':
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_memory.h:140: warning: passing arg 1 of `pmd_offset' from incompatible pointer type
-[5-ERROR] In file included from /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/gamma_drv.c:57:
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_vm.h: In function `gamma_mmap':
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_vm.h:623: warning: implicit declaration of function `remap_page_range'
-[5-ERROR] In file included from /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/gamma_drv.c:58:
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_stub.h: In function `gamma_stub_putminor':
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_stub.h:142: warning: `inter_module_put' is deprecated (declared at include/linux/module.h:578)
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_stub.h:144: warning: `inter_module_unregister' is deprecated (declared at include/linux/module.h:574)
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_stub.h: In function `gamma_stub_register':
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_stub.h:197: warning: `inter_module_register' is deprecated (declared at include/linux/module.h:573)
-[5-ERROR] /ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/drm_stub.h:207: warning: `inter_module_unregister' is deprecated (declared at include/linux/module.h:574)
-[5-ERROR] make[2]: *** [/ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18/gamma_drv.o] Error 1
-[5-ERROR] make[1]: *** [_module_/ROCK/src.linux-drm.1116558892.2940.4129135334/drm-4.4-2004-07-18] Error 2
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_agpsupport.h:407: error: (Each undeclared identifier is reported only once
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_agpsupport.h:407: error: for each function it appears in.)
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_agpsupport.h:407: error: parse error before ')' token
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_agpsupport.h:412: error: request for member `copy_info' in something not a structure or union
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_agpsupport.h: In function `gamma_agp_uninit':
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_agpsupport.h:436: warning: `inter_module_put' is deprecated (declared at include/linux/module.h:578)
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_agpsupport.h: In function `gamma_agp_allocate_memory':
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_agpsupport.h:443: error: request for member `allocate_memory' in something not a structure or union
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_agpsupport.h:445: error: request for member `allocate_memory' in something not a structure or union
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_agpsupport.h: In function `gamma_agp_free_memory':
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_agpsupport.h:451: error: request for member `free_memory' in something not a structure or union
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_agpsupport.h:453: error: request for member `free_memory' in something not a structure or union
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_agpsupport.h: In function `gamma_agp_bind_memory':
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_agpsupport.h:460: error: request for member `bind_memory' in something not a structure or union
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_agpsupport.h:462: error: request for member `bind_memory' in something not a structure or union
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_agpsupport.h: In function `gamma_agp_unbind_memory':
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_agpsupport.h:468: error: request for member `unbind_memory' in something not a structure or union
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_agpsupport.h:470: error: request for member `unbind_memory' in something not a structure or union
+[5-ERROR] In file included from /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/gamma_drv.c:55:
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_memory.h: In function `drm_follow_page':
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_memory.h:140: warning: passing arg 1 of `pmd_offset' from incompatible pointer type
+[5-ERROR] In file included from /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/gamma_drv.c:57:
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_vm.h: In function `gamma_mmap':
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_vm.h:623: warning: implicit declaration of function `remap_page_range'
+[5-ERROR] In file included from /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/gamma_drv.c:58:
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_stub.h: In function `gamma_stub_putminor':
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_stub.h:142: warning: `inter_module_put' is deprecated (declared at include/linux/module.h:578)
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_stub.h:144: warning: `inter_module_unregister' is deprecated (declared at include/linux/module.h:574)
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_stub.h: In function `gamma_stub_register':
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_stub.h:197: warning: `inter_module_register' is deprecated (declared at include/linux/module.h:573)
+[5-ERROR] /ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/drm_stub.h:207: warning: `inter_module_unregister' is deprecated (declared at include/linux/module.h:574)
+[5-ERROR] make[2]: *** [/ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18/gamma_drv.o] Error 1
+[5-ERROR] make[1]: *** [_module_/ROCK/src.linux-drm.1117530228.2799.3725077939/drm-4.4-2004-07-18] Error 2
 [5-ERROR] make[1]: Leaving directory `/usr/src/linux-2.6.11.7-rock'
 [5-ERROR] make: *** [modules] Error 2
 [5-ERROR] --- BUILD ERROR ---
@@ -92,39 +96,39 @@
 [5-ERROR] Making post-install adaptions.
 [5-ERROR] Finished building linux-drm=linux-drm.
 
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_agpsupport.h:407: error: (Each undeclared identifier is reported only once
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_agpsupport.h:407: error: for each function it appears in.)
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_agpsupport.h:407: error: parse error before ')' token
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_agpsupport.h:412: error: request for member `copy_info' in something not a structure or union
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_agpsupport.h: In function `gamma_agp_uninit':
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_agpsupport.h:436: warning: `inter_module_put' is deprecated (declared at include/linux/module.h:578)
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_agpsupport.h: In function `gamma_agp_allocate_memory':
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_agpsupport.h:443: error: request for member `allocate_memory' in something not a structure or union
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_agpsupport.h:445: error: request for member `allocate_memory' in something not a structure or union
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_agpsupport.h: In function `gamma_agp_free_memory':
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_agpsupport.h:451: error: request for member `free_memory' in something not a structure or union
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_agpsupport.h:453: error: request for member `free_memory' in something not a structure or union
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_agpsupport.h: In function `gamma_agp_bind_memory':
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_agpsupport.h:460: error: request for member `bind_memory' in something not a structure or union
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_agpsupport.h:462: error: request for member `bind_memory' in something not a structure or union
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_agpsupport.h: In function `gamma_agp_unbind_memory':
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_agpsupport.h:468: error: request for member `unbind_memory' in something not a structure or union
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_agpsupport.h:470: error: request for member `unbind_memory' in something not a structure or union
-[9-ERROR] In file included from /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/gamma_drv.c:55:
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_memory.h: In function `drm_follow_page':
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_memory.h:140: warning: passing arg 1 of `pmd_offset' from incompatible pointer type
-[9-ERROR] In file included from /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/gamma_drv.c:57:
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_vm.h: In function `gamma_mmap':
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_vm.h:623: warning: implicit declaration of function `remap_page_range'
-[9-ERROR] In file included from /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/gamma_drv.c:58:
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_stub.h: In function `gamma_stub_putminor':
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_stub.h:142: warning: `inter_module_put' is deprecated (declared at include/linux/module.h:578)
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_stub.h:144: warning: `inter_module_unregister' is deprecated (declared at include/linux/module.h:574)
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_stub.h: In function `gamma_stub_register':
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_stub.h:197: warning: `inter_module_register' is deprecated (declared at include/linux/module.h:573)
-[9-ERROR] /ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/drm_stub.h:207: warning: `inter_module_unregister' is deprecated (declared at include/linux/module.h:574)
-[9-ERROR] make[2]: *** [/ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18/gamma_drv.o] Error 1
-[9-ERROR] make[1]: *** [_module_/ROCK/src.linux-drm.1116571166.7063.720012499/drm-4.4-2004-07-18] Error 2
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_agpsupport.h:407: error: (Each undeclared identifier is reported only once
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_agpsupport.h:407: error: for each function it appears in.)
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_agpsupport.h:407: error: parse error before ')' token
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_agpsupport.h:412: error: request for member `copy_info' in something not a structure or union
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_agpsupport.h: In function `gamma_agp_uninit':
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_agpsupport.h:436: warning: `inter_module_put' is deprecated (declared at include/linux/module.h:578)
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_agpsupport.h: In function `gamma_agp_allocate_memory':
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_agpsupport.h:443: error: request for member `allocate_memory' in something not a structure or union
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_agpsupport.h:445: error: request for member `allocate_memory' in something not a structure or union
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_agpsupport.h: In function `gamma_agp_free_memory':
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_agpsupport.h:451: error: request for member `free_memory' in something not a structure or union
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_agpsupport.h:453: error: request for member `free_memory' in something not a structure or union
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_agpsupport.h: In function `gamma_agp_bind_memory':
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_agpsupport.h:460: error: request for member `bind_memory' in something not a structure or union
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_agpsupport.h:462: error: request for member `bind_memory' in something not a structure or union
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_agpsupport.h: In function `gamma_agp_unbind_memory':
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_agpsupport.h:468: error: request for member `unbind_memory' in something not a structure or union
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_agpsupport.h:470: error: request for member `unbind_memory' in something not a structure or union
+[9-ERROR] In file included from /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/gamma_drv.c:55:
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_memory.h: In function `drm_follow_page':
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_memory.h:140: warning: passing arg 1 of `pmd_offset' from incompatible pointer type
+[9-ERROR] In file included from /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/gamma_drv.c:57:
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_vm.h: In function `gamma_mmap':
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_vm.h:623: warning: implicit declaration of function `remap_page_range'
+[9-ERROR] In file included from /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/gamma_drv.c:58:
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_stub.h: In function `gamma_stub_putminor':
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_stub.h:142: warning: `inter_module_put' is deprecated (declared at include/linux/module.h:578)
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_stub.h:144: warning: `inter_module_unregister' is deprecated (declared at include/linux/module.h:574)
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_stub.h: In function `gamma_stub_register':
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_stub.h:197: warning: `inter_module_register' is deprecated (declared at include/linux/module.h:573)
+[9-ERROR] /ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/drm_stub.h:207: warning: `inter_module_unregister' is deprecated (declared at include/linux/module.h:574)
+[9-ERROR] make[2]: *** [/ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18/gamma_drv.o] Error 1
+[9-ERROR] make[1]: *** [_module_/ROCK/src.linux-drm.1117534684.7274.1635865583/drm-4.4-2004-07-18] Error 2
 [9-ERROR] make[1]: Leaving directory `/usr/src/linux-2.6.11.7-rock'
 [9-ERROR] make: *** [modules] Error 2
 [9-ERROR] --- BUILD ERROR ---

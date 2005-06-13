@@ -24,6 +24,8 @@
 [TIMESTAMP] 1116109047 Sun May 15 00:17:27 2005 (9)
 [TIMESTAMP] 1116559252 Fri May 20 05:20:52 2005 (5)
 [TIMESTAMP] 1116571396 Fri May 20 08:43:16 2005 (9)
+[TIMESTAMP] 1117530351 Tue May 31 11:05:51 2005 (5) ERROR
+[TIMESTAMP] 1117534793 Tue May 31 12:19:53 2005 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
@@ -34,6 +36,8 @@
 [BUILDTIME] 1623 (9)
 [BUILDTIME] 1657 (5)
 [BUILDTIME] 1642 (9)
+[BUILDTIME] 1529 (5) ERROR
+[BUILDTIME] 1543 (9) ERROR
 [SIZE] 0.02 MB, 8 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
@@ -59,23 +63,23 @@
 [5-ERROR] 
 [5-ERROR] >>>>>> COMPILING IPTRAF 2.7.0 FROM SUPPLIED SOURCE CODE
 [5-ERROR] 
-[5-ERROR] make: Entering directory `/ROCK/src.iptraf.1116559156.13850.2934256206/iptraf-2.7.0/src'
+[5-ERROR] make: Entering directory `/ROCK/src.iptraf.1117530311.8281.3382489956/iptraf-2.7.0/src'
 [5-ERROR] rm -f *.o *~ core iptraf rvnamed rawtime cfconv
 [5-ERROR] make -C ../support clean
-[5-ERROR] make[1]: Entering directory `/ROCK/src.iptraf.1116559156.13850.2934256206/iptraf-2.7.0/support'
+[5-ERROR] make[1]: Entering directory `/ROCK/src.iptraf.1117530311.8281.3382489956/iptraf-2.7.0/support'
 [5-ERROR] rm -rf *.o *~ libtextbox.a libtextbox.so
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.iptraf.1116559156.13850.2934256206/iptraf-2.7.0/support'
-[5-ERROR] make: Leaving directory `/ROCK/src.iptraf.1116559156.13850.2934256206/iptraf-2.7.0/src'
-[5-ERROR] make: Entering directory `/ROCK/src.iptraf.1116559156.13850.2934256206/iptraf-2.7.0/support'
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.iptraf.1117530311.8281.3382489956/iptraf-2.7.0/support'
+[5-ERROR] make: Leaving directory `/ROCK/src.iptraf.1117530311.8281.3382489956/iptraf-2.7.0/src'
+[5-ERROR] make: Entering directory `/ROCK/src.iptraf.1117530311.8281.3382489956/iptraf-2.7.0/support'
 [5-ERROR] rm -rf *.o *~ libtextbox.a libtextbox.so
-[5-ERROR] make: Leaving directory `/ROCK/src.iptraf.1116559156.13850.2934256206/iptraf-2.7.0/support'
-[5-ERROR] make: Entering directory `/ROCK/src.iptraf.1116559156.13850.2934256206/iptraf-2.7.0/src'
+[5-ERROR] make: Leaving directory `/ROCK/src.iptraf.1117530311.8281.3382489956/iptraf-2.7.0/support'
+[5-ERROR] make: Entering directory `/ROCK/src.iptraf.1117530311.8281.3382489956/iptraf-2.7.0/src'
 [5-ERROR] gcc -Wall  -DWORKDIR=\"/var/iptraf\" -DLOGDIR=\"/var/log/iptraf\" -DEXECDIR=\"/usr/bin\" -I/usr/include/ncurses -I../support -DVERSION=\"2.7.0\" -DPLATFORM=\"Linux/i386\"  -g    -c -o iptraf.o iptraf.c
 [5-ERROR] In file included from tcptable.h:25,
 [5-ERROR]                  from iptraf.c:54:
 [5-ERROR] /usr/include/linux/if_fddi.h:110: error: field `gen' has incomplete type
 [5-ERROR] make: *** [iptraf.o] Error 1
-[5-ERROR] make: Leaving directory `/ROCK/src.iptraf.1116559156.13850.2934256206/iptraf-2.7.0/src'
+[5-ERROR] make: Leaving directory `/ROCK/src.iptraf.1117530311.8281.3382489956/iptraf-2.7.0/src'
 [5-ERROR] --- BUILD ERROR ---
 [5-ERROR] Creating file list and doing final adaptions ... 
 [5-ERROR] Processing static lib corrections ...
@@ -110,23 +114,23 @@
 [9-ERROR] 
 [9-ERROR] >>>>>> COMPILING IPTRAF 2.7.0 FROM SUPPLIED SOURCE CODE
 [9-ERROR] 
-[9-ERROR] make: Entering directory `/ROCK/src.iptraf.1116571297.12541.1385732264/iptraf-2.7.0/src'
+[9-ERROR] make: Entering directory `/ROCK/src.iptraf.1117534746.12750.2268620163/iptraf-2.7.0/src'
 [9-ERROR] rm -f *.o *~ core iptraf rvnamed rawtime cfconv
 [9-ERROR] make -C ../support clean
-[9-ERROR] make[1]: Entering directory `/ROCK/src.iptraf.1116571297.12541.1385732264/iptraf-2.7.0/support'
+[9-ERROR] make[1]: Entering directory `/ROCK/src.iptraf.1117534746.12750.2268620163/iptraf-2.7.0/support'
 [9-ERROR] rm -rf *.o *~ libtextbox.a libtextbox.so
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.iptraf.1116571297.12541.1385732264/iptraf-2.7.0/support'
-[9-ERROR] make: Leaving directory `/ROCK/src.iptraf.1116571297.12541.1385732264/iptraf-2.7.0/src'
-[9-ERROR] make: Entering directory `/ROCK/src.iptraf.1116571297.12541.1385732264/iptraf-2.7.0/support'
+[9-ERROR] make[1]: Leaving directory `/ROCK/src.iptraf.1117534746.12750.2268620163/iptraf-2.7.0/support'
+[9-ERROR] make: Leaving directory `/ROCK/src.iptraf.1117534746.12750.2268620163/iptraf-2.7.0/src'
+[9-ERROR] make: Entering directory `/ROCK/src.iptraf.1117534746.12750.2268620163/iptraf-2.7.0/support'
 [9-ERROR] rm -rf *.o *~ libtextbox.a libtextbox.so
-[9-ERROR] make: Leaving directory `/ROCK/src.iptraf.1116571297.12541.1385732264/iptraf-2.7.0/support'
-[9-ERROR] make: Entering directory `/ROCK/src.iptraf.1116571297.12541.1385732264/iptraf-2.7.0/src'
+[9-ERROR] make: Leaving directory `/ROCK/src.iptraf.1117534746.12750.2268620163/iptraf-2.7.0/support'
+[9-ERROR] make: Entering directory `/ROCK/src.iptraf.1117534746.12750.2268620163/iptraf-2.7.0/src'
 [9-ERROR] gcc -Wall  -DWORKDIR=\"/var/iptraf\" -DLOGDIR=\"/var/log/iptraf\" -DEXECDIR=\"/usr/bin\" -I/usr/include/ncurses -I../support -DVERSION=\"2.7.0\" -DPLATFORM=\"Linux/i386\"  -g    -c -o iptraf.o iptraf.c
 [9-ERROR] In file included from tcptable.h:25,
 [9-ERROR]                  from iptraf.c:54:
 [9-ERROR] /usr/include/linux/if_fddi.h:110: error: field `gen' has incomplete type
 [9-ERROR] make: *** [iptraf.o] Error 1
-[9-ERROR] make: Leaving directory `/ROCK/src.iptraf.1116571297.12541.1385732264/iptraf-2.7.0/src'
+[9-ERROR] make: Leaving directory `/ROCK/src.iptraf.1117534746.12750.2268620163/iptraf-2.7.0/src'
 [9-ERROR] --- BUILD ERROR ---
 [9-ERROR] Creating file list and doing final adaptions ... 
 [9-ERROR] Processing static lib corrections ...

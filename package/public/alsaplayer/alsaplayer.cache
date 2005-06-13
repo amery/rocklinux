@@ -20,25 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1115840488 Wed May 11 21:41:28 2005 (5)
-[TIMESTAMP] 1116163003 Sun May 15 15:16:43 2005 (9)
+[TIMESTAMP] 1116710361 Sat May 21 23:19:21 2005 (5)
+[TIMESTAMP] 1116873052 Mon May 23 20:30:52 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 5-alsaplayer.log 9-alsaplayer.log
 
-[BUILDTIME] 9184 (5)
-[BUILDTIME] 10327 (9)
-[SIZE] 0.63 MB, 44 files
+[BUILDTIME] 9691 (5)
+[BUILDTIME] 10364 (9)
+[SIZE] 0.63 MB, 38 files
 
 [DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev bash2 binutils
 [DEP] bzip2 coreutils diffutils doxygen esound esound:dev findutils flac
 [DEP] flac:dev gawk gcc34 gcc34:dev glib12 glib12:dev glibc23 glibc23:dev
-[DEP] grep gtk+12 gtk+12:dev jack jack:dev libmikmod libmikmod:dev
-[DEP] libsndfile libsndfile:dev linux26-header:dev mad mad:dev make
-[DEP] mktemp nas nas:dev net-tools ogg-vorbis ogg-vorbis:dev pkgconfig
-[DEP] sed sysfiles tar util-linux xorg xorg:dev xosd xosd:dev zlib:dev
+[DEP] gnome14-dirtree grep gtk+12 gtk+12:dev jack jack:dev libmikmod
+[DEP] libmikmod:dev libsndfile libsndfile:dev linux26-header:dev mad
+[DEP] mad:dev make mktemp nas nas:dev net-tools ogg-vorbis ogg-vorbis:dev
+[DEP] pkgconfig sed sysfiles tar util-linux xorg xorg:dev xosd xosd:dev
+[DEP] zlib:dev
 
 [PROVIDES] alsaplayer libaf.so libalsa_out.so libalsaplayer.so
 [PROVIDES] libblurscope.so libcdda.so libdaemon_interface.so

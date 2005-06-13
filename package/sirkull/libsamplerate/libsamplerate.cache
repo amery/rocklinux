@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1115890173 Thu May 12 11:29:33 2005 (5)
-[TIMESTAMP] 1116273097 Mon May 16 21:51:37 2005 (9)
+[TIMESTAMP] 1116746710 Sun May 22 09:25:10 2005 (5)
+[TIMESTAMP] 1116985617 Wed May 25 03:46:57 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 5-libsamplerate.log 9-libsamplerate.log
 
-[BUILDTIME] 3704 (5)
-[BUILDTIME] 4431 (9)
+[BUILDTIME] 4061 (5)
+[BUILDTIME] 4429 (9)
 [SIZE] 0.13 MB, 10 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glib12 glibc23 glibc23:dev gnome-libs14 grep libsndfile
-[DEP] libsndfile:dev linux26-header:dev make mktemp net-tools pkgconfig
-[DEP] sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev gnome-libs14 gnome14-dirtree
+[DEP] grep libsndfile libsndfile:dev linux26-header:dev make mktemp
+[DEP] net-tools pkgconfig sed sysfiles tar util-linux
 
 [PROVIDES] libsamplerate.a libsamplerate.so sndfile-resample
 

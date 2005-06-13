@@ -4,6 +4,22 @@
 # dependencies and by scripts/Build-Pkg to dump additional debug info
 # for this dependencies.
 
+# additional false deps added manually (2005-06-13)
+gtkam		del	anjuta bug-buddy gnome-system-tools ghex totem glabels gnomeicu
+scrollkeeper	del	gconf-editor gnome-netstatus quick-lounge-applet seahorse zapping
+mergeant	del	gnome-system-tools
+gnome-desktop	del	battfink
+gnome-doc-utils	del	zapping
+glabels		del	anjuta gnumeric
+linux		del	net-tools
+docbookx	del	gnome-doc-utils
+seahorse	del	glabels gdesklets
+mplayer		del	mplayer-fonts
+libxml2		del	libxslt
+xorg		del	ctwm isdn4k-utils root-tail xautolock terminus-font transfig xfig
+xfree86		del	ctwm isdn4k-utils root-tail xautolock terminus-font transfig xfig
+libpng		del	xorg xfree86
+
 # additional false deps added manually (2004-11-29)
 mythtv		del	mythdvd
 

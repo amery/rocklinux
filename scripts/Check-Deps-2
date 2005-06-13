@@ -28,6 +28,8 @@ while ($_ = shift @ARGV) {
 	}
 }
 
+unlink $_ foreach qw/dependencies.dbg dependencies.dot dependencies.patch dependencies.png dependencies.ps/;
+
 print "Reading package priorities ...\n";
 if ( $config eq "" ) {
 	open(F, "./scripts/Create-PkgList |") || die $!;
@@ -231,7 +233,6 @@ sub setpri($$$$$$) {
 if ( $did_something ) {
 	print "\nCreate dependencies.patch ...\n";
 	my $tmpfile = `mktemp`; chomp $tmpfile;
-	unlink "dependencies.patch";
 
 	foreach $package (@pkg) {
 		if ($pri{$package} != $opr{$package}) {
@@ -240,7 +241,7 @@ if ( $did_something ) {
 		}
 	}
 	unlink $tmpfile;
-	print "Done. Please check moves manually bofore applying the patch.\n";
+	print "Done. Please check moves manually before applying the patch.\n";
 } else {
 	print "No unresolved dependencies found.\n";
 }

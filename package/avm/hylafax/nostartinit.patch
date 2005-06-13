@@ -1,0 +1,19 @@
+diff -ruN hylafax-4.2.1/configure hylafax-4.2.1-new/configure
+--- hylafax-4.2.1/configure	2004-12-28 05:45:03.000000000 +0100
++++ hylafax-4.2.1-new/configure	2005-05-18 12:40:52.000000000 +0200
+@@ -3596,13 +3596,13 @@
+ if [ "$SYSVINIT" = yes ]; then
+     if [ -z "$DIR_SYSVINITSTART" ]; then
+ 	case $TARGET in
+-	    *-linux*)	DIR_SYSVINITSTART="../rc2.d ../rc3.d ../rc4.d ../rc5.d";;
++	    *-linux*)	DIR_SYSVINITSTART="";;
+ 	    *)		DIR_SYSVINITSTART="../rc2.d";;
+ 	esac
+     fi
+     if [ -z "$DIR_SYSVINITSTOP" ]; then
+ 	case $TARGET in
+-	    *-linux*)	DIR_SYSVINITSTOP="../rc0.d ../rc1.d ../rc6.d";;
++	    *-linux*)	DIR_SYSVINITSTOP="../rc0.d ../rc1.d ../rc2.d ../rc3.d ../rc4.d ../rc5.d ../rc6.d";;
+ 	    *-solaris*)	DIR_SYSVINITSTOP="../rc0.d ../rc1.d ../rcS.d";;
+ 	    *sysv4.2uw2*)	DIR_SYSVINITSTOP="../rc0.d ../rc1.d";;
+ 	    *-sysv5UnixWare*)	DIR_SYSVINITSTOP="../rc0.d ../rc1.d";;

@@ -233,24 +233,28 @@ static int pid2ppid(int pid)
 static char *getpname(int pid)
 {
 	static char p[512];
-	char buffer[100]="";
+	char buffer[513]="";
 	char *arg=0, *b;
 	int i, fd, rc;
 
 	sprintf(buffer, "/proc/%d/cmdline", pid);
 	if ( (fd = open(buffer, O_RDONLY, 0)) < 0 ) return "unkown";
-	if ( (rc = read(fd, buffer, 99)) > 0) {
+	if ( (rc = read(fd, buffer, 512)) > 0) {
 		buffer[rc--] = 0;
 		for (i=0; i<rc; i++)
-			if (!buffer[i]) { arg = buffer+i+1; break; }
+			if (buffer[i] == 0 && buffer[i+1] != '-')
+				{ arg = buffer+i+1; break; }
 	}
 	close(fd);
 
 	b = basename(buffer);
 	snprintf(p, 512, "%s", b);
 
-	if ( !strcmp(b, "bash") || !strcmp(b, "sh") || !strcmp(b, "perl") )
-		if (arg && *arg && *arg != '-')
+	if ( !strcmp(b, "bash") || !strcmp(b, "sh") ||
+	     !strcmp(b, "perl") || !strcmp(b, "python") )
+		if ( arg && *arg &&
+		     strlen(arg) < 100 && !strchr(arg, '\n') &&
+		     !strchr(arg, ' ') && !strchr(arg, ';') )
 			snprintf(p, 512, "%s(%s)", b, basename(arg));
 
 	return p;
@@ -269,11 +273,12 @@ static void addptree(int *txtpos, char *cmdtxt, int pid, int basepid)
 
 	p = getpname(pid);
 
-	if ( strcmp(l, p) )
-		*txtpos += snprintf(cmdtxt+*txtpos, 4096-*txtpos, "%s%s",
-				*txtpos ? "." : "", getpname(pid));
-	else
-		*txtpos += snprintf(cmdtxt+*txtpos, 4096-*txtpos, "*");
+	if (*txtpos < 4000)
+		if ( strcmp(l, p) )
+			*txtpos += snprintf(cmdtxt+*txtpos, 4096-*txtpos, "%s%s",
+					*txtpos ? "." : "", getpname(pid));
+		else
+			*txtpos += snprintf(cmdtxt+*txtpos, 4096-*txtpos, "*");
 
 	strcpy(l, p);
 }

@@ -20,22 +20,121 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1116016147 Fri May 13 22:29:07 2005 (5)
-[TIMESTAMP] 1116517354 Thu May 19 17:42:34 2005 (9)
+[TIMESTAMP] 1117910672 Sat Jun  4 20:44:32 2005 (5) ERROR
+[TIMESTAMP] 1118437266 Fri Jun 10 23:01:06 2005 (9) ERROR
+[TIMESTAMP] 1118658866 Mon Jun 13 12:34:26 2005 (5) ERROR
+[TIMESTAMP] 1118661402 Mon Jun 13 13:16:42 2005 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
-[LOGS] 5-lyx.log 9-lyx.log
+[LOGS] 5-lyx.err 9-lyx.err
 
-[BUILDTIME] 110198 (5)
-[BUILDTIME] 113256 (9)
-[SIZE] 22.30 MB, 952 files
+[BUILDTIME] 109573 (5) ERROR
+[BUILDTIME] 107683 (9) ERROR
+[BUILDTIME] 107766 (5) ERROR
+[BUILDTIME] 107907 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils expat
-[DEP] findutils freetype gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev
-[DEP] grep latex2html libpng linux26-header:dev make mktemp net-tools
-[DEP] perl5 qt qt:dev sed sysfiles tar tetex util-linux xorg xorg:dev
 
-[PROVIDES] lyx noweb2lyx reLyX
+[5-ERROR] depmode=gcc3 /bin/sh ../config/depcomp \
+[5-ERROR] g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I../boost   -isystem /usr/X11R6/include  -O -c -o trans.o `test -f 'trans.C' || echo './'`trans.C
+[5-ERROR] source='trans_mgr.C' object='trans_mgr.o' libtool=no \
+[5-ERROR] depfile='.deps/trans_mgr.Po' tmpdepfile='.deps/trans_mgr.TPo' \
+[5-ERROR] depmode=gcc3 /bin/sh ../config/depcomp \
+[5-ERROR] g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I../boost   -isystem /usr/X11R6/include  -O -c -o trans_mgr.o `test -f 'trans_mgr.C' || echo './'`trans_mgr.C
+[5-ERROR] source='undo.C' object='undo.o' libtool=no \
+[5-ERROR] depfile='.deps/undo.Po' tmpdepfile='.deps/undo.TPo' \
+[5-ERROR] depmode=gcc3 /bin/sh ../config/depcomp \
+[5-ERROR] g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I../boost   -isystem /usr/X11R6/include  -O -c -o undo.o `test -f 'undo.C' || echo './'`undo.C
+[5-ERROR] source='undo_funcs.C' object='undo_funcs.o' libtool=no \
+[5-ERROR] depfile='.deps/undo_funcs.Po' tmpdepfile='.deps/undo_funcs.TPo' \
+[5-ERROR] depmode=gcc3 /bin/sh ../config/depcomp \
+[5-ERROR] g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I../boost   -isystem /usr/X11R6/include  -O -c -o undo_funcs.o `test -f 'undo_funcs.C' || echo './'`undo_funcs.C
+[5-ERROR] source='vc-backend.C' object='vc-backend.o' libtool=no \
+[5-ERROR] depfile='.deps/vc-backend.Po' tmpdepfile='.deps/vc-backend.TPo' \
+[5-ERROR] depmode=gcc3 /bin/sh ../config/depcomp \
+[5-ERROR] g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I../boost   -isystem /usr/X11R6/include  -O -c -o vc-backend.o `test -f 'vc-backend.C' || echo './'`vc-backend.C
+[5-ERROR] source='version.C' object='version.o' libtool=no \
+[5-ERROR] depfile='.deps/version.Po' tmpdepfile='.deps/version.TPo' \
+[5-ERROR] depmode=gcc3 /bin/sh ../config/depcomp \
+[5-ERROR] g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I../boost   -isystem /usr/X11R6/include  -O -c -o version.o `test -f 'version.C' || echo './'`version.C
+[5-ERROR] source='vspace.C' object='vspace.o' libtool=no \
+[5-ERROR] depfile='.deps/vspace.Po' tmpdepfile='.deps/vspace.TPo' \
+[5-ERROR] depmode=gcc3 /bin/sh ../config/depcomp \
+[5-ERROR] g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I../boost   -isystem /usr/X11R6/include  -O -c -o vspace.o `test -f 'vspace.C' || echo './'`vspace.C
+[5-ERROR] /bin/sh ../libtool --mode=link g++-34  -O   -o lyx  BufferView.o BufferView_pimpl.o Bullet.o Chktex.o CutAndPaste.o DepTable.o FloatList.o Floating.o FuncStatus.o InsetList.o LColor.o LaTeX.o LaTeXFeatures.o LyXAction.o MenuBackend.o paragraph_funcs.o ParagraphList.o ParagraphParameters.o Spacing.o TextCache.o Thesaurus.o ToolbarDefaults.o boost.o boost-inst.o box.o buffer.o bufferlist.o bufferparams.o bufferview_funcs.o chset.o converter.o counters.o debug.o encoding.o exporter.o gettext.o factory.o funcrequest.o importer.o intl.o iterators.o kbmap.o kbsequence.o language.o lastfiles.o lengthcommon.o lyx_cb.o lyx_main.o lyx_sty.o lyxcursor.o lyxfont.o lyxfind.o lyxfunc.o lyxgluelength.o lyxlayout.o lyxlength.o lyxlex.o lyxlex_pimpl.o lyxrc.o lyxrow.o lyxserver.o lyxtextclass.o lyxtextclasslist.o lyxvc.o main.o paragraph.o paragraph_pimpl.o ispell.o pspell.o sgml.o tabular.o tabular-old.o tabular_funcs.o tex-accent.o tex-strings.o texrow.o text.o text2.o text3.o toc.o trans.o trans_mgr.o undo.o undo_funcs.o vc-backend.o version.o vspace.o mathed/libmathed.la insets/libinsets.la frontends/libfrontends.la graphics/libgraphics.la support/libsupport.la ../boost/libs/regex/src/libboostregex.la ../boost/libs/signals/src/libboostsignals.la     -lSM -lICE -lc -lm   -L/usr/X11R6/lib -lX11  
+[5-ERROR] mkdir .libs
+[5-ERROR] g++-34 -O -o lyx BufferView.o BufferView_pimpl.o Bullet.o Chktex.o CutAndPaste.o DepTable.o FloatList.o Floating.o FuncStatus.o InsetList.o LColor.o LaTeX.o LaTeXFeatures.o LyXAction.o MenuBackend.o paragraph_funcs.o ParagraphList.o ParagraphParameters.o Spacing.o TextCache.o Thesaurus.o ToolbarDefaults.o boost.o boost-inst.o box.o buffer.o bufferlist.o bufferparams.o bufferview_funcs.o chset.o converter.o counters.o debug.o encoding.o exporter.o gettext.o factory.o funcrequest.o importer.o intl.o iterators.o kbmap.o kbsequence.o language.o lastfiles.o lengthcommon.o lyx_cb.o lyx_main.o lyx_sty.o lyxcursor.o lyxfont.o lyxfind.o lyxfunc.o lyxgluelength.o lyxlayout.o lyxlength.o lyxlex.o lyxlex_pimpl.o lyxrc.o lyxrow.o lyxserver.o lyxtextclass.o lyxtextclasslist.o lyxvc.o main.o paragraph.o paragraph_pimpl.o ispell.o pspell.o sgml.o tabular.o tabular-old.o tabular_funcs.o tex-accent.o tex-strings.o texrow.o text.o text2.o text3.o toc.o trans.o trans_mgr.o undo.o undo_funcs.o vc-backend.o version.o vspace.o  mathed/.libs/libmathed.a insets/.libs/libinsets.a frontends/.libs/libfrontends.a -L/opt/qt33/lib -lqt graphics/.libs/libgraphics.a support/.libs/libsupport.a ../boost/libs/regex/src/.libs/libboostregex.a ../boost/libs/signals/src/.libs/libboostsignals.a -lSM -lICE -lc -lm -L/usr/X11R6/lib -lX11
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/3.4.3/../../../../i386-unknown-linux-gnu/bin/ld: `.gnu.linkonce.t._ZN5boost9re_detail15query_match_auxIN9__gnu_cxx17__normal_iteratorIPKcSsEESaIcEcNS_12regex_traitsIcEES7_EEbT_SA_RNS_13match_resultsISA_T0_EERKNS_14reg_expressionIT1_T2_T3_EEjRNS0_16_priv_match_dataISA_SC_EEPSA_' referenced in section `.rodata' of chset.o: defined in discarded section `.gnu.linkonce.t._ZN5boost9re_detail15query_match_auxIN9__gnu_cxx17__normal_iteratorIPKcSsEESaIcEcNS_12regex_traitsIcEES7_EEbT_SA_RNS_13match_resultsISA_T0_EERKNS_14reg_expressionIT1_T2_T3_EEjRNS0_16_priv_match_dataISA_SC_EEPSA_' of chset.o
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/3.4.3/../../../../i386-unknown-linux-gnu/bin/ld: final link failed: Bad value
+[5-ERROR] collect2: ld returned 1 exit status
+[5-ERROR] make[3]: *** [lyx] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/src.lyx.1118657671.12206.1493910770/lyx-1.3.5/src'
+[5-ERROR] make[2]: *** [all-recursive] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.lyx.1118657671.12206.1493910770/lyx-1.3.5/src'
+[5-ERROR] make[1]: *** [all] Error 2
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.lyx.1118657671.12206.1493910770/lyx-1.3.5/src'
+[5-ERROR] make: *** [all-recursive] Error 1
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 0 files for this package.
+[5-ERROR] Applying package split: 40 lyx:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 lyx:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 lyx:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building lyx=lyx.
+
+[9-ERROR] depmode=gcc3 /bin/sh ../config/depcomp \
+[9-ERROR] g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I../boost   -isystem /usr/X11R6/include  -O -c -o trans.o `test -f 'trans.C' || echo './'`trans.C
+[9-ERROR] source='trans_mgr.C' object='trans_mgr.o' libtool=no \
+[9-ERROR] depfile='.deps/trans_mgr.Po' tmpdepfile='.deps/trans_mgr.TPo' \
+[9-ERROR] depmode=gcc3 /bin/sh ../config/depcomp \
+[9-ERROR] g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I../boost   -isystem /usr/X11R6/include  -O -c -o trans_mgr.o `test -f 'trans_mgr.C' || echo './'`trans_mgr.C
+[9-ERROR] source='undo.C' object='undo.o' libtool=no \
+[9-ERROR] depfile='.deps/undo.Po' tmpdepfile='.deps/undo.TPo' \
+[9-ERROR] depmode=gcc3 /bin/sh ../config/depcomp \
+[9-ERROR] g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I../boost   -isystem /usr/X11R6/include  -O -c -o undo.o `test -f 'undo.C' || echo './'`undo.C
+[9-ERROR] source='undo_funcs.C' object='undo_funcs.o' libtool=no \
+[9-ERROR] depfile='.deps/undo_funcs.Po' tmpdepfile='.deps/undo_funcs.TPo' \
+[9-ERROR] depmode=gcc3 /bin/sh ../config/depcomp \
+[9-ERROR] g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I../boost   -isystem /usr/X11R6/include  -O -c -o undo_funcs.o `test -f 'undo_funcs.C' || echo './'`undo_funcs.C
+[9-ERROR] source='vc-backend.C' object='vc-backend.o' libtool=no \
+[9-ERROR] depfile='.deps/vc-backend.Po' tmpdepfile='.deps/vc-backend.TPo' \
+[9-ERROR] depmode=gcc3 /bin/sh ../config/depcomp \
+[9-ERROR] g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I../boost   -isystem /usr/X11R6/include  -O -c -o vc-backend.o `test -f 'vc-backend.C' || echo './'`vc-backend.C
+[9-ERROR] source='version.C' object='version.o' libtool=no \
+[9-ERROR] depfile='.deps/version.Po' tmpdepfile='.deps/version.TPo' \
+[9-ERROR] depmode=gcc3 /bin/sh ../config/depcomp \
+[9-ERROR] g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I../boost   -isystem /usr/X11R6/include  -O -c -o version.o `test -f 'version.C' || echo './'`version.C
+[9-ERROR] source='vspace.C' object='vspace.o' libtool=no \
+[9-ERROR] depfile='.deps/vspace.Po' tmpdepfile='.deps/vspace.TPo' \
+[9-ERROR] depmode=gcc3 /bin/sh ../config/depcomp \
+[9-ERROR] g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I../boost   -isystem /usr/X11R6/include  -O -c -o vspace.o `test -f 'vspace.C' || echo './'`vspace.C
+[9-ERROR] /bin/sh ../libtool --mode=link g++-34  -O   -o lyx  BufferView.o BufferView_pimpl.o Bullet.o Chktex.o CutAndPaste.o DepTable.o FloatList.o Floating.o FuncStatus.o InsetList.o LColor.o LaTeX.o LaTeXFeatures.o LyXAction.o MenuBackend.o paragraph_funcs.o ParagraphList.o ParagraphParameters.o Spacing.o TextCache.o Thesaurus.o ToolbarDefaults.o boost.o boost-inst.o box.o buffer.o bufferlist.o bufferparams.o bufferview_funcs.o chset.o converter.o counters.o debug.o encoding.o exporter.o gettext.o factory.o funcrequest.o importer.o intl.o iterators.o kbmap.o kbsequence.o language.o lastfiles.o lengthcommon.o lyx_cb.o lyx_main.o lyx_sty.o lyxcursor.o lyxfont.o lyxfind.o lyxfunc.o lyxgluelength.o lyxlayout.o lyxlength.o lyxlex.o lyxlex_pimpl.o lyxrc.o lyxrow.o lyxserver.o lyxtextclass.o lyxtextclasslist.o lyxvc.o main.o paragraph.o paragraph_pimpl.o ispell.o pspell.o sgml.o tabular.o tabular-old.o tabular_funcs.o tex-accent.o tex-strings.o texrow.o text.o text2.o text3.o toc.o trans.o trans_mgr.o undo.o undo_funcs.o vc-backend.o version.o vspace.o mathed/libmathed.la insets/libinsets.la frontends/libfrontends.la graphics/libgraphics.la support/libsupport.la ../boost/libs/regex/src/libboostregex.la ../boost/libs/signals/src/libboostsignals.la     -lSM -lICE -lc -lm   -L/usr/X11R6/lib -lX11  
+[9-ERROR] mkdir .libs
+[9-ERROR] g++-34 -O -o lyx BufferView.o BufferView_pimpl.o Bullet.o Chktex.o CutAndPaste.o DepTable.o FloatList.o Floating.o FuncStatus.o InsetList.o LColor.o LaTeX.o LaTeXFeatures.o LyXAction.o MenuBackend.o paragraph_funcs.o ParagraphList.o ParagraphParameters.o Spacing.o TextCache.o Thesaurus.o ToolbarDefaults.o boost.o boost-inst.o box.o buffer.o bufferlist.o bufferparams.o bufferview_funcs.o chset.o converter.o counters.o debug.o encoding.o exporter.o gettext.o factory.o funcrequest.o importer.o intl.o iterators.o kbmap.o kbsequence.o language.o lastfiles.o lengthcommon.o lyx_cb.o lyx_main.o lyx_sty.o lyxcursor.o lyxfont.o lyxfind.o lyxfunc.o lyxgluelength.o lyxlayout.o lyxlength.o lyxlex.o lyxlex_pimpl.o lyxrc.o lyxrow.o lyxserver.o lyxtextclass.o lyxtextclasslist.o lyxvc.o main.o paragraph.o paragraph_pimpl.o ispell.o pspell.o sgml.o tabular.o tabular-old.o tabular_funcs.o tex-accent.o tex-strings.o texrow.o text.o text2.o text3.o toc.o trans.o trans_mgr.o undo.o undo_funcs.o vc-backend.o version.o vspace.o  mathed/.libs/libmathed.a insets/.libs/libinsets.a frontends/.libs/libfrontends.a -L/opt/qt33/lib -lqt graphics/.libs/libgraphics.a support/.libs/libsupport.a ../boost/libs/regex/src/.libs/libboostregex.a ../boost/libs/signals/src/.libs/libboostsignals.a -lSM -lICE -lc -lm -L/usr/X11R6/lib -lX11
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/3.4.3/../../../../i386-unknown-linux-gnu/bin/ld: `.gnu.linkonce.t._ZN5boost9re_detail15query_match_auxIN9__gnu_cxx17__normal_iteratorIPKcSsEESaIcEcNS_12regex_traitsIcEES7_EEbT_SA_RNS_13match_resultsISA_T0_EERKNS_14reg_expressionIT1_T2_T3_EEjRNS0_16_priv_match_dataISA_SC_EEPSA_' referenced in section `.rodata' of chset.o: defined in discarded section `.gnu.linkonce.t._ZN5boost9re_detail15query_match_auxIN9__gnu_cxx17__normal_iteratorIPKcSsEESaIcEcNS_12regex_traitsIcEES7_EEbT_SA_RNS_13match_resultsISA_T0_EERKNS_14reg_expressionIT1_T2_T3_EEjRNS0_16_priv_match_dataISA_SC_EEPSA_' of chset.o
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/3.4.3/../../../../i386-unknown-linux-gnu/bin/ld: final link failed: Bad value
+[9-ERROR] collect2: ld returned 1 exit status
+[9-ERROR] make[3]: *** [lyx] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/src.lyx.1118660228.12763.2631758457/lyx-1.3.5/src'
+[9-ERROR] make[2]: *** [all-recursive] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/src.lyx.1118660228.12763.2631758457/lyx-1.3.5/src'
+[9-ERROR] make[1]: *** [all] Error 2
+[9-ERROR] make[1]: Leaving directory `/ROCK/src.lyx.1118660228.12763.2631758457/lyx-1.3.5/src'
+[9-ERROR] make: *** [all-recursive] Error 1
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 0 files for this package.
+[9-ERROR] Applying package split: 40 lyx:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 lyx:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 lyx:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building lyx=lyx.
 

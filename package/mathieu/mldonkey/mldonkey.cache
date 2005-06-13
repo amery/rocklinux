@@ -20,23 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1116808349 Mon May 23 02:32:29 2005 (5)
-[TIMESTAMP] 1117048060 Wed May 25 21:07:40 2005 (9)
+[TIMESTAMP] 1117798265 Fri Jun  3 13:31:05 2005 (5)
+[TIMESTAMP] 1118358086 Fri Jun 10 01:01:26 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 5-mldonkey.log 9-mldonkey.log
 
-[BUILDTIME] 11369 (5)
-[BUILDTIME] 10890 (9)
-[SIZE] 18.59 MB, 22 files
+[BUILDTIME] 12188 (5)
+[BUILDTIME] 12578 (9)
+[SIZE] 19.49 MB, 22 files
 
-[DEP] 00-dirtree alsa autoconf bash2 binutils bzip2 coreutils
-[DEP] diffutils findutils gawk gcc34 gcc34:dev glib12 glibc23
+[DEP] 00-dirtree alsa autoconf bash2 binutils bzip2 coreutils diffutils
+[DEP] expat findutils freetype gawk gcc34 gcc34:dev glib12 glibc23
 [DEP] glibc23:dev gnome14-dirtree grep gtk+12 gzip lablgtk lablgtk:dev
-[DEP] linux26-header:dev m4 make mktemp ncurses:dev net-tools ocaml
-[DEP] ocaml:dev patch perl5 sed sysfiles tar util-linux xorg zlib:dev
+[DEP] libgd libgd:dev libjpeg libpng linux26-header:dev m4 make mktemp
+[DEP] ncurses:dev net-tools ocaml ocaml:dev patch perl5 sed sysfiles tar
+[DEP] util-linux xorg zlib:dev
 
 [PROVIDES] mlbt mlbt+gui mldc mldc+gui mldonkey mldonkey+gui mldonkey_gui
 [PROVIDES] mlgnut mlgnut+gui mlgui mlim mlnet mlnet+gui mlslsk mlslsk+gui

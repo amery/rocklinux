@@ -20,25 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1115853293 Thu May 12 01:14:53 2005 (5)
-[TIMESTAMP] 1116202868 Mon May 16 02:21:08 2005 (9)
-[TIMESTAMP] 1116571879 Fri May 20 08:51:19 2005 (9)
-[TIMESTAMP] 1117535013 Tue May 31 12:23:33 2005 (9) ERROR
+[TIMESTAMP] 1117703249 Thu Jun  2 11:07:29 2005 (5)
+[TIMESTAMP] 1118161640 Tue Jun  7 18:27:20 2005 (9) ERROR
+[TIMESTAMP] 1118660124 Mon Jun 13 12:55:24 2005 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 5-ladspa.log 9-ladspa.err
 
-[BUILDTIME] 1209 (5)
-[BUILDTIME] 1645 (9)
-[BUILDTIME] 1799 (9)
-[BUILDTIME] 1693 (9) ERROR
+[BUILDTIME] 1214 (5)
+[BUILDTIME] 1807 (9) ERROR
+[BUILDTIME] 1666 (9) ERROR
 [SIZE] 0.07 MB, 15 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp nvram-wakeup
-[DEP] patch sed sysfiles tar time xorg
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
+[DEP] nvram-wakeup patch sed sysfiles tar time xorg
 
 [PROVIDES] amp.so analyseplugin applyplugin delay.so filter.so listplugins
 [PROVIDES] noise.so sine.so

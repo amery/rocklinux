@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1116038309 Sat May 14 04:38:29 2005 (5)
-[TIMESTAMP] 1116550150 Fri May 20 02:49:10 2005 (9)
+[TIMESTAMP] 1117935344 Sun Jun  5 03:35:44 2005 (5)
+[TIMESTAMP] 1118464862 Sat Jun 11 06:41:02 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 5-speex.log 9-speex.log
 
-[BUILDTIME] 4909 (5)
-[BUILDTIME] 4922 (9)
+[BUILDTIME] 4712 (5)
+[BUILDTIME] 4972 (9)
 [SIZE] 0.14 MB, 14 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] net-tools ogg-vorbis ogg-vorbis:dev sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
+[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
+[DEP] make mktemp net-tools ogg-vorbis ogg-vorbis:dev sed sysfiles tar
+[DEP] util-linux
 
 [PROVIDES] libspeex.a libspeex.so speexdec speexenc
 

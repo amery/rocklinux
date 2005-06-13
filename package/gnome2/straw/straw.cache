@@ -20,24 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1116725098 Sun May 22 03:24:58 2005 (5)
-[TIMESTAMP] 1116922878 Tue May 24 10:21:18 2005 (9)
+[TIMESTAMP] 1117706718 Thu Jun  2 12:05:18 2005 (5) ERROR
+[TIMESTAMP] 1118179382 Tue Jun  7 23:23:02 2005 (9)
+[TIMESTAMP] 1118657307 Mon Jun 13 12:08:27 2005 (5)
 
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 5-straw.log 9-straw.log
 
-[BUILDTIME] 1639 (5)
-[BUILDTIME] 1895 (9)
+[BUILDTIME] 1126 (5) ERROR
+[BUILDTIME] 1964 (9)
+[BUILDTIME] 1775 (5)
 [SIZE] 1.24 MB, 117 files
 
-[DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils findutils gawk
-[DEP] gcc34 gcc34:dev gconf glib glib:dev glibc23 glibc23:dev gnome-python
-[DEP] gnome-vfs gnome-vfs-extras gnome2-dirtree grep gtk+ gtk+:dev intltool
-[DEP] linux26-header:dev mktemp nautilus-cd-burner numpy pango pango:dev
-[DEP] perl5 pil pkgconfig pygtk pygtk:dev pyorbit python python:dev sed
-[DEP] sysfiles tar wxpython xorg xorg:dev
+[DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 control-center
+[DEP] coreutils findutils gawk gcc34 gcc34:dev gconf glib glib:dev
+[DEP] glibc23 glibc23:dev gnome-python gnome-vfs gnome-vfs-extras
+[DEP] gnome2-dirtree grep gtk+ gtk+:dev intltool linux26-header:dev mktemp
+[DEP] nautilus-cd-burner pango pango:dev perl5 pkgconfig pygtk pygtk:dev
+[DEP] pyorbit python python:dev sed sysfiles tar xorg xorg:dev zapping
 
 [PROVIDES] pytrayicon.so straw
 

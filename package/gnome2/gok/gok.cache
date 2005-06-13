@@ -20,34 +20,36 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1116728492 Sun May 22 04:21:32 2005 (5)
-[TIMESTAMP] 1116933996 Tue May 24 13:26:36 2005 (9)
+[TIMESTAMP] 1117710685 Thu Jun  2 13:11:25 2005 (5)
+[TIMESTAMP] 1118194001 Wed Jun  8 03:26:41 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 5-gok.log 9-gok.log
 
-[BUILDTIME] 11484 (5)
-[BUILDTIME] 12114 (9)
+[BUILDTIME] 11076 (5)
+[BUILDTIME] 12243 (9)
 [SIZE] 7.90 MB, 721 files
 
-[DEP] 00-dirtree alsa alsa:dev at-spi at-spi:dev atk atk:dev
-[DEP] audiofile audiofile:dev bash2 binutils bug-buddy bzip2 coreutils
+[DEP] 00-dirtree alsa alsa:dev at-spi at-spi:dev atk atk:dev audiofile
+[DEP] audiofile:dev bash2 battfink binutils bug-buddy bzip2 coreutils
 [DEP] cpan-xml-parser diffutils docbookx eog epiphany esound esound:dev
-[DEP] expat findutils freetype gail gail:dev gawk gcalctool gcc34 gcc34:dev
-[DEP] gconf gconf:dev gdm gedit gettext ghex12 glade10 glib glib:dev
-[DEP] glibc23 glibc23:dev gnome-desktop gnome-keyring gnome-keyring:dev
-[DEP] gnome-speech gnome-speech:dev gnome-utils gnome-vfs gnome-vfs:dev
-[DEP] gnome14-dirtree gnome2-dirtree grep gtk+ gtk+:dev libart_lgpl23
-[DEP] libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui libbonoboui:dev
-[DEP] libgda libglade libglade:dev libgnome libgnome:dev libgnomecanvas
-[DEP] libgnomecanvas:dev libgnomeui libgnomeui:dev libjpeg libjpeg:dev
-[DEP] libwnck libwnck:dev libxml2 libxml2:dev linux26-header:dev make
-[DEP] mgt mktemp net-tools openssl orbit2 orbit2:dev pango pango:dev
-[DEP] perl5 pkgconfig popt popt:dev quick-lounge-applet scrollkeeper
-[DEP] sed startup-notification startup-notification:dev sysfiles tar
-[DEP] util-linux xorg xorg:dev zlib:dev
+[DEP] expat file-roller findutils freetype gail gail:dev gawk gcalctool
+[DEP] gcc34 gcc34:dev gconf gconf:dev gdm gedit gettext ghex12 glade10
+[DEP] glib glib:dev glibc23 glibc23:dev gnome-applets gnome-blog
+[DEP] gnome-desktop gnome-doc-utils gnome-keyring gnome-keyring:dev
+[DEP] gnome-netstatus gnome-speech gnome-speech:dev gnome-utils gnome-vfs
+[DEP] gnome-vfs:dev gnome14-dirtree gnome2-dirtree gnotepad+ grep gtk+
+[DEP] gtk+:dev libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev
+[DEP] libbonoboui libbonoboui:dev libgda libglade libglade:dev libgnome
+[DEP] libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeui
+[DEP] libgnomeui:dev libjpeg libjpeg:dev libwnck libwnck:dev libxml2
+[DEP] libxml2:dev linux26-header:dev make mgt mktemp net-tools openssl
+[DEP] orbit2 orbit2:dev pango pango:dev perl5 pkgconfig popt popt:dev
+[DEP] quick-lounge-applet scrollkeeper sed startup-notification
+[DEP] startup-notification:dev sysfiles tar util-linux xorg xorg:dev
+[DEP] zapping zlib:dev
 
 [PROVIDES] create-branching-keyboard gok
 

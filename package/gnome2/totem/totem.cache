@@ -20,24 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1116782556 Sun May 22 19:22:36 2005 (5)
-[TIMESTAMP] 1117037656 Wed May 25 18:14:16 2005 (9)
+[TIMESTAMP] 1117780035 Fri Jun  3 08:27:15 2005 (5)
+[TIMESTAMP] 1118298576 Thu Jun  9 08:29:36 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
 [LOGS] 5-totem.log 9-totem.log
 
-[BUILDTIME] 8430 (5)
-[BUILDTIME] 10230 (9)
+[BUILDTIME] 8540 (5)
+[BUILDTIME] 13517 (9)
 [SIZE] 2.67 MB, 150 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
 [DEP] balsa bash2 binutils bzip2 coreutils cpan-xml-parser diffutils
 [DEP] docbookx esound esound:dev evolution expat findutils freetype
 [DEP] freetype:dev gawk gcc34 gcc34:dev gconf gconf:dev gettext ggv gjiten
-[DEP] glabels glade glib glib:dev glibc23 glibc23:dev gnome-desktop
-[DEP] gnome-desktop:dev gnome-keyring gnome-keyring:dev gnome-libs14
+[DEP] glabels glade glib glib:dev glibc23 glibc23:dev gnome-applets
+[DEP] gnome-blog gnome-desktop gnome-desktop:dev gnome-keyring
+[DEP] gnome-keyring:dev gnome-libs14 gnome-media gnome-pilot
 [DEP] gnome-system-monitor gnome-terminal gnome-vfs gnome-vfs:dev
 [DEP] gnome14-dirtree gnome2-dirtree gnome2-user-docs gnomemeeting
 [DEP] gok grep gst-editor gthumb gtk+ gtk+:dev gucharmap libart_lgpl23
@@ -47,9 +48,9 @@
 [DEP] libxml2 libxml2:dev linux26-header:dev lirc lirc:dev make mktemp
 [DEP] nautilus nautilus-cd-burner nautilus-cd-burner:dev nautilus:dev
 [DEP] net-tools openssl orbit2 orbit2:dev pango pango:dev perl5 pkgconfig
-[DEP] popt popt:dev pybliographer scrollkeeper sed startup-notification
-[DEP] startup-notification:dev sysfiles tar util-linux xine-lib
-[DEP] xine-lib:dev xorg xorg:dev zlib:dev
+[DEP] popt popt:dev pybliographer scrollkeeper seahorse sed sound-juicer
+[DEP] startup-notification startup-notification:dev sysfiles tar util-linux
+[DEP] xine-lib xine-lib:dev xorg xorg:dev zapping zlib:dev
 
 [PROVIDES] libtotem-plparser.a libtotem-plparser.so
 [PROVIDES] libtotem-properties-page.a libtotem-properties-page.so totem

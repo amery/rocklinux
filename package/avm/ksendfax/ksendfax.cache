@@ -20,125 +20,27 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1116036164 Sat May 14 04:02:44 2005 (5)
-[TIMESTAMP] 1116547942 Fri May 20 02:12:22 2005 (9)
-[TIMESTAMP] 1116571156 Fri May 20 08:39:16 2005 (5)
-[TIMESTAMP] 1116572513 Fri May 20 09:01:53 2005 (9)
-[TIMESTAMP] 1117534671 Tue May 31 12:17:51 2005 (5) ERROR
-[TIMESTAMP] 1117535235 Tue May 31 12:27:15 2005 (9) ERROR
+[TIMESTAMP] 1117934147 Sun Jun  5 03:15:47 2005 (5)
+[TIMESTAMP] 1118460981 Sat Jun 11 05:36:21 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference-expert
 [ROCKVER] TRUNK
 
-[LOGS] 5-ksendfax.err 9-ksendfax.err
+[LOGS] 5-ksendfax.log 9-ksendfax.log
 
-[BUILDTIME] 8372 (5)
-[BUILDTIME] 8432 (9)
-[BUILDTIME] 8457 (5)
-[BUILDTIME] 8427 (9)
-[BUILDTIME] 8178 (5) ERROR
-[BUILDTIME] 8175 (9) ERROR
+[BUILDTIME] 11755 (5)
+[BUILDTIME] 12173 (9)
+[SIZE] 0.66 MB, 51 files
 
+[DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils expat
+[DEP] fam fam:dev file findutils freetype freetype:dev gawk gcc34
+[DEP] gcc34:dev gettext glibc23 glibc23:dev grep hicolor-icon-theme
+[DEP] kdegraphics kdegraphics:dev kdelibs kdelibs:dev kphone leif
+[DEP] leif:doc libart_lgpl23 libart_lgpl23:dev libexif libexif:dev
+[DEP] libgphoto libgphoto:dev libjpeg libjpeg:dev libpng libpng:dev libusb
+[DEP] libusb:dev linux26-header:dev make mktemp net-tools patch perl5 qt
+[DEP] qt:dev sane-backends sane-backends:dev sed sysfiles tar util-linux
+[DEP] xorg xorg:dev zlib:dev
 
-[5-ERROR] /opt/qt33/include/qtooltip.h:91: note: candidates are: static void QToolTip::add(QWidget*, const QString&)
-[5-ERROR] /opt/qt33/include/qtooltip.h:93: note:                 static void QToolTip::add(QWidget*, const QString&, QToolTipGroup*, const QString&)
-[5-ERROR] /opt/qt33/include/qtooltip.h:96: note:                 static void QToolTip::add(QWidget*, const QRect&, const QString&)
-[5-ERROR] /opt/qt33/include/qtooltip.h:98: note:                 static void QToolTip::add(QWidget*, const QRect&, const QString&, QToolTipGroup*, const QString&)
-[5-ERROR] myscandialog.cpp:185: error: `GROUP_STARTUP' undeclared (first use this function)
-[5-ERROR] myscandialog.cpp:186: error: `STARTUP_SKIP_ASK' undeclared (first use this function)
-[5-ERROR] myscandialog.cpp:187: error: `STARTUP_ONLY_LOCAL' undeclared (first use this function)
-[5-ERROR] myscandialog.cpp:192: error: invalid use of undefined type `struct QCheckBox'
-[5-ERROR] myscandialog.h:16: error: forward declaration of `struct QCheckBox'
-[5-ERROR] myscandialog.cpp:193: error: no matching function for call to `MyScanDialog::connect(QCheckBox*&, const char[15], MyScanDialog* const, const char[28])'
-[5-ERROR] /opt/qt33/include/qobject.h:116: note: candidates are: static bool QObject::connect(const QObject*, const char*, const QObject*, const char*)
-[5-ERROR] /opt/qt33/include/qobject.h:227: note:                 bool QObject::connect(const QObject*, const char*, const char*) const
-[5-ERROR] myscandialog.cpp:195: error: invalid use of undefined type `struct QCheckBox'
-[5-ERROR] myscandialog.h:16: error: forward declaration of `struct QCheckBox'
-[5-ERROR] myscandialog.cpp:196: error: no matching function for call to `MyScanDialog::connect(QCheckBox*&, const char[15], MyScanDialog* const, const char[25])'
-[5-ERROR] /opt/qt33/include/qobject.h:116: note: candidates are: static bool QObject::connect(const QObject*, const char*, const QObject*, const char*)
-[5-ERROR] /opt/qt33/include/qobject.h:227: note:                 bool QObject::connect(const QObject*, const char*, const char*) const
-[5-ERROR] myscandialog.cpp:199: error: no matching function for call to `QWidget::QWidget(QVBox*&)'
-[5-ERROR] /opt/qt33/include/qwidget.h:696: note: candidates are: QWidget::QWidget(const QWidget&)
-[5-ERROR] /opt/qt33/include/qwidget.h:135: note:                 QWidget::QWidget(QWidget*, const char*, uint)
-[5-ERROR] myscandialog.cpp: In member function `void MyScanDialog::slotNetworkToggle(bool)':
-[5-ERROR] myscandialog.cpp:216: error: `GROUP_STARTUP' undeclared (first use this function)
-[5-ERROR] myscandialog.cpp:217: error: `STARTUP_ONLY_LOCAL' undeclared (first use this function)
-[5-ERROR] myscandialog.cpp: In member function `void MyScanDialog::slotAskOnStartToggle(bool)':
-[5-ERROR] myscandialog.cpp:234: error: `GROUP_STARTUP' undeclared (first use this function)
-[5-ERROR] myscandialog.cpp:235: error: `STARTUP_SKIP_ASK' undeclared (first use this function)
-[5-ERROR] myscandialog.cpp: In member function `virtual bool MyScanDialog::setup()':
-[5-ERROR] myscandialog.cpp:259: error: invalid use of undefined type `struct Previewer'
-[5-ERROR] myscandialog.h:15: error: forward declaration of `struct Previewer'
-[5-ERROR] myscandialog.cpp: In member function `void MyScanDialog::slotNewPreview(QImage*)':
-[5-ERROR] myscandialog.cpp:279: error: invalid use of undefined type `struct Previewer'
-[5-ERROR] myscandialog.h:15: error: forward declaration of `struct Previewer'
-[5-ERROR] make[3]: *** [myscandialog.o] Error 1
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.ksendfax.1117534546.30378.797321464/ksendfax-3.0.2/ksendfax'
-[5-ERROR] make[2]: *** [all-recursive] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.ksendfax.1117534546.30378.797321464/ksendfax-3.0.2/ksendfax'
-[5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.ksendfax.1117534546.30378.797321464/ksendfax-3.0.2'
-[5-ERROR] make: *** [all] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 0 files for this package.
-[5-ERROR] Applying package split: 40 ksendfax:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 ksendfax:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 ksendfax:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building ksendfax=ksendfax.
-
-[9-ERROR] /opt/qt33/include/qtooltip.h:91: note: candidates are: static void QToolTip::add(QWidget*, const QString&)
-[9-ERROR] /opt/qt33/include/qtooltip.h:93: note:                 static void QToolTip::add(QWidget*, const QString&, QToolTipGroup*, const QString&)
-[9-ERROR] /opt/qt33/include/qtooltip.h:96: note:                 static void QToolTip::add(QWidget*, const QRect&, const QString&)
-[9-ERROR] /opt/qt33/include/qtooltip.h:98: note:                 static void QToolTip::add(QWidget*, const QRect&, const QString&, QToolTipGroup*, const QString&)
-[9-ERROR] myscandialog.cpp:185: error: `GROUP_STARTUP' undeclared (first use this function)
-[9-ERROR] myscandialog.cpp:186: error: `STARTUP_SKIP_ASK' undeclared (first use this function)
-[9-ERROR] myscandialog.cpp:187: error: `STARTUP_ONLY_LOCAL' undeclared (first use this function)
-[9-ERROR] myscandialog.cpp:192: error: invalid use of undefined type `struct QCheckBox'
-[9-ERROR] myscandialog.h:16: error: forward declaration of `struct QCheckBox'
-[9-ERROR] myscandialog.cpp:193: error: no matching function for call to `MyScanDialog::connect(QCheckBox*&, const char[15], MyScanDialog* const, const char[28])'
-[9-ERROR] /opt/qt33/include/qobject.h:116: note: candidates are: static bool QObject::connect(const QObject*, const char*, const QObject*, const char*)
-[9-ERROR] /opt/qt33/include/qobject.h:227: note:                 bool QObject::connect(const QObject*, const char*, const char*) const
-[9-ERROR] myscandialog.cpp:195: error: invalid use of undefined type `struct QCheckBox'
-[9-ERROR] myscandialog.h:16: error: forward declaration of `struct QCheckBox'
-[9-ERROR] myscandialog.cpp:196: error: no matching function for call to `MyScanDialog::connect(QCheckBox*&, const char[15], MyScanDialog* const, const char[25])'
-[9-ERROR] /opt/qt33/include/qobject.h:116: note: candidates are: static bool QObject::connect(const QObject*, const char*, const QObject*, const char*)
-[9-ERROR] /opt/qt33/include/qobject.h:227: note:                 bool QObject::connect(const QObject*, const char*, const char*) const
-[9-ERROR] myscandialog.cpp:199: error: no matching function for call to `QWidget::QWidget(QVBox*&)'
-[9-ERROR] /opt/qt33/include/qwidget.h:696: note: candidates are: QWidget::QWidget(const QWidget&)
-[9-ERROR] /opt/qt33/include/qwidget.h:135: note:                 QWidget::QWidget(QWidget*, const char*, uint)
-[9-ERROR] myscandialog.cpp: In member function `void MyScanDialog::slotNetworkToggle(bool)':
-[9-ERROR] myscandialog.cpp:216: error: `GROUP_STARTUP' undeclared (first use this function)
-[9-ERROR] myscandialog.cpp:217: error: `STARTUP_ONLY_LOCAL' undeclared (first use this function)
-[9-ERROR] myscandialog.cpp: In member function `void MyScanDialog::slotAskOnStartToggle(bool)':
-[9-ERROR] myscandialog.cpp:234: error: `GROUP_STARTUP' undeclared (first use this function)
-[9-ERROR] myscandialog.cpp:235: error: `STARTUP_SKIP_ASK' undeclared (first use this function)
-[9-ERROR] myscandialog.cpp: In member function `virtual bool MyScanDialog::setup()':
-[9-ERROR] myscandialog.cpp:259: error: invalid use of undefined type `struct Previewer'
-[9-ERROR] myscandialog.h:15: error: forward declaration of `struct Previewer'
-[9-ERROR] myscandialog.cpp: In member function `void MyScanDialog::slotNewPreview(QImage*)':
-[9-ERROR] myscandialog.cpp:279: error: invalid use of undefined type `struct Previewer'
-[9-ERROR] myscandialog.h:15: error: forward declaration of `struct Previewer'
-[9-ERROR] make[3]: *** [myscandialog.o] Error 1
-[9-ERROR] make[3]: Leaving directory `/ROCK/src.ksendfax.1117535115.10575.4154973378/ksendfax-3.0.2/ksendfax'
-[9-ERROR] make[2]: *** [all-recursive] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.ksendfax.1117535115.10575.4154973378/ksendfax-3.0.2/ksendfax'
-[9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.ksendfax.1117535115.10575.4154973378/ksendfax-3.0.2'
-[9-ERROR] make: *** [all] Error 2
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 0 files for this package.
-[9-ERROR] Applying package split: 40 ksendfax:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 ksendfax:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 ksendfax:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building ksendfax=ksendfax.
+[PROVIDES] ksendfax
 

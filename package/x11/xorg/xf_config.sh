@@ -47,10 +47,10 @@ xf_extract_gl() {
 # extract the Matrox HALlib (additional TV/DVI out support on x86)
 xf_extract_hallib() {
 	echo "Extracting mgaHALlib (For Matrox (>G400) cards) ..."
-	tar $taropt $archdir/mgadrivers-$mga_version-src.tbz2
-	cp mgadrivers-$mga_version-src/4.2.0/drivers/src/HALlib/mgaHALlib.a \
+	tar $taropt $archdir/mgadriver-$mga_version-src.tar.bz2
+	cp mgadriver-$mga_version-src/4.3.0/mga/HALlib/mgaHALlib.a \
 	  programs/Xserver/hw/xfree86/drivers/mga/HALlib/mgaHALlib.a
-	rm -rf mgadrivers-$mga_version-src 
+	rm -rf mgadriver-$mga_version-src 
 
 	if [[ $arch == "x86" && $arch_machine != "x86_64" ]] ; then
 		echo "Enabling Matrox HALlib (since this is x86) ..."

@@ -131,6 +131,7 @@ mirror='' ; checkonly=0 ; altdir='' ; loop=1
 tryques=0 ; nocheck=0 ; options='-this_is_the_2nd_run '
 notimeout=0 ; curl_options='--disable-epsv --location'
 altcopy=link
+ignore_xpkg=1
 
 #
 while [ $loop -eq 1 ] ; do
@@ -235,8 +236,11 @@ fi
 curl_options="$curl_options -k"
 
 # build descparser if needed and run it
+# name=value pairs as arguments to this function are passed to the 
+# descparser binary as environment variables
 descparser() {
         local var
+	local descfiles
 	if [ ! -f src/descparser ]; then
 		mkdir -p src
 		cc -o src/descparser misc/tools-source/descparser.c
@@ -246,7 +250,13 @@ descparser() {
         else
              var="descparser_ign_xpkg=1"
         fi
-	cat "$@" | eval $var src/descparser
+	for arg ; do
+		case $arg in 
+		*=*) var="$var $arg";;
+		*) descfiles="$arg $descfiles";;
+		esac
+	done
+	cat "${descfiles% }" | eval $var src/descparser
 }
 
 # cksum_chk filename cksum origfile
@@ -815,14 +825,16 @@ required() {
         echo "ERROR: try ./scripts/Config -cfg $config first."
         exit 1
     fi
+    
+    ignore_xpkg=0
 
     local forkedpkg
     while read on a b repo pkg c ; do
-	forkedpkg=${pkg%=*}
-	[ "$forkedpkg" = "$pkg" ] || pkg=$forkedpkg
+	forkedpkg=${pkg#*=}
+	[ "$forkedpkg" = "$pkg" ] || pkg=${pkg%=*}
 
 	if [ "$on" = "X" ] ; then
-	    descparser package/$repo/$pkg/$pkg.desc | grep '^\[D\] ' > src/down.$$.lst
+	    descparser "xpkg=$forkedpkg" "package/$repo/$pkg/$pkg.desc" | grep '^\[D\] ' > src/down.$$.lst
 	    while read tag cksum file url flags ; do
 		download_file "`source_file cksum $file url $flags`" "$url" "$cksum" "$repo" "$pkg"
 	    done < src/down.$$.lst ; rm -f src/down.$$.lst
@@ -866,7 +878,13 @@ all() {
 
 packages() {
 	local descfile
+	local forkedpkg
 	for arg; do
+		# Check if this is a forked package name
+		case "$arg" in
+		*=*) ignore_xpkg=0; forkedpkg="xpkg=${arg#*=}"; arg=${arg%=*};;
+		*) ignore_xpkg=1; forkedpkg="";;
+		esac
 		case "$arg" in
 		target/*)
 			if [ ! -f $arg ]; then
@@ -899,7 +917,8 @@ packages() {
 			while read tag cksum file url flags ; do
 			    download_file "`source_file cksum $file url $flags`" \
 				"$url" "$cksum" "$repo" "$pkg"
-			done < <(descparser package/$repo/$pkg/$pkg.desc | grep '^\[D\] ')
+			done < <(descparser $forkedpkg package/$repo/$pkg/$pkg.desc |
+				grep '^\[D\] ')
 			;;
 		esac
 	done

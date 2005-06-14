@@ -1,7 +1,7 @@
 diff -dur /usr/src/mine-0.21/install.c ./install.c
 --- /usr/src/mine-0.21/install.c	2005-03-23 09:51:06.000000000 +0100
 +++ ./install.c	2005-05-03 13:14:05.000000000 +0200
-@@ -137,6 +137,20 @@
+@@ -137,6 +137,21 @@
  		       O_RDONLY, 0, 0) == -1) goto error_errno;
  	if ( mode_test && mode_verbose ) printf("-- %s --\n", pname);
  
@@ -12,17 +12,18 @@ diff -dur /usr/src/mine-0.21/install.c ./install.c
 +		snprintf(postinst, 1024, "%s/var/adm/postinstall/%s-install.XXXXXX", root, pname);
 +		if ( mkstemp(postinst) != -1 ) 
 +			logfile = fopen(postinst, "w");
-+		if ( mode_verbose ) 
++		if ( mode_verbose ) {
 +			if ( logfile == NULL )
 +				printf("Not writing postinstall log\n");
 +			else
 +				printf("Writing postinstall log to %s\n", postinst);
++		}
 +	}
 +
  	filename = 0;
  	while (th_read(t) == 0)
  	{
-@@ -187,17 +201,20 @@
+@@ -187,17 +201,21 @@
  		}
  		else
  		{
@@ -40,21 +41,10 @@ diff -dur /usr/src/mine-0.21/install.c ./install.c
  
  	tar_close(t); close(bunzip2tar[0]);
  	cdb_free(&c); close(gem_fd);
++
 +	if ( logfile != NULL ) fclose(logfile);
  
  	return 0;
- 
-diff -dur /usr/src/mine-0.21/Makefile ./Makefile
---- /usr/src/mine-0.21/Makefile	2005-03-23 09:51:06.000000000 +0100
-+++ ./Makefile	2005-05-03 16:41:09.000000000 +0200
-@@ -20,7 +20,7 @@
- 
- # Mine Itself
- #
--MINE_VER  = 0.21
-+MINE_VER  = 0.22
- MINE_OBJ  = check.o create.o install.o remove.o pkglist.o mkpdb.o
- MINE_OBJ += showfile.o showkey.o memdb.o md5.o md5sum.o mine.o
  
 diff -dur /usr/src/mine-0.21/md5sum.c ./md5sum.c
 --- /usr/src/mine-0.21/md5sum.c	2005-03-23 09:51:06.000000000 +0100
@@ -264,7 +254,7 @@ diff -dur /usr/src/mine-0.21/remove.c ./remove.c
   */
  struct flist;
  struct flist {
-@@ -98,6 +98,21 @@
+@@ -98,6 +98,22 @@
  	}
  	fclose(f);
  
@@ -276,17 +266,18 @@ diff -dur /usr/src/mine-0.21/remove.c ./remove.c
 +					 root, package);
 +		if ( mkstemp(postinst) != -1 ) 
 +			logfile = fopen(postinst, "w");
-+		if ( mode_verbose ) 
++		if ( mode_verbose ) {
 +			if ( logfile == NULL )
 +				printf("Not writing postremove log\n");
 +			else
 +				printf("Writing postremove log to %s\n", postinst);
++		}
 +	}
 +
  	while ( flist )
  	{
  		filename = flist->filename;
-@@ -158,9 +173,12 @@
+@@ -158,9 +173,13 @@
  					errors++;
  				}
  			}
@@ -295,9 +286,10 @@ diff -dur /usr/src/mine-0.21/remove.c ./remove.c
  		}
  
  		free(filename);
-+		if ( logfile != NULL ) fclose(logfile);
  	}
  
++	if ( logfile != NULL ) fclose(logfile);
++
  	if ( errors )
 diff -dur /usr/src/mine-0.21/showfile.c ./showfile.c
 --- /usr/src/mine-0.21/showfile.c	2005-03-23 09:51:06.000000000 +0100

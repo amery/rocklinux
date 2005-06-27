@@ -995,14 +995,14 @@ abort() {
 		fi
 		sort -u $builddir/dependencies.debug > var/adm/dep-debug/$xpkg
 
-		# add debug info for known false positives
-		if egrep -q "^[^#].*[   ]$spkg([        ]|$)" $base/scripts/dep_fixes.txt; then
+		# add debug info for known false dependencies
+		if egrep -q "^[^#].* $spkg( |$)" $base/scripts/dep_fixes.txt; then
 			echo "---  $spkg [$stagelevel] ---" >> $root/var/adm/rock-debug/falsedeps.txt
 		fi
 		while read x; do
 			grep "^$x: " $builddir/dependencies.debug | sort -u | \
 				sed "s,:, -> $spkg [$stagelevel]:," >> $root/var/adm/rock-debug/falsedeps.txt
-		done < <( egrep "^$spkg[        ]+del[  ]+" $base/scripts/dep_fixes.txt | \
+		done < <( egrep "^$spkg +del +" $base/scripts/dep_fixes.txt | \
 				tr ' ' '\t' | tr -s '\t' | cut -f3- | tr '\t' '\n' )
 
 		# merge the dependencies defined by the package

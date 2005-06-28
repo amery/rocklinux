@@ -11,10 +11,8 @@
 # grep -f <( grep color=red dependencies.dot | awk '{ gsub("_", "."); print "^" $3 ".*" $1; }'; ) <( perl -pe 'my @a = split /\s+/; my $p = shift @a; shift @a; printf "%-20s del %s\n", $p, $_ foreach (@a); $_=""' old_dep_fixes.txt; )
 
 docbookx del gnome-doc-utils
-firefox  del mplayerplug-in
 libxml2  del libxslt
 mozilla  del control-center
-mozilla  del mplayerplug-in
 mozilla  del nautilus-cd-burner
 mplayer  del mplayer-fonts
 python   del kdebindings

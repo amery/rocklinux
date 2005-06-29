@@ -1,3 +1,6 @@
 
+# the python interpreter reads all this files on startup, but
+# they are note required and if a real dependency ist there it
+# will read other files from the package which provided the *.pth too
 var_append flistrfilter "|" ".*/lib/python.*\.pth"
 

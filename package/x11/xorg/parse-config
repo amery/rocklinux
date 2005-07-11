@@ -24,3 +24,10 @@ if [ "$ROCKCFG_PKG_XORG_XINERAMA" = 1 ] ; then
 	var_append confopt " " "--with-xinerama"
 fi
 
+if [ "$stagelevel" -gt 1 -a -d "/usr/X11/bin" ]; then
+	# ouch! some packages seam to be using
+	# this variables in ./configure
+	export XBINDIR=/usr/X11/bin
+	export XLIBDIR=/usr/X11/lib
+fi
+

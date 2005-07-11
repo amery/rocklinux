@@ -1,0 +1,18 @@
+--- ./src/tr.c	2005-07-06 11:31:33.000000000 +0200
++++ ./src/tr.c	2005-07-06 11:30:56.000000000 +0200
+@@ -8,6 +8,15 @@
+ 
+ #include <asm/types.h>
+ #include <linux/if_tr.h>
++
++/* conflict between sys/types.h and asm/types.h */
++#define nlink_t libc_nlink_t
++#define mode_t libc_mode_t
++#define fd_set libc_fd_set
++#define dev_t libc_dev_t
++#define gid_t libc_gid_t
++#define uid_t libc_uid_t
++
+ #include <netinet/in.h>
+ 
+ unsigned int get_tr_ip_offset(unsigned char *pkt)

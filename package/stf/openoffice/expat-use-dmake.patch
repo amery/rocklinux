@@ -1,0 +1,13 @@
+--- ./expat/expat.patch.orig	2005-05-23 13:57:24.000000000 +0200
++++ ./expat/expat.patch	2005-05-23 14:04:34.000000000 +0200
+@@ -66,8 +66,8 @@
+ ! #
+ ! #*************************************************************************
+ ! target:
+-! 	+cd xmltok && $(MAKE) $(MFLAGS) $(CALLMACROS)
+-! 	+cd xmlparse && $(MAKE) $(MFLAGS) $(CALLMACROS)
++! 	+cd xmltok && $(DMAKE) $(MFLAGS) $(CALLMACROS)
++! 	+cd xmlparse && $(DMAKE) $(MFLAGS) $(CALLMACROS)
+ *** misc/expat/xmlparse/makefile.mk	Mon Apr 29 18:59:16 2002
+ --- misc/build/expat/xmlparse/makefile.mk	Mon Apr 29 17:49:05 2002
+ ***************

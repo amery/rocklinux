@@ -2,6 +2,7 @@
 
 kernel=`uname -r`
 tmpdir=`mktemp -d`
+modprobeopt=`echo $kernel | sed '/2.4/ { s,.*,-n,; q; }; s,.*,--show-depends,'`
 empty=0
 
 if [ "$1" = "empty" ]; then
@@ -32,7 +33,7 @@ echo "Creating /boot/initrd-${kernel}.img ..."
 if [ "$empty" = 0 ]; then
   grep '^modprobe ' /etc/conf/kernel |
   grep -v 'no-initrd' | sed 's,[ 	]#.*,,' |
-  while read a b; do $a -n -v $b 2> /dev/null; done |
+  while read a b; do $a $modprobeopt -v $b 2> /dev/null; done |
   while read a b c; do
 	# ouch - this is pretty ugly....
 	b="${b//`uname -r`/$kernel}"

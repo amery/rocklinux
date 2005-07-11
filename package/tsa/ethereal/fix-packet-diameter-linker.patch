@@ -1,0 +1,19 @@
+--- ./epan/dissectors/packet-diameter.c.vanilla	2005-06-11 22:41:26.489159160 +0200
++++ ./epan/dissectors/packet-diameter.c	2005-06-11 22:42:37.487365792 +0200
+@@ -2022,13 +2022,13 @@
+ 		  { "Flags", "diameter.flags", FT_UINT8, BASE_HEX, NULL, 0x0,
+ 		    "", HFILL }},
+ 		{ &hf_diameter_flags_request,
+-		  { "Request", "diameter.flags.request", FT_BOOLEAN, 8, TFS(&flags_set_truth), DIAM_FLAGS_R,
++		  { "Request ", "diameter.flags.request", FT_BOOLEAN, 8, TFS(&flags_set_truth), DIAM_FLAGS_R,
+ 			"", HFILL }},
+ 		{ &hf_diameter_flags_proxyable,
+-		  { "Proxyable", "diameter.flags.proxyable", FT_BOOLEAN, 8, TFS(&flags_set_truth), DIAM_FLAGS_P,
++		  { "Proxyable ", "diameter.flags.proxyable", FT_BOOLEAN, 8, TFS(&flags_set_truth), DIAM_FLAGS_P,
+ 			"", HFILL }},
+ 		{ &hf_diameter_flags_error,
+-		  { "Error","diameter.flags.error", FT_BOOLEAN, 8, TFS(&flags_set_truth), DIAM_FLAGS_E,
++		  { "Error ","diameter.flags.error", FT_BOOLEAN, 8, TFS(&flags_set_truth), DIAM_FLAGS_E,
+ 			"", HFILL }},
+ 		{ &hf_diameter_flags_T,
+ 		  { "T(Potentially re-transmitted message)","diameter.flags.T", FT_BOOLEAN, 8, TFS(&flags_set_truth),DIAM_FLAGS_T,

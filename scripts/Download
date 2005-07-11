@@ -327,6 +327,26 @@ detect_mirror() {
     fi
 }
 
+
+# Check if static download location is available
+#
+is_static() {
+	local repo="$1" pkg="$2" gzfile="$3" url="$4"
+	
+	local file="package/$repo/$pkg/$pkg.desc"
+	local pattern="^\[D\].*${gzfile##*/}.*NOAUTO"
+	
+	if [ "`grep "$file" -e"$pattern"`" != "" ]; then
+		mkdir -p "${gzfile%/*}"
+		echo "INFO: File ${gzfile##*/} needs to be downloaded manually." 
+		echo "INFO: Download the file from"
+		echo "INFO:     $url"
+		echo "INFO: and place it in ${gzfile%/*}"
+		return 1
+	fi
+	return 0
+}
+
 # download_file local-filename download-location cksum repo pkg
 #
 # This function decides if download directly or from a mirror,
@@ -468,12 +488,18 @@ download_file() {
 
 			if ! download_file_now "!$mirror/${bzfile#download/mirror/}" $bzfile $bzfile; then
 				echo "INFO: download from mirror failed, trying original URL." 1>&2
+				if ! is_static $repo $pkg "$gzfile" "$location"; then
+					rm -f "$lkfile" ; trap INT ; return 1
+				fi
 				download_file_now $location $gzfile $bzfile
 			else
 				gzfile="$bzfile"
 			fi
 		    else
 			# don't want to use mirror
+			if ! is_static $repo $pkg "$gzfile" "$location"; then
+				rm -f "$lkfile" ; trap INT ; return 1
+			fi
 			download_file_now $location $gzfile $bzfile
 		    fi
 		fi

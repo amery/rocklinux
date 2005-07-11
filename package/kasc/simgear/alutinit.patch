@@ -1,0 +1,22 @@
+--- ./simgear/sound/soundmgr_openal.cxx.orig	2005-07-11 17:54:35.000000000 +0200
++++ ./simgear/sound/soundmgr_openal.cxx	2005-07-11 17:54:52.000000000 +0200
+@@ -71,7 +71,7 @@
+     SG_LOG( SG_GENERAL, SG_INFO, "Initializing OpenAL sound manager" );
+ 
+     // initialize OpenAL
+-    alutInit( 0, NULL );
++    alutInit( 0, 0, 0 );
+     atexit(alutExit);
+ 
+     if ( alGetError() == AL_NO_ERROR) {
+--- ./simgear/sound/openal_test1.cxx.orig	2005-07-11 17:55:17.000000000 +0200
++++ ./simgear/sound/openal_test1.cxx	2005-07-11 17:55:27.000000000 +0200
+@@ -39,7 +39,7 @@
+ 
+ int main( int argc, char *argv[] ) {
+     // initialize OpenAL
+-    alutInit( 0, NULL );
++    alutInit( 0, 0, 0 );
+     alGetError();
+     if ( alGetError() != AL_NO_ERROR) {
+ 	SG_LOG( SG_GENERAL, SG_ALERT, "Audio initialization failed!" );

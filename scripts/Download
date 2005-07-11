@@ -311,10 +311,10 @@ detect_mirror() {
 		echo -n "INFO: Testing <$mirror_name> ..." 1>&2
 		val="$(curl -s $curl_options -m 20 "${mirror_url%/}/DOWNTEST" \
 			-w "ok %{speed_download}" -o /dev/null)"
-		if [ "$val" = "${val#ok }" -o "$val" = "ok 0.000" ] ; then
+		if [ "$val" = "${val#ok }" -o "$val" = "ok 0.000" -o "$val" = "ok 0,000" ] ; then
 			echo " error"
 		else
-			xval=`echo ${val#ok } | tr -d .` ; echo " $val"
+			xval=`echo ${val#ok } | tr -d .,` ; echo " $val"
 			if [ "$xval" -gt "$bestval" ] ; then
 				bestval=$xval ; mirror="${mirror_url%/}"
 				result="Using mirror <$mirror>."

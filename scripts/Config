@@ -87,7 +87,7 @@ done
 if [ $do_config_cycle = 0 ]
 then
 	export swpid=swp$$
-	rm -f CONFIg.data.$swpid config.dialog.$swpid config.out.$swpid config.help.$swpid
+	rm -f config.data.$swpid config.dialog.$swpid config.out.$swpid config.help.$swpid
 	rm -f config.pcache.data.$swpid config.pcache.cmd.$swpid
 	rm -f rockdialog.scrltmp # src/rockdialog.bin
 	mkdir -p src

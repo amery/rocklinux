@@ -32,7 +32,7 @@ do
 		echo_error "Did not find program binary for '$x'."
 done
 
-for x in iproute2 iptables grub pppd
+for x in iproute2 iptables grub ppp
 do
 	echo_status "Copy entire $x package."
 	while read dummy fn
@@ -47,7 +47,7 @@ for x in $( ls initrd/bin/ )
 do
 	while read a b c d
 	do
-		[ "$b" = "=>" ] && \
+		[ "$b" = "=>" ] && [ -n "$d" ] && \
 			cp $build_root/${c#/} initrd/lib/
 	done < <( chroot $build_root /bin/bash -c \
 					"cd /; ldd \`type -p $x\`"; )
@@ -88,8 +88,19 @@ cp $build_root/sbin/{hwscan,dumpnetcfg} initrd/bin/
 cp $build_root/usr/share/pci.ids initrd/share/
 ln -s bash initrd/bin/sh
 
-echo_status "Creating initrd image."
-dd if=/dev/zero of=initrd.img count=16384 bs=1024 2>/dev/null
+
+SIZE=$(( 1024 * $ROCKCFG_T_ROUTER_INITRD_SIZE ))
+REALSIZE=`du -sk initrd | cut -d'	' -f1`
+
+if [ $REALSIZE -gt $SIZE ] ; then
+	echo_error "Initrd too small!" 
+	echo_status "$REALSIZE kb are needed, but you only want $SIZE kb."
+	echo_status "please re-run ./scripts/Config and increase the initrd size!"
+	exit 1
+fi
+
+echo_status "Creating initrd image ($SIZE kb)."
+dd if=/dev/zero of=initrd.img count=$SIZE bs=1024 2>/dev/null
 mke2fs -qF initrd.img 2>/dev/null
 mount -o loop initrd.img initrd.mnt
 cp -a initrd/* initrd.mnt/
@@ -104,7 +115,8 @@ echo_status "Create isolinux setup."
 tar --use-compress-program=bzip2 \
 	-xOf $base/download/mirror/s/syslinux-3.07.tar.bz2 \
 	syslinux-3.07/isolinux.bin > isolinux.bin
-cp $base/target/$target/isolinux.cfg .
+sed -e "s,@INITRD_SIZE@,$SIZE," -e "s,@SERIAL_BAUD@,$ROCKCFG_T_ROUTER_SERIAL_BAUD," \
+	$base/target/$target/isolinux.cfg > ./isolinux.cfg
 
 echo_status "Create iso description."
 cat > ../isofs.txt <<- EOT

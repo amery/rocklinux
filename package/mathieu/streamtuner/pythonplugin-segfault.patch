@@ -1,0 +1,19 @@
+diff -ruN streamtuner-0.99.99/src/plugins/python/pst-main.c streamtuner-0.99.99-new/src/plugins/python/pst-main.c
+--- streamtuner-0.99.99/src/plugins/python/pst-main.c	2004-12-11 03:00:39.000000000 +0100
++++ streamtuner-0.99.99-new/src/plugins/python/pst-main.c	2005-06-15 13:13:03.000000000 +0200
+@@ -94,6 +94,7 @@
+ {
+   gboolean status = FALSE;
+   PyObject *module;
++  char *argv[] = { "" };
+ 
+   if (! check_api_version(err))
+     return FALSE;
+@@ -109,6 +110,7 @@
+     }
+ 
+   Py_Initialize();
++  PySys_SetArgv(G_N_ELEMENTS(argv), argv);
+   PyEval_InitThreads();
+ 
+   module = PyImport_AddModule("__main__");

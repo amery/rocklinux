@@ -1,0 +1,12 @@
+diff -ruN flac-1.1.2/src/plugin_xmms/configure.c flac-1.1.2-new/src/plugin_xmms/configure.c
+--- flac-1.1.2/src/plugin_xmms/configure.c	2005-01-25 05:26:29.000000000 +0100
++++ flac-1.1.2-new/src/plugin_xmms/configure.c	2005-06-12 09:59:49.000000000 +0200
+@@ -61,7 +61,7 @@
+ 		"", /* proxy_user */
+ 		"", /* proxy_pass */
+ 		FALSE, /* save_http_stream */
+-		"", /* save_http_path */
++		FALSE, /* save_http_path */
+ 		FALSE, /* cast_title_streaming */
+ 		FALSE /* use_udp_channel */
+ 	},

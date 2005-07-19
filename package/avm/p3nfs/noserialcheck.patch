@@ -1,0 +1,36 @@
+diff -ruN p3nfs-5.18/configure p3nfs-5.18-new/configure
+--- p3nfs-5.18/configure	2005-05-05 09:12:44.000000000 +0200
++++ p3nfs-5.18-new/configure	2005-05-18 12:32:21.000000000 +0200
+@@ -3367,18 +3367,20 @@
+ 
+ 
+ echo "$as_me:$LINENO: checking for default serial line" >&5
+-echo $ECHO_N "checking for default serial line... $ECHO_C" >&6
+-for i in /dev/tty0p0 /dev/tty00 /dev/ttyS0 /dev/term/a /dev/ttyfa /dev/ttya /dev/tty0 /dev/ttyf1 /dev/cuaa1 ; do
+-  if test -c $i ; then
+-    DDEV=$i
+-    echo "$as_me:$LINENO: result: $i" >&5
+-echo "${ECHO_T}$i" >&6
+-    break
+-  fi
+-done
+-test -z "$DDEV" && { { echo "$as_me:$LINENO: error: serial device not found... Try harder." >&5
+-echo "$as_me: error: serial device not found... Try harder." >&2;}
+-   { (exit 1); exit 1; }; }
++echo $ECHO_N "ROCK: default serial line is /dev/tts/0 $ECHO_T" >&6
++DDEV=/dev/tts/0
++# echo $ECHO_N "checking for default serial line... $ECHO_C" >&6
++# for i in /dev/tty0p0 /dev/tty00 /dev/ttyS0 /dev/term/a /dev/ttyfa /dev/ttya /dev/tty0 /dev/ttyf1 /dev/cuaa1 ; do
++#   if test -c $i ; then
++#     DDEV=$i
++#     echo "$as_me:$LINENO: result: $i" >&5
++# echo "${ECHO_T}$i" >&6
++#     break
++#   fi
++# done
++# test -z "$DDEV" && { { echo "$as_me:$LINENO: error: serial device not found... Try harder." >&5
++# echo "$as_me: error: serial device not found... Try harder." >&2;}
++#    { (exit 1); exit 1; }; }
+ 
+ 
+ 

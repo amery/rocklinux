@@ -1,0 +1,11 @@
+--- ./source/cert.cxx.vanilla	2005-07-19 10:41:52.000000000 +0200
++++ ./source/cert.cxx	2005-07-19 10:42:58.000000000 +0200
+@@ -100,7 +100,7 @@
+ 		throw new certificate_exception_init(
+ 				"Could not create the certificate" );
+ 
+-	d2i_X509( &cert, &der_cert, length );
++	d2i_X509( &cert, (const unsigned char**)&der_cert, length );
+ }
+ 	
+ certificate::~certificate(){

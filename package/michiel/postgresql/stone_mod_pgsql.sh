@@ -114,11 +114,18 @@ pgsql_create_db() {
 
 	[ -z "$dbname" ] && return;
 
-	gui_cmd "Creating database $dbname for user $uname" \
-		"echo \"D_prefix/bin/createdb $dbname\" | su - $uname"
+	[ -z "$encoding" ] && encoding="UNICODE"
 
-	unset dbname uname 
+	gui_input "Encoding for the database to create:" "$encoding" "encoding"
+
+	[ -z "$encoding" ] && return;
+
+	gui_cmd "Creating database $dbname for user $uname - $encoding" \
+		"echo \"D_prefix/bin/createdb -E $encoding $dbname\" | su - $uname"
+
+	unset dbname encoding uname 
 }
+
 
 pgsql_drop_db() {
 	if [ -z "$1" -a -z "$uname" ] ; then
@@ -144,7 +151,7 @@ pgsql_drop_db() {
 }
 
 pgsql_gen_menu () {
-    eval `echo "D_prefix/bin/initdb --show" 2>&1 | su - postgres | grep PGDATA`
+    eval `echo "D_prefix/bin/initdb --show 2>&1" | su - postgres | grep PGDATA`
     PGPID="`echo "D_prefix/bin/pg_ctl status" | su - postgres | grep -o 'PID: .[^)]*' | tr -d 'PID: '`"
 
     echo "gui_menu pgsql 'PostgresQL Database Setup'"

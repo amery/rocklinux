@@ -1,0 +1,41 @@
+--- ./ext/digest/md5/md5ossl.c.orig	2005-07-18 16:11:09.000000000 +0200
++++ ./ext/digest/md5/md5ossl.c	2005-07-18 16:23:18.000000000 +0200
+@@ -1,5 +1,7 @@
+ /* $Id: md5ossl.c,v 1.2 2003/01/06 11:47:53 knu Exp $ */
+ 
++#include <sys/types.h>
++
+ #include "md5ossl.h"
+ #include <sys/types.h>
+ #include <stdio.h>
+--- ./ext/digest/sha1/sha1ossl.c.orig	2005-07-18 16:11:45.000000000 +0200
++++ ./ext/digest/sha1/sha1ossl.c	2005-07-18 16:23:32.000000000 +0200
+@@ -1,5 +1,7 @@
+ /* $Id: sha1ossl.c,v 1.1 2002/09/26 17:44:33 knu Exp $ */
+ 
++#include <sys/types.h>
++
+ #include "sha1ossl.h"
+ #include "defs.h"
+ #include <assert.h>
+--- ./ext/digest/rmd160/rmd160ossl.c.orig	2005-07-18 16:12:11.000000000 +0200
++++ ./ext/digest/rmd160/rmd160ossl.c	2005-07-18 16:23:26.000000000 +0200
+@@ -1,5 +1,7 @@
+ /* $Id: rmd160ossl.c,v 1.1 2002/09/26 17:26:46 knu Exp $ */
+ 
++#include <sys/types.h>
++
+ #include "rmd160ossl.h"
+ #include "defs.h"
+ #include <assert.h>
+--- ./ext/openssl/ossl_x509store.c.orig	2005-07-18 16:13:49.000000000 +0200
++++ ./ext/openssl/ossl_x509store.c	2005-07-18 16:22:03.000000000 +0200
+@@ -538,7 +538,7 @@
+ 
+     if(NIL_P(time)) {
+ 	GetX509StCtx(self, store);
+-	store->flags &= ~X509_V_FLAG_USE_CHECK_TIME;
++	store->param->flags &= ~X509_V_FLAG_USE_CHECK_TIME;
+     }
+     else {
+ 	long t = NUM2LONG(rb_Integer(time));

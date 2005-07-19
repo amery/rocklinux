@@ -1,0 +1,29 @@
+--- ./modules/ssl/ssl_engine_pphrase.c.orig	2005-07-18 14:47:47.000000000 +0200
++++ ./modules/ssl/ssl_engine_pphrase.c	2005-07-18 14:48:13.000000000 +0200
+@@ -681,7 +681,7 @@
+                     ap_log_error(APLOG_MARK, APLOG_ERR, 0, s,
+                                  "Init: Failed to create pass phrase pipe '%s'",
+                                  sc->server->pphrase_dialog_path);
+-                    PEMerr(PEM_F_DEF_CALLBACK,PEM_R_PROBLEMS_GETTING_PASSWORD);
++                    PEMerr(PEM_F_PEM_DEF_CALLBACK,PEM_R_PROBLEMS_GETTING_PASSWORD);
+                     memset(buf, 0, (unsigned int)bufsize);
+                     return (-1);
+                 }
+@@ -691,7 +691,7 @@
+         }
+         else { /* sc->server->pphrase_dialog_type == SSL_PPTYPE_BUILTIN */ 
+ #ifdef WIN32
+-            PEMerr(PEM_F_DEF_CALLBACK,PEM_R_PROBLEMS_GETTING_PASSWORD);
++            PEMerr(PEM_F_PEM_DEF_CALLBACK,PEM_R_PROBLEMS_GETTING_PASSWORD);
+             memset(buf, 0, (unsigned int)bufsize);
+             return (-1);
+ #else
+@@ -742,7 +742,7 @@
+                 i = EVP_read_pw_string(buf, bufsize, "", FALSE); 
+             }  
+             if (i != 0) {
+-                PEMerr(PEM_F_DEF_CALLBACK,PEM_R_PROBLEMS_GETTING_PASSWORD);
++                PEMerr(PEM_F_PEM_DEF_CALLBACK,PEM_R_PROBLEMS_GETTING_PASSWORD);
+                 memset(buf, 0, (unsigned int)bufsize);
+                 return (-1);
+             }

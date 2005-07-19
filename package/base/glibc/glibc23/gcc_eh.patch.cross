@@ -17,14 +17,21 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
---- ./Makeconfig	2003-09-17 10:36:10.000000000 +0200
-+++ ./Makeconfig.patch	2004-09-06 17:52:29.000000000 +0200
-@@ -511,7 +511,7 @@
- link-extra-libs-bounded = $(foreach lib,$(LDLIBS-$(@F:%-bp=%)),$(common-objpfx)$(lib)_b.a)
- 
- ifndef gnulib
--gnulib := -lgcc -lgcc_eh
-+gnulib := -lgcc
+diff -ruN glibc-2.3.4/Makeconfig glibc-2.3.4-new/Makeconfig
+--- glibc-2.3.4/Makeconfig	2004-12-15 19:51:47.000000000 +0100
++++ glibc-2.3.4-new/Makeconfig	2005-03-27 15:47:19.000000000 +0200
+@@ -514,12 +514,12 @@
+   libunwind = -lunwind
+ endif
+ ifneq ($(have-as-needed),yes)
+- libgcc_eh := -lgcc_eh $(libunwind)
++ libgcc_eh := $(libunwind)
+ else
+  libgcc_eh := -Wl,--as-needed -lgcc_s$(libgcc_s_suffix) $(libunwind) -Wl,--no-as-needed
+ endif
+ gnulib := -lgcc $(libgcc_eh)
+-static-gnulib := -lgcc -lgcc_eh $(libunwind)
++static-gnulib := -lgcc $(libunwind)
+ libc.so-gnulib := -lgcc
  endif
  ifeq ($(elf),yes)
- +preinit = $(addprefix $(csu-objpfx),crti.o)

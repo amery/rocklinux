@@ -1,0 +1,10 @@
+--- ./sysdeps/i386/i686/memcmp.S.orig	2005-02-10 15:32:56.000000000 +0200
++++ ./sysdeps/i386/i686/memcmp.S	2005-02-10 15:47:35.000000000 +0200
+@@ -351,7 +351,6 @@
+ 	popl	%esi
+ 	RETURN
+ 
+-	.section	.rodata
+ 	ALIGN (2)
+ L(table_32bytes) :
+ 	.long	L(0bytes) - . + 0x0

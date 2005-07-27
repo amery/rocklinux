@@ -46,14 +46,14 @@
 [P] X -?---5---9 100.200
 
 #if xpkg == linux24.*
-[V] 2.4.29
-[D] 2282232393 linux-2.4.29.tar.bz2 http://www.kernel.org/pub/linux/kernel/v2.4/
+[V] 2.4.31
+[D] 385888706 linux-2.4.31.tar.bz2 http://www.kernel.org/pub/linux/kernel/v2.4/
 #endif
 
 #if xpkg == linux26.*
-[V] 2.6.12
-[D] 2030351311 linux-2.6.12.tar.bz2 ftp://ftp.kernel.org/pub/linux/kernel/v2.6/
-[D] 1034274479 patch-2.6.12-pa1.gz http://cvs.parisc-linux.org/download/linux-2.6/
+[V] 2.6.12.3
+[D] 2470658801 linux-2.6.12.3.tar.bz2 ftp://ftp.kernel.org/pub/linux/kernel/v2.6/
+[D] 401719165 patch-2.6.12-pa2.gz http://cvs.parisc-linux.org/download/linux-2.6/
 #endif
 
 [CD] <COPY> for x in $cachedir/linux2[46].cache; do cp $x $confdir/$pkg.cache; done

@@ -6,3 +6,5 @@ fi
 if [ "$ROCKCFG_HPPA_BITS" == "64" ] ; then
 	var_append GCC_WRAPPER_INSERT " " "-march=2.0"
 fi
+
+var_append GCC_WRAPPER_INSERT " " "-fno-unit-at-a-time"

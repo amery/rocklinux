@@ -92,21 +92,6 @@
  if expr "$LD_VERSION_MAJOR" \> 2 > /dev/null; then
    LD_OK="ok"
  else
---- ./libstdc++-v3/scripts/check_survey.in.orig	2003-07-05 08:00:05.000000000 +0200
-+++ ./libstdc++-v3/scripts/check_survey.in	2005-03-25 19:25:38.663192416 +0100
-@@ -182,9 +182,9 @@
-     function size_command()
-     {
-       case $1 in
--        TEXT)  TEXT=$(size -B $EXENAME | tail -1 | awk '{print $1}')  ;;
--        DATA)  DATA=$(size -B $EXENAME | tail -1 | awk '{print $2}')  ;;
--        SIZE)  SIZE=$(size -B $EXENAME | tail -1 | awk '{print $4}')  ;;
-+        TEXT)  TEXT=$(size -B $EXENAME | tail -n 1 | awk '{print $1}')  ;;
-+        DATA)  DATA=$(size -B $EXENAME | tail -n 1 | awk '{print $2}')  ;;
-+        SIZE)  SIZE=$(size -B $EXENAME | tail -n 1 | awk '{print $4}')  ;;
-       esac
-     }
-   else
 --- ./libstdc++-v3/acinclude.m4.orig	2005-02-24 19:55:16.000000000 +0100
 +++ ./libstdc++-v3/acinclude.m4	2005-03-25 19:25:34.534820024 +0100
 @@ -241,7 +241,7 @@

@@ -1,0 +1,115 @@
+--- ./py_openal.c.vanilla	2005-07-13 17:06:10.000000000 +0200
++++ ./py_openal.c	2005-07-13 18:13:49.000000000 +0200
+@@ -60,16 +60,6 @@
+ }
+ 
+ 
+-static PyObject *_wrap_alHint(PyObject *self, PyObject *args) {
+-  ALenum arg1;
+-  ALenum arg2;
+-  if(!PyArg_ParseTuple(args,(char *)"ii:alHint",&arg1,&arg2)) return NULL;
+-  alHint(arg1,arg2);
+-  Py_INCREF(Py_None);
+-  return Py_None;
+-}
+-
+-
+ static PyObject *_wrap_alGetBooleanv(PyObject *self, PyObject *args) {
+     ALenum arg1 ;
+     int arg2 ;
+@@ -906,14 +896,14 @@
+     void *result;
+     
+     if(!PyCObject_Check(arg)) return NULL;
+-    result = alcProcessContext(PyCObject_AsVoidPtr(arg));
++    alcProcessContext(PyCObject_AsVoidPtr(arg));
+ 
+-    if(result == NULL) {
++    //if(result == NULL) {
+         Py_INCREF(Py_None); 
+         return Py_None;
+-    } else {    
++    /*}  else {    
+         return PyCObject_FromVoidPtr(result, NULL);
+-    }
++    }*/
+ }
+ 
+ 
+@@ -928,7 +918,9 @@
+ 
+ static PyObject *_wrap_alcDestroyContext(PyObject *self, PyObject *arg) {
+     if(!PyCObject_Check(arg)) return NULL;
+-    return PyInt_FromLong((long) alcDestroyContext(PyCObject_AsVoidPtr(arg)));
++    alcDestroyContext(PyCObject_AsVoidPtr(arg));
++    Py_INCREF(Py_None); 
++    return Py_None;
+ }
+ 
+ 
+@@ -1050,7 +1042,7 @@
+ }
+ 
+ 
+-static PyObject *_wrap_alutLoadWAV(PyObject *self, PyObject *arg) {
++static PyObject *_wrap_alutLoadWAVFile(PyObject *self, PyObject *arg) {
+     ALvoid *wave = NULL;
+     ALsizei format;
+     ALsizei size;
+@@ -1060,7 +1052,7 @@
+ 
+     if(!PyString_Check(arg)) return NULL;
+ 
+-    alutLoadWAV((char* const) PyString_AS_STRING(arg), &wave, &format, &size, &bits, &freq);
++    alutLoadWAVFile((char* const) PyString_AS_STRING(arg), &wave, &format, &size, &bits, &freq);
+ 
+     if(wave == NULL) {
+         Py_INCREF(Py_None);
+@@ -2219,7 +2211,6 @@
+ 	 { (char *)"alEnable", (PyCFunction) _wrap_alEnable, METH_O },
+ 	 { (char *)"alDisable", (PyCFunction) _wrap_alDisable, METH_O },
+ 	 { (char *)"alIsEnabled", (PyCFunction) _wrap_alIsEnabled, METH_O },
+-	 { (char *)"alHint", (PyCFunction) _wrap_alHint, METH_VARARGS },
+ 	 { (char *)"alGetBooleanv", (PyCFunction) _wrap_alGetBooleanv, METH_VARARGS },
+ 	 { (char *)"alGetIntegerv", (PyCFunction) _wrap_alGetIntegerv, METH_VARARGS },
+ 	 { (char *)"alGetFloatv", (PyCFunction) _wrap_alGetFloatv, METH_VARARGS },
+@@ -2284,7 +2275,7 @@
+ */
+ 	 { (char *)"alutInit", (PyCFunction) _wrap_alutInit, METH_VARARGS },
+ 	 { (char *)"alutExit", (PyCFunction) _wrap_alutExit, METH_NOARGS },
+-	 { (char *)"alutLoadWAV", (PyCFunction) _wrap_alutLoadWAV, METH_VARARGS },
++	 { (char *)"alutLoadWAVFile", (PyCFunction) _wrap_alutLoadWAVFile, METH_VARARGS },
+ /*
+ 	 { (char *)"alcGetAudioChannel_LOKI", (PyCFunction) _wrap_alcGetAudioChannel_LOKI, METH_VARARGS },
+ 	 { (char *)"alcSetAudioChannel_LOKI", (PyCFunction) _wrap_alcSetAudioChannel_LOKI, METH_VARARGS },
+@@ -2339,7 +2330,6 @@
+     PyModule_AddIntConstant(m, "AL_STREAMING", AL_STREAMING);
+     PyModule_AddIntConstant(m, "AL_BUFFER", AL_BUFFER);
+     PyModule_AddIntConstant(m, "AL_GAIN", AL_GAIN);
+-    PyModule_AddIntConstant(m, "AL_BYTE_LOKI", AL_BYTE_LOKI);
+     PyModule_AddIntConstant(m, "AL_MIN_GAIN", AL_MIN_GAIN);
+     PyModule_AddIntConstant(m, "AL_MAX_GAIN", AL_MAX_GAIN);
+     PyModule_AddIntConstant(m, "AL_ORIENTATION", AL_ORIENTATION);
+@@ -2375,22 +2365,9 @@
+     PyModule_AddIntConstant(m, "AL_EXTENSIONS", AL_EXTENSIONS);
+     PyModule_AddIntConstant(m, "AL_DOPPLER_FACTOR", AL_DOPPLER_FACTOR);
+     PyModule_AddIntConstant(m, "AL_DOPPLER_VELOCITY", AL_DOPPLER_VELOCITY);
+-    PyModule_AddIntConstant(m, "AL_DISTANCE_SCALE", AL_DISTANCE_SCALE);
+     PyModule_AddIntConstant(m, "AL_DISTANCE_MODEL", AL_DISTANCE_MODEL);
+     PyModule_AddIntConstant(m, "AL_INVERSE_DISTANCE", AL_INVERSE_DISTANCE);
+     PyModule_AddIntConstant(m, "AL_INVERSE_DISTANCE_CLAMPED", AL_INVERSE_DISTANCE_CLAMPED);
+-    PyModule_AddIntConstant(m, "AL_ENV_ROOM_IASIG", AL_ENV_ROOM_IASIG);
+-    PyModule_AddIntConstant(m, "AL_ENV_ROOM_HIGH_FREQUENCY_IASIG", AL_ENV_ROOM_HIGH_FREQUENCY_IASIG);
+-    PyModule_AddIntConstant(m, "AL_ENV_ROOM_ROLLOFF_FACTOR_IASIG", AL_ENV_ROOM_ROLLOFF_FACTOR_IASIG);
+-    PyModule_AddIntConstant(m, "AL_ENV_DECAY_TIME_IASIG", AL_ENV_DECAY_TIME_IASIG);
+-    PyModule_AddIntConstant(m, "AL_ENV_DECAY_HIGH_FREQUENCY_RATIO_IASIG", AL_ENV_DECAY_HIGH_FREQUENCY_RATIO_IASIG);
+-    PyModule_AddIntConstant(m, "AL_ENV_REFLECTIONS_IASIG", AL_ENV_REFLECTIONS_IASIG);
+-    PyModule_AddIntConstant(m, "AL_ENV_REFLECTIONS_DELAY_IASIG", AL_ENV_REFLECTIONS_DELAY_IASIG);
+-    PyModule_AddIntConstant(m, "AL_ENV_REVERB_IASIG", AL_ENV_REVERB_IASIG);
+-    PyModule_AddIntConstant(m, "AL_ENV_REVERB_DELAY_IASIG", AL_ENV_REVERB_DELAY_IASIG);
+-    PyModule_AddIntConstant(m, "AL_ENV_DIFFUSION_IASIG", AL_ENV_DIFFUSION_IASIG);
+-    PyModule_AddIntConstant(m, "AL_ENV_DENSITY_IASIG", AL_ENV_DENSITY_IASIG);
+-    PyModule_AddIntConstant(m, "AL_ENV_HIGH_FREQUENCY_REFERENCE_IASIG", AL_ENV_HIGH_FREQUENCY_REFERENCE_IASIG);
+ //    PyModule_AddIntConstant(m, "AL_FORMAT_IMA_ADPCM_MONO16_EXT", AL_FORMAT_IMA_ADPCM_MONO16_EXT);
+ //    PyModule_AddIntConstant(m, "AL_FORMAT_IMA_ADPCM_STEREO16_EXT", AL_FORMAT_IMA_ADPCM_STEREO16_EXT);
+ //    PyModule_AddIntConstant(m, "AL_FORMAT_WAVE_EXT", AL_FORMAT_WAVE_EXT);

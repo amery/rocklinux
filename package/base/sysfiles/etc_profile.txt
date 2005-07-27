@@ -21,23 +21,21 @@
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
 # set the PATH-variable
-
-if [ -w / ] ; then
-	PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-	for x in /usr/X11/bin /usr/X11/sbin /usr/games /usr/local/games \
-	         /opt/*/bin /opt/*/sbin /opt/*/games $HOME/bin $HOME/sbin
-	do
-		[ -d $x ] && export PATH="$x:$PATH"
-	done
-else
-	PATH="/usr/local/bin:/usr/bin:/bin"
-	for x in /usr/X11/bin /usr/games /usr/local/games \
-	         /opt/*/bin /opt/*/games $HOME/bin
-	do
-		[ -d $x ] && export PATH="$x:$PATH"
-	done
-fi
-export PATH
+export PATH=""
+for _bindir in $HOME/bin /usr/local/bin /usr/bin /bin /usr/X11/bin \
+	 /usr/games /usr/local/games /opt/*/bin /opt/*/games
+do
+	if [ -d "$_bindir" ]; then
+		PATH="$PATH${PATH:+:}$_bindir"
+	fi
+	if [ -w / ]; then
+		_sbindir=${_bindir/%\/bin/\/sbin}
+		if [ "$_bindir" != "$_sbindir" -a -d "$_sbindir" ]; then
+			PATH="$PATH${PATH:+:}$_sbindir"
+		fi
+	fi
+done
+unset _bindir _sbindir
 
 # set the prompts for bash and ksh
 #

@@ -1,0 +1,33 @@
+--- linux-2.6.12.3/include/asm-i386/mc146818rtc.h
++++ linux-2.6.12.3/include/asm-i386/mc146818rtc.h
+@@ -5,14 +5,21 @@
+ #define _ASM_MC146818RTC_H
+ 
+ #include <asm/io.h>
++
++#ifdef __KERNEL__
++
+ #include <asm/system.h>
+ #include <linux/mc146818rtc.h>
+ 
++#endif /* __KERNEL__ */
++
+ #ifndef RTC_PORT
+ #define RTC_PORT(x)	(0x70 + (x))
+ #define RTC_ALWAYS_BCD	1	/* RTC operates in binary mode */
+ #endif
+ 
++#ifdef __KERNEL__
++
+ #ifdef __HAVE_ARCH_CMPXCHG
+ /*
+  * This lock provides nmi access to the CMOS/RTC registers.  It has some
+@@ -80,6 +87,8 @@
+ #define current_lock_cmos_reg() 0
+ #endif
+ 
++#endif /* __KERNEL__ */
++
+ /*
+  * The yet supported machines all access the RTC index register via
+  * an ISA port access but the way to access the date register differs ...

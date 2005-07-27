@@ -105,9 +105,11 @@ dnl
 	    touch /var/lock/subsys/hotplug
 	    ;;
       *) 
-	block_split(`Loading kernel modules and configuring the kernel.')
-	    check(`sh /etc/conf/kernel')
+	block_split(`Auto-load all modules at boot-time using hwscan.')
+	check(`hwscan -- -V | sh')
     esac
+    block_split(`Loading kernel modules and configuring the kernel.')
+	check(`sh /etc/conf/kernel')
 dnl
     [ -f /etc/conf/clock ] && . /etc/conf/clock
     if [ "$clock_tz" = localtime ] ; then

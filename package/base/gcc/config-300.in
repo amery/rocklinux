@@ -68,10 +68,11 @@ then
 	done
 	choice ROCKCFG_DEFAULT_F77 $d $k
 
+	# build non-default CCs in stage 5
 	k=""; for x in gcc2 gcc32 gcc33 gcc34 gcc40 gcc41; do
 		if [ "$ROCKCFG_DEFAULT_CC" != "$x" ]; then
 			if [ "$ROCKCFG_DEFAULT_CXX" != "$x" ]; then
-				k="$k / gcc=$x / s/^\(..\).../\1---/;"
+				k="$k / gcc=$x / s/^\(..\)...\(..\)./\1---\25/;"
 			else
 				k="$k / gcc=$x / s/^\(..\)../\1--/;"
 			fi

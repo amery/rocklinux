@@ -1,0 +1,10 @@
+--- ./crypto.c.orig	2005-07-25 15:14:45.000000000 +0200
++++ ./crypto.c	2005-07-25 15:14:53.000000000 +0200
+@@ -12,6 +12,7 @@
+  * See README and COPYING for more details.
+  */
+ 
++#include <sys/types.h>
+ #include <openssl/md4.h>
+ #include <openssl/des.h>
+ 

@@ -53,7 +53,7 @@ if ( open(D, "<hosted_cpan.desc") ) {
 	close D;
 }
 
-open(F, "bzip2 -d < ../../../download/mirror/c/cpan_packages_20041221.txt.bz2 |") || die $!;
+open(F, "bzip2 -d < ../../../download/mirror/c/cpan_packages_20050721.txt.bz2 |") || die $!;
 open(D, ">hosted_cpan.desc") || die $!;
 open(S, ">hosted_cpan.sel") || die $!;
 open(C, ">hosted_cpan.cfg") || die $!;

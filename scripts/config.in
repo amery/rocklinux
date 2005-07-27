@@ -391,8 +391,12 @@ expert_end
 
 %include package/*/*/postconfig.in
 %include misc/*/postconfig.in
-%include architecture/*/postconfig.in
-%include target/*/postconfig.in
+
+if [ -f architecture/$ROCKCFG_ARCH/postconfig.in ]
+then . architecture/$ROCKCFG_ARCH/postconfig.in; fi
+
+if [ -f target/$ROCKCFG_TARGET/postconfig.in ]
+then . target/$ROCKCFG_TARGET/postconfig.in; fi
 
 if [ "$ROCKCFG_CROSSBUILD" = 1 ] ; then
 	pkgfilter sed -e 's,^\(. ..\)[^ ]*,\1--------,;'

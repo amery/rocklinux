@@ -68,13 +68,14 @@ then
 	done
 	choice ROCKCFG_DEFAULT_F77 $d $k
 
-	# build non-default CCs in stage 5
+	# build non-default CCs in stages 5 and 9
+	# and a dedicated C++ compiler in stages 2 and 9
 	k=""; for x in gcc2 gcc32 gcc33 gcc34 gcc40 gcc41; do
-		if [ "$ROCKCFG_DEFAULT_CC" != "$x" ]; then
+		if [ "$ROCKCFG_DEFAULT_CC" != "$x" ] ; then
 			if [ "$ROCKCFG_DEFAULT_CXX" != "$x" ]; then
-				k="$k / gcc=$x / s/^\(..\)...\(..\)./\1---\25/;"
+				k="$k / gcc=$x / { s/^\(.\) [0-9-]*/\1 -----5---9/; s/ CORE //g; };"
 			else
-				k="$k / gcc=$x / s/^\(..\)../\1--/;"
+				k="$k / gcc=$x /   s/^\(.\) [0-9-]*/\1 --2------9/;"
 			fi
 		fi
 	done

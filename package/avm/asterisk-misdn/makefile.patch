@@ -1,7 +1,7 @@
-diff -ruN chan_misdn-beta-0.0.3-rc6/Makefile chan_misdn-beta-0.0.3-rc6-new/Makefile
---- chan_misdn-beta-0.0.3-rc6/Makefile	2005-02-14 15:36:14.000000000 +0100
-+++ chan_misdn-beta-0.0.3-rc6-new/Makefile	2005-06-17 11:05:18.000000000 +0200
-@@ -23,15 +23,15 @@
+diff -ruN chan_misdn-beta-0.1.0/Makefile chan_misdn-beta-0.1.0-new/Makefile
+--- chan_misdn-beta-0.1.0/Makefile	2005-04-01 16:32:38.000000000 +0200
++++ chan_misdn-beta-0.1.0-new/Makefile	2005-06-28 21:39:03.000000000 +0200
+@@ -24,15 +24,15 @@
  #
  # The Includes are Set appropriatly
  #
@@ -12,7 +12,7 @@ diff -ruN chan_misdn-beta-0.0.3-rc6/Makefile chan_misdn-beta-0.0.3-rc6-new/Makef
  #
  # mISDNuser PATHS
  #
--MISDNUSER=/usr/src/mISDNuser
+-MISDNUSER=/usr/src/install-misdn/mISDNuser
 -MISDNUSERINC=$(MISDNUSER)/include
 -MISDNUSERLIB=$(MISDNUSER)/lib
 +MISDNUSER=/usr
@@ -21,8 +21,12 @@ diff -ruN chan_misdn-beta-0.0.3-rc6/Makefile chan_misdn-beta-0.0.3-rc6-new/Makef
  
  #
  # mISDNuser Version
-@@ -49,7 +49,7 @@
- CFLAGS+=-DASTERISK_STABLE
+@@ -47,10 +47,10 @@
+ # If you are using a asterisk version above from stable (v1-0)
+ # then comment the following line out (good luck)
+ #
+-#CFLAGS+=-DASTERISK_STABLE
++CFLAGS+=-DASTERISK_STABLE
  
  
 -LINUXROOT=/usr/src/linux-2.6
@@ -30,7 +34,7 @@ diff -ruN chan_misdn-beta-0.0.3-rc6/Makefile chan_misdn-beta-0.0.3-rc6-new/Makef
  
  #
  # Kernel 2.4 ? 
-@@ -66,14 +66,14 @@
+@@ -78,14 +78,14 @@
  
  all: chan_misdn.so
  
@@ -39,8 +43,8 @@ diff -ruN chan_misdn-beta-0.0.3-rc6/Makefile chan_misdn-beta-0.0.3-rc6-new/Makef
 +CFLAGS+=-fPIC -I$(ASTERISKINC) -DAST_CONFIG_DIR=\"$(AST_CONFIG_DIR)\" -I$(MISDNUSERINC) -I$(LINUXINC) -I$(MISDNUSERINC)/i4lnet/ -Wall
 +ADDOBJS+=$(MISDNUSERLIB)/i4lnet/libisdnnet.a $(MISDNUSERLIB)/libmISDN.a
  
- chan_misdn.so: chan_misdn.o te_lib.o crypt.o $(ADDOBJS)
- 	$(CC) -shared -Xlinker -x -o $@ te_lib.o crypt.o chan_misdn.o $(ADDOBJS) 
+ chan_misdn.so: chan_misdn.o te_lib.o crypt.o ec.o $(ADDOBJS)
+ 	$(CC) -shared -Xlinker -x -o $@ ec.o te_lib.o crypt.o chan_misdn.o $(ADDOBJS) 
  
  testphone:  testphone.c
 -	$(CC) -I$(MISDNUSERINC) -I$(MISDNUSER)/i4lnet/ -I$(LINUXINC)  testphone.c $(MISDNUSERLIB)/libmISDN.a -o testphone
@@ -48,14 +52,16 @@ diff -ruN chan_misdn-beta-0.0.3-rc6/Makefile chan_misdn-beta-0.0.3-rc6-new/Makef
  
  install: chan_misdn.so
  	install -m 644 chan_misdn.so $(INSTALL_MODPATH)/
-@@ -95,16 +95,16 @@
+@@ -107,7 +107,7 @@
  
  
  te_lib.o: te_lib.c te_lib.h isdn_msg.c isdn_msg_parser.c
 -	$(CC) -I$(MISDNUSERINC) -I$(MISDNUSER)/i4lnet/ -I$(LINUXINC) $(CFLAGS) -ggdb -c te_lib.c
 +	$(CC) -I$(MISDNUSERINC) -I$(MISDNUSERINC)/i4lnet/ -I$(LINUXINC) $(CFLAGS) -ggdb -c te_lib.c
  
- crypt.o: crypt.c crypt.h 
+ ec.o: ec.c 
+ 	$(CC) $(CFLAGS) -ggdb -c ec.c
+@@ -116,10 +116,10 @@
  	$(CC) $(CFLAGS) -ggdb -c crypt.c
  
  te_test.o: te_test.c

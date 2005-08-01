@@ -14,6 +14,7 @@ code_snipplets_counter=0
 lineno=0
 ignore=0
 global=1
+retcode=0
 
 if [ "$3" != "up" -a "$3" != "down" ]; then
 	echo "Usage: $0 { profile | default } { interface | auto } { up | down }"
@@ -56,6 +57,7 @@ isfirst() {
 #
 error() {
 	echo "$*"
+	retcode=1
 }
 
 status() {
@@ -115,3 +117,4 @@ done < <(
 [ "$pmatched" = 1 -a "$imatched" = 0 ] && \
 	error "Unknown interface for profile: '$interface'"
 
+exit $retcode

@@ -1,0 +1,19 @@
+if [ "$ROCKCFG_PKG_LINUX_IMG26" = 1 ]; then
+	bool 'Add mISDN driver to 2.6 kernel' ROCKCFG_PKG_LINUX_MISDN 0
+	if [ ! x"$ROCKCFG_PKG_LINUX_CUSTCONFIG" == x"1" ]; then
+	 	 comment "Please activate custom kernel configuration above"
+	 	 comment " to build mISDN drivers during kernel build"
+	fi
+	if [ x"$ROCKCFG_PKG_LINUX_MISDN" == x'1' ]; then
+    	for x in AVM_FRITZ HFCPCI HFCMULTI HFCUSB SPEEDFAX W6692 DSP; do 
+	 		grep -s -v CONFIG_MISDN_$x config/$config.$swpid/linux.cfg > config/$config.$swpid/linux.cfg.$$
+    		echo "CONFIG_MISDN_$x=y" >> config/$config.$swpid/linux.cfg.$$ 
+	 	 	mv config/$config.$swpid/linux.cfg.$$ config/$config.$swpid/linux.cfg
+    	done 
+	else
+    	for x in AVM_FRITZ HFCPCI HFCMULTI HFCUSB SPEEDFAX W6692 DSP; do 
+	 		grep -s -v CONFIG_MISDN_$x config/$config.$swpid/linux.cfg > config/$config.$swpid/linux.cfg.$$
+	 	 	mv config/$config.$swpid/linux.cfg.$$ config/$config.$swpid/linux.cfg
+	 	done
+	fi 
+fi

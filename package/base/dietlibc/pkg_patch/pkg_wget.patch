@@ -79,12 +79,3 @@
  	 we've written.  */
 --- ./src/convert.c~	2003-11-14 12:36:33.000000000 +0100
 +++ ./src/convert.c	2003-11-14 12:37:06.000000000 +0100
-@@ -600,7 +600,7 @@
- 	      *to++ = 'F';
- 	    }
- 	}
--      assert (to - newname == fsqlen);
-+      assert ((to - newname) == fsqlen);
-       *to = '\0';
- 
-       file_sans_qmark = newname;

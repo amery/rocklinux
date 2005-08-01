@@ -22,23 +22,22 @@
 
 if pkgcheck bootsplash X
 then
-	menu_begin MENU_PKG_BOOTSPLASH 'BOOTSPLASH Options'
-	bool 'Patch the kernel with the bootsplash patch' ROCKCFG_KERNEL_BOOTSPLASH 0
-	comment 'Please also activate the "Apply custom kernel build configuration"'
-	comment 'setting (you find it under Linux Kernel Options)'
-		
-		if [ $ROCKCFG_KERNEL_BOOTSPLASH == '1' ]; then
-			for x in CONFIG_FBCON_SPLASHSCREEN ; do
-				grep -s -v $x config/$config.$swpid/linux.cfg > config/$config.$swpid/linux.cfg.$$
-				echo "$x=y" >> config/$config.$swpid/linux.cfg.$$
-				mv config/$config.$swpid/linux.cfg.$$ config/$config.$swpid/linux.cfg
-			done
-		else
-			for x in CONFIG_FBCON_SPLASHSCREEN ; do
-				grep -s -v $x config/$config.$swpid/linux.cfg > config/$config.$swpid/linux.cfg.$$
-				# echo "$x=n" >> config/$config.$swpid/linux.cfg.$$
-				mv config/$config.$swpid/linux.cfg.$$ config/$config.$swpid/linux.cfg
-			done
-		fi	
-	menu_end
+	bool 'Patch the kernel with the bootsplash patch' ROCKCFG_PKG_LINUX_BOOTSPLASH 0
+	if [ ! x"$ROCKCFG_PKG_LINUX_CUSTCONFIG" == x"1" ]; then
+        comment "Please activate custom kernel configuration above"
+        comment " to activate bootsplash during kernel build"
+    fi
+
+	if [ x"$ROCKCFG_PKG_LINUX_BOOTSPLASH" == x'1' ]; then
+		for x in CONFIG_{FRAMEBUFFER_CONSOLE,FBCON_SPLASHSCREEN,BOOTSPLASH}; do 
+			 grep -s -v $x config/$config.$swpid/linux.cfg > config/$config.$swpid/linux.cfg.$$
+			 echo "$x=y" >> config/$config.$swpid/linux.cfg.$$
+			 mv config/$config.$swpid/linux.cfg.$$ config/$config.$swpid/linux.cfg
+		done
+	else
+		for x in CONFIG_{FRAMEBUFFER_CONSOLE,FBCON_SPLASHSCREEN,BOOTSPLASH}; do 
+	 	 	 grep -s -v $x config/$config.$swpid/linux.cfg > config/$config.$swpid/linux.cfg.$$
+	 	 	 mv config/$config.$swpid/linux.cfg.$$ config/$config.$swpid/linux.cfg
+	 	 done
+	fi 
 fi

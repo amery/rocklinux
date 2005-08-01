@@ -1,0 +1,76 @@
+#!/bin/bash
+
+initrd_mount() { # {{{
+	dev=${1}
+	mntpoint=${2}
+
+	/sbin/fsck -C -a ${dev}
+	fsckrc=${?}
+	if [ ${fsckrc} -eq 8 ] ; then
+		return 1
+	fi
+	if   [ $(( ${fsckrc} & ~3 )) != 0 ] ; then
+		echo " **"
+		echo " ** Filesystem ${dev} || error=${?} failed (returncode=${fsckrc})."
+		echo " ** Please repair the broken disk(s) manually."
+		echo " **"
+		exec /bin/bash
+	elif [ $(( ${fsckrc} &  2 )) != 0 ] ; then
+		echo " **"
+		echo " ** fsck has requested the system to be rebooted."
+		echo " ** Running a shell."
+		echo " **"
+		echo
+		exec /bin/bash
+	fi
+
+	mount -n ${dev} ${mntpoint}
+	return ${?}
+} # }}}
+
+PATH="/sbin:/usr/sbin:/bin/:/usr/bin"
+
+rootfs=""
+rootfsmounted=0
+
+mount -n -t tmpfs none /tmp
+mount -n -t proc none /proc
+mount -n -t sysfs none /sys
+mount -n -t ramfs none /dev
+/sbin/udevd &
+/sbin/udevstart
+cd /dev
+rm -rf fd
+ln -sf /proc/self/fd
+cd /
+
+while read dev mntpoint fstype options fsck1 fsck2 ; do
+	[ "${mntpoint}" == "/" ] && rootfs=${dev}
+	[ -n "${rootfs}" ] && break
+done < /etc/fstab
+
+echo "loading kernel modules"
+. /etc/conf/kernel
+
+for x in /etc/conf/* ; do
+	[ "${x}" == "/etc/conf/kernel" ] && continue
+	echo "Running ${x} ..."
+	. ${x}
+done
+
+if [ ${rootfsmounted} -eq 0 ] ; then
+	echo "Mounting rootfs (${rootfs}) on /root"
+	initrd_mount ${rootfs} /root
+	rootfsmounted=1
+fi
+
+echo "starting init in /root"
+echo "parameters passed to init: ${@}"
+cd /root
+mkdir -p /root/initrd
+mount -n --move /tmp /root/tmp
+mount -n --move /proc /root/proc
+mount -n --move /sys /root/sys
+mount -n --move /dev /root/dev
+/sbin/pivot_root . initrd
+exec chroot . /sbin/init "${@}"

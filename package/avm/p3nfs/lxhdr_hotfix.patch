@@ -1,0 +1,17 @@
+--- ./nfsd/nfs_prot.h.orig	2005-08-17 13:11:29.000000000 +0200
++++ ./nfsd/nfs_prot.h	2005-08-17 13:17:27.000000000 +0200
+@@ -1,3 +1,14 @@
++
++// glibc defines them. this results in compiler errors
++// in the kernel string.h header...
++#undef strpbrk
++#undef strsep
++#undef strspn
++#undef strcspn
++#undef strcmp
++#undef strncmp
++#undef strchr
++
+ #ifdef hpux
+ #include <sys/time.h>
+ #include <nfs/nfs.h>

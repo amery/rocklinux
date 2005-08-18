@@ -1,0 +1,38 @@
+--- ./rocket.sh
++++ ./rocket.sh
+@@ -20,6 +20,7 @@
+ rocket remove <pkg> ........ remove package
+ 
+ rocket search <regex> ...... search packge descriptions for this regex
++rocket fsearch <regex> ..... search packge file list for this regex
+ rocket list <regex> ........ list all packages with a name matching the regex
+ rocket info <pkg> .......... print package details
+ 
+@@ -148,6 +149,27 @@
+ 	fi
+ 	;;
+ 
++    fsearch)
++	matches=0;
++	if [ "${2#^}" != "$2" ]; then
++		regex="^[^ ]+ [^ ]+ ${2#^}"
++	else
++		regex="^[^ ]+ [^ ]+ .*$2"
++	fi
++	while read f; do
++		echo
++		if [ -f "/var/adm/packages/${f##*/}" ]; then
++			echo "Match #$((matches++)) ${f##*/} (installed):"
++		else
++			echo "Match #$((matches++)) ${f##*/} (not installed):"
++		fi
++		egrep -i "$regex" $f | cut -f3- -d' '
++	done < <( egrep -lir "$regex" /var/adm/rocket/cksums | sort; )
++	if [ $matches -gt 0 ]; then
++		echo
++	fi
++	;;
++
+     list)
+ 	while read p; do
+ 		if [ -f "/var/adm/packages/$p" ]

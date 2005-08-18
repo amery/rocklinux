@@ -1,0 +1,15 @@
+--- ./lib/gvc/gvconfig.c.orig	2005-08-18 11:25:03.000000000 +0200
++++ ./lib/gvc/gvconfig.c	2005-08-18 11:28:17.000000000 +0200
+@@ -235,7 +235,11 @@
+     gvplugin_library_t *library;
+     char *plugin_glob = "libgvplugin*.so.?";
+ 
+-    if (config_path) {
++    // this so-called "config file" should be in /var/cache, morrons!
++    // I'm going to change the config file location, so here is a little
++    // hack which skips updating the file when graphviz is called in a
++    // Build-Pkg process tree... - clifford
++    if (config_path && !getenv("ROCKCFG_ID")) {
+ 	f = fopen(config_path,"w");
+ 	if (!f) {
+ 	    agerr(AGERR,"failed to open %s for write.\n", config_path);

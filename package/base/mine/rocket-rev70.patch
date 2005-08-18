@@ -1,0 +1,54 @@
+--- ./rocket.sh	(revision 69)
++++ ./rocket.sh	(revision 70)
+@@ -135,9 +135,14 @@
+     search)
+ 	matches=0;
+ 	while read f; do
+-		echo; echo "Match #$((matches++)) ${f##*/}:"
++		echo
++		if [ -f "/var/adm/packages/${f##*/}" ]; then
++			echo "Match #$((matches++)) ${f##*/} (installed):"
++		else
++			echo "Match #$((matches++)) ${f##*/} (not installed):"
++		fi
+ 		egrep -i "^(\[I\]|\[T\].*$2)" $f
+-	done < <( egrep -lir "^\[(I|T)\].*$2" /var/adm/rocket/descs; )
++	done < <( egrep -lir "^\[(I|T)\].*$2" /var/adm/rocket/descs | sort; )
+ 	if [ $matches -gt 0 ]; then
+ 		echo
+ 	fi
+@@ -145,17 +150,27 @@
+ 
+     list)
+ 	while read p; do
++		if [ -f "/var/adm/packages/$p" ]
++		then s='i'; else s='.'; fi
+ 		grep '^\[I\].*' /var/adm/rocket/descs/$p |
+-			sed "s,^....,$p\t," | expand -t20,30,40,50
+-	done < <( egrep "^.*$2.* " /var/adm/rocket/locations.txt | cut -f1 -d' '; )
++			sed "s,^....,$s $p\t," | expand -t25,35,45,55
++	done < <( egrep "^.*$2.* " /var/adm/rocket/locations.txt | cut -f1 -d' ' | sort; )
+ 	;;
+ 
+     info)
+-	echo; echo "$2"; echo
+-	egrep '^\[I\]' /var/adm/rocket/descs/$2 && echo
+-	egrep '^\[T\]' /var/adm/rocket/descs/$2 && echo
+-	egrep '^\[V\]' /var/adm/rocket/descs/$2 && echo
+-	egrep '^\[L\]' /var/adm/rocket/descs/$2 && echo
++	echo
++	if [ -f "/var/adm/packages/$2" ]; then
++		echo "$2 (installed)"
++	else
++		echo "$2 (not installed)"
++	fi
++	echo
++	egrep '^\[[I ]\]' /var/adm/rocket/descs/$2 && echo
++	egrep '^\[[T ]\]' /var/adm/rocket/descs/$2 && echo
++	egrep '^\[[U ]\]' /var/adm/rocket/descs/$2 && echo
++	egrep '^\[[MA]\]' /var/adm/rocket/descs/$2 && echo
++	egrep '^\[[V ]\]' /var/adm/rocket/descs/$2 && echo
++	egrep '^\[[LS]\]' /var/adm/rocket/descs/$2 && echo
+ 	;;
+ 
+     install)

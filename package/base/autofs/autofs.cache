@@ -20,21 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1119333956 Tue Jun 21 08:05:56 2005 (5)
-[TIMESTAMP] 1119593715 Fri Jun 24 08:15:15 2005 (9)
+[TIMESTAMP] 1123908057 Sat Aug 13 06:40:57 2005 (5)
+[TIMESTAMP] 1124146322 Tue Aug 16 00:52:02 2005 (9)
 
-[CONFIG-ID] TRUNK-x86-reference-expert
+[CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-autofs.log 9-autofs.log
 
-[BUILDTIME] 1487 (5)
-[BUILDTIME] 1810 (9)
-[SIZE] 0.06 MB, 13 files
+[BUILDTIME] 2051 (5)
+[BUILDTIME] 2424 (9)
+[SIZE] 0.22 MB, 35 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep hesiod linux26-header:dev m4
-[DEP] make mktemp net-tools sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep hesiod hesiod:dev
+[DEP] linux26-header:dev m4 make mktemp net-tools sed sysfiles tar
+[DEP] util-linux
 
-[PROVIDES] automount
+[PROVIDES] automount lookup_file.so lookup_hesiod.so lookup_multi.so
+[PROVIDES] lookup_nisplus.so lookup_program.so lookup_userhome.so
+[PROVIDES] lookup_yp.so mount_afs.so mount_autofs.so mount_bind.so
+[PROVIDES] mount_changer.so mount_ext2.so mount_ext3.so mount_generic.so
+[PROVIDES] mount_nfs.so parse_hesiod.so parse_sun.so
 

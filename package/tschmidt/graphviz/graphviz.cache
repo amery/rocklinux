@@ -20,29 +20,41 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1119120251 Sat Jun 18 20:44:11 2005 (5)
-[TIMESTAMP] 1119478394 Thu Jun 23 00:13:14 2005 (9)
+[TIMESTAMP] 1123817665 Fri Aug 12 05:34:25 2005 (5)
+[TIMESTAMP] 1124043952 Sun Aug 14 20:25:52 2005 (9) ERROR
+[TIMESTAMP] 1124207436 Tue Aug 16 17:50:36 2005 (9) ERROR
+[TIMESTAMP] 1124289096 Wed Aug 17 16:31:36 2005 (5) ERROR
+[TIMESTAMP] 1124289895 Wed Aug 17 16:44:55 2005 (5)
+[TIMESTAMP] 1124298502 Wed Aug 17 19:08:22 2005 (9)
 
-[CONFIG-ID] TRUNK-x86-reference-expert
+[CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-graphviz.log 9-graphviz.log
 
-[BUILDTIME] 26328 (5)
-[BUILDTIME] 27539 (9)
-[SIZE] 3.91 MB, 373 files
+[BUILDTIME] 31482 (5)
+[BUILDTIME] 32779 (9) ERROR
+[BUILDTIME] 32753 (9) ERROR
+[BUILDTIME] 1916 (5) ERROR
+[BUILDTIME] 32883 (5)
+[BUILDTIME] 32886 (9)
+[SIZE] 5.88 MB, 383 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils expat expat:dev
-[DEP] findutils flex flex:dev freetype freetype:dev gawk gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep libgd libgd:dev libjpeg libjpeg:dev libpng
-[DEP] libpng:dev linux26-header:dev m4 make mktemp net-tools sed sysfiles
-[DEP] tar tcl tcl:dev tk tk:dev util-linux xorg xorg:dev zlib:dev
+[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils expat
+[DEP] expat:dev findutils flex flex:dev freetype freetype:dev gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep guile:dev libgd libjpeg
+[DEP] libjpeg:dev libpng libpng:dev libtool libtool:dev linux26-header:dev
+[DEP] m4 make mktemp net-tools nx-X11 nx-X11:dev nxcomp nxproxy patch
+[DEP] perl5 perl5:dev php:dev pkgconfig python python:dev ruby sed swig
+[DEP] sysfiles tar tcl tcl:dev tk tk:dev util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] acyclic bcomps ccomps circo dijkstra dot dot2gxl
-[PROVIDES] dotneato-config dotty fdp gc gvcolor gvpack gvpr gxl2dot lefty
-[PROVIDES] libagraph.so libcdt.so libcircogen.so libcommon.so libdotgen.so
-[PROVIDES] libdotneato.so libexpr.so libfdpgen.so libgdtclft.so libgraph.so
-[PROVIDES] libgvrender.so libneatogen.so libpack.so libpathplan.so
-[PROVIDES] libtcldot.so libtclplan.so libtkspline.so libtwopigen.so lneato
-[PROVIDES] neato nop prune sccmap tred twopi unflatten
+[PROVIDES] acyclic bcomps ccomps circo dijkstra dot dot2gxl dotty
+[PROVIDES] fdp gc gvcolor gvpack gvpr gxl2dot lefty libagraph.so
+[PROVIDES] libcdt.so libexpr.so libgdtclft.so libgraph.so libgv_guile.so
+[PROVIDES] libgv_perl.so libgv_php.so libgv_python.so libgv_ruby.so
+[PROVIDES] libgv_tcl.so libgvc.so libgvgd.so libgvplugin_dot_layout.so
+[PROVIDES] libgvplugin_neato_layout.so libgvplugin_usershape_gd.so
+[PROVIDES] libpack.so libpathplan.so libplugins.so libtcldot.so
+[PROVIDES] libtclplan.so libtkspline.so lneato neato nop prune sccmap
+[PROVIDES] tred twopi unflatten
 

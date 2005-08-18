@@ -20,17 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1119099177 Sat Jun 18 14:52:57 2005 (5)
-[TIMESTAMP] 1119452624 Wed Jun 22 17:03:44 2005 (9)
+[TIMESTAMP] 1123796241 Thu Aug 11 23:37:21 2005 (5)
+[TIMESTAMP] 1124016823 Sun Aug 14 12:53:43 2005 (9)
 
-[CONFIG-ID] TRUNK-x86-reference-expert
+[CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-quagga.log 9-quagga.log
 
-[BUILDTIME] 12076 (5)
-[BUILDTIME] 13136 (9)
-[SIZE] 2.23 MB, 48 files
+[BUILDTIME] 12986 (5)
+[BUILDTIME] 13906 (9)
+[SIZE] 2.63 MB, 52 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libcap libcap:dev
@@ -38,5 +38,6 @@
 [DEP] readline readline:dev sed sysfiles tar texinfo util-linux
 
 [PROVIDES] bgpd libospf.a libospf.so libospfapiclient.a libospfapiclient.so
-[PROVIDES] libzebra.a libzebra.so ospfclient ospfd ripd vtysh zebra
+[PROVIDES] libzebra.a libzebra.so ospf6d ospfclient ospfd ripd ripngd
+[PROVIDES] vtysh zebra
 

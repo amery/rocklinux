@@ -20,17 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1119341895 Tue Jun 21 10:18:15 2005 (5)
-[TIMESTAMP] 1119602167 Fri Jun 24 10:36:07 2005 (9)
+[TIMESTAMP] 1123916380 Sat Aug 13 08:59:40 2005 (5)
+[TIMESTAMP] 1124155157 Tue Aug 16 03:19:17 2005 (9)
 
-[CONFIG-ID] TRUNK-x86-reference-expert
+[CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-kdesdk.log 9-kdesdk.log
 
-[BUILDTIME] 152292 (5)
-[BUILDTIME] 153217 (9)
-[SIZE] 13.48 MB, 781 files
+[BUILDTIME] 152301 (5)
+[BUILDTIME] 153035 (9)
+[SIZE] 13.66 MB, 793 files
 
 [DEP] 00-dirtree apache apache:apr apache:dev arts bash2 bdb42 bdb42:dev
 [DEP] binutils binutils:dev bzip2 coreutils diffutils expat expat:dev
@@ -42,29 +42,31 @@
 [DEP] openssl pcre pcre:dev perl5 qt qt:dev sed subversion subversion:dev
 [DEP] sysfiles tar util-linux vim xorg xorg:dev zlib:dev
 
-[PROVIDES] adddebug build-progress.sh catalogmanager cervisia cheatmake
-[PROVIDES] create_cvsignore create_makefile create_makefiles cvs-clean
-[PROVIDES] cvs2dist cvsaskpass cvsbackport cvsblame cvscheck cvsforwardport
-[PROVIDES] cvslastchange cvslastlog cvsrevertlast cvsservice cvsversion
-[PROVIDES] cxxmetric demangle dprof2calltree extend_dmalloc extractattr
-[PROVIDES] extractrc findmissingcrystal fixkdeincludes fixuifiles
-[PROVIDES] hotshot2calltree includemocs kabcformat_kdeaccounts.so
-[PROVIDES] kapptemplate kbabel kbabel_accelstool.so kbabel_argstool.so
-[PROVIDES] kbabel_contexttool.so kbabel_equationstool.so
-[PROVIDES] kbabel_gettextexport.so kbabel_gettextimport.so
-[PROVIDES] kbabel_lengthtool.so kbabel_linguistexport.so
-[PROVIDES] kbabel_linguistimport.so kbabel_nottranslatedtool.so
-[PROVIDES] kbabel_pluraltool.so kbabel_punctuationtool.so
-[PROVIDES] kbabel_setfuzzytool.so kbabel_whitespacetool.so
-[PROVIDES] kbabel_xliffexport.so kbabel_xliffimport.so
-[PROVIDES] kbabel_xmltool.so kbabeldict kbabeldict_dbsearchengine.so
-[PROVIDES] kbabeldict_poauxiliary.so kbabeldict_pocompendium.so
-[PROVIDES] kbabeldict_tmxcompendium.so kbugbuster kcachegrind
-[PROVIDES] kcal_bugzilla.so kde-build kded_ksvnd.so kdedoc kdekillall
-[PROVIDES] kdelnk2desktop.py kdemangen.pl kfile_cpp.so kfile_diff.so
-[PROVIDES] kfile_po.so kfile_ts.so kio_svn.so kminspector kmmatch
-[PROVIDES] kmtrace kompare kuiviewer libcervisiapart.so libcvsservice.so
-[PROVIDES] libkbabelcommon.so libkbabeldictplugin.so libkompareinterface.so
+[PROVIDES] adddebug build-progress.sh catalogmanager cervisia cervisia.so
+[PROVIDES] cheatmake create_cvsignore create_makefile create_makefiles
+[PROVIDES] cvs-clean cvs2dist cvsaskpass cvsaskpass.so cvsbackport
+[PROVIDES] cvsblame cvscheck cvsforwardport cvslastchange cvslastlog
+[PROVIDES] cvsrevertlast cvsservice cvsservice.so cvsversion cxxmetric
+[PROVIDES] demangle dprof2calltree extend_dmalloc extractattr extractrc
+[PROVIDES] findmissingcrystal fixkdeincludes fixuifiles hotshot2calltree
+[PROVIDES] includemocs kabcformat_kdeaccounts.so kapptemplate kbabel
+[PROVIDES] kbabel_accelstool.so kbabel_argstool.so kbabel_contexttool.so
+[PROVIDES] kbabel_equationstool.so kbabel_gettextexport.so
+[PROVIDES] kbabel_gettextimport.so kbabel_lengthtool.so
+[PROVIDES] kbabel_linguistexport.so kbabel_linguistimport.so
+[PROVIDES] kbabel_nottranslatedtool.so kbabel_pluraltool.so
+[PROVIDES] kbabel_punctuationtool.so kbabel_setfuzzytool.so
+[PROVIDES] kbabel_whitespacetool.so kbabel_xliffexport.so
+[PROVIDES] kbabel_xliffimport.so kbabel_xmltool.so kbabeldict
+[PROVIDES] kbabeldict_dbsearchengine.so kbabeldict_poauxiliary.so
+[PROVIDES] kbabeldict_pocompendium.so kbabeldict_tmxcompendium.so
+[PROVIDES] kbugbuster kcachegrind kcal_bugzilla.so kde-build kded_ksvnd.so
+[PROVIDES] kdedoc kdekillall kdelnk2desktop.py kdemangen.pl kfile_cpp.so
+[PROVIDES] kfile_diff.so kfile_po.so kfile_ts.so kio_svn.so kminspector
+[PROVIDES] kmmatch kmtrace kompare kuiviewer libcervisiapart.so
+[PROVIDES] libcvsservice.so libkbabelcommon.so libkbabeldictplugin.so
+[PROVIDES] libkdeinit_cervisia.so libkdeinit_cvsaskpass.so
+[PROVIDES] libkdeinit_cvsservice.so libkompareinterface.so
 [PROVIDES] libkomparenavtreepart.so libkomparepart.so libkspy.so
 [PROVIDES] libktrace.so libktrace_s.a libkuiviewerpart.so licensecheck
 [PROVIDES] makeobj memprof2calltree mkinstalldirs noncvslist op2calltree

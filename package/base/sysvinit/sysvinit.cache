@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1119321128 Tue Jun 21 04:32:08 2005 (5)
-[TIMESTAMP] 1119578280 Fri Jun 24 03:58:00 2005 (9)
+[TIMESTAMP] 1123897304 Sat Aug 13 03:41:44 2005 (5)
+[TIMESTAMP] 1124133626 Mon Aug 15 21:20:26 2005 (9)
 
-[CONFIG-ID] TRUNK-x86-reference-expert
+[CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-sysvinit.log 9-sysvinit.log
 
-[BUILDTIME] 1730 (5)
-[BUILDTIME] 2059 (9)
+[BUILDTIME] 1544 (5)
+[BUILDTIME] 1851 (9)
 [SIZE] 0.19 MB, 41 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] patch sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
+[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp patch sed
+[DEP] sysfiles tar
 
 [PROVIDES] bootlogd halt init killall5 last lastb mesg mountpoint pidof
 [PROVIDES] poweroff reboot runlevel shutdown sulogin telinit wall

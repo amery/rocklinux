@@ -20,19 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1119099248 Sat Jun 18 14:54:08 2005 (5)
-[TIMESTAMP] 1119452736 Wed Jun 22 17:05:36 2005 (9)
+[TIMESTAMP] 1123796066 Thu Aug 11 23:34:26 2005 (5)
+[TIMESTAMP] 1124016596 Sun Aug 14 12:49:56 2005 (9)
 
-[CONFIG-ID] TRUNK-x86-reference-expert
+[CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-cpan-class-methodmaker.log 9-cpan-class-methodmaker.log
 
-[BUILDTIME] 1003 (5)
-[BUILDTIME] 1768 (9)
-[SIZE] 0.23 MB, 54 files
+[BUILDTIME] 3025 (5)
+[BUILDTIME] 3986 (9)
+[SIZE] 21.08 MB, 904 files
 
-[DEP] 00-dirtree bash2 bzip2 coreutils findutils gawk gcc34 grep make
-[DEP] mktemp perl5 sed ssleay-perlmod sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
+[DEP] perl5 sed sysfiles tar
 
+[PROVIDES] MethodMaker.so
 

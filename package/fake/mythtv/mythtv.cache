@@ -20,31 +20,32 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1119112233 Sat Jun 18 18:30:33 2005 (5)
-[TIMESTAMP] 1119468762 Wed Jun 22 21:32:42 2005 (9)
+[TIMESTAMP] 1123809755 Fri Aug 12 03:22:35 2005 (5)
+[TIMESTAMP] 1124034392 Sun Aug 14 17:46:32 2005 (9)
 
-[CONFIG-ID] TRUNK-x86-reference-expert
+[CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-mythtv.log 9-mythtv.log
 
-[BUILDTIME] 103148 (5)
-[BUILDTIME] 104290 (9)
-[SIZE] 19.52 MB, 791 files
+[BUILDTIME] 109608 (5)
+[BUILDTIME] 111267 (9)
+[SIZE] 22.33 MB, 415 files
 
-[DEP] 00-dirtree alsa alsa:dev bash2 binutils bzip2 coreutils diffutils
-[DEP] expat findutils freetype freetype:dev gawk gcc34 gcc34:dev glibc23
-[DEP] glibc23:dev grep lame lame:dev libpng linux26-header:dev lirc
-[DEP] lirc:dev make mktemp patch perl5 qt qt:dev sed sysfiles tar tetex
-[DEP] xorg xorg:dev zlib:dev
+[DEP] 00-dirtree alsa alsa:dev bash2 binutils bzip2 ccache coreutils
+[DEP] diffutils expat findutils freetype freetype:dev gawk gcc34 gcc34:dev
+[DEP] glibc23 glibc23:dev grep jack jack:dev lame lame:dev libavc1394
+[DEP] libavc1394:dev libiec61883 libiec61883:dev libpng libraw1394
+[DEP] libraw1394:dev linux26-header:dev lirc lirc:dev make mktemp
+[DEP] patch perl5 qt qt:dev sed sysfiles tar tetex xorg xorg:dev zlib:dev
 
 [PROVIDES] libadjust.so libbobdeint.so libconvert.so libcrop.so
 [PROVIDES] libdenoise3d.so libforce.so libinvert.so libkerneldeint.so
-[PROVIDES] liblinearblend.so libmyth-0.17.so libmythavcodec-0.17.so
-[PROVIDES] libmythavformat-0.17.so libmythmpeg2-0.17.a
-[PROVIDES] libmythsamplerate-0.17.a libmythsoundtouch-0.17.a
-[PROVIDES] libmythtv-0.17.so libonefield.so libpostprocess.so
+[PROVIDES] liblinearblend.so libmyth-0.18.1.so libmythavcodec-0.18.1.so
+[PROVIDES] libmythavformat-0.18.1.so libmythmpeg2-0.18.1.a
+[PROVIDES] libmythsamplerate-0.18.1.a libmythsoundtouch-0.18.1.a
+[PROVIDES] libmythtv-0.18.1.so libonefield.so libpostprocess.so
 [PROVIDES] libquickdnr.so mythbackend mythcommflag mythepg mythfilldatabase
-[PROVIDES] mythfrontend mythjobqueue mythprogfind mythsetup mythtranscode
-[PROVIDES] mythtv mythtvosd
+[PROVIDES] mythfrontend mythjobqueue mythprogfind mythtranscode mythtv
+[PROVIDES] mythtv-setup mythtvosd
 

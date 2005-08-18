@@ -20,31 +20,30 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1119121137 Sat Jun 18 20:58:57 2005 (5)
-[TIMESTAMP] 1119479444 Thu Jun 23 00:30:44 2005 (9)
+[TIMESTAMP] 1123818559 Fri Aug 12 05:49:19 2005 (5)
+[TIMESTAMP] 1124045025 Sun Aug 14 20:43:45 2005 (9)
 
-[CONFIG-ID] TRUNK-x86-reference-expert
+[CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-ecore.log 9-ecore.log
 
-[BUILDTIME] 11307 (5)
-[BUILDTIME] 12614 (9)
-[SIZE] 1.12 MB, 71 files
+[BUILDTIME] 11283 (5)
+[BUILDTIME] 12471 (9)
+[SIZE] 1.13 MB, 71 files
 
-[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils directfb directfb:dev edb edb:dev eet eet:dev evas
+[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils curl
+[DEP] curl:dev diffutils directfb directfb:dev edb edb:dev eet eet:dev evas
 [DEP] evas:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev glibc23
 [DEP] glibc23:dev grep imlib2 libjpeg libjpeg:dev libpng libpng:dev libtool
 [DEP] linux26-header:dev m4 make mktemp net-tools openssl openssl:dev
 [DEP] perl5 pkgconfig sed sysfiles tar util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] ecore-config ecore_config_ipc_ecore.a ecore_config_ipc_ecore.so
-[PROVIDES] ecore_evas_test ecore_test libecore.a libecore.so libecore_con.a
-[PROVIDES] libecore_con.so libecore_config.a libecore_config.so
-[PROVIDES] libecore_dbus.a libecore_dbus.so libecore_evas.a
-[PROVIDES] libecore_evas.so libecore_fb.a libecore_fb.so libecore_file.a
-[PROVIDES] libecore_file.so libecore_ipc.a libecore_ipc.so libecore_job.a
-[PROVIDES] libecore_job.so libecore_txt.a libecore_txt.so libecore_x.a
-[PROVIDES] libecore_x.so
+[PROVIDES] ecore-config ecore_config ecore_evas_test ecore_test libecore.a
+[PROVIDES] libecore.so libecore_con.a libecore_con.so libecore_config.a
+[PROVIDES] libecore_config.so libecore_dbus.a libecore_dbus.so
+[PROVIDES] libecore_evas.a libecore_evas.so libecore_fb.a libecore_fb.so
+[PROVIDES] libecore_file.a libecore_file.so libecore_ipc.a libecore_ipc.so
+[PROVIDES] libecore_job.a libecore_job.so libecore_txt.a libecore_txt.so
+[PROVIDES] libecore_x.a libecore_x.so
 

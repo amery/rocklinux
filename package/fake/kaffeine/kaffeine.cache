@@ -20,25 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1119346213 Tue Jun 21 11:30:13 2005 (5)
-[TIMESTAMP] 1119606749 Fri Jun 24 11:52:29 2005 (9)
+[TIMESTAMP] 1123920982 Sat Aug 13 10:16:22 2005 (5)
+[TIMESTAMP] 1124160054 Tue Aug 16 04:40:54 2005 (9)
 
-[CONFIG-ID] TRUNK-x86-reference-expert
+[CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-kaffeine.log 9-kaffeine.log
 
-[BUILDTIME] 12433 (5)
-[BUILDTIME] 12762 (9)
-[SIZE] 1.58 MB, 72 files
+[BUILDTIME] 22380 (5)
+[BUILDTIME] 22726 (9)
+[SIZE] 2.63 MB, 89 files
 
 [DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils expat fam
 [DEP] fam:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev gettext
-[DEP] glibc23 glibc23:dev grep kdebase kdelibs kdelibs:dev kdelibs:doc
-[DEP] kdesdk kdeutils libart_lgpl23 libart_lgpl23:dev libjpeg libpng
-[DEP] libpng:dev libxml2 linux26-header:dev make mktemp net-tools perl5
-[DEP] qt qt:dev sed sysfiles tar util-linux vim xine-lib xine-lib:dev
-[DEP] xorg xorg:dev zlib:dev
+[DEP] glib glib:dev glibc23 glibc23:dev gnome2-dirtree grep gst-plugins
+[DEP] gst-plugins:dev gstreamer gstreamer:dev kdebase kdelibs kdelibs:dev
+[DEP] kdelibs:doc kdesdk kdeutils koffice libart_lgpl23 libart_lgpl23:dev
+[DEP] libjpeg libpng libpng:dev libxml2 libxml2:dev linux26-header:dev make
+[DEP] mktemp net-tools perl5 pkgconfig popt popt:dev qt qt:dev sed sysfiles
+[DEP] tar util-linux vim xine-lib xine-lib:dev xorg xorg:dev zlib:dev
 
-[PROVIDES] kaffeine libkaffeinepart.so libkmediapart.so
+[PROVIDES] kaffeine libgstreamerpart.so libkaffeinepart.so libkmediapart.so
 

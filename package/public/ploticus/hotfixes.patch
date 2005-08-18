@@ -1,0 +1,11 @@
+--- ./src/functions.c.orig	2005-08-16 15:34:30.000000000 +0200
++++ ./src/functions.c	2005-08-16 15:34:41.000000000 +0200
+@@ -636,7 +636,7 @@
+ 
+ 	if( hash == 1708 ) { /* $htmldisplay( var1, .. varN ) - convert embedded HTML problem chars (<,>,&) 
+ 			      * to their html esc sequences for all variables given */
+-		char *strchr();
++		// char *strchr();
+ 		for( i = 0; i < nargs; i++ ) {
+         		stat = TDH_getvalue( tok, arg[i], TDH_dat, TDH_recid );
+ 			if( strchr( tok, '&' ) != NULL ) GL_substitute( "&", "&amp;", tok );

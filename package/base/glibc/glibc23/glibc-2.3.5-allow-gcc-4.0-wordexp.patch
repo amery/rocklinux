@@ -1,0 +1,16 @@
+../sysdeps/generic/wordexp.c: In function 'exec_comm':
+../sysdeps/generic/wordexp.c:815: sorry, unimplemented: inlining failed in call to 'exec_comm_child': function body not available
+../sysdeps/generic/wordexp.c:900: sorry, unimplemented: called from here
+
+
+--- glibc-2.3-20050307/sysdeps/generic/wordexp.c.old	2005-03-12 08:54:15.709253928 -0800
++++ glibc-2.3-20050307/sysdeps/generic/wordexp.c	2005-03-12 08:54:51.242852000 -0800
+@@ -809,7 +809,7 @@
+ }
+
+ /* Function called by child process in exec_comm() */
+-static void
++static inline void
+ internal_function __attribute__ ((always_inline))
+ exec_comm_child (char *comm, int *fildes, int showerr, int noexec)
+ {

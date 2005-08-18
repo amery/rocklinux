@@ -1,0 +1,39 @@
+Fixes
+../sysdeps/wordsize-64/wcstol_l.c:11: error: '____wcstoll_l_internal' aliased to undefined symbol '____wcstol_l_internal'
+../sysdeps/wordsize-64/wcstol_l.c:12: error: '__wcstoll_l' aliased to undefined symbol '__wcstol_l'
+../sysdeps/wordsize-64/wcstol_l.c:13: error: 'wcstoll_l' aliased to undefined symbol '__wcstol_l'
+
+===================================================================
+RCS file: /cvs/glibc/libc/sysdeps/wordsize-64/strtol_l.c,v
+retrieving revision 1.4
+retrieving revision 1.4.2.1
+diff -u -r1.4 -r1.4.2.1
+--- libc/sysdeps/wordsize-64/strtol_l.c	2003/03/03 09:45:12	1.4
++++ libc/sysdeps/wordsize-64/strtol_l.c	2005/03/25 11:59:01	1.4.2.1
+@@ -8,7 +8,9 @@
+ #undef ____strtoll_l_internal
+ #undef __strtoll_l
+ #undef strtoll_l
++#if !UNSIGNED
+ strong_alias (____strtol_l_internal, ____strtoll_l_internal)
+ libc_hidden_ver (____strtol_l_internal, ____strtoll_l_internal)
+ weak_alias (__strtol_l, __strtoll_l)
+ weak_alias (__strtol_l, strtoll_l)
++#endif
+===================================================================
+RCS file: /cvs/glibc/libc/sysdeps/wordsize-64/wcstol_l.c,v
+retrieving revision 1.4
+retrieving revision 1.4.2.1
+diff -u -r1.4 -r1.4.2.1
+--- libc/sysdeps/wordsize-64/wcstol_l.c	2002/08/08 11:44:51	1.4
++++ libc/sysdeps/wordsize-64/wcstol_l.c	2005/03/25 11:59:01	1.4.2.1
+@@ -8,6 +8,8 @@
+ #undef ____wcstoll_l_internal
+ #undef __wcstoll_l
+ #undef wcstoll_l
++#if !UNSIGNED
+ strong_alias (____wcstol_l_internal, ____wcstoll_l_internal)
+ weak_alias (__wcstol_l, __wcstoll_l)
+ weak_alias (__wcstol_l, wcstoll_l)
++#endif
+

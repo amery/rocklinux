@@ -29,7 +29,6 @@ diff -dur xc/extras/fontconfig/configure xc-p/extras/fontconfig/configure
  
  # Set major version
  PACKAGE_MAJOR=`echo $PACKAGE_VERSION | awk -F . '{ print $1 }'`
-diff -dur xc/extras/fontconfig/configure.in xc-p/extras/fontconfig/configure.in
 --- xc/extras/fontconfig/configure.in	2003-09-25 13:01:14.000000000 +0200
 +++ xc-p/extras/fontconfig/configure.in	2004-11-11 22:22:24.000000000 +0100
 @@ -43,7 +43,7 @@
@@ -41,7 +40,6 @@ diff -dur xc/extras/fontconfig/configure.in xc-p/extras/fontconfig/configure.in
  
  # Set major version
  PACKAGE_MAJOR=`echo $PACKAGE_VERSION | awk -F . '{ print $1 }'`
-diff -dur xc/extras/fontconfig/fc-cache/fc-cache.c xc-p/extras/fontconfig/fc-cache/fc-cache.c
 --- xc/extras/fontconfig/fc-cache/fc-cache.c	2003-09-25 13:01:15.000000000 +0200
 +++ xc-p/extras/fontconfig/fc-cache/fc-cache.c	2004-11-11 22:22:24.000000000 +0100
 @@ -1,7 +1,7 @@
@@ -166,7 +164,6 @@ diff -dur xc/extras/fontconfig/fc-cache/fc-cache.c xc-p/extras/fontconfig/fc-cac
      config = FcInitLoadConfig ();
      if (!config)
      {
-diff -dur xc/extras/fontconfig/fc-lang/fc-lang.c xc-p/extras/fontconfig/fc-lang/fc-lang.c
 --- xc/extras/fontconfig/fc-lang/fc-lang.c	2003-06-04 18:29:38.000000000 +0200
 +++ xc-p/extras/fontconfig/fc-lang/fc-lang.c	2004-11-11 22:22:24.000000000 +0100
 @@ -1,5 +1,7 @@
@@ -303,7 +300,6 @@ diff -dur xc/extras/fontconfig/fc-lang/fc-lang.c xc-p/extras/fontconfig/fc-lang/
      while (fgets (line, sizeof (line), stdin))
  	fputs (line, stdout);
      
-diff -dur xc/extras/fontconfig/fc-lang/fclang.h xc-p/extras/fontconfig/fc-lang/fclang.h
 --- xc/extras/fontconfig/fc-lang/fclang.h	2003-06-04 18:29:38.000000000 +0200
 +++ xc-p/extras/fontconfig/fc-lang/fclang.h	2004-11-11 22:22:24.000000000 +0100
 @@ -1,5 +1,7 @@
@@ -2071,7 +2067,6 @@ diff -dur xc/extras/fontconfig/fc-lang/fclang.h xc-p/extras/fontconfig/fc-lang/f
  };
  
 -#define NUM_COUNTRY_SET 1
-diff -dur xc/extras/fontconfig/fc-lang/fclang.tmpl.h xc-p/extras/fontconfig/fc-lang/fclang.tmpl.h
 --- xc/extras/fontconfig/fc-lang/fclang.tmpl.h	2003-09-25 13:01:18.000000000 +0200
 +++ xc-p/extras/fontconfig/fc-lang/fclang.tmpl.h	2004-11-11 22:22:24.000000000 +0100
 @@ -1,7 +1,7 @@
@@ -2084,7 +2079,6 @@ diff -dur xc/extras/fontconfig/fc-lang/fclang.tmpl.h xc-p/extras/fontconfig/fc-l
   *
   * Permission to use, copy, modify, distribute, and sell this software and its
   * documentation for any purpose is hereby granted without fee, provided that
-diff -dur xc/extras/fontconfig/fc-list/fc-list.c xc-p/extras/fontconfig/fc-list/fc-list.c
 --- xc/extras/fontconfig/fc-list/fc-list.c	2003-09-25 13:01:21.000000000 +0200
 +++ xc-p/extras/fontconfig/fc-list/fc-list.c	2004-11-11 22:22:24.000000000 +0100
 @@ -1,5 +1,7 @@
@@ -2172,7 +2166,6 @@ diff -dur xc/extras/fontconfig/fc-list/fc-list.c xc-p/extras/fontconfig/fc-list/
  	    break;
  	default:
  	    usage (argv[0]);
-diff -dur xc/extras/fontconfig/fontconfig/fcfreetype.h xc-p/extras/fontconfig/fontconfig/fcfreetype.h
 --- xc/extras/fontconfig/fontconfig/fcfreetype.h	2003-11-21 06:56:14.000000000 +0100
 +++ xc-p/extras/fontconfig/fontconfig/fcfreetype.h	2004-11-11 22:22:24.000000000 +0100
 @@ -31,6 +31,9 @@
@@ -2185,7 +2178,6 @@ diff -dur xc/extras/fontconfig/fontconfig/fcfreetype.h xc-p/extras/fontconfig/fo
  FcFreeTypeCharSet (FT_Face face, FcBlanks *blanks);
  
  FcResult
-diff -dur xc/extras/fontconfig/fontconfig/fcprivate.h xc-p/extras/fontconfig/fontconfig/fcprivate.h
 --- xc/extras/fontconfig/fontconfig/fcprivate.h	2003-06-04 18:29:39.000000000 +0200
 +++ xc-p/extras/fontconfig/fontconfig/fcprivate.h	2004-11-11 22:22:24.000000000 +0100
 @@ -1,5 +1,7 @@
@@ -2205,12 +2197,11 @@ diff -dur xc/extras/fontconfig/fontconfig/fcprivate.h xc-p/extras/fontconfig/fon
  
  #ifndef _FCPRIVATE_H_
  #define _FCPRIVATE_H_
-diff -dur xc/extras/fontconfig/fontconfig/fontconfig.h xc-p/extras/fontconfig/fontconfig/fontconfig.h
 --- xc/extras/fontconfig/fontconfig/fontconfig.h	2003-09-25 13:01:21.000000000 +0200
 +++ xc-p/extras/fontconfig/fontconfig/fontconfig.h	2004-11-11 22:22:24.000000000 +0100
 @@ -1,7 +1,7 @@
  /*
-- * $XFree86: xc/extras/fontconfig/fontconfig/fontconfig.h,v 1.1.1.1 2003/06/04 02:57:42 dawes Exp $
+- * $XFree86: xc/extras/fontconfig/fontconfig/fontconfig.h,v 1.2 2005/02/14 03:04:59 dawes Exp $
 + * $RCSId: xc/lib/fontconfig/fontconfig/fontconfig.h,v 1.30 2002/09/26 00:17:27 keithp Exp $
   *
 - * Copyright © 2001 Keith Packard, member of The XFree86 Project, Inc.
@@ -2227,11 +2218,10 @@ diff -dur xc/extras/fontconfig/fontconfig/fontconfig.h xc-p/extras/fontconfig/fo
 + * must appear in the fontconfig configure.in file. Yes,
 + * it'a a pain to synchronize version numbers like this.
   */
--#define FC_MAJOR	1
--#define FC_MINOR	0
--#define FC_REVISION	2
 +
-+#define FC_MAJOR	2
+ #define FC_MAJOR	2
+-#define FC_MINOR	1
+-#define FC_REVISION	0
 +#define FC_MINOR	2
 +#define FC_REVISION	1
  
@@ -2254,6 +2244,14 @@ diff -dur xc/extras/fontconfig/fontconfig/fontconfig.h xc-p/extras/fontconfig/fo
 -#define FC_WEIGHT_DEMIBOLD  180
 -#define FC_WEIGHT_BOLD	    200
 -#define FC_WEIGHT_BLACK	    210
+-
+-#define FC_SLANT_ROMAN	    0
+-#define FC_SLANT_ITALIC	    100
+-#define FC_SLANT_OBLIQUE    110
+-
+-#define FC_PROPORTIONAL	    0
+-#define FC_MONO		    100
+-#define FC_CHARCELL	    110
 +#define FC_WEIGHT_THIN		    0
 +#define FC_WEIGHT_EXTRALIGHT	    40
 +#define FC_WEIGHT_ULTRALIGHT	    FC_WEIGHT_EXTRALIGHT
@@ -2268,17 +2266,11 @@ diff -dur xc/extras/fontconfig/fontconfig/fontconfig.h xc-p/extras/fontconfig/fo
 +#define FC_WEIGHT_ULTRABOLD	    FC_WEIGHT_EXTRABOLD
 +#define FC_WEIGHT_BLACK		    210
 +#define FC_WEIGHT_HEAVY		    FC_WEIGHT_BLACK
- 
--#define FC_SLANT_ROMAN	    0
--#define FC_SLANT_ITALIC	    100
--#define FC_SLANT_OBLIQUE    110
++
 +#define FC_SLANT_ROMAN		    0
 +#define FC_SLANT_ITALIC		    100
 +#define FC_SLANT_OBLIQUE	    110
- 
--#define FC_PROPORTIONAL	    0
--#define FC_MONO		    100
--#define FC_CHARCELL	    110
++
 +#define FC_WIDTH_ULTRACONDENSED	    50
 +#define FC_WIDTH_EXTRACONDENSED	    63
 +#define FC_WIDTH_CONDENSED	    75
@@ -2329,7 +2321,6 @@ diff -dur xc/extras/fontconfig/fontconfig/fontconfig.h xc-p/extras/fontconfig/fo
  
  int
  FcStrCmpIgnoreCase (const FcChar8 *s1, const FcChar8 *s2);
-diff -dur xc/extras/fontconfig/Imakefile xc-p/extras/fontconfig/Imakefile
 --- xc/extras/fontconfig/Imakefile	2003-09-25 13:01:13.000000000 +0200
 +++ xc-p/extras/fontconfig/Imakefile	2004-11-11 22:22:24.000000000 +0100
 @@ -7,6 +7,9 @@
@@ -2342,7 +2333,6 @@ diff -dur xc/extras/fontconfig/Imakefile xc-p/extras/fontconfig/Imakefile
  FONTCONFIG_REVISION=1
  
  #ifndef FontconfigFontsConfDir
-diff -dur xc/extras/fontconfig/local.def xc-p/extras/fontconfig/local.def
 --- xc/extras/fontconfig/local.def	2003-09-25 13:01:14.000000000 +0200
 +++ xc-p/extras/fontconfig/local.def	2004-11-11 22:22:24.000000000 +0100
 @@ -41,7 +41,7 @@
@@ -2354,7 +2344,6 @@ diff -dur xc/extras/fontconfig/local.def xc-p/extras/fontconfig/local.def
  SharedLibReferences(FONTCONFIG,fontconfig,$(FONTCONFIGSRC),SOXLIBREV,SharedFontconfigRev)
  #else
  ProjectUnsharedLibReferences(FONTCONFIG,fontconfig,$(FONTCONFIGSRC),BuildLibDir)
-diff -dur xc/extras/fontconfig/src/fcatomic.c xc-p/extras/fontconfig/src/fcatomic.c
 --- xc/extras/fontconfig/src/fcatomic.c	2003-09-25 13:01:22.000000000 +0200
 +++ xc-p/extras/fontconfig/src/fcatomic.c	2004-11-11 22:22:24.000000000 +0100
 @@ -1,7 +1,7 @@
@@ -2442,7 +2431,6 @@ diff -dur xc/extras/fontconfig/src/fcatomic.c xc-p/extras/fontconfig/src/fcatomi
  }
  
  void
-diff -dur xc/extras/fontconfig/src/fcblanks.c xc-p/extras/fontconfig/src/fcblanks.c
 --- xc/extras/fontconfig/src/fcblanks.c	2003-09-25 13:01:22.000000000 +0200
 +++ xc-p/extras/fontconfig/src/fcblanks.c	2004-11-11 22:22:24.000000000 +0100
 @@ -1,7 +1,7 @@
@@ -2455,7 +2443,6 @@ diff -dur xc/extras/fontconfig/src/fcblanks.c xc-p/extras/fontconfig/src/fcblank
   *
   * Permission to use, copy, modify, distribute, and sell this software and its
   * documentation for any purpose is hereby granted without fee, provided that
-diff -dur xc/extras/fontconfig/src/fccache.c xc-p/extras/fontconfig/src/fccache.c
 --- xc/extras/fontconfig/src/fccache.c	2003-12-03 05:57:04.000000000 +0100
 +++ xc-p/extras/fontconfig/src/fccache.c	2004-11-11 22:22:24.000000000 +0100
 @@ -1,5 +1,7 @@
@@ -2768,7 +2755,6 @@ diff -dur xc/extras/fontconfig/src/fccache.c xc-p/extras/fontconfig/src/fccache.
      if (cache_slash && !strncmp ((const char *) cache, (const char *) file,
  				 (cache_slash + 1) - cache))
  	return file + ((cache_slash + 1) - cache);
-diff -dur xc/extras/fontconfig/src/fccfg.c xc-p/extras/fontconfig/src/fccfg.c
 --- xc/extras/fontconfig/src/fccfg.c	2003-06-04 18:29:39.000000000 +0200
 +++ xc-p/extras/fontconfig/src/fccfg.c	2004-11-11 22:22:24.000000000 +0100
 @@ -1,5 +1,7 @@
@@ -3148,7 +3134,6 @@ diff -dur xc/extras/fontconfig/src/fccfg.c xc-p/extras/fontconfig/src/fccfg.c
      case '/':
  	file = FcConfigFileExists (0, url);
  	break;
-diff -dur xc/extras/fontconfig/src/fccharset.c xc-p/extras/fontconfig/src/fccharset.c
 --- xc/extras/fontconfig/src/fccharset.c	2003-06-04 18:29:39.000000000 +0200
 +++ xc-p/extras/fontconfig/src/fccharset.c	2004-11-11 22:22:24.000000000 +0100
 @@ -1,5 +1,7 @@
@@ -3956,7 +3941,6 @@ diff -dur xc/extras/fontconfig/src/fccharset.c xc-p/extras/fontconfig/src/fcchar
 -    return 0;
 -}
 -
-diff -dur xc/extras/fontconfig/src/fcdbg.c xc-p/extras/fontconfig/src/fcdbg.c
 --- xc/extras/fontconfig/src/fcdbg.c	2003-09-25 13:01:22.000000000 +0200
 +++ xc-p/extras/fontconfig/src/fcdbg.c	2004-11-11 22:22:24.000000000 +0100
 @@ -1,7 +1,7 @@
@@ -4073,7 +4057,6 @@ diff -dur xc/extras/fontconfig/src/fcdbg.c xc-p/extras/fontconfig/src/fcdbg.c
      case FcOpInvalid: printf ("Invalid"); break;
      }
  }
-diff -dur xc/extras/fontconfig/src/fcdefault.c xc-p/extras/fontconfig/src/fcdefault.c
 --- xc/extras/fontconfig/src/fcdefault.c	2003-09-25 13:01:22.000000000 +0200
 +++ xc-p/extras/fontconfig/src/fcdefault.c	2004-11-11 22:22:24.000000000 +0100
 @@ -1,7 +1,7 @@
@@ -4096,7 +4079,6 @@ diff -dur xc/extras/fontconfig/src/fcdefault.c xc-p/extras/fontconfig/src/fcdefa
      for (i = 0; i < NUM_FC_BOOL_DEFAULTS; i++)
  	if (FcPatternGet (pattern, FcBoolDefaults[i].field, 0, &v) == FcResultNoMatch)
  	    FcPatternAddBool (pattern, FcBoolDefaults[i].field, FcBoolDefaults[i].value);
-diff -dur xc/extras/fontconfig/src/fcdir.c xc-p/extras/fontconfig/src/fcdir.c
 --- xc/extras/fontconfig/src/fcdir.c	2003-06-04 18:29:39.000000000 +0200
 +++ xc-p/extras/fontconfig/src/fcdir.c	2004-11-11 22:22:24.000000000 +0100
 @@ -1,5 +1,7 @@
@@ -4202,7 +4184,6 @@ diff -dur xc/extras/fontconfig/src/fcdir.c xc-p/extras/fontconfig/src/fcdir.c
      if (ret && cache)
  	FcGlobalCacheUpdate (cache, dir, 0, 0);
  	
-diff -dur xc/extras/fontconfig/src/fcfreetype.c xc-p/extras/fontconfig/src/fcfreetype.c
 --- xc/extras/fontconfig/src/fcfreetype.c	2003-11-21 06:56:14.000000000 +0100
 +++ xc-p/extras/fontconfig/src/fcfreetype.c	2004-11-11 22:22:24.000000000 +0100
 @@ -22,6 +22,28 @@
@@ -5478,7 +5459,6 @@ diff -dur xc/extras/fontconfig/src/fcfreetype.c xc-p/extras/fontconfig/src/fcfre
 +
 +    return FcFreeTypeCharSetAndSpacing (face, blanks, &spacing);
 +}
-diff -dur xc/extras/fontconfig/src/fcfs.c xc-p/extras/fontconfig/src/fcfs.c
 --- xc/extras/fontconfig/src/fcfs.c	2003-09-25 13:01:22.000000000 +0200
 +++ xc-p/extras/fontconfig/src/fcfs.c	2004-11-11 22:22:24.000000000 +0100
 @@ -1,7 +1,7 @@
@@ -5491,12 +5471,11 @@ diff -dur xc/extras/fontconfig/src/fcfs.c xc-p/extras/fontconfig/src/fcfs.c
   *
   * Permission to use, copy, modify, distribute, and sell this software and its
   * documentation for any purpose is hereby granted without fee, provided that
-diff -dur xc/extras/fontconfig/src/fcinit.c xc-p/extras/fontconfig/src/fcinit.c
 --- xc/extras/fontconfig/src/fcinit.c	2003-09-25 13:01:22.000000000 +0200
 +++ xc-p/extras/fontconfig/src/fcinit.c	2004-11-11 22:22:24.000000000 +0100
 @@ -1,7 +1,7 @@
  /*
-- * $XFree86: xc/extras/fontconfig/src/fcinit.c,v 1.1.1.1 2003/06/04 02:57:52 dawes Exp $
+- * $XFree86: xc/extras/fontconfig/src/fcinit.c,v 1.2 2005/02/16 21:01:09 dawes Exp $
 + * $RCSId: xc/lib/fontconfig/src/fcinit.c,v 1.7 2002/08/22 07:36:44 keithp Exp $
   *
 - * Copyright © 2001 Keith Packard, member of The XFree86 Project, Inc.
@@ -5504,7 +5483,6 @@ diff -dur xc/extras/fontconfig/src/fcinit.c xc-p/extras/fontconfig/src/fcinit.c
   *
   * Permission to use, copy, modify, distribute, and sell this software and its
   * documentation for any purpose is hereby granted without fee, provided that
-diff -dur xc/extras/fontconfig/src/fcint.h xc-p/extras/fontconfig/src/fcint.h
 --- xc/extras/fontconfig/src/fcint.h	2003-11-02 05:40:29.000000000 +0100
 +++ xc-p/extras/fontconfig/src/fcint.h	2004-11-11 22:22:24.000000000 +0100
 @@ -1,7 +1,7 @@
@@ -5633,7 +5611,6 @@ diff -dur xc/extras/fontconfig/src/fcint.h xc-p/extras/fontconfig/src/fcint.h
 +FcStrLastSlash (const FcChar8  *path);
 +
  #endif /* _FC_INT_H_ */
-diff -dur xc/extras/fontconfig/src/fclang.c xc-p/extras/fontconfig/src/fclang.c
 --- xc/extras/fontconfig/src/fclang.c	2004-10-27 13:00:28.000000000 +0200
 +++ xc-p/extras/fontconfig/src/fclang.c	2004-11-11 22:22:24.000000000 +0100
 @@ -1,5 +1,7 @@
@@ -5910,9 +5887,6 @@ diff -dur xc/extras/fontconfig/src/fclang.c xc-p/extras/fontconfig/src/fclang.c
 +    }
 +    return FcTrue;
 +}
-Nur in xc-p/extras/fontconfig/src: fclang.c~.
-Nur in xc-p/extras/fontconfig/src: fclang.c.rej.
-diff -dur xc/extras/fontconfig/src/fclist.c xc-p/extras/fontconfig/src/fclist.c
 --- xc/extras/fontconfig/src/fclist.c	2003-09-25 13:01:22.000000000 +0200
 +++ xc-p/extras/fontconfig/src/fclist.c	2004-11-11 22:22:24.000000000 +0100
 @@ -1,7 +1,7 @@
@@ -5934,7 +5908,6 @@ diff -dur xc/extras/fontconfig/src/fclist.c xc-p/extras/fontconfig/src/fclist.c
  		return FcTrue;
      return FcFalse;
  }
-diff -dur xc/extras/fontconfig/src/fcmatch.c xc-p/extras/fontconfig/src/fcmatch.c
 --- xc/extras/fontconfig/src/fcmatch.c	2003-09-25 13:01:22.000000000 +0200
 +++ xc-p/extras/fontconfig/src/fcmatch.c	2004-11-11 22:22:24.000000000 +0100
 @@ -1,7 +1,7 @@
@@ -6048,7 +6021,6 @@ diff -dur xc/extras/fontconfig/src/fcmatch.c xc-p/extras/fontconfig/src/fcmatch.
      case 'r':
  	i = MATCH_RASTERIZER; break;
      case 'o':
-diff -dur xc/extras/fontconfig/src/fcmatrix.c xc-p/extras/fontconfig/src/fcmatrix.c
 --- xc/extras/fontconfig/src/fcmatrix.c	2003-09-25 13:01:22.000000000 +0200
 +++ xc-p/extras/fontconfig/src/fcmatrix.c	2004-11-11 22:22:24.000000000 +0100
 @@ -1,5 +1,5 @@
@@ -6058,7 +6030,6 @@ diff -dur xc/extras/fontconfig/src/fcmatrix.c xc-p/extras/fontconfig/src/fcmatri
   *
   * Copyright © 2000 Tuomas J. Lukka
   *
-diff -dur xc/extras/fontconfig/src/fcname.c xc-p/extras/fontconfig/src/fcname.c
 --- xc/extras/fontconfig/src/fcname.c	2003-09-25 13:01:22.000000000 +0200
 +++ xc-p/extras/fontconfig/src/fcname.c	2004-11-11 22:22:24.000000000 +0100
 @@ -1,7 +1,7 @@
@@ -6142,7 +6113,6 @@ diff -dur xc/extras/fontconfig/src/fcname.c xc-p/extras/fontconfig/src/fcname.c
  	if (c1 == 'n')
  	{
  	    *result = FcTrue;
-diff -dur xc/extras/fontconfig/src/fcpat.c xc-p/extras/fontconfig/src/fcpat.c
 --- xc/extras/fontconfig/src/fcpat.c	2003-06-04 18:29:39.000000000 +0200
 +++ xc-p/extras/fontconfig/src/fcpat.c	2004-11-11 22:22:24.000000000 +0100
 @@ -1,5 +1,7 @@
@@ -6177,7 +6147,6 @@ diff -dur xc/extras/fontconfig/src/fcpat.c xc-p/extras/fontconfig/src/fcpat.c
      /* destroy value */
      FcValueListDestroy (e->values);
      
-diff -dur xc/extras/fontconfig/src/fcstr.c xc-p/extras/fontconfig/src/fcstr.c
 --- xc/extras/fontconfig/src/fcstr.c	2003-11-21 06:56:14.000000000 +0100
 +++ xc-p/extras/fontconfig/src/fcstr.c	2004-11-11 22:22:24.000000000 +0100
 @@ -1,5 +1,7 @@
@@ -6290,7 +6259,6 @@ diff -dur xc/extras/fontconfig/src/fcstr.c xc-p/extras/fontconfig/src/fcstr.c
      if (!slash)
  	return FcStrCopy (file);
      return FcStrCopy (slash + 1);
-diff -dur xc/extras/fontconfig/src/fcxml.c xc-p/extras/fontconfig/src/fcxml.c
 --- xc/extras/fontconfig/src/fcxml.c	2003-06-04 18:29:39.000000000 +0200
 +++ xc-p/extras/fontconfig/src/fcxml.c	2004-11-11 22:22:24.000000000 +0100
 @@ -1,5 +1,7 @@
@@ -6604,7 +6572,6 @@ diff -dur xc/extras/fontconfig/src/fcxml.c xc-p/extras/fontconfig/src/fcxml.c
  	break;
      case FcElementUnknown:
  	break;
-diff -dur xc/extras/fontconfig/src/Imakefile xc-p/extras/fontconfig/src/Imakefile
 --- xc/extras/fontconfig/src/Imakefile	2003-09-25 13:01:22.000000000 +0200
 +++ xc-p/extras/fontconfig/src/Imakefile	2004-11-11 22:22:24.000000000 +0100
 @@ -16,7 +16,7 @@
@@ -6616,7 +6583,6 @@ diff -dur xc/extras/fontconfig/src/Imakefile xc-p/extras/fontconfig/src/Imakefil
  #define SoRev SOFONTCONFIGREV
  
  #include <Threads.tmpl>
-diff -dur xc/lib/fontconfig/Imakefile xc-p/lib/fontconfig/Imakefile
 --- xc/lib/fontconfig/Imakefile	2004-04-12 13:01:28.000000000 +0200
 +++ xc-p/lib/fontconfig/Imakefile	2004-11-11 22:22:24.000000000 +0100
 @@ -7,6 +7,8 @@
@@ -6637,4 +6603,3 @@ diff -dur xc/lib/fontconfig/Imakefile xc-p/lib/fontconfig/Imakefile
  
  #ifndef FontconfigFontsConfDir
  #if NothingOutsideProjectRoot
-Nur in xc-p/programs/Xserver/hw/tinyx/linux: linux.c~.

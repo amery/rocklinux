@@ -7,30 +7,9 @@
 # format:
 # pkg-name del list-of-false-dependencies
 
-# search fo dep fixes in old dep_fixes.txt after Check-Deps-2:
-# grep -f <( grep color=red dependencies.dot | awk '{ gsub("_", "."); print "^" $3 ".*" $1; }'; ) <( perl -pe 'my @a = split /\s+/; my $p = shift @a; shift @a; printf "%-20s del %s\n", $p, $_ foreach (@a); $_=""' old_dep_fixes.txt; )
-
-docbookx del gnome-doc-utils
+seahorse del glabels gdesklets
+mozilla	 del control-center nautilus-cd-burner
 libxml2  del libxslt
-mozilla  del control-center
-mozilla  del nautilus-cd-burner
-mplayer  del mplayer-fonts
+docbookx del gnome-doc-utils
 python   del kdebindings
-seahorse del gdesklets
-seahorse del glabels
-xfree86  del ctwm
-xfree86  del isdn4k-utils
-xfree86  del root-tail
-xfree86  del terminus-font
-xfree86  del transfig
-xfree86  del xautolock
-xfree86  del xfig
-xfree86  del xfree86-cyrillic-fonts
-xorg     del ctwm
-xorg     del isdn4k-utils
-xorg     del root-tail
-xorg     del terminus-font
-xorg     del transfig
-xorg     del xautolock
-xorg     del xfig
 

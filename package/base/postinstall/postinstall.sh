@@ -23,68 +23,76 @@
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
 # Helper functions
-is_installed ()
+is_installed()
 {
-	if [ install_checks_true == 1 ]; then return 0; fi
+	if [ $install_checks_true == 1 ]; then return 0; fi
 	[ -e "$1" ];
 }
 
-is_removed ()
+is_removed()
 {
-	if [ remove_checks_true == 1 ]; then return 0; fi
+	if [ $remove_checks_true == 1 ]; then return 0; fi
 	[ ! -e "$1" ];
 }
 
-all_installed () {
-	for N in /var/adm/postinstall/*-install.??????;
-	do
-		#echo $N
-		if [ ! -e "$N" ]; then return 0; fi
-		grep "$1" "$N" | cut -f2 -d' ' |
-		while read M; do 
-			if is_installed "/$M"; then echo "/$M"; fi; 
-		done
-	done | sort -u
+all_installed() {
+	while read dummy M; do
+		[ -e "/$M" ] && echo "/$M"
+	done < <( cat /var/adm/postinstall/*-install.?????? 2> /dev/null | grep "$1"; ) | sort -u
 }
 
-all_removed () {
-	for N in /var/adm/postinstall/*-remove.??????;
-	do
-		if [ ! -e "$N" ]; then return 0; fi
-		grep "$1" "$N" | cut -f2 -d' ' |
-		while read M; do 
-			if is_removed "/$M"; then echo "/$M"; fi; 
-		done
-	done | sort -u
+all_removed() {
+	while read dummy M; do
+		[ -e "/$M" ] || echo "/$M"
+	done < <( cat /var/adm/postinstall/*-remove.?????? 2> /dev/null | grep "$1"; ) | sort -u
 }
 
-any_installed () {
-	if [ install_checks_true == 1 ]; then return 0; fi
-	# This is a hack. Simply returning 0 if a file is found does not work?!
-	if [ "`all_installed $1`" != "" ]; then return 0; else return 1; fi
+all_touched() {
+	while read dummy M; do
+		[ -e "/$M" ] || echo "/$M"
+	done < <( cat /var/adm/postinstall/*-install.?????? /var/adm/postinstall/*-remove.?????? 2> /dev/null | grep "$1"; ) | sort -u
 }
 
-any_removed () {
-	if [ remove_checks_true == 1 ]; then return 0; fi
-	# This is a hack. Simply returning 0 if a file is found does not work?!
-	if [ "`all_installed $1`" != "" ]; then return 0; else return 1; fi
+any_installed() {
+	if [ $install_checks_true == 1 ]; then return 0; fi
+	cat /var/adm/postinstall/*-install.?????? 2> /dev/null | grep -q "$1" 
+}
+
+any_removed() {
+	if [ $remove_checks_true == 1 ]; then return 0; fi
+	cat /var/adm/postinstall/*-remove.?????? 2> /dev/null | grep -q "$1" 
+}
+
+any_touched() {
+	if [ $install_checks_true == 1 ]; then return 0; fi
+	if [ $remove_checks_true == 1 ]; then return 0; fi
+	cat /var/adm/postinstall/*-install.?????? /var/adm/postinstall/*-remove.?????? 2> /dev/null | grep -q "$1" 
 }
 
 install_checks_true=0
 remove_checks_true=0
 
-if [ "$1" == "-a" ]; then install_checks_true=1; shift; fi
-if [ "$1" == "-r" ]; then remove_checks_true=1; shift; fi
-if [ "$1" == "--help" ]; then 
-	echo "Usage: $0 [ -a ] [ -r ] [ --help ]"
-	echo
-	echo "	-a	execute all postinstall actions"
-	echo "	-r	execute all postremove actions"
-	echo "	--help  show this help text"
-	echo
-	exit 0;
-fi
-
+while [ "$#" -ge 1 ]; do
+	case "$1" in
+		-a)
+			install_checks_true=1
+			shift
+			;;
+		-r)
+			remove_checks_true=1
+			shift
+			;;
+		*)
+			echo
+			echo "Usage: $0 [ -a ] [ -r ]"
+			echo
+			echo "	-a	execute all postinstall actions"
+			echo "	-r	execute all postremove actions"
+			echo
+			exit 1
+			;;
+	esac
+done
 
 # Backup postinstall scripts for postremove operation
 all_installed "etc/postinstall/.*\.sh" | while read M;

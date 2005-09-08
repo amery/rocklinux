@@ -322,7 +322,7 @@ pkgloop_package() {
 		cmd_prefix="-prefix $pkg_prefix"
 	else cmd_prefix="" ; fi
 
-	cmd_buildpkg="./scripts/Build-Pkg -$stagelevel -cfg $config"
+	cmd_buildpkg="./scripts/Build-Pkg -$stagelevel -cfg $config -nopostinst"
 	cmd_buildpkg="$cmd_buildpkg $cmd_root $cmd_prefix $pkg_basename=$pkg_name"
 
 	# Execute action handler

@@ -31,6 +31,7 @@ config=default
 
 clear_src=1
 norebuild=0
+nopostinst=0
 update=0
 
 make_tar=''
@@ -57,12 +58,12 @@ help_msg() {
 	spacer="                          "
 	echo
 	echo "Usage: ./scripts/Build-Pkg" \
-	             "[ -0 | -1 | -2  ... | -8 | -9 ]           \\"
-	echo "$spacer [ -v ]  [ -xtrace ]  [ -chroot ]          \\"
-	echo "$spacer [ -root { <rootdir> | auto } ]            \\"
-	echo "$spacer [ -cfg <config> ]  [ -update ]            \\"
-	echo "$spacer [ -prefix <prefix-dir> ]  [ -norebuild ]  \\"
-	echo "$spacer [ -noclearsrc ]  [ -pkgdir <pkgdir> ]     \\"
+	             "[ -0 | -1 | -2  ... | -8 | -9 ]            \\"
+	echo "$spacer [ -v ]  [ -xtrace ]  [ -chroot ]           \\"
+	echo "$spacer [ -root { <rootdir> | auto } ] [ -update ] \\"
+	echo "$spacer [ -cfg <config> ]  [ -nopostinst ]         \\"
+	echo "$spacer [ -prefix <prefix-dir> ]  [ -norebuild ]   \\"
+	echo "$spacer [ -noclearsrc ]  [ -pkgdir <pkgdir> ]      \\"
 	echo "$spacer [ -id <id> ]  [ -debug ]  pkg-name(s)"
 	echo
 	echo " Build a single package. Warning: Re-building a package might overwrite or"
@@ -77,8 +78,9 @@ help_msg() {
 	echo "	-chroot		create and use a chroot environment"
 	echo "	-root { <rootdir> | auto }	the root build directory to use;"
 	echo "					defaults to automatic setting"
-	echo "	-cfg <config>	the build configuration to use"
 	echo "	-update		backup/restore modified package files"
+	echo "	-cfg <config>	the build configuration to use"
+	echo "	-nopostinst	do not create postinstall files"
 	echo "	-prefix <prefix-dir>		the installation prefix for packages;"
 	echo "					defaults to automatic setting"
 	echo "	-norebuild	don't rebuild a previously successfully built package;"
@@ -120,6 +122,7 @@ while [ "$1" ] ; do
 		-pkgdir)  options="$options $1 $2" ; pkgdir="$2"   ; shift ;;
 		-noclearsrc) options="$options $1" ; clear_src=0   ;;
 		-norebuild)  options="$options $1" ; norebuild=1   ;;
+		-nopostinst) options="$options $1" ; nopostinst=1  ;;
 		-download)   options="$options $1" ; download=1    ;;
 		-*) help_msg ; exit 1 ;;
 		*)  break ;;
@@ -1053,6 +1056,10 @@ abort() {
 					touch $x ; echo "$spkg: $x"
 			done
 		} | sort -u > var/adm/flists/$spkg
+
+		if [ $stagelevel -ge 2 -a $nopostinst = 0 -a -d /var/adm/postinstall ]; then
+			cp var/adm/flists/$spkg "$(mktemp var/adm/postinstall/${spkg}-install.XXXXXX)"
+		fi
 
 		echo "<$spkg> Creating package dependencies file ..."
 		sed "s,^[^ ]*,$spkg:," < $builddir/dependencies.txt > var/adm/dependencies/$spkg

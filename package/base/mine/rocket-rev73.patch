@@ -1,0 +1,44 @@
+--- ./rocket.sh	(revision 72)
++++ ./rocket.sh	(revision 73)
+@@ -9,6 +9,8 @@
+ The GEM Pools (install sources) are configured in /etc/rocket.conf
+ 
+ rocket updsrc .............. update local rock source tree
++rocket which <regex> ....... search in the "provides" package information
++
+ rocket build <pkg> ......... build tar.bz2 and .gem from sources
+ rocket emerge <pkg> ........ build and install a package
+ 
+@@ -22,7 +24,9 @@
+ rocket search <regex> ...... search packge descriptions for this regex
+ rocket fsearch <regex> ..... search packge file list for this regex
+ rocket list <regex> ........ list all packages with a name matching the regex
++
+ rocket info <pkg> .......... print package details
++rocket flist <pkg> ......... print package file list
+ 
+ EOT
+ 	exit 1
+@@ -67,6 +71,11 @@
+ 	./scripts/Cleanup
+ 	;;
+ 
++    which)
++	cd /usr/src/rock-src || exit 1
++	egrep -l "^\[PROVIDES\].* ($2)($| )" package/*/*/*.cache | cut -f3 -d/
++	;;
++
+     build)
+ 	shift
+ 	"$0" emerge "$@"; rc=$?
+@@ -195,6 +204,10 @@
+ 	egrep '^\[[LS]\]' /var/adm/rocket/descs/$2 && echo
+ 	;;
+ 
++    flist)
++	cut -f3- -d' ' /var/adm/rocket/cksums/$2
++	;;
++
+     install)
+ 	shift
+ 	deps=$( echo $( echo "$*" | tr ' ' '\n' |

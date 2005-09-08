@@ -1,0 +1,45 @@
+--- ./rocket.sh	(revision 73)
++++ ./rocket.sh	(revision 74)
+@@ -63,6 +63,15 @@
+ ' < <( curl -s "$1/packages.db" | gunzip; )
+ }
+ 
++call_postinstall() {
++	if [ -n "$( /bin/ls /var/adm/postinstall/ | head -n1 )" ]; then
++		read -p "Do you want to run the postinstall scripts now? [Y/n] " yn
++		if [ "$yn" = "y" -o "$yn" = "Y" -o "$yn" = "" ]; then
++			postinstall
++		fi
++	fi
++}
++
+ case "$1" in
+ 
+     updsrc)
+@@ -92,7 +101,9 @@
+ 		cp -r /etc/ROCK-CONFIG/* config/rocket/
+ 		./scripts/Config -cfg rocket -oldconfig
+ 	fi
+-	exec -a "$0" ./scripts/Emerge-Pkg -cfg rocket "$@"
++	./scripts/Emerge-Pkg -cfg rocket "$@"; rc=$?
++	call_postinstall
++	exit $rc
+ 	;;
+ 
+     create)
+@@ -282,12 +293,15 @@
+ 			echo "+ mine -i '$url'"; mine -i "$url"
+ 		fi
+ 	done
++	call_postinstall
+ 	exit 0
+ 	;;
+ 
+     remove)
+ 	shift
++	echo "+ mine -rs $*"
+ 	mine -rs "$@"
++	call_postinstall
+ 	;;
+ 
+     index)

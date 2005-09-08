@@ -36,15 +36,15 @@ this for supporting feedback compilation using the ROCK toolchain...
    || !strcmp (STR, "isystem") || !strcmp (STR, "-param") \
 --- ./gcc/gcc.c.orig	2004-09-24 15:44:36.000000000 +0200
 +++ ./gcc/gcc.c	2004-09-24 15:48:48.000000000 +0200
-@@ -765,9 +765,9 @@
+@@ -766,9 +766,9 @@
  /* NB: This is shared amongst all front-ends.  */
  static const char *cc1_options =
  "%{pg:%{fomit-frame-pointer:%e-pg and -fomit-frame-pointer are incompatible}}\
 - %1 %{!Q:-quiet} -dumpbase %B %{d*} %{m*} %{a*}\
 + %1 %{!Q:-quiet} -dumpbase %B %{d*} %{m*}\
   %{c|S:%{o*:-auxbase-strip %*}%{!o*:-auxbase %b}}%{!c:%{!S:-auxbase %b}}\
-- %{g*} %{O*} %{W*&pedantic*} %{w} %{std*} %{ansi}\
-+ %{a*} %{g*} %{O*} %{W*&pedantic*} %{w} %{std*} %{ansi}\
+- %{g*} %{O*} %{W*&pedantic*} %{w} %{std*&ansi&trigraphs}\
++ %{a*} %{g*} %{O*} %{W*&pedantic*} %{w} %{std*&ansi&trigraphs}\
   %{v:-version} %{pg:-p} %{p} %{f*} %{undef}\
   %{Qn:-fno-ident} %{--help:--help}\
   %{--target-help:--target-help}\

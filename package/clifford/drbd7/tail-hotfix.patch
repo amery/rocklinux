@@ -1,0 +1,11 @@
+--- ./drbd/Makefile.orig	2005-08-24 10:45:39.000000000 +0200
++++ ./drbd/Makefile	2005-08-24 10:44:40.000000000 +0200
+@@ -109,7 +109,7 @@
+ 	@mv .kernelrelease.new .kernelrelease
+ 	@echo -n "Memorizing module configuration ... "
+ 	@{ echo -e "#\n# drbd.o was compiled with"          ; \
+-	  echo "#  `gcc -v 2>&1 | tail -1`"                 ; \
++	  echo "#  `gcc -v 2>&1 | tail -n -1`"              ; \
+ 	  echo "# against this kernelrelease:"              ; \
+ 	  sed 's/^/#  /' .kernelrelease                     ; \
+           echo    "# kernel .config from"                   ; \

@@ -26,11 +26,6 @@ pkgloop
 
 echo_header "Finishing build."
 
-echo_status "Creating new dependency database .."
-mkdir -p "$build_result/scripts"
-./scripts/Create-DepDB -cachedir "$build_result/package" \
-	> "$build_result/scripts/dep_db.txt" 2> /dev/null
-
 echo_status "Copying error logs and rock-debug data."
 mkdir -p $build_result/{errors,rock-debug,dep-debug}
 cp -r $build_root/var/adm/rock-debug/. $build_result/rock-debug/

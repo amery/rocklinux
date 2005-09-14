@@ -22,18 +22,9 @@
 #
 # [MAIN] 50 sshd SSH Daemon configuration
 
-ssh_create_hostpair(){
-	gui_cmd "Creating ssh host keypair" \
-                "/usr/bin/ssh-keygen -t rsa1 -f /etc/ssh/ssh_host_key -N '' ; \
-		 /usr/bin/ssh-keygen -t dsa  -f /etc/ssh/ssh_host_dsa_key -N '' ; \
-		 /usr/bin/ssh-keygen -t rsa  -f /etc/ssh/ssh_host_rsa_key -N '' "
-}
-
 main() {
     while
 	gui_menu alsa 'SSH Daemon Configuration.' \
-		'Create a ssh host keypair' \
-			'ssh_create_hostpair' \
 		'Configure runlevels for sshd service' \
                         '$STONE runlevel edit_srv sshd' \
                 '(Re-)Start sshd init script' \

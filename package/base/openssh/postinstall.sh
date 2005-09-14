@@ -13,9 +13,3 @@ if any_installed "usr/bin/ssh-keygen" ; then
 	fi
 fi
 
-exit 0
-
-if any_removed "usr/bin/ssh-keygen" ; then
-	echo "Removing ssh host keys"
-	rm -f /etc/ssh/ssh_host_key /etc/ssh/ssh_host_dsa_key /etc/ssh/ssh_host_rsa_key
-fi

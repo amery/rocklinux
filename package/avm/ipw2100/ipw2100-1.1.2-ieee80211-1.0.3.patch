@@ -1,0 +1,12 @@
+diff -ruN ipw2100-1.1.2-old/ipw2100.h ipw2100-1.1.2/ipw2100.h
+--- ipw2100-1.1.2-old/ipw2100.h	2005-09-08 10:36:09.000000000 +0200
++++ ipw2100-1.1.2/ipw2100.h	2005-09-08 10:35:55.000000000 +0200
+@@ -786,7 +786,7 @@
+ 
+ 
+ 
+-#define IPW_HEADER_802_11_SIZE		 sizeof(struct ieee80211_header_data)
++#define IPW_HEADER_802_11_SIZE		 sizeof(struct ieee80211_hdr_3addr)
+ #define IPW_MAX_80211_PAYLOAD_SIZE              2304U
+ #define IPW_MAX_802_11_PAYLOAD_LENGTH		2312
+ #define IPW_MAX_ACCEPTABLE_TX_FRAME_LENGTH	1536

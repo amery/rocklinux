@@ -753,6 +753,14 @@ build_this_package() {
 			  $root/usr/share/applications/`basename $file`
 		done
 
+		if [ -f $confdir/postinstall.sh ] ; then
+			echo "Installing postinstall file $confdir/postinstall.sh"
+			mkdir -p $root/etc/postinstall
+
+			rock_substitute $confdir/postinstall.sh > \
+			  $root/etc/postinstall/$pkg-postinstall.sh
+		fi
+
 		if [ "$createdocs" = 1 ]; then
 			echo "Trying to copy the default documentation ..."
 			[ -d $builddir/$xsrcdir ] && cd $builddir/$xsrcdir

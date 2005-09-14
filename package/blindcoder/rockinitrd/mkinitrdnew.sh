@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 kernel=`uname -r`
 tmpdir=`mktemp -d`
@@ -19,7 +19,6 @@ grep '^modprobe ' /etc/conf/kernel | grep -v 'no-initrd' | \
 	sed 's,[ 	]#.*,,' | \
 	while read a b ; do
 		b="`find /lib/modules/$kernel -name "$b.o" -o -name "$b.ko"`"
-#b=${b//`uname -r`/$kernel} # substitute autodetected value by correct value
 		echo "Adding $b."
 		mkdir -p $tmpdir/${b%/*}
 		cp $b $tmpdir/$b
@@ -34,10 +33,17 @@ mknod $tmpdir/dev/console c 5 1
 # this copies a set of programs and the necessary libraries into a
 # chroot environment
 
+echo -n "Checking necessary fsck programs ... "
+while read dev a mnt b fs c ; do
+	[ -e "/sbin/fsck.${fs}" ] && echo "/sbin/fsck.${fs} /sbin/fsck.${fs}"
+done < <( mount ) | sort | uniq >/etc/conf/initrd/initrd_fsck
+echo "/sbin/fsck /sbin/fsck" >>/etc/conf/initrd/initrd_fsck
+echo "done"
+
 targetdir=$tmpdir
 programs="/bin/bash /bin/bash2 /bin/sh /bin/ls /sbin/pivot_root /sbin/insmod /sbin/insmod.old /bin/mount /bin/umount /usr/bin/chroot /etc/fstab /bin/mkdir"
 
-libs=""
+libs="/lib/ld-linux.so.2"
 for x in $programs ; do
 	[ -e $x ] || continue
 	mkdir -p $targetdir/${x%/*}
@@ -79,9 +85,7 @@ while [ -n "$libs" ] ; do
 	done
 done
 
-# This works, but only for initrd images < 4 MB
 itmp=`mktemp`
-#/boot/initrdnew-${kernel}.img.tmp \
 dd if=/dev/zero of=${itmp} count=8192 bs=1024 > /dev/null 2>&1
 mke2fs -m 0 -N 5120 -F ${itmp} > /dev/null 2>&1
 mntpoint="`mktemp -d`"

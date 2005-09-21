@@ -1,0 +1,16 @@
+diff -pruN udev-068/etc/udev/debian/devfs.rules udev-068-patch/etc/udev/debian/devfs.rules
+--- udev-068/etc/udev/debian/devfs.rules	2005-08-18 19:04:49.000000000 +0200
++++ udev-068-patch/etc/udev/debian/devfs.rules	2005-09-13 10:20:27.000000000 +0200
+@@ -24,8 +24,10 @@ BUS=="ide", KERNEL=="hd[a-z]*", \
+ 				NAME="%c{1}", SYMLINK+="%k %c{2}"
+ 
+ # SCSI devices
+-BUS=="scsi",		PROGRAM="/etc/udev/scripts/scsi-devfs.sh %k %b %n", \
+-				NAME="%c{1}", SYMLINK+="%k %c{2}"
++BUS=="scsi", KERNEL=="sd*", PROGRAM="/etc/udev/scripts/scsi-devfs.sh sd %b %n", NAME="%c{1}", SYMLINK="%c{2} %k %c{3} %c{4} %c{5}"
++BUS=="scsi", KERNEL=="sr*", PROGRAM="/etc/udev/scripts/scsi-devfs.sh sr %b %n", NAME="%c{1}", SYMLINK="%c{2} %k %c{3} %c{4} %c{5}"
++BUS=="scsi", KERNEL=="st*", PROGRAM="/etc/udev/scripts/scsi-devfs.sh st %b %n", NAME="%c{1}", SYMLINK="%c{2} %k %c{3} %c{4} %c{5}"
++BUS=="scsi", KERNEL=="sg*", PROGRAM="/etc/udev/scripts/scsi-devfs.sh sg %b %n", NAME="%c{1}", SYMLINK="%c{2} %k %c{3} %c{4} %c{5}"
+ 
+ # RAID controllers
+ KERNEL=="cciss!*",	PROGRAM="/etc/udev/scripts/raid-devfs.sh %k", \

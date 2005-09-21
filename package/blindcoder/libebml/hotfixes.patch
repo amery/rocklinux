@@ -1,0 +1,20 @@
+--- ./Makefile	2005-09-20 14:26:51.000000000 +0200
++++ ./Makefile	2005-09-20 14:27:04.000000000 +0200
+@@ -95,7 +95,7 @@
+ 
+ $(LIBRARY_SO): $(objects_so)
+ 	$(CXX) -shared -Wl,-soname,$(LIBRARY_SO_VER) -o $(LIBRARY_SO_VER) $(objects_so)
+-	ln -s $(LIBRARY_SO_VER) $(LIBRARY_SO)
++	ln -fs $(LIBRARY_SO_VER) $(LIBRARY_SO)
+ 
+ clean:
+ 	rm -f $(objects) $(objects_so)
+@@ -139,7 +139,7 @@
+ 
+ install_sharedlib: $(LIBRARY_SO)
+ 	$(INSTALL) $(INSTALL_OPTS_LIB) $(LIBRARY_SO_VER) $(libdir)
+-	ln -s $(LIBRARY_SO_VER) $(libdir)/$(LIBRARY_SO)
++	ln -sf $(LIBRARY_SO_VER) $(libdir)/$(LIBRARY_SO)
+ 
+ 
+ ifneq ($(wildcard .depend),)

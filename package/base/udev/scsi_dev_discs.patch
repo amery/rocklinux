@@ -1,0 +1,29 @@
+diff -pruN udev-063/etc/udev/debian/devfs.rules udev-063-patch/etc/udev/debian/devfs.rules
+--- udev-063/etc/udev/debian/devfs.rules	2005-09-10 08:53:44.000000000 +0200
++++ udev-063-patch/etc/udev/debian/devfs.rules	2005-09-10 08:51:23.000000000 +0200
+@@ -21,7 +21,7 @@ BUS=="ide", KERNEL=="hd[a-z]", SYSFS{rem
+ # IDE devices
+ BUS=="ide", KERNEL=="hd[a-z]*", \
+   PROGRAM="/etc/udev/scripts/ide-devfs.sh %k %b %n", \
+-				NAME="%c{1}", SYMLINK+="%k %c{2}"
++				NAME="%c{1}", SYMLINK+="%k %c{2} %c{3}"
+ 
+ # SCSI devices
+ BUS=="scsi",		PROGRAM="/etc/udev/scripts/scsi-devfs.sh %k %b %n", \
+diff -pruN udev-063/extras/scsi-devfs.sh udev-063-patch/extras/scsi-devfs.sh
+--- udev-063/extras/scsi-devfs.sh	2005-07-15 01:09:21.000000000 +0200
++++ udev-063-patch/extras/scsi-devfs.sh	2005-09-10 08:49:28.000000000 +0200
+@@ -83,6 +83,12 @@ l_pci="domain$pci_domain/bus$pci_bus/slo
+ l_phy="bus/pci/$l_pci/scsi/$l_com"
+ s_phy="$1/pci/$pci_addr/$s_com"
+ 
+-echo $l_phy $s_phy $l_log $s_log
++x=0
++while [ -e /dev/discs/disc$x ] ; do
++	[[ "`readlink /dev/discs/disc$x/disc`" = *${l_pci}* ]] && break
++	x=$(($x+1))
++done
++
++echo $l_phy $s_phy $l_log $s_log discs/disc${x}/${lpart}
+ 
+ 

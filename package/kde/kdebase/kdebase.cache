@@ -20,17 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1123858885 Fri Aug 12 17:01:25 2005 (5)
-[TIMESTAMP] 1124091976 Mon Aug 15 09:46:16 2005 (9)
+[TIMESTAMP] 1126891533 Fri Sep 16 19:25:33 2005 (5)
+[TIMESTAMP] 1127134088 Mon Sep 19 14:48:08 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-kdebase.log 9-kdebase.log
 
-[BUILDTIME] 370639 (5)
-[BUILDTIME] 367441 (9)
-[SIZE] 47.36 MB, 3980 files
+[BUILDTIME] 361577 (5)
+[BUILDTIME] 365360 (9)
+[SIZE] 46.75 MB, 3947 files
 
 [DEP] 00-dirtree alien alsa alsa:dev arts arts:dev audiofile audiofile:dev
 [DEP] autoconf automake19 bash2 binutils bzip2 bzip2:dev coreutils
@@ -48,19 +48,19 @@
 
 [PROVIDES] appletproxy appletproxy.so clock_panelapplet.so
 [PROVIDES] cursorthumbnail.so djvuthumbnail.so dockbar_panelextension.so
-[PROVIDES] drkonqi extensionproxy extensionproxy.so fontthumbnail.so
-[PROVIDES] genkdmconf htmlthumbnail.so imagethumbnail.so kaccess
-[PROVIDES] kaccess.so kappfinder kasbar kasbar_panelextension.so
-[PROVIDES] kate kate.so katedefaultprojectplugin.so kblankscrn.kss
-[PROVIDES] kbookmarkmerger kcheckpass kcheckrunning kcm_access.so
-[PROVIDES] kcm_arts.so kcm_background.so kcm_bell.so kcm_cgi.so
-[PROVIDES] kcm_clock.so kcm_colors.so kcm_componentchooser.so kcm_crypto.so
-[PROVIDES] kcm_css.so kcm_display.so kcm_energy.so kcm_filetypes.so
-[PROVIDES] kcm_fontinst.so kcm_fonts.so kcm_history.so kcm_icons.so
-[PROVIDES] kcm_info.so kcm_input.so kcm_ioslaveinfo.so kcm_joystick.so
-[PROVIDES] kcm_kded.so kcm_kdm.so kcm_kdnssd.so kcm_keyboard.so kcm_keys.so
-[PROVIDES] kcm_khotkeys.so kcm_kicker.so kcm_kio.so kcm_knotify.so
-[PROVIDES] kcm_konq.so kcm_konqhtml.so kcm_konsole.so kcm_ksplashthemes.so
+[PROVIDES] drkonqi extensionproxy extensionproxy.so genkdmconf
+[PROVIDES] htmlthumbnail.so imagethumbnail.so kaccess kaccess.so
+[PROVIDES] kappfinder kasbar kasbar_panelextension.so kate kate.so
+[PROVIDES] katedefaultprojectplugin.so kblankscrn.kss kbookmarkmerger
+[PROVIDES] kcheckpass kcheckrunning kcm_access.so kcm_arts.so
+[PROVIDES] kcm_background.so kcm_bell.so kcm_cgi.so kcm_clock.so
+[PROVIDES] kcm_colors.so kcm_componentchooser.so kcm_crypto.so kcm_css.so
+[PROVIDES] kcm_display.so kcm_energy.so kcm_filetypes.so kcm_fonts.so
+[PROVIDES] kcm_history.so kcm_icons.so kcm_info.so kcm_input.so
+[PROVIDES] kcm_ioslaveinfo.so kcm_joystick.so kcm_kded.so kcm_kdm.so
+[PROVIDES] kcm_kdnssd.so kcm_keyboard.so kcm_keys.so kcm_khotkeys.so
+[PROVIDES] kcm_kicker.so kcm_kio.so kcm_knotify.so kcm_konq.so
+[PROVIDES] kcm_konqhtml.so kcm_konsole.so kcm_ksplashthemes.so
 [PROVIDES] kcm_kthememanager.so kcm_kurifilt.so kcm_kwindecoration.so
 [PROVIDES] kcm_kwinoptions.so kcm_kwinrules.so kcm_launch.so
 [PROVIDES] kcm_locale.so kcm_nic.so kcm_nsplugins.so kcm_performance.so
@@ -71,12 +71,11 @@
 [PROVIDES] kcontrol.so kcontroledit kcontroledit.so kdcop kdebugdialog
 [PROVIDES] kded_favicons.so kded_khotkeys.so kded_konqy_preloader.so
 [PROVIDES] kded_kwrited.so kded_mediamanager.so kded_remotedirnotify.so
-[PROVIDES] kded_systemdirnotify.so kdeeject kdeinstallktheme
-[PROVIDES] kdepasswd kdeprintfax kdesktop kdesktop.so kdesktop_lock
-[PROVIDES] kdesu kdesud kdialog kdm kdm_config kdm_greet kdmctl
-[PROVIDES] keditbookmarks keditbookmarks.so keditfiletype kfile_font.so
-[PROVIDES] kfile_media.so kfile_trash.so kfind kfmclient kfmclient.so
-[PROVIDES] kfontinst kfontview kgreet_classic.so kgreet_winbind.so
+[PROVIDES] kded_systemdirnotify.so kdeeject kdeinstallktheme kdepasswd
+[PROVIDES] kdeprintfax kdesktop kdesktop.so kdesktop_lock kdesu kdesud
+[PROVIDES] kdialog kdm kdm_config kdm_greet kdmctl keditbookmarks
+[PROVIDES] keditbookmarks.so keditfiletype kfile_media.so kfile_trash.so
+[PROVIDES] kfind kfmclient kfmclient.so kgreet_classic.so kgreet_winbind.so
 [PROVIDES] khc_docbookdig.pl khc_htdig.pl khc_htsearch.pl khc_indexbuilder
 [PROVIDES] khc_mansearch.pl khelpcenter khelpcenter.so khotkeys
 [PROVIDES] khotkeys.so khotkeys_update kicker kicker-3.4-reverseLayout
@@ -84,8 +83,8 @@
 [PROVIDES] kickermenu_konqueror.so kickermenu_konsole.so
 [PROVIDES] kickermenu_prefmenu.so kickermenu_recentdocs.so
 [PROVIDES] kickermenu_remotemenu.so kickermenu_systemmenu.so kinfocenter
-[PROVIDES] kio_about.so kio_cgi.so kio_filter.so kio_finger.so kio_fish.so
-[PROVIDES] kio_floppy.so kio_fonts.so kio_info.so kio_ldap.so kio_mac.so
+[PROVIDES] kio_about.so kio_cgi.so kio_filter.so kio_finger.so
+[PROVIDES] kio_fish.so kio_floppy.so kio_info.so kio_ldap.so kio_mac.so
 [PROVIDES] kio_man.so kio_media.so kio_media_mounthelper kio_nfs.so
 [PROVIDES] kio_nntp.so kio_pop3.so kio_print.so kio_remote.so
 [PROVIDES] kio_settings.so kio_sftp.so kio_smtp.so kio_system.so
@@ -124,16 +123,16 @@
 [PROVIDES] libkdeinit_krandrinithack.so libkdeinit_ksmserver.so
 [PROVIDES] libkdeinit_kwin.so libkdeinit_kwin_rules_dialog.so
 [PROVIDES] libkdeinit_kwrite.so libkdeinit_kxkb.so libkdeprint_part.so
-[PROVIDES] libkfindpart.so libkfontinst.so libkfontviewpart.so
-[PROVIDES] libkhtmlkttsdplugin.so libkickermain.so libkmanpart.so
-[PROVIDES] libkonq.so libkonqsidebarplugin.so libkonsolepart.so libksgrd.so
-[PROVIDES] libkshorturifilter.so libksplashthemes.so libkuriikwsfilter.so
-[PROVIDES] libkurisearchfilter.so liblocaldomainurifilter.so
-[PROVIDES] libnsplugin.so libtaskbar.so libtaskmanager.so
-[PROVIDES] lockout_panelapplet.so media_panelapplet.so menu_panelapplet.so
-[PROVIDES] minipager_panelapplet.so naughty_panelapplet.so nspluginscan
-[PROVIDES] nspluginviewer picturethumbnail.so run_panelapplet.so
-[PROVIDES] sidebar_panelextension.so startkde sysguard_panelapplet.so
-[PROVIDES] systemtray_panelapplet.so taskbar_panelapplet.so
-[PROVIDES] taskbar_panelextension.so textthumbnail.so trash_panelapplet.so
+[PROVIDES] libkfindpart.so libkhtmlkttsdplugin.so libkickermain.so
+[PROVIDES] libkmanpart.so libkonq.so libkonqsidebarplugin.so
+[PROVIDES] libkonsolepart.so libksgrd.so libkshorturifilter.so
+[PROVIDES] libksplashthemes.so libkuriikwsfilter.so libkurisearchfilter.so
+[PROVIDES] liblocaldomainurifilter.so libnsplugin.so libtaskbar.so
+[PROVIDES] libtaskmanager.so lockout_panelapplet.so media_panelapplet.so
+[PROVIDES] menu_panelapplet.so minipager_panelapplet.so
+[PROVIDES] naughty_panelapplet.so nspluginscan nspluginviewer
+[PROVIDES] picturethumbnail.so run_panelapplet.so sidebar_panelextension.so
+[PROVIDES] startkde sysguard_panelapplet.so systemtray_panelapplet.so
+[PROVIDES] taskbar_panelapplet.so taskbar_panelextension.so
+[PROVIDES] textthumbnail.so trash_panelapplet.so
 

@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1123791057 Thu Aug 11 22:10:57 2005 (5)
-[TIMESTAMP] 1124010011 Sun Aug 14 11:00:11 2005 (9)
+[TIMESTAMP] 1126818606 Thu Sep 15 23:10:06 2005 (5)
+[TIMESTAMP] 1127041091 Sun Sep 18 12:58:11 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-pcre.log 9-pcre.log
 
-[BUILDTIME] 2593 (5)
-[BUILDTIME] 3404 (9)
-[SIZE] 0.33 MB, 42 files
+[BUILDTIME] 4556 (5)
+[BUILDTIME] 5437 (9)
+[SIZE] 0.52 MB, 49 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] net-tools sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils file findutils
+[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
+[DEP] make mktemp net-tools sed sysfiles tar util-linux
 
-[PROVIDES] libpcre.a libpcre.so libpcreposix.a libpcreposix.so pcre-config
-[PROVIDES] pcregrep pcretest
+[PROVIDES] libpcre.a libpcre.so libpcrecpp.a libpcrecpp.so libpcreposix.a
+[PROVIDES] libpcreposix.so pcre-config pcregrep pcretest
 

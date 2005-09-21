@@ -20,16 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1123892233 Sat Aug 13 02:17:13 2005 (5)
-[TIMESTAMP] 1124127946 Mon Aug 15 19:45:46 2005 (9)
+[TIMESTAMP] 1126911624 Sat Sep 17 01:00:24 2005 (5)
+[TIMESTAMP] 1127157692 Mon Sep 19 21:21:32 2005 (9) ERROR
+[TIMESTAMP] 1127221711 Tue Sep 20 15:08:31 2005 (9) ERROR
+[TIMESTAMP] 1127225195 Tue Sep 20 16:06:35 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-libmatroska.log 9-libmatroska.log
 
-[BUILDTIME] 2565 (5)
-[BUILDTIME] 2901 (9)
+[BUILDTIME] 4455 (5)
+[BUILDTIME] 4787 (9) ERROR
+[BUILDTIME] 1390 (9) ERROR
+[BUILDTIME] 4845 (9)
+[SIZE] 0.58 MB, 8 files
 
-[PROVIDES] libmatroska.a
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
+[DEP] glibc23 glibc23:dev grep libebml libebml:dev linux26-header:dev
+[DEP] make mktemp patch sed sysfiles tar
+
+[PROVIDES] libmatroska.a libmatroska.so
 

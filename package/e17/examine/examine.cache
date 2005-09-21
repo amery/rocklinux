@@ -20,129 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1123961376 Sat Aug 13 21:29:36 2005 (5) ERROR
-[TIMESTAMP] 1124206540 Tue Aug 16 17:35:40 2005 (5) ERROR
-[TIMESTAMP] 1124221674 Tue Aug 16 21:47:54 2005 (9) ERROR
+[TIMESTAMP] 1126988318 Sat Sep 17 22:18:38 2005 (5)
+[TIMESTAMP] 1127247402 Tue Sep 20 22:16:42 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-examine.err 9-examine.err
+[LOGS] 5-examine.log 9-examine.log
 
-[BUILDTIME] 4053 (5) ERROR
-[BUILDTIME] 4193 (5) ERROR
-[BUILDTIME] 4195 (9) ERROR
-[SIZE] 0.02 MB, 9 files
+[BUILDTIME] 4259 (5)
+[BUILDTIME] 4385 (9)
+[SIZE] 0.08 MB, 8 files
 
-[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils curl
-[DEP] curl:dev diffutils directfb directfb:dev ecore ecore:dev edb edb:dev
-[DEP] edje edje:dev eet eet:dev embryo embryo:dev emotion emotion:dev
-[DEP] evas evas:dev ewl ewl:dev findutils freetype freetype:dev gawk gcc34
+[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
+[DEP] diffutils directfb directfb:dev ecore ecore:dev edb edb:dev edje
+[DEP] edje:dev eet eet:dev embryo embryo:dev emotion emotion:dev evas
+[DEP] evas:dev ewl ewl:dev findutils freetype freetype:dev gawk gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep imlib2 libjpeg libjpeg:dev libpng
 [DEP] libpng:dev libtool linux26-header:dev m4 make mktemp ncurses:dev
 [DEP] net-tools openssl patch perl5 readline readline:dev sed sysfiles
 [DEP] tar util-linux xorg zlib:dev
 
-
-[5-ERROR] config.status: executing depfiles commands
-[5-ERROR] config.status: executing default commands
-[5-ERROR] make  all-recursive
-[5-ERROR] make[1]: Entering directory `/ROCK/src.examine.1124206473.19603.3173564226/examine-2005-07-07'
-[5-ERROR] Making all in src
-[5-ERROR] make[2]: Entering directory `/ROCK/src.examine.1124206473.19603.3173564226/examine-2005-07-07/src'
-[5-ERROR] if gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/e17/include -g -O2 -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl   -g -O2 -I/opt/e17/include -g -O2 -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl -g -O2 -MT exsh-exsh.o -MD -MP -MF ".deps/exsh-exsh.Tpo" -c -o exsh-exsh.o `test -f 'exsh.c' || echo './'`exsh.c; \
-[5-ERROR] then mv -f ".deps/exsh-exsh.Tpo" ".deps/exsh-exsh.Po"; else rm -f ".deps/exsh-exsh.Tpo"; exit 1; fi
-[5-ERROR] if gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/e17/include -g -O2 -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl   -g -O2 -I/opt/e17/include -g -O2 -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl -g -O2 -MT exsh-ecore_config_client.o -MD -MP -MF ".deps/exsh-ecore_config_client.Tpo" -c -o exsh-ecore_config_client.o `test -f 'ecore_config_client.c' || echo './'`ecore_config_client.c; \
-[5-ERROR] then mv -f ".deps/exsh-ecore_config_client.Tpo" ".deps/exsh-ecore_config_client.Po"; else rm -f ".deps/exsh-ecore_config_client.Tpo"; exit 1; fi
-[5-ERROR] /bin/sh ../libtool --tag=CC --mode=link gcc-34  -g -O2   -o exsh  exsh-exsh.o exsh-ecore_config_client.o -lreadline -ltermcap -L/opt/e17/lib -lecore -lecore_job -lecore_x -lecore_evas -lecore_con -lecore_ipc -lecore_txt -lecore_fb -lecore_config -lecore_file -L/usr/lib -lcurl -lssl -lcrypto -ldl -lssl -lcrypto -ldl -lz -L/opt/e17/lib -leet -lz -ljpeg -lm 
-[5-ERROR] mkdir .libs
-[5-ERROR] gcc-34 -g -O2 -o exsh exsh-exsh.o exsh-ecore_config_client.o  -lreadline -ltermcap -L/opt/e17/lib -L/ROCK/src.ecore.1124044865.15292.121587823/ecore-2005-07-07/src/lib/ecore/.libs -L/ROCK/src.ecore.1124044865.15292.121587823/ecore-2005-07-07/src/lib/ecore_txt/.libs -L/ROCK/src.ecore.1124044865.15292.121587823/ecore-2005-07-07/src/lib/ecore_job/.libs -L/usr/X11R6/lib /opt/e17/lib/libecore_evas.so -L/ROCK/src.ecore.1124044865.15292.121587823/ecore-2005-07-07/src/lib/ecore_x/.libs -L/ROCK/src.ecore.1124044865.15292.121587823/ecore-2005-07-07/src/lib/ecore_fb/.libs /opt/e17/lib/libecore_x.so -lXcursor -lXp -lXinerama /opt/e17/lib/libecore_job.so -L/usr/lib -L/ROCK/src.ecore.1124044865.15292.121587823/ecore-2005-07-07/src/lib/ecore_con/.libs /opt/e17/lib/libecore_txt.so /opt/e17/lib/libecore_fb.so /opt/e17/lib/libecore_config.so /opt/e17/lib/libecore_ipc.so /opt/e17/lib/libecore_con.so /opt/e17/lib/libevas.so /usr/lib/libfreetype.so /usr/lib/libpng.so /opt/e17/lib/libedb.so /usr/lib/libdirectfb.so /usr/lib/libfusion.so /usr/lib/libdirect.so -lX11 -lXext -lGL -lGLU -lpthread /opt/e17/lib/libecore_file.so /opt/e17/lib/libecore.so /usr/lib/libcurl.so -lssl -lcrypto -ldl /opt/e17/lib/libeet.so -lz /usr/lib/libjpeg.so -lm
-[5-ERROR] if gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/e17/include -g -O2 -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl   -g -O2 -I/opt/e17/include -g -O2 -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl -g -O2 -MT examine-examine_client.o -MD -MP -MF ".deps/examine-examine_client.Tpo" -c -o examine-examine_client.o `test -f 'examine_client.c' || echo './'`examine_client.c; \
-[5-ERROR] then mv -f ".deps/examine-examine_client.Tpo" ".deps/examine-examine_client.Po"; else rm -f ".deps/examine-examine_client.Tpo"; exit 1; fi
-[5-ERROR] if gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/e17/include -g -O2 -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl   -g -O2 -I/opt/e17/include -g -O2 -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl -g -O2 -MT examine-ecore_config_client.o -MD -MP -MF ".deps/examine-ecore_config_client.Tpo" -c -o examine-ecore_config_client.o `test -f 'ecore_config_client.c' || echo './'`ecore_config_client.c; \
-[5-ERROR] then mv -f ".deps/examine-ecore_config_client.Tpo" ".deps/examine-ecore_config_client.Po"; else rm -f ".deps/examine-ecore_config_client.Tpo"; exit 1; fi
-[5-ERROR] if gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/e17/include -g -O2 -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl   -g -O2 -I/opt/e17/include -g -O2 -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl -g -O2 -MT examine-examine.o -MD -MP -MF ".deps/examine-examine.Tpo" -c -o examine-examine.o `test -f 'examine.c' || echo './'`examine.c; \
-[5-ERROR] then mv -f ".deps/examine-examine.Tpo" ".deps/examine-examine.Po"; else rm -f ".deps/examine-examine.Tpo"; exit 1; fi
-[5-ERROR] examine.c: In function `draw_tree':
-[5-ERROR] examine.c:356: warning: assignment from incompatible pointer type
-[5-ERROR] examine.c:360: warning: passing arg 1 of `ewl_widget_show' from incompatible pointer type
-[5-ERROR] examine.c:377: warning: passing arg 2 of `ewl_container_child_append' from incompatible pointer type
-[5-ERROR] /bin/sh ../libtool --tag=CC --mode=link gcc-34  -g -O2   -o examine  examine-examine_client.o examine-ecore_config_client.o examine-examine.o -L/opt/e17/lib -lewl -L/opt/e17/lib -ledje -L/opt/e17/lib -lecore -lecore_job -lecore_x -lecore_evas -lecore_con -lecore_ipc -lecore_txt -lecore_fb -lecore_config -lecore_file -L/usr/lib -lcurl -lssl -lcrypto -ldl -lssl -lcrypto -ldl -lz -L/opt/e17/lib -leet -lz -ljpeg -lm -L/opt/e17/lib -ledb -lz -L/opt/e17/lib -levas -lm 
-[5-ERROR] gcc-34 -g -O2 -o examine examine-examine_client.o examine-ecore_config_client.o examine-examine.o  -L/opt/e17/lib /opt/e17/lib/libewl.so -L/usr/X11R6/lib -L/ROCK/src.ecore.1124044865.15292.121587823/ecore-2005-07-07/src/lib/ecore/.libs -L/ROCK/src.ecore.1124044865.15292.121587823/ecore-2005-07-07/src/lib/ecore_txt/.libs -L/ROCK/src.ecore.1124044865.15292.121587823/ecore-2005-07-07/src/lib/ecore_job/.libs -L/ROCK/src.ecore.1124044865.15292.121587823/ecore-2005-07-07/src/lib/ecore_x/.libs -L/ROCK/src.ecore.1124044865.15292.121587823/ecore-2005-07-07/src/lib/ecore_fb/.libs -L/usr/lib -L/ROCK/src.ecore.1124044865.15292.121587823/ecore-2005-07-07/src/lib/ecore_con/.libs /opt/e17/lib/libemotion.so /opt/e17/lib/libedje.so /opt/e17/lib/libembryo.so /opt/e17/lib/libecore_evas.so /opt/e17/lib/libecore_x.so -lXcursor -lXp -lXinerama /opt/e17/lib/libecore_job.so /opt/e17/lib/libecore_txt.so /opt/e17/lib/libecore_fb.so /opt/e17/lib/libecore_config.so /opt/e17/lib/libecore_ipc.so /opt/e17/lib/libecore_con.so /opt/e17/lib/libecore_file.so /opt/e17/lib/libecore.so /usr/lib/libcurl.so -lssl -lcrypto /opt/e17/lib/libevas.so /usr/lib/libfreetype.so /usr/lib/libpng.so /opt/e17/lib/libeet.so /usr/lib/libjpeg.so /opt/e17/lib/libedb.so /usr/lib/libdirectfb.so /usr/lib/libfusion.so /usr/lib/libdirect.so -lz -ldl -lX11 -lXext -lGL -lGLU -lpthread -lm
-[5-ERROR] examine-examine_client.o: In function `examine_client_revert':
-[5-ERROR] examine_client.c:(.text+0x9d2): undefined reference to `ewl_entry_text_set'
-[5-ERROR] examine-examine_client.o: In function `examine_client_get_val_cb':
-[5-ERROR] examine_client.c:(.text+0xd81): undefined reference to `ewl_entry_text_set'
-[5-ERROR] collect2: ld returned 1 exit status
-[5-ERROR] make[2]: *** [examine] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.examine.1124206473.19603.3173564226/examine-2005-07-07/src'
-[5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.examine.1124206473.19603.3173564226/examine-2005-07-07'
-[5-ERROR] make: *** [all] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 3 files for this package.
-[5-ERROR] Applying package split: 40 examine:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 examine:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 examine:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <examine> Creating flist file ...
-[5-ERROR] <examine> Creating package dependencies file ...
-[5-ERROR] <examine> Creating md5sum and cksum files ...
-[5-ERROR] <examine> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building examine=examine.
-
-[9-ERROR] config.status: executing depfiles commands
-[9-ERROR] config.status: executing default commands
-[9-ERROR] make  all-recursive
-[9-ERROR] make[1]: Entering directory `/ROCK/src.examine.1124221608.27565.2224825580/examine-2005-07-07'
-[9-ERROR] Making all in src
-[9-ERROR] make[2]: Entering directory `/ROCK/src.examine.1124221608.27565.2224825580/examine-2005-07-07/src'
-[9-ERROR] if gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/e17/include -g -O2 -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl   -g -O2 -I/opt/e17/include -g -O2 -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl -g -O2 -MT exsh-exsh.o -MD -MP -MF ".deps/exsh-exsh.Tpo" -c -o exsh-exsh.o `test -f 'exsh.c' || echo './'`exsh.c; \
-[9-ERROR] then mv -f ".deps/exsh-exsh.Tpo" ".deps/exsh-exsh.Po"; else rm -f ".deps/exsh-exsh.Tpo"; exit 1; fi
-[9-ERROR] if gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/e17/include -g -O2 -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl   -g -O2 -I/opt/e17/include -g -O2 -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl -g -O2 -MT exsh-ecore_config_client.o -MD -MP -MF ".deps/exsh-ecore_config_client.Tpo" -c -o exsh-ecore_config_client.o `test -f 'ecore_config_client.c' || echo './'`ecore_config_client.c; \
-[9-ERROR] then mv -f ".deps/exsh-ecore_config_client.Tpo" ".deps/exsh-ecore_config_client.Po"; else rm -f ".deps/exsh-ecore_config_client.Tpo"; exit 1; fi
-[9-ERROR] /bin/sh ../libtool --tag=CC --mode=link gcc-34  -g -O2   -o exsh  exsh-exsh.o exsh-ecore_config_client.o -lreadline -ltermcap -L/opt/e17/lib -lecore -lecore_job -lecore_x -lecore_evas -lecore_con -lecore_ipc -lecore_txt -lecore_fb -lecore_config -lecore_file -L/usr/lib -lcurl -lssl -lcrypto -ldl -lssl -lcrypto -ldl -lz -L/opt/e17/lib -leet -lz -ljpeg -lm 
-[9-ERROR] mkdir .libs
-[9-ERROR] gcc-34 -g -O2 -o exsh exsh-exsh.o exsh-ecore_config_client.o  -lreadline -ltermcap -L/opt/e17/lib -L/ROCK/src.ecore.1124044865.15292.121587823/ecore-2005-07-07/src/lib/ecore/.libs -L/ROCK/src.ecore.1124044865.15292.121587823/ecore-2005-07-07/src/lib/ecore_txt/.libs -L/ROCK/src.ecore.1124044865.15292.121587823/ecore-2005-07-07/src/lib/ecore_job/.libs -L/usr/X11R6/lib /opt/e17/lib/libecore_evas.so -L/ROCK/src.ecore.1124044865.15292.121587823/ecore-2005-07-07/src/lib/ecore_x/.libs -L/ROCK/src.ecore.1124044865.15292.121587823/ecore-2005-07-07/src/lib/ecore_fb/.libs /opt/e17/lib/libecore_x.so -lXcursor -lXp -lXinerama /opt/e17/lib/libecore_job.so -L/usr/lib -L/ROCK/src.ecore.1124044865.15292.121587823/ecore-2005-07-07/src/lib/ecore_con/.libs /opt/e17/lib/libecore_txt.so /opt/e17/lib/libecore_fb.so /opt/e17/lib/libecore_config.so /opt/e17/lib/libecore_ipc.so /opt/e17/lib/libecore_con.so /opt/e17/lib/libevas.so /usr/lib/libfreetype.so /usr/lib/libpng.so /opt/e17/lib/libedb.so /usr/lib/libdirectfb.so /usr/lib/libfusion.so /usr/lib/libdirect.so -lX11 -lXext -lGL -lGLU -lpthread /opt/e17/lib/libecore_file.so /opt/e17/lib/libecore.so /usr/lib/libcurl.so -lssl -lcrypto -ldl /opt/e17/lib/libeet.so -lz /usr/lib/libjpeg.so -lm
-[9-ERROR] if gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/e17/include -g -O2 -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl   -g -O2 -I/opt/e17/include -g -O2 -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl -g -O2 -MT examine-examine_client.o -MD -MP -MF ".deps/examine-examine_client.Tpo" -c -o examine-examine_client.o `test -f 'examine_client.c' || echo './'`examine_client.c; \
-[9-ERROR] then mv -f ".deps/examine-examine_client.Tpo" ".deps/examine-examine_client.Po"; else rm -f ".deps/examine-examine_client.Tpo"; exit 1; fi
-[9-ERROR] if gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/e17/include -g -O2 -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl   -g -O2 -I/opt/e17/include -g -O2 -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl -g -O2 -MT examine-ecore_config_client.o -MD -MP -MF ".deps/examine-ecore_config_client.Tpo" -c -o examine-ecore_config_client.o `test -f 'ecore_config_client.c' || echo './'`ecore_config_client.c; \
-[9-ERROR] then mv -f ".deps/examine-ecore_config_client.Tpo" ".deps/examine-ecore_config_client.Po"; else rm -f ".deps/examine-ecore_config_client.Tpo"; exit 1; fi
-[9-ERROR] if gcc-34 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/e17/include -g -O2 -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl   -g -O2 -I/opt/e17/include -g -O2 -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include/ewl -g -O2 -MT examine-examine.o -MD -MP -MF ".deps/examine-examine.Tpo" -c -o examine-examine.o `test -f 'examine.c' || echo './'`examine.c; \
-[9-ERROR] then mv -f ".deps/examine-examine.Tpo" ".deps/examine-examine.Po"; else rm -f ".deps/examine-examine.Tpo"; exit 1; fi
-[9-ERROR] examine.c: In function `draw_tree':
-[9-ERROR] examine.c:356: warning: assignment from incompatible pointer type
-[9-ERROR] examine.c:360: warning: passing arg 1 of `ewl_widget_show' from incompatible pointer type
-[9-ERROR] examine.c:377: warning: passing arg 2 of `ewl_container_child_append' from incompatible pointer type
-[9-ERROR] /bin/sh ../libtool --tag=CC --mode=link gcc-34  -g -O2   -o examine  examine-examine_client.o examine-ecore_config_client.o examine-examine.o -L/opt/e17/lib -lewl -L/opt/e17/lib -ledje -L/opt/e17/lib -lecore -lecore_job -lecore_x -lecore_evas -lecore_con -lecore_ipc -lecore_txt -lecore_fb -lecore_config -lecore_file -L/usr/lib -lcurl -lssl -lcrypto -ldl -lssl -lcrypto -ldl -lz -L/opt/e17/lib -leet -lz -ljpeg -lm -L/opt/e17/lib -ledb -lz -L/opt/e17/lib -levas -lm 
-[9-ERROR] gcc-34 -g -O2 -o examine examine-examine_client.o examine-ecore_config_client.o examine-examine.o  -L/opt/e17/lib /opt/e17/lib/libewl.so -L/usr/X11R6/lib -L/ROCK/src.ecore.1124044865.15292.121587823/ecore-2005-07-07/src/lib/ecore/.libs -L/ROCK/src.ecore.1124044865.15292.121587823/ecore-2005-07-07/src/lib/ecore_txt/.libs -L/ROCK/src.ecore.1124044865.15292.121587823/ecore-2005-07-07/src/lib/ecore_job/.libs -L/ROCK/src.ecore.1124044865.15292.121587823/ecore-2005-07-07/src/lib/ecore_x/.libs -L/ROCK/src.ecore.1124044865.15292.121587823/ecore-2005-07-07/src/lib/ecore_fb/.libs -L/usr/lib -L/ROCK/src.ecore.1124044865.15292.121587823/ecore-2005-07-07/src/lib/ecore_con/.libs /opt/e17/lib/libemotion.so /opt/e17/lib/libedje.so /opt/e17/lib/libembryo.so /opt/e17/lib/libecore_evas.so /opt/e17/lib/libecore_x.so -lXcursor -lXp -lXinerama /opt/e17/lib/libecore_job.so /opt/e17/lib/libecore_txt.so /opt/e17/lib/libecore_fb.so /opt/e17/lib/libecore_config.so /opt/e17/lib/libecore_ipc.so /opt/e17/lib/libecore_con.so /opt/e17/lib/libecore_file.so /opt/e17/lib/libecore.so /usr/lib/libcurl.so -lssl -lcrypto /opt/e17/lib/libevas.so /usr/lib/libfreetype.so /usr/lib/libpng.so /opt/e17/lib/libeet.so /usr/lib/libjpeg.so /opt/e17/lib/libedb.so /usr/lib/libdirectfb.so /usr/lib/libfusion.so /usr/lib/libdirect.so -lz -ldl -lX11 -lXext -lGL -lGLU -lpthread -lm
-[9-ERROR] examine-examine_client.o: In function `examine_client_revert':
-[9-ERROR] examine_client.c:(.text+0x9d2): undefined reference to `ewl_entry_text_set'
-[9-ERROR] examine-examine_client.o: In function `examine_client_get_val_cb':
-[9-ERROR] examine_client.c:(.text+0xd81): undefined reference to `ewl_entry_text_set'
-[9-ERROR] collect2: ld returned 1 exit status
-[9-ERROR] make[2]: *** [examine] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.examine.1124221608.27565.2224825580/examine-2005-07-07/src'
-[9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.examine.1124221608.27565.2224825580/examine-2005-07-07'
-[9-ERROR] make: *** [all] Error 2
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 3 files for this package.
-[9-ERROR] Applying package split: 40 examine:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 examine:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 examine:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <examine> Creating flist file ...
-[9-ERROR] <examine> Creating package dependencies file ...
-[9-ERROR] <examine> Creating md5sum and cksum files ...
-[9-ERROR] <examine> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building examine=examine.
+[PROVIDES] examine exsh
 

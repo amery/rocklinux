@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1123788367 Thu Aug 11 21:26:07 2005 (5)
-[TIMESTAMP] 1124002002 Sun Aug 14 08:46:42 2005 (9)
+[TIMESTAMP] 1126815905 Thu Sep 15 22:25:05 2005 (5)
+[TIMESTAMP] 1127032393 Sun Sep 18 10:33:13 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 1-gzip.log 5-gzip.log 9-gzip.log
 
-[BUILDTIME] 1114 (5)
-[BUILDTIME] 1820 (9)
-[SIZE] 0.25 MB, 27 files
+[BUILDTIME] 1598 (5)
+[BUILDTIME] 2334 (9)
+[SIZE] 0.24 MB, 31 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] net-tools patch sed sysfiles tar tcsh texinfo
+[DEP] net-tools patch sed sysfiles tar texinfo util-linux
 
-[PROVIDES] gunzip gzexe gzip zcat zcmp zdiff zforce zgrep zmore znew
+[PROVIDES] gunzip gzexe gzip zcat zcmp zdiff zegrep zfgrep zforce zgrep
+[PROVIDES] zless zmore znew
 

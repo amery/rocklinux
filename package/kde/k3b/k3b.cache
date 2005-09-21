@@ -20,33 +20,35 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1123924714 Sat Aug 13 11:18:34 2005 (5)
-[TIMESTAMP] 1124164512 Tue Aug 16 05:55:12 2005 (9)
+[TIMESTAMP] 1126953355 Sat Sep 17 12:35:55 2005 (5)
+[TIMESTAMP] 1127207311 Tue Sep 20 11:08:31 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-k3b.log 9-k3b.log
 
-[BUILDTIME] 70734 (5)
-[BUILDTIME] 71245 (9)
-[SIZE] 6.29 MB, 150 files
+[BUILDTIME] 80272 (5)
+[BUILDTIME] 81126 (9)
+[SIZE] 8.92 MB, 160 files
 
-[DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev
-[DEP] autoconf bash2 binutils bzip2 coreutils diffutils esound esound:dev
-[DEP] expat fam fam:dev findutils flac flac:dev freetype freetype:dev
-[DEP] gawk gcc34 gcc34:dev gettext glib glib:dev glibc23 glibc23:dev
-[DEP] gnome2-dirtree grep id3lib id3lib:dev jack jack:dev kdebase kdelibs
-[DEP] kdelibs:dev kdelibs:doc koffice libart_lgpl23 libart_lgpl23:dev
-[DEP] libjpeg libpng libpng:dev libsamplerate libsamplerate:dev libxml2
-[DEP] linux26-header:dev m4 mad mad:dev make mktemp nas net-tools
-[DEP] ogg-vorbis ogg-vorbis:dev perl5 qt qt:dev sed sysfiles tar util-linux
-[DEP] vim xorg xorg:dev zlib:dev
+[DEP] 00-dirtree arts arts:dev bash2 binutils bzip2 coreutils diffutils
+[DEP] expat expat:dev fam fam:dev ffmpeg ffmpeg:dev findutils flac
+[DEP] flac:dev freetype freetype:dev gawk gcc34 gcc34:dev gettext
+[DEP] glibc23 glibc23:dev grep kdebase kdelibs kdelibs:dev kdelibs:doc
+[DEP] kdeutils koffice lame lame:dev libart_lgpl23 libart_lgpl23:dev
+[DEP] libjpeg libmusicbrainz libmusicbrainz:dev libpng libpng:dev
+[DEP] libsamplerate libsamplerate:dev libsndfile libsndfile:dev libxml2
+[DEP] linux26-header:dev mad mad:dev make mktemp net-tools ogg-vorbis
+[DEP] ogg-vorbis:dev perl5 pkgconfig qt qt:dev sed sysfiles taglib
+[DEP] taglib:dev tar util-linux vim xorg xorg:dev zlib:dev
 
-[PROVIDES] k3b k3bsetup kcm_k3bsetup2.so
-[PROVIDES] libk3baudiometainforenamerplugin.so libk3bcore.so
-[PROVIDES] libk3bdevice.so libk3bexternalencoder.so libk3bflacdecoder.so
-[PROVIDES] libk3bmaddecoder.so libk3boggvorbisdecoder.so
-[PROVIDES] libk3boggvorbisencoder.so libk3bplugin.so libk3bproject.so
-[PROVIDES] libk3bsoxencoder.so libk3btools.so libk3bwavedecoder.so
+[PROVIDES] k3b k3bsetup kcm_k3bsetup2.so libk3b.so
+[PROVIDES] libk3bartsoutputplugin.so libk3baudiometainforenamerplugin.so
+[PROVIDES] libk3baudioprojectcddbplugin.so libk3bdevice.so
+[PROVIDES] libk3bexternalencoder.so libk3bffmpegdecoder.so
+[PROVIDES] libk3bflacdecoder.so libk3blameencoder.so
+[PROVIDES] libk3blibsndfiledecoder.so libk3bmaddecoder.so
+[PROVIDES] libk3boggvorbisdecoder.so libk3boggvorbisencoder.so
+[PROVIDES] libk3bsoxencoder.so libk3bwavedecoder.so
 

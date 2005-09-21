@@ -20,119 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1123979283 Sun Aug 14 02:28:03 2005 (5) ERROR
-[TIMESTAMP] 1124206635 Tue Aug 16 17:37:15 2005 (5) ERROR
-[TIMESTAMP] 1124240932 Wed Aug 17 03:08:52 2005 (9) ERROR
+[TIMESTAMP] 1127006773 Sun Sep 18 03:26:13 2005 (5) ERROR
+[TIMESTAMP] 1127134315 Mon Sep 19 14:51:55 2005 (5)
+[TIMESTAMP] 1127268246 Wed Sep 21 04:04:06 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-ipw2200.err 9-ipw2200.err
+[LOGS] 5-ipw2200.log 9-ipw2200.log
 
-[BUILDTIME] 1411 (5) ERROR
-[BUILDTIME] 1469 (5) ERROR
-[BUILDTIME] 1476 (9) ERROR
+[BUILDTIME] 1281 (5) ERROR
+[BUILDTIME] 1982 (5)
+[BUILDTIME] 1991 (9)
+[SIZE] 0.21 MB, 7 files
 
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
+[DEP] glibc23 grep ieee80211 ieee80211:dev linux26 linux26-source make
+[DEP] mktemp sed sysfiles tar
 
-[5-ERROR] OTHERS = ''
-[5-ERROR] INSERT = '-O1 -pipe'
-[5-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
-[5-ERROR] APPEND = '-s'
-[5-ERROR] FILTER = ''
-[5-ERROR] Old PATH: /ROCK/src.ipw2200.1124206607.5880.3476981796/wrappers:/ROCK/build/ref0811-TRUNK-x86-reference/ROCK/tools.chroot/wrapper:/ROCK/build/ref0811-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clip/bin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/deva/bin:/opt/e16/bin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/flexlm/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/kde3/bin:/opt/kde3/sbin:/opt/mono/bin:/opt/mysql/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/root/bin:/opt/samba/bin:/opt/samba/sbin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/opt/kde3/bin:/opt/root/bin
-[5-ERROR] New PATH: /ROCK/src.ipw2200.1124206607.5880.3476981796/wrappers:/ROCK/build/ref0811-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clip/bin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/deva/bin:/opt/e16/bin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/flexlm/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/kde3/bin:/opt/kde3/sbin:/opt/mono/bin:/opt/mysql/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/root/bin:/opt/samba/bin:/opt/samba/sbin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/opt/kde3/bin:/opt/root/bin
-[5-ERROR] Insert: -O1
-[5-ERROR] Insert: -pipe
-[5-ERROR] Copy:   --version
-[5-ERROR] Append: -s
-[5-ERROR] New Command: gcc-34 -O1 -pipe --version -s
-[5-ERROR] gcc-34 (GCC) 3.4.3
-[5-ERROR] Copyright (C) 2004 Free Software Foundation, Inc.
-[5-ERROR] This is free software; see the source for copying conditions.  There is NO
-[5-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-[5-ERROR] 
-[5-ERROR] [ writing debug log to /ROCK/src.ipw2200.1124206607.5880.3476981796/cmd_wrapper.log ]
-[5-ERROR] Running main build function 'build_this_package' ...
-[5-ERROR] Extracting ipw2200-1.0.4.tbz2 (--use-compress-program=bzip2 -xf) ... 
-[5-ERROR] Fixing ownership and permissions ...
-[5-ERROR] Removing CVS and .svn directories ...
-[5-ERROR] Changeing into /ROCK/src.ipw2200.1124206607.5880.3476981796/ipw2200-1.0.4 ...
-[5-ERROR] Creating /usr/<..> if required ...
-[5-ERROR] make -C /lib/modules/2.6.12.3-rock/build SUBDIRS=/ROCK/src.ipw2200.1124206607.5880.3476981796/ipw2200-1.0.4 MODVERDIR=/ROCK/src.ipw2200.1124206607.5880.3476981796/ipw2200-1.0.4 modules
-[5-ERROR] make[1]: Entering directory `/usr/src/linux-2.6.12.3-rock'
-[5-ERROR] 
-[5-ERROR]   WARNING: Symbol version dump /usr/src/linux-2.6.12.3-rock/Module.symvers
-[5-ERROR]            is missing; modules will have no dependencies and modversions.
-[5-ERROR] 
-[5-ERROR]   CC [M]  /ROCK/src.ipw2200.1124206607.5880.3476981796/ipw2200-1.0.4/ipw2200.o
-[5-ERROR] In file included from /ROCK/src.ipw2200.1124206607.5880.3476981796/ipw2200-1.0.4/ipw2200.h:50,
-[5-ERROR]                  from /ROCK/src.ipw2200.1124206607.5880.3476981796/ipw2200-1.0.4/ipw2200.c:33:
-[5-ERROR] /ROCK/src.ipw2200.1124206607.5880.3476981796/ipw2200-1.0.4/net/ipw22_ieee80211.h:722: error: redefinition of 'is_multicast_ether_addr'
-[5-ERROR] include/linux/etherdevice.h:67: error: previous definition of 'is_multicast_ether_addr' was here
-[5-ERROR] make[2]: *** [/ROCK/src.ipw2200.1124206607.5880.3476981796/ipw2200-1.0.4/ipw2200.o] Error 1
-[5-ERROR] make[1]: *** [_module_/ROCK/src.ipw2200.1124206607.5880.3476981796/ipw2200-1.0.4] Error 2
-[5-ERROR] make[1]: Leaving directory `/usr/src/linux-2.6.12.3-rock'
-[5-ERROR] make: *** [modules] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 0 files for this package.
-[5-ERROR] Applying package split: 40 ipw2200:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 ipw2200:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 ipw2200:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building ipw2200=ipw2200.
-
-[9-ERROR] OTHERS = ''
-[9-ERROR] INSERT = '-O1 -pipe'
-[9-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
-[9-ERROR] APPEND = '-s'
-[9-ERROR] FILTER = ''
-[9-ERROR] Old PATH: /ROCK/src.ipw2200.1124240896.17631.3447987494/wrappers:/ROCK/build/ref0811-TRUNK-x86-reference/ROCK/tools.chroot/wrapper:/ROCK/build/ref0811-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clip/bin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/deva/bin:/opt/e16/bin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/flexlm/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/kde3/bin:/opt/kde3/sbin:/opt/mono/bin:/opt/mysql/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/root/bin:/opt/samba/bin:/opt/samba/sbin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/opt/kde3/bin:/opt/root/bin
-[9-ERROR] New PATH: /ROCK/src.ipw2200.1124240896.17631.3447987494/wrappers:/ROCK/build/ref0811-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clip/bin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/deva/bin:/opt/e16/bin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/flexlm/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/kde3/bin:/opt/kde3/sbin:/opt/mono/bin:/opt/mysql/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/root/bin:/opt/samba/bin:/opt/samba/sbin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/opt/kde3/bin:/opt/root/bin
-[9-ERROR] Insert: -O1
-[9-ERROR] Insert: -pipe
-[9-ERROR] Copy:   --version
-[9-ERROR] Append: -s
-[9-ERROR] New Command: gcc-34 -O1 -pipe --version -s
-[9-ERROR] gcc-34 (GCC) 3.4.3
-[9-ERROR] Copyright (C) 2004 Free Software Foundation, Inc.
-[9-ERROR] This is free software; see the source for copying conditions.  There is NO
-[9-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-[9-ERROR] 
-[9-ERROR] [ writing debug log to /ROCK/src.ipw2200.1124240896.17631.3447987494/cmd_wrapper.log ]
-[9-ERROR] Running main build function 'build_this_package' ...
-[9-ERROR] Extracting ipw2200-1.0.4.tbz2 (--use-compress-program=bzip2 -xf) ... 
-[9-ERROR] Fixing ownership and permissions ...
-[9-ERROR] Removing CVS and .svn directories ...
-[9-ERROR] Changeing into /ROCK/src.ipw2200.1124240896.17631.3447987494/ipw2200-1.0.4 ...
-[9-ERROR] Creating /usr/<..> if required ...
-[9-ERROR] make -C /lib/modules/2.6.12.3-rock/build SUBDIRS=/ROCK/src.ipw2200.1124240896.17631.3447987494/ipw2200-1.0.4 MODVERDIR=/ROCK/src.ipw2200.1124240896.17631.3447987494/ipw2200-1.0.4 modules
-[9-ERROR] make[1]: Entering directory `/usr/src/linux-2.6.12.3-rock'
-[9-ERROR] 
-[9-ERROR]   WARNING: Symbol version dump /usr/src/linux-2.6.12.3-rock/Module.symvers
-[9-ERROR]            is missing; modules will have no dependencies and modversions.
-[9-ERROR] 
-[9-ERROR]   CC [M]  /ROCK/src.ipw2200.1124240896.17631.3447987494/ipw2200-1.0.4/ipw2200.o
-[9-ERROR] In file included from /ROCK/src.ipw2200.1124240896.17631.3447987494/ipw2200-1.0.4/ipw2200.h:50,
-[9-ERROR]                  from /ROCK/src.ipw2200.1124240896.17631.3447987494/ipw2200-1.0.4/ipw2200.c:33:
-[9-ERROR] /ROCK/src.ipw2200.1124240896.17631.3447987494/ipw2200-1.0.4/net/ipw22_ieee80211.h:722: error: redefinition of 'is_multicast_ether_addr'
-[9-ERROR] include/linux/etherdevice.h:67: error: previous definition of 'is_multicast_ether_addr' was here
-[9-ERROR] make[2]: *** [/ROCK/src.ipw2200.1124240896.17631.3447987494/ipw2200-1.0.4/ipw2200.o] Error 1
-[9-ERROR] make[1]: *** [_module_/ROCK/src.ipw2200.1124240896.17631.3447987494/ipw2200-1.0.4] Error 2
-[9-ERROR] make[1]: Leaving directory `/usr/src/linux-2.6.12.3-rock'
-[9-ERROR] make: *** [modules] Error 2
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 0 files for this package.
-[9-ERROR] Applying package split: 40 ipw2200:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 ipw2200:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 ipw2200:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building ipw2200=ipw2200.
 

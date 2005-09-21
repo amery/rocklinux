@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1123898348 Sat Aug 13 03:59:08 2005 (5)
-[TIMESTAMP] 1124135230 Mon Aug 15 21:47:10 2005 (9)
+[TIMESTAMP] 1126877474 Fri Sep 16 15:31:14 2005 (5)
+[TIMESTAMP] 1127117963 Mon Sep 19 10:19:23 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-nettle.log 9-nettle.log
 
-[BUILDTIME] 3714 (5)
-[BUILDTIME] 4076 (9)
+[BUILDTIME] 3622 (5)
+[BUILDTIME] 4112 (9)
 [SIZE] 0.14 MB, 9 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev gmp gmp:dev grep linux26-header:dev
-[DEP] make mktemp net-tools openssl openssl:dev sed sysfiles tar texinfo
-[DEP] util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
+[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev gmp gmp:dev grep
+[DEP] linux26-header:dev make mktemp net-tools openssl openssl:dev sed
+[DEP] sysfiles tar texinfo util-linux
 
 [PROVIDES] libnettle.a nettle-lfib-stream sexp-conv
 

@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1123783544 Thu Aug 11 20:05:44 2005 (3)
-[TIMESTAMP] 1124144644 Tue Aug 16 00:24:04 2005 (9)
+[TIMESTAMP] 1126811067 Thu Sep 15 21:04:27 2005 (3)
+[TIMESTAMP] 1127178388 Tue Sep 20 03:06:28 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 3-udev.log 9-udev.log
 
-[BUILDTIME] 1536 (3)
-[BUILDTIME] 2222 (9)
-[SIZE] 0.29 MB, 28 files
+[BUILDTIME] 1632 (3)
+[BUILDTIME] 2335 (9)
+[SIZE] 0.30 MB, 29 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] psmisc sed sysfiles tar
+[DEP] patch psmisc sed sysfiles tar
 
-[PROVIDES] udev udevcontrol udevd udevinfo udevsend udevstart udevtest
+[PROVIDES] udev udevcontrol udevd udevinfo udevmonitor udevsend udevstart
+[PROVIDES] udevtest
 

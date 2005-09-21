@@ -37,11 +37,12 @@ mount -n -t tmpfs none /tmp
 mount -n -t proc none /proc
 mount -n -t sysfs none /sys
 mount -n -t ramfs none /dev
-/sbin/udevd &
 /sbin/udevstart
+/sbin/udevd --daemon
 cd /dev
 rm -rf fd
 ln -sf /proc/self/fd
+mkdir -p pts shm
 cd /
 
 while read dev mntpoint fstype options fsck1 fsck2 ; do

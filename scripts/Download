@@ -46,7 +46,6 @@ if [ "$1" = '-help' ] ; then
 	echo " Download files required for given packages, package description files, package"
 	echo " repositories, import packages, or build configurations."
  	echo " On default, this script auto-detects the best ROCK Linux mirror."
-	echo " See '-mirror none' output for help on bypassing the official mirrors."
 	echo
 	echo "	-all		download all files for a build configuration"
 	echo "	-required	download only files for packages that will be built in"
@@ -66,6 +65,8 @@ if [ "$1" = '-help' ] ; then
 	echo "	-mirror <URL>	set the download mirror to use"
 	echo "			Mirrors can also be local directories in the form"
 	echo "			of 'file:///<dir>'"
+	echo "			Use '-mirror auto' to autodetect a new best mirror server"
+	echo " 			Use '-mirror none' to bypass the official mirrors"
 	echo "	-check		check checksums only; don't download files"
 	echo "	-try-questionable	also try to download from URLs marked as"
 	echo "				questionable"
@@ -90,7 +91,7 @@ if [ "$1" = '-help' ] ; then
 	echo "	-mk-cksum <Filenames>	calculate checksums on files as used in package"
 	echo "				descriptions"
 	echo "	-list		all files a complete download directory would contain"
-	echo "	-list-cksums	as -list, with an checksum for each file"
+	echo "	-list-cksums	as -list, with a checksum for each file"
 	echo "	-list-unknown	files in the download directory that are not in any"
 	echo "			package description, e.g. old files"
 	echo "	-list-missing	files in package descriptions that are not"
@@ -133,6 +134,8 @@ notimeout=0 ; curl_options='--disable-epsv --location'
 altcopy=link
 ignore_xpkg=1
 
+if [ -f download/Mirror ]; then mirror="`cat download/Mirror`" ; fi
+
 #
 while [ $loop -eq 1 ] ; do
 	case "$1" in
@@ -154,21 +157,19 @@ while [ $loop -eq 1 ] ; do
 		# -mirror uses a mirror for finding source files
 		if [ "$2" = none ]; then
 			echo
-			echo "The option '-mirror none' is not supported anymore!"
+			echo "WARNING: The option '-mirror none' is not supported anymore!"
 			echo
-			echo "You may 'echo none > download/Mirror' if you really"
-			echo "want to use the original download resources. However, this"
-			echo "is not supported and if such a download fails, this is not"
-			echo "a bug in ROCK Linux and doesn't neccessarily needs fixing."
+			echo "WARNING: You may use '-mirror none' if you really want to use the"
+			echo "WARNING: original download resources. However, this is not"
+			echo "WARNING: supported and if such a download fails, this is not a bug"
+			echo "WARNING: in ROCK Linux and doesn't necessarily need fixing."
 			echo
-			exit 1;
 		else
-			mkdir -p download
 			echo "$2" > download/Mirror
-			options="$options -mirror $2"
-			mirror="$2"
 		fi
-		shift ; shift ;;
+		options="$options -mirror $2"
+		mirror="$2"
+		shift 2 ;;
 
 	    -check)
 		# -check just validates the file using the checksum
@@ -284,16 +285,15 @@ cksum_chk() {
 # Autodetect best Mirror and safe url in $mirror
 #
 detect_mirror() {
-    if [ -f download/Mirror ] ; then
-	mirror="`cat download/Mirror`"
-	if [ -z "$mirror" -o "$mirror" = "none" ] ; then
-		echo "INFO: Found download/Mirror: none" \
+    if [ -n "$mirror" -a "$mirror" != "auto" ] ; then
+	if [ "$mirror" = "none" ] ; then
+		echo "INFO: Using download mirror: none" \
 			"(use the original download locations)" 1>&2
 	else
-		echo "INFO: Found cached mirror URL in download/Mirror:" 1>&2
+		echo "INFO: Using download mirror:" 1>&2
 		echo "INFO: $mirror" 1>&2
 	fi
-	echo "INFO: To force a new mirror auto-detection, remove download/Mirror." 1>&2
+	echo "INFO: To force a new mirror auto-detection, use '-mirror auto'." 1>&2
     else
 	echo "INFO: Auto-detecting best mirror ..." 1>&2
 	eval "$(egrep '^(rockver)=' scripts/parse-config)"
@@ -481,7 +481,6 @@ download_file() {
 
 		    # Mirroring
 		    #
-		    mirror="$( cat download/Mirror )"
 
 		    if [ -n "$mirror" -a "$mirror" != "none" -a -z "${bzfile##download/mirror/*}" ] ; then
 			# try to use mirror

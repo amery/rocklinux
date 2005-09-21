@@ -1,0 +1,8 @@
+diff -pruN acerhk-0.5.27-orig/Makefile acerhk-0.5.27/Makefile
+--- acerhk-0.5.27-orig/Makefile	2005-09-09 14:59:26.000000000 +0200
++++ acerhk-0.5.27/Makefile	2005-09-09 14:59:39.000000000 +0200
+@@ -63,4 +63,3 @@ install: $(TARGET)
+ 	#cp -v $(TARGET) /lib/modules/$(KERNELVERSION)/kernel/drivers/char
+ 	mkdir -p /lib/modules/$(KERNELVERSION)/extra
+ 	cp -v $(TARGET) /lib/modules/$(KERNELVERSION)/extra/
+-	depmod -a

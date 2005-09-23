@@ -31,6 +31,10 @@
 
 [C] extra/theme extra/desktop/gnome
 
+# looks like the dependency to librsvg is just a bogus bullying by the
+# configure script and is not detected by our syscall wrappers...
+[E] add librsvg
+
 [L] Unknown
 [S] Beta
 [V] 0.7

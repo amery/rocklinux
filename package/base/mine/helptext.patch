@@ -1,0 +1,11 @@
+--- ./mine.c~	2005-08-09 12:57:29.000000000 +0200
++++ ./mine.c	2005-09-19 18:03:50.000000000 +0200
+@@ -122,7 +122,7 @@
+ "E.g. this will create a GEM file from the mine package installed in /:\n"
+ "\n"
+ "      mine -T /var/adm / mine mine.tar.bz2\n"
+-"      mine -C /var/adm mine.tar.bz2 mine.gem\n"
++"      mine -C /var/adm mine.tar.bz2 mine mine.gem\n"
+ "\n"
+ "Hint: After installing, updating or removing packages you should run the\n"
+ "      scripts 'cron.run' and 'postinstall'. This updates some important\n"

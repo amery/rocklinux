@@ -22,7 +22,22 @@
 
 if pkgcheck php X ; then
 	menu_begin MENU_PKG_PHP 'PHP Package Options'
-		bool 'Force usage of shared modules' ROCKCFG_PKG_PHP_FORCESHARED 0
+
+                k=' 4 Build_PHP4 5 Build_PHP5'
+                d=4
+                choice ROCKCFG_PKG_PHP_VERSION $d $k
+                
+                if [ $ROCKCFG_PKG_PHP_VERSION = 4 ] ; then
+                   pkgfork php php4
+                   pkgdisable php=php5
+                else
+                   pkgfork php php5
+                   pkgdisable php=php4 
+                fi
+
+                pkgremove php
+	
+        	bool 'Force usage of shared modules' ROCKCFG_PKG_PHP_FORCESHARED 0
 		for xpkg in postgresql openssl mysql libgd ; do
 		  if pkgcheck $xpkg X ; then
 		  	bool "Build PHP with $xpkg support" ROCKCFG_PKG_PHP_$xpkg 1

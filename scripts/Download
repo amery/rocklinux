@@ -56,7 +56,7 @@ if [ "$1" = '-help' ] ; then
 	echo "    [ -mirror <URL> | -check ] [ -try-questionable ]  [ -notimeout ]"
 	echo "    [ -longtimeout ] [ -curl-opt <curl-option>[:<curl-option>[:..]] ]"
 	echo "    [ -proxy <server>[:<port>] ] [ -proxy-auth <username>[:<password>] ]"
-	echo "    [ -copy ] [ -move ]"
+	echo "    [ -copy ] [ -move ] [ -cksumpatch ]"
 	echo
 	echo "	-cfg <config>	download files for the given configuration"
 	echo "	-nock		skip checksum checks (don't use lightly)"
@@ -84,6 +84,7 @@ if [ "$1" = '-help' ] ; then
 	echo "	-move		move files instead"
 	echo "			Default is to link files, if existent, from the old"
 	echo "			layout to the new one"
+	echo "	-cksumpatch	Patch the checksum in the .desc file after downloading."
 	echo
 	echo " ./scripts/Download -mk-cksum <Filename(s)>"
 	echo " ./scripts/Download [ -list | -list-unknown | -list-missing | -list-cksums ]"
@@ -131,7 +132,7 @@ this_is_the_2nd_run=0
 mirror='' ; checkonly=0 ; altdir='' ; loop=1
 tryques=0 ; nocheck=0 ; options='-this_is_the_2nd_run '
 notimeout=0 ; curl_options='--disable-epsv --location'
-altcopy=link
+altcopy=link ; cksumpatch=0
 ignore_xpkg=1
 
 if [ -f download/Mirror ]; then mirror="`cat download/Mirror`" ; fi
@@ -220,6 +221,7 @@ while [ $loop -eq 1 ] ; do
 	
 	    -move) altcopy=move ; shift ;;
 	    -copy) altcopy=copy ; shift ;;
+	    -cksumpatch) cksumpatch=1 ; shift ;;
 
 	    *)
 		loop=0 ;;
@@ -960,6 +962,9 @@ mapped_packages() {
 		export xpkg=$pkg
 		. src/pkgmapper
 		packages $pkg
+		if [ $cksumpatch = 1 ]; then
+			./scripts/Create-CkSumPatch $pkg | patch -p0
+		fi
 	done
 }
 

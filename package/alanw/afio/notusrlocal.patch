@@ -1,0 +1,12 @@
+diff -Naur afio-2.5.orig/Makefile afio-2.5/Makefile
+--- afio-2.5.orig/Makefile	2003-12-21 10:23:51.000000000 +0000
++++ afio-2.5/Makefile	2005-01-26 09:44:00.000000000 +0000
+@@ -88,7 +88,7 @@
+ 	cd regtest; /bin/sh regtest.clean
+ 
+ install: afio
+-	cp afio /usr/local/bin
++	cp afio /usr/bin
+ 	cp afio.1 /usr/share/man/man1
+ 
+ # generate default list of -E extensions from manpage

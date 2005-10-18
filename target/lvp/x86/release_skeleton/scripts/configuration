@@ -1,7 +1,6 @@
 multi LVP_TYPE plain "How to store data on the LVP" plain encrypted
 if [ "${LVP_TYPE}" == "encrypted" ] ; then
 	multi LVP_ENTROPY_SOURCE random "What device to use for creating the pseudo-filesystems" random urandom zero
-	multi LVP_ENCRYPTION blowfish "What encryption-algorhythm to use" blowfish twofish serpent
 fi
 
 multi LVP_SIZE dvd "What medium are you using" cd dvd other

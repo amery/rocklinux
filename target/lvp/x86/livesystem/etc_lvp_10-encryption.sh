@@ -13,36 +13,22 @@ encryption_start() {
 		echo
 		echo "Starting crypto-subroutine"
 
-		echo "Please choose which encryption you want to use:"
-		echo -e "\t1\tblowfish"
-		echo -e "\t2\ttwofish"
-		echo -e "\t3\tserpent"
-		echo
-		unset thisenc
-		while [ -z "${thisenc}" ] ; do
-			read -p "Please enter your choice: " rthisenc
-			[ "${rthisenc}" == "1" ] && thisenc="blowfish256"
-			[ "${rthisenc}" == "2" ] && thisenc="twofish256"
-			[ "${rthisenc}" == "3" ] && thisenc="serpent256"
-		done
-		echo "Using ${thisenc%256} encryption."
-
 		exec 2>/dev/null
+		for x in /lvp.data* ; do
+			losetup /dev/loop/${x#/lvp.data} ${x} 
+		done
+		mdadm --build /dev/md/0 -l linear --force -n ${numfiles} ${files} 
 		while [ ! -e /mnt1/lvp.xml ] ; do
 			echo -n "Please enter passphrase: "
-			read -s passphrase
+			read -s pass
 			echo
-			for x in /lvp.data* ; do
-				echo "${passphrase}" | losetup -e ${thisenc} -p 0 /dev/loop/${x#/lvp.data} ${x} 
-			done
-			mdadm --build /dev/md/0 -l linear --force -n ${numfiles} ${files} 
-			mount /dev/md/0 /mnt1
+			pass="`echo ${pass} | md5sum`"
+			pass=${pass%% *}
+			echo 0 `/sbin/blockdev --getsize /dev/md/0` crypt aes-plain ${pass} 0 /dev/md/0 0 | /sbin/dmsetup create lvp_data
+			mount /dev/mapper/lvp_data /mnt1
 			if [ ! -e /mnt1/lvp.xml ] ; then
 				echo "Wrong Passphrase!"
-				mdadm /dev/md/0 -S
-				for x in /lvp.data* ; do
-					losetup -d /dev/loop/${x#/lvp.data}
-				done
+				dmsetup remove /dev/mapper/lvp_data
 			fi
 		done
 		exec 2>&1
@@ -51,6 +37,7 @@ encryption_start() {
 
 encryption_stop(){
 	umount /mnt1
+	dmsetup remove /dev/mapper/lvp_data
 	mdadm -S /dev/md/0
 	for x in /lvp.data* ; do
 		losetup -d /dev/loop/${x#/lvp.data}

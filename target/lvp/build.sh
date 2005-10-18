@@ -1,5 +1,5 @@
 
-lvp_ver="0.4.4-dev"
+lvp_ver="0.5.0"
 rootdir="${base}/build/${ROCKCFG_ID}"
 ROCKdir="${rootdir}/ROCK"
 releasedir="${ROCKdir}/lvp_${lvp_ver}_${ROCKCFG_X86_OPT}"
@@ -32,7 +32,12 @@ else
 	echo_status "Creating directory structure"
 	mkdir -p ${releasedir}/initrd
 	cd ${releasedir}/initrd
-	mkdir -p bin etc proc dev tmp mnt
+	mkdir -p bin etc proc dev tmp mnt sys
+	mknod dev/ram0  b 1 0
+	mknod dev/null  c 1 3
+	mknod dev/zero  c 1 5
+	mknod dev/tty   c 5 0
+	mknod dev/console c 5 1
 	ln -sf bin sbin
 	ln -sf . usr
 	cd etc
@@ -51,16 +56,18 @@ else
 		bin/mount \
 		bin/umount \
 		bin/rm \
-		usr/bin/chroot \
 		bin/find \
 		bin/gawk \
 		bin/loadkeys \
+		etc/udev \
 		lib/modules/${kernelversion}-rock \
 		sbin/agetty \
 		sbin/hwscan \
 		sbin/rmmod \
 		sbin/modprobe \
 		sbin/insmod \
+		sbin/udevstart \
+		usr/bin/chroot \
 		usr/bin/eject \
 		usr/bin/lsmod \
 		usr/sbin/lspci \
@@ -70,7 +77,7 @@ else
 
 		mkdir -p ${x%/*}
 		cp -ar ${rootdir}/${x} ${x}
-		chmod u-s,g-s ${x}
+		chmod u-s,g-s,u+w ${x}
 		dynamic=`file ${x} | grep -c dynamic`
 		if [ "${dynamic}" != "0" ] ; then
 			echo_error "WARNING! ${x} is NOT linked statically!"
@@ -82,6 +89,7 @@ else
 	chmod +x *
 	ln -sf gzip gunzip
 	ln -sf gzip gzcat
+	ln -sf bash sh
 	cd ..
 	mv bin/linuxrc .
 
@@ -116,7 +124,7 @@ else
 		bin/umount \
 		etc/mplayer/mplayer.conf \
 		usr/share/mplayer/font-arial-24-iso-8859-1 \
-		usr/X11/bin/XFree86 \
+		usr/X11/bin/Xorg \
 		usr/X11/bin/X \
 		usr/X11/bin/startx \
 		usr/X11/bin/xauth \
@@ -125,15 +133,19 @@ else
 		usr/X11/lib/X11/fonts/misc \
 		usr/bin/lvp \
 		usr/bin/mplayer \
+		usr/bin/md5sum \
 		usr/bin/tail \
 		usr/sbin/lspci \
+		sbin/blockdev \
+		sbin/dmsetup \
 		sbin/losetup \
-		sbin/mdadm
+		sbin/mdadm \
+		sbin/udevstart
 		do
 
 		mkdir -p ${x%/*}
 		cp -ar ${rootdir}/${x} ${x}
-		chmod u-s,g-s ${x}
+		chmod u-s,g-s,u+w ${x}
 		dynamic=`file ${x} | grep -c dynamic`
 		if [ "${dynamic}" != "0" ] ; then
 			echo_error "WARNING! ${x} is NOT linked statically!"

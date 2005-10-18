@@ -6,29 +6,6 @@ entrosource="${LVP_ENTROPY_SOURCE}"
 process_encrypted(){
 	target="livesystem"
 
-	for module in twofish blowfish serpent ; do
-		eval "encryption_${module}=0"
-		[ `lsmod | grep -c "loop_${module}"` -eq 0 ] && modprobe loop_${module} >/dev/null 2>&1 # fails for kernel >= 2.5.48 if module already loaded
-		[ `lsmod | grep -c "loop_${module}"` -eq 1 ] && eval "encryption_${module}=1"
-	done
-
-	encryption_available=0
-	[ ${encryption_twofish} -eq 1 -o ${encryption_blowfish} -eq 1 -o ${encryption_serpent} -eq 1 ] && \
-		encryption_available=1
-
-	if [ ${encryption_available} -eq 0 ] ; then
-		echo "Sorry, you do not have loop-aes on your system. Please have a look at"
-		echo "http://loop-aes.sourceforge.net"
-		exit 1
-	fi
-
-	eval "avail=\${encryption_${LVP_ENCRYPTION}}"
-	if [ "${avail}" == "0" ] ; then
-		echo "Sorry, ${LVP_ENCRYPTION} is not available on your system."
-		echo "Please check your kernel configuration."
-		exit 1
-	fi
-
 	echo "Loading kernel module for linear mode"
 	grep -q linear /proc/mdstat || modprobe linear
 	if ! grep -q linear /proc/mdstat ; then
@@ -137,8 +114,6 @@ process_encrypted(){
 	rm -rf ${target}/mnt*
 	mkdir ${target}/mnt1
 
-	echo "Using ${LVP_ENCRYPTION} encryption."
-
 	echo "Now I need a passphrase for encrypting the filesystems."
 	passphrase="MEEP"
 	passphrase_confirm="MOOP"
@@ -165,7 +140,7 @@ process_encrypted(){
 		file="${target}/lvp.data${lvpdata}"
 
 		echo "Setting up loopdevice ${lvpdata}"
-		echo "${passphrase}" | losetup -p 0 -e ${LVP_ENCRYPTION}256 ${lodev} ${file}
+		losetup ${lodev} ${file}
 		lvpdata=$(( ${lvpdata} + 1 ))
 	done
 
@@ -183,10 +158,15 @@ process_encrypted(){
 	done
 	${target}/sbin/mdadm --build ${mddev} -l linear --force -n ${needed_pseudofs} ${mdloopdevs}
 
-	echo "Creating filesystem on ${mddev}"
-	mkfs.ext2 -m 0 ${mddev} >/dev/null 2>&1
-	echo "Mounting filesystem ${mddev}"
-	mount ${mddev} ${target}/mnt1
+	passphrase="`echo ${passphrase} | md5sum`"
+	passphrase=${passphrase%% *}
+
+	echo 0 `/sbin/blockdev --getsize ${mddev}` crypt aes-plain ${passphrase} 0 ${mddev} 0 | /sbin/dmsetup create lvp_data_$$
+
+	echo "Creating filesystem"
+	mkfs.ext2 -m 0 /dev/mapper/lvp_data_$$ >/dev/null 2>&1
+	echo "Mounting filesystem"
+	mount /dev/mapper/lvp_data_$$ ${target}/mnt1
 	rm -rf ${target}/mnt1/*
 
 	continue=0
@@ -219,8 +199,9 @@ process_encrypted(){
 	process_create_lvpxml
 
 	echo "Umounting filesystem ${mddev}"
-	umount ${mddev}
+	umount livesystem/mnt1
 	echo "Shutting down ${mddev}"
+	dmsetup remove /dev/mapper/lvp_data_$$
 	mdadm -S ${mddev}
 
 	lvpdata=${needed_pseudofs}

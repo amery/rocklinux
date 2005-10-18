@@ -61,7 +61,9 @@ while : ; do
 	if [ ${s} -gt 0 -a ${s} -le ${num_found} ] ; then
 		eval "x=\${choice_${s}}"
 		mount -n ${x} /mnt
+		mount --bind /dev /mnt/dev
 		chroot /mnt /linuxrc
+		umount /mnt/dev
 		# man, this sucks
 		# sometimes the livesystem's linuxrc seems to be unable to umount everything...
 		for x in 1 2 3 4 5 6 7 8 9 0 ; do

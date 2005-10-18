@@ -1,5 +1,5 @@
 #!/bin/bash
 
-for x in /lib/modules/*/block/loop_* ; do
-	insmod ${x} >/dev/null 2>&1 
-done
+insmod /lib/modules/*/kernel/arch/i386/crypto/aes-i586.ko
+insmod /lib/modules/*/kernel/drivers/md/dm-mod.ko
+insmod /lib/modules/*/kernel/drivers/md/dm-crypt.ko

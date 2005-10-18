@@ -1,29 +1,8 @@
 #!/bin/bash
 
-echo "Trying to autodetect hardware..."
+echo "Running udevstart to get /dev started ... "
 
-read a b version c < /proc/version
-/bin/hwscan -k ${version} >/tmp/hardware
-
-if [ `grep -c '^# ' /tmp/hardware` -gt 0 ] ; then
-	echo 'Found the following:'
-	grep '^# ' /tmp/hardware | sed 's,^# ,- ,g'
-	echo 'Now trying to initialise them...'
-	. /tmp/hardware
-fi
-
-# looks like hwscan just silently fails if something is missing
-# for example it says it found 0 modules, while executing that
-# find command brings up 400-odd files. We'll just load
-# _everything_ in that case.
-if [ ! -s /tmp/hardware ] ; then
-	echo "EEP! hwscan screwed up!"
-	echo -n "Trying emergency module loading ... "
-	for x in `find /lib/modules/ -name '*.ko'` ; do
-		insmod ${x} >/dev/null 2>&1
-	done
-	echo "done"
-fi
+/sbin/udevstart
 
 if [ ! -e /dev/sound/dsp ] ; then
 	echo 'EEP! We have no sound!'

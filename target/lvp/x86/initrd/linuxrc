@@ -2,6 +2,12 @@
 
 mount -n -t proc proc /proc
 mount -n -t tmpfs tmpfs /tmp
+mount -n -t ramfs devfs /dev
+mount -n -t sysfs sys /sys
+
+/bin/keymap
+/bin/hardware
+/bin/kernel
 
 cd /dev ; rm -f fd
 ln -sf /proc/kcore      core
@@ -31,9 +37,5 @@ ttydevs="vc/2 vc/3"
 for x in ${ttydevs}  ; do
 	( ( while : ; do agetty -i 38400 ${x} -n -l /bin/login-shell ; done ) & )
 done
-
-/bin/keymap
-/bin/hardware
-/bin/kernel
 
 agetty -i 38400 vc/1 -n -l /bin/linuxrc2

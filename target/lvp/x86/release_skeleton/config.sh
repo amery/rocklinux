@@ -24,12 +24,15 @@ while [ "${quit}" == "0" ] ; do
 		c)
 			save
 			scripts/create_lvp
+			read -p "Press -<enter>- to continue"
 			;;
 		x)
 			scripts/cleanup
+			read -p "Press -<enter>- to continue"
 			;;
 		i)
 			scripts/create_iso
+			read -p "Press -<enter>- to continue"
 			;;
 		*)
 			get ${choice}

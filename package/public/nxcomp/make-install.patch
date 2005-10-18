@@ -19,7 +19,7 @@
 
 --- nxcomp/Makefile.in.orig	2003-11-12 04:24:17.000000000 +0100
 +++ nxcomp/Makefile.in	2003-11-12 04:25:49.000000000 +0100
-@@ -195,8 +195,10 @@
+@@ -195,8 +195,11 @@
  		touch depend.status
  
  install:	install.bin install.man
@@ -27,6 +27,7 @@
  
  install.bin:
 +		$(INSTALL) -v $(LIBFULL) $(prefix)/lib/
++		$(INSTALL) -v $(LIBSHARED) $(prefix)/lib/
  
  install.man:
  

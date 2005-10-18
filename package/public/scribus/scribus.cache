@@ -20,27 +20,30 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1126988089 Sat Sep 17 22:14:49 2005 (5)
-[TIMESTAMP] 1127247126 Tue Sep 20 22:12:06 2005 (9)
+[TIMESTAMP] 1129232823 Thu Oct 13 21:47:03 2005 (5)
+[TIMESTAMP] 1129480607 Sun Oct 16 18:36:47 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-scribus.log 9-scribus.log
 
-[BUILDTIME] 38765 (5)
-[BUILDTIME] 38997 (9)
-[SIZE] 7.47 MB, 240 files
+[BUILDTIME] 91434 (5)
+[BUILDTIME] 92214 (9)
+[SIZE] 18.78 MB, 723 files
 
 [DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils cups cups:dev
-[DEP] diffutils expat findutils freetype freetype:dev gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep lcms lcms:dev libart_lgpl23
+[DEP] diffutils expat findutils freetype freetype:dev gawk gcc34 gcc34:dev
+[DEP] ghostscript glibc23 glibc23:dev grep lcms lcms:dev libart_lgpl23
 [DEP] libart_lgpl23:dev libjpeg libjpeg:dev libpng libpng:dev libtiff
-[DEP] libtiff:dev linux26-header:dev make mktemp net-tools openssl patch
-[DEP] qt qt:dev sed sysfiles tar util-linux xorg xorg:dev zlib:dev
+[DEP] libtiff:dev libxml2 libxml2:dev linux26-header:dev make mktemp nas
+[DEP] net-tools openssl pkgconfig python python:dev qt qt:dev sed sysfiles
+[DEP] tar tcl tk util-linux xorg xorg:dev zapping zlib:dev
 
-[PROVIDES] libabout.so libcharselect.so libfontpreview.so libimportps.so
-[PROVIDES] libpdf.so libpostscript.so libpreferences.so libpreview.so
-[PROVIDES] libscribusexportpixmap.so libsvgexplugin.so libsvgimplugin.so
-[PROVIDES] scribus
+[PROVIDES] libcolorwheel.so libcsvim.so libfontpreview.so
+[PROVIDES] libhtmlim.so libimportps.so libnewfromtemplateplugin.so
+[PROVIDES] libodtimplugin.so liboodrawimp.so libsaveastemplateplugin.so
+[PROVIDES] libscribusexportpixmap.so libscribusshortwords.so
+[PROVIDES] libscriptplugin.so libsvgexplugin.so libsvgimplugin.so
+[PROVIDES] libsxwimplugin.so libtextfilterplugin.so libtxtim.so scribus
 

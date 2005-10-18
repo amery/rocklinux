@@ -20,17 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1126906194 Fri Sep 16 23:29:54 2005 (5)
-[TIMESTAMP] 1127150820 Mon Sep 19 19:27:00 2005 (9)
+[TIMESTAMP] 1129149906 Wed Oct 12 22:45:06 2005 (5)
+[TIMESTAMP] 1129388204 Sat Oct 15 16:56:44 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-xine-lib.log 9-xine-lib.log
 
-[BUILDTIME] 70768 (5)
-[BUILDTIME] 71846 (9)
-[SIZE] 10.00 MB, 170 files
+[BUILDTIME] 71911 (5)
+[BUILDTIME] 72789 (9)
+[SIZE] 10.39 MB, 175 files
 
 [DEP] 00-dirtree aalib aalib:dev alsa alsa:dev arts arts:dev audiofile
 [DEP] audiofile:dev bash2 binutils bison bzip2 bzip2:dev coreutils
@@ -38,20 +38,22 @@
 [DEP] freetype:dev gawk gcc34 gcc34:dev gconf gconf:dev gettext glib
 [DEP] glib:dev glibc23 glibc23:dev gnome-libs14 gnome-vfs gnome-vfs:dev
 [DEP] gnome14-dirtree gnome2-dirtree gpm grep imagemagick imagemagick:dev
-[DEP] lcms lcms:dev libbonobo libbonobo:dev libcdio libcdio:dev libfame
-[DEP] libfame:dev libjpeg libjpeg:dev libmng libmng:dev libsdl libsdl:dev
-[DEP] libtiff libtiff:dev libtool:dev libxml2:dev linux26-header:dev make
-[DEP] mktemp nas net-tools ogg-vorbis ogg-vorbis:dev orbit2 orbit2:dev
-[DEP] pkgconfig popt:dev rte sed slang speex speex:dev sysfiles tar
-[DEP] util-linux vcdimager vcdimager:dev xorg xorg:dev zlib:dev
+[DEP] lcms lcms:dev libbonobo libbonobo:dev libcaca libcaca:dev libcdio
+[DEP] libcdio:dev libfame libfame:dev libjpeg libjpeg:dev libmng libmng:dev
+[DEP] libsdl libsdl:dev libtheora libtheora:dev libtiff libtiff:dev
+[DEP] libtool:dev libxml2:dev linux26-header:dev make mktemp modplug-xmms
+[DEP] modplug-xmms:dev nas ncurses:dev net-tools ogg-vorbis ogg-vorbis:dev
+[DEP] orbit2 orbit2:dev pkgconfig polypaudio polypaudio:dev popt:dev
+[DEP] rte sed slang speex speex:dev sysfiles tar util-linux vcdimager
+[DEP] vcdimager:dev xorg xorg:dev xvmc-wrapper xvmc-wrapper:dev zlib:dev
 
 [PROVIDES] cyberblade_vid.so libxine.so mach64_vid.so mga_crtc2_vid.so
-[PROVIDES] mga_vid.so nvidia_vid.so pm2_vid.so pm3_vid.so
-[PROVIDES] radeon_vid.so rage128_vid.so savage_vid.so sis_vid.so
-[PROVIDES] unichrome_vid.so xine-config xineplug_ao_out_alsa.so
-[PROVIDES] xineplug_ao_out_arts.so xineplug_ao_out_esd.so
-[PROVIDES] xineplug_ao_out_file.so xineplug_ao_out_none.so
-[PROVIDES] xineplug_ao_out_oss.so xineplug_decode_a52.so
+[PROVIDES] mga_vid.so nvidia_vid.so pm2_vid.so pm3_vid.so radeon_vid.so
+[PROVIDES] rage128_vid.so savage_vid.so sis_vid.so unichrome_vid.so
+[PROVIDES] xine-config xineplug_ao_out_alsa.so xineplug_ao_out_arts.so
+[PROVIDES] xineplug_ao_out_esd.so xineplug_ao_out_file.so
+[PROVIDES] xineplug_ao_out_none.so xineplug_ao_out_oss.so
+[PROVIDES] xineplug_ao_out_polypaudio.so xineplug_decode_a52.so
 [PROVIDES] xineplug_decode_bitplane.so xineplug_decode_dts.so
 [PROVIDES] xineplug_decode_dvaudio.so xineplug_decode_dxr3_spu.so
 [PROVIDES] xineplug_decode_dxr3_video.so xineplug_decode_faad.so
@@ -64,10 +66,11 @@
 [PROVIDES] xineplug_decode_speex.so xineplug_decode_spu.so
 [PROVIDES] xineplug_decode_spucc.so xineplug_decode_spucmml.so
 [PROVIDES] xineplug_decode_spudvb.so xineplug_decode_sputext.so
-[PROVIDES] xineplug_decode_vorbis.so xineplug_decode_w32dll.so
-[PROVIDES] xineplug_decode_yuv.so xineplug_dmx_asf.so xineplug_dmx_audio.so
-[PROVIDES] xineplug_dmx_avi.so xineplug_dmx_fli.so xineplug_dmx_flv.so
-[PROVIDES] xineplug_dmx_games.so xineplug_dmx_iff.so xineplug_dmx_image.so
+[PROVIDES] xineplug_decode_theora.so xineplug_decode_vorbis.so
+[PROVIDES] xineplug_decode_w32dll.so xineplug_decode_yuv.so
+[PROVIDES] xineplug_dmx_asf.so xineplug_dmx_audio.so xineplug_dmx_avi.so
+[PROVIDES] xineplug_dmx_fli.so xineplug_dmx_flv.so xineplug_dmx_games.so
+[PROVIDES] xineplug_dmx_iff.so xineplug_dmx_image.so
 [PROVIDES] xineplug_dmx_matroska.so xineplug_dmx_mng.so
 [PROVIDES] xineplug_dmx_mpeg.so xineplug_dmx_mpeg_block.so
 [PROVIDES] xineplug_dmx_mpeg_elem.so xineplug_dmx_mpeg_pes.so
@@ -86,8 +89,10 @@
 [PROVIDES] xineplug_post_mosaico.so xineplug_post_planar.so
 [PROVIDES] xineplug_post_switch.so xineplug_post_tvtime.so
 [PROVIDES] xineplug_post_visualizations.so xineplug_vo_out_aa.so
-[PROVIDES] xineplug_vo_out_dxr3.so xineplug_vo_out_fb.so
-[PROVIDES] xineplug_vo_out_none.so xineplug_vo_out_opengl.so
-[PROVIDES] xineplug_vo_out_sdl.so xineplug_vo_out_vidix.so
-[PROVIDES] xineplug_vo_out_xshm.so xineplug_vo_out_xv.so
+[PROVIDES] xineplug_vo_out_caca.so xineplug_vo_out_dxr3.so
+[PROVIDES] xineplug_vo_out_fb.so xineplug_vo_out_none.so
+[PROVIDES] xineplug_vo_out_opengl.so xineplug_vo_out_sdl.so
+[PROVIDES] xineplug_vo_out_vidix.so xineplug_vo_out_xshm.so
+[PROVIDES] xineplug_vo_out_xv.so xineplug_vo_out_xvmc.so
+[PROVIDES] xineplug_vo_out_xxmc.so
 

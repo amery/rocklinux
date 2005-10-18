@@ -20,78 +20,83 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1126903836 Fri Sep 16 22:50:36 2005 (5)
-[TIMESTAMP] 1127147918 Mon Sep 19 18:38:38 2005 (9)
+[TIMESTAMP] 1129147462 Wed Oct 12 22:04:22 2005 (5)
+[TIMESTAMP] 1129385322 Sat Oct 15 16:08:42 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-gst-plugins.log 9-gst-plugins.log
 
-[BUILDTIME] 57665 (5)
-[BUILDTIME] 58780 (9)
-[SIZE] 4.66 MB, 185 files
+[BUILDTIME] 58351 (5)
+[BUILDTIME] 59566 (9)
+[SIZE] 4.91 MB, 190 files
 
 [DEP] 00-dirtree a52dec:dev aalib aalib:dev alsa alsa:dev arts arts:dev
 [DEP] atk atk:dev audiofile audiofile:dev bash2 binutils bzip2 cdparanoia
 [DEP] cdparanoia:dev coreutils diffutils directfb directfb:dev divx4linux
-[DEP] divx4linux:dev docbookx esound esound:dev expat expat:dev findutils
-[DEP] flac flac:dev freetype freetype:dev gawk gcc34 gcc34:dev gconf
-[DEP] gconf:dev gettext glib glib:dev glibc23 glibc23:dev gnome-blog
-[DEP] gnome-libs14 gnome-vfs gnome-vfs:dev gnome14-dirtree gnome2-dirtree
-[DEP] gpm grep gsm:dev gstreamer gstreamer:dev gtk+ gtk+:dev gtkdoc hermes
-[DEP] hermes:dev jack jack:dev ladspa:dev lame lame:dev lcms lcms:dev
-[DEP] libavc1394 libavc1394:dev libbonobo libbonobo:dev libcdaudio
+[DEP] divx4linux:dev docbookx esound esound:dev expat expat:dev
+[DEP] faac faac:dev faad2 faad2:dev findutils flac flac:dev freetype
+[DEP] freetype:dev gawk gcc34 gcc34:dev gconf gconf:dev gettext glib
+[DEP] glib:dev glibc23 glibc23:dev gnome-blog gnome-libs14 gnome-vfs
+[DEP] gnome-vfs:dev gnome14-dirtree gnome2-dirtree gpm grep gsm:dev
+[DEP] gstreamer gstreamer:dev gtk+ gtk+:dev gtkdoc hermes hermes:dev
+[DEP] jack jack:dev ladspa:dev lame lame:dev lcms lcms:dev libavc1394
+[DEP] libavc1394:dev libbonobo libbonobo:dev libcaca libcaca:dev libcdaudio
 [DEP] libcdaudio:dev libdv libdv:dev libdvdnav libdvdnav:dev libdvdread
 [DEP] libdvdread:dev libfame libfame:dev libjpeg libjpeg:dev libmikmod
 [DEP] libmikmod:dev libmng libmng:dev libmusicbrainz libmusicbrainz:dev
 [DEP] libpng libpng:dev libraw1394 libraw1394:dev libsdl libsdl:dev
-[DEP] libshout libshout:dev libsndfile libsndfile:dev libxml2 libxml2:dev
-[DEP] libxslt linphone linphone:dev linux26-header:dev mad mad:dev make
-[DEP] mjpegtools mjpegtools:dev mktemp nas nas:dev net-tools ogg-vorbis
-[DEP] ogg-vorbis:dev orbit2 orbit2:dev pango pango:dev patch perl5
-[DEP] pkgconfig popt popt:dev python sed slang speex speex:dev sysfiles
-[DEP] tar transfig util-linux xorg xorg:dev xvid:dev zlib:dev
+[DEP] libshout libshout:dev libsndfile libsndfile:dev libtheora
+[DEP] libtheora:dev libxml2 libxml2:dev libxslt linphone linphone:dev
+[DEP] linux26-header:dev mad mad:dev make mjpegtools mjpegtools:dev
+[DEP] mktemp mpeg4ip mpeg4ip:dev nas nas:dev ncurses:dev net-tools
+[DEP] ogg-vorbis ogg-vorbis:dev orbit2 orbit2:dev pango pango:dev patch
+[DEP] perl5 pkgconfig polypaudio polypaudio:dev popt popt:dev python sed
+[DEP] slang speex speex:dev sysfiles tar transfig util-linux xorg xorg:dev
+[DEP] xvid:dev zlib:dev
 
 [PROVIDES] gst-launch-ext-0.8 gst-visualise-0.8 libgst1394.so
 [PROVIDES] libgsta52dec.so libgstaasink.so libgstac3parse.so libgstadder.so
 [PROVIDES] libgstalaw.so libgstalpha.so libgstalphacolor.so libgstalsa.so
-[PROVIDES] libgstapetag.so libgstarts.so libgstartsdsink.so libgstasf.so
-[PROVIDES] libgstaudio.so libgstaudioconvert.so libgstaudiofile.so
-[PROVIDES] libgstaudiofilter.so libgstaudiorate.so libgstaudioscale.so
-[PROVIDES] libgstauparse.so libgstautodetect.so libgstavi.so
-[PROVIDES] libgstcdaudio.so libgstcdparanoia.so libgstcdplayer.so
-[PROVIDES] libgstcdxaparse.so libgstchart.so libgstcolorspace.so
-[PROVIDES] libgstcutter.so libgstdebug.so libgstdecodebin.so
-[PROVIDES] libgstdeinterlace.so libgstdirectfbvideosink.so libgstdvdec.so
-[PROVIDES] libgstdvdlpcmdec.so libgstdvdnavsrc.so libgstdvdreadsrc.so
-[PROVIDES] libgstefence.so libgsteffectv.so libgstequalizer.so libgstesd.so
-[PROVIDES] libgstfestival.so libgstffmpegcolorspace.so libgstfilter.so
-[PROVIDES] libgstflac.so libgstflxdec.so libgstgamma.so libgstgconf-0.8.so
-[PROVIDES] libgstgconfelements.so libgstgdkpixbuf.so libgstglimagesink.so
-[PROVIDES] libgstgnomevfs.so libgstgoom.so libgstgsm.so
-[PROVIDES] libgsthermescolorspace.so libgstidct.so libgstinterfaces-0.8.so
-[PROVIDES] libgstinterleave.so libgstjack.so libgstjpeg.so
-[PROVIDES] libgstladspa.so libgstlame.so libgstlevel.so libgstlibfame.so
-[PROVIDES] libgstmad.so libgstmatroska.so libgstmedia-info-0.8.so
-[PROVIDES] libgstmedian.so libgstmikmod.so libgstmixmatrix.so
-[PROVIDES] libgstmng.so libgstmodplug.so libgstmonoscope.so
-[PROVIDES] libgstmp1videoparse.so libgstmpeg1systemencode.so
-[PROVIDES] libgstmpeg2enc.so libgstmpeg2subt.so libgstmpegaudio.so
-[PROVIDES] libgstmpegaudioparse.so libgstmpegstream.so libgstmplex.so
-[PROVIDES] libgstmulaw.so libgstmultifilesink.so libgstmultipart.so
-[PROVIDES] libgstnassink.so libgstnavigationtest.so libgstogg.so
-[PROVIDES] libgstossaudio.so libgstoverlay.so libgstpassthrough.so
-[PROVIDES] libgstplay-0.8.so libgstplaybin.so libgstplayondemand.so
-[PROVIDES] libgstpng.so libgstpuzzle.so libgstqcam.so libgstqtdemux.so
-[PROVIDES] libgstresample.so libgstrfbsrc.so libgstriff.so libgstrmdemux.so
-[PROVIDES] libgstrtjpeg.so libgstrtp.so libgstsdlvideosink.so
-[PROVIDES] libgstshout2.so libgstsilence.so libgstsinesrc.so
-[PROVIDES] libgstsmooth.so libgstsmoothwave.so libgstsmpte.so
-[PROVIDES] libgstsnapshot.so libgstsndfile.so libgstspectrum.so
-[PROVIDES] libgstspeed.so libgstspeex.so libgststereo.so libgstsubparse.so
-[PROVIDES] libgstswitch.so libgstsynaesthesia.so libgsttagedit.so
-[PROVIDES] libgsttcp.so libgsttextoverlay.so libgsttimeoverlay.so
+[PROVIDES] libgstapetag.so libgstarts.so libgstartsdsink.so
+[PROVIDES] libgstasf.so libgstaudio.so libgstaudioconvert.so
+[PROVIDES] libgstaudiofile.so libgstaudiofilter.so libgstaudiorate.so
+[PROVIDES] libgstaudioscale.so libgstauparse.so libgstautodetect.so
+[PROVIDES] libgstavi.so libgstcacasink.so libgstcdaudio.so
+[PROVIDES] libgstcdparanoia.so libgstcdplayer.so libgstcdxaparse.so
+[PROVIDES] libgstchart.so libgstcolorspace.so libgstcutter.so
+[PROVIDES] libgstdebug.so libgstdecodebin.so libgstdeinterlace.so
+[PROVIDES] libgstdirectfbvideosink.so libgstdvdec.so libgstdvdlpcmdec.so
+[PROVIDES] libgstdvdnavsrc.so libgstdvdreadsrc.so libgstefence.so
+[PROVIDES] libgsteffectv.so libgstequalizer.so libgstesd.so libgstfaac.so
+[PROVIDES] libgstfaad.so libgstfestival.so libgstffmpegcolorspace.so
+[PROVIDES] libgstfilter.so libgstflac.so libgstflxdec.so libgstgamma.so
+[PROVIDES] libgstgconf-0.8.so libgstgconfelements.so libgstgdkpixbuf.so
+[PROVIDES] libgstglimagesink.so libgstgnomevfs.so libgstgoom.so
+[PROVIDES] libgstgsm.so libgsthermescolorspace.so libgstidct.so
+[PROVIDES] libgstinterfaces-0.8.so libgstinterleave.so
+[PROVIDES] libgstjack.so libgstjpeg.so libgstladspa.so
+[PROVIDES] libgstlame.so libgstlevel.so libgstlibfame.so libgstmad.so
+[PROVIDES] libgstmatroska.so libgstmedia-info-0.8.so libgstmedian.so
+[PROVIDES] libgstmikmod.so libgstmixmatrix.so libgstmng.so
+[PROVIDES] libgstmodplug.so libgstmonoscope.so libgstmp1videoparse.so
+[PROVIDES] libgstmpeg1systemencode.so libgstmpeg2enc.so libgstmpeg2subt.so
+[PROVIDES] libgstmpegaudio.so libgstmpegaudioparse.so libgstmpegstream.so
+[PROVIDES] libgstmplex.so libgstmulaw.so libgstmultifilesink.so
+[PROVIDES] libgstmultipart.so libgstnassink.so libgstnavigationtest.so
+[PROVIDES] libgstogg.so libgstossaudio.so libgstoverlay.so
+[PROVIDES] libgstpassthrough.so libgstplay-0.8.so libgstplaybin.so
+[PROVIDES] libgstplayondemand.so libgstpng.so libgstpuzzle.so
+[PROVIDES] libgstqcam.so libgstqtdemux.so libgstresample.so libgstrfbsrc.so
+[PROVIDES] libgstriff.so libgstrmdemux.so libgstrtjpeg.so libgstrtp.so
+[PROVIDES] libgstsdlvideosink.so libgstshout2.so libgstsilence.so
+[PROVIDES] libgstsinesrc.so libgstsmooth.so libgstsmoothwave.so
+[PROVIDES] libgstsmpte.so libgstsnapshot.so libgstsndfile.so
+[PROVIDES] libgstspectrum.so libgstspeed.so libgstspeex.so
+[PROVIDES] libgststereo.so libgstsubparse.so libgstswitch.so
+[PROVIDES] libgstsynaesthesia.so libgsttagedit.so libgsttcp.so
+[PROVIDES] libgsttextoverlay.so libgsttheora.so libgsttimeoverlay.so
 [PROVIDES] libgsttrm.so libgsttta.so libgsttypefindfunctions.so
 [PROVIDES] libgstudp.so libgstvbidec.so libgstvcdsrc.so libgstvideo.so
 [PROVIDES] libgstvideo4linux.so libgstvideo4linux2.so libgstvideobalance.so
@@ -101,4 +106,5 @@
 [PROVIDES] libgstvolenv.so libgstvolume.so libgstvorbis.so libgstwavenc.so
 [PROVIDES] libgstwavparse.so libgstximagesink.so libgstxvid.so
 [PROVIDES] libgstxvimagesink.so libgstxwindowlistener.so libgsty4menc.so
+[PROVIDES] libpolypaudio.so
 

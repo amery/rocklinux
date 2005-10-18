@@ -20,43 +20,51 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1126961377 Sat Sep 17 14:49:37 2005 (5)
-[TIMESTAMP] 1127216517 Tue Sep 20 13:41:57 2005 (9)
+[TIMESTAMP] 1129205311 Thu Oct 13 14:08:31 2005 (5)
+[TIMESTAMP] 1129451441 Sun Oct 16 10:30:41 2005 (9)
+[TIMESTAMP] 1129554004 Mon Oct 17 15:00:04 2005 (5)
+[TIMESTAMP] 1129554903 Mon Oct 17 15:15:03 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-vlc.log 9-vlc.log
 
-[BUILDTIME] 39921 (5)
-[BUILDTIME] 40532 (9)
-[SIZE] 7.53 MB, 264 files
+[BUILDTIME] 43377 (5)
+[BUILDTIME] 43891 (9)
+[BUILDTIME] 43964 (5)
+[BUILDTIME] 43914 (9)
+[SIZE] 9.13 MB, 288 files
 
-[DEP] 00-dirtree a52dec:dev atk bash2 binutils bison bzip2 coreutils
-[DEP] diffutils ffmpeg ffmpeg:dev findutils freetype freetype:dev fribidi
-[DEP] fribidi:dev gawk gcc34 gcc34:dev gettext glib glibc23 glibc23:dev
-[DEP] gnome-libs14 gnome14-dirtree gnome2-dirtree grep gtk+ lame libcdio
-[DEP] libcdio:dev libdvbpsi3 libdvbpsi3:dev libdvdnav libdvdnav:dev
-[DEP] libdvdread libdvdread:dev libebml libebml:dev libjpeg libmatroska
-[DEP] libmatroska:dev libmpeg2:dev libpng libpng:dev libsdl libsdl:dev
-[DEP] libtiff libxml2 libxml2:dev linux26-header:dev mad mad:dev make
-[DEP] mktemp mplayer:dev net-tools ogg-vorbis ogg-vorbis:dev pango
-[DEP] pkgconfig sed speex:dev sysfiles sysfsutils sysfsutils:dev tar
-[DEP] util-linux wxwidgets wxwidgets:dev xorg xorg:dev zlib:dev
+[DEP] 00-dirtree a52dec:dev alsa alsa:dev atk bash2 binutils bison
+[DEP] bzip2 coreutils diffutils ffmpeg ffmpeg:dev findutils freetype
+[DEP] freetype:dev fribidi fribidi:dev gawk gcc34 gcc34:dev gettext glib
+[DEP] glibc23 glibc23:dev gnome2-dirtree gnutls gnutls:dev grep gtk+
+[DEP] lame libdvbpsi libdvbpsi3 libdvbpsi3:dev libdvbpsi:dev libdvdnav
+[DEP] libdvdnav:dev libdvdread libdvdread:dev libebml libebml:dev
+[DEP] libgcrypt libgcrypt:dev libgpg-error libgpg-error:dev libjpeg
+[DEP] libmatroska libmatroska:dev libmpeg2:dev libpng libpng:dev libsdl
+[DEP] libsdl:dev libtiff libxml2 libxml2:dev linux26-header:dev mad
+[DEP] mad:dev make mktemp modplug-xmms modplug-xmms:dev mplayer:dev
+[DEP] net-tools ogg-vorbis ogg-vorbis:dev pango patch samba samba:dev sed
+[DEP] speex speex:dev sysfiles sysfsutils sysfsutils:dev tar util-linux
+[DEP] wxwidgets wxwidgets:dev x264:dev xorg xorg:dev zlib:dev
 
-[PROVIDES] liba52_plugin.so liba52sys_plugin.so liba52tofloat32_plugin.so
-[PROVIDES] liba52tospdif_plugin.so libaac_plugin.so
-[PROVIDES] libaccess_directory_plugin.so libaccess_file_plugin.so
-[PROVIDES] libaccess_ftp_plugin.so libaccess_http_plugin.so
-[PROVIDES] libaccess_mms_plugin.so libaccess_output_dummy_plugin.so
-[PROVIDES] libaccess_output_file_plugin.so libaccess_output_http_plugin.so
-[PROVIDES] libaccess_output_udp_plugin.so libaccess_tcp_plugin.so
+[PROVIDES] liba52_plugin.so liba52sys_plugin.so
+[PROVIDES] liba52tofloat32_plugin.so liba52tospdif_plugin.so
+[PROVIDES] libaccess_directory_plugin.so libaccess_fake_plugin.so
+[PROVIDES] libaccess_file_plugin.so libaccess_filter_record_plugin.so
+[PROVIDES] libaccess_filter_timeshift_plugin.so libaccess_ftp_plugin.so
+[PROVIDES] libaccess_http_plugin.so libaccess_mms_plugin.so
+[PROVIDES] libaccess_output_dummy_plugin.so libaccess_output_file_plugin.so
+[PROVIDES] libaccess_output_http_plugin.so libaccess_output_udp_plugin.so
+[PROVIDES] libaccess_smb_plugin.so libaccess_tcp_plugin.so
 [PROVIDES] libaccess_udp_plugin.so libadjust_plugin.so
-[PROVIDES] libadpcm_plugin.so libaiff_plugin.so libaout_file_plugin.so
-[PROVIDES] libaout_sdl_plugin.so libaraw_plugin.so libasf_plugin.so
-[PROVIDES] libau_plugin.so libaudio_format_plugin.so libavi_plugin.so
-[PROVIDES] libbandlimited_resampler_plugin.so libblend_plugin.so
-[PROVIDES] libcdda_plugin.so libcddax_plugin.so libcinepak_plugin.so
+[PROVIDES] libadpcm_plugin.so libaiff_plugin.so libalsa_plugin.so
+[PROVIDES] libaout_file_plugin.so libaout_sdl_plugin.so libaraw_plugin.so
+[PROVIDES] libasf_plugin.so libau_plugin.so libaudio_format_plugin.so
+[PROVIDES] libavi_plugin.so libbandlimited_resampler_plugin.so
+[PROVIDES] libblend_plugin.so libcdda_plugin.so libcinepak_plugin.so
 [PROVIDES] libclone_plugin.so libcmml_plugin.so libcrop_plugin.so
 [PROVIDES] libcvdsub_plugin.so libdeinterlace_plugin.so
 [PROVIDES] libdemuxdump_plugin.so libdistort_plugin.so
@@ -64,54 +72,63 @@
 [PROVIDES] libdummy_plugin.so libdvbsub_plugin.so libdvdnav_plugin.so
 [PROVIDES] libdvdread_plugin.so libequalizer_plugin.so libexport_plugin.so
 [PROVIDES] libfb_plugin.so libffmpeg.a libfixed32tofloat32_plugin.so
-[PROVIDES] libfixed32tos16_plugin.so libfloat32_mixer_plugin.so
-[PROVIDES] libfloat32tos16_plugin.so libfloat32tos8_plugin.so
-[PROVIDES] libfloat32tou16_plugin.so libfloat32tou8_plugin.so
-[PROVIDES] libfreetype_plugin.so libgestures_plugin.so libglx_plugin.so
+[PROVIDES] libfixed32tos16_plugin.so libflac_plugin.so libflacdec_plugin.so
+[PROVIDES] libfloat32_mixer_plugin.so libfloat32tos16_plugin.so
+[PROVIDES] libfloat32tos8_plugin.so libfloat32tou16_plugin.so
+[PROVIDES] libfloat32tou8_plugin.so libfreetype_plugin.so
+[PROVIDES] libgestures_plugin.so libglx_plugin.so libgnutls_plugin.so
 [PROVIDES] libh264_plugin.so libheadphone_channel_mixer_plugin.so
 [PROVIDES] libhotkeys_plugin.so libhttp_plugin.so libi420_rgb_mmx.a
 [PROVIDES] libi420_rgb_plugin.so libi420_ymga_mmx.a libi420_ymga_plugin.so
 [PROVIDES] libi420_yuy2_mmx.a libi420_yuy2_plugin.so libi422_yuy2_mmx.a
-[PROVIDES] libi422_yuy2_plugin.so libid3_plugin.so libid3tag_plugin.so
+[PROVIDES] libi422_yuy2_plugin.so libid3tag_plugin.so libimage_plugin.so
 [PROVIDES] libinvert_plugin.so libipv4_plugin.so libipv6_plugin.so
 [PROVIDES] liblibmpeg2_plugin.so liblinear_resampler_plugin.so
 [PROVIDES] liblogger_plugin.so liblogo_plugin.so liblpcm_plugin.so
 [PROVIDES] libm3u_plugin.so libm4a_plugin.so libm4v_plugin.so
 [PROVIDES] libmarq_plugin.so libmemcpy3dn.a libmemcpy_plugin.so
-[PROVIDES] libmemcpymmx.a libmemcpymmxext.a libmjpeg_plugin.so libmkv.a
-[PROVIDES] libmotionblur_plugin.so libmp4_plugin.so libmpeg_audio_plugin.so
-[PROVIDES] libmpga_plugin.so libmpgatofixed32_plugin.so libmpgv_plugin.so
-[PROVIDES] libmux_asf_plugin.so libmux_avi_plugin.so libmux_dummy_plugin.so
-[PROVIDES] libmux_mp4_plugin.so libmux_mpjpeg_plugin.so
-[PROVIDES] libmux_ogg_plugin.so libmux_ps_plugin.so libmux_ts_plugin.so
-[PROVIDES] libmux_wav_plugin.so libnetsync_plugin.so libnormvol_plugin.so
-[PROVIDES] libnsv_plugin.so libogg_plugin.so libopengl_plugin.so
-[PROVIDES] liboss_plugin.so libpacketizer_copy_plugin.so
-[PROVIDES] libpacketizer_h264_plugin.so libpacketizer_mpeg4audio_plugin.so
+[PROVIDES] libmemcpymmx.a libmemcpymmxext.a libmjpeg_plugin.so
+[PROVIDES] libmkv.a libmod_plugin.so libmosaic_plugin.so
+[PROVIDES] libmotionblur_plugin.so libmotiondetect_plugin.so
+[PROVIDES] libmp4_plugin.so libmpeg_audio_plugin.so libmpga_plugin.so
+[PROVIDES] libmpgatofixed32_plugin.so libmpgv_plugin.so
+[PROVIDES] libmux_asf_plugin.so libmux_avi_plugin.so
+[PROVIDES] libmux_dummy_plugin.so libmux_mp4_plugin.so
+[PROVIDES] libmux_mpjpeg_plugin.so libmux_ogg_plugin.so libmux_ps_plugin.so
+[PROVIDES] libmux_ts.a libmux_wav_plugin.so libnetsync_plugin.so
+[PROVIDES] libnormvol_plugin.so libnsv_plugin.so libnuv_plugin.so
+[PROVIDES] libogg_plugin.so libopengl_plugin.so liboss_plugin.so
+[PROVIDES] libpacketizer_copy_plugin.so libpacketizer_h264_plugin.so
+[PROVIDES] libpacketizer_mpeg4audio_plugin.so
 [PROVIDES] libpacketizer_mpeg4video_plugin.so
 [PROVIDES] libpacketizer_mpegvideo_plugin.so libplaylist_plugin.so
-[PROVIDES] libps_plugin.so libpva_plugin.so librawdv_plugin.so
-[PROVIDES] librawvideo_plugin.so librc_plugin.so libreal_plugin.so
-[PROVIDES] libs16tofixed32_plugin.so libs16tofloat32_plugin.so
-[PROVIDES] libs16tofloat32swab_plugin.so libs8tofloat32_plugin.so
-[PROVIDES] libsap_plugin.so libscale_plugin.so libscreen_plugin.so
-[PROVIDES] libscreensaver_plugin.so libsgimb_plugin.so
-[PROVIDES] libshowintf_plugin.so libsimple_channel_mixer_plugin.so
-[PROVIDES] libskins2_plugin.so libspdif_mixer_plugin.so
-[PROVIDES] libspudec_plugin.so libstream_out_description_plugin.so
+[PROVIDES] libpng_plugin.so libps_plugin.so libpva_plugin.so
+[PROVIDES] librawdv_plugin.so librawvideo_plugin.so librc_plugin.so
+[PROVIDES] libreal_plugin.so libs16tofixed32_plugin.so
+[PROVIDES] libs16tofloat32_plugin.so libs16tofloat32swab_plugin.so
+[PROVIDES] libs8tofloat32_plugin.so libsap_plugin.so libscale_plugin.so
+[PROVIDES] libscreen_plugin.so libscreensaver_plugin.so
+[PROVIDES] libsgimb_plugin.so libshout_plugin.so libshowintf_plugin.so
+[PROVIDES] libsimple_channel_mixer_plugin.so libskins2_plugin.so
+[PROVIDES] libspdif_mixer_plugin.so libspeex_plugin.so
+[PROVIDES] libspudec_plugin.so libstream_out_bridge_plugin.so
+[PROVIDES] libstream_out_description_plugin.so
 [PROVIDES] libstream_out_display_plugin.so
 [PROVIDES] libstream_out_dummy_plugin.so libstream_out_duplicate_plugin.so
 [PROVIDES] libstream_out_es_plugin.so libstream_out_gather_plugin.so
+[PROVIDES] libstream_out_mosaic_bridge_plugin.so
 [PROVIDES] libstream_out_rtp_plugin.so libstream_out_standard_plugin.so
-[PROVIDES] libstream_out_transcode_plugin.so libsubsdec_plugin.so
-[PROVIDES] libsubtitle_plugin.so libsvcdsub_plugin.so
+[PROVIDES] libstream_out_switcher.a libstream_out_transcode_plugin.so
+[PROVIDES] libsubsdec_plugin.so libsubtitle_plugin.so libsvcdsub_plugin.so
 [PROVIDES] libtelnet_plugin.so libtime_plugin.so libtransform_plugin.so
 [PROVIDES] libtrivial_channel_mixer_plugin.so libtrivial_mixer_plugin.so
-[PROVIDES] libtrivial_resampler_plugin.so libts_plugin.so
+[PROVIDES] libtrivial_resampler_plugin.so libts_plugin.so libty_plugin.so
 [PROVIDES] libu8tofixed32_plugin.so libu8tofloat32_plugin.so
-[PROVIDES] libugly_resampler_plugin.so libvcd_plugin.so libvisual_plugin.so
-[PROVIDES] libvlc.a libvobsub_plugin.so libvod_rtsp_plugin.so
-[PROVIDES] libvorbis_plugin.so libvout_sdl_plugin.so libwall_plugin.so
-[PROVIDES] libwav_plugin.so libwxwindows_plugin.so libx11_plugin.so
-[PROVIDES] libxvideo_plugin.so svlc vlc vlc-config wxvlc
+[PROVIDES] libugly_resampler_plugin.so libvcd_plugin.so
+[PROVIDES] libvisual_plugin.so libvlc.a libvobsub_plugin.so
+[PROVIDES] libvoc_plugin.so libvod_rtsp_plugin.so libvorbis_plugin.so
+[PROVIDES] libvout_sdl_plugin.so libwall_plugin.so libwav_plugin.so
+[PROVIDES] libwxwindows_plugin.so libx11_plugin.so libxa_plugin.so
+[PROVIDES] libxml_plugin.so libxtag_plugin.so libxvideo_plugin.so svlc
+[PROVIDES] vlc vlc-config wxvlc
 

@@ -20,17 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1126832093 Fri Sep 16 02:54:53 2005 (5)
-[TIMESTAMP] 1127060343 Sun Sep 18 18:19:03 2005 (9)
+[TIMESTAMP] 1129078297 Wed Oct 12 02:51:37 2005 (5)
+[TIMESTAMP] 1129304274 Fri Oct 14 17:37:54 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-mysql.log 9-mysql.log
 
-[BUILDTIME] 117780 (5)
-[BUILDTIME] 120132 (9)
-[SIZE] 44.32 MB, 1151 files
+[BUILDTIME] 118333 (5)
+[BUILDTIME] 120506 (9)
+[SIZE] 45.02 MB, 1173 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
 [DEP] diffutils findutils gawk gcc34 gcc34:dev glib12 glibc23 glibc23:dev
@@ -38,13 +38,12 @@
 [DEP] ncurses:dev net-tools openssl openssl:dev orbit10 patch perl5 procps
 [DEP] sed sysfiles tar util-linux zlib:dev
 
-[PROVIDES] comp_err isamchk isamlog libdbug.a libheap.a libmerge.a
-[PROVIDES] libmyisam.a libmyisammrg.a libmysqlclient.a libmysqlclient.so
-[PROVIDES] libmysqld.a libmystrings.a libmysys.a libndbclient.a
-[PROVIDES] libndbclient.so libnisam.a libvio.a make_win_binary_distribution
-[PROVIDES] make_win_src_distribution msql2mysql my_print_defaults
-[PROVIDES] myisam_ftdump myisamchk myisamlog myisampack mysql
-[PROVIDES] mysql_client_test mysql_client_test_embedded mysql_config
+[PROVIDES] comp_err isamchk isamlog libdbug.a libheap.a
+[PROVIDES] libmerge.a libmyisam.a libmyisammrg.a libmysqlclient.a
+[PROVIDES] libmysqlclient.so libmysqld.a libmystrings.a libmysys.a
+[PROVIDES] libndbclient.a libndbclient.so libnisam.a libvio.a msql2mysql
+[PROVIDES] my_print_defaults myisam_ftdump myisamchk myisamlog myisampack
+[PROVIDES] mysql mysql_client_test mysql_client_test_embedded mysql_config
 [PROVIDES] mysql_convert_table_format mysql_create_system_tables
 [PROVIDES] mysql_explain_log mysql_find_rows mysql_fix_extensions
 [PROVIDES] mysql_fix_privilege_tables mysql_install_db
@@ -53,8 +52,8 @@
 [PROVIDES] mysqladmin mysqlbinlog mysqlbug mysqlcheck mysqld_multi
 [PROVIDES] mysqld_safe mysqldump mysqldumpslow mysqlhotcopy mysqlimport
 [PROVIDES] mysqlmanager-pwgen mysqlmanagerc mysqlshow mysqltest
-[PROVIDES] mysqltest_embedded ndb_delete_all ndb_desc ndb_drop_index
-[PROVIDES] ndb_drop_table ndb_mgm ndb_restore ndb_select_all
+[PROVIDES] mysqltest_embedded ndb_config ndb_delete_all ndb_desc
+[PROVIDES] ndb_drop_index ndb_drop_table ndb_mgm ndb_restore ndb_select_all
 [PROVIDES] ndb_select_count ndb_show_tables ndb_test_platform ndb_waiter
 [PROVIDES] pack_isam perror replace resolve_stack_dump resolveip
 

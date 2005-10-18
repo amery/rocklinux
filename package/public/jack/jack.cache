@@ -20,22 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1126836152 Fri Sep 16 04:02:32 2005 (5)
-[TIMESTAMP] 1127065677 Sun Sep 18 19:47:57 2005 (9)
+[TIMESTAMP] 1129082296 Wed Oct 12 03:58:16 2005 (5)
+[TIMESTAMP] 1129309153 Fri Oct 14 18:59:13 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-jack.log 9-jack.log
 
-[BUILDTIME] 3782 (5)
-[BUILDTIME] 4489 (9)
-[SIZE] 0.63 MB, 61 files
+[BUILDTIME] 3785 (5)
+[BUILDTIME] 4581 (9)
+[SIZE] 0.64 MB, 62 files
 
 [DEP] 00-dirtree alsa alsa:dev bash2 binutils bzip2 coreutils diffutils
 [DEP] doxygen file findutils gawk gcc34 gcc34:dev ghostscript glibc23
 [DEP] glibc23:dev grep linux26-header:dev make mktemp ncurses:dev net-tools
-[DEP] patch perl5 pkgconfig readline sed sysfiles tar tetex util-linux
+[DEP] patch perl5 pkgconfig portaudio portaudio:dev readline sed sysfiles
+[DEP] tar tetex util-linux
 
-[PROVIDES] jack_alsa.so jack_dummy.so jack_oss.so jackd libjack.so
+[PROVIDES] jack_alsa.so jack_dummy.so jack_oss.so jack_portaudio.so
+[PROVIDES] jackd libjack.so
 

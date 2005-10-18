@@ -20,21 +20,38 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1126843579 Fri Sep 16 06:06:19 2005 (5)
-[TIMESTAMP] 1127075676 Sun Sep 18 22:34:36 2005 (9)
+[TIMESTAMP] 1129089678 Wed Oct 12 06:01:18 2005 (5) ERROR
+[TIMESTAMP] 1129318605 Fri Oct 14 21:36:45 2005 (9) ERROR
+[TIMESTAMP] 1129542747 Mon Oct 17 11:52:27 2005 (5) ERROR
+[TIMESTAMP] 1129544388 Mon Oct 17 12:19:48 2005 (9) ERROR
+[TIMESTAMP] 1129551575 Mon Oct 17 14:19:35 2005 (5) ERROR
+[TIMESTAMP] 1129553142 Mon Oct 17 14:45:42 2005 (9) ERROR
+[TIMESTAMP] 1129632499 Tue Oct 18 12:48:19 2005 (5) ERROR
+[TIMESTAMP] 1129634261 Tue Oct 18 13:17:41 2005 (9) ERROR
+[TIMESTAMP] 1129641703 Tue Oct 18 15:21:43 2005 (5)
+[TIMESTAMP] 1129641983 Tue Oct 18 15:26:23 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-nxproxy.log 9-nxproxy.log
 
-[BUILDTIME] 1243 (5)
-[BUILDTIME] 1777 (9)
-[SIZE] 0.02 MB, 11 files
+[BUILDTIME] 1175 (5) ERROR
+[BUILDTIME] 1685 (9) ERROR
+[BUILDTIME] 1711 (5) ERROR
+[BUILDTIME] 1689 (9) ERROR
+[BUILDTIME] 1692 (5) ERROR
+[BUILDTIME] 1695 (9) ERROR
+[BUILDTIME] 1728 (5) ERROR
+[BUILDTIME] 1696 (9) ERROR
+[BUILDTIME] 1748 (5)
+[BUILDTIME] 1754 (9)
+[SIZE] 0.02 MB, 16 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] net-tools nxcomp nxcomp:dev patch sed sysfiles tar util-linux xorg
+[DEP] gcc34:dev glibc23 glibc23:dev grep libjpeg libpng linux26-header:dev
+[DEP] make mktemp net-tools nx-X11 nxcomp nxcomp:dev sed sysfiles tar
+[DEP] util-linux xorg
 
 [PROVIDES] nxproxy
 

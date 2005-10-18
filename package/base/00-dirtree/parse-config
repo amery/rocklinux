@@ -20,7 +20,6 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-
 # never add the .../share/locale/*/ directories to the package file list
 # every package creates them if they are not present and its absolutely
 # random which package is built first and so gets the directory..
@@ -28,4 +27,7 @@ var_append flistdel "|" '.*/share/locale/[a-z][a-z](_[^/]*|)(/[A-Z_]*|)'
 
 # the same thing for localized manual pages
 var_append flistdel "|" '.*/share/man/[a-z][a-z](_[^/]*|)(/man.|)'
+
+# and (localized) HTML documentation directories
+var_append flistdel "|" '.*/share/doc/HTML(/[a-z][a-z](_[^/]*|)|)'
 

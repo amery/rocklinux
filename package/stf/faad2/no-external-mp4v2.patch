@@ -1,0 +1,11 @@
+--- faad2/configure.in	2005-10-18 16:10:25.000000000 +0200
++++ faad2/configure.in	2005-10-18 16:10:31.000000000 +0200
+@@ -67,7 +67,7 @@
+         [HAVE_FPOS_T_POS])
+ 
+ 
+-external_mp4v2=yes
++external_mp4v2=no
+ AC_CHECK_LIB(mp4v2, MP4Create, , external_mp4v2=no, -lstdc++)
+ AC_CHECK_LIB(mp4v2, MP4MetadataDelete, , external_mp4v2=no, -lstdc++)
+ AC_CHECK_HEADER(mp4.h, , external_mp4v2=no)

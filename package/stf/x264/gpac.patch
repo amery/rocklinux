@@ -1,0 +1,11 @@
+--- ./configure.orig	2005-07-20 17:39:44.000000000 +0200
++++ ./configure	2005-09-13 00:58:55.000000000 +0200
+@@ -158,7 +158,7 @@
+             ;;
+         --enable-mp4-output)
+             CFLAGS="$CFLAGS -DMP4_OUTPUT"
+-            LDFLAGS="$LDFLAGS -lm4systems_static"
++            LDFLAGS="$LDFLAGS -lm4systems"
+             if [ $SYS = CYGWIN -o $SYS = MINGW ]; then
+                 LDFLAGS="$LDFLAGS -lwinmm"
+             fi

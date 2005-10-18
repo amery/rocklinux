@@ -162,8 +162,11 @@ logdir="${logdir:-build/$ROCKCFG_ID/var/adm/logs}"
 pkgdir="${logdir%/*}/packages"
 
 if [ "$newdelete" = 1 ]; then
-	while read xpkg cksum1
+	while read xpkg
 	do
+		cksum1="$( grep '^ROCK Linux Package Source Checksum: ' \
+			build/$ROCKCFG_ID/var/adm/packages/$xpkg | cut -f6 -d' '; )"
+
 		if [ ! -f package/*/$xpkg/$xpkg.desc ]; then
 		    pkg="`grep "=$xpkg " config/$config/packages \
 			| awk '{ print $5; }'`"
@@ -171,20 +174,18 @@ if [ "$newdelete" = 1 ]; then
 		else
 		    pkg=$xpkg
 		fi
-		    
+
 		cksum2=$( md5sum package/*/$pkg/* 2> /dev/null | \
 			  grep -v '\.cache$' | md5sum | cut -f1 -d' ' )
 		if [ "$cksum1" != "$cksum2" ]; then
 			echo "Scheduling package '$xpkg' for rebuild ..."
 			if [ "$dryrun" = 0 ]; then
-			    mine -rf -R build/$ROCKCFG_ID $xpkg
+			    mine -rfs -R build/$ROCKCFG_ID $xpkg
 			    rm -f build/$ROCKCFG_ID/var/adm/*/?-$xpkg.*
 			fi
 		fi
 	done < <(
-		grep -R '^ROCK Linux Package Source Checksum: ' \
-		     build/$ROCKCFG_ID/var/adm/packages |
-		tr '/:' '  ' | cut -f6,13 -d' '
+		cd build/$ROCKCFG_ID/var/adm/packages && ls | grep -v ':'
 	)
 	exit 0
 fi

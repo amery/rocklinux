@@ -1,0 +1,22 @@
+--- ./polyp/Makefile.am.orig	2005-10-18 14:38:11.000000000 +0200
++++ ./polyp/Makefile.am	2005-10-18 14:38:15.000000000 +0200
+@@ -731,7 +731,7 @@
+ install-exec-hook:
+ 	chown root $(DESTDIR)$(bindir)/polypaudio
+ 	chmod u+s $(DESTDIR)$(bindir)/polypaudio
+-	ln -s pacat $(DESTDIR)$(bindir)/parec
++	ln -fs pacat $(DESTDIR)$(bindir)/parec
+ 
+ $(SYMDEF_FILES): module-defs.h.m4
+ 	$(M4) -Dfname="$@" $< > $@
+--- ./polyp/Makefile.in.orig	2005-10-18 14:38:18.000000000 +0200
++++ ./polyp/Makefile.in	2005-10-18 14:38:23.000000000 +0200
+@@ -3960,7 +3960,7 @@
+ install-exec-hook:
+ 	chown root $(DESTDIR)$(bindir)/polypaudio
+ 	chmod u+s $(DESTDIR)$(bindir)/polypaudio
+-	ln -s pacat $(DESTDIR)$(bindir)/parec
++	ln -fs pacat $(DESTDIR)$(bindir)/parec
+ 
+ $(SYMDEF_FILES): module-defs.h.m4
+ 	$(M4) -Dfname="$@" $< > $@

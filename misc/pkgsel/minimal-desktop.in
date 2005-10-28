@@ -129,6 +129,7 @@ pkgfilter sed '
 / kde-i18n-fr /			{ s/^X /O / ; p; d; };
 / kde-i18n-es /			{ s/^X /O / ; p; d; };
 / kde-i18n-it /			{ s/^X /O / ; p; d; };
+/ qt /				{ p; d; };
 / kde /				{ p; d; };
 / mozilla /			{ p; d; };
 / bitstream-vera-fonts /	{ p; d; };

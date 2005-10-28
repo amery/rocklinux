@@ -42,13 +42,8 @@
 		done
 	fi
 
-	# echo `grep -A 20 'Processor family' \
-	#	/usr/src/linux/arch/i386/config.in | expand | \
-	#	cut -c 57- | cut -f1 -d' ' | tr -d '"'`
-	#
-	for x in M386 M486 M586 M586TSC M586MMX M686 MPENTIUMIII MPENTIUM4 \
-	         MK6 MK7 MK8 MELAN MCRUSOE MWINCHIPC6 MWINCHIP2 MWINCHIP3D \
-	         MCYRIXIII MVIAC3_2 MPSC GENERIC_CPU
+	for x in M386 M486 MCYRIXIII MVIAC3_2 M586 M586MMX M686 MPENTIUMII \
+	         MPENTIUMIII MPENTIUM4 MK6 MK7 MK8 MPSC GENERIC_CPU
 	do
 		if [ "$linux_arch" != "$x" ]
 		then echo "# CONFIG_$x is not set"

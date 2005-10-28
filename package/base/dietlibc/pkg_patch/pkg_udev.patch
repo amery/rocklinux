@@ -1,0 +1,30 @@
+--- ./udev_rules_parse.c	2005-10-16 10:58:04.000000000 +0200
++++ ./udev_rules_parse.c	2005-10-16 10:59:47.000000000 +0200
+@@ -205,7 +205,7 @@
+ static int add_rule_key(struct udev_rule *rule, struct key *key,
+ 			enum key_operation operation, const char *value)
+ {
+-	size_t val_len = strnlen(value, PATH_SIZE);
++	size_t val_len = strlen(value);
+ 
+ 	key->operation = operation;
+ 
+@@ -219,7 +219,7 @@
+ static int add_rule_key_pair(struct udev_rule *rule, struct key_pairs *pairs,
+ 			     enum key_operation operation, const char *key, const char *value)
+ {
+-	size_t key_len = strnlen(key, PATH_SIZE);
++	size_t key_len = strlen(key);
+ 
+ 	if (pairs->count >= PAIRS_MAX) {
+ 		err("skip, too many keys in a single rule");
+--- ./udevstart.c	2005-10-16 11:00:53.000000000 +0200
++++ ./udevstart.c	2005-10-16 11:01:05.000000000 +0200
+@@ -120,7 +120,6 @@
+ 	char path[PATH_SIZE];
+ 
+ 	/* clear and set environment for next event */
+-	clearenv();
+ 	setenv("ACTION", "add", 1);
+ 	setenv("DEVPATH", devpath, 1);
+ 	setenv("SUBSYSTEM", subsystem, 1);

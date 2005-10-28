@@ -485,7 +485,7 @@ int main(int argc, char** argv)
      ============================================\n\
 \n\
 The ROCK Linux live CD system boots up in two stages. You are now in\n\
-the first of this two stages and if everything goes right you will not\n\
+the first of these two stages and if everything goes right you will not\n\
 spend much time here. I will just try to load some drivers (if needed)\n\
 so the 2nd stage boot system can be loaded.\n");
 

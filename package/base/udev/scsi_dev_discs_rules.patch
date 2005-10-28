@@ -1,8 +1,12 @@
-diff -pruN udev-068/etc/udev/debian/devfs.rules udev-068-patch/etc/udev/debian/devfs.rules
---- udev-068/etc/udev/debian/devfs.rules	2005-08-18 19:04:49.000000000 +0200
-+++ udev-068-patch/etc/udev/debian/devfs.rules	2005-09-13 10:20:27.000000000 +0200
-@@ -24,8 +24,10 @@ BUS=="ide", KERNEL=="hd[a-z]*", \
- 				NAME="%c{1}", SYMLINK+="%k %c{2}"
+diff -pruN udev-068-orig/etc/udev/debian/devfs.rules udev-068/etc/udev/debian/devfs.rules
+--- udev-068-orig/etc/udev/debian/devfs.rules	2005-10-11 17:33:26.000000000 +0200
++++ udev-068/etc/udev/debian/devfs.rules	2005-10-11 17:33:42.000000000 +0200
+@@ -21,11 +21,13 @@ BUS=="ide", KERNEL=="hd[a-z]", SYSFS{rem
+ # IDE devices
+ BUS=="ide", KERNEL=="hd[a-z]*", \
+   PROGRAM="/etc/udev/scripts/ide-devfs.sh %k %b %n", \
+-				NAME="%c{1}", SYMLINK+="%k %c{2}"
++				NAME="%c{1}", SYMLINK+="%k %c{2} %c{3}"
  
  # SCSI devices
 -BUS=="scsi",		PROGRAM="/etc/udev/scripts/scsi-devfs.sh %k %b %n", \

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # --- ROCK-COPYRIGHT-NOTE-BEGIN ---
 # 
@@ -30,8 +30,12 @@ for filename in `find /var/log -type f ! -name '*.gz'` ; do
 		for num in `seq 3 1` ; do
 			[ -f "$filename-$num.gz" ] && mv "$filename-$num.gz" "$filename-$(( $num + 1 )).gz"
 		done
+		read mode uid gid < <( stat -c "%a %u %g" "$filename" )
 		mv "$filename" "$filename-1" ; fuser -s -k -HUP "$filename-1"
 		sleep 5 ; gzip "$filename-1"
+		touch "$filename"
+		chmod $mode "$filename"
+		chown $uid:$gid "$filename"
 	else
 		echo -e "$kilobytes\t$filename\t(don't rotate, less than 4 MB)"
 	fi

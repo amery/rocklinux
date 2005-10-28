@@ -20,8 +20,6 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-bool 'Include the kiss shell into the initrd' ROCKCFG_BOOTDISK_USEKISS 1
-
 pkgfilter sed '
 
 # Select some packages explicitely (base)
@@ -43,7 +41,7 @@ pkgfilter sed '
 / mdadm /       { p; d; };      / ntfsprogs /   { P; d; };
 / linux /	{ p; d; };	/ ddrescue /    { p; d; };
 / iproute2 /	{ p; d; };	/ wget /	{ p; d; };
-/ kiss /	{ p; d; };
+/ kiss /	{ p; d; };	/ udev /	{ p; d; };
 
 
 # Select some packages explicitely (architectures)
@@ -83,9 +81,9 @@ ROCKCFGSET_DIETLIBC_bzip2=1
 ROCKCFGSET_DIETLIBC_wget=1
 ROCKCFGSET_DIETLIBC_gawk=1
 ROCKCFGSET_DIETLIBC_iproute2=1
+ROCKCFGSET_DIETLIBC_udev=1
 ROCKCFGSET_DIETWANT_SYSENTER=0
 
-ROCKCFGSET_PKG_TERMCAP_USEIT=1
 ROCKCFGSET_PKG_GCC2_NO_CHILL=1
 ROCKCFGSET_PKG_GCC32_NO_JAVA=1
 ROCKCFGSET_PKG_GCC33_NO_JAVA=1

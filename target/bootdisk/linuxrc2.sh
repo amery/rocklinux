@@ -10,12 +10,12 @@ else
 	done
 fi
 grep -v "^rootfs " /proc/mounts > /etc/mtab
-mount -t sysfs none /sys
 freeramdisk /dev/rd/* 2> /dev/null
 
 mkdir -p /lib/modules/$( uname -r )
 echo -n >> /lib/modules/$( uname -r )/modules.dep
 
+udevd --daemon
 cd /dev ; rm -f fd
 ln -sf /proc/kcore      core
 ln -sf /proc/self/fd    fd
@@ -54,7 +54,7 @@ if [ -z "$ttydevs" ]; then
 	ttydevs="vc/1 vc/2 vc/3 vc/4 vc/5 vc/6"
 fi
 
-if [[ "$ttydevs" = tts/* ]] ; then
+if [[ "$ttydevs" = *tts/* ]] ; then
 	echo -n "Connection speed in Baud (default: 9600): " ; read baud
 	[ -z "$baud" ] && baud=9600
 else

@@ -189,9 +189,9 @@ This dialog allows you to modify your discs parition layout and to create filesy
 		# protect for the case no discs are present ...
 		if [ -e /dev/discs ] ; then
 		  for x in $( cd /dev/discs
-		            ls -l * | grep ' -> ' | cut -f2- -d/ ; )
+		            ls -l */disc | grep ' -> ' | cut -f4- -d/ ; )
 		  do
-			disk_add $x
+			disk_add ${x%/disc}
 		  done
 		  for x in $( cat /etc/lvmtab 2> /dev/null )
 		  do
@@ -210,9 +210,10 @@ This dialog allows you to modify your discs parition layout and to create filesy
 		$STONE packages
 		cat > /mnt/target/tmp/stone_postinst.sh << EOT
 #!/bin/sh
-mount -v -t devfs none /dev
+mount -v -t ramfs none /dev
 mount -v -t proc none /proc
 mount -v -t sysfs none /sys
+/sbin/udevstart
 . /etc/profile
 stone setup
 umount -v /sys

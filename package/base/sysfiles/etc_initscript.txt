@@ -30,7 +30,7 @@ export PATH
 # Do the dev filesystem magic
 #
 if [ -z "$devtype" ]; then
-	devtype=devfs
+	devtype=udev
 	if [ -f /etc/conf/devtype ]; then
 		. /etc/conf/devtype
 	fi

@@ -102,7 +102,7 @@ set_rtc() {
 
 main() {
     while
-	devtype=devfs
+	devtype=udev
 	if [ -f /etc/conf/devtype ]; then
 	    . /etc/conf/devtype
 	fi

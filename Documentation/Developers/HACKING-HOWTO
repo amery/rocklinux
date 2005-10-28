@@ -188,14 +188,14 @@ to  set up a graphical workstation including the most important tools.
 ----------------------
 
 There are some architecture specific repositories like 'alpha', 'powerpc',
-'spar', 'x86', ... They contain packages that are only useful on this one
+'sparc', 'x86', ... They contain packages that are only useful on this one
 architecture.
 
 1.3.4. package/<person>/
 ----------------------
 
 Other packages are grouped together into repositories named by the maintainer.
-Those are e.g. 'clifford', 'rene', 'esden', ... and many more.
+Those are e.g. 'clifford', 'esden', ... and many more.
 But functional grouping like kde and gnome repositories are also possible.
 
 1.4. misc/
@@ -207,7 +207,7 @@ Various stuff which doesn't fit elsewhere can be found here.
 ============
 
 A 'target' is a ROCK Linux based distribution. The 'normal ROCK Linux' is
-the 'generic' target, build with the default settings.
+the 'crystal' target, built with the default settings.
 
 Every target has it's own subdirectory in this tree.
 
@@ -259,7 +259,7 @@ The ./scripts/Download script is the tool for downloading the package sources.
 Calling the script without any parameters prints out the help message.
 
 You can download single files:
-	./scripts/Download download/base/linux24/linux-2.4.18.tar.bz2
+	./scripts/Download download/mirror/l/linux-2.4.18.tar.bz2
 
 All files for a single package:
 	./scripts/Download -package linux24
@@ -303,7 +303,7 @@ build.
 2.3.4. ./scripts/Build-Tools
 ----------------------------
 
-This script creates the 'build.xxxxxx.tools' directory (where 'xxxxxx' is the
+This script creates the 'build/xxxxxx/ROCK/tools' directory (where 'xxxxxx' is the
 config id) which contains various helper applications needed by Build-Pkg and
 other scripts.
 
@@ -363,7 +363,7 @@ the maximum number of packages to print (0=no limit) and the 2nd parameter is
 the root directory where the script can find the /var/adm/... information it
 needs. E.g.:
 
-     # ./scripts/Create-PkgQueue 3 build/1.7.0-DEV-intel-generic/root
+     # ./scripts/Create-PkgQueue 3 build/default-TRUNK-x86-generic/
      2 X --2------9 010.050 base strace 4.4 / development/tool 159
      2 X --2------9 010.052 base ltrace 0.3.10 / development/tool 85
      2 X --2-4----9 010.055 base perl5 5.6.1 / development/interpreter 125
@@ -390,7 +390,7 @@ E.g.: ./scripts/Create-Diff ../rock-src.orig . > mychanges.diff
 This script can be used by ROCK Linux developers to automatically create the
 download checksums in the .desc files in one or more package repositories.
 
-E.g.: ./scripts/Create-CkSumPatch extra2 ; patch -p1 < cksum.patch
+E.g.: ./scripts/Create-CkSumPatch glibc | patch -p1
 
 2.4.8. ./scripts/Create-DescPatch
 ---------------------------------
@@ -398,7 +398,7 @@ E.g.: ./scripts/Create-CkSumPatch extra2 ; patch -p1 < cksum.patch
 This script can be used by ROCK Linux developers to automatically adopt the
 format of the package .desc files.
 
-E.g.: ./scripts/Create-DescPatch -repository extra2
+E.g.: ./scripts/Create-DescPatch -repository base | patch -p1
 
 2.4.9. ./scripts/Create-PkgUpdPatch
 -----------------------------------
@@ -407,15 +407,12 @@ This script can be used by ROCK Linux developers to automatically create
 package update patches (after evaluating the output of the
 ./scripts/Check-PkgVersion script). E.g.:
 
-	./scripts/Create-PkgUpdPatch > update.patch << EOT
+	./scripts/Create-PkgUpdPatch | patch -p1 << EOT
 		automake-1.6.1, bin86-0.16.3, bison-1.35, curl-7.9.6,
 		diffutils-2.8.1, dump-0.4b28, ifhp-3.5.7, net-snmp-4.2.4,
 		ntp-4.1.1, pciutils-2.1.10, sendmail.8.12.3, silo-1.2.5,
 		tree-1.4b2, util-linux-2.11q, whois_4.5.25
 	EOT
-
-The resulting update.patch file should be checked manually before being
-applied with 'patch -p1 < update.patch'.
 
 2.4.10. ./scripts/Create-ErrList
 --------------------------------
@@ -474,7 +471,7 @@ Check-PkgVersion the next time.
 This script does a few very simple tests to auto-detect errors in the package
 *.desc and *.conf files.
 
-E.g.: ./scripts/Check-PkgFormat -repository extra1
+E.g.: ./scripts/Check-PkgFormat -repository base
 
 2.5.3. ./scripts/Check-System
 -----------------------------
@@ -527,7 +524,7 @@ menu.
 3.2.1. comment 'Description' ["Help"]
 -------------------------------------
 
-Add a comment to the config menu (and item without any function). E.g.:
+Add a comment to the config menu (an item without any function). E.g.:
 
 	comment '- Architecture, CPU and Optimisation' "
 	Select which CPU optimalization is right for your machine."
@@ -541,7 +538,7 @@ Add a comment to the config menu (and item without any function). E.g.:
 3.2.2. comment_id 'Description' 'ID' ["Help"]
 ---------------------------------------------
 
-Add a comment to the config menu (and item without any function). E.g.:
+Add a comment to the config menu (an item without any function). E.g.:
 
 	comment '- Architecture, CPU and Optimisation' COMMENT_ARCH_CPU_OPT "
 	Select which CPU optimalization is right for your machine."
@@ -669,8 +666,9 @@ ROCKCFG_EXPERT	If set to '0', config items between expert_begin and
 -------------------
 
 The ROCKCFGSET_* variables can be used to preset an option (e.g. in a target).
-If e.g. ROCKCFGSET_STRIP is set to 1, ROCKCFG_STRIP will have the value 1 and
-the user will not be able to change this setting.
+If e.g. ROCKCFGSET_STRIP is set to 1, ROCKCFG_STRIP will have the value 1
+when you start configuring this target. Note that these options can still
+be overwritten in scripts/Config, they are merely different default values.
 
 3.3.3. CFGTEMP_*
 ----------------
@@ -717,8 +715,8 @@ order:
 	- architecture/$ROCKCFG_ARCH/postconfig.in
 	- target/$ROCKCFG_TARGET/postconfig.in
 
-Only scripts marked with '*' might interact with the user (create menu
-items). The others might only set and modify various variables.
+Only scripts marked with '*' may interact with the user (create menu
+items). The others may only set and modify various variables.
 
 3.5. Creation of the Packages file
 ==================================
@@ -746,7 +744,7 @@ Stages	Stage levels as specified in the packages [P] tag (see next chapter)
 
 Pri.	Priority as specified in the packages [P] tag (sort-key for the file)
 
-Resp.	Repository name where the package is found
+Rep.	Repository name where the package is found
 
 Name	Package Name
 
@@ -869,6 +867,18 @@ The ./scripts/Check-PkgVersion script is also using this [D] tags for checking
 for new package versions. The ./scripts/Check-PkgVersion can also be directly
 configured using the tags [CV-URL], [CV-PAT] and [CV-DEL].
 
+Download from a Subversion repository:
+	[D] X somethingfromsubversion.tar.bz2 svn://svn:publicuser:publicpassword@server:12345:/path::revision
+
+The svn:// download method has this syntax
+	svn://mode:[login[:password]@]server[:port]:/path::revision/
+
+Dowload from a CVS server:
+	[D] X gatos-ati.4.4.0-2004-08-09.tar.bz2 cvs://pserver:anonymous@cvs.gatos.sourceforge.net:/cvsroot/gatos::ati.4.4.0/!2004-08-09/
+
+The cvs:// download method has this syntax
+	cvs://mode:[login[:password]@]server[:port]:/path::module!revision/
+
 4.3. The *.conf files
 =====================
 
@@ -878,9 +888,6 @@ package. It's the build_this_package() shell function which can be found in
 which can be set or modified in the *.conf file. A list of those variables
 can be found in the PKG-BUILD-VARS file in this directory. Read the existing
 *.conf files for examples.
-
-4.3.1. FIXME
-------------
 
 4.4. The *.patch files
 ======================

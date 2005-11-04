@@ -67,6 +67,15 @@ while [ "$1" ] ; do
 	esac
 done
 
+if [ $tasks -gt 1 ] ; then
+	. config/$config/config
+	if [ "$ROCKCFG_PARALLEL" = 0 ] ; then
+		echo_error "You have not configured this to be a cluster build!"
+		echo_error "Please remove -tasks $tasks or configure this for cluster build"
+		exit 1
+	fi
+fi
+
 if [ "$daemon_mode" = 1 ] ; then
 	. config/$config/config
 	echo "Running $0 in the background (messages go to logfile only).."

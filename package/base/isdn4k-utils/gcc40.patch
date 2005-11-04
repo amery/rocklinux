@@ -1,0 +1,49 @@
+diff -dur isdn4k-utils/hisax/hisaxctrl.c isdn4k-utils-p/hisax/hisaxctrl.c
+--- isdn4k-utils/hisax/hisaxctrl.c	2000-06-30 11:37:38.000000000 +0200
++++ isdn4k-utils-p/hisax/hisaxctrl.c	2005-10-21 00:17:49.000000000 +0200
+@@ -43,7 +43,7 @@
+ 		fprintf(stderr, "cannot open file %s\n", fname);
+ 		exit(-1);
+ 	}
+-	p = (int *) buffer = (unsigned char *) malloc(MAX_SIZE+4);
++	buffer = p = (unsigned char *) malloc(MAX_SIZE+4);
+ 	if (!buffer) {
+ 		fprintf(stderr, "cannot get %d byte memory\n", MAX_SIZE+4);
+ 		exit(-1);
+diff -dur isdn4k-utils/ipppd/main.c isdn4k-utils-p/ipppd/main.c
+--- isdn4k-utils/ipppd/main.c	2002-07-18 02:06:21.000000000 +0200
++++ isdn4k-utils-p/ipppd/main.c	2005-10-21 00:19:22.000000000 +0200
+@@ -1041,9 +1041,10 @@
+ static char line[256];			/* line to be logged accumulated here */
+ static char *linep;
+ 
++static void pr_log __P((void *, char *, ...));
++
+ void log_packet(u_char *p,int len,char *prefix,int linkunit)
+ {
+-	static void pr_log __P((void *, char *, ...));
+ 
+     int i, n;
+     u_short proto;
+diff -dur isdn4k-utils/isdnlog/tools/isdnrate.c isdn4k-utils-p/isdnlog/tools/isdnrate.c
+--- isdn4k-utils/isdnlog/tools/isdnrate.c	2001-06-21 18:34:56.000000000 +0200
++++ isdn4k-utils-p/isdnlog/tools/isdnrate.c	2005-10-21 00:12:22.000000000 +0200
+@@ -304,7 +304,7 @@
+ 
+ static void print_header(void);
+ 
+-static char *myname, *myshortname;
++char *myname, *myshortname;
+ static char options[] = "ab:d:f:h:l:op:st:v::x:CD::G:HLNP:O:S:TUVX::Z";
+ static char usage[] = "%s: usage: %s [ -%s ] Destination ...\n";
+ 
+@@ -313,7 +313,8 @@
+ static int usestat = 0;
+ static int duration = LCR_DURATION;
+ static time_t start;
+-static int day, month, year, hour, min, sec;
++int day, month, hour;
++static int year, min, sec;
+ static char ignore[MAXPROVIDER];
+ static char *fromarea = 0;
+ static char wanted_day;

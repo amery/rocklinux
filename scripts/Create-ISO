@@ -71,7 +71,11 @@ if [ "$implantisomd5" = 1 -a ! -x src/isomd5sum/implantisomd5 ] ; then
 	echo ; date "+  [%X] Creating ISO-MD5 tools ..."
 	rm -rf src/isomd5sum; mkdir -p src/isomd5sum
 	cp misc/isomd5sum/* src/isomd5sum/
-	make -C src/isomd5sum all
+	if ! make -C src/isomd5sum all ; then
+		implantisomd5=0
+		date "+  [%X] Could not create ISO-MD5 tools"
+		date "+  [%X] Not implanting md5sum into isos"
+	fi
 fi
 
 echo ; date "+  [%X] Removing old files with same prefix ..."

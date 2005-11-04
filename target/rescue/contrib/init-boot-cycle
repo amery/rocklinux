@@ -55,7 +55,7 @@ fail_shell() {
 
 # some init
 export PATH=/sbin:/bin:/usr/sbin:/usr/bin
-mount -t proc none /proc
+mount -t proc proc /proc
 mkdir /mnt/boot /mnt/root
 mount --move /old_root/mnt_boot /mnt/boot
 umount -n /old_root

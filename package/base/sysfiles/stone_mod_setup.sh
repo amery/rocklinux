@@ -27,11 +27,11 @@ make_fstab() {
 
 	cat <<- EOT > $tmp2
 /dev/root / auto defaults 0 1
-none /proc proc defaults 0 0
-none /dev/pts devpts defaults 0 0
-none /dev/shm ramfs defaults 0 0
-none /sys sysfs defaults 0 0
-#none /tmp tmpfs defaults 0 0
+proc /proc proc defaults 0 0
+devpts /dev/pts devpts defaults 0 0
+ramfs /dev/shm ramfs defaults 0 0
+sysfs /sys sysfs defaults 0 0
+#tmpfs /tmp tmpfs defaults 0 0
 EOT
 
 	for x in /dev/cdroms/cdrom[0-9] ; do

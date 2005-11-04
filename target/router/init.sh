@@ -1,8 +1,8 @@
 #!/bin/bash
 
-mount -n -t proc none /proc
-mount -n -t tmpfs none /tmp
-mount -n -t devpts none /dev/pts
+mount -n -t proc proc /proc
+mount -n -t tmpfs tmpfs /tmp
+mount -n -t devpts devpts /dev/pts
 cat /proc/mounts > /etc/fstab
 cat /proc/mounts > /etc/mtab
 

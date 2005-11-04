@@ -38,7 +38,7 @@ fi
 case "$devtype" in
     devfs)
 	if ! [ -e /dev/.devfsd ] ; then
-		mount -v -n -t devfs none /dev
+		mount -v -n -t devfs devfs /dev
 		exec > /dev/console 2>&1 < /dev/console
 		echo "Mounted /dev (devfs) from /etc/initscript."
 	fi
@@ -48,11 +48,11 @@ case "$devtype" in
 	if ! [ -e /dev/.udevdb ] ; then
 		if [ -e /dev/.devfsd ]; then
 			mount --move /dev /etc/udev
-			mount -t ramfs none /dev
+			mount -t ramfs ramfs /dev
 			mkdir /dev/devfs
 			mount --move /etc/udev /dev/devfs
 		else
-			mount -t ramfs none /dev
+			mount -t ramfs ramfs /dev
 		fi
 		mount -n /sys; mount -n /proc
 		mkdir -p /dev/pts /dev/shm
@@ -69,7 +69,7 @@ case "$devtype" in
 	;;
     *)
 	if ! [ -e /dev/console ]; then
-		mount -t ramfs none /dev
+		mount -t ramfs ramfs /dev
 		mknod -m 600 /dev/console c 5 1
 	fi
 	exec > /dev/console 2>&1 < /dev/console

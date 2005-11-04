@@ -217,7 +217,7 @@ if [ "$chroot" = 1 ] ; then
 
 		if [ ! -f /proc/sys/fs/binfmt_misc/register ] ; then
 			echo_status "Mounting /proc/sys/fs/binfmt_misc."
-			mount -t binfmt_misc none /proc/sys/fs/binfmt_misc
+			mount -t binfmt_misc binfmt_misc /proc/sys/fs/binfmt_misc
 		fi
 
 		echo_status "Registering pseudonative_handler."
@@ -275,7 +275,7 @@ if [ "$chroot" = 1 ] ; then
 	fi
 
 	if [ ! -f proc/mounts ]; then
-		mount -t proc none $PWD/proc
+		mount -t proc proc $PWD/proc
 	fi
 
 	for x in Documentation architecture misc package scripts target; do
@@ -687,7 +687,7 @@ echo_status "Preparing build in src.$xpkg.$id"
 mkdir -p $builddir; chmod 700 $builddir
 if [ $clear_src = 1 ] ; then
 	if [ "$ROCKCFG_SRC_TMPFS" = 1 ]; then
-		mount -t tmpfs -o $ROCKCFG_SRC_TMPFS_OPT none $builddir
+		mount -t tmpfs -o $ROCKCFG_SRC_TMPFS_OPT tmpfs $builddir
 	fi
 fi
 

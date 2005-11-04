@@ -255,7 +255,7 @@ int main(int argc, char **argv) {
 		}
 	 }
 
-	if (mount("none", "/dev", "devfs", 0, NULL)) {
+	if (mount("devfs", "/dev", "devfs", 0, NULL)) {
 		if (errno != EBUSY) { /* might be mounted automatically at boot */
 			perror("Can't mount /dev");
 			die();
@@ -268,7 +268,7 @@ int main(int argc, char **argv) {
 			bootdev, bootfst);
 		shell();
 	}
-	if (mount("none", "/mnt_root", "tmpfs", 0, TMPFS_OPTIONS)) {
+	if (mount("tmpfs", "/mnt_root", "tmpfs", 0, TMPFS_OPTIONS)) {
 		perror("Can't mount root-tmpfs. I need it at /mnt_root - good luck.");
 		shell();
 	}

@@ -210,9 +210,9 @@ This dialog allows you to modify your discs parition layout and to create filesy
 		$STONE packages
 		cat > /mnt/target/tmp/stone_postinst.sh << EOT
 #!/bin/sh
-mount -v -t ramfs none /dev
-mount -v -t proc none /proc
-mount -v -t sysfs none /sys
+mount -v -t ramfs ramfs /dev
+mount -v -t proc proc /proc
+mount -v -t sysfs sysfs /sys
 /sbin/udevstart
 . /etc/profile
 stone setup

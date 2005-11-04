@@ -135,7 +135,7 @@ void do_chroot(char *d, char *b)
 		system(buf);
 		snprintf(buf, 1024, "mount -t nfs -o noac %s/download %s/ROCK/download", d, e);
 		system(buf);
-		snprintf(buf, 1024, "mount -t proc none %s/proc", e);
+		snprintf(buf, 1024, "mount -t proc proc %s/proc", e);
 		system(buf);
 	}
 

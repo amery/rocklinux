@@ -453,19 +453,19 @@ int main(int argc, char** argv)
 		}
 	}
 
-	if ( mount("none", "/dev", "devfs", 0, NULL) && errno != EBUSY )
+	if ( mount("devfs", "/dev", "devfs", 0, NULL) && errno != EBUSY )
 		perror("Can't mount /dev");
 
-	if ( mount("none", "/sys", "sysfs", 0, NULL) && errno != EBUSY )
+	if ( mount("sysfs", "/sys", "sysfs", 0, NULL) && errno != EBUSY )
 		perror("Can't mount /sys (not fatal)");
 
-	if ( mount("none", "/proc", "proc", 0, NULL) && errno != EBUSY )
+	if ( mount("proc", "/proc", "proc", 0, NULL) && errno != EBUSY )
 		perror("Can't mount /proc");
 
-	if ( mount("none", "/dev/pts", "devpts", 0, NULL) && errno != EBUSY )
+	if ( mount("devpts", "/dev/pts", "devpts", 0, NULL) && errno != EBUSY )
 		perror("Can't mount /dev/pts (not too fatal)");
 
-	if ( mount("none", "/dev/shm", "ramfs", 0, NULL) && errno != EBUSY )
+	if ( mount("ramfs", "/dev/shm", "ramfs", 0, NULL) && errno != EBUSY )
 		perror("Can't mount /dev/shm (not fatal)");
 
 	/* Only print important stuff to console */

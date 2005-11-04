@@ -142,7 +142,7 @@ do
 done
 EOF
 <<EOF cat  > etc/boot.d/05-system
-[ -f /proc/mounts ] || mount -t proc none /proc
+[ -f /proc/mounts ] || mount -t proc proc /proc
 [ -d /mnt/boot ] || mkdir -p /mnt/boot
 [ -d /dev/pts ] && mount /dev/pts
 rm -f /dev/fd ; ln -s /proc/self/fd /dev/fd

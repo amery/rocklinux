@@ -161,7 +161,7 @@ function get_usb_drivers() {
 		id = "usb-controller (PCI " usb_ctrl_driver ")";
 		driver_mod[id] = usb_ctrl_driver;
 		driver_dsc[id] = usb_ctrl_desc;
-		driver_cmd[id] = "\nmount -t usbfs none /proc/bus/usb";
+		driver_cmd[id] = "\nmount -t usbfs usbfs /proc/bus/usb";
 		drivers[id] = id;
 		autocomplete(usb_ctrl_driver, id);
 	}

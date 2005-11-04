@@ -815,6 +815,32 @@ list_unknown() {
 }
 
 list_missing() {
+	if [ -z "${config}" ] ; then
+		list_missing_all
+		return
+	fi
+	if [ ! -f config/$config/packages ]; then
+		echo "ERROR: Config $config doesn't exist."
+		echo "ERROR: try ./scripts/Config -cfg $config first."
+		exit 1
+	fi
+	ignore_xpkg=0
+	while read on a b repo pkg c ; do
+		forkedpkg=${pkg#*=}
+		[ "$forkedpkg" = "$pkg" ] || pkg=${pkg%=*}
+		if [ "${on}" = "X" ] ; then
+			descparser "xpkg=${forkedpkg}" "package/${repo}/${pkg}/${pkg}.desc" | column_clean | grep '^\[D\]' | \
+				sed -e "s,^$D2re[ ].*\($NODISTre\).*$,\2 download/nodist/\4/\3,;" \
+				    -e "s,^$D2re$,\2 download/mirror/\4/\3,;" | awk '{print $2;}' | \
+				    sed -e 's,\.\(t\?\)\(gz\|Z\)$,.\1bz2,' | \
+				while read fn ; do
+					[ -f "${fn}" ] || echo "${fn}"
+				done
+		fi
+	done < config/$config/packages
+}
+
+list_missing_all() {
 	trap '' INT
 	list | sed 's,\.\(t\?\)\(gz\|Z\)$,.\1bz2,' | \
 	while read fn ; do

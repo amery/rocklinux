@@ -27,6 +27,6 @@ diff -ruN ffmpeg-0.4.9-pre1/Makefile ffmpeg-0.4.9-pre1-new/Makefile
 +# ReneR: well the maintainer could also test his ... without imlib2 support
 +EXTRALIBS+=-L/usr/X11/lib -lX11
 +
- MANPAGE=$(SRC_PATH)/doc/ffmpeg.1
+ MANPAGE=doc/ffmpeg.1
  PROG=ffmpeg$(EXESUF)
  PROGTEST=output_example$(EXESUF)

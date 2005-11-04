@@ -1,0 +1,20 @@
+--- ./kcontrol/joystick/joydevice.h~	2005-10-05 15:37:43.000000000 +0200
++++ ./kcontrol/joystick/joydevice.h	2005-10-22 15:32:27.000000000 +0200
+@@ -23,8 +23,17 @@
+ 
+ #include <qstring.h>
+ 
++#ifdef __STRICT_ANSI__
++#define REDEFINE__STRICT_ANSI__
++#undef __STRICT_ANSI__
++#endif
++
+ #include <linux/joystick.h>
+ 
++#ifdef REDEFINE__STRICT_ANSI__
++#define __STRICT_ANSI__
++#endif
++
+ // helper class which holds all current values, file descriptor, etc. for
+ // one device
+ class JoyDevice

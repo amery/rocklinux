@@ -1,0 +1,22 @@
+diff -dur xc/programs/Xserver/hw/xfree86/input/ur98/xf86Ur-98.c src.xorg.1129808283.2035.3041395841/xc/programs/Xserver/hw/xfree86/input/ur98/xf86Ur-98.c
+--- xc/programs/Xserver/hw/xfree86/input/ur98/xf86Ur-98.c	2004-04-23 21:54:05.000000000 +0200
++++ src.xorg.1129808283.2035.3041395841/xc/programs/Xserver/hw/xfree86/input/ur98/xf86Ur-98.c	2005-10-20 21:27:44.000000000 +0200
+@@ -5,8 +5,18 @@
+ #include <string.h>
+ #include <errno.h>
+ #define inline __inline__
++
++#ifdef __STRICT_ANSI__
++#define REDEFINE__STRICT_ANSI__
++#undef __STRICT_ANSI__
++#endif
++
+ #include <linux/joystick.h>
+ 
++#ifdef REDEFINE__STRICT_ANSI__
++#define __STRICT_ANSI__
++#endif
++
+ #undef BUS_ISA
+ #undef BUS_PCI
+ 

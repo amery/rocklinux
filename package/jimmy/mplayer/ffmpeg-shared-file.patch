@@ -1,0 +1,11 @@
+--- MPlayer-1.0pre7try2/libavcodec/libpostproc/Makefile~	2005-04-16 22:41:13.000000000 +0200
++++ MPlayer-1.0pre7try2/libavcodec/libpostproc/Makefile	2005-10-26 03:24:19.000000000 +0200
+@@ -61,7 +61,7 @@
+ endif
+ endif
+ 	mkdir -p $(prefix)/include/postproc
+-	install -m 644 postprocess.h $(prefix)/include/postproc/postprocess.h
++#	install -m 644 postprocess.h $(prefix)/include/postproc/postprocess.h
+ 
+ 
+ #

@@ -148,6 +148,11 @@ xf_install() {
 
 # configure the World
 xf_config() {
+	if [ -f "$base/config/$config/xorgsite.def" ] ; then
+		cp $base/config/$config/xorgsite.def config/cf/host.def
+		echo "Found custom configuration"
+	else
+	
 	echo "Configuring X-Windows ..."
 	cat >> config/cf/host.def << EOT
 /* Disable the internal zlib to use the system installed one */
@@ -175,6 +180,8 @@ EOT
 /* Additinal TV/DVI support since this is x86 */
 #define		HaveMatroxHal		YES
 EOT
+	fi
+	
 	fi
 }
 

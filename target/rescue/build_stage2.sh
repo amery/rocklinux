@@ -6,7 +6,8 @@ echo_header "Creating 2nd stage filesystem:"
 mkdir -p $disksdir/rescue_root ; cd $disksdir/rescue_root
 #
 package_map='       +00-dirtree         +glibc22            +glibc23
--gcc2               -gcc3               -gcc33 -gcc32       -gccx
+-gcc2               -gcc3               -gcc33              -gcc34
+-gcc40              -gcc41              -gmp
 -linux24-src        -linux26-src        -linux24benh-src
 -linux24-source
 -linux24-header     -linux26-header     -linux24benh-header

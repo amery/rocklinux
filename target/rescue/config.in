@@ -64,7 +64,8 @@ pkgfilter sed '
 / xfsprogs /	{ p; d; };
 / kbd /		{ p; d; };	/ eject /	{ p; d; };
 / openssl /	{ p; d; };	/ openssh /	{ p; d; };
-/ ntfsprogs / { p; d; };
+/ ntfsprogs /	{ p; d; };
+/ gmp /		{ p; d; };
 
 # Select some packages explicitely (architectures)
 / bin86 /	{ p; d; };
@@ -80,7 +81,7 @@ pkgfilter sed '
 
 # Disable even more packages we do not need
 / gcc2 /	{ s/^X /O /p; d; };	/ joe /		{ s/^X /O /p; d; };
-/ gdbm /	{ s/^X /O /p; d; };	/ pam /         { s/^X /O /p; d; };
+/ gdbm /	{ s/^X /O /p; d; };	/ pam /		{ s/^X /O /p; d; };
 / pdksh /	{ s/^X /O /p; d; };	/ libelf /	{ s/^X /O /p; d; };
 / prelink /	{ s/^X /O /p; d; };	/ ccache /	{ s/^X /O /p; d; };
 / cracklib /	{ s/^X /O /p; d; };	/ hotplug /	{ s/^X /O /p; d; };
@@ -89,8 +90,8 @@ pkgfilter sed '
 / dietlibc /	{ s/^X /O /p; d; };
 / sysvinit /	{ s/^X /O /p; d; };
 / uml_utilities /	{ s/^X /O /p; d; };
-/ python /    { s/^X /O /p; d; };
-/ dmapi /    { s/^X /O /p; d; };
+/ python /	{ s/^X /O /p; d; };
+/ dmapi /	{ s/^X /O /p; d; };
 '
 if [[ $rockver = 2.0* ]] ; then
        pkgfilter sed '

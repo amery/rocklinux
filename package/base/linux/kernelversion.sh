@@ -19,5 +19,15 @@ getkernelversion() {
 	fi
 }
 
+add_uname_wrapper() {
+	add_wrapper uname <<- EOT
+		if [ "\$*" = "-r" ]; then
+			echo "$kernelversion"
+			exit 0
+		fi
+		exec \$orig "\$@"
+	EOT
+}
+
 kernelversion="$( getkernelversion )"
 

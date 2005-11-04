@@ -904,12 +904,13 @@ static void addptree(int *txtpos, char *cmdtxt, int pid, int basepid)
 
 	p = getpname(pid);
 
-	if (*txtpos < 4000)
+	if (*txtpos < 4000) {
 		if ( strcmp(l, p) )
 			*txtpos += snprintf(cmdtxt+*txtpos, 4096-*txtpos, "%s%s",
 					*txtpos ? "." : "", getpname(pid));
 		else
 			*txtpos += snprintf(cmdtxt+*txtpos, 4096-*txtpos, "*");
+	}
 
 	strcpy(l, p);
 }

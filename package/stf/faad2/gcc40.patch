@@ -1,0 +1,17 @@
+This fixes the error:
+
+mp4ff.c:91: error: static declaration of 'mp4ff_track_add' follows non-static declaration
+mp4ffint.h:304: error: previous declaration of 'mp4ff_track_add' was here
+
+diff -dur faad2/common/mp4ff/mp4ff.c src.faad2.1129998164.4669.1585831089/faad2/common/mp4ff/mp4ff.c
+--- faad2/common/mp4ff/mp4ff.c	2004-01-11 16:52:18.000000000 +0100
++++ src.faad2.1129998164.4669.1585831089/faad2/common/mp4ff/mp4ff.c	2005-10-23 22:28:23.000000000 +0200
+@@ -87,7 +87,7 @@
+     if (ff) free(ff);
+ }
+ 
+-static void mp4ff_track_add(mp4ff_t *f)
++void mp4ff_track_add(mp4ff_t *f)
+ {
+     f->total_tracks++;
+ 

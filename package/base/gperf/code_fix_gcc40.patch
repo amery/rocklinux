@@ -1,0 +1,22 @@
+--- ./src/positions.h~	2003-04-07 11:48:19.000000000 +0200
++++ ./src/positions.h	2005-10-23 16:00:30.000000000 +0200
+@@ -71,15 +71,15 @@
+   bool                  sort ();
+ 
+   /* Creates an iterator, returning the positions in descending order.  */
+-  PositionIterator      iterator () const;
++  class PositionIterator      iterator () const;
+   /* Creates an iterator, returning the positions in descending order,
+      that apply to strings of length <= maxlen.  */
+-  PositionIterator      iterator (int maxlen) const;
++  class PositionIterator      iterator (int maxlen) const;
+   /* Creates an iterator, returning the positions in ascending order.  */
+-  PositionReverseIterator reviterator () const;
++  class PositionReverseIterator reviterator () const;
+   /* Creates an iterator, returning the positions in ascending order,
+      that apply to strings of length <= maxlen.  */
+-  PositionReverseIterator reviterator (int maxlen) const;
++  class PositionReverseIterator reviterator (int maxlen) const;
+ 
+   /* Set operations.  Assumes the array is in reverse order.  */
+   bool                  contains (int pos) const;

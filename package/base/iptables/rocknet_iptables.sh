@@ -21,8 +21,16 @@ iptables_parse_conditions() {
 			shift
 			;;
 		    tcp|udp)
-			iptables_cond="$iptables_cond -p $1 --dport $2"
-			shift; shift
+			case "$2" in
+				from)
+				iptables_cond="$iptables_cond -p $1 --sport $3"
+				shift; shift; shift;
+				;;
+				*)
+				iptables_cond="$iptables_cond -p $1 --dport $2"
+				shift; shift
+				;;
+			esac
 			;;
 		    icmp)
 			iptables_cond="$iptables_cond -p icmp --icmp-type $2"

@@ -1,0 +1,23 @@
+diff -dur automake-1.9.3/aclocal.in automake-1.9.3-p/aclocal.in
+--- automake-1.9.3/aclocal.in	2004-10-10 18:10:24.000000000 +0200
++++ automake-1.9.3-p/aclocal.in	2005-10-18 22:43:23.000000000 +0200
+@@ -672,12 +672,11 @@
+ 	  # Ignore '#' lines.
+ 	  next if /^#/;
+ 	  # strip off newlines and end-of-line comments
+-	  s/\s*\#.*$//;
+-	  chomp ($contents=$_);
+-	  if (-d $contents )
+-	    {
+-	      push (@dirlist, $contents);
+-	    }
++	    s/\s*\#.*$//; chomp;
++	    foreach my $dir (glob)
++	      {
++		push (@dirlist, $dir) if -d $dir;
++	      }
+ 	}
+       close (DEFAULT_DIRLIST);
+     }
+Nur in automake-1.9.3-p: aclocal.in~.
+Nur in automake-1.9.3-p: aclocal.in.rej.

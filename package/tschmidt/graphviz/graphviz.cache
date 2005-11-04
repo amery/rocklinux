@@ -20,33 +20,38 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1129127369 Wed Oct 12 16:29:29 2005 (5)
-[TIMESTAMP] 1129363676 Sat Oct 15 10:07:56 2005 (9)
+[TIMESTAMP] 1130608343 Sat Oct 29 19:52:23 2005 (5)
+[TIMESTAMP] 1130830620 Tue Nov  1 08:37:00 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-graphviz.log 9-graphviz.log
 
-[BUILDTIME] 31968 (5)
-[BUILDTIME] 32836 (9)
-[SIZE] 5.88 MB, 382 files
+[BUILDTIME] 42044 (5)
+[BUILDTIME] 43319 (9)
+[SIZE] 7.07 MB, 380 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils expat
 [DEP] expat:dev findutils flex flex:dev freetype freetype:dev gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep guile:dev libgd libjpeg
 [DEP] libjpeg:dev libpng libpng:dev libtool libtool:dev linux26-header:dev
-[DEP] m4 make mktemp net-tools nx-X11 nx-X11:dev nxcomp nxproxy patch
-[DEP] perl5 perl5:dev php4:dev pkgconfig python python:dev ruby sed swig
-[DEP] sysfiles tar tcl tcl:dev tk tk:dev util-linux xorg xorg:dev zlib:dev
+[DEP] m4 make mktemp net-tools nx-X11 nx-X11:dev nxcomp patch perl5
+[DEP] perl5:dev php4:dev pkgconfig python python:dev ruby sed swig sysfiles
+[DEP] tar tcl tcl:dev tk tk:dev util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] acyclic bcomps ccomps circo dijkstra dot dot2gxl dotty
-[PROVIDES] fdp gc gvcolor gvpack gvpr gxl2dot lefty libagraph.so
-[PROVIDES] libcdt.so libexpr.so libgdtclft.so libgraph.so libgv_guile.so
-[PROVIDES] libgv_perl.so libgv_php.so libgv_python.so libgv_ruby.so
-[PROVIDES] libgv_tcl.so libgvc.so libgvgd.so libgvplugin_dot_layout.so
-[PROVIDES] libgvplugin_neato_layout.so libgvplugin_usershape_gd.so
-[PROVIDES] libpack.so libpathplan.so libplugins.so libtcldot.so
-[PROVIDES] libtclplan.so libtkspline.so lneato neato nop prune sccmap
-[PROVIDES] tred twopi unflatten
+[PROVIDES] acyclic bcomps ccomps circo dijkstra dot dot2gxl dot_static
+[PROVIDES] dotty fdp gc gvcolor gvpack gvpr gxl2dot lefty libagraph.a
+[PROVIDES] libagraph.so libcdt.a libcdt.so libexpr.a libexpr.so
+[PROVIDES] libgdtclft.a libgdtclft.so libgraph.a libgraph.so
+[PROVIDES] libgv_perl.a libgv_perl.so libgv_php.a libgv_php.so
+[PROVIDES] libgv_python.a libgv_python.so libgv_ruby.a libgv_ruby.so
+[PROVIDES] libgv_tcl.a libgv_tcl.so libgvc.a libgvc.so libgvc_builtins.a
+[PROVIDES] libgvc_builtins.so libgvgd.a libgvgd.so libgvplugin_dot_layout.a
+[PROVIDES] libgvplugin_dot_layout.so libgvplugin_neato_layout.a
+[PROVIDES] libgvplugin_neato_layout.so libgvplugin_usershape_gd.a
+[PROVIDES] libgvplugin_usershape_gd.so libpack.a libpack.so libpathplan.a
+[PROVIDES] libpathplan.so libtcldot.a libtcldot.so libtclplan.a
+[PROVIDES] libtclplan.so libtkspline.a libtkspline.so lneato neato nop
+[PROVIDES] prune sccmap tred twopi unflatten
 

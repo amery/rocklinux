@@ -20,22 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1129244834 Fri Oct 14 01:07:14 2005 (5)
-[TIMESTAMP] 1129493638 Sun Oct 16 22:13:58 2005 (9)
+[TIMESTAMP] 1130719564 Mon Oct 31 01:46:04 2005 (5)
+[TIMESTAMP] 1130952136 Wed Nov  2 18:22:16 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-hostap.log 9-hostap.log
 
-[BUILDTIME] 3207 (5)
-[BUILDTIME] 3283 (9)
+[BUILDTIME] 3329 (5)
+[BUILDTIME] 3421 (9)
 [SIZE] 0.65 MB, 24 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26 linux26-header:dev
-[DEP] linux26-source make mktemp openssl openssl:dev patch pcmcia-cs sed
-[DEP] sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
+[DEP] glibc23 glibc23:dev grep linux26 linux26-header:dev linux26-source
+[DEP] make mktemp openssl openssl:dev patch pcmcia-cs sed sysfiles tar
 
 [PROVIDES] hostap_crypt_conf hostap_diag hostap_fw_load hostap_io_debug
 [PROVIDES] hostap_rid hostapd hostapd_cli prism2_param prism2_srec

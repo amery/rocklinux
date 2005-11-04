@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1129076066 Wed Oct 12 02:14:26 2005 (5)
-[TIMESTAMP] 1129301638 Fri Oct 14 16:53:58 2005 (9)
+[TIMESTAMP] 1130560714 Sat Oct 29 06:38:34 2005 (5)
+[TIMESTAMP] 1130772409 Mon Oct 31 16:26:49 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-dmalloc.log 9-dmalloc.log
 
-[BUILDTIME] 2252 (5)
-[BUILDTIME] 2860 (9)
+[BUILDTIME] 2431 (5)
+[BUILDTIME] 3051 (9)
 [SIZE] 0.31 MB, 10 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] net-tools sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
+[DEP] mktemp net-tools sed sysfiles tar util-linux
 
 [PROVIDES] dmalloc libdmalloc.a libdmalloc.so libdmallocth.a
 [PROVIDES] libdmallocth.so libdmallocthcxx.a libdmallocxx.a

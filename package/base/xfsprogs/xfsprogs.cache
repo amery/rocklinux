@@ -20,26 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1129167147 Thu Oct 13 03:32:27 2005 (5)
-[TIMESTAMP] 1129408706 Sat Oct 15 22:38:26 2005 (9)
+[TIMESTAMP] 1130647659 Sun Oct 30 05:47:39 2005 (5)
+[TIMESTAMP] 1130873690 Tue Nov  1 20:34:50 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-xfsprogs.log 9-xfsprogs.log
 
-[BUILDTIME] 9914 (5)
-[BUILDTIME] 10366 (9)
-[SIZE] 2.25 MB, 53 files
+[BUILDTIME] 10843 (5)
+[BUILDTIME] 11278 (9)
+[SIZE] 2.48 MB, 56 files
 
-[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils e2fsprogs:dev findutils gawk gcc34 gcc34:dev glibc23
-[DEP] glibc23:dev grep gzip libtool linux26-header:dev m4 make mktemp
-[DEP] ncurses:dev net-tools patch perl5 readline readline:dev rpm sed
-[DEP] sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils e2fsprogs:dev
+[DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep gzip libtool
+[DEP] linux26-header:dev make mktemp ncurses:dev net-tools patch readline
+[DEP] readline:dev rpm sed sysfiles tar util-linux
 
-[PROVIDES] fsck.xfs libdisk.a libhandle.a libhandle.so libxfs.a libxlog.a
-[PROVIDES] mkfs.xfs xfs_admin xfs_bmap xfs_check xfs_copy xfs_db xfs_freeze
-[PROVIDES] xfs_growfs xfs_info xfs_io xfs_logprint xfs_mkfile xfs_ncheck
-[PROVIDES] xfs_repair xfs_rtcp
+[PROVIDES] fsck.xfs libdisk.a libhandle.a libhandle.so libxcmd.a libxfs.a
+[PROVIDES] libxlog.a mkfs.xfs xfs_admin xfs_bmap xfs_check xfs_copy xfs_db
+[PROVIDES] xfs_freeze xfs_growfs xfs_info xfs_io xfs_logprint xfs_mkfile
+[PROVIDES] xfs_ncheck xfs_quota xfs_repair xfs_rtcp
 

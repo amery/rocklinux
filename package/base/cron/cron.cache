@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1129057174 Tue Oct 11 20:59:34 2005 (3)
-[TIMESTAMP] 1129414441 Sun Oct 16 00:14:01 2005 (9)
+[TIMESTAMP] 1130542248 Sat Oct 29 01:30:48 2005 (3)
+[TIMESTAMP] 1130878968 Tue Nov  1 22:02:48 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 3-cron.log 9-cron.log
 
-[BUILDTIME] 916 (3)
-[BUILDTIME] 1591 (9)
+[BUILDTIME] 1016 (3)
+[BUILDTIME] 1707 (9)
 [SIZE] 0.10 MB, 27 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp patch
-[DEP] sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp
+[DEP] patch sed sysfiles tar
 
 [PROVIDES] cron cron.run crontab
 

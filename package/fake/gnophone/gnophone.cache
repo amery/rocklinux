@@ -20,21 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1129258806 Fri Oct 14 05:00:06 2005 (5)
-[TIMESTAMP] 1129508367 Mon Oct 17 02:19:27 2005 (9)
+[TIMESTAMP] 1130729314 Mon Oct 31 04:28:34 2005 (5) ERROR
+[TIMESTAMP] 1130962579 Wed Nov  2 21:16:19 2005 (9) ERROR
+[TIMESTAMP] 1131118957 Fri Nov  4 16:42:37 2005 (5)
+[TIMESTAMP] 1131120128 Fri Nov  4 17:02:08 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-gnophone.log 9-gnophone.log
 
-[BUILDTIME] 2639 (5)
-[BUILDTIME] 2680 (9)
+[BUILDTIME] 1803 (5) ERROR
+[BUILDTIME] 1836 (9) ERROR
+[BUILDTIME] 2848 (5)
+[BUILDTIME] 2825 (9)
 [SIZE] 0.68 MB, 15 files
 
-[DEP] 00-dirtree alsa audiofile audiofile:dev autoconf automake19 bash2
-[DEP] binutils bzip2 coreutils diffutils esound esound:dev findutils
-[DEP] gawk gcc34 gcc34:dev glib12 glib12:dev glibc23 glibc23:dev
+[DEP] 00-dirtree alsa audiofile audiofile:dev autoconf automake19
+[DEP] bash2 binutils bzip2 coreutils diffutils esound esound:dev
+[DEP] findutils gcc34 gcc34:dev glib12 glib12:dev glibc23 glibc23:dev
 [DEP] gnome14-dirtree grep gsm:dev gtk+12 gtk+12:dev iax iax:dev imlib
 [DEP] imlib:dev linux26-header:dev make mktemp mozilla net-tools patch
 [DEP] perl5 sed sox sysfiles tar texinfo xorg

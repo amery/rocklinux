@@ -1,0 +1,30 @@
+This fixes the error:
+
+In file included from mutt_menu.h:23,
+                 from addrbook.c:20:
+keymap.h:83: error: array type has incomplete element type
+
+diff -dur mutt-1.4.2.1/keymap.c src.mutt.1129843324.3091.4058436413/mutt-1.4.2.1/keymap.c
+--- mutt-1.4.2.1/keymap.c	2001-10-16 16:29:27.000000000 +0200
++++ src.mutt.1129843324.3091.4058436413/mutt-1.4.2.1/keymap.c	2005-10-20 23:45:08.000000000 +0200
+@@ -28,7 +28,7 @@
+ 
+ #include "functions.h"
+ 
+-struct mapping_t Menus[] = {
++struct mapping_t *Menus = {
+  { "alias",	MENU_ALIAS },
+  { "attach",	MENU_ATTACH },
+  { "browser",	MENU_FOLDER },
+diff -dur mutt-1.4.2.1/keymap.h src.mutt.1129843324.3091.4058436413/mutt-1.4.2.1/keymap.h
+--- mutt-1.4.2.1/keymap.h	2001-09-11 13:20:34.000000000 +0200
++++ src.mutt.1129843324.3091.4058436413/mutt-1.4.2.1/keymap.h	2005-10-20 23:44:07.000000000 +0200
+@@ -80,7 +80,7 @@
+ /* dokey() records the last real key pressed  */
+ extern int LastKey;
+ 
+-extern struct mapping_t Menus[];
++extern struct mapping_t *Menus;
+ 
+ struct binding_t
+ {

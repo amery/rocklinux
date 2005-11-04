@@ -1,0 +1,16 @@
+This fixes the error:
+gcc-40 -DHAVE_CONFIG_H -DLOCALEDIR=\"/usr/share/locale\" -I. -I. -I.. -I. -I. -I../intl    -g -O2 -c `test -f 'output.c' || echo './'`output.c
+output.c:26: error: static declaration of 'output' follows non-static declaration
+indent.h:100: error: previous declaration of 'output' was here
+
+--- ./src/output.c~	2002-12-12 18:36:49.000000000 +0100
++++ ./src/output.c	2005-10-20 13:31:51.000000000 +0200
+@@ -23,7 +23,7 @@
+ 
+ RCSTAG_CC ("$Id: output.c,v 1.5 2002/12/12 17:36:49 david Exp $");
+ 
+-static FILE            * output       = NULL;
++FILE            * output       = NULL;
+ static BOOLEAN           inhibited    = 0;
+ static buf_break_st_ty * buf_break_list = NULL;
+ 

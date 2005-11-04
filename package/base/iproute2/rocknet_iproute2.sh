@@ -8,7 +8,7 @@ iproute2_init_if() {
 }
 
 public_ip() {
-	addcode up 5 5 "ip addr add $1 dev $if"
+	addcode up 5 5 "ip addr add $1 broadcast + dev $if"
 	iproute2_init_if
 }
 

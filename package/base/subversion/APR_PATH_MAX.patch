@@ -1,0 +1,36 @@
+diff -dur subversion-1.2.3/Makefile.in src.subversion.1129998287.20026.922330946/subversion-1.2.3/Makefile.in
+--- subversion-1.2.3/Makefile.in	2005-05-09 07:56:09.000000000 +0200
++++ src.subversion.1129998287.20026.922330946/subversion-1.2.3/Makefile.in	2005-10-25 14:09:02.000000000 +0200
+@@ -110,7 +110,8 @@
+ SWIG = @SWIG@
+ SWIG_VERSION = @SWIG_VERSION@
+ SWIG_LIBSWIG_DIR = @SWIG_LIBSWIG_DIR@
+-SWIG_INCLUDES = -I$(SWIG_SRC_DIR) \
++SWIG_INCLUDES = -I/usr/include \
++                -I$(SWIG_SRC_DIR) \
+                 -I$(abs_srcdir)/subversion/include \
+                 -I$(SWIG_LIBSWIG_DIR) \
+                 -DSVN_SWIG_VERSION=$(SWIG_VERSION) \
+diff -dur subversion-1.2.3/subversion/bindings/swig/apr.i src.subversion.1129998287.20026.922330946/subversion-1.2.3/subversion/bindings/swig/apr.i
+--- subversion-1.2.3/subversion/bindings/swig/apr.i	2005-03-29 20:21:35.000000000 +0200
++++ src.subversion.1129998287.20026.922330946/subversion-1.2.3/subversion/bindings/swig/apr.i	2005-10-25 13:43:37.000000000 +0200
+@@ -44,6 +44,7 @@
+ 
+ /* ----------------------------------------------------------------------- */
+ 
++%include linux/limits.h
+ %include apr.h
+ 
+ /* ### be nice to have all the error values and macros. there are some
+diff -dur subversion-1.2.3/subversion/bindings/swig/perl/native/Makefile.PL.in src.subversion.1129998287.20026.922330946/subversion-1.2.3/subversion/bindings/swig/perl/native/Makefile.PL.in
+--- subversion-1.2.3/subversion/bindings/swig/perl/native/Makefile.PL.in	2005-03-22 10:31:58.000000000 +0100
++++ src.subversion.1129998287.20026.922330946/subversion-1.2.3/subversion/bindings/swig/perl/native/Makefile.PL.in	2005-10-25 14:15:24.000000000 +0200
+@@ -29,7 +29,7 @@
+ my @ldmodules = map {"-lsvn_$_-1"} (@modules, qw/diff subr/);
+ 
+ my $apr_shlib_path_var = '@SVN_APR_SHLIB_PATH_VAR@';
+-my $apr_cflags = '@SVN_APR_INCLUDES@';
++my $apr_cflags = '@SVN_APR_INCLUDES@ -I/usr/include';
+ my $apu_cflags = '@SVN_APRUTIL_INCLUDES@';
+ 
+ # According to the log of r7937, the flags guarded by the conditional break

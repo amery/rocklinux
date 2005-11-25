@@ -15,7 +15,6 @@ CONFIG_PMAC=y
 # CONFIG_GEMINI is not set
 # CONFIG_APUS is not set
 # CONFIG_SMP is not set
-# CONFIG_ALTIVEC is not set
 CONFIG_MACH_SPECIFIC=y
 
 # additional 2.6 kernel configs
@@ -29,6 +28,9 @@ include(`kernel-common.conf')
 include(`kernel-scsi.conf')
 include(`kernel-net.conf')
 include(`kernel-fs.conf')
+
+CONFIG_BROKEN_ON_SMP=y
+# CONFIG_SMP is not set
 
 CONFIG_HFS_FS=y
 
@@ -74,11 +76,6 @@ CONFIG_CPU_FREQ_26_API=y
 CONFIG_MAC_FLOPPY=y
 CONFIG_PMU_HD_BLINK=y
 # CONFIG_MAC_ADBKEYCODES is not set
-
-dnl make sure old OSS modules are build (ALSA does not yet work correct)
-dnl
-CONFIG_DMASOUND_PMAC=m
-CONFIG_DMASOUND=m
 
 dnl some network teaks (the GMAC is obsoleted by SUNGEM)
 dnl

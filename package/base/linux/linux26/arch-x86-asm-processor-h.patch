@@ -1,0 +1,19 @@
+--- ./include/asm-i386/processor.h.vanilla	2005-11-02 17:16:16.000000000 +0100
++++ ./include/asm-i386/processor.h	2005-11-02 17:17:08.000000000 +0100
+
+@@ -220,6 +220,7 @@
+ #define X86_CR4_OSFXSR		0x0200	/* enable fast FPU save and restore */
+ #define X86_CR4_OSXMMEXCPT	0x0400	/* enable unmasked SSE exceptions */
+ 
++#ifdef __KERNEL__
+ /*
+  * Save the cr4 feature set we're using (ie
+  * Pentium 4MB enable and PPro Global page
+@@ -246,6 +247,7 @@
+ 	write_cr4(cr4);
+ }
+ 
++#endif /* __KERNEL__ /*
+ /*
+  *      NSC/Cyrix CPU configuration register indexes
+  */

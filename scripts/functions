@@ -753,7 +753,17 @@ build_this_package() {
 			  $root/usr/share/applications/`basename $file`
 		done
 
-		if [ -f $confdir/postinstall.sh ] ; then
+		if [ -f $confdir/postinstall.sh.$xpkg ] ; then
+			echo "Installing postinstall file $confdir/postinstall.sh.$xpkg"
+			mkdir -p $root/etc/postinstall
+
+			rock_substitute $confdir/postinstall.sh.$xpkg > \
+			  $root/etc/postinstall/$xpkg-postinstall.sh
+		elif [ -f $confdir/postinstall.sh -a "$pkg" != "$xpkg" ] ; then
+			echo_error "forked package $xpkg from $pkg"
+			echo_error "but only found a 'postinstall.sh'"
+			echo_error "please create a 'postinstall.sh.$xpkg'"
+		elif [ -f $confdir/postinstall.sh ] ; then
 			echo "Installing postinstall file $confdir/postinstall.sh"
 			mkdir -p $root/etc/postinstall
 

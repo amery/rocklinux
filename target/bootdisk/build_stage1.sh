@@ -12,14 +12,17 @@ mknod dev/tty   c 5 0
 mknod dev/console c 5 1
 
 echo_status "Create checkisomd5 binary"
-cd ${base}/misc/isomd5sum
-make CC="${CC}" LDFLAGS="-L ${base}/build/${ROCKCFG_ID}/usr/lib -lpopt"
-cd -
-cp ${base}/misc/isomd5sum/checkisomd5 bin/
-cd -
+cp -r ${base}/misc/isomd5sum ${base}/build/${ROCKCFG_ID}/
+cat >${base}/build/${ROCKCFG_ID}/compile_isomd5sum.sh <<EOF
+#!/bin/bash
+cd /isomd5sum
 make clean
-cd -
-
+make CC=gcc
+EOF
+chmod +x ${base}/build/${ROCKCFG_ID}/compile_isomd5sum.sh
+chroot ${base}/build/${ROCKCFG_ID}/ /compile_isomd5sum.sh
+cp ${base}/build/${ROCKCFG_ID}/isomd5sum/checkisomd5 bin/
+rm -rf ${base}/build/${ROCKCFG_ID}/compile_isomd5sum.sh ${base}/build/${ROCKCFG_ID}/isomd5sum
 echo_status "Copying and adjusting linuxrc scipt"
 cp ${base}/target/${target}/linuxrc.sh linuxrc
 chmod +x linuxrc

@@ -29,7 +29,7 @@ then
 			bool "Build the KDE-GUI" ROCKCFG_PKG_LICQ_KDE 1
 			pkgcheck xosd X && bool "Build the OSD Plugin" ROCKCFG_PKG_LICQ_OSD 1
 			bool "Build the Auto-Replier" ROCKCFG_PKG_LICQ_REPLY 1
-			bool "Build the Forwarder" ROCKCFG_PKG_LICQ_EMAIL 1
+			bool "Build the Forwarder (broken in 1.3.2)" ROCKCFG_PKG_LICQ_EMAIL 0
 			bool "Build the Remote Management Service Plugin" ROCKCFG_PKG_LICQ_RMS 0
 		block_end
 	menu_end

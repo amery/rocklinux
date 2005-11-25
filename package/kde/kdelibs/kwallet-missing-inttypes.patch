@@ -1,0 +1,11 @@
+--- ./kwallet/backend/sha1.cc.orig	2005-10-27 21:06:44.000000000 +0200
++++ ./kwallet/backend/sha1.cc	2005-10-27 21:06:08.000000000 +0200
+@@ -29,6 +29,8 @@
+ #include "sha1.h"
+ #include <string.h>
+ 
++#include <inttypes.h>
++
+ // FIXME: this can be optimized to one instruction on most cpus.
+ #define rol(x,y) ((x << y) | (x >> (32-y)))
+ 

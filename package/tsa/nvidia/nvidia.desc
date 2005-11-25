@@ -21,7 +21,12 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
+#if xpkg == nvidia
 [I] Nvidia Linux driver
+#endif
+#if xpkg == nvidia-legacy
+[I] Nvidia Linux Driver for Legacy GPUs
+#endif
 
 [T] These XFree86 binary drivers provide optimized hardware acceleration of
 [T] OpenGL applications via a direct-rendering
@@ -29,19 +34,58 @@
 [T] GeForce2 Pro, GeForce2 GTS, GeForce 2 Ultra, GeForce2 Go, GeForce3, Quadro, 
 [T] Quadro2 MXR, and Quadro2 Pro chipsets. AGP and flat panel displays are also 
 [T] supported.
+#if xpkg == nvidia-legacy
+[T]
+[T] The following products are supported in the ForceWare Release 70 drivers
+[T] included in this package, but not in the current Release 75 driver:
+[T]
+[T] TNT2 
+[T] TNT2 Pro 
+[T] TNT2 Ultra 
+[T] TNT2 Model 64 (M64) 
+[T] TNT2 Model 64 (M64) Pro 
+[T] Vanta 
+[T] Vanta LT 
+[T] GeForce 256 
+[T] GeForce DDR 
+[T] GeForce2 GTS 
+[T] GeForce2 Pro 
+[T] GeForce2 Ti 
+[T] GeForce2 Ultra 
+[T] GeForce2 MX Integrated graphics
+[T] Quadro 
+[T] Quadro2 Pro 
+[T] Quadro2 EX
+#endif
 
 [U] http://www.nvidia.com
 
-[A] Nvidia Corp. 
+[A] Nvidia Corp.
+#if xpkg == nvidia
 [M] Sebastian Jaenicke <tsa@jaenicke.org>
+#endif
+#if xpkg == nvidia-legacy
+[M] Stefan Fiedler <stefan.fiedler at students.jku.at>
+#endif
 
 [C] base/system
 [R] + x86
 
 [L] Free-to-use
 [S] Stable
+#if xpkg == nvidia
 [V] 1.0-7676
+#endif
+#if xpkg == nvidia-legacy
+[V] 1.0-7174
+#endif
+
 [P] X -?---5---9 130.800
 
+#if xpkg == nvidia
 [D] 1685077456 NVIDIA-Linux-x86-1.0-7676-pkg1.run http://download.nvidia.com/XFree86/Linux-x86/1.0-7676/
+#endif
+#if xpkg == nvidia-legacy
+[D] 0 NVIDIA-Linux-x86-1.0-7174-pkg1.run http://download.nvidia.com/XFree86/Linux-x86/1.0-7174/
+#endif
 

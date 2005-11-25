@@ -29,5 +29,11 @@ add_uname_wrapper() {
 	EOT
 }
 
+add_depmod_wrapper() {
+	add_wrapper depmod <<- EOT
+		exit 0
+	EOT
+}
+
 kernelversion="$( getkernelversion )"
 

@@ -12,12 +12,12 @@ then
 	#
 	echo_status "Extracting yaboot boot loader images."
 	mkdir -p boot etc
-	tar --use-compress-program=bzip2 \
+	tar -O --use-compress-program=bzip2 \
 	    -xf $base/build/${ROCKCFG_ID}/ROCK/pkgs/yaboot.tar.bz2 \
-	    usr/lib/yaboot/yaboot -O > boot/yaboot
-	tar --use-compress-program=bzip2 \
+	    usr/lib/yaboot/yaboot > boot/yaboot
+	tar -O --use-compress-program=bzip2 \
 	    -xf $base/build/${ROCKCFG_ID}/ROCK/pkgs/yaboot.tar.bz2 \
-            usr/lib/yaboot/yaboot.rs6k -O > boot/yaboot.rs6k
+            usr/lib/yaboot/yaboot.rs6k > boot/yaboot.rs6k
 	cp boot/yaboot.rs6k install.bin
 	#
 	echo_status "Creating yaboot config files."

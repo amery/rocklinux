@@ -46,10 +46,10 @@ function add_lib () {
 # --- FUNCTIONS-END --
 
 # decide wether to compile the packet with dietlibc or not
-if [ "$ROCKCFG_DIETLIBC_ALL" = 1 -o "$pkg" = "dietlibc" ]; then
+if [ "$ROCKCFG_DIETLIBC_ALL" = 1 -o "$xpkg" = "dietlibc" ]; then
 	pkg_dietlibc_useit=1
 else
-	x="${pkg//-/_}" ; x="${x//+/_}" ; x="${x#*=}"
+	x="${xpkg//-/_}" ; x="${x//+/_}" ; x="${x#*=}"
 	eval "pkg_dietlibc_useit=\$ROCKCFG_DIETLIBC_${x}"
 fi
 [ "$pkg_dietlibc_useit" != 1 ] && pkg_dietlibc_useit=0

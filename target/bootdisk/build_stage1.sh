@@ -31,9 +31,9 @@ sed -i -e "s,^STAGE_2_BIG_IMAGE=\"2nd_stage.tar.gz\"$,STAGE_2_BIG_IMAGE=\"${ROCK
        linuxrc
 
 echo_status "Copy various helper applications."
-for file in ../2nd_stage/bin/{tar,gzip,bash2,bash,sh,mount,umount,ls,cat,uname,rm,ln,mkdir,rmdir,gawk} \
+for file in ../2nd_stage/bin/{tar,gzip,bash2,bash,sh,mount,umount,ls,cat,uname,rm,ln,mkdir,rmdir,gawk,awk,grep} \
 	    ../2nd_stage/sbin/{ip,hwscan,pivot_root,swapon,swapoff,udevstart} \
-	    ../2nd_stage/usr/bin/{wget,find,expand} \
+	    ../2nd_stage/usr/bin/{wget,find,expand,readlink} \
 	    ../2nd_stage/usr/sbin/lspci ; do
 	programs="${programs} ${file#../2nd_stage}"
 	cp ${file} bin/

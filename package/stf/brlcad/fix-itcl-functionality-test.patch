@@ -1,0 +1,22 @@
+--- brlcad-7.6.2/configure	2005-09-29 08:47:39.000000000 +0200
++++ brlcad-7.6.2-p2/configure	2005-10-29 03:28:14.000000000 +0200
+@@ -26736,7 +26736,7 @@
+ PRECPPFLAGS="$CPPFLAGS"
+ if test "x$itcl_link_works" = "xyes" ; then
+ 	LIBS="$LIBS $LIBITCL $LIBTCL"
+-	CPPFLAGS="$CPPFLAGS -Iinclude"
++	CPPFLAGS="$CPPFLAGS -DHAVE_CONFIG_H -Iinclude"
+ fi
+ if test "$cross_compiling" = yes; then
+   { { echo "$as_me:$LINENO: error: cannot run test program while cross compiling
+--- brlcad-7.6.2/configure.ac	2005-09-29 08:37:35.000000000 +0200
++++ brlcad-7.6.2-p2/configure.ac	2005-10-29 03:28:39.000000000 +0200
+@@ -1986,7 +1986,7 @@
+ PRECPPFLAGS="$CPPFLAGS"
+ if test "x$itcl_link_works" = "xyes" ; then
+ 	LIBS="$LIBS $LIBITCL $LIBTCL"
+-	CPPFLAGS="$CPPFLAGS -Iinclude"
++	CPPFLAGS="$CPPFLAGS -DHAVE_CONFIG_H -Iinclude"
+ fi
+ AC_TRY_RUN([
+ #include <itcl.h>

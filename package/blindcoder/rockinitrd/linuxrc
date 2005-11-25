@@ -38,7 +38,6 @@ mount -n -t proc proc /proc
 mount -n -t sysfs sysfs /sys
 mount -n -t ramfs ramfs /dev
 /sbin/udevstart
-/sbin/udevd --daemon
 cd /dev
 rm -rf fd
 ln -sf /proc/self/fd

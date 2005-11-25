@@ -177,6 +177,19 @@ EOF
 	return
 } # }}}
 getdevice () { # {{{
+	while : ; do
+		echo -en "\nDevice file to use (q to return) : ";
+		read device;
+		[ "${device}" == "q" ] && return -1;
+		if [ ! -e "${device}" ] ; then
+			echo -e "\nNot a valid device!"
+		else 
+			devicefile=${device}
+			return 0;
+		fi
+	done
+} # }}}
+getcdromdevice () { # {{{
 	cdroms="${1}"
 	floppies="${2}"
 	autoboot="${3}"
@@ -243,11 +256,16 @@ getdevice () { # {{{
 	return 1;
 } # }}}
 load_ramdisk_file() { # {{{
-	autoboot=${1}
+	devicetype=${1}
+	autoboot=${2}
 
 	echo -en "Select a device for loading the 2nd stage system from: \n\n"
 
-	getdevice 1 1 ${autoboot} || return
+	if [ "${devicetype}" == "cdroms" ] ; then
+		getcdromdevice 1 1 ${autoboot} || return
+	else 
+		getdevice || return
+	fi
 	
 	cat << EOF
 Select a stage 2 image file:
@@ -369,7 +387,7 @@ exec_sh() { # {{{
 checkisomd5() { # {{{
 	echo "Select a device for checking: "
 	
-	getdevice 1 0 0 || return
+	getcdromdevice 1 0 0 || return
 	echo "Running check..."
 
 	/bin/checkisomd5 ${devicefile}
@@ -386,6 +404,7 @@ mount -t ramfs none /dev || echo "Can't mount a ramfs on /dev"
 mount -t sysfs none /sys || echo "Can't mount sysfs on /sys"
 mount -t proc none /proc || echo "Can't mount /proc"
 mount -t tmpfs -o ${TMPFS_OPTIONS} none /tmp || echo "Can't mount /tmpfs"
+
 udevstart
 cd /dev
 rm -rf fd
@@ -394,6 +413,12 @@ cd -
 mod_load_info
 
 autoload_modules
+
+# some devices (scsi...) need time to settle...
+echo "Waiting for devices to settle..."
+sleep 5
+udevstart
+
 if [ ${autoboot} -eq 1 ] ; then
 	load_ramdisk_file 1
 fi
@@ -411,14 +436,15 @@ drivers (if needed) and configure the installation source so the
 EOF
 while [ ${exit_linuxrc} -eq 0 ] ; do
 	cat <<EOF
-	0. Load 2nd stage system from local device
-	1. Load 2nd stage system from network
-	2. Configure network interfaces (IPv4 only)
-	3. Load kernel modules from this disk
-	4. Load kernel modules from another disk
-	5. Activate already formatted swap device
-	6. Execute a shell (for experts!)
-	7. Validate a CD/DVD against its embedded checksum
+	0. Load 2nd stage system from cdrom or floppy drive
+	1. Load 2nd stage system from any device
+	2. Load 2nd stage system from network
+	3. Configure network interfaces (IPv4 only)
+	4. Load kernel modules from this disk
+	5. Load kernel modules from another disk
+	6. Activate already formatted swap device
+	7. Execute a shell (for experts!)
+	8. Validate a CD/DVD against its embedded checksum
 
 EOF
 	echo -n "What do you want to do [0-7] (default=0)? "
@@ -429,30 +455,33 @@ EOF
 	
 	case "${input}" in
 		0)
-		  load_ramdisk_file 0
+		  load_ramdisk_file cdroms 0
 		  ;;
 		1)
-		  httpload
+		  load_ramdisk_file any 0
 		  ;;
 		2)
-		  config_net
+		  httpload
 		  ;;
 		3)
-		  load_modules "${mod_dir}"
+		  config_net
 		  ;;
 		4)
+		  load_modules "${mod_dir}"
+		  ;;
+		5)
 		  mkdir "/mnt_floppy" || echo "Can't create /mnt_floppy"
 		  trymount "/dev/floppy/0" "/mnt_floppy" && load_modules "/mnt_floppy"
 		  umount "/mnt_floppy" || echo "Can't umount /mnt_floppy"
 		  rmdir "/mnt_floppy" || echo "Can't remove /mnt_floppy"
 		  ;;
-		5)
+		6)
 		  activate_swap
 		  ;;
-		6)
+		7)
 		  exec_sh
 		  ;;
-		7)
+		8)
 		  checkisomd5
 		  ;;
 		*)

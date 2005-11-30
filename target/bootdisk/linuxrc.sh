@@ -107,7 +107,7 @@ EOF
 
 	url="${baseurl%/}/${filename}"
 	echo "[ ${url} ]"
-	ROCK_INSTALL_SOURCE_URL=${baseurl}
+	export ROCK_INSTALL_SOURCE_URL=${baseurl}
 
 	exit_linuxrc=1;
 	if ! mkdir /mnt_root ; then
@@ -331,8 +331,8 @@ EOF
 		exit_linuxrc=0
 	fi
 
-	ROCK_INSTALL_SOURCE_DEV=${devicefile}
-	ROCK_INSTALL_SOURCE_FILE=${filename}
+	export ROCK_INSTALL_SOURCE_DEV=${devicefile}
+	export ROCK_INSTALL_SOURCE_FILE=${filename}
 	doboot
 } # }}}
 activate_swap() { # {{{

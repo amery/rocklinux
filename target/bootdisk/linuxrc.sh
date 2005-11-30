@@ -420,7 +420,7 @@ sleep 5
 udevstart
 
 if [ ${autoboot} -eq 1 ] ; then
-	load_ramdisk_file 1
+	load_ramdisk_file cdroms 1
 fi
 autoboot=0
 cat << EOF

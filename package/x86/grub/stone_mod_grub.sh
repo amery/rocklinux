@@ -30,6 +30,22 @@ EOT
 	)"
 }
 
+normalize_device() {
+	local master_devid this_devid this_devname
+	local device="$1"
+
+	master_devid="`ls -lL $device | awk '{print $5 $6;}'`"
+
+	while read this_devid this_devname; do
+		if [ "$this_devid" = "$master_devid" ]; then
+			device="$this_devname"
+		fi
+	done < <( ls -lL --time-style='+xx' /dev/[hs]d[a-z]* |
+		awk '{print $5 $6 " " $8;}'; )
+
+	echo "$device"
+}
+
 convert_device () {
     device="$1"
 

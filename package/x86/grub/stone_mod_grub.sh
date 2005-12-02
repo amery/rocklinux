@@ -37,18 +37,25 @@ convert_device () {
     user_drive_maj=`ls -Ll $device |
     awk '{if ($6 < 64) printf("%c%d0", $1, $5); else printf("%c%d1", $1, $5)}'`
 
-    # does your bios know about the above drive?
+    # does the bios know about the above drive?
+    tmp_part=""
     for bios_drive in `grep -v '^#' /boot/grub/device.map|awk '{print $2}'`; do
-    bios_drive_maj=`ls -l $bios_drive |
-    awk '{if ($6 < 64) printf("%c%d0", $1, $5); else printf("%c%d1", $1, $5)}'`
-
-    if [ "$user_drive_maj" = "$bios_drive_maj" ]; then
-	# yupi ya yeh! we found your drive!
-	root_drive=`grep $bios_drive /boot/grub/device.map | awk '{print $1}'`
-	    tmp_part=`ls -Ll $device | awk '{print $6}'`
-	break
-    fi
+	test -e $bios_drive || continue
+	bios_drive_maj=`ls -Ll $bios_drive |
+	awk '{if ($6 < 64) printf("%c%d0", $1, $5); else printf("%c%d1", $1, $5)}'`
+	if [ "$user_drive_maj" = "$bios_drive_maj" ]; then
+	    # yupi ya yeh! we found the drive!
+	    root_drive=`grep $bios_drive /boot/grub/device.map | awk '{print $1}'`
+		tmp_part=`ls -Ll $device | awk '{print $6}'`
+	    break
+	fi
     done
+
+    # give up
+    if [ -z "$tmp_part" ]; then
+	echo "(unknown)"
+	return
+    fi
 
     # convert the partition number to GRUB style
     if [ $tmp_part -gt 64 ]; then
@@ -56,7 +63,7 @@ convert_device () {
 	# this doesn't handle the disk itself correctly - just the partitions
 	root_part=$[$tmp_part-65]
     else
-    root_part=$[$tmp_part-1]
+	root_part=$[$tmp_part-1]
     fi 
     unset tmp_part
 
@@ -99,25 +106,31 @@ grub_init() {
 				awk '/\/dev\// { print $1; }'`"
 	bootdev="`grep ' /boot ' /proc/mounts | tail -n 1 | \
 				awk '/\/dev\// { print $1; }'`"
+
+	if [ "$rootdev" = "/dev/root" -a '!' -e /dev/root ]; then
+		rootdev="`cat /proc/cmdline | tr ' ' '\n' | \
+			grep '^root=' | cut -f2- -d= | head -n1`"
+	fi
+
 	[ -z "$bootdev" ] && bootdev="$rootdev"
 
-	i=0
-	rootdev="$( cd `dirname $rootdev` ; pwd -P )/$( basename $rootdev )"
-	while [ -L $rootdev ] ; do
-		directory="$( cd `dirname $rootdev` ; pwd -P )"
-		rootdev="$( ls -l $rootdev | sed 's,.* -> ,,' )"
-		[ "${rootdev##/*}" ] && rootdev="$directory/$rootdev"
-		i=$(( $i + 1 )) ; [ $i -gt 20 ] && rootdev="Not found!"
-	done
+	# i=0
+	# rootdev="$( cd `dirname $rootdev` ; pwd -P )/$( basename $rootdev )"
+	# while [ -L $rootdev ] ; do
+	# 	directory="$( cd `dirname $rootdev` ; pwd -P )"
+	# 	rootdev="$( ls -l $rootdev | sed 's,.* -> ,,' )"
+	# 	[ "${rootdev##/*}" ] && rootdev="$directory/$rootdev"
+	# 	i=$(( $i + 1 )) ; [ $i -gt 20 ] && rootdev="Not found!"
+	# done
 
-	i=0
-	bootdev="$( cd `dirname $bootdev` ; pwd -P )/$( basename $bootdev )"
-	while [ -L $bootdev ] ; do
-		directory="$( cd `dirname $bootdev` ; pwd -P )"
-		bootdev="$( ls -l $bootdev | sed 's,.* -> ,,' )"
-		[ "${bootdev##/*}" ] && bootdev="$directory/$bootdev"
-		i=$(( $i + 1 )) ; [ $i -gt 20 ] && bootdev="Not found!"
-	done
+	# i=0
+	# bootdev="$( cd `dirname $bootdev` ; pwd -P )/$( basename $bootdev )"
+	# while [ -L $bootdev ] ; do
+	# 	directory="$( cd `dirname $bootdev` ; pwd -P )"
+	# 	bootdev="$( ls -l $bootdev | sed 's,.* -> ,,' )"
+	# 	[ "${bootdev##/*}" ] && bootdev="$directory/$bootdev"
+	# 	i=$(( $i + 1 )) ; [ $i -gt 20 ] && bootdev="Not found!"
+	# done
 
 	if [ -s /boot/grub/device.map ] ; then
 		rootdrive=`convert_device $rootdev`

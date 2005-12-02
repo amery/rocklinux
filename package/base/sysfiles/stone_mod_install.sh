@@ -213,6 +213,7 @@ This dialog allows you to modify your discs parition layout and to create filesy
 mount -v -t ramfs ramfs /dev
 mount -v -t proc proc /proc
 mount -v -t sysfs sysfs /sys
+ln -fs /proc/self/fd /dev/fd
 /sbin/udevstart
 . /etc/profile
 stone setup

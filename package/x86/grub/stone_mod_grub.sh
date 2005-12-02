@@ -130,6 +130,9 @@ grub_init() {
 
 	[ -z "$bootdev" ] && bootdev="$rootdev"
 
+	rootdev=`normalize_device $rootdev`
+	bootdev=`normalize_device $bootdev`
+
 	# i=0
 	# rootdev="$( cd `dirname $rootdev` ; pwd -P )/$( basename $rootdev )"
 	# while [ -L $rootdev ] ; do

@@ -20,18 +20,16 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1130718648 Mon Oct 31 01:30:48 2005 (5)
-[TIMESTAMP] 1130951187 Wed Nov  2 18:06:27 2005 (9) ERROR
-[TIMESTAMP] 1131120084 Fri Nov  4 17:01:24 2005 (9) ERROR
+[TIMESTAMP] 1133154968 Mon Nov 28 06:16:08 2005 (5)
+[TIMESTAMP] 1133397124 Thu Dec  1 01:32:04 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-tpctl.log 9-tpctl.err
+[LOGS] 5-tpctl.log 9-tpctl.log
 
-[BUILDTIME] 3575 (5)
-[BUILDTIME] 2087 (9) ERROR
-[BUILDTIME] 2112 (9) ERROR
+[BUILDTIME] 3620 (5)
+[BUILDTIME] 3692 (9)
 [SIZE] 0.44 MB, 31 files
 
 [DEP] 00-dirtree alsa atk atk:dev audiofile bash2 binutils bzip2
@@ -43,59 +41,8 @@
 [DEP] libgnomecanvas:dev libgnomeui libgnomeui:dev libjpeg libxml2 linux26
 [DEP] linux26-header:dev linux26-source make mktemp module-init-tools
 [DEP] ncurses:dev net-tools openssl orbit2 orbit2:dev pango pango:dev
-[DEP] pkgconfig popt popt:dev sed sysfiles tar util-linux xorg zapping
-[DEP] zlib:dev
+[DEP] perl5 pkgconfig popt popt:dev sed sysfiles tar util-linux xorg
+[DEP] zapping zlib:dev
 
 [PROVIDES] apmiser configure-thinkpad ntpctl tpctl
-
-[9-ERROR]   CC      /ROCK/src.tpctl.1131120043.24660.2726062018/thinkpad-5.8/2.6/drivers/thinkpadpm.mod.o
-[9-ERROR]   LD [M]  /ROCK/src.tpctl.1131120043.24660.2726062018/thinkpad-5.8/2.6/drivers/thinkpadpm.ko
-[9-ERROR] make[2]: Leaving directory `/usr/src/linux-2.6.13.4-rock'
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.tpctl.1131120043.24660.2726062018/thinkpad-5.8/2.6/drivers'
-[9-ERROR] /sbin/modprobe -r smapi || true
-[9-ERROR] FATAL: Could not load /lib/modules/2.6.12.3-rock/modules.dep: No such file or directory
-[9-ERROR] /sbin/modprobe -r superio || true
-[9-ERROR] FATAL: Could not load /lib/modules/2.6.12.3-rock/modules.dep: No such file or directory
-[9-ERROR] /sbin/modprobe -r rtcmosram || true
-[9-ERROR] FATAL: Could not load /lib/modules/2.6.12.3-rock/modules.dep: No such file or directory
-[9-ERROR] /sbin/modprobe -r thinkpadpm || true
-[9-ERROR] FATAL: Could not load /lib/modules/2.6.12.3-rock/modules.dep: No such file or directory
-[9-ERROR] /sbin/modprobe -r thinkpad || true
-[9-ERROR] FATAL: Could not load /lib/modules/2.6.12.3-rock/modules.dep: No such file or directory
-[9-ERROR] cd /lib/modules/2.6.13.4-rock && { rm -vf thinkpad/* ; rmdir thinkpad ; }
-[9-ERROR] removed `thinkpad/rtcmosram.ko'
-[9-ERROR] removed `thinkpad/smapi.ko'
-[9-ERROR] removed `thinkpad/superio.ko'
-[9-ERROR] removed `thinkpad/thinkpad.ko'
-[9-ERROR] removed `thinkpad/thinkpadpm.ko'
-[9-ERROR] if [ ! -d /lib/modules/2.6.13.4-rock/thinkpad ]; then mkdir -p -m 755 /lib/modules/2.6.13.4-rock/thinkpad ; fi
-[9-ERROR] install -m 444 -o 0 -g 0 2.6/drivers/thinkpad.ko /lib/modules/2.6.13.4-rock/thinkpad/thinkpad.ko
-[9-ERROR] install -m 444 -o 0 -g 0 2.6/drivers/smapi.ko /lib/modules/2.6.13.4-rock/thinkpad/smapi.ko
-[9-ERROR] install -m 444 -o 0 -g 0 2.6/drivers/superio.ko /lib/modules/2.6.13.4-rock/thinkpad/superio.ko
-[9-ERROR] install -m 444 -o 0 -g 0 2.6/drivers/rtcmosram.ko /lib/modules/2.6.13.4-rock/thinkpad/rtcmosram.ko
-[9-ERROR] install -m 444 -o 0 -g 0 2.6/drivers/thinkpadpm.ko /lib/modules/2.6.13.4-rock/thinkpad/thinkpadpm.ko
-[9-ERROR] depmod -a
-[9-ERROR] WARNING: Couldn't open directory /lib/modules/2.6.12.3-rock: No such file or directory
-[9-ERROR] FATAL: Could not open /lib/modules/2.6.12.3-rock/modules.dep.temp for writing: No such file or directory
-[9-ERROR] make: *** [install_modules] Error 1
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Checking usr/share/applications/configure-thinkpad.desktop ... 
-[9-ERROR] Found 35 files for this package.
-[9-ERROR] Applying package split: 40 tpctl:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 tpctl:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 tpctl:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <tpctl> Creating flist file ...
-[9-ERROR] <tpctl> Creating package dependencies file ...
-[9-ERROR] <tpctl> Creating md5sum and cksum files ...
-[9-ERROR] <tpctl> Creating package description ...
-[9-ERROR] <tpctl:doc> Creating flist file ...
-[9-ERROR] <tpctl:doc> Creating package dependencies file ...
-[9-ERROR] <tpctl:doc> Creating md5sum and cksum files ...
-[9-ERROR] <tpctl:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building tpctl=tpctl.
 

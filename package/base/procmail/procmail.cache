@@ -20,8 +20,8 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1130569463 Sat Oct 29 09:04:23 2005 (5)
-[TIMESTAMP] 1130785092 Mon Oct 31 19:58:12 2005 (9)
+[TIMESTAMP] 1132995581 Sat Nov 26 09:59:41 2005 (5)
+[TIMESTAMP] 1133218962 Tue Nov 29 00:02:42 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
@@ -29,12 +29,12 @@
 [LOGS] 5-procmail.log 9-procmail.log
 
 [BUILDTIME] 2129 (5)
-[BUILDTIME] 2696 (9)
+[BUILDTIME] 2733 (9)
 [SIZE] 0.23 MB, 16 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep libnet:dev linux26-header:dev make mktemp
-[DEP] sed sendmail sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep libnet:dev linux26-header:dev
+[DEP] make mktemp sed sendmail sysfiles tar
 
 [PROVIDES] formail lockfile mailstat procmail
 

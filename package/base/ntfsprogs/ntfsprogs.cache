@@ -20,23 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1130712199 Sun Oct 30 23:43:19 2005 (5)
-[TIMESTAMP] 1130944456 Wed Nov  2 16:14:16 2005 (9)
+[TIMESTAMP] 1133148120 Mon Nov 28 04:22:00 2005 (5)
+[TIMESTAMP] 1133389949 Wed Nov 30 23:32:29 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-ntfsprogs.log 9-ntfsprogs.log
 
-[BUILDTIME] 5747 (5)
-[BUILDTIME] 5906 (9)
-[SIZE] 0.43 MB, 31 files
+[BUILDTIME] 6413 (5)
+[BUILDTIME] 6534 (9)
+[SIZE] 0.53 MB, 35 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev gnome-libs14 gnome14-dirtree
-[DEP] grep linux26-header:dev make mktemp net-tools pkgconfig sed sysfiles
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils fuse
+[DEP] fuse:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev gnome-libs14
+[DEP] gnome14-dirtree gnutls:dev grep libgcrypt:dev libgpg-error:dev
+[DEP] linux26-header:dev make mktemp net-tools pkgconfig sed sysfiles
 [DEP] tar util-linux
 
 [PROVIDES] libntfs.a libntfs.so mkntfs ntfscat ntfsclone ntfscluster
-[PROVIDES] ntfsfix ntfsinfo ntfslabel ntfsls ntfsresize ntfsundelete
+[PROVIDES] ntfscp ntfsfix ntfsinfo ntfslabel ntfsls ntfsmount ntfsresize
+[PROVIDES] ntfsundelete
 

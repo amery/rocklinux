@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1130573010 Sat Oct 29 10:03:30 2005 (5)
-[TIMESTAMP] 1130789463 Mon Oct 31 21:11:03 2005 (9)
+[TIMESTAMP] 1132999357 Sat Nov 26 11:02:37 2005 (5)
+[TIMESTAMP] 1133223543 Tue Nov 29 01:19:03 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-blackbox.log 9-blackbox.log
 
-[BUILDTIME] 4408 (5)
-[BUILDTIME] 4955 (9)
-[SIZE] 0.61 MB, 30 files
+[BUILDTIME] 7571 (5)
+[BUILDTIME] 8242 (9)
+[SIZE] 0.91 MB, 22 files
 
-[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp net-tools patch perl5 sed sysfiles
-[DEP] tar texinfo xorg xorg:dev
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils expat findutils
+[DEP] freetype freetype:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
+[DEP] linux26-header:dev make mktemp net-tools pkgconfig sed sysfiles
+[DEP] tar util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] blackbox bsetbg bsetroot
+[PROVIDES] blackbox bsetbg bsetroot bstyleconvert libbt.a
 

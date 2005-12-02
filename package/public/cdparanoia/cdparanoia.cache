@@ -20,8 +20,8 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1130555121 Sat Oct 29 05:05:21 2005 (5)
-[TIMESTAMP] 1130763731 Mon Oct 31 14:02:11 2005 (9)
+[TIMESTAMP] 1132980749 Sat Nov 26 05:52:29 2005 (5)
+[TIMESTAMP] 1133201239 Mon Nov 28 19:07:19 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
@@ -29,12 +29,12 @@
 [LOGS] 5-cdparanoia.log 9-cdparanoia.log
 
 [BUILDTIME] 1673 (5)
-[BUILDTIME] 2324 (9)
+[BUILDTIME] 2331 (9)
 [SIZE] 0.14 MB, 14 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] net-tools patch sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
+[DEP] mktemp net-tools patch sed sysfiles tar
 
 [PROVIDES] cdparanoia libcdda_interface.a libcdda_interface.so
 [PROVIDES] libcdda_paranoia.a libcdda_paranoia.so

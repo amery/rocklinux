@@ -20,50 +20,47 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1130586754 Sat Oct 29 13:52:34 2005 (5) ERROR
-[TIMESTAMP] 1130805470 Tue Nov  1 01:37:50 2005 (9) ERROR
-[TIMESTAMP] 1131107672 Fri Nov  4 13:34:32 2005 (5)
-[TIMESTAMP] 1131115506 Fri Nov  4 15:45:06 2005 (9)
+[TIMESTAMP] 1133015650 Sat Nov 26 15:34:10 2005 (5)
+[TIMESTAMP] 1133242343 Tue Nov 29 06:32:23 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-mozilla.log 9-mozilla.log
 
-[BUILDTIME] 56441 (5) ERROR
-[BUILDTIME] 56701 (9) ERROR
-[BUILDTIME] 219896 (5)
-[BUILDTIME] 220846 (9)
-[SIZE] 45.06 MB, 2024 files
+[BUILDTIME] 220423 (5)
+[BUILDTIME] 220246 (9)
+[SIZE] 45.11 MB, 2023 files
 
 [DEP] 00-dirtree alsa atk atk:dev bash2 binutils bzip2 control-center
 [DEP] coreutils diffutils expat findutils freetype freetype:dev gawk
 [DEP] gcc34 gcc34:dev gconf glib glib:dev glibc23 glibc23:dev gnome-vfs
 [DEP] gnome-vfs-extras gnome-vfs:dev gnome2-dirtree grep gtk+ gtk+:dev
-[DEP] libbonobo libidl libidl:dev linux26-header:dev make mktemp
-[DEP] nautilus-cd-burner net-tools orbit2 pango pango:dev patch perl5
-[DEP] pkgconfig sed sysfiles tar xorg xorg:dev zip zlib:dev
+[DEP] libbonobo libidl libidl:dev libjpeg libjpeg:dev libpng libpng:dev
+[DEP] linux26-header:dev make mktemp nautilus-cd-burner net-tools orbit2
+[DEP] pango pango:dev patch perl5 pkgconfig sed sysfiles tar xorg xorg:dev
+[DEP] zip zlib:dev
 
 [PROVIDES] gtk2xtbin.h gtkxtbin.h libaccessibility.so libaddrbook.so
 [PROVIDES] libappcomps.so libautoconfig.so libbayesflt.so libcaps.so
 [PROVIDES] libchrome.so libcomposer.so libcookie.so libdocshell.so
 [PROVIDES] libeditor.so libembedcomponents.so libfileview.so
 [PROVIDES] libgfx_gtk.so libgfxps.so libgfxxprint.so libgkgfx.so
-[PROVIDES] libgklayout.so libgkplugin.so libgtkembedmoz.so
-[PROVIDES] libgtkxtbin.so libhtmlpars.so libi18n.so libimglib2.so
-[PROVIDES] libimpComm4xMail.so libimpText.so libimport.so libinspector.so
-[PROVIDES] libipcdc.so libjar50.so libjsd.so libjsj.so libldap50.so
-[PROVIDES] liblocalmail.so liblockmodule.so libmailnews.so libmailview.so
-[PROVIDES] libmime.so libmimeemitter.so libmork.so libmozfind.so
-[PROVIDES] libmozjs.so libmozldap.so libmozz.so libmsgbaseutil.so
-[PROVIDES] libmsgcompose.so libmsgdb.so libmsgimap.so libmsgmdn.so
-[PROVIDES] libmsgnews.so libmsgsmime.so libmyspell.so libnecko.so
-[PROVIDES] libnecko2.so libnkgnomevfs.so libnsappshell.so libnspr4.so
-[PROVIDES] libnsprefm.so libnss3.so libnssckbi.so libnullplugin.so
-[PROVIDES] liboji.so libp3p.so libpipboot.so libpipnss.so libpippki.so
-[PROVIDES] libplc4.so libplds4.so libpref.so libprldap50.so libprofile.so
-[PROVIDES] librdf.so libsmime3.so libsoftokn3.so libspellchecker.so
-[PROVIDES] libssl3.so libsystem-pref.so libtransformiix.so libtransmgr.so
+[PROVIDES] libgklayout.so libgkplugin.so libgtkembedmoz.so libgtkxtbin.so
+[PROVIDES] libhtmlpars.so libi18n.so libimglib2.so libimpComm4xMail.so
+[PROVIDES] libimpText.so libimport.so libinspector.so libipcdc.so
+[PROVIDES] libjar50.so libjsd.so libjsj.so libldap50.so liblocalmail.so
+[PROVIDES] liblockmodule.so libmailnews.so libmailview.so libmime.so
+[PROVIDES] libmimeemitter.so libmork.so libmozfind.so libmozjs.so
+[PROVIDES] libmozldap.so libmsgbaseutil.so libmsgcompose.so libmsgdb.so
+[PROVIDES] libmsgimap.so libmsgmdn.so libmsgnews.so libmsgsmime.so
+[PROVIDES] libmyspell.so libnecko.so libnecko2.so libnkgnomevfs.so
+[PROVIDES] libnsappshell.so libnspr4.so libnsprefm.so libnss3.so
+[PROVIDES] libnssckbi.so libnullplugin.so liboji.so libp3p.so
+[PROVIDES] libpipboot.so libpipnss.so libpippki.so libplc4.so
+[PROVIDES] libplds4.so libpref.so libprldap50.so libprofile.so librdf.so
+[PROVIDES] libsmime3.so libsoftokn3.so libspellchecker.so libssl3.so
+[PROVIDES] libsystem-pref.so libtransformiix.so libtransmgr.so
 [PROVIDES] libtxmgr.so libtypeaheadfind.so libuconv.so libucvmath.so
 [PROVIDES] libuniversalchardet.so libvcard.so libwallet.so
 [PROVIDES] libwalletviewers.so libwebbrwsr.so libwebsrvcs.so

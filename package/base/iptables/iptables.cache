@@ -20,42 +20,43 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1130653450 Sun Oct 30 07:24:10 2005 (5)
-[TIMESTAMP] 1130880656 Tue Nov  1 22:30:56 2005 (9)
+[TIMESTAMP] 1133086438 Sun Nov 27 11:13:58 2005 (5)
+[TIMESTAMP] 1133322891 Wed Nov 30 04:54:51 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-iptables.log 9-iptables.log
 
-[BUILDTIME] 3685 (5)
-[BUILDTIME] 4015 (9)
-[SIZE] 0.64 MB, 87 files
+[BUILDTIME] 3902 (5)
+[BUILDTIME] 4264 (9)
+[SIZE] 0.69 MB, 92 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
 [DEP] sed sysfiles tar
 
-[PROVIDES] ip6tables iptables iptables-restore iptables-save
-[PROVIDES] libip6t_HL.so libip6t_LOG.so libip6t_MARK.so libip6t_TRACE.so
-[PROVIDES] libip6t_eui64.so libip6t_hl.so libip6t_icmpv6.so
-[PROVIDES] libip6t_length.so libip6t_limit.so libip6t_mac.so
-[PROVIDES] libip6t_mark.so libip6t_multiport.so libip6t_owner.so
-[PROVIDES] libip6t_physdev.so libip6t_standard.so libip6t_tcp.so
-[PROVIDES] libip6t_udp.so libipt_CLASSIFY.so libipt_CONNMARK.so
-[PROVIDES] libipt_DNAT.so libipt_DSCP.so libipt_ECN.so libipt_LOG.so
-[PROVIDES] libipt_MARK.so libipt_MASQUERADE.so libipt_MIRROR.so
-[PROVIDES] libipt_NETMAP.so libipt_NOTRACK.so libipt_REDIRECT.so
+[PROVIDES] ip6tables iptables iptables-restore iptables-save libip6t_HL.so
+[PROVIDES] libip6t_LOG.so libip6t_MARK.so libip6t_NFQUEUE.so
+[PROVIDES] libip6t_REJECT.so libip6t_TRACE.so libip6t_eui64.so
+[PROVIDES] libip6t_hl.so libip6t_icmpv6.so libip6t_length.so
+[PROVIDES] libip6t_limit.so libip6t_mac.so libip6t_mark.so
+[PROVIDES] libip6t_multiport.so libip6t_owner.so libip6t_physdev.so
+[PROVIDES] libip6t_standard.so libip6t_tcp.so libip6t_udp.so
+[PROVIDES] libipt_CLASSIFY.so libipt_CONNMARK.so libipt_DNAT.so
+[PROVIDES] libipt_DSCP.so libipt_ECN.so libipt_LOG.so libipt_MARK.so
+[PROVIDES] libipt_MASQUERADE.so libipt_MIRROR.so libipt_NETMAP.so
+[PROVIDES] libipt_NFQUEUE.so libipt_NOTRACK.so libipt_REDIRECT.so
 [PROVIDES] libipt_REJECT.so libipt_SAME.so libipt_SNAT.so libipt_TARPIT.so
 [PROVIDES] libipt_TCPMSS.so libipt_TOS.so libipt_TRACE.so libipt_TTL.so
 [PROVIDES] libipt_ULOG.so libipt_addrtype.so libipt_ah.so libipt_comment.so
 [PROVIDES] libipt_connlimit.so libipt_connmark.so libipt_conntrack.so
-[PROVIDES] libipt_dscp.so libipt_ecn.so libipt_esp.so libipt_hashlimit.so
-[PROVIDES] libipt_helper.so libipt_icmp.so libipt_iprange.so
-[PROVIDES] libipt_length.so libipt_limit.so libipt_mac.so libipt_mark.so
-[PROVIDES] libipt_multiport.so libipt_owner.so libipt_physdev.so
-[PROVIDES] libipt_pkttype.so libipt_realm.so libipt_recent.so libipt_rpc.so
-[PROVIDES] libipt_sctp.so libipt_standard.so libipt_state.so libipt_tcp.so
-[PROVIDES] libipt_tcpmss.so libipt_tos.so libipt_ttl.so libipt_udp.so
-[PROVIDES] libipt_unclean.so
+[PROVIDES] libipt_dccp.so libipt_dscp.so libipt_ecn.so libipt_esp.so
+[PROVIDES] libipt_hashlimit.so libipt_helper.so libipt_icmp.so
+[PROVIDES] libipt_iprange.so libipt_length.so libipt_limit.so libipt_mac.so
+[PROVIDES] libipt_mark.so libipt_multiport.so libipt_owner.so
+[PROVIDES] libipt_physdev.so libipt_pkttype.so libipt_realm.so
+[PROVIDES] libipt_recent.so libipt_rpc.so libipt_sctp.so libipt_standard.so
+[PROVIDES] libipt_state.so libipt_string.so libipt_tcp.so libipt_tcpmss.so
+[PROVIDES] libipt_tos.so libipt_ttl.so libipt_udp.so libipt_unclean.so
 

@@ -20,28 +20,36 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1130732995 Mon Oct 31 05:29:55 2005 (5) ERROR
-[TIMESTAMP] 1130760978 Mon Oct 31 13:16:18 2005 (5)
-[TIMESTAMP] 1130966208 Wed Nov  2 22:16:48 2005 (9)
+[TIMESTAMP] 1133171815 Mon Nov 28 10:56:55 2005 (5)
+[TIMESTAMP] 1133414877 Thu Dec  1 06:27:57 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-amarok.log 9-amarok.log
 
-[BUILDTIME] 38053 (5) ERROR
-[BUILDTIME] 18478 (5)
-[BUILDTIME] 18474 (9)
-[SIZE] 4.18 MB, 52 files
+[BUILDTIME] 58485 (5)
+[BUILDTIME] 58774 (9)
+[SIZE] 8.36 MB, 264 files
 
-[DEP] 00-dirtree arts arts:dev bash2 binutils bzip2 coreutils diffutils
-[DEP] expat findutils freetype gawk gcc34 gcc34:dev gettext glib glib:dev
+[DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev
+[DEP] bash2 binutils bzip2 coreutils diffutils esound esound:dev expat
+[DEP] expat:dev fam fam:dev findutils flac flac:dev freetype freetype:dev
+[DEP] gawk gcc34 gcc34:dev gettext glib glib12 glib12:dev glib:dev
 [DEP] glibc23 glibc23:dev gnome-libs14 gnome14-dirtree gnome2-dirtree
-[DEP] grep gst-plugins:dev gstreamer:dev gtk+12 gwenview kdebase:dev
-[DEP] kdelibs kdelibs:dev kdemultimedia:dev libjpeg libpng libpng:dev
-[DEP] libsdl libxml2 libxml2:dev linux26-header:dev make mktemp nas
-[DEP] net-tools perl5 pkgconfig popt:dev qt qt:dev sed sysfiles taglib
-[DEP] tar tunepimp:dev util-linux xine-lib xine-lib:dev xmms xorg xorg:dev
-[DEP] zlib:dev
+[DEP] grep gst-plugins:dev gstreamer gstreamer:dev gtk+12 gtk+12:dev
+[DEP] jack jack:dev kdebase kdebase:dev kdegames kdelibs kdelibs:dev
+[DEP] kdemultimedia kdemultimedia:dev kdeutils koffice libart_lgpl23
+[DEP] libart_lgpl23:dev libidn libidn:dev libjpeg libjpeg:dev libkipi
+[DEP] libmusicbrainz libmusicbrainz:dev libpng libpng:dev libsdl libsdl:dev
+[DEP] libvisual libvisual:dev libxml2 libxml2:dev linux26-header:dev
+[DEP] mad mad:dev make mktemp nas net-tools ogg-vorbis ogg-vorbis:dev
+[DEP] pcre pcre:dev perl5 pkgconfig popt popt:dev qt qt:dev sed sysfiles
+[DEP] taglib taglib:dev tar tunepimp tunepimp:dev util-linux vim xine-lib
+[DEP] xine-lib:dev xmms xmms:dev xorg xorg:dev zlib:dev
 
+[PROVIDES] amarok amarok_libvisual amarok_xmmswrapper2 amarokapp
+[PROVIDES] konqsidebar_universalamarok.so libamarok_artsengine_plugin.so
+[PROVIDES] libamarok_gstengine_plugin.so libamarok_void-engine_plugin.so
+[PROVIDES] libamarok_xine-engine.so libamarokarts.so
 

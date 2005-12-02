@@ -20,34 +20,32 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1130600868 Sat Oct 29 17:47:48 2005 (5) ERROR
-[TIMESTAMP] 1130755557 Mon Oct 31 11:45:57 2005 (5) ERROR
-[TIMESTAMP] 1130766067 Mon Oct 31 14:41:07 2005 (5)
-[TIMESTAMP] 1130822241 Tue Nov  1 06:17:21 2005 (9)
+[TIMESTAMP] 1133030771 Sat Nov 26 19:46:11 2005 (5)
+[TIMESTAMP] 1133259923 Tue Nov 29 11:25:23 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-avifile.log 9-avifile.log
 
-[BUILDTIME] 1387 (5) ERROR
-[BUILDTIME] 1800 (5) ERROR
-[BUILDTIME] 37127 (5)
-[BUILDTIME] 36965 (9)
-[SIZE] 6.70 MB, 97 files
+[BUILDTIME] 37988 (5)
+[BUILDTIME] 38864 (9)
+[SIZE] 6.73 MB, 109 files
 
 [DEP] 00-dirtree a52dec:dev autoconf bash2 binutils bzip2 coreutils
 [DEP] diffutils divx4linux divx4linux:dev expat faad2 faad2:dev
 [DEP] findutils freetype freetype:dev gawk gcc34 gcc34:dev glibc23
 [DEP] glibc23:dev grep lame libjpeg libjpeg:dev libpng libsdl libsdl:dev
 [DEP] libtool linux26-header:dev make mktemp nas net-tools ogg-vorbis
-[DEP] ogg-vorbis:dev perl5 pkgconfig qt qt:dev sed sysfiles tar texinfo
-[DEP] util-linux xorg xorg:dev xvid:dev zlib:dev
+[DEP] ogg-vorbis:dev patch perl5 pkgconfig qt qt:dev sed sysfiles tar
+[DEP] texinfo util-linux xorg xorg:dev xvid:dev zlib:dev
 
 [PROVIDES] ac3pass.so audiodec.so avibench avicap avicat avifile-config
-[PROVIDES] avimake aviplay avirec avirecompress avitype divx4.so ffmpeg.so
-[PROVIDES] kv4lsetup libaviplay.so libgenfb.so libmach64.so libmga.so
-[PROVIDES] libmga_crtc2.so libpm3.so libqavm.so libradeon.so librage128.so
-[PROVIDES] mad_audiodec.so mp3lame_audioenc.so mp3lamebin_audioenc.so
-[PROVIDES] mpeg_audiodec.so osmjpeg.so vorbis_audio.so win32.so xvid4.so
+[PROVIDES] avimake aviplay avirec avirecompress avitype divx4.so
+[PROVIDES] ffmpeg.so kv4lsetup libaviplay.so libaviplayavcodec.so
+[PROVIDES] libaviplayavformat.so libaviplaydha.so libaviplayvidix.so
+[PROVIDES] libgenfb.so libmach64.so libmga.so libmga_crtc2.so libpm3.so
+[PROVIDES] libqavm.so libradeon.so librage128.so mad_audiodec.so
+[PROVIDES] mp3lame_audioenc.so mp3lamebin_audioenc.so mpeg_audiodec.so
+[PROVIDES] osmjpeg.so vorbis_audio.so win32.so xvid4.so
 

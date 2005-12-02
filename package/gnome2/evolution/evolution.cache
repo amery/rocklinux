@@ -20,17 +20,17 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1130604210 Sat Oct 29 18:43:30 2005 (5)
-[TIMESTAMP] 1130825905 Tue Nov  1 07:18:25 2005 (9)
+[TIMESTAMP] 1133034279 Sat Nov 26 20:44:39 2005 (5)
+[TIMESTAMP] 1133263836 Tue Nov 29 12:30:36 2005 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-evolution.log 9-evolution.log
 
-[BUILDTIME] 83873 (5)
-[BUILDTIME] 84764 (9)
-[SIZE] 21.52 MB, 418 files
+[BUILDTIME] 86049 (5)
+[BUILDTIME] 87663 (9)
+[SIZE] 21.69 MB, 425 files
 
 [DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
 [DEP] bash2 binutils bzip2 coreutils cpan-xml-parser diffutils
@@ -46,22 +46,24 @@
 [DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeprint
 [DEP] libgnomeprint:dev libgnomeprintui libgnomeprintui:dev libgnomeui
 [DEP] libgnomeui:dev libgpg-error libgpg-error:dev libjpeg libjpeg:dev
-[DEP] libsoup libsoup:dev libxml2 libxml2:dev linux26-header:dev m4 make
-[DEP] mktemp net-tools openldap openldap:dev openssl orbit2 orbit2:dev
-[DEP] pango pango:dev perl5 pkgconfig popt popt:dev scrollkeeper sed
-[DEP] sysfiles tar util-linux xorg xorg:dev zapping zlib:dev
+[DEP] libsoup libsoup:dev libxml2 libxml2:dev linux26-header:dev m4
+[DEP] make mktemp mozilla mozilla:dev net-tools openldap openldap:dev
+[DEP] openssl orbit2 orbit2:dev pango pango:dev perl5 pkgconfig popt
+[DEP] popt:dev scrollkeeper sed sysfiles tar util-linux xorg xorg:dev
+[DEP] zapping zlib:dev
 
 [PROVIDES] evolution-2.2 libeabutil.so libeconduit.so libecontacteditor.so
 [PROVIDES] libecontactlisteditor.so libefilterbar.so libemiscwidgets.so
-[PROVIDES] libeshell.so libetimezonedialog.so libeutil.so
+[PROVIDES] libeshell.so libessmime.so libetimezonedialog.so libeutil.so
 [PROVIDES] libevolution-a11y.so libevolution-addressbook-a11y.so
 [PROVIDES] libevolution-addressbook-ldif-importer.so
 [PROVIDES] libevolution-addressbook-vcard-importer.so
 [PROVIDES] libevolution-addressbook.so libevolution-calendar-a11y.so
 [PROVIDES] libevolution-calendar-importers.so libevolution-calendar.so
 [PROVIDES] libevolution-importer.so libevolution-mail-importers.so
-[PROVIDES] libevolution-mail.so libevolution-widgets-a11y.so
-[PROVIDES] libfilter.so libmenus.so liborg-gnome-addressbook-file.so
+[PROVIDES] libevolution-mail.so libevolution-smime.so
+[PROVIDES] libevolution-widgets-a11y.so libfilter.so
+[PROVIDES] libmenus.so liborg-gnome-addressbook-file.so
 [PROVIDES] liborg-gnome-addressbook-groupwise.so
 [PROVIDES] liborg-gnome-audio-inline.so liborg-gnome-calendar-file.so
 [PROVIDES] liborg-gnome-calendar-http.so liborg-gnome-calendar-weather.so

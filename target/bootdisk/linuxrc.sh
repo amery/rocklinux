@@ -272,6 +272,7 @@ Select a stage 2 image file:
 
 	1. ${STAGE_2_BIG_IMAGE}
 	2. ${STAGE_2_SMALL_IMAGE}
+
 EOF
 	echo -n "Enter number or image file name (default=1): "
 	if [ ${autoboot} -eq 1 ] ; then

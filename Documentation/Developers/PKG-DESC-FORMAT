@@ -117,6 +117,14 @@ file.
   Format: [CV-URL] http://www.research.avayalabs.com/project/libsafe/
   The URL used by ./scripts/Check-PkgVersion.
 
+[CV-INCL]
+  Format: [CV-INCL] ^libsafe-[0-9]
+  The include pattern for the www.rocklinux.net version checker
+
+[CV-EXCL]
+  Format: [CV-EXCL] ^patch-
+  The exclude pattern for the www.rocklinux.net version checker
+
 [CV-PAT]
 
   Format: [CV-PAT] ^libsafe-[0-9]

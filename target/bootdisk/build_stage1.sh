@@ -120,8 +120,15 @@ tmpdir=initrd_$$.dir; mkdir -p $disksdir/$tmpdir; cd $disksdir
 dd if=/dev/zero of=initrd.img bs=1024 count=$ramdisk_size &> /dev/null
 tmpdev="`losetup -f`"
 if [ -z "$tmpdev" ] ; then
-        echo_error "No free loopback device found!"
-        rm -f $tmpfile ; rmdir $tmpdir; exit 1
+	for x in /dev/loop* /dev/loop/* ; do
+		[ -b "${x}" ] || continue
+		losetup ${x} 2>&1 >/dev/null || tmpdev="${x}"
+		[ -n "${tmpdev}" ] && break
+	done
+	if [ -z "${tmpdev}" ] ; then
+		echo_error "No free loopback device found!"
+		rm -f $tmpfile ; rmdir $tmpdir; exit 1
+	fi
 fi
 echo_status "Using loopback device $tmpdev."
 losetup "$tmpdev" initrd.img

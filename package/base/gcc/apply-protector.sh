@@ -4,7 +4,8 @@ pfile=$( echo "$3" | grep protector | tr ' ' '\t' | tr -s '\t' | cut -f2 )
 if [ "$pfile" ]
 then
         tar='tar --use-compress-program=bzip2'
-        pdif=$($tar -tf $archdir/${pfile/.gz/.bz2} | grep '\.dif$')
+        pdif=$($tar -tf $archdir/${pfile/.gz/.bz2} | \
+		grep '\.dif$' | grep -v 'protectonly.dif')
 	$tar -xf $archdir/${pfile/.gz/.bz2}
 
 	# Patch protector.dif a bit to apply against current gcc-3

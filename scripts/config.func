@@ -182,7 +182,7 @@ comment() {
 		echo "COMMENT_$commentnr '$spacer$1'" >> config.dialog.$swpid
 
 		# Hi, esden here, very ill stuff here I save the help
-		# strings here to a temporary file named config.help
+		# strings here to a temporary file named config.help.$swpid
 		# this sed tr sandwitch formats the string so that
 		# \n are masked and the Help strings are not killed some way
 		if [ "$2" != "" ] ; then
@@ -519,7 +519,7 @@ menu_end() {
 set_help() {
 	bprof set_help start
 	(echo -ne "$1 '$1:\n\n$2'" | sed 's,$,\\n,' |
-		tr -d '\n' | sed 's,\\n$,,'; echo ) >> config.help
+		tr -d '\n' | sed 's,\\n$,,'; echo ) >> config.help.$swpid
 	bprof set_help stop
 }
 
@@ -580,7 +580,7 @@ $item_name:\\
 			}" scripts/config*.hlp package/*/*/subconfig-*.hlp package/*/*/config*.hlp target/*/config*.hlp misc/*/config*.hlp misc/*/*/config*.hlp 2>/dev/null )
 	
 	# Get help strings out of the temporary file.
-	tmp_text=$(grep "^$item_name" config.help | cut -f2- -d' ' | sed -e "s,^',," -e "s,'$,," )
+	tmp_text=$(grep "^$item_name" config.help.$swpid | cut -f2- -d' ' | sed -e "s,^',," -e "s,'$,," )
 
 	# Let us see what we have ...
 	if [ "$hlp_text" -a "$tmp_text" ] ; then

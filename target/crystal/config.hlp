@@ -5,7 +5,7 @@
 # the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 # the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 # 
-# ROCK Linux: rock-src/target/crystal/config.in
+# ROCK Linux: rock-src/target/crystal/config.hlp
 # ROCK Linux is Copyright (C) 1998 - 2005 Clifford Wolf
 # 
 # This program is free software; you can redistribute it and/or modify
@@ -20,19 +20,12 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-bool 'Also build add-on (non-CORE) packages' \
-				ROCKCFG_TARGET_CRYSTAL_BUILDADDONS 0
+ROCKCFG_TARGET_CRYSTAL_BUILDADDONS
+   Set this option to allow the inclusion of additional packages in your
+   Crystal target, e.g. using custom package selection.
 
-if [ $ROCKCFG_TARGET_CRYSTAL_BUILDADDONS = 1 ]
-then
-	pkgfilter sed \
-		-e '/ xfree86 / d' \
-		-e '/CORE/ s/^\(. .........\)./\1-/' \
-		-e '/CORE/ ! s/^\(.\) .........\(.\)/\1 ---------\2/'
-else
-	pkgfilter sed -e '/CORE/ ! s/^X/O/'
-	ROCKCFGSET_DO_REBUILD_STAGE=0
-fi
+   If unset, only packages flagged as CORE will be built for this target.
 
-ROCKCFGSET_PKG_SUBVERSION_STATIC=0
-
+   If set, non-CORE packages will be listed to build in stage 9, after all
+   CORE packages have been created. In this case ROCKCFG_DO_REBUILD_STAGE
+   should also be set to actually perform stage 9 builds.

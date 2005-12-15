@@ -6,7 +6,7 @@
 # the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 # the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 # 
-# ROCK Linux: rock-src/target/lvp/x86/initrd/login-shell
+# ROCK Linux: rock-src/target/lvp/x86/livesystem/etc_lvp_80-xorgconfig.sh
 # ROCK Linux is Copyright (C) 1998 - 2005 Clifford Wolf
 # 
 # This program is free software; you can redistribute it and/or modify
@@ -20,4 +20,15 @@
 # file for details.
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
-cd ; exec /bin/bash --login
+
+xorgconfig_start(){
+	echo -n "Running integrated X.org-Autoconfiguration ... "
+	HOME="/tmp" /usr/X11/bin/X -configure -logfile /dev/null >/dev/null 2>&1
+	echo "done"
+}
+
+xorgconfig_stop(){
+	echo -n
+}
+
+eval "xorgconfig_${1}"

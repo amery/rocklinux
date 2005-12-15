@@ -104,7 +104,7 @@ int implantISOFile(char *fname, int supported, int forceit, int quiet, char **er
 	return -1;
     }
 
-    pvd_offset = parsepvd(isofd, mediasum, &isosize);
+    pvd_offset = parsepvd(isofd, (char *)mediasum, &isosize);
     if (pvd_offset < 0) {
 	*errstr = "Could not find primary volumne!\n\n";
 	return -1;
@@ -171,8 +171,8 @@ int implantISOFile(char *fname, int supported, int forceit, int quiet, char **er
     loc = writeAppData(new_appdata, "ISO MD5SUM = ", loc);
     loc = writeAppData(new_appdata, md5str, loc);
     loc = writeAppData(new_appdata, ";", loc);
-    snprintf(buf, sizeof(buf), "SKIPSECTORS = %d", SKIPSECTORS);
-    loc = writeAppData(new_appdata, buf, loc);
+    snprintf((char *)buf, sizeof(buf), "SKIPSECTORS = %d", SKIPSECTORS);
+    loc = writeAppData(new_appdata, (char *)buf, loc);
     loc = writeAppData(new_appdata, ";", loc);
 
     if (supported) {

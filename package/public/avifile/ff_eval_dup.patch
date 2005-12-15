@@ -1,0 +1,19 @@
+--- ./ffmpeg/libavutil/eval.c.orig	2005-12-07 16:09:07.000000000 +0100
++++ ./ffmpeg/libavutil/eval.c	2005-12-07 16:11:59.000000000 +0100
+@@ -182,6 +182,8 @@
+     return ret;
+ }
+ 
++#if 0
++// this is already defined in ffmpeg/libavcodec/eval.c
+ double ff_eval(char *s, double *const_value, const char **const_name,
+                double (**func1)(void *, double), const char **func1_name,
+                double (**func2)(void *, double, double), char **func2_name,
+@@ -200,6 +202,7 @@
+     
+     return evalExpression(&p);
+ }
++#endif
+ 
+ #ifdef TEST
+ #undef printf 

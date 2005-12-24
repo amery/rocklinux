@@ -1,0 +1,36 @@
+--- ./gtk-xmhtml/colors.c.vanilla	2005-12-13 18:31:33.000000000 +0100
++++ ./gtk-xmhtml/colors.c	2005-12-14 16:11:46.000000000 +0100
+@@ -292,33 +292,6 @@
+ #define BMASK		0xc0
+ #define BSHIFT		6
+ 
+-/* XXX: This function does an XQueryColors() the hard way, because there is
+- * no corresponding function in Gdk.
+- */
+-#ifndef WITH_MOTIF
+-static void
+-my_x_query_colors(GdkColormap *colormap,
+-		  GdkColor    *colors,
+-		  gint         ncolors)
+-{
+-	XColor *xcolors;
+-	gint    i;
+-
+-	xcolors = g_new(XColor, ncolors);
+-	for (i = 0; i < ncolors; i++)
+-		xcolors[i].pixel = colors[i].pixel;
+-
+-	XQueryColors(gdk_display, GDK_COLORMAP_XCOLORMAP(colormap), xcolors, ncolors);
+-
+-	for (i = 0; i < ncolors; i++) {
+-		colors[i].red   = xcolors[i].red;
+-		colors[i].green = xcolors[i].green;
+-		colors[i].blue  = xcolors[i].blue;
+-	}
+-
+-	g_free(xcolors);
+-}
+-#endif
+ /*****
+ * Name: 		tryColor
+ * Return Type: 	Boolean

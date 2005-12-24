@@ -1,6 +1,6 @@
---- ./src/tr.c	2005-07-06 11:31:33.000000000 +0200
-+++ ./src/tr.c	2005-07-06 11:30:56.000000000 +0200
-@@ -8,6 +8,15 @@
+--- iptraf-2.7.0/src/tr.c	2005-12-17 04:35:54.000000000 +0100
++++ src.iptraf.1134788240.15878.1654813972/iptraf-2.7.0/src/tr.c	2005-12-17 04:35:35.000000000 +0100
+@@ -8,6 +8,16 @@
  
  #include <asm/types.h>
  #include <linux/if_tr.h>
@@ -12,6 +12,7 @@
 +#define dev_t libc_dev_t
 +#define gid_t libc_gid_t
 +#define uid_t libc_uid_t
++#define timer_t libc_timer_t
 +
  #include <netinet/in.h>
  

@@ -1,0 +1,10 @@
+--- ./source/optout.h~	2005-12-17 05:02:34.000000000 +0100
++++ ./source/optout.h	2005-12-17 05:03:44.000000000 +0100
+@@ -55,6 +55,7 @@
+ #define OFFICIAL_VERSION_NUMBER_HEX 0x0361
+ 
+ #define DISTRIBUTION_MESSAGE_1 "This is an unofficial version compiled by:"
++#define DISTRIBUTION_MESSAGE_2 "--- the ROCK Linux build scripts ... ( http://www.rocklinux.org ) ---"
+ #ifndef DISTRIBUTION_MESSAGE_2
+ #error You must complete the following DISTRIBUTION_MESSAGE_2 definition
+ #define DISTRIBUTION_MESSAGE_2 " FILL IN NAME HERE........................."

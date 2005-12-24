@@ -1,0 +1,35 @@
+--- ./protector.dif.orig	2005-12-12 18:08:37.000000000 +0100
++++ ./protector.dif	2005-12-12 18:09:04.000000000 +0100
+@@ -573,24 +573,23 @@
+   		    /* P comes after Q; combine P into Q.  */
+   		    q->size += p->size;
+ *************** put_reg_into_stack (function, reg, type,
+-*** 1497,1503 ****
+-      new = func->x_parm_reg_stack_loc[regno];
++*** 1513,1518 ****
+   
+     if (new == 0)
+-!     new = assign_stack_local_1 (decl_mode, GET_MODE_SIZE (decl_mode), 0, func);
++!     new = assign_stack_local_1 (decl_mode, GET_MODE_SIZE (decl_mode),
++! 				consecutive_p ? -2 : 0, func);
+   
+     PUT_CODE (reg, MEM);
+-    PUT_MODE (reg, decl_mode);
+---- 1512,1520 ----
+-      new = func->x_parm_reg_stack_loc[regno];
++--- 1513,1521 ----
+   
+     if (new == 0)
+ !     new = function ?
+-! 	assign_stack_local_1 (decl_mode, GET_MODE_SIZE (decl_mode), 0, func):
+-! 	assign_stack_local_for_pseudo_reg (decl_mode, GET_MODE_SIZE (decl_mode), 0);
++!       assign_stack_local_1 (decl_mode, GET_MODE_SIZE (decl_mode),
++! 				consecutive_p ? -2 : 0, func) :
++!       assign_stack_local_for_pseudo_reg (decl_mode, GET_MODE_SIZE (decl_mode),
++! 				consecutive_p ? -2 : 0);
+   
+     PUT_CODE (reg, MEM);
+-    PUT_MODE (reg, decl_mode);
+ *************** instantiate_virtual_regs_1 (loc, object,
+ *** 3961,3967 ****
+   		 constant with that register.  */

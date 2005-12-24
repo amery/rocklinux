@@ -1,20 +1,19 @@
-diff -pruN udev-068-orig/etc/udev/debian/devfs.rules udev-068/etc/udev/debian/devfs.rules
---- udev-068-orig/etc/udev/debian/devfs.rules	2005-10-11 17:33:26.000000000 +0200
-+++ udev-068/etc/udev/debian/devfs.rules	2005-10-11 17:33:42.000000000 +0200
-@@ -21,11 +21,13 @@ BUS=="ide", KERNEL=="hd[a-z]", SYSFS{rem
+--- ./etc/udev/debian/devfs.rules	2005-10-11 17:33:26.000000000 +0200
++++ ./etc/udev/debian/devfs.rules	2005-10-11 17:33:42.000000000 +0200
+@@ -19,11 +19,13 @@
+ 
  # IDE devices
- BUS=="ide", KERNEL=="hd[a-z]*", \
-   PROGRAM="/etc/udev/scripts/ide-devfs.sh %k %b %n", \
--				NAME="%c{1}", SYMLINK+="%k %c{2}"
-+				NAME="%c{1}", SYMLINK+="%k %c{2} %c{3}"
+ BUS=="ide", KERNEL=="hd[a-z]*", PROGRAM="/lib/udev/ide-devfs.sh %k %b %n", \
+-					NAME="%c{1}", SYMLINK+="%k %c{2}"
++ 				NAME="%c{1}", SYMLINK+="%k %c{2} %c{3}"
  
  # SCSI devices
--BUS=="scsi",		PROGRAM="/etc/udev/scripts/scsi-devfs.sh %k %b %n", \
--				NAME="%c{1}", SYMLINK+="%k %c{2}"
+-BUS=="scsi", PROGRAM="/lib/udev/scsi-devfs.sh %k %b %n", \
+-					NAME="%c{1}", SYMLINK+="%k %c{2}"
 +BUS=="scsi", KERNEL=="sd*", PROGRAM="/etc/udev/scripts/scsi-devfs.sh sd %b %n", NAME="%c{1}", SYMLINK="%c{2} %k %c{3} %c{4} %c{5}"
 +BUS=="scsi", KERNEL=="sr*", PROGRAM="/etc/udev/scripts/scsi-devfs.sh sr %b %n", NAME="%c{1}", SYMLINK="%c{2} %k %c{3} %c{4} %c{5}"
 +BUS=="scsi", KERNEL=="st*", PROGRAM="/etc/udev/scripts/scsi-devfs.sh st %b %n", NAME="%c{1}", SYMLINK="%c{2} %k %c{3} %c{4} %c{5}"
 +BUS=="scsi", KERNEL=="sg*", PROGRAM="/etc/udev/scripts/scsi-devfs.sh sg %b %n", NAME="%c{1}", SYMLINK="%c{2} %k %c{3} %c{4} %c{5}"
  
  # RAID controllers
- KERNEL=="cciss!*",	PROGRAM="/etc/udev/scripts/raid-devfs.sh %k", \
+ KERNEL=="cciss!*|ida!*|rd!*", PROGRAM="/lib/udev/raid-devfs.sh %k", \

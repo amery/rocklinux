@@ -1,0 +1,11 @@
+--- ./src/Makefile.in.orig	2005-12-14 23:56:18.000000000 +0100
++++ ./src/Makefile.in	2005-12-14 23:56:21.000000000 +0100
+@@ -470,7 +470,7 @@
+ 
+ install-exec-hook:
+ 		cd $(DESTDIR)$(bindir) && \
+-			$(LN_S) pstree pstree.x11
++			$(LN_S) -f pstree pstree.x11
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:

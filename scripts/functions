@@ -518,14 +518,20 @@ register_xdm() {
 # Create Package Database for gasgui install tool
 #
 create_package_db() {
-	rm -f $3 $3.tmp
-	for file in $( ls $1/descs/ ) ; do
+	local admdir="$1"
+	local outdir="$2"
+
+	rm -f $outdir/packages.db $outdir/packages_stripped.db
+	rm -f $outdir/packages.db.md5 $outdir/packages_stripped.db.md5
+	rm -f $outdir/packages.db.tmp
+
+	for file in $( ls $admdir/descs/ ) ; do
 		pkg="${file##*/}"
 		# only include the package if a binary file is available
 
 		if [ "$ROCKCFG_PKGFILE_VER" = 1 ] ; then
 			v=-$(grep '^Package Name and Version' \
-                                $1/packages/$pkg | cut -f6,7 -d' ' | tr ' ' -)
+                                $admdir/packages/$pkg | cut -f6,7 -d' ' | tr ' ' -)
 		else
 			v=""
 		fi
@@ -535,27 +541,38 @@ create_package_db() {
 			bfile=${pkg}${v}.tar.bz2
 		fi
 
-		if [ -e $2/$bfile ] ; then
+		if [ -e $outdir/$bfile ] ; then
 			[ "$pkg" = TRANS.TBL ] && continue
 
 			( echo -e "$pkg"
 			  echo -e "\027"
 
-			  cat $1/descs/$pkg
+			  cat $admdir/descs/$pkg
 			  echo -e "\027"
 
-			  cat $1/dependencies/$pkg
+			  cat $admdir/dependencies/$pkg
 			  echo -e "\027"
 
-			  cat $1/cksums/$pkg
+			  cat $admdir/cksums/$pkg
 			  echo -e "\027"
 
 			  echo -e "\004"
-			) >> $3.tmp
+			) >> $outdir/packages.db.tmp
 		fi
 	done
-	gzip -c $3.tmp > $3
-	rm -f $3.tmp
+
+	gawk '
+		BEGIN { chunk=0; }
+		$0 == "\004" { chunk=0; print; next; }
+		$0 == "\027" { chunk++; print; next; }
+		chunk != 3 { print; }
+	' < $outdir/packages.db.tmp | gzip -9 > $outdir/packages_stripped.db
+
+	gzip -9 < $outdir/packages.db.tmp > $outdir/packages.db
+	rm -f $outdir/packages.db.tmp
+
+	( cd $outdir; md5sum packages.db > packages.db.md5; )
+	( cd $outdir; md5sum packages_stripped.db > packages_stripped.db.md5; )
 }
 
 # Add files to the 'badfiles' list

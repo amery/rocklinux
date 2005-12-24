@@ -34,8 +34,7 @@ cp $build_root/var/adm/logs/*.err $build_result/errors/ 2> /dev/null
 
 echo_status "Creating package database ..."
 admdir="build/${ROCKCFG_ID}/var/adm"
-create_package_db $admdir build/${ROCKCFG_ID}/ROCK/pkgs \
-                  build/${ROCKCFG_ID}/ROCK/pkgs/packages.db
+create_package_db $admdir build/${ROCKCFG_ID}/ROCK/pkgs
 
 echo_status "Creating isofs.txt file .."
 cat << EOT > build/${ROCKCFG_ID}/ROCK/isofs.txt

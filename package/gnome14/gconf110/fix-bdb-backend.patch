@@ -1,0 +1,20 @@
+--- ./backends/bdb.c.vanilla	2005-12-12 21:48:59.000000000 +0100
++++ ./backends/bdb.c	2005-12-12 21:52:20.000000000 +0100
+@@ -331,7 +331,7 @@
+ 
+ /* } */
+ 
+-static guint32
++guint32
+ get_dir_id (BDB_Store * bdb, const char *dir)
+ {
+   int ret;
+@@ -405,7 +405,7 @@
+ 
+ /* { Functions to create directories and maintain the dir hierarchy */
+ 
+-static guint32
++guint32
+ get_or_create_dir (BDB_Store * bdb, const char *dir)
+ {
+   guint32 parent_id;

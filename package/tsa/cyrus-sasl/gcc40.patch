@@ -1,0 +1,62 @@
+diff -dur cyrus-sasl-1.5.28/sample/client.c src.cyrus-sasl.1134298515.31795.185555095/cyrus-sasl-1.5.28/sample/client.c
+--- cyrus-sasl-1.5.28/sample/client.c	2001-12-21 03:31:17.000000000 +0100
++++ src.cyrus-sasl.1134298515.31795.185555095/cyrus-sasl-1.5.28/sample/client.c	2005-12-12 03:38:20.000000000 +0100
+@@ -230,7 +230,7 @@
+ 	exit(EX_OSERR);
+     }
+     
+-    if (connect(sock, (struct sockaddr *) &sin, sizeof (sin)) < 0) {
++    if (connect(sock, (__CONST_SOCKADDR_ARG) ((const struct sockaddr_in *)&sin), sizeof (sin)) < 0) {
+ 	perror("connect");
+ 	exit(EX_UNAVAILABLE);
+     }
+@@ -386,11 +386,11 @@
+ 
+     /* set ip addresses */
+     salen = sizeof(localaddr);
+-    if (getsockname(fd, (struct sockaddr *)&localaddr, &salen) < 0) {
++    if (getsockname(fd, (__SOCKADDR_ARG)&localaddr, &salen) < 0) {
+ 	perror("getsockname");
+     }
+     salen = sizeof(remoteaddr);
+-    if (getpeername(fd, (struct sockaddr *)&remoteaddr, &salen) < 0) {
++    if (getpeername(fd, (__SOCKADDR_ARG)&remoteaddr, &salen) < 0) {
+ 	perror("getpeername");
+     }
+ 
+diff -dur cyrus-sasl-1.5.28/sample/server.c src.cyrus-sasl.1134298515.31795.185555095/cyrus-sasl-1.5.28/sample/server.c
+--- cyrus-sasl-1.5.28/sample/server.c	2001-12-21 03:31:18.000000000 +0100
++++ src.cyrus-sasl.1134298515.31795.185555095/cyrus-sasl-1.5.28/sample/server.c	2005-12-12 03:46:32.000000000 +0100
+@@ -95,7 +95,7 @@
+ 	exit(EX_OSERR);
+     }
+ 
+-    if (bind(sock, &sin, salen) < 0) {
++    if (bind(sock, (__CONST_SOCKADDR_ARG) ((const struct sockaddr_in *)&sin), salen) < 0) {
+ 	perror("bind");
+ 	exit(EX_OSERR);
+     }
+@@ -263,7 +263,8 @@
+ 	int fd = -1;
+ 	FILE *in, *out;
+ 
+-	fd = accept(l, NULL, NULL);
++        __SOCKADDR_ARG nullarg;
++	fd = accept(l, nullarg, NULL);
+ 	if (fd < 0) {
+ 	    perror("accept");
+ 	    exit(0);
+@@ -283,11 +284,11 @@
+ 
+ 	/* set ip addresses */
+ 	salen = sizeof(localaddr);
+-	if (getsockname(fd, (struct sockaddr *)&localaddr, &salen) < 0) {
++	if (getsockname(fd, (__SOCKADDR_ARG)&localaddr, &salen) < 0) {
+ 	    perror("getsockname");
+ 	}
+ 	salen = sizeof(remoteaddr);
+-	if (getpeername(fd, (struct sockaddr *)&remoteaddr, &salen) < 0) {
++	if (getpeername(fd, (__SOCKADDR_ARG)&remoteaddr, &salen) < 0) {
+ 	    perror("getpeername");
+ 	}
+ 

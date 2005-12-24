@@ -1,0 +1,20 @@
+--- ./Makefile.vanilla	2005-12-09 15:52:39.000000000 +0100
++++ ./Makefile	2005-12-09 15:54:43.000000000 +0100
+@@ -73,7 +73,7 @@
+ SRC_DIR=$(PWD)/src
+ 
+ KVER := $(shell echo $(KERNRELEASE)|cut -d "." -f1-2;)
+-MODPATH := /lib/modules/$(KERNRELEASE)
++MODPATH := /lib/modules/$(KERNRELEASE)/kernel/drivers
+ 
+ # Retrieving driver version
+ ZD_VERSION := $(shell $(DATE) +%Y%m%d)
+@@ -115,7 +115,7 @@
+ # for apdbg
+ 	gcc -o apdbg tools/apdbg.c
+ 	chmod +x apdbg
+-	cp ./apdbg /usr/local/sbin/apdbg   
++	cp ./apdbg /usr/sbin/apdbg   
+ 
+ clean:
+ 	@$(RM) .tmp_versions .*.cmd *.ko *.mod.c *.mod.o *.o $(SRC_DIR)/*.o  $(SRC_DIR)/.*.o.cmd $(SRC_DIR)/*~ $(SRC_DIR)/zddevlist.h

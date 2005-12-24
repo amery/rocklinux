@@ -17,14 +17,14 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
---- ./Makefile.in.orig	2003-01-07 18:04:53.000000000 +0100
-+++ ./Makefile.in	2003-01-07 18:05:27.000000000 +0100
-@@ -125,7 +125,7 @@
- install:: installdirs all $(srcdir)/cpio.1 $(srcdir)/mt.1
- 	$(INSTALL_PROGRAM) cpio $(bindir)/$(binprefix)cpio
- 	test ! -f mt || $(INSTALL_PROGRAM) mt $(bindir)/$(binprefix)mt
--	-test ! -f rmt || $(INSTALL_PROGRAM) rmt $(libexecdir)/rmt
-+#	-test ! -f rmt || $(INSTALL_PROGRAM) rmt $(libexecdir)/rmt
- 	-$(INSTALL_DATA) $(srcdir)/cpio.1 $(mandir)/$(manprefix)cpio.$(manext)
- 	-test ! -f mt || $(INSTALL_DATA) $(srcdir)/mt.1 $(mandir)/$(manprefix)mt.$(manext)
+--- ./Makefile.in.orig	2004-12-20 11:52:17.000000000 +0100
++++ ./Makefile.in	2005-12-12 22:19:04.000000000 +0100
+@@ -217,7 +217,7 @@
+ target_alias = @target_alias@
+ ACLOCAL_AMFLAGS = -I m4
+ AUTOMAKE_OPTIONS = gnits 1.8 dist-bzip2 std-options
+-SUBDIRS = doc headers lib rmt src po tests
++SUBDIRS = doc headers lib src po tests
+ all: config.h
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
  

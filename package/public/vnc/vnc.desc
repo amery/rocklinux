@@ -42,7 +42,14 @@
 [P] X -?---5---9 172.100
 
 [D] 2362805175 vnc-4.0-unixsrc.tar.gz http://www.realvnc.com/dist/
+#if xpkg == vnc-xfree86
+[O] xc_files="XFree86-4.4.0-src-1.tbz2 XFree86-4.4.0-src-2.tbz2 XFree86-4.4.0-src-3.tbz2"
 [D] 2082020133 XFree86-4.4.0-src-1.tgz ftp://ftp.xfree86.org/pub/XFree86/4.4.0/source/
 [D] 2638701983 XFree86-4.4.0-src-2.tgz ftp://ftp.xfree86.org/pub/XFree86/4.4.0/source/
 [D] 2284831286 XFree86-4.4.0-src-3.tgz ftp://ftp.xfree86.org/pub/XFree86/4.4.0/source/
+#endif
+#if xpkg == vnc-xorg
+[O] xc_files="X11R6.8.2-src.tar.bz2"
+# [D] 3448356598 X11R6.8.2-src.tar.bz2 http://ftp.gwdg.de/pub/x11/x.org/pub/X11R6.8.2/src-single/
+#endif
 

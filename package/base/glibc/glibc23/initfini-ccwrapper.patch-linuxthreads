@@ -5,7 +5,7 @@
 # the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 # the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 # 
-# ROCK Linux: rock-src/package/base/glibc/glibc23/glibc-2.3.1-timezone.patch
+# ROCK Linux: rock-src/package/base/glibc/glibc23/initfini-ccwrapper.patch
 # ROCK Linux is Copyright (C) 1998 - 2005 Clifford Wolf
 # 
 # This patch file is dual-licensed. It is available under the license the
@@ -17,14 +17,15 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
---- ./timezone/solar87.orig	2002-12-16 22:50:28.000000000 +0100
-+++ ./timezone/solar87	2002-12-16 22:46:40.000000000 +0100
-@@ -382,7 +382,7 @@
+Make sure that the ROCK Linux CC Wrapper is not removing the CFLAGS
+stored in CFLAGS-initfini.s and CFLAGS-pt-initfini.s.
+
+--- ./linuxthreads/Makefile.orig	2002-01-21 05:21:14.000000000 +0200
++++ ./linuxthreads/Makefile	2002-06-23 12:25:10.000000000 +0300
+@@ -105,5 +105,5 @@
  
- # Zone	NAME		GMTOFF	RULES/SAVE	FORMAT	[UNTIL]
- Zone	Asia/Riyadh87	3:07:04	-		??	1987
--			3:07:04	sol87		??	1988
-+#			3:07:04	sol87		??	1988
- 			3:07:04	-		??
- # For backward compatibility...
- Link	Asia/Riyadh87	Mideast/Riyadh87
+ $(objpfx)pt-initfini.s: pt-initfini.c
+-	$(compile.c) -S $(CFLAGS-pt-initfini.s) -finhibit-size-directive \
++	CMD_WRAPPER_BYPASS=1 $(compile.c) -O -S $(CFLAGS-pt-initfini.s) -finhibit-size-directive \
+  		$(patsubst -f%,-fno-%,$(exceptions)) -o $@
+ 

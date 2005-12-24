@@ -43,6 +43,8 @@ then
 		pkgfork glibc glibc22
 		pkgremove glibc
 	else
+		bool 'Use old-style linuxthreads instead of NPTL' \
+			ROCKCFG_PKG_GLIBC23_LINUXTHREADS 0
 		pkgfork glibc glibc23
 		pkgremove glibc
 	fi

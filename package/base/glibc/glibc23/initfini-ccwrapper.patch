@@ -29,12 +29,14 @@ stored in CFLAGS-initfini.s and CFLAGS-pt-initfini.s.
 +	CMD_WRAPPER_BYPASS=1 $(compile.c) -O -S $(CFLAGS-initfini.s) -finhibit-size-directive \
  		$(patsubst -f%,-fno-%,$(exceptions)) -o $@
  
---- ./linuxthreads/Makefile.orig	2002-01-21 05:21:14.000000000 +0200
-+++ ./linuxthreads/Makefile	2002-06-23 12:25:10.000000000 +0300
-@@ -105,5 +105,5 @@
+--- ./nptl/Makefile.orig	2005-12-07 17:07:04.000000000 +0100
++++ ./nptl/Makefile	2005-12-07 17:07:25.000000000 +0100
+@@ -516,7 +516,7 @@
+ vpath pt-initfini.c $(full_config_sysdirs)
  
  $(objpfx)pt-initfini.s: pt-initfini.c
 -	$(compile.c) -S $(CFLAGS-pt-initfini.s) -finhibit-size-directive \
 +	CMD_WRAPPER_BYPASS=1 $(compile.c) -O -S $(CFLAGS-pt-initfini.s) -finhibit-size-directive \
-  		$(patsubst -f%,-fno-%,$(exceptions)) -o $@
+ 		$(patsubst -f%,-fno-%,$(exceptions)) -o $@
  
+ $(objpfx)tst-cleanup0.out: /dev/null $(objpfx)tst-cleanup0

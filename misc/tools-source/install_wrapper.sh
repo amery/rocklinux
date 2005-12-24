@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ -z "$INSTALL_WRAPPER_MYPATH" ]; then
+	# someone brain-washed the environment.. tztz.
+	INSTALL_WRAPPER_MYPATH="$( dirname "`type -p $0`"; )"
+fi
+
 PATH="${PATH/:$INSTALL_WRAPPER_MYPATH:/:}"
 PATH="${PATH#$INSTALL_WRAPPER_MYPATH:}"
 PATH="${PATH%:$INSTALL_WRAPPER_MYPATH}"

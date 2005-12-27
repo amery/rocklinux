@@ -1,7 +1,7 @@
 
 echo_header "Creating initrd data:"
 rm -rf $disksdir/initrd
-mkdir -p $disksdir/initrd/{dev,proc,sys,tmp,scsi,net,bin,etc}
+mkdir -p $disksdir/initrd/{dev,proc,sys,tmp,scsi,net,bin,etc,lib}
 cd $disksdir/initrd; ln -s bin sbin; ln -s . usr
 
 echo_status "Creating some device nodes"
@@ -37,8 +37,9 @@ for file in ../2nd_stage/bin/{tar,gzip,bash2,bash,sh,mount,umount,ls,cat,uname,r
 	    ../2nd_stage/usr/sbin/lspci ; do
 	programs="${programs} ${file#../2nd_stage}"
 	cp ${file} bin/
-done	
-cp -r $build_root/etc/udev etc/
+done
+cp -a $build_root/etc/udev etc/
+cp -a $build_root/lib/udev lib/
 
 for x in modprobe.static modprobe.static.old insmod.static insmod.static.old ; do
 	if [ -f ../2nd_stage/sbin/${x/.static/} ]; then

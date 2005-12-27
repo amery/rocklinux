@@ -85,7 +85,7 @@ gui_menu() {
 		fi
 	done
 
-	cmd="$cmd --default-item \${default:-0}"
+	cmd="$cmd --default-item \${default:-1}"
 	cmd="$cmd --menu '${title//$x/$x\\$x$x}'"
 	cmd="$cmd $(( $y_text + $y_menu +  6 )) $gui_dialog_s70 $y_menu"
 

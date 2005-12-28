@@ -156,7 +156,7 @@ int main(int argc, char ** argv) {
 	for (i=1; i<64; i++) {
 		if ( i == SIGKILL ) continue;
 		if ( i == SIGSTOP ) continue;
-		if( signal(i, SIG_DFL) == SIG_ERR ) {
+		if ( signal(i, SIG_DFL) == SIG_ERR && i < 32 ) {
 			fprintf(stderr, "rc: Can't reset signal #%d: "
 			        "%s\n", i, strerror(errno) );
 			return 1;

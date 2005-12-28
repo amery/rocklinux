@@ -45,7 +45,7 @@ case "$devtype" in
 	;;
 
     udev)
-	if ! [ -e /dev/.udevdb ] ; then
+	if ! [ -e /dev/.udev ] ; then
 		if [ -e /dev/.devfsd ]; then
 			mount --move /dev /etc/udev
 			mount -t ramfs ramfs /dev

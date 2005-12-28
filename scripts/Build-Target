@@ -270,7 +270,11 @@ fi
 		cat
 	fi > $pkglst
 	for file in $( ls build/$ROCKCFG_ID/ROCK/pkgs/ ) ; do
-		x="$file"; [ "$x" = packages.db ] && continue
+		x="$file"
+		[ "$x" = packages.db ] && continue
+		[ "$x" = packages.db.md5 ] && continue
+		[ "$x" = packages_stripped.db ] && continue
+		[ "$x" = packages_stripped.db.md5 ] && continue
 		[ $ROCKCFG_CREATE_GEM = 0 ] || x=${x%.gem}
 		[ $ROCKCFG_CREATE_TARBZ2 = 0 ] || x=${x%.tar.bz2}
 		y=$( echo $x | sed 's,:[^-]*,,' )

@@ -45,7 +45,7 @@ EOT
 
 echo "Creating copy.patch (this may take a while) ..." >&2
 
-if [ $1 == -help ] ; then
+if [ "$1" == -* ] ; then
 	echo 
 	echo "Usage: ./scripts/Create-CopyPatch [ <directories> ]"
 	echo

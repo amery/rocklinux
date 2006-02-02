@@ -23,6 +23,7 @@
 / 00-dirtree /		{ p; d; }
 
 / linux.*-src /		{ s/^X /O / ; p; d; }
+/ linux-drm /		{ s/^X /O / ; p; d; }
 / linux.* /		{ p; d; }
 / linux.*-header /	{ p; d; }
 / glibc /		{ p; d; }

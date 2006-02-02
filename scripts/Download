@@ -972,6 +972,10 @@ packages() {
 				"$url" "$cksum" "$repo" "$pkg"
 			done < <(descparser $forkedpkg package/$repo/$pkg/$pkg.desc |
 				grep '^\[D\] ')
+
+			if [ $cksumpatch = 1 ]; then
+				./scripts/Create-CkSumPatch $pkg | patch -p0
+			fi
 			;;
 		esac
 	done
@@ -988,9 +992,6 @@ mapped_packages() {
 		export xpkg=$pkg
 		. src/pkgmapper
 		packages $pkg
-		if [ $cksumpatch = 1 ]; then
-			./scripts/Create-CkSumPatch $pkg | patch -p0
-		fi
 	done
 }
 

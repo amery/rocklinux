@@ -5,8 +5,8 @@
 # the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 # the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 # 
-# ROCK Linux: rock-src/misc/pkgsel/benchmark.in
-# ROCK Linux is Copyright (C) 1998 - 2006 Clifford Wolf
+# ROCK Linux: rock-src/misc/pkgsel/sets/xorg.set
+# ROCK Linux is Copyright (C) 1998 - 2005 Clifford Wolf
 # 
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -19,20 +19,25 @@
 # file for details.
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
-#
-# TITLE: A base selection for benchmarking purposes
-#
 
-START_PKGSEL
+/ expat /			{ p; d; };
+/ freetype /			{ p; d; };
+/ libjpeg /                     { p; d; };
+/ libpng /                      { p; d; };
+/ libtiff /                     { p; d; };
+/ libungif /                    { p; d; };
+/ vlock /                       { p; d; };
+/ xorg /			{ p; d; };
+/ zsh/                          { p; d; };
 
-#include "basic.set"
-#include "common.set"
-#include "xorg.set"
 
-# other stray junk
-REMOVE(intel-rng)
-REMOVE(microcode_ctl)
+# Some architecture-specifc-packages with missing deps
+/ macosd /                      { s/^X /O / ; p; d; };
+/ apmd /			{ s/^X /O / ; p; d; };
 
-DISABLE_REST
-
-END_PKGSEL
+# Add architecture-specific-packages
+/ alpha /                       { p; d; };
+/ mips /                        { p; d; };
+/ powerpc /                     { p; d; };
+/ sparc /                       { p; d; };
+/ x86 /                         { p; d; };

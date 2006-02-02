@@ -1,0 +1,9 @@
+
+#define START_PKGSEL pkgfilter sed '
+
+#define ADD(F) / F / 	{ p; d; };
+#define REMOVE(F) / F /	{ s/^X /O / ; p; d; };
+
+#define DISABLE_REST s/^X /O /;
+
+#define END_PKGSEL '

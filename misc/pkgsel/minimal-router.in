@@ -5,8 +5,8 @@
 # the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 # the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 # 
-# ROCK Linux: rock-src/misc/pkgsel/benchmark.in
-# ROCK Linux is Copyright (C) 1998 - 2006 Clifford Wolf
+# ROCK Linux: rock-src/misc/pkgsel/minimal-router.in
+# ROCK Linux is Copyright (C) 1998 - 2005 Clifford Wolf
 # 
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -20,19 +20,21 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 #
-# TITLE: A base selection for benchmarking purposes
-#
+# TITLE: Minimalistic router package selection
+
 
 START_PKGSEL
 
 #include "basic.set"
 #include "common.set"
-#include "xorg.set"
 
-# other stray junk
-REMOVE(intel-rng)
-REMOVE(microcode_ctl)
+ADD(ppp)
+ADD(pppoe)
+ADD(openvpn)
+ADD(nagios)
+ADD(bridge-utils)
 
 DISABLE_REST
 
 END_PKGSEL
+

@@ -1,0 +1,12 @@
+diff -dur at-poke-0.2.2/src/accessible-tree-model.c src.at-poke.1135212060.7536.238402817/at-poke-0.2.2/src/accessible-tree-model.c
+--- at-poke-0.2.2/src/accessible-tree-model.c	2003-05-28 14:36:43.000000000 +0200
++++ src.at-poke.1135212060.7536.238402817/at-poke-0.2.2/src/accessible-tree-model.c	2005-12-23 22:14:04.000000000 +0100
+@@ -113,7 +113,7 @@
+ 		return make_iter_invalid (iter);
+ 
+ 	iter->stamp = ACCESSIBLE_TREE_MODEL (model)->stamp;
+-	ITER_NODE (iter) = node;
++	iter->user_data = node;
+ 	iter->user_data2 = NULL;
+ 	iter->user_data3 = NULL;
+ 

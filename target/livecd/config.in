@@ -61,7 +61,7 @@ ROCKCFGSET_PKG_LINUX_USE26MODTOOLS=1
 ROCKCFGSET_PKG_SUBVERSION_STATIC=0
 
 # hardwired for now...
-cpp -Imisc/pkgsel/sets -imacros misc/pkgsel/macros -P misc/pkgsel/minimal-desktop.in 2>/dev/null > config/$config.$swpid/predefined-pkgsel.parsed
+cpp -undef -Imisc/pkgsel/sets -imacros misc/pkgsel/macros -P misc/pkgsel/minimal-desktop.in 2>/dev/null > config/$config.$swpid/predefined-pkgsel.parsed
 . config/$config.$swpid/predefined-pkgsel.parsed
 
 pkgenable kiss

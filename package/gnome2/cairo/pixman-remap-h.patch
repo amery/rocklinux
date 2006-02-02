@@ -1,0 +1,18 @@
+===================================================================
+RCS file: /mirrors/freedesktop/cairo/cairo/pixman/src/pixman-remap.h,v
+retrieving revision 1.5
+retrieving revision 1.7
+diff -u -p -r1.5 -r1.7
+--- ./pixman/src/pixman-remap.h   22 Aug 2005 04:02:33 -0000      1.5
++++ ./pixman/src/pixman-remap.h   21 Nov 2005 19:46:40 -0000      1.7
+@@ -1,9 +1,7 @@
+ #define pixman_add_trapezoids _cairo_pixman_add_trapezoids
+-#define INT_pixman_color_to_pixel _cairo_pixman_color_to_pixel
+ #define pixman_color_to_pixel _cairo_pixman_color_to_pixel
+ #define composeFunctions _cairo_pixman_compose_functions
+ #define fbComposeSetupMMX _cairo_pixman_compose_setup_mmx
+-#define INT_pixman_composite _cairo_pixman_composite
+ #define pixman_composite _cairo_pixman_composite
+ #define fbCompositeCopyAreammx _cairo_pixman_composite_copy_area_mmx
+ #define fbCompositeSolidMask_nx8888x0565Cmmx
+_cairo_pixman_composite_solid_mask_nx8888x0565Cmmx

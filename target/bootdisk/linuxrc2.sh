@@ -16,6 +16,7 @@ mkdir -p /lib/modules/$( uname -r )
 echo -n >> /lib/modules/$( uname -r )/modules.dep
 
 udevd --daemon
+echo "/sbin/udevsend" > /proc/sys/kernel/hotplug
 cd /dev ; rm -f fd
 ln -sf /proc/kcore      core
 ln -sf /proc/self/fd    fd

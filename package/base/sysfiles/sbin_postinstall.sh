@@ -38,35 +38,42 @@ is_removed()
 all_installed() {
 	while read dummy M; do
 		[ -e "/$M" ] && echo "/$M"
-	done < <( cat /var/adm/postinstall/*-install.?????? 2> /dev/null | grep "$1"; ) | sort -u
-}
+	done < <( find /var/adm/postinstall/ -name "*-install.??????" \
+		-exec grep "$1" "{}" \; 2> /dev/null ) | sort -u
+} 
 
 all_removed() {
 	while read dummy M; do
 		[ -e "/$M" ] || echo "/$M"
-	done < <( cat /var/adm/postinstall/*-remove.?????? 2> /dev/null | grep "$1"; ) | sort -u
+	done < <( find /var/adm/postinstall/ -name "*-remove.??????" \
+		-exec grep "$1" "{}" \; 2> /dev/null ) | sort -u
 }
 
 all_touched() {
 	while read dummy M; do
 		[ -e "/$M" ] || echo "/$M"
-	done < <( cat /var/adm/postinstall/*-install.?????? /var/adm/postinstall/*-remove.?????? 2> /dev/null | grep "$1"; ) | sort -u
+	done < <( find /var/adm/postinstall/ \
+		\( -name "*-install.??????" -o -name "*-remove.??????" \) \
+		 -exec grep "$1" "{}" \; 2> /dev/null ) | sort -u
 }
 
 any_installed() {
 	if [ $install_checks_true == 1 ]; then return 0; fi
-	cat /var/adm/postinstall/*-install.?????? 2> /dev/null | grep -q "$1" 
+	find /var/adm/postinstall/ -name "*-install.??????" \
+		2> /dev/null | xargs grep -q "$1" 
 }
 
 any_removed() {
 	if [ $remove_checks_true == 1 ]; then return 0; fi
-	cat /var/adm/postinstall/*-remove.?????? 2> /dev/null | grep -q "$1" 
+	find /var/adm/postinstall/ -name "*-remove.??????" \
+		2> /dev/null | xargs grep -q "$1" 
 }
 
 any_touched() {
 	if [ $install_checks_true == 1 ]; then return 0; fi
 	if [ $remove_checks_true == 1 ]; then return 0; fi
-	cat /var/adm/postinstall/*-install.?????? /var/adm/postinstall/*-remove.?????? 2> /dev/null | grep -q "$1" 
+	find /var/adm/postinstall/ -name "*-install.??????" -o \
+		-name "*-remove.??????" 2> /dev/null | xargs grep -q "$1" 
 }
 
 install_checks_true=0
@@ -122,5 +129,5 @@ do
 done
 
 # Remove the postinstall/postremove logs
-rm -f /var/adm/postinstall/*-{install,remove}.??????
-
+find /var/adm/postinstall/ \( -name "*-install.??????" -o \
+	-name "*-remove.??????" \) -exec rm -f "{}" \;

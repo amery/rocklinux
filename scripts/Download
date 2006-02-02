@@ -290,7 +290,7 @@ cksum_chk() {
 # Determine if a check should be done on files with the given cksum.
 #
 do_cksum_chk() {
-	local cksum="$1", y="`echo $cksum | sed 's,^0*,,;'`";
+	local cksum="$1" y="`echo $cksum | sed 's,^0*,,;'`";
 
 	[ $nocheck = 1 -o -z "$y" -o -z "${cksum//X/}" ] && return 1
 	return 0

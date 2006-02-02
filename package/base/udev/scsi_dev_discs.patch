@@ -17,10 +17,9 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-diff -pruN udev-068-orig/extras/scsi-devfs.sh udev-068/extras/scsi-devfs.sh
---- udev-068-orig/extras/scsi-devfs.sh	2005-10-11 17:33:26.000000000 +0200
-+++ udev-068/extras/scsi-devfs.sh	2005-10-12 10:17:44.000000000 +0200
-@@ -83,6 +83,16 @@ l_pci="domain$pci_domain/bus$pci_bus/slo
+--- ./extras/scsi-devfs.sh.orig	2006-01-04 17:02:54.370422160 +0100
++++ ./extras/scsi-devfs.sh	2006-01-04 17:04:39.350462768 +0100
+@@ -83,6 +83,16 @@
  l_phy="bus/pci/$l_pci/scsi/$l_com"
  s_phy="$1/pci/$pci_addr/$s_com"
  
@@ -37,4 +36,4 @@ diff -pruN udev-068-orig/extras/scsi-devfs.sh udev-068/extras/scsi-devfs.sh
 +	x="`ls /dev/discs/ | grep -c .`"
 +fi
  
-+echo $l_phy $s_phy $l_log $s_log discs/disc${x}/${lpart}
++echo $l_log $s_log discs/disc${x}/${lpart}

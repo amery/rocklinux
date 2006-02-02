@@ -1,0 +1,11 @@
+--- ./configure.in.vanilla	2005-12-01 08:47:22.000000000 +0100
++++ ./configure.in	2005-12-01 08:48:19.000000000 +0100
+@@ -1356,7 +1356,7 @@
+ if test "x$gdktarget" = "xwin32"; then
+ 	PANGO_PACKAGES="pangowin32 pangocairo"
+ else
+-	PANGO_PACKAGES="pango pangocairo"
++	PANGO_PACKAGES="pango pangocairo pangoft2"
+ fi
+ 
+ AC_MSG_CHECKING(Pango flags)

@@ -465,7 +465,7 @@ int main(int argc, char** argv)
 	if ( mount("devpts", "/dev/pts", "devpts", 0, NULL) && errno != EBUSY )
 		perror("Can't mount /dev/pts (not too fatal)");
 
-	if ( mount("ramfs", "/dev/shm", "ramfs", 0, NULL) && errno != EBUSY )
+	if ( mount("tmpfs", "/dev/shm", "tmpfs", 0, NULL) && errno != EBUSY )
 		perror("Can't mount /dev/shm (not fatal)");
 
 	/* Only print important stuff to console */

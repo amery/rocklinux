@@ -1,0 +1,5 @@
+if pkgcheck qt X; then
+	 pkgfork qt qt33
+	 pkgfork qt qt40
+	 pkgremove qt
+fi

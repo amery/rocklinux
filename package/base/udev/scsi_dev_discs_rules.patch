@@ -29,10 +29,10 @@
  # SCSI devices
 -BUS=="scsi", PROGRAM="/lib/udev/scsi-devfs.sh %k %b %n", \
 -					NAME="%c{1}", SYMLINK+="%k %c{2}"
-+BUS=="scsi", KERNEL=="sd*", PROGRAM="/etc/udev/scripts/scsi-devfs.sh sd %b %n", NAME="%c{1}", SYMLINK="%c{2} %k %c{3} %c{4} %c{5}"
-+BUS=="scsi", KERNEL=="sr*", PROGRAM="/etc/udev/scripts/scsi-devfs.sh sr %b %n", NAME="%c{1}", SYMLINK="%c{2} %k %c{3} %c{4} %c{5}"
-+BUS=="scsi", KERNEL=="st*", PROGRAM="/etc/udev/scripts/scsi-devfs.sh st %b %n", NAME="%c{1}", SYMLINK="%c{2} %k %c{3} %c{4} %c{5}"
-+BUS=="scsi", KERNEL=="sg*", PROGRAM="/etc/udev/scripts/scsi-devfs.sh sg %b %n", NAME="%c{1}", SYMLINK="%c{2} %k %c{3} %c{4} %c{5}"
++BUS=="scsi", KERNEL=="sd*", PROGRAM="/etc/udev/scripts/scsi-devfs.sh sd %b %n", NAME="%c{1}", SYMLINK="%c{2} %k %c{3}"
++BUS=="scsi", KERNEL=="sr*", PROGRAM="/etc/udev/scripts/scsi-devfs.sh sr %b %n", NAME="%c{1}", SYMLINK="%c{2} %k %c{3}"
++BUS=="scsi", KERNEL=="st*", PROGRAM="/etc/udev/scripts/scsi-devfs.sh st %b %n", NAME="%c{1}", SYMLINK="%c{2} %k %c{3}"
++BUS=="scsi", KERNEL=="sg*", PROGRAM="/etc/udev/scripts/scsi-devfs.sh sg %b %n", NAME="%c{1}", SYMLINK="%c{2} %k %c{3}"
  
  # RAID controllers
  KERNEL=="cciss!*|ida!*|rd!*", PROGRAM="/lib/udev/raid-devfs.sh %k", \

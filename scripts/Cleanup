@@ -43,10 +43,10 @@ while [ "$1" ] ; do
 		echo
 		echo " Cleanup the build environment, deleting the directories src, src.*,"
 		echo " build/*/ROCK/src.* and various temporary/backup files."
-		echo " Also check for old liggering files."
+		echo " Also check for old lingering files."
 		echo " Without options, remove src and all src.* and build/*/ROCK/src.*"
 		echo " directories, and all temporary/backup files, and perform checks for old"
-		echo " liggering files."
+		echo " lingering files."
 		echo " If directories are given, delete only them. Directories used by ROCK scripts"
 		echo " at the moment are recognized and not deleted."
 		echo
@@ -54,10 +54,10 @@ while [ "$1" ] ; do
 		echo "				e.g. build/desktop-*"
 		echo
 		echo "	-nocheck		don't delete temporary/backup files and don't"
-		echo "				check for old liggering files" 
+		echo "				check for old lingering files" 
 		echo
 		echo "  -umount			don't remove anything, just umount all the"
-		echo "				liggering mounts, implies '-full' and '-nocheck'"
+		echo "				lingering mounts, implies '-full' and '-nocheck'"
  		echo
 		exit 1 ;;
 	    *)
@@ -136,7 +136,7 @@ bash scripts/xfind.sh Documentation/. architecture/. misc/. \
 	package/. scripts/. target/. -type f \( -name '*~' -o \
 	-name 'a.out' -o -name 'core.*' -o -name 'core' \) | xargs rm -vf
 
-# Print warnings for 'liggering' files
+# Print warnings for 'lingering' files
 #
 bash scripts/xfind.sh Documentation/. architecture/. misc/. \
 	package/. scripts/. target/.	\

@@ -258,7 +258,7 @@ fi
 	fi
 
 	local pkglst=`mktemp` errors=0; rm -f src/invalid-files.lst
-	echo_header "Searching for old liggering files ..."
+	echo_header "Searching for old lingering files ..."
 	grep "^X" config/$config/packages | cut -d' ' -f5 | sed 's,.*=,,' |
 	if [ $ROCKCFG_PKGFILE_VER = 1 ] ; then
 		while read p; do
@@ -431,12 +431,12 @@ build_target_exit() {
 
 	echo_header "Running Build-Target cleanup procedure"
 
-	echo_status "Killing liggering processes and removing parallel build queue."
+	echo_status "Killing lingering processes and removing parallel build queue."
 	rm -rf $build_rock/queue
 	fuser -k ${build_logs}/*.log &> /dev/null
 	sleep 2
 
-	echo_status "Umounting liggering mounts in build/$ROCKCFG_ID."
+	echo_status "Umounting lingering mounts in build/$ROCKCFG_ID."
 	umount -d -f    $build_rock/{loop,config,download} 2> /dev/null
 	umount -d -f -l $build_rock/{loop,config,download} 2> /dev/null
 	umount -d -f    $build_root/proc 2> /dev/null

@@ -184,7 +184,7 @@ main() {
 	while
 		cmd="gui_menu install 'Partitioning your discs
 
-This dialog allows you to modify your discs parition layout and to create filesystems and swap-space - as well as mouting / activating it. Everything you can do using this tool can also be done manually on the command line.'"
+This dialog allows you to modify your discs partition layout and to create filesystems and swap space - as well as mounting / activating it. Everything you can do using this tool can also be done manually on the command line.'"
 
 		# protect for the case no discs are present ...
 		if [ -e /dev/discs ] ; then

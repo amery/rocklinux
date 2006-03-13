@@ -33,7 +33,7 @@ sed -i -e "s,^STAGE_2_BIG_IMAGE=\"2nd_stage.tar.gz\"$,STAGE_2_BIG_IMAGE=\"${ROCK
 echo_status "Copy various helper applications."
 for file in ../2nd_stage/bin/{tar,gzip,bash2,bash,sh,mount,umount,ls,cat,uname,rm,ln,mkdir,rmdir,gawk,awk,grep,sleep} \
 	    ../2nd_stage/sbin/{ip,hwscan,pivot_root,swapon,swapoff,udevstart} \
-	    ../2nd_stage/usr/bin/{wget,find,expand,readlink} \
+	    ../2nd_stage/usr/bin/{wget,find,expand,readlink,basename,tr} \
 	    ../2nd_stage/usr/sbin/lspci ; do
 	programs="${programs} ${file#../2nd_stage}"
 	cp ${file} bin/
@@ -54,14 +54,8 @@ for x in modprobe.static modprobe.static.old insmod.static insmod.static.old ; d
 done
 
 echo_status "Copy scsi and network kernel modules."
-for x in ../2nd_stage/lib/modules/*/kernel/drivers/{scsi,net}/*.{ko,o} ; do
-	# this test is needed in case there are only .o or only .ko files
-	if [ -f $x ]; then
-		xx=${x#../2nd_stage/}
-		mkdir -p $( dirname $xx ) ; cp $x $xx
-		$STRIP --strip-debug $xx # stripping more breaks the object
-	fi
-done
+( cd ../2nd_stage ; tar cf - lib/modules/*/kernel/drivers/{scsi,net} ) | tar xf -
+find lib/modules -type f -exec $STRIP --strip-debug {} \;
 
 for x in ../2nd_stage/lib/modules/*/modules.{dep,pcimap,isapnpmap} ; do
 	cp $x ${x#../2nd_stage/} || echo "not found: $x" ;
@@ -114,7 +108,7 @@ cd ..
 
 echo_header "Creating initrd filesystem image: "
 
-ramdisk_size=8192
+ramdisk_size=16384
 
 echo_status "Creating temporary files."
 tmpdir=initrd_$$.dir; mkdir -p $disksdir/$tmpdir; cd $disksdir

@@ -68,7 +68,7 @@ for x in ../2nd_stage/lib/modules/*/modules.{dep,pcimap,isapnpmap} ; do
 done
 
 for x in lib/modules/*/kernel/drivers/{scsi,net}; do
-	ln -s ${x#lib/modules/} lib/modules/
+	[ -d $x ] && ln -s ${x#lib/modules/} lib/modules/
 done
 rm -f lib/modules/[0-9]*/kernel/drivers/scsi/{st,scsi_debug}.{o,ko}
 rm -f lib/modules/[0-9]*/kernel/drivers/net/{dummy,ppp*}.{o,ko}

@@ -23,16 +23,14 @@
 # TITLE: A base selection for benchmarking purposes
 #
 
-START_PKGSEL
 
-#include "basic.set"
-#include "common.set"
-#include "xorg.set"
+INCLUDE basic.set
+INCLUDE common.set
+INCLUDE xorg.set
 
 # other stray junk
-REMOVE(intel-rng)
-REMOVE(microcode_ctl)
+REMOVE intel-rng
+REMOVE microcode_ctl
 
 DISABLE_REST
 
-END_PKGSEL

@@ -1,12 +1,9 @@
 # TITLE: Minimalistic GNOME Desktop
 
-START_PKGSEL
-
-#include "basic.set"
-#include "common.set"
-#include "xorg.set"
-#include "gnome-desktop.set"
+INCLUDE basic.set
+INCLUDE common.set
+INCLUDE xorg.set
+INCLUDE gnome-desktop.set
 
 DISABLE_REST
 
-END_PKGSEL

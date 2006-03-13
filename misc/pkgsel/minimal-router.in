@@ -23,18 +23,14 @@
 # TITLE: Minimalistic router package selection
 
 
-START_PKGSEL
+INCLUDE basic.set
+INCLUDE common.set
 
-#include "basic.set"
-#include "common.set"
-
-ADD(ppp)
-ADD(pppoe)
-ADD(openvpn)
-ADD(nagios)
-ADD(bridge-utils)
+ADD ppp
+ADD pppoe
+ADD openvpn
+ADD nagios
+ADD bridge-utils
 
 DISABLE_REST
-
-END_PKGSEL
 

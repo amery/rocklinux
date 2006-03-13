@@ -22,13 +22,11 @@
 #
 # TITLE: Minimalistic KDE Desktop
 
-START_PKGSEL
 
-#include "basic.set"
-#include "common.set"
-#include "xorg.set"
-#include "kde-desktop.set"
+INCLUDE basic.set
+INCLUDE common.set
+INCLUDE xorg.set
+INCLUDE kde-desktop.set
 
 DISABLE_REST
 
-END_PKGSEL

@@ -22,12 +22,9 @@
 #
 # TITLE: Minimalistic package selection + X.org
 
-START_PKGSEL
-
-#include "basic.set"
-#include "common.set"
-#include "xorg.set"
+INCLUDE basic.set
+INCLUDE common.set
+INCLUDE xorg.set
 
 DISABLE_REST
 
-END_PKGSEL

@@ -1,9 +1,22 @@
+# this is to be sourced by bash
 
-#define START_PKGSEL pkgfilter sed '
+INCLUDE() {
+	if echo "$1" | grep -q '.*\.set$'
+	then
+		cat ./misc/pkgsel/sets/$1 | sed 's/#.*//'
+	else
+		cat $1 | sed 's/#.*//'
+	fi
+}
 
-#define ADD(F) / F / 	{ p; d; };
-#define REMOVE(F) / F /	{ s/^X /O / ; p; d; };
+ADD() {
+	echo "/ $1 / 	{ p; d; };"
+}
+REMOVE() {
+	echo "/ $1 /	{ s/^X /O / ; p; d; };"
+}
 
-#define DISABLE_REST s/^X /O /;
+DISABLE_REST() {
+   echo 's/^X /O /;'
+}
 
-#define END_PKGSEL '

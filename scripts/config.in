@@ -208,9 +208,14 @@ expert_begin
     block_begin 3
       choice ROCKCFG_PKGSEL_TPL none none 'No package preselection template' \
 		$( cd misc/pkgsel; grep -H "^# TITLE: " *.in | tr ' ' '_' | sed 's,\.in:#_TITLE:_, ,' )
-      if [ -f misc/pkgsel/${ROCKCFG_PKGSEL_TPL}.in ]; then
-	cpp -undef -Imisc/pkgsel/sets -imacros misc/pkgsel/macros -P misc/pkgsel/${ROCKCFG_PKGSEL_TPL}.in 2>/dev/null > config/$config.$swpid/predefined-pkgsel.parsed
-	. config/$config.$swpid/predefined-pkgsel.parsed
+	if [ -f misc/pkgsel/${ROCKCFG_PKGSEL_TPL}.in ]; then
+		# begin the sed string
+		echo "pkgfilter sed '" > config/$config.$swpid/predefined-pkgsel.parsed
+		. ./misc/pkgsel/macros
+		. ./misc/pkgsel/${ROCKCFG_PKGSEL_TPL}.in >> config/$config.$swpid/predefined-pkgsel.parsed
+		# end the sed string
+		echo "'"  >> config/$config.$swpid/predefined-pkgsel.parsed
+		. config/$config.$swpid/predefined-pkgsel.parsed
       fi
       bool 'Custom package selection' ROCKCFG_PKGSEL 0
       if [ "$ROCKCFG_PKGSEL" = 1 ] ; then

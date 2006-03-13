@@ -2,6 +2,7 @@
 
 kernel=`uname -r`
 tmpdir=`mktemp -d`
+modprobeopt=`echo $kernel | sed '/2.4/ { s,.*,-n,; q; }; s,.*,--show-depends,'`
 
 if [ -n "$1" ]; then
 	if [ -d "/lib/modules/$1" ]; then
@@ -17,8 +18,10 @@ echo "Creating /boot/initrdnew-${kernel}.img ..."
 mkdir -p $tmpdir/etc/conf
 grep '^modprobe ' /etc/conf/kernel | grep -v 'no-initrd' | \
 	sed 's,[ 	]#.*,,' | \
-	while read a b ; do
-		b="`find /lib/modules/$kernel -name "$b.o" -o -name "$b.ko"`"
+	while read a b ; do $a $modprobeopt -v $b 2> /dev/null; done |
+	while read a b c; do
+		[[ "$b" = *.ko ]] && b=${b/.ko/};
+		b="`find /lib/modules/$kernel -wholename "$b.o" -o -wholename "$b.ko"`"
 		echo "Adding $b."
 		mkdir -p $tmpdir/${b%/*}
 		cp $b $tmpdir/$b

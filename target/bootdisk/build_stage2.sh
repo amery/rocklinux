@@ -10,7 +10,7 @@ mkdir -p mnt/source mnt/target
 package_map='       +00-dirtree         +glibc22            +glibc23
 -automake17         -automake18         -automake19         -gcc2
 -gcc33              -gcc34              -gcc40              -gcc41
--gmp
+-gmp                -rockinitrd
 -linux24-source     -linux26-header     -linux24            +udev
 -linux26-source     -linux26-header     -linux26            -postinstall
 -binutils           -bin86              -nasm               -dietlibc

@@ -86,15 +86,7 @@ while [ -n "$libs" ] ; do
 done
 
 itmp=`mktemp`
-dd if=/dev/zero of=${itmp} count=8192 bs=1024 > /dev/null 2>&1
-mke2fs -m 0 -N 5120 -F ${itmp} > /dev/null 2>&1
-mntpoint="`mktemp -d`"
-mount -o loop ${itmp} $mntpoint
-rmdir $mntpoint/lost+found/
-cp -a $tmpdir/* $mntpoint/
-umount -d $mntpoint
-rmdir $mntpoint
-
+mkfs.cramfs $tmpdir ${itmp}
 gzip -9 < ${itmp} > /boot/initrdnew-${kernel}.img
 rm -f ${itmp}
 

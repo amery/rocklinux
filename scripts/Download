@@ -1003,9 +1003,9 @@ mapped_packages() {
 			-printf '%f\t%p\n' | sort | awk '{ $1="."; print; }' > src/pkgmapper
 	fi
 	for pkg; do
-		export xpkg=$pkg
+ 		export xpkg=${pkg#*=}
 		. src/pkgmapper
-		packages $pkg
+ 		packages ${pkg%=*}=$xpkg
 	done
 }
 

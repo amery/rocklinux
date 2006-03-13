@@ -42,7 +42,7 @@ pkgfilter sed '
 / linux /	{ p; d; };	/ ddrescue /    { p; d; };
 / iproute2 /	{ p; d; };	/ wget /	{ p; d; };
 / kiss /	{ p; d; };	/ udev /	{ p; d; };
-/ gmp /		{ p; d; };
+/ gmp /		{ p; d; };	/ rockinitrd /	{ p; d; };
 
 # Select some non-base packages
 / lzo /		{ p; d; };

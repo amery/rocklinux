@@ -15,9 +15,11 @@ freeramdisk /dev/rd/* 2> /dev/null
 mkdir -p /lib/modules/$( uname -r )
 echo -n >> /lib/modules/$( uname -r )/modules.dep
 
-udevd --daemon
-echo "/sbin/udevsend" > /proc/sys/kernel/hotplug
-cd /dev ; rm -f fd
+echo "" > /proc/sys/kernel/hotplug
+/sbin/udevstart
+/sbin/udevd --daemon
+cd /dev
+rm -vf fd
 ln -sf /proc/kcore      core
 ln -sf /proc/self/fd    fd
 ln -sf fd/0             stdin

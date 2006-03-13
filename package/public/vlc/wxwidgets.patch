@@ -1,0 +1,29 @@
+--- ./modules/gui/wxwidgets/open.cpp~	2005-12-11 22:36:20.000000000 +0100
++++ ./modules/gui/wxwidgets/open.cpp	2006-01-18 17:56:19.000000000 +0100
+@@ -1334,7 +1334,7 @@
+ {
+   char **ppsz_cd_drives;
+   const wxWX2MBbuf tmp_buf = wxConvCurrent->cWX2MB(device);
+-  char *psz_device = const_cast<char *>(tmp_buf.data());
++  char *psz_device = const_cast<char *>(tmp_buf);
+ 
+   if( IsDVD(psz_device) )
+   {
+@@ -1404,7 +1404,7 @@
+ {
+    char *ppsz_device[2];
+    const wxWX2MBbuf tmp_buf = wxConvCurrent->cWX2MB(device);
+-   char *psz_device = const_cast<char *>(tmp_buf.data());
++   char *psz_device = const_cast<char *>(tmp_buf);
+    ppsz_device[0] = (device && *device) ? psz_device : NULL;
+    ppsz_device[1] = NULL;
+    return ProbeDevice(ppsz_device, CDIO_FS_AUDIO, false);
+@@ -1417,7 +1417,7 @@
+ {
+    char *ppsz_device[2];
+    const wxWX2MBbuf tmp_buf = wxConvCurrent->cWX2MB(device);
+-   char *psz_device = const_cast<char *>(tmp_buf.data());
++   char *psz_device = const_cast<char *>(tmp_buf);
+    ppsz_device[0] = (device && *device) ? psz_device : NULL;
+    ppsz_device[1] = NULL;
+    return ProbeDevice(ppsz_device,

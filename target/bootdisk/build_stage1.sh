@@ -31,10 +31,10 @@ sed -i -e "s,^STAGE_2_BIG_IMAGE=\"2nd_stage.tar.gz\"$,STAGE_2_BIG_IMAGE=\"${ROCK
        linuxrc
 
 echo_status "Copy various helper applications."
-for file in ../2nd_stage/bin/{tar,gzip,bash2,bash,sh,mount,umount,ls,sed,cut,tr} \
+for file in ../2nd_stage/bin/{tar,gzip,bash2,bash,sh,mount,umount,ls,sed,cut} \
 		../2nd_stage/bin/{cat,uname,rm,ln,mkdir,rmdir,gawk,awk,grep,sleep} \
 	    ../2nd_stage/sbin/{ip,hwscan,pivot_root,swapon,swapoff,udevd} \
-	    ../2nd_stage/usr/bin/{wget,find,expand,readlink,basename} \
+	    ../2nd_stage/usr/bin/{wget,find,expand,readlink,basename,tr} \
 	    ../2nd_stage/usr/sbin/lspci ; do
 	programs="${programs} ${file#../2nd_stage}"
 	cp ${file} bin/

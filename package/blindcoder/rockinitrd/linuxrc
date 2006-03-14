@@ -39,8 +39,16 @@ mount -n -t sysfs sysfs /sys || echo "Can't mount sysfs!"
 mount -n -t ramfs ramfs /dev || echo "Can't mount ramfs!"
 echo "" > /proc/sys/kernel/hotplug
 /sbin/udevd --daemon 
-/sbin/udevstart # create nodes for devices already in kernel
-sleep 2
+# create nodes for devices already in kernel
+while read uevent; do 
+		echo 1 > $uevent
+done < <( find /sys -name uevent )
+udevwait=0
+while [ -d /dev/.udev/queue -a $udevwait -lt 300 ] ; do
+		sleep 1
+		(( udevwait++ ))
+done
+
 cd /dev
 rm -rf fd
 ln -sf /proc/self/fd

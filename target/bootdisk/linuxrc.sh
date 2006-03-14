@@ -418,7 +418,16 @@ autoload_modules
 # some devices (scsi...) need time to settle...
 echo "Waiting for devices to settle..."
 sleep 5
-udevstart
+
+# create nodes for devices already in kernel
+while read uevent; do 
+		echo 1 > $uevent
+done < <( find /sys -name uevent )
+udevwait=0
+while [ -d /dev/.udev/queue -a $udevwait -lt 300 ] ; do
+		sleep 1
+		(( udevwait++ ))
+done
 
 if [ ${autoboot} -eq 1 ] ; then
 	load_ramdisk_file cdroms 1

@@ -4,6 +4,13 @@ initrd_mount() { # {{{
 	dev=${1}
 	mntpoint=${2}
 
+	if [ ! -e ${dev} ] ; then
+		echo " ** ${dev} could not be found!"
+		echo " ** dumping you into an emergency shell"
+		exec /bin/bash
+		return 1;
+	fi
+
 	/sbin/fsck -C -a ${dev}
 	fsckrc=${?}
 	if [ ${fsckrc} -eq 8 ] ; then
@@ -39,21 +46,10 @@ mount -n -t sysfs sysfs /sys || echo "Can't mount sysfs!"
 mount -n -t ramfs ramfs /dev || echo "Can't mount ramfs!"
 echo "" > /proc/sys/kernel/hotplug
 /sbin/udevd --daemon 
-# create nodes for devices already in kernel
-while read uevent; do 
-		echo 1 > $uevent
-done < <( find /sys -name uevent )
-udevwait=0
-while [ -d /dev/.udev/queue -a $udevwait -lt 300 ] ; do
-		sleep 1
-		(( udevwait++ ))
-done
 
-cd /dev
-rm -rf fd
-ln -sf /proc/self/fd
-mkdir -p pts shm
-cd /
+rm -rf /dev/fd
+ln -sf /proc/self/fd /dev
+mkdir -p /dev/pts /dev/shm
 
 if [ -n "${real_root}" ] ; then
 	rootfs=${real_root}
@@ -66,9 +62,16 @@ fi
 
 echo "loading kernel modules"
 . /etc/conf/kernel
-# some devices need time...
-echo "waiting for devices to settle..."
-sleep 2
+
+# create nodes for devices already in kernel
+while read uevent; do 
+		echo 1 > $uevent
+done < <( find /sys -name uevent )
+udevwait=0
+while [ -d /dev/.udev/queue -a $udevwait -lt 300 ] ; do
+		sleep 1
+		(( udevwait++ ))
+done
 
 for x in /etc/conf/* ; do
 	[ "${x}" == "/etc/conf/kernel" ] && continue

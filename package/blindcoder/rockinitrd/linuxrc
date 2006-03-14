@@ -37,8 +37,10 @@ mount -n -t tmpfs tmpfs /tmp || echo "Can't mount tmpfs!"
 mount -n -t proc proc /proc  || echo "Can't mount procfs!"
 mount -n -t sysfs sysfs /sys || echo "Can't mount sysfs!"
 mount -n -t ramfs ramfs /dev || echo "Can't mount ramfs!"
-/sbin/udevstart
-echo "/sbin/udevsend" > /proc/sys/kernel/hotplug
+echo "" > /proc/sys/kernel/hotplug
+/sbin/udevd --daemon 
+/sbin/udevstart # create nodes for devices already in kernel
+sleep 2
 cd /dev
 rm -rf fd
 ln -sf /proc/self/fd
@@ -59,7 +61,6 @@ echo "loading kernel modules"
 # some devices need time...
 echo "waiting for devices to settle..."
 sleep 2
-/sbin/udevstart
 
 for x in /etc/conf/* ; do
 	[ "${x}" == "/etc/conf/kernel" ] && continue

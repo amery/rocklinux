@@ -45,10 +45,14 @@ ln -sf /proc/self/fd
 mkdir -p pts shm
 cd /
 
-while read dev mntpoint fstype options fsck1 fsck2 ; do
-	[ "${mntpoint}" == "/" ] && rootfs=${dev}
-	[ -n "${rootfs}" ] && break
-done < /etc/fstab
+if [ -n "${real_root}" ] ; then
+	rootfs=${real_root}
+else
+	while read dev mntpoint fstype options fsck1 fsck2 ; do
+		[ "${mntpoint}" == "/" ] && rootfs=${dev}
+		[ -n "${rootfs}" ] && break
+	done < /etc/fstab
+fi
 
 echo "loading kernel modules"
 . /etc/conf/kernel

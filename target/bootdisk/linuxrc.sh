@@ -431,6 +431,9 @@ autoload_modules
 echo "Waiting for devices to settle..."
 sleep 5
 
+ip addr add 127.0.0.1 dev lo
+ip link set lo up
+
 if [ ${autoboot} -eq 1 ] ; then
 	load_ramdisk_file cdroms 1
 fi

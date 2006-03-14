@@ -410,14 +410,8 @@ cd /dev
 rm -rf fd
 ln -s /proc/self/fd
 cd -
-mod_load_info
 
-autoload_modules
-
-# some devices (scsi...) need time to settle...
-echo "Waiting for devices to settle..."
-sleep 5
-
+/sbin/udevd --daemon
 # create nodes for devices already in kernel
 while read uevent; do 
 		echo 1 > $uevent
@@ -427,6 +421,14 @@ while [ -d /dev/.udev/queue -a $udevwait -lt 300 ] ; do
 		sleep 1
 		(( udevwait++ ))
 done
+
+mod_load_info
+
+autoload_modules
+
+# some devices (scsi...) need time to settle...
+echo "Waiting for devices to settle..."
+sleep 5
 
 if [ ${autoboot} -eq 1 ] ; then
 	load_ramdisk_file cdroms 1

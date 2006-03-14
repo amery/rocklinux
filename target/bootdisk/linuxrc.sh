@@ -406,7 +406,6 @@ mount -t sysfs none /sys || echo "Can't mount sysfs on /sys"
 mount -t proc none /proc || echo "Can't mount /proc"
 mount -t tmpfs -o ${TMPFS_OPTIONS} none /tmp || echo "Can't mount /tmpfs"
 
-udevstart
 cd /dev
 rm -rf fd
 ln -s /proc/self/fd

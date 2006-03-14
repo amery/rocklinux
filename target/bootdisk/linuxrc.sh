@@ -411,6 +411,7 @@ rm -rf fd
 ln -s /proc/self/fd
 cd -
 
+echo "" > /proc/sys/kernel/hotplug
 /sbin/udevd --daemon
 # create nodes for devices already in kernel
 while read uevent; do 

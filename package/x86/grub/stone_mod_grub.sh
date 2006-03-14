@@ -98,7 +98,7 @@ default 0
 fallback 1
 
 title  ROCK Linux
-linux $bootdrive$bootpath/vmlinuz root=$rootdev ro
+linux $bootdrive$bootpath/vmlinuz root=/dev/ram0 init=/linuxrc ro
 initrd $bootdrive$bootpath/initrd.img
 EOT
 	if [ -f /boot/memtest86.bin ] ; then

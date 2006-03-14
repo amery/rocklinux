@@ -3,6 +3,11 @@
 kernel=`uname -r`
 tmpdir=`mktemp -d`
 modprobeopt=`echo $kernel | sed '/2.4/ { s,.*,-n,; q; }; s,.*,--show-depends,'`
+empty=0
+
+if [ "$1" = "empty" ]; then
+	empty=1; shift
+fi
 
 if [ -n "$1" ]; then
 	if [ -d "/lib/modules/$1" ]; then
@@ -14,19 +19,21 @@ if [ -n "$1" ]; then
 	fi
 fi
 
-echo "Creating /boot/initrdnew-${kernel}.img ..."
+echo "Creating /boot/initrd-${kernel}.img ..."
 mkdir -p $tmpdir/etc/conf
-grep '^modprobe ' /etc/conf/kernel | grep -v 'no-initrd' | \
-	sed 's,[ 	]#.*,,' | \
-	while read a b ; do $a $modprobeopt -v $b 2> /dev/null; done |
-	while read a b c; do
-		[[ "$b" = *.ko ]] && b=${b/.ko/};
-		b="`find /lib/modules/$kernel -wholename "$b.o" -o -wholename "$b.ko"`"
-		echo "Adding $b."
-		mkdir -p $tmpdir/${b%/*}
-		cp $b $tmpdir/$b
-		echo "/sbin/insmod $b $c" >> $tmpdir/etc/conf/kernel
-	done
+if [ "$empty" = 0 ] ; then
+	grep '^modprobe ' /etc/conf/kernel | grep -v 'no-initrd' | \
+		sed 's,[ 	]#.*,,' | \
+		while read a b ; do $a $modprobeopt -v $b 2> /dev/null; done |
+		while read a b c; do
+			[[ "$b" = *.ko ]] && b=${b/.ko/};
+			b="`find /lib/modules/$kernel -wholename "$b.o" -o -wholename "$b.ko"`"
+			echo "Adding $b."
+			mkdir -p $tmpdir/${b%/*}
+			cp $b $tmpdir/$b
+			echo "/sbin/insmod $b $c" >> $tmpdir/etc/conf/kernel
+		done
+fi
 mkdir -p $tmpdir/dev $tmpdir/root $tmpdir/tmp $tmpdir/proc $tmpdir/sys
 mknod $tmpdir/dev/ram0	b 1 0
 mknod $tmpdir/dev/null	c 1 3
@@ -90,7 +97,7 @@ done
 
 itmp=`mktemp`
 mkfs.cramfs $tmpdir ${itmp}
-gzip -9 < ${itmp} > /boot/initrdnew-${kernel}.img
+gzip -9 < ${itmp} > /boot/initrd-${kernel}.img
 rm -f ${itmp}
 
 rm -rf $tmpdir

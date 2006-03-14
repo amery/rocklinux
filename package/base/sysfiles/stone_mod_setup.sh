@@ -26,7 +26,7 @@ make_fstab() {
 	tmp1=`mktemp` ; tmp2=`mktemp`
 
 	cat <<- EOT > $tmp2
-/dev/root / auto defaults 0 1
+/dev/root / auto defaults 0 0
 proc /proc proc defaults 0 0
 devpts /dev/pts devpts defaults 0 0
 tmpfs /dev/shm tmpfs defaults 0 0
@@ -64,7 +64,7 @@ EOT
 			sprintf("%-45s ", sprintf("%-35s ",
 			sprintf("%-20s ", $1) $2) $3) $4,
 			$5, $6); }' < $tmp1 | \
-		sed "/ \($fsregex\) / s, 0$, 1," > /etc/fstab
+		sed "/ \/[^	 ].*\($fsregex\) / s, 0$, 1," > /etc/fstab
 	tr ' ' '\240' < /etc/fstab > $tmp1
 
 	gui_message $'Auto-created /etc/fstab file:\n\n'"$( cat $tmp1 )"

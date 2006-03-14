@@ -210,20 +210,17 @@ This dialog allows you to modify your discs partition layout and to create files
 		$STONE packages
 		cat > /mnt/target/tmp/stone_postinst.sh << EOT
 #!/bin/sh
-mount -v -t ramfs ramfs /dev
 mount -v -t proc proc /proc
 mount -v -t sysfs sysfs /sys
-ln -fs /proc/self/fd /dev/fd
-/sbin/udevstart
 . /etc/profile
 stone setup
 umount -v /sys
-umount -v /dev
 umount -v /proc
 EOT
 		chmod +x /mnt/target/tmp/stone_postinst.sh
 		grep ' /mnt/target[/ ]' /proc/mounts | \
 			sed 's,/mnt/target/\?,/,' > /mnt/target/etc/mtab
+		mount --bind /dev /mnt/target/dev
 		cd /mnt/target ; chroot . ./tmp/stone_postinst.sh
 		rm -fv ./tmp/stone_postinst.sh
 		if gui_yesno "Do you want to un-mount the filesystems and reboot now?"

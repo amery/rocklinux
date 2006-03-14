@@ -96,13 +96,8 @@ dnl
 	    done
 	    ;;
       hotplug)
-	block_split(`Configuring hardware by activating hotplug.')
-	    echo "/sbin/hotplug" > /proc/sys/kernel/hotplug
-            for RC in /etc/hotplug/*.rc; do
-		echo -n "[$( basename ${RC%.rc} )] "
-		check(`$RC start');
-	    done; echo
-	    echo -n >> /var/lock/subsys/hotplug
+	block_split(`Disabling hotplug helper (udev uses netlink).')
+	    echo "" > /proc/sys/kernel/hotplug
 	    ;;
       *) 
 	block_split(`Auto-load all modules at boot-time using hwscan.')

@@ -33,11 +33,12 @@ PATH="/sbin:/usr/sbin:/bin/:/usr/bin"
 rootfs=""
 rootfsmounted=0
 
-mount -n -t tmpfs tmpfs /tmp
-mount -n -t proc proc /proc
-mount -n -t sysfs sysfs /sys
-mount -n -t ramfs ramfs /dev
+mount -n -t tmpfs tmpfs /tmp || echo "Can't mount tmpfs!"
+mount -n -t proc proc /proc  || echo "Can't mount procfs!"
+mount -n -t sysfs sysfs /sys || echo "Can't mount sysfs!"
+mount -n -t ramfs ramfs /dev || echo "Can't mount ramfs!"
 /sbin/udevstart
+echo "/sbin/udevsend" > /proc/sys/kernel/hotplug
 cd /dev
 rm -rf fd
 ln -sf /proc/self/fd
@@ -51,6 +52,10 @@ done < /etc/fstab
 
 echo "loading kernel modules"
 . /etc/conf/kernel
+# some devices need time...
+echo "waiting for devices to settle..."
+sleep 2
+/sbin/udevstart
 
 for x in /etc/conf/* ; do
 	[ "${x}" == "/etc/conf/kernel" ] && continue
@@ -64,8 +69,10 @@ if [ ${rootfsmounted} -eq 0 ] ; then
 	rootfsmounted=1
 fi
 
-echo "starting init in /root"
-echo "parameters passed to init: ${@}"
+[ -z "$real_init" ] && real_init="/sbin/init"
+
+echo "starting $real_init in /root"
+echo "parameters passed to $real_init: ${@}"
 cd /root
 mkdir -p /root/initrd
 mount -n --move /tmp /root/tmp
@@ -73,4 +80,4 @@ mount -n --move /proc /root/proc
 mount -n --move /sys /root/sys
 mount -n --move /dev /root/dev
 /sbin/pivot_root . initrd
-exec chroot . /sbin/init "${@}"
+exec chroot . $real_init "${@}" < /dev/console > /dev/console 2>&1

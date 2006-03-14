@@ -1,5 +1,5 @@
---- etc/udev/debian/devfs.rules.orig	2006-01-13 00:23:21.195562168 +0100
-+++ etc/udev/debian/devfs.rules	2006-01-13 00:24:18.676823688 +0100
+--- ./etc/udev/debian/devfs.rules.orig	2006-01-13 00:23:21.195562168 +0100
++++ ./etc/udev/debian/devfs.rules	2006-01-13 00:24:18.676823688 +0100
 @@ -18,12 +18,14 @@
  	ENV{ID_MODEL}=="IOMEGA_ZIP*",	NAME="%k", OPTIONS+="all_partitions"
  

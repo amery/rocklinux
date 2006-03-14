@@ -39,7 +39,6 @@ for file in ../2nd_stage/bin/{tar,gzip,bash2,bash,sh,mount,umount,ls,cat,uname,r
 	cp ${file} bin/
 done
 cp -a $build_root/etc/udev etc/
-cp -a $build_root/lib/udev lib/
 
 for x in modprobe.static modprobe.static.old insmod.static insmod.static.old ; do
 	if [ -f ../2nd_stage/sbin/${x/.static/} ]; then

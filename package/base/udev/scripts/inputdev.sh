@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/bash -e
 #
 # Scans /proc/bus/input/devices for the given device.
 #

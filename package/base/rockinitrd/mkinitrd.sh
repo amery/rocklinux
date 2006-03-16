@@ -66,11 +66,12 @@ for x in /etc/conf/initrd/initrd_* ; do
 	[ -f $x ] || continue
 	while read file target ; do
 		if [ -d $file ] ; then
-			find $file -type f | while read f ; do
+			find $file -type f -o -type b -o -type c -o -type l | while read f ; do
 				tfile=${targetdir}/${target}/${f#$file}
 				[ -e $tfile ] && continue
 				mkdir -p ${tfile%/*}
-				cp $f $tfile
+				cp -a $f $tfile
+				file $x | grep -q ELF || continue
 				libs="$libs `ldd $f 2>/dev/null | grep -v 'not a dynamic executable' | sed -e 's,^[\t ]*,,g' | cut -f 3 -d' '`"
 			done
 		fi
@@ -94,6 +95,10 @@ while [ -n "$libs" ] ; do
 		done
 	done
 done
+
+# though this is not clean, it helps avoid a warning from fsck about
+# it being unable to determine wether a filesystem is mounted.
+ln -s /proc/mounts $targetdir/etc/mtab
 
 itmp=`mktemp`
 mkfs.cramfs $tmpdir ${itmp}

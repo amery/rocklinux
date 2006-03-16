@@ -44,12 +44,11 @@ mount -n -t tmpfs tmpfs /tmp || echo "Can't mount tmpfs!"
 mount -n -t proc proc /proc  || echo "Can't mount procfs!"
 mount -n -t sysfs sysfs /sys || echo "Can't mount sysfs!"
 mount -n -t ramfs ramfs /dev || echo "Can't mount ramfs!"
+
+cp -r /lib/udev/devices/* /dev
+
 echo "" > /proc/sys/kernel/hotplug
 /sbin/udevd --daemon 
-
-rm -rf /dev/fd
-ln -sf /proc/self/fd /dev
-mkdir -p /dev/pts /dev/shm
 
 if [ -n "${real_root}" ] ; then
 	rootfs=${real_root}

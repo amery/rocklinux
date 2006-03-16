@@ -406,10 +406,7 @@ mount -t sysfs none /sys || echo "Can't mount sysfs on /sys"
 mount -t proc none /proc || echo "Can't mount /proc"
 mount -t tmpfs -o ${TMPFS_OPTIONS} none /tmp || echo "Can't mount /tmpfs"
 
-cd /dev
-rm -rf fd
-ln -s /proc/self/fd
-cd -
+cp -r /lib/udev/devices/* /dev
 
 echo "" > /proc/sys/kernel/hotplug
 /sbin/udevd --daemon

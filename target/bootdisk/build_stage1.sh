@@ -31,7 +31,7 @@ sed -i -e "s,^STAGE_2_BIG_IMAGE=\"2nd_stage.tar.gz\"$,STAGE_2_BIG_IMAGE=\"${ROCK
        linuxrc
 
 echo_status "Copy various helper applications."
-for file in ../2nd_stage/bin/{tar,gzip,bash2,bash,sh,mount,umount,ls,sed,cut} \
+for file in ../2nd_stage/bin/{tar,gzip,bash2,bash,sh,mount,umount,ls,sed,cut,cp} \
 		../2nd_stage/bin/{cat,uname,rm,ln,mkdir,rmdir,gawk,awk,grep,sleep} \
 	    ../2nd_stage/sbin/{ip,hwscan,pivot_root,swapon,swapoff,udevd} \
 	    ../2nd_stage/usr/bin/{wget,find,expand,readlink,basename,tr} \
@@ -40,6 +40,7 @@ for file in ../2nd_stage/bin/{tar,gzip,bash2,bash,sh,mount,umount,ls,sed,cut} \
 	cp ${file} bin/
 done
 cp -a $build_root/etc/udev etc/
+cp -a $build_root/lib/udev lib/
 
 for x in modprobe.static modprobe.static.old insmod.static insmod.static.old ; do
 	if [ -f ../2nd_stage/sbin/${x/.static/} ]; then

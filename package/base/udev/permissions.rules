@@ -71,7 +71,7 @@ KERNEL=="dv1394*",	GROUP="video"
 KERNEL=="video1394*",	GROUP="video"
 
 # input devices
-KERNEL=="event[0-9]*",	PROGRAM="/etc/udev/scripts/inputdev.sh %k", \
+KERNEL=="event[0-9]*",	PROGRAM="/lib/udev/inputdev.sh %k", \
 			RESULT=="inputdev", MODE="0664", GROUP="video"
 KERNEL=="js[0-9]*",	MODE="0664"
 

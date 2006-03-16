@@ -15,18 +15,6 @@ freeramdisk /dev/rd/* 2> /dev/null
 mkdir -p /lib/modules/$( uname -r )
 echo -n >> /lib/modules/$( uname -r )/modules.dep
 
-echo "" > /proc/sys/kernel/hotplug
-/sbin/udevstart
-/sbin/udevd --daemon
-cd /dev
-rm -vf fd
-ln -sf /proc/kcore      core
-ln -sf /proc/self/fd    fd
-ln -sf fd/0             stdin
-ln -sf fd/1             stdout
-ln -sf fd/2             stderr
-cd /
-
 setterm -blank 0 -powersave off -powerdown 0
 
 echo

@@ -1,0 +1,25 @@
+--- ./Makefile.orig	2006-03-14 23:08:37.000000000 +0100
++++ ./Makefile	2006-03-14 23:09:18.000000000 +0100
+@@ -294,11 +294,6 @@
+ 	@extras="$(EXTRAS)"; for target in $$extras; do \
+ 		$(MAKE) -C $$target $@ || exit 1; \
+ 	done;
+-ifndef DESTDIR
+-	- killall udevd
+-	- rm -rf /dev/.udev
+-	- $(sbindir)/udevd --daemon
+-endif
+ .PHONY: install-bin
+ 
+ uninstall-bin:
+@@ -307,10 +302,6 @@
+ 	- rm -f $(DESTDIR)$(usrsbindir)/udevmonitor
+ 	- rm -f $(DESTDIR)$(usrbindir)/udevinfo
+ 	- rm -f $(DESTDIR)$(usrbindir)/udevtest
+-ifndef DESTDIR
+-	- killall udevd
+-	- rm -rf /dev/.udev
+-endif
+ 	@extras="$(EXTRAS)"; for target in $$extras; do \
+ 		$(MAKE) -C $$target $@ || exit 1; \
+ 	done;

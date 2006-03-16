@@ -1,0 +1,10 @@
+--- ./src/core/export_project_dialog.cpp.orig	2006-03-16 12:14:02.000000000 +0100
++++ ./src/core/export_project_dialog.cpp	2006-03-16 12:14:30.000000000 +0100
+@@ -46,6 +46,7 @@
+ 
+ #endif
+ 
++#include <stdlib.h>
+ 
+ #include "export_project_dialog.h"
+ #include "song_editor.h"

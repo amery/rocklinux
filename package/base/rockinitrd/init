@@ -95,4 +95,9 @@ mount -n --move /proc /root/proc
 mount -n --move /sys /root/sys
 mount -n --move /dev /root/dev
 /sbin/pivot_root . initrd
+
+# re-start real-system udevd, so group/permission settings get honored
+killall udevd
+/sbin/udevd --daemon
+
 exec chroot . $real_init "${@}" < /dev/console > /dev/console 2>&1

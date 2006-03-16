@@ -31,22 +31,14 @@ then
 	bool 'Building gcc 4.0.x package' ROCKCFG_PKG_GCC_GCC40 0
 	bool 'Building gcc 4.1.x package' ROCKCFG_PKG_GCC_GCC41 0
 
-	l=""
-	if [ $ROCKCFG_PKG_GCC_GCC2  = 1 ]; then pkgfork gcc gcc2;  l="$l gcc2";  fi
-	if [ $ROCKCFG_PKG_GCC_GCC32 = 1 ]; then pkgfork gcc gcc32; l="$l gcc32"; fi
-	if [ $ROCKCFG_PKG_GCC_GCC33 = 1 ]; then pkgfork gcc gcc33; l="$l gcc33"; fi
-	if [ $ROCKCFG_PKG_GCC_GCC34 = 1 ]; then pkgfork gcc gcc34; l="$l gcc34"; fi
-	if [ $ROCKCFG_PKG_GCC_GCC40 = 1 ]; then pkgfork gcc gcc40; l="$l gcc40"; fi
-	if [ $ROCKCFG_PKG_GCC_GCC41 = 1 ]; then pkgfork gcc gcc41; l="$l gcc41"; fi
+	d="none" ; l="" ; m=""
+	if [ $ROCKCFG_PKG_GCC_GCC2  = 1 ]; then pkgfork gcc gcc2;  d="gcc2";  l="$l $d"; fi
+	if [ $ROCKCFG_PKG_GCC_GCC32 = 1 ]; then pkgfork gcc gcc32; d="gcc33"; l="$l $d"; fi
+	if [ $ROCKCFG_PKG_GCC_GCC33 = 1 ]; then pkgfork gcc gcc33; d="gcc32"; l="$l $d"; fi
+	if [ $ROCKCFG_PKG_GCC_GCC34 = 1 ]; then pkgfork gcc gcc34; d="gcc34"; l="$l $d"; fi
+	if [ $ROCKCFG_PKG_GCC_GCC40 = 1 ]; then pkgfork gcc gcc40; d="gcc40"; l="$l $d"; m="$m $d"; fi
+	if [ $ROCKCFG_PKG_GCC_GCC41 = 1 ]; then pkgfork gcc gcc41; d="gcc41"; l="$l $d"; m="$m $d"; fi
 	pkgremove gcc
-
-	d="none"
-	if [ $ROCKCFG_PKG_GCC_GCC2  = 1 ]; then d="gcc2";  fi
-	if [ $ROCKCFG_PKG_GCC_GCC33 = 1 ]; then d="gcc33"; fi
-	if [ $ROCKCFG_PKG_GCC_GCC32 = 1 ]; then d="gcc32"; fi
-	if [ $ROCKCFG_PKG_GCC_GCC34 = 1 ]; then d="gcc34"; fi
-	if [ $ROCKCFG_PKG_GCC_GCC40 = 1 ]; then d="gcc40"; fi
-	if [ $ROCKCFG_PKG_GCC_GCC41 = 1 ]; then d="gcc41"; fi
 
 	k=""; for x in $l; do
 		k="$k $x Use_${x}_as_standard_C_compiler"
@@ -64,9 +56,14 @@ then
 	choice ROCKCFG_DEFAULT_CXX $d $k
 	
 	k=""; for x in $l; do
-		k="$k $x Use_${x}_as_standard_Fortran_compiler"
+		k="$k $x Use_${x}_as_standard_Fortran_77_compiler"
 	done
 	choice ROCKCFG_DEFAULT_F77 $d $k
+
+	k=""; for x in $m; do
+		k="$k $x Use_${x}_as_standard_Fortran_95_compiler"
+	done
+	[ "$k" ] && choice ROCKCFG_DEFAULT_F95 $d $k
 
 	# build non-default CCs in stages 5 and 9
 	# and dedicated C++ and Fortran77 compilers in stages 2 and 9

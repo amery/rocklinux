@@ -110,7 +110,7 @@ main() {
 		[ -f $x ] && . $x
 	done
 
-	cron.run
+	[ -n "`which cron.run`" ] && cron.run
 
 	unset gui_nocancel
 	exec $STONE

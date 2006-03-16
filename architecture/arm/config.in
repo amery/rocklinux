@@ -61,12 +61,16 @@ choice ROCKCFG_ARM_OPT generic   \
 	arm9e          "arm9e CPU" \
 	arm920         "arm920 CPU" \
 	arm920t        "arm920t CPU" \
+	arm926ejs      "arm926ejs CPU" \
 	arm940t        "arm940t CPU" \
 	arm9tdmi       "arm9tdmi CPU" \
 	arm10tdmi      "arm10tdmi CPU" \
 	arm1020t       "arm1020t CPU" \
-	xscale         "xscale CPU"
-                                   
+	arm1026ejs     "arm1026ejs CPU" \
+	arm1136js      "arm1136js CPU" \
+	xscale         "xscale CPU" \
+	iwmmxt         "iwmmxt CPU" \
+	ep9312         "ep9312 CPU"
 
 choice ROCKCFG_ARM_OPT_ARCH generic   \
 	generic	"No ARM architecture selected" \
@@ -78,7 +82,10 @@ choice ROCKCFG_ARM_OPT_ARCH generic   \
 	armv4t  "armv4t" \
 	armv5   "armv5" \
 	armv5t  "armv5t" \
-	armv5te "armv5te"
+	armv5te "armv5te" \
+	armv6j  "armv6j" \
+	iwmmxt  "iwmmxt" \
+	ep9312  "ep9312"
 
 if [ $ROCKCFG_ARM_OPT != generic ] ; then
 	ROCKCFG_ID="$ROCKCFG_ID-$ROCKCFG_ARM_OPT"

@@ -63,29 +63,9 @@ s_com="b${scsi_bus}t${scsi_target}u${scsi_lun}$spart"
 l_log="scsi/host$scsi_host/$l_com"
 s_log="$1/c${scsi_host}${s_com}"
 
-readlink $2 | grep -F -q pci
-if [ "$?" != "0" ]; then
-    # Not a PCI controller, show logical locations only
-    echo $l_log $s_log
-    exit 0
-fi
-
-# Extract PCI address
-tmp=`readlink $2 | sed -e 's@/host.*/.*@@'`
-pci_addr=`basename "$tmp"`
-pci_domain=`echo $pci_addr | cut -f 1 -d:`
-pci_bus=`echo $pci_addr | cut -f 2 -d:`
-pci_slot=`echo $pci_addr | tr . : | cut -f 3 -d:`
-pci_function=`echo $pci_addr | cut -f 2 -d.`
-
-# Generate long and short physical names
-l_pci="domain$pci_domain/bus$pci_bus/slot$pci_slot/function$pci_function"
-l_phy="bus/pci/$l_pci/scsi/$l_com"
-s_phy="$1/pci/$pci_addr/$s_com"
-
 if [ -d /dev/discs ] ; then
 	for x in /dev/discs/disc* ; do
-	       if readlink $x/disc | grep -q "$l_pci" ; then
+	       if readlink `ls -d $x/* | awk '{print $0; exit;}'` | grep -q "${l_log%$lpart}" ; then
 		       x=`echo $x | cut -f3 -dc` # gives the number in disc0
 		       break
 	       fi
@@ -93,8 +73,8 @@ if [ -d /dev/discs ] ; then
 	done
 fi
 
-if [ -z "${x}" -a -d /dev/discs ] ; then
-	x="`ls /dev/discs/ | grep -c .`"
+if [ -z "${x}" ] ; then
+	x="`ls /dev/discs/ 2> /dev/null | grep -c .`"
 fi
 
 echo $l_log $s_log discs/disc${x}/${lpart}

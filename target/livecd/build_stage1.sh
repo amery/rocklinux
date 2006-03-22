@@ -2,8 +2,8 @@
 echo_header "Creating initrd data:"
 rm -rf $disksdir/initrd
 mkdir -p $disksdir/initrd/{dev,sys,proc,mnt/{cdrom,floppy,stick,}}
-mkdir -p $disksdir/initrd/mnt/{cowfs_ro/{bin,lib},cowfs_rw}
-cd $disksdir/initrd; ln -s mnt/cowfs_ro/bin mnt/cowfs_ro/sbin; 
+mkdir -p $disksdir/initrd/mnt/{cowfs_ro/{etc,home,bin,sbin,opt,usr/{bin,sbin},tmp,var,lib},cowfs_rw}
+cd $disksdir/initrd
 #
 echo_status "Creating read-only symlinks..."
 for d in etc home bin sbin opt usr tmp var lib ; do
@@ -15,36 +15,60 @@ if [ -L $disksdir/2nd_stage/lib64 ] ; then
 	ln -s /mnt/cowfs_rw/lib64 lib64
 	ln -s /mnt/cowfs_ro/lib64 mnt/cowfs_rw/lib64
 fi
-#
-if [ -x ../../../usr/bin/diet ] ; then
-	export DIETHOME="../../../usr/dietlibc"
-	LXRCCC="../../../usr/bin/diet $CC";
-elif [ -x /usr/bin/diet ] ; then
-	echo_status "using host's diet - did the target's dietlibc build fail?"
-	LXRCCC="/usr/bin/diet $CC";
-else
-	echo_status "diet not found - using glibc -static - initrd may be too big..."
-	LXRCCC="$CC -static"
-fi
-echo_status "Create linuxrc binary."
-$LXRCCC $base/target/$target/linuxrc.c -Wall \
-	-DSTAGE_2_IMAGE="\"${ROCKCFG_SHORTID}/2nd_stage.img.z\"" \
-	-o linuxrc
+
+echo_status "Creating some device nodes"
+mknod dev/ram0  b 1 0
+mknod dev/null  c 1 3
+mknod dev/zero  c 1 5
+mknod dev/tty   c 5 0
+mknod dev/console c 5 1
+
+echo_status "Create checkisomd5 binary"
+cp -r ${base}/misc/isomd5sum ${base}/build/${ROCKCFG_ID}/
+cat >${base}/build/${ROCKCFG_ID}/compile_isomd5sum.sh <<EOF
+#!/bin/bash
+cd /isomd5sum
+make clean
+make CC=gcc
+EOF
+chmod +x ${base}/build/${ROCKCFG_ID}/compile_isomd5sum.sh
+chroot ${base}/build/${ROCKCFG_ID}/ /compile_isomd5sum.sh
+cp ${base}/build/${ROCKCFG_ID}/isomd5sum/checkisomd5 mnt/cowfs_ro/bin/
+rm -rf ${base}/build/${ROCKCFG_ID}/compile_isomd5sum.sh ${base}/build/${ROCKCFG_ID}/isomd5sum
+
+echo_status "Copying and adjusting linuxrc scipt"
+cp ${base}/target/${target}/linuxrc.sh linuxrc
+chmod +x linuxrc
+#sed -i -e "s,^STAGE_2_BIG_IMAGE=\"2nd_stage.tar.gz\"$,STAGE_2_BIG_IMAGE=\"${ROCKCFG_SHORTID}/2nd_stage.tar.gz\"," \
+#       -e "s,^STAGE_2_SMALL_IMAGE=\"2nd_stage_small.tar.gz\"$,STAGE_2_SMALL_IMAGE=\"${ROCKCFG_SHORTID}/2nd_stage_small.tar.gz\"," \
+sed -i -e "s,\(^STAGE_2_BIG_IMAGE=\"\)\(2nd_stage.img.z\"$\),\1${ROCKCFG_SHORTID}/\2," \
+       linuxrc
+
 #
 echo_status "Copy various helper applications."
 cp ../2nd_stage/bin/{tar,gzip} mnt/cowfs_ro/bin/
-cp ../2nd_stage/sbin/hwscan mnt/cowfs_ro/bin/
+cp ../2nd_stage/sbin/hwscan mnt/cowfs_ro/sbin/
 cp ../2nd_stage/usr/bin/gawk mnt/cowfs_ro/bin/
+
+for file in ../2nd_stage/bin/{tar,gzip,bash2,bash,sh,mount,umount,ls,cat,uname,rm,ln,mkdir,rmdir,gawk,awk,grep,sleep,dmesg} \
+	    ../2nd_stage/sbin/{ip,hwscan,pivot_root,swapon,swapoff,udev*,losetup} \
+	    ../2nd_stage/usr/bin/{wget,find,expand,readlink} \
+	    ../2nd_stage/usr/sbin/lspci ; do
+	programs="${programs} ${file#../2nd_stage}"
+	cp ${file} mnt/cowfs_ro/${file#../2nd_stage/}
+done
+cp -a $build_root/etc/udev mnt/cowfs_ro/etc/
+
 for x in modprobe.static modprobe.static.old \
          insmod.static insmod.static.old
 do
 	if [ -f ../2nd_stage/sbin/${x/.static/} ]; then
 		rm -f mnt/cowfs_ro/bin/${x/.static/}
-		cp -a ../2nd_stage/sbin/${x/.static/} mnt/cowfs_ro/bin/
+		cp -a ../2nd_stage/sbin/${x/.static/} mnt/cowfs_ro/sbin/
 	fi
 	if [ -f ../2nd_stage/sbin/$x ]; then
 		rm -f mnt/cowfs_ro/bin/$x mnt/cowfs_ro/bin/${x/.static/}
-		cp -a ../2nd_stage/sbin/$x mnt/cowfs_ro/bin/
+		cp -a ../2nd_stage/sbin/$x mnt/cowfs_ro/sbin/
 		ln -sf $x mnt/cowfs_ro/bin/${x/.static/}
 	fi
 done
@@ -64,9 +88,44 @@ for x in ../2nd_stage/lib/modules/*/modules.{dep,pcimap,isapnpmap} ; do
 done
 #
 rm -f mnt/cowfs_ro/lib/modules/[0-9]*/kernel/drivers/net/{dummy,ppp*}.{o,ko}
-#
-echo_status "Adding kiss shell for expert use of the initrd image."
-cp $build_root/bin/kiss mnt/cowfs_ro/bin/
+
+echo_status "Copying necessary libraries"
+
+libs="/lib/ld-linux.so.2 /lib/libdl.so.2 /lib/libc.so.6 /lib/librt.so.1 /lib/libpthread.so.0 /usr/lib/libpopt.so.0"
+# libpopt from checkisomd5 which is not in build/*
+for x in ${programs} ; do
+	[ -e ./$x ] || continue
+	file $x | grep -q ELF || continue
+	libs="$libs `chroot ${base}/build/${ROCKCFG_ID} ldd $x 2>/dev/null | grep -v 'not a dynamic executable' | sed -e 's,^[\t ]*,,g' | cut -f 3 -d' '`"
+done
+
+while [ -n "$libs" ] ; do
+	oldlibs=$libs
+	libs=""
+	for x in $oldlibs ; do
+		mkdir -p mnt/cowfs_ro/${x%/*}
+		if [ ! -e ./$x ] ; then
+			cp ${base}/build/${ROCKCFG_ID}/$x mnt/cowfs_ro/$x
+			echo_status "- ${x##*/}"
+		fi
+		file $x | grep -q ELF || continue
+		for y in `chroot ${base}/build/${ROCKCFG_ID} ldd $x 2>/dev/null | grep -v 'not a dynamic executable' | sed -e 's,^[\t ]*,,g' | cut -f 3 -d' '` ; do
+			[ ! -e "./$y" ] && libs="$libs $y"
+		done
+	done
+done
+
+echo_status "Creating links for identical files."
+while read ck fn
+do
+	if [ "$oldck" = "$ck" ] ; then
+		echo_status "\`- Found $fn -> $oldfn."
+		rm $fn ; ln -s ${oldfn#.} $fn
+	else
+		oldck=$ck ; oldfn=$fn
+	fi
+done < <( find -type f | xargs md5sum | sort )
+
 cd ..
 
 echo_header "Creating initrd filesystem image: "
@@ -89,7 +148,7 @@ fi
 echo_status "Using loopback device $tmpdev."
 #
 echo_status "Writing initrd image file."
-mke2fs -m 0 -N 180 -q $tmpdev &> /dev/null
+mke2fs -m 0 -N 360 -q $tmpdev &> /dev/null
 mount -t ext2 $tmpdev $tmpdir
 rmdir $tmpdir/lost+found/
 cp -a initrd/* $tmpdir

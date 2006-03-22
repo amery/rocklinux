@@ -20,20 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1132992979 Sat Nov 26 09:16:19 2005 (5)
-[TIMESTAMP] 1133215947 Mon Nov 28 23:12:27 2005 (9)
+[TIMESTAMP] 1142480485 Thu Mar 16 04:41:25 2006 (5) ERROR
+[TIMESTAMP] 1142726263 Sun Mar 19 00:57:43 2006 (9) ERROR
+[TIMESTAMP] 1142952214 Tue Mar 21 15:43:34 2006 (5) ERROR
+[TIMESTAMP] 1142966124 Tue Mar 21 19:35:24 2006 (9) ERROR
+[TIMESTAMP] 1143027321 Wed Mar 22 12:35:21 2006 (5) ERROR
+[TIMESTAMP] 1143035467 Wed Mar 22 14:51:07 2006 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-gatos-km.log 9-gatos-km.log
+[LOGS] 5-gatos-km.err 9-gatos-km.err
 
-[BUILDTIME] 1397 (5)
-[BUILDTIME] 1973 (9)
-[SIZE] 0.08 MB, 9 files
+[BUILDTIME] 1064 (5) ERROR
+[BUILDTIME] 1614 (9) ERROR
+[BUILDTIME] 1639 (5) ERROR
+[BUILDTIME] 1649 (9) ERROR
+[BUILDTIME] 1638 (5) ERROR
+[BUILDTIME] 1641 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 grep linux26 linux26-source make mktemp perl5
-[DEP] sed sysfiles tar
 
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1028: error: (near initialization for `km_pci_tbl[54].device')
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1029: error: initializer element is not constant
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1029: error: (near initialization for `km_pci_tbl[54]')
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1031: error: initializer element is not constant
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1031: error: (near initialization for `km_pci_tbl[55]')
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1033: error: initializer element is not constant
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1033: error: (near initialization for `km_pci_tbl[56]')
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1035: error: initializer element is not constant
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1035: error: (near initialization for `km_pci_tbl[57]')
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1037: error: initializer element is not constant
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1037: error: (near initialization for `km_pci_tbl[58]')
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1039: error: initializer element is not constant
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1039: error: (near initialization for `km_pci_tbl[59]')
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1041: error: initializer element is not constant
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1041: error: (near initialization for `km_pci_tbl[60]')
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1043: error: initializer element is not constant
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1043: error: (near initialization for `km_pci_tbl[61]')
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1045: error: initializer element is not constant
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1045: error: (near initialization for `km_pci_tbl[62]')
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1047: error: initializer element is not constant
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1047: error: (near initialization for `km_pci_tbl[63]')
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1049: error: initializer element is not constant
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1049: error: (near initialization for `km_pci_tbl[64]')
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1051: error: initializer element is not constant
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1051: error: (near initialization for `km_pci_tbl[65]')
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1053: error: initializer element is not constant
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1053: error: (near initialization for `km_pci_tbl[66]')
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1056: error: initializer element is not constant
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1056: error: (near initialization for `km_pci_tbl[67]')
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1058: error: initializer element is not constant
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1058: error: (near initialization for `km_pci_tbl[68]')
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1060: error: initializer element is not constant
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1060: error: (near initialization for `km_pci_tbl[69]')
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1061: error: initializer element is not constant
+[5-ERROR] /ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.c:1061: error: (near initialization for `km_pci_tbl[70]')
+[5-ERROR] make[2]: *** [/ROCK/src.gatos-km.1143027287.26954.3512543924/km/km.o] Error 1
+[5-ERROR] make[1]: *** [_module_/ROCK/src.gatos-km.1143027287.26954.3512543924/km] Error 2
+[5-ERROR] make[1]: Leaving directory `/usr/src/linux-2.6.15.4-rock'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 0 files for this package.
+[5-ERROR] Applying package split: 40 gatos-km:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 gatos-km:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 gatos-km:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building gatos-km=gatos-km.
+
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1028: error: (near initialization for `km_pci_tbl[54].device')
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1029: error: initializer element is not constant
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1029: error: (near initialization for `km_pci_tbl[54]')
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1031: error: initializer element is not constant
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1031: error: (near initialization for `km_pci_tbl[55]')
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1033: error: initializer element is not constant
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1033: error: (near initialization for `km_pci_tbl[56]')
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1035: error: initializer element is not constant
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1035: error: (near initialization for `km_pci_tbl[57]')
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1037: error: initializer element is not constant
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1037: error: (near initialization for `km_pci_tbl[58]')
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1039: error: initializer element is not constant
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1039: error: (near initialization for `km_pci_tbl[59]')
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1041: error: initializer element is not constant
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1041: error: (near initialization for `km_pci_tbl[60]')
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1043: error: initializer element is not constant
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1043: error: (near initialization for `km_pci_tbl[61]')
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1045: error: initializer element is not constant
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1045: error: (near initialization for `km_pci_tbl[62]')
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1047: error: initializer element is not constant
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1047: error: (near initialization for `km_pci_tbl[63]')
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1049: error: initializer element is not constant
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1049: error: (near initialization for `km_pci_tbl[64]')
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1051: error: initializer element is not constant
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1051: error: (near initialization for `km_pci_tbl[65]')
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1053: error: initializer element is not constant
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1053: error: (near initialization for `km_pci_tbl[66]')
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1056: error: initializer element is not constant
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1056: error: (near initialization for `km_pci_tbl[67]')
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1058: error: initializer element is not constant
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1058: error: (near initialization for `km_pci_tbl[68]')
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1060: error: initializer element is not constant
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1060: error: (near initialization for `km_pci_tbl[69]')
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1061: error: initializer element is not constant
+[9-ERROR] /ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.c:1061: error: (near initialization for `km_pci_tbl[70]')
+[9-ERROR] make[2]: *** [/ROCK/src.gatos-km.1143035434.3539.2277529151/km/km.o] Error 1
+[9-ERROR] make[1]: *** [_module_/ROCK/src.gatos-km.1143035434.3539.2277529151/km] Error 2
+[9-ERROR] make[1]: Leaving directory `/usr/src/linux-2.6.15.4-rock'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 0 files for this package.
+[9-ERROR] Applying package split: 40 gatos-km:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 gatos-km:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 gatos-km:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building gatos-km=gatos-km.
 

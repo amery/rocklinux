@@ -20,70 +20,76 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133053286 Sun Nov 27 02:01:26 2005 (5)
-[TIMESTAMP] 1133284541 Tue Nov 29 18:15:41 2005 (9)
+[TIMESTAMP] 1142543899 Thu Mar 16 22:18:19 2006 (5)
+[TIMESTAMP] 1142800426 Sun Mar 19 21:33:46 2006 (9) ERROR
+[TIMESTAMP] 1142970243 Tue Mar 21 20:44:03 2006 (9) ERROR
+[TIMESTAMP] 1143039387 Wed Mar 22 15:56:27 2006 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-kdepim.log 9-kdepim.log
+[LOGS] 5-kdepim.log 9-kdepim.err
 
-[BUILDTIME] 493805 (5)
-[BUILDTIME] 498966 (9)
-[SIZE] 38.37 MB, 1436 files
+[BUILDTIME] 545808 (5)
+[BUILDTIME] 550484 (9) ERROR
+[BUILDTIME] 1825 (9) ERROR
+[BUILDTIME] 1814 (9) ERROR
+[SIZE] 44.64 MB, 1897 files
 
-[DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev
-[DEP] autoconf automake19 bash2 binutils bison bluez-libs bluez-libs:dev
-[DEP] bzip2 coreutils cyrus-sasl2 cyrus-sasl2:dev cyrus-sasl:dev diffutils
-[DEP] esound esound:dev expat fam fam:dev findutils flex flex:dev freetype
-[DEP] freetype:dev gawk gcc34 gcc34:dev gettext glib glib:dev glibc23
-[DEP] glibc23:dev gnokii gnokii:dev gnome2-dirtree gpgme gpgme:dev grep
-[DEP] jack jack:dev kdebase kdelibs kdelibs:dev kdeutils libart_lgpl23
-[DEP] libart_lgpl23:dev libassuan:dev libgpg-error libgpg-error:dev libidn
-[DEP] libidn:dev libjpeg libjpeg:dev libpng libpng:dev linux26-header:dev
-[DEP] m4 mad mad:dev make mktemp nas ncurses:dev net-tools ogg-vorbis
-[DEP] ogg-vorbis:dev openssl openssl:dev patch pcre pcre:dev perl5
-[DEP] pilot-link pilot-link:dev qt qt:dev sed sysfiles tar util-linux
-[DEP] vim xorg xorg:dev zlib:dev
+[DEP] 00-dirtree acl acl:dev alsa alsa:dev arts arts:dev attr
+[DEP] attr:dev audiofile audiofile:dev autoconf automake19 bash2
+[DEP] binutils bluez-libs bluez-libs:dev bzip2 coreutils cyrus-sasl2
+[DEP] cyrus-sasl2:dev cyrus-sasl:dev diffutils esound esound:dev expat
+[DEP] fam fam:dev findutils flex flex:dev freetype freetype:dev gawk gcc34
+[DEP] gcc34:dev gettext glib glib:dev glibc23 glibc23:dev gnokii gnokii:dev
+[DEP] gnome2-dirtree gpgme gpgme:dev grep jack jack:dev kdebase kdelibs
+[DEP] kdelibs:dev kdeutils libart_lgpl23 libart_lgpl23:dev libassuan:dev
+[DEP] libgpg-error libgpg-error:dev libidn libidn:dev libjpeg libjpeg:dev
+[DEP] libpng libpng:dev linux26-header:dev m4 mad mad:dev make mktemp nas
+[DEP] ncurses:dev net-tools ogg-vorbis ogg-vorbis:dev openssl openssl:dev
+[DEP] patch pcre pcre:dev perl5 pilot-link pilot-link:dev qt33 qt33:dev
+[DEP] rrdtool sed sysfiles tar util-linux xorg xorg:dev zlib:dev
 
 [PROVIDES] akregator conduit_address.so conduit_doc.so conduit_knotes.so
 [PROVIDES] conduit_memofile.so conduit_notepad.so conduit_popmail.so
 [PROVIDES] conduit_sysinfo.so conduit_time.so conduit_todo.so
-[PROVIDES] conduit_vcal.so egroupwarewizard exchangewizard groupwarewizard
-[PROVIDES] groupwisewizard ical2vcal kabc2mutt kabc_groupdav.so
-[PROVIDES] kabc_groupwise.so kabc_kolab.so kabc_newexchange.so kabc_slox.so
-[PROVIDES] kabc_xmlrpc.so kaddressbook kalarm kalarmd kandy kandy_client
-[PROVIDES] karm kcal_blogging.so kcal_groupdav.so kcal_groupwise.so
-[PROVIDES] kcal_kabc.so kcal_kolab.so kcal_local.so kcal_localdir.so
-[PROVIDES] kcal_newexchange.so kcal_remote.so kcal_resourcefeatureplan.so
-[PROVIDES] kcal_slox.so kcal_xmlrpc.so kcm_kabconfig.so
-[PROVIDES] kcm_kabcustomfields.so kcm_kabldapconfig.so kcm_kabsummary.so
-[PROVIDES] kcm_kleopatra.so kcm_kmail.so kcm_kmailsummary.so kcm_knode.so
-[PROVIDES] kcm_kontact.so kcm_kontactknt.so kcm_kontactsummary.so
-[PROVIDES] kcm_korganizer.so kcm_korgsummary.so kcm_kpilot.so
-[PROVIDES] kcm_sdsummary.so kded_networkstatus.so kdepimwidgets.so
-[PROVIDES] kfile_ics.so kfile_palm.so kfile_vcf.so kio_groupwise.so
-[PROVIDES] kio_imap4.so kio_mbox.so kio_sieve.so kitchensync
-[PROVIDES] kleopatra kmail kmail_antivir.sh kmail_clamav.sh
-[PROVIDES] kmail_fprot.sh kmail_sav.sh kmailcvt knode knotes
-[PROVIDES] knotes_kolab.so knotes_local.so knotes_xmlrpc.so kode
-[PROVIDES] kolabwizard konsolekalendar kontact korgac korganizer korn
-[PROVIDES] korn-3-4-config_change kpalmdoc kpartsdesignerplugin.so
-[PROVIDES] kpilot kpilotDaemon ksync ktnef kwatchgnupg kxml_compiler
-[PROVIDES] ldifvcardthumbnail.so libakregatorpart.so libakregatorprivate.so
-[PROVIDES] libegroupwarewizard.so libexchangewizard.so
-[PROVIDES] libgpgme++.so libgroupwisewizard.so libkabc_groupdav.so
-[PROVIDES] libkabc_groupwise.so libkabc_newexchange.so libkabc_slox.so
-[PROVIDES] libkabc_xmlrpc.so libkabckolab.so libkabckonnector.so
-[PROVIDES] libkabinterfaces.so libkaddrbk_bookmark_xxport.so
-[PROVIDES] libkaddrbk_cardview.so libkaddrbk_cryptosettings.so
-[PROVIDES] libkaddrbk_csv_xxport.so libkaddrbk_distributionlist.so
-[PROVIDES] libkaddrbk_eudora_xxport.so libkaddrbk_gnokii_xxport.so
-[PROVIDES] libkaddrbk_iconview.so libkaddrbk_kde2_xxport.so
-[PROVIDES] libkaddrbk_ldif_xxport.so libkaddrbk_opera_xxport.so
-[PROVIDES] libkaddrbk_pab_xxport.so libkaddrbk_resourceselection.so
-[PROVIDES] libkaddrbk_tableview.so libkaddrbk_vcard_xxport.so
-[PROVIDES] libkaddressbook.so libkaddressbookpart.so libkcal.so
+[PROVIDES] conduit_vcal.so egroupwarewizard exchangewizard
+[PROVIDES] groupwarewizard groupwisewizard ical2vcal indexlib-config
+[PROVIDES] kabc2mutt kabc_groupdav.so kabc_groupwise.so kabc_kolab.so
+[PROVIDES] kabc_newexchange.so kabc_slox.so kabc_xmlrpc.so kaddressbook
+[PROVIDES] kalarm kalarmd kandy kandy_client karm kcal_blogging.so
+[PROVIDES] kcal_groupdav.so kcal_groupwise.so kcal_kabc.so kcal_kolab.so
+[PROVIDES] kcal_local.so kcal_localdir.so kcal_newexchange.so
+[PROVIDES] kcal_remote.so kcal_resourcefeatureplan.so kcal_slox.so
+[PROVIDES] kcal_xmlrpc.so kcm_kabconfig.so kcm_kabcustomfields.so
+[PROVIDES] kcm_kabldapconfig.so kcm_kleopatra.so kcm_kmail.so
+[PROVIDES] kcm_kmailsummary.so kcm_knode.so kcm_kontact.so
+[PROVIDES] kcm_kontactknt.so kcm_kontactsummary.so kcm_korganizer.so
+[PROVIDES] kcm_korgsummary.so kcm_kpilot.so kcm_sdsummary.so
+[PROVIDES] kded_networkstatus.so kdepimwidgets.so kfile_ics.so
+[PROVIDES] kfile_palm.so kfile_vcf.so kio_groupwise.so kio_imap4.so
+[PROVIDES] kio_mbox.so kio_sieve.so kitchensync kleopatra kmail
+[PROVIDES] kmail_antivir.sh kmail_clamav.sh kmail_fprot.sh kmail_sav.sh
+[PROVIDES] kmailcvt knode knotes knotes_kolab.so knotes_local.so
+[PROVIDES] knotes_xmlrpc.so kode kolabwizard konsolekalendar kontact
+[PROVIDES] korgac korganizer korn korn-3-4-config_change kpalmdoc
+[PROVIDES] kpartsdesignerplugin.so kpilot kpilotDaemon ksync
+[PROVIDES] ktnef kwatchgnupg kxml_compiler ldifvcardthumbnail.so
+[PROVIDES] libakregator_mk4storage_plugin.so libakregatorpart.so
+[PROVIDES] libakregatorprivate.so libegroupwarewizard.so
+[PROVIDES] libexchangewizard.so libgpgme++.so libgroupwisewizard.so
+[PROVIDES] libindex.so libkabc_groupdav.so libkabc_groupwise.so
+[PROVIDES] libkabc_newexchange.so libkabc_slox.so libkabc_xmlrpc.so
+[PROVIDES] libkabckolab.so libkabckonnector.so libkabinterfaces.so
+[PROVIDES] libkaddrbk_bookmark_xxport.so libkaddrbk_cardview.so
+[PROVIDES] libkaddrbk_cryptosettings.so libkaddrbk_csv_xxport.so
+[PROVIDES] libkaddrbk_distributionlist.so libkaddrbk_eudora_xxport.so
+[PROVIDES] libkaddrbk_gnokii_xxport.so libkaddrbk_iconview.so
+[PROVIDES] libkaddrbk_kde2_xxport.so libkaddrbk_ldif_xxport.so
+[PROVIDES] libkaddrbk_opera_xxport.so libkaddrbk_pab_xxport.so
+[PROVIDES] libkaddrbk_resourceselection.so libkaddrbk_tableview.so
+[PROVIDES] libkaddrbk_vcard_xxport.so libkaddressbook.so
+[PROVIDES] libkaddressbookpart.so libkarmpart.so libkcal.so
 [PROVIDES] libkcal_blogging.so libkcal_groupdav.so libkcal_groupwise.so
 [PROVIDES] libkcal_newexchange.so libkcal_resourcefeatureplan.so
 [PROVIDES] libkcal_resourceremote.so libkcal_slox.so libkcal_xmlrpc.so
@@ -94,11 +100,12 @@
 [PROVIDES] libkmail_bodypartformatter_text_calendar.so
 [PROVIDES] libkmail_bodypartformatter_text_vcard.so
 [PROVIDES] libkmail_bodypartformatter_text_xdiff.so libkmailpart.so
-[PROVIDES] libkmailprivate.so libkmime.so libknodecommon.so libknodepart.so
-[PROVIDES] libknotes_xmlrpc.so libknoteskolab.so libkocorehelper.so
-[PROVIDES] libkode.so libkolabwizard.so libkonnector.so libkontact.so
-[PROVIDES] libkontact_akregator.so libkontact_journalplugin.so
-[PROVIDES] libkontact_kaddressbookplugin.so libkontact_kmailplugin.so
+[PROVIDES] libkmailprivate.so libkmime.so libknodecommon.so
+[PROVIDES] libknodepart.so libknotes_xmlrpc.so libknoteskolab.so
+[PROVIDES] libkocorehelper.so libkode.so libkolabwizard.so
+[PROVIDES] libkonnector.so libkontact.so libkontact_akregator.so
+[PROVIDES] libkontact_journalplugin.so libkontact_kaddressbookplugin.so
+[PROVIDES] libkontact_karm.so libkontact_kmailplugin.so
 [PROVIDES] libkontact_knodeplugin.so libkontact_knotesplugin.so
 [PROVIDES] libkontact_korganizerplugin.so libkontact_kpilotplugin.so
 [PROVIDES] libkontact_multisynk.so libkontact_newstickerplugin.so
@@ -107,14 +114,65 @@
 [PROVIDES] libkorg_datenums.so libkorg_exchange.so libkorg_hebrew.so
 [PROVIDES] libkorg_journalprint.so libkorg_stdprinting.so libkorganizer.so
 [PROVIDES] libkorganizer_calendar.so libkorganizer_eventviewer.so
-[PROVIDES] libkorganizerpart.so libkpgp.so libkpilot.so libkpimexchange.so
-[PROVIDES] libkpimidentities.so libkpinterfaces.so libksieve.so
+[PROVIDES] libkorganizerpart.so libkpgp.so libkpilot.so
+[PROVIDES] libkpimexchange.so libkpimidentities.so libkpinterfaces.so
+[PROVIDES] libksfilter_addressbook.so libksfilter_calendar.so libksieve.so
 [PROVIDES] libkslox.so libksync.so libksync2.so libksync_backup.so
 [PROVIDES] libksync_debugger.so libksync_pluckerpart.so libksync_restore.so
 [PROVIDES] libksync_syncerpart.so libksync_viewer.so libktnef.so
 [PROVIDES] liblocalkonnector.so libmimelib.so libmultisynk.so
 [PROVIDES] libmultisynkpart.so liboverviewpart.so libqgpgme.so
 [PROVIDES] libqtopiakonnector.so libremotekonnector.so libsloxwizard.so
-[PROVIDES] libsyncmlkonnector.so multisynk networkstatustestservice
-[PROVIDES] resourcecalendarexchange.so sloxwizard
+[PROVIDES] multisynk networkstatustestservice resourcecalendarexchange.so
+[PROVIDES] sloxwizard
+
+[9-ERROR] Command Wrapper Debug: running 'gcc-34 --version' ..
+[9-ERROR] gcc-34 is /ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/gcc-34
+[9-ERROR] Old Command: gcc-34 --version
+[9-ERROR] ENVPREFIX = 'CMD'
+[9-ERROR] APPEND_PO = ''
+[9-ERROR] OTHERS = ''
+[9-ERROR] INSERT = '-O1 -pipe'
+[9-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
+[9-ERROR] APPEND = '-s'
+[9-ERROR] FILTER = ''
+[9-ERROR] Old PATH: /ROCK/src.kdepim.1143039334.23263.2757298185/wrappers:/ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper:/ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clip/bin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/deva/bin:/opt/e16/bin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/flexlm/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/kde3/bin:/opt/kde3/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/samba/bin:/opt/samba/sbin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/opt/kde3/bin:/opt/root/bin
+[9-ERROR] New PATH: /ROCK/src.kdepim.1143039334.23263.2757298185/wrappers:/ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clip/bin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/deva/bin:/opt/e16/bin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/flexlm/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/kde3/bin:/opt/kde3/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/samba/bin:/opt/samba/sbin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/opt/kde3/bin:/opt/root/bin
+[9-ERROR] Insert: -O1
+[9-ERROR] Insert: -pipe
+[9-ERROR] Copy:   --version
+[9-ERROR] Append: -s
+[9-ERROR] New Command: gcc-34 -O1 -pipe --version -s
+[9-ERROR] gcc-34 (GCC) 3.4.5
+[9-ERROR] Copyright (C) 2004 Free Software Foundation, Inc.
+[9-ERROR] This is free software; see the source for copying conditions.  There is NO
+[9-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[9-ERROR] 
+[9-ERROR] [ writing debug log to /ROCK/src.kdepim.1143039334.23263.2757298185/cmd_wrapper.log ]
+[9-ERROR] File not found: download/mirror/k/kdepim-3.5.1.tar.bz2
+[9-ERROR] Did you run ./scripts/Download for this package?
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 2769 files for this package.
+[9-ERROR] Applying package split: 40 kdepim:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 kdepim:dev /pkgconfig/
+[9-ERROR] Applying package split: 45 kdepim /.*\.la$
+[9-ERROR] Applying package split: 60 kdepim:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <kdepim> Creating flist file ...
+[9-ERROR] <kdepim> Creating package dependencies file ...
+[9-ERROR] <kdepim> Creating md5sum and cksum files ...
+[9-ERROR] <kdepim> Creating package description ...
+[9-ERROR] <kdepim:dev> Creating flist file ...
+[9-ERROR] <kdepim:dev> Creating package dependencies file ...
+[9-ERROR] <kdepim:dev> Creating md5sum and cksum files ...
+[9-ERROR] <kdepim:dev> Creating package description ...
+[9-ERROR] <kdepim:doc> Creating flist file ...
+[9-ERROR] <kdepim:doc> Creating package dependencies file ...
+[9-ERROR] <kdepim:doc> Creating md5sum and cksum files ...
+[9-ERROR] <kdepim:doc> Creating package description ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building kdepim=kdepim.
 

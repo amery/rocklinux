@@ -20,31 +20,30 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1132960392 Sat Nov 26 00:13:12 2005 (3)
-[TIMESTAMP] 1133309748 Wed Nov 30 01:15:48 2005 (9)
+[TIMESTAMP] 1142447396 Wed Mar 15 19:29:56 2006 (3)
+[TIMESTAMP] 1142825329 Mon Mar 20 04:28:49 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 3-pam.log 9-pam.log
 
-[BUILDTIME] 3627 (3)
-[BUILDTIME] 4447 (9)
-[SIZE] 0.51 MB, 77 files
+[BUILDTIME] 11724 (3)
+[BUILDTIME] 13006 (9)
+[SIZE] 0.62 MB, 98 files
 
-[DEP] 00-dirtree bash2 bdb42 bdb42:dev binutils bzip2 coreutils
+[DEP] 00-dirtree bash2 bdb42 bdb42:dev binutils bison bzip2 coreutils
 [DEP] cracklib:dev diffutils findutils flex flex:dev gawk gcc34 gcc34:dev
-[DEP] gdbm:dev glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp
-[DEP] net-tools sed sysfiles tar util-linux
+[DEP] gdbm:dev gettext glibc23 glibc23:dev grep libcap linux26-header:dev
+[DEP] m4 make mktemp net-tools opensc rrdtool sed sysfiles tar util-linux
 
 [PROVIDES] libpam.so libpam_misc.so libpamc.so pam_access.so
-[PROVIDES] pam_cracklib.so pam_debug.so pam_deny.so pam_env.so
-[PROVIDES] pam_filter.so pam_ftp.so pam_group.so pam_issue.so
+[PROVIDES] pam_cracklib.so pam_debug.so pam_deny.so pam_echo.so
+[PROVIDES] pam_env.so pam_filter.so pam_ftp.so pam_group.so pam_issue.so
 [PROVIDES] pam_lastlog.so pam_limits.so pam_listfile.so pam_localuser.so
 [PROVIDES] pam_mail.so pam_mkhomedir.so pam_motd.so pam_nologin.so
 [PROVIDES] pam_permit.so pam_rhosts_auth.so pam_rootok.so pam_securetty.so
 [PROVIDES] pam_shells.so pam_stress.so pam_succeed_if.so pam_tally
-[PROVIDES] pam_tally.so pam_time.so pam_unix.so pam_unix_acct.so
-[PROVIDES] pam_unix_auth.so pam_unix_passwd.so pam_unix_session.so
-[PROVIDES] pam_userdb.so pam_warn.so pam_wheel.so pam_xauth.so unix_chkpwd
+[PROVIDES] pam_tally.so pam_time.so pam_umask.so pam_unix.so pam_userdb.so
+[PROVIDES] pam_warn.so pam_wheel.so pam_xauth.so unix_chkpwd
 

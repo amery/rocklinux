@@ -20,48 +20,53 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133138296 Mon Nov 28 01:38:16 2005 (5)
-[TIMESTAMP] 1133379751 Wed Nov 30 20:42:31 2005 (9)
+[TIMESTAMP] 1142633430 Fri Mar 17 23:10:30 2006 (5)
+[TIMESTAMP] 1142901836 Tue Mar 21 01:43:56 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-kdegraphics.log 9-kdegraphics.log
 
-[BUILDTIME] 215131 (5)
-[BUILDTIME] 216266 (9)
-[SIZE] 16.65 MB, 834 files
+[BUILDTIME] 234989 (5)
+[BUILDTIME] 236541 (9)
+[SIZE] 18.83 MB, 975 files
 
-[DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils djvulibre
-[DEP] expat fam fam:dev findutils freetype freetype:dev fribidi fribidi:dev
-[DEP] gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev gnome-libs14
-[DEP] gnome14-dirtree gnome2-dirtree grep imlib imlib:dev kdebase
-[DEP] kdelibs kdelibs:dev kdenetwork kdeutils lcms lcms:dev libart_lgpl23
-[DEP] libart_lgpl23:dev libexif libexif:dev libgphoto libgphoto:dev libidn
-[DEP] libidn:dev libjpeg libjpeg:dev libpng libpng:dev libtiff libtiff:dev
-[DEP] libungif libungif:dev libusb libusb:dev linux26-header:dev make
-[DEP] mktemp nas net-tools nx-X11 nx-X11:dev nxcomp patch pcre pcre:dev
-[DEP] perl5 pkgconfig qt qt:dev sane-backends sane-backends:dev sed
-[DEP] sysfiles tar tetex util-linux vim xorg xorg:dev zlib:dev
+[DEP] 00-dirtree acl acl:dev arts attr attr:dev bash2 binutils bzip2 cairo
+[DEP] cairo:dev coreutils diffutils djvulibre expat fam fam:dev findutils
+[DEP] freetype freetype:dev fribidi fribidi:dev gawk gcc34 gcc34:dev
+[DEP] gettext glibc23 glibc23:dev gnome14-dirtree gnome2-dirtree grep
+[DEP] imlib imlib:dev kdebase kdegames kdelibs kdelibs:dev kdenetwork
+[DEP] lcms lcms:dev libart_lgpl23 libart_lgpl23:dev libexif libexif:dev
+[DEP] libgphoto libgphoto:dev libidn libidn:dev libjpeg libjpeg:dev
+[DEP] libpng libpng:dev libtiff libtiff:dev libtool libtool:dev libungif
+[DEP] libungif:dev libusb libusb:dev linux26-header:dev make mktemp nas
+[DEP] net-tools nx-x11 nx-x11:dev nxcomp openexr openexr:dev patch pcre
+[DEP] pcre:dev perl5 pkgconfig poppler poppler:dev qt33 qt33:dev rrdtool
+[DEP] sane-backends sane-backends:dev sed sysfiles tar tetex util-linux
+[DEP] xorg xorg:dev zlib:dev
 
-[PROVIDES] emptymultipagepart.so gsthumbnail.so kcm_kamera.so kcm_kgamma.so
-[PROVIDES] kcm_kmrml.so kcm_kviewcanvasconfig.so kcm_kviewgeneralconfig.so
+[PROVIDES] djvuviewpart.so emptymultipagepart.so gsthumbnail.so
+[PROVIDES] kcm_kamera.so kcm_kgamma.so kcm_kmrml.so
+[PROVIDES] kcm_kviewcanvasconfig.so kcm_kviewgeneralconfig.so
 [PROVIDES] kcm_kviewpluginsconfig.so kcm_kviewviewerpluginsconfig.so
-[PROVIDES] kcolorchooser kcoloredit kded_daemonwatcher.so kdvi kdvipart.so
-[PROVIDES] kfax kfaxpart.so kfile_bmp.so kfile_dds.so kfile_dvi.so
+[PROVIDES] kcolorchooser kcoloredit kded_daemonwatcher.so kdvi
+[PROVIDES] kdvipart.so kfax kfaxview kfaxviewpart.so kfile_bmp.so
+[PROVIDES] kfile_dds.so kfile_dvi.so kfile_exr.so kfile_gif.so
 [PROVIDES] kfile_ico.so kfile_jpeg.so kfile_pcx.so kfile_pdf.so
-[PROVIDES] kfile_png.so kfile_pnm.so kfile_ps.so kfile_rgb.so
-[PROVIDES] kfile_tga.so kfile_tiff.so kfile_xbm.so kfile_xpm.so
-[PROVIDES] kghostview kiconedit kio_kamera.so kio_mrml.so kolourpaint
-[PROVIDES] kooka kpdf kpovmodeler kruler ksnapshot kuickshow kuickshow.so
-[PROVIDES] kview kview.so kview_browserplugin.so kview_effectsplugin.so
-[PROVIDES] kview_presenterplugin.so kview_scannerplugin.so kviewerpart.so
-[PROVIDES] kviewshell libkdeinit_kuickshow.so libkdeinit_kview.so
-[PROVIDES] libkdeinit_mrmlsearch.so libkghostviewlib.so
-[PROVIDES] libkghostviewpart.so libkimageviewer.so libkmrmlpart.so
-[PROVIDES] libkmultipage.so libkpdfpart.so libkpovmodeler.so
-[PROVIDES] libkpovmodelerpart.so libkscan.so libksvg.so libksvgplugin.so
-[PROVIDES] libksvgrendererlibart.so libkviewcanvas.so libkviewviewer.so
-[PROVIDES] libphotobook.so libtext2path.so mrmlsearch mrmlsearch.so
-[PROVIDES] printnodetest svgdisplay svgthumbnail.so xf86gammacfg
+[PROVIDES] kfile_png.so kfile_pnm.so kfile_ps.so kfile_raw.so kfile_rgb.so
+[PROVIDES] kfile_tga.so kfile_tiff.so kfile_xbm.so kfile_xpm.so kghostview
+[PROVIDES] kiconedit kio_kamera.so kio_mrml.so kolourpaint kooka kpdf
+[PROVIDES] kpovmodeler kruler ksnapshot kuickshow kuickshow.so kview
+[PROVIDES] kview.so kview_browserplugin.so kview_effectsplugin.so
+[PROVIDES] kview_presenterplugin.so kview_scannerplugin.so
+[PROVIDES] kviewerpart.so kviewshell libdjvu.so libkdeinit_kuickshow.so
+[PROVIDES] libkdeinit_kview.so libkdeinit_mrmlsearch.so libkfaximage.so
+[PROVIDES] libkghostviewlib.so libkghostviewpart.so libkimageviewer.so
+[PROVIDES] libkmrmlpart.so libkmultipage.so libkpdfpart.so
+[PROVIDES] libkpovmodeler.so libkpovmodelerpart.so libkscan.so libksvg.so
+[PROVIDES] libksvgplugin.so libksvgrendererlibart.so libkviewcanvas.so
+[PROVIDES] libkviewviewer.so libphotobook.so libtext2path.so mrmlsearch
+[PROVIDES] mrmlsearch.so printnodetest svgdisplay svgthumbnail.so
+[PROVIDES] xf86gammacfg
 

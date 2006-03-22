@@ -20,33 +20,38 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133027358 Sat Nov 26 18:49:18 2005 (5)
-[TIMESTAMP] 1133256128 Tue Nov 29 10:22:08 2005 (9)
+[TIMESTAMP] 1142517082 Thu Mar 16 14:51:22 2006 (5)
+[TIMESTAMP] 1142770691 Sun Mar 19 13:18:11 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-mjpegtools.log 9-mjpegtools.log
 
-[BUILDTIME] 12658 (5)
-[BUILDTIME] 13377 (9)
-[SIZE] 1.70 MB, 97 files
+[BUILDTIME] 15946 (5)
+[BUILDTIME] 16752 (9)
+[SIZE] 1.82 MB, 113 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glib12 glib12:dev glibc23 glibc23:dev gnome14-dirtree
-[DEP] grep gtk+12 gtk+12:dev libdv libdv:dev libjpeg libjpeg:dev libpng
-[DEP] libpng:dev libsdl libsdl:dev linux26-header:dev make mktemp nas nasm
-[DEP] net-tools patch sed sysfiles tar util-linux xorg xorg:dev zlib:dev
+[DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 cairo cairo:dev coreutils
+[DEP] diffutils expat findutils freetype freetype:dev gawk gcc34 gcc34:dev
+[DEP] glib glib:dev glibc23 glibc23:dev gnome-libs14 gnome14-dirtree
+[DEP] gnome2-dirtree grep gtk+ gtk+:dev libdv libdv:dev libjpeg libjpeg:dev
+[DEP] libpng libpng:dev libsdl libsdl:dev linux26-header:dev make mktemp
+[DEP] nas net-tools pango pango:dev pkgconfig rrdtool sed sysfiles tar
+[DEP] util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] glav jpeg2yuv lav2avi.sh lav2mpeg lav2wav lav2yuv lavaddwav
-[PROVIDES] lavinfo lavpipe lavplay lavrec lavtrans lavvideo liblavfile.a
-[PROVIDES] liblavfile.so liblavjpeg.a liblavjpeg.so liblavplay.a
-[PROVIDES] liblavplay.so liblavrec.a liblavrec.so libmjpegutils.a
-[PROVIDES] libmpeg2encpp.a libmpeg2encpp.so libmplex2.a libmplex2.so
-[PROVIDES] matteblend.flt mjpegtools-config mp2enc mpeg2enc mpegtranscode
-[PROVIDES] mplex multiblend.flt pgmtoy4m png2yuv ppmtoy4m testrec
-[PROVIDES] transist.flt y4mblack y4mcolorbars y4mshift y4mtoppm y4mtoyuv
-[PROVIDES] ypipe yuv2lav yuv4mpeg yuvcorrect yuvcorrect_tune yuvdenoise
-[PROVIDES] yuvfps yuvinactive yuvkineco yuvmedianfilter yuvplay yuvscaler
-[PROVIDES] yuvycsnoise
+[PROVIDES] anytovcd.sh glav jpeg2yuv lav2avi.sh lav2mpeg lav2wav lav2yuv
+[PROVIDES] lavaddwav lavinfo lavpipe lavplay lavrec lavtrans lavvideo
+[PROVIDES] liblavfile.a liblavfile.so liblavjpeg.a liblavjpeg.so
+[PROVIDES] liblavplay.a liblavplay.so liblavrec.a liblavrec.so
+[PROVIDES] libmjpegutils.a libmjpegutils.so libmpeg2encpp.a
+[PROVIDES] libmpeg2encpp.so libmplex2.a libmplex2.so matteblend.flt
+[PROVIDES] mjpeg_simd_helper mp2enc mpeg2enc mpegtranscode mplex
+[PROVIDES] multiblend.flt pgmtoy4m png2yuv pnmtoy4m ppmtoy4m testrec
+[PROVIDES] transist.flt y4mblack y4mcolorbars y4mdenoise y4mhist
+[PROVIDES] y4minterlace y4mshift y4mspatialfilter y4mstabilizer y4mtopnm
+[PROVIDES] y4mtoppm y4mtoyuv y4munsharp ypipe yuv2lav yuv4mpeg yuvcorrect
+[PROVIDES] yuvcorrect_tune yuvdeinterlace yuvdenoise yuvfps yuvinactive
+[PROVIDES] yuvkineco yuvmedianfilter yuvplay yuvscaler yuvycsnoise
+[PROVIDES] yuyvtoy4m
 

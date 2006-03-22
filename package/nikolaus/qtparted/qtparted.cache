@@ -20,23 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133148263 Mon Nov 28 04:24:23 2005 (5)
-[TIMESTAMP] 1133390091 Wed Nov 30 23:34:51 2005 (9)
+[TIMESTAMP] 1142643980 Sat Mar 18 02:06:20 2006 (5)
+[TIMESTAMP] 1142912630 Tue Mar 21 04:43:50 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-qtparted.log 9-qtparted.log
 
-[BUILDTIME] 11738 (5)
-[BUILDTIME] 11859 (9)
+[BUILDTIME] 11607 (5)
+[BUILDTIME] 11750 (9)
 [SIZE] 0.55 MB, 28 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils e2fsprogs:dev
 [DEP] expat file findutils freetype freetype:dev gawk gcc34 gcc34:dev
 [DEP] glibc23 glibc23:dev grep leif libjpeg libpng libpng:dev
-[DEP] linux26-header:dev make mktemp nas net-tools parted parted:dev qt
-[DEP] qt:dev sed sysfiles tar util-linux xorg xorg:dev zapping zlib:dev
+[DEP] linux26-header:dev make mktemp nas net-tools openbox parted
+[DEP] parted:dev qt33 qt33:dev rrdtool sed sysfiles tar util-linux xorg
+[DEP] xorg:dev zlib:dev
 
 [PROVIDES] qtparted run_qtparted
 

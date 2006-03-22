@@ -20,22 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1132996655 Sat Nov 26 10:17:35 2005 (5)
-[TIMESTAMP] 1133220165 Tue Nov 29 00:22:45 2005 (9)
+[TIMESTAMP] 1142483702 Thu Mar 16 05:35:02 2006 (5) ERROR
+[TIMESTAMP] 1142730992 Sun Mar 19 02:16:32 2006 (9)
+[TIMESTAMP] 1142952896 Tue Mar 21 15:54:56 2006 (5)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-mono.log 9-mono.log
 
-[BUILDTIME] 50088 (5)
-[BUILDTIME] 51013 (9)
-[SIZE] 31.13 MB, 305 files
+[BUILDTIME] 13306 (5) ERROR
+[BUILDTIME] 52851 (9)
+[BUILDTIME] 52638 (5)
+[SIZE] 31.01 MB, 309 files
 
-[DEP] 00-dirtree bash2 binutils bison boehm-gc boehm-gc:dev bzip2
-[DEP] coreutils diffutils findutils gawk gcc34 gcc34:dev glib glib:dev
-[DEP] glibc23 glibc23:dev gnome2-dirtree grep linux26-header:dev m4 make
-[DEP] mktemp net-tools pkgconfig sed sysfiles tar util-linux valgrind:dev
+[DEP] 00-dirtree bash2 binutils bison boehm-gc boehm-gc:dev bzip2 coreutils
+[DEP] diffutils findutils gawk gcc34 gcc34:dev glib glib:dev glibc23
+[DEP] glibc23:dev gnome2-dirtree grep libicu libicu:dev linux26-header:dev
+[DEP] m4 make mktemp net-tools pkgconfig rrdtool sed sysfiles tar
+[DEP] util-linux valgrind:dev
 
 [PROVIDES] CorCompare.exe EnumCheck.exe GenerateDelegate.exe IFaceDisco.exe
 [PROVIDES] MakeCert.exe al al.exe browsercaps-updater.exe cert2spc

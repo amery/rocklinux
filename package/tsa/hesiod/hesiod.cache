@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133072340 Sun Nov 27 07:19:00 2005 (5)
-[TIMESTAMP] 1133305807 Wed Nov 30 00:10:07 2005 (9)
+[TIMESTAMP] 1142560921 Fri Mar 17 03:02:01 2006 (5)
+[TIMESTAMP] 1142820830 Mon Mar 20 03:13:50 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-hesiod.log 9-hesiod.log
 
-[BUILDTIME] 1632 (5)
-[BUILDTIME] 2025 (9)
+[BUILDTIME] 1634 (5)
+[BUILDTIME] 2000 (9)
 [SIZE] 0.06 MB, 24 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp net-tools patch sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
+[DEP] net-tools patch rrdtool sed sysfiles tar util-linux
 
 [PROVIDES] hesinfo libhesiod.a libhesiod.so
 

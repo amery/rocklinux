@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133161871 Mon Nov 28 08:11:11 2005 (5)
-[TIMESTAMP] 1133404541 Thu Dec  1 03:35:41 2005 (9)
+[TIMESTAMP] 1142658001 Sat Mar 18 06:00:01 2006 (5)
+[TIMESTAMP] 1142927983 Tue Mar 21 08:59:43 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-ddrescue.log 9-ddrescue.log
 
-[BUILDTIME] 1422 (5)
-[BUILDTIME] 1484 (9)
+[BUILDTIME] 1407 (5)
+[BUILDTIME] 1500 (9)
 [SIZE] 0.03 MB, 7 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp sed
-[DEP] sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
+[DEP] rrdtool sed sysfiles tar
 
 [PROVIDES] dd_rescue
 

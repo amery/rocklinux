@@ -20,23 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1132985083 Sat Nov 26 07:04:43 2005 (5)
-[TIMESTAMP] 1133206759 Mon Nov 28 20:39:19 2005 (9)
+[TIMESTAMP] 1142466421 Thu Mar 16 00:47:01 2006 (5)
+[TIMESTAMP] 1142709917 Sat Mar 18 20:25:17 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-emacs.log 9-emacs.log
 
-[BUILDTIME] 9861 (5)
-[BUILDTIME] 10721 (9)
-[SIZE] 59.12 MB, 1882 files
+[BUILDTIME] 9763 (5)
+[BUILDTIME] 10646 (9)
+[SIZE] 59.26 MB, 1880 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libjpeg libjpeg:dev
-[DEP] liblockfile:dev libpng libpng:dev libtiff libtiff:dev libungif
-[DEP] libungif:dev linux26-header:dev make mktemp ncurses:dev net-tools
-[DEP] patch sed sysfiles tar texinfo xaw3d xaw3d:dev xorg xorg:dev zlib:dev
+[DEP] gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep libjpeg
+[DEP] libjpeg:dev liblockfile:dev libpng libpng:dev libtiff libtiff:dev
+[DEP] libungif libungif:dev linux26-header:dev make mktemp ncurses:dev
+[DEP] net-tools patch rrdtool sed sysfiles tar texinfo xaw3d xaw3d:dev
+[DEP] xorg xorg:dev zlib:dev
 
-[PROVIDES] emacs emacs-21.3
+[PROVIDES] emacs emacs-21.4
 

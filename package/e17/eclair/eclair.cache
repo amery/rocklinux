@@ -20,26 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133169975 Mon Nov 28 10:26:15 2005 (5)
-[TIMESTAMP] 1133413002 Thu Dec  1 05:56:42 2005 (9)
+[TIMESTAMP] 1142667140 Sat Mar 18 08:32:20 2006 (5) ERROR
+[TIMESTAMP] 1142937788 Tue Mar 21 11:43:08 2006 (9) ERROR
+[TIMESTAMP] 1142964235 Tue Mar 21 19:03:55 2006 (5) ERROR
+[TIMESTAMP] 1142974019 Tue Mar 21 21:46:59 2006 (9) ERROR
+[TIMESTAMP] 1143033650 Wed Mar 22 14:20:50 2006 (5) ERROR
+[TIMESTAMP] 1143043300 Wed Mar 22 17:01:40 2006 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-eclair.log 9-eclair.log
+[LOGS] 5-eclair.err 9-eclair.err
 
-[BUILDTIME] 5243 (5)
-[BUILDTIME] 5286 (9)
-[SIZE] 0.61 MB, 36 files
+[BUILDTIME] 3815 (5) ERROR
+[BUILDTIME] 3879 (9) ERROR
+[BUILDTIME] 3885 (5) ERROR
+[BUILDTIME] 3896 (9) ERROR
+[BUILDTIME] 3881 (5) ERROR
+[BUILDTIME] 3896 (9) ERROR
 
-[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils directfb directfb:dev ecore ecore:dev edb edb:dev edje
-[DEP] edje:dev eet eet:dev embryo embryo:dev emotion emotion:dev esmart
-[DEP] esmart:dev evas evas:dev findutils freetype freetype:dev gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep imlib2 libjpeg libjpeg:dev libpng
-[DEP] libpng:dev libtool libxml2 libxml2:dev linux26-header:dev m4 make
-[DEP] mktemp net-tools openssl perl5 pkgconfig sed sqlite3 sqlite3:dev
-[DEP] sysfiles taglib taglib:dev tar util-linux xorg zlib:dev
 
-[PROVIDES] eclair eclair_wsz2edj
+[5-ERROR] checking whether to build static libraries... yes
+[5-ERROR] configure: creating libtool
+[5-ERROR] appending configuration tag "CXX" to libtool
+[5-ERROR] checking for ld used by g++-34... ld
+[5-ERROR] checking if the linker (ld) is GNU ld... yes
+[5-ERROR] checking whether the g++-34 linker (ld) supports shared libraries... yes
+[5-ERROR] checking for g++-34 option to produce PIC... -fPIC
+[5-ERROR] checking if g++-34 PIC flag -fPIC works... yes
+[5-ERROR] checking if g++-34 supports -c -o file.o... yes
+[5-ERROR] checking whether the g++-34 linker (ld) supports shared libraries... yes
+[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] checking whether stripping libraries is possible... yes
+[5-ERROR] appending configuration tag "F77" to libtool
+[5-ERROR] checking if libtool supports shared libraries... yes
+[5-ERROR] checking whether to build shared libraries... yes
+[5-ERROR] checking whether to build static libraries... yes
+[5-ERROR] checking for g77-34 option to produce PIC... -fPIC
+[5-ERROR] checking if g77-34 PIC flag -fPIC works... yes
+[5-ERROR] checking if g77-34 supports -c -o file.o... yes
+[5-ERROR] checking whether the g77-34 linker (ld) supports shared libraries... yes
+[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] checking whether stripping libraries is possible... yes
+[5-ERROR] checking for taglib-config... /usr/bin/taglib-config
+[5-ERROR] checking taglib/tag_c.h usability... yes
+[5-ERROR] checking taglib/tag_c.h presence... yes
+[5-ERROR] checking for taglib/tag_c.h... yes
+[5-ERROR] checking for pkg-config... /usr/bin/pkg-config
+[5-ERROR] checking for i386-unknown-linux-gnu-pkg-config... (cached) /usr/bin/pkg-config
+[5-ERROR] checking pkg-config is at least version 0.9.0... yes
+[5-ERROR] checking for SQLITE... yes
+[5-ERROR] checking for evas-config... /opt/e17/bin/evas-config
+[5-ERROR] checking for ecore-config... /opt/e17/bin/ecore-config
+[5-ERROR] checking for edje-config... /opt/e17/bin/edje-config
+[5-ERROR] checking for emotion-config... no
+[5-ERROR] emotion-config  is not in your $PATH. Please ensure it is.
+[5-ERROR] Read the manual page for you shell as to how to extend your path.
+[5-ERROR] configure: error: Cannot find emotion-config
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 0 files for this package.
+[5-ERROR] Applying package split: 40 eclair:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 eclair:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 eclair:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building eclair=eclair.
+
+[9-ERROR] checking whether to build static libraries... yes
+[9-ERROR] configure: creating libtool
+[9-ERROR] appending configuration tag "CXX" to libtool
+[9-ERROR] checking for ld used by g++-34... ld
+[9-ERROR] checking if the linker (ld) is GNU ld... yes
+[9-ERROR] checking whether the g++-34 linker (ld) supports shared libraries... yes
+[9-ERROR] checking for g++-34 option to produce PIC... -fPIC
+[9-ERROR] checking if g++-34 PIC flag -fPIC works... yes
+[9-ERROR] checking if g++-34 supports -c -o file.o... yes
+[9-ERROR] checking whether the g++-34 linker (ld) supports shared libraries... yes
+[9-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[9-ERROR] checking how to hardcode library paths into programs... immediate
+[9-ERROR] checking whether stripping libraries is possible... yes
+[9-ERROR] appending configuration tag "F77" to libtool
+[9-ERROR] checking if libtool supports shared libraries... yes
+[9-ERROR] checking whether to build shared libraries... yes
+[9-ERROR] checking whether to build static libraries... yes
+[9-ERROR] checking for g77-34 option to produce PIC... -fPIC
+[9-ERROR] checking if g77-34 PIC flag -fPIC works... yes
+[9-ERROR] checking if g77-34 supports -c -o file.o... yes
+[9-ERROR] checking whether the g77-34 linker (ld) supports shared libraries... yes
+[9-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[9-ERROR] checking how to hardcode library paths into programs... immediate
+[9-ERROR] checking whether stripping libraries is possible... yes
+[9-ERROR] checking for taglib-config... /usr/bin/taglib-config
+[9-ERROR] checking taglib/tag_c.h usability... yes
+[9-ERROR] checking taglib/tag_c.h presence... yes
+[9-ERROR] checking for taglib/tag_c.h... yes
+[9-ERROR] checking for pkg-config... /usr/bin/pkg-config
+[9-ERROR] checking for i386-unknown-linux-gnu-pkg-config... (cached) /usr/bin/pkg-config
+[9-ERROR] checking pkg-config is at least version 0.9.0... yes
+[9-ERROR] checking for SQLITE... yes
+[9-ERROR] checking for evas-config... /opt/e17/bin/evas-config
+[9-ERROR] checking for ecore-config... /opt/e17/bin/ecore-config
+[9-ERROR] checking for edje-config... /opt/e17/bin/edje-config
+[9-ERROR] checking for emotion-config... no
+[9-ERROR] emotion-config  is not in your $PATH. Please ensure it is.
+[9-ERROR] Read the manual page for you shell as to how to extend your path.
+[9-ERROR] configure: error: Cannot find emotion-config
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 0 files for this package.
+[9-ERROR] Applying package split: 40 eclair:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 eclair:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 eclair:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building eclair=eclair.
 

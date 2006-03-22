@@ -20,24 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133018197 Sat Nov 26 16:16:37 2005 (5)
-[TIMESTAMP] 1133245498 Tue Nov 29 07:24:58 2005 (9)
+[TIMESTAMP] 1142508316 Thu Mar 16 12:25:16 2006 (5)
+[TIMESTAMP] 1142759182 Sun Mar 19 10:06:22 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-gnome-menus.log 9-gnome-menus.log
 
-[BUILDTIME] 3411 (5)
-[BUILDTIME] 4014 (9)
-[SIZE] 0.29 MB, 79 files
+[BUILDTIME] 4079 (5)
+[BUILDTIME] 4601 (9)
+[SIZE] 0.48 MB, 112 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils cpan-xml-parser diffutils
-[DEP] findutils gawk gcc34 gcc34:dev gconf gconf:dev gettext glib glib:dev
-[DEP] glibc23 glibc23:dev gnome-vfs gnome-vfs:dev gnome2-dirtree grep
-[DEP] libbonobo libbonobo:dev libxml2 libxml2:dev linux26-header:dev make
-[DEP] mktemp net-tools openssl orbit2 orbit2:dev pango perl5 pkgconfig
-[DEP] popt popt:dev sed sysfiles tar util-linux zlib:dev
+[DEP] fam fam:dev findutils gawk gcc34 gcc34:dev gettext glib glib:dev
+[DEP] glibc23 glibc23:dev gnome2-dirtree grep linux26-header:dev make
+[DEP] mktemp net-tools pango perl5 pkgconfig python python:dev rrdtool
+[DEP] sed sysfiles tar util-linux
 
-[PROVIDES] gnome-menu-spec-test libgnome-menu.a libgnome-menu.so
+[PROVIDES] gmenu-simple-editor gmenu.a gmenu.so gnome-menu-spec-test
+[PROVIDES] libgnome-menu.a libgnome-menu.so
 

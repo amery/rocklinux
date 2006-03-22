@@ -20,20 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133089278 Sun Nov 27 12:01:18 2005 (5)
-[TIMESTAMP] 1133326175 Wed Nov 30 05:49:35 2005 (9)
+[TIMESTAMP] 1142579472 Fri Mar 17 08:11:12 2006 (5)
+[TIMESTAMP] 1142843255 Mon Mar 20 09:27:35 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-netperf.log 9-netperf.log
 
-[BUILDTIME] 1393 (5)
-[BUILDTIME] 1714 (9)
+[BUILDTIME] 1410 (5)
+[BUILDTIME] 1725 (9)
 [SIZE] 0.18 MB, 16 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
+[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp rrdtool
 [DEP] sed sysfiles tar
 
 [PROVIDES] netperf netserver snapshot_script tcp_range_script tcp_rr_script

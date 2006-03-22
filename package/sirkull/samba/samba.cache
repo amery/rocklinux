@@ -20,31 +20,32 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133011279 Sat Nov 26 14:21:19 2005 (5)
-[TIMESTAMP] 1133237568 Tue Nov 29 05:12:48 2005 (9)
+[TIMESTAMP] 1142500368 Thu Mar 16 10:12:48 2006 (5)
+[TIMESTAMP] 1142750984 Sun Mar 19 07:49:44 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-samba.log 9-samba.log
 
-[BUILDTIME] 42429 (5)
-[BUILDTIME] 43774 (9)
-[SIZE] 35.63 MB, 587 files
+[BUILDTIME] 43856 (5)
+[BUILDTIME] 44866 (9)
+[SIZE] 40.96 MB, 586 files
 
 [DEP] 00-dirtree acl acl:dev attr attr:dev bash2 binutils bzip2 coreutils
 [DEP] cups cups:dev diffutils findutils gawk gcc34 gcc34:dev glibc23
 [DEP] glibc23:dev grep libcap:dev linux26-header:dev m4 make mktemp
 [DEP] ncurses:dev net-tools openldap openldap:dev openssl pam pam:dev
-[DEP] patch popt popt:dev readline readline:dev sed sysfiles tar util-linux
-[DEP] valgrind:dev
+[DEP] patch popt popt:dev readline readline:dev rrdtool sed sysfiles tar
+[DEP] util-linux valgrind:dev
 
 [PROVIDES] CP437.so CP850.so audit.so cap.so default_quota.so
-[PROVIDES] expand_msdfs.so extd_audit.so fake_perms.so findsmb
-[PROVIDES] full_audit.so libsmbclient.so mount.smbfs net netatalk.so nmbd
-[PROVIDES] nmblookup ntlm_auth pdbedit profiles readonly.so recycle.so
-[PROVIDES] rpcclient shadow_copy.so smbadduser smbcacls smbclient
-[PROVIDES] smbcontrol smbcquotas smbd smbmnt smbmount smbpasswd smbspool
-[PROVIDES] smbstatus smbtar smbtree smbumount swat tdbbackup tdbdump
-[PROVIDES] tdbtool testparm wbinfo winbindd
+[PROVIDES] eventlogadm expand_msdfs.so extd_audit.so fake_perms.so
+[PROVIDES] findsmb full_audit.so libmsrpc.so libsmbclient.so mount.smbfs
+[PROVIDES] net netatalk.so nmbd nmblookup ntlm_auth pdbedit profiles
+[PROVIDES] readonly.so recycle.so rpcclient script.so shadow_copy.so
+[PROVIDES] smbadduser smbcacls smbclient smbcontrol smbcquotas smbd
+[PROVIDES] smbget smbmnt smbmount smbpasswd smbspool smbstatus smbtar
+[PROVIDES] smbtree smbumount swat tdbbackup tdbdump tdbtool testparm
+[PROVIDES] wbinfo winbindd
 

@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1132979448 Sat Nov 26 05:30:48 2005 (5)
-[TIMESTAMP] 1133199570 Mon Nov 28 18:39:30 2005 (9)
+[TIMESTAMP] 1142460601 Wed Mar 15 23:10:01 2006 (5)
+[TIMESTAMP] 1142701592 Sat Mar 18 18:06:32 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-sendmail.log 9-sendmail.log
 
-[BUILDTIME] 5285 (5)
-[BUILDTIME] 6216 (9)
-[SIZE] 1.98 MB, 232 files
+[BUILDTIME] 5346 (5)
+[BUILDTIME] 6370 (9)
+[SIZE] 2.08 MB, 241 files
 
 [DEP] 00-dirtree bash2 bdb42 bdb42:dev binutils bzip2 coreutils
 [DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep groff
-[DEP] linux26-header:dev m4 make mktemp net-tools patch sed sysfiles tar
+[DEP] linux26-header:dev m4 make mktemp net-tools patch rrdtool sed
+[DEP] sysfiles tar
 
 [PROVIDES] editmap hoststat mailq mailq_sendmail mailstats makemap
 [PROVIDES] newaliases newaliases_sendmail praliases purgestat rmail

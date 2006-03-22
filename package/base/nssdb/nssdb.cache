@@ -20,22 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133113181 Sun Nov 27 18:39:41 2005 (5)
-[TIMESTAMP] 1133351706 Wed Nov 30 12:55:06 2005 (9)
+[TIMESTAMP] 1142604969 Fri Mar 17 15:16:09 2006 (5) ERROR
+[TIMESTAMP] 1142870285 Mon Mar 20 16:58:05 2006 (9) ERROR
+[TIMESTAMP] 1142961488 Tue Mar 21 18:18:08 2006 (5) ERROR
+[TIMESTAMP] 1142972557 Tue Mar 21 21:22:37 2006 (9) ERROR
+[TIMESTAMP] 1143032305 Wed Mar 22 13:58:25 2006 (5) ERROR
+[TIMESTAMP] 1143041908 Wed Mar 22 16:38:28 2006 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-nssdb.log 9-nssdb.log
+[LOGS] 5-nssdb.err 9-nssdb.err
 
-[BUILDTIME] 2439 (5)
-[BUILDTIME] 2714 (9)
-[SIZE] 0.84 MB, 14 files
+[BUILDTIME] 1412 (5) ERROR
+[BUILDTIME] 1658 (9) ERROR
+[BUILDTIME] 1678 (5) ERROR
+[BUILDTIME] 1686 (9) ERROR
+[BUILDTIME] 1680 (5) ERROR
+[BUILDTIME] 1698 (9) ERROR
 
-[DEP] 00-dirtree autoconf automake19 bash2 bdb33:dev binutils bison bzip2
-[DEP] coreutils diffutils findutils gawk gcc34 gcc34:dev gettext glibc23
-[DEP] glibc23:dev grep linux26-header:dev make mktemp net-tools patch
-[DEP] perl5 sed sysfiles tar texinfo
 
-[PROVIDES] libnss_db-2.2.3.so libnss_db.so makedb
+[5-ERROR] checking whether the C compiler (gcc-34  ) works... yes
+[5-ERROR] checking whether the C compiler (gcc-34  ) is a cross-compiler... no
+[5-ERROR] checking whether we are using GNU C... yes
+[5-ERROR] checking whether gcc-34 accepts -g... yes
+[5-ERROR] checking how to run the C preprocessor... gcc-34 -E
+[5-ERROR] checking for Cygwin environment... no
+[5-ERROR] checking for mingw32 environment... no
+[5-ERROR] checking host system type... i386-unknown-linux-gnu
+[5-ERROR] checking build system type... i386-unknown-linux-gnu
+[5-ERROR] checking for ld used by GCC... ld
+[5-ERROR] checking if the linker (ld) is GNU ld... yes
+[5-ERROR] checking for ld option to reload object files... -r
+[5-ERROR] checking for BSD-compatible nm... nm
+[5-ERROR] checking whether ln -s works... yes
+[5-ERROR] checking how to recognise dependant libraries... pass_all
+[5-ERROR] checking for object suffix... o
+[5-ERROR] checking for executable suffix... no
+[5-ERROR] checking command to parse nm output... ok
+[5-ERROR] checking for dlfcn.h... yes
+[5-ERROR] checking for ranlib... ranlib
+[5-ERROR] checking for strip... strip
+[5-ERROR] checking for objdir... .libs
+[5-ERROR] checking for gcc-34 option to produce PIC... -fPIC
+[5-ERROR] checking if gcc-34 PIC flag -fPIC works... yes
+[5-ERROR] checking if gcc-34 static flag -static works... yes
+[5-ERROR] checking if gcc-34 supports -c -o file.o... yes
+[5-ERROR] checking if gcc-34 supports -c -o file.lo... 
+[5-ERROR] checking if gcc-34 supports -fno-rtti -fno-exceptions... yes
+[5-ERROR] checking whether the linker (ld) supports shared libraries... yes
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] checking whether stripping libraries is possible... yes
+[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[5-ERROR] checking if libtool supports shared libraries... yes
+[5-ERROR] checking whether -lc should be explicitly linked in... no
+[5-ERROR] creating libtool
+[5-ERROR] checking for db.h... yes
+[5-ERROR] checking for db_version in /usr/lib/libdb-3.a... no
+[5-ERROR] configure: error: 
+[5-ERROR] *** Could not find Berkeley DB library.
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 0 files for this package.
+[5-ERROR] Applying package split: 40 nssdb:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 nssdb:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 nssdb:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building nssdb=nssdb.
+
+[9-ERROR] checking whether the C compiler (gcc-34  ) works... yes
+[9-ERROR] checking whether the C compiler (gcc-34  ) is a cross-compiler... no
+[9-ERROR] checking whether we are using GNU C... yes
+[9-ERROR] checking whether gcc-34 accepts -g... yes
+[9-ERROR] checking how to run the C preprocessor... gcc-34 -E
+[9-ERROR] checking for Cygwin environment... no
+[9-ERROR] checking for mingw32 environment... no
+[9-ERROR] checking host system type... i386-unknown-linux-gnu
+[9-ERROR] checking build system type... i386-unknown-linux-gnu
+[9-ERROR] checking for ld used by GCC... ld
+[9-ERROR] checking if the linker (ld) is GNU ld... yes
+[9-ERROR] checking for ld option to reload object files... -r
+[9-ERROR] checking for BSD-compatible nm... nm
+[9-ERROR] checking whether ln -s works... yes
+[9-ERROR] checking how to recognise dependant libraries... pass_all
+[9-ERROR] checking for object suffix... o
+[9-ERROR] checking for executable suffix... no
+[9-ERROR] checking command to parse nm output... ok
+[9-ERROR] checking for dlfcn.h... yes
+[9-ERROR] checking for ranlib... ranlib
+[9-ERROR] checking for strip... strip
+[9-ERROR] checking for objdir... .libs
+[9-ERROR] checking for gcc-34 option to produce PIC... -fPIC
+[9-ERROR] checking if gcc-34 PIC flag -fPIC works... yes
+[9-ERROR] checking if gcc-34 static flag -static works... yes
+[9-ERROR] checking if gcc-34 supports -c -o file.o... yes
+[9-ERROR] checking if gcc-34 supports -c -o file.lo... 
+[9-ERROR] checking if gcc-34 supports -fno-rtti -fno-exceptions... yes
+[9-ERROR] checking whether the linker (ld) supports shared libraries... yes
+[9-ERROR] checking how to hardcode library paths into programs... immediate
+[9-ERROR] checking whether stripping libraries is possible... yes
+[9-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[9-ERROR] checking if libtool supports shared libraries... yes
+[9-ERROR] checking whether -lc should be explicitly linked in... no
+[9-ERROR] creating libtool
+[9-ERROR] checking for db.h... yes
+[9-ERROR] checking for db_version in /usr/lib/libdb-3.a... no
+[9-ERROR] configure: error: 
+[9-ERROR] *** Could not find Berkeley DB library.
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 0 files for this package.
+[9-ERROR] Applying package split: 40 nssdb:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 nssdb:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 nssdb:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building nssdb=nssdb.
 

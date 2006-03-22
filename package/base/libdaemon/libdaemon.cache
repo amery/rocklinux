@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1132984118 Sat Nov 26 06:48:38 2005 (5)
-[TIMESTAMP] 1133205625 Mon Nov 28 20:20:25 2005 (9)
+[TIMESTAMP] 1142465445 Thu Mar 16 00:30:45 2006 (5)
+[TIMESTAMP] 1142708646 Sat Mar 18 20:04:06 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-libdaemon.log 9-libdaemon.log
 
-[BUILDTIME] 2571 (5)
-[BUILDTIME] 3301 (9)
+[BUILDTIME] 2776 (5)
+[BUILDTIME] 3501 (9)
 [SIZE] 0.03 MB, 9 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils doxygen findutils
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev lynx
-[DEP] make mktemp net-tools sed sysfiles tar util-linux
+[DEP] make mktemp net-tools rrdtool sed sysfiles tar util-linux
 
 [PROVIDES] libdaemon.a libdaemon.so
 

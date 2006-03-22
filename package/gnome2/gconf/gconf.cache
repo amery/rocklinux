@@ -20,24 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133003522 Sat Nov 26 12:12:02 2005 (5)
-[TIMESTAMP] 1133228540 Tue Nov 29 02:42:20 2005 (9)
+[TIMESTAMP] 1142490756 Thu Mar 16 07:32:36 2006 (5)
+[TIMESTAMP] 1142739786 Sun Mar 19 04:43:06 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-gconf.log 9-gconf.log
 
-[BUILDTIME] 6887 (5)
-[BUILDTIME] 7592 (9)
-[SIZE] 4.23 MB, 109 files
+[BUILDTIME] 7205 (5)
+[BUILDTIME] 7859 (9)
+[SIZE] 4.70 MB, 112 files
 
-[DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils diffutils expat
-[DEP] findutils freetype gawk gcc34 gcc34:dev gettext glib glib:dev glibc23
-[DEP] glibc23:dev gnome2-dirtree grep gtk+ gtk+:dev libxml2 libxml2:dev
-[DEP] linux26-header:dev make mktemp net-tools orbit2 orbit2:dev pango
-[DEP] pango:dev perl5 pkgconfig popt popt:dev sed sysfiles tar util-linux
-[DEP] xorg zlib:dev
+[DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 cairo cairo:dev coreutils
+[DEP] diffutils expat findutils freetype freetype:dev gawk gcc34 gcc34:dev
+[DEP] gettext glib glib:dev glibc23 glibc23:dev gnome2-dirtree grep gtk+
+[DEP] gtk+:dev libpng libpng:dev libxml2 libxml2:dev linux26-header:dev
+[DEP] make mktemp net-tools orbit2 orbit2:dev pango pango:dev perl5
+[DEP] pkgconfig popt popt:dev rrdtool sed sysfiles tar util-linux xorg
+[DEP] zlib:dev
 
 [PROVIDES] gconf-merge-tree gconftool-2 libgconf-2.a libgconf-2.so
 [PROVIDES] libgconfbackend-oldxml.a libgconfbackend-oldxml.so

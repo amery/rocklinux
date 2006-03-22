@@ -20,33 +20,39 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133062574 Sun Nov 27 04:36:14 2005 (5)
-[TIMESTAMP] 1133294729 Tue Nov 29 21:05:29 2005 (9)
+[TIMESTAMP] 1142551091 Fri Mar 17 00:18:11 2006 (5)
+[TIMESTAMP] 1142808899 Sun Mar 19 23:54:59 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-spiralsynthmodular.log 9-spiralsynthmodular.log
 
-[BUILDTIME] 11426 (5)
-[BUILDTIME] 11934 (9)
-[SIZE] 9.37 MB, 44 files
+[BUILDTIME] 14749 (5)
+[BUILDTIME] 15388 (9)
+[SIZE] 17.53 MB, 58 files
 
-[DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] fltk fltk:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libpng
-[DEP] libpng:dev linux26-header:dev make mktemp net-tools patch sed
-[DEP] sysfiles tar xorg xorg:dev zlib:dev
+[DEP] 00-dirtree alsa alsa:dev bash2 binutils bzip2 coreutils curl
+[DEP] diffutils findutils fltk fltk:dev gawk gcc34 gcc34:dev glibc23
+[DEP] glibc23:dev grep jack jack:dev ladspa:dev libidn liblrdf liblrdf:dev
+[DEP] libsndfile libsndfile:dev libxml2 linux26-header:dev make mktemp
+[DEP] net-tools openssl raptor raptor:dev rrdtool sed sysfiles tar xorg
+[DEP] xorg:dev
 
-[PROVIDES] AmpPlugin.so ComplexEnvelopePlugin.so ControllerPlugin.so
-[PROVIDES] DelayPlugin.so DistributorPlugin.so EchoPlugin.so
+[PROVIDES] AmpPlugin.so AnotherFilterPlugin.so BeatMatchPlugin.so
+[PROVIDES] ControllerPlugin.so CounterPlugin.so DelayPlugin.so
+[PROVIDES] DiskWriterPlugin.so DistributorPlugin.so EchoPlugin.so
 [PROVIDES] EnvFollowerPlugin.so EnvelopePlugin.so FilterPlugin.so
-[PROVIDES] JoystickPlugin.so LADSPAPlugin.so LFOPlugin.so MeterPlugin.so
-[PROVIDES] MidiPlugin.so MixerPlugin.so MoogFilterPlugin.so
-[PROVIDES] NoteSnapPlugin.so OscillatorPlugin.so OutputPlugin.so
-[PROVIDES] PoshSamplerPlugin.so RingModPlugin.so SVFilterPlugin.so
-[PROVIDES] SampleHoldPlugin.so SamplerPlugin.so ScopePlugin.so SeqPlugin.so
-[PROVIDES] SeqSelectorPlugin.so SmoothPlugin.so SpiralLoopPlugin.so
-[PROVIDES] SpiralSynthModular SplitterPlugin.so StereoMixerPlugin.so
-[PROVIDES] StreamPlugin.so WaveShaperPlugin.so WaveTablePlugin.so
-[PROVIDES] XFadePlugin.so
+[PROVIDES] FlipflopPlugin.so FormantFilterPlugin.so JackPlugin.so
+[PROVIDES] KeyboardPlugin.so LADSPAPlugin.so LFOPlugin.so LogicPlugin.so
+[PROVIDES] MasherPlugin.so MatrixPlugin.so MeterPlugin.so MidiPlugin.so
+[PROVIDES] MixSwitchPlugin.so MixerPlugin.so MoogFilterPlugin.so
+[PROVIDES] NoisePlugin.so NoteSnapPlugin.so OperatorPlugin.so
+[PROVIDES] OscillatorPlugin.so OutputPlugin.so PoshSamplerPlugin.so
+[PROVIDES] RingModPlugin.so SVFilterPlugin.so SampleHoldPlugin.so
+[PROVIDES] ScopePlugin.so SeqSelectorPlugin.so SmoothPlugin.so
+[PROVIDES] SpiralLoopPlugin.so SplitSwitchPlugin.so SplitterPlugin.so
+[PROVIDES] StereoMixerPlugin.so StreamPlugin.so SwitchPlugin.so
+[PROVIDES] TransposePlugin.so TrigPlugin.so WaveShaperPlugin.so
+[PROVIDES] WaveTablePlugin.so XFadePlugin.so spiralsynthmodular
 

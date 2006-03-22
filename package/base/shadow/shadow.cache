@@ -20,26 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1132960726 Sat Nov 26 00:18:46 2005 (3)
-[TIMESTAMP] 1133310160 Wed Nov 30 01:22:40 2005 (9)
+[TIMESTAMP] 1142447500 Wed Mar 15 19:31:40 2006 (3)
+[TIMESTAMP] 1142825785 Mon Mar 20 04:36:25 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 3-shadow.log 9-shadow.log
 
-[BUILDTIME] 8628 (3)
-[BUILDTIME] 9723 (9)
-[SIZE] 2.22 MB, 300 files
+[BUILDTIME] 8736 (3)
+[BUILDTIME] 9927 (9)
+[SIZE] 2.34 MB, 311 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils cracklib:dev diffutils
-[DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
-[DEP] libtool linux26-header:dev make mktemp net-tools pam pam:dev patch
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
+[DEP] gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep libtool
+[DEP] linux26-header:dev make mktemp net-tools pam pam:dev patch rrdtool
 [DEP] sed sysfiles tar util-linux
 
 [PROVIDES] chage chfn chpasswd chsh expiry faillog gpasswd groupadd
 [PROVIDES] groupdel groupmod groups grpck grpconv grpunconv lastlog
-[PROVIDES] libshadow.a libshadow.so login logoutd mkpasswd newgrp newusers
-[PROVIDES] passwd pwck pwconv pwunconv sg su useradd userdel usermod
-[PROVIDES] vigr vipw
+[PROVIDES] libshadow.a libshadow.so login logoutd newgrp newusers passwd
+[PROVIDES] pwck pwconv pwunconv sg su useradd userdel usermod vigr vipw
 

@@ -20,31 +20,32 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133120828 Sun Nov 27 20:47:08 2005 (5)
-[TIMESTAMP] 1133360493 Wed Nov 30 15:21:33 2005 (9)
+[TIMESTAMP] 1142613396 Fri Mar 17 17:36:36 2006 (5)
+[TIMESTAMP] 1142879368 Mon Mar 20 19:29:28 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-kdevelop.log 9-kdevelop.log
 
-[BUILDTIME] 298584 (5)
-[BUILDTIME] 300028 (9)
-[SIZE] 28.67 MB, 1354 files
+[BUILDTIME] 331740 (5)
+[BUILDTIME] 333144 (9)
+[SIZE] 29.16 MB, 1382 files
 
-[DEP] 00-dirtree apache apache:apr arts bash2 binutils bzip2 coreutils
-[DEP] diffutils expat fam fam:dev findutils flex flex:dev freetype
-[DEP] freetype:dev gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev
-[DEP] grep gzip kdebase kdeedu kdelibs kdelibs:dev kdesdk kdesdk:dev
+[DEP] 00-dirtree acl acl:dev apache apache:apr arts attr attr:dev autoconf
+[DEP] automake19 bash2 bdb42 bdb42:dev binutils bzip2 coreutils diffutils
+[DEP] expat fam fam:dev findutils flex flex:dev freetype freetype:dev
+[DEP] gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep gzip
+[DEP] kdeaccessibility kdebase kdelibs kdelibs:dev kdesdk kdesdk:dev
 [DEP] kdeutils libart_lgpl23 libart_lgpl23:dev libidn libidn:dev libjpeg
-[DEP] libjpeg:dev libpng libpng:dev libxml2 linux26-header:dev m4 make
-[DEP] mktemp nas neon net-tools patch pcre pcre:dev perl5 qt qt:dev sed
-[DEP] sysfiles tar util-linux vim xorg xorg:dev zlib:dev
+[DEP] libjpeg:dev libpng libpng:dev linux26-header:dev m4 make mktemp
+[DEP] nas neon net-tools pcre pcre:dev perl5 qt33 qt33:dev rrdtool sed
+[DEP] sysfiles tar util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] kdevassistant kdevdesigner kdevelop kdevelop-htdig
-[PROVIDES] kdevprj2kdevelop kdevprofileeditor kio_chm.so
-[PROVIDES] kio_perldoc.so kio_pydoc.so libclearcaseintegrator.so
-[PROVIDES] libcvsserviceintegrator.so libdesignerintegration.so
+[PROVIDES] kdev-gen-settings-kconf_update kdevassistant kdevdesigner
+[PROVIDES] kdevelop kdevelop-htdig kdevprj2kdevelop kdevprofileeditor
+[PROVIDES] kio_chm.so kio_perldoc.so kio_pydoc.so libclearcaseintegrator.so
+[PROVIDES] libcvsserviceintegrator.so libd.so libdesignerintegration.so
 [PROVIDES] libdocchmplugin.so libdoccustomplugin.so libdocdevhelpplugin.so
 [PROVIDES] libdocdoxygenplugin.so libdockdevtocplugin.so
 [PROVIDES] libdocqtplugin.so libdocumentation_interfaces.so
@@ -73,15 +74,16 @@
 [PROVIDES] libkdevperforce.so libkdevperlsupport.so libkdevpgioptions.so
 [PROVIDES] libkdevphpsupport.so libkdevprojectmanager.so
 [PROVIDES] libkdevpropertyeditor.so libkdevpythonsupport.so
-[PROVIDES] libkdevqtimporter.so libkdevquickopen.so libkdevrbdebugger.so
-[PROVIDES] libkdevregexptest.so libkdevreplace.so libkdevrubysupport.so
-[PROVIDES] libkdevscripting.so libkdevscriptproject.so
-[PROVIDES] libkdevshell.so libkdevsnippet.so libkdevsqlsupport.so
-[PROVIDES] libkdevsubversion.so libkdevtexttools.so libkdevtipofday.so
-[PROVIDES] libkdevtools.so libkdevtrollproject.so libkdevuichooser.so
-[PROVIDES] libkdevvalgrind.so libkdevvcsmanager.so libkdevwidgets.so
-[PROVIDES] libkinterfacedesigner.so liblang_debugger.so
-[PROVIDES] liblang_interfaces.so libperforceintegrator.so
-[PROVIDES] libprofileengine.so libprojectmanager_interfaces.so
-[PROVIDES] libqeditorpart.so libsubversionintegrator.so r++
+[PROVIDES] libkdevqmakeparser.so libkdevqtimporter.so
+[PROVIDES] libkdevquickopen.so libkdevrbdebugger.so libkdevregexptest.so
+[PROVIDES] libkdevreplace.so libkdevrubysupport.so libkdevscripting.so
+[PROVIDES] libkdevscriptproject.so libkdevsecurity.so libkdevshell.so
+[PROVIDES] libkdevsnippet.so libkdevsqlsupport.so libkdevsubversion.so
+[PROVIDES] libkdevtexttools.so libkdevtipofday.so libkdevtools.so
+[PROVIDES] libkdevtrollproject.so libkdevuichooser.so libkdevvalgrind.so
+[PROVIDES] libkdevvcsmanager.so libkdevwidgets.so libkinterfacedesigner.so
+[PROVIDES] liblang_debugger.so liblang_interfaces.so
+[PROVIDES] libperforceintegrator.so libprofileengine.so
+[PROVIDES] libprojectmanager_interfaces.so libqeditorpart.so
+[PROVIDES] libqmakeimporter.so libsubversionintegrator.so r++
 

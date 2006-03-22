@@ -20,29 +20,37 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133010555 Sat Nov 26 14:09:15 2005 (5)
-[TIMESTAMP] 1133236783 Tue Nov 29 04:59:43 2005 (9)
+[TIMESTAMP] 1142499566 Thu Mar 16 09:59:26 2006 (5)
+[TIMESTAMP] 1142750082 Sun Mar 19 07:34:42 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-libgnomeprint.log 9-libgnomeprint.log
 
-[BUILDTIME] 10031 (5)
-[BUILDTIME] 10753 (9)
-[SIZE] 1.36 MB, 120 files
+[BUILDTIME] 13680 (5)
+[BUILDTIME] 14491 (9)
+[SIZE] 1.52 MB, 134 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils cpan-xml-parser cups
-[DEP] cups:dev diffutils expat findutils freetype freetype:dev gawk
-[DEP] gcc34 gcc34:dev gettext glib glib:dev glibc23 glibc23:dev
+[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils cpan-xml-parser
+[DEP] cups cups:dev diffutils expat findutils flex freetype freetype:dev
+[DEP] gawk gcc34 gcc34:dev gettext glib glib:dev glibc23 glibc23:dev
 [DEP] gnome2-dirtree grep gtkdoc libart_lgpl23 libart_lgpl23:dev
 [DEP] libgnomecups libgnomecups:dev libxml2 libxml2:dev linux26-header:dev
-[DEP] make mktemp net-tools openssl pango pango:dev perl5 pkgconfig popt
-[DEP] popt:dev sed sysfiles tar util-linux xorg xorg:dev zlib:dev
+[DEP] m4 make mktemp net-tools openssl pango pango:dev perl5 pkgconfig popt
+[DEP] popt:dev rrdtool sed sysfiles tar util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] libgnomeprint-2-2.a libgnomeprint-2-2.so libgnomeprint-custom.a
-[PROVIDES] libgnomeprint-custom.so libgnomeprint-file.a
-[PROVIDES] libgnomeprint-file.so libgnomeprint-lpr.a libgnomeprint-lpr.so
-[PROVIDES] libgnomeprintcups.a libgnomeprintcups.so libgnomeprintlpd.a
-[PROVIDES] libgnomeprintlpd.so
+[PROVIDES] libgnomeprint-2-2.a libgnomeprint-2-2.so
+[PROVIDES] libgnomeprint-clip.a libgnomeprint-clip.so
+[PROVIDES] libgnomeprint-custom.a libgnomeprint-custom.so
+[PROVIDES] libgnomeprint-draft.a libgnomeprint-draft.so
+[PROVIDES] libgnomeprint-file.a libgnomeprint-file.so libgnomeprint-frgba.a
+[PROVIDES] libgnomeprint-frgba.so libgnomeprint-lpr.a libgnomeprint-lpr.so
+[PROVIDES] libgnomeprint-multipage.a libgnomeprint-multipage.so
+[PROVIDES] libgnomeprint-position.a libgnomeprint-position.so
+[PROVIDES] libgnomeprint-reorder.a libgnomeprint-reorder.so
+[PROVIDES] libgnomeprint-rotate.a libgnomeprint-rotate.so
+[PROVIDES] libgnomeprint-select.a libgnomeprint-select.so
+[PROVIDES] libgnomeprint-zoom.a libgnomeprint-zoom.so libgnomeprintcups.a
+[PROVIDES] libgnomeprintcups.so libgnomeprintlpd.a libgnomeprintlpd.so
 

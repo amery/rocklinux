@@ -20,24 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1132988937 Sat Nov 26 08:08:57 2005 (5)
-[TIMESTAMP] 1133211221 Mon Nov 28 21:53:41 2005 (9)
+[TIMESTAMP] 1142470434 Thu Mar 16 01:53:54 2006 (5)
+[TIMESTAMP] 1142714829 Sat Mar 18 21:47:09 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-rrdtool.log 9-rrdtool.log
 
-[BUILDTIME] 9471 (5)
-[BUILDTIME] 10447 (9)
-[SIZE] 1.00 MB, 53 files
+[BUILDTIME] 9291 (5)
+[BUILDTIME] 10336 (9)
+[SIZE] 0.06 MB, 70 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 cgilib:dev coreutils diffutils
-[DEP] findutils freetype freetype:dev gawk gcc34 gcc34:dev glibc23
-[DEP] glibc23:dev grep groff libart_lgpl23 libart_lgpl23:dev libpng
-[DEP] libpng:dev linux26-header:dev make mktemp net-tools patch perl5
-[DEP] sed ssleay-perlmod sysfiles tar util-linux zlib:dev
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
+[DEP] freetype freetype:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
+[DEP] libart_lgpl23 libart_lgpl23:dev libpng libpng:dev linux26-header:dev
+[DEP] make mktemp net-tools perl5 python python:dev sed ssleay-perlmod
+[DEP] sysfiles tar tcl tcl:dev util-linux zlib:dev
 
 [PROVIDES] RRDs.so librrd.a librrd.so librrd_th.a librrd_th.so rrdcgi
-[PROVIDES] rrdtool rrdupdate
+[PROVIDES] rrdtool rrdtoolmodule.so rrdupdate tclrrd1.2.12.so
 

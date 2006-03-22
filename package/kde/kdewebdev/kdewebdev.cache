@@ -20,31 +20,32 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133095878 Sun Nov 27 13:51:18 2005 (5)
-[TIMESTAMP] 1133333057 Wed Nov 30 07:44:17 2005 (9)
+[TIMESTAMP] 1142586425 Fri Mar 17 10:07:05 2006 (5)
+[TIMESTAMP] 1142850615 Mon Mar 20 11:30:15 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-kdewebdev.log 9-kdewebdev.log
 
-[BUILDTIME] 124899 (5)
-[BUILDTIME] 125816 (9)
-[SIZE] 12.25 MB, 1540 files
+[BUILDTIME] 130532 (5)
+[BUILDTIME] 131856 (9)
+[SIZE] 12.62 MB, 1551 files
 
-[DEP] 00-dirtree arts bash2 binutils binutils:dev bzip2 coreutils
-[DEP] diffutils expat fam fam:dev findutils freetype freetype:dev gawk
-[DEP] gcc34 gcc34:dev gettext glibc23 glibc23:dev grep kdebase kdelibs
-[DEP] kdelibs:dev kdeutils libart_lgpl23 libart_lgpl23:dev libgcrypt
+[DEP] 00-dirtree acl acl:dev arts attr attr:dev bash2 binutils binutils:dev
+[DEP] bzip2 coreutils diffutils expat fam fam:dev findutils freetype
+[DEP] freetype:dev gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev
+[DEP] grep kdeaccessibility kdeadmin kdebase kdelibs kdelibs:dev kdesdk
+[DEP] kdesdk:dev kdeutils libart_lgpl23 libart_lgpl23:dev libgcrypt
 [DEP] libgcrypt:dev libgpg-error libgpg-error:dev libidn libidn:dev libjpeg
 [DEP] libjpeg:dev libpng libpng:dev libxml2 libxml2:dev libxslt libxslt:dev
-[DEP] linux26-header:dev make mktemp nas net-tools pcre pcre:dev perl5
-[DEP] qt qt:dev sed sysfiles tar util-linux vim xorg xorg:dev zlib:dev
+[DEP] linux26-header:dev make mktemp nas net-tools pcre pcre:dev perl5 qt33
+[DEP] qt33:dev rrdtool sed sysfiles tar util-linux xorg xorg:dev zlib:dev
 
 [PROVIDES] kfilereplace kimagemapeditor klinkstatus kmdr-editor
 [PROVIDES] kmdr-executor kmdr-plugins kxsldbg libkfilereplacepart.so
 [PROVIDES] libkimagemapeditor.so libklinkstatuspart.so
 [PROVIDES] libkommanderplugin.so libkommanderwidget.so
 [PROVIDES] libkommanderwidgets.so libkxsldbgpart.so quanta
-[PROVIDES] quantadebuggergubed.so xsldbg
+[PROVIDES] quantadebuggerdbgp.so quantadebuggergubed.so xsldbg
 

@@ -20,20 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133077948 Sun Nov 27 08:52:28 2005 (5)
-[TIMESTAMP] 1133312779 Wed Nov 30 02:06:19 2005 (9)
+[TIMESTAMP] 1142567065 Fri Mar 17 04:44:25 2006 (5)
+[TIMESTAMP] 1142828836 Mon Mar 20 05:27:16 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-ladspa-rev.log 9-ladspa-rev.log
 
-[BUILDTIME] 1175 (5)
-[BUILDTIME] 1516 (9)
+[BUILDTIME] 1168 (5)
+[BUILDTIME] 1525 (9)
 [SIZE] 0.03 MB, 7 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep ladspa make mktemp sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep ladspa make mktemp rrdtool sed
+[DEP] sysfiles tar
 
 [PROVIDES] g2reverb.so
 

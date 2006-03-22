@@ -20,24 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133148004 Mon Nov 28 04:20:04 2005 (5)
-[TIMESTAMP] 1133389815 Wed Nov 30 23:30:15 2005 (9)
+[TIMESTAMP] 1142643702 Sat Mar 18 02:01:42 2006 (5)
+[TIMESTAMP] 1142912334 Tue Mar 21 04:38:54 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-fwbuilder.log 9-fwbuilder.log
 
-[BUILDTIME] 67193 (5)
-[BUILDTIME] 67311 (9)
+[BUILDTIME] 67633 (5)
+[BUILDTIME] 68063 (9)
 [SIZE] 8.15 MB, 94 files
 
-[DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils diffutils expat
-[DEP] findutils freetype gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev
-[DEP] grep libelf libpng libxml2 libxml2:dev libxslt libxslt:dev
+[DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils diffutils
+[DEP] expat findutils freetype gawk gcc34 gcc34:dev gettext glibc23
+[DEP] glibc23:dev grep libpng libxml2 libxml2:dev libxslt libxslt:dev
 [DEP] linux26-header:dev make mktemp nas net-snmp net-snmp:dev net-tools
-[DEP] openssl openssl:dev qt qt:dev sed sysfiles tar tcp_wrappers:dev
-[DEP] util-linux xorg zlib:dev
+[DEP] openssl openssl:dev qt33 qt33:dev rrdtool sed sysfiles tar
+[DEP] tcp_wrappers:dev util-linux xorg zlib:dev
 
 [PROVIDES] fwb_compile_all fwb_install fwb_ipf fwb_ipfw fwb_ipt
 [PROVIDES] fwb_pf fwbedit fwblookup fwbuilder libfwbuilder-config-2

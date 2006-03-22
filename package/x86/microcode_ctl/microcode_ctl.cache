@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1132971998 Sat Nov 26 03:26:38 2005 (5)
-[TIMESTAMP] 1133188440 Mon Nov 28 15:34:00 2005 (9)
+[TIMESTAMP] 1142453353 Wed Mar 15 21:09:13 2006 (5)
+[TIMESTAMP] 1142688817 Sat Mar 18 14:33:37 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-microcode_ctl.log 9-microcode_ctl.log
 
-[BUILDTIME] 823 (5)
-[BUILDTIME] 1502 (9)
-[SIZE] 0.63 MB, 21 files
+[BUILDTIME] 819 (5)
+[BUILDTIME] 1517 (9)
+[SIZE] 0.70 MB, 21 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep gzip linux26-source m4 make mktemp patch
-[DEP] sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep gzip linux26-source m4 make
+[DEP] mktemp patch rrdtool sed sysfiles tar
 
 [PROVIDES] microcode_ctl
 

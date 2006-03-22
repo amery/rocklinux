@@ -20,24 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133149611 Mon Nov 28 04:46:51 2005 (5)
-[TIMESTAMP] 1133391532 Wed Nov 30 23:58:52 2005 (9)
+[TIMESTAMP] 1142644978 Sat Mar 18 02:22:58 2006 (5)
+[TIMESTAMP] 1142913663 Tue Mar 21 05:01:03 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-tse3.log 9-tse3.log
 
-[BUILDTIME] 13985 (5)
-[BUILDTIME] 14200 (9)
-[SIZE] 1.26 MB, 12 files
+[BUILDTIME] 15580 (5)
+[BUILDTIME] 15973 (9)
+[SIZE] 1.32 MB, 12 files
 
 [DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev bash2
-[DEP] binutils bzip2 coreutils diffutils esound esound:dev findutils gawk
-[DEP] gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev gnome2-dirtree
+[DEP] binutils bzip2 coreutils diffutils esound esound:dev file findutils
+[DEP] gawk gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev gnome2-dirtree
 [DEP] grep jack jack:dev kdelibs kdemultimedia kdemultimedia:dev
 [DEP] linux26-header:dev mad mad:dev make mktemp nas net-tools ogg-vorbis
-[DEP] ogg-vorbis:dev patch perl5 sed sysfiles tar util-linux xorg
+[DEP] ogg-vorbis:dev patch perl5 rrdtool sed sysfiles tar util-linux xorg
 
 [PROVIDES] libtse3.so tse3play
 

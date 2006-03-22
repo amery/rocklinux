@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133016263 Sat Nov 26 15:44:23 2005 (5)
-[TIMESTAMP] 1133243126 Tue Nov 29 06:45:26 2005 (9)
+[TIMESTAMP] 1142505568 Thu Mar 16 11:39:28 2006 (5)
+[TIMESTAMP] 1142756792 Sun Mar 19 09:26:32 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-flite.log 9-flite.log
 
-[BUILDTIME] 10664 (5)
-[BUILDTIME] 10952 (9)
+[BUILDTIME] 10612 (5)
+[BUILDTIME] 10931 (9)
 [SIZE] 8.24 MB, 8 files
 
 [DEP] 00-dirtree alsa:dev bash2 binutils bzip2 coreutils diffutils
 [DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp net-tools patch sed sysfiles tar
+[DEP] linux26-header:dev make mktemp net-tools patch rrdtool sed
+[DEP] sysfiles tar
 
 [PROVIDES] flite flite_time libflite.a libflite_cmu_time_awb.a
 [PROVIDES] libflite_cmu_us_kal.a libflite_cmu_us_kal16.a libflite_cmulex.a

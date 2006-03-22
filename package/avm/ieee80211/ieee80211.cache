@@ -20,44 +20,52 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133155954 Mon Nov 28 06:32:34 2005 (5) ERROR
-[TIMESTAMP] 1133398176 Thu Dec  1 01:49:36 2005 (9) ERROR
+[TIMESTAMP] 1142651640 Sat Mar 18 04:14:00 2006 (5) ERROR
+[TIMESTAMP] 1142921107 Tue Mar 21 07:05:07 2006 (9) ERROR
+[TIMESTAMP] 1142963598 Tue Mar 21 18:53:18 2006 (5) ERROR
+[TIMESTAMP] 1142973732 Tue Mar 21 21:42:12 2006 (9) ERROR
+[TIMESTAMP] 1143033385 Wed Mar 22 14:16:25 2006 (5) ERROR
+[TIMESTAMP] 1143043029 Wed Mar 22 16:57:09 2006 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-ieee80211.err 9-ieee80211.err
 
-[BUILDTIME] 1673 (5) ERROR
+[BUILDTIME] 1630 (5) ERROR
 [BUILDTIME] 1750 (9) ERROR
+[BUILDTIME] 1756 (5) ERROR
+[BUILDTIME] 1763 (9) ERROR
+[BUILDTIME] 1746 (5) ERROR
+[BUILDTIME] 1759 (9) ERROR
 
 
-[5-ERROR] gcc-34 (GCC) 3.4.4
+[5-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
+[5-ERROR] APPEND = '-s'
+[5-ERROR] FILTER = ''
+[5-ERROR] Old PATH: /ROCK/src.ieee80211.1143033345.22044.254568225/wrappers:/ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper:/ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clip/bin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/deva/bin:/opt/e16/bin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/flexlm/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/kde3/bin:/opt/kde3/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/samba/bin:/opt/samba/sbin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/opt/kde3/bin:/opt/root/bin
+[5-ERROR] New PATH: /ROCK/src.ieee80211.1143033345.22044.254568225/wrappers:/ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clip/bin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/deva/bin:/opt/e16/bin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/flexlm/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/kde3/bin:/opt/kde3/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/samba/bin:/opt/samba/sbin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/opt/kde3/bin:/opt/root/bin
+[5-ERROR] Insert: -O1
+[5-ERROR] Insert: -pipe
+[5-ERROR] Copy:   --version
+[5-ERROR] Append: -s
+[5-ERROR] New Command: gcc-34 -O1 -pipe --version -s
+[5-ERROR] gcc-34 (GCC) 3.4.5
 [5-ERROR] Copyright (C) 2004 Free Software Foundation, Inc.
 [5-ERROR] This is free software; see the source for copying conditions.  There is NO
 [5-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 [5-ERROR] 
-[5-ERROR] [ writing debug log to /ROCK/src.ieee80211.1133155922.4975.2737358842/cmd_wrapper.log ]
+[5-ERROR] [ writing debug log to /ROCK/src.ieee80211.1143033345.22044.254568225/cmd_wrapper.log ]
 [5-ERROR] Running main build function 'build_this_package' ...
 [5-ERROR] Extracting ieee80211-1.0.3.tbz2 (--use-compress-program=bzip2 -xf) ... 
 [5-ERROR] Fixing ownership and permissions ...
 [5-ERROR] Removing CVS and .svn directories ...
-[5-ERROR] Changeing into /ROCK/src.ieee80211.1133155922.4975.2737358842/ieee80211-1.0.3 ...
+[5-ERROR] Changeing into /ROCK/src.ieee80211.1143033345.22044.254568225/ieee80211-1.0.3 ...
 [5-ERROR] Creating /usr/<..> if required ...
-[5-ERROR] Checking in /lib/modules/2.6.14.2-rock/build/ for ieee80211 components...
+[5-ERROR] Checking in /lib/modules/2.6.15.4-rock/build/ for ieee80211 components...
 [5-ERROR] 
-[5-ERROR] /lib/modules/2.6.14.2-rock/build/net/ieee80211
-[5-ERROR] /lib/modules/2.6.14.2-rock/build/net/ieee80211/ieee80211_module.c
-[5-ERROR] /lib/modules/2.6.14.2-rock/build/net/ieee80211/ieee80211_crypt_ccmp.c
-[5-ERROR] /lib/modules/2.6.14.2-rock/build/net/ieee80211/ieee80211_crypt_tkip.c
-[5-ERROR] /lib/modules/2.6.14.2-rock/build/net/ieee80211/ieee80211_rx.c
-[5-ERROR] /lib/modules/2.6.14.2-rock/build/net/ieee80211/ieee80211_tx.c
-[5-ERROR] /lib/modules/2.6.14.2-rock/build/net/ieee80211/ieee80211_wx.c
-[5-ERROR] /lib/modules/2.6.14.2-rock/build/net/ieee80211/ieee80211_crypt.c
-[5-ERROR] /lib/modules/2.6.14.2-rock/build/net/ieee80211/ieee80211_crypt_wep.c
-[5-ERROR] /lib/modules/2.6.14.2-rock/build/include/net/ieee80211_crypt.h
-[5-ERROR] /lib/modules/2.6.14.2-rock/build/include/net/ieee80211.h
-[5-ERROR] /lib/modules/2.6.14.2-rock/build/include/config/ieee80211
+[5-ERROR] /lib/modules/2.6.15.4-rock/build/net/ieee80211
+[5-ERROR] /lib/modules/2.6.15.4-rock/build/include/config/ieee80211
 [5-ERROR] 
 [5-ERROR] 
 [5-ERROR]  Old ieee80211 references found.  In order to build the ieee80211
@@ -83,32 +91,32 @@
 [5-ERROR] Making post-install adaptions.
 [5-ERROR] Finished building ieee80211=ieee80211.
 
-[9-ERROR] gcc-34 (GCC) 3.4.4
+[9-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
+[9-ERROR] APPEND = '-s'
+[9-ERROR] FILTER = ''
+[9-ERROR] Old PATH: /ROCK/src.ieee80211.1143042987.19488.716794945/wrappers:/ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper:/ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clip/bin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/deva/bin:/opt/e16/bin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/flexlm/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/kde3/bin:/opt/kde3/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/samba/bin:/opt/samba/sbin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/opt/kde3/bin:/opt/root/bin
+[9-ERROR] New PATH: /ROCK/src.ieee80211.1143042987.19488.716794945/wrappers:/ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clip/bin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/deva/bin:/opt/e16/bin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/flexlm/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/kde3/bin:/opt/kde3/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/samba/bin:/opt/samba/sbin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/opt/kde3/bin:/opt/root/bin
+[9-ERROR] Insert: -O1
+[9-ERROR] Insert: -pipe
+[9-ERROR] Copy:   --version
+[9-ERROR] Append: -s
+[9-ERROR] New Command: gcc-34 -O1 -pipe --version -s
+[9-ERROR] gcc-34 (GCC) 3.4.5
 [9-ERROR] Copyright (C) 2004 Free Software Foundation, Inc.
 [9-ERROR] This is free software; see the source for copying conditions.  There is NO
 [9-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 [9-ERROR] 
-[9-ERROR] [ writing debug log to /ROCK/src.ieee80211.1133398138.12529.3599851644/cmd_wrapper.log ]
+[9-ERROR] [ writing debug log to /ROCK/src.ieee80211.1143042987.19488.716794945/cmd_wrapper.log ]
 [9-ERROR] Running main build function 'build_this_package' ...
 [9-ERROR] Extracting ieee80211-1.0.3.tbz2 (--use-compress-program=bzip2 -xf) ... 
 [9-ERROR] Fixing ownership and permissions ...
 [9-ERROR] Removing CVS and .svn directories ...
-[9-ERROR] Changeing into /ROCK/src.ieee80211.1133398138.12529.3599851644/ieee80211-1.0.3 ...
+[9-ERROR] Changeing into /ROCK/src.ieee80211.1143042987.19488.716794945/ieee80211-1.0.3 ...
 [9-ERROR] Creating /usr/<..> if required ...
-[9-ERROR] Checking in /lib/modules/2.6.14.2-rock/build/ for ieee80211 components...
+[9-ERROR] Checking in /lib/modules/2.6.15.4-rock/build/ for ieee80211 components...
 [9-ERROR] 
-[9-ERROR] /lib/modules/2.6.14.2-rock/build/net/ieee80211
-[9-ERROR] /lib/modules/2.6.14.2-rock/build/net/ieee80211/ieee80211_module.c
-[9-ERROR] /lib/modules/2.6.14.2-rock/build/net/ieee80211/ieee80211_crypt_ccmp.c
-[9-ERROR] /lib/modules/2.6.14.2-rock/build/net/ieee80211/ieee80211_crypt_tkip.c
-[9-ERROR] /lib/modules/2.6.14.2-rock/build/net/ieee80211/ieee80211_rx.c
-[9-ERROR] /lib/modules/2.6.14.2-rock/build/net/ieee80211/ieee80211_tx.c
-[9-ERROR] /lib/modules/2.6.14.2-rock/build/net/ieee80211/ieee80211_wx.c
-[9-ERROR] /lib/modules/2.6.14.2-rock/build/net/ieee80211/ieee80211_crypt.c
-[9-ERROR] /lib/modules/2.6.14.2-rock/build/net/ieee80211/ieee80211_crypt_wep.c
-[9-ERROR] /lib/modules/2.6.14.2-rock/build/include/net/ieee80211_crypt.h
-[9-ERROR] /lib/modules/2.6.14.2-rock/build/include/net/ieee80211.h
-[9-ERROR] /lib/modules/2.6.14.2-rock/build/include/config/ieee80211
+[9-ERROR] /lib/modules/2.6.15.4-rock/build/net/ieee80211
+[9-ERROR] /lib/modules/2.6.15.4-rock/build/include/config/ieee80211
 [9-ERROR] 
 [9-ERROR] 
 [9-ERROR]  Old ieee80211 references found.  In order to build the ieee80211

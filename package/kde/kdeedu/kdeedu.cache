@@ -20,33 +20,38 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133071574 Sun Nov 27 07:06:14 2005 (5)
-[TIMESTAMP] 1133304862 Tue Nov 29 23:54:22 2005 (9)
+[TIMESTAMP] 1142560120 Fri Mar 17 02:48:40 2006 (5)
+[TIMESTAMP] 1142819790 Mon Mar 20 02:56:30 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-kdeedu.log 9-kdeedu.log
 
-[BUILDTIME] 170268 (5)
-[BUILDTIME] 171179 (9)
-[SIZE] 39.38 MB, 1608 files
+[BUILDTIME] 190454 (5)
+[BUILDTIME] 192167 (9)
+[SIZE] 44.48 MB, 2319 files
 
-[DEP] 00-dirtree arts bash2 binutils boost:dev bzip2 coreutils diffutils
-[DEP] expat fam fam:dev findutils freetype freetype:dev gawk gcc34
-[DEP] gcc34:dev gettext glibc23 glibc23:dev grep kdebase kdegames
+[DEP] 00-dirtree acl acl:dev alsa alsa:dev arts arts:dev attr attr:dev
+[DEP] audiofile audiofile:dev bash2 binutils bzip2 coreutils diffutils
+[DEP] esound esound:dev expat fam fam:dev findutils freetype freetype:dev
+[DEP] gawk gcc34 gcc34:dev gettext glib glib:dev glibc23 glibc23:dev
+[DEP] gnome2-dirtree grep jack jack:dev kdeaccessibility kdebase kdegames
 [DEP] kdelibs kdelibs:dev kdeutils libart_lgpl23 libart_lgpl23:dev libidn
-[DEP] libidn:dev libjpeg libjpeg:dev libpng libpng:dev linux26-header:dev
-[DEP] make mktemp nas net-tools pcre pcre:dev perl5 python python:dev qt
-[DEP] qt:dev sed sysfiles tar tcl tk util-linux vim xorg xorg:dev zlib:dev
+[DEP] libidn:dev libjpeg libjpeg:dev libpng libpng:dev libusb libusb:dev
+[DEP] linux26-header:dev mad mad:dev make mktemp nas net-tools ocaml
+[DEP] ogg-vorbis ogg-vorbis:dev pcre pcre:dev perl5 qt33 qt33:dev rrdtool
+[DEP] sed sysfiles tar util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] celestrongps fliccd indiserver kalzium kbruch keduca
-[PROVIDES] keducabuilder kfile_drgeo.so kfile_kig.so khangman kig kiten
-[PROVIDES] kitengen klatin klettres kmessedwords kmplot kpercentage
-[PROVIDES] kstars ktouch kturtle kverbos kvoctrain kwordquiz langen2kvtml
-[PROVIDES] libextdate.so libkdeeducore.so libkdeeduplot.so libkdeeduui.so
+[PROVIDES] apmount apogee_ppi blinken celestrongps fliccd fliwheel
+[PROVIDES] indiserver kalzium kanagram kbruch keduca keducabuilder
+[PROVIDES] kfile_drgeo.so kfile_kig.so kgeography khangman kig
+[PROVIDES] kiten kitengen klatin klettres kmplot kpercentage kstars
+[PROVIDES] ktouch kturtle kverbos kvoctrain kwordquiz libextdate.so
+[PROVIDES] libkdeeducore.so libkdeeduplot.so libkdeeduui.so
 [PROVIDES] libkeducapart.so libkigpart.so libkiten.so libkmplotpart.so
-[PROVIDES] lx200_16 lx200autostar lx200classic lx200generic lx200gps
-[PROVIDES] spotlight2kvtml temma test_extdate test_extdatepicker v4ldriver
-[PROVIDES] v4lphilips
+[PROVIDES] libkvoctraincore.so lx200_16 lx200autostar lx200basic
+[PROVIDES] lx200classic lx200generic lx200gps meade_lpi pykig.py
+[PROVIDES] sbigccd skycommander spotlight2kvtml temma test_extdate
+[PROVIDES] test_extdatepicker v4ldriver v4lphilips
 

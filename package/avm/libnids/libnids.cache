@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133087930 Sun Nov 27 11:38:50 2005 (5)
-[TIMESTAMP] 1133324634 Wed Nov 30 05:23:54 2005 (9)
+[TIMESTAMP] 1142578043 Fri Mar 17 07:47:23 2006 (5)
+[TIMESTAMP] 1142841710 Mon Mar 20 09:01:50 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-libnids.log 9-libnids.log
 
-[BUILDTIME] 1745 (5)
-[BUILDTIME] 2075 (9)
+[BUILDTIME] 1748 (5)
+[BUILDTIME] 2092 (9)
 [SIZE] 0.02 MB, 7 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep libnet:dev libpcap:dev
-[DEP] linux26-header:dev make mktemp net-tools sed sysfiles tar util-linux
+[DEP] linux26-header:dev make mktemp net-tools rrdtool sed sysfiles
+[DEP] tar util-linux
 
 [PROVIDES] libnids.a
 

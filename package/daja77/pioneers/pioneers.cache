@@ -5,7 +5,7 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/alessandro/php/php.cache
+[COPY] ROCK Linux: rock-src/package/daja77/pioneers/pioneers.cache
 [COPY] ROCK Linux is Copyright (C) 1998 - 2006 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
@@ -20,25 +20,28 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1126858644 Fri Sep 16 10:17:24 2005 (5)
-[TIMESTAMP] 1127094733 Mon Sep 19 03:52:13 2005 (9)
+[TIMESTAMP] 1142626425 Fri Mar 17 21:13:45 2006 (5)
+[TIMESTAMP] 1142894005 Mon Mar 20 23:33:25 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-php.log 9-php.log
+[LOGS] 5-pioneers.log 9-pioneers.log
 
-[BUILDTIME] 17257 (5)
-[BUILDTIME] 18193 (9)
-[SIZE] 6.29 MB, 179 files
+[BUILDTIME] 7352 (5)
+[BUILDTIME] 7677 (9)
+[SIZE] 2.29 MB, 165 files
 
-[DEP] 00-dirtree apache apache:apr apache:dev bash2 binutils bison bzip2
-[DEP] bzip2:dev coreutils diffutils expat findutils flex flex:dev freetype
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libpng libpng:dev
-[DEP] libxml2 libxml2:dev libxslt libxslt:dev linux26-header:dev m4 make
-[DEP] mktemp mysql mysql:dev ncurses net-tools openssl openssl:dev pam
-[DEP] patch perl5 pine:dev pkgconfig postgresql postgresql:dev qt qt:dev
-[DEP] sed sysfiles tar xorg zlib:dev
+[DEP] 00-dirtree alsa atk atk:dev audiofile bash2 binutils bzip2 cairo
+[DEP] cairo:dev coreutils diffutils docbookx esound expat findutils
+[DEP] freetype gawk gcc34 gcc34:dev gconf gconf:dev gettext glib
+[DEP] glib:dev glibc23 glibc23:dev gnome-doc-utils gnome-keyring-manager
+[DEP] gnome-netstatus gnome-vfs gnome-vfs:dev gnome2-dirtree grep gtk+
+[DEP] gtk+:dev gtkam libbonobo libbonobo:dev libgnome libgnome:dev libpng
+[DEP] libxml2 linux26-header:dev make mktemp net-tools openbox openssl
+[DEP] orbit2 orbit2:dev pango pango:dev pkgconfig popt popt:dev rrdtool
+[DEP] scrollkeeper sed sysfiles tar util-linux xorg
 
-[PROVIDES] pear php php-config phpextdist phpize
+[PROVIDES] pioneers pioneers-editor pioneers-meta-server
+[PROVIDES] pioneers-server-console pioneers-server-gtk pioneersai
 

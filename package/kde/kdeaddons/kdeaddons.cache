@@ -20,53 +20,54 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133097084 Sun Nov 27 14:11:24 2005 (5)
-[TIMESTAMP] 1133334304 Wed Nov 30 08:05:04 2005 (9)
+[TIMESTAMP] 1142587705 Fri Mar 17 10:28:25 2006 (5)
+[TIMESTAMP] 1142851974 Mon Mar 20 11:52:54 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-kdeaddons.log 9-kdeaddons.log
 
-[BUILDTIME] 94299 (5)
-[BUILDTIME] 94676 (9)
-[SIZE] 8.05 MB, 385 files
+[BUILDTIME] 99812 (5)
+[BUILDTIME] 100930 (9)
+[SIZE] 8.28 MB, 403 files
 
-[DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev
-[DEP] bash2 binutils bzip2 coreutils diffutils esound esound:dev expat
-[DEP] fam fam:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev
-[DEP] gettext glib glib12 glib12:dev glib:dev glibc23 glibc23:dev
-[DEP] gnome14-dirtree gnome2-dirtree grep gtk+12 gtk+12:dev jack jack:dev
-[DEP] kdebase kdebase:dev kdegames kdegames:dev kdelibs kdelibs:dev
-[DEP] kdemultimedia kdemultimedia:dev kdenetwork kdepim kdepim:dev
-[DEP] kdeutils libart_lgpl23 libart_lgpl23:dev libidn libidn:dev libjpeg
-[DEP] libjpeg:dev libpng libpng:dev libsdl libsdl:dev linux26-header:dev
-[DEP] mad mad:dev make mktemp nas net-tools ogg-vorbis ogg-vorbis:dev
-[DEP] openssl openssl:dev pcre pcre:dev perl5 qt qt:dev sed sysfiles tar
-[DEP] util-linux vim xmms xmms:dev xorg xorg:dev zlib:dev
+[DEP] 00-dirtree acl acl:dev alsa alsa:dev arts arts:dev attr attr:dev
+[DEP] audiofile audiofile:dev bash2 binutils bzip2 coreutils diffutils
+[DEP] esound esound:dev expat fam fam:dev findutils freetype freetype:dev
+[DEP] gawk gcc34 gcc34:dev gettext glib glib12 glib12:dev glib:dev
+[DEP] glibc23 glibc23:dev gnome14-dirtree gnome2-dirtree grep gtk+12
+[DEP] gtk+12:dev jack jack:dev kdebase kdebase:dev kdegames kdegames:dev
+[DEP] kdelibs kdelibs:dev kdemultimedia kdemultimedia:dev kdenetwork
+[DEP] kdepim kdepim:dev kdeutils libart_lgpl23 libart_lgpl23:dev libidn
+[DEP] libidn:dev libjpeg libjpeg:dev libpng libpng:dev libsdl libsdl:dev
+[DEP] linux26-header:dev mad mad:dev make mktemp nas net-tools ogg-vorbis
+[DEP] ogg-vorbis:dev openssl openssl:dev pcre pcre:dev perl5 qt33
+[DEP] qt33:dev rrdtool sed sysfiles tar util-linux xmms xmms:dev xorg
+[DEP] xorg:dev zlib:dev
 
 [PROVIDES] atlantikdesigner exif.py fsview jpegorient
 [PROVIDES] katecppsymbolviewerplugin.so katefiletemplates.so
-[PROVIDES] katefll_initplugin.so katefll_plugin.so katehtmltoolsplugin.so
-[PROVIDES] katemodelineplugin.so kateopenheaderplugin.so
-[PROVIDES] katepybrowseplugin.so katesnippetsplugin.so
-[PROVIDES] katetextfilterplugin.so katexmlcheckplugin.so
-[PROVIDES] katexmltoolsplugin.so kbinaryclock_panelapplet.so
-[PROVIDES] kcm_kuick.so kcm_vim.so kfile_cert.so kfile_desktop.so
-[PROVIDES] kfile_folder.so kfile_html.so kfile_lnk.so kfile_mhtml.so
-[PROVIDES] kfile_txt.so kolourpicker_panelapplet.so konq_sidebarnews.so
-[PROVIDES] konqsidebar_mediaplayer.so ksig ktimemon_panelapplet.so
+[PROVIDES] katefll_plugin.so katehtmltoolsplugin.so katemodelineplugin.so
+[PROVIDES] kateopenheaderplugin.so katepybrowseplugin.so
+[PROVIDES] katesnippetsplugin.so katetextfilterplugin.so
+[PROVIDES] katexmlcheckplugin.so katexmltoolsplugin.so
+[PROVIDES] kbinaryclock_panelapplet.so kcm_kuick.so kfile_cert.so
+[PROVIDES] kfile_desktop.so kfile_folder.so kfile_html.so kfile_lnk.so
+[PROVIDES] kfile_mhtml.so kfile_txt.so kio_media_realfolder
+[PROVIDES] kolourpicker_panelapplet.so konq_sidebarnews.so
+[PROVIDES] konqsidebar_delicious.so konqsidebar_mediaplayer.so
+[PROVIDES] konqsidebar_metabar.so ksig ktimemon_panelapplet.so
 [PROVIDES] libakregatorkonqfeedicon.so libakregatorkonqplugin.so
 [PROVIDES] libarkplugin.so libautorefresh.so libbabelfishplugin.so
 [PROVIDES] libcrashesplugin.so libdirfilterplugin.so
 [PROVIDES] libdomtreeviewerplugin.so libfsviewpart.so
 [PROVIDES] libkaddrbk_geo_xxport.so libkaddrbk_gmx_xxport.so
 [PROVIDES] libkatetabbarextensionplugin.so libkhtmlsettingsplugin.so
-[PROVIDES] libkimgallery.so libkuickplugin.so libminitoolsplugin.so
-[PROVIDES] librellinksplugin.so librenaudioplugin.so
-[PROVIDES] librenimageplugin.so libsearchbarplugin.so
-[PROVIDES] libuachangerplugin.so libvalidatorsplugin.so
-[PROVIDES] libvimpart.so libwebarchiverplugin.so libxvim.so lnkforward
+[PROVIDES] libkimgallery.so libkuickplugin.so libmfkonqmficon.so
+[PROVIDES] libminitoolsplugin.so librellinksplugin.so librenaudioplugin.so
+[PROVIDES] librenimageplugin.so libsearchbarplugin.so libuachangerplugin.so
+[PROVIDES] libvalidatorsplugin.so libwebarchiverplugin.so lnkforward
 [PROVIDES] math_panelapplet.so mediacontrol_panelapplet.so noatun_ffrs.so
 [PROVIDES] noatunalsaplayer.so noatunblurscope.so noatuncharlatan.so
 [PROVIDES] noatundub.so noatunluckytag.so noatunlyrics.so noatunmadness.so

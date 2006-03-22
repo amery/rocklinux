@@ -20,8 +20,8 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133087901 Sun Nov 27 11:38:21 2005 (5)
-[TIMESTAMP] 1133324596 Wed Nov 30 05:23:16 2005 (9)
+[TIMESTAMP] 1142578010 Fri Mar 17 07:46:50 2006 (5)
+[TIMESTAMP] 1142841663 Mon Mar 20 09:01:03 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
@@ -29,14 +29,14 @@
 [LOGS] 5-driftnet.log 9-driftnet.log
 
 [BUILDTIME] 1334 (5)
-[BUILDTIME] 1680 (9)
-[SIZE] 0.17 MB, 8 files
+[BUILDTIME] 1657 (9)
+[SIZE] 0.18 MB, 8 files
 
-[DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils findutils gcc34
+[DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils findutils gawk gcc34
 [DEP] gcc34:dev glib12 glib12:dev glibc23 glibc23:dev gnome14-dirtree
 [DEP] grep gtk+12 gtk+12:dev libjpeg libjpeg:dev libpcap:dev libungif
-[DEP] libungif:dev linux26-header:dev make mktemp sed sysfiles tar xorg
-[DEP] xorg:dev
+[DEP] libungif:dev linux26-header:dev make mktemp rrdtool sed sysfiles
+[DEP] tar xorg xorg:dev
 
 [PROVIDES] driftnet
 

@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133026517 Sat Nov 26 18:35:17 2005 (5)
-[TIMESTAMP] 1133255133 Tue Nov 29 10:05:33 2005 (9)
+[TIMESTAMP] 1142516291 Thu Mar 16 14:38:11 2006 (5)
+[TIMESTAMP] 1142769567 Sun Mar 19 12:59:27 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-nvram-wakeup.log 9-nvram-wakeup.log
 
-[BUILDTIME] 1329 (5)
+[BUILDTIME] 1315 (5)
 [BUILDTIME] 1807 (9)
 [SIZE] 0.19 MB, 24 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] gettext glibc23 glibc23:dev grep gzip linux26-header:dev make mktemp
-[DEP] sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
+[DEP] gcc34:dev gettext glibc23 glibc23:dev grep gzip linux26-header:dev
+[DEP] make mktemp rrdtool sed sysfiles tar
 
 [PROVIDES] biosinfo cat_nvram guess guess-helper nvram-wakeup rtc time
 [PROVIDES] vdrshutdown

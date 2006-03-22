@@ -20,24 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133078583 Sun Nov 27 09:03:03 2005 (5)
-[TIMESTAMP] 1133313490 Wed Nov 30 02:18:10 2005 (9)
+[TIMESTAMP] 1142567654 Fri Mar 17 04:54:14 2006 (5) ERROR
+[TIMESTAMP] 1142829474 Mon Mar 20 05:37:54 2006 (9) ERROR
+[TIMESTAMP] 1142961229 Tue Mar 21 18:13:49 2006 (5) ERROR
+[TIMESTAMP] 1142972430 Tue Mar 21 21:20:30 2006 (9) ERROR
+[TIMESTAMP] 1143032180 Wed Mar 22 13:56:20 2006 (5) ERROR
+[TIMESTAMP] 1143041782 Wed Mar 22 16:36:22 2006 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-jamin.log 9-jamin.log
+[LOGS] 5-jamin.err 9-jamin.err
 
-[BUILDTIME] 7816 (5)
-[BUILDTIME] 8208 (9)
-[SIZE] 1.32 MB, 30 files
+[BUILDTIME] 1322 (5) ERROR
+[BUILDTIME] 1672 (9) ERROR
+[BUILDTIME] 1677 (5) ERROR
+[BUILDTIME] 1705 (9) ERROR
+[BUILDTIME] 1678 (5) ERROR
+[BUILDTIME] 1684 (9) ERROR
 
-[DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils diffutils
-[DEP] expat fftw3:dev findutils freetype gawk gcc34 gcc34:dev gettext
-[DEP] glib glib:dev glibc23 glibc23:dev gnome-libs14 gnome14-dirtree
-[DEP] gnome2-dirtree grep gtk+ gtk+:dev jack jack:dev libxml2 libxml2:dev
-[DEP] linux26-header:dev make mktemp net-tools pango pango:dev patch
-[DEP] pkgconfig sed sysfiles tar util-linux xorg zlib:dev
 
-[PROVIDES] jamin
+[5-ERROR] checking whether to enable maintainer-specific portions of Makefiles... no
+[5-ERROR] checking for style of include used by make... GNU
+[5-ERROR] checking for i386-unknown-linux-gnu-gcc... gcc-34
+[5-ERROR] checking for C compiler default output file name... a.out
+[5-ERROR] checking whether the C compiler works... yes
+[5-ERROR] checking whether we are cross compiling... no
+[5-ERROR] checking for suffix of executables... 
+[5-ERROR] checking for suffix of object files... o
+[5-ERROR] checking whether we are using the GNU C compiler... yes
+[5-ERROR] checking whether gcc-34 accepts -g... yes
+[5-ERROR] checking for gcc-34 option to accept ANSI C... none needed
+[5-ERROR] checking dependency style of gcc-34... gcc3
+[5-ERROR] checking for strerror in -lcposix... no
+[5-ERROR] checking for i386-unknown-linux-gnu-gcc... (cached) gcc-34
+[5-ERROR] checking whether we are using the GNU C compiler... (cached) yes
+[5-ERROR] checking whether gcc-34 accepts -g... (cached) yes
+[5-ERROR] checking for gcc-34 option to accept ANSI C... (cached) none needed
+[5-ERROR] checking dependency style of gcc-34... (cached) gcc3
+[5-ERROR] checking for gcc-34 option to accept ANSI C... none needed
+[5-ERROR] checking how to run the C preprocessor... gcc-34 -E
+[5-ERROR] checking for egrep... grep -E
+[5-ERROR] checking for ANSI C header files... yes
+[5-ERROR] checking for an ANSI C-conforming const... yes
+[5-ERROR] checking for working volatile... yes
+[5-ERROR] checking for inline... inline
+[5-ERROR] checking for i386-unknown-linux-gnu-ranlib... ranlib
+[5-ERROR] checking for pthread_self in -lpthread... yes
+[5-ERROR] checking for sched_getscheduler... yes
+[5-ERROR] checking for pkg-config... /usr/bin/pkg-config
+[5-ERROR] checking for jack >= 0.80.0... yes
+[5-ERROR] checking JACK_CFLAGS...  
+[5-ERROR] checking JACK_LIBS... -ljack  
+[5-ERROR] checking for jack_ringbuffer_create in -ljack... yes
+[5-ERROR] checking for jack_client_name_size in -ljack... yes
+[5-ERROR] checking for fftw3f >= 3.0... configure: error: Didn't find any float FFTW3 libraries.
+[5-ERROR] configure: error: Make sure you built FFTW with --enable-float.
+[5-ERROR] configure: error: Double precision /can/ be used (--enable-double-fft),
+[5-ERROR] configure: error: but this package will not run in realtime on many 2003
+[5-ERROR] configure: error: era machines
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 0 files for this package.
+[5-ERROR] Applying package split: 40 jamin:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 jamin:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 jamin:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building jamin=jamin.
+
+[9-ERROR] checking whether to enable maintainer-specific portions of Makefiles... no
+[9-ERROR] checking for style of include used by make... GNU
+[9-ERROR] checking for i386-unknown-linux-gnu-gcc... gcc-34
+[9-ERROR] checking for C compiler default output file name... a.out
+[9-ERROR] checking whether the C compiler works... yes
+[9-ERROR] checking whether we are cross compiling... no
+[9-ERROR] checking for suffix of executables... 
+[9-ERROR] checking for suffix of object files... o
+[9-ERROR] checking whether we are using the GNU C compiler... yes
+[9-ERROR] checking whether gcc-34 accepts -g... yes
+[9-ERROR] checking for gcc-34 option to accept ANSI C... none needed
+[9-ERROR] checking dependency style of gcc-34... gcc3
+[9-ERROR] checking for strerror in -lcposix... no
+[9-ERROR] checking for i386-unknown-linux-gnu-gcc... (cached) gcc-34
+[9-ERROR] checking whether we are using the GNU C compiler... (cached) yes
+[9-ERROR] checking whether gcc-34 accepts -g... (cached) yes
+[9-ERROR] checking for gcc-34 option to accept ANSI C... (cached) none needed
+[9-ERROR] checking dependency style of gcc-34... (cached) gcc3
+[9-ERROR] checking for gcc-34 option to accept ANSI C... none needed
+[9-ERROR] checking how to run the C preprocessor... gcc-34 -E
+[9-ERROR] checking for egrep... grep -E
+[9-ERROR] checking for ANSI C header files... yes
+[9-ERROR] checking for an ANSI C-conforming const... yes
+[9-ERROR] checking for working volatile... yes
+[9-ERROR] checking for inline... inline
+[9-ERROR] checking for i386-unknown-linux-gnu-ranlib... ranlib
+[9-ERROR] checking for pthread_self in -lpthread... yes
+[9-ERROR] checking for sched_getscheduler... yes
+[9-ERROR] checking for pkg-config... /usr/bin/pkg-config
+[9-ERROR] checking for jack >= 0.80.0... yes
+[9-ERROR] checking JACK_CFLAGS...  
+[9-ERROR] checking JACK_LIBS... -ljack  
+[9-ERROR] checking for jack_ringbuffer_create in -ljack... yes
+[9-ERROR] checking for jack_client_name_size in -ljack... yes
+[9-ERROR] checking for fftw3f >= 3.0... configure: error: Didn't find any float FFTW3 libraries.
+[9-ERROR] configure: error: Make sure you built FFTW with --enable-float.
+[9-ERROR] configure: error: Double precision /can/ be used (--enable-double-fft),
+[9-ERROR] configure: error: but this package will not run in realtime on many 2003
+[9-ERROR] configure: error: era machines
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 0 files for this package.
+[9-ERROR] Applying package split: 40 jamin:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 jamin:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 jamin:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building jamin=jamin.
 

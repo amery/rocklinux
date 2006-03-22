@@ -20,20 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133035970 Sat Nov 26 21:12:50 2005 (5)
-[TIMESTAMP] 1133265842 Tue Nov 29 13:04:02 2005 (9)
+[TIMESTAMP] 1142525663 Thu Mar 16 17:14:23 2006 (5)
+[TIMESTAMP] 1142780785 Sun Mar 19 16:06:25 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-ifenslave.log 9-ifenslave.log
 
-[BUILDTIME] 3188 (5)
-[BUILDTIME] 3615 (9)
+[BUILDTIME] 3214 (5)
+[BUILDTIME] 3637 (9)
 [SIZE] 0.03 MB, 7 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev mktemp sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev mktemp rrdtool
+[DEP] sed sysfiles tar
 
 [PROVIDES] ifenslave
 

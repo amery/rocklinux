@@ -20,22 +20,77 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133066919 Sun Nov 27 05:48:39 2005 (5)
-[TIMESTAMP] 1133299794 Tue Nov 29 22:29:54 2005 (9)
+[TIMESTAMP] 1142555286 Fri Mar 17 01:28:06 2006 (5)
+[TIMESTAMP] 1142814209 Mon Mar 20 01:23:29 2006 (9) ERROR
+[TIMESTAMP] 1142971647 Tue Mar 21 21:07:27 2006 (9) ERROR
+[TIMESTAMP] 1143041000 Wed Mar 22 16:23:20 2006 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-motor.log 9-motor.log
+[LOGS] 5-motor.log 9-motor.err
 
-[BUILDTIME] 10231 (5)
-[BUILDTIME] 10631 (9)
-[SIZE] 1.32 MB, 65 files
+[BUILDTIME] 10272 (5)
+[BUILDTIME] 10637 (9) ERROR
+[BUILDTIME] 10746 (9) ERROR
+[BUILDTIME] 10735 (9) ERROR
+[SIZE] 1.37 MB, 65 files
 
 [DEP] 00-dirtree autoconf bash2 binutils bison bzip2 coreutils diffutils
 [DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
 [DEP] gzip linux26-header:dev make mktemp ncurses:dev net-tools patch
-[DEP] perl5 sed sysfiles tar texinfo
+[DEP] perl5 rrdtool sed sysfiles tar texinfo
 
 [PROVIDES] motor motorsync
+
+[9-ERROR] ranlib libvcs.a
+[9-ERROR] make[3]: Leaving directory `/ROCK/src.motor.1143040869.14361.3380754697/motor-3.3.0/src/vcs'
+[9-ERROR] Making all in tagbrowser
+[9-ERROR] make[3]: Entering directory `/ROCK/src.motor.1143040869.14361.3380754697/motor-3.3.0/src/tagbrowser'
+[9-ERROR] g++-34 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../kkstrtext -I../../kkconsui/include     -I../../kksystr/include -I../../intl     -I../../src/ui/ncurses -I../../src/debugger     -I../../src/executor -I../../src/project     -I../../src/configuration -I../../src     -I../../src/ui -I../../parser/include    -g -O2 -c motortagbrowser.cc
+[9-ERROR] In file included from /usr/lib/gcc/i386-unknown-linux-gnu/3.4.5/include/c++/backward/strstream:51,
+[9-ERROR]                  from motortagbrowser.cc:5:
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/3.4.5/include/c++/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated.
+[9-ERROR] rm -f libtagbrowser.a
+[9-ERROR] ar cru libtagbrowser.a motortagbrowser.o 
+[9-ERROR] ranlib libtagbrowser.a
+[9-ERROR] make[3]: Leaving directory `/ROCK/src.motor.1143040869.14361.3380754697/motor-3.3.0/src/tagbrowser'
+[9-ERROR] make[3]: Entering directory `/ROCK/src.motor.1143040869.14361.3380754697/motor-3.3.0/src'
+[9-ERROR] g++-34 -DHAVE_CONFIG_H -I. -I. -I.. -I../kkstrtext -I../kksystr/include     -I../kkconsui/include -I../intl     -I../src/ui -I../src/ui/ncurses     -I../src/debugger -I../src/executor     -I../src/project -I../src/configuration     -I../src/manager -I../src/grepper     -I../src/tagbrowser -I../src/vcs     -I../parser/include  -DSHARE_DIR=\"/usr/share/motor\" -DLOCALE_DIR=\"/usr/share/locale\"  -g -O2 -c main.cc
+[9-ERROR] g++-34 -DHAVE_CONFIG_H -I. -I. -I.. -I../kkstrtext -I../kksystr/include     -I../kkconsui/include -I../intl     -I../src/ui -I../src/ui/ncurses     -I../src/debugger -I../src/executor     -I../src/project -I../src/configuration     -I../src/manager -I../src/grepper     -I../src/tagbrowser -I../src/vcs     -I../parser/include  -DSHARE_DIR=\"/usr/share/motor\" -DLOCALE_DIR=\"/usr/share/locale\"  -g -O2 -c motormisc.cc
+[9-ERROR] g++-34 -DHAVE_CONFIG_H -I. -I. -I.. -I../kkstrtext -I../kksystr/include     -I../kkconsui/include -I../intl     -I../src/ui -I../src/ui/ncurses     -I../src/debugger -I../src/executor     -I../src/project -I../src/configuration     -I../src/manager -I../src/grepper     -I../src/tagbrowser -I../src/vcs     -I../parser/include  -DSHARE_DIR=\"/usr/share/motor\" -DLOCALE_DIR=\"/usr/share/locale\"  -g -O2 -c motorcommon.cc
+[9-ERROR] g++-34  -g -O2  -o motor  main.o motormisc.o motorcommon.o project/libproject.a debugger/libdebugger.a     executor/libexecutor.a configuration/libconfiguration.a     manager/libmanager.a ui/ncurses/libncursesui.a ui/libui.a     grepper/libgrepper.a vcs/libvcs.a tagbrowser/libtagbrowser.a     ../parser/libparser.a ../kkstrtext/libkkstrtext.a     ../kkconsui/src/libkkconsui.a ../kksystr/src/libkksystr.a      -lncurses  -lncurses 
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/3.4.5/../../../libncurses.a(lib_mouse.o): In function `initialize_mousetype':lib_mouse.c:(.text+0x1bb): undefined reference to `dlopen'
+[9-ERROR] :lib_mouse.c:(.text+0x1d2): undefined reference to `dlsym'
+[9-ERROR] :lib_mouse.c:(.text+0x1ec): undefined reference to `dlsym'
+[9-ERROR] :lib_mouse.c:(.text+0x206): undefined reference to `dlsym'
+[9-ERROR] :lib_mouse.c:(.text+0x220): undefined reference to `dlsym'
+[9-ERROR] :lib_mouse.c:(.text+0x235): undefined reference to `dlclose'
+[9-ERROR] collect2: ld returned 1 exit status
+[9-ERROR] make[3]: *** [motor] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/src.motor.1143040869.14361.3380754697/motor-3.3.0/src'
+[9-ERROR] make[2]: *** [all-recursive] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/src.motor.1143040869.14361.3380754697/motor-3.3.0/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/src.motor.1143040869.14361.3380754697/motor-3.3.0'
+[9-ERROR] make: *** [all-recursive-am] Error 2
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 86 files for this package.
+[9-ERROR] Applying package split: 40 motor:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 motor:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 motor:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <motor> Creating flist file ...
+[9-ERROR] <motor> Creating package dependencies file ...
+[9-ERROR] <motor> Creating md5sum and cksum files ...
+[9-ERROR] <motor> Creating package description ...
+[9-ERROR] <motor:doc> Creating flist file ...
+[9-ERROR] <motor:doc> Creating package dependencies file ...
+[9-ERROR] <motor:doc> Creating md5sum and cksum files ...
+[9-ERROR] <motor:doc> Creating package description ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building motor=motor.
 

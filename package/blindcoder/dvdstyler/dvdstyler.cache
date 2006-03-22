@@ -20,24 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133159648 Mon Nov 28 07:34:08 2005 (5)
-[TIMESTAMP] 1133402141 Thu Dec  1 02:55:41 2005 (9)
+[TIMESTAMP] 1142655522 Sat Mar 18 05:18:42 2006 (5) ERROR
+[TIMESTAMP] 1142925277 Tue Mar 21 08:14:37 2006 (9) ERROR
+[TIMESTAMP] 1142963947 Tue Mar 21 18:59:07 2006 (5) ERROR
+[TIMESTAMP] 1142973919 Tue Mar 21 21:45:19 2006 (9) ERROR
+[TIMESTAMP] 1143033552 Wed Mar 22 14:19:12 2006 (5) ERROR
+[TIMESTAMP] 1143043201 Wed Mar 22 17:00:01 2006 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-dvdstyler.log 9-dvdstyler.log
+[LOGS] 5-dvdstyler.err 9-dvdstyler.err
 
-[BUILDTIME] 13647 (5)
-[BUILDTIME] 13706 (9)
-[SIZE] 1.22 MB, 65 files
+[BUILDTIME] 13643 (5) ERROR
+[BUILDTIME] 13754 (9) ERROR
+[BUILDTIME] 13753 (5) ERROR
+[BUILDTIME] 13865 (9) ERROR
+[BUILDTIME] 13765 (5) ERROR
+[BUILDTIME] 13765 (9) ERROR
 
-[DEP] 00-dirtree arts atk autoconf bash2 binutils bzip2 coreutils diffutils
-[DEP] expat findutils freetype gawk gcc34 gcc34:dev gettext glib glibc23
-[DEP] glibc23:dev gnome-libs14 gnome14-dirtree gnome2-dirtree grep gtk+
-[DEP] kdelibs libjpeg libjpeg:dev libpng libsdl libtiff linux26-header:dev
-[DEP] make mktemp mpgtx nas net-tools pango patch perl5 sed sysfiles tar
-[DEP] texinfo vim wxwidgets wxwidgets:dev xorg zlib:dev
 
-[PROVIDES] dvdstyler rc
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_matrix_multiply'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_image_surface_create_for_data'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_fill'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_surface_set_device_offset'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `pango_cairo_font_map_get_default'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_get_matrix'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_surface_create_similar'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_font_options_destroy'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_reset_clip'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_font_options_set_hint_style'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_set_operator'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_surface_finish'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_set_line_width'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_get_target'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_paint'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_surface_reference'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_pattern_destroy'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_restore'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_move_to'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_set_source_rgba'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_create'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_pattern_create_for_surface'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `pango_cairo_show_layout'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `pango_cairo_context_set_font_options'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_surface_destroy'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_xlib_surface_create'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_font_options_create'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_xlib_surface_set_size'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_clip'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_set_source_surface'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_identity_matrix'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_set_matrix'
+[5-ERROR] collect2: ld returned 1 exit status
+[5-ERROR] make[2]: *** [dvdstyler] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/src.dvdstyler.1143033386.26122.1476987639/DVDStyler-1.1/src'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.dvdstyler.1143033386.26122.1476987639/DVDStyler-1.1/src'
+[5-ERROR] make: *** [all-recursive] Error 1
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 0 files for this package.
+[5-ERROR] Applying package split: 40 dvdstyler:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 dvdstyler:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 dvdstyler:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] Adding dependency: mpgtx ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building dvdstyler=dvdstyler.
+
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_matrix_multiply'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_image_surface_create_for_data'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_fill'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_surface_set_device_offset'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `pango_cairo_font_map_get_default'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_get_matrix'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_surface_create_similar'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_font_options_destroy'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_reset_clip'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_font_options_set_hint_style'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_set_operator'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_surface_finish'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_set_line_width'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_get_target'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_paint'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_surface_reference'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_pattern_destroy'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_restore'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_move_to'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_set_source_rgba'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_create'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_pattern_create_for_surface'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `pango_cairo_show_layout'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `pango_cairo_context_set_font_options'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_surface_destroy'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_xlib_surface_create'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_font_options_create'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_xlib_surface_set_size'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_clip'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_set_source_surface'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_identity_matrix'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_set_matrix'
+[9-ERROR] collect2: ld returned 1 exit status
+[9-ERROR] make[2]: *** [dvdstyler] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/src.dvdstyler.1143043030.23566.2389644019/DVDStyler-1.1/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/src.dvdstyler.1143043030.23566.2389644019/DVDStyler-1.1/src'
+[9-ERROR] make: *** [all-recursive] Error 1
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 0 files for this package.
+[9-ERROR] Applying package split: 40 dvdstyler:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 dvdstyler:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 dvdstyler:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] Adding dependency: mpgtx ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building dvdstyler=dvdstyler.
 

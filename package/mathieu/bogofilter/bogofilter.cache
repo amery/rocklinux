@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133113963 Sun Nov 27 18:52:43 2005 (5)
-[TIMESTAMP] 1133352670 Wed Nov 30 13:11:10 2005 (9)
+[TIMESTAMP] 1142605882 Fri Mar 17 15:31:22 2006 (5)
+[TIMESTAMP] 1142871245 Mon Mar 20 17:14:05 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-bogofilter.log 9-bogofilter.log
 
-[BUILDTIME] 4304 (5)
-[BUILDTIME] 4573 (9)
+[BUILDTIME] 4268 (5)
+[BUILDTIME] 4558 (9)
 [SIZE] 0.62 MB, 25 files
 
 [DEP] 00-dirtree bash2 bdb42 bdb42:dev binutils bzip2 coreutils diffutils
 [DEP] findutils flex flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev
-[DEP] grep gsl linux26-header:dev m4 make mktemp net-tools sed sysfiles
-[DEP] tar util-linux
+[DEP] grep gsl linux26-header:dev m4 make mktemp net-tools rrdtool sed
+[DEP] sysfiles tar util-linux
 
 [PROVIDES] bf_compact bf_copy bf_resize bf_tar bogofilter bogolexer
 [PROVIDES] bogotune bogoupgrade bogoutil

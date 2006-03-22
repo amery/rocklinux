@@ -20,44 +20,47 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133083286 Sun Nov 27 10:21:26 2005 (5)
-[TIMESTAMP] 1133318706 Wed Nov 30 03:45:06 2005 (9)
+[TIMESTAMP] 1142572883 Fri Mar 17 06:21:23 2006 (5)
+[TIMESTAMP] 1142835337 Mon Mar 20 07:15:37 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-kdenetwork.log 9-kdenetwork.log
 
-[BUILDTIME] 250944 (5)
-[BUILDTIME] 252612 (9)
-[SIZE] 21.70 MB, 1764 files
+[BUILDTIME] 282501 (5)
+[BUILDTIME] 283730 (9)
+[SIZE] 24.42 MB, 1827 files
 
-[DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev
-[DEP] bash2 binutils bzip2 coreutils diffutils ekg:dev esound esound:dev
-[DEP] expat fam fam:dev findutils freetype freetype:dev gawk gcc34
-[DEP] gcc34:dev gettext glib glib12 glib12:dev glib:dev glibc23
-[DEP] glibc23:dev gnome14-dirtree gnome2-dirtree grep gtk+12 gtk+12:dev
-[DEP] jack jack:dev kdebase kdebase:doc kdegames kdelibs kdelibs:dev
-[DEP] kdeutils libart_lgpl23 libart_lgpl23:dev libidn libidn:dev libjpeg
-[DEP] libjpeg:dev libpng libpng:dev libxml2 libxml2:dev libxslt libxslt:dev
-[DEP] linux26-header:dev mad mad:dev make mktemp nas net-tools ogg-vorbis
-[DEP] ogg-vorbis:dev openslp openslp:dev openssl openssl:dev pcre
-[DEP] pcre:dev perl5 qt qt:dev sed sysfiles tar util-linux valgrind:dev
-[DEP] vim wireless-tools wireless-tools:dev xmms xmms:dev xorg xorg:dev
+[DEP] 00-dirtree acl acl:dev alsa alsa:dev arts arts:dev attr attr:dev
+[DEP] audiofile audiofile:dev bash2 binutils bzip2 coreutils diffutils
+[DEP] ekg:dev esound esound:dev expat fam fam:dev findutils freetype
+[DEP] freetype:dev gawk gcc34 gcc34:dev gettext glib glib12 glib12:dev
+[DEP] glib:dev glibc23 glibc23:dev gnome-libs14 gnome14-dirtree
+[DEP] gnome2-dirtree grep gtk+12 gtk+12:dev jack jack:dev kdebase
+[DEP] kdebase:doc kdegames kdelibs kdelibs:dev kdeutils libart_lgpl23
+[DEP] libart_lgpl23:dev libidn libidn:dev libjpeg libjpeg:dev libpng
+[DEP] libpng:dev libxml2 libxml2:dev libxslt libxslt:dev linux26-header:dev
+[DEP] mad mad:dev make mktemp nas net-tools ogg-vorbis ogg-vorbis:dev
+[DEP] openslp openslp:dev openssl openssl:dev pcre pcre:dev perl5 pkgconfig
+[DEP] qt33 qt33:dev rrdtool sed sysfiles tar util-linux valgrind:dev
+[DEP] wireless-tools wireless-tools:dev xmms xmms:dev xorg xorg:dev
 [DEP] zlib:dev
 
 [PROVIDES] dsirc feedbrowser fileshare_propsdlgplugin.so kcm_fileshare.so
 [PROVIDES] kcm_kopete_accountconfig.so kcm_kopete_addbookmarks.so
 [PROVIDES] kcm_kopete_alias.so kcm_kopete_appearanceconfig.so
-[PROVIDES] kcm_kopete_autoreplace.so kcm_kopete_behaviorconfig.so
-[PROVIDES] kcm_kopete_cryptography.so kcm_kopete_highlight.so
-[PROVIDES] kcm_kopete_history.so kcm_kopete_latex.so kcm_kopete_msn.so
-[PROVIDES] kcm_kopete_netmeeting.so kcm_kopete_nowlistening.so
-[PROVIDES] kcm_kopete_texteffect.so kcm_kopete_translator.so
-[PROVIDES] kcm_kopete_webpresence.so kcm_krfb.so kcm_ktalkd.so
-[PROVIDES] kcm_lanbrowser.so kcm_wifi.so kded_dnssdwatcher.so
-[PROVIDES] kded_kinetd.so kdict kdict_panelapplet.so kfile_torrent.so
-[PROVIDES] kget khtml_kget.so kio_lan.so kio_zeroconf.so
+[PROVIDES] kcm_kopete_autoreplace.so kcm_kopete_avdeviceconfig.so
+[PROVIDES] kcm_kopete_behaviorconfig.so kcm_kopete_cryptography.so
+[PROVIDES] kcm_kopete_highlight.so kcm_kopete_history.so
+[PROVIDES] kcm_kopete_identityconfig.so kcm_kopete_latex.so
+[PROVIDES] kcm_kopete_msn.so kcm_kopete_netmeeting.so
+[PROVIDES] kcm_kopete_nowlistening.so kcm_kopete_texteffect.so
+[PROVIDES] kcm_kopete_translator.so kcm_kopete_webpresence.so
+[PROVIDES] kcm_krfb.so kcm_ktalkd.so kcm_lanbrowser.so kcm_wifi.so
+[PROVIDES] kded_dnssdwatcher.so kded_kinetd.so kdict kdict.so
+[PROVIDES] kdict_panelapplet.so kfile_torrent.so kget khtml_kget.so
+[PROVIDES] kio_jabberdisco.so kio_lan.so kio_zeroconf.so
 [PROVIDES] knewsticker_panelapplet.so knewstickerstub kopete
 [PROVIDES] kopete-account-kconf_update kopete-nameTracking-kconf_update
 [PROVIDES] kopete-pluginloader2-kconf_update kopete_addbookmarks.so
@@ -69,11 +72,13 @@
 [PROVIDES] kopete_irc.so kopete_jabber.so kopete_latex.so
 [PROVIDES] kopete_latexconvert.sh kopete_msn.so kopete_netmeeting.so
 [PROVIDES] kopete_nowlistening.so kopete_sms.so kopete_statistics.so
-[PROVIDES] kopete_texteffect.so kopete_translator.so kopete_webpresence.so
-[PROVIDES] kopete_yahoo.so kpf_panelapplet.so kpfpropertiesdialog.so
-[PROVIDES] kppp kppplogview krdc krfb krfb_httpd ksirc ksirc.so ktalkd
-[PROVIDES] ktalkdlg kwifimanager libkcm_kcmsambaconf.so libkdeinit_ksirc.so
+[PROVIDES] kopete_testbed.so kopete_texteffect.so kopete_translator.so
+[PROVIDES] kopete_webpresence.so kopete_yahoo.so kpf_panelapplet.so
+[PROVIDES] kpfpropertiesdialog.so kppp kppplogview krdc krfb
+[PROVIDES] krfb_httpd ksirc ksirc.so ktalkd ktalkdlg kwifimanager
+[PROVIDES] libkcm_kcmsambaconf.so libkdeinit_kdict.so libkdeinit_ksirc.so
 [PROVIDES] libkntsrcfilepropsdlg.so libkopete.so libkopete_msn_shared.so
-[PROVIDES] libkopete_oscar.so libkrichtexteditpart.so libkwireless.so
-[PROVIDES] librss.so lisa mail.local reslisa rssclient rssservice
+[PROVIDES] libkopete_oscar.so libkopete_videodevice.so
+[PROVIDES] libkrichtexteditpart.so libkwireless.so librss.so lisa
+[PROVIDES] mail.local reslisa rssclient rssservice
 

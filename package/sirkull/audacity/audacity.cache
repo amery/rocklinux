@@ -20,25 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133078481 Sun Nov 27 09:01:21 2005 (5)
-[TIMESTAMP] 1133313375 Wed Nov 30 02:16:15 2005 (9)
+[TIMESTAMP] 1142567630 Fri Mar 17 04:53:50 2006 (5) ERROR
+[TIMESTAMP] 1142829434 Mon Mar 20 05:37:14 2006 (9) ERROR
+[TIMESTAMP] 1142961194 Tue Mar 21 18:13:14 2006 (5) ERROR
+[TIMESTAMP] 1142972389 Tue Mar 21 21:19:49 2006 (9) ERROR
+[TIMESTAMP] 1143032145 Wed Mar 22 13:55:45 2006 (5) ERROR
+[TIMESTAMP] 1143041742 Wed Mar 22 16:35:42 2006 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-audacity.log 9-audacity.log
+[LOGS] 5-audacity.err 9-audacity.err
 
-[BUILDTIME] 34484 (5)
-[BUILDTIME] 34984 (9)
-[SIZE] 3.70 MB, 60 files
+[BUILDTIME] 34771 (5) ERROR
+[BUILDTIME] 35489 (9) ERROR
+[BUILDTIME] 35307 (5) ERROR
+[BUILDTIME] 35365 (9) ERROR
+[BUILDTIME] 35324 (5) ERROR
+[BUILDTIME] 35364 (9) ERROR
 
-[DEP] 00-dirtree atk bash2 binutils bzip2 coreutils diffutils expat
-[DEP] findutils flac flac:dev freetype gawk gcc34 gcc34:dev gettext glib
-[DEP] glibc23 glibc23:dev gnome2-dirtree grep gtk+ gzip libjpeg libpng
-[DEP] libsamplerate libsamplerate:dev libsdl libsndfile libsndfile:dev
-[DEP] libtiff linux26-header:dev mad mad:dev make mktemp nas net-tools
-[DEP] ogg-vorbis ogg-vorbis:dev pango pkgconfig sed sysfiles tar util-linux
-[DEP] wxwidgets wxwidgets:dev xorg zip zlib:dev
 
-[PROVIDES] audacity
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_pattern_set_matrix'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_surface_set_user_data'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_scale'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_matrix_multiply'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_image_surface_create_for_data'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_fill'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_surface_set_device_offset'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `pango_cairo_font_map_get_default'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_get_matrix'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_surface_create_similar'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_font_options_destroy'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_reset_clip'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_font_options_set_hint_style'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_set_operator'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_surface_finish'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_set_line_width'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_get_target'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_paint'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_surface_reference'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_pattern_destroy'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_restore'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_move_to'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_set_source_rgba'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_create'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_pattern_create_for_surface'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `pango_cairo_show_layout'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `pango_cairo_context_set_font_options'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_surface_destroy'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_xlib_surface_create'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_font_options_create'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_xlib_surface_set_size'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_clip'
+[5-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_set_source_surface'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_identity_matrix'
+[5-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_set_matrix'
+[5-ERROR] collect2: ld returned 1 exit status
+[5-ERROR] make[1]: *** [../audacity] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/src.audacity.1143031754.1833.2586682617/audacity-src-2004-12-17/src'
+[5-ERROR] make: *** [audacity] Error 2
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 0 files for this package.
+[5-ERROR] Applying package split: 40 audacity:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 audacity:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 audacity:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building audacity=audacity.
+
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_pattern_set_matrix'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_surface_set_user_data'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_scale'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_matrix_multiply'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_image_surface_create_for_data'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_fill'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_surface_set_device_offset'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `pango_cairo_font_map_get_default'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_get_matrix'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_surface_create_similar'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_font_options_destroy'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_reset_clip'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_font_options_set_hint_style'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_set_operator'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_surface_finish'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_set_line_width'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_get_target'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_paint'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_surface_reference'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_pattern_destroy'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_restore'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_move_to'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_set_source_rgba'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_create'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_pattern_create_for_surface'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `pango_cairo_show_layout'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `pango_cairo_context_set_font_options'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_surface_destroy'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_xlib_surface_create'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_font_options_create'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_xlib_surface_set_size'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_clip'
+[9-ERROR] /opt/gnome2/lib/libgtk-x11-2.0.so: undefined reference to `cairo_set_source_surface'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_identity_matrix'
+[9-ERROR] /opt/gnome2/lib/libgdk-x11-2.0.so: undefined reference to `cairo_set_matrix'
+[9-ERROR] collect2: ld returned 1 exit status
+[9-ERROR] make[1]: *** [../audacity] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/src.audacity.1143041335.31670.2636903384/audacity-src-2004-12-17/src'
+[9-ERROR] make: *** [audacity] Error 2
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 0 files for this package.
+[9-ERROR] Applying package split: 40 audacity:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 audacity:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 audacity:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building audacity=audacity.
 

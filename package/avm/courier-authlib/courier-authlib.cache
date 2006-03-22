@@ -20,31 +20,32 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133004231 Sat Nov 26 12:23:51 2005 (5)
-[TIMESTAMP] 1133229350 Tue Nov 29 02:55:50 2005 (9)
+[TIMESTAMP] 1142491501 Thu Mar 16 07:45:01 2006 (5)
+[TIMESTAMP] 1142740651 Sun Mar 19 04:57:31 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-courier-authlib.log 9-courier-authlib.log
 
-[BUILDTIME] 23998 (5)
-[BUILDTIME] 25646 (9)
-[SIZE] 0.36 MB, 68 files
+[BUILDTIME] 24386 (5)
+[BUILDTIME] 25732 (9)
+[SIZE] 0.38 MB, 74 files
 
 [DEP] 00-dirtree bash2 bdb42 binutils bzip2 coreutils diffutils findutils
 [DEP] gawk gcc34 gcc34:dev gdbm gdbm:dev glibc23 glibc23:dev grep libtool
 [DEP] libtool:dev linux26-header:dev m4 make mktemp mysql mysql:dev
 [DEP] net-tools openssl pam pam:dev perl5 postgresql postgresql:dev procps
-[DEP] sed shadow:dev sysfiles tar util-linux zlib:dev
+[DEP] rrdtool sed shadow shadow:dev sysfiles tar util-linux zlib:dev
 
-[PROVIDES] authdaemond authenumerate authtest courierauthconfig
+[PROVIDES] authdaemond authenumerate authpasswd authtest courierauthconfig
 [PROVIDES] courierlogger libauthcustom.a libauthcustom.so libauthmysql.a
 [PROVIDES] libauthmysql.so libauthpam.a libauthpam.so libauthpgsql.a
-[PROVIDES] libauthpgsql.so libauthuserdb.a libauthuserdb.so
-[PROVIDES] libcourierauth.a libcourierauth.so libcourierauthcommon.a
-[PROVIDES] libcourierauthcommon.so libcourierauthsasl.a
-[PROVIDES] libcourierauthsasl.so libcourierauthsaslclient.a
-[PROVIDES] libcourierauthsaslclient.so makeuserdb pw2userdb userdb
-[PROVIDES] userdb-test-cram-md5 userdbpw vchkpw2userdb
+[PROVIDES] libauthpgsql.so libauthpipe.a libauthpipe.so libauthuserdb.a
+[PROVIDES] libauthuserdb.so libcourierauth.a libcourierauth.so
+[PROVIDES] libcourierauthcommon.a libcourierauthcommon.so
+[PROVIDES] libcourierauthsasl.a libcourierauthsasl.so
+[PROVIDES] libcourierauthsaslclient.a libcourierauthsaslclient.so
+[PROVIDES] makeuserdb pw2userdb userdb userdb-test-cram-md5 userdbpw
+[PROVIDES] vchkpw2userdb
 

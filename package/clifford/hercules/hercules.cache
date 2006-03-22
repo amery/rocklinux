@@ -20,28 +20,29 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133160287 Mon Nov 28 07:44:47 2005 (5)
-[TIMESTAMP] 1133402882 Thu Dec  1 03:08:02 2005 (9)
+[TIMESTAMP] 1142656517 Sat Mar 18 05:35:17 2006 (5)
+[TIMESTAMP] 1142926410 Tue Mar 21 08:33:30 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-hercules.log 9-hercules.log
 
-[BUILDTIME] 22929 (5)
-[BUILDTIME] 23042 (9)
-[SIZE] 4.42 MB, 135 files
+[BUILDTIME] 44188 (5)
+[BUILDTIME] 44419 (9)
+[SIZE] 6.91 MB, 169 files
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 bzip2:dev coreutils diffutils
-[DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev
-[DEP] grep libgcrypt libgcrypt:dev libgpg-error libgpg-error:dev
-[DEP] linux26-header:dev make mktemp net-tools patch sed sysfiles tar
-[DEP] util-linux zlib:dev
+[DEP] 00-dirtree bash2 binutils bzip2 bzip2:dev coreutils diffutils
+[DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
+[DEP] libtool:dev linux26-header:dev make mktemp net-tools rrdtool sed
+[DEP] sysfiles tar util-linux zlib:dev
 
 [PROVIDES] cckd2ckd cckdcdsk cckdcomp cckddiag cckdswap cfba2fba ckd2cckd
-[PROVIDES] dasdcat dasdcopy dasdinit dasdisup dasdlist dasdload dasdls
-[PROVIDES] dasdpdsu dasdseq dmap2hrc dyncrypt.so dyngui.so dyninst.so
-[PROVIDES] fba2cfba hdt1403.so hdt2703.so hdt3088.so hdt3270.so hdt3420.so
-[PROVIDES] hdt3505.so hdt3525.so hdteq.so hercifc hercules hetget hetinit
-[PROVIDES] hetmap hetupd libherc.so libhercs.so tapecopy tapemap tapesplt
+[PROVIDES] cvslvlck dasdcat dasdconv dasdcopy dasdinit dasdisup dasdlist
+[PROVIDES] dasdload dasdls dasdpdsu dasdseq dmap2hrc dyncrypt.so dyngui.so
+[PROVIDES] dyninst.so fba2cfba hdt1052c.so hdt1403.so hdt2703.so hdt2880.so
+[PROVIDES] hdt3088.so hdt3270.so hdt3420.so hdt3505.so hdt3525.so hdteq.so
+[PROVIDES] hdtqeth.so hercifc herclin hercules hetget hetinit hetmap hetupd
+[PROVIDES] libherc.so libhercd.so libhercs.so libherct.so libhercu.so
+[PROVIDES] tapecopy tapemap tapesplt
 

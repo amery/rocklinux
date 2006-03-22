@@ -20,24 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133032214 Sat Nov 26 20:10:14 2005 (5)
-[TIMESTAMP] 1133261506 Tue Nov 29 11:51:46 2005 (9)
+[TIMESTAMP] 1142521239 Thu Mar 16 16:00:39 2006 (5)
+[TIMESTAMP] 1142775568 Sun Mar 19 14:39:28 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-xchat.log 9-xchat.log
 
-[BUILDTIME] 6388 (5)
-[BUILDTIME] 6942 (9)
-[SIZE] 4.86 MB, 51 files
+[BUILDTIME] 6419 (5)
+[BUILDTIME] 6950 (9)
+[SIZE] 4.87 MB, 51 files
 
-[DEP] 00-dirtree alsa atk atk:dev bash2 binutils bison bzip2 coreutils
-[DEP] diffutils expat findutils freetype gawk gcc34 gcc34:dev gettext
-[DEP] glib glib:dev glibc23 glibc23:dev gnome2-dirtree grep gtk+ gtk+:dev
+[DEP] 00-dirtree alsa atk atk:dev bash2 binutils bison bzip2
+[DEP] cairo cairo:dev coreutils diffutils expat findutils freetype
+[DEP] freetype:dev gawk gcc34 gcc34:dev gettext glib glib:dev glibc23
+[DEP] glibc23:dev gnome2-dirtree grep gtk+ gtk+:dev libpng libpng:dev
 [DEP] linux26-header:dev make mktemp net-tools openssl openssl:dev pango
-[DEP] pango:dev perl5 perl5:dev pkgconfig python python:dev sed sysfiles
-[DEP] tar tcl tcl:dev util-linux xorg xorg:dev
+[DEP] pango:dev perl5 perl5:dev pkgconfig python python:dev rrdtool sed
+[DEP] sysfiles tar tcl tcl:dev util-linux xorg xorg:dev zlib:dev
 
 [PROVIDES] perl.so python.so tcl.so xchat
 

@@ -20,23 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133008843 Sat Nov 26 13:40:43 2005 (5)
-[TIMESTAMP] 1133234802 Tue Nov 29 04:26:42 2005 (9)
+[TIMESTAMP] 1142496592 Thu Mar 16 09:09:52 2006 (5)
+[TIMESTAMP] 1142746811 Sun Mar 19 06:40:11 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-magicpoint.log 9-magicpoint.log
 
-[BUILDTIME] 3009 (5)
-[BUILDTIME] 3515 (9)
-[SIZE] 8.62 MB, 25 files
+[BUILDTIME] 3423 (5)
+[BUILDTIME] 3957 (9)
+[SIZE] 8.64 MB, 25 files
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils findutils
-[DEP] flex flex:dev freetype1 freetype1:dev gcc34 gcc34:dev glibc23
-[DEP] glibc23:dev grep lcms libjpeg libjpeg:dev libmng libmng:dev libpng
-[DEP] libpng:dev linux26-header:dev m4 make mktemp net-tools patch perl5
-[DEP] sed sysfiles tar xorg xorg:dev zlib:dev
+[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils expat
+[DEP] findutils flex flex:dev freetype freetype1 freetype1:dev freetype:dev
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep lcms libjpeg libjpeg:dev
+[DEP] libmng libmng:dev libpng libpng:dev linux26-header:dev m4 make
+[DEP] mktemp net-tools patch perl5 pkgconfig rrdtool sed sysfiles tar
+[DEP] util-linux xorg xorg:dev zlib:dev
 
 [PROVIDES] mgp mgp2ps mgpembed mgpnet xwintoppm
 

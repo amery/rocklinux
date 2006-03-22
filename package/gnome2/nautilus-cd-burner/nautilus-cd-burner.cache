@@ -20,32 +20,35 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133025497 Sat Nov 26 18:18:17 2005 (5)
-[TIMESTAMP] 1133253874 Tue Nov 29 09:44:34 2005 (9)
+[TIMESTAMP] 1142515452 Thu Mar 16 14:24:12 2006 (5) ERROR
+[TIMESTAMP] 1142768228 Sun Mar 19 12:37:08 2006 (9)
+[TIMESTAMP] 1142957156 Tue Mar 21 17:05:56 2006 (5)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-nautilus-cd-burner.log 9-nautilus-cd-burner.log
 
-[BUILDTIME] 4992 (5)
-[BUILDTIME] 5584 (9)
-[SIZE] 0.95 MB, 86 files
+[BUILDTIME] 2040 (5) ERROR
+[BUILDTIME] 6125 (9)
+[BUILDTIME] 6135 (5)
+[SIZE] 1.24 MB, 91 files
 
-[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
-[DEP] binutils bzip2 coreutils cpan-xml-parser diffutils eel eel:dev
-[DEP] esound esound:dev expat findutils freetype gail gail:dev gawk gcc34
-[DEP] gcc34:dev gconf gconf:dev gettext glib glib:dev glibc23 glibc23:dev
-[DEP] gnome-blog gnome-desktop:dev gnome-keyring gnome-keyring:dev
-[DEP] gnome-libs14 gnome-menus:dev gnome-vfs gnome-vfs:dev gnome14-dirtree
+[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
+[DEP] bash2 binutils bzip2 cairo cairo:dev coreutils cpan-xml-parser
+[DEP] diffutils eel eel:dev esound esound:dev expat fam:dev findutils
+[DEP] freetype freetype:dev gail gail:dev gawk gcc34 gcc34:dev gconf
+[DEP] gconf:dev gettext glib glib:dev glibc23 glibc23:dev gnome-blog
+[DEP] gnome-desktop:dev gnome-keyring gnome-keyring:dev gnome-libs14
+[DEP] gnome-menus:dev gnome-vfs gnome-vfs:dev gnome14-dirtree
 [DEP] gnome2-dirtree grep gtk+ gtk+:dev libart_lgpl23 libart_lgpl23:dev
 [DEP] libbonobo libbonobo:dev libbonoboui libbonoboui:dev libglade
 [DEP] libglade:dev libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev
-[DEP] libgnomeui libgnomeui:dev libjpeg libjpeg:dev libxml2 libxml2:dev
-[DEP] linux26-header:dev make mktemp nautilus nautilus:dev net-tools
-[DEP] openssl orbit2 orbit2:dev pango pango:dev perl5 pkgconfig popt
-[DEP] popt:dev sed startup-notification:dev sysfiles tar util-linux xorg
-[DEP] zapping zlib:dev
+[DEP] libgnomeui libgnomeui:dev libjpeg libjpeg:dev libpng libpng:dev
+[DEP] libxml2 libxml2:dev linux26-header:dev make mktemp nautilus
+[DEP] nautilus:dev net-tools openssl orbit2 orbit2:dev pango pango:dev
+[DEP] perl5 pkgconfig popt popt:dev rrdtool sed startup-notification:dev
+[DEP] sysfiles tar util-linux xorg zlib:dev
 
 [PROVIDES] libmapping.so libnautilus-burn-extension.so libnautilus-burn.so
 [PROVIDES] nautilus-cd-burner

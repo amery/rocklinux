@@ -5,7 +5,7 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/import/cpan/cpan-event.cache
+[COPY] ROCK Linux: rock-src/package/import/cpan/cpan.cache
 [COPY] ROCK Linux is Copyright (C) 1998 - 2006 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133069627 Sun Nov 27 06:33:47 2005 (5)
-[TIMESTAMP] 1133302862 Tue Nov 29 23:21:02 2005 (9)
+[TIMESTAMP] 1142557938 Fri Mar 17 02:12:18 2006 (5)
+[TIMESTAMP] 1142817509 Mon Mar 20 02:18:29 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-cpan-event.log 9-cpan-event.log
 
-[BUILDTIME] 1440 (5)
+[BUILDTIME] 1433 (5)
 [BUILDTIME] 1852 (9)
 [SIZE] 0.20 MB, 28 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
 [DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] perl5 sed sysfiles tar
+[DEP] perl5 rrdtool sed sysfiles tar
 
 [PROVIDES] Event.so
 

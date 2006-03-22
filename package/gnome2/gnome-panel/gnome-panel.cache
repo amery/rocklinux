@@ -20,33 +20,38 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133022501 Sat Nov 26 17:28:21 2005 (5)
-[TIMESTAMP] 1133250453 Tue Nov 29 08:47:33 2005 (9)
+[TIMESTAMP] 1142512729 Thu Mar 16 13:38:49 2006 (5) ERROR
+[TIMESTAMP] 1142764548 Sun Mar 19 11:35:48 2006 (9)
+[TIMESTAMP] 1142956496 Tue Mar 21 16:54:56 2006 (5)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-gnome-panel.log 9-gnome-panel.log
 
-[BUILDTIME] 14509 (5)
-[BUILDTIME] 15299 (9)
-[SIZE] 8.24 MB, 458 files
+[BUILDTIME] 2231 (5) ERROR
+[BUILDTIME] 16110 (9)
+[BUILDTIME] 16235 (5)
+[SIZE] 8.76 MB, 493 files
 
-[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
-[DEP] binutils bzip2 coreutils cpan-xml-parser diffutils docbookx esound
-[DEP] esound:dev evolution-data-server evolution-data-server:dev expat
-[DEP] findutils freetype gawk gcc34 gcc34:dev gconf gconf:dev gettext
+[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
+[DEP] bash2 binutils bzip2 cairo cairo:dev coreutils cpan-xml-parser
+[DEP] diffutils docbookx esound esound:dev evolution-data-server
+[DEP] evolution-data-server:dev expat fam fam:dev findutils freetype
+[DEP] freetype:dev gawk gcc34 gcc34:dev gconf gconf:dev gettext
 [DEP] glib glib:dev glibc23 glibc23:dev gnome-blog gnome-desktop
-[DEP] gnome-desktop:dev gnome-keyring gnome-keyring:dev gnome-menus
-[DEP] gnome-menus:dev gnome-vfs gnome-vfs:dev gnome2-dirtree grep gtk+
+[DEP] gnome-desktop:dev gnome-doc-utils gnome-keyring gnome-keyring-manager
+[DEP] gnome-keyring:dev gnome-menus gnome-menus:dev gnome-netstatus
+[DEP] gnome-vfs gnome-vfs:dev gnome2-dirtree gnopernicus grep gtk+
 [DEP] gtk+:dev libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev
 [DEP] libbonoboui libbonoboui:dev libglade libglade:dev libgnome
 [DEP] libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeui
-[DEP] libgnomeui:dev libjpeg libjpeg:dev libwnck libwnck:dev libxml2
-[DEP] libxml2:dev linux26-header:dev make mktemp mozilla net-tools openssl
-[DEP] orbit2 orbit2:dev pango pango:dev perl5 pkgconfig popt popt:dev
-[DEP] scrollkeeper sed startup-notification startup-notification:dev
-[DEP] sysfiles tar util-linux xorg xorg:dev zapping zlib:dev
+[DEP] libgnomeui:dev libjpeg libjpeg:dev libpng libpng:dev libwnck
+[DEP] libwnck:dev libxml2 libxml2:dev libxslt linux26-header:dev
+[DEP] make mktemp mozilla net-tools openssl orbit2 orbit2:dev pango
+[DEP] pango:dev perl5 pkgconfig popt popt:dev rrdtool scrollkeeper sed
+[DEP] startup-notification startup-notification:dev sysfiles tar util-linux
+[DEP] xorg xorg:dev zlib:dev
 
 [PROVIDES] gnome-desktop-item-edit gnome-panel libpanel-applet-2.a
 [PROVIDES] libpanel-applet-2.so panel-test-applets

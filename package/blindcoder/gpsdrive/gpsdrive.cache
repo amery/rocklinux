@@ -20,23 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133092805 Sun Nov 27 13:00:05 2005 (5)
-[TIMESTAMP] 1133329920 Wed Nov 30 06:52:00 2005 (9)
+[TIMESTAMP] 1142583108 Fri Mar 17 09:11:48 2006 (5)
+[TIMESTAMP] 1142847186 Mon Mar 20 10:33:06 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-gpsdrive.log 9-gpsdrive.log
 
-[BUILDTIME] 5254 (5)
-[BUILDTIME] 5626 (9)
+[BUILDTIME] 5268 (5)
+[BUILDTIME] 5659 (9)
 [SIZE] 1.92 MB, 72 files
 
-[DEP] 00-dirtree alsa atk atk:dev bash2 binutils bzip2 coreutils diffutils
-[DEP] expat file findutils freetype gawk gcc34 gcc34:dev gettext glib
-[DEP] glib:dev glibc23 glibc23:dev gnome2-dirtree grep gtk+ gtk+:dev
-[DEP] linux26-header:dev make mktemp net-tools pango pango:dev pcre
-[DEP] pcre:dev pkgconfig sed sysfiles tar util-linux xorg xorg:dev zapping
+[DEP] 00-dirtree alsa atk atk:dev bash2 binutils bzip2 cairo
+[DEP] cairo:dev coreutils diffutils expat file findutils freetype
+[DEP] freetype:dev gawk gcc34 gcc34:dev gettext glib glib:dev glibc23
+[DEP] glibc23:dev gnome2-dirtree grep gtk+ gtk+:dev libpng libpng:dev
+[DEP] linux26-header:dev make mktemp net-tools openbox pango pango:dev
+[DEP] pcre pcre:dev pkgconfig rrdtool sed sysfiles tar util-linux xorg
+[DEP] xorg:dev zlib:dev
 
 [PROVIDES] friendsd2 garble geo-code geo-nearest geocache2way gpsd
 [PROVIDES] gpsdrive gpsfetchmap.pl gpspoint2gpsdrive.pl gpsreplay

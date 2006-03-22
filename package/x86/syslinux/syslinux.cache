@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1132986825 Sat Nov 26 07:33:45 2005 (5)
-[TIMESTAMP] 1133208913 Mon Nov 28 21:15:13 2005 (9)
+[TIMESTAMP] 1142468299 Thu Mar 16 01:18:19 2006 (5)
+[TIMESTAMP] 1142712376 Sat Mar 18 21:06:16 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-syslinux.log 9-syslinux.log
 
-[BUILDTIME] 2576 (5)
-[BUILDTIME] 3261 (9)
-[SIZE] 0.21 MB, 25 files
+[BUILDTIME] 2763 (5)
+[BUILDTIME] 3400 (9)
+[SIZE] 0.27 MB, 27 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] nasm perl5 sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
+[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp nasm perl5
+[DEP] rrdtool sed sysfiles tar
 
 [PROVIDES] extlinux gethostip libcom32.a libutil_com.a libutil_lnx.a
 [PROVIDES] lss16toppm ppmtolss16 syslinux

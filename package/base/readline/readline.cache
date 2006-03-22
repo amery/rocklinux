@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1132972332 Sat Nov 26 03:32:12 2005 (5)
-[TIMESTAMP] 1133188990 Mon Nov 28 15:43:10 2005 (9)
+[TIMESTAMP] 1142453552 Wed Mar 15 21:12:32 2006 (5)
+[TIMESTAMP] 1142689450 Sat Mar 18 14:44:10 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 1-readline.log 5-readline.log 9-readline.log
 
-[BUILDTIME] 3050 (5)
-[BUILDTIME] 3813 (9)
-[SIZE] 0.55 MB, 17 files
+[BUILDTIME] 3246 (5)
+[BUILDTIME] 4006 (9)
+[SIZE] 0.58 MB, 17 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp ncurses:dev net-tools sed sysfiles tar texinfo util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
+[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
+[DEP] make mktemp ncurses:dev net-tools rrdtool sed sysfiles tar texinfo
+[DEP] util-linux
 
 [PROVIDES] libhistory.a libhistory.so libreadline.a libreadline.so
 

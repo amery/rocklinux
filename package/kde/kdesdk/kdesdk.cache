@@ -20,30 +20,32 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133094530 Sun Nov 27 13:28:50 2005 (5)
-[TIMESTAMP] 1133331679 Wed Nov 30 07:21:19 2005 (9)
+[TIMESTAMP] 1142584996 Fri Mar 17 09:43:16 2006 (5)
+[TIMESTAMP] 1142849155 Mon Mar 20 11:05:55 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-kdesdk.log 9-kdesdk.log
 
-[BUILDTIME] 154101 (5)
-[BUILDTIME] 155030 (9)
-[SIZE] 13.67 MB, 793 files
+[BUILDTIME] 167065 (5)
+[BUILDTIME] 168678 (9)
+[SIZE] 14.87 MB, 882 files
 
-[DEP] 00-dirtree apache apache:apr apache:dev arts bash2 bdb42 bdb42:dev
-[DEP] binutils binutils:dev bzip2 coreutils diffutils expat expat:dev fam
-[DEP] fam:dev findutils flex flex:dev freetype freetype:dev gawk gcc34
-[DEP] gcc34:dev gdbm gdbm:dev gettext glibc23 glibc23:dev grep kdebase
-[DEP] kdelibs kdelibs:dev kdepim kdepim:dev kdeutils libart_lgpl23
-[DEP] libart_lgpl23:dev libidn libidn:dev libjpeg libjpeg:dev libpng
-[DEP] libpng:dev libxml2 libxml2:dev linux26-header:dev m4 make mktemp
-[DEP] nas net-tools openssl pcre pcre:dev perl5 qt qt:dev sed subversion
-[DEP] subversion:dev sysfiles tar util-linux vim xorg xorg:dev zlib:dev
+[DEP] 00-dirtree acl acl:dev apache apache:apr apache:dev arts attr
+[DEP] attr:dev bash2 bdb42 bdb42:dev binutils binutils:dev bzip2
+[DEP] coreutils diffutils expat expat:dev fam fam:dev findutils flex
+[DEP] flex:dev freetype freetype:dev gawk gcc34 gcc34:dev gdbm gdbm:dev
+[DEP] gettext glibc23 glibc23:dev grep kdebase kdelibs kdelibs:dev kdepim
+[DEP] kdepim:dev kdeutils libart_lgpl23 libart_lgpl23:dev libidn libidn:dev
+[DEP] libjpeg libjpeg:dev libpng libpng:dev linux26-header:dev m4 make
+[DEP] mktemp nas net-tools openssl pcre pcre:dev perl5 qt33 qt33:dev
+[DEP] rrdtool sed subversion subversion:dev sysfiles tar util-linux xorg
+[DEP] xorg:dev zlib:dev
 
-[PROVIDES] adddebug build-progress.sh catalogmanager cervisia cervisia.so
-[PROVIDES] cheatmake create_cvsignore create_makefile create_makefiles
+[PROVIDES] adddebug build-progress.sh catalogmanager cervisia
+[PROVIDES] cervisia.so cheatmake colorsvn create_cvsignore
+[PROVIDES] create_makefile create_makefiles create_svnignore
 [PROVIDES] cvs-clean cvs2dist cvsaskpass cvsaskpass.so cvsbackport
 [PROVIDES] cvsblame cvscheck cvsforwardport cvslastchange cvslastlog
 [PROVIDES] cvsrevertlast cvsservice cvsservice.so cvsversion cxxmetric
@@ -55,22 +57,28 @@
 [PROVIDES] kbabel_gettextimport.so kbabel_lengthtool.so
 [PROVIDES] kbabel_linguistexport.so kbabel_linguistimport.so
 [PROVIDES] kbabel_nottranslatedtool.so kbabel_pluraltool.so
-[PROVIDES] kbabel_punctuationtool.so kbabel_setfuzzytool.so
-[PROVIDES] kbabel_whitespacetool.so kbabel_xliffexport.so
-[PROVIDES] kbabel_xliffimport.so kbabel_xmltool.so kbabeldict
-[PROVIDES] kbabeldict_dbsearchengine.so kbabeldict_poauxiliary.so
-[PROVIDES] kbabeldict_pocompendium.so kbabeldict_tmxcompendium.so
-[PROVIDES] kbugbuster kcachegrind kcal_bugzilla.so kde-build kded_ksvnd.so
-[PROVIDES] kdedoc kdekillall kdelnk2desktop.py kdemangen.pl kfile_cpp.so
-[PROVIDES] kfile_diff.so kfile_po.so kfile_ts.so kio_svn.so kminspector
-[PROVIDES] kmmatch kmtrace kompare kuiviewer libcervisiapart.so
-[PROVIDES] libcvsservice.so libkbabelcommon.so libkbabeldictplugin.so
-[PROVIDES] libkdeinit_cervisia.so libkdeinit_cvsaskpass.so
-[PROVIDES] libkdeinit_cvsservice.so libkompareinterface.so
-[PROVIDES] libkomparenavtreepart.so libkomparepart.so libkspy.so
-[PROVIDES] libktrace.so libktrace_s.a libkuiviewerpart.so licensecheck
-[PROVIDES] makeobj memprof2calltree mkinstalldirs noncvslist op2calltree
-[PROVIDES] package_crystalsvg png2mng.pl po2xml pothumbnail.so
+[PROVIDES] kbabel_punctuationtool.so kbabel_regexptool.so
+[PROVIDES] kbabel_setfuzzytool.so kbabel_whitespacetool.so
+[PROVIDES] kbabel_xliffexport.so kbabel_xliffimport.so
+[PROVIDES] kbabel_xmltool.so kbabeldict kbabeldict_dbsearchengine.so
+[PROVIDES] kbabeldict_poauxiliary.so kbabeldict_pocompendium.so
+[PROVIDES] kbabeldict_tmxcompendium.so kbugbuster kcachegrind
+[PROVIDES] kcal_bugzilla.so kde-build kded_ksvnd.so kdedoc kdekillall
+[PROVIDES] kdelnk2desktop.py kdemangen.pl kdesvn-build kfile_cpp.so
+[PROVIDES] kfile_diff.so kfile_po.so kfile_ts.so kio_svn.so kio_svn_helper
+[PROVIDES] kminspector kmmatch kmtrace kompare kuiviewer kunittest
+[PROVIDES] kunittest_debughelper kunittestguimodrunner kunittestmod
+[PROVIDES] libcervisiapart.so libcvsservice.so libkbabelcommon.so
+[PROVIDES] libkbabeldictplugin.so libkdeinit_cervisia.so
+[PROVIDES] libkdeinit_cvsaskpass.so libkdeinit_cvsservice.so
+[PROVIDES] libkompareinterface.so libkomparenavtreepart.so
+[PROVIDES] libkomparepart.so libkspy.so libktrace.so libktrace_s.a
+[PROVIDES] libkuiviewerpart.so libkunittestgui.so licensecheck
+[PROVIDES] makeobj memprof2calltree mkinstalldirs noncvslist nonsvnlist
+[PROVIDES] op2calltree package_crystalsvg png2mng.pl po2xml pothumbnail.so
 [PROVIDES] pprof2calltree pruneemptydirs qtdoc quithumbnail.so scheck.so
-[PROVIDES] split2po swappo transxx umbrello xml2pot zonetab2pot.py
+[PROVIDES] split2po svn-clean svn2dist svnaddcurrentdir svnbackport
+[PROVIDES] svnchangesince svnforwardport svngettags svnlastchange
+[PROVIDES] svnlastlog svnrevertlast svnversions swappo transxx umbrello
+[PROVIDES] xml2pot zonetab2pot.py
 

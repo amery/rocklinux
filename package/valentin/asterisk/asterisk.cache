@@ -20,54 +20,59 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133112975 Sun Nov 27 18:36:15 2005 (5)
-[TIMESTAMP] 1133351474 Wed Nov 30 12:51:14 2005 (9)
+[TIMESTAMP] 1142604599 Fri Mar 17 15:09:59 2006 (5)
+[TIMESTAMP] 1142870049 Mon Mar 20 16:54:09 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-asterisk.log 9-asterisk.log
 
-[BUILDTIME] 11572 (5)
-[BUILDTIME] 11997 (9)
-[SIZE] 10.40 MB, 499 files
+[BUILDTIME] 13536 (5)
+[BUILDTIME] 13826 (9)
+[SIZE] 11.66 MB, 582 files
 
-[DEP] 00-dirtree alien alsa alsa:dev bash2 binutils bison bluez-libs
-[DEP] bluez-libs:dev bzip2 coreutils diffutils findutils gawk gcc34
-[DEP] gcc34:dev glib12 glib12:dev glibc23 glibc23:dev gnome14-dirtree
-[DEP] grep gtk+12 gtk+12:dev gzip linux26-header:dev m4 make mktemp mpg321
-[DEP] ncurses:dev net-tools openssl openssl:dev patch sed speex speex:dev
-[DEP] sqlite sqlite:dev sysfiles tar xorg
+[DEP] 00-dirtree alien alsa alsa:dev bash2 binutils bzip2 coreutils
+[DEP] curl curl:dev diffutils findutils gawk gcc34 gcc34:dev glibc23
+[DEP] glibc23:dev grep libidn linux26-header:dev make mktemp mpg123
+[DEP] ncurses:dev net-tools ogg-vorbis ogg-vorbis:dev openssl openssl:dev
+[DEP] patch popt popt:dev rrdtool sed speex speex:dev sqlite sqlite:dev
+[DEP] sysfiles tar zlib:dev
 
 [PROVIDES] agi-test.agi app_adsiprog.so app_alarmreceiver.so
 [PROVIDES] app_authenticate.so app_cdr.so app_chanisavail.so
-[PROVIDES] app_controlplayback.so app_cut.so app_db.so app_dial.so
-[PROVIDES] app_directory.so app_disa.so app_echo.so app_enumlookup.so
-[PROVIDES] app_eval.so app_exec.so app_festival.so app_forkcdr.so
-[PROVIDES] app_getcpeid.so app_groupcount.so app_hasnewvoicemail.so
-[PROVIDES] app_ices.so app_image.so app_intercom.so app_lookupblacklist.so
-[PROVIDES] app_lookupcidname.so app_macro.so app_milliwatt.so
+[PROVIDES] app_chanspy.so app_controlplayback.so app_curl.so app_cut.so
+[PROVIDES] app_db.so app_dial.so app_dictate.so app_directed_pickup.so
+[PROVIDES] app_directory.so app_disa.so app_dumpchan.so app_echo.so
+[PROVIDES] app_enumlookup.so app_eval.so app_exec.so app_externalivr.so
+[PROVIDES] app_festival.so app_forkcdr.so app_getcpeid.so app_groupcount.so
+[PROVIDES] app_hasnewvoicemail.so app_ices.so app_image.so
+[PROVIDES] app_lookupblacklist.so app_lookupcidname.so app_macro.so
+[PROVIDES] app_math.so app_md5.so app_milliwatt.so app_mixmonitor.so
 [PROVIDES] app_mp3.so app_nbscat.so app_parkandannounce.so
-[PROVIDES] app_playback.so app_privacy.so app_qcall.so app_queue.so
-[PROVIDES] app_random.so app_read.so app_record.so app_sayunixtime.so
-[PROVIDES] app_senddtmf.so app_sendtext.so app_setcallerid.so
-[PROVIDES] app_setcdruserfield.so app_setcidname.so app_setcidnum.so
-[PROVIDES] app_sms.so app_softhangup.so app_striplsd.so app_substring.so
-[PROVIDES] app_system.so app_talkdetect.so app_test.so app_transfer.so
-[PROVIDES] app_txtcidname.so app_url.so app_userevent.so app_verbose.so
-[PROVIDES] app_voicemail.so app_waitforring.so app_zapateller.so
-[PROVIDES] asterisk astgenkey autosupport cdr_csv.so cdr_manager.so
-[PROVIDES] cdr_sqlite.so chan_agent.so chan_alsa.so chan_bluetooth.so
-[PROVIDES] chan_iax2.so chan_local.so chan_mgcp.so chan_modem.so
-[PROVIDES] chan_modem_aopen.so chan_modem_bestdata.so chan_modem_i4l.so
-[PROVIDES] chan_oss.so chan_phone.so chan_sip.so chan_skinny.so
-[PROVIDES] codec_a_mu.so codec_adpcm.so codec_alaw.so codec_g726.so
-[PROVIDES] codec_gsm.so codec_ilbc.so codec_lpc10.so codec_speex.so
-[PROVIDES] codec_ulaw.so eagi-sphinx-test eagi-test format_g726.so
-[PROVIDES] format_g729.so format_gsm.so format_h263.so format_ilbc.so
-[PROVIDES] format_jpeg.so format_pcm.so format_pcm_alaw.so format_sln.so
-[PROVIDES] format_vox.so format_wav.so format_wav_gsm.so pbx_config.so
-[PROVIDES] pbx_gtkconsole.so pbx_spool.so pbx_wilcalu.so res_adsi.so
-[PROVIDES] res_agi.so res_crypto.so res_features.so res_indications.so
-[PROVIDES] res_monitor.so res_musiconhold.so safe_asterisk
+[PROVIDES] app_playback.so app_privacy.so app_queue.so app_random.so
+[PROVIDES] app_read.so app_readfile.so app_realtime.so app_record.so
+[PROVIDES] app_sayunixtime.so app_senddtmf.so app_sendtext.so
+[PROVIDES] app_setcallerid.so app_setcdruserfield.so app_setcidname.so
+[PROVIDES] app_setcidnum.so app_setrdnis.so app_settransfercapability.so
+[PROVIDES] app_sms.so app_softhangup.so app_stack.so app_system.so
+[PROVIDES] app_talkdetect.so app_test.so app_transfer.so app_txtcidname.so
+[PROVIDES] app_url.so app_userevent.so app_verbose.so app_voicemail.so
+[PROVIDES] app_waitforring.so app_waitforsilence.so app_while.so
+[PROVIDES] app_zapateller.so asterisk astgenkey autosupport cdr_csv.so
+[PROVIDES] cdr_custom.so cdr_manager.so cdr_sqlite.so chan_agent.so
+[PROVIDES] chan_alsa.so chan_features.so chan_iax2.so chan_local.so
+[PROVIDES] chan_mgcp.so chan_oss.so chan_phone.so chan_sip.so
+[PROVIDES] chan_skinny.so codec_a_mu.so codec_adpcm.so codec_alaw.so
+[PROVIDES] codec_g726.so codec_gsm.so codec_ilbc.so codec_lpc10.so
+[PROVIDES] codec_speex.so codec_ulaw.so eagi-sphinx-test eagi-test
+[PROVIDES] format_au.so format_g723.so format_g726.so format_g729.so
+[PROVIDES] format_gsm.so format_h263.so format_ilbc.so format_jpeg.so
+[PROVIDES] format_ogg_vorbis.so format_pcm.so format_pcm_alaw.so
+[PROVIDES] format_sln.so format_vox.so format_wav.so format_wav_gsm.so
+[PROVIDES] func_callerid.so func_enum.so func_uri.so pbx_ael.so
+[PROVIDES] pbx_config.so pbx_dundi.so pbx_functions.so pbx_loopback.so
+[PROVIDES] pbx_realtime.so pbx_spool.so rasterisk res_adsi.so res_agi.so
+[PROVIDES] res_crypto.so res_features.so res_indications.so res_monitor.so
+[PROVIDES] res_musiconhold.so safe_asterisk smsq stereorize streamplayer
 

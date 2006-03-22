@@ -20,31 +20,32 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133110538 Sun Nov 27 17:55:38 2005 (5)
-[TIMESTAMP] 1133348835 Wed Nov 30 12:07:15 2005 (9)
+[TIMESTAMP] 1142601682 Fri Mar 17 14:21:22 2006 (5)
+[TIMESTAMP] 1142867287 Mon Mar 20 16:08:07 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-k3b.log 9-k3b.log
 
-[BUILDTIME] 82069 (5)
-[BUILDTIME] 82772 (9)
-[SIZE] 8.93 MB, 160 files
+[BUILDTIME] 84757 (5)
+[BUILDTIME] 85296 (9)
+[SIZE] 9.32 MB, 251 files
 
-[DEP] 00-dirtree arts arts:dev bash2 binutils bzip2 coreutils diffutils
-[DEP] expat expat:dev fam fam:dev ffmpeg ffmpeg:dev findutils flac
-[DEP] flac:dev freetype freetype:dev gawk gcc34 gcc34:dev gettext glibc23
-[DEP] glibc23:dev grep kdebase kdelibs kdelibs:dev kdeutils koffice
-[DEP] lame lame:dev libart_lgpl23 libart_lgpl23:dev libidn libidn:dev
-[DEP] libjpeg libmusicbrainz libmusicbrainz:dev libpng libpng:dev
-[DEP] libsamplerate libsamplerate:dev libsndfile libsndfile:dev libxml2
-[DEP] linux26-header:dev mad mad:dev make mktemp nas net-tools ogg-vorbis
-[DEP] ogg-vorbis:dev perl5 pkgconfig qt qt:dev sed sysfiles taglib
-[DEP] taglib:dev tar util-linux vim xorg xorg:dev zlib:dev
+[DEP] 00-dirtree acl acl:dev alsa alsa:dev arts arts:dev attr attr:dev
+[DEP] bash2 binutils bzip2 coreutils diffutils expat expat:dev fam fam:dev
+[DEP] ffmpeg ffmpeg:dev findutils flac flac:dev freetype freetype:dev
+[DEP] gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep kdebase
+[DEP] kdelibs kdelibs:dev lame lame:dev libart_lgpl23 libart_lgpl23:dev
+[DEP] libidn libidn:dev libjpeg libmusicbrainz libmusicbrainz:dev libpng
+[DEP] libpng:dev libsamplerate libsamplerate:dev libsndfile libsndfile:dev
+[DEP] libxml2 linux26-header:dev mad mad:dev make mktemp nas net-tools
+[DEP] ogg-vorbis ogg-vorbis:dev perl5 pkgconfig qt33 qt33:dev rrdtool
+[DEP] sed sysfiles taglib taglib:dev tar util-linux xorg xorg:dev zlib:dev
 
 [PROVIDES] k3b k3bsetup kcm_k3bsetup2.so libk3b.so
-[PROVIDES] libk3bartsoutputplugin.so libk3baudiometainforenamerplugin.so
+[PROVIDES] libk3balsaoutputplugin.so libk3bartsoutputplugin.so
+[PROVIDES] libk3baudiometainforenamerplugin.so
 [PROVIDES] libk3baudioprojectcddbplugin.so libk3bdevice.so
 [PROVIDES] libk3bexternalencoder.so libk3bffmpegdecoder.so
 [PROVIDES] libk3bflacdecoder.so libk3blameencoder.so

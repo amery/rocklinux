@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133127401 Sun Nov 27 22:36:41 2005 (5)
-[TIMESTAMP] 1133367980 Wed Nov 30 17:26:20 2005 (9)
+[TIMESTAMP] 1142622340 Fri Mar 17 20:05:40 2006 (5)
+[TIMESTAMP] 1142889468 Mon Mar 20 22:17:48 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-drbd7.log 9-drbd7.log
 
-[BUILDTIME] 2646 (5)
-[BUILDTIME] 2864 (9)
-[SIZE] 0.83 MB, 16 files
+[BUILDTIME] 2739 (5)
+[BUILDTIME] 2981 (9)
+[SIZE] 0.87 MB, 17 files
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils findutils
-[DEP] flex gcc34 gcc34:dev glibc23 glibc23:dev grep gzip heartbeat linux26
-[DEP] linux26-header:dev linux26-source m4 make mktemp patch perl5 sed
-[DEP] sysfiles tar
+[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils
+[DEP] findutils flex gawk gcc34 gcc34:dev glibc23 glibc23:dev grep gzip
+[DEP] heartbeat linux26 linux26-header:dev linux26-source m4 make mktemp
+[DEP] module-init-tools patch perl5 rrdtool sed sysfiles tar
 
 [PROVIDES] drbdadm drbdsetup
 

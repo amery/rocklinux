@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133000221 Sat Nov 26 11:17:01 2005 (5)
-[TIMESTAMP] 1133224631 Tue Nov 29 01:37:11 2005 (9)
+[TIMESTAMP] 1142487389 Thu Mar 16 06:36:29 2006 (5)
+[TIMESTAMP] 1142735752 Sun Mar 19 03:35:52 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-libmpeg3.log 9-libmpeg3.log
 
-[BUILDTIME] 2100 (5)
-[BUILDTIME] 2644 (9)
-[SIZE] 0.66 MB, 9 files
+[BUILDTIME] 2189 (5)
+[BUILDTIME] 2737 (9)
+[SIZE] 0.85 MB, 10 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] nasm patch sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
+[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp nasm patch
+[DEP] rrdtool sed sysfiles tar util-linux
 
-[PROVIDES] libmpeg3.a mpeg3cat mpeg3dump mpeg3toc
+[PROVIDES] libmpeg3.a mpeg3cat mpeg3dump mpeg3peek mpeg3toc
 

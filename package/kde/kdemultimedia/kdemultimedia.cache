@@ -20,44 +20,40 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133091947 Sun Nov 27 12:45:47 2005 (5)
-[TIMESTAMP] 1133328904 Wed Nov 30 06:35:04 2005 (9)
+[TIMESTAMP] 1142582184 Fri Mar 17 08:56:24 2006 (5)
+[TIMESTAMP] 1142846025 Mon Mar 20 10:13:45 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-kdemultimedia.log 9-kdemultimedia.log
 
-[BUILDTIME] 241914 (5)
-[BUILDTIME] 243580 (9)
-[SIZE] 21.55 MB, 1040 files
+[BUILDTIME] 244197 (5)
+[BUILDTIME] 246175 (9)
+[SIZE] 20.98 MB, 1011 files
 
-[DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev bash2
-[DEP] binutils bzip2 cdparanoia cdparanoia:dev coreutils diffutils esound
-[DEP] esound:dev expat expat:dev fam fam:dev findutils flac flac:dev
-[DEP] freetype freetype:dev gawk gcc34 gcc34:dev gettext glib glib:dev
-[DEP] glibc23 glibc23:dev gnome2-dirtree grep gstreamer gstreamer:dev
-[DEP] jack jack:dev kdebase kdebase:doc kdelibs kdelibs:dev kdeutils lame
-[DEP] lame:dev libart_lgpl23 libart_lgpl23:dev libcdaudio libidn libidn:dev
-[DEP] libjpeg libjpeg:dev libmusicbrainz libmusicbrainz:dev libpng
-[DEP] libpng:dev libsamplerate libsamplerate:dev libtheora libtheora:dev
-[DEP] libtool libtool:dev libxml2 libxml2:dev linux26-header:dev mad
-[DEP] mad:dev make mktemp nas net-tools ogg-vorbis ogg-vorbis:dev patch
-[DEP] pcre pcre:dev perl5 pkgconfig polypaudio polypaudio:dev popt popt:dev
-[DEP] qt qt:dev sed speex speex:dev sysfiles taglib taglib:dev tar tunepimp
-[DEP] tunepimp:dev util-linux xine-lib xine-lib:dev xorg xorg:dev zlib:dev
+[DEP] 00-dirtree acl acl:dev alsa alsa:dev arts arts:dev attr attr:dev
+[DEP] audiofile audiofile:dev bash2 binutils bzip2 cdparanoia
+[DEP] cdparanoia:dev coreutils diffutils esound esound:dev expat
+[DEP] expat:dev fam fam:dev findutils flac flac:dev freetype freetype:dev
+[DEP] gawk gcc34 gcc34:dev gettext glib glib:dev glibc23 glibc23:dev
+[DEP] gnome2-dirtree grep gstreamer gstreamer:dev jack jack:dev kdebase
+[DEP] kdebase:doc kdelibs kdelibs:dev kdeutils lame lame:dev libart_lgpl23
+[DEP] libart_lgpl23:dev libcdaudio libidn libidn:dev libjpeg libjpeg:dev
+[DEP] libmusicbrainz libmusicbrainz:dev libpng libpng:dev libtheora
+[DEP] libtheora:dev libxml2 libxml2:dev linux26-header:dev mad mad:dev
+[DEP] make mktemp nas net-tools ogg-vorbis ogg-vorbis:dev pcre pcre:dev
+[DEP] perl5 pkgconfig popt popt:dev qt33 qt33:dev rrdtool sed sysfiles
+[DEP] taglib taglib:dev tar tunepimp tunepimp:dev util-linux xine-lib
+[DEP] xine-lib:dev xorg xorg:dev zlib:dev
 
 [PROVIDES] artsbuilder artscontrol juk kaboodle kaudiocreator
 [PROVIDES] kcm_audiocd.so kcm_cddb.so kcm_krec.so kcm_krec_files.so
 [PROVIDES] kfile_au.so kfile_avi.so kfile_flac.so kfile_m3u.so
-[PROVIDES] kfile_mp3.so kfile_mpc.so kfile_ogg.so kfile_sid.so
-[PROVIDES] kfile_theora.so kfile_wav.so kio_audiocd.so kmid kmix kmix.so
-[PROVIDES] kmix_panelapplet.so kmixctrl kmixctrl.so krec krec.so kscd
-[PROVIDES] libakode.so libakode_alsa_sink.so libakode_jack_sink.so
-[PROVIDES] libakode_mpc_decoder.so libakode_mpeg_decoder.so
-[PROVIDES] libakode_oss_sink.so libakode_polyp_sink.so
-[PROVIDES] libakode_src_resampler.so libakode_xiph_decoder.so
-[PROVIDES] libarts_akode.so libarts_mpeglib.so libarts_splay.so
+[PROVIDES] kfile_mp3.so kfile_mpc.so kfile_mpeg.so kfile_ogg.so
+[PROVIDES] kfile_sid.so kfile_theora.so kfile_wav.so kio_audiocd.so
+[PROVIDES] kmid kmix kmix.so kmix_panelapplet.so kmixctrl kmixctrl.so
+[PROVIDES] krec krec.so kscd libarts_mpeglib.so libarts_splay.so
 [PROVIDES] libarts_xine.so libartsbuilder.so libartscontrolapplet.so
 [PROVIDES] libartscontrolsupport.so libartseffects.so libartsgui.so
 [PROVIDES] libartsgui_idl.so libartsgui_kde.so libartsmidi.so

@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133016452 Sat Nov 26 15:47:32 2005 (5)
-[TIMESTAMP] 1133243368 Tue Nov 29 06:49:28 2005 (9)
+[TIMESTAMP] 1142505755 Thu Mar 16 11:42:35 2006 (5)
+[TIMESTAMP] 1142757046 Sun Mar 19 09:30:46 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-mpg321.log 9-mpg321.log
 
-[BUILDTIME] 1949 (5)
-[BUILDTIME] 2441 (9)
-[SIZE] 0.06 MB, 9 files
+[BUILDTIME] 1962 (5)
+[BUILDTIME] 2436 (9)
+[SIZE] 0.06 MB, 8 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils findutils gcc34 gcc34:dev glibc23 glibc23:dev grep
+[DEP] diffutils findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
 [DEP] linux26-header:dev mad mad:dev make mktemp net-tools ogg-vorbis
-[DEP] ogg-vorbis:dev perl5 sed sysfiles tar texinfo util-linux zlib:dev
+[DEP] ogg-vorbis:dev perl5 rrdtool sed sysfiles tar texinfo util-linux
+[DEP] zlib:dev
 
-[PROVIDES] mpg123 mpg321
+[PROVIDES] mpg321
 

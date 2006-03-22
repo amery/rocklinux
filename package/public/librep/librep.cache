@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133003646 Sat Nov 26 12:14:06 2005 (5)
-[TIMESTAMP] 1133228682 Tue Nov 29 02:44:42 2005 (9)
+[TIMESTAMP] 1142490886 Thu Mar 16 07:34:46 2006 (5)
+[TIMESTAMP] 1142739937 Sun Mar 19 04:45:37 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-librep.log 9-librep.log
 
-[BUILDTIME] 10411 (5)
-[BUILDTIME] 11185 (9)
-[SIZE] 2.52 MB, 300 files
+[BUILDTIME] 10453 (5)
+[BUILDTIME] 11173 (9)
+[SIZE] 2.62 MB, 300 files
 
-[DEP] 00-dirtree automake19 bash2 binutils bzip2 coreutils diffutils emacs
-[DEP] findutils gawk gcc34 gcc34:dev gdbm gdbm:dev glibc23 glibc23:dev gmp
-[DEP] gmp:dev grep linux26-header:dev make mktemp ncurses:dev net-tools
-[DEP] patch perl5 readline readline:dev sed sysfiles tar texinfo util-linux
+[DEP] 00-dirtree automake19 bash2 binutils bzip2 coreutils diffutils
+[DEP] findutils gawk gcc34 gcc34:dev gdbm gdbm:dev gettext glibc23
+[DEP] glibc23:dev gmp gmp:dev grep linux26-header:dev make mktemp
+[DEP] ncurses:dev net-tools patch perl5 readline readline:dev rrdtool
+[DEP] sed sysfiles tar texinfo util-linux
 
 [PROVIDES] librep.so rep rep-config rep-remote rep-xgettext repdoc
 

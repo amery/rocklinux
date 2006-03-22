@@ -20,20 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1132975082 Sat Nov 26 04:18:02 2005 (5)
-[TIMESTAMP] 1133194300 Mon Nov 28 17:11:40 2005 (9)
+[TIMESTAMP] 1142456283 Wed Mar 15 21:58:03 2006 (5)
+[TIMESTAMP] 1142696043 Sat Mar 18 16:34:03 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-unzip.log 9-unzip.log
 
-[BUILDTIME] 1556 (5)
-[BUILDTIME] 2234 (9)
+[BUILDTIME] 1536 (5)
+[BUILDTIME] 2223 (9)
 [SIZE] 0.36 MB, 16 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
+[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp rrdtool
 [DEP] sed sysfiles tar
 
 [PROVIDES] funzip unzip unzipsfx zipgrep zipinfo

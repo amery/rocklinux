@@ -20,30 +20,35 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133042531 Sat Nov 26 23:02:11 2005 (5)
-[TIMESTAMP] 1133273081 Tue Nov 29 15:04:41 2005 (9)
+[TIMESTAMP] 1142532024 Thu Mar 16 19:00:24 2006 (5)
+[TIMESTAMP] 1142787933 Sun Mar 19 18:05:33 2006 (9) ERROR
+[TIMESTAMP] 1142970149 Tue Mar 21 20:42:29 2006 (9) ERROR
+[TIMESTAMP] 1143039289 Wed Mar 22 15:54:49 2006 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-kdelibs.log 9-kdelibs.log
+[LOGS] 5-kdelibs.log 9-kdelibs.err
 
-[BUILDTIME] 326089 (5)
-[BUILDTIME] 328940 (9)
-[SIZE] 36.23 MB, 4767 files
+[BUILDTIME] 340872 (5)
+[BUILDTIME] 345456 (9) ERROR
+[BUILDTIME] 1949 (9) ERROR
+[BUILDTIME] 1934 (9) ERROR
+[SIZE] 46.68 MB, 4900 files
 
-[DEP] 00-dirtree alsa alsa:dev arts arts:dev aspell aspell:dev audiofile
-[DEP] audiofile:dev autoconf bash2 binutils bzip2 bzip2:dev coreutils cups
-[DEP] cups:dev diffutils esound esound:dev expat fam fam:dev findutils
-[DEP] freetype freetype:dev gawk gcc34 gcc34:dev gettext glib glib:dev
-[DEP] glibc23 glibc23:dev gnome-libs14 gnome14-dirtree gnome2-dirtree
-[DEP] grep jack jack:dev jasper:dev libart_lgpl23 libart_lgpl23:dev libidn
-[DEP] libidn:dev libjpeg libjpeg:dev libpng libpng:dev libtiff libtiff:dev
-[DEP] libxml2 libxml2:dev libxslt libxslt:dev linux26-header:dev m4
-[DEP] mad mad:dev make mktemp nas net-tools nx-X11 nx-X11:dev nxcomp
-[DEP] ogg-vorbis ogg-vorbis:dev openssl openssl:dev patch pcre pcre:dev
-[DEP] perl5 pkgconfig qt qt:dev sed sysfiles tar util-linux xorg xorg:dev
-[DEP] zlib:dev
+[DEP] 00-dirtree acl acl:dev alsa alsa:dev arts arts:dev aspell aspell:dev
+[DEP] attr attr:dev audiofile audiofile:dev autoconf bash2 binutils
+[DEP] bzip2 bzip2:dev coreutils cups cups:dev diffutils djvulibre esound
+[DEP] esound:dev expat fam fam:dev findutils freetype freetype:dev
+[DEP] gawk gcc34 gcc34:dev gettext glib glib:dev glibc23 glibc23:dev
+[DEP] gnome2-dirtree grep jack jack:dev jasper:dev libart_lgpl23
+[DEP] libart_lgpl23:dev libidn libidn:dev libjpeg libjpeg:dev libpng
+[DEP] libpng:dev libtiff libtiff:dev libxml2 libxml2:dev libxslt
+[DEP] libxslt:dev linux26-header:dev lua:dev m4 mad mad:dev make mktemp
+[DEP] nas net-tools nx-x11 nx-x11:dev nxcomp ogg-vorbis ogg-vorbis:dev
+[DEP] openexr openexr:dev openssl openssl:dev patch pcre pcre:dev perl5
+[DEP] pkgconfig qt33 qt33:dev rrdtool sed sysfiles tar util-linux xorg
+[DEP] xorg:dev zlib:dev
 
 [PROVIDES] artsmessage checkXML cupsdconf cupsdconf.so cupsdoprint
 [PROVIDES] dcop dcopclient dcopfind dcopidl dcopidl2cpp dcopidlng
@@ -60,22 +65,24 @@
 [PROVIDES] kded_proxyscout.so kdeinit kdeinit_shutdown kdeinit_wrapper
 [PROVIDES] kdeprint_cups.so kdeprint_ext.so kdeprint_lpdunix.so
 [PROVIDES] kdeprint_lpr.so kdeprint_rlpr.so kdeprint_tool_escputil.so
-[PROVIDES] kdesu_stub kdewidgets.so kdontchangethehostname keramik.so
-[PROVIDES] kfile kfileaudiopreview.so kfmexec kgrantpty kgzipfilter.so
-[PROVIDES] khotnewstuff khtmlimagepart.so kimage_concat kimg_dds.so
-[PROVIDES] kimg_eps.so kimg_ico.so kimg_jp2.so kimg_pcx.so kimg_psd.so
-[PROVIDES] kimg_rgb.so kimg_tga.so kimg_tiff.so kimg_xcf.so kimg_xview.so
-[PROVIDES] kinstalltheme kio_file.so kio_ftp.so kio_ghelp.so kio_help.so
-[PROVIDES] kio_http.so kio_http_cache_cleaner kio_http_cache_cleaner.so
+[PROVIDES] kdesu_stub kdewidgets.so kdontchangethehostname kdostartupconfig
+[PROVIDES] keramik.so kfile kfileaudiopreview.so kfmexec kgrantpty
+[PROVIDES] kgzipfilter.so khotnewstuff khtmlimagepart.so kimg_dds.so
+[PROVIDES] kimg_eps.so kimg_exr.so kimg_hdr.so kimg_ico.so kimg_jp2.so
+[PROVIDES] kimg_pcx.so kimg_psd.so kimg_rgb.so kimg_tga.so kimg_tiff.so
+[PROVIDES] kimg_xcf.so kimg_xview.so kinstalltheme kio_file.so
+[PROVIDES] kio_ftp.so kio_ghelp.so kio_help.so kio_http.so
+[PROVIDES] kio_http_cache_cleaner kio_http_cache_cleaner.so
 [PROVIDES] kio_metainfo.so kio_uiserver kio_uiserver.so kioexec
 [PROVIDES] kioslave kjavaappletviewer.so klauncher klauncher.so
-[PROVIDES] kmailservice knotify.so kpac_dhcp_helper ksendbugmail kshell
-[PROVIDES] kspell_aspell.so kspell_ispell.so kstyle_plastik_config.so
+[PROVIDES] kmailservice knotify.so kpac_dhcp_helper ksendbugmail
+[PROVIDES] kshell kspell_aspell.so kspell_ispell.so kstartupconfig
+[PROVIDES] kstyle_highcontrast_config.so kstyle_plastik_config.so
 [PROVIDES] ksvgtopng ktelnetservice ktexteditor_docwordcompletion.so
 [PROVIDES] ktexteditor_insertfile.so ktexteditor_isearch.so
-[PROVIDES] ktexteditor_kdatatool.so kthemestyle.so ktradertest kwrapper
-[PROVIDES] libDCOP.so libartskde.so libkabc.so libkabc_dir.so
-[PROVIDES] libkabc_file.so libkabc_ldapkio.so libkabc_net.so
+[PROVIDES] ktexteditor_kdatatool.so kthemestyle.so ktradertest
+[PROVIDES] kunittestmodrunner kwrapper libDCOP.so libartskde.so libkabc.so
+[PROVIDES] libkabc_dir.so libkabc_file.so libkabc_ldapkio.so libkabc_net.so
 [PROVIDES] libkatepart.so libkatepartinterfaces.so libkcertpart.so
 [PROVIDES] libkdecore.so libkdefakes.so libkdefakes_nonpic.a
 [PROVIDES] libkdefx.so libkdeinit_cupsdconf.so libkdeinit_dcopserver.so
@@ -86,12 +93,64 @@
 [PROVIDES] libkdeinit_klauncher.so libkdeprint.so libkdeprint_management.so
 [PROVIDES] libkdeprint_management_module.so libkdesasl.so libkdesu.so
 [PROVIDES] libkdeui.so libkdnssd.so libkhtml.so libkhtmlpart.so
-[PROVIDES] libkimproxy.so libkio.so libkjava.so libkjs.so libkmdi.so
-[PROVIDES] libkmdi2.so libkmediaplayer.so libkmid.so libkmultipart.so
-[PROVIDES] libknewstuff.so libkntlm.so libkparts.so libkresources.so
-[PROVIDES] libkscreensaver.so libkscript.so libkspell.so libkspell2.so
-[PROVIDES] libktexteditor.so libkutils.so libkwalletbackend.so
-[PROVIDES] libkwalletclient.so libshellscript.so libvcard.so light.so
-[PROVIDES] lnusertemp make_driver_db_cups make_driver_db_lpr makekdewidgets
-[PROVIDES] meinproc plastik.so preparetips
+[PROVIDES] libkimproxy.so libkio.so libkjava.so libkjs.so
+[PROVIDES] libkmdi.so libkmdi2.so libkmediaplayer.so libkmid.so
+[PROVIDES] libkmultipart.so libknewstuff.so libkntlm.so libkparts.so
+[PROVIDES] libkresources.so libkscreensaver.so libkscript.so libkspell.so
+[PROVIDES] libkspell2.so libktexteditor.so libkunittest.so libkutils.so
+[PROVIDES] libkwalletbackend.so libkwalletclient.so libshellscript.so
+[PROVIDES] libvcard.so light.so lnusertemp make_driver_db_cups
+[PROVIDES] make_driver_db_lpr makekdewidgets meinproc plastik.so
+[PROVIDES] preparetips
+
+[9-ERROR] Old Command: gcc-34 --version
+[9-ERROR] ENVPREFIX = 'CMD'
+[9-ERROR] APPEND_PO = ''
+[9-ERROR] OTHERS = ''
+[9-ERROR] INSERT = '-O1 -pipe'
+[9-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
+[9-ERROR] APPEND = '-s'
+[9-ERROR] FILTER = ''
+[9-ERROR] Old PATH: /ROCK/src.kdelibs.1143039222.14019.2912667408/wrappers:/ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper:/ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clip/bin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/deva/bin:/opt/e16/bin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/flexlm/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/kde3/bin:/opt/kde3/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/samba/bin:/opt/samba/sbin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/opt/kde3/bin:/opt/root/bin
+[9-ERROR] New PATH: /ROCK/src.kdelibs.1143039222.14019.2912667408/wrappers:/ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clip/bin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/deva/bin:/opt/e16/bin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/flexlm/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/kde3/bin:/opt/kde3/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/samba/bin:/opt/samba/sbin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/opt/kde3/bin:/opt/root/bin
+[9-ERROR] Insert: -O1
+[9-ERROR] Insert: -pipe
+[9-ERROR] Copy:   --version
+[9-ERROR] Append: -s
+[9-ERROR] New Command: gcc-34 -O1 -pipe --version -s
+[9-ERROR] gcc-34 (GCC) 3.4.5
+[9-ERROR] Copyright (C) 2004 Free Software Foundation, Inc.
+[9-ERROR] This is free software; see the source for copying conditions.  There is NO
+[9-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[9-ERROR] 
+[9-ERROR] [ writing debug log to /ROCK/src.kdelibs.1143039222.14019.2912667408/cmd_wrapper.log ]
+[9-ERROR] File not found: download/mirror/k/kdelibs-3.5.1.tar.bz2
+[9-ERROR] Did you run ./scripts/Download for this package?
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 5867 files for this package.
+[9-ERROR] Applying package split: 40 kdelibs:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 kdelibs:dev /pkgconfig/
+[9-ERROR] Applying package split: 45 kdelibs /.*\.la$
+[9-ERROR] Applying package split: 60 kdelibs:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <kdelibs> Creating flist file ...
+[9-ERROR] <kdelibs> Creating package dependencies file ...
+[9-ERROR] <kdelibs> Creating md5sum and cksum files ...
+[9-ERROR] <kdelibs> Creating package description ...
+[9-ERROR] <kdelibs:dev> Creating flist file ...
+[9-ERROR] <kdelibs:dev> Creating package dependencies file ...
+[9-ERROR] <kdelibs:dev> Creating md5sum and cksum files ...
+[9-ERROR] <kdelibs:dev> Creating package description ...
+[9-ERROR] <kdelibs:doc> Creating flist file ...
+[9-ERROR] <kdelibs:doc> Creating package dependencies file ...
+[9-ERROR] <kdelibs:doc> Creating md5sum and cksum files ...
+[9-ERROR] <kdelibs:doc> Creating package description ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] opt/kde3/share/mimelnk/image/x-djvu.desktop: djvulibre kdelibs
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] Finished building kdelibs=kdelibs.
 

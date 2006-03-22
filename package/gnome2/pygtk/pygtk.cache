@@ -20,23 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133004332 Sat Nov 26 12:25:32 2005 (5)
-[TIMESTAMP] 1133229461 Tue Nov 29 02:57:41 2005 (9)
+[TIMESTAMP] 1142491607 Thu Mar 16 07:46:47 2006 (5)
+[TIMESTAMP] 1142740772 Sun Mar 19 04:59:32 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-pygtk.log 9-pygtk.log
 
-[BUILDTIME] 7892 (5)
-[BUILDTIME] 8561 (9)
-[SIZE] 3.69 MB, 172 files
+[BUILDTIME] 8312 (5)
+[BUILDTIME] 8947 (9)
+[SIZE] 3.84 MB, 172 files
 
-[DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 coreutils diffutils
-[DEP] findutils gawk gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev
-[DEP] gnome2-dirtree grep gtk+ gtk+:dev libglade libglade:dev libxml2
-[DEP] libxml2:dev linux26-header:dev make mktemp net-tools numpy:dev pango
-[DEP] pango:dev pkgconfig python python:dev sed sysfiles tar util-linux
+[DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 cairo cairo:dev coreutils
+[DEP] diffutils findutils freetype:dev gawk gcc34 gcc34:dev glib glib:dev
+[DEP] glibc23 glibc23:dev gnome-libs14 gnome14-dirtree gnome2-dirtree grep
+[DEP] gtk+ gtk+:dev libglade libglade:dev libpng:dev libxml2 libxml2:dev
+[DEP] linux26-header:dev make mktemp net-tools numpy:dev pango pango:dev
+[DEP] pkgconfig python python:dev rrdtool sed sysfiles tar util-linux
 [DEP] xorg xorg:dev zlib:dev
 
 [PROVIDES] _gtk.so atk.so glade.so gobject.so pango.so pygtk-codegen-2.0

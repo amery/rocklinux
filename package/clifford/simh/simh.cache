@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133066124 Sun Nov 27 05:35:24 2005 (5)
-[TIMESTAMP] 1133298873 Tue Nov 29 22:14:33 2005 (9)
+[TIMESTAMP] 1142554793 Fri Mar 17 01:19:53 2006 (5)
+[TIMESTAMP] 1142813323 Mon Mar 20 01:08:43 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-simh.log 9-simh.log
 
-[BUILDTIME] 10515 (5)
-[BUILDTIME] 10891 (9)
-[SIZE] 3.07 MB, 30 files
+[BUILDTIME] 11780 (5)
+[BUILDTIME] 12152 (9)
+[SIZE] 3.57 MB, 31 files
 
 [DEP] 00-dirtree bash2 binutils coreutils findutils gawk gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp sed unzip
+[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp rrdtool
+[DEP] sed unzip
 
 [PROVIDES] altair altairz80 eclipse gri h316 hp2100 i1401 i1620 ibm1130
 [PROVIDES] id16 id32 lgp nova pdp1 pdp10 pdp11 pdp15 pdp4 pdp7 pdp8 pdp9
-[PROVIDES] s3 sds vax
+[PROVIDES] s3 sds vax vax780
 

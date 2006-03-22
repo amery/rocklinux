@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1132968105 Sat Nov 26 02:21:45 2005 (5)
-[TIMESTAMP] 1133183294 Mon Nov 28 14:08:14 2005 (9)
+[TIMESTAMP] 1142450767 Wed Mar 15 20:26:07 2006 (5)
+[TIMESTAMP] 1142683207 Sat Mar 18 13:00:07 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-linux26.log 9-linux26.log
 
-[BUILDTIME] 210804 (5)
-[BUILDTIME] 212576 (9)
-[SIZE] 37.24 MB, 1503 files
+[BUILDTIME] 205663 (5)
+[BUILDTIME] 207967 (9)
+[SIZE] 35.64 MB, 1515 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils e2fsprogs
-[DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep gzip
-[DEP] linux26-header:dev m4 make mktemp module-init-tools modutils patch
-[DEP] perl5 sed sysfiles tar util-linux
+[DEP] 00-dirtree acl attr bash2 binutils bzip2 coreutils device-mapper
+[DEP] diffutils e2fsprogs file findutils fuse gawk gcc34 gcc34:dev glibc23
+[DEP] glibc23:dev grep gzip hotplug linux26-header:dev m4 make mktemp
+[DEP] module-init-tools modutils openct patch perl5 rockinitrd rrdtool
+[DEP] sed sysfiles tar udev util-linux
 
-[PROVIDES] mkinitrd
 

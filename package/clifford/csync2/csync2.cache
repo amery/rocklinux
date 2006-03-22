@@ -20,23 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133127246 Sun Nov 27 22:34:06 2005 (5)
-[TIMESTAMP] 1133367807 Wed Nov 30 17:23:27 2005 (9)
+[TIMESTAMP] 1142622166 Fri Mar 17 20:02:46 2006 (5)
+[TIMESTAMP] 1142889280 Mon Mar 20 22:14:40 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-csync2.log 9-csync2.log
 
-[BUILDTIME] 1897 (5)
-[BUILDTIME] 2104 (9)
-[SIZE] 0.09 MB, 9 files
+[BUILDTIME] 1882 (5)
+[BUILDTIME] 2123 (9)
+[SIZE] 0.10 MB, 11 files
 
 [DEP] 00-dirtree alien bash2 binutils bison bzip2 coreutils diffutils
-[DEP] findutils flex flex:dev gcc34 gcc34:dev glibc23 glibc23:dev
-[DEP] grep librsync librsync:dev linux26-header:dev m4 make mktemp
-[DEP] net-tools openssl openssl:dev popt sed sqlite sqlite:dev sysfiles
-[DEP] tar util-linux
+[DEP] findutils flex flex:dev gcc34 gcc34:dev glibc23 glibc23:dev gnutls
+[DEP] gnutls:dev grep libgcrypt libgcrypt:dev libgpg-error libgpg-error:dev
+[DEP] librsync librsync:dev linux26-header:dev m4 make mktemp net-tools
+[DEP] popt rrdtool sed sqlite sqlite:dev sysfiles tar util-linux zlib:dev
 
-[PROVIDES] csync2
+[PROVIDES] csync2 csync2-compare
 

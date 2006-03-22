@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1132956781 Fri Nov 25 23:13:01 2005 (3)
-[TIMESTAMP] 1133189122 Mon Nov 28 15:45:22 2005 (9)
+[TIMESTAMP] 1142445583 Wed Mar 15 18:59:43 2006 (3)
+[TIMESTAMP] 1142689610 Sat Mar 18 14:46:50 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 3-ltrace.log 9-ltrace.log
 
-[BUILDTIME] 1463 (3)
-[BUILDTIME] 2178 (9)
+[BUILDTIME] 1415 (3)
+[BUILDTIME] 2159 (9)
 [SIZE] 0.11 MB, 9 files
 
 [DEP] 00-dirtree bash2 binutils binutils:dev bzip2 coreutils diffutils
-[DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libelf
-[DEP] libelf:dev linux26-header:dev make mktemp net-tools sed sysfiles
+[DEP] findutils gcc34 gcc34:dev glibc23 glibc23:dev grep libelf libelf:dev
+[DEP] linux26-header:dev make mktemp net-tools rrdtool sed sysfiles
 [DEP] tar util-linux
 
 [PROVIDES] ltrace

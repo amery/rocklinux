@@ -20,25 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1132958934 Fri Nov 25 23:48:54 2005 (3)
-[TIMESTAMP] 1133193431 Mon Nov 28 16:57:11 2005 (9)
+[TIMESTAMP] 1142447008 Wed Mar 15 19:23:28 2006 (3)
+[TIMESTAMP] 1142694986 Sat Mar 18 16:16:26 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 3-groff.log 9-groff.log
 
-[BUILDTIME] 8083 (3)
-[BUILDTIME] 10830 (9)
-[SIZE] 6.71 MB, 454 files
+[BUILDTIME] 8296 (3)
+[BUILDTIME] 11570 (9)
+[SIZE] 7.45 MB, 471 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev ghostscript ghostscript-fonts glibc23 glibc23:dev
-[DEP] grep linux26-header:dev make mktemp net-tools netpbm psutils sed
-[DEP] sysfiles tar tcsh texinfo util-linux
+[DEP] grep linux26-header:dev make mktemp net-tools netpbm psutils rrdtool
+[DEP] sed sysfiles tar tcsh texinfo util-linux xorg xorg:dev
 
-[PROVIDES] addftinfo afmtodit eqn eqn2graph grap2graph grn grodvi groff
-[PROVIDES] groffer grog grolbp grolj4 grops grotty hpftodit indxbib lkbib
-[PROVIDES] lookbib mmroff neqn nroff pfbtops pic pic2graph post-grohtml
-[PROVIDES] pre-grohtml refer soelim tbl tfmtodit troff zsoelim
+[PROVIDES] addftinfo afmtodit eqn eqn2graph gdiffmk grap2graph grn grodvi
+[PROVIDES] groff groffer grog grolbp grolj4 grops grotty gxditview hpftodit
+[PROVIDES] indxbib lkbib lookbib mmroff neqn nroff pdfroff pfbtops pic
+[PROVIDES] pic2graph post-grohtml pre-grohtml refer soelim tbl tfmtodit
+[PROVIDES] troff xtotroff zsoelim
 

@@ -5,7 +5,7 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/import/cpan/cpan-lwp.cache
+[COPY] ROCK Linux: rock-src/package/import/cpan/cpan.cache
 [COPY] ROCK Linux is Copyright (C) 1998 - 2006 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
@@ -20,20 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1132979862 Sat Nov 26 05:37:42 2005 (5)
-[TIMESTAMP] 1133200133 Mon Nov 28 18:48:53 2005 (9)
+[TIMESTAMP] 1142461057 Wed Mar 15 23:17:37 2006 (5)
+[TIMESTAMP] 1142702272 Sat Mar 18 18:17:52 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-cpan-lwp.log 9-cpan-lwp.log
 
-[BUILDTIME] 1116 (5)
-[BUILDTIME] 2070 (9)
+[BUILDTIME] 1117 (5)
+[BUILDTIME] 2076 (9)
 [SIZE] 0.96 MB, 114 files
 
 [DEP] 00-dirtree bash2 bzip2 coreutils cpan-compress-zlib cpan-html-parser
-[DEP] cpan-uri findutils gawk gcc34 grep make mktemp perl5 sed sysfiles tar
+[DEP] cpan-uri findutils gawk gcc34 grep make mktemp perl5 rrdtool sed
+[DEP] sysfiles tar
 
 [PROVIDES] lwp-download lwp-mirror lwp-request lwp-rget
 

@@ -20,22 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133173969 Mon Nov 28 11:32:49 2005 (5)
-[TIMESTAMP] 1133417209 Thu Dec  1 07:06:49 2005 (9)
+[TIMESTAMP] 1142671089 Sat Mar 18 09:38:09 2006 (5) ERROR
+[TIMESTAMP] 1142941948 Tue Mar 21 12:52:28 2006 (9) ERROR
+[TIMESTAMP] 1142965412 Tue Mar 21 19:23:32 2006 (5) ERROR
+[TIMESTAMP] 1142975248 Tue Mar 21 22:07:28 2006 (9) ERROR
+[TIMESTAMP] 1143034815 Wed Mar 22 14:40:15 2006 (5) ERROR
+[TIMESTAMP] 1143044474 Wed Mar 22 17:21:14 2006 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-widelands.log 9-widelands.log
+[LOGS] 5-widelands.err 9-widelands.err
 
-[BUILDTIME] 25309 (5)
-[BUILDTIME] 25436 (9)
-[SIZE] 6.26 MB, 1651 files
+[BUILDTIME] 13598 (5) ERROR
+[BUILDTIME] 13672 (9) ERROR
+[BUILDTIME] 13671 (5) ERROR
+[BUILDTIME] 13665 (9) ERROR
+[BUILDTIME] 13659 (5) ERROR
+[BUILDTIME] 13680 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils ctags findutils freetype
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libjpeg libpng libsdl
-[DEP] libsdl:dev libsdl_image libsdl_image:dev libsdl_net libsdl_net:dev
-[DEP] libsdl_ttf libsdl_ttf:dev linux26-header:dev make mktemp nas nethack
-[DEP] sed sysfiles tar xorg
 
+[5-ERROR] rm src/native-debug/player.o.d
+[5-ERROR] g++-34 -pipe -Wall -I/usr/include/SDL -D_REENTRANT -O3 -g -DDEBUG  -fmessage-length=0 -Isrc -Isrc/ui/ui_fs_menus -Isrc/ui/ui_basic -Isrc/editor -Isrc/editor/ui_menus -Isrc/editor/tools -MMD -MP -MF src/native-debug/playercommand.o.d -c -o src/native-debug/playercommand.o src/playercommand.cc
+[5-ERROR] sed -e 's@^\(.*\)\.o:@\1.d \1.o:@' src/native-debug/playercommand.o.d > src/native-debug/playercommand.d
+[5-ERROR] rm src/native-debug/playercommand.o.d
+[5-ERROR] g++-34 -pipe -Wall -I/usr/include/SDL -D_REENTRANT -O3 -g -DDEBUG  -fmessage-length=0 -Isrc -Isrc/ui/ui_fs_menus -Isrc/ui/ui_basic -Isrc/editor -Isrc/editor/ui_menus -Isrc/editor/tools -MMD -MP -MF src/native-debug/playerdescrgroup.o.d -c -o src/native-debug/playerdescrgroup.o src/playerdescrgroup.cc
+[5-ERROR] sed -e 's@^\(.*\)\.o:@\1.d \1.o:@' src/native-debug/playerdescrgroup.o.d > src/native-debug/playerdescrgroup.d
+[5-ERROR] rm src/native-debug/playerdescrgroup.o.d
+[5-ERROR] g++-34 -pipe -Wall -I/usr/include/SDL -D_REENTRANT -O3 -g -DDEBUG  -fmessage-length=0 -Isrc -Isrc/ui/ui_fs_menus -Isrc/ui/ui_basic -Isrc/editor -Isrc/editor/ui_menus -Isrc/editor/tools -MMD -MP -MF src/native-debug/production_program.o.d -c -o src/native-debug/production_program.o src/production_program.cc
+[5-ERROR] sed -e 's@^\(.*\)\.o:@\1.d \1.o:@' src/native-debug/production_program.o.d > src/native-debug/production_program.d
+[5-ERROR] rm src/native-debug/production_program.o.d
+[5-ERROR] g++-34 -pipe -Wall -I/usr/include/SDL -D_REENTRANT -O3 -g -DDEBUG  -fmessage-length=0 -Isrc -Isrc/ui/ui_fs_menus -Isrc/ui/ui_basic -Isrc/editor -Isrc/editor/ui_menus -Isrc/editor/tools -MMD -MP -MF src/native-debug/productionsite.o.d -c -o src/native-debug/productionsite.o src/productionsite.cc
+[5-ERROR] sed -e 's@^\(.*\)\.o:@\1.d \1.o:@' src/native-debug/productionsite.o.d > src/native-debug/productionsite.d
+[5-ERROR] rm src/native-debug/productionsite.o.d
+[5-ERROR] g++-34 -pipe -Wall -I/usr/include/SDL -D_REENTRANT -O3 -g -DDEBUG  -fmessage-length=0 -Isrc -Isrc/ui/ui_fs_menus -Isrc/ui/ui_basic -Isrc/editor -Isrc/editor/ui_menus -Isrc/editor/tools -MMD -MP -MF src/native-debug/profile.o.d -c -o src/native-debug/profile.o src/profile.cc
+[5-ERROR] sed -e 's@^\(.*\)\.o:@\1.d \1.o:@' src/native-debug/profile.o.d > src/native-debug/profile.d
+[5-ERROR] rm src/native-debug/profile.o.d
+[5-ERROR] g++-34 -pipe -Wall -I/usr/include/SDL -D_REENTRANT -O3 -g -DDEBUG  -fmessage-length=0 -Isrc -Isrc/ui/ui_fs_menus -Isrc/ui/ui_basic -Isrc/editor -Isrc/editor/ui_menus -Isrc/editor/tools -MMD -MP -MF src/native-debug/queue_cmd_factory.o.d -c -o src/native-debug/queue_cmd_factory.o src/queue_cmd_factory.cc
+[5-ERROR] sed -e 's@^\(.*\)\.o:@\1.d \1.o:@' src/native-debug/queue_cmd_factory.o.d > src/native-debug/queue_cmd_factory.d
+[5-ERROR] rm src/native-debug/queue_cmd_factory.o.d
+[5-ERROR] g++-34 -pipe -Wall -I/usr/include/SDL -D_REENTRANT -O3 -g -DDEBUG  -fmessage-length=0 -Isrc -Isrc/ui/ui_fs_menus -Isrc/ui/ui_basic -Isrc/editor -Isrc/editor/ui_menus -Isrc/editor/tools -MMD -MP -MF src/native-debug/random.o.d -c -o src/native-debug/random.o src/random.cc
+[5-ERROR] sed -e 's@^\(.*\)\.o:@\1.d \1.o:@' src/native-debug/random.o.d > src/native-debug/random.d
+[5-ERROR] rm src/native-debug/random.o.d
+[5-ERROR] g++-34 -pipe -Wall -I/usr/include/SDL -D_REENTRANT -O3 -g -DDEBUG  -fmessage-length=0 -Isrc -Isrc/ui/ui_fs_menus -Isrc/ui/ui_basic -Isrc/editor -Isrc/editor/ui_menus -Isrc/editor/tools -MMD -MP -MF src/native-debug/render.o.d -c -o src/native-debug/render.o src/render.cc
+[5-ERROR] sed -e 's@^\(.*\)\.o:@\1.d \1.o:@' src/native-debug/render.o.d > src/native-debug/render.d
+[5-ERROR] rm src/native-debug/render.o.d
+[5-ERROR] g++-34 -pipe -Wall -I/usr/include/SDL -D_REENTRANT -O3 -g -DDEBUG  -fmessage-length=0 -Isrc -Isrc/ui/ui_fs_menus -Isrc/ui/ui_basic -Isrc/editor -Isrc/editor/ui_menus -Isrc/editor/tools -MMD -MP -MF src/native-debug/s2map.o.d -c -o src/native-debug/s2map.o src/s2map.cc
+[5-ERROR] sed -e 's@^\(.*\)\.o:@\1.d \1.o:@' src/native-debug/s2map.o.d > src/native-debug/s2map.d
+[5-ERROR] rm src/native-debug/s2map.o.d
+[5-ERROR] g++-34 -pipe -Wall -I/usr/include/SDL -D_REENTRANT -O3 -g -DDEBUG  -fmessage-length=0 -Isrc -Isrc/ui/ui_fs_menus -Isrc/ui/ui_basic -Isrc/editor -Isrc/editor/ui_menus -Isrc/editor/tools -MMD -MP -MF src/native-debug/setup.o.d -c -o src/native-debug/setup.o src/setup.cc
+[5-ERROR] sed -e 's@^\(.*\)\.o:@\1.d \1.o:@' src/native-debug/setup.o.d > src/native-debug/setup.d
+[5-ERROR] rm src/native-debug/setup.o.d
+[5-ERROR] g++-34 -pipe -Wall -I/usr/include/SDL -D_REENTRANT -O3 -g -DDEBUG  -fmessage-length=0 -Isrc -Isrc/ui/ui_fs_menus -Isrc/ui/ui_basic -Isrc/editor -Isrc/editor/ui_menus -Isrc/editor/tools -MMD -MP -MF src/native-debug/soldier.o.d -c -o src/native-debug/soldier.o src/soldier.cc
+[5-ERROR] sed -e 's@^\(.*\)\.o:@\1.d \1.o:@' src/native-debug/soldier.o.d > src/native-debug/soldier.d
+[5-ERROR] rm src/native-debug/soldier.o.d
+[5-ERROR] g++-34 -pipe -Wall -I/usr/include/SDL -D_REENTRANT -O3 -g -DDEBUG  -fmessage-length=0 -Isrc -Isrc/ui/ui_fs_menus -Isrc/ui/ui_basic -Isrc/editor -Isrc/editor/ui_menus -Isrc/editor/tools -MMD -MP -MF src/native-debug/sound_handler.o.d -c -o src/native-debug/sound_handler.o src/sound_handler.cc
+[5-ERROR] src/sound_handler.cc: In member function `Mix_Music* Songset::get_song()':
+[5-ERROR] src/sound_handler.cc:112: error: `Mix_LoadMUS_RW' was not declared in this scope
+[5-ERROR] src/sound_handler.cc:112: warning: unused variable 'Mix_LoadMUS_RW'
+[5-ERROR] make: *** [src/native-debug/sound_handler.o] Error 1
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 0 files for this package.
+[5-ERROR] Applying package split: 40 widelands:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 widelands:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 widelands:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building widelands=widelands.
+
+[9-ERROR] rm src/native-debug/player.o.d
+[9-ERROR] g++-34 -pipe -Wall -I/usr/include/SDL -D_REENTRANT -O3 -g -DDEBUG  -fmessage-length=0 -Isrc -Isrc/ui/ui_fs_menus -Isrc/ui/ui_basic -Isrc/editor -Isrc/editor/ui_menus -Isrc/editor/tools -MMD -MP -MF src/native-debug/playercommand.o.d -c -o src/native-debug/playercommand.o src/playercommand.cc
+[9-ERROR] sed -e 's@^\(.*\)\.o:@\1.d \1.o:@' src/native-debug/playercommand.o.d > src/native-debug/playercommand.d
+[9-ERROR] rm src/native-debug/playercommand.o.d
+[9-ERROR] g++-34 -pipe -Wall -I/usr/include/SDL -D_REENTRANT -O3 -g -DDEBUG  -fmessage-length=0 -Isrc -Isrc/ui/ui_fs_menus -Isrc/ui/ui_basic -Isrc/editor -Isrc/editor/ui_menus -Isrc/editor/tools -MMD -MP -MF src/native-debug/playerdescrgroup.o.d -c -o src/native-debug/playerdescrgroup.o src/playerdescrgroup.cc
+[9-ERROR] sed -e 's@^\(.*\)\.o:@\1.d \1.o:@' src/native-debug/playerdescrgroup.o.d > src/native-debug/playerdescrgroup.d
+[9-ERROR] rm src/native-debug/playerdescrgroup.o.d
+[9-ERROR] g++-34 -pipe -Wall -I/usr/include/SDL -D_REENTRANT -O3 -g -DDEBUG  -fmessage-length=0 -Isrc -Isrc/ui/ui_fs_menus -Isrc/ui/ui_basic -Isrc/editor -Isrc/editor/ui_menus -Isrc/editor/tools -MMD -MP -MF src/native-debug/production_program.o.d -c -o src/native-debug/production_program.o src/production_program.cc
+[9-ERROR] sed -e 's@^\(.*\)\.o:@\1.d \1.o:@' src/native-debug/production_program.o.d > src/native-debug/production_program.d
+[9-ERROR] rm src/native-debug/production_program.o.d
+[9-ERROR] g++-34 -pipe -Wall -I/usr/include/SDL -D_REENTRANT -O3 -g -DDEBUG  -fmessage-length=0 -Isrc -Isrc/ui/ui_fs_menus -Isrc/ui/ui_basic -Isrc/editor -Isrc/editor/ui_menus -Isrc/editor/tools -MMD -MP -MF src/native-debug/productionsite.o.d -c -o src/native-debug/productionsite.o src/productionsite.cc
+[9-ERROR] sed -e 's@^\(.*\)\.o:@\1.d \1.o:@' src/native-debug/productionsite.o.d > src/native-debug/productionsite.d
+[9-ERROR] rm src/native-debug/productionsite.o.d
+[9-ERROR] g++-34 -pipe -Wall -I/usr/include/SDL -D_REENTRANT -O3 -g -DDEBUG  -fmessage-length=0 -Isrc -Isrc/ui/ui_fs_menus -Isrc/ui/ui_basic -Isrc/editor -Isrc/editor/ui_menus -Isrc/editor/tools -MMD -MP -MF src/native-debug/profile.o.d -c -o src/native-debug/profile.o src/profile.cc
+[9-ERROR] sed -e 's@^\(.*\)\.o:@\1.d \1.o:@' src/native-debug/profile.o.d > src/native-debug/profile.d
+[9-ERROR] rm src/native-debug/profile.o.d
+[9-ERROR] g++-34 -pipe -Wall -I/usr/include/SDL -D_REENTRANT -O3 -g -DDEBUG  -fmessage-length=0 -Isrc -Isrc/ui/ui_fs_menus -Isrc/ui/ui_basic -Isrc/editor -Isrc/editor/ui_menus -Isrc/editor/tools -MMD -MP -MF src/native-debug/queue_cmd_factory.o.d -c -o src/native-debug/queue_cmd_factory.o src/queue_cmd_factory.cc
+[9-ERROR] sed -e 's@^\(.*\)\.o:@\1.d \1.o:@' src/native-debug/queue_cmd_factory.o.d > src/native-debug/queue_cmd_factory.d
+[9-ERROR] rm src/native-debug/queue_cmd_factory.o.d
+[9-ERROR] g++-34 -pipe -Wall -I/usr/include/SDL -D_REENTRANT -O3 -g -DDEBUG  -fmessage-length=0 -Isrc -Isrc/ui/ui_fs_menus -Isrc/ui/ui_basic -Isrc/editor -Isrc/editor/ui_menus -Isrc/editor/tools -MMD -MP -MF src/native-debug/random.o.d -c -o src/native-debug/random.o src/random.cc
+[9-ERROR] sed -e 's@^\(.*\)\.o:@\1.d \1.o:@' src/native-debug/random.o.d > src/native-debug/random.d
+[9-ERROR] rm src/native-debug/random.o.d
+[9-ERROR] g++-34 -pipe -Wall -I/usr/include/SDL -D_REENTRANT -O3 -g -DDEBUG  -fmessage-length=0 -Isrc -Isrc/ui/ui_fs_menus -Isrc/ui/ui_basic -Isrc/editor -Isrc/editor/ui_menus -Isrc/editor/tools -MMD -MP -MF src/native-debug/render.o.d -c -o src/native-debug/render.o src/render.cc
+[9-ERROR] sed -e 's@^\(.*\)\.o:@\1.d \1.o:@' src/native-debug/render.o.d > src/native-debug/render.d
+[9-ERROR] rm src/native-debug/render.o.d
+[9-ERROR] g++-34 -pipe -Wall -I/usr/include/SDL -D_REENTRANT -O3 -g -DDEBUG  -fmessage-length=0 -Isrc -Isrc/ui/ui_fs_menus -Isrc/ui/ui_basic -Isrc/editor -Isrc/editor/ui_menus -Isrc/editor/tools -MMD -MP -MF src/native-debug/s2map.o.d -c -o src/native-debug/s2map.o src/s2map.cc
+[9-ERROR] sed -e 's@^\(.*\)\.o:@\1.d \1.o:@' src/native-debug/s2map.o.d > src/native-debug/s2map.d
+[9-ERROR] rm src/native-debug/s2map.o.d
+[9-ERROR] g++-34 -pipe -Wall -I/usr/include/SDL -D_REENTRANT -O3 -g -DDEBUG  -fmessage-length=0 -Isrc -Isrc/ui/ui_fs_menus -Isrc/ui/ui_basic -Isrc/editor -Isrc/editor/ui_menus -Isrc/editor/tools -MMD -MP -MF src/native-debug/setup.o.d -c -o src/native-debug/setup.o src/setup.cc
+[9-ERROR] sed -e 's@^\(.*\)\.o:@\1.d \1.o:@' src/native-debug/setup.o.d > src/native-debug/setup.d
+[9-ERROR] rm src/native-debug/setup.o.d
+[9-ERROR] g++-34 -pipe -Wall -I/usr/include/SDL -D_REENTRANT -O3 -g -DDEBUG  -fmessage-length=0 -Isrc -Isrc/ui/ui_fs_menus -Isrc/ui/ui_basic -Isrc/editor -Isrc/editor/ui_menus -Isrc/editor/tools -MMD -MP -MF src/native-debug/soldier.o.d -c -o src/native-debug/soldier.o src/soldier.cc
+[9-ERROR] sed -e 's@^\(.*\)\.o:@\1.d \1.o:@' src/native-debug/soldier.o.d > src/native-debug/soldier.d
+[9-ERROR] rm src/native-debug/soldier.o.d
+[9-ERROR] g++-34 -pipe -Wall -I/usr/include/SDL -D_REENTRANT -O3 -g -DDEBUG  -fmessage-length=0 -Isrc -Isrc/ui/ui_fs_menus -Isrc/ui/ui_basic -Isrc/editor -Isrc/editor/ui_menus -Isrc/editor/tools -MMD -MP -MF src/native-debug/sound_handler.o.d -c -o src/native-debug/sound_handler.o src/sound_handler.cc
+[9-ERROR] src/sound_handler.cc: In member function `Mix_Music* Songset::get_song()':
+[9-ERROR] src/sound_handler.cc:112: error: `Mix_LoadMUS_RW' was not declared in this scope
+[9-ERROR] src/sound_handler.cc:112: warning: unused variable 'Mix_LoadMUS_RW'
+[9-ERROR] make: *** [src/native-debug/sound_handler.o] Error 1
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 0 files for this package.
+[9-ERROR] Applying package split: 40 widelands:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 widelands:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 widelands:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building widelands=widelands.
 

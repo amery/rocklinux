@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133147278 Mon Nov 28 04:07:58 2005 (5)
-[TIMESTAMP] 1133389081 Wed Nov 30 23:18:01 2005 (9)
+[TIMESTAMP] 1142642967 Sat Mar 18 01:49:27 2006 (5)
+[TIMESTAMP] 1142911586 Tue Mar 21 04:26:26 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-linesrv.log 9-linesrv.log
 
-[BUILDTIME] 2368 (5)
-[BUILDTIME] 2460 (9)
-[SIZE] 0.09 MB, 9 files
+[BUILDTIME] 2431 (5)
+[BUILDTIME] 2566 (9)
+[SIZE] 0.13 MB, 12 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp net-tools pam pam:dev sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
+[DEP] net-tools pam pam:dev patch rrdtool sed sysfiles tar util-linux
 
-[PROVIDES] htmlstatus lclog linesrv
+[PROVIDES] htmlstatus lcc lclog linesrv
 

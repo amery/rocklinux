@@ -20,30 +20,31 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133127295 Sun Nov 27 22:34:55 2005 (5)
-[TIMESTAMP] 1133367859 Wed Nov 30 17:24:19 2005 (9)
+[TIMESTAMP] 1142622222 Fri Mar 17 20:03:42 2006 (5)
+[TIMESTAMP] 1142889338 Mon Mar 20 22:15:38 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-spl.log 9-spl.log
 
-[BUILDTIME] 2936 (5)
-[BUILDTIME] 3149 (9)
-[SIZE] 0.90 MB, 56 files
+[BUILDTIME] 3143 (5)
+[BUILDTIME] 3378 (9)
+[SIZE] 1.17 MB, 61 files
 
-[DEP] 00-dirtree arts bash2 binutils bzip2 coreutils e2fsprogs:dev expat
-[DEP] expat:dev findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] kdebindings:dev libsdl libsdl:dev libsdl_image libsdl_image:dev
-[DEP] libxml2 libxml2:dev libxslt libxslt:dev linux26-header:dev make
-[DEP] mktemp mysql mysql:dev ncurses:dev openssl openssl:dev pcre pcre:dev
-[DEP] postgresql postgresql:dev qt qt:dev readline readline:dev sed
-[DEP] sqlite3 sqlite3:dev sysfiles tar zlib:dev
+[DEP] 00-dirtree arts bash2 binutils bzip2 coreutils curl curl:dev
+[DEP] e2fsprogs:dev expat expat:dev findutils gawk gcc34 gcc34:dev
+[DEP] glibc23 glibc23:dev grep kdebindings:dev libidn libsdl libsdl:dev
+[DEP] libsdl_image libsdl_image:dev libxml2 libxml2:dev libxslt libxslt:dev
+[DEP] linux26-header:dev make mktemp mysql mysql:dev ncurses:dev openssl
+[DEP] pcre pcre:dev postgresql postgresql:dev qt33 qt33:dev readline
+[DEP] readline:dev rrdtool sed sqlite3 sqlite3:dev sysfiles tar zlib:dev
 
-[PROVIDES] libspl.a mod_array.so mod_bits.so mod_cgi.so mod_encode_xml.so
-[PROVIDES] mod_environ.so mod_file.so mod_format_xml.so mod_multimouse.so
-[PROVIDES] mod_prime.so mod_qt.so mod_sdl.so mod_sql.so mod_sql_mysql.so
-[PROVIDES] mod_sql_postgres.so mod_sql_sqlite.so mod_system.so mod_task.so
-[PROVIDES] mod_termio.so mod_uuidgen.so mod_wsf_debug.so mod_xml.so
-[PROVIDES] spl-config splrun webspl.cgi webspld
+[PROVIDES] libspl.a mod_array.so mod_bits.so mod_cgi.so mod_curl.so
+[PROVIDES] mod_encode_xml.so mod_environ.so mod_file.so mod_format_xml.so
+[PROVIDES] mod_kde.so mod_multimouse.so mod_prime.so mod_qt.so
+[PROVIDES] mod_sdl.so mod_sql.so mod_sql_mysql.so mod_sql_postgres.so
+[PROVIDES] mod_sql_sqlite.so mod_system.so mod_task.so mod_termio.so
+[PROVIDES] mod_time.so mod_uuidgen.so mod_webdebug.so mod_xml.so spl-config
+[PROVIDES] splrun webspl.cgi webspld
 

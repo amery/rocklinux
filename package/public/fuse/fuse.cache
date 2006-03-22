@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133001053 Sat Nov 26 11:30:53 2005 (5)
-[TIMESTAMP] 1133225542 Tue Nov 29 01:52:22 2005 (9)
+[TIMESTAMP] 1142488239 Thu Mar 16 06:50:39 2006 (5)
+[TIMESTAMP] 1142736643 Sun Mar 19 03:50:43 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-fuse.log 9-fuse.log
 
-[BUILDTIME] 2746 (5)
-[BUILDTIME] 3331 (9)
+[BUILDTIME] 2770 (5)
+[BUILDTIME] 3321 (9)
 [SIZE] 0.08 MB, 12 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] linux26-source make mktemp net-tools patch sed sysfiles tar udev
-[DEP] util-linux
+[DEP] linux26-source make mktemp net-tools patch rrdtool sed sysfiles
+[DEP] tar udev util-linux
 
 [PROVIDES] fusermount libfuse.a libfuse.so mount.fuse
 

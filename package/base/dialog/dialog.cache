@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1132978960 Sat Nov 26 05:22:40 2005 (5)
-[TIMESTAMP] 1133198870 Mon Nov 28 18:27:50 2005 (9)
+[TIMESTAMP] 1142460072 Wed Mar 15 23:01:12 2006 (5)
+[TIMESTAMP] 1142700721 Sat Mar 18 17:52:01 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-dialog.log 9-dialog.log
 
-[BUILDTIME] 2418 (5)
-[BUILDTIME] 3080 (9)
-[SIZE] 0.16 MB, 9 files
+[BUILDTIME] 2500 (5)
+[BUILDTIME] 3186 (9)
+[SIZE] 0.18 MB, 9 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp ncurses ncurses:dev net-tools patch sed sysfiles tar
-[DEP] util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
+[DEP] mktemp ncurses ncurses:dev net-tools patch rrdtool sed sysfiles
+[DEP] tar util-linux
 
 [PROVIDES] dialog libdialog.a
 

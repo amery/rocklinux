@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133085764 Sun Nov 27 11:02:44 2005 (5)
-[TIMESTAMP] 1133322093 Wed Nov 30 04:41:33 2005 (9)
+[TIMESTAMP] 1142575623 Fri Mar 17 07:07:03 2006 (5)
+[TIMESTAMP] 1142838996 Mon Mar 20 08:16:36 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-ntp.log 9-ntp.log
 
-[BUILDTIME] 8208 (5)
-[BUILDTIME] 8674 (9)
-[SIZE] 0.60 MB, 18 files
+[BUILDTIME] 8189 (5)
+[BUILDTIME] 8663 (9)
+[SIZE] 0.73 MB, 18 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
 [DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libelf libelf:dev
 [DEP] linux26-header:dev m4 make mktemp ncurses:dev net-tools openssl
-[DEP] openssl:dev patch readline readline:dev sed sysfiles tar util-linux
+[DEP] openssl:dev patch readline readline:dev rrdtool sed sysfiles tar
+[DEP] util-linux
 
 [PROVIDES] monl mvstats ntp-keygen ntp-wait ntpd ntpdate ntpdc ntpq
 [PROVIDES] ntptime ntptrace sntp tickadj

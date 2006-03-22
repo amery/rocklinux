@@ -5,7 +5,7 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/x11/qt/qt.cache
+[COPY] ROCK Linux: rock-src/package/avm/kiax/kiax.cache
 [COPY] ROCK Linux is Copyright (C) 1998 - 2006 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
@@ -20,25 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1132991340 Sat Nov 26 08:49:00 2005 (5)
-[TIMESTAMP] 1133213807 Mon Nov 28 22:36:47 2005 (9)
+[TIMESTAMP] 1142673753 Sat Mar 18 10:22:33 2006 (5)
+[TIMESTAMP] 1142944974 Tue Mar 21 13:42:54 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-qt.log 9-qt.log
+[LOGS] 5-kiax.log 9-kiax.log
 
-[BUILDTIME] 125558 (5)
-[BUILDTIME] 127837 (9)
-[SIZE] 15.44 MB, 270 files
+[BUILDTIME] 7848 (5)
+[BUILDTIME] 7897 (9)
+[SIZE] 0.93 MB, 26 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils cups:dev diffutils expat
-[DEP] findutils freetype freetype:dev gawk gcc34 gcc34:dev glibc23
-[DEP] glibc23:dev grep libjpeg libjpeg:dev libmng libmng:dev libpng
-[DEP] libpng:dev linux26-header:dev make mktemp mysql mysql:dev nas
-[DEP] nas:dev patch sed sysfiles tar xorg xorg:dev zlib:dev
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils expat findutils freetype
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep libpng linux26-header:dev
+[DEP] make mktemp nas patch perl5 qt33 qt33:dev rrdtool sed sysfiles tar
+[DEP] xorg xorg:dev
 
-[PROVIDES] assistant designer libdesignercore.a libeditor.a
-[PROVIDES] libqassistantclient.a libqt-mt.so libqt.so libqui.so linguist
-[PROVIDES] lrelease lupdate moc qm2ts qmake qtconfig uic
+[PROVIDES] kiax
 

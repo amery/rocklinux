@@ -20,8 +20,8 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1132978823 Sat Nov 26 05:20:23 2005 (5)
-[TIMESTAMP] 1133198664 Mon Nov 28 18:24:24 2005 (9)
+[TIMESTAMP] 1142459930 Wed Mar 15 22:58:50 2006 (5)
+[TIMESTAMP] 1142700469 Sat Mar 18 17:47:49 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
@@ -29,12 +29,12 @@
 [LOGS] 5-liblockfile.log 9-liblockfile.log
 
 [BUILDTIME] 1047 (5)
-[BUILDTIME] 1696 (9)
+[BUILDTIME] 1711 (9)
 [SIZE] 0.04 MB, 10 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] net-tools patch sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
+[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
+[DEP] mktemp net-tools patch rrdtool sed sysfiles tar
 
 [PROVIDES] dotlockfile liblockfile.a
 

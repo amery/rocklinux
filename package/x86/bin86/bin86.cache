@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1132956199 Fri Nov 25 23:03:19 2005 (3)
-[TIMESTAMP] 1133188410 Mon Nov 28 15:33:30 2005 (9)
+[TIMESTAMP] 1142445305 Wed Mar 15 18:55:05 2006 (3)
+[TIMESTAMP] 1142688779 Sat Mar 18 14:32:59 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 3-bin86.log 9-bin86.log
 
-[BUILDTIME] 1186 (3)
-[BUILDTIME] 1879 (9)
-[SIZE] 0.12 MB, 15 files
+[BUILDTIME] 1155 (3)
+[BUILDTIME] 1873 (9)
+[SIZE] 0.12 MB, 13 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp patch sed
-[DEP] sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
+[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
+[DEP] patch rrdtool sed sysfiles tar
 
-[PROVIDES] as86 as86_encap ld86 nm86 objdump86 size86
+[PROVIDES] as86 ld86 nm86 objdump86 size86
 

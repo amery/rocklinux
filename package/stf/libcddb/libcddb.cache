@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1132986628 Sat Nov 26 07:30:28 2005 (5)
-[TIMESTAMP] 1133208661 Mon Nov 28 21:11:01 2005 (9)
+[TIMESTAMP] 1142468089 Thu Mar 16 01:14:49 2006 (5)
+[TIMESTAMP] 1142712084 Sat Mar 18 21:01:24 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-libcddb.log 9-libcddb.log
 
-[BUILDTIME] 3465 (5)
-[BUILDTIME] 4269 (9)
+[BUILDTIME] 3486 (5)
+[BUILDTIME] 4259 (9)
 [SIZE] 0.09 MB, 10 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils file findutils
 [DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libcdio libcdio:dev
-[DEP] linux26-header:dev make mktemp net-tools pkgconfig sed sysfiles
-[DEP] tar util-linux
+[DEP] linux26-header:dev make mktemp net-tools pkgconfig rrdtool sed
+[DEP] sysfiles tar util-linux
 
 [PROVIDES] cddb_query libcddb.a libcddb.so
 

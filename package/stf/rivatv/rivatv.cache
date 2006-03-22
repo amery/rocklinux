@@ -20,56 +20,64 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133154685 Mon Nov 28 06:11:25 2005 (5) ERROR
-[TIMESTAMP] 1133396837 Thu Dec  1 01:27:17 2005 (9) ERROR
+[TIMESTAMP] 1142650328 Sat Mar 18 03:52:08 2006 (5) ERROR
+[TIMESTAMP] 1142919702 Tue Mar 21 06:41:42 2006 (9) ERROR
+[TIMESTAMP] 1142963520 Tue Mar 21 18:52:00 2006 (5) ERROR
+[TIMESTAMP] 1142973652 Tue Mar 21 21:40:52 2006 (9) ERROR
+[TIMESTAMP] 1143033308 Wed Mar 22 14:15:08 2006 (5) ERROR
+[TIMESTAMP] 1143042952 Wed Mar 22 16:55:52 2006 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-rivatv.err 9-rivatv.err
 
-[BUILDTIME] 1618 (5) ERROR
-[BUILDTIME] 1689 (9) ERROR
+[BUILDTIME] 1557 (5) ERROR
+[BUILDTIME] 1687 (9) ERROR
+[BUILDTIME] 1699 (5) ERROR
+[BUILDTIME] 1705 (9) ERROR
+[BUILDTIME] 1693 (5) ERROR
+[BUILDTIME] 1700 (9) ERROR
 
 
-[5-ERROR] /ROCK/src.rivatv.1133154650.20966.2741706437/rivatv-0.8.6/src/rivatv-driver.c:882:5: warning: "EVER_IMPLEMENTED" is not defined
-[5-ERROR]   CC [M]  /ROCK/src.rivatv.1133154650.20966.2741706437/rivatv-0.8.6/src/v4l-riva.o
-[5-ERROR] In file included from include/asm/thread_info.h:17,
-[5-ERROR]                  from include/linux/thread_info.h:21,
-[5-ERROR]                  from include/linux/spinlock.h:53,
-[5-ERROR]                  from include/linux/capability.h:45,
-[5-ERROR]                  from include/linux/sched.h:7,
-[5-ERROR]                  from include/linux/module.h:10,
-[5-ERROR]                  from /ROCK/src.rivatv.1133154650.20966.2741706437/rivatv-0.8.6/src/v4l-riva.c:30:
-[5-ERROR] include/asm/processor.h:250:22: warning: "/*" within comment
-[5-ERROR] include/asm/processor.h:251:1: warning: "/*" within comment
-[5-ERROR] /ROCK/src.rivatv.1133154650.20966.2741706437/rivatv-0.8.6/src/v4l-riva.c:1377:5: warning: "NVIDIA_SUPPORTS_OTHER_FORMATS" is not defined
-[5-ERROR] /ROCK/src.rivatv.1133154650.20966.2741706437/rivatv-0.8.6/src/v4l-riva.c: In function `rivatv_print_decoder':
-[5-ERROR] /ROCK/src.rivatv.1133154650.20966.2741706437/rivatv-0.8.6/src/v4l-riva.c:1991: warning: implicit declaration of function `i2c_clientname'
-[5-ERROR] /ROCK/src.rivatv.1133154650.20966.2741706437/rivatv-0.8.6/src/v4l-riva.c:1991: warning: pointer/integer type mismatch in conditional expression
-[5-ERROR]   CC [M]  /ROCK/src.rivatv.1133154650.20966.2741706437/rivatv-0.8.6/src/i2c-riva.o
-[5-ERROR] In file included from include/asm/thread_info.h:17,
-[5-ERROR]                  from include/linux/thread_info.h:21,
-[5-ERROR]                  from include/linux/spinlock.h:53,
-[5-ERROR]                  from include/linux/capability.h:45,
-[5-ERROR]                  from include/linux/sched.h:7,
-[5-ERROR]                  from include/linux/module.h:10,
-[5-ERROR]                  from /ROCK/src.rivatv.1133154650.20966.2741706437/rivatv-0.8.6/src/i2c-riva.c:22:
-[5-ERROR] include/asm/processor.h:250:22: warning: "/*" within comment
-[5-ERROR] include/asm/processor.h:251:1: warning: "/*" within comment
-[5-ERROR] /ROCK/src.rivatv.1133154650.20966.2741706437/rivatv-0.8.6/src/i2c-riva.c:225: warning: implicit declaration of function `I2C_DEVNAME'
-[5-ERROR] /ROCK/src.rivatv.1133154650.20966.2741706437/rivatv-0.8.6/src/i2c-riva.c:225: error: initializer element is not constant
-[5-ERROR] /ROCK/src.rivatv.1133154650.20966.2741706437/rivatv-0.8.6/src/i2c-riva.c:225: error: (near initialization for `i2c_riva_bus0.owner')
-[5-ERROR] /ROCK/src.rivatv.1133154650.20966.2741706437/rivatv-0.8.6/src/i2c-riva.c:245: error: initializer element is not constant
-[5-ERROR] /ROCK/src.rivatv.1133154650.20966.2741706437/rivatv-0.8.6/src/i2c-riva.c:245: error: (near initialization for `i2c_riva_bus1.owner')
-[5-ERROR] /ROCK/src.rivatv.1133154650.20966.2741706437/rivatv-0.8.6/src/i2c-riva.c:265: error: initializer element is not constant
-[5-ERROR] /ROCK/src.rivatv.1133154650.20966.2741706437/rivatv-0.8.6/src/i2c-riva.c:265: error: (near initialization for `i2c_riva_bus2.owner')
-[5-ERROR] /ROCK/src.rivatv.1133154650.20966.2741706437/rivatv-0.8.6/src/i2c-riva.c: In function `bit_riva_reg':
-[5-ERROR] /ROCK/src.rivatv.1133154650.20966.2741706437/rivatv-0.8.6/src/i2c-riva.c:436: warning: implicit declaration of function `i2c_clientname'
-[5-ERROR] /ROCK/src.rivatv.1133154650.20966.2741706437/rivatv-0.8.6/src/i2c-riva.c:436: warning: format argument is not a pointer (arg 3)
-[5-ERROR] make[2]: *** [/ROCK/src.rivatv.1133154650.20966.2741706437/rivatv-0.8.6/src/i2c-riva.o] Error 1
-[5-ERROR] make[1]: *** [_module_/ROCK/src.rivatv.1133154650.20966.2741706437/rivatv-0.8.6/src] Error 2
-[5-ERROR] make[1]: Leaving directory `/usr/src/linux-2.6.14.2-rock'
+[5-ERROR] /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/bttv/tuner.c:1251:27: warning: "KERNEL_VERSION" is not defined
+[5-ERROR] /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/bttv/tuner.c:1251:41: missing binary operator before token "("
+[5-ERROR] /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/bttv/tuner.c: At top level:
+[5-ERROR] /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/bttv/tuner.c:1263: warning: implicit declaration of function `I2C_DEVNAME'
+[5-ERROR] /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/bttv/tuner.c:1263: error: initializer element is not constant
+[5-ERROR] /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/bttv/tuner.c:1263: error: (near initialization for `client_template.flags')
+[5-ERROR] make[2]: *** [/ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/bttv/tuner.o] Error 1
+[5-ERROR] make[1]: *** [_module_/ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/bttv] Error 2
+[5-ERROR] make[1]: Leaving directory `/usr/src/linux-2.6.15.4-rock'
+[5-ERROR] make: [all-kbuild] Error 2 (ignored)
+[5-ERROR] make[1]: Entering directory `/usr/src/linux-2.6.15.4-rock'
+[5-ERROR] 
+[5-ERROR]   WARNING: Symbol version dump /usr/src/linux-2.6.15.4-rock/Module.symvers
+[5-ERROR]            is missing; modules will have no dependencies and modversions.
+[5-ERROR] 
+[5-ERROR]   CC [M]  /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/src/rivatv-driver.o
+[5-ERROR] /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/src/rivatv-driver.c:232:5: warning: "EVER_IMPLEMENTED" is not defined
+[5-ERROR] /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/src/rivatv-driver.c:521:5: warning: "V4L_APPS_CARE_CORRECTLY" is not defined
+[5-ERROR] /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/src/rivatv-driver.c:882:5: warning: "EVER_IMPLEMENTED" is not defined
+[5-ERROR]   CC [M]  /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/src/v4l-riva.o
+[5-ERROR] /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/src/v4l-riva.c:1377:5: warning: "NVIDIA_SUPPORTS_OTHER_FORMATS" is not defined
+[5-ERROR] /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/src/v4l-riva.c: In function `rivatv_print_decoder':
+[5-ERROR] /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/src/v4l-riva.c:1991: warning: implicit declaration of function `i2c_clientname'
+[5-ERROR] /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/src/v4l-riva.c:1991: warning: pointer/integer type mismatch in conditional expression
+[5-ERROR]   CC [M]  /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/src/i2c-riva.o
+[5-ERROR] /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/src/i2c-riva.c:225: warning: implicit declaration of function `I2C_DEVNAME'
+[5-ERROR] /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/src/i2c-riva.c:225: error: initializer element is not constant
+[5-ERROR] /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/src/i2c-riva.c:225: error: (near initialization for `i2c_riva_bus0.owner')
+[5-ERROR] /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/src/i2c-riva.c:245: error: initializer element is not constant
+[5-ERROR] /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/src/i2c-riva.c:245: error: (near initialization for `i2c_riva_bus1.owner')
+[5-ERROR] /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/src/i2c-riva.c:265: error: initializer element is not constant
+[5-ERROR] /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/src/i2c-riva.c:265: error: (near initialization for `i2c_riva_bus2.owner')
+[5-ERROR] /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/src/i2c-riva.c: In function `bit_riva_reg':
+[5-ERROR] /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/src/i2c-riva.c:436: warning: implicit declaration of function `i2c_clientname'
+[5-ERROR] /ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/src/i2c-riva.c:436: warning: format argument is not a pointer (arg 3)
+[5-ERROR] make[2]: *** [/ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/src/i2c-riva.o] Error 1
+[5-ERROR] make[1]: *** [_module_/ROCK/src.rivatv.1143033273.13186.785966634/rivatv-0.8.6/src] Error 2
+[5-ERROR] make[1]: Leaving directory `/usr/src/linux-2.6.15.4-rock'
 [5-ERROR] make: *** [all-kbuild] Error 2
 [5-ERROR] --- BUILD ERROR ---
 [5-ERROR] Creating file list and doing final adaptions ... 
@@ -83,44 +91,44 @@
 [5-ERROR] Making post-install adaptions.
 [5-ERROR] Finished building rivatv=rivatv.
 
-[9-ERROR] /ROCK/src.rivatv.1133396798.27953.3175364203/rivatv-0.8.6/src/rivatv-driver.c:882:5: warning: "EVER_IMPLEMENTED" is not defined
-[9-ERROR]   CC [M]  /ROCK/src.rivatv.1133396798.27953.3175364203/rivatv-0.8.6/src/v4l-riva.o
-[9-ERROR] In file included from include/asm/thread_info.h:17,
-[9-ERROR]                  from include/linux/thread_info.h:21,
-[9-ERROR]                  from include/linux/spinlock.h:53,
-[9-ERROR]                  from include/linux/capability.h:45,
-[9-ERROR]                  from include/linux/sched.h:7,
-[9-ERROR]                  from include/linux/module.h:10,
-[9-ERROR]                  from /ROCK/src.rivatv.1133396798.27953.3175364203/rivatv-0.8.6/src/v4l-riva.c:30:
-[9-ERROR] include/asm/processor.h:250:22: warning: "/*" within comment
-[9-ERROR] include/asm/processor.h:251:1: warning: "/*" within comment
-[9-ERROR] /ROCK/src.rivatv.1133396798.27953.3175364203/rivatv-0.8.6/src/v4l-riva.c:1377:5: warning: "NVIDIA_SUPPORTS_OTHER_FORMATS" is not defined
-[9-ERROR] /ROCK/src.rivatv.1133396798.27953.3175364203/rivatv-0.8.6/src/v4l-riva.c: In function `rivatv_print_decoder':
-[9-ERROR] /ROCK/src.rivatv.1133396798.27953.3175364203/rivatv-0.8.6/src/v4l-riva.c:1991: warning: implicit declaration of function `i2c_clientname'
-[9-ERROR] /ROCK/src.rivatv.1133396798.27953.3175364203/rivatv-0.8.6/src/v4l-riva.c:1991: warning: pointer/integer type mismatch in conditional expression
-[9-ERROR]   CC [M]  /ROCK/src.rivatv.1133396798.27953.3175364203/rivatv-0.8.6/src/i2c-riva.o
-[9-ERROR] In file included from include/asm/thread_info.h:17,
-[9-ERROR]                  from include/linux/thread_info.h:21,
-[9-ERROR]                  from include/linux/spinlock.h:53,
-[9-ERROR]                  from include/linux/capability.h:45,
-[9-ERROR]                  from include/linux/sched.h:7,
-[9-ERROR]                  from include/linux/module.h:10,
-[9-ERROR]                  from /ROCK/src.rivatv.1133396798.27953.3175364203/rivatv-0.8.6/src/i2c-riva.c:22:
-[9-ERROR] include/asm/processor.h:250:22: warning: "/*" within comment
-[9-ERROR] include/asm/processor.h:251:1: warning: "/*" within comment
-[9-ERROR] /ROCK/src.rivatv.1133396798.27953.3175364203/rivatv-0.8.6/src/i2c-riva.c:225: warning: implicit declaration of function `I2C_DEVNAME'
-[9-ERROR] /ROCK/src.rivatv.1133396798.27953.3175364203/rivatv-0.8.6/src/i2c-riva.c:225: error: initializer element is not constant
-[9-ERROR] /ROCK/src.rivatv.1133396798.27953.3175364203/rivatv-0.8.6/src/i2c-riva.c:225: error: (near initialization for `i2c_riva_bus0.owner')
-[9-ERROR] /ROCK/src.rivatv.1133396798.27953.3175364203/rivatv-0.8.6/src/i2c-riva.c:245: error: initializer element is not constant
-[9-ERROR] /ROCK/src.rivatv.1133396798.27953.3175364203/rivatv-0.8.6/src/i2c-riva.c:245: error: (near initialization for `i2c_riva_bus1.owner')
-[9-ERROR] /ROCK/src.rivatv.1133396798.27953.3175364203/rivatv-0.8.6/src/i2c-riva.c:265: error: initializer element is not constant
-[9-ERROR] /ROCK/src.rivatv.1133396798.27953.3175364203/rivatv-0.8.6/src/i2c-riva.c:265: error: (near initialization for `i2c_riva_bus2.owner')
-[9-ERROR] /ROCK/src.rivatv.1133396798.27953.3175364203/rivatv-0.8.6/src/i2c-riva.c: In function `bit_riva_reg':
-[9-ERROR] /ROCK/src.rivatv.1133396798.27953.3175364203/rivatv-0.8.6/src/i2c-riva.c:436: warning: implicit declaration of function `i2c_clientname'
-[9-ERROR] /ROCK/src.rivatv.1133396798.27953.3175364203/rivatv-0.8.6/src/i2c-riva.c:436: warning: format argument is not a pointer (arg 3)
-[9-ERROR] make[2]: *** [/ROCK/src.rivatv.1133396798.27953.3175364203/rivatv-0.8.6/src/i2c-riva.o] Error 1
-[9-ERROR] make[1]: *** [_module_/ROCK/src.rivatv.1133396798.27953.3175364203/rivatv-0.8.6/src] Error 2
-[9-ERROR] make[1]: Leaving directory `/usr/src/linux-2.6.14.2-rock'
+[9-ERROR] /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/bttv/tuner.c:1251:27: warning: "KERNEL_VERSION" is not defined
+[9-ERROR] /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/bttv/tuner.c:1251:41: missing binary operator before token "("
+[9-ERROR] /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/bttv/tuner.c: At top level:
+[9-ERROR] /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/bttv/tuner.c:1263: warning: implicit declaration of function `I2C_DEVNAME'
+[9-ERROR] /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/bttv/tuner.c:1263: error: initializer element is not constant
+[9-ERROR] /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/bttv/tuner.c:1263: error: (near initialization for `client_template.flags')
+[9-ERROR] make[2]: *** [/ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/bttv/tuner.o] Error 1
+[9-ERROR] make[1]: *** [_module_/ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/bttv] Error 2
+[9-ERROR] make[1]: Leaving directory `/usr/src/linux-2.6.15.4-rock'
+[9-ERROR] make: [all-kbuild] Error 2 (ignored)
+[9-ERROR] make[1]: Entering directory `/usr/src/linux-2.6.15.4-rock'
+[9-ERROR] 
+[9-ERROR]   WARNING: Symbol version dump /usr/src/linux-2.6.15.4-rock/Module.symvers
+[9-ERROR]            is missing; modules will have no dependencies and modversions.
+[9-ERROR] 
+[9-ERROR]   CC [M]  /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/src/rivatv-driver.o
+[9-ERROR] /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/src/rivatv-driver.c:232:5: warning: "EVER_IMPLEMENTED" is not defined
+[9-ERROR] /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/src/rivatv-driver.c:521:5: warning: "V4L_APPS_CARE_CORRECTLY" is not defined
+[9-ERROR] /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/src/rivatv-driver.c:882:5: warning: "EVER_IMPLEMENTED" is not defined
+[9-ERROR]   CC [M]  /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/src/v4l-riva.o
+[9-ERROR] /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/src/v4l-riva.c:1377:5: warning: "NVIDIA_SUPPORTS_OTHER_FORMATS" is not defined
+[9-ERROR] /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/src/v4l-riva.c: In function `rivatv_print_decoder':
+[9-ERROR] /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/src/v4l-riva.c:1991: warning: implicit declaration of function `i2c_clientname'
+[9-ERROR] /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/src/v4l-riva.c:1991: warning: pointer/integer type mismatch in conditional expression
+[9-ERROR]   CC [M]  /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/src/i2c-riva.o
+[9-ERROR] /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/src/i2c-riva.c:225: warning: implicit declaration of function `I2C_DEVNAME'
+[9-ERROR] /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/src/i2c-riva.c:225: error: initializer element is not constant
+[9-ERROR] /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/src/i2c-riva.c:225: error: (near initialization for `i2c_riva_bus0.owner')
+[9-ERROR] /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/src/i2c-riva.c:245: error: initializer element is not constant
+[9-ERROR] /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/src/i2c-riva.c:245: error: (near initialization for `i2c_riva_bus1.owner')
+[9-ERROR] /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/src/i2c-riva.c:265: error: initializer element is not constant
+[9-ERROR] /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/src/i2c-riva.c:265: error: (near initialization for `i2c_riva_bus2.owner')
+[9-ERROR] /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/src/i2c-riva.c: In function `bit_riva_reg':
+[9-ERROR] /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/src/i2c-riva.c:436: warning: implicit declaration of function `i2c_clientname'
+[9-ERROR] /ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/src/i2c-riva.c:436: warning: format argument is not a pointer (arg 3)
+[9-ERROR] make[2]: *** [/ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/src/i2c-riva.o] Error 1
+[9-ERROR] make[1]: *** [_module_/ROCK/src.rivatv.1143042914.10623.3738542040/rivatv-0.8.6/src] Error 2
+[9-ERROR] make[1]: Leaving directory `/usr/src/linux-2.6.15.4-rock'
 [9-ERROR] make: *** [all-kbuild] Error 2
 [9-ERROR] --- BUILD ERROR ---
 [9-ERROR] Creating file list and doing final adaptions ... 

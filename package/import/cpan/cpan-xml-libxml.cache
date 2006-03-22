@@ -5,7 +5,7 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/import/cpan/cpan-xml-libxml.cache
+[COPY] ROCK Linux: rock-src/package/import/cpan/cpan.cache
 [COPY] ROCK Linux is Copyright (C) 1998 - 2006 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133005167 Sat Nov 26 12:39:27 2005 (5)
-[TIMESTAMP] 1133230518 Tue Nov 29 03:15:18 2005 (9)
+[TIMESTAMP] 1142492480 Thu Mar 16 08:01:20 2006 (5)
+[TIMESTAMP] 1142741888 Sun Mar 19 05:18:08 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-cpan-xml-libxml.log 9-cpan-xml-libxml.log
 
-[BUILDTIME] 1741 (5)
-[BUILDTIME] 2421 (9)
+[BUILDTIME] 1746 (5)
+[BUILDTIME] 2442 (9)
 [SIZE] 0.56 MB, 56 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils cpan-xml-libxml-common
 [DEP] cpan-xml-namespacesupport cpan-xml-parser cpan-xml-sax findutils
 [DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libxml2 libxml2:dev
-[DEP] linux26-header:dev make mktemp perl5 sed sysfiles tar zlib:dev
+[DEP] linux26-header:dev make mktemp perl5 rrdtool sed sysfiles tar
+[DEP] zlib:dev
 
 [PROVIDES] LibXML.so
 

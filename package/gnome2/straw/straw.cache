@@ -20,24 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133079936 Sun Nov 27 09:25:36 2005 (5)
-[TIMESTAMP] 1133314931 Wed Nov 30 02:42:11 2005 (9)
+[TIMESTAMP] 1142569040 Fri Mar 17 05:17:20 2006 (5) ERROR
+[TIMESTAMP] 1142831093 Mon Mar 20 06:04:53 2006 (9) ERROR
+[TIMESTAMP] 1142961262 Tue Mar 21 18:14:22 2006 (5) ERROR
+[TIMESTAMP] 1142972465 Tue Mar 21 21:21:05 2006 (9) ERROR
+[TIMESTAMP] 1143032214 Wed Mar 22 13:56:54 2006 (5) ERROR
+[TIMESTAMP] 1143041815 Wed Mar 22 16:36:55 2006 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-straw.log 9-straw.log
+[LOGS] 5-straw.err 9-straw.err
 
-[BUILDTIME] 1441 (5)
-[BUILDTIME] 1737 (9)
-[SIZE] 1.24 MB, 117 files
+[BUILDTIME] 1266 (5) ERROR
+[BUILDTIME] 1589 (9) ERROR
+[BUILDTIME] 1598 (5) ERROR
+[BUILDTIME] 1607 (9) ERROR
+[BUILDTIME] 1605 (5) ERROR
+[BUILDTIME] 1604 (9) ERROR
 
-[DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 control-center coreutils
-[DEP] findutils gcc34 gcc34:dev gconf glib glib:dev glibc23 glibc23:dev
-[DEP] gnome-python gnome-vfs gnome-vfs-extras gnome2-dirtree grep gtk+
-[DEP] gtk+:dev intltool linux26-header:dev mktemp nautilus-cd-burner pango
-[DEP] pango:dev perl5 pkgconfig pygtk pygtk:dev pyorbit python python:dev
-[DEP] sed sysfiles tar xorg xorg:dev zapping
 
-[PROVIDES] pytrayicon.so straw
+[5-ERROR] creating build/share/locale/es/LC_MESSAGES
+[5-ERROR] creating build/share/locale/fi
+[5-ERROR] creating build/share/locale/fi/LC_MESSAGES
+[5-ERROR] creating build/share/locale/fr
+[5-ERROR] creating build/share/locale/fr/LC_MESSAGES
+[5-ERROR] creating build/share/locale/nl
+[5-ERROR] creating build/share/locale/nl/LC_MESSAGES
+[5-ERROR] creating build/share/locale/no
+[5-ERROR] creating build/share/locale/no/LC_MESSAGES
+[5-ERROR] creating build/share/locale/pt
+[5-ERROR] creating build/share/locale/pt/LC_MESSAGES
+[5-ERROR] creating build/share/locale/ru
+[5-ERROR] creating build/share/locale/ru/LC_MESSAGES
+[5-ERROR] creating build/share/locale/sr
+[5-ERROR] creating build/share/locale/sr/LC_MESSAGES
+[5-ERROR] creating build/share/locale/sv
+[5-ERROR] creating build/share/locale/sv/LC_MESSAGES
+[5-ERROR] creating build/share/locale/en_CA
+[5-ERROR] creating build/share/locale/en_CA/LC_MESSAGES
+[5-ERROR] creating build/share/locale/en_GB
+[5-ERROR] creating build/share/locale/en_GB/LC_MESSAGES
+[5-ERROR] creating build/share/locale/sr@Latn
+[5-ERROR] creating build/share/locale/sr@Latn/LC_MESSAGES
+[5-ERROR] creating build/share/locale/pt_BR
+[5-ERROR] creating build/share/locale/pt_BR/LC_MESSAGES
+[5-ERROR] running build_desktop
+[5-ERROR] creating build/share/applications
+[5-ERROR] WARNING: po/ru.po is not in UTF-8 but koi8-r, converting...
+[5-ERROR] WARNING: po/no.po is not in UTF-8 but ISO-8859-1, converting...
+[5-ERROR] WARNING: po/fi.po is not in UTF-8 but ISO-8859-1, converting...
+[5-ERROR] WARNING: po/fr.po is not in UTF-8 but ISO-8859-1, converting...
+[5-ERROR] WARNING: po/de.po is not in UTF-8 but ISO-8859-1, converting...
+[5-ERROR] Merging translations into build/share/applications/straw.desktop.
+[5-ERROR] running install
+[5-ERROR] running install_modules_check
+[5-ERROR] /opt/gnome2/lib/python2.4/site-packages/gtk-2.0/gnome/vfs.py:4: DeprecationWarning: Module gnome.vfs is deprecated; please import gnomevfs instead
+[5-ERROR]   DeprecationWarning)
+[5-ERROR] Error: gtkhtml2 Python module is required to install Straw
+[5-ERROR] Warning: ADNS Python module not found, will continue without.
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing static lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 0 files for this package.
+[5-ERROR] Applying package split: 40 straw:dev (/lib/.*\.(la|a|o)$|/include/)
+[5-ERROR] Applying package split: 42 straw:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 straw:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Finished building straw=straw.
+
+[9-ERROR] creating build/share/locale/es/LC_MESSAGES
+[9-ERROR] creating build/share/locale/fi
+[9-ERROR] creating build/share/locale/fi/LC_MESSAGES
+[9-ERROR] creating build/share/locale/fr
+[9-ERROR] creating build/share/locale/fr/LC_MESSAGES
+[9-ERROR] creating build/share/locale/nl
+[9-ERROR] creating build/share/locale/nl/LC_MESSAGES
+[9-ERROR] creating build/share/locale/no
+[9-ERROR] creating build/share/locale/no/LC_MESSAGES
+[9-ERROR] creating build/share/locale/pt
+[9-ERROR] creating build/share/locale/pt/LC_MESSAGES
+[9-ERROR] creating build/share/locale/ru
+[9-ERROR] creating build/share/locale/ru/LC_MESSAGES
+[9-ERROR] creating build/share/locale/sr
+[9-ERROR] creating build/share/locale/sr/LC_MESSAGES
+[9-ERROR] creating build/share/locale/sv
+[9-ERROR] creating build/share/locale/sv/LC_MESSAGES
+[9-ERROR] creating build/share/locale/en_CA
+[9-ERROR] creating build/share/locale/en_CA/LC_MESSAGES
+[9-ERROR] creating build/share/locale/en_GB
+[9-ERROR] creating build/share/locale/en_GB/LC_MESSAGES
+[9-ERROR] creating build/share/locale/sr@Latn
+[9-ERROR] creating build/share/locale/sr@Latn/LC_MESSAGES
+[9-ERROR] creating build/share/locale/pt_BR
+[9-ERROR] creating build/share/locale/pt_BR/LC_MESSAGES
+[9-ERROR] running build_desktop
+[9-ERROR] creating build/share/applications
+[9-ERROR] WARNING: po/ru.po is not in UTF-8 but koi8-r, converting...
+[9-ERROR] WARNING: po/no.po is not in UTF-8 but ISO-8859-1, converting...
+[9-ERROR] WARNING: po/fi.po is not in UTF-8 but ISO-8859-1, converting...
+[9-ERROR] WARNING: po/fr.po is not in UTF-8 but ISO-8859-1, converting...
+[9-ERROR] WARNING: po/de.po is not in UTF-8 but ISO-8859-1, converting...
+[9-ERROR] Merging translations into build/share/applications/straw.desktop.
+[9-ERROR] running install
+[9-ERROR] running install_modules_check
+[9-ERROR] /opt/gnome2/lib/python2.4/site-packages/gtk-2.0/gnome/vfs.py:4: DeprecationWarning: Module gnome.vfs is deprecated; please import gnomevfs instead
+[9-ERROR]   DeprecationWarning)
+[9-ERROR] Error: gtkhtml2 Python module is required to install Straw
+[9-ERROR] Warning: ADNS Python module not found, will continue without.
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 0 files for this package.
+[9-ERROR] Applying package split: 40 straw:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Applying package split: 42 straw:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 straw:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Finished building straw=straw.
 

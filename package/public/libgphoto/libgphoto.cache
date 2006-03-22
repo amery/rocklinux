@@ -20,69 +20,49 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133028741 Sat Nov 26 19:12:21 2005 (5)
-[TIMESTAMP] 1133257721 Tue Nov 29 10:48:41 2005 (9)
+[TIMESTAMP] 1142518539 Thu Mar 16 15:15:39 2006 (5)
+[TIMESTAMP] 1142772454 Sun Mar 19 13:47:34 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-libgphoto.log 9-libgphoto.log
 
-[BUILDTIME] 22790 (5)
-[BUILDTIME] 23806 (9)
-[SIZE] 2.52 MB, 112 files
+[BUILDTIME] 28314 (5)
+[BUILDTIME] 29583 (9)
+[SIZE] 2.93 MB, 121 files
 
-[DEP] 00-dirtree alien bash2 binutils bison bzip2 coreutils diffutils
+[DEP] 00-dirtree alien bash2 binutils bzip2 coreutils diffutils doxygen
 [DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev
-[DEP] grep libexif libexif:dev libjpeg libjpeg:dev libusb libusb:dev
-[DEP] linux26-header:dev make mktemp net-tools pkgconfig rpm sed sysfiles
-[DEP] tar util-linux xscreensaver
+[DEP] gnome-libs14 gnome14-dirtree graphviz grep libexif libexif:dev
+[DEP] libjpeg libjpeg:dev libtool libtool:dev libusb libusb:dev
+[DEP] linux26-header:dev make mktemp net-tools pkgconfig rpm rrdtool sed
+[DEP] sysfiles tar util-linux xscreensaver
 
-[PROVIDES] gphoto2-config gphoto2-port-config libgphoto2.a
-[PROVIDES] libgphoto2.so libgphoto2_agfa_cl20.a libgphoto2_agfa_cl20.so
-[PROVIDES] libgphoto2_aox.a libgphoto2_aox.so libgphoto2_barbie.a
-[PROVIDES] libgphoto2_barbie.so libgphoto2_canon.a libgphoto2_canon.so
-[PROVIDES] libgphoto2_casio_qv.a libgphoto2_casio_qv.so libgphoto2_digita.a
-[PROVIDES] libgphoto2_digita.so libgphoto2_dimagev.a libgphoto2_dimagev.so
-[PROVIDES] libgphoto2_dimera3500.a libgphoto2_dimera3500.so
-[PROVIDES] libgphoto2_directory.a libgphoto2_directory.so
-[PROVIDES] libgphoto2_enigma13.a libgphoto2_enigma13.so libgphoto2_ez200.a
-[PROVIDES] libgphoto2_ez200.so libgphoto2_fuji.a libgphoto2_fuji.so
-[PROVIDES] libgphoto2_gsmart300.a libgphoto2_gsmart300.so
-[PROVIDES] libgphoto2_iclick.a libgphoto2_iclick.so libgphoto2_jamcam.a
-[PROVIDES] libgphoto2_jamcam.so libgphoto2_jd11.a libgphoto2_jd11.so
-[PROVIDES] libgphoto2_kodak_dc120.a libgphoto2_kodak_dc120.so
-[PROVIDES] libgphoto2_kodak_dc210.a libgphoto2_kodak_dc210.so
-[PROVIDES] libgphoto2_kodak_dc240.a libgphoto2_kodak_dc240.so
-[PROVIDES] libgphoto2_kodak_dc3200.a libgphoto2_kodak_dc3200.so
-[PROVIDES] libgphoto2_konica.a libgphoto2_konica.so
-[PROVIDES] libgphoto2_konica_qm150.a libgphoto2_konica_qm150.so
-[PROVIDES] libgphoto2_largan.a libgphoto2_largan.so libgphoto2_mars.a
-[PROVIDES] libgphoto2_mars.so libgphoto2_mustek.a libgphoto2_mustek.so
-[PROVIDES] libgphoto2_panasonic_coolshot.a libgphoto2_panasonic_coolshot.so
-[PROVIDES] libgphoto2_panasonic_dc1000.a libgphoto2_panasonic_dc1000.so
-[PROVIDES] libgphoto2_panasonic_dc1580.a libgphoto2_panasonic_dc1580.so
-[PROVIDES] libgphoto2_panasonic_l859.a libgphoto2_panasonic_l859.so
-[PROVIDES] libgphoto2_pccam300.a libgphoto2_pccam300.so
-[PROVIDES] libgphoto2_pccam600.a libgphoto2_pccam600.so
-[PROVIDES] libgphoto2_polaroid_pdc320.a libgphoto2_polaroid_pdc320.so
-[PROVIDES] libgphoto2_polaroid_pdc640.a libgphoto2_polaroid_pdc640.so
-[PROVIDES] libgphoto2_polaroid_pdc700.a libgphoto2_polaroid_pdc700.so
-[PROVIDES] libgphoto2_port.a libgphoto2_port.so libgphoto2_port_serial.a
-[PROVIDES] libgphoto2_port_serial.so libgphoto2_port_usb.a
-[PROVIDES] libgphoto2_port_usb.so libgphoto2_ptp2.a libgphoto2_ptp2.so
-[PROVIDES] libgphoto2_ricoh.a libgphoto2_ricoh.so libgphoto2_ricoh_g3.a
-[PROVIDES] libgphoto2_ricoh_g3.so libgphoto2_samsung.a
-[PROVIDES] libgphoto2_samsung.so libgphoto2_sierra.a libgphoto2_sierra.so
-[PROVIDES] libgphoto2_sipix_blink.a libgphoto2_sipix_blink.so
-[PROVIDES] libgphoto2_sipix_blink2.a libgphoto2_sipix_blink2.so
-[PROVIDES] libgphoto2_sipix_web2.a libgphoto2_sipix_web2.so
-[PROVIDES] libgphoto2_smal.a libgphoto2_smal.so libgphoto2_sony_dscf1.a
-[PROVIDES] libgphoto2_sony_dscf1.so libgphoto2_sony_dscf55.a
-[PROVIDES] libgphoto2_sony_dscf55.so libgphoto2_soundvision.a
-[PROVIDES] libgphoto2_soundvision.so libgphoto2_spca50x.a
-[PROVIDES] libgphoto2_spca50x.so libgphoto2_sq905.a libgphoto2_sq905.so
-[PROVIDES] libgphoto2_stv0674.a libgphoto2_stv0674.so libgphoto2_stv0680.a
-[PROVIDES] libgphoto2_stv0680.so libgphoto2_sx330z.a libgphoto2_sx330z.so
-[PROVIDES] libgphoto2_toshiba_pdrm11.a libgphoto2_toshiba_pdrm11.so
+[PROVIDES] adc65.a adc65.so agfa_cl20.a agfa_cl20.so aox.a aox.so barbie.a
+[PROVIDES] barbie.so canon.a canon.so casio_qv.a casio_qv.so digigr8.a
+[PROVIDES] digigr8.so digita.a digita.so dimagev.a dimagev.so dimera3500.a
+[PROVIDES] dimera3500.so directory.a directory.so disk.a disk.so enigma13.a
+[PROVIDES] enigma13.so fuji.a fuji.so gphoto2-config gphoto2-port-config
+[PROVIDES] gsmart300.a gsmart300.so hp215.a hp215.so iclick.a iclick.so
+[PROVIDES] jamcam.a jamcam.so jd11.a jd11.so kodak_dc120.a kodak_dc120.so
+[PROVIDES] kodak_dc210.a kodak_dc210.so kodak_dc240.a kodak_dc240.so
+[PROVIDES] kodak_dc3200.a kodak_dc3200.so kodak_ez200.a kodak_ez200.so
+[PROVIDES] konica.a konica.so konica_qm150.a konica_qm150.so largan.a
+[PROVIDES] largan.so lg_gsm.a lg_gsm.so libgphoto2.a libgphoto2.so
+[PROVIDES] libgphoto2_port.a libgphoto2_port.so mars.a mars.so mustek.a
+[PROVIDES] mustek.so panasonic_coolshot.a panasonic_coolshot.so
+[PROVIDES] panasonic_dc1000.a panasonic_dc1000.so panasonic_dc1580.a
+[PROVIDES] panasonic_dc1580.so panasonic_l859.a panasonic_l859.so
+[PROVIDES] pccam300.a pccam300.so pccam600.a pccam600.so polaroid_pdc320.a
+[PROVIDES] polaroid_pdc320.so polaroid_pdc640.a polaroid_pdc640.so
+[PROVIDES] polaroid_pdc700.a polaroid_pdc700.so ptp2.a ptp2.so ricoh.a
+[PROVIDES] ricoh.so ricoh_g3.a ricoh_g3.so samsung.a samsung.so serial.a
+[PROVIDES] serial.so sierra.a sierra.so sipix_blink.a sipix_blink.so
+[PROVIDES] sipix_blink2.a sipix_blink2.so sipix_web2.a sipix_web2.so
+[PROVIDES] smal.a smal.so sonix.a sonix.so sony_dscf1.a sony_dscf1.so
+[PROVIDES] sony_dscf55.a sony_dscf55.so soundvision.a soundvision.so
+[PROVIDES] spca50x.a spca50x.so sq905.a sq905.so stv0674.a stv0674.so
+[PROVIDES] stv0680.a stv0680.so sx330z.a sx330z.so toshiba_pdrm11.a
+[PROVIDES] toshiba_pdrm11.so usb.a usb.so
 

@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1132995640 Sat Nov 26 10:00:40 2005 (5)
-[TIMESTAMP] 1133219044 Tue Nov 29 00:04:04 2005 (9)
+[TIMESTAMP] 1142483202 Thu Mar 16 05:26:42 2006 (5)
+[TIMESTAMP] 1142729800 Sun Mar 19 01:56:40 2006 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-libavc1394.log 9-libavc1394.log
 
-[BUILDTIME] 2823 (5)
-[BUILDTIME] 3496 (9)
+[BUILDTIME] 2890 (5)
+[BUILDTIME] 3488 (9)
 [SIZE] 0.06 MB, 16 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
 [DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep libraw1394 libraw1394:dev
-[DEP] linux26-header:dev make mktemp net-tools pkgconfig sed sysfiles
-[DEP] tar util-linux
+[DEP] linux26-header:dev make mktemp net-tools pkgconfig rrdtool sed
+[DEP] sysfiles tar util-linux
 
 [PROVIDES] dvcont libavc1394.a libavc1394.so librom1394.a librom1394.so
 [PROVIDES] mkrfc2734

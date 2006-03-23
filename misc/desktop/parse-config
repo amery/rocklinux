@@ -92,7 +92,9 @@ postflist_desktop() {
 
 	grep \\.desktop\$ ${builddir}/flist.txt | while read desktop ; do
 		[ ! -f "${desktop}" ] && continue
-		[ "${desktop/opt?kde/}" != "${desktop}" ] && continue
+		# this is dirty!
+		[ "${desktop/konqueror\.desktop/}" != "${desktop}" ] && continue
+		[ "${desktop/System\/ScreenSavers/}" != "${desktop}" ] && continue
 
 		echo "Checking ${desktop} ... "
 		rm -f "${tmp}"

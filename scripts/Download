@@ -548,7 +548,7 @@ download_file() {
 
 	# Execute a cksum test on a raw data file
 	#
-	else
+	elif [ $nocheck = 0 ] ; then
 		echo "cksum-test (raw): $gzfile"
 		cksum_chk "$gzfile" $cksum "$gzfile"
 	fi

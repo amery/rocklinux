@@ -66,6 +66,7 @@ pkgfilter sed '
 / openssl /	{ p; d; };	/ openssh /	{ p; d; };
 / ntfsprogs /	{ p; d; };
 / gmp /		{ p; d; };
+/ lzo /		{ p; d; };
 
 # Select some packages explicitely (architectures)
 / bin86 /	{ p; d; };

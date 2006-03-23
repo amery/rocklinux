@@ -160,5 +160,5 @@ fi
 EOF
 chmod 755 etc/init.d/rcS etc/boot.d/[0-9][0-9]-*
 echo_status "Creating system.tar.bz2 archive."
-tar -cIf ../system.tar.bz2 * ; cd ..
+tar --use-compress-program=bzip2 -cf ../system.tar.bz2 * ; cd ..
 

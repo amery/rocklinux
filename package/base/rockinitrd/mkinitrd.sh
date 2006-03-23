@@ -1,110 +1,224 @@
 #!/bin/bash
 
 kernel=`uname -r`
-tmpdir=`mktemp -d`
+targetdir=`mktemp -d`
 modprobeopt=`echo $kernel | sed '/2.4/ { s,.*,-n,; q; }; s,.*,--show-depends,'`
 empty=0
 
-if [ "$1" = "empty" ]; then
-	empty=1; shift
-fi
+rootdir=""
+cross_compile=""
+initrdfs="cramfs"
+block_size=""
+ramdisk_size=8192
 
-if [ -n "$1" ]; then
-	if [ -d "/lib/modules/$1" ]; then
-		kernel="$1"
-	else
-		echo "Can't open /lib/modules/$1: No such directory."
-		echo "Usage: $0 [ kernel-version ]"
-		exit 1
-	fi
-fi
+# Successfully tested combinations: <arch> <blocksize> <initrdfs>
+#	ARM (QEMU)			1024			ext2fs
+#	ARM (QEMU)			4096			cramfs
+#	x86 (QEMU)			1024			ext2fs
+#	x86 (QEMU)			4096			cramfs
 
-echo "Creating /boot/initrd-${kernel}.img ..."
-mkdir -p $tmpdir/etc/conf
+while [ $# -gt 0 ] ; do
+	case $1 in
+	empty) empty=1 ;;
+	-root) 
+		if [ -d "$2/" ]; then
+			rootdir="${2%/}" ; shift
+		else
+			echo "Can't open ${2}: No such directory."
+			echo "Usage: $0 [ kernel-version ]"
+			exit 1
+		fi
+		;;
+	-cross) cross_compile="$2" ; shift ;;
+	-bs) block_size="$2" ; shift ;;
+	-fs)
+		case "$2" in
+		ext2fs|ext3fs|cramfs|ramfs) initrdfs="$2" ; shift ;;
+		*)
+			echo "Filesystem $2 not supported as initrd filesystem."
+			exit 1
+			;;
+		esac
+		;;
+	*)
+		if [ -d "${rootdir}/lib/modules/$1" ]; then
+			kernel="$1"
+			echo kernel $kernel
+		else
+			echo "Can't open ${rootdir}/lib/modules/$1: No such directory."
+			echo "Usage: $0 [ kernel-version ]"
+			exit 1
+		fi
+		;;
+	esac
+	shift
+done
+
+case $initrdfs in
+	ext2fs|ext3fs|cramfs) 
+		initrd_img="${rootdir}/boot/initrd-${kernel}.img"
+		;;
+	ramfs)
+		initrd_img="${rootdir}/boot/initrd-${kernel}.cpio"
+		;;
+esac
+
+echo "Creating $initrd_img ..."
+mkdir -p $targetdir/etc/conf
 if [ "$empty" = 0 ] ; then
-	grep '^modprobe ' /etc/conf/kernel | grep -v 'no-initrd' | \
+	grep '^modprobe ' ${rootdir}/etc/conf/kernel | grep -v 'no-initrd' | \
 		sed 's,[ 	]#.*,,' | \
 		while read a b ; do $a $modprobeopt -v $b 2> /dev/null; done |
 		while read a b c; do
 			[[ "$b" = *.ko ]] && b=${b/.ko/};
-			b="`find /lib/modules/$kernel -wholename "$b.o" -o -wholename "$b.ko"`"
+			b="`find ${rootdir}/lib/modules/$kernel -wholename "$b.o" -o -wholename "$b.ko"`"
 			echo "Adding $b."
-			mkdir -p $tmpdir/${b%/*}
-			cp $b $tmpdir/$b
-			echo "/sbin/insmod $b $c" >> $tmpdir/etc/conf/kernel
+			mkdir -p $targetdir/${b%/*}
+			cp $b $targetdir/$b
+			echo "/sbin/insmod $b $c" >> $targetdir/etc/conf/kernel
 		done
 fi
-mkdir -p $tmpdir/dev $tmpdir/root $tmpdir/tmp $tmpdir/proc $tmpdir/sys
-mknod $tmpdir/dev/ram0	b 1 0
-mknod $tmpdir/dev/null	c 1 3
-mknod $tmpdir/dev/zero	c 1 5
-mknod $tmpdir/dev/tty	c 5 0
-mknod $tmpdir/dev/console c 5 1
+
+mkdir -p $targetdir/{dev,root,tmp,proc,sys}
+mknod $targetdir/dev/ram0	b 1 0
+mknod $targetdir/dev/null	c 1 3
+mknod $targetdir/dev/zero	c 1 5
+mknod $targetdir/dev/tty	c 5 0
+mknod $targetdir/dev/console	c 5 1
+
 # this copies a set of programs and the necessary libraries into a
 # chroot environment
 
 echo -n "Checking necessary fsck programs ... "
 while read dev a mnt b fs c ; do
-	[ -e "/sbin/fsck.${fs}" ] && echo "/sbin/fsck.${fs} /sbin/fsck.${fs}"
+	[ -e "${rootdir}/sbin/fsck.${fs}" ] && echo "/sbin/fsck.${fs} /sbin/fsck.${fs}"
 done < <( mount ) | sort | uniq >/etc/conf/initrd/initrd_fsck
 echo "/sbin/fsck /sbin/fsck" >>/etc/conf/initrd/initrd_fsck
 echo "done"
 
-targetdir=$tmpdir
-programs="/bin/bash /bin/bash2 /bin/sh /bin/ls /sbin/pivot_root /sbin/insmod /sbin/insmod.old /bin/mount /bin/umount /usr/bin/chroot /etc/fstab /bin/mkdir"
+libdirs="${rootdir}/lib `sed -e"s,^\(.*\),${rootdir}\1," ${rootdir}/etc/ld.so.conf | tr '\n' ' '`"
 
-libs="/lib/ld-linux.so.2"
-for x in $programs ; do
-	[ -e $x ] || continue
-	mkdir -p $targetdir/${x%/*}
-	cp -a $x $targetdir/$x
-	file $x | grep -q ELF || continue
-	libs="$libs `ldd $x 2>/dev/null | grep -v 'not a dynamic executable' | sed -e 's,^[\t ]*,,g' | cut -f 3 -d' '`"
-done
+needed_libs() {
+	local x="$1" library
 
-for x in /etc/conf/initrd/initrd_* ; do
+	${cross_compile}readelf -d $x 2>/dev/null | grep "(NEEDED)" |
+		sed -e"s,.*Shared library: \[\(.*\)\],\1," |
+		while read library ; do
+			find $libdirs -name "$library" 2>/dev/null |
+			sed -e "s,^$rootdir,,g" | tr '\n' ' '
+		done
+}
+
+echo -n "Copying other files ... "
+for x in ${rootdir}/etc/conf/initrd/initrd_* ; do
 	[ -f $x ] || continue
 	while read file target ; do
-		if [ -d $file ] ; then
-			find $file -type f -o -type b -o -type c -o -type l | while read f ; do
-				tfile=${targetdir}/${target}/${f#$file}
-				[ -e $tfile ] && continue
+		file="${rootdir}/$file"
+		[ -e $file ] || continue
+
+		for f in `find $file` ; do
+			tfile=${targetdir}/${target}${f#$file}
+			[ -e $tfile ] && continue
+
+			if [ -d $f -a ! -L $f ] ; then
+				mkdir -p ${tfile}
+				continue
+			else
 				mkdir -p ${tfile%/*}
+			fi
+
+# 			if [ -b $f -o -c $f -o -p $f -o -L $f ] ; then
 				cp -a $f $tfile
-				file $x | grep -q ELF || continue
-				libs="$libs `ldd $f 2>/dev/null | grep -v 'not a dynamic executable' | sed -e 's,^[\t ]*,,g' | cut -f 3 -d' '`"
-			done
-		fi
-		[ -f $file ] || continue
-		mkdir -p $targetdir/${target%/*}
-		cp $file $targetdir/$target
-		file $file | grep -q ELF || continue
-		libs="$libs `ldd $file 2>/dev/null | grep -v 'not a dynamic executable' | sed -e 's,^[\t ]*,,g' | cut -f 3 -d' '`"
+# 			else
+# 				cp $f $tfile
+# 			fi
+
+			file -L $f | grep -q ELF || continue
+			libs="$libs `needed_libs $f`"
+		done
 	done < $x
 done
+echo "done"
 
+echo -n "Copying required libraries ... "
 while [ -n "$libs" ] ; do
 	oldlibs=$libs
 	libs=""
 	for x in $oldlibs ; do
+		[ -e $targetdir/$x ] && continue
 		mkdir -p $targetdir/${x%/*}
-		cp $x $targetdir/$x
-		file $x | grep -q ELF || continue
-		for y in `ldd $x 2>/dev/null | grep -v 'not a dynamic executable' | sed -e 's,^[\t ]*,,g' | cut -f 3 -d' '` ; do
+		cp $rootdir/$x $targetdir/$x
+		file -L $rootdir/$x | grep -q ELF || continue
+		for y in `needed_libs $rootdir/$x` ; do
 			[ ! -e "$targetdir/$y" ] && libs="$libs $y"
 		done
 	done
 done
+echo "done"
+
+echo "Creating links for identical files ..."
+while read ck fn
+do
+	# don't link empty files...
+	if [ "$oldck" = "$ck" -a -s "$fn" ] ; then
+		echo "\`- Found ${fn#$targetdir} -> ${oldfn#$targetdir}."
+		rm $fn ; ln -s /${oldfn#$targetdir} $fn
+	else
+		oldck=$ck ; oldfn=$fn
+	fi
+done < <( find $targetdir -type f | xargs md5sum | sort )
 
 # though this is not clean, it helps avoid a warning from fsck about
 # it being unable to determine wether a filesystem is mounted.
 ln -s /proc/mounts $targetdir/etc/mtab
 
-itmp=`mktemp`
-mkfs.cramfs $tmpdir ${itmp}
-gzip -9 < ${itmp} > /boot/initrd-${kernel}.img
-rm -f ${itmp}
+echo "Creating initrd filesystem image ($initrdfs): "
+case "$initrdfs" in
+cramfs)
+	[ "$block_size" == "" ] && block_size=4096
+	mkfs.cramfs -b $block_size $targetdir $initrd_img
+	;;
+ramfs)
+#	cp -a $targetdir/{linuxrc,init}
+	( cd $targetdir ; find | cpio -o -c > $initrd_img ; )
+	;;	
+ext2fs|ext3fs)
+	[ "$block_size" == "" ] && block_size=1024
+	block_count=$(( ( 1024 * $ramdisk_size ) / $block_size ))
 
-rm -rf $tmpdir
+	echo "Creating temporary files."
+	tmpdir=`mktemp -d` ; mkdir -p $tmpdir
+	dd if=/dev/zero of=$initrd_img bs=${block_size} count=$block_count &> /dev/null
+	tmpdev="`losetup -f 2>/dev/null`"
+	if [ -z "$tmpdev" ] ; then
+		for x in /dev/loop* /dev/loop/* ; do
+			[ -b "${x}" ] || continue
+			losetup ${x} 2>&1 >/dev/null || tmpdev="${x}"
+			[ -n "${tmpdev}" ] && break
+		done
+		if [ -z "${tmpdev}" ] ; then
+			echo "No free loopback device found!"
+			rm -f $tmpfile ; rmdir $tmpdir; exit 1
+		fi
+	fi
+	echo "Using loopback device $tmpdev."
+	losetup "$tmpdev" $initrd_img
+
+	echo "Writing initrd image file."
+	mkfs.${initrdfs:0:4} -b $block_size -m 0 -N 360 -q $tmpdev &> /dev/null
+	mount -t ${initrdfs:0:4} $tmpdev $tmpdir
+	rmdir $tmpdir/lost+found/
+	cp -a $targetdir/* $tmpdir
+	umount $tmpdir
+ 
+	echo "Removing temporary files."
+	losetup -d $tmpdev
+	rm -rf $tmpdir
+	;;
+esac
+
+echo "Compressing initrd image file."
+gzip -9 -c $initrd_img > $initrd_img.gz
+
+rm -rf $targetdir
 echo "Done."
-

@@ -758,8 +758,8 @@ build_this_package() {
 			fi
 			[ -z "$createdocs" ] && createdocs="$ROCKCFG_CREATE_DOCS"
 		fi
-
-		for file in $confdir/*.desktop ; do 
+		
+		[ -n "${desktopfiles}" ] && for file in ${desktopfiles} ; do
 			[ -f $file ] || continue
 	
 			echo -n "Install desktop file '$file': "

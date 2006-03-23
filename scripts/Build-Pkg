@@ -45,6 +45,7 @@ debug=0
 chroot=0
 root=""
 id=''
+desktopfiles=''
 
 stagelevel=9
 this_is_the_2nd_run=0
@@ -177,6 +178,9 @@ builddir="$base/src.$xpkg.$id"
 
 # get real pkg name for mapped packages
 . build/$ROCKCFG_ID/ROCK/$toolsdir/lib/pkgmapper
+
+# set desktop file name
+desktopfiles="$( echo ${base}/package/*/${pkg} )/*.desktop"
 
 export ROCK_PKG=$pkg
 export ROCK_XPKG=$xpkg

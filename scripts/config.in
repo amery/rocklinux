@@ -191,6 +191,7 @@ expert_begin
     comment ' '
     comment '- Binary package format'
     block_begin 3
+    	bool 'Create Checksums for installed files' ROCKCFG_CREATE_CKSUM 1
 	bool 'Create *.tar.bz2 binary packages' ROCKCFG_CREATE_TARBZ2 0
 	bool 'Create *.gem binary packages' ROCKCFG_CREATE_GEM 1
 	bool 'Append version number to package files' ROCKCFG_PKGFILE_VER 1

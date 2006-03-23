@@ -1073,12 +1073,17 @@ abort() {
 		echo "<$spkg> Creating md5sum and cksum files ..."
 		getfiles < var/adm/flists/$spkg > $builddir/files.lst
 		if [ -s $builddir/files.lst ] ; then
-			cat $builddir/files.lst | \
-				grep -v '^var/adm/' | sed -e 's/ /\\ /g' | \
-				xargs -r md5sum > var/adm/md5sums/$spkg
-			cat $builddir/files.lst | \
-				grep -v '^var/adm/' | sed -e 's/ /\\ /g' | \
-				xargs -r cksum > var/adm/cksums/$spkg
+			while read file ; do
+				[[ $file = var/adm/* ]] && continue
+				[ -z "${file//[ 	]/}" ] && continue
+				if [ ${ROCKCFG_CREATE_CKSUM} -eq 1 ] ; then
+					md5sum "${file}" >> var/adm/md5sums/$spkg
+					cksum "${file}"  >> var/adm/cksums/$spkg
+				else
+					echo "0  ${file}" >> var/adm/md5sums/$spkg
+					echo "0 $( stat -c %s ${file} ) ${file}" >> var/adm/cksums/$spkg
+				fi
+			done < $builddir/files.lst
 		else
 			cat /dev/null > var/adm/md5sums/$spkg
 			cat /dev/null > var/adm/cksums/$spkg

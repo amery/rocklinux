@@ -114,7 +114,7 @@ ramdisk_size=16384
 echo_status "Creating temporary files."
 tmpdir=initrd_$$.dir; mkdir -p $disksdir/$tmpdir; cd $disksdir
 dd if=/dev/zero of=initrd.img bs=1024 count=$ramdisk_size &> /dev/null
-tmpdev="`losetup -f`"
+eval tmpdev="`losetup -f 2>/dev/null`" 
 if [ -z "$tmpdev" ] ; then
 	for x in /dev/loop* /dev/loop/* ; do
 		[ -b "${x}" ] || continue

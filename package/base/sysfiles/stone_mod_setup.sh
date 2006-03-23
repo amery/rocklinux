@@ -110,7 +110,14 @@ main() {
 		[ -f $x ] && . $x
 	done
 
-	[ -n "`which cron.run`" ] && cron.run
+	# postinstall is called by cron.run / 00-updates - it wouldn't get
+	# called at all if cron isn't installed, so let's call it at lease
+	# once after installing / chrooting.
+	if [ -n "`which cron.run`" ] ; then
+		cron.run
+	else
+		postinstall -a
+	fi
 
 	unset gui_nocancel
 	exec $STONE

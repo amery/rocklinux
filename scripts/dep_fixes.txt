@@ -23,7 +23,22 @@ faad2			del mpeg4ip
 nx-X11			del nxproxy
 ffmpeg			del mplayer mpeg4ip
 x264			del subversion
+libgphoto		del graphviz
+linux			del fuse file openct
+libbonobo		del gnome-keyring-manager
+kdelibs			del djvulibre
+kdeutils		del superkaramba
+shared-mime-info	del bluefish rox-filer cdrdao
+docbookx		del iso-codes
 
-# this seams to be a real, but optional, ring dependency
-gpac			del ffmpeg mplayer mpeg4ip
+# note so sure about these
+scrollkeeper		del gnome-netstatus
+scrollkeeper		del gnome-doc-utils gnome-keyring-manager
+gnome-doc-utils		del gnome-keyring-manager gnome-netstatus
+gnome-panel		del gnome-netstatus
+gnome-netstatus		del gtkam
+
+# this seam to be a real, but optional, ring dependencies
+gpac	del ffmpeg mplayer mpeg4ip
+esound	del arts
 

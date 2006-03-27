@@ -28,15 +28,15 @@
 # export EDITOR="nvi"
 # export PAGER="less -R -F -M"
 
-if [ "$PS1" ] ; then
-	alias cp='cp -i'
-	alias mv='mv -i'
-	alias rm='rm -i'
-
-	case "$TERM" in *xterm*)
-		[ "$TERM" = "xterm" ] && TERM="nxterm"
-		set_xterm_title() { echo -ne "\033]0;$*\007" ; } ;;
-	esac
+# if [ "$PS1" ] ; then
+# 	alias cp='cp -i'
+# 	alias mv='mv -i'
+# 	alias rm='rm -i'
+# 
+# 	case "$TERM" in *xterm*)
+# 		[ "$TERM" = "xterm" ] && TERM="nxterm"
+# 		set_xterm_title() { echo -ne "\033]0;$*\007" ; } ;;
+# 	esac
 
 	# if bash is not in POSIX mode, set a more inteligent prompt
 	#
@@ -44,5 +44,6 @@ if [ "$PS1" ] ; then
 	#	PS1='\u@\h:$([ ${#PWD} -lt 30 ] && \
 	#	builtin echo "\w" || builtin echo "[\W]" ; echo )\$ '
 
-	alias beep='echo -en \\007'
-fi
+#	alias beep='echo -en \\007'
+# fi
+

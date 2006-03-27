@@ -1,0 +1,10 @@
+--- ./XTerm.ad.orig	2006-03-24 20:47:47.000000000 +0100
++++ ./XTerm.ad	2006-03-24 20:48:20.000000000 +0100
+@@ -186,3 +186,7 @@
+ !
+ ! Alternatively,
+ !*on2Clicks: regex [[:alpha:]]+://([[:alnum:]!#+,./=?@~-]|(%[[:xdigit:]][[:xdigit:]]))+
++
++! A new xTerm should (= must!) have a login shell.  (Clifford)
++*loginShell: on
++

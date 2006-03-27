@@ -22,10 +22,7 @@ BUS=="ide", KERNEL=="hd[a-z]*", PROGRAM="/lib/udev/ide-devfs.sh %k %b %n", \
  				NAME="%c{1}", SYMLINK+="%k %c{2}", GROUP="%c{3}"
 
 # SCSI devices
-BUS=="scsi", KERNEL=="sd*", PROGRAM="/lib/udev/scsi-devfs.sh sd %b %n", NAME="%c{1}", SYMLINK="%c{2} %k %c{3}"
-BUS=="scsi", KERNEL=="sr*", PROGRAM="/lib/udev/scsi-devfs.sh sr %b %n", NAME="%c{1}", SYMLINK="%c{2} %k %c{3}"
-BUS=="scsi", KERNEL=="st*", PROGRAM="/lib/udev/scsi-devfs.sh st %b %n", NAME="%c{1}", SYMLINK="%c{2} %k %c{3}"
-BUS=="scsi", KERNEL=="sg*", PROGRAM="/lib/udev/scsi-devfs.sh sg %b %n", NAME="%c{1}", SYMLINK="%c{2} %k %c{3}"
+BUS=="scsi", PROGRAM="/lib/udev/scsi-devfs.sh %k %b %n", NAME="%c{1}", SYMLINK="%k %c{2}"
 
 # RAID controllers
 KERNEL=="cciss!*|ida!*|rd!*", PROGRAM="/lib/udev/raid-devfs.sh %k", \

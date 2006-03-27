@@ -1,73 +1,82 @@
-#!/bin/bash
+#!/bin/sh -e
+# Inspired from a script by Remco <remco@d-compu.dyndns.org>.
+# Support for /dev/discs/* and /dev/cdroms/* by Daniel Mueller <danm@gmx.li>.
 #
-#  scsi-devfs.sh: udev external PROGRAM script
-#
-#  Copyright 2004  Richard Gooch <rgooch@atnf.csiro.au>
-#  Copyright 2004  Fujitsu Ltd.
-#  Distributed under the GNU Copyleft version 2.0.
-#
-# return devfs-names for scsi-devices
-# Usage in udev.rules:
-# BUS="scsi", PROGRAM="/lib/udev/scsi-devfs.sh %k %b %n", NAME="%c{1}", SYMLINK="%c{2} %k"
+# BUS="scsi", PROGRAM="/etc/udev/scsi-devfs.sh %k %b %n", \
+#   NAME="%c{1}", SYMLINK="%k %c{2}"
 
-# Find out where sysfs is mounted. Exit if not available
-sysfs=`grep -F sysfs /proc/mounts | awk '{print $2}'`
-if [ "$sysfs" = "" ]; then
-    echo "sysfs is required"
-    exit 1
-fi
-cd $sysfs/bus/scsi/devices
+get_ide_offset() {
+	local num=0
+	local dev
+
+	for dev in /proc/ide/*/media; do
+		if [ "`cat $dev`" = "$1" ]; then
+			num=$(($num + 1))
+		fi
+	done
+
+	echo $num
+}
+
+get_next_number() {
+	local num=0
+	local dev
+	local offset=`get_ide_offset $2`
+	
+	if [ "$2" = "disk" ]; then
+		local DRIVE="${1%%[0-9]*}"
+		local DEVLIST="/sys/block/sd*"
+	else
+		local DRIVE=$1
+		local DEVLIST="/sys/block/sr*"
+	fi
+
+	for dev in $DEVLIST; do
+		[ "${dev#/sys/block/}" = "$DRIVE" ] && break
+		num=$(($num + 1))
+	done
+
+	echo $(($offset + $num))
+}
+
+# the format is "HOST:BUS:TARGET:LUN"
+SCSI_ID=$2
+HOST=${SCSI_ID%%:*}
+SCSI_ID=${SCSI_ID#*:}
+BUS=${SCSI_ID%%:*} 
+SCSI_ID=${SCSI_ID#*:} 
+TARGET=${SCSI_ID%%:*} 
+SCSI_ID=${SCSI_ID#*:}
+LUN=$SCSI_ID 
 
 case "$1" in
-  sd*)
-    # Extract partition component
-    if [ "$3" = "" ]; then
-	lpart="disc"
-	spart=""
-    else
-	lpart="part$3"
-	spart="p$3"
-    fi
-    ;;
-  sr*)
-    lpart="cdrom"
-    spart=""
-    ;;
-  st*)
-    # Not supported yet
-    exit 1
-    ;;
-  sg*)
-    lpart="generic"
-    spart=""
-    ;;
-  *)
-    exit 1
-    ;;
+scd*|sr*)
+	# CDROM/DVD
+	NAME=cd
+	LINK="cdroms/cdrom"`get_next_number $1 cdrom`
+	;;
+sd*)
+	if [ "$3" ]; then
+		NAME=part$3
+		LINK="discs/disc"`get_next_number $1 disk`/part${3}
+	else
+		NAME=disc
+		LINK="discs/disc"`get_next_number $1 disk`/disc
+	fi
+	;;
+nst*)
+	NAME=$(echo "$1" | sed -e 's/nst0m/nmt/')
+	[ $NAME = "mt0" ] && LINK=ntape
+	;;
+st*)
+	NAME=$(echo "$1" | sed -e 's/st0m/mt/')
+	[ $NAME = "mt0" ] && LINK=tape
+	;;
+sg*|*)
+	NAME=generic
+	;;
 esac
 
-# Extract SCSI logical address components
-scsi_host=`echo $2 | cut -f 1 -d:`
-scsi_bus=`echo $2 | cut -f 2 -d:`
-scsi_target=`echo $2 | cut -f 3 -d:`
-scsi_lun=`echo $2 | cut -f 4 -d:`
+echo scsi/host$HOST/bus$BUS/target$TARGET/lun$LUN/$NAME $LINK
 
-# Generate common and logical names
-l_com="bus$scsi_bus/target$scsi_target/lun$scsi_lun/$lpart"
-l_log="scsi/host$scsi_host/$l_com"
-
-if [ -d /dev/discs ] ; then
-	for x in /dev/discs/disc* ; do
-	       if readlink `ls -d $x/* | awk '{print $0; exit;}'` | grep -q "${l_log%${lpart}}" ; then
-		       x=`echo $x | cut -f3 -dc` # gives the number in disc0
-		       break
-	       fi
-	       unset x
-	done
-fi
-
-if [ -z "${x}" ] ; then
-	x="`ls /dev/discs/ 2> /dev/null | grep -c .`"
-fi
-
-echo $l_log discs/disc${x}/${lpart}
+exit 0

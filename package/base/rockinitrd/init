@@ -35,6 +35,17 @@ initrd_mount() { # {{{
 	return ${?}
 } # }}}
 
+emit_udev_events() { # {{{
+	while read uevent; do 
+			echo 1 > $uevent
+	done < <( find /sys -name uevent )
+	udevwait=0
+	while [ -d /dev/.udev/queue -a $udevwait -lt 300 ] ; do
+			sleep 1
+			(( udevwait++ ))
+	done
+} # }}}
+
 PATH="/sbin:/usr/sbin:/bin/:/usr/bin"
 
 rootfs=""
@@ -63,14 +74,7 @@ echo "loading kernel modules"
 . /etc/conf/kernel
 
 # create nodes for devices already in kernel
-while read uevent; do 
-		echo 1 > $uevent
-done < <( find /sys -name uevent )
-udevwait=0
-while [ -d /dev/.udev/queue -a $udevwait -lt 300 ] ; do
-		sleep 1
-		(( udevwait++ ))
-done
+emit_udev_events
 
 for x in /etc/conf/* ; do
 	[ "${x}" == "/etc/conf/kernel" ] && continue
@@ -99,5 +103,8 @@ mount -n --move /dev /root/dev
 # re-start real-system udevd, so group/permission settings get honored
 killall udevd
 /sbin/udevd --daemon
+# re-emit events so permissions get corrected and rules which need 
+# additional programs can be applied (like persistent storage, et alas)
+emit_udev_events
 
 exec chroot . $real_init "${@}" < /dev/console > /dev/console 2>&1

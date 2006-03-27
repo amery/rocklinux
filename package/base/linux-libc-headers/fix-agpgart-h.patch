@@ -1,0 +1,11 @@
+diff -uNpr linux-libc-headers-2.6.12.0.orig/include/linux/agpgart.h linux-libc-headers-2.6.12.0/include/linux/agpgart.h
+--- linux-libc-headers-2.6.12.0.orig/include/linux/agpgart.h	2006-01-05 23:25:08 +0300
++++ linux-libc-headers-2.6.12.0/include/linux/agpgart.h	2006-02-12 13:00:31 +0300
+@@ -50,6 +50,7 @@
+ #endif
+ 
+ #include <linux/types.h>
++#include <asm/types.h>
+ 
+ struct agp_version {
+ 	__u16 major;

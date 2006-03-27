@@ -27,7 +27,7 @@ menu_begin MENU_CROSSTOOLS 'Cross Toolchain Creation'
 		. architecture/$ROCKCFG_ARCH/archtest.out
 	fi
 
-	for crosstarget in sparc sparc64 mips mipsel mips64 mips64el powerpc i386 ; do
+	for crosstarget in sparc sparc64 mips mipsel mips64 mips64el powerpc i386 x86_64 ; do
 		[ "$crosstarget-unknown-linux-gnu" == "$arch_target" ] && continue ;
 		bool "Build $crosstarget cross toolchain" ROCKCFG_PKG_CROSSTOOL_$crosstarget 0
 
@@ -40,7 +40,7 @@ menu_begin MENU_CROSSTOOLS 'Cross Toolchain Creation'
 		if [ "$( eval echo \$ROCKCFG_PKG_CROSSTOOL_$crosstarget )" == 1 ] ; then
 			pkgfork binutils binutils-cross-$crosstarget stages $stages
 
-			pkgfork linux $ROCKCFG_PKG_LINUX_HEADERS-header-cross-$crosstarget \
+			pkgfork linux-libc-headers linux-libc-headers-cross-$crosstarget \
 				stages $stages
 
 			if [ "$ROCKCFG_PKG_GLIBC22_USEIT" = 1 ] ; then

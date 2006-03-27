@@ -148,3 +148,5 @@ SUBSYSTEM=="aoe", KERNEL=="interfaces",	NAME="etherd/%k"
 KERNEL=="dm-[0-9]*",		NAME=""
 KERNEL=="device-mapper",	NAME="mapper/control"
 
+ACTION=="add", SUBSYSTEM=="firmware", RUN+="/lib/udev/firmware_helper"
+

@@ -59,6 +59,7 @@ autopatch ..... '0' = skip automatic patching
 chownsrcdir ... '0' = don't make a chown to root after extracting the $srctar
 desktopfiles .. filenames of the desktop files to install ($confdir/*.desktop)
 		set to an empty string to deactivate desktop file installation
+desktopauto ... '0' = disable automatic changes to .desktop files
 nocvsinsrcdir . '0' = don't remove CVS and .svn directories in $srcdir
 srctar ........ filename of source tar file ('auto' = autodetect)
 srcdir ........ directory in source tar file ('auto' = autodetect)

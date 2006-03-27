@@ -21,7 +21,7 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-[ $desktopauto = 1 ] || continue
+if [ $desktopauto = 1 ] ; then
 
 postflist_desktop_rock2desktop() {
 
@@ -124,3 +124,4 @@ postflist_desktop() {
 
 hook_add postflist 5 postflist_desktop
 
+fi

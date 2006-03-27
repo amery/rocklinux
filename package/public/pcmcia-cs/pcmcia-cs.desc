@@ -6,7 +6,7 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/blindcoder/pcmciautils/pcmciautils.desc
+[COPY] ROCK Linux: rock-src/package/base/pcmcia-cs/pcmcia-cs.desc
 [COPY] ROCK Linux is Copyright (C) 1998 - 2006 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
@@ -21,21 +21,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[I] Userspace tools for PCMCIA support in the Linux 2.6 kernel.
+[I] The Linux PCMCIA (PC-Card) Utilities
 
-[T] pcmciautils is a suite of userspace tools for
-[T] PCMCIA support in the Linux 2.6 kernel.
+[T] Card Services for Linux is a complete PCMCIA or 'PC Card' support
+[T] package. It includes a set of loadable kernel modules that implement
+[T] a version of the Card Services applications program interface, a set
+[T] of client drivers for specific cards, and a card manager daemon that
+[T] can respond to card insertion and removal events, loading and
+[T] unloading drivers on demand. It supports ``hot swapping'' of most
+[T] card types, so cards can be safely inserted and ejected at any time.
 
-[U] http://kernel.org/pub/linux/utils/kernel/pcmcia/pcmcia.html
+[A] David Hinds <dahinds@users.sourceforge.net>
+[M] Clifford Wolf <clifford@clifford.at>
 
-[A] Dominik Broodwski <linux@brodo.de>
-[M] Benjamin Schieder <blindcoder@scavenger.homeip.net>
+[C] base/system base/kernel
+[R] - sparc
 
-[C] extra/tool
+[L] OpenSource
+[S] Stable
+[V] 3.2.8
+[P] X -?---5---9 163.300
 
-[L] GPL
-[S] Beta
-[V] 012
-[P] X -----5---9 800.000
+[D] 1558764160 pcmcia-cs-3.2.8.tar.gz http://dl.sourceforge.net/sourceforge/pcmcia-cs/
 
-[D] 108784350 pcmciautils-012.tar.bz2 http://kernel.org/pub/linux/utils/kernel/pcmcia/

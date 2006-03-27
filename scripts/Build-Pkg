@@ -706,7 +706,7 @@ if [ $update = 1 ] ; then
 	echo_status "Creating backup of old package data (running in update mode)."
 	(
 		cd $xroot/
-		cat var/adm/md5sums/$xpkg var/adm/md5sums/$xpkg:* 2> /dev/null |
+		grep -v "^X" var/adm/md5sums/$xpkg var/adm/md5sums/$xpkg:* 2> /dev/null |
 			md5sum --check - 2>&1 | grep ': FAILED$' | cut -f1 -d:
 	) > $builddir/backup_files.txt
 	if [ -s $builddir/backup_files.txt ] ; then
@@ -1074,13 +1074,16 @@ abort() {
 		getfiles < var/adm/flists/$spkg > $builddir/files.lst
 		if [ -s $builddir/files.lst ] ; then
 			while read file ; do
-				[[ $file = var/adm/* ]] && continue
+				[[ "$file" = "var/adm/*" ]] && continue
 				[ -z "${file//[ 	]/}" ] && continue
-				if [ ${ROCKCFG_CREATE_CKSUM} -eq 1 ] ; then
+				if [ -b "$file" -o -c "$file" -o -p "$file" -o -L "$file" -o -S "$file" ] ; then
+					echo "X ${file}" >> var/adm/md5sums/$spkg
+					echo "X $( stat -c %s ${file} ) ${file}" >> var/adm/cksums/$spkg
+				elif [ ${ROCKCFG_CREATE_CKSUM} -eq 1 ] ; then
 					md5sum "${file}" >> var/adm/md5sums/$spkg
 					cksum "${file}"  >> var/adm/cksums/$spkg
 				else
-					echo "0  ${file}" >> var/adm/md5sums/$spkg
+					echo "0 ${file}" >> var/adm/md5sums/$spkg
 					echo "0 $( stat -c %s ${file} ) ${file}" >> var/adm/cksums/$spkg
 				fi
 			done < $builddir/files.lst

@@ -1,0 +1,28 @@
+diff -dur mine-0.24/md5sum.c mine-0.24-p/md5sum.c
+--- mine-0.24/md5sum.c	2005-08-09 12:57:29.000000000 +0200
++++ mine-0.24-p/md5sum.c	2006-03-24 22:00:15.000000000 +0100
+@@ -20,6 +20,7 @@
+ #include <stdio.h>
+ #include <dirent.h>
+ #include <string.h>
++#include <sys/types.h>
+ #include <sys/stat.h>
+ #include <unistd.h>
+ 
+@@ -37,8 +38,14 @@
+ 	struct stat statbuf;
+ 
+ 	snprintf(realfilename, 1024, "%s/%s", root, filename);
+-	return (stat(realfilename, &statbuf) != 0 || S_ISFIFO(statbuf.st_mode))
+-		? "" : md5_file(realfilename);
++	if (stat(realfilename, &statbuf) != 0)
++		return "";
++	else if ( S_ISCHR(statbuf.st_mode) || S_ISBLK(statbuf.st_mode)
++		|| S_ISLNK(statbuf.st_mode) || S_ISSOCK(statbuf.st_mode)
++		|| S_ISFIFO(statbuf.st_mode) )
++		return "X";
++	else
++		return md5_file(realfilename);
+ }
+ 
+ /* Returns 1 if file is duplicate, 2 if file is modified. */

@@ -24,7 +24,7 @@ if pkgcheck php X ; then
 	menu_begin MENU_PKG_PHP 'PHP Package Options'
 
                 k=' 4 Build_PHP4 5 Build_PHP5'
-                d=4
+                d=5
                 choice ROCKCFG_PKG_PHP_VERSION $d $k
                 
                 if [ $ROCKCFG_PKG_PHP_VERSION = 4 ] ; then

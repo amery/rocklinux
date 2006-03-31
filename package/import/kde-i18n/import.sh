@@ -25,7 +25,7 @@ egrep "^$pkg-.*\.tar\.bz2" |
 while read file ; do
 	filever="${file#$pkg-}"
 	filever="${filever%.tar.bz2*}"
-	lang="${filever%-*}"
+	lang="${filever%%-*}"
 	filever="${filever#$lang-}"
 
 	echo "#if xpkg == $pkg-$lang" >> $pkg.desc.new
@@ -33,7 +33,8 @@ while read file ; do
 	echo "[D] 0 $pkg-$lang-$filever.tar.bz2 $download_url" >> $pkg.desc.new
 	echo "#endif" >> $pkg.desc.new
 
-	echo "pkgfork $pkg $pkg-$lang status O version $filever" >> hosted.cfg.new
+	forkopts="`grep "^$pkg-$lang " hosted.cfg.in | cut -f2- -d" "`"
+	echo "pkgfork $pkg $pkg-$lang status O version $filever $forkopts" >> hosted.cfg.new
 
 	echo "$pkg-$lang) pkg=$pkg ;;" >> pkgmapper.in.new
 done

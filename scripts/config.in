@@ -124,6 +124,8 @@ block_begin 7
 
 	if [ -f target/$ROCKCFG_TARGET/config.in ]
 	then . target/$ROCKCFG_TARGET/config.in ; fi
+
+	text 'Linguas (translations)' ROCKCFG_LINGUAS 'de es fr it'
 block_end
 
 echo "## BUILDENV_SETTINGS_BEGIN" >> config/$config.$swpid/config

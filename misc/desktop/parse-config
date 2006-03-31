@@ -21,8 +21,6 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-if [ $desktopauto = 1 ] ; then
-
 postflist_desktop_rock2desktop() {
 
 	case "${1}" in
@@ -122,6 +120,4 @@ postflist_desktop() {
 	done
 }
 
-hook_add postflist 5 postflist_desktop
-
-fi
+hook_add postflist 5 "[ \"\$desktopauto\" = 1 ] && postflist_desktop"

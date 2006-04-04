@@ -31,7 +31,8 @@ if [ $# -eq 0 ] ; then
 	echo " ISO images from them."
 	echo
 	echo "	-size  <MB>	limit the size of images to <MB> MB; default is 680"
-	echo "	-source		include package sources on the images"
+	echo "	-source		include package sources from download/mirror on the images"
+	echo "	-nodist		also include download/nodist sources (Check licenses!)"
 	echo "	-mkdebug	create a small debug script for every image"
 	echo "	-nomd5		don't add md5 checksums to images"
 	echo
@@ -46,7 +47,7 @@ fi
 
 # default disk-size is 680 MB
 dsize=$(( 680 * 1024 ))
-src=0; mkdebug=0; implantisomd5=1
+src=0; mkdebug=0; implantisomd5=1; nodist=0
 
 while true ; do
 	case "$1" in
@@ -58,6 +59,8 @@ while true ; do
 			mkdebug=1 ; shift ;;
 		-nomd5)
 			implantisomd5=0 ; shift ;;
+		-nodist)
+			nodist=1 ; shift ;;
 		-* | '')
 			$0 ; exit 1 ;;
 		*)
@@ -210,6 +213,9 @@ if [ $src = 1 ] ; then
 	done
 
 	while read from ; do
+		if [ "${from#download/nodist/}" != "${from}" ] ; then
+			[ "${nodist}" == "0" ] && continue
+		fi
 		# adaptions of the sed exp need to propagated into Download, too
 		from="`echo $from | sed 's,\.\(t\?\)\(gz\|Z\)$,.\1bz2,'`"
 		if [ -e $from ] ; then

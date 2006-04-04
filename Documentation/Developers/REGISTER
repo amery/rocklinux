@@ -52,9 +52,6 @@ Reserved User and Group IDs:
   - exim users:		- exim groups:
       exim   30		   exim     30
 
-  - ivman user:     - ivman group:
-      ivman  32        ivman    32
-
   - nullmailer users:   - nullmailer groups:
       nullmailer 38        nullmailer 38
 
@@ -71,6 +68,11 @@ Reserved User and Group IDs:
   - postfix users:      - postfix groups:
       postdrop 43           postfix 44
       postfix  44
+
+  - hal/dbus/plugdev users / groups:
+      messagebus 50	    messagebus 50
+      haldaemon  51  	    haldaemon  51
+      			    plugdev    52
 
   - cron group:
       crontab 53
@@ -99,7 +101,7 @@ Reserved User and Group IDs:
   - httpd user:		- httpd group:
       http 80		    http 80
 
-  Free IDs:  29-37,45-52,55,57-65,67-69,72-77
+  Free IDs:  29,31-37,45-50,55,57-65,67-69,72-77
 
 
 Filedescriptor Numbers

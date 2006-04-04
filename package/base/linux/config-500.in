@@ -49,7 +49,7 @@ then
 		ROCKCFG_PKG_LINUX_IMG26 1
 
 	if [ "$ROCKCFG_PKG_LINUX_IMG26" = 1 ]; then
-		pkgfork linux linux26
+		pkgfork linux linux26 stages -X---5---9
 	fi
 
 	case "$ROCKCFG_PKG_LINUX_IMG24$ROCKCFG_PKG_LINUX_IMG26" in

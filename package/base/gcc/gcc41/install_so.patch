@@ -25,7 +25,7 @@
      # Now rename the file to the real destination.
 -    { $doit $mvcmd -f "$dsttmp" "$dstdir/$dstfile" 2>/dev/null \
 -      || {
-+    if echo $dstdir/$dstfile | grep -q 'lib/.*\.so' ; then
++    { if echo $dstdir/$dstfile | grep -q 'lib/.*\.so' ; then
 +	$doit $mvcmd $dsttmp $dstdir/$dstfile
 +	rc=$?
 +    else

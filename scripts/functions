@@ -447,6 +447,16 @@ abort() {
 	exit 1
 }
 
+# Simple helper for checking the package version in *.conf files.
+# This is useful to force a check if the fix is still needed after
+# a package update.
+#
+versionhotfix() {
+	[ "$1" = "$ver" ] && return
+	abort "This package has hotfixes for version $1.
+Please check if they are still needed for $ver."
+}
+
 # Dump Environment
 #
 dump_env() {

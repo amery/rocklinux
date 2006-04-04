@@ -35,7 +35,7 @@
 
 [C] base/library
 [F] CORE
-[E] group libc glibc22 glibc23
+[E] group libc glibc22 glibc23 glibc24
 [E] del libgd
 
 [L] GPL
@@ -53,6 +53,11 @@
 [V] 2.3.6
 [D] 3555313491 glibc-2.3.6.tar.bz2 ftp://ftp.gnu.org/gnu/glibc/
 [D] 2449696200 glibc-linuxthreads-2.3.6.tar.bz2 ftp://ftp.gnu.org/gnu/glibc/
+#endif
+
+#if xpkg == glibc24.*
+[V] 2.4
+[D] 1764169258 glibc-2.4.tar.bz2 http://ftp.gnu.org/gnu/glibc/
 #endif
 
 [CD] <COPY> cp $cachedir/glibc2[23].cache $confdir/$pkg.cache

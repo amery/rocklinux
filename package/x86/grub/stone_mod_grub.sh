@@ -24,9 +24,8 @@
 
 create_device_map() {
 	gui_cmd '(Re-)Create GRUB Device Map' "$( cat << "EOT"
-( set -x
-rm -f /boot/grub/device.map
-grub-mkdevicemap --no-floppy; )
+rm -vf /boot/grub/device.map
+echo quit | grub --batch --device-map=/boot/grub/device.map
 EOT
 	)"
 }
@@ -92,35 +91,30 @@ convert_device () {
 }
 
 create_boot_menu() {
-	cat << EOT > /boot/grub/grub.cfg
+	cat << EOT > /boot/grub/menu.lst
 timeout 8
 default 0
 fallback 1
 
 title  ROCK Linux
-linux $bootdrive$bootpath/vmlinuz root=/dev/ram0 ro
+kernel $bootdrive$bootpath/vmlinuz root=/dev/ram0 ro
 initrd $bootdrive$bootpath/initrd.img
 EOT
 	if [ -f /boot/memtest86.bin ] ; then
-	cat << EOT >> /boot/grub/grub.cfg
+	cat << EOT >> /boot/grub/menu.lst
 
 title  MemTest86 (SGI memory tester)
-linux $bootdrive$bootpath/memtest86.bin
+kernel $bootdrive$bootpath/memtest86.bin
 EOT
 	fi
 
-	gui_message "This is the new /boot/grub/grub.cfg file:
+	gui_message "This is the new /boot/grub/menu.lst file:
 
-$( cat /boot/grub/grub.cfg )"
+$( cat /boot/grub/menu.lst )"
 }
 
 grub_install() {
-	gui_cmd 'Installing GRUB' "$( cat << "EOT"
-( set -x
-grub-mkimage -o /boot/grub/core.img _chain pc ext2
-grub-setup -r $bootdrive '(hd0)'; )
-EOT
-	)"
+	gui_cmd 'Installing GRUB' "echo -e 'root $bootdrive\\nsetup (hd0)\\nquit' | grub --batch --device-map=/boot/grub/device.map"
 }
 
 grub_init() {
@@ -191,8 +185,8 @@ main() {
 		'' '' \
 		"Edit /boot/grub/device.map (Device Map)" \
 			"gui_edit 'GRUB Device Map' /boot/grub/device.map" \
-		"Edit /boot/grub/grub.cfg (Boot Menu)" \
-			"gui_edit 'GRUB Boot Menu' /boot/grub/grub.cfg"
+		"Edit /boot/grub/menu.lst (Boot Menu)" \
+			"gui_edit 'GRUB Boot Menu' /boot/grub/menu.lst"
     do : ; done
 }
 

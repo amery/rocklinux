@@ -32,12 +32,12 @@ main_begin
 	check(`D_prefix/sbin/smartd')
     block_end
 
-    block_begin(stop, `Stopping courier-imapd.')
-	check(`kill -SIGKILL smartd')
+    block_begin(stop, `Stopping smartd.')
+	check(`killall -SIGKILL smartd')
     block_end
 
-    block_begin(restart, `Restarting courier-imapd.')
-	check(`sigkill -SIGKILL smartd')
+    block_begin(restart, `Restarting smartd.')
+	check(`killall -SIGKILL smartd')
 	check(`D_prefix/sbin/smartd')
     block_end
 

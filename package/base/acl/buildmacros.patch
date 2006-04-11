@@ -17,9 +17,22 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
---- ./include/buildmacros.orig	2004-12-05 09:33:13.219446632 +0100
-+++ ./include/buildmacros	2004-12-05 09:33:26.831377304 +0100
-@@ -102,8 +102,6 @@
+--- ./include/buildmacros.orig	2006-01-12 06:06:24.000000000 +0100
++++ ./include/buildmacros	2006-04-03 18:18:19.000000000 +0200
+@@ -41,10 +41,10 @@
+ LTOBJECTS = $(OBJECTS:.o=.lo)
+ LTVERSION = $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
+ 
+-LTLINK = $(LIBTOOL) --mode=link $(CC)
++LTLINK = $(LIBTOOL) --tag CC --mode=link $(CC)
+ LTEXEC = $(LIBTOOL) --mode=execute
+ LTINSTALL = $(LIBTOOL) --mode=install $(INSTALL)
+-LTCOMPILE = $(LIBTOOL) --mode=compile $(CCF)
++LTCOMPILE = $(LIBTOOL) --tag CC --mode=compile $(CCF)
+ 
+ ifeq ($(ENABLE_SHARED),yes)
+ LTLDFLAGS += -rpath $(PKG_LIB_DIR)
+@@ -74,8 +74,6 @@
  	../$(INSTALL) -m 644 $(LIBNAME).lai $(PKG_DEVLIB_DIR)/$(LIBNAME).la ; \
  	../$(INSTALL) -m 755 -d $(PKG_LIB_DIR); \
  	../$(INSTALL) -T so_base $(LIBNAME).lai $(PKG_LIB_DIR); \

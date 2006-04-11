@@ -97,6 +97,8 @@ export BUILDCXX="c++" BUILD_CXX="c++" HOSTCXX="c++" HOST_CXX="c++"
 
 if [ "$ROCKCFG_LINGUAS" == "all" ] ; then
 	unset LINGUAS
+elif [ "$ROCKCFG_LINGUAS" == "none" ] ; then
+	export LINGUAS=
 else
 	export LINGUAS="$ROCKCFG_LINGUAS"
 fi

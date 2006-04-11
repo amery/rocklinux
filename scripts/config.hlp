@@ -76,6 +76,15 @@ ROCKCFG_TARGET
 	This target is intended to build a not blown up server distribution
 	to install web-, mail-, fileserver or similar.
 
+ROCKCFG_LINGUAS
+    Here you can choose the languages for which message translation
+    catalogs should be installed.
+
+    Note that not all programs provide translations for each language.
+
+    If set to 'all', all available translations will be installed, and
+    none if set to 'none'.
+
 ROCKCFG_PARALLEL
   Select this option if you want to perform a parallel build on several
   machines or if you build on a multiprocessor machine.

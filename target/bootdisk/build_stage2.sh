@@ -10,7 +10,7 @@ mkdir -p mnt/source mnt/target
 package_map='       +00-dirtree         +glibc22            +glibc23
 -automake17         -automake18         -automake19         -gcc2
 -gcc33              -gcc34              -gcc40              -gcc41
--gmp                -rockinitrd
+-gmp                -mpfr               -rockinitrd
 -linux24-source     -linux26-header     -linux24            +udev
 -linux26-source     -linux26-header     -linux26            -postinstall
 -binutils           -bin86              -nasm               -dietlibc
@@ -18,7 +18,7 @@ package_map='       +00-dirtree         +glibc22            +glibc23
 +silo               +parted             +mac-fdisk          +pdisk
 +xfsprogs           +dosfstools         +jfsutils	    +hfsutils
 +e2fsprogs          +reiserfsprogs      +genromfs           +device-mapper
-+popt                                   +mdadm              +lvm2
++popt               +file               +mdadm              +lvm2
 +dump               +eject              +disktype           +lvm-wrapper
 +hdparm             +memtest86          +cpuburn            +bonnie++
 -mine               -bize               -termcap            +ncurses
@@ -64,7 +64,7 @@ do
 	elif ! echo "" $package_map "" | grep -q " -$x "
 	then
 		echo_error "\`- Not found in \$package_map: $x"
-		echo_error "    ... fix target/$target/build.sh"
+		echo_error "    ... target/bootdisk/build_stage1.sh"
 	fi
 done
 #

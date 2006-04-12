@@ -3,8 +3,8 @@ This fixes the error:
 
 A variation of Richard Stallman's patch, see http://lists.gnu.org/archive/html/emacs-devel/2003-11/msg00082.html
 
---- ./build/generic-distro-TRUNK-x86-athlon-xp-32-generic-expert/ROCK/src.emacs.1143533650.9471.2717819003/emacs-21.4/src/xterm.c~	2002-10-15 16:21:45.000000000 +0200
-+++ ./build/generic-distro-TRUNK-x86-athlon-xp-32-generic-expert/ROCK/src.emacs.1143533650.9471.2717819003/emacs-21.4/src/xterm.c	2006-03-29 02:12:52.000000000 +0200
+--- ./src/xterm.c~	2002-10-15 16:21:45.000000000 +0200
++++ ./src/xterm.c	2006-03-29 02:12:52.000000000 +0200
 @@ -118,7 +118,7 @@
  #ifdef HAVE_XAW3D
  #include <X11/Xaw3d/Simple.h>

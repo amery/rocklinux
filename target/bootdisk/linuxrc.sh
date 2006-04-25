@@ -35,8 +35,8 @@ doboot() { # {{{
 		exit_linuxrc=0
 	fi
 
-	if [ ! -f /mnt_root/linuxrc ] ; then
-		echo "Can't find /mnt_root/linuxrc!"
+	if [ ! -f /mnt_root/sbin/init ] ; then
+		echo "Can't find /mnt_root/sbin/init!"
 		exit_linuxrc=0
 	fi
 
@@ -310,7 +310,7 @@ EOF
 		exit_linuxrc=0
 	fi
 
-	if ! mount -t tmpfs -o ${TMPFS_OPTIONS} none /mnt_root ; then
+	if ! mount -t tmpfs -o ${TMPFS_OPTIONS} tmpfs /mnt_root ; then
 		echo "Can't mount tmpfs on /mnt_root"
 		exit_linuxrc=0
 	fi
@@ -398,27 +398,35 @@ checkisomd5() { # {{{
 	read
 } # }}}
 
+emit_udev_events() { # {{{
+	while read uevent; do 
+			echo 1 > $uevent
+	done < <( find /sys -name uevent )
+	udevwait=0
+	while [ -d /dev/.udev/queue -a $udevwait -lt 300 ] ; do
+			sleep 1
+			(( udevwait++ ))
+	done
+} # }}}
+
 input=1
 exit_linuxrc=0
 [ -z "${autoboot}" ] && autoboot=0
-mount -t ramfs none /dev || echo "Can't mount a ramfs on /dev"
-mount -t sysfs none /sys || echo "Can't mount sysfs on /sys"
-mount -t proc none /proc || echo "Can't mount /proc"
-mount -t tmpfs -o ${TMPFS_OPTIONS} none /tmp || echo "Can't mount /tmpfs"
+
+# mount / / -o remount,rw  || echo "Can't remount / read-/writeable"
+# mount / / -o remount,rw  || echo "Can't remount / read-/writeable (for mount log)"
+mount -t tmpfs tmpfs /tmp -o ${TMPFS_OPTIONS} || echo "Can't mount a tmpfs on /tmp"
+mount -t proc proc /proc  || echo "Can't mount proc on /proc!"
+mount -t sysfs sysfs /sys || echo "Can't mount sysfs on /sys!"
+mount -t tmpfs tmpfs /dev || echo "Can't mount a tmpfs on /dev!"
 
 cp -r /lib/udev/devices/* /dev
 
 echo "" > /proc/sys/kernel/hotplug
 /sbin/udevd --daemon
+
 # create nodes for devices already in kernel
-while read uevent; do 
-		echo 1 > $uevent
-done < <( find /sys -name uevent )
-udevwait=0
-while [ -d /dev/.udev/queue -a $udevwait -lt 300 ] ; do
-		sleep 1
-		(( udevwait++ ))
-done
+emit_udev_events
 
 mod_load_info
 
@@ -501,6 +509,6 @@ EOF
 	esac
 done
 	
-exec /linuxrc
-echo "Can't start /linuxrc!! Life sucks.\n\n"
+exec /sbin/init
+echo "Can't start /sbin/init!! Life sucks.\n\n"
 

@@ -18,7 +18,7 @@ image=/mnt/vmlinuz
 	read-write
 	append="root=/dev/fd devfs=nocompat \
 		load_ramdisk=1 prompt_ramdisk=1 \
-		ramdisk_size=4096 init=/linuxrc"
+		ramdisk_size=12288"
 	label=ramdisk
 
 image=/mnt/vmlinuz

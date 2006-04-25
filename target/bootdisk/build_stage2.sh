@@ -102,7 +102,7 @@ if [ -f ../../pkgs/pciutils.tar.bz2 ] ; then
 fi
 #
 echo_status "Creating 2nd stage linuxrc."
-cp $base/target/$target/linuxrc2.sh linuxrc ; chmod +x linuxrc
+cp $base/target/$target/linuxrc2.sh sbin/init ; chmod +x sbin/init
 cp $base/target/$target/shutdown sbin/shutdown ; chmod +x sbin/shutdown
 echo '$STONE install' > etc/stone.d/default.sh
 #
@@ -169,7 +169,7 @@ do
 done
 #
 echo_status "Copy linuxrc."
-cp ../2nd_stage/linuxrc .
+cp ../2nd_stage/sbin/init sbin/init
 echo_status "Copy /etc/fstab."
 cp ../2nd_stage/etc/fstab etc
 echo_status "Copy stone.d."
@@ -191,4 +191,3 @@ done < <( find -type f | xargs md5sum | sort )
 #
 echo_status "Creating 2nd_stage_small.tar.gz archive."
 tar -cf- * | gzip -9 > ../2nd_stage_small.tar.gz ; cd ..
-

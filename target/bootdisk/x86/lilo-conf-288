@@ -16,7 +16,7 @@ prompt
 
 image=/mnt/vmlinuz
 	read-write
-	append="root=/dev/ram devfs=nocompat init=/linuxrc"
+	append="root=/dev/ram0 devfs=nocompat"
 	initrd=/mnt/initrd.gz
 	label=ramdisk
 

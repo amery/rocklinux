@@ -119,5 +119,7 @@ modprobe $x # added by mod_dm
 		[ -e "/sbin/fsck.${fs}" ]  && echo "/sbin/fsck.${fs} /sbin/fsck.${fs}"
 	done < <( mount ) | sort | uniq >>/etc/conf/initrd/initrd_dm
 	echo "/sbin/fsck /sbin/fsck" >>/etc/conf/initrd/initrd_dm
+
+	mkinitrd
 }
 

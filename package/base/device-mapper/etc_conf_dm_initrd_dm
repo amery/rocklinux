@@ -100,7 +100,8 @@ while read device mountpoint status ; do
 		fi
 		[ "${mountpoint}" == "/" ] && rootfsmounted=1
 		echo "done"
-		echo "Remember to change the status of ${device} to encrypted using stone."
+		sed -e "s,^${device}\(.*\)encrypt,${device}\\1encrypted," -i /root/etc/conf/dm/mounts
+		recreateinitrd=1
 		echo "Press enter to continue"
 		read < /dev/console
 		continue
@@ -186,7 +187,8 @@ while read device mountpoint status ; do
 		fi
 		[ "${mountpoint}" == "/" ] && rootfsmounted=1
 		echo "done"
-		echo "Remember to change the status of ${device} to 'plain' using stone."
+		sed -e "s,^${device}\(.*\)decrypt,${device}\\1plain," -i /root/etc/conf/dm/mounts
+		recreateinitrd=1
 		echo "Press enter to continue"
 		read < /dev/console
 		continue

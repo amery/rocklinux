@@ -50,6 +50,7 @@ PATH="/sbin:/usr/sbin:/bin/:/usr/bin"
 
 rootfs=""
 rootfsmounted=0
+recreateinitrd=0
 
 mount -n -t tmpfs tmpfs /tmp || echo "Can't mount tmpfs!"
 mount -n -t proc proc /proc  || echo "Can't mount procfs!"
@@ -107,4 +108,8 @@ killall udevd
 # additional programs can be applied (like persistent storage, et alas)
 emit_udev_events
 
+if [ "${recreateinitrd}" != "0" ] ; then
+	echo "Recreating initrd"
+	chroot . /sbin/mkinitrd < /dev/console > /dev/console 2>&1
+fi
 exec chroot . $real_init "${@}" < /dev/console > /dev/console 2>&1

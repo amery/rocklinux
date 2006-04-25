@@ -119,7 +119,7 @@ comment ' '
 comment_id '- Target Distribution' COMMENT_TARGET
 
 block_begin 7
-	choice ROCKCFG_TARGET generic $CFGTEMP_TARGETLIST
+	choice ROCKCFG_TARGET crystal $CFGTEMP_TARGETLIST
 	ROCKCFG_ID="$ROCKCFG_ID-$ROCKCFG_TARGET"
 
 	if [ -f target/$ROCKCFG_TARGET/config.in ]

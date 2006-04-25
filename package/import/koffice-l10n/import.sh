@@ -2,7 +2,7 @@
 
 base="../../.."
 pkg="koffice-l10n"
-download_url='ftp://ftp.kde.org/pub/kde/unstable/koffice-$desc_V/src/$pkg/'
+download_url='ftp://ftp.kde.org/pub/kde/stable/koffice-$desc_V/src/$pkg/'
 
 . $base/scripts/functions
 

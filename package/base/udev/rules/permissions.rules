@@ -31,12 +31,12 @@ KERNEL=="tty",		MODE="0666", GROUP="root"
 KERNEL=="tty[0-9]*",	GROUP="root"
 
 # video devices
-# SUBSYSTEM=="video4linux", GROUP="video"
-# SUBSYSTEM=="drm",	GROUP="video"
-# SUBSYSTEM=="dvb",	GROUP="video"
-# SUBSYSTEM=="em8300",	GROUP="video"
-# SUBSYSTEM=="graphics",	GROUP="video"
-# SUBSYSTEM=="nvidia",	GROUP="video"
+SUBSYSTEM=="video4linux", GROUP="video"
+SUBSYSTEM=="drm",	GROUP="video"
+SUBSYSTEM=="dvb",	GROUP="video"
+SUBSYSTEM=="em8300",	GROUP="video"
+SUBSYSTEM=="graphics",	GROUP="video"
+SUBSYSTEM=="nvidia",	GROUP="video"
 
 # misc devices
 KERNEL=="random",	MODE="0666"
@@ -50,7 +50,7 @@ KERNEL=="zero",		MODE="0666"
 KERNEL=="inotify",	MODE="0666"
 KERNEL=="sgi_fetchop",	MODE="0666"
 KERNEL=="sonypi",	MODE="0666"
-# KERNEL=="agpgart",	GROUP="video"
+KERNEL=="agpgart",	GROUP="video"
 # KERNEL=="nvram",	GROUP="nvram"
 KERNEL=="rtc",		MODE="0660", GROUP="sound"
 
@@ -69,8 +69,8 @@ SUBSYSTEM=="sound",	GROUP="sound"
 
 # ieee1394 devices       
 KERNEL=="raw1394",	GROUP="disk"
-# KERNEL=="dv1394*",	GROUP="video"
-# KERNEL=="video1394*",	GROUP="video"
+KERNEL=="dv1394*",	GROUP="video"
+KERNEL=="video1394*",	GROUP="video"
 
 # input devices
 KERNEL=="event[0-9]*",	PROGRAM="/lib/udev/inputdev.sh %k", \

@@ -177,7 +177,7 @@ echo "Creating initrd filesystem image (${initrdfs}): "
 case "${initrdfs}" in
 cramfs)
 	[ "${block_size}" == "" ] && block_size=4096
-	mkfs.cramfs -b ${block_size} ${targetdir} ${initrd_img}
+	/sbin/mkfs.cramfs -b ${block_size} ${targetdir} ${initrd_img}
 	;;
 ramfs)
 #	cp -a ${targetdir}/{linuxrc,init}
@@ -206,7 +206,7 @@ ext2fs|ext3fs)
 	losetup "${tmpdev}" ${initrd_img}
 
 	echo "Writing initrd image file."
-	mkfs.${initrdfs:0:4} -b ${block_size} -m 0 -N 360 -q ${tmpdev} &> /dev/null
+	/sbin/mkfs.${initrdfs:0:4} -b ${block_size} -m 0 -N 360 -q ${tmpdev} &> /dev/null
 	mount -t ${initrdfs:0:4} ${tmpdev} ${tmpdir}
 	rmdir ${tmpdir}/lost+found/
 	cp -a ${targetdir}/* ${tmpdir}

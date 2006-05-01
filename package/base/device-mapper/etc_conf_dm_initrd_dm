@@ -198,15 +198,22 @@ while read device mountpoint status ; do
 		echo "setting up encryption"
 		echo -n "gathering entropy ... "
 		ent=""
-		while [ -z "${ent:128}" ] ; do
-			read -n 1 e < /dev/random
+		while read -n 1 -t 1 e < /dev/random ; do
+			[ -n "${ent:128}" ] && break
+			[ "${e}" == "\n" ] && continue
+			ent="${ent}${e}"
+			echo -n "."
+		done
+		[ -z "${ent:128}" ] && echo -n " switching to urandom ... "
+		while read -n 1 e < /dev/urandom ; do
+			[ -n "${ent:128}" ] && break
 			[ "${e}" == "\n" ] && continue
 			ent="${ent}${e}"
 			echo -n "."
 		done
 		ent="`echo ${ent} | md5sum`"
 		ent=${ent%% *}
-		echo
+		echo " done"
 		echo -n "setting up encryption ... "
 		encryptedname=${device//\//_}_encrypted
 		encryptedname=${encryptedname#_}

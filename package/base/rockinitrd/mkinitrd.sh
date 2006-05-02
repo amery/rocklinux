@@ -115,7 +115,10 @@ for x in ${rootdir}/etc/conf/initrd/initrd_* ; do
 	[ -f ${x} ] || continue
 	while read file target ; do
 		file="${rootdir}/${file}"
-		[ -e ${file} ] || continue
+		if [ ! -e ${file} ] ; then
+			echo "${file} is requested by ${x} but doesn't exist!" >&2
+			continue
+		fi
 
 		while read f ; do
 			tfile=${targetdir}/${target}${f#${file}}

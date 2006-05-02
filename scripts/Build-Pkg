@@ -1075,34 +1075,8 @@ abort() {
 			done
 		} | sort -u > var/adm/flists/$spkg
 
-		if [ $stagelevel -ge 2 -a $nopostinst = 0 -a -d /var/adm/postinstall ]; then
-			cp var/adm/flists/$spkg "$(mktemp var/adm/postinstall/${spkg}-install.XXXXXX)"
-		fi
-
 		echo "<$spkg> Creating package dependencies file ..."
 		sed "s,^[^ ]*,$spkg:," < $builddir/dependencies.txt > var/adm/dependencies/$spkg
-
-		echo "<$spkg> Creating md5sum and cksum files ..."
-		getfiles < var/adm/flists/$spkg > $builddir/files.lst
-		if [ -s $builddir/files.lst ] ; then
-			while read file ; do
-				[[ "$file" = "var/adm/*" ]] && continue
-				[ -z "${file//[ 	]/}" ] && continue
-				if [ -b "$file" -o -c "$file" -o -p "$file" -o -L "$file" -o -S "$file" ] ; then
-					echo "X ${file}" >> var/adm/md5sums/$spkg
-					echo "X $( stat -c %s ${file} ) ${file}" >> var/adm/cksums/$spkg
-				elif [ ${ROCKCFG_CREATE_CKSUM} -eq 1 ] ; then
-					md5sum "${file}" >> var/adm/md5sums/$spkg
-					cksum "${file}"  >> var/adm/cksums/$spkg
-				else
-					echo "0 ${file}" >> var/adm/md5sums/$spkg
-					echo "0 $( stat -c %s ${file} ) ${file}" >> var/adm/cksums/$spkg
-				fi
-			done < $builddir/files.lst
-		else
-			cat /dev/null > var/adm/md5sums/$spkg
-			cat /dev/null > var/adm/cksums/$spkg
-		fi
 
 		echo "<$spkg> Creating package description ..."
 		#
@@ -1150,6 +1124,38 @@ EOT
 			fi
 		    done < $base/Documentation/Developers/PKG-DESC-FORMAT
 		} > var/adm/descs/$spkg
+
+		# Create them last so checksums of other var/adm files are correct.
+		echo "<$spkg> Creating md5sum and cksum files ..."
+		echo -n > var/adm/cksums/$spkg
+		echo -n > var/adm/md5sums/$spkg
+		# getfiles only returns non-directories, suitable for checksum creation.
+		getfiles < var/adm/flists/$spkg > $builddir/files.lst
+		if [ -s $builddir/files.lst ] ; then
+			while read file ; do
+				[ -z "${file//[ 	]/}" ] && continue
+				# Checksums on these files are volatile.
+				if [ "$file" = "var/adm/cksums/$spkg" -o \
+				    "$file" = "var/adm/md5sums/$spkg" -o \
+				    -b "$file" -o -c "$file" -o -p "$file" -o \
+				    -L "$file" -o -S "$file" ] ; then
+					echo "X ${file}" >> var/adm/md5sums/$spkg
+					echo "X $( stat -c %s ${file} ) ${file}" \
+					    >> var/adm/cksums/$spkg
+				elif [ ${ROCKCFG_CREATE_CKSUM} -eq 1 ] ; then
+					md5sum "${file}" >> var/adm/md5sums/$spkg
+					cksum  "${file}" >> var/adm/cksums/$spkg
+				else
+					echo "0 ${file}" >> var/adm/md5sums/$spkg
+					echo "0 $( stat -c %s ${file} ) ${file}" \
+					    >> var/adm/cksums/$spkg
+				fi
+			done < $builddir/files.lst
+		fi
+
+		if [ $stagelevel -ge 2 -a $nopostinst = 0 -a -d /var/adm/postinstall ]; then
+			cp var/adm/flists/$spkg "$(mktemp var/adm/postinstall/${spkg}-install.XXXXXX)"
+		fi
 	  )
 	done
 

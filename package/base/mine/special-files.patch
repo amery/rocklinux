@@ -71,13 +71,13 @@ diff -dur mine-0.24/md5sum.c mine-0.24-patch/md5sum.c
  #include <sys/stat.h>
  #include <unistd.h>
  
-@@ -37,35 +38,39 @@
+@@ -37,35 +38,42 @@
  	struct stat statbuf;
  
  	snprintf(realfilename, 1024, "%s/%s", root, filename);
 -	return (stat(realfilename, &statbuf) != 0 || S_ISFIFO(statbuf.st_mode))
 -		? "" : md5_file(realfilename);
-+	if (stat(realfilename, &statbuf) != 0)
++	if (lstat(realfilename, &statbuf) != 0 || S_ISDIR(statbuf.st_mode))
 +		return "";
 +	else if (!S_ISREG(statbuf.st_mode))
 +		return "X";
@@ -97,6 +97,9 @@ diff -dur mine-0.24/md5sum.c mine-0.24-patch/md5sum.c
 -	if (md5_f == NULL || strcmp(md5_f, "") == 0)
 -		return 0;
 +
++/*	printf ("md5sum_check(): md5_f: %s, md5_d: %s\n",
++		(md5_f) ? md5_f : "NULL", (md5_d) ? md5_d : "NULL");
++*/	
 +	if (strcmp(md5_f, "") == 0)
 +		return MD5SUM_CHECK_OK;
  	else if (md5_d == NULL)

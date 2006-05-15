@@ -20,7 +20,7 @@ get_dev_number() {
 
 	for x in /proc/ide/*/media; do
 		if [ -e "${x}" ]; then
-			lMEDIA=`cat ${x}`
+			read lMEDIA < ${x}
 			if [ "${lMEDIA}" = "$2" ]; then
 				num=$((${num} + 1))
 			fi
@@ -34,7 +34,7 @@ get_dev_number() {
 }
 
 if [ -z "$3" ] && [ -f /proc/ide/${1}/media ]; then
-	MEDIA=`cat /proc/ide/${1}/media`
+	read MEDIA < /proc/ide/${1}/media
 	if [ "${MEDIA}" = "cdrom" ]; then
 		echo ide/host${HOST}/bus${BUS}/target${TARGET}/lun0/cd cdroms/cdrom`get_dev_number $1 cdrom` ${MEDIA}
 	elif [ "${MEDIA}" = "floppy" ]; then

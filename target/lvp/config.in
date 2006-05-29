@@ -45,6 +45,7 @@ pkgfilter sed '
 / gawk / { p; d; };
 / gcc / { p; d; };
 / glibc / { p; d; };
+/ gmp / { p; d; };
 / grep / { p; d; };
 / groff / { p; d; };
 / gzip / { p; d; };
@@ -59,12 +60,14 @@ pkgfilter sed '
 / libtool / { p; d; };
 / libungif / { p; d; };
 / linux / { p; d; };
+/ linux-libc-headers / { p; d; };
 / lvp / { p; d; };
 / m4 / { p; d; };
 / make / { p; d; };
 / mdadm / { p; d; };
 / mktemp / { p; d; };
 / module-init-tools / { p; d; };
+/ mpfr / { p; d; };
 / mplayer / { p; d; };
 / nasm / { p; d; };
 / ncurses / { p; d; };
@@ -72,6 +75,7 @@ pkgfilter sed '
 / patch / { p; d; };
 / pciutils / { p; d; };
 / perl5 / { p; d; };
+/ rockinitrd / { p; d; };
 / sed / { p; d; };
 / sysfiles / { p; d; };
 / syslinux / { p; d; };
@@ -80,10 +84,11 @@ pkgfilter sed '
 / texinfo / { p; d; };
 / udev / { p; d; };
 / ucl / { p; d; };
-/ upx / { p; d; };
+/ upx2 / { p; d; };
 / util-linux / { p; d; };
 / w32codec / { p; d; };
 / xorg / { p; d; };
+/ xterm / { p; d; };
 / zlib / { p; d; };
 # Disable all other packages
 /.*/	{ s/^X /O /p; d; };'
@@ -118,4 +123,5 @@ ROCKCFGSET_PKG_BASH_HELP_CMD=0
 pkgenable freeglut
 pkgenable lvp
 pkgenable bash=bash2
+pkgenable upx2
 ROCKCFGSET_DEBUG=0

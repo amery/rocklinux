@@ -21,9 +21,9 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-mount -t proc proc /proc
-mount -t tmpfs tmpfs /tmp
-mount -t devpts devpts /dev/pts
+mount -t proc none /proc
+mount -t tmpfs none /tmp
+mount -t devpts none /dev/pts
 
 cd /dev ; rm -f fd
 ln -sf /proc/kcore      core

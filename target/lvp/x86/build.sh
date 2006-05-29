@@ -51,6 +51,7 @@ case "${ROCKCFG_X86_OPT}" in
 esac
 
 sed -i -e "s,COMPILEDFOR,${opt_text},g" README
+echo "LVP Version ${lvp_ver}" > VERSION
 
 find ${releasedir} -name .svn -exec rm -rf {} \; 2>/dev/null
 

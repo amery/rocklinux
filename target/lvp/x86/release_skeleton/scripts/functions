@@ -133,7 +133,7 @@ multi () {
 	eval "text_${items}=\"${3}\""
 	shift; shift; shift
 	eval "values_${items}=\"\""
-	while [ ! -z "${1}" ] ; do
+	while [ -n "${1}" ] ; do
 		eval "values_${items}=\"\${values_${items}} ${1}\""
 		shift
 	done
@@ -181,7 +181,7 @@ display () {
 				eval "option=\${option_${i}}"
 				eval "value=\${${option}}"
 				dots="..."
-				[ "${value:0:17}" == "${value}" ] && dots=""
+				[ "${value:0:20}" == "${value}" ] && dots=""
 				eval "echo \"${i} - (${value:0:17}${dots}) \${text_${i}}\""
 				;;
 			comment)
@@ -237,7 +237,7 @@ get () {
 		text)
 			eval "value=\${${option}}"
 			read -erp "Enter new value for ${option} [${value}]> " new
-			[ ! -z "${new}" ] && eval "${option}=\"${new}\""
+			[ -n "${new}" ] && eval "${option}=\"${new}\""
 			;;
 		multi)
 			eval "value=\${${option}}"

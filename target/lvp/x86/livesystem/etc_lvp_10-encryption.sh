@@ -57,6 +57,7 @@ encryption_start() {
 }
 
 encryption_stop(){
+	[ -e /lvp.data1 ] || return
 	umount /mnt1
 	dmsetup remove /dev/mapper/lvp_data
 	mdadm -S /dev/md/0

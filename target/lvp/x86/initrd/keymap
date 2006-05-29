@@ -21,7 +21,9 @@
 # file for details.
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
-for x in `cat /proc/cmdline` ; do
+
+read args < /proc/cmdline
+for x in ${args} ; do
 	if [[ ${x} = *keymap* ]] ; then
 		keymap=`find /usr/share/kbd/keymaps -name "${x##*=}.map*" 2>/dev/null`
 		if [ -f "${keymap}" ] ; then

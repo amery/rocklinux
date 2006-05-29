@@ -39,16 +39,14 @@ mount -n -t ramfs devfs /dev
 
 exec < /dev/console > /dev/console 2> /dev/console ; cd /
 
-cat << EOF
- _       __     __                             __           __ _    ______
-| |     / /__  / /________  ____ ___  ___     / /_____     / /| |  / / __ \\
-| | /| / / _ \/ / ___/ __ \/ __ \`__ \/ _ \   / __/ __ \   / / | | / / /_/ /
-| |/ |/ /  __/ / /__/ /_/ / / / / / /  __/  / /_/ /_/ /  / /__| |/ / ____/
-|__/|__/\___/_/\___/\____/_/ /_/ /_/\___/   \__/\____/  /_____/___/_/
-
-A lot of fun wishes:
-The LVP Team:
-	-Benjamin 'blindcoder' Schieder
-EOF
+echo " _       __     __                             __           __ _    ______"
+echo "| |     / /__  / /________  ____ ___  ___     / /_____     / /| |  / / __ \\"
+echo "| | /| / / _ \/ / ___/ __ \/ __ \`__ \/ _ \   / __/ __ \   / / | | / / /_/ /"
+echo "| |/ |/ /  __/ / /__/ /_/ / / / / / /  __/  / /_/ /_/ /  / /__| |/ / ____/"
+echo "|__/|__/\___/_/\___/\____/_/ /_/ /_/\___/   \__/\____/  /_____/___/_/"
+echo ""
+echo "A lot of fun wishes:"
+echo "The LVP Team:"
+echo "	-Benjamin 'blindcoder' Schieder"
 
 agetty -i 38400 vc/1 -n -l /bin/linuxrc2

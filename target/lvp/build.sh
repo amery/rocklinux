@@ -22,7 +22,7 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-lvp_ver="0.5.1"
+lvp_ver="0.5.3"
 rootdir="${base}/build/${ROCKCFG_ID}"
 ROCKdir="${rootdir}/ROCK"
 releasedir="${ROCKdir}/lvp_${lvp_ver}_${ROCKCFG_X86_OPT}"
@@ -65,32 +65,36 @@ else
 	ln -sf . usr
 	cd etc
 	ln -sf /proc/mounts mtab
+	touch fstab
 	cd ..
 	
 	echo_status "Copying programs"
 	for x in \
 		bin/bash2 \
 		bin/bash \
-		bin/cat \
+		bin/cp \
 		bin/grep \
 		bin/gzip \
 		bin/ln \
-		bin/ls \
 		bin/mount \
-		bin/sed \
+		bin/mkdir \
 		bin/umount \
 		bin/rm \
+		bin/sleep \
 		bin/find \
 		bin/gawk \
 		bin/loadkeys \
 		etc/udev \
 		lib/modules/${kernelversion}-rock \
+		lib/udev \
 		sbin/agetty \
 		sbin/hwscan \
 		sbin/rmmod \
 		sbin/modprobe \
 		sbin/insmod \
-		sbin/udevstart \
+		sbin/udevd \
+		sbin/udevtrigger \
+		sbin/udevsettle \
 		usr/bin/chroot \
 		usr/bin/eject \
 		usr/bin/lsmod \
@@ -138,6 +142,7 @@ else
 		bin/mount \
 		bin/rm \
 		bin/sh \
+		bin/sleep \
 		bin/umount \
 		etc/mplayer/mplayer.conf \
 		usr/share/mplayer/font-arial-24-iso-8859-1 \
@@ -146,7 +151,7 @@ else
 		usr/X11/bin/startx \
 		usr/X11/bin/xauth \
 		usr/X11/bin/xinit \
-		usr/X11/bin/xterm \
+		usr/bin/xterm \
 		usr/X11/lib/X11/fonts/misc \
 		usr/bin/lvp \
 		usr/bin/mplayer \
@@ -193,7 +198,7 @@ else
 	echo "LVP v${lvp_ver}" >>${releasedir}/livesystem/etc/VERSION
 
 	echo_status "Compressing binaries ... "
-	${rootdir}/usr/bin/upx --best --crp-ms=999999 --nrv2d `find ${releasedir}/livesystem -type f | xargs file | grep "statically linked" | grep -v bin/bash | grep -v bin/mount | cut -f1 -d:` `find ${releasedir}/initrd -type f | xargs file | grep "statically linked" | grep -v bin/bash | grep -v bin/mount | cut -f1 -d:` >/proc/${$}/fd/1 2>/proc/${$}/fd/2 </proc/${$}/fd/0
+	${rootdir}/usr/bin/upx2 --color --best --all-methods `find ${releasedir}/livesystem -type f | xargs file | grep "statically linked" | cut -f1 -d:` `find ${releasedir}/initrd -type f | xargs file | grep "statically linked" | cut -f1 -d:` >/proc/${$}/fd/1 2>/proc/${$}/fd/2 </proc/${$}/fd/0
 
 	echo_status "Creating initrd.img"
 	dd if=/dev/zero of=${releasedir}/isolinux/initrd bs=1k count=16384 >/dev/null 2>&1
@@ -202,8 +207,6 @@ else
 	mount -o loop ${releasedir}/isolinux/initrd ${releasedir}/initrd.tmp.${$}
 	mv ${releasedir}/initrd/* ${releasedir}/initrd.tmp.${$}
 	umount ${releasedir}/initrd.tmp.${$}
-
-	echo_status "Compressing initrd ..."
 	gzip -9 ${releasedir}/isolinux/initrd
 	mv ${releasedir}/isolinux/initrd.gz ${releasedir}/isolinux/initrd
 

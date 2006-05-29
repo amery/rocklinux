@@ -34,8 +34,8 @@ create_thumbnail() {
 
 	mplayer -nosound -vo png -ss $time -frames 2 "livesystem/$file" >/dev/null 2>&1
 	orig="00000002.png"
-	[ ! -f "${orig}" ] && orig="00000001.png"
-	[ ! -f "${orig}" ] && return 1
+	[ -f "${orig}" ] || orig="00000001.png"
+	[ -f "${orig}" ] || return 1
 	convert -resize '128x128!' ${orig} SGI:$tmp
 	convert -depth 8 -size 128x128 SGI:$tmp gray:$tmp.tmp
 	convert -depth 8 -size 128x128 gray:$tmp.tmp SGI:$tmp.gray
@@ -55,10 +55,12 @@ process_create_lvpxml() {
 
 	for x in ${!file_*} ; do
 		[ -z "${files}" ] || files="${files}\n"
-		files="${files}${x}"	# note: we're not dereferencing the variables here to keep the order the user specified
+		files="${files}${x}"
+# note: we're not dereferencing the variables here to keep the order
+# the user specified them in
 	done
 
-	files=`echo -e ${files} | sort`
+	files=`echo -e ${files}`
 
 	rm -f ${lvpxml}
 	touch ${lvpxml}
@@ -82,8 +84,8 @@ process_create_lvpxml() {
 				[ -z "${tmp}" ] || title="${tmp}"
 				cat >> ${lvpxml} <<-EOF
 					<item type="text">
-						<position x="0" y="$(( 95 - ((${item} - (${item} % 4)) / 4) * 50 - ${offset} ))">
-						<size w="5" h="5">
+						<position x="0" y="$(( 95 - ((${item} - (${item} % 4)) / 4) * 50 - ${offset} ))" />
+						<size w="5" h="5" />
 						<text>${title}</text>
 					</item>
 				EOF
@@ -117,7 +119,7 @@ process_create_lvpxml() {
 					<size w="40" h="40" />
 				</item>
 				<item type="text">
-					<position x="$(( (${item} % 4) * 50 - 75 ))" y="$(( 75 - ((${item} - (${item} % 4)) / 4) * 50 - ${offset} - 25))"
+					<position x="$(( (${item} % 4) * 50 - 75 ))" y="$(( 75 - ((${item} - (${item} % 4)) / 4) * 50 - ${offset} - 25))" />
 					<size w="5" h="5">
 					<text>${button_text}</text>
 				</item>
@@ -157,7 +159,7 @@ process_create_lvpxml() {
 	echo "done creating lvp.xml file"
 	echo "Please check that the file is correct!"
 
-	if [ ! -z ${DISPLAY} ] ; then
+	if [ -n "${DISPLAY}" ] ; then
 		echo "Trying to show menu now on ${DISPLAY}"
 		lvp=`which lvp`
 		[ -z "${lvp}" ] && lvp="livesystem/usr/bin/lvp"

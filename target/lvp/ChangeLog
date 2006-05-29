@@ -1,4 +1,36 @@
 
+Mon May 15 10:36:53 CEST 2006 Benjamin Schieder <blindcoder@scavenger.homeip.net>
+
+ * usual package updates (freeglut 2.4.0, udev 090, xorg 6.9.0, ROCK Linux 7368)
+ * use upx2 for in-memory decompression (now bash and mount are also compressed)
+ * improved hardware detection through the now almost-sane-again interface udev provides
+ * feedback option
+ * check-for-updates option
+ * V0.5.3: released, dubbed "Naginata"
+
+Thu Mar  9 07:06:31 CET 2006 Benjamin Schieder <blindcoder@scavenger.homeip.net>
+
+ * isolinux: initrd size is 16 MB, not 8 MB
+ * V0.5.2.1: released, dubbed "CLT Bug"
+
+Thu Feb  2 19:59:36 CET 2006 Benjamin Schieder <blindcoder@scavenger.homeip.net>
+
+ * usual round of updates: ROCK 6947
+ * udev now expects its stuff in /lib: fixed
+ * findutils 4.2.26 shares namespace with glibc 2.3.6: fixed
+ * add a VERSION file to binary releases
+ * mount devpts
+ * remove livesystem dependency on cat
+ * no more error messages when not using encryption
+ * make author happy menu entry ;)
+ * fix pseudo-xml output
+ * check if we can actually use encryption
+ * passphrase must be *at least* 20 chars, not *more than*
+ * fix scripts for coreutils-5.93 and beyond
+ * code cleanup: no more useless negations
+ * code cleanup: get filesize with stat instead of ls+sed+cut
+ * V0.5.2: released, dubbed "Go-Kyu"
+
 Tue Nov 15 20:17:48 CET 2005 Benjamin Schieder <blindcoder@scavenger.homeip.net>
 
  * removed unnecessary programs from the live system

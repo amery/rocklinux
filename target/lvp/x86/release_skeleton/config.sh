@@ -24,8 +24,11 @@
 . scripts/functions
 
 [ -e .config ] && . .config
+read a b lvp_ver < VERSION
 
+oldcount=${LVP_COUNTME:-0}
 quit=0
+
 while [ "${quit}" == "0" ] ; do
 	menu_init
 	. scripts/configuration
@@ -45,6 +48,21 @@ while [ "${quit}" == "0" ] ; do
 		c)
 			save
 			scripts/create_lvp
+			if [ ${LVP_COUNTME} -eq 1 ] ; then
+				read id a < <( ( cpuid 2>/dev/null ; hostid 2>/dev/null ; cat /etc/passwd ) | md5sum )
+				program="`which curl`"
+				if [ -z "${program}" ] ; then
+					program="`which wget`"
+					if [ -z "${program}" ] ; then
+						echo "Can't find either curl or wget. Not counting this disk."
+					else
+						program="${program} -O - -o /dev/null http://lvp.crash-override.net/count.php?id=${id}"
+					fi
+				else
+					program="${program} http://lvp.crash-override.net/count.php?id=${id} 2>/dev/null"
+				fi
+				${program}
+			fi
 			read -p "Press -<enter>- to continue"
 			;;
 		x)
@@ -84,11 +102,70 @@ POSSIBILITY OF SUCH DAMAGES.
 			;;
 		L)
 			clear
-			more COPYING || cat COPYING
+			more=$( which more )
+			${more:-cat} COPYING
+			read -p "Press -<enter>- to continue"
+			;;
+		m)
+			clear
+			cat <<-EOF
+If you want to make the author of this software happy, drop him a line:
+	blindcoder@scavenger.homeip.net
+
+Or support him:
+	http://lvp.crash-override.net/support.html
+
+Either way, you'll make a simple programmer very happy :-)
+
+			EOF
+			read -p "Press -<enter>- to continue"
+			;;
+		u)
+			program="`which curl`"
+			if [ -z "${program}" ] ; then
+				program="`which wget`"
+				if [ -z "${program}" ] ; then
+					echo "Can't find either curl or wget. Please check"
+					echo
+					echo "	http://lvp.crash-override.net/latest.txt"
+					echo
+					echo "manually for an update."
+				else
+					program="${program} -O - http://lvp.crash-override.net/latest.txt"
+				fi
+			else
+				program="${program} http://lvp.crash-override.net/latest.txt"
+			fi
+			read new_ver url < <( ${program} 2>/dev/null )
+			if [ "${lvp_ver}" != "${new_ver}" ] ; then
+				echo "New version LVP V${new_ver} is available! Download it at"
+				echo "${url}"
+				echo
+			else
+				echo "You already have the latest version."
+				echo
+			fi
 			read -p "Press -<enter>- to continue"
 			;;
 		*)
 			get ${choice}
+			if [ "${LVP_COUNTME}" == "1" -a "${oldcount}" == "0" ] ; then
+				read id a < <( ( cpuid 2>/dev/null ; hostid 2>/dev/null ; cat /etc/passwd ) | md5sum )
+				cat <<-EOF
+Thank you for deciding to have your disks counted!
+To prevent abuse of the counter a semi-unique ID is sent to the server
+when counting. Your ID is this:
+
+	${id}
+
+				EOF
+				olddefault=${LVP_USE_DEFAULTS}
+				LVP_USE_DEFAULTS=0
+				confirm "Do you really want to do this"
+				[ ${?} -eq 1 ] && LVP_COUNTME=0
+				LVP_USE_DEFAULTS=${olddefault}
+			fi
+			oldcount=${LVP_COUNTME}
 			;;
 	esac
 done

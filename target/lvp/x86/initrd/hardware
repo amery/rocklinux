@@ -21,15 +21,11 @@
 # file for details.
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
-echo "Running udevstart to get /dev started ... "
+echo "Populating /dev ... "
 
-/sbin/udevstart
-cd /dev ; rm -f fd
-ln -sf /proc/kcore      core
-ln -sf /proc/self/fd    fd
-ln -sf fd/0             stdin
-ln -sf fd/1             stdout
-ln -sf fd/2             stderr
+cp -r /lib/udev/devices/* /dev
+mount -t devpts devpts /dev/pts
+cd /dev
 ln -sf misc/psaux       mouse
 cd /
 
@@ -46,7 +42,10 @@ if [ `grep -c '^# ' /tmp/hardware` -gt 0 ] ; then
 	. /tmp/hardware
 fi
 
-/sbin/udevstart
+echo "" > /proc/sys/kernel/hotplug
+/sbin/udevd --daemon
+/sbin/udevtrigger
+/sbin/udevsettle
 
 if [ ! -e /dev/sound/dsp ] ; then
 	echo 'EEP! We have no sound!'

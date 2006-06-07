@@ -505,8 +505,8 @@ flistdel="etc/ld.so.cache|var/tmp/.*|var/lock/.*|var/run/.*|usr/tmp/.*|.*\\.old"
 pkgsplits=""
 if [ "$ROCKCFG_SPLIT_DEV" != 0 ]; then
 	# this doesn't affect files in /lib, just /.../lib
-	# so there mustn't be an exception for linux kernel modules
-	splitreg 40 dev '(/lib/.*\.(la|a|o)$|/include/)'
+	# so there needn't be an exception for linux kernel modules
+	splitreg 40 dev '(/lib/.*\.(la|a|o)$|/include/|/man[23]/)'
 	splitdesc_dev() { desc_I="$desc_I (development files)"; }
 fi
 if [ "$ROCKCFG_SPLIT_DOC" != 0 ]; then
@@ -556,7 +556,7 @@ postflist=""    ; hook_add postflist    5 'eval "$postflist"'
 finish=""	; hook_add finish	5 'eval "$finish"'
 
 [ "$ROCKCFG_DO_CHECK" = 1 ] && hook_add inmake 6 'run_check'
-hook_add postflist 3 'postflist_static_lib'
+hook_add postflist 3 'postflist_libs'
 
 configprefix="" ; autogen=0 ; automakever=""
 configscript="./configure" ; extraconfopt=""

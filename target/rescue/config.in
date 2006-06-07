@@ -32,13 +32,13 @@ choice ROCKCFG_RESCUE_ACTION_OVERLAY_FAILURE "ignore" \
 	"panic" "panic if overlay fails to extract."  \
 	"shell" "give shell if overlay fails to extract"
 
-text "Hostname for the stage2 system" "ROCKFG_RESCUE_DEFAULT_HOSTNAME" "stage2"
+text "Hostname for the stage2 system" "ROCKCFG_RESCUE_DEFAULT_HOSTNAME" "stage2"
 
 block_end
 
 pkgfilter sed '
 
-# Select some packages explicitely (base)
+# Select some packages explicitly (base)
 / lvm /		{ s/^[OX] /X /p; d; };
 / lvm-wrapper /		{ s/^[OX] /X /p; d; };
 / mdadm /	{ s/^[OX] /X /p; d; };

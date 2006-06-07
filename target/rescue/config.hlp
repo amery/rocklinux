@@ -20,4 +20,20 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
+ROCKCFG_RESCUE_ACTION_SYSTEM_FAILURE
+  Select which action to take if the compressed system image fails to
+  extract. Possible choices are:
+    "reboot" "reboot if system fails to extract."
+    "panic" "panic if system fails to extract."
+    "shell" "give shell if system fails to extract."
 
+choice ROCKCFG_RESCUE_ACTION_OVERLAY_FAILURE "ignore" \
+  Select which action to take if the compressed overlay image fails to
+  extract. Possible choices are:
+    "ignore" "ignore if overlay fails to extract."
+    "reboot" "reboot if overlay fails to extract."
+    "panic" "panic if overlay fails to extract."
+    "shell" "give shell if overlay fails to extract."
+
+ROCKCFG_RESCUE_DEFAULT_HOSTNAME
+  Set the default hostname for the stage 2 system here.

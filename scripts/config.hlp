@@ -40,6 +40,30 @@ ROCKCFG_CROSSBUILD
   This option needs to be selected to perform a cross-build to another
   architecture.
 
+ROCKCFG_CROSS_TESTALL
+  If enabled, try to cross-build packages which are not known to support
+  cross-compilation.
+
+  USE WITH CARE: cross-building packages which don't support cross-compilation
+  might overwrite files on your real root filesystem, rendering your system
+  unusable!
+
+ROCKCFG_PSEUDONATIVE
+  Many packages cannot be cross-build, but building them natively might
+  considerably slow down the build process (e.g. on old hardware).
+
+  Pseudo-native builds combine the advantages of cross-builds (fast hardware)
+  and native builds (being able to execute compiled programs): like in
+  cross-builds, most of the build is done on a non-native machine; programs
+  that require native execution, however, are transparently run on another,
+  native machine.
+
+ROCKCFG_PSEUDONATIVE_NATIVEHOST
+  The IP adress of the native host for pseudo-native builds.
+
+ROCKCFG_PSEUDONATIVE_NFSROOT
+  The NFS root to be mounted on the native host for pseudo-native builds.
+
 ROCKCFG_DISABLE_BROKEN
   If you select this option packages that have not built in the last
   referency build will not be built.
@@ -109,6 +133,9 @@ ROCKCFG_DISABLE_BROKEN
   as broken. Note that this differs from ROCKCFG_RETRY_BROKEN. The reason
   a package is deemed 'broken' can also be missing *.cache file or others.
 
+ROCKCFG_NOBROKENDEPS
+  Do not try building packages if any of their build-time dependencies failed.
+
 ROCKCFG_ALWAYS_CLEAN
   When a package built flawlessly then the temporary directory which was
   used for building is deleted. Select this options if you also want this
@@ -142,6 +169,35 @@ ROCKCFG_SRC_TMPFS_OPT
 ROCKCFG_SRC_TMPFS_LOG
   Please enter the path to the tmpfs logfile.
 
+ROCKCFG_SENDMAIL
+  If enabled, Build-Target will send emails when special events happen,
+  currently on failed package builds and on completed target builds.
+
+ROCKCFG_SENDMAIL_BIN
+  The program used by the build scripts for sending email notifications.
+
+ROCKCFG_SENDMAIL_TO
+  Email notifications about build events will be sent to this email address.
+
+ROCKCFG_MYTHTVOSD
+  Use a Myth TV on-screen display for certain output of the build scripts.
+
+ROCKCFG_OUTPUT_HTML
+  Write the output of the build scripts to HTML files.
+
+ROCKCFG_OUTPUT_HTML_DIR
+  The directory which build output should be written to.
+
+ROCKCFG_OUTPUT_TTS
+  Use a text-to-speech system for certain output of the build scripts.
+
+ROCKCFG_OUTPUT_TERM_COLOR
+  Use ANSI colors for output to a terminal.
+
+ROCKCFG_VERBOSE
+  If enabled, all output during builds is not only written to the respective
+  build log but also displayed on the console.
+
 ROCKCFG_EXPERT
   This button will enable a lot of additional configuration options.
   Some of these will make small changes to what the system will look
@@ -166,8 +222,33 @@ ROCKCFG_PKGFILE_VER
   If selected the package version number will be added to the binary
   package filenme.
 
+ROCKCFG_SPLIT_DOC
+  If enabled, each binary package is split, with one split containing
+  only documentation files, e.g. kdelibs.gem and kdelibs:doc.gem. This
+  allows to easily distribute and install package splits separately.
+
+  Altough man and info pages are documentation files as well, they are
+  not included in :doc splits because they are considered too important.
+
+ROCKCFG_SPLIT_DEV
+  If enabled, each binary package is split, with one split containing
+  only files required for software development, e.g. kdelibs.gem and 
+  kdelibs:dev.gem. This allows to easily distribute and install package
+  splits separately.
+
+  Files required solely for the purpose of software development include
+  static libraries and C header files.
+
 ROCKCFG_PKGSEL
   If selected you can modify the package list for the build.
+
+ROCKCFG_PKGSEL_TPL
+  Package preselection templates are sets of package selection rules, where
+  each template is used for a distinct set of packages.
+
+  Package preselection templates (together with the default package
+  selections of each target) can be seen as starting points for creating
+  your own package selection (using "Custom package selection").
 
 MENU_PKGSEL_RULES
   Here you can modify the package list for the build. You have the
@@ -266,6 +347,16 @@ ROCKCFG_DO_CHECK
 ROCKCFG_OPT
   With this option, the type of optimisation can be selected.
 
+ROCKCFG_C_FLAGS
+  These parameters (flags) will be used for every invocation of gcc.
+
+ROCKCFG_CONFIGURE_OPTS
+  These parameters will be used for every invocation of GNU configure.
+
+ROCKCFG_CREATE_DOCS
+  If enabled, the build scripts will automatically install documentation files
+  like README, INSTALL and Changelog, contained in each packages sources.
+
 ROCKCFG_DEBUG
   Enable this option if you want to have debug symbols in your binaries.
 
@@ -274,6 +365,9 @@ ROCKCFG_LIMITCXX
   identification. This can make the C++ binaries about 25% smaller,
   but any C++ sources using exceptions or rtti, for example QT/KDE,
   will fail to compile. If you don't know, don't touch.
+
+ROCKCFG_STATIC
+  Create statically linked binaries.
 
 ROCKCFG_MULTILIB
   Enable installing several versions of the same library.

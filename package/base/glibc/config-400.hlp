@@ -33,3 +33,15 @@ MENU_PKG_GLIBC
 ROCKCFG_PKG_GLIBC22_USEIT
   Please check here if you want to use the old glibc Version 2.2.
 
+ROCKCFG_PKG_GLIBC_ENABLE_PROFILE
+  If enabled, glibc libraries will be built with profiling support.
+
+ROCKCFG_PKG_GLIBC_BRANCH
+  Choose the glibc branch to use, either 2.2, 2.3 or 2.4.
+
+ROCKCFG_PKG_GLIBC23_LINUXTHREADS
+  Use old-style linuxthreads instead of NPTL (Native POSIX Threads for Linux).
+
+  NPTL does not work on plain i386. Furthermore glibc libraries supporting
+  NPTL are incompatible with those supporting linuxthreads.
+  You need to be running a 2.6 Linux kernel to build a glibc supporting NPTL.

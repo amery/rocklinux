@@ -39,7 +39,25 @@ ROCKCFG_PKG_GCC_STACKPRO
   Please check here to use the GCC Stack Smashing Protector in all
   gcc versions for which it is available.
   This will help to prevent buffer overflows.
-  
+
+ROCKCFG_PKG_GCC_GCC2
+  Build the GNU Compiler Collection, version 2.x.
+
+ROCKCFG_PKG_GCC_GCC32
+  Build the GNU Compiler Collection, version 3.2.x.
+
+ROCKCFG_PKG_GCC_GCC33
+  Build the GNU Compiler Collection, version 3.3.x.
+
+ROCKCFG_PKG_GCC_GCC34
+  Build the GNU Compiler Collection, version 3.4.x.
+
+ROCKCFG_PKG_GCC_GCC40
+  Build the GNU Compiler Collection, version 4.0.x.
+
+ROCKCFG_PKG_GCC_GCC41
+  Build the GNU Compiler Collection, version 4.1.x.
+
 ROCKCFG_PKG_GCC2_NO_CHILL
   Please check here if you don't want to build the gcc2 CHILL compiler.
 
@@ -56,3 +74,16 @@ ROCKCFG_PKG_GCC34_PROFILED
   Enables profiling during GCC bootstrap and so yields an optimised
   compiler. Build speedup might be 5-10%.
 
+ROCKCFG_PKG_GCC40_NO_JAVA
+  Please check here if you don't want to build the gcc40 JAVA compiler.
+
+ROCKCFG_PKG_GCC40_PROFILED
+  Enables profiling during GCC bootstrap and so yields an optimised
+  compiler. Build speedup might be 5-10%.
+
+ROCKCFG_PKG_GCC41_NO_JAVA
+  Please check here if you don't want to build the gcc41 JAVA compiler.
+
+ROCKCFG_PKG_GCC41_PROFILED
+  Enables profiling during GCC bootstrap and so yields an optimised
+  compiler. Build speedup might be 5-10%.

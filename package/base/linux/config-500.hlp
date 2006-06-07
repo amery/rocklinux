@@ -44,3 +44,19 @@ ROCKCFG_PKG_LINUX_USE26MODTOOLS
   Please check here if you want to use the newer modutils. This is
   needed if you want to use a 2.6.x kernel.
 
+ROCKCFG_PKG_LINUX_SRC24
+  Place the extracted linux24 sources in /usr/src (together with the ROCK
+  Linux kernel patches).
+
+ROCKCFG_PKG_LINUX_SRC26
+  Place the extracted linux26 sources in /usr/src (together with the ROCK
+  Linux kernel patches).
+
+ROCKCFG_PKG_LINUX_IMG24
+  Build and install a linux24 kernel.
+
+ROCKCFG_PKG_LINUX_IMG26
+  Build and install a linux26 kernel.
+
+ROCKCFG_PKG_LINUX_DEFAULT
+  This kernel will be installed as the default kernel.

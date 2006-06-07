@@ -399,14 +399,8 @@ checkisomd5() { # {{{
 } # }}}
 
 emit_udev_events() { # {{{
-	while read uevent; do 
-			echo 1 > $uevent
-	done < <( find /sys -name uevent )
-	udevwait=0
-	while [ -d /dev/.udev/queue -a $udevwait -lt 300 ] ; do
-			sleep 1
-			(( udevwait++ ))
-	done
+	/sbin/udevtrigger
+	/sbin/udevsettle
 } # }}}
 
 input=1

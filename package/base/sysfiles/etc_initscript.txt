@@ -59,14 +59,8 @@ case "$devtype" in
 		echo "" > /proc/sys/kernel/hotplug
 		/sbin/udevd --daemon 
 		# create nodes for devices already in kernel
-		find /sys -name uevent | while read uevent; do 
-				echo 1 > $uevent
-		done
-		udevwait=0
-		while [ -d /dev/.udev/queue -a $udevwait -lt 300 ] ; do
-				sleep 1
-				(( udevwait++ ))
-		done
+		/sbin/udevtrigger
+		/sbin/udevsettle
 		exec > /dev/console 2>&1 < /dev/console
 		echo "Mounted /dev (udev) from /etc/initscript."
 	fi

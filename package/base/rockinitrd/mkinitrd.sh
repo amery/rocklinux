@@ -2,8 +2,6 @@
 
 kernel=`uname -r`
 targetdir=`mktemp -d`
-modprobeopt="-n"
-[ "${kernel:0:3}" == "2.6" ] && modprobeopt="--show-depends"
 empty=0
 
 rootdir=""
@@ -64,19 +62,39 @@ case ${initrdfs} in
 		;;
 esac
 
+add_module_to_initrd() {
+	module="${1}"
+	parameter="${2}"
+	module=${module/.ko/} # just in case, shouldn't be
+	module="`find ${rootdir}/lib/modules/${kernel} -name "${module}.o" -o -name "${module}.ko"`"
+	[ -f "${targetdir}/${module}" ] && return # skip dupes
+	echo "Adding ${module}."
+	mkdir -p ${targetdir}/${module%/*}
+	cp ${module} ${targetdir}/${module}
+	echo "/sbin/insmod ${module} ${parameter}" >> ${targetdir}/etc/conf/kernel
+}
+
 echo "Creating ${initrd_img} ..."
 mkdir -p ${targetdir}/etc/conf
 if [ "${empty}" = 0 ] ; then
 	grep '^modprobe ' ${rootdir}/etc/conf/kernel | grep -v 'no-initrd' | \
 		sed 's,[ 	]#.*,,' | \
-		while read a b ; do ${a} ${modprobeopt} -v ${b} 2> /dev/null; done |
 		while read a b c; do
-			[[ "${b}" = *.ko ]] && b=${b/.ko/};
-			b="`find ${rootdir}/lib/modules/${kernel} -wholename "${b}.o" -o -wholename "${b}.ko"`"
-			echo "Adding ${b}."
-			mkdir -p ${targetdir}/${b%/*}
-			cp ${b} ${targetdir}/${b}
-			echo "/sbin/insmod ${b} ${c}" >> ${targetdir}/etc/conf/kernel
+			module="$( find ${rootdir}/lib/modules/${kernel}/ -name "${b}.o" -o -name "${b}.ko" )"
+			if [ -z "${module}" ] ; then
+				echo "$0: ${b} is no longer a module in ${kernel}" >&2
+				echo "$0: Please either adjust /etc/conf/kernel or the configuration for the kernel V${kernel}" >&2
+				continue
+			fi
+			modinfo ${module} 2> /dev/null | grep ^depends: | \
+			while read a b; do
+				[ -z "${b}" ] && continue
+				b="${b//,/ }"
+				for module in ${b} ; do
+					add_module_to_initrd "${b}"
+				done
+			done
+			add_module_to_initrd "${b}" "${c}"
 		done
 fi
 

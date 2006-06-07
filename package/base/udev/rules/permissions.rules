@@ -5,14 +5,14 @@ SUBSYSTEM=="block",				GROUP="disk"
 # SUBSYSTEM=="block", SYSFS{removable}=="1",	GROUP="floppy"
 
 # IDE devices
-# BUS=="ide", KERNEL=="hd[a-z]", SYSFS{removable}="1", \
-#  PROGRAM="/bin/cat /proc/ide/%k/media", RESULT=="cdrom*",	GROUP="cdrom"
+BUS=="ide", KERNEL=="hd[a-z]", SYSFS{removable}="1", \
+  PROGRAM="/bin/cat /proc/ide/%k/media", RESULT=="cdrom*",	GROUP="cdrom"
 # BUS=="ide", KERNEL=="ht[0-9]*",					GROUP="tape"
 # BUS=="ide", KERNEL=="nht[0-9]*",				GROUP="tape"
 
 # SCSI devices
 # BUS=="scsi", SYSFS{type}=="1",	GROUP="tape"
-# BUS=="scsi", SYSFS{type}=="5",	GROUP="cdrom"
+BUS=="scsi", SYSFS{type}=="5",	GROUP="cdrom"
 # BUS=="scsi", SYSFS{type}=="6",	GROUP="scanner"
 
 # USB devices
@@ -54,8 +54,8 @@ KERNEL=="agpgart",	GROUP="video"
 # KERNEL=="nvram",	GROUP="nvram"
 KERNEL=="rtc",		MODE="0660", GROUP="sound"
 
-# KERNEL=="cdemu[0-9]*",	GROUP="cdrom"
-# KERNEL=="pktcdvd[0-9]*", GROUP="cdrom"
+KERNEL=="cdemu[0-9]*",	GROUP="cdrom"
+KERNEL=="pktcdvd[0-9]*", GROUP="cdrom"
 KERNEL=="pktcdvd",	MODE="0644"
 
 # printers and parallel devices

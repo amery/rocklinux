@@ -25,9 +25,6 @@ if [ "$ROCKCFG_TARGET_CRYSTAL_BUILDADDONS" = 1 ]; then
 	done
 fi
 
-# do not include the linux source package on the install media
-rm build/${ROCKCFG_ID}/ROCK/pkgs_sel/linux2?-source-*.gem
-
 echo_status "Selecting info files ..."
 rm -rf build/${ROCKCFG_ID}/ROCK/info_sel
 mkdir -p build/${ROCKCFG_ID}/ROCK/info_sel

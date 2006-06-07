@@ -1,0 +1,18 @@
+--- ./mk-1st.awk.orig	2005-06-18 21:15:57.000000000 +0200
++++ ./mk-1st.awk	2006-05-30 01:48:45.556155823 +0200
+@@ -207,7 +207,6 @@
+ 				} else {
+ 					dst_dirs = "$(DESTDIR)$(libdir)";
+ 					printf "../lib/%s : $(%s_OBJS)\n", end_name, OBJS
+-					print "\t-@rm -f $@";
+ 				}
+ 				if ( subset == "termlib" || subset == "termlib+ext_tinfo" ) {
+ 					printf "\t$(MK_SHARED_LIB) $(%s_OBJS) $(TINFO_LIST) $(LDFLAGS)\n", OBJS
+@@ -240,7 +239,6 @@
+ 					src_name = sprintf("../lib/%s", end_name);
+ 					dst_name = sprintf("$(DESTDIR)$(libdir)/%s", end_name);
+ 					printf "\t@echo installing %s as %s\n", src_name, dst_name
+-					printf "\t-@rm -f %s\n", dst_name
+ 					printf "\t$(INSTALL_LIB) %s %s\n", src_name, dst_name
+ 
+ 					sharedlinks("$(DESTDIR)$(libdir)")

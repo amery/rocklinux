@@ -51,13 +51,28 @@ while [ "$1" ] ; do
 	shift
 done
 
-cmd="rsync -rltzv --delete"
-for x in Documentation architecture package misc scripts target
-do cmd="$cmd --include='/$x' --include='/$x/**'"; done
-cmd="$cmd --exclude='*' $srcroot ."
+if [ -L scripts ] ; then
+	echo "Update-Src shouldn't be run in a linked source tree."
+	exit 1;
+fi
 
-echo "Running '$cmd' ..."
-eval "$cmd"
+if [ -d .svn ] ; then
+	if [ -d ../`basename $PWD`.sm/SM ] ; then
+		echo "This looks like a submaster tree. Please update it using sm sync!"
+		exit 1
+	fi
+
+	echo "Running 'svn up' ..."
+	svn up
+else
+	cmd="rsync -rltzv --delete"
+	for x in Documentation architecture package misc scripts target
+	do cmd="$cmd --include='/$x' --include='/$x/**'"; done
+	cmd="$cmd --exclude='*' $srcroot ."
+
+	echo "Running '$cmd' ..."
+	eval "$cmd"
+fi
 
 echo
 echo "You might need to run ./scripts/Download now."

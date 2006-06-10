@@ -1,27 +1,55 @@
 
 echo_header "Creating initrd data:"
 rm -rf $disksdir/initrd
-mkdir -p $disksdir/initrd/{dev,sys,proc,mnt/{cdrom,floppy,stick,}}
+mkdir -p $disksdir/initrd/{dev,proc,sys,mnt/{cdrom,floppy,stick,}}
 mkdir -p $disksdir/initrd/mnt/{cowfs_ro/{etc,home,bin,sbin,opt,usr/{bin,sbin},tmp,var,lib},cowfs_rw}
 cd $disksdir/initrd
+
 #
 echo_status "Creating read-only symlinks..."
 for d in etc home bin sbin opt usr tmp var lib ; do
-	ln -s /mnt/cowfs_rw/$d $d
-	ln -s /mnt/cowfs_ro/$d mnt/cowfs_rw/$d
+	ln -s mnt/cowfs_rw/$d $d
+	ln -s ../cowfs_ro/$d mnt/cowfs_rw/$d
 done
 #
 if [ -L $disksdir/2nd_stage/lib64 ] ; then
-	ln -s /mnt/cowfs_rw/lib64 lib64
-	ln -s /mnt/cowfs_ro/lib64 mnt/cowfs_rw/lib64
+	ln -s mnt/cowfs_rw/lib64 lib64
+	ln -s ../cowfs_ro/lib64 mnt/cowfs_rw/lib64
 fi
 
+rock_targetdir="$base/target/$target/"
+rock_target="$target"
+
+rootdir="$disksdir/2nd_stage"
+targetdir="$disksdir/initrd"
+cross_compile=""
+if [ "$ROCKCFG_CROSSBUILD" = "1" ] ; then
+	cross_compile="`find ${base}/ROCK/tools.cross/ -name "*-readelf"`"
+	cross_compile="${cross_compile##*/}"
+	cross_compile="${cross_compile%%readelf}"
+fi
+initrdfs="ext2fs"
+block_size=""
+ramdisk_size=12288
+
+case ${initrdfs} in
+	ext2fs|ext3fs|cramfs) 
+		initrd_img="${disksdir}/initrd.img"
+		;;
+	ramfs)
+		initrd_img="${disksdir}/initrd.cpio"
+		;;
+esac
+
 echo_status "Creating some device nodes"
-mknod dev/ram0  b 1 0
-mknod dev/null  c 1 3
-mknod dev/zero  c 1 5
-mknod dev/tty   c 5 0
-mknod dev/console c 5 1
+mknod ${targetdir}/dev/ram0	b 1 0
+mknod ${targetdir}/dev/null	c 1 3
+mknod ${targetdir}/dev/zero	c 1 5
+mknod ${targetdir}/dev/tty	c 5 0
+mknod ${targetdir}/dev/console	c 5 1
+
+# this copies a set of programs and the necessary libraries into a
+# chroot environment
 
 echo_status "Create checkisomd5 binary"
 cp -r ${base}/misc/isomd5sum ${base}/build/${ROCKCFG_ID}/
@@ -36,28 +64,52 @@ chroot ${base}/build/${ROCKCFG_ID}/ /compile_isomd5sum.sh
 cp ${base}/build/${ROCKCFG_ID}/isomd5sum/checkisomd5 mnt/cowfs_ro/bin/
 rm -rf ${base}/build/${ROCKCFG_ID}/compile_isomd5sum.sh ${base}/build/${ROCKCFG_ID}/isomd5sum
 
-echo_status "Copying and adjusting linuxrc scipt"
+echo_status "Copying and adjusting linuxrc script"
 cp ${base}/target/${target}/linuxrc.sh linuxrc
 chmod +x linuxrc
-#sed -i -e "s,^STAGE_2_BIG_IMAGE=\"2nd_stage.tar.gz\"$,STAGE_2_BIG_IMAGE=\"${ROCKCFG_SHORTID}/2nd_stage.tar.gz\"," \
-#       -e "s,^STAGE_2_SMALL_IMAGE=\"2nd_stage_small.tar.gz\"$,STAGE_2_SMALL_IMAGE=\"${ROCKCFG_SHORTID}/2nd_stage_small.tar.gz\"," \
 sed -i -e "s,\(^STAGE_2_BIG_IMAGE=\"\)\(2nd_stage.img.z\"$\),\1${ROCKCFG_SHORTID}/\2," \
        linuxrc
 
-#
-echo_status "Copy various helper applications."
-cp ../2nd_stage/bin/{tar,gzip} mnt/cowfs_ro/bin/
-cp ../2nd_stage/sbin/hwscan mnt/cowfs_ro/sbin/
-cp ../2nd_stage/usr/bin/gawk mnt/cowfs_ro/bin/
+libdirs="${rootdir}/lib `sed -e"s,^\(.*\),${rootdir}\1," ${rootdir}/etc/ld.so.conf | tr '\n' ' '`"
 
-for file in ../2nd_stage/bin/{tar,gzip,bash2,bash,sh,mount,umount,ls,cat,uname,rm,ln,mkdir,rmdir,gawk,awk,grep,sleep,dmesg} \
-	    ../2nd_stage/sbin/{ip,hwscan,pivot_root,swapon,swapoff,udev*,losetup} \
-	    ../2nd_stage/usr/bin/{wget,find,expand,readlink} \
-	    ../2nd_stage/usr/sbin/lspci ; do
-	programs="${programs} ${file#../2nd_stage}"
-	cp ${file} mnt/cowfs_ro/${file#../2nd_stage/}
+needed_libs() {
+	local x="${1}" library
+
+	${cross_compile}readelf -d ${x} 2>/dev/null | grep "(NEEDED)" |
+		sed -e"s,.*Shared library: \[\(.*\)\],\1," |
+		while read library ; do
+			find ${libdirs} -name "${library}" 2>/dev/null |
+			sed -e "s,^${rootdir},,g" | tr '\n' ' '
+		done
+}
+
+libs="${libs} `needed_libs bin/checkisomd5`"
+
+echo_status "Copying other files ... "
+for x in ${rock_targetdir}/initrd/initrd_* ; do
+	[ -f ${x} ] || continue
+	while read file target ; do
+		file="${rootdir}/${file}"
+		[ -e ${file} ] || continue
+
+		while read f ; do
+			tfile=${targetdir}/${target}${f#${file}}
+			[ -e ${tfile} ] && continue
+
+			if [ -d ${f} -a ! -L ${f} ] ; then
+				mkdir -p "${tfile}"
+				continue
+			else
+				mkdir -p "${tfile%/*}"
+			fi
+
+			cp -a ${f} ${tfile}
+
+			file -L ${f} | grep -q ELF || continue
+			libs="${libs} `needed_libs ${f}`"
+		done < <( find "${file}" )
+	done < ${x}
 done
-cp -a $build_root/etc/udev mnt/cowfs_ro/etc/
 
 for x in modprobe.static modprobe.static.old \
          insmod.static insmod.static.old
@@ -89,42 +141,32 @@ done
 #
 rm -f mnt/cowfs_ro/lib/modules/[0-9]*/kernel/drivers/net/{dummy,ppp*}.{o,ko}
 
-echo_status "Copying necessary libraries"
-
-libs="/lib/ld-linux.so.2 /lib/libdl.so.2 /lib/libc.so.6 /lib/librt.so.1 /lib/libpthread.so.0 /usr/lib/libpopt.so.0"
-# libpopt from checkisomd5 which is not in build/*
-for x in ${programs} ; do
-	[ -e ./$x ] || continue
-	file $x | grep -q ELF || continue
-	libs="$libs `chroot ${base}/build/${ROCKCFG_ID} ldd $x 2>/dev/null | grep -v 'not a dynamic executable' | sed -e 's,^[\t ]*,,g' | cut -f 3 -d' '`"
-done
-
-while [ -n "$libs" ] ; do
-	oldlibs=$libs
+echo_status "Copying required libraries ... "
+while [ -n "${libs}" ] ; do
+	oldlibs=${libs}
 	libs=""
-	for x in $oldlibs ; do
-		mkdir -p mnt/cowfs_ro/${x%/*}
-		if [ ! -e ./$x ] ; then
-			cp ${base}/build/${ROCKCFG_ID}/$x mnt/cowfs_ro/$x
-			echo_status "- ${x##*/}"
-		fi
-		file $x | grep -q ELF || continue
-		for y in `chroot ${base}/build/${ROCKCFG_ID} ldd $x 2>/dev/null | grep -v 'not a dynamic executable' | sed -e 's,^[\t ]*,,g' | cut -f 3 -d' '` ; do
-			[ ! -e "./$y" ] && libs="$libs $y"
+	for x in ${oldlibs} ; do
+		[ -e "${targetdir}/${x}" ] && continue
+		mkdir -p "${targetdir}/${x%/*}"
+		cp ${rootdir}/${x} ${targetdir}/${x}
+		file -L ${rootdir}/${x} | grep -q ELF || continue
+		for y in `needed_libs ${rootdir}/${x}` ; do
+			[ ! -e "${targetdir}/${y}" ] && libs="${libs} ${y}"
 		done
 	done
 done
 
-echo_status "Creating links for identical files."
+echo_status "Creating links for identical files ..."
 while read ck fn
 do
-	if [ "$oldck" = "$ck" ] ; then
-		echo_status "\`- Found $fn -> $oldfn."
-		rm $fn ; ln -s ${oldfn#.} $fn
+	# don't link empty files...
+	if [ "${oldck}" = "${ck}" -a -s "${fn}" ] ; then
+		echo_status "\`- Found ${fn#${targetdir}} -> ${oldfn#${targetdir}}."
+		rm ${fn} ; ln -s /${oldfn#${targetdir}} ${fn}
 	else
-		oldck=$ck ; oldfn=$fn
+		oldck=${ck} ; oldfn=${fn}
 	fi
-done < <( find -type f | xargs md5sum | sort )
+done < <( find ${targetdir} -type f | xargs md5sum | sort )
 
 cd ..
 
@@ -132,32 +174,40 @@ echo_header "Creating initrd filesystem image: "
 
 ramdisk_size=8139
 
+[ "${block_size}" == "" ] && block_size=1024
+block_count=$(( ( 1024 * ${ramdisk_size} ) / ${block_size} ))
+
 echo_status "Creating temporary files."
-tmpdir=initrd_$$.dir; mkdir -p $disksdir/$tmpdir; cd $disksdir
-dd if=/dev/zero of=initrd.img bs=1024 count=$ramdisk_size &> /dev/null
-tmpdev=""
-for x in /dev/loop/* ; do
-        if losetup $x initrd.img 2> /dev/null ; then
-                tmpdev=$x ; break
-        fi
-done
-if [ -z "$tmpdev" ] ; then
-        echo_error "No free loopback device found!"
-        rm -f $tmpfile ; rmdir $tmpdir; exit 1
+tmpdir=`mktemp -d` ; mkdir -p ${tmpdir}
+dd if=/dev/zero of=${initrd_img} bs=${block_size} count=${block_count} &> /dev/null
+tmpdev="`losetup -f 2>/dev/null`"
+if [ -z "${tmpdev}" ] ; then
+	for x in /dev/loop* /dev/loop/* ; do
+		[ -b "${x}" ] || continue
+		losetup ${x} 2>&1 >/dev/null || tmpdev="${x}"
+		[ -n "${tmpdev}" ] && break
+	done
+	if [ -z "${tmpdev}" ] ; then
+		echo_status "No free loopback device found!"
+		rm -f ${tmpfile} ; rmdir ${tmpdir}; exit 1
+	fi
 fi
-echo_status "Using loopback device $tmpdev."
-#
+echo_status "Using loopback device ${tmpdev}."
+losetup "${tmpdev}" ${initrd_img}
+
 echo_status "Writing initrd image file."
-mke2fs -m 0 -N 360 -q $tmpdev &> /dev/null
-mount -t ext2 $tmpdev $tmpdir
-rmdir $tmpdir/lost+found/
-cp -a initrd/* $tmpdir
-umount $tmpdir
+mkfs.${initrdfs:0:4} -b ${block_size} -m 0 -N 360 -q ${tmpdev} &> /dev/null
+mount -t ${initrdfs:0:4} ${tmpdev} ${tmpdir}
+rmdir ${tmpdir}/lost+found/
+cp -a ${targetdir}/* ${tmpdir}
+umount ${tmpdir}
+
+echo_status "Removing temporary files."
+losetup -d ${tmpdev}
+rm -rf ${tmpdir}
 #
 echo_status "Compressing initrd image file."
-gzip -9 initrd.img 
-mv initrd{.img,}.gz
-#
-echo_status "Removing temporary files."
-losetup -d $tmpdev
-rm -rf $tmpdir
+gzip -9 -c ${initrd_img} > ${initrd_img}.gz
+mv ${initrd_img%.img}{.img,}.gz
+
+target="$rock_target"

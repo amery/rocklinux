@@ -153,7 +153,7 @@ getcdromdevice () { # {{{
 	cdroms="${1}"
 	floppies="${2}"
 	autoboot="${3}"
-	devicelists="/dev/cdroms/* /dev/hd[a-d] /dev/floppy/*"
+	devicelists="/dev/cdroms/* /dev/floppy/*"
 
 	[ "${cdroms}" == "0" -a "${floppies}" == "0" ] && return -1
 
@@ -178,12 +178,8 @@ getcdromdevice () { # {{{
 			echo "	${x}. CD-ROM #${cdrom} (IDE/ATAPI or SCSI)"
 			cdrom=$((${cdrom}+1))
 		fi
-		if [[ ${device} = /dev/floppy* ]] ; then
+		if [[ ${device} = /dev/flopp* ]] ; then
 			echo "	${x}. FDD (Floppy Disk Drive) #${floppy}"
-			floppy=$((${floppy}+1))
-		fi
-		if [[ ${device} = /dev/hd[a-d] ]] ; then
-			echo "	${x}. IDE Drive #${x}"
 			floppy=$((${floppy}+1))
 		fi
 		x=$((${x}+1))
@@ -236,6 +232,7 @@ prepare_root () {
 	ln -svf /mnt/cowfs_ro/* /mnt/cowfs_rw-new/
 	rm -rf /mnt/cowfs_rw-new/{home,tmp}
 	mkdir -p /mnt/cowfs_rw-new/{home,tmp}
+	chmod 1777 /mnt/cowfs_rw-new/tmp
 	mkdir -p /mnt/cowfs_rw-new/home/{rocker,root}
 	chmod 755 /mnt/cowfs_rw-new/home/rocker
 	chmod 700 /mnt/cowfs_rw-new/home/root
@@ -281,7 +278,7 @@ EOF
 	fi
 
 	exit_linuxrc=1
-	echo "Using ${devicefile}://${filename}."
+	echo "Using ${devicefile}:${filename}."
 
 	if ! mkdir -p /mnt/cdrom ; then
 		echo "Can't create /mnt/cdrom"
@@ -293,14 +290,15 @@ EOF
 		exit_linuxrc=0
 	fi
 
-	if ! losetup /dev/loop/0 "/mnt/cdrom/${filename}" ; then
+	loopdev="dev/loop/0" ; [ ! -e "${loopdev}" ] && loopdev="/dev/loop0"
+	if ! losetup "${loopdev}" "/mnt/cdrom/${filename}" ; then
 		echo "Can't losetup /mnt/cdrom/${filename}"
 		exit_linuxrc=0
 	fi
 
 #	mkdir -p /mnt/cowfs_r{o,w}
 
-	if ! mount -t squashfs /dev/loop/0 /mnt/cowfs_ro -o ro ; then
+	if ! mount -t squashfs "${loopdev}" /mnt/cowfs_ro -o ro ; then
 		echo "Can't mount squashfs on /mnt/cowfs_ro"
 		exit_linuxrc=0
 	fi
@@ -386,32 +384,29 @@ checkisomd5() { # {{{
 	read
 } # }}}
 
+emit_udev_events() { # {{{
+	/sbin/udevtrigger
+	/sbin/udevsettle
+} # }}}
+
 input=1
 exit_linuxrc=0
 [ -z "${autoboot}" ] && autoboot=0
-mount -t tmpfs tmpfs /dev || echo "Can't mount a tmpfs on /dev"
-mount -t sysfs sysfs /sys || echo "Can't mount sysfs on /sys"
-mount -t proc proc /proc || echo "Can't mount /proc"
-mount -t tmpfs -o ${TMPFS_OPTIONS} tmpfs /tmp || echo "Can't mount /tmpfs"
 
-cd /dev
-rm -rf fd
-ln -s /proc/self/fd
-cd -
+mount -t tmpfs -o ${TMPFS_OPTIONS} tmpfs /tmp || echo "Can't mount /tmpfs"
+mount -t proc proc /proc || echo "Can't mount /proc"
+mount -t sysfs sysfs /sys || echo "Can't mount sysfs on /sys"
+mount -t tmpfs tmpfs /dev || echo "Can't mount a tmpfs on /dev"
 
 export PATH="/sbin:/bin:/usr/sbin:/usr/bin:$PATH"
 
+cp -r /lib/udev/devices/* /dev
+
 echo "" > /proc/sys/kernel/hotplug
 /sbin/udevd --daemon
+
 # create nodes for devices already in kernel
-while read uevent; do 
-		echo 1 > $uevent
-done < <( find /sys -name uevent )
-udevwait=0
-while [ -d /dev/.udev/queue -a $udevwait -lt 300 ] ; do
-		sleep 1
-		(( udevwait++ ))
-done
+emit_udev_events
 
 mod_load_info
 
@@ -452,7 +447,7 @@ while [ ${exit_linuxrc} -eq 0 ] ; do
 	8. Validate a CD/DVD against its embedded checksum
 
 EOF
-	echo -n "What do you want to do [0-7] (default=0)? "
+	echo -n "What do you want to do [0-8] (default=0)? "
 	read text
 	[ -z "${text}" ] && text=0
 	input=${text//[^0-9]/}

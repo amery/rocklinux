@@ -40,12 +40,13 @@ mkdir home/{rocker,root}
 chown 1000:100 home/rocker
 
 sed -i -e 's,root:.*,root:x:0:0:root:/home/root:/bin/bash,' etc/passwd
-sed -i -e 's,root:.*,root:$1$1YssESn0$Y9LvBGGXpsZhjNKZ0x8OM/:12548::::::,' etc/shadow
-sed -i -e 's,sound:x:17:,sound:x:17:rocker,' etc/group
+sed -i -e 's,root:.*,root:$1$9KtEb9vt$IDoD/c7IG5EpCwxvBudgA:13300::::::,' etc/shadow
 echo 'rocker:x:1000:100:ROCK Live CD User:/home/rocker:/bin/bash' >> etc/passwd
-echo 'rocker:$1$//TuI8QD$kTxVesUbGLNKuxILuK2UN/:12548:0:99999:7:::' >> etc/shadow
-echo 'wheel:x:440:rocker' >> etc/group
-echo 'wheel:!::rocker' >> etc/gshadow
+echo 'rocker:$1$b3mL1k/q$zneIjKcHqok1T80fp1cPI1:13300:0:99999:7:::' >> etc/shadow
+sed -i -e 's,wheel:x:10:,wheel:x:10:rocker,' etc/group
+sed -i -e 's,video:x:16:,video:x:16:rocker,' etc/group
+sed -i -e 's,sound:x:17:,sound:x:17:rocker,' etc/group
+sed -i -e 's,cdrom:x:29:,cdrom:x:29:rocker,' etc/group
 
 # 
 echo_status "activating shadowfs through /etc/ld.so.preload"

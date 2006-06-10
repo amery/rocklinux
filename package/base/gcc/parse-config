@@ -69,7 +69,13 @@ for x in CC CXX F77 ; do
 	fi
 done
 
-# Add the usual gcc optimazation options
+# Use automatically precompiled C++ headers
+if [ "$ROCKCFG_AUTOPCH" = 1 ] ; then
+	[ -n "$CXX" -a -n "`type -p g++-autopch`" ] && \
+		CXX="eval AUTOPCHCXX=\"$CXX\" g++-autopch"
+fi
+
+# Add the usual gcc optimization options
 # Strip or add debug information
 #
 if [ "$ROCKCFG_DEBUG" = 0 ] ; then

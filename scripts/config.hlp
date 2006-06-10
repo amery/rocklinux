@@ -372,6 +372,13 @@ ROCKCFG_STATIC
 ROCKCFG_MULTILIB
   Enable installing several versions of the same library.
 
+ROCKCFG_AUTOPCH
+  Compiling C++ headers more than once (e.g. when included from different
+  files) often causes a significant increase in build time.
+  Enable this option and a wrapper for the C++ compiler will try to make
+  sure the time-expensive part of compiling C++ headers is done only once
+  at most.
+
 ROCKCFG_DISABLE_NLS
   Please check here if you do not want to use Native Language Support.
 

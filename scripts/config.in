@@ -381,6 +381,8 @@ break packages!'
 	bool 'Disable exceptions and rtti in C++' ROCKCFG_LIMITCXX 0
 	bool 'Enable C compiler multilib support' ROCKCFG_MULTILIB 0
 
+	bool 'Use automatically precompiled C++ headers' ROCKCFG_AUTOPCH 0
+
 	bool 'Disable National Language Support' ROCKCFG_DISABLE_NLS 0
 	if [ "$ROCKCFG_DISABLE_NLS" = 1 ] ; then
 		pkgremove gettext

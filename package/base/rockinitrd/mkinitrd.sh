@@ -16,6 +16,13 @@ ramdisk_size=8192
 #	x86 (QEMU)			1024			ext2fs
 #	x86 (QEMU)			4096			cramfs
 
+for P in find sed grep xargs mkdir cp mknod mount sort uniq tr file rm ln \
+    mount umount ; do
+	if ! type -p "$P" ; then
+		echo "Can't find program $P! Aborting..."
+		exit 1
+	fi
+done
 while [ ${#} -gt 0 ] ; do
 	case "${1}" in
 	empty) empty=1 ;;

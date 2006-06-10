@@ -71,6 +71,8 @@ needed_libs() {
 		done
 }
 
+libs="${libs} `needed_libs bin/checkisomd5`"
+
 echo_status "Copying other files ... "
 for x in ${rock_targetdir}/initrd/initrd_* ; do
 	[ -f ${x} ] || continue

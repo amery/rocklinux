@@ -60,8 +60,13 @@ ROCKCFGSET_PKG_LINUX_USE26MODTOOLS=1
 # not static subversion
 ROCKCFGSET_PKG_SUBVERSION_STATIC=0
 
-# hardwired for now...
-cpp -undef -Imisc/pkgsel/sets -imacros misc/pkgsel/macros -P misc/pkgsel/minimal-desktop.in 2>/dev/null > config/$config.$swpid/predefined-pkgsel.parsed
+# default package selection for this target...
+# begin the sed string
+echo "pkgfilter sed '" > config/$config.$swpid/predefined-pkgsel.parsed
+. ./misc/pkgsel/macros
+. ./misc/pkgsel/minimal-desktop.in >> config/$config.$swpid/predefined-pkgsel.parsed
+# end the sed string
+echo "'"  >> config/$config.$swpid/predefined-pkgsel.parsed
 . config/$config.$swpid/predefined-pkgsel.parsed
 
 pkgenable kiss

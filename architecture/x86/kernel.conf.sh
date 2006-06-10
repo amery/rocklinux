@@ -68,6 +68,7 @@
 		dnl Other useful stuff
 		dnl
 		CONFIG_RTC=y
+		CONFIG_INPUT_JOYSTICK=y
 
 		include(`kernel-common.conf')
 		include(`kernel-scsi.conf')

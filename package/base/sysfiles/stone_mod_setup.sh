@@ -38,6 +38,7 @@ EOT
 	    if [ -e $x ] ; then
 		trg=/mnt/${x/*\//} ; trg=${trg/cdrom0/cdrom}
 		mkdir -p $trg
+		[ -L "$x" ] && x="`readlink -f $x`"
 		echo "$x $trg iso9660 ro,noauto 0 0" >> $tmp2
 	    fi
 	done
@@ -46,6 +47,7 @@ EOT
 	    if [ -e $x ] ; then
 		trg=/mnt/floppy${x/*\//} ; trg=${trg/floppy0/floppy}
 		mkdir -p $trg
+		[ -L "$x" ] && x="`readlink -f $x`"
 		echo "$x $trg auto sync,noauto 0 0" >> $tmp2
 	    fi
 	done

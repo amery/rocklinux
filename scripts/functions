@@ -326,7 +326,7 @@ postflist_libs() {
 		if   [[ $fn = *.a ]] ; then
 			mv -fv $root/$fn $root/usr/$fn
 		elif [[ $fn = *.so ]] ; then
-			[ -e $root/usr/$fn ] || ln -sfv /$fn $root/usr/$fn
+			[ -e $root/usr/$fn ] || ln -sfv ../../$fn $root/usr/$fn
 		elif [[ $fn = *.la ]] ; then
 			sed "s,\([ =']\)/lib\(.*\),\1/usr/lib\2,g" \
 				$root/$fn > $root/usr/$fn

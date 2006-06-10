@@ -51,7 +51,7 @@ all_removed() {
 
 all_touched() {
 	while read dummy M; do
-		[ -e "/$M" ] || echo "/$M"
+		echo "/$M"
 	done < <( find /var/adm/postinstall/ \
 		\( -name "*-install.??????" -o -name "*-remove.??????" \) \
 		 -exec grep "$1" "{}" \; 2> /dev/null ) | sort -u

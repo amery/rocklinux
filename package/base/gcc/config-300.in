@@ -33,8 +33,8 @@ then
 
 	d="none" ; l="" ; m=""
 	if [ $ROCKCFG_PKG_GCC_GCC2  = 1 ]; then pkgfork gcc gcc2;  d="gcc2";  l="$l $d"; fi
-	if [ $ROCKCFG_PKG_GCC_GCC32 = 1 ]; then pkgfork gcc gcc32; d="gcc33"; l="$l $d"; fi
-	if [ $ROCKCFG_PKG_GCC_GCC33 = 1 ]; then pkgfork gcc gcc33; d="gcc32"; l="$l $d"; fi
+	if [ $ROCKCFG_PKG_GCC_GCC32 = 1 ]; then pkgfork gcc gcc32; d="gcc32"; l="$l $d"; fi
+	if [ $ROCKCFG_PKG_GCC_GCC33 = 1 ]; then pkgfork gcc gcc33; d="gcc33"; l="$l $d"; fi
 	if [ $ROCKCFG_PKG_GCC_GCC34 = 1 ]; then pkgfork gcc gcc34; d="gcc34"; l="$l $d"; fi
 	if [ $ROCKCFG_PKG_GCC_GCC40 = 1 ]; then pkgfork gcc gcc40; d="gcc40"; l="$l $d"; m="$m $d"; fi
 	if [ $ROCKCFG_PKG_GCC_GCC41 = 1 ]; then pkgfork gcc gcc41; d="gcc41"; l="$l $d"; m="$m $d"; fi

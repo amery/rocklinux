@@ -107,7 +107,7 @@ main() {
 	    . /etc/conf/devtype
 	fi
 
-        HARDWARE_SETUP=hotplug
+        HARDWARE_SETUP=hwscan
 	if [ -f /etc/conf/hardware ]; then
 	    . /etc/conf/hardware
 	fi

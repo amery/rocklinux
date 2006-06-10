@@ -461,7 +461,7 @@ while [ ${exit_linuxrc} -eq 0 ] ; do
 	8. Validate a CD/DVD against its embedded checksum
 
 EOF
-	echo -n "What do you want to do [0-7] (default=0)? "
+	echo -n "What do you want to do [0-8] (default=0)? "
 	read text
 	[ -z "${text}" ] && text=0
 	input=${text//[^0-9]/}

@@ -5,7 +5,7 @@ SUBSYSTEM=="block",				GROUP="disk"
 # SUBSYSTEM=="block", SYSFS{removable}=="1",	GROUP="floppy"
 
 # IDE devices
-BUS=="ide", KERNEL=="hd[a-z]", SYSFS{removable}="1", \
+BUS=="ide", KERNEL=="hd[a-z]", SYSFS{removable}=="1", \
   PROGRAM="/bin/cat /proc/ide/%k/media", RESULT=="cdrom*",	GROUP="cdrom"
 # BUS=="ide", KERNEL=="ht[0-9]*",					GROUP="tape"
 # BUS=="ide", KERNEL=="nht[0-9]*",				GROUP="tape"

@@ -46,7 +46,7 @@ set_keymap() {
 	cmd="$cmd following keyboard mappings. (Current: $keymap)'"
 	cmd="$cmd 'none (kernel defaults)' 'rm -f /etc/default.keymap ; loadkeys defkeymap'"
 
-	cmd="$cmd $( find $mapdir -type f ! -path '*/include/*' -name '*.map.gz' -printf '%P\n' | sed 's,\(.*\)/\(.*\).map.gz$,"\2	(\1)" "ln -sf '$mapdir'/& /etc/default.keymap ; loadkeys \2",' | expand -t30 | sort | tr '\n' ' ')"
+	cmd="$cmd $( find $mapdir -type f ! -path '*/include/*' -name '*.map.gz' -printf '%P\n' | sed 's,\(.*\)/\(.*\).map.gz$,"\2	(\1)" "ln -sf '$mapdir'/& /etc/default.keymap ; loadkeys \1/\2.map.gz",' | expand -t30 | sort | tr '\n' ' ')"
 
 	eval "$cmd"
 }

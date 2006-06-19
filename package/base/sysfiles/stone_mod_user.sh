@@ -77,12 +77,13 @@ user_add_user() { # {{{
 } # }}}
 user_edit_group_members() { # {{{
 	IFS=: read groupname haspwd gid members < <( grep ^${1}: /etc/group )
+	read oldline < <( grep ^${1}: /etc/group )
 	run=0
 	members=" ${members//,/ } "
 	while [ ${run} -eq 0 ] ; do
 		cmd=""
 		while read x ; do
-			if [[ ${members} == *\ ${x}\ * ]] ; then
+			if [[ "${members}" == *\ ${x}\ * ]] ; then
 				cmd="${cmd} '[X] ${x}' 'members=\${members// ${x} / }'"
 			else
 				cmd="${cmd} '[ ] ${x}' 'members=\"\${members} ${x} \"'"
@@ -91,6 +92,10 @@ user_edit_group_members() { # {{{
 		eval "gui_menu user_edit_group_members 'Manage Members of group ${groupname}' ${cmd}"
 		run=${?}
 	done
+	members=${members# }
+	members=${members% }
+	members=${members// /,}
+	sed -i /etc/group -e "s/^${oldline}$/${groupname}:${haspwd}:${gid}:${members}/"
 	echo ${members} >&2
 } # }}}
 user_edit_group() { # {{{

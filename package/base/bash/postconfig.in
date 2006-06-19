@@ -1,0 +1,4 @@
+# We rely on bash so heavily that it makes no sense to disable default bash, imho.
+# Therefore make sure that it is always enabled.
+
+pkgenable bash=$ROCKCFG_PKG_BASH_DEFAULT

@@ -65,15 +65,15 @@ dm_add () {
 		grep -q $x /etc/conf/dm/mounts && continue
 		cmd="$cmd '$x' 'device=$x'"
 	done
-	eval "gui_menu dm_add1 'Please select the device to use' $cmd"
+	eval "gui_menu dm_add1 'Please select the device to use' $cmd" || return
 	cmd=""
-	gui_input "Please enter mountpoint of $device" "/data" mountpoint
+	gui_input "Please enter mountpoint of $device" "/data" mountpoint || return
 	gui_menu dm_add2 "Please enter current state of $device" \
 		"is encrypted" "status=encrypted" \
 		"Decrypt" "status=decrypt" \
 		"Encrypt" "status=encrypt" \
 		"Encrypted Swap (read documentation)" "status=swap" \
-		"not encrypted" "status=plain"
+		"not encrypted" "status=plain" || return
 
 	echo -e "$device\t$mountpoint\t$status" >>/etc/conf/dm/mounts
 }

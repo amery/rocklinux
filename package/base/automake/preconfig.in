@@ -22,8 +22,8 @@
 
 if pkgcheck automake X
 then
-	pkgfork automake automake17
-	pkgfork automake automake18
+	pkgfork automake automake17 unflag CORE
+	pkgfork automake automake18 unflag CORE
 	pkgfork automake automake19
 	pkgremove automake
 fi

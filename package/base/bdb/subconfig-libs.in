@@ -25,7 +25,7 @@ then
 	menu_begin MENU_PKG_BDB 'BerkleyDB Options'
 	block_begin 4
 
-	# we choose to select the newest bdb availible as default
+	# we choose to select the newest bdb available as default
 	if pkgcheck bdb=bdb33 X ; then
 		bdbdefselect="$bdbdefselect bdb33 'Using v3.3 as default'"
 		bdbdefault="bdb33";

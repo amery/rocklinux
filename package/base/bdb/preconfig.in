@@ -22,10 +22,10 @@
 
 if pkgcheck bdb X
 then
-	pkgfork bdb bdb33 version 3.3.11
-	pkgfork bdb bdb40 version 4.0.14
-	pkgfork bdb bdb41 version 4.1.25
-	pkgfork bdb bdb42 version 4.2.52
+	pkgfork bdb bdb33 unflag CORE
+	pkgfork bdb bdb40 unflag CORE
+	pkgfork bdb bdb41 unflag CORE
+	pkgfork bdb bdb42
 	pkgremove bdb
 fi
 

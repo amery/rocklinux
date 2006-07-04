@@ -37,6 +37,14 @@ elif [ -n "$ROCK_INSTALL_SOURCE_URL" ] ; then
 	ROCKCFG_SHORTID="$( grep '^export ROCKCFG_SHORTID=' \
 		/etc/ROCK-CONFIG/config 2> /dev/null | cut -f2- -d= )"
 	ROCKCFG_SHORTID="${ROCKCFG_SHORTID//\'/}"
+
+	tmpfile=`mktemp`
+	if wget -q -O "$tmpfile" "${ROCK_INSTALL_SOURCE_URL}/index.txt" ; then
+		ROCKCFG_SHORTID=`grep -v "${ROCKCFG_SHORTID}" $tmpfile | \
+					grep '/pkgs/' | head -n 1 | \
+					cut -f2 -d'	' | cut -f1 -d/`	
+	fi ;
+	rm -f $tmpfile
 else
 	dev="/dev/cdroms/cdrom0"
 	dir="/mnt/cdrom" ; root="/"

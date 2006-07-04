@@ -92,8 +92,7 @@ user_edit_group_members() { # {{{
 		eval "gui_menu user_edit_group_members 'Manage Members of group ${groupname}' ${cmd}"
 		run=${?}
 	done
-	members=${members# }
-	members=${members% }
+	members="$( echo "${members}" | sed -e 's,^ *,,g' -e 's, *$,,g' -e 's,  *, ,g' )"
 	members=${members// /,}
 	sed -i /etc/group -e "s/^${oldline}$/${groupname}:${haspwd}:${gid}:${members}/"
 	echo ${members} >&2

@@ -392,8 +392,13 @@ checkisomd5() { # {{{
 	echo "Running check..."
 
 	/bin/checkisomd5 ${devicefile}
+	code=${?}
+	if [ ${code} -eq 1 ] ; then
+		echo "MD5Sum is correct."
+	elif [ ${code} -eq 0 ] ; then
+		echo "MD5Sum is NOT correct! Please contact the authors!"
+	fi
 
-	echo "done"
 	echo "Press Return key to continue."
 	read
 } # }}}

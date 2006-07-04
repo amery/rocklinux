@@ -156,7 +156,6 @@ dnl
 	if [ -e /var/state/random-seed ] ; then
 		check(`cat /var/state/random-seed >/dev/urandom')
 	fi
-    block_end
 
     block_split(`Renaming network interfaces')
     	if [ -e /etc/iftab ] ; then

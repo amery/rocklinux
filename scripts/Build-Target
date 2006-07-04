@@ -354,6 +354,18 @@ EOT
 			echo; tail -n 200 ${build_root}/var/adm/logs/$stagelevel-$pkg_name.err; echo
 		} | $ROCKCFG_SENDMAIL_BIN $ROCKCFG_SENDMAIL_TO
 	fi
+	if [ -f ${build_root}/var/adm/logs/$stagelevel-$pkg_name.err -a \
+	     "$ROCKCFG_HTTP" = 1 ]
+	then
+		{
+			query=${ROCKCFG_HTTP_SITE}
+			query=${query//PACKAGE/$pkg_name}
+			query=${query//STAGE/$stagelevel}
+			query=${query//CONFIG/$config}
+			query=${query//STATUS/failed}
+			curl "${query}" > /dev/null 2>&1
+		}
+	fi
 
 	if [ ! -f ${build_root}/var/adm/logs/$stagelevel-$pkg_name.log -a \
 	     ! -f ${build_root}/var/adm/logs/$stagelevel-$pkg_name.err ]
@@ -365,6 +377,18 @@ EOT
 		echo_error "and abort the build process."
 		touch ${build_root}/var/adm/logs/$stagelevel-$pkg_name.err
 		exit 1
+	fi
+
+	if [ "${ROCKCFG_HTTP}" = "1" -a -f ${build_root}/var/adm/logs/$stagelevel-$pkg_name.log ]
+	then
+		{
+			query=${ROCKCFG_HTTP_SITE}
+			query=${query//PACKAGE/$pkg_name}
+			query=${query//STAGE/$stagelevel}
+			query=${query//CONFIG/$config}
+			query=${query//STATUS/finished}
+			curl "${query}" > /dev/null 2>&1
+		}
 	fi
 
 	if [ $pkg_laststage -eq $stagelevel ] && \
@@ -457,6 +481,17 @@ trap 'build_target_exit' EXIT
 	echo_status "Going to run cleanup procedure now.."
 } 2>&1 201>> "${build_logs}/build_target_$$.log" | \
 	tee -a "${build_logs}/build_target_$$.log"
+
+	if [ "${ROCKCFG_HTTP}" = "1" ] ; then
+		{
+			query=${ROCKCFG_HTTP_SITE}
+			query=${query//PACKAGE/}
+			query=${query//STAGE/}
+			query=${query//CONFIG/$config}
+			query=${query//STATUS/finished}
+			curl "${query}" > /dev/null 2>&1
+		}
+	fi
 
 if [ "$ROCKCFG_SENDMAIL" = 1 ]; then
 	$ROCKCFG_SENDMAIL_BIN $ROCKCFG_SENDMAIL_TO << EOT

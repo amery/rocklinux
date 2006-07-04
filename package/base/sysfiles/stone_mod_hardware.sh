@@ -26,49 +26,6 @@ set_dev_setup() {
     echo "devtype=$1" > /etc/conf/devtype
 }
 
-set_hw_setup() {
-    echo "HARDWARE_SETUP=$1" > /etc/conf/hardware
-}
-
-flip_hw_config() {
-	local tmp=`mktemp`
-	awk "\$0 == \"### $1 ###\", \$0 == \"\" {"'
-		if ( /^#[^# ]/ ) {
-			sub("^#", "");
-			system($0 " >&2");
-		} else {
-			if ( /^[^# ]/ ) $0 = "#" $0;
-			if (/^#modprobe /) {
-				cmd = $0;
-				sub("^#modprobe", "modprobe -r", cmd);
-				system(cmd " >&2");
-			}
-			if (/^#mount /) {
-				cmd = $0;
-				sub("^#mount .* ", "umount ", cmd);
-				system(cmd " >&2");
-			}
-		}
-	} { print; }' < /etc/conf/kernel > $tmp
-	cat $tmp > /etc/conf/kernel; rm -f $tmp
-
-	# this is needed to e.g. initialize /proc/bus/usb/devices
-	sleep 1
-}
-
-add_hw_config() {
-	case $state in
-		1) cmd="$cmd '[ ] $name'" ;;
-		2) cmd="$cmd '[*] $name'" ;;
-		*) cmd="$cmd '[?] $name'" ;;
-	esac
-	case $state in
-		1|2) cmd="$cmd 'flip_hw_config \"$id\"'" ;;
-		*)   cmd="$cmd 'true'" ;;
-	esac
-	id=""
-}
-
 store_clock() {
 	if [ -f /etc/conf/clock ] ; then
 		sed -e "s/clock_tz=.*/clock_tz=$clock_tz/" \
@@ -107,11 +64,6 @@ main() {
 	    . /etc/conf/devtype
 	fi
 
-        HARDWARE_SETUP=hwscan
-	if [ -f /etc/conf/hardware ]; then
-	    . /etc/conf/hardware
-	fi
-
 	clock_tz=utc
 	clock_rtc="`cat /proc/sys/dev/rtc/max-user-freq 2> /dev/null`"
 	if [ -f /etc/conf/clock ]; then
@@ -129,63 +81,6 @@ main() {
 	    cmd="$cmd \"set_dev_setup $x\"";
 	done
 	cmd="$cmd '' ''";
-
-	for x in hwscan hotplug rockplug; do
-	    [ -x /sbin/$x ] || continue
-	    if [ "$HARDWARE_SETUP" = $x ]; then
-	        cmd="$cmd \"<*> Use $x to configure hardware.\""
-	    else
-	        cmd="$cmd \"< > Use $x to configure hardware.\""
-	    fi
-	    cmd="$cmd \"set_hw_setup $x\"";
-	done
-	cmd="$cmd '' ''";
-
-	if [ "$HARDWARE_SETUP" = rockplug ]; then
-	    cmd="$cmd 'Edit/View PCI configuration'";
-	    cmd="$cmd \"gui_edit PCI /etc/conf/pci\""
-	    cmd="$cmd 'Edit/View USB configuration'";
-	    cmd="$cmd \"gui_edit USB /etc/conf/usb\""
-	    cmd="$cmd '' ''";
-	    
-	    cmd="$cmd 'ROCK-Plug/Drivers Configuration'"
-	    cmd="$cmd 'stone rockplug' '' ''"
-
-	    cmd="$cmd 'Re-create initrd image (mkinitrd, `uname -r`)'"
-	    cmd="$cmd 'gui_cmd mkinitrd mkinitrd' '' ''"
-	fi
-	    
-	if [ "$HARDWARE_SETUP" = hwscan ]; then
-	    cmd="$cmd 'Edit /etc/conf/kernel (kernel drivers config file)'"
-	    cmd="$cmd \"gui_edit 'Kernel Drivers Config File' /etc/conf/kernel\""
-	    cmd="$cmd 'Re-create initrd image (mkinitrd, `uname -r`)'"
-	    cmd="$cmd 'gui_cmd mkinitrd mkinitrd' '' ''"
-	    hwscan -d -s /etc/conf/kernel
-
-	    id=""
-	    while read line; do
-		if [ "${line#\#\#\# }" != "${line}" -a \
-		    "${line% \#\#\#}" != "${line}" ]
-		    then
-		    id="${line#\#\#\# }"; id="${id% \#\#\#}"
-		    state=0; name="Unamed Kernel Driver"
-		elif [ -z "$id" ]; then
-		    continue
-		elif [ "${line#\# }" != "${line}" ]; then
-		    name="${line#\# }"
-		elif [ "${line#\#[!\# ]}" != "${line}" ]; then
-		    [ $state -eq 0 ] && state=1
-		    [ $state -eq 2 ] && state=3
-		elif [ "${line#[!\# ]}" != "${line}" ]; then
-		    [ $state -eq 0 ] && state=2
-		    [ $state -eq 1 ] && state=3
-		elif [ -z "$line" ]; then
-		    add_hw_config
-		fi
-	    done < /etc/conf/kernel
-	    [ -z "$id" ] || add_hw_config
-	    cmd="$cmd '' ''"
-	fi	   
 
 	if [ "$clock_tz" = localtime ] ; then
 	    cmd="$cmd '[*] Use localtime instead of utc' 'set_zone utc'"

@@ -87,22 +87,6 @@ dnl
 	mkdir /tmp/.ICE-unix /var/lock/subsys
 	chmod 1777 /tmp/.ICE-unix
 dnl
-    case "$HARDWARE_SETUP" in
-      rockplug)
-	block_split(`Configuring hardware by activating rockplug.')
-	    echo "/sbin/rockplug" > /proc/sys/kernel/hotplug
-	    for file in /etc/rockplug/*.init; do
-		[ -f $file ] && $file start
-	    done
-	    ;;
-      hotplug)
-	block_split(`Disabling hotplug helper (udev uses netlink).')
-	    echo "" > /proc/sys/kernel/hotplug
-	    ;;
-      *) 
-	block_split(`Auto-load all modules at boot-time using hwscan.')
-	check(`hwscan -- -V | sh')
-    esac
     block_split(`Loading kernel modules and configuring the kernel.')
 	check(`sh /etc/conf/kernel')
 dnl
@@ -190,23 +174,6 @@ dnl
 	else check(`reboot -w') ; fi
     block_split(`Saving kernel random seed.')
 	dd if=/dev/urandom of=/var/state/random-seed count=1 2> /dev/null
-dnl
-    case "$HARDWARE_SETUP" in
-      rockplug)
-	block_split(`Unconfiguring hardware by de-activating rockplug.')
-	    for file in /etc/rockplug/*.init; do
-		[ -f $file ] && $file stop
-	    done
-	    ;;
-      hotplug)
-	block_split(`Unconfiguring hardware by de-activating hotplug.')
-            for RC in /etc/hotplug/*.rc; do
-		echo -n "[$( basename ${RC%.rc} )] "
-		check(`$RC stop');
-	    done; echo
-	    rm -f /var/lock/subsys/hotplug
-	    ;;
-    esac
 dnl
     block_split(`Sending all processes a SIGTERM (15).')
 	check(`killall5 -15') ; sleep 5 

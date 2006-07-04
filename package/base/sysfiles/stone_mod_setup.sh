@@ -31,6 +31,7 @@ proc /proc proc defaults 0 0
 devpts /dev/pts devpts defaults 0 0
 tmpfs /dev/shm tmpfs defaults 0 0
 sysfs /sys sysfs defaults 0 0
+/dev/bus/usb /proc/bus/usb bind bind 0 0
 #tmpfs /tmp tmpfs defaults 0 0
 EOT
 

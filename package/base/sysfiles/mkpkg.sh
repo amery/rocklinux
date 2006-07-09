@@ -24,7 +24,7 @@ fi
 
 strace -o $slog -F -f -q -e open,creat,`
 	`mkdir,mknod,link,symlink,rename,utime,chdir,`
-	`execve,fork,vfork,$SYSEXIT,exit_group -p $$ &
+	`execve,fork,vfork,clone,$SYSEXIT,exit_group -p $$ &
 strace_pid=$!; sleep 1; cd $PWD
 
 "$@"

@@ -122,7 +122,10 @@ done < <( mount ) | sort | uniq >/etc/conf/initrd/initrd_fsck
 echo "/sbin/fsck /sbin/fsck" >>/etc/conf/initrd/initrd_fsck
 echo "done"
 
-libdirs="${rootdir}/lib `sed -e"s,^\(.*\),${rootdir}\1," ${rootdir}/etc/ld.so.conf | tr '\n' ' '`"
+libdirs=""
+for N in ${rootdir}/lib `sed -e"s,^\(.*\),${rootdir}\1," ${rootdir}/etc/ld.so.conf | tr '\n' ' '` ; do
+	[ -d "$N" ] && libdirs="$libdirs $N"
+done
 
 needed_libs() {
 	local x="${1}" library

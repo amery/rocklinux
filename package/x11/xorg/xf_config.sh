@@ -177,7 +177,7 @@ EOT
 	        echo "Enabling Matrox HALlib (since this is x86) ..."
 		cat >> config/cf/host.def << EOT
 
-/* Additinal TV/DVI support since this is x86 */
+/* Additional TV/DVI support since this is x86 */
 #define		HaveMatroxHal		YES
 EOT
 	fi

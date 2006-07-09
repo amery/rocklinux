@@ -98,7 +98,7 @@ if [ "${empty}" = 0 ] ; then
 				[ -z "${b}" ] && continue
 				b="${b//,/ }"
 				for module in ${b} ; do
-					add_module_to_initrd "${b}"
+					add_module_to_initrd "${module}"
 				done
 			done
 			add_module_to_initrd "${b}" "${c}"

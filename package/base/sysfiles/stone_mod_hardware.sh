@@ -22,6 +22,57 @@
 #
 # [MAIN] 20 hardware Kernel Drivers and Hardware Configuration
 
+get_module_dependencies() {
+        module="${1}"
+        deps=`/sbin/modinfo -F depends ${module} 2>/dev/null | tr ',' ' '`
+        if [ -n "${deps}" ] ; then
+                for dep in ${deps} ; do
+                        echo "`get_module_dependencies ${dep}`"
+                done
+        fi
+        echo "${module}";
+}
+
+get_initrd_module_cmds() {
+	ret=""
+	modules=`grep '^modprobe ' /etc/conf/kernel | grep -v 'no-initrd' | \
+                sed 's,[        ]#.*,,' | \
+                while read a b c; do
+			echo "${b}"
+		done`
+
+	for module in ${modules} ; do
+		module_dependencies=`get_module_dependencies ${module} | sort | uniq`
+		
+		if [ -n "${module_dependencies}" -a "${module_dependencies}" != "${module}" ] ; then
+			ret="$ret '${module} (adds: ${module_dependencies})' 'remove_module_from_initrd \"${module}\"'"
+		else
+			ret="$ret '${module}' 'remove_module_from_initrd \"${module}\"'"
+		fi
+	done
+	echo ${ret}
+
+}
+
+add_module_to_initrd() {
+	gui_input "Module to add to initrd: " "" "addmodule"
+	[ -z "${addmodule}" ] && return;
+
+	kernel=`uname -r`
+	module="`find /lib/modules/${kernel} -name "${addmodule}.o" -o -name "${addmodule}.ko" 2>/dev/null`"
+	if [ -z "${module}" ] ; then
+		gui_message "Error: No such module in /lib/modules/$kernel!";
+	else 
+		echo "modprobe ${addmodule}" >> /etc/conf/kernel
+	fi
+}
+
+remove_module_from_initrd() {
+	module=${1};
+	grep -v '^modprobe[ 	].*'${module} /etc/conf/kernel > /etc/conf/kernel.new
+	mv /etc/conf/kernel.new /etc/conf/kernel
+}
+
 set_dev_setup() {
     echo "devtype=$1" > /etc/conf/devtype
 }
@@ -80,6 +131,16 @@ main() {
 	    fi
 	    cmd="$cmd \"set_dev_setup $x\"";
 	done
+	cmd="$cmd '' ''";
+
+	# initrd module handling
+        cmd="$cmd 'Add module to initrd' 'add_module_to_initrd'";
+	cmd="$cmd '' ''";
+	cmd="$cmd 'Current initrd modules, select to remove: ' ''";
+	cmd="$cmd `get_initrd_module_cmds`";
+     
+	cmd="$cmd '' ''";
+        cmd="$cmd 'Re-create initrd now (dont forget this!)' '/sbin/mkinitrd'";
 	cmd="$cmd '' ''";
 
 	if [ "$clock_tz" = localtime ] ; then

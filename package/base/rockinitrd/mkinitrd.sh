@@ -69,20 +69,38 @@ case ${initrdfs} in
 		;;
 esac
 
+get_module_dependencies() {
+        module="${1}"
+        deps=`/sbin/modinfo -F depends ${module} 2>/dev/null | tr ',' ' '`
+        if [ -n "${deps}" ] ; then
+                for dep in ${deps} ; do
+                        echo "`get_module_dependencies ${dep}`"
+                done
+        fi
+        echo "${module}";
+}
+
 add_module_to_initrd() {
-	module="${1}"
+	# adds a module and all it's dependencies to the initrd
+	module_name="${1}"
 	parameter="${2}"
-	module=${module/.ko/} # just in case, shouldn't be
-	module="`find ${rootdir}/lib/modules/${kernel} -name "${module}.o" -o -name "${module}.ko"`"
-	[ -f "${targetdir}/${module}" ] && return # skip dupes
-	echo "Adding ${module}."
-	mkdir -p ${targetdir}/${module%/*}
-	cp ${module} ${targetdir}/${module}
-	echo "/sbin/insmod ${module} ${parameter}" >> ${targetdir}/etc/conf/kernel
+	module_name=${module_name/.ko/} # just in case, shouldn't be
+
+	for dependant_module in `get_module_dependencies ${module_name} | sort | uniq` ; do
+		module="`find ${rootdir}/lib/modules/${kernel} -name "${dependant_module}.o" -o -name "${dependant_module}.ko"`"
+		[ -f "${targetdir}/${module}" ] && return # skip dupes
+		echo "Adding ${module}."
+		mkdir -p ${targetdir}/${module%/*}
+		cp ${module} ${targetdir}/${module}
+	done
+
+	echo "/sbin/modprobe ${module_name} ${parameter}" >> ${targetdir}/etc/conf/kernel
 }
 
 echo "Creating ${initrd_img} ..."
 mkdir -p ${targetdir}/etc/conf
+mkdir -p ${targetdir}/lib/modules/${kernel}
+cp ${rootdir}/lib/modules/${kernel}/modules.dep ${targetdir}/lib/modules/${kernel}
 if [ "${empty}" = 0 ] ; then
 	grep '^modprobe ' ${rootdir}/etc/conf/kernel | grep -v 'no-initrd' | \
 		sed 's,[ 	]#.*,,' | \
@@ -93,14 +111,6 @@ if [ "${empty}" = 0 ] ; then
 				echo "$0: Please either adjust /etc/conf/kernel or the configuration for the kernel V${kernel}" >&2
 				continue
 			fi
-			modinfo ${module} 2> /dev/null | grep ^depends: | \
-			while read a b; do
-				[ -z "${b}" ] && continue
-				b="${b//,/ }"
-				for module in ${b} ; do
-					add_module_to_initrd "${module}"
-				done
-			done
 			add_module_to_initrd "${b}" "${c}"
 		done
 fi

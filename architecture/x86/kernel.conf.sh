@@ -69,6 +69,7 @@
 		dnl
 		CONFIG_RTC=y
 		CONFIG_INPUT_JOYSTICK=y
+		CONFIG_CPU_FREQ=y
 
 		include(`kernel-common.conf')
 		include(`kernel-scsi.conf')

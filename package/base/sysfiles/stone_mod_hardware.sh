@@ -65,12 +65,14 @@ add_module_to_initrd() {
 	else 
 		echo "modprobe ${addmodule}" >> /etc/conf/kernel
 	fi
+	recreate_initrd=1
 }
 
 remove_module_from_initrd() {
 	module=${1};
 	grep -v '^modprobe[ 	].*'${module} /etc/conf/kernel > /etc/conf/kernel.new
 	mv /etc/conf/kernel.new /etc/conf/kernel
+	recreate_initrd=1
 }
 
 set_dev_setup() {
@@ -109,6 +111,7 @@ set_rtc() {
 }
 
 main() {
+    recreate_initrd=0;
     while
 	devtype=udev
 	if [ -f /etc/conf/devtype ]; then
@@ -140,7 +143,7 @@ main() {
 	cmd="$cmd `get_initrd_module_cmds`";
      
 	cmd="$cmd '' ''";
-        cmd="$cmd 'Re-create initrd now (dont forget this!)' '/sbin/mkinitrd'";
+	cmd="$cmd 'Force initrd re-creation now' '/sbin/mkinitrd'";
 	cmd="$cmd '' ''";
 
 	if [ "$clock_tz" = localtime ] ; then
@@ -154,6 +157,7 @@ main() {
 	eval "$cmd"
     do : ; done
 
+    [ "${recreate_initrd}" == "1" ] && /sbin/mkinitrd
     return
 }
 

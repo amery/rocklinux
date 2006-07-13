@@ -44,23 +44,64 @@ if [ "$*" ] ; then
 	exit $?
 fi
 
+base=.
+. scripts/functions
+
 tr ', \t' '\n\n\n' |
 tr -s '\n' | 
 while read x ; do
 	pkg="" ; pkgdir=""
 	[ -z "$x" ] && continue
 
-	echo "[ $x ]" >&2
-	for y in package/*/* ; do
-		z=${y##*/}
-		if [[ "$x" == "$z"[-_]* ]] ; then
-			pkg="$z" ; pkgdir="$y"
+	if [ "${x//=/}" != "${x}" ] ; then
+		pkg="${x%%=*}"
+		xpkg="${x#*=}"
+		newver="${xpkg##*-}"
+		xpkg="${xpkg%-*}"
+	else
+		pkg="${x%-*}"
+		xpkg="${pkg}"
+		newver="${x##*-}"
+	fi
+
+	for var in pkg xpkg newver ; do
+		if [ -z "$( eval echo \$${var} )" ] ; then
+			echo "ERROR: Please specify package and version in this format:" >&2
+			echo "ERROR:    package-version     package=xpackage-version" >&2
+			echo "ERROR: You entered: $x" >&2
+			continue 2
 		fi
 	done
-	if [ "$pkg" ] ; then
-		oldver="`egrep "^\[(V|VER|VERSION)\] " $pkgdir/$pkg.desc |
+
+	echo "[ ${pkg}=${xpkg}-${newver} ]" >&2
+	for dir in package/*/* ; do
+		if [ "${dir##*/}" == "$pkg" ] ; then
+			if [ -n "${pkgdir}" ] ; then
+				echo "ERROR: Package in multiple repositories: $pkg" >&2
+				echo "ERROR: $( ls -d package/*/${pkg} )" >&2
+				continue 2
+			fi
+			pkgdir="$dir"
+			continue
+		fi
+	done
+	if [ -n "$pkgdir" ] ; then
+		unset ${!desc_*} descparser_ign_xpkg
+		if [ "${pkg}" == "${xpkg}" ] ; then
+			oldver="`egrep "^\[(V|VER|VERSION)\] " $pkgdir/$pkg.desc |
 				tr '\t' ' ' | tr -s ' ' | cut -f2 -d' '`"
-		newver=${x/$pkg?/} ; tmpfile=`mktemp` ; tmpfile2=`mktemp`
+			if [ $( wc -l <<< "${oldver}" ) -gt 1 ] ; then
+				echo "ERROR: Package ${pkg} is a forked package!" >&2
+				echo "ERROR: Use $0 package=xpackage-version" >&2
+				continue
+			fi
+		else
+			parse_desc ${pkgdir}/${pkg}.desc
+			oldver=${desc_V##*
+}
+			# this is not a typo! desc_V contains all [V] tags newline separated
+		fi
+		tmpfile=`mktemp` ; tmpfile2=`mktemp`
 		echo "Upgrade Patch for $pkg ($pkgdir): $oldver -> $newver"
 		sed "s/${oldver//./\\.}/$newver/g" < $pkgdir/$pkg.desc | \
 		sed "s/^\[\(D\|DOWN\|DOWNLOAD\)\] [0-9]\+/[\1] 0/" > $tmpfile

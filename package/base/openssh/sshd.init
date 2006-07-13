@@ -29,9 +29,9 @@
 main_begin
 
     block_begin(start, `Starting sshd.')
-	if ! test -e /etc/ssh/ssh_host_key -o \
-	          -e /etc/ssh/ssh_host_dsa_key -o \
-	          -e /etc/ssh/ssh_host_rsa_key
+	if ! test -e D_sysconfdir/ssh/ssh_host_key -o \
+	          -e D_sysconfdir/ssh/ssh_host_dsa_key -o \
+	          -e D_sysconfdir/ssh/ssh_host_rsa_key
 	then
 		echo "Can't start sshd: No ssh host keys found !!"\
 			"Please create the keys using either ssh-keygen or stone."
@@ -42,19 +42,19 @@ IN		error=1
     block_end
 
     block_begin(stop, `Stopping sshd.')
-	check(`if [ -s /var/run/sshd.pid ] ; then
-		kill -15 $(cat /var/run/sshd.pid)
+	check(`if [ -s D_localstatedir/run/sshd.pid ] ; then
+		kill -15 $(cat D_localstatedir/run/sshd.pid)
 	else
-		echo "sshd is not running or /var/run/sshd.pid disappeared."
+		echo "sshd is not running or D_localstatedir/run/sshd.pid disappeared."
 		error=1
 	fi')
     block_end
 
     block_begin(restart, `Restarting sshd.')
-	check(`if [ -s /var/run/sshd.pid ] ; then 
-		kill -HUP $(cat /var/run/sshd.pid)
+	check(`if [ -s D_localstatedir/run/sshd.pid ] ; then 
+		kill -HUP $(cat D_localstatedir/run/sshd.pid)
 	else 
-		echo "sshd is not running or /var/run/sshd.pid disappeared."
+		echo "sshd is not running or D_localstatedir/run/sshd.pid disappeared."
 		error=1
 	fi')
     block_end

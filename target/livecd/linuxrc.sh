@@ -357,16 +357,6 @@ config_net() { # {{{
 	ip route
 	echo
 } # }}}
-autoload_modules () { # {{{
-	while read cmd mod rest ; do
-		[ -n "${rest}" ] && continue
-		[ -z "${cmd}" ] && continue
-		if [ "${cmd}" == "modprobe" -o "${cmd}" == "insmod" ] ; then
-			echo "${cmd} ${mod}"
-			${cmd} ${mod} 2>&1 >/dev/null
-		fi
-	done < <( /bin/gawk -f /sbin/hwscan )
-} # }}}
 exec_sh() { # {{{
 	echo "Quit the shell to return to the stage 1 loader!"
 	/bin/sh
@@ -402,6 +392,8 @@ export PATH="/sbin:/bin:/usr/sbin:/usr/bin:$PATH"
 
 cp -r /lib/udev/devices/* /dev
 
+mount -t devpts devpts /dev/pts || echo "Can't mount devpts on /dev/pts"
+
 echo "" > /proc/sys/kernel/hotplug
 /sbin/udevd --daemon
 
@@ -409,8 +401,6 @@ echo "" > /proc/sys/kernel/hotplug
 emit_udev_events
 
 mod_load_info
-
-autoload_modules
 
 # some devices (scsi...) need time to settle...
 echo "Waiting for devices to settle..."

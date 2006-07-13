@@ -350,9 +350,16 @@ postflist_libs() {
 # save the tag data in $desc_*.
 #
 parse_desc() {
+	parser="$( which descparser )"
+	[ -z "${parser}" ] && parser="$base/src/descparser"
+	if [ ! -x "${parser}" ] ; then
+		mkdir -p $base/src
+		cc -o $base/src/descparser $base/misc/tools-source/descparser.c
+	fi
+	[ ! -x "${parser}" ] && abort "Couldn't find \`descparser'! Please run ./scripts/Build-Tools!"
 	tag="`grep '^\[' $base/Documentation/Developers/PKG-DESC-FORMAT | \
 	      sed 's, (\*),,; s,\] \[,|,g; s,\[,,; s,\],,;'`"
-	descfile="$( pkg="$pkg" xpkg="$xpkg" descparser < $1 )"
+	descfile="$( pkg="$pkg" xpkg="$xpkg" $parser < $1 )"
 	for tag in $tag ; do
 		tagdata="`echo "$descfile" | egrep "^\[($tag)\]" | \
 			  cut -f2- -d']' | sed 's,^ ,,'`"

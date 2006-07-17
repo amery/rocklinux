@@ -1,0 +1,11 @@
+--- ./rocket.sh.orig	2006-07-13 20:14:25.000000000 +0200
++++ ./rocket.sh	2006-07-13 20:14:33.000000000 +0200
+@@ -232,7 +232,7 @@
+ 	while read keyword p1 p2 p3 p4 p5 rest; do
+ 		case "$keyword" in
+ 		    archive)
+-			[ -n "$p2" ] || file="packages.db"
++			[ -n "$p2" ] || p2="packages.db"
+ 			upd_archive "$p1" "$p1/$p2" \
+ 				"$ignore_list" "$ignore_list_deps"
+ 			;;

@@ -121,10 +121,8 @@ xf_install() {
 			$root/etc/fonts/local.conf
 
 	echo "Fixing compiled keymaps directory ..."
-	mkdir -p $root/var/lib/xkb $root/etc/X11/xkb
+	mkdir -p $root/var/lib/xkb 
 	cp -fu programs/xkbcomp/compiled/README $root/var/lib/xkb
-	rm -rf $root/etc/X11/xkb/compiled
-	ln -sf ../../../var/lib/xkb $root/etc/X11/xkb/compiled
 
 	echo "Installing xfs init script ..."
 	install_init xfs $base/package/x11/${pkg}/xfs.init

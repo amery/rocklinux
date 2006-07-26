@@ -63,6 +63,11 @@ else
 			[ "${mntpoint}" == "/" ] && rootfs=${dev}
 			[ -n "${rootfs}" ] && break
 		done < /etc/fstab
+	else
+		echo " ** /etc/fstab is missing and no real_root= option was given!"
+		echo " ** dumping you into an emergency shell"
+		exec /bin/bash
+		return 1;
 	fi
 fi
 

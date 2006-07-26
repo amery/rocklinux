@@ -2,7 +2,7 @@
 
 echo "Removing all old gdm sessions scripts ..."
 # we should not delete Default
-rm -fv /etc/D_prefix/dm/Sessions/[a-z]*
+rm -fv /D_sysconfdir/dm/Sessions/[a-z]*
 
 echo "Creating gdm session scripts from ROCK wm registry ..."
 for x in /usr/share/rock-registry/wm/* ; do
@@ -12,7 +12,7 @@ for x in /usr/share/rock-registry/wm/* ; do
 	echo "  $name ($short) ..."
 
 	# create the .desktop file
-	cat > /etc/D_prefix/dm/Sessions/$short.desktop <<- EOT
+	cat > /D_sysconfdir/dm/Sessions/$short.desktop <<- EOT
 [Desktop Entry]
 Encoding=UTF-8
 Name=$short

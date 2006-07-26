@@ -46,7 +46,6 @@ rootfs=""
 rootfsmounted=0
 recreateinitrd=0
 
-mount -n -t tmpfs tmpfs /tmp || echo "Can't mount tmpfs!"
 mount -n -t proc proc /proc  || echo "Can't mount procfs!"
 mount -n -t sysfs sysfs /sys || echo "Can't mount sysfs!"
 mount -n -t ramfs ramfs /dev || echo "Can't mount ramfs!"
@@ -89,7 +88,6 @@ echo "starting $real_init in /root"
 echo "parameters passed to $real_init: ${@}"
 cd /root
 mkdir -p /root/initrd
-mount -n --move /tmp /root/tmp
 mount -n --move /proc /root/proc
 mount -n --move /sys /root/sys
 mount -n --move /dev /root/dev

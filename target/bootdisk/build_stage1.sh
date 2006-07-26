@@ -116,8 +116,15 @@ for x in modprobe.static modprobe.static.old insmod.static insmod.static.old ; d
 done
 
 echo_status "Copy scsi and network kernel modules."
-( cd ../2nd_stage ; tar cf - lib/modules/*/kernel/drivers/{scsi,net} ) | tar xf -
-find lib/modules -type f -exec $STRIP --strip-debug {} \;
+tmptar="`mktemp`" ; tar cfT ${tmptar} /dev/null
+
+for x in $( cd ../2nd_stage ; ls -d lib/modules/*/kernel/drivers/{scsi,net} )
+do
+	[ -e "../2nd_stage/${x}" ] && tar rf ${tmptar} -C ../2nd_stage ${x}
+done
+tar xf ${tmptar} ; rm -f ${tmptar}
+
+[ -e lib/modules ] && find lib/modules -type f -exec $STRIP --strip-debug {} \;
 
 for x in ../2nd_stage/lib/modules/*/modules.{dep,pcimap,isapnpmap} ; do
 	cp $x ${x#../2nd_stage/} || echo_status "not found: $x" ;

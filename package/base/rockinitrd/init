@@ -58,10 +58,12 @@ echo "" > /proc/sys/kernel/hotplug
 if [ -n "${real_root}" ] ; then
 	rootfs=${real_root}
 else
-	while read dev mntpoint fstype options fsck1 fsck2 ; do
-		[ "${mntpoint}" == "/" ] && rootfs=${dev}
-		[ -n "${rootfs}" ] && break
-	done < /etc/fstab
+	if [ -f /etc/fstab ] ; then
+		while read dev mntpoint fstype options fsck1 fsck2 ; do
+			[ "${mntpoint}" == "/" ] && rootfs=${dev}
+			[ -n "${rootfs}" ] && break
+		done < /etc/fstab
+	fi
 fi
 
 echo "loading kernel modules"

@@ -258,11 +258,13 @@ getcdromdevice () { # {{{
 load_ramdisk_file() { # {{{
 	devicetype=${1}
 	autoboot=${2}
+	mountopts=""
 
 	echo -en "Select a device for loading the 2nd stage system from: \n\n"
 
 	if [ "${devicetype}" == "cdroms" ] ; then
 		getcdromdevice 1 1 ${autoboot} || return
+		mountopts="-o ro"
 	else 
 		getdevice || return
 	fi
@@ -300,7 +302,7 @@ EOF
 		exit_linuxrc=0
 	fi
 
-	if ! mount ${devicefile} "/mnt_source" ; then
+	if ! mount ${mountopts} ${devicefile} "/mnt_source" ; then
 		echo "Can't mount /mnt_source"
 		exit_linuxrc=0
 	fi

@@ -5,6 +5,9 @@ rm -rf $disksdir/initrd
 mkdir -p $disksdir/initrd/{dev,proc,sys,tmp,scsi,net,bin,etc,lib}
 cd $disksdir/initrd; ln -s bin sbin; ln -s . usr
 
+# make mount not complain
+touch etc/fstab
+
 rock_targetdir="$base/target/$target/"
 rock_target="$target"
 

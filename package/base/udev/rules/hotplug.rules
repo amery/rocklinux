@@ -37,11 +37,11 @@ LABEL="hotplug_driver_loaded"
 #SUBSYSTEM=="scsi_device", SYSFS{idVendor}=="...", \
 #	RUN+="scsi-re-add"
 
-SUBSYSTEM=="firmware",		RUN+="firmware.agent"
+SUBSYSTEM=="firmware",	RUN+="/bin/sh -c `/etc/hotplug/firmware.agent &`"
 
 LABEL="hotplug_not_add_event"
 
-SUBSYSTEM=="net",		RUN+="/bin/sh -c '/lib/udev/net.agent &'"
+SUBSYSTEM=="net",	RUN+="/bin/sh -c '/etc/hotplug/net.agent &'"
 
 # Log every event to /dev/hotplug.log (for debugging).
 #RUN+="logger.agent"

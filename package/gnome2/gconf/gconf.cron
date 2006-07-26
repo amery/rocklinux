@@ -22,7 +22,7 @@
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
 umask 022
-SCHEMA_DIR=/etc/D_prefix/gconf/schemas
+SCHEMA_DIR=/D_sysconfdir/gconf/schemas
 export GCONF_CONFIG_SOURCE="`/D_prefix/bin/gconftool-2 --get-default-source`"
 
 echo "(Re-)Generating Gnome gconf schemes ..."
@@ -39,6 +39,6 @@ done < <(
 touch $SCHEMA_DIR/.stamp
 
 echo "Correcting Gnome gconf permissions (installed incorrectly by Gnome) ..."
-find /etc/D_prefix/gconf -type d | xargs chmod 0755
-find /etc/D_prefix/gconf -type f | xargs chmod 0644
+find /D_sysconfdir/gconf -type d | xargs chmod 0755
+find /D_sysconfdir/gconf -type f | xargs chmod 0644
 

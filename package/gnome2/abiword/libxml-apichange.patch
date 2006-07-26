@@ -1,0 +1,20 @@
+--- ./wv/wvConfig.c.orig	2006-07-23 19:48:19.000000000 +0200
++++ ./wv/wvConfig.c	2006-07-23 19:48:44.000000000 +0200
+@@ -2129,7 +2129,7 @@
+ 
+ }
+ 
+-static void
++void
+ startElement (void *userData, const XML_Char *name, const XML_Char **atts)
+ {
+     unsigned int nAtts = 0;
+@@ -3093,7 +3093,7 @@
+       }
+ }
+ 
+-static void
++void
+ endElement (void *userData, const XML_Char *name)
+ {
+     state_data *mydata = (state_data *) userData;

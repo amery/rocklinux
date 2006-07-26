@@ -39,10 +39,13 @@ pkgfilter sed '
 / kbd /		{ p; d; };	/ eject /	{ p; d; };
 / popt /	{ p; d; };
 / mdadm /       { p; d; };      / ntfsprogs /   { P; d; };
-/ linux /	{ p; d; };	/ ddrescue /    { p; d; };
+/ ddrescue /    { p; d; };
 / iproute2 /	{ p; d; };	/ wget /	{ p; d; };
 / kiss /	{ p; d; };	/ udev /	{ p; d; };
 / gmp /		{ p; d; };	/ rockinitrd /	{ p; d; };
+/ linux=linux26 /	{ p; d; };
+/ linux=linux26-source /	{ p; d; };
+
 
 # Select some non-base packages
 / lzo /		{ p; d; };
@@ -84,7 +87,7 @@ ROCKCFGSET_DISABLE_NLS=1
 ROCKCFGSET_OPTSIZE=1
 ROCKCFGSET_LIMITCXX=1
 
-if [ $ROCKCFG_PKG_LINUX_DEFAULT = linux26 ] ; then
+if [ "$ROCKCFG_PKG_LINUX_DEFAULT" = linux26 ] ; then
 	pkgremove lvm
 fi
 

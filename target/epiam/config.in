@@ -29,7 +29,7 @@ pkgfilter sed '
 # / xv /		{ s/^X /O /; p; d; };
 / wu-ftp /	{ s/^X /O /; p; d; };
 / gcc2 /	{ s/^X /O /; p; d; };
-/ linux26* /	{ s/^X /O /; p; d; };
+/ linux=linux26* /	{ s/^X /O /; p; d; };
 / module-init-tools /	{ s/^X /O /; p; d; };
 / bootsplash /	{ s/^X /O /; p; d; };
 

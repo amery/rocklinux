@@ -20,36 +20,37 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-if pkgcheck linux X
+if pkgcheck linux=linux24 X || pkgcheck linux=linux26 X || \
+	pkgcheck linux=linux24-source X || pkgcheck linux=linux26-source X
 then
   menu_begin MENU_PKG_LINUX 'Linux Kernel Options'
 
 	bool 'Place linux24 sources in /usr/src' \
 		ROCKCFG_PKG_LINUX_SRC24 0
 
-	if [ "$ROCKCFG_PKG_LINUX_SRC24" = 1 ]; then
-		pkgfork linux linux24-source
+	if [ "$ROCKCFG_PKG_LINUX_SRC24" = 0 ]; then
+		pkgdisable linux24-source
 	fi
 
 	bool 'Place linux26 sources in /usr/src' \
 		ROCKCFG_PKG_LINUX_SRC26 1
 
-	if [ "$ROCKCFG_PKG_LINUX_SRC26" = 1 ]; then
-		pkgfork linux linux26-source
+	if [ "$ROCKCFG_PKG_LINUX_SRC26" = 0 ]; then
+		pkgdisable linux26-source
 	fi
 
 	bool 'Build and install a linux24 kernel' \
 		ROCKCFG_PKG_LINUX_IMG24 0
 
-	if [ "$ROCKCFG_PKG_LINUX_IMG24" = 1 ]; then
-		pkgfork linux linux24
+	if [ "$ROCKCFG_PKG_LINUX_IMG24" = 0 ]; then
+		pkgdisable linux24
 	fi
 
 	bool 'Build and install a linux26 kernel' \
 		ROCKCFG_PKG_LINUX_IMG26 1
 
-	if [ "$ROCKCFG_PKG_LINUX_IMG26" = 1 ]; then
-		pkgfork linux linux26 stages -X---5---9
+	if [ "$ROCKCFG_PKG_LINUX_IMG26" = 0 ]; then
+		pkgdisable linux26
 	fi
 
 	case "$ROCKCFG_PKG_LINUX_IMG24$ROCKCFG_PKG_LINUX_IMG26" in
@@ -102,6 +103,5 @@ then
 	%include package/*/*/pkg_config_linux.in
 
   menu_end
-  pkgremove linux
 fi
 

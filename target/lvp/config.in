@@ -59,7 +59,7 @@ pkgfilter sed '
 / libtiff / { p; d; };
 / libtool / { p; d; };
 / libungif / { p; d; };
-/ linux / { p; d; };
+/ linux=[^ ]* / { p; d; };
 / linux-libc-headers / { p; d; };
 / lvp / { p; d; };
 / m4 / { p; d; };

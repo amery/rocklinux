@@ -791,7 +791,7 @@ then
 	if [ "$download" = 1 ]; then
 		echo_status "Running ./scripts/Download for this package..."
 		echo_status "----- DOWNLOAD LOG -----"
-		echo; ./scripts/Download $pkg; echo
+		echo; ./scripts/Download $xpkg; echo
 		echo_status "------------------------"
 	fi
 fi

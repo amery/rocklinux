@@ -55,6 +55,7 @@ dm_edit () {
 		run=$?
 	done
 	sed -e "s,^$olddevice.*$oldmountpoint.*$oldstatus$,$device\t$mountpoint\t$status," -i /etc/conf/dm/mounts
+	recreate_initrd=1
 	return 0
 }
 
@@ -76,6 +77,7 @@ dm_add () {
 		"not encrypted" "status=plain" || return
 
 	echo -e "$device\t$mountpoint\t$status" >>/etc/conf/dm/mounts
+	recreate_initrd=1
 }
 
 main() {
@@ -119,7 +121,5 @@ modprobe $x # added by mod_dm
 		[ -e "/sbin/fsck.${fs}" ]  && echo "/sbin/fsck.${fs} /sbin/fsck.${fs}"
 	done < <( mount ) | sort | uniq >>/etc/conf/initrd/initrd_dm
 	echo "/sbin/fsck /sbin/fsck" >>/etc/conf/initrd/initrd_dm
-
-	mkinitrd
 }
 

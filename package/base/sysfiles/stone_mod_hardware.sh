@@ -111,7 +111,6 @@ set_rtc() {
 }
 
 main() {
-    recreate_initrd=0;
     while
 	devtype=udev
 	if [ -f /etc/conf/devtype ]; then
@@ -143,7 +142,7 @@ main() {
 	cmd="$cmd `get_initrd_module_cmds`";
      
 	cmd="$cmd '' ''";
-	cmd="$cmd 'Force initrd re-creation now' '/sbin/mkinitrd'";
+	cmd="$cmd 'Force initrd re-creation now' '/sbin/mkinitrd; recreate_initrd=0'";
 	cmd="$cmd '' ''";
 
 	if [ "$clock_tz" = localtime ] ; then
@@ -157,7 +156,6 @@ main() {
 	eval "$cmd"
     do : ; done
 
-    [ "${recreate_initrd}" == "1" ] && /sbin/mkinitrd
     return
 }
 

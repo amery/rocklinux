@@ -22,6 +22,7 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
+recreate_initrd=0
 export SETUPD="${SETUPD:-/etc/stone.d}"
 if type -p dialog > /dev/null ; then 
 	export SETUPG="${SETUPG:-dialog}"
@@ -67,3 +68,4 @@ else
 	echo
 fi
 
+[ "${recreate_initrd}" == "1" ] && /sbin/mkinitrd

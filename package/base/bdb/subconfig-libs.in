@@ -20,7 +20,8 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-if pkgcheck bdb=bdb33 X || pkgcheck bdb=bdb40 X || pkgcheck bdb=bdb41 X || pkgcheck bdb=bdb42 X
+if pkgcheck bdb=bdb33 X || pkgcheck bdb=bdb40 X || pkgcheck bdb=bdb41 X \
+	|| pkgcheck bdb=bdb42 X || pkgcheck bdb=bdb44 X
 then
 	menu_begin MENU_PKG_BDB 'BerkleyDB Options'
 	block_begin 4
@@ -41,6 +42,10 @@ then
 	if pkgcheck bdb=bdb42 X ; then 
 		bdbdefselect="$bdbdefselect bdb42 'Using v4.2 as default'"
 		bdbdefault="bdb42";
+	fi
+	if pkgcheck bdb=bdb44 X ; then 
+		bdbdefselect="$bdbdefselect bdb44 'Using v4.4 as default'"
+		bdbdefault="bdb44";
 	fi
 
 	eval "choice ROCKCFG_PKG_BDB_DEFAULT $bdbdefault $bdbdefselect"

@@ -75,5 +75,10 @@
 [D] 4159179082 db-4.2.52.tar.gz http://www.sleepycat.com/update/snapshot/
 #endif
 
+#if xpkg == bdb44
+[V] 4.4.20
+[D] 2730568920 db-4.4.20.tar.gz ftp://ftp.sleepycat.com/releases/
+#endif
+
 [CD] <COPY> for x in $cachedir/*.cache; do cp $x $confdir/$pkg.cache; done
 

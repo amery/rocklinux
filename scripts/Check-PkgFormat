@@ -108,7 +108,7 @@ for package ; do
 			case $x in
 				Unknown|GPL|LGPL|MPL|FDL|MIT|BSD) ;;
 				OpenSource|Free-to-use|Commercial) ;;
-				IBM-Public-License) ;;
+				IBM-Public-License|DLJ) ;;
 				*) echo "$package: Unknown package" \
 				        "license: $x" ;;
 			esac

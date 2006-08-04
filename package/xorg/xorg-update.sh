@@ -54,7 +54,8 @@ while read N ; do
 			libxt)			delta=18 ;;
 			libxmu|libxpm)		delta=20 ;;
 			libxp|libxaw|libxfixes)	delta=22 ;;
-			libxcomposite|libxrender|libxdamage|libxcursor|libxevie|`
+			libxrender)		delta=23 ;;
+			libxcomposite|libxdamage|libxcursor|libxevie|`
 			`libxfont|libxfontcache|libxft|libxi|libxinerama|libxkbfile|libxkbui)
 						delta=24 ;;
 			libxprintutil)		delta=25 ;;

@@ -1,0 +1,12 @@
+diff -pruN Python-2.4.3-orig/Modules/_curses_panel.c Python-2.4.3/Modules/_curses_panel.c
+--- Python-2.4.3-orig/Modules/_curses_panel.c	2006-03-07 14:39:26.000000000 +0100
++++ Python-2.4.3/Modules/_curses_panel.c	2006-07-12 08:54:11.000000000 +0200
+@@ -14,7 +14,7 @@ static char *PyCursesVersion = "2.1";
+ 
+ #include "py_curses.h"
+ 
+-#include <panel.h>
++#include <ncurses/panel.h>
+ 
+ static PyObject *PyCursesError;
+ 

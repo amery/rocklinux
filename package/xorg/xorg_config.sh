@@ -4,8 +4,17 @@
 prefix="$root/usr/X11R7"
 set_confopt
 
+if [[ "$xpkg" == font-* && "$xpkg" != font-util ]] ; then
+	xorg_fonts_preconf ()
+	{
+		# This prevents creation of fonts.scale and font.dir files.
+		sed -i -e's,\(.*$(MAKE).*install-data-hook\),#\1,' Makefile.in
+	}
+	hook_add preconf 5 xorg_fonts_preconf
+fi
+
 SUDO=""
-DESTDIR=""
+DESTDIR="$root/"
 PREFIX="$prefix"
 
 # Must create local aclocal dir or aclocal fails

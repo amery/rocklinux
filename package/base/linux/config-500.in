@@ -29,28 +29,28 @@ then
 		ROCKCFG_PKG_LINUX_SRC24 0
 
 	if [ "$ROCKCFG_PKG_LINUX_SRC24" = 0 ]; then
-		pkgdisable linux24-source
+		pkgdisable linux=linux24-source
 	fi
 
 	bool 'Place linux26 sources in /usr/src' \
 		ROCKCFG_PKG_LINUX_SRC26 1
 
 	if [ "$ROCKCFG_PKG_LINUX_SRC26" = 0 ]; then
-		pkgdisable linux26-source
+		pkgdisable linux=linux26-source
 	fi
 
 	bool 'Build and install a linux24 kernel' \
 		ROCKCFG_PKG_LINUX_IMG24 0
 
 	if [ "$ROCKCFG_PKG_LINUX_IMG24" = 0 ]; then
-		pkgdisable linux24
+		pkgdisable linux=linux24
 	fi
 
 	bool 'Build and install a linux26 kernel' \
 		ROCKCFG_PKG_LINUX_IMG26 1
 
 	if [ "$ROCKCFG_PKG_LINUX_IMG26" = 0 ]; then
-		pkgdisable linux26
+		pkgdisable linux=linux26
 	fi
 
 	case "$ROCKCFG_PKG_LINUX_IMG24$ROCKCFG_PKG_LINUX_IMG26" in

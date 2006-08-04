@@ -1,6 +1,4 @@
 
-# hook_add premake 5 " " "ln -svf X11R7 $root/usr/X11"
-
 prefix="$root/usr/X11R7"
 set_confopt
 
@@ -12,6 +10,20 @@ if [[ "$xpkg" == font-* && "$xpkg" != font-util ]] ; then
 	}
 	hook_add preconf 5 xorg_fonts_preconf
 fi
+
+createdocs=0
+forcefpic=0
+
+var_remove GCC3_WRAPPER_INSERT " " "-fstack-protector"
+
+# don't put the modules in a :dev package
+splitreg 45 . '/lib/modules/'
+
+# documentation files
+splitreg 50 doc 'usr/X11.*/lib/X11/doc'
+
+# this fixes many cyclic dependencies..
+var_append flistrfilter "|" ".*mkhtmlindex.pl.*X11/doc/html.*"
 
 SUDO=""
 DESTDIR="$root/"

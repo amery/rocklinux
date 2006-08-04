@@ -1,5 +1,5 @@
 
-prefix="$root/usr/X11R7"
+prefix="usr/X11R7"
 set_confopt
 
 if [[ "$xpkg" == font-* && "$xpkg" != font-util ]] ; then

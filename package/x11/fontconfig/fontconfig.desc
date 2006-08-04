@@ -6,7 +6,7 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/base/pkgconfig/pkgconfig.desc
+[COPY] ROCK Linux: rock-src/package/x11/fontconfig/fontconfig.desc
 [COPY] ROCK Linux is Copyright (C) 1998 - 2006 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
@@ -21,25 +21,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[I] pkgconfig
+[I] a library for font customization and configuration
 
-[T] pkg-config is a system for managing library compile/link flags that
-[T] works with automake and autoconf. It replaces the ubiquitous *-config
-[T] scripts you may have seen with a single tool.
+[T] Fontconfig is a library designed to provide system-wide font configuration,
+[T] customization and application access.
 
-[U] http://www.freedesktop.org/software/pkgconfig/
+[U] http://www.fontconfig.org
 
-[A] James Henstridge <james@daa.com.au>
-[A] Havoc Pennington <hp@redhat.com> {Maintainer}
+[A] Keith Packard
 [M] The ROCK Linux Project
 
-[C] base/tool
-[F] CORE
+[C] base/x11
 
-[L] GPL
-[S] Beta
-[V] 0.20
-[P] X -?---5---9 110.750
+[L] LGPL
+[S] Stable
+[V] 2.3.2
+[P] X -----5---9 110.750
 
-[D] 1518948158 pkg-config-0.20.tar.gz http://pkgconfig.freedesktop.org/releases/
+[D] 306420814 fontconfig-2.3.2.tar.gz http://fontconfig.org/release/
 

@@ -5,7 +5,7 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/fake/mips64-emul/mips64-emul.cache
+[COPY] ROCK Linux: rock-src/package/fake/gxemul/gxemul.desc
 [COPY] ROCK Linux is Copyright (C) 1998 - 2006 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
@@ -20,21 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142644648 Sat Mar 18 02:17:28 2006 (5)
-[TIMESTAMP] 1142913324 Tue Mar 21 04:55:24 2006 (9)
+[I] A MIPS machine emulator
 
-[CONFIG-ID] TRUNK-x86-reference
-[ROCKVER] TRUNK
+[T] The goals of gxemul are to emulate MIPS-like CPUs and enough 
+[T] surrounding hardware to fake real machines, capable of running real 
+[T] (unmodified) operating systems (such as NetBSD, Linux, FreeBSD, or 
+[T] OpenBSD), and to assist in experimenting with MIPS in general.
 
-[LOGS] 5-mips64-emul.log 9-mips64-emul.log
+[U] http://gavare.se/gxemul/
 
-[BUILDTIME] 3251 (5)
-[BUILDTIME] 3361 (9)
-[SIZE] 0.46 MB, 7 files
+[A] Anders Gavare <md1gavan@mdstud.chalmers.se>
+[M] fake <fake@rapidnetworks.de>
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] rrdtool sed sysfiles tar xorg xorg:dev
+[C] extra/tool
 
-[PROVIDES] mips64emul
+[L] OpenSource
+[S] Stable
+[V] 0.4.0.1
+[P] X -?---5---9 224.400
+
+[D] 1070842306 gxemul-0.4.0.1.tar.gz http://gavare.se/gxemul/src/
 

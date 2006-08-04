@@ -1,0 +1,11 @@
+--- ./src/pmount-hal.c.orig	2006-08-03 23:38:45.000000000 +0200
++++ ./src/pmount-hal.c	2006-08-03 23:38:54.000000000 +0200
+@@ -345,7 +345,7 @@
+     /* shut down hal connection */
+     libhal_ctx_shutdown( hal_ctx, &error );
+     libhal_ctx_free( hal_ctx );
+-    dbus_connection_disconnect( dbus_conn );
++    dbus_connection_close( dbus_conn );
+     dbus_connection_unref( dbus_conn );
+ 
+     /* go */

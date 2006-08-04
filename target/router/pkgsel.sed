@@ -1,6 +1,6 @@
 / 00-dirtree / { p; d; }
 / autoconf / { p; d; }
-/ automake=automake17 / { p; d; }
+/ automake=automake19 / { p; d; }
 / bash=bash2 / { p; d; }
 / binutils / { p; d; }
 / bison / { p; d; }
@@ -22,7 +22,9 @@
 / iproute2 / { p; d; }
 / iptables / { p; d; }
 / liblockfile / { p; d; }
-/ linux / { p; d; }
+/ linux-libc-headers / { p; d; }
+/ linux=linux24 / { p; d; }
+/ linux=linux26 / { p; d; }
 / lzo / { p; d; }
 / m4 / { p; d; }
 / make / { p; d; }

@@ -33,15 +33,17 @@ user_edit_user_change_shell() { # {{{
 user_edit_user() { # {{{
 	IFS=: read username haspwd uid gid desc home shell < <( grep ^${1}: /etc/passwd )
 	read oldline < <( grep ^${1}: /etc/passwd )
+	groups="`grep -e":$1," -e",$1," -e",$1$" -e":$1" /etc/group | cut -f1 -d: | tr '\n' ' '`"
 	run=0
 	while [ ${run} -eq 0 ] ; do
 		cmd="'Login: ${username}' 'gui_input \"Enter new login for ${username}\" \"${username}\" username'"
 		cmd="${cmd} 'Has a password: $( [ -n "${haspwd}" ] && echo "yes" || echo "no" )' 'gui_yesno \"Must ${username} supply a password to login?\" && haspwd=x || unset haspwd'"
 		cmd="${cmd} 'User ID: ${uid}' 'gui_input \"Enter new user ID for ${username}\" \"${uid}\" uid'"
 		cmd="${cmd} 'Group ID: ${gid}' 'gui_input \"Enter new primary group ID for ${username}\" \"${gid}\" gid'"
-		cmd="${cmd} 'Long description: ${desc}' 'gui_input \"Enter new descryption for ${username}\" \"${desc}\" desc'"
+		cmd="${cmd} 'Long description: ${desc}' 'gui_input \"Enter new description for ${username}\" \"${desc}\" desc'"
 		cmd="${cmd} 'Home directory: ${home}' 'gui_input \"Enter new home directory for ${username}\" \"${home}\" home'"
 		cmd="${cmd} 'Shell: ${shell}' 'user_edit_user_change_shell ${username}'"
+		cmd="${cmd} 'Groups: ${groups}' 'user_edit_user_groups ${username}'"
 		cmd="${cmd} 'Set new password' 'passwd \"${username}\" ; read -p \"Press -<Return>- to continue\"'"
 		eval "gui_menu user_edit_user 'Manage account ${username}' ${cmd}"
 		run=${?}
@@ -74,6 +76,30 @@ user_add_user() { # {{{
 		-c "${desc}" "${username}" >${tmp} 2>&1 || \
 		gui_message "Error creating user: `cat ${tmp}`"
 	rm "${tmp}"
+} # }}}
+user_edit_user_groups() { # {{{
+	run=0
+	while [ ${run} -eq 0 ] ; do
+	    cmd=""
+	    while IFS=: read group groupid members ; do
+		members=" ${members/,/ } "
+		status=""
+		if [[ "${groupid}" == "${gid}" ]] ; then
+		    status="1"
+		elif [[ "${members}" == *\ ${1}\ * ]] ; then
+		    status="X"
+		    members="${members// ${1} / }"
+		else
+		    status=" "
+		    members="${members} ${1} "
+		fi
+		members="$( echo "${members}" | sed -e 's,^ *,,g' -e 's, *$,,g' -e 's,  *, ,g' )"
+		members="${members// /,}"
+		cmd="${cmd} '[${status}] ${group}' 'sed -i /etc/group -e \"s/^\(${group}.*:\).*$/\1${members}/\"'"
+	    done < <( cut -f 1,3,4 -d: /etc/group )
+	    eval "gui_menu user_edit_user_groups 'Manage Group Memberships of User ${1}' ${cmd}"
+	    run=${?}
+	done
 } # }}}
 user_edit_group_members() { # {{{
 	IFS=: read groupname haspwd gid members < <( grep ^${1}: /etc/group )
@@ -138,7 +164,7 @@ user_add_group() { # {{{
 main() { # {{{
 	run=0
 	while [ ${run} -eq 0 ] ; do
-		cmd="'User Managemeint' ''"
+		cmd="'User Management' ''"
 		while IFS=: read username haspwd uid gid desc home shell ; do
 			cmd="${cmd} '${desc:-No description} (${username})' 'user_edit_user ${username}'"
 		done < /etc/passwd

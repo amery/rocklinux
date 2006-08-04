@@ -1,0 +1,13 @@
+--- Mesa-6.5/bin/installmesa~	2006-02-22 18:22:23.000000000 +0100
++++ Mesa-6.5/bin/installmesa	2006-06-07 02:15:38.000000000 +0200
+@@ -9,8 +9,8 @@
+ 
+ TOP=.
+ 
+-INCLUDE_DIR="/usr/local/include"
+-LIB_DIR="/usr/local/lib"
++INCLUDE_DIR="/usr/include"
++LIB_DIR="/usr/lib"
+ 
+ if [ "x$#" = "x0" ] ; then
+ echo

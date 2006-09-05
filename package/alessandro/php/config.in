@@ -41,11 +41,15 @@ if pkgcheck php X ; then
 		for xpkg in postgresql openssl mysql libgd ; do
 		  if pkgcheck $xpkg X ; then
 		  	bool "Build PHP with $xpkg support" ROCKCFG_PKG_PHP_$xpkg 1
+		  else
+		  	comment "Package $xpkg is disabled. Bulding PHP without $xpkg support."
 		  fi
 		done
 
 		if pkgcheck pine X ; then
 		  bool "Build PHP with imap support" ROCKCFG_PKG_PHP_imap 1
+		else
+		  comment "Package pine is disabled. Bulding PHP without imap support."
 		fi
 
 		bool "Build PHP with mcrypt support" ROCKCFG_PKG_PHP_mcrypt 0

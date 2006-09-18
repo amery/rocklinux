@@ -175,6 +175,7 @@ fi
 
 # parameter 1 has $pkg=$xpkg
 pkg="${1%=*}"; xpkg="${1#*=}"
+
 builddir="$base/src.$xpkg.$id"
 
 # get real pkg name for mapped packages
@@ -295,21 +296,16 @@ if [ "$chroot" = 1 ] ; then
 	# If build is a symlink to somewhere else (NFS share for clusterbuild
 	# usually) we do _not_ want to extract our stuff there.
 	# Network latency!
-	if [ -L ${base}/build ] ; then
-		mkdir -p "${builddir}"
-		mkdir "$PWD/ROCK/src.$xpkg.$id"
-		mount --bind "${builddir}" "$PWD/ROCK/src.$xpkg.$id"
-	else
-		mkdir -p "ROCK/src.$xpkg.$id"
-		ln -s "$PWD/ROCK/src.$xpkg.$id" "$builddir"
-	fi
+	mkdir -p "$builddir"; chmod 700 "$builddir"
+	ln -s loop/src.$xpkg.$id ROCK/src.$xpkg.$id
 
-	cat > $builddir/chroot.sh <<- EOT
+	cat > "$builddir/chroot.sh" <<- EOT
+		#!/bin/bash
 		export ROCK_THIS_IS_CHROOT=1; cd /ROCK
 		./scripts/Build-Pkg $options -chr-sub -root "/" "$1"
 	EOT
 
-	cat > $builddir/debug.sh <<- EOT
+	cat > "$builddir/debug.sh" <<- EOT
 		#!/bin/bash
 		export ROCK_THIS_IS_CHROOT=1
 		if [ ! -e $PWD/ROCK/loop/scripts ]; then
@@ -319,7 +315,7 @@ if [ "$chroot" = 1 ] ; then
 		fi
 		chroot "$xroot" /bin/bash ROCK/src.$xpkg.$id/debug_x.sh
 	EOT
-	chmod +x $builddir/debug.sh
+	chmod +x "$builddir/debug.sh"
 
 	if [ "$TZ" ] ; then
 		if [ "${TZ#/}" != "$TZ" ] ; then
@@ -338,11 +334,8 @@ if [ "$chroot" = 1 ] ; then
 	TZ="/ROCK/localtime" chroot . bin/bash ROCK/src.$xpkg.$id/chroot.sh
 	returncode=$?
 
-	if [ -L "$builddir" ]; then
-		rm "$builddir"
-	else
-		umount "${builddir}"
-	fi
+	# Only remove $builddir if it is empty.
+	rmdir --ignore-fail-on-non-empty "$builddir"
 
 	exit $returncode
 fi
@@ -396,22 +389,11 @@ if [ -z "$confdir" ] ; then
 	echo_pkg_deny $stagelevel $pkg "does not exist" ; exit 1
 fi
 
-mkdir -p $root/var/adm/logs
-mkdir -p $root/var/adm/flists
-mkdir -p $root/var/adm/cksums
-mkdir -p $root/var/adm/md5sums
-mkdir -p $root/var/adm/packages
-mkdir -p $root/var/adm/dependencies
-mkdir -p $root/var/adm/dep-debug
-mkdir -p $root/var/adm/parse-config
-mkdir -p $root/var/adm/cache
-mkdir -p $root/var/adm/descs
-mkdir -p $root/var/adm/rock-debug
+mkdir -p $root/var/adm/{logs,flists,cksums,md5sums,packages,dependencies}
+mkdir -p $root/var/adm/{dep-debug,parse-config,cache,descs,rock-debug}
 [ "$root" ] && chmod 700 $root
 
-rm -f $root/var/adm/logs/$stagelevel-$xpkg.out
-rm -f $root/var/adm/logs/$stagelevel-$xpkg.log
-rm -f $root/var/adm/logs/$stagelevel-$xpkg.err
+rm -f $root/var/adm/logs/$stagelevel-$xpkg.{out,log,err}
 
 if [ $this_is_the_2nd_run = 0 ] ; then
 	[ $stagelevel -gt 1 ] && . /etc/profile
@@ -700,10 +682,9 @@ fi
 
 echo_status "Preparing build in src.$xpkg.$id"
 
-mkdir -p $builddir; chmod 700 $builddir
 if [ $clear_src = 1 ] ; then
 	if [ "$ROCKCFG_SRC_TMPFS" = 1 ]; then
-		mount -t tmpfs -o $ROCKCFG_SRC_TMPFS_OPT tmpfs $builddir
+		mount -t tmpfs -o $ROCKCFG_SRC_TMPFS_OPT tmpfs "$builddir"
 	fi
 fi
 
@@ -720,24 +701,24 @@ if [ $update = 1 ] ; then
 		cd $xroot/
 		grep -v "^X" var/adm/md5sums/$xpkg var/adm/md5sums/$xpkg:* 2> /dev/null |
 			md5sum --check - 2>&1 | grep ': FAILED$' | cut -f1 -d:
-	) > $builddir/backup_files.txt
-	if [ -s $builddir/backup_files.txt ] ; then
+	) > "$builddir/backup_files.txt"
+	if [ -s "$builddir/backup_files.txt" ] ; then
 		mkdir -p "$xroot/var/adm/backup"
 		chmod 700 "$xroot/var/adm/backup"
 		backup_tar="$xroot/var/adm/backup/$(
 			date '+%Y%m%d%H%M%S')_$xpkg.tar.bz2"
-		( cd $xroot/; tar --no-recursion --force-local -cf - -T $builddir/`
-			`backup_files.txt || true; ) | bzip2 > $backup_tar
+		( cd $xroot/; tar --no-recursion --force-local -cf - -T "$builddir/`
+			`backup_files.txt" || true; ) | bzip2 > $backup_tar
 	else
 		update=0
 	fi
 fi
 
 if [ "$ROCKCFG_FLIST" = "flwrapper" ] ; then
-	rm -f $builddir/fl_wrapper.wlog $builddir/fl_wrapper.rlog
-	touch $builddir/fl_wrapper.wlog $builddir/fl_wrapper.rlog
+	rm -f "$builddir/"fl_wrapper.{r,w}log
+	touch "$builddir/"fl_wrapper.{r,w}log
 elif [ "$ROCKCFG_FLIST" = "find" ] ; then
-	touch $builddir/temp.time_stamp
+	touch "$builddir/temp.time_stamp"
 	sleep 2
 fi
 
@@ -810,7 +791,7 @@ abort() {
 
 	# Makes debugging build problems easier
 	#
-	hook_dump > $builddir/debug.hooks
+	hook_dump > "$builddir/debug.hooks"
 	#
 	{
 	  dump_env
@@ -833,17 +814,17 @@ abort() {
 		  done
 		}
 		EOT
-	} > $builddir/debug.buildenv
+	} > "$builddir/debug.buildenv"
 	#
-	cat > $builddir/debug_x.sh <<- EOT
+	cat > "$builddir/debug_x.sh" <<- EOT
 		#!/bin/bash
 		export PROMPT_COMMAND='. debug.buildenv; cd .; unset PROMPT_COMMAND'
-		cd $builddir; exec bash 200>> build.pid
+		cd "$builddir"; exec bash 200>> build.pid
 	EOT
 	#
 	if [ "$ROCK_THIS_IS_CHROOT" != 1 ]; then
-		mv $builddir/debug_x.sh $builddir/debug.sh
-		chmod +x $builddir/debug.sh
+		mv "$builddir/debug_x.sh" "$builddir/debug.sh"
+		chmod +x "$builddir/debug.sh"
 	fi
 
 	# Create PID file
@@ -856,8 +837,8 @@ abort() {
 	# 'fuser' can be used to create a list of all processes which are part
 	# of this build process.
 	#
-	sh -c 'echo $PPID' > $builddir/build.pid
-	exec 200>> $builddir/build.pid
+	sh -c 'echo $PPID' > "$builddir/build.pid"
+	exec 200>> "$builddir/build.pid"
 
 	echo "Command Wrapper Debug: running '${CC} --version' .."
 	type ${CC%% *}; CMD_WRAPPER_DEBUG=1 ${CC} --version
@@ -875,10 +856,10 @@ abort() {
 		else
 			SYSEXIT="_exit"
 		fi
-		strace -o $builddir/strace.out -F -f -q -e open,creat,mkdir,`
+		strace -o "$builddir/strace.out" -F -f -q -e open,creat,mkdir,`
 		       `mknod,link,symlink,rename,utime,chdir,execve,`
                        `fork,clone,vfork,`
-                       `$SYSEXIT,exit_group -p `cat $builddir/build.pid` &
+                       `$SYSEXIT,exit_group -p `cat "$builddir/build.pid"` &
                  strace_pid=$! ; sleep 1 ; cd $base
 	fi
 
@@ -894,16 +875,16 @@ abort() {
 				echo "Did you run ./scripts/Download for this package?"
 				false
 			fi
-			ln -vs $x $builddir/archdir/
+			ln -vs $x "$builddir/archdir/"
 		done < <( echo "$desc_D" | column_clean )
 
 		echo "Running main build function '$mainfunction' ..."
 		if [ $xtrace -eq 1 -o $ROCKCFG_XTRACE -eq 1 ] ;	then
 			PS4=$'=[$FUNCNAME:$LINENO (last \\\$?=$?)> ' ; set -o xtrace
-			cd $builddir ; eval "$mainfunction"
+			cd "$builddir" ; eval "$mainfunction"
 			set +o xtrace
 		else
-			cd $builddir ; eval "$mainfunction"
+			cd "$builddir" ; eval "$mainfunction"
 		fi
 		touch $root/var/adm/logs/$stagelevel-$xpkg.log
 	)
@@ -917,8 +898,8 @@ abort() {
 	#
 	if [ "$ROCKCFG_FLIST" = "strace" ] ; then
 		sleep 1 ; kill -INT $strace_pid ; sleep 1
-		fl_stparse -w $builddir/fl_wrapper.wlog \
-			   -r $builddir/fl_wrapper.rlog < $builddir/strace.out
+		fl_stparse -w "$builddir/fl_wrapper.wlog" \
+			   -r "$builddir/fl_wrapper.rlog" < "$builddir/strace.out"
 		
 	fi
 	if [ "$ROCKCFG_FLIST" = "flwrapper" -o \
@@ -927,39 +908,39 @@ abort() {
 		then
 			xbase="$( cd $xroot/ 2> /dev/null ; pwd -P )"
 			if egrep -qv "[	 ]($base|$xbase|/tmp|/usr/tmp|/var/tmp|/var/backups|/proc|/dev)(/|$)" \
-						$builddir/fl_wrapper.wlog
+						"$builddir/fl_wrapper.wlog"
 			then
 				x="Created file outside basedir: "
 				egrep -v "[ 	]($base|$xbase|/tmp|/usr/tmp|/var/tmp|/proc|/dev)(/|$)" \
-					$builddir/fl_wrapper.wlog | \
+					"$builddir/fl_wrapper.wlog" | \
 					cut -f2- | sort -u | sed "s,^,$x,"
 				echo "base #1: $base"
 				echo "base #2: $xbase"
 				abort
 			fi
 		fi
-		if fl_wrparse -D -s -r "$xroot/" < $builddir/fl_wrapper.wlog | \
+		if fl_wrparse -D -s -r "$xroot/" < "$builddir/fl_wrapper.wlog" | \
 			egrep "^(${flistroot// /|})(/|$)" >> \
-			$builddir/flist.txt
+			"$builddir/flist.txt"
 		then : ; fi
 	elif [ "$ROCKCFG_FLIST" = "find" ] ; then
 		if find $flistroot \
 			\( -not -type d -or -type d -empty \) \
-			-and \( -newer $builddir/temp.time_stamp -or \
-			-cnewer $builddir/temp.time_stamp \) -printf "%p\n" >> \
-			$builddir/flist.txt
+			-and \( -newer "$builddir/temp.time_stamp" -or \
+			-cnewer "$builddir/temp.time_stamp" \) -printf "%p\n" >> \
+			"$builddir/flist.txt"
 		then : ; fi
 	fi
 
 	# evaluate flistdel (1/2)
-	egrep -v "^($flistdel)\$" $builddir/flist.txt | sort -u > $builddir/flist.txt.new
-	mv $builddir/flist.txt.new $builddir/flist.txt
+	egrep -v "^($flistdel)\$" "$builddir/flist.txt" | sort -u > "$builddir/flist.txt.new"
+	mv "$builddir/flist.txt.new" "$builddir/flist.txt"
 
 	# copy over missing *.a files
 	if [ "$autoso2a" = 1 ]; then
 		echo "Checking for missing .a files ..."
 		while read d s; do
-			grep -q "/${s%.so}.a$" $builddir/flist.txt && continue
+			grep -q "/${s%.so}.a$" "$builddir/flist.txt" && continue
 			[ "$d" = "lib" ] && d="usr/lib"
 			if [ -f "$AUTOSO2A_DIR/${s%.so}.a" ]; then
 				echo "Installing automatically created $d/${s%.so}.a."
@@ -968,29 +949,29 @@ abort() {
 			else
 				echo "Not found: $AUTOSO2A_DIR/${s%.so}.a"
 			fi
-		done < <( egrep '(^|/)lib/[^/]*\.so$' $builddir/flist.txt | sed 's,\(.*\)/,\1 ,' )
+		done < <( egrep '(^|/)lib/[^/]*\.so$' "$builddir/flist.txt" | sed 's,\(.*\)/,\1 ,' )
 	fi
 
 	# merge flist of previous build
 	for x in var/adm/flists/$xpkg var/adm/flists/$xpkg:*; do
-		[ -f $x ] && cut -f2- -d' ' $x >> $builddir/flist.txt
+		[ -f $x ] && cut -f2- -d' ' $x >> "$builddir/flist.txt"
 	done
 
 	# evaluate flistdel (2/2)
-	egrep -v "^($flistdel)\$" $builddir/flist.txt | sort -u > $builddir/flist.txt.new
-	mv $builddir/flist.txt.new $builddir/flist.txt
+	egrep -v "^($flistdel)\$" "$builddir/flist.txt" | sort -u > "$builddir/flist.txt.new"
+	mv "$builddir/flist.txt.new" "$builddir/flist.txt"
 
 	hook_eval postflist
 
-	fl_wrparse -D -p "$xpkg" -r "$xroot/" < $builddir/flist.txt | sort -u > $builddir/flist.split
-	echo Found `wc -l < $builddir/flist.split` "files for this package."
-	splitapply $xpkg $builddir/flist.split
+	fl_wrparse -D -p "$xpkg" -r "$xroot/" < "$builddir/flist.txt" | sort -u > "$builddir/flist.split"
+	echo Found `wc -l < "$builddir/flist.split"` "files for this package."
+	splitapply $xpkg "$builddir/flist.split"
 
 	if [ "$ROCKCFG_FLIST" = "flwrapper" -o \
 	     "$ROCKCFG_FLIST" = "strace" ] && [ $stagelevel -gt 1 ] ; then
 		echo "Calculating package dependencies ..."
 
-		! egrep -v "^($flistrfilter)\$" $builddir/fl_wrapper.[rw]log |
+		! egrep -v "^($flistrfilter)\$" "$builddir"/fl_wrapper.[rw]log |
 		sort -u | fl_wrparse -D -s -r "$xroot/" -p '' | \
 		grep -v ' var/adm/' | awk '
 			ARGIND < ARGC-1 {
@@ -1011,22 +992,22 @@ abort() {
 				sub("/?[^/]*$", "", file)
 			    }
 			}
-		' var/adm/flists/* - > $builddir/dependencies.debug
+		' var/adm/flists/* - > "$builddir/dependencies.debug"
 
 		awk 'BEGIN { FS=": "; } { print "'$xpkg': " $1; }' \
-			<  $builddir/dependencies.debug > $builddir/dependencies.txt
+			<  "$builddir/dependencies.debug" > "$builddir/dependencies.txt"
 
 		if [ -f var/adm/dep-debug/$xpkg ] ; then
-			cat var/adm/dep-debug/$xpkg >> $builddir/dependencies.debug
+			cat var/adm/dep-debug/$xpkg >> "$builddir/dependencies.debug"
 		fi
-		sort -u $builddir/dependencies.debug > var/adm/dep-debug/$xpkg
+		sort -u "$builddir/dependencies.debug" > var/adm/dep-debug/$xpkg
 
 		# add debug info for known false dependencies
 		if egrep -q "^[^#].* $xpkg( |$)" $base/scripts/dep_fixes.txt; then
 			echo "---  $xpkg [$stagelevel] ---" >> $root/var/adm/rock-debug/falsedeps.txt
 		fi
 		while read x; do
-			grep "^$x: " $builddir/dependencies.debug | sort -u | \
+			grep "^$x: " "$builddir/dependencies.debug" | sort -u | \
 				sed "s,:, -> $xpkg [$stagelevel]:," >> $root/var/adm/rock-debug/falsedeps.txt
 		done < <( egrep "^$xpkg +del +" $base/scripts/dep_fixes.txt | \
 				tr ' ' '\t' | tr -s '\t' | cut -f3- | tr '\t' '\n' )
@@ -1034,7 +1015,7 @@ abort() {
 		# merge the dependencies defined by the package
 		for x in `echo "$desc_E" | egrep '^add ' | sed 's/^add //' ` ; do
 			echo "Adding dependency: $x ..."
-			echo "$xpkg: $x" >> $builddir/dependencies.txt
+			echo "$xpkg: $x" >> "$builddir/dependencies.txt"
 		done
 
 		# remove dependencies as requested by the package
@@ -1045,18 +1026,18 @@ abort() {
 		done
 		if [ -n "$del_pattern" ] ; then
 			echo "Deleting dependencies, pattern: $del_pattern ..."
-			eval "egrep -v $del_pattern $builddir/dependencies.txt" > $builddir/dependencies.txt.new
-			mv $builddir/dependencies.txt.new $builddir/dependencies.txt
+			eval "egrep -v $del_pattern \"$builddir/dependencies.txt\"" > "$builddir/dependencies.txt.new"
+			mv "$builddir/dependencies.txt.new" "$builddir/dependencies.txt"
 		fi
 
 		if [ -f var/adm/dependencies/$xpkg ] ; then
-			cat var/adm/dependencies/$xpkg >> $builddir/dependencies.txt
+			cat var/adm/dependencies/$xpkg >> "$builddir/dependencies.txt"
 		fi
-		sort -u $builddir/dependencies.txt > $builddir/dependencies.txt.new
-		mv $builddir/dependencies.txt.new $builddir/dependencies.txt
+		sort -u "$builddir/dependencies.txt" > "$builddir/dependencies.txt.new"
+		mv "$builddir/dependencies.txt.new" "$builddir/dependencies.txt"
 	fi
 
-	for spkg in $( sed 's,: .*,,' < $builddir/flist.split | sort -u )
+	for spkg in $( sed 's,: .*,,' < "$builddir/flist.split" | sort -u )
 	do
 	  (
 		if [ -z "${spkg##*:*}" ]; then
@@ -1065,7 +1046,7 @@ abort() {
 
 		echo "<$spkg> Creating flist file ..."
 		{
-			grep "^$spkg: " $builddir/flist.split
+			grep "^$spkg: " "$builddir/flist.split"
 			[ -s "var/adm/parse-config/$spkg" ] && \
 				echo "$spkg: var/adm/parse-config/$spkg"
 			for x in var/adm/flists/$spkg var/adm/md5sums/$spkg \
@@ -1076,7 +1057,7 @@ abort() {
 		} | sort -u > var/adm/flists/$spkg
 
 		echo "<$spkg> Creating package dependencies file ..."
-		sed "s,^[^ ]*,$spkg:," < $builddir/dependencies.txt > var/adm/dependencies/$spkg
+		sed "s,^[^ ]*,$spkg:," < "$builddir/dependencies.txt" > var/adm/dependencies/$spkg
 
 		echo "<$spkg> Creating package description ..."
 		#
@@ -1130,8 +1111,8 @@ EOT
 		echo -n > var/adm/cksums/$spkg
 		echo -n > var/adm/md5sums/$spkg
 		# getfiles only returns non-directories, suitable for checksum creation.
-		getfiles < var/adm/flists/$spkg > $builddir/files.lst
-		if [ -s $builddir/files.lst ] ; then
+		getfiles < var/adm/flists/$spkg > "$builddir/files.lst"
+		if [ -s "$builddir/files.lst" ] ; then
 			while read file ; do
 				[ -z "${file//[ 	]/}" ] && continue
 				# Checksums on these files are volatile.
@@ -1150,7 +1131,7 @@ EOT
 					echo "0 $( stat -c %s ${file} ) ${file}" \
 					    >> var/adm/cksums/$spkg
 				fi
-			done < $builddir/files.lst
+			done < "$builddir/files.lst"
 		fi
 
 		if [ $stagelevel -ge 2 -a $nopostinst = 0 -a -d /var/adm/postinstall ]; then
@@ -1197,7 +1178,7 @@ EOT
 
 		# check for registered 'bad files'
 		if [ "$check_badfiles" != "0"  -a -n "$badfiles" ]; then
-			echo "$badfiles" > $builddir/badfiles.txt
+			echo "$badfiles" > "$builddir/badfiles.txt"
 			while read x file; do
 				if [ $found_bad = 0 ]; then
 					echo "Found registered 'bad files' in package:"
@@ -1209,7 +1190,7 @@ EOT
 					then desc="${badfiles_desc[x]#*$'\n'}"; fi
 				done
 				echo "$file: $desc"
-			done < <( grep -f $builddir/badfiles.txt $root/var/adm/flists/$xpkg \
+			done < <( grep -f "$builddir/badfiles.txt" $root/var/adm/flists/$xpkg \
 					$root/var/adm/flists/$xpkg:* 2> /dev/null )
 		fi
 
@@ -1239,19 +1220,19 @@ if [ $update = 1 ] ; then
 
 	while read fn ; do
 		[ -f $xroot/$fn ] && mv $xroot/$fn $xroot/$fn.new
-	done < $builddir/backup_files.txt
+	done < "$builddir/backup_files.txt"
 
 	tar --force-local --use-compress-program=bzip2 -C $xroot/ -xpf $backup_tar
 
 	while read fn ; do
 		cmp -s $fn $fn.new && rm -f $fn.new
-	done < $builddir/backup_files.txt
+	done < "$builddir/backup_files.txt"
 fi
 
 cd $base
 
-umount -r -d -f    $builddir/* 2> /dev/null
-umount -r -d -f -l $builddir/* 2> /dev/null
+umount -r -d -f    "$builddir"/* 2> /dev/null
+umount -r -d -f -l "$builddir"/* 2> /dev/null
 
 if [ "$ROCKCFG_SRC_TMPFS_LOG" = 1 -a -n "$( type -p df )" ]; then
 	if [ ! -f $root/var/adm/rock-debug/tmpfslog.txt ] ; then
@@ -1259,14 +1240,11 @@ if [ "$ROCKCFG_SRC_TMPFS_LOG" = 1 -a -n "$( type -p df )" ]; then
 			expand -t20 > $root/var/adm/rock-debug/tmpfslog.txt
 	fi
 	echo -e "$config\t$stagelevel-$xpkg\t$(
-		df 2> /dev/null -Pi $builddir | tail -n 1 | tr -s ' ' | cut -f3 -d' '
+		df 2> /dev/null -Pi "$builddir" | tail -n 1 | tr -s ' ' | cut -f3 -d' '
 	)\t$(
-		df 2> /dev/null -Pk $builddir | tail -n 1 | tr -s ' ' | cut -f3 -d' ')" | \
+		df 2> /dev/null -Pk "$builddir" | tail -n 1 | tr -s ' ' | cut -f3 -d' ')" | \
 	expand -t20 >> $root/var/adm/rock-debug/tmpfslog.txt
 fi
-
-umount -r -d -f    $builddir   2> /dev/null
-umount -r -d -f -l $builddir   2> /dev/null
 
 if [ "$ROCKCFG_PSEUDONATIVE" = 1 -a $stagelevel -eq 0 ]; then
 	rm -f $base/build/$ROCKCFG_ID/pseudonative_handler
@@ -1274,9 +1252,9 @@ fi
 
 if [ -f $root/var/adm/logs/$stagelevel-$xpkg.log ] ; then
 	if [ $clear_src = 1 ] ; then
-		rm -rf $builddir/* $builddir
+		rm -rf "$builddir"/* "$builddir"
 	else
-		cp $root/var/adm/logs/$stagelevel-$xpkg.out $builddir/BUILD-LOG
+		cp $root/var/adm/logs/$stagelevel-$xpkg.out "$builddir/BUILD-LOG"
 	fi
 	echo_status "\$root/var/adm/logs/$stagelevel-$xpkg.out" \
 	            "-> $stagelevel-$xpkg.log"
@@ -1286,9 +1264,9 @@ if [ -f $root/var/adm/logs/$stagelevel-$xpkg.log ] ; then
 	exit 0
 else
 	if [ $clear_src = 1 -a "$ROCKCFG_ALWAYS_CLEAN" = 1 ] ; then
-		rm -rf $builddir/* $builddir
+		rm -rf "$builddir"/* "$builddir"
 	else
-		cp $root/var/adm/logs/$stagelevel-$xpkg.out $builddir/ERROR-LOG
+		cp $root/var/adm/logs/$stagelevel-$xpkg.out "$builddir/ERROR-LOG"
 	fi
 	if [ "$ROCKCFG_VERBOSE" != 1 -a "$verbose" != 1 ] ; then
 		echo_errorquote "$( grep -B7 -- '--- BUILD ERROR ---' \

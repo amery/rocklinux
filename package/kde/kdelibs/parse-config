@@ -1,1 +1,1 @@
-export kde_htmldir="`${KDECONFIG:-kde-config} --install html --expandvars`"
+[[ "`which kde-config`" != */ROCK/* ]] && export kde_htmldir="`${KDECONFIG:-kde-config} --install html --expandvars`"

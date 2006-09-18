@@ -16,9 +16,6 @@ forcefpic=0
 
 var_remove GCC3_WRAPPER_INSERT " " "-fstack-protector"
 
-# don't put the modules in a :dev package
-splitreg 45 . '/lib/modules/'
-
 # documentation files
 splitreg 50 doc 'usr/X11.*/lib/X11/doc'
 

@@ -70,7 +70,7 @@ then
 	k=""; for x in gcc2 gcc32 gcc33 gcc34 gcc40 gcc41; do
 		if [ "$ROCKCFG_DEFAULT_CC" != "$x" ] ; then
 			if [[ "$ROCKCFG_DEFAULT_CXX" != "$x" && "$ROCKCFG_DEFAULT_F77" != "$x" ]]; then
-				k="$k / gcc=$x / { s/^\(.\) [0-9-]*/\1 -----5---9/; s/ CORE //g; };"
+				k="$k / gcc=$x /   s/^\(.\) [0-9-]*/\1 -----5---9/;";
 			else
 				k="$k / gcc=$x /   s/^\(.\) [0-9-]*/\1 --2------9/;"
 			fi

@@ -187,6 +187,16 @@ desktopfiles="$( echo ${base}/package/*/${pkg} )/*.desktop"
 export ROCK_PKG=$pkg
 export ROCK_XPKG=$xpkg
 
+mkdir -p "$builddir"; chmod 700 "$builddir"
+
+# This must happen _before_ the FLWRAPPER starts or we get into trouble
+# also before $chroot does anything
+if [ "$ROCKCFG_SRC_TMPFS" = 1 ]; then
+	if ! grep -q "src.$xpkg.$id" /proc/mounts ; then
+		mount -t tmpfs -o $ROCKCFG_SRC_TMPFS_OPT tmpfs "$builddir"
+	fi
+fi
+
 if [ "$chroot" = 1 ] ; then
 
 	cd "$xroot" || exit 1
@@ -278,6 +288,9 @@ if [ "$chroot" = 1 ] ; then
 		mount --bind $realbase $PWD/ROCK/loop
 		mount --bind $realconf $PWD/ROCK/config
 		mount --bind $realdown $PWD/ROCK/download
+		if [ "$ROCKCFG_SRC_TMPFS" = 1 ]; then
+			mount --bind $builddir $PWD/ROCK/loop/src.$xpkg.$id
+		fi
 	fi
 
 	if [ ! -f proc/mounts ]; then
@@ -296,7 +309,6 @@ if [ "$chroot" = 1 ] ; then
 	# If build is a symlink to somewhere else (NFS share for clusterbuild
 	# usually) we do _not_ want to extract our stuff there.
 	# Network latency!
-	mkdir -p "$builddir"; chmod 700 "$builddir"
 	ln -s loop/src.$xpkg.$id ROCK/src.$xpkg.$id
 
 	cat > "$builddir/chroot.sh" <<- EOT
@@ -312,6 +324,9 @@ if [ "$chroot" = 1 ] ; then
 			mount --bind $realbase $PWD/ROCK/loop
 			mount --bind $realconf $PWD/ROCK/config
 			mount --bind $realdown $PWD/ROCK/download
+			if [ "$ROCKCFG_SRC_TMPFS" = 1 ]; then
+				mount --bind $builddir $PWD/ROCK/loop/src.$xpkg.$id
+			fi
 		fi
 		chroot "$xroot" /bin/bash ROCK/src.$xpkg.$id/debug_x.sh
 	EOT
@@ -334,8 +349,17 @@ if [ "$chroot" = 1 ] ; then
 	TZ="/ROCK/localtime" chroot . bin/bash ROCK/src.$xpkg.$id/chroot.sh
 	returncode=$?
 
+	if [ "$ROCKCFG_SRC_TMPFS" = 1 ]; then
+		umount $PWD/ROCK/loop/src.$xpkg.$id
+		umount $realbase/src.$xpkg.$id
+	fi
+	umount $PWD/ROCK/loop
+	umount $PWD/ROCK/config
+	umount $PWD/ROCK/download
+	umount $PWD/proc
 	# Only remove $builddir if it is empty.
-	rmdir --ignore-fail-on-non-empty "$builddir"
+	rm ROCK/src.$xpkg.$id
+	rmdir --ignore-fail-on-non-empty "$realbase/src.$xpkg.$id"
 
 	exit $returncode
 fi
@@ -681,12 +705,6 @@ fi
 #
 
 echo_status "Preparing build in src.$xpkg.$id"
-
-if [ $clear_src = 1 ] ; then
-	if [ "$ROCKCFG_SRC_TMPFS" = 1 ]; then
-		mount -t tmpfs -o $ROCKCFG_SRC_TMPFS_OPT tmpfs "$builddir"
-	fi
-fi
 
 if [ "$xroot" != "$root" ] ; then
 	for x in $flistroot ; do
@@ -1250,9 +1268,20 @@ if [ "$ROCKCFG_PSEUDONATIVE" = 1 -a $stagelevel -eq 0 ]; then
 	rm -f $base/build/$ROCKCFG_ID/pseudonative_handler
 fi
 
+if [ "$ROCKCFG_FLIST" = "flwrapper" ] ; then
+	export LD_PRELOAD="${LD_PRELOAD//${FLWRAPPER}/}"
+	export LD_PRELOAD="${LD_PRELOAD//::/:}"
+fi
 if [ -f $root/var/adm/logs/$stagelevel-$xpkg.log ] ; then
 	if [ $clear_src = 1 ] ; then
-		rm -rf "$builddir"/* "$builddir"
+		rm -rf "$builddir"/*
+		if [ $stagelevel -lt 2 ] ; then
+# in stages 2-9 the outer Build-Pkg has a fd open in $builddir
+			if [ "$ROCKCFG_SRC_TMPFS" = 1 ]; then
+				umount "$builddir"
+			fi
+			rmdir "$builddir"
+		fi
 	else
 		cp $root/var/adm/logs/$stagelevel-$xpkg.out "$builddir/BUILD-LOG"
 	fi
@@ -1264,7 +1293,14 @@ if [ -f $root/var/adm/logs/$stagelevel-$xpkg.log ] ; then
 	exit 0
 else
 	if [ $clear_src = 1 -a "$ROCKCFG_ALWAYS_CLEAN" = 1 ] ; then
-		rm -rf "$builddir"/* "$builddir"
+		rm -rf "$builddir"/*
+		if [ $stagelevel -lt 2 ] ; then
+# in stages 2-9 the outer Build-Pkg has a fd open in $builddir
+			if [ "$ROCKCFG_SRC_TMPFS" = 1 ]; then
+				umount "$builddir"
+			fi
+			rmdir "$builddir"
+		fi
 	else
 		cp $root/var/adm/logs/$stagelevel-$xpkg.out "$builddir/ERROR-LOG"
 	fi

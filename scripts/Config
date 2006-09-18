@@ -87,8 +87,8 @@ done
 if [ $do_config_cycle = 0 ]
 then
 	export swpid=swp$$
-	rm -f config.data.$swpid config.dialog.$swpid config.out.$swpid config.help.$swpid
-	rm -f config.pcache.data.$swpid config.pcache.cmd.$swpid
+	rm -f config.{data,dialog,out,help}.$swpid
+	rm -f config.pcache.*.$swpid
 	rm -f rockdialog.scrltmp # src/rockdialog.bin
 	mkdir -p src
 
@@ -100,34 +100,17 @@ then
 		mv src/rockdialog.bin.$swpid src/rockdialog.bin
 	fi
 
-	echo "Creating configuration script."
-	cat << EOT > src/rockconfig.awk.$swpid
-#!/usr/bin/awk -f
+	arch=none
+	if expr "`uname -m`" : "x86_64"  > /dev/null ; then arch=x86     ; fi
+	if expr "`uname -m`" : "i.86"    > /dev/null ; then arch=x86     ; fi
+	if expr "`uname -m`" : "alpha"   > /dev/null ; then arch=alpha   ; fi
+	if expr "`uname -m`" : "ppc"     > /dev/null ; then arch=powerpc ; fi
+	if expr "`uname -m`" : "powerpc" > /dev/null ; then arch=powerpc ; fi
+	if expr "`uname -m`" : "sparc"   > /dev/null ; then arch=sparc   ; fi
+	if expr "`uname -m`" : "mips"    > /dev/null ; then arch=mips    ; fi
 
-FNR == 1 {
-        if ( lastfile ) {
-                print "### END of " lastfile;
-        }
-        print "### BEGIN of " FILENAME;
-        lastfile = FILENAME;
-}
-
-END {
-        print "### END of " FILENAME;
-}
-
-\$1 == "%include" {
-        \$1 = "awk -f src/rockconfig.awk";
-        system(\$0);
-        next;
-}
-
-\$1 == "#" { next; }
-{ print; }
-EOT
-	mv src/rockconfig.awk.$swpid src/rockconfig.awk
-	awk -f src/rockconfig.awk scripts/config.in > src/rockconfig.in.$swpid 2> /dev/null
-	mv src/rockconfig.in.$swpid src/rockconfig.in
+	export ROCKCFG_ARCH="$arch" ; export ROCKCFG_EXPERT=0
+	export ROCKCFG_ID="$rockver"
 
 	echo "Running ROCK Linux $rockver configuration ..."
 	while "$0" -cfg $config $oldconfig $profile $nobashmod -cycle ; do : ; done
@@ -163,106 +146,96 @@ else
 					printf "%7d %7Ld %10.3f %s\n", count[id], time[id], time[id]/count[id], id;
 			}
 		' < config.profile | sort -n -k2 > config.profile.new
-		mv config.profile.new config.profile
+		mv config.profile{.new,}
 	}
 fi
 
 bprof main start
-
 . scripts/config.func
 
-arch=none
-if expr "`uname -m`" : "x86_64"  > /dev/null ; then arch=x86     ; fi
-if expr "`uname -m`" : "i.86"    > /dev/null ; then arch=x86     ; fi
-if expr "`uname -m`" : "alpha"   > /dev/null ; then arch=alpha   ; fi
-if expr "`uname -m`" : "ppc"     > /dev/null ; then arch=powerpc ; fi
-if expr "`uname -m`" : "powerpc" > /dev/null ; then arch=powerpc ; fi
-if expr "`uname -m`" : "sparc"   > /dev/null ; then arch=sparc   ; fi
-if expr "`uname -m`" : "mips"    > /dev/null ; then arch=mips    ; fi
-current="" ; export ROCKCFG_ARCH="$arch" ; export ROCKCFG_EXPERT=0
+current=""
 menu_this=0 ; menu_current=0 ; menu_counter=0
 menu_stack=x ; menu_back=-1 ; menu_backpos=-1
 
 mkdir -p config/$config
-touch config/$config/config
-touch config/$config/packages
+touch config/$config/{config,packages}
 
 rm -rf config/$config.$swpid
-cp -r config/$config config/$config.$swpid
+cp -r config/$config{,.$swpid}
 
-configtitle="$(printf ' %-50s %6s active packages ]' \
-	"ROCK Linux $rockver Configuration - $config" \
-	"[ $(echo `grep '^X' config/$config/packages | wc -l`)" )"
-
+rm -f config.{dialog,data,help}.$swpid
+touch config.{dialog,data,help}.$swpid
 bprof main stop
-. ./config/$config.$swpid/config
+
 if [ -f config/$config.$swpid/config_usr ]; then
 	nousrconfig=0
 	. ./config/$config.$swpid/config_usr
 else
 	nousrconfig=1
 fi
-bprof main start
 
-rm -f config.dialog.$swpid config.data.$swpid config.help.$swpid
-touch config.dialog.$swpid config.data.$swpid config.help.$swpid
-echo -e "#\n# ROCK Linux $rockver Config File\n#" > config/$config.$swpid/config
-echo -e "#\n# ROCK Linux $rockver User Config File\n#" > config/$config.$swpid/config_usr
+bprof main start
 spacer="" ; expert=0 ; tabspace="5" ; tabspace_list=""
 commentnr=0 ; editfilenr=0
 
-bprof mkpkglist start
-cmd="./scripts/Create-PkgList"
-[ "$ROCKCFG_DISABLE_BROKEN" = 1 ] && cmd="$cmd -nobroken"
-cmd="$cmd $ROCKCFG_ARCH"
-
-if [ "$cmd" != "`cat config.pcache.cmd.$swpid 2> /dev/null`" ] ; then
-	eval "$cmd" | tee config.pcache.data.$swpid > config/$config.$swpid/packages
-	echo "$cmd" > config.pcache.cmd.$swpid
+cmd="$ROCKCFG_ARCH"
+[ "$ROCKCFG_DISABLE_BROKEN" = 1 ] && cmd="${cmd}-nobroken"
+if [ -f config.pcache.$cmd.$swpid ] ; then
+	cat config.pcache.$cmd.$swpid > config/$config.$swpid/packages
 else
-	cat config.pcache.data.$swpid > config/$config.$swpid/packages
+	eval "./scripts/Create-PkgList $cmd" | tee config.pcache.data.$swpid \
+		> config/$config.$swpid/packages
 fi
-bprof mkpkglist stop
+bprof main stop
 
-export ROCKCFG_ID="$rockver"; pkgin; . src/rockconfig.in; pkgout
-echo "export ROCKCFG_ID='$ROCKCFG_ID'" >> config/$config.$swpid/config
+echo -e "#\n# ROCK Linux $rockver Config File\n#\n" \
+	> config/$config.$swpid/config
+echo -e "#\n# ROCK Linux $rockver User Config File\n#" \
+	> config/$config.$swpid/config_usr
+
+pkgin
+bprof rockconfig start
+. scripts/config.in
+bprof rockconfig stop
+pkgout
+
+bprof main start
 rm -f config/$config.$swpid/*.tmp
 
-sort -k3 config/$config.$swpid/packages > config/$config.$swpid/packages.sorted
-mv -f config/$config.$swpid/packages.sorted config/$config.$swpid/packages
-
-cut -f1,2,4,5,8- -d' ' config/$config.$swpid/packages | sed 's, [^ ]*$,,' | \
-tr ' ' '\t' | expand -t2,15,35, > config/$config.$swpid/packages.txt
-
 for x in ${!ROCKCFGUSR_*}; do
-	eval "echo \"$x='\$$x'\""
+	echo "${x}=\"${!x}\""
 done >> config/$config.$swpid/config_usr
 
 configtitle="$(printf ' %-50s %6s active packages ]' \
 	"ROCK Linux $rockver Configuration - $config" \
 	"[ $(echo `grep '^X' config/$config.$swpid/packages | wc -l`)" )"
-
 bprof main stop
 
 if [ -z "$oldconfig" ] ; then
+    bprof rockdialog start
     eval "./src/rockdialog.bin --title 'Build Config' \
 	--backtitle '$configtitle' \
 	--menu 'Arrow keys navigate the menu.  Press <Enter> to activate menu items.  Highlighted letters are hotkeys.' \
 	$(( $lines - 4 )) $(( $columns - 5 )) $(( $lines - 12 )) \
 	'$current' `tr '\n' ' ' < config.dialog.$swpid`" 2> config.out.$swpid
     returncode=$? ; item="`cat config.out.$swpid`"
+    bprof rockdialog stop
 else
     returncode=1
 fi
 
-bprof main start
 
+bprof main start
 [ "$returncode" = 1 -a "$menu_back" -ne -1 ] && returncode="menu-back"
 
 writeback() {
+	sort -k1,1r -k3,3 config/$config.$swpid/packages \
+		> config/$config.$swpid/packages.sorted
+	mv -f config/$config.$swpid/packages{.sorted,}
+
 	for x in $( ls config/$config.$swpid ); do
-		cp config/$config.$swpid/$x config/$config.$swpid/__tmp
-		mv config/$config.$swpid/__tmp config/$config/$x
+		cp config/$config.$swpid/{$x,__tmp}
+		mv config/$config{.$swpid/__tmp,/$x}
 	done
 	for x in $( ls config/$config ); do
 		[ -e config/$config.$swpid/$x ] || rm -f config/$config/$x
@@ -270,6 +243,7 @@ writeback() {
 	rm -rf config/$config.$swpid
 }
 
+exit_code=0
 case "$returncode" in
 	0|6)
 		command="`grep "^$item	" config.data.$swpid | cut -f2-`"
@@ -284,15 +258,12 @@ case "$returncode" in
 		} >> config/$config.$swpid/config_usr
 		;;
 	1|255)
-		rm -f config.data.$swpid config.dialog.$swpid config.out.$swpid config.help.$swpid
-		rm -f config.pcache.data.$swpid config.pcache.cmd.$swpid
+		rm -f config.{data,dialog,out,help}.$swpid
+		rm -f config.pcache.*.$swpid
 		rm -f rockdialog.scrltmp # src/rockdialog.bin
 		echo "New config written to config/$config/*."
 		echo "Cleaning up. Configuration finished."
-		writeback
-		bprof main stop
-		bprof_print
-		exit 1 ;;
+		exit_code=1 ;;
 	2)
 		tempitem=$item
 		item=$(echo $item | cut -f1 -d' ')  # dialog(1) bug?
@@ -311,15 +282,12 @@ case "$returncode" in
 		;;
 	*)
 		echo "unknown returncode: $returncode"
-		writeback	
-		bprof main stop
-		bprof_print
-		exit 1 ;;
+		exit_code=1 ;;
 esac
 
-writeback	
+writeback
 
 bprof main stop
 bprof_print
 
-exit 0
+exit $exit_code

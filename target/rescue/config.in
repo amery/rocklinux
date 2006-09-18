@@ -94,22 +94,12 @@ pkgfilter sed '
 / python /	{ s/^X /O /p; d; };
 / dmapi /	{ s/^X /O /p; d; };
 '
-if [[ $rockver = 2.0* ]] ; then
-       pkgfilter sed '
-               / linux24 / { s/^[XO] .......... /X -?-------- /p; d; };
-               / KERNEL /      { s/^X /O /p; d; };
-               / linux26-src / { s/^X /O /p; d; };
-       '
-       ROCKCFGSET_PKG_GCC3_NO_JAVA=1
-else
-       pkgenable linux;
-       ROCKCFGSET_PKG_LINUX_SRC26=0
-       ROCKCFGSET_PKG_LINUX_IMG26=0
+pkgenable linux
+ROCKCFGSET_PKG_LINUX_SRC26=0
+ROCKCFGSET_PKG_LINUX_IMG26=0
 
-       ROCKCFGSET_PKG_GCC32_NO_JAVA=1
-       ROCKCFGSET_PKG_GCC34_NO_JAVA=1
-fi ;
-	
+ROCKCFGSET_PKG_GCC32_NO_JAVA=1
+ROCKCFGSET_PKG_GCC34_NO_JAVA=1
 
 ROCKCFGSET_CREATE_TARBZ2=1
 ROCKCFGSET_CREATE_GEM=0

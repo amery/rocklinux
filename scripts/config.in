@@ -1,3 +1,4 @@
+#!/bin/bash
 #
 # --- ROCK-COPYRIGHT-NOTE-BEGIN ---
 # 
@@ -39,8 +40,10 @@
 #
 #	* misc/*/noexpertconfig.in
 #
-#	* {package/*,misc}/*/config-*.in
-#	* {package/*,misc}/*/config.in
+#	* misc/*/config-*.in
+#	* misc/*/config.in
+#	* package/*/config-*.in
+#	* package/*/config.in
 #	* Various common build options
 #
 #	- package/*/*/postconfig.in
@@ -70,7 +73,15 @@
 CFGTEMP_ARCHLIST=""
 CFGTEMP_TARGETLIST=""
 
-%include architecture/*/preconfig.in
+include ()
+{
+	local x
+	for x in $@ ; do
+		[ -f "$x" ] && . "./$x"
+	done
+}
+
+include "architecture/*/preconfig.in"
 
 comment_id '- Architecture, CPU and Optimization' COMMENT_ARCHCPUOPT
 block_begin 7
@@ -105,21 +116,24 @@ block_begin 7
 	fi
 block_end
 
-%include misc/*/preconfig.in
-%include target/*/preconfig.in
-%include package/*/*/preconfig.in
+include "misc/*/preconfig.in"
+include "target/*/preconfig.in"
+include "package/*/*/preconfig.in"
 
 if [ "$ROCKCFG_CROSSBUILD" = 1 ] ; then
+	pkgfilter sed -e 's,^\(. ..\)[^ ]*,\1--------, ;'
 	if [ $ROCKCFG_CROSS_TESTALL = 1 ]; then
-		pkgfilter sed -e 's,^\(. ..\)[^ ]*,\1--------,; s,^\(. .\)[1X?],\11,; s,^\(. \)X,\1-,;'
+		pkgfilter sed -e 's,^\(. .\)?,\11, ;'
 	else
-		pkgfilter sed -e 's,^\(. ..\)[^ ]*,\1--------,; s,^\(. .\)[1X],\11,; s,^\(. .\)?,\1-,; s,^\(. \)X,\1-,;'
+		pkgfilter sed -e 's,^\(. .\)?,\1-, ;'
 	fi
+	pkgfilter sed -e 's,^\(. .\)X,\11, ; s,^\(. \)X,\1-, ;'
 else
+	pkgfilter sed -e 's,^\(. .\)[?X],\1-, ;'
 	if [ "$ROCKCFG_PSEUDONATIVE" = 1 ] ; then
-		pkgfilter sed -e 's,^\(. .\)[?X],\1-,; s,^\(. \)X,\10,;'
+		pkgfilter sed -e 's,^\(. \)X,\10, ;'
 	else
-		pkgfilter sed -e 's,^\(. .\)[?X],\1-,; s,^\(. \)X,\1-,;'
+		pkgfilter sed -e 's,^\(. \)X,\1-, ;'
 	fi
 fi
 
@@ -130,8 +144,7 @@ block_begin 7
 	choice ROCKCFG_TARGET crystal $CFGTEMP_TARGETLIST
 	ROCKCFG_ID="$ROCKCFG_ID-$ROCKCFG_TARGET"
 
-	if [ -f target/$ROCKCFG_TARGET/config.in ]
-	then . target/$ROCKCFG_TARGET/config.in ; fi
+	include target/$ROCKCFG_TARGET/config.in
 
 	text 'Linguas (translations)' ROCKCFG_LINGUAS 'de es fr it ru'
 block_end
@@ -190,7 +203,7 @@ block_begin 3
 	fi
 block_end
 
-%include misc/*/noexpertconfig.in
+include "misc/*/noexpertconfig.in"
 
 echo "## BUILDENV_SETTINGS_END" >> config/$config.$swpid/config
 
@@ -199,8 +212,11 @@ block_begin 3
 	bool 'Show expert-only and experimental options' ROCKCFG_EXPERT 0
 block_end
 
-if [ $ROCKCFG_EXPERT = 1 ] ; then ROCKCFG_ID="$ROCKCFG_ID-expert"
-else ROCKCFG_ID="$ROCKCFG_ID-noexpert" ; fi
+if [ $ROCKCFG_EXPERT == 1 ] ; then 
+	ROCKCFG_ID="$ROCKCFG_ID-expert"
+else
+	ROCKCFG_ID="$ROCKCFG_ID-noexpert"
+fi
 
 expert_begin
 
@@ -221,110 +237,10 @@ expert_begin
     block_end
 
     comment ' '
-    comment '- Additional Package Selection'
-    block_begin 3
-      choice ROCKCFG_PKGSEL_TPL none none 'No package preselection template' \
-		$( cd misc/pkgsel; grep -H "^# TITLE: " *.in | tr ' ' '_' | sed 's,\.in:#_TITLE:_, ,' )
-	if [ -f misc/pkgsel/${ROCKCFG_PKGSEL_TPL}.in ]; then
-		# begin the sed string
-		echo "pkgfilter sed '" > config/$config.$swpid/predefined-pkgsel.parsed
-		. ./misc/pkgsel/macros
-		. ./misc/pkgsel/${ROCKCFG_PKGSEL_TPL}.in >> config/$config.$swpid/predefined-pkgsel.parsed
-		# end the sed string
-		echo "'"  >> config/$config.$swpid/predefined-pkgsel.parsed
-		. config/$config.$swpid/predefined-pkgsel.parsed
-      fi
-      bool 'Custom package selection' ROCKCFG_PKGSEL 0
-      if [ "$ROCKCFG_PKGSEL" = 1 ] ; then
-	menu_begin MENU_PKGSEL_RULES 'Edit package selection rules'
-		# Active error checking: explicitly show an annoying popup
-		filter=`printf "^[-xXoO][ \t]\+[a-zA-Z0-9_/*+.-]"`
-		if grep -lvq "$filter" config/$config.$swpid/pkgsel 2> /dev/null && \
-			./src/rockdialog.bin --title "Build Config" --yesno \
-			"Invalid line(s) in package rule set. Remove?" 5 50
-		then
-			grep "$filter" < config/$config.$swpid/pkgsel \
-				> config/$config.$swpid/pkgsel.new
-			mv config/$config.$swpid/pkgsel.new config/$config.$swpid/pkgsel
-		fi
-		unset filter
-
-		editfile ROCKCFG_PKGSEL_FILE config/$config.$swpid/pkgsel \
-		         'Package selection rules'
-
-# Create an awk program from the list of package selection rules stored in 
-# config/$config.$swpid/pkgsel which is applied to the list of packages stored in 
-# config/$config.$swpid/packages.
-# Syntax for package selection rules is:
-# <action> <patternlist>
-# <action> is a single character: x or X enables the packages matching 
-# <patternlist>, o or O disables them, - omits them in the packages list.
-# Any other character exits the awk program, resulting in an empty list.
-# <patternlist> consists of one or more white-space separated <pattern>s.
-# <pattern> consists of letters, numbers, and characters _ * + . = -
-# <action> is performed on every line in the list matching all <pattern>s of a rule.
-# If the first <pattern> of a rule is a !, <action> is performed on every line 
-# _not_ matching _any_ <pattern> of a rule.
-# A <pattern> of the form <base-pkg>=<derived-pkg> denotes a pkgforked package;
-# such a <pattern> will duplicate the line of the <base-pkg> and substitute its
-# package name with the name of the pkgforked package, that is, the <pattern>.
-
-		echo "# created from 'pkgsel'" > config/$config.$swpid/pkgsel.awk
-		while read action patternlist ; do
-			case "$action" in
-			    [xX])
-				action='$1="X"' ;;
-			    [oO])
-				action='$1="O"' ;;
-			    -)
-				action='next'   ;;
-			    *)
-				echo '{ exit; }'
-				continue ;;
-			esac
-			address="" ; first="(" ; others="&&"
-			while read pattern ; do
-				if [ -z "$address" ] && \
-				   [ "$pattern" = "!" ] ; then
-					address="! " ; others="||"
-				else
-					pattern="$( echo "$pattern" | sed \
-						-e 's,[^a-zA-Z0-9_/\*+\.=-],,g' \
-						-e 's,[/\.\+],\\&,g' \
-						-e 's,\*,[^ ]*,g' )"
-					[ "$pattern" ] || continue
-					address="$address$first /[ =]$pattern[ =]/"
-					first=" $others"
-				fi
-			done < <( echo "$patternlist" | tr '\t ' '\n\n' )
-			echo "$address ) { $action; }"
-		done < config/$config.$swpid/pkgsel >> config/$config.$swpid/pkgsel.awk
-		echo '{ print; }' >> config/$config.$swpid/pkgsel.awk
-
-		pkgout
-		gawk -f config/$config.$swpid/pkgsel.awk < config/$config.$swpid/packages \
-				> config/$config.$swpid/packages.new 2> /dev/null
-		if [ -s config/$config.$swpid/packages.new ] ; then
-			mv config/$config.$swpid/packages.new config/$config.$swpid/packages
-		else
-			rm -f config/$config.$swpid/packages.new
-			comment '----    Syntax error(s) in rule set!'
-		fi
-		pkgin
-	menu_end
-      else
-	rm -f config/$config.$swpid/pkgsel
-	rm -f config/$config.$swpid/pkgsel.awk
-      fi
-      startprog ROCKCFG_SHOW_PKGLIST 'Show the current package list' \
-              "./src/rockdialog.bin --title 'ROCK Linux Config - Package List' \
-                        --backtitle 'ROCK Linux $rockver Configuration' \
-                        --textbox config/$config.$swpid/packages.txt \
-                        $(( $lines - 4 )) $(( $columns - 5 ))"
-    block_end
-
-    comment ' '
-%include $( ls {package/*,misc}/*/config{,-*}.in 2>/dev/null | sed 's,\(.*/\)\([^/]*/\)\([^/]*\),\3\2 \1\2\3,' | sort | cut -f2 -d' ' )
+    include "$(ls misc/*/config{,-*}.in 2>/dev/null \
+	| LC_ALL=C sort -k3,3 -t"/" | tr '\n' ' ')"
+    include "$(ls package/*/*/config{,-*}.in 2>/dev/null \
+	| LC_ALL=C sort -k4,4 -t"/" | tr '\n' ' ')"
 
     comment ' '
     comment '- Additional GNU Configure Options'
@@ -374,11 +290,11 @@ break packages!'
 	fi
 
 	if [ $ROCKCFG_USE_CROSSCC != 1 ]; then
-		pkgfilter sed 's,^\([XO] \)0,\1-,'
+		pkgfilter sed -e 's,^\([XO] \)0,\1-, ;'
 	fi
 
 	if [ $ROCKCFG_DO_REBUILD_STAGE != 1 ]; then
-		pkgfilter sed 's,^\([XO] [^ ]*\)9 ,\1- ,'
+		pkgfilter sed -e 's,^\([XO] [^ ]*\)9 ,\1- , ;'
 	fi
 
 	choice ROCKCFG_OPT size \
@@ -414,27 +330,24 @@ break packages!'
     block_end
 expert_end
 
-%include package/*/*/postconfig.in
-%include misc/*/postconfig.in
-
-if [ -f architecture/$ROCKCFG_ARCH/postconfig.in ]
-then . architecture/$ROCKCFG_ARCH/postconfig.in; fi
-
-if [ -f target/$ROCKCFG_TARGET/postconfig.in ]
-then . target/$ROCKCFG_TARGET/postconfig.in; fi
+include "package/*/*/postconfig.in"
+include "misc/*/postconfig.in"
+include architecture/$ROCKCFG_ARCH/postconfig.in
+include target/$ROCKCFG_TARGET/postconfig.in
 
 if [ "$ROCKCFG_CROSSBUILD" = 1 ] ; then
-	pkgfilter sed -e 's,^\(. ..\)[^ ]*,\1--------,;'
+	pkgfilter sed -e 's,^\(. ..\)[^ ]*,\1--------, ;'
 fi
 
-pkgfilter sed '/^[XO] --* / d;'
+pkgfilter sed -e '/^[XO] --* / d ;'
 
-[ $ROCKCFG_EXPERT = 1 ] ||
+[ "$ROCKCFG_EXPERT" = 1 ] ||
 	ROCKCFG_ID="`echo $ROCKCFG_ID | sed 's,-noexpert.*,,'`"
 
 [ "$ROCKCFG_IDCKSUM" = 1 ] &&
 	ROCKCFG_ID="`echo $ROCKCFG_ID | cksum | cut -f1 -d' '`"  
 
 const ROCKCFG_SHORTID "$ROCKCFG_ID"
-ROCKCFG_ID="$config-$ROCKCFG_ID"
 
+ROCKCFG_ID="$config-$ROCKCFG_ID"
+const ROCKCFG_ID "$ROCKCFG_ID"

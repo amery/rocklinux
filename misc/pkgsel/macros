@@ -1,4 +1,4 @@
-# this is to be sourced by bash
+#!/bin/bash
 
 INCLUDE() {
 	if echo "$1" | grep -q '.*\.set$'
@@ -10,13 +10,13 @@ INCLUDE() {
 }
 
 ADD() {
-	echo "/ $1 / 	{ p; d; };"
+	echo "/[ =]$1 /	{ p ; d } ;"
 }
+
 REMOVE() {
-	echo "/ $1 /	{ s/^X /O / ; p; d; };"
+	echo "/[ =]$1 /	{ s/^X /O / ; p ; d } ;"
 }
 
 DISABLE_REST() {
-   echo 's/^X /O /;'
+	echo 's/^X /O / ;'
 }
-

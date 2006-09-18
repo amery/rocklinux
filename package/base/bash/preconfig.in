@@ -22,13 +22,7 @@
 
 if pkgcheck bash X
 then
-	if [ "$ROCKCFG_PKG_BASH_DEFAULT" == "bash2" ]; then
-        	pkgfork bash bash2
-        	pkgfork bash bash3 stages "-----5---9"
-	elif [ "$ROCKCFG_PKG_BASH_DEFAULT" == "bash3" ]; then
-        	pkgfork bash bash2 stages "-----5---9"
-        	pkgfork bash bash3
-	fi
-        pkgremove bash
+	pkgfork bash bash2
+	pkgfork bash bash3
+	pkgremove bash
 fi
-

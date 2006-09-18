@@ -80,28 +80,28 @@ then
 
 	bool 'Use Stack-Smashing Protector when available' \
 				ROCKCFG_PKG_GCC_STACKPRO 0
-	%include package/*/*/subconfig-gcc.in
+	include "package/*/*/subconfig-gcc.in"
 	
 	if pkgcheck gcc=gcc2 X; then
 		comment ' '
 		comment '--- GCC 2.x options'
 		bool 'Do not build CHILL compiler' \
 				ROCKCFG_PKG_GCC2_NO_CHILL 1
-		%include package/*/*/subconfig-gcc2.in
+		include "package/*/*/subconfig-gcc2.in"
 	fi
 	if pkgcheck gcc=gcc32 X; then
 		comment ' '
 		comment '--- GCC 3.2.x options'
 		bool 'Do not build JAVA compiler' \
 				ROCKCFG_PKG_GCC32_NO_JAVA 1
-		%include package/*/*/subconfig-gcc32.in
+		include "package/*/*/subconfig-gcc32.in"
 	fi
 	if pkgcheck gcc=gcc33 X; then
 		comment ' '
 		comment '--- GCC 3.3.x options'
 		bool 'Do not build JAVA compiler' \
 				ROCKCFG_PKG_GCC33_NO_JAVA 1
-		%include package/*/*/subconfig-gcc33.in
+		include "package/*/*/subconfig-gcc33.in"
 	fi
 	if pkgcheck gcc=gcc34 X; then
 		comment ' '
@@ -110,7 +110,7 @@ then
 				ROCKCFG_PKG_GCC34_NO_JAVA 1
 		bool 'Do profiled bootstrap' \
 				ROCKCFG_PKG_GCC34_PROFILED 1
-		%include package/*/*/subconfig-gcc34.in
+		include "package/*/*/subconfig-gcc34.in"
 	fi
 	if pkgcheck gcc=gcc40 X; then
 		comment ' '
@@ -119,7 +119,7 @@ then
 				ROCKCFG_PKG_GCC40_NO_JAVA 1
 		bool 'Do profiled bootstrap' \
 				ROCKCFG_PKG_GCC40_PROFILED 1
-		%include package/*/*/subconfig-gcc40.in
+		include "package/*/*/subconfig-gcc40.in"
 	fi
 	if pkgcheck gcc=gcc41 X; then
 		comment ' '
@@ -128,7 +128,7 @@ then
 				ROCKCFG_PKG_GCC41_NO_JAVA 1
 		bool 'Do profiled bootstrap' \
 				ROCKCFG_PKG_GCC41_PROFILED 1
-		%include package/*/*/subconfig-gcc41.in
+		include "package/*/*/subconfig-gcc41.in"
 	fi
 
   menu_end

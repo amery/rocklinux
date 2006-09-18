@@ -100,7 +100,7 @@ then
 		rm -f config/$config.$swpid/linux.cfg
 	fi
 
-	%include package/*/*/pkg_config_linux.in
+	include "package/*/*/pkg_config_linux.in"
 
   menu_end
 fi

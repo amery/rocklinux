@@ -27,10 +27,10 @@ if [ $ROCKCFG_TARGET_CRYSTAL_BUILDADDONS = 1 ]
 then
 	pkgfilter sed \
 		-e '/ xfree86 / d' \
-		-e '/CORE/ s/^\(. .........\)./\1-/' \
-		-e '/CORE/ ! s/^\(.\) .........\(.\)/\1 ---------\2/'
+		-e '/ CORE / s/^\(. .........\)./\1-/' \
+		-e '/ CORE / ! s/^\(.\) .........\(.\)/\1 ---------\2/'
 else
-	pkgfilter sed -e '/CORE/ ! s/^X/O/'
+	pkgfilter sed -e '/ CORE / ! s/^X /O /'
 	ROCKCFGSET_DO_REBUILD_STAGE=0
 fi
 

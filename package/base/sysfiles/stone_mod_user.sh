@@ -33,7 +33,7 @@ user_edit_user_change_shell() { # {{{
 user_edit_user() { # {{{
 	IFS=: read username haspwd uid gid desc home shell < <( grep ^${1}: /etc/passwd )
 	read oldline < <( grep ^${1}: /etc/passwd )
-	groups="`grep -e":$1," -e",$1," -e",$1$" -e":$1" /etc/group | cut -f1 -d: | tr '\n' ' '`"
+	groups="`egrep -e"[:,]$1[, $]?" /etc/group | cut -f1 -d: | tr '\n' ' '`"
 	run=0
 	while [ ${run} -eq 0 ] ; do
 		cmd="'Login: ${username}' 'gui_input \"Enter new login for ${username}\" \"${username}\" username'"
@@ -97,6 +97,7 @@ user_edit_user_groups() { # {{{
 		members="${members// /,}"
 		cmd="${cmd} '[${status}] ${group}' 'sed -i /etc/group -e \"s/^\(${group}.*:\).*$/\1${members}/\"'"
 	    done < <( cut -f 1,3,4 -d: /etc/group )
+	    groups="`egrep -e"[:,]$1[, $]?" /etc/group | cut -f1 -d: | tr '\n' ' '`"
 	    eval "gui_menu user_edit_user_groups 'Manage Group Memberships of User ${1}' ${cmd}"
 	    run=${?}
 	done

@@ -43,6 +43,8 @@ struct builtin {
 #include <string.h>
 #include <stdlib.h>
 #include <sys/time.h>
+#include <sys/types.h>
+#include <regex.h>
 
 struct package;
 struct package {
@@ -155,38 +157,84 @@ int write_pkg_list(const char *file) {
 	return 0;
 }
 
+regex_t * create_pkg_regex(const char* pattern)
+{
+	char fullpattern[512];
+	snprintf(fullpattern, 512, "[= ]%s ", pattern);
+
+	regex_t *preg = malloc(sizeof(regex_t));
+	int errcode = regcomp(preg, fullpattern,
+		REG_EXTENDED | REG_ICASE | REG_NOSUB | REG_NEWLINE);
+	if (errcode)
+	{
+		int errbuf_size = regerror(errcode, preg, 0, 0);
+		char *errbuf = malloc(errbuf_size);
+		regerror(errcode, preg, errbuf, errbuf_size);
+		fprintf(stderr, "config_helper: create_pkg_regex(%s): %s\n",
+		 	pattern, errbuf);
+		free(errbuf);
+		return NULL;
+	}
+	return preg;
+}
+
+char * create_pkg_line(struct package *pkg)
+{
+	char *line = calloc(1024, sizeof(char));
+	int i, offset = 0;
+
+	offset += snprintf(line+offset, 1024-offset, "%c ",
+		pkg->status ? 'X' : 'O');
+	for (i=0; i<10; i++)
+		offset += snprintf(line+offset, 1024-offset, "%c",
+			pkg->stages[i] ? pkg->stages[i] : '-');
+	offset += snprintf(line+offset, 1024-offset, " %s %s %s",
+		pkg->prio, pkg->repository, pkg->name);
+	if (strcmp(pkg->name, pkg->alias))
+		offset += snprintf(line+offset, 1024-offset, "=%s", pkg->alias);
+	offset += snprintf(line+offset, 1024-offset, " %s %s %s0\n",
+		pkg->version, pkg->prefix, pkg->flags);
+
+	return line;
+}
+
 int pkgcheck(const char *pattern, const char *mode)
 {
 	struct package *pkg = package_list;
-	char *pattern_copy = strdup(pattern);
-	char *pat_list[10];
-	int i;
 
-	pat_list[0] = strtok(pattern_copy, "|");
-	for (i=1; i<10; i++)
-		if ( !(pat_list[i] = strtok(0, "|")) ) break;
+	char fullpattern[512];
+	snprintf(fullpattern, 512, "[= ]%s ", pattern);
+
+	regex_t *preg = create_pkg_regex(pattern);
+	if (preg == NULL) return 0;
 
 	while (pkg) {
-		for (i=0; i<10 && pat_list[i]; i++)
-			if (!strcmp(pkg->alias, pat_list[i]))
-				switch (mode[0]) {
-					case 'X':
-						if (pkg->status) goto found;
-						break;
-					case 'O':
-						if (!pkg->status) goto found;
-						break;
-					case '.':
-						goto found;
-				}
+		char *line = create_pkg_line(pkg);
+		int match = !regexec(preg, line, 0, 0, 0);
+		free(line);
+
+		if (match)
+		{
+
+			switch (mode[0]) {
+				case 'X':
+					if (pkg->status) goto found;
+					break;
+				case 'O':
+					if (!pkg->status) goto found;
+					break;
+				case '.':
+					goto found;
+			}
+		}
 		pkg = pkg->next;
 	}
 
-	free(pattern_copy);
+ 	regfree(preg);
 	return 1;
 
 found:
-	free(pattern_copy);
+ 	regfree(preg);
 	return 0;
 }
 
@@ -195,26 +243,31 @@ int pkgswitch(int mode, char **args)
 	struct package *pkg = package_list;
 	struct package *last_pkg = 0;
 	struct package *pkg_tmp = 0;
-	int i;
+
+	regex_t *preg = create_pkg_regex(args[0]);
+	if (preg == NULL) return 0;
 
 	while (pkg) {
-		for (i=0; *args[i]; i++)
-			if (!strcmp(pkg->alias, args[i])) {
-				if ( !mode ) {
-					*(last_pkg ? &(last_pkg->next) : &package_list) = pkg->next;
-					free(pkg->prio);
-					free(pkg->repository);
-					free(pkg->name);
-					free(pkg->alias);
-					free(pkg->version);
-					free(pkg->prefix);
-					free(pkg->flags);
-					pkg = (pkg_tmp=pkg)->next;
-					free(pkg_tmp);
-					continue;
-				} else
-					pkg->status = mode == 1;
-			}
+		char *line = create_pkg_line(pkg);
+		int match = !regexec(preg, line, 0, 0, 0);
+		free(line);
+
+		if (match) {
+			if ( !mode ) {
+				*(last_pkg ? &(last_pkg->next) : &package_list) = pkg->next;
+				free(pkg->prio);
+				free(pkg->repository);
+				free(pkg->name);
+				free(pkg->alias);
+				free(pkg->version);
+				free(pkg->prefix);
+				free(pkg->flags);
+				pkg = (pkg_tmp=pkg)->next;
+				free(pkg_tmp);
+				continue;
+			} else
+				pkg->status = mode == 1;
+		}
 		pkg = (last_pkg=pkg)->next;
 	}
 

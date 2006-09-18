@@ -1,10 +1,10 @@
---- ndiswrapper-1.19/driver/Makefile~	2006-07-02 14:47:57.000000000 +0200
-+++ ndiswrapper-1.19/driver/Makefile	2006-07-13 00:02:46.000000000 +0200
-@@ -283,7 +283,6 @@
- 	mkdir -p $(INST_DIR)
+--- ./driver/Makefile~	2006-08-11 20:00:54.000000000 +0200
++++ ./driver/Makefile	2006-08-11 20:01:56.000000000 +0200
+@@ -275,7 +275,6 @@
  	install -m 0644 $(MODULE) $(INST_DIR)
  	-@/bin/rm -rf $(SRC_DIR)/.tmp_versions
--	-/sbin/depmod -a $(KVERS)
+ ifndef DIST_DESTDIR
+-	-/sbin/depmod -a $(KVERS) -b $(DESTDIR)
+ endif
  
  dist:
- 	@for file in $(DISTFILES); do \

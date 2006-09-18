@@ -178,7 +178,10 @@ if [ ! -f build/$ROCKCFG_ID/ROCK/$toolsdir/.lastupdate ] ; then
 				echo -n "${z}\$${y}_WRAPPER_FILTER"; z="|"
 			done ; echo '"'
 
-			echo 'exec cmd_wrapper $( basename $0 ) "$@"'
+			echo -n 'exec cmd_wrapper $( basename $0 ) "$@"'
+			eval "outputfilter=\"\$${y}_WRAPPER_OUTPUTFILTER\""
+			[ -n "${outputfilter}" ] && echo -n " | ${outputfilter}"
+			echo
 		} > $tmp
 		chmod +rx $tmp
 		mv $tmp "build/$ROCKCFG_ID/ROCK/$toolsdir/wrapper/$1"

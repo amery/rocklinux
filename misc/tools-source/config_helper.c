@@ -270,7 +270,7 @@ int pkgswitch(int mode, char **args)
 		}
 		pkg = (last_pkg=pkg)->next;
 	}
-
+ 	regfree(preg);
 	return 0;
 }
 

@@ -185,10 +185,10 @@ fi
 
 comment() {
 	bprof comment start
-	if [ $ROCKCFG_EXPERT -eq 1 -o $expert -eq 0 ] && \
-	   [ $menu_current = $menu_this ] ; then
+	if [ $ROCKCFG_EXPERT -eq 1 -o $expert -eq 0 ]
+	then
 		commentnr=$(( $commentnr + 1 ))
-		echo "COMMENT_$commentnr '$spacer$1'" >> config.dialog.$swpid
+		echo "COMMENT_$commentnr '$spacer$1'" >> config.dialog.$menu_this.$swpid
 
 		# Hi, esden here, very ill stuff here I save the help
 		# strings here to a temporary file named config.help.$swpid
@@ -203,9 +203,9 @@ comment() {
 
 comment_id() {
 	bprof comment_id start
-	if [ $ROCKCFG_EXPERT -eq 1 -o $expert -eq 0 ] &&
-	   [ $menu_current = $menu_this ] ; then
-		echo "$2 '$spacer$1'" >> config.dialog.$swpid
+	if [ $ROCKCFG_EXPERT -eq 1 -o $expert -eq 0 ]
+	then
+		echo "$2 '$spacer$1'" >> config.dialog.$menu_this.$swpid
 
 		# If you do not know what mighty esden
 		# is doing here see comment()
@@ -287,15 +287,17 @@ choice() {
 		echo "export $1='${data//$q/$q\\$q$q}'" >> config/$config.$swpid/config
 	fi
 
-	if [ "$menumode" -gt 0 -a $menu_current = $menu_this ] ; then
+	if [ "$menumode" -gt 0 ]
+	then
 		{ echo -en "$item\tchoice_action '$usr_name' '$usr_data'" ; shift ; shift
 		echo -n " '' 'Reset_this_switch_to_default_value'"
-		for x ; do echo -n " '$x'" ; done ; echo ; } >> config.data.$swpid
+		for x ; do echo -n " '$x'" ; done ; echo ; } >> config.data.$menu_this.$swpid
 
 		xdata="$obegin$data$oend"
 
 		while [ "$1" -a "$1" != "$data" ] ; do shift ; shift ; done
-		printf "'$item' '$spacer%-${tabspace}s ${2//_/ }'\n" "$xdata" >> config.dialog.$swpid
+		printf "'$item' '$spacer%-${tabspace}s ${2//_/ }'\n" "$xdata" \
+			>> config.dialog.$menu_this.$swpid
 	fi
 
 	bprof choice stop
@@ -330,15 +332,16 @@ text() {
 	local q="'" obegin="(" oend=")"
 	set_data "$2" "$3"
 
-	if [ "$menumode" -gt 0 -a $menu_current = $menu_this ] ; then
+	if [ "$menumode" -gt 0 ]
+	then
 		echo -e "$2\ttext_action '$1' '$usr_name'" \
-				"'${data//$q/$q\\$q$q}'" >> config.data.$swpid
+				"'${data//$q/$q\\$q$q}'" >> config.data.$menu_this.$swpid
 
 		xdata="${obegin}$( printf "%-${tabspace}s" \
 				"$(echo $data | cut -c1-20)")${oend}"
 
 		printf "'$2' '$spacer%s $1'\n" \
-			"${xdata//$q/$q\\$q$q}" >> config.dialog.$swpid
+			"${xdata//$q/$q\\$q$q}" >> config.dialog.$menu_this.$swpid
 
 		# If you do not know what mighty esden
 		# is doin here see comment()
@@ -361,11 +364,12 @@ bool() {
 	local x obegin="[" oend="]"
 	set_data "$2" "$3"
 
-	if [ "$menumode" -gt 0 -a $menu_current = $menu_this ] ; then
+	if [ "$menumode" -gt 0 ]
+	then
 		if [ $data -eq 0 ] ; then x="${obegin} ${oend}" ; else x="${obegin}*${oend}" ; fi
-		echo -e "$2\tbool_action '$usr_name' '$usr_data' '$3'" >> config.data.$swpid
+		echo -e "$2\tbool_action '$usr_name' '$usr_data' '$3'" >> config.data.$menu_this.$swpid
 
-		printf "$2 '$spacer%-${tabspace}s ${1//_/ }'\n" "$x" >> config.dialog.$swpid
+		printf "$2 '$spacer%-${tabspace}s ${1//_/ }'\n" "$x" >> config.dialog.$menu_this.$swpid
 
 		# If you do not know what mighty esden is doin here see comment()
 		if [ "$4" != "" ] ; then
@@ -404,25 +408,21 @@ editfile() {
 	line_nr=1
 	while read line ; do
 		line="${line//$q/$q\\$q$q}"
-		if [ $menu_current = $menu_this ] ; then
-			printf "$1:${editfilenr} '$spacer%-${tabspace}s %s'\n" \
-			    `printf "%03d:" $line_nr` "$line" >> config.dialog.$swpid
+		printf "$1:${editfilenr} '$spacer%-${tabspace}s %s'\n" \
+		    `printf "%03d:" $line_nr` "$line" >> config.dialog.$menu_this.$swpid
 
-			echo -e "$1:${editfilenr}\teditfile_action $2" \
-				"$line_nr '$3'" >> config.data.$swpid
-		fi
+		echo -e "$1:${editfilenr}\teditfile_action $2" \
+			"$line_nr '$3'" >> config.data.$menu_this.$swpid
 
 		editfilenr=$(( $editfilenr + 1 ))
 		line_nr=$(( $line_nr + 1 ))
 	done < "$2"
 
-	if [ $menu_current = $menu_this ] ; then
-		printf "$1:${editfilenr} '$spacer%-${tabspace}s %s'\n" \
-		       `printf "%03d:" $line_nr` "<add new rule>" >> config.dialog.$swpid
+	printf "$1:${editfilenr} '$spacer%-${tabspace}s %s'\n" \
+	       `printf "%03d:" $line_nr` "<add new rule>" >> config.dialog.$menu_this.$swpid
 
-		echo -e "$1:${editfilenr}\teditfile_action $2" \
-			"$line_nr '$3'" >> config.data.$swpid
-	fi
+	echo -e "$1:${editfilenr}\teditfile_action $2" \
+		"$line_nr '$3'" >> config.data.$menu_this.$swpid
 
 	editfilenr=$(( $editfilenr + 1 ))
 
@@ -450,32 +450,28 @@ editfile_action() {
 
 startprog() {
 	bprof startprog start
-	if [ $ROCKCFG_EXPERT -eq 1 -o $expert -eq 0 ] &&
-	   [ $menu_current = $menu_this ] ; then
+	if [ $ROCKCFG_EXPERT -eq 1 -o $expert -eq 0 ]
+	then
 		printf "$1 '$spacer%-${tabspace}s %s'\n" \
-		       "-->" "$2" >> config.dialog.$swpid
-		echo -e "$1\t$3" >> config.data.$swpid
+		       "-->" "$2" >> config.dialog.$menu_this.$swpid
+		echo -e "$1\t$3" >> config.data.$menu_this.$swpid
 	fi
 	bprof startprog stop
 }
 
 block_begin() {
 	bprof block_begin start
-	if [ $menu_current = $menu_this ] ; then
-		[ "$tabspace_list" ] && spacer="$spacer  "
-		tabspace_list="$tabspace $tabspace_list"
-		tabspace="$(( $tabspace + $1 - 2 ))"
-	fi
+	[ "$tabspace_list" ] && spacer="$spacer  "
+	tabspace_list="$tabspace $tabspace_list"
+	tabspace="$(( $tabspace + $1 - 2 ))"
 	bprof block_begin stop
 }
 
 block_end() {
 	bprof block_end start
-	if [ $menu_current = $menu_this ] ; then
-		spacer="${spacer%??}"
-		tabspace="${tabspace_list%% *}"
-		tabspace_list="${tabspace_list#* }"
-	fi
+	spacer="${spacer%??}"
+	tabspace="${tabspace_list%% *}"
+	tabspace_list="${tabspace_list#* }"
 	bprof block_end stop
 }
 
@@ -491,21 +487,15 @@ menu_begin() {
 	bprof menu_begin start
 	menu_counter=$(( $menu_counter + 1 ))
 
-	if [ $ROCKCFG_EXPERT -eq 1 -o $expert -eq 0 ] &&
-	   [ $menu_current = $menu_this ] ; then
+	if [ $ROCKCFG_EXPERT -eq 1 -o $expert -eq 0 ]
+	then
 		printf "$1 '$spacer%-${tabspace}s %s'\n" \
-			"===>" "$2" >> config.dialog.$swpid
-		echo -e "$1\tmenu_current=$menu_counter" >> config.data.$swpid
-	fi
-	if [ $ROCKCFG_EXPERT -eq 1 -o $expert -eq 0 ] &&
-	   [ $menu_current = $menu_counter ] ; then
-		echo "$1 '===> $2'" >> config.dialog.$swpid
-		echo -e "$1\tmenu_current=$menu_this" >> config.data.$swpid
-	fi
+			"===>" "$2" >> config.dialog.$menu_this.$swpid
+		echo -e "$1\tmenu_current=$menu_counter" >> config.data.$menu_this.$swpid
 
-	if [ $menu_current = $menu_counter ] ; then
-		menu_back=$menu_this
-		menu_backpos=$1
+		echo "$1 '===> $2'" >> config.dialog.$menu_counter.$swpid
+		echo -e "$1\tmenu_current=$menu_this current=$1" >> config.data.$menu_counter.$swpid
+		echo -e "MENU_BACK\tmenu_current=$menu_this current=$1" >> config.data.$menu_counter.$swpid
 	fi
 
 	menu_stack="$menu_this $menu_stack"

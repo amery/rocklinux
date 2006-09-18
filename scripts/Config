@@ -87,7 +87,7 @@ done
 if [ $do_config_cycle = 0 ]
 then
 	export swpid=swp$$
-	rm -f config.{data,dialog,out,help}.$swpid
+	rm -f config.{data,dialog,out,help}{,.*}.$swpid
 	rm -f config.pcache.*.$swpid
 	rm -f rockdialog.scrltmp # src/rockdialog.bin
 	mkdir -p src
@@ -155,7 +155,7 @@ bprof main start
 
 current=""
 menu_this=0 ; menu_current=0 ; menu_counter=0
-menu_stack=x ; menu_back=-1 ; menu_backpos=-1
+menu_stack=x
 
 mkdir -p config/$config
 touch config/$config/{config,packages}
@@ -163,7 +163,7 @@ touch config/$config/{config,packages}
 rm -rf config/$config.$swpid
 cp -r config/$config{,.$swpid}
 
-rm -f config.{dialog,data,help}.$swpid
+rm -f config.{dialog,data,help}{,.*}.$swpid
 touch config.{dialog,data,help}.$swpid
 bprof main stop
 
@@ -211,13 +211,16 @@ configtitle="$(printf ' %-50s %6s active packages ]' \
 	"[ $(echo `grep '^X' config/$config.$swpid/packages | wc -l`)" )"
 bprof main stop
 
+do_dialog_cycle=1
+while [ "$do_dialog_cycle" = 1 ] ; do
+
 if [ -z "$oldconfig" ] ; then
     bprof rockdialog start
     eval "./src/rockdialog.bin --title 'Build Config' \
 	--backtitle '$configtitle' \
 	--menu 'Arrow keys navigate the menu.  Press <Enter> to activate menu items.  Highlighted letters are hotkeys.' \
 	$(( $lines - 4 )) $(( $columns - 5 )) $(( $lines - 12 )) \
-	'$current' `tr '\n' ' ' < config.dialog.$swpid`" 2> config.out.$swpid
+	'$current' `tr '\n' ' ' < config.dialog.$menu_current.$swpid`" 2> config.out.$swpid
     returncode=$? ; item="`cat config.out.$swpid`"
     bprof rockdialog stop
 else
@@ -226,7 +229,7 @@ fi
 
 
 bprof main start
-[ "$returncode" = 1 -a "$menu_back" -ne -1 ] && returncode="menu-back"
+[ "$returncode" = 1 -a "$menu_current" -ne 0 ] && returncode="menu-back"
 
 writeback() {
 	sort -k1,1r -k3,3 config/$config.$swpid/packages \
@@ -246,30 +249,32 @@ writeback() {
 exit_code=0
 case "$returncode" in
 	0|6)
-		command="`grep "^$item	" config.data.$swpid | cut -f2-`"
-		{ echo -e "\n# Remember menu position:\ncurrent='$item'"
-		echo -e "\n# Remember sub-menu:\nmenu_current='$menu_current'"
-		echo -e "\n# Execute this config command:\n$command"
-		} >> config/$config.$swpid/config_usr
+		command="`grep "^$item	" config.data.$menu_current.$swpid | cut -f2-`"
+		if [[ "$command" != menu_current=* ]] ; then
+			do_dialog_cycle=0
+			{ echo -e "\n# Remember menu position:\ncurrent='$item'"
+			echo -e "\n# Remember sub-menu:\nmenu_current='$menu_current'"
+			echo -e "\n# Execute this config command:\n$command"
+			} >> config/$config.$swpid/config_usr
+		else
+			eval "$command"
+		fi
 		;;
 	menu-back)
-		{ echo -e "\n# New menu position:\ncurrent='$menu_backpos'"
-		echo -e "\n# New sub-menu:\nmenu_current='$menu_back'"
-		} >> config/$config.$swpid/config_usr
+		command="`grep "^MENU_BACK	" config.data.$menu_current.$swpid | cut -f2-`"
+		eval "$command"
 		;;
 	1|255)
-		rm -f config.{data,dialog,out,help}.$swpid
+		do_dialog_cycle=0
+		rm -f config.{data,dialog,out,help}{,.*}.$swpid
 		rm -f config.pcache.*.$swpid
 		rm -f rockdialog.scrltmp # src/rockdialog.bin
 		echo "New config written to config/$config/*."
 		echo "Cleaning up. Configuration finished."
 		exit_code=1 ;;
 	2)
-		tempitem=$item
 		item=$(echo $item | cut -f1 -d' ')  # dialog(1) bug?
-		{ echo -e "\n# Remember menu position:\ncurrent='$item'"
-		echo -e "\n# Remember sub-menu:\nmenu_current='$menu_current'"
-		} >> config/$config.$swpid/config_usr
+		current="$item"
 
 		get_help $item > config.dialog.$swpid
 
@@ -281,9 +286,12 @@ case "$returncode" in
 		bprof main start
 		;;
 	*)
+		do_dialog_cycle=0
 		echo "unknown returncode: $returncode"
 		exit_code=1 ;;
 esac
+
+done
 
 writeback
 

@@ -22,7 +22,7 @@
 
 pkgfilter sed '
 
-# Select some packages explicitely (base)
+# Select some packages explicitly (base)
 / dialog /	{ p; d; };	/ bc /		{ p; d; };
 / dump /	{ p; d; };	/ cpio /	{ p; d; };
 / ed /		{ p; d; };	/ lrzsz /	{ p; d; };
@@ -69,7 +69,8 @@ pkgfilter sed '
 / gdbm /	{ s/^X /O /; p; d; };	/ pam /         { s/^X /O /; p; d; };
 / prelink /	{ s/^X /O /; p; d; };	/ ccache /	{ s/^X /O /; p; d; };
 / cracklib /	{ s/^X /O /; p; d; };	/ hotplug /	{ s/^X /O /; p; d; };
-/ bash=bash3 /	{ s/^X /O /; p; d; };	/ pdksh /	{ s/^X /O /; p; d; };'
+/ bash=bash3 /	{ s/^X /O /; p; d; };	/ pdksh /	{ s/^X /O /; p; d; };
+'
 
 ROCKCFGSET_CREATE_TARBZ2=1
 ROCKCFGSET_CREATE_GEM=0
@@ -86,8 +87,3 @@ ROCKCFGSET_CREATE_DOCS=0
 ROCKCFGSET_DISABLE_NLS=1
 ROCKCFGSET_OPTSIZE=1
 ROCKCFGSET_LIMITCXX=1
-
-if [ "$ROCKCFG_PKG_LINUX_DEFAULT" = linux26 ] ; then
-	pkgremove lvm
-fi
-

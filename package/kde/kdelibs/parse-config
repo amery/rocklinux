@@ -1,1 +1,5 @@
-[[ "`which kde-config`" != */ROCK/* ]] && export kde_htmldir="`${KDECONFIG:-kde-config} --install html --expandvars`"
+# if /usr/bin/kde-config exists, the wrapper exists, too.
+if [ -x $root/$ROCKCFG_PKG_KDE3_CORE_PREFIX/bin/kde-config ] ; then
+	export kde_htmldir="`kde-config --install html --expandvars`"
+	export KDECONFIG="`which kde-config`"
+fi

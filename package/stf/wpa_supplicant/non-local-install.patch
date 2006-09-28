@@ -1,0 +1,130 @@
+diff -dur wpa_supplicant-0.4.9/defconfig wpa_supplicant-0.4.9-p/defconfig
+--- wpa_supplicant-0.4.9/defconfig	2006-04-29 05:25:43.000000000 +0200
++++ wpa_supplicant-0.4.9-p/defconfig	2006-08-12 04:46:34.000000000 +0200
+@@ -12,8 +12,8 @@
+ 
+ # Uncomment following two lines and fix the paths if you have installed openssl
+ # in non-default location
+-#CFLAGS += -I/usr/local/openssl/include
+-#LIBS += -L/usr/local/openssl/lib
++#CFLAGS += -I/usr/openssl/include
++#LIBS += -L/usr/openssl/lib
+ 
+ # Some Red Hat versions seem to include kerberos header files from OpenSSL, but
+ # the kerberos files are not in the default include path. Following line can be
+@@ -78,13 +78,13 @@
+ 
+ # Driver interface for FreeBSD net80211 layer (e.g., Atheros driver)
+ #CONFIG_DRIVER_BSD=y
+-#CFLAGS += -I/usr/local/include
+-#LIBS += -L/usr/local/lib
++#CFLAGS += -I/usr/include
++#LIBS += -L/usr/lib
+ 
+ # Driver interface for Windows NDIS
+ #CONFIG_DRIVER_NDIS=y
+ #CFLAGS += -I/usr/include/w32api/ddk
+-#LIBS += -L/usr/local/lib
++#LIBS += -L/usr/lib
+ # For native build using mingw
+ #CONFIG_NATIVE_WINDOWS=y
+ # Additional directories for cross-compilation on Linux host for mingw target
+diff -dur wpa_supplicant-0.4.9/doc/docbook/wpa_supplicant.8 wpa_supplicant-0.4.9-p/doc/docbook/wpa_supplicant.8
+--- wpa_supplicant-0.4.9/doc/docbook/wpa_supplicant.8	2006-05-07 06:05:38.000000000 +0200
++++ wpa_supplicant-0.4.9-p/doc/docbook/wpa_supplicant.8	2006-08-12 04:46:34.000000000 +0200
+@@ -500,8 +500,8 @@
+ .RS
+ 
+ .nf
+-if [ "$WPA" = "y" -a -x /usr/local/bin/wpa_supplicant ]; then
+-    /usr/local/bin/wpa_supplicant -Bw -c/etc/wpa_supplicant.conf -i$DEVICE
++if [ "$WPA" = "y" -a -x /usr/bin/wpa_supplicant ]; then
++    /usr/bin/wpa_supplicant -Bw -c/etc/wpa_supplicant.conf -i$DEVICE
+ fi
+     
+ .fi
+@@ -514,7 +514,7 @@
+ .RS
+ 
+ .nf
+-if [ "$WPA" = "y" -a -x /usr/local/bin/wpa_supplicant ]; then
++if [ "$WPA" = "y" -a -x /usr/bin/wpa_supplicant ]; then
+     killall wpa_supplicant
+ fi
+     
+diff -dur wpa_supplicant-0.4.9/doc/docbook/wpa_supplicant.sgml wpa_supplicant-0.4.9-p/doc/docbook/wpa_supplicant.sgml
+--- wpa_supplicant-0.4.9/doc/docbook/wpa_supplicant.sgml	2005-08-27 07:02:15.000000000 +0200
++++ wpa_supplicant-0.4.9-p/doc/docbook/wpa_supplicant.sgml	2006-08-12 04:46:34.000000000 +0200
+@@ -703,8 +703,8 @@
+     in <filename>/etc/pcmcia/wireless</filename>:</para>
+ 
+     <blockquote><programlisting>
+-if [ "$WPA" = "y" -a -x /usr/local/bin/wpa_supplicant ]; then
+-    /usr/local/bin/wpa_supplicant -Bw -c/etc/wpa_supplicant.conf -i$DEVICE
++if [ "$WPA" = "y" -a -x /usr/bin/wpa_supplicant ]; then
++    /usr/bin/wpa_supplicant -Bw -c/etc/wpa_supplicant.conf -i$DEVICE
+ fi
+     </programlisting></blockquote>
+ 
+@@ -714,7 +714,7 @@
+     <filename>/etc/pcmcia/wireless</filename>:</para>
+ 
+     <blockquote><programlisting>
+-if [ "$WPA" = "y" -a -x /usr/local/bin/wpa_supplicant ]; then
++if [ "$WPA" = "y" -a -x /usr/bin/wpa_supplicant ]; then
+     killall wpa_supplicant
+ fi
+     </programlisting></blockquote>
+diff -dur wpa_supplicant-0.4.9/Makefile wpa_supplicant-0.4.9-p/Makefile
+--- wpa_supplicant-0.4.9/Makefile	2006-05-07 06:05:36.000000000 +0200
++++ wpa_supplicant-0.4.9-p/Makefile	2006-08-12 04:46:34.000000000 +0200
+@@ -32,8 +32,8 @@
+ 	echo CONFIG_WIRELESS_EXTENSION=y >> .config
+ 
+ install: all
+-	mkdir -p $(DESTDIR)/usr/local/sbin/
+-	for i in $(ALL); do cp $$i $(DESTDIR)/usr/local/sbin/$$i; done
++	mkdir -p $(DESTDIR)/usr/sbin/
++	for i in $(ALL); do cp $$i $(DESTDIR)/usr/sbin/$$i; done
+ 
+ OBJS = config.o \
+ 	eloop.o common.o md5.o \
+diff -dur wpa_supplicant-0.4.9/README wpa_supplicant-0.4.9-p/README
+--- wpa_supplicant-0.4.9/README	2006-01-30 05:39:54.000000000 +0100
++++ wpa_supplicant-0.4.9-p/README	2006-08-12 04:46:34.000000000 +0200
+@@ -412,14 +412,14 @@
+ 
+ After you have created a configuration file, you can build
+ wpa_supplicant and wpa_cli with 'make' command. You may then install
+-the binaries to a suitable system directory, e.g., /usr/local/bin.
++the binaries to a suitable system directory, e.g., /usr/bin.
+ 
+ Example commands:
+ 
+ # build wpa_supplicant and wpa_cli
+ make
+ # install binaries (this may need root privileges)
+-cp wpa_cli wpa_supplicant /usr/local/bin
++cp wpa_cli wpa_supplicant /usr/bin
+ 
+ 
+ You will need to make a configuration file, e.g.,
+@@ -863,15 +863,15 @@
+ Add the following block to the end of 'start' action handler in
+ /etc/pcmcia/wireless:
+ 
+-    if [ "$WPA" = "y" -a -x /usr/local/bin/wpa_supplicant ]; then
+-	/usr/local/bin/wpa_supplicant -Bw -c/etc/wpa_supplicant.conf \
++    if [ "$WPA" = "y" -a -x /usr/bin/wpa_supplicant ]; then
++	/usr/bin/wpa_supplicant -Bw -c/etc/wpa_supplicant.conf \
+ 		-i$DEVICE
+     fi
+ 
+ Add the following block to the end of 'stop' action handler (may need
+ to be separated from other actions) in /etc/pcmcia/wireless:
+ 
+-    if [ "$WPA" = "y" -a -x /usr/local/bin/wpa_supplicant ]; then
++    if [ "$WPA" = "y" -a -x /usr/bin/wpa_supplicant ]; then
+ 	killall wpa_supplicant
+     fi
+ 

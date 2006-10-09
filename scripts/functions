@@ -513,9 +513,13 @@ dump_env() {
 # installed.
 #
 pkginstalled() {
-	local pattern="$1"; pattern="${pattern//+/\\+}"
+	local pattern="$1" ; pattern="${pattern//+/\\+}"
 
-	ls $root/var/adm/flists | egrep -q "^($pattern)$"
+	if [ $stagelevel = 0 ] ; then
+		ls "$base/build/$ROCKCFG_ID/ROCK/$toolsdir/var/adm/flists"
+	else
+		ls $root/var/adm/flists
+	fi | egrep -q "^($pattern)$"
 }
 
 # Register a window-manager

@@ -157,6 +157,8 @@ dnl
 		check(`cat /var/state/random-seed >/dev/urandom')
 	fi
 
+    block_end
+
     block_begin(stop, `Saving /var/log/init.msg and /var/log/boot.msg.')
 	check(`echo -n >> /var/log/init.msg')
 	check(`echo -n >> /var/log/boot.msg')

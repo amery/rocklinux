@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# This shell-script genereates the fl_wrapper.c source file.
+# This shell-script generates the fl_wrapper.c source file.
 
 cat << EOT
 /* ROCK Linux Wrapper for getting a list of created files
@@ -44,6 +44,7 @@ cat << EOT
 
 #define DEBUG 0
 #define DLOPEN_LIBC 1
+#define FD_TRACKER 1
 
 #define _GNU_SOURCE
 #define _REENTRANT
@@ -66,6 +67,7 @@ cat << EOT
 #  include <unistd.h>
 #  include <utime.h>
 #  include <stdarg.h>
+#  include <sched.h>
 
 #undef _LARGEFILE64_SOURCE
 #undef _LARGEFILE_SOURCE
@@ -87,6 +89,10 @@ static void handle_file_access_before(const char *, const char *, struct status_
 static void handle_file_access_after(const char *, const char *, struct status_t *);
 
 char *wlog = 0, *rlog = 0, *cmdname = "unkown";
+
+#  if DEBUG == 1
+int debug = 0;
+#  endif
 
 /* Wrapper Functions */
 EOT
@@ -118,18 +124,19 @@ $ret_type $function($p1)
 
 	handle_file_access_before("$function", f, &status);
 	if (!orig_$function) orig_$function = get_dl_symbol("$function");
-	errno=old_errno;
 
-#if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original $function() at %p (wrapper is at %p).\n",
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original $function() at %p (wrapper is at %p).\n",
 		getpid(), orig_$function, $function);
-#endif
-	rc = orig_$function($p2);
+#  endif
 
-	old_errno=errno;
-	handle_file_access_after("$function", f, &status);
 	errno=old_errno;
+	rc = orig_$function($p2);
+	old_errno=errno;
 
+	handle_file_access_after("$function", f, &status);
+
+	errno=old_errno;
 	return rc;
 }
 EOT
@@ -141,22 +148,64 @@ $ret_type (*orig_$function)($p1) = 0;
 $ret_type $function($p1)
 {
 	int old_errno=errno;
+	int rc;
 
 	handle_file_access_after("$function", f, 0);
 	if (!orig_$function) orig_$function = get_dl_symbol("$function");
-	errno=old_errno;
 
-	return orig_$function($p2);
+#  if FD_TRACKER == 1
+	struct pid_reg *pid = *find_pid(getpid());
+	struct fd_reg ** fd_iter;
+	if (pid)
+	{
+		fd_iter = &pid->fd_head;
+		while (*fd_iter != 0)
+		{
+			(*fd_iter)->closed = fcntl((*fd_iter)->fd, F_GETFD) & FD_CLOEXEC;
+			fd_iter = &(*fd_iter)->next;
+		}
+		pid->executed = 1;
+	}
+#  endif
+
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original $function() at %p (wrapper is at %p).\n",
+		getpid(), orig_$function, $function);
+#  endif
+
+	errno=old_errno;
+	rc = orig_$function($p2);
+	old_errno=errno;
+
+# if FD_TRACKER == 1
+	if (pid)
+	{
+		fd_iter = &pid->fd_head;
+		while (*fd_iter != 0)
+		{
+			(*fd_iter)->closed = 0;
+			fd_iter = &(*fd_iter)->next;
+		}
+		pid->executed = 0;
+	}
+# endif
+
+	errno=old_errno;
+	return rc;
 }
 EOT
 	fi
 }
 
-add_wrapper 'FILE*, fopen,   const char* f, const char* g'
-add_wrapper 'FILE*, fopen64, const char* f, const char* g'
+echo
+cat fd_tracker.c
+cat fl_wrapper_execl.c
+cat fl_wrapper_open.c
+cat fl_wrapper_close.c
 
-add_wrapper 'int,   creat,   const char* f, mode_t m'
-add_wrapper 'int,   creat64, const char* f, mode_t m'
+
+# add_wrapper 'FILE*, fopen,   const char* f, const char* g'
+# add_wrapper 'FILE*, fopen64, const char* f, const char* g'
 
 add_wrapper 'int,   mkdir,   const char* f, mode_t m'
 add_wrapper 'int,   mknod,   const char* f, mode_t m, dev_t d'
@@ -170,10 +219,6 @@ add_wrapper 'int,   utimes,  const char* f, struct timeval* t'
 
 add_wrapper 'int,   execv,   const char* f, char* const a[]'
 add_wrapper 'int,   execve,  const char* f, char* const a[], char* const e[]'
-
-echo
-cat fl_wrapper_execl.c
-cat fl_wrapper_open.c
 
 echo ; cat << "EOT"
 /* Internal Functions */
@@ -192,13 +237,13 @@ static void * get_dl_symbol(char * symname)
 
         rc = dlsym(libc_handle, symname);
 #  if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: Symbol '%s' in libc (%p) has been resolved to %p.\n",
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: Symbol '%s' in libc (%p) has been resolved to %p.\n",
 		getpid(), symname, libc_handle, rc);
 #  endif
 #else
         rc = dlsym(RTLD_NEXT, symname);
 #  if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: Symbol '%s' (RTLD_NEXT) has been resolved to %p.\n",
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: Symbol '%s' (RTLD_NEXT) has been resolved to %p.\n",
 		getpid(), symname, rc);
 #  endif
 #endif
@@ -274,17 +319,23 @@ static void addptree(int *txtpos, char *cmdtxt, int pid, int basepid)
 	p = getpname(pid);
 
 	if (*txtpos < 4000)
+	{
 		if ( strcmp(l, p) )
 			*txtpos += snprintf(cmdtxt+*txtpos, 4096-*txtpos, "%s%s",
 					*txtpos ? "." : "", getpname(pid));
 		else
 			*txtpos += snprintf(cmdtxt+*txtpos, 4096-*txtpos, "*");
+	}
 
 	strcpy(l, p);
 }
 
 void __attribute__ ((constructor)) fl_wrapper_init()
 {
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: fl_wrapper_init()\n", getpid());
+#  endif
+
 	char cmdtxt[4096] = "";
 	char *basepid_txt = getenv("FLWRAPPER_BASEPID");
 	int basepid = 0, txtpos=0;
@@ -297,16 +348,44 @@ void __attribute__ ((constructor)) fl_wrapper_init()
 
 	wlog = getenv("FLWRAPPER_WLOG");
 	rlog = getenv("FLWRAPPER_RLOG");
+#  if DEBUG == 1
+	char *debugwrapper = getenv("FLWRAPPER_DEBUG");
+	if (debugwrapper) debug = atoi(debugwrapper);
+#  endif
+}
+
+/*
+	Clean up file descriptors still registered for this pid, if any.
+*/
+void __attribute__ ((destructor)) fl_wrapper_finish()
+{
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: fl_wrapper_finish()\n", getpid());
+#  endif
+	struct pid_reg **pid = find_pid(getpid());
+	if (*pid)
+	{
+#  if DEBUG == 1
+		if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: PID still registered!\n", getpid());
+#  endif
+		struct fd_reg **fd = &(*pid)->fd_head;
+		while (*fd)
+		{
+			handle_file_access_after("fl_wrapper_finish", (*fd)->filename, &(*fd)->status);
+			remove_fd(fd);
+		}
+		remove_pid(pid);
+	}
 }
 
 static void handle_file_access_before(const char * func, const char * file,
                                struct status_t * status)
 {
 	struct stat st;
-#if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: begin of handle_file_access_before(\"%s\", \"%s\", xxx)\n",
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: begin of handle_file_access_before(\"%s\", \"%s\", xxx)\n",
 		getpid(), func, file);
-#endif
+#  endif
 	if ( lstat(file,&st) ) {
 		status->inode=0;  status->size=0;
 		status->mtime=0;  status->ctime=0;
@@ -314,11 +393,21 @@ static void handle_file_access_before(const char * func, const char * file,
 		status->inode=st.st_ino;    status->size=st.st_size;
 		status->mtime=st.st_mtime;  status->ctime=st.st_ctime;
 	}
-#if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: end   of handle_file_access_before(\"%s\", \"%s\", xxx)\n",
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: end   of handle_file_access_before(\"%s\", \"%s\", xxx)\n",
 		getpid(), func, file);
-#endif
+#  endif
 }
+
+/*
+	Declared in fl_wrapper_open.c and fl_wrapper_close.c,
+	reused here since logging access to the log files eventually
+	overwrites close'd but not yet deregistered file descriptors.
+
+int (*orig_open)(const char* f, int a, ...) = 0;
+int (*orig_open64)(const char* f, int a, ...) = 0;
+int (*orig_close)(int fd) = 0;
+*/
 
 static void handle_file_access_after(const char * func, const char * file,
                               struct status_t * status)
@@ -326,27 +415,55 @@ static void handle_file_access_after(const char * func, const char * file,
 	char buf[512], *buf2, *logfile;
 	int fd; struct stat st;
 
-#if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: begin of handle_file_access_after(\"%s\", \"%s\", xxx)\n",
-		getpid(), func, file);
+#ifdef __USE_LARGEFILE
+	if (!orig_open64) orig_open64 = get_dl_symbol("open64");
+#else
+	if (!orig_open) orig_open = get_dl_symbol("open");
 #endif
-	if ( wlog != 0 && !strcmp(file, wlog) ) return;
-	if ( rlog != 0 && !strcmp(file, rlog) ) return;
-	if ( lstat(file, &st) ) return;
+	if (!orig_close) orig_close = get_dl_symbol("close");
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: begin of handle_file_access_after(\"%s\", \"%s\", xxx), %d, %s, %s\n",
+		getpid(), func, file, status != 0, wlog, rlog);
+#  endif
+
+	if ( lstat(file, &st) )
+	{
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: lstat(%s, ...) failed\n",
+		getpid(), file);
+#  endif
+	 return;
+	}
 
 	if ( (status != 0) && (status->inode != st.st_ino ||
 	     status->size  != st.st_size || status->mtime != st.st_mtime ||
 	     status->ctime != st.st_ctime) ) { logfile = wlog; }
 	else { logfile = rlog; }
 
-	if ( logfile == 0 ) return;
+	if ( logfile == 0 ) 
+	{
+#  if DEBUG == 1
+		if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: no log file\n",
+			getpid());
+#  endif
+		return;
+	}
+
 #ifdef __USE_LARGEFILE
-	fd=open64(logfile,O_APPEND|O_WRONLY|O_LARGEFILE,0);
+	fd=orig_open64(logfile,O_APPEND|O_WRONLY|O_LARGEFILE,0);
 #else
 #warning "The wrapper library will not work properly for large logs!"
-	fd=open(logfile,O_APPEND|O_WRONLY,0);
+	fd=orig_open(logfile,O_APPEND|O_WRONLY,0);
 #endif
-	if (fd == -1) return;
+
+	if (fd == -1)
+	{
+#  if DEBUG == 1
+		if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: log open failed (%s)\n",
+			getpid(), strerror(errno));
+#  endif
+		return;
+	}
 
 	if (file[0] == '/') {
 		sprintf(buf,"%s.%s:\t%s\n",
@@ -359,11 +476,10 @@ static void handle_file_access_after(const char * func, const char * file,
 		free(buf2);
 	}
 	write(fd,buf,strlen(buf));
-	close(fd);
-#if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: end   of handle_file_access_after(\"%s\", \"%s\", xxx)\n",
+	orig_close(fd);
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: end   of handle_file_access_after(\"%s\", \"%s\", xxx)\n",
 		getpid(), func, file);
-#endif
+#  endif
 }
 EOT
-

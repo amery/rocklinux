@@ -35,10 +35,11 @@ int open(const char* f, int a, ...)
 	if (!orig_open) orig_open = get_dl_symbol("open");
 	errno=old_errno;
 
-#if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original open() at %p (wrapper is at %p).\n",
-		getpid(), orig_open, open);
-#endif
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original open(\"%s\", ...) at %p (wrapper is at %p).\n",
+		getpid(), f, orig_open, open);
+#  endif
+
 	if (a & O_CREAT)
 	{
 		va_list ap;
@@ -52,11 +53,31 @@ int open(const char* f, int a, ...)
 	}
 	else
 		rc = orig_open(f, a);
-
 	old_errno=errno;
-	handle_file_access_after("open", f, &status);
-	errno=old_errno;
 
+# if FD_TRACKER == 1
+	if (rc != -1)
+	{
+		char *buf = 0;
+		int free_buf = 0;
+		if (f[0] != '/')
+		{
+			char *buf2 = get_current_dir_name();
+			if (asprintf(&buf,"%s%s%s", buf2,
+				strcmp(buf2,"/") ? "/" : "", f) != -1)
+			{
+				f = buf; free_buf = 1;
+			}
+			free(buf2);
+		}
+		register_fd(rc, f, &status);
+		if (free_buf) free(buf);
+	}
+#  else
+	handle_file_access_after("open", f, &status);
+#  endif
+
+	errno=old_errno;
 	return rc;
 }
 
@@ -73,10 +94,11 @@ int open64(const char* f, int a, ...)
 	if (!orig_open64) orig_open64 = get_dl_symbol("open64");
 	errno=old_errno;
 
-#if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original open64() at %p (wrapper is at %p).\n",
-		getpid(), orig_open64, open64);
-#endif
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original open64(\"%s\", ...) at %p (wrapper is at %p).\n",
+		getpid(), f, orig_open64, open64);
+#  endif
+ 
 	if (a & O_CREAT)
 	{
 		va_list ap;
@@ -90,11 +112,346 @@ int open64(const char* f, int a, ...)
 	}
 	else
 		rc = orig_open64(f, a);
-
 	old_errno=errno;
-	handle_file_access_after("open64", f, &status);
-	errno=old_errno;
 
+# if FD_TRACKER == 1
+	if (rc != -1)
+	{
+		char *buf = 0;
+		int free_buf = 0;
+		if (f[0] != '/')
+		{
+			char *buf2 = get_current_dir_name();
+			if (asprintf(&buf,"%s%s%s", buf2,
+				strcmp(buf2,"/") ? "/" : "", f) != -1)
+			{
+				f = buf; free_buf = 1;
+			}
+			free(buf2);
+		}
+		register_fd(rc, f, &status);
+		if (free_buf) free(buf);
+	}
+#  else
+	handle_file_access_after("open64", f, &status);
+#  endif
+
+	errno=old_errno;
 	return rc;
 }
 
+extern int creat(const char* f, mode_t m);
+int (*orig_creat)(const char* f, mode_t m) = 0;
+
+int creat(const char* f, mode_t m)
+{
+	struct status_t status;
+	int old_errno=errno;
+	int rc;
+
+	handle_file_access_before("creat", f, &status);
+	if (!orig_creat) orig_creat = get_dl_symbol("creat");
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original creat(\"%s\", ...) at %p (wrapper is at %p).\n",
+		getpid(), f, orig_creat, creat);
+#  endif
+
+	errno=old_errno;
+	rc = orig_creat(f, m);
+	old_errno=errno;
+
+# if FD_TRACKER == 1
+	if (rc != -1)
+	{
+		char *buf = 0;
+		int free_buf = 0;
+		if (f[0] != '/')
+		{
+			char *buf2 = get_current_dir_name();
+			if (asprintf(&buf,"%s%s%s", buf2,
+				strcmp(buf2,"/") ? "/" : "", f) != -1)
+			{
+				f = buf; free_buf = 1;
+			}
+			free(buf2);
+		}
+		register_fd(rc, f, &status);
+		if (free_buf) free(buf);
+	}
+#  else
+	handle_file_access_after("creat", f, &status);
+#  endif
+
+	errno=old_errno;
+	return rc;
+}
+
+extern int creat64(const char* f, mode_t m);
+int (*orig_creat64)(const char* f, mode_t m) = 0;
+
+int creat64(const char* f, mode_t m)
+{
+	struct status_t status;
+	int old_errno=errno;
+	int rc;
+
+	handle_file_access_before("creat64", f, &status);
+	if (!orig_creat64) orig_creat64 = get_dl_symbol("creat64");
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original creat64(%s, ...) at %p (wrapper is at %p).\n",
+		getpid(), f, orig_creat64, creat64);
+#  endif
+
+	errno=old_errno;
+	rc = orig_creat64(f, m);
+	old_errno=errno;
+
+# if FD_TRACKER == 1
+	if (rc != -1)
+	{
+		char *buf = 0;
+		int free_buf = 0;
+		if (f[0] != '/')
+		{
+			char *buf2 = get_current_dir_name();
+			if (asprintf(&buf,"%s%s%s", buf2,
+				strcmp(buf2,"/") ? "/" : "", f) != -1)
+			{
+				f = buf; free_buf = 1;
+			}
+			free(buf2);
+		}
+		register_fd(rc, f, &status);
+		if (free_buf) free(buf);
+	}
+#  else
+	handle_file_access_after("creat64", f, &status);
+#  endif
+
+	errno=old_errno;
+	return rc;
+}
+
+extern FILE* fopen(const char* f, const char* g);
+FILE* (*orig_fopen)(const char* f, const char* g) = 0;
+
+FILE* fopen(const char* f, const char* g)
+{
+	struct status_t status;
+	int old_errno=errno;
+	FILE* rc;
+
+	handle_file_access_before("fopen", f, &status);
+	if (!orig_fopen) orig_fopen = get_dl_symbol("fopen");
+
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original fopen() at %p (wrapper is at %p).\n",
+		getpid(), orig_fopen, fopen);
+#  endif
+
+	errno=old_errno;
+	rc = orig_fopen(f, g);
+	old_errno=errno;
+
+# if FD_TRACKER == 1
+	if (rc != 0)
+	{
+		char *buf = 0;
+		int free_buf = 0;
+		if (f[0] != '/')
+		{
+			char *buf2 = get_current_dir_name();
+			if (asprintf(&buf,"%s%s%s", buf2,
+				strcmp(buf2,"/") ? "/" : "", f) != -1)
+			{
+				f = buf; free_buf = 1;
+			}
+			free(buf2);
+		}
+		register_fd(fileno(rc), f, &status);
+		if (free_buf) free(buf);
+	}
+#  else
+	handle_file_access_after("fopen", f, &status);
+#  endif
+
+	errno=old_errno;
+	return rc;
+}
+
+extern FILE* fopen64(const char* f, const char* g);
+FILE* (*orig_fopen64)(const char* f, const char* g) = 0;
+
+FILE* fopen64(const char* f, const char* g)
+{
+	struct status_t status;
+	int old_errno=errno;
+	FILE* rc;
+
+	handle_file_access_before("fopen64", f, &status);
+	if (!orig_fopen64) orig_fopen64 = get_dl_symbol("fopen64");
+
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original fopen64() at %p (wrapper is at %p).\n",
+		getpid(), orig_fopen64, fopen64);
+#  endif
+
+	errno=old_errno;
+	rc = orig_fopen64(f, g);
+	old_errno=errno;
+
+# if FD_TRACKER == 1
+	if (rc != 0)
+	{
+		char *buf = 0;
+		int free_buf = 0;
+		if (f[0] != '/')
+		{
+			char *buf2 = get_current_dir_name();
+			if (asprintf(&buf,"%s%s%s", buf2,
+				strcmp(buf2,"/") ? "/" : "", f) != -1)
+			{
+				f = buf; free_buf = 1;
+			}
+			free(buf2);
+		}
+		register_fd(fileno(rc), f, &status);
+		if (free_buf) free(buf);
+	}
+#  else
+	handle_file_access_after("fopen64", f, &status);
+#  endif
+
+	errno=old_errno;
+	return rc;
+}
+
+extern int dup(int fd);
+int (*orig_dup)(int fd) = 0;
+
+int dup(int fd)
+{
+	int old_errno = errno;
+	int rc;
+
+	if (!orig_dup) orig_dup = get_dl_symbol("dup");
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original dup(%d) at %p (wrapper is at %p).\n",
+		getpid(), fd, orig_dup, dup);
+#  endif
+
+	errno=old_errno;
+	rc = orig_dup(fd);
+	old_errno = errno;
+
+#  if FD_TRACKER == 1
+	if (rc != -1)
+	{
+		struct pid_reg *pid = *find_pid(getpid());
+		if (pid)
+		{
+			struct fd_reg *oldfd = *find_fd(pid, fd);
+			if (oldfd) register_fd(rc, oldfd->filename, &oldfd->status);
+		}
+	}
+#  endif
+
+	errno=old_errno;
+	return rc;
+}
+
+extern int dup2(int fd, int fd2);
+int (*orig_dup2)(int fd, int fd2) = 0;
+
+int dup2(int oldfd, int newfd)
+{
+	int old_errno = errno;
+	int rc;
+
+	if (!orig_dup2) orig_dup2 = get_dl_symbol("dup2");
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original dup2(%d, %d) at %p (wrapper is at %p).\n",
+		getpid(), oldfd, newfd, orig_dup2, dup2);
+#  endif
+
+	errno=old_errno;
+	rc = orig_dup2(oldfd, newfd);
+	old_errno = errno;
+
+#  if FD_TRACKER == 1
+	if (rc != -1)
+	{
+		struct pid_reg *pid = *find_pid(getpid());
+		if (pid)
+		{
+			struct fd_reg *fd = *find_fd(pid, newfd);
+			if (fd && oldfd != newfd)
+			{
+				handle_file_access_after("dup2", fd->filename, &fd->status);
+				deregister_fd(newfd);
+			}
+
+			fd = *find_fd(pid, oldfd);
+			if (fd) register_fd(rc, fd->filename, &fd->status);
+		}
+	}
+#  endif
+
+	errno=old_errno;
+	return rc;
+}
+
+extern int fcntl(int fd, int cmd, ...);
+int (*orig_fcntl)(int fd, int cmd, ...) = 0;
+
+int fcntl(int fd, int cmd, ...)
+{
+	int old_errno = errno;
+	int rc;
+	int fd2 = -1;
+
+	if (!orig_fcntl) orig_fcntl = get_dl_symbol("fcntl");
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original fcntl(%d, %d, ...) at %p (wrapper is at %p).\n",
+		getpid(), fd, cmd, orig_fcntl, fcntl);
+#  endif
+
+	errno=old_errno;
+	if (cmd & F_GETLK || cmd & F_SETLK || cmd & F_SETLKW)
+	{
+		va_list ap;
+		struct flock *b = 0;
+
+		va_start(ap, cmd);
+		b = va_arg(ap, struct flock*);
+		va_end(ap);
+
+		rc = orig_fcntl(fd, cmd, b);
+	} else {
+		va_list ap;
+		long b = 0;
+
+		va_start(ap, cmd);
+		b = va_arg(ap, long);
+		va_end(ap);
+
+		rc = orig_fcntl(fd, cmd, b);
+		fd2 = (int) b;
+	}
+	old_errno = errno;
+
+#  if FD_TRACKER == 1
+	if (rc != -1 && cmd == F_DUPFD)
+	{
+		struct pid_reg *pid = *find_pid(getpid());
+		if (pid)
+		{
+			struct fd_reg *oldfd = *find_fd(pid, fd);
+			if (oldfd) register_fd(rc, oldfd->filename, &oldfd->status);
+		}
+	}
+#  endif
+
+	errno=old_errno;
+	return rc;
+}

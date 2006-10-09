@@ -29,6 +29,13 @@
 main_begin
 
     block_begin(start, `Setting up network devices.')
+    	block_split(`Renaming network interfaces')
+    		if [ -e /etc/iftab ] ; then
+			check(`ifrename')
+		else
+			true
+		fi
+
 	oldprof="$(cat /etc/network/profile 2>/dev/null)"
 	oldprof=${oldprof:-default}
 	if [ -n "$2" ]; then

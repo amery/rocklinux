@@ -8,7 +8,7 @@
  * the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
  * 
  * ROCK Linux: rock-src/misc/tools-source/fl_wrapper.c.sh
- * ROCK Linux is Copyright (C) 1998 - 2005 Clifford Wolf
+ * ROCK Linux is Copyright (C) 1998 - 2006 Clifford Wolf
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -39,6 +39,7 @@
 
 #define DEBUG 0
 #define DLOPEN_LIBC 1
+#define FD_TRACKER 1
 
 #define _GNU_SOURCE
 #define _REENTRANT
@@ -61,6 +62,7 @@
 #  include <unistd.h>
 #  include <utime.h>
 #  include <stdarg.h>
+#  include <sched.h>
 
 #undef _LARGEFILE64_SOURCE
 #undef _LARGEFILE_SOURCE
@@ -83,322 +85,235 @@ static void handle_file_access_after(const char *, const char *, struct status_t
 
 char *wlog = 0, *rlog = 0, *cmdname = "unkown";
 
+#  if DEBUG == 1
+int debug = 0;
+#  endif
+
 /* Wrapper Functions */
 
-extern FILE* fopen(const char* f, const char* g);
-FILE* (*orig_fopen)(const char* f, const char* g) = 0;
 
-FILE* fopen(const char* f, const char* g)
+/*
+	TODO:
+	get rid of the compiler warnings:
+
+fl_wrapper.c: In function '_Exit':
+fl_wrapper.c:1100: warning: 'noreturn' function does return
+fl_wrapper.c: In function '_exit':
+fl_wrapper.c:1075: warning: 'noreturn' function does return
+fl_wrapper.c: In function 'exit':
+fl_wrapper.c:1050: warning: 'noreturn' function does return
+
+	maybe TODO:
+	wrape clone(); catch termination of child process created with clone()
+*/
+
+#  if FD_TRACKER == 1
+
+/*
+	
+	Whenever a new file descriptor is opened, it will/should be added to the
+	fl_wrapper-internal register, together with its current file status.
+	Accordingly, when a file descriptor is closed, it will be removed from this
+	register, and handle_file_access_after() will be called with the stored
+	filename and status.
+*/
+
+struct pid_reg
 {
+	pid_t id;
+	int executed;
+	struct fd_reg *fd_head;
+	struct pid_reg *next;
+};
+
+struct pid_reg *pid_head = 0;
+
+struct fd_reg
+{
+	int fd;
+	int closed;
 	struct status_t status;
-	int old_errno=errno;
-	FILE* rc;
+	char *filename;
+	struct fd_reg *next;
+};
 
-	handle_file_access_before("fopen", f, &status);
-	if (!orig_fopen) orig_fopen = get_dl_symbol("fopen");
-	errno=old_errno;
-
-#if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original fopen() at %p (wrapper is at %p).\n",
-		getpid(), orig_fopen, fopen);
-#endif
-	rc = orig_fopen(f, g);
-
-	old_errno=errno;
-	handle_file_access_after("fopen", f, &status);
-	errno=old_errno;
-
-	return rc;
-}
-
-extern FILE* fopen64(const char* f, const char* g);
-FILE* (*orig_fopen64)(const char* f, const char* g) = 0;
-
-FILE* fopen64(const char* f, const char* g)
+void add_pid(pid_t pid)
 {
-	struct status_t status;
-	int old_errno=errno;
-	FILE* rc;
+	struct pid_reg *newpid = malloc(sizeof(struct pid_reg));
 
-	handle_file_access_before("fopen64", f, &status);
-	if (!orig_fopen64) orig_fopen64 = get_dl_symbol("fopen64");
-	errno=old_errno;
+	newpid->id = pid;
+	newpid->fd_head = 0;
+	newpid->executed = 0;
 
-#if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original fopen64() at %p (wrapper is at %p).\n",
-		getpid(), orig_fopen64, fopen64);
-#endif
-	rc = orig_fopen64(f, g);
+	newpid->next = pid_head;
+	pid_head = newpid;
 
-	old_errno=errno;
-	handle_file_access_after("fopen64", f, &status);
-	errno=old_errno;
-
-	return rc;
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: PID %d added.\n",
+		getpid(), pid);
+#  endif
 }
 
-extern int creat(const char* f, mode_t m);
-int (*orig_creat)(const char* f, mode_t m) = 0;
-
-int creat(const char* f, mode_t m)
+void add_fd(struct pid_reg *pid, int fd, const char *filename, struct status_t *status)
 {
-	struct status_t status;
-	int old_errno=errno;
-	int rc;
+	struct fd_reg *newfd = malloc(sizeof(struct fd_reg));
 
-	handle_file_access_before("creat", f, &status);
-	if (!orig_creat) orig_creat = get_dl_symbol("creat");
-	errno=old_errno;
+	newfd->fd = fd;
+	newfd->closed = 0;
+	newfd->status = *status;
+	newfd->filename = strdup(filename);
 
-#if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original creat() at %p (wrapper is at %p).\n",
-		getpid(), orig_creat, creat);
-#endif
-	rc = orig_creat(f, m);
+	newfd->next = pid->fd_head;
+	pid->fd_head = newfd;
 
-	old_errno=errno;
-	handle_file_access_after("creat", f, &status);
-	errno=old_errno;
-
-	return rc;
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: fd %d (%s) added.\n",
+		getpid(), fd, filename);
+#  endif
 }
 
-extern int creat64(const char* f, mode_t m);
-int (*orig_creat64)(const char* f, mode_t m) = 0;
+void remove_fd(struct fd_reg **fd);
 
-int creat64(const char* f, mode_t m)
+void remove_pid(struct pid_reg **pid)
 {
-	struct status_t status;
-	int old_errno=errno;
-	int rc;
+	struct pid_reg *tmp = *pid;
+	struct fd_reg **fd_iter = &(*pid)->fd_head; 
 
-	handle_file_access_before("creat64", f, &status);
-	if (!orig_creat64) orig_creat64 = get_dl_symbol("creat64");
-	errno=old_errno;
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: PID %d removed.\n",
+		getpid(), (*pid)->id);
+#  endif
 
-#if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original creat64() at %p (wrapper is at %p).\n",
-		getpid(), orig_creat64, creat64);
-#endif
-	rc = orig_creat64(f, m);
-
-	old_errno=errno;
-	handle_file_access_after("creat64", f, &status);
-	errno=old_errno;
-
-	return rc;
+	while (*fd_iter) remove_fd(fd_iter);
+	*pid = (*pid)->next;
+	free(tmp);
 }
 
-extern int mkdir(const char* f, mode_t m);
-int (*orig_mkdir)(const char* f, mode_t m) = 0;
-
-int mkdir(const char* f, mode_t m)
+void remove_fd(struct fd_reg **fd)
 {
-	struct status_t status;
-	int old_errno=errno;
-	int rc;
+	struct fd_reg *tmp = *fd;
 
-	handle_file_access_before("mkdir", f, &status);
-	if (!orig_mkdir) orig_mkdir = get_dl_symbol("mkdir");
-	errno=old_errno;
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: fd %d (%s) removed.\n",
+		getpid(), (*fd)->fd, (*fd)->filename);
+#  endif
 
-#if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original mkdir() at %p (wrapper is at %p).\n",
-		getpid(), orig_mkdir, mkdir);
-#endif
-	rc = orig_mkdir(f, m);
-
-	old_errno=errno;
-	handle_file_access_after("mkdir", f, &status);
-	errno=old_errno;
-
-	return rc;
+	free((*fd)->filename);
+	*fd = (*fd)->next;
+	free(tmp);
 }
 
-extern int mknod(const char* f, mode_t m, dev_t d);
-int (*orig_mknod)(const char* f, mode_t m, dev_t d) = 0;
+void deregister_fd(int fd);
 
-int mknod(const char* f, mode_t m, dev_t d)
+struct pid_reg **find_pid(pid_t pid)
 {
-	struct status_t status;
-	int old_errno=errno;
-	int rc;
+	struct pid_reg **pid_iter = &pid_head;
 
-	handle_file_access_before("mknod", f, &status);
-	if (!orig_mknod) orig_mknod = get_dl_symbol("mknod");
-	errno=old_errno;
+	while (*pid_iter)
+	{
+		if ((*pid_iter)->executed)
+		{
+			struct fd_reg **fd_iter = &(*pid_iter)->fd_head;
+			while (*fd_iter)
+			{
+				if ((*fd_iter)->closed)
+				{
+					handle_file_access_after("exec*", (*fd_iter)->filename, &(*fd_iter)->status);
+					deregister_fd((*fd_iter)->fd);
 
-#if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original mknod() at %p (wrapper is at %p).\n",
-		getpid(), orig_mknod, mknod);
-#endif
-	rc = orig_mknod(f, m, d);
+				}
+				else fd_iter = &(*fd_iter)->next;
+			}
+		}
 
-	old_errno=errno;
-	handle_file_access_after("mknod", f, &status);
-	errno=old_errno;
+		if ((*pid_iter)->fd_head == 0) remove_pid(pid_iter);
+		else pid_iter = &(*pid_iter)->next;
+	}
 
-	return rc;
+	pid_iter = &pid_head;
+	while (*pid_iter)
+	{
+		if ((*pid_iter)->id == pid) break;
+		pid_iter = &(*pid_iter)->next;
+	}
+
+	return pid_iter;
 }
 
-extern int link(const char* s, const char* f);
-int (*orig_link)(const char* s, const char* f) = 0;
-
-int link(const char* s, const char* f)
+struct fd_reg **find_fd(struct pid_reg *pid, int fd)
 {
-	struct status_t status;
-	int old_errno=errno;
-	int rc;
+	struct fd_reg **fd_iter = &pid->fd_head;
+	while (*fd_iter)
+	{
+		if ((*fd_iter)->fd == fd) break;
+		fd_iter = &(*fd_iter)->next;
+	}
 
-	handle_file_access_before("link", f, &status);
-	if (!orig_link) orig_link = get_dl_symbol("link");
-	errno=old_errno;
-
-#if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original link() at %p (wrapper is at %p).\n",
-		getpid(), orig_link, link);
-#endif
-	rc = orig_link(s, f);
-
-	old_errno=errno;
-	handle_file_access_after("link", f, &status);
-	errno=old_errno;
-
-	return rc;
+	return fd_iter;
 }
 
-extern int symlink(const char* s, const char* f);
-int (*orig_symlink)(const char* s, const char* f) = 0;
-
-int symlink(const char* s, const char* f)
+void register_fd(int fd, const char *filename, struct status_t *status)
 {
-	struct status_t status;
-	int old_errno=errno;
-	int rc;
+	struct pid_reg *pid_iter = *find_pid(getpid());
+	if (pid_iter == 0)
+	{
+		add_pid(getpid());
+		pid_iter = pid_head;
+	}
 
-	handle_file_access_before("symlink", f, &status);
-	if (!orig_symlink) orig_symlink = get_dl_symbol("symlink");
-	errno=old_errno;
-
-#if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original symlink() at %p (wrapper is at %p).\n",
-		getpid(), orig_symlink, symlink);
-#endif
-	rc = orig_symlink(s, f);
-
-	old_errno=errno;
-	handle_file_access_after("symlink", f, &status);
-	errno=old_errno;
-
-	return rc;
+	struct fd_reg *fd_iter = *find_fd(pid_iter, fd);
+	if (fd_iter == 0)
+	{
+		add_fd(pid_iter, fd, filename, status);
+	} else {
+#  if DEBUG == 1
+		if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: fd %d already registered (is %s, was %s).\n",
+			getpid(), fd, filename, fd_iter->filename);
+#  endif
+		free(fd_iter->filename);
+		fd_iter->filename = strdup(filename);
+		fd_iter->status = *status;
+	}
 }
 
-extern int rename(const char* s, const char* f);
-int (*orig_rename)(const char* s, const char* f) = 0;
-
-int rename(const char* s, const char* f)
+/* removes fd from register, returning its filename and status via filename
+   and status arguments.
+*/
+void deregister_fd(int fd)
 {
-	struct status_t status;
-	int old_errno=errno;
-	int rc;
-
-	handle_file_access_before("rename", f, &status);
-	if (!orig_rename) orig_rename = get_dl_symbol("rename");
-	errno=old_errno;
-
-#if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original rename() at %p (wrapper is at %p).\n",
-		getpid(), orig_rename, rename);
-#endif
-	rc = orig_rename(s, f);
-
-	old_errno=errno;
-	handle_file_access_after("rename", f, &status);
-	errno=old_errno;
-
-	return rc;
+	struct pid_reg **pid_iter = find_pid(getpid());
+	if (*pid_iter)
+	{
+		struct fd_reg **fd_iter = find_fd(*pid_iter, fd);
+		if (*fd_iter)
+		{
+			remove_fd(fd_iter);
+			if ((*pid_iter)->fd_head == 0) remove_pid(pid_iter);
+		}
+	}
 }
 
-extern int utime(const char* f, const struct utimbuf* t);
-int (*orig_utime)(const char* f, const struct utimbuf* t) = 0;
-
-int utime(const char* f, const struct utimbuf* t)
+void copy_fds(pid_t parent, pid_t child)
 {
-	struct status_t status;
-	int old_errno=errno;
-	int rc;
+	struct pid_reg *pid_iter = *find_pid(parent);
+	if (pid_iter)
+	{
+		struct fd_reg *fd_iter = pid_iter->fd_head;
 
-	handle_file_access_before("utime", f, &status);
-	if (!orig_utime) orig_utime = get_dl_symbol("utime");
-	errno=old_errno;
+		add_pid(child);
+		struct fd_reg **nextfd = &pid_head->fd_head;
 
-#if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original utime() at %p (wrapper is at %p).\n",
-		getpid(), orig_utime, utime);
-#endif
-	rc = orig_utime(f, t);
-
-	old_errno=errno;
-	handle_file_access_after("utime", f, &status);
-	errno=old_errno;
-
-	return rc;
+		while (fd_iter)
+		{
+			*nextfd = malloc(sizeof(struct fd_reg));
+			**nextfd = *fd_iter;
+			nextfd = &(*nextfd)->next;
+			fd_iter = fd_iter->next;
+		}
+	}
 }
 
-extern int utimes(const char* f, struct timeval* t);
-int (*orig_utimes)(const char* f, struct timeval* t) = 0;
-
-int utimes(const char* f, struct timeval* t)
-{
-	struct status_t status;
-	int old_errno=errno;
-	int rc;
-
-	handle_file_access_before("utimes", f, &status);
-	if (!orig_utimes) orig_utimes = get_dl_symbol("utimes");
-	errno=old_errno;
-
-#if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original utimes() at %p (wrapper is at %p).\n",
-		getpid(), orig_utimes, utimes);
-#endif
-	rc = orig_utimes(f, t);
-
-	old_errno=errno;
-	handle_file_access_after("utimes", f, &status);
-	errno=old_errno;
-
-	return rc;
-}
-
-extern int execv(const char* f, char* const a[]);
-int (*orig_execv)(const char* f, char* const a[]) = 0;
-
-int execv(const char* f, char* const a[])
-{
-	int old_errno=errno;
-
-	handle_file_access_after("execv", f, 0);
-	if (!orig_execv) orig_execv = get_dl_symbol("execv");
-	errno=old_errno;
-
-	return orig_execv(f, a);
-}
-
-extern int execve(const char* f, char* const a[], char* const e[]);
-int (*orig_execve)(const char* f, char* const a[], char* const e[]) = 0;
-
-int execve(const char* f, char* const a[], char* const e[])
-{
-	int old_errno=errno;
-
-	handle_file_access_after("execve", f, 0);
-	if (!orig_execve) orig_execve = get_dl_symbol("execve");
-	errno=old_errno;
-
-	return orig_execve(f, a, e);
-}
-
+#  endif
 /*
  *  Copyright (C) 1991, 92, 94, 97, 98, 99 Free Software Foundation, Inc.
  *  This file is part of the GNU C Library.
@@ -717,7 +632,7 @@ execvp (file, argv)
  * the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
  * 
  * ROCK Linux: rock-src/misc/tools-source/fl_wrapper_open.c
- * ROCK Linux is Copyright (C) 1998 - 2005 Clifford Wolf
+ * ROCK Linux is Copyright (C) 1998 - 2006 Clifford Wolf
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -744,10 +659,11 @@ int open(const char* f, int a, ...)
 	if (!orig_open) orig_open = get_dl_symbol("open");
 	errno=old_errno;
 
-#if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original open() at %p (wrapper is at %p).\n",
-		getpid(), orig_open, open);
-#endif
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original open(\"%s\", ...) at %p (wrapper is at %p).\n",
+		getpid(), f, orig_open, open);
+#  endif
+
 	if (a & O_CREAT)
 	{
 		va_list ap;
@@ -761,11 +677,31 @@ int open(const char* f, int a, ...)
 	}
 	else
 		rc = orig_open(f, a);
-
 	old_errno=errno;
-	handle_file_access_after("open", f, &status);
-	errno=old_errno;
 
+# if FD_TRACKER == 1
+	if (rc != -1)
+	{
+		char *buf = 0;
+		int free_buf = 0;
+		if (f[0] != '/')
+		{
+			char *buf2 = get_current_dir_name();
+			if (asprintf(&buf,"%s%s%s", buf2,
+				strcmp(buf2,"/") ? "/" : "", f) != -1)
+			{
+				f = buf; free_buf = 1;
+			}
+			free(buf2);
+		}
+		register_fd(rc, f, &status);
+		if (free_buf) free(buf);
+	}
+#  else
+	handle_file_access_after("open", f, &status);
+#  endif
+
+	errno=old_errno;
 	return rc;
 }
 
@@ -782,10 +718,11 @@ int open64(const char* f, int a, ...)
 	if (!orig_open64) orig_open64 = get_dl_symbol("open64");
 	errno=old_errno;
 
-#if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original open64() at %p (wrapper is at %p).\n",
-		getpid(), orig_open64, open64);
-#endif
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original open64(\"%s\", ...) at %p (wrapper is at %p).\n",
+		getpid(), f, orig_open64, open64);
+#  endif
+ 
 	if (a & O_CREAT)
 	{
 		va_list ap;
@@ -799,14 +736,876 @@ int open64(const char* f, int a, ...)
 	}
 	else
 		rc = orig_open64(f, a);
-
 	old_errno=errno;
-	handle_file_access_after("open64", f, &status);
-	errno=old_errno;
 
+# if FD_TRACKER == 1
+	if (rc != -1)
+	{
+		char *buf = 0;
+		int free_buf = 0;
+		if (f[0] != '/')
+		{
+			char *buf2 = get_current_dir_name();
+			if (asprintf(&buf,"%s%s%s", buf2,
+				strcmp(buf2,"/") ? "/" : "", f) != -1)
+			{
+				f = buf; free_buf = 1;
+			}
+			free(buf2);
+		}
+		register_fd(rc, f, &status);
+		if (free_buf) free(buf);
+	}
+#  else
+	handle_file_access_after("open64", f, &status);
+#  endif
+
+	errno=old_errno;
 	return rc;
 }
 
+extern int creat(const char* f, mode_t m);
+int (*orig_creat)(const char* f, mode_t m) = 0;
+
+int creat(const char* f, mode_t m)
+{
+	struct status_t status;
+	int old_errno=errno;
+	int rc;
+
+	handle_file_access_before("creat", f, &status);
+	if (!orig_creat) orig_creat = get_dl_symbol("creat");
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original creat(\"%s\", ...) at %p (wrapper is at %p).\n",
+		getpid(), f, orig_creat, creat);
+#  endif
+
+	errno=old_errno;
+	rc = orig_creat(f, m);
+	old_errno=errno;
+
+# if FD_TRACKER == 1
+	if (rc != -1)
+	{
+		char *buf = 0;
+		int free_buf = 0;
+		if (f[0] != '/')
+		{
+			char *buf2 = get_current_dir_name();
+			if (asprintf(&buf,"%s%s%s", buf2,
+				strcmp(buf2,"/") ? "/" : "", f) != -1)
+			{
+				f = buf; free_buf = 1;
+			}
+			free(buf2);
+		}
+		register_fd(rc, f, &status);
+		if (free_buf) free(buf);
+	}
+#  else
+	handle_file_access_after("creat", f, &status);
+#  endif
+
+	errno=old_errno;
+	return rc;
+}
+
+extern int creat64(const char* f, mode_t m);
+int (*orig_creat64)(const char* f, mode_t m) = 0;
+
+int creat64(const char* f, mode_t m)
+{
+	struct status_t status;
+	int old_errno=errno;
+	int rc;
+
+	handle_file_access_before("creat64", f, &status);
+	if (!orig_creat64) orig_creat64 = get_dl_symbol("creat64");
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original creat64(%s, ...) at %p (wrapper is at %p).\n",
+		getpid(), f, orig_creat64, creat64);
+#  endif
+
+	errno=old_errno;
+	rc = orig_creat64(f, m);
+	old_errno=errno;
+
+# if FD_TRACKER == 1
+	if (rc != -1)
+	{
+		char *buf = 0;
+		int free_buf = 0;
+		if (f[0] != '/')
+		{
+			char *buf2 = get_current_dir_name();
+			if (asprintf(&buf,"%s%s%s", buf2,
+				strcmp(buf2,"/") ? "/" : "", f) != -1)
+			{
+				f = buf; free_buf = 1;
+			}
+			free(buf2);
+		}
+		register_fd(rc, f, &status);
+		if (free_buf) free(buf);
+	}
+#  else
+	handle_file_access_after("creat64", f, &status);
+#  endif
+
+	errno=old_errno;
+	return rc;
+}
+
+extern FILE* fopen(const char* f, const char* g);
+FILE* (*orig_fopen)(const char* f, const char* g) = 0;
+
+FILE* fopen(const char* f, const char* g)
+{
+	struct status_t status;
+	int old_errno=errno;
+	FILE* rc;
+
+	handle_file_access_before("fopen", f, &status);
+	if (!orig_fopen) orig_fopen = get_dl_symbol("fopen");
+
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original fopen() at %p (wrapper is at %p).\n",
+		getpid(), orig_fopen, fopen);
+#  endif
+
+	errno=old_errno;
+	rc = orig_fopen(f, g);
+	old_errno=errno;
+
+# if FD_TRACKER == 1
+	if (rc != 0)
+	{
+		char *buf = 0;
+		int free_buf = 0;
+		if (f[0] != '/')
+		{
+			char *buf2 = get_current_dir_name();
+			if (asprintf(&buf,"%s%s%s", buf2,
+				strcmp(buf2,"/") ? "/" : "", f) != -1)
+			{
+				f = buf; free_buf = 1;
+			}
+			free(buf2);
+		}
+		register_fd(fileno(rc), f, &status);
+		if (free_buf) free(buf);
+	}
+#  else
+	handle_file_access_after("fopen", f, &status);
+#  endif
+
+	errno=old_errno;
+	return rc;
+}
+
+extern FILE* fopen64(const char* f, const char* g);
+FILE* (*orig_fopen64)(const char* f, const char* g) = 0;
+
+FILE* fopen64(const char* f, const char* g)
+{
+	struct status_t status;
+	int old_errno=errno;
+	FILE* rc;
+
+	handle_file_access_before("fopen64", f, &status);
+	if (!orig_fopen64) orig_fopen64 = get_dl_symbol("fopen64");
+
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original fopen64() at %p (wrapper is at %p).\n",
+		getpid(), orig_fopen64, fopen64);
+#  endif
+
+	errno=old_errno;
+	rc = orig_fopen64(f, g);
+	old_errno=errno;
+
+# if FD_TRACKER == 1
+	if (rc != 0)
+	{
+		char *buf = 0;
+		int free_buf = 0;
+		if (f[0] != '/')
+		{
+			char *buf2 = get_current_dir_name();
+			if (asprintf(&buf,"%s%s%s", buf2,
+				strcmp(buf2,"/") ? "/" : "", f) != -1)
+			{
+				f = buf; free_buf = 1;
+			}
+			free(buf2);
+		}
+		register_fd(fileno(rc), f, &status);
+		if (free_buf) free(buf);
+	}
+#  else
+	handle_file_access_after("fopen64", f, &status);
+#  endif
+
+	errno=old_errno;
+	return rc;
+}
+
+extern int dup(int fd);
+int (*orig_dup)(int fd) = 0;
+
+int dup(int fd)
+{
+	int old_errno = errno;
+	int rc;
+
+	if (!orig_dup) orig_dup = get_dl_symbol("dup");
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original dup(%d) at %p (wrapper is at %p).\n",
+		getpid(), fd, orig_dup, dup);
+#  endif
+
+	errno=old_errno;
+	rc = orig_dup(fd);
+	old_errno = errno;
+
+#  if FD_TRACKER == 1
+	if (rc != -1)
+	{
+		struct pid_reg *pid = *find_pid(getpid());
+		if (pid)
+		{
+			struct fd_reg *oldfd = *find_fd(pid, fd);
+			if (oldfd) register_fd(rc, oldfd->filename, &oldfd->status);
+		}
+	}
+#  endif
+
+	errno=old_errno;
+	return rc;
+}
+
+extern int dup2(int fd, int fd2);
+int (*orig_dup2)(int fd, int fd2) = 0;
+
+int dup2(int oldfd, int newfd)
+{
+	int old_errno = errno;
+	int rc;
+
+	if (!orig_dup2) orig_dup2 = get_dl_symbol("dup2");
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original dup2(%d, %d) at %p (wrapper is at %p).\n",
+		getpid(), oldfd, newfd, orig_dup2, dup2);
+#  endif
+
+	errno=old_errno;
+	rc = orig_dup2(oldfd, newfd);
+	old_errno = errno;
+
+#  if FD_TRACKER == 1
+	if (rc != -1)
+	{
+		struct pid_reg *pid = *find_pid(getpid());
+		if (pid)
+		{
+			struct fd_reg *fd = *find_fd(pid, newfd);
+			if (fd && oldfd != newfd)
+			{
+				handle_file_access_after("dup2", fd->filename, &fd->status);
+				deregister_fd(newfd);
+			}
+
+			fd = *find_fd(pid, oldfd);
+			if (fd) register_fd(rc, fd->filename, &fd->status);
+		}
+	}
+#  endif
+
+	errno=old_errno;
+	return rc;
+}
+
+extern int fcntl(int fd, int cmd, ...);
+int (*orig_fcntl)(int fd, int cmd, ...) = 0;
+
+int fcntl(int fd, int cmd, ...)
+{
+	int old_errno = errno;
+	int rc;
+	int fd2 = -1;
+
+	if (!orig_fcntl) orig_fcntl = get_dl_symbol("fcntl");
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original fcntl(%d, %d, ...) at %p (wrapper is at %p).\n",
+		getpid(), fd, cmd, orig_fcntl, fcntl);
+#  endif
+
+	errno=old_errno;
+	if (cmd & F_GETLK || cmd & F_SETLK || cmd & F_SETLKW)
+	{
+		va_list ap;
+		struct flock *b = 0;
+
+		va_start(ap, cmd);
+		b = va_arg(ap, struct flock*);
+		va_end(ap);
+
+		rc = orig_fcntl(fd, cmd, b);
+	} else {
+		va_list ap;
+		long b = 0;
+
+		va_start(ap, cmd);
+		b = va_arg(ap, long);
+		va_end(ap);
+
+		rc = orig_fcntl(fd, cmd, b);
+		fd2 = (int) b;
+	}
+	old_errno = errno;
+
+#  if FD_TRACKER == 1
+	if (rc != -1 && cmd == F_DUPFD)
+	{
+		struct pid_reg *pid = *find_pid(getpid());
+		if (pid)
+		{
+			struct fd_reg *oldfd = *find_fd(pid, fd);
+			if (oldfd) register_fd(rc, oldfd->filename, &oldfd->status);
+		}
+	}
+#  endif
+
+	errno=old_errno;
+	return rc;
+}
+extern int close(int fd);
+int (*orig_close)(int fd) = 0;
+
+int close(int fd)
+{
+	int old_errno=errno;
+	int rc;
+
+	if (!orig_close) orig_close = get_dl_symbol("close");
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original close(%d) at %p (wrapper is at %p).\n",
+		getpid(), fd, orig_close, close);
+#  endif
+
+	errno=old_errno;
+	rc = orig_close(fd);
+	old_errno=errno;
+
+#  if FD_TRACKER == 1
+	if (rc == 0 || errno == EBADF)
+	{
+		struct pid_reg *pidreg = *find_pid(getpid());
+		if (pidreg)
+		{
+			struct fd_reg *fdreg = *find_fd(pidreg, fd);
+			if (fdreg)
+			{	
+				handle_file_access_after("close", fdreg->filename, &fdreg->status);
+				deregister_fd(fd);
+			}
+		}
+	}
+#  endif
+
+	errno=old_errno;
+	return rc;
+}
+
+extern int fclose(FILE* f);
+int (*orig_fclose)(FILE* f) = 0;
+
+int fclose(FILE* f)
+{
+	int old_errno=errno;
+	int rc;
+	int fd=fileno(f);
+
+	if (!orig_fclose) orig_fclose = get_dl_symbol("fclose");
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original fclose(%d) at %p (wrapper is at %p).\n",
+		getpid(), fd, orig_fclose, fclose);
+#  endif
+
+	errno=old_errno;
+	rc = orig_fclose(f);
+	old_errno=errno;
+
+#  if FD_TRACKER == 1
+	if (rc == 0)
+	{
+		struct pid_reg *pidreg = *find_pid(getpid());
+		if (pidreg)
+		{
+			struct fd_reg *fdreg = *find_fd(pidreg, fd);
+			if (fdreg)
+			{	
+				handle_file_access_after("fclose", fdreg->filename, &fdreg->status);
+				deregister_fd(fd);
+			}
+		}
+	}
+#  endif
+
+	errno=old_errno;
+	return rc;
+}
+
+/*
+extern int fcloseall();
+int (*orig_fcloseall)() = 0;
+
+int fcloseall()
+{
+	int old_errno=errno;
+	int rc;
+
+	if (!orig_fcloseall) orig_fcloseall = get_dl_symbol("fcloseall");
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original fcloseall() at %p (wrapper is at %p).\n",
+		getpid(), orig_fcloseall, fcloseall);
+#  endif
+
+	errno=old_errno;
+	rc = orig_fcloseall();
+
+	return rc;
+}
+*/
+
+extern int fork();
+int (*orig_fork)() = 0;
+
+int fork()
+{
+	int old_errno = errno;
+	int rc;
+#  if FD_TRACKER == 1
+	int caller_pid = getpid();
+#  endif
+
+	if (!orig_fork) orig_fork = get_dl_symbol("fork");
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original fork() at %p (wrapper is at %p).\n",
+		getpid(), orig_fork, fork);
+#  endif
+
+	errno = old_errno;
+	rc = orig_fork();
+	old_errno = errno;
+
+#  if FD_TRACKER == 1
+	if ( rc == 0) copy_fds(caller_pid, getpid());
+#  endif
+
+#  if DEBUG == 1
+	struct pid_reg *pid = pid_head;
+	while (pid)
+	{
+		struct fd_reg *fd = pid->fd_head;
+		if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: fork: found PID %d.\n",
+			getpid(), pid->id);
+		while (fd)
+		{
+			if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: fork: found fd %d (%s).\n",
+				getpid(), fd->fd, fd->filename);
+			fd = fd->next;
+		}
+		pid = pid->next;
+	}
+#  endif
+
+	errno=old_errno;
+	return rc;
+}
+
+extern void exit(int status) __attribute__ ((noreturn));
+void (*orig_exit)(int status) = 0;
+
+void exit(int status)
+{
+	int old_errno = errno;
+
+	if (!orig_exit) orig_exit = get_dl_symbol("exit");
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original exit(%d) at %p (wrapper is at %p).\n",
+		getpid(), status, orig_exit, exit);
+#  endif
+
+#  if FD_TRACKER == 1
+	struct pid_reg *pid = *find_pid(getpid());
+	if (pid)
+	{
+		struct fd_reg **fd_iter = &pid->fd_head;
+		while (*fd_iter)
+		{
+			handle_file_access_after("exit", (*fd_iter)->filename, &(*fd_iter)->status);
+			deregister_fd((*fd_iter)->fd);
+		}
+	}
+#  endif
+
+	errno=old_errno;
+	orig_exit(status);
+}
+
+extern void _exit(int status) __attribute__ ((noreturn));
+void (*orig__exit)(int status) = 0;
+
+void _exit(int status)
+{
+	int old_errno = errno;
+
+	if (!orig__exit) orig__exit = get_dl_symbol("_exit");
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original _exit(%d) at %p (wrapper is at %p).\n",
+		getpid(), status, orig__exit, _exit);
+#  endif
+
+#  if FD_TRACKER == 1
+	struct pid_reg *pid = *find_pid(getpid());
+	if (pid)
+	{
+		struct fd_reg **fd_iter = &pid->fd_head;
+		while (*fd_iter)
+		{
+			handle_file_access_after("_exit", (*fd_iter)->filename, &(*fd_iter)->status);
+			deregister_fd((*fd_iter)->fd);
+		}
+	}
+#  endif
+
+	errno=old_errno;
+	orig__exit(status);
+}
+
+extern void _Exit(int status) __attribute__ ((noreturn));
+void (*orig__Exit)(int status) = 0;
+
+void _Exit(int status)
+{
+	int old_errno = errno;
+
+	if (!orig__Exit) orig__Exit = get_dl_symbol("_Exit");
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original _Exit(%d) at %p (wrapper is at %p).\n",
+		getpid(), status, orig__Exit, _Exit);
+#  endif
+
+#  if FD_TRACKER == 1
+	struct pid_reg *pid = *find_pid(getpid());
+	if (pid)
+	{
+		struct fd_reg **fd_iter = &pid->fd_head;
+		while (*fd_iter)
+		{
+			handle_file_access_after("_Exit", (*fd_iter)->filename, &(*fd_iter)->status);
+			deregister_fd((*fd_iter)->fd);
+		}
+	}
+#  endif
+
+	errno=old_errno;
+	orig__Exit(status);
+}
+
+extern int mkdir(const char* f, mode_t m);
+int (*orig_mkdir)(const char* f, mode_t m) = 0;
+
+int mkdir(const char* f, mode_t m)
+{
+	struct status_t status;
+	int old_errno=errno;
+	int rc;
+
+	handle_file_access_before("mkdir", f, &status);
+	if (!orig_mkdir) orig_mkdir = get_dl_symbol("mkdir");
+
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original mkdir() at %p (wrapper is at %p).\n",
+		getpid(), orig_mkdir, mkdir);
+#  endif
+
+	errno=old_errno;
+	rc = orig_mkdir(f, m);
+	old_errno=errno;
+
+	handle_file_access_after("mkdir", f, &status);
+
+	errno=old_errno;
+	return rc;
+}
+
+extern int mknod(const char* f, mode_t m, dev_t d);
+int (*orig_mknod)(const char* f, mode_t m, dev_t d) = 0;
+
+int mknod(const char* f, mode_t m, dev_t d)
+{
+	struct status_t status;
+	int old_errno=errno;
+	int rc;
+
+	handle_file_access_before("mknod", f, &status);
+	if (!orig_mknod) orig_mknod = get_dl_symbol("mknod");
+
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original mknod() at %p (wrapper is at %p).\n",
+		getpid(), orig_mknod, mknod);
+#  endif
+
+	errno=old_errno;
+	rc = orig_mknod(f, m, d);
+	old_errno=errno;
+
+	handle_file_access_after("mknod", f, &status);
+
+	errno=old_errno;
+	return rc;
+}
+
+extern int link(const char* s, const char* f);
+int (*orig_link)(const char* s, const char* f) = 0;
+
+int link(const char* s, const char* f)
+{
+	struct status_t status;
+	int old_errno=errno;
+	int rc;
+
+	handle_file_access_before("link", f, &status);
+	if (!orig_link) orig_link = get_dl_symbol("link");
+
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original link() at %p (wrapper is at %p).\n",
+		getpid(), orig_link, link);
+#  endif
+
+	errno=old_errno;
+	rc = orig_link(s, f);
+	old_errno=errno;
+
+	handle_file_access_after("link", f, &status);
+
+	errno=old_errno;
+	return rc;
+}
+
+extern int symlink(const char* s, const char* f);
+int (*orig_symlink)(const char* s, const char* f) = 0;
+
+int symlink(const char* s, const char* f)
+{
+	struct status_t status;
+	int old_errno=errno;
+	int rc;
+
+	handle_file_access_before("symlink", f, &status);
+	if (!orig_symlink) orig_symlink = get_dl_symbol("symlink");
+
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original symlink() at %p (wrapper is at %p).\n",
+		getpid(), orig_symlink, symlink);
+#  endif
+
+	errno=old_errno;
+	rc = orig_symlink(s, f);
+	old_errno=errno;
+
+	handle_file_access_after("symlink", f, &status);
+
+	errno=old_errno;
+	return rc;
+}
+
+extern int rename(const char* s, const char* f);
+int (*orig_rename)(const char* s, const char* f) = 0;
+
+int rename(const char* s, const char* f)
+{
+	struct status_t status;
+	int old_errno=errno;
+	int rc;
+
+	handle_file_access_before("rename", f, &status);
+	if (!orig_rename) orig_rename = get_dl_symbol("rename");
+
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original rename() at %p (wrapper is at %p).\n",
+		getpid(), orig_rename, rename);
+#  endif
+
+	errno=old_errno;
+	rc = orig_rename(s, f);
+	old_errno=errno;
+
+	handle_file_access_after("rename", f, &status);
+
+	errno=old_errno;
+	return rc;
+}
+
+extern int utime(const char* f, const struct utimbuf* t);
+int (*orig_utime)(const char* f, const struct utimbuf* t) = 0;
+
+int utime(const char* f, const struct utimbuf* t)
+{
+	struct status_t status;
+	int old_errno=errno;
+	int rc;
+
+	handle_file_access_before("utime", f, &status);
+	if (!orig_utime) orig_utime = get_dl_symbol("utime");
+
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original utime() at %p (wrapper is at %p).\n",
+		getpid(), orig_utime, utime);
+#  endif
+
+	errno=old_errno;
+	rc = orig_utime(f, t);
+	old_errno=errno;
+
+	handle_file_access_after("utime", f, &status);
+
+	errno=old_errno;
+	return rc;
+}
+
+extern int utimes(const char* f, struct timeval* t);
+int (*orig_utimes)(const char* f, struct timeval* t) = 0;
+
+int utimes(const char* f, struct timeval* t)
+{
+	struct status_t status;
+	int old_errno=errno;
+	int rc;
+
+	handle_file_access_before("utimes", f, &status);
+	if (!orig_utimes) orig_utimes = get_dl_symbol("utimes");
+
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original utimes() at %p (wrapper is at %p).\n",
+		getpid(), orig_utimes, utimes);
+#  endif
+
+	errno=old_errno;
+	rc = orig_utimes(f, t);
+	old_errno=errno;
+
+	handle_file_access_after("utimes", f, &status);
+
+	errno=old_errno;
+	return rc;
+}
+
+extern int execv(const char* f, char* const a[]);
+int (*orig_execv)(const char* f, char* const a[]) = 0;
+
+int execv(const char* f, char* const a[])
+{
+	int old_errno=errno;
+	int rc;
+
+	handle_file_access_after("execv", f, 0);
+	if (!orig_execv) orig_execv = get_dl_symbol("execv");
+
+#  if FD_TRACKER == 1
+	struct pid_reg *pid = *find_pid(getpid());
+	struct fd_reg ** fd_iter;
+	if (pid)
+	{
+		fd_iter = &pid->fd_head;
+		while (*fd_iter != 0)
+		{
+			(*fd_iter)->closed = fcntl((*fd_iter)->fd, F_GETFD) & FD_CLOEXEC;
+			fd_iter = &(*fd_iter)->next;
+		}
+		pid->executed = 1;
+	}
+#  endif
+
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original execv() at %p (wrapper is at %p).\n",
+		getpid(), orig_execv, execv);
+#  endif
+
+	errno=old_errno;
+	rc = orig_execv(f, a);
+	old_errno=errno;
+
+# if FD_TRACKER == 1
+	if (pid)
+	{
+		fd_iter = &pid->fd_head;
+		while (*fd_iter != 0)
+		{
+			(*fd_iter)->closed = 0;
+			fd_iter = &(*fd_iter)->next;
+		}
+		pid->executed = 0;
+	}
+# endif
+
+	errno=old_errno;
+	return rc;
+}
+
+extern int execve(const char* f, char* const a[], char* const e[]);
+int (*orig_execve)(const char* f, char* const a[], char* const e[]) = 0;
+
+int execve(const char* f, char* const a[], char* const e[])
+{
+	int old_errno=errno;
+	int rc;
+
+	handle_file_access_after("execve", f, 0);
+	if (!orig_execve) orig_execve = get_dl_symbol("execve");
+
+#  if FD_TRACKER == 1
+	struct pid_reg *pid = *find_pid(getpid());
+	struct fd_reg ** fd_iter;
+	if (pid)
+	{
+		fd_iter = &pid->fd_head;
+		while (*fd_iter != 0)
+		{
+			(*fd_iter)->closed = fcntl((*fd_iter)->fd, F_GETFD) & FD_CLOEXEC;
+			fd_iter = &(*fd_iter)->next;
+		}
+		pid->executed = 1;
+	}
+#  endif
+
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: going to run original execve() at %p (wrapper is at %p).\n",
+		getpid(), orig_execve, execve);
+#  endif
+
+	errno=old_errno;
+	rc = orig_execve(f, a, e);
+	old_errno=errno;
+
+# if FD_TRACKER == 1
+	if (pid)
+	{
+		fd_iter = &pid->fd_head;
+		while (*fd_iter != 0)
+		{
+			(*fd_iter)->closed = 0;
+			fd_iter = &(*fd_iter)->next;
+		}
+		pid->executed = 0;
+	}
+# endif
+
+	errno=old_errno;
+	return rc;
+}
 
 /* Internal Functions */
 
@@ -824,13 +1623,13 @@ static void * get_dl_symbol(char * symname)
 
         rc = dlsym(libc_handle, symname);
 #  if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: Symbol '%s' in libc (%p) has been resolved to %p.\n",
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: Symbol '%s' in libc (%p) has been resolved to %p.\n",
 		getpid(), symname, libc_handle, rc);
 #  endif
 #else
         rc = dlsym(RTLD_NEXT, symname);
 #  if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: Symbol '%s' (RTLD_NEXT) has been resolved to %p.\n",
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: Symbol '%s' (RTLD_NEXT) has been resolved to %p.\n",
 		getpid(), symname, rc);
 #  endif
 #endif
@@ -884,8 +1683,9 @@ static char *getpname(int pid)
 
 	if ( !strcmp(b, "bash") || !strcmp(b, "sh") ||
 	     !strcmp(b, "perl") || !strcmp(b, "python") )
-		if (arg && *arg && strlen(arg) < 100 &&
-		    !strchr(arg, ' ') && !strchr(arg, ';'))
+		if ( arg && *arg &&
+		     strlen(arg) < 100 && !strchr(arg, '\n') &&
+		     !strchr(arg, ' ') && !strchr(arg, ';') )
 			snprintf(p, 512, "%s(%s)", b, basename(arg));
 
 	return p;
@@ -904,7 +1704,8 @@ static void addptree(int *txtpos, char *cmdtxt, int pid, int basepid)
 
 	p = getpname(pid);
 
-	if (*txtpos < 4000) {
+	if (*txtpos < 4000)
+	{
 		if ( strcmp(l, p) )
 			*txtpos += snprintf(cmdtxt+*txtpos, 4096-*txtpos, "%s%s",
 					*txtpos ? "." : "", getpname(pid));
@@ -917,6 +1718,10 @@ static void addptree(int *txtpos, char *cmdtxt, int pid, int basepid)
 
 void __attribute__ ((constructor)) fl_wrapper_init()
 {
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: fl_wrapper_init()\n", getpid());
+#  endif
+
 	char cmdtxt[4096] = "";
 	char *basepid_txt = getenv("FLWRAPPER_BASEPID");
 	int basepid = 0, txtpos=0;
@@ -929,16 +1734,44 @@ void __attribute__ ((constructor)) fl_wrapper_init()
 
 	wlog = getenv("FLWRAPPER_WLOG");
 	rlog = getenv("FLWRAPPER_RLOG");
+#  if DEBUG == 1
+	char *debugwrapper = getenv("FLWRAPPER_DEBUG");
+	if (debugwrapper) debug = atoi(debugwrapper);
+#  endif
+}
+
+/*
+	Clean up file descriptors still registered for this pid, if any.
+*/
+void __attribute__ ((destructor)) fl_wrapper_finish()
+{
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: fl_wrapper_finish()\n", getpid());
+#  endif
+	struct pid_reg **pid = find_pid(getpid());
+	if (*pid)
+	{
+#  if DEBUG == 1
+		if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: PID still registered!\n", getpid());
+#  endif
+		struct fd_reg **fd = &(*pid)->fd_head;
+		while (*fd)
+		{
+			handle_file_access_after("fl_wrapper_finish", (*fd)->filename, &(*fd)->status);
+			remove_fd(fd);
+		}
+		remove_pid(pid);
+	}
 }
 
 static void handle_file_access_before(const char * func, const char * file,
                                struct status_t * status)
 {
 	struct stat st;
-#if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: begin of handle_file_access_before(\"%s\", \"%s\", xxx)\n",
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: begin of handle_file_access_before(\"%s\", \"%s\", xxx)\n",
 		getpid(), func, file);
-#endif
+#  endif
 	if ( lstat(file,&st) ) {
 		status->inode=0;  status->size=0;
 		status->mtime=0;  status->ctime=0;
@@ -946,11 +1779,21 @@ static void handle_file_access_before(const char * func, const char * file,
 		status->inode=st.st_ino;    status->size=st.st_size;
 		status->mtime=st.st_mtime;  status->ctime=st.st_ctime;
 	}
-#if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: end   of handle_file_access_before(\"%s\", \"%s\", xxx)\n",
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: end   of handle_file_access_before(\"%s\", \"%s\", xxx)\n",
 		getpid(), func, file);
-#endif
+#  endif
 }
+
+/*
+	Declared in fl_wrapper_open.c and fl_wrapper_close.c,
+	reused here since logging access to the log files eventually
+	overwrites close'd but not yet deregistered file descriptors.
+
+int (*orig_open)(const char* f, int a, ...) = 0;
+int (*orig_open64)(const char* f, int a, ...) = 0;
+int (*orig_close)(int fd) = 0;
+*/
 
 static void handle_file_access_after(const char * func, const char * file,
                               struct status_t * status)
@@ -958,27 +1801,55 @@ static void handle_file_access_after(const char * func, const char * file,
 	char buf[512], *buf2, *logfile;
 	int fd; struct stat st;
 
-#if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: begin of handle_file_access_after(\"%s\", \"%s\", xxx)\n",
-		getpid(), func, file);
+#ifdef __USE_LARGEFILE
+	if (!orig_open64) orig_open64 = get_dl_symbol("open64");
+#else
+	if (!orig_open) orig_open = get_dl_symbol("open");
 #endif
-	if ( wlog != 0 && !strcmp(file, wlog) ) return;
-	if ( rlog != 0 && !strcmp(file, rlog) ) return;
-	if ( lstat(file, &st) ) return;
+	if (!orig_close) orig_close = get_dl_symbol("close");
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: begin of handle_file_access_after(\"%s\", \"%s\", xxx), %d, %s, %s\n",
+		getpid(), func, file, status != 0, wlog, rlog);
+#  endif
+
+	if ( lstat(file, &st) )
+	{
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: lstat(%s, ...) failed\n",
+		getpid(), file);
+#  endif
+	 return;
+	}
 
 	if ( (status != 0) && (status->inode != st.st_ino ||
 	     status->size  != st.st_size || status->mtime != st.st_mtime ||
 	     status->ctime != st.st_ctime) ) { logfile = wlog; }
 	else { logfile = rlog; }
 
-	if ( logfile == 0 ) return;
+	if ( logfile == 0 ) 
+	{
+#  if DEBUG == 1
+		if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: no log file\n",
+			getpid());
+#  endif
+		return;
+	}
+
 #ifdef __USE_LARGEFILE
-	fd=open64(logfile,O_APPEND|O_WRONLY|O_LARGEFILE,0);
+	fd=orig_open64(logfile,O_APPEND|O_WRONLY|O_LARGEFILE,0);
 #else
 #warning "The wrapper library will not work properly for large logs!"
-	fd=open(logfile,O_APPEND|O_WRONLY,0);
+	fd=orig_open(logfile,O_APPEND|O_WRONLY,0);
 #endif
-	if (fd == -1) return;
+
+	if (fd == -1)
+	{
+#  if DEBUG == 1
+		if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: log open failed (%s)\n",
+			getpid(), strerror(errno));
+#  endif
+		return;
+	}
 
 	if (file[0] == '/') {
 		sprintf(buf,"%s.%s:\t%s\n",
@@ -991,9 +1862,9 @@ static void handle_file_access_after(const char * func, const char * file,
 		free(buf2);
 	}
 	write(fd,buf,strlen(buf));
-	close(fd);
-#if DEBUG == 1
-	fprintf(stderr, "fl_wrapper.so debug [%d]: end   of handle_file_access_after(\"%s\", \"%s\", xxx)\n",
+	orig_close(fd);
+#  if DEBUG == 1
+	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: end   of handle_file_access_after(\"%s\", \"%s\", xxx)\n",
 		getpid(), func, file);
-#endif
+#  endif
 }

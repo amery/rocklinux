@@ -756,27 +756,6 @@ unset i
 # empty docdir in it if the package build fails..
 flistdel="$flistdel|${docdir#$root/}"
 
-hook_eval prepare
-
-if [ "$download" = 1 ]
-then
-	download=0
-	while read l_cksum l_srctar l_url l_flags ; do
-		[ -z "$l_cksum" ] && continue 
-		x=`source_file l_cksum $l_srctar l_url $l_flags`
-		if [ ! -f $x ]; then
-			echo_status "File not found: ${x#$base/}"
-			download=1
-		fi
-	done < <( echo "$desc_D" | column_clean )
-	if [ "$download" = 1 ]; then
-		echo_status "Running ./scripts/Download for this package..."
-		echo_status "----- DOWNLOAD LOG -----"
-		echo; ./scripts/Download $xpkg; echo
-		echo_status "------------------------"
-	fi
-fi
-
 # define new abort function for errors while building
 #
 abort() {
@@ -786,6 +765,32 @@ abort() {
 }
 
 {
+    (
+	set -e
+	hook_eval prepare
+
+	mkdir -p "$builddir/archdir"
+
+	# Download archives files and link to them in $archdir.
+	while read l_cksum l_srctar l_url l_flags ; do
+		[ -z "$l_cksum" ] && continue
+		x=`source_file l_cksum $l_srctar l_url $l_flags`
+		if [ ! -f $x ]; then
+			if [ $download = 1 ] ; then
+				echo_status "Running ./scripts/Download for this package..."
+				echo_status "----- DOWNLOAD LOG -----"
+				echo; ./scripts/Download $xpkg; echo
+				echo_status "------------------------"
+				download=0
+			fi
+			if [ ! -f $x ]; then
+				echo "File not found: ${x#$base/}"
+				abort "Did you run ./scripts/Download for this package?"
+			fi
+		fi
+		ln -vs $x "$builddir/archdir/"
+	done < <( echo "$desc_D" | column_clean )
+
 	trap 'echo "Got SIGINT (Crtl-C). Aborting build." ; exit 1' INT
 	exec < /dev/null
 
@@ -863,32 +868,14 @@ abort() {
                  strace_pid=$! ; sleep 1 ; cd $base
 	fi
 
-	(
-		set -e
-
-		mkdir -p "$builddir/archdir"
-		while read l_cksum l_srctar l_url l_flags ; do
-			[ -z "$l_cksum" ] && continue 
-			x=`source_file l_cksum $l_srctar l_url $l_flags`
-			if [ ! -f $x ]; then
-				echo "File not found: ${x#$base/}"
-				echo "Did you run ./scripts/Download for this package?"
-				false
-			fi
-			ln -vs $x "$builddir/archdir/"
-		done < <( echo "$desc_D" | column_clean )
-
-		echo "Running main build function '$mainfunction' ..."
-		if [ $xtrace -eq 1 -o $ROCKCFG_XTRACE -eq 1 ] ;	then
-			PS4=$'=[$FUNCNAME:$LINENO (last \\\$?=$?)> ' ; set -o xtrace
-			cd "$builddir" ; eval "$mainfunction"
-			set +o xtrace
-		else
-			cd "$builddir" ; eval "$mainfunction"
-		fi
-		touch $root/var/adm/logs/$stagelevel-$xpkg.log
-	)
-	[ ! -f $root/var/adm/logs/$stagelevel-$xpkg.log ] && abort
+	echo "Running main build function '$mainfunction' ..."
+	if [ $xtrace -eq 1 -o $ROCKCFG_XTRACE -eq 1 ] ;	then
+		PS4=$'=[$FUNCNAME:$LINENO (last \\\$?=$?)> ' ; set -o xtrace
+		cd "$builddir" ; eval "$mainfunction"
+		set +o xtrace
+	else
+		cd "$builddir" ; eval "$mainfunction"
+	fi
 
 	hook_eval postinstall
 
@@ -1056,8 +1043,10 @@ abort() {
 			done
 		} | sort -u > var/adm/flists/$spkg
 
-		echo "<$spkg> Creating package dependencies file ..."
-		sed "s,^[^ ]*,$spkg:," < "$builddir/dependencies.txt" > var/adm/dependencies/$spkg
+		if [ -f "$builddir/dependencies.txt" ] ; then
+			echo "<$spkg> Creating package dependencies file ..."
+			sed "s,^[^ ]*,$spkg:," < "$builddir/dependencies.txt" > var/adm/dependencies/$spkg
+		fi
 
 		echo "<$spkg> Creating package description ..."
 		#
@@ -1095,7 +1084,7 @@ EOT
 		{
 		    echo "[CONFIG] ${ROCKCFG_ID#*-}"
 		    while read x; do
-			if [ "${x#\[}" != "$x" ]; then
+			if [ "${x#\[}" != "$x" ]; then # "]}"
 			    x="`echo ${x// /|} | tr -d '[]'`"
 			    y="${x%%|*}" ; x="(${x%|(*)})"
 			    case "$y" in
@@ -1196,11 +1185,17 @@ EOT
 
 		[ $found_errors != 0 ] && abort
 	fi
+	touch $root/var/adm/logs/$stagelevel-$xpkg.log
 
 	echo "Finished building $pkg=$xpkg."
+	hook_eval finish
+    )
+
+    if [ ! -f $root/var/adm/logs/$stagelevel-$xpkg.log ] ; then
+	abort
+    fi
 
 } 2>&1 | {
-
 	trap '' INT
 
 	echo_status "Building. Writing output to" \
@@ -1212,8 +1207,6 @@ EOT
 		cat > $root/var/adm/logs/$stagelevel-$xpkg.out
 	fi
 }
-
-hook_eval finish
 
 if [ $update = 1 ] ; then
 	echo_status "Restoring backup of old package data."

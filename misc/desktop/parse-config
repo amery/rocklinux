@@ -120,4 +120,4 @@ postflist_desktop() {
 	done
 }
 
-hook_add postflist 5 "[ \"\$desktopauto\" = 1 ] && postflist_desktop"
+hook_add postflist 5 "[ \"\$desktopauto\" = 1 ] && postflist_desktop || true"

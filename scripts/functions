@@ -635,7 +635,7 @@ build_this_package() {
 				cut -f2 | sed 's,.\(t\?\)\(gz\|Z\)$,.\1bz2,' )
 			if [ -z "$xsourceballs" ] ; then
 				echo "Can't auto-detect srctar for package '$xpkg'!"
-				false
+				[ $autoextract = 1 ] && false
 			fi
 		else
 			xsourceballs="$srctar"

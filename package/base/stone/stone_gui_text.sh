@@ -79,7 +79,7 @@ gui_yesno() {
 		fi
 	done
 
-	[ "$input" = "[y]" ] && return 0
+	[ "$y" = "[y]" ] && return 0
 	return 1
 }
 

@@ -102,6 +102,7 @@ while read x ; do
 			# this is not a typo! desc_V contains all [V] tags newline separated
 		fi
 		tmpfile=`mktemp` ; tmpfile2=`mktemp`
+		[ "$oldver" == "$newver" ] && continue
 		echo "Upgrade Patch for $pkg ($pkgdir): $oldver -> $newver"
 		sed "s/${oldver//./\\.}/$newver/g" < $pkgdir/$pkg.desc | \
 		sed "s/^\[\(D\|DOWN\|DOWNLOAD\)\] [0-9]\+/[\1] 0/" > $tmpfile

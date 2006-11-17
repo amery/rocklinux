@@ -786,8 +786,10 @@ download_file_now() {
 }
 
 list_dtags() {
-	{ 
-		descparser package/*/*/*.desc | grep '^\[D\] '
+	{
+		# Split the long list of .desc files into smaller chunks here.
+		find package -name "*.desc" | \
+		while read x ; do descparser $x ; done | grep '^\[D\] '
 		grep -h '^[X0-9]' target/*/download.txt | sed 's,^,[D] ,' 
 		grep -h '^[X0-9]' target/*/*/download.txt | sed 's,^,[D] ,' 
 	} | column_clean

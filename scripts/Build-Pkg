@@ -767,6 +767,12 @@ abort() {
 {
     (
 	set -e
+
+	if [ $xtrace -eq 1 -o $ROCKCFG_XTRACE -eq 1 ] ;	then
+		PS4=$'=[$FUNCNAME:$LINENO (last \\\$?=$?)> '
+		set -o xtrace
+	fi
+
 	hook_eval prepare
 
 	mkdir -p "$builddir/archdir"
@@ -869,13 +875,7 @@ abort() {
 	fi
 
 	echo "Running main build function '$mainfunction' ..."
-	if [ $xtrace -eq 1 -o $ROCKCFG_XTRACE -eq 1 ] ;	then
-		PS4=$'=[$FUNCNAME:$LINENO (last \\\$?=$?)> ' ; set -o xtrace
-		cd "$builddir" ; eval "$mainfunction"
-		set +o xtrace
-	else
-		cd "$builddir" ; eval "$mainfunction"
-	fi
+	cd "$builddir" ; eval "$mainfunction"
 
 	hook_eval postinstall
 

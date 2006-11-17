@@ -1,0 +1,24 @@
+diff -dur gdl-0.6.1/gdl/Makefile.in build/crystal-distro-TRUNK-x86-pentium-mmx-32-crystal-expert/gdl-0.6.1/gdl/Makefile.in
+--- gdl-0.6.1/gdl/Makefile.in	2006-05-15 20:00:52.000000000 +0200
++++ build/crystal-distro-TRUNK-x86-pentium-mmx-32-crystal-expert/gdl-0.6.1/gdl/Makefile.in	2006-10-24 14:09:10.000000000 +0200
+@@ -340,7 +340,7 @@
+ 	$(XML_LIBS)
+ 
+ test_dock_sources = test-dock.c
+-test_dock_LDADD = libgdl-1.la $(XML_LIBS)
++test_dock_LDADD = libgdl-1.la $(XML_LIBS) -L/opt/gnome2/lib libgdl-1.la -Wl,-rpath -Wl,/opt/gnome2/lib -lgtk-x11-2.0 -lgdk-x11-2.0 -lcairo -lpangoft2-1.0 -latk-1.0  -lgobject-2.0 -lgmodule-2.0 -lglib-2.0 -lpango-1.0 -lpangocairo-1.0 -lgnome-2 -lbonobo-2 -lORBitCosNaming-2 -lbonobo-activation  -lgnomevfs-2 -lgdk_pixbuf-2.0 -lgconf-2 -lORBit-2 -lgthread-2.0 -lbonoboui-2 -lglade-2.0 -lgnomeui-2
+ libgdlincludedir = $(includedir)/libgdl-1.0/gdl
+ libgdlinclude_HEADERS = \
+ 	$(libgdl_headers) \
+@@ -374,9 +374,9 @@
+ 	gdl-data-row.c \
+ 	test-dataview.c
+ 
+-test_dataview_LDADD = libgdl-1.la
++test_dataview_LDADD = libgdl-1.la -L/opt/gnome2/lib libgdl-1.la -Wl,-rpath -Wl,/opt/gnome2/lib -lgtk-x11-2.0 -lgdk-x11-2.0 -lcairo -lpangoft2-1.0 -latk-1.0  -lgobject-2.0 -lgmodule-2.0 -lglib-2.0 -lpango-1.0 -lpangocairo-1.0 -lgnome-2 -lbonobo-2 -lORBitCosNaming-2 -lbonobo-activation  -lgnomevfs-2 -lgdk_pixbuf-2.0 -lgconf-2 -lORBit-2 -lgthread-2.0 -lbonoboui-2 -lglade-2.0 -lgnomeui-2
+ test_combo_button_SOURCES = test-combo-button.c
+-test_combo_button_LDADD = libgdl-1.la
++test_combo_button_LDADD = libgdl-1.la -L/opt/gnome2/lib libgdl-1.la -Wl,-rpath -Wl,/opt/gnome2/lib -lgtk-x11-2.0 -lgdk-x11-2.0 -lcairo -lpangoft2-1.0 -latk-1.0  -lgobject-2.0 -lgmodule-2.0 -lglib-2.0 -lpango-1.0 -lpangocairo-1.0 -lgnome-2 -lbonobo-2 -lORBitCosNaming-2 -lbonobo-activation  -lgnomevfs-2 -lgdk_pixbuf-2.0 -lgconf-2 -lORBit-2 -lgthread-2.0 -lbonoboui-2 -lglade-2.0 -lgnomeui-2
+ all: $(BUILT_SOURCES)
+ 	$(MAKE) $(AM_MAKEFLAGS) all-am
+ 

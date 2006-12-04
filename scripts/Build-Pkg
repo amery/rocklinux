@@ -764,6 +764,9 @@ abort() {
 	false
 }
 
+# FD 202 can be used to write output to console instead of build log
+exec 202>&1
+
 {
     (
 	set -e
@@ -772,6 +775,9 @@ abort() {
 		PS4=$'=[$FUNCNAME:$LINENO (last \\\$?=$?)> '
 		set -o xtrace
 	fi
+
+	trap 'echo "Got SIGINT (Crtl-C). Aborting build." ; exit 1' INT
+	exec < /dev/null
 
 	hook_eval prepare
 
@@ -788,7 +794,7 @@ abort() {
 				echo; ./scripts/Download $xpkg; echo
 				echo_status "------------------------"
 				download=0
-			fi
+			fi >&202 2>&1
 			if [ ! -f $x ]; then
 				echo "File not found: ${x#$base/}"
 				abort "Did you run ./scripts/Download for this package?"
@@ -797,8 +803,8 @@ abort() {
 		ln -vs $x "$builddir/archdir/"
 	done < <( echo "$desc_D" | column_clean )
 
-	trap 'echo "Got SIGINT (Crtl-C). Aborting build." ; exit 1' INT
-	exec < /dev/null
+	echo_status "Building. Writing output to" \
+	            "\$root/var/adm/logs/$stagelevel-$xpkg.out" >&202
 
 	# Makes debugging build problems easier
 	#
@@ -1197,9 +1203,6 @@ EOT
 
 } 2>&1 | {
 	trap '' INT
-
-	echo_status "Building. Writing output to" \
-	            "\$root/var/adm/logs/$stagelevel-$xpkg.out"
 
 	if [ "$ROCKCFG_VERBOSE" = 1 -o "$verbose" = 1 ] ; then
 		tee $root/var/adm/logs/$stagelevel-$xpkg.out

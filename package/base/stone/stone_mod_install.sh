@@ -188,8 +188,7 @@ This dialog allows you to modify your discs partition layout and to create files
 
 		# protect for the case no discs are present ...
 		if [ -e /dev/discs ] ; then
-		  for x in $( cd /dev/discs
-		            ls -l */disc | grep ' -> ' | cut -f4- -d/ ; )
+		  for x in $( cd /dev/ ; ls discs/*/disc 2> /dev/null )
 		  do
 			disk_add ${x%/disc}
 		  done

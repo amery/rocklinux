@@ -65,6 +65,7 @@ pkgfilter sed '
 / base / !  { s/^X /O /; p; d; };		/^. -----/ { s/^X /O /; p; d; };
 
 # Disable even more packages we do not need
+/ automake=automake17 /	{ s/^X /O /; p; d; };	/ automake=automake18/	{ s/^X /O /; p; d; };
 / gcc2 /	{ s/^X /O /; p; d; };	/ joe /		{ s/^X /O /; p; d; };
 / gdbm /	{ s/^X /O /; p; d; };	/ pam /         { s/^X /O /; p; d; };
 / prelink /	{ s/^X /O /; p; d; };	/ ccache /	{ s/^X /O /; p; d; };

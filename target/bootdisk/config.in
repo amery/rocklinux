@@ -50,7 +50,7 @@ pkgfilter sed '
 # Select some non-base packages
 / lzo /		{ p; d; };
 
-# Select some packages explicitely (architectures)
+# Select some packages explicitly (architectures)
 / bin86 /	{ p; d; };	/ cpuburn /	{ p; d; };
 / grub /	{ p; d; };	/ lilo /	{ p; d; };
 / memtest86 /	{ p; d; };	/ aboot /	{ p; d; };
@@ -70,6 +70,7 @@ pkgfilter sed '
 / prelink /	{ s/^X /O /; p; d; };	/ ccache /	{ s/^X /O /; p; d; };
 / cracklib /	{ s/^X /O /; p; d; };	/ hotplug /	{ s/^X /O /; p; d; };
 / bash=bash3 /	{ s/^X /O /; p; d; };	/ pdksh /	{ s/^X /O /; p; d; };
+/ dietlibc /	{ s/^X /O /; p; d; };
 '
 
 ROCKCFGSET_CREATE_TARBZ2=1

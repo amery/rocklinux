@@ -14,136 +14,135 @@
 #
 
 # workaround for devices which do not report media changes
-BUS=="ide", KERNEL=="hd[a-z]", SYSFS{removable}=="1", \
-	ENV{ID_MODEL}=="IOMEGA_ZIP*",	NAME="%k", OPTIONS+="all_partitions"
+BUS=="ide", KERNEL=="hd[a-z]", ATTR{removable}=="1", \
+	ENV{ID_MODEL}=="IOMEGA_ZIP*", OPTIONS+="all_partitions"
 
 # IDE devices
-BUS=="ide", KERNEL=="hd[a-z]*", PROGRAM="/lib/udev/ide-devfs.sh %k %b %n", \
- 				NAME="%c{1}", SYMLINK+="%k %c{2}", GROUP="%c{3}"
+BUS=="ide", KERNEL=="hd[a-z]*", PROGRAM="ide-devfs.sh %k %b %n", \
+ 				SYMLINK+="%c{1} %c{2}", GROUP="%c{3}"
 
 # SCSI devices
-BUS=="scsi", PROGRAM="/lib/udev/scsi-devfs.sh %k %b %n", NAME="%c{1}", SYMLINK="%k %c{2}"
+BUS=="scsi", PROGRAM="scsi-devfs.sh %k %b %n", SYMLINK+="%c{1} %c{2}"
 
 # RAID controllers
-KERNEL=="cciss!*|ida!*|rd!*", PROGRAM="/lib/udev/raid-devfs.sh %k", \
-					NAME="%c{1}", SYMLINK+="%k"
+KERNEL=="cciss!*|ida!*|rd!*", PROGRAM="raid-devfs.sh %k", \
+					SYMLINK+="%c{1}"
 
 # other block devices
-KERNEL=="md[0-9]*",			NAME="md/%n",
-KERNEL=="loop[0-9]*",			NAME="loop/%n"
-KERNEL=="ram[0-9]*",			NAME="rd/%n"
+KERNEL=="md[0-9]*",			SYMLINK+="md/%n"
+KERNEL=="loop[0-9]*",			SYMLINK+="loop/%n"
+KERNEL=="ram[0-9]*",			SYMLINK+="rd/%n"
 
 # USB devices
-BUS=="usb", KERNEL=="auer[0-9]*",	NAME="usb/%k"
-BUS=="usb", KERNEL=="cpad[0-9]*",	NAME="usb/%k"
-BUS=="usb", KERNEL=="dabusb*",		NAME="usb/%k"
-BUS=="usb", KERNEL=="hiddev*",		NAME="usb/%k"
-BUS=="usb", KERNEL=="legousbtower*",	NAME="usb/%k"
-BUS=="usb", KERNEL=="lp[0-9]*",		NAME="usb/%k"
-BUS=="usb", KERNEL=="ttyUSB*", SYSFS{product}=="Palm Handheld*", \
+BUS=="usb", KERNEL=="auer[0-9]*",	SYMLINK+="usb/%k"
+BUS=="usb", KERNEL=="cpad[0-9]*",	SYMLINK+="usb/%k"
+BUS=="usb", KERNEL=="dabusb*",		SYMLINK+="usb/%k"
+BUS=="usb", KERNEL=="hiddev*",		SYMLINK+="usb/%k"
+BUS=="usb", KERNEL=="legousbtower*",	SYMLINK+="usb/%k"
+BUS=="usb", KERNEL=="lp[0-9]*",		SYMLINK+="usb/%k"
+BUS=="usb", KERNEL=="ttyUSB*", ATTR{product}=="Palm Handheld*", \
 					SYMLINK+="pilot"
 
 # usbfs-like devices
 SUBSYSTEM=="usb_device",	PROGRAM="/bin/sh -c 'K=%k; K=$${K#usbdev}; B=$${K%%%%.*}; D=$${K#*.}; echo bus/usb/$$B/$$D'", \
-				NAME="%c"
+				SYMLINK+="%c"
 
 # serial devices
-KERNEL=="ttyS[0-9]*",		NAME="tts/%n"
-KERNEL=="ttyUSB[0-9]*",		NAME="tts/USB%n"
-KERNEL=="rfcomm[0-9]*",		NAME="bluetooth/rfcomm/%n",
-KERNEL=="capi",			NAME="capi20", SYMLINK+="isdn/capi20"
-KERNEL=="capi[0-9]*",		NAME="capi/%n"
+KERNEL=="ttyS[0-9]*",		SYMLINK+="tts/%n"
+KERNEL=="ttyUSB[0-9]*",		SYMLINK+="tts/USB%n"
+KERNEL=="rfcomm[0-9]*",		SYMLINK+="bluetooth/rfcomm/%n",
+KERNEL=="capi",			SYMLINK+="capi20", SYMLINK+="isdn/capi20"
+KERNEL=="capi[0-9]*",		SYMLINK+="capi/%n"
 
 # vc devices
-KERNEL=="tty[0-9]*",		NAME="vc/%n"
-KERNEL=="vcs",			NAME="vcc/0"
-KERNEL=="vcs[0-9]*",		NAME="vcc/%n"
-KERNEL=="vcsa",			NAME="vcc/a0"
-KERNEL=="vcsa[0-9]*",		NAME="vcc/a%n"
+KERNEL=="tty[0-9]*",		SYMLINK+="vc/%n"
+KERNEL=="vcs",			SYMLINK+="vcc/0"
+KERNEL=="vcs[0-9]*",		SYMLINK+="vcc/%n"
+KERNEL=="vcsa",			SYMLINK+="vcc/a0"
+KERNEL=="vcsa[0-9]*",		SYMLINK+="vcc/a%n"
 
 # video devices
-KERNEL=="video[0-9]*",		NAME="v4l/%k"
-KERNEL=="radio[0-9]*",		NAME="v4l/%k"
-KERNEL=="vbi[0-9]*",		NAME="v4l/%k"
-KERNEL=="vtx[0-9]*",		NAME="v4l/%k"
-KERNEL=="dvb*",			PROGRAM="/bin/sh -c 'KNAME=%k; KNAME=$${KNAME#dvb}; A=$${KNAME%%%%.*}; D=$${KNAME#*.}; echo dvb/adapter$$A/$$D'", \
-				NAME="%c"
-KERNEL=="fb[0-9]*",		NAME="fb/%n"
-KERNEL=="card[0-9]*",		NAME="dri/%k"
+KERNEL=="video[0-9]*",		SYMLINK+="v4l/%k"
+KERNEL=="radio[0-9]*",		SYMLINK+="v4l/%k"
+KERNEL=="vbi[0-9]*",		SYMLINK+="v4l/%k"
+KERNEL=="vtx[0-9]*",		SYMLINK+="v4l/%k"
+KERNEL=="dvb*",			PROGRAM="/bin/sh -c 'KSYMLINK+=%k; KSYMLINK+=$${KNAME#dvb}; A=$${KNAME%%%%.*}; D=$${KNAME#*.}; echo dvb/adapter$$A/$$D'", \
+				SYMLINK+="%c"
+KERNEL=="fb[0-9]*",		SYMLINK+="fb/%n"
+KERNEL=="card[0-9]*",		SYMLINK+="dri/%k"
 
 # misc devices
-KERNEL=="apm_bios",		NAME="misc/%k",
-KERNEL=="agpgart",		NAME="misc/%k"
-KERNEL=="hw_random",		NAME="hwrng"
-KERNEL=="nvram",		NAME="misc/%k"
-KERNEL=="psaux",		NAME="misc/%k"
-KERNEL=="rtc",			NAME="misc/%k"
-KERNEL=="tun",			NAME="net/%k"
+KERNEL=="apm_bios",		SYMLINK+="misc/%k",
+KERNEL=="agpgart",		SYMLINK+="misc/%k"
+KERNEL=="hw_random",		SYMLINK+="hwrng"
+KERNEL=="nvram",		SYMLINK+="misc/%k"
+KERNEL=="psaux",		SYMLINK+="misc/%k"
+KERNEL=="rtc",			SYMLINK+="misc/%k"
+KERNEL=="tun",			SYMLINK+="net/%k"
 
 # printers and parallel devices
-KERNEL=="lp[0-9]*",		NAME="printers/%n"
-KERNEL=="parport[0-9]*",	NAME="parports/%n"
+KERNEL=="lp[0-9]*",		SYMLINK+="printers/%n"
+KERNEL=="parport[0-9]*",	SYMLINK+="parports/%n"
 
-KERNEL=="i2c-[0-9]*",		NAME="i2c/%n"
-KERNEL=="fd[0-9]*",		NAME="floppy/%n"
+KERNEL=="i2c-[0-9]*",		SYMLINK+="i2c/%n"
+KERNEL=="fd[0-9]*",		SYMLINK+="floppy/%n"
 
-KERNEL=="cdemu[0-9]*",		NAME="cdemu/%n"
-KERNEL=="pktcdvd[0-9]*",	NAME="pktcdvd/%n"
-KERNEL=="pktcdvd",		NAME="pktcdvd/control"
+KERNEL=="cdemu[0-9]*",		SYMLINK+="cdemu/%n"
+KERNEL=="pktcdvd[0-9]*",	SYMLINK+="pktcdvd/%n"
+KERNEL=="pktcdvd",		SYMLINK+="pktcdvd/control"
 
-KERNEL=="cpu[0-9]*",		NAME="cpu/%n/cpuid"
-KERNEL=="msr[0-9]*",		NAME="cpu/%n/msr"
-KERNEL=="microcode",		NAME="cpu/microcode", SYMLINK="misc/microcode"
+KERNEL=="cpu[0-9]*",		SYMLINK+="cpu/%n/cpuid"
+KERNEL=="msr[0-9]*",		SYMLINK+="cpu/%n/msr"
+KERNEL=="microcode",		SYMLINK+="cpu/microcode misc/microcode"
 
-KERNEL=="umad*",		NAME="infiniband/%k"
-KERNEL=="issm*",		NAME="infiniband/%k"
-KERNEL=="uverbs*",		NAME="infiniband/%k"
-KERNEL=="ucm*",			NAME="infiniband/%k"
+KERNEL=="umad*",		SYMLINK+="infiniband/%k"
+KERNEL=="issm*",		SYMLINK+="infiniband/%k"
+KERNEL=="uverbs*",		SYMLINK+="infiniband/%k"
+KERNEL=="ucm*",			SYMLINK+="infiniband/%k"
 
 # sound devices
-KERNEL=="controlC[0-9]*",	NAME="snd/%k"
-KERNEL=="hwC[D0-9]*",		NAME="snd/%k"
-KERNEL=="pcmC[D0-9cp]*",	NAME="snd/%k"
-KERNEL=="midiC[D0-9]*",		NAME="snd/%k"
-KERNEL=="timer",		NAME="snd/%k"
-KERNEL=="seq",			NAME="snd/%k"
-KERNEL=="audio*",		NAME="sound/%k"
-KERNEL=="dsp*",			NAME="sound/%k"
-KERNEL=="adsp*",		NAME="sound/%k"
-KERNEL=="midi*",		NAME="sound/%k"
-KERNEL=="mixer*",		NAME="sound/%k"
-KERNEL=="sequencer*",		NAME="sound/%k"
-KERNEL=="amidi*",		NAME="sound/%k"
-KERNEL=="dmmidi*",		NAME="sound/%k"
-KERNEL=="admmidi*",		NAME="sound/%k"
+KERNEL=="controlC[0-9]*",	SYMLINK+="snd/%k"
+KERNEL=="hwC[D0-9]*",		SYMLINK+="snd/%k"
+KERNEL=="pcmC[D0-9cp]*",	SYMLINK+="snd/%k"
+KERNEL=="midiC[D0-9]*",		SYMLINK+="snd/%k"
+KERNEL=="timer",		SYMLINK+="snd/%k"
+KERNEL=="seq",			SYMLINK+="snd/%k"
+KERNEL=="audio*",		SYMLINK+="sound/%k"
+KERNEL=="dsp*",			SYMLINK+="sound/%k"
+KERNEL=="adsp*",		SYMLINK+="sound/%k"
+KERNEL=="midi*",		SYMLINK+="sound/%k"
+KERNEL=="mixer*",		SYMLINK+="sound/%k"
+KERNEL=="sequencer*",		SYMLINK+="sound/%k"
+KERNEL=="amidi*",		SYMLINK+="sound/%k"
+KERNEL=="dmmidi*",		SYMLINK+="sound/%k"
+KERNEL=="admmidi*",		SYMLINK+="sound/%k"
 
 # ieee1394 devices       
-KERNEL=="dv1394*",		NAME="dv1394/%n"
-KERNEL=="video1394*",		NAME="video1394/%n"
+KERNEL=="dv1394*",		SYMLINK+="dv1394/%n"
+KERNEL=="video1394*",		SYMLINK+="video1394/%n"
 
 # input devices
-KERNEL=="mice",			NAME="input/%k"
-KERNEL=="mouse[0-9]*",		NAME="input/%k"
-KERNEL=="event[0-9]*",		NAME="input/%k"
-KERNEL=="js[0-9]*",		NAME="input/%k"
-KERNEL=="ts[0-9]*",		NAME="input/%k"
-KERNEL=="uinput",		NAME="input/%k"
+KERNEL=="mice",			SYMLINK+="input/%k"
+KERNEL=="mouse[0-9]*",		SYMLINK+="input/%k"
+KERNEL=="event[0-9]*",		SYMLINK+="input/%k"
+KERNEL=="js[0-9]*",		SYMLINK+="input/%k"
+KERNEL=="ts[0-9]*",		SYMLINK+="input/%k"
+KERNEL=="uinput",		SYMLINK+="input/%k"
 
 # Zaptel
-KERNEL=="zapctl",		NAME="zap/ctl"
-KERNEL=="zaptimer",		NAME="zap/timer"
-KERNEL=="zapchannel",		NAME="zap/channel"
-KERNEL=="zappseudo",		NAME="zap/pseudo"
-KERNEL=="zap[0-9]*",		NAME="zap/%n"
+KERNEL=="zapctl",		SYMLINK+="zap/ctl"
+KERNEL=="zaptimer",		SYMLINK+="zap/timer"
+KERNEL=="zapchannel",		SYMLINK+="zap/channel"
+KERNEL=="zappseudo",		SYMLINK+="zap/pseudo"
+KERNEL=="zap[0-9]*",		SYMLINK+="zap/%n"
 
 # AOE character devices
-SUBSYSTEM=="aoe", KERNEL=="discover",	NAME="etherd/%k"
-SUBSYSTEM=="aoe", KERNEL=="err",	NAME="etherd/%k"
-SUBSYSTEM=="aoe", KERNEL=="interfaces",	NAME="etherd/%k"
+SUBSYSTEM=="aoe", KERNEL=="discover",	SYMLINK+="etherd/%k"
+SUBSYSTEM=="aoe", KERNEL=="err",	SYMLINK+="etherd/%k"
+SUBSYSTEM=="aoe", KERNEL=="interfaces",	SYMLINK+="etherd/%k"
 
 # device mapper creates its own device nodes, so ignore these
-KERNEL=="dm-[0-9]*",		NAME=""
-KERNEL=="device-mapper",	NAME="mapper/control"
+# KERNEL=="dm-[0-9]*",		SYMLINK+=""
+KERNEL=="device-mapper",	SYMLINK+="mapper/control"
 
-ACTION=="add", SUBSYSTEM=="firmware", RUN+="/lib/udev/firmware_helper"
-
+ACTION=="add", SUBSYSTEM=="firmware", RUN+="firmware_helper"

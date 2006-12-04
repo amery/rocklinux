@@ -2,18 +2,18 @@
 # mostly examples, we're missing lots of groups.
 #
 SUBSYSTEM=="block",				GROUP="disk"
-# SUBSYSTEM=="block", SYSFS{removable}=="1",	GROUP="floppy"
+# SUBSYSTEM=="block", ATTR{removable}=="1",	GROUP="floppy"
 
 # IDE devices
-BUS=="ide", KERNEL=="hd[a-z]", SYSFS{removable}=="1", \
+BUS=="ide", KERNEL=="hd[a-z]", ATTR{removable}=="1", \
   PROGRAM="/bin/cat /proc/ide/%k/media", RESULT=="cdrom*",	GROUP="cdrom"
 # BUS=="ide", KERNEL=="ht[0-9]*",					GROUP="tape"
 # BUS=="ide", KERNEL=="nht[0-9]*",				GROUP="tape"
 
 # SCSI devices
-# BUS=="scsi", SYSFS{type}=="1",	GROUP="tape"
-BUS=="scsi", SYSFS{type}=="5",	GROUP="cdrom"
-# BUS=="scsi", SYSFS{type}=="6",	GROUP="scanner"
+# BUS=="scsi", ATTR{type}=="1",	GROUP="tape"
+BUS=="scsi", ATTR{type}=="5",	GROUP="cdrom"
+# BUS=="scsi", ATTR{type}=="6",	GROUP="scanner"
 
 # USB devices
 # BUS=="usb", KERNEL=="legousbtower*", MODE="0666"
@@ -73,7 +73,7 @@ KERNEL=="dv1394*",	GROUP="video"
 KERNEL=="video1394*",	GROUP="video"
 
 # input devices
-KERNEL=="event[0-9]*",	PROGRAM="/lib/udev/inputdev.sh %k", \
+KERNEL=="event[0-9]*",	PROGRAM="inputdev.sh %k", \
 			RESULT=="inputdev", MODE="0664"
 KERNEL=="js[0-9]*",	MODE="0664"
 

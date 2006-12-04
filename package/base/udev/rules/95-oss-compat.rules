@@ -1,5 +1,5 @@
 # add OSS compatibility modules for sound devices
-# ACTION=="add",	SUBSYSTEM=="sound"	RUN+="/lib/udev/load-oss-compat.sh"
+# ACTION=="add",	SUBSYSTEM=="sound"	RUN+="load-oss-compat.sh"
 ACTION=="add",	SUBSYSTEM=="sound",	KERNEL=="pcmC[0-9]*"	\
 	RUN+="/bin/sh -c 'test -e /sys/class/sound/dsp || /sbin/modprobe snd-pcm-oss'"
 ACTION=="add",	SUBSYSTEM=="sound",	KERNEL=="seq"	\

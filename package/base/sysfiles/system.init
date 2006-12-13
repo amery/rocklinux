@@ -142,8 +142,8 @@ dnl
 dnl
     block_split(`Setting up loopback networking.')
 	check(`ip link set lo up')
-	check(`ip addr add 127.0.0.1/8 dev lo')
-	check(`ip route add 127/8 dev lo')
+	ip addr add 127.0.0.1/8 dev lo
+	ip route add 127/8 dev lo
 dnl
     block_split(`Setting overflow UID and GID kernel parameters.')
 	check(`sysctl -w kernel.overflowuid=$(grep ^nobody: /etc/passwd | cut -f 3 -d:) > /dev/null')

@@ -23,6 +23,9 @@
 bool 'Also build add-on (non-CORE) packages' \
 				ROCKCFG_TARGET_CRYSTAL_BUILDADDONS 0
 
+bool 'Do NOT include documentation on ISO' \
+				ROCKCFG_TARGET_CRYSTAL_REMOVEDOCS 0
+
 if [ $ROCKCFG_TARGET_CRYSTAL_BUILDADDONS = 1 ]
 then
 	pkgfilter sed \

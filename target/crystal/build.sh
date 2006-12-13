@@ -13,8 +13,13 @@ mkdir -p build/${ROCKCFG_ID}/ROCK/pkgs_sel
 (cd build/${ROCKCFG_ID}/ROCK/pkgs/;
 	ls | xargs ln --target-directory="../pkgs_sel";)
 
-# :doc packages are nice but in most cases never used
-(cd build/${ROCKCFG_ID}/ROCK/pkgs_sel/; rm -f *:doc{-*,}.gem;)
+if [ "$ROCKCFG_TARGET_CRYSTAL_REMOVEDOCS" = 1 ]; then
+	# :doc packages are nice but in most cases never used
+	(
+		cd build/${ROCKCFG_ID}/ROCK/pkgs_sel/
+		rm -f *:doc{-*,}.gem
+	)
+fi
 
 # remove packages which haven't been built in stages 0-8
 if [ "$ROCKCFG_TARGET_CRYSTAL_BUILDADDONS" = 1 ]; then

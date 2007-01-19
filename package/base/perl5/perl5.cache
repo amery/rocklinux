@@ -20,33 +20,91 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142445866 Wed Mar 15 19:04:26 2006 (3)
-[TIMESTAMP] 1142690011 Sat Mar 18 14:53:31 2006 (9)
+[TIMESTAMP] 1168520275 Thu Jan 11 13:57:55 2007 (2)
+[TIMESTAMP] 1168523216 Thu Jan 11 14:46:56 2007 (3)
+[TIMESTAMP] 1168716049 Sat Jan 13 20:20:49 2007 (9) ERROR
+[TIMESTAMP] 1168957789 Tue Jan 16 15:29:49 2007 (9) ERROR
+[TIMESTAMP] 1169128082 Thu Jan 18 14:48:02 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 3-perl5.log 9-perl5.log
+[LOGS] 2-perl5.log 3-perl5.log 9-perl5.err
 
-[BUILDTIME] 24504 (3)
-[BUILDTIME] 31400 (9)
-[SIZE] 37.88 MB, 2192 files
+[BUILDTIME] 26732 (2)
+[BUILDTIME] 24863 (3)
+[BUILDTIME] 32589 (9) ERROR
+[BUILDTIME] 32786 (9) ERROR
+[BUILDTIME] 32796 (9) ERROR
+[SIZE] 33.49 MB, 1853 files
 
-[DEP] 00-dirtree bash2 bdb42 bdb42:dev binutils bzip2 coreutils diffutils
-[DEP] findutils gawk gcc34 gcc34:dev gdbm gdbm:dev glibc23 glibc23:dev
-[DEP] grep linux26-header:dev make mktemp rrdtool sed sysfiles tar tcsh
+[DEP] 00-dirtree bash2 bdb33 bdb44 bdb44:dev binutils bzip2 coreutils
+[DEP] cvm diffutils findutils gawk gcc40 gcc40:dev gdbm gdbm:dev glibc23
+[DEP] glibc23:dev grep linux-libc-headers:dev make mktemp netpbm nspr:dev
+[DEP] openssl:dev patch rrdtool sed sysfiles tar tcsh twoftpd ucspi-unix
 [DEP] util-linux
 
 [PROVIDES] APItest.so B.so Base64.so Byte.so ByteLoader.so C.so CN.so
 [PROVIDES] Call.so Cwd.so DB_File.so DProf.so Dumper.so DynaLoader.a
 [PROVIDES] EBCDIC.so Encode.so Fcntl.so GDBM_File.so Glob.so HiRes.so
-[PROVIDES] Hostname.so IO.so JP.so KR.so Langinfo.so MD5.so Normalize.so
-[PROVIDES] Opcode.so POSIX.so PPPort.so Peek.so SDBM_File.so Socket.so
-[PROVIDES] Storable.so Symbol.so SysV.so Syslog.so TW.so Typemap.so
-[PROVIDES] Unicode.so Util.so a2p attrs.so c2ph cpan dprofpp enc2xs
-[PROVIDES] encoding.so find2perl h2ph h2xs instmodsh libnetcfg libperl.a
-[PROVIDES] perl perl5.8.7 perlbug perlcc perldoc perlivp piconv pl2pm
-[PROVIDES] pod2html pod2latex pod2man pod2text pod2usage podchecker
+[PROVIDES] Hostname.so IO.so JP.so KR.so Langinfo.so MD5.so NDBM_File.so
+[PROVIDES] Normalize.so Opcode.so POSIX.so PPPort.so Peek.so SDBM_File.so
+[PROVIDES] Socket.so Storable.so Symbol.so SysV.so Syslog.so TW.so
+[PROVIDES] Typemap.so Unicode.so Util.so a2p attrs.so c2ph cpan dprofpp
+[PROVIDES] enc2xs encoding.so find2perl h2ph h2xs instmodsh libnetcfg
+[PROVIDES] libperl.a perl perl5.8.7 perlbug perlcc perldoc perlivp piconv
+[PROVIDES] pl2pm pod2html pod2latex pod2man pod2text pod2usage podchecker
 [PROVIDES] podselect prove psed pstruct re.so s2p scalar.so shared.so
 [PROVIDES] sperl5.8.7 splain suidperl threads.so via.so xsubpp
+
+[9-ERROR] /usr/include/sys/xattr.h -> /usr/include/sys/xattr.ph
+[9-ERROR] /usr/include/syscall.h -> /usr/include/syscall.ph
+[9-ERROR] /usr/include/sysexits.h -> /usr/include/sysexits.ph
+[9-ERROR] /usr/include/syslog.h -> /usr/include/syslog.ph
+[9-ERROR] /usr/include/tar.h -> /usr/include/tar.ph
+[9-ERROR] /usr/include/termio.h -> /usr/include/termio.ph
+[9-ERROR] /usr/include/termios.h -> /usr/include/termios.ph
+[9-ERROR] /usr/include/tgmath.h -> /usr/include/tgmath.ph
+[9-ERROR] /usr/include/thread_db.h -> /usr/include/thread_db.ph
+[9-ERROR] /usr/include/time.h -> /usr/include/time.ph
+[9-ERROR] /usr/include/ttyent.h -> /usr/include/ttyent.ph
+[9-ERROR] /usr/include/ucontext.h -> /usr/include/ucontext.ph
+[9-ERROR] /usr/include/ulimit.h -> /usr/include/ulimit.ph
+[9-ERROR] /usr/include/unistd.h -> /usr/include/unistd.ph
+[9-ERROR] /usr/include/ustat.h -> /usr/include/ustat.ph
+[9-ERROR] /usr/include/utime.h -> /usr/include/utime.ph
+[9-ERROR] /usr/include/utmp.h -> /usr/include/utmp.ph
+[9-ERROR] /usr/include/utmpx.h -> /usr/include/utmpx.ph
+[9-ERROR] /usr/include/values.h -> /usr/include/values.ph
+[9-ERROR] /usr/include/wait.h -> /usr/include/wait.ph
+[9-ERROR] /usr/include/wchar.h -> /usr/include/wchar.ph
+[9-ERROR] /usr/include/wctype.h -> /usr/include/wctype.ph
+[9-ERROR] /usr/include/wordexp.h -> /usr/include/wordexp.ph
+[9-ERROR] /usr/include/xlocale.h -> /usr/include/xlocale.ph
+[9-ERROR] Trying to copy the default documentation ...
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing /lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 2615 files for this package.
+[9-ERROR] Applying package split: 40 perl5:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[9-ERROR] Applying package split: 42 perl5:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 perl5:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <perl5> Creating flist file ...
+[9-ERROR] <perl5> Creating package dependencies file ...
+[9-ERROR] <perl5> Creating package description ...
+[9-ERROR] <perl5> Creating md5sum and cksum files ...
+[9-ERROR] <perl5:dev> Creating flist file ...
+[9-ERROR] <perl5:dev> Creating package dependencies file ...
+[9-ERROR] <perl5:dev> Creating package description ...
+[9-ERROR] <perl5:dev> Creating md5sum and cksum files ...
+[9-ERROR] <perl5:doc> Creating flist file ...
+[9-ERROR] <perl5:doc> Creating package dependencies file ...
+[9-ERROR] <perl5:doc> Creating package description ...
+[9-ERROR] <perl5:doc> Creating md5sum and cksum files ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] usr/share/man/man3/threads.3: openssl:dev perl5:dev
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] --- BUILD ERROR ---
 

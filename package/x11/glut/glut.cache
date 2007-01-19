@@ -20,21 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142462772 Wed Mar 15 23:46:12 2006 (5)
-[TIMESTAMP] 1142704695 Sat Mar 18 18:58:15 2006 (9)
+[TIMESTAMP] 1168543231 Thu Jan 11 20:20:31 2007 (5)
+[TIMESTAMP] 1168737449 Sun Jan 14 02:17:29 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-glut.log 9-glut.log
 
-[BUILDTIME] 5271 (5)
-[BUILDTIME] 6020 (9)
-[SIZE] 0.21 MB, 9 files
+[BUILDTIME] 5440 (5)
+[BUILDTIME] 6112 (9)
+[SIZE] 0.22 MB, 9 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] patch rrdtool sed sysfiles tar xorg xorg:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm findutils gawk gcc40 gcc40:dev gccmakedep glibc23
+[DEP] glibc23:dev grep imake inputproto:dev libx11 libx11:dev libxmu:dev
+[DEP] libxt linux-libc-headers:dev make mesalib:dev mktemp patch rrdtool
+[DEP] sed sysfiles tar xorg-cf-files xproto:dev
 
 [PROVIDES] libglut.so
 

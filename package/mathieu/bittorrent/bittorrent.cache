@@ -20,23 +20,27 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142588160 Fri Mar 17 10:36:00 2006 (5)
-[TIMESTAMP] 1142852523 Mon Mar 20 12:02:03 2006 (9)
+[TIMESTAMP] 1168648530 Sat Jan 13 01:35:30 2007 (5) ERROR
+[TIMESTAMP] 1168855029 Mon Jan 15 10:57:09 2007 (9) ERROR
+[TIMESTAMP] 1168949023 Tue Jan 16 13:03:43 2007 (5)
+[TIMESTAMP] 1168978946 Tue Jan 16 21:22:26 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-bittorrent.log 9-bittorrent.log
 
-[BUILDTIME] 1237 (5)
-[BUILDTIME] 1489 (9)
-[SIZE] 0.86 MB, 110 files
+[BUILDTIME] 790 (5) ERROR
+[BUILDTIME] 812 (9) ERROR
+[BUILDTIME] 2214 (5)
+[BUILDTIME] 2079 (9)
+[SIZE] 6.83 MB, 520 files
 
-[DEP] 00-dirtree bash2 bzip2 coreutils findutils gcc34 grep mktemp openbox
-[DEP] python rrdtool sed sysfiles tar
+[DEP] 00-dirtree bash2 bzip2 coreutils cvm findutils gawk gcc40 grep
+[DEP] mktemp python rrdtool sed sysfiles tar twisted zapping zopeinterface
 
-[PROVIDES] btdownloadcurses.py btdownloadgui.py btdownloadheadless.py
-[PROVIDES] btlaunchmany.py btlaunchmanycurses.py btmaketorrent.py
-[PROVIDES] btmaketorrentgui.py btreannounce.py btrename.py
-[PROVIDES] btshowmetainfo.py bttrack.py
+[PROVIDES] bittorrent bittorrent-console bittorrent-curses
+[PROVIDES] bittorrent-tracker changetracker-console launchmany-console
+[PROVIDES] launchmany-curses maketorrent maketorrent-console
+[PROVIDES] torrentinfo-console
 

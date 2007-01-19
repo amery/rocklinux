@@ -20,22 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142622340 Fri Mar 17 20:05:40 2006 (5)
-[TIMESTAMP] 1142889468 Mon Mar 20 22:17:48 2006 (9)
+[TIMESTAMP] 1168674522 Sat Jan 13 08:48:42 2007 (5) ERROR
+[TIMESTAMP] 1168882743 Mon Jan 15 18:39:03 2007 (9) ERROR
+[TIMESTAMP] 1168951294 Tue Jan 16 13:41:34 2007 (5) ERROR
+[TIMESTAMP] 1168980702 Tue Jan 16 21:51:42 2007 (9) ERROR
+[TIMESTAMP] 1169121597 Thu Jan 18 12:59:57 2007 (5) ERROR
+[TIMESTAMP] 1169150907 Thu Jan 18 21:08:27 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-drbd7.log 9-drbd7.log
+[LOGS] 5-drbd7.err 9-drbd7.err
 
-[BUILDTIME] 2739 (5)
-[BUILDTIME] 2981 (9)
-[SIZE] 0.87 MB, 17 files
+[BUILDTIME] 2159 (5) ERROR
+[BUILDTIME] 2232 (9) ERROR
+[BUILDTIME] 2236 (5) ERROR
+[BUILDTIME] 2229 (9) ERROR
+[BUILDTIME] 2244 (5) ERROR
+[BUILDTIME] 2224 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils
-[DEP] findutils flex gawk gcc34 gcc34:dev glibc23 glibc23:dev grep gzip
-[DEP] heartbeat linux26 linux26-header:dev linux26-source m4 make mktemp
-[DEP] module-init-tools patch perl5 rrdtool sed sysfiles tar
 
-[PROVIDES] drbdadm drbdsetup
+[5-ERROR] gcc-40 -o drbdadm drbdadm_scanner.o drbdadm_parser.o drbdadm_main.o drbdadm_adjust.o ../drbd/drbd_buildtag.o 
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/user'
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/scripts'
+[5-ERROR] Makefile:45: No special distribution INITD
+[5-ERROR] Makefile:46: setting INITD=/etc/init.d/ according to LSB
+[5-ERROR] make[1]: Nothing to be done for `all'.
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/scripts'
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/documentation'
+[5-ERROR] To (re)make the documentation: make doc
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/documentation'
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/drbd'
+[5-ERROR] 
+[5-ERROR]     Calling toplevel makefile of kernel source tree, which I believe is in
+[5-ERROR]     KDIR=/lib/modules/2.6.17.7-rock/build
+[5-ERROR] 
+[5-ERROR] test -f ../scripts/adjust_drbd_config_h.sh && \
+[5-ERROR] 	 KDIR=/lib/modules/2.6.17.7-rock/build /bin/sh ../scripts/adjust_drbd_config_h.sh
+[5-ERROR] 
+[5-ERROR]   Using unmodified drbd_config.h
+[5-ERROR] 
+[5-ERROR] make -C /lib/modules/2.6.17.7-rock/build SUBDIRS=/ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/drbd  modules
+[5-ERROR] make[2]: Entering directory `/usr/src/linux-2.6.17.7-rock'
+[5-ERROR] 
+[5-ERROR]   WARNING: Symbol version dump /usr/src/linux-2.6.17.7-rock/Module.symvers
+[5-ERROR]            is missing; modules will have no dependencies and modversions.
+[5-ERROR] 
+[5-ERROR]   CC [M]  /ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/drbd/drbd_sizeof_sanity_check.o
+[5-ERROR]   CC [M]  /ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/drbd/drbd_buildtag.o
+[5-ERROR]   CC [M]  /ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/drbd/drbd_bitmap.o
+[5-ERROR]   CC [M]  /ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/drbd/drbd_fs.o
+[5-ERROR] /ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/drbd/drbd_fs.c: In function 'drbd_ioctl_set_disk':
+[5-ERROR] /ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/drbd/drbd_fs.c:461: warning: comparison of distinct pointer types lacks a cast
+[5-ERROR]   CC [M]  /ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/drbd/drbd_proc.o
+[5-ERROR]   CC [M]  /ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/drbd/drbd_worker.o
+[5-ERROR]   CC [M]  /ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/drbd/drbd_receiver.o
+[5-ERROR]   CC [M]  /ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/drbd/drbd_req.o
+[5-ERROR]   CC [M]  /ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/drbd/drbd_actlog.o
+[5-ERROR]   CC [M]  /ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/drbd/lru_cache.o
+[5-ERROR]   CC [M]  /ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/drbd/drbd_main.o
+[5-ERROR] /ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/drbd/drbd_main.c: In function 'drbd_create_mempools':
+[5-ERROR] /ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/drbd/drbd_main.c:1544: error: 'SLAB_NO_REAP' undeclared (first use in this function)
+[5-ERROR] /ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/drbd/drbd_main.c:1544: error: (Each undeclared identifier is reported only once
+[5-ERROR] /ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/drbd/drbd_main.c:1544: error: for each function it appears in.)
+[5-ERROR] make[3]: *** [/ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/drbd/drbd_main.o] Error 1
+[5-ERROR] make[2]: *** [_module_/ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/drbd] Error 2
+[5-ERROR] make[2]: Leaving directory `/usr/src/linux-2.6.17.7-rock'
+[5-ERROR] make[1]: *** [kbuild] Error 2
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.drbd7.1169121572.22343.2270576875/drbd-0.7.17/drbd'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] gcc-40 -o drbdadm drbdadm_scanner.o drbdadm_parser.o drbdadm_main.o drbdadm_adjust.o ../drbd/drbd_buildtag.o 
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/user'
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/scripts'
+[9-ERROR] Makefile:45: No special distribution INITD
+[9-ERROR] Makefile:46: setting INITD=/etc/init.d/ according to LSB
+[9-ERROR] make[1]: Nothing to be done for `all'.
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/scripts'
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/documentation'
+[9-ERROR] To (re)make the documentation: make doc
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/documentation'
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/drbd'
+[9-ERROR] 
+[9-ERROR]     Calling toplevel makefile of kernel source tree, which I believe is in
+[9-ERROR]     KDIR=/lib/modules/2.6.17.7-rock/build
+[9-ERROR] 
+[9-ERROR] test -f ../scripts/adjust_drbd_config_h.sh && \
+[9-ERROR] 	 KDIR=/lib/modules/2.6.17.7-rock/build /bin/sh ../scripts/adjust_drbd_config_h.sh
+[9-ERROR] 
+[9-ERROR]   Using unmodified drbd_config.h
+[9-ERROR] 
+[9-ERROR] make -C /lib/modules/2.6.17.7-rock/build SUBDIRS=/ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/drbd  modules
+[9-ERROR] make[2]: Entering directory `/usr/src/linux-2.6.17.7-rock'
+[9-ERROR] 
+[9-ERROR]   WARNING: Symbol version dump /usr/src/linux-2.6.17.7-rock/Module.symvers
+[9-ERROR]            is missing; modules will have no dependencies and modversions.
+[9-ERROR] 
+[9-ERROR]   CC [M]  /ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/drbd/drbd_sizeof_sanity_check.o
+[9-ERROR]   CC [M]  /ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/drbd/drbd_buildtag.o
+[9-ERROR]   CC [M]  /ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/drbd/drbd_bitmap.o
+[9-ERROR]   CC [M]  /ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/drbd/drbd_fs.o
+[9-ERROR] /ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/drbd/drbd_fs.c: In function 'drbd_ioctl_set_disk':
+[9-ERROR] /ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/drbd/drbd_fs.c:461: warning: comparison of distinct pointer types lacks a cast
+[9-ERROR]   CC [M]  /ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/drbd/drbd_proc.o
+[9-ERROR]   CC [M]  /ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/drbd/drbd_worker.o
+[9-ERROR]   CC [M]  /ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/drbd/drbd_receiver.o
+[9-ERROR]   CC [M]  /ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/drbd/drbd_req.o
+[9-ERROR]   CC [M]  /ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/drbd/drbd_actlog.o
+[9-ERROR]   CC [M]  /ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/drbd/lru_cache.o
+[9-ERROR]   CC [M]  /ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/drbd/drbd_main.o
+[9-ERROR] /ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/drbd/drbd_main.c: In function 'drbd_create_mempools':
+[9-ERROR] /ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/drbd/drbd_main.c:1544: error: 'SLAB_NO_REAP' undeclared (first use in this function)
+[9-ERROR] /ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/drbd/drbd_main.c:1544: error: (Each undeclared identifier is reported only once
+[9-ERROR] /ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/drbd/drbd_main.c:1544: error: for each function it appears in.)
+[9-ERROR] make[3]: *** [/ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/drbd/drbd_main.o] Error 1
+[9-ERROR] make[2]: *** [_module_/ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/drbd] Error 2
+[9-ERROR] make[2]: Leaving directory `/usr/src/linux-2.6.17.7-rock'
+[9-ERROR] make[1]: *** [kbuild] Error 2
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.drbd7.1169150881.12951.3000052527/drbd-0.7.17/drbd'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

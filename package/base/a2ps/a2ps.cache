@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142484036 Thu Mar 16 05:40:36 2006 (5)
-[TIMESTAMP] 1142731471 Sun Mar 19 02:24:31 2006 (9)
+[TIMESTAMP] 1168562133 Fri Jan 12 01:35:33 2007 (5)
+[TIMESTAMP] 1168758906 Sun Jan 14 08:15:06 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-a2ps.log 9-a2ps.log
 
-[BUILDTIME] 6280 (5)
-[BUILDTIME] 6970 (9)
-[SIZE] 2.58 MB, 296 files
+[BUILDTIME] 6528 (5)
+[BUILDTIME] 7177 (9)
+[SIZE] 2.37 MB, 282 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils emacs file
-[DEP] findutils flex flex:dev gawk gcc34 gcc34:dev gettext glibc23
-[DEP] glibc23:dev grep linux26-header:dev m4 make mktemp net-tools patch
-[DEP] perl5 psutils rrdtool sed sysfiles tar texinfo xorg
+[DEP] 00-dirtree applewmproto bash2 binutils bzip2 coreutils cvm diffutils
+[DEP] emacs file findutils flex flex:dev gawk gcc40 gcc40:dev gettext
+[DEP] glibc23 glibc23:dev grep imake libx11 libxt linux-libc-headers:dev
+[DEP] m4 make mktemp net-tools netpbm patch perl5 psutils rrdtool sed
+[DEP] sysfiles tar texinfo twoftpd ucspi-unix xorg-cf-files
 
 [PROVIDES] a2ps card composeglyphs fixnt fixps liba2ps.a ogonkify pdiff
 [PROVIDES] psmandup psset texi2dvi4a2ps

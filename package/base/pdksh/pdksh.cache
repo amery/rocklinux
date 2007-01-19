@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142455160 Wed Mar 15 21:39:20 2006 (5)
-[TIMESTAMP] 1142692556 Sat Mar 18 15:35:56 2006 (9)
+[TIMESTAMP] 1168531932 Thu Jan 11 17:12:12 2007 (5)
+[TIMESTAMP] 1168721895 Sat Jan 13 21:58:15 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-pdksh.log 9-pdksh.log
 
-[BUILDTIME] 2233 (5)
-[BUILDTIME] 2951 (9)
+[BUILDTIME] 2391 (5)
+[BUILDTIME] 3058 (9)
 [SIZE] 0.31 MB, 8 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp net-tools patch rrdtool sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
+[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev
+[DEP] make mktemp net-tools netpbm patch rrdtool sed sysfiles tar twoftpd
+[DEP] ucspi-unix
 
 [PROVIDES] pdksh
 

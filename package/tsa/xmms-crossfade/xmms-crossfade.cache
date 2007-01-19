@@ -20,23 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142547831 Thu Mar 16 23:23:51 2006 (5)
-[TIMESTAMP] 1142804720 Sun Mar 19 22:45:20 2006 (9)
+[TIMESTAMP] 1168618148 Fri Jan 12 17:09:08 2007 (5) ERROR
+[TIMESTAMP] 1168821277 Mon Jan 15 01:34:37 2007 (9) ERROR
+[TIMESTAMP] 1168946580 Tue Jan 16 12:23:00 2007 (5) ERROR
+[TIMESTAMP] 1168973171 Tue Jan 16 19:46:11 2007 (9) ERROR
+[TIMESTAMP] 1169089992 Thu Jan 18 04:13:12 2007 (5) ERROR
+[TIMESTAMP] 1169143452 Thu Jan 18 19:04:12 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-xmms-crossfade.log 9-xmms-crossfade.log
+[LOGS] 5-xmms-crossfade.err 9-xmms-crossfade.err
 
-[BUILDTIME] 3426 (5)
-[BUILDTIME] 3868 (9)
-[SIZE] 0.18 MB, 7 files
+[BUILDTIME] 2359 (5) ERROR
+[BUILDTIME] 2407 (9) ERROR
+[BUILDTIME] 2413 (5) ERROR
+[BUILDTIME] 2414 (9) ERROR
+[BUILDTIME] 2426 (5) ERROR
+[BUILDTIME] 2422 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils file
-[DEP] findutils gawk gcc34 gcc34:dev glib12 glib12:dev glibc23
-[DEP] glibc23:dev gnome14-dirtree grep gtk+12 gtk+12:dev libsamplerate
-[DEP] libsamplerate:dev linux26-header:dev make mktemp net-tools rrdtool
-[DEP] sed sysfiles tar util-linux xmms xmms:dev xorg
 
-[PROVIDES] libcrossfade.so
+[5-ERROR] 	depfile='.deps/crossfade.Plo' tmpdepfile='.deps/crossfade.TPlo' \
+[5-ERROR] 	depmode=gcc3 /bin/sh ./depcomp \
+[5-ERROR] 	/bin/sh ./libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms     -Wall -c -o crossfade.lo `test -f 'crossfade.c' || echo './'`crossfade.c
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms -Wall -c crossfade.c -MT crossfade.lo -MD -MP -MF .deps/crossfade.TPlo  -fPIC -DPIC -DPIC -o crossfade.o
+[5-ERROR] mv -f crossfade.o crossfade.lo
+[5-ERROR] source='configure.c' object='configure.lo' libtool=yes \
+[5-ERROR] 	depfile='.deps/configure.Plo' tmpdepfile='.deps/configure.TPlo' \
+[5-ERROR] 	depmode=gcc3 /bin/sh ./depcomp \
+[5-ERROR] 	/bin/sh ./libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms     -Wall -c -o configure.lo `test -f 'configure.c' || echo './'`configure.c
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms -Wall -c configure.c -MT configure.lo -MD -MP -MF .deps/configure.TPlo  -fPIC -DPIC -DPIC -o configure.o
+[5-ERROR] mv -f configure.o configure.lo
+[5-ERROR] source='convert.c' object='convert.lo' libtool=yes \
+[5-ERROR] 	depfile='.deps/convert.Plo' tmpdepfile='.deps/convert.TPlo' \
+[5-ERROR] 	depmode=gcc3 /bin/sh ./depcomp \
+[5-ERROR] 	/bin/sh ./libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms     -Wall -c -o convert.lo `test -f 'convert.c' || echo './'`convert.c
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms -Wall -c convert.c -MT convert.lo -MD -MP -MF .deps/convert.TPlo  -fPIC -DPIC -DPIC -o convert.o
+[5-ERROR] mv -f convert.o convert.lo
+[5-ERROR] source='debug.c' object='debug.lo' libtool=yes \
+[5-ERROR] 	depfile='.deps/debug.Plo' tmpdepfile='.deps/debug.TPlo' \
+[5-ERROR] 	depmode=gcc3 /bin/sh ./depcomp \
+[5-ERROR] 	/bin/sh ./libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms     -Wall -c -o debug.lo `test -f 'debug.c' || echo './'`debug.c
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms -Wall -c debug.c -MT debug.lo -MD -MP -MF .deps/debug.TPlo  -fPIC -DPIC -DPIC -o debug.o
+[5-ERROR] mv -f debug.o debug.lo
+[5-ERROR] source='effect.c' object='effect.lo' libtool=yes \
+[5-ERROR] 	depfile='.deps/effect.Plo' tmpdepfile='.deps/effect.TPlo' \
+[5-ERROR] 	depmode=gcc3 /bin/sh ./depcomp \
+[5-ERROR] 	/bin/sh ./libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms     -Wall -c -o effect.lo `test -f 'effect.c' || echo './'`effect.c
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms -Wall -c effect.c -MT effect.lo -MD -MP -MF .deps/effect.TPlo  -fPIC -DPIC -DPIC -o effect.o
+[5-ERROR] mv -f effect.o effect.lo
+[5-ERROR] source='format.c' object='format.lo' libtool=yes \
+[5-ERROR] 	depfile='.deps/format.Plo' tmpdepfile='.deps/format.TPlo' \
+[5-ERROR] 	depmode=gcc3 /bin/sh ./depcomp \
+[5-ERROR] 	/bin/sh ./libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms     -Wall -c -o format.lo `test -f 'format.c' || echo './'`format.c
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms -Wall -c format.c -MT format.lo -MD -MP -MF .deps/format.TPlo  -fPIC -DPIC -DPIC -o format.o
+[5-ERROR] mv -f format.o format.lo
+[5-ERROR] source='monitor.c' object='monitor.lo' libtool=yes \
+[5-ERROR] 	depfile='.deps/monitor.Plo' tmpdepfile='.deps/monitor.TPlo' \
+[5-ERROR] 	depmode=gcc3 /bin/sh ./depcomp \
+[5-ERROR] 	/bin/sh ./libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms     -Wall -c -o monitor.lo `test -f 'monitor.c' || echo './'`monitor.c
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms -Wall -c monitor.c -MT monitor.lo -MD -MP -MF .deps/monitor.TPlo  -fPIC -DPIC -DPIC -o monitor.o
+[5-ERROR] monitor.c:38: error: static declaration of 'monitor_win' follows non-static declaration
+[5-ERROR] monitor.h:37: error: previous declaration of 'monitor_win' was here
+[5-ERROR] monitor.c:39: error: static declaration of 'monitor_display_drawingarea' follows non-static declaration
+[5-ERROR] monitor.h:38: error: previous declaration of 'monitor_display_drawingarea' was here
+[5-ERROR] monitor.c:40: error: static declaration of 'monitor_output_progress' follows non-static declaration
+[5-ERROR] monitor.h:40: error: previous declaration of 'monitor_output_progress' was here
+[5-ERROR] make[1]: *** [monitor.lo] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.xmms-crossfade.1169089966.27114.1258219122/xmms-crossfade-0.3.8'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] 	depfile='.deps/crossfade.Plo' tmpdepfile='.deps/crossfade.TPlo' \
+[9-ERROR] 	depmode=gcc3 /bin/sh ./depcomp \
+[9-ERROR] 	/bin/sh ./libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms     -Wall -c -o crossfade.lo `test -f 'crossfade.c' || echo './'`crossfade.c
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms -Wall -c crossfade.c -MT crossfade.lo -MD -MP -MF .deps/crossfade.TPlo  -fPIC -DPIC -DPIC -o crossfade.o
+[9-ERROR] mv -f crossfade.o crossfade.lo
+[9-ERROR] source='configure.c' object='configure.lo' libtool=yes \
+[9-ERROR] 	depfile='.deps/configure.Plo' tmpdepfile='.deps/configure.TPlo' \
+[9-ERROR] 	depmode=gcc3 /bin/sh ./depcomp \
+[9-ERROR] 	/bin/sh ./libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms     -Wall -c -o configure.lo `test -f 'configure.c' || echo './'`configure.c
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms -Wall -c configure.c -MT configure.lo -MD -MP -MF .deps/configure.TPlo  -fPIC -DPIC -DPIC -o configure.o
+[9-ERROR] mv -f configure.o configure.lo
+[9-ERROR] source='convert.c' object='convert.lo' libtool=yes \
+[9-ERROR] 	depfile='.deps/convert.Plo' tmpdepfile='.deps/convert.TPlo' \
+[9-ERROR] 	depmode=gcc3 /bin/sh ./depcomp \
+[9-ERROR] 	/bin/sh ./libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms     -Wall -c -o convert.lo `test -f 'convert.c' || echo './'`convert.c
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms -Wall -c convert.c -MT convert.lo -MD -MP -MF .deps/convert.TPlo  -fPIC -DPIC -DPIC -o convert.o
+[9-ERROR] mv -f convert.o convert.lo
+[9-ERROR] source='debug.c' object='debug.lo' libtool=yes \
+[9-ERROR] 	depfile='.deps/debug.Plo' tmpdepfile='.deps/debug.TPlo' \
+[9-ERROR] 	depmode=gcc3 /bin/sh ./depcomp \
+[9-ERROR] 	/bin/sh ./libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms     -Wall -c -o debug.lo `test -f 'debug.c' || echo './'`debug.c
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms -Wall -c debug.c -MT debug.lo -MD -MP -MF .deps/debug.TPlo  -fPIC -DPIC -DPIC -o debug.o
+[9-ERROR] mv -f debug.o debug.lo
+[9-ERROR] source='effect.c' object='effect.lo' libtool=yes \
+[9-ERROR] 	depfile='.deps/effect.Plo' tmpdepfile='.deps/effect.TPlo' \
+[9-ERROR] 	depmode=gcc3 /bin/sh ./depcomp \
+[9-ERROR] 	/bin/sh ./libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms     -Wall -c -o effect.lo `test -f 'effect.c' || echo './'`effect.c
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms -Wall -c effect.c -MT effect.lo -MD -MP -MF .deps/effect.TPlo  -fPIC -DPIC -DPIC -o effect.o
+[9-ERROR] mv -f effect.o effect.lo
+[9-ERROR] source='format.c' object='format.lo' libtool=yes \
+[9-ERROR] 	depfile='.deps/format.Plo' tmpdepfile='.deps/format.TPlo' \
+[9-ERROR] 	depmode=gcc3 /bin/sh ./depcomp \
+[9-ERROR] 	/bin/sh ./libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms     -Wall -c -o format.lo `test -f 'format.c' || echo './'`format.c
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms -Wall -c format.c -MT format.lo -MD -MP -MF .deps/format.TPlo  -fPIC -DPIC -DPIC -o format.o
+[9-ERROR] mv -f format.o format.lo
+[9-ERROR] source='monitor.c' object='monitor.lo' libtool=yes \
+[9-ERROR] 	depfile='.deps/monitor.Plo' tmpdepfile='.deps/monitor.TPlo' \
+[9-ERROR] 	depmode=gcc3 /bin/sh ./depcomp \
+[9-ERROR] 	/bin/sh ./libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms     -Wall -c -o monitor.lo `test -f 'monitor.c' || echo './'`monitor.c
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -D_REENTRANT -I/opt/gnome/include/glib-1.2 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/usr/include/xmms -Wall -c monitor.c -MT monitor.lo -MD -MP -MF .deps/monitor.TPlo  -fPIC -DPIC -DPIC -o monitor.o
+[9-ERROR] monitor.c:38: error: static declaration of 'monitor_win' follows non-static declaration
+[9-ERROR] monitor.h:37: error: previous declaration of 'monitor_win' was here
+[9-ERROR] monitor.c:39: error: static declaration of 'monitor_display_drawingarea' follows non-static declaration
+[9-ERROR] monitor.h:38: error: previous declaration of 'monitor_display_drawingarea' was here
+[9-ERROR] monitor.c:40: error: static declaration of 'monitor_output_progress' follows non-static declaration
+[9-ERROR] monitor.h:40: error: previous declaration of 'monitor_output_progress' was here
+[9-ERROR] make[1]: *** [monitor.lo] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.xmms-crossfade.1169143426.807.4224487765/xmms-crossfade-0.3.8'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

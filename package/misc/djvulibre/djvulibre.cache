@@ -1,135 +1,123 @@
 
-[TIMESTAMP] 1142607741 Fri Mar 17 16:02:21 2006 (5) ERROR
-[TIMESTAMP] 1142873405 Mon Mar 20 17:50:05 2006 (9) ERROR
-[TIMESTAMP] 1142961823 Tue Mar 21 18:23:43 2006 (5) ERROR
-[TIMESTAMP] 1142972899 Tue Mar 21 21:28:19 2006 (9) ERROR
-[TIMESTAMP] 1143032639 Wed Mar 22 14:03:59 2006 (5) ERROR
-[TIMESTAMP] 1143042252 Wed Mar 22 16:44:12 2006 (9) ERROR
+[TIMESTAMP] 1168664408 Sat Jan 13 06:00:08 2007 (5) ERROR
+[TIMESTAMP] 1168872197 Mon Jan 15 15:43:17 2007 (9) ERROR
+[TIMESTAMP] 1168950471 Tue Jan 16 13:27:51 2007 (5) ERROR
+[TIMESTAMP] 1168979885 Tue Jan 16 21:38:05 2007 (9) ERROR
+[TIMESTAMP] 1169120773 Thu Jan 18 12:46:13 2007 (5) ERROR
+[TIMESTAMP] 1169150095 Thu Jan 18 20:54:55 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-djvulibre.err 9-djvulibre.err
 
-[BUILDTIME] 29501 (5) ERROR
-[BUILDTIME] 29904 (9) ERROR
-[BUILDTIME] 29876 (5) ERROR
-[BUILDTIME] 29948 (9) ERROR
-[BUILDTIME] 29907 (5) ERROR
-[BUILDTIME] 29963 (9) ERROR
-[SIZE] 3.97 MB, 114 files
+[BUILDTIME] 2473 (5) ERROR
+[BUILDTIME] 2504 (9) ERROR
+[BUILDTIME] 2512 (5) ERROR
+[BUILDTIME] 2526 (9) ERROR
+[BUILDTIME] 2539 (5) ERROR
+[BUILDTIME] 2533 (9) ERROR
 
-[DEP] 00-dirtree arts bash2 binutils bzip2 coreutils diffutils expat
-[DEP] findutils freetype freetype:dev gawk gcc34 gcc34:dev glibc23
-[DEP] glibc23:dev grep kaffeine kdebase kdelibs kdesdk libjpeg libjpeg:dev
-[DEP] libpng libpng:dev libtiff libtiff:dev linux26-header:dev make
-[DEP] mktemp nas net-tools openbox qt33 qt33:dev rrdtool sed sysfiles
-[DEP] tar tsclient util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] bzz c44 cjb2 cpaldjvu csepdjvu ddjvu djview djvm djvmcvt
-[PROVIDES] djvudigital djvudump djvuextract djvumake djvups djvused
-[PROVIDES] djvuserve djvutoxml djvutxt djvuxmlparser libdjvulibre.so
-[PROVIDES] nsdejavu.so
-
-[5-ERROR] done
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.djvulibre.1143032307.1689.3892570294/djvulibre-3.5.14/i18n/fr'
-[5-ERROR] make[2]: Entering directory `/ROCK/src.djvulibre.1143032307.1689.3892570294/djvulibre-3.5.14/i18n/ja'
-[5-ERROR] test ja != dummy
-[5-ERROR] ../../config/install-sh -c -d /usr/share/djvu/osi/ja
-[5-ERROR] for n in qt.qm djview.qm ; do \
-[5-ERROR]   if test -r $n ; then \
-[5-ERROR]     ../../config/install-sh -c -m 644 $n /usr/share/djvu/osi/ja ; \
-[5-ERROR]   elif test -r ./$n ; then \
-[5-ERROR]     ../../config/install-sh -c -m 644 ./$n /usr/share/djvu/osi/ja ; \
-[5-ERROR]   fi ; \
-[5-ERROR] done
-[5-ERROR] test ja != dummy
-[5-ERROR] ../../config/install-sh -c -d /usr/share/man/ja/man1
-[5-ERROR] for n in bzz.1 c44.1 cjb2.1 cpaldjvu.1 csepdjvu.1 ddjvu.1 djvm.1 djvmcvt.1 djvu.1 djvudump.1 djvuextract.1 djvumake.1 djvups.1 djvused.1 djvuserve.1 djvutxt.1 nsdejavu.1 djview.1 ; do \
-[5-ERROR]    if test -r $n ; then \
-[5-ERROR]      ../../config/install-sh -c -m 644 $n /usr/share/man/ja/man1 ; \
-[5-ERROR]    elif test -r ./$n ; then \
-[5-ERROR]      ../../config/install-sh -c -m 644 ./$n /usr/share/man/ja/man1 ; \
-[5-ERROR]    fi ; \
-[5-ERROR] done
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.djvulibre.1143032307.1689.3892570294/djvulibre-3.5.14/i18n/ja'
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.djvulibre.1143032307.1689.3892570294/djvulibre-3.5.14/i18n'
-[5-ERROR] Trying to copy the default documentation ...
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 120 files for this package.
-[5-ERROR] Applying package split: 40 djvulibre:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 djvulibre:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 djvulibre:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <djvulibre> Creating flist file ...
-[5-ERROR] <djvulibre> Creating package dependencies file ...
-[5-ERROR] <djvulibre> Creating md5sum and cksum files ...
-[5-ERROR] <djvulibre> Creating package description ...
-[5-ERROR] <djvulibre:dev> Creating flist file ...
-[5-ERROR] <djvulibre:dev> Creating package dependencies file ...
-[5-ERROR] <djvulibre:dev> Creating md5sum and cksum files ...
-[5-ERROR] <djvulibre:dev> Creating package description ...
-[5-ERROR] <djvulibre:doc> Creating flist file ...
-[5-ERROR] <djvulibre:doc> Creating package dependencies file ...
-[5-ERROR] <djvulibre:doc> Creating md5sum and cksum files ...
-[5-ERROR] <djvulibre:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Found shared files with other packages:
-[5-ERROR] opt/kde3/share/mimelnk/image/x-djvu.desktop: djvulibre kdelibs
+[5-ERROR] checking for kde-config... /usr/bin/kde-config
+[5-ERROR] checking for Debian menu directory... no
+[5-ERROR] checking for XDG menu directory... ${datadir}/applications
+[5-ERROR] checking for Gnome icon directory... ${datadir}/pixmaps
+[5-ERROR] checking for Gnome mimetype directory... ${datadir}/mime-info
+[5-ERROR] checking for Gnome association directory... ${datadir}/application-registry
+[5-ERROR] checking for KDE icon directory... ${datadir}/icons
+[5-ERROR] checking for KDE mimetype directory... ${datadir}/mimelnk
+[5-ERROR] checking if g++-40 has the LPR0 bug... no
+[5-ERROR] checking g++ version... 4.0.3
+[5-ERROR] configure: creating ./config.status
+[5-ERROR] config.status: creating Makefile
+[5-ERROR] config.status: creating libdjvu/Makefile
+[5-ERROR] config.status: creating tools/Makefile
+[5-ERROR] config.status: creating xmltools/Makefile
+[5-ERROR] config.status: creating gui/Makefile
+[5-ERROR] config.status: creating gui/desktop/Makefile
+[5-ERROR] config.status: creating gui/bin2cpp/Makefile
+[5-ERROR] config.status: creating gui/djview/Makefile
+[5-ERROR] config.status: creating gui/nsdejavu/Makefile
+[5-ERROR] config.status: creating gsfiles/Makefile
+[5-ERROR] config.status: creating i18n/Makefile
+[5-ERROR] config.status: creating i18n/ja/Makefile
+[5-ERROR] config.status: creating i18n/de/Makefile
+[5-ERROR] config.status: creating i18n/fr/Makefile
+[5-ERROR] config.status: creating config.h
+[5-ERROR] 
+[5-ERROR] Configuration is done.
+[5-ERROR] Compile with command:
+[5-ERROR]     $ make depend     (optional!)
+[5-ERROR]     $ make
+[5-ERROR] Then install the binaries in /usr with command:
+[5-ERROR]     # make install
+[5-ERROR] for d in libdjvu tools xmltools gui gsfiles i18n ; \
+[5-ERROR] 	  do ( cd $d && make all ) || exit ; done
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.djvulibre.1169120744.24842.1486741501/djvulibre-3.5.14/libdjvu'
+[5-ERROR] make[1]: Circular Makefile.dep <- Makefile.dep dependency dropped.
+[5-ERROR] /bin/sh ../libtool --mode=compile g++-40   -DHAVE_CONFIG_H -I.. -I. -DNDEBUG -Wall -O3 -mcpu=i386  -pthread -DTHREADMODEL=POSIXTHREADS -c DjVuGlobal.cpp
+[5-ERROR] mkdir .libs
+[5-ERROR]  g++-40 -DHAVE_CONFIG_H -I.. -I. -DNDEBUG -Wall -O3 -mcpu=i386 -pthread -DTHREADMODEL=POSIXTHREADS -c DjVuGlobal.cpp  -fPIC -DPIC -o .libs/DjVuGlobal.o
+[5-ERROR] /bin/sh ../libtool --mode=compile g++-40   -DHAVE_CONFIG_H -I.. -I. -DNDEBUG -Wall -O3 -mcpu=i386  -pthread -DTHREADMODEL=POSIXTHREADS -c DjVuGlobalMemory.cpp
+[5-ERROR]  g++-40 -DHAVE_CONFIG_H -I.. -I. -DNDEBUG -Wall -O3 -mcpu=i386 -pthread -DTHREADMODEL=POSIXTHREADS -c DjVuGlobalMemory.cpp  -fPIC -DPIC -o .libs/DjVuGlobalMemory.o
+[5-ERROR] /bin/sh ../libtool --mode=compile g++-40   -DHAVE_CONFIG_H -I.. -I. -DNDEBUG -Wall -O3 -mcpu=i386  -pthread -DTHREADMODEL=POSIXTHREADS -c GOS.cpp
+[5-ERROR]  g++-40 -DHAVE_CONFIG_H -I.. -I. -DNDEBUG -Wall -O3 -mcpu=i386 -pthread -DTHREADMODEL=POSIXTHREADS -c GOS.cpp  -fPIC -DPIC -o .libs/GOS.o
+[5-ERROR] GString.h:165: error: expected ',' or '...' before '&' token
+[5-ERROR] GString.h:165: error: ISO C++ forbids declaration of 'GBaseString' with no type
+[5-ERROR] make[1]: *** [GOS.lo] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.djvulibre.1169120744.24842.1486741501/djvulibre-3.5.14/libdjvu'
+[5-ERROR] make: *** [all] Error 2
 [5-ERROR] --- BUILD ERROR ---
-[5-ERROR] removed `/var/adm/logs/5-djvulibre.log'
-[5-ERROR] Finished building djvulibre=djvulibre.
 
-[9-ERROR] done
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.djvulibre.1143041909.31544.201262647/djvulibre-3.5.14/i18n/fr'
-[9-ERROR] make[2]: Entering directory `/ROCK/src.djvulibre.1143041909.31544.201262647/djvulibre-3.5.14/i18n/ja'
-[9-ERROR] test ja != dummy
-[9-ERROR] ../../config/install-sh -c -d /usr/share/djvu/osi/ja
-[9-ERROR] for n in qt.qm djview.qm ; do \
-[9-ERROR]   if test -r $n ; then \
-[9-ERROR]     ../../config/install-sh -c -m 644 $n /usr/share/djvu/osi/ja ; \
-[9-ERROR]   elif test -r ./$n ; then \
-[9-ERROR]     ../../config/install-sh -c -m 644 ./$n /usr/share/djvu/osi/ja ; \
-[9-ERROR]   fi ; \
-[9-ERROR] done
-[9-ERROR] test ja != dummy
-[9-ERROR] ../../config/install-sh -c -d /usr/share/man/ja/man1
-[9-ERROR] for n in bzz.1 c44.1 cjb2.1 cpaldjvu.1 csepdjvu.1 ddjvu.1 djvm.1 djvmcvt.1 djvu.1 djvudump.1 djvuextract.1 djvumake.1 djvups.1 djvused.1 djvuserve.1 djvutxt.1 nsdejavu.1 djview.1 ; do \
-[9-ERROR]    if test -r $n ; then \
-[9-ERROR]      ../../config/install-sh -c -m 644 $n /usr/share/man/ja/man1 ; \
-[9-ERROR]    elif test -r ./$n ; then \
-[9-ERROR]      ../../config/install-sh -c -m 644 ./$n /usr/share/man/ja/man1 ; \
-[9-ERROR]    fi ; \
-[9-ERROR] done
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.djvulibre.1143041909.31544.201262647/djvulibre-3.5.14/i18n/ja'
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.djvulibre.1143041909.31544.201262647/djvulibre-3.5.14/i18n'
-[9-ERROR] Trying to copy the default documentation ...
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 120 files for this package.
-[9-ERROR] Applying package split: 40 djvulibre:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 djvulibre:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 djvulibre:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <djvulibre> Creating flist file ...
-[9-ERROR] <djvulibre> Creating package dependencies file ...
-[9-ERROR] <djvulibre> Creating md5sum and cksum files ...
-[9-ERROR] <djvulibre> Creating package description ...
-[9-ERROR] <djvulibre:dev> Creating flist file ...
-[9-ERROR] <djvulibre:dev> Creating package dependencies file ...
-[9-ERROR] <djvulibre:dev> Creating md5sum and cksum files ...
-[9-ERROR] <djvulibre:dev> Creating package description ...
-[9-ERROR] <djvulibre:doc> Creating flist file ...
-[9-ERROR] <djvulibre:doc> Creating package dependencies file ...
-[9-ERROR] <djvulibre:doc> Creating md5sum and cksum files ...
-[9-ERROR] <djvulibre:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Found shared files with other packages:
-[9-ERROR] opt/kde3/share/mimelnk/image/x-djvu.desktop: djvulibre kdelibs
+[9-ERROR] checking for kde-config... /usr/bin/kde-config
+[9-ERROR] checking for Debian menu directory... no
+[9-ERROR] checking for XDG menu directory... ${datadir}/applications
+[9-ERROR] checking for Gnome icon directory... ${datadir}/pixmaps
+[9-ERROR] checking for Gnome mimetype directory... ${datadir}/mime-info
+[9-ERROR] checking for Gnome association directory... ${datadir}/application-registry
+[9-ERROR] checking for KDE icon directory... ${datadir}/icons
+[9-ERROR] checking for KDE mimetype directory... ${datadir}/mimelnk
+[9-ERROR] checking if g++-40 has the LPR0 bug... no
+[9-ERROR] checking g++ version... 4.0.3
+[9-ERROR] configure: creating ./config.status
+[9-ERROR] config.status: creating Makefile
+[9-ERROR] config.status: creating libdjvu/Makefile
+[9-ERROR] config.status: creating tools/Makefile
+[9-ERROR] config.status: creating xmltools/Makefile
+[9-ERROR] config.status: creating gui/Makefile
+[9-ERROR] config.status: creating gui/desktop/Makefile
+[9-ERROR] config.status: creating gui/bin2cpp/Makefile
+[9-ERROR] config.status: creating gui/djview/Makefile
+[9-ERROR] config.status: creating gui/nsdejavu/Makefile
+[9-ERROR] config.status: creating gsfiles/Makefile
+[9-ERROR] config.status: creating i18n/Makefile
+[9-ERROR] config.status: creating i18n/ja/Makefile
+[9-ERROR] config.status: creating i18n/de/Makefile
+[9-ERROR] config.status: creating i18n/fr/Makefile
+[9-ERROR] config.status: creating config.h
+[9-ERROR] 
+[9-ERROR] Configuration is done.
+[9-ERROR] Compile with command:
+[9-ERROR]     $ make depend     (optional!)
+[9-ERROR]     $ make
+[9-ERROR] Then install the binaries in /usr with command:
+[9-ERROR]     # make install
+[9-ERROR] for d in libdjvu tools xmltools gui gsfiles i18n ; \
+[9-ERROR] 	  do ( cd $d && make all ) || exit ; done
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.djvulibre.1169150068.15442.3084940077/djvulibre-3.5.14/libdjvu'
+[9-ERROR] make[1]: Circular Makefile.dep <- Makefile.dep dependency dropped.
+[9-ERROR] /bin/sh ../libtool --mode=compile g++-40   -DHAVE_CONFIG_H -I.. -I. -DNDEBUG -Wall -O3 -mcpu=i386  -pthread -DTHREADMODEL=POSIXTHREADS -c DjVuGlobal.cpp
+[9-ERROR] mkdir .libs
+[9-ERROR]  g++-40 -DHAVE_CONFIG_H -I.. -I. -DNDEBUG -Wall -O3 -mcpu=i386 -pthread -DTHREADMODEL=POSIXTHREADS -c DjVuGlobal.cpp  -fPIC -DPIC -o .libs/DjVuGlobal.o
+[9-ERROR] /bin/sh ../libtool --mode=compile g++-40   -DHAVE_CONFIG_H -I.. -I. -DNDEBUG -Wall -O3 -mcpu=i386  -pthread -DTHREADMODEL=POSIXTHREADS -c DjVuGlobalMemory.cpp
+[9-ERROR]  g++-40 -DHAVE_CONFIG_H -I.. -I. -DNDEBUG -Wall -O3 -mcpu=i386 -pthread -DTHREADMODEL=POSIXTHREADS -c DjVuGlobalMemory.cpp  -fPIC -DPIC -o .libs/DjVuGlobalMemory.o
+[9-ERROR] /bin/sh ../libtool --mode=compile g++-40   -DHAVE_CONFIG_H -I.. -I. -DNDEBUG -Wall -O3 -mcpu=i386  -pthread -DTHREADMODEL=POSIXTHREADS -c GOS.cpp
+[9-ERROR]  g++-40 -DHAVE_CONFIG_H -I.. -I. -DNDEBUG -Wall -O3 -mcpu=i386 -pthread -DTHREADMODEL=POSIXTHREADS -c GOS.cpp  -fPIC -DPIC -o .libs/GOS.o
+[9-ERROR] GString.h:165: error: expected ',' or '...' before '&' token
+[9-ERROR] GString.h:165: error: ISO C++ forbids declaration of 'GBaseString' with no type
+[9-ERROR] make[1]: *** [GOS.lo] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.djvulibre.1169150068.15442.3084940077/djvulibre-3.5.14/libdjvu'
+[9-ERROR] make: *** [all] Error 2
 [9-ERROR] --- BUILD ERROR ---
-[9-ERROR] removed `/var/adm/logs/9-djvulibre.log'
-[9-ERROR] Finished building djvulibre=djvulibre.
 

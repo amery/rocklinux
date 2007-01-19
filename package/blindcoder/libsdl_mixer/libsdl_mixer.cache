@@ -20,23 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142524662 Thu Mar 16 16:57:42 2006 (5)
-[TIMESTAMP] 1142779610 Sun Mar 19 15:46:50 2006 (9)
+[TIMESTAMP] 1168600241 Fri Jan 12 12:10:41 2007 (5)
+[TIMESTAMP] 1168802459 Sun Jan 14 20:20:59 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-libsdl_mixer.log 9-libsdl_mixer.log
 
-[BUILDTIME] 3974 (5)
-[BUILDTIME] 4423 (9)
-[SIZE] 0.22 MB, 9 files
+[BUILDTIME] 6037 (5)
+[BUILDTIME] 6455 (9)
+[SIZE] 0.28 MB, 9 files
 
-[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] libsdl libsdl:dev linux26-header:dev make mktemp nas net-tools
-[DEP] ogg-vorbis ogg-vorbis:dev perl5 rrdtool sed smpeg smpeg:dev sysfiles
-[DEP] tar texinfo xorg
+[DEP] 00-dirtree applewmproto bash2 binutils bzip2 coreutils cvm
+[DEP] diffutils findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev
+[DEP] grep libice libice:dev libsdl libsdl:dev libsm libsm:dev libx11
+[DEP] libx11:dev libxau libxau:dev libxdmcp libxdmcp:dev libxt libxt:dev
+[DEP] linux-libc-headers:dev make mktemp nas net-tools ogg-vorbis:dev
+[DEP] rrdtool sed smpeg smpeg:dev sysfiles tar util-linux
 
 [PROVIDES] libSDL_mixer.a libSDL_mixer.so
 

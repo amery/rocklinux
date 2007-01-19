@@ -20,28 +20,37 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142617593 Fri Mar 17 18:46:33 2006 (5)
-[TIMESTAMP] 1142884205 Mon Mar 20 20:50:05 2006 (9)
+[TIMESTAMP] 1168588858 Fri Jan 12 09:00:58 2007 (5)
+[TIMESTAMP] 1168790275 Sun Jan 14 16:57:55 2007 (9) ERROR
+[TIMESTAMP] 1168966942 Tue Jan 16 18:02:22 2007 (9) ERROR
+[TIMESTAMP] 1169137229 Thu Jan 18 17:20:29 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-firefox.log 9-firefox.log
+[LOGS] 5-firefox.log 9-firefox.err
 
-[BUILDTIME] 261060 (5)
-[BUILDTIME] 262268 (9)
-[SIZE] 30.87 MB, 1430 files
+[BUILDTIME] 251993 (5)
+[BUILDTIME] 253389 (9) ERROR
+[BUILDTIME] 253612 (9) ERROR
+[BUILDTIME] 253533 (9) ERROR
+[SIZE] 28.91 MB, 1517 files
 
-[DEP] 00-dirtree alsa atk atk:dev bash2 binutils bzip2 cairo cairo:dev
-[DEP] coreutils diffutils expat findutils freetype freetype:dev gawk
-[DEP] gcc34 gcc34:dev gconf gconf:dev glib glib:dev glibc23 glibc23:dev
+[DEP] 00-dirtree alsa applewmproto applewmproto:dev atk atk:dev bash2
+[DEP] binutils bzip2 cairo cairo:dev coreutils cvm diffutils epiphany
+[DEP] expat findutils fontconfig fontconfig:dev freetype freetype:dev gawk
+[DEP] gcc40 gcc40:dev gconf gconf:dev glib glib:dev glibc23 glibc23:dev
 [DEP] gnome-keyring gnome-vfs gnome-vfs:dev gnome2-dirtree grep gtk+
-[DEP] gtk+:dev libart_lgpl23 libbonobo libbonobo:dev libbonoboui
-[DEP] libgnome libgnome:dev libgnomecanvas libgnomeui libgnomeui:dev
-[DEP] libidl libidl:dev libjpeg libjpeg:dev libpng libpng:dev libxml2
-[DEP] linux26-header:dev make mktemp net-tools orbit2 orbit2:dev pango
-[DEP] pango:dev patch perl5 pkgconfig popt popt:dev rrdtool sed sysfiles
-[DEP] tar xorg xorg:dev zip zlib:dev
+[DEP] gtk+:dev imake kbproto:dev libart_lgpl23 libbonobo libbonobo:dev
+[DEP] libbonoboui libgnome libgnome:dev libgnomecanvas libgnomeui
+[DEP] libgnomeui:dev libice libice:dev libidl libidl:dev libjpeg
+[DEP] libjpeg:dev libpng libpng:dev libsm libsm:dev libx11 libx11:dev
+[DEP] libxau libxcursor libxdmcp libxext libxfixes libxft libxft:dev libxi
+[DEP] libxinerama libxml2 libxp libxrandr libxrender libxrender:dev libxt
+[DEP] libxt:dev linux-libc-headers:dev make mktemp net-tools orbit2 pango
+[DEP] pango:dev perl5 pkgconfig popt popt:dev renderproto:dev rrdtool
+[DEP] sed sysfiles tar xextproto:dev xineramaproto:dev xorg-cf-files
+[DEP] xproto:dev zip zlib zlib:dev
 
 [PROVIDES] firefox firefox-config gtk2xtbin.h gtkxtbin.h
 [PROVIDES] libaccessibility.so libappcomps.so libautoconfig.so
@@ -54,13 +63,65 @@
 [PROVIDES] libimglib2.so libinspector.so libjar50.so libjsd.so
 [PROVIDES] libjsj.so libmork.so libmozfind.so libmozgnome.so libmozjs.so
 [PROVIDES] libnecko.so libnecko2.so libnkgnomevfs.so libnsappshell.so
-[PROVIDES] libnspr4.so libnss3.so libnssckbi.so libnullplugin.so liboji.so
-[PROVIDES] libpipboot.so libpipnss.so libpippki.so libplc4.so libplds4.so
-[PROVIDES] libpref.so librdf.so libremoteservice.so libsearchservice.so
-[PROVIDES] libsmime3.so libsoftokn3.so libssl3.so libsystem-pref.so
-[PROVIDES] libtoolkitcomps.so libtransformiix.so libtxmgr.so libuconv.so
-[PROVIDES] libucvmath.so libuniversalchardet.so libunixprintplugin.so
-[PROVIDES] libwebbrwsr.so libwebsrvcs.so libwidget_gtk2.so libxmlextras.so
-[PROVIDES] libxpcom.so libxpcom_compat.so libxpcom_compat_c.so
-[PROVIDES] libxpcom_core.so libxpconnect.so libxpinstall.so libxpistub.so
+[PROVIDES] libnspr4.so libnss3.so libnssckbi.so libnullplugin.so
+[PROVIDES] liboji.so libpermissions.so libpipboot.so libpipnss.so
+[PROVIDES] libpippki.so libplc4.so libplds4.so libpref.so librdf.so
+[PROVIDES] libremoteservice.so libsearchservice.so libsmime3.so
+[PROVIDES] libsoftokn3.so libssl3.so libsystem-pref.so libtoolkitcomps.so
+[PROVIDES] libtransformiix.so libtxmgr.so libuconv.so libucvmath.so
+[PROVIDES] libuniversalchardet.so libunixprintplugin.so libwebbrwsr.so
+[PROVIDES] libwebsrvcs.so libwidget_gtk2.so libxmlextras.so libxpcom.so
+[PROVIDES] libxpcom_compat.so libxpcom_compat_c.so libxpcom_core.so
+[PROVIDES] libxpconnect.so libxpinstall.so libxpistub.so
+
+[9-ERROR] /ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/config/nsinstall -t -m 755 mozilla-installer-bin //opt/firefox/lib/firefox-1.5.0.7
+[9-ERROR] /ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/config/nsinstall -R mozilla-installer mozilla-installer-bin //opt/firefox/lib/firefox-1.5.0.7/install
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/toolkit/mozapps/installer/unix/wizard'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/toolkit/mozapps/installer/unix'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/toolkit/mozapps/installer'
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/embedding/browser/gtk'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/embedding/browser/gtk/src'
+[9-ERROR] ../../../../config/static-rules.mk:8: FINAL_LINK_COMP_NAMES = ../../../../config/final-link-comp-names
+[9-ERROR] ../../../../config/static-rules.mk:9: FINAL_LINK_COMPS = ../../../../config/final-link-comps
+[9-ERROR] /ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/config/nsinstall -t -m 644 gtkmozembed.h gtkmozembed_internal.h /opt/firefox/include/firefox-1.5.0.7/gtkembedmoz
+[9-ERROR] /ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/config/nsinstall -t -m 755 libgtkembedmoz.so  //opt/firefox/lib/firefox-1.5.0.7
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/embedding/browser/gtk/src'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/embedding/browser/gtk/tests'
+[9-ERROR] /ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/config/nsinstall -t -m 755 TestGtkEmbed //opt/firefox/lib/firefox-1.5.0.7
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/embedding/browser/gtk/tests'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/embedding/browser/gtk'
+[9-ERROR] Run the component registration ...
+[9-ERROR] /opt/firefox/lib/firefox-1.5.0.7 /ROCK/src.firefox.1169134563.20440.428350364/mozilla
+[9-ERROR] /ROCK/src.firefox.1169134563.20440.428350364/mozilla
+[9-ERROR] Hook preconf is still marked as dirty ...
+[9-ERROR] Hook premake is still marked as dirty ...
+[9-ERROR] Hook inmake is still marked as dirty ...
+[9-ERROR] Hook postmake is still marked as dirty ...
+[9-ERROR] Install desktop file '/ROCK/package/x11/firefox/firefox.desktop': Trying to copy the default documentation ...
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing /lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Checking usr/share/applications/firefox.desktop ... 
+[9-ERROR] Found 3619 files for this package.
+[9-ERROR] Applying package split: 40 firefox:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[9-ERROR] Applying package split: 42 firefox:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 firefox:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <firefox> Creating flist file ...
+[9-ERROR] <firefox> Creating package dependencies file ...
+[9-ERROR] <firefox> Creating package description ...
+[9-ERROR] <firefox> Creating md5sum and cksum files ...
+[9-ERROR] <firefox:dev> Creating flist file ...
+[9-ERROR] <firefox:dev> Creating package dependencies file ...
+[9-ERROR] <firefox:dev> Creating package description ...
+[9-ERROR] <firefox:dev> Creating md5sum and cksum files ...
+[9-ERROR] <firefox:doc> Creating flist file ...
+[9-ERROR] <firefox:doc> Creating package dependencies file ...
+[9-ERROR] <firefox:doc> Creating package description ...
+[9-ERROR] <firefox:doc> Creating md5sum and cksum files ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] opt/firefox/lib/firefox-1.5.0.7/components/xpti.dat: epiphany firefox
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] --- BUILD ERROR ---
 

@@ -20,125 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142569040 Fri Mar 17 05:17:20 2006 (5) ERROR
-[TIMESTAMP] 1142831093 Mon Mar 20 06:04:53 2006 (9) ERROR
-[TIMESTAMP] 1142961262 Tue Mar 21 18:14:22 2006 (5) ERROR
-[TIMESTAMP] 1142972465 Tue Mar 21 21:21:05 2006 (9) ERROR
-[TIMESTAMP] 1143032214 Wed Mar 22 13:56:54 2006 (5) ERROR
-[TIMESTAMP] 1143041815 Wed Mar 22 16:36:55 2006 (9) ERROR
+[TIMESTAMP] 1168633860 Fri Jan 12 21:31:00 2007 (5) ERROR
+[TIMESTAMP] 1168839001 Mon Jan 15 06:30:01 2007 (9) ERROR
+[TIMESTAMP] 1168948381 Tue Jan 16 12:53:01 2007 (5) ERROR
+[TIMESTAMP] 1168975593 Tue Jan 16 20:26:33 2007 (9) ERROR
+[TIMESTAMP] 1169091796 Thu Jan 18 04:43:16 2007 (5) ERROR
+[TIMESTAMP] 1169145882 Thu Jan 18 19:44:42 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-straw.err 9-straw.err
 
-[BUILDTIME] 1266 (5) ERROR
-[BUILDTIME] 1589 (9) ERROR
-[BUILDTIME] 1598 (5) ERROR
-[BUILDTIME] 1607 (9) ERROR
-[BUILDTIME] 1605 (5) ERROR
-[BUILDTIME] 1604 (9) ERROR
+[BUILDTIME] 694 (5) ERROR
+[BUILDTIME] 720 (9) ERROR
+[BUILDTIME] 734 (5) ERROR
+[BUILDTIME] 722 (9) ERROR
+[BUILDTIME] 721 (5) ERROR
+[BUILDTIME] 715 (9) ERROR
 
 
-[5-ERROR] creating build/share/locale/es/LC_MESSAGES
-[5-ERROR] creating build/share/locale/fi
-[5-ERROR] creating build/share/locale/fi/LC_MESSAGES
-[5-ERROR] creating build/share/locale/fr
-[5-ERROR] creating build/share/locale/fr/LC_MESSAGES
-[5-ERROR] creating build/share/locale/nl
-[5-ERROR] creating build/share/locale/nl/LC_MESSAGES
-[5-ERROR] creating build/share/locale/no
-[5-ERROR] creating build/share/locale/no/LC_MESSAGES
-[5-ERROR] creating build/share/locale/pt
-[5-ERROR] creating build/share/locale/pt/LC_MESSAGES
-[5-ERROR] creating build/share/locale/ru
-[5-ERROR] creating build/share/locale/ru/LC_MESSAGES
-[5-ERROR] creating build/share/locale/sr
-[5-ERROR] creating build/share/locale/sr/LC_MESSAGES
-[5-ERROR] creating build/share/locale/sv
-[5-ERROR] creating build/share/locale/sv/LC_MESSAGES
-[5-ERROR] creating build/share/locale/en_CA
-[5-ERROR] creating build/share/locale/en_CA/LC_MESSAGES
-[5-ERROR] creating build/share/locale/en_GB
-[5-ERROR] creating build/share/locale/en_GB/LC_MESSAGES
-[5-ERROR] creating build/share/locale/sr@Latn
-[5-ERROR] creating build/share/locale/sr@Latn/LC_MESSAGES
-[5-ERROR] creating build/share/locale/pt_BR
-[5-ERROR] creating build/share/locale/pt_BR/LC_MESSAGES
-[5-ERROR] running build_desktop
-[5-ERROR] creating build/share/applications
-[5-ERROR] WARNING: po/ru.po is not in UTF-8 but koi8-r, converting...
-[5-ERROR] WARNING: po/no.po is not in UTF-8 but ISO-8859-1, converting...
-[5-ERROR] WARNING: po/fi.po is not in UTF-8 but ISO-8859-1, converting...
-[5-ERROR] WARNING: po/fr.po is not in UTF-8 but ISO-8859-1, converting...
-[5-ERROR] WARNING: po/de.po is not in UTF-8 but ISO-8859-1, converting...
-[5-ERROR] Merging translations into build/share/applications/straw.desktop.
-[5-ERROR] running install
-[5-ERROR] running install_modules_check
-[5-ERROR] /opt/gnome2/lib/python2.4/site-packages/gtk-2.0/gnome/vfs.py:4: DeprecationWarning: Module gnome.vfs is deprecated; please import gnomevfs instead
-[5-ERROR]   DeprecationWarning)
-[5-ERROR] Error: gtkhtml2 Python module is required to install Straw
-[5-ERROR] Warning: ADNS Python module not found, will continue without.
+[5-ERROR] copying src/lib/SubscribeDialog.py -> build/lib.linux-i686-2.4/straw
+[5-ERROR] copying src/lib/FeedCategoryList.py -> build/lib.linux-i686-2.4/straw
+[5-ERROR] copying src/lib/OPML.py -> build/lib.linux-i686-2.4/straw
+[5-ERROR] copying src/lib/Feed.py -> build/lib.linux-i686-2.4/straw
+[5-ERROR] copying src/lib/FeedItems.py -> build/lib.linux-i686-2.4/straw
+[5-ERROR] copying src/lib/SummaryParser.py -> build/lib.linux-i686-2.4/straw
+[5-ERROR] copying src/lib/QueueDict.py -> build/lib.linux-i686-2.4/straw
+[5-ERROR] copying src/lib/Config.py -> build/lib.linux-i686-2.4/straw
+[5-ERROR] copying src/lib/SummaryItem.py -> build/lib.linux-i686-2.4/straw
+[5-ERROR] copying src/lib/__init__.py -> build/lib.linux-i686-2.4/straw
+[5-ERROR] copying src/lib/Tray.py -> build/lib.linux-i686-2.4/straw
+[5-ERROR] copying src/lib/OPMLExport.py -> build/lib.linux-i686-2.4/straw
+[5-ERROR] copying src/lib/DashboardFrontend.py -> build/lib.linux-i686-2.4/straw
+[5-ERROR] copying src/lib/URLFetch.py -> build/lib.linux-i686-2.4/straw
+[5-ERROR] copying src/lib/ValueMonitor.py -> build/lib.linux-i686-2.4/straw
+[5-ERROR] copying src/lib/utils.py -> build/lib.linux-i686-2.4/straw
+[5-ERROR] running build_ext
+[5-ERROR] Traceback (most recent call last):
+[5-ERROR]   File "setup.py", line 154, in ?
+[5-ERROR]     override='src/eggtray/trayicon.override')])
+[5-ERROR]   File "/ROCK/loop/src.straw.1169091788.22401.905555977/straw-0.25.1/tools/straw_distutils.py", line 520, in setup
+[5-ERROR]     setup(**kwds)
+[5-ERROR]   File "/usr/lib/python2.4/distutils/core.py", line 149, in setup
+[5-ERROR]     dist.run_commands()
+[5-ERROR]   File "/usr/lib/python2.4/distutils/dist.py", line 946, in run_commands
+[5-ERROR]     self.run_command(cmd)
+[5-ERROR]   File "/usr/lib/python2.4/distutils/dist.py", line 966, in run_command
+[5-ERROR]     cmd_obj.run()
+[5-ERROR]   File "/usr/lib/python2.4/distutils/command/build.py", line 112, in run
+[5-ERROR]     self.run_command(cmd_name)
+[5-ERROR]   File "/usr/lib/python2.4/distutils/cmd.py", line 333, in run_command
+[5-ERROR]     self.distribution.run_command(command)
+[5-ERROR]   File "/usr/lib/python2.4/distutils/dist.py", line 966, in run_command
+[5-ERROR]     cmd_obj.run()
+[5-ERROR]   File "/usr/lib/python2.4/distutils/command/build_ext.py", line 279, in run
+[5-ERROR]     self.build_extensions()
+[5-ERROR]   File "/opt/gnome2/lib/python2.4/site-packages/gtk-2.0/dsextras.py", line 132, in build_extensions
+[5-ERROR]     build_ext.build_extensions(self)
+[5-ERROR]   File "/usr/lib/python2.4/distutils/command/build_ext.py", line 405, in build_extensions
+[5-ERROR]     self.build_extension(ext)
+[5-ERROR]   File "/opt/gnome2/lib/python2.4/site-packages/gtk-2.0/dsextras.py", line 139, in build_extension
+[5-ERROR]     ext.generate()
+[5-ERROR]   File "/opt/gnome2/lib/python2.4/site-packages/gtk-2.0/dsextras.py", line 387, in generate
+[5-ERROR]     map(lambda x: x.generate(), self.templates)
+[5-ERROR]   File "/opt/gnome2/lib/python2.4/site-packages/gtk-2.0/dsextras.py", line 387, in <lambda>
+[5-ERROR]     map(lambda x: x.generate(), self.templates)
+[5-ERROR]   File "/opt/gnome2/lib/python2.4/site-packages/gtk-2.0/dsextras.py", line 340, in generate
+[5-ERROR]     from codegen import register_types, write_source, FileOutput
+[5-ERROR] ImportError: cannot import name write_source
 [5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 0 files for this package.
-[5-ERROR] Applying package split: 40 straw:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 straw:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 straw:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building straw=straw.
 
-[9-ERROR] creating build/share/locale/es/LC_MESSAGES
-[9-ERROR] creating build/share/locale/fi
-[9-ERROR] creating build/share/locale/fi/LC_MESSAGES
-[9-ERROR] creating build/share/locale/fr
-[9-ERROR] creating build/share/locale/fr/LC_MESSAGES
-[9-ERROR] creating build/share/locale/nl
-[9-ERROR] creating build/share/locale/nl/LC_MESSAGES
-[9-ERROR] creating build/share/locale/no
-[9-ERROR] creating build/share/locale/no/LC_MESSAGES
-[9-ERROR] creating build/share/locale/pt
-[9-ERROR] creating build/share/locale/pt/LC_MESSAGES
-[9-ERROR] creating build/share/locale/ru
-[9-ERROR] creating build/share/locale/ru/LC_MESSAGES
-[9-ERROR] creating build/share/locale/sr
-[9-ERROR] creating build/share/locale/sr/LC_MESSAGES
-[9-ERROR] creating build/share/locale/sv
-[9-ERROR] creating build/share/locale/sv/LC_MESSAGES
-[9-ERROR] creating build/share/locale/en_CA
-[9-ERROR] creating build/share/locale/en_CA/LC_MESSAGES
-[9-ERROR] creating build/share/locale/en_GB
-[9-ERROR] creating build/share/locale/en_GB/LC_MESSAGES
-[9-ERROR] creating build/share/locale/sr@Latn
-[9-ERROR] creating build/share/locale/sr@Latn/LC_MESSAGES
-[9-ERROR] creating build/share/locale/pt_BR
-[9-ERROR] creating build/share/locale/pt_BR/LC_MESSAGES
-[9-ERROR] running build_desktop
-[9-ERROR] creating build/share/applications
-[9-ERROR] WARNING: po/ru.po is not in UTF-8 but koi8-r, converting...
-[9-ERROR] WARNING: po/no.po is not in UTF-8 but ISO-8859-1, converting...
-[9-ERROR] WARNING: po/fi.po is not in UTF-8 but ISO-8859-1, converting...
-[9-ERROR] WARNING: po/fr.po is not in UTF-8 but ISO-8859-1, converting...
-[9-ERROR] WARNING: po/de.po is not in UTF-8 but ISO-8859-1, converting...
-[9-ERROR] Merging translations into build/share/applications/straw.desktop.
-[9-ERROR] running install
-[9-ERROR] running install_modules_check
-[9-ERROR] /opt/gnome2/lib/python2.4/site-packages/gtk-2.0/gnome/vfs.py:4: DeprecationWarning: Module gnome.vfs is deprecated; please import gnomevfs instead
-[9-ERROR]   DeprecationWarning)
-[9-ERROR] Error: gtkhtml2 Python module is required to install Straw
-[9-ERROR] Warning: ADNS Python module not found, will continue without.
+[9-ERROR] copying src/lib/SubscribeDialog.py -> build/lib.linux-i686-2.4/straw
+[9-ERROR] copying src/lib/FeedCategoryList.py -> build/lib.linux-i686-2.4/straw
+[9-ERROR] copying src/lib/OPML.py -> build/lib.linux-i686-2.4/straw
+[9-ERROR] copying src/lib/Feed.py -> build/lib.linux-i686-2.4/straw
+[9-ERROR] copying src/lib/FeedItems.py -> build/lib.linux-i686-2.4/straw
+[9-ERROR] copying src/lib/SummaryParser.py -> build/lib.linux-i686-2.4/straw
+[9-ERROR] copying src/lib/QueueDict.py -> build/lib.linux-i686-2.4/straw
+[9-ERROR] copying src/lib/Config.py -> build/lib.linux-i686-2.4/straw
+[9-ERROR] copying src/lib/SummaryItem.py -> build/lib.linux-i686-2.4/straw
+[9-ERROR] copying src/lib/__init__.py -> build/lib.linux-i686-2.4/straw
+[9-ERROR] copying src/lib/Tray.py -> build/lib.linux-i686-2.4/straw
+[9-ERROR] copying src/lib/OPMLExport.py -> build/lib.linux-i686-2.4/straw
+[9-ERROR] copying src/lib/DashboardFrontend.py -> build/lib.linux-i686-2.4/straw
+[9-ERROR] copying src/lib/URLFetch.py -> build/lib.linux-i686-2.4/straw
+[9-ERROR] copying src/lib/ValueMonitor.py -> build/lib.linux-i686-2.4/straw
+[9-ERROR] copying src/lib/utils.py -> build/lib.linux-i686-2.4/straw
+[9-ERROR] running build_ext
+[9-ERROR] Traceback (most recent call last):
+[9-ERROR]   File "setup.py", line 154, in ?
+[9-ERROR]     override='src/eggtray/trayicon.override')])
+[9-ERROR]   File "/ROCK/loop/src.straw.1169145873.23890.4245164994/straw-0.25.1/tools/straw_distutils.py", line 520, in setup
+[9-ERROR]     setup(**kwds)
+[9-ERROR]   File "/usr/lib/python2.4/distutils/core.py", line 149, in setup
+[9-ERROR]     dist.run_commands()
+[9-ERROR]   File "/usr/lib/python2.4/distutils/dist.py", line 946, in run_commands
+[9-ERROR]     self.run_command(cmd)
+[9-ERROR]   File "/usr/lib/python2.4/distutils/dist.py", line 966, in run_command
+[9-ERROR]     cmd_obj.run()
+[9-ERROR]   File "/usr/lib/python2.4/distutils/command/build.py", line 112, in run
+[9-ERROR]     self.run_command(cmd_name)
+[9-ERROR]   File "/usr/lib/python2.4/distutils/cmd.py", line 333, in run_command
+[9-ERROR]     self.distribution.run_command(command)
+[9-ERROR]   File "/usr/lib/python2.4/distutils/dist.py", line 966, in run_command
+[9-ERROR]     cmd_obj.run()
+[9-ERROR]   File "/usr/lib/python2.4/distutils/command/build_ext.py", line 279, in run
+[9-ERROR]     self.build_extensions()
+[9-ERROR]   File "/opt/gnome2/lib/python2.4/site-packages/gtk-2.0/dsextras.py", line 132, in build_extensions
+[9-ERROR]     build_ext.build_extensions(self)
+[9-ERROR]   File "/usr/lib/python2.4/distutils/command/build_ext.py", line 405, in build_extensions
+[9-ERROR]     self.build_extension(ext)
+[9-ERROR]   File "/opt/gnome2/lib/python2.4/site-packages/gtk-2.0/dsextras.py", line 139, in build_extension
+[9-ERROR]     ext.generate()
+[9-ERROR]   File "/opt/gnome2/lib/python2.4/site-packages/gtk-2.0/dsextras.py", line 387, in generate
+[9-ERROR]     map(lambda x: x.generate(), self.templates)
+[9-ERROR]   File "/opt/gnome2/lib/python2.4/site-packages/gtk-2.0/dsextras.py", line 387, in <lambda>
+[9-ERROR]     map(lambda x: x.generate(), self.templates)
+[9-ERROR]   File "/opt/gnome2/lib/python2.4/site-packages/gtk-2.0/dsextras.py", line 340, in generate
+[9-ERROR]     from codegen import register_types, write_source, FileOutput
+[9-ERROR] ImportError: cannot import name write_source
 [9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 0 files for this package.
-[9-ERROR] Applying package split: 40 straw:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 straw:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 straw:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building straw=straw.
 

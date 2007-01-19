@@ -20,23 +20,27 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142501523 Thu Mar 16 10:32:03 2006 (5)
-[TIMESTAMP] 1142752415 Sun Mar 19 08:13:35 2006 (9)
+[TIMESTAMP] 1168578137 Fri Jan 12 06:02:17 2007 (5)
+[TIMESTAMP] 1168776920 Sun Jan 14 13:15:20 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-xosd.log 9-xosd.log
 
-[BUILDTIME] 3307 (5)
-[BUILDTIME] 3839 (9)
-[SIZE] 0.13 MB, 40 files
+[BUILDTIME] 3542 (5)
+[BUILDTIME] 4051 (9)
+[SIZE] 0.10 MB, 25 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev gdk-pixbuf10 gdk-pixbuf10:dev glib12 glib12:dev
-[DEP] glibc23 glibc23:dev gnome14-dirtree grep gtk+12 gtk+12:dev
-[DEP] linux26-header:dev make mktemp net-tools rrdtool sed sysfiles tar
-[DEP] util-linux xmms xmms:dev xorg xorg:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils
+[DEP] bzip2 coreutils cvm diffutils findutils gawk gcc40 gcc40:dev
+[DEP] gdk-pixbuf10 gdk-pixbuf10:dev glib12 glib12:dev glibc23 glibc23:dev
+[DEP] gnome14-dirtree grep gtk+12 gtk+12:dev imake libice libice:dev libsm
+[DEP] libsm:dev libx11 libx11:dev libxau libxau:dev libxdmcp libxdmcp:dev
+[DEP] libxext libxext:dev libxi libxi:dev libxinerama libxinerama:dev
+[DEP] libxt libxt:dev linux-libc-headers:dev make mktemp net-tools netpbm
+[DEP] rrdtool sed sysfiles tar twoftpd ucspi-unix util-linux xextproto:dev
+[DEP] xineramaproto:dev xmms xmms:dev xorg-cf-files xproto:dev
 
 [PROVIDES] libxmms_osd.so libxosd.a libxosd.so osd_cat xosd-config
 

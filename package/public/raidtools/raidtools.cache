@@ -20,22 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1133080481 Sun Nov 27 09:34:41 2005 (5)
-[TIMESTAMP] 1133315801 Wed Nov 30 02:56:41 2005 (9)
+[TIMESTAMP] 1168634314 Fri Jan 12 21:38:34 2007 (5) ERROR
+[TIMESTAMP] 1168839577 Mon Jan 15 06:39:37 2007 (9) ERROR
+[TIMESTAMP] 1168948390 Tue Jan 16 12:53:10 2007 (5) ERROR
+[TIMESTAMP] 1168975603 Tue Jan 16 20:26:43 2007 (9) ERROR
+[TIMESTAMP] 1169091806 Thu Jan 18 04:43:26 2007 (5) ERROR
+[TIMESTAMP] 1169145891 Thu Jan 18 19:44:51 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-raidtools.log 9-raidtools.log
+[LOGS] 5-raidtools.err 9-raidtools.err
 
-[BUILDTIME] 1709 (5)
-[BUILDTIME] 2090 (9)
-[SIZE] 0.43 MB, 27 files
+[BUILDTIME] 933 (5) ERROR
+[BUILDTIME] 926 (9) ERROR
+[BUILDTIME] 921 (5) ERROR
+[BUILDTIME] 907 (9) ERROR
+[BUILDTIME] 919 (5) ERROR
+[BUILDTIME] 905 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] net-tools patch popt:dev sed sysfiles tar util-linux
 
-[PROVIDES] arytst detect_multipath lsraid mkraid raid0run raidhotadd
-[PROVIDES] raidhotremove raidreconf raidsetfaulty raidstart raidstop
+[5-ERROR] Removing raidtools-1.00.3/Software-RAID.HOWTO/CVS/Repository ...
+[5-ERROR] Removing raidtools-1.00.3/Software-RAID.HOWTO/CVS/Entries ...
+[5-ERROR] Removing raidtools-1.00.3/Software-RAID.HOWTO/CVS/Root ...
+[5-ERROR] Changeing into /ROCK/src.raidtools.1169091797.26296.905555977/raidtools-1.00.3 ...
+[5-ERROR] Apply patch /ROCK/package/public/raidtools/gcc33-support.patch ...
+[5-ERROR] patching file mkraid.c
+[5-ERROR] Apply patch /ROCK/package/public/raidtools/no_install_dev.patch ...
+[5-ERROR] patching file Makefile.in
+[5-ERROR] Hunk #1 succeeded at 61 with fuzz 2 (offset 15 lines).
+[5-ERROR] Creating /usr/<..> if required ...
+[5-ERROR] Autodetection for option impossible:  --disable-debug passed thru.
+[5-ERROR] Removing unsupported '--with-mysql-lib=/opt/mysql/lib/mysql' from configure option string.
+[5-ERROR] Removing unsupported '--with-mysql-include=/opt/mysql/include/mysql' from configure option string.
+[5-ERROR] Removing unsupported '--with-libpam' from configure option string.
+[5-ERROR] Removing unsupported '--with-pam' from configure option string.
+[5-ERROR] Autodetection for option impossible:  --enable-libpam passed thru.
+[5-ERROR] Autodetection for option impossible:  --enable-pam passed thru.
+[5-ERROR] Running  bash ./configure --prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --libdir=/usr/lib --datadir=/usr/share --includedir=/usr/include --infodir=/usr/share/info --mandir=/usr/share/man --sysconfdir=/etc --localstatedir=/var --disable-debug --enable-libpam --enable-pam --build=i386-unknown-linux-gnu --host=i386-unknown-linux-gnu
+[5-ERROR] checking for i386-unknown-linux-gnu-gcc... gcc-40
+[5-ERROR] checking for C compiler default output... a.out
+[5-ERROR] checking whether the C compiler works... yes
+[5-ERROR] checking whether we are cross compiling... no
+[5-ERROR] checking for suffix of executables... 
+[5-ERROR] checking for suffix of object files... o
+[5-ERROR] checking whether we are using the GNU C compiler... yes
+[5-ERROR] checking whether gcc-40 accepts -g... yes
+[5-ERROR] checking for gcc-40 option to accept ANSI C... none needed
+[5-ERROR] checking how to run the C preprocessor... gcc-40 -E
+[5-ERROR] configure: creating ./config.status
+[5-ERROR] config.status: creating Makefile
+[5-ERROR] config.status: creating config.h
+[5-ERROR] config.status: config.h is unchanged
+[5-ERROR] gcc-40 -O2 -Wall -DMD_VERSION=\""raidtools-1.00.3"\" -c -o raidstart.o raidstart.c
+[5-ERROR] gcc-40 -O2 -Wall -DMD_VERSION=\""raidtools-1.00.3"\" -c -o parser.o parser.c
+[5-ERROR] gcc-40 -O2 -Wall -DMD_VERSION=\""raidtools-1.00.3"\" -c -o raidlib.o raidlib.c
+[5-ERROR] gcc-40 -O2 -Wall -DMD_VERSION=\""raidtools-1.00.3"\" -c -o version.o version.c
+[5-ERROR] raidlib.c:66: error: redefinition of 'getpageshift'
+[5-ERROR] /usr/include/asm/page.h:8: error: previous definition of 'getpageshift' was here
+[5-ERROR] make: *** [raidlib.o] Error 1
+[5-ERROR] make: *** Waiting for unfinished jobs....
+[5-ERROR] raidstart.c: In function 'main':
+[5-ERROR] raidstart.c:76: warning: pointer targets in passing argument 1 of 'usage' differ in signedness
+[5-ERROR] raidstart.c:86: warning: pointer targets in passing argument 1 of 'usage' differ in signedness
+[5-ERROR] raidstart.c:91: warning: pointer targets in passing argument 1 of 'usage' differ in signedness
+[5-ERROR] raidstart.c:116: warning: pointer targets in passing argument 1 of 'usage' differ in signedness
+[5-ERROR] raidstart.c:144: warning: pointer targets in passing argument 1 of 'usage' differ in signedness
+[5-ERROR] raidstart.c:165: warning: pointer targets in passing argument 1 of 'usage' differ in signedness
+[5-ERROR] raidstart.c:175: warning: pointer targets in passing argument 1 of 'usage' differ in signedness
+[5-ERROR] raidstart.c:207: warning: pointer targets in passing argument 1 of 'usage' differ in signedness
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] Removing raidtools-1.00.3/Software-RAID.HOWTO/CVS/Repository ...
+[9-ERROR] Removing raidtools-1.00.3/Software-RAID.HOWTO/CVS/Entries ...
+[9-ERROR] Removing raidtools-1.00.3/Software-RAID.HOWTO/CVS/Root ...
+[9-ERROR] Changeing into /ROCK/src.raidtools.1169145882.27787.4245164994/raidtools-1.00.3 ...
+[9-ERROR] Apply patch /ROCK/package/public/raidtools/gcc33-support.patch ...
+[9-ERROR] patching file mkraid.c
+[9-ERROR] Apply patch /ROCK/package/public/raidtools/no_install_dev.patch ...
+[9-ERROR] patching file Makefile.in
+[9-ERROR] Hunk #1 succeeded at 61 with fuzz 2 (offset 15 lines).
+[9-ERROR] Creating /usr/<..> if required ...
+[9-ERROR] Autodetection for option impossible:  --disable-debug passed thru.
+[9-ERROR] Removing unsupported '--with-mysql-lib=/opt/mysql/lib/mysql' from configure option string.
+[9-ERROR] Removing unsupported '--with-mysql-include=/opt/mysql/include/mysql' from configure option string.
+[9-ERROR] Removing unsupported '--with-libpam' from configure option string.
+[9-ERROR] Removing unsupported '--with-pam' from configure option string.
+[9-ERROR] Autodetection for option impossible:  --enable-libpam passed thru.
+[9-ERROR] Autodetection for option impossible:  --enable-pam passed thru.
+[9-ERROR] Running  bash ./configure --prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --libdir=/usr/lib --datadir=/usr/share --includedir=/usr/include --infodir=/usr/share/info --mandir=/usr/share/man --sysconfdir=/etc --localstatedir=/var --disable-debug --enable-libpam --enable-pam --build=i386-unknown-linux-gnu --host=i386-unknown-linux-gnu
+[9-ERROR] checking for i386-unknown-linux-gnu-gcc... gcc-40
+[9-ERROR] checking for C compiler default output... a.out
+[9-ERROR] checking whether the C compiler works... yes
+[9-ERROR] checking whether we are cross compiling... no
+[9-ERROR] checking for suffix of executables... 
+[9-ERROR] checking for suffix of object files... o
+[9-ERROR] checking whether we are using the GNU C compiler... yes
+[9-ERROR] checking whether gcc-40 accepts -g... yes
+[9-ERROR] checking for gcc-40 option to accept ANSI C... none needed
+[9-ERROR] checking how to run the C preprocessor... gcc-40 -E
+[9-ERROR] configure: creating ./config.status
+[9-ERROR] config.status: creating Makefile
+[9-ERROR] config.status: creating config.h
+[9-ERROR] config.status: config.h is unchanged
+[9-ERROR] gcc-40 -O2 -Wall -DMD_VERSION=\""raidtools-1.00.3"\" -c -o raidstart.o raidstart.c
+[9-ERROR] gcc-40 -O2 -Wall -DMD_VERSION=\""raidtools-1.00.3"\" -c -o parser.o parser.c
+[9-ERROR] gcc-40 -O2 -Wall -DMD_VERSION=\""raidtools-1.00.3"\" -c -o raidlib.o raidlib.c
+[9-ERROR] gcc-40 -O2 -Wall -DMD_VERSION=\""raidtools-1.00.3"\" -c -o version.o version.c
+[9-ERROR] raidlib.c:66: error: redefinition of 'getpageshift'
+[9-ERROR] /usr/include/asm/page.h:8: error: previous definition of 'getpageshift' was here
+[9-ERROR] raidstart.c: In function 'main':
+[9-ERROR] raidstart.c:76: warning: pointer targets in passing argument 1 of 'usage' differ in signedness
+[9-ERROR] raidstart.c:86: warning: pointer targets in passing argument 1 of 'usage' differ in signedness
+[9-ERROR] raidstart.c:91: warning: pointer targets in passing argument 1 of 'usage' differ in signedness
+[9-ERROR] raidstart.c:116: warning: pointer targets in passing argument 1 of 'usage' differ in signedness
+[9-ERROR] raidstart.c:144: warning: pointer targets in passing argument 1 of 'usage' differ in signedness
+[9-ERROR] raidstart.c:165: warning: pointer targets in passing argument 1 of 'usage' differ in signedness
+[9-ERROR] raidstart.c:175: warning: pointer targets in passing argument 1 of 'usage' differ in signedness
+[9-ERROR] raidstart.c:207: warning: pointer targets in passing argument 1 of 'usage' differ in signedness
+[9-ERROR] make: *** [raidlib.o] Error 1
+[9-ERROR] make: *** Waiting for unfinished jobs....
+[9-ERROR] --- BUILD ERROR ---
 

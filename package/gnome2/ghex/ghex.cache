@@ -20,32 +20,91 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142655609 Sat Mar 18 05:20:09 2006 (5)
-[TIMESTAMP] 1142925381 Tue Mar 21 08:16:21 2006 (9)
+[TIMESTAMP] 1168695800 Sat Jan 13 14:43:20 2007 (5) ERROR
+[TIMESTAMP] 1168904953 Tue Jan 16 00:49:13 2007 (9) ERROR
+[TIMESTAMP] 1168953983 Tue Jan 16 14:26:23 2007 (5) ERROR
+[TIMESTAMP] 1168983712 Tue Jan 16 22:41:52 2007 (9) ERROR
+[TIMESTAMP] 1169124317 Thu Jan 18 13:45:17 2007 (5) ERROR
+[TIMESTAMP] 1169153905 Thu Jan 18 21:58:25 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-ghex.log 9-ghex.log
+[LOGS] 5-ghex.err 9-ghex.err
 
-[BUILDTIME] 5618 (5)
-[BUILDTIME] 5872 (9)
-[SIZE] 1.49 MB, 136 files
+[BUILDTIME] 715 (5) ERROR
+[BUILDTIME] 713 (9) ERROR
+[BUILDTIME] 738 (5) ERROR
+[BUILDTIME] 742 (9) ERROR
+[BUILDTIME] 724 (5) ERROR
+[BUILDTIME] 733 (9) ERROR
 
-[DEP] 00-dirtree alsa atk atk:dev audiofile autoconf bash2 binutils bzip2
-[DEP] cairo cairo:dev coreutils cpan-xml-parser diffutils docbookx esound
-[DEP] expat findutils freetype freetype:dev gail gail:dev gawk gcc34
-[DEP] gcc34:dev gconf gconf:dev gettext glib glib:dev glibc23 glibc23:dev
-[DEP] gnome-blog gnome-doc-utils gnome-keyring gnome-keyring-manager
-[DEP] gnome-keyring:dev gnome-netstatus gnome-vfs gnome-vfs:dev
-[DEP] gnome2-dirtree gnopernicus grep gtk+ gtk+:dev libart_lgpl23
-[DEP] libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui libbonoboui:dev
-[DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeprint
-[DEP] libgnomeprint:dev libgnomeprintui libgnomeprintui:dev libgnomeui
-[DEP] libgnomeui:dev libjpeg libpng libpng:dev libxml2 libxml2:dev
-[DEP] linux26-header:dev make mktemp net-tools openssl orbit2 orbit2:dev
-[DEP] pango pango:dev patch perl5 pkgconfig popt popt:dev rrdtool
-[DEP] scrollkeeper sed sysfiles tar texinfo util-linux xorg zlib:dev
 
-[PROVIDES] ghex2 libgtkhex.a libgtkhex.so
+[5-ERROR] Command Wrapper Debug: running 'gcc-40 --version' ..
+[5-ERROR] gcc-40 is /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/gcc-40
+[5-ERROR] Old Command: gcc-40 --version
+[5-ERROR] ENVPREFIX = 'CMD'
+[5-ERROR] APPEND_PO = ''
+[5-ERROR] OTHERS = ''
+[5-ERROR] INSERT = '-O1 -pipe'
+[5-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
+[5-ERROR] APPEND = '-s'
+[5-ERROR] FILTER = ''
+[5-ERROR] Old PATH: /ROCK/src.ghex.1169124309.25271.3641098646/wrappers:/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper:/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[5-ERROR] New PATH: /ROCK/src.ghex.1169124309.25271.3641098646/wrappers:/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[5-ERROR] Insert: -O1
+[5-ERROR] Insert: -pipe
+[5-ERROR] Copy:   --version
+[5-ERROR] Append: -s
+[5-ERROR] New Command: gcc-40 -O1 -pipe --version -s
+[5-ERROR] gcc-40 (GCC) 4.0.3
+[5-ERROR] Copyright (C) 2006 Free Software Foundation, Inc.
+[5-ERROR] This is free software; see the source for copying conditions.  There is NO
+[5-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[5-ERROR] 
+[5-ERROR] [ writing debug log to /ROCK/src.ghex.1169124309.25271.3641098646/cmd_wrapper.log ]
+[5-ERROR] Running main build function 'build_this_package' ...
+[5-ERROR] Extracting ghex-2.8.2.tar.bz2 (--use-compress-program=bzip2 -xf) ... 
+[5-ERROR] Fixing ownership and permissions ...
+[5-ERROR] Removing CVS and .svn directories ...
+[5-ERROR] Changeing into /ROCK/src.ghex.1169124309.25271.3641098646/ghex-2.8.2 ...
+[5-ERROR] Apply patch /ROCK/package/gnome2/ghex/missing-ldadd-gailutil.patch ...
+[5-ERROR] patching file src/Makefile.in
+[5-ERROR] Hunk #1 FAILED at 168.
+[5-ERROR] 1 out of 1 hunk FAILED -- saving rejects to file src/Makefile.in.rej
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] Command Wrapper Debug: running 'gcc-40 --version' ..
+[9-ERROR] gcc-40 is /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/gcc-40
+[9-ERROR] Old Command: gcc-40 --version
+[9-ERROR] ENVPREFIX = 'CMD'
+[9-ERROR] APPEND_PO = ''
+[9-ERROR] OTHERS = ''
+[9-ERROR] INSERT = '-O1 -pipe'
+[9-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
+[9-ERROR] APPEND = '-s'
+[9-ERROR] FILTER = ''
+[9-ERROR] Old PATH: /ROCK/src.ghex.1169153897.15757.3951810427/wrappers:/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper:/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[9-ERROR] New PATH: /ROCK/src.ghex.1169153897.15757.3951810427/wrappers:/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[9-ERROR] Insert: -O1
+[9-ERROR] Insert: -pipe
+[9-ERROR] Copy:   --version
+[9-ERROR] Append: -s
+[9-ERROR] New Command: gcc-40 -O1 -pipe --version -s
+[9-ERROR] gcc-40 (GCC) 4.0.3
+[9-ERROR] Copyright (C) 2006 Free Software Foundation, Inc.
+[9-ERROR] This is free software; see the source for copying conditions.  There is NO
+[9-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[9-ERROR] 
+[9-ERROR] [ writing debug log to /ROCK/src.ghex.1169153897.15757.3951810427/cmd_wrapper.log ]
+[9-ERROR] Running main build function 'build_this_package' ...
+[9-ERROR] Extracting ghex-2.8.2.tar.bz2 (--use-compress-program=bzip2 -xf) ... 
+[9-ERROR] Fixing ownership and permissions ...
+[9-ERROR] Removing CVS and .svn directories ...
+[9-ERROR] Changeing into /ROCK/src.ghex.1169153897.15757.3951810427/ghex-2.8.2 ...
+[9-ERROR] Apply patch /ROCK/package/gnome2/ghex/missing-ldadd-gailutil.patch ...
+[9-ERROR] patching file src/Makefile.in
+[9-ERROR] Hunk #1 FAILED at 168.
+[9-ERROR] 1 out of 1 hunk FAILED -- saving rejects to file src/Makefile.in.rej
+[9-ERROR] --- BUILD ERROR ---
 

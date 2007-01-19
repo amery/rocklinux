@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142491636 Thu Mar 16 07:47:16 2006 (5)
-[TIMESTAMP] 1142740816 Sun Mar 19 05:00:16 2006 (9)
+[TIMESTAMP] 1168568188 Fri Jan 12 03:16:28 2007 (5)
+[TIMESTAMP] 1168765854 Sun Jan 14 10:10:54 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-gnome-blog.log 9-gnome-blog.log
 
-[BUILDTIME] 1575 (5)
-[BUILDTIME] 2114 (9)
-[SIZE] 0.21 MB, 66 files
+[BUILDTIME] 2034 (5)
+[BUILDTIME] 2430 (9)
+[SIZE] 0.45 MB, 98 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev gconf gettext glib glibc23 glibc23:dev gnome2-dirtree
-[DEP] grep linux26-header:dev make mktemp net-tools pango perl5 pkgconfig
-[DEP] python rrdtool sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cpan-xml-parser cvm
+[DEP] diffutils findutils gawk gcc40 gcc40:dev gconf gettext glibc23
+[DEP] glibc23:dev gnome2-dirtree grep linux-libc-headers:dev make mktemp
+[DEP] net-tools pango perl5 pkgconfig python rrdtool sed sysfiles tar
+[DEP] util-linux
 
-[PROVIDES] blog_applet.py gnome-blog-poster
+[PROVIDES] gnome-blog-poster
 

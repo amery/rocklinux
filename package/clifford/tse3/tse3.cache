@@ -20,24 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142644978 Sat Mar 18 02:22:58 2006 (5)
-[TIMESTAMP] 1142913663 Tue Mar 21 05:01:03 2006 (9)
+[TIMESTAMP] 1168689711 Sat Jan 13 13:01:51 2007 (5) ERROR
+[TIMESTAMP] 1168898575 Mon Jan 15 23:02:55 2007 (9) ERROR
+[TIMESTAMP] 1168953297 Tue Jan 16 14:14:57 2007 (5) ERROR
+[TIMESTAMP] 1168983002 Tue Jan 16 22:30:02 2007 (9) ERROR
+[TIMESTAMP] 1169123626 Thu Jan 18 13:33:46 2007 (5) ERROR
+[TIMESTAMP] 1169153205 Thu Jan 18 21:46:45 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-tse3.log 9-tse3.log
+[LOGS] 5-tse3.err 9-tse3.err
 
-[BUILDTIME] 15580 (5)
-[BUILDTIME] 15973 (9)
-[SIZE] 1.32 MB, 12 files
+[BUILDTIME] 3889 (5) ERROR
+[BUILDTIME] 3929 (9) ERROR
+[BUILDTIME] 3972 (5) ERROR
+[BUILDTIME] 3963 (9) ERROR
+[BUILDTIME] 3935 (5) ERROR
+[BUILDTIME] 3983 (9) ERROR
 
-[DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev bash2
-[DEP] binutils bzip2 coreutils diffutils esound esound:dev file findutils
-[DEP] gawk gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev gnome2-dirtree
-[DEP] grep jack jack:dev kdelibs kdemultimedia kdemultimedia:dev
-[DEP] linux26-header:dev mad mad:dev make mktemp nas net-tools ogg-vorbis
-[DEP] ogg-vorbis:dev patch perl5 rrdtool sed sysfiles tar util-linux xorg
 
-[PROVIDES] libtse3.so tse3play
+[5-ERROR] ../../../src/tse3/listen/Phrase.h:33: warning: 'class TSE3::PhraseListener' has virtual functions but non-virtual destructor
+[5-ERROR] if /bin/sh ../../../libtool --tag=CXX --mode=compile g++-40 -D_SYS_SYSMACROS_H=IGNORE -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src    -g -O2 -W -Wall -ansi -pedantic -MT Phrase.lo -MD -MP -MF ".deps/Phrase.Tpo" -c -o Phrase.lo Phrase.cpp; \
+[5-ERROR] 	then mv -f ".deps/Phrase.Tpo" ".deps/Phrase.Plo"; else rm -f ".deps/Phrase.Tpo"; exit 1; fi
+[5-ERROR]  g++-40 -D_SYS_SYSMACROS_H=IGNORE -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src -g -O2 -W -Wall -ansi -pedantic -MT Phrase.lo -MD -MP -MF .deps/Phrase.Tpo -c Phrase.cpp  -fPIC -DPIC -o .libs/Phrase.o
+[5-ERROR] ../../../src/tse3/listen/Phrase.h:33: warning: 'class TSE3::PhraseListener' has virtual functions but non-virtual destructor
+[5-ERROR] ../../../src/tse3/listen/DisplayParams.h:33: warning: 'class TSE3::DisplayParamsListener' has virtual functions but non-virtual destructor
+[5-ERROR] ../../../src/tse3/listen/DisplayParams.h:48: warning: 'class TSE3::PresetColoursListener' has virtual functions but non-virtual destructor
+[5-ERROR] ../../../src/tse3/cmd/Phrase.h:116: error: 'TSE3::PhraseEdit' has not been declared
+[5-ERROR] ../../../src/tse3/cmd/Phrase.h:141: error: using-declaration for non-member at class scope
+[5-ERROR] ../../../src/tse3/cmd/Phrase.h:141: error: expected ';' before '*' token
+[5-ERROR] ../../../src/tse3/cmd/Phrase.h:243: error: 'TSE3::PhraseEdit' has not been declared
+[5-ERROR] ../../../src/tse3/cmd/Phrase.h:273: error: using-declaration for non-member at class scope
+[5-ERROR] ../../../src/tse3/cmd/Phrase.h:273: error: expected ';' before '*' token
+[5-ERROR] ../../../src/tse3/listen/Song.h:37: warning: 'class TSE3::SongListener' has virtual functions but non-virtual destructor
+[5-ERROR] ../../../src/tse3/listen/Track.h:33: warning: 'class TSE3::TrackListener' has virtual functions but non-virtual destructor
+[5-ERROR] ../../../src/tse3/listen/Part.h:35: warning: 'class TSE3::PartListener' has virtual functions but non-virtual destructor
+[5-ERROR] ../../../src/tse3/listen/MidiFilter.h:32: warning: 'class TSE3::MidiFilterListener' has virtual functions but non-virtual destructor
+[5-ERROR] ../../../src/tse3/listen/MidiParams.h:32: warning: 'class TSE3::MidiParamsListener' has virtual functions but non-virtual destructor
+[5-ERROR] ../../../src/tse3/listen/PhraseEdit.h:36: warning: 'class TSE3::PhraseEditListener' has virtual functions but non-virtual destructor
+[5-ERROR] ../../../src/tse3/listen/PhraseList.h:33: warning: 'class TSE3::PhraseListListener' has virtual functions but non-virtual destructor
+[5-ERROR] Phrase.cpp:79: error: prototype for 'TSE3::Cmd::Phrase_Create::Phrase_Create(TSE3::PhraseList*, TSE3::PhraseEdit*, const std::string&)' does not match any in class 'TSE3::Cmd::Phrase_Create'
+[5-ERROR] ../../../src/tse3/cmd/Phrase.h:102: error: candidates are: TSE3::Cmd::Phrase_Create::Phrase_Create(const TSE3::Cmd::Phrase_Create&)
+[5-ERROR] ../../../src/tse3/cmd/Phrase.h:117: error:                 TSE3::Cmd::Phrase_Create::Phrase_Create(TSE3::PhraseList*, int*, const std::string&)
+[5-ERROR] Phrase.cpp: In constructor 'TSE3::Cmd::Phrase_Create::Phrase_Create(TSE3::PhraseList*, TSE3::PhraseEdit*, const std::string&)':
+[5-ERROR] Phrase.cpp:80: error: class 'TSE3::Cmd::Phrase_Create' does not have any field named 'phraseEdit'
+[5-ERROR] Phrase.cpp: In member function 'virtual void TSE3::Cmd::Phrase_Create::executeImpl()':
+[5-ERROR] Phrase.cpp:103: error: 'phraseEdit' was not declared in this scope
+[5-ERROR] Phrase.cpp: In constructor 'TSE3::Cmd::Phrase_Replace::Phrase_Replace(TSE3::Phrase*, TSE3::Phrase*, TSE3::Song*)':
+[5-ERROR] Phrase.cpp:198: error: class 'TSE3::Cmd::Phrase_Replace' does not have any field named 'phraseEdit'
+[5-ERROR] Phrase.cpp: At global scope:
+[5-ERROR] Phrase.cpp:207: error: prototype for 'TSE3::Cmd::Phrase_Replace::Phrase_Replace(TSE3::Phrase*, TSE3::PhraseEdit*, TSE3::Song*, const std::string&)' does not match any in class 'TSE3::Cmd::Phrase_Replace'
+[5-ERROR] ../../../src/tse3/cmd/Phrase.h:207: error: candidates are: TSE3::Cmd::Phrase_Replace::Phrase_Replace(const TSE3::Cmd::Phrase_Replace&)
+[5-ERROR] ../../../src/tse3/cmd/Phrase.h:245: error:                 TSE3::Cmd::Phrase_Replace::Phrase_Replace(TSE3::Phrase*, int*, TSE3::Song*, const std::string&)
+[5-ERROR] Phrase.cpp:196: error:                 TSE3::Cmd::Phrase_Replace::Phrase_Replace(TSE3::Phrase*, TSE3::Phrase*, TSE3::Song*)
+[5-ERROR] Phrase.cpp: In constructor 'TSE3::Cmd::Phrase_Replace::Phrase_Replace(TSE3::Phrase*, TSE3::PhraseEdit*, TSE3::Song*, const std::string&)':
+[5-ERROR] Phrase.cpp:209: error: class 'TSE3::Cmd::Phrase_Replace' does not have any field named 'phraseEdit'
+[5-ERROR] Phrase.cpp: In member function 'virtual void TSE3::Cmd::Phrase_Replace::executeImpl()':
+[5-ERROR] Phrase.cpp:233: error: 'phraseEdit' was not declared in this scope
+[5-ERROR] Phrase.cpp: In member function 'virtual void TSE3::Cmd::Phrase_Replace::undoImpl()':
+[5-ERROR] Phrase.cpp:274: error: 'phraseEdit' was not declared in this scope
+[5-ERROR] make[4]: *** [Phrase.lo] Error 1
+[5-ERROR] make[4]: Leaving directory `/ROCK/loop/src.tse3.1169123585.30970.3694631316/tse3-0.3.1/src/tse3/cmd'
+[5-ERROR] make[3]: *** [all-recursive] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.tse3.1169123585.30970.3694631316/tse3-0.3.1/src/tse3'
+[5-ERROR] make[2]: *** [all-recursive] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.tse3.1169123585.30970.3694631316/tse3-0.3.1/src'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.tse3.1169123585.30970.3694631316/tse3-0.3.1'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] ../../../src/tse3/listen/Phrase.h:33: warning: 'class TSE3::PhraseListener' has virtual functions but non-virtual destructor
+[9-ERROR] if /bin/sh ../../../libtool --tag=CXX --mode=compile g++-40 -D_SYS_SYSMACROS_H=IGNORE -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src    -g -O2 -W -Wall -ansi -pedantic -MT Phrase.lo -MD -MP -MF ".deps/Phrase.Tpo" -c -o Phrase.lo Phrase.cpp; \
+[9-ERROR] 	then mv -f ".deps/Phrase.Tpo" ".deps/Phrase.Plo"; else rm -f ".deps/Phrase.Tpo"; exit 1; fi
+[9-ERROR]  g++-40 -D_SYS_SYSMACROS_H=IGNORE -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src -g -O2 -W -Wall -ansi -pedantic -MT Phrase.lo -MD -MP -MF .deps/Phrase.Tpo -c Phrase.cpp  -fPIC -DPIC -o .libs/Phrase.o
+[9-ERROR] ../../../src/tse3/listen/Phrase.h:33: warning: 'class TSE3::PhraseListener' has virtual functions but non-virtual destructor
+[9-ERROR] ../../../src/tse3/listen/DisplayParams.h:33: warning: 'class TSE3::DisplayParamsListener' has virtual functions but non-virtual destructor
+[9-ERROR] ../../../src/tse3/listen/DisplayParams.h:48: warning: 'class TSE3::PresetColoursListener' has virtual functions but non-virtual destructor
+[9-ERROR] ../../../src/tse3/cmd/Phrase.h:116: error: 'TSE3::PhraseEdit' has not been declared
+[9-ERROR] ../../../src/tse3/cmd/Phrase.h:141: error: using-declaration for non-member at class scope
+[9-ERROR] ../../../src/tse3/cmd/Phrase.h:141: error: expected ';' before '*' token
+[9-ERROR] ../../../src/tse3/cmd/Phrase.h:243: error: 'TSE3::PhraseEdit' has not been declared
+[9-ERROR] ../../../src/tse3/cmd/Phrase.h:273: error: using-declaration for non-member at class scope
+[9-ERROR] ../../../src/tse3/cmd/Phrase.h:273: error: expected ';' before '*' token
+[9-ERROR] ../../../src/tse3/listen/Song.h:37: warning: 'class TSE3::SongListener' has virtual functions but non-virtual destructor
+[9-ERROR] ../../../src/tse3/listen/Track.h:33: warning: 'class TSE3::TrackListener' has virtual functions but non-virtual destructor
+[9-ERROR] ../../../src/tse3/listen/Part.h:35: warning: 'class TSE3::PartListener' has virtual functions but non-virtual destructor
+[9-ERROR] ../../../src/tse3/listen/MidiFilter.h:32: warning: 'class TSE3::MidiFilterListener' has virtual functions but non-virtual destructor
+[9-ERROR] ../../../src/tse3/listen/MidiParams.h:32: warning: 'class TSE3::MidiParamsListener' has virtual functions but non-virtual destructor
+[9-ERROR] ../../../src/tse3/listen/PhraseEdit.h:36: warning: 'class TSE3::PhraseEditListener' has virtual functions but non-virtual destructor
+[9-ERROR] ../../../src/tse3/listen/PhraseList.h:33: warning: 'class TSE3::PhraseListListener' has virtual functions but non-virtual destructor
+[9-ERROR] Phrase.cpp:79: error: prototype for 'TSE3::Cmd::Phrase_Create::Phrase_Create(TSE3::PhraseList*, TSE3::PhraseEdit*, const std::string&)' does not match any in class 'TSE3::Cmd::Phrase_Create'
+[9-ERROR] ../../../src/tse3/cmd/Phrase.h:102: error: candidates are: TSE3::Cmd::Phrase_Create::Phrase_Create(const TSE3::Cmd::Phrase_Create&)
+[9-ERROR] ../../../src/tse3/cmd/Phrase.h:117: error:                 TSE3::Cmd::Phrase_Create::Phrase_Create(TSE3::PhraseList*, int*, const std::string&)
+[9-ERROR] Phrase.cpp: In constructor 'TSE3::Cmd::Phrase_Create::Phrase_Create(TSE3::PhraseList*, TSE3::PhraseEdit*, const std::string&)':
+[9-ERROR] Phrase.cpp:80: error: class 'TSE3::Cmd::Phrase_Create' does not have any field named 'phraseEdit'
+[9-ERROR] Phrase.cpp: In member function 'virtual void TSE3::Cmd::Phrase_Create::executeImpl()':
+[9-ERROR] Phrase.cpp:103: error: 'phraseEdit' was not declared in this scope
+[9-ERROR] Phrase.cpp: In constructor 'TSE3::Cmd::Phrase_Replace::Phrase_Replace(TSE3::Phrase*, TSE3::Phrase*, TSE3::Song*)':
+[9-ERROR] Phrase.cpp:198: error: class 'TSE3::Cmd::Phrase_Replace' does not have any field named 'phraseEdit'
+[9-ERROR] Phrase.cpp: At global scope:
+[9-ERROR] Phrase.cpp:207: error: prototype for 'TSE3::Cmd::Phrase_Replace::Phrase_Replace(TSE3::Phrase*, TSE3::PhraseEdit*, TSE3::Song*, const std::string&)' does not match any in class 'TSE3::Cmd::Phrase_Replace'
+[9-ERROR] ../../../src/tse3/cmd/Phrase.h:207: error: candidates are: TSE3::Cmd::Phrase_Replace::Phrase_Replace(const TSE3::Cmd::Phrase_Replace&)
+[9-ERROR] ../../../src/tse3/cmd/Phrase.h:245: error:                 TSE3::Cmd::Phrase_Replace::Phrase_Replace(TSE3::Phrase*, int*, TSE3::Song*, const std::string&)
+[9-ERROR] Phrase.cpp:196: error:                 TSE3::Cmd::Phrase_Replace::Phrase_Replace(TSE3::Phrase*, TSE3::Phrase*, TSE3::Song*)
+[9-ERROR] Phrase.cpp: In constructor 'TSE3::Cmd::Phrase_Replace::Phrase_Replace(TSE3::Phrase*, TSE3::PhraseEdit*, TSE3::Song*, const std::string&)':
+[9-ERROR] Phrase.cpp:209: error: class 'TSE3::Cmd::Phrase_Replace' does not have any field named 'phraseEdit'
+[9-ERROR] Phrase.cpp: In member function 'virtual void TSE3::Cmd::Phrase_Replace::executeImpl()':
+[9-ERROR] Phrase.cpp:233: error: 'phraseEdit' was not declared in this scope
+[9-ERROR] Phrase.cpp: In member function 'virtual void TSE3::Cmd::Phrase_Replace::undoImpl()':
+[9-ERROR] Phrase.cpp:274: error: 'phraseEdit' was not declared in this scope
+[9-ERROR] make[4]: *** [Phrase.lo] Error 1
+[9-ERROR] make[4]: Leaving directory `/ROCK/loop/src.tse3.1169153164.21311.1197622847/tse3-0.3.1/src/tse3/cmd'
+[9-ERROR] make[3]: *** [all-recursive] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.tse3.1169153164.21311.1197622847/tse3-0.3.1/src/tse3'
+[9-ERROR] make[2]: *** [all-recursive] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.tse3.1169153164.21311.1197622847/tse3-0.3.1/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.tse3.1169153164.21311.1197622847/tse3-0.3.1'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

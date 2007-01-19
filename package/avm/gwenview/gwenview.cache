@@ -20,27 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142666389 Sat Mar 18 08:19:49 2006 (5)
-[TIMESTAMP] 1142936994 Tue Mar 21 11:29:54 2006 (9)
+[TIMESTAMP] 1168699242 Sat Jan 13 15:40:42 2007 (5) ERROR
+[TIMESTAMP] 1168908735 Tue Jan 16 01:52:15 2007 (9) ERROR
+[TIMESTAMP] 1168954394 Tue Jan 16 14:33:14 2007 (5) ERROR
+[TIMESTAMP] 1168984138 Tue Jan 16 22:48:58 2007 (9) ERROR
+[TIMESTAMP] 1169124726 Thu Jan 18 13:52:06 2007 (5) ERROR
+[TIMESTAMP] 1169154330 Thu Jan 18 22:05:30 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-gwenview.log 9-gwenview.log
+[LOGS] 5-gwenview.err 9-gwenview.err
 
-[BUILDTIME] 26976 (5)
-[BUILDTIME] 27103 (9)
-[SIZE] 1.96 MB, 141 files
+[BUILDTIME] 3804 (5) ERROR
+[BUILDTIME] 3832 (9) ERROR
+[BUILDTIME] 3840 (5) ERROR
+[BUILDTIME] 3851 (9) ERROR
+[BUILDTIME] 3839 (5) ERROR
+[BUILDTIME] 3851 (9) ERROR
 
-[DEP] 00-dirtree acl acl:dev arts attr attr:dev bash2 binutils bzip2
-[DEP] coreutils diffutils expat fam fam:dev findutils freetype freetype:dev
-[DEP] gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep kdebase
-[DEP] kdelibs kdelibs:dev kdesdk lcms libart_lgpl23 libart_lgpl23:dev
-[DEP] libexif libexif:dev libidn libidn:dev libjpeg libjpeg:dev libkipi
-[DEP] libmng libmng:dev libpng libpng:dev libxml2 linux26-header:dev
-[DEP] make mktemp nas net-tools perl5 pkgconfig qt33 qt33:dev rrdtool
-[DEP] sed sysfiles tar util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] gwenview gwenview.so libgvdirpart.so libgvimagepart.so
-[PROVIDES] libgwenviewcore.so libkdeinit_gwenview.so
+[5-ERROR] jpegcontent.cpp:258: error: 'exif_data_unref' was not declared in this scope
+[5-ERROR] jpegcontent.cpp:259: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[5-ERROR] jpegcontent.cpp:270: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[5-ERROR] jpegcontent.cpp:270: error: 'exif_data_new_from_data' was not declared in this scope
+[5-ERROR] jpegcontent.cpp:271: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[5-ERROR] jpegcontent.cpp:275: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mByteOrder'
+[5-ERROR] jpegcontent.cpp:275: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[5-ERROR] jpegcontent.cpp:275: error: 'exif_data_get_byte_order' was not declared in this scope
+[5-ERROR] jpegcontent.cpp:277: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mOrientationEntry'
+[5-ERROR] jpegcontent.cpp:278: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[5-ERROR] jpegcontent.cpp:278: error: 'EXIF_IFD_0' was not declared in this scope
+[5-ERROR] jpegcontent.cpp:279: error: 'EXIF_TAG_ORIENTATION' was not declared in this scope
+[5-ERROR] jpegcontent.cpp:279: error: 'exif_content_get_entry' was not declared in this scope
+[5-ERROR] jpegcontent.cpp: In member function 'ImageUtils::Orientation ImageUtils::JPEGContent::orientation() const':
+[5-ERROR] jpegcontent.cpp:298: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mOrientationEntry'
+[5-ERROR] jpegcontent.cpp:301: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mOrientationEntry'
+[5-ERROR] jpegcontent.cpp:301: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mByteOrder'
+[5-ERROR] jpegcontent.cpp:301: error: 'exif_get_short' was not declared in this scope
+[5-ERROR] jpegcontent.cpp: In member function 'void ImageUtils::JPEGContent::resetOrientation()':
+[5-ERROR] jpegcontent.cpp:308: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mOrientationEntry'
+[5-ERROR] jpegcontent.cpp:311: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mOrientationEntry'
+[5-ERROR] jpegcontent.cpp:311: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mByteOrder'
+[5-ERROR] jpegcontent.cpp:312: error: 'exif_set_short' was not declared in this scope
+[5-ERROR] jpegcontent.cpp: In member function 'QImage ImageUtils::JPEGContent::thumbnail() const':
+[5-ERROR] jpegcontent.cpp:463: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[5-ERROR] jpegcontent.cpp:463: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[5-ERROR] jpegcontent.cpp:464: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[5-ERROR] jpegcontent.cpp:464: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[5-ERROR] jpegcontent.cpp: In member function 'void ImageUtils::JPEGContent::setThumbnail(const QImage&)':
+[5-ERROR] jpegcontent.cpp:471: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[5-ERROR] jpegcontent.cpp:475: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[5-ERROR] jpegcontent.cpp:476: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[5-ERROR] jpegcontent.cpp:477: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[5-ERROR] jpegcontent.cpp:479: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[5-ERROR] jpegcontent.cpp:491: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[5-ERROR] jpegcontent.cpp:492: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[5-ERROR] jpegcontent.cpp:492: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[5-ERROR] jpegcontent.cpp:493: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[5-ERROR] jpegcontent.cpp:497: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[5-ERROR] jpegcontent.cpp: In member function 'bool ImageUtils::JPEGContent::save(QFile*) const':
+[5-ERROR] jpegcontent.cpp:518: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[5-ERROR] jpegcontent.cpp:531: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[5-ERROR] make[3]: *** [jpegcontent.lo] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.gwenview.1169124684.4569.3641098646/gwenview-1.3.1/src/imageutils'
+[5-ERROR] make[2]: *** [all-recursive] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.gwenview.1169124684.4569.3641098646/gwenview-1.3.1/src'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.gwenview.1169124684.4569.3641098646/gwenview-1.3.1'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] jpegcontent.cpp:258: error: 'exif_data_unref' was not declared in this scope
+[9-ERROR] jpegcontent.cpp:259: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[9-ERROR] jpegcontent.cpp:270: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[9-ERROR] jpegcontent.cpp:270: error: 'exif_data_new_from_data' was not declared in this scope
+[9-ERROR] jpegcontent.cpp:271: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[9-ERROR] jpegcontent.cpp:275: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mByteOrder'
+[9-ERROR] jpegcontent.cpp:275: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[9-ERROR] jpegcontent.cpp:275: error: 'exif_data_get_byte_order' was not declared in this scope
+[9-ERROR] jpegcontent.cpp:277: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mOrientationEntry'
+[9-ERROR] jpegcontent.cpp:278: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[9-ERROR] jpegcontent.cpp:278: error: 'EXIF_IFD_0' was not declared in this scope
+[9-ERROR] jpegcontent.cpp:279: error: 'EXIF_TAG_ORIENTATION' was not declared in this scope
+[9-ERROR] jpegcontent.cpp:279: error: 'exif_content_get_entry' was not declared in this scope
+[9-ERROR] jpegcontent.cpp: In member function 'ImageUtils::Orientation ImageUtils::JPEGContent::orientation() const':
+[9-ERROR] jpegcontent.cpp:298: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mOrientationEntry'
+[9-ERROR] jpegcontent.cpp:301: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mOrientationEntry'
+[9-ERROR] jpegcontent.cpp:301: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mByteOrder'
+[9-ERROR] jpegcontent.cpp:301: error: 'exif_get_short' was not declared in this scope
+[9-ERROR] jpegcontent.cpp: In member function 'void ImageUtils::JPEGContent::resetOrientation()':
+[9-ERROR] jpegcontent.cpp:308: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mOrientationEntry'
+[9-ERROR] jpegcontent.cpp:311: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mOrientationEntry'
+[9-ERROR] jpegcontent.cpp:311: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mByteOrder'
+[9-ERROR] jpegcontent.cpp:312: error: 'exif_set_short' was not declared in this scope
+[9-ERROR] jpegcontent.cpp: In member function 'QImage ImageUtils::JPEGContent::thumbnail() const':
+[9-ERROR] jpegcontent.cpp:463: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[9-ERROR] jpegcontent.cpp:463: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[9-ERROR] jpegcontent.cpp:464: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[9-ERROR] jpegcontent.cpp:464: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[9-ERROR] jpegcontent.cpp: In member function 'void ImageUtils::JPEGContent::setThumbnail(const QImage&)':
+[9-ERROR] jpegcontent.cpp:471: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[9-ERROR] jpegcontent.cpp:475: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[9-ERROR] jpegcontent.cpp:476: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[9-ERROR] jpegcontent.cpp:477: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[9-ERROR] jpegcontent.cpp:479: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[9-ERROR] jpegcontent.cpp:491: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[9-ERROR] jpegcontent.cpp:492: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[9-ERROR] jpegcontent.cpp:492: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[9-ERROR] jpegcontent.cpp:493: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[9-ERROR] jpegcontent.cpp:497: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[9-ERROR] jpegcontent.cpp: In member function 'bool ImageUtils::JPEGContent::save(QFile*) const':
+[9-ERROR] jpegcontent.cpp:518: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[9-ERROR] jpegcontent.cpp:531: error: 'struct ImageUtils::JPEGContent::Private' has no member named 'mExifData'
+[9-ERROR] make[3]: *** [jpegcontent.lo] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.gwenview.1169154288.27530.3951810427/gwenview-1.3.1/src/imageutils'
+[9-ERROR] make[2]: *** [all-recursive] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.gwenview.1169154288.27530.3951810427/gwenview-1.3.1/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.gwenview.1169154288.27530.3951810427/gwenview-1.3.1'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

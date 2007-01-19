@@ -20,26 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142578383 Fri Mar 17 07:53:03 2006 (5)
-[TIMESTAMP] 1142842093 Mon Mar 20 09:08:13 2006 (9)
+[TIMESTAMP] 1168641197 Fri Jan 12 23:33:17 2007 (5) ERROR
+[TIMESTAMP] 1168847315 Mon Jan 15 08:48:35 2007 (9) ERROR
+[TIMESTAMP] 1168948880 Tue Jan 16 13:01:20 2007 (5) ERROR
+[TIMESTAMP] 1168978791 Tue Jan 16 21:19:51 2007 (9) ERROR
+[TIMESTAMP] 1169092296 Thu Jan 18 04:51:36 2007 (5) ERROR
+[TIMESTAMP] 1169149063 Thu Jan 18 20:37:43 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-ewl.log 9-ewl.log
+[LOGS] 5-ewl.err 9-ewl.err
 
-[BUILDTIME] 9947 (5)
-[BUILDTIME] 10406 (9)
-[SIZE] 1.09 MB, 56 files
+[BUILDTIME] 2854 (5) ERROR
+[BUILDTIME] 2892 (9) ERROR
+[BUILDTIME] 2878 (5) ERROR
+[BUILDTIME] 2899 (9) ERROR
+[BUILDTIME] 2915 (5) ERROR
+[BUILDTIME] 2876 (9) ERROR
 
-[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils directfb directfb:dev ecore ecore:dev edb edb:dev edje
-[DEP] edje:dev eet eet:dev embryo embryo:dev evas evas:dev findutils
-[DEP] freetype freetype:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev
-[DEP] grep imlib2 libjpeg libjpeg:dev libpng libpng:dev libtool
-[DEP] linux26-header:dev m4 make mktemp net-tools openssl perl5 rrdtool
-[DEP] sed sysfiles tar util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] ewl-config ewl_embed_test ewl_simple_test ewl_test libewl.a
-[PROVIDES] libewl.so
+[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] checking whether stripping libraries is possible... yes
+[5-ERROR] checking if libtool supports shared libraries... yes
+[5-ERROR] checking whether to build shared libraries... yes
+[5-ERROR] checking whether to build static libraries... yes
+[5-ERROR] configure: creating libtool
+[5-ERROR] appending configuration tag "CXX" to libtool
+[5-ERROR] checking for ld used by g++-40... ld
+[5-ERROR] checking if the linker (ld) is GNU ld... yes
+[5-ERROR] checking whether the g++-40 linker (ld) supports shared libraries... yes
+[5-ERROR] checking for g++-40 option to produce PIC... -fPIC
+[5-ERROR] checking if g++-40 PIC flag -fPIC works... yes
+[5-ERROR] checking if g++-40 static flag -static works... yes
+[5-ERROR] checking if g++-40 supports -c -o file.o... yes
+[5-ERROR] checking whether the g++-40 linker (ld) supports shared libraries... yes
+[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] appending configuration tag "F77" to libtool
+[5-ERROR] checking if libtool supports shared libraries... yes
+[5-ERROR] checking whether to build shared libraries... yes
+[5-ERROR] checking whether to build static libraries... yes
+[5-ERROR] checking for f77 option to produce PIC... -fPIC
+[5-ERROR] checking if f77 PIC flag -fPIC works... no
+[5-ERROR] checking if f77 static flag -static works... no
+[5-ERROR] checking if f77 supports -c -o file.o... no
+[5-ERROR] checking whether the f77 linker (ld) supports shared libraries... yes
+[5-ERROR] checking dynamic linker characteristics... ./configure: line 1: f77: command not found
+[5-ERROR] GNU/Linux ld.so
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] checking for __attribute__... yes
+[5-ERROR] checking for evas-config... no
+[5-ERROR] checking for evas - version >= 0.9.9... no
+[5-ERROR] *** The evas-config script installed by evas could not be found
+[5-ERROR] *** If evas was installed in PREFIX, make sure PREFIX/bin is in
+[5-ERROR] *** your path, or set the EVAS_CONFIG environment variable to the
+[5-ERROR] *** full path to evas-config.
+[5-ERROR] ERROR:
+[5-ERROR] The evas-config development script was not found in your execute
+[5-ERROR] path. This may mean one of several things
+[5-ERROR] 1. You may not have installed the evas-devel (or evas-dev)
+[5-ERROR]    packages.
+[5-ERROR] 2. You may have evas installed somewhere not covered by your path.
+[5-ERROR] 
+[5-ERROR] If this is the case make sure you have the packages installed, AND
+[5-ERROR] that the evas-config script is in your execute path (see your
+[5-ERROR] shell's manual page on setting the $PATH environment variable), OR
+[5-ERROR] alternatively, specify the script to use with --with-evas-config.
+[5-ERROR] configure: error: Fatal Error: no evas-config detected.
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[9-ERROR] checking how to hardcode library paths into programs... immediate
+[9-ERROR] checking whether stripping libraries is possible... yes
+[9-ERROR] checking if libtool supports shared libraries... yes
+[9-ERROR] checking whether to build shared libraries... yes
+[9-ERROR] checking whether to build static libraries... yes
+[9-ERROR] configure: creating libtool
+[9-ERROR] appending configuration tag "CXX" to libtool
+[9-ERROR] checking for ld used by g++-40... ld
+[9-ERROR] checking if the linker (ld) is GNU ld... yes
+[9-ERROR] checking whether the g++-40 linker (ld) supports shared libraries... yes
+[9-ERROR] checking for g++-40 option to produce PIC... -fPIC
+[9-ERROR] checking if g++-40 PIC flag -fPIC works... yes
+[9-ERROR] checking if g++-40 static flag -static works... yes
+[9-ERROR] checking if g++-40 supports -c -o file.o... yes
+[9-ERROR] checking whether the g++-40 linker (ld) supports shared libraries... yes
+[9-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[9-ERROR] checking how to hardcode library paths into programs... immediate
+[9-ERROR] appending configuration tag "F77" to libtool
+[9-ERROR] checking if libtool supports shared libraries... yes
+[9-ERROR] checking whether to build shared libraries... yes
+[9-ERROR] checking whether to build static libraries... yes
+[9-ERROR] checking for f77 option to produce PIC... -fPIC
+[9-ERROR] checking if f77 PIC flag -fPIC works... no
+[9-ERROR] checking if f77 static flag -static works... no
+[9-ERROR] checking if f77 supports -c -o file.o... no
+[9-ERROR] checking whether the f77 linker (ld) supports shared libraries... yes
+[9-ERROR] checking dynamic linker characteristics... ./configure: line 1: f77: command not found
+[9-ERROR] GNU/Linux ld.so
+[9-ERROR] checking how to hardcode library paths into programs... immediate
+[9-ERROR] checking for __attribute__... yes
+[9-ERROR] checking for evas-config... no
+[9-ERROR] checking for evas - version >= 0.9.9... no
+[9-ERROR] *** The evas-config script installed by evas could not be found
+[9-ERROR] *** If evas was installed in PREFIX, make sure PREFIX/bin is in
+[9-ERROR] *** your path, or set the EVAS_CONFIG environment variable to the
+[9-ERROR] *** full path to evas-config.
+[9-ERROR] ERROR:
+[9-ERROR] The evas-config development script was not found in your execute
+[9-ERROR] path. This may mean one of several things
+[9-ERROR] 1. You may not have installed the evas-devel (or evas-dev)
+[9-ERROR]    packages.
+[9-ERROR] 2. You may have evas installed somewhere not covered by your path.
+[9-ERROR] 
+[9-ERROR] If this is the case make sure you have the packages installed, AND
+[9-ERROR] that the evas-config script is in your execute path (see your
+[9-ERROR] shell's manual page on setting the $PATH environment variable), OR
+[9-ERROR] alternatively, specify the script to use with --with-evas-config.
+[9-ERROR] configure: error: Fatal Error: no evas-config detected.
+[9-ERROR] --- BUILD ERROR ---
 

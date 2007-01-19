@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142609752 Fri Mar 17 16:35:52 2006 (5)
-[TIMESTAMP] 1142875668 Mon Mar 20 18:27:48 2006 (9)
+[TIMESTAMP] 1168665671 Sat Jan 13 06:21:11 2007 (5)
+[TIMESTAMP] 1168873541 Mon Jan 15 16:05:41 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-httrack.log 9-httrack.log
 
-[BUILDTIME] 11894 (5)
-[BUILDTIME] 12219 (9)
-[SIZE] 2.35 MB, 99 files
+[BUILDTIME] 11427 (5)
+[BUILDTIME] 11703 (9)
+[SIZE] 2.13 MB, 99 files
 
-[DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp net-tools openbox rrdtool sed sysfiles tar util-linux zlib:dev
+[DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils cvm diffutils
+[DEP] findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev grep
+[DEP] linux-libc-headers:dev make mktemp net-tools netpbm rrdtool sed
+[DEP] sysfiles tar twoftpd ucspi-unix util-linux zapping zlib zlib:dev
 
 [PROVIDES] htsserver httrack libbaselinks.a libbaselinks.so
 [PROVIDES] libcontentfilter.a libcontentfilter.so libdisplayheader.a

@@ -20,20 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142463385 Wed Mar 15 23:56:25 2006 (5)
-[TIMESTAMP] 1142705538 Sat Mar 18 19:12:18 2006 (9)
+[TIMESTAMP] 1168543702 Thu Jan 11 20:28:22 2007 (5) ERROR
+[TIMESTAMP] 1168737992 Sun Jan 14 02:26:32 2007 (9) ERROR
+[TIMESTAMP] 1168938553 Tue Jan 16 10:09:13 2007 (5) ERROR
+[TIMESTAMP] 1168958445 Tue Jan 16 15:40:45 2007 (9) ERROR
+[TIMESTAMP] 1169081891 Thu Jan 18 01:58:11 2007 (5) ERROR
+[TIMESTAMP] 1169128740 Thu Jan 18 14:59:00 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-linux-drm.log 9-linux-drm.log
+[LOGS] 5-linux-drm.err 9-linux-drm.err
 
-[BUILDTIME] 4880 (5)
-[BUILDTIME] 5623 (9)
-[SIZE] 1.18 MB, 82 files
+[BUILDTIME] 1998 (5) ERROR
+[BUILDTIME] 2086 (9) ERROR
+[BUILDTIME] 2111 (5) ERROR
+[BUILDTIME] 2082 (9) ERROR
+[BUILDTIME] 2098 (5) ERROR
+[BUILDTIME] 2074 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 grep linux26 linux26-source make mktemp
-[DEP] perl5 rrdtool sed sysfiles tar
 
+[5-ERROR] + ln -s ../shared-core/i915_mem.c i915_mem.c
+[5-ERROR] + ln -s ../shared-core/i915_dma.c i915_dma.c
+[5-ERROR] + ln -s ../shared-core/savage_drv.h savage_drv.h
+[5-ERROR] + ln -s ../shared-core/savage_drm.h savage_drm.h
+[5-ERROR] + ln -s ../shared-core/savage_bci.c savage_bci.c
+[5-ERROR] + ln -s ../shared-core/savage_state.c savage_state.c
+[5-ERROR] + ln -s ../shared-core/nv_drv.h nv_drv.h
+[5-ERROR] sh ../scripts/create_linux_pci_lists.sh < ../shared-core/drm_pciids.txt
+[5-ERROR] rm -f linux
+[5-ERROR] ln -s . linux
+[5-ERROR] make -C /lib/modules/2.6.17.7-rock/build  SUBDIRS=`pwd` DRMSRCDIR=`pwd` modules
+[5-ERROR] make[1]: Entering directory `/usr/src/linux-2.6.17.7-rock'
+[5-ERROR] 
+[5-ERROR]   WARNING: Symbol version dump /usr/src/linux-2.6.17.7-rock/Module.symvers
+[5-ERROR]            is missing; modules will have no dependencies and modversions.
+[5-ERROR] 
+[5-ERROR]   CC [M]  /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_auth.o
+[5-ERROR]   CC [M]  /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_bufs.o
+[5-ERROR]   CC [M]  /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_context.o
+[5-ERROR]   CC [M]  /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_dma.o
+[5-ERROR]   CC [M]  /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_drawable.o
+[5-ERROR]   CC [M]  /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_drv.o
+[5-ERROR]   CC [M]  /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_fops.o
+[5-ERROR] /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_fops.c: In function 'drm_stub_open':
+[5-ERROR] /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_fops.c:187: warning: assignment discards qualifiers from pointer target type
+[5-ERROR]   CC [M]  /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_ioctl.o
+[5-ERROR]   CC [M]  /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_irq.o
+[5-ERROR]   CC [M]  /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_lock.o
+[5-ERROR]   CC [M]  /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_memory.o
+[5-ERROR]   CC [M]  /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_proc.o
+[5-ERROR]   CC [M]  /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_stub.o
+[5-ERROR]   CC [M]  /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_vm.o
+[5-ERROR]   CC [M]  /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_sysfs.o
+[5-ERROR]   CC [M]  /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_pci.o
+[5-ERROR] /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_pci.c:57:5: warning: "DRM_DEBUG_MEMORY" is not defined
+[5-ERROR] /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_pci.c:88:5: warning: "DRM_DEBUG_MEMORY" is not defined
+[5-ERROR] /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_pci.c:136:5: warning: "DRM_DEBUG_MEMORY" is not defined
+[5-ERROR] /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_pci.c:143:5: warning: "DRM_DEBUG_MEMORY" is not defined
+[5-ERROR] /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_pci.c:159:5: warning: "DRM_DEBUG_MEMORY" is not defined
+[5-ERROR]   CC [M]  /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_agpsupport.o
+[5-ERROR]   CC [M]  /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_scatter.o
+[5-ERROR]   CC [M]  /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/drm_memory_debug.o
+[5-ERROR]   CC [M]  /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/ati_pcigart.o
+[5-ERROR] /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/ati_pcigart.c: In function 'drm_ati_free_pcigart_table':
+[5-ERROR] /ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/ati_pcigart.c:87: error: 'struct page' has no member named 'count'
+[5-ERROR] make[2]: *** [/ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core/ati_pcigart.o] Error 1
+[5-ERROR] make[1]: *** [_module_/ROCK/src.linux-drm.1169081868.13087.2923668759/drm-4.4-2005-11-20/linux-core] Error 2
+[5-ERROR] make[1]: Leaving directory `/usr/src/linux-2.6.17.7-rock'
+[5-ERROR] make: *** [modules] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] + ln -s ../shared-core/i915_mem.c i915_mem.c
+[9-ERROR] + ln -s ../shared-core/i915_dma.c i915_dma.c
+[9-ERROR] + ln -s ../shared-core/savage_drv.h savage_drv.h
+[9-ERROR] + ln -s ../shared-core/savage_drm.h savage_drm.h
+[9-ERROR] + ln -s ../shared-core/savage_bci.c savage_bci.c
+[9-ERROR] + ln -s ../shared-core/savage_state.c savage_state.c
+[9-ERROR] + ln -s ../shared-core/nv_drv.h nv_drv.h
+[9-ERROR] sh ../scripts/create_linux_pci_lists.sh < ../shared-core/drm_pciids.txt
+[9-ERROR] rm -f linux
+[9-ERROR] ln -s . linux
+[9-ERROR] make -C /lib/modules/2.6.17.7-rock/build  SUBDIRS=`pwd` DRMSRCDIR=`pwd` modules
+[9-ERROR] make[1]: Entering directory `/usr/src/linux-2.6.17.7-rock'
+[9-ERROR] 
+[9-ERROR]   WARNING: Symbol version dump /usr/src/linux-2.6.17.7-rock/Module.symvers
+[9-ERROR]            is missing; modules will have no dependencies and modversions.
+[9-ERROR] 
+[9-ERROR]   CC [M]  /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_auth.o
+[9-ERROR]   CC [M]  /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_bufs.o
+[9-ERROR]   CC [M]  /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_context.o
+[9-ERROR]   CC [M]  /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_dma.o
+[9-ERROR]   CC [M]  /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_drawable.o
+[9-ERROR]   CC [M]  /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_drv.o
+[9-ERROR]   CC [M]  /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_fops.o
+[9-ERROR] /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_fops.c: In function 'drm_stub_open':
+[9-ERROR] /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_fops.c:187: warning: assignment discards qualifiers from pointer target type
+[9-ERROR]   CC [M]  /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_ioctl.o
+[9-ERROR]   CC [M]  /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_irq.o
+[9-ERROR]   CC [M]  /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_lock.o
+[9-ERROR]   CC [M]  /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_memory.o
+[9-ERROR]   CC [M]  /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_proc.o
+[9-ERROR]   CC [M]  /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_stub.o
+[9-ERROR]   CC [M]  /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_vm.o
+[9-ERROR]   CC [M]  /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_sysfs.o
+[9-ERROR]   CC [M]  /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_pci.o
+[9-ERROR] /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_pci.c:57:5: warning: "DRM_DEBUG_MEMORY" is not defined
+[9-ERROR] /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_pci.c:88:5: warning: "DRM_DEBUG_MEMORY" is not defined
+[9-ERROR] /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_pci.c:136:5: warning: "DRM_DEBUG_MEMORY" is not defined
+[9-ERROR] /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_pci.c:143:5: warning: "DRM_DEBUG_MEMORY" is not defined
+[9-ERROR] /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_pci.c:159:5: warning: "DRM_DEBUG_MEMORY" is not defined
+[9-ERROR]   CC [M]  /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_agpsupport.o
+[9-ERROR]   CC [M]  /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_scatter.o
+[9-ERROR]   CC [M]  /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/drm_memory_debug.o
+[9-ERROR]   CC [M]  /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/ati_pcigart.o
+[9-ERROR] /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/ati_pcigart.c: In function 'drm_ati_free_pcigart_table':
+[9-ERROR] /ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/ati_pcigart.c:87: error: 'struct page' has no member named 'count'
+[9-ERROR] make[2]: *** [/ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core/ati_pcigart.o] Error 1
+[9-ERROR] make[1]: *** [_module_/ROCK/src.linux-drm.1169128716.30042.3231913534/drm-4.4-2005-11-20/linux-core] Error 2
+[9-ERROR] make[1]: Leaving directory `/usr/src/linux-2.6.17.7-rock'
+[9-ERROR] make: *** [modules] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

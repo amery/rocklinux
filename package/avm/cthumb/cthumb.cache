@@ -20,20 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142516264 Thu Mar 16 14:37:44 2006 (5)
-[TIMESTAMP] 1142769526 Sun Mar 19 12:58:46 2006 (9)
+[TIMESTAMP] 1168592684 Fri Jan 12 10:04:44 2007 (5)
+[TIMESTAMP] 1168794415 Sun Jan 14 18:06:55 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-cthumb.log 9-cthumb.log
 
-[BUILDTIME] 1161 (5)
-[BUILDTIME] 1577 (9)
+[BUILDTIME] 1311 (5)
+[BUILDTIME] 1662 (9)
 [SIZE] 0.57 MB, 266 files
 
-[DEP] 00-dirtree bash2 bzip2 coreutils diffutils findutils gawk gcc34
-[DEP] grep make mktemp net-tools patch rsync sed sysfiles tar
+[DEP] 00-dirtree bash2 bzip2 coreutils cvm diffutils findutils gawk
+[DEP] gcc40 grep make mktemp net-tools netpbm patch rsync sed sysfiles
+[DEP] tar twoftpd ucspi-unix
 
 [PROVIDES] cthumb
 

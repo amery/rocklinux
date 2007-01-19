@@ -15,125 +15,23 @@
 [COPY] file for details.
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142613580 Fri Mar 17 17:39:40 2006 (5) ERROR
-[TIMESTAMP] 1142879621 Mon Mar 20 19:33:41 2006 (9) ERROR
-[TIMESTAMP] 1142961867 Tue Mar 21 18:24:27 2006 (5) ERROR
-[TIMESTAMP] 1142972944 Tue Mar 21 21:29:04 2006 (9) ERROR
-[TIMESTAMP] 1143032684 Wed Mar 22 14:04:44 2006 (5) ERROR
-[TIMESTAMP] 1143042296 Wed Mar 22 16:44:56 2006 (9) ERROR
+[TIMESTAMP] 1168669303 Sat Jan 13 07:21:43 2007 (5)
+[TIMESTAMP] 1168877254 Mon Jan 15 17:07:34 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-monotone.err 9-monotone.err
+[LOGS] 5-monotone.log 9-monotone.log
 
-[BUILDTIME] 2058 (5) ERROR
-[BUILDTIME] 2326 (9) ERROR
-[BUILDTIME] 2318 (5) ERROR
-[BUILDTIME] 2327 (9) ERROR
-[BUILDTIME] 2324 (5) ERROR
-[BUILDTIME] 2340 (9) ERROR
+[BUILDTIME] 50082 (5)
+[BUILDTIME] 50560 (9)
+[SIZE] 4.78 MB, 12 files
 
+[DEP] 00-dirtree bash2 binutils boost boost:dev bzip2 coreutils cvm
+[DEP] diffutils findutils gawk gcc40 gcc40:dev gettext glibc23 glibc23:dev
+[DEP] grep libicu linux-libc-headers:dev make mktemp net-tools netpbm
+[DEP] rrdtool sed sysfiles tar texinfo twoftpd ucspi-unix util-linux
+[DEP] zlib zlib:dev
 
-[5-ERROR] checking whether the compiler supports __gnu_cxx::hash_map... yes
-[5-ERROR] checking whether the compiler supports std::hash_map... no
-[5-ERROR] checking whether gcc-34 and cc understand -c and -o together... yes
-[5-ERROR] checking whether the compiler supports extern template... yes
-[5-ERROR] checking for msgfmt... /usr/bin/msgfmt
-[5-ERROR] checking for gmsgfmt... /usr/bin/msgfmt
-[5-ERROR] checking for xgettext... /usr/bin/xgettext
-[5-ERROR] checking for msgmerge... /usr/bin/msgmerge
-[5-ERROR] checking build system type... i386-unknown-linux-gnu
-[5-ERROR] checking host system type... i386-unknown-linux-gnu
-[5-ERROR] checking for ld used by GCC... ld
-[5-ERROR] checking if the linker (ld) is GNU ld... yes
-[5-ERROR] checking for shared library run path origin... done
-[5-ERROR] checking whether NLS is requested... yes
-[5-ERROR] checking for GNU gettext in libc... yes
-[5-ERROR] checking for iconv... yes
-[5-ERROR] checking for iconv declaration... 
-[5-ERROR]          extern size_t iconv (iconv_t cd, char * *inbuf, size_t *inbytesleft, char * *outbuf, size_t *outbytesleft);
-[5-ERROR] checking whether xgettext supports --flag... yes
-[5-ERROR] checking how to run the C++ preprocessor... g++-34 -E
-[5-ERROR] checking for egrep... grep -E
-[5-ERROR] checking for ANSI C header files... yes
-[5-ERROR] checking for sys/types.h... yes
-[5-ERROR] checking for sys/stat.h... yes
-[5-ERROR] checking for stdlib.h... yes
-[5-ERROR] checking for string.h... yes
-[5-ERROR] checking for memory.h... yes
-[5-ERROR] checking for strings.h... yes
-[5-ERROR] checking for inttypes.h... yes
-[5-ERROR] checking for stdint.h... yes
-[5-ERROR] checking for unistd.h... yes
-[5-ERROR] checking for unistd.h... (cached) yes
-[5-ERROR] checking errno.h usability... yes
-[5-ERROR] checking errno.h presence... yes
-[5-ERROR] checking for errno.h... yes
-[5-ERROR] checking if setlocale() and nl_langinfo() works... yes
-[5-ERROR] checking for pthread_mutex_lock... yes
-[5-ERROR] checking boost version 1.32 or newer... no
-[5-ERROR] configure: error: boost 1.32 or newer required
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 0 files for this package.
-[5-ERROR] Applying package split: 40 monotone:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 monotone:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 monotone:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building monotone=monotone.
-
-[9-ERROR] checking whether the compiler supports __gnu_cxx::hash_map... yes
-[9-ERROR] checking whether the compiler supports std::hash_map... no
-[9-ERROR] checking whether gcc-34 and cc understand -c and -o together... yes
-[9-ERROR] checking whether the compiler supports extern template... yes
-[9-ERROR] checking for msgfmt... /usr/bin/msgfmt
-[9-ERROR] checking for gmsgfmt... /usr/bin/msgfmt
-[9-ERROR] checking for xgettext... /usr/bin/xgettext
-[9-ERROR] checking for msgmerge... /usr/bin/msgmerge
-[9-ERROR] checking build system type... i386-unknown-linux-gnu
-[9-ERROR] checking host system type... i386-unknown-linux-gnu
-[9-ERROR] checking for ld used by GCC... ld
-[9-ERROR] checking if the linker (ld) is GNU ld... yes
-[9-ERROR] checking for shared library run path origin... done
-[9-ERROR] checking whether NLS is requested... yes
-[9-ERROR] checking for GNU gettext in libc... yes
-[9-ERROR] checking for iconv... yes
-[9-ERROR] checking for iconv declaration... 
-[9-ERROR]          extern size_t iconv (iconv_t cd, char * *inbuf, size_t *inbytesleft, char * *outbuf, size_t *outbytesleft);
-[9-ERROR] checking whether xgettext supports --flag... yes
-[9-ERROR] checking how to run the C++ preprocessor... g++-34 -E
-[9-ERROR] checking for egrep... grep -E
-[9-ERROR] checking for ANSI C header files... yes
-[9-ERROR] checking for sys/types.h... yes
-[9-ERROR] checking for sys/stat.h... yes
-[9-ERROR] checking for stdlib.h... yes
-[9-ERROR] checking for string.h... yes
-[9-ERROR] checking for memory.h... yes
-[9-ERROR] checking for strings.h... yes
-[9-ERROR] checking for inttypes.h... yes
-[9-ERROR] checking for stdint.h... yes
-[9-ERROR] checking for unistd.h... yes
-[9-ERROR] checking for unistd.h... (cached) yes
-[9-ERROR] checking errno.h usability... yes
-[9-ERROR] checking errno.h presence... yes
-[9-ERROR] checking for errno.h... yes
-[9-ERROR] checking if setlocale() and nl_langinfo() works... yes
-[9-ERROR] checking for pthread_mutex_lock... yes
-[9-ERROR] checking boost version 1.32 or newer... no
-[9-ERROR] configure: error: boost 1.32 or newer required
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 0 files for this package.
-[9-ERROR] Applying package split: 40 monotone:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 monotone:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 monotone:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building monotone=monotone.
+[PROVIDES] monotone
 

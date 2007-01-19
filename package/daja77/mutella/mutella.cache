@@ -20,22 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142613685 Fri Mar 17 17:41:25 2006 (5)
-[TIMESTAMP] 1142879735 Mon Mar 20 19:35:35 2006 (9)
+[TIMESTAMP] 1168669363 Sat Jan 13 07:22:43 2007 (5) ERROR
+[TIMESTAMP] 1168877328 Mon Jan 15 17:08:48 2007 (9) ERROR
+[TIMESTAMP] 1168950591 Tue Jan 16 13:29:51 2007 (5) ERROR
+[TIMESTAMP] 1168980006 Tue Jan 16 21:40:06 2007 (9) ERROR
+[TIMESTAMP] 1169120892 Thu Jan 18 12:48:12 2007 (5) ERROR
+[TIMESTAMP] 1169150213 Thu Jan 18 20:56:53 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-mutella.log 9-mutella.log
+[LOGS] 5-mutella.err 9-mutella.err
 
-[BUILDTIME] 8538 (5)
-[BUILDTIME] 8894 (9)
-[SIZE] 1.05 MB, 83 files
+[BUILDTIME] 5853 (5) ERROR
+[BUILDTIME] 5908 (9) ERROR
+[BUILDTIME] 5953 (5) ERROR
+[BUILDTIME] 5934 (9) ERROR
+[BUILDTIME] 5955 (5) ERROR
+[BUILDTIME] 5917 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp ncurses:dev net-tools readline readline:dev rrdtool sed
-[DEP] sysfiles tar util-linux zlib:dev
 
-[PROVIDES] mutella mutella_sio
+[5-ERROR] 	then mv -f ".deps/lineinput.Tpo" ".deps/lineinput.Po"; else rm -f ".deps/lineinput.Tpo"; exit 1; fi
+[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT rcobject.o -MD -MP -MF ".deps/rcobject.Tpo" -c -o rcobject.o rcobject.cpp; \
+[5-ERROR] 	then mv -f ".deps/rcobject.Tpo" ".deps/rcobject.Po"; else rm -f ".deps/rcobject.Tpo"; exit 1; fi
+[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT event.o -MD -MP -MF ".deps/event.Tpo" -c -o event.o event.cpp; \
+[5-ERROR] 	then mv -f ".deps/event.Tpo" ".deps/event.Po"; else rm -f ".deps/event.Tpo"; exit 1; fi
+[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -D_REENTRANT -D_MIT_POSIX_THREADS -g  -O0 -MT term_help.o -MD -MP -MF ".deps/term_help.Tpo" -c -o term_help.o term_help.c; \
+[5-ERROR] 	then mv -f ".deps/term_help.Tpo" ".deps/term_help.Po"; else rm -f ".deps/term_help.Tpo"; exit 1; fi
+[5-ERROR] cc1: warning: command line option "-fno-check-new" is valid for C++/ObjC++ but not for C
+[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT mprintf.o -MD -MP -MF ".deps/mprintf.Tpo" -c -o mprintf.o mprintf.cpp; \
+[5-ERROR] 	then mv -f ".deps/mprintf.Tpo" ".deps/mprintf.Po"; else rm -f ".deps/mprintf.Tpo"; exit 1; fi
+[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -D_REENTRANT -D_MIT_POSIX_THREADS -g  -O0 -MT readline4fix.o -MD -MP -MF ".deps/readline4fix.Tpo" -c -o readline4fix.o readline4fix.c; \
+[5-ERROR] 	then mv -f ".deps/readline4fix.Tpo" ".deps/readline4fix.Po"; else rm -f ".deps/readline4fix.Tpo"; exit 1; fi
+[5-ERROR] cc1: warning: command line option "-fno-check-new" is valid for C++/ObjC++ but not for C
+[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT asyncfile.o -MD -MP -MF ".deps/asyncfile.Tpo" -c -o asyncfile.o asyncfile.cpp; \
+[5-ERROR] 	then mv -f ".deps/asyncfile.Tpo" ".deps/asyncfile.Po"; else rm -f ".deps/asyncfile.Tpo"; exit 1; fi
+[5-ERROR] asyncfile.cpp:201:3: warning: #warning This requires no requests to be sent before OPEN or ATTACH competes
+[5-ERROR] asyncfile.cpp:271:5: warning: #warning call error notifiers here!!!
+[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT tstring.o -MD -MP -MF ".deps/tstring.Tpo" -c -o tstring.o tstring.cpp; \
+[5-ERROR] 	then mv -f ".deps/tstring.Tpo" ".deps/tstring.Po"; else rm -f ".deps/tstring.Tpo"; exit 1; fi
+[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT dir.o -MD -MP -MF ".deps/dir.Tpo" -c -o dir.o dir.cpp; \
+[5-ERROR] 	then mv -f ".deps/dir.Tpo" ".deps/dir.Po"; else rm -f ".deps/dir.Tpo"; exit 1; fi
+[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT inifile.o -MD -MP -MF ".deps/inifile.Tpo" -c -o inifile.o inifile.cpp; \
+[5-ERROR] 	then mv -f ".deps/inifile.Tpo" ".deps/inifile.Po"; else rm -f ".deps/inifile.Tpo"; exit 1; fi
+[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT property.o -MD -MP -MF ".deps/property.Tpo" -c -o property.o property.cpp; \
+[5-ERROR] 	then mv -f ".deps/property.Tpo" ".deps/property.Po"; else rm -f ".deps/property.Tpo"; exit 1; fi
+[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT byteorder.o -MD -MP -MF ".deps/byteorder.Tpo" -c -o byteorder.o byteorder.cpp; \
+[5-ERROR] 	then mv -f ".deps/byteorder.Tpo" ".deps/byteorder.Po"; else rm -f ".deps/byteorder.Tpo"; exit 1; fi
+[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT mui.o -MD -MP -MF ".deps/mui.Tpo" -c -o mui.o mui.cpp; \
+[5-ERROR] 	then mv -f ".deps/mui.Tpo" ".deps/mui.Po"; else rm -f ".deps/mui.Tpo"; exit 1; fi
+[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT gnusearch.o -MD -MP -MF ".deps/gnusearch.Tpo" -c -o gnusearch.o gnusearch.cpp; \
+[5-ERROR] 	then mv -f ".deps/gnusearch.Tpo" ".deps/gnusearch.Po"; else rm -f ".deps/gnusearch.Tpo"; exit 1; fi
+[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT mthread_unix.o -MD -MP -MF ".deps/mthread_unix.Tpo" -c -o mthread_unix.o mthread_unix.cpp; \
+[5-ERROR] 	then mv -f ".deps/mthread_unix.Tpo" ".deps/mthread_unix.Po"; else rm -f ".deps/mthread_unix.Tpo"; exit 1; fi
+[5-ERROR] mthread_unix.cpp:147:1: warning: "_GNU_SOURCE" redefined
+[5-ERROR] <command line>:1:1: warning: this is the location of the previous definition
+[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT asyncsocket.o -MD -MP -MF ".deps/asyncsocket.Tpo" -c -o asyncsocket.o asyncsocket.cpp; \
+[5-ERROR] 	then mv -f ".deps/asyncsocket.Tpo" ".deps/asyncsocket.Po"; else rm -f ".deps/asyncsocket.Tpo"; exit 1; fi
+[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT controller.o -MD -MP -MF ".deps/controller.Tpo" -c -o controller.o controller.cpp; \
+[5-ERROR] 	then mv -f ".deps/controller.Tpo" ".deps/controller.Po"; else rm -f ".deps/controller.Tpo"; exit 1; fi
+[5-ERROR] controller.cpp:460:4: warning: #warning add a proper knownDB entry
+[5-ERROR] gnushare.h:67: error: ISO C++ forbids declaration of 'MShareThread' with no type
+[5-ERROR] gnushare.h:67: error: expected ';' before '*' token
+[5-ERROR] make[3]: *** [controller.o] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.mutella.1169120832.15454.1486741501/mutella-0.4.5/mutella'
+[5-ERROR] make[2]: *** [all-recursive] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.mutella.1169120832.15454.1486741501/mutella-0.4.5/mutella'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.mutella.1169120832.15454.1486741501/mutella-0.4.5'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] 	then mv -f ".deps/lineinput.Tpo" ".deps/lineinput.Po"; else rm -f ".deps/lineinput.Tpo"; exit 1; fi
+[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT rcobject.o -MD -MP -MF ".deps/rcobject.Tpo" -c -o rcobject.o rcobject.cpp; \
+[9-ERROR] 	then mv -f ".deps/rcobject.Tpo" ".deps/rcobject.Po"; else rm -f ".deps/rcobject.Tpo"; exit 1; fi
+[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT event.o -MD -MP -MF ".deps/event.Tpo" -c -o event.o event.cpp; \
+[9-ERROR] 	then mv -f ".deps/event.Tpo" ".deps/event.Po"; else rm -f ".deps/event.Tpo"; exit 1; fi
+[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -D_REENTRANT -D_MIT_POSIX_THREADS -g  -O0 -MT term_help.o -MD -MP -MF ".deps/term_help.Tpo" -c -o term_help.o term_help.c; \
+[9-ERROR] 	then mv -f ".deps/term_help.Tpo" ".deps/term_help.Po"; else rm -f ".deps/term_help.Tpo"; exit 1; fi
+[9-ERROR] cc1: warning: command line option "-fno-check-new" is valid for C++/ObjC++ but not for C
+[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT mprintf.o -MD -MP -MF ".deps/mprintf.Tpo" -c -o mprintf.o mprintf.cpp; \
+[9-ERROR] 	then mv -f ".deps/mprintf.Tpo" ".deps/mprintf.Po"; else rm -f ".deps/mprintf.Tpo"; exit 1; fi
+[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -D_REENTRANT -D_MIT_POSIX_THREADS -g  -O0 -MT readline4fix.o -MD -MP -MF ".deps/readline4fix.Tpo" -c -o readline4fix.o readline4fix.c; \
+[9-ERROR] 	then mv -f ".deps/readline4fix.Tpo" ".deps/readline4fix.Po"; else rm -f ".deps/readline4fix.Tpo"; exit 1; fi
+[9-ERROR] cc1: warning: command line option "-fno-check-new" is valid for C++/ObjC++ but not for C
+[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT asyncfile.o -MD -MP -MF ".deps/asyncfile.Tpo" -c -o asyncfile.o asyncfile.cpp; \
+[9-ERROR] 	then mv -f ".deps/asyncfile.Tpo" ".deps/asyncfile.Po"; else rm -f ".deps/asyncfile.Tpo"; exit 1; fi
+[9-ERROR] asyncfile.cpp:201:3: warning: #warning This requires no requests to be sent before OPEN or ATTACH competes
+[9-ERROR] asyncfile.cpp:271:5: warning: #warning call error notifiers here!!!
+[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT tstring.o -MD -MP -MF ".deps/tstring.Tpo" -c -o tstring.o tstring.cpp; \
+[9-ERROR] 	then mv -f ".deps/tstring.Tpo" ".deps/tstring.Po"; else rm -f ".deps/tstring.Tpo"; exit 1; fi
+[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT dir.o -MD -MP -MF ".deps/dir.Tpo" -c -o dir.o dir.cpp; \
+[9-ERROR] 	then mv -f ".deps/dir.Tpo" ".deps/dir.Po"; else rm -f ".deps/dir.Tpo"; exit 1; fi
+[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT inifile.o -MD -MP -MF ".deps/inifile.Tpo" -c -o inifile.o inifile.cpp; \
+[9-ERROR] 	then mv -f ".deps/inifile.Tpo" ".deps/inifile.Po"; else rm -f ".deps/inifile.Tpo"; exit 1; fi
+[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT property.o -MD -MP -MF ".deps/property.Tpo" -c -o property.o property.cpp; \
+[9-ERROR] 	then mv -f ".deps/property.Tpo" ".deps/property.Po"; else rm -f ".deps/property.Tpo"; exit 1; fi
+[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT byteorder.o -MD -MP -MF ".deps/byteorder.Tpo" -c -o byteorder.o byteorder.cpp; \
+[9-ERROR] 	then mv -f ".deps/byteorder.Tpo" ".deps/byteorder.Po"; else rm -f ".deps/byteorder.Tpo"; exit 1; fi
+[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT mui.o -MD -MP -MF ".deps/mui.Tpo" -c -o mui.o mui.cpp; \
+[9-ERROR] 	then mv -f ".deps/mui.Tpo" ".deps/mui.Po"; else rm -f ".deps/mui.Tpo"; exit 1; fi
+[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT gnusearch.o -MD -MP -MF ".deps/gnusearch.Tpo" -c -o gnusearch.o gnusearch.cpp; \
+[9-ERROR] 	then mv -f ".deps/gnusearch.Tpo" ".deps/gnusearch.Po"; else rm -f ".deps/gnusearch.Tpo"; exit 1; fi
+[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT mthread_unix.o -MD -MP -MF ".deps/mthread_unix.Tpo" -c -o mthread_unix.o mthread_unix.cpp; \
+[9-ERROR] 	then mv -f ".deps/mthread_unix.Tpo" ".deps/mthread_unix.Po"; else rm -f ".deps/mthread_unix.Tpo"; exit 1; fi
+[9-ERROR] mthread_unix.cpp:147:1: warning: "_GNU_SOURCE" redefined
+[9-ERROR] <command line>:1:1: warning: this is the location of the previous definition
+[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT asyncsocket.o -MD -MP -MF ".deps/asyncsocket.Tpo" -c -o asyncsocket.o asyncsocket.cpp; \
+[9-ERROR] 	then mv -f ".deps/asyncsocket.Tpo" ".deps/asyncsocket.Po"; else rm -f ".deps/asyncsocket.Tpo"; exit 1; fi
+[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include  -D_REENTRANT -D_MIT_POSIX_THREADS -fno-exceptions -fno-check-new     -g  -O0 -MT controller.o -MD -MP -MF ".deps/controller.Tpo" -c -o controller.o controller.cpp; \
+[9-ERROR] 	then mv -f ".deps/controller.Tpo" ".deps/controller.Po"; else rm -f ".deps/controller.Tpo"; exit 1; fi
+[9-ERROR] controller.cpp:460:4: warning: #warning add a proper knownDB entry
+[9-ERROR] gnushare.h:67: error: ISO C++ forbids declaration of 'MShareThread' with no type
+[9-ERROR] gnushare.h:67: error: expected ';' before '*' token
+[9-ERROR] make[3]: *** [controller.o] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.mutella.1169150153.6061.3084940077/mutella-0.4.5/mutella'
+[9-ERROR] make[2]: *** [all-recursive] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.mutella.1169150153.6061.3084940077/mutella-0.4.5/mutella'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.mutella.1169150153.6061.3084940077/mutella-0.4.5'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

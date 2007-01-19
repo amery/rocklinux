@@ -20,24 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142500368 Thu Mar 16 10:12:48 2006 (5)
-[TIMESTAMP] 1142750984 Sun Mar 19 07:49:44 2006 (9)
+[TIMESTAMP] 1168577185 Fri Jan 12 05:46:25 2007 (5)
+[TIMESTAMP] 1168775837 Sun Jan 14 12:57:17 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-samba.log 9-samba.log
 
-[BUILDTIME] 43856 (5)
-[BUILDTIME] 44866 (9)
-[SIZE] 40.96 MB, 586 files
+[BUILDTIME] 45878 (5)
+[BUILDTIME] 46859 (9)
+[SIZE] 40.26 MB, 587 files
 
 [DEP] 00-dirtree acl acl:dev attr attr:dev bash2 binutils bzip2 coreutils
-[DEP] cups cups:dev diffutils findutils gawk gcc34 gcc34:dev glibc23
-[DEP] glibc23:dev grep libcap:dev linux26-header:dev m4 make mktemp
-[DEP] ncurses:dev net-tools openldap openldap:dev openssl pam pam:dev
-[DEP] patch popt popt:dev readline readline:dev rrdtool sed sysfiles tar
-[DEP] util-linux valgrind:dev
+[DEP] cups cups:dev cvm cyrus-sasl2 diffutils findutils gawk gcc40
+[DEP] gcc40:dev glibc23 glibc23:dev gnutls grep libcap:dev libgcrypt
+[DEP] libgpg-error linux-libc-headers:dev m4 make mktemp ncurses
+[DEP] net-tools openldap openldap:dev openssl pam pam:dev patch popt
+[DEP] popt:dev readline readline:dev rrdtool sed sysfiles tar util-linux
+[DEP] valgrind:dev zlib
 
 [PROVIDES] CP437.so CP850.so audit.so cap.so default_quota.so
 [PROVIDES] eventlogadm expand_msdfs.so extd_audit.so fake_perms.so

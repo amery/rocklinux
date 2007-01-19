@@ -20,36 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142591225 Fri Mar 17 11:27:05 2006 (5)
-[TIMESTAMP] 1142855898 Mon Mar 20 12:58:18 2006 (9)
+[TIMESTAMP] 1168649861 Sat Jan 13 01:57:41 2007 (5) ERROR
+[TIMESTAMP] 1168856429 Mon Jan 15 11:20:29 2007 (9) ERROR
+[TIMESTAMP] 1168949557 Tue Jan 16 13:12:37 2007 (5) ERROR
+[TIMESTAMP] 1168979488 Tue Jan 16 21:31:28 2007 (9) ERROR
+[TIMESTAMP] 1169093025 Thu Jan 18 05:03:45 2007 (5) ERROR
+[TIMESTAMP] 1169149701 Thu Jan 18 20:48:21 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-kdebindings.log 9-kdebindings.log
+[LOGS] 5-kdebindings.err 9-kdebindings.err
 
-[BUILDTIME] 186278 (5)
-[BUILDTIME] 186892 (9)
-[SIZE] 45.69 MB, 794 files
+[BUILDTIME] 46872 (5) ERROR
+[BUILDTIME] 47435 (9) ERROR
+[BUILDTIME] 47502 (5) ERROR
+[BUILDTIME] 47481 (9) ERROR
+[BUILDTIME] 47755 (5) ERROR
+[BUILDTIME] 47416 (9) ERROR
 
-[DEP] 00-dirtree acl acl:dev arts attr attr:dev bash2 binutils bzip2
-[DEP] coreutils diffutils expat fam fam:dev findutils freetype freetype:dev
-[DEP] gawk gcc34 gcc34:dev gettext glib12 glib12:dev glibc23 glibc23:dev
-[DEP] gnome14-dirtree grep gtk+12 gtk+12:dev kdeaddons kdebase kdelibs
-[DEP] kdelibs:dev kdesdk libart_lgpl23 libart_lgpl23:dev libidn libidn:dev
-[DEP] libjpeg libjpeg:dev libpng libpng:dev linux26-header:dev make
-[DEP] mktemp nas net-tools openssl:dev patch pcre pcre:dev perl5 python
-[DEP] python:dev qt33 qt33:dev rrdtool ruby sed ssleay-perlmod sysfiles
-[DEP] tar tcl tk util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] DCOP.so dcop.so embedjs jsaccess kdecore.so kdefx.so
-[PROVIDES] kdeprint.so kdesu.so kdeui.so kfile.so khtml.so kio.so
-[PROVIDES] kjscmd kmdi.so korundum.so kparts.so krubyinit kspell.so
-[PROVIDES] kutils.so libcustomobjectplugin.so libcustomqobjectplugin.so
-[PROVIDES] libfileitemplugin.so libimagefxplugin.so libjavascript.so
-[PROVIDES] libjsconsoleplugin.so libkjsembed.so libqprocessplugin.so
-[PROVIDES] libsmokekde.so libsmokeqt.so pcop.so pylupdate pyuic qt.so
-[PROVIDES] qtcanvas.so qtgl.so qtnetwork.so qtruby.so qtrubyinit qtsql.so
-[PROVIDES] qttable.so qtui.so qtxml.so qui.so rbkconfig_compiler rbkdeapi
-[PROVIDES] rbkdesh rbqtapi rbqtsh rbuic sip sip.so
+[5-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QPoint___div__(PyObject*, PyObject*)':
+[5-ERROR] sipqtpart0.cpp:174777: error: 'sipClass_' was not declared in this scope
+[5-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QPoint___mul__(PyObject*, PyObject*)':
+[5-ERROR] sipqtpart0.cpp:174850: error: 'sipClass_' was not declared in this scope
+[5-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QPoint___sub__(PyObject*, PyObject*)':
+[5-ERROR] sipqtpart0.cpp:174902: error: 'sipClass_' was not declared in this scope
+[5-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QPoint___add__(PyObject*, PyObject*)':
+[5-ERROR] sipqtpart0.cpp:174941: error: 'sipClass_' was not declared in this scope
+[5-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QPoint___idiv__(PyObject*, PyObject*)':
+[5-ERROR] sipqtpart0.cpp:175059: error: 'sipClass_' was not declared in this scope
+[5-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QPoint___imul__(PyObject*, PyObject*)':
+[5-ERROR] sipqtpart0.cpp:175109: error: 'sipClass_' was not declared in this scope
+[5-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QPoint___isub__(PyObject*, PyObject*)':
+[5-ERROR] sipqtpart0.cpp:175159: error: 'sipClass_' was not declared in this scope
+[5-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QPoint___iadd__(PyObject*, PyObject*)':
+[5-ERROR] sipqtpart0.cpp:175197: error: 'sipClass_' was not declared in this scope
+[5-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QListViewItemIterator___isub__(PyObject*, PyObject*)':
+[5-ERROR] sipqtpart0.cpp:226004: error: 'sipClass_' was not declared in this scope
+[5-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QListViewItemIterator___iadd__(PyObject*, PyObject*)':
+[5-ERROR] sipqtpart0.cpp:226042: error: 'sipClass_' was not declared in this scope
+[5-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QDataStream___rshift__(PyObject*, PyObject*)':
+[5-ERROR] sipqtpart0.cpp:392968: error: 'sipClass_' was not declared in this scope
+[5-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QDataStream___lshift__(PyObject*, PyObject*)':
+[5-ERROR] sipqtpart0.cpp:393348: error: 'sipClass_' was not declared in this scope
+[5-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QSize___div__(PyObject*, PyObject*)':
+[5-ERROR] sipqtpart0.cpp:450368: error: 'sipClass_' was not declared in this scope
+[5-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QSize___mul__(PyObject*, PyObject*)':
+[5-ERROR] sipqtpart0.cpp:450420: error: 'sipClass_' was not declared in this scope
+[5-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QSize___sub__(PyObject*, PyObject*)':
+[5-ERROR] sipqtpart0.cpp:450472: error: 'sipClass_' was not declared in this scope
+[5-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QSize___add__(PyObject*, PyObject*)':
+[5-ERROR] sipqtpart0.cpp:450511: error: 'sipClass_' was not declared in this scope
+[5-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QSize___idiv__(PyObject*, PyObject*)':
+[5-ERROR] sipqtpart0.cpp:450629: error: 'sipClass_' was not declared in this scope
+[5-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QSize___imul__(PyObject*, PyObject*)':
+[5-ERROR] sipqtpart0.cpp:450679: error: 'sipClass_' was not declared in this scope
+[5-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QSize___isub__(PyObject*, PyObject*)':
+[5-ERROR] sipqtpart0.cpp:450729: error: 'sipClass_' was not declared in this scope
+[5-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QSize___iadd__(PyObject*, PyObject*)':
+[5-ERROR] sipqtpart0.cpp:450767: error: 'sipClass_' was not declared in this scope
+[5-ERROR] make[4]: *** [sipqtpart0.o] Error 1
+[5-ERROR] make[4]: Leaving directory `/ROCK/loop/src.kdebindings.1169092427.8997.905555977/kdebindings-3.5.5/python/pyqt/qt'
+[5-ERROR] make[3]: *** [all] Error 2
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.kdebindings.1169092427.8997.905555977/kdebindings-3.5.5/python/pyqt'
+[5-ERROR] make[2]: *** [build_pyqt_pykde] Error 2
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdebindings.1169092427.8997.905555977/kdebindings-3.5.5/python'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kdebindings.1169092427.8997.905555977/kdebindings-3.5.5'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QPoint___div__(PyObject*, PyObject*)':
+[9-ERROR] sipqtpart0.cpp:174777: error: 'sipClass_' was not declared in this scope
+[9-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QPoint___mul__(PyObject*, PyObject*)':
+[9-ERROR] sipqtpart0.cpp:174850: error: 'sipClass_' was not declared in this scope
+[9-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QPoint___sub__(PyObject*, PyObject*)':
+[9-ERROR] sipqtpart0.cpp:174902: error: 'sipClass_' was not declared in this scope
+[9-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QPoint___add__(PyObject*, PyObject*)':
+[9-ERROR] sipqtpart0.cpp:174941: error: 'sipClass_' was not declared in this scope
+[9-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QPoint___idiv__(PyObject*, PyObject*)':
+[9-ERROR] sipqtpart0.cpp:175059: error: 'sipClass_' was not declared in this scope
+[9-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QPoint___imul__(PyObject*, PyObject*)':
+[9-ERROR] sipqtpart0.cpp:175109: error: 'sipClass_' was not declared in this scope
+[9-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QPoint___isub__(PyObject*, PyObject*)':
+[9-ERROR] sipqtpart0.cpp:175159: error: 'sipClass_' was not declared in this scope
+[9-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QPoint___iadd__(PyObject*, PyObject*)':
+[9-ERROR] sipqtpart0.cpp:175197: error: 'sipClass_' was not declared in this scope
+[9-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QListViewItemIterator___isub__(PyObject*, PyObject*)':
+[9-ERROR] sipqtpart0.cpp:226004: error: 'sipClass_' was not declared in this scope
+[9-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QListViewItemIterator___iadd__(PyObject*, PyObject*)':
+[9-ERROR] sipqtpart0.cpp:226042: error: 'sipClass_' was not declared in this scope
+[9-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QDataStream___rshift__(PyObject*, PyObject*)':
+[9-ERROR] sipqtpart0.cpp:392968: error: 'sipClass_' was not declared in this scope
+[9-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QDataStream___lshift__(PyObject*, PyObject*)':
+[9-ERROR] sipqtpart0.cpp:393348: error: 'sipClass_' was not declared in this scope
+[9-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QSize___div__(PyObject*, PyObject*)':
+[9-ERROR] sipqtpart0.cpp:450368: error: 'sipClass_' was not declared in this scope
+[9-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QSize___mul__(PyObject*, PyObject*)':
+[9-ERROR] sipqtpart0.cpp:450420: error: 'sipClass_' was not declared in this scope
+[9-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QSize___sub__(PyObject*, PyObject*)':
+[9-ERROR] sipqtpart0.cpp:450472: error: 'sipClass_' was not declared in this scope
+[9-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QSize___add__(PyObject*, PyObject*)':
+[9-ERROR] sipqtpart0.cpp:450511: error: 'sipClass_' was not declared in this scope
+[9-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QSize___idiv__(PyObject*, PyObject*)':
+[9-ERROR] sipqtpart0.cpp:450629: error: 'sipClass_' was not declared in this scope
+[9-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QSize___imul__(PyObject*, PyObject*)':
+[9-ERROR] sipqtpart0.cpp:450679: error: 'sipClass_' was not declared in this scope
+[9-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QSize___isub__(PyObject*, PyObject*)':
+[9-ERROR] sipqtpart0.cpp:450729: error: 'sipClass_' was not declared in this scope
+[9-ERROR] sipqtpart0.cpp: In function 'PyObject* slot_QSize___iadd__(PyObject*, PyObject*)':
+[9-ERROR] sipqtpart0.cpp:450767: error: 'sipClass_' was not declared in this scope
+[9-ERROR] make[4]: *** [sipqtpart0.o] Error 1
+[9-ERROR] make[4]: Leaving directory `/ROCK/loop/src.kdebindings.1169149197.653.453632617/kdebindings-3.5.5/python/pyqt/qt'
+[9-ERROR] make[3]: *** [all] Error 2
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.kdebindings.1169149197.653.453632617/kdebindings-3.5.5/python/pyqt'
+[9-ERROR] make[2]: *** [build_pyqt_pykde] Error 2
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdebindings.1169149197.653.453632617/kdebindings-3.5.5/python'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kdebindings.1169149197.653.453632617/kdebindings-3.5.5'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

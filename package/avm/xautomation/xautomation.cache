@@ -20,22 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142653873 Sat Mar 18 04:51:13 2006 (5)
-[TIMESTAMP] 1142923487 Tue Mar 21 07:44:47 2006 (9)
+[TIMESTAMP] 1168694644 Sat Jan 13 14:24:04 2007 (5) ERROR
+[TIMESTAMP] 1168903712 Tue Jan 16 00:28:32 2007 (9) ERROR
+[TIMESTAMP] 1168953967 Tue Jan 16 14:26:07 2007 (5) ERROR
+[TIMESTAMP] 1168983696 Tue Jan 16 22:41:36 2007 (9) ERROR
+[TIMESTAMP] 1169124301 Thu Jan 18 13:45:01 2007 (5) ERROR
+[TIMESTAMP] 1169153889 Thu Jan 18 21:58:09 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-xautomation.log 9-xautomation.log
+[LOGS] 5-xautomation.err 9-xautomation.err
 
-[BUILDTIME] 1887 (5)
-[BUILDTIME] 2000 (9)
-[SIZE] 0.08 MB, 12 files
+[BUILDTIME] 1087 (5) ERROR
+[BUILDTIME] 1101 (9) ERROR
+[BUILDTIME] 1114 (5) ERROR
+[BUILDTIME] 1115 (9) ERROR
+[BUILDTIME] 1109 (5) ERROR
+[BUILDTIME] 1097 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libpng libpng:dev
-[DEP] linux26-header:dev make mktemp net-tools patch rrdtool sed sysfiles
-[DEP] tar util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] pat2ppm patextract png2pat rgb2pat visgrep xte
+[5-ERROR] checking for stdint.h... yes
+[5-ERROR] checking for unistd.h... yes
+[5-ERROR] checking for stdlib.h... (cached) yes
+[5-ERROR] checking for unistd.h... (cached) yes
+[5-ERROR] checking for an ANSI C-conforming const... yes
+[5-ERROR] checking for stdlib.h... (cached) yes
+[5-ERROR] checking for GNU libc compatible malloc... yes
+[5-ERROR] checking for bzero... yes
+[5-ERROR] configure: creating ./config.status
+[5-ERROR] config.status: creating Makefile
+[5-ERROR] config.status: executing depfiles commands
+[5-ERROR] if gcc-40 -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"xautomation\" -DVERSION=\"0.96\" -DDEBUG_A_LOO=1 -DHAVE_LIBPNG=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MALLOC=1 -DHAVE_BZERO=1  -I. -I.     -g -O2 -MT xte.o -MD -MP -MF ".deps/xte.Tpo" \
+[5-ERROR] 	  -c -o xte.o `test -f 'xte.c' || echo './'`xte.c; \
+[5-ERROR] 	then mv -f ".deps/xte.Tpo" ".deps/xte.Po"; \
+[5-ERROR] 	else rm -f ".deps/xte.Tpo"; exit 1; \
+[5-ERROR] 	fi
+[5-ERROR] if gcc-40 -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"xautomation\" -DVERSION=\"0.96\" -DDEBUG_A_LOO=1 -DHAVE_LIBPNG=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MALLOC=1 -DHAVE_BZERO=1  -I. -I.     -g -O2 -MT debug.o -MD -MP -MF ".deps/debug.Tpo" \
+[5-ERROR] 	  -c -o debug.o `test -f 'debug.c' || echo './'`debug.c; \
+[5-ERROR] 	then mv -f ".deps/debug.Tpo" ".deps/debug.Po"; \
+[5-ERROR] 	else rm -f ".deps/debug.Tpo"; exit 1; \
+[5-ERROR] 	fi
+[5-ERROR] gcc-40  -g -O2   -o xte  xte.o debug.o -L /usr/X11R7/lib -lX11 -lXtst -lpng 
+[5-ERROR] if gcc-40 -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"xautomation\" -DVERSION=\"0.96\" -DDEBUG_A_LOO=1 -DHAVE_LIBPNG=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MALLOC=1 -DHAVE_BZERO=1  -I. -I.     -g -O2 -MT rgb2pat.o -MD -MP -MF ".deps/rgb2pat.Tpo" \
+[5-ERROR] 	  -c -o rgb2pat.o `test -f 'rgb2pat.c' || echo './'`rgb2pat.c; \
+[5-ERROR] 	then mv -f ".deps/rgb2pat.Tpo" ".deps/rgb2pat.Po"; \
+[5-ERROR] 	else rm -f ".deps/rgb2pat.Tpo"; exit 1; \
+[5-ERROR] 	fi
+[5-ERROR] if gcc-40 -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"xautomation\" -DVERSION=\"0.96\" -DDEBUG_A_LOO=1 -DHAVE_LIBPNG=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MALLOC=1 -DHAVE_BZERO=1  -I. -I.     -g -O2 -MT image.o -MD -MP -MF ".deps/image.Tpo" \
+[5-ERROR] 	  -c -o image.o `test -f 'image.c' || echo './'`image.c; \
+[5-ERROR] 	then mv -f ".deps/image.Tpo" ".deps/image.Po"; \
+[5-ERROR] 	else rm -f ".deps/image.Tpo"; exit 1; \
+[5-ERROR] 	fi
+[5-ERROR] image.c:25:24: error: libpng/png.h: No such file or directory
+[5-ERROR] image.c: In function 'img_load':
+[5-ERROR] image.c:57: warning: incompatible implicit declaration of built-in function 'bzero'
+[5-ERROR] image.c: In function 'img_load_from_png':
+[5-ERROR] image.c:186: error: 'png_infop' undeclared (first use in this function)
+[5-ERROR] image.c:186: error: (Each undeclared identifier is reported only once
+[5-ERROR] image.c:186: error: for each function it appears in.)
+[5-ERROR] image.c:186: error: syntax error before 'info'
+[5-ERROR] image.c:187: error: 'png_structp' undeclared (first use in this function)
+[5-ERROR] image.c:191: error: 'png_bytep' undeclared (first use in this function)
+[5-ERROR] image.c:191: error: 'row_pointers' undeclared (first use in this function)
+[5-ERROR] image.c:198: error: 'png' undeclared (first use in this function)
+[5-ERROR] image.c:198: error: 'PNG_LIBPNG_VER_STRING' undeclared (first use in this function)
+[5-ERROR] image.c:203: error: 'info' undeclared (first use in this function)
+[5-ERROR] image.c:207: error: 'png_infopp' undeclared (first use in this function)
+[5-ERROR] image.c:214: error: 'PNG_TRANSFORM_EXPAND' undeclared (first use in this function)
+[5-ERROR] make: *** [image.o] Error 1
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] checking for stdint.h... yes
+[9-ERROR] checking for unistd.h... yes
+[9-ERROR] checking for stdlib.h... (cached) yes
+[9-ERROR] checking for unistd.h... (cached) yes
+[9-ERROR] checking for an ANSI C-conforming const... yes
+[9-ERROR] checking for stdlib.h... (cached) yes
+[9-ERROR] checking for GNU libc compatible malloc... yes
+[9-ERROR] checking for bzero... yes
+[9-ERROR] configure: creating ./config.status
+[9-ERROR] config.status: creating Makefile
+[9-ERROR] config.status: executing depfiles commands
+[9-ERROR] if gcc-40 -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"xautomation\" -DVERSION=\"0.96\" -DDEBUG_A_LOO=1 -DHAVE_LIBPNG=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MALLOC=1 -DHAVE_BZERO=1  -I. -I.     -g -O2 -MT xte.o -MD -MP -MF ".deps/xte.Tpo" \
+[9-ERROR] 	  -c -o xte.o `test -f 'xte.c' || echo './'`xte.c; \
+[9-ERROR] 	then mv -f ".deps/xte.Tpo" ".deps/xte.Po"; \
+[9-ERROR] 	else rm -f ".deps/xte.Tpo"; exit 1; \
+[9-ERROR] 	fi
+[9-ERROR] if gcc-40 -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"xautomation\" -DVERSION=\"0.96\" -DDEBUG_A_LOO=1 -DHAVE_LIBPNG=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MALLOC=1 -DHAVE_BZERO=1  -I. -I.     -g -O2 -MT debug.o -MD -MP -MF ".deps/debug.Tpo" \
+[9-ERROR] 	  -c -o debug.o `test -f 'debug.c' || echo './'`debug.c; \
+[9-ERROR] 	then mv -f ".deps/debug.Tpo" ".deps/debug.Po"; \
+[9-ERROR] 	else rm -f ".deps/debug.Tpo"; exit 1; \
+[9-ERROR] 	fi
+[9-ERROR] gcc-40  -g -O2   -o xte  xte.o debug.o -L /usr/X11R7/lib -lX11 -lXtst -lpng 
+[9-ERROR] if gcc-40 -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"xautomation\" -DVERSION=\"0.96\" -DDEBUG_A_LOO=1 -DHAVE_LIBPNG=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MALLOC=1 -DHAVE_BZERO=1  -I. -I.     -g -O2 -MT rgb2pat.o -MD -MP -MF ".deps/rgb2pat.Tpo" \
+[9-ERROR] 	  -c -o rgb2pat.o `test -f 'rgb2pat.c' || echo './'`rgb2pat.c; \
+[9-ERROR] 	then mv -f ".deps/rgb2pat.Tpo" ".deps/rgb2pat.Po"; \
+[9-ERROR] 	else rm -f ".deps/rgb2pat.Tpo"; exit 1; \
+[9-ERROR] 	fi
+[9-ERROR] if gcc-40 -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"xautomation\" -DVERSION=\"0.96\" -DDEBUG_A_LOO=1 -DHAVE_LIBPNG=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MALLOC=1 -DHAVE_BZERO=1  -I. -I.     -g -O2 -MT image.o -MD -MP -MF ".deps/image.Tpo" \
+[9-ERROR] 	  -c -o image.o `test -f 'image.c' || echo './'`image.c; \
+[9-ERROR] 	then mv -f ".deps/image.Tpo" ".deps/image.Po"; \
+[9-ERROR] 	else rm -f ".deps/image.Tpo"; exit 1; \
+[9-ERROR] 	fi
+[9-ERROR] image.c:25:24: error: libpng/png.h: No such file or directory
+[9-ERROR] image.c: In function 'img_load':
+[9-ERROR] image.c:57: warning: incompatible implicit declaration of built-in function 'bzero'
+[9-ERROR] image.c: In function 'img_load_from_png':
+[9-ERROR] image.c:186: error: 'png_infop' undeclared (first use in this function)
+[9-ERROR] image.c:186: error: (Each undeclared identifier is reported only once
+[9-ERROR] image.c:186: error: for each function it appears in.)
+[9-ERROR] image.c:186: error: syntax error before 'info'
+[9-ERROR] image.c:187: error: 'png_structp' undeclared (first use in this function)
+[9-ERROR] image.c:191: error: 'png_bytep' undeclared (first use in this function)
+[9-ERROR] image.c:191: error: 'row_pointers' undeclared (first use in this function)
+[9-ERROR] image.c:198: error: 'png' undeclared (first use in this function)
+[9-ERROR] image.c:198: error: 'PNG_LIBPNG_VER_STRING' undeclared (first use in this function)
+[9-ERROR] image.c:203: error: 'info' undeclared (first use in this function)
+[9-ERROR] image.c:207: error: 'png_infopp' undeclared (first use in this function)
+[9-ERROR] image.c:214: error: 'PNG_TRANSFORM_EXPAND' undeclared (first use in this function)
+[9-ERROR] make: *** [image.o] Error 1
+[9-ERROR] --- BUILD ERROR ---
 

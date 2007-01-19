@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142650446 Sat Mar 18 03:54:06 2006 (5)
-[TIMESTAMP] 1142919823 Tue Mar 21 06:43:43 2006 (9)
+[TIMESTAMP] 1168692301 Sat Jan 13 13:45:01 2007 (5)
+[TIMESTAMP] 1168901279 Mon Jan 15 23:47:59 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-dictd.log 9-dictd.log
 
-[BUILDTIME] 5308 (5)
-[BUILDTIME] 5482 (9)
-[SIZE] 0.54 MB, 30 files
+[BUILDTIME] 5478 (5)
+[BUILDTIME] 5617 (9)
+[SIZE] 0.48 MB, 30 files
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils findutils
-[DEP] flex flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev m4 make mktemp net-tools rrdtool sed sysfiles
-[DEP] tar util-linux zlib:dev
+[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils cvm diffutils
+[DEP] findutils flex flex:dev gawk gcc40 gcc40:dev glibc23 glibc23:dev
+[DEP] grep linux-libc-headers:dev m4 make mktemp net-tools netpbm rrdtool
+[DEP] sed sysfiles tar twoftpd ucspi-unix util-linux zlib zlib:dev
 
 [PROVIDES] colorit dict dictd dictdplugin-config dictfmt
 [PROVIDES] dictfmt_index2suffix dictfmt_index2word dictfmt_plugin

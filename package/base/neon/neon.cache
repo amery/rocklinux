@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142489518 Thu Mar 16 07:11:58 2006 (5)
-[TIMESTAMP] 1142738269 Sun Mar 19 04:17:49 2006 (9)
+[TIMESTAMP] 1168566543 Fri Jan 12 02:49:03 2007 (5)
+[TIMESTAMP] 1168764041 Sun Jan 14 09:40:41 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-neon.log 9-neon.log
 
-[BUILDTIME] 4412 (5)
-[BUILDTIME] 5061 (9)
-[SIZE] 0.14 MB, 92 files
+[BUILDTIME] 4715 (5)
+[BUILDTIME] 5401 (9)
+[SIZE] 0.04 MB, 15 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils expat
-[DEP] expat:dev findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp net-tools openssl:dev pkgconfig
-[DEP] rrdtool sed sysfiles tar util-linux zlib:dev
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils expat
+[DEP] expat:dev findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev
+[DEP] grep linux-libc-headers:dev make mktemp net-tools netpbm openssl
+[DEP] openssl:dev pkgconfig rrdtool sed sysfiles tar twoftpd ucspi-unix
+[DEP] util-linux zlib zlib:dev
 
 [PROVIDES] libneon.a neon-config
 

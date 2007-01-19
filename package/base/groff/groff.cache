@@ -20,22 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142447008 Wed Mar 15 19:23:28 2006 (3)
-[TIMESTAMP] 1142694986 Sat Mar 18 16:16:26 2006 (9)
+[TIMESTAMP] 1168524630 Thu Jan 11 15:10:30 2007 (3)
+[TIMESTAMP] 1168723527 Sat Jan 13 22:25:27 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 3-groff.log 9-groff.log
 
-[BUILDTIME] 8296 (3)
-[BUILDTIME] 11570 (9)
-[SIZE] 7.45 MB, 471 files
+[BUILDTIME] 8659 (3)
+[BUILDTIME] 11874 (9)
+[SIZE] 7.41 MB, 471 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev ghostscript ghostscript-fonts glibc23 glibc23:dev
-[DEP] grep linux26-header:dev make mktemp net-tools netpbm psutils rrdtool
-[DEP] sed sysfiles tar tcsh texinfo util-linux xorg xorg:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm diffutils esp-ghostscript findutils gawk gcc40
+[DEP] gcc40:dev ghostscript ghostscript-fonts glibc23 glibc23:dev grep
+[DEP] imake libice libice:dev libsm libsm:dev libx11 libx11:dev libxau
+[DEP] libxaw libxaw:dev libxdmcp libxext libxmu libxmu:dev libxpm libxt
+[DEP] libxt:dev linux-libc-headers:dev make mktemp net-tools netpbm
+[DEP] psutils rrdtool sed sysfiles tar tcsh texinfo twoftpd ucspi-unix
+[DEP] util-linux xfig xorg-cf-files xorg-server xproto:dev
 
 [PROVIDES] addftinfo afmtodit eqn eqn2graph gdiffmk grap2graph grn grodvi
 [PROVIDES] groff groffer grog grolbp grolj4 grops grotty gxditview hpftodit

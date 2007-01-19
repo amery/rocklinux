@@ -20,50 +20,63 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142667140 Sat Mar 18 08:32:20 2006 (5) ERROR
-[TIMESTAMP] 1142937788 Tue Mar 21 11:43:08 2006 (9) ERROR
-[TIMESTAMP] 1142964235 Tue Mar 21 19:03:55 2006 (5) ERROR
-[TIMESTAMP] 1142974019 Tue Mar 21 21:46:59 2006 (9) ERROR
-[TIMESTAMP] 1143033650 Wed Mar 22 14:20:50 2006 (5) ERROR
-[TIMESTAMP] 1143043300 Wed Mar 22 17:01:40 2006 (9) ERROR
+[TIMESTAMP] 1168699766 Sat Jan 13 15:49:26 2007 (5) ERROR
+[TIMESTAMP] 1168909279 Tue Jan 16 02:01:19 2007 (9) ERROR
+[TIMESTAMP] 1168954463 Tue Jan 16 14:34:23 2007 (5) ERROR
+[TIMESTAMP] 1168984207 Tue Jan 16 22:50:07 2007 (9) ERROR
+[TIMESTAMP] 1169124794 Thu Jan 18 13:53:14 2007 (5) ERROR
+[TIMESTAMP] 1169154399 Thu Jan 18 22:06:39 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-eclair.err 9-eclair.err
 
-[BUILDTIME] 3815 (5) ERROR
-[BUILDTIME] 3879 (9) ERROR
-[BUILDTIME] 3885 (5) ERROR
-[BUILDTIME] 3896 (9) ERROR
-[BUILDTIME] 3881 (5) ERROR
-[BUILDTIME] 3896 (9) ERROR
+[BUILDTIME] 2955 (5) ERROR
+[BUILDTIME] 2948 (9) ERROR
+[BUILDTIME] 2948 (5) ERROR
+[BUILDTIME] 2947 (9) ERROR
+[BUILDTIME] 2932 (5) ERROR
+[BUILDTIME] 2961 (9) ERROR
 
 
-[5-ERROR] checking whether to build static libraries... yes
-[5-ERROR] configure: creating libtool
-[5-ERROR] appending configuration tag "CXX" to libtool
-[5-ERROR] checking for ld used by g++-34... ld
-[5-ERROR] checking if the linker (ld) is GNU ld... yes
-[5-ERROR] checking whether the g++-34 linker (ld) supports shared libraries... yes
-[5-ERROR] checking for g++-34 option to produce PIC... -fPIC
-[5-ERROR] checking if g++-34 PIC flag -fPIC works... yes
-[5-ERROR] checking if g++-34 supports -c -o file.o... yes
-[5-ERROR] checking whether the g++-34 linker (ld) supports shared libraries... yes
+[5-ERROR] checking if gcc-40 supports -fno-rtti -fno-exceptions... no
+[5-ERROR] checking for gcc-40 option to produce PIC... -fPIC
+[5-ERROR] checking if gcc-40 PIC flag -fPIC works... yes
+[5-ERROR] checking if gcc-40 static flag -static works... yes
+[5-ERROR] checking if gcc-40 supports -c -o file.o... yes
+[5-ERROR] checking whether the gcc-40 linker (ld) supports shared libraries... yes
+[5-ERROR] checking whether -lc should be explicitly linked in... no
 [5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
 [5-ERROR] checking how to hardcode library paths into programs... immediate
 [5-ERROR] checking whether stripping libraries is possible... yes
+[5-ERROR] checking if libtool supports shared libraries... yes
+[5-ERROR] checking whether to build shared libraries... yes
+[5-ERROR] checking whether to build static libraries... yes
+[5-ERROR] configure: creating libtool
+[5-ERROR] appending configuration tag "CXX" to libtool
+[5-ERROR] checking for ld used by g++-40... ld
+[5-ERROR] checking if the linker (ld) is GNU ld... yes
+[5-ERROR] checking whether the g++-40 linker (ld) supports shared libraries... yes
+[5-ERROR] checking for g++-40 option to produce PIC... -fPIC
+[5-ERROR] checking if g++-40 PIC flag -fPIC works... yes
+[5-ERROR] checking if g++-40 static flag -static works... yes
+[5-ERROR] checking if g++-40 supports -c -o file.o... yes
+[5-ERROR] checking whether the g++-40 linker (ld) supports shared libraries... yes
+[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[5-ERROR] checking how to hardcode library paths into programs... immediate
 [5-ERROR] appending configuration tag "F77" to libtool
 [5-ERROR] checking if libtool supports shared libraries... yes
 [5-ERROR] checking whether to build shared libraries... yes
 [5-ERROR] checking whether to build static libraries... yes
-[5-ERROR] checking for g77-34 option to produce PIC... -fPIC
-[5-ERROR] checking if g77-34 PIC flag -fPIC works... yes
-[5-ERROR] checking if g77-34 supports -c -o file.o... yes
-[5-ERROR] checking whether the g77-34 linker (ld) supports shared libraries... yes
-[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[5-ERROR] checking for f77 option to produce PIC... -fPIC
+[5-ERROR] checking if f77 PIC flag -fPIC works... no
+[5-ERROR] checking if f77 static flag -static works... no
+[5-ERROR] checking if f77 supports -c -o file.o... no
+[5-ERROR] checking whether the f77 linker (ld) supports shared libraries... yes
+[5-ERROR] checking dynamic linker characteristics... ./configure: line 1: f77: command not found
+[5-ERROR] GNU/Linux ld.so
 [5-ERROR] checking how to hardcode library paths into programs... immediate
-[5-ERROR] checking whether stripping libraries is possible... yes
 [5-ERROR] checking for taglib-config... /usr/bin/taglib-config
 [5-ERROR] checking taglib/tag_c.h usability... yes
 [5-ERROR] checking taglib/tag_c.h presence... yes
@@ -72,49 +85,49 @@
 [5-ERROR] checking for i386-unknown-linux-gnu-pkg-config... (cached) /usr/bin/pkg-config
 [5-ERROR] checking pkg-config is at least version 0.9.0... yes
 [5-ERROR] checking for SQLITE... yes
-[5-ERROR] checking for evas-config... /opt/e17/bin/evas-config
-[5-ERROR] checking for ecore-config... /opt/e17/bin/ecore-config
-[5-ERROR] checking for edje-config... /opt/e17/bin/edje-config
-[5-ERROR] checking for emotion-config... no
-[5-ERROR] emotion-config  is not in your $PATH. Please ensure it is.
+[5-ERROR] checking for evas-config... no
+[5-ERROR] evas-config  is not in your $PATH. Please ensure it is.
 [5-ERROR] Read the manual page for you shell as to how to extend your path.
-[5-ERROR] configure: error: Cannot find emotion-config
+[5-ERROR] configure: error: Cannot find evas-config
 [5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 0 files for this package.
-[5-ERROR] Applying package split: 40 eclair:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 eclair:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 eclair:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building eclair=eclair.
 
-[9-ERROR] checking whether to build static libraries... yes
-[9-ERROR] configure: creating libtool
-[9-ERROR] appending configuration tag "CXX" to libtool
-[9-ERROR] checking for ld used by g++-34... ld
-[9-ERROR] checking if the linker (ld) is GNU ld... yes
-[9-ERROR] checking whether the g++-34 linker (ld) supports shared libraries... yes
-[9-ERROR] checking for g++-34 option to produce PIC... -fPIC
-[9-ERROR] checking if g++-34 PIC flag -fPIC works... yes
-[9-ERROR] checking if g++-34 supports -c -o file.o... yes
-[9-ERROR] checking whether the g++-34 linker (ld) supports shared libraries... yes
+[9-ERROR] checking if gcc-40 supports -fno-rtti -fno-exceptions... no
+[9-ERROR] checking for gcc-40 option to produce PIC... -fPIC
+[9-ERROR] checking if gcc-40 PIC flag -fPIC works... yes
+[9-ERROR] checking if gcc-40 static flag -static works... yes
+[9-ERROR] checking if gcc-40 supports -c -o file.o... yes
+[9-ERROR] checking whether the gcc-40 linker (ld) supports shared libraries... yes
+[9-ERROR] checking whether -lc should be explicitly linked in... no
 [9-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
 [9-ERROR] checking how to hardcode library paths into programs... immediate
 [9-ERROR] checking whether stripping libraries is possible... yes
+[9-ERROR] checking if libtool supports shared libraries... yes
+[9-ERROR] checking whether to build shared libraries... yes
+[9-ERROR] checking whether to build static libraries... yes
+[9-ERROR] configure: creating libtool
+[9-ERROR] appending configuration tag "CXX" to libtool
+[9-ERROR] checking for ld used by g++-40... ld
+[9-ERROR] checking if the linker (ld) is GNU ld... yes
+[9-ERROR] checking whether the g++-40 linker (ld) supports shared libraries... yes
+[9-ERROR] checking for g++-40 option to produce PIC... -fPIC
+[9-ERROR] checking if g++-40 PIC flag -fPIC works... yes
+[9-ERROR] checking if g++-40 static flag -static works... yes
+[9-ERROR] checking if g++-40 supports -c -o file.o... yes
+[9-ERROR] checking whether the g++-40 linker (ld) supports shared libraries... yes
+[9-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[9-ERROR] checking how to hardcode library paths into programs... immediate
 [9-ERROR] appending configuration tag "F77" to libtool
 [9-ERROR] checking if libtool supports shared libraries... yes
 [9-ERROR] checking whether to build shared libraries... yes
 [9-ERROR] checking whether to build static libraries... yes
-[9-ERROR] checking for g77-34 option to produce PIC... -fPIC
-[9-ERROR] checking if g77-34 PIC flag -fPIC works... yes
-[9-ERROR] checking if g77-34 supports -c -o file.o... yes
-[9-ERROR] checking whether the g77-34 linker (ld) supports shared libraries... yes
-[9-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[9-ERROR] checking for f77 option to produce PIC... -fPIC
+[9-ERROR] checking if f77 PIC flag -fPIC works... no
+[9-ERROR] checking if f77 static flag -static works... no
+[9-ERROR] checking if f77 supports -c -o file.o... no
+[9-ERROR] checking whether the f77 linker (ld) supports shared libraries... yes
+[9-ERROR] checking dynamic linker characteristics... ./configure: line 1: f77: command not found
+[9-ERROR] GNU/Linux ld.so
 [9-ERROR] checking how to hardcode library paths into programs... immediate
-[9-ERROR] checking whether stripping libraries is possible... yes
 [9-ERROR] checking for taglib-config... /usr/bin/taglib-config
 [9-ERROR] checking taglib/tag_c.h usability... yes
 [9-ERROR] checking taglib/tag_c.h presence... yes
@@ -123,22 +136,9 @@
 [9-ERROR] checking for i386-unknown-linux-gnu-pkg-config... (cached) /usr/bin/pkg-config
 [9-ERROR] checking pkg-config is at least version 0.9.0... yes
 [9-ERROR] checking for SQLITE... yes
-[9-ERROR] checking for evas-config... /opt/e17/bin/evas-config
-[9-ERROR] checking for ecore-config... /opt/e17/bin/ecore-config
-[9-ERROR] checking for edje-config... /opt/e17/bin/edje-config
-[9-ERROR] checking for emotion-config... no
-[9-ERROR] emotion-config  is not in your $PATH. Please ensure it is.
+[9-ERROR] checking for evas-config... no
+[9-ERROR] evas-config  is not in your $PATH. Please ensure it is.
 [9-ERROR] Read the manual page for you shell as to how to extend your path.
-[9-ERROR] configure: error: Cannot find emotion-config
+[9-ERROR] configure: error: Cannot find evas-config
 [9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 0 files for this package.
-[9-ERROR] Applying package split: 40 eclair:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 eclair:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 eclair:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building eclair=eclair.
 

@@ -20,21 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142674645 Sat Mar 18 10:37:25 2006 (5)
-[TIMESTAMP] 1142945853 Tue Mar 21 13:57:33 2006 (9)
+[TIMESTAMP] 1168662561 Sat Jan 13 05:29:21 2007 (5) ERROR
+[TIMESTAMP] 1168870156 Mon Jan 15 15:09:16 2007 (9) ERROR
+[TIMESTAMP] 1168950335 Tue Jan 16 13:25:35 2007 (5) ERROR
+[TIMESTAMP] 1168979699 Tue Jan 16 21:34:59 2007 (9) ERROR
+[TIMESTAMP] 1169093304 Thu Jan 18 05:08:24 2007 (5) ERROR
+[TIMESTAMP] 1169149910 Thu Jan 18 20:51:50 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-mpg123.log 9-mpg123.log
+[LOGS] 5-mpg123.err 9-mpg123.err
 
-[BUILDTIME] 1986 (5)
-[BUILDTIME] 2061 (9)
-[SIZE] 0.17 MB, 8 files
+[BUILDTIME] 757 (5) ERROR
+[BUILDTIME] 782 (9) ERROR
+[BUILDTIME] 774 (5) ERROR
+[BUILDTIME] 786 (9) ERROR
+[BUILDTIME] 811 (5) ERROR
+[BUILDTIME] 779 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] rrdtool sed sysfiles tar
 
-[PROVIDES] mpg123
+[5-ERROR] Running main build function 'build_this_package' ...
+[5-ERROR] Extracting mpg123-0.59r-gpl.tar.bz2 (--use-compress-program=bzip2 -xf) ... 
+[5-ERROR] Fixing ownership and permissions ...
+[5-ERROR] Removing CVS and .svn directories ...
+[5-ERROR] Changeing into /ROCK/src.mpg123.1169093295.21934.563344256/mpg123-0.59r-gpl ...
+[5-ERROR] Creating /usr/<..> if required ...
+[5-ERROR] make CC=gcc LDFLAGS= \
+[5-ERROR] 		OBJECTS='decode_i386.o dct64_i386.o decode_i586.o \
+[5-ERROR] 			audio_oss.o term.o' \
+[5-ERROR] 		CFLAGS='-DI386_ASSEM -DPENTIUM_OPT -DREAL_IS_FLOAT -DLINUX \
+[5-ERROR] 			-DOSS -DTERM_CONTROL\
+[5-ERROR] 			-Wall -g -O2 -mcpu=i486 \
+[5-ERROR] 			-fomit-frame-pointer -funroll-all-loops \
+[5-ERROR] 			-finline-functions -ffast-math' \
+[5-ERROR] 		mpg123-make
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.mpg123.1169093295.21934.563344256/mpg123-0.59r-gpl'
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.mpg123.1169093295.21934.563344256/mpg123-0.59r-gpl'
+[5-ERROR] gcc -DI386_ASSEM -DPENTIUM_OPT -DREAL_IS_FLOAT -DLINUX \
+[5-ERROR] 	-DOSS -DTERM_CONTROL\
+[5-ERROR] 	-Wall -g -O2 -mcpu=i486 \
+[5-ERROR] 	-fomit-frame-pointer -funroll-all-loops \
+[5-ERROR] 	-finline-functions -ffast-math   -c -o mpg123.o mpg123.c
+[5-ERROR] <command line>:1:13: warning: missing whitespace after the macro name
+[5-ERROR] mpg123.c:512: warning: initialization makes integer from pointer without a cast
+[5-ERROR] gcc -DI386_ASSEM -DPENTIUM_OPT -DREAL_IS_FLOAT -DLINUX \
+[5-ERROR] 	-DOSS -DTERM_CONTROL\
+[5-ERROR] 	-Wall -g -O2 -mcpu=i486 \
+[5-ERROR] 	-fomit-frame-pointer -funroll-all-loops \
+[5-ERROR] 	-finline-functions -ffast-math   -c -o common.o common.c
+[5-ERROR] <command line>:1:13: warning: missing whitespace after the macro name
+[5-ERROR] gcc -DI386_ASSEM -DPENTIUM_OPT -DREAL_IS_FLOAT -DLINUX \
+[5-ERROR] 	-DOSS -DTERM_CONTROL\
+[5-ERROR] 	-Wall -g -O2 -mcpu=i486 \
+[5-ERROR] 	-fomit-frame-pointer -funroll-all-loops \
+[5-ERROR] 	-finline-functions -ffast-math   -c -o decode_i386.o decode_i386.c
+[5-ERROR] <command line>:1:13: warning: missing whitespace after the macro name
+[5-ERROR] gcc -DI386_ASSEM -DPENTIUM_OPT -DREAL_IS_FLOAT -DLINUX \
+[5-ERROR] 	-DOSS -DTERM_CONTROL\
+[5-ERROR] 	-Wall -g -O2 -mcpu=i486 \
+[5-ERROR] 	-fomit-frame-pointer -funroll-all-loops \
+[5-ERROR] 	-finline-functions -ffast-math   -c -o dct64_i386.o dct64_i386.c
+[5-ERROR] <command line>:1:13: warning: missing whitespace after the macro name
+[5-ERROR] as   -o decode_i586.o decode_i586.s
+[5-ERROR] make[2]: *** No rule to make target `\
+[5-ERROR] ', needed by `mpg123'.  Stop.
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.mpg123.1169093295.21934.563344256/mpg123-0.59r-gpl'
+[5-ERROR] make[1]: *** [mpg123-make] Error 2
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.mpg123.1169093295.21934.563344256/mpg123-0.59r-gpl'
+[5-ERROR] make: *** [linux] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] Running main build function 'build_this_package' ...
+[9-ERROR] Extracting mpg123-0.59r-gpl.tar.bz2 (--use-compress-program=bzip2 -xf) ... 
+[9-ERROR] Fixing ownership and permissions ...
+[9-ERROR] Removing CVS and .svn directories ...
+[9-ERROR] Changeing into /ROCK/src.mpg123.1169149901.13587.3084940077/mpg123-0.59r-gpl ...
+[9-ERROR] Creating /usr/<..> if required ...
+[9-ERROR] make CC=gcc LDFLAGS= \
+[9-ERROR] 		OBJECTS='decode_i386.o dct64_i386.o decode_i586.o \
+[9-ERROR] 			audio_oss.o term.o' \
+[9-ERROR] 		CFLAGS='-DI386_ASSEM -DPENTIUM_OPT -DREAL_IS_FLOAT -DLINUX \
+[9-ERROR] 			-DOSS -DTERM_CONTROL\
+[9-ERROR] 			-Wall -g -O2 -mcpu=i486 \
+[9-ERROR] 			-fomit-frame-pointer -funroll-all-loops \
+[9-ERROR] 			-finline-functions -ffast-math' \
+[9-ERROR] 		mpg123-make
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.mpg123.1169149901.13587.3084940077/mpg123-0.59r-gpl'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.mpg123.1169149901.13587.3084940077/mpg123-0.59r-gpl'
+[9-ERROR] gcc -DI386_ASSEM -DPENTIUM_OPT -DREAL_IS_FLOAT -DLINUX \
+[9-ERROR] 	-DOSS -DTERM_CONTROL\
+[9-ERROR] 	-Wall -g -O2 -mcpu=i486 \
+[9-ERROR] 	-fomit-frame-pointer -funroll-all-loops \
+[9-ERROR] 	-finline-functions -ffast-math   -c -o mpg123.o mpg123.c
+[9-ERROR] <command line>:1:13: warning: missing whitespace after the macro name
+[9-ERROR] mpg123.c:512: warning: initialization makes integer from pointer without a cast
+[9-ERROR] gcc -DI386_ASSEM -DPENTIUM_OPT -DREAL_IS_FLOAT -DLINUX \
+[9-ERROR] 	-DOSS -DTERM_CONTROL\
+[9-ERROR] 	-Wall -g -O2 -mcpu=i486 \
+[9-ERROR] 	-fomit-frame-pointer -funroll-all-loops \
+[9-ERROR] 	-finline-functions -ffast-math   -c -o common.o common.c
+[9-ERROR] <command line>:1:13: warning: missing whitespace after the macro name
+[9-ERROR] gcc -DI386_ASSEM -DPENTIUM_OPT -DREAL_IS_FLOAT -DLINUX \
+[9-ERROR] 	-DOSS -DTERM_CONTROL\
+[9-ERROR] 	-Wall -g -O2 -mcpu=i486 \
+[9-ERROR] 	-fomit-frame-pointer -funroll-all-loops \
+[9-ERROR] 	-finline-functions -ffast-math   -c -o decode_i386.o decode_i386.c
+[9-ERROR] <command line>:1:13: warning: missing whitespace after the macro name
+[9-ERROR] gcc -DI386_ASSEM -DPENTIUM_OPT -DREAL_IS_FLOAT -DLINUX \
+[9-ERROR] 	-DOSS -DTERM_CONTROL\
+[9-ERROR] 	-Wall -g -O2 -mcpu=i486 \
+[9-ERROR] 	-fomit-frame-pointer -funroll-all-loops \
+[9-ERROR] 	-finline-functions -ffast-math   -c -o dct64_i386.o dct64_i386.c
+[9-ERROR] <command line>:1:13: warning: missing whitespace after the macro name
+[9-ERROR] as   -o decode_i586.o decode_i586.s
+[9-ERROR] make[2]: *** No rule to make target `\
+[9-ERROR] ', needed by `mpg123'.  Stop.
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.mpg123.1169149901.13587.3084940077/mpg123-0.59r-gpl'
+[9-ERROR] make[1]: *** [mpg123-make] Error 2
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.mpg123.1169149901.13587.3084940077/mpg123-0.59r-gpl'
+[9-ERROR] make: *** [linux] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

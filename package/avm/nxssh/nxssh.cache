@@ -20,23 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142674818 Sat Mar 18 10:40:18 2006 (5)
-[TIMESTAMP] 1142946033 Tue Mar 21 14:00:33 2006 (9)
+[TIMESTAMP] 1168704846 Sat Jan 13 17:14:06 2007 (5)
+[TIMESTAMP] 1168914646 Tue Jan 16 03:30:46 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-nxssh.log 9-nxssh.log
 
-[BUILDTIME] 7180 (5)
-[BUILDTIME] 7242 (9)
-[SIZE] 0.28 MB, 7 files
+[BUILDTIME] 7219 (5)
+[BUILDTIME] 7291 (9)
+[SIZE] 0.24 MB, 7 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep groff libjpeg
-[DEP] liblockfile:dev libpng linux26-header:dev make mktemp net-tools
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
+[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep groff libjpeg
+[DEP] liblockfile:dev libpng linux-libc-headers:dev make mktemp net-tools
 [DEP] nx-x11 nxcomp nxcomp:dev openssl openssl:dev pam pam:dev patch
-[DEP] rrdtool sed sysfiles tar util-linux zlib:dev
+[DEP] rrdtool sed sysfiles tar util-linux zlib zlib:dev
 
 [PROVIDES] nxssh
 

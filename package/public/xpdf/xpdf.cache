@@ -20,23 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142564123 Fri Mar 17 03:55:23 2006 (5)
-[TIMESTAMP] 1142824478 Mon Mar 20 04:14:38 2006 (9)
+[TIMESTAMP] 1168630681 Fri Jan 12 20:38:01 2007 (5) ERROR
+[TIMESTAMP] 1168835128 Mon Jan 15 05:25:28 2007 (9) ERROR
+[TIMESTAMP] 1168947856 Tue Jan 16 12:44:16 2007 (5) ERROR
+[TIMESTAMP] 1168974867 Tue Jan 16 20:14:27 2007 (9) ERROR
+[TIMESTAMP] 1169091269 Thu Jan 18 04:34:29 2007 (5) ERROR
+[TIMESTAMP] 1169145157 Thu Jan 18 19:32:37 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-xpdf.log 9-xpdf.log
+[LOGS] 5-xpdf.err 9-xpdf.err
 
-[BUILDTIME] 10200 (5)
-[BUILDTIME] 10622 (9)
-[SIZE] 9.48 MB, 35 files
+[BUILDTIME] 6756 (5) ERROR
+[BUILDTIME] 6881 (9) ERROR
+[BUILDTIME] 6898 (5) ERROR
+[BUILDTIME] 6898 (9) ERROR
+[BUILDTIME] 6905 (5) ERROR
+[BUILDTIME] 6900 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] freetype freetype:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp net-tools openmotif openmotif:dev
-[DEP] patch rrdtool sed sysfiles tar tetex util-linux xorg xorg:dev
 
-[PROVIDES] libt1.a libt1.so libt1x.a libt1x.so pdffonts pdfimages pdfinfo
-[PROVIDES] pdftoppm pdftops pdftotext type1afm xglyph xpdf
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.xpdf.1169091198.27522.905555977/xpdf-3.01/goo'
+[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I. -c GHash.cc
+[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I. -c GList.cc
+[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I. -c GString.cc
+[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I. -c gmempp.cc
+[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I. -c gfile.cc
+[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I. -c FixedPoint.cc
+[5-ERROR] gcc-40 -I/usr/include/freetype2 -DHAVE_CONFIG_H -I.. -I.  -I/usr/include/freetype2  -c -o gmem.o gmem.c
+[5-ERROR] gcc-40 -I/usr/include/freetype2 -DHAVE_CONFIG_H -I.. -I.  -I/usr/include/freetype2  -c -o parseargs.o parseargs.c
+[5-ERROR] rm -f libGoo.a
+[5-ERROR] ar rc libGoo.a GHash.o GList.o GString.o gmempp.o gfile.o FixedPoint.o gmem.o parseargs.o
+[5-ERROR] ranlib libGoo.a
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.xpdf.1169091198.27522.905555977/xpdf-3.01/goo'
+[5-ERROR] cd fofi; make
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.xpdf.1169091198.27522.905555977/xpdf-3.01/fofi'
+[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I. -c FoFiBase.cc
+[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I. -c FoFiEncodings.cc
+[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I. -c FoFiTrueType.cc
+[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I. -c FoFiType1.cc
+[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I. -c FoFiType1C.cc
+[5-ERROR] rm -f libfofi.a
+[5-ERROR] ar rc libfofi.a FoFiBase.o FoFiEncodings.o FoFiTrueType.o FoFiType1.o FoFiType1C.o
+[5-ERROR] ranlib libfofi.a
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.xpdf.1169091198.27522.905555977/xpdf-3.01/fofi'
+[5-ERROR] cd splash; make
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.xpdf.1169091198.27522.905555977/xpdf-3.01/splash'
+[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I./../fofi -I.  -I/usr/include/freetype2 -c Splash.cc
+[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I./../fofi -I.  -I/usr/include/freetype2 -c SplashBitmap.cc
+[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I./../fofi -I.  -I/usr/include/freetype2 -c SplashClip.cc
+[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I./../fofi -I.  -I/usr/include/freetype2 -c SplashFTFont.cc
+[5-ERROR] SplashFTFont.cc:17:10: error: #include expects "FILENAME" or <FILENAME>
+[5-ERROR] SplashFTFont.cc: In constructor 'SplashFTFont::SplashFTFont(SplashFTFontFile*, SplashCoord*)':
+[5-ERROR] SplashFTFont.cc:46: error: 'FT_New_Size' was not declared in this scope
+[5-ERROR] SplashFTFont.cc: In member function 'virtual SplashPath* SplashFTFont::getGlyphPath(int)':
+[5-ERROR] SplashFTFont.cc:219: error: invalid conversion from 'int (*)(FT_Vector*, void*)' to 'int (*)(const FT_Vector*, void*)'
+[5-ERROR] SplashFTFont.cc:219: error: invalid conversion from 'int (*)(FT_Vector*, void*)' to 'int (*)(const FT_Vector*, void*)'
+[5-ERROR] SplashFTFont.cc:219: error: invalid conversion from 'int (*)(FT_Vector*, FT_Vector*, void*)' to 'int (*)(const FT_Vector*, const FT_Vector*, void*)'
+[5-ERROR] SplashFTFont.cc:219: error: invalid conversion from 'int (*)(FT_Vector*, FT_Vector*, FT_Vector*, void*)' to 'int (*)(const FT_Vector*, const FT_Vector*, const FT_Vector*, void*)'
+[5-ERROR] SplashFTFont.cc:224: error: 'FT_Glyph' was not declared in this scope
+[5-ERROR] SplashFTFont.cc:224: error: expected `;' before 'glyph'
+[5-ERROR] SplashFTFont.cc:238: error: 'glyph' was not declared in this scope
+[5-ERROR] SplashFTFont.cc:238: error: 'FT_Get_Glyph' was not declared in this scope
+[5-ERROR] SplashFTFont.cc:243: error: 'FT_OutlineGlyph' was not declared in this scope
+[5-ERROR] SplashFTFont.cc:243: error: expected `)' before 'glyph'
+[5-ERROR] SplashFTFont.cc:248: error: 'glyph' was not declared in this scope
+[5-ERROR] SplashFTFont.cc:248: error: 'FT_Done_Glyph' was not declared in this scope
+[5-ERROR] make[1]: *** [SplashFTFont.o] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.xpdf.1169091198.27522.905555977/xpdf-3.01/splash'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.xpdf.1169145075.19795.729073658/xpdf-3.01/goo'
+[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I. -c GHash.cc
+[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I. -c GList.cc
+[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I. -c GString.cc
+[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I. -c gmempp.cc
+[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I. -c gfile.cc
+[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I. -c FixedPoint.cc
+[9-ERROR] gcc-40 -I/usr/include/freetype2 -DHAVE_CONFIG_H -I.. -I.  -I/usr/include/freetype2  -c -o gmem.o gmem.c
+[9-ERROR] gcc-40 -I/usr/include/freetype2 -DHAVE_CONFIG_H -I.. -I.  -I/usr/include/freetype2  -c -o parseargs.o parseargs.c
+[9-ERROR] rm -f libGoo.a
+[9-ERROR] ar rc libGoo.a GHash.o GList.o GString.o gmempp.o gfile.o FixedPoint.o gmem.o parseargs.o
+[9-ERROR] ranlib libGoo.a
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.xpdf.1169145075.19795.729073658/xpdf-3.01/goo'
+[9-ERROR] cd fofi; make
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.xpdf.1169145075.19795.729073658/xpdf-3.01/fofi'
+[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I. -c FoFiBase.cc
+[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I. -c FoFiEncodings.cc
+[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I. -c FoFiTrueType.cc
+[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I. -c FoFiType1.cc
+[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I. -c FoFiType1C.cc
+[9-ERROR] rm -f libfofi.a
+[9-ERROR] ar rc libfofi.a FoFiBase.o FoFiEncodings.o FoFiTrueType.o FoFiType1.o FoFiType1C.o
+[9-ERROR] ranlib libfofi.a
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.xpdf.1169145075.19795.729073658/xpdf-3.01/fofi'
+[9-ERROR] cd splash; make
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.xpdf.1169145075.19795.729073658/xpdf-3.01/splash'
+[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I./../fofi -I.  -I/usr/include/freetype2 -c Splash.cc
+[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I./../fofi -I.  -I/usr/include/freetype2 -c SplashBitmap.cc
+[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I./../fofi -I.  -I/usr/include/freetype2 -c SplashClip.cc
+[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I./../fofi -I.  -I/usr/include/freetype2 -c SplashFTFont.cc
+[9-ERROR] SplashFTFont.cc:17:10: error: #include expects "FILENAME" or <FILENAME>
+[9-ERROR] SplashFTFont.cc: In constructor 'SplashFTFont::SplashFTFont(SplashFTFontFile*, SplashCoord*)':
+[9-ERROR] SplashFTFont.cc:46: error: 'FT_New_Size' was not declared in this scope
+[9-ERROR] SplashFTFont.cc: In member function 'virtual SplashPath* SplashFTFont::getGlyphPath(int)':
+[9-ERROR] SplashFTFont.cc:219: error: invalid conversion from 'int (*)(FT_Vector*, void*)' to 'int (*)(const FT_Vector*, void*)'
+[9-ERROR] SplashFTFont.cc:219: error: invalid conversion from 'int (*)(FT_Vector*, void*)' to 'int (*)(const FT_Vector*, void*)'
+[9-ERROR] SplashFTFont.cc:219: error: invalid conversion from 'int (*)(FT_Vector*, FT_Vector*, void*)' to 'int (*)(const FT_Vector*, const FT_Vector*, void*)'
+[9-ERROR] SplashFTFont.cc:219: error: invalid conversion from 'int (*)(FT_Vector*, FT_Vector*, FT_Vector*, void*)' to 'int (*)(const FT_Vector*, const FT_Vector*, const FT_Vector*, void*)'
+[9-ERROR] SplashFTFont.cc:224: error: 'FT_Glyph' was not declared in this scope
+[9-ERROR] SplashFTFont.cc:224: error: expected `;' before 'glyph'
+[9-ERROR] SplashFTFont.cc:238: error: 'glyph' was not declared in this scope
+[9-ERROR] SplashFTFont.cc:238: error: 'FT_Get_Glyph' was not declared in this scope
+[9-ERROR] SplashFTFont.cc:243: error: 'FT_OutlineGlyph' was not declared in this scope
+[9-ERROR] SplashFTFont.cc:243: error: expected `)' before 'glyph'
+[9-ERROR] SplashFTFont.cc:248: error: 'glyph' was not declared in this scope
+[9-ERROR] SplashFTFont.cc:248: error: 'FT_Done_Glyph' was not declared in this scope
+[9-ERROR] make[1]: *** [SplashFTFont.o] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.xpdf.1169145075.19795.729073658/xpdf-3.01/splash'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

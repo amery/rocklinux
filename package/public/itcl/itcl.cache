@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142664902 Sat Mar 18 07:55:02 2006 (5)
-[TIMESTAMP] 1142935454 Tue Mar 21 11:04:14 2006 (9)
+[TIMESTAMP] 1168698271 Sat Jan 13 15:24:31 2007 (5)
+[TIMESTAMP] 1168907694 Tue Jan 16 01:34:54 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-itcl.log 9-itcl.log
 
-[BUILDTIME] 3981 (5)
-[BUILDTIME] 4092 (9)
+[BUILDTIME] 4040 (5)
+[BUILDTIME] 4117 (9)
 [SIZE] 0.29 MB, 37 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm diffutils findutils gawk gcc40 gcc40:dev glibc23
+[DEP] glibc23:dev grep imake libx11 libx11:dev libxt linux-libc-headers:dev
 [DEP] make mktemp net-tools rrdtool sed sysfiles tar tcl tcl:dev tk:dev
-[DEP] xorg xorg:dev
+[DEP] xorg-cf-files xproto:dev
 
 [PROVIDES] libitcl3.2.so libitclstub3.2.a libitk3.2.so libitkstub3.2.a
 

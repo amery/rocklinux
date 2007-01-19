@@ -20,134 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142552137 Fri Mar 17 00:35:37 2006 (5) ERROR
-[TIMESTAMP] 1142810054 Mon Mar 20 00:14:14 2006 (9) ERROR
-[TIMESTAMP] 1142959599 Tue Mar 21 17:46:39 2006 (5) ERROR
-[TIMESTAMP] 1142970795 Tue Mar 21 20:53:15 2006 (9) ERROR
-[TIMESTAMP] 1143031220 Wed Mar 22 13:40:20 2006 (5) ERROR
-[TIMESTAMP] 1143039952 Wed Mar 22 16:05:52 2006 (9) ERROR
+[TIMESTAMP] 1168621919 Fri Jan 12 18:11:59 2007 (5) ERROR
+[TIMESTAMP] 1168825454 Mon Jan 15 02:44:14 2007 (9) ERROR
+[TIMESTAMP] 1168946801 Tue Jan 16 12:26:41 2007 (5) ERROR
+[TIMESTAMP] 1168973393 Tue Jan 16 19:49:53 2007 (9) ERROR
+[TIMESTAMP] 1169090214 Thu Jan 18 04:16:54 2007 (5) ERROR
+[TIMESTAMP] 1169143672 Thu Jan 18 19:07:52 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-emotion.err 9-emotion.err
 
-[BUILDTIME] 4117 (5) ERROR
-[BUILDTIME] 4554 (9) ERROR
-[BUILDTIME] 4572 (5) ERROR
-[BUILDTIME] 4666 (9) ERROR
-[BUILDTIME] 4654 (5) ERROR
-[BUILDTIME] 4674 (9) ERROR
-[SIZE] 0.02 MB, 11 files
-
-[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils directfb directfb:dev ecore ecore:dev edb edb:dev edje
-[DEP] edje:dev eet eet:dev embryo embryo:dev evas evas:dev findutils
-[DEP] freetype freetype:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev
-[DEP] grep imlib2 libjpeg libjpeg:dev libpng libpng:dev libtool
-[DEP] linux26-header:dev m4 make mktemp net-tools openssl perl5 rrdtool
-[DEP] sed sysfiles tar util-linux xine-lib xine-lib:dev xorg zlib:dev
+[BUILDTIME] 2761 (5) ERROR
+[BUILDTIME] 2831 (9) ERROR
+[BUILDTIME] 2844 (5) ERROR
+[BUILDTIME] 2858 (9) ERROR
+[BUILDTIME] 2858 (5) ERROR
+[BUILDTIME] 2840 (9) ERROR
 
 
-[5-ERROR] creating emotion_test
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.emotion.1143031134.27236.3634730579/emotion-2005-09-11/src/bin'
-[5-ERROR] Making all in modules
-[5-ERROR] make[3]: Entering directory `/ROCK/src.emotion.1143031134.27236.3634730579/emotion-2005-09-11/src/modules'
-[5-ERROR] Making all in xine
-[5-ERROR] make[4]: Entering directory `/ROCK/src.emotion.1143031134.27236.3634730579/emotion-2005-09-11/src/modules/xine'
-[5-ERROR] if /bin/sh ../../../libtool --tag=CC --mode=compile gcc-34 -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../.. -I../../../src/lib -I../../../src/modules -I../../../src/modules/xine -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/usr/include    -g -O2 -MT emotion_xine_vo_out.lo -MD -MP -MF ".deps/emotion_xine_vo_out.Tpo" -c -o emotion_xine_vo_out.lo emotion_xine_vo_out.c; \
-[5-ERROR] then mv -f ".deps/emotion_xine_vo_out.Tpo" ".deps/emotion_xine_vo_out.Plo"; else rm -f ".deps/emotion_xine_vo_out.Tpo"; exit 1; fi
-[5-ERROR] mkdir .libs
-[5-ERROR]  gcc-34 -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../.. -I../../../src/lib -I../../../src/modules -I../../../src/modules/xine -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/usr/include -g -O2 -MT emotion_xine_vo_out.lo -MD -MP -MF .deps/emotion_xine_vo_out.Tpo -c emotion_xine_vo_out.c  -fPIC -DPIC -o .libs/emotion_xine_vo_out.o
-[5-ERROR] emotion_xine_vo_out.c: In function `_emotion_frame_display':
-[5-ERROR] emotion_xine_vo_out.c:450: warning: assignment from incompatible pointer type
-[5-ERROR] emotion_xine_vo_out.c: In function `_emotion_overlay_blend_yuv':
-[5-ERROR] emotion_xine_vo_out.c:577: error: structure has no member named `clip_color'
-[5-ERROR] emotion_xine_vo_out.c:578: error: structure has no member named `clip_trans'
-[5-ERROR] emotion_xine_vo_out.c:581: error: structure has no member named `clip_right'
-[5-ERROR] emotion_xine_vo_out.c:582: error: structure has no member named `clip_right'
-[5-ERROR] emotion_xine_vo_out.c:592: error: structure has no member named `clip_top'
-[5-ERROR] emotion_xine_vo_out.c:592: error: structure has no member named `clip_bottom'
-[5-ERROR] emotion_xine_vo_out.c:612: error: structure has no member named `clip_left'
-[5-ERROR] emotion_xine_vo_out.c:614: error: structure has no member named `clip_left'
-[5-ERROR] emotion_xine_vo_out.c:616: error: structure has no member named `clip_left'
-[5-ERROR] emotion_xine_vo_out.c:638: error: structure has no member named `clip_color'
-[5-ERROR] emotion_xine_vo_out.c:639: error: structure has no member named `clip_trans'
-[5-ERROR] emotion_xine_vo_out.c:646: error: structure has no member named `clip_color'
-[5-ERROR] emotion_xine_vo_out.c:647: error: structure has no member named `clip_trans'
-[5-ERROR] make[4]: *** [emotion_xine_vo_out.lo] Error 1
-[5-ERROR] make[4]: Leaving directory `/ROCK/src.emotion.1143031134.27236.3634730579/emotion-2005-09-11/src/modules/xine'
-[5-ERROR] make[3]: *** [all-recursive] Error 1
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.emotion.1143031134.27236.3634730579/emotion-2005-09-11/src/modules'
-[5-ERROR] make[2]: *** [all-recursive] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.emotion.1143031134.27236.3634730579/emotion-2005-09-11/src'
-[5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.emotion.1143031134.27236.3634730579/emotion-2005-09-11'
-[5-ERROR] make: *** [all] Error 2
+[5-ERROR] checking for i386-unknown-linux-gnu-ar... ar
+[5-ERROR] checking for i386-unknown-linux-gnu-ranlib... ranlib
+[5-ERROR] checking for i386-unknown-linux-gnu-strip... strip
+[5-ERROR] checking if gcc-40 supports -fno-rtti -fno-exceptions... no
+[5-ERROR] checking for gcc-40 option to produce PIC... -fPIC
+[5-ERROR] checking if gcc-40 PIC flag -fPIC works... yes
+[5-ERROR] checking if gcc-40 static flag -static works... yes
+[5-ERROR] checking if gcc-40 supports -c -o file.o... yes
+[5-ERROR] checking whether the gcc-40 linker (ld) supports shared libraries... yes
+[5-ERROR] checking whether -lc should be explicitly linked in... no
+[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] checking whether stripping libraries is possible... yes
+[5-ERROR] checking if libtool supports shared libraries... yes
+[5-ERROR] checking whether to build shared libraries... yes
+[5-ERROR] checking whether to build static libraries... yes
+[5-ERROR] configure: creating libtool
+[5-ERROR] appending configuration tag "CXX" to libtool
+[5-ERROR] checking for ld used by g++-40... ld
+[5-ERROR] checking if the linker (ld) is GNU ld... yes
+[5-ERROR] checking whether the g++-40 linker (ld) supports shared libraries... yes
+[5-ERROR] checking for g++-40 option to produce PIC... -fPIC
+[5-ERROR] checking if g++-40 PIC flag -fPIC works... yes
+[5-ERROR] checking if g++-40 static flag -static works... yes
+[5-ERROR] checking if g++-40 supports -c -o file.o... yes
+[5-ERROR] checking whether the g++-40 linker (ld) supports shared libraries... yes
+[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] appending configuration tag "F77" to libtool
+[5-ERROR] checking if libtool supports shared libraries... yes
+[5-ERROR] checking whether to build shared libraries... yes
+[5-ERROR] checking whether to build static libraries... yes
+[5-ERROR] checking for f77 option to produce PIC... -fPIC
+[5-ERROR] checking if f77 PIC flag -fPIC works... no
+[5-ERROR] checking if f77 static flag -static works... no
+[5-ERROR] checking if f77 supports -c -o file.o... no
+[5-ERROR] checking whether the f77 linker (ld) supports shared libraries... yes
+[5-ERROR] checking dynamic linker characteristics... ./configure: line 1: f77: command not found
+[5-ERROR] GNU/Linux ld.so
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] checking for eet-config... /opt/e17/bin/eet-config
+[5-ERROR] checking for eet - version >= 0.9.10... yes
+[5-ERROR] checking for evas-config... no
+[5-ERROR] checking for evas - version >= 0.9.9... no
+[5-ERROR] *** The evas-config script installed by evas could not be found
+[5-ERROR] *** If evas was installed in PREFIX, make sure PREFIX/bin is in
+[5-ERROR] *** your path, or set the EVAS_CONFIG environment variable to the
+[5-ERROR] *** full path to evas-config.
+[5-ERROR] configure: error: Evas isn't installed
 [5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 5 files for this package.
-[5-ERROR] Applying package split: 40 emotion:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 emotion:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 emotion:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <emotion> Creating flist file ...
-[5-ERROR] <emotion> Creating package dependencies file ...
-[5-ERROR] <emotion> Creating md5sum and cksum files ...
-[5-ERROR] <emotion> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building emotion=emotion.
 
-[9-ERROR] creating emotion_test
-[9-ERROR] make[3]: Leaving directory `/ROCK/src.emotion.1143039859.1278.1372745627/emotion-2005-09-11/src/bin'
-[9-ERROR] Making all in modules
-[9-ERROR] make[3]: Entering directory `/ROCK/src.emotion.1143039859.1278.1372745627/emotion-2005-09-11/src/modules'
-[9-ERROR] Making all in xine
-[9-ERROR] make[4]: Entering directory `/ROCK/src.emotion.1143039859.1278.1372745627/emotion-2005-09-11/src/modules/xine'
-[9-ERROR] if /bin/sh ../../../libtool --tag=CC --mode=compile gcc-34 -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../.. -I../../../src/lib -I../../../src/modules -I../../../src/modules/xine -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/usr/include    -g -O2 -MT emotion_xine_vo_out.lo -MD -MP -MF ".deps/emotion_xine_vo_out.Tpo" -c -o emotion_xine_vo_out.lo emotion_xine_vo_out.c; \
-[9-ERROR] then mv -f ".deps/emotion_xine_vo_out.Tpo" ".deps/emotion_xine_vo_out.Plo"; else rm -f ".deps/emotion_xine_vo_out.Tpo"; exit 1; fi
-[9-ERROR] mkdir .libs
-[9-ERROR]  gcc-34 -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../.. -I../../../src/lib -I../../../src/modules -I../../../src/modules/xine -I/opt/e17/include -I/opt/e17/include -I/opt/e17/include -I/usr/include -g -O2 -MT emotion_xine_vo_out.lo -MD -MP -MF .deps/emotion_xine_vo_out.Tpo -c emotion_xine_vo_out.c  -fPIC -DPIC -o .libs/emotion_xine_vo_out.o
-[9-ERROR] emotion_xine_vo_out.c: In function `_emotion_frame_display':
-[9-ERROR] emotion_xine_vo_out.c:450: warning: assignment from incompatible pointer type
-[9-ERROR] emotion_xine_vo_out.c: In function `_emotion_overlay_blend_yuv':
-[9-ERROR] emotion_xine_vo_out.c:577: error: structure has no member named `clip_color'
-[9-ERROR] emotion_xine_vo_out.c:578: error: structure has no member named `clip_trans'
-[9-ERROR] emotion_xine_vo_out.c:581: error: structure has no member named `clip_right'
-[9-ERROR] emotion_xine_vo_out.c:582: error: structure has no member named `clip_right'
-[9-ERROR] emotion_xine_vo_out.c:592: error: structure has no member named `clip_top'
-[9-ERROR] emotion_xine_vo_out.c:592: error: structure has no member named `clip_bottom'
-[9-ERROR] emotion_xine_vo_out.c:612: error: structure has no member named `clip_left'
-[9-ERROR] emotion_xine_vo_out.c:614: error: structure has no member named `clip_left'
-[9-ERROR] emotion_xine_vo_out.c:616: error: structure has no member named `clip_left'
-[9-ERROR] emotion_xine_vo_out.c:638: error: structure has no member named `clip_color'
-[9-ERROR] emotion_xine_vo_out.c:639: error: structure has no member named `clip_trans'
-[9-ERROR] emotion_xine_vo_out.c:646: error: structure has no member named `clip_color'
-[9-ERROR] emotion_xine_vo_out.c:647: error: structure has no member named `clip_trans'
-[9-ERROR] make[4]: *** [emotion_xine_vo_out.lo] Error 1
-[9-ERROR] make[4]: Leaving directory `/ROCK/src.emotion.1143039859.1278.1372745627/emotion-2005-09-11/src/modules/xine'
-[9-ERROR] make[3]: *** [all-recursive] Error 1
-[9-ERROR] make[3]: Leaving directory `/ROCK/src.emotion.1143039859.1278.1372745627/emotion-2005-09-11/src/modules'
-[9-ERROR] make[2]: *** [all-recursive] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.emotion.1143039859.1278.1372745627/emotion-2005-09-11/src'
-[9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.emotion.1143039859.1278.1372745627/emotion-2005-09-11'
-[9-ERROR] make: *** [all] Error 2
+[9-ERROR] checking for i386-unknown-linux-gnu-ar... ar
+[9-ERROR] checking for i386-unknown-linux-gnu-ranlib... ranlib
+[9-ERROR] checking for i386-unknown-linux-gnu-strip... strip
+[9-ERROR] checking if gcc-40 supports -fno-rtti -fno-exceptions... no
+[9-ERROR] checking for gcc-40 option to produce PIC... -fPIC
+[9-ERROR] checking if gcc-40 PIC flag -fPIC works... yes
+[9-ERROR] checking if gcc-40 static flag -static works... yes
+[9-ERROR] checking if gcc-40 supports -c -o file.o... yes
+[9-ERROR] checking whether the gcc-40 linker (ld) supports shared libraries... yes
+[9-ERROR] checking whether -lc should be explicitly linked in... no
+[9-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[9-ERROR] checking how to hardcode library paths into programs... immediate
+[9-ERROR] checking whether stripping libraries is possible... yes
+[9-ERROR] checking if libtool supports shared libraries... yes
+[9-ERROR] checking whether to build shared libraries... yes
+[9-ERROR] checking whether to build static libraries... yes
+[9-ERROR] configure: creating libtool
+[9-ERROR] appending configuration tag "CXX" to libtool
+[9-ERROR] checking for ld used by g++-40... ld
+[9-ERROR] checking if the linker (ld) is GNU ld... yes
+[9-ERROR] checking whether the g++-40 linker (ld) supports shared libraries... yes
+[9-ERROR] checking for g++-40 option to produce PIC... -fPIC
+[9-ERROR] checking if g++-40 PIC flag -fPIC works... yes
+[9-ERROR] checking if g++-40 static flag -static works... yes
+[9-ERROR] checking if g++-40 supports -c -o file.o... yes
+[9-ERROR] checking whether the g++-40 linker (ld) supports shared libraries... yes
+[9-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[9-ERROR] checking how to hardcode library paths into programs... immediate
+[9-ERROR] appending configuration tag "F77" to libtool
+[9-ERROR] checking if libtool supports shared libraries... yes
+[9-ERROR] checking whether to build shared libraries... yes
+[9-ERROR] checking whether to build static libraries... yes
+[9-ERROR] checking for f77 option to produce PIC... -fPIC
+[9-ERROR] checking if f77 PIC flag -fPIC works... no
+[9-ERROR] checking if f77 static flag -static works... no
+[9-ERROR] checking if f77 supports -c -o file.o... no
+[9-ERROR] checking whether the f77 linker (ld) supports shared libraries... yes
+[9-ERROR] checking dynamic linker characteristics... ./configure: line 1: f77: command not found
+[9-ERROR] GNU/Linux ld.so
+[9-ERROR] checking how to hardcode library paths into programs... immediate
+[9-ERROR] checking for eet-config... /opt/e17/bin/eet-config
+[9-ERROR] checking for eet - version >= 0.9.10... yes
+[9-ERROR] checking for evas-config... no
+[9-ERROR] checking for evas - version >= 0.9.9... no
+[9-ERROR] *** The evas-config script installed by evas could not be found
+[9-ERROR] *** If evas was installed in PREFIX, make sure PREFIX/bin is in
+[9-ERROR] *** your path, or set the EVAS_CONFIG environment variable to the
+[9-ERROR] *** full path to evas-config.
+[9-ERROR] configure: error: Evas isn't installed
 [9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 5 files for this package.
-[9-ERROR] Applying package split: 40 emotion:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 emotion:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 emotion:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <emotion> Creating flist file ...
-[9-ERROR] <emotion> Creating package dependencies file ...
-[9-ERROR] <emotion> Creating md5sum and cksum files ...
-[9-ERROR] <emotion> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building emotion=emotion.
 

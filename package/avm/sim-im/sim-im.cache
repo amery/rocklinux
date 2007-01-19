@@ -20,27 +20,41 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142676138 Sat Mar 18 11:02:18 2006 (5)
-[TIMESTAMP] 1142947371 Tue Mar 21 14:22:51 2006 (9)
+[TIMESTAMP] 1168705759 Sat Jan 13 17:29:19 2007 (5) ERROR
+[TIMESTAMP] 1168915570 Tue Jan 16 03:46:10 2007 (9) ERROR
+[TIMESTAMP] 1168956036 Tue Jan 16 15:00:36 2007 (5) ERROR
+[TIMESTAMP] 1168985786 Tue Jan 16 23:16:26 2007 (9) ERROR
+[TIMESTAMP] 1169126361 Thu Jan 18 14:19:21 2007 (5) ERROR
+[TIMESTAMP] 1169155977 Thu Jan 18 22:32:57 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-sim-im.log 9-sim-im.log
+[LOGS] 5-sim-im.err 9-sim-im.err
 
-[BUILDTIME] 116121 (5)
-[BUILDTIME] 116420 (9)
-[SIZE] 8.50 MB, 128 files
+[BUILDTIME] 91736 (5) ERROR
+[BUILDTIME] 91963 (9) ERROR
+[BUILDTIME] 92193 (5) ERROR
+[BUILDTIME] 92163 (9) ERROR
+[BUILDTIME] 92228 (5) ERROR
+[BUILDTIME] 92267 (9) ERROR
+[SIZE] 7.45 MB, 120 files
 
-[DEP] 00-dirtree acl acl:dev arts attr attr:dev bash2 binutils bzip2
-[DEP] coreutils diffutils expat fam fam:dev findutils flex flex:dev
-[DEP] freetype freetype:dev gawk gcc34 gcc34:dev gettext glibc23
-[DEP] glibc23:dev grep hicolor-icon-theme kdelibs kdelibs:dev kile
-[DEP] kimdaba kmplayer kphone leif libart_lgpl23 libart_lgpl23:dev libidn
-[DEP] libidn:dev libjpeg libpng libpng:dev libxml2 libxml2:dev libxslt
-[DEP] libxslt:dev linux26-header:dev m4 make mktemp nas net-tools openssl
-[DEP] openssl:dev perl5 pkgconfig qt33 qt33:dev rrdtool sed sysfiles tar
-[DEP] util-linux xorg xorg:dev zlib:dev
+[DEP] 00-dirtree acl acl:dev applewmproto applewmproto:dev attr attr:dev
+[DEP] bash2 binutils bzip2 coreutils cups cvm diffutils expat expat:dev fam
+[DEP] fam:dev findutils flex flex:dev fontconfig fontconfig:dev freetype
+[DEP] freetype:dev gawk gcc40 gcc40:dev gettext glibc23 glibc23:dev grep
+[DEP] hicolor-icon-theme imake kdeaccessibility kdebase kdelibs kdelibs:dev
+[DEP] kdenetwork kdeutils libart_lgpl23 libart_lgpl23:dev libice libice:dev
+[DEP] libidn libidn:dev libjpeg libpng libpng:dev libsm libsm:dev
+[DEP] libx11 libx11:dev libxau libxau:dev libxcursor libxcursor:dev
+[DEP] libxdmcp libxdmcp:dev libxext libxext:dev libxfixes libxfixes:dev
+[DEP] libxft libxft:dev libxinerama libxinerama:dev libxml2 libxml2:dev
+[DEP] libxmu libxmu:dev libxrandr libxrandr:dev libxrender libxrender:dev
+[DEP] libxscrnsaver libxscrnsaver:dev libxslt libxslt:dev libxt libxt:dev
+[DEP] linux-libc-headers:dev m4 make mesalib mktemp nas net-tools openssl
+[DEP] openssl:dev perl5 pkgconfig qt33 qt33:dev rrdtool scrnsaverproto:dev
+[DEP] sed sysfiles tar util-linux xorg-cf-files xproto:dev zlib zlib:dev
 
 [PROVIDES] __homedir.so __migrate.so _core.so about.so action.so
 [PROVIDES] autoaway.so background.so dock.so filter.so floaty.so forward.so
@@ -49,4 +63,106 @@
 [PROVIDES] ontop.so osd.so proxy.so remote.so replace.so shortcuts.so sim
 [PROVIDES] simctrl sound.so splash.so styles.so transparent.so update.so
 [PROVIDES] weather.so yahoo.so zodiak.so
+
+[5-ERROR]  /bin/sh ../../libtool --silent --mode=install /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p  zodiak.la /usr/lib/sim/zodiak.la
+[5-ERROR] libtool: install: warning: relinking `zodiak.la'
+[5-ERROR] make  install-data-hook
+[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.sim-im.1169125395.11994.3641098646/sim-0.9.3/plugins/zodiak'
+[5-ERROR] rm -rf /usr/lib/sim/zodiak.la
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.sim-im.1169125395.11994.3641098646/sim-0.9.3/plugins/zodiak'
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.sim-im.1169125395.11994.3641098646/sim-0.9.3/plugins/zodiak'
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.sim-im.1169125395.11994.3641098646/sim-0.9.3/plugins/zodiak'
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.sim-im.1169125395.11994.3641098646/sim-0.9.3'
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.sim-im.1169125395.11994.3641098646/sim-0.9.3'
+[5-ERROR] make[2]: Nothing to be done for `install-exec-am'.
+[5-ERROR] /bin/sh ./admin/mkinstalldirs /usr/share/apps/sim/
+[5-ERROR] /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 COPYING /usr/share/apps/sim/
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.sim-im.1169125395.11994.3641098646/sim-0.9.3'
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.sim-im.1169125395.11994.3641098646/sim-0.9.3'
+[5-ERROR] Trying to copy the default documentation ...
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing /lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Checking usr/share/applnk/Internet/sim.desktop ... 
+[5-ERROR] Adding Categories tag (Network)
+[5-ERROR] Adding X-ROCK-Name tag (sim-im)
+[5-ERROR] Checking usr/share/mimelnk/application/x-icq.desktop ... 
+[5-ERROR] Adding Categories tag (Network)
+[5-ERROR] Adding X-ROCK-Name tag (sim-im)
+[5-ERROR] Checking usr/share/services/simctrl.desktop ... 
+[5-ERROR] Adding Categories tag (Network)
+[5-ERROR] Adding X-ROCK-Name tag (sim-im)
+[5-ERROR] Found 123 files for this package.
+[5-ERROR] Applying package split: 40 sim-im:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[5-ERROR] Applying package split: 42 sim-im:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 sim-im:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <sim-im> Creating flist file ...
+[5-ERROR] <sim-im> Creating package dependencies file ...
+[5-ERROR] <sim-im> Creating package description ...
+[5-ERROR] <sim-im> Creating md5sum and cksum files ...
+[5-ERROR] <sim-im:dev> Creating flist file ...
+[5-ERROR] <sim-im:dev> Creating package dependencies file ...
+[5-ERROR] <sim-im:dev> Creating package description ...
+[5-ERROR] <sim-im:dev> Creating md5sum and cksum files ...
+[5-ERROR] <sim-im:doc> Creating flist file ...
+[5-ERROR] <sim-im:doc> Creating package dependencies file ...
+[5-ERROR] <sim-im:doc> Creating package description ...
+[5-ERROR] <sim-im:doc> Creating md5sum and cksum files ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Found shared files with other packages:
+[5-ERROR] usr/share/mimelnk/application/x-icq.desktop: kdenetwork sim-im
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR]  /bin/sh ../../libtool --silent --mode=install /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p  zodiak.la /usr/lib/sim/zodiak.la
+[9-ERROR] libtool: install: warning: relinking `zodiak.la'
+[9-ERROR] make  install-data-hook
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.sim-im.1169155012.2520.2864609941/sim-0.9.3/plugins/zodiak'
+[9-ERROR] rm -rf /usr/lib/sim/zodiak.la
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.sim-im.1169155012.2520.2864609941/sim-0.9.3/plugins/zodiak'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.sim-im.1169155012.2520.2864609941/sim-0.9.3/plugins/zodiak'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.sim-im.1169155012.2520.2864609941/sim-0.9.3/plugins/zodiak'
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.sim-im.1169155012.2520.2864609941/sim-0.9.3'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.sim-im.1169155012.2520.2864609941/sim-0.9.3'
+[9-ERROR] make[2]: Nothing to be done for `install-exec-am'.
+[9-ERROR] /bin/sh ./admin/mkinstalldirs /usr/share/apps/sim/
+[9-ERROR] /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 COPYING /usr/share/apps/sim/
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.sim-im.1169155012.2520.2864609941/sim-0.9.3'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.sim-im.1169155012.2520.2864609941/sim-0.9.3'
+[9-ERROR] Trying to copy the default documentation ...
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing /lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Checking usr/share/applnk/Internet/sim.desktop ... 
+[9-ERROR] Adding Categories tag (Network)
+[9-ERROR] Adding X-ROCK-Name tag (sim-im)
+[9-ERROR] Checking usr/share/mimelnk/application/x-icq.desktop ... 
+[9-ERROR] Adding Categories tag (Network)
+[9-ERROR] Adding X-ROCK-Name tag (sim-im)
+[9-ERROR] Checking usr/share/services/simctrl.desktop ... 
+[9-ERROR] Adding Categories tag (Network)
+[9-ERROR] Adding X-ROCK-Name tag (sim-im)
+[9-ERROR] Found 123 files for this package.
+[9-ERROR] Applying package split: 40 sim-im:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[9-ERROR] Applying package split: 42 sim-im:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 sim-im:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <sim-im> Creating flist file ...
+[9-ERROR] <sim-im> Creating package dependencies file ...
+[9-ERROR] <sim-im> Creating package description ...
+[9-ERROR] <sim-im> Creating md5sum and cksum files ...
+[9-ERROR] <sim-im:dev> Creating flist file ...
+[9-ERROR] <sim-im:dev> Creating package dependencies file ...
+[9-ERROR] <sim-im:dev> Creating package description ...
+[9-ERROR] <sim-im:dev> Creating md5sum and cksum files ...
+[9-ERROR] <sim-im:doc> Creating flist file ...
+[9-ERROR] <sim-im:doc> Creating package dependencies file ...
+[9-ERROR] <sim-im:doc> Creating package description ...
+[9-ERROR] <sim-im:doc> Creating md5sum and cksum files ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] usr/share/mimelnk/application/x-icq.desktop: kdenetwork sim-im
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] --- BUILD ERROR ---
 

@@ -20,22 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142653422 Sat Mar 18 04:43:42 2006 (5)
-[TIMESTAMP] 1142923000 Tue Mar 21 07:36:40 2006 (9)
+[TIMESTAMP] 1168694448 Sat Jan 13 14:20:48 2007 (5)
+[TIMESTAMP] 1168903504 Tue Jan 16 00:25:04 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-qdvdauthor.log 9-qdvdauthor.log
 
-[BUILDTIME] 24779 (5)
-[BUILDTIME] 24946 (9)
-[SIZE] 3.41 MB, 10 files
+[BUILDTIME] 26909 (5)
+[BUILDTIME] 27150 (9)
+[SIZE] 6.35 MB, 11 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils dvdauthor expat findutils
-[DEP] freetype gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libpng
-[DEP] linux26-header:dev make mjpegtools mktemp nas qt33 qt33:dev rrdtool
-[DEP] sed sysfiles tar xorg xorg:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm dvdauthor expat findutils fontconfig freetype gawk
+[DEP] gcc40 gcc40:dev glibc23 glibc23:dev grep libice libpng libsm libx11
+[DEP] libx11:dev libxau libxcursor libxdmcp libxext libxfixes libxft
+[DEP] libxinerama libxmu libxrandr libxrender libxt linux-libc-headers:dev
+[DEP] make mesalib mjpegtools mktemp nas qt33 qt33:dev rrdtool sed sysfiles
+[DEP] tar xine-lib xine-lib:dev xproto:dev zlib
 
-[PROVIDES] qdvdauthor qplayer qslideshow to_pal_dvd.sh
+[PROVIDES] dvd-slideshow qdvdauthor qplayer qslideshow to_pal_dvd.sh
 

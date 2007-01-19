@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142484917 Thu Mar 16 05:55:17 2006 (5)
-[TIMESTAMP] 1142732582 Sun Mar 19 02:43:02 2006 (9)
+[TIMESTAMP] 1168562869 Fri Jan 12 01:47:49 2007 (5)
+[TIMESTAMP] 1168759821 Sun Jan 14 08:30:21 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-chrony.log 9-chrony.log
 
-[BUILDTIME] 1646 (5)
-[BUILDTIME] 2177 (9)
-[SIZE] 0.26 MB, 19 files
+[BUILDTIME] 1713 (5)
+[BUILDTIME] 2243 (9)
+[SIZE] 0.16 MB, 19 files
 
-[DEP] 00-dirtree alien bash2 binutils bzip2 coreutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp
-[DEP] ncurses:dev patch readline readline:dev rrdtool sed sysfiles tar
+[DEP] 00-dirtree alien bash2 binutils bzip2 coreutils cvm findutils gawk
+[DEP] gcc40 gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev m4
+[DEP] make mktemp ncurses netpbm patch readline readline:dev rrdtool sed
+[DEP] sysfiles tar twoftpd ucspi-unix
 
 [PROVIDES] chronyc chronyd
 

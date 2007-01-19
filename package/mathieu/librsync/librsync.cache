@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142622127 Fri Mar 17 20:02:07 2006 (5)
-[TIMESTAMP] 1142889236 Mon Mar 20 22:13:56 2006 (9)
+[TIMESTAMP] 1168674429 Sat Jan 13 08:47:09 2007 (5)
+[TIMESTAMP] 1168882643 Mon Jan 15 18:37:23 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-librsync.log 9-librsync.log
 
-[BUILDTIME] 3765 (5)
-[BUILDTIME] 4059 (9)
-[SIZE] 0.06 MB, 11 files
+[BUILDTIME] 3790 (5)
+[BUILDTIME] 4009 (9)
+[SIZE] 0.05 MB, 10 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 bzip2:dev coreutils diffutils
-[DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp net-tools popt popt:dev rrdtool sed
-[DEP] sysfiles tar util-linux zlib:dev
+[DEP] 00-dirtree bash2 binutils bzip2 bzip2:dev coreutils cvm
+[DEP] diffutils findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev grep
+[DEP] linux-libc-headers:dev make mktemp net-tools netpbm popt popt:dev
+[DEP] rrdtool sed sysfiles tar twoftpd ucspi-unix util-linux zlib zlib:dev
 
 [PROVIDES] librsync.a librsync.so
 

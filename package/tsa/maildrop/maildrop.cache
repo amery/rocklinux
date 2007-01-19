@@ -20,24 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142555169 Fri Mar 17 01:26:09 2006 (5)
-[TIMESTAMP] 1142814072 Mon Mar 20 01:21:12 2006 (9)
+[TIMESTAMP] 1168624528 Fri Jan 12 18:55:28 2007 (5) ERROR
+[TIMESTAMP] 1168828390 Mon Jan 15 03:33:10 2007 (9) ERROR
+[TIMESTAMP] 1168947178 Tue Jan 16 12:32:58 2007 (5) ERROR
+[TIMESTAMP] 1168974165 Tue Jan 16 20:02:45 2007 (9) ERROR
+[TIMESTAMP] 1169090591 Thu Jan 18 04:23:11 2007 (5) ERROR
+[TIMESTAMP] 1169144459 Thu Jan 18 19:20:59 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-maildrop.log 9-maildrop.log
+[LOGS] 5-maildrop.err 9-maildrop.err
 
-[BUILDTIME] 19181 (5)
-[BUILDTIME] 20112 (9)
-[SIZE] 0.85 MB, 47 files
+[BUILDTIME] 18701 (5) ERROR
+[BUILDTIME] 19237 (9) ERROR
+[BUILDTIME] 19333 (5) ERROR
+[BUILDTIME] 19313 (9) ERROR
+[BUILDTIME] 19340 (5) ERROR
+[BUILDTIME] 19249 (9) ERROR
 
-[DEP] 00-dirtree bash2 bdb42 bdb42:dev binutils bzip2 coreutils
-[DEP] courier-authlib courier-authlib:dev diffutils fam fam:dev
-[DEP] findutils gawk gcc34 gcc34:dev gdbm gdbm:dev glibc23 glibc23:dev
-[DEP] grep linux26-header:dev make mktemp net-tools perl5 rrdtool sed
-[DEP] sysfiles tar util-linux
 
-[PROVIDES] deliverquota_maildrop librfc2045.a librfc822.a lockmail mailbot
-[PROVIDES] maildirmake maildrop makemime reformail reformime
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './maildir.5' '/usr/share/man/man5/maildir.5'
+[5-ERROR] test -z "/usr/share/man/man7" || mkdir -p -- . "/usr/share/man/man7"
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './maildirquota.7' '/usr/share/man/man7/maildirquota.7'
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './maildropex.7' '/usr/share/man/man7/maildropex.7'
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './maildropfilter.7' '/usr/share/man/man7/maildropfilter.7'
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './maildropgdbm.7' '/usr/share/man/man7/maildropgdbm.7'
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './maildirquota.7' '/usr/share/man/man7/maildirquota.7'
+[5-ERROR] test -z "/usr/share/man/man8" || mkdir -p -- . "/usr/share/man/man8"
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './deliverquota.8' '/usr/share/man/man8/deliverquota.8'
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './deliverquota.8' '/usr/share/man/man8/deliverquota.8'
+[5-ERROR] mkdir -p -- . /usr/bin
+[5-ERROR] /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c maildir/deliverquota /usr/bin/deliverquota
+[5-ERROR] cd /usr/bin; rm -f maildrop.deliverquota
+[5-ERROR] mkdir -p -- . /usr/bin
+[5-ERROR] for f in maildrop mailbot reformail ; do \
+[5-ERROR] 		/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c maildrop/$f /usr/bin/$f ; \
+[5-ERROR] 	done
+[5-ERROR] /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c liblock/lockmail /usr/bin/lockmail
+[5-ERROR] /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c maildir/maildirmake /usr/bin/maildirmake
+[5-ERROR] /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c rfc2045/reformime /usr/bin/reformime
+[5-ERROR] /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c rfc2045/makemime /usr/bin/makemime
+[5-ERROR] . maildrop/uidgid ; test -z "$gid" && exit 0; test -w /etc || exit 0; cd /usr/bin && chgrp $gid maildrop lockmail
+[5-ERROR] . maildrop/uidgid ; test -z "$uid" && exit 0; test -w /etc || exit 0; cd /usr/bin && chown $uid maildrop lockmail && chmod 755 maildrop lockmail
+[5-ERROR] test -z "/usr/share/maildrop/html" || mkdir -p -- . "/usr/share/maildrop/html"
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'maildirquota.html' '/usr/share/maildrop/html/maildirquota.html'
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'deliverquota.html' '/usr/share/maildrop/html/deliverquota.html'
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'lockmail.html' '/usr/share/maildrop/html/lockmail.html'
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'maildirmake.html' '/usr/share/maildrop/html/maildirmake.html'
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'maildropex.html' '/usr/share/maildrop/html/maildropex.html'
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'maildir.html' '/usr/share/maildrop/html/maildir.html'
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'maildropfilter.html' '/usr/share/maildrop/html/maildropfilter.html'
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'maildropgdbm.html' '/usr/share/maildrop/html/maildropgdbm.html'
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'maildrop.html' '/usr/share/maildrop/html/maildrop.html'
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'mailbot.html' '/usr/share/maildrop/html/mailbot.html'
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'makemime.html' '/usr/share/maildrop/html/makemime.html'
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'reformail.html' '/usr/share/maildrop/html/reformail.html'
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'reformime.html' '/usr/share/maildrop/html/reformime.html'
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'rfc822.html' '/usr/share/maildrop/html/rfc822.html'
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'rfc2045.html' '/usr/share/maildrop/html/rfc2045.html'
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'manpage.css' '/usr/share/maildrop/html/manpage.css'
+[5-ERROR] test -z "/usr/include" || mkdir -p -- . "/usr/include"
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'rfc822.h' '/usr/include/rfc822.h'
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'rfc2045.h' '/usr/include/rfc2045.h'
+[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'rfc2047.h' '/usr/include/rfc2047.h'
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.maildrop.1169090388.19148.3434750941/maildrop-1.8.1'
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.maildrop.1169090388.19148.3434750941/maildrop-1.8.1'
+[5-ERROR] Trying to copy the default documentation ...
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] chmod: cannot access `/usr/share/man/man8/deliverquota_maildrop_maildrop.8': No such file or directory
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './maildir.5' '/usr/share/man/man5/maildir.5'
+[9-ERROR] test -z "/usr/share/man/man7" || mkdir -p -- . "/usr/share/man/man7"
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './maildirquota.7' '/usr/share/man/man7/maildirquota.7'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './maildropex.7' '/usr/share/man/man7/maildropex.7'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './maildropfilter.7' '/usr/share/man/man7/maildropfilter.7'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './maildropgdbm.7' '/usr/share/man/man7/maildropgdbm.7'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './maildirquota.7' '/usr/share/man/man7/maildirquota.7'
+[9-ERROR] test -z "/usr/share/man/man8" || mkdir -p -- . "/usr/share/man/man8"
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './deliverquota.8' '/usr/share/man/man8/deliverquota.8'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './deliverquota.8' '/usr/share/man/man8/deliverquota.8'
+[9-ERROR] mkdir -p -- . /usr/bin
+[9-ERROR] /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c maildir/deliverquota /usr/bin/deliverquota
+[9-ERROR] cd /usr/bin; rm -f maildrop.deliverquota
+[9-ERROR] mkdir -p -- . /usr/bin
+[9-ERROR] for f in maildrop mailbot reformail ; do \
+[9-ERROR] 		/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c maildrop/$f /usr/bin/$f ; \
+[9-ERROR] 	done
+[9-ERROR] /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c liblock/lockmail /usr/bin/lockmail
+[9-ERROR] /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c maildir/maildirmake /usr/bin/maildirmake
+[9-ERROR] /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c rfc2045/reformime /usr/bin/reformime
+[9-ERROR] /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c rfc2045/makemime /usr/bin/makemime
+[9-ERROR] . maildrop/uidgid ; test -z "$gid" && exit 0; test -w /etc || exit 0; cd /usr/bin && chgrp $gid maildrop lockmail
+[9-ERROR] . maildrop/uidgid ; test -z "$uid" && exit 0; test -w /etc || exit 0; cd /usr/bin && chown $uid maildrop lockmail && chmod 755 maildrop lockmail
+[9-ERROR] test -z "/usr/share/maildrop/html" || mkdir -p -- . "/usr/share/maildrop/html"
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'maildirquota.html' '/usr/share/maildrop/html/maildirquota.html'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'deliverquota.html' '/usr/share/maildrop/html/deliverquota.html'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'lockmail.html' '/usr/share/maildrop/html/lockmail.html'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'maildirmake.html' '/usr/share/maildrop/html/maildirmake.html'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'maildropex.html' '/usr/share/maildrop/html/maildropex.html'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'maildir.html' '/usr/share/maildrop/html/maildir.html'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'maildropfilter.html' '/usr/share/maildrop/html/maildropfilter.html'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'maildropgdbm.html' '/usr/share/maildrop/html/maildropgdbm.html'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'maildrop.html' '/usr/share/maildrop/html/maildrop.html'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'mailbot.html' '/usr/share/maildrop/html/mailbot.html'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'makemime.html' '/usr/share/maildrop/html/makemime.html'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'reformail.html' '/usr/share/maildrop/html/reformail.html'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'reformime.html' '/usr/share/maildrop/html/reformime.html'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'rfc822.html' '/usr/share/maildrop/html/rfc822.html'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'rfc2045.html' '/usr/share/maildrop/html/rfc2045.html'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'manpage.css' '/usr/share/maildrop/html/manpage.css'
+[9-ERROR] test -z "/usr/include" || mkdir -p -- . "/usr/include"
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'rfc822.h' '/usr/include/rfc822.h'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'rfc2045.h' '/usr/include/rfc2045.h'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'rfc2047.h' '/usr/include/rfc2047.h'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.maildrop.1169144257.11411.3713659689/maildrop-1.8.1'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.maildrop.1169144257.11411.3713659689/maildrop-1.8.1'
+[9-ERROR] Trying to copy the default documentation ...
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] chmod: cannot access `/usr/share/man/man8/deliverquota_maildrop_maildrop.8': No such file or directory
+[9-ERROR] --- BUILD ERROR ---
 

@@ -20,21 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142601876 Fri Mar 17 14:24:36 2006 (5)
-[TIMESTAMP] 1142867520 Mon Mar 20 16:12:00 2006 (9)
+[TIMESTAMP] 1168661061 Sat Jan 13 05:04:21 2007 (5)
+[TIMESTAMP] 1168868050 Mon Jan 15 14:34:10 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-xosview.log 9-xosview.log
 
-[BUILDTIME] 3662 (5)
-[BUILDTIME] 3975 (9)
+[BUILDTIME] 3458 (5)
+[BUILDTIME] 3626 (9)
 [SIZE] 0.17 MB, 9 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp net-tools rrdtool sed sysfiles tar util-linux xorg xorg:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm diffutils findutils gawk gcc40 gcc40:dev glibc23
+[DEP] glibc23:dev grep imake libx11 libx11:dev libxau libxdmcp libxpm
+[DEP] libxpm:dev libxt linux-libc-headers:dev make mktemp net-tools
+[DEP] netpbm rrdtool sed sysfiles tar twoftpd ucspi-unix util-linux xfig
+[DEP] xorg-cf-files xorg-server xproto:dev
 
 [PROVIDES] xosview
 

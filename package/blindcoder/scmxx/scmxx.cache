@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142609548 Fri Mar 17 16:32:28 2006 (5)
-[TIMESTAMP] 1142875426 Mon Mar 20 18:23:46 2006 (9)
+[TIMESTAMP] 1168665523 Sat Jan 13 06:18:43 2007 (5)
+[TIMESTAMP] 1168873385 Mon Jan 15 16:03:05 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-scmxx.log 9-scmxx.log
 
-[BUILDTIME] 2908 (5)
-[BUILDTIME] 3173 (9)
-[SIZE] 0.29 MB, 15 files
+[BUILDTIME] 3456 (5)
+[BUILDTIME] 3704 (9)
+[SIZE] 0.41 MB, 18 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev gettext glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp net-tools rrdtool sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bluez-libs bluez-libs:dev bzip2 coreutils
+[DEP] cvm diffutils findutils gawk gcc40 gcc40:dev gettext glibc23
+[DEP] glibc23:dev grep linux-libc-headers:dev make mktemp net-tools netpbm
+[DEP] rrdtool sed sysfiles tar twoftpd ucspi-unix util-linux
 
-[PROVIDES] scmxx
+[PROVIDES] adr2vcf apoconv scmxx smi
 

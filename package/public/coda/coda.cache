@@ -20,36 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142576318 Fri Mar 17 07:18:38 2006 (5)
-[TIMESTAMP] 1142839798 Mon Mar 20 08:29:58 2006 (9)
+[TIMESTAMP] 1168639058 Fri Jan 12 22:57:38 2007 (5) ERROR
+[TIMESTAMP] 1168844810 Mon Jan 15 08:06:50 2007 (9) ERROR
+[TIMESTAMP] 1168948788 Tue Jan 16 12:59:48 2007 (5) ERROR
+[TIMESTAMP] 1168978699 Tue Jan 16 21:18:19 2007 (9) ERROR
+[TIMESTAMP] 1169092204 Thu Jan 18 04:50:04 2007 (5) ERROR
+[TIMESTAMP] 1169148971 Thu Jan 18 20:36:11 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-coda.log 9-coda.log
+[LOGS] 5-coda.err 9-coda.err
 
-[BUILDTIME] 24926 (5)
-[BUILDTIME] 25732 (9)
-[SIZE] 5.41 MB, 146 files
+[BUILDTIME] 18227 (5) ERROR
+[BUILDTIME] 18422 (9) ERROR
+[BUILDTIME] 18581 (5) ERROR
+[BUILDTIME] 18593 (9) ERROR
+[BUILDTIME] 18562 (5) ERROR
+[BUILDTIME] 18580 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils findutils
-[DEP] flex flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev m4 make mktemp ncurses:dev net-tools perl5
-[DEP] readline readline:dev rrdtool sed sysfiles tar util-linux
 
-[PROVIDES] au auth2 backup backup.sh bldvldb.sh cfs clog cmon
-[PROVIDES] coda-client-logrotate coda-server-logrotate coda-setup-ports
-[PROVIDES] coda_replay codacon codaconfedit codadump2tar codasrv codastart
-[PROVIDES] cpasswd createvol_rep ctokens cunlog filcon filerepair
-[PROVIDES] getvolinfo hoard initpw inoder libfail.a libfail.so liblwp.a
-[PROVIDES] liblwp.so librds.a librds.so librdslwp.a librdslwp.so librpc2.a
-[PROVIDES] librpc2.so librvm.a librvm.so librvmlwp.a librvmlwp.so
-[PROVIDES] libse.a libse.so libseg.a libseg.so merge mklka norton
-[PROVIDES] norton-reinit parser parserecdump partial-reinit.sh pdbtool
-[PROVIDES] printvrdb purgevol_rep rdsinit readdump reinit removeinc
-[PROVIDES] repair rp2gen rpc2ping rpc2portmap rvmsizer rvmutl sidekick
-[PROVIDES] smon2 spy startserver tape.pl updateclnt updatefetch updatesrv
-[PROVIDES] venus venus-setup vice-killvolumes vice-setup vice-setup-rvm
-[PROVIDES] vice-setup-scm vice-setup-srvdir vice-setup-user volmunge
-[PROVIDES] volutil vutil xaskuser xfrepair
+[5-ERROR] a - lockqueue.o
+[5-ERROR] a - vollocate.o
+[5-ERROR] a - vol-debug.o
+[5-ERROR] ranlib libvol.a
+[5-ERROR] ../../tools/our-install 644 /ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8/include vldb.h fssync.h recov.h vutil.h index.h vicelock.h treeremove.h vlist.h cvnode.h coda_globals.h voldefs.h volume.h camprivate.h volres.h volhash.h vrdb.h struct.h lockqueue.h vollocate.h
+[5-ERROR] touch chdrinstall
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.coda.1169092016.22632.905555977/coda-6.0.8/coda-src/vol'
+[5-ERROR] <---- Leaving vol.
+[5-ERROR] ----> Entering librepair
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.coda.1169092016.22632.905555977/coda-6.0.8/coda-src/librepair'
+[5-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8/include -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o repio.o repio.cc
+[5-ERROR] ar rv librepio.a repio.o
+[5-ERROR] ar: creating librepio.a
+[5-ERROR] a - repio.o
+[5-ERROR] ranlib librepio.a
+[5-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8/include -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o resolve.o resolve.cc
+[5-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8/include -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o cure.o cure.cc
+[5-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8/include -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o predicate.o predicate.cc
+[5-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8/include -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o repcmds.o repcmds.cc
+[5-ERROR] repcmds.cc: In function 'int DoRepair(repvol*, char*, FILE*, char*, int)':
+[5-ERROR] repcmds.cc:409: warning: format '%d' expects type 'int', but argument 3 has type 'long int'
+[5-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8/include -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o rvol.o rvol.cc
+[5-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8/include -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o path.o path.cc
+[5-ERROR] ar rv libclnrepair.a resolve.o cure.o predicate.o repcmds.o rvol.o path.o
+[5-ERROR] ar: creating libclnrepair.a
+[5-ERROR] a - resolve.o
+[5-ERROR] a - cure.o
+[5-ERROR] a - predicate.o
+[5-ERROR] a - repcmds.o
+[5-ERROR] a - rvol.o
+[5-ERROR] a - path.o
+[5-ERROR] ranlib libclnrepair.a
+[5-ERROR] ../../tools/our-install 644 /ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8/include resolve.h repio.h repcmds.h
+[5-ERROR] touch chdrinstall
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.coda.1169092016.22632.905555977/coda-6.0.8/coda-src/librepair'
+[5-ERROR] <---- Leaving librepair.
+[5-ERROR] ----> Entering venus
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.coda.1169092016.22632.905555977/coda-6.0.8/coda-src/venus'
+[5-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8/include -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8 -g -O2 -DVENUS -DTIMING -DVENUSDEBUG -DRVM_USELWP -I/opt/coda/include   -c -o adv_monitor.o adv_monitor.cc
+[5-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8/include -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8 -g -O2 -DVENUS -DTIMING -DVENUSDEBUG -DRVM_USELWP -I/opt/coda/include   -c -o adv_daemon.o adv_daemon.cc
+[5-ERROR] ./venusvol.h:501: error: 'fsobj' has not been declared
+[5-ERROR] ./venusvol.h:878: error: 'fsobj' has not been declared
+[5-ERROR] make[2]: *** [adv_daemon.o] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.coda.1169092016.22632.905555977/coda-6.0.8/coda-src/venus'
+[5-ERROR] ----> Error in venus
+[5-ERROR] make[1]: *** [Coda] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.coda.1169092016.22632.905555977/coda-6.0.8/coda-src'
+[5-ERROR] ----> Error in coda-src
+[5-ERROR] make: *** [Coda] Error 1
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] a - lockqueue.o
+[9-ERROR] a - vollocate.o
+[9-ERROR] a - vol-debug.o
+[9-ERROR] ranlib libvol.a
+[9-ERROR] ../../tools/our-install 644 /ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8/include vldb.h fssync.h recov.h vutil.h index.h vicelock.h treeremove.h vlist.h cvnode.h coda_globals.h voldefs.h volume.h camprivate.h volres.h volhash.h vrdb.h struct.h lockqueue.h vollocate.h
+[9-ERROR] touch chdrinstall
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.coda.1169148783.14297.1060515637/coda-6.0.8/coda-src/vol'
+[9-ERROR] <---- Leaving vol.
+[9-ERROR] ----> Entering librepair
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.coda.1169148783.14297.1060515637/coda-6.0.8/coda-src/librepair'
+[9-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8/include -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o repio.o repio.cc
+[9-ERROR] ar rv librepio.a repio.o
+[9-ERROR] ar: creating librepio.a
+[9-ERROR] a - repio.o
+[9-ERROR] ranlib librepio.a
+[9-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8/include -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o resolve.o resolve.cc
+[9-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8/include -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o cure.o cure.cc
+[9-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8/include -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o predicate.o predicate.cc
+[9-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8/include -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o repcmds.o repcmds.cc
+[9-ERROR] repcmds.cc: In function 'int DoRepair(repvol*, char*, FILE*, char*, int)':
+[9-ERROR] repcmds.cc:409: warning: format '%d' expects type 'int', but argument 3 has type 'long int'
+[9-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8/include -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o rvol.o rvol.cc
+[9-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8/include -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o path.o path.cc
+[9-ERROR] ar rv libclnrepair.a resolve.o cure.o predicate.o repcmds.o rvol.o path.o
+[9-ERROR] ar: creating libclnrepair.a
+[9-ERROR] a - resolve.o
+[9-ERROR] a - cure.o
+[9-ERROR] a - predicate.o
+[9-ERROR] a - repcmds.o
+[9-ERROR] a - rvol.o
+[9-ERROR] a - path.o
+[9-ERROR] ranlib libclnrepair.a
+[9-ERROR] ../../tools/our-install 644 /ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8/include resolve.h repio.h repcmds.h
+[9-ERROR] touch chdrinstall
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.coda.1169148783.14297.1060515637/coda-6.0.8/coda-src/librepair'
+[9-ERROR] <---- Leaving librepair.
+[9-ERROR] ----> Entering venus
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.coda.1169148783.14297.1060515637/coda-6.0.8/coda-src/venus'
+[9-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8/include -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8 -g -O2 -DVENUS -DTIMING -DVENUSDEBUG -DRVM_USELWP -I/opt/coda/include   -c -o adv_monitor.o adv_monitor.cc
+[9-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8/include -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8 -g -O2 -DVENUS -DTIMING -DVENUSDEBUG -DRVM_USELWP -I/opt/coda/include   -c -o adv_daemon.o adv_daemon.cc
+[9-ERROR] ./venusvol.h:501: error: 'fsobj' has not been declared
+[9-ERROR] ./venusvol.h:878: error: 'fsobj' has not been declared
+[9-ERROR] make[2]: *** [adv_daemon.o] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.coda.1169148783.14297.1060515637/coda-6.0.8/coda-src/venus'
+[9-ERROR] ----> Error in venus
+[9-ERROR] make[1]: *** [Coda] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.coda.1169148783.14297.1060515637/coda-6.0.8/coda-src'
+[9-ERROR] ----> Error in coda-src
+[9-ERROR] make: *** [Coda] Error 1
+[9-ERROR] --- BUILD ERROR ---
 

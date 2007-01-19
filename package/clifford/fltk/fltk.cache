@@ -20,22 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142480444 Thu Mar 16 04:40:44 2006 (5)
-[TIMESTAMP] 1142726180 Sun Mar 19 00:56:20 2006 (9)
+[TIMESTAMP] 1168558945 Fri Jan 12 00:42:25 2007 (5)
+[TIMESTAMP] 1168755250 Sun Jan 14 07:14:10 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-fltk.log 9-fltk.log
 
-[BUILDTIME] 8398 (5)
-[BUILDTIME] 9088 (9)
-[SIZE] 0.52 MB, 11 files
+[BUILDTIME] 8031 (5)
+[BUILDTIME] 8663 (9)
+[SIZE] 0.53 MB, 10 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep groff libjpeg libjpeg:dev
-[DEP] libpng libpng:dev linux26-header:dev make mktemp net-tools rrdtool
-[DEP] sed sysfiles tar util-linux xorg xorg:dev zlib:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm diffutils findutils gawk gcc40 gcc40:dev glibc23
+[DEP] glibc23:dev grep groff imake libice libjpeg libjpeg:dev libpng
+[DEP] libpng:dev libx11 libx11:dev libxau libxdmcp libxext libxt
+[DEP] linux-libc-headers:dev make mesalib mesalib:dev mktemp net-tools
+[DEP] netpbm rrdtool sed sysfiles tar twoftpd ucspi-unix util-linux
+[DEP] xorg-cf-files xprop xproto:dev zlib zlib:dev
 
 [PROVIDES] fltk-config fluid libfltk.a libfltk_forms.a libfltk_gl.a
 [PROVIDES] libfltk_images.a

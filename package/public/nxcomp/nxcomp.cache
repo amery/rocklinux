@@ -20,22 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142485391 Thu Mar 16 06:03:11 2006 (5)
-[TIMESTAMP] 1142733131 Sun Mar 19 02:52:11 2006 (9)
+[TIMESTAMP] 1168563293 Fri Jan 12 01:54:53 2007 (5)
+[TIMESTAMP] 1168760293 Sun Jan 14 08:38:13 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-nxcomp.log 9-nxcomp.log
 
-[BUILDTIME] 9697 (5)
-[BUILDTIME] 10377 (9)
-[SIZE] 2.03 MB, 13 files
+[BUILDTIME] 8656 (5)
+[BUILDTIME] 9164 (9)
+[SIZE] 1.90 MB, 13 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep libjpeg libjpeg:dev libpng
-[DEP] libpng:dev linux26-header:dev make mktemp net-tools patch rrdtool
-[DEP] sed sysfiles tar util-linux xorg xorg:dev zlib:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm diffutils findutils gawk gcc40 gcc40:dev glibc23
+[DEP] glibc23:dev grep imake libice libjpeg libjpeg:dev libpng libpng:dev
+[DEP] libx11 libxau libxdmcp libxt linux-libc-headers:dev make makedepend
+[DEP] mktemp net-tools patch rrdtool sed sysfiles tar util-linux
+[DEP] xorg-cf-files xproto:dev zlib zlib:dev
 
 [PROVIDES] libXcomp.so
 

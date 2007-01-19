@@ -20,63 +20,183 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142482181 Thu Mar 16 05:09:41 2006 (5)
-[TIMESTAMP] 1142728374 Sun Mar 19 01:32:54 2006 (9)
+[TIMESTAMP] 1168560276 Fri Jan 12 01:04:36 2007 (5) ERROR
+[TIMESTAMP] 1168756727 Sun Jan 14 07:38:47 2007 (9) ERROR
+[TIMESTAMP] 1168941312 Tue Jan 16 10:55:12 2007 (5) ERROR
+[TIMESTAMP] 1168963332 Tue Jan 16 17:02:12 2007 (9) ERROR
+[TIMESTAMP] 1169084699 Thu Jan 18 02:44:59 2007 (5) ERROR
+[TIMESTAMP] 1169133627 Thu Jan 18 16:20:27 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-netpbm.log 9-netpbm.log
+[LOGS] 5-netpbm.err 9-netpbm.err
 
-[BUILDTIME] 12830 (5)
-[BUILDTIME] 15425 (9)
-[SIZE] 3.07 MB, 533 files
+[BUILDTIME] 19209 (5) ERROR
+[BUILDTIME] 22760 (9) ERROR
+[BUILDTIME] 23071 (5) ERROR
+[BUILDTIME] 23118 (9) ERROR
+[BUILDTIME] 23110 (5) ERROR
+[BUILDTIME] 23105 (9) ERROR
+[SIZE] 4.09 MB, 644 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils flex gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep libjpeg libjpeg:dev libpng
-[DEP] libpng:dev libtiff libtiff:dev linux26-header:dev m4 make mktemp
-[DEP] patch perl5 rrdtool sed svgalib svgalib:dev sysfiles tar zlib:dev
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils flex gawk
+[DEP] gcc40 gcc40:dev glibc23 glibc23:dev grep libjpeg libjpeg:dev libpng
+[DEP] libpng:dev libtiff libtiff:dev linux-libc-headers:dev m4 make mktemp
+[DEP] perl5 rrdtool sed sysfiles tar twoftpd ucspi-unix zlib zlib:dev
 
 [PROVIDES] 411toppm anytopnm asciitopgm atktopbm bioradtopgm bmptopnm
-[PROVIDES] bmptoppm brushtopbm cmuwmtopbm doc.url eyuvtoppm fiascotopnm
-[PROVIDES] fitstopnm fstopgm g3topbm gemtopbm gemtopnm giftopnm gouldtoppm
-[PROVIDES] hdifftopam hipstopgm hpcdtoppm icontopbm ilbmtoppm imgtoppm
-[PROVIDES] jbigtopnm jpegtopnm leaftoppm libnetpbm.a libnetpbm.so
-[PROVIDES] lispmtopgm macptopbm manweb mdatopbm mgrtopbm mtvtoppm neotoppm
-[PROVIDES] palmtopnm pamarith pamchannel pamcut pamdeinterlace pamdice
-[PROVIDES] pamendian pamfile pamfunc pamoil pamseq pamslice pamstack
-[PROVIDES] pamstretch pamstretch-gen pamtohdiff pamtopnm pamtotga pamtouil
-[PROVIDES] pbmclean pbmlife pbmmake pbmmask pbmpage pbmpscale pbmreduce
-[PROVIDES] pbmtext pbmtextps pbmto10x pbmto4425 pbmtoascii pbmtoatk
-[PROVIDES] pbmtobbnbg pbmtocmuwm pbmtoepsi pbmtoepson pbmtog3 pbmtogem
-[PROVIDES] pbmtogo pbmtoicon pbmtolj pbmtoln03 pbmtolps pbmtomacp pbmtomda
-[PROVIDES] pbmtomgr pbmtonokia pbmtopgm pbmtopi3 pbmtopk pbmtoplot pbmtoppa
-[PROVIDES] pbmtopsg3 pbmtoptx pbmtowbmp pbmtox10bm pbmtoxbm pbmtoybm
-[PROVIDES] pbmtozinc pbmupc pcdovtoppm pcxtoppm pgmabel pgmbentley
-[PROVIDES] pgmcrater pgmedge pgmenhance pgmhist pgmkernel pgmminkowski
-[PROVIDES] pgmmorphconv pgmnoise pgmnorm pgmoil pgmramp pgmslice pgmtexture
-[PROVIDES] pgmtofs pgmtolispm pgmtopbm pgmtopgm pgmtoppm pi1toppm pi3topbm
-[PROVIDES] picttoppm pjtoppm pktopbm pngtopnm pnmalias pnmarith pnmcat
-[PROVIDES] pnmcolormap pnmcomp pnmconvol pnmcrop pnmcut pnmdepth pnmenlarge
-[PROVIDES] pnmfile pnmflip pnmgamma pnmhisteq pnmhistmap pnmindex pnminterp
-[PROVIDES] pnminvert pnmmargin pnmmontage pnmnlfilt pnmnoraw pnmnorm
-[PROVIDES] pnmpad pnmpaste pnmpsnr pnmquant pnmremap pnmrotate pnmscale
-[PROVIDES] pnmscalefixed pnmshear pnmsmooth pnmsplit pnmstitch pnmtile
-[PROVIDES] pnmtoddif pnmtofiasco pnmtofits pnmtojbig pnmtojpeg pnmtopalm
-[PROVIDES] pnmtopclxl pnmtoplainpnm pnmtopng pnmtops pnmtorast pnmtorle
+[PROVIDES] bmptoppm brushtopbm cameratopam cmuwmtopbm ddbugtopbm doc.url
+[PROVIDES] escp2topbm eyuvtoppm fiascotopnm fitstopnm fstopgm g3topbm
+[PROVIDES] gemtopbm gemtopnm giftopnm gouldtoppm hdifftopam hipstopgm
+[PROVIDES] hpcdtoppm icontopbm ilbmtoppm imgtoppm infotopam jbigtopnm
+[PROVIDES] jpeg2ktopam jpegtopnm leaftoppm libnetpbm.a libnetpbm.so
+[PROVIDES] lispmtopgm macptopbm manweb mdatopbm mgrtopbm mrftopbm mtvtoppm
+[PROVIDES] neotoppm netpbm-config palmtopnm pamaddnoise pamarith pambayer
+[PROVIDES] pamchannel pamcomp pamcut pamdeinterlace pamdepth pamdice
+[PROVIDES] pamditherbw pamedge pamendian pamenlarge pamfile pamflip pamfunc
+[PROVIDES] pamgauss pamgradient pamlookup pammasksharpen pammixinterlace
+[PROVIDES] pamoil pamperspective pampick pampop9 pamrgbatopng pamscale
+[PROVIDES] pamseq pamsharpmap pamsharpness pamslice pamsplit pamstack
+[PROVIDES] pamstereogram pamstretch pamstretch-gen pamsumm pamsummcol
+[PROVIDES] pamtilt pamtodjvurle pamtofits pamtohdiff pamtohtmltbl
+[PROVIDES] pamtojpeg2k pamtopfm pamtopnm pamtosvg pamtotga pamtotiff
+[PROVIDES] pamtouil pbmclean pbmlife pbmmake pbmmask pbmpage pbmpscale
+[PROVIDES] pbmreduce pbmtext pbmtextps pbmto10x pbmto4425 pbmtoascii
+[PROVIDES] pbmtoatk pbmtobbnbg pbmtocmuwm pbmtodjvurle pbmtoepsi pbmtoepson
+[PROVIDES] pbmtoescp2 pbmtog3 pbmtogem pbmtogo pbmtoibm23xx pbmtoicon
+[PROVIDES] pbmtolj pbmtoln03 pbmtolps pbmtomacp pbmtomatrixorbital
+[PROVIDES] pbmtomda pbmtomgr pbmtomrf pbmtonokia pbmtopgm pbmtopi3 pbmtopk
+[PROVIDES] pbmtoplot pbmtoppa pbmtopsg3 pbmtoptx pbmtowbmp pbmtox10bm
+[PROVIDES] pbmtoxbm pbmtoybm pbmtozinc pbmupc pc1toppm pcdovtoppm pcxtoppm
+[PROVIDES] pfmtopam pgmabel pgmbentley pgmcrater pgmedge pgmenhance pgmhist
+[PROVIDES] pgmkernel pgmmake pgmmedian pgmminkowski pgmmorphconv pgmnoise
+[PROVIDES] pgmnorm pgmoil pgmramp pgmslice pgmtexture pgmtofs pgmtolispm
+[PROVIDES] pgmtopbm pgmtopgm pgmtoppm pi1toppm pi3topbm picttoppm pjtoppm
+[PROVIDES] pktopbm pngtopnm pnmalias pnmarith pnmcat pnmcolormap pnmcomp
+[PROVIDES] pnmconvol pnmcrop pnmcut pnmdepth pnmenlarge pnmfile pnmflip
+[PROVIDES] pnmgamma pnmhisteq pnmhistmap pnmindex pnminterp pnminvert
+[PROVIDES] pnmmargin pnmmontage pnmnlfilt pnmnoraw pnmnorm pnmpad pnmpaste
+[PROVIDES] pnmpsnr pnmquant pnmremap pnmrotate pnmscale pnmscalefixed
+[PROVIDES] pnmshear pnmsmooth pnmsplit pnmstitch pnmtile pnmtoddif
+[PROVIDES] pnmtofiasco pnmtofits pnmtojbig pnmtojpeg pnmtopalm pnmtopclxl
+[PROVIDES] pnmtoplainpnm pnmtopng pnmtopnm pnmtops pnmtorast pnmtorle
 [PROVIDES] pnmtosgi pnmtosir pnmtotiff pnmtotiffcmyk pnmtoxwd ppm3d
-[PROVIDES] ppmbrighten ppmchange ppmcie ppmcolormask ppmcolors ppmdim
-[PROVIDES] ppmdist ppmdither ppmfade ppmflash ppmforge ppmhist ppmlabel
-[PROVIDES] ppmmake ppmmix ppmnorm ppmntsc ppmpat ppmquant ppmquantall
-[PROVIDES] ppmrainbow ppmrelief ppmrough ppmshadow ppmshift ppmspread
-[PROVIDES] ppmsvgalib ppmtoacad ppmtobmp ppmtoeyuv ppmtogif ppmtoicr
+[PROVIDES] ppmbrighten ppmchange ppmcie ppmcolormask ppmcolors ppmdcfont
+[PROVIDES] ppmddumpfont ppmdim ppmdist ppmdither ppmdmkfont ppmdraw
+[PROVIDES] ppmfade ppmflash ppmforge ppmglobe ppmhist ppmlabel ppmmake
+[PROVIDES] ppmmix ppmnorm ppmntsc ppmpat ppmquant ppmquantall ppmrainbow
+[PROVIDES] ppmrelief ppmrough ppmshadow ppmshift ppmspread ppmsvgalib
+[PROVIDES] ppmtoacad ppmtoarbtxt ppmtobmp ppmtoeyuv ppmtogif ppmtoicr
 [PROVIDES] ppmtoilbm ppmtojpeg ppmtoleaf ppmtolj ppmtomap ppmtomitsu
-[PROVIDES] ppmtompeg ppmtoneo ppmtopcx ppmtopgm ppmtopi1 ppmtopict
-[PROVIDES] ppmtopj ppmtopjxl ppmtoppm ppmtopuzz ppmtorgb3 ppmtosixel
-[PROVIDES] ppmtoterm ppmtouil ppmtowinicon ppmtoxpm ppmtoyuv ppmtoyuvsplit
-[PROVIDES] ppmtv psidtopgm pstopnm qrttoppm rasttopnm rawtopgm rawtoppm
-[PROVIDES] rgb3toppm rletopnm sbigtopgm sgitopnm sirtopnm sldtoppm spctoppm
-[PROVIDES] spottopgm sputoppm tgatoppm thinkjettopbm tifftopnm wbmptopbm
-[PROVIDES] winicontoppm xbmtopbm ximtoppm xpmtoppm xvminitoppm xwdtopnm
-[PROVIDES] ybmtopbm yuvsplittoppm yuvtoppm zeisstopnm
+[PROVIDES] ppmtompeg ppmtoneo ppmtopcx ppmtopgm ppmtopi1 ppmtopict ppmtopj
+[PROVIDES] ppmtopjxl ppmtoppm ppmtopuzz ppmtorgb3 ppmtosixel ppmtoterm
+[PROVIDES] ppmtouil ppmtowinicon ppmtoxpm ppmtoyuv ppmtoyuvsplit ppmtv
+[PROVIDES] ppmwheel psidtopgm pstopnm qrttoppm rasttopnm rawtopgm rawtoppm
+[PROVIDES] rgb3toppm rlatopam rletopnm sbigtopgm sgitopnm sirtopnm sldtoppm
+[PROVIDES] spctoppm spottopgm sputoppm tgatoppm thinkjettopbm tifftopnm
+[PROVIDES] wbmptopbm winicontoppm xbmtopbm ximtoppm xpmtoppm xvminitoppm
+[PROVIDES] xwdtopnm ybmtopbm yuvsplittoppm yuvtoppm zeisstopnm
+
+[5-ERROR] Where do you want the library interface header files installed?
+[5-ERROR] 
+[5-ERROR] header directory (/usr/include) ==> 
+[5-ERROR] Installing interface header files...
+[5-ERROR] done.
+[5-ERROR] 
+[5-ERROR] Where do you want the man pages installed?
+[5-ERROR] 
+[5-ERROR] man page directory (/usr/man) ==> 
+[5-ERROR] Installing man pages...
+[5-ERROR] done.
+[5-ERROR] 
+[5-ERROR] You don't have a /etc/manweb.conf, which is the configuration
+[5-ERROR] file for the 'manweb' program, which is a quick way to get to Netpbm
+[5-ERROR] documentation.  Would you like to create one now?
+[5-ERROR] create /etc/manweb.conf (Y) ==> 
+[5-ERROR] Installation is complete (except where previous error messages have
+[5-ERROR] indicated otherwise).
+[5-ERROR] Hook preconf is still marked as dirty ...
+[5-ERROR] Hook premake is still marked as dirty ...
+[5-ERROR] Hook inmake is still marked as dirty ...
+[5-ERROR] Hook postmake is still marked as dirty ...
+[5-ERROR] Trying to copy the default documentation ...
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing /lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 677 files for this package.
+[5-ERROR] Applying package split: 40 netpbm:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[5-ERROR] Applying package split: 42 netpbm:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 netpbm:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <netpbm> Creating flist file ...
+[5-ERROR] <netpbm> Creating package dependencies file ...
+[5-ERROR] <netpbm> Creating package description ...
+[5-ERROR] <netpbm> Creating md5sum and cksum files ...
+[5-ERROR] <netpbm:dev> Creating flist file ...
+[5-ERROR] <netpbm:dev> Creating package dependencies file ...
+[5-ERROR] <netpbm:dev> Creating package description ...
+[5-ERROR] <netpbm:dev> Creating md5sum and cksum files ...
+[5-ERROR] <netpbm:doc> Creating flist file ...
+[5-ERROR] <netpbm:doc> Creating package dependencies file ...
+[5-ERROR] <netpbm:doc> Creating package description ...
+[5-ERROR] <netpbm:doc> Creating md5sum and cksum files ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Found shared files with other packages:
+[5-ERROR] usr/share/man/man1: 00-dirtree netpbm twoftpd ucspi-unix
+[5-ERROR] usr/share/man/man3: 00-dirtree netpbm
+[5-ERROR] usr/share/man/man5: 00-dirtree netpbm
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] Where do you want the library interface header files installed?
+[9-ERROR] 
+[9-ERROR] header directory (/usr/include) ==> 
+[9-ERROR] Installing interface header files...
+[9-ERROR] done.
+[9-ERROR] 
+[9-ERROR] Where do you want the man pages installed?
+[9-ERROR] 
+[9-ERROR] man page directory (/usr/man) ==> 
+[9-ERROR] Installing man pages...
+[9-ERROR] done.
+[9-ERROR] 
+[9-ERROR] You don't have a /etc/manweb.conf, which is the configuration
+[9-ERROR] file for the 'manweb' program, which is a quick way to get to Netpbm
+[9-ERROR] documentation.  Would you like to create one now?
+[9-ERROR] create /etc/manweb.conf (Y) ==> 
+[9-ERROR] Installation is complete (except where previous error messages have
+[9-ERROR] indicated otherwise).
+[9-ERROR] Hook preconf is still marked as dirty ...
+[9-ERROR] Hook premake is still marked as dirty ...
+[9-ERROR] Hook inmake is still marked as dirty ...
+[9-ERROR] Hook postmake is still marked as dirty ...
+[9-ERROR] Trying to copy the default documentation ...
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing /lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 677 files for this package.
+[9-ERROR] Applying package split: 40 netpbm:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[9-ERROR] Applying package split: 42 netpbm:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 netpbm:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <netpbm> Creating flist file ...
+[9-ERROR] <netpbm> Creating package dependencies file ...
+[9-ERROR] <netpbm> Creating package description ...
+[9-ERROR] <netpbm> Creating md5sum and cksum files ...
+[9-ERROR] <netpbm:dev> Creating flist file ...
+[9-ERROR] <netpbm:dev> Creating package dependencies file ...
+[9-ERROR] <netpbm:dev> Creating package description ...
+[9-ERROR] <netpbm:dev> Creating md5sum and cksum files ...
+[9-ERROR] <netpbm:doc> Creating flist file ...
+[9-ERROR] <netpbm:doc> Creating package dependencies file ...
+[9-ERROR] <netpbm:doc> Creating package description ...
+[9-ERROR] <netpbm:doc> Creating md5sum and cksum files ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] usr/share/man/man1: 00-dirtree netpbm twoftpd ucspi-unix
+[9-ERROR] usr/share/man/man3: 00-dirtree netpbm
+[9-ERROR] usr/share/man/man5: 00-dirtree netpbm
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] --- BUILD ERROR ---
 

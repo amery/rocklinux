@@ -20,30 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142639516 Sat Mar 18 00:51:56 2006 (5)
-[TIMESTAMP] 1142907586 Tue Mar 21 03:19:46 2006 (9)
+[TIMESTAMP] 1168687222 Sat Jan 13 12:20:22 2007 (5) ERROR
+[TIMESTAMP] 1168895708 Mon Jan 15 22:15:08 2007 (9) ERROR
+[TIMESTAMP] 1168952987 Tue Jan 16 14:09:47 2007 (5) ERROR
+[TIMESTAMP] 1168982679 Tue Jan 16 22:24:39 2007 (9) ERROR
+[TIMESTAMP] 1169123316 Thu Jan 18 13:28:36 2007 (5) ERROR
+[TIMESTAMP] 1169152883 Thu Jan 18 21:41:23 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-scribus.log 9-scribus.log
+[LOGS] 5-scribus.err 9-scribus.err
 
-[BUILDTIME] 92745 (5)
-[BUILDTIME] 93327 (9)
-[SIZE] 18.78 MB, 723 files
+[BUILDTIME] 48044 (5) ERROR
+[BUILDTIME] 48316 (9) ERROR
+[BUILDTIME] 48376 (5) ERROR
+[BUILDTIME] 48394 (9) ERROR
+[BUILDTIME] 48398 (5) ERROR
+[BUILDTIME] 48398 (9) ERROR
 
-[DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils cups cups:dev
-[DEP] diffutils expat findutils freetype freetype:dev gawk gcc34 gcc34:dev
-[DEP] ghostscript glibc23 glibc23:dev grep lcms lcms:dev libart_lgpl23
-[DEP] libart_lgpl23:dev libjpeg libjpeg:dev libpng libpng:dev libtiff
-[DEP] libtiff:dev libxml2 libxml2:dev linux26-header:dev make mktemp nas
-[DEP] net-tools openbox openssl pkgconfig python python:dev qt33 qt33:dev
-[DEP] rrdtool sed sysfiles tar tcl tk util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] libcolorwheel.so libcsvim.so libfontpreview.so
-[PROVIDES] libhtmlim.so libimportps.so libnewfromtemplateplugin.so
-[PROVIDES] libodtimplugin.so liboodrawimp.so libsaveastemplateplugin.so
-[PROVIDES] libscribusexportpixmap.so libscribusshortwords.so
-[PROVIDES] libscriptplugin.so libsvgexplugin.so libsvgimplugin.so
-[PROVIDES] libsxwimplugin.so libtextfilterplugin.so libtxtim.so scribus
+[5-ERROR] /opt/qt33/include/qxml.h:461: warning: 'class QXmlDeclHandler' has virtual functions but non-virtual destructor
+[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include/libart-2.0 -I/usr/include/freetype2  -I/opt/qt33/include -I/usr/X11R7/include -DDOCDIR=\"/usr/share/scribus/doc/\" -DICONDIR=\"/usr/share/scribus/icons/\" -DSAMPLESDIR=\"/usr/share/scribus/samples/\" -DSCRIPTSDIR=\"/usr/share/scribus/scripts/\" -DTEMPLATEDIR=\"/usr/share/scribus/templates/\" -DLIBDIR=\"/usr/lib/scribus/\" -DPLUGINDIR=\"/usr/lib/scribus/plugins/\" -DSHAREDIR=\"/usr/share/scribus/\"  -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -Wall -W -Wpointer-arith -Wwrite-strings -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -MT prefstable.o -MD -MP -MF ".deps/prefstable.Tpo" -c -o prefstable.o prefstable.cpp; \
+[5-ERROR] 	then mv -f ".deps/prefstable.Tpo" ".deps/prefstable.Po"; else rm -f ".deps/prefstable.Tpo"; exit 1; fi
+[5-ERROR] /opt/qt33/bin/moc ./preview.h -o preview.moc
+[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include/libart-2.0 -I/usr/include/freetype2  -I/opt/qt33/include -I/usr/X11R7/include -DDOCDIR=\"/usr/share/scribus/doc/\" -DICONDIR=\"/usr/share/scribus/icons/\" -DSAMPLESDIR=\"/usr/share/scribus/samples/\" -DSCRIPTSDIR=\"/usr/share/scribus/scripts/\" -DTEMPLATEDIR=\"/usr/share/scribus/templates/\" -DLIBDIR=\"/usr/lib/scribus/\" -DPLUGINDIR=\"/usr/lib/scribus/plugins/\" -DSHAREDIR=\"/usr/share/scribus/\"  -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -Wall -W -Wpointer-arith -Wwrite-strings -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -MT preview.o -MD -MP -MF ".deps/preview.Tpo" -c -o preview.o preview.cpp; \
+[5-ERROR] 	then mv -f ".deps/preview.Tpo" ".deps/preview.Po"; else rm -f ".deps/preview.Tpo"; exit 1; fi
+[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include/libart-2.0 -I/usr/include/freetype2  -I/opt/qt33/include -I/usr/X11R7/include -DDOCDIR=\"/usr/share/scribus/doc/\" -DICONDIR=\"/usr/share/scribus/icons/\" -DSAMPLESDIR=\"/usr/share/scribus/samples/\" -DSCRIPTSDIR=\"/usr/share/scribus/scripts/\" -DTEMPLATEDIR=\"/usr/share/scribus/templates/\" -DLIBDIR=\"/usr/lib/scribus/\" -DPLUGINDIR=\"/usr/lib/scribus/plugins/\" -DSHAREDIR=\"/usr/share/scribus/\"  -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -Wall -W -Wpointer-arith -Wwrite-strings -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -MT pslib.o -MD -MP -MF ".deps/pslib.Tpo" -c -o pslib.o pslib.cpp; \
+[5-ERROR] 	then mv -f ".deps/pslib.Tpo" ".deps/pslib.Po"; else rm -f ".deps/pslib.Tpo"; exit 1; fi
+[5-ERROR] pslib.cpp: In member function 'virtual void PSLib::CreatePS(ScribusDoc*, ScribusView*, std::vector<int, std::allocator<int> >&, bool, QString, QStringList, bool, bool, bool, bool, bool, bool)':
+[5-ERROR] pslib.cpp:966: warning: 'gh' may be used uninitialized in this function
+[5-ERROR] pslib.cpp:966: warning: 'gw' may be used uninitialized in this function
+[5-ERROR] pslib.cpp:966: warning: 'gy' may be used uninitialized in this function
+[5-ERROR] pslib.cpp:966: warning: 'gx' may be used uninitialized in this function
+[5-ERROR] pslib.cpp: In member function 'virtual void PSLib::setTextCh(ScribusDoc*, PageItem*, bool, uint, uint, ScText*, Page*, bool, bool, bool, bool)':
+[5-ERROR] pslib.cpp:2151: warning: 'wideR' may be used uninitialized in this function
+[5-ERROR] /opt/qt33/bin/moc ./query.h -o query.moc
+[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include/libart-2.0 -I/usr/include/freetype2  -I/opt/qt33/include -I/usr/X11R7/include -DDOCDIR=\"/usr/share/scribus/doc/\" -DICONDIR=\"/usr/share/scribus/icons/\" -DSAMPLESDIR=\"/usr/share/scribus/samples/\" -DSCRIPTSDIR=\"/usr/share/scribus/scripts/\" -DTEMPLATEDIR=\"/usr/share/scribus/templates/\" -DLIBDIR=\"/usr/lib/scribus/\" -DPLUGINDIR=\"/usr/lib/scribus/plugins/\" -DSHAREDIR=\"/usr/share/scribus/\"  -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -Wall -W -Wpointer-arith -Wwrite-strings -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -MT query.o -MD -MP -MF ".deps/query.Tpo" -c -o query.o query.cpp; \
+[5-ERROR] 	then mv -f ".deps/query.Tpo" ".deps/query.Po"; else rm -f ".deps/query.Tpo"; exit 1; fi
+[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include/libart-2.0 -I/usr/include/freetype2  -I/opt/qt33/include -I/usr/X11R7/include -DDOCDIR=\"/usr/share/scribus/doc/\" -DICONDIR=\"/usr/share/scribus/icons/\" -DSAMPLESDIR=\"/usr/share/scribus/samples/\" -DSCRIPTSDIR=\"/usr/share/scribus/scripts/\" -DTEMPLATEDIR=\"/usr/share/scribus/templates/\" -DLIBDIR=\"/usr/lib/scribus/\" -DPLUGINDIR=\"/usr/lib/scribus/plugins/\" -DSHAREDIR=\"/usr/share/scribus/\"  -DQT_THREAD_SUPPORT  -D_REENTRANT  -ansi -W -Wall -Wchar-subscripts -Wshadow -Wpointer-arith -Wmissing-prototypes -Wwrite-strings -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -DNDEBUG -O2  -g -O2 -Wformat-security -Wmissing-format-attribute -MT rc4.o -MD -MP -MF ".deps/rc4.Tpo" -c -o rc4.o rc4.c; \
+[5-ERROR] 	then mv -f ".deps/rc4.Tpo" ".deps/rc4.Po"; else rm -f ".deps/rc4.Tpo"; exit 1; fi
+[5-ERROR] /opt/qt33/bin/moc ./reformdoc.h -o reformdoc.moc
+[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include/libart-2.0 -I/usr/include/freetype2  -I/opt/qt33/include -I/usr/X11R7/include -DDOCDIR=\"/usr/share/scribus/doc/\" -DICONDIR=\"/usr/share/scribus/icons/\" -DSAMPLESDIR=\"/usr/share/scribus/samples/\" -DSCRIPTSDIR=\"/usr/share/scribus/scripts/\" -DTEMPLATEDIR=\"/usr/share/scribus/templates/\" -DLIBDIR=\"/usr/lib/scribus/\" -DPLUGINDIR=\"/usr/lib/scribus/plugins/\" -DSHAREDIR=\"/usr/share/scribus/\"  -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -Wall -W -Wpointer-arith -Wwrite-strings -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -MT reformdoc.o -MD -MP -MF ".deps/reformdoc.Tpo" -c -o reformdoc.o reformdoc.cpp; \
+[5-ERROR] 	then mv -f ".deps/reformdoc.Tpo" ".deps/reformdoc.Po"; else rm -f ".deps/reformdoc.Tpo"; exit 1; fi
+[5-ERROR] /opt/qt33/bin/moc ./rulermover.h -o rulermover.moc
+[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include/libart-2.0 -I/usr/include/freetype2  -I/opt/qt33/include -I/usr/X11R7/include -DDOCDIR=\"/usr/share/scribus/doc/\" -DICONDIR=\"/usr/share/scribus/icons/\" -DSAMPLESDIR=\"/usr/share/scribus/samples/\" -DSCRIPTSDIR=\"/usr/share/scribus/scripts/\" -DTEMPLATEDIR=\"/usr/share/scribus/templates/\" -DLIBDIR=\"/usr/lib/scribus/\" -DPLUGINDIR=\"/usr/lib/scribus/plugins/\" -DSHAREDIR=\"/usr/share/scribus/\"  -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -Wall -W -Wpointer-arith -Wwrite-strings -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -MT rulermover.o -MD -MP -MF ".deps/rulermover.Tpo" -c -o rulermover.o rulermover.cpp; \
+[5-ERROR] 	then mv -f ".deps/rulermover.Tpo" ".deps/rulermover.Po"; else rm -f ".deps/rulermover.Tpo"; exit 1; fi
+[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include/libart-2.0 -I/usr/include/freetype2  -I/opt/qt33/include -I/usr/X11R7/include -DDOCDIR=\"/usr/share/scribus/doc/\" -DICONDIR=\"/usr/share/scribus/icons/\" -DSAMPLESDIR=\"/usr/share/scribus/samples/\" -DSCRIPTSDIR=\"/usr/share/scribus/scripts/\" -DTEMPLATEDIR=\"/usr/share/scribus/templates/\" -DLIBDIR=\"/usr/lib/scribus/\" -DPLUGINDIR=\"/usr/lib/scribus/plugins/\" -DSHAREDIR=\"/usr/share/scribus/\"  -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -Wall -W -Wpointer-arith -Wwrite-strings -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -MT sccolor.o -MD -MP -MF ".deps/sccolor.Tpo" -c -o sccolor.o sccolor.cpp; \
+[5-ERROR] 	then mv -f ".deps/sccolor.Tpo" ".deps/sccolor.Po"; else rm -f ".deps/sccolor.Tpo"; exit 1; fi
+[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include/libart-2.0 -I/usr/include/freetype2  -I/opt/qt33/include -I/usr/X11R7/include -DDOCDIR=\"/usr/share/scribus/doc/\" -DICONDIR=\"/usr/share/scribus/icons/\" -DSAMPLESDIR=\"/usr/share/scribus/samples/\" -DSCRIPTSDIR=\"/usr/share/scribus/scripts/\" -DTEMPLATEDIR=\"/usr/share/scribus/templates/\" -DLIBDIR=\"/usr/lib/scribus/\" -DPLUGINDIR=\"/usr/lib/scribus/plugins/\" -DSHAREDIR=\"/usr/share/scribus/\"  -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -Wall -W -Wpointer-arith -Wwrite-strings -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -MT sccombobox.o -MD -MP -MF ".deps/sccombobox.Tpo" -c -o sccombobox.o sccombobox.cpp; \
+[5-ERROR] 	then mv -f ".deps/sccombobox.Tpo" ".deps/sccombobox.Po"; else rm -f ".deps/sccombobox.Tpo"; exit 1; fi
+[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include/libart-2.0 -I/usr/include/freetype2  -I/opt/qt33/include -I/usr/X11R7/include -DDOCDIR=\"/usr/share/scribus/doc/\" -DICONDIR=\"/usr/share/scribus/icons/\" -DSAMPLESDIR=\"/usr/share/scribus/samples/\" -DSCRIPTSDIR=\"/usr/share/scribus/scripts/\" -DTEMPLATEDIR=\"/usr/share/scribus/templates/\" -DLIBDIR=\"/usr/lib/scribus/\" -DPLUGINDIR=\"/usr/lib/scribus/plugins/\" -DSHAREDIR=\"/usr/share/scribus/\"  -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -Wall -W -Wpointer-arith -Wwrite-strings -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -MT scfonts.o -MD -MP -MF ".deps/scfonts.Tpo" -c -o scfonts.o scfonts.cpp; \
+[5-ERROR] 	then mv -f ".deps/scfonts.Tpo" ".deps/scfonts.Po"; else rm -f ".deps/scfonts.Tpo"; exit 1; fi
+[5-ERROR] scfonts.cpp:46:10: error: #include expects "FILENAME" or <FILENAME>
+[5-ERROR] scfonts.cpp: In member function 'virtual void Foi::RawData(QByteArray&)':
+[5-ERROR] scfonts.cpp:101: error: 'FT_Stream_Seek' was not declared in this scope
+[5-ERROR] scfonts.cpp:103: error: 'FT_Stream_Read' was not declared in this scope
+[5-ERROR] scfonts.cpp: In function 'void getFontFormat(FT_FaceRec_*, Foi::FontFormat&, Foi::FontType&)':
+[5-ERROR] scfonts.cpp:558: error: 'FT_Stream_Seek' was not declared in this scope
+[5-ERROR] scfonts.cpp:558: error: 'FT_Stream_Read' was not declared in this scope
+[5-ERROR] scfonts.cpp: In member function 'bool SCFonts::AddScalableFont(QString, FT_LibraryRec_*&, QString)':
+[5-ERROR] scfonts.cpp:715: warning: enumeration value 'TYPE2' not handled in switch
+[5-ERROR] scfonts.cpp:715: warning: enumeration value 'UNKNOWN_FORMAT' not handled in switch
+[5-ERROR] make[3]: *** [scfonts.o] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.scribus.1169122830.23266.1424082316/scribus-1.3.1/scribus'
+[5-ERROR] make[2]: *** [all-recursive] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.scribus.1169122830.23266.1424082316/scribus-1.3.1/scribus'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.scribus.1169122830.23266.1424082316/scribus-1.3.1'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] /opt/qt33/include/qxml.h:461: warning: 'class QXmlDeclHandler' has virtual functions but non-virtual destructor
+[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include/libart-2.0 -I/usr/include/freetype2  -I/opt/qt33/include -I/usr/X11R7/include -DDOCDIR=\"/usr/share/scribus/doc/\" -DICONDIR=\"/usr/share/scribus/icons/\" -DSAMPLESDIR=\"/usr/share/scribus/samples/\" -DSCRIPTSDIR=\"/usr/share/scribus/scripts/\" -DTEMPLATEDIR=\"/usr/share/scribus/templates/\" -DLIBDIR=\"/usr/lib/scribus/\" -DPLUGINDIR=\"/usr/lib/scribus/plugins/\" -DSHAREDIR=\"/usr/share/scribus/\"  -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -Wall -W -Wpointer-arith -Wwrite-strings -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -MT prefstable.o -MD -MP -MF ".deps/prefstable.Tpo" -c -o prefstable.o prefstable.cpp; \
+[9-ERROR] 	then mv -f ".deps/prefstable.Tpo" ".deps/prefstable.Po"; else rm -f ".deps/prefstable.Tpo"; exit 1; fi
+[9-ERROR] /opt/qt33/bin/moc ./preview.h -o preview.moc
+[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include/libart-2.0 -I/usr/include/freetype2  -I/opt/qt33/include -I/usr/X11R7/include -DDOCDIR=\"/usr/share/scribus/doc/\" -DICONDIR=\"/usr/share/scribus/icons/\" -DSAMPLESDIR=\"/usr/share/scribus/samples/\" -DSCRIPTSDIR=\"/usr/share/scribus/scripts/\" -DTEMPLATEDIR=\"/usr/share/scribus/templates/\" -DLIBDIR=\"/usr/lib/scribus/\" -DPLUGINDIR=\"/usr/lib/scribus/plugins/\" -DSHAREDIR=\"/usr/share/scribus/\"  -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -Wall -W -Wpointer-arith -Wwrite-strings -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -MT preview.o -MD -MP -MF ".deps/preview.Tpo" -c -o preview.o preview.cpp; \
+[9-ERROR] 	then mv -f ".deps/preview.Tpo" ".deps/preview.Po"; else rm -f ".deps/preview.Tpo"; exit 1; fi
+[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include/libart-2.0 -I/usr/include/freetype2  -I/opt/qt33/include -I/usr/X11R7/include -DDOCDIR=\"/usr/share/scribus/doc/\" -DICONDIR=\"/usr/share/scribus/icons/\" -DSAMPLESDIR=\"/usr/share/scribus/samples/\" -DSCRIPTSDIR=\"/usr/share/scribus/scripts/\" -DTEMPLATEDIR=\"/usr/share/scribus/templates/\" -DLIBDIR=\"/usr/lib/scribus/\" -DPLUGINDIR=\"/usr/lib/scribus/plugins/\" -DSHAREDIR=\"/usr/share/scribus/\"  -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -Wall -W -Wpointer-arith -Wwrite-strings -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -MT pslib.o -MD -MP -MF ".deps/pslib.Tpo" -c -o pslib.o pslib.cpp; \
+[9-ERROR] 	then mv -f ".deps/pslib.Tpo" ".deps/pslib.Po"; else rm -f ".deps/pslib.Tpo"; exit 1; fi
+[9-ERROR] pslib.cpp: In member function 'virtual void PSLib::CreatePS(ScribusDoc*, ScribusView*, std::vector<int, std::allocator<int> >&, bool, QString, QStringList, bool, bool, bool, bool, bool, bool)':
+[9-ERROR] pslib.cpp:966: warning: 'gh' may be used uninitialized in this function
+[9-ERROR] pslib.cpp:966: warning: 'gw' may be used uninitialized in this function
+[9-ERROR] pslib.cpp:966: warning: 'gy' may be used uninitialized in this function
+[9-ERROR] pslib.cpp:966: warning: 'gx' may be used uninitialized in this function
+[9-ERROR] pslib.cpp: In member function 'virtual void PSLib::setTextCh(ScribusDoc*, PageItem*, bool, uint, uint, ScText*, Page*, bool, bool, bool, bool)':
+[9-ERROR] pslib.cpp:2151: warning: 'wideR' may be used uninitialized in this function
+[9-ERROR] /opt/qt33/bin/moc ./query.h -o query.moc
+[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include/libart-2.0 -I/usr/include/freetype2  -I/opt/qt33/include -I/usr/X11R7/include -DDOCDIR=\"/usr/share/scribus/doc/\" -DICONDIR=\"/usr/share/scribus/icons/\" -DSAMPLESDIR=\"/usr/share/scribus/samples/\" -DSCRIPTSDIR=\"/usr/share/scribus/scripts/\" -DTEMPLATEDIR=\"/usr/share/scribus/templates/\" -DLIBDIR=\"/usr/lib/scribus/\" -DPLUGINDIR=\"/usr/lib/scribus/plugins/\" -DSHAREDIR=\"/usr/share/scribus/\"  -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -Wall -W -Wpointer-arith -Wwrite-strings -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -MT query.o -MD -MP -MF ".deps/query.Tpo" -c -o query.o query.cpp; \
+[9-ERROR] 	then mv -f ".deps/query.Tpo" ".deps/query.Po"; else rm -f ".deps/query.Tpo"; exit 1; fi
+[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include/libart-2.0 -I/usr/include/freetype2  -I/opt/qt33/include -I/usr/X11R7/include -DDOCDIR=\"/usr/share/scribus/doc/\" -DICONDIR=\"/usr/share/scribus/icons/\" -DSAMPLESDIR=\"/usr/share/scribus/samples/\" -DSCRIPTSDIR=\"/usr/share/scribus/scripts/\" -DTEMPLATEDIR=\"/usr/share/scribus/templates/\" -DLIBDIR=\"/usr/lib/scribus/\" -DPLUGINDIR=\"/usr/lib/scribus/plugins/\" -DSHAREDIR=\"/usr/share/scribus/\"  -DQT_THREAD_SUPPORT  -D_REENTRANT  -ansi -W -Wall -Wchar-subscripts -Wshadow -Wpointer-arith -Wmissing-prototypes -Wwrite-strings -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -DNDEBUG -O2  -g -O2 -Wformat-security -Wmissing-format-attribute -MT rc4.o -MD -MP -MF ".deps/rc4.Tpo" -c -o rc4.o rc4.c; \
+[9-ERROR] 	then mv -f ".deps/rc4.Tpo" ".deps/rc4.Po"; else rm -f ".deps/rc4.Tpo"; exit 1; fi
+[9-ERROR] /opt/qt33/bin/moc ./reformdoc.h -o reformdoc.moc
+[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include/libart-2.0 -I/usr/include/freetype2  -I/opt/qt33/include -I/usr/X11R7/include -DDOCDIR=\"/usr/share/scribus/doc/\" -DICONDIR=\"/usr/share/scribus/icons/\" -DSAMPLESDIR=\"/usr/share/scribus/samples/\" -DSCRIPTSDIR=\"/usr/share/scribus/scripts/\" -DTEMPLATEDIR=\"/usr/share/scribus/templates/\" -DLIBDIR=\"/usr/lib/scribus/\" -DPLUGINDIR=\"/usr/lib/scribus/plugins/\" -DSHAREDIR=\"/usr/share/scribus/\"  -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -Wall -W -Wpointer-arith -Wwrite-strings -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -MT reformdoc.o -MD -MP -MF ".deps/reformdoc.Tpo" -c -o reformdoc.o reformdoc.cpp; \
+[9-ERROR] 	then mv -f ".deps/reformdoc.Tpo" ".deps/reformdoc.Po"; else rm -f ".deps/reformdoc.Tpo"; exit 1; fi
+[9-ERROR] /opt/qt33/bin/moc ./rulermover.h -o rulermover.moc
+[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include/libart-2.0 -I/usr/include/freetype2  -I/opt/qt33/include -I/usr/X11R7/include -DDOCDIR=\"/usr/share/scribus/doc/\" -DICONDIR=\"/usr/share/scribus/icons/\" -DSAMPLESDIR=\"/usr/share/scribus/samples/\" -DSCRIPTSDIR=\"/usr/share/scribus/scripts/\" -DTEMPLATEDIR=\"/usr/share/scribus/templates/\" -DLIBDIR=\"/usr/lib/scribus/\" -DPLUGINDIR=\"/usr/lib/scribus/plugins/\" -DSHAREDIR=\"/usr/share/scribus/\"  -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -Wall -W -Wpointer-arith -Wwrite-strings -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -MT rulermover.o -MD -MP -MF ".deps/rulermover.Tpo" -c -o rulermover.o rulermover.cpp; \
+[9-ERROR] 	then mv -f ".deps/rulermover.Tpo" ".deps/rulermover.Po"; else rm -f ".deps/rulermover.Tpo"; exit 1; fi
+[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include/libart-2.0 -I/usr/include/freetype2  -I/opt/qt33/include -I/usr/X11R7/include -DDOCDIR=\"/usr/share/scribus/doc/\" -DICONDIR=\"/usr/share/scribus/icons/\" -DSAMPLESDIR=\"/usr/share/scribus/samples/\" -DSCRIPTSDIR=\"/usr/share/scribus/scripts/\" -DTEMPLATEDIR=\"/usr/share/scribus/templates/\" -DLIBDIR=\"/usr/lib/scribus/\" -DPLUGINDIR=\"/usr/lib/scribus/plugins/\" -DSHAREDIR=\"/usr/share/scribus/\"  -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -Wall -W -Wpointer-arith -Wwrite-strings -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -MT sccolor.o -MD -MP -MF ".deps/sccolor.Tpo" -c -o sccolor.o sccolor.cpp; \
+[9-ERROR] 	then mv -f ".deps/sccolor.Tpo" ".deps/sccolor.Po"; else rm -f ".deps/sccolor.Tpo"; exit 1; fi
+[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include/libart-2.0 -I/usr/include/freetype2  -I/opt/qt33/include -I/usr/X11R7/include -DDOCDIR=\"/usr/share/scribus/doc/\" -DICONDIR=\"/usr/share/scribus/icons/\" -DSAMPLESDIR=\"/usr/share/scribus/samples/\" -DSCRIPTSDIR=\"/usr/share/scribus/scripts/\" -DTEMPLATEDIR=\"/usr/share/scribus/templates/\" -DLIBDIR=\"/usr/lib/scribus/\" -DPLUGINDIR=\"/usr/lib/scribus/plugins/\" -DSHAREDIR=\"/usr/share/scribus/\"  -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -Wall -W -Wpointer-arith -Wwrite-strings -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -MT sccombobox.o -MD -MP -MF ".deps/sccombobox.Tpo" -c -o sccombobox.o sccombobox.cpp; \
+[9-ERROR] 	then mv -f ".deps/sccombobox.Tpo" ".deps/sccombobox.Po"; else rm -f ".deps/sccombobox.Tpo"; exit 1; fi
+[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I..  -I/usr/include/libart-2.0 -I/usr/include/freetype2  -I/opt/qt33/include -I/usr/X11R7/include -DDOCDIR=\"/usr/share/scribus/doc/\" -DICONDIR=\"/usr/share/scribus/icons/\" -DSAMPLESDIR=\"/usr/share/scribus/samples/\" -DSCRIPTSDIR=\"/usr/share/scribus/scripts/\" -DTEMPLATEDIR=\"/usr/share/scribus/templates/\" -DLIBDIR=\"/usr/lib/scribus/\" -DPLUGINDIR=\"/usr/lib/scribus/plugins/\" -DSHAREDIR=\"/usr/share/scribus/\"  -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -Wall -W -Wpointer-arith -Wwrite-strings -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -MT scfonts.o -MD -MP -MF ".deps/scfonts.Tpo" -c -o scfonts.o scfonts.cpp; \
+[9-ERROR] 	then mv -f ".deps/scfonts.Tpo" ".deps/scfonts.Po"; else rm -f ".deps/scfonts.Tpo"; exit 1; fi
+[9-ERROR] scfonts.cpp:46:10: error: #include expects "FILENAME" or <FILENAME>
+[9-ERROR] scfonts.cpp: In member function 'virtual void Foi::RawData(QByteArray&)':
+[9-ERROR] scfonts.cpp:101: error: 'FT_Stream_Seek' was not declared in this scope
+[9-ERROR] scfonts.cpp:103: error: 'FT_Stream_Read' was not declared in this scope
+[9-ERROR] scfonts.cpp: In function 'void getFontFormat(FT_FaceRec_*, Foi::FontFormat&, Foi::FontType&)':
+[9-ERROR] scfonts.cpp:558: error: 'FT_Stream_Seek' was not declared in this scope
+[9-ERROR] scfonts.cpp:558: error: 'FT_Stream_Read' was not declared in this scope
+[9-ERROR] scfonts.cpp: In member function 'bool SCFonts::AddScalableFont(QString, FT_LibraryRec_*&, QString)':
+[9-ERROR] scfonts.cpp:715: warning: enumeration value 'TYPE2' not handled in switch
+[9-ERROR] scfonts.cpp:715: warning: enumeration value 'UNKNOWN_FORMAT' not handled in switch
+[9-ERROR] make[3]: *** [scfonts.o] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.scribus.1169152397.13583.1667074915/scribus-1.3.1/scribus'
+[9-ERROR] make[2]: *** [all-recursive] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.scribus.1169152397.13583.1667074915/scribus-1.3.1/scribus'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.scribus.1169152397.13583.1667074915/scribus-1.3.1'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

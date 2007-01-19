@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142488274 Thu Mar 16 06:51:14 2006 (5)
-[TIMESTAMP] 1142736697 Sun Mar 19 03:51:37 2006 (9)
+[TIMESTAMP] 1168565672 Fri Jan 12 02:34:32 2007 (5)
+[TIMESTAMP] 1168763086 Sun Jan 14 09:24:46 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-gocr.log 9-gocr.log
 
-[BUILDTIME] 2404 (5)
-[BUILDTIME] 2914 (9)
-[SIZE] 0.30 MB, 8 files
+[BUILDTIME] 2423 (5)
+[BUILDTIME] 2876 (9)
+[SIZE] 0.29 MB, 8 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] net-tools netpbm netpbm:dev patch rrdtool sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
+[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev
+[DEP] make mktemp net-tools netpbm netpbm:dev patch rrdtool sed sysfiles
+[DEP] tar twoftpd ucspi-unix util-linux
 
 [PROVIDES] gocr libPgm2asc.a
 

@@ -5,7 +5,7 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/stf/kimdaba/kimdaba.cache
+[COPY] ROCK Linux: rock-src/package/stf/kimdaba/kimdaba.desc
 [COPY] ROCK Linux is Copyright (C) 1998 - 2006 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
@@ -20,26 +20,87 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142626226 Fri Mar 17 21:10:26 2006 (5)
-[TIMESTAMP] 1142893779 Mon Mar 20 23:29:39 2006 (9)
+[TIMESTAMP] 1168677393 Sat Jan 13 09:36:33 2007 (5)
+[TIMESTAMP] 1168885756 Mon Jan 15 19:29:16 2007 (9) ERROR
+[TIMESTAMP] 1168980979 Tue Jan 16 21:56:19 2007 (9) ERROR
+[TIMESTAMP] 1169151184 Thu Jan 18 21:13:04 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-kimdaba.log 9-kimdaba.log
+[LOGS] 5-kphotoalbum.log 9-kphotoalbum.err
 
-[BUILDTIME] 25398 (5)
-[BUILDTIME] 25831 (9)
-[SIZE] 4.13 MB, 134 files
+[BUILDTIME] 16244 (5)
+[BUILDTIME] 15548 (9) ERROR
+[BUILDTIME] 15597 (9) ERROR
+[BUILDTIME] 15629 (9) ERROR
+[SIZE] 3.90 MB, 106 files
 
-[DEP] 00-dirtree acl acl:dev alsa arts attr attr:dev bash2 binutils
-[DEP] bzip2 coreutils diffutils expat fam fam:dev findutils freetype
-[DEP] freetype:dev gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
-[DEP] hicolor-icon-theme kdelibs kdelibs:dev kile kphone libart_lgpl23
-[DEP] libart_lgpl23:dev libidn libidn:dev libjpeg libjpeg:dev libkipi
-[DEP] libkipi:dev libpng libpng:dev libxml2 linux26-header:dev make
-[DEP] mktemp nas net-tools perl5 qt33 qt33:dev rrdtool sed sysfiles tar
-[DEP] util-linux xmms xorg xorg:dev zlib:dev
+[DEP] 00-dirtree acl acl:dev alsa applewmproto applewmproto:dev attr
+[DEP] attr:dev bash2 binutils bzip2 coreutils cups cvm diffutils expat
+[DEP] expat:dev fam fam:dev findutils fontconfig fontconfig:dev freetype
+[DEP] freetype:dev gawk gcc40 gcc40:dev gettext glibc23 glibc23:dev
+[DEP] grep hicolor-icon-theme imake kdelibs kdelibs:dev libart_lgpl23
+[DEP] libart_lgpl23:dev libice libice:dev libidn libidn:dev libjpeg
+[DEP] libjpeg:dev libkipi libkipi:dev libpng libpng:dev libsm libsm:dev
+[DEP] libx11 libx11:dev libxau libxau:dev libxcursor libxcursor:dev
+[DEP] libxdmcp libxdmcp:dev libxext libxext:dev libxfixes libxfixes:dev
+[DEP] libxft libxft:dev libxinerama libxinerama:dev libxmu libxmu:dev
+[DEP] libxrandr libxrandr:dev libxrender libxrender:dev libxt libxt:dev
+[DEP] linux-libc-headers:dev make mesalib mktemp nas net-tools perl5
+[DEP] qt33 qt33:dev rrdtool sed sysfiles tar util-linux xorg-cf-files
+[DEP] xproto:dev zlib zlib:dev
 
-[PROVIDES] kimdaba
+[PROVIDES] kphotoalbum
+
+[9-ERROR] Making install in Browser
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.kphotoalbum.1169151012.6089.3186828470/kphotoalbum-2.2-noi18n/src/Browser'
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.kphotoalbum.1169151012.6089.3186828470/kphotoalbum-2.2-noi18n/src/Browser'
+[9-ERROR] make[3]: Nothing to be done for `install-exec-am'.
+[9-ERROR] make[3]: Nothing to be done for `install-data-am'.
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.kphotoalbum.1169151012.6089.3186828470/kphotoalbum-2.2-noi18n/src/Browser'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kphotoalbum.1169151012.6089.3186828470/kphotoalbum-2.2-noi18n/src/Browser'
+[9-ERROR] Making install in ImportExport
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.kphotoalbum.1169151012.6089.3186828470/kphotoalbum-2.2-noi18n/src/ImportExport'
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.kphotoalbum.1169151012.6089.3186828470/kphotoalbum-2.2-noi18n/src/ImportExport'
+[9-ERROR] make[3]: Nothing to be done for `install-exec-am'.
+[9-ERROR] make[3]: Nothing to be done for `install-data-am'.
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.kphotoalbum.1169151012.6089.3186828470/kphotoalbum-2.2-noi18n/src/ImportExport'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kphotoalbum.1169151012.6089.3186828470/kphotoalbum-2.2-noi18n/src/ImportExport'
+[9-ERROR] Making install in AnnotationDialog
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.kphotoalbum.1169151012.6089.3186828470/kphotoalbum-2.2-noi18n/src/AnnotationDialog'
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.kphotoalbum.1169151012.6089.3186828470/kphotoalbum-2.2-noi18n/src/AnnotationDialog'
+[9-ERROR] make[3]: Nothing to be done for `install-exec-am'.
+[9-ERROR] make[3]: Nothing to be done for `install-data-am'.
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.kphotoalbum.1169151012.6089.3186828470/kphotoalbum-2.2-noi18n/src/AnnotationDialog'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kphotoalbum.1169151012.6089.3186828470/kphotoalbum-2.2-noi18n/src/AnnotationDialog'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.kphotoalbum.1169151012.6089.3186828470/kphotoalbum-2.2-noi18n/src'
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.kphotoalbum.1169151012.6089.3186828470/kphotoalbum-2.2-noi18n/src'
+[9-ERROR] test -z "/usr/bin" || mkdir -p -- "/usr/bin"
+[9-ERROR]   /bin/sh ../libtool --silent --mode=install /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p  'kphotoalbum' '/usr/bin/kphotoalbum'
+[9-ERROR] test -z "/usr/share/apps/kphotoalbum" || mkdir -p -- "/usr/share/apps/kphotoalbum"
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 'tips' '/usr/share/apps/kphotoalbum/tips'
+[9-ERROR] test -z "/usr/share/config" || mkdir -p -- "/usr/share/config"
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 'kphotoalbumrc' '/usr/share/config/kphotoalbumrc'
+[9-ERROR] test -z "/usr/share/mimelnk/application" || mkdir -p -- "/usr/share/mimelnk/application"
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 'x-vnd.kde.kphotoalbum-import.desktop' '/usr/share/mimelnk/application/x-vnd.kde.kphotoalbum-import.desktop'
+[9-ERROR] test -z "/usr/share/apps/kphotoalbum" || mkdir -p -- "/usr/share/apps/kphotoalbum"
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 'kphotoalbumui.rc' '/usr/share/apps/kphotoalbum/kphotoalbumui.rc'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 'default-setup' '/usr/share/apps/kphotoalbum/default-setup'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 'default-layout.xml' '/usr/share/apps/kphotoalbum/default-layout.xml'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 'exif-sqlite.db' '/usr/share/apps/kphotoalbum/exif-sqlite.db'
+[9-ERROR] test -z "/usr/share/applications/kde" || mkdir -p -- "/usr/share/applications/kde"
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 'kphotoalbum.desktop' '/usr/share/applications/kde/kphotoalbum.desktop'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 'kphotoalbum-import.desktop' '/usr/share/applications/kde/kphotoalbum-import.desktop'
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.kphotoalbum.1169151012.6089.3186828470/kphotoalbum-2.2-noi18n/src'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kphotoalbum.1169151012.6089.3186828470/kphotoalbum-2.2-noi18n/src'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kphotoalbum.1169151012.6089.3186828470/kphotoalbum-2.2-noi18n/src'
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.kphotoalbum.1169151012.6089.3186828470/kphotoalbum-2.2-noi18n'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.kphotoalbum.1169151012.6089.3186828470/kphotoalbum-2.2-noi18n'
+[9-ERROR] make[2]: Nothing to be done for `install-exec-am'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kphotoalbum.1169151012.6089.3186828470/kphotoalbum-2.2-noi18n'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kphotoalbum.1169151012.6089.3186828470/kphotoalbum-2.2-noi18n'
+[9-ERROR] Trying to copy the default documentation ...
+[9-ERROR] mv: cannot move `/usr/share/doc/HTML' to a subdirectory of itself, `/usr/share/doc/kphotoalbum/HTML'
+[9-ERROR] --- BUILD ERROR ---
 

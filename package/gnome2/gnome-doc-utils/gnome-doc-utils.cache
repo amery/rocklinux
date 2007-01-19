@@ -20,134 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142505284 Thu Mar 16 11:34:44 2006 (5) ERROR
-[TIMESTAMP] 1142756431 Sun Mar 19 09:20:31 2006 (9) ERROR
-[TIMESTAMP] 1142955391 Tue Mar 21 16:36:31 2006 (5) ERROR
-[TIMESTAMP] 1142968569 Tue Mar 21 20:16:09 2006 (9) ERROR
-[TIMESTAMP] 1143029708 Wed Mar 22 13:15:08 2006 (5) ERROR
-[TIMESTAMP] 1143037949 Wed Mar 22 15:32:29 2006 (9) ERROR
+[TIMESTAMP] 1168568960 Fri Jan 12 03:29:20 2007 (5)
+[TIMESTAMP] 1168766698 Sun Jan 14 10:24:58 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-gnome-doc-utils.err 9-gnome-doc-utils.err
+[LOGS] 5-gnome-doc-utils.log 9-gnome-doc-utils.log
 
-[BUILDTIME] 1868 (5) ERROR
-[BUILDTIME] 2605 (9) ERROR
-[BUILDTIME] 2655 (5) ERROR
-[BUILDTIME] 2627 (9) ERROR
-[BUILDTIME] 2630 (5) ERROR
-[BUILDTIME] 2636 (9) ERROR
-[SIZE] 1.31 MB, 104 files
+[BUILDTIME] 2758 (5)
+[BUILDTIME] 3181 (9)
+[SIZE] 1.97 MB, 175 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils cpan-xml-parser diffutils
-[DEP] docbookx findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev
-[DEP] gnome-keyring-manager gnome-libs14 gnome-netstatus gnome14-dirtree
-[DEP] gnome2-dirtree grep libxml2 libxslt linux26-header:dev make mktemp
-[DEP] net-tools pango perl5 pkgconfig python rrdtool scrollkeeper sed
-[DEP] sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cpan-xml-parser
+[DEP] cvm diffutils docbookx findutils gawk gcc40 gcc40:dev gettext
+[DEP] glibc23 glibc23:dev gnome-blog gnome2-dirtree grep libxml2 libxslt
+[DEP] linux-libc-headers:dev make mktemp net-tools perl5 pkgconfig python
+[DEP] rrdtool sed sysfiles tar util-linux
 
 [PROVIDES] gnome-doc-prepare xml2po
-
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.gnome-doc-utils.1143029656.26701.1200331649/gnome-doc-utils-0.4.2/doc/xslt'
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.gnome-doc-utils.1143029656.26701.1200331649/gnome-doc-utils-0.4.2/doc/xslt'
-[5-ERROR] make[2]: Entering directory `/ROCK/src.gnome-doc-utils.1143029656.26701.1200331649/gnome-doc-utils-0.4.2/doc'
-[5-ERROR] make[3]: Entering directory `/ROCK/src.gnome-doc-utils.1143029656.26701.1200331649/gnome-doc-utils-0.4.2/doc'
-[5-ERROR] make[3]: Nothing to be done for `install-exec-am'.
-[5-ERROR] make[3]: Nothing to be done for `install-data-am'.
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.gnome-doc-utils.1143029656.26701.1200331649/gnome-doc-utils-0.4.2/doc'
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.gnome-doc-utils.1143029656.26701.1200331649/gnome-doc-utils-0.4.2/doc'
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.gnome-doc-utils.1143029656.26701.1200331649/gnome-doc-utils-0.4.2/doc'
-[5-ERROR] make[1]: Entering directory `/ROCK/src.gnome-doc-utils.1143029656.26701.1200331649/gnome-doc-utils-0.4.2'
-[5-ERROR] make[2]: Entering directory `/ROCK/src.gnome-doc-utils.1143029656.26701.1200331649/gnome-doc-utils-0.4.2'
-[5-ERROR] /bin/sh ./mkinstalldirs /usr/bin
-[5-ERROR]  /ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c gnome-doc-prepare /usr/bin/gnome-doc-prepare
-[5-ERROR] /bin/sh ./mkinstalldirs /usr/share/aclocal
-[5-ERROR]  /ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 gnome-doc-utils.m4 /usr/share/aclocal/gnome-doc-utils.m4
-[5-ERROR] /bin/sh ./mkinstalldirs /usr/lib/pkgconfig
-[5-ERROR]  /ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 gnome-doc-utils.pc /usr/lib/pkgconfig/gnome-doc-utils.pc
-[5-ERROR] /bin/sh ./mkinstalldirs /usr/share/gnome-doc-utils
-[5-ERROR]  /ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 gnome-doc-utils.make /usr/share/gnome-doc-utils/gnome-doc-utils.make
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.gnome-doc-utils.1143029656.26701.1200331649/gnome-doc-utils-0.4.2'
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.gnome-doc-utils.1143029656.26701.1200331649/gnome-doc-utils-0.4.2'
-[5-ERROR] Trying to copy the default documentation ...
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 151 files for this package.
-[5-ERROR] Applying package split: 40 gnome-doc-utils:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 gnome-doc-utils:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 gnome-doc-utils:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <gnome-doc-utils> Creating flist file ...
-[5-ERROR] <gnome-doc-utils> Creating package dependencies file ...
-[5-ERROR] <gnome-doc-utils> Creating md5sum and cksum files ...
-[5-ERROR] <gnome-doc-utils> Creating package description ...
-[5-ERROR] <gnome-doc-utils:dev> Creating flist file ...
-[5-ERROR] <gnome-doc-utils:dev> Creating package dependencies file ...
-[5-ERROR] <gnome-doc-utils:dev> Creating md5sum and cksum files ...
-[5-ERROR] <gnome-doc-utils:dev> Creating package description ...
-[5-ERROR] <gnome-doc-utils:doc> Creating flist file ...
-[5-ERROR] <gnome-doc-utils:doc> Creating package dependencies file ...
-[5-ERROR] <gnome-doc-utils:doc> Creating md5sum and cksum files ...
-[5-ERROR] <gnome-doc-utils:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Found shared files with other packages:
-[5-ERROR] var/opt/gnome2/lib/scrollkeeper/C/scrollkeeper_cl.xml: gnome-doc-utils gnome-netstatus scrollkeeper
-[5-ERROR] var/opt/gnome2/lib/scrollkeeper/C/scrollkeeper_extended_cl.xml: gnome-doc-utils gnome-netstatus scrollkeeper
-[5-ERROR] var/opt/gnome2/lib/scrollkeeper/scrollkeeper_docs: gnome-doc-utils gnome-netstatus scrollkeeper
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] removed `/var/adm/logs/5-gnome-doc-utils.log'
-[5-ERROR] Finished building gnome-doc-utils=gnome-doc-utils.
-
-[9-ERROR] make[3]: Leaving directory `/ROCK/src.gnome-doc-utils.1143037897.3300.3736454825/gnome-doc-utils-0.4.2/doc/xslt'
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.gnome-doc-utils.1143037897.3300.3736454825/gnome-doc-utils-0.4.2/doc/xslt'
-[9-ERROR] make[2]: Entering directory `/ROCK/src.gnome-doc-utils.1143037897.3300.3736454825/gnome-doc-utils-0.4.2/doc'
-[9-ERROR] make[3]: Entering directory `/ROCK/src.gnome-doc-utils.1143037897.3300.3736454825/gnome-doc-utils-0.4.2/doc'
-[9-ERROR] make[3]: Nothing to be done for `install-exec-am'.
-[9-ERROR] make[3]: Nothing to be done for `install-data-am'.
-[9-ERROR] make[3]: Leaving directory `/ROCK/src.gnome-doc-utils.1143037897.3300.3736454825/gnome-doc-utils-0.4.2/doc'
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.gnome-doc-utils.1143037897.3300.3736454825/gnome-doc-utils-0.4.2/doc'
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.gnome-doc-utils.1143037897.3300.3736454825/gnome-doc-utils-0.4.2/doc'
-[9-ERROR] make[1]: Entering directory `/ROCK/src.gnome-doc-utils.1143037897.3300.3736454825/gnome-doc-utils-0.4.2'
-[9-ERROR] make[2]: Entering directory `/ROCK/src.gnome-doc-utils.1143037897.3300.3736454825/gnome-doc-utils-0.4.2'
-[9-ERROR] /bin/sh ./mkinstalldirs /usr/bin
-[9-ERROR]  /ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c gnome-doc-prepare /usr/bin/gnome-doc-prepare
-[9-ERROR] /bin/sh ./mkinstalldirs /usr/share/aclocal
-[9-ERROR]  /ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 gnome-doc-utils.m4 /usr/share/aclocal/gnome-doc-utils.m4
-[9-ERROR] /bin/sh ./mkinstalldirs /usr/lib/pkgconfig
-[9-ERROR]  /ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 gnome-doc-utils.pc /usr/lib/pkgconfig/gnome-doc-utils.pc
-[9-ERROR] /bin/sh ./mkinstalldirs /usr/share/gnome-doc-utils
-[9-ERROR]  /ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 gnome-doc-utils.make /usr/share/gnome-doc-utils/gnome-doc-utils.make
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.gnome-doc-utils.1143037897.3300.3736454825/gnome-doc-utils-0.4.2'
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.gnome-doc-utils.1143037897.3300.3736454825/gnome-doc-utils-0.4.2'
-[9-ERROR] Trying to copy the default documentation ...
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 151 files for this package.
-[9-ERROR] Applying package split: 40 gnome-doc-utils:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 gnome-doc-utils:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 gnome-doc-utils:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <gnome-doc-utils> Creating flist file ...
-[9-ERROR] <gnome-doc-utils> Creating package dependencies file ...
-[9-ERROR] <gnome-doc-utils> Creating md5sum and cksum files ...
-[9-ERROR] <gnome-doc-utils> Creating package description ...
-[9-ERROR] <gnome-doc-utils:dev> Creating flist file ...
-[9-ERROR] <gnome-doc-utils:dev> Creating package dependencies file ...
-[9-ERROR] <gnome-doc-utils:dev> Creating md5sum and cksum files ...
-[9-ERROR] <gnome-doc-utils:dev> Creating package description ...
-[9-ERROR] <gnome-doc-utils:doc> Creating flist file ...
-[9-ERROR] <gnome-doc-utils:doc> Creating package dependencies file ...
-[9-ERROR] <gnome-doc-utils:doc> Creating md5sum and cksum files ...
-[9-ERROR] <gnome-doc-utils:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Found shared files with other packages:
-[9-ERROR] var/opt/gnome2/lib/scrollkeeper/C/scrollkeeper_cl.xml: gnome-doc-utils gnome-netstatus scrollkeeper
-[9-ERROR] var/opt/gnome2/lib/scrollkeeper/C/scrollkeeper_extended_cl.xml: gnome-doc-utils gnome-netstatus scrollkeeper
-[9-ERROR] var/opt/gnome2/lib/scrollkeeper/scrollkeeper_docs: gnome-doc-utils gnome-netstatus scrollkeeper
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] removed `/var/adm/logs/9-gnome-doc-utils.log'
-[9-ERROR] Finished building gnome-doc-utils=gnome-doc-utils.
 

@@ -20,25 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142641589 Sat Mar 18 01:26:29 2006 (5)
-[TIMESTAMP] 1142909744 Tue Mar 21 03:55:44 2006 (9)
+[TIMESTAMP] 1168687456 Sat Jan 13 12:24:16 2007 (5) ERROR
+[TIMESTAMP] 1168895963 Mon Jan 15 22:19:23 2007 (9) ERROR
+[TIMESTAMP] 1168953054 Tue Jan 16 14:10:54 2007 (5) ERROR
+[TIMESTAMP] 1168982751 Tue Jan 16 22:25:51 2007 (9) ERROR
+[TIMESTAMP] 1169123378 Thu Jan 18 13:29:38 2007 (5) ERROR
+[TIMESTAMP] 1169152960 Thu Jan 18 21:42:40 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-octave.log 9-octave.log
+[LOGS] 5-octave.err 9-octave.err
 
-[BUILDTIME] 161900 (5)
-[BUILDTIME] 163236 (9)
-[SIZE] 15.55 MB, 699 files
+[BUILDTIME] 1771 (5) ERROR
+[BUILDTIME] 1779 (9) ERROR
+[BUILDTIME] 1778 (5) ERROR
+[BUILDTIME] 1761 (9) ERROR
+[BUILDTIME] 1759 (5) ERROR
+[BUILDTIME] 1759 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils flex
-[DEP] flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev gnuplot gperf
-[DEP] grep hdf5 hdf5:dev libsndfile linux26-header:dev m4 make mktemp
-[DEP] ncurses:dev net-tools openssl perl5 readline readline:dev rrdtool
-[DEP] sed sysfiles tar tetex texinfo util-linux zlib:dev
 
-[PROVIDES] libcruft.a liboctave.a liboctinterp.a mkoctfile mkoctfile-2.1.71
-[PROVIDES] octave octave-2.1.71 octave-bug octave-bug-2.1.71 octave-config
-[PROVIDES] octave-config-2.1.71
+[5-ERROR] defining localapioctfiledir to be $(libexecdir)/octave/site/oct/$(apiversion)/$(canonical_host_type)
+[5-ERROR] defining localveroctfiledir to be $(libexecdir)/octave/$(version)/site/oct/$(canonical_host_type)
+[5-ERROR] defining localoctfilepath to be $(localveroctfiledir)//:$(localapioctfiledir)//:$(localoctfiledir)//
+[5-ERROR] defining fcnfilepath to be .:$(localoctfilepath):$(localfcnfilepath):$(octfiledir)//:$(fcnfiledir)//
+[5-ERROR] defining imagedir to be $(datadir)/octave/$(version)/imagelib
+[5-ERROR] defining imagepath to be .:$(imagedir)//
+[5-ERROR] defining __NO_MATH_INLINES avoids buggy GNU libc exp function
+[5-ERROR] checking for i386-unknown-linux-gnu-g++... g++-40
+[5-ERROR] checking whether we are using the GNU C++ compiler... yes
+[5-ERROR] checking whether g++-40 accepts -g... yes
+[5-ERROR] checking how to run the C++ preprocessor... g++-40 -E
+[5-ERROR] checking for C++ support for new friend template declaration... yes
+[5-ERROR] checking if C++ library is ISO compliant... yes
+[5-ERROR] checking for i386-unknown-linux-gnu-nm... nm
+[5-ERROR] checking C++ ABI version used by g++-40... gnu_v3
+[5-ERROR] checking for i386-unknown-linux-gnu-gcc... (cached) gcc-40
+[5-ERROR] checking whether we are using the GNU C compiler... (cached) yes
+[5-ERROR] checking whether gcc-40 accepts -g... (cached) yes
+[5-ERROR] checking for gcc-40 option to accept ANSI C... (cached) none needed
+[5-ERROR] checking how to run the C preprocessor... gcc-40 -E
+[5-ERROR] checking whether gcc-40 needs -traditional... no
+[5-ERROR] checking whether gcc-40 accepts -mieee-fp... yes
+[5-ERROR] adding -mieee-fp to XTRA_CFLAGS
+[5-ERROR] checking whether g++-40 accepts -mieee-fp... yes
+[5-ERROR] adding -mieee-fp to XTRA_CXXFLAGS
+[5-ERROR] checking whether g++-40 prepends an underscore to external names... no
+[5-ERROR] checking for sin in -lm... yes
+[5-ERROR] checking for H5Pcreate in -lhdf5... yes
+[5-ERROR] checking for deflate in -lz... yes
+[5-ERROR] checking hdf5.h usability... yes
+[5-ERROR] checking hdf5.h presence... yes
+[5-ERROR] checking for hdf5.h... yes
+[5-ERROR] checking for H5Gget_num_objs in -lhdf5... yes
+[5-ERROR] checking fftw3.h usability... yes
+[5-ERROR] checking fftw3.h presence... yes
+[5-ERROR] checking for fftw3.h... yes
+[5-ERROR] checking for fftw_plan_dft_1d in -lfftw3... no
+[5-ERROR] checking for MPI_Init in -lmpi... no
+[5-ERROR] checking for IEEE 754 data format... yes
+[5-ERROR] checking for i386-unknown-linux-gnu-ranlib... ranlib
+[5-ERROR] checking for i386-unknown-linux-gnu-g77... f77
+[5-ERROR] checking whether we are using the GNU Fortran 77 compiler... no
+[5-ERROR] checking whether f77 accepts -g... no
+[5-ERROR] checking how to get verbose linking output from f77... configure: WARNING: compilation failed
+[5-ERROR] 
+[5-ERROR] checking for Fortran libraries of f77... 
+[5-ERROR] checking for dummy main to link with Fortran libraries... none
+[5-ERROR] checking for Fortran name-mangling scheme... configure: error: cannot compile a simple Fortran program
+[5-ERROR] See `config.log' for more details.
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] defining localapioctfiledir to be $(libexecdir)/octave/site/oct/$(apiversion)/$(canonical_host_type)
+[9-ERROR] defining localveroctfiledir to be $(libexecdir)/octave/$(version)/site/oct/$(canonical_host_type)
+[9-ERROR] defining localoctfilepath to be $(localveroctfiledir)//:$(localapioctfiledir)//:$(localoctfiledir)//
+[9-ERROR] defining fcnfilepath to be .:$(localoctfilepath):$(localfcnfilepath):$(octfiledir)//:$(fcnfiledir)//
+[9-ERROR] defining imagedir to be $(datadir)/octave/$(version)/imagelib
+[9-ERROR] defining imagepath to be .:$(imagedir)//
+[9-ERROR] defining __NO_MATH_INLINES avoids buggy GNU libc exp function
+[9-ERROR] checking for i386-unknown-linux-gnu-g++... g++-40
+[9-ERROR] checking whether we are using the GNU C++ compiler... yes
+[9-ERROR] checking whether g++-40 accepts -g... yes
+[9-ERROR] checking how to run the C++ preprocessor... g++-40 -E
+[9-ERROR] checking for C++ support for new friend template declaration... yes
+[9-ERROR] checking if C++ library is ISO compliant... yes
+[9-ERROR] checking for i386-unknown-linux-gnu-nm... nm
+[9-ERROR] checking C++ ABI version used by g++-40... gnu_v3
+[9-ERROR] checking for i386-unknown-linux-gnu-gcc... (cached) gcc-40
+[9-ERROR] checking whether we are using the GNU C compiler... (cached) yes
+[9-ERROR] checking whether gcc-40 accepts -g... (cached) yes
+[9-ERROR] checking for gcc-40 option to accept ANSI C... (cached) none needed
+[9-ERROR] checking how to run the C preprocessor... gcc-40 -E
+[9-ERROR] checking whether gcc-40 needs -traditional... no
+[9-ERROR] checking whether gcc-40 accepts -mieee-fp... yes
+[9-ERROR] adding -mieee-fp to XTRA_CFLAGS
+[9-ERROR] checking whether g++-40 accepts -mieee-fp... yes
+[9-ERROR] adding -mieee-fp to XTRA_CXXFLAGS
+[9-ERROR] checking whether g++-40 prepends an underscore to external names... no
+[9-ERROR] checking for sin in -lm... yes
+[9-ERROR] checking for H5Pcreate in -lhdf5... yes
+[9-ERROR] checking for deflate in -lz... yes
+[9-ERROR] checking hdf5.h usability... yes
+[9-ERROR] checking hdf5.h presence... yes
+[9-ERROR] checking for hdf5.h... yes
+[9-ERROR] checking for H5Gget_num_objs in -lhdf5... yes
+[9-ERROR] checking fftw3.h usability... yes
+[9-ERROR] checking fftw3.h presence... yes
+[9-ERROR] checking for fftw3.h... yes
+[9-ERROR] checking for fftw_plan_dft_1d in -lfftw3... no
+[9-ERROR] checking for MPI_Init in -lmpi... no
+[9-ERROR] checking for IEEE 754 data format... yes
+[9-ERROR] checking for i386-unknown-linux-gnu-ranlib... ranlib
+[9-ERROR] checking for i386-unknown-linux-gnu-g77... f77
+[9-ERROR] checking whether we are using the GNU Fortran 77 compiler... no
+[9-ERROR] checking whether f77 accepts -g... no
+[9-ERROR] checking how to get verbose linking output from f77... configure: WARNING: compilation failed
+[9-ERROR] 
+[9-ERROR] checking for Fortran libraries of f77... 
+[9-ERROR] checking for dummy main to link with Fortran libraries... none
+[9-ERROR] checking for Fortran name-mangling scheme... configure: error: cannot compile a simple Fortran program
+[9-ERROR] See `config.log' for more details.
+[9-ERROR] --- BUILD ERROR ---
 

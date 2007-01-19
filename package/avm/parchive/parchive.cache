@@ -20,21 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142667041 Sat Mar 18 08:30:41 2006 (5)
-[TIMESTAMP] 1142937684 Tue Mar 21 11:41:24 2006 (9)
+[TIMESTAMP] 1168699720 Sat Jan 13 15:48:40 2007 (5) ERROR
+[TIMESTAMP] 1168909231 Tue Jan 16 02:00:31 2007 (9) ERROR
+[TIMESTAMP] 1168954431 Tue Jan 16 14:33:51 2007 (5) ERROR
+[TIMESTAMP] 1168984176 Tue Jan 16 22:49:36 2007 (9) ERROR
+[TIMESTAMP] 1169124763 Thu Jan 18 13:52:43 2007 (5) ERROR
+[TIMESTAMP] 1169154367 Thu Jan 18 22:06:07 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-parchive.log 9-parchive.log
+[LOGS] 5-parchive.err 9-parchive.err
 
-[BUILDTIME] 4843 (5)
-[BUILDTIME] 4945 (9)
-[SIZE] 0.98 MB, 10 files
+[BUILDTIME] 3488 (5) ERROR
+[BUILDTIME] 3478 (9) ERROR
+[BUILDTIME] 3503 (5) ERROR
+[BUILDTIME] 3518 (9) ERROR
+[BUILDTIME] 3501 (5) ERROR
+[BUILDTIME] 3504 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] net-tools rrdtool sed sysfiles tar util-linux
 
-[PROVIDES] par2 par2create par2repair par2verify
+[5-ERROR] par2fileformat.h:67: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+[5-ERROR] par2fileformat.h:68: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+[5-ERROR] par2fileformat.h:79: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+[5-ERROR] par2fileformat.h:86: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+[5-ERROR] par2fileformat.h:87: warning: ignoring packed attribute on unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0u]'
+[5-ERROR] par2fileformat.h:101: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+[5-ERROR] par2fileformat.h:102: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+[5-ERROR] par2fileformat.h:103: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+[5-ERROR] par2fileformat.h:131: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0u]'
+[5-ERROR] par1fileformat.h:41: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+[5-ERROR] par1fileformat.h:42: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+[5-ERROR] par1fileformat.h:56: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+[5-ERROR] par1fileformat.h:57: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.    -Wall -g -O2 -MT reedsolomon.o -MD -MP -MF ".deps/reedsolomon.Tpo" -c -o reedsolomon.o reedsolomon.cpp; \
+[5-ERROR] 	then mv -f ".deps/reedsolomon.Tpo" ".deps/reedsolomon.Po"; else rm -f ".deps/reedsolomon.Tpo"; exit 1; fi
+[5-ERROR] par2fileformat.h:67: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+[5-ERROR] par2fileformat.h:68: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+[5-ERROR] par2fileformat.h:79: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+[5-ERROR] par2fileformat.h:86: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+[5-ERROR] par2fileformat.h:87: warning: ignoring packed attribute on unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0u]'
+[5-ERROR] par2fileformat.h:101: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+[5-ERROR] par2fileformat.h:102: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+[5-ERROR] par2fileformat.h:103: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+[5-ERROR] par2fileformat.h:131: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0u]'
+[5-ERROR] par1fileformat.h:41: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+[5-ERROR] par1fileformat.h:42: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+[5-ERROR] par1fileformat.h:56: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+[5-ERROR] par1fileformat.h:57: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+[5-ERROR] reedsolomon.cpp:54: error: explicit specialization of 'bool ReedSolomon<Galois<8u, 285u, unsigned char> >::SetInput(const std::vector<bool, std::allocator<bool> >&)' must be introduced by 'template <>'
+[5-ERROR] reedsolomon.cpp:54: error: template-id 'SetInput<>' for 'bool ReedSolomon<Galois<8u, 285u, unsigned char> >::SetInput(const std::vector<bool, std::allocator<bool> >&)' does not match any template declaration
+[5-ERROR] reedsolomon.cpp:54: error: invalid function declaration
+[5-ERROR] reedsolomon.cpp:83: error: explicit specialization of 'bool ReedSolomon<Galois<8u, 285u, unsigned char> >::SetInput(u32)' must be introduced by 'template <>'
+[5-ERROR] reedsolomon.cpp:83: error: template-id 'SetInput<>' for 'bool ReedSolomon<Galois<8u, 285u, unsigned char> >::SetInput(u32)' does not match any template declaration
+[5-ERROR] reedsolomon.cpp:83: error: invalid function declaration
+[5-ERROR] reedsolomon.cpp:104: error: explicit specialization of 'bool ReedSolomon<Galois<8u, 285u, unsigned char> >::Process(size_t, u32, const void*, u32, void*)' must be introduced by 'template <>'
+[5-ERROR] reedsolomon.cpp:104: error: template-id 'Process<>' for 'bool ReedSolomon<Galois<8u, 285u, unsigned char> >::Process(size_t, u32, const void*, u32, void*)' does not match any template declaration
+[5-ERROR] reedsolomon.cpp:104: error: invalid function declaration
+[5-ERROR] reedsolomon.cpp:192: error: explicit specialization of 'bool ReedSolomon<Galois<16u, 69643u, short unsigned int> >::SetInput(const std::vector<bool, std::allocator<bool> >&)' must be introduced by 'template <>'
+[5-ERROR] reedsolomon.cpp:192: error: template-id 'SetInput<>' for 'bool ReedSolomon<Galois<16u, 69643u, short unsigned int> >::SetInput(const std::vector<bool, std::allocator<bool> >&)' does not match any template declaration
+[5-ERROR] reedsolomon.cpp:192: error: invalid function declaration
+[5-ERROR] reedsolomon.cpp:236: error: explicit specialization of 'bool ReedSolomon<Galois<16u, 69643u, short unsigned int> >::SetInput(u32)' must be introduced by 'template <>'
+[5-ERROR] reedsolomon.cpp:236: error: template-id 'SetInput<>' for 'bool ReedSolomon<Galois<16u, 69643u, short unsigned int> >::SetInput(u32)' does not match any template declaration
+[5-ERROR] reedsolomon.cpp:236: error: invalid function declaration
+[5-ERROR] reedsolomon.cpp:270: error: explicit specialization of 'bool ReedSolomon<Galois<16u, 69643u, short unsigned int> >::Process(size_t, u32, const void*, u32, void*)' must be introduced by 'template <>'
+[5-ERROR] reedsolomon.cpp:270: error: template-id 'Process<>' for 'bool ReedSolomon<Galois<16u, 69643u, short unsigned int> >::Process(size_t, u32, const void*, u32, void*)' does not match any template declaration
+[5-ERROR] reedsolomon.cpp:270: error: invalid function declaration
+[5-ERROR] make[1]: *** [reedsolomon.o] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.parchive.1169124727.16276.3641098646/par2cmdline-0.4'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] par2fileformat.h:67: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+[9-ERROR] par2fileformat.h:68: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+[9-ERROR] par2fileformat.h:79: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+[9-ERROR] par2fileformat.h:86: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+[9-ERROR] par2fileformat.h:87: warning: ignoring packed attribute on unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0u]'
+[9-ERROR] par2fileformat.h:101: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+[9-ERROR] par2fileformat.h:102: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+[9-ERROR] par2fileformat.h:103: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+[9-ERROR] par2fileformat.h:131: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0u]'
+[9-ERROR] par1fileformat.h:41: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+[9-ERROR] par1fileformat.h:42: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+[9-ERROR] par1fileformat.h:56: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+[9-ERROR] par1fileformat.h:57: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.    -Wall -g -O2 -MT reedsolomon.o -MD -MP -MF ".deps/reedsolomon.Tpo" -c -o reedsolomon.o reedsolomon.cpp; \
+[9-ERROR] 	then mv -f ".deps/reedsolomon.Tpo" ".deps/reedsolomon.Po"; else rm -f ".deps/reedsolomon.Tpo"; exit 1; fi
+[9-ERROR] par2fileformat.h:67: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash PACKET_HEADER::hash'
+[9-ERROR] par2fileformat.h:68: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash PACKET_HEADER::setid'
+[9-ERROR] par2fileformat.h:79: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash FILEVERIFICATIONENTRY::hash'
+[9-ERROR] par2fileformat.h:86: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash FILEVERIFICATIONPACKET::fileid'
+[9-ERROR] par2fileformat.h:87: warning: ignoring packed attribute on unpacked non-POD field 'FILEVERIFICATIONENTRY FILEVERIFICATIONPACKET::entries [0u]'
+[9-ERROR] par2fileformat.h:101: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::fileid'
+[9-ERROR] par2fileformat.h:102: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hashfull'
+[9-ERROR] par2fileformat.h:103: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash FILEDESCRIPTIONPACKET::hash16k'
+[9-ERROR] par2fileformat.h:131: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash MAINPACKET::fileid [0u]'
+[9-ERROR] par1fileformat.h:41: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash PAR1FILEHEADER::controlhash'
+[9-ERROR] par1fileformat.h:42: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash PAR1FILEHEADER::sethash'
+[9-ERROR] par1fileformat.h:56: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hashfull'
+[9-ERROR] par1fileformat.h:57: warning: ignoring packed attribute on unpacked non-POD field 'MD5Hash PAR1FILEENTRY::hash16k'
+[9-ERROR] reedsolomon.cpp:54: error: explicit specialization of 'bool ReedSolomon<Galois<8u, 285u, unsigned char> >::SetInput(const std::vector<bool, std::allocator<bool> >&)' must be introduced by 'template <>'
+[9-ERROR] reedsolomon.cpp:54: error: template-id 'SetInput<>' for 'bool ReedSolomon<Galois<8u, 285u, unsigned char> >::SetInput(const std::vector<bool, std::allocator<bool> >&)' does not match any template declaration
+[9-ERROR] reedsolomon.cpp:54: error: invalid function declaration
+[9-ERROR] reedsolomon.cpp:83: error: explicit specialization of 'bool ReedSolomon<Galois<8u, 285u, unsigned char> >::SetInput(u32)' must be introduced by 'template <>'
+[9-ERROR] reedsolomon.cpp:83: error: template-id 'SetInput<>' for 'bool ReedSolomon<Galois<8u, 285u, unsigned char> >::SetInput(u32)' does not match any template declaration
+[9-ERROR] reedsolomon.cpp:83: error: invalid function declaration
+[9-ERROR] reedsolomon.cpp:104: error: explicit specialization of 'bool ReedSolomon<Galois<8u, 285u, unsigned char> >::Process(size_t, u32, const void*, u32, void*)' must be introduced by 'template <>'
+[9-ERROR] reedsolomon.cpp:104: error: template-id 'Process<>' for 'bool ReedSolomon<Galois<8u, 285u, unsigned char> >::Process(size_t, u32, const void*, u32, void*)' does not match any template declaration
+[9-ERROR] reedsolomon.cpp:104: error: invalid function declaration
+[9-ERROR] reedsolomon.cpp:192: error: explicit specialization of 'bool ReedSolomon<Galois<16u, 69643u, short unsigned int> >::SetInput(const std::vector<bool, std::allocator<bool> >&)' must be introduced by 'template <>'
+[9-ERROR] reedsolomon.cpp:192: error: template-id 'SetInput<>' for 'bool ReedSolomon<Galois<16u, 69643u, short unsigned int> >::SetInput(const std::vector<bool, std::allocator<bool> >&)' does not match any template declaration
+[9-ERROR] reedsolomon.cpp:192: error: invalid function declaration
+[9-ERROR] reedsolomon.cpp:236: error: explicit specialization of 'bool ReedSolomon<Galois<16u, 69643u, short unsigned int> >::SetInput(u32)' must be introduced by 'template <>'
+[9-ERROR] reedsolomon.cpp:236: error: template-id 'SetInput<>' for 'bool ReedSolomon<Galois<16u, 69643u, short unsigned int> >::SetInput(u32)' does not match any template declaration
+[9-ERROR] reedsolomon.cpp:236: error: invalid function declaration
+[9-ERROR] reedsolomon.cpp:270: error: explicit specialization of 'bool ReedSolomon<Galois<16u, 69643u, short unsigned int> >::Process(size_t, u32, const void*, u32, void*)' must be introduced by 'template <>'
+[9-ERROR] reedsolomon.cpp:270: error: template-id 'Process<>' for 'bool ReedSolomon<Galois<16u, 69643u, short unsigned int> >::Process(size_t, u32, const void*, u32, void*)' does not match any template declaration
+[9-ERROR] reedsolomon.cpp:270: error: invalid function declaration
+[9-ERROR] make[1]: *** [reedsolomon.o] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.parchive.1169154331.6806.3951810427/par2cmdline-0.4'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

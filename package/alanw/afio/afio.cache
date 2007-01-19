@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142672838 Sat Mar 18 10:07:18 2006 (5)
-[TIMESTAMP] 1142944018 Tue Mar 21 13:26:58 2006 (9)
+[TIMESTAMP] 1168703066 Sat Jan 13 16:44:26 2007 (5)
+[TIMESTAMP] 1168912815 Tue Jan 16 03:00:15 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-afio.log 9-afio.log
 
-[BUILDTIME] 1554 (5)
-[BUILDTIME] 1623 (9)
+[BUILDTIME] 1565 (5)
+[BUILDTIME] 1588 (9)
 [SIZE] 0.11 MB, 8 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] patch rrdtool sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils gawk gcc40
+[DEP] gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev make
+[DEP] mktemp netpbm patch rrdtool sed sysfiles tar twoftpd ucspi-unix
 
 [PROVIDES] afio
 

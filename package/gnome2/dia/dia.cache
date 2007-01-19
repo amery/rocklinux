@@ -20,41 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142556290 Fri Mar 17 01:44:50 2006 (5)
-[TIMESTAMP] 1142815372 Mon Mar 20 01:42:52 2006 (9)
+[TIMESTAMP] 1168625219 Fri Jan 12 19:06:59 2007 (5) ERROR
+[TIMESTAMP] 1168829141 Mon Jan 15 03:45:41 2007 (9) ERROR
+[TIMESTAMP] 1168947544 Tue Jan 16 12:39:04 2007 (5) ERROR
+[TIMESTAMP] 1168974533 Tue Jan 16 20:08:53 2007 (9) ERROR
+[TIMESTAMP] 1169090959 Thu Jan 18 04:29:19 2007 (5) ERROR
+[TIMESTAMP] 1169144825 Thu Jan 18 19:27:05 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-dia.log 9-dia.log
+[LOGS] 5-dia.err 9-dia.err
 
-[BUILDTIME] 32502 (5)
-[BUILDTIME] 33531 (9)
-[SIZE] 9.48 MB, 1426 files
+[BUILDTIME] 27584 (5) ERROR
+[BUILDTIME] 27778 (9) ERROR
+[BUILDTIME] 27845 (5) ERROR
+[BUILDTIME] 27820 (9) ERROR
+[BUILDTIME] 27819 (5) ERROR
+[BUILDTIME] 27832 (9) ERROR
 
-[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
-[DEP] bash2 binutils bzip2 cairo cairo:dev coreutils cpan-xml-parser
-[DEP] diffutils esound esound:dev expat findutils freetype freetype:dev
-[DEP] gawk gcc34 gcc34:dev gconf gconf:dev gettext glib glib:dev glibc23
-[DEP] glibc23:dev gnome-keyring gnome-keyring-manager gnome-keyring:dev
-[DEP] gnome-vfs gnome-vfs:dev gnome2-dirtree gnopernicus grep gtk+
-[DEP] gtk+:dev libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev
-[DEP] libbonoboui libbonoboui:dev libgnome libgnome:dev libgnomecanvas
-[DEP] libgnomecanvas:dev libgnomeui libgnomeui:dev libjpeg libjpeg:dev
-[DEP] libpng libpng:dev libxml2 libxml2:dev libxslt libxslt:dev
-[DEP] linux26-header:dev make mktemp net-tools openssl orbit2 orbit2:dev
-[DEP] pango pango:dev patch perl5 pkgconfig popt popt:dev pygtk python
-[DEP] python:dev rrdtool scrollkeeper sed sysfiles tar tcl tk util-linux
-[DEP] xorg xorg:dev zlib:dev
 
-[PROVIDES] dia libbondgraph_objects.so libcairo_filter.so libcgm_filter.so
-[PROVIDES] libchronogram_objects.so libcustom_objects.so libdia.so
-[PROVIDES] libdxf_filter.so liber_objects.so libflowchart_objects.so
-[PROVIDES] libfs_objects.so libgrafcet_objects.so libhpgl_filter.so
-[PROVIDES] libistar_objects.so libjackson_objects.so libkaos_objects.so
-[PROVIDES] libmetapost_filter.so libmisc_objects.so libnetwork_objects.so
-[PROVIDES] libpixbuf_filter.so libpstricks_filter.so libpython_plugin.so
-[PROVIDES] libsadt_objects.so libshape_filter.so libstandard_objects.so
-[PROVIDES] libsvg_filter.so libuml_objects.so libwmf_filter.so
-[PROVIDES] libwpg_filter.so libxfig_filter.so libxslt_filter.so
+[5-ERROR] CREATED AADL.sheet
+[5-ERROR] ../intltool-merge ../po Gane_and_Sarson.sheet.in Gane_and_Sarson.sheet -x -u \
+[5-ERROR] 	 	-c ../po/.intltool-merge-cache
+[5-ERROR] Found cached translation database
+[5-ERROR] Merging translations into Gane_and_Sarson.sheet.
+[5-ERROR] CREATED Gane_and_Sarson.sheet
+[5-ERROR] (cd . && ./checktrans UML.sheet ER.sheet sybase.sheet FS.sheet network.sheet Flowchart.sheet Circuit.sheet Contact.sheet GRAFCET.sheet chronogram.sheet SADT.sheet Pneumatic.sheet Electric.sheet civil.sheet jigsaw.sheet MSE.sheet SDL.sheet Logic.sheet EML.sheet Misc.sheet Assorted.sheet ciscocomputer.sheet ciscohub.sheet ciscomisc.sheet cisconetwork.sheet ciscotelephony.sheet Cybernetics.sheet IsometricMap.sheet Istar.sheet Jackson.sheet KAOS.sheet ChemEng.sheet AADL.sheet Gane_and_Sarson.sheet)
+[5-ERROR] Traceback (most recent call last):
+[5-ERROR]   File "./checktrans.py", line 154, in ?
+[5-ERROR]     p.parse("file://localhost" + os.getcwd() + "/" + name)
+[5-ERROR]   File "/usr/lib/python2.4/site-packages/_xmlplus/sax/drivers/drv_pyexpat.py", line 59, in parse
+[5-ERROR]     self.parseFile(urllib2.urlopen(sysID),sysID)
+[5-ERROR]   File "/usr/lib/python2.4/urllib2.py", line 130, in urlopen
+[5-ERROR]     return _opener.open(url, data)
+[5-ERROR]   File "/usr/lib/python2.4/urllib2.py", line 358, in open
+[5-ERROR]     response = self._open(req, data)
+[5-ERROR]   File "/usr/lib/python2.4/urllib2.py", line 376, in _open
+[5-ERROR]     '_open', req)
+[5-ERROR]   File "/usr/lib/python2.4/urllib2.py", line 337, in _call_chain
+[5-ERROR]     result = func(*args)
+[5-ERROR]   File "/usr/lib/python2.4/urllib2.py", line 1116, in file_open
+[5-ERROR]     return self.open_local_file(req)
+[5-ERROR]   File "/usr/lib/python2.4/urllib2.py", line 1141, in open_local_file
+[5-ERROR]     if not host or \
+[5-ERROR]   File "/usr/lib/python2.4/urllib2.py", line 1122, in get_names
+[5-ERROR]     FileHandler.names = (socket.gethostbyname('localhost'),
+[5-ERROR] socket.gaierror: (-3, 'Temporary failure in name resolution')
+[5-ERROR] *** Sheet translation report: ***
+[5-ERROR] (Absence of a language code means 0% translation for that language)
+[5-ERROR] (Help for translations (and/or much more) is of course welcome !)
+[5-ERROR] E: checktrans failed to run. Please check that python and python-xml are installed
+[5-ERROR] E: on your system. On some systems, python-xml is called PyXML. If in doubt,
+[5-ERROR] E: have a look at http://pyxml.sourceforge.net
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.dia.1169090674.27876.3434750941/dia-0.95-1/sheets'
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.dia.1169090674.27876.3434750941/dia-0.95-1/sheets'
+[5-ERROR] Making all in doc
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.dia.1169090674.27876.3434750941/dia-0.95-1/doc'
+[5-ERROR] Making all in en
+[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.dia.1169090674.27876.3434750941/dia-0.95-1/doc/en'
+[5-ERROR] xsltproc --nonet --novalid http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl dia.dbk >dia.1
+[5-ERROR] warning: failed to load external entity "http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl"
+[5-ERROR] cannot parse http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl
+[5-ERROR] make[3]: *** [dia.1] Error 4
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.dia.1169090674.27876.3434750941/dia-0.95-1/doc/en'
+[5-ERROR] make[2]: *** [all-recursive] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.dia.1169090674.27876.3434750941/dia-0.95-1/doc'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.dia.1169090674.27876.3434750941/dia-0.95-1'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] CREATED AADL.sheet
+[9-ERROR] ../intltool-merge ../po Gane_and_Sarson.sheet.in Gane_and_Sarson.sheet -x -u \
+[9-ERROR] 	 	-c ../po/.intltool-merge-cache
+[9-ERROR] Found cached translation database
+[9-ERROR] Merging translations into Gane_and_Sarson.sheet.
+[9-ERROR] CREATED Gane_and_Sarson.sheet
+[9-ERROR] (cd . && ./checktrans UML.sheet ER.sheet sybase.sheet FS.sheet network.sheet Flowchart.sheet Circuit.sheet Contact.sheet GRAFCET.sheet chronogram.sheet SADT.sheet Pneumatic.sheet Electric.sheet civil.sheet jigsaw.sheet MSE.sheet SDL.sheet Logic.sheet EML.sheet Misc.sheet Assorted.sheet ciscocomputer.sheet ciscohub.sheet ciscomisc.sheet cisconetwork.sheet ciscotelephony.sheet Cybernetics.sheet IsometricMap.sheet Istar.sheet Jackson.sheet KAOS.sheet ChemEng.sheet AADL.sheet Gane_and_Sarson.sheet)
+[9-ERROR] Traceback (most recent call last):
+[9-ERROR]   File "./checktrans.py", line 154, in ?
+[9-ERROR]     p.parse("file://localhost" + os.getcwd() + "/" + name)
+[9-ERROR]   File "/usr/lib/python2.4/site-packages/_xmlplus/sax/drivers/drv_pyexpat.py", line 59, in parse
+[9-ERROR]     self.parseFile(urllib2.urlopen(sysID),sysID)
+[9-ERROR]   File "/usr/lib/python2.4/urllib2.py", line 130, in urlopen
+[9-ERROR]     return _opener.open(url, data)
+[9-ERROR]   File "/usr/lib/python2.4/urllib2.py", line 358, in open
+[9-ERROR]     response = self._open(req, data)
+[9-ERROR]   File "/usr/lib/python2.4/urllib2.py", line 376, in _open
+[9-ERROR]     '_open', req)
+[9-ERROR]   File "/usr/lib/python2.4/urllib2.py", line 337, in _call_chain
+[9-ERROR]     result = func(*args)
+[9-ERROR]   File "/usr/lib/python2.4/urllib2.py", line 1116, in file_open
+[9-ERROR]     return self.open_local_file(req)
+[9-ERROR]   File "/usr/lib/python2.4/urllib2.py", line 1141, in open_local_file
+[9-ERROR]     if not host or \
+[9-ERROR]   File "/usr/lib/python2.4/urllib2.py", line 1122, in get_names
+[9-ERROR]     FileHandler.names = (socket.gethostbyname('localhost'),
+[9-ERROR] socket.gaierror: (-3, 'Temporary failure in name resolution')
+[9-ERROR] *** Sheet translation report: ***
+[9-ERROR] (Absence of a language code means 0% translation for that language)
+[9-ERROR] (Help for translations (and/or much more) is of course welcome !)
+[9-ERROR] E: checktrans failed to run. Please check that python and python-xml are installed
+[9-ERROR] E: on your system. On some systems, python-xml is called PyXML. If in doubt,
+[9-ERROR] E: have a look at http://pyxml.sourceforge.net
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.dia.1169144543.20135.3174803688/dia-0.95-1/sheets'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.dia.1169144543.20135.3174803688/dia-0.95-1/sheets'
+[9-ERROR] Making all in doc
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.dia.1169144543.20135.3174803688/dia-0.95-1/doc'
+[9-ERROR] Making all in en
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.dia.1169144543.20135.3174803688/dia-0.95-1/doc/en'
+[9-ERROR] xsltproc --nonet --novalid http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl dia.dbk >dia.1
+[9-ERROR] warning: failed to load external entity "http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl"
+[9-ERROR] cannot parse http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl
+[9-ERROR] make[3]: *** [dia.1] Error 4
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.dia.1169144543.20135.3174803688/dia-0.95-1/doc/en'
+[9-ERROR] make[2]: *** [all-recursive] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.dia.1169144543.20135.3174803688/dia-0.95-1/doc'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.dia.1169144543.20135.3174803688/dia-0.95-1'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

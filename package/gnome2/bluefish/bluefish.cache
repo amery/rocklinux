@@ -20,29 +20,33 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142516673 Thu Mar 16 14:44:33 2006 (5)
-[TIMESTAMP] 1142770209 Sun Mar 19 13:10:09 2006 (9)
+[TIMESTAMP] 1168694509 Sat Jan 13 14:21:49 2007 (5) ERROR
+[TIMESTAMP] 1168903573 Tue Jan 16 00:26:13 2007 (9) ERROR
+[TIMESTAMP] 1168953829 Tue Jan 16 14:23:49 2007 (5) ERROR
+[TIMESTAMP] 1168983556 Tue Jan 16 22:39:16 2007 (9) ERROR
+[TIMESTAMP] 1169124162 Thu Jan 18 13:42:42 2007 (5) ERROR
+[TIMESTAMP] 1169153750 Thu Jan 18 21:55:50 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-bluefish.log 9-bluefish.log
+[LOGS] 5-bluefish.err 9-bluefish.err
 
-[BUILDTIME] 6312 (5)
-[BUILDTIME] 6823 (9)
-[SIZE] 6.01 MB, 63 files
+[BUILDTIME] 131 (5) ERROR
+[BUILDTIME] 139 (9) ERROR
+[BUILDTIME] 136 (5) ERROR
+[BUILDTIME] 140 (9) ERROR
+[BUILDTIME] 142 (5) ERROR
+[BUILDTIME] 136 (9) ERROR
 
-[DEP] 00-dirtree alsa aspell aspell:dev atk atk:dev audiofile bash2
-[DEP] binutils bison bzip2 cairo cairo:dev coreutils desktop-file-utils
-[DEP] diffutils esound expat findutils freetype gawk gcc34 gcc34:dev gconf
-[DEP] gettext glib glib:dev glibc23 glibc23:dev gnome-keyring gnome-vfs
-[DEP] gnome-vfs:dev gnome2-dirtree grep gtk+ gtk+:dev libart_lgpl23
-[DEP] libart_lgpl23:dev libbonobo libbonoboui libbonoboui:dev libgnome
-[DEP] libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeui
-[DEP] libgnomeui:dev libjpeg libpng libxml2 linux26-header:dev make
-[DEP] mktemp net-tools openssl orbit2 pango pango:dev patch pcre pcre:dev
-[DEP] pkgconfig popt popt:dev rrdtool sed shared-mime-info sysfiles tar
-[DEP] tsclient util-linux xorg zlib:dev
 
-[PROVIDES] bluefish
+[5-ERROR] File not found: download/mirror/b/bluefish-1.0.5.tar.bz2
+[5-ERROR] Did you run ./scripts/Download for this package?
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] File not found: download/mirror/b/bluefish-1.0.5.tar.bz2
+[9-ERROR] Did you run ./scripts/Download for this package?
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] --- BUILD ERROR ---
 

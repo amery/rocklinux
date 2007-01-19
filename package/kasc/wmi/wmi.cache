@@ -20,22 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142649790 Sat Mar 18 03:43:10 2006 (5)
-[TIMESTAMP] 1142919072 Tue Mar 21 06:31:12 2006 (9)
+[TIMESTAMP] 1168691867 Sat Jan 13 13:37:47 2007 (5)
+[TIMESTAMP] 1168900804 Mon Jan 15 23:40:04 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-wmi.log 9-wmi.log
 
-[BUILDTIME] 6061 (5)
-[BUILDTIME] 6265 (9)
-[SIZE] 0.52 MB, 15 files
+[BUILDTIME] 5781 (5)
+[BUILDTIME] 5877 (9)
+[SIZE] 0.51 MB, 15 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils expat findutils
-[DEP] freetype freetype:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev
-[DEP] grep linux26-header:dev make mktemp net-tools pkgconfig rrdtool
-[DEP] sed sysfiles tar util-linux xorg xorg:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm diffutils expat findutils fontconfig fontconfig:dev
+[DEP] freetype freetype:dev gawk gcc40 gcc40:dev glibc23 glibc23:dev
+[DEP] grep imake libice libsm libx11 libx11:dev libxau libxdmcp libxft
+[DEP] libxft:dev libxrender libxrender:dev libxt linux-libc-headers:dev
+[DEP] make mktemp net-tools netpbm pkgconfig renderproto:dev rrdtool
+[DEP] sed sysfiles tar twm twoftpd ucspi-unix util-linux xorg-cf-files
+[DEP] xproto:dev zlib
 
 [PROVIDES] wmi wmiremote
 

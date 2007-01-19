@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142577120 Fri Mar 17 07:32:00 2006 (5)
-[TIMESTAMP] 1142840741 Mon Mar 20 08:45:41 2006 (9)
+[TIMESTAMP] 1168639574 Fri Jan 12 23:06:14 2007 (5)
+[TIMESTAMP] 1168845384 Mon Jan 15 08:16:24 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-bacula.log 9-bacula.log
 
-[BUILDTIME] 9128 (5)
-[BUILDTIME] 9524 (9)
-[SIZE] 2.16 MB, 52 files
+[BUILDTIME] 8833 (5)
+[BUILDTIME] 9078 (9)
+[SIZE] 1.99 MB, 52 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp ncurses:dev net-tools openssl rrdtool sed sysfiles tar
-[DEP] util-linux xorg zlib:dev
+[DEP] 00-dirtree applewmproto bash2 binutils bzip2 coreutils cvm diffutils
+[DEP] findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev grep imake
+[DEP] libice libx11 libxau libxdmcp libxt linux-libc-headers:dev make
+[DEP] mktemp ncurses ncurses:dev net-tools openssl rrdtool sed sysfiles
+[DEP] tar util-linux xorg-cf-files zlib zlib:dev
 
 [PROVIDES] bacula-dir bacula-fd bacula-sd bconsole bcopy bextract bls
 [PROVIDES] bscan bsmtp btape btraceback dbcheck

@@ -20,28 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142488935 Thu Mar 16 07:02:15 2006 (5)
-[TIMESTAMP] 1142737503 Sun Mar 19 04:05:03 2006 (9)
+[TIMESTAMP] 1168566211 Fri Jan 12 02:43:31 2007 (5) ERROR
+[TIMESTAMP] 1168763677 Sun Jan 14 09:34:37 2007 (9) ERROR
+[TIMESTAMP] 1168941521 Tue Jan 16 10:58:41 2007 (5) ERROR
+[TIMESTAMP] 1168963547 Tue Jan 16 17:05:47 2007 (9) ERROR
+[TIMESTAMP] 1169084910 Thu Jan 18 02:48:30 2007 (5) ERROR
+[TIMESTAMP] 1169133839 Thu Jan 18 16:23:59 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-evas.log 9-evas.log
+[LOGS] 5-evas.err 9-evas.err
 
-[BUILDTIME] 14103 (5)
-[BUILDTIME] 14823 (9)
-[SIZE] 1.40 MB, 40 files
+[BUILDTIME] 12605 (5) ERROR
+[BUILDTIME] 12797 (9) ERROR
+[BUILDTIME] 12852 (5) ERROR
+[BUILDTIME] 12852 (9) ERROR
+[BUILDTIME] 12843 (5) ERROR
+[BUILDTIME] 12860 (9) ERROR
 
-[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils directfb directfb:dev edb edb:dev eet eet:dev findutils
-[DEP] freetype freetype:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev
-[DEP] gnome-libs14 gnome14-dirtree grep imlib2 libjpeg libjpeg:dev libpng
-[DEP] libpng:dev libtool linux26-header:dev m4 make mktemp net-tools patch
-[DEP] perl5 pkgconfig rrdtool sed sysfiles tar util-linux valgrind:dev
-[DEP] xorg xorg:dev zlib:dev
 
-[PROVIDES] evas-config evas_buffer_test evas_directfb_test
-[PROVIDES] evas_directfb_window evas_fb_test evas_gl_x11_test
-[PROVIDES] evas_software_x11_perf_load evas_software_x11_perf_test
-[PROVIDES] evas_software_x11_test libevas.a libevas.so
+[5-ERROR] gcc-40: -lz: linker input file unused because linking not done
+[5-ERROR] gcc-40: -lm: linker input file unused because linking not done
+[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I. -I../../src/lib -I../.. -D_REENTRANT -I/usr/include/directfb    -I/usr/include   -g -O2 -I/usr/X11R7/include -g -O2 -MT evas_software_x11_test-evas_software_x11_main.o -MD -MP -MF ".deps/evas_software_x11_test-evas_software_x11_main.Tpo" -c -o evas_software_x11_test-evas_software_x11_main.o `test -f 'evas_software_x11_main.c' || echo './'`evas_software_x11_main.c; \
+[5-ERROR] 	then mv -f ".deps/evas_software_x11_test-evas_software_x11_main.Tpo" ".deps/evas_software_x11_test-evas_software_x11_main.Po"; else rm -f ".deps/evas_software_x11_test-evas_software_x11_main.Tpo"; exit 1; fi
+[5-ERROR] gcc-40: -lz: linker input file unused because linking not done
+[5-ERROR] gcc-40: -lm: linker input file unused because linking not done
+[5-ERROR] /bin/sh ../../libtool --tag=CC --mode=link gcc-40  -g -O2   -o evas_software_x11_test  evas_software_x11_test-evas_test_main.o evas_software_x11_test-evas_software_x11_main.o ../../src/lib/libevas.la -lm -L/usr/X11R7/lib -lX11 -lXext 
+[5-ERROR] mkdir .libs
+[5-ERROR] gcc-40 -g -O2 -o .libs/evas_software_x11_test evas_software_x11_test-evas_test_main.o evas_software_x11_test-evas_software_x11_main.o  ../../src/lib/.libs/libevas.so /usr/lib/libfreetype.so /usr/lib/libpng12.so -L/opt/e17/lib /opt/e17/lib/libeet.so /usr/lib/libjpeg.so /opt/e17/lib/libedb.so -L/usr/X11R7/lib /usr/lib/libdirectfb.so /usr/lib/libfusion.so /usr/lib/libdirect.so -lz -lGL -lGLU -lpthread -lm /usr/X11R7/lib/libXext.so /usr/X11R7/lib/libX11.so /usr/X11R7/lib/libXdmcp.so -ldl /usr/X11R7/lib/libXau.so -Wl,--rpath -Wl,/usr/X11R7/lib
+[5-ERROR] creating evas_software_x11_test
+[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I. -I../../src/lib -I../.. -D_REENTRANT -I/usr/include/directfb    -I/usr/include   -g -O2 -I/usr/X11R7/include -g -O2 -MT evas_software_x11_perf_test-evas_software_x11_perf_test.o -MD -MP -MF ".deps/evas_software_x11_perf_test-evas_software_x11_perf_test.Tpo" -c -o evas_software_x11_perf_test-evas_software_x11_perf_test.o `test -f 'evas_software_x11_perf_test.c' || echo './'`evas_software_x11_perf_test.c; \
+[5-ERROR] 	then mv -f ".deps/evas_software_x11_perf_test-evas_software_x11_perf_test.Tpo" ".deps/evas_software_x11_perf_test-evas_software_x11_perf_test.Po"; else rm -f ".deps/evas_software_x11_perf_test-evas_software_x11_perf_test.Tpo"; exit 1; fi
+[5-ERROR] gcc-40: -lz: linker input file unused because linking not done
+[5-ERROR] gcc-40: -lm: linker input file unused because linking not done
+[5-ERROR] /bin/sh ../../libtool --tag=CC --mode=link gcc-40  -g -O2   -o evas_software_x11_perf_test  evas_software_x11_perf_test-evas_software_x11_perf_test.o ../../src/lib/libevas.la -lm -L/usr/X11R7/lib -lX11 -lXext 
+[5-ERROR] gcc-40 -g -O2 -o .libs/evas_software_x11_perf_test evas_software_x11_perf_test-evas_software_x11_perf_test.o  ../../src/lib/.libs/libevas.so /usr/lib/libfreetype.so /usr/lib/libpng12.so -L/opt/e17/lib /opt/e17/lib/libeet.so /usr/lib/libjpeg.so /opt/e17/lib/libedb.so -L/usr/X11R7/lib /usr/lib/libdirectfb.so /usr/lib/libfusion.so /usr/lib/libdirect.so -lz -lGL -lGLU -lpthread -lm /usr/X11R7/lib/libXext.so /usr/X11R7/lib/libX11.so /usr/X11R7/lib/libXdmcp.so -ldl /usr/X11R7/lib/libXau.so -Wl,--rpath -Wl,/usr/X11R7/lib
+[5-ERROR] creating evas_software_x11_perf_test
+[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I. -I../../src/lib -I../.. -D_REENTRANT -I/usr/include/directfb    -I/usr/include   -g -O2 -I/usr/X11R7/include -g -O2 -MT evas_software_x11_perf_load-evas_software_x11_perf_load.o -MD -MP -MF ".deps/evas_software_x11_perf_load-evas_software_x11_perf_load.Tpo" -c -o evas_software_x11_perf_load-evas_software_x11_perf_load.o `test -f 'evas_software_x11_perf_load.c' || echo './'`evas_software_x11_perf_load.c; \
+[5-ERROR] 	then mv -f ".deps/evas_software_x11_perf_load-evas_software_x11_perf_load.Tpo" ".deps/evas_software_x11_perf_load-evas_software_x11_perf_load.Po"; else rm -f ".deps/evas_software_x11_perf_load-evas_software_x11_perf_load.Tpo"; exit 1; fi
+[5-ERROR] gcc-40: -lz: linker input file unused because linking not done
+[5-ERROR] gcc-40: -lm: linker input file unused because linking not done
+[5-ERROR] /bin/sh ../../libtool --tag=CC --mode=link gcc-40  -g -O2   -o evas_software_x11_perf_load  evas_software_x11_perf_load-evas_software_x11_perf_load.o ../../src/lib/libevas.la -lm -L/usr/X11R7/lib -lX11 -lXext 
+[5-ERROR] gcc-40 -g -O2 -o .libs/evas_software_x11_perf_load evas_software_x11_perf_load-evas_software_x11_perf_load.o  ../../src/lib/.libs/libevas.so /usr/lib/libfreetype.so /usr/lib/libpng12.so -L/opt/e17/lib /opt/e17/lib/libeet.so /usr/lib/libjpeg.so /opt/e17/lib/libedb.so -L/usr/X11R7/lib /usr/lib/libdirectfb.so /usr/lib/libfusion.so /usr/lib/libdirect.so -lz -lGL -lGLU -lpthread -lm /usr/X11R7/lib/libXext.so /usr/X11R7/lib/libX11.so /usr/X11R7/lib/libXdmcp.so -ldl /usr/X11R7/lib/libXau.so -Wl,--rpath -Wl,/usr/X11R7/lib
+[5-ERROR] creating evas_software_x11_perf_load
+[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I. -I../../src/lib -I../.. -D_REENTRANT -I/usr/include/directfb    -I/usr/include   -g -O2 -D_REENTRANT -I/usr/include/directfb   -g -O2 -MT evas_directfb_test-evas_test_main.o -MD -MP -MF ".deps/evas_directfb_test-evas_test_main.Tpo" -c -o evas_directfb_test-evas_test_main.o `test -f 'evas_test_main.c' || echo './'`evas_test_main.c; \
+[5-ERROR] 	then mv -f ".deps/evas_directfb_test-evas_test_main.Tpo" ".deps/evas_directfb_test-evas_test_main.Po"; else rm -f ".deps/evas_directfb_test-evas_test_main.Tpo"; exit 1; fi
+[5-ERROR] evas_test_main.c: In function 'scroll_setup':
+[5-ERROR] evas_test_main.c:2021: warning: passing argument 3 of 'evas_object_event_callback_add' from incompatible pointer type
+[5-ERROR] evas_test_main.c: In function 'setup':
+[5-ERROR] evas_test_main.c:2067: warning: passing argument 3 of 'evas_object_event_callback_add' from incompatible pointer type
+[5-ERROR] gcc-40: -lz: linker input file unused because linking not done
+[5-ERROR] gcc-40: -lm: linker input file unused because linking not done
+[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I. -I../../src/lib -I../.. -D_REENTRANT -I/usr/include/directfb    -I/usr/include   -g -O2 -D_REENTRANT -I/usr/include/directfb   -g -O2 -MT evas_directfb_test-evas_directfb_main.o -MD -MP -MF ".deps/evas_directfb_test-evas_directfb_main.Tpo" -c -o evas_directfb_test-evas_directfb_main.o `test -f 'evas_directfb_main.c' || echo './'`evas_directfb_main.c; \
+[5-ERROR] 	then mv -f ".deps/evas_directfb_test-evas_directfb_main.Tpo" ".deps/evas_directfb_test-evas_directfb_main.Po"; else rm -f ".deps/evas_directfb_test-evas_directfb_main.Tpo"; exit 1; fi
+[5-ERROR] evas_directfb_main.c: In function 'main':
+[5-ERROR] evas_directfb_main.c:29: error: 'DFBCardCapabilities' undeclared (first use in this function)
+[5-ERROR] evas_directfb_main.c:29: error: (Each undeclared identifier is reported only once
+[5-ERROR] evas_directfb_main.c:29: error: for each function it appears in.)
+[5-ERROR] evas_directfb_main.c:29: error: syntax error before 'caps'
+[5-ERROR] evas_directfb_main.c:48: warning: incompatible implicit declaration of built-in function 'memset'
+[5-ERROR] make[4]: *** [evas_directfb_test-evas_directfb_main.o] Error 1
+[5-ERROR] make[4]: Leaving directory `/ROCK/loop/src.evas.1169084778.12247.3583069520/evas-2005-09-11/src/bin'
+[5-ERROR] make[3]: *** [all-recursive] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.evas.1169084778.12247.3583069520/evas-2005-09-11/src/bin'
+[5-ERROR] make[2]: *** [all-recursive] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.evas.1169084778.12247.3583069520/evas-2005-09-11/src'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.evas.1169084778.12247.3583069520/evas-2005-09-11'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] gcc-40: -lz: linker input file unused because linking not done
+[9-ERROR] gcc-40: -lm: linker input file unused because linking not done
+[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I. -I../../src/lib -I../.. -D_REENTRANT -I/usr/include/directfb    -I/usr/include   -g -O2 -I/usr/X11R7/include -g -O2 -MT evas_software_x11_test-evas_software_x11_main.o -MD -MP -MF ".deps/evas_software_x11_test-evas_software_x11_main.Tpo" -c -o evas_software_x11_test-evas_software_x11_main.o `test -f 'evas_software_x11_main.c' || echo './'`evas_software_x11_main.c; \
+[9-ERROR] 	then mv -f ".deps/evas_software_x11_test-evas_software_x11_main.Tpo" ".deps/evas_software_x11_test-evas_software_x11_main.Po"; else rm -f ".deps/evas_software_x11_test-evas_software_x11_main.Tpo"; exit 1; fi
+[9-ERROR] gcc-40: -lz: linker input file unused because linking not done
+[9-ERROR] gcc-40: -lm: linker input file unused because linking not done
+[9-ERROR] /bin/sh ../../libtool --tag=CC --mode=link gcc-40  -g -O2   -o evas_software_x11_test  evas_software_x11_test-evas_test_main.o evas_software_x11_test-evas_software_x11_main.o ../../src/lib/libevas.la -lm -L/usr/X11R7/lib -lX11 -lXext 
+[9-ERROR] mkdir .libs
+[9-ERROR] gcc-40 -g -O2 -o .libs/evas_software_x11_test evas_software_x11_test-evas_test_main.o evas_software_x11_test-evas_software_x11_main.o  ../../src/lib/.libs/libevas.so /usr/lib/libfreetype.so /usr/lib/libpng12.so -L/opt/e17/lib /opt/e17/lib/libeet.so /usr/lib/libjpeg.so /opt/e17/lib/libedb.so -L/usr/X11R7/lib /usr/lib/libdirectfb.so /usr/lib/libfusion.so /usr/lib/libdirect.so -lz -lGL -lGLU -lpthread -lm /usr/X11R7/lib/libXext.so /usr/X11R7/lib/libX11.so /usr/X11R7/lib/libXdmcp.so -ldl /usr/X11R7/lib/libXau.so -Wl,--rpath -Wl,/usr/X11R7/lib
+[9-ERROR] creating evas_software_x11_test
+[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I. -I../../src/lib -I../.. -D_REENTRANT -I/usr/include/directfb    -I/usr/include   -g -O2 -I/usr/X11R7/include -g -O2 -MT evas_software_x11_perf_test-evas_software_x11_perf_test.o -MD -MP -MF ".deps/evas_software_x11_perf_test-evas_software_x11_perf_test.Tpo" -c -o evas_software_x11_perf_test-evas_software_x11_perf_test.o `test -f 'evas_software_x11_perf_test.c' || echo './'`evas_software_x11_perf_test.c; \
+[9-ERROR] 	then mv -f ".deps/evas_software_x11_perf_test-evas_software_x11_perf_test.Tpo" ".deps/evas_software_x11_perf_test-evas_software_x11_perf_test.Po"; else rm -f ".deps/evas_software_x11_perf_test-evas_software_x11_perf_test.Tpo"; exit 1; fi
+[9-ERROR] gcc-40: -lz: linker input file unused because linking not done
+[9-ERROR] gcc-40: -lm: linker input file unused because linking not done
+[9-ERROR] /bin/sh ../../libtool --tag=CC --mode=link gcc-40  -g -O2   -o evas_software_x11_perf_test  evas_software_x11_perf_test-evas_software_x11_perf_test.o ../../src/lib/libevas.la -lm -L/usr/X11R7/lib -lX11 -lXext 
+[9-ERROR] gcc-40 -g -O2 -o .libs/evas_software_x11_perf_test evas_software_x11_perf_test-evas_software_x11_perf_test.o  ../../src/lib/.libs/libevas.so /usr/lib/libfreetype.so /usr/lib/libpng12.so -L/opt/e17/lib /opt/e17/lib/libeet.so /usr/lib/libjpeg.so /opt/e17/lib/libedb.so -L/usr/X11R7/lib /usr/lib/libdirectfb.so /usr/lib/libfusion.so /usr/lib/libdirect.so -lz -lGL -lGLU -lpthread -lm /usr/X11R7/lib/libXext.so /usr/X11R7/lib/libX11.so /usr/X11R7/lib/libXdmcp.so -ldl /usr/X11R7/lib/libXau.so -Wl,--rpath -Wl,/usr/X11R7/lib
+[9-ERROR] creating evas_software_x11_perf_test
+[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I. -I../../src/lib -I../.. -D_REENTRANT -I/usr/include/directfb    -I/usr/include   -g -O2 -I/usr/X11R7/include -g -O2 -MT evas_software_x11_perf_load-evas_software_x11_perf_load.o -MD -MP -MF ".deps/evas_software_x11_perf_load-evas_software_x11_perf_load.Tpo" -c -o evas_software_x11_perf_load-evas_software_x11_perf_load.o `test -f 'evas_software_x11_perf_load.c' || echo './'`evas_software_x11_perf_load.c; \
+[9-ERROR] 	then mv -f ".deps/evas_software_x11_perf_load-evas_software_x11_perf_load.Tpo" ".deps/evas_software_x11_perf_load-evas_software_x11_perf_load.Po"; else rm -f ".deps/evas_software_x11_perf_load-evas_software_x11_perf_load.Tpo"; exit 1; fi
+[9-ERROR] gcc-40: -lz: linker input file unused because linking not done
+[9-ERROR] gcc-40: -lm: linker input file unused because linking not done
+[9-ERROR] /bin/sh ../../libtool --tag=CC --mode=link gcc-40  -g -O2   -o evas_software_x11_perf_load  evas_software_x11_perf_load-evas_software_x11_perf_load.o ../../src/lib/libevas.la -lm -L/usr/X11R7/lib -lX11 -lXext 
+[9-ERROR] gcc-40 -g -O2 -o .libs/evas_software_x11_perf_load evas_software_x11_perf_load-evas_software_x11_perf_load.o  ../../src/lib/.libs/libevas.so /usr/lib/libfreetype.so /usr/lib/libpng12.so -L/opt/e17/lib /opt/e17/lib/libeet.so /usr/lib/libjpeg.so /opt/e17/lib/libedb.so -L/usr/X11R7/lib /usr/lib/libdirectfb.so /usr/lib/libfusion.so /usr/lib/libdirect.so -lz -lGL -lGLU -lpthread -lm /usr/X11R7/lib/libXext.so /usr/X11R7/lib/libX11.so /usr/X11R7/lib/libXdmcp.so -ldl /usr/X11R7/lib/libXau.so -Wl,--rpath -Wl,/usr/X11R7/lib
+[9-ERROR] creating evas_software_x11_perf_load
+[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I. -I../../src/lib -I../.. -D_REENTRANT -I/usr/include/directfb    -I/usr/include   -g -O2 -D_REENTRANT -I/usr/include/directfb   -g -O2 -MT evas_directfb_test-evas_test_main.o -MD -MP -MF ".deps/evas_directfb_test-evas_test_main.Tpo" -c -o evas_directfb_test-evas_test_main.o `test -f 'evas_test_main.c' || echo './'`evas_test_main.c; \
+[9-ERROR] 	then mv -f ".deps/evas_directfb_test-evas_test_main.Tpo" ".deps/evas_directfb_test-evas_test_main.Po"; else rm -f ".deps/evas_directfb_test-evas_test_main.Tpo"; exit 1; fi
+[9-ERROR] evas_test_main.c: In function 'scroll_setup':
+[9-ERROR] evas_test_main.c:2021: warning: passing argument 3 of 'evas_object_event_callback_add' from incompatible pointer type
+[9-ERROR] evas_test_main.c: In function 'setup':
+[9-ERROR] evas_test_main.c:2067: warning: passing argument 3 of 'evas_object_event_callback_add' from incompatible pointer type
+[9-ERROR] gcc-40: -lz: linker input file unused because linking not done
+[9-ERROR] gcc-40: -lm: linker input file unused because linking not done
+[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I. -I../../src/lib -I../.. -D_REENTRANT -I/usr/include/directfb    -I/usr/include   -g -O2 -D_REENTRANT -I/usr/include/directfb   -g -O2 -MT evas_directfb_test-evas_directfb_main.o -MD -MP -MF ".deps/evas_directfb_test-evas_directfb_main.Tpo" -c -o evas_directfb_test-evas_directfb_main.o `test -f 'evas_directfb_main.c' || echo './'`evas_directfb_main.c; \
+[9-ERROR] 	then mv -f ".deps/evas_directfb_test-evas_directfb_main.Tpo" ".deps/evas_directfb_test-evas_directfb_main.Po"; else rm -f ".deps/evas_directfb_test-evas_directfb_main.Tpo"; exit 1; fi
+[9-ERROR] evas_directfb_main.c: In function 'main':
+[9-ERROR] evas_directfb_main.c:29: error: 'DFBCardCapabilities' undeclared (first use in this function)
+[9-ERROR] evas_directfb_main.c:29: error: (Each undeclared identifier is reported only once
+[9-ERROR] evas_directfb_main.c:29: error: for each function it appears in.)
+[9-ERROR] evas_directfb_main.c:29: error: syntax error before 'caps'
+[9-ERROR] evas_directfb_main.c:48: warning: incompatible implicit declaration of built-in function 'memset'
+[9-ERROR] make[4]: *** [evas_directfb_test-evas_directfb_main.o] Error 1
+[9-ERROR] make[4]: Leaving directory `/ROCK/loop/src.evas.1169133706.8103.3627834414/evas-2005-09-11/src/bin'
+[9-ERROR] make[3]: *** [all-recursive] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.evas.1169133706.8103.3627834414/evas-2005-09-11/src/bin'
+[9-ERROR] make[2]: *** [all-recursive] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.evas.1169133706.8103.3627834414/evas-2005-09-11/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.evas.1169133706.8103.3627834414/evas-2005-09-11'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

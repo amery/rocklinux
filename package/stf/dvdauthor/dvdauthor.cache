@@ -20,24 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142552649 Fri Mar 17 00:44:09 2006 (5)
-[TIMESTAMP] 1142810714 Mon Mar 20 00:25:14 2006 (9)
+[TIMESTAMP] 1168622331 Fri Jan 12 18:18:51 2007 (5)
+[TIMESTAMP] 1168825960 Mon Jan 15 02:52:40 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-dvdauthor.log 9-dvdauthor.log
 
-[BUILDTIME] 2436 (5)
-[BUILDTIME] 2821 (9)
+[BUILDTIME] 2643 (5)
+[BUILDTIME] 2950 (9)
 [SIZE] 0.27 MB, 18 files
 
-[DEP] 00-dirtree alsa bash2 binutils bzip2 bzip2:dev coreutils diffutils
-[DEP] findutils freetype freetype:dev fribidi fribidi:dev gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev gnome2-dirtree grep imagemagick
-[DEP] imagemagick:dev lcms libdvdread libdvdread:dev libjpeg libpng
-[DEP] libpng:dev libtiff libxml2 libxml2:dev linux26-header:dev make
-[DEP] mktemp net-tools rrdtool sed sysfiles tar util-linux xorg zlib:dev
+[DEP] 00-dirtree alsa applewmproto bash2 binutils bzip2 bzip2:dev coreutils
+[DEP] cvm diffutils findutils freetype freetype:dev fribidi fribidi:dev
+[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev gnome2-dirtree grep
+[DEP] imagemagick imagemagick:dev lcms libdvdread libdvdread:dev libice
+[DEP] libjpeg libpng libpng:dev libsm libtiff libx11 libxau libxdmcp
+[DEP] libxext libxml2 libxml2:dev libxt linux-libc-headers:dev make
+[DEP] mktemp net-tools netpbm rrdtool sed sysfiles tar twoftpd ucspi-unix
+[DEP] util-linux zlib zlib:dev
 
 [PROVIDES] dvdauthor dvddirdel dvdunauthor mpeg2desc spumux spuunmux
 

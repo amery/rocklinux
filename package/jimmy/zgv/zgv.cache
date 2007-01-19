@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142558005 Fri Mar 17 02:13:25 2006 (5)
-[TIMESTAMP] 1142817592 Mon Mar 20 02:19:52 2006 (9)
+[TIMESTAMP] 1168626357 Fri Jan 12 19:25:57 2007 (5)
+[TIMESTAMP] 1168830371 Mon Jan 15 04:06:11 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-zgv.log 9-zgv.log
 
-[BUILDTIME] 1797 (5)
-[BUILDTIME] 2171 (9)
+[BUILDTIME] 1946 (5)
+[BUILDTIME] 2244 (9)
 [SIZE] 0.51 MB, 14 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep libjpeg libjpeg:dev libpng
-[DEP] libpng:dev libtiff libtiff:dev linux26-header:dev make mktemp patch
-[DEP] rrdtool sed svgalib svgalib:dev sysfiles tar zlib:dev
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils gawk
+[DEP] gcc40 gcc40:dev glibc23 glibc23:dev grep libjpeg libjpeg:dev
+[DEP] libpng libpng:dev libtiff libtiff:dev linux-libc-headers:dev make
+[DEP] mktemp netpbm patch rrdtool sed sysfiles tar twoftpd ucspi-unix
+[DEP] zlib zlib:dev
 
 [PROVIDES] zgv
 

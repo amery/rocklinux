@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142486156 Thu Mar 16 06:15:56 2006 (5)
-[TIMESTAMP] 1142734183 Sun Mar 19 03:09:43 2006 (9)
+[TIMESTAMP] 1168563980 Fri Jan 12 02:06:20 2007 (5)
+[TIMESTAMP] 1168761163 Sun Jan 14 08:52:43 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-pinfo.log 9-pinfo.log
 
-[BUILDTIME] 2118 (5)
-[BUILDTIME] 2680 (9)
-[SIZE] 0.31 MB, 16 files
+[BUILDTIME] 2157 (5)
+[BUILDTIME] 2647 (9)
+[SIZE] 0.15 MB, 12 files
 
-[DEP] 00-dirtree autoconf automake19 bash2 binutils bison bzip2 coreutils
-[DEP] diffutils findutils gcc34 gcc34:dev gettext glibc23 glibc23:dev
-[DEP] grep linux26-header:dev make mktemp ncurses:dev net-tools perl5
-[DEP] rrdtool sed sysfiles tar texinfo
+[DEP] 00-dirtree autoconf automake19 bash2 binutils bison bzip2
+[DEP] coreutils cvm diffutils findutils gawk gcc40 gcc40:dev gettext
+[DEP] glibc23 glibc23:dev grep linux-libc-headers:dev make mktemp ncurses
+[DEP] ncurses:dev net-tools netpbm perl5 rrdtool sed sysfiles tar texinfo
+[DEP] twoftpd ucspi-unix
 
 [PROVIDES] pinfo
 

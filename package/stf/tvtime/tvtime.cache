@@ -20,23 +20,29 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142552883 Fri Mar 17 00:48:03 2006 (5)
-[TIMESTAMP] 1142811138 Mon Mar 20 00:32:18 2006 (9)
+[TIMESTAMP] 1168622629 Fri Jan 12 18:23:49 2007 (5)
+[TIMESTAMP] 1168826305 Mon Jan 15 02:58:25 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-tvtime.log 9-tvtime.log
 
-[BUILDTIME] 5765 (5)
-[BUILDTIME] 6225 (9)
-[SIZE] 1.26 MB, 58 files
+[BUILDTIME] 6030 (5)
+[BUILDTIME] 6420 (9)
+[SIZE] 1.06 MB, 49 files
 
-[DEP] 00-dirtree alsa bash2 binutils bison bzip2 coreutils diffutils
-[DEP] findutils freetype freetype:dev gawk gcc34 gcc34:dev gettext glibc23
-[DEP] glibc23:dev grep hicolor-icon-theme libpng libpng:dev libxml2
-[DEP] libxml2:dev linux26-header:dev make mktemp net-tools openbox rrdtool
-[DEP] sed sysfiles tar util-linux xorg xorg:dev zlib:dev
+[DEP] 00-dirtree alsa applewmproto applewmproto:dev bash2 binutils
+[DEP] bison bzip2 coreutils cups cvm diffutils findutils freetype
+[DEP] freetype:dev gawk gcc40 gcc40:dev gettext glibc23 glibc23:dev grep
+[DEP] hicolor-icon-theme imake inputproto:dev libice libice:dev libpng
+[DEP] libpng:dev libsm libsm:dev libx11 libx11:dev libxau libxdmcp libxext
+[DEP] libxext:dev libxinerama libxinerama:dev libxml2 libxml2:dev libxt
+[DEP] libxtst libxtst:dev libxv libxv:dev libxxf86vm libxxf86vm:dev
+[DEP] linux-libc-headers:dev make mktemp net-tools netpbm rrdtool
+[DEP] sed sysfiles tar twoftpd ucspi-unix util-linux videoproto:dev
+[DEP] xextproto:dev xf86vidmodeproto:dev xineramaproto:dev xorg-cf-files
+[DEP] xproto:dev zapping zlib zlib:dev
 
 [PROVIDES] tvtime tvtime-command tvtime-configure tvtime-scanner
 

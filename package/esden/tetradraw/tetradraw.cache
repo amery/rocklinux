@@ -20,22 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142587769 Fri Mar 17 10:29:29 2006 (5)
-[TIMESTAMP] 1142852068 Mon Mar 20 11:54:28 2006 (9)
+[TIMESTAMP] 1168648299 Sat Jan 13 01:31:39 2007 (5) ERROR
+[TIMESTAMP] 1168854776 Mon Jan 15 10:52:56 2007 (9) ERROR
+[TIMESTAMP] 1168948936 Tue Jan 16 13:02:16 2007 (5) ERROR
+[TIMESTAMP] 1168978848 Tue Jan 16 21:20:48 2007 (9) ERROR
+[TIMESTAMP] 1169092352 Thu Jan 18 04:52:32 2007 (5) ERROR
+[TIMESTAMP] 1169149121 Thu Jan 18 20:38:41 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-tetradraw.log 9-tetradraw.log
+[LOGS] 5-tetradraw.err 9-tetradraw.err
 
-[BUILDTIME] 2122 (5)
-[BUILDTIME] 2451 (9)
-[SIZE] 0.31 MB, 9 files
+[BUILDTIME] 1363 (5) ERROR
+[BUILDTIME] 1413 (9) ERROR
+[BUILDTIME] 1410 (5) ERROR
+[BUILDTIME] 1425 (9) ERROR
+[BUILDTIME] 1410 (5) ERROR
+[BUILDTIME] 1412 (9) ERROR
 
-[DEP] 00-dirtree alsa autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils findutils gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp ncurses ncurses:dev net-tools patch
-[DEP] perl5 rrdtool sed sysfiles tar texinfo util-linux
 
-[PROVIDES] tetradraw tetraview
+[5-ERROR] interface.c:1160: error: 'items' undeclared (first use in this function)
+[5-ERROR] interface.c:1160: error: syntax error before ')' token
+[5-ERROR] interface.c:1161: error: 'current' undeclared (first use in this function)
+[5-ERROR] interface.c:1161: error: syntax error before ')' token
+[5-ERROR] interface.c:1162: error: 'MENU' undeclared (first use in this function)
+[5-ERROR] interface.c:1162: error: 'menu' undeclared (first use in this function)
+[5-ERROR] interface.c:1162: error: syntax error before ')' token
+[5-ERROR] interface.c:1177: warning: incompatible implicit declaration of built-in function 'memset'
+[5-ERROR] interface.c:1200: error: 'REQ_DOWN_ITEM' undeclared (first use in this function)
+[5-ERROR] interface.c:1221: error: 'REQ_UP_ITEM' undeclared (first use in this function)
+[5-ERROR] interface.c:1235: error: 'E_REQUEST_DENIED' undeclared (first use in this function)
+[5-ERROR] interface.c:1277: warning: incompatible implicit declaration of built-in function 'strlen'
+[5-ERROR] interface.c:1288: warning: incompatible implicit declaration of built-in function 'strlen'
+[5-ERROR] interface.c:1289: warning: incompatible implicit declaration of built-in function 'strcpy'
+[5-ERROR] interface.c: In function 'draw_md_chat_input':
+[5-ERROR] interface.c:1721: warning: incompatible implicit declaration of built-in function 'strlen'
+[5-ERROR] interface.c: In function 'multidraw_chat':
+[5-ERROR] interface.c:1774: warning: incompatible implicit declaration of built-in function 'memset'
+[5-ERROR] interface.c: In function 'multidraw_connect':
+[5-ERROR] interface.c:1878: error: 'MENU' undeclared (first use in this function)
+[5-ERROR] interface.c:1878: error: 'menu' undeclared (first use in this function)
+[5-ERROR] interface.c:1878: error: syntax error before ')' token
+[5-ERROR] interface.c:1879: error: 'ITEM' undeclared (first use in this function)
+[5-ERROR] interface.c:1879: error: 'items' undeclared (first use in this function)
+[5-ERROR] interface.c:1880: error: 'current' undeclared (first use in this function)
+[5-ERROR] interface.c:1880: error: syntax error before ')' token
+[5-ERROR] interface.c:1921: error: 'REQ_UP_ITEM' undeclared (first use in this function)
+[5-ERROR] interface.c:1924: error: 'REQ_DOWN_ITEM' undeclared (first use in this function)
+[5-ERROR] interface.c:1928: warning: implicit declaration of function 'item_index'
+[5-ERROR] interface.c: In function 'draw_hostname':
+[5-ERROR] interface.c:2129: warning: incompatible implicit declaration of built-in function 'strlen'
+[5-ERROR] interface.c: In function 'quicksave_prompt':
+[5-ERROR] interface.c:2228: warning: incompatible implicit declaration of built-in function 'strlen'
+[5-ERROR] interface.c: In function 'clear_prompt':
+[5-ERROR] interface.c:2264: warning: incompatible implicit declaration of built-in function 'strlen'
+[5-ERROR] interface.c: In function 'quit_prompt':
+[5-ERROR] interface.c:2300: warning: incompatible implicit declaration of built-in function 'strlen'
+[5-ERROR] interface.c: In function 'draw_num':
+[5-ERROR] interface.c:2534: warning: incompatible implicit declaration of built-in function 'strlen'
+[5-ERROR] interface.c: In function 'get_num':
+[5-ERROR] interface.c:2693: warning: incompatible implicit declaration of built-in function 'memset'
+[5-ERROR] interface.c:2699: warning: incompatible implicit declaration of built-in function 'strlen'
+[5-ERROR] interface.c: In function 'chselect':
+[5-ERROR] interface.c:2932: warning: incompatible implicit declaration of built-in function 'memset'
+[5-ERROR] make[2]: *** [interface.o] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.tetradraw.1169092337.8687.905555977/tetradraw-2.0.2/src'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.tetradraw.1169092337.8687.905555977/tetradraw-2.0.2'
+[5-ERROR] make: *** [all-recursive-am] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] interface.c:1160: error: 'items' undeclared (first use in this function)
+[9-ERROR] interface.c:1160: error: syntax error before ')' token
+[9-ERROR] interface.c:1161: error: 'current' undeclared (first use in this function)
+[9-ERROR] interface.c:1161: error: syntax error before ')' token
+[9-ERROR] interface.c:1162: error: 'MENU' undeclared (first use in this function)
+[9-ERROR] interface.c:1162: error: 'menu' undeclared (first use in this function)
+[9-ERROR] interface.c:1162: error: syntax error before ')' token
+[9-ERROR] interface.c:1177: warning: incompatible implicit declaration of built-in function 'memset'
+[9-ERROR] interface.c:1200: error: 'REQ_DOWN_ITEM' undeclared (first use in this function)
+[9-ERROR] interface.c:1221: error: 'REQ_UP_ITEM' undeclared (first use in this function)
+[9-ERROR] interface.c:1235: error: 'E_REQUEST_DENIED' undeclared (first use in this function)
+[9-ERROR] interface.c:1277: warning: incompatible implicit declaration of built-in function 'strlen'
+[9-ERROR] interface.c:1288: warning: incompatible implicit declaration of built-in function 'strlen'
+[9-ERROR] interface.c:1289: warning: incompatible implicit declaration of built-in function 'strcpy'
+[9-ERROR] interface.c: In function 'draw_md_chat_input':
+[9-ERROR] interface.c:1721: warning: incompatible implicit declaration of built-in function 'strlen'
+[9-ERROR] interface.c: In function 'multidraw_chat':
+[9-ERROR] interface.c:1774: warning: incompatible implicit declaration of built-in function 'memset'
+[9-ERROR] interface.c: In function 'multidraw_connect':
+[9-ERROR] interface.c:1878: error: 'MENU' undeclared (first use in this function)
+[9-ERROR] interface.c:1878: error: 'menu' undeclared (first use in this function)
+[9-ERROR] interface.c:1878: error: syntax error before ')' token
+[9-ERROR] interface.c:1879: error: 'ITEM' undeclared (first use in this function)
+[9-ERROR] interface.c:1879: error: 'items' undeclared (first use in this function)
+[9-ERROR] interface.c:1880: error: 'current' undeclared (first use in this function)
+[9-ERROR] interface.c:1880: error: syntax error before ')' token
+[9-ERROR] interface.c:1921: error: 'REQ_UP_ITEM' undeclared (first use in this function)
+[9-ERROR] interface.c:1924: error: 'REQ_DOWN_ITEM' undeclared (first use in this function)
+[9-ERROR] interface.c:1928: warning: implicit declaration of function 'item_index'
+[9-ERROR] interface.c: In function 'draw_hostname':
+[9-ERROR] interface.c:2129: warning: incompatible implicit declaration of built-in function 'strlen'
+[9-ERROR] interface.c: In function 'quicksave_prompt':
+[9-ERROR] interface.c:2228: warning: incompatible implicit declaration of built-in function 'strlen'
+[9-ERROR] interface.c: In function 'clear_prompt':
+[9-ERROR] interface.c:2264: warning: incompatible implicit declaration of built-in function 'strlen'
+[9-ERROR] interface.c: In function 'quit_prompt':
+[9-ERROR] interface.c:2300: warning: incompatible implicit declaration of built-in function 'strlen'
+[9-ERROR] interface.c: In function 'draw_num':
+[9-ERROR] interface.c:2534: warning: incompatible implicit declaration of built-in function 'strlen'
+[9-ERROR] interface.c: In function 'get_num':
+[9-ERROR] interface.c:2693: warning: incompatible implicit declaration of built-in function 'memset'
+[9-ERROR] interface.c:2699: warning: incompatible implicit declaration of built-in function 'strlen'
+[9-ERROR] interface.c: In function 'chselect':
+[9-ERROR] interface.c:2932: warning: incompatible implicit declaration of built-in function 'memset'
+[9-ERROR] make[2]: *** [interface.o] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.tetradraw.1169149105.333.1060515637/tetradraw-2.0.2/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.tetradraw.1169149105.333.1060515637/tetradraw-2.0.2'
+[9-ERROR] make: *** [all-recursive-am] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

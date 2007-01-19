@@ -20,31 +20,32 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142666533 Sat Mar 18 08:22:13 2006 (5)
-[TIMESTAMP] 1142937149 Tue Mar 21 11:32:29 2006 (9)
+[TIMESTAMP] 1168699359 Sat Jan 13 15:42:39 2007 (5)
+[TIMESTAMP] 1168908854 Tue Jan 16 01:54:14 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-hylafax.log 9-hylafax.log
 
-[BUILDTIME] 11296 (5)
-[BUILDTIME] 11491 (9)
-[SIZE] 2.82 MB, 237 files
+[BUILDTIME] 11685 (5)
+[BUILDTIME] 11871 (9)
+[SIZE] 2.91 MB, 242 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev ghostscript glibc23 glibc23:dev grep libjpeg libtiff
-[DEP] libtiff:dev linux26-header:dev make mktemp pam pam:dev patch rrdtool
-[DEP] sed sysfiles tar zlib:dev
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils
+[DEP] esp-ghostscript findutils gawk gcc40 gcc40:dev ghostscript glibc23
+[DEP] glibc23:dev grep libjpeg libtiff libtiff:dev linux-libc-headers:dev
+[DEP] make mktemp netpbm pam pam:dev patch rrdtool sed sysfiles tar
+[DEP] twoftpd ucspi-unix zlib zlib:dev
 
-[PROVIDES] archive choptest cqtest dialtest edit-faxcover faxabort
-[PROVIDES] faxaddmodem faxadduser faxalter faxanswer faxconfig faxcover
-[PROVIDES] faxcron faxdeluser faxgetty faxinfo faxlock faxmail faxmodem
-[PROVIDES] faxmsg faxq faxqclean faxquit faxrcvd faxrm faxsend faxsetup
-[PROVIDES] faxsetup.bsdi faxsetup.irix faxsetup.linux faxstat faxstate
-[PROVIDES] faxwatch hfaxd libfaxserver.so libfaxutil.so lockname mkcover
-[PROVIDES] notify notify-4.1 ondelay pagesend pcl2fax pdf2fax.gs pollrcvd
-[PROVIDES] probemodem ps2fax.dps ps2fax.gs ps2fax.imp recvstats sendfax
-[PROVIDES] sendpage tagtest textfmt tiff2fax tiff2pdf tiffcheck tsitest
-[PROVIDES] typetest wedged xferfaxstats
+[PROVIDES] archive choptest common-functions cqtest dialtest dictionary
+[PROVIDES] edit-faxcover faxabort faxaddmodem faxadduser faxalter faxanswer
+[PROVIDES] faxconfig faxcover faxcron faxdeluser faxgetty faxinfo faxlock
+[PROVIDES] faxmail faxmodem faxmsg faxq faxqclean faxquit faxrcvd faxrm
+[PROVIDES] faxsend faxsetup faxsetup.bsdi faxsetup.irix faxsetup.linux
+[PROVIDES] faxstat faxstate faxwatch hfaxd libfaxserver.so libfaxutil.so
+[PROVIDES] lockname mkcover notify notify-4.1 notify.awk ondelay pagesend
+[PROVIDES] pcl2fax pdf2fax.gs pollrcvd probemodem ps2fax.dps ps2fax.gs
+[PROVIDES] ps2fax.imp recvstats sendfax sendpage tagtest textfmt tiff2fax
+[PROVIDES] tiff2pdf tiffcheck tsitest typetest wedged xferfaxstats
 

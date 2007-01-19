@@ -20,23 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142465840 Thu Mar 16 00:37:20 2006 (5)
-[TIMESTAMP] 1142709142 Sat Mar 18 20:12:22 2006 (9)
+[TIMESTAMP] 1168545726 Thu Jan 11 21:02:06 2007 (5)
+[TIMESTAMP] 1168740643 Sun Jan 14 03:10:43 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-gtk+12.log 9-gtk+12.log
 
-[BUILDTIME] 12393 (5)
-[BUILDTIME] 13293 (9)
-[SIZE] 1.57 MB, 118 files
+[BUILDTIME] 13512 (5)
+[BUILDTIME] 14335 (9)
+[SIZE] 1.37 MB, 85 files
 
-[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils file findutils gawk gcc34 gcc34:dev gettext
-[DEP] glib12 glib12:dev glibc23 glibc23:dev gnome14-dirtree grep
-[DEP] linux26-header:dev make mktemp net-tools patch perl5 rrdtool sed
-[DEP] sysfiles tar texinfo xorg xorg:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev autoconf automake19
+[DEP] bash2 binutils bzip2 coreutils cvm diffutils file findutils gawk
+[DEP] gcc40 gcc40:dev gettext glib12 glib12:dev glibc23 glibc23:dev
+[DEP] gnome14-dirtree grep imake inputproto:dev libice libx11 libx11:dev
+[DEP] libxau libxdmcp libxext libxext:dev libxi libxi:dev libxt
+[DEP] linux-libc-headers:dev make mktemp net-tools patch perl5 rrdtool
+[DEP] sed sysfiles tar texinfo xextproto:dev xorg-cf-files xproto:dev
 
 [PROVIDES] gtk-config libgdk.a libgdk.so libgtk.a libgtk.so
 

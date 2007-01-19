@@ -20,23 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142471934 Thu Mar 16 02:18:54 2006 (5)
-[TIMESTAMP] 1142716665 Sat Mar 18 22:17:45 2006 (9)
+[TIMESTAMP] 1168552078 Thu Jan 11 22:47:58 2007 (5)
+[TIMESTAMP] 1168748266 Sun Jan 14 05:17:46 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-postgresql.log 9-postgresql.log
 
-[BUILDTIME] 24747 (5)
-[BUILDTIME] 26497 (9)
-[SIZE] 17.57 MB, 1446 files
+[BUILDTIME] 26143 (5)
+[BUILDTIME] 27202 (9)
+[SIZE] 16.75 MB, 1492 files
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils
-[DEP] findutils flex gawk gcc34 gcc34:dev glibc23 glibc23:dev grep gzip
-[DEP] linux26-header:dev m4 make mktemp ncurses:dev net-tools openjade
+[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils cvm diffutils
+[DEP] findutils flex gawk gcc40 gcc40:dev glibc23 glibc23:dev grep gzip
+[DEP] linux-libc-headers:dev m4 make mktemp ncurses net-tools openjade
 [DEP] openssl openssl:dev pam pam:dev patch perl5 perl5:dev readline
-[DEP] readline:dev rrdtool sed sysfiles tar util-linux zlib:dev
+[DEP] readline:dev rrdtool sed sysfiles tar util-linux zlib zlib:dev
 
 [PROVIDES] ascii_and_mic.so clusterdb createdb createlang createuser
 [PROVIDES] cyrillic_and_mic.so dropdb droplang dropuser ecpg
@@ -45,12 +45,12 @@
 [PROVIDES] latin_and_mic.so libecpg.a libecpg.so libecpg_compat.a
 [PROVIDES] libecpg_compat.so libpgport.a libpgtypes.a libpgtypes.so
 [PROVIDES] libpq.a libpq.so pg_config pg_controldata pg_ctl pg_dump
-[PROVIDES] pg_dumpall pg_resetxlog pg_restore plperl.so plpgsql.so
-[PROVIDES] postgres postmaster psql utf8_and_ascii.so utf8_and_big5.so
+[PROVIDES] pg_dumpall pg_resetxlog pg_restore plperl.so plpgsql.so postgres
+[PROVIDES] postmaster psql reindexdb utf8_and_ascii.so utf8_and_big5.so
 [PROVIDES] utf8_and_cyrillic.so utf8_and_euc_cn.so utf8_and_euc_jp.so
 [PROVIDES] utf8_and_euc_kr.so utf8_and_euc_tw.so utf8_and_gb18030.so
 [PROVIDES] utf8_and_gbk.so utf8_and_iso8859.so utf8_and_iso8859_1.so
-[PROVIDES] utf8_and_johab.so utf8_and_sjis.so utf8_and_tcvn.so
-[PROVIDES] utf8_and_uhc.so utf8_and_win1250.so utf8_and_win1256.so
-[PROVIDES] utf8_and_win874.so vacuumdb
+[PROVIDES] utf8_and_johab.so utf8_and_sjis.so utf8_and_uhc.so
+[PROVIDES] utf8_and_win1250.so utf8_and_win1252.so utf8_and_win1256.so
+[PROVIDES] utf8_and_win1258.so utf8_and_win874.so vacuumdb
 

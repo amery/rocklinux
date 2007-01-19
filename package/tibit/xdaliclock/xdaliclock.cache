@@ -20,21 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142608372 Fri Mar 17 16:12:52 2006 (5)
-[TIMESTAMP] 1142874091 Mon Mar 20 18:01:31 2006 (9)
+[TIMESTAMP] 1168664515 Sat Jan 13 06:01:55 2007 (5)
+[TIMESTAMP] 1168872318 Mon Jan 15 15:45:18 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-xdaliclock.log 9-xdaliclock.log
 
-[BUILDTIME] 1855 (5)
-[BUILDTIME] 2106 (9)
+[BUILDTIME] 1859 (5)
+[BUILDTIME] 2092 (9)
 [SIZE] 0.10 MB, 8 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp net-tools rrdtool sed sysfiles tar util-linux xorg xorg:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm diffutils findutils gawk gcc40 gcc40:dev glibc23
+[DEP] glibc23:dev grep imake libice libice:dev libsm libsm:dev
+[DEP] libx11 libx11:dev libxau libxdmcp libxext libxt libxt:dev
+[DEP] linux-libc-headers:dev make mktemp net-tools netpbm rrdtool
+[DEP] sed sysfiles tar twoftpd ucspi-unix util-linux xextproto:dev
+[DEP] xorg-cf-files xproto:dev
 
 [PROVIDES] xdaliclock
 

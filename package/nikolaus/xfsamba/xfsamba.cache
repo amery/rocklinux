@@ -20,24 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142644503 Sat Mar 18 02:15:03 2006 (5)
-[TIMESTAMP] 1142913175 Tue Mar 21 04:52:55 2006 (9)
+[TIMESTAMP] 1168689425 Sat Jan 13 12:57:05 2007 (5) ERROR
+[TIMESTAMP] 1168898280 Mon Jan 15 22:58:00 2007 (9) ERROR
+[TIMESTAMP] 1168953256 Tue Jan 16 14:14:16 2007 (5) ERROR
+[TIMESTAMP] 1168982960 Tue Jan 16 22:29:20 2007 (9) ERROR
+[TIMESTAMP] 1169123584 Thu Jan 18 13:33:04 2007 (5) ERROR
+[TIMESTAMP] 1169153163 Thu Jan 18 21:46:03 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-xfsamba.log 9-xfsamba.log
+[LOGS] 5-xfsamba.err 9-xfsamba.err
 
-[BUILDTIME] 7194 (5)
-[BUILDTIME] 7359 (9)
-[SIZE] 1.14 MB, 39 files
+[BUILDTIME] 6056 (5) ERROR
+[BUILDTIME] 6084 (9) ERROR
+[BUILDTIME] 6105 (5) ERROR
+[BUILDTIME] 6109 (9) ERROR
+[BUILDTIME] 6111 (5) ERROR
+[BUILDTIME] 6107 (9) ERROR
 
-[DEP] 00-dirtree audiofile autoconf automake19 bash2 binutils bison bzip2
-[DEP] coreutils diffutils findutils gawk gcc34 gcc34:dev gdk-pixbuf10
-[DEP] gdk-pixbuf10:dev gettext glib12 glib12:dev glibc23 glibc23:dev
-[DEP] gnome14-dirtree grep gtk+12 gtk+12:dev linux26-header:dev make
-[DEP] mktemp net-tools perl5 rrdtool sed sysfiles tar texinfo util-linux
-[DEP] xorg xorg:dev
 
-[PROVIDES] glob xfdiff xfglob xfsamba xftree
+[5-ERROR] xfsamba_gui.c:569: warning: pointer targets in passing argument 1 of 'g_strdup' differ in signedness
+[5-ERROR] xfsamba_gui.c: In function 'get_select_share':
+[5-ERROR] xfsamba_gui.c:757: warning: pointer targets in assignment differ in signedness
+[5-ERROR] xfsamba_gui.c:758: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness
+[5-ERROR] xfsamba_gui.c:763: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[5-ERROR] xfsamba_gui.c:763: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[5-ERROR] xfsamba_gui.c:763: warning: pointer targets in passing argument 1 of '__builtin_strcmp' differ in signedness
+[5-ERROR] xfsamba_gui.c:763: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[5-ERROR] xfsamba_gui.c:763: warning: pointer targets in passing argument 1 of '__builtin_strcmp' differ in signedness
+[5-ERROR] xfsamba_gui.c:763: warning: pointer targets in passing argument 1 of '__builtin_strcmp' differ in signedness
+[5-ERROR] xfsamba_gui.c:763: warning: pointer targets in passing argument 1 of '__builtin_strcmp' differ in signedness
+[5-ERROR] xfsamba_gui.c:763: warning: pointer targets in passing argument 1 of 'strncmp' differ in signedness
+[5-ERROR] xfsamba_gui.c:778: warning: pointer targets in assignment differ in signedness
+[5-ERROR] xfsamba_gui.c:779: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness
+[5-ERROR] xfsamba_gui.c:780: warning: pointer targets in assignment differ in signedness
+[5-ERROR] xfsamba_gui.c:781: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness
+[5-ERROR] xfsamba_gui.c:798: warning: pointer targets in assignment differ in signedness
+[5-ERROR] xfsamba_gui.c:799: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness
+[5-ERROR] xfsamba_gui.c:800: warning: pointer targets in assignment differ in signedness
+[5-ERROR] xfsamba_gui.c:801: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness
+[5-ERROR] xfsamba_gui.c:806: warning: pointer targets in assignment differ in signedness
+[5-ERROR] xfsamba_gui.c:821: warning: pointer targets in assignment differ in signedness
+[5-ERROR] xfsamba_gui.c:822: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness
+[5-ERROR] xfsamba_gui.c:826: warning: pointer targets in assignment differ in signedness
+[5-ERROR] xfsamba_gui.c:827: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness
+[5-ERROR] xfsamba_gui.c:851: warning: pointer targets in assignment differ in signedness
+[5-ERROR] xfsamba_gui.c:852: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include  -I/opt/gnome/include/gdk-pixbuf-1.0 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I../ -I../libs/ -DXFCE_DIR=\"/usr/share/xfce\" -DXFCE_LOCALE_DIR=\"/usr/share/locale\" -DXFCE_CONFDIR=\"/etc/xfce\"  -I/usr/X11R7/include  -g -O2 -c xfsamba_mem.c
+[5-ERROR] xfsamba_mem.c:39: error: static declaration of 'headH' follows non-static declaration
+[5-ERROR] xfsamba.h:243: error: previous declaration of 'headH' was here
+[5-ERROR] xfsamba_mem.c: In function 'push_nmb':
+[5-ERROR] xfsamba_mem.c:346: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness
+[5-ERROR] xfsamba_mem.c: In function 'push_nmbName':
+[5-ERROR] xfsamba_mem.c:377: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness
+[5-ERROR] xfsamba_mem.c:384: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[5-ERROR] xfsamba_mem.c:385: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[5-ERROR] xfsamba_mem.c:388: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness
+[5-ERROR] xfsamba_mem.c:388: warning: pointer targets in passing argument 2 of 'strcpy' differ in signedness
+[5-ERROR] xfsamba_mem.c:389: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness
+[5-ERROR] xfsamba_mem.c:389: warning: pointer targets in passing argument 2 of 'strcpy' differ in signedness
+[5-ERROR] xfsamba_mem.c:391: warning: pointer targets in passing argument 1 of 'latin_1_unreadable' differ in signedness
+[5-ERROR] xfsamba_mem.c:392: warning: pointer targets in passing argument 1 of 'latin_1_readable' differ in signedness
+[5-ERROR] make[3]: *** [xfsamba_mem.o] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.xfsamba.1169123522.15119.1893599440/xfsamba-0.47/xfsamba'
+[5-ERROR] make[2]: *** [all-recursive] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.xfsamba.1169123522.15119.1893599440/xfsamba-0.47/xfsamba'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.xfsamba.1169123522.15119.1893599440/xfsamba-0.47'
+[5-ERROR] make: *** [all-recursive-am] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] xfsamba_gui.c:569: warning: pointer targets in passing argument 1 of 'g_strdup' differ in signedness
+[9-ERROR] xfsamba_gui.c: In function 'get_select_share':
+[9-ERROR] xfsamba_gui.c:757: warning: pointer targets in assignment differ in signedness
+[9-ERROR] xfsamba_gui.c:758: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness
+[9-ERROR] xfsamba_gui.c:763: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[9-ERROR] xfsamba_gui.c:763: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[9-ERROR] xfsamba_gui.c:763: warning: pointer targets in passing argument 1 of '__builtin_strcmp' differ in signedness
+[9-ERROR] xfsamba_gui.c:763: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[9-ERROR] xfsamba_gui.c:763: warning: pointer targets in passing argument 1 of '__builtin_strcmp' differ in signedness
+[9-ERROR] xfsamba_gui.c:763: warning: pointer targets in passing argument 1 of '__builtin_strcmp' differ in signedness
+[9-ERROR] xfsamba_gui.c:763: warning: pointer targets in passing argument 1 of '__builtin_strcmp' differ in signedness
+[9-ERROR] xfsamba_gui.c:763: warning: pointer targets in passing argument 1 of 'strncmp' differ in signedness
+[9-ERROR] xfsamba_gui.c:778: warning: pointer targets in assignment differ in signedness
+[9-ERROR] xfsamba_gui.c:779: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness
+[9-ERROR] xfsamba_gui.c:780: warning: pointer targets in assignment differ in signedness
+[9-ERROR] xfsamba_gui.c:781: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness
+[9-ERROR] xfsamba_gui.c:798: warning: pointer targets in assignment differ in signedness
+[9-ERROR] xfsamba_gui.c:799: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness
+[9-ERROR] xfsamba_gui.c:800: warning: pointer targets in assignment differ in signedness
+[9-ERROR] xfsamba_gui.c:801: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness
+[9-ERROR] xfsamba_gui.c:806: warning: pointer targets in assignment differ in signedness
+[9-ERROR] xfsamba_gui.c:821: warning: pointer targets in assignment differ in signedness
+[9-ERROR] xfsamba_gui.c:822: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness
+[9-ERROR] xfsamba_gui.c:826: warning: pointer targets in assignment differ in signedness
+[9-ERROR] xfsamba_gui.c:827: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness
+[9-ERROR] xfsamba_gui.c:851: warning: pointer targets in assignment differ in signedness
+[9-ERROR] xfsamba_gui.c:852: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include  -I/opt/gnome/include/gdk-pixbuf-1.0 -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I../ -I../libs/ -DXFCE_DIR=\"/usr/share/xfce\" -DXFCE_LOCALE_DIR=\"/usr/share/locale\" -DXFCE_CONFDIR=\"/etc/xfce\"  -I/usr/X11R7/include  -g -O2 -c xfsamba_mem.c
+[9-ERROR] xfsamba_mem.c:39: error: static declaration of 'headH' follows non-static declaration
+[9-ERROR] xfsamba.h:243: error: previous declaration of 'headH' was here
+[9-ERROR] xfsamba_mem.c: In function 'push_nmb':
+[9-ERROR] xfsamba_mem.c:346: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness
+[9-ERROR] xfsamba_mem.c: In function 'push_nmbName':
+[9-ERROR] xfsamba_mem.c:377: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness
+[9-ERROR] xfsamba_mem.c:384: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[9-ERROR] xfsamba_mem.c:385: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[9-ERROR] xfsamba_mem.c:388: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness
+[9-ERROR] xfsamba_mem.c:388: warning: pointer targets in passing argument 2 of 'strcpy' differ in signedness
+[9-ERROR] xfsamba_mem.c:389: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness
+[9-ERROR] xfsamba_mem.c:389: warning: pointer targets in passing argument 2 of 'strcpy' differ in signedness
+[9-ERROR] xfsamba_mem.c:391: warning: pointer targets in passing argument 1 of 'latin_1_unreadable' differ in signedness
+[9-ERROR] xfsamba_mem.c:392: warning: pointer targets in passing argument 1 of 'latin_1_readable' differ in signedness
+[9-ERROR] make[3]: *** [xfsamba_mem.o] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.xfsamba.1169153101.5457.1197622847/xfsamba-0.47/xfsamba'
+[9-ERROR] make[2]: *** [all-recursive] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.xfsamba.1169153101.5457.1197622847/xfsamba-0.47/xfsamba'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.xfsamba.1169153101.5457.1197622847/xfsamba-0.47'
+[9-ERROR] make: *** [all-recursive-am] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

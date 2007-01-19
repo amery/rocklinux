@@ -20,8 +20,8 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142455852 Wed Mar 15 21:50:52 2006 (5)
-[TIMESTAMP] 1142694531 Sat Mar 18 16:08:51 2006 (9)
+[TIMESTAMP] 1168532516 Thu Jan 11 17:21:56 2007 (5)
+[TIMESTAMP] 1168723206 Sat Jan 13 22:20:06 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
@@ -29,12 +29,13 @@
 [LOGS] 1-gawk.log 5-gawk.log 9-gawk.log
 
 [BUILDTIME] 4328 (5)
-[BUILDTIME] 5145 (9)
-[SIZE] 2.70 MB, 59 files
+[BUILDTIME] 5050 (9)
+[SIZE] 2.24 MB, 46 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev gettext glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp net-tools patch rrdtool sed sysfiles tar texinfo util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils
+[DEP] findutils gcc40 gcc40:dev gettext glibc23 glibc23:dev grep
+[DEP] linux-libc-headers:dev make mktemp net-tools netpbm patch rrdtool
+[DEP] sed sysfiles tar texinfo twoftpd ucspi-unix util-linux
 
 [PROVIDES] awk gawk gawk-3.1.5 igawk pgawk pgawk-3.1.5
 

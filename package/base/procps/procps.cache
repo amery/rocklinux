@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142447892 Wed Mar 15 19:38:12 2006 (3)
-[TIMESTAMP] 1142836933 Mon Mar 20 07:42:13 2006 (9)
+[TIMESTAMP] 1168525326 Thu Jan 11 15:22:06 2007 (3)
+[TIMESTAMP] 1168843282 Mon Jan 15 07:41:22 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 3-procps.log 9-procps.log
 
-[BUILDTIME] 1974 (3)
-[BUILDTIME] 2741 (9)
-[SIZE] 0.82 MB, 42 files
+[BUILDTIME] 2095 (3)
+[BUILDTIME] 2833 (9)
+[SIZE] 0.45 MB, 43 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] ncurses:dev rrdtool sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils gawk
+[DEP] gcc40 gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev
+[DEP] make mktemp ncurses ncurses:dev netpbm rrdtool sed sysfiles tar
+[DEP] twoftpd ucspi-unix
 
 [PROVIDES] free kill libproc-3.2.6.so pgrep pkill pmap ps pwdx skill
 [PROVIDES] slabtop snice sysctl tload top uptime vmstat w watch

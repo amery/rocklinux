@@ -20,21 +20,132 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142605976 Fri Mar 17 15:32:56 2006 (5)
-[TIMESTAMP] 1142871372 Mon Mar 20 17:16:12 2006 (9)
+[TIMESTAMP] 1168663283 Sat Jan 13 05:41:23 2007 (5) ERROR
+[TIMESTAMP] 1168871028 Mon Jan 15 15:23:48 2007 (9) ERROR
+[TIMESTAMP] 1168950444 Tue Jan 16 13:27:24 2007 (5) ERROR
+[TIMESTAMP] 1168979858 Tue Jan 16 21:37:38 2007 (9) ERROR
+[TIMESTAMP] 1169120737 Thu Jan 18 12:45:37 2007 (5) ERROR
+[TIMESTAMP] 1169150067 Thu Jan 18 20:54:27 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-ucspi-unix.log 9-ucspi-unix.log
+[LOGS] 5-ucspi-unix.err 9-ucspi-unix.err
 
-[BUILDTIME] 1323 (5)
-[BUILDTIME] 1580 (9)
-[SIZE] 0.04 MB, 11 files
+[BUILDTIME] 1355 (5) ERROR
+[BUILDTIME] 1597 (9) ERROR
+[BUILDTIME] 1630 (5) ERROR
+[BUILDTIME] 1594 (9) ERROR
+[BUILDTIME] 1736 (5) ERROR
+[BUILDTIME] 1618 (9) ERROR
+[SIZE] 0.04 MB, 13 files
 
-[DEP] 00-dirtree bash2 bglibs bglibs:dev binutils bzip2 coreutils findutils
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp patch rrdtool sed sysfiles tar
+[DEP] 00-dirtree bash2 bglibs bglibs:dev binutils bzip2 coreutils
+[DEP] cvm findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev grep
+[DEP] linux-libc-headers:dev make mktemp netpbm patch rrdtool sed sysfiles
+[DEP] tar twoftpd
 
-[PROVIDES] unixcat unixclient unixserver
+[PROVIDES] .  unixcat unixclient unixserver
+
+[5-ERROR] env.c:13: warning: pointer targets in passing argument 5 of 'getsockopt' differ in signedness
+[5-ERROR] ./compile utoa.c
+[5-ERROR] ( ( ./compile trylib.c && ./load trylib -lsocket -lnsl ) >/dev/null 2>&1 \
+[5-ERROR] 	  && echo -lsocket -lnsl || exit 0 ) >socket.lib
+[5-ERROR] rm -f trylib.o trylib
+[5-ERROR] ./load unixclient env.o utoa.o `cat socket.lib` 
+[5-ERROR] ./compile unixserver.c
+[5-ERROR] unixserver.c: In function 'parse_options':
+[5-ERROR] unixserver.c:161: warning: pointer targets in passing argument 2 of 'parseu' differ in signedness
+[5-ERROR] ./load unixserver env.o utoa.o `cat socket.lib` 
+[5-ERROR] cat warn-auto.sh unixcat.sh >unixcat
+[5-ERROR] chmod 755 unixcat
+[5-ERROR] head -n 1 conf-bin | \
+[5-ERROR] 	  sed -e 's/"/\\"/g' \
+[5-ERROR] 	      -e 's/^/const char conf_bin[] = "/' \
+[5-ERROR] 	      -e 's/$/";/' >conf_bin.c
+[5-ERROR] head -n 1 conf-man | \
+[5-ERROR] 	  sed -e 's/"/\\"/g' \
+[5-ERROR] 	      -e 's/^/const char conf_man[] = "/' \
+[5-ERROR] 	      -e 's/$/";/' >conf_man.c
+[5-ERROR] ./compile insthier.c
+[5-ERROR] ./load insthier -linstaller
+[5-ERROR] mv insthier installer
+[5-ERROR] ./load insthier -linstcheck
+[5-ERROR] mv insthier instcheck
+[5-ERROR] ./load insthier -linstshow
+[5-ERROR] mv insthier instshow
+[5-ERROR] Trying to copy the default documentation ...
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing /lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 16 files for this package.
+[5-ERROR] Applying package split: 40 ucspi-unix:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[5-ERROR] Applying package split: 42 ucspi-unix:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 ucspi-unix:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <ucspi-unix> Creating flist file ...
+[5-ERROR] <ucspi-unix> Creating package dependencies file ...
+[5-ERROR] <ucspi-unix> Creating package description ...
+[5-ERROR] <ucspi-unix> Creating md5sum and cksum files ...
+[5-ERROR] <ucspi-unix:doc> Creating flist file ...
+[5-ERROR] <ucspi-unix:doc> Creating package dependencies file ...
+[5-ERROR] <ucspi-unix:doc> Creating package description ...
+[5-ERROR] <ucspi-unix:doc> Creating md5sum and cksum files ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Found shared files with other packages:
+[5-ERROR] usr/bin/.: coreutils procps twoftpd ucspi-unix
+[5-ERROR] usr/share/man/man1: 00-dirtree netpbm twoftpd ucspi-unix
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] env.c:13: warning: pointer targets in passing argument 5 of 'getsockopt' differ in signedness
+[9-ERROR] ./compile utoa.c
+[9-ERROR] ( ( ./compile trylib.c && ./load trylib -lsocket -lnsl ) >/dev/null 2>&1 \
+[9-ERROR] 	  && echo -lsocket -lnsl || exit 0 ) >socket.lib
+[9-ERROR] rm -f trylib.o trylib
+[9-ERROR] ./load unixclient env.o utoa.o `cat socket.lib` 
+[9-ERROR] ./compile unixserver.c
+[9-ERROR] unixserver.c: In function 'parse_options':
+[9-ERROR] unixserver.c:161: warning: pointer targets in passing argument 2 of 'parseu' differ in signedness
+[9-ERROR] ./load unixserver env.o utoa.o `cat socket.lib` 
+[9-ERROR] cat warn-auto.sh unixcat.sh >unixcat
+[9-ERROR] chmod 755 unixcat
+[9-ERROR] head -n 1 conf-bin | \
+[9-ERROR] 	  sed -e 's/"/\\"/g' \
+[9-ERROR] 	      -e 's/^/const char conf_bin[] = "/' \
+[9-ERROR] 	      -e 's/$/";/' >conf_bin.c
+[9-ERROR] head -n 1 conf-man | \
+[9-ERROR] 	  sed -e 's/"/\\"/g' \
+[9-ERROR] 	      -e 's/^/const char conf_man[] = "/' \
+[9-ERROR] 	      -e 's/$/";/' >conf_man.c
+[9-ERROR] ./compile insthier.c
+[9-ERROR] ./load insthier -linstaller
+[9-ERROR] mv insthier installer
+[9-ERROR] ./load insthier -linstcheck
+[9-ERROR] mv insthier instcheck
+[9-ERROR] ./load insthier -linstshow
+[9-ERROR] mv insthier instshow
+[9-ERROR] Trying to copy the default documentation ...
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing /lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 16 files for this package.
+[9-ERROR] Applying package split: 40 ucspi-unix:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[9-ERROR] Applying package split: 42 ucspi-unix:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 ucspi-unix:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <ucspi-unix> Creating flist file ...
+[9-ERROR] <ucspi-unix> Creating package dependencies file ...
+[9-ERROR] <ucspi-unix> Creating package description ...
+[9-ERROR] <ucspi-unix> Creating md5sum and cksum files ...
+[9-ERROR] <ucspi-unix:doc> Creating flist file ...
+[9-ERROR] <ucspi-unix:doc> Creating package dependencies file ...
+[9-ERROR] <ucspi-unix:doc> Creating package description ...
+[9-ERROR] <ucspi-unix:doc> Creating md5sum and cksum files ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] usr/bin/.: coreutils procps twoftpd ucspi-unix
+[9-ERROR] usr/share/man/man1: 00-dirtree netpbm twoftpd ucspi-unix
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] --- BUILD ERROR ---
 

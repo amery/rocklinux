@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142495543 Thu Mar 16 08:52:23 2006 (5)
-[TIMESTAMP] 1142745593 Sun Mar 19 06:19:53 2006 (9)
+[TIMESTAMP] 1168572642 Fri Jan 12 04:30:42 2007 (5)
+[TIMESTAMP] 1168770890 Sun Jan 14 11:34:50 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-enscript.log 9-enscript.log
 
-[BUILDTIME] 2464 (5)
-[BUILDTIME] 3029 (9)
-[SIZE] 1.31 MB, 89 files
+[BUILDTIME] 2640 (5)
+[BUILDTIME] 3113 (9)
+[SIZE] 1.28 MB, 86 files
 
-[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils findutils flex flex:dev gawk gcc34 gcc34:dev gettext
-[DEP] glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp net-tools
-[DEP] perl5 rrdtool sed sysfiles tar texinfo
+[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils cvm
+[DEP] diffutils findutils flex flex:dev gawk gcc40 gcc40:dev gettext
+[DEP] glibc23 glibc23:dev grep linux-libc-headers:dev m4 make mktemp
+[DEP] net-tools netpbm perl5 rrdtool sed sysfiles tar texinfo twoftpd
+[DEP] ucspi-unix
 
 [PROVIDES] diffpp enscript mkafmmap over sliceprint states
 

@@ -20,21 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142629043 Fri Mar 17 21:57:23 2006 (5)
-[TIMESTAMP] 1142897246 Tue Mar 21 00:27:26 2006 (9)
+[TIMESTAMP] 1168679798 Sat Jan 13 10:16:38 2007 (5)
+[TIMESTAMP] 1168888583 Mon Jan 15 20:16:23 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-nedit.log 9-nedit.log
 
-[BUILDTIME] 3426 (5)
-[BUILDTIME] 3651 (9)
-[SIZE] 1.04 MB, 8 files
+[BUILDTIME] 3893 (5)
+[BUILDTIME] 4022 (9)
+[SIZE] 1.05 MB, 8 files
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp
-[DEP] openmotif openmotif:dev patch rrdtool sed sysfiles tar xorg xorg:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bison bzip2
+[DEP] coreutils cvm findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev grep
+[DEP] libice libice:dev libsm libsm:dev libx11 libx11:dev libxau libxau:dev
+[DEP] libxdmcp libxext libxmu libxp libxt libxt:dev linux-libc-headers:dev
+[DEP] m4 make mktemp patch printproto:dev rrdtool sed sysfiles tar
+[DEP] xproto:dev
 
 [PROVIDES] nc nedit
 

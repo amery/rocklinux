@@ -20,33 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142664232 Sat Mar 18 07:43:52 2006 (5) ERROR
-[TIMESTAMP] 1142934654 Tue Mar 21 10:50:54 2006 (9)
-[TIMESTAMP] 1142964042 Tue Mar 21 19:00:42 2006 (5)
+[TIMESTAMP] 1168697894 Sat Jan 13 15:18:14 2007 (5) ERROR
+[TIMESTAMP] 1168907290 Tue Jan 16 01:28:10 2007 (9) ERROR
+[TIMESTAMP] 1168954301 Tue Jan 16 14:31:41 2007 (5) ERROR
+[TIMESTAMP] 1168984040 Tue Jan 16 22:47:20 2007 (9) ERROR
+[TIMESTAMP] 1169124633 Thu Jan 18 13:50:33 2007 (5) ERROR
+[TIMESTAMP] 1169154235 Thu Jan 18 22:03:55 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-bug-buddy.log 9-bug-buddy.log
+[LOGS] 5-bug-buddy.err 9-bug-buddy.err
 
-[BUILDTIME] 1427 (5) ERROR
-[BUILDTIME] 3585 (9)
-[BUILDTIME] 3559 (5)
-[SIZE] 2.12 MB, 118 files
+[BUILDTIME] 1832 (5) ERROR
+[BUILDTIME] 1839 (9) ERROR
+[BUILDTIME] 1832 (5) ERROR
+[BUILDTIME] 1852 (9) ERROR
+[BUILDTIME] 1848 (5) ERROR
+[BUILDTIME] 1844 (9) ERROR
 
-[DEP] 00-dirtree alsa atk atk:dev audiofile bash2 binutils bzip2 cairo
-[DEP] cairo:dev coreutils cpan-xml-parser diffutils docbookx esound
-[DEP] expat fam findutils freetype gawk gcc34 gcc34:dev gconf gconf:dev
-[DEP] gettext glib glib:dev glibc23 glibc23:dev gnome-blog gnome-desktop
-[DEP] gnome-desktop:dev gnome-doc-utils gnome-keyring gnome-menus
-[DEP] gnome-menus:dev gnome-vfs gnome-vfs:dev gnome2-dirtree grep gtk+
-[DEP] gtk+:dev libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev
-[DEP] libbonoboui libbonoboui:dev libglade libglade:dev libgnome
-[DEP] libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeui
-[DEP] libgnomeui:dev libjpeg libpng libxml2 libxml2:dev libxslt
-[DEP] linux26-header:dev make mktemp net-tools openssl orbit2 orbit2:dev
-[DEP] pango pango:dev perl5 pkgconfig popt popt:dev rrdtool scrollkeeper
-[DEP] sed startup-notification sysfiles tar util-linux xorg zlib:dev
 
-[PROVIDES] bug-buddy
+[5-ERROR] 	  && rm -f $file && /usr/bin/msgfmt -o $file wa.po
+[5-ERROR] file=`echo xh | sed 's,.*/,,'`.gmo \
+[5-ERROR] 	  && rm -f $file && /usr/bin/msgfmt -o $file xh.po
+[5-ERROR] file=`echo zh_CN | sed 's,.*/,,'`.gmo \
+[5-ERROR] 	  && rm -f $file && /usr/bin/msgfmt -o $file zh_CN.po
+[5-ERROR] file=`echo zh_HK | sed 's,.*/,,'`.gmo \
+[5-ERROR] 	  && rm -f $file && /usr/bin/msgfmt -o $file zh_HK.po
+[5-ERROR] file=`echo zh_TW | sed 's,.*/,,'`.gmo \
+[5-ERROR] 	  && rm -f $file && /usr/bin/msgfmt -o $file zh_TW.po
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.bug-buddy.1169124613.14174.3641098646/bug-buddy-2.16.0/po'
+[5-ERROR] Making all in pixmaps
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.bug-buddy.1169124613.14174.3641098646/bug-buddy-2.16.0/pixmaps'
+[5-ERROR] make[2]: Nothing to be done for `all'.
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.bug-buddy.1169124613.14174.3641098646/bug-buddy-2.16.0/pixmaps'
+[5-ERROR] Making all in src
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.bug-buddy.1169124613.14174.3641098646/bug-buddy-2.16.0/src'
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DGNOMELOCALEDIR=\""/opt/gnome2/share/locale"\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gnome-desktop-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/startup-notification-1.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/gnome-menus -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libsoup-2.2 -I/opt/gnome2/include/libgtop-2.0 -I/opt/gnome2/include/evolution-data-server-1.8   -I/opt/gnome2/include  -DBUDDY_DATADIR=\""/opt/gnome2/share/bug-buddy"\" -DBUDDY_ICONDIR=\""/opt/gnome2/share/pixmaps"\" -DREAL_DATADIR=\""/opt/gnome2/share"\"  -DGMENU_I_KNOW_THIS_IS_UNSTABLE -D_GNU_SOURCE    -g -O2 -c bug-buddy.c
+[5-ERROR] bug-buddy.c: In function 'network_error':
+[5-ERROR] bug-buddy.c:265: warning: pointer targets in assignment differ in signedness
+[5-ERROR] bug-buddy.c: In function 'send_report':
+[5-ERROR] bug-buddy.c:626: warning: passing argument 3 of 'soup_session_queue_message' from incompatible pointer type
+[5-ERROR] bug-buddy.c: In function 'main':
+[5-ERROR] bug-buddy.c:1213: warning: passing argument 2 of 'g_hash_table_find' from incompatible pointer type
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DGNOMELOCALEDIR=\""/opt/gnome2/share/locale"\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gnome-desktop-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/startup-notification-1.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/gnome-menus -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libsoup-2.2 -I/opt/gnome2/include/libgtop-2.0 -I/opt/gnome2/include/evolution-data-server-1.8   -I/opt/gnome2/include  -DBUDDY_DATADIR=\""/opt/gnome2/share/bug-buddy"\" -DBUDDY_ICONDIR=\""/opt/gnome2/share/pixmaps"\" -DREAL_DATADIR=\""/opt/gnome2/share"\"  -DGMENU_I_KNOW_THIS_IS_UNSTABLE -D_GNU_SOURCE    -g -O2 -c bugzilla.c
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DGNOMELOCALEDIR=\""/opt/gnome2/share/locale"\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gnome-desktop-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/startup-notification-1.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/gnome-menus -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libsoup-2.2 -I/opt/gnome2/include/libgtop-2.0 -I/opt/gnome2/include/evolution-data-server-1.8   -I/opt/gnome2/include  -DBUDDY_DATADIR=\""/opt/gnome2/share/bug-buddy"\" -DBUDDY_ICONDIR=\""/opt/gnome2/share/pixmaps"\" -DREAL_DATADIR=\""/opt/gnome2/share"\"  -DGMENU_I_KNOW_THIS_IS_UNSTABLE -D_GNU_SOURCE    -g -O2 -c gdb-buddy.c
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DGNOMELOCALEDIR=\""/opt/gnome2/share/locale"\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gnome-desktop-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/startup-notification-1.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/gnome-menus -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libsoup-2.2 -I/opt/gnome2/include/libgtop-2.0 -I/opt/gnome2/include/evolution-data-server-1.8   -I/opt/gnome2/include  -DBUDDY_DATADIR=\""/opt/gnome2/share/bug-buddy"\" -DBUDDY_ICONDIR=\""/opt/gnome2/share/pixmaps"\" -DREAL_DATADIR=\""/opt/gnome2/share"\"  -DGMENU_I_KNOW_THIS_IS_UNSTABLE -D_GNU_SOURCE    -g -O2 -c distribution.c
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DGNOMELOCALEDIR=\""/opt/gnome2/share/locale"\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gnome-desktop-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/startup-notification-1.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/gnome-menus -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libsoup-2.2 -I/opt/gnome2/include/libgtop-2.0 -I/opt/gnome2/include/evolution-data-server-1.8   -I/opt/gnome2/include  -DBUDDY_DATADIR=\""/opt/gnome2/share/bug-buddy"\" -DBUDDY_ICONDIR=\""/opt/gnome2/share/pixmaps"\" -DREAL_DATADIR=\""/opt/gnome2/share"\"  -DGMENU_I_KNOW_THIS_IS_UNSTABLE -D_GNU_SOURCE    -g -O2 -c proccess.c
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DGNOMELOCALEDIR=\""/opt/gnome2/share/locale"\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gnome-desktop-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/startup-notification-1.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/gnome-menus -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libsoup-2.2 -I/opt/gnome2/include/libgtop-2.0 -I/opt/gnome2/include/evolution-data-server-1.8   -I/opt/gnome2/include  -DBUDDY_DATADIR=\""/opt/gnome2/share/bug-buddy"\" -DBUDDY_ICONDIR=\""/opt/gnome2/share/pixmaps"\" -DREAL_DATADIR=\""/opt/gnome2/share"\"  -DGMENU_I_KNOW_THIS_IS_UNSTABLE -D_GNU_SOURCE    -g -O2 -c eds-buddy.c
+[5-ERROR] eds-buddy.c: In function 'get_default_user_email':
+[5-ERROR] eds-buddy.c:35: warning: incompatible implicit declaration of built-in function 'strlen'
+[5-ERROR] gcc-40  -g -O2   -o bug-buddy --export-dynamic bug-buddy.o bugzilla.o gdb-buddy.o distribution.o proccess.o eds-buddy.o -Wl,--export-dynamic -L/opt/gnome2/lib -L/usr/X11R7/lib -lgnome-desktop-2 -lstartup-notification-1 -lgnome-menu -lgnomeui-2 -lSM -lICE -lbonoboui-2 -lgnome-keyring -lgnomecanvas-2 -lart_lgpl_2 -lglade-2.0 -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lpangocairo-1.0 -lpangoft2-1.0 -lcairo -lpango-1.0 -lsoup-2.2 -lgnutls -ltasn1 -lgcrypt -lgpg-error -lgtop-2.0 -lebook-1.2 -lgnome-2 -lpopt -ledataserver-1.2 -lgnomevfs-2 -lgobject-2.0 -lxml2 -lz -lgconf-2 -lbonobo-2 -lORBitCosNaming-2 -lbonobo-activation -lORBit-2 -lm -lgmodule-2.0 -ldl -lgthread-2.0 -lglib-2.0    
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/../../../../i386-unknown-linux-gnu/bin/ld: warning: libcamel-1.2.so.0, needed by /opt/gnome2/lib/libebook-1.2.so, not found (try using -rpath or -rpath-link)
+[5-ERROR] /opt/gnome2/lib/libebook-1.2.so: undefined reference to `camel_object_unref'
+[5-ERROR] /opt/gnome2/lib/libebook-1.2.so: undefined reference to `camel_internet_address_new'
+[5-ERROR] /opt/gnome2/lib/libebook-1.2.so: undefined reference to `camel_object_type'
+[5-ERROR] /opt/gnome2/lib/libebook-1.2.so: undefined reference to `camel_internet_address_get'
+[5-ERROR] /opt/gnome2/lib/libebook-1.2.so: undefined reference to `camel_address_decode'
+[5-ERROR] /opt/gnome2/lib/libebook-1.2.so: undefined reference to `camel_object_cast'
+[5-ERROR] /opt/gnome2/lib/libebook-1.2.so: undefined reference to `camel_address_encode'
+[5-ERROR] /opt/gnome2/lib/libebook-1.2.so: undefined reference to `camel_internet_address_add'
+[5-ERROR] /opt/gnome2/lib/libebook-1.2.so: undefined reference to `camel_address_format'
+[5-ERROR] /opt/gnome2/lib/libebook-1.2.so: undefined reference to `camel_address_get_type'
+[5-ERROR] /opt/gnome2/lib/libebook-1.2.so: undefined reference to `camel_address_unformat'
+[5-ERROR] collect2: ld returned 1 exit status
+[5-ERROR] make[2]: *** [bug-buddy] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.bug-buddy.1169124613.14174.3641098646/bug-buddy-2.16.0/src'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.bug-buddy.1169124613.14174.3641098646/bug-buddy-2.16.0'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] 	  && rm -f $file && /usr/bin/msgfmt -o $file wa.po
+[9-ERROR] file=`echo xh | sed 's,.*/,,'`.gmo \
+[9-ERROR] 	  && rm -f $file && /usr/bin/msgfmt -o $file xh.po
+[9-ERROR] file=`echo zh_CN | sed 's,.*/,,'`.gmo \
+[9-ERROR] 	  && rm -f $file && /usr/bin/msgfmt -o $file zh_CN.po
+[9-ERROR] file=`echo zh_HK | sed 's,.*/,,'`.gmo \
+[9-ERROR] 	  && rm -f $file && /usr/bin/msgfmt -o $file zh_HK.po
+[9-ERROR] file=`echo zh_TW | sed 's,.*/,,'`.gmo \
+[9-ERROR] 	  && rm -f $file && /usr/bin/msgfmt -o $file zh_TW.po
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.bug-buddy.1169154214.4692.3951810427/bug-buddy-2.16.0/po'
+[9-ERROR] Making all in pixmaps
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.bug-buddy.1169154214.4692.3951810427/bug-buddy-2.16.0/pixmaps'
+[9-ERROR] make[2]: Nothing to be done for `all'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.bug-buddy.1169154214.4692.3951810427/bug-buddy-2.16.0/pixmaps'
+[9-ERROR] Making all in src
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.bug-buddy.1169154214.4692.3951810427/bug-buddy-2.16.0/src'
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DGNOMELOCALEDIR=\""/opt/gnome2/share/locale"\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gnome-desktop-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/startup-notification-1.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/gnome-menus -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libsoup-2.2 -I/opt/gnome2/include/libgtop-2.0 -I/opt/gnome2/include/evolution-data-server-1.8   -I/opt/gnome2/include  -DBUDDY_DATADIR=\""/opt/gnome2/share/bug-buddy"\" -DBUDDY_ICONDIR=\""/opt/gnome2/share/pixmaps"\" -DREAL_DATADIR=\""/opt/gnome2/share"\"  -DGMENU_I_KNOW_THIS_IS_UNSTABLE -D_GNU_SOURCE    -g -O2 -c bug-buddy.c
+[9-ERROR] bug-buddy.c: In function 'network_error':
+[9-ERROR] bug-buddy.c:265: warning: pointer targets in assignment differ in signedness
+[9-ERROR] bug-buddy.c: In function 'send_report':
+[9-ERROR] bug-buddy.c:626: warning: passing argument 3 of 'soup_session_queue_message' from incompatible pointer type
+[9-ERROR] bug-buddy.c: In function 'main':
+[9-ERROR] bug-buddy.c:1213: warning: passing argument 2 of 'g_hash_table_find' from incompatible pointer type
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DGNOMELOCALEDIR=\""/opt/gnome2/share/locale"\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gnome-desktop-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/startup-notification-1.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/gnome-menus -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libsoup-2.2 -I/opt/gnome2/include/libgtop-2.0 -I/opt/gnome2/include/evolution-data-server-1.8   -I/opt/gnome2/include  -DBUDDY_DATADIR=\""/opt/gnome2/share/bug-buddy"\" -DBUDDY_ICONDIR=\""/opt/gnome2/share/pixmaps"\" -DREAL_DATADIR=\""/opt/gnome2/share"\"  -DGMENU_I_KNOW_THIS_IS_UNSTABLE -D_GNU_SOURCE    -g -O2 -c bugzilla.c
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DGNOMELOCALEDIR=\""/opt/gnome2/share/locale"\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gnome-desktop-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/startup-notification-1.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/gnome-menus -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libsoup-2.2 -I/opt/gnome2/include/libgtop-2.0 -I/opt/gnome2/include/evolution-data-server-1.8   -I/opt/gnome2/include  -DBUDDY_DATADIR=\""/opt/gnome2/share/bug-buddy"\" -DBUDDY_ICONDIR=\""/opt/gnome2/share/pixmaps"\" -DREAL_DATADIR=\""/opt/gnome2/share"\"  -DGMENU_I_KNOW_THIS_IS_UNSTABLE -D_GNU_SOURCE    -g -O2 -c gdb-buddy.c
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DGNOMELOCALEDIR=\""/opt/gnome2/share/locale"\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gnome-desktop-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/startup-notification-1.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/gnome-menus -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libsoup-2.2 -I/opt/gnome2/include/libgtop-2.0 -I/opt/gnome2/include/evolution-data-server-1.8   -I/opt/gnome2/include  -DBUDDY_DATADIR=\""/opt/gnome2/share/bug-buddy"\" -DBUDDY_ICONDIR=\""/opt/gnome2/share/pixmaps"\" -DREAL_DATADIR=\""/opt/gnome2/share"\"  -DGMENU_I_KNOW_THIS_IS_UNSTABLE -D_GNU_SOURCE    -g -O2 -c distribution.c
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DGNOMELOCALEDIR=\""/opt/gnome2/share/locale"\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gnome-desktop-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/startup-notification-1.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/gnome-menus -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libsoup-2.2 -I/opt/gnome2/include/libgtop-2.0 -I/opt/gnome2/include/evolution-data-server-1.8   -I/opt/gnome2/include  -DBUDDY_DATADIR=\""/opt/gnome2/share/bug-buddy"\" -DBUDDY_ICONDIR=\""/opt/gnome2/share/pixmaps"\" -DREAL_DATADIR=\""/opt/gnome2/share"\"  -DGMENU_I_KNOW_THIS_IS_UNSTABLE -D_GNU_SOURCE    -g -O2 -c proccess.c
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DGNOMELOCALEDIR=\""/opt/gnome2/share/locale"\" -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gnome-desktop-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/startup-notification-1.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/gnome-menus -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libsoup-2.2 -I/opt/gnome2/include/libgtop-2.0 -I/opt/gnome2/include/evolution-data-server-1.8   -I/opt/gnome2/include  -DBUDDY_DATADIR=\""/opt/gnome2/share/bug-buddy"\" -DBUDDY_ICONDIR=\""/opt/gnome2/share/pixmaps"\" -DREAL_DATADIR=\""/opt/gnome2/share"\"  -DGMENU_I_KNOW_THIS_IS_UNSTABLE -D_GNU_SOURCE    -g -O2 -c eds-buddy.c
+[9-ERROR] eds-buddy.c: In function 'get_default_user_email':
+[9-ERROR] eds-buddy.c:35: warning: incompatible implicit declaration of built-in function 'strlen'
+[9-ERROR] gcc-40  -g -O2   -o bug-buddy --export-dynamic bug-buddy.o bugzilla.o gdb-buddy.o distribution.o proccess.o eds-buddy.o -Wl,--export-dynamic -L/opt/gnome2/lib -L/usr/X11R7/lib -lgnome-desktop-2 -lstartup-notification-1 -lgnome-menu -lgnomeui-2 -lSM -lICE -lbonoboui-2 -lgnome-keyring -lgnomecanvas-2 -lart_lgpl_2 -lglade-2.0 -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lpangocairo-1.0 -lpangoft2-1.0 -lcairo -lpango-1.0 -lsoup-2.2 -lgnutls -ltasn1 -lgcrypt -lgpg-error -lgtop-2.0 -lebook-1.2 -lgnome-2 -lpopt -ledataserver-1.2 -lgnomevfs-2 -lgobject-2.0 -lxml2 -lz -lgconf-2 -lbonobo-2 -lORBitCosNaming-2 -lbonobo-activation -lORBit-2 -lm -lgmodule-2.0 -ldl -lgthread-2.0 -lglib-2.0    
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/../../../../i386-unknown-linux-gnu/bin/ld: warning: libcamel-1.2.so.0, needed by /opt/gnome2/lib/libebook-1.2.so, not found (try using -rpath or -rpath-link)
+[9-ERROR] /opt/gnome2/lib/libebook-1.2.so: undefined reference to `camel_object_unref'
+[9-ERROR] /opt/gnome2/lib/libebook-1.2.so: undefined reference to `camel_internet_address_new'
+[9-ERROR] /opt/gnome2/lib/libebook-1.2.so: undefined reference to `camel_object_type'
+[9-ERROR] /opt/gnome2/lib/libebook-1.2.so: undefined reference to `camel_internet_address_get'
+[9-ERROR] /opt/gnome2/lib/libebook-1.2.so: undefined reference to `camel_address_decode'
+[9-ERROR] /opt/gnome2/lib/libebook-1.2.so: undefined reference to `camel_object_cast'
+[9-ERROR] /opt/gnome2/lib/libebook-1.2.so: undefined reference to `camel_address_encode'
+[9-ERROR] /opt/gnome2/lib/libebook-1.2.so: undefined reference to `camel_internet_address_add'
+[9-ERROR] /opt/gnome2/lib/libebook-1.2.so: undefined reference to `camel_address_format'
+[9-ERROR] /opt/gnome2/lib/libebook-1.2.so: undefined reference to `camel_address_get_type'
+[9-ERROR] /opt/gnome2/lib/libebook-1.2.so: undefined reference to `camel_address_unformat'
+[9-ERROR] collect2: ld returned 1 exit status
+[9-ERROR] make[2]: *** [bug-buddy] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.bug-buddy.1169154214.4692.3951810427/bug-buddy-2.16.0/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.bug-buddy.1169154214.4692.3951810427/bug-buddy-2.16.0'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

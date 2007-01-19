@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142671160 Sat Mar 18 09:39:20 2006 (5)
-[TIMESTAMP] 1142942029 Tue Mar 21 12:53:49 2006 (9)
+[TIMESTAMP] 1168702330 Sat Jan 13 16:32:10 2007 (5)
+[TIMESTAMP] 1168912017 Tue Jan 16 02:46:57 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-powernowd.log 9-powernowd.log
 
-[BUILDTIME] 1434 (5)
-[BUILDTIME] 1501 (9)
+[BUILDTIME] 1430 (5)
+[BUILDTIME] 1450 (9)
 [SIZE] 0.03 MB, 9 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp rrdtool
-[DEP] sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils gcc40
+[DEP] gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev m4 make
+[DEP] mktemp rrdtool sed sysfiles tar
 
 [PROVIDES] powernowd
 

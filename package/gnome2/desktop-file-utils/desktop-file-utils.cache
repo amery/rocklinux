@@ -20,23 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142492455 Thu Mar 16 08:00:55 2006 (5)
-[TIMESTAMP] 1142741842 Sun Mar 19 05:17:22 2006 (9)
+[TIMESTAMP] 1168569107 Fri Jan 12 03:31:47 2007 (5) ERROR
+[TIMESTAMP] 1168766908 Sun Jan 14 10:28:28 2007 (9) ERROR
+[TIMESTAMP] 1168941857 Tue Jan 16 11:04:17 2007 (5) ERROR
+[TIMESTAMP] 1168963989 Tue Jan 16 17:13:09 2007 (9) ERROR
+[TIMESTAMP] 1169085247 Thu Jan 18 02:54:07 2007 (5) ERROR
+[TIMESTAMP] 1169134279 Thu Jan 18 16:31:19 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-desktop-file-utils.log 9-desktop-file-utils.log
+[LOGS] 5-desktop-file-utils.err 9-desktop-file-utils.err
 
-[BUILDTIME] 2329 (5)
-[BUILDTIME] 2933 (9)
-[SIZE] 0.13 MB, 12 files
+[BUILDTIME] 1931 (5) ERROR
+[BUILDTIME] 2028 (9) ERROR
+[BUILDTIME] 2032 (5) ERROR
+[BUILDTIME] 2004 (9) ERROR
+[BUILDTIME] 2011 (5) ERROR
+[BUILDTIME] 2020 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils emacs findutils
-[DEP] gawk gcc34 gcc34:dev gettext glib glib:dev glibc23 glibc23:dev
-[DEP] gnome2-dirtree grep linux26-header:dev make mktemp net-tools
-[DEP] pkgconfig popt popt:dev rrdtool sed sysfiles tar util-linux xorg
 
-[PROVIDES] desktop-file-install desktop-file-validate
-[PROVIDES] update-desktop-database
+[5-ERROR] 	then mv -f ".deps/desktop_file.Tpo" ".deps/desktop_file.Po"; \
+[5-ERROR] 	else rm -f ".deps/desktop_file.Tpo"; exit 1; \
+[5-ERROR] 	fi
+[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -DDATADIR="\"/usr/share\"" -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE    -g -O2 -Wall -Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wcast-align -Wsign-compare -MT validate.o -MD -MP -MF ".deps/validate.Tpo" \
+[5-ERROR] 	  -c -o validate.o `test -f 'validate.c' || echo './'`validate.c; \
+[5-ERROR] 	then mv -f ".deps/validate.Tpo" ".deps/validate.Po"; \
+[5-ERROR] 	else rm -f ".deps/validate.Tpo"; exit 1; \
+[5-ERROR] 	fi
+[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -DDATADIR="\"/usr/share\"" -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE    -g -O2 -Wall -Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wcast-align -Wsign-compare -MT validator.o -MD -MP -MF ".deps/validator.Tpo" \
+[5-ERROR] 	  -c -o validator.o `test -f 'validator.c' || echo './'`validator.c; \
+[5-ERROR] 	then mv -f ".deps/validator.Tpo" ".deps/validator.Po"; \
+[5-ERROR] 	else rm -f ".deps/validator.Tpo"; exit 1; \
+[5-ERROR] 	fi
+[5-ERROR] /bin/sh ../libtool --mode=link gcc-40  -g -O2 -Wall -Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wcast-align -Wsign-compare   -o desktop-file-validate  desktop_file.o validate.o validator.o -L/opt/gnome2/lib -lglib-2.0   
+[5-ERROR] mkdir .libs
+[5-ERROR] gcc-40 -g -O2 -Wall -Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wcast-align -Wsign-compare -o desktop-file-validate desktop_file.o validate.o validator.o  -L/opt/gnome2/lib /opt/gnome2/lib/libglib-2.0.so -lrt
+[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -DDATADIR="\"/usr/share\"" -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE    -g -O2 -Wall -Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wcast-align -Wsign-compare -MT install.o -MD -MP -MF ".deps/install.Tpo" \
+[5-ERROR] 	  -c -o install.o `test -f 'install.c' || echo './'`install.c; \
+[5-ERROR] 	then mv -f ".deps/install.Tpo" ".deps/install.Po"; \
+[5-ERROR] 	else rm -f ".deps/install.Tpo"; exit 1; \
+[5-ERROR] 	fi
+[5-ERROR] /bin/sh ../libtool --mode=link gcc-40  -g -O2 -Wall -Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wcast-align -Wsign-compare   -o desktop-file-install  desktop_file.o validate.o install.o -L/opt/gnome2/lib -lglib-2.0   
+[5-ERROR] gcc-40 -g -O2 -Wall -Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wcast-align -Wsign-compare -o desktop-file-install desktop_file.o validate.o install.o  -L/opt/gnome2/lib /opt/gnome2/lib/libglib-2.0.so -lrt
+[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -DDATADIR="\"/usr/share\"" -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE    -g -O2 -Wall -Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wcast-align -Wsign-compare -MT update-desktop-database.o -MD -MP -MF ".deps/update-desktop-database.Tpo" \
+[5-ERROR] 	  -c -o update-desktop-database.o `test -f 'update-desktop-database.c' || echo './'`update-desktop-database.c; \
+[5-ERROR] 	then mv -f ".deps/update-desktop-database.Tpo" ".deps/update-desktop-database.Po"; \
+[5-ERROR] 	else rm -f ".deps/update-desktop-database.Tpo"; exit 1; \
+[5-ERROR] 	fi
+[5-ERROR] /bin/sh ../libtool --mode=link gcc-40  -g -O2 -Wall -Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wcast-align -Wsign-compare   -o update-desktop-database  update-desktop-database.o -L/opt/gnome2/lib -lglib-2.0   
+[5-ERROR] gcc-40 -g -O2 -Wall -Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wcast-align -Wsign-compare -o update-desktop-database update-desktop-database.o  -L/opt/gnome2/lib /opt/gnome2/lib/libglib-2.0.so -lrt
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.desktop-file-utils.1169085226.14210.3583069520/desktop-file-utils-0.11/src'
+[5-ERROR] Making all in misc
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.desktop-file-utils.1169085226.14210.3583069520/desktop-file-utils-0.11/misc'
+[5-ERROR] WARNING: Warnings can be ignored. :-)
+[5-ERROR] if test emacs != no; then \
+[5-ERROR] 	  set x; \
+[5-ERROR] 	  list='desktop-entry-mode.el'; for p in $list; do \
+[5-ERROR]             if test -f "$p"; then d=; else d="./"; fi; \
+[5-ERROR] 	    set x "$@" "$d$p"; shift; \
+[5-ERROR] 	  done; \
+[5-ERROR] 	  shift; \
+[5-ERROR] 	  EMACS=emacs /bin/sh ../elisp-comp "$@" || exit 1; \
+[5-ERROR] 	else : ; fi
+[5-ERROR] ../elisp-comp: line 58: 22440 Segmentation fault      (core dumped) $EMACS -batch -q -l script -f batch-byte-compile *.el
+[5-ERROR] make[2]: *** [elc-stamp] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.desktop-file-utils.1169085226.14210.3583069520/desktop-file-utils-0.11/misc'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.desktop-file-utils.1169085226.14210.3583069520/desktop-file-utils-0.11'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] 	then mv -f ".deps/desktop_file.Tpo" ".deps/desktop_file.Po"; \
+[9-ERROR] 	else rm -f ".deps/desktop_file.Tpo"; exit 1; \
+[9-ERROR] 	fi
+[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -DDATADIR="\"/usr/share\"" -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE    -g -O2 -Wall -Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wcast-align -Wsign-compare -MT validate.o -MD -MP -MF ".deps/validate.Tpo" \
+[9-ERROR] 	  -c -o validate.o `test -f 'validate.c' || echo './'`validate.c; \
+[9-ERROR] 	then mv -f ".deps/validate.Tpo" ".deps/validate.Po"; \
+[9-ERROR] 	else rm -f ".deps/validate.Tpo"; exit 1; \
+[9-ERROR] 	fi
+[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -DDATADIR="\"/usr/share\"" -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE    -g -O2 -Wall -Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wcast-align -Wsign-compare -MT validator.o -MD -MP -MF ".deps/validator.Tpo" \
+[9-ERROR] 	  -c -o validator.o `test -f 'validator.c' || echo './'`validator.c; \
+[9-ERROR] 	then mv -f ".deps/validator.Tpo" ".deps/validator.Po"; \
+[9-ERROR] 	else rm -f ".deps/validator.Tpo"; exit 1; \
+[9-ERROR] 	fi
+[9-ERROR] /bin/sh ../libtool --mode=link gcc-40  -g -O2 -Wall -Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wcast-align -Wsign-compare   -o desktop-file-validate  desktop_file.o validate.o validator.o -L/opt/gnome2/lib -lglib-2.0   
+[9-ERROR] mkdir .libs
+[9-ERROR] gcc-40 -g -O2 -Wall -Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wcast-align -Wsign-compare -o desktop-file-validate desktop_file.o validate.o validator.o  -L/opt/gnome2/lib /opt/gnome2/lib/libglib-2.0.so -lrt
+[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -DDATADIR="\"/usr/share\"" -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE    -g -O2 -Wall -Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wcast-align -Wsign-compare -MT install.o -MD -MP -MF ".deps/install.Tpo" \
+[9-ERROR] 	  -c -o install.o `test -f 'install.c' || echo './'`install.c; \
+[9-ERROR] 	then mv -f ".deps/install.Tpo" ".deps/install.Po"; \
+[9-ERROR] 	else rm -f ".deps/install.Tpo"; exit 1; \
+[9-ERROR] 	fi
+[9-ERROR] /bin/sh ../libtool --mode=link gcc-40  -g -O2 -Wall -Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wcast-align -Wsign-compare   -o desktop-file-install  desktop_file.o validate.o install.o -L/opt/gnome2/lib -lglib-2.0   
+[9-ERROR] gcc-40 -g -O2 -Wall -Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wcast-align -Wsign-compare -o desktop-file-install desktop_file.o validate.o install.o  -L/opt/gnome2/lib /opt/gnome2/lib/libglib-2.0.so -lrt
+[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -DDATADIR="\"/usr/share\"" -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE    -g -O2 -Wall -Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wcast-align -Wsign-compare -MT update-desktop-database.o -MD -MP -MF ".deps/update-desktop-database.Tpo" \
+[9-ERROR] 	  -c -o update-desktop-database.o `test -f 'update-desktop-database.c' || echo './'`update-desktop-database.c; \
+[9-ERROR] 	then mv -f ".deps/update-desktop-database.Tpo" ".deps/update-desktop-database.Po"; \
+[9-ERROR] 	else rm -f ".deps/update-desktop-database.Tpo"; exit 1; \
+[9-ERROR] 	fi
+[9-ERROR] /bin/sh ../libtool --mode=link gcc-40  -g -O2 -Wall -Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wcast-align -Wsign-compare   -o update-desktop-database  update-desktop-database.o -L/opt/gnome2/lib -lglib-2.0   
+[9-ERROR] gcc-40 -g -O2 -Wall -Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wcast-align -Wsign-compare -o update-desktop-database update-desktop-database.o  -L/opt/gnome2/lib /opt/gnome2/lib/libglib-2.0.so -lrt
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.desktop-file-utils.1169134258.25183.428350364/desktop-file-utils-0.11/src'
+[9-ERROR] Making all in misc
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.desktop-file-utils.1169134258.25183.428350364/desktop-file-utils-0.11/misc'
+[9-ERROR] WARNING: Warnings can be ignored. :-)
+[9-ERROR] if test emacs != no; then \
+[9-ERROR] 	  set x; \
+[9-ERROR] 	  list='desktop-entry-mode.el'; for p in $list; do \
+[9-ERROR]             if test -f "$p"; then d=; else d="./"; fi; \
+[9-ERROR] 	    set x "$@" "$d$p"; shift; \
+[9-ERROR] 	  done; \
+[9-ERROR] 	  shift; \
+[9-ERROR] 	  EMACS=emacs /bin/sh ../elisp-comp "$@" || exit 1; \
+[9-ERROR] 	else : ; fi
+[9-ERROR] ../elisp-comp: line 58:   949 Segmentation fault      (core dumped) $EMACS -batch -q -l script -f batch-byte-compile *.el
+[9-ERROR] make[2]: *** [elc-stamp] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.desktop-file-utils.1169134258.25183.428350364/desktop-file-utils-0.11/misc'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.desktop-file-utils.1169134258.25183.428350364/desktop-file-utils-0.11'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

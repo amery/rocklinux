@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142447171 Wed Mar 15 19:26:11 2006 (3)
-[TIMESTAMP] 1142695459 Sat Mar 18 16:24:19 2006 (9)
+[TIMESTAMP] 1168524766 Thu Jan 11 15:12:46 2007 (3)
+[TIMESTAMP] 1168723950 Sat Jan 13 22:32:30 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 1-bison.log 3-bison.log 9-bison.log
 
-[BUILDTIME] 4291 (3)
-[BUILDTIME] 5078 (9)
-[SIZE] 1.05 MB, 62 files
+[BUILDTIME] 4263 (3)
+[BUILDTIME] 5005 (9)
+[SIZE] 0.83 MB, 30 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils flex
-[DEP] flex:dev gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
-[DEP] linux26-header:dev m4 make mktemp net-tools rrdtool sed sysfiles
-[DEP] tar texinfo util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
+[DEP] flex flex:dev gawk gcc40 gcc40:dev gettext glibc23 glibc23:dev grep
+[DEP] linux-libc-headers:dev m4 make mktemp net-tools netpbm rrdtool sed
+[DEP] sysfiles tar texinfo twoftpd ucspi-unix util-linux
 
 [PROVIDES] bison liby.a yacc
 

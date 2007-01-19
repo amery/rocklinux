@@ -20,24 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142628727 Fri Mar 17 21:52:07 2006 (5)
-[TIMESTAMP] 1142896899 Tue Mar 21 00:21:39 2006 (9)
+[TIMESTAMP] 1168679582 Sat Jan 13 10:13:02 2007 (5)
+[TIMESTAMP] 1168888356 Mon Jan 15 20:12:36 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-dvgrab.log 9-dvgrab.log
 
-[BUILDTIME] 3075 (5)
-[BUILDTIME] 3286 (9)
-[SIZE] 0.20 MB, 8 files
+[BUILDTIME] 2986 (5)
+[BUILDTIME] 3170 (9)
+[SIZE] 0.17 MB, 8 files
 
-[DEP] 00-dirtree a52dec:dev bash2 binutils bzip2 coreutils diffutils
-[DEP] findutils gcc34 gcc34:dev glibc23 glibc23:dev grep libavc1394
-[DEP] libavc1394:dev libdv libdv:dev libiec61883 libiec61883:dev
-[DEP] libjpeg libjpeg:dev libmpeg3:dev libpng libraw1394 libraw1394:dev
-[DEP] linux26-header:dev make mktemp net-tools ogg-vorbis pkgconfig
-[DEP] rrdtool sed sysfiles tar util-linux
+[DEP] 00-dirtree a52dec:dev bash2 binutils bzip2 coreutils cvm diffutils
+[DEP] findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev grep libavc1394
+[DEP] libavc1394:dev libdv libdv:dev libiec61883 libiec61883:dev libjpeg
+[DEP] libjpeg:dev libpng libraw1394 libraw1394:dev linux-libc-headers:dev
+[DEP] make mktemp net-tools netpbm ogg-vorbis pkgconfig rrdtool sed
+[DEP] sysfiles tar twoftpd ucspi-unix util-linux zlib
 
 [PROVIDES] dvgrab
 

@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142588227 Fri Mar 17 10:37:07 2006 (5)
-[TIMESTAMP] 1142852606 Mon Mar 20 12:03:26 2006 (9)
+[TIMESTAMP] 1168648585 Sat Jan 13 01:36:25 2007 (5)
+[TIMESTAMP] 1168855088 Mon Jan 15 10:58:08 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-crm114.log 9-crm114.log
 
-[BUILDTIME] 5217 (5)
-[BUILDTIME] 5587 (9)
+[BUILDTIME] 5452 (5)
+[BUILDTIME] 5698 (9)
 [SIZE] 2.20 MB, 64 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev gettext glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp net-tools rrdtool sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils emacs
+[DEP] findutils gawk gcc40 gcc40:dev gettext glibc23 glibc23:dev grep
+[DEP] linux-libc-headers:dev make mktemp net-tools netpbm rrdtool sed
+[DEP] sysfiles tar twoftpd ucspi-unix util-linux
 
 [PROVIDES] agrep crm cssdiff cssmerge cssutil libtre.a libtre.so osbf-util
 

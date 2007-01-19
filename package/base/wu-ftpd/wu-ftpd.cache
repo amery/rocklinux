@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142575850 Fri Mar 17 07:10:50 2006 (5)
-[TIMESTAMP] 1142839284 Mon Mar 20 08:21:24 2006 (9)
+[TIMESTAMP] 1168638755 Fri Jan 12 22:52:35 2007 (5)
+[TIMESTAMP] 1168844491 Mon Jan 15 08:01:31 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-wu-ftpd.log 9-wu-ftpd.log
 
-[BUILDTIME] 2833 (5)
-[BUILDTIME] 3203 (9)
+[BUILDTIME] 2984 (5)
+[BUILDTIME] 3263 (9)
 [SIZE] 0.30 MB, 26 files
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils findutils
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] m4 make mktemp net-tools pam pam:dev patch rrdtool sed shadow:dev
-[DEP] sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils cvm diffutils
+[DEP] findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev grep
+[DEP] linux-libc-headers:dev m4 make mktemp net-tools netpbm pam pam:dev
+[DEP] patch rrdtool sed shadow sysfiles tar twoftpd ucspi-unix util-linux
 
 [PROVIDES] ckconfig ftpcount ftprestart ftpshut ftpwho in.ftpd privatepw
 

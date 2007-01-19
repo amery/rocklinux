@@ -20,43 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142591659 Fri Mar 17 11:34:19 2006 (5)
-[TIMESTAMP] 1142856456 Mon Mar 20 13:07:36 2006 (9)
+[TIMESTAMP] 1168649988 Sat Jan 13 01:59:48 2007 (5) ERROR
+[TIMESTAMP] 1168856591 Mon Jan 15 11:23:11 2007 (9) ERROR
+[TIMESTAMP] 1168949613 Tue Jan 16 13:13:33 2007 (5) ERROR
+[TIMESTAMP] 1168979557 Tue Jan 16 21:32:37 2007 (9) ERROR
+[TIMESTAMP] 1169093098 Thu Jan 18 05:04:58 2007 (5) ERROR
+[TIMESTAMP] 1169149769 Thu Jan 18 20:49:29 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-clip.log 9-clip.log
+[LOGS] 5-clip.err 9-clip.err
 
-[BUILDTIME] 19400 (5)
-[BUILDTIME] 20128 (9)
-[SIZE] 8.98 MB, 453 files
+[BUILDTIME] 1470 (5) ERROR
+[BUILDTIME] 1490 (9) ERROR
+[BUILDTIME] 1467 (5) ERROR
+[BUILDTIME] 1528 (9) ERROR
+[BUILDTIME] 1556 (5) ERROR
+[BUILDTIME] 1510 (9) ERROR
 
-[DEP] 00-dirtree atk atk:dev bash2 binutils bison bonobo-conf10:dev
-[DEP] bonobo10:dev bzip2 bzip2:dev cairo cairo:dev cinepaint:dev
-[DEP] coreutils cpio diffutils findutils flex gal01:dev gawk gcc34
-[DEP] gcc34:dev gconf110:dev gdk-pixbuf10 gdk-pixbuf10:dev gettext
-[DEP] gimp-print42:dev glib glib12 glib12:dev glib:dev glibc23 glibc23:dev
-[DEP] gnome-libs14:dev gnome-print10:dev gnome14-dirtree gnome2-dirtree
-[DEP] gnomemm12:dev gnucash:dev gpm gpm:dev grep gtk+ gtk+12 gtk+12:dev
-[DEP] gtk+:dev gtk+extra10 gtk+extra10:dev gtkhtml1:dev gtkmm12:dev
-[DEP] guppi:dev libglade10:dev libjpeg:dev libpng:dev linux26-header:dev
-[DEP] lynx make mktemp ncurses:dev net-tools oaf10:dev openssl openssl:dev
-[DEP] orbit10:dev pango pango:dev patch pkgconfig postgresql postgresql:dev
-[DEP] readline readline:dev rrdtool sed soup:dev sysfiles tar xorg
-[DEP] xorg:dev zlib:dev
 
-[PROVIDES] add_meta_tag clip clip_bug clip_conv clip_cp clip_dbg
-[PROVIDES] clip_hashextract clip_makelib clip_makeslib clip_msgfmt
-[PROVIDES] clip_msgmerge clip_trans clipar cliphash gen_tbl joinlib.sh
-[PROVIDES] libclip-bzip2.a libclip-bzip2.so libclip-codb.a libclip-codb.so
-[PROVIDES] libclip-com.a libclip-com.so libclip-crypto.a libclip-crypto.so
-[PROVIDES] libclip-cti.a libclip-cti.so libclip-fw.a libclip-fw.so
-[PROVIDES] libclip-gtk.a libclip-gtk.so libclip-gtk2.a libclip-gtk2.so
-[PROVIDES] libclip-gtkextra.a libclip-gtkextra.so libclip-gzip.a
-[PROVIDES] libclip-gzip.so libclip-nanfor.a libclip-nanfor.so
-[PROVIDES] libclip-netto.a libclip-netto.so libclip-postgres.a
-[PROVIDES] libclip-postgres.so libclip-r2d2.a libclip-r2d2.so libclip-rtf.a
-[PROVIDES] libclip-rtf.so libclip.a libclip.so lowname po_compat po_extr
-[PROVIDES] po_subst tconv xclip
+[5-ERROR] Removing unsupported '--sysconfdir=/etc/opt/clip' from configure option string.
+[5-ERROR] Removing unsupported '--localstatedir=/var/opt/clip' from configure option string.
+[5-ERROR] Removing unsupported '--disable-debug' from configure option string.
+[5-ERROR] Removing unsupported '--with-mysql-lib=/opt/mysql/lib/mysql' from configure option string.
+[5-ERROR] Removing unsupported '--with-mysql-include=/opt/mysql/include/mysql' from configure option string.
+[5-ERROR] Removing unsupported '--with-libpam' from configure option string.
+[5-ERROR] Removing unsupported '--with-pam' from configure option string.
+[5-ERROR] Removing unsupported '--enable-libpam' from configure option string.
+[5-ERROR] Removing unsupported '--enable-pam' from configure option string.
+[5-ERROR] Removing unsupported '--build=i386-unknown-linux-gnu' from configure option string.
+[5-ERROR] Removing unsupported '--host=i386-unknown-linux-gnu' from configure option string.
+[5-ERROR] Running  bash ./configure
+[5-ERROR] Warning: task not available: unknown system
+[5-ERROR] configure: Makefile creating... done.
+[5-ERROR] configure: creating clipcfg.h ... done.
+[5-ERROR] configure: creating clip_msgmerge ... done.
+[5-ERROR] configure: creating clip_msgfmt ... done.
+[5-ERROR] configure: creating clip_makeslib ... done.
+[5-ERROR] configure: creating clip_cp ... done.
+[5-ERROR] configure: creating clip_makelib ... done.
+[5-ERROR] Registration info:
+[5-ERROR] 
+[5-ERROR] This program is free software; you can redistribute it and/or modify
+[5-ERROR] it under the terms of the "GNU" General Public License as published by
+[5-ERROR] the Free Software Foundation; either version 2 of the License, or
+[5-ERROR] (at your option) any later version.
+[5-ERROR] 
+[5-ERROR] This program is distributed in the hope that it will be useful,
+[5-ERROR] but WITHOUT ANY WARRANTY; without even the implied warranty of
+[5-ERROR] MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+[5-ERROR] GNU General Public License for more details.
+[5-ERROR] 
+[5-ERROR] You should have received a copy of the GNU General Public License
+[5-ERROR] along with this program; if not, please read license at
+[5-ERROR] http://www.gnu.org/copyleft/gpl.html
+[5-ERROR] 
+[5-ERROR] . done.
+[5-ERROR] [ -d charsets ] || ln -s screen/install/charsets .
+[5-ERROR] gcc-40 -Wall -I. -I./include -g  -O0   -c lex.hash.c
+[5-ERROR] lex.hash.c:1012: warning: 'yyunput' defined but not used
+[5-ERROR] gcc-40 -Wall -I. -I./include -g  -O0  -DSTANDALONE -o clip_hash.o -c cliphash.c
+[5-ERROR] cliphash.c: In function '_clip_casehashbytes':
+[5-ERROR] cliphash.c:248: warning: pointer targets in passing argument 1 of 'strtoul' differ in signedness
+[5-ERROR] gcc-40 -O -o hashextract lex.hash.o clip_hash.o
+[5-ERROR] gcc-40 -Wall -I. -I./include -g  -O0   -c clic.tab.c
+[5-ERROR] gcc-40 -Wall -I. -I./include -g  -O0   -c lex.yy.c
+[5-ERROR] clic.lex:1332: error: static declaration of 'optLevel' follows non-static declaration
+[5-ERROR] clic.h:411: error: previous declaration of 'optLevel' was here
+[5-ERROR] make: *** [lex.yy.o] Error 1
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] Removing unsupported '--sysconfdir=/etc/opt/clip' from configure option string.
+[9-ERROR] Removing unsupported '--localstatedir=/var/opt/clip' from configure option string.
+[9-ERROR] Removing unsupported '--disable-debug' from configure option string.
+[9-ERROR] Removing unsupported '--with-mysql-lib=/opt/mysql/lib/mysql' from configure option string.
+[9-ERROR] Removing unsupported '--with-mysql-include=/opt/mysql/include/mysql' from configure option string.
+[9-ERROR] Removing unsupported '--with-libpam' from configure option string.
+[9-ERROR] Removing unsupported '--with-pam' from configure option string.
+[9-ERROR] Removing unsupported '--enable-libpam' from configure option string.
+[9-ERROR] Removing unsupported '--enable-pam' from configure option string.
+[9-ERROR] Removing unsupported '--build=i386-unknown-linux-gnu' from configure option string.
+[9-ERROR] Removing unsupported '--host=i386-unknown-linux-gnu' from configure option string.
+[9-ERROR] Running  bash ./configure
+[9-ERROR] Warning: task not available: unknown system
+[9-ERROR] configure: Makefile creating... done.
+[9-ERROR] configure: creating clipcfg.h ... done.
+[9-ERROR] configure: creating clip_msgmerge ... done.
+[9-ERROR] configure: creating clip_msgfmt ... done.
+[9-ERROR] configure: creating clip_makeslib ... done.
+[9-ERROR] configure: creating clip_cp ... done.
+[9-ERROR] configure: creating clip_makelib ... done.
+[9-ERROR] Registration info:
+[9-ERROR] 
+[9-ERROR] This program is free software; you can redistribute it and/or modify
+[9-ERROR] it under the terms of the "GNU" General Public License as published by
+[9-ERROR] the Free Software Foundation; either version 2 of the License, or
+[9-ERROR] (at your option) any later version.
+[9-ERROR] 
+[9-ERROR] This program is distributed in the hope that it will be useful,
+[9-ERROR] but WITHOUT ANY WARRANTY; without even the implied warranty of
+[9-ERROR] MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+[9-ERROR] GNU General Public License for more details.
+[9-ERROR] 
+[9-ERROR] You should have received a copy of the GNU General Public License
+[9-ERROR] along with this program; if not, please read license at
+[9-ERROR] http://www.gnu.org/copyleft/gpl.html
+[9-ERROR] 
+[9-ERROR] . done.
+[9-ERROR] [ -d charsets ] || ln -s screen/install/charsets .
+[9-ERROR] gcc-40 -Wall -I. -I./include -g  -O0   -c lex.hash.c
+[9-ERROR] lex.hash.c:1012: warning: 'yyunput' defined but not used
+[9-ERROR] gcc-40 -Wall -I. -I./include -g  -O0  -DSTANDALONE -o clip_hash.o -c cliphash.c
+[9-ERROR] cliphash.c: In function '_clip_casehashbytes':
+[9-ERROR] cliphash.c:248: warning: pointer targets in passing argument 1 of 'strtoul' differ in signedness
+[9-ERROR] gcc-40 -O -o hashextract lex.hash.o clip_hash.o
+[9-ERROR] gcc-40 -Wall -I. -I./include -g  -O0   -c clic.tab.c
+[9-ERROR] gcc-40 -Wall -I. -I./include -g  -O0   -c lex.yy.c
+[9-ERROR] clic.lex:1332: error: static declaration of 'optLevel' follows non-static declaration
+[9-ERROR] clic.h:411: error: previous declaration of 'optLevel' was here
+[9-ERROR] make: *** [lex.yy.o] Error 1
+[9-ERROR] --- BUILD ERROR ---
 

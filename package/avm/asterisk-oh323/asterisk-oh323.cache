@@ -20,125 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142669995 Sat Mar 18 09:19:55 2006 (5) ERROR
-[TIMESTAMP] 1142940733 Tue Mar 21 12:32:13 2006 (9) ERROR
-[TIMESTAMP] 1142965216 Tue Mar 21 19:20:16 2006 (5) ERROR
-[TIMESTAMP] 1142975040 Tue Mar 21 22:04:00 2006 (9) ERROR
-[TIMESTAMP] 1143034627 Wed Mar 22 14:37:07 2006 (5) ERROR
-[TIMESTAMP] 1143044278 Wed Mar 22 17:17:58 2006 (9) ERROR
+[TIMESTAMP] 1168701463 Sat Jan 13 16:17:43 2007 (5) ERROR
+[TIMESTAMP] 1168911065 Tue Jan 16 02:31:05 2007 (9) ERROR
+[TIMESTAMP] 1168954494 Tue Jan 16 14:34:54 2007 (5) ERROR
+[TIMESTAMP] 1168984239 Tue Jan 16 22:50:39 2007 (9) ERROR
+[TIMESTAMP] 1169124826 Thu Jan 18 13:53:46 2007 (5) ERROR
+[TIMESTAMP] 1169154431 Thu Jan 18 22:07:11 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-asterisk-oh323.err 9-asterisk-oh323.err
 
-[BUILDTIME] 90462 (5) ERROR
-[BUILDTIME] 90512 (9) ERROR
-[BUILDTIME] 90581 (5) ERROR
-[BUILDTIME] 90639 (9) ERROR
-[BUILDTIME] 90573 (5) ERROR
-[BUILDTIME] 90561 (9) ERROR
+[BUILDTIME] 2191 (5) ERROR
+[BUILDTIME] 2219 (9) ERROR
+[BUILDTIME] 2219 (5) ERROR
+[BUILDTIME] 2209 (9) ERROR
+[BUILDTIME] 2193 (5) ERROR
+[BUILDTIME] 2236 (9) ERROR
 
 
-[5-ERROR] chan_oh323.c:2633: error: structure has no member named `callerid'
-[5-ERROR] chan_oh323.c:2634: error: structure has no member named `callerid'
-[5-ERROR] chan_oh323.c:2636: error: structure has no member named `callerid'
-[5-ERROR] chan_oh323.c:2641: error: structure has no member named `callerid'
-[5-ERROR] chan_oh323.c:2642: error: structure has no member named `callerid'
-[5-ERROR] chan_oh323.c:2644: error: structure has no member named `callerid'
-[5-ERROR] chan_oh323.c:2646: error: structure has no member named `callerid'
-[5-ERROR] chan_oh323.c:2650: error: structure has no member named `callerid'
-[5-ERROR] chan_oh323.c:2653: error: structure has no member named `ani'
-[5-ERROR] chan_oh323.c:2653: error: structure has no member named `callerid'
-[5-ERROR] chan_oh323.c:2653: error: structure has no member named `callerid'
-[5-ERROR] chan_oh323.c:2653: error: structure has no member named `callerid'
-[5-ERROR] chan_oh323.c:2653: error: structure has no member named `callerid'
-[5-ERROR] chan_oh323.c:2653: error: structure has no member named `callerid'
-[5-ERROR] chan_oh323.c:2653: error: structure has no member named `callerid'
-[5-ERROR] chan_oh323.c:2653: error: structure has no member named `callerid'
-[5-ERROR] chan_oh323.c:2659: error: structure has no member named `callerid'
-[5-ERROR] chan_oh323.c:2660: error: structure has no member named `callerid'
-[5-ERROR] chan_oh323.c: In function `oh323_request':
-[5-ERROR] chan_oh323.c:2799: error: structure has no member named `pvt'
-[5-ERROR] chan_oh323.c:2801: error: structure has no member named `pvt'
-[5-ERROR] chan_oh323.c: In function `oh323_codecset2str':
-[5-ERROR] chan_oh323.c:2951: warning: implicit declaration of function `sprintf'
-[5-ERROR] chan_oh323.c: In function `stats_h323_connection':
-[5-ERROR] chan_oh323.c:4139: warning: implicit declaration of function `printf'
-[5-ERROR] chan_oh323.c: In function `reload_config':
-[5-ERROR] chan_oh323.c:4631: warning: implicit declaration of function `ast_load'
-[5-ERROR] chan_oh323.c:4631: warning: assignment makes pointer from integer without a cast
-[5-ERROR] chan_oh323.c:4647: warning: implicit declaration of function `ast_destroy'
-[5-ERROR] chan_oh323.c:4651: warning: assignment makes pointer from integer without a cast
-[5-ERROR] chan_oh323.c:4710: warning: implicit declaration of function `sscanf'
-[5-ERROR] chan_oh323.c: In function `oh323_atexit':
-[5-ERROR] chan_oh323.c:5135: warning: passing arg 1 of `ast_channel_unregister' from incompatible pointer type
-[5-ERROR] chan_oh323.c: In function `load_module':
-[5-ERROR] chan_oh323.c:5431: warning: passing arg 1 of `ast_channel_register' from incompatible pointer type
-[5-ERROR] chan_oh323.c:5431: error: too many arguments to function `ast_channel_register'
-[5-ERROR] make[1]: *** [chan_oh323.o] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.asterisk-oh323.1143033684.15420.4009685137/asterisk-oh323-0.6.6-pre1/asterisk-driver'
-[5-ERROR] make: *** [subdirs_build] Error 1
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:449: warning: 'class PHTML::Strong' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:452: warning: 'class PHTML::Code' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:455: warning: 'class PHTML::Sample' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:458: warning: 'class PHTML::Keyboard' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:461: warning: 'class PHTML::Variable' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:464: warning: 'class PHTML::Definition' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:468: warning: 'class PHTML::Quote' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:471: warning: 'class PHTML::Author' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:474: warning: 'class PHTML::Person' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:477: warning: 'class PHTML::Acronym' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:480: warning: 'class PHTML::Abbrev' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:483: warning: 'class PHTML::InsertedText' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:487: warning: 'class PHTML::DeletedText' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:493: warning: 'class PHTML::SimpleList' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:500: warning: 'class PHTML::BulletList' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:505: warning: 'class PHTML::OrderedList' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:514: warning: 'class PHTML::DefinitionList' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:519: warning: 'class PHTML::ListHeading' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:524: warning: 'class PHTML::ListItem' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:533: warning: 'class PHTML::DefinitionTerm' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:540: warning: 'class PHTML::DefinitionItem' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:552: warning: 'class PHTML::TableStart' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:564: warning: 'class PHTML::TableEnd' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:572: warning: 'class PHTML::TableRow' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:577: warning: 'class PHTML::TableHeader' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:582: warning: 'class PHTML::TableData' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:588: warning: 'class PHTML::Form' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:609: warning: 'class PHTML::FieldElement' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:623: warning: 'class PHTML::Select' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:644: warning: 'class PHTML::Option' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:668: warning: 'class PHTML::FormField' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:683: warning: 'class PHTML::TextArea' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:702: warning: 'class PHTML::InputField' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:715: warning: 'class PHTML::HiddenField' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:728: warning: 'class PHTML::InputText' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:773: warning: 'class PHTML::InputPassword' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:808: warning: 'class PHTML::RadioButton' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:843: warning: 'class PHTML::CheckBox' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:863: warning: 'class PHTML::InputRange' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:878: warning: 'class PHTML::InputFile' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:892: warning: 'class PHTML::InputImage' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:913: warning: 'class PHTML::InputScribble' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:923: warning: 'class PHTML::ResetButton' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:946: warning: 'class PHTML::SubmitButton' has virtual functions but non-virtual destructor
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptlib/array.h:360: warning: inline function 'virtual PBaseArray<PObject*>::~PBaseArray()' used but never defined
+[5-ERROR] /ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/include/ptlib/array.h:360: warning: inline function 'virtual PBaseArray<PObject*>::~PBaseArray()' used but never defined
+[5-ERROR] make[1]: *** [/ROCK/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/lib/obj_linux_x86_r/asner.o] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.asterisk-oh323.1169124803.2208.3641098646/asterisk-oh323-0.6.6-pre1/pwlib/src/ptlib/unix'
+[5-ERROR] make: *** [opt] Error 2
 [5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 0 files for this package.
-[5-ERROR] Applying package split: 40 asterisk-oh323:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 asterisk-oh323:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 asterisk-oh323:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building asterisk-oh323=asterisk-oh323.
 
-[9-ERROR] chan_oh323.c:2633: error: structure has no member named `callerid'
-[9-ERROR] chan_oh323.c:2634: error: structure has no member named `callerid'
-[9-ERROR] chan_oh323.c:2636: error: structure has no member named `callerid'
-[9-ERROR] chan_oh323.c:2641: error: structure has no member named `callerid'
-[9-ERROR] chan_oh323.c:2642: error: structure has no member named `callerid'
-[9-ERROR] chan_oh323.c:2644: error: structure has no member named `callerid'
-[9-ERROR] chan_oh323.c:2646: error: structure has no member named `callerid'
-[9-ERROR] chan_oh323.c:2650: error: structure has no member named `callerid'
-[9-ERROR] chan_oh323.c:2653: error: structure has no member named `ani'
-[9-ERROR] chan_oh323.c:2653: error: structure has no member named `callerid'
-[9-ERROR] chan_oh323.c:2653: error: structure has no member named `callerid'
-[9-ERROR] chan_oh323.c:2653: error: structure has no member named `callerid'
-[9-ERROR] chan_oh323.c:2653: error: structure has no member named `callerid'
-[9-ERROR] chan_oh323.c:2653: error: structure has no member named `callerid'
-[9-ERROR] chan_oh323.c:2653: error: structure has no member named `callerid'
-[9-ERROR] chan_oh323.c:2653: error: structure has no member named `callerid'
-[9-ERROR] chan_oh323.c:2659: error: structure has no member named `callerid'
-[9-ERROR] chan_oh323.c:2660: error: structure has no member named `callerid'
-[9-ERROR] chan_oh323.c: In function `oh323_request':
-[9-ERROR] chan_oh323.c:2799: error: structure has no member named `pvt'
-[9-ERROR] chan_oh323.c:2801: error: structure has no member named `pvt'
-[9-ERROR] chan_oh323.c: In function `oh323_codecset2str':
-[9-ERROR] chan_oh323.c:2951: warning: implicit declaration of function `sprintf'
-[9-ERROR] chan_oh323.c: In function `stats_h323_connection':
-[9-ERROR] chan_oh323.c:4139: warning: implicit declaration of function `printf'
-[9-ERROR] chan_oh323.c: In function `reload_config':
-[9-ERROR] chan_oh323.c:4631: warning: implicit declaration of function `ast_load'
-[9-ERROR] chan_oh323.c:4631: warning: assignment makes pointer from integer without a cast
-[9-ERROR] chan_oh323.c:4647: warning: implicit declaration of function `ast_destroy'
-[9-ERROR] chan_oh323.c:4651: warning: assignment makes pointer from integer without a cast
-[9-ERROR] chan_oh323.c:4710: warning: implicit declaration of function `sscanf'
-[9-ERROR] chan_oh323.c: In function `oh323_atexit':
-[9-ERROR] chan_oh323.c:5135: warning: passing arg 1 of `ast_channel_unregister' from incompatible pointer type
-[9-ERROR] chan_oh323.c: In function `load_module':
-[9-ERROR] chan_oh323.c:5431: warning: passing arg 1 of `ast_channel_register' from incompatible pointer type
-[9-ERROR] chan_oh323.c:5431: error: too many arguments to function `ast_channel_register'
-[9-ERROR] make[1]: *** [chan_oh323.o] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.asterisk-oh323.1143043333.12878.3161908473/asterisk-oh323-0.6.6-pre1/asterisk-driver'
-[9-ERROR] make: *** [subdirs_build] Error 1
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:449: warning: 'class PHTML::Strong' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:452: warning: 'class PHTML::Code' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:455: warning: 'class PHTML::Sample' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:458: warning: 'class PHTML::Keyboard' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:461: warning: 'class PHTML::Variable' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:464: warning: 'class PHTML::Definition' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:468: warning: 'class PHTML::Quote' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:471: warning: 'class PHTML::Author' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:474: warning: 'class PHTML::Person' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:477: warning: 'class PHTML::Acronym' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:480: warning: 'class PHTML::Abbrev' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:483: warning: 'class PHTML::InsertedText' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:487: warning: 'class PHTML::DeletedText' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:493: warning: 'class PHTML::SimpleList' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:500: warning: 'class PHTML::BulletList' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:505: warning: 'class PHTML::OrderedList' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:514: warning: 'class PHTML::DefinitionList' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:519: warning: 'class PHTML::ListHeading' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:524: warning: 'class PHTML::ListItem' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:533: warning: 'class PHTML::DefinitionTerm' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:540: warning: 'class PHTML::DefinitionItem' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:552: warning: 'class PHTML::TableStart' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:564: warning: 'class PHTML::TableEnd' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:572: warning: 'class PHTML::TableRow' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:577: warning: 'class PHTML::TableHeader' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:582: warning: 'class PHTML::TableData' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:588: warning: 'class PHTML::Form' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:609: warning: 'class PHTML::FieldElement' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:623: warning: 'class PHTML::Select' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:644: warning: 'class PHTML::Option' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:668: warning: 'class PHTML::FormField' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:683: warning: 'class PHTML::TextArea' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:702: warning: 'class PHTML::InputField' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:715: warning: 'class PHTML::HiddenField' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:728: warning: 'class PHTML::InputText' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:773: warning: 'class PHTML::InputPassword' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:808: warning: 'class PHTML::RadioButton' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:843: warning: 'class PHTML::CheckBox' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:863: warning: 'class PHTML::InputRange' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:878: warning: 'class PHTML::InputFile' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:892: warning: 'class PHTML::InputImage' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:913: warning: 'class PHTML::InputScribble' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:923: warning: 'class PHTML::ResetButton' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptclib/html.h:946: warning: 'class PHTML::SubmitButton' has virtual functions but non-virtual destructor
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptlib/array.h:360: warning: inline function 'virtual PBaseArray<PObject*>::~PBaseArray()' used but never defined
+[9-ERROR] /ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/include/ptlib/array.h:360: warning: inline function 'virtual PBaseArray<PObject*>::~PBaseArray()' used but never defined
+[9-ERROR] make[1]: *** [/ROCK/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/lib/obj_linux_x86_r/asner.o] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.asterisk-oh323.1169154408.25202.2388341846/asterisk-oh323-0.6.6-pre1/pwlib/src/ptlib/unix'
+[9-ERROR] make: *** [opt] Error 2
 [9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 0 files for this package.
-[9-ERROR] Applying package split: 40 asterisk-oh323:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 asterisk-oh323:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 asterisk-oh323:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building asterisk-oh323=asterisk-oh323.
 

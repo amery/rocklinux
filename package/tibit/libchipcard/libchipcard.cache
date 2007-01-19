@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142557569 Fri Mar 17 02:06:09 2006 (5)
-[TIMESTAMP] 1142817102 Mon Mar 20 02:11:42 2006 (9)
+[TIMESTAMP] 1168626077 Fri Jan 12 19:21:17 2007 (5)
+[TIMESTAMP] 1168830071 Mon Jan 15 04:01:11 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-libchipcard.log 9-libchipcard.log
 
-[BUILDTIME] 13738 (5)
-[BUILDTIME] 14243 (9)
-[SIZE] 1.89 MB, 57 files
+[BUILDTIME] 10734 (5)
+[BUILDTIME] 11183 (9)
+[SIZE] 1.17 MB, 57 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev gettext glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp net-tools openssl openssl:dev pcsc-lite:dev rrdtool
-[DEP] sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils
+[DEP] findutils gawk gcc40 gcc40:dev gettext glibc23 glibc23:dev
+[DEP] grep linux-libc-headers:dev make mktemp net-tools netpbm openssl
+[DEP] openssl:dev pcsc-lite:dev rrdtool sed sysfiles tar twoftpd ucspi-unix
+[DEP] util-linux
 
 [PROVIDES] cardcommander chipcardd ctfstool geldkarte hbcicard kvkd
 [PROVIDES] libchipcard-config libchipcard.a libchipcard.so memcard

@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142574723 Fri Mar 17 06:52:03 2006 (5)
-[TIMESTAMP] 1142837600 Mon Mar 20 07:53:20 2006 (9)
+[TIMESTAMP] 1168568511 Fri Jan 12 03:21:51 2007 (5)
+[TIMESTAMP] 1168766199 Sun Jan 14 10:16:39 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-pciutils.log 9-pciutils.log
 
-[BUILDTIME] 1364 (5)
-[BUILDTIME] 1703 (9)
+[BUILDTIME] 1235 (5)
+[BUILDTIME] 1697 (9)
 [SIZE] 0.46 MB, 13 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp rrdtool
-[DEP] sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils gawk gcc40
+[DEP] gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev make
+[DEP] mktemp rrdtool sed sysfiles tar
 
 [PROVIDES] lspci setpci update-pciids
 

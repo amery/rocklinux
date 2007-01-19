@@ -20,24 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142666842 Sat Mar 18 08:27:22 2006 (5)
-[TIMESTAMP] 1142937477 Tue Mar 21 11:37:57 2006 (9)
+[TIMESTAMP] 1168699595 Sat Jan 13 15:46:35 2007 (5)
+[TIMESTAMP] 1168909102 Tue Jan 16 01:58:22 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-nagios.log 9-nagios.log
 
-[BUILDTIME] 10714 (5)
-[BUILDTIME] 10871 (9)
-[SIZE] 5.38 MB, 366 files
+[BUILDTIME] 11939 (5)
+[BUILDTIME] 12050 (9)
+[SIZE] 5.36 MB, 366 files
 
-[DEP] 00-dirtree bash2 bind binutils bison bzip2 coreutils cpan-net-snmp
-[DEP] diffutils expat findutils freetype freetype1 gawk gcc34 gcc34:dev
-[DEP] gettext glibc23 glibc23:dev grep libgd libgd:dev libjpeg libpng
-[DEP] libtool libtool:dev linux26-header:dev make mktemp net-tools
+[DEP] 00-dirtree applewmproto bash2 bind binutils bison bzip2 coreutils
+[DEP] cpan-net-snmp cvm diffutils expat findutils fontconfig freetype
+[DEP] freetype1 gawk gcc40 gcc40:dev gettext glibc23 glibc23:dev grep
+[DEP] libgd libgd:dev libjpeg libpng libtool libtool:dev libx11 libxau
+[DEP] libxdmcp libxpm linux-libc-headers:dev make mktemp net-tools
 [DEP] netkit-base openssl openssl:dev perl5 procps rrdtool sed sysfiles
-[DEP] tar util-linux xorg zlib:dev
+[DEP] tar util-linux zlib
 
 [PROVIDES] avail.cgi cmd.cgi config.cgi extinfo.cgi histogram.cgi
 [PROVIDES] history.cgi nagios nagiostats notifications.cgi outages.cgi

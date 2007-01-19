@@ -20,37 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142656746 Sat Mar 18 05:39:06 2006 (5)
-[TIMESTAMP] 1142926655 Tue Mar 21 08:37:35 2006 (9)
+[TIMESTAMP] 1168696624 Sat Jan 13 14:57:04 2007 (5) ERROR
+[TIMESTAMP] 1168905909 Tue Jan 16 01:05:09 2007 (9) ERROR
+[TIMESTAMP] 1168954006 Tue Jan 16 14:26:46 2007 (5) ERROR
+[TIMESTAMP] 1168983735 Tue Jan 16 22:42:15 2007 (9) ERROR
+[TIMESTAMP] 1169124340 Thu Jan 18 13:45:40 2007 (5) ERROR
+[TIMESTAMP] 1169153928 Thu Jan 18 21:58:48 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-anjuta.log 9-anjuta.log
+[LOGS] 5-anjuta.err 9-anjuta.err
 
-[BUILDTIME] 16950 (5)
-[BUILDTIME] 17045 (9)
-[SIZE] 11.43 MB, 493 files
+[BUILDTIME] 2140 (5) ERROR
+[BUILDTIME] 2159 (9) ERROR
+[BUILDTIME] 2169 (5) ERROR
+[BUILDTIME] 2156 (9) ERROR
+[BUILDTIME] 2167 (5) ERROR
+[BUILDTIME] 2165 (9) ERROR
 
-[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev autoconf
-[DEP] bash2 binutils bzip2 cairo cairo:dev coreutils diffutils docbookx
-[DEP] esound esound:dev expat findutils freetype freetype:dev gawk gcc34
-[DEP] gcc34:dev gconf gconf:dev gettext glib glib:dev glibc23 glibc23:dev
-[DEP] gnome-doc-utils gnome-keyring gnome-keyring-manager gnome-keyring:dev
-[DEP] gnome-netstatus gnome-vfs gnome-vfs:dev gnome2-dirtree gnopernicus
-[DEP] grep gtk+ gtk+:dev libart_lgpl23 libart_lgpl23:dev libbonobo
-[DEP] libbonobo:dev libbonoboui libbonoboui:dev libglade libglade:dev
-[DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeprint
-[DEP] libgnomeprint:dev libgnomeprintui libgnomeprintui:dev libgnomeui
-[DEP] libgnomeui:dev libjpeg libjpeg:dev libpng libpng:dev libsdl
-[DEP] libsdl:dev libsdl_gfx:dev libsdl_image:dev libsdl_mixer:dev
-[DEP] libsdl_net:dev libsdl_sound:dev libsdl_ttf:dev libxml2 libxml2:dev
-[DEP] linux26-header:dev make mktemp ncurses:dev net-tools openssl
-[DEP] orbit2 orbit2:dev pango pango:dev pcre pcre:dev perl5 pkgconfig popt
-[DEP] popt:dev rrdtool scrollkeeper sed sysfiles tar texinfo util-linux vte
-[DEP] vte:dev wxpython:dev wxwidgets wxwidgets:dev xorg xorg:dev zlib:dev
 
-[PROVIDES] anjuta anjuta_import.sh anjuta_launcher libanjuta_clsGen.a
-[PROVIDES] libanjuta_clsGen.so libanjuta_patch.a libanjuta_patch.so
-[PROVIDES] libanjuta_sample1.a libanjuta_sample1.so
+[5-ERROR] checking whether the g++-40 linker (ld) supports shared libraries... yes
+[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] appending configuration tag "F77" to libtool
+[5-ERROR] checking if libtool supports shared libraries... yes
+[5-ERROR] checking whether to build shared libraries... yes
+[5-ERROR] checking whether to build static libraries... no
+[5-ERROR] checking for f77 option to produce PIC... -fPIC
+[5-ERROR] checking if f77 PIC flag -fPIC works... no
+[5-ERROR] checking if f77 static flag -static works... no
+[5-ERROR] checking if f77 supports -c -o file.o... no
+[5-ERROR] checking whether the f77 linker (ld) supports shared libraries... yes
+[5-ERROR] checking dynamic linker characteristics... ./configure: line 1: f77: command not found
+[5-ERROR] GNU/Linux ld.so
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] checking return type of signal handlers... void
+[5-ERROR] checking for pkg-config... /usr/bin/pkg-config
+[5-ERROR] checking for i386-unknown-linux-gnu-pkg-config... no
+[5-ERROR] checking for pkg-config... /usr/bin/pkg-config
+[5-ERROR] checking pkg-config is at least version 0.9.0... yes
+[5-ERROR] checking for GLIB... yes
+[5-ERROR] checking for GOBJECT... yes
+[5-ERROR] checking for GMODULE... yes
+[5-ERROR] checking for GTHREAD... yes
+[5-ERROR] checking for GTK... yes
+[5-ERROR] checking for GDK_PIXBUF... yes
+[5-ERROR] checking for ORBIT... yes
+[5-ERROR] checking for GLADE... yes
+[5-ERROR] checking for GNOME... yes
+[5-ERROR] checking for GNOME_UI... yes
+[5-ERROR] checking for GNOME_PRINT... yes
+[5-ERROR] checking for GNOME_PRINT_UI... yes
+[5-ERROR] checking for GNOME_VFS... yes
+[5-ERROR] checking for GNOME_VFS_MODULE... yes
+[5-ERROR] checking for GCONF... yes
+[5-ERROR] checking for VTE... yes
+[5-ERROR] checking for LIBXML... yes
+[5-ERROR] checking for PANGO... yes
+[5-ERROR] checking for GDL... configure: error: Package requirements (gdl-1.0 >= 0.6.1) were not met:
+[5-ERROR] 
+[5-ERROR] No package 'gdl-1.0' found
+[5-ERROR] 
+[5-ERROR] Consider adjusting the PKG_CONFIG_PATH environment variable if you
+[5-ERROR] installed software in a non-standard prefix.
+[5-ERROR] 
+[5-ERROR] Alternatively, you may set the environment variables GDL_CFLAGS
+[5-ERROR] and GDL_LIBS to avoid the need to call pkg-config.
+[5-ERROR] See the pkg-config man page for more details.
+[5-ERROR] 
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] checking whether the g++-40 linker (ld) supports shared libraries... yes
+[9-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[9-ERROR] checking how to hardcode library paths into programs... immediate
+[9-ERROR] appending configuration tag "F77" to libtool
+[9-ERROR] checking if libtool supports shared libraries... yes
+[9-ERROR] checking whether to build shared libraries... yes
+[9-ERROR] checking whether to build static libraries... no
+[9-ERROR] checking for f77 option to produce PIC... -fPIC
+[9-ERROR] checking if f77 PIC flag -fPIC works... no
+[9-ERROR] checking if f77 static flag -static works... no
+[9-ERROR] checking if f77 supports -c -o file.o... no
+[9-ERROR] checking whether the f77 linker (ld) supports shared libraries... yes
+[9-ERROR] checking dynamic linker characteristics... ./configure: line 1: f77: command not found
+[9-ERROR] GNU/Linux ld.so
+[9-ERROR] checking how to hardcode library paths into programs... immediate
+[9-ERROR] checking return type of signal handlers... void
+[9-ERROR] checking for pkg-config... /usr/bin/pkg-config
+[9-ERROR] checking for i386-unknown-linux-gnu-pkg-config... no
+[9-ERROR] checking for pkg-config... /usr/bin/pkg-config
+[9-ERROR] checking pkg-config is at least version 0.9.0... yes
+[9-ERROR] checking for GLIB... yes
+[9-ERROR] checking for GOBJECT... yes
+[9-ERROR] checking for GMODULE... yes
+[9-ERROR] checking for GTHREAD... yes
+[9-ERROR] checking for GTK... yes
+[9-ERROR] checking for GDK_PIXBUF... yes
+[9-ERROR] checking for ORBIT... yes
+[9-ERROR] checking for GLADE... yes
+[9-ERROR] checking for GNOME... yes
+[9-ERROR] checking for GNOME_UI... yes
+[9-ERROR] checking for GNOME_PRINT... yes
+[9-ERROR] checking for GNOME_PRINT_UI... yes
+[9-ERROR] checking for GNOME_VFS... yes
+[9-ERROR] checking for GNOME_VFS_MODULE... yes
+[9-ERROR] checking for GCONF... yes
+[9-ERROR] checking for VTE... yes
+[9-ERROR] checking for LIBXML... yes
+[9-ERROR] checking for PANGO... yes
+[9-ERROR] checking for GDL... configure: error: Package requirements (gdl-1.0 >= 0.6.1) were not met:
+[9-ERROR] 
+[9-ERROR] No package 'gdl-1.0' found
+[9-ERROR] 
+[9-ERROR] Consider adjusting the PKG_CONFIG_PATH environment variable if you
+[9-ERROR] installed software in a non-standard prefix.
+[9-ERROR] 
+[9-ERROR] Alternatively, you may set the environment variables GDL_CFLAGS
+[9-ERROR] and GDL_LIBS to avoid the need to call pkg-config.
+[9-ERROR] See the pkg-config man page for more details.
+[9-ERROR] 
+[9-ERROR] --- BUILD ERROR ---
 

@@ -20,23 +20,37 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142488113 Thu Mar 16 06:48:33 2006 (5)
-[TIMESTAMP] 1142736494 Sun Mar 19 03:48:14 2006 (9)
+[TIMESTAMP] 1168565586 Fri Jan 12 02:33:06 2007 (5)
+[TIMESTAMP] 1168762964 Sun Jan 14 09:22:44 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-nx-x11.log 9-nx-x11.log
 
-[BUILDTIME] 60672 (5)
-[BUILDTIME] 62193 (9)
-[SIZE] 7.56 MB, 208 files
+[BUILDTIME] 65315 (5)
+[BUILDTIME] 66791 (9)
+[SIZE] 7.61 MB, 222 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils ed expat
-[DEP] expat:dev findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] libjpeg libjpeg:dev libpng libpng:dev linux26-header:dev make
-[DEP] mktemp net-tools nxcomp patch rrdtool sed sysfiles tar util-linux
-[DEP] xorg xorg:dev zlib:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils
+[DEP] bitstream-vera-fonts bzip2 coreutils cvm diffutils ed encodings
+[DEP] expat expat:dev findutils font-adobe-100dpi font-adobe-75dpi
+[DEP] font-adobe-utopia-100dpi font-adobe-utopia-75dpi
+[DEP] font-adobe-utopia-type1 font-alias font-arabic-misc
+[DEP] font-bh-100dpi font-bh-75dpi font-bh-lucidatypewriter-100dpi
+[DEP] font-bh-lucidatypewriter-75dpi font-bh-ttf font-bh-type1
+[DEP] font-bitstream-100dpi font-bitstream-75dpi font-bitstream-speedo
+[DEP] font-bitstream-type1 font-cronyx-cyrillic font-cursor-misc
+[DEP] font-daewoo-misc font-dec-misc font-ibm-type1 font-isas-misc
+[DEP] font-jis-misc font-micro-misc font-misc-cyrillic font-misc-ethiopic
+[DEP] font-misc-meltho font-misc-misc font-mutt-misc font-schumacher-misc
+[DEP] font-screen-cyrillic font-sony-misc font-sun-misc font-util
+[DEP] font-winitzki-cyrillic font-xfree86-type1 fontconfig freefonts gawk
+[DEP] gcc40 gcc40:dev glibc23 glibc23:dev gpl-fonts grep imake libdockapp
+[DEP] libice libjpeg libjpeg:dev libpng libpng:dev libx11 libx11:dev
+[DEP] libxau libxdmcp libxt linux-libc-headers:dev make mktemp net-tools
+[DEP] nxcomp patch rrdtool sed sysfiles tar terminus-font util-linux
+[DEP] xorg-cf-files xorg-server xproto:dev zlib zlib:dev
 
 [PROVIDES] ccmakedep cleanlinks fc-cache fc-list fontconfig-config
 [PROVIDES] freetype-config gccmakedep imake libFS.a libICE.so libSM.so

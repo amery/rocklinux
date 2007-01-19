@@ -20,35 +20,39 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142512390 Thu Mar 16 13:33:10 2006 (5) ERROR
-[TIMESTAMP] 1142763939 Sun Mar 19 11:25:39 2006 (9)
-[TIMESTAMP] 1142956278 Tue Mar 21 16:51:18 2006 (5)
+[TIMESTAMP] 1168670239 Sat Jan 13 07:37:19 2007 (5)
+[TIMESTAMP] 1168878258 Mon Jan 15 17:24:18 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-yelp.log 9-yelp.log
 
-[BUILDTIME] 2180 (5) ERROR
-[BUILDTIME] 5190 (9)
-[BUILDTIME] 5213 (5)
-[SIZE] 1.25 MB, 117 files
+[BUILDTIME] 6396 (5)
+[BUILDTIME] 6648 (9)
+[SIZE] 2.04 MB, 129 files
 
-[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
-[DEP] binutils bzip2 bzip2:dev cairo cairo:dev coreutils cpan-xml-parser
-[DEP] diffutils esound esound:dev expat findutils firefox firefox:dev
-[DEP] freetype freetype:dev gawk gcc34 gcc34:dev gconf gconf:dev gettext
-[DEP] glib glib:dev glibc23 glibc23:dev gnome-blog gnome-icon-theme
-[DEP] gnome-keyring gnome-keyring:dev gnome-vfs gnome-vfs:dev
-[DEP] gnome2-dirtree grep gtk+ gtk+:dev libart_lgpl23 libart_lgpl23:dev
-[DEP] libbonobo libbonobo:dev libbonoboui libbonoboui:dev libgcrypt
-[DEP] libgcrypt:dev libglade libglade:dev libgnome libgnome:dev
+[DEP] 00-dirtree alsa alsa:dev applewmproto applewmproto:dev atk
+[DEP] atk:dev audiofile audiofile:dev bash2 binutils bzip2 bzip2:dev
+[DEP] cairo cairo:dev coreutils cpan-xml-parser cvm dasher dbus
+[DEP] dbus-glib dbus-glib:dev dbus:dev diffutils esound esound:dev
+[DEP] evolution-webcal expat expat:dev findutils firefox firefox:dev
+[DEP] fontconfig fontconfig:dev freetype freetype:dev gawk gcc40 gcc40:dev
+[DEP] gconf gconf:dev gettext glib glib:dev glibc23 glibc23:dev gnome-blog
+[DEP] gnome-keyring gnome-keyring:dev gnome-libs14 gnome-vfs gnome-vfs:dev
+[DEP] gnome14-dirtree gnome2-dirtree grep gtk+ gtk+:dev imake libart_lgpl23
+[DEP] libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui libbonoboui:dev
+[DEP] libgcrypt libgcrypt:dev libglade libglade:dev libgnome libgnome:dev
 [DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev
-[DEP] libgpg-error libgpg-error:dev libjpeg libjpeg:dev libpng libpng:dev
-[DEP] libxml2 libxml2:dev libxslt libxslt:dev linux26-header:dev make
-[DEP] mktemp mozilla net-tools openssl orbit2 orbit2:dev pango pango:dev
-[DEP] perl5 pkgconfig popt popt:dev rrdtool sed sysfiles tar util-linux
-[DEP] xorg zlib:dev
+[DEP] libgpg-error libgpg-error:dev libice libice:dev libjpeg libjpeg:dev
+[DEP] libpng libpng:dev libsm libsm:dev libx11 libx11:dev libxau libxau:dev
+[DEP] libxcursor libxdmcp libxdmcp:dev libxext libxfixes libxi libxinerama
+[DEP] libxml2 libxml2:dev libxrandr libxrender libxrender:dev libxslt
+[DEP] libxslt:dev libxt liferea linux-libc-headers:dev make mktemp
+[DEP] mozilla net-tools openssl orbit2 orbit2:dev pango pango:dev
+[DEP] perl5 pkgconfig popt popt:dev rrdtool sed startup-notification
+[DEP] startup-notification:dev sysfiles tar util-linux vino xorg-cf-files
+[DEP] xproto:dev zapping zlib zlib:dev
 
 [PROVIDES] gnome-help yelp
 

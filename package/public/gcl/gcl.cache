@@ -20,23 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142658414 Sat Mar 18 06:06:54 2006 (5)
-[TIMESTAMP] 1142928399 Tue Mar 21 09:06:39 2006 (9)
+[TIMESTAMP] 1168697133 Sat Jan 13 15:05:33 2007 (5)
+[TIMESTAMP] 1168906432 Tue Jan 16 01:13:52 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-gcl.log 9-gcl.log
 
-[BUILDTIME] 23262 (5)
-[BUILDTIME] 23463 (9)
-[SIZE] 7.79 MB, 78 files
+[BUILDTIME] 20349 (5)
+[BUILDTIME] 20462 (9)
+[SIZE] 7.46 MB, 68 files
 
-[DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils diffutils emacs
-[DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev gmp
-[DEP] gmp:dev grep linux26-header:dev make mktemp ncurses:dev net-tools
-[DEP] perl5 readline readline:dev rrdtool sed sysfiles tar tcl tcl:dev
-[DEP] tetex texinfo tk tk:dev xorg xorg:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev autoconf bash2 binutils
+[DEP] bzip2 coreutils cvm diffutils emacs findutils gawk gcc40 gcc40:dev
+[DEP] gettext glibc23 glibc23:dev gmp gmp:dev grep imake libice libsm
+[DEP] libx11 libx11:dev libxau libxaw libxdmcp libxext libxmu libxp libxpm
+[DEP] libxt linux-libc-headers:dev make mktemp ncurses net-tools perl5
+[DEP] readline readline:dev rrdtool sed sysfiles tar tcl tcl:dev tetex
+[DEP] texinfo tk tk:dev xorg-cf-files xproto:dev
 
 [PROVIDES] gcl libgcl.a libgclp.a
 

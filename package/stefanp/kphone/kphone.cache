@@ -20,23 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142552397 Fri Mar 17 00:39:57 2006 (5)
-[TIMESTAMP] 1142810336 Mon Mar 20 00:18:56 2006 (9)
+[TIMESTAMP] 1168622125 Fri Jan 12 18:15:25 2007 (5)
+[TIMESTAMP] 1168825673 Mon Jan 15 02:47:53 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-kphone.log 9-kphone.log
 
-[BUILDTIME] 10192 (5)
-[BUILDTIME] 10590 (9)
-[SIZE] 1.13 MB, 30 files
+[BUILDTIME] 9294 (5)
+[BUILDTIME] 9638 (9)
+[SIZE] 1.13 MB, 29 files
 
-[DEP] 00-dirtree alsa alsa:dev bash2 binutils bzip2 coreutils diffutils
-[DEP] expat findutils freetype gawk gcc34 gcc34:dev glibc23 glibc23:dev
-[DEP] grep jack jack:dev libpng linux26-header:dev make mktemp nas
-[DEP] net-tools openssl openssl:dev qt33 qt33:dev rrdtool sed sysfiles
-[DEP] tar xorg xorg:dev
+[DEP] 00-dirtree alsa alsa:dev applewmproto applewmproto:dev bash2
+[DEP] binutils bzip2 coreutils cvm diffutils expat findutils fontconfig
+[DEP] freetype gawk gcc40 gcc40:dev glibc23 glibc23:dev grep kdelibs libice
+[DEP] libpng libsm libx11 libx11:dev libxau libxcursor libxdmcp libxext
+[DEP] libxfixes libxft libxinerama libxmu libxrandr libxrender libxt
+[DEP] linux-libc-headers:dev make mesalib mktemp nas net-tools openssl
+[DEP] openssl:dev qt33 qt33:dev rrdtool sed sysfiles tar xproto:dev zlib
 
 [PROVIDES] kphone
 

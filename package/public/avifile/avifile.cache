@@ -20,32 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142519741 Thu Mar 16 15:35:41 2006 (5)
-[TIMESTAMP] 1142773895 Sun Mar 19 14:11:35 2006 (9)
+[TIMESTAMP] 1168596236 Fri Jan 12 11:03:56 2007 (5) ERROR
+[TIMESTAMP] 1168798215 Sun Jan 14 19:10:15 2007 (9) ERROR
+[TIMESTAMP] 1168942334 Tue Jan 16 11:12:14 2007 (5) ERROR
+[TIMESTAMP] 1168967924 Tue Jan 16 18:18:44 2007 (9) ERROR
+[TIMESTAMP] 1169085729 Thu Jan 18 03:02:09 2007 (5) ERROR
+[TIMESTAMP] 1169138212 Thu Jan 18 17:36:52 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-avifile.log 9-avifile.log
+[LOGS] 5-avifile.err 9-avifile.err
 
-[BUILDTIME] 47347 (5)
-[BUILDTIME] 48386 (9)
-[SIZE] 6.86 MB, 112 files
+[BUILDTIME] 11744 (5) ERROR
+[BUILDTIME] 11812 (9) ERROR
+[BUILDTIME] 11875 (5) ERROR
+[BUILDTIME] 11864 (9) ERROR
+[BUILDTIME] 11888 (5) ERROR
+[BUILDTIME] 11901 (9) ERROR
 
-[DEP] 00-dirtree a52dec:dev autoconf automake19 bash2 binutils bzip2
-[DEP] coreutils diffutils divx4linux divx4linux:dev expat faad2 faad2:dev
-[DEP] findutils freetype freetype:dev gawk gcc34 gcc34:dev glibc23
-[DEP] glibc23:dev grep lame libjpeg libjpeg:dev libpng libpng:dev libsdl
-[DEP] libsdl:dev libtool linux26-header:dev m4 make mktemp nas net-tools
-[DEP] ogg-vorbis ogg-vorbis:dev patch perl5 pkgconfig qt33 qt33:dev
-[DEP] rrdtool sed sysfiles tar util-linux xorg xorg:dev xvid:dev zlib:dev
 
-[PROVIDES] ac3pass.so audiodec.so avibench avicap avicat avifile-config
-[PROVIDES] avimake aviplay avirec avirecompress avitype divx4.so
-[PROVIDES] ffmpeg.so kv4lsetup libaviplay.so libaviplayavcodec.so
-[PROVIDES] libaviplayavformat.so libaviplayavutil.so libaviplaydha.so
-[PROVIDES] libaviplayvidix.so libgenfb.so libmach64.so libmga.so
-[PROVIDES] libmga_crtc2.so libpm3.so libqavm.so libradeon.so librage128.so
-[PROVIDES] mad_audiodec.so mp3lame_audioenc.so mp3lamebin_audioenc.so
-[PROVIDES] mpeg_audiodec.so osmjpeg.so vorbis_audio.so win32.so xvid4.so
+[5-ERROR] /bin/sh ../../libtool --tag=CC --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../include   -DHAVE_AV_CONFIG_H -I./../libavutil -I./../libavcodec -I./.. -Wall -Wno-unused -I../../include  -O2 -mcpu=i386 -march=i386 -ffast-math -fomit-frame-pointer -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -pipe -c -o grab.lo grab.c
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../include -DHAVE_AV_CONFIG_H -I./../libavutil -I./../libavcodec -I./.. -Wall -Wno-unused -I../../include -O2 -mcpu=i386 -march=i386 -ffast-math -fomit-frame-pointer -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -pipe -c grab.c  -fPIC -DPIC -o .libs/grab.o
+[5-ERROR] /bin/sh ../../libtool --tag=CC --mode=link gcc-40  -O2 -mcpu=i386 -march=i386 -ffast-math -fomit-frame-pointer -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -pipe   -o libaviplayavformat.la -rpath /usr/lib -release 0.7 -version-info 0:43:0 4xm.lo allformats.lo asf-enc.lo asf.lo au.lo avidec.lo avienc.lo avio.lo aviobuf.lo crc.lo cutils.lo daud.lo dv.lo dv1394.lo electronicarts.lo ffm.lo file.lo flic.lo flvdec.lo flvenc.lo framehook.lo gif.lo gifdec.lo http.lo idcin.lo idroq.lo img.lo img2.lo ipmovie.lo jpeg.lo matroska.lo mmf.lo mov.lo movenc.lo mp3.lo mpeg.lo mpegts.lo mpegtsenc.lo mpjpeg.lo nsvdec.lo nut.lo ogg2.lo oggparseflac.lo oggparsetheora.lo oggparsevorbis.lo os_support.lo png.lo pnm.lo psxstr.lo raw.lo rm.lo rtp.lo rtpproto.lo rtsp.lo segafilm.lo sierravmd.lo sgi.lo sol.lo swf.lo tcp.lo udp.lo utils.lo wc3movie.lo westwood.lo wav.lo yuv.lo yuv4mpeg.lo audio.lo grab.lo  -lz -lnsl -ldl 
+[5-ERROR] gcc-40 -shared  .libs/4xm.o .libs/allformats.o .libs/asf-enc.o .libs/asf.o .libs/au.o .libs/avidec.o .libs/avienc.o .libs/avio.o .libs/aviobuf.o .libs/crc.o .libs/cutils.o .libs/daud.o .libs/dv.o .libs/dv1394.o .libs/electronicarts.o .libs/ffm.o .libs/file.o .libs/flic.o .libs/flvdec.o .libs/flvenc.o .libs/framehook.o .libs/gif.o .libs/gifdec.o .libs/http.o .libs/idcin.o .libs/idroq.o .libs/img.o .libs/img2.o .libs/ipmovie.o .libs/jpeg.o .libs/matroska.o .libs/mmf.o .libs/mov.o .libs/movenc.o .libs/mp3.o .libs/mpeg.o .libs/mpegts.o .libs/mpegtsenc.o .libs/mpjpeg.o .libs/nsvdec.o .libs/nut.o .libs/ogg2.o .libs/oggparseflac.o .libs/oggparsetheora.o .libs/oggparsevorbis.o .libs/os_support.o .libs/png.o .libs/pnm.o .libs/psxstr.o .libs/raw.o .libs/rm.o .libs/rtp.o .libs/rtpproto.o .libs/rtsp.o .libs/segafilm.o .libs/sierravmd.o .libs/sgi.o .libs/sol.o .libs/swf.o .libs/tcp.o .libs/udp.o .libs/utils.o .libs/wc3movie.o .libs/westwood.o .libs/wav.o .libs/yuv.o .libs/yuv4mpeg.o .libs/audio.o .libs/grab.o  -lz -lnsl -ldl  -mcpu=i386 -march=i386 -Wl,-soname -Wl,libaviplayavformat-0.7.so.0 -o .libs/libaviplayavformat-0.7.so.0.0.43
+[5-ERROR] (cd .libs && rm -f libaviplayavformat-0.7.so.0 && ln -s libaviplayavformat-0.7.so.0.0.43 libaviplayavformat-0.7.so.0)
+[5-ERROR] (cd .libs && rm -f libaviplayavformat.so && ln -s libaviplayavformat-0.7.so.0.0.43 libaviplayavformat.so)
+[5-ERROR] creating libaviplayavformat.la
+[5-ERROR] (cd .libs && rm -f libaviplayavformat.la && ln -s ../libaviplayavformat.la libaviplayavformat.la)
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.avifile.1169085607.4040.3583069520/avifile-0.7-050913/ffmpeg/libavformat'
+[5-ERROR] Making all in libavcodec
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.avifile.1169085607.4040.3583069520/avifile-0.7-050913/ffmpeg/libavcodec'
+[5-ERROR] Making all in alpha
+[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.avifile.1169085607.4040.3583069520/avifile-0.7-050913/ffmpeg/libavcodec/alpha'
+[5-ERROR] /bin/sh ../../../libtool --tag=CC --mode=link gcc-40  -O2 -mcpu=i386 -march=i386 -ffast-math -fomit-frame-pointer -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -pipe   -o libavcodecalpha.la     -lnsl -ldl 
+[5-ERROR] mkdir .libs
+[5-ERROR] ar cru .libs/libavcodecalpha.a
+[5-ERROR] ranlib .libs/libavcodecalpha.a
+[5-ERROR] creating libavcodecalpha.la
+[5-ERROR] (cd .libs && rm -f libavcodecalpha.la && ln -s ../libavcodecalpha.la libavcodecalpha.la)
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.avifile.1169085607.4040.3583069520/avifile-0.7-050913/ffmpeg/libavcodec/alpha'
+[5-ERROR] Making all in armv4l
+[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.avifile.1169085607.4040.3583069520/avifile-0.7-050913/ffmpeg/libavcodec/armv4l'
+[5-ERROR] /bin/sh ../../../libtool --tag=CC --mode=link gcc-40  -O2 -mcpu=i386 -march=i386 -ffast-math -fomit-frame-pointer -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -pipe   -o libavcodecarmv4l.la     -lnsl -ldl 
+[5-ERROR] mkdir .libs
+[5-ERROR] ar cru .libs/libavcodecarmv4l.a
+[5-ERROR] ranlib .libs/libavcodecarmv4l.a
+[5-ERROR] creating libavcodecarmv4l.la
+[5-ERROR] (cd .libs && rm -f libavcodecarmv4l.la && ln -s ../libavcodecarmv4l.la libavcodecarmv4l.la)
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.avifile.1169085607.4040.3583069520/avifile-0.7-050913/ffmpeg/libavcodec/armv4l'
+[5-ERROR] Making all in i386
+[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.avifile.1169085607.4040.3583069520/avifile-0.7-050913/ffmpeg/libavcodec/i386'
+[5-ERROR] if /bin/sh ../../../libtool --tag=CC --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../include   -DHAVE_AV_CONFIG_H -I./../../libavutil -I./.. -Wall -Wno-unused -I../../../include  -O4 -mcpu=i386 -march=i386 -ffast-math -fomit-frame-pointer -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -O2  -MT cputest.lo -MD -MP -MF ".deps/cputest.Tpo" -c -o cputest.lo cputest.c; \
+[5-ERROR] 	then mv -f ".deps/cputest.Tpo" ".deps/cputest.Plo"; else rm -f ".deps/cputest.Tpo"; exit 1; fi
+[5-ERROR] mkdir .libs
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../include -DHAVE_AV_CONFIG_H -I./../../libavutil -I./.. -Wall -Wno-unused -I../../../include -O4 -mcpu=i386 -march=i386 -ffast-math -fomit-frame-pointer -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -O2 -MT cputest.lo -MD -MP -MF .deps/cputest.Tpo -c cputest.c  -fPIC -DPIC -o .libs/cputest.o
+[5-ERROR] if /bin/sh ../../../libtool --tag=CC --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../include   -DHAVE_AV_CONFIG_H -I./../../libavutil -I./.. -Wall -Wno-unused -I../../../include  -O4 -mcpu=i386 -march=i386 -ffast-math -fomit-frame-pointer -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -O2  -MT dsputil_mmx.lo -MD -MP -MF ".deps/dsputil_mmx.Tpo" -c -o dsputil_mmx.lo dsputil_mmx.c; \
+[5-ERROR] 	then mv -f ".deps/dsputil_mmx.Tpo" ".deps/dsputil_mmx.Plo"; else rm -f ".deps/dsputil_mmx.Tpo"; exit 1; fi
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../include -DHAVE_AV_CONFIG_H -I./../../libavutil -I./.. -Wall -Wno-unused -I../../../include -O4 -mcpu=i386 -march=i386 -ffast-math -fomit-frame-pointer -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -O2 -MT dsputil_mmx.lo -MD -MP -MF .deps/dsputil_mmx.Tpo -c dsputil_mmx.c  -fPIC -DPIC -o .libs/dsputil_mmx.o
+[5-ERROR] In file included from dsputil_mmx.c:2410:
+[5-ERROR] h264dsp_mmx.c: In function 'h264_h_loop_filter_luma_mmx2':
+[5-ERROR] dsputil_mmx.c:620: error: can't find a register in class 'GENERAL_REGS' while reloading 'asm'
+[5-ERROR] dsputil_mmx.c:620: error: can't find a register in class 'GENERAL_REGS' while reloading 'asm'
+[5-ERROR] make[3]: *** [dsputil_mmx.lo] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.avifile.1169085607.4040.3583069520/avifile-0.7-050913/ffmpeg/libavcodec/i386'
+[5-ERROR] make[2]: *** [all-recursive] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.avifile.1169085607.4040.3583069520/avifile-0.7-050913/ffmpeg/libavcodec'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.avifile.1169085607.4040.3583069520/avifile-0.7-050913/ffmpeg'
+[5-ERROR] make: *** [all-recursive] Error 1
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] /bin/sh ../../libtool --tag=CC --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../include   -DHAVE_AV_CONFIG_H -I./../libavutil -I./../libavcodec -I./.. -Wall -Wno-unused -I../../include  -O2 -mcpu=i386 -march=i386 -ffast-math -fomit-frame-pointer -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -pipe -c -o grab.lo grab.c
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../include -DHAVE_AV_CONFIG_H -I./../libavutil -I./../libavcodec -I./.. -Wall -Wno-unused -I../../include -O2 -mcpu=i386 -march=i386 -ffast-math -fomit-frame-pointer -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -pipe -c grab.c  -fPIC -DPIC -o .libs/grab.o
+[9-ERROR] /bin/sh ../../libtool --tag=CC --mode=link gcc-40  -O2 -mcpu=i386 -march=i386 -ffast-math -fomit-frame-pointer -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -pipe   -o libaviplayavformat.la -rpath /usr/lib -release 0.7 -version-info 0:43:0 4xm.lo allformats.lo asf-enc.lo asf.lo au.lo avidec.lo avienc.lo avio.lo aviobuf.lo crc.lo cutils.lo daud.lo dv.lo dv1394.lo electronicarts.lo ffm.lo file.lo flic.lo flvdec.lo flvenc.lo framehook.lo gif.lo gifdec.lo http.lo idcin.lo idroq.lo img.lo img2.lo ipmovie.lo jpeg.lo matroska.lo mmf.lo mov.lo movenc.lo mp3.lo mpeg.lo mpegts.lo mpegtsenc.lo mpjpeg.lo nsvdec.lo nut.lo ogg2.lo oggparseflac.lo oggparsetheora.lo oggparsevorbis.lo os_support.lo png.lo pnm.lo psxstr.lo raw.lo rm.lo rtp.lo rtpproto.lo rtsp.lo segafilm.lo sierravmd.lo sgi.lo sol.lo swf.lo tcp.lo udp.lo utils.lo wc3movie.lo westwood.lo wav.lo yuv.lo yuv4mpeg.lo audio.lo grab.lo  -lz -lnsl -ldl 
+[9-ERROR] gcc-40 -shared  .libs/4xm.o .libs/allformats.o .libs/asf-enc.o .libs/asf.o .libs/au.o .libs/avidec.o .libs/avienc.o .libs/avio.o .libs/aviobuf.o .libs/crc.o .libs/cutils.o .libs/daud.o .libs/dv.o .libs/dv1394.o .libs/electronicarts.o .libs/ffm.o .libs/file.o .libs/flic.o .libs/flvdec.o .libs/flvenc.o .libs/framehook.o .libs/gif.o .libs/gifdec.o .libs/http.o .libs/idcin.o .libs/idroq.o .libs/img.o .libs/img2.o .libs/ipmovie.o .libs/jpeg.o .libs/matroska.o .libs/mmf.o .libs/mov.o .libs/movenc.o .libs/mp3.o .libs/mpeg.o .libs/mpegts.o .libs/mpegtsenc.o .libs/mpjpeg.o .libs/nsvdec.o .libs/nut.o .libs/ogg2.o .libs/oggparseflac.o .libs/oggparsetheora.o .libs/oggparsevorbis.o .libs/os_support.o .libs/png.o .libs/pnm.o .libs/psxstr.o .libs/raw.o .libs/rm.o .libs/rtp.o .libs/rtpproto.o .libs/rtsp.o .libs/segafilm.o .libs/sierravmd.o .libs/sgi.o .libs/sol.o .libs/swf.o .libs/tcp.o .libs/udp.o .libs/utils.o .libs/wc3movie.o .libs/westwood.o .libs/wav.o .libs/yuv.o .libs/yuv4mpeg.o .libs/audio.o .libs/grab.o  -lz -lnsl -ldl  -mcpu=i386 -march=i386 -Wl,-soname -Wl,libaviplayavformat-0.7.so.0 -o .libs/libaviplayavformat-0.7.so.0.0.43
+[9-ERROR] (cd .libs && rm -f libaviplayavformat-0.7.so.0 && ln -s libaviplayavformat-0.7.so.0.0.43 libaviplayavformat-0.7.so.0)
+[9-ERROR] (cd .libs && rm -f libaviplayavformat.so && ln -s libaviplayavformat-0.7.so.0.0.43 libaviplayavformat.so)
+[9-ERROR] creating libaviplayavformat.la
+[9-ERROR] (cd .libs && rm -f libaviplayavformat.la && ln -s ../libaviplayavformat.la libaviplayavformat.la)
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.avifile.1169138089.18419.2177560645/avifile-0.7-050913/ffmpeg/libavformat'
+[9-ERROR] Making all in libavcodec
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.avifile.1169138089.18419.2177560645/avifile-0.7-050913/ffmpeg/libavcodec'
+[9-ERROR] Making all in alpha
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.avifile.1169138089.18419.2177560645/avifile-0.7-050913/ffmpeg/libavcodec/alpha'
+[9-ERROR] /bin/sh ../../../libtool --tag=CC --mode=link gcc-40  -O2 -mcpu=i386 -march=i386 -ffast-math -fomit-frame-pointer -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -pipe   -o libavcodecalpha.la     -lnsl -ldl 
+[9-ERROR] mkdir .libs
+[9-ERROR] ar cru .libs/libavcodecalpha.a
+[9-ERROR] ranlib .libs/libavcodecalpha.a
+[9-ERROR] creating libavcodecalpha.la
+[9-ERROR] (cd .libs && rm -f libavcodecalpha.la && ln -s ../libavcodecalpha.la libavcodecalpha.la)
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.avifile.1169138089.18419.2177560645/avifile-0.7-050913/ffmpeg/libavcodec/alpha'
+[9-ERROR] Making all in armv4l
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.avifile.1169138089.18419.2177560645/avifile-0.7-050913/ffmpeg/libavcodec/armv4l'
+[9-ERROR] /bin/sh ../../../libtool --tag=CC --mode=link gcc-40  -O2 -mcpu=i386 -march=i386 -ffast-math -fomit-frame-pointer -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -pipe   -o libavcodecarmv4l.la     -lnsl -ldl 
+[9-ERROR] mkdir .libs
+[9-ERROR] ar cru .libs/libavcodecarmv4l.a
+[9-ERROR] ranlib .libs/libavcodecarmv4l.a
+[9-ERROR] creating libavcodecarmv4l.la
+[9-ERROR] (cd .libs && rm -f libavcodecarmv4l.la && ln -s ../libavcodecarmv4l.la libavcodecarmv4l.la)
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.avifile.1169138089.18419.2177560645/avifile-0.7-050913/ffmpeg/libavcodec/armv4l'
+[9-ERROR] Making all in i386
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.avifile.1169138089.18419.2177560645/avifile-0.7-050913/ffmpeg/libavcodec/i386'
+[9-ERROR] if /bin/sh ../../../libtool --tag=CC --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../include   -DHAVE_AV_CONFIG_H -I./../../libavutil -I./.. -Wall -Wno-unused -I../../../include  -O4 -mcpu=i386 -march=i386 -ffast-math -fomit-frame-pointer -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -O2  -MT cputest.lo -MD -MP -MF ".deps/cputest.Tpo" -c -o cputest.lo cputest.c; \
+[9-ERROR] 	then mv -f ".deps/cputest.Tpo" ".deps/cputest.Plo"; else rm -f ".deps/cputest.Tpo"; exit 1; fi
+[9-ERROR] mkdir .libs
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../include -DHAVE_AV_CONFIG_H -I./../../libavutil -I./.. -Wall -Wno-unused -I../../../include -O4 -mcpu=i386 -march=i386 -ffast-math -fomit-frame-pointer -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -O2 -MT cputest.lo -MD -MP -MF .deps/cputest.Tpo -c cputest.c  -fPIC -DPIC -o .libs/cputest.o
+[9-ERROR] if /bin/sh ../../../libtool --tag=CC --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../include   -DHAVE_AV_CONFIG_H -I./../../libavutil -I./.. -Wall -Wno-unused -I../../../include  -O4 -mcpu=i386 -march=i386 -ffast-math -fomit-frame-pointer -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -O2  -MT dsputil_mmx.lo -MD -MP -MF ".deps/dsputil_mmx.Tpo" -c -o dsputil_mmx.lo dsputil_mmx.c; \
+[9-ERROR] 	then mv -f ".deps/dsputil_mmx.Tpo" ".deps/dsputil_mmx.Plo"; else rm -f ".deps/dsputil_mmx.Tpo"; exit 1; fi
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../include -DHAVE_AV_CONFIG_H -I./../../libavutil -I./.. -Wall -Wno-unused -I../../../include -O4 -mcpu=i386 -march=i386 -ffast-math -fomit-frame-pointer -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -O2 -MT dsputil_mmx.lo -MD -MP -MF .deps/dsputil_mmx.Tpo -c dsputil_mmx.c  -fPIC -DPIC -o .libs/dsputil_mmx.o
+[9-ERROR] In file included from dsputil_mmx.c:2410:
+[9-ERROR] h264dsp_mmx.c: In function 'h264_h_loop_filter_luma_mmx2':
+[9-ERROR] dsputil_mmx.c:620: error: can't find a register in class 'GENERAL_REGS' while reloading 'asm'
+[9-ERROR] dsputil_mmx.c:620: error: can't find a register in class 'GENERAL_REGS' while reloading 'asm'
+[9-ERROR] make[3]: *** [dsputil_mmx.lo] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.avifile.1169138089.18419.2177560645/avifile-0.7-050913/ffmpeg/libavcodec/i386'
+[9-ERROR] make[2]: *** [all-recursive] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.avifile.1169138089.18419.2177560645/avifile-0.7-050913/ffmpeg/libavcodec'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.avifile.1169138089.18419.2177560645/avifile-0.7-050913/ffmpeg'
+[9-ERROR] make: *** [all-recursive] Error 1
+[9-ERROR] --- BUILD ERROR ---
 

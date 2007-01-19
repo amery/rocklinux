@@ -20,21 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142486943 Thu Mar 16 06:29:03 2006 (5)
-[TIMESTAMP] 1142735211 Sun Mar 19 03:26:51 2006 (9)
+[TIMESTAMP] 1168564553 Fri Jan 12 02:15:53 2007 (5) ERROR
+[TIMESTAMP] 1168761826 Sun Jan 14 09:03:46 2007 (9) ERROR
+[TIMESTAMP] 1168941380 Tue Jan 16 10:56:20 2007 (5) ERROR
+[TIMESTAMP] 1168963405 Tue Jan 16 17:03:25 2007 (9) ERROR
+[TIMESTAMP] 1169084768 Thu Jan 18 02:46:08 2007 (5) ERROR
+[TIMESTAMP] 1169133697 Thu Jan 18 16:21:37 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-hermes.log 9-hermes.log
+[LOGS] 5-hermes.err 9-hermes.err
 
-[BUILDTIME] 2688 (5)
-[BUILDTIME] 3262 (9)
-[SIZE] 0.11 MB, 9 files
+[BUILDTIME] 1133 (5) ERROR
+[BUILDTIME] 1174 (9) ERROR
+[BUILDTIME] 1168 (5) ERROR
+[BUILDTIME] 1186 (9) ERROR
+[BUILDTIME] 1175 (5) ERROR
+[BUILDTIME] 1178 (9) ERROR
 
-[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils file findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev
-[DEP] grep make mktemp net-tools perl5 rrdtool sed sysfiles tar texinfo
 
-[PROVIDES] libHermes.a libHermes.so
+[5-ERROR] HeadX86.h:94: error: 'ClearX86_24' aliased to undefined symbol '_ClearX86_24'
+[5-ERROR] HeadX86.h:95: error: 'ClearX86_16' aliased to undefined symbol '_ClearX86_16'
+[5-ERROR] HeadX86.h:96: error: 'ClearX86_8' aliased to undefined symbol '_ClearX86_8'
+[5-ERROR] HeadX86.h:99: error: 'ConvertX86p32_32BGR888' aliased to undefined symbol '_ConvertX86p32_32BGR888'
+[5-ERROR] HeadX86.h:100: error: 'ConvertX86p32_32RGBA888' aliased to undefined symbol '_ConvertX86p32_32RGBA888'
+[5-ERROR] HeadX86.h:101: error: 'ConvertX86p32_32BGRA888' aliased to undefined symbol '_ConvertX86p32_32BGRA888'
+[5-ERROR] HeadX86.h:102: error: 'ConvertX86p32_24RGB888' aliased to undefined symbol '_ConvertX86p32_24RGB888'
+[5-ERROR] HeadX86.h:103: error: 'ConvertX86p32_24BGR888' aliased to undefined symbol '_ConvertX86p32_24BGR888'
+[5-ERROR] HeadX86.h:104: error: 'ConvertX86p32_16RGB565' aliased to undefined symbol '_ConvertX86p32_16RGB565'
+[5-ERROR] HeadX86.h:105: error: 'ConvertX86p32_16BGR565' aliased to undefined symbol '_ConvertX86p32_16BGR565'
+[5-ERROR] HeadX86.h:106: error: 'ConvertX86p32_16RGB555' aliased to undefined symbol '_ConvertX86p32_16RGB555'
+[5-ERROR] HeadX86.h:107: error: 'ConvertX86p32_16BGR555' aliased to undefined symbol '_ConvertX86p32_16BGR555'
+[5-ERROR] HeadX86.h:108: error: 'ConvertX86p32_8RGB332' aliased to undefined symbol '_ConvertX86p32_8RGB332'
+[5-ERROR] HeadX86.h:110: error: 'ConvertX86p32_16RGB565_S' aliased to undefined symbol '_ConvertX86p32_16RGB565_S'
+[5-ERROR] HeadX86.h:112: error: 'ConvertX86p16_32RGB888' aliased to undefined symbol '_ConvertX86p16_32RGB888'
+[5-ERROR] HeadX86.h:113: error: 'ConvertX86p16_32BGR888' aliased to undefined symbol '_ConvertX86p16_32BGR888'
+[5-ERROR] HeadX86.h:114: error: 'ConvertX86p16_32RGBA888' aliased to undefined symbol '_ConvertX86p16_32RGBA888'
+[5-ERROR] HeadX86.h:115: error: 'ConvertX86p16_32BGRA888' aliased to undefined symbol '_ConvertX86p16_32BGRA888'
+[5-ERROR] HeadX86.h:116: error: 'ConvertX86p16_24RGB888' aliased to undefined symbol '_ConvertX86p16_24RGB888'
+[5-ERROR] HeadX86.h:117: error: 'ConvertX86p16_24BGR888' aliased to undefined symbol '_ConvertX86p16_24BGR888'
+[5-ERROR] HeadX86.h:118: error: 'ConvertX86p16_16BGR565' aliased to undefined symbol '_ConvertX86p16_16BGR565'
+[5-ERROR] HeadX86.h:119: error: 'ConvertX86p16_16RGB555' aliased to undefined symbol '_ConvertX86p16_16RGB555'
+[5-ERROR] HeadX86.h:120: error: 'ConvertX86p16_16BGR555' aliased to undefined symbol '_ConvertX86p16_16BGR555'
+[5-ERROR] HeadX86.h:121: error: 'ConvertX86p16_8RGB332' aliased to undefined symbol '_ConvertX86p16_8RGB332'
+[5-ERROR] HeadX86.h:123: error: 'CopyX86p_4byte' aliased to undefined symbol '_CopyX86p_4byte'
+[5-ERROR] HeadX86.h:124: error: 'CopyX86p_3byte' aliased to undefined symbol '_CopyX86p_3byte'
+[5-ERROR] HeadX86.h:125: error: 'CopyX86p_2byte' aliased to undefined symbol '_CopyX86p_2byte'
+[5-ERROR] HeadX86.h:126: error: 'CopyX86p_1byte' aliased to undefined symbol '_CopyX86p_1byte'
+[5-ERROR] HeadX86.h:128: error: 'ConvertX86pI8_32' aliased to undefined symbol '_ConvertX86pI8_32'
+[5-ERROR] HeadX86.h:129: error: 'ConvertX86pI8_24' aliased to undefined symbol '_ConvertX86pI8_24'
+[5-ERROR] HeadX86.h:130: error: 'ConvertX86pI8_16' aliased to undefined symbol '_ConvertX86pI8_16'
+[5-ERROR] HeadX86.h:132: error: 'ConvertX86p16_32RGB888_LUT_X86' aliased to undefined symbol '_ConvertX86p16_32RGB888_LUT_X86'
+[5-ERROR] HeadX86.h:133: error: 'ConvertX86p16_32BGR888_LUT_X86' aliased to undefined symbol '_ConvertX86p16_32BGR888_LUT_X86'
+[5-ERROR] HeadX86.h:134: error: 'ConvertX86p16_32RGBA888_LUT_X86' aliased to undefined symbol '_ConvertX86p16_32RGBA888_LUT_X86'
+[5-ERROR] HeadX86.h:135: error: 'ConvertX86p16_32BGRA888_LUT_X86' aliased to undefined symbol '_ConvertX86p16_32BGRA888_LUT_X86'
+[5-ERROR] HeadMMX.h:55: error: 'ConvertMMX' aliased to undefined symbol '_ConvertMMX'
+[5-ERROR] HeadMMX.h:56: error: 'ClearMMX_32' aliased to undefined symbol '_ClearMMX_32'
+[5-ERROR] HeadMMX.h:57: error: 'ClearMMX_24' aliased to undefined symbol '_ClearMMX_24'
+[5-ERROR] HeadMMX.h:58: error: 'ClearMMX_16' aliased to undefined symbol '_ClearMMX_16'
+[5-ERROR] HeadMMX.h:59: error: 'ClearMMX_8' aliased to undefined symbol '_ClearMMX_8'
+[5-ERROR] HeadMMX.h:61: error: 'ConvertMMXp32_16RGB555' aliased to undefined symbol '_ConvertMMXp32_16RGB555'
+[5-ERROR] HeadMMX.h:63: error: 'ConvertMMXpII32_24RGB888' aliased to undefined symbol '_ConvertMMXpII32_24RGB888'
+[5-ERROR] HeadMMX.h:64: error: 'ConvertMMXpII32_16RGB565' aliased to undefined symbol '_ConvertMMXpII32_16RGB565'
+[5-ERROR] HeadMMX.h:65: error: 'ConvertMMXpII32_16BGR565' aliased to undefined symbol '_ConvertMMXpII32_16BGR565'
+[5-ERROR] HeadMMX.h:66: error: 'ConvertMMXpII32_16RGB555' aliased to undefined symbol '_ConvertMMXpII32_16RGB555'
+[5-ERROR] HeadMMX.h:67: error: 'ConvertMMXpII32_16BGR555' aliased to undefined symbol '_ConvertMMXpII32_16BGR555'
+[5-ERROR] make[1]: *** [Convert.lo] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.hermes.1169084755.2479.3583069520/Hermes-1.3.2/src'
+[5-ERROR] make: *** [all-recursive] Error 1
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] HeadX86.h:94: error: 'ClearX86_24' aliased to undefined symbol '_ClearX86_24'
+[9-ERROR] HeadX86.h:95: error: 'ClearX86_16' aliased to undefined symbol '_ClearX86_16'
+[9-ERROR] HeadX86.h:96: error: 'ClearX86_8' aliased to undefined symbol '_ClearX86_8'
+[9-ERROR] HeadX86.h:99: error: 'ConvertX86p32_32BGR888' aliased to undefined symbol '_ConvertX86p32_32BGR888'
+[9-ERROR] HeadX86.h:100: error: 'ConvertX86p32_32RGBA888' aliased to undefined symbol '_ConvertX86p32_32RGBA888'
+[9-ERROR] HeadX86.h:101: error: 'ConvertX86p32_32BGRA888' aliased to undefined symbol '_ConvertX86p32_32BGRA888'
+[9-ERROR] HeadX86.h:102: error: 'ConvertX86p32_24RGB888' aliased to undefined symbol '_ConvertX86p32_24RGB888'
+[9-ERROR] HeadX86.h:103: error: 'ConvertX86p32_24BGR888' aliased to undefined symbol '_ConvertX86p32_24BGR888'
+[9-ERROR] HeadX86.h:104: error: 'ConvertX86p32_16RGB565' aliased to undefined symbol '_ConvertX86p32_16RGB565'
+[9-ERROR] HeadX86.h:105: error: 'ConvertX86p32_16BGR565' aliased to undefined symbol '_ConvertX86p32_16BGR565'
+[9-ERROR] HeadX86.h:106: error: 'ConvertX86p32_16RGB555' aliased to undefined symbol '_ConvertX86p32_16RGB555'
+[9-ERROR] HeadX86.h:107: error: 'ConvertX86p32_16BGR555' aliased to undefined symbol '_ConvertX86p32_16BGR555'
+[9-ERROR] HeadX86.h:108: error: 'ConvertX86p32_8RGB332' aliased to undefined symbol '_ConvertX86p32_8RGB332'
+[9-ERROR] HeadX86.h:110: error: 'ConvertX86p32_16RGB565_S' aliased to undefined symbol '_ConvertX86p32_16RGB565_S'
+[9-ERROR] HeadX86.h:112: error: 'ConvertX86p16_32RGB888' aliased to undefined symbol '_ConvertX86p16_32RGB888'
+[9-ERROR] HeadX86.h:113: error: 'ConvertX86p16_32BGR888' aliased to undefined symbol '_ConvertX86p16_32BGR888'
+[9-ERROR] HeadX86.h:114: error: 'ConvertX86p16_32RGBA888' aliased to undefined symbol '_ConvertX86p16_32RGBA888'
+[9-ERROR] HeadX86.h:115: error: 'ConvertX86p16_32BGRA888' aliased to undefined symbol '_ConvertX86p16_32BGRA888'
+[9-ERROR] HeadX86.h:116: error: 'ConvertX86p16_24RGB888' aliased to undefined symbol '_ConvertX86p16_24RGB888'
+[9-ERROR] HeadX86.h:117: error: 'ConvertX86p16_24BGR888' aliased to undefined symbol '_ConvertX86p16_24BGR888'
+[9-ERROR] HeadX86.h:118: error: 'ConvertX86p16_16BGR565' aliased to undefined symbol '_ConvertX86p16_16BGR565'
+[9-ERROR] HeadX86.h:119: error: 'ConvertX86p16_16RGB555' aliased to undefined symbol '_ConvertX86p16_16RGB555'
+[9-ERROR] HeadX86.h:120: error: 'ConvertX86p16_16BGR555' aliased to undefined symbol '_ConvertX86p16_16BGR555'
+[9-ERROR] HeadX86.h:121: error: 'ConvertX86p16_8RGB332' aliased to undefined symbol '_ConvertX86p16_8RGB332'
+[9-ERROR] HeadX86.h:123: error: 'CopyX86p_4byte' aliased to undefined symbol '_CopyX86p_4byte'
+[9-ERROR] HeadX86.h:124: error: 'CopyX86p_3byte' aliased to undefined symbol '_CopyX86p_3byte'
+[9-ERROR] HeadX86.h:125: error: 'CopyX86p_2byte' aliased to undefined symbol '_CopyX86p_2byte'
+[9-ERROR] HeadX86.h:126: error: 'CopyX86p_1byte' aliased to undefined symbol '_CopyX86p_1byte'
+[9-ERROR] HeadX86.h:128: error: 'ConvertX86pI8_32' aliased to undefined symbol '_ConvertX86pI8_32'
+[9-ERROR] HeadX86.h:129: error: 'ConvertX86pI8_24' aliased to undefined symbol '_ConvertX86pI8_24'
+[9-ERROR] HeadX86.h:130: error: 'ConvertX86pI8_16' aliased to undefined symbol '_ConvertX86pI8_16'
+[9-ERROR] HeadX86.h:132: error: 'ConvertX86p16_32RGB888_LUT_X86' aliased to undefined symbol '_ConvertX86p16_32RGB888_LUT_X86'
+[9-ERROR] HeadX86.h:133: error: 'ConvertX86p16_32BGR888_LUT_X86' aliased to undefined symbol '_ConvertX86p16_32BGR888_LUT_X86'
+[9-ERROR] HeadX86.h:134: error: 'ConvertX86p16_32RGBA888_LUT_X86' aliased to undefined symbol '_ConvertX86p16_32RGBA888_LUT_X86'
+[9-ERROR] HeadX86.h:135: error: 'ConvertX86p16_32BGRA888_LUT_X86' aliased to undefined symbol '_ConvertX86p16_32BGRA888_LUT_X86'
+[9-ERROR] HeadMMX.h:55: error: 'ConvertMMX' aliased to undefined symbol '_ConvertMMX'
+[9-ERROR] HeadMMX.h:56: error: 'ClearMMX_32' aliased to undefined symbol '_ClearMMX_32'
+[9-ERROR] HeadMMX.h:57: error: 'ClearMMX_24' aliased to undefined symbol '_ClearMMX_24'
+[9-ERROR] HeadMMX.h:58: error: 'ClearMMX_16' aliased to undefined symbol '_ClearMMX_16'
+[9-ERROR] HeadMMX.h:59: error: 'ClearMMX_8' aliased to undefined symbol '_ClearMMX_8'
+[9-ERROR] HeadMMX.h:61: error: 'ConvertMMXp32_16RGB555' aliased to undefined symbol '_ConvertMMXp32_16RGB555'
+[9-ERROR] HeadMMX.h:63: error: 'ConvertMMXpII32_24RGB888' aliased to undefined symbol '_ConvertMMXpII32_24RGB888'
+[9-ERROR] HeadMMX.h:64: error: 'ConvertMMXpII32_16RGB565' aliased to undefined symbol '_ConvertMMXpII32_16RGB565'
+[9-ERROR] HeadMMX.h:65: error: 'ConvertMMXpII32_16BGR565' aliased to undefined symbol '_ConvertMMXpII32_16BGR565'
+[9-ERROR] HeadMMX.h:66: error: 'ConvertMMXpII32_16RGB555' aliased to undefined symbol '_ConvertMMXpII32_16RGB555'
+[9-ERROR] HeadMMX.h:67: error: 'ConvertMMXpII32_16BGR555' aliased to undefined symbol '_ConvertMMXpII32_16BGR555'
+[9-ERROR] make[1]: *** [Convert.lo] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.hermes.1169133683.30791.3627834414/Hermes-1.3.2/src'
+[9-ERROR] make: *** [all-recursive] Error 1
+[9-ERROR] --- BUILD ERROR ---
 

@@ -20,23 +20,27 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142603487 Fri Mar 17 14:51:27 2006 (5)
-[TIMESTAMP] 1142869149 Mon Mar 20 16:39:09 2006 (9)
+[TIMESTAMP] 1168662032 Sat Jan 13 05:20:32 2007 (5) ERROR
+[TIMESTAMP] 1168869581 Mon Jan 15 14:59:41 2007 (9)
+[TIMESTAMP] 1168950249 Tue Jan 16 13:24:09 2007 (5)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-blender.log 9-blender.log
 
-[BUILDTIME] 43866 (5)
-[BUILDTIME] 44435 (9)
-[SIZE] 9.57 MB, 8 files
+[BUILDTIME] 2526 (5) ERROR
+[BUILDTIME] 53398 (9)
+[BUILDTIME] 53249 (5)
+[SIZE] 11.49 MB, 219 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils freetype:dev
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep libcdaudio:dev libjpeg
-[DEP] libjpeg:dev libpng libpng:dev libsdl libsdl:dev linux26-header:dev
-[DEP] mktemp patch pkgconfig pth:dev python python:dev rrdtool scons sed
-[DEP] sysfiles tar xorg xorg:dev zlib:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm findutils freetype freetype:dev gawk gcc40 gcc40:dev
+[DEP] gettext glibc23 glibc23:dev grep libcdaudio:dev libice libjpeg
+[DEP] libjpeg:dev libpng libpng:dev libsdl libsdl:dev libsm libtiff:dev
+[DEP] libx11 libx11:dev libxau libxdmcp libxext libxi libxi:dev libxt
+[DEP] linux-libc-headers:dev mesalib mesalib:dev mktemp nas openal
+[DEP] openal:dev openexr openexr:dev pth:dev python python:dev rrdtool
+[DEP] scons sed sysfiles tar tcl tk xproto:dev zlib zlib:dev
 
-[PROVIDES] blender blenderplayer
 

@@ -20,33 +20,37 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142513004 Thu Mar 16 13:43:24 2006 (5)
-[TIMESTAMP] 1142764847 Sun Mar 19 11:40:47 2006 (9)
+[TIMESTAMP] 1168589492 Fri Jan 12 09:11:32 2007 (5)
+[TIMESTAMP] 1168791012 Sun Jan 14 17:10:12 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-gtkhtml.log 9-gtkhtml.log
 
-[BUILDTIME] 22817 (5)
-[BUILDTIME] 23554 (9)
-[SIZE] 2.46 MB, 141 files
+[BUILDTIME] 23804 (5)
+[BUILDTIME] 24373 (9)
+[SIZE] 2.71 MB, 150 files
 
-[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
-[DEP] binutils bzip2 cairo cairo:dev coreutils cpan-xml-parser diffutils
-[DEP] esound esound:dev expat findutils freetype freetype:dev gail gail:dev
-[DEP] gawk gcc34 gcc34:dev gconf gconf:dev gettext glib glib:dev glibc23
-[DEP] glibc23:dev gnome-keyring gnome-keyring:dev gnome-vfs gnome-vfs:dev
+[DEP] 00-dirtree alsa alsa:dev applewmproto atk atk:dev audiofile
+[DEP] audiofile:dev bash2 binutils bzip2 cairo cairo:dev coreutils
+[DEP] cpan-xml-parser cvm dbus dbus-glib dbus-glib:dev dbus:dev
+[DEP] diffutils esound esound:dev expat expat:dev findutils fontconfig
+[DEP] fontconfig:dev freetype freetype:dev gail gail:dev gawk gcc40
+[DEP] gcc40:dev gconf gconf:dev gettext glib glib:dev glibc23 glibc23:dev
+[DEP] gnome-blog gnome-keyring gnome-keyring:dev gnome-vfs gnome-vfs:dev
 [DEP] gnome2-dirtree gnutls gnutls:dev grep gtk+ gtk+:dev libart_lgpl23
 [DEP] libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui libbonoboui:dev
 [DEP] libgcrypt libgcrypt:dev libglade libglade:dev libgnome libgnome:dev
 [DEP] libgnomecanvas libgnomecanvas:dev libgnomeprint libgnomeprint:dev
 [DEP] libgnomeprintui libgnomeprintui:dev libgnomeui libgnomeui:dev
-[DEP] libgpg-error libgpg-error:dev libjpeg libjpeg:dev libpng libpng:dev
-[DEP] libsoup libsoup:dev libxml2 libxml2:dev linux26-header:dev make
-[DEP] mktemp net-tools openssl orbit2 orbit2:dev pango pango:dev perl5
-[DEP] pkgconfig popt popt:dev rrdtool sed sysfiles tar util-linux xorg
-[DEP] zlib:dev
+[DEP] libgpg-error libgpg-error:dev libice libice:dev libjpeg libjpeg:dev
+[DEP] libpng libpng:dev libsm libsm:dev libsoup libsoup:dev libx11
+[DEP] libx11:dev libxau libxau:dev libxcursor libxdmcp libxdmcp:dev libxext
+[DEP] libxfixes libxi libxinerama libxml2 libxml2:dev libxrandr libxrender
+[DEP] libxrender:dev linux-libc-headers:dev make mktemp net-tools openssl
+[DEP] orbit2 orbit2:dev pango pango:dev perl5 pkgconfig popt popt:dev
+[DEP] rrdtool sed sysfiles tar util-linux zlib
 
 [PROVIDES] libgnome-gtkhtml-editor-3.8.a libgnome-gtkhtml-editor-3.8.so
 [PROVIDES] libgtkhtml-3.8.a libgtkhtml-3.8.so

@@ -20,23 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142578010 Fri Mar 17 07:46:50 2006 (5)
-[TIMESTAMP] 1142841663 Mon Mar 20 09:01:03 2006 (9)
+[TIMESTAMP] 1168640320 Fri Jan 12 23:18:40 2007 (5)
+[TIMESTAMP] 1168846174 Mon Jan 15 08:29:34 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-driftnet.log 9-driftnet.log
 
-[BUILDTIME] 1334 (5)
-[BUILDTIME] 1657 (9)
+[BUILDTIME] 1399 (5)
+[BUILDTIME] 1639 (9)
 [SIZE] 0.18 MB, 8 files
 
-[DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glib12 glib12:dev glibc23 glibc23:dev gnome14-dirtree
-[DEP] grep gtk+12 gtk+12:dev libjpeg libjpeg:dev libpcap:dev libungif
-[DEP] libungif:dev linux26-header:dev make mktemp rrdtool sed sysfiles
-[DEP] tar xorg xorg:dev
+[DEP] 00-dirtree alsa applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm findutils gawk gcc40 gcc40:dev glib12 glib12:dev
+[DEP] glibc23 glibc23:dev gnome14-dirtree grep gtk+12 gtk+12:dev libice
+[DEP] libjpeg libjpeg:dev libpcap:dev libsm libungif libungif:dev libx11
+[DEP] libx11:dev libxau libxdmcp libxext libxi libxt linux-libc-headers:dev
+[DEP] make makedepend mktemp rrdtool sed sysfiles tar xproto:dev
 
 [PROVIDES] driftnet
 

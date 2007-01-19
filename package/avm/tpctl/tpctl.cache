@@ -20,131 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142650599 Sat Mar 18 03:56:39 2006 (5) ERROR
-[TIMESTAMP] 1142919990 Tue Mar 21 06:46:30 2006 (9) ERROR
-[TIMESTAMP] 1142963555 Tue Mar 21 18:52:35 2006 (5) ERROR
-[TIMESTAMP] 1142973690 Tue Mar 21 21:41:30 2006 (9) ERROR
-[TIMESTAMP] 1143033345 Wed Mar 22 14:15:45 2006 (5) ERROR
-[TIMESTAMP] 1143042986 Wed Mar 22 16:56:26 2006 (9) ERROR
+[TIMESTAMP] 1168692402 Sat Jan 13 13:46:42 2007 (5) ERROR
+[TIMESTAMP] 1168901389 Mon Jan 15 23:49:49 2007 (9) ERROR
+[TIMESTAMP] 1168953739 Tue Jan 16 14:22:19 2007 (5) ERROR
+[TIMESTAMP] 1168983465 Tue Jan 16 22:37:45 2007 (9) ERROR
+[TIMESTAMP] 1169124072 Thu Jan 18 13:41:12 2007 (5) ERROR
+[TIMESTAMP] 1169153659 Thu Jan 18 21:54:19 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-tpctl.err 9-tpctl.err
 
-[BUILDTIME] 1869 (5) ERROR
-[BUILDTIME] 1731 (9) ERROR
-[BUILDTIME] 1748 (5) ERROR
-[BUILDTIME] 1754 (9) ERROR
-[BUILDTIME] 1753 (5) ERROR
-[BUILDTIME] 1818 (9) ERROR
-[SIZE] 0.36 MB, 13 files
+[BUILDTIME] 885 (5) ERROR
+[BUILDTIME] 905 (9) ERROR
+[BUILDTIME] 894 (5) ERROR
+[BUILDTIME] 903 (9) ERROR
+[BUILDTIME] 903 (5) ERROR
+[BUILDTIME] 912 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev linux26-source make
-[DEP] mktemp ncurses:dev perl5 rrdtool sed sysfiles tar
 
-[PROVIDES] apmiser ntpctl tpctl
-
-[5-ERROR] gcc-34 -Wall -Wcast-align -Wstrict-prototypes -O2 -g -L../lib -I../include -DLINUX -o ntpctl.o -c ntpctl.c
-[5-ERROR] In file included from ../include/thinkpad_common.h:80,
-[5-ERROR]                  from ntpctl.h:27,
-[5-ERROR]                  from ntpctl.c:38:
-[5-ERROR] ../include/rtcmosram.h:171: warning: `packed' attribute ignored
-[5-ERROR] gcc-34 -Wall -Wcast-align -Wstrict-prototypes -O2 -g -L../lib -I../include -DLINUX -o event_cond.o -c event_cond.c
-[5-ERROR] In file included from ../include/thinkpad_common.h:80,
-[5-ERROR]                  from ntpctl.h:27,
-[5-ERROR]                  from event_cond.c:34:
-[5-ERROR] ../include/rtcmosram.h:171: warning: `packed' attribute ignored
-[5-ERROR] gcc-34 -Wall -Wcast-align -Wstrict-prototypes -O2 -g -L../lib -I../include -DLINUX -o pointing_device.o -c pointing_device.c
-[5-ERROR] In file included from ../include/thinkpad_common.h:80,
-[5-ERROR]                  from ntpctl.h:27,
-[5-ERROR]                  from pointing_device.c:34:
-[5-ERROR] ../include/rtcmosram.h:171: warning: `packed' attribute ignored
-[5-ERROR] gcc-34 -Wall -Wcast-align -Wstrict-prototypes -O2 -g -L../lib -I../include -DLINUX -o timer.o -c timer.c
-[5-ERROR] In file included from ../include/thinkpad_common.h:80,
-[5-ERROR]                  from ntpctl.h:27,
-[5-ERROR]                  from timer.c:34:
-[5-ERROR] ../include/rtcmosram.h:171: warning: `packed' attribute ignored
-[5-ERROR] gcc-34 -Wall -Wcast-align -Wstrict-prototypes -O2 -g -L../lib -I../include -DLINUX -o ntpctl ntpctl.o event_cond.o pointing_device.o timer.o -lmenu -lncurses -lsmapidev
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/3.4.5/../../../libncurses.a(lib_mouse.o): In function `initialize_mousetype':lib_mouse.c:(.text+0x1bb): undefined reference to `dlopen'
-[5-ERROR] :lib_mouse.c:(.text+0x1d2): undefined reference to `dlsym'
-[5-ERROR] :lib_mouse.c:(.text+0x1ec): undefined reference to `dlsym'
-[5-ERROR] :lib_mouse.c:(.text+0x206): undefined reference to `dlsym'
-[5-ERROR] :lib_mouse.c:(.text+0x220): undefined reference to `dlsym'
-[5-ERROR] :lib_mouse.c:(.text+0x235): undefined reference to `dlclose'
-[5-ERROR] collect2: ld returned 1 exit status
-[5-ERROR] make[1]: *** [ntpctl] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.tpctl.1143033309.17447.3803025837/tpctl-4.17/ntpctl'
+[5-ERROR] ntpctl.c:541: error: dereferencing pointer to incomplete type
+[5-ERROR] ntpctl.c:544: error: dereferencing pointer to incomplete type
+[5-ERROR] ntpctl.c:547: error: dereferencing pointer to incomplete type
+[5-ERROR] ntpctl.c:549: error: dereferencing pointer to incomplete type
+[5-ERROR] ntpctl.c:579: error: dereferencing pointer to incomplete type
+[5-ERROR] ntpctl.c:580: error: dereferencing pointer to incomplete type
+[5-ERROR] ntpctl.c:581: error: dereferencing pointer to incomplete type
+[5-ERROR] ntpctl.c:582: error: dereferencing pointer to incomplete type
+[5-ERROR] ntpctl.c: In function 'pm_resume_hardware':
+[5-ERROR] ntpctl.c:599: error: dereferencing pointer to incomplete type
+[5-ERROR] ntpctl.c:600: error: dereferencing pointer to incomplete type
+[5-ERROR] ntpctl.c: In function 'pm_resume_lid':
+[5-ERROR] ntpctl.c:617: error: dereferencing pointer to incomplete type
+[5-ERROR] ntpctl.c:618: error: dereferencing pointer to incomplete type
+[5-ERROR] ntpctl.c: In function 'pm_resume_RTC':
+[5-ERROR] ntpctl.c:644: error: dereferencing pointer to incomplete type
+[5-ERROR] ntpctl.c:645: error: dereferencing pointer to incomplete type
+[5-ERROR] ntpctl.c: In function 'pm_resume_serial_RI':
+[5-ERROR] ntpctl.c:665: error: dereferencing pointer to incomplete type
+[5-ERROR] ntpctl.c:666: error: dereferencing pointer to incomplete type
+[5-ERROR] ntpctl.c: In function 'cleanup':
+[5-ERROR] ntpctl.c:710: warning: implicit declaration of function 'free_menu'
+[5-ERROR] ntpctl.c:714: warning: implicit declaration of function 'free_item'
+[5-ERROR] ntpctl.c: In function 'handle_sig_winch':
+[5-ERROR] ntpctl.c:747: warning: implicit declaration of function 'unpost_menu'
+[5-ERROR] ntpctl.c:761: warning: implicit declaration of function 'set_menu_win'
+[5-ERROR] ntpctl.c:762: warning: implicit declaration of function 'set_menu_spacing'
+[5-ERROR] ntpctl.c:764: warning: implicit declaration of function 'set_menu_format'
+[5-ERROR] ntpctl.c:766: warning: implicit declaration of function 'post_menu'
+[5-ERROR] ntpctl.c:766: error: 'E_OK' undeclared (first use in this function)
+[5-ERROR] ntpctl.c: In function 'startup':
+[5-ERROR] ntpctl.c:856: warning: implicit declaration of function 'new_item'
+[5-ERROR] ntpctl.c:856: warning: assignment makes pointer from integer without a cast
+[5-ERROR] ntpctl.c:865: warning: implicit declaration of function 'new_menu'
+[5-ERROR] ntpctl.c:865: warning: assignment makes pointer from integer without a cast
+[5-ERROR] ntpctl.c:882: error: 'E_OK' undeclared (first use in this function)
+[5-ERROR] ntpctl.c: In function 'main':
+[5-ERROR] ntpctl.c:951: error: 'E_OK' undeclared (first use in this function)
+[5-ERROR] ntpctl.c:980: warning: implicit declaration of function 'menu_driver'
+[5-ERROR] ntpctl.c:980: error: 'REQ_DOWN_ITEM' undeclared (first use in this function)
+[5-ERROR] ntpctl.c:984: error: 'REQ_UP_ITEM' undeclared (first use in this function)
+[5-ERROR] ntpctl.c:988: error: 'REQ_SCR_DPAGE' undeclared (first use in this function)
+[5-ERROR] ntpctl.c:988: error: 'E_REQUEST_DENIED' undeclared (first use in this function)
+[5-ERROR] ntpctl.c:989: error: 'REQ_LAST_ITEM' undeclared (first use in this function)
+[5-ERROR] ntpctl.c:993: error: 'REQ_SCR_UPAGE' undeclared (first use in this function)
+[5-ERROR] ntpctl.c:994: error: 'REQ_FIRST_ITEM' undeclared (first use in this function)
+[5-ERROR] make[1]: *** [ntpctl.o] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.tpctl.1169124063.27053.3694631316/tpctl-4.17/ntpctl'
 [5-ERROR] make: *** [all] Error 2
 [5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 14 files for this package.
-[5-ERROR] Applying package split: 40 tpctl:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 tpctl:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 tpctl:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <tpctl> Creating flist file ...
-[5-ERROR] <tpctl> Creating package dependencies file ...
-[5-ERROR] <tpctl> Creating md5sum and cksum files ...
-[5-ERROR] <tpctl> Creating package description ...
-[5-ERROR] <tpctl:doc> Creating flist file ...
-[5-ERROR] <tpctl:doc> Creating package dependencies file ...
-[5-ERROR] <tpctl:doc> Creating md5sum and cksum files ...
-[5-ERROR] <tpctl:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building tpctl=tpctl.
 
-[9-ERROR] gcc-34 -Wall -Wcast-align -Wstrict-prototypes -O2 -g -L../lib -I../include -DLINUX -o ntpctl.o -c ntpctl.c
-[9-ERROR] In file included from ../include/thinkpad_common.h:80,
-[9-ERROR]                  from ntpctl.h:27,
-[9-ERROR]                  from ntpctl.c:38:
-[9-ERROR] ../include/rtcmosram.h:171: warning: `packed' attribute ignored
-[9-ERROR] gcc-34 -Wall -Wcast-align -Wstrict-prototypes -O2 -g -L../lib -I../include -DLINUX -o event_cond.o -c event_cond.c
-[9-ERROR] In file included from ../include/thinkpad_common.h:80,
-[9-ERROR]                  from ntpctl.h:27,
-[9-ERROR]                  from event_cond.c:34:
-[9-ERROR] ../include/rtcmosram.h:171: warning: `packed' attribute ignored
-[9-ERROR] gcc-34 -Wall -Wcast-align -Wstrict-prototypes -O2 -g -L../lib -I../include -DLINUX -o pointing_device.o -c pointing_device.c
-[9-ERROR] In file included from ../include/thinkpad_common.h:80,
-[9-ERROR]                  from ntpctl.h:27,
-[9-ERROR]                  from pointing_device.c:34:
-[9-ERROR] ../include/rtcmosram.h:171: warning: `packed' attribute ignored
-[9-ERROR] gcc-34 -Wall -Wcast-align -Wstrict-prototypes -O2 -g -L../lib -I../include -DLINUX -o timer.o -c timer.c
-[9-ERROR] In file included from ../include/thinkpad_common.h:80,
-[9-ERROR]                  from ntpctl.h:27,
-[9-ERROR]                  from timer.c:34:
-[9-ERROR] ../include/rtcmosram.h:171: warning: `packed' attribute ignored
-[9-ERROR] gcc-34 -Wall -Wcast-align -Wstrict-prototypes -O2 -g -L../lib -I../include -DLINUX -o ntpctl ntpctl.o event_cond.o pointing_device.o timer.o -lmenu -lncurses -lsmapidev
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/3.4.5/../../../libncurses.a(lib_mouse.o): In function `initialize_mousetype':lib_mouse.c:(.text+0x1bb): undefined reference to `dlopen'
-[9-ERROR] :lib_mouse.c:(.text+0x1d2): undefined reference to `dlsym'
-[9-ERROR] :lib_mouse.c:(.text+0x1ec): undefined reference to `dlsym'
-[9-ERROR] :lib_mouse.c:(.text+0x206): undefined reference to `dlsym'
-[9-ERROR] :lib_mouse.c:(.text+0x220): undefined reference to `dlsym'
-[9-ERROR] :lib_mouse.c:(.text+0x235): undefined reference to `dlclose'
-[9-ERROR] collect2: ld returned 1 exit status
-[9-ERROR] make[1]: *** [ntpctl] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.tpctl.1143042955.14886.544111303/tpctl-4.17/ntpctl'
+[9-ERROR] ntpctl.c:541: error: dereferencing pointer to incomplete type
+[9-ERROR] ntpctl.c:544: error: dereferencing pointer to incomplete type
+[9-ERROR] ntpctl.c:547: error: dereferencing pointer to incomplete type
+[9-ERROR] ntpctl.c:549: error: dereferencing pointer to incomplete type
+[9-ERROR] ntpctl.c:579: error: dereferencing pointer to incomplete type
+[9-ERROR] ntpctl.c:580: error: dereferencing pointer to incomplete type
+[9-ERROR] ntpctl.c:581: error: dereferencing pointer to incomplete type
+[9-ERROR] ntpctl.c:582: error: dereferencing pointer to incomplete type
+[9-ERROR] ntpctl.c: In function 'pm_resume_hardware':
+[9-ERROR] ntpctl.c:599: error: dereferencing pointer to incomplete type
+[9-ERROR] ntpctl.c:600: error: dereferencing pointer to incomplete type
+[9-ERROR] ntpctl.c: In function 'pm_resume_lid':
+[9-ERROR] ntpctl.c:617: error: dereferencing pointer to incomplete type
+[9-ERROR] ntpctl.c:618: error: dereferencing pointer to incomplete type
+[9-ERROR] ntpctl.c: In function 'pm_resume_RTC':
+[9-ERROR] ntpctl.c:644: error: dereferencing pointer to incomplete type
+[9-ERROR] ntpctl.c:645: error: dereferencing pointer to incomplete type
+[9-ERROR] ntpctl.c: In function 'pm_resume_serial_RI':
+[9-ERROR] ntpctl.c:665: error: dereferencing pointer to incomplete type
+[9-ERROR] ntpctl.c:666: error: dereferencing pointer to incomplete type
+[9-ERROR] ntpctl.c: In function 'cleanup':
+[9-ERROR] ntpctl.c:710: warning: implicit declaration of function 'free_menu'
+[9-ERROR] ntpctl.c:714: warning: implicit declaration of function 'free_item'
+[9-ERROR] ntpctl.c: In function 'handle_sig_winch':
+[9-ERROR] ntpctl.c:747: warning: implicit declaration of function 'unpost_menu'
+[9-ERROR] ntpctl.c:761: warning: implicit declaration of function 'set_menu_win'
+[9-ERROR] ntpctl.c:762: warning: implicit declaration of function 'set_menu_spacing'
+[9-ERROR] ntpctl.c:764: warning: implicit declaration of function 'set_menu_format'
+[9-ERROR] ntpctl.c:766: warning: implicit declaration of function 'post_menu'
+[9-ERROR] ntpctl.c:766: error: 'E_OK' undeclared (first use in this function)
+[9-ERROR] ntpctl.c: In function 'startup':
+[9-ERROR] ntpctl.c:856: warning: implicit declaration of function 'new_item'
+[9-ERROR] ntpctl.c:856: warning: assignment makes pointer from integer without a cast
+[9-ERROR] ntpctl.c:865: warning: implicit declaration of function 'new_menu'
+[9-ERROR] ntpctl.c:865: warning: assignment makes pointer from integer without a cast
+[9-ERROR] ntpctl.c:882: error: 'E_OK' undeclared (first use in this function)
+[9-ERROR] ntpctl.c: In function 'main':
+[9-ERROR] ntpctl.c:951: error: 'E_OK' undeclared (first use in this function)
+[9-ERROR] ntpctl.c:980: warning: implicit declaration of function 'menu_driver'
+[9-ERROR] ntpctl.c:980: error: 'REQ_DOWN_ITEM' undeclared (first use in this function)
+[9-ERROR] ntpctl.c:984: error: 'REQ_UP_ITEM' undeclared (first use in this function)
+[9-ERROR] ntpctl.c:988: error: 'REQ_SCR_DPAGE' undeclared (first use in this function)
+[9-ERROR] ntpctl.c:988: error: 'E_REQUEST_DENIED' undeclared (first use in this function)
+[9-ERROR] ntpctl.c:989: error: 'REQ_LAST_ITEM' undeclared (first use in this function)
+[9-ERROR] ntpctl.c:993: error: 'REQ_SCR_UPAGE' undeclared (first use in this function)
+[9-ERROR] ntpctl.c:994: error: 'REQ_FIRST_ITEM' undeclared (first use in this function)
+[9-ERROR] make[1]: *** [ntpctl.o] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.tpctl.1169153650.17408.3951810427/tpctl-4.17/ntpctl'
 [9-ERROR] make: *** [all] Error 2
 [9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 14 files for this package.
-[9-ERROR] Applying package split: 40 tpctl:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 tpctl:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 tpctl:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <tpctl> Creating flist file ...
-[9-ERROR] <tpctl> Creating package dependencies file ...
-[9-ERROR] <tpctl> Creating md5sum and cksum files ...
-[9-ERROR] <tpctl> Creating package description ...
-[9-ERROR] <tpctl:doc> Creating flist file ...
-[9-ERROR] <tpctl:doc> Creating package dependencies file ...
-[9-ERROR] <tpctl:doc> Creating md5sum and cksum files ...
-[9-ERROR] <tpctl:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building tpctl=tpctl.
 

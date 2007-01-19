@@ -20,22 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142625930 Fri Mar 17 21:05:30 2006 (5)
-[TIMESTAMP] 1142893471 Mon Mar 20 23:24:31 2006 (9)
+[TIMESTAMP] 1168677230 Sat Jan 13 09:33:50 2007 (5) ERROR
+[TIMESTAMP] 1168885585 Mon Jan 15 19:26:25 2007 (9) ERROR
+[TIMESTAMP] 1168951399 Tue Jan 16 13:43:19 2007 (5) ERROR
+[TIMESTAMP] 1168980807 Tue Jan 16 21:53:27 2007 (9) ERROR
+[TIMESTAMP] 1169121701 Thu Jan 18 13:01:41 2007 (5) ERROR
+[TIMESTAMP] 1169151012 Thu Jan 18 21:10:12 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-cal3d.log 9-cal3d.log
+[LOGS] 5-cal3d.err 9-cal3d.err
 
-[BUILDTIME] 10157 (5)
-[BUILDTIME] 10530 (9)
-[SIZE] 0.80 MB, 9 files
+[BUILDTIME] 7984 (5) ERROR
+[BUILDTIME] 8043 (9) ERROR
+[BUILDTIME] 8048 (5) ERROR
+[BUILDTIME] 8047 (9) ERROR
+[BUILDTIME] 8075 (5) ERROR
+[BUILDTIME] 8061 (9) ERROR
 
-[DEP] 00-dirtree autoconf automake17 automake18 automake19 bash2 binutils
-[DEP] bzip2 coreutils diffutils findutils gawk gcc34 gcc34:dev glibc23
-[DEP] glibc23:dev grep libtool linux26-header:dev m4 make mktemp net-tools
-[DEP] perl5 rrdtool sed sysfiles tar util-linux
 
-[PROVIDES] libcal3d.so
+[5-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT quaternion.lo -MD -MP -MF ".deps/quaternion.Tpo" -c -o quaternion.lo quaternion.cpp; \
+[5-ERROR] 	then mv -f ".deps/quaternion.Tpo" ".deps/quaternion.Plo"; else rm -f ".deps/quaternion.Tpo"; exit 1; fi
+[5-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT quaternion.lo -MD -MP -MF .deps/quaternion.Tpo -c quaternion.cpp  -fPIC -DPIC -o .libs/quaternion.o
+[5-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT renderer.lo -MD -MP -MF ".deps/renderer.Tpo" -c -o renderer.lo renderer.cpp; \
+[5-ERROR] 	then mv -f ".deps/renderer.Tpo" ".deps/renderer.Plo"; else rm -f ".deps/renderer.Tpo"; exit 1; fi
+[5-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT renderer.lo -MD -MP -MF .deps/renderer.Tpo -c renderer.cpp  -fPIC -DPIC -o .libs/renderer.o
+[5-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT saver.lo -MD -MP -MF ".deps/saver.Tpo" -c -o saver.lo saver.cpp; \
+[5-ERROR] 	then mv -f ".deps/saver.Tpo" ".deps/saver.Plo"; else rm -f ".deps/saver.Tpo"; exit 1; fi
+[5-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT saver.lo -MD -MP -MF .deps/saver.Tpo -c saver.cpp  -fPIC -DPIC -o .libs/saver.o
+[5-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT skeleton.lo -MD -MP -MF ".deps/skeleton.Tpo" -c -o skeleton.lo skeleton.cpp; \
+[5-ERROR] 	then mv -f ".deps/skeleton.Tpo" ".deps/skeleton.Plo"; else rm -f ".deps/skeleton.Tpo"; exit 1; fi
+[5-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT skeleton.lo -MD -MP -MF .deps/skeleton.Tpo -c skeleton.cpp  -fPIC -DPIC -o .libs/skeleton.o
+[5-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT springsystem.lo -MD -MP -MF ".deps/springsystem.Tpo" -c -o springsystem.lo springsystem.cpp; \
+[5-ERROR] 	then mv -f ".deps/springsystem.Tpo" ".deps/springsystem.Plo"; else rm -f ".deps/springsystem.Tpo"; exit 1; fi
+[5-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT springsystem.lo -MD -MP -MF .deps/springsystem.Tpo -c springsystem.cpp  -fPIC -DPIC -o .libs/springsystem.o
+[5-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT streamsource.lo -MD -MP -MF ".deps/streamsource.Tpo" -c -o streamsource.lo streamsource.cpp; \
+[5-ERROR] 	then mv -f ".deps/streamsource.Tpo" ".deps/streamsource.Plo"; else rm -f ".deps/streamsource.Tpo"; exit 1; fi
+[5-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT streamsource.lo -MD -MP -MF .deps/streamsource.Tpo -c streamsource.cpp  -fPIC -DPIC -o .libs/streamsource.o
+[5-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT submesh.lo -MD -MP -MF ".deps/submesh.Tpo" -c -o submesh.lo submesh.cpp; \
+[5-ERROR] 	then mv -f ".deps/submesh.Tpo" ".deps/submesh.Plo"; else rm -f ".deps/submesh.Tpo"; exit 1; fi
+[5-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT submesh.lo -MD -MP -MF .deps/submesh.Tpo -c submesh.cpp  -fPIC -DPIC -o .libs/submesh.o
+[5-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT vector.lo -MD -MP -MF ".deps/vector.Tpo" -c -o vector.lo vector.cpp; \
+[5-ERROR] 	then mv -f ".deps/vector.Tpo" ".deps/vector.Plo"; else rm -f ".deps/vector.Tpo"; exit 1; fi
+[5-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT vector.lo -MD -MP -MF .deps/vector.Tpo -c vector.cpp  -fPIC -DPIC -o .libs/vector.o
+[5-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT tinyxml.lo -MD -MP -MF ".deps/tinyxml.Tpo" -c -o tinyxml.lo tinyxml.cpp; \
+[5-ERROR] 	then mv -f ".deps/tinyxml.Tpo" ".deps/tinyxml.Plo"; else rm -f ".deps/tinyxml.Tpo"; exit 1; fi
+[5-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT tinyxml.lo -MD -MP -MF .deps/tinyxml.Tpo -c tinyxml.cpp  -fPIC -DPIC -o .libs/tinyxml.o
+[5-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT tinyxmlerror.lo -MD -MP -MF ".deps/tinyxmlerror.Tpo" -c -o tinyxmlerror.lo tinyxmlerror.cpp; \
+[5-ERROR] 	then mv -f ".deps/tinyxmlerror.Tpo" ".deps/tinyxmlerror.Plo"; else rm -f ".deps/tinyxmlerror.Tpo"; exit 1; fi
+[5-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT tinyxmlerror.lo -MD -MP -MF .deps/tinyxmlerror.Tpo -c tinyxmlerror.cpp  -fPIC -DPIC -o .libs/tinyxmlerror.o
+[5-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT tinyxmlparser.lo -MD -MP -MF ".deps/tinyxmlparser.Tpo" -c -o tinyxmlparser.lo tinyxmlparser.cpp; \
+[5-ERROR] 	then mv -f ".deps/tinyxmlparser.Tpo" ".deps/tinyxmlparser.Plo"; else rm -f ".deps/tinyxmlparser.Tpo"; exit 1; fi
+[5-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT tinyxmlparser.lo -MD -MP -MF .deps/tinyxmlparser.Tpo -c tinyxmlparser.cpp  -fPIC -DPIC -o .libs/tinyxmlparser.o
+[5-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT tinystr.lo -MD -MP -MF ".deps/tinystr.Tpo" -c -o tinystr.lo tinystr.cpp; \
+[5-ERROR] 	then mv -f ".deps/tinystr.Tpo" ".deps/tinystr.Plo"; else rm -f ".deps/tinystr.Tpo"; exit 1; fi
+[5-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT tinystr.lo -MD -MP -MF .deps/tinystr.Tpo -c tinystr.cpp  -fPIC -DPIC -o .libs/tinystr.o
+[5-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT coremorphanimation.lo -MD -MP -MF ".deps/coremorphanimation.Tpo" -c -o coremorphanimation.lo coremorphanimation.cpp; \
+[5-ERROR] 	then mv -f ".deps/coremorphanimation.Tpo" ".deps/coremorphanimation.Plo"; else rm -f ".deps/coremorphanimation.Tpo"; exit 1; fi
+[5-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT coremorphanimation.lo -MD -MP -MF .deps/coremorphanimation.Tpo -c coremorphanimation.cpp  -fPIC -DPIC -o .libs/coremorphanimation.o
+[5-ERROR] /bin/sh ../../libtool --tag=CXX --mode=link g++-40  -O2 -fno-rtti   -o libcal3d.la -rpath /usr/lib @all_libraries@ -no-undefined -version-info 11:0:0  animation.lo animation_action.lo animation_cycle.lo bone.lo buffersource.lo cal3d_wrapper.lo coreanimation.lo corebone.lo corekeyframe.lo corematerial.lo coremesh.lo coremodel.lo coreskeleton.lo coresubmesh.lo coresubmorphtarget.lo coretrack.lo error.lo global.lo hardwaremodel.lo loader.lo matrix.lo mesh.lo mixer.lo model.lo morphtargetmixer.lo physique.lo platform.lo quaternion.lo renderer.lo saver.lo skeleton.lo springsystem.lo streamsource.lo submesh.lo vector.lo tinyxml.lo tinyxmlerror.lo tinyxmlparser.lo tinystr.lo coremorphanimation.lo  
+[5-ERROR] g++-40 -shared -nostdlib /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/../../../../i386-unknown-linux-gnu/lib/crti.o /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/crtbeginS.o  .libs/animation.o .libs/animation_action.o .libs/animation_cycle.o .libs/bone.o .libs/buffersource.o .libs/cal3d_wrapper.o .libs/coreanimation.o .libs/corebone.o .libs/corekeyframe.o .libs/corematerial.o .libs/coremesh.o .libs/coremodel.o .libs/coreskeleton.o .libs/coresubmesh.o .libs/coresubmorphtarget.o .libs/coretrack.o .libs/error.o .libs/global.o .libs/hardwaremodel.o .libs/loader.o .libs/matrix.o .libs/mesh.o .libs/mixer.o .libs/model.o .libs/morphtargetmixer.o .libs/physique.o .libs/platform.o .libs/quaternion.o .libs/renderer.o .libs/saver.o .libs/skeleton.o .libs/springsystem.o .libs/streamsource.o .libs/submesh.o .libs/vector.o .libs/tinyxml.o .libs/tinyxmlerror.o .libs/tinyxmlparser.o .libs/tinystr.o .libs/coremorphanimation.o  -Wl,--rpath -Wl,/usr/lib/gcc/i386-unknown-linux-gnu/4.0.3 -Wl,--rpath -Wl,/usr/lib/gcc/i386-unknown-linux-gnu/4.0.3 -L/usr/lib/gcc/i386-unknown-linux-gnu/4.0.3 -L/usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/../../../../i386-unknown-linux-gnu/lib -L/usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/../../.. /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/libstdc++.so -L/ROCK/src.gcc40.1168716320.23937.2263911776/gcc-4.0.3/objdir/i386-unknown-linux-gnu/libstdc++-v3/src -L/ROCK/src.gcc40.1168716320.23937.2263911776/gcc-4.0.3/objdir/i386-unknown-linux-gnu/libstdc++-v3/src/.libs -L/ROCK/src.gcc40.1168716320.23937.2263911776/gcc-4.0.3/objdir/gcc -L/usr/i386-unknown-linux-gnu/bin -L/usr/i386-unknown-linux-gnu/lib -lm -lc -lgcc_s /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/crtendS.o /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/../../../../i386-unknown-linux-gnu/lib/crtn.o  @all_libraries@ -Wl,-soname -Wl,libcal3d.so.11 -o .libs/libcal3d.so.11.0.0
+[5-ERROR] g++-40: @all_libraries@: No such file or directory
+[5-ERROR] make[3]: *** [libcal3d.la] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.cal3d.1169121617.2503.2270576875/cal3d-0.10.0/src/cal3d'
+[5-ERROR] make[2]: *** [all-recursive] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.cal3d.1169121617.2503.2270576875/cal3d-0.10.0/src'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.cal3d.1169121617.2503.2270576875/cal3d-0.10.0'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT quaternion.lo -MD -MP -MF ".deps/quaternion.Tpo" -c -o quaternion.lo quaternion.cpp; \
+[9-ERROR] 	then mv -f ".deps/quaternion.Tpo" ".deps/quaternion.Plo"; else rm -f ".deps/quaternion.Tpo"; exit 1; fi
+[9-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT quaternion.lo -MD -MP -MF .deps/quaternion.Tpo -c quaternion.cpp  -fPIC -DPIC -o .libs/quaternion.o
+[9-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT renderer.lo -MD -MP -MF ".deps/renderer.Tpo" -c -o renderer.lo renderer.cpp; \
+[9-ERROR] 	then mv -f ".deps/renderer.Tpo" ".deps/renderer.Plo"; else rm -f ".deps/renderer.Tpo"; exit 1; fi
+[9-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT renderer.lo -MD -MP -MF .deps/renderer.Tpo -c renderer.cpp  -fPIC -DPIC -o .libs/renderer.o
+[9-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT saver.lo -MD -MP -MF ".deps/saver.Tpo" -c -o saver.lo saver.cpp; \
+[9-ERROR] 	then mv -f ".deps/saver.Tpo" ".deps/saver.Plo"; else rm -f ".deps/saver.Tpo"; exit 1; fi
+[9-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT saver.lo -MD -MP -MF .deps/saver.Tpo -c saver.cpp  -fPIC -DPIC -o .libs/saver.o
+[9-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT skeleton.lo -MD -MP -MF ".deps/skeleton.Tpo" -c -o skeleton.lo skeleton.cpp; \
+[9-ERROR] 	then mv -f ".deps/skeleton.Tpo" ".deps/skeleton.Plo"; else rm -f ".deps/skeleton.Tpo"; exit 1; fi
+[9-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT skeleton.lo -MD -MP -MF .deps/skeleton.Tpo -c skeleton.cpp  -fPIC -DPIC -o .libs/skeleton.o
+[9-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT springsystem.lo -MD -MP -MF ".deps/springsystem.Tpo" -c -o springsystem.lo springsystem.cpp; \
+[9-ERROR] 	then mv -f ".deps/springsystem.Tpo" ".deps/springsystem.Plo"; else rm -f ".deps/springsystem.Tpo"; exit 1; fi
+[9-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT springsystem.lo -MD -MP -MF .deps/springsystem.Tpo -c springsystem.cpp  -fPIC -DPIC -o .libs/springsystem.o
+[9-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT streamsource.lo -MD -MP -MF ".deps/streamsource.Tpo" -c -o streamsource.lo streamsource.cpp; \
+[9-ERROR] 	then mv -f ".deps/streamsource.Tpo" ".deps/streamsource.Plo"; else rm -f ".deps/streamsource.Tpo"; exit 1; fi
+[9-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT streamsource.lo -MD -MP -MF .deps/streamsource.Tpo -c streamsource.cpp  -fPIC -DPIC -o .libs/streamsource.o
+[9-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT submesh.lo -MD -MP -MF ".deps/submesh.Tpo" -c -o submesh.lo submesh.cpp; \
+[9-ERROR] 	then mv -f ".deps/submesh.Tpo" ".deps/submesh.Plo"; else rm -f ".deps/submesh.Tpo"; exit 1; fi
+[9-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT submesh.lo -MD -MP -MF .deps/submesh.Tpo -c submesh.cpp  -fPIC -DPIC -o .libs/submesh.o
+[9-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT vector.lo -MD -MP -MF ".deps/vector.Tpo" -c -o vector.lo vector.cpp; \
+[9-ERROR] 	then mv -f ".deps/vector.Tpo" ".deps/vector.Plo"; else rm -f ".deps/vector.Tpo"; exit 1; fi
+[9-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT vector.lo -MD -MP -MF .deps/vector.Tpo -c vector.cpp  -fPIC -DPIC -o .libs/vector.o
+[9-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT tinyxml.lo -MD -MP -MF ".deps/tinyxml.Tpo" -c -o tinyxml.lo tinyxml.cpp; \
+[9-ERROR] 	then mv -f ".deps/tinyxml.Tpo" ".deps/tinyxml.Plo"; else rm -f ".deps/tinyxml.Tpo"; exit 1; fi
+[9-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT tinyxml.lo -MD -MP -MF .deps/tinyxml.Tpo -c tinyxml.cpp  -fPIC -DPIC -o .libs/tinyxml.o
+[9-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT tinyxmlerror.lo -MD -MP -MF ".deps/tinyxmlerror.Tpo" -c -o tinyxmlerror.lo tinyxmlerror.cpp; \
+[9-ERROR] 	then mv -f ".deps/tinyxmlerror.Tpo" ".deps/tinyxmlerror.Plo"; else rm -f ".deps/tinyxmlerror.Tpo"; exit 1; fi
+[9-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT tinyxmlerror.lo -MD -MP -MF .deps/tinyxmlerror.Tpo -c tinyxmlerror.cpp  -fPIC -DPIC -o .libs/tinyxmlerror.o
+[9-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT tinyxmlparser.lo -MD -MP -MF ".deps/tinyxmlparser.Tpo" -c -o tinyxmlparser.lo tinyxmlparser.cpp; \
+[9-ERROR] 	then mv -f ".deps/tinyxmlparser.Tpo" ".deps/tinyxmlparser.Plo"; else rm -f ".deps/tinyxmlparser.Tpo"; exit 1; fi
+[9-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT tinyxmlparser.lo -MD -MP -MF .deps/tinyxmlparser.Tpo -c tinyxmlparser.cpp  -fPIC -DPIC -o .libs/tinyxmlparser.o
+[9-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT tinystr.lo -MD -MP -MF ".deps/tinystr.Tpo" -c -o tinystr.lo tinystr.cpp; \
+[9-ERROR] 	then mv -f ".deps/tinystr.Tpo" ".deps/tinystr.Plo"; else rm -f ".deps/tinystr.Tpo"; exit 1; fi
+[9-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT tinystr.lo -MD -MP -MF .deps/tinystr.Tpo -c tinystr.cpp  -fPIC -DPIC -o .libs/tinystr.o
+[9-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I../..  -I../../src    -O2 -fno-rtti -MT coremorphanimation.lo -MD -MP -MF ".deps/coremorphanimation.Tpo" -c -o coremorphanimation.lo coremorphanimation.cpp; \
+[9-ERROR] 	then mv -f ".deps/coremorphanimation.Tpo" ".deps/coremorphanimation.Plo"; else rm -f ".deps/coremorphanimation.Tpo"; exit 1; fi
+[9-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src -O2 -fno-rtti -MT coremorphanimation.lo -MD -MP -MF .deps/coremorphanimation.Tpo -c coremorphanimation.cpp  -fPIC -DPIC -o .libs/coremorphanimation.o
+[9-ERROR] /bin/sh ../../libtool --tag=CXX --mode=link g++-40  -O2 -fno-rtti   -o libcal3d.la -rpath /usr/lib @all_libraries@ -no-undefined -version-info 11:0:0  animation.lo animation_action.lo animation_cycle.lo bone.lo buffersource.lo cal3d_wrapper.lo coreanimation.lo corebone.lo corekeyframe.lo corematerial.lo coremesh.lo coremodel.lo coreskeleton.lo coresubmesh.lo coresubmorphtarget.lo coretrack.lo error.lo global.lo hardwaremodel.lo loader.lo matrix.lo mesh.lo mixer.lo model.lo morphtargetmixer.lo physique.lo platform.lo quaternion.lo renderer.lo saver.lo skeleton.lo springsystem.lo streamsource.lo submesh.lo vector.lo tinyxml.lo tinyxmlerror.lo tinyxmlparser.lo tinystr.lo coremorphanimation.lo  
+[9-ERROR] g++-40 -shared -nostdlib /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/../../../../i386-unknown-linux-gnu/lib/crti.o /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/crtbeginS.o  .libs/animation.o .libs/animation_action.o .libs/animation_cycle.o .libs/bone.o .libs/buffersource.o .libs/cal3d_wrapper.o .libs/coreanimation.o .libs/corebone.o .libs/corekeyframe.o .libs/corematerial.o .libs/coremesh.o .libs/coremodel.o .libs/coreskeleton.o .libs/coresubmesh.o .libs/coresubmorphtarget.o .libs/coretrack.o .libs/error.o .libs/global.o .libs/hardwaremodel.o .libs/loader.o .libs/matrix.o .libs/mesh.o .libs/mixer.o .libs/model.o .libs/morphtargetmixer.o .libs/physique.o .libs/platform.o .libs/quaternion.o .libs/renderer.o .libs/saver.o .libs/skeleton.o .libs/springsystem.o .libs/streamsource.o .libs/submesh.o .libs/vector.o .libs/tinyxml.o .libs/tinyxmlerror.o .libs/tinyxmlparser.o .libs/tinystr.o .libs/coremorphanimation.o  -Wl,--rpath -Wl,/usr/lib/gcc/i386-unknown-linux-gnu/4.0.3 -Wl,--rpath -Wl,/usr/lib/gcc/i386-unknown-linux-gnu/4.0.3 -L/usr/lib/gcc/i386-unknown-linux-gnu/4.0.3 -L/usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/../../../../i386-unknown-linux-gnu/lib -L/usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/../../.. /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/libstdc++.so -L/ROCK/src.gcc40.1168716320.23937.2263911776/gcc-4.0.3/objdir/i386-unknown-linux-gnu/libstdc++-v3/src -L/ROCK/src.gcc40.1168716320.23937.2263911776/gcc-4.0.3/objdir/i386-unknown-linux-gnu/libstdc++-v3/src/.libs -L/ROCK/src.gcc40.1168716320.23937.2263911776/gcc-4.0.3/objdir/gcc -L/usr/i386-unknown-linux-gnu/bin -L/usr/i386-unknown-linux-gnu/lib -lm -lc -lgcc_s /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/crtendS.o /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/../../../../i386-unknown-linux-gnu/lib/crtn.o  @all_libraries@ -Wl,-soname -Wl,libcal3d.so.11 -o .libs/libcal3d.so.11.0.0
+[9-ERROR] g++-40: @all_libraries@: No such file or directory
+[9-ERROR] make[3]: *** [libcal3d.la] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.cal3d.1169150928.25576.3186828470/cal3d-0.10.0/src/cal3d'
+[9-ERROR] make[2]: *** [all-recursive] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.cal3d.1169150928.25576.3186828470/cal3d-0.10.0/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.cal3d.1169150928.25576.3186828470/cal3d-0.10.0'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

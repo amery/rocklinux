@@ -20,21 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142651495 Sat Mar 18 04:11:35 2006 (5)
-[TIMESTAMP] 1142920937 Tue Mar 21 07:02:17 2006 (9)
+[TIMESTAMP] 1168693015 Sat Jan 13 13:56:55 2007 (5)
+[TIMESTAMP] 1168902022 Tue Jan 16 00:00:22 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-evilwm.log 9-evilwm.log
 
-[BUILDTIME] 1450 (5)
-[BUILDTIME] 1560 (9)
-[SIZE] 0.04 MB, 9 files
+[BUILDTIME] 1483 (5)
+[BUILDTIME] 1552 (9)
+[SIZE] 0.05 MB, 9 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp openmotif:dev
-[DEP] rrdtool sed sysfiles tar xorg xorg:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev grep
+[DEP] libx11 libx11:dev libxau libxdmcp libxext linux-libc-headers:dev
+[DEP] make mktemp netpbm rrdtool sed sysfiles tar twm twoftpd ucspi-unix
+[DEP] xextproto:dev xproto:dev
 
 [PROVIDES] evilwm
 

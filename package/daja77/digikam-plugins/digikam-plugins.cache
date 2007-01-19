@@ -20,28 +20,34 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142627714 Fri Mar 17 21:35:14 2006 (5)
-[TIMESTAMP] 1142895476 Mon Mar 20 23:57:56 2006 (9)
+[TIMESTAMP] 1168678746 Sat Jan 13 09:59:06 2007 (5)
+[TIMESTAMP] 1168887234 Mon Jan 15 19:53:54 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-digikam-plugins.log 9-digikam-plugins.log
 
-[BUILDTIME] 44987 (5)
-[BUILDTIME] 45629 (9)
-[SIZE] 6.44 MB, 964 files
+[BUILDTIME] 60469 (5)
+[BUILDTIME] 60852 (9)
+[SIZE] 10.20 MB, 1337 files
 
-[DEP] 00-dirtree acl acl:dev arts attr attr:dev autoconf automake19
-[DEP] bash2 binutils bzip2 coreutils diffutils digikam digikam:dev
-[DEP] expat fam fam:dev findutils freetype freetype:dev gawk gcc34
-[DEP] gcc34:dev gdbm gdbm:dev gettext glibc23 glibc23:dev grep imlib2
-[DEP] imlib2:dev kdeaccessibility kdebase kdelibs kdelibs:dev libart_lgpl23
-[DEP] libart_lgpl23:dev libexif libexif:dev libgphoto libgphoto:dev libidn
-[DEP] libidn:dev libjpeg libjpeg:dev libkexif libkipi libpng libpng:dev
-[DEP] libtiff libtiff:dev libtool libtool:dev linux26-header:dev m4 make
-[DEP] mktemp nas net-tools perl5 qt33 qt33:dev rrdtool sed sysfiles tar
-[DEP] util-linux xorg xorg:dev zlib:dev
+[DEP] 00-dirtree acl acl:dev applewmproto applewmproto:dev attr attr:dev
+[DEP] bash2 binutils bzip2 coreutils cups cvm diffutils digikam digikam:dev
+[DEP] expat expat:dev fam fam:dev findutils fontconfig fontconfig:dev
+[DEP] freetype freetype:dev gawk gcc40 gcc40:dev gettext glibc23
+[DEP] glibc23:dev gnome-nettool grep hicolor-icon-theme imake imlib2
+[DEP] imlib2:dev kdelibs kdelibs:dev libart_lgpl23 libart_lgpl23:dev
+[DEP] libexif libexif:dev libgphoto libgphoto:dev libice libice:dev
+[DEP] libidn libidn:dev libjpeg libjpeg:dev libkexif libkipi libpng
+[DEP] libpng:dev libsm libsm:dev libtiff libtiff:dev libtool libtool:dev
+[DEP] libx11 libx11:dev libxau libxau:dev libxcursor libxcursor:dev
+[DEP] libxdmcp libxdmcp:dev libxext libxext:dev libxfixes libxfixes:dev
+[DEP] libxft libxft:dev libxinerama libxinerama:dev libxmu libxmu:dev
+[DEP] libxrandr libxrandr:dev libxrender libxrender:dev libxt libxt:dev
+[DEP] linux-libc-headers:dev make mesalib mktemp nas net-tools perl5 qt33
+[DEP] qt33:dev rrdtool sed sqlite3 sqlite3:dev sysfiles tar util-linux
+[DEP] xorg-cf-files xproto:dev zlib zlib:dev
 
 [PROVIDES] digikamimageplugin_adjustcurves.so
 [PROVIDES] digikamimageplugin_adjustlevels.so
@@ -52,11 +58,13 @@
 [PROVIDES] digikamimageplugin_distortionfx.so
 [PROVIDES] digikamimageplugin_emboss.so digikamimageplugin_filmgrain.so
 [PROVIDES] digikamimageplugin_freerotation.so
-[PROVIDES] digikamimageplugin_infrared.so digikamimageplugin_inpainting.so
+[PROVIDES] digikamimageplugin_hotpixels.so digikamimageplugin_infrared.so
+[PROVIDES] digikamimageplugin_inpainting.so
 [PROVIDES] digikamimageplugin_inserttext.so
 [PROVIDES] digikamimageplugin_lensdistortion.so
-[PROVIDES] digikamimageplugin_oilpaint.so digikamimageplugin_perspective.so
-[PROVIDES] digikamimageplugin_raindrop.so digikamimageplugin_restoration.so
+[PROVIDES] digikamimageplugin_oilpaint.so
+[PROVIDES] digikamimageplugin_perspective.so digikamimageplugin_raindrop.so
+[PROVIDES] digikamimageplugin_refocus.so digikamimageplugin_restoration.so
 [PROVIDES] digikamimageplugin_sheartool.so digikamimageplugin_solarize.so
 [PROVIDES] digikamimageplugin_superimpose.so digikamimageplugin_texture.so
 [PROVIDES] digikamimageplugin_unsharp.so digikamimageplugin_whitebalance.so

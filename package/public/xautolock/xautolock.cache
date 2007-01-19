@@ -20,21 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142481311 Thu Mar 16 04:55:11 2006 (5)
-[TIMESTAMP] 1142727254 Sun Mar 19 01:14:14 2006 (9)
+[TIMESTAMP] 1168559666 Fri Jan 12 00:54:26 2007 (5)
+[TIMESTAMP] 1168756028 Sun Jan 14 07:27:08 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-xautolock.log 9-xautolock.log
 
-[BUILDTIME] 1071 (5)
-[BUILDTIME] 1616 (9)
-[SIZE] 0.07 MB, 9 files
+[BUILDTIME] 1104 (5)
+[BUILDTIME] 1587 (9)
+[SIZE] 0.05 MB, 8 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp rrdtool
-[DEP] sed sysfiles tar xorg xorg:dev xorg:doc
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm findutils gawk gcc40 gcc40:dev gccmakedep glibc23
+[DEP] glibc23:dev grep imake libx11 libx11:dev libxau libxdmcp libxext
+[DEP] libxscrnsaver libxt linux-libc-headers:dev make mktemp rrdtool
+[DEP] scrnsaverproto:dev sed sysfiles tar xorg-cf-files xorg-docs
+[DEP] xproto:dev
 
 [PROVIDES] xautolock
 

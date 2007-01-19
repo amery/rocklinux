@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142490594 Thu Mar 16 07:29:54 2006 (5)
-[TIMESTAMP] 1142739548 Sun Mar 19 04:39:08 2006 (9)
+[TIMESTAMP] 1168567279 Fri Jan 12 03:01:19 2007 (5)
+[TIMESTAMP] 1168764836 Sun Jan 14 09:53:56 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-cpan-xml-parser.log 9-cpan-xml-parser.log
 
-[BUILDTIME] 1330 (5)
-[BUILDTIME] 1909 (9)
-[SIZE] 0.48 MB, 49 files
+[BUILDTIME] 1398 (5)
+[BUILDTIME] 2003 (9)
+[SIZE] 0.40 MB, 42 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils expat expat:dev findutils
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp perl5 rrdtool sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm expat expat:dev
+[DEP] findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev grep
+[DEP] linux-libc-headers:dev make mktemp netpbm perl5 rrdtool sed
+[DEP] sysfiles tar
 
 [PROVIDES] Expat.so
 

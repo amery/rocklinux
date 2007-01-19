@@ -20,28 +20,36 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142603831 Fri Mar 17 14:57:11 2006 (5)
-[TIMESTAMP] 1142869443 Mon Mar 20 16:44:03 2006 (9)
+[TIMESTAMP] 1168662320 Sat Jan 13 05:25:20 2007 (5)
+[TIMESTAMP] 1168869897 Mon Jan 15 15:04:57 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-kaffeine.log 9-kaffeine.log
 
-[BUILDTIME] 22569 (5)
-[BUILDTIME] 22890 (9)
-[SIZE] 3.07 MB, 85 files
+[BUILDTIME] 28119 (5)
+[BUILDTIME] 28542 (9)
+[SIZE] 4.45 MB, 116 files
 
-[DEP] 00-dirtree acl acl:dev arts attr attr:dev bash2 binutils
-[DEP] bzip2 coreutils diffutils expat fam fam:dev findutils freetype
-[DEP] freetype:dev gawk gcc34 gcc34:dev gettext glib glib:dev glibc23
-[DEP] glibc23:dev gnome2-dirtree grep gst-plugins gst-plugins:dev gstreamer
-[DEP] gstreamer:dev kdeaccessibility kdeadmin kdebase kdelibs kdelibs:dev
-[DEP] kdesdk kdeutils libart_lgpl23 libart_lgpl23:dev libidn libidn:dev
-[DEP] libjpeg libpng libpng:dev libxml2 libxml2:dev linux26-header:dev make
-[DEP] mktemp nas net-tools perl5 pkgconfig popt popt:dev qt33 qt33:dev
-[DEP] rrdtool sed sysfiles tar util-linux xine-lib xine-lib:dev xorg
-[DEP] xorg:dev zlib:dev
+[DEP] 00-dirtree acl acl:dev alsa applewmproto applewmproto:dev attr
+[DEP] attr:dev bash2 binutils bzip2 cdparanoia cdparanoia:dev coreutils
+[DEP] cups cvm diffutils expat expat:dev fam fam:dev findutils fontconfig
+[DEP] fontconfig:dev freetype freetype:dev gawk gcc40 gcc40:dev gettext
+[DEP] glibc23 glibc23:dev gnome-libs14 gnome-nettool gnome14-dirtree grep
+[DEP] hicolor-icon-theme imake kdebase kdelibs kdelibs:dev kdeutils lame
+[DEP] lame:dev libart_lgpl23 libart_lgpl23:dev libice libice:dev libidn
+[DEP] libidn:dev libjpeg libjpeg:dev libpng libpng:dev libsm libsm:dev
+[DEP] libx11 libx11:dev libxau libxau:dev libxcursor libxcursor:dev
+[DEP] libxdmcp libxdmcp:dev libxext libxext:dev libxfixes libxfixes:dev
+[DEP] libxft libxft:dev libxinerama libxinerama:dev libxmu libxmu:dev
+[DEP] libxrandr libxrandr:dev libxrender libxrender:dev libxt libxt:dev
+[DEP] linux-libc-headers:dev make mesalib mktemp nas net-tools ogg-vorbis
+[DEP] ogg-vorbis:dev patch pcre pcre:dev perl5 pkgconfig qt33 qt33:dev
+[DEP] rrdtool sed sysfiles tar util-linux xextproto:dev xine-lib
+[DEP] xine-lib:dev xineramaproto:dev xorg-cf-files xproto:dev zlib zlib:dev
 
-[PROVIDES] kaffeine libgstreamerpart.so libkaffeinepart.so libkmediapart.so
+[PROVIDES] kaffeine libkaffeineaudioencoder.so libkaffeinedvbplugin.so
+[PROVIDES] libkaffeinemp3lame.so libkaffeineoggvorbis.so libkaffeinepart.so
+[PROVIDES] libxinepart.so
 

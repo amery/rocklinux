@@ -20,23 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142556809 Fri Mar 17 01:53:29 2006 (5)
-[TIMESTAMP] 1142816197 Mon Mar 20 01:56:37 2006 (9)
+[TIMESTAMP] 1168625683 Fri Jan 12 19:14:43 2007 (5) ERROR
+[TIMESTAMP] 1168829641 Mon Jan 15 03:54:01 2007 (9) ERROR
+[TIMESTAMP] 1168947665 Tue Jan 16 12:41:05 2007 (5) ERROR
+[TIMESTAMP] 1168974654 Tue Jan 16 20:10:54 2007 (9) ERROR
+[TIMESTAMP] 1169091079 Thu Jan 18 04:31:19 2007 (5) ERROR
+[TIMESTAMP] 1169144944 Thu Jan 18 19:29:04 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-nvrec.log 9-nvrec.log
+[LOGS] 5-nvrec.err 9-nvrec.err
 
-[BUILDTIME] 2997 (5)
-[BUILDTIME] 3397 (9)
-[SIZE] 0.16 MB, 13 files
+[BUILDTIME] 2005 (5) ERROR
+[BUILDTIME] 2042 (9) ERROR
+[BUILDTIME] 2038 (5) ERROR
+[BUILDTIME] 2025 (9) ERROR
+[BUILDTIME] 2039 (5) ERROR
+[BUILDTIME] 2031 (9) ERROR
 
-[DEP] 00-dirtree autoconf automake19 avifile avifile:dev bash2
-[DEP] binutils bzip2 coreutils diffutils expat findutils freetype gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep lame lame:dev libsdl
-[DEP] linux26-header:dev m4 mad mad:dev make mktemp nas net-tools perl5
-[DEP] rrdtool rte rte:dev sed sysfiles tar util-linux xorg
 
-[PROVIDES] divxrec nuppelrec timer
+[5-ERROR] 	then mv -f ".deps/RTjpegN.Tpo" ".deps/RTjpegN.Po"; else rm -f ".deps/RTjpegN.Tpo"; exit 1; fi
+[5-ERROR] RTjpegN.c:34:2: warning: #warning Compiling MMX only code!
+[5-ERROR] RTjpegN.c: In function 'RTjpeg_b2s':
+[5-ERROR] RTjpegN.c:165: error: invalid lvalue in assignment
+[5-ERROR] RTjpegN.c:174: error: invalid lvalue in assignment
+[5-ERROR] RTjpegN.c:203: error: invalid lvalue in assignment
+[5-ERROR] RTjpegN.c:215: error: invalid lvalue in assignment
+[5-ERROR] RTjpegN.c:232: error: invalid lvalue in assignment
+[5-ERROR] RTjpegN.c:253: error: invalid lvalue in assignment
+[5-ERROR] RTjpegN.c:263: error: invalid lvalue in assignment
+[5-ERROR] RTjpegN.c:270: error: invalid lvalue in assignment
+[5-ERROR] RTjpegN.c: In function 'RTjpeg_compressYUV420':
+[5-ERROR] RTjpegN.c:2864: warning: pointer targets in initialization differ in signedness
+[5-ERROR] RTjpegN.c:2865: warning: pointer targets in initialization differ in signedness
+[5-ERROR] RTjpegN.c:2886: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
+[5-ERROR] RTjpegN.c:2890: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
+[5-ERROR] RTjpegN.c:2894: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
+[5-ERROR] RTjpegN.c:2898: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
+[5-ERROR] RTjpegN.c: In function 'RTjpeg_compressYUV422':
+[5-ERROR] RTjpegN.c:2918: warning: pointer targets in initialization differ in signedness
+[5-ERROR] RTjpegN.c:2939: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
+[5-ERROR] RTjpegN.c:2943: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
+[5-ERROR] RTjpegN.c: In function 'RTjpeg_decompressYUV422':
+[5-ERROR] RTjpegN.c:2989: warning: pointer targets in initialization differ in signedness
+[5-ERROR] RTjpegN.c:3017: warning: pointer targets in passing argument 1 of 'RTjpeg_idct' differ in signedness
+[5-ERROR] RTjpegN.c:3023: warning: pointer targets in passing argument 1 of 'RTjpeg_idct' differ in signedness
+[5-ERROR] RTjpegN.c: In function 'RTjpeg_decompressYUV420':
+[5-ERROR] RTjpegN.c:3037: warning: pointer targets in initialization differ in signedness
+[5-ERROR] RTjpegN.c:3038: warning: pointer targets in initialization differ in signedness
+[5-ERROR] RTjpegN.c:3066: warning: pointer targets in passing argument 1 of 'RTjpeg_idct' differ in signedness
+[5-ERROR] RTjpegN.c:3072: warning: pointer targets in passing argument 1 of 'RTjpeg_idct' differ in signedness
+[5-ERROR] RTjpegN.c:3078: warning: pointer targets in passing argument 1 of 'RTjpeg_idct' differ in signedness
+[5-ERROR] RTjpegN.c:3084: warning: pointer targets in passing argument 1 of 'RTjpeg_idct' differ in signedness
+[5-ERROR] RTjpegN.c: In function 'RTjpeg_mcompressYUV420':
+[5-ERROR] RTjpegN.c:3218: warning: pointer targets in initialization differ in signedness
+[5-ERROR] RTjpegN.c:3219: warning: pointer targets in initialization differ in signedness
+[5-ERROR] RTjpegN.c:3257: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
+[5-ERROR] RTjpegN.c:3266: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
+[5-ERROR] RTjpegN.c:3275: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
+[5-ERROR] RTjpegN.c:3284: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
+[5-ERROR] RTjpegN.c: In function 'RTjpeg_mcompressYUV422':
+[5-ERROR] RTjpegN.c:3324: warning: pointer targets in assignment differ in signedness
+[5-ERROR] RTjpegN.c:3352: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
+[5-ERROR] RTjpegN.c:3361: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
+[5-ERROR] make[2]: *** [RTjpegN.o] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.nvrec.1169091057.20398.905555977/nvrec-20030316/nuv'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.nvrec.1169091057.20398.905555977/nvrec-20030316'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] 	then mv -f ".deps/RTjpegN.Tpo" ".deps/RTjpegN.Po"; else rm -f ".deps/RTjpegN.Tpo"; exit 1; fi
+[9-ERROR] RTjpegN.c:34:2: warning: #warning Compiling MMX only code!
+[9-ERROR] RTjpegN.c: In function 'RTjpeg_b2s':
+[9-ERROR] RTjpegN.c:165: error: invalid lvalue in assignment
+[9-ERROR] RTjpegN.c:174: error: invalid lvalue in assignment
+[9-ERROR] RTjpegN.c:203: error: invalid lvalue in assignment
+[9-ERROR] RTjpegN.c:215: error: invalid lvalue in assignment
+[9-ERROR] RTjpegN.c:232: error: invalid lvalue in assignment
+[9-ERROR] RTjpegN.c:253: error: invalid lvalue in assignment
+[9-ERROR] RTjpegN.c:263: error: invalid lvalue in assignment
+[9-ERROR] RTjpegN.c:270: error: invalid lvalue in assignment
+[9-ERROR] RTjpegN.c: In function 'RTjpeg_compressYUV420':
+[9-ERROR] RTjpegN.c:2864: warning: pointer targets in initialization differ in signedness
+[9-ERROR] RTjpegN.c:2865: warning: pointer targets in initialization differ in signedness
+[9-ERROR] RTjpegN.c:2886: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
+[9-ERROR] RTjpegN.c:2890: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
+[9-ERROR] RTjpegN.c:2894: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
+[9-ERROR] RTjpegN.c:2898: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
+[9-ERROR] RTjpegN.c: In function 'RTjpeg_compressYUV422':
+[9-ERROR] RTjpegN.c:2918: warning: pointer targets in initialization differ in signedness
+[9-ERROR] RTjpegN.c:2939: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
+[9-ERROR] RTjpegN.c:2943: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
+[9-ERROR] RTjpegN.c: In function 'RTjpeg_decompressYUV422':
+[9-ERROR] RTjpegN.c:2989: warning: pointer targets in initialization differ in signedness
+[9-ERROR] RTjpegN.c:3017: warning: pointer targets in passing argument 1 of 'RTjpeg_idct' differ in signedness
+[9-ERROR] RTjpegN.c:3023: warning: pointer targets in passing argument 1 of 'RTjpeg_idct' differ in signedness
+[9-ERROR] RTjpegN.c: In function 'RTjpeg_decompressYUV420':
+[9-ERROR] RTjpegN.c:3037: warning: pointer targets in initialization differ in signedness
+[9-ERROR] RTjpegN.c:3038: warning: pointer targets in initialization differ in signedness
+[9-ERROR] RTjpegN.c:3066: warning: pointer targets in passing argument 1 of 'RTjpeg_idct' differ in signedness
+[9-ERROR] RTjpegN.c:3072: warning: pointer targets in passing argument 1 of 'RTjpeg_idct' differ in signedness
+[9-ERROR] RTjpegN.c:3078: warning: pointer targets in passing argument 1 of 'RTjpeg_idct' differ in signedness
+[9-ERROR] RTjpegN.c:3084: warning: pointer targets in passing argument 1 of 'RTjpeg_idct' differ in signedness
+[9-ERROR] RTjpegN.c: In function 'RTjpeg_mcompressYUV420':
+[9-ERROR] RTjpegN.c:3218: warning: pointer targets in initialization differ in signedness
+[9-ERROR] RTjpegN.c:3219: warning: pointer targets in initialization differ in signedness
+[9-ERROR] RTjpegN.c:3257: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
+[9-ERROR] RTjpegN.c:3266: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
+[9-ERROR] RTjpegN.c:3275: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
+[9-ERROR] RTjpegN.c:3284: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
+[9-ERROR] RTjpegN.c: In function 'RTjpeg_mcompressYUV422':
+[9-ERROR] RTjpegN.c:3324: warning: pointer targets in assignment differ in signedness
+[9-ERROR] RTjpegN.c:3352: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
+[9-ERROR] RTjpegN.c:3361: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
+[9-ERROR] make[2]: *** [RTjpegN.o] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.nvrec.1169144921.12668.2090540225/nvrec-20030316/nuv'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.nvrec.1169144921.12668.2090540225/nvrec-20030316'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142605055 Fri Mar 17 15:17:35 2006 (5)
-[TIMESTAMP] 1142870377 Mon Mar 20 16:59:37 2006 (9)
+[TIMESTAMP] 1168662653 Sat Jan 13 05:30:53 2007 (5)
+[TIMESTAMP] 1168870255 Mon Jan 15 15:10:55 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-mpc.log 9-mpc.log
 
-[BUILDTIME] 1854 (5)
-[BUILDTIME] 2106 (9)
+[BUILDTIME] 1880 (5)
+[BUILDTIME] 2111 (9)
 [SIZE] 0.06 MB, 10 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] net-tools quilt rrdtool sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
+[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev
+[DEP] make mktemp net-tools netpbm quilt rrdtool sed sysfiles tar twoftpd
+[DEP] ucspi-unix util-linux
 
 [PROVIDES] mpc
 

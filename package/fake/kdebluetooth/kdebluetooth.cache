@@ -20,27 +20,34 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142605818 Fri Mar 17 15:30:18 2006 (5)
-[TIMESTAMP] 1142871171 Mon Mar 20 17:12:51 2006 (9)
+[TIMESTAMP] 1168663186 Sat Jan 13 05:39:46 2007 (5)
+[TIMESTAMP] 1168870911 Mon Jan 15 15:21:51 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-kdebluetooth.log 9-kdebluetooth.log
 
-[BUILDTIME] 39598 (5)
-[BUILDTIME] 40025 (9)
-[SIZE] 4.73 MB, 135 files
+[BUILDTIME] 36127 (5)
+[BUILDTIME] 36578 (9)
+[SIZE] 3.55 MB, 134 files
 
-[DEP] 00-dirtree acl acl:dev arts attr attr:dev bash2 binutils bluez-libs
-[DEP] bluez-libs:dev bzip2 coreutils diffutils expat fam fam:dev findutils
-[DEP] freetype freetype:dev gawk gcc34 gcc34:dev gettext glib12 glib12:dev
-[DEP] glibc23 glibc23:dev gnome14-dirtree grep gtk+12 gtk+12:dev kdebase
-[DEP] kdelibs kdelibs:dev kdepim kdepim:dev kdeutils libart_lgpl23
-[DEP] libart_lgpl23:dev libidn libidn:dev libjpeg libpng libpng:dev
-[DEP] libxml2 linux26-header:dev make mktemp mpeg4ip mpeg4ip:dev nas
-[DEP] net-tools openobex openobex:dev perl5 qt33 qt33:dev rrdtool sed
-[DEP] sysfiles tar util-linux xmms xmms:dev xorg xorg:dev zlib:dev
+[DEP] 00-dirtree acl acl:dev alsa applewmproto applewmproto:dev attr
+[DEP] attr:dev autoconf automake19 bash2 binutils bluez-libs bluez-libs:dev
+[DEP] bzip2 coreutils cups cvm diffutils expat expat:dev fam fam:dev
+[DEP] findutils fontconfig fontconfig:dev freetype freetype:dev gawk
+[DEP] gcc40 gcc40:dev gettext glib12 glib12:dev glibc23 glibc23:dev
+[DEP] gnome14-dirtree grep gtk+12 gtk+12:dev hicolor-icon-theme imake
+[DEP] kdebase kdelibs kdelibs:dev kdepim kdepim:dev kdeutils libart_lgpl23
+[DEP] libart_lgpl23:dev libice libice:dev libidn libidn:dev libjpeg libpng
+[DEP] libpng:dev libsm libsm:dev libx11 libx11:dev libxau libxau:dev
+[DEP] libxcursor libxcursor:dev libxdmcp libxdmcp:dev libxext libxext:dev
+[DEP] libxfixes libxfixes:dev libxft libxft:dev libxi libxi:dev libxinerama
+[DEP] libxinerama:dev libxml2 libxmu libxmu:dev libxrandr libxrandr:dev
+[DEP] libxrender libxrender:dev libxt libxt:dev linux-libc-headers:dev
+[DEP] m4 make mesalib mktemp mpeg4ip mpeg4ip:dev nas net-tools openobex
+[DEP] openobex:dev patch perl5 qt33 qt33:dev rrdtool sed sysfiles tar
+[DEP] util-linux xmms xmms:dev xorg-cf-files xproto:dev zlib zlib:dev
 
 [PROVIDES] kbluetoothd kbtobexclient kbtsearch kbtserialchat
 [PROVIDES] kcm_btpaired.so kcm_kbluetoothd.so kcm_obex.so khciconfig

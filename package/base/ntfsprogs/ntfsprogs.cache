@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142643834 Sat Mar 18 02:03:54 2006 (5)
-[TIMESTAMP] 1142912478 Tue Mar 21 04:41:18 2006 (9)
+[TIMESTAMP] 1168688958 Sat Jan 13 12:49:18 2007 (5)
+[TIMESTAMP] 1168897798 Mon Jan 15 22:49:58 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-ntfsprogs.log 9-ntfsprogs.log
 
-[BUILDTIME] 6627 (5)
-[BUILDTIME] 6813 (9)
-[SIZE] 0.55 MB, 39 files
+[BUILDTIME] 7180 (5)
+[BUILDTIME] 7356 (9)
+[SIZE] 0.70 MB, 39 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils fuse
-[DEP] fuse:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev gnome-libs14
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
+[DEP] fuse fuse:dev gawk gcc40 gcc40:dev glibc23 glibc23:dev gnome-libs14
 [DEP] gnome14-dirtree gnutls:dev grep libgcrypt:dev libgpg-error:dev
-[DEP] linux26-header:dev make mktemp net-tools pkgconfig rrdtool sed
+[DEP] linux-libc-headers:dev make mktemp net-tools pkgconfig rrdtool sed
 [DEP] sysfiles tar util-linux
 
 [PROVIDES] libntfs.a libntfs.so mkfs.ntfs mkntfs mount.ntfs-fuse ntfscat

@@ -20,27 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142658904 Sat Mar 18 06:15:04 2006 (5)
-[TIMESTAMP] 1142928923 Tue Mar 21 09:15:23 2006 (9)
+[TIMESTAMP] 1168697187 Sat Jan 13 15:06:27 2007 (5) ERROR
+[TIMESTAMP] 1168906504 Tue Jan 16 01:15:04 2007 (9) ERROR
+[TIMESTAMP] 1168954223 Tue Jan 16 14:30:23 2007 (5) ERROR
+[TIMESTAMP] 1168983953 Tue Jan 16 22:45:53 2007 (9) ERROR
+[TIMESTAMP] 1169124555 Thu Jan 18 13:49:15 2007 (5) ERROR
+[TIMESTAMP] 1169154146 Thu Jan 18 22:02:26 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-texmacs.log 9-texmacs.log
+[LOGS] 5-texmacs.err 9-texmacs.err
 
-[BUILDTIME] 36829 (5)
-[BUILDTIME] 37174 (9)
-[SIZE] 12.60 MB, 2002 files
+[BUILDTIME] 1668 (5) ERROR
+[BUILDTIME] 1702 (9) ERROR
+[BUILDTIME] 1698 (5) ERROR
+[BUILDTIME] 1689 (9) ERROR
+[BUILDTIME] 1694 (5) ERROR
+[BUILDTIME] 1686 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] freetype freetype:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev
-[DEP] grep guile guile:dev gzip libtool libtool:dev linux26-header:dev
-[DEP] make mktemp net-tools rrdtool sed sysfiles tar util-linux xorg
-[DEP] xorg:dev zlib:dev
 
-[PROVIDES] fig2ps maple_filter maple_in_filter maxima_detect maxima_filter
-[PROVIDES] reduce_filter reduce_setup texmacs texmacs.bin tm_axiom
-[PROVIDES] tm_eukleides tm_gnuplot tm_graphviz tm_gs tm_lisp tm_lush
-[PROVIDES] tm_maple tm_matlab tm_maxima tm_mupad tm_mupad_help tm_octave
-[PROVIDES] tm_python tm_r tm_reduce tm_shell
+[5-ERROR] checking for strings.h... yes
+[5-ERROR] checking for inttypes.h... yes
+[5-ERROR] checking for stdint.h... yes
+[5-ERROR] checking for unistd.h... yes
+[5-ERROR] checking iconv.h usability... yes
+[5-ERROR] checking iconv.h presence... yes
+[5-ERROR] checking for iconv.h... yes
+[5-ERROR] checking for iconv... yes
+[5-ERROR] checking ft2build.h usability... yes
+[5-ERROR] checking ft2build.h presence... yes
+[5-ERROR] checking for ft2build.h... yes
+[5-ERROR] checking for freetype... yes
+[5-ERROR] checking for gettimeofday... yes
+[5-ERROR] checking whether ... arguments behave correctly... no
+[5-ERROR] checking the size_t of guile strings... size_t
+[5-ERROR] checking if compiler supports -fno-rtti -fno-exceptions... yes
+[5-ERROR] checking if statically linking with guile works... "no"
+[5-ERROR] checking if it works with -lltdl... "no"
+[5-ERROR] checking if it works with -lltdl -ldl... "yes"
+[5-ERROR] checking build system type... i386-unknown-linux-gnu
+[5-ERROR] checking host system type... i386-unknown-linux-gnu
+[5-ERROR] final setup for an Intel/GNU-linux host
+[5-ERROR] disabling debugging
+[5-ERROR] enabling optimizations, -O3 -fexpensive-optimizations
+[5-ERROR] configure: creating ./config.status
+[5-ERROR] config.status: creating Makefile
+[5-ERROR] config.status: creating src/common.makefile
+[5-ERROR] config.status: creating src/System/tm_configure.hpp
+[5-ERROR] config.status: creating misc/admin/admin.makefile
+[5-ERROR] config.status: creating misc/doxygen/Doxyfile
+[5-ERROR] config.status: creating misc/man/texmacs.1
+[5-ERROR] config.status: creating misc/rpm/TeXmacs.spec
+[5-ERROR] config.status: creating misc/scripts/fig2ps
+[5-ERROR] config.status: creating misc/scripts/texmacs
+[5-ERROR] config.status: creating TeXmacs/examples/plugins/dynlink/Makefile
+[5-ERROR] mkdir -p src/Deps
+[5-ERROR] mkdir -p src/Objects
+[5-ERROR] mkdir -p TeXmacs/bin
+[5-ERROR] mkdir -p TeXmacs/lib
+[5-ERROR] cd src; make -f makefile link=shared
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.texmacs.1169124537.23156.3641098646/TeXmacs-1.0.3.11-src/src'
+[5-ERROR] g++-40 -I./System -I./System/Boot -I./System/Classes -I./System/Files -I./System/Link -I./System/Misc -I./Classes/Abstract -I./Classes/Atomic -I./Classes/Compound -I./Data/Drd -I./Data/String -I./Data/Tree -I./Data/Convert -I./Guile -I./Resource -I/ROCK/src.texmacs.1169124537.23156.3641098646/TeXmacs-1.0.3.11-src/TeXmacs/include -I/usr/include/freetype2 -Wall -Wno-return-type -O3 -fexpensive-optimizations -fno-rtti -fno-exceptions -c ./Data/String/analyze.cpp -o Objects/analyze.o 
+[5-ERROR] ./Classes/Atomic/string.hpp:29: error: 'string' has not been declared
+[5-ERROR] ./Classes/Atomic/string.hpp: In function 'int N(string)':
+[5-ERROR] ./Classes/Atomic/string.hpp:19: error: 'int string_rep::n' is private
+[5-ERROR] ./Classes/Atomic/string.hpp:48: error: within this context
+[5-ERROR] make[1]: *** [Objects/analyze.o] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.texmacs.1169124537.23156.3641098646/TeXmacs-1.0.3.11-src/src'
+[5-ERROR] make: *** [TEXMACS] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] checking for strings.h... yes
+[9-ERROR] checking for inttypes.h... yes
+[9-ERROR] checking for stdint.h... yes
+[9-ERROR] checking for unistd.h... yes
+[9-ERROR] checking iconv.h usability... yes
+[9-ERROR] checking iconv.h presence... yes
+[9-ERROR] checking for iconv.h... yes
+[9-ERROR] checking for iconv... yes
+[9-ERROR] checking ft2build.h usability... yes
+[9-ERROR] checking ft2build.h presence... yes
+[9-ERROR] checking for ft2build.h... yes
+[9-ERROR] checking for freetype... yes
+[9-ERROR] checking for gettimeofday... yes
+[9-ERROR] checking whether ... arguments behave correctly... no
+[9-ERROR] checking the size_t of guile strings... size_t
+[9-ERROR] checking if compiler supports -fno-rtti -fno-exceptions... yes
+[9-ERROR] checking if statically linking with guile works... "no"
+[9-ERROR] checking if it works with -lltdl... "no"
+[9-ERROR] checking if it works with -lltdl -ldl... "yes"
+[9-ERROR] checking build system type... i386-unknown-linux-gnu
+[9-ERROR] checking host system type... i386-unknown-linux-gnu
+[9-ERROR] final setup for an Intel/GNU-linux host
+[9-ERROR] disabling debugging
+[9-ERROR] enabling optimizations, -O3 -fexpensive-optimizations
+[9-ERROR] configure: creating ./config.status
+[9-ERROR] config.status: creating Makefile
+[9-ERROR] config.status: creating src/common.makefile
+[9-ERROR] config.status: creating src/System/tm_configure.hpp
+[9-ERROR] config.status: creating misc/admin/admin.makefile
+[9-ERROR] config.status: creating misc/doxygen/Doxyfile
+[9-ERROR] config.status: creating misc/man/texmacs.1
+[9-ERROR] config.status: creating misc/rpm/TeXmacs.spec
+[9-ERROR] config.status: creating misc/scripts/fig2ps
+[9-ERROR] config.status: creating misc/scripts/texmacs
+[9-ERROR] config.status: creating TeXmacs/examples/plugins/dynlink/Makefile
+[9-ERROR] mkdir -p src/Deps
+[9-ERROR] mkdir -p src/Objects
+[9-ERROR] mkdir -p TeXmacs/bin
+[9-ERROR] mkdir -p TeXmacs/lib
+[9-ERROR] cd src; make -f makefile link=shared
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.texmacs.1169154128.13664.3951810427/TeXmacs-1.0.3.11-src/src'
+[9-ERROR] g++-40 -I./System -I./System/Boot -I./System/Classes -I./System/Files -I./System/Link -I./System/Misc -I./Classes/Abstract -I./Classes/Atomic -I./Classes/Compound -I./Data/Drd -I./Data/String -I./Data/Tree -I./Data/Convert -I./Guile -I./Resource -I/ROCK/src.texmacs.1169154128.13664.3951810427/TeXmacs-1.0.3.11-src/TeXmacs/include -I/usr/include/freetype2 -Wall -Wno-return-type -O3 -fexpensive-optimizations -fno-rtti -fno-exceptions -c ./Data/String/analyze.cpp -o Objects/analyze.o 
+[9-ERROR] ./Classes/Atomic/string.hpp:29: error: 'string' has not been declared
+[9-ERROR] ./Classes/Atomic/string.hpp: In function 'int N(string)':
+[9-ERROR] ./Classes/Atomic/string.hpp:19: error: 'int string_rep::n' is private
+[9-ERROR] ./Classes/Atomic/string.hpp:48: error: within this context
+[9-ERROR] make[1]: *** [Objects/analyze.o] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.texmacs.1169154128.13664.3951810427/TeXmacs-1.0.3.11-src/src'
+[9-ERROR] make: *** [TEXMACS] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

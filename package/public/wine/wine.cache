@@ -20,87 +20,99 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142563760 Fri Mar 17 03:49:20 2006 (5)
-[TIMESTAMP] 1142823996 Mon Mar 20 04:06:36 2006 (9)
+[TIMESTAMP] 1168630424 Fri Jan 12 20:33:44 2007 (5)
+[TIMESTAMP] 1168834794 Mon Jan 15 05:19:54 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-wine.log 9-wine.log
 
-[BUILDTIME] 93200 (5)
-[BUILDTIME] 94444 (9)
-[SIZE] 32.46 MB, 425 files
+[BUILDTIME] 122724 (5)
+[BUILDTIME] 125133 (9)
+[SIZE] 37.45 MB, 497 files
 
-[DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev
-[DEP] bash2 binutils bison bzip2 coreutils cups cups:dev diffutils
-[DEP] esound esound:dev findutils flex flex:dev freetype freetype:dev
-[DEP] gawk gcc34 gcc34:dev glib glibc23 glibc23:dev glut gnome2-dirtree
-[DEP] grep isdn4k-utils isdn4k-utils:dev jack:dev lcms lcms:dev libexif
-[DEP] libgphoto libicu:dev libjpeg libjpeg:dev libtool libungif
-[DEP] libungif:dev libusb libxml2 libxml2:dev libxslt libxslt:dev
-[DEP] linux26-header:dev m4 make mktemp nas nas:dev ncurses:dev net-tools
-[DEP] openssl openssl:dev pkgconfig prelink rrdtool sane-backends
-[DEP] sane-backends:dev sed sysfiles tar util-linux valgrind:dev xorg
-[DEP] xorg:dev zlib:dev
+[DEP] 00-dirtree alsa alsa:dev applewmproto applewmproto:dev arts arts:dev
+[DEP] audiofile audiofile:dev bash2 binutils bison bzip2 coreutils
+[DEP] cups cups:dev cvm dbus dbus:dev diffutils esound esound:dev expat
+[DEP] findutils flex flex:dev fontconfig fontconfig:dev fontforge freetype
+[DEP] freetype:dev gawk gcc40 gcc40:dev git glib glibc23 glibc23:dev
+[DEP] glut gnome2-dirtree gnutls grep hal hal:dev imake inputproto:dev
+[DEP] isdn4k-utils isdn4k-utils:dev kbproto:dev lcms lcms:dev libexif
+[DEP] libgcrypt libgpg-error libgphoto libgphoto:dev libice libicu:dev
+[DEP] libjpeg libjpeg:dev libsm libtool libusb libx11 libx11:dev
+[DEP] libxau libxdmcp libxext libxi libxinerama libxml2 libxml2:dev
+[DEP] libxmu libxrandr libxrandr:dev libxrender libxrender:dev libxslt
+[DEP] libxslt:dev libxt libxxf86vm linux-libc-headers:dev m4 make mesalib
+[DEP] mesalib:dev mktemp nas nas:dev ncurses ncurses:dev net-tools netpbm
+[DEP] openssl openssl:dev pkgconfig prelink randrproto:dev renderproto:dev
+[DEP] rrdtool sane-backends sane-backends:dev sed sysfiles tar twoftpd
+[DEP] ucspi-unix util-linux valgrind:dev xextproto:dev xf86vidmodeproto:dev
+[DEP] xineramaproto:dev xorg-cf-files xproto:dev zlib
 
 [PROVIDES] activeds.dll.so advapi32.dll.so advpack.dll.so amstream.dll.so
-[PROVIDES] atl.dll.so avicap32.dll.so avifil32.dll.so aviinfo.exe.so
-[PROVIDES] aviplay.exe.so cabinet.dll.so capi2032.dll.so cards.dll.so
-[PROVIDES] cfgmgr32.dll.so clock.exe.so comcat.dll.so comctl32.dll.so
-[PROVIDES] comdlg32.dll.so control.exe.so crtdll.dll.so crypt32.dll.so
-[PROVIDES] cryptdll.dll.so ctl3d32.dll.so d3d8.dll.so d3d9.dll.so
-[PROVIDES] d3dim.dll.so d3drm.dll.so d3dx8.dll.so d3dxof.dll.so
-[PROVIDES] dbghelp.dll.so dciman32.dll.so ddraw.dll.so devenum.dll.so
-[PROVIDES] dinput.dll.so dinput8.dll.so dmband.dll.so dmcompos.dll.so
-[PROVIDES] dmime.dll.so dmloader.dll.so dmscript.dll.so dmstyle.dll.so
-[PROVIDES] dmsynth.dll.so dmusic.dll.so dmusic32.dll.so dplay.dll.so
-[PROVIDES] dplayx.dll.so dpnet.dll.so dpnhpast.dll.so dsound.dll.so
-[PROVIDES] dswave.dll.so dxdiagn.dll.so eject.exe.so expand.exe.so
-[PROVIDES] explorer.exe.so function_grep.pl gdi32.dll.so glu32.dll.so
-[PROVIDES] glut32.dll.so hh.exe.so hhctrl.ocx.so iccvid.dll.so
-[PROVIDES] icinfo.exe.so icmp.dll.so ifsmgr.vxd.so imaadp32.acm.so
-[PROVIDES] imagehlp.dll.so imm32.dll.so iphlpapi.dll.so itss.dll.so
-[PROVIDES] joystick.drv.so kernel32.dll.so libdinput.def.a libdxerr8.a
-[PROVIDES] libdxerr9.a libdxguid.a libstrmiids.a libuuid.a libwine.so
-[PROVIDES] libwine_unicode.so libwinecrt0.a lz32.dll.so mapi32.dll.so
-[PROVIDES] mciavi32.dll.so mcicda.dll.so mciseq.dll.so mciwave.drv.so
-[PROVIDES] midimap.dll.so mlang.dll.so mmdevldr.vxd.so monodebg.vxd.so
-[PROVIDES] mpr.dll.so msacm.drv.so msacm32.dll.so msadp32.acm.so
-[PROVIDES] mscms.dll.so msdmo.dll.so msftedit.dll.so msg711.acm.so
-[PROVIDES] mshtml.dll.so msi.dll.so msiexec msiexec.exe.so msimg32.dll.so
-[PROVIDES] msisys.ocx.so msnet32.dll.so msrle32.dll.so msvcrt.dll.so
-[PROVIDES] msvcrt20.dll.so msvcrt40.dll.so msvcrtd.dll.so msvfw32.dll.so
-[PROVIDES] msvidc32.dll.so mswsock.dll.so msxml3.dll.so netapi32.dll.so
-[PROVIDES] newdev.dll.so notepad notepad.exe.so ntdll.dll.so
-[PROVIDES] objsel.dll.so odbc32.dll.so odbccp32.dll.so ole32.dll.so
-[PROVIDES] oleacc.dll.so oleaut32.dll.so olecli32.dll.so oledlg.dll.so
-[PROVIDES] olepro32.dll.so olesvr32.dll.so opengl32.dll.so powrprof.dll.so
-[PROVIDES] progman progman.exe.so psapi.dll.so qcap.dll.so quartz.dll.so
-[PROVIDES] rasapi32.dll.so regedit regedit.exe.so regsvr32 regsvr32.exe.so
+[PROVIDES] atl.dll.so avicap32.dll.so avifil32.dll.so cabinet.dll.so
+[PROVIDES] capi2032.dll.so cards.dll.so cfgmgr32.dll.so clock.exe.so
+[PROVIDES] clusapi.dll.so cmd.exe.so comcat.dll.so comctl32.dll.so
+[PROVIDES] comdlg32.dll.so compstui.dll.so control.exe.so crtdll.dll.so
+[PROVIDES] crypt32.dll.so cryptdll.dll.so cryptnet.dll.so ctl3d32.dll.so
+[PROVIDES] d3d8.dll.so d3d9.dll.so d3dim.dll.so d3drm.dll.so d3dx8.dll.so
+[PROVIDES] d3dxof.dll.so dbghelp.dll.so dciman32.dll.so ddraw.dll.so
+[PROVIDES] devenum.dll.so dinput.dll.so dinput8.dll.so dmband.dll.so
+[PROVIDES] dmcompos.dll.so dmime.dll.so dmloader.dll.so dmscript.dll.so
+[PROVIDES] dmstyle.dll.so dmsynth.dll.so dmusic.dll.so dmusic32.dll.so
+[PROVIDES] dnsapi.dll.so dplay.dll.so dplayx.dll.so dpnet.dll.so
+[PROVIDES] dpnhpast.dll.so dsound.dll.so dswave.dll.so dxdiagn.dll.so
+[PROVIDES] eject.exe.so expand.exe.so explorer.exe.so function_grep.pl
+[PROVIDES] gdi32.dll.so glu32.dll.so glut32.dll.so gphoto2.ds.so
+[PROVIDES] hh.exe.so hhctrl.ocx.so hid.dll.so hlink.dll.so iccvid.dll.so
+[PROVIDES] icinfo.exe.so icmp.dll.so iexplore.exe.so ifsmgr.vxd.so
+[PROVIDES] imaadp32.acm.so imagehlp.dll.so imm32.dll.so infosoft.dll.so
+[PROVIDES] inseng.dll.so iphlpapi.dll.so itss.dll.so joystick.drv.so
+[PROVIDES] kernel32.dll.so libdinput.def.a libdxerr8.a libdxerr9.a
+[PROVIDES] libdxguid.a libstrmiids.a libuuid.a libwine.so libwinecrt0.a
+[PROVIDES] localspl.dll.so lz32.dll.so mapi32.dll.so mciavi32.dll.so
+[PROVIDES] mcicda.dll.so mciseq.dll.so mciwave.dll.so midimap.dll.so
+[PROVIDES] mlang.dll.so mmdevldr.vxd.so monodebg.vxd.so mpr.dll.so
+[PROVIDES] mprapi.dll.so msacm32.dll.so msacm32.drv.so msadp32.acm.so
+[PROVIDES] mscms.dll.so mscoree.dll.so msdmo.dll.so msftedit.dll.so
+[PROVIDES] msg711.acm.so mshtml.dll.so msi.dll.so msiexec msiexec.exe.so
+[PROVIDES] msimg32.dll.so msisys.ocx.so msnet32.dll.so msrle32.dll.so
+[PROVIDES] msvcrt.dll.so msvcrt20.dll.so msvcrt40.dll.so msvcrtd.dll.so
+[PROVIDES] msvfw32.dll.so msvidc32.dll.so mswsock.dll.so msxml3.dll.so
+[PROVIDES] nddeapi.dll.so netapi32.dll.so newdev.dll.so notepad
+[PROVIDES] notepad.exe.so ntdll.dll.so ntdsapi.dll.so objsel.dll.so
+[PROVIDES] odbc32.dll.so odbccp32.dll.so ole32.dll.so oleacc.dll.so
+[PROVIDES] oleaut32.dll.so olecli32.dll.so oledlg.dll.so olepro32.dll.so
+[PROVIDES] olesvr32.dll.so oleview.exe.so opengl32.dll.so powrprof.dll.so
+[PROVIDES] progman progman.exe.so psapi.dll.so pstorec.dll.so qcap.dll.so
+[PROVIDES] quartz.dll.so query.dll.so rasapi32.dll.so regedit
+[PROVIDES] regedit.exe.so regsvr32 regsvr32.exe.so resutils.dll.so
 [PROVIDES] riched20.dll.so riched32.dll.so rpcrt4.dll.so rpcss.exe.so
-[PROVIDES] rsabase.dll.so rsaenh.dll.so rundll32.exe.so secur32.dll.so
-[PROVIDES] security.dll.so sensapi.dll.so serialui.dll.so setupapi.dll.so
-[PROVIDES] sfc.dll.so shdocvw.dll.so shell32.dll.so shfolder.dll.so
-[PROVIDES] shlwapi.dll.so snmpapi.dll.so start.exe.so stdole2.tlb.so
-[PROVIDES] stdole32.tlb.so sti.dll.so tapi32.dll.so taskmgr.exe.so
+[PROVIDES] rsabase.dll.so rsaenh.dll.so rundll32.exe.so sane.ds.so
+[PROVIDES] secur32.dll.so security.dll.so sensapi.dll.so serialui.dll.so
+[PROVIDES] setupapi.dll.so sfc.dll.so shdoclc.dll.so shdocvw.dll.so
+[PROVIDES] shell32.dll.so shfolder.dll.so shlwapi.dll.so snmpapi.dll.so
+[PROVIDES] spoolss.dll.so start.exe.so stdole2.tlb.so stdole32.tlb.so
+[PROVIDES] sti.dll.so svrapi.dll.so tapi32.dll.so taskmgr.exe.so
 [PROVIDES] twain_32.dll.so unicows.dll.so uninstaller uninstaller.exe.so
-[PROVIDES] url.dll.so urlmon.dll.so user32.dll.so usp10.dll.so
-[PROVIDES] uxtheme.dll.so vdhcp.vxd.so vdmdbg.dll.so version.dll.so
-[PROVIDES] vmm.vxd.so vnbt.vxd.so vnetbios.vxd.so vtdapi.vxd.so
-[PROVIDES] vwin32.vxd.so w32skrnl.dll.so wcmd wcmd.exe.so widl wine
+[PROVIDES] url.dll.so urlmon.dll.so user32.dll.so userenv.dll.so
+[PROVIDES] usp10.dll.so uxtheme.dll.so vdhcp.vxd.so vdmdbg.dll.so
+[PROVIDES] version.dll.so vmm.vxd.so vnbt.vxd.so vnetbios.vxd.so
+[PROVIDES] vtdapi.vxd.so vwin32.vxd.so w32skrnl.dll.so widl wine
 [PROVIDES] wine-kthread wine-preloader wine-pthread winealsa.drv.so
 [PROVIDES] winearts.drv.so wineaudioio.drv.so wineboot wineboot.exe.so
 [PROVIDES] winebrowser winebrowser.exe.so winebuild winecfg winecfg.exe.so
-[PROVIDES] wineconsole wineconsole.exe.so winecpp wined3d.dll.so winedbg
-[PROVIDES] winedbg.exe.so winedos.dll.so winedump wineesd.drv.so
-[PROVIDES] winefile winefile.exe.so wineg++ winegcc winejack.drv.so
-[PROVIDES] winelauncher winemaker winemenubuilder.exe.so winemine
-[PROVIDES] winemine.exe.so winemp3.acm.so winenas.drv.so wineoss.drv.so
-[PROVIDES] winepath winepath.exe.so wineprefixcreate wineps.drv.so
-[PROVIDES] wineserver wineshelllink winevdm.exe.so winex11.drv.so winhelp
-[PROVIDES] winhelp.exe.so wininet.dll.so winmm.dll.so winnls32.dll.so
-[PROVIDES] winspool.drv.so wintab32.dll.so wintrust.dll.so winver.exe.so
-[PROVIDES] wldap32.dll.so wmc wnaspi32.dll.so wordpad.exe.so wow32.dll.so
-[PROVIDES] wrc ws2_32.dll.so wsock32.dll.so wtsapi32.dll.so
+[PROVIDES] wineconsole wineconsole.exe.so winecoreaudio.drv.so winecpp
+[PROVIDES] wined3d.dll.so winedbg winedbg.exe.so winedos.dll.so winedump
+[PROVIDES] wineesd.drv.so winefile winefile.exe.so wineg++ winegcc
+[PROVIDES] winejack.drv.so winelauncher winemaker winemenubuilder.exe.so
+[PROVIDES] winemine winemine.exe.so winemp3.acm.so winenas.drv.so
+[PROVIDES] wineoss.drv.so winepath winepath.exe.so wineprefixcreate
+[PROVIDES] wineps.drv.so wineserver wineshelllink winevdm.exe.so
+[PROVIDES] winex11.drv.so winhelp winhelp.exe.so wininet.dll.so
+[PROVIDES] winmm.dll.so winnls32.dll.so winspool.drv.so wintab32.dll.so
+[PROVIDES] wintrust.dll.so winver.exe.so wldap32.dll.so wmc wnaspi32.dll.so
+[PROVIDES] wordpad.exe.so wow32.dll.so wrc ws2_32.dll.so wsock32.dll.so
+[PROVIDES] wtsapi32.dll.so
 

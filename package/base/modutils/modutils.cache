@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142447966 Wed Mar 15 19:39:26 2006 (3)
-[TIMESTAMP] 1142837087 Mon Mar 20 07:44:47 2006 (9)
+[TIMESTAMP] 1168525385 Thu Jan 11 15:23:05 2007 (3)
+[TIMESTAMP] 1168843363 Mon Jan 15 07:42:43 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 3-modutils.log 9-modutils.log
 
-[BUILDTIME] 2294 (3)
-[BUILDTIME] 3027 (9)
-[SIZE] 0.91 MB, 41 files
+[BUILDTIME] 2410 (3)
+[BUILDTIME] 3144 (9)
+[SIZE] 0.90 MB, 37 files
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils findutils
-[DEP] flex gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] m4 make mktemp net-tools patch rrdtool sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils cvm diffutils
+[DEP] findutils flex gawk gcc40 gcc40:dev glibc23 glibc23:dev grep
+[DEP] linux-libc-headers:dev m4 make mktemp net-tools netpbm patch rrdtool
+[DEP] sed sysfiles tar twoftpd ucspi-unix util-linux
 
 [PROVIDES] depmod.old genksyms genksyms.old insmod.old insmod.static.old
 [PROVIDES] insmod_ksymoops_clean.old kallsyms.old kallsyms.static.old

@@ -20,22 +20,134 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142551260 Fri Mar 17 00:21:00 2006 (5)
-[TIMESTAMP] 1142809120 Sun Mar 19 23:58:40 2006 (9)
+[TIMESTAMP] 1168621191 Fri Jan 12 17:59:51 2007 (5) ERROR
+[TIMESTAMP] 1168824689 Mon Jan 15 02:31:29 2007 (9) ERROR
+[TIMESTAMP] 1168946770 Tue Jan 16 12:26:10 2007 (5) ERROR
+[TIMESTAMP] 1168973362 Tue Jan 16 19:49:22 2007 (9) ERROR
+[TIMESTAMP] 1169090183 Thu Jan 18 04:16:23 2007 (5) ERROR
+[TIMESTAMP] 1169143641 Thu Jan 18 19:07:21 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-xvmc-wrapper.log 9-xvmc-wrapper.log
+[LOGS] 5-xvmc-wrapper.err 9-xvmc-wrapper.err
 
-[BUILDTIME] 1807 (5)
-[BUILDTIME] 2210 (9)
+[BUILDTIME] 1939 (5) ERROR
+[BUILDTIME] 2303 (9) ERROR
+[BUILDTIME] 2311 (5) ERROR
+[BUILDTIME] 2317 (9) ERROR
+[BUILDTIME] 2302 (5) ERROR
+[BUILDTIME] 2313 (9) ERROR
 [SIZE] 0.03 MB, 10 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils file findutils
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp net-tools perl5 rrdtool sed sysfiles tar util-linux
-[DEP] xorg xorg:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm diffutils file findutils gawk gcc40 gcc40:dev glibc23
+[DEP] glibc23:dev grep imake libx11 libx11:dev libxt libxv:dev libxvmc
+[DEP] libxvmc:dev linux-libc-headers:dev make mktemp net-tools perl5
+[DEP] rrdtool sed sysfiles tar util-linux videoproto:dev xorg-cf-files
+[DEP] xorg-server xproto:dev
 
 [PROVIDES] libXvMCW.a libXvMCW.so
+
+[5-ERROR] ----------------------------------------------------------------------
+[5-ERROR] Libraries have been installed in:
+[5-ERROR]    /usr/X11R7/lib
+[5-ERROR] 
+[5-ERROR] If you ever happen to want to link against installed libraries
+[5-ERROR] in a given directory, LIBDIR, you must either use libtool, and
+[5-ERROR] specify the full pathname of the library, or use the `-LLIBDIR'
+[5-ERROR] flag during linking and do at least one of the following:
+[5-ERROR]    - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+[5-ERROR]      during execution
+[5-ERROR]    - add LIBDIR to the `LD_RUN_PATH' environment variable
+[5-ERROR]      during linking
+[5-ERROR]    - use the `-Wl,--rpath -Wl,LIBDIR' linker flag
+[5-ERROR]    - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+[5-ERROR] 
+[5-ERROR] See any operating system documentation about shared libraries for
+[5-ERROR] more information, such as the ld(1) and ld.so(8) manual pages.
+[5-ERROR] ----------------------------------------------------------------------
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.xvmc-wrapper.1169090159.30251.1258219122/libXvMCW-0.9.3'
+[5-ERROR] Trying to copy the default documentation ...
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing /lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 13 files for this package.
+[5-ERROR] Applying package split: 40 xvmc-wrapper:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[5-ERROR] Applying package split: 42 xvmc-wrapper:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 xvmc-wrapper:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <xvmc-wrapper> Creating flist file ...
+[5-ERROR] <xvmc-wrapper> Creating package dependencies file ...
+[5-ERROR] <xvmc-wrapper> Creating package description ...
+[5-ERROR] <xvmc-wrapper> Creating md5sum and cksum files ...
+[5-ERROR] <xvmc-wrapper:dev> Creating flist file ...
+[5-ERROR] <xvmc-wrapper:dev> Creating package dependencies file ...
+[5-ERROR] <xvmc-wrapper:dev> Creating package description ...
+[5-ERROR] <xvmc-wrapper:dev> Creating md5sum and cksum files ...
+[5-ERROR] <xvmc-wrapper:doc> Creating flist file ...
+[5-ERROR] <xvmc-wrapper:doc> Creating package dependencies file ...
+[5-ERROR] <xvmc-wrapper:doc> Creating package description ...
+[5-ERROR] <xvmc-wrapper:doc> Creating md5sum and cksum files ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Found shared files with other packages:
+[5-ERROR] usr/X11R7/include/X11/extensions/vldXvMC.h: videoproto:dev xvmc-wrapper:dev
+[5-ERROR] usr/X11R7/lib/libXvMCW.a: libxvmc:dev xvmc-wrapper:dev
+[5-ERROR] usr/X11R7/lib/libXvMCW.la: libxvmc:dev xvmc-wrapper:dev
+[5-ERROR] usr/X11R7/lib/libXvMCW.so: libxvmc xvmc-wrapper
+[5-ERROR] usr/X11R7/lib/libXvMCW.so.1: libxvmc xvmc-wrapper
+[5-ERROR] usr/X11R7/lib/libXvMCW.so.1.0.0: libxvmc xvmc-wrapper
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] ----------------------------------------------------------------------
+[9-ERROR] Libraries have been installed in:
+[9-ERROR]    /usr/X11R7/lib
+[9-ERROR] 
+[9-ERROR] If you ever happen to want to link against installed libraries
+[9-ERROR] in a given directory, LIBDIR, you must either use libtool, and
+[9-ERROR] specify the full pathname of the library, or use the `-LLIBDIR'
+[9-ERROR] flag during linking and do at least one of the following:
+[9-ERROR]    - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+[9-ERROR]      during execution
+[9-ERROR]    - add LIBDIR to the `LD_RUN_PATH' environment variable
+[9-ERROR]      during linking
+[9-ERROR]    - use the `-Wl,--rpath -Wl,LIBDIR' linker flag
+[9-ERROR]    - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+[9-ERROR] 
+[9-ERROR] See any operating system documentation about shared libraries for
+[9-ERROR] more information, such as the ld(1) and ld.so(8) manual pages.
+[9-ERROR] ----------------------------------------------------------------------
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.xvmc-wrapper.1169143617.3986.4224487765/libXvMCW-0.9.3'
+[9-ERROR] Trying to copy the default documentation ...
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing /lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 13 files for this package.
+[9-ERROR] Applying package split: 40 xvmc-wrapper:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[9-ERROR] Applying package split: 42 xvmc-wrapper:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 xvmc-wrapper:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <xvmc-wrapper> Creating flist file ...
+[9-ERROR] <xvmc-wrapper> Creating package dependencies file ...
+[9-ERROR] <xvmc-wrapper> Creating package description ...
+[9-ERROR] <xvmc-wrapper> Creating md5sum and cksum files ...
+[9-ERROR] <xvmc-wrapper:dev> Creating flist file ...
+[9-ERROR] <xvmc-wrapper:dev> Creating package dependencies file ...
+[9-ERROR] <xvmc-wrapper:dev> Creating package description ...
+[9-ERROR] <xvmc-wrapper:dev> Creating md5sum and cksum files ...
+[9-ERROR] <xvmc-wrapper:doc> Creating flist file ...
+[9-ERROR] <xvmc-wrapper:doc> Creating package dependencies file ...
+[9-ERROR] <xvmc-wrapper:doc> Creating package description ...
+[9-ERROR] <xvmc-wrapper:doc> Creating md5sum and cksum files ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] usr/X11R7/include/X11/extensions/vldXvMC.h: videoproto:dev xvmc-wrapper:dev
+[9-ERROR] usr/X11R7/lib/libXvMCW.a: libxvmc:dev xvmc-wrapper:dev
+[9-ERROR] usr/X11R7/lib/libXvMCW.la: libxvmc:dev xvmc-wrapper:dev
+[9-ERROR] usr/X11R7/lib/libXvMCW.so: libxvmc xvmc-wrapper
+[9-ERROR] usr/X11R7/lib/libXvMCW.so.1: libxvmc xvmc-wrapper
+[9-ERROR] usr/X11R7/lib/libXvMCW.so.1.0.0: libxvmc xvmc-wrapper
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] --- BUILD ERROR ---
 

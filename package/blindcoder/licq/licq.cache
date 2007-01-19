@@ -20,29 +20,35 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142607188 Fri Mar 17 15:53:08 2006 (5)
-[TIMESTAMP] 1142872791 Mon Mar 20 17:39:51 2006 (9)
+[TIMESTAMP] 1168664241 Sat Jan 13 05:57:21 2007 (5)
+[TIMESTAMP] 1168872009 Mon Jan 15 15:40:09 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-licq.log 9-licq.log
 
-[BUILDTIME] 33685 (5)
-[BUILDTIME] 50950 (9)
-[SIZE] 1.72 MB, 102 files
+[BUILDTIME] 39254 (5)
+[BUILDTIME] 39950 (9)
+[SIZE] 1.48 MB, 98 files
 
-[DEP] 00-dirtree acl:dev alsa arts attr:dev bash2 binutils bzip2 coreutils
-[DEP] diffutils expat fam:dev file findutils freetype freetype:dev
-[DEP] gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev gpgme gpgme:dev
-[DEP] grep kdebase kdelibs kdelibs:dev libart_lgpl23:dev libassuan:dev
-[DEP] libcdk:dev libgpg-error libgpg-error:dev libidn:dev libpng libpng:dev
-[DEP] linux26-header:dev make mktemp nas ncurses:dev net-tools openssl
-[DEP] openssl:dev qt33 qt33:dev rrdtool sed sysfiles tar util-linux xorg
-[DEP] xorg:dev xosd xosd:dev
+[DEP] 00-dirtree acl:dev alsa applewmproto applewmproto:dev attr:dev
+[DEP] bash2 binutils bzip2 coreutils cvm diffutils expat expat:dev
+[DEP] fam:dev findutils fontconfig fontconfig:dev freetype freetype:dev
+[DEP] gawk gcc40 gcc40:dev gettext glibc23 glibc23:dev gpgme gpgme:dev
+[DEP] grep imake kdelibs kdelibs:dev libart_lgpl23:dev libassuan:dev
+[DEP] libgpg-error libgpg-error:dev libice libice:dev libidn:dev
+[DEP] libpng libpng:dev libsm libsm:dev libx11 libx11:dev libxau
+[DEP] libxau:dev libxcursor libxcursor:dev libxdmcp libxdmcp:dev libxext
+[DEP] libxext:dev libxfixes libxfixes:dev libxft libxft:dev libxinerama
+[DEP] libxinerama:dev libxmu libxmu:dev libxrandr libxrandr:dev libxrender
+[DEP] libxrender:dev libxscrnsaver libxscrnsaver:dev libxt libxt:dev
+[DEP] linux-libc-headers:dev make mesalib mktemp nas net-tools openssl
+[DEP] openssl:dev qt33 qt33:dev rrdtool scrnsaverproto:dev sed sysfiles
+[DEP] tar util-linux xorg-cf-files xosd xosd:dev xproto:dev zlib
 
-[PROVIDES] licq licq_autoreply.so licq_console.so licq_kde-gui.so
-[PROVIDES] licq_osd.so licq_qt-gui.so licq_rms.so viewurl-lynx.sh
+[PROVIDES] licq licq_autoreply.so licq_kde-gui.so licq_osd.so
+[PROVIDES] licq_qt-gui.so licq_rms.so viewurl-firefox.sh viewurl-lynx.sh
 [PROVIDES] viewurl-mozilla.sh viewurl-ncftp.sh viewurl-netscape.sh
-[PROVIDES] viewurl-opera.sh viewurl-w3m.sh
+[PROVIDES] viewurl-opera.sh viewurl-seamonkey.sh viewurl-w3m.sh
 

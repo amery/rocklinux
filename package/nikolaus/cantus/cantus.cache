@@ -20,25 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142648812 Sat Mar 18 03:26:52 2006 (5)
-[TIMESTAMP] 1142918033 Tue Mar 21 06:13:53 2006 (9)
+[TIMESTAMP] 1168691176 Sat Jan 13 13:26:16 2007 (5) ERROR
+[TIMESTAMP] 1168900086 Mon Jan 15 23:28:06 2007 (9) ERROR
+[TIMESTAMP] 1168953697 Tue Jan 16 14:21:37 2007 (5) ERROR
+[TIMESTAMP] 1168983422 Tue Jan 16 22:37:02 2007 (9) ERROR
+[TIMESTAMP] 1169124030 Thu Jan 18 13:40:30 2007 (5) ERROR
+[TIMESTAMP] 1169153617 Thu Jan 18 21:53:37 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-cantus.log 9-cantus.log
+[LOGS] 5-cantus.err 9-cantus.err
 
-[BUILDTIME] 3119 (5)
-[BUILDTIME] 3254 (9)
-[SIZE] 0.86 MB, 23 files
+[BUILDTIME] 1378 (5) ERROR
+[BUILDTIME] 1421 (9) ERROR
+[BUILDTIME] 1429 (5) ERROR
+[BUILDTIME] 1409 (9) ERROR
+[BUILDTIME] 1435 (5) ERROR
+[BUILDTIME] 1433 (9) ERROR
 
-[DEP] 00-dirtree alsa audiofile autoconf bash2 bdb33 binutils bzip2
-[DEP] coreutils diffutils esound findutils gawk gcc34 gcc34:dev glib12
-[DEP] glib12:dev glibc23 glibc23:dev gnome-libs14 gnome-libs14:dev
-[DEP] gnome14-dirtree gnome2-dirtree gnotepad+ grep gtk+12 gtk+12:dev
-[DEP] imlib imlib:dev linux26-header:dev make mktemp net-tools ogg-vorbis
-[DEP] ogg-vorbis:dev openbox orbit10 perl5 rrdtool sed sysfiles tar
-[DEP] texinfo xorg xorg:dev
 
-[PROVIDES] cantus
+[5-ERROR] checking for gcc-40 option to accept ANSI C... none needed
+[5-ERROR] checking how to run the C preprocessor... gcc-40 -E
+[5-ERROR] checking for ANSI C header files... yes
+[5-ERROR] checking for gnome-config... /opt/gnome/bin/gnome-config
+[5-ERROR] checking if /opt/gnome/bin/gnome-config works... yes
+[5-ERROR] checking for orbit-config... /opt/gnome/bin/orbit-config
+[5-ERROR] checking for orbit-idl... /opt/gnome/bin/orbit-idl
+[5-ERROR] checking for working ORBit environment... yes
+[5-ERROR] checking for gnorba libraries... yes
+[5-ERROR] checking what warning flags to pass to the C compiler... -Wall -Wunused
+[5-ERROR] checking what language compliance flags to pass to the C compiler... 
+[5-ERROR] checking for pthread_create in -lpthread... yes
+[5-ERROR] checking for gtk-config... /opt/gnome/bin/gtk-config
+[5-ERROR] checking for GTK - version >= 1.2.0... yes
+[5-ERROR] checking for SmcSaveYourselfDone in -lSM... yes
+[5-ERROR] checking for X11/SM/SMlib.h... yes
+[5-ERROR] checking for XpmFreeXpmImage in -lXpm... yes
+[5-ERROR] checking for ogg_sync_init in -logg... yes
+[5-ERROR] checking for vorbis_comment_init in -lvorbis... yes
+[5-ERROR] checking for ov_open in -lvorbisfile... yes
+[5-ERROR] checking for OGG file support... yes
+[5-ERROR] updating cache ./config.cache
+[5-ERROR] creating ./config.status
+[5-ERROR] creating Makefile
+[5-ERROR] creating macros/Makefile
+[5-ERROR] creating src/Makefile
+[5-ERROR] creating pixmaps/Makefile
+[5-ERROR] creating cantus.desktop
+[5-ERROR] creating config.h
+[5-ERROR] make  all-recursive
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.cantus.1169124014.11082.3694631316/cantus-1.07'
+[5-ERROR] Making all in macros
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.cantus.1169124014.11082.3694631316/cantus-1.07/macros'
+[5-ERROR] make[2]: Nothing to be done for `all'.
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.cantus.1169124014.11082.3694631316/cantus-1.07/macros'
+[5-ERROR] Making all in src
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.cantus.1169124014.11082.3694631316/cantus-1.07/src'
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome/include -I/opt/gnome/include/gnome-1.0 -DNEED_GNOMESUPPORT_H -I/opt/gnome/lib/gnome-libs/include -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/opt/gnome/include/orbit-1.0 -I/opt/gnome/include/gtk-1.2 -I/usr/X11R7/include  -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include  -Wall -Wimplicit -Wreturn-type -Wunused -Wswitch -Wcomment -Wuninitialized -Wparentheses -Wpointer-arith -Wmissing-prototypes 	 -O1 	 -g -c callbacks.c
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome/include -I/opt/gnome/include/gnome-1.0 -DNEED_GNOMESUPPORT_H -I/opt/gnome/lib/gnome-libs/include -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/opt/gnome/include/orbit-1.0 -I/opt/gnome/include/gtk-1.2 -I/usr/X11R7/include  -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include  -Wall -Wimplicit -Wreturn-type -Wunused -Wswitch -Wcomment -Wuninitialized -Wparentheses -Wpointer-arith -Wmissing-prototypes 	 -O1 	 -g -c interface.c
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome/include -I/opt/gnome/include/gnome-1.0 -DNEED_GNOMESUPPORT_H -I/opt/gnome/lib/gnome-libs/include -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/opt/gnome/include/orbit-1.0 -I/opt/gnome/include/gtk-1.2 -I/usr/X11R7/include  -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include  -Wall -Wimplicit -Wreturn-type -Wunused -Wswitch -Wcomment -Wuninitialized -Wparentheses -Wpointer-arith -Wmissing-prototypes 	 -O1 	 -g -c main.c
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome/include -I/opt/gnome/include/gnome-1.0 -DNEED_GNOMESUPPORT_H -I/opt/gnome/lib/gnome-libs/include -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/opt/gnome/include/orbit-1.0 -I/opt/gnome/include/gtk-1.2 -I/usr/X11R7/include  -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include  -Wall -Wimplicit -Wreturn-type -Wunused -Wswitch -Wcomment -Wuninitialized -Wparentheses -Wpointer-arith -Wmissing-prototypes 	 -O1 	 -g -c support.c
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome/include -I/opt/gnome/include/gnome-1.0 -DNEED_GNOMESUPPORT_H -I/opt/gnome/lib/gnome-libs/include -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/opt/gnome/include/orbit-1.0 -I/opt/gnome/include/gtk-1.2 -I/usr/X11R7/include  -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include  -Wall -Wimplicit -Wreturn-type -Wunused -Wswitch -Wcomment -Wuninitialized -Wparentheses -Wpointer-arith -Wmissing-prototypes 	 -O1 	 -g -c configfile.c
+[5-ERROR] configfile.c: In function 'configfile_option_add':
+[5-ERROR] configfile.c:272: error: invalid lvalue in assignment
+[5-ERROR] make[2]: *** [configfile.o] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.cantus.1169124014.11082.3694631316/cantus-1.07/src'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.cantus.1169124014.11082.3694631316/cantus-1.07'
+[5-ERROR] make: *** [all-recursive-am] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] checking for gcc-40 option to accept ANSI C... none needed
+[9-ERROR] checking how to run the C preprocessor... gcc-40 -E
+[9-ERROR] checking for ANSI C header files... yes
+[9-ERROR] checking for gnome-config... /opt/gnome/bin/gnome-config
+[9-ERROR] checking if /opt/gnome/bin/gnome-config works... yes
+[9-ERROR] checking for orbit-config... /opt/gnome/bin/orbit-config
+[9-ERROR] checking for orbit-idl... /opt/gnome/bin/orbit-idl
+[9-ERROR] checking for working ORBit environment... yes
+[9-ERROR] checking for gnorba libraries... yes
+[9-ERROR] checking what warning flags to pass to the C compiler... -Wall -Wunused
+[9-ERROR] checking what language compliance flags to pass to the C compiler... 
+[9-ERROR] checking for pthread_create in -lpthread... yes
+[9-ERROR] checking for gtk-config... /opt/gnome/bin/gtk-config
+[9-ERROR] checking for GTK - version >= 1.2.0... yes
+[9-ERROR] checking for SmcSaveYourselfDone in -lSM... yes
+[9-ERROR] checking for X11/SM/SMlib.h... yes
+[9-ERROR] checking for XpmFreeXpmImage in -lXpm... yes
+[9-ERROR] checking for ogg_sync_init in -logg... yes
+[9-ERROR] checking for vorbis_comment_init in -lvorbis... yes
+[9-ERROR] checking for ov_open in -lvorbisfile... yes
+[9-ERROR] checking for OGG file support... yes
+[9-ERROR] updating cache ./config.cache
+[9-ERROR] creating ./config.status
+[9-ERROR] creating Makefile
+[9-ERROR] creating macros/Makefile
+[9-ERROR] creating src/Makefile
+[9-ERROR] creating pixmaps/Makefile
+[9-ERROR] creating cantus.desktop
+[9-ERROR] creating config.h
+[9-ERROR] make  all-recursive
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.cantus.1169153600.1407.3951810427/cantus-1.07'
+[9-ERROR] Making all in macros
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.cantus.1169153600.1407.3951810427/cantus-1.07/macros'
+[9-ERROR] make[2]: Nothing to be done for `all'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.cantus.1169153600.1407.3951810427/cantus-1.07/macros'
+[9-ERROR] Making all in src
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.cantus.1169153600.1407.3951810427/cantus-1.07/src'
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome/include -I/opt/gnome/include/gnome-1.0 -DNEED_GNOMESUPPORT_H -I/opt/gnome/lib/gnome-libs/include -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/opt/gnome/include/orbit-1.0 -I/opt/gnome/include/gtk-1.2 -I/usr/X11R7/include  -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include  -Wall -Wimplicit -Wreturn-type -Wunused -Wswitch -Wcomment -Wuninitialized -Wparentheses -Wpointer-arith -Wmissing-prototypes 	 -O1 	 -g -c callbacks.c
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome/include -I/opt/gnome/include/gnome-1.0 -DNEED_GNOMESUPPORT_H -I/opt/gnome/lib/gnome-libs/include -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/opt/gnome/include/orbit-1.0 -I/opt/gnome/include/gtk-1.2 -I/usr/X11R7/include  -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include  -Wall -Wimplicit -Wreturn-type -Wunused -Wswitch -Wcomment -Wuninitialized -Wparentheses -Wpointer-arith -Wmissing-prototypes 	 -O1 	 -g -c interface.c
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome/include -I/opt/gnome/include/gnome-1.0 -DNEED_GNOMESUPPORT_H -I/opt/gnome/lib/gnome-libs/include -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/opt/gnome/include/orbit-1.0 -I/opt/gnome/include/gtk-1.2 -I/usr/X11R7/include  -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include  -Wall -Wimplicit -Wreturn-type -Wunused -Wswitch -Wcomment -Wuninitialized -Wparentheses -Wpointer-arith -Wmissing-prototypes 	 -O1 	 -g -c main.c
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome/include -I/opt/gnome/include/gnome-1.0 -DNEED_GNOMESUPPORT_H -I/opt/gnome/lib/gnome-libs/include -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/opt/gnome/include/orbit-1.0 -I/opt/gnome/include/gtk-1.2 -I/usr/X11R7/include  -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include  -Wall -Wimplicit -Wreturn-type -Wunused -Wswitch -Wcomment -Wuninitialized -Wparentheses -Wpointer-arith -Wmissing-prototypes 	 -O1 	 -g -c support.c
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome/include -I/opt/gnome/include/gnome-1.0 -DNEED_GNOMESUPPORT_H -I/opt/gnome/lib/gnome-libs/include -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/opt/gnome/include/orbit-1.0 -I/opt/gnome/include/gtk-1.2 -I/usr/X11R7/include  -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include  -Wall -Wimplicit -Wreturn-type -Wunused -Wswitch -Wcomment -Wuninitialized -Wparentheses -Wpointer-arith -Wmissing-prototypes 	 -O1 	 -g -c configfile.c
+[9-ERROR] configfile.c: In function 'configfile_option_add':
+[9-ERROR] configfile.c:272: error: invalid lvalue in assignment
+[9-ERROR] make[2]: *** [configfile.o] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.cantus.1169153600.1407.3951810427/cantus-1.07/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.cantus.1169153600.1407.3951810427/cantus-1.07'
+[9-ERROR] make: *** [all-recursive-am] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

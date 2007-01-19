@@ -20,125 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142672930 Sat Mar 18 10:08:50 2006 (5) ERROR
-[TIMESTAMP] 1142944117 Tue Mar 21 13:28:37 2006 (9) ERROR
-[TIMESTAMP] 1142965507 Tue Mar 21 19:25:07 2006 (5) ERROR
-[TIMESTAMP] 1142975313 Tue Mar 21 22:08:33 2006 (9) ERROR
-[TIMESTAMP] 1143034869 Wed Mar 22 14:41:09 2006 (5) ERROR
-[TIMESTAMP] 1143044538 Wed Mar 22 17:22:18 2006 (9) ERROR
+[TIMESTAMP] 1168568639 Fri Jan 12 03:23:59 2007 (5)
+[TIMESTAMP] 1168766339 Sun Jan 14 10:18:59 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-dbus.err 9-dbus.err
+[LOGS] 5-dbus.log 9-dbus.log
 
-[BUILDTIME] 3204 (5) ERROR
-[BUILDTIME] 3265 (9) ERROR
-[BUILDTIME] 3274 (5) ERROR
-[BUILDTIME] 3278 (9) ERROR
-[BUILDTIME] 3279 (5) ERROR
-[BUILDTIME] 3270 (9) ERROR
+[BUILDTIME] 7505 (5)
+[BUILDTIME] 8094 (9)
+[SIZE] 0.53 MB, 37 files
 
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm diffutils expat expat:dev findutils gawk gcc40
+[DEP] gcc40:dev glibc23 glibc23:dev grep imake libice libice:dev libsm
+[DEP] libsm:dev libx11 libx11:dev libxau libxau:dev libxdmcp libxdmcp:dev
+[DEP] libxt linux-libc-headers:dev m4 make mktemp net-tools netpbm
+[DEP] pkgconfig rrdtool sed sysfiles tar twoftpd ucspi-unix util-linux
+[DEP] xorg-cf-files xproto:dev
 
-[5-ERROR] checking locale.h presence... yes
-[5-ERROR] checking for locale.h... yes
-[5-ERROR] checking for LC_MESSAGES... yes
-[5-ERROR] checking libintl.h usability... yes
-[5-ERROR] checking libintl.h presence... yes
-[5-ERROR] checking for libintl.h... yes
-[5-ERROR] checking for ngettext in libc... yes
-[5-ERROR] checking for dgettext in libc... yes
-[5-ERROR] checking for bind_textdomain_codeset... yes
-[5-ERROR] checking for msgfmt... /usr/bin/msgfmt
-[5-ERROR] checking for dcgettext... yes
-[5-ERROR] checking for gmsgfmt... /usr/bin/msgfmt
-[5-ERROR] checking for xgettext... /usr/bin/xgettext
-[5-ERROR] ./configure: line 27650: ./po/POTFILES.in: No such file or directory
-[5-ERROR] checking for XML_ParserCreate_MM in -lexpat... yes
-[5-ERROR] checking expat.h usability... yes
-[5-ERROR] checking expat.h presence... yes
-[5-ERROR] checking for expat.h... yes
-[5-ERROR] checking for libxml-2.0... yes
-[5-ERROR] checking LIBXML_CFLAGS... -I/usr/include/libxml2  
-[5-ERROR] checking LIBXML_LIBS... -lxml2 -lz -lm  
-[5-ERROR] checking for is_selinux_enabled in -lselinux... no
-[5-ERROR] configure: WARNING: Sufficiently new SELinux library not found
-[5-ERROR] checking for gobject-2.0 >= 2.4... yes
-[5-ERROR] checking DBUS_GLIB_CFLAGS... -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include  
-[5-ERROR] checking DBUS_GLIB_LIBS... -L/opt/gnome2/lib -lgobject-2.0 -lglib-2.0  
-[5-ERROR] checking for gthread-2.0 >= 2.4... yes
-[5-ERROR] checking DBUS_GLIB_THREADS_CFLAGS... -D_REENTRANT -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include  
-[5-ERROR] checking DBUS_GLIB_THREADS_LIBS... -L/opt/gnome2/lib -lgthread-2.0 -lpthread -lglib-2.0  
-[5-ERROR] checking for gtk+-2.0 >= 2.4... yes
-[5-ERROR] checking DBUS_GTK_CFLAGS... -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/X11R6/include -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include  
-[5-ERROR] checking DBUS_GTK_LIBS... -L/opt/gnome2/lib -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lm -lpangocairo-1.0 -lpangoft2-1.0 -lcairo -lpango-1.0 -lgobject-2.0 -lgmodule-2.0 -ldl -lglib-2.0  
-[5-ERROR] checking for gtk+-2.0 >= 2.4 gthread-2.0... yes
-[5-ERROR] checking DBUS_GTK_THREADS_CFLAGS... -D_REENTRANT -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/X11R6/include -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include  
-[5-ERROR] checking DBUS_GTK_THREADS_LIBS... -L/opt/gnome2/lib -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lm -lpangocairo-1.0 -lpangoft2-1.0 -lcairo -lpango-1.0 -lgobject-2.0 -lgmodule-2.0 -ldl -lgthread-2.0 -lpthread -lglib-2.0  
-[5-ERROR] checking for moc... /opt/qt33/bin/moc
-[5-ERROR] checking for qglobal.h... found
-[5-ERROR] checking for QtCore >= 4.0... configure: WARNING: Qt development libraries not found
-[5-ERROR] configure: error: Qt integration explicitly required, and Qt libraries not found
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 0 files for this package.
-[5-ERROR] Applying package split: 40 dbus:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 dbus:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 dbus:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building dbus=dbus.
-
-[9-ERROR] checking locale.h presence... yes
-[9-ERROR] checking for locale.h... yes
-[9-ERROR] checking for LC_MESSAGES... yes
-[9-ERROR] checking libintl.h usability... yes
-[9-ERROR] checking libintl.h presence... yes
-[9-ERROR] checking for libintl.h... yes
-[9-ERROR] checking for ngettext in libc... yes
-[9-ERROR] checking for dgettext in libc... yes
-[9-ERROR] checking for bind_textdomain_codeset... yes
-[9-ERROR] checking for msgfmt... /usr/bin/msgfmt
-[9-ERROR] checking for dcgettext... yes
-[9-ERROR] checking for gmsgfmt... /usr/bin/msgfmt
-[9-ERROR] checking for xgettext... /usr/bin/xgettext
-[9-ERROR] ./configure: line 27650: ./po/POTFILES.in: No such file or directory
-[9-ERROR] checking for XML_ParserCreate_MM in -lexpat... yes
-[9-ERROR] checking expat.h usability... yes
-[9-ERROR] checking expat.h presence... yes
-[9-ERROR] checking for expat.h... yes
-[9-ERROR] checking for libxml-2.0... yes
-[9-ERROR] checking LIBXML_CFLAGS... -I/usr/include/libxml2  
-[9-ERROR] checking LIBXML_LIBS... -lxml2 -lz -lm  
-[9-ERROR] checking for is_selinux_enabled in -lselinux... no
-[9-ERROR] configure: WARNING: Sufficiently new SELinux library not found
-[9-ERROR] checking for gobject-2.0 >= 2.4... yes
-[9-ERROR] checking DBUS_GLIB_CFLAGS... -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include  
-[9-ERROR] checking DBUS_GLIB_LIBS... -L/opt/gnome2/lib -lgobject-2.0 -lglib-2.0  
-[9-ERROR] checking for gthread-2.0 >= 2.4... yes
-[9-ERROR] checking DBUS_GLIB_THREADS_CFLAGS... -D_REENTRANT -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include  
-[9-ERROR] checking DBUS_GLIB_THREADS_LIBS... -L/opt/gnome2/lib -lgthread-2.0 -lpthread -lglib-2.0  
-[9-ERROR] checking for gtk+-2.0 >= 2.4... yes
-[9-ERROR] checking DBUS_GTK_CFLAGS... -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/X11R6/include -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include  
-[9-ERROR] checking DBUS_GTK_LIBS... -L/opt/gnome2/lib -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lm -lpangocairo-1.0 -lpangoft2-1.0 -lcairo -lpango-1.0 -lgobject-2.0 -lgmodule-2.0 -ldl -lglib-2.0  
-[9-ERROR] checking for gtk+-2.0 >= 2.4 gthread-2.0... yes
-[9-ERROR] checking DBUS_GTK_THREADS_CFLAGS... -D_REENTRANT -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/X11R6/include -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include  
-[9-ERROR] checking DBUS_GTK_THREADS_LIBS... -L/opt/gnome2/lib -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lm -lpangocairo-1.0 -lpangoft2-1.0 -lcairo -lpango-1.0 -lgobject-2.0 -lgmodule-2.0 -ldl -lgthread-2.0 -lpthread -lglib-2.0  
-[9-ERROR] checking for moc... /opt/qt33/bin/moc
-[9-ERROR] checking for qglobal.h... found
-[9-ERROR] checking for QtCore >= 4.0... configure: WARNING: Qt development libraries not found
-[9-ERROR] configure: error: Qt integration explicitly required, and Qt libraries not found
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 0 files for this package.
-[9-ERROR] Applying package split: 40 dbus:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 dbus:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 dbus:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building dbus=dbus.
+[PROVIDES] dbus-cleanup-sockets dbus-daemon dbus-launch dbus-monitor
+[PROVIDES] dbus-send libdbus-1.a libdbus-1.so
 

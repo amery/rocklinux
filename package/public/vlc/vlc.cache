@@ -20,117 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142608302 Fri Mar 17 16:11:42 2006 (5)
-[TIMESTAMP] 1142873987 Mon Mar 20 17:59:47 2006 (9)
+[TIMESTAMP] 1168664481 Sat Jan 13 06:01:21 2007 (5) ERROR
+[TIMESTAMP] 1168872274 Mon Jan 15 15:44:34 2007 (9) ERROR
+[TIMESTAMP] 1168950530 Tue Jan 16 13:28:50 2007 (5) ERROR
+[TIMESTAMP] 1168979944 Tue Jan 16 21:39:04 2007 (9) ERROR
+[TIMESTAMP] 1169120831 Thu Jan 18 12:47:11 2007 (5) ERROR
+[TIMESTAMP] 1169150152 Thu Jan 18 20:55:52 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-vlc.log 9-vlc.log
+[LOGS] 5-vlc.err 9-vlc.err
 
-[BUILDTIME] 45379 (5)
-[BUILDTIME] 45988 (9)
-[SIZE] 10.46 MB, 345 files
+[BUILDTIME] 5408 (5) ERROR
+[BUILDTIME] 5520 (9) ERROR
+[BUILDTIME] 5518 (5) ERROR
+[BUILDTIME] 5533 (9) ERROR
+[BUILDTIME] 5525 (5) ERROR
+[BUILDTIME] 5529 (9) ERROR
 
-[DEP] 00-dirtree a52dec:dev alsa alsa:dev atk bash2 binutils bison
-[DEP] bzip2 coreutils diffutils faac faad2 ffmpeg ffmpeg:dev findutils
-[DEP] freetype freetype:dev fribidi fribidi:dev gawk gcc34 gcc34:dev gconf
-[DEP] gettext glib glib:dev glibc23 glibc23:dev gnome-libs14 gnome-vfs
-[DEP] gnome-vfs:dev gnome14-dirtree gnome2-dirtree gnutls gnutls:dev
-[DEP] grep gsm:dev gtk+ lame libbonobo libcdio libcdio:dev libdvbpsi
-[DEP] libdvbpsi:dev libdvdnav libdvdnav:dev libdvdread libdvdread:dev
-[DEP] libebml libebml:dev libgcrypt libgcrypt:dev libgpg-error
-[DEP] libgpg-error:dev libjpeg libmatroska libmatroska:dev libmpeg2:dev
-[DEP] libpng libpng:dev libsdl libsdl:dev libsdl_image libsdl_image:dev
-[DEP] libtheora libtiff libxml2 libxml2:dev linux26-header:dev mad
-[DEP] mad:dev make mktemp modplug-xmms modplug-xmms:dev mpeg4ip net-tools
-[DEP] ogg-vorbis ogg-vorbis:dev orbit2 pango patch perl5 pkgconfig rrdtool
-[DEP] samba samba:dev sed speex speex:dev subversion:server sysfiles
-[DEP] sysfsutils sysfsutils:dev tar util-linux vcdimager vcdimager:dev
-[DEP] wxwidgets wxwidgets:dev x264:dev xorg xorg:dev xvid:dev zlib:dev
 
-[PROVIDES] liba52_plugin.so liba52sys_plugin.so
-[PROVIDES] liba52tofloat32_plugin.so liba52tospdif_plugin.so
-[PROVIDES] libaccess_directory_plugin.so libaccess_fake_plugin.so
-[PROVIDES] libaccess_file_plugin.so libaccess_filter_record_plugin.so
-[PROVIDES] libaccess_filter_timeshift_plugin.so libaccess_ftp_plugin.so
-[PROVIDES] libaccess_gnomevfs_plugin.so libaccess_http_plugin.so
-[PROVIDES] libaccess_mms_plugin.so libaccess_output_dummy_plugin.so
-[PROVIDES] libaccess_output_file_plugin.so libaccess_output_http_plugin.so
-[PROVIDES] libaccess_output_udp_plugin.so libaccess_smb_plugin.so
-[PROVIDES] libaccess_tcp_plugin.so libaccess_udp_plugin.so
-[PROVIDES] libadjust_plugin.so libadpcm_plugin.so libaiff_plugin.so
-[PROVIDES] libalsa_plugin.so libaout_file_plugin.so
-[PROVIDES] libaout_sdl_plugin.so libaraw_plugin.so libasf_plugin.so
-[PROVIDES] libau_plugin.so libaudio_format_plugin.so
-[PROVIDES] libavi_plugin.so libbandlimited_resampler_plugin.so
-[PROVIDES] libblend_plugin.so libcdda_plugin.so libcinepak_plugin.so
-[PROVIDES] libclone_plugin.so libcmml_plugin.so libcrop_plugin.so
-[PROVIDES] libcvdsub_plugin.so libdeinterlace_plugin.so
-[PROVIDES] libdemuxdump_plugin.so libdistort_plugin.so
-[PROVIDES] libdolby_surround_decoder_plugin.so libdts_plugin.so
-[PROVIDES] libdtssys_plugin.so libdtstospdif_plugin.so libdummy_plugin.so
-[PROVIDES] libdvbsub_plugin.so libdvdnav_plugin.so libdvdread_plugin.so
-[PROVIDES] libequalizer_plugin.so libexport_plugin.so libfake_plugin.so
-[PROVIDES] libfb_plugin.so libffmpeg.a libfixed32tofloat32_plugin.so
-[PROVIDES] libfixed32tos16_plugin.so libflac_plugin.so libflacdec_plugin.so
-[PROVIDES] libfloat32_mixer_plugin.so libfloat32tos16_plugin.so
-[PROVIDES] libfloat32tos8_plugin.so libfloat32tou16_plugin.so
-[PROVIDES] libfloat32tou8_plugin.so libfreetype_plugin.so
-[PROVIDES] libgestures_plugin.so libglx_plugin.so libgnutls_plugin.so
-[PROVIDES] libh264_plugin.so libheadphone_channel_mixer_plugin.so
-[PROVIDES] libhotkeys_plugin.so libhttp_plugin.so libi420_rgb_mmx.a
-[PROVIDES] libi420_rgb_plugin.so libi420_ymga_mmx.a libi420_ymga_plugin.so
-[PROVIDES] libi420_yuy2_mmx.a libi420_yuy2_plugin.so libi422_yuy2_mmx.a
-[PROVIDES] libi422_yuy2_plugin.so libid3tag_plugin.so libimage_plugin.so
-[PROVIDES] libinvert_plugin.so libipv4_plugin.so libipv6_plugin.so
-[PROVIDES] liblibmpeg2_plugin.so liblinear_resampler_plugin.so
-[PROVIDES] liblogger_plugin.so liblogo_plugin.so liblpcm_plugin.so
-[PROVIDES] libm3u_plugin.so libm4a_plugin.so libm4v_plugin.so
-[PROVIDES] libmarq_plugin.so libmemcpy3dn.a libmemcpy_plugin.so
-[PROVIDES] libmemcpymmx.a libmemcpymmxext.a libmjpeg_plugin.so
-[PROVIDES] libmkv.a libmod_plugin.so libmosaic_plugin.so
-[PROVIDES] libmotionblur_plugin.so libmotiondetect_plugin.so
-[PROVIDES] libmp4_plugin.so libmpeg_audio_plugin.so libmpga_plugin.so
-[PROVIDES] libmpgatofixed32_plugin.so libmpgv_plugin.so
-[PROVIDES] libmux_asf_plugin.so libmux_avi_plugin.so libmux_dummy_plugin.so
-[PROVIDES] libmux_mp4_plugin.so libmux_mpjpeg_plugin.so
-[PROVIDES] libmux_ogg_plugin.so libmux_ps_plugin.so libmux_ts.a
-[PROVIDES] libmux_wav_plugin.so libnetsync_plugin.so libnormvol_plugin.so
-[PROVIDES] libnsc_plugin.so libnsv_plugin.so libnuv_plugin.so
-[PROVIDES] libogg_plugin.so libopengl_plugin.so libosdmenu_plugin.so
-[PROVIDES] liboss_plugin.so libpacketizer_copy_plugin.so
-[PROVIDES] libpacketizer_h264_plugin.so libpacketizer_mpeg4audio_plugin.so
-[PROVIDES] libpacketizer_mpeg4video_plugin.so
-[PROVIDES] libpacketizer_mpegvideo_plugin.so libplaylist_plugin.so
-[PROVIDES] libpng_plugin.so libps_plugin.so libpva_plugin.so
-[PROVIDES] librawdv_plugin.so librawvideo_plugin.so librc_plugin.so
-[PROVIDES] libreal_plugin.so librss_plugin.so librv32_plugin.so
-[PROVIDES] libs16tofixed32_plugin.so libs16tofloat32_plugin.so
-[PROVIDES] libs16tofloat32swab_plugin.so libs8tofloat32_plugin.so
-[PROVIDES] libsap_plugin.so libscale_plugin.so libscreen_plugin.so
-[PROVIDES] libscreensaver_plugin.so libsdl_image_plugin.so
-[PROVIDES] libsgimb_plugin.so libshout_plugin.so libshowintf_plugin.so
-[PROVIDES] libsimple_channel_mixer_plugin.so libskins2_plugin.so
-[PROVIDES] libspdif_mixer_plugin.so libspeex_plugin.so
-[PROVIDES] libspudec_plugin.so libstream_out_bridge_plugin.so
-[PROVIDES] libstream_out_description_plugin.so
-[PROVIDES] libstream_out_display_plugin.so
-[PROVIDES] libstream_out_dummy_plugin.so libstream_out_duplicate_plugin.so
-[PROVIDES] libstream_out_es_plugin.so libstream_out_gather_plugin.so
-[PROVIDES] libstream_out_mosaic_bridge_plugin.so
-[PROVIDES] libstream_out_rtp_plugin.so libstream_out_standard_plugin.so
-[PROVIDES] libstream_out_switcher.a libstream_out_transcode_plugin.so
-[PROVIDES] libsubsdec_plugin.so libsubtitle_plugin.so libsvcdsub_plugin.so
-[PROVIDES] libtelnet_plugin.so libtime_plugin.so libtransform_plugin.so
-[PROVIDES] libtrivial_channel_mixer_plugin.so libtrivial_mixer_plugin.so
-[PROVIDES] libtrivial_resampler_plugin.so libts_plugin.so libty_plugin.so
-[PROVIDES] libu8tofixed32_plugin.so libu8tofloat32_plugin.so
-[PROVIDES] libugly_resampler_plugin.so libvcd_plugin.so
-[PROVIDES] libvisual_plugin.so libvlc.a libvobsub_plugin.so
-[PROVIDES] libvoc_plugin.so libvod_rtsp_plugin.so libvorbis_plugin.so
-[PROVIDES] libvout_sdl_plugin.so libwall_plugin.so libwav_plugin.so
-[PROVIDES] libwxwidgets_plugin.so libx11_plugin.so libx264_plugin.so
-[PROVIDES] libxa_plugin.so libxml_plugin.so libxtag_plugin.so
-[PROVIDES] libxvideo_plugin.so svlc vlc vlc-config wxvlc
+[5-ERROR] checking for linux/dvb/version.h... yes
+[5-ERROR] checking linux/dvb/frontend.h usability... yes
+[5-ERROR] checking linux/dvb/frontend.h presence... yes
+[5-ERROR] checking for linux/dvb/frontend.h... yes
+[5-ERROR] checking X11/Xlib.h usability... yes
+[5-ERROR] checking X11/Xlib.h presence... yes
+[5-ERROR] checking for X11/Xlib.h... yes
+[5-ERROR] checking for inet_pton... yes
+[5-ERROR] checking for sockaddr_in6 in netinet/in.h... yes
+[5-ERROR] checking ogg/ogg.h usability... yes
+[5-ERROR] checking ogg/ogg.h presence... yes
+[5-ERROR] checking for ogg/ogg.h... yes
+[5-ERROR] checking for oggpack_read in -logg... yes
+[5-ERROR] checking ebml/EbmlVersion.h usability... yes
+[5-ERROR] checking ebml/EbmlVersion.h presence... yes
+[5-ERROR] checking for ebml/EbmlVersion.h... yes
+[5-ERROR] checking for libebml version >= 0.7.6... yes
+[5-ERROR] checking matroska/KaxVersion.h usability... yes
+[5-ERROR] checking matroska/KaxVersion.h presence... yes
+[5-ERROR] checking for matroska/KaxVersion.h... yes
+[5-ERROR] checking for libmatroska version >= 0.7.5... yes
+[5-ERROR] checking matroska/KaxAttachments.h usability... yes
+[5-ERROR] checking matroska/KaxAttachments.h presence... yes
+[5-ERROR] checking for matroska/KaxAttachments.h... yes
+[5-ERROR] checking for main in -lebml_pic... no
+[5-ERROR] checking for main in -lebml... yes
+[5-ERROR] checking libmodplug/modplug.h usability... yes
+[5-ERROR] checking libmodplug/modplug.h presence... yes
+[5-ERROR] checking for libmodplug/modplug.h... yes
+[5-ERROR] checking mpcdec/mpcdec.h usability... no
+[5-ERROR] checking mpcdec/mpcdec.h presence... no
+[5-ERROR] checking for mpcdec/mpcdec.h... no
+[5-ERROR] checking mad.h usability... yes
+[5-ERROR] checking mad.h presence... yes
+[5-ERROR] checking for mad.h... yes
+[5-ERROR] checking for mad_bit_init in -lmad... yes
+[5-ERROR] checking id3tag.h usability... yes
+[5-ERROR] checking id3tag.h presence... yes
+[5-ERROR] checking for id3tag.h... yes
+[5-ERROR] checking zlib.h usability... yes
+[5-ERROR] checking zlib.h presence... yes
+[5-ERROR] checking for zlib.h... yes
+[5-ERROR] checking for ffmpeg-config... no
+[5-ERROR] checking for FFMPEG_CFLAGS... 
+[5-ERROR] checking for FFMPEG_LIBS... 
+[5-ERROR] checking ffmpeg/avcodec.h usability... no
+[5-ERROR] checking ffmpeg/avcodec.h presence... no
+[5-ERROR] checking for ffmpeg/avcodec.h... no
+[5-ERROR] configure: error: Missing header file ffmpeg/avcodec.h.
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] checking for linux/dvb/version.h... yes
+[9-ERROR] checking linux/dvb/frontend.h usability... yes
+[9-ERROR] checking linux/dvb/frontend.h presence... yes
+[9-ERROR] checking for linux/dvb/frontend.h... yes
+[9-ERROR] checking X11/Xlib.h usability... yes
+[9-ERROR] checking X11/Xlib.h presence... yes
+[9-ERROR] checking for X11/Xlib.h... yes
+[9-ERROR] checking for inet_pton... yes
+[9-ERROR] checking for sockaddr_in6 in netinet/in.h... yes
+[9-ERROR] checking ogg/ogg.h usability... yes
+[9-ERROR] checking ogg/ogg.h presence... yes
+[9-ERROR] checking for ogg/ogg.h... yes
+[9-ERROR] checking for oggpack_read in -logg... yes
+[9-ERROR] checking ebml/EbmlVersion.h usability... yes
+[9-ERROR] checking ebml/EbmlVersion.h presence... yes
+[9-ERROR] checking for ebml/EbmlVersion.h... yes
+[9-ERROR] checking for libebml version >= 0.7.6... yes
+[9-ERROR] checking matroska/KaxVersion.h usability... yes
+[9-ERROR] checking matroska/KaxVersion.h presence... yes
+[9-ERROR] checking for matroska/KaxVersion.h... yes
+[9-ERROR] checking for libmatroska version >= 0.7.5... yes
+[9-ERROR] checking matroska/KaxAttachments.h usability... yes
+[9-ERROR] checking matroska/KaxAttachments.h presence... yes
+[9-ERROR] checking for matroska/KaxAttachments.h... yes
+[9-ERROR] checking for main in -lebml_pic... no
+[9-ERROR] checking for main in -lebml... yes
+[9-ERROR] checking libmodplug/modplug.h usability... yes
+[9-ERROR] checking libmodplug/modplug.h presence... yes
+[9-ERROR] checking for libmodplug/modplug.h... yes
+[9-ERROR] checking mpcdec/mpcdec.h usability... no
+[9-ERROR] checking mpcdec/mpcdec.h presence... no
+[9-ERROR] checking for mpcdec/mpcdec.h... no
+[9-ERROR] checking mad.h usability... yes
+[9-ERROR] checking mad.h presence... yes
+[9-ERROR] checking for mad.h... yes
+[9-ERROR] checking for mad_bit_init in -lmad... yes
+[9-ERROR] checking id3tag.h usability... yes
+[9-ERROR] checking id3tag.h presence... yes
+[9-ERROR] checking for id3tag.h... yes
+[9-ERROR] checking zlib.h usability... yes
+[9-ERROR] checking zlib.h presence... yes
+[9-ERROR] checking for zlib.h... yes
+[9-ERROR] checking for ffmpeg-config... no
+[9-ERROR] checking for FFMPEG_CFLAGS... 
+[9-ERROR] checking for FFMPEG_LIBS... 
+[9-ERROR] checking ffmpeg/avcodec.h usability... no
+[9-ERROR] checking ffmpeg/avcodec.h presence... no
+[9-ERROR] checking for ffmpeg/avcodec.h... no
+[9-ERROR] configure: error: Missing header file ffmpeg/avcodec.h.
+[9-ERROR] --- BUILD ERROR ---
 

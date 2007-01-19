@@ -20,27 +20,81 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142446155 Wed Mar 15 19:09:15 2006 (3)
-[TIMESTAMP] 1142692367 Sat Mar 18 15:32:47 2006 (9)
+[TIMESTAMP] 1168523949 Thu Jan 11 14:59:09 2007 (3)
+[TIMESTAMP] 1168721796 Sat Jan 13 21:56:36 2007 (9) ERROR
+[TIMESTAMP] 1168958229 Tue Jan 16 15:37:09 2007 (9) ERROR
+[TIMESTAMP] 1169128524 Thu Jan 18 14:55:24 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 1-gettext.log 3-gettext.log 9-gettext.log
+[LOGS] 1-gettext.log 3-gettext.log 9-gettext.err
 
-[BUILDTIME] 22666 (3)
-[BUILDTIME] 24702 (9)
-[SIZE] 5.30 MB, 275 files
+[BUILDTIME] 22750 (3)
+[BUILDTIME] 18554 (9) ERROR
+[BUILDTIME] 18713 (9) ERROR
+[BUILDTIME] 18734 (9) ERROR
+[SIZE] 3.31 MB, 195 files
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils emacs
-[DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep jikes
-[DEP] linux26-header:dev make mktemp net-tools rrdtool sed sysfiles tar
-[DEP] texinfo util-linux xorg
+[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils findutils
+[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev
+[DEP] make mktemp sed sysfiles tar texinfo util-linux
 
 [PROVIDES] autopoint envsubst gettext gettext.sh gettextize libasprintf.a
-[PROVIDES] libasprintf.so libgettextlib-0.14.5.so libgettextlib.so
-[PROVIDES] libgettextpo.a libgettextpo.so libgettextsrc-0.14.5.so
+[PROVIDES] libasprintf.so libgettextlib-0.14.6.so libgettextlib.so
+[PROVIDES] libgettextpo.a libgettextpo.so libgettextsrc-0.14.6.so
 [PROVIDES] libgettextsrc.so msgattrib msgcat msgcmp msgcomm msgconv msgen
 [PROVIDES] msgexec msgfilter msgfmt msggrep msginit msgmerge msgunfmt
 [PROVIDES] msguniq ngettext preloadable_libintl.so xgettext
+
+[9-ERROR] /bin/sh ../libtool --tag=CC --mode=link gcc-40  -g -O2   -o msguniq  msguniq-msguniq.o libgettextsrc.la  
+[9-ERROR] gcc-40 -g -O2 -o .libs/msguniq msguniq-msguniq.o  ./.libs/libgettextsrc.so /ROCK/src.gettext.1169128331.27510.3941867026/gettext-0.14.6/gettext-tools/lib/.libs/libgettextlib.so -lc
+[9-ERROR] creating msguniq
+[9-ERROR] gcc-40 -DLOCALEDIR=\"/usr/share/locale\" -DLOCALE_ALIAS_PATH=\"/usr/share/locale\" -DUSEJEXE=0 -DGETTEXTJEXEDIR=\"/usr/lib/gettext\" -DGETTEXTJAR=\"/usr/share/gettext/gettext.jar\" -DLIBDIR=\"/usr/lib\" -DGETTEXTDATADIR=\"/usr/share/gettext\" -DPROJECTSDIR=\"/usr/share/gettext/projects\" -DHAVE_CONFIG_H -I. -I. -I..  -I. -I. -I.. -I../libgrep -I../libuniname -I../lib -I../lib -I../intl -I../../gettext-runtime/intl  -DINSTALLDIR=\"/usr/lib/gettext\" -g -O2 -c -o hostname-hostname.o `test -f 'hostname.c' || echo './'`hostname.c
+[9-ERROR] /bin/sh ../libtool --tag=CC --mode=link gcc-40  -g -O2   -o hostname  hostname-hostname.o ../lib/libgettextlib.la  
+[9-ERROR] gcc-40 -g -O2 -o .libs/hostname hostname-hostname.o  ../lib/.libs/libgettextlib.so -lc
+[9-ERROR] creating hostname
+[9-ERROR] gcc-40 -DLOCALEDIR=\"/usr/share/locale\" -DLOCALE_ALIAS_PATH=\"/usr/share/locale\" -DUSEJEXE=0 -DGETTEXTJEXEDIR=\"/usr/lib/gettext\" -DGETTEXTJAR=\"/usr/share/gettext/gettext.jar\" -DLIBDIR=\"/usr/lib\" -DGETTEXTDATADIR=\"/usr/share/gettext\" -DPROJECTSDIR=\"/usr/share/gettext/projects\" -DHAVE_CONFIG_H -I. -I. -I..  -I. -I. -I.. -I../libgrep -I../libuniname -I../lib -I../lib -I../intl -I../../gettext-runtime/intl  -DINSTALLDIR=\"/usr/lib/gettext\" -g -O2 -c -o urlget-urlget.o `test -f 'urlget.c' || echo './'`urlget.c
+[9-ERROR] /bin/sh ../libtool --tag=CC --mode=link gcc-40  -g -O2   -o urlget  urlget-urlget.o ../lib/libgettextlib.la  
+[9-ERROR] gcc-40 -g -O2 -o .libs/urlget urlget-urlget.o  ../lib/.libs/libgettextlib.so -lc
+[9-ERROR] creating urlget
+[9-ERROR] /bin/sh ../lib/csharpcomp.sh -O -g -o msgfmt.net.exe ./msgfmt.cs
+[9-ERROR] warning CS8029: Compatibility: Use -debug option instead of -g or --debug
+[9-ERROR] warning CS8029: Compatibility: Use -out:FILE instead of --output FILE or -o FILE
+[9-ERROR] /bin/sh ../lib/csharpcomp.sh -O -g -o msgunfmt.net.exe -L ../../gettext-runtime/intl-csharp -l GNU.Gettext ./msgunfmt.cs
+[9-ERROR] warning CS8029: Compatibility: Use -debug option instead of -g or --debug
+[9-ERROR] warning CS8029: Compatibility: Use -out:FILE instead of --output FILE or -o FILE
+[9-ERROR] warning CS8029: Compatibility: Use -lib:ARG instead of --L arg
+[9-ERROR] warning CS8029: Compatibility: Use -r:LIBRARY instead of -r library
+[9-ERROR] make[4]: Leaving directory `/ROCK/loop/src.gettext.1169128331.27510.3941867026/gettext-0.14.6/gettext-tools/src'
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.gettext.1169128331.27510.3941867026/gettext-0.14.6/gettext-tools/src'
+[9-ERROR] Making all in po
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.gettext.1169128331.27510.3941867026/gettext-0.14.6/gettext-tools/po'
+[9-ERROR] make[3]: Nothing to be done for `all'.
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.gettext.1169128331.27510.3941867026/gettext-0.14.6/gettext-tools/po'
+[9-ERROR] Making all in projects
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.gettext.1169128331.27510.3941867026/gettext-0.14.6/gettext-tools/projects'
+[9-ERROR] make[3]: Nothing to be done for `all'.
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.gettext.1169128331.27510.3941867026/gettext-0.14.6/gettext-tools/projects'
+[9-ERROR] Making all in misc
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.gettext.1169128331.27510.3941867026/gettext-0.14.6/gettext-tools/misc'
+[9-ERROR] WARNING: Warnings can be ignored. :-)
+[9-ERROR] if test "emacs" != no; then \
+[9-ERROR] 	  set x; \
+[9-ERROR] 	  list='start-po.el po-mode.el po-compat.el'; for p in $list; do \
+[9-ERROR] 	    if test -f "$p"; then d=; else d="./"; fi; \
+[9-ERROR] 	    set x "$@" "$d$p"; shift; \
+[9-ERROR] 	  done; \
+[9-ERROR] 	  shift; \
+[9-ERROR] 	  EMACS="emacs" /bin/sh ../../build-aux/elisp-comp "$@" || exit 1; \
+[9-ERROR] 	else : ; fi
+[9-ERROR] ../../build-aux/elisp-comp: line 78: 12349 Segmentation fault      (core dumped) $EMACS -batch -q -l script -f batch-byte-compile *.el
+[9-ERROR] make[3]: *** [elc-stamp] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.gettext.1169128331.27510.3941867026/gettext-0.14.6/gettext-tools/misc'
+[9-ERROR] make[2]: *** [all-recursive] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.gettext.1169128331.27510.3941867026/gettext-0.14.6/gettext-tools'
+[9-ERROR] make[1]: *** [all] Error 2
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.gettext.1169128331.27510.3941867026/gettext-0.14.6/gettext-tools'
+[9-ERROR] make: *** [all-recursive] Error 1
+[9-ERROR] --- BUILD ERROR ---
 

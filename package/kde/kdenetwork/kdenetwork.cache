@@ -20,32 +20,46 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142572883 Fri Mar 17 06:21:23 2006 (5)
-[TIMESTAMP] 1142835337 Mon Mar 20 07:15:37 2006 (9)
+[TIMESTAMP] 1168636928 Fri Jan 12 22:22:08 2007 (5)
+[TIMESTAMP] 1168842252 Mon Jan 15 07:24:12 2007 (9) ERROR
+[TIMESTAMP] 1168978252 Tue Jan 16 21:10:52 2007 (9) ERROR
+[TIMESTAMP] 1169148526 Thu Jan 18 20:28:46 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-kdenetwork.log 9-kdenetwork.log
+[LOGS] 5-kdenetwork.log 9-kdenetwork.err
 
-[BUILDTIME] 282501 (5)
-[BUILDTIME] 283730 (9)
-[SIZE] 24.42 MB, 1827 files
+[BUILDTIME] 253947 (5)
+[BUILDTIME] 255976 (9) ERROR
+[BUILDTIME] 256483 (9) ERROR
+[BUILDTIME] 256158 (9) ERROR
+[SIZE] 25.66 MB, 1697 files
 
-[DEP] 00-dirtree acl acl:dev alsa alsa:dev arts arts:dev attr attr:dev
-[DEP] audiofile audiofile:dev bash2 binutils bzip2 coreutils diffutils
-[DEP] ekg:dev esound esound:dev expat fam fam:dev findutils freetype
-[DEP] freetype:dev gawk gcc34 gcc34:dev gettext glib glib12 glib12:dev
-[DEP] glib:dev glibc23 glibc23:dev gnome-libs14 gnome14-dirtree
-[DEP] gnome2-dirtree grep gtk+12 gtk+12:dev jack jack:dev kdebase
+[DEP] 00-dirtree acl acl:dev alsa alsa:dev applewmproto applewmproto:dev
+[DEP] arts arts:dev attr attr:dev audiofile audiofile:dev autoconf
+[DEP] bash2 binutils bzip2 coreutils cups cvm diffutils esound
+[DEP] esound:dev expat expat:dev fam fam:dev findutils fontconfig
+[DEP] fontconfig:dev freetype freetype:dev gawk gcc40 gcc40:dev gettext
+[DEP] glib glib12 glib12:dev glib:dev glibc23 glibc23:dev gnome-libs14
+[DEP] gnome14-dirtree gnome2-dirtree grep gsmlib gsmlib:dev gtk+12
+[DEP] gtk+12:dev hicolor-icon-theme imake inputproto:dev kdebase
 [DEP] kdebase:doc kdegames kdelibs kdelibs:dev kdeutils libart_lgpl23
-[DEP] libart_lgpl23:dev libidn libidn:dev libjpeg libjpeg:dev libpng
-[DEP] libpng:dev libxml2 libxml2:dev libxslt libxslt:dev linux26-header:dev
-[DEP] mad mad:dev make mktemp nas net-tools ogg-vorbis ogg-vorbis:dev
-[DEP] openslp openslp:dev openssl openssl:dev pcre pcre:dev perl5 pkgconfig
-[DEP] qt33 qt33:dev rrdtool sed sysfiles tar util-linux valgrind:dev
-[DEP] wireless-tools wireless-tools:dev xmms xmms:dev xorg xorg:dev
-[DEP] zlib:dev
+[DEP] libart_lgpl23:dev libice libice:dev libidn libidn:dev libjpeg
+[DEP] libjpeg:dev libpng libpng:dev libsm libsm:dev libx11 libx11:dev
+[DEP] libxau libxau:dev libxcursor libxcursor:dev libxdmcp libxdmcp:dev
+[DEP] libxext libxext:dev libxfixes libxfixes:dev libxft libxft:dev
+[DEP] libxi libxi:dev libxinerama libxinerama:dev libxml2 libxml2:dev
+[DEP] libxmu libxmu:dev libxrandr libxrandr:dev libxrender libxrender:dev
+[DEP] libxscrnsaver libxscrnsaver:dev libxslt libxslt:dev libxt libxt:dev
+[DEP] libxtst libxtst:dev libxxf86vm libxxf86vm:dev linux-libc-headers:dev
+[DEP] m4 mad mad:dev make mesalib mesalib:dev mktemp nas net-tools
+[DEP] ogg-vorbis ogg-vorbis:dev openslp openslp:dev openssl openssl:dev
+[DEP] pcre pcre:dev perl5 pkgconfig qt33 qt33:dev renderproto:dev
+[DEP] rrdtool scrnsaverproto:dev sed sim-im speex speex:dev sysfiles
+[DEP] tar util-linux valgrind:dev wireless-tools wireless-tools:dev
+[DEP] xextproto:dev xf86vidmodeproto:dev xmms xmms:dev xorg-cf-files
+[DEP] xproto:dev zlib zlib:dev
 
 [PROVIDES] dsirc feedbrowser fileshare_propsdlgplugin.so kcm_fileshare.so
 [PROVIDES] kcm_kopete_accountconfig.so kcm_kopete_addbookmarks.so
@@ -73,12 +87,64 @@
 [PROVIDES] kopete_latexconvert.sh kopete_msn.so kopete_netmeeting.so
 [PROVIDES] kopete_nowlistening.so kopete_sms.so kopete_statistics.so
 [PROVIDES] kopete_testbed.so kopete_texteffect.so kopete_translator.so
-[PROVIDES] kopete_webpresence.so kopete_yahoo.so kpf_panelapplet.so
-[PROVIDES] kpfpropertiesdialog.so kppp kppplogview krdc krfb
-[PROVIDES] krfb_httpd ksirc ksirc.so ktalkd ktalkdlg kwifimanager
+[PROVIDES] kopete_webpresence.so kopete_wp.so kopete_yahoo.so
+[PROVIDES] kpf_panelapplet.so kpfpropertiesdialog.so kppp kppplogview krdc
+[PROVIDES] krfb krfb_httpd ksirc ksirc.so ktalkd ktalkdlg kwifimanager
 [PROVIDES] libkcm_kcmsambaconf.so libkdeinit_kdict.so libkdeinit_ksirc.so
 [PROVIDES] libkntsrcfilepropsdlg.so libkopete.so libkopete_msn_shared.so
 [PROVIDES] libkopete_oscar.so libkopete_videodevice.so
 [PROVIDES] libkrichtexteditpart.so libkwireless.so librss.so lisa
-[PROVIDES] mail.local reslisa rssclient rssservice
+[PROVIDES] mail.local reslisa rssclient rssservice winpopup-install.sh
+[PROVIDES] winpopup-send.sh
+
+[9-ERROR] test -z "/usr/share/apps/kconf_update" || mkdir -p -- "/usr/share/apps/kconf_update"
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p 'knt-0.1-0.2.pl' '/usr/share/apps/kconf_update/knt-0.1-0.2.pl'
+[9-ERROR] test -z "/usr/share/applications/kde" || mkdir -p -- "/usr/share/applications/kde"
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 'knewsticker-standalone.desktop' '/usr/share/applications/kde/knewsticker-standalone.desktop'
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.kdenetwork.1169145900.3793.4245164994/kdenetwork-3.5.5/knewsticker'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdenetwork.1169145900.3793.4245164994/kdenetwork-3.5.5/knewsticker'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kdenetwork.1169145900.3793.4245164994/kdenetwork-3.5.5/knewsticker'
+[9-ERROR] Making install in dcoprss
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.kdenetwork.1169145900.3793.4245164994/kdenetwork-3.5.5/dcoprss'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.kdenetwork.1169145900.3793.4245164994/kdenetwork-3.5.5/dcoprss'
+[9-ERROR] test -z "/usr/bin" || mkdir -p -- "/usr/bin"
+[9-ERROR]   /bin/sh ../libtool --silent --mode=install /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p  'rssservice' '/usr/bin/rssservice'
+[9-ERROR]   /bin/sh ../libtool --silent --mode=install /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p  'rssclient' '/usr/bin/rssclient'
+[9-ERROR]   /bin/sh ../libtool --silent --mode=install /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p  'feedbrowser' '/usr/bin/feedbrowser'
+[9-ERROR] test -z "/usr/share/services" || mkdir -p -- "/usr/share/services"
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 'rssservice.desktop' '/usr/share/services/rssservice.desktop'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdenetwork.1169145900.3793.4245164994/kdenetwork-3.5.5/dcoprss'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kdenetwork.1169145900.3793.4245164994/kdenetwork-3.5.5/dcoprss'
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.kdenetwork.1169145900.3793.4245164994/kdenetwork-3.5.5'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.kdenetwork.1169145900.3793.4245164994/kdenetwork-3.5.5'
+[9-ERROR] make[2]: Nothing to be done for `install-exec-am'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdenetwork.1169145900.3793.4245164994/kdenetwork-3.5.5'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kdenetwork.1169145900.3793.4245164994/kdenetwork-3.5.5'
+[9-ERROR] Trying to copy the default documentation ...
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing /lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 2065 files for this package.
+[9-ERROR] Applying package split: 40 kdenetwork:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[9-ERROR] Applying package split: 42 kdenetwork:dev /pkgconfig/
+[9-ERROR] Applying package split: 45 kdenetwork /.*\.la$
+[9-ERROR] Applying package split: 60 kdenetwork:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <kdenetwork> Creating flist file ...
+[9-ERROR] <kdenetwork> Creating package dependencies file ...
+[9-ERROR] <kdenetwork> Creating package description ...
+[9-ERROR] <kdenetwork> Creating md5sum and cksum files ...
+[9-ERROR] <kdenetwork:dev> Creating flist file ...
+[9-ERROR] <kdenetwork:dev> Creating package dependencies file ...
+[9-ERROR] <kdenetwork:dev> Creating package description ...
+[9-ERROR] <kdenetwork:dev> Creating md5sum and cksum files ...
+[9-ERROR] <kdenetwork:doc> Creating flist file ...
+[9-ERROR] <kdenetwork:doc> Creating package dependencies file ...
+[9-ERROR] <kdenetwork:doc> Creating package description ...
+[9-ERROR] <kdenetwork:doc> Creating md5sum and cksum files ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] usr/share/mimelnk/application/x-icq.desktop: kdenetwork sim-im
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] --- BUILD ERROR ---
 

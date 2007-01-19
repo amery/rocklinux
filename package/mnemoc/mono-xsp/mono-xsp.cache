@@ -20,23 +20,78 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142573327 Fri Mar 17 06:28:47 2006 (5) ERROR
-[TIMESTAMP] 1142835829 Mon Mar 20 07:23:49 2006 (9)
-[TIMESTAMP] 1142961312 Tue Mar 21 18:15:12 2006 (5)
+[TIMESTAMP] 1168637098 Fri Jan 12 22:24:58 2007 (5)
+[TIMESTAMP] 1168842435 Mon Jan 15 07:27:15 2007 (9) ERROR
+[TIMESTAMP] 1168978412 Tue Jan 16 21:13:32 2007 (9) ERROR
+[TIMESTAMP] 1169148685 Thu Jan 18 20:31:25 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-mono-xsp.log 9-mono-xsp.log
+[LOGS] 5-mono-xsp.log 9-mono-xsp.err
 
-[BUILDTIME] 1130 (5) ERROR
-[BUILDTIME] 2813 (9)
-[BUILDTIME] 2812 (5)
-[SIZE] 0.22 MB, 20 files
+[BUILDTIME] 3343 (5)
+[BUILDTIME] 2630 (9) ERROR
+[BUILDTIME] 2658 (9) ERROR
+[BUILDTIME] 2653 (9) ERROR
+[SIZE] 0.29 MB, 31 files
 
-[DEP] 00-dirtree bash2 bzip2 coreutils diffutils findutils gcc34 glibc23
-[DEP] grep make mktemp mono net-tools patch sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 bzip2 coreutils diffutils findutils gawk gcc40
+[DEP] glibc23 grep make mktemp mono net-tools patch sed sysfiles tar
+[DEP] util-linux
 
-[PROVIDES] asp-state codebehind1.dll dbsessmgr extensions.dll
-[PROVIDES] mod-mono-server tabcontrol.dll tabcontrol2.dll typedesc.dll xsp
+[PROVIDES] asp-state asp-state2 codebehind1.dll dbsessmgr dbsessmgr2
+[PROVIDES] extensions.dll mod-mono-server mod-mono-server2 tabcontrol.dll
+[PROVIDES] tabcontrol2.dll treeview.dll typedesc.dll xsp xsp2
+
+[9-ERROR] make[4]: Leaving directory `/ROCK/loop/src.mono-xsp.1169148656.8692.3774722083/xsp-1.0.6/test/1.1/customcontrol'
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.mono-xsp.1169148656.8692.3774722083/xsp-1.0.6/test/1.1/customcontrol'
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.mono-xsp.1169148656.8692.3774722083/xsp-1.0.6/test/1.1'
+[9-ERROR] make[4]: Entering directory `/ROCK/loop/src.mono-xsp.1169148656.8692.3774722083/xsp-1.0.6/test/1.1'
+[9-ERROR] make[4]: Nothing to be done for `install-exec-am'.
+[9-ERROR] make[4]: Nothing to be done for `install-data-am'.
+[9-ERROR] make[4]: Leaving directory `/ROCK/loop/src.mono-xsp.1169148656.8692.3774722083/xsp-1.0.6/test/1.1'
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.mono-xsp.1169148656.8692.3774722083/xsp-1.0.6/test/1.1'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.mono-xsp.1169148656.8692.3774722083/xsp-1.0.6/test/1.1'
+[9-ERROR] Making install in 2.0
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.mono-xsp.1169148656.8692.3774722083/xsp-1.0.6/test/2.0'
+[9-ERROR] Making install in menu
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.mono-xsp.1169148656.8692.3774722083/xsp-1.0.6/test/2.0/menu'
+[9-ERROR] make[4]: Entering directory `/ROCK/loop/src.mono-xsp.1169148656.8692.3774722083/xsp-1.0.6/test/2.0/menu'
+[9-ERROR] make[4]: Nothing to be done for `install-exec-am'.
+[9-ERROR] test -z "/opt/mono/share/doc/xsp/test/2.0/menu" || mkdir -p -- . "/opt/mono/share/doc/xsp/test/2.0/menu"
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'menu1.aspx' '/opt/mono/share/doc/xsp/test/2.0/menu/menu1.aspx'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'menu2.aspx' '/opt/mono/share/doc/xsp/test/2.0/menu/menu2.aspx'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'stock_copy_24.png' '/opt/mono/share/doc/xsp/test/2.0/menu/stock_copy_24.png'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'stock_cut_24.png' '/opt/mono/share/doc/xsp/test/2.0/menu/stock_cut_24.png'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'stock_paste_24.png' '/opt/mono/share/doc/xsp/test/2.0/menu/stock_paste_24.png'
+[9-ERROR] make[4]: Leaving directory `/ROCK/loop/src.mono-xsp.1169148656.8692.3774722083/xsp-1.0.6/test/2.0/menu'
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.mono-xsp.1169148656.8692.3774722083/xsp-1.0.6/test/2.0/menu'
+[9-ERROR] Making install in treeview
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.mono-xsp.1169148656.8692.3774722083/xsp-1.0.6/test/2.0/treeview'
+[9-ERROR] make[4]: Entering directory `/ROCK/loop/src.mono-xsp.1169148656.8692.3774722083/xsp-1.0.6/test/2.0/treeview'
+[9-ERROR] make[4]: Nothing to be done for `install-exec-am'.
+[9-ERROR] test -z "/opt/mono/share/doc/xsp/test/2.0/treeview" || mkdir -p -- . "/opt/mono/share/doc/xsp/test/2.0/treeview"
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'populate-on-demand.aspx' '/opt/mono/share/doc/xsp/test/2.0/treeview/populate-on-demand.aspx'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'populate.cs' '/opt/mono/share/doc/xsp/test/2.0/treeview/populate.cs'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'treeview.aspx' '/opt/mono/share/doc/xsp/test/2.0/treeview/treeview.aspx'
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'treeview-databound.aspx' '/opt/mono/share/doc/xsp/test/2.0/treeview/treeview-databound.aspx'
+[9-ERROR] test -z "/opt/mono/share/doc/xsp/test/bin" || mkdir -p -- . "/opt/mono/share/doc/xsp/test/bin"
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c 'treeview.dll' '/opt/mono/share/doc/xsp/test/bin/treeview.dll'
+[9-ERROR] make  install-data-hook
+[9-ERROR] make[5]: Entering directory `/ROCK/loop/src.mono-xsp.1169148656.8692.3774722083/xsp-1.0.6/test/2.0/treeview'
+[9-ERROR] mkdir /opt/mono/share/doc/xsp/test/2.0/treeview/TreeLineImages
+[9-ERROR] mkdir: cannot create directory `/opt/mono/share/doc/xsp/test/2.0/treeview/TreeLineImages': File exists
+[9-ERROR] make[5]: *** [install-data-hook] Error 1
+[9-ERROR] make[5]: Leaving directory `/ROCK/loop/src.mono-xsp.1169148656.8692.3774722083/xsp-1.0.6/test/2.0/treeview'
+[9-ERROR] make[4]: *** [install-data-am] Error 2
+[9-ERROR] make[4]: Leaving directory `/ROCK/loop/src.mono-xsp.1169148656.8692.3774722083/xsp-1.0.6/test/2.0/treeview'
+[9-ERROR] make[3]: *** [install-am] Error 2
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.mono-xsp.1169148656.8692.3774722083/xsp-1.0.6/test/2.0/treeview'
+[9-ERROR] make[2]: *** [install-recursive] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.mono-xsp.1169148656.8692.3774722083/xsp-1.0.6/test/2.0'
+[9-ERROR] make[1]: *** [install-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.mono-xsp.1169148656.8692.3774722083/xsp-1.0.6/test'
+[9-ERROR] make: *** [install-recursive] Error 1
+[9-ERROR] --- BUILD ERROR ---
 

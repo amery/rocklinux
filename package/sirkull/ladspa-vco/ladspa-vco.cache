@@ -20,20 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142567167 Fri Mar 17 04:46:07 2006 (5)
-[TIMESTAMP] 1142828962 Mon Mar 20 05:29:22 2006 (9)
+[TIMESTAMP] 1168633515 Fri Jan 12 21:25:15 2007 (5)
+[TIMESTAMP] 1168838628 Mon Jan 15 06:23:48 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-ladspa-vco.log 9-ladspa-vco.log
 
-[BUILDTIME] 1168 (5)
-[BUILDTIME] 1516 (9)
+[BUILDTIME] 1216 (5)
+[BUILDTIME] 1486 (9)
 [SIZE] 0.04 MB, 8 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep ladspa make mktemp rrdtool sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils gawk gcc40
+[DEP] gcc40:dev glibc23 glibc23:dev grep ladspa make mktemp rrdtool sed
+[DEP] sysfiles tar
 
 [PROVIDES] blvco.so vco_sawpulse.so
 

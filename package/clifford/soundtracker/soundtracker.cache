@@ -20,26 +20,27 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142550691 Fri Mar 17 00:11:31 2006 (5)
-[TIMESTAMP] 1142808457 Sun Mar 19 23:47:37 2006 (9)
+[TIMESTAMP] 1168620727 Fri Jan 12 17:52:07 2007 (5)
+[TIMESTAMP] 1168824152 Mon Jan 15 02:22:32 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-soundtracker.log 9-soundtracker.log
 
-[BUILDTIME] 4150 (5)
-[BUILDTIME] 4562 (9)
-[SIZE] 0.79 MB, 34 files
+[BUILDTIME] 4031 (5)
+[BUILDTIME] 4368 (9)
+[SIZE] 0.58 MB, 25 files
 
-[DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev bash2 bdb33 binutils
-[DEP] bison bzip2 coreutils diffutils esound esound:dev findutils gawk
-[DEP] gcc34 gcc34:dev gdk-pixbuf10 gdk-pixbuf10:dev gettext glib12
-[DEP] glib12:dev glibc23 glibc23:dev gnome-libs14 gnome-libs14:dev
-[DEP] gnome14-dirtree gnome2-dirtree grep gtk+12 gtk+12:dev imlib imlib:dev
-[DEP] jack jack:dev libsndfile libsndfile:dev linux26-header:dev make
-[DEP] mixmagic mktemp net-tools pkgconfig rrdtool sed sysfiles tar
-[DEP] util-linux xorg xorg:dev
+[DEP] 00-dirtree alsa alsa:dev applewmproto applewmproto:dev audiofile
+[DEP] audiofile:dev bash2 bdb33 binutils bzip2 coreutils cvm diffutils
+[DEP] esound esound:dev findutils flac gawk gcc40 gcc40:dev gdk-pixbuf10
+[DEP] gdk-pixbuf10:dev gettext glib12 glib12:dev glibc23 glibc23:dev
+[DEP] gnome-libs14 gnome-libs14:dev gnome14-dirtree gnome2-dirtree grep
+[DEP] gtk+12 gtk+12:dev imlib imlib:dev libice libsdl libsdl:dev libsm
+[DEP] libsndfile libsndfile:dev libx11 libx11:dev libxau libxdmcp libxext
+[DEP] libxi libxt linux-libc-headers:dev make mixmagic mktemp nas net-tools
+[DEP] pkgconfig rrdtool sed sysfiles tar util-linux xproto:dev zlib
 
 [PROVIDES] soundtracker
 

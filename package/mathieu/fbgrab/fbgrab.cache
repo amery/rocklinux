@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142588288 Fri Mar 17 10:38:08 2006 (5)
-[TIMESTAMP] 1142852693 Mon Mar 20 12:04:53 2006 (9)
+[TIMESTAMP] 1168648620 Sat Jan 13 01:37:00 2007 (5)
+[TIMESTAMP] 1168855134 Mon Jan 15 10:58:54 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-fbgrab.log 9-fbgrab.log
 
-[BUILDTIME] 1202 (5)
-[BUILDTIME] 1489 (9)
+[BUILDTIME] 1244 (5)
+[BUILDTIME] 1447 (9)
 [SIZE] 0.03 MB, 8 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep libpng libpng:dev linux26-header:dev make
-[DEP] mktemp rrdtool sed sysfiles tar zlib:dev
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils gawk
+[DEP] gcc40 gcc40:dev glibc23 glibc23:dev grep libpng libpng:dev
+[DEP] linux-libc-headers:dev make mktemp netpbm rrdtool sed sysfiles tar
+[DEP] twoftpd ucspi-unix zlib zlib:dev
 
 [PROVIDES] fbgrab
 

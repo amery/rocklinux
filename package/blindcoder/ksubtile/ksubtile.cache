@@ -20,25 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142670925 Sat Mar 18 09:35:25 2006 (5)
-[TIMESTAMP] 1142941782 Tue Mar 21 12:49:42 2006 (9)
+[TIMESTAMP] 1168702054 Sat Jan 13 16:27:34 2007 (5) ERROR
+[TIMESTAMP] 1168911729 Tue Jan 16 02:42:09 2007 (9) ERROR
+[TIMESTAMP] 1168954543 Tue Jan 16 14:35:43 2007 (5) ERROR
+[TIMESTAMP] 1168984288 Tue Jan 16 22:51:28 2007 (9) ERROR
+[TIMESTAMP] 1169124874 Thu Jan 18 13:54:34 2007 (5) ERROR
+[TIMESTAMP] 1169154480 Thu Jan 18 22:08:00 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-ksubtile.log 9-ksubtile.log
+[LOGS] 5-ksubtile.err 9-ksubtile.err
 
-[BUILDTIME] 9160 (5)
-[BUILDTIME] 9251 (9)
-[SIZE] 0.34 MB, 15 files
+[BUILDTIME] 3582 (5) ERROR
+[BUILDTIME] 3600 (9) ERROR
+[BUILDTIME] 3633 (5) ERROR
+[BUILDTIME] 3620 (9) ERROR
+[BUILDTIME] 3615 (5) ERROR
+[BUILDTIME] 3621 (9) ERROR
 
-[DEP] 00-dirtree acl acl:dev arts attr attr:dev bash2 binutils bzip2
-[DEP] coreutils diffutils expat fam fam:dev file findutils freetype
-[DEP] freetype:dev gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
-[DEP] kdebase kdelibs kdelibs:dev libart_lgpl23 libart_lgpl23:dev libidn
-[DEP] libidn:dev libjpeg libpng libpng:dev libxml2 linux26-header:dev
-[DEP] make mktemp nas net-tools perl5 qt33 qt33:dev rrdtool sed sysfiles
-[DEP] tar util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] ksubtile ksubtile_client
+[5-ERROR] Making all in .
+[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.ksubtile.1169124833.13034.3641098646/ksubtile-1.1/doc'
+[5-ERROR] make[3]: Nothing to be done for `all-am'.
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.ksubtile.1169124833.13034.3641098646/ksubtile-1.1/doc'
+[5-ERROR] Making all in en
+[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.ksubtile.1169124833.13034.3641098646/ksubtile-1.1/doc/en'
+[5-ERROR] /usr/bin/meinproc --check --cache index.cache.bz2 ./index.docbook
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.ksubtile.1169124833.13034.3641098646/ksubtile-1.1/doc/en'
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ksubtile.1169124833.13034.3641098646/ksubtile-1.1/doc'
+[5-ERROR] Making all in po
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.ksubtile.1169124833.13034.3641098646/ksubtile-1.1/po'
+[5-ERROR] make[2]: Nothing to be done for `all'.
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ksubtile.1169124833.13034.3641098646/ksubtile-1.1/po'
+[5-ERROR] Making all in src
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.ksubtile.1169124833.13034.3641098646/ksubtile-1.1/src'
+[5-ERROR] /opt/qt33/bin/uic -L /usr/lib/kde3/plugins/designer -nounload -o ksubtiledlg.h ./ksubtiledlg.ui
+[5-ERROR] /opt/qt33/bin/uic -L /usr/lib/kde3/plugins/designer -nounload -o prefPageMPlayerDlg.h ./prefPageMPlayerDlg.ui
+[5-ERROR] /opt/qt33/bin/uic -L /usr/lib/kde3/plugins/designer -nounload -o prefPageEditorDlg.h ./prefPageEditorDlg.ui
+[5-ERROR] /opt/qt33/bin/uic -L /usr/lib/kde3/plugins/designer -nounload -o ksubtileplayerdlg.h ./ksubtileplayerdlg.ui
+[5-ERROR] /opt/qt33/bin/uic -L /usr/lib/kde3/plugins/designer -nounload -o selectfromlistdlg.h ./selectfromlistdlg.ui
+[5-ERROR] source='main.cpp' object='main.o' libtool=no \
+[5-ERROR] 	depfile='.deps/main.Po' tmpdepfile='.deps/main.TPo' \
+[5-ERROR] 	depmode=gcc3 /bin/sh ../admin/depcomp \
+[5-ERROR] 	g++-40 -DHAVE_CONFIG_H -I. -I. -I.. -I../src -I/opt/qt33/include -I/usr/X11R7/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -Wall -pedantic -W -Wpointer-arith -Wwrite-strings -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -c -o main.o `test -f 'main.cpp' || echo './'`main.cpp
+[5-ERROR] source='ksubtile.cpp' object='ksubtile.o' libtool=no \
+[5-ERROR] 	depfile='.deps/ksubtile.Po' tmpdepfile='.deps/ksubtile.TPo' \
+[5-ERROR] 	depmode=gcc3 /bin/sh ../admin/depcomp \
+[5-ERROR] 	g++-40 -DHAVE_CONFIG_H -I. -I. -I.. -I../src -I/opt/qt33/include -I/usr/X11R7/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -Wall -pedantic -W -Wpointer-arith -Wwrite-strings -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -c -o ksubtile.o `test -f 'ksubtile.cpp' || echo './'`ksubtile.cpp
+[5-ERROR] ksubtile.cpp: In member function 'void KSubtileApp::initActions()':
+[5-ERROR] ksubtile.cpp:108: warning: 'showToolbar' is deprecated (declared at /usr/include/kstdaction.h:501)
+[5-ERROR] source='ksubtileview.cpp' object='ksubtileview.o' libtool=no \
+[5-ERROR] 	depfile='.deps/ksubtileview.Po' tmpdepfile='.deps/ksubtileview.TPo' \
+[5-ERROR] 	depmode=gcc3 /bin/sh ../admin/depcomp \
+[5-ERROR] 	g++-40 -DHAVE_CONFIG_H -I. -I. -I.. -I../src -I/opt/qt33/include -I/usr/X11R7/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -Wall -pedantic -W -Wpointer-arith -Wwrite-strings -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -c -o ksubtileview.o `test -f 'ksubtileview.cpp' || echo './'`ksubtileview.cpp
+[5-ERROR] /opt/qt33/bin/moc ./pref.h -o pref.moc
+[5-ERROR] source='pref.cpp' object='pref.o' libtool=no \
+[5-ERROR] 	depfile='.deps/pref.Po' tmpdepfile='.deps/pref.TPo' \
+[5-ERROR] 	depmode=gcc3 /bin/sh ../admin/depcomp \
+[5-ERROR] 	g++-40 -DHAVE_CONFIG_H -I. -I. -I.. -I../src -I/opt/qt33/include -I/usr/X11R7/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -Wall -pedantic -W -Wpointer-arith -Wwrite-strings -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -c -o pref.o `test -f 'pref.cpp' || echo './'`pref.cpp
+[5-ERROR] source='csubtitle.cpp' object='csubtitle.o' libtool=no \
+[5-ERROR] 	depfile='.deps/csubtitle.Po' tmpdepfile='.deps/csubtitle.TPo' \
+[5-ERROR] 	depmode=gcc3 /bin/sh ../admin/depcomp \
+[5-ERROR] 	g++-40 -DHAVE_CONFIG_H -I. -I. -I.. -I../src -I/opt/qt33/include -I/usr/X11R7/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -Wall -pedantic -W -Wpointer-arith -Wwrite-strings -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -c -o csubtitle.o `test -f 'csubtitle.cpp' || echo './'`csubtitle.cpp
+[5-ERROR] csubtitles.h:63: error: 'QTextStream' has not been declared
+[5-ERROR] make[2]: *** [csubtitle.o] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ksubtile.1169124833.13034.3641098646/ksubtile-1.1/src'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.ksubtile.1169124833.13034.3641098646/ksubtile-1.1'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] Making all in .
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.ksubtile.1169154440.3574.3852421493/ksubtile-1.1/doc'
+[9-ERROR] make[3]: Nothing to be done for `all-am'.
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.ksubtile.1169154440.3574.3852421493/ksubtile-1.1/doc'
+[9-ERROR] Making all in en
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.ksubtile.1169154440.3574.3852421493/ksubtile-1.1/doc/en'
+[9-ERROR] /usr/bin/meinproc --check --cache index.cache.bz2 ./index.docbook
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.ksubtile.1169154440.3574.3852421493/ksubtile-1.1/doc/en'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ksubtile.1169154440.3574.3852421493/ksubtile-1.1/doc'
+[9-ERROR] Making all in po
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.ksubtile.1169154440.3574.3852421493/ksubtile-1.1/po'
+[9-ERROR] make[2]: Nothing to be done for `all'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ksubtile.1169154440.3574.3852421493/ksubtile-1.1/po'
+[9-ERROR] Making all in src
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.ksubtile.1169154440.3574.3852421493/ksubtile-1.1/src'
+[9-ERROR] /opt/qt33/bin/uic -L /usr/lib/kde3/plugins/designer -nounload -o ksubtiledlg.h ./ksubtiledlg.ui
+[9-ERROR] /opt/qt33/bin/uic -L /usr/lib/kde3/plugins/designer -nounload -o prefPageMPlayerDlg.h ./prefPageMPlayerDlg.ui
+[9-ERROR] /opt/qt33/bin/uic -L /usr/lib/kde3/plugins/designer -nounload -o prefPageEditorDlg.h ./prefPageEditorDlg.ui
+[9-ERROR] /opt/qt33/bin/uic -L /usr/lib/kde3/plugins/designer -nounload -o ksubtileplayerdlg.h ./ksubtileplayerdlg.ui
+[9-ERROR] /opt/qt33/bin/uic -L /usr/lib/kde3/plugins/designer -nounload -o selectfromlistdlg.h ./selectfromlistdlg.ui
+[9-ERROR] source='main.cpp' object='main.o' libtool=no \
+[9-ERROR] 	depfile='.deps/main.Po' tmpdepfile='.deps/main.TPo' \
+[9-ERROR] 	depmode=gcc3 /bin/sh ../admin/depcomp \
+[9-ERROR] 	g++-40 -DHAVE_CONFIG_H -I. -I. -I.. -I../src -I/opt/qt33/include -I/usr/X11R7/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -Wall -pedantic -W -Wpointer-arith -Wwrite-strings -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -c -o main.o `test -f 'main.cpp' || echo './'`main.cpp
+[9-ERROR] source='ksubtile.cpp' object='ksubtile.o' libtool=no \
+[9-ERROR] 	depfile='.deps/ksubtile.Po' tmpdepfile='.deps/ksubtile.TPo' \
+[9-ERROR] 	depmode=gcc3 /bin/sh ../admin/depcomp \
+[9-ERROR] 	g++-40 -DHAVE_CONFIG_H -I. -I. -I.. -I../src -I/opt/qt33/include -I/usr/X11R7/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -Wall -pedantic -W -Wpointer-arith -Wwrite-strings -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -c -o ksubtile.o `test -f 'ksubtile.cpp' || echo './'`ksubtile.cpp
+[9-ERROR] ksubtile.cpp: In member function 'void KSubtileApp::initActions()':
+[9-ERROR] ksubtile.cpp:108: warning: 'showToolbar' is deprecated (declared at /usr/include/kstdaction.h:501)
+[9-ERROR] source='ksubtileview.cpp' object='ksubtileview.o' libtool=no \
+[9-ERROR] 	depfile='.deps/ksubtileview.Po' tmpdepfile='.deps/ksubtileview.TPo' \
+[9-ERROR] 	depmode=gcc3 /bin/sh ../admin/depcomp \
+[9-ERROR] 	g++-40 -DHAVE_CONFIG_H -I. -I. -I.. -I../src -I/opt/qt33/include -I/usr/X11R7/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -Wall -pedantic -W -Wpointer-arith -Wwrite-strings -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -c -o ksubtileview.o `test -f 'ksubtileview.cpp' || echo './'`ksubtileview.cpp
+[9-ERROR] /opt/qt33/bin/moc ./pref.h -o pref.moc
+[9-ERROR] source='pref.cpp' object='pref.o' libtool=no \
+[9-ERROR] 	depfile='.deps/pref.Po' tmpdepfile='.deps/pref.TPo' \
+[9-ERROR] 	depmode=gcc3 /bin/sh ../admin/depcomp \
+[9-ERROR] 	g++-40 -DHAVE_CONFIG_H -I. -I. -I.. -I../src -I/opt/qt33/include -I/usr/X11R7/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -Wall -pedantic -W -Wpointer-arith -Wwrite-strings -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -c -o pref.o `test -f 'pref.cpp' || echo './'`pref.cpp
+[9-ERROR] source='csubtitle.cpp' object='csubtitle.o' libtool=no \
+[9-ERROR] 	depfile='.deps/csubtitle.Po' tmpdepfile='.deps/csubtitle.TPo' \
+[9-ERROR] 	depmode=gcc3 /bin/sh ../admin/depcomp \
+[9-ERROR] 	g++-40 -DHAVE_CONFIG_H -I. -I. -I.. -I../src -I/opt/qt33/include -I/usr/X11R7/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -Wall -pedantic -W -Wpointer-arith -Wwrite-strings -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -DNDEBUG -DNO_DEBUG -O2 -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common  -c -o csubtitle.o `test -f 'csubtitle.cpp' || echo './'`csubtitle.cpp
+[9-ERROR] csubtitles.h:63: error: 'QTextStream' has not been declared
+[9-ERROR] make[2]: *** [csubtitle.o] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ksubtile.1169154440.3574.3852421493/ksubtile-1.1/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.ksubtile.1169154440.3574.3852421493/ksubtile-1.1'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

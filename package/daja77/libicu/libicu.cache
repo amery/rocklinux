@@ -15,134 +15,25 @@
 [COPY] file for details.
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142495370 Thu Mar 16 08:49:30 2006 (5) ERROR
-[TIMESTAMP] 1142745367 Sun Mar 19 06:16:07 2006 (9) ERROR
-[TIMESTAMP] 1142953207 Tue Mar 21 16:00:07 2006 (5) ERROR
-[TIMESTAMP] 1142966424 Tue Mar 21 19:40:24 2006 (9) ERROR
-[TIMESTAMP] 1143027562 Wed Mar 22 12:39:22 2006 (5) ERROR
-[TIMESTAMP] 1143035730 Wed Mar 22 14:55:30 2006 (9) ERROR
+[TIMESTAMP] 1168561872 Fri Jan 12 01:31:12 2007 (5)
+[TIMESTAMP] 1168758601 Sun Jan 14 08:10:01 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-libicu.err 9-libicu.err
+[LOGS] 5-libicu.log 9-libicu.log
 
-[BUILDTIME] 15891 (5) ERROR
-[BUILDTIME] 16593 (9) ERROR
-[BUILDTIME] 16551 (5) ERROR
-[BUILDTIME] 16600 (9) ERROR
-[BUILDTIME] 16599 (5) ERROR
-[BUILDTIME] 16688 (9) ERROR
-[SIZE] 11.27 MB, 67 files
+[BUILDTIME] 16388 (5)
+[BUILDTIME] 17075 (9)
+[SIZE] 11.21 MB, 64 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp net-tools rrdtool sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
+[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev
+[DEP] make mktemp net-tools netpbm rrdtool sed sysfiles tar twoftpd
+[DEP] ucspi-unix
 
 [PROVIDES] decmn derb genbrk genccode gencmn gencnval genrb gensprep genuca
 [PROVIDES] icu-config icuswap libicudata.so libicui18n.so libicuio.so
 [PROVIDES] libicule.so libiculx.so libicutu.so libicuuc.so makeconv
 [PROVIDES] pkgdata uconv
-
-[5-ERROR] /usr/local/lib/libicudata.so.34
-[5-ERROR] /usr/local/lib/libicudata.so.34.0
-[5-ERROR] /usr/local/lib/libicui18n.so
-[5-ERROR] /usr/local/lib/libicui18n.so.34
-[5-ERROR] /usr/local/lib/libicui18n.so.34.0
-[5-ERROR] /usr/local/lib/libicuio.so
-[5-ERROR] /usr/local/lib/libicuio.so.34
-[5-ERROR] /usr/local/lib/libicuio.so.34.0
-[5-ERROR] /usr/local/lib/libicule.so
-[5-ERROR] /usr/local/lib/libicule.so.34
-[5-ERROR] /usr/local/lib/libicule.so.34.0
-[5-ERROR] /usr/local/lib/libiculx.so
-[5-ERROR] /usr/local/lib/libiculx.so.34
-[5-ERROR] /usr/local/lib/libiculx.so.34.0
-[5-ERROR] /usr/local/lib/libicutu.so
-[5-ERROR] /usr/local/lib/libicutu.so.34
-[5-ERROR] /usr/local/lib/libicutu.so.34.0
-[5-ERROR] /usr/local/lib/libicuuc.so
-[5-ERROR] /usr/local/lib/libicuuc.so.34
-[5-ERROR] /usr/local/lib/libicuuc.so.34.0
-[5-ERROR] /usr/local/man
-[5-ERROR] /usr/local/man/man1
-[5-ERROR] /usr/local/man/man1/derb.1
-[5-ERROR] /usr/local/man/man1/gencnval.1
-[5-ERROR] /usr/local/man/man1/genrb.1
-[5-ERROR] /usr/local/man/man1/icu-config.1
-[5-ERROR] /usr/local/man/man1/makeconv.1
-[5-ERROR] /usr/local/man/man1/pkgdata.1
-[5-ERROR] /usr/local/man/man1/uconv.1
-[5-ERROR] /usr/local/man/man8
-[5-ERROR] /usr/local/man/man8/decmn.8
-[5-ERROR] /usr/local/man/man8/genccode.8
-[5-ERROR] /usr/local/man/man8/gencmn.8
-[5-ERROR] /usr/local/man/man8/gensprep.8
-[5-ERROR] /usr/local/man/man8/genuca.8
-[5-ERROR] /usr/local/sbin/decmn
-[5-ERROR] /usr/local/sbin/genccode
-[5-ERROR] /usr/local/sbin/gencmn
-[5-ERROR] /usr/local/sbin/gensprep
-[5-ERROR] /usr/local/sbin/genuca
-[5-ERROR] /usr/local/sbin/icuswap
-[5-ERROR] /usr/local/share/icu
-[5-ERROR] /usr/local/share/icu/3.4
-[5-ERROR] /usr/local/share/icu/3.4/config
-[5-ERROR] /usr/local/share/icu/3.4/config/mh-linux
-[5-ERROR] /usr/local/share/icu/3.4/license.html
-[5-ERROR] /usr/local/share/icu/3.4/mkinstalldirs
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] removed `/var/adm/logs/5-libicu.log'
-[5-ERROR] Finished building libicu=libicu.
-
-[9-ERROR] /usr/local/lib/libicudata.so.34
-[9-ERROR] /usr/local/lib/libicudata.so.34.0
-[9-ERROR] /usr/local/lib/libicui18n.so
-[9-ERROR] /usr/local/lib/libicui18n.so.34
-[9-ERROR] /usr/local/lib/libicui18n.so.34.0
-[9-ERROR] /usr/local/lib/libicuio.so
-[9-ERROR] /usr/local/lib/libicuio.so.34
-[9-ERROR] /usr/local/lib/libicuio.so.34.0
-[9-ERROR] /usr/local/lib/libicule.so
-[9-ERROR] /usr/local/lib/libicule.so.34
-[9-ERROR] /usr/local/lib/libicule.so.34.0
-[9-ERROR] /usr/local/lib/libiculx.so
-[9-ERROR] /usr/local/lib/libiculx.so.34
-[9-ERROR] /usr/local/lib/libiculx.so.34.0
-[9-ERROR] /usr/local/lib/libicutu.so
-[9-ERROR] /usr/local/lib/libicutu.so.34
-[9-ERROR] /usr/local/lib/libicutu.so.34.0
-[9-ERROR] /usr/local/lib/libicuuc.so
-[9-ERROR] /usr/local/lib/libicuuc.so.34
-[9-ERROR] /usr/local/lib/libicuuc.so.34.0
-[9-ERROR] /usr/local/man
-[9-ERROR] /usr/local/man/man1
-[9-ERROR] /usr/local/man/man1/derb.1
-[9-ERROR] /usr/local/man/man1/gencnval.1
-[9-ERROR] /usr/local/man/man1/genrb.1
-[9-ERROR] /usr/local/man/man1/icu-config.1
-[9-ERROR] /usr/local/man/man1/makeconv.1
-[9-ERROR] /usr/local/man/man1/pkgdata.1
-[9-ERROR] /usr/local/man/man1/uconv.1
-[9-ERROR] /usr/local/man/man8
-[9-ERROR] /usr/local/man/man8/decmn.8
-[9-ERROR] /usr/local/man/man8/genccode.8
-[9-ERROR] /usr/local/man/man8/gencmn.8
-[9-ERROR] /usr/local/man/man8/gensprep.8
-[9-ERROR] /usr/local/man/man8/genuca.8
-[9-ERROR] /usr/local/sbin/decmn
-[9-ERROR] /usr/local/sbin/genccode
-[9-ERROR] /usr/local/sbin/gencmn
-[9-ERROR] /usr/local/sbin/gensprep
-[9-ERROR] /usr/local/sbin/genuca
-[9-ERROR] /usr/local/sbin/icuswap
-[9-ERROR] /usr/local/share/icu
-[9-ERROR] /usr/local/share/icu/3.4
-[9-ERROR] /usr/local/share/icu/3.4/config
-[9-ERROR] /usr/local/share/icu/3.4/config/mh-linux
-[9-ERROR] /usr/local/share/icu/3.4/license.html
-[9-ERROR] /usr/local/share/icu/3.4/mkinstalldirs
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] removed `/var/adm/logs/9-libicu.log'
-[9-ERROR] Finished building libicu=libicu.
 

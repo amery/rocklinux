@@ -20,23 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142525704 Thu Mar 16 17:15:04 2006 (5)
-[TIMESTAMP] 1142780840 Sun Mar 19 16:07:20 2006 (9)
+[TIMESTAMP] 1168601031 Fri Jan 12 12:23:51 2007 (5) ERROR
+[TIMESTAMP] 1168803326 Sun Jan 14 20:35:26 2007 (9) ERROR
+[TIMESTAMP] 1168943098 Tue Jan 16 11:24:58 2007 (5) ERROR
+[TIMESTAMP] 1168968694 Tue Jan 16 18:31:34 2007 (9) ERROR
+[TIMESTAMP] 1169086495 Thu Jan 18 03:14:55 2007 (5) ERROR
+[TIMESTAMP] 1169138984 Thu Jan 18 17:49:44 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-pcmcia-cs.log 9-pcmcia-cs.log
+[LOGS] 5-pcmcia-cs.err 9-pcmcia-cs.err
 
-[BUILDTIME] 2042 (5)
-[BUILDTIME] 2470 (9)
-[SIZE] 0.43 MB, 101 files
+[BUILDTIME] 1074 (5) ERROR
+[BUILDTIME] 1088 (9) ERROR
+[BUILDTIME] 1121 (5) ERROR
+[BUILDTIME] 1146 (9) ERROR
+[BUILDTIME] 1126 (5) ERROR
+[BUILDTIME] 1134 (9) ERROR
 
-[DEP] 00-dirtree alien bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] gcc34 gcc34:dev glib12 glib12:dev glibc23 glibc23:dev gnome14-dirtree
-[DEP] grep gtk+12 gtk+12:dev linux26-header:dev linux26-source make man
-[DEP] mktemp patch rrdtool sed sysfiles tar xorg xorg:dev
 
-[PROVIDES] cardctl cardmgr dump_cis ftl_check ftl_format gpccard ide_info
-[PROVIDES] ifport ifuser pack_cis pcinitrd scsi_info
+[5-ERROR] The X11/Xaw libraries are not available.
+[5-ERROR] 
+[5-ERROR] Configuration successful.
+[5-ERROR] 
+[5-ERROR] ** Your kernel is configured with PCMCIA driver support.  Therefore,
+[5-ERROR] ** 'make all' will compile the PCMCIA utilities but not the drivers.
+[5-ERROR] ** See README-2.4 if this is not what you intended!
+[5-ERROR] 
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.pcmcia-cs.1169086480.11122.505546733/pcmcia-cs-3.2.8/cardmgr'
+[5-ERROR] cc  -MD -O3 -Wall -Wstrict-prototypes -pipe -Wa,--no-warn -I../include/static -I/usr/src/linux/include -I../include -I../modules -c cardmgr.c
+[5-ERROR] In file included from cardmgr.c:56:
+[5-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:590: warning: 'struct pcmcia_socket' declared inside parameter list
+[5-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:590: warning: its scope is only this definition or declaration, which is probably not what you want
+[5-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:593: warning: 'struct pcmcia_socket' declared inside parameter list
+[5-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:594: warning: 'struct pcmcia_socket' declared inside parameter list
+[5-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:595: warning: 'struct pcmcia_socket' declared inside parameter list
+[5-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:598: warning: 'struct pcmcia_socket' declared inside parameter list
+[5-ERROR] cc  -c -MD -O -pipe -I../include/static -I/usr/src/linux/include -I../include -I../modules yacc_config.c
+[5-ERROR] In file included from yacc_config.y:40:
+[5-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:590: warning: 'struct pcmcia_socket' declared inside parameter list
+[5-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:590: warning: its scope is only this definition or declaration, which is probably not what you want
+[5-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:593: warning: 'struct pcmcia_socket' declared inside parameter list
+[5-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:594: warning: 'struct pcmcia_socket' declared inside parameter list
+[5-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:595: warning: 'struct pcmcia_socket' declared inside parameter list
+[5-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:598: warning: 'struct pcmcia_socket' declared inside parameter list
+[5-ERROR] cc  -c -MD -O -pipe -I../include/static -I/usr/src/linux/include -I../include -I../modules lex_config.c
+[5-ERROR] cc    cardmgr.o yacc_config.o lex_config.o   -o cardmgr
+[5-ERROR] cc  -O3 -Wall -Wstrict-prototypes -pipe -Wa,--no-warn -I../include/static -I/usr/src/linux/include -I../include -I../modules   cardctl.c   -o cardctl
+[5-ERROR] In file included from cardctl.c:53:
+[5-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:590: warning: 'struct pcmcia_socket' declared inside parameter list
+[5-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:590: warning: its scope is only this definition or declaration, which is probably not what you want
+[5-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:593: warning: 'struct pcmcia_socket' declared inside parameter list
+[5-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:594: warning: 'struct pcmcia_socket' declared inside parameter list
+[5-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:595: warning: 'struct pcmcia_socket' declared inside parameter list
+[5-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:598: warning: 'struct pcmcia_socket' declared inside parameter list
+[5-ERROR] cc  -O3 -Wall -Wstrict-prototypes -pipe -Wa,--no-warn -I../include/static -I/usr/src/linux/include -I../include -I../modules   ifport.c   -o ifport
+[5-ERROR] cc  -O3 -Wall -Wstrict-prototypes -pipe -Wa,--no-warn -I../include/static -I/usr/src/linux/include -I../include -I../modules   ifuser.c   -o ifuser
+[5-ERROR] cc  -O3 -Wall -Wstrict-prototypes -pipe -Wa,--no-warn -I../include/static -I/usr/src/linux/include -I../include -I../modules   scsi_info.c   -o scsi_info
+[5-ERROR] cc  -O3 -Wall -Wstrict-prototypes -pipe -Wa,--no-warn -I../include/static -I/usr/src/linux/include -I../include -I../modules   ide_info.c   -o ide_info
+[5-ERROR] In file included from ide_info.c:44:
+[5-ERROR] /usr/src/linux/include/linux/types.h:147: error: conflicting types for 'blkcnt_t'
+[5-ERROR] /usr/include/sys/types.h:231: error: previous declaration of 'blkcnt_t' was here
+[5-ERROR] ide_info.c: In function 'read_proc_identify':
+[5-ERROR] ide_info.c:92: warning: pointer targets in passing argument 1 of 'fix_string' differ in signedness
+[5-ERROR] ide_info.c:93: warning: pointer targets in passing argument 1 of 'fix_string' differ in signedness
+[5-ERROR] ide_info.c:94: warning: pointer targets in passing argument 1 of 'fix_string' differ in signedness
+[5-ERROR] make[1]: *** [ide_info] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.pcmcia-cs.1169086480.11122.505546733/pcmcia-cs-3.2.8/cardmgr'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] The X11/Xaw libraries are not available.
+[9-ERROR] 
+[9-ERROR] Configuration successful.
+[9-ERROR] 
+[9-ERROR] ** Your kernel is configured with PCMCIA driver support.  Therefore,
+[9-ERROR] ** 'make all' will compile the PCMCIA utilities but not the drivers.
+[9-ERROR] ** See README-2.4 if this is not what you intended!
+[9-ERROR] 
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.pcmcia-cs.1169138969.25522.2177560645/pcmcia-cs-3.2.8/cardmgr'
+[9-ERROR] cc  -MD -O3 -Wall -Wstrict-prototypes -pipe -Wa,--no-warn -I../include/static -I/usr/src/linux/include -I../include -I../modules -c cardmgr.c
+[9-ERROR] In file included from cardmgr.c:56:
+[9-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:590: warning: 'struct pcmcia_socket' declared inside parameter list
+[9-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:590: warning: its scope is only this definition or declaration, which is probably not what you want
+[9-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:593: warning: 'struct pcmcia_socket' declared inside parameter list
+[9-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:594: warning: 'struct pcmcia_socket' declared inside parameter list
+[9-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:595: warning: 'struct pcmcia_socket' declared inside parameter list
+[9-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:598: warning: 'struct pcmcia_socket' declared inside parameter list
+[9-ERROR] cc  -c -MD -O -pipe -I../include/static -I/usr/src/linux/include -I../include -I../modules yacc_config.c
+[9-ERROR] In file included from yacc_config.y:40:
+[9-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:590: warning: 'struct pcmcia_socket' declared inside parameter list
+[9-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:590: warning: its scope is only this definition or declaration, which is probably not what you want
+[9-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:593: warning: 'struct pcmcia_socket' declared inside parameter list
+[9-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:594: warning: 'struct pcmcia_socket' declared inside parameter list
+[9-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:595: warning: 'struct pcmcia_socket' declared inside parameter list
+[9-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:598: warning: 'struct pcmcia_socket' declared inside parameter list
+[9-ERROR] cc  -c -MD -O -pipe -I../include/static -I/usr/src/linux/include -I../include -I../modules lex_config.c
+[9-ERROR] cc    cardmgr.o yacc_config.o lex_config.o   -o cardmgr
+[9-ERROR] cc  -O3 -Wall -Wstrict-prototypes -pipe -Wa,--no-warn -I../include/static -I/usr/src/linux/include -I../include -I../modules   cardctl.c   -o cardctl
+[9-ERROR] In file included from cardctl.c:53:
+[9-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:590: warning: 'struct pcmcia_socket' declared inside parameter list
+[9-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:590: warning: its scope is only this definition or declaration, which is probably not what you want
+[9-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:593: warning: 'struct pcmcia_socket' declared inside parameter list
+[9-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:594: warning: 'struct pcmcia_socket' declared inside parameter list
+[9-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:595: warning: 'struct pcmcia_socket' declared inside parameter list
+[9-ERROR] /usr/src/linux/include/pcmcia/cistpl.h:598: warning: 'struct pcmcia_socket' declared inside parameter list
+[9-ERROR] cc  -O3 -Wall -Wstrict-prototypes -pipe -Wa,--no-warn -I../include/static -I/usr/src/linux/include -I../include -I../modules   ifport.c   -o ifport
+[9-ERROR] cc  -O3 -Wall -Wstrict-prototypes -pipe -Wa,--no-warn -I../include/static -I/usr/src/linux/include -I../include -I../modules   ifuser.c   -o ifuser
+[9-ERROR] cc  -O3 -Wall -Wstrict-prototypes -pipe -Wa,--no-warn -I../include/static -I/usr/src/linux/include -I../include -I../modules   scsi_info.c   -o scsi_info
+[9-ERROR] cc  -O3 -Wall -Wstrict-prototypes -pipe -Wa,--no-warn -I../include/static -I/usr/src/linux/include -I../include -I../modules   ide_info.c   -o ide_info
+[9-ERROR] In file included from ide_info.c:44:
+[9-ERROR] /usr/src/linux/include/linux/types.h:147: error: conflicting types for 'blkcnt_t'
+[9-ERROR] /usr/include/sys/types.h:231: error: previous declaration of 'blkcnt_t' was here
+[9-ERROR] ide_info.c: In function 'read_proc_identify':
+[9-ERROR] ide_info.c:92: warning: pointer targets in passing argument 1 of 'fix_string' differ in signedness
+[9-ERROR] ide_info.c:93: warning: pointer targets in passing argument 1 of 'fix_string' differ in signedness
+[9-ERROR] ide_info.c:94: warning: pointer targets in passing argument 1 of 'fix_string' differ in signedness
+[9-ERROR] make[1]: *** [ide_info] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.pcmcia-cs.1169138969.25522.2177560645/pcmcia-cs-3.2.8/cardmgr'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

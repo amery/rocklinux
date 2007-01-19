@@ -20,22 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142659436 Sat Mar 18 06:23:56 2006 (5)
-[TIMESTAMP] 1142929513 Tue Mar 21 09:25:13 2006 (9)
+[TIMESTAMP] 1168697295 Sat Jan 13 15:08:15 2007 (5) ERROR
+[TIMESTAMP] 1168906629 Tue Jan 16 01:17:09 2007 (9) ERROR
+[TIMESTAMP] 1168954262 Tue Jan 16 14:31:02 2007 (5) ERROR
+[TIMESTAMP] 1168984000 Tue Jan 16 22:46:40 2007 (9) ERROR
+[TIMESTAMP] 1169124594 Thu Jan 18 13:49:54 2007 (5) ERROR
+[TIMESTAMP] 1169154194 Thu Jan 18 22:03:14 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-gammu.log 9-gammu.log
+[LOGS] 5-gammu.err 9-gammu.err
 
-[BUILDTIME] 5057 (5)
-[BUILDTIME] 5156 (9)
-[SIZE] 1.28 MB, 17 files
+[BUILDTIME] 2815 (5) ERROR
+[BUILDTIME] 2821 (9) ERROR
+[BUILDTIME] 2808 (5) ERROR
+[BUILDTIME] 2820 (9) ERROR
+[BUILDTIME] 2824 (5) ERROR
+[BUILDTIME] 2836 (9) ERROR
 
-[DEP] 00-dirtree autoconf bash2 binutils bluez-libs bluez-libs:dev
-[DEP] bzip2 coreutils diffutils findutils gawk gcc34 gcc34:dev glibc23
-[DEP] glibc23:dev grep linux26-header:dev m4 make mktemp net-tools perl5
-[DEP] pkgconfig rpm rrdtool sed sysfiles tar util-linux
 
-[PROVIDES] gammu libGammu.a libGammu.so
+[5-ERROR] common/phone/alcatel/alcatel.c:1254: warning: pointer targets in passing argument 1 of 'UnicodeLength' differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:1254: warning: pointer targets in passing argument 1 of 'UnicodeLength' differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:1255: warning: pointer targets in passing argument 2 of 'EncodeDefault' differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:1264: warning: pointer targets in passing argument 1 of 'UnicodeLength' differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:1264: warning: pointer targets in passing argument 1 of 'UnicodeLength' differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:1265: warning: pointer targets in passing argument 2 of 'EncodeDefault' differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c: In function 'ALCATEL_GetCalendar':
+[5-ERROR] common/phone/alcatel/alcatel.c:2357: warning: 'evdate.Day' may be used uninitialized in this function
+[5-ERROR] common/phone/alcatel/alcatel.c:2357: warning: 'evdate.Month' may be used uninitialized in this function
+[5-ERROR] common/phone/alcatel/alcatel.c:2357: warning: 'evdate.Year' may be used uninitialized in this function
+[5-ERROR] common/phone/alcatel/alcatel.c:2357: warning: 'evdate.Timezone' may be used uninitialized in this function
+[5-ERROR] common/phone/alcatel/alcatel.c: In function 'ALCATEL_GetAlarm':
+[5-ERROR] common/phone/alcatel/alcatel.c:3109: warning: pointer targets in passing argument 1 of 'CopyUnicodeString' differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c: In function 'ALCATEL_SetAlarm':
+[5-ERROR] common/phone/alcatel/alcatel.c:3173: warning: pointer targets in passing argument 2 of 'CopyUnicodeString' differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c: At top level:
+[5-ERROR] common/phone/alcatel/alcatel.c:3834: error: static declaration of 'ALCATELReplyFunctions' follows non-static declaration
+[5-ERROR] common/phone/alcatel/alcatel.c:59: error: previous declaration of 'ALCATELReplyFunctions' was here
+[5-ERROR] common/phone/alcatel/alcatel.c:3835: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3836: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3837: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3838: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3839: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3840: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3841: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3842: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3843: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3844: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3845: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3846: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3847: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3848: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3849: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3850: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3851: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3852: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3853: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3854: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3855: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3856: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3857: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3858: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3859: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3860: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3861: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3862: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3863: warning: pointer targets in initialization differ in signedness
+[5-ERROR] common/phone/alcatel/alcatel.c:3864: warning: pointer targets in initialization differ in signedness
+[5-ERROR] make: *** [common/phone/alcatel/alcatel.o] Error 1
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] common/phone/alcatel/alcatel.c:1254: warning: pointer targets in passing argument 1 of 'UnicodeLength' differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:1254: warning: pointer targets in passing argument 1 of 'UnicodeLength' differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:1255: warning: pointer targets in passing argument 2 of 'EncodeDefault' differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:1264: warning: pointer targets in passing argument 1 of 'UnicodeLength' differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:1264: warning: pointer targets in passing argument 1 of 'UnicodeLength' differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:1265: warning: pointer targets in passing argument 2 of 'EncodeDefault' differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c: In function 'ALCATEL_GetCalendar':
+[9-ERROR] common/phone/alcatel/alcatel.c:2357: warning: 'evdate.Day' may be used uninitialized in this function
+[9-ERROR] common/phone/alcatel/alcatel.c:2357: warning: 'evdate.Month' may be used uninitialized in this function
+[9-ERROR] common/phone/alcatel/alcatel.c:2357: warning: 'evdate.Year' may be used uninitialized in this function
+[9-ERROR] common/phone/alcatel/alcatel.c:2357: warning: 'evdate.Timezone' may be used uninitialized in this function
+[9-ERROR] common/phone/alcatel/alcatel.c: In function 'ALCATEL_GetAlarm':
+[9-ERROR] common/phone/alcatel/alcatel.c:3109: warning: pointer targets in passing argument 1 of 'CopyUnicodeString' differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c: In function 'ALCATEL_SetAlarm':
+[9-ERROR] common/phone/alcatel/alcatel.c:3173: warning: pointer targets in passing argument 2 of 'CopyUnicodeString' differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c: At top level:
+[9-ERROR] common/phone/alcatel/alcatel.c:3834: error: static declaration of 'ALCATELReplyFunctions' follows non-static declaration
+[9-ERROR] common/phone/alcatel/alcatel.c:59: error: previous declaration of 'ALCATELReplyFunctions' was here
+[9-ERROR] common/phone/alcatel/alcatel.c:3835: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3836: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3837: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3838: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3839: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3840: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3841: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3842: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3843: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3844: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3845: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3846: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3847: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3848: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3849: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3850: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3851: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3852: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3853: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3854: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3855: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3856: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3857: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3858: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3859: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3860: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3861: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3862: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3863: warning: pointer targets in initialization differ in signedness
+[9-ERROR] common/phone/alcatel/alcatel.c:3864: warning: pointer targets in initialization differ in signedness
+[9-ERROR] make: *** [common/phone/alcatel/alcatel.o] Error 1
+[9-ERROR] --- BUILD ERROR ---
 

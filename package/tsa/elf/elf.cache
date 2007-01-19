@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142482201 Thu Mar 16 05:10:01 2006 (5)
-[TIMESTAMP] 1142728416 Sun Mar 19 01:33:36 2006 (9)
+[TIMESTAMP] 1168560291 Fri Jan 12 01:04:51 2007 (5)
+[TIMESTAMP] 1168756748 Sun Jan 14 07:39:08 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-elf.log 9-elf.log
 
-[BUILDTIME] 1426 (5)
-[BUILDTIME] 1972 (9)
-[SIZE] 0.13 MB, 8 files
+[BUILDTIME] 1403 (5)
+[BUILDTIME] 1925 (9)
+[SIZE] 0.04 MB, 8 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] ncurses:dev net-tools readline readline:dev rrdtool sed sysfiles
-[DEP] tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
+[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev
+[DEP] make mktemp ncurses net-tools netpbm readline readline:dev rrdtool
+[DEP] sed sysfiles tar twoftpd ucspi-unix util-linux
 
 [PROVIDES] elf
 

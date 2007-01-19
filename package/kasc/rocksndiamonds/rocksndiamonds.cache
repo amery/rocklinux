@@ -1,20 +1,123 @@
 
-[TIMESTAMP] 1142638049 Sat Mar 18 00:27:29 2006 (5)
-[TIMESTAMP] 1142906043 Tue Mar 21 02:54:03 2006 (9)
+[TIMESTAMP] 1168686514 Sat Jan 13 12:08:34 2007 (5) ERROR
+[TIMESTAMP] 1168894981 Mon Jan 15 22:03:01 2007 (9) ERROR
+[TIMESTAMP] 1168952490 Tue Jan 16 14:01:30 2007 (5) ERROR
+[TIMESTAMP] 1168982182 Tue Jan 16 22:16:22 2007 (9) ERROR
+[TIMESTAMP] 1169122819 Thu Jan 18 13:20:19 2007 (5) ERROR
+[TIMESTAMP] 1169152385 Thu Jan 18 21:33:05 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-rocksndiamonds.log 9-rocksndiamonds.log
+[LOGS] 5-rocksndiamonds.err 9-rocksndiamonds.err
 
-[BUILDTIME] 3044 (5)
-[BUILDTIME] 3186 (9)
-[SIZE] 6.90 MB, 608 files
+[BUILDTIME] 1046 (5) ERROR
+[BUILDTIME] 1038 (9) ERROR
+[BUILDTIME] 1041 (5) ERROR
+[BUILDTIME] 1046 (9) ERROR
+[BUILDTIME] 1072 (5) ERROR
+[BUILDTIME] 1065 (9) ERROR
 
-[DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep libjpeg libpng libsdl libsdl:dev
-[DEP] libsdl_image libsdl_image:dev libsdl_mixer libsdl_mixer:dev
-[DEP] libsdl_net libsdl_net:dev linux26-header:dev make mktemp nas
-[DEP] ogg-vorbis rrdtool sed smpeg sysfiles tar xorg
 
+[5-ERROR] Copy:   --version
+[5-ERROR] Append: -s
+[5-ERROR] New Command: gcc-40 -O1 -pipe --version -s
+[5-ERROR] gcc-40 (GCC) 4.0.3
+[5-ERROR] Copyright (C) 2006 Free Software Foundation, Inc.
+[5-ERROR] This is free software; see the source for copying conditions.  There is NO
+[5-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[5-ERROR] 
+[5-ERROR] [ writing debug log to /ROCK/src.rocksndiamonds.1169122808.14607.1424082316/cmd_wrapper.log ]
+[5-ERROR] Running main build function 'build_this_package' ...
+[5-ERROR] Extracting rocksndiamonds-3.1.0.tar.bz2 (--use-compress-program=bzip2 -xf) ... 
+[5-ERROR] Fixing ownership and permissions ...
+[5-ERROR] Removing CVS and .svn directories ...
+[5-ERROR] Changeing into /ROCK/src.rocksndiamonds.1169122808.14607.1424082316/rocksndiamonds-3.1.0 ...
+[5-ERROR] Creating /usr/<..> if required ...
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.rocksndiamonds.1169122808.14607.1424082316/rocksndiamonds-3.1.0/src'
+[5-ERROR] make -C libgame clean
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.rocksndiamonds.1169122808.14607.1424082316/rocksndiamonds-3.1.0/src/libgame'
+[5-ERROR] rm -f system.o gadgets.o text.o sound.o joystick.o toons.o pcx.o image.o random.o hash.o setup.o misc.o msdos.o x11.o sdl.o
+[5-ERROR] rm -f libgame.a
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.rocksndiamonds.1169122808.14607.1424082316/rocksndiamonds-3.1.0/src/libgame'
+[5-ERROR] rm -f main.o conf_gfx.o conf_snd.o conf_mus.o conf_hlp.o init.o config.o events.o tools.o screens.o game.o editor.o files.o tape.o cartoons.o network.o netserv.o
+[5-ERROR] rm -f libgame/libgame.a
+[5-ERROR] rm -f windows_icon.ico
+[5-ERROR] rm -f windows_icon.o
+[5-ERROR] rm -f ../rocksndiamonds
+[5-ERROR] rm -f ../*.exe
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.rocksndiamonds.1169122808.14607.1424082316/rocksndiamonds-3.1.0/src'
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.rocksndiamonds.1169122808.14607.1424082316/rocksndiamonds-3.1.0/src'
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.rocksndiamonds.1169122808.14607.1424082316/rocksndiamonds-3.1.0/src/libgame'
+[5-ERROR] gcc-40   -Wall			 -DTARGET_SDL -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT   -DRO_GAME_DIR="\"/usr/share/rocksndiamonds\"" -DRW_GAME_DIR="\"var/games/scores\""   -c system.c
+[5-ERROR] gcc-40   -Wall			 -DTARGET_SDL -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT   -DRO_GAME_DIR="\"/usr/share/rocksndiamonds\"" -DRW_GAME_DIR="\"var/games/scores\""   -c gadgets.c
+[5-ERROR] gcc-40   -Wall			 -DTARGET_SDL -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT   -DRO_GAME_DIR="\"/usr/share/rocksndiamonds\"" -DRW_GAME_DIR="\"var/games/scores\""   -c text.c
+[5-ERROR] gcc-40   -Wall			 -DTARGET_SDL -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT   -DRO_GAME_DIR="\"/usr/share/rocksndiamonds\"" -DRW_GAME_DIR="\"var/games/scores\""   -c sound.c
+[5-ERROR] gcc-40   -Wall			 -DTARGET_SDL -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT   -DRO_GAME_DIR="\"/usr/share/rocksndiamonds\"" -DRW_GAME_DIR="\"var/games/scores\""   -c joystick.c
+[5-ERROR] gcc-40   -Wall			 -DTARGET_SDL -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT   -DRO_GAME_DIR="\"/usr/share/rocksndiamonds\"" -DRW_GAME_DIR="\"var/games/scores\""   -c toons.c
+[5-ERROR] gcc-40   -Wall			 -DTARGET_SDL -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT   -DRO_GAME_DIR="\"/usr/share/rocksndiamonds\"" -DRW_GAME_DIR="\"var/games/scores\""   -c pcx.c
+[5-ERROR] gcc-40   -Wall			 -DTARGET_SDL -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT   -DRO_GAME_DIR="\"/usr/share/rocksndiamonds\"" -DRW_GAME_DIR="\"var/games/scores\""   -c image.c
+[5-ERROR] gcc-40   -Wall			 -DTARGET_SDL -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT   -DRO_GAME_DIR="\"/usr/share/rocksndiamonds\"" -DRW_GAME_DIR="\"var/games/scores\""   -c random.c
+[5-ERROR] gcc-40   -Wall			 -DTARGET_SDL -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT   -DRO_GAME_DIR="\"/usr/share/rocksndiamonds\"" -DRW_GAME_DIR="\"var/games/scores\""   -c hash.c
+[5-ERROR] gcc-40   -Wall			 -DTARGET_SDL -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT   -DRO_GAME_DIR="\"/usr/share/rocksndiamonds\"" -DRW_GAME_DIR="\"var/games/scores\""   -c setup.c
+[5-ERROR] setup.c: In function 'setLevelArtworkDir':
+[5-ERROR] setup.c:299: error: invalid lvalue in unary '&'
+[5-ERROR] setup.c:300: error: invalid lvalue in unary '&'
+[5-ERROR] make[2]: *** [setup.o] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.rocksndiamonds.1169122808.14607.1424082316/rocksndiamonds-3.1.0/src/libgame'
+[5-ERROR] make[1]: *** [libgame_dir] Error 2
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.rocksndiamonds.1169122808.14607.1424082316/rocksndiamonds-3.1.0/src'
+[5-ERROR] make: *** [sdl] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] Copy:   --version
+[9-ERROR] Append: -s
+[9-ERROR] New Command: gcc-40 -O1 -pipe --version -s
+[9-ERROR] gcc-40 (GCC) 4.0.3
+[9-ERROR] Copyright (C) 2006 Free Software Foundation, Inc.
+[9-ERROR] This is free software; see the source for copying conditions.  There is NO
+[9-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[9-ERROR] 
+[9-ERROR] [ writing debug log to /ROCK/src.rocksndiamonds.1169152375.4921.1667074915/cmd_wrapper.log ]
+[9-ERROR] Running main build function 'build_this_package' ...
+[9-ERROR] Extracting rocksndiamonds-3.1.0.tar.bz2 (--use-compress-program=bzip2 -xf) ... 
+[9-ERROR] Fixing ownership and permissions ...
+[9-ERROR] Removing CVS and .svn directories ...
+[9-ERROR] Changeing into /ROCK/src.rocksndiamonds.1169152375.4921.1667074915/rocksndiamonds-3.1.0 ...
+[9-ERROR] Creating /usr/<..> if required ...
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.rocksndiamonds.1169152375.4921.1667074915/rocksndiamonds-3.1.0/src'
+[9-ERROR] make -C libgame clean
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.rocksndiamonds.1169152375.4921.1667074915/rocksndiamonds-3.1.0/src/libgame'
+[9-ERROR] rm -f system.o gadgets.o text.o sound.o joystick.o toons.o pcx.o image.o random.o hash.o setup.o misc.o msdos.o x11.o sdl.o
+[9-ERROR] rm -f libgame.a
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.rocksndiamonds.1169152375.4921.1667074915/rocksndiamonds-3.1.0/src/libgame'
+[9-ERROR] rm -f main.o conf_gfx.o conf_snd.o conf_mus.o conf_hlp.o init.o config.o events.o tools.o screens.o game.o editor.o files.o tape.o cartoons.o network.o netserv.o
+[9-ERROR] rm -f libgame/libgame.a
+[9-ERROR] rm -f windows_icon.ico
+[9-ERROR] rm -f windows_icon.o
+[9-ERROR] rm -f ../rocksndiamonds
+[9-ERROR] rm -f ../*.exe
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.rocksndiamonds.1169152375.4921.1667074915/rocksndiamonds-3.1.0/src'
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.rocksndiamonds.1169152375.4921.1667074915/rocksndiamonds-3.1.0/src'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.rocksndiamonds.1169152375.4921.1667074915/rocksndiamonds-3.1.0/src/libgame'
+[9-ERROR] gcc-40   -Wall			 -DTARGET_SDL -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT   -DRO_GAME_DIR="\"/usr/share/rocksndiamonds\"" -DRW_GAME_DIR="\"var/games/scores\""   -c system.c
+[9-ERROR] gcc-40   -Wall			 -DTARGET_SDL -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT   -DRO_GAME_DIR="\"/usr/share/rocksndiamonds\"" -DRW_GAME_DIR="\"var/games/scores\""   -c gadgets.c
+[9-ERROR] gcc-40   -Wall			 -DTARGET_SDL -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT   -DRO_GAME_DIR="\"/usr/share/rocksndiamonds\"" -DRW_GAME_DIR="\"var/games/scores\""   -c text.c
+[9-ERROR] gcc-40   -Wall			 -DTARGET_SDL -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT   -DRO_GAME_DIR="\"/usr/share/rocksndiamonds\"" -DRW_GAME_DIR="\"var/games/scores\""   -c sound.c
+[9-ERROR] gcc-40   -Wall			 -DTARGET_SDL -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT   -DRO_GAME_DIR="\"/usr/share/rocksndiamonds\"" -DRW_GAME_DIR="\"var/games/scores\""   -c joystick.c
+[9-ERROR] gcc-40   -Wall			 -DTARGET_SDL -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT   -DRO_GAME_DIR="\"/usr/share/rocksndiamonds\"" -DRW_GAME_DIR="\"var/games/scores\""   -c toons.c
+[9-ERROR] gcc-40   -Wall			 -DTARGET_SDL -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT   -DRO_GAME_DIR="\"/usr/share/rocksndiamonds\"" -DRW_GAME_DIR="\"var/games/scores\""   -c pcx.c
+[9-ERROR] gcc-40   -Wall			 -DTARGET_SDL -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT   -DRO_GAME_DIR="\"/usr/share/rocksndiamonds\"" -DRW_GAME_DIR="\"var/games/scores\""   -c image.c
+[9-ERROR] gcc-40   -Wall			 -DTARGET_SDL -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT   -DRO_GAME_DIR="\"/usr/share/rocksndiamonds\"" -DRW_GAME_DIR="\"var/games/scores\""   -c random.c
+[9-ERROR] gcc-40   -Wall			 -DTARGET_SDL -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT   -DRO_GAME_DIR="\"/usr/share/rocksndiamonds\"" -DRW_GAME_DIR="\"var/games/scores\""   -c hash.c
+[9-ERROR] gcc-40   -Wall			 -DTARGET_SDL -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT   -DRO_GAME_DIR="\"/usr/share/rocksndiamonds\"" -DRW_GAME_DIR="\"var/games/scores\""   -c setup.c
+[9-ERROR] setup.c: In function 'setLevelArtworkDir':
+[9-ERROR] setup.c:299: error: invalid lvalue in unary '&'
+[9-ERROR] setup.c:300: error: invalid lvalue in unary '&'
+[9-ERROR] make[2]: *** [setup.o] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.rocksndiamonds.1169152375.4921.1667074915/rocksndiamonds-3.1.0/src/libgame'
+[9-ERROR] make[1]: *** [libgame_dir] Error 2
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.rocksndiamonds.1169152375.4921.1667074915/rocksndiamonds-3.1.0/src'
+[9-ERROR] make: *** [sdl] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

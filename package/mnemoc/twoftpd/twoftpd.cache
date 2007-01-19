@@ -20,22 +20,81 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142605949 Fri Mar 17 15:32:29 2006 (5)
-[TIMESTAMP] 1142871336 Mon Mar 20 17:15:36 2006 (9)
+[TIMESTAMP] 1168663269 Sat Jan 13 05:41:09 2007 (5) ERROR
+[TIMESTAMP] 1168871011 Mon Jan 15 15:23:31 2007 (9) ERROR
+[TIMESTAMP] 1168950428 Tue Jan 16 13:27:08 2007 (5) ERROR
+[TIMESTAMP] 1168979841 Tue Jan 16 21:37:21 2007 (9) ERROR
+[TIMESTAMP] 1169150050 Thu Jan 18 20:54:10 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-twoftpd.log 9-twoftpd.log
+[LOGS] 5-twoftpd.err 9-twoftpd.err
 
-[BUILDTIME] 1598 (5)
-[BUILDTIME] 1871 (9)
-[SIZE] 0.17 MB, 17 files
+[BUILDTIME] 1631 (5) ERROR
+[BUILDTIME] 1880 (9) ERROR
+[BUILDTIME] 1898 (5) ERROR
+[BUILDTIME] 1899 (9) ERROR
+[BUILDTIME] 1886 (9) ERROR
+[SIZE] 0.17 MB, 19 files
 
-[DEP] 00-dirtree bash2 bglibs bglibs:dev binutils bzip2 coreutils cvm:dev
-[DEP] findutils gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp rrdtool sed sysfiles tar
+[DEP] 00-dirtree bash2 bglibs bglibs:dev binutils bzip2 coreutils cvm
+[DEP] cvm:dev findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev grep
+[DEP] linux-libc-headers:dev make mktemp netpbm rrdtool sed sysfiles
+[DEP] tar ucspi-unix
 
-[PROVIDES] twoftpd-anon twoftpd-anon-conf twoftpd-auth twoftpd-bind-port
+[PROVIDES] .  twoftpd-anon twoftpd-anon-conf twoftpd-auth twoftpd-bind-port
 [PROVIDES] twoftpd-conf twoftpd-drop twoftpd-switch twoftpd-xfer
+
+
+[9-ERROR] ( ( ./compile trylib.c && ./load trylib -lsocket -lnsl ) >/dev/null 2>&1 \
+[9-ERROR] 	  && echo -lsocket -lnsl || exit 0 ) >socket.lib
+[9-ERROR] rm -f trylib.o trylib
+[9-ERROR] ./load twoftpd-anon backend.a main.a -lbg-path -lbg-iobuf -lbg-net -lbg-unix -lbg-str `cat socket.lib`
+[9-ERROR] ./compile twoftpd-auth.c
+[9-ERROR] ./load twoftpd-auth main.a -lcvm-client -lbg-iobuf -lbg-net -lbg-unix `cat socket.lib`
+[9-ERROR] ./compile twoftpd-conf.c
+[9-ERROR] ./load twoftpd-conf conf.o -lbg-msg -lbg-iobuf 
+[9-ERROR] ./compile twoftpd-drop.c
+[9-ERROR] ./load twoftpd-drop backend.a main.a -lbg-path -lbg-iobuf -lbg-net -lbg-unix -lbg-str `cat socket.lib`
+[9-ERROR] ./compile twoftpd-bind-port.c
+[9-ERROR] ./load twoftpd-bind-port respond.o log.o -lbg-msg -lbg-net -lbg-str -lbg-iobuf 
+[9-ERROR] ./compile twoftpd-xfer.c
+[9-ERROR] ./load twoftpd-xfer backend.a main.a -lbg-path -lbg-iobuf -lbg-net -lbg-unix -lbg-str `cat socket.lib`
+[9-ERROR] ./compile twoftpd-switch.c
+[9-ERROR] ./load twoftpd-switch respond.o log.o -lbg 
+[9-ERROR] head -n 1 conf-man | \
+[9-ERROR] 	  sed -e 's/"/\\"/g' \
+[9-ERROR] 	      -e 's/^/const char conf_man[] = "/' \
+[9-ERROR] 	      -e 's/$/";/' >conf_man.c
+[9-ERROR] ./compile insthier.c
+[9-ERROR] ./load insthier -lbg-installer
+[9-ERROR] mv insthier installer
+[9-ERROR] ./load insthier -lbg-instcheck
+[9-ERROR] mv insthier instcheck
+[9-ERROR] ./load insthier -lbg-instshow
+[9-ERROR] mv insthier instshow
+[9-ERROR] Trying to copy the default documentation ...
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing /lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 24 files for this package.
+[9-ERROR] Applying package split: 40 twoftpd:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[9-ERROR] Applying package split: 42 twoftpd:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 twoftpd:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <twoftpd> Creating flist file ...
+[9-ERROR] <twoftpd> Creating package dependencies file ...
+[9-ERROR] <twoftpd> Creating package description ...
+[9-ERROR] <twoftpd> Creating md5sum and cksum files ...
+[9-ERROR] <twoftpd:doc> Creating flist file ...
+[9-ERROR] <twoftpd:doc> Creating package dependencies file ...
+[9-ERROR] <twoftpd:doc> Creating package description ...
+[9-ERROR] <twoftpd:doc> Creating md5sum and cksum files ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] usr/bin/.: coreutils procps twoftpd ucspi-unix
+[9-ERROR] usr/share/man/man1: 00-dirtree netpbm twoftpd ucspi-unix
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] --- BUILD ERROR ---
 

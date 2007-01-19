@@ -20,22 +20,27 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142650770 Sat Mar 18 03:59:30 2006 (5)
-[TIMESTAMP] 1142920178 Tue Mar 21 06:49:38 2006 (9)
+[TIMESTAMP] 1168692476 Sat Jan 13 13:47:56 2007 (5)
+[TIMESTAMP] 1168901467 Mon Jan 15 23:51:07 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-xcompmgr.log 9-xcompmgr.log
 
-[BUILDTIME] 2727 (5)
-[BUILDTIME] 2870 (9)
+[BUILDTIME] 2696 (5)
+[BUILDTIME] 2824 (9)
 [SIZE] 0.04 MB, 8 files
 
-[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils findutils gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev m4 make mktemp net-tools perl5 pkgconfig rrdtool
-[DEP] sed sysfiles tar util-linux xorg xorg:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev autoconf automake19 bash2
+[DEP] binutils bzip2 compositeproto:dev coreutils cvm damageproto:dev
+[DEP] diffutils findutils fixesproto:dev gawk gcc40 gcc40:dev glibc23
+[DEP] glibc23:dev grep libx11 libx11:dev libxau libxcomposite
+[DEP] libxcomposite:dev libxdamage libxdamage:dev libxdmcp
+[DEP] libxext libxfixes libxfixes:dev libxrender libxrender:dev
+[DEP] linux-libc-headers:dev m4 make mktemp net-tools netpbm perl5
+[DEP] pkgconfig renderproto:dev rrdtool sed sysfiles tar twoftpd ucspi-unix
+[DEP] util-linux xproto:dev
 
 [PROVIDES] xcompmgr
 

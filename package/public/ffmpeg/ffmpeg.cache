@@ -20,26 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142524606 Thu Mar 16 16:56:46 2006 (5)
-[TIMESTAMP] 1142779541 Sun Mar 19 15:45:41 2006 (9)
+[TIMESTAMP] 1168600181 Fri Jan 12 12:09:41 2007 (5) ERROR
+[TIMESTAMP] 1168802394 Sun Jan 14 20:19:54 2007 (9) ERROR
+[TIMESTAMP] 1168943029 Tue Jan 16 11:23:49 2007 (5) ERROR
+[TIMESTAMP] 1168968623 Tue Jan 16 18:30:23 2007 (9) ERROR
+[TIMESTAMP] 1169086424 Thu Jan 18 03:13:44 2007 (5) ERROR
+[TIMESTAMP] 1169138913 Thu Jan 18 17:48:33 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-ffmpeg.log 9-ffmpeg.log
+[LOGS] 5-ffmpeg.err 9-ffmpeg.err
 
-[BUILDTIME] 10662 (5)
-[BUILDTIME] 11202 (9)
-[SIZE] 3.97 MB, 24 files
+[BUILDTIME] 8965 (5) ERROR
+[BUILDTIME] 9013 (9) ERROR
+[BUILDTIME] 9031 (5) ERROR
+[BUILDTIME] 9053 (9) ERROR
+[BUILDTIME] 9044 (5) ERROR
+[BUILDTIME] 9003 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils faac faac:dev
-[DEP] faad2 faad2:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep gsm:dev lame lame:dev libsdl libsdl:dev
-[DEP] libtheora libtheora:dev linux26-header:dev make mktemp mpeg4ip
-[DEP] nas ogg-vorbis ogg-vorbis:dev patch perl5 rrdtool sed sysfiles tar
-[DEP] tetex x264:dev xorg xorg:dev xvid:dev zlib:dev
 
-[PROVIDES] drawtext.so ffmpeg ffplay ffserver fish.so libavcodec-CVS.so
-[PROVIDES] libavcodec.so libavformat-CVS.so libavformat.so libavutil-CVS.so
-[PROVIDES] libavutil.so null.so ppm.so watermark.so
+[5-ERROR] wmadec.c:883: warning: pointer targets in assignment differ in signedness
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o wnv1.o wnv1.c
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o ws-snd1.o ws-snd1.c
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o xan.o xan.c
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o xl.o xl.c
+[5-ERROR] xl.c: In function 'decode_frame':
+[5-ERROR] xl.c:50: warning: 'c1' may be used uninitialized in this function
+[5-ERROR] xl.c:50: warning: 'c0' may be used uninitialized in this function
+[5-ERROR] xl.c:50: warning: 'y3' may be used uninitialized in this function
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o bmp.o bmp.c
+[5-ERROR] bmp.c: In function 'bmp_decode_frame':
+[5-ERROR] bmp.c:59: warning: 'rgb[0]' may be used uninitialized in this function
+[5-ERROR] bmp.c:59: warning: 'rgb[1]' may be used uninitialized in this function
+[5-ERROR] bmp.c:59: warning: 'rgb[2]' may be used uninitialized in this function
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o mmvideo.o mmvideo.c
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o zmbv.o zmbv.c
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o pthread.o pthread.c
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o a52dec.o a52dec.c
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o liba52/bit_allocate.o liba52/bit_allocate.c
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o liba52/bitstream.o liba52/bitstream.c
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o liba52/downmix.o liba52/downmix.c
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o liba52/imdct.o liba52/imdct.c
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o liba52/parse.o liba52/parse.c
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o liba52/crc.o liba52/crc.c
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o liba52/resample.o liba52/resample.c
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o faad.o faad.c
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o faac.o faac.c
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o xvidff.o xvidff.c
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o xvid_rc.o xvid_rc.c
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o x264.o x264.c
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o mp3lameaudio.o mp3lameaudio.c
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o oggvorbis.o oggvorbis.c
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o oggtheora.o oggtheora.c
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o libgsm.o libgsm.c
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o i386/fdct_mmx.o i386/fdct_mmx.c
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o i386/cputest.o i386/cputest.c
+[5-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o i386/dsputil_mmx.o i386/dsputil_mmx.c
+[5-ERROR] In file included from i386/dsputil_mmx.c:2492:
+[5-ERROR] i386/h264dsp_mmx.c:49:1: warning: "SBUTTERFLY" redefined
+[5-ERROR] i386/dsputil_mmx.c:1525:1: warning: this is the location of the previous definition
+[5-ERROR] In file included from i386/dsputil_mmx.c:2492:
+[5-ERROR] i386/h264dsp_mmx.c: In function 'h264_h_loop_filter_luma_mmx2':
+[5-ERROR] i386/dsputil_mmx.c:621: error: can't find a register in class 'GENERAL_REGS' while reloading 'asm'
+[5-ERROR] i386/dsputil_mmx.c:621: error: can't find a register in class 'GENERAL_REGS' while reloading 'asm'
+[5-ERROR] i386/h264dsp_mmx.c:1135:1: warning: "PUT_OP" redefined
+[5-ERROR] i386/dsputil_mmx.c:2377:1: warning: this is the location of the previous definition
+[5-ERROR] make[1]: *** [i386/dsputil_mmx.o] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.ffmpeg.1169086334.19692.505546733/ffmpeg-2006-03-07/libavcodec'
+[5-ERROR] make: *** [lib] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] wmadec.c:883: warning: pointer targets in assignment differ in signedness
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o wnv1.o wnv1.c
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o ws-snd1.o ws-snd1.c
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o xan.o xan.c
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o xl.o xl.c
+[9-ERROR] xl.c: In function 'decode_frame':
+[9-ERROR] xl.c:50: warning: 'c1' may be used uninitialized in this function
+[9-ERROR] xl.c:50: warning: 'c0' may be used uninitialized in this function
+[9-ERROR] xl.c:50: warning: 'y3' may be used uninitialized in this function
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o bmp.o bmp.c
+[9-ERROR] bmp.c: In function 'bmp_decode_frame':
+[9-ERROR] bmp.c:59: warning: 'rgb[0]' may be used uninitialized in this function
+[9-ERROR] bmp.c:59: warning: 'rgb[1]' may be used uninitialized in this function
+[9-ERROR] bmp.c:59: warning: 'rgb[2]' may be used uninitialized in this function
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o mmvideo.o mmvideo.c
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o zmbv.o zmbv.c
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o pthread.o pthread.c
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o a52dec.o a52dec.c
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o liba52/bit_allocate.o liba52/bit_allocate.c
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o liba52/bitstream.o liba52/bitstream.c
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o liba52/downmix.o liba52/downmix.c
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o liba52/imdct.o liba52/imdct.c
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o liba52/parse.o liba52/parse.c
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o liba52/crc.o liba52/crc.c
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o liba52/resample.o liba52/resample.c
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o faad.o faad.c
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o faac.o faac.c
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o xvidff.o xvidff.c
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o xvid_rc.o xvid_rc.c
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o x264.o x264.c
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o mp3lameaudio.o mp3lameaudio.c
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o oggvorbis.o oggvorbis.c
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o oggtheora.o oggtheora.c
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o libgsm.o libgsm.c
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o i386/fdct_mmx.o i386/fdct_mmx.c
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o i386/cputest.o i386/cputest.c
+[9-ERROR] gcc-40 -O3 -Wall -Wno-switch  -Wdeclaration-after-statement -DHAVE_AV_CONFIG_H -I.. -I/ROCK/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavutil -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE   -c -o i386/dsputil_mmx.o i386/dsputil_mmx.c
+[9-ERROR] In file included from i386/dsputil_mmx.c:2492:
+[9-ERROR] i386/h264dsp_mmx.c:49:1: warning: "SBUTTERFLY" redefined
+[9-ERROR] i386/dsputil_mmx.c:1525:1: warning: this is the location of the previous definition
+[9-ERROR] In file included from i386/dsputil_mmx.c:2492:
+[9-ERROR] i386/h264dsp_mmx.c: In function 'h264_h_loop_filter_luma_mmx2':
+[9-ERROR] i386/dsputil_mmx.c:621: error: can't find a register in class 'GENERAL_REGS' while reloading 'asm'
+[9-ERROR] i386/dsputil_mmx.c:621: error: can't find a register in class 'GENERAL_REGS' while reloading 'asm'
+[9-ERROR] i386/h264dsp_mmx.c:1135:1: warning: "PUT_OP" redefined
+[9-ERROR] i386/dsputil_mmx.c:2377:1: warning: this is the location of the previous definition
+[9-ERROR] make[1]: *** [i386/dsputil_mmx.o] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.ffmpeg.1169138822.1624.2177560645/ffmpeg-2006-03-07/libavcodec'
+[9-ERROR] make: *** [lib] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

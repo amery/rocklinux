@@ -20,28 +20,35 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142584996 Fri Mar 17 09:43:16 2006 (5)
-[TIMESTAMP] 1142849155 Mon Mar 20 11:05:55 2006 (9)
+[TIMESTAMP] 1168646031 Sat Jan 13 00:53:51 2007 (5)
+[TIMESTAMP] 1168852389 Mon Jan 15 10:13:09 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-kdesdk.log 9-kdesdk.log
 
-[BUILDTIME] 167065 (5)
-[BUILDTIME] 168678 (9)
-[SIZE] 14.87 MB, 882 files
+[BUILDTIME] 132853 (5)
+[BUILDTIME] 134127 (9)
+[SIZE] 14.50 MB, 883 files
 
-[DEP] 00-dirtree acl acl:dev apache apache:apr apache:dev arts attr
-[DEP] attr:dev bash2 bdb42 bdb42:dev binutils binutils:dev bzip2
-[DEP] coreutils diffutils expat expat:dev fam fam:dev findutils flex
-[DEP] flex:dev freetype freetype:dev gawk gcc34 gcc34:dev gdbm gdbm:dev
-[DEP] gettext glibc23 glibc23:dev grep kdebase kdelibs kdelibs:dev kdepim
-[DEP] kdepim:dev kdeutils libart_lgpl23 libart_lgpl23:dev libidn libidn:dev
-[DEP] libjpeg libjpeg:dev libpng libpng:dev linux26-header:dev m4 make
-[DEP] mktemp nas net-tools openssl pcre pcre:dev perl5 qt33 qt33:dev
-[DEP] rrdtool sed subversion subversion:dev sysfiles tar util-linux xorg
-[DEP] xorg:dev zlib:dev
+[DEP] 00-dirtree acl acl:dev alsa apache apache:apr apache:dev applewmproto
+[DEP] applewmproto:dev attr attr:dev bash2 bdb44 bdb44:dev binutils
+[DEP] binutils:dev bzip2 coreutils cups cvm cyrus-sasl2 cyrus-sasl2:dev
+[DEP] diffutils expat expat:dev fam fam:dev findutils flex flex:dev
+[DEP] fontconfig fontconfig:dev freetype freetype:dev gawk gcc40 gcc40:dev
+[DEP] gettext glibc23 glibc23:dev grep hicolor-icon-theme imake kdebase
+[DEP] kdelibs kdelibs:dev kdepim kdepim:dev kdeutils libart_lgpl23
+[DEP] libart_lgpl23:dev libice libice:dev libidn libidn:dev libjpeg
+[DEP] libjpeg:dev libpng libpng:dev libsm libsm:dev libx11 libx11:dev
+[DEP] libxau libxau:dev libxcursor libxcursor:dev libxdmcp libxdmcp:dev
+[DEP] libxext libxext:dev libxfixes libxfixes:dev libxft libxft:dev
+[DEP] libxinerama libxinerama:dev libxml2 libxml2:dev libxmu libxmu:dev
+[DEP] libxrandr libxrandr:dev libxrender libxrender:dev libxslt libxslt:dev
+[DEP] libxt libxt:dev linux-libc-headers:dev m4 make mesalib mktemp nas
+[DEP] net-tools netpbm openldap openldap:dev openssl pcre pcre:dev perl5
+[DEP] qt33 qt33:dev rrdtool sed subversion subversion:dev sysfiles tar
+[DEP] twoftpd ucspi-unix util-linux xorg-cf-files xproto:dev zlib zlib:dev
 
 [PROVIDES] adddebug build-progress.sh catalogmanager cervisia
 [PROVIDES] cervisia.so cheatmake colorsvn create_cvsignore
@@ -79,6 +86,6 @@
 [PROVIDES] pprof2calltree pruneemptydirs qtdoc quithumbnail.so scheck.so
 [PROVIDES] split2po svn-clean svn2dist svnaddcurrentdir svnbackport
 [PROVIDES] svnchangesince svnforwardport svngettags svnlastchange
-[PROVIDES] svnlastlog svnrevertlast svnversions swappo transxx umbrello
-[PROVIDES] xml2pot zonetab2pot.py
+[PROVIDES] svnlastlog svnrevertlast svnversions swappo transxx umbodoc
+[PROVIDES] umbrello xml2pot zonetab2pot.py
 

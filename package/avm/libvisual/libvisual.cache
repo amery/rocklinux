@@ -20,21 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142527617 Thu Mar 16 17:46:57 2006 (5)
-[TIMESTAMP] 1142783179 Sun Mar 19 16:46:19 2006 (9)
+[TIMESTAMP] 1168602555 Fri Jan 12 12:49:15 2007 (5) ERROR
+[TIMESTAMP] 1168804985 Sun Jan 14 21:03:05 2007 (9) ERROR
+[TIMESTAMP] 1168943226 Tue Jan 16 11:27:06 2007 (5) ERROR
+[TIMESTAMP] 1168968873 Tue Jan 16 18:34:33 2007 (9) ERROR
+[TIMESTAMP] 1169086622 Thu Jan 18 03:17:02 2007 (5) ERROR
+[TIMESTAMP] 1169139158 Thu Jan 18 17:52:38 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-libvisual.log 9-libvisual.log
+[LOGS] 5-libvisual.err 9-libvisual.err
 
-[BUILDTIME] 3868 (5)
-[BUILDTIME] 4389 (9)
-[SIZE] 0.13 MB, 9 files
+[BUILDTIME] 2493 (5) ERROR
+[BUILDTIME] 2571 (9) ERROR
+[BUILDTIME] 2586 (5) ERROR
+[BUILDTIME] 2620 (9) ERROR
+[BUILDTIME] 2598 (5) ERROR
+[BUILDTIME] 2600 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] net-tools pkgconfig rrdtool sed sysfiles tar util-linux
 
-[PROVIDES] libvisual.so
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.libvisual.1169086595.10369.505546733/libvisual-0.2.0'
+[5-ERROR] Making all in libvisual
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.libvisual.1169086595.10369.505546733/libvisual-0.2.0/libvisual'
+[5-ERROR] if /bin/sh ../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual   -DPLUGPATH="\"/usr/lib/libvisual\"" -g -O2   -MT lv_actor.lo -MD -MP -MF ".deps/lv_actor.Tpo" -c -o lv_actor.lo lv_actor.c; \
+[5-ERROR] 	then mv -f ".deps/lv_actor.Tpo" ".deps/lv_actor.Plo"; else rm -f ".deps/lv_actor.Tpo"; exit 1; fi
+[5-ERROR] mkdir .libs
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual -DPLUGPATH=\"/usr/lib/libvisual\" -g -O2 -MT lv_actor.lo -MD -MP -MF .deps/lv_actor.Tpo -c lv_actor.c  -fPIC -DPIC -o .libs/lv_actor.o
+[5-ERROR] if /bin/sh ../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual   -DPLUGPATH="\"/usr/lib/libvisual\"" -g -O2   -MT lv_input.lo -MD -MP -MF ".deps/lv_input.Tpo" -c -o lv_input.lo lv_input.c; \
+[5-ERROR] 	then mv -f ".deps/lv_input.Tpo" ".deps/lv_input.Plo"; else rm -f ".deps/lv_input.Tpo"; exit 1; fi
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual -DPLUGPATH=\"/usr/lib/libvisual\" -g -O2 -MT lv_input.lo -MD -MP -MF .deps/lv_input.Tpo -c lv_input.c  -fPIC -DPIC -o .libs/lv_input.o
+[5-ERROR] if /bin/sh ../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual   -DPLUGPATH="\"/usr/lib/libvisual\"" -g -O2   -MT lv_event.lo -MD -MP -MF ".deps/lv_event.Tpo" -c -o lv_event.lo lv_event.c; \
+[5-ERROR] 	then mv -f ".deps/lv_event.Tpo" ".deps/lv_event.Plo"; else rm -f ".deps/lv_event.Tpo"; exit 1; fi
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual -DPLUGPATH=\"/usr/lib/libvisual\" -g -O2 -MT lv_event.lo -MD -MP -MF .deps/lv_event.Tpo -c lv_event.c  -fPIC -DPIC -o .libs/lv_event.o
+[5-ERROR] if /bin/sh ../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual   -DPLUGPATH="\"/usr/lib/libvisual\"" -g -O2   -MT lv_bin.lo -MD -MP -MF ".deps/lv_bin.Tpo" -c -o lv_bin.lo lv_bin.c; \
+[5-ERROR] 	then mv -f ".deps/lv_bin.Tpo" ".deps/lv_bin.Plo"; else rm -f ".deps/lv_bin.Tpo"; exit 1; fi
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual -DPLUGPATH=\"/usr/lib/libvisual\" -g -O2 -MT lv_bin.lo -MD -MP -MF .deps/lv_bin.Tpo -c lv_bin.c  -fPIC -DPIC -o .libs/lv_bin.o
+[5-ERROR] if /bin/sh ../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual   -DPLUGPATH="\"/usr/lib/libvisual\"" -g -O2   -MT lv_plugin.lo -MD -MP -MF ".deps/lv_plugin.Tpo" -c -o lv_plugin.lo lv_plugin.c; \
+[5-ERROR] 	then mv -f ".deps/lv_plugin.Tpo" ".deps/lv_plugin.Plo"; else rm -f ".deps/lv_plugin.Tpo"; exit 1; fi
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual -DPLUGPATH=\"/usr/lib/libvisual\" -g -O2 -MT lv_plugin.lo -MD -MP -MF .deps/lv_plugin.Tpo -c lv_plugin.c  -fPIC -DPIC -o .libs/lv_plugin.o
+[5-ERROR] if /bin/sh ../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual   -DPLUGPATH="\"/usr/lib/libvisual\"" -g -O2   -MT lv_video.lo -MD -MP -MF ".deps/lv_video.Tpo" -c -o lv_video.lo lv_video.c; \
+[5-ERROR] 	then mv -f ".deps/lv_video.Tpo" ".deps/lv_video.Plo"; else rm -f ".deps/lv_video.Tpo"; exit 1; fi
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual -DPLUGPATH=\"/usr/lib/libvisual\" -g -O2 -MT lv_video.lo -MD -MP -MF .deps/lv_video.Tpo -c lv_video.c  -fPIC -DPIC -o .libs/lv_video.o
+[5-ERROR] if /bin/sh ../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual   -DPLUGPATH="\"/usr/lib/libvisual\"" -g -O2   -MT lv_video_mmx.lo -MD -MP -MF ".deps/lv_video_mmx.Tpo" -c -o lv_video_mmx.lo lv_video_mmx.c; \
+[5-ERROR] 	then mv -f ".deps/lv_video_mmx.Tpo" ".deps/lv_video_mmx.Plo"; else rm -f ".deps/lv_video_mmx.Tpo"; exit 1; fi
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual -DPLUGPATH=\"/usr/lib/libvisual\" -g -O2 -MT lv_video_mmx.lo -MD -MP -MF .deps/lv_video_mmx.Tpo -c lv_video_mmx.c  -fPIC -DPIC -o .libs/lv_video_mmx.o
+[5-ERROR] lv_video_mmx.c: In function '_lv_blit_overlay_alpha32_mmx':
+[5-ERROR] lv_video_mmx.c:60: error: unknown register name 'mm6' in 'asm'
+[5-ERROR] lv_video_mmx.c:69: error: unknown register name 'mm7' in 'asm'
+[5-ERROR] lv_video_mmx.c:69: error: unknown register name 'mm6' in 'asm'
+[5-ERROR] lv_video_mmx.c:69: error: unknown register name 'mm5' in 'asm'
+[5-ERROR] lv_video_mmx.c:69: error: unknown register name 'mm4' in 'asm'
+[5-ERROR] lv_video_mmx.c:69: error: unknown register name 'mm3' in 'asm'
+[5-ERROR] lv_video_mmx.c:69: error: unknown register name 'mm2' in 'asm'
+[5-ERROR] lv_video_mmx.c:69: error: unknown register name 'mm1' in 'asm'
+[5-ERROR] lv_video_mmx.c:69: error: unknown register name 'mm0' in 'asm'
+[5-ERROR] lv_video_mmx.c: In function '_lv_scale_bilinear_32_mmx':
+[5-ERROR] lv_video_mmx.c:150: error: unknown register name 'mm7' in 'asm'
+[5-ERROR] lv_video_mmx.c:150: error: unknown register name 'mm6' in 'asm'
+[5-ERROR] lv_video_mmx.c:150: error: unknown register name 'mm5' in 'asm'
+[5-ERROR] lv_video_mmx.c:150: error: unknown register name 'mm4' in 'asm'
+[5-ERROR] lv_video_mmx.c:150: error: unknown register name 'mm3' in 'asm'
+[5-ERROR] lv_video_mmx.c:150: error: unknown register name 'mm2' in 'asm'
+[5-ERROR] lv_video_mmx.c:150: error: unknown register name 'mm1' in 'asm'
+[5-ERROR] lv_video_mmx.c:150: error: unknown register name 'mm0' in 'asm'
+[5-ERROR] make[2]: *** [lv_video_mmx.lo] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.libvisual.1169086595.10369.505546733/libvisual-0.2.0/libvisual'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.libvisual.1169086595.10369.505546733/libvisual-0.2.0'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.libvisual.1169139131.24780.2177560645/libvisual-0.2.0'
+[9-ERROR] Making all in libvisual
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.libvisual.1169139131.24780.2177560645/libvisual-0.2.0/libvisual'
+[9-ERROR] if /bin/sh ../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual   -DPLUGPATH="\"/usr/lib/libvisual\"" -g -O2   -MT lv_actor.lo -MD -MP -MF ".deps/lv_actor.Tpo" -c -o lv_actor.lo lv_actor.c; \
+[9-ERROR] 	then mv -f ".deps/lv_actor.Tpo" ".deps/lv_actor.Plo"; else rm -f ".deps/lv_actor.Tpo"; exit 1; fi
+[9-ERROR] mkdir .libs
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual -DPLUGPATH=\"/usr/lib/libvisual\" -g -O2 -MT lv_actor.lo -MD -MP -MF .deps/lv_actor.Tpo -c lv_actor.c  -fPIC -DPIC -o .libs/lv_actor.o
+[9-ERROR] if /bin/sh ../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual   -DPLUGPATH="\"/usr/lib/libvisual\"" -g -O2   -MT lv_input.lo -MD -MP -MF ".deps/lv_input.Tpo" -c -o lv_input.lo lv_input.c; \
+[9-ERROR] 	then mv -f ".deps/lv_input.Tpo" ".deps/lv_input.Plo"; else rm -f ".deps/lv_input.Tpo"; exit 1; fi
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual -DPLUGPATH=\"/usr/lib/libvisual\" -g -O2 -MT lv_input.lo -MD -MP -MF .deps/lv_input.Tpo -c lv_input.c  -fPIC -DPIC -o .libs/lv_input.o
+[9-ERROR] if /bin/sh ../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual   -DPLUGPATH="\"/usr/lib/libvisual\"" -g -O2   -MT lv_event.lo -MD -MP -MF ".deps/lv_event.Tpo" -c -o lv_event.lo lv_event.c; \
+[9-ERROR] 	then mv -f ".deps/lv_event.Tpo" ".deps/lv_event.Plo"; else rm -f ".deps/lv_event.Tpo"; exit 1; fi
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual -DPLUGPATH=\"/usr/lib/libvisual\" -g -O2 -MT lv_event.lo -MD -MP -MF .deps/lv_event.Tpo -c lv_event.c  -fPIC -DPIC -o .libs/lv_event.o
+[9-ERROR] if /bin/sh ../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual   -DPLUGPATH="\"/usr/lib/libvisual\"" -g -O2   -MT lv_bin.lo -MD -MP -MF ".deps/lv_bin.Tpo" -c -o lv_bin.lo lv_bin.c; \
+[9-ERROR] 	then mv -f ".deps/lv_bin.Tpo" ".deps/lv_bin.Plo"; else rm -f ".deps/lv_bin.Tpo"; exit 1; fi
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual -DPLUGPATH=\"/usr/lib/libvisual\" -g -O2 -MT lv_bin.lo -MD -MP -MF .deps/lv_bin.Tpo -c lv_bin.c  -fPIC -DPIC -o .libs/lv_bin.o
+[9-ERROR] if /bin/sh ../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual   -DPLUGPATH="\"/usr/lib/libvisual\"" -g -O2   -MT lv_plugin.lo -MD -MP -MF ".deps/lv_plugin.Tpo" -c -o lv_plugin.lo lv_plugin.c; \
+[9-ERROR] 	then mv -f ".deps/lv_plugin.Tpo" ".deps/lv_plugin.Plo"; else rm -f ".deps/lv_plugin.Tpo"; exit 1; fi
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual -DPLUGPATH=\"/usr/lib/libvisual\" -g -O2 -MT lv_plugin.lo -MD -MP -MF .deps/lv_plugin.Tpo -c lv_plugin.c  -fPIC -DPIC -o .libs/lv_plugin.o
+[9-ERROR] if /bin/sh ../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual   -DPLUGPATH="\"/usr/lib/libvisual\"" -g -O2   -MT lv_video.lo -MD -MP -MF ".deps/lv_video.Tpo" -c -o lv_video.lo lv_video.c; \
+[9-ERROR] 	then mv -f ".deps/lv_video.Tpo" ".deps/lv_video.Plo"; else rm -f ".deps/lv_video.Tpo"; exit 1; fi
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual -DPLUGPATH=\"/usr/lib/libvisual\" -g -O2 -MT lv_video.lo -MD -MP -MF .deps/lv_video.Tpo -c lv_video.c  -fPIC -DPIC -o .libs/lv_video.o
+[9-ERROR] if /bin/sh ../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual   -DPLUGPATH="\"/usr/lib/libvisual\"" -g -O2   -MT lv_video_mmx.lo -MD -MP -MF ".deps/lv_video_mmx.Tpo" -c -o lv_video_mmx.lo lv_video_mmx.c; \
+[9-ERROR] 	then mv -f ".deps/lv_video_mmx.Tpo" ".deps/lv_video_mmx.Plo"; else rm -f ".deps/lv_video_mmx.Tpo"; exit 1; fi
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libvisual -I.. -I../libvisual -DPLUGPATH=\"/usr/lib/libvisual\" -g -O2 -MT lv_video_mmx.lo -MD -MP -MF .deps/lv_video_mmx.Tpo -c lv_video_mmx.c  -fPIC -DPIC -o .libs/lv_video_mmx.o
+[9-ERROR] lv_video_mmx.c: In function '_lv_blit_overlay_alpha32_mmx':
+[9-ERROR] lv_video_mmx.c:60: error: unknown register name 'mm6' in 'asm'
+[9-ERROR] lv_video_mmx.c:69: error: unknown register name 'mm7' in 'asm'
+[9-ERROR] lv_video_mmx.c:69: error: unknown register name 'mm6' in 'asm'
+[9-ERROR] lv_video_mmx.c:69: error: unknown register name 'mm5' in 'asm'
+[9-ERROR] lv_video_mmx.c:69: error: unknown register name 'mm4' in 'asm'
+[9-ERROR] lv_video_mmx.c:69: error: unknown register name 'mm3' in 'asm'
+[9-ERROR] lv_video_mmx.c:69: error: unknown register name 'mm2' in 'asm'
+[9-ERROR] lv_video_mmx.c:69: error: unknown register name 'mm1' in 'asm'
+[9-ERROR] lv_video_mmx.c:69: error: unknown register name 'mm0' in 'asm'
+[9-ERROR] lv_video_mmx.c: In function '_lv_scale_bilinear_32_mmx':
+[9-ERROR] lv_video_mmx.c:150: error: unknown register name 'mm7' in 'asm'
+[9-ERROR] lv_video_mmx.c:150: error: unknown register name 'mm6' in 'asm'
+[9-ERROR] lv_video_mmx.c:150: error: unknown register name 'mm5' in 'asm'
+[9-ERROR] lv_video_mmx.c:150: error: unknown register name 'mm4' in 'asm'
+[9-ERROR] lv_video_mmx.c:150: error: unknown register name 'mm3' in 'asm'
+[9-ERROR] lv_video_mmx.c:150: error: unknown register name 'mm2' in 'asm'
+[9-ERROR] lv_video_mmx.c:150: error: unknown register name 'mm1' in 'asm'
+[9-ERROR] lv_video_mmx.c:150: error: unknown register name 'mm0' in 'asm'
+[9-ERROR] make[2]: *** [lv_video_mmx.lo] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.libvisual.1169139131.24780.2177560645/libvisual-0.2.0/libvisual'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.libvisual.1169139131.24780.2177560645/libvisual-0.2.0'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142446258 Wed Mar 15 19:10:58 2006 (3)
-[TIMESTAMP] 1142692695 Sat Mar 18 15:38:15 2006 (9)
+[TIMESTAMP] 1168524034 Thu Jan 11 15:00:34 2007 (3)
+[TIMESTAMP] 1168722091 Sat Jan 13 22:01:31 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 1-bash2.log 3-bash2.log 9-bash2.log
 
-[BUILDTIME] 6581 (3)
-[BUILDTIME] 7378 (9)
-[SIZE] 1.13 MB, 14 files
+[BUILDTIME] 6650 (3)
+[BUILDTIME] 7490 (9)
+[SIZE] 1.03 MB, 14 files
 
-[DEP] 00-dirtree binutils bzip2 coreutils diffutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] ncurses:dev net-tools patch rrdtool sed sysfiles tar texinfo
-[DEP] util-linux
+[DEP] 00-dirtree binutils bzip2 coreutils cvm diffutils findutils gawk
+[DEP] gcc40 gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev
+[DEP] make mktemp ncurses ncurses:dev net-tools netpbm patch rrdtool sed
+[DEP] sysfiles tar texinfo twoftpd ucspi-unix util-linux
 
 [PROVIDES] bash bash2 bashbug sh which
 

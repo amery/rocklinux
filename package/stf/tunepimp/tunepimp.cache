@@ -20,23 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142506875 Thu Mar 16 12:01:15 2006 (5)
-[TIMESTAMP] 1142758283 Sun Mar 19 09:51:23 2006 (9)
+[TIMESTAMP] 1168581803 Fri Jan 12 07:03:23 2007 (5)
+[TIMESTAMP] 1168782593 Sun Jan 14 14:49:53 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-tunepimp.log 9-tunepimp.log
 
-[BUILDTIME] 9367 (5)
-[BUILDTIME] 9918 (9)
-[SIZE] 0.79 MB, 11 files
+[BUILDTIME] 7994 (5)
+[BUILDTIME] 8490 (9)
+[SIZE] 0.40 MB, 11 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils expat expat:dev
-[DEP] findutils flac flac:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] libmusicbrainz libmusicbrainz:dev linux26-header:dev mad mad:dev
-[DEP] make mktemp ncurses:dev net-tools ogg-vorbis ogg-vorbis:dev patch
-[DEP] readline readline:dev rrdtool sed sysfiles tar util-linux zlib:dev
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils
+[DEP] expat expat:dev findutils flac flac:dev gawk gcc40 gcc40:dev
+[DEP] glibc23 glibc23:dev grep libmusicbrainz libmusicbrainz:dev
+[DEP] linux-libc-headers:dev mad mad:dev make mktemp ncurses net-tools
+[DEP] ogg-vorbis ogg-vorbis:dev patch readline readline:dev rrdtool sed
+[DEP] sysfiles tar util-linux zlib zlib:dev
 
 [PROVIDES] libtunepimp.a libtunepimp.so tp_tagger trm
 

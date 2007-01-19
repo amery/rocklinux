@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142582621 Fri Mar 17 09:03:41 2006 (5)
-[TIMESTAMP] 1142846567 Mon Mar 20 10:22:47 2006 (9)
+[TIMESTAMP] 1168644338 Sat Jan 13 00:25:38 2007 (5)
+[TIMESTAMP] 1168850611 Mon Jan 15 09:43:31 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-sloccount.log 9-sloccount.log
 
-[BUILDTIME] 1306 (5)
-[BUILDTIME] 1624 (9)
+[BUILDTIME] 1398 (5)
+[BUILDTIME] 1622 (9)
 [SIZE] 0.22 MB, 47 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils flex gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep gzip linux26-header:dev m4 make
-[DEP] mktemp patch rrdtool sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils flex gawk
+[DEP] gcc40 gcc40:dev glibc23 glibc23:dev grep gzip linux-libc-headers:dev
+[DEP] m4 make mktemp netpbm patch rrdtool sed sysfiles tar twoftpd
+[DEP] ucspi-unix
 
 [PROVIDES] ada_count asm_count awk_count break_filelist c_count cobol_count
 [PROVIDES] compute_all compute_sloc_lang count_extensions count_unknown_ext

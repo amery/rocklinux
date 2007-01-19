@@ -20,25 +20,27 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142496541 Thu Mar 16 09:09:01 2006 (5)
-[TIMESTAMP] 1142746742 Sun Mar 19 06:39:02 2006 (9)
+[TIMESTAMP] 1168573568 Fri Jan 12 04:46:08 2007 (5)
+[TIMESTAMP] 1168772001 Sun Jan 14 11:53:21 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-libgnome.log 9-libgnome.log
 
-[BUILDTIME] 5679 (5)
-[BUILDTIME] 6333 (9)
-[SIZE] 3.13 MB, 127 files
+[BUILDTIME] 6453 (5)
+[BUILDTIME] 12510 (9)
+[SIZE] 3.18 MB, 105 files
 
 [DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev bash2 binutils
-[DEP] bzip2 coreutils cpan-xml-parser diffutils esound esound:dev findutils
-[DEP] gawk gcc34 gcc34:dev gconf gconf:dev gettext glib glib:dev glibc23
-[DEP] glibc23:dev gnome-blog gnome-vfs gnome-vfs:dev gnome2-dirtree grep
-[DEP] libbonobo libbonobo:dev libxml2 libxml2:dev linux26-header:dev make
-[DEP] mktemp net-tools openssl orbit2 orbit2:dev pango perl5 pkgconfig
-[DEP] popt popt:dev rrdtool sed sysfiles tar util-linux zlib:dev
+[DEP] bzip2 coreutils cpan-xml-parser cvm dbus dbus-glib dbus-glib:dev
+[DEP] dbus:dev diffutils esound esound:dev evolution-webcal findutils
+[DEP] gawk gcc40 gcc40:dev gconf gconf:dev gettext glib glib:dev
+[DEP] glib:doc glibc23 glibc23:dev gnome-blog gnome-vfs gnome-vfs:dev
+[DEP] gnome2-dirtree grep libbonobo libbonobo:dev libxml2 libxml2:dev
+[DEP] liferea linux-libc-headers:dev make mktemp net-tools openssl orbit2
+[DEP] orbit2:dev pango perl5 pkgconfig popt popt:dev rrdtool sed sysfiles
+[DEP] tar util-linux vino zapping zlib
 
 [PROVIDES] gnome-open libgnome-2.a libgnome-2.so libmoniker_extra_2.a
 [PROVIDES] libmoniker_extra_2.so

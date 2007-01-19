@@ -20,143 +20,39 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142521380 Thu Mar 16 16:03:00 2006 (5) ERROR
-[TIMESTAMP] 1142775730 Sun Mar 19 14:42:10 2006 (9) ERROR
-[TIMESTAMP] 1142958560 Tue Mar 21 17:29:20 2006 (5) ERROR
-[TIMESTAMP] 1142970079 Tue Mar 21 20:41:19 2006 (9) ERROR
-[TIMESTAMP] 1143030667 Wed Mar 22 13:31:07 2006 (5) ERROR
-[TIMESTAMP] 1143039220 Wed Mar 22 15:53:40 2006 (9) ERROR
+[TIMESTAMP] 1168597313 Fri Jan 12 11:21:53 2007 (5)
+[TIMESTAMP] 1168799319 Sun Jan 14 19:28:39 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-balsa.err 9-balsa.err
+[LOGS] 5-balsa.log 9-balsa.log
 
-[BUILDTIME] 9216 (5) ERROR
-[BUILDTIME] 9752 (9) ERROR
-[BUILDTIME] 9782 (5) ERROR
-[BUILDTIME] 9791 (9) ERROR
-[BUILDTIME] 9772 (5) ERROR
-[BUILDTIME] 9765 (9) ERROR
-[SIZE] 3.04 MB, 122 files
+[BUILDTIME] 9882 (5)
+[BUILDTIME] 10305 (9)
+[SIZE] 2.01 MB, 112 files
 
-[DEP] 00-dirtree alsa alsa:dev aspell aspell:dev atk atk:dev audiofile
-[DEP] audiofile:dev bash2 binutils bzip2 cairo cairo:dev coreutils
-[DEP] cpan-xml-parser diffutils esound esound:dev expat findutils
-[DEP] freetype freetype:dev gail gail:dev gawk gcc34 gcc34:dev
-[DEP] gconf gconf:dev gettext glib glib:dev glibc23 glibc23:dev gmime
-[DEP] gmime:dev gnome-keyring gnome-keyring:dev gnome-libs14 gnome-vfs
-[DEP] gnome-vfs:dev gnome14-dirtree gnome2-dirtree grep gtk+ gtk+:dev
-[DEP] libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui
-[DEP] libbonoboui:dev libesmtp libesmtp:dev libgnome libgnome:dev
-[DEP] libgnomecanvas libgnomecanvas:dev libgnomeprint libgnomeprint:dev
-[DEP] libgnomeprintui libgnomeprintui:dev libgnomeui libgnomeui:dev
-[DEP] libgtkhtml libgtkhtml:dev libjpeg libjpeg:dev libpng libpng:dev
-[DEP] libtool libtool:dev libxml2 libxml2:dev linux26-header:dev make
-[DEP] mktemp net-tools openssl orbit2 orbit2:dev pango pango:dev pcre
-[DEP] pcre:dev perl5 pkgconfig popt popt:dev rrdtool scrollkeeper sed
-[DEP] sysfiles tar util-linux xorg xorg:dev zlib:dev
+[DEP] 00-dirtree alsa alsa:dev applewmproto applewmproto:dev aspell
+[DEP] aspell:dev atk atk:dev audiofile audiofile:dev bash2 binutils
+[DEP] bzip2 cairo cairo:dev coreutils cpan-xml-parser cvm dasher
+[DEP] dbus dbus-glib dbus-glib:dev dbus:dev diffutils docbookx esound
+[DEP] esound:dev expat expat:dev findutils fontconfig fontconfig:dev
+[DEP] freetype freetype:dev gail gail:dev gawk gcc40 gcc40:dev gconf
+[DEP] gconf:dev gettext glib glib:dev glibc23 glibc23:dev gmime gmime:dev
+[DEP] gnome-doc-utils gnome-keyring gnome-keyring:dev gnome-nettool
+[DEP] gnome-vfs gnome-vfs:dev gnome2-dirtree gnopernicus grep gtk+ gtk+:dev
+[DEP] gtkam gtkhtml gtkhtml:dev libart_lgpl23 libart_lgpl23:dev libbonobo
+[DEP] libbonobo:dev libbonoboui libbonoboui:dev libesmtp libesmtp:dev
+[DEP] libglade libglade:dev libgnome libgnome:dev libgnomecanvas
+[DEP] libgnomecanvas:dev libgnomeprint libgnomeprint:dev libgnomeprintui
+[DEP] libgnomeprintui:dev libgnomeui libgnomeui:dev libice libice:dev
+[DEP] libjpeg libjpeg:dev libpng libpng:dev libsm libsm:dev libx11
+[DEP] libx11:dev libxau libxau:dev libxcursor libxdmcp libxdmcp:dev libxext
+[DEP] libxfixes libxi libxinerama libxml2 libxml2:dev libxrandr libxrender
+[DEP] libxrender:dev linux-libc-headers:dev make mktemp net-tools openssl
+[DEP] orbit2 orbit2:dev pango pango:dev pcre pcre:dev perl5 pioneers
+[DEP] pkgconfig popt popt:dev rrdtool scrollkeeper sed sensors-applet
+[DEP] streamtuner sysfiles tar util-linux xproto:dev zapping zlib
 
-
-[5-ERROR] if ! test -e 22x22; then     \
-[5-ERROR] 	ln -s 24x24 22x22 ;  \
-[5-ERROR] fi
-[5-ERROR] make[4]: Leaving directory `/ROCK/src.balsa.1143030529.7335.3416389206/balsa-2.3.0/images/24x24'
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.balsa.1143030529.7335.3416389206/balsa-2.3.0/images/24x24'
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.balsa.1143030529.7335.3416389206/balsa-2.3.0/images/24x24'
-[5-ERROR] make[2]: Entering directory `/ROCK/src.balsa.1143030529.7335.3416389206/balsa-2.3.0/images'
-[5-ERROR] make[3]: Entering directory `/ROCK/src.balsa.1143030529.7335.3416389206/balsa-2.3.0/images'
-[5-ERROR] make[3]: Nothing to be done for `install-exec-am'.
-[5-ERROR] test -z "/opt/gnome2/share/balsa/pixmaps" || mkdir -p -- "/opt/gnome2/share/balsa/pixmaps"
-[5-ERROR]  /ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'attachment.png' '/opt/gnome2/share/balsa/pixmaps/attachment.png'
-[5-ERROR]  /ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'balsa-logo.png' '/opt/gnome2/share/balsa/pixmaps/balsa-logo.png'
-[5-ERROR]  /ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'balsa-top.png' '/opt/gnome2/share/balsa/pixmaps/balsa-top.png'
-[5-ERROR]  /ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'balsa-watermark.png' '/opt/gnome2/share/balsa/pixmaps/balsa-watermark.png'
-[5-ERROR]  /ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'balsa_icon.png' '/opt/gnome2/share/balsa/pixmaps/balsa_icon.png'
-[5-ERROR]  /ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'balsa_logo.png' '/opt/gnome2/share/balsa/pixmaps/balsa_logo.png'
-[5-ERROR] make  install-data-hook
-[5-ERROR] make[4]: Entering directory `/ROCK/src.balsa.1143030529.7335.3416389206/balsa-2.3.0/images'
-[5-ERROR] if test -n "/opt/gnome2/bin/gtk-update-icon-cache" ; then                    \
-[5-ERROR] 	/opt/gnome2/bin/gtk-update-icon-cache /opt/gnome2/share/balsa/hicolor ; \
-[5-ERROR] 	/opt/gnome2/bin/gtk-update-icon-cache /opt/gnome2/share/icons/hicolor ;          \
-[5-ERROR] fi
-[5-ERROR] No theme index file in '/opt/gnome2/share/balsa/hicolor'.
-[5-ERROR] If you really want to create an icon cache here, use --ignore-theme-index.
-[5-ERROR] No theme index file in '/opt/gnome2/share/icons/hicolor'.
-[5-ERROR] If you really want to create an icon cache here, use --ignore-theme-index.
-[5-ERROR] make[4]: *** [install-data-hook] Error 1
-[5-ERROR] make[4]: Leaving directory `/ROCK/src.balsa.1143030529.7335.3416389206/balsa-2.3.0/images'
-[5-ERROR] make[3]: *** [install-data-am] Error 2
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.balsa.1143030529.7335.3416389206/balsa-2.3.0/images'
-[5-ERROR] make[2]: *** [install-am] Error 2
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.balsa.1143030529.7335.3416389206/balsa-2.3.0/images'
-[5-ERROR] make[1]: *** [install-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.balsa.1143030529.7335.3416389206/balsa-2.3.0/images'
-[5-ERROR] make: *** [install-recursive] Error 1
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 116 files for this package.
-[5-ERROR] Applying package split: 40 balsa:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 balsa:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 balsa:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <balsa> Creating flist file ...
-[5-ERROR] <balsa> Creating package dependencies file ...
-[5-ERROR] <balsa> Creating md5sum and cksum files ...
-[5-ERROR] <balsa> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building balsa=balsa.
-
-[9-ERROR] if ! test -e 22x22; then     \
-[9-ERROR] 	ln -s 24x24 22x22 ;  \
-[9-ERROR] fi
-[9-ERROR] make[4]: Leaving directory `/ROCK/src.balsa.1143039062.32387.3669711311/balsa-2.3.0/images/24x24'
-[9-ERROR] make[3]: Leaving directory `/ROCK/src.balsa.1143039062.32387.3669711311/balsa-2.3.0/images/24x24'
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.balsa.1143039062.32387.3669711311/balsa-2.3.0/images/24x24'
-[9-ERROR] make[2]: Entering directory `/ROCK/src.balsa.1143039062.32387.3669711311/balsa-2.3.0/images'
-[9-ERROR] make[3]: Entering directory `/ROCK/src.balsa.1143039062.32387.3669711311/balsa-2.3.0/images'
-[9-ERROR] make[3]: Nothing to be done for `install-exec-am'.
-[9-ERROR] test -z "/opt/gnome2/share/balsa/pixmaps" || mkdir -p -- "/opt/gnome2/share/balsa/pixmaps"
-[9-ERROR]  /ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'attachment.png' '/opt/gnome2/share/balsa/pixmaps/attachment.png'
-[9-ERROR]  /ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'balsa-logo.png' '/opt/gnome2/share/balsa/pixmaps/balsa-logo.png'
-[9-ERROR]  /ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'balsa-top.png' '/opt/gnome2/share/balsa/pixmaps/balsa-top.png'
-[9-ERROR]  /ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'balsa-watermark.png' '/opt/gnome2/share/balsa/pixmaps/balsa-watermark.png'
-[9-ERROR]  /ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'balsa_icon.png' '/opt/gnome2/share/balsa/pixmaps/balsa_icon.png'
-[9-ERROR]  /ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'balsa_logo.png' '/opt/gnome2/share/balsa/pixmaps/balsa_logo.png'
-[9-ERROR] make  install-data-hook
-[9-ERROR] make[4]: Entering directory `/ROCK/src.balsa.1143039062.32387.3669711311/balsa-2.3.0/images'
-[9-ERROR] if test -n "/opt/gnome2/bin/gtk-update-icon-cache" ; then                    \
-[9-ERROR] 	/opt/gnome2/bin/gtk-update-icon-cache /opt/gnome2/share/balsa/hicolor ; \
-[9-ERROR] 	/opt/gnome2/bin/gtk-update-icon-cache /opt/gnome2/share/icons/hicolor ;          \
-[9-ERROR] fi
-[9-ERROR] No theme index file in '/opt/gnome2/share/balsa/hicolor'.
-[9-ERROR] If you really want to create an icon cache here, use --ignore-theme-index.
-[9-ERROR] No theme index file in '/opt/gnome2/share/icons/hicolor'.
-[9-ERROR] If you really want to create an icon cache here, use --ignore-theme-index.
-[9-ERROR] make[4]: *** [install-data-hook] Error 1
-[9-ERROR] make[4]: Leaving directory `/ROCK/src.balsa.1143039062.32387.3669711311/balsa-2.3.0/images'
-[9-ERROR] make[3]: *** [install-data-am] Error 2
-[9-ERROR] make[3]: Leaving directory `/ROCK/src.balsa.1143039062.32387.3669711311/balsa-2.3.0/images'
-[9-ERROR] make[2]: *** [install-am] Error 2
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.balsa.1143039062.32387.3669711311/balsa-2.3.0/images'
-[9-ERROR] make[1]: *** [install-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.balsa.1143039062.32387.3669711311/balsa-2.3.0/images'
-[9-ERROR] make: *** [install-recursive] Error 1
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 116 files for this package.
-[9-ERROR] Applying package split: 40 balsa:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 balsa:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 balsa:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <balsa> Creating flist file ...
-[9-ERROR] <balsa> Creating package dependencies file ...
-[9-ERROR] <balsa> Creating md5sum and cksum files ...
-[9-ERROR] <balsa> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building balsa=balsa.
+[PROVIDES] balsa balsa-ab
 

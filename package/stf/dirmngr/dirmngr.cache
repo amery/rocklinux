@@ -20,24 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142650287 Sat Mar 18 03:51:27 2006 (5)
-[TIMESTAMP] 1142919660 Tue Mar 21 06:41:00 2006 (9)
+[TIMESTAMP] 1168692215 Sat Jan 13 13:43:35 2007 (5)
+[TIMESTAMP] 1168901189 Mon Jan 15 23:46:29 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-dirmngr.log 9-dirmngr.log
 
-[BUILDTIME] 3732 (5)
-[BUILDTIME] 3885 (9)
-[SIZE] 0.36 MB, 11 files
+[BUILDTIME] 3921 (5)
+[BUILDTIME] 4048 (9)
+[SIZE] 0.40 MB, 13 files
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils findutils
-[DEP] gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep libassuan
-[DEP] libassuan:dev libgcrypt libgcrypt:dev libgpg-error libgpg-error:dev
-[DEP] libksba libksba:dev linux26-header:dev make mktemp net-tools openldap
-[DEP] openldap:dev openssl pth pth:dev rrdtool sed sysfiles tar texinfo
-[DEP] util-linux
+[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils cvm cyrus-sasl2
+[DEP] diffutils findutils gawk gcc40 gcc40:dev gettext glibc23 glibc23:dev
+[DEP] grep libassuan libassuan:dev libgcrypt libgcrypt:dev libgpg-error
+[DEP] libgpg-error:dev libksba libksba:dev linux-libc-headers:dev make
+[DEP] mktemp net-tools netpbm openldap openldap:dev openssl pth pth:dev
+[DEP] rrdtool sed sysfiles tar texinfo twoftpd ucspi-unix util-linux
 
 [PROVIDES] dirmngr dirmngr-client
 

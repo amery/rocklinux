@@ -20,50 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142560248 Fri Mar 17 02:50:48 2006 (5)
-[TIMESTAMP] 1142820008 Mon Mar 20 03:00:08 2006 (9)
+[TIMESTAMP] 1168620999 Fri Jan 12 17:56:39 2007 (5) ERROR
+[TIMESTAMP] 1168824469 Mon Jan 15 02:27:49 2007 (9) ERROR
+[TIMESTAMP] 1168946745 Tue Jan 16 12:25:45 2007 (5) ERROR
+[TIMESTAMP] 1168973337 Tue Jan 16 19:48:57 2007 (9) ERROR
+[TIMESTAMP] 1169090159 Thu Jan 18 04:15:59 2007 (5) ERROR
+[TIMESTAMP] 1169143616 Thu Jan 18 19:06:56 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-ladspa-swh-plugins.log 9-ladspa-swh-plugins.log
+[LOGS] 5-ladspa-swh-plugins.err 9-ladspa-swh-plugins.err
 
-[BUILDTIME] 10555 (5)
-[BUILDTIME] 11144 (9)
-[SIZE] 2.76 MB, 107 files
+[BUILDTIME] 2018 (5) ERROR
+[BUILDTIME] 2082 (9) ERROR
+[BUILDTIME] 2083 (5) ERROR
+[BUILDTIME] 2094 (9) ERROR
+[BUILDTIME] 2105 (5) ERROR
+[BUILDTIME] 2097 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils fftw:dev
-[DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev
-[DEP] gnome-libs14 gnome14-dirtree grep ladspa linux26-header:dev make
-[DEP] mktemp net-tools pkgconfig rrdtool sed sysfiles tar util-linux
 
-[PROVIDES] alias_1407.so allpass_1895.so am_pitchshift_1433.so amp_1181.so
-[PROVIDES] analogue_osc_1416.so bandpass_a_iir_1893.so bandpass_iir_1892.so
-[PROVIDES] bode_shifter_1431.so bode_shifter_cv_1432.so butterworth_1902.so
-[PROVIDES] chebstortion_1430.so comb_1190.so comb_1887.so
-[PROVIDES] comb_splitter_1411.so const_1909.so crossover_dist_1404.so
-[PROVIDES] dc_remove_1207.so decay_1886.so decimator_1202.so declip_1195.so
-[PROVIDES] delay_1898.so delayorama_1402.so diode_1185.so divider_1186.so
-[PROVIDES] dj_eq_1901.so dj_flanger_1438.so dyson_compress_1403.so
-[PROVIDES] fad_delay_1192.so fast_lookahead_limiter_1913.so flanger_1191.so
-[PROVIDES] fm_osc_1415.so foldover_1213.so foverdrive_1196.so
-[PROVIDES] freq_tracker_1418.so gate_1410.so giant_flange_1437.so
-[PROVIDES] gong_1424.so gong_beater_1439.so gsm_1215.so gverb_1216.so
-[PROVIDES] hard_limiter_1413.so harmonic_gen_1220.so hermes_filter_1200.so
-[PROVIDES] highpass_iir_1890.so hilbert_1440.so imp_1199.so impulse_1885.so
-[PROVIDES] inv_1429.so karaoke_1409.so latency_1914.so lcr_delay_1436.so
-[PROVIDES] lowpass_iir_1891.so ls_filter_1908.so matrix_ms_st_1421.so
-[PROVIDES] matrix_spatialiser_1422.so matrix_st_ms_1420.so mbeq_1197.so
-[PROVIDES] mod_delay_1419.so multivoice_chorus_1201.so notch_iir_1894.so
-[PROVIDES] phasers_1217.so pitch_scale_1193.so pitch_scale_1194.so
-[PROVIDES] plate_1423.so pointer_cast_1910.so rate_shifter_1417.so
-[PROVIDES] retro_flange_1208.so revdelay_1605.so ringmod_1188.so
-[PROVIDES] satan_maximiser_1408.so sc1_1425.so sc2_1426.so sc3_1427.so
-[PROVIDES] sc4_1882.so sc4m_1916.so se4_1883.so shaper_1187.so
-[PROVIDES] sifter_1210.so sin_cos_1881.so single_para_1203.so
-[PROVIDES] sinus_wavewrapper_1198.so smooth_decimate_1414.so split_1406.so
-[PROVIDES] step_muxer_1212.so surround_encoder_1401.so svf_1214.so
-[PROVIDES] tape_delay_1211.so transient_1206.so triple_para_1204.so
-[PROVIDES] valve_1209.so valve_rect_1405.so vynil_1905.so
-[PROVIDES] wave_terrain_1412.so xfade_1915.so zm1_1428.so
+[5-ERROR] checking whether byte ordering is bigendian... no
+[5-ERROR] checking for pkg-config... /usr/bin/pkg-config
+[5-ERROR] checking for fftw3f >= 3.0... yes
+[5-ERROR] checking FFTW_CFLAGS...  
+[5-ERROR] checking FFTW_LIBS... -lfftw3f -lm  
+[5-ERROR] Using FFTW 3
+[5-ERROR] checking for sqrt in -lm... yes
+[5-ERROR] checking for log10f in -lm... yes
+[5-ERROR] checking for shm_open... no
+[5-ERROR] checking for shm_open in -lrt... yes
+[5-ERROR] checking for lrintf... yes
+[5-ERROR] ./configure: line 22726: -I@top_srcdir@/intl: No such file or directory
+[5-ERROR] configure: WARNING: Can't fine architecture specifaction in CFLAGS, picking one from build host CPU type
+[5-ERROR] configure: WARNING: May result in non-portable code
+[5-ERROR] checking for ld used by gcc-40... (cached) ld
+[5-ERROR] checking if the linker (ld) is GNU ld... (cached) yes
+[5-ERROR] configure: creating ./config.status
+[5-ERROR] config.status: creating m4/Makefile
+[5-ERROR] config.status: creating Makefile
+[5-ERROR] config.status: creating util/Makefile
+[5-ERROR] config.status: creating gsm/Makefile
+[5-ERROR] config.status: creating gverb/Makefile
+[5-ERROR] config.status: creating metadata/Makefile
+[5-ERROR] config.status: creating po/Makefile.in
+[5-ERROR] config.status: creating config.h
+[5-ERROR] config.status: executing depfiles commands
+[5-ERROR] config.status: executing default-1 commands
+[5-ERROR] config.status: creating po/POTFILES
+[5-ERROR] config.status: creating po/Makefile
+[5-ERROR] make  all-recursive
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.ladspa-swh-plugins.1169090136.21464.1258219122/swh-plugins-0.4.13'
+[5-ERROR] Making all in m4
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.ladspa-swh-plugins.1169090136.21464.1258219122/swh-plugins-0.4.13/m4'
+[5-ERROR] make[2]: Nothing to be done for `all'.
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ladspa-swh-plugins.1169090136.21464.1258219122/swh-plugins-0.4.13/m4'
+[5-ERROR] Making all in po
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.ladspa-swh-plugins.1169090136.21464.1258219122/swh-plugins-0.4.13/po'
+[5-ERROR] make[2]: Nothing to be done for `all'.
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ladspa-swh-plugins.1169090136.21464.1258219122/swh-plugins-0.4.13/po'
+[5-ERROR] Making all in util
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.ladspa-swh-plugins.1169090136.21464.1258219122/swh-plugins-0.4.13/util'
+[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -O6 -fomit-frame-pointer -fstrength-reduce -funroll-loops -fmove-all-movables -ffast-math -fPIC -DPIC -mcpu=i386 -march=i386   -MT rms.o -MD -MP -MF ".deps/rms.Tpo" -c -o rms.o rms.c; \
+[5-ERROR] 	then mv -f ".deps/rms.Tpo" ".deps/rms.Po"; else rm -f ".deps/rms.Tpo"; exit 1; fi
+[5-ERROR] cc1: error: unrecognized command line option "-fmove-all-movables"
+[5-ERROR] make[2]: *** [rms.o] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ladspa-swh-plugins.1169090136.21464.1258219122/swh-plugins-0.4.13/util'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.ladspa-swh-plugins.1169090136.21464.1258219122/swh-plugins-0.4.13'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] checking whether byte ordering is bigendian... no
+[9-ERROR] checking for pkg-config... /usr/bin/pkg-config
+[9-ERROR] checking for fftw3f >= 3.0... yes
+[9-ERROR] checking FFTW_CFLAGS...  
+[9-ERROR] checking FFTW_LIBS... -lfftw3f -lm  
+[9-ERROR] Using FFTW 3
+[9-ERROR] checking for sqrt in -lm... yes
+[9-ERROR] checking for log10f in -lm... yes
+[9-ERROR] checking for shm_open... no
+[9-ERROR] checking for shm_open in -lrt... yes
+[9-ERROR] checking for lrintf... yes
+[9-ERROR] ./configure: line 22726: -I@top_srcdir@/intl: No such file or directory
+[9-ERROR] configure: WARNING: Can't fine architecture specifaction in CFLAGS, picking one from build host CPU type
+[9-ERROR] configure: WARNING: May result in non-portable code
+[9-ERROR] checking for ld used by gcc-40... (cached) ld
+[9-ERROR] checking if the linker (ld) is GNU ld... (cached) yes
+[9-ERROR] configure: creating ./config.status
+[9-ERROR] config.status: creating m4/Makefile
+[9-ERROR] config.status: creating Makefile
+[9-ERROR] config.status: creating util/Makefile
+[9-ERROR] config.status: creating gsm/Makefile
+[9-ERROR] config.status: creating gverb/Makefile
+[9-ERROR] config.status: creating metadata/Makefile
+[9-ERROR] config.status: creating po/Makefile.in
+[9-ERROR] config.status: creating config.h
+[9-ERROR] config.status: executing depfiles commands
+[9-ERROR] config.status: executing default-1 commands
+[9-ERROR] config.status: creating po/POTFILES
+[9-ERROR] config.status: creating po/Makefile
+[9-ERROR] make  all-recursive
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.ladspa-swh-plugins.1169143594.27632.4224487765/swh-plugins-0.4.13'
+[9-ERROR] Making all in m4
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.ladspa-swh-plugins.1169143594.27632.4224487765/swh-plugins-0.4.13/m4'
+[9-ERROR] make[2]: Nothing to be done for `all'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ladspa-swh-plugins.1169143594.27632.4224487765/swh-plugins-0.4.13/m4'
+[9-ERROR] Making all in po
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.ladspa-swh-plugins.1169143594.27632.4224487765/swh-plugins-0.4.13/po'
+[9-ERROR] make[2]: Nothing to be done for `all'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ladspa-swh-plugins.1169143594.27632.4224487765/swh-plugins-0.4.13/po'
+[9-ERROR] Making all in util
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.ladspa-swh-plugins.1169143594.27632.4224487765/swh-plugins-0.4.13/util'
+[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -O6 -fomit-frame-pointer -fstrength-reduce -funroll-loops -fmove-all-movables -ffast-math -fPIC -DPIC -mcpu=i386 -march=i386   -MT rms.o -MD -MP -MF ".deps/rms.Tpo" -c -o rms.o rms.c; \
+[9-ERROR] 	then mv -f ".deps/rms.Tpo" ".deps/rms.Po"; else rm -f ".deps/rms.Tpo"; exit 1; fi
+[9-ERROR] cc1: error: unrecognized command line option "-fmove-all-movables"
+[9-ERROR] make[2]: *** [rms.o] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ladspa-swh-plugins.1169143594.27632.4224487765/swh-plugins-0.4.13/util'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.ladspa-swh-plugins.1169143594.27632.4224487765/swh-plugins-0.4.13'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

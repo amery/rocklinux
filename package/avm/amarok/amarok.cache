@@ -20,36 +20,45 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142669015 Sat Mar 18 09:03:35 2006 (5)
-[TIMESTAMP] 1142939728 Tue Mar 21 12:15:28 2006 (9)
+[TIMESTAMP] 1168701423 Sat Jan 13 16:17:03 2007 (5)
+[TIMESTAMP] 1168910985 Tue Jan 16 02:29:45 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-amarok.log 9-amarok.log
 
-[BUILDTIME] 56647 (5)
-[BUILDTIME] 56848 (9)
-[SIZE] 9.18 MB, 253 files
+[BUILDTIME] 75250 (5)
+[BUILDTIME] 75427 (9)
+[SIZE] 15.27 MB, 670 files
 
-[DEP] 00-dirtree acl acl:dev alsa alsa:dev arts arts:dev attr attr:dev
-[DEP] audiofile audiofile:dev bash2 binutils bzip2 coreutils diffutils
-[DEP] esound esound:dev expat expat:dev fam fam:dev findutils flac
-[DEP] flac:dev freetype freetype:dev gawk gcc34 gcc34:dev gettext glib
-[DEP] glib12 glib12:dev glib:dev glibc23 glibc23:dev gnome14-dirtree
-[DEP] gnome2-dirtree grep gst-plugins:dev gstreamer gstreamer:dev
-[DEP] gtk+12 gtk+12:dev jack jack:dev kdebase kdebase:dev kdelibs
-[DEP] kdelibs:dev kdemultimedia kdemultimedia:dev kdeutils libart_lgpl23
-[DEP] libart_lgpl23:dev libidn libidn:dev libjpeg libjpeg:dev libkipi
-[DEP] libmusicbrainz libmusicbrainz:dev libpng libpng:dev libsdl libsdl:dev
-[DEP] libvisual libvisual:dev libxml2 libxml2:dev linux26-header:dev mad
-[DEP] mad:dev make mktemp nas net-tools ogg-vorbis ogg-vorbis:dev pcre
-[DEP] pcre:dev perl5 pkgconfig popt popt:dev qt33 qt33:dev rrdtool sed
-[DEP] sysfiles taglib taglib:dev tar tunepimp tunepimp:dev util-linux
-[DEP] xine-lib xine-lib:dev xmms xmms:dev xorg xorg:dev zlib:dev
+[DEP] 00-dirtree acl acl:dev alsa applewmproto applewmproto:dev
+[DEP] attr attr:dev bash2 binutils bzip2 coreutils cups cvm dbus
+[DEP] dbus-glib dbus-glib:dev dbus:dev diffutils expat expat:dev
+[DEP] fam fam:dev findutils flac flac:dev fontconfig fontconfig:dev
+[DEP] freetype freetype:dev gawk gcc40 gcc40:dev gettext glib glib12
+[DEP] glib12:dev glib:dev glibc23 glibc23:dev gnome-libs14 gnome-nettool
+[DEP] gnome14-dirtree gnome2-dirtree grep gtk+ gtk+12 gtk+12:dev gtk+:dev
+[DEP] hal hal:dev hicolor-icon-theme imake kdebase kdebase:dev kdelibs
+[DEP] kdelibs:dev kdeutils libart_lgpl23 libart_lgpl23:dev libgpod
+[DEP] libgpod:dev libice libice:dev libidn libidn:dev libjpeg libjpeg:dev
+[DEP] libmusicbrainz libmusicbrainz:dev libpng libpng:dev libsdl libsm
+[DEP] libsm:dev libusb:dev libx11 libx11:dev libxau libxau:dev libxcursor
+[DEP] libxcursor:dev libxdmcp libxdmcp:dev libxext libxext:dev libxfixes
+[DEP] libxfixes:dev libxft libxft:dev libxi libxi:dev libxinerama
+[DEP] libxinerama:dev libxml2 libxmu libxmu:dev libxrandr libxrandr:dev
+[DEP] libxrender libxrender:dev libxt libxt:dev linux-libc-headers:dev
+[DEP] mad mad:dev make mesalib mesalib:dev mktemp nas net-tools ogg-vorbis
+[DEP] ogg-vorbis:dev pcre pcre:dev perl5 pkgconfig qt33 qt33:dev rrdtool
+[DEP] ruby sed sysfiles taglib taglib:dev tar tunepimp tunepimp:dev
+[DEP] util-linux xine-lib xine-lib:dev xmms xmms:dev xorg-cf-files
+[DEP] xproto:dev zlib zlib:dev
 
-[PROVIDES] amarok amarok_libvisual amarok_xmmswrapper2 amarokapp
-[PROVIDES] konqsidebar_universalamarok.so libamarok_artsengine_plugin.so
-[PROVIDES] libamarok_gstengine_plugin.so libamarok_void-engine_plugin.so
-[PROVIDES] libamarok_xine-engine.so libamarokarts.so
+[PROVIDES] amarok amarok_daapserver.rb amarok_proxy.rb amarok_xmmswrapper2
+[PROVIDES] amarokapp amarokcollectionscanner konqsidebar_universalamarok.so
+[PROVIDES] libamarok.so libamarok_daap-mediadevice.so
+[PROVIDES] libamarok_generic-mediadevice.so libamarok_ipod-mediadevice.so
+[PROVIDES] libamarok_massstorage-device.so libamarok_nfs-device.so
+[PROVIDES] libamarok_smb-device.so libamarok_void-engine_plugin.so
+[PROVIDES] libamarok_xine-engine.so libhttp11.so
 

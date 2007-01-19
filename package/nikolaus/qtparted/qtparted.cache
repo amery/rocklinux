@@ -20,24 +20,28 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142643980 Sat Mar 18 02:06:20 2006 (5)
-[TIMESTAMP] 1142912630 Tue Mar 21 04:43:50 2006 (9)
+[TIMESTAMP] 1168689058 Sat Jan 13 12:50:58 2007 (5)
+[TIMESTAMP] 1168897901 Mon Jan 15 22:51:41 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-qtparted.log 9-qtparted.log
 
-[BUILDTIME] 11607 (5)
-[BUILDTIME] 11750 (9)
-[SIZE] 0.55 MB, 28 files
+[BUILDTIME] 9865 (5)
+[BUILDTIME] 10077 (9)
+[SIZE] 0.55 MB, 27 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils e2fsprogs:dev
-[DEP] expat file findutils freetype freetype:dev gawk gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep leif libjpeg libpng libpng:dev
-[DEP] linux26-header:dev make mktemp nas net-tools openbox parted
-[DEP] parted:dev qt33 qt33:dev rrdtool sed sysfiles tar util-linux xorg
-[DEP] xorg:dev zlib:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm diffutils e2fsprogs expat file findutils fontconfig
+[DEP] fontconfig:dev freetype freetype:dev gawk gcc40 gcc40:dev glibc23
+[DEP] glibc23:dev grep imake kdebase libice libice:dev libjpeg libpng
+[DEP] libpng:dev libsm libsm:dev libx11 libx11:dev libxau libxau:dev
+[DEP] libxcursor libxdmcp libxdmcp:dev libxext libxext:dev libxfixes
+[DEP] libxft libxinerama libxmu libxrandr libxrender libxt libxt:dev
+[DEP] linux-libc-headers:dev make mesalib mktemp nas net-tools netpbm
+[DEP] parted parted:dev qt33 qt33:dev rrdtool sed sysfiles tar twoftpd
+[DEP] ucspi-unix util-linux xorg-cf-files xproto:dev zapping zlib zlib:dev
 
 [PROVIDES] qtparted run_qtparted
 

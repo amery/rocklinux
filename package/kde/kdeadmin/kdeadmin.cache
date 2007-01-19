@@ -20,25 +20,32 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142550624 Fri Mar 17 00:10:24 2006 (5)
-[TIMESTAMP] 1142808375 Sun Mar 19 23:46:15 2006 (9)
+[TIMESTAMP] 1168620685 Fri Jan 12 17:51:25 2007 (5)
+[TIMESTAMP] 1168824103 Mon Jan 15 02:21:43 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-kdeadmin.log 9-kdeadmin.log
 
-[BUILDTIME] 41569 (5)
-[BUILDTIME] 45874 (9)
-[SIZE] 3.14 MB, 203 files
+[BUILDTIME] 25891 (5)
+[BUILDTIME] 29199 (9)
+[SIZE] 3.08 MB, 201 files
 
-[DEP] 00-dirtree acl acl:dev arts attr attr:dev bash2 binutils
-[DEP] bzip2 coreutils diffutils expat fam fam:dev findutils freetype
-[DEP] freetype:dev gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
-[DEP] kdebase kdelibs kdelibs:dev kdeutils libart_lgpl23 libart_lgpl23:dev
-[DEP] libidn libidn:dev libjpeg libpng libpng:dev linux26-header:dev make
+[DEP] 00-dirtree acl acl:dev alsa applewmproto applewmproto:dev attr
+[DEP] attr:dev bash2 binutils bzip2 coreutils cups cvm diffutils expat
+[DEP] expat:dev fam fam:dev findutils fontconfig fontconfig:dev freetype
+[DEP] freetype:dev gawk gcc40 gcc40:dev gettext glibc23 glibc23:dev
+[DEP] grep hicolor-icon-theme imake kdebase kdelibs kdelibs:dev kdeutils
+[DEP] libart_lgpl23 libart_lgpl23:dev libice libice:dev libidn libidn:dev
+[DEP] libjpeg libpng libpng:dev libsm libsm:dev libx11 libx11:dev libxau
+[DEP] libxau:dev libxcursor libxcursor:dev libxdmcp libxdmcp:dev libxext
+[DEP] libxext:dev libxfixes libxfixes:dev libxft libxft:dev libxinerama
+[DEP] libxinerama:dev libxmu libxmu:dev libxrandr libxrandr:dev libxrender
+[DEP] libxrender:dev libxt libxt:dev linux-libc-headers:dev make mesalib
 [DEP] mktemp nas net-tools pam pam:dev patch perl5 qt33 qt33:dev rrdtool
-[DEP] sed shadow shadow:dev sysfiles tar util-linux xorg xorg:dev zlib:dev
+[DEP] sed shadow shadow:dev sysfiles tar util-linux xorg-cf-files
+[DEP] xproto:dev zlib zlib:dev
 
 [PROVIDES] kcm_knetworkconfmodule.so kcm_lilo.so kcron kdat kfile_deb.so
 [PROVIDES] kfile_rpm.so kpackage ksysv kuser secpolicy

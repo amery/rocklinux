@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142455677 Wed Mar 15 21:47:57 2006 (5)
-[TIMESTAMP] 1142694267 Sat Mar 18 16:04:27 2006 (9)
+[TIMESTAMP] 1168532373 Thu Jan 11 17:19:33 2007 (5)
+[TIMESTAMP] 1168723033 Sat Jan 13 22:17:13 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 1-grep.log 5-grep.log 9-grep.log
 
-[BUILDTIME] 2575 (5)
-[BUILDTIME] 3326 (9)
-[SIZE] 0.40 MB, 33 files
+[BUILDTIME] 2579 (5)
+[BUILDTIME] 3262 (9)
+[SIZE] 0.25 MB, 18 files
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils findutils
-[DEP] gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev linux26-header:dev
-[DEP] make mktemp net-tools rrdtool sed sysfiles tar texinfo util-linux
+[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils cvm diffutils
+[DEP] findutils gawk gcc40 gcc40:dev gettext glibc23 glibc23:dev
+[DEP] linux-libc-headers:dev make mktemp net-tools netpbm rrdtool sed
+[DEP] sysfiles tar texinfo twoftpd ucspi-unix util-linux
 
 [PROVIDES] egrep fgrep grep
 

@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142636035 Fri Mar 17 23:53:55 2006 (5)
-[TIMESTAMP] 1142903870 Tue Mar 21 02:17:50 2006 (9)
+[TIMESTAMP] 1168684847 Sat Jan 13 11:40:47 2007 (5)
+[TIMESTAMP] 1168893201 Mon Jan 15 21:33:21 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-pegasus.log 9-pegasus.log
 
-[BUILDTIME] 77884 (5)
-[BUILDTIME] 9085 (9)
-[SIZE] 61.59 MB, 3262 files
+[BUILDTIME] 76128 (5)
+[BUILDTIME] 9938 (9)
+[SIZE] 59.91 MB, 3262 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] rrdtool sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils gawk gcc40
+[DEP] gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev make
+[DEP] mktemp rrdtool sed sysfiles tar
 
 [PROVIDES] AssocTable AssociationClient AssociationTestClient
 [PROVIDES] AuthorizationHandler CGIClient CLI CSProviderTestClient

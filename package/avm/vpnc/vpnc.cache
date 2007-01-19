@@ -20,22 +20,132 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142653835 Sat Mar 18 04:50:35 2006 (5)
-[TIMESTAMP] 1142923443 Tue Mar 21 07:44:03 2006 (9)
+[TIMESTAMP] 1168694632 Sat Jan 13 14:23:52 2007 (5) ERROR
+[TIMESTAMP] 1168903699 Tue Jan 16 00:28:19 2007 (9) ERROR
+[TIMESTAMP] 1168953954 Tue Jan 16 14:25:54 2007 (5) ERROR
+[TIMESTAMP] 1168983683 Tue Jan 16 22:41:23 2007 (9) ERROR
+[TIMESTAMP] 1169124288 Thu Jan 18 13:44:48 2007 (5) ERROR
+[TIMESTAMP] 1169153876 Thu Jan 18 21:57:56 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-vpnc.log 9-vpnc.log
+[LOGS] 5-vpnc.err 9-vpnc.err
 
-[BUILDTIME] 1510 (5)
-[BUILDTIME] 1617 (9)
-[SIZE] 0.08 MB, 10 files
+[BUILDTIME] 1553 (5) ERROR
+[BUILDTIME] 1637 (9) ERROR
+[BUILDTIME] 1664 (5) ERROR
+[BUILDTIME] 1659 (9) ERROR
+[BUILDTIME] 1665 (5) ERROR
+[BUILDTIME] 1654 (9) ERROR
+[SIZE] 0.09 MB, 14 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep libgcrypt libgcrypt:dev libgpg-error
-[DEP] libgpg-error:dev linux26-header:dev make mktemp rrdtool sed
-[DEP] sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils gawk
+[DEP] gcc40 gcc40:dev glibc23 glibc23:dev grep libgcrypt libgcrypt:dev
+[DEP] libgpg-error libgpg-error:dev linux-libc-headers:dev make mktemp
+[DEP] rrdtool sed sysfiles tar
 
-[PROVIDES] vpnc vpnc-connect vpnc-disconnect
+[PROVIDES] vpnc vpnc-disconnect
+
+[5-ERROR] gcc-40 -W -Wall -O -g '-DVERSION="0.3.3"'      -c -o vpnc.o vpnc.c
+[5-ERROR] gcc-40 -W -Wall -O -g '-DVERSION="0.3.3"'      -c -o isakmp-pkt.o isakmp-pkt.c
+[5-ERROR] gcc-40 -W -Wall -O -g '-DVERSION="0.3.3"'      -c -o tunip.o tunip.c
+[5-ERROR] tunip.c: In function 'tun_send_ip':
+[5-ERROR] tunip.c:330: warning: pointer targets in passing argument 2 of 'tun_write' differ in signedness
+[5-ERROR] tunip.c: In function 'encap_esp_new':
+[5-ERROR] tunip.c:356: warning: pointer targets in assignment differ in signedness
+[5-ERROR] tunip.c: In function 'encap_udp_new':
+[5-ERROR] tunip.c:370: warning: pointer targets in assignment differ in signedness
+[5-ERROR] tunip.c: In function 'find_local_addr':
+[5-ERROR] tunip.c:413: warning: pointer targets in passing argument 3 of 'getsockname' differ in signedness
+[5-ERROR] tunip.c: In function 'vpnc_main_loop':
+[5-ERROR] tunip.c:798: warning: pointer targets in passing argument 2 of 'tun_read' differ in signedness
+[5-ERROR] gcc-40 -W -Wall -O -g '-DVERSION="0.3.3"'      -c -o config.o config.c
+[5-ERROR] config.c: In function 'read_config_file':
+[5-ERROR] config.c:341: warning: pointer targets in passing argument 2 of 'getline' differ in signedness
+[5-ERROR] gcc-40 -W -Wall -O -g '-DVERSION="0.3.3"'      -c -o sysdep-linux.o sysdep-linux.c
+[5-ERROR] gcc-40 -W -Wall -O -g '-DVERSION="0.3.3"'      -c -o dh.o dh.c
+[5-ERROR] gcc-40 -W -Wall -O -g '-DVERSION="0.3.3"'      -c -o math_group.o math_group.c
+[5-ERROR] gcc-40 -o vpnc vpnc.o isakmp-pkt.o tunip.o config.o sysdep-linux.o dh.o math_group.o -g  -lgcrypt -lgpg-error
+[5-ERROR] install -d /etc/vpnc /usr/local/sbin /usr/local/share/man/man8
+[5-ERROR] install vpnc.conf vpnc-script /etc/vpnc
+[5-ERROR] install vpnc vpnc-disconnect /usr/local/sbin
+[5-ERROR] install vpnc.8 /usr/local/share/man/man8
+[5-ERROR] Trying to copy the default documentation ...
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing /lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 13 files for this package.
+[5-ERROR] Applying package split: 40 vpnc:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[5-ERROR] Applying package split: 42 vpnc:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 vpnc:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <vpnc> Creating flist file ...
+[5-ERROR] <vpnc> Creating package dependencies file ...
+[5-ERROR] <vpnc> Creating package description ...
+[5-ERROR] <vpnc> Creating md5sum and cksum files ...
+[5-ERROR] <vpnc:doc> Creating flist file ...
+[5-ERROR] <vpnc:doc> Creating package dependencies file ...
+[5-ERROR] <vpnc:doc> Creating package description ...
+[5-ERROR] <vpnc:doc> Creating md5sum and cksum files ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Found files in /usr/local:
+[5-ERROR] /usr/local/sbin/vpnc
+[5-ERROR] /usr/local/sbin/vpnc-disconnect
+[5-ERROR] /usr/local/share/man
+[5-ERROR] /usr/local/share/man/man8
+[5-ERROR] /usr/local/share/man/man8/vpnc.8
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] gcc-40 -W -Wall -O -g '-DVERSION="0.3.3"'      -c -o vpnc.o vpnc.c
+[9-ERROR] gcc-40 -W -Wall -O -g '-DVERSION="0.3.3"'      -c -o isakmp-pkt.o isakmp-pkt.c
+[9-ERROR] gcc-40 -W -Wall -O -g '-DVERSION="0.3.3"'      -c -o tunip.o tunip.c
+[9-ERROR] tunip.c: In function 'tun_send_ip':
+[9-ERROR] tunip.c:330: warning: pointer targets in passing argument 2 of 'tun_write' differ in signedness
+[9-ERROR] tunip.c: In function 'encap_esp_new':
+[9-ERROR] tunip.c:356: warning: pointer targets in assignment differ in signedness
+[9-ERROR] tunip.c: In function 'encap_udp_new':
+[9-ERROR] tunip.c:370: warning: pointer targets in assignment differ in signedness
+[9-ERROR] tunip.c: In function 'find_local_addr':
+[9-ERROR] tunip.c:413: warning: pointer targets in passing argument 3 of 'getsockname' differ in signedness
+[9-ERROR] tunip.c: In function 'vpnc_main_loop':
+[9-ERROR] tunip.c:798: warning: pointer targets in passing argument 2 of 'tun_read' differ in signedness
+[9-ERROR] gcc-40 -W -Wall -O -g '-DVERSION="0.3.3"'      -c -o config.o config.c
+[9-ERROR] config.c: In function 'read_config_file':
+[9-ERROR] config.c:341: warning: pointer targets in passing argument 2 of 'getline' differ in signedness
+[9-ERROR] gcc-40 -W -Wall -O -g '-DVERSION="0.3.3"'      -c -o sysdep-linux.o sysdep-linux.c
+[9-ERROR] gcc-40 -W -Wall -O -g '-DVERSION="0.3.3"'      -c -o dh.o dh.c
+[9-ERROR] gcc-40 -W -Wall -O -g '-DVERSION="0.3.3"'      -c -o math_group.o math_group.c
+[9-ERROR] gcc-40 -o vpnc vpnc.o isakmp-pkt.o tunip.o config.o sysdep-linux.o dh.o math_group.o -g  -lgcrypt -lgpg-error
+[9-ERROR] install -d /etc/vpnc /usr/local/sbin /usr/local/share/man/man8
+[9-ERROR] install vpnc.conf vpnc-script /etc/vpnc
+[9-ERROR] install vpnc vpnc-disconnect /usr/local/sbin
+[9-ERROR] install vpnc.8 /usr/local/share/man/man8
+[9-ERROR] Trying to copy the default documentation ...
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing /lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 13 files for this package.
+[9-ERROR] Applying package split: 40 vpnc:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[9-ERROR] Applying package split: 42 vpnc:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 vpnc:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <vpnc> Creating flist file ...
+[9-ERROR] <vpnc> Creating package dependencies file ...
+[9-ERROR] <vpnc> Creating package description ...
+[9-ERROR] <vpnc> Creating md5sum and cksum files ...
+[9-ERROR] <vpnc:doc> Creating flist file ...
+[9-ERROR] <vpnc:doc> Creating package dependencies file ...
+[9-ERROR] <vpnc:doc> Creating package description ...
+[9-ERROR] <vpnc:doc> Creating md5sum and cksum files ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found files in /usr/local:
+[9-ERROR] /usr/local/sbin/vpnc
+[9-ERROR] /usr/local/sbin/vpnc-disconnect
+[9-ERROR] /usr/local/share/man
+[9-ERROR] /usr/local/share/man/man8
+[9-ERROR] /usr/local/share/man/man8/vpnc.8
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] --- BUILD ERROR ---
 

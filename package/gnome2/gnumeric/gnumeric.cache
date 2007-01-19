@@ -20,41 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142657932 Sat Mar 18 05:58:52 2006 (5)
-[TIMESTAMP] 1142927884 Tue Mar 21 08:58:04 2006 (9)
+[TIMESTAMP] 1168696848 Sat Jan 13 15:00:48 2007 (5) ERROR
+[TIMESTAMP] 1168906141 Tue Jan 16 01:09:01 2007 (9) ERROR
+[TIMESTAMP] 1168954195 Tue Jan 16 14:29:55 2007 (5) ERROR
+[TIMESTAMP] 1168983924 Tue Jan 16 22:45:24 2007 (9) ERROR
+[TIMESTAMP] 1169124528 Thu Jan 18 13:48:48 2007 (5) ERROR
+[TIMESTAMP] 1169154119 Thu Jan 18 22:01:59 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-gnumeric.log 9-gnumeric.log
+[LOGS] 5-gnumeric.err 9-gnumeric.err
 
-[BUILDTIME] 42874 (5)
-[BUILDTIME] 43139 (9)
-[SIZE] 30.40 MB, 836 files
+[BUILDTIME] 2790 (5) ERROR
+[BUILDTIME] 2824 (9) ERROR
+[BUILDTIME] 2861 (5) ERROR
+[BUILDTIME] 2835 (9) ERROR
+[BUILDTIME] 2835 (5) ERROR
+[BUILDTIME] 2828 (9) ERROR
 
-[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev
-[DEP] bash2 binutils bzip2 cairo cairo:dev coreutils cpan-xml-parser
-[DEP] diffutils docbookx esound esound:dev expat findutils flex
-[DEP] flex:dev freetype freetype:dev gawk gcc34 gcc34:dev gconf
-[DEP] gconf:dev gettext glib glib:dev glibc23 glibc23:dev gnome-blog
-[DEP] gnome-doc-utils gnome-keyring gnome-keyring-manager gnome-keyring:dev
-[DEP] gnome-libs14 gnome-netstatus gnome-vfs gnome-vfs:dev gnome14-dirtree
-[DEP] gnome2-dirtree gnopernicus grep gtk+ gtk+:dev gtksourceview:dev
-[DEP] libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui
-[DEP] libbonoboui:dev libgda libgda:dev libglade libglade:dev libgnome
-[DEP] libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomedb
-[DEP] libgnomedb:dev libgnomeprint libgnomeprint:dev libgnomeprintui
-[DEP] libgnomeprintui:dev libgnomeui libgnomeui:dev libgsf libgsf:dev
-[DEP] libjpeg libjpeg:dev libpng libpng:dev libxml2 libxml2:dev libxslt
-[DEP] libxslt:dev linux26-header:dev m4 make mktemp net-tools openssl
-[DEP] orbit2 orbit2:dev pango pango:dev perl5 pkgconfig popt popt:dev
-[DEP] pygtk:dev python python:dev rrdtool scrollkeeper sed sysfiles tar
-[DEP] tcl tk util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] applix.so barcol.so corba.so derivatives.so dif.so erlang.so
-[PROVIDES] excel.so gdaif.so gnomedb.so gnumeric gnumeric-1.4.2 html.so
-[PROVIDES] lotus.so mps.so numtheory.so oleo.so openoffice.so pie.so
-[PROVIDES] plan_perfect.so plugin.so python_loader.so qpro.so radar.so
-[PROVIDES] sample_datasource.so sc.so ssconvert surface.so sylk.so xbase.so
-[PROVIDES] xml_sax.so xy.so
+[5-ERROR] appending configuration tag "F77" to libtool
+[5-ERROR] checking if libtool supports shared libraries... yes
+[5-ERROR] checking whether to build shared libraries... yes
+[5-ERROR] checking whether to build static libraries... no
+[5-ERROR] checking for f77 option to produce PIC... -fPIC
+[5-ERROR] checking if f77 PIC flag -fPIC works... no
+[5-ERROR] checking if f77 static flag -static works... no
+[5-ERROR] checking if f77 supports -c -o file.o... no
+[5-ERROR] checking whether the f77 linker (ld) supports shared libraries... yes
+[5-ERROR] checking dynamic linker characteristics... ./configure: line 1: f77: command not found
+[5-ERROR] GNU/Linux ld.so
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] checking for ANSI C header files... (cached) yes
+[5-ERROR] checking zlib.h usability... yes
+[5-ERROR] checking zlib.h presence... yes
+[5-ERROR] checking for zlib.h... yes
+[5-ERROR] checking for gzread in -lz... yes
+[5-ERROR] checking for i386-unknown-linux-gnu-pkg-config... no
+[5-ERROR] checking for pkg-config... /usr/bin/pkg-config
+[5-ERROR] checking pkg-config is at least version 0.18... yes
+[5-ERROR] checking for GTK... yes
+[5-ERROR] checking for GTK... yes
+[5-ERROR] checking for GNOME... yes
+[5-ERROR] checking for GNOME... yes
+[5-ERROR] checking for LIBSPREADSHEET... configure: error: Package requirements (
+[5-ERROR] 	libgoffice-0.3		>= 0.3.1
+[5-ERROR] 	libgsf-1		>= 1.14.2
+[5-ERROR] 	libxml-2.0		>= 2.4.12
+[5-ERROR]  
+[5-ERROR] 	libglade-2.0		>= 2.3.6
+[5-ERROR] 	libgnomeprint-2.2	>= 2.8.2
+[5-ERROR] 	libgnomeprintui-2.2	>= 2.8.2
+[5-ERROR] 	gtk+-2.0		>= 2.6.0
+[5-ERROR] 	libart-2.0		>= 2.3.11
+[5-ERROR]  
+[5-ERROR] 	libgnomeui-2.0		>= 2.0.0
+[5-ERROR] 	gconf-2.0
+[5-ERROR] 	libbonobo-2.0		>= 2.2.0
+[5-ERROR] ) were not met:
+[5-ERROR] 
+[5-ERROR] No package 'libgoffice-0.3' found
+[5-ERROR] 
+[5-ERROR] Consider adjusting the PKG_CONFIG_PATH environment variable if you
+[5-ERROR] installed software in a non-standard prefix.
+[5-ERROR] 
+[5-ERROR] Alternatively, you may set the environment variables LIBSPREADSHEET_CFLAGS
+[5-ERROR] and LIBSPREADSHEET_LIBS to avoid the need to call pkg-config.
+[5-ERROR] See the pkg-config man page for more details.
+[5-ERROR] 
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] appending configuration tag "F77" to libtool
+[9-ERROR] checking if libtool supports shared libraries... yes
+[9-ERROR] checking whether to build shared libraries... yes
+[9-ERROR] checking whether to build static libraries... no
+[9-ERROR] checking for f77 option to produce PIC... -fPIC
+[9-ERROR] checking if f77 PIC flag -fPIC works... no
+[9-ERROR] checking if f77 static flag -static works... no
+[9-ERROR] checking if f77 supports -c -o file.o... no
+[9-ERROR] checking whether the f77 linker (ld) supports shared libraries... yes
+[9-ERROR] checking dynamic linker characteristics... ./configure: line 1: f77: command not found
+[9-ERROR] GNU/Linux ld.so
+[9-ERROR] checking how to hardcode library paths into programs... immediate
+[9-ERROR] checking for ANSI C header files... (cached) yes
+[9-ERROR] checking zlib.h usability... yes
+[9-ERROR] checking zlib.h presence... yes
+[9-ERROR] checking for zlib.h... yes
+[9-ERROR] checking for gzread in -lz... yes
+[9-ERROR] checking for i386-unknown-linux-gnu-pkg-config... no
+[9-ERROR] checking for pkg-config... /usr/bin/pkg-config
+[9-ERROR] checking pkg-config is at least version 0.18... yes
+[9-ERROR] checking for GTK... yes
+[9-ERROR] checking for GTK... yes
+[9-ERROR] checking for GNOME... yes
+[9-ERROR] checking for GNOME... yes
+[9-ERROR] checking for LIBSPREADSHEET... configure: error: Package requirements (
+[9-ERROR] 	libgoffice-0.3		>= 0.3.1
+[9-ERROR] 	libgsf-1		>= 1.14.2
+[9-ERROR] 	libxml-2.0		>= 2.4.12
+[9-ERROR]  
+[9-ERROR] 	libglade-2.0		>= 2.3.6
+[9-ERROR] 	libgnomeprint-2.2	>= 2.8.2
+[9-ERROR] 	libgnomeprintui-2.2	>= 2.8.2
+[9-ERROR] 	gtk+-2.0		>= 2.6.0
+[9-ERROR] 	libart-2.0		>= 2.3.11
+[9-ERROR]  
+[9-ERROR] 	libgnomeui-2.0		>= 2.0.0
+[9-ERROR] 	gconf-2.0
+[9-ERROR] 	libbonobo-2.0		>= 2.2.0
+[9-ERROR] ) were not met:
+[9-ERROR] 
+[9-ERROR] No package 'libgoffice-0.3' found
+[9-ERROR] 
+[9-ERROR] Consider adjusting the PKG_CONFIG_PATH environment variable if you
+[9-ERROR] installed software in a non-standard prefix.
+[9-ERROR] 
+[9-ERROR] Alternatively, you may set the environment variables LIBSPREADSHEET_CFLAGS
+[9-ERROR] and LIBSPREADSHEET_LIBS to avoid the need to call pkg-config.
+[9-ERROR] See the pkg-config man page for more details.
+[9-ERROR] 
+[9-ERROR] --- BUILD ERROR ---
 

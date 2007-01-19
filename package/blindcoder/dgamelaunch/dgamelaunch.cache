@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142655315 Sat Mar 18 05:15:15 2006 (5)
-[TIMESTAMP] 1142924923 Tue Mar 21 08:08:43 2006 (9)
+[TIMESTAMP] 1168695785 Sat Jan 13 14:43:05 2007 (5)
+[TIMESTAMP] 1168904937 Tue Jan 16 00:48:57 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-dgamelaunch.log 9-dgamelaunch.log
 
-[BUILDTIME] 2111 (5)
-[BUILDTIME] 2234 (9)
-[SIZE] 0.25 MB, 21 files
+[BUILDTIME] 2155 (5)
+[BUILDTIME] 2229 (9)
+[SIZE] 0.11 MB, 21 files
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils findutils
-[DEP] flex flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev m4 make mktemp ncurses:dev net-tools rrdtool
-[DEP] sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils cvm diffutils
+[DEP] findutils flex flex:dev gawk gcc40 gcc40:dev glibc23 glibc23:dev
+[DEP] grep linux-libc-headers:dev m4 make mktemp ncurses ncurses:dev
+[DEP] net-tools rrdtool sed sysfiles tar util-linux
 
 [PROVIDES] dgamelaunch dgamelaunch_telnetd
 

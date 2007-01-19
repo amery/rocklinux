@@ -20,25 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142604792 Fri Mar 17 15:13:12 2006 (5)
-[TIMESTAMP] 1142870208 Mon Mar 20 16:56:48 2006 (9)
+[TIMESTAMP] 1168662590 Sat Jan 13 05:29:50 2007 (5) ERROR
+[TIMESTAMP] 1168870186 Mon Jan 15 15:09:46 2007 (9) ERROR
+[TIMESTAMP] 1168950365 Tue Jan 16 13:26:05 2007 (5) ERROR
+[TIMESTAMP] 1168979728 Tue Jan 16 21:35:28 2007 (9) ERROR
+[TIMESTAMP] 1169093341 Thu Jan 18 05:09:01 2007 (5) ERROR
+[TIMESTAMP] 1169149939 Thu Jan 18 20:52:19 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-kismet.log 9-kismet.log
+[LOGS] 5-kismet.err 9-kismet.err
 
-[BUILDTIME] 11971 (5)
-[BUILDTIME] 12279 (9)
-[SIZE] 2.60 MB, 31 files
+[BUILDTIME] 2766 (5) ERROR
+[BUILDTIME] 2827 (9) ERROR
+[BUILDTIME] 2842 (5) ERROR
+[BUILDTIME] 2832 (9) ERROR
+[BUILDTIME] 2895 (5) ERROR
+[BUILDTIME] 2842 (9) ERROR
 
-[DEP] 00-dirtree alsa autoconf bash2 binutils bzip2 bzip2:dev coreutils
-[DEP] diffutils expat expat:dev findutils freetype gawk gcc34 gcc34:dev
-[DEP] glib12 glibc23 glibc23:dev gmp gmp:dev gnome14-dirtree grep
-[DEP] imagemagick imagemagick:dev lcms libjpeg libpcap:dev libtiff
-[DEP] linux26-header:dev m4 make mktemp ncurses:dev net-tools patch perl5
-[DEP] rrdtool sed sysfiles tar util-linux xorg zlib:dev
 
-[PROVIDES] gpsmap gpsmap-helper-earthamaps kismet kismet_client
-[PROVIDES] kismet_drone kismet_server
+[5-ERROR] 
+[5-ERROR] Configuration complete: 
+[5-ERROR]          Compiling for: linux-gnu (i386)
+[5-ERROR]    Installing as group: root
+[5-ERROR]     Man pages owned by: root
+[5-ERROR]        Installing into: /usr
+[5-ERROR]         Setuid capable: yes
+[5-ERROR]          Zaurus extras: no
+[5-ERROR]       Terminal Control: ncurses
+[5-ERROR]       Curses interface: yes
+[5-ERROR]       Panels interface: yes
+[5-ERROR]  Linux Netlink capture: yes
+[5-ERROR]        Linux wireless : no
+[5-ERROR]  Linux wireless v.22+ : no
+[5-ERROR]           pcap capture: yes
+[5-ERROR]            pcap source: system
+[5-ERROR]         WSP100 capture: no
+[5-ERROR]           Viha capture: no
+[5-ERROR]       Radiotap headers: no
+[5-ERROR]  Using local dump code: yes
+[5-ERROR] Using ethereal wiretap: no
+[5-ERROR]    Imagemagick support: yes (6.3.0)
+[5-ERROR]          Expat Library: yes
+[5-ERROR]            GMP Library: yes
+[5-ERROR]        PThread Support: yes
+[5-ERROR]       libz compression: yes
+[5-ERROR] *** WARNING ***
+[5-ERROR] Linux Wireless Extentions were not found.  This means that they are not
+[5-ERROR] turned on in your kernel or that your kernel source include paths on your
+[5-ERROR] distribution are broken (namely, that linux/wireless.h didn't exist or
+[5-ERROR] was unuseable).  Without wireless extentions, most of the commonly used
+[5-ERROR] packet sources (such as Cisco, Orinoco, Madwifi, Prism54, and others)
+[5-ERROR] WILL NOT BE BUILT.
+[5-ERROR] *** WARNING ***
+[5-ERROR] 
+[5-ERROR] Configuration complete.  Run 'make dep' to generate dependencies
+[5-ERROR] and 'make' followed by 'make install' to compile and install.
+[5-ERROR] Makefile:371: .depend: No such file or directory
+[5-ERROR] Generating dependencies... 
+[5-ERROR] g++-40 -I/lib/modules/2.6.17.7-rock/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2005\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -W -pthread -c util.cc -o util.o 
+[5-ERROR] g++-40 -I/lib/modules/2.6.17.7-rock/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2005\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -W -pthread -c ringbuf.cc -o ringbuf.o 
+[5-ERROR] g++-40 -I/lib/modules/2.6.17.7-rock/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2005\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -W -pthread -c configfile.cc -o configfile.o 
+[5-ERROR] macaddr.h:149: warning: unused parameter 'in'
+[5-ERROR] g++-40 -I/lib/modules/2.6.17.7-rock/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2005\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -W -pthread -c speech.cc -o speech.o 
+[5-ERROR] macaddr.h:149: warning: unused parameter 'in'
+[5-ERROR] g++-40 -I/lib/modules/2.6.17.7-rock/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2005\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -W -pthread -c ifcontrol.cc -o ifcontrol.o 
+[5-ERROR] /lib/modules/2.6.17.7-rock/build/include/linux/types.h:147: error: conflicting declaration 'typedef long unsigned int blkcnt_t'
+[5-ERROR] /usr/include/sys/types.h:244: error: 'blkcnt_t' has a previous declaration as 'typedef __blkcnt64_t blkcnt_t'
+[5-ERROR] make: *** [ifcontrol.o] Error 1
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] 
+[9-ERROR] Configuration complete: 
+[9-ERROR]          Compiling for: linux-gnu (i386)
+[9-ERROR]    Installing as group: root
+[9-ERROR]     Man pages owned by: root
+[9-ERROR]        Installing into: /usr
+[9-ERROR]         Setuid capable: yes
+[9-ERROR]          Zaurus extras: no
+[9-ERROR]       Terminal Control: ncurses
+[9-ERROR]       Curses interface: yes
+[9-ERROR]       Panels interface: yes
+[9-ERROR]  Linux Netlink capture: yes
+[9-ERROR]        Linux wireless : no
+[9-ERROR]  Linux wireless v.22+ : no
+[9-ERROR]           pcap capture: yes
+[9-ERROR]            pcap source: system
+[9-ERROR]         WSP100 capture: no
+[9-ERROR]           Viha capture: no
+[9-ERROR]       Radiotap headers: no
+[9-ERROR]  Using local dump code: yes
+[9-ERROR] Using ethereal wiretap: no
+[9-ERROR]    Imagemagick support: yes (6.3.0)
+[9-ERROR]          Expat Library: yes
+[9-ERROR]            GMP Library: yes
+[9-ERROR]        PThread Support: yes
+[9-ERROR]       libz compression: yes
+[9-ERROR] *** WARNING ***
+[9-ERROR] Linux Wireless Extentions were not found.  This means that they are not
+[9-ERROR] turned on in your kernel or that your kernel source include paths on your
+[9-ERROR] distribution are broken (namely, that linux/wireless.h didn't exist or
+[9-ERROR] was unuseable).  Without wireless extentions, most of the commonly used
+[9-ERROR] packet sources (such as Cisco, Orinoco, Madwifi, Prism54, and others)
+[9-ERROR] WILL NOT BE BUILT.
+[9-ERROR] *** WARNING ***
+[9-ERROR] 
+[9-ERROR] Configuration complete.  Run 'make dep' to generate dependencies
+[9-ERROR] and 'make' followed by 'make install' to compile and install.
+[9-ERROR] Makefile:371: .depend: No such file or directory
+[9-ERROR] Generating dependencies... 
+[9-ERROR] g++-40 -I/lib/modules/2.6.17.7-rock/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2005\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -W -pthread -c util.cc -o util.o 
+[9-ERROR] g++-40 -I/lib/modules/2.6.17.7-rock/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2005\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -W -pthread -c ringbuf.cc -o ringbuf.o 
+[9-ERROR] g++-40 -I/lib/modules/2.6.17.7-rock/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2005\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -W -pthread -c configfile.cc -o configfile.o 
+[9-ERROR] macaddr.h:149: warning: unused parameter 'in'
+[9-ERROR] g++-40 -I/lib/modules/2.6.17.7-rock/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2005\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -W -pthread -c speech.cc -o speech.o 
+[9-ERROR] macaddr.h:149: warning: unused parameter 'in'
+[9-ERROR] g++-40 -I/lib/modules/2.6.17.7-rock/build/include/ -I/usr/include -O2 -Wall -DVERSION_MAJOR=\"2005\" -DVERSION_MINOR=\"04\" -DVERSION_TINY=\"R1\" -DTIMESTAMP=\"`cat TIMESTAMP`\" -g -O2 -g -O2 -g -O2 -Wall -W -pthread -c ifcontrol.cc -o ifcontrol.o 
+[9-ERROR] /lib/modules/2.6.17.7-rock/build/include/linux/types.h:147: error: conflicting declaration 'typedef long unsigned int blkcnt_t'
+[9-ERROR] /usr/include/sys/types.h:244: error: 'blkcnt_t' has a previous declaration as 'typedef __blkcnt64_t blkcnt_t'
+[9-ERROR] make: *** [ifcontrol.o] Error 1
+[9-ERROR] --- BUILD ERROR ---
 

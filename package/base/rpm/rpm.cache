@@ -20,23 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142490356 Thu Mar 16 07:25:56 2006 (5)
-[TIMESTAMP] 1142739211 Sun Mar 19 04:33:31 2006 (9)
+[TIMESTAMP] 1168567185 Fri Jan 12 02:59:45 2007 (5)
+[TIMESTAMP] 1168764714 Sun Jan 14 09:51:54 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-rpm.log 9-rpm.log
 
-[BUILDTIME] 36678 (5)
-[BUILDTIME] 37895 (9)
-[SIZE] 4.43 MB, 141 files
+[BUILDTIME] 38225 (5)
+[BUILDTIME] 39514 (9)
+[SIZE] 3.95 MB, 124 files
 
-[DEP] 00-dirtree alien bash2 binutils bison bzip2 bzip2:dev coreutils
-[DEP] diffutils doxygen findutils gawk gcc34 gcc34:dev gettext glibc23
-[DEP] glibc23:dev grep libelf libelf:dev linux26-header:dev make mktemp
-[DEP] net-tools patch python python:dev rrdtool sed sysfiles tar util-linux
-[DEP] zlib:dev
+[DEP] 00-dirtree alien bash2 binutils bison bzip2 bzip2:dev coreutils cvm
+[DEP] diffutils doxygen findutils gawk gcc40 gcc40:dev gettext glibc23
+[DEP] glibc23:dev grep libelf libelf:dev linux-libc-headers:dev make mktemp
+[DEP] net-tools netpbm patch python python:dev rrdtool sed sysfiles tar
+[DEP] twoftpd ucspi-unix util-linux zlib:dev
 
 [PROVIDES] _rpmdb.so gendiff libbeecrypt.a libbeecrypt.so librpm-4.1.so
 [PROVIDES] librpm.a librpm.so librpmbuild-4.1.so librpmbuild.a

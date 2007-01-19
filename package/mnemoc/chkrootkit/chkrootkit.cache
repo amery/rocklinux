@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142591414 Fri Mar 17 11:30:14 2006 (5)
-[TIMESTAMP] 1142856180 Mon Mar 20 13:03:00 2006 (9)
+[TIMESTAMP] 1168649972 Sat Jan 13 01:59:32 2007 (5)
+[TIMESTAMP] 1168856575 Mon Jan 15 11:22:55 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-chkrootkit.log 9-chkrootkit.log
 
-[BUILDTIME] 1337 (5)
-[BUILDTIME] 1636 (9)
+[BUILDTIME] 1328 (5)
+[BUILDTIME] 1639 (9)
 [SIZE] 0.47 MB, 14 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp patch
-[DEP] rrdtool sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils gawk gcc40
+[DEP] gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev make
+[DEP] mktemp patch rrdtool sed sysfiles tar
 
 [PROVIDES] check_wtmpx chkdirs chklastlog chkproc chkrootkit chkwtmp
 [PROVIDES] ifpromisc strings-static

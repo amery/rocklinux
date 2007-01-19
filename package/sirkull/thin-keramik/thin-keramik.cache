@@ -20,25 +20,31 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142548402 Thu Mar 16 23:33:22 2006 (5)
-[TIMESTAMP] 1142805379 Sun Mar 19 22:56:19 2006 (9)
+[TIMESTAMP] 1168618666 Fri Jan 12 17:17:46 2007 (5)
+[TIMESTAMP] 1168821820 Mon Jan 15 01:43:40 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-thin-keramik.log 9-thin-keramik.log
 
-[BUILDTIME] 6895 (5)
-[BUILDTIME] 7348 (9)
-[SIZE] 0.79 MB, 18 files
+[BUILDTIME] 7459 (5)
+[BUILDTIME] 7833 (9)
+[SIZE] 0.78 MB, 18 files
 
-[DEP] 00-dirtree acl acl:dev arts attr attr:dev bash2 binutils bzip2
-[DEP] coreutils diffutils expat fam fam:dev findutils freetype freetype:dev
-[DEP] gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep kdebase
+[DEP] 00-dirtree acl acl:dev applewmproto applewmproto:dev attr attr:dev
+[DEP] bash2 binutils bzip2 coreutils cvm diffutils expat expat:dev fam
+[DEP] fam:dev findutils fontconfig fontconfig:dev freetype freetype:dev
+[DEP] gawk gcc40 gcc40:dev gettext glibc23 glibc23:dev grep imake kdebase
 [DEP] kdebase:dev kdelibs kdelibs:dev libart_lgpl23 libart_lgpl23:dev
-[DEP] libidn libidn:dev libjpeg libpng libpng:dev linux26-header:dev make
-[DEP] mktemp nas net-tools perl5 qt33 qt33:dev rrdtool sed sysfiles tar
-[DEP] util-linux xorg xorg:dev zlib:dev
+[DEP] libice libice:dev libidn libidn:dev libjpeg libpng libpng:dev
+[DEP] libsm libsm:dev libx11 libx11:dev libxau libxau:dev libxcursor
+[DEP] libxcursor:dev libxdmcp libxdmcp:dev libxext libxext:dev libxfixes
+[DEP] libxfixes:dev libxft libxft:dev libxinerama libxinerama:dev libxmu
+[DEP] libxmu:dev libxrandr libxrandr:dev libxrender libxrender:dev libxt
+[DEP] libxt:dev linux-libc-headers:dev make mesalib mktemp nas net-tools
+[DEP] perl5 qt33 qt33:dev rrdtool sed sysfiles tar util-linux xorg-cf-files
+[DEP] xproto:dev zlib zlib:dev
 
 [PROVIDES] kstyle_thinkeramik_config.so kwin3_thinkeramik.so
 [PROVIDES] kwin_thinkeramik_config.so thinkeramik.so

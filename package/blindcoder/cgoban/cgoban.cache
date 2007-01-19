@@ -20,21 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142609207 Fri Mar 17 16:26:47 2006 (5)
-[TIMESTAMP] 1142875021 Mon Mar 20 18:17:01 2006 (9)
+[TIMESTAMP] 1168665276 Sat Jan 13 06:14:36 2007 (5)
+[TIMESTAMP] 1168873120 Mon Jan 15 15:58:40 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-cgoban.log 9-cgoban.log
 
-[BUILDTIME] 3554 (5)
-[BUILDTIME] 3837 (9)
-[SIZE] 0.37 MB, 9 files
+[BUILDTIME] 3771 (5)
+[BUILDTIME] 3999 (9)
+[SIZE] 0.38 MB, 9 files
 
-[DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp net-tools patch rrdtool sed sysfiles tar xorg xorg:dev
+[DEP] 00-dirtree alsa applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm diffutils findutils gawk gcc40 gcc40:dev glibc23
+[DEP] glibc23:dev grep imake libx11 libx11:dev libxau libxdmcp libxt
+[DEP] linux-libc-headers:dev make mktemp net-tools patch rrdtool sed
+[DEP] sysfiles tar xorg-cf-files xproto:dev
 
 [PROVIDES] cgoban
 

@@ -20,24 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142470498 Thu Mar 16 01:54:58 2006 (5) ERROR
-[TIMESTAMP] 1142714956 Sat Mar 18 21:49:16 2006 (9)
-[TIMESTAMP] 1142952176 Tue Mar 21 15:42:56 2006 (5)
+[TIMESTAMP] 1168565616 Fri Jan 12 02:33:36 2007 (5)
+[TIMESTAMP] 1168763018 Sun Jan 14 09:23:38 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-lm_sensors.log 9-lm_sensors.log
 
-[BUILDTIME] 1092 (5) ERROR
-[BUILDTIME] 2821 (9)
-[BUILDTIME] 2847 (5)
-[SIZE] 0.77 MB, 40 files
+[BUILDTIME] 2526 (5)
+[BUILDTIME] 2990 (9)
+[SIZE] 0.77 MB, 39 files
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils findutils flex
-[DEP] freetype gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libart_lgpl23
-[DEP] libpng linux26-header:dev linux26-source m4 make mktemp patch
-[DEP] rrdtool rrdtool:dev sed sysfiles sysfsutils sysfsutils:dev tar
+[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils cvm findutils flex
+[DEP] freetype gawk gcc40 gcc40:dev glibc23 glibc23:dev grep libart_lgpl23
+[DEP] libpng linux-libc-headers:dev linux26-source m4 make mktemp netpbm
+[DEP] patch rrdtool rrdtool:dev sed sysfiles sysfsutils sysfsutils:dev
+[DEP] tar twoftpd ucspi-unix zlib
 
 [PROVIDES] ddcmon decode-dimms.pl decode-edid.pl decode-vaio.pl
 [PROVIDES] decode-xeon.pl fancontrol fancontrol.pl i2cdetect i2cdump

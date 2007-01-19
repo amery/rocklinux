@@ -20,40 +20,48 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142582184 Fri Mar 17 08:56:24 2006 (5)
-[TIMESTAMP] 1142846025 Mon Mar 20 10:13:45 2006 (9)
+[TIMESTAMP] 1168644030 Sat Jan 13 00:20:30 2007 (5)
+[TIMESTAMP] 1168850249 Mon Jan 15 09:37:29 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-kdemultimedia.log 9-kdemultimedia.log
 
-[BUILDTIME] 244197 (5)
-[BUILDTIME] 246175 (9)
-[SIZE] 20.98 MB, 1011 files
+[BUILDTIME] 216577 (5)
+[BUILDTIME] 218417 (9)
+[SIZE] 19.74 MB, 1015 files
 
-[DEP] 00-dirtree acl acl:dev alsa alsa:dev arts arts:dev attr attr:dev
-[DEP] audiofile audiofile:dev bash2 binutils bzip2 cdparanoia
-[DEP] cdparanoia:dev coreutils diffutils esound esound:dev expat
-[DEP] expat:dev fam fam:dev findutils flac flac:dev freetype freetype:dev
-[DEP] gawk gcc34 gcc34:dev gettext glib glib:dev glibc23 glibc23:dev
-[DEP] gnome2-dirtree grep gstreamer gstreamer:dev jack jack:dev kdebase
-[DEP] kdebase:doc kdelibs kdelibs:dev kdeutils lame lame:dev libart_lgpl23
-[DEP] libart_lgpl23:dev libcdaudio libidn libidn:dev libjpeg libjpeg:dev
-[DEP] libmusicbrainz libmusicbrainz:dev libpng libpng:dev libtheora
-[DEP] libtheora:dev libxml2 libxml2:dev linux26-header:dev mad mad:dev
-[DEP] make mktemp nas net-tools ogg-vorbis ogg-vorbis:dev pcre pcre:dev
-[DEP] perl5 pkgconfig popt popt:dev qt33 qt33:dev rrdtool sed sysfiles
-[DEP] taglib taglib:dev tar tunepimp tunepimp:dev util-linux xine-lib
-[DEP] xine-lib:dev xorg xorg:dev zlib:dev
+[DEP] 00-dirtree acl acl:dev alsa alsa:dev applewmproto applewmproto:dev
+[DEP] arts arts:dev attr attr:dev audiofile audiofile:dev bash2
+[DEP] binutils bzip2 cdparanoia cdparanoia:dev coreutils cups cvm
+[DEP] diffutils esound esound:dev expat expat:dev fam fam:dev findutils
+[DEP] flac flac:dev fontconfig fontconfig:dev freetype freetype:dev
+[DEP] gawk gcc40 gcc40:dev gettext glib glib:dev glibc23 glibc23:dev
+[DEP] gnome2-dirtree grep gstreamer gstreamer:dev hicolor-icon-theme
+[DEP] imake kdebase kdebase:doc kdelibs kdelibs:dev kdeutils lame lame:dev
+[DEP] libart_lgpl23 libart_lgpl23:dev libcdaudio libice libice:dev libidn
+[DEP] libidn:dev libjpeg libjpeg:dev libmusicbrainz libmusicbrainz:dev
+[DEP] libpng libpng:dev libsm libsm:dev libtheora libtheora:dev libx11
+[DEP] libx11:dev libxau libxau:dev libxcursor libxcursor:dev libxdmcp
+[DEP] libxdmcp:dev libxext libxext:dev libxfixes libxfixes:dev libxft
+[DEP] libxft:dev libxinerama libxinerama:dev libxml2 libxml2:dev libxmu
+[DEP] libxmu:dev libxrandr libxrandr:dev libxrender libxrender:dev libxt
+[DEP] libxt:dev libxv libxv:dev libxxf86dga libxxf86dga:dev libxxf86vm
+[DEP] libxxf86vm:dev linux-libc-headers:dev mad mad:dev make mesalib mktemp
+[DEP] nas net-tools ogg-vorbis ogg-vorbis:dev openbox pcre pcre:dev perl5
+[DEP] pkgconfig qt33 qt33:dev rrdtool sed sysfiles taglib taglib:dev
+[DEP] tar tunepimp tunepimp:dev util-linux videoproto:dev xextproto:dev
+[DEP] xf86dgaproto:dev xf86vidmodeproto:dev xine-lib xine-lib:dev
+[DEP] xorg-cf-files xproto:dev zlib zlib:dev
 
 [PROVIDES] artsbuilder artscontrol juk kaboodle kaudiocreator
 [PROVIDES] kcm_audiocd.so kcm_cddb.so kcm_krec.so kcm_krec_files.so
-[PROVIDES] kfile_au.so kfile_avi.so kfile_flac.so kfile_m3u.so
-[PROVIDES] kfile_mp3.so kfile_mpc.so kfile_mpeg.so kfile_ogg.so
-[PROVIDES] kfile_sid.so kfile_theora.so kfile_wav.so kio_audiocd.so
-[PROVIDES] kmid kmix kmix.so kmix_panelapplet.so kmixctrl kmixctrl.so
-[PROVIDES] krec krec.so kscd libarts_mpeglib.so libarts_splay.so
+[PROVIDES] kfile_au.so kfile_avi.so kfile_flac.so kfile_m3u.so kfile_mp3.so
+[PROVIDES] kfile_mpc.so kfile_mpeg.so kfile_ogg.so kfile_sid.so
+[PROVIDES] kfile_theora.so kfile_wav.so kio_audiocd.so kmid kmix kmix.so
+[PROVIDES] kmix_panelapplet.so kmixctrl kmixctrl.so krec krec.so kscd
+[PROVIDES] libarts_audiofile.so libarts_mpeglib.so libarts_splay.so
 [PROVIDES] libarts_xine.so libartsbuilder.so libartscontrolapplet.so
 [PROVIDES] libartscontrolsupport.so libartseffects.so libartsgui.so
 [PROVIDES] libartsgui_idl.so libartsgui_kde.so libartsmidi.so
@@ -62,19 +70,18 @@
 [PROVIDES] libartsmodulessynth.so libaudiocd_encoder_flac.so
 [PROVIDES] libaudiocd_encoder_lame.so libaudiocd_encoder_vorbis.so
 [PROVIDES] libaudiocd_encoder_wav.so libaudiocdplugins.so
-[PROVIDES] libaudiofilearts.so libkaboodlepart.so libkcddb.so
-[PROVIDES] libkdeinit_kmix.so libkdeinit_kmixctrl.so libkdeinit_krec.so
-[PROVIDES] libkdeinit_noatun.so libkmidlib.so libkmidpart.so
-[PROVIDES] libkrecexport_mp3.so libkrecexport_ogg.so libkrecexport_wave.so
-[PROVIDES] libmpeg-0.3.0.so libmpeg.so libnoatun.so libnoatunarts.so
-[PROVIDES] libnoatuncontrols.so libnoatuntags.so libwinskinvis.so
-[PROVIDES] libyafcore.so libyafxplayer.so midisend mpeglibartsplay
-[PROVIDES] noatun noatun.so noatun_dcopiface.so noatun_excellent.so
-[PROVIDES] noatun_htmlexport.so noatun_infrared.so noatun_kaiman.so
-[PROVIDES] noatun_keyz.so noatun_kjofol.so noatun_marquis.so
-[PROVIDES] noatun_metatag.so noatun_monoscope.so noatun_net.so
-[PROVIDES] noatun_splitplaylist.so noatun_systray.so noatun_ui.so
-[PROVIDES] noatun_voiceprint.so noatun_winskin.so noatunsimple.so
-[PROVIDES] videothumbnail.so workman2cddb.pl yaf-cdda yaf-mpgplay yaf-splay
-[PROVIDES] yaf-tplay yaf-vorbis yaf-yuv
+[PROVIDES] libkaboodlepart.so libkcddb.so libkdeinit_kmix.so
+[PROVIDES] libkdeinit_kmixctrl.so libkdeinit_krec.so libkdeinit_noatun.so
+[PROVIDES] libkmidlib.so libkmidpart.so libkrecexport_mp3.so
+[PROVIDES] libkrecexport_ogg.so libkrecexport_wave.so libmpeg-0.3.0.so
+[PROVIDES] libmpeg.so libnoatun.so libnoatunarts.so libnoatuncontrols.so
+[PROVIDES] libnoatuntags.so libwinskinvis.so libyafcore.so libyafxplayer.so
+[PROVIDES] midisend mpeglibartsplay noatun noatun.so noatun_dcopiface.so
+[PROVIDES] noatun_excellent.so noatun_htmlexport.so noatun_infrared.so
+[PROVIDES] noatun_kaiman.so noatun_keyz.so noatun_kjofol.so
+[PROVIDES] noatun_marquis.so noatun_metatag.so noatun_monoscope.so
+[PROVIDES] noatun_net.so noatun_splitplaylist.so noatun_systray.so
+[PROVIDES] noatun_ui.so noatun_voiceprint.so noatun_winskin.so
+[PROVIDES] noatunsimple.so videothumbnail.so workman2cddb.pl yaf-cdda
+[PROVIDES] yaf-mpgplay yaf-splay yaf-tplay yaf-vorbis yaf-yuv
 

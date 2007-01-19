@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142676632 Sat Mar 18 11:10:32 2006 (5)
-[TIMESTAMP] 1142947890 Tue Mar 21 14:31:30 2006 (9)
+[TIMESTAMP] 1168706285 Sat Jan 13 17:38:05 2007 (5)
+[TIMESTAMP] 1168916128 Tue Jan 16 03:55:28 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-exiftags.log 9-exiftags.log
 
-[BUILDTIME] 1699 (5)
-[BUILDTIME] 1767 (9)
+[BUILDTIME] 1692 (5)
+[BUILDTIME] 1736 (9)
 [SIZE] 0.17 MB, 12 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] rrdtool sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils gcc40
+[DEP] gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev make
+[DEP] mktemp netpbm rrdtool sed sysfiles tar twoftpd ucspi-unix
 
 [PROVIDES] exifcom exiftags exiftime
 

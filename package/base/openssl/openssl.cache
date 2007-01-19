@@ -20,23 +20,79 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142453798 Wed Mar 15 21:16:38 2006 (5)
-[TIMESTAMP] 1142690342 Sat Mar 18 14:59:02 2006 (9)
+[TIMESTAMP] 1168530412 Thu Jan 11 16:46:52 2007 (5)
+[TIMESTAMP] 1168719963 Sat Jan 13 21:26:03 2007 (9) ERROR
+[TIMESTAMP] 1168958035 Tue Jan 16 15:33:55 2007 (9) ERROR
+[TIMESTAMP] 1169128330 Thu Jan 18 14:52:10 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-openssl.log 9-openssl.log
+[LOGS] 5-openssl.log 9-openssl.err
 
-[BUILDTIME] 19640 (5)
-[BUILDTIME] 20950 (9)
-[SIZE] 1.81 MB, 36 files
+[BUILDTIME] 22400 (5)
+[BUILDTIME] 23936 (9) ERROR
+[BUILDTIME] 24124 (9) ERROR
+[BUILDTIME] 24059 (9) ERROR
+[SIZE] 2.31 MB, 75 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] perl5 rrdtool sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils
+[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep libowfat:dev
+[DEP] linux-libc-headers:dev make mktemp netpbm perl5 perl5:dev rrdtool
+[DEP] sed sysfiles tar twoftpd ucspi-unix
 
 [PROVIDES] c_rehash lib4758cca.so libaep.so libatalla.so libchil.so
 [PROVIDES] libcrypto.a libcrypto.so libcswift.so libgmp.so libnuron.so
 [PROVIDES] libssl.a libssl.so libsureware.so libubsec.so openssl
+
+[9-ERROR] making install in tools...
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.openssl.1169128089.2443.3941867026/openssl-0.9.8d/tools'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.openssl.1169128089.2443.3941867026/openssl-0.9.8d/tools'
+[9-ERROR] installing libcrypto.a
+[9-ERROR] installing libssl.a
+[9-ERROR] installing libcrypto.so.0.9.8
+[9-ERROR] installing libssl.so.0.9.8
+[9-ERROR] make[1]: Entering directory `/usr/lib'
+[9-ERROR] make[2]: Entering directory `/usr/lib'
+[9-ERROR] make[2]: Leaving directory `/usr/lib'
+[9-ERROR] make[2]: Entering directory `/usr/lib'
+[9-ERROR] make[2]: Leaving directory `/usr/lib'
+[9-ERROR] make[1]: Leaving directory `/usr/lib'
+[9-ERROR] cp libcrypto.pc /usr/lib/pkgconfig
+[9-ERROR] chmod 644 /usr/lib/pkgconfig/libcrypto.pc
+[9-ERROR] cp libssl.pc /usr/lib/pkgconfig
+[9-ERROR] chmod 644 /usr/lib/pkgconfig/libssl.pc
+[9-ERROR] cp openssl.pc /usr/lib/pkgconfig
+[9-ERROR] chmod 644 /usr/lib/pkgconfig/openssl.pc
+[9-ERROR] Hook preconf is still marked as dirty ...
+[9-ERROR] Hook premake is still marked as dirty ...
+[9-ERROR] Hook inmake is still marked as dirty ...
+[9-ERROR] Hook postmake is still marked as dirty ...
+[9-ERROR] Trying to copy the default documentation ...
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing /lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 993 files for this package.
+[9-ERROR] Applying package split: 40 openssl:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[9-ERROR] Applying package split: 42 openssl:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 openssl:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <openssl> Creating flist file ...
+[9-ERROR] <openssl> Creating package dependencies file ...
+[9-ERROR] <openssl> Creating package description ...
+[9-ERROR] <openssl> Creating md5sum and cksum files ...
+[9-ERROR] <openssl:dev> Creating flist file ...
+[9-ERROR] <openssl:dev> Creating package dependencies file ...
+[9-ERROR] <openssl:dev> Creating package description ...
+[9-ERROR] <openssl:dev> Creating md5sum and cksum files ...
+[9-ERROR] <openssl:doc> Creating flist file ...
+[9-ERROR] <openssl:doc> Creating package dependencies file ...
+[9-ERROR] <openssl:doc> Creating package description ...
+[9-ERROR] <openssl:doc> Creating md5sum and cksum files ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] usr/share/man/man3/buffer.3: libowfat:dev openssl:dev
+[9-ERROR] usr/share/man/man3/threads.3: openssl:dev perl5:dev
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] --- BUILD ERROR ---
 

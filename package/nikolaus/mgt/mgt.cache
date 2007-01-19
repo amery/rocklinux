@@ -20,28 +20,31 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142668224 Sat Mar 18 08:50:24 2006 (5)
-[TIMESTAMP] 1142938924 Tue Mar 21 12:02:04 2006 (9)
+[TIMESTAMP] 1168700533 Sat Jan 13 16:02:13 2007 (5)
+[TIMESTAMP] 1168910069 Tue Jan 16 02:14:29 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-mgt.log 9-mgt.log
 
-[BUILDTIME] 5820 (5)
-[BUILDTIME] 6790 (9)
+[BUILDTIME] 5818 (5)
+[BUILDTIME] 5911 (9)
 [SIZE] 3.09 MB, 197 files
 
-[DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev autoconf bash2
-[DEP] bdb33 binutils bzip2 bzip2:dev coreutils diffutils docbookx esound
-[DEP] esound:dev findutils flex flex:dev gawk gcc34 gcc34:dev gdk-pixbuf10
-[DEP] gettext glade10 glib12 glib12:dev glibc23 glibc23:dev gnome-doc-utils
-[DEP] gnome-keyring-manager gnome-libs14 gnome-libs14:dev gnome-netstatus
-[DEP] gnome14-dirtree gnome2-dirtree grep gtk+12 gtk+12:dev imlib imlib:dev
-[DEP] libglade10 libglade10:dev libxml libxml:dev linux26-header:dev
-[DEP] m4 make mktemp net-tools orbit10 orbit10:dev pango patch perl5
-[DEP] rrdtool scrollkeeper sed sysfiles tar tcp_wrappers:dev texinfo xorg
-[DEP] xorg:dev zlib:dev
+[DEP] 00-dirtree alsa alsa:dev applewmproto applewmproto:dev audiofile
+[DEP] audiofile:dev autoconf bash2 bdb33 binutils bzip2 bzip2:dev
+[DEP] coreutils cvm diffutils docbookx esound esound:dev findutils
+[DEP] flex flex:dev gawk gcc40 gcc40:dev gdk-pixbuf10 gettext glade10
+[DEP] glib12 glib12:dev glibc23 glibc23:dev gnome-libs14 gnome-libs14:dev
+[DEP] gnome-nettool gnome14-dirtree gnome2-dirtree grep gtk+12 gtk+12:dev
+[DEP] gtkam imlib imlib:dev libglade10 libglade10:dev libice libice:dev
+[DEP] libsm libsm:dev libx11 libx11:dev libxau libxau:dev libxdmcp
+[DEP] libxdmcp:dev libxext libxext:dev libxi libxi:dev libxml libxml:dev
+[DEP] libxpm linux-libc-headers:dev m4 make mktemp net-tools orbit10
+[DEP] orbit10:dev pango patch perl5 pioneers rrdtool scrollkeeper sed
+[DEP] sensors-applet streamtuner sysfiles tar tcp_wrappers:dev texinfo
+[DEP] xproto:dev zapping zlib
 
 [PROVIDES] mgt-helper mgt-pty-helper multi-gnome-terminal
 

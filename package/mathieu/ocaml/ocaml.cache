@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142518207 Thu Mar 16 15:10:07 2006 (5)
-[TIMESTAMP] 1142772066 Sun Mar 19 13:41:06 2006 (9)
+[TIMESTAMP] 1168594385 Fri Jan 12 10:33:05 2007 (5)
+[TIMESTAMP] 1168796252 Sun Jan 14 18:37:32 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-ocaml.log 9-ocaml.log
 
-[BUILDTIME] 28769 (5)
-[BUILDTIME] 29561 (9)
-[SIZE] 30.86 MB, 960 files
+[BUILDTIME] 32517 (5)
+[BUILDTIME] 33096 (9)
+[SIZE] 30.34 MB, 879 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev gdbm gdbm:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp ncurses:dev rrdtool sed sysfiles tar tcl tcl:dev tk
-[DEP] tk:dev xorg xorg:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm findutils gawk gcc40 gcc40:dev gdbm gdbm:dev
+[DEP] glibc23 glibc23:dev grep libx11 libx11:dev libxau libxdmcp
+[DEP] linux-libc-headers:dev make mktemp ncurses netpbm rrdtool sed
+[DEP] sysfiles tar tcl tcl:dev tk tk:dev twoftpd ucspi-unix xproto:dev
 
 [PROVIDES] bigarray.a camlp4 camlp4.a camlp4o camlp4o.opt camlp4r
 [PROVIDES] camlp4r.opt dbm.a dllbigarray.so dllgraphics.so dlllabltk.so

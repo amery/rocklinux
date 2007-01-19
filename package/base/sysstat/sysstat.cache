@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142526901 Thu Mar 16 17:35:01 2006 (5)
-[TIMESTAMP] 1142782181 Sun Mar 19 16:29:41 2006 (9)
+[TIMESTAMP] 1168602020 Fri Jan 12 12:40:20 2007 (5)
+[TIMESTAMP] 1168804384 Sun Jan 14 20:53:04 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-sysstat.log 9-sysstat.log
 
-[BUILDTIME] 1493 (5)
-[BUILDTIME] 1914 (9)
-[SIZE] 0.29 MB, 37 files
+[BUILDTIME] 1620 (5)
+[BUILDTIME] 1971 (9)
+[SIZE] 0.28 MB, 37 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] gettext glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] patch rrdtool sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils gawk gcc40
+[DEP] gcc40:dev gettext glibc23 glibc23:dev grep linux-libc-headers:dev
+[DEP] make mktemp netpbm patch rrdtool sed sysfiles tar twoftpd ucspi-unix
 
 [PROVIDES] iostat mpstat sadf sar
 

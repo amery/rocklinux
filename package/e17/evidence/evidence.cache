@@ -20,56 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142573304 Fri Mar 17 06:28:24 2006 (5)
-[TIMESTAMP] 1142835765 Mon Mar 20 07:22:45 2006 (9)
+[TIMESTAMP] 1168637062 Fri Jan 12 22:24:22 2007 (5) ERROR
+[TIMESTAMP] 1168842405 Mon Jan 15 07:26:45 2007 (9) ERROR
+[TIMESTAMP] 1168948502 Tue Jan 16 12:55:02 2007 (5) ERROR
+[TIMESTAMP] 1168978382 Tue Jan 16 21:13:02 2007 (9) ERROR
+[TIMESTAMP] 1169091918 Thu Jan 18 04:45:18 2007 (5) ERROR
+[TIMESTAMP] 1169148655 Thu Jan 18 20:30:55 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-evidence.log 9-evidence.log
+[LOGS] 5-evidence.err 9-evidence.err
 
-[BUILDTIME] 25924 (5)
-[BUILDTIME] 26664 (9)
-[SIZE] 8.37 MB, 576 files
+[BUILDTIME] 9965 (5) ERROR
+[BUILDTIME] 10053 (9) ERROR
+[BUILDTIME] 10084 (5) ERROR
+[BUILDTIME] 10155 (9) ERROR
+[BUILDTIME] 10104 (5) ERROR
+[BUILDTIME] 10068 (9) ERROR
 
-[DEP] 00-dirtree acl acl:dev arts atk atk:dev attr attr:dev autoconf
-[DEP] automake19 bash2 binutils bzip2 cairo cairo:dev coreutils curl
-[DEP] curl:dev diffutils directfb directfb:dev ecore ecore:dev edb edb:dev
-[DEP] edje edje:dev eet eet:dev embryo embryo:dev emotion evas evas:dev
-[DEP] expat fam fam:dev file file:dev findutils freetype freetype:dev
-[DEP] gawk gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev gnome-libs14
-[DEP] gnome14-dirtree gnome2-dirtree grep gtk+ gtk+:dev gzip id3lib
-[DEP] id3lib:dev imlib2 imlib2:dev kdelibs libjpeg libjpeg:dev libpng
-[DEP] libpng:dev libtool linux26-header:dev m4 make mktemp ncurses:dev
-[DEP] net-tools netpbm ogg-vorbis ogg-vorbis:dev openssl pango pango:dev
-[DEP] patch pcre pcre:dev perl5 pkgconfig readline readline:dev rrdtool
-[DEP] sed sysfiles taglib taglib:dev tar util-linux valgrind:dev xine-lib
-[DEP] xine-lib:dev xorg xorg:dev zlib:dev
 
-[PROVIDES] ape.a ape.so backdrop.a backdrop.so bg_ebg.a bg_ebg.so
-[PROVIDES] bg_ebg_trans.a bg_ebg_trans.so bg_edje.a bg_edje.so bg_scale.a
-[PROVIDES] bg_scale.so bg_tile.a bg_tile.so bg_trans.a bg_trans.so
-[PROVIDES] delete.a delete.so epeg.a epeg.so evidence evsh exif.a
-[PROVIDES] exif.so folder.a folder.so fsxs.so ia_basic.a ia_basic.so
-[PROVIDES] ia_colour.a ia_colour.so ia_creepology.a ia_creepology.so
-[PROVIDES] ia_creepy.a ia_creepy.so ia_grey.a ia_grey.so ia_grow.a
-[PROVIDES] ia_grow.so ia_growfade.a ia_growfade.so ia_solid.a ia_solid.so
-[PROVIDES] ia_throb.a ia_throb.so ic_alignbelow.a ic_alignbelow.so
-[PROVIDES] ic_alignright.a ic_alignright.so ic_edje.a ic_edje.so
-[PROVIDES] ic_nautilus.a ic_nautilus.so id3.a id3.so id_bubbles.a
-[PROVIDES] id_bubbles.so id_flutterby.a id_flutterby.so id_lain.a
-[PROVIDES] id_lain.so image.a image.so imlib.a imlib.so info_dial.a
-[PROVIDES] info_dial.so ipc_ecore.a ipc_ecore.so ix_LCARS.a ix_LCARS.so
-[PROVIDES] ix_rephormed.a ix_rephormed.so mkdir.a mkdir.so mp3.a mp3.so
-[PROVIDES] name2tag.a name2tag.so newwindow.a newwindow.so null.a null.so
-[PROVIDES] playlist.a playlist.so posix.so rb_edb.a rb_edb.so rb_gradient.a
-[PROVIDES] rb_gradient.so rb_gradient2.a rb_gradient2.so rb_nautilus.a
-[PROVIDES] rb_nautilus.so rename.a rename.so sb_default.a sb_default.so
-[PROVIDES] sb_edb.a sb_edb.so sb_example.a sb_example.so searchable.a
-[PROVIDES] searchable.so searchable_r.a searchable_r.so sortkey2name.a
-[PROVIDES] sortkey2name.so tag2name.a tag2name.so taglib.a taglib.so
-[PROVIDES] tb_default.a tb_default.so thumbnail.a thumbnail.so tile.a
-[PROVIDES] tile.so tt_centre.a tt_centre.so tt_diagram.a tt_diagram.so
-[PROVIDES] tt_traditional.a tt_traditional.so tt_wholewindow.a
-[PROVIDES] tt_wholewindow.so ttf.a ttf.so vorbis.a vorbis.so xine.a xine.so
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../../.. -I. -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I../../../../../src -g -O2 -Wall -MT cr_arrow.lo -MD -MP -MF .deps/cr_arrow.Tpo -c cr_arrow.c  -fPIC -DPIC -o .libs/cr_arrow.o
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../../.. -I. -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I../../../../../src -g -O2 -Wall -MT cr_arrow.lo -MD -MP -MF .deps/cr_arrow.Tpo -c cr_arrow.c -o cr_arrow.o >/dev/null 2>&1
+[5-ERROR] if /bin/sh ../../../../../libtool --tag=CC --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../../.. -I. -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I../../../../../src    -g -O2 -Wall -MT cr_date.lo -MD -MP -MF ".deps/cr_date.Tpo" -c -o cr_date.lo cr_date.c; \
+[5-ERROR] 	then mv -f ".deps/cr_date.Tpo" ".deps/cr_date.Plo"; else rm -f ".deps/cr_date.Tpo"; exit 1; fi
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../../.. -I. -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I../../../../../src -g -O2 -Wall -MT cr_date.lo -MD -MP -MF .deps/cr_date.Tpo -c cr_date.c  -fPIC -DPIC -o .libs/cr_date.o
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../../.. -I. -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I../../../../../src -g -O2 -Wall -MT cr_date.lo -MD -MP -MF .deps/cr_date.Tpo -c cr_date.c -o cr_date.o >/dev/null 2>&1
+[5-ERROR] if /bin/sh ../../../../../libtool --tag=CC --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../../.. -I. -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I../../../../../src    -g -O2 -Wall -MT cr_size.lo -MD -MP -MF ".deps/cr_size.Tpo" -c -o cr_size.lo cr_size.c; \
+[5-ERROR] 	then mv -f ".deps/cr_size.Tpo" ".deps/cr_size.Plo"; else rm -f ".deps/cr_size.Tpo"; exit 1; fi
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../../.. -I. -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I../../../../../src -g -O2 -Wall -MT cr_size.lo -MD -MP -MF .deps/cr_size.Tpo -c cr_size.c  -fPIC -DPIC -o .libs/cr_size.o
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../../.. -I. -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I../../../../../src -g -O2 -Wall -MT cr_size.lo -MD -MP -MF .deps/cr_size.Tpo -c cr_size.c -o cr_size.o >/dev/null 2>&1
+[5-ERROR] /bin/sh ../../../../../libtool --tag=CC --mode=link gcc-40  -g -O2 -Wall   -o libevidence_gui_gtk2_tree.la   tree_model.lo cr_basic.lo cr_arrow.lo cr_date.lo cr_size.lo  -L/opt/gnome2/lib -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lm -lpangocairo-1.0 -lpangoft2-1.0 -lcairo -lpango-1.0 -lgobject-2.0 -lgmodule-2.0 -ldl -lglib-2.0   
+[5-ERROR] ar cru .libs/libevidence_gui_gtk2_tree.a .libs/tree_model.o .libs/cr_basic.o .libs/cr_arrow.o .libs/cr_date.o .libs/cr_size.o
+[5-ERROR] ranlib .libs/libevidence_gui_gtk2_tree.a
+[5-ERROR] creating libevidence_gui_gtk2_tree.la
+[5-ERROR] (cd .libs && rm -f libevidence_gui_gtk2_tree.la && ln -s ../libevidence_gui_gtk2_tree.la libevidence_gui_gtk2_tree.la)
+[5-ERROR] make[6]: Leaving directory `/ROCK/loop/src.evidence.1169091814.2272.905555977/evidence-2005-09-11/src/gui/gtk2/common/tree'
+[5-ERROR] make[6]: Entering directory `/ROCK/loop/src.evidence.1169091814.2272.905555977/evidence-2005-09-11/src/gui/gtk2/common'
+[5-ERROR] if /bin/sh ../../../../libtool --tag=CC --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../.. -I. -I../../../../src    -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -g -O2 -Wall -MT libevidence_gui_gtk2_common_la-session_gtk2.lo -MD -MP -MF ".deps/libevidence_gui_gtk2_common_la-session_gtk2.Tpo" -c -o libevidence_gui_gtk2_common_la-session_gtk2.lo `test -f 'session_gtk2.c' || echo './'`session_gtk2.c; \
+[5-ERROR] 	then mv -f ".deps/libevidence_gui_gtk2_common_la-session_gtk2.Tpo" ".deps/libevidence_gui_gtk2_common_la-session_gtk2.Plo"; else rm -f ".deps/libevidence_gui_gtk2_common_la-session_gtk2.Tpo"; exit 1; fi
+[5-ERROR] mkdir .libs
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../.. -I. -I../../../../src -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -g -O2 -Wall -MT libevidence_gui_gtk2_common_la-session_gtk2.lo -MD -MP -MF .deps/libevidence_gui_gtk2_common_la-session_gtk2.Tpo -c session_gtk2.c  -fPIC -DPIC -o .libs/libevidence_gui_gtk2_common_la-session_gtk2.o
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../.. -I. -I../../../../src -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -g -O2 -Wall -MT libevidence_gui_gtk2_common_la-session_gtk2.lo -MD -MP -MF .deps/libevidence_gui_gtk2_common_la-session_gtk2.Tpo -c session_gtk2.c -o libevidence_gui_gtk2_common_la-session_gtk2.o >/dev/null 2>&1
+[5-ERROR] if /bin/sh ../../../../libtool --tag=CC --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../.. -I. -I../../../../src    -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -g -O2 -Wall -MT libevidence_gui_gtk2_common_la-tooltip.lo -MD -MP -MF ".deps/libevidence_gui_gtk2_common_la-tooltip.Tpo" -c -o libevidence_gui_gtk2_common_la-tooltip.lo `test -f 'tooltip.c' || echo './'`tooltip.c; \
+[5-ERROR] 	then mv -f ".deps/libevidence_gui_gtk2_common_la-tooltip.Tpo" ".deps/libevidence_gui_gtk2_common_la-tooltip.Plo"; else rm -f ".deps/libevidence_gui_gtk2_common_la-tooltip.Tpo"; exit 1; fi
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../.. -I. -I../../../../src -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -g -O2 -Wall -MT libevidence_gui_gtk2_common_la-tooltip.lo -MD -MP -MF .deps/libevidence_gui_gtk2_common_la-tooltip.Tpo -c tooltip.c  -fPIC -DPIC -o .libs/libevidence_gui_gtk2_common_la-tooltip.o
+[5-ERROR] In file included from tooltip.c:27:
+[5-ERROR] ../../../../src/gui/gtk2/icon_view/gevas_light.h:30:18: error: Evas.h: No such file or directory
+[5-ERROR] In file included from tooltip.c:27:
+[5-ERROR] ../../../../src/gui/gtk2/icon_view/gevas_light.h:64: error: syntax error before 'Evas'
+[5-ERROR] ../../../../src/gui/gtk2/icon_view/gevas_light.h:64: warning: no semicolon at end of struct or union
+[5-ERROR] ../../../../src/gui/gtk2/icon_view/gevas_light.h:79: error: syntax error before '}' token
+[5-ERROR] ../../../../src/gui/gtk2/icon_view/gevas_light.h:98: error: syntax error before '*' token
+[5-ERROR] ../../../../src/gui/gtk2/icon_view/gevas_light.h:98: warning: type defaults to 'int' in declaration of 'gevas_get_evas'
+[5-ERROR] ../../../../src/gui/gtk2/icon_view/gevas_light.h:98: warning: data definition has no type or storage class
+[5-ERROR] tooltip.c: In function 'tooltip_show_for':
+[5-ERROR] tooltip.c:341: warning: unused variable 'iv'
+[5-ERROR] make[6]: *** [libevidence_gui_gtk2_common_la-tooltip.lo] Error 1
+[5-ERROR] make[6]: Leaving directory `/ROCK/loop/src.evidence.1169091814.2272.905555977/evidence-2005-09-11/src/gui/gtk2/common'
+[5-ERROR] make[5]: *** [all-recursive] Error 1
+[5-ERROR] make[5]: Leaving directory `/ROCK/loop/src.evidence.1169091814.2272.905555977/evidence-2005-09-11/src/gui/gtk2/common'
+[5-ERROR] make[4]: *** [all-recursive] Error 1
+[5-ERROR] make[4]: Leaving directory `/ROCK/loop/src.evidence.1169091814.2272.905555977/evidence-2005-09-11/src/gui/gtk2'
+[5-ERROR] make[3]: *** [all-recursive] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.evidence.1169091814.2272.905555977/evidence-2005-09-11/src/gui'
+[5-ERROR] make[2]: *** [all-recursive] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.evidence.1169091814.2272.905555977/evidence-2005-09-11/src'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.evidence.1169091814.2272.905555977/evidence-2005-09-11'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../../.. -I. -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I../../../../../src -g -O2 -Wall -MT cr_arrow.lo -MD -MP -MF .deps/cr_arrow.Tpo -c cr_arrow.c  -fPIC -DPIC -o .libs/cr_arrow.o
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../../.. -I. -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I../../../../../src -g -O2 -Wall -MT cr_arrow.lo -MD -MP -MF .deps/cr_arrow.Tpo -c cr_arrow.c -o cr_arrow.o >/dev/null 2>&1
+[9-ERROR] if /bin/sh ../../../../../libtool --tag=CC --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../../.. -I. -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I../../../../../src    -g -O2 -Wall -MT cr_date.lo -MD -MP -MF ".deps/cr_date.Tpo" -c -o cr_date.lo cr_date.c; \
+[9-ERROR] 	then mv -f ".deps/cr_date.Tpo" ".deps/cr_date.Plo"; else rm -f ".deps/cr_date.Tpo"; exit 1; fi
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../../.. -I. -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I../../../../../src -g -O2 -Wall -MT cr_date.lo -MD -MP -MF .deps/cr_date.Tpo -c cr_date.c  -fPIC -DPIC -o .libs/cr_date.o
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../../.. -I. -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I../../../../../src -g -O2 -Wall -MT cr_date.lo -MD -MP -MF .deps/cr_date.Tpo -c cr_date.c -o cr_date.o >/dev/null 2>&1
+[9-ERROR] if /bin/sh ../../../../../libtool --tag=CC --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../../.. -I. -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I../../../../../src    -g -O2 -Wall -MT cr_size.lo -MD -MP -MF ".deps/cr_size.Tpo" -c -o cr_size.lo cr_size.c; \
+[9-ERROR] 	then mv -f ".deps/cr_size.Tpo" ".deps/cr_size.Plo"; else rm -f ".deps/cr_size.Tpo"; exit 1; fi
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../../.. -I. -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I../../../../../src -g -O2 -Wall -MT cr_size.lo -MD -MP -MF .deps/cr_size.Tpo -c cr_size.c  -fPIC -DPIC -o .libs/cr_size.o
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../../.. -I. -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I../../../../../src -g -O2 -Wall -MT cr_size.lo -MD -MP -MF .deps/cr_size.Tpo -c cr_size.c -o cr_size.o >/dev/null 2>&1
+[9-ERROR] /bin/sh ../../../../../libtool --tag=CC --mode=link gcc-40  -g -O2 -Wall   -o libevidence_gui_gtk2_tree.la   tree_model.lo cr_basic.lo cr_arrow.lo cr_date.lo cr_size.lo  -L/opt/gnome2/lib -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lm -lpangocairo-1.0 -lpangoft2-1.0 -lcairo -lpango-1.0 -lgobject-2.0 -lgmodule-2.0 -ldl -lglib-2.0   
+[9-ERROR] ar cru .libs/libevidence_gui_gtk2_tree.a .libs/tree_model.o .libs/cr_basic.o .libs/cr_arrow.o .libs/cr_date.o .libs/cr_size.o
+[9-ERROR] ranlib .libs/libevidence_gui_gtk2_tree.a
+[9-ERROR] creating libevidence_gui_gtk2_tree.la
+[9-ERROR] (cd .libs && rm -f libevidence_gui_gtk2_tree.la && ln -s ../libevidence_gui_gtk2_tree.la libevidence_gui_gtk2_tree.la)
+[9-ERROR] make[6]: Leaving directory `/ROCK/loop/src.evidence.1169148545.20376.3774722083/evidence-2005-09-11/src/gui/gtk2/common/tree'
+[9-ERROR] make[6]: Entering directory `/ROCK/loop/src.evidence.1169148545.20376.3774722083/evidence-2005-09-11/src/gui/gtk2/common'
+[9-ERROR] if /bin/sh ../../../../libtool --tag=CC --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../.. -I. -I../../../../src    -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -g -O2 -Wall -MT libevidence_gui_gtk2_common_la-session_gtk2.lo -MD -MP -MF ".deps/libevidence_gui_gtk2_common_la-session_gtk2.Tpo" -c -o libevidence_gui_gtk2_common_la-session_gtk2.lo `test -f 'session_gtk2.c' || echo './'`session_gtk2.c; \
+[9-ERROR] 	then mv -f ".deps/libevidence_gui_gtk2_common_la-session_gtk2.Tpo" ".deps/libevidence_gui_gtk2_common_la-session_gtk2.Plo"; else rm -f ".deps/libevidence_gui_gtk2_common_la-session_gtk2.Tpo"; exit 1; fi
+[9-ERROR] mkdir .libs
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../.. -I. -I../../../../src -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -g -O2 -Wall -MT libevidence_gui_gtk2_common_la-session_gtk2.lo -MD -MP -MF .deps/libevidence_gui_gtk2_common_la-session_gtk2.Tpo -c session_gtk2.c  -fPIC -DPIC -o .libs/libevidence_gui_gtk2_common_la-session_gtk2.o
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../.. -I. -I../../../../src -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -g -O2 -Wall -MT libevidence_gui_gtk2_common_la-session_gtk2.lo -MD -MP -MF .deps/libevidence_gui_gtk2_common_la-session_gtk2.Tpo -c session_gtk2.c -o libevidence_gui_gtk2_common_la-session_gtk2.o >/dev/null 2>&1
+[9-ERROR] if /bin/sh ../../../../libtool --tag=CC --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../.. -I. -I../../../../src    -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -g -O2 -Wall -MT libevidence_gui_gtk2_common_la-tooltip.lo -MD -MP -MF ".deps/libevidence_gui_gtk2_common_la-tooltip.Tpo" -c -o libevidence_gui_gtk2_common_la-tooltip.lo `test -f 'tooltip.c' || echo './'`tooltip.c; \
+[9-ERROR] 	then mv -f ".deps/libevidence_gui_gtk2_common_la-tooltip.Tpo" ".deps/libevidence_gui_gtk2_common_la-tooltip.Plo"; else rm -f ".deps/libevidence_gui_gtk2_common_la-tooltip.Tpo"; exit 1; fi
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../../.. -I. -I../../../../src -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -g -O2 -Wall -MT libevidence_gui_gtk2_common_la-tooltip.lo -MD -MP -MF .deps/libevidence_gui_gtk2_common_la-tooltip.Tpo -c tooltip.c  -fPIC -DPIC -o .libs/libevidence_gui_gtk2_common_la-tooltip.o
+[9-ERROR] In file included from tooltip.c:27:
+[9-ERROR] ../../../../src/gui/gtk2/icon_view/gevas_light.h:30:18: error: Evas.h: No such file or directory
+[9-ERROR] In file included from tooltip.c:27:
+[9-ERROR] ../../../../src/gui/gtk2/icon_view/gevas_light.h:64: error: syntax error before 'Evas'
+[9-ERROR] ../../../../src/gui/gtk2/icon_view/gevas_light.h:64: warning: no semicolon at end of struct or union
+[9-ERROR] ../../../../src/gui/gtk2/icon_view/gevas_light.h:79: error: syntax error before '}' token
+[9-ERROR] ../../../../src/gui/gtk2/icon_view/gevas_light.h:98: error: syntax error before '*' token
+[9-ERROR] ../../../../src/gui/gtk2/icon_view/gevas_light.h:98: warning: type defaults to 'int' in declaration of 'gevas_get_evas'
+[9-ERROR] ../../../../src/gui/gtk2/icon_view/gevas_light.h:98: warning: data definition has no type or storage class
+[9-ERROR] tooltip.c: In function 'tooltip_show_for':
+[9-ERROR] tooltip.c:341: warning: unused variable 'iv'
+[9-ERROR] make[6]: *** [libevidence_gui_gtk2_common_la-tooltip.lo] Error 1
+[9-ERROR] make[6]: Leaving directory `/ROCK/loop/src.evidence.1169148545.20376.3774722083/evidence-2005-09-11/src/gui/gtk2/common'
+[9-ERROR] make[5]: *** [all-recursive] Error 1
+[9-ERROR] make[5]: Leaving directory `/ROCK/loop/src.evidence.1169148545.20376.3774722083/evidence-2005-09-11/src/gui/gtk2/common'
+[9-ERROR] make[4]: *** [all-recursive] Error 1
+[9-ERROR] make[4]: Leaving directory `/ROCK/loop/src.evidence.1169148545.20376.3774722083/evidence-2005-09-11/src/gui/gtk2'
+[9-ERROR] make[3]: *** [all-recursive] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.evidence.1169148545.20376.3774722083/evidence-2005-09-11/src/gui'
+[9-ERROR] make[2]: *** [all-recursive] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.evidence.1169148545.20376.3774722083/evidence-2005-09-11/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.evidence.1169148545.20376.3774722083/evidence-2005-09-11'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

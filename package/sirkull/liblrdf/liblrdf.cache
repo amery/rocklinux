@@ -20,23 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142567116 Fri Mar 17 04:45:16 2006 (5)
-[TIMESTAMP] 1142828897 Mon Mar 20 05:28:17 2006 (9)
+[TIMESTAMP] 1168633315 Fri Jan 12 21:21:55 2007 (5)
+[TIMESTAMP] 1168838402 Mon Jan 15 06:20:02 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-liblrdf.log 9-liblrdf.log
 
-[BUILDTIME] 3233 (5)
-[BUILDTIME] 3701 (9)
-[SIZE] 0.05 MB, 10 files
+[BUILDTIME] 3295 (5)
+[BUILDTIME] 3686 (9)
+[SIZE] 0.05 MB, 12 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils curl curl:dev
-[DEP] diffutils findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] ladspa-swh-plugins ladspa:dev libidn libidn:dev libxml2 libxml2:dev
-[DEP] linux26-header:dev make mktemp net-tools openssl pkgconfig raptor
-[DEP] raptor:dev rrdtool sed sysfiles tar util-linux zlib:dev
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils curl curl:dev cvm diffutils
+[DEP] findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev grep ladspa:dev
+[DEP] libidn libidn:dev libxml2 libxml2:dev linux-libc-headers:dev make
+[DEP] mktemp net-tools openssl pkgconfig raptor raptor:dev rrdtool sed
+[DEP] sysfiles tar util-linux zlib
 
 [PROVIDES] liblrdf.a liblrdf.so
 

@@ -20,23 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142676235 Sat Mar 18 11:03:55 2006 (5)
-[TIMESTAMP] 1142947475 Tue Mar 21 14:24:35 2006 (9)
+[TIMESTAMP] 1168705982 Sat Jan 13 17:33:02 2007 (5)
+[TIMESTAMP] 1168915816 Tue Jan 16 03:50:16 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-spandsp.log 9-spandsp.log
 
-[BUILDTIME] 6966 (5)
-[BUILDTIME] 7076 (9)
-[SIZE] 0.63 MB, 12 files
+[BUILDTIME] 7165 (5)
+[BUILDTIME] 7203 (9)
+[SIZE] 0.66 MB, 12 files
 
-[DEP] 00-dirtree audiofile:dev bash2 binutils bzip2 coreutils diffutils
-[DEP] expat fftw:dev findutils fltk:dev freetype gawk gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep libjpeg libjpeg:dev libtiff libtiff:dev
-[DEP] libxml2 linux26-header:dev make mktemp net-tools rrdtool sed sysfiles
-[DEP] tar util-linux xorg xorg:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev audiofile:dev bash2 binutils
+[DEP] bzip2 coreutils cvm diffutils expat fftw3:dev findutils fltk:dev
+[DEP] fontconfig freetype gawk gcc40 gcc40:dev glibc23 glibc23:dev grep
+[DEP] libjpeg libjpeg:dev libtiff libtiff:dev libx11 libxau libxdmcp
+[DEP] libxext libxft libxml2 libxrender linux-libc-headers:dev make mktemp
+[DEP] net-tools rrdtool sed sysfiles tar util-linux xproto:dev zlib
 
 [PROVIDES] libspandsp.a libspandsp.so
 

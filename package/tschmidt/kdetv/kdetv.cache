@@ -20,30 +20,45 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142665780 Sat Mar 18 08:09:40 2006 (5)
-[TIMESTAMP] 1142936371 Tue Mar 21 11:19:31 2006 (9)
+[TIMESTAMP] 1168699038 Sat Jan 13 15:37:18 2007 (5)
+[TIMESTAMP] 1168908520 Tue Jan 16 01:48:40 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-kdetv.log 9-kdetv.log
 
-[BUILDTIME] 23757 (5)
-[BUILDTIME] 23904 (9)
-[SIZE] 2.07 MB, 122 files
+[BUILDTIME] 29120 (5)
+[BUILDTIME] 29190 (9)
+[SIZE] 3.52 MB, 212 files
 
-[DEP] 00-dirtree acl acl:dev alsa alsa:dev arts attr attr:dev bash2
-[DEP] binutils bzip2 coreutils diffutils expat fam fam:dev findutils
-[DEP] freetype freetype:dev gawk gcc34 gcc34:dev gettext glibc23
-[DEP] glibc23:dev grep kdebase kdelibs kdelibs:dev kdeutils libart_lgpl23
-[DEP] libart_lgpl23:dev libidn libidn:dev libjpeg libjpeg:dev libpng
-[DEP] libpng:dev libzvbi libzvbi:dev linux26-header:dev make mktemp nas
-[DEP] net-tools pcre pcre:dev perl5 qt33 qt33:dev rrdtool sed sysfiles
-[DEP] tar util-linux xorg xorg:dev zlib:dev
+[DEP] 00-dirtree acl acl:dev alsa alsa:dev applewmproto applewmproto:dev
+[DEP] attr attr:dev bash2 binutils bzip2 coreutils cups cvm diffutils
+[DEP] expat expat:dev fam fam:dev findutils fontconfig fontconfig:dev
+[DEP] freetype freetype:dev gawk gcc40 gcc40:dev gettext glibc23
+[DEP] glibc23:dev gnome-nettool grep hicolor-icon-theme imake kdebase
+[DEP] kdelibs kdelibs:dev kdeutils libart_lgpl23 libart_lgpl23:dev libice
+[DEP] libice:dev libidn libidn:dev libjpeg libjpeg:dev libpng libpng:dev
+[DEP] libsm libsm:dev libx11 libx11:dev libxau libxau:dev libxcursor
+[DEP] libxcursor:dev libxdmcp libxdmcp:dev libxext libxext:dev libxfixes
+[DEP] libxfixes:dev libxft libxft:dev libxinerama libxinerama:dev libxml2
+[DEP] libxmu libxmu:dev libxrandr libxrandr:dev libxrender libxrender:dev
+[DEP] libxt libxt:dev libxv libxv:dev libxvmc libxvmc:dev libxxf86dga
+[DEP] libxxf86dga:dev libxxf86vm libxxf86vm:dev libzvbi libzvbi:dev
+[DEP] linux-libc-headers:dev make mesalib mesalib:dev mktemp nas net-tools
+[DEP] pcre pcre:dev perl5 qt33 qt33:dev randrproto:dev renderproto:dev
+[DEP] rrdtool sed sysfiles tar util-linux videoproto:dev xextproto:dev
+[DEP] xf86dgaproto:dev xorg-cf-files xproto:dev zlib zlib:dev
 
-[PROVIDES] kdetv kdetv_alsa.so kdetv_csvchannels.so kdetv_elegant.so
-[PROVIDES] kdetv_haze.so kdetv_kwintvchannels.so kdetv_libzvbidecoder.so
-[PROVIDES] kdetv_oss.so kdetv_simon.so kdetv_telex.so kdetv_v4l.so
+[PROVIDES] kdetv kdetv_alsa.so kdetv_bilinear.so kdetv_channelsuite.so
+[PROVIDES] kdetv_chromakill.so kdetv_colourinversion.so
+[PROVIDES] kdetv_csvchannels.so kdetv_elegant.so kdetv_greedy.so
+[PROVIDES] kdetv_greedy2frame.so kdetv_greedyh.so kdetv_haze.so
+[PROVIDES] kdetv_kwintvchannels.so kdetv_libzvbidecoder.so
+[PROVIDES] kdetv_linearblend.so kdetv_mirror.so kdetv_none.so kdetv_oss.so
+[PROVIDES] kdetv_overscan.so kdetv_sharpness.so kdetv_simon.so
+[PROVIDES] kdetv_telex.so kdetv_tomsmocomp.so kdetv_v4l.so kdetv_v4l2.so
 [PROVIDES] kdetv_xawtvchannels.so kdetv_xmlchannels.so kdetv_xv.so
-[PROVIDES] kdetv_zappingchannels.so kv4lsetup libkdetv.so libkvideoio.so
+[PROVIDES] kdetv_zappingchannels.so kdetvv4lsetup libkdetv.so
+[PROVIDES] libkdetvvideo.so libkvideoio.so
 

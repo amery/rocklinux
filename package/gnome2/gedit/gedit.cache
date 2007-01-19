@@ -20,40 +20,42 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142513666 Thu Mar 16 13:54:26 2006 (5) ERROR
-[TIMESTAMP] 1142765827 Sun Mar 19 11:57:07 2006 (9)
-[TIMESTAMP] 1142956753 Tue Mar 21 16:59:13 2006 (5)
+[TIMESTAMP] 1168622485 Fri Jan 12 18:21:25 2007 (5)
+[TIMESTAMP] 1168826134 Mon Jan 15 02:55:34 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-gedit.log 9-gedit.log
 
-[BUILDTIME] 2297 (5) ERROR
-[BUILDTIME] 13457 (9)
-[BUILDTIME] 13503 (5)
-[SIZE] 12.70 MB, 232 files
+[BUILDTIME] 15126 (5)
+[BUILDTIME] 15814 (9)
+[SIZE] 14.36 MB, 212 files
 
-[DEP] 00-dirtree alsa alsa:dev aspell aspell:dev atk atk:dev audiofile
-[DEP] audiofile:dev bash2 binutils bzip2 cairo cairo:dev coreutils
-[DEP] cpan-xml-parser diffutils docbookx eel eel:dev esound esound:dev
-[DEP] expat fam fam:dev findutils freetype freetype:dev gail gail:dev
-[DEP] gawk gcc34 gcc34:dev gconf gconf:dev gettext glib glib:dev
-[DEP] glibc23 glibc23:dev gnome-blog gnome-desktop gnome-desktop:dev
-[DEP] gnome-doc-utils gnome-keyring gnome-keyring-manager gnome-keyring:dev
-[DEP] gnome-menus gnome-menus:dev gnome-netstatus gnome-vfs gnome-vfs:dev
-[DEP] gnome2-dirtree gnopernicus grep gtk+ gtk+:dev gtksourceview
+[DEP] 00-dirtree alsa alsa:dev applewmproto applewmproto:dev aspell
+[DEP] aspell:dev atk atk:dev attr attr:dev audiofile audiofile:dev bash2
+[DEP] binutils bzip2 cairo cairo:dev coreutils cpan-xml-parser cvm dbus
+[DEP] dbus-glib dbus-glib:dev dbus:dev devhelp diffutils docbookx esound
+[DEP] esound:dev evolution-webcal expat expat:dev findutils fontconfig
+[DEP] fontconfig:dev freetype freetype:dev gawk gcc40 gcc40:dev gconf
+[DEP] gconf:dev gettext glib glib:dev glib:doc glibc23 glibc23:dev
+[DEP] gnome-blog gnome-doc-utils gnome-keyring gnome-keyring:dev
+[DEP] gnome-libs14 gnome-nettool gnome-vfs gnome-vfs:dev gnome14-dirtree
+[DEP] gnome2-dirtree gnopernicus grep gtk+ gtk+:dev gtkam gtksourceview
 [DEP] gtksourceview:dev libart_lgpl23 libart_lgpl23:dev libbonobo
 [DEP] libbonobo:dev libbonoboui libbonoboui:dev libglade libglade:dev
 [DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeprint
 [DEP] libgnomeprint:dev libgnomeprintui libgnomeprintui:dev libgnomeui
-[DEP] libgnomeui:dev libjpeg libjpeg:dev libpng libpng:dev libxml2
-[DEP] libxml2:dev linux26-header:dev make mktemp net-tools openssl orbit2
-[DEP] orbit2:dev pango pango:dev perl5 pkgconfig popt popt:dev rrdtool
-[DEP] scrollkeeper sed startup-notification startup-notification:dev
-[DEP] sysfiles tar util-linux xorg xorg:dev zlib:dev
+[DEP] libgnomeui:dev libice libice:dev libjpeg libjpeg:dev libpng
+[DEP] libpng:dev libsm libsm:dev libx11 libx11:dev libxau libxau:dev
+[DEP] libxcursor libxdmcp libxdmcp:dev libxext libxfixes libxi libxinerama
+[DEP] libxml2 libxml2:dev libxrandr libxrender libxrender:dev libxslt
+[DEP] liferea linux-libc-headers:dev make mktemp net-tools openssl orbit2
+[DEP] orbit2:dev pango pango:dev perl5 pioneers pkgconfig popt popt:dev
+[DEP] python python:dev rrdtool scrollkeeper sed sensors-applet streamtuner
+[DEP] sysfiles tar tcl tk util-linux vino xproto:dev zapping zlib
 
 [PROVIDES] gedit gnome-text-editor libchangecase.so libdocinfo.so
-[PROVIDES] libindent.so libsample.so libsavecopy.so libshell_output.so
-[PROVIDES] libsort.so libspell.so libtaglist.so libtime.so
+[PROVIDES] libfilebrowser.so libindent.so libsample.so libsort.so
+[PROVIDES] libspell.so libtaglist.so libtime.so
 

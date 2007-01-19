@@ -20,24 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142507277 Thu Mar 16 12:07:57 2006 (5)
-[TIMESTAMP] 1142758486 Sun Mar 19 09:54:46 2006 (9)
+[TIMESTAMP] 1168581923 Fri Jan 12 07:05:23 2007 (5)
+[TIMESTAMP] 1168782726 Sun Jan 14 14:52:06 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-lirc.log 9-lirc.log
 
-[BUILDTIME] 3961 (5)
-[BUILDTIME] 4468 (9)
-[SIZE] 0.32 MB, 36 files
+[BUILDTIME] 4433 (5)
+[BUILDTIME] 4889 (9)
+[SIZE] 0.34 MB, 38 files
 
-[DEP] 00-dirtree alsa alsa:dev bash2 binutils bzip2 coreutils diffutils
-[DEP] findutils gcc34 gcc34:dev glibc23 glibc23:dev grep linux26
-[DEP] linux26-header:dev linux26-source make mktemp net-tools perl5
-[DEP] portaudio portaudio:dev rrdtool sed svgalib svgalib:dev sysfiles
-[DEP] tar xorg xorg:dev
+[DEP] 00-dirtree alsa alsa:dev applewmproto applewmproto:dev bash2 binutils
+[DEP] bzip2 coreutils cvm diffutils findutils gawk gcc40 gcc40:dev
+[DEP] glibc23 glibc23:dev grep imake libice libice:dev libsm libsm:dev
+[DEP] libx11 libx11:dev libxau libxau:dev libxdmcp libxdmcp:dev libxt
+[DEP] linux-libc-headers:dev linux26 linux26-source make mktemp net-tools
+[DEP] netpbm portaudio portaudio:dev rrdtool sed sysfiles tar twoftpd
+[DEP] ucspi-unix xorg-cf-files xproto:dev
 
 [PROVIDES] ircat irexec irpty irrecord irsend irw irxevent liblirc_client.a
-[PROVIDES] liblirc_client.so lircd lircmd mode2 smode2 xmode2
+[PROVIDES] liblirc_client.so lircd lircmd lircrcd mode2 smode2 xmode2
 

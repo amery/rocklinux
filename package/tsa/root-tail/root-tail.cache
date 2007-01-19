@@ -20,21 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142664482 Sat Mar 18 07:48:02 2006 (5)
-[TIMESTAMP] 1142935013 Tue Mar 21 10:56:53 2006 (9)
+[TIMESTAMP] 1168698087 Sat Jan 13 15:21:27 2007 (5)
+[TIMESTAMP] 1168907501 Tue Jan 16 01:31:41 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-root-tail.log 9-root-tail.log
 
-[BUILDTIME] 1487 (5)
-[BUILDTIME] 1564 (9)
-[SIZE] 0.05 MB, 9 files
+[BUILDTIME] 1471 (5)
+[BUILDTIME] 1543 (9)
+[SIZE] 0.04 MB, 8 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp patch
-[DEP] rrdtool sed sysfiles tar xorg xorg:dev xorg:doc
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm findutils gawk gcc40 gcc40:dev gccmakedep glibc23
+[DEP] glibc23:dev grep imake libx11 libx11:dev libxau libxdmcp libxext
+[DEP] libxt linux-libc-headers:dev make mktemp patch rrdtool sed sysfiles
+[DEP] tar xorg-cf-files xorg-docs xproto:dev
 
 [PROVIDES] root-tail
 

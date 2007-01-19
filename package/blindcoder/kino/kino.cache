@@ -20,30 +20,33 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142629238 Fri Mar 17 22:00:38 2006 (5)
-[TIMESTAMP] 1142897456 Tue Mar 21 00:30:56 2006 (9)
+[TIMESTAMP] 1168679961 Sat Jan 13 10:19:21 2007 (5)
+[TIMESTAMP] 1168888752 Mon Jan 15 20:19:12 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-kino.log 9-kino.log
 
-[BUILDTIME] 10397 (5)
-[BUILDTIME] 10671 (9)
-[SIZE] 2.20 MB, 89 files
+[BUILDTIME] 13006 (5)
+[BUILDTIME] 13263 (9)
+[SIZE] 2.59 MB, 151 files
 
-[DEP] 00-dirtree alsa arpwatch atk atk:dev audiofile bash2 binutils
-[DEP] bzip2 cairo cairo:dev coreutils diffutils esound expat findutils
-[DEP] freetype gawk gcc34 gcc34:dev gconf gettext glib glib12 glib:dev
-[DEP] glibc23 glibc23:dev gnome-keyring gnome-vfs gnome-vfs:dev
-[DEP] gnome14-dirtree gnome2-dirtree grep gtk+ gtk+:dev libart_lgpl23
-[DEP] libart_lgpl23:dev libavc1394 libavc1394:dev libbonobo libbonobo:dev
-[DEP] libbonoboui libbonoboui:dev libdv libdv:dev libglade libglade:dev
-[DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeui
-[DEP] libgnomeui:dev libjpeg libpng libraw1394 libraw1394:dev libsamplerate
-[DEP] libsamplerate:dev libxml2 libxml2:dev linux26-header:dev make mktemp
-[DEP] net-tools openbox openssl orbit2 pango pango:dev pkgconfig popt
-[DEP] popt:dev rrdtool sed sysfiles tar util-linux xorg xorg:dev zlib:dev
+[DEP] 00-dirtree alsa alsa:dev applewmproto applewmproto:dev atk atk:dev
+[DEP] bash2 binutils bzip2 cairo cairo:dev coreutils cpan-xml-parser
+[DEP] cvm diffutils expat expat:dev findutils fontconfig fontconfig:dev
+[DEP] freetype freetype:dev gawk gcc40 gcc40:dev gettext glib glib:dev
+[DEP] glibc23 glibc23:dev gnome2-dirtree grep gtk+ gtk+:dev hotplug imake
+[DEP] libavc1394 libavc1394:dev libdv libdv:dev libglade libglade:dev
+[DEP] libice libice:dev libiec61883 libiec61883:dev libpng libpng:dev
+[DEP] libraw1394 libraw1394:dev libsamplerate libsamplerate:dev libsm
+[DEP] libsm:dev libx11 libx11:dev libxau libxau:dev libxcursor libxdmcp
+[DEP] libxdmcp:dev libxext libxext:dev libxfixes libxi libxinerama libxml2
+[DEP] libxml2:dev libxrandr libxrender libxrender:dev libxt libxv libxv:dev
+[DEP] linux-libc-headers:dev make mktemp net-tools netpbm pango pango:dev
+[DEP] perl5 pkgconfig rrdtool sed shared-mime-info sysfiles tar twoftpd
+[DEP] ucspi-unix util-linux videoproto:dev xextproto:dev xorg-cf-files
+[DEP] xproto:dev zapping zlib
 
-[PROVIDES] kino
+[PROVIDES] kino libdvtitler.a libdvtitler.so libtimfx.a libtimfx.so
 

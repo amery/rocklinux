@@ -20,46 +20,64 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142567654 Fri Mar 17 04:54:14 2006 (5) ERROR
-[TIMESTAMP] 1142829474 Mon Mar 20 05:37:54 2006 (9) ERROR
-[TIMESTAMP] 1142961229 Tue Mar 21 18:13:49 2006 (5) ERROR
-[TIMESTAMP] 1142972430 Tue Mar 21 21:20:30 2006 (9) ERROR
-[TIMESTAMP] 1143032180 Wed Mar 22 13:56:20 2006 (5) ERROR
-[TIMESTAMP] 1143041782 Wed Mar 22 16:36:22 2006 (9) ERROR
+[TIMESTAMP] 1168633626 Fri Jan 12 21:27:06 2007 (5) ERROR
+[TIMESTAMP] 1168838746 Mon Jan 15 06:25:46 2007 (9) ERROR
+[TIMESTAMP] 1168948339 Tue Jan 16 12:52:19 2007 (5) ERROR
+[TIMESTAMP] 1168975552 Tue Jan 16 20:25:52 2007 (9) ERROR
+[TIMESTAMP] 1169091755 Thu Jan 18 04:42:35 2007 (5) ERROR
+[TIMESTAMP] 1169145840 Thu Jan 18 19:44:00 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-jamin.err 9-jamin.err
 
-[BUILDTIME] 1322 (5) ERROR
-[BUILDTIME] 1672 (9) ERROR
-[BUILDTIME] 1677 (5) ERROR
-[BUILDTIME] 1705 (9) ERROR
-[BUILDTIME] 1678 (5) ERROR
-[BUILDTIME] 1684 (9) ERROR
+[BUILDTIME] 942 (5) ERROR
+[BUILDTIME] 975 (9) ERROR
+[BUILDTIME] 955 (5) ERROR
+[BUILDTIME] 957 (9) ERROR
+[BUILDTIME] 953 (5) ERROR
+[BUILDTIME] 949 (9) ERROR
 
 
+[5-ERROR] Fixing ownership and permissions ...
+[5-ERROR] Removing CVS and .svn directories ...
+[5-ERROR] Changeing into /ROCK/src.jamin.1169091744.5815.905555977/jamin-0.9.0 ...
+[5-ERROR] Apply patch /ROCK/package/sirkull/jamin/gcc34.patch ...
+[5-ERROR] patching file src/scenes.c
+[5-ERROR] Creating /usr/<..> if required ...
+[5-ERROR] Autodetection for option impossible:  --disable-debug passed thru.
+[5-ERROR] Removing unsupported '--with-mysql-lib=/opt/mysql/lib/mysql' from configure option string.
+[5-ERROR] Removing unsupported '--with-mysql-include=/opt/mysql/include/mysql' from configure option string.
+[5-ERROR] Removing unsupported '--with-libpam' from configure option string.
+[5-ERROR] Removing unsupported '--with-pam' from configure option string.
+[5-ERROR] Autodetection for option impossible:  --enable-libpam passed thru.
+[5-ERROR] Autodetection for option impossible:  --enable-pam passed thru.
+[5-ERROR] Running  bash ./configure --prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --libdir=/usr/lib --datadir=/usr/share --includedir=/usr/include --infodir=/usr/share/info --mandir=/usr/share/man --sysconfdir=/etc --localstatedir=/var --disable-debug --enable-libpam --enable-pam --build=i386-unknown-linux-gnu --host=i386-unknown-linux-gnu
+[5-ERROR] checking for a BSD-compatible install... /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c
+[5-ERROR] checking whether build environment is sane... yes
+[5-ERROR] checking for gawk... gawk
+[5-ERROR] checking whether make sets $(MAKE)... yes
 [5-ERROR] checking whether to enable maintainer-specific portions of Makefiles... no
 [5-ERROR] checking for style of include used by make... GNU
-[5-ERROR] checking for i386-unknown-linux-gnu-gcc... gcc-34
+[5-ERROR] checking for i386-unknown-linux-gnu-gcc... gcc-40
 [5-ERROR] checking for C compiler default output file name... a.out
 [5-ERROR] checking whether the C compiler works... yes
 [5-ERROR] checking whether we are cross compiling... no
 [5-ERROR] checking for suffix of executables... 
 [5-ERROR] checking for suffix of object files... o
 [5-ERROR] checking whether we are using the GNU C compiler... yes
-[5-ERROR] checking whether gcc-34 accepts -g... yes
-[5-ERROR] checking for gcc-34 option to accept ANSI C... none needed
-[5-ERROR] checking dependency style of gcc-34... gcc3
+[5-ERROR] checking whether gcc-40 accepts -g... yes
+[5-ERROR] checking for gcc-40 option to accept ANSI C... none needed
+[5-ERROR] checking dependency style of gcc-40... gcc3
 [5-ERROR] checking for strerror in -lcposix... no
-[5-ERROR] checking for i386-unknown-linux-gnu-gcc... (cached) gcc-34
+[5-ERROR] checking for i386-unknown-linux-gnu-gcc... (cached) gcc-40
 [5-ERROR] checking whether we are using the GNU C compiler... (cached) yes
-[5-ERROR] checking whether gcc-34 accepts -g... (cached) yes
-[5-ERROR] checking for gcc-34 option to accept ANSI C... (cached) none needed
-[5-ERROR] checking dependency style of gcc-34... (cached) gcc3
-[5-ERROR] checking for gcc-34 option to accept ANSI C... none needed
-[5-ERROR] checking how to run the C preprocessor... gcc-34 -E
+[5-ERROR] checking whether gcc-40 accepts -g... (cached) yes
+[5-ERROR] checking for gcc-40 option to accept ANSI C... (cached) none needed
+[5-ERROR] checking dependency style of gcc-40... (cached) gcc3
+[5-ERROR] checking for gcc-40 option to accept ANSI C... none needed
+[5-ERROR] checking how to run the C preprocessor... gcc-40 -E
 [5-ERROR] checking for egrep... grep -E
 [5-ERROR] checking for ANSI C header files... yes
 [5-ERROR] checking for an ANSI C-conforming const... yes
@@ -69,48 +87,48 @@
 [5-ERROR] checking for pthread_self in -lpthread... yes
 [5-ERROR] checking for sched_getscheduler... yes
 [5-ERROR] checking for pkg-config... /usr/bin/pkg-config
-[5-ERROR] checking for jack >= 0.80.0... yes
-[5-ERROR] checking JACK_CFLAGS...  
-[5-ERROR] checking JACK_LIBS... -ljack  
-[5-ERROR] checking for jack_ringbuffer_create in -ljack... yes
-[5-ERROR] checking for jack_client_name_size in -ljack... yes
-[5-ERROR] checking for fftw3f >= 3.0... configure: error: Didn't find any float FFTW3 libraries.
-[5-ERROR] configure: error: Make sure you built FFTW with --enable-float.
-[5-ERROR] configure: error: Double precision /can/ be used (--enable-double-fft),
-[5-ERROR] configure: error: but this package will not run in realtime on many 2003
-[5-ERROR] configure: error: era machines
+[5-ERROR] checking for jack >= 0.80.0... Package jack was not found in the pkg-config search path. Perhaps you should add the directory containing `jack.pc' to the PKG_CONFIG_PATH environment variable No package 'jack' found
+[5-ERROR] configure: error: Library requirements (jack >= 0.80.0) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them.
 [5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 0 files for this package.
-[5-ERROR] Applying package split: 40 jamin:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 jamin:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 jamin:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building jamin=jamin.
 
+[9-ERROR] Fixing ownership and permissions ...
+[9-ERROR] Removing CVS and .svn directories ...
+[9-ERROR] Changeing into /ROCK/src.jamin.1169145829.7298.3810491659/jamin-0.9.0 ...
+[9-ERROR] Apply patch /ROCK/package/sirkull/jamin/gcc34.patch ...
+[9-ERROR] patching file src/scenes.c
+[9-ERROR] Creating /usr/<..> if required ...
+[9-ERROR] Autodetection for option impossible:  --disable-debug passed thru.
+[9-ERROR] Removing unsupported '--with-mysql-lib=/opt/mysql/lib/mysql' from configure option string.
+[9-ERROR] Removing unsupported '--with-mysql-include=/opt/mysql/include/mysql' from configure option string.
+[9-ERROR] Removing unsupported '--with-libpam' from configure option string.
+[9-ERROR] Removing unsupported '--with-pam' from configure option string.
+[9-ERROR] Autodetection for option impossible:  --enable-libpam passed thru.
+[9-ERROR] Autodetection for option impossible:  --enable-pam passed thru.
+[9-ERROR] Running  bash ./configure --prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --libdir=/usr/lib --datadir=/usr/share --includedir=/usr/include --infodir=/usr/share/info --mandir=/usr/share/man --sysconfdir=/etc --localstatedir=/var --disable-debug --enable-libpam --enable-pam --build=i386-unknown-linux-gnu --host=i386-unknown-linux-gnu
+[9-ERROR] checking for a BSD-compatible install... /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c
+[9-ERROR] checking whether build environment is sane... yes
+[9-ERROR] checking for gawk... gawk
+[9-ERROR] checking whether make sets $(MAKE)... yes
 [9-ERROR] checking whether to enable maintainer-specific portions of Makefiles... no
 [9-ERROR] checking for style of include used by make... GNU
-[9-ERROR] checking for i386-unknown-linux-gnu-gcc... gcc-34
+[9-ERROR] checking for i386-unknown-linux-gnu-gcc... gcc-40
 [9-ERROR] checking for C compiler default output file name... a.out
 [9-ERROR] checking whether the C compiler works... yes
 [9-ERROR] checking whether we are cross compiling... no
 [9-ERROR] checking for suffix of executables... 
 [9-ERROR] checking for suffix of object files... o
 [9-ERROR] checking whether we are using the GNU C compiler... yes
-[9-ERROR] checking whether gcc-34 accepts -g... yes
-[9-ERROR] checking for gcc-34 option to accept ANSI C... none needed
-[9-ERROR] checking dependency style of gcc-34... gcc3
+[9-ERROR] checking whether gcc-40 accepts -g... yes
+[9-ERROR] checking for gcc-40 option to accept ANSI C... none needed
+[9-ERROR] checking dependency style of gcc-40... gcc3
 [9-ERROR] checking for strerror in -lcposix... no
-[9-ERROR] checking for i386-unknown-linux-gnu-gcc... (cached) gcc-34
+[9-ERROR] checking for i386-unknown-linux-gnu-gcc... (cached) gcc-40
 [9-ERROR] checking whether we are using the GNU C compiler... (cached) yes
-[9-ERROR] checking whether gcc-34 accepts -g... (cached) yes
-[9-ERROR] checking for gcc-34 option to accept ANSI C... (cached) none needed
-[9-ERROR] checking dependency style of gcc-34... (cached) gcc3
-[9-ERROR] checking for gcc-34 option to accept ANSI C... none needed
-[9-ERROR] checking how to run the C preprocessor... gcc-34 -E
+[9-ERROR] checking whether gcc-40 accepts -g... (cached) yes
+[9-ERROR] checking for gcc-40 option to accept ANSI C... (cached) none needed
+[9-ERROR] checking dependency style of gcc-40... (cached) gcc3
+[9-ERROR] checking for gcc-40 option to accept ANSI C... none needed
+[9-ERROR] checking how to run the C preprocessor... gcc-40 -E
 [9-ERROR] checking for egrep... grep -E
 [9-ERROR] checking for ANSI C header files... yes
 [9-ERROR] checking for an ANSI C-conforming const... yes
@@ -120,25 +138,7 @@
 [9-ERROR] checking for pthread_self in -lpthread... yes
 [9-ERROR] checking for sched_getscheduler... yes
 [9-ERROR] checking for pkg-config... /usr/bin/pkg-config
-[9-ERROR] checking for jack >= 0.80.0... yes
-[9-ERROR] checking JACK_CFLAGS...  
-[9-ERROR] checking JACK_LIBS... -ljack  
-[9-ERROR] checking for jack_ringbuffer_create in -ljack... yes
-[9-ERROR] checking for jack_client_name_size in -ljack... yes
-[9-ERROR] checking for fftw3f >= 3.0... configure: error: Didn't find any float FFTW3 libraries.
-[9-ERROR] configure: error: Make sure you built FFTW with --enable-float.
-[9-ERROR] configure: error: Double precision /can/ be used (--enable-double-fft),
-[9-ERROR] configure: error: but this package will not run in realtime on many 2003
-[9-ERROR] configure: error: era machines
+[9-ERROR] checking for jack >= 0.80.0... Package jack was not found in the pkg-config search path. Perhaps you should add the directory containing `jack.pc' to the PKG_CONFIG_PATH environment variable No package 'jack' found
+[9-ERROR] configure: error: Library requirements (jack >= 0.80.0) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them.
 [9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 0 files for this package.
-[9-ERROR] Applying package split: 40 jamin:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 jamin:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 jamin:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building jamin=jamin.
 

@@ -20,27 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142568912 Fri Mar 17 05:15:12 2006 (5)
-[TIMESTAMP] 1142830916 Mon Mar 20 06:01:56 2006 (9)
+[TIMESTAMP] 1168633809 Fri Jan 12 21:30:09 2007 (5) ERROR
+[TIMESTAMP] 1168838941 Mon Jan 15 06:29:01 2007 (9) ERROR
+[TIMESTAMP] 1168948372 Tue Jan 16 12:52:52 2007 (5) ERROR
+[TIMESTAMP] 1168975585 Tue Jan 16 20:26:25 2007 (9) ERROR
+[TIMESTAMP] 1169091788 Thu Jan 18 04:43:08 2007 (5) ERROR
+[TIMESTAMP] 1169145873 Thu Jan 18 19:44:33 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-ardour.log 9-ardour.log
+[LOGS] 5-ardour.err 9-ardour.err
 
-[BUILDTIME] 92029 (5)
-[BUILDTIME] 92989 (9)
-[SIZE] 23.06 MB, 63 files
+[BUILDTIME] 1923 (5) ERROR
+[BUILDTIME] 1963 (9) ERROR
+[BUILDTIME] 1960 (5) ERROR
+[BUILDTIME] 1948 (9) ERROR
+[BUILDTIME] 1952 (5) ERROR
+[BUILDTIME] 1939 (9) ERROR
 
-[DEP] 00-dirtree alsa alsa:dev bash2 binutils bison bzip2 coreutils curl
-[DEP] curl:dev diffutils findutils flex flex:dev gawk gcc34 gcc34:dev
-[DEP] gettext glib12 glib12:dev glibc23 glibc23:dev gnome-libs14
-[DEP] gnome14-dirtree grep gtk+12 gtk+12:dev jack jack:dev libart_lgpl23
-[DEP] libart_lgpl23:dev libidn libidn:dev liblrdf liblrdf:dev libpng
-[DEP] libpng:dev libsamplerate libsamplerate:dev libsndfile libsndfile:dev
-[DEP] libtool libxml2 libxml2:dev linux26-header:dev m4 make mktemp
-[DEP] ncurses:dev net-tools openssl patch perl5 pkgconfig raptor raptor:dev
-[DEP] rrdtool sed sysfiles tar util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] ardour ksi remote_kbd
+[5-ERROR] checking for getegid... yes
+[5-ERROR] checking for geteuid... yes
+[5-ERROR] checking for getgid... yes
+[5-ERROR] checking for getuid... yes
+[5-ERROR] checking for mempcpy... yes
+[5-ERROR] checking for munmap... yes
+[5-ERROR] checking for putenv... yes
+[5-ERROR] checking for setenv... yes
+[5-ERROR] checking for setlocale... yes
+[5-ERROR] checking for stpcpy... yes
+[5-ERROR] checking for strcasecmp... yes
+[5-ERROR] checking for strdup... yes
+[5-ERROR] checking for strtoul... yes
+[5-ERROR] checking for tsearch... yes
+[5-ERROR] checking for __argz_count... yes
+[5-ERROR] checking for __argz_stringify... yes
+[5-ERROR] checking for __argz_next... yes
+[5-ERROR] checking for __fsetlocking... yes
+[5-ERROR] checking for iconv... yes
+[5-ERROR] checking for iconv declaration... 
+[5-ERROR]          extern size_t iconv (iconv_t cd, char * *inbuf, size_t *inbytesleft, char * *outbuf, size_t *outbytesleft);
+[5-ERROR] checking for nl_langinfo and CODESET... yes
+[5-ERROR] checking for LC_MESSAGES... yes
+[5-ERROR] checking for bison... bison
+[5-ERROR] checking version of bison... 2.1, ok
+[5-ERROR] checking whether NLS is requested... yes
+[5-ERROR] checking whether included gettext is requested... no
+[5-ERROR] checking for GNU gettext in libc... yes
+[5-ERROR] checking whether to use NLS... yes
+[5-ERROR] checking where the gettext function comes from... libc
+[5-ERROR] checking for i386-unknown-linux-gnu-gcc... (cached) gcc-40
+[5-ERROR] checking whether we are using the GNU C compiler... (cached) yes
+[5-ERROR] checking whether gcc-40 accepts -g... (cached) yes
+[5-ERROR] checking for gcc-40 option to accept ANSI C... (cached) none needed
+[5-ERROR] checking dependency style of gcc-40... (cached) gcc3
+[5-ERROR] checking for i386-unknown-linux-gnu-g++... g++-40
+[5-ERROR] checking whether we are using the GNU C++ compiler... yes
+[5-ERROR] checking whether g++-40 accepts -g... yes
+[5-ERROR] checking dependency style of g++-40... gcc3
+[5-ERROR] checking for i386-unknown-linux-gnu-ranlib... (cached) ranlib
+[5-ERROR] checking for gtk-config... /opt/gnome/bin/gtk-config
+[5-ERROR] checking for GTK - version >= 1.0.0... no
+[5-ERROR] *** Could not run GTK test program, checking why...
+[5-ERROR] *** The test program failed to compile or link. See the file config.log for the
+[5-ERROR] *** exact error that occured. This usually means GTK was incorrectly installed
+[5-ERROR] *** or that you have moved GTK since it was installed. In the latter case, you
+[5-ERROR] *** may want to edit the gtk-config script: /opt/gnome/bin/gtk-config
+[5-ERROR] configure: error: *** gtk-ardour requires GTK+, but it doesn't appear to be installed
+[5-ERROR] configure: error: /bin/sh './configure' failed for gtk_ardour
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] checking for getegid... yes
+[9-ERROR] checking for geteuid... yes
+[9-ERROR] checking for getgid... yes
+[9-ERROR] checking for getuid... yes
+[9-ERROR] checking for mempcpy... yes
+[9-ERROR] checking for munmap... yes
+[9-ERROR] checking for putenv... yes
+[9-ERROR] checking for setenv... yes
+[9-ERROR] checking for setlocale... yes
+[9-ERROR] checking for stpcpy... yes
+[9-ERROR] checking for strcasecmp... yes
+[9-ERROR] checking for strdup... yes
+[9-ERROR] checking for strtoul... yes
+[9-ERROR] checking for tsearch... yes
+[9-ERROR] checking for __argz_count... yes
+[9-ERROR] checking for __argz_stringify... yes
+[9-ERROR] checking for __argz_next... yes
+[9-ERROR] checking for __fsetlocking... yes
+[9-ERROR] checking for iconv... yes
+[9-ERROR] checking for iconv declaration... 
+[9-ERROR]          extern size_t iconv (iconv_t cd, char * *inbuf, size_t *inbytesleft, char * *outbuf, size_t *outbytesleft);
+[9-ERROR] checking for nl_langinfo and CODESET... yes
+[9-ERROR] checking for LC_MESSAGES... yes
+[9-ERROR] checking for bison... bison
+[9-ERROR] checking version of bison... 2.1, ok
+[9-ERROR] checking whether NLS is requested... yes
+[9-ERROR] checking whether included gettext is requested... no
+[9-ERROR] checking for GNU gettext in libc... yes
+[9-ERROR] checking whether to use NLS... yes
+[9-ERROR] checking where the gettext function comes from... libc
+[9-ERROR] checking for i386-unknown-linux-gnu-gcc... (cached) gcc-40
+[9-ERROR] checking whether we are using the GNU C compiler... (cached) yes
+[9-ERROR] checking whether gcc-40 accepts -g... (cached) yes
+[9-ERROR] checking for gcc-40 option to accept ANSI C... (cached) none needed
+[9-ERROR] checking dependency style of gcc-40... (cached) gcc3
+[9-ERROR] checking for i386-unknown-linux-gnu-g++... g++-40
+[9-ERROR] checking whether we are using the GNU C++ compiler... yes
+[9-ERROR] checking whether g++-40 accepts -g... yes
+[9-ERROR] checking dependency style of g++-40... gcc3
+[9-ERROR] checking for i386-unknown-linux-gnu-ranlib... (cached) ranlib
+[9-ERROR] checking for gtk-config... /opt/gnome/bin/gtk-config
+[9-ERROR] checking for GTK - version >= 1.0.0... no
+[9-ERROR] *** Could not run GTK test program, checking why...
+[9-ERROR] *** The test program failed to compile or link. See the file config.log for the
+[9-ERROR] *** exact error that occured. This usually means GTK was incorrectly installed
+[9-ERROR] *** or that you have moved GTK since it was installed. In the latter case, you
+[9-ERROR] *** may want to edit the gtk-config script: /opt/gnome/bin/gtk-config
+[9-ERROR] configure: error: *** gtk-ardour requires GTK+, but it doesn't appear to be installed
+[9-ERROR] configure: error: /bin/sh './configure' failed for gtk_ardour
+[9-ERROR] --- BUILD ERROR ---
 

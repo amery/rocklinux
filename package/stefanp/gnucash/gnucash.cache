@@ -20,54 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142561581 Fri Mar 17 03:13:01 2006 (5)
-[TIMESTAMP] 1142821555 Mon Mar 20 03:25:55 2006 (9)
+[TIMESTAMP] 1168628404 Fri Jan 12 20:00:04 2007 (5) ERROR
+[TIMESTAMP] 1168832613 Mon Jan 15 04:43:33 2007 (9) ERROR
+[TIMESTAMP] 1168947755 Tue Jan 16 12:42:35 2007 (5) ERROR
+[TIMESTAMP] 1168974748 Tue Jan 16 20:12:28 2007 (9) ERROR
+[TIMESTAMP] 1169091168 Thu Jan 18 04:32:48 2007 (5) ERROR
+[TIMESTAMP] 1169145035 Thu Jan 18 19:30:35 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-gnucash.log 9-gnucash.log
+[LOGS] 5-gnucash.err 9-gnucash.err
 
-[BUILDTIME] 58740 (5)
-[BUILDTIME] 59890 (9)
-[SIZE] 12.77 MB, 653 files
+[BUILDTIME] 3206 (5) ERROR
+[BUILDTIME] 3232 (9) ERROR
+[BUILDTIME] 3248 (5) ERROR
+[BUILDTIME] 3257 (9) ERROR
+[BUILDTIME] 3276 (5) ERROR
+[BUILDTIME] 3226 (9) ERROR
 
-[DEP] 00-dirtree alsa alsa:dev audiofile audiofile:dev autoconf automake19
-[DEP] bash2 bdb33 bdb41 bdb42:dev binutils bison bonobo10 bonobo10:dev
-[DEP] bzip2 coreutils diffutils esound esound:dev findutils freetype
-[DEP] freetype:dev g-wrap g-wrap:dev gal01 gal01:dev gawk gcc34 gcc34:dev
-[DEP] gconf110 gconf110:dev gdk-pixbuf10 gdk-pixbuf10:dev gettext ghex12
-[DEP] glib12 glib12:dev glibc23 glibc23:dev gnome-libs14 gnome-libs14:dev
-[DEP] gnome-print10 gnome-print10:dev gnome14-dirtree grep gtk+12
-[DEP] gtk+12:dev gtkhtml1 gtkhtml1:dev guile guile:dev guppi guppi:dev
-[DEP] imlib imlib:dev libghttp10 libghttp10:dev libglade10 libglade10:dev
-[DEP] libtool libtool:dev libxml libxml:dev linux26-header:dev make mktemp
-[DEP] ncurses:dev net-tools oaf10 oaf10:dev openhbci openhbci:dev openssl
-[DEP] orbit10 orbit10:dev patch perl5 pkgconfig popt popt:dev readline
-[DEP] rrdtool sed sysfiles tar texinfo xorg xorg:dev zlib:dev
 
-[PROVIDES] dump-finance-quote gnc-prices gnc-test-env gnucash
-[PROVIDES] gnucash-config gnucash-env gnucash-make-guids
-[PROVIDES] gnucash-run-script libcore-utils.so libgnc-app-file-gnome.so
-[PROVIDES] libgnc-business-ledger.so libgncgnome.so
-[PROVIDES] libgncmod-app-file.so libgncmod-app-utils.so
-[PROVIDES] libgncmod-backend-file.so libgncmod-binary-import.so
-[PROVIDES] libgncmod-business-backend-file.so libgncmod-business-core.so
-[PROVIDES] libgncmod-business-gnome.so libgncmod-business-utils.so
-[PROVIDES] libgncmod-calculation.so libgncmod-dialog-tax-table.so
-[PROVIDES] libgncmod-engine.so libgncmod-generic-import.so
-[PROVIDES] libgncmod-gnome-search.so libgncmod-gnome-utils.so
-[PROVIDES] libgncmod-hbci.so libgncmod-ledger-core.so
-[PROVIDES] libgncmod-locale-reports-us.so libgncmod-log-replay.so
-[PROVIDES] libgncmod-network-utils.so libgncmod-qif-import.so
-[PROVIDES] libgncmod-register-core.so libgncmod-register-gnome.so
-[PROVIDES] libgncmod-report-gnome.so libgncmod-report-system.so
-[PROVIDES] libgncmod-standard-reports.so libgncmod-stylesheets.so
-[PROVIDES] libgncmod-tax-us.so libgncmod-utility-reports.so libgncmodule.so
-[PROVIDES] libgw-app-file.so libgw-app-utils.so libgw-binary-import.so
-[PROVIDES] libgw-business-core.so libgw-business-gnome.so
-[PROVIDES] libgw-core-utils.so libgw-dialog-tax-table.so libgw-engine.so
-[PROVIDES] libgw-gnc-module.so libgw-gnc.so libgw-gnome-search.so
-[PROVIDES] libgw-gnome-utils.so libgw-kvp.so libgw-register-core.so
-[PROVIDES] libgw-report-gnome.so update-finance-quote
+[5-ERROR] checking for sin in -lm... yes
+[5-ERROR] checking for guile libraries... -lguile -lguile-ltdl -lcrypt -lm
+[5-ERROR] checking for guile headers... 
+[5-ERROR] checking whether guile works... yes
+[5-ERROR] checking for guile... /usr/bin/guile
+[5-ERROR] checking for guile - 1.6.0 <= version < 99.99.99... yes: 1.6.7
+[5-ERROR] checking for guile - 1.8.0 <= version < 99.99.99... no: 1.6.7
+[5-ERROR] checking for g-wrap-config... /usr/bin/g-wrap-config
+[5-ERROR] checking for g-wrap - version >= 1.3.3... yes
+[5-ERROR] checking for g-wrap compile args... -I /usr/include/g-wrap
+[5-ERROR] checking for g-wrap link args... -lgwrap-wct -lgwrap-glib
+[5-ERROR] checking for g-wrap module directory... /usr/share/guile
+[5-ERROR] checking g-wrap-wct.h usability... yes
+[5-ERROR] checking g-wrap-wct.h presence... yes
+[5-ERROR] checking for g-wrap-wct.h... yes
+[5-ERROR] checking for (g-wrap gw-standard) guile module... yes
+[5-ERROR] checking if guile long_long is at least as big as gint64... yes
+[5-ERROR] checking for scm_long_long2num in -lguile... yes
+[5-ERROR] checking if unsigned long is at least as big as guint32... yes
+[5-ERROR] checking if guile needs our copy of srfi-1... no
+[5-ERROR] checking if guile needs our copy of srfi-11... no
+[5-ERROR] checking if guile needs our copy of srfi-19... no
+[5-ERROR] checking if guile needs our copy of srfi-2... no
+[5-ERROR] checking if guile needs our copy of srfi-8... no
+[5-ERROR] checking if guile needs our copy of srfi-9... no
+[5-ERROR] checking if guile needs our copy of (guile www)... checking for guile... (cached) /usr/bin/guile
+[5-ERROR] checking for guile-config... /usr/bin/guile-config
+[5-ERROR] checking for guile-tools... /usr/bin/guile-tools
+[5-ERROR] checking if (www main) is available... no
+[5-ERROR] checking for gconf-2.0 >= "2.0"... yes
+[5-ERROR] checking GCONF_CFLAGS... -DORBIT2=1 -D_REENTRANT -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include  
+[5-ERROR] checking GCONF_LIBS... -L/opt/gnome2/lib -lgconf-2 -lORBit-2 -lm -lgmodule-2.0 -ldl -lgthread-2.0 -lglib-2.0  
+[5-ERROR] checking for libxml-2.0 >= 2.5.10... yes
+[5-ERROR] checking LIBXML2_CFLAGS... -I/usr/include/libxml2  
+[5-ERROR] checking LIBXML2_LIBS... -lxml2 -lz -lm  
+[5-ERROR] checking for xmlElemDump in -lxml2... yes
+[5-ERROR] configure: External QOF Disabled.  Using Internal QOF Code.
+[5-ERROR] checking whether to use OFX... yes -- automatic test
+[5-ERROR] checking for libofx version >= 0.7.0... ./configure: line 1: ofxdump: command not found
+[5-ERROR] ./configure: line 26674: xauto: command not found
+[5-ERROR] found ; Libofx 0.7.0 or newer needed for ofx support
+[5-ERROR] checking for aqbanking >= "1.0.0"... checking if aqbanking support desired... yes
+[5-ERROR] checking for aqbanking... not found 
+[5-ERROR] configure: error:
+[5-ERROR] *** The library AqBanking was not found. Obtain it from
+[5-ERROR] *** http://www.aquamaniac.de.
+[5-ERROR] *** If it is already installed (including the -devel package),
+[5-ERROR] *** you might need to specify the location with the
+[5-ERROR] *** option --with-aqbanking-dir=DIR.
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] checking for sin in -lm... yes
+[9-ERROR] checking for guile libraries... -lguile -lguile-ltdl -lcrypt -lm
+[9-ERROR] checking for guile headers... 
+[9-ERROR] checking whether guile works... yes
+[9-ERROR] checking for guile... /usr/bin/guile
+[9-ERROR] checking for guile - 1.6.0 <= version < 99.99.99... yes: 1.6.7
+[9-ERROR] checking for guile - 1.8.0 <= version < 99.99.99... no: 1.6.7
+[9-ERROR] checking for g-wrap-config... /usr/bin/g-wrap-config
+[9-ERROR] checking for g-wrap - version >= 1.3.3... yes
+[9-ERROR] checking for g-wrap compile args... -I /usr/include/g-wrap
+[9-ERROR] checking for g-wrap link args... -lgwrap-wct -lgwrap-glib
+[9-ERROR] checking for g-wrap module directory... /usr/share/guile
+[9-ERROR] checking g-wrap-wct.h usability... yes
+[9-ERROR] checking g-wrap-wct.h presence... yes
+[9-ERROR] checking for g-wrap-wct.h... yes
+[9-ERROR] checking for (g-wrap gw-standard) guile module... yes
+[9-ERROR] checking if guile long_long is at least as big as gint64... yes
+[9-ERROR] checking for scm_long_long2num in -lguile... yes
+[9-ERROR] checking if unsigned long is at least as big as guint32... yes
+[9-ERROR] checking if guile needs our copy of srfi-1... no
+[9-ERROR] checking if guile needs our copy of srfi-11... no
+[9-ERROR] checking if guile needs our copy of srfi-19... no
+[9-ERROR] checking if guile needs our copy of srfi-2... no
+[9-ERROR] checking if guile needs our copy of srfi-8... no
+[9-ERROR] checking if guile needs our copy of srfi-9... no
+[9-ERROR] checking if guile needs our copy of (guile www)... checking for guile... (cached) /usr/bin/guile
+[9-ERROR] checking for guile-config... /usr/bin/guile-config
+[9-ERROR] checking for guile-tools... /usr/bin/guile-tools
+[9-ERROR] checking if (www main) is available... no
+[9-ERROR] checking for gconf-2.0 >= "2.0"... yes
+[9-ERROR] checking GCONF_CFLAGS... -DORBIT2=1 -D_REENTRANT -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include  
+[9-ERROR] checking GCONF_LIBS... -L/opt/gnome2/lib -lgconf-2 -lORBit-2 -lm -lgmodule-2.0 -ldl -lgthread-2.0 -lglib-2.0  
+[9-ERROR] checking for libxml-2.0 >= 2.5.10... yes
+[9-ERROR] checking LIBXML2_CFLAGS... -I/usr/include/libxml2  
+[9-ERROR] checking LIBXML2_LIBS... -lxml2 -lz -lm  
+[9-ERROR] checking for xmlElemDump in -lxml2... yes
+[9-ERROR] configure: External QOF Disabled.  Using Internal QOF Code.
+[9-ERROR] checking whether to use OFX... yes -- automatic test
+[9-ERROR] checking for libofx version >= 0.7.0... ./configure: line 1: ofxdump: command not found
+[9-ERROR] ./configure: line 26674: xauto: command not found
+[9-ERROR] found ; Libofx 0.7.0 or newer needed for ofx support
+[9-ERROR] checking for aqbanking >= "1.0.0"... checking if aqbanking support desired... yes
+[9-ERROR] checking for aqbanking... not found 
+[9-ERROR] configure: error:
+[9-ERROR] *** The library AqBanking was not found. Obtain it from
+[9-ERROR] *** http://www.aquamaniac.de.
+[9-ERROR] *** If it is already installed (including the -devel package),
+[9-ERROR] *** you might need to specify the location with the
+[9-ERROR] *** option --with-aqbanking-dir=DIR.
+[9-ERROR] --- BUILD ERROR ---
 

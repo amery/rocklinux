@@ -20,32 +20,35 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142518539 Thu Mar 16 15:15:39 2006 (5)
-[TIMESTAMP] 1142772454 Sun Mar 19 13:47:34 2006 (9)
+[TIMESTAMP] 1168594684 Fri Jan 12 10:38:04 2007 (5)
+[TIMESTAMP] 1168796586 Sun Jan 14 18:43:06 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-libgphoto.log 9-libgphoto.log
 
-[BUILDTIME] 28314 (5)
-[BUILDTIME] 29583 (9)
-[SIZE] 2.93 MB, 121 files
+[BUILDTIME] 29655 (5)
+[BUILDTIME] 31063 (9)
+[SIZE] 2.39 MB, 101 files
 
-[DEP] 00-dirtree alien bash2 binutils bzip2 coreutils diffutils doxygen
-[DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev
-[DEP] gnome-libs14 gnome14-dirtree graphviz grep libexif libexif:dev
-[DEP] libjpeg libjpeg:dev libtool libtool:dev libusb libusb:dev
-[DEP] linux26-header:dev make mktemp net-tools pkgconfig rpm rrdtool sed
-[DEP] sysfiles tar util-linux xscreensaver
+[DEP] 00-dirtree alien applewmproto bash2 binutils bitstream-vera-fonts
+[DEP] bzip2 coreutils cvm dbus dbus:dev diffutils doxygen findutils
+[DEP] font-bh-ttf font-misc-ethiopic font-util fontconfig gawk gcc40
+[DEP] gcc40:dev gettext glibc23 glibc23:dev gnome-libs14 gnome14-dirtree
+[DEP] gpl-fonts graphviz grep hal hal:dev libdockapp libexif libexif:dev
+[DEP] libjpeg libjpeg:dev libtool libtool:dev libusb libusb:dev libx11
+[DEP] linux-libc-headers:dev make mktemp net-tools netpbm nx-x11 patch
+[DEP] pkgconfig rpm rrdtool sed sysfiles tar util-linux xscreensaver
 
-[PROVIDES] adc65.a adc65.so agfa_cl20.a agfa_cl20.so aox.a aox.so barbie.a
-[PROVIDES] barbie.so canon.a canon.so casio_qv.a casio_qv.so digigr8.a
-[PROVIDES] digigr8.so digita.a digita.so dimagev.a dimagev.so dimera3500.a
-[PROVIDES] dimera3500.so directory.a directory.so disk.a disk.so enigma13.a
-[PROVIDES] enigma13.so fuji.a fuji.so gphoto2-config gphoto2-port-config
-[PROVIDES] gsmart300.a gsmart300.so hp215.a hp215.so iclick.a iclick.so
-[PROVIDES] jamcam.a jamcam.so jd11.a jd11.so kodak_dc120.a kodak_dc120.so
+[PROVIDES] adc65.a adc65.so agfa_cl20.a agfa_cl20.so aox.a aox.so
+[PROVIDES] barbie.a barbie.so canon.a canon.so casio_qv.a casio_qv.so
+[PROVIDES] clicksmart310.a clicksmart310.so digigr8.a digigr8.so digita.a
+[PROVIDES] digita.so dimagev.a dimagev.so dimera3500.a dimera3500.so
+[PROVIDES] directory.a directory.so disk.a disk.so enigma13.a enigma13.so
+[PROVIDES] fuji.a fuji.so gphoto2-config gphoto2-port-config gsmart300.a
+[PROVIDES] gsmart300.so hp215.a hp215.so iclick.a iclick.so jamcam.a
+[PROVIDES] jamcam.so jd11.a jd11.so kodak_dc120.a kodak_dc120.so
 [PROVIDES] kodak_dc210.a kodak_dc210.so kodak_dc240.a kodak_dc240.so
 [PROVIDES] kodak_dc3200.a kodak_dc3200.so kodak_ez200.a kodak_ez200.so
 [PROVIDES] konica.a konica.so konica_qm150.a konica_qm150.so largan.a
@@ -56,13 +59,13 @@
 [PROVIDES] panasonic_dc1580.so panasonic_l859.a panasonic_l859.so
 [PROVIDES] pccam300.a pccam300.so pccam600.a pccam600.so polaroid_pdc320.a
 [PROVIDES] polaroid_pdc320.so polaroid_pdc640.a polaroid_pdc640.so
-[PROVIDES] polaroid_pdc700.a polaroid_pdc700.so ptp2.a ptp2.so ricoh.a
-[PROVIDES] ricoh.so ricoh_g3.a ricoh_g3.so samsung.a samsung.so serial.a
-[PROVIDES] serial.so sierra.a sierra.so sipix_blink.a sipix_blink.so
-[PROVIDES] sipix_blink2.a sipix_blink2.so sipix_web2.a sipix_web2.so
-[PROVIDES] smal.a smal.so sonix.a sonix.so sony_dscf1.a sony_dscf1.so
-[PROVIDES] sony_dscf55.a sony_dscf55.so soundvision.a soundvision.so
-[PROVIDES] spca50x.a spca50x.so sq905.a sq905.so stv0674.a stv0674.so
-[PROVIDES] stv0680.a stv0680.so sx330z.a sx330z.so toshiba_pdrm11.a
-[PROVIDES] toshiba_pdrm11.so usb.a usb.so
+[PROVIDES] polaroid_pdc700.a polaroid_pdc700.so ptp2.a ptp2.so ptpip.a
+[PROVIDES] ptpip.so ricoh.a ricoh.so ricoh_g3.a ricoh_g3.so samsung.a
+[PROVIDES] samsung.so serial.a serial.so sierra.a sierra.so sipix_blink.a
+[PROVIDES] sipix_blink.so sipix_blink2.a sipix_blink2.so sipix_web2.a
+[PROVIDES] sipix_web2.so smal.a smal.so sonix.a sonix.so sony_dscf1.a
+[PROVIDES] sony_dscf1.so sony_dscf55.a sony_dscf55.so soundvision.a
+[PROVIDES] soundvision.so spca50x.a spca50x.so sq905.a sq905.so
+[PROVIDES] stv0674.a stv0674.so stv0680.a stv0680.so sx330z.a sx330z.so
+[PROVIDES] toshiba_pdrm11.a toshiba_pdrm11.so usb.a usb.so
 

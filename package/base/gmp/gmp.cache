@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142454738 Wed Mar 15 21:32:18 2006 (5)
-[TIMESTAMP] 1142691659 Sat Mar 18 15:20:59 2006 (9)
+[TIMESTAMP] 1168531465 Thu Jan 11 17:04:25 2007 (5)
+[TIMESTAMP] 1168721172 Sat Jan 13 21:46:12 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 1-gmp.log 5-gmp.log 9-gmp.log
 
-[BUILDTIME] 16592 (5)
-[BUILDTIME] 17779 (9)
-[SIZE] 0.63 MB, 13 files
+[BUILDTIME] 17355 (5)
+[BUILDTIME] 18478 (9)
+[SIZE] 0.64 MB, 12 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] flex flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev m4 make mktemp net-tools readline rrdtool sed
-[DEP] sysfiles tar texinfo util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
+[DEP] flex flex:dev gawk gcc40 gcc40:dev glibc23 glibc23:dev grep
+[DEP] linux-libc-headers:dev m4 make mktemp ncurses net-tools readline
+[DEP] readline:dev rrdtool sed sysfiles tar texinfo util-linux
 
-[PROVIDES] libgmp.a libgmp.so libmpfr.a
+[PROVIDES] libgmp.a libgmp.so
 

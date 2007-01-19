@@ -20,21 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142588942 Fri Mar 17 10:49:02 2006 (5)
-[TIMESTAMP] 1142853520 Mon Mar 20 12:18:40 2006 (9)
+[TIMESTAMP] 1168649119 Sat Jan 13 01:45:19 2007 (5)
+[TIMESTAMP] 1168855664 Mon Jan 15 11:07:44 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-yudit.log 9-yudit.log
 
-[BUILDTIME] 11052 (5)
-[BUILDTIME] 11653 (9)
-[SIZE] 11.57 MB, 494 files
+[BUILDTIME] 11933 (5)
+[BUILDTIME] 12428 (9)
+[SIZE] 11.88 MB, 494 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp net-tools rrdtool sed sysfiles tar xorg xorg:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm diffutils findutils gawk gcc40 gcc40:dev glibc23
+[DEP] glibc23:dev grep imake libice libx11 libx11:dev libxau libxdmcp
+[DEP] libxt linux-libc-headers:dev make mktemp net-tools netpbm rrdtool
+[DEP] sed sysfiles tar twoftpd ucspi-unix xorg-cf-files xproto:dev
 
 [PROVIDES] mytool uniconv uniprint yudit
 

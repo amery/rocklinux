@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142575442 Fri Mar 17 07:04:02 2006 (5)
-[TIMESTAMP] 1142838790 Mon Mar 20 08:13:10 2006 (9)
+[TIMESTAMP] 1168638470 Fri Jan 12 22:47:50 2007 (5)
+[TIMESTAMP] 1168844177 Mon Jan 15 07:56:17 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-bsd-finger.log 9-bsd-finger.log
 
-[BUILDTIME] 1316 (5)
-[BUILDTIME] 1646 (9)
+[BUILDTIME] 1387 (5)
+[BUILDTIME] 1616 (9)
 [SIZE] 0.05 MB, 11 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp patch
-[DEP] rrdtool sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils gawk gcc40
+[DEP] gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev make
+[DEP] mktemp netpbm patch rrdtool sed sysfiles tar twoftpd ucspi-unix
 
 [PROVIDES] finger in.fingerd
 

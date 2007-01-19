@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142453378 Wed Mar 15 21:09:38 2006 (5)
-[TIMESTAMP] 1142688862 Sat Mar 18 14:34:22 2006 (9)
+[TIMESTAMP] 1168530026 Thu Jan 11 16:40:26 2007 (5)
+[TIMESTAMP] 1168718899 Sat Jan 13 21:08:19 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-net-tools.log 9-net-tools.log
 
-[BUILDTIME] 1707 (5)
-[BUILDTIME] 2571 (9)
+[BUILDTIME] 1928 (5)
+[BUILDTIME] 2619 (9)
 [SIZE] 0.38 MB, 39 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] patch rrdtool sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils gawk gcc40
+[DEP] gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev make
+[DEP] mktemp netpbm patch rrdtool sed sysfiles tar twoftpd ucspi-unix
 
 [PROVIDES] arp dnsdomainname domainname ether-wake hostname ifconfig
 [PROVIDES] ipmaddr iptunnel mii-tool nameif netstat nisdomainname

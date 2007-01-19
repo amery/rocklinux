@@ -20,28 +20,88 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142463715 Thu Mar 16 00:01:55 2006 (5)
-[TIMESTAMP] 1142706057 Sat Mar 18 19:20:57 2006 (9)
+[TIMESTAMP] 1168543918 Thu Jan 11 20:31:58 2007 (5)
+[TIMESTAMP] 1168738396 Sun Jan 14 02:33:16 2007 (9) ERROR
+[TIMESTAMP] 1168958662 Tue Jan 16 15:44:22 2007 (9) ERROR
+[TIMESTAMP] 1169128956 Thu Jan 18 15:02:36 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-isdn4k-utils.log 9-isdn4k-utils.log
+[LOGS] 5-isdn4k-utils.log 9-isdn4k-utils.err
 
-[BUILDTIME] 16030 (5)
-[BUILDTIME] 17132 (9)
-[SIZE] 2.72 MB, 127 files
+[BUILDTIME] 16222 (5)
+[BUILDTIME] 17359 (9) ERROR
+[BUILDTIME] 17425 (9) ERROR
+[BUILDTIME] 17377 (9) ERROR
+[SIZE] 2.40 MB, 126 files
 
-[DEP] 00-dirtree autoconf automake17 automake19 bash2 binutils bzip2
-[DEP] coreutils diffutils findutils gawk gcc34 gcc34:dev glibc23
-[DEP] glibc23:dev grep libtool linux26-header:dev m4 make mktemp
-[DEP] ncurses:dev net-tools patch perl5 procps rrdtool sed sysfiles tar
-[DEP] tcl tcl:dev texinfo util-linux xorg xorg:dev xorg:doc
+[DEP] 00-dirtree applewmproto applewmproto:dev autoconf automake19
+[DEP] bash2 binutils bzip2 coreutils cvm diffutils findutils gawk gcc40
+[DEP] gcc40:dev glibc23 glibc23:dev grep imake libice libice:dev libsm
+[DEP] libsm:dev libtool libx11 libx11:dev libxau libxaw libxaw:dev
+[DEP] libxdmcp libxext libxmu libxmu:dev libxp libxpm libxt libxt:dev
+[DEP] linux-libc-headers:dev m4 make mktemp ncurses ncurses:dev net-tools
+[DEP] netpbm patch perl5 procps rrdtool sed sysfiles tar tcl tcl:dev
+[DEP] texinfo twoftpd ucspi-unix util-linux xbitmaps:dev xextproto:dev
+[DEP] xfig xorg-cf-files xorg-docs xorg-server xproto:dev xterm
 
 [PROVIDES] autovbox avmcapictrl capifax capifaxrcvd capiinfo capiinit
-[PROVIDES] hisaxctrl icnctrl imon imontty ipppd ipppstats iprofd isdnconf
-[PROVIDES] isdnctrl isdnlog isdnrate isdnrep libcapi20.a libcapi20.so
-[PROVIDES] libcapi20dyn.a loopctrl mkzonedb pcbitctl rcapid rmdtovbox vbox
-[PROVIDES] vboxbeep vboxcnvt vboxctrl vboxd vboxgetty vboxmail vboxmode
-[PROVIDES] vboxplay vboxputty vboxtoau xisdnload xmonisdn
+[PROVIDES] hisaxctrl icnctrl imon imontty ipppd ipppstats iprofd
+[PROVIDES] isdn-makedev.sh isdnconf isdnctrl isdnlog isdnrate isdnrep
+[PROVIDES] libcapi20.a libcapi20.so libcapi20dyn.a loopctrl mkzonedb
+[PROVIDES] pcbitctl rcapid rmdtovbox vbox vboxbeep vboxcnvt vboxctrl
+[PROVIDES] vboxd vboxgetty vboxmail vboxmode vboxplay vboxputty vboxtoau
+[PROVIDES] xisdnload xmonisdn
+
+[9-ERROR] test -z "/sbin" || mkdir -p -- "/sbin"
+[9-ERROR]   /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c 'rcapid' '/sbin/rcapid'
+[9-ERROR] make[2]: Nothing to be done for `install-data-am'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.isdn4k-utils.1169128741.3916.3231913534/isdn4k-utils/rcapid'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.isdn4k-utils.1169128741.3916.3231913534/isdn4k-utils/rcapid'
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.isdn4k-utils.1169128741.3916.3231913534/isdn4k-utils/capifax'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.isdn4k-utils.1169128741.3916.3231913534/isdn4k-utils/capifax'
+[9-ERROR] test -z "/usr/bin" || mkdir -p -- "/usr/bin"
+[9-ERROR]   /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c 'capifax' '/usr/bin/capifax'
+[9-ERROR]   /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c 'capifaxrcvd' '/usr/bin/capifaxrcvd'
+[9-ERROR] make[2]: Nothing to be done for `install-data-am'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.isdn4k-utils.1169128741.3916.3231913534/isdn4k-utils/capifax'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.isdn4k-utils.1169128741.3916.3231913534/isdn4k-utils/capifax'
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.isdn4k-utils.1169128741.3916.3231913534/isdn4k-utils/doc'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.isdn4k-utils.1169128741.3916.3231913534/isdn4k-utils/doc'
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.isdn4k-utils.1169128741.3916.3231913534/isdn4k-utils/FAQ'
+[9-ERROR] 
+[9-ERROR] WARNING: package disabled because of config-error
+[9-ERROR] 
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.isdn4k-utils.1169128741.3916.3231913534/isdn4k-utils/FAQ'
+[9-ERROR] Hook preconf is still marked as dirty ...
+[9-ERROR] Hook premake is still marked as dirty ...
+[9-ERROR] Hook inmake is still marked as dirty ...
+[9-ERROR] Hook postmake is still marked as dirty ...
+[9-ERROR] Trying to copy the default documentation ...
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing /lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 190 files for this package.
+[9-ERROR] Applying package split: 40 isdn4k-utils:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[9-ERROR] Applying package split: 42 isdn4k-utils:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 isdn4k-utils:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <isdn4k-utils> Creating flist file ...
+[9-ERROR] <isdn4k-utils> Creating package dependencies file ...
+[9-ERROR] <isdn4k-utils> Creating package description ...
+[9-ERROR] <isdn4k-utils> Creating md5sum and cksum files ...
+[9-ERROR] <isdn4k-utils:dev> Creating flist file ...
+[9-ERROR] <isdn4k-utils:dev> Creating package dependencies file ...
+[9-ERROR] <isdn4k-utils:dev> Creating package description ...
+[9-ERROR] <isdn4k-utils:dev> Creating md5sum and cksum files ...
+[9-ERROR] <isdn4k-utils:doc> Creating flist file ...
+[9-ERROR] <isdn4k-utils:doc> Creating package dependencies file ...
+[9-ERROR] <isdn4k-utils:doc> Creating package description ...
+[9-ERROR] <isdn4k-utils:doc> Creating md5sum and cksum files ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] etc/X11/app-defaults/XISDNLoad: isdn4k-utils xfig
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] --- BUILD ERROR ---
 

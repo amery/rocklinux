@@ -20,26 +20,27 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142495628 Thu Mar 16 08:53:48 2006 (5)
-[TIMESTAMP] 1142745708 Sun Mar 19 06:21:48 2006 (9)
+[TIMESTAMP] 1168572711 Fri Jan 12 04:31:51 2007 (5)
+[TIMESTAMP] 1168770969 Sun Jan 14 11:36:09 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-gconf110.log 9-gconf110.log
 
-[BUILDTIME] 6286 (5)
-[BUILDTIME] 6950 (9)
-[SIZE] 1.37 MB, 61 files
+[BUILDTIME] 6583 (5)
+[BUILDTIME] 7069 (9)
+[SIZE] 0.58 MB, 37 files
 
-[DEP] 00-dirtree autoconf automake19 bash2 bdb33 bdb33:dev bdb42:dev
-[DEP] binutils bzip2 coreutils diffutils findutils gawk gcc34 gcc34:dev
-[DEP] gdk-pixbuf10:doc gettext glib12 glib12:dev glibc23 glibc23:dev
-[DEP] gnome-libs14:doc gnome14-dirtree gnome2-dirtree grep gtk+12
-[DEP] gtk+12:dev gtkdoc guile indent libxml libxml:dev linux26-header:dev
-[DEP] make mktemp net-tools oaf10 oaf10:dev orbit10 orbit10:dev patch
-[DEP] perl5 pkgconfig popt popt:dev rrdtool sed sysfiles tar texinfo
-[DEP] util-linux xorg zlib:dev
+[DEP] 00-dirtree applewmproto autoconf automake19 bash2 bdb33 bdb33:dev
+[DEP] bdb44:dev binutils bzip2 coreutils cvm diffutils findutils gawk
+[DEP] gcc40 gcc40:dev gdk-pixbuf10:doc gettext glib12 glib12:dev glibc23
+[DEP] glibc23:dev gnome-libs14:doc gnome14-dirtree gnome2-dirtree grep
+[DEP] gtk+12 gtk+12:dev gtkdoc guile indent libx11 libx11:dev libxau
+[DEP] libxau:dev libxdmcp libxdmcp:dev libxext libxext:dev libxi libxi:dev
+[DEP] libxml libxml:dev linux-libc-headers:dev make mktemp net-tools oaf10
+[DEP] oaf10:dev orbit10 orbit10:dev patch perl5 pkgconfig popt popt:dev
+[DEP] rrdtool sed sysfiles tar texinfo util-linux zlib
 
 [PROVIDES] gconf-config gconf-config-1 gconf-sanity-check-1
 [PROVIDES] gconfd-1 gconftool gconftool-1 libgconf-1.a libgconf-1.so

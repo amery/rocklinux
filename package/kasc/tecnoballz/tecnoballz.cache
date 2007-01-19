@@ -1,22 +1,123 @@
 
-[TIMESTAMP] 1142633537 Fri Mar 17 23:12:17 2006 (5)
-[TIMESTAMP] 1142901982 Tue Mar 21 01:46:22 2006 (9)
+[TIMESTAMP] 1168683241 Sat Jan 13 11:14:01 2007 (5) ERROR
+[TIMESTAMP] 1168892188 Mon Jan 15 21:16:28 2007 (9) ERROR
+[TIMESTAMP] 1168951807 Tue Jan 16 13:50:07 2007 (5) ERROR
+[TIMESTAMP] 1168981426 Tue Jan 16 22:03:46 2007 (9) ERROR
+[TIMESTAMP] 1169122119 Thu Jan 18 13:08:39 2007 (5) ERROR
+[TIMESTAMP] 1169151625 Thu Jan 18 21:20:25 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-tecnoballz.log 9-tecnoballz.log
+[LOGS] 5-tecnoballz.err 9-tecnoballz.err
 
-[BUILDTIME] 6000 (5)
-[BUILDTIME] 6243 (9)
-[SIZE] 6.20 MB, 164 files
+[BUILDTIME] 2125 (5) ERROR
+[BUILDTIME] 2159 (9) ERROR
+[BUILDTIME] 2150 (5) ERROR
+[BUILDTIME] 2134 (9) ERROR
+[BUILDTIME] 2144 (5) ERROR
+[BUILDTIME] 2161 (9) ERROR
 
-[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev
-[DEP] grep libmikmod libmikmod:dev libsdl libsdl:dev libsdl_mixer
-[DEP] libsdl_mixer:dev libtool linux26-header:dev m4 make mktemp
-[DEP] nas net-tools ogg-vorbis perl5 rrdtool sed smpeg sysfiles tar
-[DEP] util-linux xorg
 
-[PROVIDES] tecnoballz
+[5-ERROR] checking for Mix_GetChunk in -lSDL_mixer... yes
+[5-ERROR] checking for Player_Stop in -lmikmod... yes
+[5-ERROR] checking for asin in -lm... yes
+[5-ERROR] checking for dlopen in -ldl... yes
+[5-ERROR] checking for pthread_attr_destroy in -lpthread... yes
+[5-ERROR] checking for an ANSI C-conforming const... yes
+[5-ERROR] checking for egrep... grep -E
+[5-ERROR] checking for ANSI C header files... yes
+[5-ERROR] checking for sys/types.h... yes
+[5-ERROR] checking for sys/stat.h... yes
+[5-ERROR] checking for stdlib.h... yes
+[5-ERROR] checking for string.h... yes
+[5-ERROR] checking for memory.h... yes
+[5-ERROR] checking for strings.h... yes
+[5-ERROR] checking for inttypes.h... yes
+[5-ERROR] checking for stdint.h... yes
+[5-ERROR] checking for unistd.h... yes
+[5-ERROR] checking for stdlib.h... (cached) yes
+[5-ERROR] checking for GNU libc compatible malloc... yes
+[5-ERROR] checking whether lstat dereferences a symlink specified with a trailing slash... yes
+[5-ERROR] checking whether stat accepts an empty string... no
+[5-ERROR] checking for strdup... yes
+[5-ERROR] checking for strerror... yes
+[5-ERROR] configure: creating ./config.status
+[5-ERROR] config.status: creating Makefile
+[5-ERROR] config.status: creating config.h
+[5-ERROR] config.status: config.h is unchanged
+[5-ERROR] g++-40  -O3 -Wall -pthread -D_REENTRANT -I/usr/X11R6/includes     -c -o src/audiomixer.o src/audiomixer.cc
+[5-ERROR] g++-40  -O3 -Wall -pthread -D_REENTRANT -I/usr/X11R6/includes     -c -o src/ballDirect.o src/ballDirect.cc
+[5-ERROR] g++-40  -O3 -Wall -pthread -D_REENTRANT -I/usr/X11R6/includes     -c -o src/barreScore.o src/barreScore.cc
+[5-ERROR] g++-40  -O3 -Wall -pthread -D_REENTRANT -I/usr/X11R6/includes     -c -o src/BOB_killer.o src/BOB_killer.cc
+[5-ERROR] g++-40  -O3 -Wall -pthread -D_REENTRANT -I/usr/X11R6/includes     -c -o src/briqueCote.o src/briqueCote.cc
+[5-ERROR] g++-40  -O3 -Wall -pthread -D_REENTRANT -I/usr/X11R6/includes     -c -o src/clavierMac.o src/clavierMac.cc
+[5-ERROR] g++-40  -O3 -Wall -pthread -D_REENTRANT -I/usr/X11R6/includes     -c -o src/configfile.o src/configfile.cc
+[5-ERROR] src/configfile.cc: In member function 'void configfile::configinfo()':
+[5-ERROR] src/configfile.cc:86: warning: too few arguments for format
+[5-ERROR] g++-40  -O3 -Wall -pthread -D_REENTRANT -I/usr/X11R6/includes     -c -o src/ecran_hard.o src/ecran_hard.cc
+[5-ERROR] g++-40  -O3 -Wall -pthread -D_REENTRANT -I/usr/X11R6/includes     -c -o src/ejectBalls.o src/ejectBalls.cc
+[5-ERROR] g++-40  -O3 -Wall -pthread -D_REENTRANT -I/usr/X11R6/includes     -c -o src/escapeMenu.o src/escapeMenu.cc
+[5-ERROR] g++-40  -O3 -Wall -pthread -D_REENTRANT -I/usr/X11R6/includes     -c -o src/fond_ecran.o src/fond_ecran.cc
+[5-ERROR] g++-40  -O3 -Wall -pthread -D_REENTRANT -I/usr/X11R6/includes     -c -o src/gard_tecno.o src/gard_tecno.cc
+[5-ERROR] src/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/zeGigaBlit.h:50: error: ISO C++ forbids declaration of 'zexplosion' with no type
+[5-ERROR] src/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/zeGigaBlit.h:50: error: expected ';' before '*' token
+[5-ERROR] src/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/zeGigaBlit.h:73: error: 'zexplosion' has not been declared
+[5-ERROR] src/gard_tecno.cc: In member function 'virtual Sint32 gard_tecno::first_init()':
+[5-ERROR] src/gard_tecno.cc:109: error: no matching function for call to 'zeGigaBlit::init_liste(zeRaquette*&, zexplosion*&)'
+[5-ERROR] src/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/zeGigaBlit.h:69: note: candidates are: Sint32 zeGigaBlit::init_liste(zeRaquette*, head_anima*, lesBriques*)
+[5-ERROR] src/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/zeGigaBlit.h:73: note:                 Sint32 zeGigaBlit::init_liste(zeRaquette*, int*)
+[5-ERROR] make: *** [src/gard_tecno.o] Error 1
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] checking for Mix_GetChunk in -lSDL_mixer... yes
+[9-ERROR] checking for Player_Stop in -lmikmod... yes
+[9-ERROR] checking for asin in -lm... yes
+[9-ERROR] checking for dlopen in -ldl... yes
+[9-ERROR] checking for pthread_attr_destroy in -lpthread... yes
+[9-ERROR] checking for an ANSI C-conforming const... yes
+[9-ERROR] checking for egrep... grep -E
+[9-ERROR] checking for ANSI C header files... yes
+[9-ERROR] checking for sys/types.h... yes
+[9-ERROR] checking for sys/stat.h... yes
+[9-ERROR] checking for stdlib.h... yes
+[9-ERROR] checking for string.h... yes
+[9-ERROR] checking for memory.h... yes
+[9-ERROR] checking for strings.h... yes
+[9-ERROR] checking for inttypes.h... yes
+[9-ERROR] checking for stdint.h... yes
+[9-ERROR] checking for unistd.h... yes
+[9-ERROR] checking for stdlib.h... (cached) yes
+[9-ERROR] checking for GNU libc compatible malloc... yes
+[9-ERROR] checking whether lstat dereferences a symlink specified with a trailing slash... yes
+[9-ERROR] checking whether stat accepts an empty string... no
+[9-ERROR] checking for strdup... yes
+[9-ERROR] checking for strerror... yes
+[9-ERROR] configure: creating ./config.status
+[9-ERROR] config.status: creating Makefile
+[9-ERROR] config.status: creating config.h
+[9-ERROR] config.status: config.h is unchanged
+[9-ERROR] g++-40  -O3 -Wall -pthread -D_REENTRANT -I/usr/X11R6/includes     -c -o src/audiomixer.o src/audiomixer.cc
+[9-ERROR] g++-40  -O3 -Wall -pthread -D_REENTRANT -I/usr/X11R6/includes     -c -o src/ballDirect.o src/ballDirect.cc
+[9-ERROR] g++-40  -O3 -Wall -pthread -D_REENTRANT -I/usr/X11R6/includes     -c -o src/barreScore.o src/barreScore.cc
+[9-ERROR] g++-40  -O3 -Wall -pthread -D_REENTRANT -I/usr/X11R6/includes     -c -o src/BOB_killer.o src/BOB_killer.cc
+[9-ERROR] g++-40  -O3 -Wall -pthread -D_REENTRANT -I/usr/X11R6/includes     -c -o src/briqueCote.o src/briqueCote.cc
+[9-ERROR] g++-40  -O3 -Wall -pthread -D_REENTRANT -I/usr/X11R6/includes     -c -o src/clavierMac.o src/clavierMac.cc
+[9-ERROR] g++-40  -O3 -Wall -pthread -D_REENTRANT -I/usr/X11R6/includes     -c -o src/configfile.o src/configfile.cc
+[9-ERROR] src/configfile.cc: In member function 'void configfile::configinfo()':
+[9-ERROR] src/configfile.cc:86: warning: too few arguments for format
+[9-ERROR] g++-40  -O3 -Wall -pthread -D_REENTRANT -I/usr/X11R6/includes     -c -o src/ecran_hard.o src/ecran_hard.cc
+[9-ERROR] g++-40  -O3 -Wall -pthread -D_REENTRANT -I/usr/X11R6/includes     -c -o src/ejectBalls.o src/ejectBalls.cc
+[9-ERROR] g++-40  -O3 -Wall -pthread -D_REENTRANT -I/usr/X11R6/includes     -c -o src/escapeMenu.o src/escapeMenu.cc
+[9-ERROR] g++-40  -O3 -Wall -pthread -D_REENTRANT -I/usr/X11R6/includes     -c -o src/fond_ecran.o src/fond_ecran.cc
+[9-ERROR] g++-40  -O3 -Wall -pthread -D_REENTRANT -I/usr/X11R6/includes     -c -o src/gard_tecno.o src/gard_tecno.cc
+[9-ERROR] src/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/zeGigaBlit.h:50: error: ISO C++ forbids declaration of 'zexplosion' with no type
+[9-ERROR] src/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/zeGigaBlit.h:50: error: expected ';' before '*' token
+[9-ERROR] src/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/zeGigaBlit.h:73: error: 'zexplosion' has not been declared
+[9-ERROR] src/gard_tecno.cc: In member function 'virtual Sint32 gard_tecno::first_init()':
+[9-ERROR] src/gard_tecno.cc:109: error: no matching function for call to 'zeGigaBlit::init_liste(zeRaquette*&, zexplosion*&)'
+[9-ERROR] src/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/zeGigaBlit.h:69: note: candidates are: Sint32 zeGigaBlit::init_liste(zeRaquette*, head_anima*, lesBriques*)
+[9-ERROR] src/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/../include/zeGigaBlit.h:73: note:                 Sint32 zeGigaBlit::init_liste(zeRaquette*, int*)
+[9-ERROR] make: *** [src/gard_tecno.o] Error 1
+[9-ERROR] --- BUILD ERROR ---
 

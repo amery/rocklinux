@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142555673 Fri Mar 17 01:34:33 2006 (5)
-[TIMESTAMP] 1142814697 Mon Mar 20 01:31:37 2006 (9)
+[TIMESTAMP] 1168624844 Fri Jan 12 19:00:44 2007 (5)
+[TIMESTAMP] 1168828754 Mon Jan 15 03:39:14 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-wvdial.log 9-wvdial.log
 
-[BUILDTIME] 1824 (5)
-[BUILDTIME] 2202 (9)
-[SIZE] 0.22 MB, 15 files
+[BUILDTIME] 1725 (5)
+[BUILDTIME] 2014 (9)
+[SIZE] 0.19 MB, 15 files
 
-[DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils fam findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp openslp openssl pam ppp rrdtool sed sysfiles tar wvstreams
-[DEP] wvstreams:dev zlib
+[DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils cvm fam findutils
+[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev
+[DEP] make mktemp netpbm openslp openssl pam ppp rrdtool sed sysfiles
+[DEP] tar twoftpd ucspi-unix wvstreams wvstreams:dev zlib
 
 [PROVIDES] wvdial wvdialconf
 

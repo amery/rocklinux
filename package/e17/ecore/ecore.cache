@@ -20,30 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142489073 Thu Mar 16 07:04:33 2006 (5)
-[TIMESTAMP] 1142737667 Sun Mar 19 04:07:47 2006 (9)
+[TIMESTAMP] 1168566288 Fri Jan 12 02:44:48 2007 (5) ERROR
+[TIMESTAMP] 1168763756 Sun Jan 14 09:35:56 2007 (9) ERROR
+[TIMESTAMP] 1168941600 Tue Jan 16 11:00:00 2007 (5) ERROR
+[TIMESTAMP] 1168963627 Tue Jan 16 17:07:07 2007 (9) ERROR
+[TIMESTAMP] 1169084990 Thu Jan 18 02:49:50 2007 (5) ERROR
+[TIMESTAMP] 1169133918 Thu Jan 18 16:25:18 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-ecore.log 9-ecore.log
+[LOGS] 5-ecore.err 9-ecore.err
 
-[BUILDTIME] 11833 (5)
-[BUILDTIME] 12544 (9)
-[SIZE] 1.13 MB, 71 files
+[BUILDTIME] 7553 (5) ERROR
+[BUILDTIME] 7705 (9) ERROR
+[BUILDTIME] 7745 (5) ERROR
+[BUILDTIME] 7758 (9) ERROR
+[BUILDTIME] 7778 (5) ERROR
+[BUILDTIME] 7766 (9) ERROR
 
-[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils directfb directfb:dev edb edb:dev eet eet:dev evas
-[DEP] evas:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev glibc23
-[DEP] glibc23:dev grep imlib2 libjpeg libjpeg:dev libpng libpng:dev libtool
-[DEP] linux26-header:dev m4 make mktemp net-tools openssl openssl:dev perl5
-[DEP] pkgconfig rrdtool sed sysfiles tar util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] ecore-config ecore_config ecore_evas_test ecore_test libecore.a
-[PROVIDES] libecore.so libecore_con.a libecore_con.so libecore_config.a
-[PROVIDES] libecore_config.so libecore_dbus.a libecore_dbus.so
-[PROVIDES] libecore_evas.a libecore_evas.so libecore_fb.a libecore_fb.so
-[PROVIDES] libecore_file.a libecore_file.so libecore_ipc.a libecore_ipc.so
-[PROVIDES] libecore_job.a libecore_job.so libecore_txt.a libecore_txt.so
-[PROVIDES] libecore_x.a libecore_x.so
+[5-ERROR] Making all in ecore_ipc
+[5-ERROR] make[4]: Entering directory `/ROCK/loop/src.ecore.1169084911.5303.3583069520/ecore-2005-09-11/src/lib/ecore_ipc'
+[5-ERROR] if /bin/sh ../../../libtool --tag=CC --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src/lib/ecore -I../../../src/lib/ecore_con -I../../../src/lib/ecore_ipc -I../../../src/lib/ecore -I../../../src/lib/ecore_con -I../../../src/lib/ecore_ipc     -g -O2 -Wall -MT ecore_ipc.lo -MD -MP -MF ".deps/ecore_ipc.Tpo" -c -o ecore_ipc.lo ecore_ipc.c; \
+[5-ERROR] 	then mv -f ".deps/ecore_ipc.Tpo" ".deps/ecore_ipc.Plo"; else rm -f ".deps/ecore_ipc.Tpo"; exit 1; fi
+[5-ERROR] mkdir .libs
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src/lib/ecore -I../../../src/lib/ecore_con -I../../../src/lib/ecore_ipc -I../../../src/lib/ecore -I../../../src/lib/ecore_con -I../../../src/lib/ecore_ipc -g -O2 -Wall -MT ecore_ipc.lo -MD -MP -MF .deps/ecore_ipc.Tpo -c ecore_ipc.c  -fPIC -DPIC -o .libs/ecore_ipc.o
+[5-ERROR] ecore_ipc.c: In function 'ecore_ipc_server_send':
+[5-ERROR] ecore_ipc.c:563: warning: 'msg.head' is used uninitialized in this function
+[5-ERROR] ecore_ipc.c: In function 'ecore_ipc_client_send':
+[5-ERROR] ecore_ipc.c:693: warning: 'msg.head' is used uninitialized in this function
+[5-ERROR] ecore_ipc.c: In function '_ecore_ipc_event_client_data':
+[5-ERROR] ecore_ipc.c:1045: warning: 'msg.head' is used uninitialized in this function
+[5-ERROR] ecore_ipc.c:988: warning: 'd' may be used uninitialized in this function
+[5-ERROR] ecore_ipc.c: In function '_ecore_ipc_event_server_data':
+[5-ERROR] ecore_ipc.c:1218: warning: 'msg.head' is used uninitialized in this function
+[5-ERROR] ecore_ipc.c:1161: warning: 'd' may be used uninitialized in this function
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src/lib/ecore -I../../../src/lib/ecore_con -I../../../src/lib/ecore_ipc -I../../../src/lib/ecore -I../../../src/lib/ecore_con -I../../../src/lib/ecore_ipc -g -O2 -Wall -MT ecore_ipc.lo -MD -MP -MF .deps/ecore_ipc.Tpo -c ecore_ipc.c -o ecore_ipc.o >/dev/null 2>&1
+[5-ERROR] /bin/sh ../../../libtool --tag=CC --mode=link gcc-40  -g -O2 -Wall   -o libecore_ipc.la -rpath /opt/e17/lib -version-info 1:0:0 -L../../../src/lib/ecore/.libs -L../../../src/lib/ecore_con/.libs ecore_ipc.lo ../../../src/lib/ecore/libecore.la ../../../src/lib/ecore_con/libecore_con.la -lssl -lcrypto -ldl    
+[5-ERROR] gcc-40 -shared  .libs/ecore_ipc.o  -Wl,--rpath -Wl,/ROCK/src.ecore.1169084911.5303.3583069520/ecore-2005-09-11/src/lib/ecore/.libs -Wl,--rpath -Wl,/ROCK/src.ecore.1169084911.5303.3583069520/ecore-2005-09-11/src/lib/ecore_con/.libs -L/ROCK/src.ecore.1169084911.5303.3583069520/ecore-2005-09-11/src/lib/ecore/.libs -L/ROCK/src.ecore.1169084911.5303.3583069520/ecore-2005-09-11/src/lib/ecore_con/.libs ../../../src/lib/ecore/.libs/libecore.so ../../../src/lib/ecore_con/.libs/libecore_con.so -lssl -lcrypto -ldl  -Wl,-soname -Wl,libecore_ipc.so.1 -o .libs/libecore_ipc.so.1.0.0
+[5-ERROR] (cd .libs && rm -f libecore_ipc.so.1 && ln -s libecore_ipc.so.1.0.0 libecore_ipc.so.1)
+[5-ERROR] (cd .libs && rm -f libecore_ipc.so && ln -s libecore_ipc.so.1.0.0 libecore_ipc.so)
+[5-ERROR] ar cru .libs/libecore_ipc.a  ecore_ipc.o
+[5-ERROR] ranlib .libs/libecore_ipc.a
+[5-ERROR] creating libecore_ipc.la
+[5-ERROR] (cd .libs && rm -f libecore_ipc.la && ln -s ../libecore_ipc.la libecore_ipc.la)
+[5-ERROR] make[4]: Leaving directory `/ROCK/loop/src.ecore.1169084911.5303.3583069520/ecore-2005-09-11/src/lib/ecore_ipc'
+[5-ERROR] Making all in ecore_evas
+[5-ERROR] make[4]: Entering directory `/ROCK/loop/src.ecore.1169084911.5303.3583069520/ecore-2005-09-11/src/lib/ecore_evas'
+[5-ERROR] make[4]: Nothing to be done for `all'.
+[5-ERROR] make[4]: Leaving directory `/ROCK/loop/src.ecore.1169084911.5303.3583069520/ecore-2005-09-11/src/lib/ecore_evas'
+[5-ERROR] Making all in ecore_config
+[5-ERROR] make[4]: Entering directory `/ROCK/loop/src.ecore.1169084911.5303.3583069520/ecore-2005-09-11/src/lib/ecore_config'
+[5-ERROR] if /bin/sh ../../../libtool --tag=CC --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src/lib/ecore -I../../../src/lib/ecore_ipc -I../../../ -I../../../src/lib/ecore -I../../../src/lib/ecore_ipc -I../../../ -I/opt/e17/include    -g -O2 -Wall -MT ecore_config.lo -MD -MP -MF ".deps/ecore_config.Tpo" -c -o ecore_config.lo ecore_config.c; \
+[5-ERROR] 	then mv -f ".deps/ecore_config.Tpo" ".deps/ecore_config.Plo"; else rm -f ".deps/ecore_config.Tpo"; exit 1; fi
+[5-ERROR] mkdir .libs
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src/lib/ecore -I../../../src/lib/ecore_ipc -I../../../ -I../../../src/lib/ecore -I../../../src/lib/ecore_ipc -I../../../ -I/opt/e17/include -g -O2 -Wall -MT ecore_config.lo -MD -MP -MF .deps/ecore_config.Tpo -c ecore_config.c  -fPIC -DPIC -o .libs/ecore_config.o
+[5-ERROR] In file included from ecore_config.c:1:
+[5-ERROR] Ecore_Config.h:33:19: error: Evas.h: No such file or directory
+[5-ERROR] In file included from ecore_config.c:1:
+[5-ERROR] Ecore_Config.h:241: error: syntax error before '*' token
+[5-ERROR] make[4]: *** [ecore_config.lo] Error 1
+[5-ERROR] make[4]: Leaving directory `/ROCK/loop/src.ecore.1169084911.5303.3583069520/ecore-2005-09-11/src/lib/ecore_config'
+[5-ERROR] make[3]: *** [all-recursive] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.ecore.1169084911.5303.3583069520/ecore-2005-09-11/src/lib'
+[5-ERROR] make[2]: *** [all-recursive] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ecore.1169084911.5303.3583069520/ecore-2005-09-11/src'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.ecore.1169084911.5303.3583069520/ecore-2005-09-11'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] Making all in ecore_ipc
+[9-ERROR] make[4]: Entering directory `/ROCK/loop/src.ecore.1169133839.1133.3627834414/ecore-2005-09-11/src/lib/ecore_ipc'
+[9-ERROR] if /bin/sh ../../../libtool --tag=CC --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src/lib/ecore -I../../../src/lib/ecore_con -I../../../src/lib/ecore_ipc -I../../../src/lib/ecore -I../../../src/lib/ecore_con -I../../../src/lib/ecore_ipc     -g -O2 -Wall -MT ecore_ipc.lo -MD -MP -MF ".deps/ecore_ipc.Tpo" -c -o ecore_ipc.lo ecore_ipc.c; \
+[9-ERROR] 	then mv -f ".deps/ecore_ipc.Tpo" ".deps/ecore_ipc.Plo"; else rm -f ".deps/ecore_ipc.Tpo"; exit 1; fi
+[9-ERROR] mkdir .libs
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src/lib/ecore -I../../../src/lib/ecore_con -I../../../src/lib/ecore_ipc -I../../../src/lib/ecore -I../../../src/lib/ecore_con -I../../../src/lib/ecore_ipc -g -O2 -Wall -MT ecore_ipc.lo -MD -MP -MF .deps/ecore_ipc.Tpo -c ecore_ipc.c  -fPIC -DPIC -o .libs/ecore_ipc.o
+[9-ERROR] ecore_ipc.c: In function 'ecore_ipc_server_send':
+[9-ERROR] ecore_ipc.c:563: warning: 'msg.head' is used uninitialized in this function
+[9-ERROR] ecore_ipc.c: In function 'ecore_ipc_client_send':
+[9-ERROR] ecore_ipc.c:693: warning: 'msg.head' is used uninitialized in this function
+[9-ERROR] ecore_ipc.c: In function '_ecore_ipc_event_client_data':
+[9-ERROR] ecore_ipc.c:1045: warning: 'msg.head' is used uninitialized in this function
+[9-ERROR] ecore_ipc.c:988: warning: 'd' may be used uninitialized in this function
+[9-ERROR] ecore_ipc.c: In function '_ecore_ipc_event_server_data':
+[9-ERROR] ecore_ipc.c:1218: warning: 'msg.head' is used uninitialized in this function
+[9-ERROR] ecore_ipc.c:1161: warning: 'd' may be used uninitialized in this function
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src/lib/ecore -I../../../src/lib/ecore_con -I../../../src/lib/ecore_ipc -I../../../src/lib/ecore -I../../../src/lib/ecore_con -I../../../src/lib/ecore_ipc -g -O2 -Wall -MT ecore_ipc.lo -MD -MP -MF .deps/ecore_ipc.Tpo -c ecore_ipc.c -o ecore_ipc.o >/dev/null 2>&1
+[9-ERROR] /bin/sh ../../../libtool --tag=CC --mode=link gcc-40  -g -O2 -Wall   -o libecore_ipc.la -rpath /opt/e17/lib -version-info 1:0:0 -L../../../src/lib/ecore/.libs -L../../../src/lib/ecore_con/.libs ecore_ipc.lo ../../../src/lib/ecore/libecore.la ../../../src/lib/ecore_con/libecore_con.la -lssl -lcrypto -ldl    
+[9-ERROR] gcc-40 -shared  .libs/ecore_ipc.o  -Wl,--rpath -Wl,/ROCK/src.ecore.1169133839.1133.3627834414/ecore-2005-09-11/src/lib/ecore/.libs -Wl,--rpath -Wl,/ROCK/src.ecore.1169133839.1133.3627834414/ecore-2005-09-11/src/lib/ecore_con/.libs -L/ROCK/src.ecore.1169133839.1133.3627834414/ecore-2005-09-11/src/lib/ecore/.libs -L/ROCK/src.ecore.1169133839.1133.3627834414/ecore-2005-09-11/src/lib/ecore_con/.libs ../../../src/lib/ecore/.libs/libecore.so ../../../src/lib/ecore_con/.libs/libecore_con.so -lssl -lcrypto -ldl  -Wl,-soname -Wl,libecore_ipc.so.1 -o .libs/libecore_ipc.so.1.0.0
+[9-ERROR] (cd .libs && rm -f libecore_ipc.so.1 && ln -s libecore_ipc.so.1.0.0 libecore_ipc.so.1)
+[9-ERROR] (cd .libs && rm -f libecore_ipc.so && ln -s libecore_ipc.so.1.0.0 libecore_ipc.so)
+[9-ERROR] ar cru .libs/libecore_ipc.a  ecore_ipc.o
+[9-ERROR] ranlib .libs/libecore_ipc.a
+[9-ERROR] creating libecore_ipc.la
+[9-ERROR] (cd .libs && rm -f libecore_ipc.la && ln -s ../libecore_ipc.la libecore_ipc.la)
+[9-ERROR] make[4]: Leaving directory `/ROCK/loop/src.ecore.1169133839.1133.3627834414/ecore-2005-09-11/src/lib/ecore_ipc'
+[9-ERROR] Making all in ecore_evas
+[9-ERROR] make[4]: Entering directory `/ROCK/loop/src.ecore.1169133839.1133.3627834414/ecore-2005-09-11/src/lib/ecore_evas'
+[9-ERROR] make[4]: Nothing to be done for `all'.
+[9-ERROR] make[4]: Leaving directory `/ROCK/loop/src.ecore.1169133839.1133.3627834414/ecore-2005-09-11/src/lib/ecore_evas'
+[9-ERROR] Making all in ecore_config
+[9-ERROR] make[4]: Entering directory `/ROCK/loop/src.ecore.1169133839.1133.3627834414/ecore-2005-09-11/src/lib/ecore_config'
+[9-ERROR] if /bin/sh ../../../libtool --tag=CC --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src/lib/ecore -I../../../src/lib/ecore_ipc -I../../../ -I../../../src/lib/ecore -I../../../src/lib/ecore_ipc -I../../../ -I/opt/e17/include    -g -O2 -Wall -MT ecore_config.lo -MD -MP -MF ".deps/ecore_config.Tpo" -c -o ecore_config.lo ecore_config.c; \
+[9-ERROR] 	then mv -f ".deps/ecore_config.Tpo" ".deps/ecore_config.Plo"; else rm -f ".deps/ecore_config.Tpo"; exit 1; fi
+[9-ERROR] mkdir .libs
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src/lib/ecore -I../../../src/lib/ecore_ipc -I../../../ -I../../../src/lib/ecore -I../../../src/lib/ecore_ipc -I../../../ -I/opt/e17/include -g -O2 -Wall -MT ecore_config.lo -MD -MP -MF .deps/ecore_config.Tpo -c ecore_config.c  -fPIC -DPIC -o .libs/ecore_config.o
+[9-ERROR] In file included from ecore_config.c:1:
+[9-ERROR] Ecore_Config.h:33:19: error: Evas.h: No such file or directory
+[9-ERROR] In file included from ecore_config.c:1:
+[9-ERROR] Ecore_Config.h:241: error: syntax error before '*' token
+[9-ERROR] make[4]: *** [ecore_config.lo] Error 1
+[9-ERROR] make[4]: Leaving directory `/ROCK/loop/src.ecore.1169133839.1133.3627834414/ecore-2005-09-11/src/lib/ecore_config'
+[9-ERROR] make[3]: *** [all-recursive] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.ecore.1169133839.1133.3627834414/ecore-2005-09-11/src/lib'
+[9-ERROR] make[2]: *** [all-recursive] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ecore.1169133839.1133.3627834414/ecore-2005-09-11/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.ecore.1169133839.1133.3627834414/ecore-2005-09-11'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

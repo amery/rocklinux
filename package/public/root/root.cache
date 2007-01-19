@@ -20,33 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142647541 Sat Mar 18 03:05:41 2006 (5)
-[TIMESTAMP] 1142916501 Tue Mar 21 05:48:21 2006 (9)
+[TIMESTAMP] 1168690717 Sat Jan 13 13:18:37 2007 (5) ERROR
+[TIMESTAMP] 1168899608 Mon Jan 15 23:20:08 2007 (9) ERROR
+[TIMESTAMP] 1168953399 Tue Jan 16 14:16:39 2007 (5) ERROR
+[TIMESTAMP] 1168983104 Tue Jan 16 22:31:44 2007 (9) ERROR
+[TIMESTAMP] 1169123729 Thu Jan 18 13:35:29 2007 (5) ERROR
+[TIMESTAMP] 1169153308 Thu Jan 18 21:48:28 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-root.log 9-root.log
+[LOGS] 5-root.err 9-root.err
 
-[BUILDTIME] 119208 (5)
-[BUILDTIME] 120378 (9)
-[SIZE] 29.84 MB, 674 files
+[BUILDTIME] 7027 (5) ERROR
+[BUILDTIME] 7109 (9) ERROR
+[BUILDTIME] 7146 (5) ERROR
+[BUILDTIME] 7139 (9) ERROR
+[BUILDTIME] 7125 (5) ERROR
+[BUILDTIME] 7141 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] freetype:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep gzip
-[DEP] libjpeg libjpeg:dev libpng libpng:dev libtiff libtiff:dev libungif
-[DEP] libungif:dev linux26-header:dev make mktemp net-tools openssl
-[DEP] openssl:dev postgresql postgresql:dev rrdtool sed sysfiles tar
-[DEP] util-linux xorg xorg:dev zlib zlib:dev
 
-[PROVIDES] cint hadd libASImage.so libAfterImage.a libCint.so libCore.so
-[PROVIDES] libEG.so libFumili.so libGX11.so libGX11TTF.so libGed.so
-[PROVIDES] libGedOld.so libGeom.so libGeomPainter.so libGpad.so libGraf.so
-[PROVIDES] libGraf3d.so libGui.so libHist.so libHistPainter.so libHtml.so
-[PROVIDES] libMLP.so libMatrix.so libMinuit.so libNew.so libPgSQL.so
-[PROVIDES] libPhysics.so libPostscript.so libProof.so libProofGui.so
-[PROVIDES] libQuadp.so libRGL.so libRint.so libThread.so libTree.so
-[PROVIDES] libTreePlayer.so libTreeViewer.so libVMC.so libX3d.so
-[PROVIDES] libfreetype.a makecint memprobe proofd proofserv rmkdepend
-[PROVIDES] root root-config root.exe rootcint rootd rootn.exe ssh2rpd
+[5-ERROR] cint/src/libstrm.cxx:2099: error: 'G__Lderived' was not declared in this scope
+[5-ERROR] cint/src/libstrm.cxx:2100: error: expected primary-expression before ')' token
+[5-ERROR] cint/src/libstrm.cxx:2100: error: expected `;' before numeric constant
+[5-ERROR] cint/src/libstrm.cxx:2102: error: 'strstreambase' was not declared in this scope
+[5-ERROR] cint/src/libstrm.cxx:2102: error: 'G__Lpbase' was not declared in this scope
+[5-ERROR] cint/src/libstrm.cxx:2102: error: expected primary-expression before ')' token
+[5-ERROR] cint/src/libstrm.cxx:2102: error: expected `;' before 'G__Lderived'
+[5-ERROR] cint/src/libstrm.cxx: In function 'void G__setup_memvarfilebuf()':
+[5-ERROR] cint/src/libstrm.cxx:2244: error: 'openprot' is not a member of 'std::filebuf'
+[5-ERROR] cint/src/libstrm.cxx: In function 'void G__setup_memvarfstreambase()':
+[5-ERROR] cint/src/libstrm.cxx:2253: error: 'fstreambase' was not declared in this scope
+[5-ERROR] cint/src/libstrm.cxx:2253: error: 'p' was not declared in this scope
+[5-ERROR] cint/src/libstrm.cxx:2253: error: expected primary-expression before ')' token
+[5-ERROR] cint/src/libstrm.cxx:2253: error: expected `;' before numeric constant
+[5-ERROR] cint/src/libstrm.cxx: In function 'void G__setup_memvarstrstreambuf()':
+[5-ERROR] cint/src/libstrm.cxx:2289: error: 'strstreambuf' was not declared in this scope
+[5-ERROR] cint/src/libstrm.cxx:2289: error: 'p' was not declared in this scope
+[5-ERROR] cint/src/libstrm.cxx:2289: error: expected primary-expression before ')' token
+[5-ERROR] cint/src/libstrm.cxx:2289: error: expected `;' before numeric constant
+[5-ERROR] cint/src/libstrm.cxx: In function 'void G__setup_memvarstrstreambase()':
+[5-ERROR] cint/src/libstrm.cxx:2298: error: 'strstreambase' was not declared in this scope
+[5-ERROR] cint/src/libstrm.cxx:2298: error: 'p' was not declared in this scope
+[5-ERROR] cint/src/libstrm.cxx:2298: error: expected primary-expression before ')' token
+[5-ERROR] cint/src/libstrm.cxx:2298: error: expected `;' before numeric constant
+[5-ERROR] cint/src/libstrm.cxx: In function 'void G__setup_memvaristrstream()':
+[5-ERROR] cint/src/libstrm.cxx:2307: error: 'istrstream' was not declared in this scope
+[5-ERROR] cint/src/libstrm.cxx:2307: error: 'p' was not declared in this scope
+[5-ERROR] cint/src/libstrm.cxx:2307: error: expected primary-expression before ')' token
+[5-ERROR] cint/src/libstrm.cxx:2307: error: expected `;' before numeric constant
+[5-ERROR] cint/src/libstrm.cxx: In function 'void G__setup_memvarostrstream()':
+[5-ERROR] cint/src/libstrm.cxx:2316: error: 'ostrstream' was not declared in this scope
+[5-ERROR] cint/src/libstrm.cxx:2316: error: 'p' was not declared in this scope
+[5-ERROR] cint/src/libstrm.cxx:2316: error: expected primary-expression before ')' token
+[5-ERROR] cint/src/libstrm.cxx:2316: error: expected `;' before numeric constant
+[5-ERROR] cint/src/libstrm.cxx: In function 'void G__setup_memvarstrstream()':
+[5-ERROR] cint/src/libstrm.cxx:2325: error: 'strstream' was not declared in this scope
+[5-ERROR] cint/src/libstrm.cxx:2325: error: 'p' was not declared in this scope
+[5-ERROR] cint/src/libstrm.cxx:2325: error: expected primary-expression before ')' token
+[5-ERROR] cint/src/libstrm.cxx:2325: error: expected `;' before numeric constant
+[5-ERROR] cint/src/libstrm.cxx: In function 'void G__setup_memfuncios()':
+[5-ERROR] cint/src/libstrm.cxx:2441: error: 'bitalloc' is not a member of 'std::ios'
+[5-ERROR] cint/src/libstrm.cxx: In function 'void G__cpp_setup_tagtableG__stream()':
+[5-ERROR] cint/src/libstrm.cxx:2825: error: 'fstreambase' was not declared in this scope
+[5-ERROR] cint/src/libstrm.cxx:2829: error: 'strstreambuf' was not declared in this scope
+[5-ERROR] cint/src/libstrm.cxx:2830: error: 'strstreambase' was not declared in this scope
+[5-ERROR] cint/src/libstrm.cxx:2831: error: 'istrstream' was not declared in this scope
+[5-ERROR] cint/src/libstrm.cxx:2832: error: 'ostrstream' was not declared in this scope
+[5-ERROR] cint/src/libstrm.cxx:2833: error: 'strstream' was not declared in this scope
+[5-ERROR] make: *** [cint/src/libstrm.o] Error 1
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] cint/src/libstrm.cxx:2099: error: 'G__Lderived' was not declared in this scope
+[9-ERROR] cint/src/libstrm.cxx:2100: error: expected primary-expression before ')' token
+[9-ERROR] cint/src/libstrm.cxx:2100: error: expected `;' before numeric constant
+[9-ERROR] cint/src/libstrm.cxx:2102: error: 'strstreambase' was not declared in this scope
+[9-ERROR] cint/src/libstrm.cxx:2102: error: 'G__Lpbase' was not declared in this scope
+[9-ERROR] cint/src/libstrm.cxx:2102: error: expected primary-expression before ')' token
+[9-ERROR] cint/src/libstrm.cxx:2102: error: expected `;' before 'G__Lderived'
+[9-ERROR] cint/src/libstrm.cxx: In function 'void G__setup_memvarfilebuf()':
+[9-ERROR] cint/src/libstrm.cxx:2244: error: 'openprot' is not a member of 'std::filebuf'
+[9-ERROR] cint/src/libstrm.cxx: In function 'void G__setup_memvarfstreambase()':
+[9-ERROR] cint/src/libstrm.cxx:2253: error: 'fstreambase' was not declared in this scope
+[9-ERROR] cint/src/libstrm.cxx:2253: error: 'p' was not declared in this scope
+[9-ERROR] cint/src/libstrm.cxx:2253: error: expected primary-expression before ')' token
+[9-ERROR] cint/src/libstrm.cxx:2253: error: expected `;' before numeric constant
+[9-ERROR] cint/src/libstrm.cxx: In function 'void G__setup_memvarstrstreambuf()':
+[9-ERROR] cint/src/libstrm.cxx:2289: error: 'strstreambuf' was not declared in this scope
+[9-ERROR] cint/src/libstrm.cxx:2289: error: 'p' was not declared in this scope
+[9-ERROR] cint/src/libstrm.cxx:2289: error: expected primary-expression before ')' token
+[9-ERROR] cint/src/libstrm.cxx:2289: error: expected `;' before numeric constant
+[9-ERROR] cint/src/libstrm.cxx: In function 'void G__setup_memvarstrstreambase()':
+[9-ERROR] cint/src/libstrm.cxx:2298: error: 'strstreambase' was not declared in this scope
+[9-ERROR] cint/src/libstrm.cxx:2298: error: 'p' was not declared in this scope
+[9-ERROR] cint/src/libstrm.cxx:2298: error: expected primary-expression before ')' token
+[9-ERROR] cint/src/libstrm.cxx:2298: error: expected `;' before numeric constant
+[9-ERROR] cint/src/libstrm.cxx: In function 'void G__setup_memvaristrstream()':
+[9-ERROR] cint/src/libstrm.cxx:2307: error: 'istrstream' was not declared in this scope
+[9-ERROR] cint/src/libstrm.cxx:2307: error: 'p' was not declared in this scope
+[9-ERROR] cint/src/libstrm.cxx:2307: error: expected primary-expression before ')' token
+[9-ERROR] cint/src/libstrm.cxx:2307: error: expected `;' before numeric constant
+[9-ERROR] cint/src/libstrm.cxx: In function 'void G__setup_memvarostrstream()':
+[9-ERROR] cint/src/libstrm.cxx:2316: error: 'ostrstream' was not declared in this scope
+[9-ERROR] cint/src/libstrm.cxx:2316: error: 'p' was not declared in this scope
+[9-ERROR] cint/src/libstrm.cxx:2316: error: expected primary-expression before ')' token
+[9-ERROR] cint/src/libstrm.cxx:2316: error: expected `;' before numeric constant
+[9-ERROR] cint/src/libstrm.cxx: In function 'void G__setup_memvarstrstream()':
+[9-ERROR] cint/src/libstrm.cxx:2325: error: 'strstream' was not declared in this scope
+[9-ERROR] cint/src/libstrm.cxx:2325: error: 'p' was not declared in this scope
+[9-ERROR] cint/src/libstrm.cxx:2325: error: expected primary-expression before ')' token
+[9-ERROR] cint/src/libstrm.cxx:2325: error: expected `;' before numeric constant
+[9-ERROR] cint/src/libstrm.cxx: In function 'void G__setup_memfuncios()':
+[9-ERROR] cint/src/libstrm.cxx:2441: error: 'bitalloc' is not a member of 'std::ios'
+[9-ERROR] cint/src/libstrm.cxx: In function 'void G__cpp_setup_tagtableG__stream()':
+[9-ERROR] cint/src/libstrm.cxx:2825: error: 'fstreambase' was not declared in this scope
+[9-ERROR] cint/src/libstrm.cxx:2829: error: 'strstreambuf' was not declared in this scope
+[9-ERROR] cint/src/libstrm.cxx:2830: error: 'strstreambase' was not declared in this scope
+[9-ERROR] cint/src/libstrm.cxx:2831: error: 'istrstream' was not declared in this scope
+[9-ERROR] cint/src/libstrm.cxx:2832: error: 'ostrstream' was not declared in this scope
+[9-ERROR] cint/src/libstrm.cxx:2833: error: 'strstream' was not declared in this scope
+[9-ERROR] make: *** [cint/src/libstrm.o] Error 1
+[9-ERROR] --- BUILD ERROR ---
 

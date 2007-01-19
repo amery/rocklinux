@@ -20,23 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142516241 Thu Mar 16 14:37:21 2006 (5)
-[TIMESTAMP] 1142769489 Sun Mar 19 12:58:09 2006 (9)
+[TIMESTAMP] 1168592670 Fri Jan 12 10:04:30 2007 (5)
+[TIMESTAMP] 1168794397 Sun Jan 14 18:06:37 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-libcaca.log 9-libcaca.log
 
-[BUILDTIME] 3698 (5)
-[BUILDTIME] 4305 (9)
-[SIZE] 1.28 MB, 176 files
+[BUILDTIME] 3992 (5)
+[BUILDTIME] 4489 (9)
+[SIZE] 0.24 MB, 22 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils doxygen findutils
-[DEP] freetype gawk gcc34 gcc34:dev glibc23 glibc23:dev grep imlib2
-[DEP] imlib2:dev linux26-header:dev make mktemp ncurses:dev net-tools
-[DEP] patch rrdtool sed slang slang:dev sysfiles tar util-linux xorg
-[DEP] xorg:dev zlib:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm diffutils doxygen findutils freetype gawk gcc40
+[DEP] gcc40:dev glibc23 glibc23:dev grep imake imlib2 imlib2:dev
+[DEP] kbproto:dev libice libsm libx11 libx11:dev libxau libxdmcp libxext
+[DEP] libxt linux-libc-headers:dev make mktemp ncurses ncurses:dev
+[DEP] net-tools netpbm patch rrdtool sed slang slang:dev sysfiles tar
+[DEP] twoftpd ucspi-unix util-linux xorg-cf-files xproto:dev zlib
 
 [PROVIDES] caca-config cacaball cacademo cacafire cacamoir cacaplas
 [PROVIDES] cacaview libcaca.a libcaca_pic.a

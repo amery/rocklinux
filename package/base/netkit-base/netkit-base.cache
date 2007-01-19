@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142461952 Wed Mar 15 23:32:32 2006 (5)
-[TIMESTAMP] 1142703550 Sat Mar 18 18:39:10 2006 (9)
+[TIMESTAMP] 1168542522 Thu Jan 11 20:08:42 2007 (5)
+[TIMESTAMP] 1168736634 Sun Jan 14 02:03:54 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-netkit-base.log 9-netkit-base.log
 
-[BUILDTIME] 1042 (5)
+[BUILDTIME] 1078 (5)
 [BUILDTIME] 1677 (9)
 [SIZE] 0.08 MB, 13 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev m4 make mktemp patch
-[DEP] rrdtool sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils gawk gcc40
+[DEP] gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev m4 make
+[DEP] mktemp patch rrdtool sed sysfiles tar
 
 [PROVIDES] inetd ping
 

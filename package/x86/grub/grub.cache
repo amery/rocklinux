@@ -20,23 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142605213 Fri Mar 17 15:20:13 2006 (5)
-[TIMESTAMP] 1142870558 Mon Mar 20 17:02:38 2006 (9)
+[TIMESTAMP] 1168662802 Sat Jan 13 05:33:22 2007 (5)
+[TIMESTAMP] 1168870411 Mon Jan 15 15:13:31 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-grub.log 9-grub.log
 
-[BUILDTIME] 6853 (5)
-[BUILDTIME] 7365 (9)
-[SIZE] 0.91 MB, 130 files
+[BUILDTIME] 9821 (5)
+[BUILDTIME] 10138 (9)
+[SIZE] 2.11 MB, 63 files
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils findutils
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev
-[DEP] lzo:dev m4 make mktemp ncurses:dev net-tools rrdtool sed sysfiles
-[DEP] tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
+[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev
+[DEP] make mktemp ncurses ncurses:dev net-tools netpbm patch rrdtool sed
+[DEP] sysfiles tar texinfo twoftpd ucspi-unix util-linux
 
-[PROVIDES] grub-emu grub-install grub-mkdevicemap grub-mkimage grub-probefs
-[PROVIDES] grub-setup
+[PROVIDES] grub grub-install grub-md5-crypt grub-set-default grub-terminfo
+[PROVIDES] mbchk
 

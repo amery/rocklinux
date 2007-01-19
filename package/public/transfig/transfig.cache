@@ -20,132 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142463969 Thu Mar 16 00:06:09 2006 (5) ERROR
-[TIMESTAMP] 1142706438 Sat Mar 18 19:27:18 2006 (9) ERROR
-[TIMESTAMP] 1142952031 Tue Mar 21 15:40:31 2006 (5) ERROR
-[TIMESTAMP] 1142965983 Tue Mar 21 19:33:03 2006 (9) ERROR
-[TIMESTAMP] 1143027182 Wed Mar 22 12:33:02 2006 (5) ERROR
-[TIMESTAMP] 1143035333 Wed Mar 22 14:48:53 2006 (9) ERROR
+[TIMESTAMP] 1168544127 Thu Jan 11 20:35:27 2007 (5)
+[TIMESTAMP] 1168738653 Sun Jan 14 02:37:33 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-transfig.err 9-transfig.err
+[LOGS] 5-transfig.log 9-transfig.log
 
-[BUILDTIME] 2381 (5) ERROR
-[BUILDTIME] 3074 (9) ERROR
-[BUILDTIME] 3125 (5) ERROR
-[BUILDTIME] 3100 (9) ERROR
-[BUILDTIME] 3161 (5) ERROR
-[BUILDTIME] 3094 (9) ERROR
-[SIZE] 0.57 MB, 88 files
+[BUILDTIME] 2671 (5)
+[BUILDTIME] 3261 (9)
+[SIZE] 0.49 MB, 65 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep libpng libpng:dev
-[DEP] linux26-header:dev make mktemp rrdtool sed sysfiles tar xfig xorg
-[DEP] xorg:dev xorg:doc zlib:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev
+[DEP] grep imake libpng libpng:dev libx11 libx11:dev libxau libxdmcp
+[DEP] libxpm libxpm:dev libxt linux-libc-headers:dev make mktemp rrdtool
+[DEP] sed sysfiles tar util-macros xfig xorg-cf-files xorg-docs xproto:dev
+[DEP] zlib zlib:dev
 
 [PROVIDES] fig2dev fig2ps2tex fig2ps2tex.sh pic2tpic transfig
-
-[5-ERROR] + install -c -m 0444 transfig.1x.html /usr/X11R6/lib/X11/doc/html/transfig.1.html
-[5-ERROR] install -c -m 0444 transfig._man /usr/X11R6/man/man1/transfig.1x
-[5-ERROR] + install -c -m 0444 fig2ps2tex.1x.html /usr/X11R6/lib/X11/doc/html/fig2ps2tex.1.html
-[5-ERROR] install -c -m 0444 fig2ps2tex._man /usr/X11R6/man/man1/fig2ps2tex.1x
-[5-ERROR] + install -c -m 0444 pic2tpic.1x.html /usr/X11R6/lib/X11/doc/html/pic2tpic.1.html
-[5-ERROR] install -c -m 0444 pic2tpic._man /usr/X11R6/man/man1/pic2tpic.1x
-[5-ERROR] install.man in transfig done
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.transfig.1143027079.6558.3248211418/transfig.3.2.5_alpha7/transfig'
-[5-ERROR] make: `install.man' is up to date.
-[5-ERROR] Trying to copy the default documentation ...
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 98 files for this package.
-[5-ERROR] Applying package split: 40 transfig:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 transfig:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 transfig:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <transfig> Creating flist file ...
-[5-ERROR] <transfig> Creating package dependencies file ...
-[5-ERROR] <transfig> Creating md5sum and cksum files ...
-[5-ERROR] <transfig> Creating package description ...
-[5-ERROR] <transfig:doc> Creating flist file ...
-[5-ERROR] <transfig:doc> Creating package dependencies file ...
-[5-ERROR] <transfig:doc> Creating md5sum and cksum files ...
-[5-ERROR] <transfig:doc> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Found files in /usr/local:
-[5-ERROR] /usr/local/lib/fig2dev
-[5-ERROR] /usr/local/lib/fig2dev/cs_CZ.ps
-[5-ERROR] /usr/local/lib/fig2dev/hr_HR.ps
-[5-ERROR] /usr/local/lib/fig2dev/hu_HU.ps
-[5-ERROR] /usr/local/lib/fig2dev/ja.ps
-[5-ERROR] /usr/local/lib/fig2dev/ja_JP.EUC.ps
-[5-ERROR] /usr/local/lib/fig2dev/ja_JP.eucJP.ps
-[5-ERROR] /usr/local/lib/fig2dev/ja_JP.ps
-[5-ERROR] /usr/local/lib/fig2dev/ja_JP.ujis.ps
-[5-ERROR] /usr/local/lib/fig2dev/japanese.ps
-[5-ERROR] /usr/local/lib/fig2dev/ko.ps
-[5-ERROR] /usr/local/lib/fig2dev/ko_KR.EUC.ps
-[5-ERROR] /usr/local/lib/fig2dev/ko_KR.eucKR.ps
-[5-ERROR] /usr/local/lib/fig2dev/ko_KR.ps
-[5-ERROR] /usr/local/lib/fig2dev/korean.ps
-[5-ERROR] /usr/local/lib/fig2dev/pl_PL.ps
-[5-ERROR] /usr/local/lib/fig2dev/ro_RO.ps
-[5-ERROR] /usr/local/lib/fig2dev/sk_SK.ps
-[5-ERROR] /usr/local/lib/fig2dev/sl_SI.ps
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] removed `/var/adm/logs/5-transfig.log'
-[5-ERROR] Finished building transfig=transfig.
-
-[9-ERROR] + install -c -m 0444 transfig.1x.html /usr/X11R6/lib/X11/doc/html/transfig.1.html
-[9-ERROR] install -c -m 0444 transfig._man /usr/X11R6/man/man1/transfig.1x
-[9-ERROR] + install -c -m 0444 fig2ps2tex.1x.html /usr/X11R6/lib/X11/doc/html/fig2ps2tex.1.html
-[9-ERROR] install -c -m 0444 fig2ps2tex._man /usr/X11R6/man/man1/fig2ps2tex.1x
-[9-ERROR] + install -c -m 0444 pic2tpic.1x.html /usr/X11R6/lib/X11/doc/html/pic2tpic.1.html
-[9-ERROR] install -c -m 0444 pic2tpic._man /usr/X11R6/man/man1/pic2tpic.1x
-[9-ERROR] install.man in transfig done
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.transfig.1143035284.15584.2162800637/transfig.3.2.5_alpha7/transfig'
-[9-ERROR] make: `install.man' is up to date.
-[9-ERROR] Trying to copy the default documentation ...
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 98 files for this package.
-[9-ERROR] Applying package split: 40 transfig:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 transfig:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 transfig:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <transfig> Creating flist file ...
-[9-ERROR] <transfig> Creating package dependencies file ...
-[9-ERROR] <transfig> Creating md5sum and cksum files ...
-[9-ERROR] <transfig> Creating package description ...
-[9-ERROR] <transfig:doc> Creating flist file ...
-[9-ERROR] <transfig:doc> Creating package dependencies file ...
-[9-ERROR] <transfig:doc> Creating md5sum and cksum files ...
-[9-ERROR] <transfig:doc> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Found files in /usr/local:
-[9-ERROR] /usr/local/lib/fig2dev
-[9-ERROR] /usr/local/lib/fig2dev/cs_CZ.ps
-[9-ERROR] /usr/local/lib/fig2dev/hr_HR.ps
-[9-ERROR] /usr/local/lib/fig2dev/hu_HU.ps
-[9-ERROR] /usr/local/lib/fig2dev/ja.ps
-[9-ERROR] /usr/local/lib/fig2dev/ja_JP.EUC.ps
-[9-ERROR] /usr/local/lib/fig2dev/ja_JP.eucJP.ps
-[9-ERROR] /usr/local/lib/fig2dev/ja_JP.ps
-[9-ERROR] /usr/local/lib/fig2dev/ja_JP.ujis.ps
-[9-ERROR] /usr/local/lib/fig2dev/japanese.ps
-[9-ERROR] /usr/local/lib/fig2dev/ko.ps
-[9-ERROR] /usr/local/lib/fig2dev/ko_KR.EUC.ps
-[9-ERROR] /usr/local/lib/fig2dev/ko_KR.eucKR.ps
-[9-ERROR] /usr/local/lib/fig2dev/ko_KR.ps
-[9-ERROR] /usr/local/lib/fig2dev/korean.ps
-[9-ERROR] /usr/local/lib/fig2dev/pl_PL.ps
-[9-ERROR] /usr/local/lib/fig2dev/ro_RO.ps
-[9-ERROR] /usr/local/lib/fig2dev/sk_SK.ps
-[9-ERROR] /usr/local/lib/fig2dev/sl_SI.ps
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] removed `/var/adm/logs/9-transfig.log'
-[9-ERROR] Finished building transfig=transfig.
 

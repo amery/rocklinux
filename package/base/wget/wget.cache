@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142457043 Wed Mar 15 22:10:43 2006 (5)
-[TIMESTAMP] 1142697172 Sat Mar 18 16:52:52 2006 (9)
+[TIMESTAMP] 1168533561 Thu Jan 11 17:39:21 2007 (5)
+[TIMESTAMP] 1168725117 Sat Jan 13 22:51:57 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-wget.log 9-wget.log
 
-[BUILDTIME] 3222 (5)
-[BUILDTIME] 3964 (9)
-[SIZE] 1.59 MB, 45 files
+[BUILDTIME] 3159 (5)
+[BUILDTIME] 3798 (9)
+[SIZE] 0.65 MB, 15 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev gettext glibc23 glibc23:dev grep linux26-header:dev
-[DEP] make mktemp net-tools openssl openssl:dev perl5 rrdtool sed sysfiles
-[DEP] tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils
+[DEP] findutils gawk gcc40 gcc40:dev gettext glibc23 glibc23:dev grep
+[DEP] linux-libc-headers:dev make mktemp net-tools netpbm openssl
+[DEP] openssl:dev perl5 rrdtool sed sysfiles tar twoftpd ucspi-unix
+[DEP] util-linux
 
 [PROVIDES] wget
 

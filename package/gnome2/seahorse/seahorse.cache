@@ -20,41 +20,152 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142627898 Fri Mar 17 21:38:18 2006 (5) ERROR
-[TIMESTAMP] 1142895836 Tue Mar 21 00:03:56 2006 (9)
-[TIMESTAMP] 1142963294 Tue Mar 21 18:48:14 2006 (5)
+[TIMESTAMP] 1168678923 Sat Jan 13 10:02:03 2007 (5) ERROR
+[TIMESTAMP] 1168887458 Mon Jan 15 19:57:38 2007 (9) ERROR
+[TIMESTAMP] 1168951785 Tue Jan 16 13:49:45 2007 (5) ERROR
+[TIMESTAMP] 1168981401 Tue Jan 16 22:03:21 2007 (9) ERROR
+[TIMESTAMP] 1169122095 Thu Jan 18 13:08:15 2007 (5) ERROR
+[TIMESTAMP] 1169151599 Thu Jan 18 21:19:59 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-seahorse.log 9-seahorse.log
+[LOGS] 5-seahorse.err 9-seahorse.err
 
-[BUILDTIME] 2334 (5) ERROR
-[BUILDTIME] 11397 (9)
-[BUILDTIME] 11509 (5)
-[SIZE] 2.02 MB, 119 files
+[BUILDTIME] 10766 (5) ERROR
+[BUILDTIME] 11128 (9) ERROR
+[BUILDTIME] 11196 (5) ERROR
+[BUILDTIME] 11203 (9) ERROR
+[BUILDTIME] 11145 (5) ERROR
+[BUILDTIME] 11193 (9) ERROR
+[SIZE] 1.25 MB, 87 files
 
-[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev autoconf
-[DEP] bash2 binutils bzip2 cairo cairo:dev coreutils cpan-xml-parser
-[DEP] diffutils docbookx esound esound:dev expat findutils freetype
-[DEP] freetype:dev gawk gcc34 gcc34:dev gconf gconf:dev gdesklets
-[DEP] gedit gedit:dev gettext glabels glib glib:dev glibc23 glibc23:dev
-[DEP] gnome-blog gnome-doc-utils gnome-keyring gnome-keyring-manager
-[DEP] gnome-keyring:dev gnome-netstatus gnome-vfs gnome-vfs:dev
-[DEP] gnome2-dirtree gnopernicus gnutls gnutls:dev gpgme gpgme:dev grep
-[DEP] gtk+ gtk+:dev gtksourceview:dev libart_lgpl23 libart_lgpl23:dev
+[DEP] 00-dirtree alsa alsa:dev applewmproto applewmproto:dev atk atk:dev
+[DEP] audiofile audiofile:dev bash2 binutils bzip2 cairo cairo:dev
+[DEP] coreutils cpan-xml-parser cvm dbus dbus-glib dbus-glib:dev dbus:dev
+[DEP] diffutils docbookx esound esound:dev evolution-webcal expat
+[DEP] expat:dev findutils fontconfig fontconfig:dev freetype freetype:dev
+[DEP] gawk gcc40 gcc40:dev gconf gconf:dev gdesklets gettext glabels glib
+[DEP] glib:dev glibc23 glibc23:dev gnome-blog gnome-doc-utils gnome-keyring
+[DEP] gnome-keyring:dev gnome-libs14 gnome-nettool gnome-vfs gnome-vfs:dev
+[DEP] gnome14-dirtree gnome2-dirtree gnopernicus gnutls gnutls:dev gpgme
+[DEP] gpgme:dev grep gtk+ gtk+:dev gtkam libart_lgpl23 libart_lgpl23:dev
 [DEP] libbonobo libbonobo:dev libbonoboui libbonoboui:dev libgcrypt
 [DEP] libgcrypt:dev libglade libglade:dev libgnome libgnome:dev
 [DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev
-[DEP] libgpg-error libgpg-error:dev libjpeg libjpeg:dev libpng libpng:dev
-[DEP] libsoup libsoup:dev libxml2 libxml2:dev linux26-header:dev make
-[DEP] mktemp nautilus nautilus:dev net-tools openssl orbit2 orbit2:dev
-[DEP] pango pango:dev perl5 pkgconfig popt popt:dev rrdtool scrollkeeper
-[DEP] sed shared-mime-info sysfiles tar texinfo util-linux xorg xorg:dev
-[DEP] zlib:dev
+[DEP] libgpg-error libgpg-error:dev libice libice:dev libjpeg libjpeg:dev
+[DEP] libpng libpng:dev libsm libsm:dev libsoup libsoup:dev libx11
+[DEP] libx11:dev libxau libxau:dev libxcursor libxdmcp libxdmcp:dev libxext
+[DEP] libxfixes libxi libxinerama libxml2 libxml2:dev libxrandr libxrender
+[DEP] libxrender:dev liferea linux-libc-headers:dev make mktemp nautilus
+[DEP] nautilus:dev net-tools openssl orbit2 orbit2:dev pango pango:dev
+[DEP] perl5 pioneers pkgconfig popt popt:dev rrdtool scrollkeeper sed
+[DEP] sensors-applet shared-mime-info streamtuner sysfiles tar util-linux
+[DEP] vino xproto:dev zapping zlib
 
 [PROVIDES] libnautilus-seahorse.a libnautilus-seahorse.so
-[PROVIDES] libseahorse-internal.a libseahorse-internal.so
-[PROVIDES] libseahorse-pgp.a libseahorse-pgp.so seahorse seahorse-agent
-[PROVIDES] seahorse-pgp-preferences
+[PROVIDES] libseahorse-internal.a libseahorse-internal.so seahorse
+[PROVIDES] seahorse-agent seahorse-pgp-preferences
+
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing /lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Checking opt/gnome2/share/applications/seahorse-pgp-encrypted.desktop ... 
+[5-ERROR] Adding Categories tag (System;Security)
+[5-ERROR] Adding X-ROCK-Name tag (seahorse)
+[5-ERROR] Checking opt/gnome2/share/applications/seahorse-pgp-keys.desktop ... 
+[5-ERROR] Adding Categories tag (System;Security)
+[5-ERROR] Adding X-ROCK-Name tag (seahorse)
+[5-ERROR] Checking opt/gnome2/share/applications/seahorse-pgp-preferences.desktop ... 
+[5-ERROR] Adding X-ROCK-Name tag (seahorse)
+[5-ERROR] Checking opt/gnome2/share/applications/seahorse-pgp-signature.desktop ... 
+[5-ERROR] Adding Categories tag (System;Security)
+[5-ERROR] Adding X-ROCK-Name tag (seahorse)
+[5-ERROR] Checking opt/gnome2/share/applications/seahorse.desktop ... 
+[5-ERROR] Adding X-ROCK-Name tag (seahorse)
+[5-ERROR] Checking opt/gnome2/share/control-center-2.0/capplets/seahorse-pgp-preferences.desktop ... 
+[5-ERROR] Adding X-ROCK-Name tag (seahorse)
+[5-ERROR] Found 96 files for this package.
+[5-ERROR] Applying package split: 40 seahorse:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[5-ERROR] Applying package split: 42 seahorse:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 seahorse:doc /share/doc/
+[5-ERROR] Applying package split: 61 seahorse:doc /share/gtk-doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <seahorse> Creating flist file ...
+[5-ERROR] <seahorse> Creating package dependencies file ...
+[5-ERROR] <seahorse> Creating package description ...
+[5-ERROR] <seahorse> Creating md5sum and cksum files ...
+[5-ERROR] <seahorse:dev> Creating flist file ...
+[5-ERROR] <seahorse:dev> Creating package dependencies file ...
+[5-ERROR] <seahorse:dev> Creating package description ...
+[5-ERROR] <seahorse:dev> Creating md5sum and cksum files ...
+[5-ERROR] <seahorse:doc> Creating flist file ...
+[5-ERROR] <seahorse:doc> Creating package dependencies file ...
+[5-ERROR] <seahorse:doc> Creating package description ...
+[5-ERROR] <seahorse:doc> Creating md5sum and cksum files ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Found shared files with other packages:
+[5-ERROR] opt/gnome2/share/mime/XMLnamespaces: nautilus seahorse
+[5-ERROR] opt/gnome2/share/mime/aliases: glabels nautilus seahorse
+[5-ERROR] opt/gnome2/share/mime/application/pgp-encrypted.xml: nautilus seahorse
+[5-ERROR] opt/gnome2/share/mime/application/pgp-keys.xml: nautilus seahorse
+[5-ERROR] opt/gnome2/share/mime/application/pgp-signature.xml: nautilus seahorse
+[5-ERROR] opt/gnome2/share/mime/application/x-gnome-saved-search.xml: glabels nautilus seahorse
+[5-ERROR] opt/gnome2/share/mime/globs: nautilus seahorse
+[5-ERROR] opt/gnome2/share/mime/magic: nautilus seahorse
+[5-ERROR] opt/gnome2/share/mime/mime.cache: glabels nautilus seahorse
+[5-ERROR] opt/gnome2/share/mime/subclasses: glabels nautilus seahorse
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing /lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Checking opt/gnome2/share/applications/seahorse-pgp-encrypted.desktop ... 
+[9-ERROR] Adding Categories tag (System;Security)
+[9-ERROR] Adding X-ROCK-Name tag (seahorse)
+[9-ERROR] Checking opt/gnome2/share/applications/seahorse-pgp-keys.desktop ... 
+[9-ERROR] Adding Categories tag (System;Security)
+[9-ERROR] Adding X-ROCK-Name tag (seahorse)
+[9-ERROR] Checking opt/gnome2/share/applications/seahorse-pgp-preferences.desktop ... 
+[9-ERROR] Adding X-ROCK-Name tag (seahorse)
+[9-ERROR] Checking opt/gnome2/share/applications/seahorse-pgp-signature.desktop ... 
+[9-ERROR] Adding Categories tag (System;Security)
+[9-ERROR] Adding X-ROCK-Name tag (seahorse)
+[9-ERROR] Checking opt/gnome2/share/applications/seahorse.desktop ... 
+[9-ERROR] Adding X-ROCK-Name tag (seahorse)
+[9-ERROR] Checking opt/gnome2/share/control-center-2.0/capplets/seahorse-pgp-preferences.desktop ... 
+[9-ERROR] Adding X-ROCK-Name tag (seahorse)
+[9-ERROR] Found 96 files for this package.
+[9-ERROR] Applying package split: 40 seahorse:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[9-ERROR] Applying package split: 42 seahorse:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 seahorse:doc /share/doc/
+[9-ERROR] Applying package split: 61 seahorse:doc /share/gtk-doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <seahorse> Creating flist file ...
+[9-ERROR] <seahorse> Creating package dependencies file ...
+[9-ERROR] <seahorse> Creating package description ...
+[9-ERROR] <seahorse> Creating md5sum and cksum files ...
+[9-ERROR] <seahorse:dev> Creating flist file ...
+[9-ERROR] <seahorse:dev> Creating package dependencies file ...
+[9-ERROR] <seahorse:dev> Creating package description ...
+[9-ERROR] <seahorse:dev> Creating md5sum and cksum files ...
+[9-ERROR] <seahorse:doc> Creating flist file ...
+[9-ERROR] <seahorse:doc> Creating package dependencies file ...
+[9-ERROR] <seahorse:doc> Creating package description ...
+[9-ERROR] <seahorse:doc> Creating md5sum and cksum files ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] opt/gnome2/share/mime/XMLnamespaces: nautilus seahorse
+[9-ERROR] opt/gnome2/share/mime/aliases: glabels nautilus seahorse
+[9-ERROR] opt/gnome2/share/mime/application/pgp-encrypted.xml: nautilus seahorse
+[9-ERROR] opt/gnome2/share/mime/application/pgp-keys.xml: nautilus seahorse
+[9-ERROR] opt/gnome2/share/mime/application/pgp-signature.xml: nautilus seahorse
+[9-ERROR] opt/gnome2/share/mime/application/x-gnome-saved-search.xml: glabels nautilus seahorse
+[9-ERROR] opt/gnome2/share/mime/globs: nautilus seahorse
+[9-ERROR] opt/gnome2/share/mime/magic: nautilus seahorse
+[9-ERROR] opt/gnome2/share/mime/mime.cache: glabels nautilus seahorse
+[9-ERROR] opt/gnome2/share/mime/subclasses: glabels nautilus seahorse
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] --- BUILD ERROR ---
 

@@ -20,125 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142550110 Fri Mar 17 00:01:50 2006 (5) ERROR
-[TIMESTAMP] 1142807777 Sun Mar 19 23:36:17 2006 (9) ERROR
-[TIMESTAMP] 1142959371 Tue Mar 21 17:42:51 2006 (5) ERROR
-[TIMESTAMP] 1142970535 Tue Mar 21 20:48:55 2006 (9) ERROR
-[TIMESTAMP] 1143030969 Wed Mar 22 13:36:09 2006 (5) ERROR
-[TIMESTAMP] 1143039692 Wed Mar 22 16:01:32 2006 (9) ERROR
+[TIMESTAMP] 1168620386 Fri Jan 12 17:46:26 2007 (5)
+[TIMESTAMP] 1168823762 Mon Jan 15 02:16:02 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-fftw3.err 9-fftw3.err
+[LOGS] 5-fftw3.log 9-fftw3.log
 
-[BUILDTIME] 2204 (5) ERROR
-[BUILDTIME] 2593 (9) ERROR
-[BUILDTIME] 2588 (5) ERROR
-[BUILDTIME] 2635 (9) ERROR
-[BUILDTIME] 2596 (5) ERROR
-[BUILDTIME] 2609 (9) ERROR
+[BUILDTIME] 15361 (5)
+[BUILDTIME] 15840 (9)
+[SIZE] 0.74 MB, 16 files
 
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
+[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev
+[DEP] make mktemp net-tools netpbm rrdtool sed sysfiles tar texinfo
+[DEP] twoftpd ucspi-unix util-linux
 
-[5-ERROR] checking for uintptr_t... yes
-[5-ERROR] checking for double... yes
-[5-ERROR] checking size of double... 8
-[5-ERROR] checking for long double... yes
-[5-ERROR] checking size of long double... 12
-[5-ERROR] checking for working alloca.h... yes
-[5-ERROR] checking for alloca... yes
-[5-ERROR] checking for working strtod... yes
-[5-ERROR] checking for vprintf... yes
-[5-ERROR] checking for _doprnt... no
-[5-ERROR] checking for sin in -lm... yes
-[5-ERROR] checking for BSDgettimeofday... no
-[5-ERROR] checking for gettimeofday... yes
-[5-ERROR] checking for gethrtime... no
-[5-ERROR] checking for read_real_time... no
-[5-ERROR] checking for time_base_to_time... no
-[5-ERROR] checking for drand48... yes
-[5-ERROR] checking for sqrt... yes
-[5-ERROR] checking for memset... yes
-[5-ERROR] checking for posix_memalign... yes
-[5-ERROR] checking for memalign... yes
-[5-ERROR] checking for _mm_malloc... no
-[5-ERROR] checking for _mm_free... no
-[5-ERROR] checking for clock_gettime... no
-[5-ERROR] checking whether drand48 is declared... yes
-[5-ERROR] checking whether memalign is declared... no
-[5-ERROR] checking whether posix_memalign is declared... no
-[5-ERROR] checking for _rtc intrinsic... no
-[5-ERROR] checking for isnan... yes
-[5-ERROR] checking whether gcc-34 accepts -mpreferred-stack-boundary=4... yes
-[5-ERROR] checking whether the stack is correctly aligned by gcc... yes
-[5-ERROR] checking whether we are using the GNU Fortran 77 compiler... no
-[5-ERROR] checking whether /usr/bin/gfortran-40 accepts -g... no
-[5-ERROR] checking how to get verbose linking output from /usr/bin/gfortran-40... configure: WARNING: compilation failed
-[5-ERROR] 
-[5-ERROR] checking for Fortran 77 libraries... 
-[5-ERROR] checking for dummy main to link with Fortran 77 libraries... none
-[5-ERROR] checking for Fortran 77 name-mangling scheme... configure: error: cannot compile a simple Fortran program
-[5-ERROR] See `config.log' for more details.
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 0 files for this package.
-[5-ERROR] Applying package split: 40 fftw3:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 fftw3:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 fftw3:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building fftw3=fftw3.
-
-[9-ERROR] checking for uintptr_t... yes
-[9-ERROR] checking for double... yes
-[9-ERROR] checking size of double... 8
-[9-ERROR] checking for long double... yes
-[9-ERROR] checking size of long double... 12
-[9-ERROR] checking for working alloca.h... yes
-[9-ERROR] checking for alloca... yes
-[9-ERROR] checking for working strtod... yes
-[9-ERROR] checking for vprintf... yes
-[9-ERROR] checking for _doprnt... no
-[9-ERROR] checking for sin in -lm... yes
-[9-ERROR] checking for BSDgettimeofday... no
-[9-ERROR] checking for gettimeofday... yes
-[9-ERROR] checking for gethrtime... no
-[9-ERROR] checking for read_real_time... no
-[9-ERROR] checking for time_base_to_time... no
-[9-ERROR] checking for drand48... yes
-[9-ERROR] checking for sqrt... yes
-[9-ERROR] checking for memset... yes
-[9-ERROR] checking for posix_memalign... yes
-[9-ERROR] checking for memalign... yes
-[9-ERROR] checking for _mm_malloc... no
-[9-ERROR] checking for _mm_free... no
-[9-ERROR] checking for clock_gettime... no
-[9-ERROR] checking whether drand48 is declared... yes
-[9-ERROR] checking whether memalign is declared... no
-[9-ERROR] checking whether posix_memalign is declared... no
-[9-ERROR] checking for _rtc intrinsic... no
-[9-ERROR] checking for isnan... yes
-[9-ERROR] checking whether gcc-34 accepts -mpreferred-stack-boundary=4... yes
-[9-ERROR] checking whether the stack is correctly aligned by gcc... yes
-[9-ERROR] checking whether we are using the GNU Fortran 77 compiler... no
-[9-ERROR] checking whether /usr/bin/gfortran-40 accepts -g... no
-[9-ERROR] checking how to get verbose linking output from /usr/bin/gfortran-40... configure: WARNING: compilation failed
-[9-ERROR] 
-[9-ERROR] checking for Fortran 77 libraries... 
-[9-ERROR] checking for dummy main to link with Fortran 77 libraries... none
-[9-ERROR] checking for Fortran 77 name-mangling scheme... configure: error: cannot compile a simple Fortran program
-[9-ERROR] See `config.log' for more details.
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 0 files for this package.
-[9-ERROR] Applying package split: 40 fftw3:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 fftw3:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 fftw3:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building fftw3=fftw3.
+[PROVIDES] fftw-wisdom-to-conf fftwf-wisdom libfftw3f.a libfftw3f_threads.a
 

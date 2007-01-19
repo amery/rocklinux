@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142456447 Wed Mar 15 22:00:47 2006 (5)
-[TIMESTAMP] 1142696264 Sat Mar 18 16:37:44 2006 (9)
+[TIMESTAMP] 1168533048 Thu Jan 11 17:30:48 2007 (5)
+[TIMESTAMP] 1168724496 Sat Jan 13 22:41:36 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-alsa.log 9-alsa.log
 
-[BUILDTIME] 11679 (5)
-[BUILDTIME] 12944 (9)
-[SIZE] 2.65 MB, 146 files
+[BUILDTIME] 12286 (5)
+[BUILDTIME] 13410 (9)
+[SIZE] 2.49 MB, 153 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils devfsd diffutils
-[DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep
-[DEP] linux26-header:dev m4 make mktemp ncurses:dev net-tools rrdtool
-[DEP] sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm devfsd diffutils
+[DEP] findutils gawk gcc40 gcc40:dev gettext glibc23 glibc23:dev grep
+[DEP] linux-libc-headers:dev m4 make mktemp ncurses ncurses:dev net-tools
+[DEP] netpbm patch rrdtool sed sysfiles tar twoftpd ucspi-unix util-linux
 
 [PROVIDES] aconnect alsaconf alsactl alsalisp alsamixer amidi amixer aoss
 [PROVIDES] aplay aplaymidi arecord arecordmidi aseqdump aseqnet aserver

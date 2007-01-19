@@ -20,48 +20,50 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142577979 Fri Mar 17 07:46:19 2006 (5)
-[TIMESTAMP] 1142841612 Mon Mar 20 09:00:12 2006 (9)
+[TIMESTAMP] 1168640301 Fri Jan 12 23:18:21 2007 (5)
+[TIMESTAMP] 1168846132 Mon Jan 15 08:28:52 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-abiword.log 9-abiword.log
 
-[BUILDTIME] 68809 (5)
-[BUILDTIME] 69797 (9)
-[SIZE] 11.53 MB, 329 files
+[BUILDTIME] 71285 (5)
+[BUILDTIME] 71799 (9)
+[SIZE] 12.68 MB, 334 files
 
-[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
-[DEP] binutils bzip2 bzip2:dev cairo cairo:dev coreutils diffutils
-[DEP] enchant enchant:dev esound esound:dev expat findutils freetype
-[DEP] freetype:dev fribidi fribidi:dev gawk gcc34 gcc34:dev gconf
-[DEP] gconf:dev glib glib:dev glibc23 glibc23:dev gnome-keyring
-[DEP] gnome-keyring:dev gnome-libs14 gnome-vfs gnome-vfs:dev
-[DEP] gnome14-dirtree gnome2-dirtree grep gtk+ gtk+:dev gtksourceview:dev
-[DEP] gucharmap gucharmap:dev imagemagick imagemagick:dev lcms lcms:dev
-[DEP] libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui
-[DEP] libbonoboui:dev libcroco libcroco:dev libgda libgda:dev libglade
-[DEP] libglade:dev libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev
-[DEP] libgnomedb libgnomedb:dev libgnomeprint libgnomeprint:dev
+[DEP] 00-dirtree alsa alsa:dev applewmproto applewmproto:dev atk atk:dev
+[DEP] audiofile audiofile:dev bash2 binutils bzip2 bzip2:dev cairo
+[DEP] cairo:dev coreutils cvm dbus dbus-glib dbus-glib:dev dbus:dev
+[DEP] diffutils enchant enchant:dev esound esound:dev expat expat:dev
+[DEP] findutils fontconfig fontconfig:dev freetype freetype:dev
+[DEP] fribidi fribidi:dev gawk gcc40 gcc40:dev gconf gconf:dev glib
+[DEP] glib:dev glibc23 glibc23:dev gnome-keyring gnome-keyring:dev
+[DEP] gnome-libs14 gnome-vfs gnome-vfs:dev gnome14-dirtree gnome2-dirtree
+[DEP] grep gtk+ gtk+:dev gucharmap gucharmap:dev imake libart_lgpl23
+[DEP] libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui libbonoboui:dev
+[DEP] libcroco libcroco:dev libglade libglade:dev libgnome libgnome:dev
+[DEP] libgnomecanvas libgnomecanvas:dev libgnomeprint libgnomeprint:dev
 [DEP] libgnomeprintui libgnomeprintui:dev libgnomeui libgnomeui:dev
-[DEP] libgsf libgsf:dev libjpeg libjpeg:dev libpng libpng:dev librsvg
-[DEP] librsvg:dev libtiff libtiff:dev libxml2 libxml2:dev libxslt
-[DEP] libxslt:dev linux26-header:dev make mktemp ncurses:dev net-tools
-[DEP] openssl orbit2 orbit2:dev pango pango:dev pkgconfig popt popt:dev
-[DEP] readline readline:dev rrdtool sed sysfiles tar util-linux xorg
-[DEP] xorg:dev zlib:dev
+[DEP] libgsf libgsf:dev libice libice:dev libjpeg libjpeg:dev libpng
+[DEP] libpng:dev librsvg librsvg:dev libsm libsm:dev libx11 libx11:dev
+[DEP] libxau libxau:dev libxcursor libxdmcp libxdmcp:dev libxext libxfixes
+[DEP] libxft libxft:dev libxi libxinerama libxml2 libxml2:dev libxrandr
+[DEP] libxrender libxrender:dev libxt linux-libc-headers:dev make mktemp
+[DEP] ncurses net-tools openssl orbit2 orbit2:dev pango pango:dev patch
+[DEP] pkgconfig popt popt:dev readline readline:dev renderproto:dev rrdtool
+[DEP] sed sysfiles tar util-linux valgrind valgrind:dev xorg-cf-files
+[DEP] xproto:dev zlib zlib:dev
 
-[PROVIDES] AbiWord-2.2 abiword libAbiApplix.so libAbiBMP.so libAbiBZ2.so
+[PROVIDES] AbiWord-2.4 abiword libAbiApplix.so libAbiBMP.so libAbiBZ2.so
 [PROVIDES] libAbiBabelfish.so libAbiCAPI.so libAbiClarisWorks.so
 [PROVIDES] libAbiCommand.so libAbiDash.so libAbiDocBook.so libAbiEML.so
-[PROVIDES] libAbiFreeTranslation.so libAbiGDA.so libAbiGdict.so
-[PROVIDES] libAbiGdkPixbuf.so libAbiGimp.so libAbiGoogle.so libAbiHRText.so
-[PROVIDES] libAbiHancom.so libAbiISCII.so libAbiJPEG.so libAbiKWord.so
-[PROVIDES] libAbiLaTeX.so libAbiMIF.so libAbiMSWrite.so libAbiMagick.so
-[PROVIDES] libAbiNroff.so libAbiOpenWriter.so libAbiPalmDoc.so
-[PROVIDES] libAbiPassepartout.so libAbiRSVG.so libAbiReferee.so
-[PROVIDES] libAbiSDW.so libAbiScriptHappy.so libAbiT602.so libAbiURLDict.so
-[PROVIDES] libAbiWML.so libAbiWikipedia.so libAbiXHTML.so libAbiXSLFO.so
-[PROVIDES] ttfadmin.sh ttftool
+[PROVIDES] libAbiFreeTranslation.so libAbiGdict.so libAbiGimp.so
+[PROVIDES] libAbiGoogle.so libAbiHRText.so libAbiHancom.so libAbiISCII.so
+[PROVIDES] libAbiJPEG.so libAbiKWord.so libAbiLaTeX.so libAbiMIF.so
+[PROVIDES] libAbiMSWrite.so libAbiNroff.so libAbiOpenDocument.so
+[PROVIDES] libAbiOpenWriter.so libAbiPalmDoc.so libAbiPassepartout.so
+[PROVIDES] libAbiRSVG.so libAbiSDW.so libAbiScriptHappy.so libAbiT602.so
+[PROVIDES] libAbiURLDict.so libAbiWML.so libAbiWikipedia.so libAbiXHTML.so
+[PROVIDES] libAbiXSLFO.so ttfadmin.sh ttftool
 

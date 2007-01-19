@@ -20,25 +20,32 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142548317 Thu Mar 16 23:31:57 2006 (5)
-[TIMESTAMP] 1142805281 Sun Mar 19 22:54:41 2006 (9)
+[TIMESTAMP] 1168618591 Fri Jan 12 17:16:31 2007 (5)
+[TIMESTAMP] 1168821739 Mon Jan 15 01:42:19 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-poppler.log 9-poppler.log
 
-[BUILDTIME] 12913 (5)
-[BUILDTIME] 13487 (9)
-[SIZE] 1.13 MB, 15 files
+[BUILDTIME] 17901 (5)
+[BUILDTIME] 18426 (9)
+[SIZE] 1.81 MB, 45 files
 
-[DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 cairo cairo:dev coreutils
-[DEP] diffutils expat findutils freetype freetype:dev gawk gcc34 gcc34:dev
-[DEP] glib glib:dev glibc23 glibc23:dev gnome2-dirtree grep gtk+ gtk+:dev
-[DEP] libjpeg libjpeg:dev libpng libpng:dev linux26-header:dev make mktemp
-[DEP] nas net-tools pango pango:dev pkgconfig qt33 qt33:dev rrdtool sed
-[DEP] sysfiles tar util-linux xorg xorg:dev zlib:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev atk atk:dev bash2 binutils
+[DEP] bzip2 cairo cairo:dev coreutils cvm diffutils expat expat:dev
+[DEP] findutils fontconfig fontconfig:dev freetype freetype:dev gawk
+[DEP] gcc40 gcc40:dev glib glib:dev glibc23 glibc23:dev gnome2-dirtree
+[DEP] grep gtk+ gtk+:dev imake libglade libglade:dev libice libjpeg
+[DEP] libjpeg:dev libpng libpng:dev libsm libx11 libx11:dev libxau
+[DEP] libxau:dev libxcursor libxdmcp libxdmcp:dev libxext libxfixes libxft
+[DEP] libxi libxinerama libxml2 libxml2:dev libxmu libxrandr libxrender
+[DEP] libxrender:dev libxt linux-libc-headers:dev make mesalib mktemp nas
+[DEP] net-tools netpbm pango pango:dev pkgconfig qt33 qt33:dev rrdtool
+[DEP] sed sysfiles tar twoftpd ucspi-unix util-linux xorg-cf-files
+[DEP] xproto:dev zlib
 
 [PROVIDES] libpoppler-glib.a libpoppler-glib.so libpoppler-qt.a
-[PROVIDES] libpoppler-qt.so libpoppler.a libpoppler.so
+[PROVIDES] libpoppler-qt.so libpoppler.a libpoppler.so pdffonts pdfimages
+[PROVIDES] pdfinfo pdftohtml pdftoppm pdftops pdftotext
 

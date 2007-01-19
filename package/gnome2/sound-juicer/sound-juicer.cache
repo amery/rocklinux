@@ -20,35 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142588755 Fri Mar 17 10:45:55 2006 (5) ERROR
-[TIMESTAMP] 1142853288 Mon Mar 20 12:14:48 2006 (9)
-[TIMESTAMP] 1142961403 Tue Mar 21 18:16:43 2006 (5)
+[TIMESTAMP] 1168648971 Sat Jan 13 01:42:51 2007 (5) ERROR
+[TIMESTAMP] 1168855505 Mon Jan 15 11:05:05 2007 (9) ERROR
+[TIMESTAMP] 1168949050 Tue Jan 16 13:04:10 2007 (5) ERROR
+[TIMESTAMP] 1168978984 Tue Jan 16 21:23:04 2007 (9) ERROR
+[TIMESTAMP] 1169092426 Thu Jan 18 04:53:46 2007 (5) ERROR
+[TIMESTAMP] 1169149196 Thu Jan 18 20:39:56 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-sound-juicer.log 9-sound-juicer.log
+[LOGS] 5-sound-juicer.err 9-sound-juicer.err
 
-[BUILDTIME] 2200 (5) ERROR
-[BUILDTIME] 5820 (9)
-[BUILDTIME] 5836 (5)
-[SIZE] 1.13 MB, 87 files
+[BUILDTIME] 1995 (5) ERROR
+[BUILDTIME] 2042 (9) ERROR
+[BUILDTIME] 2061 (5) ERROR
+[BUILDTIME] 2049 (9) ERROR
+[BUILDTIME] 2062 (5) ERROR
+[BUILDTIME] 2063 (9) ERROR
 
-[DEP] 00-dirtree alsa atk atk:dev audiofile bash2 binutils bzip2 cairo
-[DEP] cairo:dev control-center coreutils cpan-xml-parser diffutils docbookx
-[DEP] esound evince expat findutils freetype gawk gcc34 gcc34:dev gconf
-[DEP] gconf:dev gettext glib glib:dev glibc23 glibc23:dev gnome-blog
-[DEP] gnome-doc-utils gnome-keyring gnome-keyring-manager gnome-keyring:dev
-[DEP] gnome-media gnome-media:dev gnome-vfs gnome-vfs-extras gnome-vfs:dev
-[DEP] gnome2-dirtree grep gst-plugins gst-plugins:dev gstreamer
-[DEP] gstreamer:dev gtk+ gtk+:dev libart_lgpl23 libart_lgpl23:dev
-[DEP] libbonobo libbonobo:dev libbonoboui libbonoboui:dev libglade
-[DEP] libglade:dev libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev
-[DEP] libgnomeui libgnomeui:dev libjpeg libmusicbrainz libmusicbrainz:dev
-[DEP] libpng libxml2 libxml2:dev libxslt linux26-header:dev make mktemp
-[DEP] nautilus-cd-burner nautilus-cd-burner:dev net-tools openssl orbit2
-[DEP] orbit2:dev pango pango:dev perl5 pkgconfig popt popt:dev python
-[DEP] rrdtool scrollkeeper sed sysfiles tar util-linux xorg zlib:dev
 
-[PROVIDES] sound-juicer
+[5-ERROR] checking whether the g++-40 linker (ld) supports shared libraries... yes
+[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] appending configuration tag "F77" to libtool
+[5-ERROR] checking if libtool supports shared libraries... yes
+[5-ERROR] checking whether to build shared libraries... yes
+[5-ERROR] checking whether to build static libraries... yes
+[5-ERROR] checking for f77 option to produce PIC... -fPIC
+[5-ERROR] checking if f77 PIC flag -fPIC works... no
+[5-ERROR] checking if f77 static flag -static works... no
+[5-ERROR] checking if f77 supports -c -o file.o... no
+[5-ERROR] checking whether the f77 linker (ld) supports shared libraries... yes
+[5-ERROR] checking dynamic linker characteristics... ./configure: line 1: f77: command not found
+[5-ERROR] GNU/Linux ld.so
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] checking for intltool >= 0.35.0... 0.35.0 found
+[5-ERROR] checking for perl... /usr/bin/perl
+[5-ERROR] checking for XML::Parser... ok
+[5-ERROR] checking for iconv... /usr/bin/iconv
+[5-ERROR] checking for msgfmt... /usr/bin/msgfmt
+[5-ERROR] checking for msgmerge... /usr/bin/msgmerge
+[5-ERROR] checking for xgettext... /usr/bin/xgettext
+[5-ERROR] checking what warning flags to pass to the C compiler... -Wall -Wmissing-prototypes
+[5-ERROR] checking what language compliance flags to pass to the C compiler... 
+[5-ERROR] checking for i386-unknown-linux-gnu-pkg-config... no
+[5-ERROR] checking for pkg-config... /usr/bin/pkg-config
+[5-ERROR] checking pkg-config is at least version 0.9.0... yes
+[5-ERROR] checking for GDU_MODULE_VERSION_CHECK... yes
+[5-ERROR] checking for GLIB... yes
+[5-ERROR] checking for BURN... yes
+[5-ERROR] checking for UI... yes
+[5-ERROR] checking for GSTREAMER... yes
+[5-ERROR] checking for gst-inspect-0.10... gst-inspect-0.10
+[5-ERROR] checking GStreamer 0.10 element cdparanoiasrc... found.
+[5-ERROR] checking GStreamer 0.10 element vorbisenc... found.
+[5-ERROR] checking GStreamer 0.10 element flacenc... found.
+[5-ERROR] checking GStreamer 0.10 element wavenc... found.
+[5-ERROR] checking GStreamer 0.10 element gnomevfssink... found.
+[5-ERROR] checking for MEDIA_PROFILES... configure: error: Package requirements (gnome-media-profiles >= 2.11.91) were not met:
+[5-ERROR] 
+[5-ERROR] No package 'gnome-media-profiles' found
+[5-ERROR] 
+[5-ERROR] Consider adjusting the PKG_CONFIG_PATH environment variable if you
+[5-ERROR] installed software in a non-standard prefix.
+[5-ERROR] 
+[5-ERROR] Alternatively, you may set the environment variables MEDIA_PROFILES_CFLAGS
+[5-ERROR] and MEDIA_PROFILES_LIBS to avoid the need to call pkg-config.
+[5-ERROR] See the pkg-config man page for more details.
+[5-ERROR] 
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] checking whether the g++-40 linker (ld) supports shared libraries... yes
+[9-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[9-ERROR] checking how to hardcode library paths into programs... immediate
+[9-ERROR] appending configuration tag "F77" to libtool
+[9-ERROR] checking if libtool supports shared libraries... yes
+[9-ERROR] checking whether to build shared libraries... yes
+[9-ERROR] checking whether to build static libraries... yes
+[9-ERROR] checking for f77 option to produce PIC... -fPIC
+[9-ERROR] checking if f77 PIC flag -fPIC works... no
+[9-ERROR] checking if f77 static flag -static works... no
+[9-ERROR] checking if f77 supports -c -o file.o... no
+[9-ERROR] checking whether the f77 linker (ld) supports shared libraries... yes
+[9-ERROR] checking dynamic linker characteristics... ./configure: line 1: f77: command not found
+[9-ERROR] GNU/Linux ld.so
+[9-ERROR] checking how to hardcode library paths into programs... immediate
+[9-ERROR] checking for intltool >= 0.35.0... 0.35.0 found
+[9-ERROR] checking for perl... /usr/bin/perl
+[9-ERROR] checking for XML::Parser... ok
+[9-ERROR] checking for iconv... /usr/bin/iconv
+[9-ERROR] checking for msgfmt... /usr/bin/msgfmt
+[9-ERROR] checking for msgmerge... /usr/bin/msgmerge
+[9-ERROR] checking for xgettext... /usr/bin/xgettext
+[9-ERROR] checking what warning flags to pass to the C compiler... -Wall -Wmissing-prototypes
+[9-ERROR] checking what language compliance flags to pass to the C compiler... 
+[9-ERROR] checking for i386-unknown-linux-gnu-pkg-config... no
+[9-ERROR] checking for pkg-config... /usr/bin/pkg-config
+[9-ERROR] checking pkg-config is at least version 0.9.0... yes
+[9-ERROR] checking for GDU_MODULE_VERSION_CHECK... yes
+[9-ERROR] checking for GLIB... yes
+[9-ERROR] checking for BURN... yes
+[9-ERROR] checking for UI... yes
+[9-ERROR] checking for GSTREAMER... yes
+[9-ERROR] checking for gst-inspect-0.10... gst-inspect-0.10
+[9-ERROR] checking GStreamer 0.10 element cdparanoiasrc... found.
+[9-ERROR] checking GStreamer 0.10 element vorbisenc... found.
+[9-ERROR] checking GStreamer 0.10 element flacenc... found.
+[9-ERROR] checking GStreamer 0.10 element wavenc... found.
+[9-ERROR] checking GStreamer 0.10 element gnomevfssink... found.
+[9-ERROR] checking for MEDIA_PROFILES... configure: error: Package requirements (gnome-media-profiles >= 2.11.91) were not met:
+[9-ERROR] 
+[9-ERROR] No package 'gnome-media-profiles' found
+[9-ERROR] 
+[9-ERROR] Consider adjusting the PKG_CONFIG_PATH environment variable if you
+[9-ERROR] installed software in a non-standard prefix.
+[9-ERROR] 
+[9-ERROR] Alternatively, you may set the environment variables MEDIA_PROFILES_CFLAGS
+[9-ERROR] and MEDIA_PROFILES_LIBS to avoid the need to call pkg-config.
+[9-ERROR] See the pkg-config man page for more details.
+[9-ERROR] 
+[9-ERROR] --- BUILD ERROR ---
 

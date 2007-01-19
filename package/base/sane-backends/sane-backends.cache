@@ -20,41 +20,44 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142524985 Thu Mar 16 17:03:05 2006 (5)
-[TIMESTAMP] 1142779985 Sun Mar 19 15:53:05 2006 (9)
+[TIMESTAMP] 1168600541 Fri Jan 12 12:15:41 2007 (5)
+[TIMESTAMP] 1168802782 Sun Jan 14 20:26:22 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-sane-backends.log 9-sane-backends.log
 
-[BUILDTIME] 19205 (5)
-[BUILDTIME] 19962 (9)
-[SIZE] 5.03 MB, 322 files
+[BUILDTIME] 23056 (5)
+[BUILDTIME] 23702 (9)
+[SIZE] 5.71 MB, 349 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev gettext glibc23 glibc23:dev grep libexif libexif:dev
-[DEP] libgphoto libgphoto:dev libjpeg libjpeg:dev libtool libtool:dev
-[DEP] libusb libusb:dev linux26-header:dev linux26-source make mktemp
-[DEP] net-tools pkgconfig rrdtool sed sysfiles tar tetex util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
+[DEP] gawk gcc40 gcc40:dev gettext glibc23 glibc23:dev grep libexif
+[DEP] libexif:dev libgphoto libgphoto:dev libjpeg libjpeg:dev libtool
+[DEP] libtool:dev libusb libusb:dev libxt linux-libc-headers:dev
+[DEP] linux26-source make makedepend mktemp net-tools netpbm pkgconfig
+[DEP] rrdtool sed sysfiles tar tetex twoftpd ucspi-unix util-linux
 
 [PROVIDES] gamma4scanimage libsane-abaton.so libsane-agfafocus.so
 [PROVIDES] libsane-apple.so libsane-artec.so libsane-artec_eplus48u.so
 [PROVIDES] libsane-as6e.so libsane-avision.so libsane-bh.so
 [PROVIDES] libsane-canon.so libsane-canon630u.so libsane-coolscan.so
 [PROVIDES] libsane-coolscan2.so libsane-dc210.so libsane-dc240.so
-[PROVIDES] libsane-dc25.so libsane-dll.so libsane-dmc.so libsane-epson.so
-[PROVIDES] libsane-fujitsu.so libsane-gphoto2.so libsane-gt68xx.so
-[PROVIDES] libsane-hp.so libsane-hp5400.so libsane-ibm.so libsane-leo.so
-[PROVIDES] libsane-ma1509.so libsane-matsushita.so libsane-microtek.so
-[PROVIDES] libsane-microtek2.so libsane-mustek.so libsane-mustek_usb.so
+[PROVIDES] libsane-dc25.so libsane-dll.so libsane-dmc.so
+[PROVIDES] libsane-epson.so libsane-fujitsu.so libsane-genesys.so
+[PROVIDES] libsane-gphoto2.so libsane-gt68xx.so libsane-hp.so
+[PROVIDES] libsane-hp4200.so libsane-hp5400.so libsane-ibm.so
+[PROVIDES] libsane-leo.so libsane-lexmark.so libsane-ma1509.so
+[PROVIDES] libsane-matsushita.so libsane-microtek.so libsane-microtek2.so
+[PROVIDES] libsane-mustek.so libsane-mustek_usb.so libsane-mustek_usb2.so
 [PROVIDES] libsane-nec.so libsane-net.so libsane-niash.so libsane-pie.so
 [PROVIDES] libsane-plustek.so libsane-plustek_pp.so libsane-qcam.so
 [PROVIDES] libsane-ricoh.so libsane-s9036.so libsane-sceptre.so
-[PROVIDES] libsane-sharp.so libsane-sm3600.so libsane-snapscan.so
-[PROVIDES] libsane-sp15c.so libsane-st400.so libsane-tamarack.so
-[PROVIDES] libsane-teco1.so libsane-teco2.so libsane-teco3.so
-[PROVIDES] libsane-test.so libsane-u12.so libsane-umax.so
+[PROVIDES] libsane-sharp.so libsane-sm3600.so libsane-sm3840.so
+[PROVIDES] libsane-snapscan.so libsane-sp15c.so libsane-st400.so
+[PROVIDES] libsane-tamarack.so libsane-teco1.so libsane-teco2.so
+[PROVIDES] libsane-teco3.so libsane-test.so libsane-u12.so libsane-umax.so
 [PROVIDES] libsane-umax1220u.so libsane-umax_pp.so libsane-v4l.so
 [PROVIDES] libsane.so sane-config sane-find-scanner saned scanimage
 

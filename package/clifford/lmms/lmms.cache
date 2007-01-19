@@ -20,125 +20,33 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142550913 Fri Mar 17 00:15:13 2006 (5) ERROR
-[TIMESTAMP] 1142808710 Sun Mar 19 23:51:50 2006 (9) ERROR
-[TIMESTAMP] 1142959527 Tue Mar 21 17:45:27 2006 (5) ERROR
-[TIMESTAMP] 1142970698 Tue Mar 21 20:51:38 2006 (9) ERROR
-[TIMESTAMP] 1143031133 Wed Mar 22 13:38:53 2006 (5) ERROR
-[TIMESTAMP] 1143039856 Wed Mar 22 16:04:16 2006 (9) ERROR
+[TIMESTAMP] 1168620978 Fri Jan 12 17:56:18 2007 (5)
+[TIMESTAMP] 1168824430 Mon Jan 15 02:27:10 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-lmms.err 9-lmms.err
+[LOGS] 5-lmms.log 9-lmms.log
 
-[BUILDTIME] 12947 (5) ERROR
-[BUILDTIME] 13419 (9) ERROR
-[BUILDTIME] 13415 (5) ERROR
-[BUILDTIME] 13470 (9) ERROR
-[BUILDTIME] 13422 (5) ERROR
-[BUILDTIME] 13460 (9) ERROR
+[BUILDTIME] 19191 (5)
+[BUILDTIME] 19839 (9)
+[SIZE] 9.01 MB, 435 files
 
+[DEP] 00-dirtree alsa alsa:dev applewmproto applewmproto:dev bash2
+[DEP] binutils bzip2 coreutils cvm diffutils expat findutils flac
+[DEP] flac:dev fontconfig freetype gawk gcc40 gcc40:dev glibc23
+[DEP] glibc23:dev grep imake ladspa:dev libice libice:dev libjpeg
+[DEP] libjpeg:dev libmikmod libpng libsamplerate libsamplerate:dev
+[DEP] libsdl libsdl:dev libsdl_sound libsdl_sound:dev libsm libsm:dev
+[DEP] libsndfile libsndfile:dev libx11 libx11:dev libxau libxcursor
+[DEP] libxdmcp libxext libxext:dev libxfixes libxft libxinerama libxmu
+[DEP] libxrandr libxrender libxt linux-libc-headers:dev make mesalib
+[DEP] mktemp nas net-tools netpbm ogg-vorbis ogg-vorbis:dev patch perl5
+[DEP] qt33 qt33:dev rrdtool sed sysfiles tar twoftpd ucspi-unix util-linux
+[DEP] xorg-cf-files xproto:dev zlib
 
-[5-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT arp_and_chords_tab_widget.o -MD -MP -MF ".deps/arp_and_chords_tab_widget.Tpo" -c -o arp_and_chords_tab_widget.o `test -f './src/core/arp_and_chords_tab_widget.cpp' || echo './'`./src/core/arp_and_chords_tab_widget.cpp; \
-[5-ERROR] then mv -f ".deps/arp_and_chords_tab_widget.Tpo" ".deps/arp_and_chords_tab_widget.Po"; else rm -f ".deps/arp_and_chords_tab_widget.Tpo"; exit 1; fi
-[5-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT bb_editor.o -MD -MP -MF ".deps/bb_editor.Tpo" -c -o bb_editor.o `test -f './src/core/bb_editor.cpp' || echo './'`./src/core/bb_editor.cpp; \
-[5-ERROR] then mv -f ".deps/bb_editor.Tpo" ".deps/bb_editor.Po"; else rm -f ".deps/bb_editor.Tpo"; exit 1; fi
-[5-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT config_mgr.o -MD -MP -MF ".deps/config_mgr.Tpo" -c -o config_mgr.o `test -f './src/core/config_mgr.cpp' || echo './'`./src/core/config_mgr.cpp; \
-[5-ERROR] then mv -f ".deps/config_mgr.Tpo" ".deps/config_mgr.Po"; else rm -f ".deps/config_mgr.Tpo"; exit 1; fi
-[5-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT envelope_and_lfo_widget.o -MD -MP -MF ".deps/envelope_and_lfo_widget.Tpo" -c -o envelope_and_lfo_widget.o `test -f './src/core/envelope_and_lfo_widget.cpp' || echo './'`./src/core/envelope_and_lfo_widget.cpp; \
-[5-ERROR] then mv -f ".deps/envelope_and_lfo_widget.Tpo" ".deps/envelope_and_lfo_widget.Po"; else rm -f ".deps/envelope_and_lfo_widget.Tpo"; exit 1; fi
-[5-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT envelope_tab_widget.o -MD -MP -MF ".deps/envelope_tab_widget.Tpo" -c -o envelope_tab_widget.o `test -f './src/core/envelope_tab_widget.cpp' || echo './'`./src/core/envelope_tab_widget.cpp; \
-[5-ERROR] then mv -f ".deps/envelope_tab_widget.Tpo" ".deps/envelope_tab_widget.Po"; else rm -f ".deps/envelope_tab_widget.Tpo"; exit 1; fi
-[5-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT export_project_dialog.o -MD -MP -MF ".deps/export_project_dialog.Tpo" -c -o export_project_dialog.o `test -f './src/core/export_project_dialog.cpp' || echo './'`./src/core/export_project_dialog.cpp; \
-[5-ERROR] then mv -f ".deps/export_project_dialog.Tpo" ".deps/export_project_dialog.Po"; else rm -f ".deps/export_project_dialog.Tpo"; exit 1; fi
-[5-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT file_browser.o -MD -MP -MF ".deps/file_browser.Tpo" -c -o file_browser.o `test -f './src/core/file_browser.cpp' || echo './'`./src/core/file_browser.cpp; \
-[5-ERROR] then mv -f ".deps/file_browser.Tpo" ".deps/file_browser.Po"; else rm -f ".deps/file_browser.Tpo"; exit 1; fi
-[5-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT instrument.o -MD -MP -MF ".deps/instrument.Tpo" -c -o instrument.o `test -f './src/core/instrument.cpp' || echo './'`./src/core/instrument.cpp; \
-[5-ERROR] then mv -f ".deps/instrument.Tpo" ".deps/instrument.Po"; else rm -f ".deps/instrument.Tpo"; exit 1; fi
-[5-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT lmms_main_win.o -MD -MP -MF ".deps/lmms_main_win.Tpo" -c -o lmms_main_win.o `test -f './src/core/lmms_main_win.cpp' || echo './'`./src/core/lmms_main_win.cpp; \
-[5-ERROR] then mv -f ".deps/lmms_main_win.Tpo" ".deps/lmms_main_win.Po"; else rm -f ".deps/lmms_main_win.Tpo"; exit 1; fi
-[5-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT main.o -MD -MP -MF ".deps/main.Tpo" -c -o main.o `test -f './src/core/main.cpp' || echo './'`./src/core/main.cpp; \
-[5-ERROR] then mv -f ".deps/main.Tpo" ".deps/main.Po"; else rm -f ".deps/main.Tpo"; exit 1; fi
-[5-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT midi_tab_widget.o -MD -MP -MF ".deps/midi_tab_widget.Tpo" -c -o midi_tab_widget.o `test -f './src/core/midi_tab_widget.cpp' || echo './'`./src/core/midi_tab_widget.cpp; \
-[5-ERROR] then mv -f ".deps/midi_tab_widget.Tpo" ".deps/midi_tab_widget.Po"; else rm -f ".deps/midi_tab_widget.Tpo"; exit 1; fi
-[5-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT mixer.o -MD -MP -MF ".deps/mixer.Tpo" -c -o mixer.o `test -f './src/core/mixer.cpp' || echo './'`./src/core/mixer.cpp; \
-[5-ERROR] then mv -f ".deps/mixer.Tpo" ".deps/mixer.Po"; else rm -f ".deps/mixer.Tpo"; exit 1; fi
-[5-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT name_label.o -MD -MP -MF ".deps/name_label.Tpo" -c -o name_label.o `test -f './src/core/name_label.cpp' || echo './'`./src/core/name_label.cpp; \
-[5-ERROR] then mv -f ".deps/name_label.Tpo" ".deps/name_label.Po"; else rm -f ".deps/name_label.Tpo"; exit 1; fi
-[5-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT note.o -MD -MP -MF ".deps/note.Tpo" -c -o note.o `test -f './src/core/note.cpp' || echo './'`./src/core/note.cpp; \
-[5-ERROR] then mv -f ".deps/note.Tpo" ".deps/note.Po"; else rm -f ".deps/note.Tpo"; exit 1; fi
-[5-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT note_play_handle.o -MD -MP -MF ".deps/note_play_handle.Tpo" -c -o note_play_handle.o `test -f './src/core/note_play_handle.cpp' || echo './'`./src/core/note_play_handle.cpp; \
-[5-ERROR] then mv -f ".deps/note_play_handle.Tpo" ".deps/note_play_handle.Po"; else rm -f ".deps/note_play_handle.Tpo"; exit 1; fi
-[5-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT piano_roll.o -MD -MP -MF ".deps/piano_roll.Tpo" -c -o piano_roll.o `test -f './src/core/piano_roll.cpp' || echo './'`./src/core/piano_roll.cpp; \
-[5-ERROR] then mv -f ".deps/piano_roll.Tpo" ".deps/piano_roll.Po"; else rm -f ".deps/piano_roll.Tpo"; exit 1; fi
-[5-ERROR] ./src/core/piano_roll.cpp: In member function `void pianoRoll::zoomingChanged(const QString&)':
-[5-ERROR] ./src/core/piano_roll.cpp:2427: error: `assert' was not declared in this scope
-[5-ERROR] make[2]: *** [piano_roll.o] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.lmms.1143030970.13630.731294984/lmms-0.1.4'
-[5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.lmms.1143030970.13630.731294984/lmms-0.1.4'
-[5-ERROR] make: *** [all] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 0 files for this package.
-[5-ERROR] Applying package split: 40 lmms:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 lmms:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 lmms:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building lmms=lmms.
-
-[9-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT arp_and_chords_tab_widget.o -MD -MP -MF ".deps/arp_and_chords_tab_widget.Tpo" -c -o arp_and_chords_tab_widget.o `test -f './src/core/arp_and_chords_tab_widget.cpp' || echo './'`./src/core/arp_and_chords_tab_widget.cpp; \
-[9-ERROR] then mv -f ".deps/arp_and_chords_tab_widget.Tpo" ".deps/arp_and_chords_tab_widget.Po"; else rm -f ".deps/arp_and_chords_tab_widget.Tpo"; exit 1; fi
-[9-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT bb_editor.o -MD -MP -MF ".deps/bb_editor.Tpo" -c -o bb_editor.o `test -f './src/core/bb_editor.cpp' || echo './'`./src/core/bb_editor.cpp; \
-[9-ERROR] then mv -f ".deps/bb_editor.Tpo" ".deps/bb_editor.Po"; else rm -f ".deps/bb_editor.Tpo"; exit 1; fi
-[9-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT config_mgr.o -MD -MP -MF ".deps/config_mgr.Tpo" -c -o config_mgr.o `test -f './src/core/config_mgr.cpp' || echo './'`./src/core/config_mgr.cpp; \
-[9-ERROR] then mv -f ".deps/config_mgr.Tpo" ".deps/config_mgr.Po"; else rm -f ".deps/config_mgr.Tpo"; exit 1; fi
-[9-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT envelope_and_lfo_widget.o -MD -MP -MF ".deps/envelope_and_lfo_widget.Tpo" -c -o envelope_and_lfo_widget.o `test -f './src/core/envelope_and_lfo_widget.cpp' || echo './'`./src/core/envelope_and_lfo_widget.cpp; \
-[9-ERROR] then mv -f ".deps/envelope_and_lfo_widget.Tpo" ".deps/envelope_and_lfo_widget.Po"; else rm -f ".deps/envelope_and_lfo_widget.Tpo"; exit 1; fi
-[9-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT envelope_tab_widget.o -MD -MP -MF ".deps/envelope_tab_widget.Tpo" -c -o envelope_tab_widget.o `test -f './src/core/envelope_tab_widget.cpp' || echo './'`./src/core/envelope_tab_widget.cpp; \
-[9-ERROR] then mv -f ".deps/envelope_tab_widget.Tpo" ".deps/envelope_tab_widget.Po"; else rm -f ".deps/envelope_tab_widget.Tpo"; exit 1; fi
-[9-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT export_project_dialog.o -MD -MP -MF ".deps/export_project_dialog.Tpo" -c -o export_project_dialog.o `test -f './src/core/export_project_dialog.cpp' || echo './'`./src/core/export_project_dialog.cpp; \
-[9-ERROR] then mv -f ".deps/export_project_dialog.Tpo" ".deps/export_project_dialog.Po"; else rm -f ".deps/export_project_dialog.Tpo"; exit 1; fi
-[9-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT file_browser.o -MD -MP -MF ".deps/file_browser.Tpo" -c -o file_browser.o `test -f './src/core/file_browser.cpp' || echo './'`./src/core/file_browser.cpp; \
-[9-ERROR] then mv -f ".deps/file_browser.Tpo" ".deps/file_browser.Po"; else rm -f ".deps/file_browser.Tpo"; exit 1; fi
-[9-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT instrument.o -MD -MP -MF ".deps/instrument.Tpo" -c -o instrument.o `test -f './src/core/instrument.cpp' || echo './'`./src/core/instrument.cpp; \
-[9-ERROR] then mv -f ".deps/instrument.Tpo" ".deps/instrument.Po"; else rm -f ".deps/instrument.Tpo"; exit 1; fi
-[9-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT lmms_main_win.o -MD -MP -MF ".deps/lmms_main_win.Tpo" -c -o lmms_main_win.o `test -f './src/core/lmms_main_win.cpp' || echo './'`./src/core/lmms_main_win.cpp; \
-[9-ERROR] then mv -f ".deps/lmms_main_win.Tpo" ".deps/lmms_main_win.Po"; else rm -f ".deps/lmms_main_win.Tpo"; exit 1; fi
-[9-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT main.o -MD -MP -MF ".deps/main.Tpo" -c -o main.o `test -f './src/core/main.cpp' || echo './'`./src/core/main.cpp; \
-[9-ERROR] then mv -f ".deps/main.Tpo" ".deps/main.Po"; else rm -f ".deps/main.Tpo"; exit 1; fi
-[9-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT midi_tab_widget.o -MD -MP -MF ".deps/midi_tab_widget.Tpo" -c -o midi_tab_widget.o `test -f './src/core/midi_tab_widget.cpp' || echo './'`./src/core/midi_tab_widget.cpp; \
-[9-ERROR] then mv -f ".deps/midi_tab_widget.Tpo" ".deps/midi_tab_widget.Po"; else rm -f ".deps/midi_tab_widget.Tpo"; exit 1; fi
-[9-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT mixer.o -MD -MP -MF ".deps/mixer.Tpo" -c -o mixer.o `test -f './src/core/mixer.cpp' || echo './'`./src/core/mixer.cpp; \
-[9-ERROR] then mv -f ".deps/mixer.Tpo" ".deps/mixer.Po"; else rm -f ".deps/mixer.Tpo"; exit 1; fi
-[9-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT name_label.o -MD -MP -MF ".deps/name_label.Tpo" -c -o name_label.o `test -f './src/core/name_label.cpp' || echo './'`./src/core/name_label.cpp; \
-[9-ERROR] then mv -f ".deps/name_label.Tpo" ".deps/name_label.Po"; else rm -f ".deps/name_label.Tpo"; exit 1; fi
-[9-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT note.o -MD -MP -MF ".deps/note.Tpo" -c -o note.o `test -f './src/core/note.cpp' || echo './'`./src/core/note.cpp; \
-[9-ERROR] then mv -f ".deps/note.Tpo" ".deps/note.Po"; else rm -f ".deps/note.Tpo"; exit 1; fi
-[9-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT note_play_handle.o -MD -MP -MF ".deps/note_play_handle.Tpo" -c -o note_play_handle.o `test -f './src/core/note_play_handle.cpp' || echo './'`./src/core/note_play_handle.cpp; \
-[9-ERROR] then mv -f ".deps/note_play_handle.Tpo" ".deps/note_play_handle.Po"; else rm -f ".deps/note_play_handle.Tpo"; exit 1; fi
-[9-ERROR] if g++-34 -DHAVE_CONFIG_H -I. -I. -I. -I./include -I. -I/usr/include/wine -I/usr/include/wine/windows    -DQT3 -I/opt/qt33/include -D_REENTRANT -DQT_THREAD_SUPPORT -g -O2 -MT piano_roll.o -MD -MP -MF ".deps/piano_roll.Tpo" -c -o piano_roll.o `test -f './src/core/piano_roll.cpp' || echo './'`./src/core/piano_roll.cpp; \
-[9-ERROR] then mv -f ".deps/piano_roll.Tpo" ".deps/piano_roll.Po"; else rm -f ".deps/piano_roll.Tpo"; exit 1; fi
-[9-ERROR] ./src/core/piano_roll.cpp: In member function `void pianoRoll::zoomingChanged(const QString&)':
-[9-ERROR] ./src/core/piano_roll.cpp:2427: error: `assert' was not declared in this scope
-[9-ERROR] make[2]: *** [piano_roll.o] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.lmms.1143039693.20119.2532935409/lmms-0.1.4'
-[9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.lmms.1143039693.20119.2532935409/lmms-0.1.4'
-[9-ERROR] make: *** [all] Error 2
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 0 files for this package.
-[9-ERROR] Applying package split: 40 lmms:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 lmms:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 lmms:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building lmms=lmms.
+[PROVIDES] libaudiofileprocessor.a libaudiofileprocessor.so
+[PROVIDES] libbitinvader.a libbitinvader.so libpluckedstringsynth.a
+[PROVIDES] libpluckedstringsynth.so libtripleoscillator.a
+[PROVIDES] libtripleoscillator.so lmms
 

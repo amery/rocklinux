@@ -20,125 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142614149 Fri Mar 17 17:49:09 2006 (5) ERROR
-[TIMESTAMP] 1142880628 Mon Mar 20 19:50:28 2006 (9) ERROR
-[TIMESTAMP] 1142962370 Tue Mar 21 18:32:50 2006 (5) ERROR
-[TIMESTAMP] 1142973040 Tue Mar 21 21:30:40 2006 (9) ERROR
-[TIMESTAMP] 1143032780 Wed Mar 22 14:06:20 2006 (5) ERROR
-[TIMESTAMP] 1143042401 Wed Mar 22 16:46:41 2006 (9) ERROR
+[TIMESTAMP] 1168669982 Sat Jan 13 07:33:02 2007 (5) ERROR
+[TIMESTAMP] 1168877963 Mon Jan 15 17:19:23 2007 (9) ERROR
+[TIMESTAMP] 1168951090 Tue Jan 16 13:38:10 2007 (5) ERROR
+[TIMESTAMP] 1168980504 Tue Jan 16 21:48:24 2007 (9) ERROR
+[TIMESTAMP] 1169121399 Thu Jan 18 12:56:39 2007 (5) ERROR
+[TIMESTAMP] 1169150710 Thu Jan 18 21:05:10 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-qemu.err 9-qemu.err
 
-[BUILDTIME] 2650 (5) ERROR
-[BUILDTIME] 2907 (9) ERROR
-[BUILDTIME] 2923 (5) ERROR
-[BUILDTIME] 2933 (9) ERROR
-[BUILDTIME] 2921 (5) ERROR
-[BUILDTIME] 2932 (9) ERROR
+[BUILDTIME] 749 (5) ERROR
+[BUILDTIME] 811 (9) ERROR
+[BUILDTIME] 806 (5) ERROR
+[BUILDTIME] 786 (9) ERROR
+[BUILDTIME] 794 (5) ERROR
+[BUILDTIME] 812 (9) ERROR
 
 
-[5-ERROR] make -C $d all || exit 1 ; \
-[5-ERROR]         done
-[5-ERROR] make[1]: Entering directory `/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/i386-user'
-[5-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/slirp -c -o elfload.o /ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/elfload.c
-[5-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/slirp -c -o main.o /ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/main.c
-[5-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/slirp -c -o syscall.o /ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/syscall.c
-[5-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/slirp -c -o mmap.o /ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/mmap.c
-[5-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/slirp -c -o signal.o /ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/signal.c
-[5-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/slirp -c -o path.o /ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/path.c
-[5-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/slirp -c -o osdep.o /ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/osdep.c
-[5-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/slirp -c -o thunk.o /ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/thunk.c
-[5-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/slirp -c -o vm86.o /ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/vm86.c
-[5-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/slirp -c -o exec.o /ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/exec.c
-[5-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/slirp -c -o kqemu.o /ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/kqemu.c
-[5-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -mpreferred-stack-boundary=2 -falign-functions=0 -fno-gcse -fno-reorder-blocks -fno-optimize-sibling-calls -I. -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/slirp -c -o op.o /ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386/op.c
-[5-ERROR] ../dyngen -o op.h op.o
-[5-ERROR] ../dyngen -c -o opc.h op.o
-[5-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/slirp -c -o translate-op.o /ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/translate-op.c
-[5-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/slirp -c -o translate-all.o /ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/translate-all.c
-[5-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/slirp -c -o cpu-exec.o /ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/cpu-exec.c
-[5-ERROR] ../dyngen -g -o gen-op.h op.o
-[5-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/slirp -c -o translate.o /ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386/translate.c
-[5-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/slirp -c -o fpu/softfloat-native.o /ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/fpu/softfloat-native.c
-[5-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/slirp -c -o helper.o /ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386/helper.c
-[5-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/slirp -c -o helper2.o /ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386/helper2.c
-[5-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/slirp -c -o translate-copy.o /ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386/translate-copy.c
-[5-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/slirp -c -o disas.o /ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/disas.c
-[5-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/slirp -c -o i386-dis.o /ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/i386-dis.c
-[5-ERROR] rm -f libqemu.a
-[5-ERROR] ar rcs libqemu.a exec.o kqemu.o translate-op.o translate-all.o cpu-exec.o translate.o op.o  fpu/softfloat-native.o helper.o helper2.o translate-copy.o disas.o  i386-dis.o
-[5-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2 -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/slirp -c -o gdbstub.o /ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/gdbstub.c
-[5-ERROR] gcc-34 -g -Wl,-shared -o qemu-i386 elfload.o main.o syscall.o mmap.o signal.o path.o osdep.o thunk.o vm86.o libqemu.a gdbstub.o   -lm
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/3.4.5/../../../../i386-unknown-linux-gnu/bin/ld: section .note.ABI-tag [00000240 -> 0000025f] overlaps section .hash [00000114 -> 000027cf]
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/3.4.5/../../../../i386-unknown-linux-gnu/bin/ld: qemu-i386: Not enough room for program headers (allocated 8, need 9)
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/3.4.5/../../../../i386-unknown-linux-gnu/bin/ld: final link failed: Bad value
-[5-ERROR] collect2: ld returned 1 exit status
-[5-ERROR] make[1]: *** [qemu-i386] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.qemu.1143032732.1382.2325565839/qemu-0.7.2/i386-user'
-[5-ERROR] make: *** [all] Error 1
+[5-ERROR] ENVPREFIX = 'CMD'
+[5-ERROR] APPEND_PO = ''
+[5-ERROR] OTHERS = ''
+[5-ERROR] INSERT = '-O1 -pipe'
+[5-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
+[5-ERROR] APPEND = '-s'
+[5-ERROR] FILTER = ''
+[5-ERROR] Old PATH: /ROCK/src.qemu.1169121388.16479.2270576875/wrappers:/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper:/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[5-ERROR] New PATH: /ROCK/src.qemu.1169121388.16479.2270576875/wrappers:/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[5-ERROR] Insert: -O1
+[5-ERROR] Insert: -pipe
+[5-ERROR] Copy:   --version
+[5-ERROR] Append: -s
+[5-ERROR] New Command: gcc-40 -O1 -pipe --version -s
+[5-ERROR] gcc-40 (GCC) 4.0.3
+[5-ERROR] Copyright (C) 2006 Free Software Foundation, Inc.
+[5-ERROR] This is free software; see the source for copying conditions.  There is NO
+[5-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[5-ERROR] 
+[5-ERROR] [ writing debug log to /ROCK/src.qemu.1169121388.16479.2270576875/cmd_wrapper.log ]
+[5-ERROR] Running main build function 'build_this_package' ...
+[5-ERROR] Extracting qemu-0.8.2.tar.bz2 (--use-compress-program=bzip2 -xf) ... 
+[5-ERROR] Fixing ownership and permissions ...
+[5-ERROR] Removing CVS and .svn directories ...
+[5-ERROR] Changeing into /ROCK/src.qemu.1169121388.16479.2270576875/qemu-0.8.2 ...
+[5-ERROR] Creating /usr/<..> if required ...
+[5-ERROR] Removing unsupported '--bindir=/usr/bin' from configure option string.
+[5-ERROR] Removing unsupported '--sbindir=/usr/sbin' from configure option string.
+[5-ERROR] Removing unsupported '--libdir=/usr/lib' from configure option string.
+[5-ERROR] Removing unsupported '--datadir=/usr/share' from configure option string.
+[5-ERROR] Removing unsupported '--includedir=/usr/include' from configure option string.
+[5-ERROR] Removing unsupported '--infodir=/usr/share/info' from configure option string.
+[5-ERROR] Removing unsupported '--mandir=/usr/share/man' from configure option string.
+[5-ERROR] Removing unsupported '--sysconfdir=/etc' from configure option string.
+[5-ERROR] Removing unsupported '--localstatedir=/var' from configure option string.
+[5-ERROR] Removing unsupported '--disable-debug' from configure option string.
+[5-ERROR] Removing unsupported '--with-mysql-lib=/opt/mysql/lib/mysql' from configure option string.
+[5-ERROR] Removing unsupported '--with-mysql-include=/opt/mysql/include/mysql' from configure option string.
+[5-ERROR] Removing unsupported '--with-libpam' from configure option string.
+[5-ERROR] Removing unsupported '--with-pam' from configure option string.
+[5-ERROR] Removing unsupported '--enable-libpam' from configure option string.
+[5-ERROR] Removing unsupported '--enable-pam' from configure option string.
+[5-ERROR] Removing unsupported '--build=i386-unknown-linux-gnu' from configure option string.
+[5-ERROR] Removing unsupported '--host=i386-unknown-linux-gnu' from configure option string.
+[5-ERROR] Running  bash ./configure --prefix=/usr
+[5-ERROR] ERROR: "gcc" looks like gcc 4.x
+[5-ERROR] QEMU is known to have problems when compiled with gcc 4.x
+[5-ERROR] It is recommended that you use gcc 3.x to build QEMU
+[5-ERROR] To use this compiler anyway, configure with --disable-gcc-check
 [5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 0 files for this package.
-[5-ERROR] Applying package split: 40 qemu:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 qemu:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 qemu:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building qemu=qemu.
 
-[9-ERROR] make -C $d all || exit 1 ; \
-[9-ERROR]         done
-[9-ERROR] make[1]: Entering directory `/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/i386-user'
-[9-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/slirp -c -o elfload.o /ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/elfload.c
-[9-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/slirp -c -o main.o /ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/main.c
-[9-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/slirp -c -o syscall.o /ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/syscall.c
-[9-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/slirp -c -o mmap.o /ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/mmap.c
-[9-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/slirp -c -o signal.o /ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/signal.c
-[9-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/slirp -c -o path.o /ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/path.c
-[9-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/slirp -c -o osdep.o /ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/osdep.c
-[9-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/slirp -c -o thunk.o /ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/thunk.c
-[9-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/slirp -c -o vm86.o /ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/vm86.c
-[9-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/slirp -c -o exec.o /ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/exec.c
-[9-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/slirp -c -o kqemu.o /ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/kqemu.c
-[9-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -mpreferred-stack-boundary=2 -falign-functions=0 -fno-gcse -fno-reorder-blocks -fno-optimize-sibling-calls -I. -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/slirp -c -o op.o /ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386/op.c
-[9-ERROR] ../dyngen -o op.h op.o
-[9-ERROR] ../dyngen -c -o opc.h op.o
-[9-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/slirp -c -o translate-op.o /ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/translate-op.c
-[9-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/slirp -c -o translate-all.o /ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/translate-all.c
-[9-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/slirp -c -o cpu-exec.o /ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/cpu-exec.c
-[9-ERROR] ../dyngen -g -o gen-op.h op.o
-[9-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/slirp -c -o translate.o /ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386/translate.c
-[9-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/slirp -c -o fpu/softfloat-native.o /ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/fpu/softfloat-native.c
-[9-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/slirp -c -o helper.o /ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386/helper.c
-[9-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/slirp -c -o helper2.o /ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386/helper2.c
-[9-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/slirp -c -o translate-copy.o /ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386/translate-copy.c
-[9-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/slirp -c -o disas.o /ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/disas.c
-[9-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/slirp -c -o i386-dis.o /ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/i386-dis.c
-[9-ERROR] rm -f libqemu.a
-[9-ERROR] ar rcs libqemu.a exec.o kqemu.o translate-op.o translate-all.o cpu-exec.o translate.o op.o  fpu/softfloat-native.o helper.o helper2.o translate-copy.o disas.o  i386-dis.o
-[9-ERROR] gcc-34 -Wall -O2 -g -fno-strict-aliasing -fomit-frame-pointer -I. -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/target-i386 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2 -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/linux-user/i386 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/fpu -I/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/slirp -c -o gdbstub.o /ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/gdbstub.c
-[9-ERROR] gcc-34 -g -Wl,-shared -o qemu-i386 elfload.o main.o syscall.o mmap.o signal.o path.o osdep.o thunk.o vm86.o libqemu.a gdbstub.o   -lm
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/3.4.5/../../../../i386-unknown-linux-gnu/bin/ld: section .note.ABI-tag [00000240 -> 0000025f] overlaps section .hash [00000114 -> 000027cf]
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/3.4.5/../../../../i386-unknown-linux-gnu/bin/ld: qemu-i386: Not enough room for program headers (allocated 8, need 9)
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/3.4.5/../../../../i386-unknown-linux-gnu/bin/ld: final link failed: Bad value
-[9-ERROR] collect2: ld returned 1 exit status
-[9-ERROR] make[1]: *** [qemu-i386] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.qemu.1143042352.31246.4148574202/qemu-0.7.2/i386-user'
-[9-ERROR] make: *** [all] Error 1
+[9-ERROR] ENVPREFIX = 'CMD'
+[9-ERROR] APPEND_PO = ''
+[9-ERROR] OTHERS = ''
+[9-ERROR] INSERT = '-O1 -pipe'
+[9-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
+[9-ERROR] APPEND = '-s'
+[9-ERROR] FILTER = ''
+[9-ERROR] Old PATH: /ROCK/src.qemu.1169150702.7094.3000052527/wrappers:/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper:/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[9-ERROR] New PATH: /ROCK/src.qemu.1169150702.7094.3000052527/wrappers:/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[9-ERROR] Insert: -O1
+[9-ERROR] Insert: -pipe
+[9-ERROR] Copy:   --version
+[9-ERROR] Append: -s
+[9-ERROR] New Command: gcc-40 -O1 -pipe --version -s
+[9-ERROR] gcc-40 (GCC) 4.0.3
+[9-ERROR] Copyright (C) 2006 Free Software Foundation, Inc.
+[9-ERROR] This is free software; see the source for copying conditions.  There is NO
+[9-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[9-ERROR] 
+[9-ERROR] [ writing debug log to /ROCK/src.qemu.1169150702.7094.3000052527/cmd_wrapper.log ]
+[9-ERROR] Running main build function 'build_this_package' ...
+[9-ERROR] Extracting qemu-0.8.2.tar.bz2 (--use-compress-program=bzip2 -xf) ... 
+[9-ERROR] Fixing ownership and permissions ...
+[9-ERROR] Removing CVS and .svn directories ...
+[9-ERROR] Changeing into /ROCK/src.qemu.1169150702.7094.3000052527/qemu-0.8.2 ...
+[9-ERROR] Creating /usr/<..> if required ...
+[9-ERROR] Removing unsupported '--bindir=/usr/bin' from configure option string.
+[9-ERROR] Removing unsupported '--sbindir=/usr/sbin' from configure option string.
+[9-ERROR] Removing unsupported '--libdir=/usr/lib' from configure option string.
+[9-ERROR] Removing unsupported '--datadir=/usr/share' from configure option string.
+[9-ERROR] Removing unsupported '--includedir=/usr/include' from configure option string.
+[9-ERROR] Removing unsupported '--infodir=/usr/share/info' from configure option string.
+[9-ERROR] Removing unsupported '--mandir=/usr/share/man' from configure option string.
+[9-ERROR] Removing unsupported '--sysconfdir=/etc' from configure option string.
+[9-ERROR] Removing unsupported '--localstatedir=/var' from configure option string.
+[9-ERROR] Removing unsupported '--disable-debug' from configure option string.
+[9-ERROR] Removing unsupported '--with-mysql-lib=/opt/mysql/lib/mysql' from configure option string.
+[9-ERROR] Removing unsupported '--with-mysql-include=/opt/mysql/include/mysql' from configure option string.
+[9-ERROR] Removing unsupported '--with-libpam' from configure option string.
+[9-ERROR] Removing unsupported '--with-pam' from configure option string.
+[9-ERROR] Removing unsupported '--enable-libpam' from configure option string.
+[9-ERROR] Removing unsupported '--enable-pam' from configure option string.
+[9-ERROR] Removing unsupported '--build=i386-unknown-linux-gnu' from configure option string.
+[9-ERROR] Removing unsupported '--host=i386-unknown-linux-gnu' from configure option string.
+[9-ERROR] Running  bash ./configure --prefix=/usr
+[9-ERROR] ERROR: "gcc" looks like gcc 4.x
+[9-ERROR] QEMU is known to have problems when compiled with gcc 4.x
+[9-ERROR] It is recommended that you use gcc 3.x to build QEMU
+[9-ERROR] To use this compiler anyway, configure with --disable-gcc-check
 [9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 0 files for this package.
-[9-ERROR] Applying package split: 40 qemu:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 qemu:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 qemu:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building qemu=qemu.
 

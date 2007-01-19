@@ -20,31 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142557372 Fri Mar 17 02:02:52 2006 (5)
-[TIMESTAMP] 1142816860 Mon Mar 20 02:07:40 2006 (9)
+[TIMESTAMP] 1168625944 Fri Jan 12 19:19:04 2007 (5) ERROR
+[TIMESTAMP] 1168829923 Mon Jan 15 03:58:43 2007 (9) ERROR
+[TIMESTAMP] 1168947720 Tue Jan 16 12:42:00 2007 (5) ERROR
+[TIMESTAMP] 1168974712 Tue Jan 16 20:11:52 2007 (9) ERROR
+[TIMESTAMP] 1169091134 Thu Jan 18 04:32:14 2007 (5) ERROR
+[TIMESTAMP] 1169145000 Thu Jan 18 19:30:00 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-xawtv.log 9-xawtv.log
+[LOGS] 5-xawtv.err 9-xawtv.err
 
-[BUILDTIME] 4598 (5)
-[BUILDTIME] 5026 (9)
-[SIZE] 2.29 MB, 124 files
+[BUILDTIME] 2115 (5) ERROR
+[BUILDTIME] 2162 (9) ERROR
+[BUILDTIME] 2153 (5) ERROR
+[BUILDTIME] 2144 (9) ERROR
+[BUILDTIME] 2149 (5) ERROR
+[BUILDTIME] 2153 (9) ERROR
 
-[DEP] 00-dirtree aalib aalib:dev alsa alsa:dev bash2 binutils bzip2
-[DEP] coreutils diffutils expat findutils freetype freetype:dev gawk
-[DEP] gcc34 gcc34:dev glib12 glibc23 glibc23:dev gnome14-dirtree gpm
-[DEP] grep libdv libdv:dev libjpeg libjpeg:dev libpng libzvbi libzvbi:dev
-[DEP] linux26-header:dev lirc lirc:dev make mktemp ncurses:dev net-tools
-[DEP] openmotif openmotif:dev perl5 pkgconfig rrdtool sed slang sysfiles
-[DEP] tar util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] alevtd bilinear.so conv-mjpeg.so cubic.so drv0-v4l2-old.so
-[PROVIDES] drv0-v4l2.so drv1-v4l.so dump-mixers fbtv flt-disor.so
-[PROVIDES] flt-gamma.so flt-invert.so flt-smooth.so linear-blend.so
-[PROVIDES] linedoubler.so motv mtt ntsc-cc pia propwatch radio read-avi.so
-[PROVIDES] read-dv.so record rootv scantv showqt showriff snd-oss.so
-[PROVIDES] streamer subtitles ttv v4l-conf v4l-info v4lctl webcam
-[PROVIDES] write-avi.so write-dv.so xawtv xawtv-remote
+[5-ERROR]   CC	  console/webcam.o
+[5-ERROR] console/webcam.c: In function 'write_file':
+[5-ERROR] console/webcam.c:85: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c: In function 'add_text':
+[5-ERROR] console/webcam.c:423: warning: pointer targets in passing argument 1 of 'strftime' differ in signedness
+[5-ERROR] console/webcam.c:427: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c: In function 'main':
+[5-ERROR] console/webcam.c:658: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c:659: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c:660: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c:661: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c:662: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c:663: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c:664: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c:665: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c:666: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c:667: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c:693: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c:694: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c:781: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c:782: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c:783: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c:784: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c:785: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c:786: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c:787: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c:788: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c:789: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c:790: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c:791: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c:792: warning: pointer targets in assignment differ in signedness
+[5-ERROR] console/webcam.c:873: warning: pointer targets in passing argument 1 of 'add_text' differ in signedness
+[5-ERROR] console/webcam.c:876: warning: pointer targets in passing argument 2 of 's->ops->xfer' differ in signedness
+[5-ERROR] console/webcam.c:894: warning: pointer targets in passing argument 2 of 'write_file' differ in signedness
+[5-ERROR]   CC	  console/ftp.o
+[5-ERROR] console/ftp.c: In function 'ftp_recv':
+[5-ERROR] console/ftp.c:189: warning: the address of 'ftp_connected', will always evaluate as 'true'
+[5-ERROR] console/ftp.c: In function 'ftp_connect':
+[5-ERROR] console/ftp.c:239: warning: the address of 'ftp_connected', will always evaluate as 'true'
+[5-ERROR]   LD	  console/webcam
+[5-ERROR]   CC	  console/scantv.o
+[5-ERROR] In file included from console/scantv.c:19:
+[5-ERROR] ./common/channel.h:93: error: array type has incomplete element type
+[5-ERROR] ./common/channel.h:94: error: array type has incomplete element type
+[5-ERROR] console/scantv.c: In function 'event':
+[5-ERROR] console/scantv.c:53: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[5-ERROR] console/scantv.c:54: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[5-ERROR] console/scantv.c:54: warning: pointer targets in passing argument 1 of '__strdup' differ in signedness
+[5-ERROR] make: *** [console/scantv.o] Error 1
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR]   CC	  console/webcam.o
+[9-ERROR] console/webcam.c: In function 'write_file':
+[9-ERROR] console/webcam.c:85: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c: In function 'add_text':
+[9-ERROR] console/webcam.c:423: warning: pointer targets in passing argument 1 of 'strftime' differ in signedness
+[9-ERROR] console/webcam.c:427: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c: In function 'main':
+[9-ERROR] console/webcam.c:658: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c:659: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c:660: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c:661: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c:662: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c:663: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c:664: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c:665: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c:666: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c:667: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c:693: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c:694: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c:781: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c:782: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c:783: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c:784: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c:785: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c:786: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c:787: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c:788: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c:789: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c:790: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c:791: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c:792: warning: pointer targets in assignment differ in signedness
+[9-ERROR] console/webcam.c:873: warning: pointer targets in passing argument 1 of 'add_text' differ in signedness
+[9-ERROR] console/webcam.c:876: warning: pointer targets in passing argument 2 of 's->ops->xfer' differ in signedness
+[9-ERROR] console/webcam.c:894: warning: pointer targets in passing argument 2 of 'write_file' differ in signedness
+[9-ERROR]   CC	  console/ftp.o
+[9-ERROR] console/ftp.c: In function 'ftp_recv':
+[9-ERROR] console/ftp.c:189: warning: the address of 'ftp_connected', will always evaluate as 'true'
+[9-ERROR] console/ftp.c: In function 'ftp_connect':
+[9-ERROR] console/ftp.c:239: warning: the address of 'ftp_connected', will always evaluate as 'true'
+[9-ERROR]   LD	  console/webcam
+[9-ERROR]   CC	  console/scantv.o
+[9-ERROR] In file included from console/scantv.c:19:
+[9-ERROR] ./common/channel.h:93: error: array type has incomplete element type
+[9-ERROR] ./common/channel.h:94: error: array type has incomplete element type
+[9-ERROR] console/scantv.c: In function 'event':
+[9-ERROR] console/scantv.c:53: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[9-ERROR] console/scantv.c:54: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[9-ERROR] console/scantv.c:54: warning: pointer targets in passing argument 1 of '__strdup' differ in signedness
+[9-ERROR] make: *** [console/scantv.o] Error 1
+[9-ERROR] --- BUILD ERROR ---
 

@@ -20,22 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142651538 Sat Mar 18 04:12:18 2006 (5)
-[TIMESTAMP] 1142920989 Tue Mar 21 07:03:09 2006 (9)
+[TIMESTAMP] 1168693043 Sat Jan 13 13:57:23 2007 (5)
+[TIMESTAMP] 1168902051 Tue Jan 16 00:00:51 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-tuxnes.log 9-tuxnes.log
 
-[BUILDTIME] 2470 (5)
-[BUILDTIME] 2600 (9)
-[SIZE] 4.80 MB, 9 files
+[BUILDTIME] 2602 (5)
+[BUILDTIME] 2684 (9)
+[SIZE] 4.75 MB, 9 files
 
-[DEP] 00-dirtree alsa autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils findutils gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp net-tools netpbm:dev patch perl5
-[DEP] rrdtool sed sysfiles tar texinfo xorg xorg:dev zlib:dev
+[DEP] 00-dirtree alsa applewmproto applewmproto:dev autoconf automake19
+[DEP] bash2 binutils bzip2 coreutils cvm diffutils findutils gawk gcc40
+[DEP] gcc40:dev glibc23 glibc23:dev grep imake libice libsm libx11
+[DEP] libx11:dev libxau libxdmcp libxext libxpm libxpm:dev libxt
+[DEP] linux-libc-headers:dev make mktemp net-tools netpbm:dev patch
+[DEP] perl5 rrdtool sed sysfiles tar texinfo xextproto:dev xorg-cf-files
+[DEP] xproto:dev zlib zlib:dev
 
 [PROVIDES] romfixer tuxnes
 

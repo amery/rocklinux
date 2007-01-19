@@ -20,29 +20,144 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142647770 Sat Mar 18 03:09:30 2006 (5)
-[TIMESTAMP] 1142916919 Tue Mar 21 05:55:19 2006 (9)
+[TIMESTAMP] 1168690884 Sat Jan 13 13:21:24 2007 (5) ERROR
+[TIMESTAMP] 1168899779 Mon Jan 15 23:22:59 2007 (9) ERROR
+[TIMESTAMP] 1168953617 Tue Jan 16 14:20:17 2007 (5) ERROR
+[TIMESTAMP] 1168983332 Tue Jan 16 22:35:32 2007 (9) ERROR
+[TIMESTAMP] 1169123949 Thu Jan 18 13:39:09 2007 (5) ERROR
+[TIMESTAMP] 1169153527 Thu Jan 18 21:52:07 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-kmplayer.log 9-kmplayer.log
+[LOGS] 5-kmplayer.err 9-kmplayer.err
 
-[BUILDTIME] 19048 (5)
-[BUILDTIME] 19337 (9)
-[SIZE] 2.20 MB, 77 files
+[BUILDTIME] 15901 (5) ERROR
+[BUILDTIME] 16100 (9) ERROR
+[BUILDTIME] 16205 (5) ERROR
+[BUILDTIME] 16166 (9) ERROR
+[BUILDTIME] 16210 (5) ERROR
+[BUILDTIME] 16213 (9) ERROR
+[SIZE] 2.19 MB, 72 files
 
-[DEP] 00-dirtree acl acl:dev alsa arts attr attr:dev bash2 binutils
-[DEP] bzip2 coreutils diffutils expat fam fam:dev findutils freetype
-[DEP] freetype:dev gawk gcc34 gcc34:dev gettext glib glib:dev glibc23
-[DEP] glibc23:dev gnome2-dirtree grep gst-plugins gst-plugins:dev
-[DEP] gstreamer gstreamer:dev hicolor-icon-theme kdelibs kdelibs:dev
-[DEP] kile kimdaba koffice:dev kphone libart_lgpl23 libart_lgpl23:dev
-[DEP] libidn libidn:dev libjpeg libpng libpng:dev libxml2 libxml2:dev
-[DEP] linux26-header:dev make mktemp nas net-tools perl5 pkgconfig popt
-[DEP] popt:dev qt33 qt33:dev rrdtool sed sysfiles tar util-linux xine-lib
-[DEP] xine-lib:dev xmms xorg xorg:dev zlib:dev
+[DEP] 00-dirtree acl acl:dev alsa applewmproto applewmproto:dev attr
+[DEP] attr:dev bash2 binutils bzip2 coreutils cups cvm diffutils expat
+[DEP] expat:dev fam fam:dev findutils fontconfig fontconfig:dev freetype
+[DEP] freetype:dev gawk gcc40 gcc40:dev gettext glibc23 glibc23:dev
+[DEP] gnome-libs14 gnome-nettool gnome14-dirtree grep hicolor-icon-theme
+[DEP] imake kdelibs kdelibs:dev libart_lgpl23 libart_lgpl23:dev
+[DEP] libice libice:dev libidn libidn:dev libjpeg libpng libpng:dev
+[DEP] libsm libsm:dev libx11 libx11:dev libxau libxau:dev libxcursor
+[DEP] libxcursor:dev libxdmcp libxdmcp:dev libxext libxext:dev libxfixes
+[DEP] libxfixes:dev libxft libxft:dev libxinerama libxinerama:dev libxml2
+[DEP] libxmu libxmu:dev libxrandr libxrandr:dev libxrender libxrender:dev
+[DEP] libxt libxt:dev libxv libxv:dev linux-libc-headers:dev make mesalib
+[DEP] mktemp nas net-tools perl5 pkgconfig qt33 qt33:dev rrdtool sed
+[DEP] sysfiles tar util-linux videoproto:dev xextproto:dev xine-lib
+[DEP] xine-lib:dev xorg-cf-files xproto:dev zlib zlib:dev
 
-[PROVIDES] kgstplayer kmplayer kmplayer.so kxineplayer kxvplayer
+[PROVIDES] kmplayer kmplayer.so kxineplayer kxvplayer
 [PROVIDES] libkdeinit_kmplayer.so libkmplayercommon.so libkmplayerpart.so
+
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kmplayer.1169123729.28117.3694631316/kmplayer-0.9.1/po'
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kmplayer.1169123729.28117.3694631316/kmplayer-0.9.1/po'
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.kmplayer.1169123729.28117.3694631316/kmplayer-0.9.1'
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.kmplayer.1169123729.28117.3694631316/kmplayer-0.9.1'
+[5-ERROR] make[2]: Nothing to be done for `install-exec-am'.
+[5-ERROR] make[2]: Nothing to be done for `install-data-am'.
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kmplayer.1169123729.28117.3694631316/kmplayer-0.9.1'
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kmplayer.1169123729.28117.3694631316/kmplayer-0.9.1'
+[5-ERROR] Trying to copy the default documentation ...
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing /lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Checking usr/share/applications/kde/kmplayer.desktop ... 
+[5-ERROR] Adding X-ROCK-Name tag (kmplayer)
+[5-ERROR] Checking usr/share/mimelnk/application/x-kmplayer.desktop ... 
+[5-ERROR] Adding Categories tag (AudioVideo)
+[5-ERROR] Adding X-ROCK-Name tag (kmplayer)
+[5-ERROR] Adding Categories tag (AudioVideo)
+[5-ERROR] Adding X-ROCK-Name tag (kmplayer)
+[5-ERROR] Checking usr/share/mimelnk/application/x-mplayer2.desktop ... 
+[5-ERROR] Adding Categories tag (AudioVideo)
+[5-ERROR] Adding X-ROCK-Name tag (kmplayer)
+[5-ERROR] Checking usr/share/mimelnk/video/x-ms-wmp.desktop ... 
+[5-ERROR] Adding Categories tag (AudioVideo)
+[5-ERROR] Adding X-ROCK-Name tag (kmplayer)
+[5-ERROR] Checking usr/share/services/kmplayer_part.desktop ... 
+[5-ERROR] Adding Categories tag (AudioVideo)
+[5-ERROR] Adding X-ROCK-Name tag (kmplayer)
+[5-ERROR] Found 142 files for this package.
+[5-ERROR] Applying package split: 40 kmplayer:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[5-ERROR] Applying package split: 42 kmplayer:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 kmplayer:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <kmplayer> Creating flist file ...
+[5-ERROR] <kmplayer> Creating package dependencies file ...
+[5-ERROR] <kmplayer> Creating package description ...
+[5-ERROR] <kmplayer> Creating md5sum and cksum files ...
+[5-ERROR] <kmplayer:dev> Creating flist file ...
+[5-ERROR] <kmplayer:dev> Creating package dependencies file ...
+[5-ERROR] <kmplayer:dev> Creating package description ...
+[5-ERROR] <kmplayer:dev> Creating md5sum and cksum files ...
+[5-ERROR] <kmplayer:doc> Creating flist file ...
+[5-ERROR] <kmplayer:doc> Creating package dependencies file ...
+[5-ERROR] <kmplayer:doc> Creating package description ...
+[5-ERROR] <kmplayer:doc> Creating md5sum and cksum files ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Found shared files with other packages:
+[5-ERROR] usr/share/mimelnk/application/x-mplayer2.desktop: kdelibs kmplayer
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kmplayer.1169153312.18460.1197622847/kmplayer-0.9.1/po'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kmplayer.1169153312.18460.1197622847/kmplayer-0.9.1/po'
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.kmplayer.1169153312.18460.1197622847/kmplayer-0.9.1'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.kmplayer.1169153312.18460.1197622847/kmplayer-0.9.1'
+[9-ERROR] make[2]: Nothing to be done for `install-exec-am'.
+[9-ERROR] make[2]: Nothing to be done for `install-data-am'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kmplayer.1169153312.18460.1197622847/kmplayer-0.9.1'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kmplayer.1169153312.18460.1197622847/kmplayer-0.9.1'
+[9-ERROR] Trying to copy the default documentation ...
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing /lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Checking usr/share/applications/kde/kmplayer.desktop ... 
+[9-ERROR] Adding X-ROCK-Name tag (kmplayer)
+[9-ERROR] Checking usr/share/mimelnk/application/x-kmplayer.desktop ... 
+[9-ERROR] Adding Categories tag (AudioVideo)
+[9-ERROR] Adding X-ROCK-Name tag (kmplayer)
+[9-ERROR] Adding Categories tag (AudioVideo)
+[9-ERROR] Adding X-ROCK-Name tag (kmplayer)
+[9-ERROR] Checking usr/share/mimelnk/application/x-mplayer2.desktop ... 
+[9-ERROR] Adding Categories tag (AudioVideo)
+[9-ERROR] Adding X-ROCK-Name tag (kmplayer)
+[9-ERROR] Checking usr/share/mimelnk/video/x-ms-wmp.desktop ... 
+[9-ERROR] Adding Categories tag (AudioVideo)
+[9-ERROR] Adding X-ROCK-Name tag (kmplayer)
+[9-ERROR] Checking usr/share/services/kmplayer_part.desktop ... 
+[9-ERROR] Adding Categories tag (AudioVideo)
+[9-ERROR] Adding X-ROCK-Name tag (kmplayer)
+[9-ERROR] Found 142 files for this package.
+[9-ERROR] Applying package split: 40 kmplayer:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[9-ERROR] Applying package split: 42 kmplayer:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 kmplayer:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <kmplayer> Creating flist file ...
+[9-ERROR] <kmplayer> Creating package dependencies file ...
+[9-ERROR] <kmplayer> Creating package description ...
+[9-ERROR] <kmplayer> Creating md5sum and cksum files ...
+[9-ERROR] <kmplayer:dev> Creating flist file ...
+[9-ERROR] <kmplayer:dev> Creating package dependencies file ...
+[9-ERROR] <kmplayer:dev> Creating package description ...
+[9-ERROR] <kmplayer:dev> Creating md5sum and cksum files ...
+[9-ERROR] <kmplayer:doc> Creating flist file ...
+[9-ERROR] <kmplayer:doc> Creating package dependencies file ...
+[9-ERROR] <kmplayer:doc> Creating package description ...
+[9-ERROR] <kmplayer:doc> Creating md5sum and cksum files ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] usr/share/mimelnk/application/x-mplayer2.desktop: kdelibs kmplayer
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] --- BUILD ERROR ---
 

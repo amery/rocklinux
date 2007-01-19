@@ -20,31 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142516839 Thu Mar 16 14:47:19 2006 (5)
-[TIMESTAMP] 1142770406 Sun Mar 19 13:13:26 2006 (9)
+[TIMESTAMP] 1168593147 Fri Jan 12 10:12:27 2007 (5) ERROR
+[TIMESTAMP] 1168794921 Sun Jan 14 18:15:21 2007 (9) ERROR
+[TIMESTAMP] 1168942212 Tue Jan 16 11:10:12 2007 (5) ERROR
+[TIMESTAMP] 1168967801 Tue Jan 16 18:16:41 2007 (9) ERROR
+[TIMESTAMP] 1169085606 Thu Jan 18 03:00:06 2007 (5) ERROR
+[TIMESTAMP] 1169138089 Thu Jan 18 17:34:49 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-opensc.log 9-opensc.log
+[LOGS] 5-opensc.err 9-opensc.err
 
-[BUILDTIME] 13600 (5)
-[BUILDTIME] 14292 (9)
-[SIZE] 1.08 MB, 81 files
+[BUILDTIME] 10379 (5) ERROR
+[BUILDTIME] 10546 (9) ERROR
+[BUILDTIME] 10631 (5) ERROR
+[BUILDTIME] 10647 (9) ERROR
+[BUILDTIME] 10632 (5) ERROR
+[BUILDTIME] 10610 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils flex
-[DEP] flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libassuan:dev
-[DEP] linux26-header:dev m4 make mktemp mozilla ncurses:dev net-tools
-[DEP] openct openct:dev openldap openldap:dev openssl openssl:dev pam
-[DEP] pam:dev pcsc-lite pcsc-lite:dev pkgconfig readline readline:dev
-[DEP] rrdtool sed sysfiles tar util-linux xorg xorg:dev
 
-[PROVIDES] cardos-info cryptoflex-tool engine_opensc.a engine_opensc.so
-[PROVIDES] engine_pkcs11.a engine_pkcs11.so libopensc.a libopensc.so
-[PROVIDES] libpkcs11.a libpkcs11.so libpkcs15init.a libpkcs15init.so
-[PROVIDES] libscam.a libscam.so libscconf.a libscconf.so libscldap.a
-[PROVIDES] libscldap.so opensc-config opensc-explorer opensc-pkcs11.a
-[PROVIDES] opensc-pkcs11.so opensc-signer.a opensc-signer.so opensc-tool
-[PROVIDES] pam_opensc.a pam_opensc.so pkcs11-spy.a pkcs11-spy.so
-[PROVIDES] pkcs11-tool pkcs15-crypt pkcs15-init pkcs15-tool
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src/include -I/usr//include -I/opt/openldap/include -Wall -fno-strict-aliasing -g -O2 -MT p15_eid.lo -MD -MP -MF .deps/p15_eid.Tpo -c p15_eid.c  -fPIC -DPIC -o .libs/p15_eid.o
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src/include -I/usr//include -I/opt/openldap/include -Wall -fno-strict-aliasing -g -O2 -MT p15_eid.lo -MD -MP -MF .deps/p15_eid.Tpo -c p15_eid.c -o p15_eid.o >/dev/null 2>&1
+[5-ERROR] if /bin/sh ../../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I../..   -I../../src/include -I/usr//include  -I/opt/openldap/include  -Wall -fno-strict-aliasing -g -O2  -MT p15_ldap.lo -MD -MP -MF ".deps/p15_ldap.Tpo" \
+[5-ERROR] 	  -c -o p15_ldap.lo `test -f 'p15_ldap.c' || echo './'`p15_ldap.c; \
+[5-ERROR] 	then mv -f ".deps/p15_ldap.Tpo" ".deps/p15_ldap.Plo"; \
+[5-ERROR] 	else rm -f ".deps/p15_ldap.Tpo"; exit 1; \
+[5-ERROR] 	fi
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src/include -I/usr//include -I/opt/openldap/include -Wall -fno-strict-aliasing -g -O2 -MT p15_ldap.lo -MD -MP -MF .deps/p15_ldap.Tpo -c p15_ldap.c  -fPIC -DPIC -o .libs/p15_ldap.o
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src/include -I/usr//include -I/opt/openldap/include -Wall -fno-strict-aliasing -g -O2 -MT p15_ldap.lo -MD -MP -MF .deps/p15_ldap.Tpo -c p15_ldap.c -o p15_ldap.o >/dev/null 2>&1
+[5-ERROR] /bin/sh ../../libtool --mode=link gcc-40  -Wall -fno-strict-aliasing -g -O2   -L/usr//lib  -L/opt/openldap/lib -Wl,-rpath,/opt/openldap/lib -o libscam.la -rpath /usr/lib -version-info 1:0:0 scam.lo cert_support.lo p15_eid.lo p15_ldap.lo ../../src/libopensc/libopensc.la -lcrypto ../../src/scldap/libscldap.la ../scrandom/libscrandom.la -lpthread 
+[5-ERROR] gcc-40 -shared  .libs/scam.o .libs/cert_support.o .libs/p15_eid.o .libs/p15_ldap.o -Wl,--whole-archive ../scrandom/.libs/libscrandom.a -Wl,--no-whole-archive  -Wl,--rpath -Wl,/ROCK/src.opensc.1169085498.10794.3583069520/opensc-0.9.4/src/libopensc/.libs -Wl,--rpath -Wl,/ROCK/src.opensc.1169085498.10794.3583069520/opensc-0.9.4/src/scldap/.libs -L/usr//lib -L/opt/openldap/lib ../../src/libopensc/.libs/libopensc.so -lcrypto ../../src/scldap/.libs/libscldap.so -lpthread  -Wl,-rpath -Wl,/opt/openldap/lib -Wl,-soname -Wl,libscam.so.1 -o .libs/libscam.so.1.0.0
+[5-ERROR] (cd .libs && rm -f libscam.so.1 && ln -s libscam.so.1.0.0 libscam.so.1)
+[5-ERROR] (cd .libs && rm -f libscam.so && ln -s libscam.so.1.0.0 libscam.so)
+[5-ERROR] rm -fr .libs/libscam.lax
+[5-ERROR] mkdir .libs/libscam.lax
+[5-ERROR] rm -fr .libs/libscam.lax/libscrandom.a
+[5-ERROR] mkdir .libs/libscam.lax/libscrandom.a
+[5-ERROR] (cd .libs/libscam.lax/libscrandom.a && ar x /ROCK/src.opensc.1169085498.10794.3583069520/opensc-0.9.4/src/scam/../scrandom/.libs/libscrandom.a)
+[5-ERROR] ar cru .libs/libscam.a  scam.o cert_support.o p15_eid.o p15_ldap.o .libs/libscam.lax/libscrandom.a/scrandom.o 
+[5-ERROR] ranlib .libs/libscam.a
+[5-ERROR] rm -fr .libs/libscam.lax
+[5-ERROR] creating libscam.la
+[5-ERROR] (cd .libs && rm -f libscam.la && ln -s ../libscam.la libscam.la)
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.opensc.1169085498.10794.3583069520/opensc-0.9.4/src/scam'
+[5-ERROR] Making all in pam
+[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.opensc.1169085498.10794.3583069520/opensc-0.9.4/src/pam'
+[5-ERROR] if /bin/sh ../../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src/include -I/usr//include  -I/opt/openldap/include -I../../src/scam  -I../../src/include -I/usr//include  -I/opt/openldap/include  -Wall -fno-strict-aliasing -g -O2  -MT pam_opensc.lo -MD -MP -MF ".deps/pam_opensc.Tpo" \
+[5-ERROR] 	  -c -o pam_opensc.lo `test -f 'pam_opensc.c' || echo './'`pam_opensc.c; \
+[5-ERROR] 	then mv -f ".deps/pam_opensc.Tpo" ".deps/pam_opensc.Plo"; \
+[5-ERROR] 	else rm -f ".deps/pam_opensc.Tpo"; exit 1; \
+[5-ERROR] 	fi
+[5-ERROR] mkdir .libs
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src/include -I/usr//include -I/opt/openldap/include -I../../src/scam -I../../src/include -I/usr//include -I/opt/openldap/include -Wall -fno-strict-aliasing -g -O2 -MT pam_opensc.lo -MD -MP -MF .deps/pam_opensc.Tpo -c pam_opensc.c  -fPIC -DPIC -o .libs/pam_opensc.o
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src/include -I/usr//include -I/opt/openldap/include -I../../src/scam -I../../src/include -I/usr//include -I/opt/openldap/include -Wall -fno-strict-aliasing -g -O2 -MT pam_opensc.lo -MD -MP -MF .deps/pam_opensc.Tpo -c pam_opensc.c -o pam_opensc.o >/dev/null 2>&1
+[5-ERROR] if /bin/sh ../../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src/include -I/usr//include  -I/opt/openldap/include -I../../src/scam  -I../../src/include -I/usr//include  -I/opt/openldap/include  -Wall -fno-strict-aliasing -g -O2  -MT pam_support.lo -MD -MP -MF ".deps/pam_support.Tpo" \
+[5-ERROR] 	  -c -o pam_support.lo `test -f 'pam_support.c' || echo './'`pam_support.c; \
+[5-ERROR] 	then mv -f ".deps/pam_support.Tpo" ".deps/pam_support.Plo"; \
+[5-ERROR] 	else rm -f ".deps/pam_support.Tpo"; exit 1; \
+[5-ERROR] 	fi
+[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src/include -I/usr//include -I/opt/openldap/include -I../../src/scam -I../../src/include -I/usr//include -I/opt/openldap/include -Wall -fno-strict-aliasing -g -O2 -MT pam_support.lo -MD -MP -MF .deps/pam_support.Tpo -c pam_support.c  -fPIC -DPIC -o .libs/pam_support.o
+[5-ERROR] pam_support.c: In function '_cleanup':
+[5-ERROR] pam_support.c:208: error: invalid lvalue in assignment
+[5-ERROR] make[3]: *** [pam_support.lo] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.opensc.1169085498.10794.3583069520/opensc-0.9.4/src/pam'
+[5-ERROR] make[2]: *** [all-recursive] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.opensc.1169085498.10794.3583069520/opensc-0.9.4/src'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.opensc.1169085498.10794.3583069520/opensc-0.9.4'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src/include -I/usr//include -I/opt/openldap/include -Wall -fno-strict-aliasing -g -O2 -MT p15_eid.lo -MD -MP -MF .deps/p15_eid.Tpo -c p15_eid.c  -fPIC -DPIC -o .libs/p15_eid.o
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src/include -I/usr//include -I/opt/openldap/include -Wall -fno-strict-aliasing -g -O2 -MT p15_eid.lo -MD -MP -MF .deps/p15_eid.Tpo -c p15_eid.c -o p15_eid.o >/dev/null 2>&1
+[9-ERROR] if /bin/sh ../../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I../..   -I../../src/include -I/usr//include  -I/opt/openldap/include  -Wall -fno-strict-aliasing -g -O2  -MT p15_ldap.lo -MD -MP -MF ".deps/p15_ldap.Tpo" \
+[9-ERROR] 	  -c -o p15_ldap.lo `test -f 'p15_ldap.c' || echo './'`p15_ldap.c; \
+[9-ERROR] 	then mv -f ".deps/p15_ldap.Tpo" ".deps/p15_ldap.Plo"; \
+[9-ERROR] 	else rm -f ".deps/p15_ldap.Tpo"; exit 1; \
+[9-ERROR] 	fi
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src/include -I/usr//include -I/opt/openldap/include -Wall -fno-strict-aliasing -g -O2 -MT p15_ldap.lo -MD -MP -MF .deps/p15_ldap.Tpo -c p15_ldap.c  -fPIC -DPIC -o .libs/p15_ldap.o
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src/include -I/usr//include -I/opt/openldap/include -Wall -fno-strict-aliasing -g -O2 -MT p15_ldap.lo -MD -MP -MF .deps/p15_ldap.Tpo -c p15_ldap.c -o p15_ldap.o >/dev/null 2>&1
+[9-ERROR] /bin/sh ../../libtool --mode=link gcc-40  -Wall -fno-strict-aliasing -g -O2   -L/usr//lib  -L/opt/openldap/lib -Wl,-rpath,/opt/openldap/lib -o libscam.la -rpath /usr/lib -version-info 1:0:0 scam.lo cert_support.lo p15_eid.lo p15_ldap.lo ../../src/libopensc/libopensc.la -lcrypto ../../src/scldap/libscldap.la ../scrandom/libscrandom.la -lpthread 
+[9-ERROR] gcc-40 -shared  .libs/scam.o .libs/cert_support.o .libs/p15_eid.o .libs/p15_ldap.o -Wl,--whole-archive ../scrandom/.libs/libscrandom.a -Wl,--no-whole-archive  -Wl,--rpath -Wl,/ROCK/src.opensc.1169137982.25176.2177560645/opensc-0.9.4/src/libopensc/.libs -Wl,--rpath -Wl,/ROCK/src.opensc.1169137982.25176.2177560645/opensc-0.9.4/src/scldap/.libs -L/usr//lib -L/opt/openldap/lib ../../src/libopensc/.libs/libopensc.so -lcrypto ../../src/scldap/.libs/libscldap.so -lpthread  -Wl,-rpath -Wl,/opt/openldap/lib -Wl,-soname -Wl,libscam.so.1 -o .libs/libscam.so.1.0.0
+[9-ERROR] (cd .libs && rm -f libscam.so.1 && ln -s libscam.so.1.0.0 libscam.so.1)
+[9-ERROR] (cd .libs && rm -f libscam.so && ln -s libscam.so.1.0.0 libscam.so)
+[9-ERROR] rm -fr .libs/libscam.lax
+[9-ERROR] mkdir .libs/libscam.lax
+[9-ERROR] rm -fr .libs/libscam.lax/libscrandom.a
+[9-ERROR] mkdir .libs/libscam.lax/libscrandom.a
+[9-ERROR] (cd .libs/libscam.lax/libscrandom.a && ar x /ROCK/src.opensc.1169137982.25176.2177560645/opensc-0.9.4/src/scam/../scrandom/.libs/libscrandom.a)
+[9-ERROR] ar cru .libs/libscam.a  scam.o cert_support.o p15_eid.o p15_ldap.o .libs/libscam.lax/libscrandom.a/scrandom.o 
+[9-ERROR] ranlib .libs/libscam.a
+[9-ERROR] rm -fr .libs/libscam.lax
+[9-ERROR] creating libscam.la
+[9-ERROR] (cd .libs && rm -f libscam.la && ln -s ../libscam.la libscam.la)
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.opensc.1169137982.25176.2177560645/opensc-0.9.4/src/scam'
+[9-ERROR] Making all in pam
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.opensc.1169137982.25176.2177560645/opensc-0.9.4/src/pam'
+[9-ERROR] if /bin/sh ../../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src/include -I/usr//include  -I/opt/openldap/include -I../../src/scam  -I../../src/include -I/usr//include  -I/opt/openldap/include  -Wall -fno-strict-aliasing -g -O2  -MT pam_opensc.lo -MD -MP -MF ".deps/pam_opensc.Tpo" \
+[9-ERROR] 	  -c -o pam_opensc.lo `test -f 'pam_opensc.c' || echo './'`pam_opensc.c; \
+[9-ERROR] 	then mv -f ".deps/pam_opensc.Tpo" ".deps/pam_opensc.Plo"; \
+[9-ERROR] 	else rm -f ".deps/pam_opensc.Tpo"; exit 1; \
+[9-ERROR] 	fi
+[9-ERROR] mkdir .libs
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src/include -I/usr//include -I/opt/openldap/include -I../../src/scam -I../../src/include -I/usr//include -I/opt/openldap/include -Wall -fno-strict-aliasing -g -O2 -MT pam_opensc.lo -MD -MP -MF .deps/pam_opensc.Tpo -c pam_opensc.c  -fPIC -DPIC -o .libs/pam_opensc.o
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src/include -I/usr//include -I/opt/openldap/include -I../../src/scam -I../../src/include -I/usr//include -I/opt/openldap/include -Wall -fno-strict-aliasing -g -O2 -MT pam_opensc.lo -MD -MP -MF .deps/pam_opensc.Tpo -c pam_opensc.c -o pam_opensc.o >/dev/null 2>&1
+[9-ERROR] if /bin/sh ../../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src/include -I/usr//include  -I/opt/openldap/include -I../../src/scam  -I../../src/include -I/usr//include  -I/opt/openldap/include  -Wall -fno-strict-aliasing -g -O2  -MT pam_support.lo -MD -MP -MF ".deps/pam_support.Tpo" \
+[9-ERROR] 	  -c -o pam_support.lo `test -f 'pam_support.c' || echo './'`pam_support.c; \
+[9-ERROR] 	then mv -f ".deps/pam_support.Tpo" ".deps/pam_support.Plo"; \
+[9-ERROR] 	else rm -f ".deps/pam_support.Tpo"; exit 1; \
+[9-ERROR] 	fi
+[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I../.. -I../../src/include -I/usr//include -I/opt/openldap/include -I../../src/scam -I../../src/include -I/usr//include -I/opt/openldap/include -Wall -fno-strict-aliasing -g -O2 -MT pam_support.lo -MD -MP -MF .deps/pam_support.Tpo -c pam_support.c  -fPIC -DPIC -o .libs/pam_support.o
+[9-ERROR] pam_support.c: In function '_cleanup':
+[9-ERROR] pam_support.c:208: error: invalid lvalue in assignment
+[9-ERROR] make[3]: *** [pam_support.lo] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.opensc.1169137982.25176.2177560645/opensc-0.9.4/src/pam'
+[9-ERROR] make[2]: *** [all-recursive] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.opensc.1169137982.25176.2177560645/opensc-0.9.4/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.opensc.1169137982.25176.2177560645/opensc-0.9.4'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

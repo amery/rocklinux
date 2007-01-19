@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142563991 Fri Mar 17 03:53:11 2006 (5)
-[TIMESTAMP] 1142824337 Mon Mar 20 04:12:17 2006 (9)
+[TIMESTAMP] 1168630612 Fri Jan 12 20:36:52 2007 (5)
+[TIMESTAMP] 1168835056 Mon Jan 15 05:24:16 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-bglibs.log 9-bglibs.log
 
-[BUILDTIME] 5957 (5)
-[BUILDTIME] 6423 (9)
+[BUILDTIME] 6181 (5)
+[BUILDTIME] 6559 (9)
 [SIZE] 0.03 MB, 26 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp rrdtool sed sysfiles tar zlib:dev
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
+[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev
+[DEP] make mktemp rrdtool sed sysfiles tar zlib:dev
 
 [PROVIDES] base64.a cdb.a cli.a client.a dict.a hex.a iobuf.a ipv4.a iter.a
 [PROVIDES] libbg-adt.a libbg-base64.a libbg-cdb.a libbg-cli.a libbg-crc.a

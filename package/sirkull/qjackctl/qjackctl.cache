@@ -20,23 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142567927 Fri Mar 17 04:58:47 2006 (5)
-[TIMESTAMP] 1142829848 Mon Mar 20 05:44:08 2006 (9)
+[TIMESTAMP] 1168633788 Fri Jan 12 21:29:48 2007 (5) ERROR
+[TIMESTAMP] 1168838919 Mon Jan 15 06:28:39 2007 (9) ERROR
+[TIMESTAMP] 1168948350 Tue Jan 16 12:52:30 2007 (5) ERROR
+[TIMESTAMP] 1168975563 Tue Jan 16 20:26:03 2007 (9) ERROR
+[TIMESTAMP] 1169091766 Thu Jan 18 04:42:46 2007 (5) ERROR
+[TIMESTAMP] 1169145851 Thu Jan 18 19:44:11 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-qjackctl.log 9-qjackctl.log
+[LOGS] 5-qjackctl.err 9-qjackctl.err
 
-[BUILDTIME] 8563 (5)
-[BUILDTIME] 9013 (9)
-[SIZE] 0.80 MB, 8 files
+[BUILDTIME] 969 (5) ERROR
+[BUILDTIME] 1002 (9) ERROR
+[BUILDTIME] 996 (5) ERROR
+[BUILDTIME] 999 (9) ERROR
+[BUILDTIME] 1023 (5) ERROR
+[BUILDTIME] 1005 (9) ERROR
 
-[DEP] 00-dirtree alsa alsa:dev arts bash2 binutils bzip2 coreutils
-[DEP] diffutils expat findutils freetype gawk gcc34 gcc34:dev glibc23
-[DEP] glibc23:dev grep jack jack:dev kdelibs libpng linux26-header:dev
-[DEP] make mktemp nas net-tools patch qt33 qt33:dev rrdtool sed sysfiles
-[DEP] tar util-linux xorg xorg:dev
 
-[PROVIDES] qjackctl
+[5-ERROR] Running main build function 'build_this_package' ...
+[5-ERROR] Extracting qjackctl-0.2.14.tar.bz2 (--use-compress-program=bzip2 -xf) ... 
+[5-ERROR] Fixing ownership and permissions ...
+[5-ERROR] Removing CVS and .svn directories ...
+[5-ERROR] Changeing into /ROCK/src.qjackctl.1169091756.10565.905555977/qjackctl-0.2.14 ...
+[5-ERROR] Apply patch /ROCK/package/sirkull/qjackctl/hotfixes.patch ...
+[5-ERROR] patching file src/qjackctlConnectionsForm.ui
+[5-ERROR] patching file src/qjackctlPatchbayForm.ui
+[5-ERROR] Creating /usr/<..> if required ...
+[5-ERROR] Removing unsupported '--with-mysql-lib=/opt/mysql/lib/mysql' from configure option string.
+[5-ERROR] Removing unsupported '--with-mysql-include=/opt/mysql/include/mysql' from configure option string.
+[5-ERROR] Removing unsupported '--with-libpam' from configure option string.
+[5-ERROR] Removing unsupported '--with-pam' from configure option string.
+[5-ERROR] Autodetection for option impossible:  --enable-libpam passed thru.
+[5-ERROR] Autodetection for option impossible:  --enable-pam passed thru.
+[5-ERROR] Removing unsupported '--with-qt-dir=/opt/qt33' from configure option string.
+[5-ERROR] Removing unsupported '--with-qt-includes=/opt/qt33/include' from configure option string.
+[5-ERROR] Removing unsupported '--with-qt-libraries=/opt/qt33/lib' from configure option string.
+[5-ERROR] Removing unsupported '--with-ldap=//opt/openldap' from configure option string.
+[5-ERROR] Removing unsupported '--with-xinerama' from configure option string.
+[5-ERROR] Running  bash ./configure --prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --libdir=/usr/lib --datadir=/usr/share --includedir=/usr/include --infodir=/usr/share/info --mandir=/usr/share/man --sysconfdir=/etc --localstatedir=/var --disable-debug --enable-libpam --enable-pam --build=i386-unknown-linux-gnu --host=i386-unknown-linux-gnu
+[5-ERROR] checking for i386-unknown-linux-gnu-gcc... gcc-40
+[5-ERROR] checking for C compiler default output file name... a.out
+[5-ERROR] checking whether the C compiler works... yes
+[5-ERROR] checking whether we are cross compiling... no
+[5-ERROR] checking for suffix of executables... 
+[5-ERROR] checking for suffix of object files... o
+[5-ERROR] checking whether we are using the GNU C compiler... yes
+[5-ERROR] checking whether gcc-40 accepts -g... yes
+[5-ERROR] checking for gcc-40 option to accept ANSI C... none needed
+[5-ERROR] checking how to run the C preprocessor... gcc-40 -E
+[5-ERROR] checking for i386-unknown-linux-gnu-g++... g++-40
+[5-ERROR] checking whether we are using the GNU C++ compiler... yes
+[5-ERROR] checking whether g++-40 accepts -g... yes
+[5-ERROR] checking how to run the C++ preprocessor... g++-40 -E
+[5-ERROR] checking for egrep... grep -E
+[5-ERROR] checking whether gcc-40 needs -traditional... no
+[5-ERROR] checking whether QTDIR environment variable is set... /opt/qt33
+[5-ERROR] checking for Qt library... qt-mt
+[5-ERROR] checking for Qt library version >= 3.1.1... yes
+[5-ERROR] checking for qmake... /opt/qt33/bin/qmake
+[5-ERROR] checking for moc... /opt/qt33/bin/moc
+[5-ERROR] checking for uic... /opt/qt33/bin/uic
+[5-ERROR] checking for main in -lm... yes
+[5-ERROR] checking for main in -lX11... yes
+[5-ERROR] checking for main in -lXext... yes
+[5-ERROR] checking for main in -lqt-mt... yes
+[5-ERROR] checking for main in -ljack... no
+[5-ERROR] configure: error: JACK library not found.
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] Running main build function 'build_this_package' ...
+[9-ERROR] Extracting qjackctl-0.2.14.tar.bz2 (--use-compress-program=bzip2 -xf) ... 
+[9-ERROR] Fixing ownership and permissions ...
+[9-ERROR] Removing CVS and .svn directories ...
+[9-ERROR] Changeing into /ROCK/src.qjackctl.1169145840.12050.467538766/qjackctl-0.2.14 ...
+[9-ERROR] Apply patch /ROCK/package/sirkull/qjackctl/hotfixes.patch ...
+[9-ERROR] patching file src/qjackctlConnectionsForm.ui
+[9-ERROR] patching file src/qjackctlPatchbayForm.ui
+[9-ERROR] Creating /usr/<..> if required ...
+[9-ERROR] Removing unsupported '--with-mysql-lib=/opt/mysql/lib/mysql' from configure option string.
+[9-ERROR] Removing unsupported '--with-mysql-include=/opt/mysql/include/mysql' from configure option string.
+[9-ERROR] Removing unsupported '--with-libpam' from configure option string.
+[9-ERROR] Removing unsupported '--with-pam' from configure option string.
+[9-ERROR] Autodetection for option impossible:  --enable-libpam passed thru.
+[9-ERROR] Autodetection for option impossible:  --enable-pam passed thru.
+[9-ERROR] Removing unsupported '--with-qt-dir=/opt/qt33' from configure option string.
+[9-ERROR] Removing unsupported '--with-qt-includes=/opt/qt33/include' from configure option string.
+[9-ERROR] Removing unsupported '--with-qt-libraries=/opt/qt33/lib' from configure option string.
+[9-ERROR] Removing unsupported '--with-ldap=//opt/openldap' from configure option string.
+[9-ERROR] Removing unsupported '--with-xinerama' from configure option string.
+[9-ERROR] Running  bash ./configure --prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --libdir=/usr/lib --datadir=/usr/share --includedir=/usr/include --infodir=/usr/share/info --mandir=/usr/share/man --sysconfdir=/etc --localstatedir=/var --disable-debug --enable-libpam --enable-pam --build=i386-unknown-linux-gnu --host=i386-unknown-linux-gnu
+[9-ERROR] checking for i386-unknown-linux-gnu-gcc... gcc-40
+[9-ERROR] checking for C compiler default output file name... a.out
+[9-ERROR] checking whether the C compiler works... yes
+[9-ERROR] checking whether we are cross compiling... no
+[9-ERROR] checking for suffix of executables... 
+[9-ERROR] checking for suffix of object files... o
+[9-ERROR] checking whether we are using the GNU C compiler... yes
+[9-ERROR] checking whether gcc-40 accepts -g... yes
+[9-ERROR] checking for gcc-40 option to accept ANSI C... none needed
+[9-ERROR] checking how to run the C preprocessor... gcc-40 -E
+[9-ERROR] checking for i386-unknown-linux-gnu-g++... g++-40
+[9-ERROR] checking whether we are using the GNU C++ compiler... yes
+[9-ERROR] checking whether g++-40 accepts -g... yes
+[9-ERROR] checking how to run the C++ preprocessor... g++-40 -E
+[9-ERROR] checking for egrep... grep -E
+[9-ERROR] checking whether gcc-40 needs -traditional... no
+[9-ERROR] checking whether QTDIR environment variable is set... /opt/qt33
+[9-ERROR] checking for Qt library... qt-mt
+[9-ERROR] checking for Qt library version >= 3.1.1... yes
+[9-ERROR] checking for qmake... /opt/qt33/bin/qmake
+[9-ERROR] checking for moc... /opt/qt33/bin/moc
+[9-ERROR] checking for uic... /opt/qt33/bin/uic
+[9-ERROR] checking for main in -lm... yes
+[9-ERROR] checking for main in -lX11... yes
+[9-ERROR] checking for main in -lXext... yes
+[9-ERROR] checking for main in -lqt-mt... yes
+[9-ERROR] checking for main in -ljack... no
+[9-ERROR] configure: error: JACK library not found.
+[9-ERROR] --- BUILD ERROR ---
 

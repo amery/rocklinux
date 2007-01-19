@@ -20,24 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142495504 Thu Mar 16 08:51:44 2006 (5)
-[TIMESTAMP] 1142745530 Sun Mar 19 06:18:50 2006 (9)
+[TIMESTAMP] 1168571608 Fri Jan 12 04:13:28 2007 (5)
+[TIMESTAMP] 1168769759 Sun Jan 14 11:15:59 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-gail.log 9-gail.log
 
-[BUILDTIME] 11527 (5)
-[BUILDTIME] 12287 (9)
-[SIZE] 0.73 MB, 75 files
+[BUILDTIME] 11464 (5)
+[BUILDTIME] 12066 (9)
+[SIZE] 0.40 MB, 17 files
 
-[DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 cairo cairo:dev coreutils
-[DEP] diffutils findutils freetype:dev gawk gcc34 gcc34:dev gettext glib
-[DEP] glib:dev glibc23 glibc23:dev gnome2-dirtree grep gtk+ gtk+:dev
-[DEP] libart_lgpl23 libart_lgpl23:dev libgnomecanvas libgnomecanvas:dev
-[DEP] libpng:dev linux26-header:dev make mktemp net-tools pango pango:dev
-[DEP] pkgconfig rrdtool sed sysfiles tar util-linux xorg xorg:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev atk atk:dev bash2
+[DEP] binutils bzip2 cairo cairo:dev coreutils cvm diffutils expat:dev
+[DEP] findutils fontconfig:dev freetype:dev gawk gcc40 gcc40:dev gettext
+[DEP] glib glib:dev glib:doc glibc23 glibc23:dev gnome2-dirtree grep
+[DEP] gtk+ gtk+:dev libart_lgpl23 libart_lgpl23:dev libgnomecanvas
+[DEP] libgnomecanvas:dev libpng:dev libx11:dev libxau:dev libxdmcp:dev
+[DEP] libxrender:dev linux-libc-headers:dev make mktemp net-tools pango
+[DEP] pango:dev pkgconfig rrdtool sed sysfiles tar util-linux xproto:dev
 
 [PROVIDES] libferret.so libgail.so libgailutil.so
 

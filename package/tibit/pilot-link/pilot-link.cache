@@ -20,23 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142501086 Thu Mar 16 10:24:46 2006 (5)
-[TIMESTAMP] 1142751912 Sun Mar 19 08:05:12 2006 (9)
+[TIMESTAMP] 1168577759 Fri Jan 12 05:55:59 2007 (5)
+[TIMESTAMP] 1168776503 Sun Jan 14 13:08:23 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-pilot-link.log 9-pilot-link.log
 
-[BUILDTIME] 10978 (5)
-[BUILDTIME] 11694 (9)
-[SIZE] 0.97 MB, 102 files
+[BUILDTIME] 11189 (5)
+[BUILDTIME] 12019 (9)
+[SIZE] 0.95 MB, 102 files
 
-[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev
-[DEP] grep libpng libpng:dev libtool linux26-header:dev m4 make mktemp
-[DEP] ncurses:dev net-tools patch perl5 python python:dev readline rrdtool
-[DEP] sed sysfiles tar tcl tcl:dev tk util-linux xorg zlib:dev
+[DEP] 00-dirtree applewmproto autoconf automake19 bash2 binutils bzip2
+[DEP] coreutils cvm diffutils findutils gawk gcc40 gcc40:dev glibc23
+[DEP] glibc23:dev grep libpng libpng:dev libtool libx11 libx11:dev
+[DEP] libxau libxau:dev libxdmcp libxdmcp:dev linux-libc-headers:dev
+[DEP] m4 make mktemp ncurses ncurses:dev net-tools netpbm patch perl5
+[DEP] python python:dev readline readline:dev rrdtool sed sysfiles tar
+[DEP] tcl tcl:dev tk twoftpd ucspi-unix util-linux zlib zlib:dev
 
 [PROVIDES] Pilot.so addresses ccexample debugsh dlpsh hinotes ietf2datebook
 [PROVIDES] install-datebook install-expenses install-hinote install-memo

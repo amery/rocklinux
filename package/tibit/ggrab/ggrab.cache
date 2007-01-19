@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142608336 Fri Mar 17 16:12:16 2006 (5)
-[TIMESTAMP] 1142874052 Mon Mar 20 18:00:52 2006 (9)
+[TIMESTAMP] 1168664496 Sat Jan 13 06:01:36 2007 (5)
+[TIMESTAMP] 1168872292 Mon Jan 15 15:44:52 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-ggrab.log 9-ggrab.log
 
-[BUILDTIME] 1474 (5)
-[BUILDTIME] 1720 (9)
+[BUILDTIME] 1493 (5)
+[BUILDTIME] 1687 (9)
 [SIZE] 0.06 MB, 8 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp patch
-[DEP] rrdtool sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils gawk gcc40
+[DEP] gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev make
+[DEP] mktemp patch rrdtool sed sysfiles tar
 
 [PROVIDES] ggrab sserver
 

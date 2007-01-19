@@ -20,26 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142641930 Sat Mar 18 01:32:10 2006 (5)
-[TIMESTAMP] 1142910142 Tue Mar 21 04:02:22 2006 (9)
+[TIMESTAMP] 1168687678 Sat Jan 13 12:27:58 2007 (5) ERROR
+[TIMESTAMP] 1168896191 Mon Jan 15 22:23:11 2007 (9) ERROR
+[TIMESTAMP] 1168953109 Tue Jan 16 14:11:49 2007 (5) ERROR
+[TIMESTAMP] 1168982806 Tue Jan 16 22:26:46 2007 (9) ERROR
+[TIMESTAMP] 1169123433 Thu Jan 18 13:30:33 2007 (5) ERROR
+[TIMESTAMP] 1169153016 Thu Jan 18 21:43:36 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-eterm16.log 9-eterm16.log
+[LOGS] 5-eterm16.err 9-eterm16.err
 
-[BUILDTIME] 8829 (5)
-[BUILDTIME] 8951 (9)
-[SIZE] 0.91 MB, 68 files
+[BUILDTIME] 4935 (5) ERROR
+[BUILDTIME] 4985 (9) ERROR
+[BUILDTIME] 5007 (5) ERROR
+[BUILDTIME] 5028 (9) ERROR
+[BUILDTIME] 4998 (5) ERROR
+[BUILDTIME] 4986 (9) ERROR
 
-[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils enlightenment16 findutils fnlib freetype freetype1
-[DEP] freetype1:dev freetype:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev
-[DEP] grep groff imlib2 imlib2:dev linux26-header:dev make man mktemp
-[DEP] ncurses net-tools pcre pcre:dev perl5 rrdtool sed sysfiles tar
-[DEP] texinfo xorg xorg:dev zlib:dev
 
-[PROVIDES] Esetroot Etbg Etbg_update_list Etcolors Eterm Etsearch Ettable
-[PROVIDES] kEsetroot libEterm-0.9.3.so libEterm.a libEterm.so libast-config
-[PROVIDES] libast.a libast.so
+[5-ERROR] creating themes/Eterm/theme.cfg
+[5-ERROR] creating themes/auto/theme.cfg
+[5-ERROR] creating themes/Escreen/theme.cfg
+[5-ERROR] creating themes/trans/theme.cfg
+[5-ERROR] 
+[5-ERROR] Eterm 0.9.3
+[5-ERROR] Configuration:
+[5-ERROR] --------------
+[5-ERROR] 
+[5-ERROR]   Source code location:       .
+[5-ERROR]   Host System Type:           i386-unknown-linux-gnu
+[5-ERROR]   Preprocessor:               gcc-40 -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include 
+[5-ERROR]   Compiler:	              gcc-40 -I/opt/e16/include -I//opt/gnome/include 
+[5-ERROR]   Linker:                     gcc-40 -L/opt/e16/lib -L/usr/X11R7/lib -L/opt/e17/lib -L/opt/e16/lib -L/usr/X11R7/lib -L/opt/e17/lib  -lImlib2 -lttf -ldl -L/opt/e17/lib -lImlib2 -lfreetype -lz -L/usr/X11R7/lib -lX11 -lXext -ldl -lm  -lSM -lICE -lpcre    -lSM -lICE -lXmu -last -lXext -lX11 -lutil -lm  
+[5-ERROR]   Install path:		      /opt/e16
+[5-ERROR] 
+[5-ERROR]   See src/feature.h for further configuration information.
+[5-ERROR] 
+[5-ERROR]   Now type 'make' to build Eterm 0.9.3.
+[5-ERROR] 
+[5-ERROR] make  all-recursive
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.eterm16.1169123378.10464.1893599440/Eterm-0.9.3'
+[5-ERROR] Making all in src
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.eterm16.1169123378.10464.1893599440/Eterm-0.9.3/src'
+[5-ERROR] /bin/sh ../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include   -I/opt/e16/include -I//opt/gnome/include  -c actions.c
+[5-ERROR] mkdir .libs
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I//opt/gnome/include -c actions.c  -fPIC -DPIC -o .libs/actions.lo
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I//opt/gnome/include -c actions.c -o actions.o >/dev/null 2>&1
+[5-ERROR] mv -f .libs/actions.lo actions.lo
+[5-ERROR] /bin/sh ../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include   -I/opt/e16/include -I//opt/gnome/include  -c buttons.c
+[5-ERROR] rm -f .libs/buttons.lo
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I//opt/gnome/include -c buttons.c  -fPIC -DPIC -o .libs/buttons.lo
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I//opt/gnome/include -c buttons.c -o buttons.o >/dev/null 2>&1
+[5-ERROR] mv -f .libs/buttons.lo buttons.lo
+[5-ERROR] /bin/sh ../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include   -I/opt/e16/include -I//opt/gnome/include  -c command.c
+[5-ERROR] rm -f .libs/command.lo
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I//opt/gnome/include -c command.c  -fPIC -DPIC -o .libs/command.lo
+[5-ERROR] command.c: In function 'inp_text':
+[5-ERROR] command.c:2560: warning: pointer targets in passing argument 1 of 'tt_write' differ in signedness
+[5-ERROR] command.c: In function 'init_command':
+[5-ERROR] command.c:3005: error: invalid lvalue in assignment
+[5-ERROR] command.c:3007: error: invalid lvalue in assignment
+[5-ERROR] command.c: In function 'main_loop':
+[5-ERROR] command.c:3472: warning: pointer targets in passing argument 1 of 'safe_print_string' differ in signedness
+[5-ERROR] make[2]: *** [command.lo] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.eterm16.1169123378.10464.1893599440/Eterm-0.9.3/src'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.eterm16.1169123378.10464.1893599440/Eterm-0.9.3'
+[5-ERROR] make: *** [all-recursive-am] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] creating themes/Eterm/theme.cfg
+[9-ERROR] creating themes/auto/theme.cfg
+[9-ERROR] creating themes/Escreen/theme.cfg
+[9-ERROR] creating themes/trans/theme.cfg
+[9-ERROR] 
+[9-ERROR] Eterm 0.9.3
+[9-ERROR] Configuration:
+[9-ERROR] --------------
+[9-ERROR] 
+[9-ERROR]   Source code location:       .
+[9-ERROR]   Host System Type:           i386-unknown-linux-gnu
+[9-ERROR]   Preprocessor:               gcc-40 -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include 
+[9-ERROR]   Compiler:	              gcc-40 -I/opt/e16/include -I//opt/gnome/include 
+[9-ERROR]   Linker:                     gcc-40 -L/opt/e16/lib -L/usr/X11R7/lib -L/opt/e17/lib -L/opt/e16/lib -L/usr/X11R7/lib -L/opt/e17/lib  -lImlib2 -lttf -ldl -L/opt/e17/lib -lImlib2 -lfreetype -lz -L/usr/X11R7/lib -lX11 -lXext -ldl -lm  -lSM -lICE -lpcre    -lSM -lICE -lXmu -last -lXext -lX11 -lutil -lm  
+[9-ERROR]   Install path:		      /opt/e16
+[9-ERROR] 
+[9-ERROR]   See src/feature.h for further configuration information.
+[9-ERROR] 
+[9-ERROR]   Now type 'make' to build Eterm 0.9.3.
+[9-ERROR] 
+[9-ERROR] make  all-recursive
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.eterm16.1169152961.755.1197622847/Eterm-0.9.3'
+[9-ERROR] Making all in src
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.eterm16.1169152961.755.1197622847/Eterm-0.9.3/src'
+[9-ERROR] /bin/sh ../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include   -I/opt/e16/include -I//opt/gnome/include  -c actions.c
+[9-ERROR] mkdir .libs
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I//opt/gnome/include -c actions.c  -fPIC -DPIC -o .libs/actions.lo
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I//opt/gnome/include -c actions.c -o actions.o >/dev/null 2>&1
+[9-ERROR] mv -f .libs/actions.lo actions.lo
+[9-ERROR] /bin/sh ../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include   -I/opt/e16/include -I//opt/gnome/include  -c buttons.c
+[9-ERROR] rm -f .libs/buttons.lo
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I//opt/gnome/include -c buttons.c  -fPIC -DPIC -o .libs/buttons.lo
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I//opt/gnome/include -c buttons.c -o buttons.o >/dev/null 2>&1
+[9-ERROR] mv -f .libs/buttons.lo buttons.lo
+[9-ERROR] /bin/sh ../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include   -I/opt/e16/include -I//opt/gnome/include  -c command.c
+[9-ERROR] rm -f .libs/command.lo
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I/usr/X11R7/include -I/opt/e17/include -I/opt/e16/include -I//opt/gnome/include -c command.c  -fPIC -DPIC -o .libs/command.lo
+[9-ERROR] command.c: In function 'inp_text':
+[9-ERROR] command.c:2560: warning: pointer targets in passing argument 1 of 'tt_write' differ in signedness
+[9-ERROR] command.c: In function 'init_command':
+[9-ERROR] command.c:3005: error: invalid lvalue in assignment
+[9-ERROR] command.c:3007: error: invalid lvalue in assignment
+[9-ERROR] command.c: In function 'main_loop':
+[9-ERROR] command.c:3472: warning: pointer targets in passing argument 1 of 'safe_print_string' differ in signedness
+[9-ERROR] make[2]: *** [command.lo] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.eterm16.1169152961.755.1197622847/Eterm-0.9.3/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.eterm16.1169152961.755.1197622847/Eterm-0.9.3'
+[9-ERROR] make: *** [all-recursive-am] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

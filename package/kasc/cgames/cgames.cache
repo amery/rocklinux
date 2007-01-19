@@ -1,18 +1,123 @@
 
-[TIMESTAMP] 1142588047 Fri Mar 17 10:34:07 2006 (5)
-[TIMESTAMP] 1142852373 Mon Mar 20 11:59:33 2006 (9)
+[TIMESTAMP] 1168648457 Sat Jan 13 01:34:17 2007 (5) ERROR
+[TIMESTAMP] 1168854944 Mon Jan 15 10:55:44 2007 (9) ERROR
+[TIMESTAMP] 1168948986 Tue Jan 16 13:03:06 2007 (5) ERROR
+[TIMESTAMP] 1168978900 Tue Jan 16 21:21:40 2007 (9) ERROR
+[TIMESTAMP] 1169092402 Thu Jan 18 04:53:22 2007 (5) ERROR
+[TIMESTAMP] 1169149172 Thu Jan 18 20:39:32 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-cgames.log 9-cgames.log
+[LOGS] 5-cgames.err 9-cgames.err
 
-[BUILDTIME] 1530 (5)
-[BUILDTIME] 1820 (9)
-[SIZE] 0.16 MB, 20 files
+[BUILDTIME] 846 (5) ERROR
+[BUILDTIME] 840 (9) ERROR
+[BUILDTIME] 861 (5) ERROR
+[BUILDTIME] 876 (9) ERROR
+[BUILDTIME] 886 (5) ERROR
+[BUILDTIME] 881 (9) ERROR
 
-[DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev gpm gpm:dev grep
-[DEP] linux26-header:dev make mktemp net-tools rrdtool sed sysfiles tar
 
+[5-ERROR] userio.c:50: warning: data definition has no type or storage class
+[5-ERROR] userio.c:63: error: syntax error before 'lastgpm'
+[5-ERROR] userio.c:63: warning: type defaults to 'int' in declaration of 'lastgpm'
+[5-ERROR] userio.c:63: warning: data definition has no type or storage class
+[5-ERROR] userio.c: In function 'out':
+[5-ERROR] userio.c:274: error: request for member 'y' in something not a structure or union
+[5-ERROR] userio.c:274: warning: implicit declaration of function 'GPM_DRAWPOINTER'
+[5-ERROR] userio.c: In function 'getkey':
+[5-ERROR] userio.c:457: error: 'gpm_fd' undeclared (first use in this function)
+[5-ERROR] userio.c:457: error: (Each undeclared identifier is reported only once
+[5-ERROR] userio.c:457: error: for each function it appears in.)
+[5-ERROR] userio.c:461: warning: implicit declaration of function 'Gpm_Getchar'
+[5-ERROR] userio.c:458: error: invalid lvalue in asm output 0
+[5-ERROR] userio.c: In function 'input':
+[5-ERROR] userio.c:486: error: request for member 'y' in something not a structure or union
+[5-ERROR] userio.c: At top level:
+[5-ERROR] userio.c:519: error: syntax error before '*' token
+[5-ERROR] userio.c: In function 'mousehandler':
+[5-ERROR] userio.c:523: error: 'clientdata' undeclared (first use in this function)
+[5-ERROR] userio.c:524: error: 'event' undeclared (first use in this function)
+[5-ERROR] userio.c:527: error: 'GPM_DOWN' undeclared (first use in this function)
+[5-ERROR] userio.c:527: error: 'GPM_UP' undeclared (first use in this function)
+[5-ERROR] userio.c:528: error: 'GPM_B_MIDDLE' undeclared (first use in this function)
+[5-ERROR] userio.c:532: error: 'GPM_B_LEFT' undeclared (first use in this function)
+[5-ERROR] userio.c:534: error: 'GPM_B_RIGHT' undeclared (first use in this function)
+[5-ERROR] userio.c: In function 'startup':
+[5-ERROR] userio.c:557: error: 'gpm_zerobased' undeclared (first use in this function)
+[5-ERROR] userio.c:557: error: 'gpm_handler' undeclared (first use in this function)
+[5-ERROR] userio.c:557: warning: left-hand operand of comma expression has no effect
+[5-ERROR] userio.c:557: error: request for member 'eventMask' in something not a structure or union
+[5-ERROR] userio.c:557: error: 'GPM_DOWN' undeclared (first use in this function)
+[5-ERROR] userio.c:557: error: 'GPM_UP' undeclared (first use in this function)
+[5-ERROR] userio.c:557: warning: left-hand operand of comma expression has no effect
+[5-ERROR] userio.c:557: error: request for member 'defaultMask' in something not a structure or union
+[5-ERROR] userio.c:557: error: 'GPM_MOVE' undeclared (first use in this function)
+[5-ERROR] userio.c:557: error: 'GPM_HARD' undeclared (first use in this function)
+[5-ERROR] userio.c:557: warning: left-hand operand of comma expression has no effect
+[5-ERROR] userio.c:557: error: request for member 'minMod' in something not a structure or union
+[5-ERROR] userio.c:557: warning: left-hand operand of comma expression has no effect
+[5-ERROR] userio.c:557: error: request for member 'maxMod' in something not a structure or union
+[5-ERROR] userio.c:557: warning: left-hand operand of comma expression has no effect
+[5-ERROR] userio.c:557: warning: implicit declaration of function 'Gpm_Open'
+[5-ERROR] userio.c:557: warning: left-hand operand of comma expression has no effect
+[5-ERROR] userio.c:558: error: request for member 'y' in something not a structure or union
+[5-ERROR] userio.c: In function 'shutdown':
+[5-ERROR] userio.c:569: warning: implicit declaration of function 'Gpm_Close'
+[5-ERROR] make[1]: *** [userio.o] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.cgames.1169092393.29030.905555977/cgames-2.2/cmines'
+[5-ERROR] make: *** [cmines-build] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] userio.c:50: warning: data definition has no type or storage class
+[9-ERROR] userio.c:63: error: syntax error before 'lastgpm'
+[9-ERROR] userio.c:63: warning: type defaults to 'int' in declaration of 'lastgpm'
+[9-ERROR] userio.c:63: warning: data definition has no type or storage class
+[9-ERROR] userio.c: In function 'out':
+[9-ERROR] userio.c:274: error: request for member 'y' in something not a structure or union
+[9-ERROR] userio.c:274: warning: implicit declaration of function 'GPM_DRAWPOINTER'
+[9-ERROR] userio.c: In function 'getkey':
+[9-ERROR] userio.c:457: error: 'gpm_fd' undeclared (first use in this function)
+[9-ERROR] userio.c:457: error: (Each undeclared identifier is reported only once
+[9-ERROR] userio.c:457: error: for each function it appears in.)
+[9-ERROR] userio.c:461: warning: implicit declaration of function 'Gpm_Getchar'
+[9-ERROR] userio.c:458: error: invalid lvalue in asm output 0
+[9-ERROR] userio.c: In function 'input':
+[9-ERROR] userio.c:486: error: request for member 'y' in something not a structure or union
+[9-ERROR] userio.c: At top level:
+[9-ERROR] userio.c:519: error: syntax error before '*' token
+[9-ERROR] userio.c: In function 'mousehandler':
+[9-ERROR] userio.c:523: error: 'clientdata' undeclared (first use in this function)
+[9-ERROR] userio.c:524: error: 'event' undeclared (first use in this function)
+[9-ERROR] userio.c:527: error: 'GPM_DOWN' undeclared (first use in this function)
+[9-ERROR] userio.c:527: error: 'GPM_UP' undeclared (first use in this function)
+[9-ERROR] userio.c:528: error: 'GPM_B_MIDDLE' undeclared (first use in this function)
+[9-ERROR] userio.c:532: error: 'GPM_B_LEFT' undeclared (first use in this function)
+[9-ERROR] userio.c:534: error: 'GPM_B_RIGHT' undeclared (first use in this function)
+[9-ERROR] userio.c: In function 'startup':
+[9-ERROR] userio.c:557: error: 'gpm_zerobased' undeclared (first use in this function)
+[9-ERROR] userio.c:557: error: 'gpm_handler' undeclared (first use in this function)
+[9-ERROR] userio.c:557: warning: left-hand operand of comma expression has no effect
+[9-ERROR] userio.c:557: error: request for member 'eventMask' in something not a structure or union
+[9-ERROR] userio.c:557: error: 'GPM_DOWN' undeclared (first use in this function)
+[9-ERROR] userio.c:557: error: 'GPM_UP' undeclared (first use in this function)
+[9-ERROR] userio.c:557: warning: left-hand operand of comma expression has no effect
+[9-ERROR] userio.c:557: error: request for member 'defaultMask' in something not a structure or union
+[9-ERROR] userio.c:557: error: 'GPM_MOVE' undeclared (first use in this function)
+[9-ERROR] userio.c:557: error: 'GPM_HARD' undeclared (first use in this function)
+[9-ERROR] userio.c:557: warning: left-hand operand of comma expression has no effect
+[9-ERROR] userio.c:557: error: request for member 'minMod' in something not a structure or union
+[9-ERROR] userio.c:557: warning: left-hand operand of comma expression has no effect
+[9-ERROR] userio.c:557: error: request for member 'maxMod' in something not a structure or union
+[9-ERROR] userio.c:557: warning: left-hand operand of comma expression has no effect
+[9-ERROR] userio.c:557: warning: implicit declaration of function 'Gpm_Open'
+[9-ERROR] userio.c:557: warning: left-hand operand of comma expression has no effect
+[9-ERROR] userio.c:558: error: request for member 'y' in something not a structure or union
+[9-ERROR] userio.c: In function 'shutdown':
+[9-ERROR] userio.c:569: warning: implicit declaration of function 'Gpm_Close'
+[9-ERROR] make[1]: *** [userio.o] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.cgames.1169149163.20717.453632617/cgames-2.2/cmines'
+[9-ERROR] make: *** [cmines-build] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

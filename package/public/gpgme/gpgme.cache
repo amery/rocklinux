@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142525376 Thu Mar 16 17:09:36 2006 (5)
-[TIMESTAMP] 1142780452 Sun Mar 19 16:00:52 2006 (9)
+[TIMESTAMP] 1168600795 Fri Jan 12 12:19:55 2007 (5)
+[TIMESTAMP] 1168803058 Sun Jan 14 20:30:58 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-gpgme.log 9-gpgme.log
 
-[BUILDTIME] 6759 (5)
-[BUILDTIME] 7313 (9)
-[SIZE] 0.68 MB, 18 files
+[BUILDTIME] 6731 (5)
+[BUILDTIME] 7238 (9)
+[SIZE] 0.67 MB, 18 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev gnupg gnupg2 grep libassuan:dev
-[DEP] libgpg-error libgpg-error:dev linux26-header:dev make mktemp
-[DEP] net-tools pth pth:dev rrdtool sed sysfiles tar texinfo util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
+[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev gnupg gnupg2 grep
+[DEP] libassuan:dev libgpg-error libgpg-error:dev linux-libc-headers:dev
+[DEP] make mktemp net-tools pth pth:dev rrdtool sed sysfiles tar texinfo
+[DEP] util-linux
 
 [PROVIDES] gpgme-config libgpgme-pth.so libgpgme-pthread.so libgpgme.so
 

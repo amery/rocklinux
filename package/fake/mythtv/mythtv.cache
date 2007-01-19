@@ -20,132 +20,39 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142519210 Thu Mar 16 15:26:50 2006 (5) ERROR
-[TIMESTAMP] 1142773324 Sun Mar 19 14:02:04 2006 (9) ERROR
-[TIMESTAMP] 1142958409 Tue Mar 21 17:26:49 2006 (5) ERROR
-[TIMESTAMP] 1142969926 Tue Mar 21 20:38:46 2006 (9) ERROR
-[TIMESTAMP] 1143030526 Wed Mar 22 13:28:46 2006 (5) ERROR
-[TIMESTAMP] 1143039061 Wed Mar 22 15:51:01 2006 (9) ERROR
+[TIMESTAMP] 1168596114 Fri Jan 12 11:01:54 2007 (5)
+[TIMESTAMP] 1168798070 Sun Jan 14 19:07:50 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-mythtv.err 9-mythtv.err
+[LOGS] 5-mythtv.log 9-mythtv.log
 
-[BUILDTIME] 24338 (5) ERROR
-[BUILDTIME] 24862 (9) ERROR
-[BUILDTIME] 24874 (5) ERROR
-[BUILDTIME] 24885 (9) ERROR
-[BUILDTIME] 24829 (5) ERROR
-[BUILDTIME] 24858 (9) ERROR
-[SIZE] 0.02 MB, 19 files
+[BUILDTIME] 107489 (5)
+[BUILDTIME] 108680 (9)
+[SIZE] 28.20 MB, 506 files
 
-[DEP] 00-dirtree alsa alsa:dev bash2 binutils bzip2 ccache coreutils
-[DEP] diffutils findutils freetype freetype:dev gawk gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep jack jack:dev linux26-header:dev lirc:dev
-[DEP] make mktemp patch perl5 qt33 qt33:dev rrdtool sed sysfiles tar
-[DEP] tetex xorg xorg:dev zlib:dev
+[DEP] 00-dirtree alsa alsa:dev applewmproto applewmproto:dev bash2 binutils
+[DEP] bzip2 ccache coreutils cvm diffutils expat findutils fontconfig
+[DEP] freetype freetype:dev gawk gcc40 gcc40:dev glibc23 glibc23:dev grep
+[DEP] lame lame:dev libavc1394 libavc1394:dev libdvdnav libdvdnav:dev
+[DEP] libice libiec61883 libiec61883:dev libpng libraw1394 libraw1394:dev
+[DEP] libsm libx11 libx11:dev libxau libxcursor libxdmcp libxext libxfixes
+[DEP] libxft libxinerama libxmu libxrandr libxrandr:dev libxrender libxt
+[DEP] libxv libxv:dev libxxf86vm linux-libc-headers:dev lirc lirc:dev make
+[DEP] mesalib mesalib:dev mktemp nas patch perl5 pkgconfig qt33 qt33:dev
+[DEP] randrproto:dev rrdtool sed subversion:server sysfiles tar tetex
+[DEP] videoproto:dev xextproto:dev xf86vidmodeproto:dev xineramaproto:dev
+[DEP] xproto:dev zlib zlib:dev
 
-
-[5-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o screensaver.o screensaver.cpp
-[5-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o screensaver-null.o screensaver-null.cpp
-[5-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o output.o output.cpp
-[5-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o langsettings.o langsettings.cpp
-[5-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o mythdbcon.o mythdbcon.cpp
-[5-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o audiooutputnull.o audiooutputnull.cpp
-[5-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o DisplayResScreen.o DisplayResScreen.cpp
-[5-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o util-x11.o util-x11.cpp
-[5-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o qmdcodec.o qmdcodec.cpp
-[5-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o audiooutputoss.o audiooutputoss.cpp
-[5-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o mythcdrom.o mythcdrom.cpp
-[5-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o mythmediamonitor.o mythmediamonitor.cpp
-[5-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o mythcdrom-linux.o mythcdrom-linux.cpp
-[5-ERROR] In file included from /usr/include/pthread.h:24,
-[5-ERROR]                  from /usr/lib/gcc/i386-unknown-linux-gnu/3.4.5/include/c++/i386-unknown-linux-gnu/bits/gthr-default.h:43,
-[5-ERROR]                  from /usr/lib/gcc/i386-unknown-linux-gnu/3.4.5/include/c++/i386-unknown-linux-gnu/bits/gthr.h:96,
-[5-ERROR]                  from /usr/lib/gcc/i386-unknown-linux-gnu/3.4.5/include/c++/i386-unknown-linux-gnu/bits/c++io.h:37,
-[5-ERROR]                  from /usr/lib/gcc/i386-unknown-linux-gnu/3.4.5/include/c++/iosfwd:47,
-[5-ERROR]                  from /usr/lib/gcc/i386-unknown-linux-gnu/3.4.5/include/c++/ios:44,
-[5-ERROR]                  from /usr/lib/gcc/i386-unknown-linux-gnu/3.4.5/include/c++/ostream:45,
-[5-ERROR]                  from /usr/lib/gcc/i386-unknown-linux-gnu/3.4.5/include/c++/iostream:45,
-[5-ERROR]                  from mythcontext.h:17,
-[5-ERROR]                  from mythcdrom-linux.cpp:18:
-[5-ERROR] /usr/include/time.h:104: error: conflicting declaration 'typedef void*timer_t'
-[5-ERROR] /usr/include/linux/types.h:30: error: 'timer_t' has a previous declaration as `typedef __kernel_timer_t timer_t'
-[5-ERROR] /usr/include/time.h:104: error: declaration of `typedef void*timer_t'
-[5-ERROR] /usr/include/linux/types.h:30: error: conflicts with previous declaration `typedef __kernel_timer_t timer_t'
-[5-ERROR] /usr/include/time.h:104: error: declaration of `typedef void*timer_t'
-[5-ERROR] /usr/include/linux/types.h:30: error: conflicts with previous declaration `typedef __kernel_timer_t timer_t'
-[5-ERROR] make[2]: *** [mythcdrom-linux.o] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.mythtv.1143030248.1317.250251680/mythtv-0.18.1/libs/libmyth'
-[5-ERROR] make[1]: *** [sub-libmyth] Error 2
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.mythtv.1143030248.1317.250251680/mythtv-0.18.1/libs'
-[5-ERROR] make: *** [sub-libs] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 13 files for this package.
-[5-ERROR] Applying package split: 40 mythtv:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 mythtv:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 mythtv:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] Deleting dependencies, pattern:  -e ".*: mythtv-plugins(:.*|)$" -e ".*: mythtv-themes(:.*|)$" ...
-[5-ERROR] <mythtv> Creating flist file ...
-[5-ERROR] <mythtv> Creating package dependencies file ...
-[5-ERROR] <mythtv> Creating md5sum and cksum files ...
-[5-ERROR] <mythtv> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building mythtv=mythtv.
-
-[9-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o screensaver.o screensaver.cpp
-[9-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o screensaver-null.o screensaver-null.cpp
-[9-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o output.o output.cpp
-[9-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o langsettings.o langsettings.cpp
-[9-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o mythdbcon.o mythdbcon.cpp
-[9-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o audiooutputnull.o audiooutputnull.cpp
-[9-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o DisplayResScreen.o DisplayResScreen.cpp
-[9-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o util-x11.o util-x11.cpp
-[9-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o qmdcodec.o qmdcodec.cpp
-[9-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o audiooutputoss.o audiooutputoss.cpp
-[9-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o mythcdrom.o mythcdrom.cpp
-[9-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o mythmediamonitor.o mythmediamonitor.cpp
-[9-ERROR] g++-34 -c -pipe -march=pentiumpro -mmmx -Wall -W -O3 -Wall -Wno-switch -fomit-frame-pointer -D_REENTRANT -DPIC -fPIC  -DMMX -Di386 -DUSING_IVTV -DUSING_FIREWIRE -DUSING_DVB -DUSING_XRANDR -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DPREFIX=\"/opt/mythtv\" -DUSING_OSS -DUSE_ALSA -DUSE_JOYSTICK_MENU -DUSE_LIRC -DUSE_JACK -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I/opt/qt33/mkspecs/default -I. -I/opt/mythtv/include -I/usr/include -I../libmythsamplerate -I../libmythsoundtouch -I../.. -I/opt/qt33/include -o mythcdrom-linux.o mythcdrom-linux.cpp
-[9-ERROR] In file included from /usr/include/pthread.h:24,
-[9-ERROR]                  from /usr/lib/gcc/i386-unknown-linux-gnu/3.4.5/include/c++/i386-unknown-linux-gnu/bits/gthr-default.h:43,
-[9-ERROR]                  from /usr/lib/gcc/i386-unknown-linux-gnu/3.4.5/include/c++/i386-unknown-linux-gnu/bits/gthr.h:96,
-[9-ERROR]                  from /usr/lib/gcc/i386-unknown-linux-gnu/3.4.5/include/c++/i386-unknown-linux-gnu/bits/c++io.h:37,
-[9-ERROR]                  from /usr/lib/gcc/i386-unknown-linux-gnu/3.4.5/include/c++/iosfwd:47,
-[9-ERROR]                  from /usr/lib/gcc/i386-unknown-linux-gnu/3.4.5/include/c++/ios:44,
-[9-ERROR]                  from /usr/lib/gcc/i386-unknown-linux-gnu/3.4.5/include/c++/ostream:45,
-[9-ERROR]                  from /usr/lib/gcc/i386-unknown-linux-gnu/3.4.5/include/c++/iostream:45,
-[9-ERROR]                  from mythcontext.h:17,
-[9-ERROR]                  from mythcdrom-linux.cpp:18:
-[9-ERROR] /usr/include/time.h:104: error: conflicting declaration 'typedef void*timer_t'
-[9-ERROR] /usr/include/linux/types.h:30: error: 'timer_t' has a previous declaration as `typedef __kernel_timer_t timer_t'
-[9-ERROR] /usr/include/time.h:104: error: declaration of `typedef void*timer_t'
-[9-ERROR] /usr/include/linux/types.h:30: error: conflicts with previous declaration `typedef __kernel_timer_t timer_t'
-[9-ERROR] /usr/include/time.h:104: error: declaration of `typedef void*timer_t'
-[9-ERROR] /usr/include/linux/types.h:30: error: conflicts with previous declaration `typedef __kernel_timer_t timer_t'
-[9-ERROR] make[2]: *** [mythcdrom-linux.o] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.mythtv.1143038783.26384.2652884763/mythtv-0.18.1/libs/libmyth'
-[9-ERROR] make[1]: *** [sub-libmyth] Error 2
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.mythtv.1143038783.26384.2652884763/mythtv-0.18.1/libs'
-[9-ERROR] make: *** [sub-libs] Error 2
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 13 files for this package.
-[9-ERROR] Applying package split: 40 mythtv:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 mythtv:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 mythtv:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] Deleting dependencies, pattern:  -e ".*: mythtv-plugins(:.*|)$" -e ".*: mythtv-themes(:.*|)$" ...
-[9-ERROR] <mythtv> Creating flist file ...
-[9-ERROR] <mythtv> Creating package dependencies file ...
-[9-ERROR] <mythtv> Creating md5sum and cksum files ...
-[9-ERROR] <mythtv> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building mythtv=mythtv.
+[PROVIDES] libadjust.so libbobdeint.so libconvert.so libcrop.so
+[PROVIDES] libdenoise3d.so libforce.so libinvert.so libkerneldeint.so
+[PROVIDES] liblinearblend.so libmyth-0.19.so libmythavcodec-0.19.so
+[PROVIDES] libmythavformat-0.19.so libmythavutil-0.19.so
+[PROVIDES] libmythmpeg2-0.19.a libmythsamplerate-0.19.a
+[PROVIDES] libmythsoundtouch-0.19.a libmythtv-0.19.so libmythui-0.19.so
+[PROVIDES] libonefield.so libpostprocess.so libquickdnr.so mythbackend
+[PROVIDES] mythcommflag mythfilldatabase mythfrontend mythjobqueue
+[PROVIDES] mythlcdserver mythshutdown mythtranscode mythtv mythtv-setup
+[PROVIDES] mythtvosd mythwelcome
 

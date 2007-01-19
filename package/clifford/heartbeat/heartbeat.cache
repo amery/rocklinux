@@ -20,43 +20,51 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142485282 Thu Mar 16 06:01:22 2006 (5)
-[TIMESTAMP] 1142732995 Sun Mar 19 02:49:55 2006 (9)
+[TIMESTAMP] 1168563205 Fri Jan 12 01:53:25 2007 (5)
+[TIMESTAMP] 1168760197 Sun Jan 14 08:36:37 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-heartbeat.log 9-heartbeat.log
 
-[BUILDTIME] 30564 (5)
-[BUILDTIME] 31874 (9)
-[SIZE] 3.39 MB, 270 files
+[BUILDTIME] 33874 (5)
+[BUILDTIME] 37581 (9)
+[SIZE] 3.25 MB, 310 files
 
-[DEP] 00-dirtree alien bash2 bdb42:dev binutils bzip2 bzip2:dev coreutils
-[DEP] curl curl:dev diffutils e2fsprogs:dev findutils flex flex:dev gawk
-[DEP] gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev gnome2-dirtree
-[DEP] grep libidn:dev libnet:dev libtool libtool:dev libxml2 libxml2:dev
-[DEP] linux26-header:dev m4 make mktemp ncurses:dev net-snmp net-snmp:dev
-[DEP] net-tools netkit-base openssl openssl:dev pam perl5 pkgconfig
-[DEP] rrdtool sed shadow sysfiles tar tcp_wrappers:dev util-linux zlib:dev
+[DEP] 00-dirtree alien bash2 bdb44:dev binutils bzip2 bzip2:dev coreutils
+[DEP] curl curl:dev cvm diffutils e2fsprogs e2fsprogs:dev findutils flex
+[DEP] flex:dev gawk gcc40 gcc40:dev glib glib:dev glibc23 glibc23:dev
+[DEP] gnome2-dirtree gnutls gnutls:dev grep libgcrypt libgcrypt:dev
+[DEP] libgpg-error libgpg-error:dev libidn:dev libnet:dev libtool
+[DEP] libtool:dev libxml2 libxml2:dev linux-libc-headers:dev m4 make mktemp
+[DEP] ncurses ncurses:dev net-snmp net-snmp:dev net-tools netkit-base
+[DEP] netpbm openssl openssl:dev pam pam:dev patch perl5 pkgconfig python
+[DEP] python:dev rrdtool sed shadow swig sysfiles tar tcp_wrappers:dev
+[DEP] twoftpd ucspi-unix util-linux zlib zlib:dev
 
-[PROVIDES] apcmaster.a apcmaster.so apcmastersnmp.a apcmastersnmp.so
-[PROVIDES] apcsmart.a apcsmart.so baytech.a baytech.so bcast.a bcast.so
-[PROVIDES] bz2.a bz2.so cl_respawn cl_status crc.a crc.so cyclades.a
-[PROVIDES] cyclades.so drac3.a drac3.so external.a external.so
-[PROVIDES] generic.a generic.so heartbeat.a heartbeat.so ibmhmc.a
-[PROVIDES] ibmhmc.so ldirectord libapphb.a libapphb.so libccmclient.a
+[PROVIDES] _pymgmt.a _pymgmt.so apcmaster.a apcmaster.so apcmastersnmp.a
+[PROVIDES] apcmastersnmp.so apcsmart.a apcsmart.so baytech.a baytech.so
+[PROVIDES] bcast.a bcast.so bz2.a bz2.so ccm_tool cibadmin cl_respawn
+[PROVIDES] cl_status crc.a crc.so crm_attribute crm_diff crm_master
+[PROVIDES] crm_mon crm_resource crm_standby crm_uuid crm_verify crmadmin
+[PROVIDES] cyclades.a cyclades.so drac3.a drac3.so external.a external.so
+[PROVIDES] generic.a generic.so heartbeat.a heartbeat.so ibmhmc.a ibmhmc.so
+[PROVIDES] iso8601 ldirectord libapphb.a libapphb.so libccmclient.a
 [PROVIDES] libccmclient.so libcib.a libcib.so libclm.a libclm.so
 [PROVIDES] libcrmcommon.a libcrmcommon.so libhbclient.a libhbclient.so
-[PROVIDES] liblrm.a liblrm.so libpengine.a libpengine.so libpils.a
-[PROVIDES] libpils.so libplumb.a libplumb.so libplumbgpl.a libplumbgpl.so
-[PROVIDES] librecoverymgr.a librecoverymgr.so libstonith.a libstonith.so
-[PROVIDES] libstonithd.a libstonithd.so lsb.a lsb.so mcast.a mcast.so
-[PROVIDES] md5.a md5.so meatclient meatware.a meatware.so null.a
-[PROVIDES] null.so nw_rpc100s.a nw_rpc100s.so ocf.a ocf.so ping.a ping.so
-[PROVIDES] ping_group.a ping_group.so rcd_serial.a rcd_serial.so recmgr.a
-[PROVIDES] recmgr.so rps10.a rps10.so serial.a serial.so sha1.a sha1.so
-[PROVIDES] ssh.a ssh.so stonith stonith.a stonith.so suicide.a suicide.so
-[PROVIDES] supervise-ldirectord-config test.a test.so ucast.a ucast.so
-[PROVIDES] wti_nps.a wti_nps.so zlib.a zlib.so
+[PROVIDES] libhbmgmt.a libhbmgmt.so libhbmgmtclient.a libhbmgmtclient.so
+[PROVIDES] libhbmgmtcommon.a libhbmgmtcommon.so libhbmgmttls.a
+[PROVIDES] libhbmgmttls.so liblrm.a liblrm.so libpengine.a libpengine.so
+[PROVIDES] libpils.a libpils.so libplumb.a libplumb.so libplumbgpl.a
+[PROVIDES] libplumbgpl.so librecoverymgr.a librecoverymgr.so libstonith.a
+[PROVIDES] libstonith.so libstonithd.a libstonithd.so libtransitioner.a
+[PROVIDES] libtransitioner.so lsb.a lsb.so majority.a majority.so mcast.a
+[PROVIDES] mcast.so md5.a md5.so meatclient meatware.a meatware.so
+[PROVIDES] null.a null.so nw_rpc100s.a nw_rpc100s.so ocf.a ocf.so ping.a
+[PROVIDES] ping.so ping_group.a ping_group.so rcd_serial.a rcd_serial.so
+[PROVIDES] recmgr.a recmgr.so rps10.a rps10.so serial.a serial.so sha1.a
+[PROVIDES] sha1.so ssh.a ssh.so stonith stonith.a stonith.so suicide.a
+[PROVIDES] suicide.so supervise-ldirectord-config test.a test.so twonodes.a
+[PROVIDES] twonodes.so ucast.a ucast.so wti_nps.a wti_nps.so zlib.a zlib.so
 

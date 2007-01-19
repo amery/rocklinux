@@ -20,26 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142489649 Thu Mar 16 07:14:09 2006 (5)
-[TIMESTAMP] 1142738427 Sun Mar 19 04:20:27 2006 (9)
+[TIMESTAMP] 1168566616 Fri Jan 12 02:50:16 2007 (5) ERROR
+[TIMESTAMP] 1168764121 Sun Jan 14 09:42:01 2007 (9) ERROR
+[TIMESTAMP] 1168941724 Tue Jan 16 11:02:04 2007 (5) ERROR
+[TIMESTAMP] 1168963751 Tue Jan 16 17:09:11 2007 (9) ERROR
+[TIMESTAMP] 1169085114 Thu Jan 18 02:51:54 2007 (5) ERROR
+[TIMESTAMP] 1169134047 Thu Jan 18 16:27:27 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-elicit.log 9-elicit.log
+[LOGS] 5-elicit.err 9-elicit.err
 
-[BUILDTIME] 5029 (5)
-[BUILDTIME] 5637 (9)
-[SIZE] 0.25 MB, 11 files
+[BUILDTIME] 2697 (5) ERROR
+[BUILDTIME] 2799 (9) ERROR
+[BUILDTIME] 2815 (5) ERROR
+[BUILDTIME] 2810 (9) ERROR
+[BUILDTIME] 2796 (5) ERROR
+[BUILDTIME] 2819 (9) ERROR
 
-[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils directfb directfb:dev ecore ecore:dev edb edb:dev edje
-[DEP] edje:dev eet eet:dev embryo embryo:dev esmart esmart:dev evas
-[DEP] evas:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep imlib2 imlib2:dev libjpeg libjpeg:dev
-[DEP] libpng libpng:dev libtool libtool:dev linux26-header:dev m4 make
-[DEP] mktemp net-tools openssl perl5 rrdtool sed sysfiles tar util-linux
-[DEP] xorg xorg:dev zlib:dev
 
-[PROVIDES] elicit
+[5-ERROR] checking whether f77 accepts -g... no
+[5-ERROR] checking the maximum length of command line arguments... 32768
+[5-ERROR] checking command to parse nm output from gcc-40 object... ok
+[5-ERROR] checking for objdir... .libs
+[5-ERROR] checking for ar... ar
+[5-ERROR] checking for ranlib... ranlib
+[5-ERROR] checking for strip... strip
+[5-ERROR] checking if gcc-40 supports -fno-rtti -fno-exceptions... no
+[5-ERROR] checking for gcc-40 option to produce PIC... -fPIC
+[5-ERROR] checking if gcc-40 PIC flag -fPIC works... yes
+[5-ERROR] checking if gcc-40 static flag -static works... yes
+[5-ERROR] checking if gcc-40 supports -c -o file.o... yes
+[5-ERROR] checking whether the gcc-40 linker (ld) supports shared libraries... yes
+[5-ERROR] checking whether -lc should be explicitly linked in... no
+[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] checking whether stripping libraries is possible... yes
+[5-ERROR] checking if libtool supports shared libraries... yes
+[5-ERROR] checking whether to build shared libraries... yes
+[5-ERROR] checking whether to build static libraries... yes
+[5-ERROR] configure: creating libtool
+[5-ERROR] appending configuration tag "CXX" to libtool
+[5-ERROR] checking for ld used by g++-40... ld
+[5-ERROR] checking if the linker (ld) is GNU ld... yes
+[5-ERROR] checking whether the g++-40 linker (ld) supports shared libraries... yes
+[5-ERROR] checking for g++-40 option to produce PIC... -fPIC
+[5-ERROR] checking if g++-40 PIC flag -fPIC works... yes
+[5-ERROR] checking if g++-40 static flag -static works... yes
+[5-ERROR] checking if g++-40 supports -c -o file.o... yes
+[5-ERROR] checking whether the g++-40 linker (ld) supports shared libraries... yes
+[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] appending configuration tag "F77" to libtool
+[5-ERROR] checking if libtool supports shared libraries... yes
+[5-ERROR] checking whether to build shared libraries... yes
+[5-ERROR] checking whether to build static libraries... yes
+[5-ERROR] checking for f77 option to produce PIC... -fPIC
+[5-ERROR] checking if f77 PIC flag -fPIC works... no
+[5-ERROR] checking if f77 static flag -static works... no
+[5-ERROR] checking if f77 supports -c -o file.o... no
+[5-ERROR] checking whether the f77 linker (ld) supports shared libraries... yes
+[5-ERROR] checking dynamic linker characteristics... ./configure: line 1: f77: command not found
+[5-ERROR] GNU/Linux ld.so
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] checking if malloc debugging is wanted... no
+[5-ERROR] checking for esmart-config... no
+[5-ERROR] esmart-config  is not in your $PATH. Please ensure it is.
+[5-ERROR] Read the manual page for you shell as to how to extend your path.
+[5-ERROR] configure: error: Cannot find esmart-config
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] checking whether f77 accepts -g... no
+[9-ERROR] checking the maximum length of command line arguments... 32768
+[9-ERROR] checking command to parse nm output from gcc-40 object... ok
+[9-ERROR] checking for objdir... .libs
+[9-ERROR] checking for ar... ar
+[9-ERROR] checking for ranlib... ranlib
+[9-ERROR] checking for strip... strip
+[9-ERROR] checking if gcc-40 supports -fno-rtti -fno-exceptions... no
+[9-ERROR] checking for gcc-40 option to produce PIC... -fPIC
+[9-ERROR] checking if gcc-40 PIC flag -fPIC works... yes
+[9-ERROR] checking if gcc-40 static flag -static works... yes
+[9-ERROR] checking if gcc-40 supports -c -o file.o... yes
+[9-ERROR] checking whether the gcc-40 linker (ld) supports shared libraries... yes
+[9-ERROR] checking whether -lc should be explicitly linked in... no
+[9-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[9-ERROR] checking how to hardcode library paths into programs... immediate
+[9-ERROR] checking whether stripping libraries is possible... yes
+[9-ERROR] checking if libtool supports shared libraries... yes
+[9-ERROR] checking whether to build shared libraries... yes
+[9-ERROR] checking whether to build static libraries... yes
+[9-ERROR] configure: creating libtool
+[9-ERROR] appending configuration tag "CXX" to libtool
+[9-ERROR] checking for ld used by g++-40... ld
+[9-ERROR] checking if the linker (ld) is GNU ld... yes
+[9-ERROR] checking whether the g++-40 linker (ld) supports shared libraries... yes
+[9-ERROR] checking for g++-40 option to produce PIC... -fPIC
+[9-ERROR] checking if g++-40 PIC flag -fPIC works... yes
+[9-ERROR] checking if g++-40 static flag -static works... yes
+[9-ERROR] checking if g++-40 supports -c -o file.o... yes
+[9-ERROR] checking whether the g++-40 linker (ld) supports shared libraries... yes
+[9-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[9-ERROR] checking how to hardcode library paths into programs... immediate
+[9-ERROR] appending configuration tag "F77" to libtool
+[9-ERROR] checking if libtool supports shared libraries... yes
+[9-ERROR] checking whether to build shared libraries... yes
+[9-ERROR] checking whether to build static libraries... yes
+[9-ERROR] checking for f77 option to produce PIC... -fPIC
+[9-ERROR] checking if f77 PIC flag -fPIC works... no
+[9-ERROR] checking if f77 static flag -static works... no
+[9-ERROR] checking if f77 supports -c -o file.o... no
+[9-ERROR] checking whether the f77 linker (ld) supports shared libraries... yes
+[9-ERROR] checking dynamic linker characteristics... ./configure: line 1: f77: command not found
+[9-ERROR] GNU/Linux ld.so
+[9-ERROR] checking how to hardcode library paths into programs... immediate
+[9-ERROR] checking if malloc debugging is wanted... no
+[9-ERROR] checking for esmart-config... no
+[9-ERROR] esmart-config  is not in your $PATH. Please ensure it is.
+[9-ERROR] Read the manual page for you shell as to how to extend your path.
+[9-ERROR] configure: error: Cannot find esmart-config
+[9-ERROR] --- BUILD ERROR ---
 

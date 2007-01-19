@@ -20,23 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142525759 Thu Mar 16 17:15:59 2006 (5)
-[TIMESTAMP] 1142780906 Sun Mar 19 16:08:26 2006 (9)
+[TIMESTAMP] 1168601051 Fri Jan 12 12:24:11 2007 (5) ERROR
+[TIMESTAMP] 1168803346 Sun Jan 14 20:35:46 2007 (9) ERROR
+[TIMESTAMP] 1168943119 Tue Jan 16 11:25:19 2007 (5) ERROR
+[TIMESTAMP] 1168968715 Tue Jan 16 18:31:55 2007 (9) ERROR
+[TIMESTAMP] 1169086515 Thu Jan 18 03:15:15 2007 (5) ERROR
+[TIMESTAMP] 1169139004 Thu Jan 18 17:50:04 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-obexftp.log 9-obexftp.log
+[LOGS] 5-obexftp.err 9-obexftp.err
 
-[BUILDTIME] 3372 (5)
-[BUILDTIME] 3864 (9)
-[SIZE] 0.08 MB, 18 files
+[BUILDTIME] 1814 (5) ERROR
+[BUILDTIME] 1859 (9) ERROR
+[BUILDTIME] 1859 (5) ERROR
+[BUILDTIME] 1865 (9) ERROR
+[BUILDTIME] 1868 (5) ERROR
+[BUILDTIME] 1857 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bluez-libs bluez-libs:dev bzip2 coreutils
-[DEP] diffutils file findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev
-[DEP] grep linux26-header:dev make mktemp net-tools openobex openobex:dev
-[DEP] rrdtool sed sysfiles tar util-linux
 
-[PROVIDES] libbfb.a libbfb.so libcobexbfb.a libcobexbfb.so libobexftp.a
-[PROVIDES] libobexftp.so obexftp obexftpd
+[5-ERROR] checking if libtool supports shared libraries... yes
+[5-ERROR] checking whether to build shared libraries... yes
+[5-ERROR] checking whether to build static libraries... yes
+[5-ERROR] checking for f77 option to produce PIC... -fPIC
+[5-ERROR] checking if f77 PIC flag -fPIC works... no
+[5-ERROR] checking if f77 supports -c -o file.o... no
+[5-ERROR] checking whether the f77 linker (ld) supports shared libraries... yes
+[5-ERROR] checking dynamic linker characteristics... ./configure: line 1: f77: command not found
+[5-ERROR] GNU/Linux ld.so
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] checking whether stripping libraries is possible... yes
+[5-ERROR] checking for ANSI C header files... (cached) yes
+[5-ERROR] checking for dirent.h that defines DIR... yes
+[5-ERROR] checking for library containing opendir... none required
+[5-ERROR] checking arpa/inet.h usability... yes
+[5-ERROR] checking arpa/inet.h presence... yes
+[5-ERROR] checking for arpa/inet.h... yes
+[5-ERROR] checking errno.h usability... yes
+[5-ERROR] checking errno.h presence... yes
+[5-ERROR] checking for errno.h... yes
+[5-ERROR] checking fcntl.h usability... yes
+[5-ERROR] checking fcntl.h presence... yes
+[5-ERROR] checking for fcntl.h... yes
+[5-ERROR] checking netdb.h usability... yes
+[5-ERROR] checking netdb.h presence... yes
+[5-ERROR] checking for netdb.h... yes
+[5-ERROR] checking netinet/in.h usability... yes
+[5-ERROR] checking netinet/in.h presence... yes
+[5-ERROR] checking for netinet/in.h... yes
+[5-ERROR] checking for stdlib.h... (cached) yes
+[5-ERROR] checking for string.h... (cached) yes
+[5-ERROR] checking sys/ioctl.h usability... yes
+[5-ERROR] checking sys/ioctl.h presence... yes
+[5-ERROR] checking for sys/ioctl.h... yes
+[5-ERROR] checking sys/socket.h usability... yes
+[5-ERROR] checking sys/socket.h presence... yes
+[5-ERROR] checking for sys/socket.h... yes
+[5-ERROR] checking sys/time.h usability... yes
+[5-ERROR] checking sys/time.h presence... yes
+[5-ERROR] checking for sys/time.h... yes
+[5-ERROR] checking termios.h usability... yes
+[5-ERROR] checking termios.h presence... yes
+[5-ERROR] checking for termios.h... yes
+[5-ERROR] checking for unistd.h... (cached) yes
+[5-ERROR] checking sys/select.h usability... yes
+[5-ERROR] checking sys/select.h presence... yes
+[5-ERROR] checking for sys/select.h... yes
+[5-ERROR] checking for openobex-config... no
+[5-ERROR] configure: error: openobex-config not found. Pehaps openobex is not installed.
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] checking if libtool supports shared libraries... yes
+[9-ERROR] checking whether to build shared libraries... yes
+[9-ERROR] checking whether to build static libraries... yes
+[9-ERROR] checking for f77 option to produce PIC... -fPIC
+[9-ERROR] checking if f77 PIC flag -fPIC works... no
+[9-ERROR] checking if f77 supports -c -o file.o... no
+[9-ERROR] checking whether the f77 linker (ld) supports shared libraries... yes
+[9-ERROR] checking dynamic linker characteristics... ./configure: line 1: f77: command not found
+[9-ERROR] GNU/Linux ld.so
+[9-ERROR] checking how to hardcode library paths into programs... immediate
+[9-ERROR] checking whether stripping libraries is possible... yes
+[9-ERROR] checking for ANSI C header files... (cached) yes
+[9-ERROR] checking for dirent.h that defines DIR... yes
+[9-ERROR] checking for library containing opendir... none required
+[9-ERROR] checking arpa/inet.h usability... yes
+[9-ERROR] checking arpa/inet.h presence... yes
+[9-ERROR] checking for arpa/inet.h... yes
+[9-ERROR] checking errno.h usability... yes
+[9-ERROR] checking errno.h presence... yes
+[9-ERROR] checking for errno.h... yes
+[9-ERROR] checking fcntl.h usability... yes
+[9-ERROR] checking fcntl.h presence... yes
+[9-ERROR] checking for fcntl.h... yes
+[9-ERROR] checking netdb.h usability... yes
+[9-ERROR] checking netdb.h presence... yes
+[9-ERROR] checking for netdb.h... yes
+[9-ERROR] checking netinet/in.h usability... yes
+[9-ERROR] checking netinet/in.h presence... yes
+[9-ERROR] checking for netinet/in.h... yes
+[9-ERROR] checking for stdlib.h... (cached) yes
+[9-ERROR] checking for string.h... (cached) yes
+[9-ERROR] checking sys/ioctl.h usability... yes
+[9-ERROR] checking sys/ioctl.h presence... yes
+[9-ERROR] checking for sys/ioctl.h... yes
+[9-ERROR] checking sys/socket.h usability... yes
+[9-ERROR] checking sys/socket.h presence... yes
+[9-ERROR] checking for sys/socket.h... yes
+[9-ERROR] checking sys/time.h usability... yes
+[9-ERROR] checking sys/time.h presence... yes
+[9-ERROR] checking for sys/time.h... yes
+[9-ERROR] checking termios.h usability... yes
+[9-ERROR] checking termios.h presence... yes
+[9-ERROR] checking for termios.h... yes
+[9-ERROR] checking for unistd.h... (cached) yes
+[9-ERROR] checking sys/select.h usability... yes
+[9-ERROR] checking sys/select.h presence... yes
+[9-ERROR] checking for sys/select.h... yes
+[9-ERROR] checking for openobex-config... no
+[9-ERROR] configure: error: openobex-config not found. Pehaps openobex is not installed.
+[9-ERROR] --- BUILD ERROR ---
 

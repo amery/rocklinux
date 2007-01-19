@@ -20,22 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142481382 Thu Mar 16 04:56:22 2006 (5)
-[TIMESTAMP] 1142727364 Sun Mar 19 01:16:04 2006 (9)
+[TIMESTAMP] 1168559719 Fri Jan 12 00:55:19 2007 (5) ERROR
+[TIMESTAMP] 1168756090 Sun Jan 14 07:28:10 2007 (9) ERROR
+[TIMESTAMP] 1168941080 Tue Jan 16 10:51:20 2007 (5) ERROR
+[TIMESTAMP] 1168963082 Tue Jan 16 16:58:02 2007 (9) ERROR
+[TIMESTAMP] 1169084467 Thu Jan 18 02:41:07 2007 (5) ERROR
+[TIMESTAMP] 1169133388 Thu Jan 18 16:16:28 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-numpy.log 9-numpy.log
+[LOGS] 5-numpy.err 9-numpy.err
 
-[BUILDTIME] 3269 (5)
-[BUILDTIME] 3799 (9)
-[SIZE] 1.26 MB, 51 files
+[BUILDTIME] 3495 (5) ERROR
+[BUILDTIME] 3531 (9) ERROR
+[BUILDTIME] 3554 (5) ERROR
+[BUILDTIME] 3554 (9) ERROR
+[BUILDTIME] 3576 (5) ERROR
+[BUILDTIME] 3568 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev mktemp patch python
-[DEP] python:dev rrdtool sed sysfiles tar
 
-[PROVIDES] RNG.so _numpy.so arrayfns.so fftpack.so lapack_lite.so
-[PROVIDES] multiarray.so ranlib.so umath.so
+[5-ERROR] Src/dlapack_lite.c:35805: warning: suggest parentheses around && within ||
+[5-ERROR] Src/dlapack_lite.c:35806: warning: suggest parentheses around && within ||
+[5-ERROR] gcc-40 -pthread -shared build/temp.linux-i686-2.4/Src/lapack_litemodule.o build/temp.linux-i686-2.4/Src/blas_lite.o build/temp.linux-i686-2.4/Src/f2c_lite.o build/temp.linux-i686-2.4/Src/zlapack_lite.o build/temp.linux-i686-2.4/Src/dlapack_lite.o -o build/lib.linux-i686-2.4/lapack_lite.so
+[5-ERROR] building 'FFT.fftpack' extension
+[5-ERROR] creating build/temp.linux-i686-2.4/Packages
+[5-ERROR] creating build/temp.linux-i686-2.4/Packages/FFT
+[5-ERROR] creating build/temp.linux-i686-2.4/Packages/FFT/Src
+[5-ERROR] gcc-40 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -IInclude -IPackages/FFT/Include -IPackages/RNG/Include -I/usr/include/python2.4 -c Packages/FFT/Src/fftpackmodule.c -o build/temp.linux-i686-2.4/Packages/FFT/Src/fftpackmodule.o
+[5-ERROR] Packages/FFT/Src/fftpackmodule.c:243: warning: function declaration isn't a prototype
+[5-ERROR] gcc-40 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -IInclude -IPackages/FFT/Include -IPackages/RNG/Include -I/usr/include/python2.4 -c Packages/FFT/Src/fftpack.c -o build/temp.linux-i686-2.4/Packages/FFT/Src/fftpack.o
+[5-ERROR] gcc-40 -pthread -shared build/temp.linux-i686-2.4/Packages/FFT/Src/fftpackmodule.o build/temp.linux-i686-2.4/Packages/FFT/Src/fftpack.o -o build/lib.linux-i686-2.4/FFT/fftpack.so
+[5-ERROR] building 'RNG.RNG' extension
+[5-ERROR] creating build/temp.linux-i686-2.4/Packages/RNG
+[5-ERROR] creating build/temp.linux-i686-2.4/Packages/RNG/Src
+[5-ERROR] gcc-40 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -IInclude -IPackages/FFT/Include -IPackages/RNG/Include -I/usr/include/python2.4 -c Packages/RNG/Src/RNGmodule.c -o build/temp.linux-i686-2.4/Packages/RNG/Src/RNGmodule.o
+[5-ERROR] In file included from Packages/RNG/Src/RNGmodule.c:17:
+[5-ERROR] Packages/RNG/Include/ranf.h:31: warning: function declaration isn't a prototype
+[5-ERROR] Packages/RNG/Include/ranf.h:52: warning: function declaration isn't a prototype
+[5-ERROR] Packages/RNG/Src/RNGmodule.c:618: warning: function declaration isn't a prototype
+[5-ERROR] gcc-40 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -IInclude -IPackages/FFT/Include -IPackages/RNG/Include -I/usr/include/python2.4 -c Packages/RNG/Src/ranf.c -o build/temp.linux-i686-2.4/Packages/RNG/Src/ranf.o
+[5-ERROR] In file included from Packages/RNG/Src/ranf.c:63:
+[5-ERROR] Packages/RNG/Include/ranf.h:31: warning: function declaration isn't a prototype
+[5-ERROR] Packages/RNG/Include/ranf.h:52: warning: function declaration isn't a prototype
+[5-ERROR] Packages/RNG/Src/ranf.c: In function 'Mixranf':
+[5-ERROR] Packages/RNG/Src/ranf.c:153: warning: function declaration isn't a prototype
+[5-ERROR] Packages/RNG/Src/ranf.c: At top level:
+[5-ERROR] Packages/RNG/Src/ranf.c:366: warning: function declaration isn't a prototype
+[5-ERROR] gcc-40 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -IInclude -IPackages/FFT/Include -IPackages/RNG/Include -I/usr/include/python2.4 -c Packages/RNG/Src/pmath_rng.c -o build/temp.linux-i686-2.4/Packages/RNG/Src/pmath_rng.o
+[5-ERROR] In file included from Packages/RNG/Src/pmath_rng.c:106:
+[5-ERROR] Packages/RNG/Include/ranf.h:31: warning: function declaration isn't a prototype
+[5-ERROR] Packages/RNG/Include/ranf.h:52: warning: function declaration isn't a prototype
+[5-ERROR] Packages/RNG/Src/pmath_rng.c:447: warning: function declaration isn't a prototype
+[5-ERROR] gcc-40 -pthread -shared build/temp.linux-i686-2.4/Packages/RNG/Src/RNGmodule.o build/temp.linux-i686-2.4/Packages/RNG/Src/ranf.o build/temp.linux-i686-2.4/Packages/RNG/Src/pmath_rng.o -o build/lib.linux-i686-2.4/RNG/RNG.so
+[5-ERROR] running install
+[5-ERROR] running install_lib
+[5-ERROR] copying build/lib.linux-i686-2.4/FFT/fftpack.so -> /usr/lib/python2.4/site-packages/Numeric/FFT
+[5-ERROR] copying build/lib.linux-i686-2.4/RNG/RNG.so -> /usr/lib/python2.4/site-packages/Numeric/RNG
+[5-ERROR] copying build/lib.linux-i686-2.4/_numpy.so -> /usr/lib/python2.4/site-packages/Numeric
+[5-ERROR] copying build/lib.linux-i686-2.4/multiarray.so -> /usr/lib/python2.4/site-packages/Numeric
+[5-ERROR] copying build/lib.linux-i686-2.4/umath.so -> /usr/lib/python2.4/site-packages/Numeric
+[5-ERROR] copying build/lib.linux-i686-2.4/arrayfns.so -> /usr/lib/python2.4/site-packages/Numeric
+[5-ERROR] copying build/lib.linux-i686-2.4/ranlib.so -> /usr/lib/python2.4/site-packages/Numeric
+[5-ERROR] copying build/lib.linux-i686-2.4/lapack_lite.so -> /usr/lib/python2.4/site-packages/Numeric
+[5-ERROR] running install_headers
+[5-ERROR] creating /usr/lib/python2.4/site-packages/Numeric.pth
+[5-ERROR] MA Version 12.2.0
+[5-ERROR] Numeric Version 23.3
+[5-ERROR] Trying to copy the default documentation ...
+[5-ERROR] ./scripts/Build-Pkg: line 1: numpy_main: command not found
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] Src/dlapack_lite.c:35805: warning: suggest parentheses around && within ||
+[9-ERROR] Src/dlapack_lite.c:35806: warning: suggest parentheses around && within ||
+[9-ERROR] gcc-40 -pthread -shared build/temp.linux-i686-2.4/Src/lapack_litemodule.o build/temp.linux-i686-2.4/Src/blas_lite.o build/temp.linux-i686-2.4/Src/f2c_lite.o build/temp.linux-i686-2.4/Src/zlapack_lite.o build/temp.linux-i686-2.4/Src/dlapack_lite.o -o build/lib.linux-i686-2.4/lapack_lite.so
+[9-ERROR] building 'FFT.fftpack' extension
+[9-ERROR] creating build/temp.linux-i686-2.4/Packages
+[9-ERROR] creating build/temp.linux-i686-2.4/Packages/FFT
+[9-ERROR] creating build/temp.linux-i686-2.4/Packages/FFT/Src
+[9-ERROR] gcc-40 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -IInclude -IPackages/FFT/Include -IPackages/RNG/Include -I/usr/include/python2.4 -c Packages/FFT/Src/fftpackmodule.c -o build/temp.linux-i686-2.4/Packages/FFT/Src/fftpackmodule.o
+[9-ERROR] Packages/FFT/Src/fftpackmodule.c:243: warning: function declaration isn't a prototype
+[9-ERROR] gcc-40 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -IInclude -IPackages/FFT/Include -IPackages/RNG/Include -I/usr/include/python2.4 -c Packages/FFT/Src/fftpack.c -o build/temp.linux-i686-2.4/Packages/FFT/Src/fftpack.o
+[9-ERROR] gcc-40 -pthread -shared build/temp.linux-i686-2.4/Packages/FFT/Src/fftpackmodule.o build/temp.linux-i686-2.4/Packages/FFT/Src/fftpack.o -o build/lib.linux-i686-2.4/FFT/fftpack.so
+[9-ERROR] building 'RNG.RNG' extension
+[9-ERROR] creating build/temp.linux-i686-2.4/Packages/RNG
+[9-ERROR] creating build/temp.linux-i686-2.4/Packages/RNG/Src
+[9-ERROR] gcc-40 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -IInclude -IPackages/FFT/Include -IPackages/RNG/Include -I/usr/include/python2.4 -c Packages/RNG/Src/RNGmodule.c -o build/temp.linux-i686-2.4/Packages/RNG/Src/RNGmodule.o
+[9-ERROR] In file included from Packages/RNG/Src/RNGmodule.c:17:
+[9-ERROR] Packages/RNG/Include/ranf.h:31: warning: function declaration isn't a prototype
+[9-ERROR] Packages/RNG/Include/ranf.h:52: warning: function declaration isn't a prototype
+[9-ERROR] Packages/RNG/Src/RNGmodule.c:618: warning: function declaration isn't a prototype
+[9-ERROR] gcc-40 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -IInclude -IPackages/FFT/Include -IPackages/RNG/Include -I/usr/include/python2.4 -c Packages/RNG/Src/ranf.c -o build/temp.linux-i686-2.4/Packages/RNG/Src/ranf.o
+[9-ERROR] In file included from Packages/RNG/Src/ranf.c:63:
+[9-ERROR] Packages/RNG/Include/ranf.h:31: warning: function declaration isn't a prototype
+[9-ERROR] Packages/RNG/Include/ranf.h:52: warning: function declaration isn't a prototype
+[9-ERROR] Packages/RNG/Src/ranf.c: In function 'Mixranf':
+[9-ERROR] Packages/RNG/Src/ranf.c:153: warning: function declaration isn't a prototype
+[9-ERROR] Packages/RNG/Src/ranf.c: At top level:
+[9-ERROR] Packages/RNG/Src/ranf.c:366: warning: function declaration isn't a prototype
+[9-ERROR] gcc-40 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -IInclude -IPackages/FFT/Include -IPackages/RNG/Include -I/usr/include/python2.4 -c Packages/RNG/Src/pmath_rng.c -o build/temp.linux-i686-2.4/Packages/RNG/Src/pmath_rng.o
+[9-ERROR] In file included from Packages/RNG/Src/pmath_rng.c:106:
+[9-ERROR] Packages/RNG/Include/ranf.h:31: warning: function declaration isn't a prototype
+[9-ERROR] Packages/RNG/Include/ranf.h:52: warning: function declaration isn't a prototype
+[9-ERROR] Packages/RNG/Src/pmath_rng.c:447: warning: function declaration isn't a prototype
+[9-ERROR] gcc-40 -pthread -shared build/temp.linux-i686-2.4/Packages/RNG/Src/RNGmodule.o build/temp.linux-i686-2.4/Packages/RNG/Src/ranf.o build/temp.linux-i686-2.4/Packages/RNG/Src/pmath_rng.o -o build/lib.linux-i686-2.4/RNG/RNG.so
+[9-ERROR] running install
+[9-ERROR] running install_lib
+[9-ERROR] copying build/lib.linux-i686-2.4/FFT/fftpack.so -> /usr/lib/python2.4/site-packages/Numeric/FFT
+[9-ERROR] copying build/lib.linux-i686-2.4/RNG/RNG.so -> /usr/lib/python2.4/site-packages/Numeric/RNG
+[9-ERROR] copying build/lib.linux-i686-2.4/_numpy.so -> /usr/lib/python2.4/site-packages/Numeric
+[9-ERROR] copying build/lib.linux-i686-2.4/multiarray.so -> /usr/lib/python2.4/site-packages/Numeric
+[9-ERROR] copying build/lib.linux-i686-2.4/umath.so -> /usr/lib/python2.4/site-packages/Numeric
+[9-ERROR] copying build/lib.linux-i686-2.4/arrayfns.so -> /usr/lib/python2.4/site-packages/Numeric
+[9-ERROR] copying build/lib.linux-i686-2.4/ranlib.so -> /usr/lib/python2.4/site-packages/Numeric
+[9-ERROR] copying build/lib.linux-i686-2.4/lapack_lite.so -> /usr/lib/python2.4/site-packages/Numeric
+[9-ERROR] running install_headers
+[9-ERROR] creating /usr/lib/python2.4/site-packages/Numeric.pth
+[9-ERROR] MA Version 12.2.0
+[9-ERROR] Numeric Version 23.3
+[9-ERROR] Trying to copy the default documentation ...
+[9-ERROR] ./scripts/Build-Pkg: line 1: numpy_main: command not found
+[9-ERROR] --- BUILD ERROR ---
 

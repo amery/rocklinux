@@ -20,38 +20,34 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142483702 Thu Mar 16 05:35:02 2006 (5) ERROR
-[TIMESTAMP] 1142730992 Sun Mar 19 02:16:32 2006 (9)
-[TIMESTAMP] 1142952896 Tue Mar 21 15:54:56 2006 (5)
+[TIMESTAMP] 1168572607 Fri Jan 12 04:30:07 2007 (5)
+[TIMESTAMP] 1168770821 Sun Jan 14 11:33:41 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-mono.log 9-mono.log
 
-[BUILDTIME] 13306 (5) ERROR
-[BUILDTIME] 52851 (9)
-[BUILDTIME] 52638 (5)
-[SIZE] 31.01 MB, 309 files
+[BUILDTIME] 98495 (5)
+[BUILDTIME] 99776 (9)
+[SIZE] 59.98 MB, 661 files
 
-[DEP] 00-dirtree bash2 binutils bison boehm-gc boehm-gc:dev bzip2 coreutils
-[DEP] diffutils findutils gawk gcc34 gcc34:dev glib glib:dev glibc23
-[DEP] glibc23:dev gnome2-dirtree grep libicu libicu:dev linux26-header:dev
-[DEP] m4 make mktemp net-tools pkgconfig rrdtool sed sysfiles tar
-[DEP] util-linux valgrind:dev
+[DEP] 00-dirtree applewmproto attr:dev bash2 binutils bison boehm-gc
+[DEP] boehm-gc:dev bzip2 coreutils cvm diffutils findutils gawk gcc40
+[DEP] gcc40:dev glib glib:dev glibc23 glibc23:dev gnome2-dirtree grep
+[DEP] imake libx11 libxt linux-libc-headers:dev m4 make mktemp ncurses:dev
+[DEP] net-tools pkgconfig rrdtool sed sysfiles tar util-linux valgrind:dev
+[DEP] xorg-cf-files zlib zlib:dev
 
-[PROVIDES] CorCompare.exe EnumCheck.exe GenerateDelegate.exe IFaceDisco.exe
-[PROVIDES] MakeCert.exe al al.exe browsercaps-updater.exe cert2spc
-[PROVIDES] cert2spc.exe certmgr certmgr.exe chktrust chktrust.exe
-[PROVIDES] cilc cilc.exe disco disco.exe gacutil gacutil.exe
-[PROVIDES] genxs genxs.exe gmcs ictool.exe ilasm ilasm.exe jay
-[PROVIDES] libMonoPosixHelper.a libMonoPosixHelper.so libmint.a libmint.so
-[PROVIDES] libmono-profiler-cov.a libmono-profiler-cov.so libmono.a
-[PROVIDES] libmono.so makecert mbas mcs mint mono mono-api-diff.exe
-[PROVIDES] mono-api-info.exe mono-find-provides mono-find-provides.exe
-[PROVIDES] mono-find-requires mono-find-requires.exe monodis monograph
-[PROVIDES] monop monop.exe monoresgen monoresgen.exe monostyle.exe
-[PROVIDES] nunit-console.exe pedump resgen secutil secutil.exe setreg
-[PROVIDES] setreg.exe signcode signcode.exe sn sn.exe soapsuds soapsuds.exe
-[PROVIDES] sqlsharp sqlsharp.exe wsdl wsdl.exe xsd xsd.exe
+[PROVIDES] al caspol cert2spc certmgr chktrust cilc disco dtd2rng dtd2xsd
+[PROVIDES] gacutil genxs gmcs ilasm ilasm2 jay libMonoPosixHelper.a
+[PROVIDES] libMonoPosixHelper.so libMonoSupportW.a libMonoSupportW.so
+[PROVIDES] libikvm-native.a libikvm-native.so libmono-profiler-aot.a
+[PROVIDES] libmono-profiler-aot.so libmono-profiler-cov.a
+[PROVIDES] libmono-profiler-cov.so libmono.a libmono.so macpack makecert
+[PROVIDES] mbas mcs mjs mkbundle mono mono-find-provides mono-find-requires
+[PROVIDES] mono-service mono-service2 mono-shlib-cop mono-xmltool
+[PROVIDES] monodiet monodis monograph monop monop2 mozroots nunit-console
+[PROVIDES] nunit-console2 pedump permview prj2make resgen resgen2 secutil
+[PROVIDES] setreg signcode sn soapsuds sqlsharp wsdl wsdl2 xbuild xsd
 

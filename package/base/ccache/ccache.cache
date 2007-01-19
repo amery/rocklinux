@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142454554 Wed Mar 15 21:29:14 2006 (5)
-[TIMESTAMP] 1142691450 Sat Mar 18 15:17:30 2006 (9)
+[TIMESTAMP] 1168531292 Thu Jan 11 17:01:32 2007 (5)
+[TIMESTAMP] 1168720988 Sat Jan 13 21:43:08 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 1-ccache.log 5-ccache.log 9-ccache.log
 
-[BUILDTIME] 1411 (5)
-[BUILDTIME] 2117 (9)
+[BUILDTIME] 1441 (5)
+[BUILDTIME] 2107 (9)
 [SIZE] 0.06 MB, 8 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make
-[DEP] mktemp net-tools patch rrdtool sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
+[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev
+[DEP] make mktemp net-tools netpbm patch rrdtool sed sysfiles tar twoftpd
+[DEP] ucspi-unix util-linux
 
 [PROVIDES] ccache
 

@@ -20,125 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142629287 Fri Mar 17 22:01:27 2006 (5) ERROR
-[TIMESTAMP] 1142897527 Tue Mar 21 00:32:07 2006 (9) ERROR
-[TIMESTAMP] 1142963348 Tue Mar 21 18:49:08 2006 (5) ERROR
-[TIMESTAMP] 1142973466 Tue Mar 21 21:37:46 2006 (9) ERROR
-[TIMESTAMP] 1143033157 Wed Mar 22 14:12:37 2006 (5) ERROR
-[TIMESTAMP] 1143042784 Wed Mar 22 16:53:04 2006 (9) ERROR
+[TIMESTAMP] 1168573354 Fri Jan 12 04:42:34 2007 (5)
+[TIMESTAMP] 1168771687 Sun Jan 14 11:48:07 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-mono-doc.err 9-mono-doc.err
+[LOGS] 5-mono-doc.log 9-mono-doc.log
 
-[BUILDTIME] 2443 (5) ERROR
-[BUILDTIME] 2929 (9) ERROR
-[BUILDTIME] 2990 (5) ERROR
-[BUILDTIME] 2913 (9) ERROR
-[BUILDTIME] 2888 (5) ERROR
-[BUILDTIME] 2923 (9) ERROR
+[BUILDTIME] 2938 (5)
+[BUILDTIME] 3433 (9)
+[SIZE] 7.48 MB, 52 files
 
+[DEP] 00-dirtree bash2 coreutils cvm diffutils findutils gawk gcc40
+[DEP] glibc23 grep make mktemp mono net-tools sed sysfiles unzip util-linux
 
-[5-ERROR] checking for C compiler default output file name... a.out
-[5-ERROR] checking whether the C compiler works... yes
-[5-ERROR] checking whether we are cross compiling... no
-[5-ERROR] checking for suffix of executables... 
-[5-ERROR] checking for suffix of object files... o
-[5-ERROR] checking whether we are using the GNU C compiler... yes
-[5-ERROR] checking whether gcc-34 accepts -g... yes
-[5-ERROR] checking for gcc-34 option to accept ANSI C... none needed
-[5-ERROR] checking dependency style of gcc-34... none
-[5-ERROR] checking how to run the C preprocessor... gcc-34 -E
-[5-ERROR] checking for egrep... grep -E
-[5-ERROR] checking for ANSI C header files... yes
-[5-ERROR] checking for sys/types.h... yes
-[5-ERROR] checking for sys/stat.h... yes
-[5-ERROR] checking for stdlib.h... yes
-[5-ERROR] checking for string.h... yes
-[5-ERROR] checking for memory.h... yes
-[5-ERROR] checking for strings.h... yes
-[5-ERROR] checking for inttypes.h... yes
-[5-ERROR] checking for stdint.h... yes
-[5-ERROR] checking for unistd.h... yes
-[5-ERROR] checking locale.h usability... yes
-[5-ERROR] checking locale.h presence... yes
-[5-ERROR] checking for locale.h... yes
-[5-ERROR] checking for LC_MESSAGES... yes
-[5-ERROR] checking libintl.h usability... yes
-[5-ERROR] checking libintl.h presence... yes
-[5-ERROR] checking for libintl.h... yes
-[5-ERROR] checking for dgettext in libc... yes
-[5-ERROR] checking for bind_textdomain_codeset... yes
-[5-ERROR] checking for msgfmt... /usr/bin/msgfmt
-[5-ERROR] checking for dcgettext... yes
-[5-ERROR] checking for gmsgfmt... /usr/bin/msgfmt
-[5-ERROR] checking for xgettext... /usr/bin/xgettext
-[5-ERROR] checking for catalogs to be installed...  ca
-[5-ERROR] ./configure: line 4920: ./po/POTFILES.in: No such file or directory
-[5-ERROR] checking for pkg-config... /usr/bin/pkg-config
-[5-ERROR] checking for gtk-sharp >= 0.91 gtkhtml-sharp >= 0.91 glade-sharp >= 0.91 mono >= 0.90... Package gtkhtml-sharp was not found in the pkg-config search path. Perhaps you should add the directory containing `gtkhtml-sharp.pc' to the PKG_CONFIG_PATH environment variable No package 'gtkhtml-sharp' found
-[5-ERROR] configure: error: Library requirements (gtk-sharp >= 0.91 gtkhtml-sharp >= 0.91 glade-sharp >= 0.91 mono >= 0.90) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them.
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 0 files for this package.
-[5-ERROR] Applying package split: 40 mono-doc:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 mono-doc:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 mono-doc:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building mono-doc=mono-doc.
-
-[9-ERROR] checking for C compiler default output file name... a.out
-[9-ERROR] checking whether the C compiler works... yes
-[9-ERROR] checking whether we are cross compiling... no
-[9-ERROR] checking for suffix of executables... 
-[9-ERROR] checking for suffix of object files... o
-[9-ERROR] checking whether we are using the GNU C compiler... yes
-[9-ERROR] checking whether gcc-34 accepts -g... yes
-[9-ERROR] checking for gcc-34 option to accept ANSI C... none needed
-[9-ERROR] checking dependency style of gcc-34... none
-[9-ERROR] checking how to run the C preprocessor... gcc-34 -E
-[9-ERROR] checking for egrep... grep -E
-[9-ERROR] checking for ANSI C header files... yes
-[9-ERROR] checking for sys/types.h... yes
-[9-ERROR] checking for sys/stat.h... yes
-[9-ERROR] checking for stdlib.h... yes
-[9-ERROR] checking for string.h... yes
-[9-ERROR] checking for memory.h... yes
-[9-ERROR] checking for strings.h... yes
-[9-ERROR] checking for inttypes.h... yes
-[9-ERROR] checking for stdint.h... yes
-[9-ERROR] checking for unistd.h... yes
-[9-ERROR] checking locale.h usability... yes
-[9-ERROR] checking locale.h presence... yes
-[9-ERROR] checking for locale.h... yes
-[9-ERROR] checking for LC_MESSAGES... yes
-[9-ERROR] checking libintl.h usability... yes
-[9-ERROR] checking libintl.h presence... yes
-[9-ERROR] checking for libintl.h... yes
-[9-ERROR] checking for dgettext in libc... yes
-[9-ERROR] checking for bind_textdomain_codeset... yes
-[9-ERROR] checking for msgfmt... /usr/bin/msgfmt
-[9-ERROR] checking for dcgettext... yes
-[9-ERROR] checking for gmsgfmt... /usr/bin/msgfmt
-[9-ERROR] checking for xgettext... /usr/bin/xgettext
-[9-ERROR] checking for catalogs to be installed...  ca
-[9-ERROR] ./configure: line 4920: ./po/POTFILES.in: No such file or directory
-[9-ERROR] checking for pkg-config... /usr/bin/pkg-config
-[9-ERROR] checking for gtk-sharp >= 0.91 gtkhtml-sharp >= 0.91 glade-sharp >= 0.91 mono >= 0.90... Package gtkhtml-sharp was not found in the pkg-config search path. Perhaps you should add the directory containing `gtkhtml-sharp.pc' to the PKG_CONFIG_PATH environment variable No package 'gtkhtml-sharp' found
-[9-ERROR] configure: error: Library requirements (gtk-sharp >= 0.91 gtkhtml-sharp >= 0.91 glade-sharp >= 0.91 mono >= 0.90) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them.
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 0 files for this package.
-[9-ERROR] Applying package split: 40 mono-doc:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 mono-doc:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 mono-doc:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building mono-doc=mono-doc.
+[PROVIDES] mdassembler mdcs2ecma mdnormalizer mdvalidater mod monodocer
+[PROVIDES] monodocs2html monodocs2slashdoc
 

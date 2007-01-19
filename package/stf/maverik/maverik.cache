@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142629674 Fri Mar 17 22:07:54 2006 (5)
-[TIMESTAMP] 1142897941 Tue Mar 21 00:39:01 2006 (9)
+[TIMESTAMP] 1168680387 Sat Jan 13 10:26:27 2007 (5)
+[TIMESTAMP] 1168889209 Mon Jan 15 20:26:49 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-maverik.log 9-maverik.log
 
-[BUILDTIME] 6146 (5)
-[BUILDTIME] 6361 (9)
-[SIZE] 33.25 MB, 2632 files
+[BUILDTIME] 7866 (5)
+[BUILDTIME] 7998 (9)
+[SIZE] 31.36 MB, 1886 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep make mktemp rrdtool sed sysfiles
-[DEP] tar xorg xorg:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev grep
+[DEP] libx11 libx11:dev libxau libxdmcp libxext make mesalib mesalib:dev
+[DEP] mktemp rrdtool sed sysfiles tar xproto:dev
 
 [PROVIDES] libmav_avatar.so libmav_callbacks.so libmav_collide.so
 [PROVIDES] libmav_ffnav.so libmav_gfx.so libmav_gfxNone.so

@@ -20,31 +20,39 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142537970 Thu Mar 16 20:39:30 2006 (5)
-[TIMESTAMP] 1142794336 Sun Mar 19 19:52:16 2006 (9) ERROR
-[TIMESTAMP] 1142970188 Tue Mar 21 20:43:08 2006 (9) ERROR
-[TIMESTAMP] 1143039327 Wed Mar 22 15:55:27 2006 (9) ERROR
+[TIMESTAMP] 1168610938 Fri Jan 12 15:08:58 2007 (5)
+[TIMESTAMP] 1168813766 Sun Jan 14 23:29:26 2007 (9) ERROR
+[TIMESTAMP] 1168972917 Tue Jan 16 19:41:57 2007 (9) ERROR
+[TIMESTAMP] 1169143198 Thu Jan 18 18:59:58 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-kdeutils.log 9-kdeutils.err
 
-[BUILDTIME] 111562 (5)
-[BUILDTIME] 113039 (9) ERROR
-[BUILDTIME] 1620 (9) ERROR
-[BUILDTIME] 1613 (9) ERROR
-[SIZE] 9.38 MB, 479 files
+[BUILDTIME] 85580 (5)
+[BUILDTIME] 87224 (9) ERROR
+[BUILDTIME] 87504 (9) ERROR
+[BUILDTIME] 87374 (9) ERROR
+[SIZE] 8.08 MB, 479 files
 
-[DEP] 00-dirtree acl acl:dev arts attr attr:dev bash2 binutils bzip2
-[DEP] coreutils diffutils expat fam fam:dev findutils freetype freetype:dev
-[DEP] gawk gcc34 gcc34:dev gettext glib12 glib12:dev glibc23 glibc23:dev
-[DEP] gmp gmp:dev gnome14-dirtree grep gtk+12 gtk+12:dev kdebase
-[DEP] kdebase:doc kdelibs kdelibs:dev libart_lgpl23 libart_lgpl23:dev
-[DEP] libidn libidn:dev libjpeg libpng libpng:dev linux26-header:dev make
+[DEP] 00-dirtree acl acl:dev alsa applewmproto applewmproto:dev attr
+[DEP] attr:dev bash2 binutils bzip2 coreutils cups cvm diffutils expat
+[DEP] expat:dev fam fam:dev findutils fontconfig fontconfig:dev freetype
+[DEP] freetype:dev gawk gcc40 gcc40:dev gettext glib12 glib12:dev glibc23
+[DEP] glibc23:dev gmp gmp:dev gnome14-dirtree grep gtk+12 gtk+12:dev
+[DEP] hicolor-icon-theme imake inputproto:dev kdebase kdebase:doc kdelibs
+[DEP] kdelibs:dev libart_lgpl23 libart_lgpl23:dev libice libice:dev
+[DEP] libidn libidn:dev libjpeg libpng libpng:dev libsm libsm:dev libx11
+[DEP] libx11:dev libxau libxau:dev libxcursor libxcursor:dev libxdmcp
+[DEP] libxdmcp:dev libxext libxext:dev libxfixes libxfixes:dev libxft
+[DEP] libxft:dev libxi libxi:dev libxinerama libxinerama:dev libxmu
+[DEP] libxmu:dev libxrandr libxrandr:dev libxrender libxrender:dev libxt
+[DEP] libxt:dev libxtst libxtst:dev linux-libc-headers:dev make mesalib
 [DEP] mktemp nas net-snmp net-snmp:dev net-tools openssl perl5 python
 [DEP] python:dev qt33 qt33:dev rrdtool sed superkaramba sysfiles tar tcl
-[DEP] tk util-linux xmms xmms:dev xorg xorg:dev zlib:dev
+[DEP] tk util-linux xextproto:dev xmms xmms:dev xorg-cf-files xproto:dev
+[DEP] zlib zlib:dev
 
 [PROVIDES] ark ark.so irkick irkick.so kcalc kcalc.so kcharselect
 [PROVIDES] kcharselect_panelapplet.so kcm_kcmlirc.so kcm_kdf.so
@@ -61,54 +69,54 @@
 [PROVIDES] libkmilo.so libkregexpeditorcommon.so libkregexpeditorgui.so
 [PROVIDES] libksimcore.so superkaramba
 
-[9-ERROR] Old Command: gcc-34 --version
-[9-ERROR] ENVPREFIX = 'CMD'
-[9-ERROR] APPEND_PO = ''
-[9-ERROR] OTHERS = ''
-[9-ERROR] INSERT = '-O1 -pipe'
-[9-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
-[9-ERROR] APPEND = '-s'
-[9-ERROR] FILTER = ''
-[9-ERROR] Old PATH: /ROCK/src.kdeutils.1143039292.18643.1228168117/wrappers:/ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/wrapper:/ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clip/bin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/deva/bin:/opt/e16/bin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/flexlm/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/kde3/bin:/opt/kde3/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/samba/bin:/opt/samba/sbin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/opt/kde3/bin:/opt/root/bin
-[9-ERROR] New PATH: /ROCK/src.kdeutils.1143039292.18643.1228168117/wrappers:/ROCK/build/ref0315-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clip/bin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/deva/bin:/opt/e16/bin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/flexlm/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/kde3/bin:/opt/kde3/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/samba/bin:/opt/samba/sbin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/opt/kde3/bin:/opt/root/bin
-[9-ERROR] Insert: -O1
-[9-ERROR] Insert: -pipe
-[9-ERROR] Copy:   --version
-[9-ERROR] Append: -s
-[9-ERROR] New Command: gcc-34 -O1 -pipe --version -s
-[9-ERROR] gcc-34 (GCC) 3.4.5
-[9-ERROR] Copyright (C) 2004 Free Software Foundation, Inc.
-[9-ERROR] This is free software; see the source for copying conditions.  There is NO
-[9-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-[9-ERROR] 
-[9-ERROR] [ writing debug log to /ROCK/src.kdeutils.1143039292.18643.1228168117/cmd_wrapper.log ]
-[9-ERROR] File not found: download/mirror/k/kdeutils-3.5.1.tar.bz2
-[9-ERROR] Did you run ./scripts/Download for this package?
-[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] /bin/sh ../../admin/mkinstalldirs /usr/share/icons/crystalsvg/32x32/mimetypes
+[9-ERROR] /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 ./cr32-mime-superkaramba_theme.png /usr/share/icons/crystalsvg/32x32/mimetypes/superkaramba_theme.png
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5/superkaramba/icons'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5/superkaramba/icons'
+[9-ERROR] Making install in mimetypes
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5/superkaramba/mimetypes'
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5/superkaramba/mimetypes'
+[9-ERROR] make[3]: Nothing to be done for `install-exec-am'.
+[9-ERROR] test -z "/usr/share/mimelnk/application" || mkdir -p -- "/usr/share/mimelnk/application"
+[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 'x-superkaramba.desktop' '/usr/share/mimelnk/application/x-superkaramba.desktop'
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5/superkaramba/mimetypes'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5/superkaramba/mimetypes'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5/superkaramba'
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5/superkaramba'
+[9-ERROR] make[3]: Nothing to be done for `install-exec-am'.
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5/superkaramba'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5/superkaramba'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5/superkaramba'
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5'
+[9-ERROR] make[2]: Nothing to be done for `install-exec-am'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5'
+[9-ERROR] Trying to copy the default documentation ...
 [9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
+[9-ERROR] Processing /lib corrections ...
 [9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 750 files for this package.
-[9-ERROR] Applying package split: 40 kdeutils:dev (/lib/.*\.(la|a|o)$|/include/)
+[9-ERROR] Found 753 files for this package.
+[9-ERROR] Applying package split: 40 kdeutils:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
 [9-ERROR] Applying package split: 42 kdeutils:dev /pkgconfig/
 [9-ERROR] Applying package split: 45 kdeutils /.*\.la$
 [9-ERROR] Applying package split: 60 kdeutils:doc /share/doc/
 [9-ERROR] Calculating package dependencies ...
 [9-ERROR] <kdeutils> Creating flist file ...
 [9-ERROR] <kdeutils> Creating package dependencies file ...
-[9-ERROR] <kdeutils> Creating md5sum and cksum files ...
 [9-ERROR] <kdeutils> Creating package description ...
+[9-ERROR] <kdeutils> Creating md5sum and cksum files ...
 [9-ERROR] <kdeutils:dev> Creating flist file ...
 [9-ERROR] <kdeutils:dev> Creating package dependencies file ...
-[9-ERROR] <kdeutils:dev> Creating md5sum and cksum files ...
 [9-ERROR] <kdeutils:dev> Creating package description ...
+[9-ERROR] <kdeutils:dev> Creating md5sum and cksum files ...
 [9-ERROR] <kdeutils:doc> Creating flist file ...
 [9-ERROR] <kdeutils:doc> Creating package dependencies file ...
-[9-ERROR] <kdeutils:doc> Creating md5sum and cksum files ...
 [9-ERROR] <kdeutils:doc> Creating package description ...
+[9-ERROR] <kdeutils:doc> Creating md5sum and cksum files ...
 [9-ERROR] Making post-install adaptions.
 [9-ERROR] Found shared files with other packages:
-[9-ERROR] opt/kde3/bin/superkaramba: kdeutils superkaramba
+[9-ERROR] usr/bin/superkaramba: kdeutils superkaramba
 [9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Finished building kdeutils=kdeutils.
+[9-ERROR] --- BUILD ERROR ---
 

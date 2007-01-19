@@ -20,21 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142593651 Fri Mar 17 12:07:31 2006 (5)
-[TIMESTAMP] 1142858952 Mon Mar 20 13:49:12 2006 (9)
+[TIMESTAMP] 1168651185 Sat Jan 13 02:19:45 2007 (5) ERROR
+[TIMESTAMP] 1168857977 Mon Jan 15 11:46:17 2007 (9) ERROR
+[TIMESTAMP] 1168949652 Tue Jan 16 13:14:12 2007 (5) ERROR
+[TIMESTAMP] 1168979596 Tue Jan 16 21:33:16 2007 (9) ERROR
+[TIMESTAMP] 1169093140 Thu Jan 18 05:05:40 2007 (5) ERROR
+[TIMESTAMP] 1169149807 Thu Jan 18 20:50:07 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-tla.log 9-tla.log
+[LOGS] 5-tla.err 9-tla.err
 
-[BUILDTIME] 18241 (5)
-[BUILDTIME] 18652 (9)
-[SIZE] 0.68 MB, 7 files
+[BUILDTIME] 3675 (5) ERROR
+[BUILDTIME] 3724 (9) ERROR
+[BUILDTIME] 3731 (5) ERROR
+[BUILDTIME] 3719 (9) ERROR
+[BUILDTIME] 3821 (5) ERROR
+[BUILDTIME] 3722 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep gzip linux26-header:dev
-[DEP] make mktemp net-tools patch rrdtool sed sysfiles tar util-linux
 
-[PROVIDES] tla
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/url-fd.c:122: warning: pointer targets in passing argument 1 of 'vu_push_name_handler' differ in signedness
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/url-fd.c: In function 'url_fd_to_fd':
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/url-fd.c:144: warning: pointer targets in passing argument 1 of 'str_chr_index' differ in signedness
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/url-fd.c:144: warning: pointer targets in assignment differ in signedness
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/url-fd.c:152: warning: pointer targets in passing argument 1 of 'str_length' differ in signedness
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/url-fd.c:152: warning: pointer targets in passing argument 3 of 'cvt_decimal_to_int' differ in signedness
+[5-ERROR] gcc-40 -I/ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/=build/config-include -I/ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/=build -I/ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src -g    -c -o vfdbuf.o /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vfdbuf.c
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vfdbuf.c: In function 'vfdbuf_shift':
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vfdbuf.c:789: warning: pointer targets in passing argument 3 of '(bufs.vfd + (struct vfdbuf_record *)((fd) * 64u))->sub_handler.vtable->write' differ in signedness
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vfdbuf.c: In function 'vfdbuf_flush':
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vfdbuf.c:914: warning: pointer targets in passing argument 3 of '(bufs.vfd + (struct vfdbuf_record *)((fd) * 64u))->sub_handler.vtable->write' differ in signedness
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vfdbuf.c: In function 'vfdbuf_more':
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vfdbuf.c:1119: warning: pointer targets in passing argument 3 of '(bufs.vfd + (struct vfdbuf_record *)((fd) * 64u))->sub_handler.vtable->read' differ in signedness
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vfdbuf.c: In function 'vfdbuf_read':
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vfdbuf.c:1522: warning: pointer targets in passing argument 1 of 'mem_move' differ in signedness
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vfdbuf.c:1641: warning: pointer targets in passing argument 1 of 'mem_move' differ in signedness
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vfdbuf.c: In function 'vfdbuf_write':
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vfdbuf.c:1672: warning: pointer targets in passing argument 2 of 'mem_move' differ in signedness
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vfdbuf.c:1752: warning: pointer targets in passing argument 2 of 'mem_move' differ in signedness
+[5-ERROR] gcc-40 -I/ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/=build/config-include -I/ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/=build -I/ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src -g    -c -o vu-bad-arg.o /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vu-bad-arg.c
+[5-ERROR] gcc-40 -I/ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/=build/config-include -I/ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/=build -I/ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src -g    -c -o vu-dash.o /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vu-dash.c
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vu-dash.c: In function 'vu_push_dash_handler':
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vu-dash.c:72: warning: pointer targets in initialization differ in signedness
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vu-dash.c:73: warning: pointer targets in initialization differ in signedness
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vu-dash.c:84: warning: pointer targets in passing argument 1 of 'vu_push_name_handler' differ in signedness
+[5-ERROR] gcc-40 -I/ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/=build/config-include -I/ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/=build -I/ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src -g    -c -o vu-help.o /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vu-help.c
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vu-help.c: In function 'vu_help_with_handlers':
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vu-help.c:53: warning: pointer targets in assignment differ in signedness
+[5-ERROR] gcc-40 -I/ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/=build/config-include -I/ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/=build -I/ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src -g    -c -o vu-sys.o /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vu-sys.c
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vu-sys.c: In function 'vu_sys_readdir':
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vu-sys.c:455: warning: pointer targets in passing argument 2 of 'str_save' differ in signedness
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vu-sys.c:455: warning: pointer targets in assignment differ in signedness
+[5-ERROR] gcc-40 -I/ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/=build/config-include -I/ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/=build -I/ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src -g    -c -o vu-utils-vfdbuf.o /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vu-utils-vfdbuf.c
+[5-ERROR] gcc-40 -I/ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/=build/config-include -I/ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/=build -I/ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src -g    -c -o vu-utils.o /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vu-utils.c
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vu-utils.c: In function 'vu_file_to_string':
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vu-utils.c:56: warning: pointer targets in passing argument 3 of 'vu_read_retry' differ in signedness
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vu-utils.c:77: warning: pointer targets in passing argument 3 of 'vu_read_retry' differ in signedness
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vu-utils.c: In function 'vu_file_is_directory':
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vu-utils.c:156: warning: pointer targets in passing argument 2 of 'vu_lstat' differ in signedness
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vu-utils.c: In function 'vu_file_is_directory_following':
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vu-utils.c:182: warning: pointer targets in passing argument 2 of 'vu_stat' differ in signedness
+[5-ERROR] gcc-40 -I/ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/=build/config-include -I/ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/=build -I/ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src -g    -c -o vu-virtual-null.o /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vu-virtual-null.c
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vu-virtual-null.c:62: error: static declaration of 'vu_virtual_null_vtable' follows non-static declaration
+[5-ERROR] /ROCK/src.tla.1169093099.21290.563344256/tla-1.2.1/src/hackerlab/vu/vu-virtual-null.h:25: error: previous declaration of 'vu_virtual_null_vtable' was here
+[5-ERROR] make[2]: *** [vu-virtual-null.o] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.tla.1169093099.21290.563344256/tla-1.2.1/=build/hackerlab/vu'
+[5-ERROR] make[1]: *** [all] Error 2
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.tla.1169093099.21290.563344256/tla-1.2.1/=build/hackerlab'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/url-fd.c:122: warning: pointer targets in passing argument 1 of 'vu_push_name_handler' differ in signedness
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/url-fd.c: In function 'url_fd_to_fd':
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/url-fd.c:144: warning: pointer targets in passing argument 1 of 'str_chr_index' differ in signedness
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/url-fd.c:144: warning: pointer targets in assignment differ in signedness
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/url-fd.c:152: warning: pointer targets in passing argument 1 of 'str_length' differ in signedness
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/url-fd.c:152: warning: pointer targets in passing argument 3 of 'cvt_decimal_to_int' differ in signedness
+[9-ERROR] gcc-40 -I/ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/=build/config-include -I/ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/=build -I/ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src -g    -c -o vfdbuf.o /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vfdbuf.c
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vfdbuf.c: In function 'vfdbuf_shift':
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vfdbuf.c:789: warning: pointer targets in passing argument 3 of '(bufs.vfd + (struct vfdbuf_record *)((fd) * 64u))->sub_handler.vtable->write' differ in signedness
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vfdbuf.c: In function 'vfdbuf_flush':
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vfdbuf.c:914: warning: pointer targets in passing argument 3 of '(bufs.vfd + (struct vfdbuf_record *)((fd) * 64u))->sub_handler.vtable->write' differ in signedness
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vfdbuf.c: In function 'vfdbuf_more':
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vfdbuf.c:1119: warning: pointer targets in passing argument 3 of '(bufs.vfd + (struct vfdbuf_record *)((fd) * 64u))->sub_handler.vtable->read' differ in signedness
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vfdbuf.c: In function 'vfdbuf_read':
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vfdbuf.c:1522: warning: pointer targets in passing argument 1 of 'mem_move' differ in signedness
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vfdbuf.c:1641: warning: pointer targets in passing argument 1 of 'mem_move' differ in signedness
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vfdbuf.c: In function 'vfdbuf_write':
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vfdbuf.c:1672: warning: pointer targets in passing argument 2 of 'mem_move' differ in signedness
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vfdbuf.c:1752: warning: pointer targets in passing argument 2 of 'mem_move' differ in signedness
+[9-ERROR] gcc-40 -I/ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/=build/config-include -I/ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/=build -I/ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src -g    -c -o vu-bad-arg.o /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vu-bad-arg.c
+[9-ERROR] gcc-40 -I/ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/=build/config-include -I/ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/=build -I/ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src -g    -c -o vu-dash.o /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vu-dash.c
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vu-dash.c: In function 'vu_push_dash_handler':
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vu-dash.c:72: warning: pointer targets in initialization differ in signedness
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vu-dash.c:73: warning: pointer targets in initialization differ in signedness
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vu-dash.c:84: warning: pointer targets in passing argument 1 of 'vu_push_name_handler' differ in signedness
+[9-ERROR] gcc-40 -I/ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/=build/config-include -I/ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/=build -I/ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src -g    -c -o vu-help.o /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vu-help.c
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vu-help.c: In function 'vu_help_with_handlers':
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vu-help.c:53: warning: pointer targets in assignment differ in signedness
+[9-ERROR] gcc-40 -I/ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/=build/config-include -I/ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/=build -I/ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src -g    -c -o vu-sys.o /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vu-sys.c
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vu-sys.c: In function 'vu_sys_readdir':
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vu-sys.c:455: warning: pointer targets in passing argument 2 of 'str_save' differ in signedness
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vu-sys.c:455: warning: pointer targets in assignment differ in signedness
+[9-ERROR] gcc-40 -I/ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/=build/config-include -I/ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/=build -I/ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src -g    -c -o vu-utils-vfdbuf.o /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vu-utils-vfdbuf.c
+[9-ERROR] gcc-40 -I/ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/=build/config-include -I/ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/=build -I/ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src -g    -c -o vu-utils.o /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vu-utils.c
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vu-utils.c: In function 'vu_file_to_string':
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vu-utils.c:56: warning: pointer targets in passing argument 3 of 'vu_read_retry' differ in signedness
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vu-utils.c:77: warning: pointer targets in passing argument 3 of 'vu_read_retry' differ in signedness
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vu-utils.c: In function 'vu_file_is_directory':
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vu-utils.c:156: warning: pointer targets in passing argument 2 of 'vu_lstat' differ in signedness
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vu-utils.c: In function 'vu_file_is_directory_following':
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vu-utils.c:182: warning: pointer targets in passing argument 2 of 'vu_stat' differ in signedness
+[9-ERROR] gcc-40 -I/ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/=build/config-include -I/ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/=build -I/ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src -g    -c -o vu-virtual-null.o /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vu-virtual-null.c
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vu-virtual-null.c:62: error: static declaration of 'vu_virtual_null_vtable' follows non-static declaration
+[9-ERROR] /ROCK/src.tla.1169149770.12955.3084940077/tla-1.2.1/src/hackerlab/vu/vu-virtual-null.h:25: error: previous declaration of 'vu_virtual_null_vtable' was here
+[9-ERROR] make[2]: *** [vu-virtual-null.o] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.tla.1169149770.12955.3084940077/tla-1.2.1/=build/hackerlab/vu'
+[9-ERROR] make[1]: *** [all] Error 2
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.tla.1169149770.12955.3084940077/tla-1.2.1/=build/hackerlab'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

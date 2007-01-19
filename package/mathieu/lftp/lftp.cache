@@ -20,23 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142606413 Fri Mar 17 15:40:13 2006 (5)
-[TIMESTAMP] 1142871785 Mon Mar 20 17:23:05 2006 (9)
+[TIMESTAMP] 1168663572 Sat Jan 13 05:46:12 2007 (5)
+[TIMESTAMP] 1168871327 Mon Jan 15 15:28:47 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-lftp.log 9-lftp.log
 
-[BUILDTIME] 11061 (5)
-[BUILDTIME] 11390 (9)
-[SIZE] 1.21 MB, 25 files
+[BUILDTIME] 10693 (5)
+[BUILDTIME] 10931 (9)
+[SIZE] 0.92 MB, 19 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils expat expat:dev
-[DEP] findutils gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev gnutls
-[DEP] gnutls:dev grep libgcrypt libgcrypt:dev libgpg-error libgpg-error:dev
-[DEP] linux26-header:dev make mktemp ncurses:dev net-tools readline
-[DEP] readline:dev rrdtool sed sysfiles tar util-linux zlib:dev
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils expat
+[DEP] expat:dev findutils gawk gcc40 gcc40:dev gettext glibc23 glibc23:dev
+[DEP] gnutls gnutls:dev grep libgcrypt libgcrypt:dev libgpg-error
+[DEP] libgpg-error:dev linux-libc-headers:dev make mktemp ncurses
+[DEP] ncurses:dev net-tools netpbm readline readline:dev rrdtool sed
+[DEP] sysfiles tar twoftpd ucspi-unix util-linux zlib
 
 [PROVIDES] lftp lftpget
 

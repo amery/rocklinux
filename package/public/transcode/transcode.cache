@@ -20,58 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142573598 Fri Mar 17 06:33:18 2006 (5)
-[TIMESTAMP] 1142836117 Mon Mar 20 07:28:37 2006 (9)
+[TIMESTAMP] 1168637136 Fri Jan 12 22:25:36 2007 (5) ERROR
+[TIMESTAMP] 1168842474 Mon Jan 15 07:27:54 2007 (9) ERROR
+[TIMESTAMP] 1168948542 Tue Jan 16 12:55:42 2007 (5) ERROR
+[TIMESTAMP] 1168978452 Tue Jan 16 21:14:12 2007 (9) ERROR
+[TIMESTAMP] 1169091958 Thu Jan 18 04:45:58 2007 (5) ERROR
+[TIMESTAMP] 1169148725 Thu Jan 18 20:32:05 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-transcode.log 9-transcode.log
+[LOGS] 5-transcode.err 9-transcode.err
 
-[BUILDTIME] 23564 (5)
-[BUILDTIME] 24381 (9)
-[SIZE] 3.78 MB, 153 files
+[BUILDTIME] 3726 (5) ERROR
+[BUILDTIME] 3834 (9) ERROR
+[BUILDTIME] 3850 (5) ERROR
+[BUILDTIME] 3854 (9) ERROR
+[BUILDTIME] 3876 (5) ERROR
+[BUILDTIME] 3847 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils divx4linux:dev
-[DEP] faac faad2 ffmpeg ffmpeg:dev findutils gawk gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev gnome-libs14 gnome14-dirtree grep lame lame:dev
-[DEP] libdvdread libdvdread:dev libjpeg libjpeg:dev libmpeg2:dev libtheora
-[DEP] linux26-header:dev make mktemp mpeg4ip net-tools ogg-vorbis pkgconfig
-[DEP] rrdtool sed sysfiles tar util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] af6_decore.so avifix aviindex avimerge avisplit avisync
-[PROVIDES] export_ac3.so export_debugppm.so export_divx4.so
-[PROVIDES] export_divx4raw.so export_divx5.so export_divx5raw.so
-[PROVIDES] export_ffmpeg.so export_jpg.so export_lame.so export_mjpeg.so
-[PROVIDES] export_mp1e.so export_mp2.so export_null.so export_ogg.so
-[PROVIDES] export_pcm.so export_ppm.so export_pvn.so export_raw.so
-[PROVIDES] export_toolame.so export_wav.so export_xvid.so export_xvid2.so
-[PROVIDES] export_xvid3.so export_xvid4.so filter_29to23.so
-[PROVIDES] filter_32detect.so filter_32drop.so filter_aclip.so
-[PROVIDES] filter_ascii.so filter_astat.so filter_clone.so
-[PROVIDES] filter_control.so filter_cpaudio.so filter_cshift.so
-[PROVIDES] filter_cut.so filter_decimate.so filter_denoise3d.so
-[PROVIDES] filter_detectclipping.so filter_detectsilence.so
-[PROVIDES] filter_dilyuvmmx.so filter_divxkey.so filter_dnr.so
-[PROVIDES] filter_doublefps.so filter_extsub.so filter_extsub2.so
-[PROVIDES] filter_facemask.so filter_fieldanalysis.so filter_fields.so
-[PROVIDES] filter_fps.so filter_hqdn3d.so filter_invert.so
-[PROVIDES] filter_ivtc.so filter_levels.so filter_lowpass.so
-[PROVIDES] filter_mask.so filter_modfps.so filter_msharpen.so
-[PROVIDES] filter_nored.so filter_normalize.so filter_null.so
-[PROVIDES] filter_pv.so filter_resample.so filter_skip.so filter_slowmo.so
-[PROVIDES] filter_smartbob.so filter_smartdeinter.so filter_smartyuv.so
-[PROVIDES] filter_smooth.so filter_tc_audio.so filter_tc_video.so
-[PROVIDES] filter_test.so filter_testframe.so filter_tomsmocomp.so
-[PROVIDES] filter_unsharp.so filter_videocore.so filter_whitebalance.so
-[PROVIDES] filter_xsharpen.so filter_yuvdenoise.so filter_yuvmedian.so
-[PROVIDES] filter_yuy2toyv12.so import_ac3.so import_avi.so import_bsdav.so
-[PROVIDES] import_divx.so import_dv.so import_dvd.so import_ffbin.so
-[PROVIDES] import_ffmpeg.so import_fraps.so import_lav.so import_mp3.so
-[PROVIDES] import_mpeg2.so import_mplayer.so import_null.so import_nuv.so
-[PROVIDES] import_nvrec.so import_ogg.so import_pvn.so import_raw.so
-[PROVIDES] import_rawlist.so import_sh.so import_vdrac3.so import_vnc.so
-[PROVIDES] import_vob.so import_xvid.so import_yuv.so import_yuv4mpeg.so
-[PROVIDES] tccat tcdecode tcdemux tcextract tcmodinfo tcmp3cut tcprobe
-[PROVIDES] tcrequant tcscan tcxmlcheck tcxpm2rgb transcode
+[5-ERROR] hardware support
+[5-ERROR] ----------------------------------------
+[5-ERROR] v4l/v4l2                       no
+[5-ERROR] OSS                            no
+[5-ERROR] bktr                           no
+[5-ERROR] sunau                          no
+[5-ERROR] 
+[5-ERROR] optional package support
+[5-ERROR] ----------------------------------------
+[5-ERROR] IBP                            no
+[5-ERROR] X11                            yes
+[5-ERROR] libmpeg2                       yes
+[5-ERROR] libpostproc                    no
+[5-ERROR] freetype2                      no
+[5-ERROR] avifile                        no
+[5-ERROR] lame                           yes
+[5-ERROR] ogg                            no
+[5-ERROR] vorbis                         no
+[5-ERROR] theora                         no
+[5-ERROR] libdvdread                     yes
+[5-ERROR] pvm3                           no
+[5-ERROR] libdv                          no
+[5-ERROR] libquicktime                   no
+[5-ERROR] lzo                            no
+[5-ERROR] a52                            no
+[5-ERROR] libmpeg3                       no
+[5-ERROR] libxml2                        no
+[5-ERROR] mjpegtools                     no
+[5-ERROR] sdl                            no
+[5-ERROR] gtk                            no
+[5-ERROR] libfame                        no
+[5-ERROR] imagemagick                    no
+[5-ERROR] libjpeg                        yes
+[5-ERROR] bsdav                          no
+[5-ERROR] iconv                          yes
+[5-ERROR] 
+[5-ERROR] ERROR: requirement failed: cannot compile ffmpeg/avcodec.h
+[5-ERROR] ffmpeg/avcodec.h can be found in the following packages:
+[5-ERROR]   FFMpeg  http://www.ffmpeg.org/
+[5-ERROR] 
+[5-ERROR] ERROR: requirement failed: cannot link against libavcodec
+[5-ERROR] libavcodec can be found in the following packages:
+[5-ERROR]   FFMpeg  http://www.ffmpeg.org/
+[5-ERROR] 
+[5-ERROR] 
+[5-ERROR] Please see the INSTALL file in the top directory of the
+[5-ERROR] transcode sources for more information about building
+[5-ERROR] transcode with this configure script.
+[5-ERROR] 
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] hardware support
+[9-ERROR] ----------------------------------------
+[9-ERROR] v4l/v4l2                       no
+[9-ERROR] OSS                            no
+[9-ERROR] bktr                           no
+[9-ERROR] sunau                          no
+[9-ERROR] 
+[9-ERROR] optional package support
+[9-ERROR] ----------------------------------------
+[9-ERROR] IBP                            no
+[9-ERROR] X11                            yes
+[9-ERROR] libmpeg2                       yes
+[9-ERROR] libpostproc                    no
+[9-ERROR] freetype2                      no
+[9-ERROR] avifile                        no
+[9-ERROR] lame                           yes
+[9-ERROR] ogg                            no
+[9-ERROR] vorbis                         no
+[9-ERROR] theora                         no
+[9-ERROR] libdvdread                     yes
+[9-ERROR] pvm3                           no
+[9-ERROR] libdv                          no
+[9-ERROR] libquicktime                   no
+[9-ERROR] lzo                            no
+[9-ERROR] a52                            no
+[9-ERROR] libmpeg3                       no
+[9-ERROR] libxml2                        no
+[9-ERROR] mjpegtools                     no
+[9-ERROR] sdl                            no
+[9-ERROR] gtk                            no
+[9-ERROR] libfame                        no
+[9-ERROR] imagemagick                    no
+[9-ERROR] libjpeg                        yes
+[9-ERROR] bsdav                          no
+[9-ERROR] iconv                          yes
+[9-ERROR] 
+[9-ERROR] ERROR: requirement failed: cannot compile ffmpeg/avcodec.h
+[9-ERROR] ffmpeg/avcodec.h can be found in the following packages:
+[9-ERROR]   FFMpeg  http://www.ffmpeg.org/
+[9-ERROR] 
+[9-ERROR] ERROR: requirement failed: cannot link against libavcodec
+[9-ERROR] libavcodec can be found in the following packages:
+[9-ERROR]   FFMpeg  http://www.ffmpeg.org/
+[9-ERROR] 
+[9-ERROR] 
+[9-ERROR] Please see the INSTALL file in the top directory of the
+[9-ERROR] transcode sources for more information about building
+[9-ERROR] transcode with this configure script.
+[9-ERROR] 
+[9-ERROR] --- BUILD ERROR ---
 

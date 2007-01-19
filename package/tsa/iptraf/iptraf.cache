@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142482548 Thu Mar 16 05:15:48 2006 (5)
-[TIMESTAMP] 1142728868 Sun Mar 19 01:41:08 2006 (9)
+[TIMESTAMP] 1168560902 Fri Jan 12 01:15:02 2007 (5)
+[TIMESTAMP] 1168757464 Sun Jan 14 07:51:04 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-iptraf.log 9-iptraf.log
 
-[BUILDTIME] 1664 (5)
-[BUILDTIME] 2237 (9)
-[SIZE] 0.30 MB, 12 files
+[BUILDTIME] 1773 (5)
+[BUILDTIME] 2279 (9)
+[SIZE] 0.15 MB, 12 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp ncurses
-[DEP] ncurses:dev patch rrdtool sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils gawk gcc40
+[DEP] gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev make
+[DEP] mktemp ncurses ncurses:dev patch rrdtool sed sysfiles tar
 
 [PROVIDES] iptraf rvnamed
 

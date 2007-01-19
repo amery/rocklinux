@@ -20,49 +20,53 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142526825 Thu Mar 16 17:33:45 2006 (5)
-[TIMESTAMP] 1142782058 Sun Mar 19 16:27:38 2006 (9)
+[TIMESTAMP] 1168601978 Fri Jan 12 12:39:38 2007 (5)
+[TIMESTAMP] 1168804313 Sun Jan 14 20:51:53 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-mpeg4ip.log 9-mpeg4ip.log
 
-[BUILDTIME] 82442 (5)
-[BUILDTIME] 84291 (9)
-[SIZE] 5.78 MB, 264 files
+[BUILDTIME] 82451 (5)
+[BUILDTIME] 84220 (9)
+[SIZE] 6.35 MB, 156 files
 
-[DEP] 00-dirtree a52dec:dev alsa alsa:dev arts arts:dev atk atk:dev
-[DEP] audiofile audiofile:dev bash2 binutils bzip2 cairo cairo:dev
-[DEP] coreutils diffutils esound esound:dev expat faac faac:dev faad2
-[DEP] faad2:dev ffmpeg ffmpeg:dev findutils freetype freetype:dev gawk
-[DEP] gcc34 gcc34:dev glib glib:dev glibc23 glibc23:dev gnome2-dirtree grep
-[DEP] gtk+ gtk+:dev id3lib id3lib:dev lame lame:dev libmpeg2:dev libpng
-[DEP] libpng:dev libsdl libsdl:dev libtheora libtool linux26-header:dev
-[DEP] mad make mktemp nas nas:dev nasm net-tools ogg-vorbis ogg-vorbis:dev
-[DEP] pango pango:dev patch pkgconfig rrdtool sed sysfiles tar util-linux
-[DEP] x264:dev xorg xorg:dev xvid:dev zlib:dev
+[DEP] 00-dirtree a52dec:dev alsa alsa:dev applewmproto applewmproto:dev
+[DEP] arts arts:dev atk atk:dev audiofile audiofile:dev bash2 binutils
+[DEP] bzip2 cairo cairo:dev coreutils cvm diffutils esound esound:dev
+[DEP] expat expat:dev faac faac:dev faad2 faad2:dev findutils fontconfig
+[DEP] fontconfig:dev freetype freetype:dev gawk gcc40 gcc40:dev glib
+[DEP] glib:dev glibc23 glibc23:dev gnome2-dirtree grep gtk+ gtk+:dev
+[DEP] id3lib id3lib:dev imake lame lame:dev libice libice:dev libmpeg2:dev
+[DEP] libpng libpng:dev libsdl libsdl:dev libsm libsm:dev libtool libx11
+[DEP] libx11:dev libxau libxau:dev libxcursor libxdmcp libxdmcp:dev libxext
+[DEP] libxfixes libxi libxinerama libxrandr libxrender libxrender:dev
+[DEP] libxt libxt:dev linux-libc-headers:dev mad make mktemp nas nas:dev
+[DEP] nasm net-tools netpbm ogg-vorbis ogg-vorbis:dev pango pango:dev
+[DEP] pkgconfig rrdtool sed sysfiles tar twoftpd ucspi-unix util-linux
+[DEP] x264:dev xorg-cf-files xproto:dev xvid:dev zlib
 
 [PROVIDES] a52_audio_plugin.a a52_audio_plugin.so aac_plugin.a
-[PROVIDES] aac_plugin.so avi2raw avidump celp_plugin.a
-[PROVIDES] celp_plugin.so ffmpeg_audio_plugin.a ffmpeg_audio_plugin.so
-[PROVIDES] ffmpeg_video_plugin.a ffmpeg_video_plugin.so g711_audio_plugin.a
-[PROVIDES] g711_audio_plugin.so gmp4player h261_plugin.a
-[PROVIDES] h261_plugin.so h261_rtp_plugin.a h261_rtp_plugin.so
-[PROVIDES] h264_parse h264_rtp_plugin.a h264_rtp_plugin.so
-[PROVIDES] href_rtp_plugin.a href_rtp_plugin.so href_text_plugin.a
-[PROVIDES] href_text_plugin.so isma_enc_rtp_plugin.a isma_enc_rtp_plugin.so
-[PROVIDES] isma_enc_video_rtp_plugin.a isma_enc_video_rtp_plugin.so
-[PROVIDES] isma_rtp_plugin.a isma_rtp_plugin.so lboxcrop libh264util.a
-[PROVIDES] libh264util.so libhttp.a libhttp.so libismacryp.a libismacryp.so
-[PROVIDES] libmp4.a libmp4.so libmp4av.a libmp4av.so libmp4util.a
-[PROVIDES] libmp4util.so libmp4v2.a libmp4v2.so libmpeg4ipSDL.a
-[PROVIDES] libmpeg4ipSDL.so libmpeg4ip_celp.a libmpeg4ip_celp.so
-[PROVIDES] libmpeg4ip_celpbs.a libmpeg4ip_celpbs.so libmpeg4ip_faad.a
-[PROVIDES] libmpeg4ip_faad.so libmpeg4ip_fposrec.a libmpeg4ip_fposrec.so
-[PROVIDES] libmpeg4ip_gnu.a libmpeg4ip_gnu.so libmpeg4ip_mpeg4_iso.a
-[PROVIDES] libmpeg4ip_mpeg4_iso.so libmsg_queue.a libmsg_queue.so
-[PROVIDES] libsdp.a libsdp.so mp3_plugin.a mp3_plugin.so mp4art
+[PROVIDES] aac_plugin.so avi2raw avidump celp_plugin.a celp_plugin.so
+[PROVIDES] g711_audio_plugin.a g711_audio_plugin.so gmp4player
+[PROVIDES] h261_plugin.a h261_plugin.so h261_rtp_plugin.a
+[PROVIDES] h261_rtp_plugin.so h264_parse h264_rtp_plugin.a
+[PROVIDES] h264_rtp_plugin.so href_rtp_plugin.a href_rtp_plugin.so
+[PROVIDES] href_text_plugin.a href_text_plugin.so isma_enc_rtp_plugin.a
+[PROVIDES] isma_enc_rtp_plugin.so isma_enc_video_rtp_plugin.a
+[PROVIDES] isma_enc_video_rtp_plugin.so isma_rtp_plugin.a
+[PROVIDES] isma_rtp_plugin.so latm_rtp_plugin.a latm_rtp_plugin.so
+[PROVIDES] lboxcrop libh264util.a libh264util.so libhttp.a libhttp.so
+[PROVIDES] libismacryp.a libismacryp.so libmp4.a libmp4.so libmp4av.a
+[PROVIDES] libmp4av.so libmp4util.a libmp4util.so libmp4v2.a libmp4v2.so
+[PROVIDES] libmpeg4ipSDL.a libmpeg4ipSDL.so libmpeg4ip_celp.a
+[PROVIDES] libmpeg4ip_celp.so libmpeg4ip_celpbs.a libmpeg4ip_celpbs.so
+[PROVIDES] libmpeg4ip_faad.a libmpeg4ip_faad.so libmpeg4ip_fposrec.a
+[PROVIDES] libmpeg4ip_fposrec.so libmpeg4ip_gnu.a libmpeg4ip_gnu.so
+[PROVIDES] libmpeg4ip_mpeg4_iso.a libmpeg4ip_mpeg4_iso.so
+[PROVIDES] libmsg_queue.a libmsg_queue.so libsdp.a libsdp.so
+[PROVIDES] libsrtpif.a libsrtpif.so mp3_plugin.a mp3_plugin.so mp4art
 [PROVIDES] mp4creator mp4dump mp4extract mp4info mp4live mp4player
 [PROVIDES] mp4tags mp4trackdump mp4videoinfo mpeg2dec_video_plugin.a
 [PROVIDES] mpeg2dec_video_plugin.so mpeg2video_parse mpeg4_iso_plugin.a

@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142587734 Fri Mar 17 10:28:54 2006 (5)
-[TIMESTAMP] 1142852018 Mon Mar 20 11:53:38 2006 (9)
+[TIMESTAMP] 1168648283 Sat Jan 13 01:31:23 2007 (5)
+[TIMESTAMP] 1168854760 Mon Jan 15 10:52:40 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-socket.log 9-socket.log
 
-[BUILDTIME] 1227 (5)
-[BUILDTIME] 1517 (9)
+[BUILDTIME] 1271 (5)
+[BUILDTIME] 1497 (9)
 [SIZE] 0.03 MB, 8 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp patch
-[DEP] rrdtool sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils gawk gcc40
+[DEP] gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev make
+[DEP] mktemp netpbm patch rrdtool sed sysfiles tar twoftpd ucspi-unix
 
 [PROVIDES] socket
 

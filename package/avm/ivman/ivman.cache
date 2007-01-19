@@ -20,125 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142673107 Sat Mar 18 10:11:47 2006 (5) ERROR
-[TIMESTAMP] 1142944302 Tue Mar 21 13:31:42 2006 (9) ERROR
-[TIMESTAMP] 1142965616 Tue Mar 21 19:26:56 2006 (5) ERROR
-[TIMESTAMP] 1142975424 Tue Mar 21 22:10:24 2006 (9) ERROR
-[TIMESTAMP] 1143034972 Wed Mar 22 14:42:52 2006 (5) ERROR
-[TIMESTAMP] 1143044644 Wed Mar 22 17:24:04 2006 (9) ERROR
+[TIMESTAMP] 1168703396 Sat Jan 13 16:49:56 2007 (5)
+[TIMESTAMP] 1168913158 Tue Jan 16 03:05:58 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-ivman.err 9-ivman.err
+[LOGS] 5-ivman.log 9-ivman.log
 
-[BUILDTIME] 2397 (5) ERROR
-[BUILDTIME] 2466 (9) ERROR
-[BUILDTIME] 2475 (5) ERROR
-[BUILDTIME] 2478 (9) ERROR
-[BUILDTIME] 2468 (5) ERROR
-[BUILDTIME] 2465 (9) ERROR
+[BUILDTIME] 3126 (5)
+[BUILDTIME] 3177 (9)
+[SIZE] 0.12 MB, 20 files
 
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm dbus dbus-glib
+[DEP] dbus-glib:dev dbus:dev diffutils file findutils gawk gcc40 gcc40:dev
+[DEP] gettext glib glib:dev glibc23 glibc23:dev gnome2-dirtree grep hal
+[DEP] hal:dev libxml2 libxml2:dev linux-libc-headers:dev m4 make mktemp
+[DEP] net-tools netpbm pkgconfig rrdtool sed sysfiles tar util-linux zlib
 
-[5-ERROR] checking whether stripping libraries is possible... yes
-[5-ERROR] appending configuration tag "F77" to libtool
-[5-ERROR] checking if libtool supports shared libraries... yes
-[5-ERROR] checking whether to build shared libraries... yes
-[5-ERROR] checking whether to build static libraries... yes
-[5-ERROR] checking for g77-34 option to produce PIC... -fPIC
-[5-ERROR] checking if g77-34 PIC flag -fPIC works... yes
-[5-ERROR] checking if g77-34 supports -c -o file.o... yes
-[5-ERROR] checking whether the g77-34 linker (ld) supports shared libraries... yes
-[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
-[5-ERROR] checking how to hardcode library paths into programs... immediate
-[5-ERROR] checking whether stripping libraries is possible... yes
-[5-ERROR] checking whether NLS is requested... yes
-[5-ERROR] checking for msgfmt... /usr/bin/msgfmt
-[5-ERROR] checking for gmsgfmt... /usr/bin/msgfmt
-[5-ERROR] checking for xgettext... /usr/bin/xgettext
-[5-ERROR] checking for msgmerge... /usr/bin/msgmerge
-[5-ERROR] checking for ld used by GCC... ld
-[5-ERROR] checking if the linker (ld) is GNU ld... yes
-[5-ERROR] checking for shared library run path origin... done
-[5-ERROR] checking for CFPreferencesCopyAppValue... no
-[5-ERROR] checking for CFLocaleCopyCurrent... no
-[5-ERROR] checking whether NLS is requested... yes
-[5-ERROR] checking for GNU gettext in libc... yes
-[5-ERROR] checking whether to use NLS... yes
-[5-ERROR] checking where the gettext function comes from... libc
-[5-ERROR] checking for mkdir... /bin/mkdir
-[5-ERROR] checking for grep... /bin/grep
-[5-ERROR] checking whether to enable debugging... no
-[5-ERROR] checking for i386-unknown-linux-gnu-pkg-config... no
-[5-ERROR] checking for pkg-config... /usr/bin/pkg-config
-[5-ERROR] checking pkg-config is at least version 0.9.0... yes
-[5-ERROR] checking for LIBXML_CFLAGS... -I/usr/include/libxml2  
-[5-ERROR] checking for LIBXML_LIBS... -lxml2 -lz -lm  
-[5-ERROR] checking for GLIB_CFLAGS... -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include  
-[5-ERROR] checking for GLIB_LIBS... -L/opt/gnome2/lib -lglib-2.0  
-[5-ERROR] checking for DBUS_GLIB_CFLAGS... 
-[5-ERROR] checking for DBUS_GLIB_LIBS... 
-[5-ERROR] configure: error: No Dbus-Glib found, check config.log for failed attempts
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 0 files for this package.
-[5-ERROR] Applying package split: 40 ivman:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 ivman:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 ivman:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building ivman=ivman.
-
-[9-ERROR] checking whether stripping libraries is possible... yes
-[9-ERROR] appending configuration tag "F77" to libtool
-[9-ERROR] checking if libtool supports shared libraries... yes
-[9-ERROR] checking whether to build shared libraries... yes
-[9-ERROR] checking whether to build static libraries... yes
-[9-ERROR] checking for g77-34 option to produce PIC... -fPIC
-[9-ERROR] checking if g77-34 PIC flag -fPIC works... yes
-[9-ERROR] checking if g77-34 supports -c -o file.o... yes
-[9-ERROR] checking whether the g77-34 linker (ld) supports shared libraries... yes
-[9-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
-[9-ERROR] checking how to hardcode library paths into programs... immediate
-[9-ERROR] checking whether stripping libraries is possible... yes
-[9-ERROR] checking whether NLS is requested... yes
-[9-ERROR] checking for msgfmt... /usr/bin/msgfmt
-[9-ERROR] checking for gmsgfmt... /usr/bin/msgfmt
-[9-ERROR] checking for xgettext... /usr/bin/xgettext
-[9-ERROR] checking for msgmerge... /usr/bin/msgmerge
-[9-ERROR] checking for ld used by GCC... ld
-[9-ERROR] checking if the linker (ld) is GNU ld... yes
-[9-ERROR] checking for shared library run path origin... done
-[9-ERROR] checking for CFPreferencesCopyAppValue... no
-[9-ERROR] checking for CFLocaleCopyCurrent... no
-[9-ERROR] checking whether NLS is requested... yes
-[9-ERROR] checking for GNU gettext in libc... yes
-[9-ERROR] checking whether to use NLS... yes
-[9-ERROR] checking where the gettext function comes from... libc
-[9-ERROR] checking for mkdir... /bin/mkdir
-[9-ERROR] checking for grep... /bin/grep
-[9-ERROR] checking whether to enable debugging... no
-[9-ERROR] checking for i386-unknown-linux-gnu-pkg-config... no
-[9-ERROR] checking for pkg-config... /usr/bin/pkg-config
-[9-ERROR] checking pkg-config is at least version 0.9.0... yes
-[9-ERROR] checking for LIBXML_CFLAGS... -I/usr/include/libxml2  
-[9-ERROR] checking for LIBXML_LIBS... -lxml2 -lz -lm  
-[9-ERROR] checking for GLIB_CFLAGS... -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include  
-[9-ERROR] checking for GLIB_LIBS... -L/opt/gnome2/lib -lglib-2.0  
-[9-ERROR] checking for DBUS_GLIB_CFLAGS... 
-[9-ERROR] checking for DBUS_GLIB_LIBS... 
-[9-ERROR] configure: error: No Dbus-Glib found, check config.log for failed attempts
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 0 files for this package.
-[9-ERROR] Applying package split: 40 ivman:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 ivman:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 ivman:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building ivman=ivman.
+[PROVIDES] ivman
 

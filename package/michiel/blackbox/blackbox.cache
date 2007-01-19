@@ -20,22 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142486477 Thu Mar 16 06:21:17 2006 (5)
-[TIMESTAMP] 1142734586 Sun Mar 19 03:16:26 2006 (9)
+[TIMESTAMP] 1168564259 Fri Jan 12 02:10:59 2007 (5)
+[TIMESTAMP] 1168761482 Sun Jan 14 08:58:02 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-blackbox.log 9-blackbox.log
 
-[BUILDTIME] 7656 (5)
-[BUILDTIME] 8289 (9)
-[SIZE] 0.91 MB, 22 files
+[BUILDTIME] 6953 (5)
+[BUILDTIME] 7519 (9)
+[SIZE] 0.68 MB, 22 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils expat findutils
-[DEP] freetype freetype:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev
-[DEP] grep linux26-header:dev make mktemp net-tools pkgconfig rrdtool
-[DEP] sed sysfiles tar util-linux xorg xorg:dev zlib:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm diffutils expat expat:dev findutils fontconfig
+[DEP] fontconfig:dev freetype freetype:dev gawk gcc40 gcc40:dev glibc23
+[DEP] glibc23:dev grep imake libx11 libx11:dev libxau libxau:dev libxdmcp
+[DEP] libxdmcp:dev libxext libxext:dev libxft libxft:dev libxrender
+[DEP] libxrender:dev libxt linux-libc-headers:dev make mktemp net-tools
+[DEP] netpbm pkgconfig renderproto:dev rrdtool sed sysfiles tar twm twoftpd
+[DEP] ucspi-unix util-linux xextproto:dev xorg-cf-files xproto:dev zlib
 
 [PROVIDES] blackbox bsetbg bsetroot bstyleconvert libbt.a
 

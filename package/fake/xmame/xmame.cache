@@ -1,20 +1,21 @@
 
-[TIMESTAMP] 1142637852 Sat Mar 18 00:24:12 2006 (5)
-[TIMESTAMP] 1142905781 Tue Mar 21 02:49:41 2006 (9)
+[TIMESTAMP] 1168686390 Sat Jan 13 12:06:30 2007 (5)
+[TIMESTAMP] 1168894818 Mon Jan 15 22:00:18 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-xmame.log 9-xmame.log
 
-[BUILDTIME] 74059 (5)
-[BUILDTIME] 74003 (9)
-[SIZE] 39.92 MB, 9 files
+[BUILDTIME] 113490 (5)
+[BUILDTIME] 113450 (9)
+[SIZE] 32.76 MB, 13 files
 
-[DEP] 00-dirtree alsa alsa:dev bash2 binutils bzip2 coreutils findutils
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libsdl libsdl:dev
-[DEP] linux26-header:dev make mktemp nas patch rrdtool sed sysfiles tar
-[DEP] xorg zlib:dev
+[DEP] 00-dirtree alsa alsa:dev applewmproto bash2 binutils bzip2
+[DEP] coreutils cvm expat expat:dev findutils gawk gcc40 gcc40:dev
+[DEP] glibc23 glibc23:dev grep libice libsdl libsdl:dev libsm libx11
+[DEP] libxau libxdmcp libxt linux-libc-headers:dev make mktemp nas patch
+[DEP] rrdtool sed sysfiles tar zlib zlib:dev
 
-[PROVIDES] mamex xmame.SDL
+[PROVIDES] chdman jedutil mamex romcmp xmame.SDL xml2info
 

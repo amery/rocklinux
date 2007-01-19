@@ -20,133 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142676592 Sat Mar 18 11:09:52 2006 (5) ERROR
-[TIMESTAMP] 1142947849 Tue Mar 21 14:30:49 2006 (9) ERROR
-[TIMESTAMP] 1142965931 Tue Mar 21 19:32:11 2006 (5) ERROR
-[TIMESTAMP] 1142975733 Tue Mar 21 22:15:33 2006 (9) ERROR
-[TIMESTAMP] 1143035280 Wed Mar 22 14:48:00 2006 (5) ERROR
-[TIMESTAMP] 1143044959 Wed Mar 22 17:29:19 2006 (9) ERROR
+[TIMESTAMP] 1168706268 Sat Jan 13 17:37:48 2007 (5) ERROR
+[TIMESTAMP] 1168916110 Tue Jan 16 03:55:10 2007 (9) ERROR
+[TIMESTAMP] 1168956178 Tue Jan 16 15:02:58 2007 (5) ERROR
+[TIMESTAMP] 1168985946 Tue Jan 16 23:19:06 2007 (9) ERROR
+[TIMESTAMP] 1169126507 Thu Jan 18 14:21:47 2007 (5) ERROR
+[TIMESTAMP] 1169156140 Thu Jan 18 22:35:40 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-arson.err 9-arson.err
 
-[BUILDTIME] 19360 (5) ERROR
-[BUILDTIME] 19419 (9) ERROR
-[BUILDTIME] 19498 (5) ERROR
-[BUILDTIME] 19481 (9) ERROR
-[BUILDTIME] 19397 (5) ERROR
-[BUILDTIME] 19415 (9) ERROR
-[SIZE] 0.02 MB, 9 files
-
-[DEP] 00-dirtree arts autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils expat findutils freetype gawk gcc34 gcc34:dev gettext
-[DEP] glibc23 glibc23:dev grep kdelibs kdelibs:dev libjpeg libpng
-[DEP] libpng:dev libtiff libtiff:dev linux26-header:dev m4 make mktemp
-[DEP] nas net-tools patch perl5 qt33 qt33:dev rrdtool sed sysfiles tar
-[DEP] util-linux xorg xorg:dev zlib:dev
+[BUILDTIME] 13407 (5) ERROR
+[BUILDTIME] 13426 (9) ERROR
+[BUILDTIME] 13415 (5) ERROR
+[BUILDTIME] 13432 (9) ERROR
+[BUILDTIME] 13439 (5) ERROR
+[BUILDTIME] 13457 (9) ERROR
 
 
+[5-ERROR] echo '#include "_optionpage.moc"' >> _optionpage.cpp
+[5-ERROR] source='_optionpage.cpp' object='_optionpage.o' libtool=no \
+[5-ERROR] 	depfile='.deps/_optionpage.Po' tmpdepfile='.deps/_optionpage.TPo' \
+[5-ERROR] 	depmode=gcc3 /bin/sh ../admin/depcomp \
+[5-ERROR] 	g++-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/qt33/include -I/usr/X11R7/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -pipe -O2 -DNDEBUG -fno-check-new  -c -o _optionpage.o `test -f _optionpage.cpp || echo './'`_optionpage.cpp
+[5-ERROR] /opt/qt33/bin/moc _programdlg.h -o _programdlg.moc
+[5-ERROR] rm -f _programdlg.cpp
+[5-ERROR] echo '#include <klocale.h>' > _programdlg.cpp
+[5-ERROR] /opt/qt33/bin/uic -L /usr/lib/kde3/plugins/designer -nounload -tr tr2i18n -i _programdlg.h ./_programdlg.ui | sed -e "s,tr2i18n( \"\" ),QString::null,g" | sed -e "s,tr2i18n( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1__programdlg,g" >> _programdlg.cpp || rm -f _programdlg.cpp
+[5-ERROR] echo '#include "_programdlg.moc"' >> _programdlg.cpp
+[5-ERROR] source='_programdlg.cpp' object='_programdlg.o' libtool=no \
+[5-ERROR] 	depfile='.deps/_programdlg.Po' tmpdepfile='.deps/_programdlg.TPo' \
+[5-ERROR] 	depmode=gcc3 /bin/sh ../admin/depcomp \
+[5-ERROR] 	g++-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/qt33/include -I/usr/X11R7/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -pipe -O2 -DNDEBUG -fno-check-new  -c -o _programdlg.o `test -f _programdlg.cpp || echo './'`_programdlg.cpp
+[5-ERROR] /opt/qt33/bin/moc _pathpage.h -o _pathpage.moc
 [5-ERROR] rm -f _pathpage.cpp
 [5-ERROR] echo '#include <klocale.h>' > _pathpage.cpp
-[5-ERROR] /opt/qt33/bin/uic -L /opt/kde3/lib/kde3/plugins/designer -nounload -tr tr2i18n -i _pathpage.h ./_pathpage.ui | sed -e "s,tr2i18n( \"\" ),QString::null,g" | sed -e "s,tr2i18n( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1__pathpage,g" >> _pathpage.cpp || rm -f _pathpage.cpp
+[5-ERROR] /opt/qt33/bin/uic -L /usr/lib/kde3/plugins/designer -nounload -tr tr2i18n -i _pathpage.h ./_pathpage.ui | sed -e "s,tr2i18n( \"\" ),QString::null,g" | sed -e "s,tr2i18n( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1__pathpage,g" >> _pathpage.cpp || rm -f _pathpage.cpp
 [5-ERROR] echo '#include "_pathpage.moc"' >> _pathpage.cpp
 [5-ERROR] source='_pathpage.cpp' object='_pathpage.o' libtool=no \
-[5-ERROR] depfile='.deps/_pathpage.Po' tmpdepfile='.deps/_pathpage.TPo' \
-[5-ERROR] depmode=gcc3 /bin/sh ../admin/depcomp \
-[5-ERROR] g++-34 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/kde3/include -I/opt/qt33/include -I/usr/X11R6/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -pipe -O2 -DNDEBUG -fno-check-new  -c -o _pathpage.o `test -f _pathpage.cpp || echo './'`_pathpage.cpp
+[5-ERROR] 	depfile='.deps/_pathpage.Po' tmpdepfile='.deps/_pathpage.TPo' \
+[5-ERROR] 	depmode=gcc3 /bin/sh ../admin/depcomp \
+[5-ERROR] 	g++-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/qt33/include -I/usr/X11R7/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -pipe -O2 -DNDEBUG -fno-check-new  -c -o _pathpage.o `test -f _pathpage.cpp || echo './'`_pathpage.cpp
 [5-ERROR] /opt/qt33/bin/moc _progress.h -o _progress.moc
 [5-ERROR] rm -f _progress.cpp
 [5-ERROR] echo '#include <klocale.h>' > _progress.cpp
-[5-ERROR] /opt/qt33/bin/uic -L /opt/kde3/lib/kde3/plugins/designer -nounload -tr tr2i18n -i _progress.h ./_progress.ui | sed -e "s,tr2i18n( \"\" ),QString::null,g" | sed -e "s,tr2i18n( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1__progress,g" >> _progress.cpp || rm -f _progress.cpp
+[5-ERROR] /opt/qt33/bin/uic -L /usr/lib/kde3/plugins/designer -nounload -tr tr2i18n -i _progress.h ./_progress.ui | sed -e "s,tr2i18n( \"\" ),QString::null,g" | sed -e "s,tr2i18n( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1__progress,g" >> _progress.cpp || rm -f _progress.cpp
 [5-ERROR] echo '#include "_progress.moc"' >> _progress.cpp
 [5-ERROR] source='_progress.cpp' object='_progress.o' libtool=no \
-[5-ERROR] depfile='.deps/_progress.Po' tmpdepfile='.deps/_progress.TPo' \
-[5-ERROR] depmode=gcc3 /bin/sh ../admin/depcomp \
-[5-ERROR] g++-34 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/kde3/include -I/opt/qt33/include -I/usr/X11R6/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -pipe -O2 -DNDEBUG -fno-check-new  -c -o _progress.o `test -f _progress.cpp || echo './'`_progress.cpp
+[5-ERROR] 	depfile='.deps/_progress.Po' tmpdepfile='.deps/_progress.TPo' \
+[5-ERROR] 	depmode=gcc3 /bin/sh ../admin/depcomp \
+[5-ERROR] 	g++-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/qt33/include -I/usr/X11R7/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -pipe -O2 -DNDEBUG -fno-check-new  -c -o _progress.o `test -f _progress.cpp || echo './'`_progress.cpp
 [5-ERROR] /opt/qt33/bin/moc _ripperpage.h -o _ripperpage.moc
 [5-ERROR] rm -f _ripperpage.cpp
 [5-ERROR] echo '#include <klocale.h>' > _ripperpage.cpp
-[5-ERROR] /opt/qt33/bin/uic -L /opt/kde3/lib/kde3/plugins/designer -nounload -tr tr2i18n -i _ripperpage.h ./_ripperpage.ui | sed -e "s,tr2i18n( \"\" ),QString::null,g" | sed -e "s,tr2i18n( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1__ripperpage,g" >> _ripperpage.cpp || rm -f _ripperpage.cpp
+[5-ERROR] /opt/qt33/bin/uic -L /usr/lib/kde3/plugins/designer -nounload -tr tr2i18n -i _ripperpage.h ./_ripperpage.ui | sed -e "s,tr2i18n( \"\" ),QString::null,g" | sed -e "s,tr2i18n( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1__ripperpage,g" >> _ripperpage.cpp || rm -f _ripperpage.cpp
 [5-ERROR] echo '#include "_ripperpage.moc"' >> _ripperpage.cpp
 [5-ERROR] source='_ripperpage.cpp' object='_ripperpage.o' libtool=no \
-[5-ERROR] depfile='.deps/_ripperpage.Po' tmpdepfile='.deps/_ripperpage.TPo' \
-[5-ERROR] depmode=gcc3 /bin/sh ../admin/depcomp \
-[5-ERROR] g++-34 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/kde3/include -I/opt/qt33/include -I/usr/X11R6/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -pipe -O2 -DNDEBUG -fno-check-new  -c -o _ripperpage.o `test -f _ripperpage.cpp || echo './'`_ripperpage.cpp
-[5-ERROR] _ripperpage.cpp:29:30: arsonlistwndbase.h: No such file or directory
+[5-ERROR] 	depfile='.deps/_ripperpage.Po' tmpdepfile='.deps/_ripperpage.TPo' \
+[5-ERROR] 	depmode=gcc3 /bin/sh ../admin/depcomp \
+[5-ERROR] 	g++-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/qt33/include -I/usr/X11R7/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -pipe -O2 -DNDEBUG -fno-check-new  -c -o _ripperpage.o `test -f _ripperpage.cpp || echo './'`_ripperpage.cpp
+[5-ERROR] _ripperpage.cpp:29:30: error: arsonlistwndbase.h: No such file or directory
 [5-ERROR] make[3]: *** [_ripperpage.o] Error 1
-[5-ERROR] make[3]: Leaving directory `/ROCK/src.arson.1143035052.6974.1969541843/arson/src'
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.arson.1169126370.13079.3706590769/arson/src'
 [5-ERROR] make[2]: *** [all-recursive] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.arson.1143035052.6974.1969541843/arson/src'
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.arson.1169126370.13079.3706590769/arson/src'
 [5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.arson.1143035052.6974.1969541843/arson'
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.arson.1169126370.13079.3706590769/arson'
 [5-ERROR] make: *** [all] Error 2
 [5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 3 files for this package.
-[5-ERROR] Applying package split: 40 arson:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 arson:dev /pkgconfig/
-[5-ERROR] Applying package split: 45 arson /.*\.la$
-[5-ERROR] Applying package split: 60 arson:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <arson> Creating flist file ...
-[5-ERROR] <arson> Creating package dependencies file ...
-[5-ERROR] <arson> Creating md5sum and cksum files ...
-[5-ERROR] <arson> Creating package description ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building arson=arson.
 
+[9-ERROR] echo '#include "_optionpage.moc"' >> _optionpage.cpp
+[9-ERROR] source='_optionpage.cpp' object='_optionpage.o' libtool=no \
+[9-ERROR] 	depfile='.deps/_optionpage.Po' tmpdepfile='.deps/_optionpage.TPo' \
+[9-ERROR] 	depmode=gcc3 /bin/sh ../admin/depcomp \
+[9-ERROR] 	g++-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/qt33/include -I/usr/X11R7/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -pipe -O2 -DNDEBUG -fno-check-new  -c -o _optionpage.o `test -f _optionpage.cpp || echo './'`_optionpage.cpp
+[9-ERROR] /opt/qt33/bin/moc _programdlg.h -o _programdlg.moc
+[9-ERROR] rm -f _programdlg.cpp
+[9-ERROR] echo '#include <klocale.h>' > _programdlg.cpp
+[9-ERROR] /opt/qt33/bin/uic -L /usr/lib/kde3/plugins/designer -nounload -tr tr2i18n -i _programdlg.h ./_programdlg.ui | sed -e "s,tr2i18n( \"\" ),QString::null,g" | sed -e "s,tr2i18n( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1__programdlg,g" >> _programdlg.cpp || rm -f _programdlg.cpp
+[9-ERROR] echo '#include "_programdlg.moc"' >> _programdlg.cpp
+[9-ERROR] source='_programdlg.cpp' object='_programdlg.o' libtool=no \
+[9-ERROR] 	depfile='.deps/_programdlg.Po' tmpdepfile='.deps/_programdlg.TPo' \
+[9-ERROR] 	depmode=gcc3 /bin/sh ../admin/depcomp \
+[9-ERROR] 	g++-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/qt33/include -I/usr/X11R7/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -pipe -O2 -DNDEBUG -fno-check-new  -c -o _programdlg.o `test -f _programdlg.cpp || echo './'`_programdlg.cpp
+[9-ERROR] /opt/qt33/bin/moc _pathpage.h -o _pathpage.moc
 [9-ERROR] rm -f _pathpage.cpp
 [9-ERROR] echo '#include <klocale.h>' > _pathpage.cpp
-[9-ERROR] /opt/qt33/bin/uic -L /opt/kde3/lib/kde3/plugins/designer -nounload -tr tr2i18n -i _pathpage.h ./_pathpage.ui | sed -e "s,tr2i18n( \"\" ),QString::null,g" | sed -e "s,tr2i18n( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1__pathpage,g" >> _pathpage.cpp || rm -f _pathpage.cpp
+[9-ERROR] /opt/qt33/bin/uic -L /usr/lib/kde3/plugins/designer -nounload -tr tr2i18n -i _pathpage.h ./_pathpage.ui | sed -e "s,tr2i18n( \"\" ),QString::null,g" | sed -e "s,tr2i18n( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1__pathpage,g" >> _pathpage.cpp || rm -f _pathpage.cpp
 [9-ERROR] echo '#include "_pathpage.moc"' >> _pathpage.cpp
 [9-ERROR] source='_pathpage.cpp' object='_pathpage.o' libtool=no \
-[9-ERROR] depfile='.deps/_pathpage.Po' tmpdepfile='.deps/_pathpage.TPo' \
-[9-ERROR] depmode=gcc3 /bin/sh ../admin/depcomp \
-[9-ERROR] g++-34 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/kde3/include -I/opt/qt33/include -I/usr/X11R6/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -pipe -O2 -DNDEBUG -fno-check-new  -c -o _pathpage.o `test -f _pathpage.cpp || echo './'`_pathpage.cpp
+[9-ERROR] 	depfile='.deps/_pathpage.Po' tmpdepfile='.deps/_pathpage.TPo' \
+[9-ERROR] 	depmode=gcc3 /bin/sh ../admin/depcomp \
+[9-ERROR] 	g++-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/qt33/include -I/usr/X11R7/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -pipe -O2 -DNDEBUG -fno-check-new  -c -o _pathpage.o `test -f _pathpage.cpp || echo './'`_pathpage.cpp
 [9-ERROR] /opt/qt33/bin/moc _progress.h -o _progress.moc
 [9-ERROR] rm -f _progress.cpp
 [9-ERROR] echo '#include <klocale.h>' > _progress.cpp
-[9-ERROR] /opt/qt33/bin/uic -L /opt/kde3/lib/kde3/plugins/designer -nounload -tr tr2i18n -i _progress.h ./_progress.ui | sed -e "s,tr2i18n( \"\" ),QString::null,g" | sed -e "s,tr2i18n( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1__progress,g" >> _progress.cpp || rm -f _progress.cpp
+[9-ERROR] /opt/qt33/bin/uic -L /usr/lib/kde3/plugins/designer -nounload -tr tr2i18n -i _progress.h ./_progress.ui | sed -e "s,tr2i18n( \"\" ),QString::null,g" | sed -e "s,tr2i18n( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1__progress,g" >> _progress.cpp || rm -f _progress.cpp
 [9-ERROR] echo '#include "_progress.moc"' >> _progress.cpp
 [9-ERROR] source='_progress.cpp' object='_progress.o' libtool=no \
-[9-ERROR] depfile='.deps/_progress.Po' tmpdepfile='.deps/_progress.TPo' \
-[9-ERROR] depmode=gcc3 /bin/sh ../admin/depcomp \
-[9-ERROR] g++-34 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/kde3/include -I/opt/qt33/include -I/usr/X11R6/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -pipe -O2 -DNDEBUG -fno-check-new  -c -o _progress.o `test -f _progress.cpp || echo './'`_progress.cpp
+[9-ERROR] 	depfile='.deps/_progress.Po' tmpdepfile='.deps/_progress.TPo' \
+[9-ERROR] 	depmode=gcc3 /bin/sh ../admin/depcomp \
+[9-ERROR] 	g++-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/qt33/include -I/usr/X11R7/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -pipe -O2 -DNDEBUG -fno-check-new  -c -o _progress.o `test -f _progress.cpp || echo './'`_progress.cpp
 [9-ERROR] /opt/qt33/bin/moc _ripperpage.h -o _ripperpage.moc
 [9-ERROR] rm -f _ripperpage.cpp
 [9-ERROR] echo '#include <klocale.h>' > _ripperpage.cpp
-[9-ERROR] /opt/qt33/bin/uic -L /opt/kde3/lib/kde3/plugins/designer -nounload -tr tr2i18n -i _ripperpage.h ./_ripperpage.ui | sed -e "s,tr2i18n( \"\" ),QString::null,g" | sed -e "s,tr2i18n( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1__ripperpage,g" >> _ripperpage.cpp || rm -f _ripperpage.cpp
+[9-ERROR] /opt/qt33/bin/uic -L /usr/lib/kde3/plugins/designer -nounload -tr tr2i18n -i _ripperpage.h ./_ripperpage.ui | sed -e "s,tr2i18n( \"\" ),QString::null,g" | sed -e "s,tr2i18n( \"\"\, \"\" ),QString::null,g" | sed -e "s,image\([0-9][0-9]*\)_data,img\1__ripperpage,g" >> _ripperpage.cpp || rm -f _ripperpage.cpp
 [9-ERROR] echo '#include "_ripperpage.moc"' >> _ripperpage.cpp
 [9-ERROR] source='_ripperpage.cpp' object='_ripperpage.o' libtool=no \
-[9-ERROR] depfile='.deps/_ripperpage.Po' tmpdepfile='.deps/_ripperpage.TPo' \
-[9-ERROR] depmode=gcc3 /bin/sh ../admin/depcomp \
-[9-ERROR] g++-34 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/kde3/include -I/opt/qt33/include -I/usr/X11R6/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -pipe -O2 -DNDEBUG -fno-check-new  -c -o _ripperpage.o `test -f _ripperpage.cpp || echo './'`_ripperpage.cpp
-[9-ERROR] _ripperpage.cpp:29:30: arsonlistwndbase.h: No such file or directory
+[9-ERROR] 	depfile='.deps/_ripperpage.Po' tmpdepfile='.deps/_ripperpage.TPo' \
+[9-ERROR] 	depmode=gcc3 /bin/sh ../admin/depcomp \
+[9-ERROR] 	g++-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/qt33/include -I/usr/X11R7/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -pipe -O2 -DNDEBUG -fno-check-new  -c -o _ripperpage.o `test -f _ripperpage.cpp || echo './'`_ripperpage.cpp
+[9-ERROR] _ripperpage.cpp:29:30: error: arsonlistwndbase.h: No such file or directory
 [9-ERROR] make[3]: *** [_ripperpage.o] Error 1
-[9-ERROR] make[3]: Leaving directory `/ROCK/src.arson.1143044727.4451.1021593603/arson/src'
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.arson.1169156000.3633.106425297/arson/src'
 [9-ERROR] make[2]: *** [all-recursive] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.arson.1143044727.4451.1021593603/arson/src'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.arson.1169156000.3633.106425297/arson/src'
 [9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.arson.1143044727.4451.1021593603/arson'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.arson.1169156000.3633.106425297/arson'
 [9-ERROR] make: *** [all] Error 2
 [9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 3 files for this package.
-[9-ERROR] Applying package split: 40 arson:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 arson:dev /pkgconfig/
-[9-ERROR] Applying package split: 45 arson /.*\.la$
-[9-ERROR] Applying package split: 60 arson:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <arson> Creating flist file ...
-[9-ERROR] <arson> Creating package dependencies file ...
-[9-ERROR] <arson> Creating md5sum and cksum files ...
-[9-ERROR] <arson> Creating package description ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building arson=arson.
 

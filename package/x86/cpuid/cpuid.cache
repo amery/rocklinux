@@ -20,20 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142453497 Wed Mar 15 21:11:37 2006 (5)
-[TIMESTAMP] 1142689116 Sat Mar 18 14:38:36 2006 (9)
+[TIMESTAMP] 1168530116 Thu Jan 11 16:41:56 2007 (5)
+[TIMESTAMP] 1168719028 Sat Jan 13 21:10:28 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-cpuid.log 9-cpuid.log
 
-[BUILDTIME] 741 (5)
-[BUILDTIME] 1411 (9)
+[BUILDTIME] 749 (5)
+[BUILDTIME] 1395 (9)
 [SIZE] 0.03 MB, 7 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep make mktemp rrdtool sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils gawk
+[DEP] gcc40 gcc40:dev glibc23 glibc23:dev grep make mktemp rrdtool sed
+[DEP] sysfiles tar
 
 [PROVIDES] cpuid
 

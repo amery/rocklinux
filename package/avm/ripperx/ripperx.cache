@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142582541 Fri Mar 17 09:02:21 2006 (5)
-[TIMESTAMP] 1142846450 Mon Mar 20 10:20:50 2006 (9)
+[TIMESTAMP] 1168644285 Sat Jan 13 00:24:45 2007 (5)
+[TIMESTAMP] 1168850550 Mon Jan 15 09:42:30 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-ripperx.log 9-ripperx.log
 
-[BUILDTIME] 2059 (5)
-[BUILDTIME] 2386 (9)
+[BUILDTIME] 2138 (5)
+[BUILDTIME] 2374 (9)
 [SIZE] 0.25 MB, 20 files
 
-[DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] gcc34 gcc34:dev glib12 glib12:dev glibc23 glibc23:dev gnome14-dirtree
-[DEP] grep gtk+12 gtk+12:dev linux26-header:dev make mktemp net-tools
-[DEP] rrdtool sed sysfiles tar xorg
+[DEP] 00-dirtree alsa applewmproto bash2 binutils bzip2 coreutils cvm
+[DEP] diffutils findutils gawk gcc40 gcc40:dev glib12 glib12:dev glibc23
+[DEP] glibc23:dev gnome14-dirtree grep gtk+12 gtk+12:dev libx11 libxau
+[DEP] libxdmcp libxext libxi linux-libc-headers:dev make mktemp net-tools
+[DEP] rrdtool sed sysfiles tar
 
 [PROVIDES] ripperX ripperX_plugin-8hz-mp3 ripperX_plugin-bladeenc
 [PROVIDES] ripperX_plugin-cdparanoia ripperX_plugin-encode

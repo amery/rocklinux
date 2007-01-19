@@ -20,25 +20,31 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142548038 Thu Mar 16 23:27:18 2006 (5)
-[TIMESTAMP] 1142804965 Sun Mar 19 22:49:25 2006 (9)
+[TIMESTAMP] 1168618308 Fri Jan 12 17:11:48 2007 (5)
+[TIMESTAMP] 1168821445 Mon Jan 15 01:37:25 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-baghira.log 9-baghira.log
 
-[BUILDTIME] 10644 (5)
-[BUILDTIME] 11130 (9)
-[SIZE] 1.02 MB, 42 files
+[BUILDTIME] 10632 (5)
+[BUILDTIME] 11028 (9)
+[SIZE] 0.98 MB, 42 files
 
-[DEP] 00-dirtree acl acl:dev arts attr attr:dev bash2 binutils bzip2
-[DEP] coreutils diffutils expat fam fam:dev findutils freetype freetype:dev
-[DEP] gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep kdebase
+[DEP] 00-dirtree acl acl:dev applewmproto applewmproto:dev attr attr:dev
+[DEP] bash2 binutils bzip2 coreutils cups cvm diffutils expat expat:dev
+[DEP] fam fam:dev findutils fontconfig fontconfig:dev freetype freetype:dev
+[DEP] gawk gcc40 gcc40:dev gettext glibc23 glibc23:dev grep imake kdebase
 [DEP] kdebase:dev kdelibs kdelibs:dev libart_lgpl23 libart_lgpl23:dev
-[DEP] libidn libidn:dev libjpeg libpng libpng:dev linux26-header:dev make
-[DEP] mktemp nas net-tools perl5 qt33 qt33:dev rrdtool sed sysfiles tar
-[DEP] util-linux xorg xorg:dev zlib:dev
+[DEP] libice libice:dev libidn libidn:dev libjpeg libpng libpng:dev
+[DEP] libsm libsm:dev libx11 libx11:dev libxau libxau:dev libxcursor
+[DEP] libxcursor:dev libxdmcp libxdmcp:dev libxext libxext:dev libxfixes
+[DEP] libxfixes:dev libxft libxft:dev libxinerama libxinerama:dev libxmu
+[DEP] libxmu:dev libxrandr libxrandr:dev libxrender libxrender:dev libxt
+[DEP] libxt:dev linux-libc-headers:dev make mesalib mktemp nas net-tools
+[DEP] perl5 qt33 qt33:dev rrdtool sed sysfiles tar util-linux xextproto:dev
+[DEP] xorg-cf-files xproto:dev zlib zlib:dev
 
 [PROVIDES] b_menu_panelapplet.so bab baghira.so kstyle_baghira_config.so
 [PROVIDES] kwin3_baghira.so kwin_baghira_config.so libbaghirastarter.so

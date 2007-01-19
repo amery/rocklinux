@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142553752 Fri Mar 17 01:02:32 2006 (5)
-[TIMESTAMP] 1142812111 Mon Mar 20 00:48:31 2006 (9)
+[TIMESTAMP] 1168623277 Fri Jan 12 18:34:37 2007 (5)
+[TIMESTAMP] 1168827048 Mon Jan 15 03:10:48 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-nmap.log 9-nmap.log
 
-[BUILDTIME] 9575 (5)
-[BUILDTIME] 10097 (9)
-[SIZE] 2.22 MB, 17 files
+[BUILDTIME] 9656 (5)
+[BUILDTIME] 10026 (9)
+[SIZE] 2.20 MB, 17 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] gawk gcc34 gcc34:dev glibc23 glibc23:dev grep libpcap:dev
-[DEP] linux26-header:dev make mktemp net-tools openssl openssl:dev pcre
-[DEP] pcre:dev rrdtool sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
+[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep libpcap:dev
+[DEP] linux-libc-headers:dev make mktemp net-tools netpbm openssl
+[DEP] openssl:dev pcre pcre:dev rrdtool sed sysfiles tar twoftpd ucspi-unix
+[DEP] util-linux
 
 [PROVIDES] nmap
 

@@ -20,48 +20,52 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142613543 Fri Mar 17 17:39:03 2006 (5)
-[TIMESTAMP] 1142879571 Mon Mar 20 19:32:51 2006 (9)
+[TIMESTAMP] 1168668798 Sat Jan 13 07:13:18 2007 (5)
+[TIMESTAMP] 1168876743 Mon Jan 15 16:59:03 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-git.log 9-git.log
 
-[BUILDTIME] 3653 (5)
-[BUILDTIME] 3928 (9)
-[SIZE] 5.30 MB, 134 files
+[BUILDTIME] 5110 (5)
+[BUILDTIME] 5354 (9)
+[SIZE] 14.96 MB, 150 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils curl curl:dev expat
-[DEP] expat:dev findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] libidn linux26-header:dev make mktemp openssl openssl:dev python
-[DEP] rrdtool sed sysfiles tar zlib:dev
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils curl curl:dev cvm expat
+[DEP] expat:dev findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev grep
+[DEP] libidn linux-libc-headers:dev make mktemp openssl openssl:dev python
+[DEP] rrdtool sed sysfiles tar zlib zlib:dev
 
-[PROVIDES] git git-add git-am git-apply git-applymbox git-applypatch
-[PROVIDES] git-archimport git-bisect git-branch git-cat-file
-[PROVIDES] git-check-ref-format git-checkout git-checkout-index
-[PROVIDES] git-cherry git-cherry-pick git-clone git-clone-pack git-commit
-[PROVIDES] git-commit-tree git-convert-objects git-count-objects
-[PROVIDES] git-cvsexportcommit git-cvsimport git-daemon git-diff
+[PROVIDES] git git-add git-am git-annotate git-apply git-applymbox
+[PROVIDES] git-applypatch git-archimport git-bisect git-blame
+[PROVIDES] git-branch git-cat-file git-check-ref-format git-checkout
+[PROVIDES] git-checkout-index git-cherry git-cherry-pick git-clean
+[PROVIDES] git-clone git-commit git-commit-tree git-convert-objects
+[PROVIDES] git-count-objects git-cvsexportcommit git-cvsimport
+[PROVIDES] git-cvsserver git-daemon git-describe git-diff
 [PROVIDES] git-diff-files git-diff-index git-diff-stages git-diff-tree
 [PROVIDES] git-fetch git-fetch-pack git-fmt-merge-msg git-format-patch
 [PROVIDES] git-fsck-objects git-get-tar-commit-id git-grep git-hash-object
-[PROVIDES] git-http-fetch git-http-push git-index-pack git-init-db
-[PROVIDES] git-local-fetch git-log git-lost-found git-ls-files
-[PROVIDES] git-ls-remote git-ls-tree git-mailinfo git-mailsplit
-[PROVIDES] git-merge git-merge-base git-merge-index git-merge-octopus
-[PROVIDES] git-merge-one-file git-merge-ours git-merge-recursive
-[PROVIDES] git-merge-resolve git-merge-stupid git-mktag git-mv git-name-rev
+[PROVIDES] git-http-fetch git-http-push git-imap-send git-index-pack
+[PROVIDES] git-init-db git-instaweb git-local-fetch git-log git-lost-found
+[PROVIDES] git-ls-files git-ls-remote git-ls-tree git-mailinfo
+[PROVIDES] git-mailsplit git-merge git-merge-base git-merge-index
+[PROVIDES] git-merge-octopus git-merge-one-file git-merge-ours
+[PROVIDES] git-merge-recursive git-merge-resolve git-merge-stupid
+[PROVIDES] git-merge-tree git-mktag git-mktree git-mv git-name-rev
 [PROVIDES] git-pack-objects git-pack-redundant git-parse-remote
 [PROVIDES] git-patch-id git-peek-remote git-prune git-prune-packed
-[PROVIDES] git-pull git-push git-read-tree git-rebase git-receive-pack
-[PROVIDES] git-relink git-repack git-repo-config git-request-pull git-reset
-[PROVIDES] git-resolve git-rev-list git-rev-parse git-revert git-send-pack
-[PROVIDES] git-sh-setup git-shell git-shortlog git-show-branch
+[PROVIDES] git-pull git-push git-quiltimport git-read-tree git-rebase
+[PROVIDES] git-receive-pack git-relink git-repack git-repo-config
+[PROVIDES] git-request-pull git-rerere git-reset git-resolve git-rev-list
+[PROVIDES] git-rev-parse git-revert git-rm git-send-email git-send-pack
+[PROVIDES] git-sh-setup git-shell git-shortlog git-show git-show-branch
 [PROVIDES] git-show-index git-ssh-fetch git-ssh-pull git-ssh-push
-[PROVIDES] git-ssh-upload git-status git-stripspace git-svnimport
+[PROVIDES] git-ssh-upload git-status git-stripspace git-svn git-svnimport
 [PROVIDES] git-symbolic-ref git-tag git-tar-tree git-unpack-file
 [PROVIDES] git-unpack-objects git-update-index git-update-ref
-[PROVIDES] git-update-server-info git-upload-pack git-var git-verify-pack
-[PROVIDES] git-verify-tag git-whatchanged git-write-tree gitk
+[PROVIDES] git-update-server-info git-upload-pack git-upload-tar git-var
+[PROVIDES] git-verify-pack git-verify-tag git-whatchanged git-write-tree
+[PROVIDES] gitk
 

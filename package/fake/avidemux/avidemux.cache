@@ -20,27 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142657278 Sat Mar 18 05:47:58 2006 (5)
-[TIMESTAMP] 1142927216 Tue Mar 21 08:46:56 2006 (9)
+[TIMESTAMP] 1168696767 Sat Jan 13 14:59:27 2007 (5) ERROR
+[TIMESTAMP] 1168906057 Tue Jan 16 01:07:37 2007 (9) ERROR
+[TIMESTAMP] 1168954114 Tue Jan 16 14:28:34 2007 (5) ERROR
+[TIMESTAMP] 1168983843 Tue Jan 16 22:44:03 2007 (9) ERROR
+[TIMESTAMP] 1169124447 Thu Jan 18 13:47:27 2007 (5) ERROR
+[TIMESTAMP] 1169154036 Thu Jan 18 22:00:36 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-avidemux.log 9-avidemux.log
+[LOGS] 5-avidemux.err 9-avidemux.err
 
-[BUILDTIME] 30686 (5)
-[BUILDTIME] 30946 (9)
-[SIZE] 4.69 MB, 8 files
+[BUILDTIME] 3904 (5) ERROR
+[BUILDTIME] 3999 (9) ERROR
+[BUILDTIME] 4026 (5) ERROR
+[BUILDTIME] 4037 (9) ERROR
+[BUILDTIME] 4019 (5) ERROR
+[BUILDTIME] 4020 (9) ERROR
 
-[DEP] 00-dirtree a52dec:dev alsa alsa:dev arts arts:dev atk atk:dev
-[DEP] autoconf bash2 binutils bzip2 cairo cairo:dev coreutils diffutils
-[DEP] expat faac faac:dev faad2 faad2:dev file findutils freetype
-[DEP] freetype:dev gawk gcc34 gcc34:dev gettext glib glib:dev glibc23
-[DEP] glibc23:dev gnome2-dirtree grep gtk+ gtk+:dev lame lame:dev libpng
-[DEP] libpng:dev libsdl libsdl:dev libxml2 libxml2:dev linux26-header:dev
-[DEP] m4 mad mad:dev make mktemp mpeg4ip mpeg4ip:dev nas net-tools
-[DEP] ogg-vorbis ogg-vorbis:dev pango pango:dev perl5 pkgconfig rrdtool
-[DEP] sed sysfiles tar util-linux x264:dev xorg xorg:dev xvid:dev zlib:dev
 
-[PROVIDES] avidemux2
+[5-ERROR] In file included from postprocess.c:655:
+[5-ERROR] postprocess_template.c:3207:1: warning: this is the location of the previous definition
+[5-ERROR] In file included from postprocess.c:665:
+[5-ERROR] postprocess_template.c: In function 'postProcess_3DNow':
+[5-ERROR] postprocess_template.c:3512: warning: pointer targets in passing argument 6 of 'blockCopy_3DNow' differ in signedness
+[5-ERROR] postprocess_template.c:3658: warning: pointer targets in passing argument 6 of 'blockCopy_3DNow' differ in signedness
+[5-ERROR] postprocess_template.c:3759: warning: pointer targets in passing argument 4 of 'tempNoiseReducer_3DNow' differ in signedness
+[5-ERROR] postprocess_template.c:3783: warning: pointer targets in passing argument 4 of 'tempNoiseReducer_3DNow' differ in signedness
+[5-ERROR] rm -f libpostproc.a
+[5-ERROR] ar cru libpostproc.a postprocess.o 
+[5-ERROR] ranlib libpostproc.a
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.avidemux.1169124405.22109.3641098646/avidemux-2.1.2/adm_lavcodec/libpostproc'
+[5-ERROR] Making all in i386
+[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.avidemux.1169124405.22109.3641098646/avidemux-2.1.2/adm_lavcodec/i386'
+[5-ERROR] make[3]: Nothing to be done for `all'.
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.avidemux.1169124405.22109.3641098646/avidemux-2.1.2/adm_lavcodec/i386'
+[5-ERROR] Making all in ppc
+[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.avidemux.1169124405.22109.3641098646/avidemux-2.1.2/adm_lavcodec/ppc'
+[5-ERROR] make[3]: Nothing to be done for `all'.
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.avidemux.1169124405.22109.3641098646/avidemux-2.1.2/adm_lavcodec/ppc'
+[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.avidemux.1169124405.22109.3641098646/avidemux-2.1.2/adm_lavcodec'
+[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I..    -I.. -DHAVE_AV_CONFIG_H  -O3 -Iamr_float -I../avidemux/ADM_lavutil  -I../avidemux/ADM_lavutil   -I/usr/include/malloc -I/usr/include/libxml2 -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT  -g -O2 -O2 -falign-loops=16 -MT cputest.o -MD -MP -MF ".deps/cputest.Tpo" -c -o cputest.o `test -f 'i386/cputest.c' || echo './'`i386/cputest.c; \
+[5-ERROR] 	then mv -f ".deps/cputest.Tpo" ".deps/cputest.Po"; else rm -f ".deps/cputest.Tpo"; exit 1; fi
+[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I..    -I.. -DHAVE_AV_CONFIG_H  -O3 -Iamr_float -I../avidemux/ADM_lavutil  -I../avidemux/ADM_lavutil   -I/usr/include/malloc -I/usr/include/libxml2 -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT  -g -O2 -O2 -falign-loops=16 -MT mpegvideo_mmx.o -MD -MP -MF ".deps/mpegvideo_mmx.Tpo" -c -o mpegvideo_mmx.o `test -f 'i386/mpegvideo_mmx.c' || echo './'`i386/mpegvideo_mmx.c; \
+[5-ERROR] 	then mv -f ".deps/mpegvideo_mmx.Tpo" ".deps/mpegvideo_mmx.Po"; else rm -f ".deps/mpegvideo_mmx.Tpo"; exit 1; fi
+[5-ERROR] In file included from i386/mpegvideo_mmx.c:685:
+[5-ERROR] i386/mpegvideo_mmx_template.c:25:1: warning: "PMAX" redefined
+[5-ERROR] In file included from i386/mpegvideo_mmx.c:678:
+[5-ERROR] i386/mpegvideo_mmx_template.c:37:1: warning: this is the location of the previous definition
+[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I..    -I.. -DHAVE_AV_CONFIG_H  -O3 -Iamr_float -I../avidemux/ADM_lavutil  -I../avidemux/ADM_lavutil   -I/usr/include/malloc -I/usr/include/libxml2 -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT  -g -O2 -O2 -falign-loops=16 -MT vp3dsp_mmx.o -MD -MP -MF ".deps/vp3dsp_mmx.Tpo" -c -o vp3dsp_mmx.o `test -f 'i386/vp3dsp_mmx.c' || echo './'`i386/vp3dsp_mmx.c; \
+[5-ERROR] 	then mv -f ".deps/vp3dsp_mmx.Tpo" ".deps/vp3dsp_mmx.Po"; else rm -f ".deps/vp3dsp_mmx.Tpo"; exit 1; fi
+[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I..    -I.. -DHAVE_AV_CONFIG_H  -O3 -Iamr_float -I../avidemux/ADM_lavutil  -I../avidemux/ADM_lavutil   -I/usr/include/malloc -I/usr/include/libxml2 -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT  -g -O2 -O2 -falign-loops=16 -MT dsputil_mmx.o -MD -MP -MF ".deps/dsputil_mmx.Tpo" -c -o dsputil_mmx.o `test -f 'i386/dsputil_mmx.c' || echo './'`i386/dsputil_mmx.c; \
+[5-ERROR] 	then mv -f ".deps/dsputil_mmx.Tpo" ".deps/dsputil_mmx.Po"; else rm -f ".deps/dsputil_mmx.Tpo"; exit 1; fi
+[5-ERROR] In file included from i386/dsputil_mmx.c:2492:
+[5-ERROR] i386/h264dsp_mmx.c:49:1: warning: "SBUTTERFLY" redefined
+[5-ERROR] i386/dsputil_mmx.c:1525:1: warning: this is the location of the previous definition
+[5-ERROR] In file included from i386/dsputil_mmx.c:2492:
+[5-ERROR] i386/h264dsp_mmx.c: In function 'h264_h_loop_filter_luma_mmx2':
+[5-ERROR] i386/dsputil_mmx.c:621: error: can't find a register in class 'GENERAL_REGS' while reloading 'asm'
+[5-ERROR] i386/dsputil_mmx.c:621: error: can't find a register in class 'GENERAL_REGS' while reloading 'asm'
+[5-ERROR] i386/h264dsp_mmx.c:865:1: warning: "PUT_OP" redefined
+[5-ERROR] i386/dsputil_mmx.c:2377:1: warning: this is the location of the previous definition
+[5-ERROR] make[3]: *** [dsputil_mmx.o] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.avidemux.1169124405.22109.3641098646/avidemux-2.1.2/adm_lavcodec'
+[5-ERROR] make[2]: *** [all-recursive] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.avidemux.1169124405.22109.3641098646/avidemux-2.1.2/adm_lavcodec'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.avidemux.1169124405.22109.3641098646/avidemux-2.1.2'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] In file included from postprocess.c:655:
+[9-ERROR] postprocess_template.c:3207:1: warning: this is the location of the previous definition
+[9-ERROR] In file included from postprocess.c:665:
+[9-ERROR] postprocess_template.c: In function 'postProcess_3DNow':
+[9-ERROR] postprocess_template.c:3512: warning: pointer targets in passing argument 6 of 'blockCopy_3DNow' differ in signedness
+[9-ERROR] postprocess_template.c:3658: warning: pointer targets in passing argument 6 of 'blockCopy_3DNow' differ in signedness
+[9-ERROR] postprocess_template.c:3759: warning: pointer targets in passing argument 4 of 'tempNoiseReducer_3DNow' differ in signedness
+[9-ERROR] postprocess_template.c:3783: warning: pointer targets in passing argument 4 of 'tempNoiseReducer_3DNow' differ in signedness
+[9-ERROR] rm -f libpostproc.a
+[9-ERROR] ar cru libpostproc.a postprocess.o 
+[9-ERROR] ranlib libpostproc.a
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.avidemux.1169153994.12605.3951810427/avidemux-2.1.2/adm_lavcodec/libpostproc'
+[9-ERROR] Making all in i386
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.avidemux.1169153994.12605.3951810427/avidemux-2.1.2/adm_lavcodec/i386'
+[9-ERROR] make[3]: Nothing to be done for `all'.
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.avidemux.1169153994.12605.3951810427/avidemux-2.1.2/adm_lavcodec/i386'
+[9-ERROR] Making all in ppc
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.avidemux.1169153994.12605.3951810427/avidemux-2.1.2/adm_lavcodec/ppc'
+[9-ERROR] make[3]: Nothing to be done for `all'.
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.avidemux.1169153994.12605.3951810427/avidemux-2.1.2/adm_lavcodec/ppc'
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.avidemux.1169153994.12605.3951810427/avidemux-2.1.2/adm_lavcodec'
+[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I..    -I.. -DHAVE_AV_CONFIG_H  -O3 -Iamr_float -I../avidemux/ADM_lavutil  -I../avidemux/ADM_lavutil   -I/usr/include/malloc -I/usr/include/libxml2 -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT  -g -O2 -O2 -falign-loops=16 -MT cputest.o -MD -MP -MF ".deps/cputest.Tpo" -c -o cputest.o `test -f 'i386/cputest.c' || echo './'`i386/cputest.c; \
+[9-ERROR] 	then mv -f ".deps/cputest.Tpo" ".deps/cputest.Po"; else rm -f ".deps/cputest.Tpo"; exit 1; fi
+[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I..    -I.. -DHAVE_AV_CONFIG_H  -O3 -Iamr_float -I../avidemux/ADM_lavutil  -I../avidemux/ADM_lavutil   -I/usr/include/malloc -I/usr/include/libxml2 -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT  -g -O2 -O2 -falign-loops=16 -MT mpegvideo_mmx.o -MD -MP -MF ".deps/mpegvideo_mmx.Tpo" -c -o mpegvideo_mmx.o `test -f 'i386/mpegvideo_mmx.c' || echo './'`i386/mpegvideo_mmx.c; \
+[9-ERROR] 	then mv -f ".deps/mpegvideo_mmx.Tpo" ".deps/mpegvideo_mmx.Po"; else rm -f ".deps/mpegvideo_mmx.Tpo"; exit 1; fi
+[9-ERROR] In file included from i386/mpegvideo_mmx.c:685:
+[9-ERROR] i386/mpegvideo_mmx_template.c:25:1: warning: "PMAX" redefined
+[9-ERROR] In file included from i386/mpegvideo_mmx.c:678:
+[9-ERROR] i386/mpegvideo_mmx_template.c:37:1: warning: this is the location of the previous definition
+[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I..    -I.. -DHAVE_AV_CONFIG_H  -O3 -Iamr_float -I../avidemux/ADM_lavutil  -I../avidemux/ADM_lavutil   -I/usr/include/malloc -I/usr/include/libxml2 -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT  -g -O2 -O2 -falign-loops=16 -MT vp3dsp_mmx.o -MD -MP -MF ".deps/vp3dsp_mmx.Tpo" -c -o vp3dsp_mmx.o `test -f 'i386/vp3dsp_mmx.c' || echo './'`i386/vp3dsp_mmx.c; \
+[9-ERROR] 	then mv -f ".deps/vp3dsp_mmx.Tpo" ".deps/vp3dsp_mmx.Po"; else rm -f ".deps/vp3dsp_mmx.Tpo"; exit 1; fi
+[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I..    -I.. -DHAVE_AV_CONFIG_H  -O3 -Iamr_float -I../avidemux/ADM_lavutil  -I../avidemux/ADM_lavutil   -I/usr/include/malloc -I/usr/include/libxml2 -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT  -g -O2 -O2 -falign-loops=16 -MT dsputil_mmx.o -MD -MP -MF ".deps/dsputil_mmx.Tpo" -c -o dsputil_mmx.o `test -f 'i386/dsputil_mmx.c' || echo './'`i386/dsputil_mmx.c; \
+[9-ERROR] 	then mv -f ".deps/dsputil_mmx.Tpo" ".deps/dsputil_mmx.Po"; else rm -f ".deps/dsputil_mmx.Tpo"; exit 1; fi
+[9-ERROR] In file included from i386/dsputil_mmx.c:2492:
+[9-ERROR] i386/h264dsp_mmx.c:49:1: warning: "SBUTTERFLY" redefined
+[9-ERROR] i386/dsputil_mmx.c:1525:1: warning: this is the location of the previous definition
+[9-ERROR] In file included from i386/dsputil_mmx.c:2492:
+[9-ERROR] i386/h264dsp_mmx.c: In function 'h264_h_loop_filter_luma_mmx2':
+[9-ERROR] i386/dsputil_mmx.c:621: error: can't find a register in class 'GENERAL_REGS' while reloading 'asm'
+[9-ERROR] i386/dsputil_mmx.c:621: error: can't find a register in class 'GENERAL_REGS' while reloading 'asm'
+[9-ERROR] i386/h264dsp_mmx.c:865:1: warning: "PUT_OP" redefined
+[9-ERROR] i386/dsputil_mmx.c:2377:1: warning: this is the location of the previous definition
+[9-ERROR] make[3]: *** [dsputil_mmx.o] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.avidemux.1169153994.12605.3951810427/avidemux-2.1.2/adm_lavcodec'
+[9-ERROR] make[2]: *** [all-recursive] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.avidemux.1169153994.12605.3951810427/avidemux-2.1.2/adm_lavcodec'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.avidemux.1169153994.12605.3951810427/avidemux-2.1.2'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142553564 Fri Mar 17 00:59:24 2006 (5)
-[TIMESTAMP] 1142811888 Mon Mar 20 00:44:48 2006 (9)
+[TIMESTAMP] 1168623141 Fri Jan 12 18:32:21 2007 (5)
+[TIMESTAMP] 1168826898 Mon Jan 15 03:08:18 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-wireless-tools.log 9-wireless-tools.log
 
-[BUILDTIME] 1524 (5)
-[BUILDTIME] 1902 (9)
-[SIZE] 0.18 MB, 25 files
+[BUILDTIME] 1641 (5)
+[BUILDTIME] 1935 (9)
+[SIZE] 0.19 MB, 26 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp rrdtool
-[DEP] sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils gawk gcc40
+[DEP] gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev make
+[DEP] mktemp netpbm rrdtool sed sysfiles tar
 
 [PROVIDES] ifrename iwconfig iwevent iwgetid iwlist iwpriv iwspy libiw.so
 

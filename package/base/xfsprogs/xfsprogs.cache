@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142569578 Fri Mar 17 05:26:18 2006 (5)
-[TIMESTAMP] 1142831674 Mon Mar 20 06:14:34 2006 (9)
+[TIMESTAMP] 1168634279 Fri Jan 12 21:37:59 2007 (5)
+[TIMESTAMP] 1168839442 Mon Jan 15 06:37:22 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-xfsprogs.log 9-xfsprogs.log
 
-[BUILDTIME] 10803 (5)
-[BUILDTIME] 11232 (9)
-[SIZE] 2.68 MB, 56 files
+[BUILDTIME] 11444 (5)
+[BUILDTIME] 11837 (9)
+[SIZE] 2.43 MB, 45 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils e2fsprogs:dev
-[DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep gzip libtool
-[DEP] linux26-header:dev make mktemp ncurses:dev net-tools patch readline
-[DEP] readline:dev rpm rrdtool sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils e2fsprogs
+[DEP] e2fsprogs:dev findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev grep
+[DEP] gzip libtool linux-libc-headers:dev make mktemp ncurses net-tools
+[DEP] netpbm patch readline readline:dev rpm rrdtool sed sysfiles tar
+[DEP] util-linux
 
 [PROVIDES] fsck.xfs libdisk.a libhandle.a libhandle.so libxcmd.a libxfs.a
 [PROVIDES] libxlog.a mkfs.xfs xfs_admin xfs_bmap xfs_check xfs_copy xfs_db

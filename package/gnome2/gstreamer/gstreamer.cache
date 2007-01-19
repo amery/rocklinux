@@ -20,48 +20,31 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142515804 Thu Mar 16 14:30:04 2006 (5)
-[TIMESTAMP] 1142768599 Sun Mar 19 12:43:19 2006 (9)
+[TIMESTAMP] 1168590236 Fri Jan 12 09:23:56 2007 (5)
+[TIMESTAMP] 1168791849 Sun Jan 14 17:24:09 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-gstreamer.log 9-gstreamer.log
 
-[BUILDTIME] 29906 (5)
-[BUILDTIME] 30818 (9)
-[SIZE] 4.17 MB, 168 files
+[BUILDTIME] 16127 (5)
+[BUILDTIME] 16670 (9)
+[SIZE] 1.09 MB, 48 files
 
-[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
-[DEP] binutils bison bzip2 cairo cairo:dev coreutils diffutils docbookx
-[DEP] esound esound:dev expat findutils flex freetype freetype:dev gawk
-[DEP] gcc34 gcc34:dev gconf gconf:dev gettext glib glib:dev glibc23
-[DEP] glibc23:dev gnome-keyring gnome-keyring-manager gnome-keyring:dev
-[DEP] gnome-vfs gnome-vfs:dev gnome2-dirtree grep gtk+ gtk+:dev
-[DEP] gtkdoc libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev
-[DEP] libbonoboui libbonoboui:dev libgnome libgnome:dev libgnomecanvas
-[DEP] libgnomecanvas:dev libgnomeui libgnomeui:dev libjpeg libjpeg:dev
-[DEP] libpng libpng:dev libxml2 libxml2:dev libxslt linux26-header:dev
-[DEP] m4 make mktemp net-tools openssl orbit2 orbit2:dev pango pango:dev
-[DEP] perl5 pkgconfig popt popt:dev python rrdtool sed sysfiles tar
-[DEP] transfig util-linux xorg zlib:dev
+[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils cvm diffutils
+[DEP] findutils flex gawk gcc40 gcc40:dev gettext glib glib:dev
+[DEP] glibc23 glibc23:dev gnome2-dirtree grep libxml2 libxml2:dev
+[DEP] linux-libc-headers:dev m4 make mktemp net-tools perl5 pkgconfig
+[DEP] python rrdtool sed sysfiles tar util-linux zlib
 
-[PROVIDES] gst-complete gst-complete-0.8 gst-compprep gst-compprep-0.8
-[PROVIDES] gst-feedback gst-feedback-0.8 gst-inspect gst-inspect-0.8
-[PROVIDES] gst-launch gst-launch-0.8 gst-md5sum gst-md5sum-0.8 gst-register
-[PROVIDES] gst-register-0.8 gst-typefind gst-typefind-0.8 gst-xmlinspect
-[PROVIDES] gst-xmlinspect-0.8 gst-xmllaunch gst-xmllaunch-0.8
-[PROVIDES] libgstbasicgthreadscheduler.a libgstbasicgthreadscheduler.so
-[PROVIDES] libgstbasicomegascheduler.a libgstbasicomegascheduler.so
-[PROVIDES] libgstbytestream.a libgstbytestream.so libgstcontrol-0.8.a
-[PROVIDES] libgstcontrol-0.8.so libgstdataprotocol.a libgstdataprotocol.so
-[PROVIDES] libgstelements.a libgstelements.so libgstentrygthreadscheduler.a
-[PROVIDES] libgstentrygthreadscheduler.so libgstentryomegascheduler.a
-[PROVIDES] libgstentryomegascheduler.so libgstfairgthreadscheduler.a
-[PROVIDES] libgstfairgthreadscheduler.so libgstgetbits.a libgstgetbits.so
-[PROVIDES] libgstindexers.a libgstindexers.so libgstoptgthreadscheduler.a
-[PROVIDES] libgstoptgthreadscheduler.so libgstoptomegascheduler.a
-[PROVIDES] libgstoptomegascheduler.so libgstoptscheduler.a
-[PROVIDES] libgstoptscheduler.so libgstreamer-0.8.a libgstreamer-0.8.so
-[PROVIDES] libgstspider.a libgstspider.so
+[PROVIDES] gst-feedback gst-feedback-0.10 gst-inspect gst-inspect-0.10
+[PROVIDES] gst-launch gst-launch-0.10 gst-typefind gst-typefind-0.10
+[PROVIDES] gst-xmlinspect gst-xmlinspect-0.10 gst-xmllaunch
+[PROVIDES] gst-xmllaunch-0.10 libgstbase-0.10.a libgstbase-0.10.so
+[PROVIDES] libgstcontroller-0.10.a libgstcontroller-0.10.so
+[PROVIDES] libgstcoreelements.a libgstcoreelements.so libgstcoreindexers.a
+[PROVIDES] libgstcoreindexers.so libgstdataprotocol-0.10.a
+[PROVIDES] libgstdataprotocol-0.10.so libgstnet-0.10.a libgstnet-0.10.so
+[PROVIDES] libgstreamer-0.10.a libgstreamer-0.10.so
 

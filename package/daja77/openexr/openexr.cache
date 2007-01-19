@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142484275 Thu Mar 16 05:44:35 2006 (5)
-[TIMESTAMP] 1142731745 Sun Mar 19 02:29:05 2006 (9)
+[TIMESTAMP] 1168562313 Fri Jan 12 01:38:33 2007 (5)
+[TIMESTAMP] 1168759100 Sun Jan 14 08:18:20 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-openexr.log 9-openexr.log
 
-[BUILDTIME] 18647 (5)
-[BUILDTIME] 19393 (9)
-[SIZE] 1.51 MB, 25 files
+[BUILDTIME] 16329 (5)
+[BUILDTIME] 17079 (9)
+[SIZE] 1.10 MB, 25 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] fltk fltk:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp net-tools patch rrdtool sed sysfiles
-[DEP] tar util-linux xorg xorg:dev zlib:dev
+[DEP] 00-dirtree applewmproto bash2 binutils bzip2 coreutils cvm diffutils
+[DEP] findutils fltk fltk:dev gawk gcc40 gcc40:dev glibc23 glibc23:dev
+[DEP] grep libx11 libx11:dev libxau libxdmcp libxext libxext:dev
+[DEP] linux-libc-headers:dev make mesalib mesalib:dev mktemp net-tools
+[DEP] patch rrdtool sed sysfiles tar util-linux zlib zlib:dev
 
 [PROVIDES] exrdisplay exrenvmap exrheader exrmakepreview exrmaketiled
 [PROVIDES] exrstdattr libHalf.a libHalf.so libIex.a libIex.so libIlmImf.a

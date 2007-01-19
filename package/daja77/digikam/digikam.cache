@@ -20,30 +20,36 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142623834 Fri Mar 17 20:30:34 2006 (5)
-[TIMESTAMP] 1142891219 Mon Mar 20 22:46:59 2006 (9)
+[TIMESTAMP] 1168675720 Sat Jan 13 09:08:40 2007 (5)
+[TIMESTAMP] 1168883992 Mon Jan 15 18:59:52 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-digikam.log 9-digikam.log
 
-[BUILDTIME] 36189 (5)
-[BUILDTIME] 36646 (9)
-[SIZE] 5.39 MB, 138 files
+[BUILDTIME] 35314 (5)
+[BUILDTIME] 35752 (9)
+[SIZE] 7.91 MB, 434 files
 
-[DEP] 00-dirtree acl acl:dev alsa arts attr attr:dev autoconf bash2
-[DEP] binutils bzip2 coreutils diffutils djvulibre expat fam fam:dev
-[DEP] findutils freetype freetype:dev gawk gcc34 gcc34:dev gdbm gdbm:dev
-[DEP] gettext glibc23 glibc23:dev grep imlib2 imlib2:dev kdebase kdelibs
-[DEP] kdelibs:dev libart_lgpl23 libart_lgpl23:dev libexif libexif:dev
-[DEP] libgphoto libgphoto:dev libidn libidn:dev libjpeg libjpeg:dev
-[DEP] libkexif libkexif:dev libkipi libkipi:dev libpng libpng:dev libtiff
-[DEP] libtiff:dev libtool libtool:dev linux26-header:dev m4 make mktemp
-[DEP] nas net-tools perl5 pkgconfig qt33 qt33:dev rrdtool sed sysfiles
-[DEP] tar util-linux xorg xorg:dev zlib:dev
+[DEP] 00-dirtree acl acl:dev alsa applewmproto applewmproto:dev attr
+[DEP] attr:dev bash2 binutils bzip2 coreutils cups cvm diffutils expat
+[DEP] expat:dev fam fam:dev findutils fontconfig fontconfig:dev freetype
+[DEP] freetype:dev gawk gcc40 gcc40:dev gettext glibc23 glibc23:dev
+[DEP] gnome-nettool grep hicolor-icon-theme imake imlib2 imlib2:dev
+[DEP] kdelibs kdelibs:dev libart_lgpl23 libart_lgpl23:dev libexif
+[DEP] libexif:dev libgphoto libgphoto:dev libice libice:dev libidn
+[DEP] libidn:dev libjpeg libjpeg:dev libkexif libkexif:dev libkipi
+[DEP] libkipi:dev libpng libpng:dev libsm libsm:dev libtiff libtiff:dev
+[DEP] libtool libtool:dev libx11 libx11:dev libxau libxau:dev libxcursor
+[DEP] libxcursor:dev libxdmcp libxdmcp:dev libxext libxext:dev libxfixes
+[DEP] libxfixes:dev libxft libxft:dev libxinerama libxinerama:dev libxmu
+[DEP] libxmu:dev libxrandr libxrandr:dev libxrender libxrender:dev libxt
+[DEP] libxt:dev linux-libc-headers:dev make mesalib mktemp nas net-tools
+[DEP] perl5 pkgconfig qt33 qt33:dev rrdtool sed sqlite3 sqlite3:dev
+[DEP] sysfiles tar util-linux xorg-cf-files xproto:dev zlib zlib:dev
 
-[PROVIDES] digikam digikamimageplugin_core.so kio_digikamio.so
-[PROVIDES] kio_digikamtags.so kio_digikamthumbnail.so libdigikam.so
-[PROVIDES] showfoto
+[PROVIDES] digikam digikamimageplugin_core.so kio_digikamalbums.so
+[PROVIDES] kio_digikamdates.so kio_digikamsearch.so kio_digikamtags.so
+[PROVIDES] kio_digikamthumbnail.so libdigikam.so showfoto
 

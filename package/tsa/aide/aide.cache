@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142482913 Thu Mar 16 05:21:53 2006 (5)
-[TIMESTAMP] 1142729320 Sun Mar 19 01:48:40 2006 (9)
+[TIMESTAMP] 1168561188 Fri Jan 12 01:19:48 2007 (5)
+[TIMESTAMP] 1168757789 Sun Jan 14 07:56:29 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-aide.log 9-aide.log
 
-[BUILDTIME] 2190 (5)
-[BUILDTIME] 2725 (9)
-[SIZE] 0.77 MB, 10 files
+[BUILDTIME] 2039 (5)
+[BUILDTIME] 2545 (9)
+[SIZE] 0.80 MB, 10 files
 
-[DEP] 00-dirtree autoconf bash2 binutils bison bzip2 coreutils diffutils
-[DEP] findutils flex flex:dev gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] libmhash:dev linux26-header:dev m4 make mktemp net-tools perl5
-[DEP] rrdtool sed sysfiles tar texinfo zlib:dev
+[DEP] 00-dirtree autoconf bash2 binutils bison bzip2 coreutils cvm
+[DEP] diffutils findutils flex flex:dev gawk gcc40 gcc40:dev glibc23
+[DEP] glibc23:dev grep libmhash:dev linux-libc-headers:dev m4 make mktemp
+[DEP] net-tools netpbm perl5 rrdtool sed sysfiles tar texinfo twoftpd
+[DEP] ucspi-unix zlib:dev
 
 [PROVIDES] aide
 

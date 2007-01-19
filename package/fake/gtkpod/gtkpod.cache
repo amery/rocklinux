@@ -20,24 +20,27 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142644591 Sat Mar 18 02:16:31 2006 (5)
-[TIMESTAMP] 1142913268 Tue Mar 21 04:54:28 2006 (9)
+[TIMESTAMP] 1168689471 Sat Jan 13 12:57:51 2007 (5)
+[TIMESTAMP] 1168898327 Mon Jan 15 22:58:47 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-gtkpod.log 9-gtkpod.log
 
-[BUILDTIME] 5504 (5)
-[BUILDTIME] 5616 (9)
-[SIZE] 0.87 MB, 30 files
+[BUILDTIME] 4325 (5)
+[BUILDTIME] 4464 (9)
+[SIZE] 1.43 MB, 43 files
 
-[DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 cairo cairo:dev coreutils
-[DEP] diffutils expat findutils flex flex:dev freetype gawk gcc34 gcc34:dev
-[DEP] gettext glib glib:dev glibc23 glibc23:dev gnome2-dirtree grep gtk+
-[DEP] gtk+:dev libpng linux26-header:dev m4 mad mad:dev make mktemp
-[DEP] mpeg4ip mpeg4ip:dev net-tools pango pango:dev pkgconfig rrdtool
-[DEP] sed sysfiles tar util-linux xorg
+[DEP] 00-dirtree applewmproto atk atk:dev bash2 binutils bzip2 cairo
+[DEP] cairo:dev coreutils cvm dbus dbus-glib diffutils expat findutils
+[DEP] flex flex:dev fontconfig freetype gawk gcc40 gcc40:dev gettext glib
+[DEP] glib:dev glibc23 glibc23:dev gnome2-dirtree grep gtk+ gtk+:dev hal
+[DEP] libglade libglade:dev libgpod libgpod:dev libpng libx11 libxau
+[DEP] libxcursor libxdmcp libxext libxfixes libxi libxinerama libxml2
+[DEP] libxrandr libxrender linux-libc-headers:dev m4 mad mad:dev make
+[DEP] mktemp mpeg4ip mpeg4ip:dev net-tools pango pango:dev pkgconfig
+[DEP] rrdtool sed sysfiles tar util-linux zlib
 
 [PROVIDES] gtkpod
 

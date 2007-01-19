@@ -20,22 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142471428 Thu Mar 16 02:10:28 2006 (5)
-[TIMESTAMP] 1142716076 Sat Mar 18 22:07:56 2006 (9)
+[TIMESTAMP] 1168551616 Thu Jan 11 22:40:16 2007 (5)
+[TIMESTAMP] 1168747765 Sun Jan 14 05:09:25 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-aalib.log 9-aalib.log
 
-[BUILDTIME] 3865 (5)
-[BUILDTIME] 4616 (9)
-[SIZE] 0.40 MB, 83 files
+[BUILDTIME] 3892 (5)
+[BUILDTIME] 4603 (9)
+[SIZE] 0.25 MB, 20 files
 
-[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev gpm
-[DEP] gpm:dev grep linux26-header:dev make mktemp net-tools perl5 rrdtool
-[DEP] sed slang slang:dev sysfiles tar texinfo xorg xorg:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev autoconf automake19
+[DEP] bash2 binutils bzip2 coreutils cvm diffutils findutils gawk gcc40
+[DEP] gcc40:dev glibc23 glibc23:dev grep imake libice libx11 libx11:dev
+[DEP] libxau libxdmcp libxt linux-libc-headers:dev make mktemp net-tools
+[DEP] netpbm perl5 rrdtool sed slang slang:dev sysfiles tar texinfo
+[DEP] twoftpd ucspi-unix xorg-cf-files xproto:dev
 
 [PROVIDES] aafire aainfo aalib-config aasavefont aatest libaa.a libaa.so
 

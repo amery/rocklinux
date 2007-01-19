@@ -20,23 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142518817 Thu Mar 16 15:20:17 2006 (5)
-[TIMESTAMP] 1142772810 Sun Mar 19 13:53:30 2006 (9)
+[TIMESTAMP] 1168594886 Fri Jan 12 10:41:26 2007 (5)
+[TIMESTAMP] 1168796814 Sun Jan 14 18:46:54 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-gworldclock.log 9-gworldclock.log
 
-[BUILDTIME] 1673 (5)
-[BUILDTIME] 2121 (9)
-[SIZE] 0.07 MB, 11 files
+[BUILDTIME] 1688 (5)
+[BUILDTIME] 2062 (9)
+[SIZE] 0.07 MB, 10 files
 
-[DEP] 00-dirtree atk atk:dev bash2 binutils bzip2 cairo cairo:dev coreutils
-[DEP] diffutils expat findutils freetype gcc34 gcc34:dev gettext glib
-[DEP] glib:dev glibc23 glibc23:dev gnome2-dirtree grep gtk+ gtk+:dev libpng
-[DEP] libxml2 libxml2:dev linux26-header:dev make mktemp net-tools pango
-[DEP] pango:dev pkgconfig rrdtool sed sysfiles tar util-linux xorg
+[DEP] 00-dirtree applewmproto atk atk:dev bash2 binutils bzip2 cairo
+[DEP] cairo:dev coreutils cvm diffutils expat findutils fontconfig freetype
+[DEP] gawk gcc40 gcc40:dev gettext glib glib:dev glibc23 glibc23:dev
+[DEP] gnome2-dirtree grep gtk+ gtk+:dev libpng libx11 libxau libxcursor
+[DEP] libxdmcp libxext libxfixes libxi libxinerama libxml2 libxml2:dev
+[DEP] libxrandr libxrender linux-libc-headers:dev make mktemp net-tools
+[DEP] pango pango:dev pkgconfig rrdtool sed sysfiles tar util-linux zlib
 
 [PROVIDES] gworldclock tzwatch
 

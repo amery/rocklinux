@@ -20,27 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142554936 Fri Mar 17 01:22:16 2006 (5)
-[TIMESTAMP] 1142813816 Mon Mar 20 01:16:56 2006 (9)
+[TIMESTAMP] 1168624332 Fri Jan 12 18:52:12 2007 (5) ERROR
+[TIMESTAMP] 1168828189 Mon Jan 15 03:29:49 2007 (9) ERROR
+[TIMESTAMP] 1168946976 Tue Jan 16 12:29:36 2007 (5) ERROR
+[TIMESTAMP] 1168973962 Tue Jan 16 19:59:22 2007 (9) ERROR
+[TIMESTAMP] 1169090387 Thu Jan 18 04:19:47 2007 (5) ERROR
+[TIMESTAMP] 1169144256 Thu Jan 18 19:17:36 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-ghex12.log 9-ghex12.log
+[LOGS] 5-ghex12.err 9-ghex12.err
 
-[BUILDTIME] 2547 (5)
-[BUILDTIME] 3226 (9)
-[SIZE] 0.57 MB, 103 files
+[BUILDTIME] 1343 (5) ERROR
+[BUILDTIME] 1405 (9) ERROR
+[BUILDTIME] 1412 (5) ERROR
+[BUILDTIME] 1407 (9) ERROR
+[BUILDTIME] 1410 (5) ERROR
+[BUILDTIME] 1409 (9) ERROR
 
-[DEP] 00-dirtree alsa audiofile autoconf automake19 bash2 bdb33 binutils
-[DEP] bzip2 coreutils diffutils esound findutils freetype gawk gcc34
-[DEP] gcc34:dev gdk-pixbuf10 gdk-pixbuf10:dev gettext glade10 glib12
-[DEP] glib12:dev glibc23 glibc23:dev gnome-doc-utils gnome-keyring-manager
-[DEP] gnome-libs14 gnome-libs14:dev gnome-netstatus gnome-print10
-[DEP] gnome-print10:dev gnome14-dirtree gnome2-dirtree grep gtk+12
-[DEP] gtk+12:dev imlib imlib:dev libxml linux26-header:dev make mktemp
-[DEP] net-tools orbit10 pango perl5 rrdtool scrollkeeper sed sysfiles
-[DEP] tar texinfo xorg xorg:dev zlib:dev
 
-[PROVIDES] ghex
+[5-ERROR] checking for catalogs to be installed...  de es fr it ru
+[5-ERROR] checking for gnome-config... (cached) /opt/gnome/bin/gnome-config
+[5-ERROR] checking for GNOME-PRINT - version >= 0.24.0... found 0.37
+[5-ERROR] updating cache ./config.cache
+[5-ERROR] creating ./config.status
+[5-ERROR] creating Makefile
+[5-ERROR] creating po/Makefile.in
+[5-ERROR] creating intl/Makefile
+[5-ERROR] creating macros/Makefile
+[5-ERROR] creating src/Makefile
+[5-ERROR] creating help/Makefile
+[5-ERROR] creating help/C/Makefile
+[5-ERROR] creating help/ja/Makefile
+[5-ERROR] creating omf-install/Makefile
+[5-ERROR] creating ghex.spec
+[5-ERROR] creating config.h
+[5-ERROR] make  all-recursive
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.ghex12.1169090372.13559.3434750941/ghex-1.2.1'
+[5-ERROR] Making all in po
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.ghex12.1169090372.13559.3434750941/ghex-1.2.1/po'
+[5-ERROR] make[2]: Nothing to be done for `all'.
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ghex12.1169090372.13559.3434750941/ghex-1.2.1/po'
+[5-ERROR] Making all in intl
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.ghex12.1169090372.13559.3434750941/ghex-1.2.1/intl'
+[5-ERROR] make[2]: Nothing to be done for `all'.
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ghex12.1169090372.13559.3434750941/ghex-1.2.1/intl'
+[5-ERROR] Making all in macros
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.ghex12.1169090372.13559.3434750941/ghex-1.2.1/macros'
+[5-ERROR] make[2]: Nothing to be done for `all'.
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ghex12.1169090372.13559.3434750941/ghex-1.2.1/macros'
+[5-ERROR] Making all in src
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.ghex12.1169090372.13559.3434750941/ghex-1.2.1/src'
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome/include 					-DGNOMELOCALEDIR=\""/opt/gnome/share/locale"\" 		-DLOCALEDIR=\"/opt/gnome/share/locale\"			-I/opt/gnome/include -I/opt/gnome/include/gnome-1.0 -DNEED_GNOMESUPPORT_H -I/opt/gnome/lib/gnome-libs/include -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/opt/gnome/include/orbit-1.0 -I/opt/gnome/include/gtk-1.2 -I/usr/X11R7/include                             	-I/opt/gnome/include -I/opt/gnome/include/gnome-1.0 -I/usr/include/freetype2 -DNEED_GNOMESUPPORT_H -I/opt/gnome/lib/gnome-libs/include -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/opt/gnome/include/gdk-pixbuf-1.0 -I/usr/include/gnome-xml  -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include  -g -O2 -Wall -Wunused  -c hex-document.c
+[5-ERROR] hex-document.c: In function 'hex_document_class_init':
+[5-ERROR] hex-document.c:328: warning: pointer targets in passing argument 2 of 'gtk_object_class_add_signals' differ in signedness
+[5-ERROR] hex-document.c: In function 'hex_document_undo':
+[5-ERROR] hex-document.c:902: warning: pointer targets in passing argument 5 of 'hex_document_set_data' differ in signedness
+[5-ERROR] hex-document.c:906: warning: pointer targets in assignment differ in signedness
+[5-ERROR] hex-document.c: In function 'hex_document_redo':
+[5-ERROR] hex-document.c:947: warning: pointer targets in passing argument 5 of 'hex_document_set_data' differ in signedness
+[5-ERROR] hex-document.c:951: warning: pointer targets in assignment differ in signedness
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome/include 					-DGNOMELOCALEDIR=\""/opt/gnome/share/locale"\" 		-DLOCALEDIR=\"/opt/gnome/share/locale\"			-I/opt/gnome/include -I/opt/gnome/include/gnome-1.0 -DNEED_GNOMESUPPORT_H -I/opt/gnome/lib/gnome-libs/include -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/opt/gnome/include/orbit-1.0 -I/opt/gnome/include/gtk-1.2 -I/usr/X11R7/include                             	-I/opt/gnome/include -I/opt/gnome/include/gnome-1.0 -I/usr/include/freetype2 -DNEED_GNOMESUPPORT_H -I/opt/gnome/lib/gnome-libs/include -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/opt/gnome/include/gdk-pixbuf-1.0 -I/usr/include/gnome-xml  -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include  -g -O2 -Wall -Wunused  -c hex-document-ui.c
+[5-ERROR] hex-document-ui.c:85: error: static declaration of 'view_menu' follows non-static declaration
+[5-ERROR] ghex.h:47: error: previous declaration of 'view_menu' was here
+[5-ERROR] make[2]: *** [hex-document-ui.o] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ghex12.1169090372.13559.3434750941/ghex-1.2.1/src'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.ghex12.1169090372.13559.3434750941/ghex-1.2.1'
+[5-ERROR] make: *** [all-recursive-am] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] checking for catalogs to be installed...  de es fr it ru
+[9-ERROR] checking for gnome-config... (cached) /opt/gnome/bin/gnome-config
+[9-ERROR] checking for GNOME-PRINT - version >= 0.24.0... found 0.37
+[9-ERROR] updating cache ./config.cache
+[9-ERROR] creating ./config.status
+[9-ERROR] creating Makefile
+[9-ERROR] creating po/Makefile.in
+[9-ERROR] creating intl/Makefile
+[9-ERROR] creating macros/Makefile
+[9-ERROR] creating src/Makefile
+[9-ERROR] creating help/Makefile
+[9-ERROR] creating help/C/Makefile
+[9-ERROR] creating help/ja/Makefile
+[9-ERROR] creating omf-install/Makefile
+[9-ERROR] creating ghex.spec
+[9-ERROR] creating config.h
+[9-ERROR] make  all-recursive
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.ghex12.1169144239.5819.89659219/ghex-1.2.1'
+[9-ERROR] Making all in po
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.ghex12.1169144239.5819.89659219/ghex-1.2.1/po'
+[9-ERROR] make[2]: Nothing to be done for `all'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ghex12.1169144239.5819.89659219/ghex-1.2.1/po'
+[9-ERROR] Making all in intl
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.ghex12.1169144239.5819.89659219/ghex-1.2.1/intl'
+[9-ERROR] make[2]: Nothing to be done for `all'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ghex12.1169144239.5819.89659219/ghex-1.2.1/intl'
+[9-ERROR] Making all in macros
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.ghex12.1169144239.5819.89659219/ghex-1.2.1/macros'
+[9-ERROR] make[2]: Nothing to be done for `all'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ghex12.1169144239.5819.89659219/ghex-1.2.1/macros'
+[9-ERROR] Making all in src
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.ghex12.1169144239.5819.89659219/ghex-1.2.1/src'
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome/include 					-DGNOMELOCALEDIR=\""/opt/gnome/share/locale"\" 		-DLOCALEDIR=\"/opt/gnome/share/locale\"			-I/opt/gnome/include -I/opt/gnome/include/gnome-1.0 -DNEED_GNOMESUPPORT_H -I/opt/gnome/lib/gnome-libs/include -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/opt/gnome/include/orbit-1.0 -I/opt/gnome/include/gtk-1.2 -I/usr/X11R7/include                             	-I/opt/gnome/include -I/opt/gnome/include/gnome-1.0 -I/usr/include/freetype2 -DNEED_GNOMESUPPORT_H -I/opt/gnome/lib/gnome-libs/include -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/opt/gnome/include/gdk-pixbuf-1.0 -I/usr/include/gnome-xml  -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include  -g -O2 -Wall -Wunused  -c hex-document.c
+[9-ERROR] hex-document.c: In function 'hex_document_class_init':
+[9-ERROR] hex-document.c:328: warning: pointer targets in passing argument 2 of 'gtk_object_class_add_signals' differ in signedness
+[9-ERROR] hex-document.c: In function 'hex_document_undo':
+[9-ERROR] hex-document.c:902: warning: pointer targets in passing argument 5 of 'hex_document_set_data' differ in signedness
+[9-ERROR] hex-document.c:906: warning: pointer targets in assignment differ in signedness
+[9-ERROR] hex-document.c: In function 'hex_document_redo':
+[9-ERROR] hex-document.c:947: warning: pointer targets in passing argument 5 of 'hex_document_set_data' differ in signedness
+[9-ERROR] hex-document.c:951: warning: pointer targets in assignment differ in signedness
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome/include 					-DGNOMELOCALEDIR=\""/opt/gnome/share/locale"\" 		-DLOCALEDIR=\"/opt/gnome/share/locale\"			-I/opt/gnome/include -I/opt/gnome/include/gnome-1.0 -DNEED_GNOMESUPPORT_H -I/opt/gnome/lib/gnome-libs/include -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/opt/gnome/include/orbit-1.0 -I/opt/gnome/include/gtk-1.2 -I/usr/X11R7/include                             	-I/opt/gnome/include -I/opt/gnome/include/gnome-1.0 -I/usr/include/freetype2 -DNEED_GNOMESUPPORT_H -I/opt/gnome/lib/gnome-libs/include -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include -I/opt/gnome/include/gdk-pixbuf-1.0 -I/usr/include/gnome-xml  -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include  -g -O2 -Wall -Wunused  -c hex-document-ui.c
+[9-ERROR] hex-document-ui.c:85: error: static declaration of 'view_menu' follows non-static declaration
+[9-ERROR] ghex.h:47: error: previous declaration of 'view_menu' was here
+[9-ERROR] make[2]: *** [hex-document-ui.o] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ghex12.1169144239.5819.89659219/ghex-1.2.1/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.ghex12.1169144239.5819.89659219/ghex-1.2.1'
+[9-ERROR] make: *** [all-recursive-am] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

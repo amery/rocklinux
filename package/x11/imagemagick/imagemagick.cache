@@ -20,28 +20,34 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142486040 Thu Mar 16 06:14:00 2006 (5)
-[TIMESTAMP] 1142680221 Sat Mar 18 12:10:21 2006 (7)
-[TIMESTAMP] 1142733876 Sun Mar 19 03:04:36 2006 (9)
+[TIMESTAMP] 1168563890 Fri Jan 12 02:04:50 2007 (5)
+[TIMESTAMP] 1168710446 Sat Jan 13 18:47:26 2007 (7)
+[TIMESTAMP] 1168760917 Sun Jan 14 08:48:37 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-imagemagick.log 7-imagemagick.log 9-imagemagick.log
 
-[BUILDTIME] 46698 (5)
-[BUILDTIME] 48387 (7)
-[BUILDTIME] 48712 (9)
-[SIZE] 7.53 MB, 362 files
+[BUILDTIME] 52225 (5)
+[BUILDTIME] 53779 (7)
+[BUILDTIME] 53918 (9)
+[SIZE] 7.63 MB, 365 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 bzip2:dev coreutils diffutils
-[DEP] expat expat:dev findutils freetype freetype:dev gawk gcc34 gcc34:dev
-[DEP] ghostscript glibc23 glibc23:dev gnome-libs14 gnome14-dirtree graphviz
-[DEP] graphviz:dev grep jasper:dev lcms lcms:dev libjpeg libjpeg:dev
-[DEP] libpng libpng:dev libtiff libtiff:dev libtool libtool:dev libxml2
-[DEP] libxml2:dev linux26-header:dev make mktemp net-tools perl5 pkgconfig
-[DEP] rrdtool sed ssleay-perlmod sysfiles tar util-linux xorg xorg:dev
-[DEP] zlib:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] bzip2:dev cairo:dev coreutils cvm dbus-glib:dev dbus:dev
+[DEP] diffutils esp-ghostscript expat:dev findutils fontconfig:dev
+[DEP] freetype freetype:dev gawk gcc40 gcc40:dev gconf gconf:dev
+[DEP] ghostscript glib glib:dev glibc23 glibc23:dev gnome-libs14 gnome-vfs
+[DEP] gnome-vfs:dev gnome14-dirtree gnome2-dirtree grep gtk+ gtk+:dev imake
+[DEP] jasper:dev lcms lcms:dev libcroco libcroco:dev libgsf libgsf:dev
+[DEP] libice libice:dev libjpeg libjpeg:dev libpng libpng:dev librsvg
+[DEP] librsvg:dev libsm libsm:dev libtiff libtiff:dev libx11 libx11:dev
+[DEP] libxau libxau:dev libxdmcp libxdmcp:dev libxext libxext:dev libxml2
+[DEP] libxml2:dev libxrender:dev libxt libxt:dev linux-libc-headers:dev
+[DEP] make mktemp net-tools netpbm orbit2 orbit2:dev pango:dev perl5
+[DEP] pkgconfig rrdtool sed ssleay-perlmod sysfiles tar twoftpd ucspi-unix
+[DEP] util-linux xextproto:dev xorg-cf-files xproto:dev zlib zlib:dev
 
 [PROVIDES] Magick++-config Magick-config Magick.so Wand-config analyze.a
 [PROVIDES] analyze.so animate art.a art.so avi.a avi.so avs.a avs.so bmp.a
@@ -63,10 +69,10 @@
 [PROVIDES] preview.so ps.a ps.so ps2.a ps2.so ps3.a ps3.so psd.a psd.so
 [PROVIDES] pwp.a pwp.so raw.a raw.so rgb.a rgb.so rla.a rla.so rle.a
 [PROVIDES] rle.so scr.a scr.so sct.a sct.so sfw.a sfw.so sgi.a sgi.so
-[PROVIDES] stegano.a stegano.so sun.a sun.so svg.a svg.so tga.a tga.so
-[PROVIDES] tiff.a tiff.so tile.a tile.so tim.a tim.so ttf.a ttf.so txt.a
-[PROVIDES] txt.so uil.a uil.so url.a url.so uyvy.a uyvy.so vicar.a vicar.so
-[PROVIDES] vid.a vid.so viff.a viff.so wbmp.a wbmp.so wmf.a wmf.so wpg.a
-[PROVIDES] wpg.so x.a x.so xbm.a xbm.so xc.a xc.so xcf.a xcf.so xpm.a
-[PROVIDES] xpm.so xwd.a xwd.so ycbcr.a ycbcr.so yuv.a yuv.so
+[PROVIDES] stegano.a stegano.so stream sun.a sun.so svg.a svg.so tga.a
+[PROVIDES] tga.so tiff.a tiff.so tile.a tile.so tim.a tim.so ttf.a ttf.so
+[PROVIDES] txt.a txt.so uil.a uil.so url.a url.so uyvy.a uyvy.so vicar.a
+[PROVIDES] vicar.so vid.a vid.so viff.a viff.so wbmp.a wbmp.so wmf.a
+[PROVIDES] wmf.so wpg.a wpg.so x.a x.so xbm.a xbm.so xc.a xc.so xcf.a
+[PROVIDES] xcf.so xpm.a xpm.so xwd.a xwd.so ycbcr.a ycbcr.so yuv.a yuv.so
 

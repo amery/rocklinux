@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142522015 Thu Mar 16 16:13:35 2006 (5)
-[TIMESTAMP] 1142776495 Sun Mar 19 14:54:55 2006 (9)
+[TIMESTAMP] 1168597874 Fri Jan 12 11:31:14 2007 (5)
+[TIMESTAMP] 1168799941 Sun Jan 14 19:39:01 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-libmcrypt.log 9-libmcrypt.log
 
-[BUILDTIME] 4297 (5)
-[BUILDTIME] 4787 (9)
-[SIZE] 0.22 MB, 13 files
+[BUILDTIME] 4401 (5)
+[BUILDTIME] 4784 (9)
+[SIZE] 0.20 MB, 12 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep linux26-header:dev make mktemp
-[DEP] net-tools rrdtool sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
+[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev
+[DEP] make mktemp net-tools netpbm rrdtool sed sysfiles tar util-linux
 
 [PROVIDES] libmcrypt-config libmcrypt.so
 

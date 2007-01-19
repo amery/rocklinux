@@ -20,125 +20,34 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142492344 Thu Mar 16 07:59:04 2006 (5) ERROR
-[TIMESTAMP] 1142741652 Sun Mar 19 05:14:12 2006 (9) ERROR
-[TIMESTAMP] 1142953008 Tue Mar 21 15:56:48 2006 (5) ERROR
-[TIMESTAMP] 1142966229 Tue Mar 21 19:37:09 2006 (9) ERROR
-[TIMESTAMP] 1143027363 Wed Mar 22 12:36:03 2006 (5) ERROR
-[TIMESTAMP] 1143035522 Wed Mar 22 14:52:02 2006 (9) ERROR
+[TIMESTAMP] 1168574160 Fri Jan 12 04:56:00 2007 (5)
+[TIMESTAMP] 1168772671 Sun Jan 14 12:04:31 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-gnome-volume-manager.err 9-gnome-volume-manager.err
+[LOGS] 5-gnome-volume-manager.log 9-gnome-volume-manager.log
 
-[BUILDTIME] 1290 (5) ERROR
-[BUILDTIME] 1820 (9) ERROR
-[BUILDTIME] 1820 (5) ERROR
-[BUILDTIME] 1839 (9) ERROR
-[BUILDTIME] 1820 (5) ERROR
-[BUILDTIME] 1825 (9) ERROR
+[BUILDTIME] 2688 (5)
+[BUILDTIME] 3511 (9)
+[SIZE] 1.89 MB, 81 files
 
+[DEP] 00-dirtree alsa applewmproto applewmproto:dev atk atk:dev audiofile
+[DEP] bash2 binutils bzip2 cairo cairo:dev coreutils cpan-xml-parser
+[DEP] cvm dbus dbus-glib dbus-glib:dev dbus:dev diffutils esound
+[DEP] evolution-webcal expat findutils fontconfig freetype gawk
+[DEP] gcc40 gcc40:dev gconf gconf:dev gettext glib glib:dev glibc23
+[DEP] glibc23:dev gnome-blog gnome-keyring gnome-libs14 gnome-mag
+[DEP] gnome-vfs gnome-vfs:dev gnome14-dirtree gnome2-dirtree grep gtk+
+[DEP] gtk+:dev hal hal:dev libart_lgpl23 libart_lgpl23:dev libbonobo
+[DEP] libbonobo:dev libbonoboui libbonoboui:dev libglade libglade:dev
+[DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeui
+[DEP] libgnomeui:dev libice libjpeg libpng libsm libx11 libx11:dev
+[DEP] libxau libxcursor libxdmcp libxext libxfixes libxi libxinerama
+[DEP] libxml2 libxrandr libxrender liferea linux-libc-headers:dev make
+[DEP] mktemp net-tools openssl orbit2 pango pango:dev perl5 pkgconfig
+[DEP] popt popt:dev rrdtool sed sysfiles tar util-linux vino xproto:dev
+[DEP] zapping zlib
 
-[5-ERROR] checking for umount... /bin/umount
-[5-ERROR] checking for nautilus... /opt/gnome2/bin/nautilus
-[5-ERROR] checking for intltool >= 0.27.2... 0.34.1 found
-[5-ERROR] checking for perl... /usr/bin/perl
-[5-ERROR] checking for XML::Parser... ok
-[5-ERROR] checking for iconv... /usr/bin/iconv
-[5-ERROR] checking for msgfmt... /usr/bin/msgfmt
-[5-ERROR] checking for msgmerge... /usr/bin/msgmerge
-[5-ERROR] checking for xgettext... /usr/bin/xgettext
-[5-ERROR] checking how to run the C preprocessor... gcc-34 -E
-[5-ERROR] checking for egrep... grep -E
-[5-ERROR] checking for ANSI C header files... yes
-[5-ERROR] checking for sys/types.h... yes
-[5-ERROR] checking for sys/stat.h... yes
-[5-ERROR] checking for stdlib.h... yes
-[5-ERROR] checking for string.h... yes
-[5-ERROR] checking for memory.h... yes
-[5-ERROR] checking for strings.h... yes
-[5-ERROR] checking for inttypes.h... yes
-[5-ERROR] checking for stdint.h... yes
-[5-ERROR] checking for unistd.h... yes
-[5-ERROR] checking locale.h usability... yes
-[5-ERROR] checking locale.h presence... yes
-[5-ERROR] checking for locale.h... yes
-[5-ERROR] checking for LC_MESSAGES... yes
-[5-ERROR] checking libintl.h usability... yes
-[5-ERROR] checking libintl.h presence... yes
-[5-ERROR] checking for libintl.h... yes
-[5-ERROR] checking for ngettext in libc... yes
-[5-ERROR] checking for dgettext in libc... yes
-[5-ERROR] checking for bind_textdomain_codeset... yes
-[5-ERROR] checking for msgfmt... /usr/bin/msgfmt
-[5-ERROR] checking for dcgettext... yes
-[5-ERROR] checking for gmsgfmt... /usr/bin/msgfmt
-[5-ERROR] checking for xgettext... /usr/bin/xgettext
-[5-ERROR] checking for catalogs to be installed...  ang ar az bg bn bs ca cs da de el en_CA en_GB es et eu fa fi fr gl gu he hi hr hu id is it ja ko lt mk mn ms nb ne nl no or pa pl pt pt_BR ro ru rw sk sq sr sr@Latn sv ta th tr uk vi xh zh_CN zh_TW
-[5-ERROR] checking for pkg-config... /usr/bin/pkg-config
-[5-ERROR] checking for libgnomeui-2.0 dbus-glib-1 >= 0.31 hal >= 0.5.4 gtk+-2.0 >= 2.6.0... Package dbus-glib-1 was not found in the pkg-config search path. Perhaps you should add the directory containing `dbus-glib-1.pc' to the PKG_CONFIG_PATH environment variable No package 'dbus-glib-1' found Package hal was not found in the pkg-config search path. Perhaps you should add the directory containing `hal.pc' to the PKG_CONFIG_PATH environment variable No package 'hal' found
-[5-ERROR] configure: error: Library requirements (libgnomeui-2.0 dbus-glib-1 >= 0.31 hal >= 0.5.4 gtk+-2.0 >= 2.6.0) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them.
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 0 files for this package.
-[5-ERROR] Applying package split: 40 gnome-volume-manager:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 gnome-volume-manager:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 gnome-volume-manager:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building gnome-volume-manager=gnome-volume-manager.
-
-[9-ERROR] checking for umount... /bin/umount
-[9-ERROR] checking for nautilus... /opt/gnome2/bin/nautilus
-[9-ERROR] checking for intltool >= 0.27.2... 0.34.1 found
-[9-ERROR] checking for perl... /usr/bin/perl
-[9-ERROR] checking for XML::Parser... ok
-[9-ERROR] checking for iconv... /usr/bin/iconv
-[9-ERROR] checking for msgfmt... /usr/bin/msgfmt
-[9-ERROR] checking for msgmerge... /usr/bin/msgmerge
-[9-ERROR] checking for xgettext... /usr/bin/xgettext
-[9-ERROR] checking how to run the C preprocessor... gcc-34 -E
-[9-ERROR] checking for egrep... grep -E
-[9-ERROR] checking for ANSI C header files... yes
-[9-ERROR] checking for sys/types.h... yes
-[9-ERROR] checking for sys/stat.h... yes
-[9-ERROR] checking for stdlib.h... yes
-[9-ERROR] checking for string.h... yes
-[9-ERROR] checking for memory.h... yes
-[9-ERROR] checking for strings.h... yes
-[9-ERROR] checking for inttypes.h... yes
-[9-ERROR] checking for stdint.h... yes
-[9-ERROR] checking for unistd.h... yes
-[9-ERROR] checking locale.h usability... yes
-[9-ERROR] checking locale.h presence... yes
-[9-ERROR] checking for locale.h... yes
-[9-ERROR] checking for LC_MESSAGES... yes
-[9-ERROR] checking libintl.h usability... yes
-[9-ERROR] checking libintl.h presence... yes
-[9-ERROR] checking for libintl.h... yes
-[9-ERROR] checking for ngettext in libc... yes
-[9-ERROR] checking for dgettext in libc... yes
-[9-ERROR] checking for bind_textdomain_codeset... yes
-[9-ERROR] checking for msgfmt... /usr/bin/msgfmt
-[9-ERROR] checking for dcgettext... yes
-[9-ERROR] checking for gmsgfmt... /usr/bin/msgfmt
-[9-ERROR] checking for xgettext... /usr/bin/xgettext
-[9-ERROR] checking for catalogs to be installed...  ang ar az bg bn bs ca cs da de el en_CA en_GB es et eu fa fi fr gl gu he hi hr hu id is it ja ko lt mk mn ms nb ne nl no or pa pl pt pt_BR ro ru rw sk sq sr sr@Latn sv ta th tr uk vi xh zh_CN zh_TW
-[9-ERROR] checking for pkg-config... /usr/bin/pkg-config
-[9-ERROR] checking for libgnomeui-2.0 dbus-glib-1 >= 0.31 hal >= 0.5.4 gtk+-2.0 >= 2.6.0... Package dbus-glib-1 was not found in the pkg-config search path. Perhaps you should add the directory containing `dbus-glib-1.pc' to the PKG_CONFIG_PATH environment variable No package 'dbus-glib-1' found Package hal was not found in the pkg-config search path. Perhaps you should add the directory containing `hal.pc' to the PKG_CONFIG_PATH environment variable No package 'hal' found
-[9-ERROR] configure: error: Library requirements (libgnomeui-2.0 dbus-glib-1 >= 0.31 hal >= 0.5.4 gtk+-2.0 >= 2.6.0) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them.
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 0 files for this package.
-[9-ERROR] Applying package split: 40 gnome-volume-manager:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 gnome-volume-manager:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 gnome-volume-manager:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building gnome-volume-manager=gnome-volume-manager.
+[PROVIDES] gnome-volume-manager gnome-volume-properties
 

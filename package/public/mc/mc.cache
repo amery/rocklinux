@@ -20,23 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142514308 Thu Mar 16 14:05:08 2006 (5)
-[TIMESTAMP] 1142766829 Sun Mar 19 12:13:49 2006 (9)
+[TIMESTAMP] 1168590780 Fri Jan 12 09:33:00 2007 (5)
+[TIMESTAMP] 1168792448 Sun Jan 14 17:34:08 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-mc.log 9-mc.log
 
-[BUILDTIME] 5142 (5)
-[BUILDTIME] 5108 (9)
-[SIZE] 1.75 MB, 146 files
+[BUILDTIME] 5831 (5)
+[BUILDTIME] 5679 (9)
+[SIZE] 1.78 MB, 146 files
 
-[DEP] 00-dirtree alsa bash2 binutils bzip2 coreutils diffutils
-[DEP] e2fsprogs:dev file findutils gawk gcc34 gcc34:dev gettext glibc23
-[DEP] glibc23:dev grep groff linux26-header:dev make mktemp net-tools
-[DEP] pam pam:dev patch rrdtool sed shadow:dev slang slang:dev sysfiles
-[DEP] tar xorg
+[DEP] 00-dirtree alsa applewmproto bash2 binutils bzip2 coreutils
+[DEP] cvm diffutils e2fsprogs e2fsprogs:dev file findutils gawk gcc40
+[DEP] gcc40:dev gettext glibc23 glibc23:dev grep groff imake libice
+[DEP] libx11 libxt linux-libc-headers:dev make mktemp net-tools netpbm
+[DEP] pam pam:dev patch rrdtool sed shadow slang slang:dev sysfiles tar
+[DEP] twoftpd ucspi-unix xorg-cf-files
 
 [PROVIDES] cons.saver create_vcs mc mcedit mcfn_install mcmfmt mcserv
 

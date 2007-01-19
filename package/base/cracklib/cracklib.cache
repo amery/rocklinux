@@ -20,21 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142447261 Wed Mar 15 19:27:41 2006 (3)
-[TIMESTAMP] 1142825158 Mon Mar 20 04:25:58 2006 (9)
+[TIMESTAMP] 1168524860 Thu Jan 11 15:14:20 2007 (3)
+[TIMESTAMP] 1168835438 Mon Jan 15 05:30:38 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 3-cracklib.log 9-cracklib.log
 
-[BUILDTIME] 926 (3)
-[BUILDTIME] 1703 (9)
-[SIZE] 1.32 MB, 9 files
+[BUILDTIME] 2734 (3)
+[BUILDTIME] 3794 (9)
+[SIZE] 0.31 MB, 24 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep make miscfiles mktemp patch
-[DEP] rrdtool sed sysfiles tar
+[DEP] 00-dirtree applewmproto bash2 binutils bzip2 coreutils cvm diffutils
+[DEP] findutils gawk gcc40 gcc40:dev gettext glibc23 glibc23:dev grep gzip
+[DEP] imake libice libx11 libxau libxdmcp libxt linux-libc-headers:dev
+[DEP] make mktemp net-tools patch python python:dev rrdtool sed sysfiles
+[DEP] tar util-linux xorg-cf-files
 
-[PROVIDES] libcrack.a
+[PROVIDES] cracklib-check cracklib-format cracklib-packer cracklib-unpacker
+[PROVIDES] cracklibmodule.a cracklibmodule.so create-cracklib-dict
+[PROVIDES] libcrack.a libcrack.so
 

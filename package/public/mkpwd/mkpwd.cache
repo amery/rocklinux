@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142658451 Sat Mar 18 06:07:31 2006 (5)
-[TIMESTAMP] 1142928443 Tue Mar 21 09:07:23 2006 (9)
+[TIMESTAMP] 1168697147 Sat Jan 13 15:05:47 2007 (5)
+[TIMESTAMP] 1168906463 Tue Jan 16 01:14:23 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-mkpwd.log 9-mkpwd.log
 
-[BUILDTIME] 1409 (5)
-[BUILDTIME] 1514 (9)
+[BUILDTIME] 1363 (5)
+[BUILDTIME] 1464 (9)
 [SIZE] 0.03 MB, 8 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp rrdtool
-[DEP] sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils gcc40
+[DEP] gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev make
+[DEP] mktemp netpbm rrdtool sed sysfiles tar twoftpd ucspi-unix
 
 [PROVIDES] mkpwd
 

@@ -20,25 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142608688 Fri Mar 17 16:18:08 2006 (5)
-[TIMESTAMP] 1142874422 Mon Mar 20 18:07:02 2006 (9)
+[TIMESTAMP] 1168664724 Sat Jan 13 06:05:24 2007 (5)
+[TIMESTAMP] 1168872538 Mon Jan 15 15:48:58 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-dbmail.log 9-dbmail.log
 
-[BUILDTIME] 4949 (5)
-[BUILDTIME] 5274 (9)
-[SIZE] 0.38 MB, 31 files
+[BUILDTIME] 4964 (5)
+[BUILDTIME] 5206 (9)
+[SIZE] 0.37 MB, 31 files
 
-[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils
-[DEP] diffutils findutils gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp mysql mysql:dev net-tools openssl
-[DEP] perl5 rrdtool sed sysfiles tar texinfo util-linux zlib:dev
+[DEP] 00-dirtree autoconf automake19 bash2 binutils bzip2 coreutils cvm
+[DEP] diffutils findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev grep
+[DEP] linux-libc-headers:dev make mktemp net-tools netpbm openssl perl5
+[DEP] postgresql postgresql:dev rrdtool sed sysfiles tar texinfo twoftpd
+[DEP] ucspi-unix util-linux
 
 [PROVIDES] dbmail-imapd dbmail-lmtpd dbmail-pop3d dbmail-smtp dbmail-users
 [PROVIDES] dbmail-util libauthdbmail.a libauthdbmail.so libdbmail.a
-[PROVIDES] libdbmail.so libmysqldbmail.a libmysqldbmail.so libsortdbmail.a
+[PROVIDES] libdbmail.so libpgsqldbmail.a libpgsqldbmail.so libsortdbmail.a
 [PROVIDES] libsortdbmail.so
 

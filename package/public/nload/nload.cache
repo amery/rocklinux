@@ -20,22 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142552925 Fri Mar 17 00:48:45 2006 (5)
-[TIMESTAMP] 1142811189 Mon Mar 20 00:33:09 2006 (9)
+[TIMESTAMP] 1168622644 Fri Jan 12 18:24:04 2007 (5) ERROR
+[TIMESTAMP] 1168826322 Mon Jan 15 02:58:42 2007 (9) ERROR
+[TIMESTAMP] 1168946825 Tue Jan 16 12:27:05 2007 (5) ERROR
+[TIMESTAMP] 1168973417 Tue Jan 16 19:50:17 2007 (9) ERROR
+[TIMESTAMP] 1169090238 Thu Jan 18 04:17:18 2007 (5) ERROR
+[TIMESTAMP] 1169143696 Thu Jan 18 19:08:16 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-nload.log 9-nload.log
+[LOGS] 5-nload.err 9-nload.err
 
-[BUILDTIME] 2448 (5)
-[BUILDTIME] 2843 (9)
-[SIZE] 0.24 MB, 8 files
+[BUILDTIME] 1259 (5) ERROR
+[BUILDTIME] 1309 (9) ERROR
+[BUILDTIME] 1305 (5) ERROR
+[BUILDTIME] 1275 (9) ERROR
+[BUILDTIME] 1303 (5) ERROR
+[BUILDTIME] 1307 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils gawk
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep gzip linux26-header:dev
-[DEP] make mktemp ncurses:dev net-tools patch rrdtool sed sysfiles tar
-[DEP] util-linux
 
-[PROVIDES] nload
+[5-ERROR] configure: creating ./config.status
+[5-ERROR] config.status: creating Makefile
+[5-ERROR] config.status: creating nload.spec
+[5-ERROR] config.status: creating docs/Makefile
+[5-ERROR] config.status: creating docs/nload.1
+[5-ERROR] config.status: creating src/Makefile
+[5-ERROR] config.status: creating config.h
+[5-ERROR] cd . \
+[5-ERROR] 	  && CONFIG_FILES= CONFIG_HEADERS=config.h \
+[5-ERROR] 	     /bin/sh ./config.status
+[5-ERROR] config.status: creating config.h
+[5-ERROR] config.status: config.h is unchanged
+[5-ERROR] make  all-recursive
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.nload.1169090224.16757.1258219122/nload-0.5.0'
+[5-ERROR] Making all in docs
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.nload.1169090224.16757.1258219122/nload-0.5.0/docs'
+[5-ERROR] make[2]: Nothing to be done for `all'.
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.nload.1169090224.16757.1258219122/nload-0.5.0/docs'
+[5-ERROR] Making all in src
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.nload.1169090224.16757.1258219122/nload-0.5.0/src'
+[5-ERROR] source='main.cpp' object='main.o' libtool=no \
+[5-ERROR] 	depfile='.deps/main.Po' tmpdepfile='.deps/main.TPo' \
+[5-ERROR] 	depmode=gcc3 /bin/sh ../depcomp \
+[5-ERROR] 	g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -c -o main.o `test -f main.cpp || echo './'`main.cpp
+[5-ERROR] In file included from /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/backward/iostream.h:31,
+[5-ERROR]                  from dev.h:21,
+[5-ERROR]                  from main.h:30,
+[5-ERROR]                  from main.cpp:32:
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated.
+[5-ERROR] In file included from options.h:25,
+[5-ERROR]                  from graph.h:26,
+[5-ERROR]                  from dev.h:25,
+[5-ERROR]                  from main.h:30,
+[5-ERROR]                  from main.cpp:32:
+[5-ERROR] optionbase.h:21:18: error: form.h: No such file or directory
+[5-ERROR] form_field.h:69: error: expected ',' or '...' before '*' token
+[5-ERROR] form_field.h:69: error: ISO C++ forbids declaration of 'FIELD' with no type
+[5-ERROR] form_field.h:73: error: ISO C++ forbids declaration of 'FIELD' with no type
+[5-ERROR] form_field.h:73: error: expected ';' before '*' token
+[5-ERROR] form_field.h:105: error: 'FORM' has not been declared
+[5-ERROR] form_field.h:109: error: ISO C++ forbids declaration of 'FORM' with no type
+[5-ERROR] form_field.h:109: error: expected ';' before '*' token
+[5-ERROR] form_field.h:111: error: ISO C++ forbids declaration of 'FIELD' with no type
+[5-ERROR] form_field.h:111: error: expected ';' before '*' token
+[5-ERROR] make[2]: *** [main.o] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.nload.1169090224.16757.1258219122/nload-0.5.0/src'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.nload.1169090224.16757.1258219122/nload-0.5.0'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] configure: creating ./config.status
+[9-ERROR] config.status: creating Makefile
+[9-ERROR] config.status: creating nload.spec
+[9-ERROR] config.status: creating docs/Makefile
+[9-ERROR] config.status: creating docs/nload.1
+[9-ERROR] config.status: creating src/Makefile
+[9-ERROR] config.status: creating config.h
+[9-ERROR] cd . \
+[9-ERROR] 	  && CONFIG_FILES= CONFIG_HEADERS=config.h \
+[9-ERROR] 	     /bin/sh ./config.status
+[9-ERROR] config.status: creating config.h
+[9-ERROR] config.status: config.h is unchanged
+[9-ERROR] make  all-recursive
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.nload.1169143682.22935.4224487765/nload-0.5.0'
+[9-ERROR] Making all in docs
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.nload.1169143682.22935.4224487765/nload-0.5.0/docs'
+[9-ERROR] make[2]: Nothing to be done for `all'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.nload.1169143682.22935.4224487765/nload-0.5.0/docs'
+[9-ERROR] Making all in src
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.nload.1169143682.22935.4224487765/nload-0.5.0/src'
+[9-ERROR] source='main.cpp' object='main.o' libtool=no \
+[9-ERROR] 	depfile='.deps/main.Po' tmpdepfile='.deps/main.TPo' \
+[9-ERROR] 	depmode=gcc3 /bin/sh ../depcomp \
+[9-ERROR] 	g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -c -o main.o `test -f main.cpp || echo './'`main.cpp
+[9-ERROR] In file included from /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/backward/iostream.h:31,
+[9-ERROR]                  from dev.h:21,
+[9-ERROR]                  from main.h:30,
+[9-ERROR]                  from main.cpp:32:
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated.
+[9-ERROR] In file included from options.h:25,
+[9-ERROR]                  from graph.h:26,
+[9-ERROR]                  from dev.h:25,
+[9-ERROR]                  from main.h:30,
+[9-ERROR]                  from main.cpp:32:
+[9-ERROR] optionbase.h:21:18: error: form.h: No such file or directory
+[9-ERROR] form_field.h:69: error: expected ',' or '...' before '*' token
+[9-ERROR] form_field.h:69: error: ISO C++ forbids declaration of 'FIELD' with no type
+[9-ERROR] form_field.h:73: error: ISO C++ forbids declaration of 'FIELD' with no type
+[9-ERROR] form_field.h:73: error: expected ';' before '*' token
+[9-ERROR] form_field.h:105: error: 'FORM' has not been declared
+[9-ERROR] form_field.h:109: error: ISO C++ forbids declaration of 'FORM' with no type
+[9-ERROR] form_field.h:109: error: expected ';' before '*' token
+[9-ERROR] form_field.h:111: error: ISO C++ forbids declaration of 'FIELD' with no type
+[9-ERROR] form_field.h:111: error: expected ';' before '*' token
+[9-ERROR] make[2]: *** [main.o] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.nload.1169143682.22935.4224487765/nload-0.5.0/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.nload.1169143682.22935.4224487765/nload-0.5.0'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

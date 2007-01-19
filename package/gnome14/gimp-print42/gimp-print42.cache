@@ -20,25 +20,82 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142478972 Thu Mar 16 04:16:12 2006 (5)
-[TIMESTAMP] 1142724199 Sun Mar 19 00:23:19 2006 (9)
+[TIMESTAMP] 1168557430 Fri Jan 12 00:17:10 2007 (5)
+[TIMESTAMP] 1168754116 Sun Jan 14 06:55:16 2007 (9) ERROR
+[TIMESTAMP] 1168962047 Tue Jan 16 16:40:47 2007 (9) ERROR
+[TIMESTAMP] 1169132349 Thu Jan 18 15:59:09 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-gimp-print42.log 9-gimp-print42.log
+[LOGS] 5-gimp-print42.log 9-gimp-print42.err
 
-[BUILDTIME] 15149 (5)
-[BUILDTIME] 17367 (9)
-[SIZE] 37.01 MB, 4406 files
+[BUILDTIME] 17841 (5)
+[BUILDTIME] 20400 (9) ERROR
+[BUILDTIME] 20651 (9) ERROR
+[BUILDTIME] 20656 (9) ERROR
+[SIZE] 36.77 MB, 4391 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bison bzip2 coreutils
-[DEP] cups cups:dev diffutils findutils flex flex:dev gcc34 gcc34:dev
-[DEP] gettext glibc23 glibc23:dev gnome14-dirtree grep libjpeg libjpeg:dev
-[DEP] libpng libpng:dev libtiff libtiff:dev linux26-header:dev m4 make
-[DEP] mktemp ncurses:dev net-tools openssl perl5 readline readline:dev
-[DEP] rrdtool sed sysfiles tar texinfo zlib:dev
+[DEP] cups cups:dev cvm diffutils findutils flex flex:dev gawk gcc40
+[DEP] gcc40:dev gettext glibc23 glibc23:dev gnutls gnutls:dev grep
+[DEP] gutenprint libgcrypt libgcrypt:dev libgpg-error libgpg-error:dev
+[DEP] libjpeg libjpeg:dev libpng libpng:dev libtiff libtiff:dev
+[DEP] linux-libc-headers:dev m4 make mktemp ncurses ncurses:dev net-tools
+[DEP] netpbm openssl perl5 readline readline:dev rrdtool sed sysfiles
+[DEP] tar texinfo twoftpd ucspi-unix zlib zlib:dev
 
 [PROVIDES] cups-calibrate escputil gimpprint-config libgimpprint.a
 [PROVIDES] libgimpprint.so
+
+[9-ERROR] 	    if test -f $file ; then \
+[9-ERROR] 	      /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 $file /usr/share/gimp-print/doc/manual-html ; \
+[9-ERROR] 	    fi ; \
+[9-ERROR] 	  done ; \
+[9-ERROR] 	fi
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.gimp-print42.1169132086.5830.2458881330/gimp-print-4.2.7/doc'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.gimp-print42.1169132086.5830.2458881330/gimp-print-4.2.7/doc'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.gimp-print42.1169132086.5830.2458881330/gimp-print-4.2.7/doc'
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.gimp-print42.1169132086.5830.2458881330/gimp-print-4.2.7'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.gimp-print42.1169132086.5830.2458881330/gimp-print-4.2.7'
+[9-ERROR] make[2]: Nothing to be done for `install-exec-am'.
+[9-ERROR] make[2]: Nothing to be done for `install-data-am'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.gimp-print42.1169132086.5830.2458881330/gimp-print-4.2.7'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.gimp-print42.1169132086.5830.2458881330/gimp-print-4.2.7'
+[9-ERROR] Trying to copy the default documentation ...
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing /lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 4583 files for this package.
+[9-ERROR] Applying package split: 40 gimp-print42:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[9-ERROR] Applying package split: 42 gimp-print42:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 gimp-print42:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <gimp-print42> Creating flist file ...
+[9-ERROR] <gimp-print42> Creating package dependencies file ...
+[9-ERROR] <gimp-print42> Creating package description ...
+[9-ERROR] <gimp-print42> Creating md5sum and cksum files ...
+[9-ERROR] <gimp-print42:dev> Creating flist file ...
+[9-ERROR] <gimp-print42:dev> Creating package dependencies file ...
+[9-ERROR] <gimp-print42:dev> Creating package description ...
+[9-ERROR] <gimp-print42:dev> Creating md5sum and cksum files ...
+[9-ERROR] <gimp-print42:doc> Creating flist file ...
+[9-ERROR] <gimp-print42:doc> Creating package dependencies file ...
+[9-ERROR] <gimp-print42:doc> Creating package description ...
+[9-ERROR] <gimp-print42:doc> Creating md5sum and cksum files ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] etc/cups/command.types: gimp-print42 gutenprint
+[9-ERROR] usr/bin/cups-calibrate: gimp-print42 gutenprint
+[9-ERROR] usr/bin/escputil: gimp-print42 gutenprint
+[9-ERROR] usr/lib/cups/backend/canon: gimp-print42 gutenprint
+[9-ERROR] usr/lib/cups/backend/epson: gimp-print42 gutenprint
+[9-ERROR] usr/lib/cups/filter/commandtocanon: gimp-print42 gutenprint
+[9-ERROR] usr/lib/cups/filter/commandtoepson: gimp-print42 gutenprint
+[9-ERROR] usr/lib/libgimpprint.so: gimp-print42 gutenprint
+[9-ERROR] usr/share/cups/calibrate.ppm: gimp-print42 gutenprint
+[9-ERROR] usr/share/man/man1/escputil.1: gimp-print42 gutenprint
+[9-ERROR] usr/share/man/man8/cups-calibrate.8: gimp-print42 gutenprint
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] --- BUILD ERROR ---
 

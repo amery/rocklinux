@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142677611 Sat Mar 18 11:26:51 2006 (5)
-[TIMESTAMP] 1142948872 Tue Mar 21 14:47:52 2006 (9)
+[TIMESTAMP] 1168706928 Sat Jan 13 17:48:48 2007 (5)
+[TIMESTAMP] 1168916781 Tue Jan 16 04:06:21 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-privoxy.log 9-privoxy.log
 
-[BUILDTIME] 3646 (5)
-[BUILDTIME] 3720 (9)
-[SIZE] 0.60 MB, 60 files
+[BUILDTIME] 3790 (5)
+[BUILDTIME] 3857 (9)
+[SIZE] 0.61 MB, 60 files
 
-[DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils diffutils
-[DEP] findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev m4 make mktemp net-tools patch pcre pcre:dev
-[DEP] perl5 rpm rrdtool sed shadow sysfiles tar util-linux
+[DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils cvm
+[DEP] diffutils findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev
+[DEP] grep linux-libc-headers:dev m4 make mktemp net-tools netpbm patch
+[DEP] pcre pcre:dev perl5 rpm rrdtool sed shadow sysfiles tar twoftpd
+[DEP] ucspi-unix util-linux
 
 [PROVIDES] privoxy
 

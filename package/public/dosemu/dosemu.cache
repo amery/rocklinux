@@ -20,31 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142562556 Fri Mar 17 03:29:16 2006 (5)
-[TIMESTAMP] 1142822689 Mon Mar 20 03:44:49 2006 (9)
+[TIMESTAMP] 1168628905 Fri Jan 12 20:08:25 2007 (5) ERROR
+[TIMESTAMP] 1168833131 Mon Jan 15 04:52:11 2007 (9) ERROR
+[TIMESTAMP] 1168947784 Tue Jan 16 12:43:04 2007 (5) ERROR
+[TIMESTAMP] 1168974784 Tue Jan 16 20:13:04 2007 (9) ERROR
+[TIMESTAMP] 1169091198 Thu Jan 18 04:33:18 2007 (5) ERROR
+[TIMESTAMP] 1169145074 Thu Jan 18 19:31:14 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-dosemu.log 9-dosemu.log
+[LOGS] 5-dosemu.err 9-dosemu.err
 
-[BUILDTIME] 10324 (5)
-[BUILDTIME] 10780 (9)
-[SIZE] 4.27 MB, 477 files
+[BUILDTIME] 2774 (5) ERROR
+[BUILDTIME] 2811 (9) ERROR
+[BUILDTIME] 2830 (5) ERROR
+[BUILDTIME] 2823 (9) ERROR
+[BUILDTIME] 2844 (5) ERROR
+[BUILDTIME] 2841 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 coreutils diffutils findutils
-[DEP] flex flex:dev gawk gcc34 gcc34:dev glibc23 glibc23:dev gpm gpm:dev
-[DEP] grep gzip linux26-header:dev m4 make mktemp net-tools rrdtool sed
-[DEP] slang slang:dev sysfiles tar util-linux xorg xorg:dev
 
-[PROVIDES] assign.com attrib.com bwbasic.exe choice.exe command.com
-[PROVIDES] comp.com debug.com deltree.com deltree2.com diskcomp.com
-[PROVIDES] diskcopy.exe diskcopy.ini display.com dosdebug dosemu
-[PROVIDES] dosemu.bin du.exe edit.exe edit.hlp edlin.exe exe2bin.com
-[PROVIDES] exe2bin.txt fc.exe find.com format.exe help.exe join.exe
-[PROVIDES] kssf.com label.exe lib.exe loadhi.com mem.exe midid mkfatimage
-[PROVIDES] mkfatimage16 mode.com more.exe move.exe nansi.sys replace.exe
-[PROVIDES] rerror.com share.exe shsucdx.exe sort.com subst.exe swsubst.exe
-[PROVIDES] sys.com tee.com touch.com tree.com vol.com vspawn.com wcd.exe
-[PROVIDES] xcopy.exe xdosemu
+[5-ERROR] cp -p mkfatimage16 ../../../1.2.2.0/bin/mkfatimage16
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.dosemu.1169091168.20125.905555977/dosemu-1.2.2/src/tools/periph'
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.dosemu.1169091168.20125.905555977/dosemu-1.2.2/src/arch/linux/dosext/sound/midid'
+[5-ERROR] gcc-40 -Wall -pipe -O -g -I/usr/X11R7/include -MP -MMD -I../../../../../../src/include -I../../../../../../src/plugin/include   -c -o midid.o midid.c
+[5-ERROR] gcc-40 -Wall -pipe -O -g -I/usr/X11R7/include -MP -MMD -I../../../../../../src/include -I../../../../../../src/plugin/include   -c -o events.o events.c
+[5-ERROR] gcc-40 -Wall -pipe -O -g -I/usr/X11R7/include -MP -MMD -I../../../../../../src/include -I../../../../../../src/plugin/include   -c -o io.o io.c
+[5-ERROR] gcc-40 -Wall -pipe -O -g -I/usr/X11R7/include -MP -MMD -I../../../../../../src/include -I../../../../../../src/plugin/include   -c -o stats.o stats.c
+[5-ERROR] gcc-40 -Wall -pipe -O -g -I/usr/X11R7/include -MP -MMD -I../../../../../../src/include -I../../../../../../src/plugin/include   -c -o emulation.o emulation.c
+[5-ERROR] gcc-40 -Wall -pipe -O -g -I/usr/X11R7/include -MP -MMD -I../../../../../../src/include -I../../../../../../src/plugin/include   -c -o device.o device.c
+[5-ERROR] gcc-40 -Wall -pipe -O -g -I/usr/X11R7/include -MP -MMD -I../../../../../../src/include -I../../../../../../src/plugin/include   -c -o oss.o oss.c
+[5-ERROR] gcc-40 -Wall -pipe -O -g -I/usr/X11R7/include -MP -MMD -I../../../../../../src/include -I../../../../../../src/plugin/include   -c -o midout.o midout.c
+[5-ERROR] gcc-40 -Wall -pipe -O -g -I/usr/X11R7/include -MP -MMD -I../../../../../../src/include -I../../../../../../src/plugin/include   -c -o timid.o timid.c
+[5-ERROR] timid.c: In function 'timid_sysex':
+[5-ERROR] timid.c:322: warning: pointer targets in initialization differ in signedness
+[5-ERROR] gcc-40 -Wall -pipe -O -g -I/usr/X11R7/include -MP -MMD -I../../../../../../src/include -I../../../../../../src/plugin/include   -c -o null.o null.c
+[5-ERROR] gcc-40 -o ../../../../../../1.2.2.0/bin/midid midid.o events.o io.o stats.o emulation.o device.o oss.o midout.o timid.o null.o -Wl,-warn-common   -L/usr/X11R7/lib -Wall
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.dosemu.1169091168.20125.905555977/dosemu-1.2.2/src/arch/linux/dosext/sound/midid'
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.dosemu.1169091168.20125.905555977/dosemu-1.2.2/src/env/video'
+[5-ERROR] gcc-40 -c -I/usr/X11R7/include -MP -MMD -I../../../src/include -I../../../src/plugin/include  -Wall -Wstrict-prototypes -Wmissing-declarations -Wnested-externs -O2 -fomit-frame-pointer -fno-strict-aliasing -mtune=i386 -pipe  -o miscemu.o miscemu.c
+[5-ERROR] gcc-40 -c -I/usr/X11R7/include -MP -MMD -I../../../src/include -I../../../src/plugin/include  -Wall -Wstrict-prototypes -Wmissing-declarations -Wnested-externs -O2 -fomit-frame-pointer -fno-strict-aliasing -mtune=i386 -pipe  -o video.o video.c
+[5-ERROR] gcc-40 -c -I/usr/X11R7/include -MP -MMD -I../../../src/include -I../../../src/plugin/include  -Wall -Wstrict-prototypes -Wmissing-declarations -Wnested-externs -O2 -fomit-frame-pointer -fno-strict-aliasing -mtune=i386 -pipe  -o vc.o vc.c
+[5-ERROR] gcc-40 -c -I/usr/X11R7/include -MP -MMD -I../../../src/include -I../../../src/plugin/include  -Wall -Wstrict-prototypes -Wmissing-declarations -Wnested-externs -O2 -fomit-frame-pointer -fno-strict-aliasing -mtune=i386 -pipe  -o vga.o vga.c
+[5-ERROR] vga.c: In function 'restore_vga_regs':
+[5-ERROR] vga.c:338: warning: pointer targets in passing argument 1 of 'set_regs' differ in signedness
+[5-ERROR] vga.c: In function 'save_vga_state':
+[5-ERROR] vga.c:351: warning: pointer targets in passing argument 1 of 'store_vga_regs' differ in signedness
+[5-ERROR] vga.c:386: warning: pointer targets in passing argument 1 of 'restore_vga_regs' differ in signedness
+[5-ERROR] vga.c: In function 'restore_vga_state':
+[5-ERROR] vga.c:399: warning: pointer targets in passing argument 1 of 'restore_vga_regs' differ in signedness
+[5-ERROR] vga.c:407: warning: pointer targets in passing argument 1 of 'restore_vga_regs' differ in signedness
+[5-ERROR] vga.c: In function 'vga_initialize':
+[5-ERROR] vga.c:477: warning: pointer targets in assignment differ in signedness
+[5-ERROR] vga.c:486: warning: pointer targets in assignment differ in signedness
+[5-ERROR] gcc-40 -c -I/usr/X11R7/include -MP -MMD -I../../../src/include -I../../../src/plugin/include  -Wall -Wstrict-prototypes -Wmissing-declarations -Wnested-externs -O2 -fomit-frame-pointer -fno-strict-aliasing -mtune=i386 -pipe  -o et4000.o et4000.c
+[5-ERROR] gcc-40 -c -I/usr/X11R7/include -MP -MMD -I../../../src/include -I../../../src/plugin/include  -Wall -Wstrict-prototypes -Wmissing-declarations -Wnested-externs -O2 -fomit-frame-pointer -fno-strict-aliasing -mtune=i386 -pipe  -o s3.o s3.c
+[5-ERROR] gcc-40 -c -I/usr/X11R7/include -MP -MMD -I../../../src/include -I../../../src/plugin/include  -Wall -Wstrict-prototypes -Wmissing-declarations -Wnested-externs -O2 -fomit-frame-pointer -fno-strict-aliasing -mtune=i386 -pipe  -o trident.o trident.c
+[5-ERROR] gcc-40 -c -I/usr/X11R7/include -MP -MMD -I../../../src/include -I../../../src/plugin/include  -Wall -Wstrict-prototypes -Wmissing-declarations -Wnested-externs -O2 -fomit-frame-pointer -fno-strict-aliasing -mtune=i386 -pipe  -o avance.o avance.c
+[5-ERROR] gcc-40 -c -I/usr/X11R7/include -MP -MMD -I../../../src/include -I../../../src/plugin/include  -Wall -Wstrict-prototypes -Wmissing-declarations -Wnested-externs -O2 -fomit-frame-pointer -fno-strict-aliasing -mtune=i386 -pipe  -o ati.o ati.c
+[5-ERROR] gcc-40 -c -I/usr/X11R7/include -MP -MMD -I../../../src/include -I../../../src/plugin/include  -Wall -Wstrict-prototypes -Wmissing-declarations -Wnested-externs -O2 -fomit-frame-pointer -fno-strict-aliasing -mtune=i386 -pipe  -o cirrus.o cirrus.c
+[5-ERROR] gcc-40 -c -I/usr/X11R7/include -MP -MMD -I../../../src/include -I../../../src/plugin/include  -Wall -Wstrict-prototypes -Wmissing-declarations -Wnested-externs -O2 -fomit-frame-pointer -fno-strict-aliasing -mtune=i386 -pipe  -o matrox.o matrox.c
+[5-ERROR] matrox.c:50: error: static declaration of 'MGAchipset' follows non-static declaration
+[5-ERROR] matrox.h:67: error: previous declaration of 'MGAchipset' was here
+[5-ERROR] matrox.c:54: error: static declaration of 'MGAMMIOBase' follows non-static declaration
+[5-ERROR] matrox.h:68: error: previous declaration of 'MGAMMIOBase' was here
+[5-ERROR] make[2]: *** [matrox.o] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.dosemu.1169091168.20125.905555977/dosemu-1.2.2/src/env/video'
+[5-ERROR] make[1]: *** [env/video] Error 2
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.dosemu.1169091168.20125.905555977/dosemu-1.2.2/src'
+[5-ERROR] make: *** [default] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] cp -p mkfatimage16 ../../../1.2.2.0/bin/mkfatimage16
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.dosemu.1169145045.12403.757858998/dosemu-1.2.2/src/tools/periph'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.dosemu.1169145045.12403.757858998/dosemu-1.2.2/src/arch/linux/dosext/sound/midid'
+[9-ERROR] gcc-40 -Wall -pipe -O -g -I/usr/X11R7/include -MP -MMD -I../../../../../../src/include -I../../../../../../src/plugin/include   -c -o midid.o midid.c
+[9-ERROR] gcc-40 -Wall -pipe -O -g -I/usr/X11R7/include -MP -MMD -I../../../../../../src/include -I../../../../../../src/plugin/include   -c -o events.o events.c
+[9-ERROR] gcc-40 -Wall -pipe -O -g -I/usr/X11R7/include -MP -MMD -I../../../../../../src/include -I../../../../../../src/plugin/include   -c -o io.o io.c
+[9-ERROR] gcc-40 -Wall -pipe -O -g -I/usr/X11R7/include -MP -MMD -I../../../../../../src/include -I../../../../../../src/plugin/include   -c -o stats.o stats.c
+[9-ERROR] gcc-40 -Wall -pipe -O -g -I/usr/X11R7/include -MP -MMD -I../../../../../../src/include -I../../../../../../src/plugin/include   -c -o emulation.o emulation.c
+[9-ERROR] gcc-40 -Wall -pipe -O -g -I/usr/X11R7/include -MP -MMD -I../../../../../../src/include -I../../../../../../src/plugin/include   -c -o device.o device.c
+[9-ERROR] gcc-40 -Wall -pipe -O -g -I/usr/X11R7/include -MP -MMD -I../../../../../../src/include -I../../../../../../src/plugin/include   -c -o oss.o oss.c
+[9-ERROR] gcc-40 -Wall -pipe -O -g -I/usr/X11R7/include -MP -MMD -I../../../../../../src/include -I../../../../../../src/plugin/include   -c -o midout.o midout.c
+[9-ERROR] gcc-40 -Wall -pipe -O -g -I/usr/X11R7/include -MP -MMD -I../../../../../../src/include -I../../../../../../src/plugin/include   -c -o timid.o timid.c
+[9-ERROR] timid.c: In function 'timid_sysex':
+[9-ERROR] timid.c:322: warning: pointer targets in initialization differ in signedness
+[9-ERROR] gcc-40 -Wall -pipe -O -g -I/usr/X11R7/include -MP -MMD -I../../../../../../src/include -I../../../../../../src/plugin/include   -c -o null.o null.c
+[9-ERROR] gcc-40 -o ../../../../../../1.2.2.0/bin/midid midid.o events.o io.o stats.o emulation.o device.o oss.o midout.o timid.o null.o -Wl,-warn-common   -L/usr/X11R7/lib -Wall
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.dosemu.1169145045.12403.757858998/dosemu-1.2.2/src/arch/linux/dosext/sound/midid'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.dosemu.1169145045.12403.757858998/dosemu-1.2.2/src/env/video'
+[9-ERROR] gcc-40 -c -I/usr/X11R7/include -MP -MMD -I../../../src/include -I../../../src/plugin/include  -Wall -Wstrict-prototypes -Wmissing-declarations -Wnested-externs -O2 -fomit-frame-pointer -fno-strict-aliasing -mtune=i386 -pipe  -o miscemu.o miscemu.c
+[9-ERROR] gcc-40 -c -I/usr/X11R7/include -MP -MMD -I../../../src/include -I../../../src/plugin/include  -Wall -Wstrict-prototypes -Wmissing-declarations -Wnested-externs -O2 -fomit-frame-pointer -fno-strict-aliasing -mtune=i386 -pipe  -o video.o video.c
+[9-ERROR] gcc-40 -c -I/usr/X11R7/include -MP -MMD -I../../../src/include -I../../../src/plugin/include  -Wall -Wstrict-prototypes -Wmissing-declarations -Wnested-externs -O2 -fomit-frame-pointer -fno-strict-aliasing -mtune=i386 -pipe  -o vc.o vc.c
+[9-ERROR] gcc-40 -c -I/usr/X11R7/include -MP -MMD -I../../../src/include -I../../../src/plugin/include  -Wall -Wstrict-prototypes -Wmissing-declarations -Wnested-externs -O2 -fomit-frame-pointer -fno-strict-aliasing -mtune=i386 -pipe  -o vga.o vga.c
+[9-ERROR] vga.c: In function 'restore_vga_regs':
+[9-ERROR] vga.c:338: warning: pointer targets in passing argument 1 of 'set_regs' differ in signedness
+[9-ERROR] vga.c: In function 'save_vga_state':
+[9-ERROR] vga.c:351: warning: pointer targets in passing argument 1 of 'store_vga_regs' differ in signedness
+[9-ERROR] vga.c:386: warning: pointer targets in passing argument 1 of 'restore_vga_regs' differ in signedness
+[9-ERROR] vga.c: In function 'restore_vga_state':
+[9-ERROR] vga.c:399: warning: pointer targets in passing argument 1 of 'restore_vga_regs' differ in signedness
+[9-ERROR] vga.c:407: warning: pointer targets in passing argument 1 of 'restore_vga_regs' differ in signedness
+[9-ERROR] vga.c: In function 'vga_initialize':
+[9-ERROR] vga.c:477: warning: pointer targets in assignment differ in signedness
+[9-ERROR] vga.c:486: warning: pointer targets in assignment differ in signedness
+[9-ERROR] gcc-40 -c -I/usr/X11R7/include -MP -MMD -I../../../src/include -I../../../src/plugin/include  -Wall -Wstrict-prototypes -Wmissing-declarations -Wnested-externs -O2 -fomit-frame-pointer -fno-strict-aliasing -mtune=i386 -pipe  -o et4000.o et4000.c
+[9-ERROR] gcc-40 -c -I/usr/X11R7/include -MP -MMD -I../../../src/include -I../../../src/plugin/include  -Wall -Wstrict-prototypes -Wmissing-declarations -Wnested-externs -O2 -fomit-frame-pointer -fno-strict-aliasing -mtune=i386 -pipe  -o s3.o s3.c
+[9-ERROR] gcc-40 -c -I/usr/X11R7/include -MP -MMD -I../../../src/include -I../../../src/plugin/include  -Wall -Wstrict-prototypes -Wmissing-declarations -Wnested-externs -O2 -fomit-frame-pointer -fno-strict-aliasing -mtune=i386 -pipe  -o trident.o trident.c
+[9-ERROR] gcc-40 -c -I/usr/X11R7/include -MP -MMD -I../../../src/include -I../../../src/plugin/include  -Wall -Wstrict-prototypes -Wmissing-declarations -Wnested-externs -O2 -fomit-frame-pointer -fno-strict-aliasing -mtune=i386 -pipe  -o avance.o avance.c
+[9-ERROR] gcc-40 -c -I/usr/X11R7/include -MP -MMD -I../../../src/include -I../../../src/plugin/include  -Wall -Wstrict-prototypes -Wmissing-declarations -Wnested-externs -O2 -fomit-frame-pointer -fno-strict-aliasing -mtune=i386 -pipe  -o ati.o ati.c
+[9-ERROR] gcc-40 -c -I/usr/X11R7/include -MP -MMD -I../../../src/include -I../../../src/plugin/include  -Wall -Wstrict-prototypes -Wmissing-declarations -Wnested-externs -O2 -fomit-frame-pointer -fno-strict-aliasing -mtune=i386 -pipe  -o cirrus.o cirrus.c
+[9-ERROR] gcc-40 -c -I/usr/X11R7/include -MP -MMD -I../../../src/include -I../../../src/plugin/include  -Wall -Wstrict-prototypes -Wmissing-declarations -Wnested-externs -O2 -fomit-frame-pointer -fno-strict-aliasing -mtune=i386 -pipe  -o matrox.o matrox.c
+[9-ERROR] matrox.c:50: error: static declaration of 'MGAchipset' follows non-static declaration
+[9-ERROR] matrox.h:67: error: previous declaration of 'MGAchipset' was here
+[9-ERROR] matrox.c:54: error: static declaration of 'MGAMMIOBase' follows non-static declaration
+[9-ERROR] matrox.h:68: error: previous declaration of 'MGAMMIOBase' was here
+[9-ERROR] make[2]: *** [matrox.o] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.dosemu.1169145045.12403.757858998/dosemu-1.2.2/src/env/video'
+[9-ERROR] make[1]: *** [env/video] Error 2
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.dosemu.1169145045.12403.757858998/dosemu-1.2.2/src'
+[9-ERROR] make: *** [default] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

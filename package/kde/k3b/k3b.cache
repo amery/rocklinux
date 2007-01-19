@@ -20,36 +20,43 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142601682 Fri Mar 17 14:21:22 2006 (5)
-[TIMESTAMP] 1142867287 Mon Mar 20 16:08:07 2006 (9)
+[TIMESTAMP] 1168660869 Sat Jan 13 05:01:09 2007 (5)
+[TIMESTAMP] 1168867895 Mon Jan 15 14:31:35 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-k3b.log 9-k3b.log
 
-[BUILDTIME] 84757 (5)
-[BUILDTIME] 85296 (9)
-[SIZE] 9.32 MB, 251 files
+[BUILDTIME] 73161 (5)
+[BUILDTIME] 73813 (9)
+[SIZE] 9.11 MB, 236 files
 
-[DEP] 00-dirtree acl acl:dev alsa alsa:dev arts arts:dev attr attr:dev
-[DEP] bash2 binutils bzip2 coreutils diffutils expat expat:dev fam fam:dev
-[DEP] ffmpeg ffmpeg:dev findutils flac flac:dev freetype freetype:dev
-[DEP] gawk gcc34 gcc34:dev gettext glibc23 glibc23:dev grep kdebase
-[DEP] kdelibs kdelibs:dev lame lame:dev libart_lgpl23 libart_lgpl23:dev
-[DEP] libidn libidn:dev libjpeg libmusicbrainz libmusicbrainz:dev libpng
-[DEP] libpng:dev libsamplerate libsamplerate:dev libsndfile libsndfile:dev
-[DEP] libxml2 linux26-header:dev mad mad:dev make mktemp nas net-tools
-[DEP] ogg-vorbis ogg-vorbis:dev perl5 pkgconfig qt33 qt33:dev rrdtool
-[DEP] sed sysfiles taglib taglib:dev tar util-linux xorg xorg:dev zlib:dev
+[DEP] 00-dirtree acl acl:dev alsa alsa:dev applewmproto applewmproto:dev
+[DEP] arts arts:dev attr attr:dev bash2 binutils bzip2 coreutils cups
+[DEP] cvm diffutils expat expat:dev fam fam:dev findutils flac flac:dev
+[DEP] fontconfig fontconfig:dev freetype freetype:dev gawk gcc40 gcc40:dev
+[DEP] gettext glibc23 glibc23:dev grep hal:dev hicolor-icon-theme
+[DEP] imake kdebase kdelibs kdelibs:dev lame lame:dev libart_lgpl23
+[DEP] libart_lgpl23:dev libice libice:dev libidn libidn:dev libjpeg
+[DEP] libmusicbrainz libmusicbrainz:dev libpng libpng:dev libsamplerate
+[DEP] libsamplerate:dev libsm libsm:dev libsndfile libsndfile:dev libx11
+[DEP] libx11:dev libxau libxau:dev libxcursor libxcursor:dev libxdmcp
+[DEP] libxdmcp:dev libxext libxext:dev libxfixes libxfixes:dev libxft
+[DEP] libxft:dev libxinerama libxinerama:dev libxml2 libxmu libxmu:dev
+[DEP] libxrandr libxrandr:dev libxrender libxrender:dev libxt libxt:dev
+[DEP] linux-libc-headers:dev mad mad:dev make mesalib mktemp nas net-tools
+[DEP] ogg-vorbis ogg-vorbis:dev perl5 pkgconfig qt33 qt33:dev rrdtool sed
+[DEP] sysfiles taglib taglib:dev tar util-linux xorg-cf-files xproto:dev
+[DEP] zlib zlib:dev
 
 [PROVIDES] k3b k3bsetup kcm_k3bsetup2.so libk3b.so
 [PROVIDES] libk3balsaoutputplugin.so libk3bartsoutputplugin.so
 [PROVIDES] libk3baudiometainforenamerplugin.so
 [PROVIDES] libk3baudioprojectcddbplugin.so libk3bdevice.so
-[PROVIDES] libk3bexternalencoder.so libk3bffmpegdecoder.so
-[PROVIDES] libk3bflacdecoder.so libk3blameencoder.so
-[PROVIDES] libk3blibsndfiledecoder.so libk3bmaddecoder.so
-[PROVIDES] libk3boggvorbisdecoder.so libk3boggvorbisencoder.so
-[PROVIDES] libk3bsoxencoder.so libk3bwavedecoder.so
+[PROVIDES] libk3bexternalencoder.so libk3bflacdecoder.so
+[PROVIDES] libk3blameencoder.so libk3blibsndfiledecoder.so
+[PROVIDES] libk3bmaddecoder.so libk3boggvorbisdecoder.so
+[PROVIDES] libk3boggvorbisencoder.so libk3bsoxencoder.so
+[PROVIDES] libk3bwavedecoder.so
 

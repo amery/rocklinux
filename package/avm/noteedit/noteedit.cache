@@ -20,28 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142648149 Sat Mar 18 03:15:49 2006 (5)
-[TIMESTAMP] 1142917331 Tue Mar 21 06:02:11 2006 (9)
+[TIMESTAMP] 1168690914 Sat Jan 13 13:21:54 2007 (5) ERROR
+[TIMESTAMP] 1168899810 Mon Jan 15 23:23:30 2007 (9) ERROR
+[TIMESTAMP] 1168953651 Tue Jan 16 14:20:51 2007 (5) ERROR
+[TIMESTAMP] 1168983372 Tue Jan 16 22:36:12 2007 (9) ERROR
+[TIMESTAMP] 1169123985 Thu Jan 18 13:39:45 2007 (5) ERROR
+[TIMESTAMP] 1169153568 Thu Jan 18 21:52:48 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-noteedit.log 9-noteedit.log
+[LOGS] 5-noteedit.err 9-noteedit.err
 
-[BUILDTIME] 33454 (5)
-[BUILDTIME] 33812 (9)
-[SIZE] 4.25 MB, 661 files
+[BUILDTIME] 2789 (5) ERROR
+[BUILDTIME] 2823 (9) ERROR
+[BUILDTIME] 2835 (5) ERROR
+[BUILDTIME] 2842 (9) ERROR
+[BUILDTIME] 2838 (5) ERROR
+[BUILDTIME] 2839 (9) ERROR
 
-[DEP] 00-dirtree acl acl:dev alsa alsa:dev arts attr attr:dev audiofile
-[DEP] audiofile:dev bash2 binutils bison bzip2 coreutils diffutils esound
-[DEP] esound:dev expat fam fam:dev findutils flex flex:dev freetype
-[DEP] freetype:dev gawk gcc34 gcc34:dev gettext glib glib:dev glibc23
-[DEP] glibc23:dev gnome2-dirtree grep jack jack:dev kdebase kdelibs
-[DEP] kdelibs:dev kdemultimedia libart_lgpl23 libart_lgpl23:dev libidn
-[DEP] libidn:dev libjpeg libpng libpng:dev libxml2 linux26-header:dev m4
-[DEP] mad mad:dev make mktemp nas net-tools ogg-vorbis ogg-vorbis:dev
-[DEP] patch perl5 qt33 qt33:dev rrdtool sed sysfiles tar tse3 tse3:dev
-[DEP] util-linux xorg xorg:dev zlib:dev
 
-[PROVIDES] libnoteedit.so noteedit
+[5-ERROR] checking for dlopen in -ldl... (cached) yes
+[5-ERROR] checking for shl_unload in -ldld... no
+[5-ERROR] checking for size_t... yes
+[5-ERROR] checking size of size_t... 4
+[5-ERROR] checking for unsigned long... yes
+[5-ERROR] checking size of unsigned long... 4
+[5-ERROR] checking sizeof size_t == sizeof unsigned long... yes
+[5-ERROR] checking crt_externs.h usability... no
+[5-ERROR] checking crt_externs.h presence... no
+[5-ERROR] checking for crt_externs.h... no
+[5-ERROR] checking for _NSGetEnviron... no
+[5-ERROR] checking for vsnprintf... yes
+[5-ERROR] checking for snprintf... yes
+[5-ERROR] checking for X... libraries /usr/X11R7/lib, headers /usr/X11R7/include
+[5-ERROR] checking for IceConnectionNumber in -lICE... yes
+[5-ERROR] checking for libXext... yes
+[5-ERROR] checking for pthread_create in -lpthread... yes
+[5-ERROR] checking for extra includes... no
+[5-ERROR] checking for extra libs... no
+[5-ERROR] checking for libz... -lz
+[5-ERROR] checking for libpng... -lpng -lz -lm
+[5-ERROR] checking for libjpeg6b... no
+[5-ERROR] checking for libjpeg... -ljpeg
+[5-ERROR] checking for perl... /usr/bin/perl
+[5-ERROR] checking for Qt... libraries /opt/qt33/lib, headers /opt/qt33/include using -mt
+[5-ERROR] checking for moc... /opt/qt33/bin/moc
+[5-ERROR] checking for uic... /opt/qt33/bin/uic
+[5-ERROR] checking whether uic supports -L ... yes
+[5-ERROR] checking whether uic supports -nounload ... yes
+[5-ERROR] checking if Qt needs -ljpeg... no
+[5-ERROR] checking for rpath... yes
+[5-ERROR] checking for KDE... libraries /usr/lib, headers /usr/include
+[5-ERROR] checking if UIC has KDE plugins available... yes
+[5-ERROR] checking for KDE paths... defaults
+[5-ERROR] checking for dcopidl... /usr/bin/dcopidl
+[5-ERROR] checking for dcopidl2cpp... /usr/bin/dcopidl2cpp
+[5-ERROR] checking for mcopidl... /usr/bin/mcopidl
+[5-ERROR] checking for artsc-config... /usr/bin/artsc-config
+[5-ERROR] checking for kde-config... /usr/bin/kde-config
+[5-ERROR] checking for meinproc... /usr/bin/meinproc
+[5-ERROR] checking for xmllint... /usr/bin/xmllint
+[5-ERROR] Testing compiler version ... 4
+[5-ERROR] 
+[5-ERROR] Cannot determine g++ version
+[5-ERROR] Check your compiler installation or
+[5-ERROR] try to find out why "./compvers" doesn't
+[5-ERROR] supply "2" or "3"!
+[5-ERROR] 
+[5-ERROR] make: *** No targets specified and no makefile found.  Stop.
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] checking for dlopen in -ldl... (cached) yes
+[9-ERROR] checking for shl_unload in -ldld... no
+[9-ERROR] checking for size_t... yes
+[9-ERROR] checking size of size_t... 4
+[9-ERROR] checking for unsigned long... yes
+[9-ERROR] checking size of unsigned long... 4
+[9-ERROR] checking sizeof size_t == sizeof unsigned long... yes
+[9-ERROR] checking crt_externs.h usability... no
+[9-ERROR] checking crt_externs.h presence... no
+[9-ERROR] checking for crt_externs.h... no
+[9-ERROR] checking for _NSGetEnviron... no
+[9-ERROR] checking for vsnprintf... yes
+[9-ERROR] checking for snprintf... yes
+[9-ERROR] checking for X... libraries /usr/X11R7/lib, headers /usr/X11R7/include
+[9-ERROR] checking for IceConnectionNumber in -lICE... yes
+[9-ERROR] checking for libXext... yes
+[9-ERROR] checking for pthread_create in -lpthread... yes
+[9-ERROR] checking for extra includes... no
+[9-ERROR] checking for extra libs... no
+[9-ERROR] checking for libz... -lz
+[9-ERROR] checking for libpng... -lpng -lz -lm
+[9-ERROR] checking for libjpeg6b... no
+[9-ERROR] checking for libjpeg... -ljpeg
+[9-ERROR] checking for perl... /usr/bin/perl
+[9-ERROR] checking for Qt... libraries /opt/qt33/lib, headers /opt/qt33/include using -mt
+[9-ERROR] checking for moc... /opt/qt33/bin/moc
+[9-ERROR] checking for uic... /opt/qt33/bin/uic
+[9-ERROR] checking whether uic supports -L ... yes
+[9-ERROR] checking whether uic supports -nounload ... yes
+[9-ERROR] checking if Qt needs -ljpeg... no
+[9-ERROR] checking for rpath... yes
+[9-ERROR] checking for KDE... libraries /usr/lib, headers /usr/include
+[9-ERROR] checking if UIC has KDE plugins available... yes
+[9-ERROR] checking for KDE paths... defaults
+[9-ERROR] checking for dcopidl... /usr/bin/dcopidl
+[9-ERROR] checking for dcopidl2cpp... /usr/bin/dcopidl2cpp
+[9-ERROR] checking for mcopidl... /usr/bin/mcopidl
+[9-ERROR] checking for artsc-config... /usr/bin/artsc-config
+[9-ERROR] checking for kde-config... /usr/bin/kde-config
+[9-ERROR] checking for meinproc... /usr/bin/meinproc
+[9-ERROR] checking for xmllint... /usr/bin/xmllint
+[9-ERROR] Testing compiler version ... 4
+[9-ERROR] 
+[9-ERROR] Cannot determine g++ version
+[9-ERROR] Check your compiler installation or
+[9-ERROR] try to find out why "./compvers" doesn't
+[9-ERROR] supply "2" or "3"!
+[9-ERROR] 
+[9-ERROR] make: *** No targets specified and no makefile found.  Stop.
+[9-ERROR] --- BUILD ERROR ---
 

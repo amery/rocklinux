@@ -20,125 +20,32 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142622068 Fri Mar 17 20:01:08 2006 (5) ERROR
-[TIMESTAMP] 1142889171 Mon Mar 20 22:12:51 2006 (9) ERROR
-[TIMESTAMP] 1142962594 Tue Mar 21 18:36:34 2006 (5) ERROR
-[TIMESTAMP] 1142973076 Tue Mar 21 21:31:16 2006 (9) ERROR
-[TIMESTAMP] 1143032812 Wed Mar 22 14:06:52 2006 (5) ERROR
-[TIMESTAMP] 1143042437 Wed Mar 22 16:47:17 2006 (9) ERROR
+[TIMESTAMP] 1168674390 Sat Jan 13 08:46:30 2007 (5)
+[TIMESTAMP] 1168882593 Mon Jan 15 18:36:33 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-mythtv-plugins.err 9-mythtv-plugins.err
+[LOGS] 5-mythtv-plugins.log 9-mythtv-plugins.log
 
-[BUILDTIME] 1571 (5) ERROR
-[BUILDTIME] 1800 (9) ERROR
-[BUILDTIME] 1798 (5) ERROR
-[BUILDTIME] 1816 (9) ERROR
-[BUILDTIME] 1804 (5) ERROR
-[BUILDTIME] 1812 (9) ERROR
+[BUILDTIME] 35531 (5)
+[BUILDTIME] 35998 (9)
+[SIZE] 8.53 MB, 341 files
 
+[DEP] 00-dirtree acl alsa applewmproto attr bash2 binutils bzip2 ccache
+[DEP] cdparanoia cdparanoia:dev coreutils cvm expat fam findutils
+[DEP] flac flac:dev fontconfig freetype gawk gcc40 gcc40:dev glibc23
+[DEP] glibc23:dev grep kdelibs kdelibs:dev lame lame:dev libart_lgpl23
+[DEP] libavc1394 libcdaudio libcdaudio:dev libdvdnav libexif libexif:dev
+[DEP] libice libidn libiec61883 libjpeg libpng libraw1394 libsdl libsdl:dev
+[DEP] libsm libtiff libtiff:dev libx11 libxau libxcursor libxdmcp libxext
+[DEP] libxfixes libxft libxinerama libxmu libxrandr libxrender libxt libxv
+[DEP] libxxf86vm linux-libc-headers:dev lirc mad mad:dev make mesalib
+[DEP] mesalib:dev mktemp mythtv mythtv:dev nas ogg-vorbis ogg-vorbis:dev
+[DEP] pcre pkgconfig qt33 qt33:dev rrdtool sed sysfiles tar zlib zlib:dev
 
-[5-ERROR] tabview.h:84: error: expected `;' before '*' token
-[5-ERROR] tabview.h:91: error: `ButtonState' does not name a type
-[5-ERROR] tabview.h:30: warning: `class TabView' has virtual functions but non-virtual destructor
-[5-ERROR] tabview.h:105: error: invalid use of undefined type `struct QDialog'
-[5-ERROR] /opt/qt33/include/qwindowdefs.h:54: error: forward declaration of `struct QDialog'
-[5-ERROR] tabview.h:119: error: ISO C++ forbids declaration of `MythRemoteLineEdit' with no type
-[5-ERROR] tabview.h:119: error: expected `;' before '*' token
-[5-ERROR] tabview.h:120: error: ISO C++ forbids declaration of `MythRemoteLineEdit' with no type
-[5-ERROR] tabview.h:120: error: expected `;' before '*' token
-[5-ERROR] tabview.h:121: error: ISO C++ forbids declaration of `MythRemoteLineEdit' with no type
-[5-ERROR] tabview.h:121: error: expected `;' before '*' token
-[5-ERROR] tabview.h:105: warning: `class PopupBox' has virtual functions but non-virtual destructor
-[5-ERROR] main.cpp:20:32: mythtv/mythcontext.h: No such file or directory
-[5-ERROR] main.cpp:21:30: mythtv/mythdbcon.h: No such file or directory
-[5-ERROR] main.cpp:22:33: mythtv/langsettings.h: No such file or directory
-[5-ERROR] main.cpp: In function `void setupKeys()':
-[5-ERROR] main.cpp:38: error: `REG_KEY' was not declared in this scope
-[5-ERROR] main.cpp: In function `int main(int, char**)':
-[5-ERROR] main.cpp:84: error: `gContext' was not declared in this scope
-[5-ERROR] main.cpp:85: error: `MythContext' has not been declared
-[5-ERROR] main.cpp:85: error: `MYTH_BINARY_VERSION' was not declared in this scope
-[5-ERROR] main.cpp:88: error: `MSqlQuery' has not been declared
-[5-ERROR] main.cpp:88: error: `testDBConnection' was not declared in this scope
-[5-ERROR] main.cpp:88: warning: unused variable 'testDBConnection'
-[5-ERROR] main.cpp:94: error: `LanguageSettings' has not been declared
-[5-ERROR] main.cpp:94: error: `load' was not declared in this scope
-[5-ERROR] main.cpp:110: error: no matching function for call to `KApplication::setMainWidget(TabView*&)'
-[5-ERROR] /opt/qt33/include/qapplication.h:119: note: candidates are: virtual void QApplication::setMainWidget(QWidget*)
-[5-ERROR] main.cpp:111: error: 'class TabView' has no member named 'setGeometry'
-[5-ERROR] main.cpp:112: error: 'class TabView' has no member named 'setFixedSize'
-[5-ERROR] main.cpp:113: error: 'class TabView' has no member named 'Show'
-[5-ERROR] main.cpp:85: warning: unused variable 'MYTH_BINARY_VERSION'
-[5-ERROR] main.cpp:94: warning: unused variable 'load'
-[5-ERROR] make[2]: *** [main.o] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/src.mythtv-plugins.1143032781.5747.911284639/mythplugins-0.18.1/mythbrowser/mythbrowser'
-[5-ERROR] make[1]: *** [sub-mythbrowser] Error 2
-[5-ERROR] make[1]: Leaving directory `/ROCK/src.mythtv-plugins.1143032781.5747.911284639/mythplugins-0.18.1/mythbrowser'
-[5-ERROR] make: *** [sub-mythbrowser] Error 2
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing static lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 0 files for this package.
-[5-ERROR] Applying package split: 40 mythtv-plugins:dev (/lib/.*\.(la|a|o)$|/include/)
-[5-ERROR] Applying package split: 42 mythtv-plugins:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 mythtv-plugins:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] Deleting dependencies, pattern:  -e ".*: mythtv-themes(:.*|)$" ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Finished building mythtv-plugins=mythtv-plugins.
-
-[9-ERROR] tabview.h:84: error: expected `;' before '*' token
-[9-ERROR] tabview.h:91: error: `ButtonState' does not name a type
-[9-ERROR] tabview.h:30: warning: `class TabView' has virtual functions but non-virtual destructor
-[9-ERROR] tabview.h:105: error: invalid use of undefined type `struct QDialog'
-[9-ERROR] /opt/qt33/include/qwindowdefs.h:54: error: forward declaration of `struct QDialog'
-[9-ERROR] tabview.h:119: error: ISO C++ forbids declaration of `MythRemoteLineEdit' with no type
-[9-ERROR] tabview.h:119: error: expected `;' before '*' token
-[9-ERROR] tabview.h:120: error: ISO C++ forbids declaration of `MythRemoteLineEdit' with no type
-[9-ERROR] tabview.h:120: error: expected `;' before '*' token
-[9-ERROR] tabview.h:121: error: ISO C++ forbids declaration of `MythRemoteLineEdit' with no type
-[9-ERROR] tabview.h:121: error: expected `;' before '*' token
-[9-ERROR] tabview.h:105: warning: `class PopupBox' has virtual functions but non-virtual destructor
-[9-ERROR] main.cpp:20:32: mythtv/mythcontext.h: No such file or directory
-[9-ERROR] main.cpp:21:30: mythtv/mythdbcon.h: No such file or directory
-[9-ERROR] main.cpp:22:33: mythtv/langsettings.h: No such file or directory
-[9-ERROR] main.cpp: In function `void setupKeys()':
-[9-ERROR] main.cpp:38: error: `REG_KEY' was not declared in this scope
-[9-ERROR] main.cpp: In function `int main(int, char**)':
-[9-ERROR] main.cpp:84: error: `gContext' was not declared in this scope
-[9-ERROR] main.cpp:85: error: `MythContext' has not been declared
-[9-ERROR] main.cpp:85: error: `MYTH_BINARY_VERSION' was not declared in this scope
-[9-ERROR] main.cpp:88: error: `MSqlQuery' has not been declared
-[9-ERROR] main.cpp:88: error: `testDBConnection' was not declared in this scope
-[9-ERROR] main.cpp:88: warning: unused variable 'testDBConnection'
-[9-ERROR] main.cpp:94: error: `LanguageSettings' has not been declared
-[9-ERROR] main.cpp:94: error: `load' was not declared in this scope
-[9-ERROR] main.cpp:110: error: no matching function for call to `KApplication::setMainWidget(TabView*&)'
-[9-ERROR] /opt/qt33/include/qapplication.h:119: note: candidates are: virtual void QApplication::setMainWidget(QWidget*)
-[9-ERROR] main.cpp:111: error: 'class TabView' has no member named 'setGeometry'
-[9-ERROR] main.cpp:112: error: 'class TabView' has no member named 'setFixedSize'
-[9-ERROR] main.cpp:113: error: 'class TabView' has no member named 'Show'
-[9-ERROR] main.cpp:85: warning: unused variable 'MYTH_BINARY_VERSION'
-[9-ERROR] main.cpp:94: warning: unused variable 'load'
-[9-ERROR] make[2]: *** [main.o] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/src.mythtv-plugins.1143042404.3156.3774996670/mythplugins-0.18.1/mythbrowser/mythbrowser'
-[9-ERROR] make[1]: *** [sub-mythbrowser] Error 2
-[9-ERROR] make[1]: Leaving directory `/ROCK/src.mythtv-plugins.1143042404.3156.3774996670/mythplugins-0.18.1/mythbrowser'
-[9-ERROR] make: *** [sub-mythbrowser] Error 2
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing static lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 0 files for this package.
-[9-ERROR] Applying package split: 40 mythtv-plugins:dev (/lib/.*\.(la|a|o)$|/include/)
-[9-ERROR] Applying package split: 42 mythtv-plugins:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 mythtv-plugins:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] Deleting dependencies, pattern:  -e ".*: mythtv-themes(:.*|)$" ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Finished building mythtv-plugins=mythtv-plugins.
+[PROVIDES] libmythbookmarkmanager.so libmythcontrols.so libmythdvd.so
+[PROVIDES] libmythflix.so libmythgallery.so libmythgame.so libmythmusic.so
+[PROVIDES] libmythnews.so libmythphone.so libmythvideo.so libmythweather.so
+[PROVIDES] mtd mythbrowser
 

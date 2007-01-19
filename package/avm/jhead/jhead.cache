@@ -20,21 +20,105 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142673138 Sat Mar 18 10:12:18 2006 (5)
-[TIMESTAMP] 1142944342 Tue Mar 21 13:32:22 2006 (9)
+[TIMESTAMP] 1168703404 Sat Jan 13 16:50:04 2007 (5) ERROR
+[TIMESTAMP] 1168913167 Tue Jan 16 03:06:07 2007 (9) ERROR
+[TIMESTAMP] 1168955105 Tue Jan 16 14:45:05 2007 (5) ERROR
+[TIMESTAMP] 1168984808 Tue Jan 16 23:00:08 2007 (9) ERROR
+[TIMESTAMP] 1169125383 Thu Jan 18 14:03:03 2007 (5) ERROR
+[TIMESTAMP] 1169155001 Thu Jan 18 22:16:41 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-jhead.log 9-jhead.log
+[LOGS] 5-jhead.err 9-jhead.err
 
-[BUILDTIME] 1458 (5)
-[BUILDTIME] 1525 (9)
-[SIZE] 0.06 MB, 7 files
+[BUILDTIME] 735 (5) ERROR
+[BUILDTIME] 730 (9) ERROR
+[BUILDTIME] 735 (5) ERROR
+[BUILDTIME] 734 (9) ERROR
+[BUILDTIME] 739 (5) ERROR
+[BUILDTIME] 751 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils findutils gcc34 gcc34:dev
-[DEP] glibc23 glibc23:dev grep linux26-header:dev make mktemp rrdtool
-[DEP] sed sysfiles tar
 
-[PROVIDES] jhead
+[5-ERROR] Command Wrapper Debug: running 'gcc-40 --version' ..
+[5-ERROR] gcc-40 is /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/gcc-40
+[5-ERROR] Old Command: gcc-40 --version
+[5-ERROR] ENVPREFIX = 'CMD'
+[5-ERROR] APPEND_PO = ''
+[5-ERROR] OTHERS = ''
+[5-ERROR] INSERT = '-O1 -pipe'
+[5-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
+[5-ERROR] APPEND = '-s'
+[5-ERROR] FILTER = ''
+[5-ERROR] Old PATH: /ROCK/src.jhead.1169125376.3752.3641098646/wrappers:/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper:/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[5-ERROR] New PATH: /ROCK/src.jhead.1169125376.3752.3641098646/wrappers:/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[5-ERROR] Insert: -O1
+[5-ERROR] Insert: -pipe
+[5-ERROR] Copy:   --version
+[5-ERROR] Append: -s
+[5-ERROR] New Command: gcc-40 -O1 -pipe --version -s
+[5-ERROR] gcc-40 (GCC) 4.0.3
+[5-ERROR] Copyright (C) 2006 Free Software Foundation, Inc.
+[5-ERROR] This is free software; see the source for copying conditions.  There is NO
+[5-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[5-ERROR] 
+[5-ERROR] [ writing debug log to /ROCK/src.jhead.1169125376.3752.3641098646/cmd_wrapper.log ]
+[5-ERROR] Running main build function 'build_this_package' ...
+[5-ERROR] Extracting jhead-2.5.tar.bz2 (--use-compress-program=bzip2 -xf) ... 
+[5-ERROR] Fixing ownership and permissions ...
+[5-ERROR] Removing CVS and .svn directories ...
+[5-ERROR] Changeing into /ROCK/src.jhead.1169125376.3752.3641098646/jhead-2.5 ...
+[5-ERROR] Creating /usr/<..> if required ...
+[5-ERROR] gcc-40 -O3 -Wall -c jhead.c -o jhead.o
+[5-ERROR] jhead.c: In function 'ProcessFile':
+[5-ERROR] jhead.c:935: warning: pointer targets in assignment differ in signedness
+[5-ERROR] gcc-40 -O3 -Wall -c jpgfile.c -o jpgfile.o
+[5-ERROR] jpgfile.c: In function 'SaveThumbnail':
+[5-ERROR] jpgfile.c:349: warning: pointer targets in assignment differ in signedness
+[5-ERROR] gcc-40 -O3 -Wall -c exif.c -o exif.o
+[5-ERROR] exif.c: In function 'PrintFormatNumber':
+[5-ERROR] exif.c:332: error: invalid lvalue in assignment
+[5-ERROR] make: *** [exif.o] Error 1
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] Command Wrapper Debug: running 'gcc-40 --version' ..
+[9-ERROR] gcc-40 is /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/gcc-40
+[9-ERROR] Old Command: gcc-40 --version
+[9-ERROR] ENVPREFIX = 'CMD'
+[9-ERROR] APPEND_PO = ''
+[9-ERROR] OTHERS = ''
+[9-ERROR] INSERT = '-O1 -pipe'
+[9-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
+[9-ERROR] APPEND = '-s'
+[9-ERROR] FILTER = ''
+[9-ERROR] Old PATH: /ROCK/src.jhead.1169154993.26735.2864609941/wrappers:/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper:/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[9-ERROR] New PATH: /ROCK/src.jhead.1169154993.26735.2864609941/wrappers:/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[9-ERROR] Insert: -O1
+[9-ERROR] Insert: -pipe
+[9-ERROR] Copy:   --version
+[9-ERROR] Append: -s
+[9-ERROR] New Command: gcc-40 -O1 -pipe --version -s
+[9-ERROR] gcc-40 (GCC) 4.0.3
+[9-ERROR] Copyright (C) 2006 Free Software Foundation, Inc.
+[9-ERROR] This is free software; see the source for copying conditions.  There is NO
+[9-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[9-ERROR] 
+[9-ERROR] [ writing debug log to /ROCK/src.jhead.1169154993.26735.2864609941/cmd_wrapper.log ]
+[9-ERROR] Running main build function 'build_this_package' ...
+[9-ERROR] Extracting jhead-2.5.tar.bz2 (--use-compress-program=bzip2 -xf) ... 
+[9-ERROR] Fixing ownership and permissions ...
+[9-ERROR] Removing CVS and .svn directories ...
+[9-ERROR] Changeing into /ROCK/src.jhead.1169154993.26735.2864609941/jhead-2.5 ...
+[9-ERROR] Creating /usr/<..> if required ...
+[9-ERROR] gcc-40 -O3 -Wall -c jhead.c -o jhead.o
+[9-ERROR] jhead.c: In function 'ProcessFile':
+[9-ERROR] jhead.c:935: warning: pointer targets in assignment differ in signedness
+[9-ERROR] gcc-40 -O3 -Wall -c jpgfile.c -o jpgfile.o
+[9-ERROR] jpgfile.c: In function 'SaveThumbnail':
+[9-ERROR] jpgfile.c:349: warning: pointer targets in assignment differ in signedness
+[9-ERROR] gcc-40 -O3 -Wall -c exif.c -o exif.o
+[9-ERROR] exif.c: In function 'PrintFormatNumber':
+[9-ERROR] exif.c:332: error: invalid lvalue in assignment
+[9-ERROR] make: *** [exif.o] Error 1
+[9-ERROR] --- BUILD ERROR ---
 

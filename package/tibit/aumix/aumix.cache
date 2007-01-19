@@ -20,24 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142512508 Thu Mar 16 13:35:08 2006 (5)
-[TIMESTAMP] 1142764084 Sun Mar 19 11:28:04 2006 (9)
+[TIMESTAMP] 1168588943 Fri Jan 12 09:02:23 2007 (5)
+[TIMESTAMP] 1168790386 Sun Jan 14 16:59:46 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-aumix.log 9-aumix.log
 
-[BUILDTIME] 2029 (5)
-[BUILDTIME] 2505 (9)
+[BUILDTIME] 2100 (5)
+[BUILDTIME] 2477 (9)
 [SIZE] 0.15 MB, 31 files
 
-[DEP] 00-dirtree alsa alsa:dev atk atk:dev autoconf automake19 bash2
-[DEP] binutils bzip2 cairo cairo:dev coreutils diffutils expat findutils
-[DEP] freetype gawk gcc34 gcc34:dev gettext glib glib:dev glibc23
-[DEP] glibc23:dev gnome2-dirtree gpm gpm:dev grep gtk+ gtk+:dev libpng
-[DEP] linux26-header:dev make mktemp ncurses:dev net-tools pango pango:dev
-[DEP] perl5 pkgconfig rrdtool sed sysfiles tar texinfo xorg
+[DEP] 00-dirtree alsa alsa:dev applewmproto atk atk:dev autoconf automake19
+[DEP] bash2 binutils bzip2 cairo cairo:dev coreutils cvm diffutils expat
+[DEP] findutils fontconfig freetype gawk gcc40 gcc40:dev gettext glib
+[DEP] glib:dev glibc23 glibc23:dev gnome2-dirtree grep gtk+ gtk+:dev
+[DEP] libpng libx11 libxau libxcursor libxdmcp libxext libxfixes libxi
+[DEP] libxinerama libxrandr libxrender linux-libc-headers:dev make mktemp
+[DEP] ncurses ncurses:dev net-tools netpbm pango pango:dev patch perl5
+[DEP] pkgconfig rrdtool sed sysfiles tar texinfo twoftpd ucspi-unix zlib
 
 [PROVIDES] aumix mute xaumix
 

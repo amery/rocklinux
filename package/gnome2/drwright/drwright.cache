@@ -20,31 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142587866 Fri Mar 17 10:31:06 2006 (5)
-[TIMESTAMP] 1142852176 Mon Mar 20 11:56:16 2006 (9)
+[TIMESTAMP] 1168648340 Sat Jan 13 01:32:20 2007 (5) ERROR
+[TIMESTAMP] 1168854819 Mon Jan 15 10:53:39 2007 (9) ERROR
+[TIMESTAMP] 1168948977 Tue Jan 16 13:02:57 2007 (5) ERROR
+[TIMESTAMP] 1168978890 Tue Jan 16 21:21:30 2007 (9) ERROR
+[TIMESTAMP] 1169092393 Thu Jan 18 04:53:13 2007 (5) ERROR
+[TIMESTAMP] 1169149162 Thu Jan 18 20:39:22 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-drwright.log 9-drwright.log
+[LOGS] 5-drwright.err 9-drwright.err
 
-[BUILDTIME] 3344 (5)
-[BUILDTIME] 3687 (9)
-[SIZE] 0.22 MB, 53 files
+[BUILDTIME] 2529 (5) ERROR
+[BUILDTIME] 2587 (9) ERROR
+[BUILDTIME] 2611 (5) ERROR
+[BUILDTIME] 2603 (9) ERROR
+[BUILDTIME] 2602 (5) ERROR
+[BUILDTIME] 2602 (9) ERROR
 
-[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev bash2
-[DEP] binutils bzip2 cairo cairo:dev coreutils cpan-xml-parser diffutils
-[DEP] esound esound:dev expat findutils freetype freetype:dev gawk gcc34
-[DEP] gcc34:dev gconf gconf:dev gettext glib glib:dev glibc23 glibc23:dev
-[DEP] gnome-blog gnome-keyring gnome-keyring:dev gnome-libs14 gnome-vfs
-[DEP] gnome-vfs:dev gnome14-dirtree gnome2-dirtree grep gtk+ gtk+:dev
-[DEP] libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui
-[DEP] libbonoboui:dev libglade libglade:dev libgnome libgnome:dev
-[DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev libjpeg
-[DEP] libjpeg:dev libpng libpng:dev libxml2 libxml2:dev linux26-header:dev
-[DEP] make mktemp net-tools openssl orbit2 orbit2:dev pango pango:dev
-[DEP] perl5 pkgconfig popt popt:dev rrdtool sed sysfiles tar util-linux
-[DEP] xorg xorg:dev zlib:dev
 
-[PROVIDES] drwright
+[5-ERROR] checking for dgettext in libc... yes
+[5-ERROR] checking for bind_textdomain_codeset... yes
+[5-ERROR] checking for msgfmt... /usr/bin/msgfmt
+[5-ERROR] checking for dcgettext... yes
+[5-ERROR] checking for gmsgfmt... /usr/bin/msgfmt
+[5-ERROR] checking for xgettext... /usr/bin/xgettext
+[5-ERROR] checking for catalogs to be installed...  de es fr it ru
+[5-ERROR] checking for gconftool-2... /opt/gnome2/bin/gconftool-2
+[5-ERROR] Using config source xml:merged:/etc/opt/gnome2/gconf/gconf.xml.defaults for schema installation
+[5-ERROR] Using $(sysconfdir)/gconf/schemas as install directory for schema files
+[5-ERROR] configure: creating ./config.status
+[5-ERROR] config.status: creating Makefile
+[5-ERROR] config.status: creating src/Makefile
+[5-ERROR] config.status: creating po/Makefile.in
+[5-ERROR] config.status: creating data/Makefile
+[5-ERROR] config.status: creating data/images/Makefile
+[5-ERROR] config.status: creating data/glade/Makefile
+[5-ERROR] config.status: creating drwright.spec
+[5-ERROR] config.status: creating config.h
+[5-ERROR] config.status: executing depfiles commands
+[5-ERROR] config.status: executing default-1 commands
+[5-ERROR] config.status: executing default-2 commands
+[5-ERROR] 
+[5-ERROR] D-BUS support: yes
+[5-ERROR] 
+[5-ERROR] make  all-recursive
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.drwright.1169092364.19239.905555977/drwright-0.18'
+[5-ERROR] Making all in src
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.drwright.1169092364.19239.905555977/drwright-0.18/src'
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -DGLADEDIR=\"/opt/gnome2/share/drwright\" -DIMAGEDIR=\"/opt/gnome2/share/drwright\" -DDBUS_API_SUBJECT_TO_CHANGE=1    -g -O2 -c dbus.c
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -DGLADEDIR=\"/opt/gnome2/share/drwright\" -DIMAGEDIR=\"/opt/gnome2/share/drwright\" -DDBUS_API_SUBJECT_TO_CHANGE=1    -g -O2 -c main.c
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -DGLADEDIR=\"/opt/gnome2/share/drwright\" -DIMAGEDIR=\"/opt/gnome2/share/drwright\" -DDBUS_API_SUBJECT_TO_CHANGE=1    -g -O2 -c drwright.c
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -DGLADEDIR=\"/opt/gnome2/share/drwright\" -DIMAGEDIR=\"/opt/gnome2/share/drwright\" -DDBUS_API_SUBJECT_TO_CHANGE=1    -g -O2 -c drw-break-window.c
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -DGLADEDIR=\"/opt/gnome2/share/drwright\" -DIMAGEDIR=\"/opt/gnome2/share/drwright\" -DDBUS_API_SUBJECT_TO_CHANGE=1    -g -O2 -c drw-utils.c
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -DGLADEDIR=\"/opt/gnome2/share/drwright\" -DIMAGEDIR=\"/opt/gnome2/share/drwright\" -DDBUS_API_SUBJECT_TO_CHANGE=1    -g -O2 -c drw-monitor.c
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -DGLADEDIR=\"/opt/gnome2/share/drwright\" -DIMAGEDIR=\"/opt/gnome2/share/drwright\" -DDBUS_API_SUBJECT_TO_CHANGE=1    -g -O2 -c drw-preferences.c
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -DGLADEDIR=\"/opt/gnome2/share/drwright\" -DIMAGEDIR=\"/opt/gnome2/share/drwright\" -DDBUS_API_SUBJECT_TO_CHANGE=1    -g -O2 -c eggtrayicon.c
+[5-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -DGLADEDIR=\"/opt/gnome2/share/drwright\" -DIMAGEDIR=\"/opt/gnome2/share/drwright\" -DDBUS_API_SUBJECT_TO_CHANGE=1    -g -O2 -c drw-selection.c
+[5-ERROR] /bin/sh ../libtool --mode=link --tag=CC gcc-40  -g -O2   -o drwright  dbus.o main.o drwright.o drw-break-window.o drw-utils.o drw-monitor.o drw-preferences.o eggtrayicon.o drw-selection.o -L/opt/gnome2/lib -L/usr/X11R7/lib -lglade-2.0 -lgnomeui-2 -lSM -lICE -lbonoboui-2 -lgnome-keyring -lxml2 -lz -lgnomecanvas-2 -lgnome-2 -lpopt -lart_lgpl_2 -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lpangocairo-1.0 -lpangoft2-1.0 -lcairo -lpango-1.0 -lbonobo-2 -lgnomevfs-2 -lORBitCosNaming-2 -lbonobo-activation -lgconf-2 -lgobject-2.0 -lORBit-2 -lm -lgmodule-2.0 -ldl -lgthread-2.0 -ldbus-glib-1 -ldbus-1 -lglib-2.0   -L/usr/X11R7/lib -lXss 
+[5-ERROR] mkdir .libs
+[5-ERROR] gcc-40 -g -O2 -o drwright dbus.o main.o drwright.o drw-break-window.o drw-utils.o drw-monitor.o drw-preferences.o eggtrayicon.o drw-selection.o  -L/opt/gnome2/lib -L/usr/X11R7/lib /opt/gnome2/lib/libglade-2.0.so /opt/gnome2/lib/libgnomeui-2.so -L/usr/lib /usr/lib/libjpeg.so /opt/gnome2/lib/libbonoboui-2.so /usr/X11R7/lib/libSM.so /usr/X11R7/lib/libICE.so /opt/gnome2/lib/libgnome-keyring.so /opt/gnome2/lib/libgnomecanvas-2.so /opt/gnome2/lib/libgnome-2.so /usr/lib/libesd.so /usr/lib/libasound.so -lpthread /usr/lib/libaudiofile.so /usr/lib/libpopt.so /usr/lib/libart_lgpl_2.so /opt/gnome2/lib/libgtk-x11-2.0.so /opt/gnome2/lib/libgdk-x11-2.0.so /opt/gnome2/lib/libatk-1.0.so /opt/gnome2/lib/libgdk_pixbuf-2.0.so /opt/gnome2/lib/libpangocairo-1.0.so /opt/gnome2/lib/libpangoft2-1.0.so /opt/gnome2/lib/libcairo.so /usr/lib/libfontconfig.so /usr/lib/libfreetype.so /usr/lib/libexpat.so /usr/lib/libpng12.so /usr/X11R7/lib/libXrender.so /opt/gnome2/lib/libpango-1.0.so /opt/gnome2/lib/libbonobo-2.so /opt/gnome2/lib/libgnomevfs-2.so /usr/lib/libxml2.so -lz -lssl -lcrypto -lresolv -lutil /opt/gnome2/lib/libbonobo-activation.so /opt/gnome2/lib/libORBitCosNaming-2.so /opt/gnome2/lib/libgconf-2.so /opt/gnome2/lib/libORBit-2.so -lm /opt/gnome2/lib/libgmodule-2.0.so /opt/gnome2/lib/libgthread-2.0.so /usr/lib/libdbus-glib-1.so /opt/gnome2/lib/libgobject-2.0.so /usr/lib/libdbus-1.so -lnsl /opt/gnome2/lib/libglib-2.0.so -lrt /usr/X11R7/lib/libXss.so /usr/X11R7/lib/libXext.so /usr/X11R7/lib/libX11.so /usr/X11R7/lib/libXdmcp.so -ldl /usr/X11R7/lib/libXau.so -Wl,--rpath -Wl,/usr/X11R7/lib -Wl,--rpath -Wl,/usr/X11R7/lib
+[5-ERROR] dbus.o: In function `dbus_init_service':
+[5-ERROR] dbus.c:(.text+0x70): undefined reference to `dbus_bus_acquire_service'
+[5-ERROR] collect2: ld returned 1 exit status
+[5-ERROR] make[2]: *** [drwright] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.drwright.1169092364.19239.905555977/drwright-0.18/src'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.drwright.1169092364.19239.905555977/drwright-0.18'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] checking for dgettext in libc... yes
+[9-ERROR] checking for bind_textdomain_codeset... yes
+[9-ERROR] checking for msgfmt... /usr/bin/msgfmt
+[9-ERROR] checking for dcgettext... yes
+[9-ERROR] checking for gmsgfmt... /usr/bin/msgfmt
+[9-ERROR] checking for xgettext... /usr/bin/xgettext
+[9-ERROR] checking for catalogs to be installed...  de es fr it ru
+[9-ERROR] checking for gconftool-2... /opt/gnome2/bin/gconftool-2
+[9-ERROR] Using config source xml:merged:/etc/opt/gnome2/gconf/gconf.xml.defaults for schema installation
+[9-ERROR] Using $(sysconfdir)/gconf/schemas as install directory for schema files
+[9-ERROR] configure: creating ./config.status
+[9-ERROR] config.status: creating Makefile
+[9-ERROR] config.status: creating src/Makefile
+[9-ERROR] config.status: creating po/Makefile.in
+[9-ERROR] config.status: creating data/Makefile
+[9-ERROR] config.status: creating data/images/Makefile
+[9-ERROR] config.status: creating data/glade/Makefile
+[9-ERROR] config.status: creating drwright.spec
+[9-ERROR] config.status: creating config.h
+[9-ERROR] config.status: executing depfiles commands
+[9-ERROR] config.status: executing default-1 commands
+[9-ERROR] config.status: executing default-2 commands
+[9-ERROR] 
+[9-ERROR] D-BUS support: yes
+[9-ERROR] 
+[9-ERROR] make  all-recursive
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.drwright.1169149133.10927.453632617/drwright-0.18'
+[9-ERROR] Making all in src
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.drwright.1169149133.10927.453632617/drwright-0.18/src'
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -DGLADEDIR=\"/opt/gnome2/share/drwright\" -DIMAGEDIR=\"/opt/gnome2/share/drwright\" -DDBUS_API_SUBJECT_TO_CHANGE=1    -g -O2 -c dbus.c
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -DGLADEDIR=\"/opt/gnome2/share/drwright\" -DIMAGEDIR=\"/opt/gnome2/share/drwright\" -DDBUS_API_SUBJECT_TO_CHANGE=1    -g -O2 -c main.c
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -DGLADEDIR=\"/opt/gnome2/share/drwright\" -DIMAGEDIR=\"/opt/gnome2/share/drwright\" -DDBUS_API_SUBJECT_TO_CHANGE=1    -g -O2 -c drwright.c
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -DGLADEDIR=\"/opt/gnome2/share/drwright\" -DIMAGEDIR=\"/opt/gnome2/share/drwright\" -DDBUS_API_SUBJECT_TO_CHANGE=1    -g -O2 -c drw-break-window.c
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -DGLADEDIR=\"/opt/gnome2/share/drwright\" -DIMAGEDIR=\"/opt/gnome2/share/drwright\" -DDBUS_API_SUBJECT_TO_CHANGE=1    -g -O2 -c drw-utils.c
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -DGLADEDIR=\"/opt/gnome2/share/drwright\" -DIMAGEDIR=\"/opt/gnome2/share/drwright\" -DDBUS_API_SUBJECT_TO_CHANGE=1    -g -O2 -c drw-monitor.c
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -DGLADEDIR=\"/opt/gnome2/share/drwright\" -DIMAGEDIR=\"/opt/gnome2/share/drwright\" -DDBUS_API_SUBJECT_TO_CHANGE=1    -g -O2 -c drw-preferences.c
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -DGLADEDIR=\"/opt/gnome2/share/drwright\" -DIMAGEDIR=\"/opt/gnome2/share/drwright\" -DDBUS_API_SUBJECT_TO_CHANGE=1    -g -O2 -c eggtrayicon.c
+[9-ERROR] gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/libart-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libglade-2.0 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -DGLADEDIR=\"/opt/gnome2/share/drwright\" -DIMAGEDIR=\"/opt/gnome2/share/drwright\" -DDBUS_API_SUBJECT_TO_CHANGE=1    -g -O2 -c drw-selection.c
+[9-ERROR] /bin/sh ../libtool --mode=link --tag=CC gcc-40  -g -O2   -o drwright  dbus.o main.o drwright.o drw-break-window.o drw-utils.o drw-monitor.o drw-preferences.o eggtrayicon.o drw-selection.o -L/opt/gnome2/lib -L/usr/X11R7/lib -lglade-2.0 -lgnomeui-2 -lSM -lICE -lbonoboui-2 -lgnome-keyring -lxml2 -lz -lgnomecanvas-2 -lgnome-2 -lpopt -lart_lgpl_2 -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lpangocairo-1.0 -lpangoft2-1.0 -lcairo -lpango-1.0 -lbonobo-2 -lgnomevfs-2 -lORBitCosNaming-2 -lbonobo-activation -lgconf-2 -lgobject-2.0 -lORBit-2 -lm -lgmodule-2.0 -ldl -lgthread-2.0 -ldbus-glib-1 -ldbus-1 -lglib-2.0   -L/usr/X11R7/lib -lXss 
+[9-ERROR] mkdir .libs
+[9-ERROR] gcc-40 -g -O2 -o drwright dbus.o main.o drwright.o drw-break-window.o drw-utils.o drw-monitor.o drw-preferences.o eggtrayicon.o drw-selection.o  -L/opt/gnome2/lib -L/usr/X11R7/lib /opt/gnome2/lib/libglade-2.0.so /opt/gnome2/lib/libgnomeui-2.so -L/usr/lib /usr/lib/libjpeg.so /opt/gnome2/lib/libbonoboui-2.so /usr/X11R7/lib/libSM.so /usr/X11R7/lib/libICE.so /opt/gnome2/lib/libgnome-keyring.so /opt/gnome2/lib/libgnomecanvas-2.so /opt/gnome2/lib/libgnome-2.so /usr/lib/libesd.so /usr/lib/libasound.so -lpthread /usr/lib/libaudiofile.so /usr/lib/libpopt.so /usr/lib/libart_lgpl_2.so /opt/gnome2/lib/libgtk-x11-2.0.so /opt/gnome2/lib/libgdk-x11-2.0.so /opt/gnome2/lib/libatk-1.0.so /opt/gnome2/lib/libgdk_pixbuf-2.0.so /opt/gnome2/lib/libpangocairo-1.0.so /opt/gnome2/lib/libpangoft2-1.0.so /opt/gnome2/lib/libcairo.so /usr/lib/libfontconfig.so /usr/lib/libfreetype.so /usr/lib/libexpat.so /usr/lib/libpng12.so /usr/X11R7/lib/libXrender.so /opt/gnome2/lib/libpango-1.0.so /opt/gnome2/lib/libbonobo-2.so /opt/gnome2/lib/libgnomevfs-2.so /usr/lib/libxml2.so -lz -lssl -lcrypto -lresolv -lutil /opt/gnome2/lib/libbonobo-activation.so /opt/gnome2/lib/libORBitCosNaming-2.so /opt/gnome2/lib/libgconf-2.so /opt/gnome2/lib/libORBit-2.so -lm /opt/gnome2/lib/libgmodule-2.0.so /opt/gnome2/lib/libgthread-2.0.so /usr/lib/libdbus-glib-1.so /opt/gnome2/lib/libgobject-2.0.so /usr/lib/libdbus-1.so -lnsl /opt/gnome2/lib/libglib-2.0.so -lrt /usr/X11R7/lib/libXss.so /usr/X11R7/lib/libXext.so /usr/X11R7/lib/libX11.so /usr/X11R7/lib/libXdmcp.so -ldl /usr/X11R7/lib/libXau.so -Wl,--rpath -Wl,/usr/X11R7/lib -Wl,--rpath -Wl,/usr/X11R7/lib
+[9-ERROR] dbus.o: In function `dbus_init_service':
+[9-ERROR] dbus.c:(.text+0x70): undefined reference to `dbus_bus_acquire_service'
+[9-ERROR] collect2: ld returned 1 exit status
+[9-ERROR] make[2]: *** [drwright] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.drwright.1169149133.10927.453632617/drwright-0.18/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.drwright.1169149133.10927.453632617/drwright-0.18'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

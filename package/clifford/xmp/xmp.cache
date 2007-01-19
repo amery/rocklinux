@@ -20,23 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142554302 Fri Mar 17 01:11:42 2006 (5)
-[TIMESTAMP] 1142812744 Mon Mar 20 00:59:04 2006 (9)
+[TIMESTAMP] 1168623759 Fri Jan 12 18:42:39 2007 (5)
+[TIMESTAMP] 1168827579 Mon Jan 15 03:19:39 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-xmp.log 9-xmp.log
 
-[BUILDTIME] 2914 (5)
-[BUILDTIME] 3313 (9)
+[BUILDTIME] 3035 (5)
+[BUILDTIME] 3365 (9)
 [SIZE] 0.29 MB, 11 files
 
-[DEP] 00-dirtree alsa alsa:dev arts arts:dev audiofile audiofile:dev bash2
-[DEP] binutils bzip2 coreutils diffutils esound esound:dev findutils gcc34
-[DEP] gcc34:dev glib12:dev glibc23 glibc23:dev gnome14-dirtree grep gtk+12
-[DEP] gtk+12:dev linux26-header:dev make mktemp net-tools patch rrdtool
-[DEP] sed sysfiles tar xmms xmms:dev xorg xorg:dev
+[DEP] 00-dirtree alsa alsa:dev applewmproto applewmproto:dev arts
+[DEP] arts:dev audiofile audiofile:dev bash2 binutils bzip2 coreutils cvm
+[DEP] diffutils esound esound:dev findutils gawk gcc40 gcc40:dev glib
+[DEP] glib12:dev glibc23 glibc23:dev gnome14-dirtree gnome2-dirtree
+[DEP] grep gtk+12 gtk+12:dev imake libice libx11 libx11:dev libxt
+[DEP] linux-libc-headers:dev make mktemp net-tools netpbm patch rrdtool
+[DEP] sed sysfiles tar twoftpd ucspi-unix xmms xmms:dev xorg-cf-files
+[DEP] xproto:dev
 
 [PROVIDES] xmp-plugin.so
 

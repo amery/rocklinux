@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142471649 Thu Mar 16 02:14:09 2006 (5)
-[TIMESTAMP] 1142716331 Sat Mar 18 22:12:11 2006 (9)
+[TIMESTAMP] 1168551817 Thu Jan 11 22:43:37 2007 (5)
+[TIMESTAMP] 1168747983 Sun Jan 14 05:13:03 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-libxml2.log 9-libxml2.log
 
-[BUILDTIME] 15996 (5)
-[BUILDTIME] 16903 (9)
-[SIZE] 4.20 MB, 79 files
+[BUILDTIME] 18127 (5)
+[BUILDTIME] 18943 (9)
+[SIZE] 4.18 MB, 78 files
 
-[DEP] 00-dirtree bash2 binutils binutils:dev bzip2 coreutils
-[DEP] diffutils findutils gawk gcc34 gcc34:dev glibc23 glibc23:dev grep
-[DEP] linux26-header:dev make mktemp net-tools python python:dev rrdtool
-[DEP] sed sysfiles tar util-linux zlib:dev
+[DEP] 00-dirtree bash2 binutils binutils:dev bzip2 coreutils cvm diffutils
+[DEP] docbookx findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev grep
+[DEP] libxslt linux-libc-headers:dev make mktemp net-tools netpbm python
+[DEP] python:dev rrdtool sed sysfiles tar twoftpd ucspi-unix util-linux
+[DEP] zlib zlib:dev
 
 [PROVIDES] libxml2.a libxml2.so libxml2mod.a libxml2mod.so xml2-config
 [PROVIDES] xmlcatalog xmllint

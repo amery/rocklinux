@@ -20,27 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142635019 Fri Mar 17 23:36:59 2006 (5)
-[TIMESTAMP] 1142903563 Tue Mar 21 02:12:43 2006 (9)
+[TIMESTAMP] 1168684008 Sat Jan 13 11:26:48 2007 (5) ERROR
+[TIMESTAMP] 1168893000 Mon Jan 15 21:30:00 2007 (9) ERROR
+[TIMESTAMP] 1168952378 Tue Jan 16 13:59:38 2007 (5) ERROR
+[TIMESTAMP] 1168982069 Tue Jan 16 22:14:29 2007 (9) ERROR
+[TIMESTAMP] 1169122695 Thu Jan 18 13:18:15 2007 (5) ERROR
+[TIMESTAMP] 1169152273 Thu Jan 18 21:31:13 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-deva.log 9-deva.log
+[LOGS] 5-deva.err 9-deva.err
 
-[BUILDTIME] 7809 (5)
-[BUILDTIME] 8113 (9)
-[SIZE] 2.60 MB, 209 files
+[BUILDTIME] 1230 (5) ERROR
+[BUILDTIME] 1218 (9) ERROR
+[BUILDTIME] 1248 (5) ERROR
+[BUILDTIME] 1244 (9) ERROR
+[BUILDTIME] 1250 (5) ERROR
+[BUILDTIME] 1255 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils coreutils cpio findutils gawk gcc34
-[DEP] gcc34:dev glibc23 glibc23:dev grep gzip linux26-header:dev make
-[DEP] maverik mktemp ncurses:dev patch perl5 readline readline:dev rpm
-[DEP] rrdtool sed sysfiles tar xorg
 
-[PROVIDES] DEVA_CRCtest DEVA_client DEVA_dictionaryTest DEVA_listTest
-[PROVIDES] DEVA_msgTest DEVA_nameTest DEVA_paramsTest DEVA_pathTest
-[PROVIDES] DEVA_server DEVA_threadListTest dcmd deva_bash_functions
-[PROVIDES] deva_gpanel_kill deva_gpanel_start devad devag devalite
-[PROVIDES] dpp libdeva_client.so libdeva_comms.so libdeva_kernel.so
-[PROVIDES] libdeva_server.so libdeva_viewer.so testscript
+[5-ERROR] g++ -Wno-deprecated -I/ROCK/src.deva.1169122682.18325.2270576875/Deva/incl -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math -DTRC=0 -c DEVA_stats.cxx
+[5-ERROR] g++ -Wno-deprecated -I/ROCK/src.deva.1169122682.18325.2270576875/Deva/incl -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math -DTRC=0 -c DEVA_lock.cxx
+[5-ERROR] g++ -Wno-deprecated -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math -shared -o /ROCK/src.deva.1169122682.18325.2270576875/Deva/lib/libdeva_kernel.so DEVA_threadList.o DEVA_traceString.o DEVA_tracer.o DEVA_utils.o DEVA_stats.o DEVA_lock.o -ldl
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.deva.1169122682.18325.2270576875/Deva/src/kernel'
+[5-ERROR] cd comms; make
+[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.deva.1169122682.18325.2270576875/Deva/src/comms'
+[5-ERROR] g++ -Wno-deprecated -I../../incl -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math -c DEVA_nameEntry.cxx
+[5-ERROR] ../../incl/comms/DEVA_connectionEntry.hxx:23: error: expected ',' or '...' before '&' token
+[5-ERROR] ../../incl/comms/DEVA_connectionEntry.hxx:23: error: ISO C++ forbids declaration of 'DEVA_connectionEntry' with no type
+[5-ERROR] DEVA_nameEntry.cxx: In function 'std::ostream& operator<<(std::ostream&, const DEVA_nameEntry&)':
+[5-ERROR] DEVA_nameEntry.cxx:75: error: ambiguous overload for 'operator<<' in 'std::operator<< [with _CharT = char, _Traits = std::char_traits<char>](((std::basic_ostream<char, std::char_traits<char> >&)(+ std::operator<< [with _Traits = std::char_traits<char>](((std::basic_ostream<char, std::char_traits<char> >&)(+ std::operator<< [with _Traits = std::char_traits<char>](((std::basic_ostream<char, std::char_traits<char> >&)(+ std::operator<< [with _CharT = char, _Traits = std::char_traits<char>](((std::basic_ostream<char, std::char_traits<char> >&)(+ std::operator<< [with _Traits = std::char_traits<char>](((std::basic_ostream<char, std::char_traits<char> >&)(+ os)), ((const char*)"name= ")))), std::setw(10)))), ((const char*)ne->DEVA_nameEntry::name)))), ((const char*)"   pid= ")))), std::setw(4)) << ne->DEVA_nameEntry::pid'
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:67: note: candidates are: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>& (*)(std::basic_ostream<_CharT, _Traits>&)) [with _CharT = char, _Traits = std::char_traits<char>] <near match>
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:78: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ios<_CharT, _Traits>& (*)(std::basic_ios<_CharT, _Traits>&)) [with _CharT = char, _Traits = std::char_traits<char>] <near match>
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:90: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char, _Traits = std::char_traits<char>] <near match>
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:125: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char, _Traits = std::char_traits<char>]
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:159: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:102: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char, _Traits = std::char_traits<char>]
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:176: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char, _Traits = std::char_traits<char>]
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:187: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:191: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char, _Traits = std::char_traits<char>]
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:202: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:183: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char, _Traits = std::char_traits<char>]
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:218: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:242: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char, _Traits = std::char_traits<char>]
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:217: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char, _Traits = std::char_traits<char>]
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:265: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char, _Traits = std::char_traits<char>]
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:288: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char, _Traits = std::char_traits<char>] <near match>
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:311: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_streambuf<_CharT, _Traits>*) [with _CharT = char, _Traits = std::char_traits<char>] <near match>
+[5-ERROR] ../../incl/kernel/DEVA_lock.hxx:15: note:                 std::ostream& operator<<(std::ostream&, const DEVA_lock&) <near match>
+[5-ERROR] ../../incl/kernel/DEVA_stats.hxx:13: note:                 std::ostream& operator<<(std::ostream&, const DEVA_statsHistogramEntry&) <near match>
+[5-ERROR] ../../incl/kernel/DEVA_stats.hxx:47: note:                 std::ostream& operator<<(std::ostream&, const DEVA_statsInt&)
+[5-ERROR] DEVA_nameEntry.cxx:71: note:                 std::ostream& operator<<(std::ostream&, const DEVA_nameEntry&) <near match>
+[5-ERROR] ../../incl/comms/DEVA_name.hxx:16: note:                 std::ostream& operator<<(std::ostream&, const DEVA_name&) <near match>
+[5-ERROR] ../../incl/comms/DEVA_connectionEntry.hxx:23: note:                 std::ostream& operator<<(std::ostream&, int)
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:502: note:                 std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*) [with _Traits = std::char_traits<char>] <near match>
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:497: note:                 std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*) [with _Traits = std::char_traits<char>] <near match>
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:616: note:                 std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*) [with _Traits = std::char_traits<char>] <near match>
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:571: note:                 std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*) [with _CharT = char, _Traits = std::char_traits<char>] <near match>
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:463: note:                 std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char) [with _Traits = std::char_traits<char>]
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:458: note:                 std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char) [with _Traits = std::char_traits<char>]
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:509: note:                 std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char) [with _Traits = std::char_traits<char>]
+[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:447: note:                 std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char) [with _CharT = char, _Traits = std::char_traits<char>]
+[5-ERROR] make[3]: *** [DEVA_nameEntry.o] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.deva.1169122682.18325.2270576875/Deva/src/comms'
+[5-ERROR] make[2]: *** [all] Error 2
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.deva.1169122682.18325.2270576875/Deva/src'
+[5-ERROR] make[1]: *** [libs] Error 2
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.deva.1169122682.18325.2270576875/Deva'
+[5-ERROR] make: *** [plat] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] g++ -Wno-deprecated -I/ROCK/src.deva.1169152260.8630.1667074915/Deva/incl -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math -DTRC=0 -c DEVA_stats.cxx
+[9-ERROR] g++ -Wno-deprecated -I/ROCK/src.deva.1169152260.8630.1667074915/Deva/incl -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math -DTRC=0 -c DEVA_lock.cxx
+[9-ERROR] g++ -Wno-deprecated -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math -shared -o /ROCK/src.deva.1169152260.8630.1667074915/Deva/lib/libdeva_kernel.so DEVA_threadList.o DEVA_traceString.o DEVA_tracer.o DEVA_utils.o DEVA_stats.o DEVA_lock.o -ldl
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.deva.1169152260.8630.1667074915/Deva/src/kernel'
+[9-ERROR] cd comms; make
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.deva.1169152260.8630.1667074915/Deva/src/comms'
+[9-ERROR] g++ -Wno-deprecated -I../../incl -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math -c DEVA_nameEntry.cxx
+[9-ERROR] ../../incl/comms/DEVA_connectionEntry.hxx:23: error: expected ',' or '...' before '&' token
+[9-ERROR] ../../incl/comms/DEVA_connectionEntry.hxx:23: error: ISO C++ forbids declaration of 'DEVA_connectionEntry' with no type
+[9-ERROR] DEVA_nameEntry.cxx: In function 'std::ostream& operator<<(std::ostream&, const DEVA_nameEntry&)':
+[9-ERROR] DEVA_nameEntry.cxx:75: error: ambiguous overload for 'operator<<' in 'std::operator<< [with _CharT = char, _Traits = std::char_traits<char>](((std::basic_ostream<char, std::char_traits<char> >&)(+ std::operator<< [with _Traits = std::char_traits<char>](((std::basic_ostream<char, std::char_traits<char> >&)(+ std::operator<< [with _Traits = std::char_traits<char>](((std::basic_ostream<char, std::char_traits<char> >&)(+ std::operator<< [with _CharT = char, _Traits = std::char_traits<char>](((std::basic_ostream<char, std::char_traits<char> >&)(+ std::operator<< [with _Traits = std::char_traits<char>](((std::basic_ostream<char, std::char_traits<char> >&)(+ os)), ((const char*)"name= ")))), std::setw(10)))), ((const char*)ne->DEVA_nameEntry::name)))), ((const char*)"   pid= ")))), std::setw(4)) << ne->DEVA_nameEntry::pid'
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:67: note: candidates are: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>& (*)(std::basic_ostream<_CharT, _Traits>&)) [with _CharT = char, _Traits = std::char_traits<char>] <near match>
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:78: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ios<_CharT, _Traits>& (*)(std::basic_ios<_CharT, _Traits>&)) [with _CharT = char, _Traits = std::char_traits<char>] <near match>
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:90: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char, _Traits = std::char_traits<char>] <near match>
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:125: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char, _Traits = std::char_traits<char>]
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:159: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:102: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char, _Traits = std::char_traits<char>]
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:176: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char, _Traits = std::char_traits<char>]
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:187: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:191: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char, _Traits = std::char_traits<char>]
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:202: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:183: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char, _Traits = std::char_traits<char>]
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:218: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:242: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char, _Traits = std::char_traits<char>]
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:217: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char, _Traits = std::char_traits<char>]
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:265: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char, _Traits = std::char_traits<char>]
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:288: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char, _Traits = std::char_traits<char>] <near match>
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:311: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_streambuf<_CharT, _Traits>*) [with _CharT = char, _Traits = std::char_traits<char>] <near match>
+[9-ERROR] ../../incl/kernel/DEVA_lock.hxx:15: note:                 std::ostream& operator<<(std::ostream&, const DEVA_lock&) <near match>
+[9-ERROR] ../../incl/kernel/DEVA_stats.hxx:13: note:                 std::ostream& operator<<(std::ostream&, const DEVA_statsHistogramEntry&) <near match>
+[9-ERROR] ../../incl/kernel/DEVA_stats.hxx:47: note:                 std::ostream& operator<<(std::ostream&, const DEVA_statsInt&)
+[9-ERROR] DEVA_nameEntry.cxx:71: note:                 std::ostream& operator<<(std::ostream&, const DEVA_nameEntry&) <near match>
+[9-ERROR] ../../incl/comms/DEVA_name.hxx:16: note:                 std::ostream& operator<<(std::ostream&, const DEVA_name&) <near match>
+[9-ERROR] ../../incl/comms/DEVA_connectionEntry.hxx:23: note:                 std::ostream& operator<<(std::ostream&, int)
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:502: note:                 std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*) [with _Traits = std::char_traits<char>] <near match>
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:497: note:                 std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*) [with _Traits = std::char_traits<char>] <near match>
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:616: note:                 std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*) [with _Traits = std::char_traits<char>] <near match>
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:571: note:                 std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*) [with _CharT = char, _Traits = std::char_traits<char>] <near match>
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:463: note:                 std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char) [with _Traits = std::char_traits<char>]
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:458: note:                 std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char) [with _Traits = std::char_traits<char>]
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:509: note:                 std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char) [with _Traits = std::char_traits<char>]
+[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:447: note:                 std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char) [with _CharT = char, _Traits = std::char_traits<char>]
+[9-ERROR] make[3]: *** [DEVA_nameEntry.o] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.deva.1169152260.8630.1667074915/Deva/src/comms'
+[9-ERROR] make[2]: *** [all] Error 2
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.deva.1169152260.8630.1667074915/Deva/src'
+[9-ERROR] make[1]: *** [libs] Error 2
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.deva.1169152260.8630.1667074915/Deva'
+[9-ERROR] make: *** [plat] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

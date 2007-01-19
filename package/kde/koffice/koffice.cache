@@ -20,59 +20,88 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142600644 Fri Mar 17 14:04:04 2006 (5)
-[TIMESTAMP] 1142866184 Mon Mar 20 15:49:44 2006 (9)
+[TIMESTAMP] 1168660080 Sat Jan 13 04:48:00 2007 (5)
+[TIMESTAMP] 1168866992 Mon Jan 15 14:16:32 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-koffice.log 9-koffice.log
 
-[BUILDTIME] 617037 (5)
-[BUILDTIME] 623239 (9)
-[SIZE] 50.17 MB, 3728 files
+[BUILDTIME] 867919 (5)
+[BUILDTIME] 873067 (9)
+[SIZE] 62.48 MB, 4394 files
 
-[DEP] 00-dirtree acl acl:dev alsa alsa:dev arts arts:dev attr attr:dev
-[DEP] audiofile audiofile:dev bash2 binutils bzip2 bzip2:dev coreutils
-[DEP] diffutils esound esound:dev expat fam fam:dev findutils freetype
-[DEP] freetype:dev gawk gcc34 gcc34:dev gettext glib glib:dev glibc23
-[DEP] glibc23:dev gnome-libs14 gnome14-dirtree gnome2-dirtree grep
-[DEP] imagemagick imagemagick:dev jack jack:dev kdebase kdebindings:dev
-[DEP] kdegames kdelibs kdelibs:dev kdeutils koffice-l10n-de lcms lcms:dev
-[DEP] libart_lgpl23 libart_lgpl23:dev libgsf libgsf:dev libidn libidn:dev
-[DEP] libjpeg libjpeg:dev libpng libpng:dev libtiff libtiff:dev libxml2
-[DEP] libxml2:dev libxslt libxslt:dev linux26-header:dev mad mad:dev
-[DEP] make mktemp mysql mysql:dev nas ncurses:dev net-tools nx-x11
-[DEP] nx-x11:dev nxcomp ogg-vorbis ogg-vorbis:dev openssl patch pcre
-[DEP] pcre:dev perl5 pkgconfig python python:dev qt33 qt33:dev readline
-[DEP] readline:dev rrdtool sed sysfiles tar tcl tk util-linux wv2 wv2:dev
-[DEP] xorg xorg:dev zlib:dev
+[DEP] 00-dirtree acl acl:dev alsa alsa:dev applewmproto applewmproto:dev
+[DEP] arts arts:dev attr attr:dev audiofile audiofile:dev bash2 binutils
+[DEP] bzip2 bzip2:dev cairo cairo:dev coreutils cups cvm diffutils
+[DEP] encodings esound esound:dev expat expat:dev fam fam:dev findutils
+[DEP] font-util fontconfig fontconfig:dev freetype freetype:dev gawk gcc40
+[DEP] gcc40:dev gettext glib glib:dev glibc23 glibc23:dev gnome-libs14
+[DEP] gnome14-dirtree gnome2-dirtree grep hicolor-icon-theme imagemagick
+[DEP] imagemagick:dev imake inputproto:dev kdebase kdegames kdelibs
+[DEP] kdelibs:dev kdesdk:dev kdeutils koffice-l10n-de lcms lcms:dev
+[DEP] libart_lgpl23 libart_lgpl23:dev libexif libexif:dev libgsf libgsf:dev
+[DEP] libice libice:dev libidn libidn:dev libjpeg libjpeg:dev libpng
+[DEP] libpng:dev libsm libsm:dev libtiff libtiff:dev libx11 libx11:dev
+[DEP] libxau libxau:dev libxcursor libxcursor:dev libxdmcp libxdmcp:dev
+[DEP] libxext libxext:dev libxfixes libxfixes:dev libxft libxft:dev libxi
+[DEP] libxi:dev libxinerama libxinerama:dev libxml2 libxml2:dev libxmu
+[DEP] libxmu:dev libxrandr libxrandr:dev libxrender libxrender:dev libxslt
+[DEP] libxslt:dev libxt libxt:dev linux-libc-headers:dev mad mad:dev make
+[DEP] mesalib mesalib:dev mkfontdir mkfontscale mktemp mysql41 mysql41:dev
+[DEP] mysql50 mysql50:dev nas ncurses net-tools nx-x11 nx-x11:dev nxcomp
+[DEP] ogg-vorbis ogg-vorbis:dev openexr openexr:dev openssl pcre pcre:dev
+[DEP] perl5 pkgconfig poppler poppler:dev postgresql python python:dev
+[DEP] qt33 qt33:dev readline readline:dev rrdtool ruby sed sysfiles tar
+[DEP] tcl tk util-linux wv2 wv2:dev xextproto:dev xorg-cf-files xproto:dev
+[DEP] zlib zlib:dev
 
-[PROVIDES] clipartthumbnail.so containers.so karbon karbon.so
+[PROVIDES] clipartthumbnail.so karbon karbon.so karbon_defaulttools.so
 [PROVIDES] karbon_flattenpathplugin.so karbon_imagetoolplugin.so
 [PROVIDES] karbon_insertknotsplugin.so karbon_roundcornersplugin.so
 [PROVIDES] karbon_shadoweffectplugin.so karbon_whirlpinchplugin.so
 [PROVIDES] karbon_zoomtoolplugin.so kchart kchart.so kexi
 [PROVIDES] kexi.so kexidb_mysqldriver.so kexidb_sqlite2driver.so
-[PROVIDES] kexidb_sqlite3driver.so kexidbwidgets.so kexihandler_form.so
-[PROVIDES] kexihandler_migration.so kexihandler_query.so
-[PROVIDES] kexihandler_relation.so kexihandler_script.so
-[PROVIDES] kexihandler_table.so keximigrate_mysql.so keximigratetest
-[PROVIDES] kfile_koffice.so kfile_ooo.so kformdesigner kformula
-[PROVIDES] kformula.so kivio kivio.so koconverter kodocinfopropspage.so
-[PROVIDES] kofficescan.so kofficethumbnail.so koscript koshell
-[PROVIDES] koshell.so kprconverter.pl kpresenter kpresenter.so
-[PROVIDES] krita krita.so kritacimg.so kritacolorrange.so
-[PROVIDES] kritacolorsfilters.so kritacolorspaceconversion.so
-[PROVIDES] kritaconvolutionfilters.so kritadefaultpaintops.so
-[PROVIDES] kritadefaulttools.so kritaembossfilter.so kritaexample.so
-[PROVIDES] kritagrayplugin.so kritahistogram.so kritaimagesize.so
-[PROVIDES] kritaoilpaintfilter.so kritaraindropsfilter.so kritargbplugin.so
-[PROVIDES] kritarotateimage.so kritascreenshot.so kritaselectiontools.so
-[PROVIDES] kritashearimage.so kritatoolcrop.so kritatoolfilter.so
-[PROVIDES] kritatoolpolygon.so kritatoolpolyline.so kritatoolstar.so
-[PROVIDES] kritatooltransform.so kspread kspread.so ksqlite
-[PROVIDES] ksqlite2 ksqlite2to3 kthesaurus kthesaurus.so kudesigner
+[PROVIDES] kexidb_sqlite3driver.so kexihandler_csv_importexport.so
+[PROVIDES] kexihandler_form.so kexihandler_migration.so
+[PROVIDES] kexihandler_query.so kexihandler_relation.so
+[PROVIDES] kexihandler_script.so kexihandler_table.so keximigrate_mysql.so
+[PROVIDES] kfile_abiword.so kfile_gnumeric.so kfile_koffice.so kfile_ooo.so
+[PROVIDES] kformdesigner_containers.so kformdesigner_kexidbwidgets.so
+[PROVIDES] kformdesigner_stdwidgets.so kformula kformula.so kivio
+[PROVIDES] kivio.so koconverter kodocinfopropspage.so kofficescan.so
+[PROVIDES] kofficethumbnail.so koshell koshell.so kplato kplato.so
+[PROVIDES] kprconverter.pl kpresenter kpresenter.so krita krita.so
+[PROVIDES] krita_cmyk_u16_plugin.so krita_gray_u16_plugin.so
+[PROVIDES] krita_lms_f32_plugin.so krita_rgb_f16half_plugin.so
+[PROVIDES] krita_rgb_f32_plugin.so krita_rgb_u16_plugin.so
+[PROVIDES] krita_ycbcr_u16_plugin.so krita_ycbcr_u8_plugin.so
+[PROVIDES] kritablurfilter.so kritabumpmap.so kritacimg.so
+[PROVIDES] kritacmykplugin.so kritacolorrange.so kritacolorsfilters.so
+[PROVIDES] kritacolorspaceconversion.so kritaconvolutionfilters.so
+[PROVIDES] kritadefaultpaintops.so kritadefaulttools.so
+[PROVIDES] kritadropshadow.so kritaembossfilter.so kritaexample.so
+[PROVIDES] kritaextensioncolorsfilters.so kritafastcolortransfer.so
+[PROVIDES] kritafiltersgallery.so kritagrayplugin.so kritahistogram.so
+[PROVIDES] kritahistogramdocker.so kritaimageenhancement.so
+[PROVIDES] kritaimagesize.so kritalenscorrectionfilter.so
+[PROVIDES] kritamodifyselection.so kritanoisefilter.so
+[PROVIDES] kritaoilpaintfilter.so kritapixelizefilter.so
+[PROVIDES] kritaraindropsfilter.so kritarandompickfilter.so
+[PROVIDES] kritargbplugin.so kritarotateimage.so kritaroundcornersfilter.so
+[PROVIDES] kritascreenshot.so kritascripting.so kritaselectiontools.so
+[PROVIDES] kritaseparatechannels.so kritashearimage.so
+[PROVIDES] kritasmalltilesfilter.so kritasobelfilter.so
+[PROVIDES] kritasubstrate.so kritatoolcrop.so kritatoolcurves.so
+[PROVIDES] kritatoolfilter.so kritatoolperspectivegrid.so
+[PROVIDES] kritatoolperspectivetransform.so kritatoolpolygon.so
+[PROVIDES] kritatoolpolyline.so kritatoolselectsimilar.so kritatoolstar.so
+[PROVIDES] kritatooltransform.so kritaunsharpfilter.so kritawavefilter.so
+[PROVIDES] kritawetplugin.so krosskexiapp.so krosskexidb.so
+[PROVIDES] krosskritacore.so krosskspreadcore.so krosspython.so
+[PROVIDES] krossruby.so krossrunner kspread kspread.so kspreadscripting.so
+[PROVIDES] ksqlite ksqlite2 ksqlite2to3 kthesaurus kthesaurus.so kudesigner
 [PROVIDES] kudesigner.so kugar kugar.so kwmailmerge_classic.so
 [PROVIDES] kwmailmerge_kabc.so kwmailmerge_kspread.so
 [PROVIDES] kwmailmerge_qtsqldb.so kwmailmerge_qtsqldb_power.so
@@ -81,45 +110,63 @@
 [PROVIDES] libapplixwordimport.so libasciiexport.so libasciiimport.so
 [PROVIDES] libcsvexport.so libcsvimport.so libdbaseimport.so
 [PROVIDES] libdocbookexport.so libexcelimport.so libgenerickofilter.so
-[PROVIDES] libgnumericexport.so libgnumericimport.so libhtmlexport.so
-[PROVIDES] libhtmlimport.so libkarbonaiimport.so libkarbonbase.so
+[PROVIDES] libgnumericexport.so libgnumericimport.so libhancomwordimport.so
+[PROVIDES] libhtmlexport.so libhtmlimport.so libkarbonaiimport.so
 [PROVIDES] libkarboncommon.so libkarbonepsexport.so libkarbonepsimport.so
 [PROVIDES] libkarbonkontourimport.so libkarbonmsodimport.so
 [PROVIDES] libkarbonpart.so libkarbonpngexport.so libkarbonsvgexport.so
-[PROVIDES] libkarbonsvgimport.so libkarbonxcfexport.so libkchartcommon.so
+[PROVIDES] libkarbonsvgimport.so libkarbonxcfexport.so
+[PROVIDES] libkchartbmpexport.so libkchartcommon.so libkchartimageexport.so
+[PROVIDES] libkchartjpegexport.so libkchartmngexport.so
 [PROVIDES] libkchartpart.so libkchartpngexport.so libkchartsvgexport.so
-[PROVIDES] libkdchart.so libkdeinit_karbon.so libkdeinit_kchart.so
-[PROVIDES] libkdeinit_kexi.so libkdeinit_kformula.so libkdeinit_kivio.so
-[PROVIDES] libkdeinit_koshell.so libkdeinit_kpresenter.so
+[PROVIDES] libkchartxbmexport.so libkchartxpmexport.so libkdchart.so
+[PROVIDES] libkdeinit_karbon.so libkdeinit_kchart.so libkdeinit_kexi.so
+[PROVIDES] libkdeinit_kformula.so libkdeinit_kivio.so libkdeinit_koshell.so
+[PROVIDES] libkdeinit_kplato.so libkdeinit_kpresenter.so
 [PROVIDES] libkdeinit_krita.so libkdeinit_kspread.so
 [PROVIDES] libkdeinit_kthesaurus.so libkdeinit_kudesigner.so
 [PROVIDES] libkdeinit_kugar.so libkdeinit_kword.so libkexicore.so
 [PROVIDES] libkexidatatable.so libkexidb.so libkexidbparser.so
 [PROVIDES] libkexiextendedwidgets.so libkexiformutils.so libkexiguiutils.so
-[PROVIDES] libkeximain.so libkeximigrate.so libkexipropertyeditor.so
-[PROVIDES] libkexirelationsview.so libkexisql2.so libkexisql3.so
+[PROVIDES] libkeximain.so libkeximigrate.so libkexirelationsview.so
+[PROVIDES] libkexisql2.so libkexisql3.so libkexiutils.so
 [PROVIDES] libkfolatexexport.so libkfomathmlexport.so libkfomathmlimport.so
-[PROVIDES] libkfopngexport.so libkformdesigner.so libkformdesigner_part.so
-[PROVIDES] libkformulalib.so libkformulapart.so libkiviocommon.so
-[PROVIDES] libkivioconnectortool.so libkiviopart.so libkivioselecttool.so
-[PROVIDES] libkiviotargettool.so libkiviotexttool.so libkiviozoomtool.so
-[PROVIDES] libkochart.so libkofficecore.so libkofficeui.so libkopainter.so
-[PROVIDES] libkoscript.so libkotext.so libkounavailpart.so libkowmf.so
-[PROVIDES] libkpresenterpart.so libkprkword.so libkritacommon.so
-[PROVIDES] libkritamagickexport.so libkritamagickimport.so
-[PROVIDES] libkritapart.so libkspreadcommon.so libkspreadhtmlexport.so
-[PROVIDES] libkspreadinsertcalendar.so libkspreadlatexexport.so
-[PROVIDES] libkspreadpart.so libkstore.so libkudesignercore.so
-[PROVIDES] libkudesignerpart.so libkugarlib.so libkugarnopimport.so
-[PROVIDES] libkugarpart.so libkwmailmerge_interface.so libkwmf.so
-[PROVIDES] libkwordexportfilters.so libkwordkword1dot3import.so
-[PROVIDES] libkwordlatexexport.so libkwordpart.so libmswordimport.so
-[PROVIDES] libmswriteexport.so libmswriteimport.so libolefilter.so
-[PROVIDES] libooimpressexport.so libooimpressimport.so liboowriterexport.so
-[PROVIDES] liboowriterimport.so libopencalcexport.so libopencalcimport.so
-[PROVIDES] libpalmdocexport.so libpalmdocimport.so libpdfimport.so
-[PROVIDES] libqproimport.so librtfexport.so librtfimport.so
-[PROVIDES] libthesaurustool.so libwmfexport.so libwmfimport.so
-[PROVIDES] libwmlexport.so libwmlimport.so libwpexport.so libxsltexport.so
-[PROVIDES] libxsltimport.so stdwidgets.so straight_connector.so
+[PROVIDES] libkfopngexport.so libkformdesigner.so libkformulalib.so
+[PROVIDES] libkformulapart.so libkfosvgexport.so libkiviocommon.so
+[PROVIDES] libkivioconnectortool.so libkivioimageexport.so libkiviopart.so
+[PROVIDES] libkivioselecttool.so libkiviotargettool.so libkiviotexttool.so
+[PROVIDES] libkiviozoomtool.so libkochart.so libkofficecore.so
+[PROVIDES] libkofficeui.so libkopainter.so libkopalette.so libkoproperty.so
+[PROVIDES] libkotext.so libkounavailpart.so libkowmf.so libkplatopart.so
+[PROVIDES] libkpresenterbmpexport.so libkpresenterimageexport.so
+[PROVIDES] libkpresenterjpegexport.so libkpresentermngexport.so
+[PROVIDES] libkpresenterpart.so libkpresenterpngexport.so
+[PROVIDES] libkpresenterprivate.so libkpresentersvgexport.so
+[PROVIDES] libkpresenterxbmexport.so libkpresenterxpmexport.so
+[PROVIDES] libkprkword.so libkrita_cmyk_u16.so libkrita_gray_u16.so
+[PROVIDES] libkrita_lms_f32.so libkrita_openexr_export.so
+[PROVIDES] libkrita_openexr_import.so libkrita_raw_import.so
+[PROVIDES] libkrita_rgb_f16half.so libkrita_rgb_f32.so libkrita_rgb_u16.so
+[PROVIDES] libkrita_ycbcr_u16.so libkrita_ycbcr_u8.so libkritacolor.so
+[PROVIDES] libkritacommon.so libkritagrayscale.so libkritaimage.so
+[PROVIDES] libkritajpegexport.so libkritajpegimport.so libkritapart.so
+[PROVIDES] libkritapdfimport.so libkritapngexport.so libkritapngimport.so
+[PROVIDES] libkritargb.so libkritascripting.so libkritatiffexport.so
+[PROVIDES] libkritatiffimport.so libkritaui.so libkrossapi.so
+[PROVIDES] libkrossmain.so libkspreadcommon.so libkspreadhtmlexport.so
+[PROVIDES] libkspreadinsertcalendar.so libkspreadkexiimport.so
+[PROVIDES] libkspreadlatexexport.so libkspreadpart.so libkstore.so
+[PROVIDES] libkudesignercore.so libkudesignerpart.so libkugarlib.so
+[PROVIDES] libkugarnopimport.so libkugarpart.so libkwmailmerge_interface.so
+[PROVIDES] libkwmf.so libkwordexportfilters.so libkwordkword1dot3import.so
+[PROVIDES] libkwordlatexexport.so libkwordpart.so libkwordprivate.so
+[PROVIDES] libmswordimport.so libmswriteexport.so libmswriteimport.so
+[PROVIDES] libolefilter.so liboodrawimport.so libooimpressexport.so
+[PROVIDES] libooimpressimport.so liboowriterexport.so liboowriterimport.so
+[PROVIDES] libopencalcexport.so libopencalcimport.so libpalmdocexport.so
+[PROVIDES] libpalmdocimport.so libpdfimport.so libqproimport.so
+[PROVIDES] librtfexport.so librtfimport.so libthesaurustool.so
+[PROVIDES] libwmfexport.so libwmfimport.so libwmlexport.so libwmlimport.so
+[PROVIDES] libwpexport.so libxsltexport.so libxsltimport.so
+[PROVIDES] straight_connector.so
 

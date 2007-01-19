@@ -20,33 +20,148 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142653796 Sat Mar 18 04:49:56 2006 (5)
-[TIMESTAMP] 1142923403 Tue Mar 21 07:43:23 2006 (9)
+[TIMESTAMP] 1168694615 Sat Jan 13 14:23:35 2007 (5) ERROR
+[TIMESTAMP] 1168903682 Tue Jan 16 00:28:02 2007 (9) ERROR
+[TIMESTAMP] 1168953937 Tue Jan 16 14:25:37 2007 (5) ERROR
+[TIMESTAMP] 1168983665 Tue Jan 16 22:41:05 2007 (9) ERROR
+[TIMESTAMP] 1169124270 Thu Jan 18 13:44:30 2007 (5) ERROR
+[TIMESTAMP] 1169153858 Thu Jan 18 21:57:38 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-glabels.log 9-glabels.log
+[LOGS] 5-glabels.err 9-glabels.err
 
-[BUILDTIME] 9083 (5)
-[BUILDTIME] 9201 (9)
-[SIZE] 1.69 MB, 72 files
+[BUILDTIME] 9899 (5) ERROR
+[BUILDTIME] 10103 (9) ERROR
+[BUILDTIME] 10130 (5) ERROR
+[BUILDTIME] 10133 (9) ERROR
+[BUILDTIME] 10140 (5) ERROR
+[BUILDTIME] 10131 (9) ERROR
+[SIZE] 2.01 MB, 78 files
 
-[DEP] 00-dirtree alsa alsa:dev atk atk:dev audiofile audiofile:dev autoconf
-[DEP] bash2 binutils bzip2 cairo cairo:dev coreutils desktop-file-utils
-[DEP] diffutils docbookx esound esound:dev expat findutils freetype
-[DEP] freetype:dev gawk gcc34 gcc34:dev gconf gconf:dev gdesklets gettext
-[DEP] glib glib:dev glibc23 glibc23:dev gnome-keyring gnome-keyring-manager
-[DEP] gnome-keyring:dev gnome-vfs gnome-vfs:dev gnome2-dirtree gnopernicus
-[DEP] grep gtk+ gtk+:dev libart_lgpl23 libart_lgpl23:dev libbonobo
-[DEP] libbonobo:dev libbonoboui libbonoboui:dev libglade libglade:dev
-[DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeprint
-[DEP] libgnomeprint:dev libgnomeprintui libgnomeprintui:dev libgnomeui
-[DEP] libgnomeui:dev libjpeg libjpeg:dev libpng libpng:dev libxml2
-[DEP] libxml2:dev linux26-header:dev make mktemp net-tools openssl orbit2
-[DEP] orbit2:dev pango pango:dev perl5 pkgconfig popt popt:dev rrdtool
-[DEP] scrollkeeper seahorse sed shared-mime-info sysfiles tar texinfo
-[DEP] util-linux xorg zlib:dev
+[DEP] 00-dirtree alsa alsa:dev applewmproto atk atk:dev audiofile
+[DEP] audiofile:dev autoconf bash2 binutils bzip2 cairo cairo:dev
+[DEP] coreutils cpan-xml-parser cvm dbus dbus-glib dbus-glib:dev
+[DEP] dbus:dev diffutils docbookx esound esound:dev expat expat:dev
+[DEP] findutils fontconfig fontconfig:dev freetype freetype:dev gawk
+[DEP] gcc40 gcc40:dev gconf gconf:dev gdesklets gettext glib glib:dev
+[DEP] glibc23 glibc23:dev gnome-doc-utils gnome-keyring gnome-keyring:dev
+[DEP] gnome-nettool gnome-vfs gnome-vfs:dev gnome2-dirtree gnopernicus
+[DEP] grep gtk+ gtk+:dev gtkam libart_lgpl23 libart_lgpl23:dev
+[DEP] libbonobo libbonobo:dev libbonoboui libbonoboui:dev libglade
+[DEP] libglade:dev libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev
+[DEP] libgnomeprint libgnomeprint:dev libgnomeprintui libgnomeprintui:dev
+[DEP] libgnomeui libgnomeui:dev libice libice:dev libjpeg libjpeg:dev
+[DEP] libpng libpng:dev libsm libsm:dev libx11 libx11:dev libxau
+[DEP] libxau:dev libxcursor libxdmcp libxdmcp:dev libxext libxfixes libxi
+[DEP] libxinerama libxml2 libxml2:dev libxrandr libxrender libxrender:dev
+[DEP] linux-libc-headers:dev make mktemp nautilus net-tools openssl orbit2
+[DEP] orbit2:dev pango pango:dev perl5 pioneers pkgconfig popt popt:dev
+[DEP] rrdtool scrollkeeper seahorse sed sensors-applet shared-mime-info
+[DEP] streamtuner sysfiles tar texinfo util-linux zapping zlib
 
 [PROVIDES] glabels glabels-batch libglabels.a libglabels.so
+
+[5-ERROR] make[4]: Leaving directory `/ROCK/loop/src.glabels.1169124162.25857.3694631316/glabels-2.0.4/help/C'
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.glabels.1169124162.25857.3694631316/glabels-2.0.4/help/C'
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.glabels.1169124162.25857.3694631316/glabels-2.0.4/help/C'
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.glabels.1169124162.25857.3694631316/glabels-2.0.4/help'
+[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.glabels.1169124162.25857.3694631316/glabels-2.0.4/help'
+[5-ERROR] make[3]: Nothing to be done for `install-exec-am'.
+[5-ERROR] make[3]: Nothing to be done for `install-data-am'.
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.glabels.1169124162.25857.3694631316/glabels-2.0.4/help'
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.glabels.1169124162.25857.3694631316/glabels-2.0.4/help'
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.glabels.1169124162.25857.3694631316/glabels-2.0.4/help'
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.glabels.1169124162.25857.3694631316/glabels-2.0.4'
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.glabels.1169124162.25857.3694631316/glabels-2.0.4'
+[5-ERROR] make[2]: Nothing to be done for `install-exec-am'.
+[5-ERROR] make[2]: Nothing to be done for `install-data-am'.
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.glabels.1169124162.25857.3694631316/glabels-2.0.4'
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.glabels.1169124162.25857.3694631316/glabels-2.0.4'
+[5-ERROR] Trying to copy the default documentation ...
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing /lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Checking opt/gnome2/share/applications/glabels.desktop ... 
+[5-ERROR] Adding X-ROCK-Name tag (glabels)
+[5-ERROR] Found 98 files for this package.
+[5-ERROR] Applying package split: 40 glabels:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[5-ERROR] Applying package split: 42 glabels:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 glabels:doc /share/doc/
+[5-ERROR] Applying package split: 61 glabels:doc /share/gtk-doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <glabels> Creating flist file ...
+[5-ERROR] <glabels> Creating package dependencies file ...
+[5-ERROR] <glabels> Creating package description ...
+[5-ERROR] <glabels> Creating md5sum and cksum files ...
+[5-ERROR] <glabels:dev> Creating flist file ...
+[5-ERROR] <glabels:dev> Creating package dependencies file ...
+[5-ERROR] <glabels:dev> Creating package description ...
+[5-ERROR] <glabels:dev> Creating md5sum and cksum files ...
+[5-ERROR] <glabels:doc> Creating flist file ...
+[5-ERROR] <glabels:doc> Creating package dependencies file ...
+[5-ERROR] <glabels:doc> Creating package description ...
+[5-ERROR] <glabels:doc> Creating md5sum and cksum files ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Found shared files with other packages:
+[5-ERROR] opt/gnome2/share/mime/aliases: glabels nautilus seahorse
+[5-ERROR] opt/gnome2/share/mime/application/x-gdesklets-display.xml: glabels nautilus
+[5-ERROR] opt/gnome2/share/mime/application/x-glabels.xml: glabels nautilus
+[5-ERROR] opt/gnome2/share/mime/application/x-gnome-saved-search.xml: glabels nautilus seahorse
+[5-ERROR] opt/gnome2/share/mime/mime.cache: glabels nautilus seahorse
+[5-ERROR] opt/gnome2/share/mime/subclasses: glabels nautilus seahorse
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] make[4]: Leaving directory `/ROCK/loop/src.glabels.1169153750.16334.3951810427/glabels-2.0.4/help/C'
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.glabels.1169153750.16334.3951810427/glabels-2.0.4/help/C'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.glabels.1169153750.16334.3951810427/glabels-2.0.4/help/C'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.glabels.1169153750.16334.3951810427/glabels-2.0.4/help'
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.glabels.1169153750.16334.3951810427/glabels-2.0.4/help'
+[9-ERROR] make[3]: Nothing to be done for `install-exec-am'.
+[9-ERROR] make[3]: Nothing to be done for `install-data-am'.
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.glabels.1169153750.16334.3951810427/glabels-2.0.4/help'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.glabels.1169153750.16334.3951810427/glabels-2.0.4/help'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.glabels.1169153750.16334.3951810427/glabels-2.0.4/help'
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.glabels.1169153750.16334.3951810427/glabels-2.0.4'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.glabels.1169153750.16334.3951810427/glabels-2.0.4'
+[9-ERROR] make[2]: Nothing to be done for `install-exec-am'.
+[9-ERROR] make[2]: Nothing to be done for `install-data-am'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.glabels.1169153750.16334.3951810427/glabels-2.0.4'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.glabels.1169153750.16334.3951810427/glabels-2.0.4'
+[9-ERROR] Trying to copy the default documentation ...
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing /lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Checking opt/gnome2/share/applications/glabels.desktop ... 
+[9-ERROR] Adding X-ROCK-Name tag (glabels)
+[9-ERROR] Found 98 files for this package.
+[9-ERROR] Applying package split: 40 glabels:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[9-ERROR] Applying package split: 42 glabels:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 glabels:doc /share/doc/
+[9-ERROR] Applying package split: 61 glabels:doc /share/gtk-doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <glabels> Creating flist file ...
+[9-ERROR] <glabels> Creating package dependencies file ...
+[9-ERROR] <glabels> Creating package description ...
+[9-ERROR] <glabels> Creating md5sum and cksum files ...
+[9-ERROR] <glabels:dev> Creating flist file ...
+[9-ERROR] <glabels:dev> Creating package dependencies file ...
+[9-ERROR] <glabels:dev> Creating package description ...
+[9-ERROR] <glabels:dev> Creating md5sum and cksum files ...
+[9-ERROR] <glabels:doc> Creating flist file ...
+[9-ERROR] <glabels:doc> Creating package dependencies file ...
+[9-ERROR] <glabels:doc> Creating package description ...
+[9-ERROR] <glabels:doc> Creating md5sum and cksum files ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] opt/gnome2/share/mime/aliases: glabels nautilus seahorse
+[9-ERROR] opt/gnome2/share/mime/application/x-gdesklets-display.xml: glabels nautilus
+[9-ERROR] opt/gnome2/share/mime/application/x-glabels.xml: glabels nautilus
+[9-ERROR] opt/gnome2/share/mime/application/x-gnome-saved-search.xml: glabels nautilus seahorse
+[9-ERROR] opt/gnome2/share/mime/mime.cache: glabels nautilus seahorse
+[9-ERROR] opt/gnome2/share/mime/subclasses: glabels nautilus seahorse
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] --- BUILD ERROR ---
 

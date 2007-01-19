@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1142576356 Fri Mar 17 07:19:16 2006 (5)
-[TIMESTAMP] 1142839858 Mon Mar 20 08:30:58 2006 (9)
+[TIMESTAMP] 1168639081 Fri Jan 12 22:58:01 2007 (5)
+[TIMESTAMP] 1168844837 Mon Jan 15 08:07:17 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-autofs.log 9-autofs.log
 
-[BUILDTIME] 2158 (5)
-[BUILDTIME] 2590 (9)
-[SIZE] 0.22 MB, 35 files
+[BUILDTIME] 2296 (5)
+[BUILDTIME] 2667 (9)
+[SIZE] 0.21 MB, 35 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils diffutils findutils
-[DEP] gcc34 gcc34:dev glibc23 glibc23:dev grep hesiod hesiod:dev
-[DEP] linux26-header:dev m4 make mktemp net-tools rrdtool sed sysfiles
-[DEP] tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
+[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep hesiod hesiod:dev
+[DEP] linux-libc-headers:dev m4 make mktemp net-tools netpbm rrdtool sed
+[DEP] sysfiles tar util-linux
 
 [PROVIDES] automount lookup_file.so lookup_hesiod.so lookup_multi.so
 [PROVIDES] lookup_nisplus.so lookup_program.so lookup_userhome.so

@@ -280,7 +280,7 @@ for x in $disks ; do
 	echo "This is disk #$x." > $dat
 	# FIXME: current mkisofs does only accept one -path-list
 	sort -u ${pathspec}_${x} ${pathspec}_0 > ${pathspec}_current 2> /dev/null
-	xxx -q -r -T -J -l -o ${isoprefix}_cd$x.iso -A "ROCK Linux - Disk $x" \
+	xxx -r -T -J -l -o ${isoprefix}_cd$x.iso -A "ROCK Linux - Disk $x" \
 	    -publisher 'The ROCK Linux Project - http://www.rocklinux.org' \
 	    -V "ROCK Linux - Disk $x" \
 	    -path-list ${pathspec}_current \

@@ -411,6 +411,8 @@ mount -t proc proc /proc  || echo "Can't mount proc on /proc!"
 mount -t sysfs sysfs /sys || echo "Can't mount sysfs on /sys!"
 mount -t tmpfs tmpfs /dev || echo "Can't mount a tmpfs on /dev!"
 
+/sbin/depmod -ae
+
 cp -r /lib/udev/devices/* /dev
 
 echo "" > /proc/sys/kernel/hotplug

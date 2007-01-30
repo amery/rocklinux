@@ -95,6 +95,7 @@ for x in ${rock_targetdir}/initrd/initrd_* ; do
 			fi
 
 # 			if [ -b ${f} -o -c ${f} -o -p ${f} -o -L ${f} ] ; then
+#				echo "cp -a ${f} ${tfile}"
 				cp -a ${f} ${tfile}
 # 			else
 # 				cp ${f} ${tfile}

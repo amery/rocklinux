@@ -28,7 +28,6 @@ pkgfilter sed '
 / ed /		{ p; d; };	/ lrzsz /	{ p; d; };
 / minicom /	{ p; d; };	/ disktype /	{ p; d; };
 / netkit-base /	{ p; d; };	/ netkit-telnet / { p; d; };
-/ netkit-ftp /	{ p; d; };	/ netkit-tftp /	{ p; d; };
 / net-tools /   { p; d; };	/ sysvinit /    { p; d; };
 / pciutils /	{ p; d; };	/ portmap /	{ p; d; };
 / reiserfsprogs / { p; d; };	/ rsync /	{ p; d; };
@@ -41,14 +40,14 @@ pkgfilter sed '
 / mdadm /       { p; d; };      / ntfsprogs /   { P; d; };
 / ddrescue /    { p; d; };
 / iproute2 /	{ p; d; };	/ wget /	{ p; d; };
-/ kiss /	{ p; d; };	/ udev /	{ p; d; };
+				/ udev /	{ p; d; };
 / gmp /		{ p; d; };	/ rockinitrd /	{ p; d; };
 / linux=linux26 /	{ p; d; };
 / linux=linux26-source /	{ p; d; };
 
 
 # Select some non-base packages
-/ lzo /		{ p; d; };
+/ etcnet /	{ s/^O /X /; p; d; };
 
 # Select some packages explicitly (architectures)
 / bin86 /	{ p; d; };	/ cpuburn /	{ p; d; };
@@ -71,7 +70,10 @@ pkgfilter sed '
 / prelink /	{ s/^X /O /; p; d; };	/ ccache /	{ s/^X /O /; p; d; };
 / cracklib /	{ s/^X /O /; p; d; };	/ hotplug /	{ s/^X /O /; p; d; };
 / bash=bash3 /	{ s/^X /O /; p; d; };	/ pdksh /	{ s/^X /O /; p; d; };
-/ dietlibc /	{ s/^X /O /; p; d; };
+/ dietlibc /	{ s/^X /O /; p; d; };	/ rocknet /	{ s/^X /O /; p; d; };
+/ devfsd /	{ s/^X /O /; p; d; };	/ rockplug /	{ s/^X /O /; p; d; };
+/ netkit-ftp /	{ s/^X /O /; p; d; };	/ netkit-tftp /	{ s/^X /O /; p; d; };
+/ modutils /	{ s/^X /O /; p; d; };
 '
 
 ROCKCFGSET_CREATE_TARBZ2=1
@@ -82,6 +84,8 @@ ROCKCFGSET_PKG_GCC2_NO_CHILL=1
 ROCKCFGSET_PKG_GCC32_NO_JAVA=1
 ROCKCFGSET_PKG_GCC33_NO_JAVA=1
 ROCKCFGSET_PKG_GCC34_NO_JAVA=1
+ROCKCFGSET_PKG_GCC40_NO_JAVA=1
+ROCKCFGSET_PKG_GCC41_NO_JAVA=1
 ROCKCFGSET_PKG_BASH_PROGCOMP=0
 
 ROCKCFGSET_DO_REBUILD_STAGE=0

@@ -7,7 +7,8 @@ mkdir -p $disksdir/2nd_stage
 cd $disksdir/2nd_stage
 mkdir -p mnt/source mnt/target
 #
-package_map='       +00-dirtree         +glibc22            +glibc23
+package_map="       +00-dirtree
++$ROCKCFG_PKG_GLIBC_BRANCH              +$ROCKCFG_PKG_BASH_DEFAULT
 -automake17         -automake18         -automake19         -gcc2
 -gcc33              -gcc34              -gcc40              -gcc41
 -gmp                -mpfr               -rockinitrd         +stone
@@ -24,7 +25,7 @@ package_map='       +00-dirtree         +glibc22            +glibc23
 -mine               -bize               -termcap            +ncurses
 +readline           -strace             -ltrace             -perl5
 -m4                 -time               -gettext            -zlib
-+bash2              +attr               +acl                +findutils
+                    +attr               +acl                +findutils
 +mktemp             +coreutils          -diffutils          -patch
 -make               +grep               +sed                +gzip
 +tar                +gawk               -flex               +bzip2
@@ -40,7 +41,7 @@ package_map='       +00-dirtree         +glibc22            +glibc23
 +netkit-base        +netkit-ftp         +netkit-telnet      +netkit-tftp
 +sysfiles           +libpcap            +iptables           +tcp_wrappers
 -kiss               +kbd		-syslinux           +ntfsprogs
--ethtool	    -uml_utilities	+ddrescue           +libelf'
+-ethtool	    -uml_utilities	+ddrescue           +libelf"
 
 if [ -f ../../pkgs/bize.tar.bz2 -a ! -f ../../pkgs/mine.tar.bz2 ] ; then
 	packager=bize

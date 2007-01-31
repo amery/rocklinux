@@ -73,7 +73,7 @@ gui_yesno() {
 		echo -en "\r? $y\t$n"
 		read -sr -n 1 input
 
-		if   [ "$input" = ""  ]; then break
+		if   [ "$input" = ""  ]; then echo; break
 		elif [ "$input" = "y" ]; then y="[y]"; n=" n "
 		elif [ "$input" = "n" ]; then y=" y "; n="[n]"
 		fi

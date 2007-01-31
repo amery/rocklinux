@@ -19,7 +19,7 @@
 -	$(LN) $@ $(RUNLEVELSCRIPTSDIR)/rc6.d/K16mdns
 -endif
 -endif
-+# $(STARTUPSCRIPTDIR)/$(STARTUPSCRIPTNAME): mdnsd.sh $(STARTUPSCRIPTDIR)
++$(STARTUPSCRIPTDIR)/$(STARTUPSCRIPTNAME): mdnsd.sh $(STARTUPSCRIPTDIR)
 +# 	$(CP) $< $@
 +# 	chmod ugo+x $@
 +# ifdef RUNLEVELSCRIPTSDIR

@@ -39,9 +39,9 @@ if pkgcheck openal X ; then
           bool 'sdl support' ROCKCFG_PKG_OPENAL_SDL 1 \
           	"Compile with sdl output support"
         fi
-        if pkgcheck ogg-vorbis X ; then
+        if pkgcheck libvorbis X ; then
           bool 'vorbis support' ROCKCFG_PKG_OPENAL_VORBIS 1 \
-          	"Compile with ogg-vorbis output support"
+          	"Compile with vorbis support"
         fi
         if pkgcheck smpeg X ; then
           bool 'smpeg support' ROCKCFG_PKG_OPENAL_SMPEG 1 \

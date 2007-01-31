@@ -651,18 +651,26 @@ build_this_package() {
 		var_append patchfiles " " \
 		           "`ls $confdir/*.patch.${xsrctar/-[0-9]*/} 2> /dev/null`"
 		if [ $autoextract = 1 ]; then
-			echo "Extracting $xsrctar ($taropt) ... "
+			if [[ $xsrctar == *.zip ]] ; then
+				extractcmd="unzip"
+				cutcmd="cut -f1 -d/ | cut -f2 -d:"
+			else
+				extractcmd="tar -v $taropt"
+				cutcmd="cut -f1 -d/"
+			fi
+			echo "Extracting $xsrctar ($extractcmd) ... "
 			cd $builddir
-			tar -v $taropt $archdir/$xsrctar | tee untar.txt |
-				cut -f1 -d/ | sort -u > xsrcdir.txt
+			$extractcmd $archdir/$xsrctar | tee untar.txt |
+				eval $cutcmd | sort -u > xsrcdir.txt
 			#
 			if [ $srcdir = auto ]; then
 				xsrcdir=${xsrctar%.tar.bz2}
 				xsrcdir=${xsrcdir%.tbz2}
+				xsrcdir=${xsrcdir%.zip}
 				if [ ! -d $xsrcdir ] ; then
 					for x in $pkg-$ver ${pkg}_$ver $pkg \
 					         $xpkg-$ver ${xpkg}_$ver $xpkg \
-					         "$( cat xsrcdir.txt )"
+					         $( cat xsrcdir.txt )
 					do
 						[ -d "$x" ] && xsrcdir="$x"
 					done

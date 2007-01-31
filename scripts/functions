@@ -706,7 +706,7 @@ build_this_package() {
 			         $docdir $infodir $mandir $sysconfdir $localstatedir
 			do
 				if [ ! -e $x ]; then
-					mkdir -p $x
+					mkdir -vp $x
 					rmemptydir="$x $rmemptydir"
 				fi
 			done
@@ -839,7 +839,8 @@ build_this_package() {
 	done
   
 	for x in $rmemptydir; do
-		rmdir $x 2> /dev/null || true
+		rmdir -v --ignore-fail-on-non-empty $x || true
+		# Remove symlinks to nonexistent files.
 		[ -e $x ] || rm $x 2> /dev/null || true
 	done
 

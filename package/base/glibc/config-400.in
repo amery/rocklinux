@@ -38,7 +38,7 @@ then
 
 	choice ROCKCFG_PKG_GLIBC_BRANCH glibc23 \
                 glibc23 'Use glibc-2.3.x (recommended)' \
-                glibc24 'Use glibc-2.4 (for testing)' \
+                glibc25 'Use glibc-2.5 (for testing)' \
                 glibc22 'Use glibc-2.2.x'
 
 	if [ "$ROCKCFG_PKG_GLIBC_BRANCH" = "glibc22" ] ; then

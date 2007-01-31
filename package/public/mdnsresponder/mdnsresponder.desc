@@ -6,8 +6,8 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/base/aspell-es/aspell-es.desc
-[COPY] ROCK Linux is Copyright (C) 1998 - 2006 Clifford Wolf
+[COPY] ROCK Linux: rock-src/package/public/mdnsresponder/mdnsresponder.desc
+[COPY] ROCK Linux is Copyright (C) 1998 - 2007 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
 [COPY] it under the terms of the GNU General Public License as published by
@@ -21,25 +21,27 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[I] The Spanish dictonary for aspell
+[I] Multicast DNS Responder
 
-[T] This package contains the Spanish dictonary for aspell.
+[T] The mDNSResponder project is a component of Bonjour,
+[T] Apple's ease-of-use IP networking initiative:
+[T] <http://developer.apple.com/bonjour/>
 [T]
-[T] This dRock backage doesn't contain the original package from,
-[T] but the pre-packed version from the aspell site ...
+[T] Apple's Bonjour software derives from the ongoing standardization
+[T] work of the IETF Zero Configuration Networking Working Group:
+[T] <http://zeroconf.org/>
 
-[U] http://www.datsi.fi.upm.es/~coes/
+[U] http://developer.apple.com/bonjour/
 
-[A] Santiago Rodriguez
+[A] Apple Computer, Inc.
 [M] The ROCK Linux Project
 
-[C] extra/office
+[C] extra/network
 [F] CORE
 
-[L] GPL
+[L] OpenSource
 [S] Stable
-[V] 0.50-2
-[P] X -?---5---9 119.800
+[V] 107
+[P] X -----5---9 800.000
 
-[D] 3893385182 aspell-es-0.50-2.tar.bz2 ftp://ftp.gnu.org/gnu/aspell/dict/es/
-
+[D] 4272780815 mDNSResponder-107.tar.gz http://helios.et.put.poznan.pl/~jstachow/pub/

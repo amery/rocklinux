@@ -1,0 +1,39 @@
+--- mDNSResponder-107/mDNSPosix/Makefile~	2005-04-20 22:12:17.000000000 +0200
++++ mDNSResponder-107/mDNSPosix/Makefile	2007-01-03 01:28:43.000000000 +0100
+@@ -450,21 +450,21 @@
+ $(INSTBASE)/include/dns_sd.h: $(SHAREDDIR)/dns_sd.h
+ 	$(CP) $< $@
+ 
+-$(STARTUPSCRIPTDIR)/$(STARTUPSCRIPTNAME): mdnsd.sh $(STARTUPSCRIPTDIR)
+-	$(CP) $< $@
+-	chmod ugo+x $@
+-ifdef RUNLEVELSCRIPTSDIR
+-ifeq ($(wildcard $(RUNLEVELSCRIPTSDIR)/runlevels/default), $(RUNLEVELSCRIPTSDIR)/runlevels/default)
+-	$(LN) $@ $(RUNLEVELSCRIPTSDIR)/runlevels/default/mdns
+-else
+-	$(LN) $@ $(RUNLEVELSCRIPTSDIR)/rc2.d/S52mdns
+-	$(LN) $@ $(RUNLEVELSCRIPTSDIR)/rc3.d/S52mdns
+-	$(LN) $@ $(RUNLEVELSCRIPTSDIR)/rc4.d/S52mdns
+-	$(LN) $@ $(RUNLEVELSCRIPTSDIR)/rc5.d/S52mdns
+-	$(LN) $@ $(RUNLEVELSCRIPTSDIR)/rc0.d/K16mdns
+-	$(LN) $@ $(RUNLEVELSCRIPTSDIR)/rc6.d/K16mdns
+-endif
+-endif
++# $(STARTUPSCRIPTDIR)/$(STARTUPSCRIPTNAME): mdnsd.sh $(STARTUPSCRIPTDIR)
++# 	$(CP) $< $@
++# 	chmod ugo+x $@
++# ifdef RUNLEVELSCRIPTSDIR
++# ifeq ($(wildcard $(RUNLEVELSCRIPTSDIR)/runlevels/default), $(RUNLEVELSCRIPTSDIR)/runlevels/default)
++# 	$(LN) $@ $(RUNLEVELSCRIPTSDIR)/runlevels/default/mdns
++# else
++# 	$(LN) $@ $(RUNLEVELSCRIPTSDIR)/rc2.d/S52mdns
++# 	$(LN) $@ $(RUNLEVELSCRIPTSDIR)/rc3.d/S52mdns
++# 	$(LN) $@ $(RUNLEVELSCRIPTSDIR)/rc4.d/S52mdns
++# 	$(LN) $@ $(RUNLEVELSCRIPTSDIR)/rc5.d/S52mdns
++# 	$(LN) $@ $(RUNLEVELSCRIPTSDIR)/rc0.d/K16mdns
++# 	$(LN) $@ $(RUNLEVELSCRIPTSDIR)/rc6.d/K16mdns
++# endif
++# endif
+ 
+ $(NSSINSTPATH)/$(NSSLINKNAME): $(NSSINSTPATH)/$(NSSLIBFILE)
+ 	$(LN) $< $@

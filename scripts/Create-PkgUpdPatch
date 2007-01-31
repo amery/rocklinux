@@ -104,9 +104,10 @@ while read x ; do
 		tmpfile=`mktemp` ; tmpfile2=`mktemp`
 		[ "$oldver" == "$newver" ] && continue
 		echo "Upgrade Patch for $pkg ($pkgdir): $oldver -> $newver"
-		sed -e"s/${oldver//./\\.}/$newver/g" -e"s/^\(\[V\] $newver\) .*/\1/" \
-			-e"s/^\[\(D\|DOWN\|DOWNLOAD\)\] [0-9]\+/[\1] 0/" \
+		sed -e"s/^\[\(D\|DOWN\|DOWNLOAD\)\] [0-9]\+ \(.*\)$oldver\(.*\)/[\1] 0 \2$newver\3/" \
+			-e"s/${oldver//./\\.}/$newver/g" -e"s/^\(\[V\] $newver\) .*/\1/" \
 			< $pkgdir/$pkg.desc > $tmpfile
+
 		diff -u ./$pkgdir/$pkg.desc $tmpfile | tee $tmpfile2
 		[ -s $tmpfile2 ] || echo "Patch for '$x' is empty!" >&2
 		rm -f $tmpfile $tmpfile2

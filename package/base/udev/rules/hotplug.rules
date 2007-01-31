@@ -9,8 +9,9 @@ SUBSYSTEM=="serio",	ENV{MODALIAS}!="?*", IMPORT{program}="modalias_serio"
 
 # load the drivers
 ENV{MODALIAS}=="?*",	RUN+="/sbin/modprobe $env{MODALIAS}"
-SUBSYSTEM=="ide",	ENV{MODALIAS}!="?*",	RUN+="ide.agent"
-SUBSYSTEM=="vio",	ENV{MODALIAS}!="?*",	RUN+="vio.agent"
+# the following two agents do not exist.
+# SUBSYSTEM=="ide",	ENV{MODALIAS}!="?*",	RUN+="ide.agent"
+# SUBSYSTEM=="vio",	ENV{MODALIAS}!="?*",	RUN+="vio.agent"
 
 SUBSYSTEM=="pnp",	ENV{MODALIAS}!="?*",	RUN+="/bin/sh -c 'while read id; do /sbin/modprobe pnp:d$$id; done < /sys$devpath/id'"
 
@@ -37,7 +38,7 @@ LABEL="hotplug_driver_loaded"
 #SUBSYSTEM=="scsi_device", ATTR{idVendor}=="...", \
 #	RUN+="scsi-re-add"
 
-SUBSYSTEM=="firmware",	RUN+="/bin/sh -c `/etc/hotplug/firmware.agent &`"
+SUBSYSTEM=="firmware",	RUN+="/bin/sh -c '/etc/hotplug/firmware.agent &'"
 
 LABEL="hotplug_not_add_event"
 

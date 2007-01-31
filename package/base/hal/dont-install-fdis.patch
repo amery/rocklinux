@@ -1,0 +1,17 @@
+--- hal-0.5.8.1/fdi/information/10freedesktop/Makefile.in~	2006-09-19 22:24:36.000000000 +0200
++++ hal-0.5.8.1/fdi/information/10freedesktop/Makefile.in	2006-12-30 20:03:41.000000000 +0100
+@@ -282,13 +282,7 @@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ fdidir = $(datadir)/hal/fdi/information/10freedesktop
+-dist_fdi_DATA = 10-usb-card-readers.fdi    \
+-		10-usb-music-players.fdi   \
+-		10-usb-zip-drives.fdi      \
+-		10-wireless-mice.fdi	   \
+-		10-camera-ptp.fdi	   \
+-		10-usb-pda.fdi		   \
+-		10-cd-dvd-burner.fdi
++dist_fdi_DATA = 10-wireless-mice.fdi
+ 
+ all: all-am
+ 

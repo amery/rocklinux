@@ -1,14 +1,12 @@
 ACTION!="add", GOTO="hotplug_not_add_event"
 
-# check if the device has already been claimed by a driver
-DRIVERS=="?*", SUBSYSTEM!="input", GOTO="hotplug_driver_loaded"
-
 # workarounds for kernels which lack $MODALIAS support
 SUBSYSTEM=="ieee1394",	ENV{MODALIAS}!="?*", IMPORT{program}="modalias_ieee1394"
 SUBSYSTEM=="serio",	ENV{MODALIAS}!="?*", IMPORT{program}="modalias_serio"
 
 # load the drivers
 ENV{MODALIAS}=="?*",	RUN+="/sbin/modprobe $env{MODALIAS}"
+
 # the following two agents do not exist.
 # SUBSYSTEM=="ide",	ENV{MODALIAS}!="?*",	RUN+="ide.agent"
 # SUBSYSTEM=="vio",	ENV{MODALIAS}!="?*",	RUN+="vio.agent"
@@ -21,15 +19,15 @@ SUBSYSTEM=="pcmcia_socket",			RUN+="/sbin/modprobe pcmcia"
 #SUBSYSTEM=="i2o",				RUN+="/sbin/modprobe i2o-block"
 #SUBSYSTEM=="mmc",				RUN+="/sbin/modprobe mmc-block"
 
-SUBSYSTEM=="scsi_device", ATTR{type}=="0|7|14", RUN+="/sbin/modprobe sd_mod"
-SUBSYSTEM=="scsi_device", ATTR{type}=="1",	RUN+="/sbin/modprobe osst", \
-	ATTR{vendor}=="Onstream", ATTR{model}!="ADR*"
-SUBSYSTEM=="scsi_device", ATTR{type}=="1",	RUN+="/sbin/modprobe st", \
-	ATTR{vendor}=="Onstream", ATTR{model}=="ADR*"
-SUBSYSTEM=="scsi_device", ATTR{type}=="1",	RUN+="/sbin/modprobe st", \
-	ATTR{vendor}!="Onstream"
-SUBSYSTEM=="scsi_device", ATTR{type}=="[45]",	RUN+="/sbin/modprobe sr_mod"
-SUBSYSTEM=="scsi_device", ATTR{type}=="[235689]", RUN+="/sbin/modprobe sg"
+SUBSYSTEM=="scsi", ATTR{type}=="0|7|14",	RUN+="/sbin/modprobe sd_mod"
+SUBSYSTEM=="scsi", ATTR{type}=="1",		RUN+="/sbin/modprobe osst", \
+	ATTR{vendor}=="On[sS]tream", ATTR{model}!="ADR*"
+SUBSYSTEM=="scsi", ATTR{type}=="1",		RUN+="/sbin/modprobe st", \
+	ATTR{vendor}=="On[sS]tream", ATTR{model}=="ADR*"
+SUBSYSTEM=="scsi", ATTR{type}=="1",		RUN+="/sbin/modprobe st", \
+	ATTR{vendor}!="On[sS]tream"
+SUBSYSTEM=="scsi", ATTR{type}=="[45]",		RUN+="/sbin/modprobe sr_mod"
+SUBSYSTEM=="scsi", ATTR{type}=="[235689]",	RUN+="/sbin/modprobe sg"
 
 # From here on follows the hotplug agents which do not load modules
 LABEL="hotplug_driver_loaded"

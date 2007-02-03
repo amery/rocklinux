@@ -85,7 +85,10 @@ part_unmounted_action() {
 
 part_add() {
 	local action="unmounted" location="currently not mounted"
-	if grep -q "^/dev/$1/$2 " /proc/swaps; then
+	# Devices in /proc/swaps are listed with their real device file name,
+	# while in /proc/mounts they are listed with the device file name that
+	# was actually used for the mount (which may have been a symlink).
+	if grep -q "^`readlink -fn /dev/$1/$2` " /proc/swaps; then
 		action=swap ; location="swap  <no mount point>"
 	elif grep -q "^/dev/$1/$2 " /proc/mounts; then
 		action=mounted

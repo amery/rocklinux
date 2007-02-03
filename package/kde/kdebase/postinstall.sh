@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if any_touched "/usr/share/rock-registry/wm/" ; then
+if any_touched "usr/share/rock-registry/wm/" ; then
 	confprefix=/usr/share/config/kdm/
 	sessprefix=/usr/share/apps/kdm/sessions/
 	sessions="default,failsafe"

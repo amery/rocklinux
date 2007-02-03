@@ -516,10 +516,10 @@ pkginstalled() {
 	local pattern="$1" ; pattern="${pattern//+/\\+}"
 
 	if [ $stagelevel = 0 ] ; then
-		ls "$base/build/$ROCKCFG_ID/ROCK/$toolsdir/var/adm/flists"
+		ls "$base/build/$ROCKCFG_ID/ROCK/$toolsdir/var/adm/flists" | egrep -q "^($pattern)$"
 	else
-		ls $root/var/adm/flists
-	fi | egrep -q "^($pattern)$"
+		ls $root/var/adm/flists | egrep -q "^($pattern)$"
+	fi
 }
 
 # Register a window-manager

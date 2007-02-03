@@ -769,6 +769,8 @@ download_file_now() {
 			  typeexpr="Zip archive data" ;;
 		      *.tar)
 			  typeexpr="tar archive" ;;
+		      *.txt)
+			  typeexpr="ASCII English text" ;;
 		      *)
 			  echo "WARNING: Unkown file extension: $gzfile"
 			  typeexpr="." ;;
@@ -776,10 +778,12 @@ download_file_now() {
 		    if file "$gzfile.incomplete" | grep -v "$typeexpr"
 		    then
 			echo "ERROR: File type does not match" \
-			     "filename ($typeexpr)!"
+			     "file name ($typeexpr)!"
 			mv "$gzfile.incomplete" "$gzfile.extck-err"
+			return 1
 		    else
 			mv "$gzfile.incomplete" "$gzfile"
+			rm -f "$gzfile".{extck,cksum}-err
 		    fi
 		fi
 	fi

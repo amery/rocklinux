@@ -76,7 +76,7 @@ fi
 
 if [ ! -L /dev/fd/0 ] ; then
 	echo
-	echo "System Check: It seams like you don't have a functional"
+	echo "System Check: It seems like you don't have a functional"
 	echo "/dev/fd symlink! A symlink from /dev/fd to /proc/self/fd"
 	echo "and a mounted /proc is needed."
 	found_error=1

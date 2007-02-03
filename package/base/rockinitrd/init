@@ -50,6 +50,8 @@ mount -n -t proc proc /proc  || echo "Can't mount procfs!"
 mount -n -t sysfs sysfs /sys || echo "Can't mount sysfs!"
 mount -n -t ramfs ramfs /dev || echo "Can't mount ramfs!"
 
+/sbin/depmod -ae
+
 cp -r /lib/udev/devices/* /dev
 
 echo "" > /proc/sys/kernel/hotplug

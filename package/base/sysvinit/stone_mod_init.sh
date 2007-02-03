@@ -41,7 +41,7 @@ set_rl() {
 
 main() {
     while
-	rl=`grep initdefault /etc/inittab | cut -d : -f2`
+	rl=`grep :initdefault: /etc/inittab | cut -d : -f2`
 
 	gui_menu gpm 'System Init Configuration.
 Select an item to change the value:' \

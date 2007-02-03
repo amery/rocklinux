@@ -4,7 +4,7 @@ diff -dur udev-103/etc/udev/rules.d/05-udev-early.rules udev-103-p/etc/udev/rule
 @@ -1,3 +1,8 @@
 +# ignore these until someone needs them
 +SUBSYSTEM=="drivers",           OPTIONS="ignore_device" 
-+SUBSYSTEM=="module",            OPTIONS="ignore_device" 
++# SUBSYSTEM=="module",            OPTIONS="ignore_device" 
 +
  # sysfs is populated after the event is sent
 +ACTION=="add", DEVPATH=="/devices/*", ENV{PHYSDEVBUS}=="?*", WAIT_FOR_SYSFS="bus"

@@ -70,6 +70,10 @@ then
 		;;
 	esac
 
+	choice ROCKCFG_PKG_LINUX_DEFAULT_HEADERS linux-libc \
+		linux26 'Use Linux 2.6 headers as system headers' \
+		linux-libc 'Use linux-libc-headers package as system headers'
+
 	choice ROCKCFG_PKG_LINUX_CONFIG_STYLE modules \
 		none 'Do not perform any automatic kernel configuration' \
 		nomodules 'Perform normal kernel configuration without modules' \
@@ -88,6 +92,8 @@ then
 	bool 'Apply custom kernel build configuration settings' \
 					ROCKCFG_PKG_LINUX_CUSTCONFIG 0
 
+	include "package/*/*/pkg_config_linux.in"
+
 	if [ "$ROCKCFG_PKG_LINUX_CUSTCONFIG" = 1 ] ; then
 	    block_begin 3
 		comment 'The kernel config is stored in:'
@@ -99,8 +105,6 @@ then
 	else
 		rm -f config/$config.$swpid/linux.cfg
 	fi
-
-	include "package/*/*/pkg_config_linux.in"
 
   menu_end
 fi

@@ -1,0 +1,13 @@
+if [ "$ROCKCFG_PKG_LINUX_DEFAULT_HEADERS" == linux24 ] ; then
+	pkgenable linux24-headers
+	pkgremove linux26-headers
+	pkgremove linux-libc-headers
+elif [ "$ROCKCFG_PKG_LINUX_DEFAULT_HEADERS" == linux26 ] ; then
+	pkgremove linux24-headers
+	pkgenable linux26-headers
+	pkgremove linux-libc-headers
+elif [ "$ROCKCFG_PKG_LINUX_DEFAULT_HEADERS" == linux-libc ] ; then
+	pkgremove linux24-headers
+	pkgremove linux26-headers
+	pkgenable linux-libc-headers
+fi

@@ -4,5 +4,6 @@ then
 	pkgfork linux linux24-source unflag CORE
 	pkgfork linux linux26 stages -X---5---9
 	pkgfork linux linux26-source
+	pkgfork linux linux26-headers stages 01-------- priority 100.200
 	pkgremove linux
 fi

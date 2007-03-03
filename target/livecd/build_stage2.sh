@@ -26,6 +26,13 @@ echo_status "Running ldconfig to create links ..."
 ldconfig -r .
 echo_status "Running depmod for target system ..."
 depmod -b $PWD -F ../boot/System.map `ls ../boot/vmlinuz_* | sed -e 's,\.\./boot/vmlinuz_,,'`
+echo_status "Running mkfontscale/mkfontdir and fc-cache ..."
+for dir in usr/X11R7/lib/X11/fonts/* ; do
+	[ -d $dir ] || continue
+	mkfontscale $dir
+	mkfontdir $dir
+	fc-cache -v $dir
+done
 #
 echo_status "replacing some vital files for live useage ..."
 cp -f $base/target/$target/fixedfiles/inittab etc/inittab

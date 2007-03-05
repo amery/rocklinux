@@ -74,7 +74,9 @@ else
 fi
 
 echo "loading kernel modules"
-. /etc/conf/kernel
+if [ -f /etc/conf/kernel ]; then
+	. /etc/conf/kernel
+fi
 
 # create nodes for devices already in kernel
 emit_udev_events

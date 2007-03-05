@@ -28,8 +28,12 @@
 
 main_begin
     block_begin(start, `Mounting /proc and /sys.')
-	check(`mount -n -t proc proc /proc')
-	check(`mount -n -t sysfs sysfs /sys')
+	if [ ! -e /proc/self ]; then
+		check(`mount -n -t proc proc /proc')
+	fi
+	if [ ! -e /sys/kernel ]; then
+		check(`mount -n -t sysfs sysfs /sys')
+	fi
 dnl
     block_split(`Setting kernel clock to local time.')
 	[ -f /etc/conf/clock ] && . /etc/conf/clock

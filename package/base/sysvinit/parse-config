@@ -46,7 +46,7 @@ then
 			ln -sf ../init.d/$name $initdir/$runlevel.d/S$spri$name
 			ln -sf ../init.d/$name $initdir/$runlevel.d/K$kpri$name
 		else
-			echo "The script '$name' has the priority $pri." \
+			echo "The script '$name' has the priority $spri." \
 					> $initdir/rcX.d/X$spri$name
 		fi
 	done

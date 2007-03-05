@@ -35,14 +35,19 @@
 #include <sys/types.h>
 #include <unistd.h>
 
+char env_PATH[100]="PATH=/bin:/usr/bin:/sbin:/usr/sbin";
+char env_INIT_VERSION[100]="INIT_VERSION=";
 char env_PREVLEVEL[100]="PREVLEVEL=N";
 char env_RUNLEVEL[100]="RUNLEVEL=N";
+char env_CONSOLE[100]="CONSOLE=/dev/console";
 char env_TERM[100]="TERM=linux";
 
 char * clean_env[] = {
-	"PATH=/bin:/usr/bin",
+	env_PATH,
+	env_INIT_VERSION,
 	env_PREVLEVEL,
 	env_RUNLEVEL,
+	env_CONSOLE,
 	env_TERM,
 	NULL
 };
@@ -79,10 +84,16 @@ int main(int argc, char ** argv) {
 	int i, cmd_space;
 
 	/* Copy some environment variables to the new environment if set */
+	if ( getenv("PATH") )
+		sprintf(env_PATH, "PATH=%.50s", getenv("PATH"));
+	if ( getenv("INIT_VERSION") )
+		sprintf(env_INIT_VERSION, "INIT_VERSION=%.50s", getenv("INIT_VERSION"));
 	if ( getenv("PREVLEVEL") )
 		sprintf(env_PREVLEVEL, "PREVLEVEL=%.50s", getenv("PREVLEVEL"));
 	if ( getenv("RUNLEVEL") )
 		sprintf(env_RUNLEVEL, "RUNLEVEL=%.50s", getenv("RUNLEVEL"));
+	if ( getenv("CONSOLE") )
+		sprintf(env_CONSOLE, "CONSOLE=%.50s", getenv("CONSOLE"));
 	if ( getenv("TERM") )
 		sprintf(env_TERM, "TERM=%.50s", getenv("TERM"));
 
@@ -163,7 +174,7 @@ int main(int argc, char ** argv) {
 		}
 	}
 
-	/* Close all file-descriptors > 2 (1024 seams to be a good value -
+	/* Close all file-descriptors > 2 (1024 seems to be a good value -
 	 * linux/fs.h defines NR_OPEN to 1024*1024, which is too big ;-) */
 	for (i=3; i<=1024; i++) close(i);
 

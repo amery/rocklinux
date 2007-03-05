@@ -22,16 +22,29 @@
 #
 # See "man 5 inittab" for details.
 #
-
-# The default runlevel.
-id:2:initdefault:
-
 # /etc/rc.d executes the S and K scripts upon change
 # of runlevel.
+#
+# Format:
+#  <id>:<runlevels>:<action>:<process>
 #
 # Runlevels 0 and 6 are halt and reboot.
 # Runlevels 1-5 are multi-user.
 # Runlevel S is single user.
+# Runlevels A, B, C are on demand runlevels.
+#
+# Valid actions are:
+#	sysinit		boot		bootwait	initdefault
+#	respawn		once		wait		ctrlaltdel
+#	off		powerfail	powerwait	kbrequest
+#	ondemand	powerfailnow	powerokwait
+
+# System initialization.
+si:12345:sysinit:/etc/rc.d/sysinit
+
+# The default runlevel.
+id:2:initdefault:
+
 l0:0:wait:/etc/rc.d/rc
 l1:1:wait:/etc/rc.d/rc
 l2:2:wait:/etc/rc.d/rc
@@ -49,12 +62,9 @@ ca:12345:ctrlaltdel:/sbin/shutdown -r now
 #
 # The "id" field MUST be the same as the last
 # characters of the device (after "tty").
-#
-# Format:
-#  <id>:<runlevels>:<action>:<process>
 
 #
-# Maintenace Console on /dev/console
+# Maintenance Console on /dev/console
 #
 #1:12345:respawn:/sbin/agetty -L -i -I '\012\015\012Maintenance Console:\012' 9600 console linux
 

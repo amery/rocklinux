@@ -27,118 +27,28 @@
 #
 
 main_begin
-    block_begin(start, `Mounting /proc, /sys, /dev/shm and /dev/pts.')
-	mount -n /proc 2> /dev/null
-	mount -n /sys  2> /dev/null
-	check(`mount -n /dev/shm')
-	mount -n /dev/pts 2> /dev/null
+    block_begin(start, `Mounting /proc and /sys.')
+	check(`mount -n -t proc proc /proc')
+	check(`mount -n -t sysfs sysfs /sys')
 dnl
-    if [ -f /etc/conf/hardware ] ; then
-	. /etc/conf/hardware
-    fi
-    dmesg -n 3
-dnl
-    block_split(`Configuring the /dev filesystem ...')
-	check(`sh /etc/conf/devfs')
-dnl
-    block_split(`Activating swap devices.')
-	check(`swapon -a')
-dnl
-    if [ -s /etc/lvmtab ]; then
-	block_split(`Activating Volume Groups...')
-	    check(`/sbin/vgchange -ay')
-    fi
-dnl
-    block_split(`Checking file systems.')
-	fsck -A -C -a ; fsckrc=$?
-	if   [ $(( $fsckrc & ~3 )) != 0 ] ; then
-		echo " **"
-		echo " ** Filesystem check failed (returncode=$fsckrc)."
-		echo " ** Please repair the broken disk(s) manually."
-		echo " **"
-		sulogin -t 600 /dev/console
-		umount -adrv ; /sbin/reboot -d -f
-		while true ; do sleep 1 ; done
-	elif [ $(( $fsckrc &  2 )) != 0 ] ; then
-		for x in 10 9 8 7 6 5 4 3 2 ; do  
-			echo -en "\rSystem reboot in $x seconds ... "
-			sleep 1
-		done ; echo -e "\rSystem reboot now!                 "
-		umount -adrv ; /sbin/reboot -d -f
-		while true ; do sleep 1 ; done
+    block_split(`Setting kernel clock to local time.')
+	[ -f /etc/conf/clock ] && . /etc/conf/clock
+
+	if [ "$clock_tz" = localtime ] ; then
+		check(`hwclock --hctosys --localtime')
 	fi
 dnl
-    block_split(`Mounting local file systems.')
-	check(`mount -n -o remount,rw /')
-	rootdev="/dev/$(ls -l /dev/root 2> /dev/null | sed 's,.* -> ,,')"
-	if [ "$rootdev" = "/dev/" ]; then
-		rootdev="$( sed 's, ,\n,g' < /proc/cmdline | \
-				grep ^root= | cut -f2- -d= )"
-		[ -z "$rootdev" ] && rootdev="/dev/root"
+    block_split(`Setting enhanced real time clock precision to $clock_rtc.')
+	if [ "$clock_rtc" ] ; then
+		if [ -w /proc/sys/dev/rtc/max-user-freq ] ; then
+			check(`echo $clock_rtc > /proc/sys/dev/rtc/max-user-freq')
+		else
+			echo "No /proc/sys/dev/rtc/max-user-freq found."
+		fi
 	fi
-	check(`grep -v "^rootfs " /proc/mounts | \
-		sed "s,^/dev/root ,$rootdev ," > /etc/mtab')
-	check(`mount -a -t nocoda,nfs,devfs,proc,sysfs')
-dnl
-    block_split(`Refresh utmp, delete lock and tmp files and other stuff.')
-	find /var/lock /var/run /tmp -mindepth 1 -print0 2> /dev/null | xargs --null rm -rf
-	rm -f /etc/nologin /nologin /fastboot ; echo -n >> /var/run/utmp
-	chmod 664 /var/run/utmp ; chown root:tty /var/run/utmp
-	mkdir /tmp/.ICE-unix /var/lock/subsys
-	chmod 1777 /tmp/.ICE-unix
-dnl
-    block_split(`Loading kernel modules and configuring the kernel.')
-	check(`sh /etc/conf/kernel')
-dnl
-    [ -f /etc/conf/clock ] && . /etc/conf/clock
-    if [ "$clock_tz" = localtime ] ; then
-	block_split(`Setting kernel clock to local time.')
-	    check(`hwclock --hctosys --localtime')
-    fi
-    if [ "$clock_rtc" ] ; then
-	block_split(`Setting enhanced real time clock precision to $clock_rtc.')
-	if [ -w /proc/sys/dev/rtc/max-user-freq ] ; then
-	    check(`echo $clock_rtc > /proc/sys/dev/rtc/max-user-freq')
-	else
-	    echo "No /proc/sys/dev/rtc/max-user-freq found."
-	fi
-    fi
 dnl
     block_split(`Setting hostname to $(cat /etc/HOSTNAME).')
 	check(`hostname "$(cat /etc/HOSTNAME)"')
-dnl
-    block_split(`Writing /var/log/boot.msg.')
-	check(`dmesg > /var/log/boot.msg')
-dnl
-    block_split(`Setting keyboard keymappings.')
-	if [ -L /etc/default.keymap ] ; then
-		mapfile=$(ls -l /etc/default.keymap | sed 's,.* -> ,,')
-		check(`loadkeys $mapfile')
-	elif [ -f /etc/default.keymap ] ; then
-		check(`loadkeys /etc/default.keymap')
-	else
-		echo "No /etc/default.keymap found."
-	fi
-dnl
-    block_split(`Setting keyboard repeat rate and delay time.')
-	kbd_rate=30; kbd_delay=250
-        [ -f /etc/conf/kbd ] && . /etc/conf/kbd
-        check(`D_prefix/bin/kbdrate -r $kbd_rate -d $kbd_delay < /dev/console')
-dnl
-    block_split(`Setting console screen font.')
-	if [ -L /etc/default.vcfont ] ; then
-		fontfile=$(ls -l /etc/default.vcfont | sed 's,.* -> ,,')
-		check(`setfont $fontfile')
-	elif [ -f /etc/default.vcfont ] ; then
-		check(`setfont /etc/default.vcfont')
-	else
-		echo "No /etc/default.vcfont found."
-	fi
-dnl
-    block_split(`Setting console terminal type and blank interval.')
-	con_term=linux; con_blank=0
-        [ -f /etc/conf/console ] && . /etc/conf/console
-        check(`D_prefix/bin/setterm -term $con_term -blank $con_blank > /dev/console')
 dnl
     block_split(`Setting up loopback networking.')
 	check(`ip link set lo up')
@@ -151,58 +61,12 @@ dnl
 dnl
     block_split(`Reading /etc/sysctl.conf file.')
 	check(`sysctl -p')
-dnl
-    block_split(`Initializing kernel random number generator.')
-	if [ -e /var/state/random-seed ] ; then
-		check(`cat /var/state/random-seed >/dev/urandom')
-	fi
-
     block_end
 
-    block_begin(stop, `Saving /var/log/init.msg and /var/log/boot.msg.')
-	check(`echo -n >> /var/log/init.msg')
-	check(`echo -n >> /var/log/boot.msg')
-	check(`mv /var/log/init.msg /var/log/init.old')
-	check(`mv /var/log/boot.msg /var/log/boot.old')
-    block_split(`Writing a wtmp record.')
-	if [ "$RUNLEVEL" = 0 ] ; then check(`halt -w')
-	else check(`reboot -w') ; fi
-    block_split(`Saving kernel random seed.')
-	dd if=/dev/urandom of=/var/state/random-seed count=1 2> /dev/null
-dnl
-    block_split(`Sending all processes a SIGTERM (15).')
-	check(`killall5 -15') ; sleep 5 
-    block_split(`Sending all processes a 2nd SIGTERM (15).')
-	check(`killall5 -15') ; sleep 5 
-    block_split(`Sending all processes a SIGKILL (9).')
-	check(`killall5 -9') ; sleep 5 
-dnl
-    block_split(`Turning off swap devices.')
-	check(`swapoff -a')
-	sync ; sleep 1
-dnl
-    block_split(`Remounting sync/ro and umount filesystems.')
-	cut -d' ' -f-3 /etc/mtab /proc/mounts | sort -k2 -u -r | \
-	while read dev dir fs ; do
-		[ "$dir" = "/"        ] && continue
-		[ "$dir" = "/dev"     ] && continue
-		[ "$dir" = "/dev/shm" ] && continue
-		[ "$dir" = "/proc"    ] && continue
-		[ "$dir" = "/sys"     ] && continue
-		[ "$dir" = "/tmp"     ] && continue
-		echo "Umounting $dev on $dir ($fs)."
-		mount -o remount,sync $dir
-		mount -o remount,ro $dir
-		umount -d $dir
-	done
-dnl
-    block_split(`Unmounting remaining file systems.')
-	grep -E -v '^none (/|[a-z]+:) ' /proc/mounts > /etc/mtab
-	sync ; sleep 1 ; sync
-	umount -vdnra -t nodevfs,proc,sysfs,shm
-	mount -vn -o remount,sync /
-	mount -vn -o remount,ro /
-	sleep 1 ; sync ; sleep 1
+    block_begin(stop, `Sending all processes a 2nd TERM signal.')
+	check(`killall5 -15') ; sleep 5
+    block_split(`Sending all processes a KILL signal.')
+	check(`killall5 -9') ; sleep 5
 dnl
     block_split()
 	command=""
@@ -213,6 +77,5 @@ dnl
 		$command -d -f -i -p
 		while true ; do sleep 1 ; done
 	fi
-    block_end	
-
+    block_end
 main_end

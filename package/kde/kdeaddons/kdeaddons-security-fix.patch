@@ -1,0 +1,25 @@
+Fixes "a minor but annoying privacy issue," see http://kde.org/info/3.5.6.php
+
+--- kdeaddons/konq-plugins/webarchiver/archivedialog.cpp	2006/06/25 12:30:34	554811
++++ kdeaddons/konq-plugins/webarchiver/archivedialog.cpp	2007/01/24 17:16:52	626814
+@@ -395,12 +395,15 @@
+ QString ArchiveDialog::handleLink(const KURL& _url, const QString& _link)
+ {
+    KURL url(getAbsoluteURL(_url, _link));
+-   QString tarFileName;
+ 
+-   if (m_state==Retrieving)
+-      m_urlsToDownload.append(url);
+-   else if (m_state==Saving)
+-      tarFileName = m_downloadedURLDict[url.url()];
++   QString tarFileName;
++   if (kapp->authorizeURLAction("redirect", _url, url))
++   {
++       if (m_state==Retrieving)
++           m_urlsToDownload.append(url);
++       else if (m_state==Saving)
++           tarFileName = m_downloadedURLDict[url.url()];
++   }
+ 
+    return tarFileName;
+ }

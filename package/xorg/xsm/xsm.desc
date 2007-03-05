@@ -24,6 +24,15 @@
 [I] X.Org X11 xsm component
 
 [T] The xsm component for the X.Org Foundation X11 Release 7 and above.
+[T]
+[T] xsm is a session manager. A session is a group of applications, each
+[T] of which has a particular state. xsm allows you to create arbitrary
+[T] sessions - for example, you might have a "light" session, a "development"
+[T] session, or an "xterminal" session. Each session can have its own set of
+[T] applications. Within a session, you can perform a "checkpoint" to save
+[T] application state, or a "shutdown" to save state and exit the session.
+[T] When you log back in to the system, you can load a specific session, and
+[T] you can delete sessions you no longer want to keep.
 
 [U] http://www.x.org
 
@@ -32,6 +41,7 @@
 [M] The ROCK Linux Project
 
 [C] base/x11
+# Not flagging as CORE because it needs some other non-core packages
 
 [L] OpenSource
 [S] Stable

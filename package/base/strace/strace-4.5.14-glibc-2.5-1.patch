@@ -1,0 +1,18 @@
+Submitted By: Ken Moffat <ken at linuxfromscratch dot org>
+Date: 2006-12-29
+Initial Package Version: 4.5.14
+Upstream Status: Merged
+Origin: Appears to have come from fedora, to fix RH#209856
+Description: Allows compilation with glibc-2.5
+
+--- strace-4.5.14/strace.c.orig	2006-12-29 22:42:51.000000000 +0000
++++ strace-4.5.14/strace.c	2006-12-29 22:43:16.000000000 +0000
+@@ -2251,7 +2251,7 @@
+ 			if (!cflag
+ 			    && (qual_flags[WSTOPSIG(status)] & QUAL_SIGNAL)) {
+ 				unsigned long addr = 0, pc = 0;
+-#ifdef PT_GETSIGINFO
++#if defined(PT_CR_IPSR) && defined(PT_CR_IIP) && defined(PT_GETSIGINFO)
+ #				define PSR_RI	41
+ 				struct siginfo si;
+ 				unsigned long psr;

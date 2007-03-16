@@ -45,14 +45,15 @@
 [P] X -?---5---9 100.200
 
 #if xpkg == linux24.*
-[V] 2.4.34
+[V] 2.4.34.1
 [D] 3444963523 linux-2.4.34.tar.bz2 http://www.kernel.org/pub/linux/kernel/v2.4/
+[D] 1802610252 patch-2.4.34.1.bz2 ftp://ftp.kernel.org/pub/linux/kernel/v2.6/
 #endif
 
 #if xpkg == linux26.*
-[V] 2.6.19.1
-[D] 4108217827 linux-2.6.19.tar.bz2 ftp://ftp.kernel.org/pub/linux/kernel/v2.6/
-[D] 569484420 patch-2.6.19.1.bz2 ftp://ftp.kernel.org/pub/linux/kernel/v2.6/
+[V] 2.6.20
+[D] 4108217827 linux-2.6.20.tar.bz2 ftp://ftp.kernel.org/pub/linux/kernel/v2.6/
+
 # [D] 2022887016 linux-2.6.17-pa6.tar.bz2 http://cvs.parisc-linux.org/download/linux-2.6/
 #endif
 

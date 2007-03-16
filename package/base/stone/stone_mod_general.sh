@@ -170,15 +170,20 @@ set_locale_sub() {
 
 set_locale() {
 	unset LANG ; [ -f /etc/profile.d/locale ] && . /etc/profile.d/locale
-	locale="${LANG:-none}" ; cmd="gui_menu 'general_locale' 'Select one of the following locales. (Current: $locale)' 'none' 'set_locale_sub none'"
+	locale="${LANG:-none}" ;
+	cmd="gui_menu 'general_locale' 'Select one of the following locales. Current: ($locale)'"
+	cmd="$cmd 'none' 'set_locale_sub none'"
+	cmd="$cmd 'POSIX (C)' 'set_locale_sub C'"
 
-	x="$( echo -e "POSIX\tC" | expand -t52 )"
-	cmd="$cmd '$x' 'set_locale_sub C' $(
-		grep -H ^title /usr/share/i18n/locales/* 2> /dev/null | \
-		awk -F '"' '{ sub(".*/", "", $1); sub("[\\.:].*", "", $1); '"
-		printf \" '%-52s%s' 'set_locale_sub %s'\", \$2, \$1, \$1; }"
-	)"
-
+	cmd="$cmd `
+		( cd /usr/share/i18n/locales ; grep -H ^title * 2> /dev/null ) | \
+		while read code desc ; do
+			desc="$(echo "$desc" | tr -d '"')"
+			desc="$(echo "$desc" | tr -d "'")"
+			code="${code%%:title*}"
+			echo -n "'${desc} (${code})' 'set_locale_sub ${code}' "
+		done
+	`"
 	eval "$cmd"
 }
 

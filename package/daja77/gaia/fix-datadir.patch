@@ -1,9 +1,13 @@
---- ./src/config.h.vanilla	2006-11-24 17:45:55.000000000 +0100
-+++ ./src/config.h	2006-11-24 17:46:13.000000000 +0100
-@@ -21,5 +21,5 @@
- #define DOTDIR		".gaia"
+--- ./programs/gaia/SConscript.orig	2007-03-11 23:53:16.000000000 +0100
++++ ./programs/gaia/SConscript	2007-03-11 23:54:28.000000000 +0100
+@@ -17,8 +17,8 @@
+ if int(env['gpsd']):
+ 	env.Append( LIBS = [ 'gps' ], CCFLAGS = [ '-DWITH_GPSD' ], CXXFLAGS = [ '-DWITH_GPSD' ] )
  
- #ifndef DATADIR
--#  define DATADIR	"./data"
-+#  define DATADIR	"/usr/share/gaia/data"
- #endif
+-env.Append(CCFLAGS = [ '-DDATADIR="\\"' + env['prefix'] + "/" + env['datadir'] + '\\""' ] );
+-env.Append(CXXFLAGS = [ '-DDATADIR="\\"' + env['prefix'] + "/" + env['datadir'] + '\\""' ] );
++env.Append(CCFLAGS = [ '-DDATADIR="\\"/usr/share/gaia/' + env['datadir'] + '\\""' ] );
++env.Append(CXXFLAGS = [ '-DDATADIR="\\"/usr/share/gaia/' + env['datadir'] + '\\""' ] );
+ 
+ #######################################
+ # CHECKS

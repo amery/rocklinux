@@ -1,0 +1,11 @@
+--- aufs-2007-02-10/local.mk~	2007-01-29 03:33:35.000000000 +0100
++++ aufs-2007-02-10/local.mk	2007-03-24 22:33:05.000000000 +0100
+@@ -61,7 +61,7 @@
+ ########################################
+ # fake top level make
+ 
+-KDIR = /lib/modules/$(shell uname -r)/build
++KDIR = /usr/src/linux
+ Tgt = aufs.ko aufs.5 aufind.sh mount.aufs auplink aulchown umount.aufs
+ ifdef CONFIG_AUFS_COMPAT
+ Tgt += unionctl

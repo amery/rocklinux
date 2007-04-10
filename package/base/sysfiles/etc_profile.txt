@@ -21,7 +21,8 @@
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
 # determine the effective user id
-EUID="$( id -u )"
+# note that bash defines EUID as a read-only variable for this purpose
+_EUID="$( id -u )"
 
 # set the PATH-variable
 export PATH=""
@@ -31,7 +32,7 @@ do
 	if [ -d "$_bindir" ]; then
 		PATH="$PATH${PATH:+:}$_bindir"
 	fi
-	if [ -w / -o "$EUID" == 0 ]; then
+	if [ -w / -o "$_EUID" == 0 ]; then
 		_sbindir=${_bindir/%\/bin/\/sbin}
 		if [ "$_bindir" != "$_sbindir" -a -d "$_sbindir" ]; then
 			PATH="$PATH${PATH:+:}$_sbindir"
@@ -98,4 +99,4 @@ for x in /etc/profile.d/* /etc/conf/profile ; do
 	[ -f $x ] && . $x
 done
 
-unset EUID x
+unset _EUID x

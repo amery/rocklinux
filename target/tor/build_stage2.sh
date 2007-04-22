@@ -77,7 +77,7 @@ echo_status "Creating home directories and users..."
 mkdir -p home/{rocker,root}
 chown 1000:100 home/rocker
 
-sed -i -e 's,root:.*,root:x:0:0:root:/home/root:/bin/bash,' etc/passwd
+sed -i -e 's,root:.*,root::0:0:root:/home/root:/bin/bash,' etc/passwd
 sed -i -e 's,root:.*,root:$1$9KtEb9vt$IDoD/c7IG5EpCwxvBudgA:13300::::::,' etc/shadow
 echo 'rocker:x:1000:100:ROCK Live CD User:/home/rocker:/bin/bash' >> etc/passwd
 echo 'rocker:$1$b3mL1k/q$zneIjKcHqok1T80fp1cPI1:13300:0:99999:7:::' >> etc/shadow
@@ -93,12 +93,25 @@ echo "/usr/lib/libcowfs.so" > etc/ld.so.preload
 echo_status "adding a few additional files"
 cp -v $base/download/mirror/t/tor_aliases_v4 etc/profile.d
 echo ROCKate > etc/HOSTNAME
-echo "export WINDOWMANAGER=\"/usr/bin/icewm\"" > etc/profile.d/windowmanager
+
+echo "export WINDOWMANAGER=\"/usr/bin/icewm-session\"" > etc/profile.d/windowmanager
 echo "export XDM=\"/usr/X11R7/bin/xdm\"" > etc/conf/xdm
 echo "#!/bin/bash" > sbin/startx_on_boot
 echo "su - rocker -c \". /etc/profile; /usr/X11R7/bin/startx\"" >> sbin/startx_on_boot
 chmod +x sbin/startx_on_boot
+
 echo "127.0.0.1		ROCKate" >> etc/hosts
+
+cp $base/target/tor/fixedfiles/irssi_config etc/irssi.conf
+chmod 644 etc/irssi.conf
+
+mkdir -p etc/tor
+cp $base/target/tor/fixedfiles/torrc etc/tor/torrc
+
+cp $base/target/tor/fixedfiles/mod_rockate.sh etc/stone.d/
+cp $base/target/tor/fixedfiles/*.desktop usr/share/applications
+
+cp $base/download/mirror/r/rockate_*jpg usr/share/icewm/
 cp $base/target/tor/fixedfiles/icewm_menu usr/share/icewm/menu
 cp $base/target/tor/fixedfiles/rock-menu usr/share/icewm/rock-menu
 chmod +x usr/share/icewm/rock-menu
@@ -110,7 +123,7 @@ chroot . /usr/share/icewm/rock-menu
 #echo "chmod 666 \${FLWRAPPER_WLOG} \${FLWRAPPER_RLOG}" >> etc/profile
 #cp "$base/build/$ROCKCFG_ID/ROCK/tools.native/lib/fl_wrapper.so" lib/
 #echo "/lib/fl_wrapper.so" >> etc/ld.so.preload
-#
+
 if [ "${ROCKCFG_TARGET_TOR_SIZE}" == "files" ] ; then
 	echo_status "Compressing binaries"
 	files="`find bin sbin usr/bin usr/sbin usr/X11/bin -type f -print0 | xargs -0 file | grep ELF | cut -f1 -d:`"

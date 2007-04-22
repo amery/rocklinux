@@ -160,6 +160,14 @@ case "$1" in
 		/usr/bin/amixer sset Master unmute >/dev/null 2>&1 || error=$?
 	status
 
+	title "Configuring Windowmanager"
+		{
+			grep -q 'vga=0x31A' /proc/cmdline && echo "DesktopBackgroundImage=/usr/share/icewm/rockate_1280x1024.jpg" >> /usr/share/icewm/preferences
+			grep -q 'vga=0x317' /proc/cmdline && echo "DesktopBackgroundImage=/usr/share/icewm/rockate_1024x768.jpg" >> /usr/share/icewm/preferences
+			grep -q 'vga=0x314' /proc/cmdline && echo "DesktopBackgroundImage=/usr/share/icewm/rockate_800x600.jpg" >> /usr/share/icewm/preferences
+			grep -q 'vga=0x311' /proc/cmdline && echo "DesktopBackgroundImage=/usr/share/icewm/rockate_640x480.jpg" >> /usr/share/icewm/preferences
+		}
+	status
 	;;
 
     stop)

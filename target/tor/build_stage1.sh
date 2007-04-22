@@ -20,7 +20,7 @@ fi
 rock_targetdir="$base/target/$target/"
 rock_target="$target"
 
-rootdir="$disksdir/2nd_stage"
+rootdir="$base/build/$ROCKCFG_ID"
 targetdir="$disksdir/initrd"
 cross_compile=""
 if [ "$ROCKCFG_CROSSBUILD" = "1" ] ; then
@@ -167,6 +167,12 @@ do
 		oldck=${ck} ; oldfn=${fn}
 	fi
 done < <( find ${targetdir} -type f | xargs md5sum | sort )
+
+if [ "${ROCKCFG_TARGET_TOR_SIZE}" == "files" ] ; then
+	echo_status "Compressing binaries"
+	files="`find . -type f -print0 | xargs -0 file | grep ELF | cut -f1 -d:`"
+	$base/build/$ROCKCFG_ID/usr/bin/upx2 --brute $files < /proc/$$/fd/0 > /proc/$$/fd/1 2> /proc/$$/fd/2 || true
+fi
 
 cd ..
 

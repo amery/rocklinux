@@ -384,11 +384,11 @@ checkisomd5() { # {{{
 	getcdromdevice 1 0 0 || return
 	echo "Running check..."
 
-	/bin/checkisomd5 ${devicefile}
+	/bin/checkisomd5 --verbose ${devicefile}
 	code=${?}
-	if [ ${code} -eq 1 ] ; then
+	if [ ${code} -eq 0 ] ; then
 		echo "MD5Sum is correct."
-	elif [ ${code} -eq 0 ] ; then
+	elif [ ${code} -eq 1 ] ; then
 		echo "MD5Sum is NOT correct! Please contact the authors!"
 	fi
 

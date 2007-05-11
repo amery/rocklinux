@@ -27,6 +27,12 @@ then
     install_init() {
 	name=$1 ; file=$2 ; set `grep '# Runlevel: ' $file | cut -f3- -d' '`
 	spri=$1 ; kpri=`expr 100 - $spri` ; initdir="$root/etc/rc.d" ; shift
+	if [[ "$kpri" == ? ]] ; then
+		kpri="0${kpri}"
+	fi
+	if [[ "$spri" == ? ]] ; then
+		spri="0${spri}"
+	fi
 
 	echo -n "Install SysV Init script '$name' ($spri/$kpri): "
 	m4 -Dinitstyle=$ROCKCFG_PKG_SYSVINIT_INITSTYLE \

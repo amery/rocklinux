@@ -1,5 +1,5 @@
 pkgfork alsa-driver alsa-driver-24
-pkgfork alsa-driver alsa-driver-26
+pkgfork alsa-driver alsa-driver-26 status O 
 
 if [ "$ROCKCFG_PKG_LINUX_SRC24" = 0 ]; then
 	pkgdisable alsa-driver=alsa-driver-24

@@ -25,11 +25,11 @@
  install_to_libdir: all
 -	${mkinstalldirs} $(DESTDIR)$(libdir)$(MULTISUBDIR)
 -	$(INSTALL_DATA) $(TARGETLIB) $(DESTDIR)$(libdir)$(MULTISUBDIR)/$(TARGETLIB)n
--	( cd $(DESTDIR)$(libdir)$(MULTISUBDIR) ; $(RANLIB) $(TARGETLIB)n )
+-	( cd $(DESTDIR)$(libdir)$(MULTISUBDIR) ; chmod 644 $(TARGETLIB)n ;$(RANLIB) $(TARGETLIB)n )
 -	mv -f $(DESTDIR)$(libdir)$(MULTISUBDIR)/$(TARGETLIB)n $(DESTDIR)$(libdir)$(MULTISUBDIR)/$(TARGETLIB)
 +	#${mkinstalldirs} $(DESTDIR)$(libdir)$(MULTISUBDIR)
 +	#$(INSTALL_DATA) $(TARGETLIB) $(DESTDIR)$(libdir)$(MULTISUBDIR)/$(TARGETLIB)n
-+	#( cd $(DESTDIR)$(libdir)$(MULTISUBDIR) ; $(RANLIB) $(TARGETLIB)n )
++	#( cd $(DESTDIR)$(libdir)$(MULTISUBDIR) ; chmod 644 $(TARGETLIB)n ;$(RANLIB) $(TARGETLIB)n )
 +	#mv -f $(DESTDIR)$(libdir)$(MULTISUBDIR)/$(TARGETLIB)n $(DESTDIR)$(libdir)$(MULTISUBDIR)/$(TARGETLIB)
  	if test -n "${target_header_dir}"; then \
  	  case "${target_header_dir}" in \

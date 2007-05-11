@@ -1,20 +1,23 @@
 #!/bin/sh
 
 export PATH="/sbin:/bin:/usr/sbin:/usr/bin"
-if type -p gzip > /dev/null ; then
-	umount -d /old_root ; rmdir /old_root
+
+if [ -d /old_root ] && umount /old_root ; then
+	rmdir /old_root
 else
-	PATH="$PATH:/old_root/bin"
-	for x in /old_root/* ; do
-		rmdir $x 2> /dev/null || rm -f $x 2> /dev/null
-	done
+	echo "Can't umount /old_root"
 fi
-grep -v "^rootfs " /proc/mounts > /etc/mtab
-freeramdisk /dev/rd/* 2> /dev/null
 
 mkdir -p /lib/modules/$( uname -r )
 echo -n >> /lib/modules/$( uname -r )/modules.dep
 
+if [[ "$( < /proc/version)" == "Linux version 2.6."* ]] \
+    && type -p udevd > /dev/null ; then
+	/sbin/udevd --daemon
+	udevtrigger
+	udevsettle
+fi
+	
 setterm -blank 0 -powersave off -powerdown 0
 
 echo

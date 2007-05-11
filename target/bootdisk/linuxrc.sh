@@ -30,46 +30,52 @@ mod_load_info () { # {{{
 	fi
 } # }}}
 doboot() { # {{{
-	if ! mkdir /mnt_root/old_root ; then
+	if ! mkdir -p /mnt_root/old_root ; then
 		echo "Can't create /mnt_root/old_root"
-		exit_linuxrc=0
+		return 1
 	fi
 
 	if [ ! -f /mnt_root/sbin/init ] ; then
 		echo "Can't find /mnt_root/sbin/init!"
-		exit_linuxrc=0
+		return 1
 	fi
 
-	if [ ${exit_linuxrc} -ne 0 ] ; then
-		if ! pivot_root "/mnt_root" "/mnt_root/old_root" ; then
-			echo "Can't call pivot_root"
-			exit_linuxrc=0
-			return
-		fi
+	# pivot_root may or may not change the PWD and root of the
+	# caller, so we change into the new root directory first.
+	cd /mnt_root
+	if ! pivot_root . "/mnt_root/old_root" ; then
+		echo "Can't call pivot_root"
 		cd /
+		return 1
+	fi
 
-		if ! mount --move /old_root/dev /dev ; then
-			echo "Can't remount /old_root/dev as /dev"
-		fi
+	if ! mount --move /old_root/dev /dev ; then
+		echo "Can't remount /old_root/dev as /dev"
+	fi
 
-		if ! mount --move /old_root/proc /proc ; then
-			echo "Can't remount /old_root/proc as /proc"
-		fi
+	if ! mount --move /old_root/proc /proc ; then
+		echo "Can't remount /old_root/proc as /proc"
+	fi
 
+	if [[ "$( < /proc/version )" == "Linux version 2.6."* ]] ; then
 		if ! mount --move /old_root/sys /sys ; then
 			echo "Can't remount /old_root/sys as /sys"
 		fi
-
-		if ! umount /old_root/tmp ; then
-			echo "Can't umount /old_root/tmp"
-		fi
-
-	else
-		rmdir /mnt_root/old_root || echo "Can't remove /mnt_root/old_root"
-
-		umount /mnt_root || echo "Can't umount /mnt_root"
-		rmdir  /mnt_root || echo "Can't remove /mnt_root"
 	fi
+
+	if ! umount /old_root/tmp ; then
+		echo "Can't umount /old_root/tmp"
+	fi
+
+	sed -e "s, /mnt_root , / ," /old_root/etc/mtab > /etc/mtab
+
+	# Kill udevd so /old_root can be unmounted.
+	killall udevd
+
+	exec chroot . sh -c "exec /sbin/init" <dev/console >dev/console 2>&1
+
+	echo "Can't exec /sbin/init!"
+	return 1
 } # }}}
 trymount() { # {{{
 	source=${1}
@@ -109,15 +115,14 @@ EOF
 	echo "[ ${url} ]"
 	export ROCK_INSTALL_SOURCE_URL=${baseurl}
 
-	exit_linuxrc=1;
-	if ! mkdir /mnt_root ; then
+	if ! mkdir -p /mnt_root ; then
 		echo "Can't create /mnt_root"
-		exit_linuxrc=0
+		return 1
 	fi
 
-	if ! mount -t tmpfs -O ${TMPFS_OPTIONS} none /mnt_root ; then
+	if ! mount -t tmpfs -O ${TMPFS_OPTIONS} tmpfs /mnt_root ; then
 		echo "Can't mount /mnt_root"
-		exit_linuxrc=0
+		return 1
 	fi
 
 	wget -O - ${url} | tar ${STAGE_2_COMPRESS_ARG} -C /mnt_root -xf -
@@ -294,44 +299,40 @@ EOF
 		filename="${text}"
 	fi
 
-	exit_linuxrc=1
 	echo "Using ${devicefile}:${filename}."
 
 	if ! mkdir -p /mnt_source ; then
 		echo "Can't create /mnt_source"
-		exit_linuxrc=0
+		return 1
 	fi
 
 	if ! mount ${mountopts} ${devicefile} "/mnt_source" ; then
 		echo "Can't mount /mnt_source"
-		exit_linuxrc=0
+		return 1
 	fi
 
 	if ! mkdir -p /mnt_root ; then
 		echo "Can't create /mnt_root"
-		exit_linuxrc=0
+		return 1
 	fi
 
 	if ! mount -t tmpfs -o ${TMPFS_OPTIONS} tmpfs /mnt_root ; then
 		echo "Can't mount tmpfs on /mnt_root"
-		exit_linuxrc=0
+		return 1
 	fi
 
 	echo "Extracting 2nd stage filesystem to ram ..."
 	if ! tar ${STAGE_2_COMPRESS_ARG} -C /mnt_root -xf /mnt_source/${filename} ; then
 		echo "Can't extract /mnt/source/${filename}"
-		exit_linuxrc=0
 		return 1
 	fi
 
 	if ! umount "/mnt_source" ; then
 		echo "Can't umount /mnt_source"
-		exit_linuxrc=0
 	fi
 
 	if ! rmdir "/mnt_source" ; then
 		echo "Can't remove /mnt_source"
-		exit_linuxrc=0
 	fi
 
 	export ROCK_INSTALL_SOURCE_DEV=${devicefile}
@@ -401,31 +402,38 @@ emit_udev_events() { # {{{
 } # }}}
 
 input=1
-exit_linuxrc=0
 [ -z "${autoboot}" ] && autoboot=0
 
 # mount / / -o remount,rw  || echo "Can't remount / read-/writeable"
 # mount / / -o remount,rw  || echo "Can't remount / read-/writeable (for mount log)"
 mount -t tmpfs tmpfs /tmp -o ${TMPFS_OPTIONS} || echo "Can't mount a tmpfs on /tmp"
 mount -t proc proc /proc  || echo "Can't mount proc on /proc!"
-mount -t sysfs sysfs /sys || echo "Can't mount sysfs on /sys!"
-mount -t tmpfs tmpfs /dev || echo "Can't mount a tmpfs on /dev!"
 
 /sbin/depmod -ae
 
-cp -r /lib/udev/devices/* /dev
+case "$( < /proc/version )" in
+"Linux version 2.4."*)
+	mount -t devfs devfs /dev || echo "Can't mount devfs on /dev!" ;;
+"Linux version 2.6."*)
+	mount -t sysfs sysfs /sys || echo "Can't mount sysfs on /sys!"
 
-echo "" > /proc/sys/kernel/hotplug
-/sbin/udevd --daemon
+	if type -p udevd > /dev/null ; then
+		mount -t tmpfs tmpfs /dev || echo "Can't mount a tmpfs on /dev!"
 
-# create nodes for devices already in kernel
-emit_udev_events
+		cp -r /lib/udev/devices/* /dev
 
-mod_load_info
+		echo "" > /proc/sys/kernel/hotplug
+		/sbin/udevd --daemon
 
-# some devices (scsi...) need time to settle...
-echo "Waiting for devices to settle..."
-sleep 5
+		# create nodes for devices already in kernel
+		emit_udev_events
+		mod_load_info
+
+		# some devices (scsi...) need time to settle...
+		echo "Waiting for devices to settle..."
+		sleep 5
+	fi ;;
+esac
 
 ip addr add 127.0.0.1 dev lo
 ip link set lo up
@@ -445,7 +453,7 @@ you will not spend much time here. Just load your SCSI and networking
 drivers (if needed) and configure the installation source so the
 2nd stage boot system can be loaded and you can start the installation.
 EOF
-while [ ${exit_linuxrc} -eq 0 ] ; do
+while : ; do
 	cat <<EOF
 	0. Load 2nd stage system from cdrom or floppy drive
 	1. Load 2nd stage system from any device
@@ -499,7 +507,3 @@ EOF
 		  echo "No such option present!"
 	esac
 done
-	
-exec /sbin/init
-echo "Can't start /sbin/init!! Life sucks.\n\n"
-

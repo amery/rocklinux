@@ -73,6 +73,7 @@ pkgfilter sed '
 / dietlibc /	{ s/^X /O /; p; d; };	/ rocknet /	{ s/^X /O /; p; d; };
 / devfsd /	{ s/^X /O /; p; d; };	/ rockplug /	{ s/^X /O /; p; d; };
 / netkit-ftp /	{ s/^X /O /; p; d; };	/ netkit-tftp /	{ s/^X /O /; p; d; };
+/ unzip /	{ s/^X /O /; p; d; };	/ zip /		{ s/^X /O /; p; d; };
 / modutils /	{ s/^X /O /; p; d; };
 '
 

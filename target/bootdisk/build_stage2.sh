@@ -97,9 +97,9 @@ if [ -f ../../pkgs/kbd.tar.bz2 ] ; then
 fi
 #
 if [ -f ../../pkgs/pciutils.tar.bz2 ] ; then
-	echo_status "Installing pci.ids.gz ..."
+	echo_status "Installing pci.ids ..."
 	tar $taropt ../../pkgs/pciutils.tar.bz2 \
-		usr/share/pci.ids.gz
+		usr/share/pci.ids
 fi
 #
 echo_status "Creating 2nd stage linuxrc."

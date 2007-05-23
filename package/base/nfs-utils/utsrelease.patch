@@ -1,0 +1,13 @@
+--- ./tools/getkversion/getkversion.c.orig	2007-05-23 19:32:18.000000000 +0200
++++ ./tools/getkversion/getkversion.c	2007-05-23 19:32:26.000000000 +0200
+@@ -12,6 +12,9 @@
+ int
+ main(void)	/* This is for Dan Popp ;) */
+ {
+-	printf("%s\n", UTS_RELEASE);
++	int a = LINUX_VERSION_CODE >> 16;
++	int b = (LINUX_VERSION_CODE & 0xff00) >> 8;
++	int c = LINUX_VERSION_CODE & 0xff;
++	printf("%d.%d.%d\n", a, b, c);
+ 	return 0;
+ }

@@ -7,8 +7,7 @@ mkdir -p $disksdir/2nd_stage
 cd $disksdir/2nd_stage
 mkdir -p mnt/source mnt/target
 #
-package_map="       +00-dirtree
-+$ROCKCFG_PKG_GLIBC_BRANCH              +$ROCKCFG_PKG_BASH_DEFAULT
+package_map="       +00-dirtree         -gcc42
 -automake17         -automake18         -automake19         -gcc2
 -gcc33              -gcc34              -gcc40              -gcc41
 -gmp                -mpfr               -rockinitrd         +stone
@@ -25,7 +24,7 @@ package_map="       +00-dirtree
 -mine               -bize               -termcap            +ncurses
 +readline           -strace             -ltrace             -perl5
 -m4                 -time               -gettext            -zlib
-                    +attr               +acl                +findutils
+-etcnet             +attr               +acl                +findutils
 +mktemp             +coreutils          -diffutils          -patch
 -make               +grep               +sed                +gzip
 +tar                +gawk               -flex               +bzip2
@@ -50,6 +49,7 @@ else
 fi
 
 package_map="+$ROCKCFG_PKG_LINUX_DEFAULT +$packager $package_map"
+package_map="+$ROCKCFG_PKG_GLIBC_BRANCH +$ROCKCFG_PKG_BASH_DEFAULT $package_map"
 
 echo_status "Extracting the packages archives."
 for x in $( ls ../../pkgs/*.tar.bz2 | tr . / | cut -f8 -d/ )
@@ -97,9 +97,9 @@ if [ -f ../../pkgs/kbd.tar.bz2 ] ; then
 fi
 #
 if [ -f ../../pkgs/pciutils.tar.bz2 ] ; then
-	echo_status "Installing pci.ids ..."
+	echo_status "Installing pci.ids.gz ..."
 	tar $taropt ../../pkgs/pciutils.tar.bz2 \
-		usr/share/pci.ids
+		usr/share/pci.ids.gz
 fi
 #
 echo_status "Creating 2nd stage linuxrc."

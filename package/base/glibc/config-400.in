@@ -36,9 +36,9 @@ then
 		ROCKCFGSET_PKG_GLIBC22_USEIT=1
 	fi
 
-	choice ROCKCFG_PKG_GLIBC_BRANCH glibc23 \
-                glibc23 'Use glibc-2.3.x (recommended)' \
-                glibc25 'Use glibc-2.5 (for testing)' \
+	choice ROCKCFG_PKG_GLIBC_BRANCH glibc25 \
+                glibc25 'Use glibc-2.5 (recommended)' \
+                glibc23 'Use glibc-2.3.x' \
                 glibc22 'Use glibc-2.2.x'
 
 	if [ "$ROCKCFG_PKG_GLIBC_BRANCH" = "glibc22" ] ; then
@@ -47,7 +47,7 @@ then
 		bool 'Use old-style linuxthreads instead of NPTL' \
 			ROCKCFG_PKG_GLIBC23_LINUXTHREADS 0
 	fi
-		
+
 	pkgfork glibc $ROCKCFG_PKG_GLIBC_BRANCH
 	pkgremove glibc
 

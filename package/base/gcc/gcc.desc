@@ -80,6 +80,11 @@
 [D] 1410840800 gcc-4.1.2.tar.bz2 ftp://gcc.gnu.org/pub/gcc/releases/gcc-4.1.2/
 #endif
 
+#if xpkg == gcc42.*
+[V] 4.2.0
+[D] 4172407453 gcc-4.2.0.tar.bz2 ftp://gcc.gnu.org/pub/gcc/releases/gcc-4.2.0/
+#endif
+
 [CD] <COPY> for x in $cachedir/*.cache; do cp $x $confdir/$pkg.cache; done
 
 [CV-URL] ftp://gcc.gnu.org/pub/gcc/releases/

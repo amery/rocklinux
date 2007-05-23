@@ -30,6 +30,7 @@ then
 	bool 'Building gcc 3.4.x package' ROCKCFG_PKG_GCC_GCC34 0
 	bool 'Building gcc 4.0.x package' ROCKCFG_PKG_GCC_GCC40 1
 	bool 'Building gcc 4.1.x package' ROCKCFG_PKG_GCC_GCC41 0
+	bool 'Building gcc 4.2.x package' ROCKCFG_PKG_GCC_GCC42 0
 
 	d="none" ; l="" ; m=""
 	if [ $ROCKCFG_PKG_GCC_GCC2  = 1 ]; then pkgfork gcc gcc2;  d="gcc2";  l="$l $d"; fi
@@ -38,6 +39,7 @@ then
 	if [ $ROCKCFG_PKG_GCC_GCC34 = 1 ]; then pkgfork gcc gcc34; d="gcc34"; l="$l $d"; fi
 	if [ $ROCKCFG_PKG_GCC_GCC40 = 1 ]; then pkgfork gcc gcc40; d="gcc40"; l="$l $d"; m="$m $d"; fi
 	if [ $ROCKCFG_PKG_GCC_GCC41 = 1 ]; then pkgfork gcc gcc41; d="gcc41"; l="$l $d"; m="$m $d"; fi
+	if [ $ROCKCFG_PKG_GCC_GCC42 = 1 ]; then pkgfork gcc gcc42; d="gcc42"; l="$l $d"; m="$m $d"; fi
 	pkgremove gcc
 
 	k=""; for x in $l; do
@@ -67,7 +69,7 @@ then
 
 	# build non-default CCs in stages 5 and 9
 	# and dedicated C++ and Fortran77 compilers in stages 2 and 9
-	k=""; for x in gcc2 gcc32 gcc33 gcc34 gcc40 gcc41; do
+	k=""; for x in gcc2 gcc32 gcc33 gcc34 gcc40 gcc41 gcc42; do
 		if [ "$ROCKCFG_DEFAULT_CC" != "$x" ] ; then
 			if [[ "$ROCKCFG_DEFAULT_CXX" != "$x" && "$ROCKCFG_DEFAULT_F77" != "$x" ]]; then
 				k="$k / gcc=$x /   s/^\(.\) [0-9-]*/\1 -----5---9/;";
@@ -129,6 +131,15 @@ then
 		bool 'Do profiled bootstrap' \
 				ROCKCFG_PKG_GCC41_PROFILED 1
 		include "package/*/*/subconfig-gcc41.in"
+	fi
+	if pkgcheck gcc=gcc42 X; then
+		comment ' '
+		comment '--- GCC 4.2.x options'
+		bool 'Do not build JAVA compiler' \
+				ROCKCFG_PKG_GCC42_NO_JAVA 1
+		bool 'Do profiled bootstrap' \
+				ROCKCFG_PKG_GCC42_PROFILED 1
+		include "package/*/*/subconfig-gcc42.in"
 	fi
 
   menu_end

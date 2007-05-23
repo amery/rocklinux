@@ -17,15 +17,14 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-diff -Naur findutils-4.2.11/locate/Makefile.in findutils-4.2.11.new/locate/Makefile.in
---- findutils-4.2.11/locate/Makefile.in	2005-01-03 00:42:34.000000000 +0000
-+++ findutils-4.2.11.new/locate/Makefile.in	2005-01-04 10:45:43.000000000 +0000
-@@ -286,7 +286,7 @@
+--- ./locate/Makefile.in.orig	2007-05-05 15:07:38.000000000 +0200
++++ ./locate/Makefile.in	2007-05-16 14:17:04.000000000 +0200
+@@ -491,7 +491,7 @@
  
  # The default database to build and search.
  AUTOMAKE_OPTIONS = std-options
 -LOCATE_DB = $(localstatedir)/locatedb
 +LOCATE_DB = /var/state/locatedb
- localedir = $(datadir)/locale
  AM_INSTALLCHECK_STD_OPTIONS_EXEMPT = frcode code bigram
  bin_SCRIPTS = updatedb
+ man_MANS = locate.1 updatedb.1 locatedb.5

@@ -1,0 +1,11 @@
+--- ./makefile	2007-05-15 22:41:39.000000000 +0200
++++ ./makefile	2007-05-15 22:42:07.000000000 +0200
+@@ -13,7 +13,7 @@
+ ifeq ($(OSTYPE),macos)
+ CC = gcc -std=c99 -O2 -U__STRICT_ANSI__ -g -lm -lrt $(OS_CCDEFS) -I .
+ else
+-CC = gcc -std=c99 -O2 -U__STRICT_ANSI__ -g -lm $(OS_CCDEFS) -I .
++CC = gcc -std=c99 -O2 -U__STRICT_ANSI__ -g -lm -lrt $(OS_CCDEFS) -I .
+ endif
+ ifeq ($(USE_NETWORK),)
+ else

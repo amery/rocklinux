@@ -313,9 +313,11 @@ if [ "$chroot" = 1 ] ; then
 			mount --bind $realbase $PWD/ROCK/loop
 			mount --bind $realconf $PWD/ROCK/config
 			mount --bind $realdown $PWD/ROCK/download
+		fi
+		if [ ! -e $PWD/ROCK/src.$xpkg.$id ]; then
 			ln -s loop/src.$xpkg.$id $PWD/ROCK/src.$xpkg.$id
 		fi
-		chroot "$xroot" /bin/bash ROCK/src.$xpkg.$id/debug_x.sh
+		chroot "$xroot" /bin/bash /ROCK/src.$xpkg.$id/debug_x.sh
 		rm -f $PWD/ROCK/src.$xpkg.$id
 	EOT
 	chmod +x "$builddir/debug.sh"

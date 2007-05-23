@@ -70,7 +70,7 @@ then
 		;;
 	esac
 
-	choice ROCKCFG_PKG_LINUX_DEFAULT_HEADERS linux-libc \
+	choice ROCKCFG_PKG_LINUX_DEFAULT_HEADERS linux26 \
 		linux26 'Use Linux 2.6 headers as system headers' \
 		linux-libc 'Use linux-libc-headers package as system headers'
 

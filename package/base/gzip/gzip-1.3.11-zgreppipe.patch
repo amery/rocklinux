@@ -5,7 +5,7 @@
 # the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 # the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 # 
-# ROCK Linux: rock-src/package/base/gzip/gzip-1.3.5-gunzip-dir.patch
+# ROCK Linux: rock-src/package/base/gzip/gzip-1.3.1-zgreppipe.patch
 # ROCK Linux is Copyright (C) 1998 - 2006 Clifford Wolf
 # 
 # This patch file is dual-licensed. It is available under the license the
@@ -17,14 +17,23 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
---- gzip-1.3.5/gzip.c.pom	2005-04-29 14:25:23.000000000 +0200
-+++ gzip-1.3.5/gzip.c	2005-04-29 14:24:42.000000000 +0200
-@@ -1344,6 +1344,8 @@
- 			error("corrupted input -- file name too large");
- 		    }
- 		}
-+		char *base2 = base_name (base);   /* there should be problem with file name */
-+		strcpy(base, base2);              /* in this name there can't be path */
-                 /* If necessary, adapt the name to local OS conventions: */
-                 if (!list) {
-                    MAKE_LEGAL_NAME(base);
+--- ./zgrep.in
++++ ./zgrep.in
+@@ -141,6 +141,8 @@
+ exec 3>&1
+ res=0
+ 
++trap break SIGPIPE
++
+ for i
+ do
+   # Fail if gzip or grep (or sed) fails.
+@@ -184,5 +186,8 @@
+   r=$?
+   test "$gzip_status" -eq 0 || test "$gzip_status" -eq 2 || r=2
+   test $res -lt $r && res=$r
++  # SIGPIPE + 128
++  test "$r" -eq 141 && exit $res
+ done
++trap - SIGPIPE
+ exit $res

@@ -1,0 +1,22 @@
+--- ./lib/sys_time_.h	2007-05-16 23:33:02.000000000 +0200
++++ ./lib/sys_time_.h	2007-05-16 23:35:10.000000000 +0200
+@@ -39,7 +39,7 @@
+ #if 1
+ # undef gettimeofday
+ # define gettimeofday rpl_gettimeofday
+-int gettimeofday (struct timeval *restrict, void *restrict);
++int gettimeofday (struct timeval *tv, void *tz);
+ #endif
+ 
+ #endif /* _gl_SYS_TIME_H */
+--- ./lib/gettimeofday.c	2007-05-16 23:34:08.000000000 +0200
++++ ./lib/gettimeofday.c	2007-05-16 23:35:31.000000000 +0200
+@@ -98,7 +98,7 @@
+    causes problems.  */
+ 
+ int
+-rpl_gettimeofday (struct timeval *restrict tv, void *restrict tz)
++rpl_gettimeofday (struct timeval *tv, void *tz)
+ {
+ #undef gettimeofday
+ #if HAVE_GETTIMEOFDAY

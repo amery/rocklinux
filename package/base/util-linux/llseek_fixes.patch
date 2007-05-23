@@ -62,3 +62,22 @@
  #endif
  
  static int
+--- ./partx/partx.c	2007-05-21 22:30:42.000000000 +0200
++++ ./partx/partx.c	2007-05-21 22:31:21.000000000 +0200
+@@ -339,10 +339,13 @@
+ #endif
+ 
+ #ifdef NEED__llseek
++#include <sys/syscall.h>
+ #include <linux/unistd.h>       /* _syscall */
+-static
+-_syscall5(int,  _llseek,  uint,  fd, ulong, hi, ulong, lo,
+-	  long long *, res, uint, wh);
++static int _llseek (unsigned int fd, unsigned long oh,
++                    unsigned long ol, long long *result,
++                    unsigned int origin) {
++	return syscall(__NR__llseek, fd, oh, ol, result, origin);
++}
+ #endif
+ 
+ static int

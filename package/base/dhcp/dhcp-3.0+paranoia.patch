@@ -62,9 +62,9 @@ last modified 12/10/2001
 
 --- dhcp-3.0/server/dhcpd.c	Thu Jun 21 22:12:58 2001
 +++ dhcp-3.0+paranoia/server/dhcpd.c	Wed Oct 17 08:23:00 2001
-@@ -56,6 +56,16 @@
- #include "version.h"
+@@ -47,6 +47,16 @@
  #include <omapip/omapip_p.h>
+ #include <syslog.h>
  
 +#if defined (PARANOIA)
 +#  include <sys/types.h>
@@ -78,8 +78,8 @@ last modified 12/10/2001
 +
  static void usage PROTO ((void));
  
- TIME cur_time;
-@@ -204,6 +214,22 @@
+ struct iaddr server_identifier;
+@@ -193,6 +203,22 @@
  	omapi_object_dereference (&listener, MDL);
  }
  
@@ -99,10 +99,10 @@ last modified 12/10/2001
 +}
 +#endif /* PARANOIA */
 +
- int main (argc, argv, envp)
- 	int argc;
- 	char **argv, **envp;
-@@ -236,6 +262,14 @@
+ #ifndef UNIT_TEST
+ int 
+ main(int argc, char **argv) {
+@@ -226,6 +252,14 @@
  	char *traceinfile = (char *)0;
  	char *traceoutfile = (char *)0;
  #endif
@@ -115,9 +115,9 @@ last modified 12/10/2001
 +	gid_t set_gid = 0;
 +#endif /* PARANOIA */
  
- 	/* Make sure we have stdin, stdout and stderr. */
- 	status = open ("/dev/null", O_RDWR);
-@@ -298,6 +332,20 @@
+         /* Make sure that file descriptors 0 (stdin), 1, (stdout), and
+            2 (stderr) are open. To do this, we assume that when we
+@@ -286,6 +320,20 @@
  			if (++i == argc)
  				usage ();
  			server = argv [i];
@@ -138,7 +138,7 @@ last modified 12/10/2001
  		} else if (!strcmp (argv [i], "-cf")) {
  			if (++i == argc)
  				usage ();
-@@ -397,6 +445,44 @@
+@@ -403,6 +451,44 @@
  					     trace_seed_stop, MDL);
  #endif
  
@@ -183,7 +183,7 @@ last modified 12/10/2001
  	/* Default to the DHCP/BOOTP port. */
  	if (!local_port)
  	{
-@@ -500,6 +586,10 @@
+@@ -537,6 +623,10 @@
  
  	postconf_initialization (quiet);
  
@@ -194,7 +194,7 @@ last modified 12/10/2001
          /* test option should cause an early exit */
   	if (cftest && !lftest) 
   		exit(0);
-@@ -543,6 +633,22 @@
+@@ -607,6 +697,22 @@
  			exit (0);
  	}
  
@@ -217,7 +217,7 @@ last modified 12/10/2001
  	/* Read previous pid file. */
  	if ((i = open (path_dhcpd_pid, O_RDONLY)) >= 0) {
  		status = read (i, pbuf, (sizeof pbuf) - 1);
-@@ -888,6 +994,10 @@
+@@ -962,6 +1068,10 @@
  
  	log_fatal ("Usage: dhcpd [-p <UDP port #>] [-d] [-f]%s%s%s%s",
  		   "\n             [-cf config-file] [-lf lease-file]",

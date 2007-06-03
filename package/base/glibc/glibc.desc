@@ -61,5 +61,11 @@
 [D] 4254948014 glibc-ports-2.5.tar.bz2 http://ftp.gnu.org/gnu/glibc/
 #endif
 
-[CD] <COPY> cp $cachedir/glibc2[235].cache $confdir/$pkg.cache
+#if xpkg == glibc26.*
+[V] 2.6
+[D] 3511308126 glibc-2.6.tar.bz2 http://ftp.gnu.org/gnu/glibc/
+[D] 2841039313 glibc-ports-2.6.tar.bz2 http://ftp.gnu.org/gnu/glibc/
+#endif
+
+[CD] <COPY> cp $cachedir/glibc2[2356].cache $confdir/$pkg.cache
 

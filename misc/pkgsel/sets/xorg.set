@@ -30,7 +30,9 @@
 / vlock /                       { p; d; };
 / xorg /			{ p; d; };
 / zsh/                          { p; d; };
-
+/ fontconfig /			{ p; d; };
+/ netkit-rsh /			{ p; d; };
+/ libdrm /			{ p; d; };
 
 # Some architecture-specifc-packages with missing deps
 / macosd /                      { s/^X /O / ; p; d; };

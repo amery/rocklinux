@@ -2,6 +2,7 @@
 #
 set -e
 #
+read ROCKATE_VERSION < $base/target/$target/VERSION
 echo_header "Creating 2nd stage filesystem:"
 mkdir -p $disksdir/2nd_stage
 cd $disksdir/2nd_stage
@@ -116,6 +117,8 @@ cp $base/target/tor/fixedfiles/icewm_menu usr/share/icewm/menu
 cp $base/target/tor/fixedfiles/rock-menu usr/share/icewm/rock-menu
 chmod +x usr/share/icewm/rock-menu
 chroot . /usr/share/icewm/rock-menu
+
+echo ${ROCKATE_VERSION} > etc/ROCKATE_VERSION
 # temporary fl_wrapper addition for dependency checking
 #echo "export FLWRAPPER_WLOG=\"/tmp/fl_wrapper.wlog\"" >> etc/profile
 #echo "export FLWRAPPER_RLOG=\"/tmp/fl_wrapper.rlog\"" >> etc/profile

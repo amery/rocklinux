@@ -78,13 +78,5 @@ dnl
 		mount -o remount,ro $dir
 		umount -d $dir
 	done
-dnl
-    block_split(`Unmounting remaining file systems.')
-	grep -E -v '^none (/|[a-z]+:) ' /proc/mounts > /etc/mtab
-	sync ; sleep 1 ; sync
-	umount -vdnra -t nodevfs,proc,sysfs,shm
-	mount -vn -o remount,sync /
-	mount -vn -o remount,ro /
-	sleep 1 ; sync ; sleep 1
     block_end
 main_end

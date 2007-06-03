@@ -21,11 +21,10 @@
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
 if pkgcheck openoffice X ; then
- 	menu_begin MENU_PKG_OPENOFFICE 'OpenOffice Package Options'
-		# only 01 and 49 language sets are built by default
-		choice ROCKCFG_PKG_OPENOFFICE_LANGUAGE 01 \
-			01 'US English version' \
-			49 'German version'
+	menu_begin MENU_PKG_OPENOFFICE 'OpenOffice Package Options'
+		choice ROCKCFG_PKG_OPENOFFICE_LANGUAGE en_US \
+			en_US 'US English version' \
+			de 'German version'
 	menu_end
 fi
 

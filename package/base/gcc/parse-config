@@ -30,8 +30,6 @@ if [ $pkg != glibc23 -a $pkg != glibc22 -a \
      $pkg != grub  -a $pkg != dietlibc ]
 then
 	if [ "$ROCKCFG_PKG_GCC_STACKPRO" = 1 ] ; then
-		var_append GCC2_WRAPPER_INSERT " " "-fstack-protector"
-		var_append GCC3_WRAPPER_INSERT " " "-fstack-protector"
 		var_append GCC4_WRAPPER_INSERT " " "-fstack-protector"
 	fi
 fi

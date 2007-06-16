@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168533801 Thu Jan 11 17:43:21 2007 (5)
-[TIMESTAMP] 1168725410 Sat Jan 13 22:56:50 2007 (9)
+[TIMESTAMP] 1180912515 Mon Jun  4 01:15:15 2007 (5)
+[TIMESTAMP] 1181278750 Fri Jun  8 06:59:10 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-fontconfig.log 9-fontconfig.log
 
-[BUILDTIME] 6467 (5)
-[BUILDTIME] 8148 (9)
-[SIZE] 1.38 MB, 47 files
+[BUILDTIME] 8287 (5)
+[BUILDTIME] 10792 (9)
+[SIZE] 1.83 MB, 94 files
 
 [DEP] 00-dirtree applewmproto bash2 binutils bitstream-vera-fonts bzip2
-[DEP] coreutils cvm diffutils encodings expat expat:dev findutils
-[DEP] font-adobe-100dpi font-adobe-75dpi font-adobe-utopia-100dpi
+[DEP] cheapskatefonts coreutils cvm diffutils encodings expat expat:dev
+[DEP] findutils font-adobe-100dpi font-adobe-75dpi font-adobe-utopia-100dpi
 [DEP] font-adobe-utopia-75dpi font-adobe-utopia-type1
 [DEP] font-alias font-arabic-misc font-bh-100dpi font-bh-75dpi
 [DEP] font-bh-lucidatypewriter-100dpi font-bh-lucidatypewriter-75dpi
@@ -45,10 +45,11 @@
 [DEP] font-misc-ethiopic font-misc-meltho font-misc-misc font-mutt-misc
 [DEP] font-schumacher-misc font-screen-cyrillic font-sony-misc
 [DEP] font-sun-misc font-util font-winitzki-cyrillic font-xfree86-type1
-[DEP] freefonts freetype freetype:dev gawk gcc40 gcc40:dev glibc23
-[DEP] glibc23:dev gnome-print10 gpl-fonts grep kdebase libdockapp libx11
-[DEP] linux-libc-headers:dev magicpoint make mktemp net-tools netpbm nx-x11
-[DEP] pkgconfig rrdtool sed sysfiles tar terminus-font util-linux zlib
+[DEP] freefonts freetype freetype:dev gawk gcc42 gcc42:dev glibc26
+[DEP] glibc26:dev gnome-print10 gpl-fonts grep kdebase libdockapp libelf
+[DEP] libx11 linux26-headers:dev ltrace magicpoint make mktemp net-tools
+[DEP] nx-x11 pkgconfig sed sysfiles tar terminus-font twoftpd ucspi-unix
+[DEP] util-linux xmame zlib
 
 [PROVIDES] fc-cache fc-cat fc-list fc-match libfontconfig.a
 [PROVIDES] libfontconfig.so

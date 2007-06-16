@@ -20,29 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168520275 Thu Jan 11 13:57:55 2007 (2)
-[TIMESTAMP] 1168523216 Thu Jan 11 14:46:56 2007 (3)
-[TIMESTAMP] 1168716049 Sat Jan 13 20:20:49 2007 (9) ERROR
-[TIMESTAMP] 1168957789 Tue Jan 16 15:29:49 2007 (9) ERROR
-[TIMESTAMP] 1169128082 Thu Jan 18 14:48:02 2007 (9) ERROR
+[TIMESTAMP] 1180887889 Sun Jun  3 18:24:49 2007 (2)
+[TIMESTAMP] 1180894991 Sun Jun  3 20:23:11 2007 (3)
+[TIMESTAMP] 1181260647 Fri Jun  8 01:57:27 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 2-perl5.log 3-perl5.log 9-perl5.err
+[LOGS] 2-perl5.log 3-perl5.log 9-perl5.log
 
-[BUILDTIME] 26732 (2)
-[BUILDTIME] 24863 (3)
-[BUILDTIME] 32589 (9) ERROR
-[BUILDTIME] 32786 (9) ERROR
-[BUILDTIME] 32796 (9) ERROR
-[SIZE] 33.49 MB, 1853 files
+[BUILDTIME] 33560 (2)
+[BUILDTIME] 30713 (3)
+[BUILDTIME] 39494 (9)
+[SIZE] 33.76 MB, 1793 files
 
 [DEP] 00-dirtree bash2 bdb33 bdb44 bdb44:dev binutils bzip2 coreutils
-[DEP] cvm diffutils findutils gawk gcc40 gcc40:dev gdbm gdbm:dev glibc23
-[DEP] glibc23:dev grep linux-libc-headers:dev make mktemp netpbm nspr:dev
-[DEP] openssl:dev patch rrdtool sed sysfiles tar tcsh twoftpd ucspi-unix
-[DEP] util-linux
+[DEP] cvm diffutils findutils gawk gcc42 gcc42:dev gdbm gdbm:dev glibc26
+[DEP] glibc26:dev grep linux26-headers:dev make mktemp nspr:dev patch
+[DEP] sed sysfiles tar tcsh twoftpd ucspi-unix util-linux xmame
 
 [PROVIDES] APItest.so B.so Base64.so Byte.so ByteLoader.so C.so CN.so
 [PROVIDES] Call.so Cwd.so DB_File.so DProf.so Dumper.so DynaLoader.a
@@ -52,59 +47,8 @@
 [PROVIDES] Socket.so Storable.so Symbol.so SysV.so Syslog.so TW.so
 [PROVIDES] Typemap.so Unicode.so Util.so a2p attrs.so c2ph cpan dprofpp
 [PROVIDES] enc2xs encoding.so find2perl h2ph h2xs instmodsh libnetcfg
-[PROVIDES] libperl.a perl perl5.8.7 perlbug perlcc perldoc perlivp piconv
+[PROVIDES] libperl.a perl perl5.8.8 perlbug perlcc perldoc perlivp piconv
 [PROVIDES] pl2pm pod2html pod2latex pod2man pod2text pod2usage podchecker
 [PROVIDES] podselect prove psed pstruct re.so s2p scalar.so shared.so
-[PROVIDES] sperl5.8.7 splain suidperl threads.so via.so xsubpp
-
-[9-ERROR] /usr/include/sys/xattr.h -> /usr/include/sys/xattr.ph
-[9-ERROR] /usr/include/syscall.h -> /usr/include/syscall.ph
-[9-ERROR] /usr/include/sysexits.h -> /usr/include/sysexits.ph
-[9-ERROR] /usr/include/syslog.h -> /usr/include/syslog.ph
-[9-ERROR] /usr/include/tar.h -> /usr/include/tar.ph
-[9-ERROR] /usr/include/termio.h -> /usr/include/termio.ph
-[9-ERROR] /usr/include/termios.h -> /usr/include/termios.ph
-[9-ERROR] /usr/include/tgmath.h -> /usr/include/tgmath.ph
-[9-ERROR] /usr/include/thread_db.h -> /usr/include/thread_db.ph
-[9-ERROR] /usr/include/time.h -> /usr/include/time.ph
-[9-ERROR] /usr/include/ttyent.h -> /usr/include/ttyent.ph
-[9-ERROR] /usr/include/ucontext.h -> /usr/include/ucontext.ph
-[9-ERROR] /usr/include/ulimit.h -> /usr/include/ulimit.ph
-[9-ERROR] /usr/include/unistd.h -> /usr/include/unistd.ph
-[9-ERROR] /usr/include/ustat.h -> /usr/include/ustat.ph
-[9-ERROR] /usr/include/utime.h -> /usr/include/utime.ph
-[9-ERROR] /usr/include/utmp.h -> /usr/include/utmp.ph
-[9-ERROR] /usr/include/utmpx.h -> /usr/include/utmpx.ph
-[9-ERROR] /usr/include/values.h -> /usr/include/values.ph
-[9-ERROR] /usr/include/wait.h -> /usr/include/wait.ph
-[9-ERROR] /usr/include/wchar.h -> /usr/include/wchar.ph
-[9-ERROR] /usr/include/wctype.h -> /usr/include/wctype.ph
-[9-ERROR] /usr/include/wordexp.h -> /usr/include/wordexp.ph
-[9-ERROR] /usr/include/xlocale.h -> /usr/include/xlocale.ph
-[9-ERROR] Trying to copy the default documentation ...
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing /lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 2615 files for this package.
-[9-ERROR] Applying package split: 40 perl5:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
-[9-ERROR] Applying package split: 42 perl5:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 perl5:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <perl5> Creating flist file ...
-[9-ERROR] <perl5> Creating package dependencies file ...
-[9-ERROR] <perl5> Creating package description ...
-[9-ERROR] <perl5> Creating md5sum and cksum files ...
-[9-ERROR] <perl5:dev> Creating flist file ...
-[9-ERROR] <perl5:dev> Creating package dependencies file ...
-[9-ERROR] <perl5:dev> Creating package description ...
-[9-ERROR] <perl5:dev> Creating md5sum and cksum files ...
-[9-ERROR] <perl5:doc> Creating flist file ...
-[9-ERROR] <perl5:doc> Creating package dependencies file ...
-[9-ERROR] <perl5:doc> Creating package description ...
-[9-ERROR] <perl5:doc> Creating md5sum and cksum files ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Found shared files with other packages:
-[9-ERROR] usr/share/man/man3/threads.3: openssl:dev perl5:dev
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] --- BUILD ERROR ---
+[PROVIDES] sperl5.8.8 splain suidperl threads.so via.so xsubpp
 

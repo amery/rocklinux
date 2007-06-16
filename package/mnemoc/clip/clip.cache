@@ -20,31 +20,31 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168649988 Sat Jan 13 01:59:48 2007 (5) ERROR
-[TIMESTAMP] 1168856591 Mon Jan 15 11:23:11 2007 (9) ERROR
-[TIMESTAMP] 1168949613 Tue Jan 16 13:13:33 2007 (5) ERROR
-[TIMESTAMP] 1168979557 Tue Jan 16 21:32:37 2007 (9) ERROR
-[TIMESTAMP] 1169093098 Thu Jan 18 05:04:58 2007 (5) ERROR
-[TIMESTAMP] 1169149769 Thu Jan 18 20:49:29 2007 (9) ERROR
+[TIMESTAMP] 1181086214 Wed Jun  6 01:30:14 2007 (5) ERROR
+[TIMESTAMP] 1181560568 Mon Jun 11 13:16:08 2007 (9) ERROR
+[TIMESTAMP] 1181824305 Thu Jun 14 14:31:45 2007 (5) ERROR
+[TIMESTAMP] 1181904960 Fri Jun 15 12:56:00 2007 (9) ERROR
+[TIMESTAMP] 1181950782 Sat Jun 16 01:39:42 2007 (5) ERROR
+[TIMESTAMP] 1181972299 Sat Jun 16 07:38:19 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-clip.err 9-clip.err
 
-[BUILDTIME] 1470 (5) ERROR
-[BUILDTIME] 1490 (9) ERROR
-[BUILDTIME] 1467 (5) ERROR
-[BUILDTIME] 1528 (9) ERROR
-[BUILDTIME] 1556 (5) ERROR
-[BUILDTIME] 1510 (9) ERROR
+[BUILDTIME] 2131 (5) ERROR
+[BUILDTIME] 1966 (9) ERROR
+[BUILDTIME] 2110 (5) ERROR
+[BUILDTIME] 2036 (9) ERROR
+[BUILDTIME] 2037 (5) ERROR
+[BUILDTIME] 2045 (9) ERROR
 
 
-[5-ERROR] Removing unsupported '--sysconfdir=/etc/opt/clip' from configure option string.
-[5-ERROR] Removing unsupported '--localstatedir=/var/opt/clip' from configure option string.
 [5-ERROR] Removing unsupported '--disable-debug' from configure option string.
-[5-ERROR] Removing unsupported '--with-mysql-lib=/opt/mysql/lib/mysql' from configure option string.
-[5-ERROR] Removing unsupported '--with-mysql-include=/opt/mysql/include/mysql' from configure option string.
+[5-ERROR] Removing unsupported '--with-mysql-lib=/opt/mysql41/lib/mysql' from configure option string.
+[5-ERROR] Removing unsupported '--with-mysql-include=/opt/mysql41/include/mysql' from configure option string.
+[5-ERROR] Removing unsupported '--with-mysql-lib=/opt/mysql50/lib/mysql' from configure option string.
+[5-ERROR] Removing unsupported '--with-mysql-include=/opt/mysql50/include/mysql' from configure option string.
 [5-ERROR] Removing unsupported '--with-libpam' from configure option string.
 [5-ERROR] Removing unsupported '--with-pam' from configure option string.
 [5-ERROR] Removing unsupported '--enable-libpam' from configure option string.
@@ -78,24 +78,24 @@
 [5-ERROR] 
 [5-ERROR] . done.
 [5-ERROR] [ -d charsets ] || ln -s screen/install/charsets .
-[5-ERROR] gcc-40 -Wall -I. -I./include -g  -O0   -c lex.hash.c
+[5-ERROR] gcc-42 -Wall -I. -I./include -g  -O0   -c lex.hash.c
 [5-ERROR] lex.hash.c:1012: warning: 'yyunput' defined but not used
-[5-ERROR] gcc-40 -Wall -I. -I./include -g  -O0  -DSTANDALONE -o clip_hash.o -c cliphash.c
+[5-ERROR] gcc-42 -Wall -I. -I./include -g  -O0  -DSTANDALONE -o clip_hash.o -c cliphash.c
 [5-ERROR] cliphash.c: In function '_clip_casehashbytes':
 [5-ERROR] cliphash.c:248: warning: pointer targets in passing argument 1 of 'strtoul' differ in signedness
-[5-ERROR] gcc-40 -O -o hashextract lex.hash.o clip_hash.o
-[5-ERROR] gcc-40 -Wall -I. -I./include -g  -O0   -c clic.tab.c
-[5-ERROR] gcc-40 -Wall -I. -I./include -g  -O0   -c lex.yy.c
+[5-ERROR] gcc-42 -O -o hashextract lex.hash.o clip_hash.o
+[5-ERROR] gcc-42 -Wall -I. -I./include -g  -O0   -c clic.tab.c
+[5-ERROR] gcc-42 -Wall -I. -I./include -g  -O0   -c lex.yy.c
 [5-ERROR] clic.lex:1332: error: static declaration of 'optLevel' follows non-static declaration
 [5-ERROR] clic.h:411: error: previous declaration of 'optLevel' was here
 [5-ERROR] make: *** [lex.yy.o] Error 1
 [5-ERROR] --- BUILD ERROR ---
 
-[9-ERROR] Removing unsupported '--sysconfdir=/etc/opt/clip' from configure option string.
-[9-ERROR] Removing unsupported '--localstatedir=/var/opt/clip' from configure option string.
 [9-ERROR] Removing unsupported '--disable-debug' from configure option string.
-[9-ERROR] Removing unsupported '--with-mysql-lib=/opt/mysql/lib/mysql' from configure option string.
-[9-ERROR] Removing unsupported '--with-mysql-include=/opt/mysql/include/mysql' from configure option string.
+[9-ERROR] Removing unsupported '--with-mysql-lib=/opt/mysql41/lib/mysql' from configure option string.
+[9-ERROR] Removing unsupported '--with-mysql-include=/opt/mysql41/include/mysql' from configure option string.
+[9-ERROR] Removing unsupported '--with-mysql-lib=/opt/mysql50/lib/mysql' from configure option string.
+[9-ERROR] Removing unsupported '--with-mysql-include=/opt/mysql50/include/mysql' from configure option string.
 [9-ERROR] Removing unsupported '--with-libpam' from configure option string.
 [9-ERROR] Removing unsupported '--with-pam' from configure option string.
 [9-ERROR] Removing unsupported '--enable-libpam' from configure option string.
@@ -129,14 +129,14 @@
 [9-ERROR] 
 [9-ERROR] . done.
 [9-ERROR] [ -d charsets ] || ln -s screen/install/charsets .
-[9-ERROR] gcc-40 -Wall -I. -I./include -g  -O0   -c lex.hash.c
+[9-ERROR] gcc-42 -Wall -I. -I./include -g  -O0   -c lex.hash.c
 [9-ERROR] lex.hash.c:1012: warning: 'yyunput' defined but not used
-[9-ERROR] gcc-40 -Wall -I. -I./include -g  -O0  -DSTANDALONE -o clip_hash.o -c cliphash.c
+[9-ERROR] gcc-42 -Wall -I. -I./include -g  -O0  -DSTANDALONE -o clip_hash.o -c cliphash.c
 [9-ERROR] cliphash.c: In function '_clip_casehashbytes':
 [9-ERROR] cliphash.c:248: warning: pointer targets in passing argument 1 of 'strtoul' differ in signedness
-[9-ERROR] gcc-40 -O -o hashextract lex.hash.o clip_hash.o
-[9-ERROR] gcc-40 -Wall -I. -I./include -g  -O0   -c clic.tab.c
-[9-ERROR] gcc-40 -Wall -I. -I./include -g  -O0   -c lex.yy.c
+[9-ERROR] gcc-42 -O -o hashextract lex.hash.o clip_hash.o
+[9-ERROR] gcc-42 -Wall -I. -I./include -g  -O0   -c clic.tab.c
+[9-ERROR] gcc-42 -Wall -I. -I./include -g  -O0   -c lex.yy.c
 [9-ERROR] clic.lex:1332: error: static declaration of 'optLevel' follows non-static declaration
 [9-ERROR] clic.h:411: error: previous declaration of 'optLevel' was here
 [9-ERROR] make: *** [lex.yy.o] Error 1

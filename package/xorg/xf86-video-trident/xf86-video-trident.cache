@@ -20,24 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168539746 Thu Jan 11 19:22:26 2007 (5)
-[TIMESTAMP] 1168733047 Sun Jan 14 01:04:07 2007 (9)
+[TIMESTAMP] 1180921905 Mon Jun  4 03:51:45 2007 (5)
+[TIMESTAMP] 1181299430 Fri Jun  8 12:43:50 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-xf86-video-trident.log 9-xf86-video-trident.log
 
-[BUILDTIME] 3208 (5)
-[BUILDTIME] 3883 (9)
+[BUILDTIME] 4223 (5)
+[BUILDTIME] 5144 (9)
 [SIZE] 0.15 MB, 8 files
 
 [DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
-[DEP] coreutils cvm diffutils findutils fontsproto:dev gawk gcc40 gcc40:dev
-[DEP] glibc23 glibc23:dev grep linux-libc-headers:dev make mktemp net-tools
-[DEP] pkgconfig randrproto:dev renderproto:dev rrdtool sed sysfiles tar
+[DEP] coreutils cvm diffutils findutils fontsproto:dev gawk gcc42 gcc42:dev
+[DEP] glibc26 glibc26:dev grep linux26-headers:dev ltrace make mktemp
+[DEP] net-tools pkgconfig randrproto:dev renderproto:dev sed sysfiles tar
 [DEP] util-linux util-macros videoproto:dev xextproto:dev xf86-video-apm
-[DEP] xf86dgaproto:dev xorg-docs xorg-server xorg-server:dev xproto:dev
+[DEP] xf86dgaproto:dev xmame xorg-docs xorg-server xorg-server:dev
+[DEP] xproto:dev
 
 [PROVIDES] trident_drv.so
 

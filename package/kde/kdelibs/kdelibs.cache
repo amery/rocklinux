@@ -20,46 +20,43 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168606240 Fri Jan 12 13:50:40 2007 (5) ERROR
-[TIMESTAMP] 1168808817 Sun Jan 14 22:06:57 2007 (9) ERROR
-[TIMESTAMP] 1168946331 Tue Jan 16 12:18:51 2007 (5) ERROR
-[TIMESTAMP] 1168971987 Tue Jan 16 19:26:27 2007 (9) ERROR
-[TIMESTAMP] 1169089741 Thu Jan 18 04:09:01 2007 (5) ERROR
-[TIMESTAMP] 1169142261 Thu Jan 18 18:44:21 2007 (9) ERROR
+[TIMESTAMP] 1181010927 Tue Jun  5 04:35:27 2007 (5) ERROR
+[TIMESTAMP] 1181475704 Sun Jun 10 13:41:44 2007 (9) ERROR
+[TIMESTAMP] 1181818322 Thu Jun 14 12:52:02 2007 (5) ERROR
+[TIMESTAMP] 1181872573 Fri Jun 15 03:56:13 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-kdelibs.err 9-kdelibs.err
 
-[BUILDTIME] 298843 (5) ERROR
-[BUILDTIME] 302845 (9) ERROR
-[BUILDTIME] 303842 (5) ERROR
-[BUILDTIME] 304061 (9) ERROR
-[BUILDTIME] 304084 (5) ERROR
-[BUILDTIME] 303455 (9) ERROR
-[SIZE] 44.73 MB, 4917 files
+[BUILDTIME] 380830 (5) ERROR
+[BUILDTIME] 386660 (9) ERROR
+[BUILDTIME] 382209 (5) ERROR
+[BUILDTIME] 373742 (9) ERROR
+[SIZE] 44.86 MB, 4918 files
 
 [DEP] 00-dirtree acl acl:dev alsa alsa:dev applewmproto applewmproto:dev
 [DEP] arts arts:dev aspell aspell:dev attr attr:dev audiofile audiofile:dev
-[DEP] autoconf bash2 binutils bzip2 bzip2:dev coreutils cups cups:dev
-[DEP] cvm diffutils esound esound:dev expat expat:dev fam fam:dev
-[DEP] findutils fontconfig fontconfig:dev freetype freetype:dev gawk gcc40
-[DEP] gcc40:dev gettext glib glib:dev glibc23 glibc23:dev gnome2-dirtree
-[DEP] gnutls gnutls:dev grep hicolor-icon-theme imake jasper:dev kmplayer
-[DEP] libart_lgpl23 libart_lgpl23:dev libgcrypt libgcrypt:dev libgpg-error
+[DEP] autoconf bash2 binutils bzip2 bzip2:dev coreutils cups cups:dev cvm
+[DEP] diffutils esound esound:dev expat expat:dev fam fam:dev findutils
+[DEP] fontconfig fontconfig:dev freetype freetype:dev gawk gcc42 gcc42:dev
+[DEP] gettext glib glib:dev glibc26 glibc26:dev gnome2-dirtree gnutls
+[DEP] gnutls:dev grep hicolor-icon-theme imake jasper:dev libart_lgpl23
+[DEP] libart_lgpl23:dev libgcrypt libgcrypt:dev libgpg-error
 [DEP] libgpg-error:dev libice libice:dev libidn libidn:dev libjpeg
-[DEP] libjpeg:dev libpng libpng:dev libsm libsm:dev libtiff libtiff:dev
-[DEP] libx11 libx11:dev libxau libxau:dev libxcursor libxcursor:dev
+[DEP] libjpeg:dev libogg libogg:dev libpng libpng:dev libsm libsm:dev
+[DEP] libtiff libtiff:dev libvorbis libvorbis:dev libx11 libx11:dev
+[DEP] libxau libxau:dev libxcb libxcb:dev libxcursor libxcursor:dev
 [DEP] libxdmcp libxdmcp:dev libxext libxext:dev libxfixes libxfixes:dev
 [DEP] libxft libxft:dev libxinerama libxinerama:dev libxml2 libxml2:dev
 [DEP] libxmu libxmu:dev libxrandr libxrandr:dev libxrender libxrender:dev
-[DEP] libxslt libxslt:dev libxt libxt:dev linux-libc-headers:dev m4 mad
-[DEP] mad:dev make mesalib mktemp nas net-tools nx-x11 nx-x11:dev nxcomp
-[DEP] ogg-vorbis ogg-vorbis:dev openbox openexr openexr:dev openssl
-[DEP] openssl:dev patch pcre pcre:dev perl5 pkgconfig qt33 qt33:dev
-[DEP] renderproto:dev rrdtool sed sysfiles tar util-linux valgrind:dev
-[DEP] xextproto:dev xorg-cf-files xproto:dev zlib zlib:dev
+[DEP] libxslt libxslt:dev libxt libxt:dev linux26-headers:dev ltrace m4
+[DEP] mad mad:dev make mdnsresponder mdnsresponder:dev mesalib mktemp
+[DEP] nas net-tools nx-x11 nx-x11:dev nxcomp openbox openexr openexr:dev
+[DEP] openssl openssl:dev patch pcre pcre:dev perl5 pkgconfig qt33 qt33:dev
+[DEP] renderproto:dev sed sysfiles tar util-linux xextproto:dev xmame
+[DEP] xorg-cf-files xproto:dev zlib zlib:dev
 
 [PROVIDES] artsmessage checkXML cupsdconf cupsdconf.so cupsdoprint
 [PROVIDES] dcop dcopclient dcopfind dcopidl dcopidl2cpp dcopidlng
@@ -114,33 +111,34 @@
 [PROVIDES] make_driver_db_lpr makekdewidgets meinproc plastik.so
 [PROVIDES] preparetips start_kdeinit
 
+[5-ERROR] make[4]: Nothing to be done for `install-exec-am'.
 [5-ERROR] make[4]: Nothing to be done for `install-data-am'.
-[5-ERROR] make[4]: Leaving directory `/ROCK/loop/src.kdelibs.1169086623.20138.505546733/kdelibs-3.5.5/kate/plugins'
-[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.kdelibs.1169086623.20138.505546733/kdelibs-3.5.5/kate/plugins'
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdelibs.1169086623.20138.505546733/kdelibs-3.5.5/kate/plugins'
-[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.kdelibs.1169086623.20138.505546733/kdelibs-3.5.5/kate'
-[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.kdelibs.1169086623.20138.505546733/kdelibs-3.5.5/kate'
+[5-ERROR] make[4]: Leaving directory `/ROCK/loop/src.kdelibs.1181813129.6376.2807618622/kdelibs-3.5.6/kate/plugins'
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.kdelibs.1181813129.6376.2807618622/kdelibs-3.5.6/kate/plugins'
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdelibs.1181813129.6376.2807618622/kdelibs-3.5.6/kate/plugins'
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.kdelibs.1181813129.6376.2807618622/kdelibs-3.5.6/kate'
+[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.kdelibs.1181813129.6376.2807618622/kdelibs-3.5.6/kate'
 [5-ERROR] make[3]: Nothing to be done for `install-exec-am'.
-[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.kdelibs.1169086623.20138.505546733/kdelibs-3.5.5/kate'
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdelibs.1169086623.20138.505546733/kdelibs-3.5.5/kate'
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kdelibs.1169086623.20138.505546733/kdelibs-3.5.5/kate'
-[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.kdelibs.1169086623.20138.505546733/kdelibs-3.5.5'
-[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.kdelibs.1169086623.20138.505546733/kdelibs-3.5.5'
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.kdelibs.1181813129.6376.2807618622/kdelibs-3.5.6/kate'
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdelibs.1181813129.6376.2807618622/kdelibs-3.5.6/kate'
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kdelibs.1181813129.6376.2807618622/kdelibs-3.5.6/kate'
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.kdelibs.1181813129.6376.2807618622/kdelibs-3.5.6'
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.kdelibs.1181813129.6376.2807618622/kdelibs-3.5.6'
 [5-ERROR] make[2]: Nothing to be done for `install-exec-am'.
 [5-ERROR] if test -f ./apidocs/qt/qt.tag; then \
 [5-ERROR] 		/bin/sh ./admin/mkinstalldirs /usr/share/doc/HTML/en/kdelibs-apidocs/qt ;\
-[5-ERROR] 		echo /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 ./apidocs/qt/qt.tag /usr/share/doc/HTML/en/kdelibs-apidocs/qt; \
-[5-ERROR] 		/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 ./apidocs/qt/qt.tag /usr/share/doc/HTML/en/kdelibs-apidocs/qt; \
+[5-ERROR] 		echo /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 ./apidocs/qt/qt.tag /usr/share/doc/HTML/en/kdelibs-apidocs/qt; \
+[5-ERROR] 		/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 ./apidocs/qt/qt.tag /usr/share/doc/HTML/en/kdelibs-apidocs/qt; \
 [5-ERROR] 	fi
 [5-ERROR] test -z "/usr/include" || mkdir -p -- "/usr/include"
-[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 'kde.pot' '/usr/include/kde.pot'
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdelibs.1169086623.20138.505546733/kdelibs-3.5.5'
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kdelibs.1169086623.20138.505546733/kdelibs-3.5.5'
+[5-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 'kde.pot' '/usr/include/kde.pot'
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdelibs.1181813129.6376.2807618622/kdelibs-3.5.6'
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kdelibs.1181813129.6376.2807618622/kdelibs-3.5.6'
 [5-ERROR] Trying to copy the default documentation ...
 [5-ERROR] Creating file list and doing final adaptions ... 
 [5-ERROR] Processing /lib corrections ...
 [5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 5886 files for this package.
+[5-ERROR] Found 5887 files for this package.
 [5-ERROR] Applying package split: 40 kdelibs:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
 [5-ERROR] Applying package split: 42 kdelibs:dev /pkgconfig/
 [5-ERROR] Applying package split: 45 kdelibs /.*\.la$
@@ -161,37 +159,37 @@
 [5-ERROR] Making post-install adaptions.
 [5-ERROR] Found shared files with other packages:
 [5-ERROR] usr/share/icons/hicolor/index.theme: hicolor-icon-theme kdelibs
-[5-ERROR] usr/share/mimelnk/application/x-mplayer2.desktop: kdelibs kmplayer
 [5-ERROR] --- BUILD ERROR ---
 [5-ERROR] --- BUILD ERROR ---
 
+[9-ERROR] make[4]: Nothing to be done for `install-exec-am'.
 [9-ERROR] make[4]: Nothing to be done for `install-data-am'.
-[9-ERROR] make[4]: Leaving directory `/ROCK/loop/src.kdelibs.1169139158.2092.2177560645/kdelibs-3.5.5/kate/plugins'
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.kdelibs.1169139158.2092.2177560645/kdelibs-3.5.5/kate/plugins'
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdelibs.1169139158.2092.2177560645/kdelibs-3.5.5/kate/plugins'
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.kdelibs.1169139158.2092.2177560645/kdelibs-3.5.5/kate'
-[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.kdelibs.1169139158.2092.2177560645/kdelibs-3.5.5/kate'
+[9-ERROR] make[4]: Leaving directory `/ROCK/loop/src.kdelibs.1181868478.10302.3611608166/kdelibs-3.5.6/kate/plugins'
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.kdelibs.1181868478.10302.3611608166/kdelibs-3.5.6/kate/plugins'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdelibs.1181868478.10302.3611608166/kdelibs-3.5.6/kate/plugins'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.kdelibs.1181868478.10302.3611608166/kdelibs-3.5.6/kate'
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.kdelibs.1181868478.10302.3611608166/kdelibs-3.5.6/kate'
 [9-ERROR] make[3]: Nothing to be done for `install-exec-am'.
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.kdelibs.1169139158.2092.2177560645/kdelibs-3.5.5/kate'
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdelibs.1169139158.2092.2177560645/kdelibs-3.5.5/kate'
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kdelibs.1169139158.2092.2177560645/kdelibs-3.5.5/kate'
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.kdelibs.1169139158.2092.2177560645/kdelibs-3.5.5'
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.kdelibs.1169139158.2092.2177560645/kdelibs-3.5.5'
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.kdelibs.1181868478.10302.3611608166/kdelibs-3.5.6/kate'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdelibs.1181868478.10302.3611608166/kdelibs-3.5.6/kate'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kdelibs.1181868478.10302.3611608166/kdelibs-3.5.6/kate'
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.kdelibs.1181868478.10302.3611608166/kdelibs-3.5.6'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.kdelibs.1181868478.10302.3611608166/kdelibs-3.5.6'
 [9-ERROR] make[2]: Nothing to be done for `install-exec-am'.
 [9-ERROR] if test -f ./apidocs/qt/qt.tag; then \
 [9-ERROR] 		/bin/sh ./admin/mkinstalldirs /usr/share/doc/HTML/en/kdelibs-apidocs/qt ;\
-[9-ERROR] 		echo /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 ./apidocs/qt/qt.tag /usr/share/doc/HTML/en/kdelibs-apidocs/qt; \
-[9-ERROR] 		/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 ./apidocs/qt/qt.tag /usr/share/doc/HTML/en/kdelibs-apidocs/qt; \
+[9-ERROR] 		echo /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 ./apidocs/qt/qt.tag /usr/share/doc/HTML/en/kdelibs-apidocs/qt; \
+[9-ERROR] 		/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 ./apidocs/qt/qt.tag /usr/share/doc/HTML/en/kdelibs-apidocs/qt; \
 [9-ERROR] 	fi
 [9-ERROR] test -z "/usr/include" || mkdir -p -- "/usr/include"
-[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 'kde.pot' '/usr/include/kde.pot'
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdelibs.1169139158.2092.2177560645/kdelibs-3.5.5'
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kdelibs.1169139158.2092.2177560645/kdelibs-3.5.5'
+[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 'kde.pot' '/usr/include/kde.pot'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdelibs.1181868478.10302.3611608166/kdelibs-3.5.6'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kdelibs.1181868478.10302.3611608166/kdelibs-3.5.6'
 [9-ERROR] Trying to copy the default documentation ...
 [9-ERROR] Creating file list and doing final adaptions ... 
 [9-ERROR] Processing /lib corrections ...
 [9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 5886 files for this package.
+[9-ERROR] Found 5887 files for this package.
 [9-ERROR] Applying package split: 40 kdelibs:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
 [9-ERROR] Applying package split: 42 kdelibs:dev /pkgconfig/
 [9-ERROR] Applying package split: 45 kdelibs /.*\.la$
@@ -212,7 +210,6 @@
 [9-ERROR] Making post-install adaptions.
 [9-ERROR] Found shared files with other packages:
 [9-ERROR] usr/share/icons/hicolor/index.theme: hicolor-icon-theme kdelibs
-[9-ERROR] usr/share/mimelnk/application/x-mplayer2.desktop: kdelibs kmplayer
 [9-ERROR] --- BUILD ERROR ---
 [9-ERROR] --- BUILD ERROR ---
 

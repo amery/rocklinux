@@ -20,31 +20,31 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168615796 Fri Jan 12 16:29:56 2007 (5)
-[TIMESTAMP] 1168818756 Mon Jan 15 00:52:36 2007 (9)
+[TIMESTAMP] 1181029027 Tue Jun  5 09:37:07 2007 (5)
+[TIMESTAMP] 1181492005 Sun Jun 10 18:13:25 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-kdirstat.log 9-kdirstat.log
 
-[BUILDTIME] 7217 (5)
-[BUILDTIME] 7638 (9)
-[SIZE] 0.41 MB, 36 files
+[BUILDTIME] 10199 (5)
+[BUILDTIME] 10483 (9)
+[SIZE] 0.44 MB, 37 files
 
-[DEP] 00-dirtree acl acl:dev applewmproto applewmproto:dev attr attr:dev
-[DEP] bash2 binutils bzip2 coreutils cups cvm diffutils expat expat:dev
-[DEP] fam fam:dev findutils fontconfig fontconfig:dev freetype freetype:dev
-[DEP] gawk gcc40 gcc40:dev gettext glibc23 glibc23:dev grep imake kdebase
-[DEP] kdelibs kdelibs:dev kdepim kdeutils libart_lgpl23 libart_lgpl23:dev
-[DEP] libice libice:dev libidn libidn:dev libjpeg libpng libpng:dev
-[DEP] libsm libsm:dev libx11 libx11:dev libxau libxau:dev libxcursor
-[DEP] libxcursor:dev libxdmcp libxdmcp:dev libxext libxext:dev libxfixes
-[DEP] libxfixes:dev libxft libxft:dev libxinerama libxinerama:dev libxml2
-[DEP] libxmu libxmu:dev libxrandr libxrandr:dev libxrender libxrender:dev
-[DEP] libxt libxt:dev linux-libc-headers:dev make mesalib mktemp nas
-[DEP] net-tools patch perl5 qt33 qt33:dev rrdtool sed sysfiles tar
-[DEP] util-linux xorg-cf-files xproto:dev zlib zlib:dev
+[DEP] 00-dirtree acl acl:dev applewmproto applewmproto:dev attr
+[DEP] attr:dev bash2 binutils bzip2 coreutils cups cvm diffutils expat
+[DEP] expat:dev fam fam:dev findutils fontconfig fontconfig:dev freetype
+[DEP] freetype:dev gawk gcc42 gcc42:dev gettext glibc26 glibc26:dev grep
+[DEP] imake kdebase kdelibs kdelibs:dev kdepim kdeutils libart_lgpl23
+[DEP] libart_lgpl23:dev libice libice:dev libidn libidn:dev libjpeg libpng
+[DEP] libpng:dev libsm libsm:dev libx11 libx11:dev libxau libxau:dev libxcb
+[DEP] libxcb:dev libxcursor libxcursor:dev libxdmcp libxdmcp:dev libxext
+[DEP] libxext:dev libxfixes libxfixes:dev libxft libxft:dev libxinerama
+[DEP] libxinerama:dev libxml2 libxmu libxmu:dev libxrandr libxrandr:dev
+[DEP] libxrender libxrender:dev libxt libxt:dev linux26-headers:dev ltrace
+[DEP] make mesalib mktemp nas net-tools patch perl5 qt33 qt33:dev sed
+[DEP] sysfiles tar util-linux xmame xorg-cf-files xproto:dev zlib zlib:dev
 
-[PROVIDES] kdirstat
+[PROVIDES] kdirstat kdirstat-cache-writer
 

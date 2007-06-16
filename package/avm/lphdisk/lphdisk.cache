@@ -20,21 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168693268 Sat Jan 13 14:01:08 2007 (5)
-[TIMESTAMP] 1168902288 Tue Jan 16 00:04:48 2007 (9)
+[TIMESTAMP] 1181174545 Thu Jun  7 02:02:25 2007 (5) ERROR
+[TIMESTAMP] 1181621204 Tue Jun 12 06:06:44 2007 (9) ERROR
+[TIMESTAMP] 1181832974 Thu Jun 14 16:56:14 2007 (5) ERROR
+[TIMESTAMP] 1181917440 Fri Jun 15 16:24:00 2007 (9) ERROR
+[TIMESTAMP] 1181956064 Sat Jun 16 03:07:44 2007 (5) ERROR
+[TIMESTAMP] 1181977946 Sat Jun 16 09:12:26 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-lphdisk.log 9-lphdisk.log
+[LOGS] 5-lphdisk.err 9-lphdisk.err
 
-[BUILDTIME] 1421 (5)
-[BUILDTIME] 1514 (9)
-[SIZE] 0.04 MB, 8 files
+[BUILDTIME] 1198 (5) ERROR
+[BUILDTIME] 1184 (9) ERROR
+[BUILDTIME] 1153 (5) ERROR
+[BUILDTIME] 1189 (9) ERROR
+[BUILDTIME] 1169 (5) ERROR
+[BUILDTIME] 1168 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils gawk gcc40
-[DEP] gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev make
-[DEP] mktemp patch rrdtool sed sysfiles tar
 
-[PROVIDES] lphdisk
+[5-ERROR] lphdisk.c:716: warning: (near initialization for 'long_opts')
+[5-ERROR] lphdisk.c:716: warning: excess elements in scalar initializer
+[5-ERROR] lphdisk.c:716: warning: (near initialization for 'long_opts')
+[5-ERROR] lphdisk.c:716: warning: excess elements in scalar initializer
+[5-ERROR] lphdisk.c:716: warning: (near initialization for 'long_opts')
+[5-ERROR] lphdisk.c:717: warning: braces around scalar initializer
+[5-ERROR] lphdisk.c:717: warning: (near initialization for 'long_opts')
+[5-ERROR] lphdisk.c:717: warning: initialization from incompatible pointer type
+[5-ERROR] lphdisk.c:717: warning: excess elements in scalar initializer
+[5-ERROR] lphdisk.c:717: warning: (near initialization for 'long_opts')
+[5-ERROR] lphdisk.c:717: warning: excess elements in scalar initializer
+[5-ERROR] lphdisk.c:717: warning: (near initialization for 'long_opts')
+[5-ERROR] lphdisk.c:717: warning: excess elements in scalar initializer
+[5-ERROR] lphdisk.c:717: warning: (near initialization for 'long_opts')
+[5-ERROR] lphdisk.c:717: warning: excess elements in scalar initializer
+[5-ERROR] lphdisk.c:717: warning: (near initialization for 'long_opts')
+[5-ERROR] lphdisk.c:718: warning: braces around scalar initializer
+[5-ERROR] lphdisk.c:718: warning: (near initialization for 'long_opts')
+[5-ERROR] lphdisk.c:718: warning: initialization from incompatible pointer type
+[5-ERROR] lphdisk.c:718: warning: excess elements in scalar initializer
+[5-ERROR] lphdisk.c:718: warning: (near initialization for 'long_opts')
+[5-ERROR] lphdisk.c:718: warning: excess elements in scalar initializer
+[5-ERROR] lphdisk.c:718: warning: (near initialization for 'long_opts')
+[5-ERROR] lphdisk.c:718: warning: excess elements in scalar initializer
+[5-ERROR] lphdisk.c:718: warning: (near initialization for 'long_opts')
+[5-ERROR] lphdisk.c:718: warning: excess elements in scalar initializer
+[5-ERROR] lphdisk.c:718: warning: (near initialization for 'long_opts')
+[5-ERROR] lphdisk.c:719: warning: braces around scalar initializer
+[5-ERROR] lphdisk.c:719: warning: (near initialization for 'long_opts')
+[5-ERROR] lphdisk.c:719: warning: excess elements in scalar initializer
+[5-ERROR] lphdisk.c:719: warning: (near initialization for 'long_opts')
+[5-ERROR] lphdisk.c:719: warning: excess elements in scalar initializer
+[5-ERROR] lphdisk.c:719: warning: (near initialization for 'long_opts')
+[5-ERROR] lphdisk.c:719: warning: excess elements in scalar initializer
+[5-ERROR] lphdisk.c:719: warning: (near initialization for 'long_opts')
+[5-ERROR] lphdisk.c:719: warning: excess elements in scalar initializer
+[5-ERROR] lphdisk.c:719: warning: (near initialization for 'long_opts')
+[5-ERROR] lphdisk.c:721: error: parameter 'usage_string' is initialized
+[5-ERROR] lphdisk.c:738: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+[5-ERROR] lphdisk.c:744: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+[5-ERROR] lphdisk.c:944: error: old-style parameter declarations in prototyped function definition
+[5-ERROR] lphdisk.c:117: error: parameter name omitted
+[5-ERROR] lphdisk.c:117: error: parameter name omitted
+[5-ERROR] lphdisk.c:117: error: parameter name omitted
+[5-ERROR] lphdisk.c:118: error: parameter name omitted
+[5-ERROR] lphdisk.c:118: error: parameter name omitted
+[5-ERROR] lphdisk.c:119: error: parameter name omitted
+[5-ERROR] lphdisk.c:944: error: expected '{' at end of input
+[5-ERROR] make: *** [lphdisk.o] Error 1
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] lphdisk.c:716: warning: (near initialization for 'long_opts')
+[9-ERROR] lphdisk.c:716: warning: excess elements in scalar initializer
+[9-ERROR] lphdisk.c:716: warning: (near initialization for 'long_opts')
+[9-ERROR] lphdisk.c:716: warning: excess elements in scalar initializer
+[9-ERROR] lphdisk.c:716: warning: (near initialization for 'long_opts')
+[9-ERROR] lphdisk.c:717: warning: braces around scalar initializer
+[9-ERROR] lphdisk.c:717: warning: (near initialization for 'long_opts')
+[9-ERROR] lphdisk.c:717: warning: initialization from incompatible pointer type
+[9-ERROR] lphdisk.c:717: warning: excess elements in scalar initializer
+[9-ERROR] lphdisk.c:717: warning: (near initialization for 'long_opts')
+[9-ERROR] lphdisk.c:717: warning: excess elements in scalar initializer
+[9-ERROR] lphdisk.c:717: warning: (near initialization for 'long_opts')
+[9-ERROR] lphdisk.c:717: warning: excess elements in scalar initializer
+[9-ERROR] lphdisk.c:717: warning: (near initialization for 'long_opts')
+[9-ERROR] lphdisk.c:717: warning: excess elements in scalar initializer
+[9-ERROR] lphdisk.c:717: warning: (near initialization for 'long_opts')
+[9-ERROR] lphdisk.c:718: warning: braces around scalar initializer
+[9-ERROR] lphdisk.c:718: warning: (near initialization for 'long_opts')
+[9-ERROR] lphdisk.c:718: warning: initialization from incompatible pointer type
+[9-ERROR] lphdisk.c:718: warning: excess elements in scalar initializer
+[9-ERROR] lphdisk.c:718: warning: (near initialization for 'long_opts')
+[9-ERROR] lphdisk.c:718: warning: excess elements in scalar initializer
+[9-ERROR] lphdisk.c:718: warning: (near initialization for 'long_opts')
+[9-ERROR] lphdisk.c:718: warning: excess elements in scalar initializer
+[9-ERROR] lphdisk.c:718: warning: (near initialization for 'long_opts')
+[9-ERROR] lphdisk.c:718: warning: excess elements in scalar initializer
+[9-ERROR] lphdisk.c:718: warning: (near initialization for 'long_opts')
+[9-ERROR] lphdisk.c:719: warning: braces around scalar initializer
+[9-ERROR] lphdisk.c:719: warning: (near initialization for 'long_opts')
+[9-ERROR] lphdisk.c:719: warning: excess elements in scalar initializer
+[9-ERROR] lphdisk.c:719: warning: (near initialization for 'long_opts')
+[9-ERROR] lphdisk.c:719: warning: excess elements in scalar initializer
+[9-ERROR] lphdisk.c:719: warning: (near initialization for 'long_opts')
+[9-ERROR] lphdisk.c:719: warning: excess elements in scalar initializer
+[9-ERROR] lphdisk.c:719: warning: (near initialization for 'long_opts')
+[9-ERROR] lphdisk.c:719: warning: excess elements in scalar initializer
+[9-ERROR] lphdisk.c:719: warning: (near initialization for 'long_opts')
+[9-ERROR] lphdisk.c:721: error: parameter 'usage_string' is initialized
+[9-ERROR] lphdisk.c:738: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+[9-ERROR] lphdisk.c:744: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+[9-ERROR] lphdisk.c:944: error: old-style parameter declarations in prototyped function definition
+[9-ERROR] lphdisk.c:117: error: parameter name omitted
+[9-ERROR] lphdisk.c:117: error: parameter name omitted
+[9-ERROR] lphdisk.c:117: error: parameter name omitted
+[9-ERROR] lphdisk.c:118: error: parameter name omitted
+[9-ERROR] lphdisk.c:118: error: parameter name omitted
+[9-ERROR] lphdisk.c:119: error: parameter name omitted
+[9-ERROR] lphdisk.c:944: error: expected '{' at end of input
+[9-ERROR] make: *** [lphdisk.o] Error 1
+[9-ERROR] --- BUILD ERROR ---
 

@@ -20,21 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168664383 Sat Jan 13 05:59:43 2007 (5)
-[TIMESTAMP] 1168872170 Mon Jan 15 15:42:50 2007 (9)
+[TIMESTAMP] 1181108346 Wed Jun  6 07:39:06 2007 (5) ERROR
+[TIMESTAMP] 1181584213 Mon Jun 11 19:50:13 2007 (9) ERROR
+[TIMESTAMP] 1181825825 Thu Jun 14 14:57:05 2007 (5) ERROR
+[TIMESTAMP] 1181908384 Fri Jun 15 13:53:04 2007 (9) ERROR
+[TIMESTAMP] 1181951188 Sat Jun 16 01:46:28 2007 (5) ERROR
+[TIMESTAMP] 1181972732 Sat Jun 16 07:45:32 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-libgli.log 9-libgli.log
+[LOGS] 5-libgli.err 9-libgli.err
 
-[BUILDTIME] 1684 (5)
-[BUILDTIME] 1896 (9)
-[SIZE] 0.12 MB, 8 files
+[BUILDTIME] 1624 (5) ERROR
+[BUILDTIME] 1582 (9) ERROR
+[BUILDTIME] 1603 (5) ERROR
+[BUILDTIME] 1535 (9) ERROR
+[BUILDTIME] 1558 (5) ERROR
+[BUILDTIME] 1562 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils gawk gcc40
-[DEP] gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev make
-[DEP] mesalib:dev mktemp netpbm patch rrdtool sed sysfiles tar
 
-[PROVIDES] libgli-0.4.so libgli.a libgli.so
+[5-ERROR] gli_glf.cpp:479: warning: array subscript has type 'char'
+[5-ERROR] gli_glf.cpp:480: warning: array subscript has type 'char'
+[5-ERROR] gli_glf.cpp: In member function 'void CGLI_VectorFont::glfDrawSolidSymbol(char)':
+[5-ERROR] gli_glf.cpp:507: warning: array subscript has type 'char'
+[5-ERROR] gli_glf.cpp:509: warning: array subscript has type 'char'
+[5-ERROR] gli_glf.cpp:510: warning: array subscript has type 'char'
+[5-ERROR] gli_glf.cpp:513: warning: array subscript has type 'char'
+[5-ERROR] gli_glf.cpp: In member function 'void CGLI_VectorFont::glfDrawSolidString(char*)':
+[5-ERROR] gli_glf.cpp:553: warning: array subscript has type 'char'
+[5-ERROR] gli_glf.cpp:559: warning: array subscript has type 'char'
+[5-ERROR] gli_glf.cpp:560: warning: array subscript has type 'char'
+[5-ERROR] gli_glf.cpp:561: warning: array subscript has type 'char'
+[5-ERROR] gli_glf.cpp:570: warning: array subscript has type 'char'
+[5-ERROR] gli_glf.cpp:575: warning: array subscript has type 'char'
+[5-ERROR] gli_glf.cpp:581: warning: array subscript has type 'char'
+[5-ERROR] gli_glf.cpp:582: warning: array subscript has type 'char'
+[5-ERROR] gli_glf.cpp:583: warning: array subscript has type 'char'
+[5-ERROR] gli_glf.cpp: In member function 'void CGLI_VectorFont::glfGetStringBoundsF(int, char*, float*, float*, float*, float*)':
+[5-ERROR] gli_glf.cpp:614: warning: array subscript has type 'char'
+[5-ERROR] gli_glf.cpp:615: warning: array subscript has type 'char'
+[5-ERROR] gli_glf.cpp:621: warning: array subscript has type 'char'
+[5-ERROR] gli_glf.cpp: In member function 'void CGLI_VectorFont::glfDrawSolidString(char*)':
+[5-ERROR] gli_glf.cpp:542: warning: 'distance' may be used uninitialized in this function
+[5-ERROR] gli_glf.cpp: In member function 'void CGLI_VectorFont::glfDrawWiredString(char*)':
+[5-ERROR] gli_glf.cpp:441: warning: 'distance' may be used uninitialized in this function
+[5-ERROR] g++ -pedantic -ansi -Wall -I./include -c gli_interface.cpp
+[5-ERROR] gli_interface.cpp: In member function 'void CGLI_Interface::SendKeyEvent(unsigned char, int, int)':
+[5-ERROR] gli_interface.cpp:193: warning: 'obj_id' may be used uninitialized in this function
+[5-ERROR] gli_interface.cpp: In member function 'void CGLI_Interface::SendMouseParameters(GLuint, int, int, int, int)':
+[5-ERROR] gli_interface.cpp:109: warning: 'obj_id' may be used uninitialized in this function
+[5-ERROR] g++ -pedantic -ansi -Wall -I./include -c gli_object.cpp
+[5-ERROR] g++ -pedantic -ansi -Wall -I./include -c gli_text.cpp
+[5-ERROR] g++ -pedantic -ansi -Wall -I./include -c gli_texture.cpp
+[5-ERROR] g++ -pedantic -ansi -Wall -I./include -c gli_window.cpp
+[5-ERROR] gli_window.cpp: In constructor 'CGLI_Window2D::CGLI_Window2D()':
+[5-ERROR] gli_window.cpp:39: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] gli_window.cpp:53: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] g++ -pedantic -ansi -Wall -I./include -c gli_texture_rgb.cpp
+[5-ERROR] g++ -pedantic -ansi -Wall -I./include -c gli_texture_tga.cpp
+[5-ERROR] g++ -pedantic -ansi -Wall -I./include -c gli_editbox.cpp
+[5-ERROR] gli_editbox.cpp: In constructor 'CGLI_EditBox2D::CGLI_EditBox2D()':
+[5-ERROR] gli_editbox.cpp:65: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] g++ -pedantic -ansi -Wall -I./include -c gli_image.cpp
+[5-ERROR] g++ -pedantic -ansi -Wall -I./include -c gli_progress.cpp
+[5-ERROR] g++ -pedantic -ansi -Wall -I./include gli*.o -o libgli.so -ldl -shared
+[5-ERROR] collect2: ld terminated with signal 11 [Segmentation fault], core dumped
+[5-ERROR] make[1]: *** [libgli.so] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.libgli.1181951173.19466.4161569442/libgli-0.4/src'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] gli_glf.cpp:479: warning: array subscript has type 'char'
+[9-ERROR] gli_glf.cpp:480: warning: array subscript has type 'char'
+[9-ERROR] gli_glf.cpp: In member function 'void CGLI_VectorFont::glfDrawSolidSymbol(char)':
+[9-ERROR] gli_glf.cpp:507: warning: array subscript has type 'char'
+[9-ERROR] gli_glf.cpp:509: warning: array subscript has type 'char'
+[9-ERROR] gli_glf.cpp:510: warning: array subscript has type 'char'
+[9-ERROR] gli_glf.cpp:513: warning: array subscript has type 'char'
+[9-ERROR] gli_glf.cpp: In member function 'void CGLI_VectorFont::glfDrawSolidString(char*)':
+[9-ERROR] gli_glf.cpp:553: warning: array subscript has type 'char'
+[9-ERROR] gli_glf.cpp:559: warning: array subscript has type 'char'
+[9-ERROR] gli_glf.cpp:560: warning: array subscript has type 'char'
+[9-ERROR] gli_glf.cpp:561: warning: array subscript has type 'char'
+[9-ERROR] gli_glf.cpp:570: warning: array subscript has type 'char'
+[9-ERROR] gli_glf.cpp:575: warning: array subscript has type 'char'
+[9-ERROR] gli_glf.cpp:581: warning: array subscript has type 'char'
+[9-ERROR] gli_glf.cpp:582: warning: array subscript has type 'char'
+[9-ERROR] gli_glf.cpp:583: warning: array subscript has type 'char'
+[9-ERROR] gli_glf.cpp: In member function 'void CGLI_VectorFont::glfGetStringBoundsF(int, char*, float*, float*, float*, float*)':
+[9-ERROR] gli_glf.cpp:614: warning: array subscript has type 'char'
+[9-ERROR] gli_glf.cpp:615: warning: array subscript has type 'char'
+[9-ERROR] gli_glf.cpp:621: warning: array subscript has type 'char'
+[9-ERROR] gli_glf.cpp: In member function 'void CGLI_VectorFont::glfDrawSolidString(char*)':
+[9-ERROR] gli_glf.cpp:542: warning: 'distance' may be used uninitialized in this function
+[9-ERROR] gli_glf.cpp: In member function 'void CGLI_VectorFont::glfDrawWiredString(char*)':
+[9-ERROR] gli_glf.cpp:441: warning: 'distance' may be used uninitialized in this function
+[9-ERROR] g++ -pedantic -ansi -Wall -I./include -c gli_interface.cpp
+[9-ERROR] gli_interface.cpp: In member function 'void CGLI_Interface::SendKeyEvent(unsigned char, int, int)':
+[9-ERROR] gli_interface.cpp:193: warning: 'obj_id' may be used uninitialized in this function
+[9-ERROR] gli_interface.cpp: In member function 'void CGLI_Interface::SendMouseParameters(GLuint, int, int, int, int)':
+[9-ERROR] gli_interface.cpp:109: warning: 'obj_id' may be used uninitialized in this function
+[9-ERROR] g++ -pedantic -ansi -Wall -I./include -c gli_object.cpp
+[9-ERROR] g++ -pedantic -ansi -Wall -I./include -c gli_text.cpp
+[9-ERROR] g++ -pedantic -ansi -Wall -I./include -c gli_texture.cpp
+[9-ERROR] g++ -pedantic -ansi -Wall -I./include -c gli_window.cpp
+[9-ERROR] gli_window.cpp: In constructor 'CGLI_Window2D::CGLI_Window2D()':
+[9-ERROR] gli_window.cpp:39: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] gli_window.cpp:53: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] g++ -pedantic -ansi -Wall -I./include -c gli_texture_rgb.cpp
+[9-ERROR] g++ -pedantic -ansi -Wall -I./include -c gli_texture_tga.cpp
+[9-ERROR] g++ -pedantic -ansi -Wall -I./include -c gli_editbox.cpp
+[9-ERROR] gli_editbox.cpp: In constructor 'CGLI_EditBox2D::CGLI_EditBox2D()':
+[9-ERROR] gli_editbox.cpp:65: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] g++ -pedantic -ansi -Wall -I./include -c gli_image.cpp
+[9-ERROR] g++ -pedantic -ansi -Wall -I./include -c gli_progress.cpp
+[9-ERROR] g++ -pedantic -ansi -Wall -I./include gli*.o -o libgli.so -ldl -shared
+[9-ERROR] collect2: ld terminated with signal 11 [Segmentation fault], core dumped
+[9-ERROR] make[1]: *** [libgli.so] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.libgli.1181972717.22758.2938899655/libgli-0.4/src'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

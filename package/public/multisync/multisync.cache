@@ -20,125 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168683752 Sat Jan 13 11:22:32 2007 (5) ERROR
-[TIMESTAMP] 1168892711 Mon Jan 15 21:25:11 2007 (9) ERROR
-[TIMESTAMP] 1168952324 Tue Jan 16 13:58:44 2007 (5) ERROR
-[TIMESTAMP] 1168981951 Tue Jan 16 22:12:31 2007 (9) ERROR
-[TIMESTAMP] 1169122641 Thu Jan 18 13:17:21 2007 (5) ERROR
-[TIMESTAMP] 1169152154 Thu Jan 18 21:29:14 2007 (9) ERROR
+[TIMESTAMP] 1181159428 Wed Jun  6 21:50:28 2007 (5) ERROR
+[TIMESTAMP] 1181610007 Tue Jun 12 03:00:07 2007 (9) ERROR
+[TIMESTAMP] 1181829278 Thu Jun 14 15:54:38 2007 (5) ERROR
+[TIMESTAMP] 1181912790 Fri Jun 15 15:06:30 2007 (9) ERROR
+[TIMESTAMP] 1181952928 Sat Jun 16 02:15:28 2007 (5) ERROR
+[TIMESTAMP] 1181974689 Sat Jun 16 08:18:09 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-multisync.err 9-multisync.err
 
-[BUILDTIME] 18383 (5) ERROR
-[BUILDTIME] 18589 (9) ERROR
-[BUILDTIME] 18671 (5) ERROR
-[BUILDTIME] 18624 (9) ERROR
-[BUILDTIME] 18665 (5) ERROR
-[BUILDTIME] 18674 (9) ERROR
+[BUILDTIME] 20532 (5) ERROR
+[BUILDTIME] 20850 (9) ERROR
+[BUILDTIME] 20897 (5) ERROR
+[BUILDTIME] 21177 (9) ERROR
+[BUILDTIME] 20580 (5) ERROR
+[BUILDTIME] 20592 (9) ERROR
 
 
-[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DPACKAGE_DATA_DIR=\"/opt/gnome2/share/multisync\" -I../../../src/libversit -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I../include -I../../../include -Werror -I//opt/openldap/include -g -O2 -c gui.c  -fPIC -DPIC -o .libs/gui.o
-[5-ERROR] /bin/sh ../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DPACKAGE_DATA_DIR=\""/opt/gnome2/share/multisync"\" -I../../../src/libversit -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo   -I../include -I../../../include -Werror  -I//opt/openldap/include  -g -O2 -c -o xml.lo `test -f 'xml.c' || echo './'`xml.c
-[5-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DPACKAGE_DATA_DIR=\"/opt/gnome2/share/multisync\" -I../../../src/libversit -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I../include -I../../../include -Werror -I//opt/openldap/include -g -O2 -c xml.c  -fPIC -DPIC -o .libs/xml.o
+[5-ERROR] checking for ld used by g++-42... ld
+[5-ERROR] checking if the linker (ld) is GNU ld... yes
+[5-ERROR] checking whether the g++-42 linker (ld) supports shared libraries... yes
+[5-ERROR] checking for g++-42 option to produce PIC... -fPIC
+[5-ERROR] checking if g++-42 PIC flag -fPIC works... yes
+[5-ERROR] checking if g++-42 supports -c -o file.o... yes
+[5-ERROR] checking whether the g++-42 linker (ld) supports shared libraries... yes
+[5-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] checking whether stripping libraries is possible... yes
+[5-ERROR] appending configuration tag "F77" to libtool
+[5-ERROR] checking if libtool supports shared libraries... yes
+[5-ERROR] checking whether to build shared libraries... yes
+[5-ERROR] checking whether to build static libraries... no
+[5-ERROR] checking for f77 option to produce PIC... -fPIC
+[5-ERROR] checking if f77 PIC flag -fPIC works... no
+[5-ERROR] checking if f77 supports -c -o file.o... no
+[5-ERROR] checking whether the f77 linker (ld) supports shared libraries... yes
+[5-ERROR] checking dynamic linker characteristics... ./configure: line 1: f77: command not found
+[5-ERROR] GNU/Linux ld.so
+[5-ERROR] checking how to hardcode library paths into programs... immediate
+[5-ERROR] checking whether stripping libraries is possible... yes
+[5-ERROR] checking for ldap_init in -lldap... yes
+[5-ERROR] checking sasl/sasl.h usability... yes
+[5-ERROR] checking sasl/sasl.h presence... yes
+[5-ERROR] checking for sasl/sasl.h... yes
+[5-ERROR] configure: creating ./config.status
+[5-ERROR] config.status: creating Makefile
+[5-ERROR] config.status: creating src/Makefile
+[5-ERROR] config.status: creating ../../specs/multisync-ldap.spec
+[5-ERROR] config.status: creating config.h
+[5-ERROR] config.status: executing depfiles commands
+[5-ERROR] make  all-recursive
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.multisync.1181952714.21852.1627887995/multisync-2004-12-18/plugins/ldap_plugin'
+[5-ERROR] Making all in src
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.multisync.1181952714.21852.1627887995/multisync-2004-12-18/plugins/ldap_plugin/src'
+[5-ERROR] /bin/sh ../libtool --mode=compile gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -DPACKAGE_DATA_DIR=\""/opt/gnome2/share/multisync"\" -I../../../src/libversit -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/X11R7/include -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/pango-1.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo   -I../include -I../../../include -Werror  -I//usr/include  -g -O2 -c -o ldap_plugin.lo `test -f 'ldap_plugin.c' || echo './'`ldap_plugin.c
+[5-ERROR] mkdir .libs
+[5-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -DPACKAGE_DATA_DIR=\"/opt/gnome2/share/multisync\" -I../../../src/libversit -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/X11R7/include -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/pango-1.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I../include -I../../../include -Werror -I//usr/include -g -O2 -c ldap_plugin.c  -fPIC -DPIC -o .libs/ldap_plugin.o
+[5-ERROR] /bin/sh ../libtool --mode=compile gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -DPACKAGE_DATA_DIR=\""/opt/gnome2/share/multisync"\" -I../../../src/libversit -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/X11R7/include -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/pango-1.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo   -I../include -I../../../include -Werror  -I//usr/include  -g -O2 -c -o gui.lo `test -f 'gui.c' || echo './'`gui.c
+[5-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -DPACKAGE_DATA_DIR=\"/opt/gnome2/share/multisync\" -I../../../src/libversit -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/X11R7/include -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/pango-1.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I../include -I../../../include -Werror -I//usr/include -g -O2 -c gui.c  -fPIC -DPIC -o .libs/gui.o
 [5-ERROR] cc1: warnings being treated as errors
-[5-ERROR] xml.c: In function 'load_ldap_state':
-[5-ERROR] xml.c:58: warning: pointer targets in assignment differ in signedness
-[5-ERROR] xml.c: In function 'save_ldap_state':
-[5-ERROR] xml.c:133: warning: pointer targets in passing argument 1 of 'xmlNewDoc' differ in signedness
-[5-ERROR] xml.c:134: warning: pointer targets in passing argument 3 of 'xmlNewDocNode' differ in signedness
-[5-ERROR] xml.c:143: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:143: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:144: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:144: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:145: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:145: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:146: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:146: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:147: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:147: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:148: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:148: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:149: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:149: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:150: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:150: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:151: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:151: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:152: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:152: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:153: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:153: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:154: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:154: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c: In function 'load_xml_entries':
-[5-ERROR] xml.c:183: warning: pointer targets in assignment differ in signedness
-[5-ERROR] xml.c:186: warning: pointer targets in assignment differ in signedness
-[5-ERROR] xml.c: In function 'save_xml_entries':
-[5-ERROR] xml.c:285: warning: pointer targets in passing argument 1 of 'xmlNewDoc' differ in signedness
-[5-ERROR] xml.c:286: warning: pointer targets in passing argument 3 of 'xmlNewDocNode' differ in signedness
-[5-ERROR] xml.c:292: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:293: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:293: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:294: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[5-ERROR] xml.c:294: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[5-ERROR] make[2]: *** [xml.lo] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.multisync.1169122441.21323.2270576875/multisync-2004-12-18/plugins/ldap_plugin/src'
+[5-ERROR] gui.c: In function 'on_btn_auth_mechs_clicked':
+[5-ERROR] gui.c:324: warning: assignment makes pointer from integer without a cast
+[5-ERROR] make[2]: *** [gui.lo] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.multisync.1181952714.21852.1627887995/multisync-2004-12-18/plugins/ldap_plugin/src'
 [5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.multisync.1169122441.21323.2270576875/multisync-2004-12-18/plugins/ldap_plugin'
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.multisync.1181952714.21852.1627887995/multisync-2004-12-18/plugins/ldap_plugin'
 [5-ERROR] make: *** [all] Error 2
 [5-ERROR] --- BUILD ERROR ---
 
-[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DPACKAGE_DATA_DIR=\"/opt/gnome2/share/multisync\" -I../../../src/libversit -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I../include -I../../../include -Werror -I//opt/openldap/include -g -O2 -c gui.c  -fPIC -DPIC -o .libs/gui.o
-[9-ERROR] /bin/sh ../libtool --mode=compile gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DPACKAGE_DATA_DIR=\""/opt/gnome2/share/multisync"\" -I../../../src/libversit -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo   -I../include -I../../../include -Werror  -I//opt/openldap/include  -g -O2 -c -o xml.lo `test -f 'xml.c' || echo './'`xml.c
-[9-ERROR]  gcc-40 -DHAVE_CONFIG_H -I. -I. -I.. -DPACKAGE_DATA_DIR=\"/opt/gnome2/share/multisync\" -I../../../src/libversit -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/libxml2 -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I../include -I../../../include -Werror -I//opt/openldap/include -g -O2 -c xml.c  -fPIC -DPIC -o .libs/xml.o
+[9-ERROR] checking for ld used by g++-42... ld
+[9-ERROR] checking if the linker (ld) is GNU ld... yes
+[9-ERROR] checking whether the g++-42 linker (ld) supports shared libraries... yes
+[9-ERROR] checking for g++-42 option to produce PIC... -fPIC
+[9-ERROR] checking if g++-42 PIC flag -fPIC works... yes
+[9-ERROR] checking if g++-42 supports -c -o file.o... yes
+[9-ERROR] checking whether the g++-42 linker (ld) supports shared libraries... yes
+[9-ERROR] checking dynamic linker characteristics... GNU/Linux ld.so
+[9-ERROR] checking how to hardcode library paths into programs... immediate
+[9-ERROR] checking whether stripping libraries is possible... yes
+[9-ERROR] appending configuration tag "F77" to libtool
+[9-ERROR] checking if libtool supports shared libraries... yes
+[9-ERROR] checking whether to build shared libraries... yes
+[9-ERROR] checking whether to build static libraries... no
+[9-ERROR] checking for f77 option to produce PIC... -fPIC
+[9-ERROR] checking if f77 PIC flag -fPIC works... no
+[9-ERROR] checking if f77 supports -c -o file.o... no
+[9-ERROR] checking whether the f77 linker (ld) supports shared libraries... yes
+[9-ERROR] checking dynamic linker characteristics... ./configure: line 1: f77: command not found
+[9-ERROR] GNU/Linux ld.so
+[9-ERROR] checking how to hardcode library paths into programs... immediate
+[9-ERROR] checking whether stripping libraries is possible... yes
+[9-ERROR] checking for ldap_init in -lldap... yes
+[9-ERROR] checking sasl/sasl.h usability... yes
+[9-ERROR] checking sasl/sasl.h presence... yes
+[9-ERROR] checking for sasl/sasl.h... yes
+[9-ERROR] configure: creating ./config.status
+[9-ERROR] config.status: creating Makefile
+[9-ERROR] config.status: creating src/Makefile
+[9-ERROR] config.status: creating ../../specs/multisync-ldap.spec
+[9-ERROR] config.status: creating config.h
+[9-ERROR] config.status: executing depfiles commands
+[9-ERROR] make  all-recursive
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.multisync.1181974475.19400.4149625545/multisync-2004-12-18/plugins/ldap_plugin'
+[9-ERROR] Making all in src
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.multisync.1181974475.19400.4149625545/multisync-2004-12-18/plugins/ldap_plugin/src'
+[9-ERROR] /bin/sh ../libtool --mode=compile gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -DPACKAGE_DATA_DIR=\""/opt/gnome2/share/multisync"\" -I../../../src/libversit -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/X11R7/include -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/pango-1.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo   -I../include -I../../../include -Werror  -I//usr/include  -g -O2 -c -o ldap_plugin.lo `test -f 'ldap_plugin.c' || echo './'`ldap_plugin.c
+[9-ERROR] mkdir .libs
+[9-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -DPACKAGE_DATA_DIR=\"/opt/gnome2/share/multisync\" -I../../../src/libversit -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/X11R7/include -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/pango-1.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I../include -I../../../include -Werror -I//usr/include -g -O2 -c ldap_plugin.c  -fPIC -DPIC -o .libs/ldap_plugin.o
+[9-ERROR] /bin/sh ../libtool --mode=compile gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -DPACKAGE_DATA_DIR=\""/opt/gnome2/share/multisync"\" -I../../../src/libversit -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/X11R7/include -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/pango-1.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo   -I../include -I../../../include -Werror  -I//usr/include  -g -O2 -c -o gui.lo `test -f 'gui.c' || echo './'`gui.c
+[9-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -DPACKAGE_DATA_DIR=\"/opt/gnome2/share/multisync\" -I../../../src/libversit -I.. -DORBIT2=1 -D_REENTRANT -I/usr/include/libart-2.0 -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/X11R7/include -I/opt/gnome2/include/libgnomeui-2.0 -I/opt/gnome2/include/libgnome-2.0 -I/opt/gnome2/include/libgnomecanvas-2.0 -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/include/gconf/2 -I/opt/gnome2/include/libbonoboui-2.0 -I/opt/gnome2/include/gnome-vfs-2.0 -I/opt/gnome2/lib/gnome-vfs-2.0/include -I/opt/gnome2/include/gnome-keyring-1 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/opt/gnome2/include/orbit-2.0 -I/opt/gnome2/include/libbonobo-2.0 -I/opt/gnome2/include/bonobo-activation-2.0 -I/opt/gnome2/include/pango-1.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I../include -I../../../include -Werror -I//usr/include -g -O2 -c gui.c  -fPIC -DPIC -o .libs/gui.o
 [9-ERROR] cc1: warnings being treated as errors
-[9-ERROR] xml.c: In function 'load_ldap_state':
-[9-ERROR] xml.c:58: warning: pointer targets in assignment differ in signedness
-[9-ERROR] xml.c: In function 'save_ldap_state':
-[9-ERROR] xml.c:133: warning: pointer targets in passing argument 1 of 'xmlNewDoc' differ in signedness
-[9-ERROR] xml.c:134: warning: pointer targets in passing argument 3 of 'xmlNewDocNode' differ in signedness
-[9-ERROR] xml.c:143: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:143: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:144: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:144: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:145: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:145: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:146: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:146: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:147: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:147: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:148: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:148: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:149: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:149: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:150: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:150: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:151: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:151: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:152: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:152: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:153: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:153: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:154: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:154: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c: In function 'load_xml_entries':
-[9-ERROR] xml.c:183: warning: pointer targets in assignment differ in signedness
-[9-ERROR] xml.c:186: warning: pointer targets in assignment differ in signedness
-[9-ERROR] xml.c: In function 'save_xml_entries':
-[9-ERROR] xml.c:285: warning: pointer targets in passing argument 1 of 'xmlNewDoc' differ in signedness
-[9-ERROR] xml.c:286: warning: pointer targets in passing argument 3 of 'xmlNewDocNode' differ in signedness
-[9-ERROR] xml.c:292: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:293: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:293: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:294: warning: pointer targets in passing argument 3 of 'xmlNewChild' differ in signedness
-[9-ERROR] xml.c:294: warning: pointer targets in passing argument 4 of 'xmlNewChild' differ in signedness
-[9-ERROR] make[2]: *** [xml.lo] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.multisync.1169151956.4111.1667074915/multisync-2004-12-18/plugins/ldap_plugin/src'
+[9-ERROR] gui.c: In function 'on_btn_auth_mechs_clicked':
+[9-ERROR] gui.c:324: warning: assignment makes pointer from integer without a cast
+[9-ERROR] make[2]: *** [gui.lo] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.multisync.1181974475.19400.4149625545/multisync-2004-12-18/plugins/ldap_plugin/src'
 [9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.multisync.1169151956.4111.1667074915/multisync-2004-12-18/plugins/ldap_plugin'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.multisync.1181974475.19400.4149625545/multisync-2004-12-18/plugins/ldap_plugin'
 [9-ERROR] make: *** [all] Error 2
 [9-ERROR] --- BUILD ERROR ---
 

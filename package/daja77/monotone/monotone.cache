@@ -15,23 +15,125 @@
 [COPY] file for details.
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168669303 Sat Jan 13 07:21:43 2007 (5)
-[TIMESTAMP] 1168877254 Mon Jan 15 17:07:34 2007 (9)
+[TIMESTAMP] 1181116132 Wed Jun  6 09:48:52 2007 (5) ERROR
+[TIMESTAMP] 1181592070 Mon Jun 11 22:01:10 2007 (9) ERROR
+[TIMESTAMP] 1181826029 Thu Jun 14 15:00:29 2007 (5) ERROR
+[TIMESTAMP] 1181908618 Fri Jun 15 13:56:58 2007 (9) ERROR
+[TIMESTAMP] 1181951382 Sat Jun 16 01:49:42 2007 (5) ERROR
+[TIMESTAMP] 1181972921 Sat Jun 16 07:48:41 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-monotone.log 9-monotone.log
+[LOGS] 5-monotone.err 9-monotone.err
 
-[BUILDTIME] 50082 (5)
-[BUILDTIME] 50560 (9)
-[SIZE] 4.78 MB, 12 files
+[BUILDTIME] 6222 (5) ERROR
+[BUILDTIME] 6154 (9) ERROR
+[BUILDTIME] 6168 (5) ERROR
+[BUILDTIME] 6068 (9) ERROR
+[BUILDTIME] 6027 (5) ERROR
+[BUILDTIME] 6036 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils boost boost:dev bzip2 coreutils cvm
-[DEP] diffutils findutils gawk gcc40 gcc40:dev gettext glibc23 glibc23:dev
-[DEP] grep libicu linux-libc-headers:dev make mktemp net-tools netpbm
-[DEP] rrdtool sed sysfiles tar texinfo twoftpd ucspi-unix util-linux
-[DEP] zlib zlib:dev
 
-[PROVIDES] monotone
+[5-ERROR] cmp -s package_revision.c.tmp package_revision.c || mv -f package_revision.c.tmp package_revision.c
+[5-ERROR] rm -f package_revision.c.tmp
+[5-ERROR] REAL_BLDDIR=$PWD/.; \
+[5-ERROR] 	(cd . && $REAL_BLDDIR/monotone status) 2>/dev/null >package_full_revision.txt \
+[5-ERROR] 	|| (cd . && monotone status) 2>/dev/null >package_full_revision.txt \
+[5-ERROR] 	|| (cp ./package_full_revision_dist.txt 2>/dev/null package_full_revision.txt) \
+[5-ERROR] 	|| (echo "unknown" >package_full_revision.txt)
+[5-ERROR] ./txt2c --no-static package_full_revision.txt package_full_revision >package_full_revision.c.tmp
+[5-ERROR] cmp -s package_full_revision.c.tmp package_full_revision.c || mv -f package_full_revision.c.tmp package_full_revision.c
+[5-ERROR] rm -f package_full_revision.c.tmp
+[5-ERROR] cp package_full_revision.txt package_full_revision_dist.txt
+[5-ERROR] (echo ''; \
+[5-ERROR] 	 echo '  Generated from data cached in the distribution;'; \
+[5-ERROR] 	 echo '  further changes may have been made.') >> package_full_revision_dist.txt
+[5-ERROR] make  all-recursive
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.monotone.1181951318.30727.4161569442/monotone-0.25'
+[5-ERROR] Making all in po
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.monotone.1181951318.30727.4161569442/monotone-0.25/po'
+[5-ERROR] make[2]: Nothing to be done for `all'.
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.monotone.1181951318.30727.4161569442/monotone-0.25/po'
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.monotone.1181951318.30727.4161569442/monotone-0.25'
+[5-ERROR] depbase=`echo unix/read_password.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
+[5-ERROR] 	if g++-42 -DLOCALEDIR=\"/usr/share/locale\" -DHAVE_CONFIG_H -I. -I. -I.     -DNDEBUG -DBOOST_DISABLE_THREADS -DBOOST_SP_DISABLE_THREADS -g -O2 -fno-strict-aliasing -Wall -MT unix/read_password.o -MD -MP -MF "$depbase.Tpo" -c -o unix/read_password.o unix/read_password.cc; \
+[5-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
+[5-ERROR] depbase=`echo unix/get_system_flavour.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
+[5-ERROR] 	if g++-42 -DLOCALEDIR=\"/usr/share/locale\" -DHAVE_CONFIG_H -I. -I. -I.     -DNDEBUG -DBOOST_DISABLE_THREADS -DBOOST_SP_DISABLE_THREADS -g -O2 -fno-strict-aliasing -Wall -MT unix/get_system_flavour.o -MD -MP -MF "$depbase.Tpo" -c -o unix/get_system_flavour.o unix/get_system_flavour.cc; \
+[5-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
+[5-ERROR] depbase=`echo unix/process.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
+[5-ERROR] 	if g++-42 -DLOCALEDIR=\"/usr/share/locale\" -DHAVE_CONFIG_H -I. -I. -I.     -DNDEBUG -DBOOST_DISABLE_THREADS -DBOOST_SP_DISABLE_THREADS -g -O2 -fno-strict-aliasing -Wall -MT unix/process.o -MD -MP -MF "$depbase.Tpo" -c -o unix/process.o unix/process.cc; \
+[5-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
+[5-ERROR] depbase=`echo unix/terminal.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
+[5-ERROR] 	if g++-42 -DLOCALEDIR=\"/usr/share/locale\" -DHAVE_CONFIG_H -I. -I. -I.     -DNDEBUG -DBOOST_DISABLE_THREADS -DBOOST_SP_DISABLE_THREADS -g -O2 -fno-strict-aliasing -Wall -MT unix/terminal.o -MD -MP -MF "$depbase.Tpo" -c -o unix/terminal.o unix/terminal.cc; \
+[5-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
+[5-ERROR] depbase=`echo unix/inodeprint.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
+[5-ERROR] 	if g++-42 -DLOCALEDIR=\"/usr/share/locale\" -DHAVE_CONFIG_H -I. -I. -I.     -DNDEBUG -DBOOST_DISABLE_THREADS -DBOOST_SP_DISABLE_THREADS -g -O2 -fno-strict-aliasing -Wall -MT unix/inodeprint.o -MD -MP -MF "$depbase.Tpo" -c -o unix/inodeprint.o unix/inodeprint.cc; \
+[5-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
+[5-ERROR] depbase=`echo unix/fs.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
+[5-ERROR] 	if g++-42 -DLOCALEDIR=\"/usr/share/locale\" -DHAVE_CONFIG_H -I. -I. -I.     -DNDEBUG -DBOOST_DISABLE_THREADS -DBOOST_SP_DISABLE_THREADS -g -O2 -fno-strict-aliasing -Wall -MT unix/fs.o -MD -MP -MF "$depbase.Tpo" -c -o unix/fs.o unix/fs.cc; \
+[5-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
+[5-ERROR] In file included from ./paths.hh:107,
+[5-ERROR]                  from ./sanity.hh:24,
+[5-ERROR]                  from unix/fs.cc:18:
+[5-ERROR] ./vocab.hh:162: error: using typedef-name 'boost::filesystem::path' after 'struct'
+[5-ERROR] /usr/include/boost/filesystem/path.hpp:43: error: 'boost::filesystem::path' has a previous declaration here
+[5-ERROR] make[2]: *** [unix/fs.o] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.monotone.1181951318.30727.4161569442/monotone-0.25'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.monotone.1181951318.30727.4161569442/monotone-0.25'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] cmp -s package_revision.c.tmp package_revision.c || mv -f package_revision.c.tmp package_revision.c
+[9-ERROR] rm -f package_revision.c.tmp
+[9-ERROR] REAL_BLDDIR=$PWD/.; \
+[9-ERROR] 	(cd . && $REAL_BLDDIR/monotone status) 2>/dev/null >package_full_revision.txt \
+[9-ERROR] 	|| (cd . && monotone status) 2>/dev/null >package_full_revision.txt \
+[9-ERROR] 	|| (cp ./package_full_revision_dist.txt 2>/dev/null package_full_revision.txt) \
+[9-ERROR] 	|| (echo "unknown" >package_full_revision.txt)
+[9-ERROR] ./txt2c --no-static package_full_revision.txt package_full_revision >package_full_revision.c.tmp
+[9-ERROR] cmp -s package_full_revision.c.tmp package_full_revision.c || mv -f package_full_revision.c.tmp package_full_revision.c
+[9-ERROR] rm -f package_full_revision.c.tmp
+[9-ERROR] cp package_full_revision.txt package_full_revision_dist.txt
+[9-ERROR] (echo ''; \
+[9-ERROR] 	 echo '  Generated from data cached in the distribution;'; \
+[9-ERROR] 	 echo '  further changes may have been made.') >> package_full_revision_dist.txt
+[9-ERROR] make  all-recursive
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.monotone.1181972857.1568.2938899655/monotone-0.25'
+[9-ERROR] Making all in po
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.monotone.1181972857.1568.2938899655/monotone-0.25/po'
+[9-ERROR] make[2]: Nothing to be done for `all'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.monotone.1181972857.1568.2938899655/monotone-0.25/po'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.monotone.1181972857.1568.2938899655/monotone-0.25'
+[9-ERROR] depbase=`echo unix/read_password.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
+[9-ERROR] 	if g++-42 -DLOCALEDIR=\"/usr/share/locale\" -DHAVE_CONFIG_H -I. -I. -I.     -DNDEBUG -DBOOST_DISABLE_THREADS -DBOOST_SP_DISABLE_THREADS -g -O2 -fno-strict-aliasing -Wall -MT unix/read_password.o -MD -MP -MF "$depbase.Tpo" -c -o unix/read_password.o unix/read_password.cc; \
+[9-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
+[9-ERROR] depbase=`echo unix/get_system_flavour.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
+[9-ERROR] 	if g++-42 -DLOCALEDIR=\"/usr/share/locale\" -DHAVE_CONFIG_H -I. -I. -I.     -DNDEBUG -DBOOST_DISABLE_THREADS -DBOOST_SP_DISABLE_THREADS -g -O2 -fno-strict-aliasing -Wall -MT unix/get_system_flavour.o -MD -MP -MF "$depbase.Tpo" -c -o unix/get_system_flavour.o unix/get_system_flavour.cc; \
+[9-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
+[9-ERROR] depbase=`echo unix/process.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
+[9-ERROR] 	if g++-42 -DLOCALEDIR=\"/usr/share/locale\" -DHAVE_CONFIG_H -I. -I. -I.     -DNDEBUG -DBOOST_DISABLE_THREADS -DBOOST_SP_DISABLE_THREADS -g -O2 -fno-strict-aliasing -Wall -MT unix/process.o -MD -MP -MF "$depbase.Tpo" -c -o unix/process.o unix/process.cc; \
+[9-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
+[9-ERROR] depbase=`echo unix/terminal.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
+[9-ERROR] 	if g++-42 -DLOCALEDIR=\"/usr/share/locale\" -DHAVE_CONFIG_H -I. -I. -I.     -DNDEBUG -DBOOST_DISABLE_THREADS -DBOOST_SP_DISABLE_THREADS -g -O2 -fno-strict-aliasing -Wall -MT unix/terminal.o -MD -MP -MF "$depbase.Tpo" -c -o unix/terminal.o unix/terminal.cc; \
+[9-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
+[9-ERROR] depbase=`echo unix/inodeprint.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
+[9-ERROR] 	if g++-42 -DLOCALEDIR=\"/usr/share/locale\" -DHAVE_CONFIG_H -I. -I. -I.     -DNDEBUG -DBOOST_DISABLE_THREADS -DBOOST_SP_DISABLE_THREADS -g -O2 -fno-strict-aliasing -Wall -MT unix/inodeprint.o -MD -MP -MF "$depbase.Tpo" -c -o unix/inodeprint.o unix/inodeprint.cc; \
+[9-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
+[9-ERROR] depbase=`echo unix/fs.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
+[9-ERROR] 	if g++-42 -DLOCALEDIR=\"/usr/share/locale\" -DHAVE_CONFIG_H -I. -I. -I.     -DNDEBUG -DBOOST_DISABLE_THREADS -DBOOST_SP_DISABLE_THREADS -g -O2 -fno-strict-aliasing -Wall -MT unix/fs.o -MD -MP -MF "$depbase.Tpo" -c -o unix/fs.o unix/fs.cc; \
+[9-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
+[9-ERROR] In file included from ./paths.hh:107,
+[9-ERROR]                  from ./sanity.hh:24,
+[9-ERROR]                  from unix/fs.cc:18:
+[9-ERROR] ./vocab.hh:162: error: using typedef-name 'boost::filesystem::path' after 'struct'
+[9-ERROR] /usr/include/boost/filesystem/path.hpp:43: error: 'boost::filesystem::path' has a previous declaration here
+[9-ERROR] make[2]: *** [unix/fs.o] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.monotone.1181972857.1568.2938899655/monotone-0.25'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.monotone.1181972857.1568.2938899655/monotone-0.25'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

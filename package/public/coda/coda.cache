@@ -20,125 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168639058 Fri Jan 12 22:57:38 2007 (5) ERROR
-[TIMESTAMP] 1168844810 Mon Jan 15 08:06:50 2007 (9) ERROR
-[TIMESTAMP] 1168948788 Tue Jan 16 12:59:48 2007 (5) ERROR
-[TIMESTAMP] 1168978699 Tue Jan 16 21:18:19 2007 (9) ERROR
-[TIMESTAMP] 1169092204 Thu Jan 18 04:50:04 2007 (5) ERROR
-[TIMESTAMP] 1169148971 Thu Jan 18 20:36:11 2007 (9) ERROR
+[TIMESTAMP] 1181070808 Tue Jun  5 21:13:28 2007 (5) ERROR
+[TIMESTAMP] 1181539840 Mon Jun 11 07:30:40 2007 (9) ERROR
+[TIMESTAMP] 1181823797 Thu Jun 14 14:23:17 2007 (5) ERROR
+[TIMESTAMP] 1181904019 Fri Jun 15 12:40:19 2007 (9) ERROR
+[TIMESTAMP] 1181950344 Sat Jun 16 01:32:24 2007 (5) ERROR
+[TIMESTAMP] 1181971824 Sat Jun 16 07:30:24 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-coda.err 9-coda.err
 
-[BUILDTIME] 18227 (5) ERROR
-[BUILDTIME] 18422 (9) ERROR
-[BUILDTIME] 18581 (5) ERROR
-[BUILDTIME] 18593 (9) ERROR
-[BUILDTIME] 18562 (5) ERROR
-[BUILDTIME] 18580 (9) ERROR
+[BUILDTIME] 2857 (5) ERROR
+[BUILDTIME] 2840 (9) ERROR
+[BUILDTIME] 2861 (5) ERROR
+[BUILDTIME] 2801 (9) ERROR
+[BUILDTIME] 2789 (5) ERROR
+[BUILDTIME] 2781 (9) ERROR
 
 
-[5-ERROR] a - lockqueue.o
-[5-ERROR] a - vollocate.o
-[5-ERROR] a - vol-debug.o
-[5-ERROR] ranlib libvol.a
-[5-ERROR] ../../tools/our-install 644 /ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8/include vldb.h fssync.h recov.h vutil.h index.h vicelock.h treeremove.h vlist.h cvnode.h coda_globals.h voldefs.h volume.h camprivate.h volres.h volhash.h vrdb.h struct.h lockqueue.h vollocate.h
-[5-ERROR] touch chdrinstall
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.coda.1169092016.22632.905555977/coda-6.0.8/coda-src/vol'
-[5-ERROR] <---- Leaving vol.
-[5-ERROR] ----> Entering librepair
-[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.coda.1169092016.22632.905555977/coda-6.0.8/coda-src/librepair'
-[5-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8/include -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o repio.o repio.cc
-[5-ERROR] ar rv librepio.a repio.o
-[5-ERROR] ar: creating librepio.a
-[5-ERROR] a - repio.o
-[5-ERROR] ranlib librepio.a
-[5-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8/include -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o resolve.o resolve.cc
-[5-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8/include -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o cure.o cure.cc
-[5-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8/include -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o predicate.o predicate.cc
-[5-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8/include -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o repcmds.o repcmds.cc
-[5-ERROR] repcmds.cc: In function 'int DoRepair(repvol*, char*, FILE*, char*, int)':
-[5-ERROR] repcmds.cc:409: warning: format '%d' expects type 'int', but argument 3 has type 'long int'
-[5-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8/include -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o rvol.o rvol.cc
-[5-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8/include -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o path.o path.cc
-[5-ERROR] ar rv libclnrepair.a resolve.o cure.o predicate.o repcmds.o rvol.o path.o
-[5-ERROR] ar: creating libclnrepair.a
-[5-ERROR] a - resolve.o
-[5-ERROR] a - cure.o
-[5-ERROR] a - predicate.o
-[5-ERROR] a - repcmds.o
-[5-ERROR] a - rvol.o
-[5-ERROR] a - path.o
-[5-ERROR] ranlib libclnrepair.a
-[5-ERROR] ../../tools/our-install 644 /ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8/include resolve.h repio.h repcmds.h
-[5-ERROR] touch chdrinstall
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.coda.1169092016.22632.905555977/coda-6.0.8/coda-src/librepair'
-[5-ERROR] <---- Leaving librepair.
-[5-ERROR] ----> Entering venus
-[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.coda.1169092016.22632.905555977/coda-6.0.8/coda-src/venus'
-[5-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8/include -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8 -g -O2 -DVENUS -DTIMING -DVENUSDEBUG -DRVM_USELWP -I/opt/coda/include   -c -o adv_monitor.o adv_monitor.cc
-[5-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8/include -I/ROCK/src.coda.1169092016.22632.905555977/coda-6.0.8 -g -O2 -DVENUS -DTIMING -DVENUSDEBUG -DRVM_USELWP -I/opt/coda/include   -c -o adv_daemon.o adv_daemon.cc
-[5-ERROR] ./venusvol.h:501: error: 'fsobj' has not been declared
-[5-ERROR] ./venusvol.h:878: error: 'fsobj' has not been declared
-[5-ERROR] make[2]: *** [adv_daemon.o] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.coda.1169092016.22632.905555977/coda-6.0.8/coda-src/venus'
-[5-ERROR] ----> Error in venus
-[5-ERROR] make[1]: *** [Coda] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.coda.1169092016.22632.905555977/coda-6.0.8/coda-src'
-[5-ERROR] ----> Error in coda-src
-[5-ERROR] make: *** [Coda] Error 1
+[5-ERROR] if /bin/sh ../libtool --mode=compile gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include   -DLWP_DEBUG -g -O2 -MT liblwp_la-fasttime.lo -MD -MP -MF ".deps/liblwp_la-fasttime.Tpo" \
+[5-ERROR] 	  -c -o liblwp_la-fasttime.lo `test -f 'fasttime.c' || echo './'`fasttime.c; \
+[5-ERROR] 	then mv -f ".deps/liblwp_la-fasttime.Tpo" ".deps/liblwp_la-fasttime.Plo"; \
+[5-ERROR] 	else rm -f ".deps/liblwp_la-fasttime.Tpo"; exit 1; \
+[5-ERROR] 	fi
+[5-ERROR] mkdir .libs
+[5-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -DLWP_DEBUG -g -O2 -MT liblwp_la-fasttime.lo -MD -MP -MF .deps/liblwp_la-fasttime.Tpo -c fasttime.c  -fPIC -DPIC -o .libs/liblwp_la-fasttime.o
+[5-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -DLWP_DEBUG -g -O2 -MT liblwp_la-fasttime.lo -MD -MP -MF .deps/liblwp_la-fasttime.Tpo -c fasttime.c -o liblwp_la-fasttime.o >/dev/null 2>&1
+[5-ERROR] if /bin/sh ../libtool --mode=compile gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include   -DLWP_DEBUG -g -O2 -MT liblwp_la-iomgr.lo -MD -MP -MF ".deps/liblwp_la-iomgr.Tpo" \
+[5-ERROR] 	  -c -o liblwp_la-iomgr.lo `test -f 'iomgr.c' || echo './'`iomgr.c; \
+[5-ERROR] 	then mv -f ".deps/liblwp_la-iomgr.Tpo" ".deps/liblwp_la-iomgr.Plo"; \
+[5-ERROR] 	else rm -f ".deps/liblwp_la-iomgr.Tpo"; exit 1; \
+[5-ERROR] 	fi
+[5-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -DLWP_DEBUG -g -O2 -MT liblwp_la-iomgr.lo -MD -MP -MF .deps/liblwp_la-iomgr.Tpo -c iomgr.c  -fPIC -DPIC -o .libs/liblwp_la-iomgr.o
+[5-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -DLWP_DEBUG -g -O2 -MT liblwp_la-iomgr.lo -MD -MP -MF .deps/liblwp_la-iomgr.Tpo -c iomgr.c -o liblwp_la-iomgr.o >/dev/null 2>&1
+[5-ERROR] if /bin/sh ../libtool --mode=compile gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include   -DLWP_DEBUG -g -O2 -MT liblwp_la-lock.lo -MD -MP -MF ".deps/liblwp_la-lock.Tpo" \
+[5-ERROR] 	  -c -o liblwp_la-lock.lo `test -f 'lock.c' || echo './'`lock.c; \
+[5-ERROR] 	then mv -f ".deps/liblwp_la-lock.Tpo" ".deps/liblwp_la-lock.Plo"; \
+[5-ERROR] 	else rm -f ".deps/liblwp_la-lock.Tpo"; exit 1; \
+[5-ERROR] 	fi
+[5-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -DLWP_DEBUG -g -O2 -MT liblwp_la-lock.lo -MD -MP -MF .deps/liblwp_la-lock.Tpo -c lock.c  -fPIC -DPIC -o .libs/liblwp_la-lock.o
+[5-ERROR] lock.c: In function 'Lock_Obtain':
+[5-ERROR] lock.c:111: warning: incompatible implicit declaration of built-in function 'abort'
+[5-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -DLWP_DEBUG -g -O2 -MT liblwp_la-lock.lo -MD -MP -MF .deps/liblwp_la-lock.Tpo -c lock.c -o liblwp_la-lock.o >/dev/null 2>&1
+[5-ERROR] if /bin/sh ../libtool --mode=compile gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include   -DLWP_DEBUG -g -O2 -MT liblwp_la-lwp.lo -MD -MP -MF ".deps/liblwp_la-lwp.Tpo" \
+[5-ERROR] 	  -c -o liblwp_la-lwp.lo `test -f 'lwp.c' || echo './'`lwp.c; \
+[5-ERROR] 	then mv -f ".deps/liblwp_la-lwp.Tpo" ".deps/liblwp_la-lwp.Plo"; \
+[5-ERROR] 	else rm -f ".deps/liblwp_la-lwp.Tpo"; exit 1; \
+[5-ERROR] 	fi
+[5-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -DLWP_DEBUG -g -O2 -MT liblwp_la-lwp.lo -MD -MP -MF .deps/liblwp_la-lwp.Tpo -c lwp.c  -fPIC -DPIC -o .libs/liblwp_la-lwp.o
+[5-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -DLWP_DEBUG -g -O2 -MT liblwp_la-lwp.lo -MD -MP -MF .deps/liblwp_la-lwp.Tpo -c lwp.c -o liblwp_la-lwp.o >/dev/null 2>&1
+[5-ERROR] if /bin/sh ../libtool --mode=compile gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include   -DLWP_DEBUG -g -O2 -MT liblwp_la-timer.lo -MD -MP -MF ".deps/liblwp_la-timer.Tpo" \
+[5-ERROR] 	  -c -o liblwp_la-timer.lo `test -f 'timer.c' || echo './'`timer.c; \
+[5-ERROR] 	then mv -f ".deps/liblwp_la-timer.Tpo" ".deps/liblwp_la-timer.Plo"; \
+[5-ERROR] 	else rm -f ".deps/liblwp_la-timer.Tpo"; exit 1; \
+[5-ERROR] 	fi
+[5-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -DLWP_DEBUG -g -O2 -MT liblwp_la-timer.lo -MD -MP -MF .deps/liblwp_la-timer.Tpo -c timer.c  -fPIC -DPIC -o .libs/liblwp_la-timer.o
+[5-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -DLWP_DEBUG -g -O2 -MT liblwp_la-timer.lo -MD -MP -MF .deps/liblwp_la-timer.Tpo -c timer.c -o liblwp_la-timer.o >/dev/null 2>&1
+[5-ERROR] /bin/sh ../libtool --mode=compile gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include    -g -O2 -DPIC -fPIC -c process.S
+[5-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -g -O2 -DPIC -fPIC -c process.S  -fPIC -DPIC -o .libs/process.o
+[5-ERROR] process.S:413:28: error: linux/linkage.h: No such file or directory
+[5-ERROR] process.S: Assembler messages:
+[5-ERROR] process.S:442: Error: invalid character '(' in mnemonic
+[5-ERROR] process.S:466: Error: invalid character '(' in mnemonic
+[5-ERROR] make[2]: *** [process.lo] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.coda.1181950317.32426.4161569442/lwp-1.12/src'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.coda.1181950317.32426.4161569442/lwp-1.12'
+[5-ERROR] make: *** [all] Error 2
 [5-ERROR] --- BUILD ERROR ---
 
-[9-ERROR] a - lockqueue.o
-[9-ERROR] a - vollocate.o
-[9-ERROR] a - vol-debug.o
-[9-ERROR] ranlib libvol.a
-[9-ERROR] ../../tools/our-install 644 /ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8/include vldb.h fssync.h recov.h vutil.h index.h vicelock.h treeremove.h vlist.h cvnode.h coda_globals.h voldefs.h volume.h camprivate.h volres.h volhash.h vrdb.h struct.h lockqueue.h vollocate.h
-[9-ERROR] touch chdrinstall
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.coda.1169148783.14297.1060515637/coda-6.0.8/coda-src/vol'
-[9-ERROR] <---- Leaving vol.
-[9-ERROR] ----> Entering librepair
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.coda.1169148783.14297.1060515637/coda-6.0.8/coda-src/librepair'
-[9-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8/include -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o repio.o repio.cc
-[9-ERROR] ar rv librepio.a repio.o
-[9-ERROR] ar: creating librepio.a
-[9-ERROR] a - repio.o
-[9-ERROR] ranlib librepio.a
-[9-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8/include -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o resolve.o resolve.cc
-[9-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8/include -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o cure.o cure.cc
-[9-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8/include -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o predicate.o predicate.cc
-[9-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8/include -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o repcmds.o repcmds.cc
-[9-ERROR] repcmds.cc: In function 'int DoRepair(repvol*, char*, FILE*, char*, int)':
-[9-ERROR] repcmds.cc:409: warning: format '%d' expects type 'int', but argument 3 has type 'long int'
-[9-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8/include -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o rvol.o rvol.cc
-[9-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8/include -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8 -g -O2 -I/opt/coda/include   -c -o path.o path.cc
-[9-ERROR] ar rv libclnrepair.a resolve.o cure.o predicate.o repcmds.o rvol.o path.o
-[9-ERROR] ar: creating libclnrepair.a
-[9-ERROR] a - resolve.o
-[9-ERROR] a - cure.o
-[9-ERROR] a - predicate.o
-[9-ERROR] a - repcmds.o
-[9-ERROR] a - rvol.o
-[9-ERROR] a - path.o
-[9-ERROR] ranlib libclnrepair.a
-[9-ERROR] ../../tools/our-install 644 /ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8/include resolve.h repio.h repcmds.h
-[9-ERROR] touch chdrinstall
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.coda.1169148783.14297.1060515637/coda-6.0.8/coda-src/librepair'
-[9-ERROR] <---- Leaving librepair.
-[9-ERROR] ----> Entering venus
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.coda.1169148783.14297.1060515637/coda-6.0.8/coda-src/venus'
-[9-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8/include -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8 -g -O2 -DVENUS -DTIMING -DVENUSDEBUG -DRVM_USELWP -I/opt/coda/include   -c -o adv_monitor.o adv_monitor.cc
-[9-ERROR] g++-40 -Wall -MD -DHAVE_CONFIG_H -I. -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8/include -I/ROCK/src.coda.1169148783.14297.1060515637/coda-6.0.8 -g -O2 -DVENUS -DTIMING -DVENUSDEBUG -DRVM_USELWP -I/opt/coda/include   -c -o adv_daemon.o adv_daemon.cc
-[9-ERROR] ./venusvol.h:501: error: 'fsobj' has not been declared
-[9-ERROR] ./venusvol.h:878: error: 'fsobj' has not been declared
-[9-ERROR] make[2]: *** [adv_daemon.o] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.coda.1169148783.14297.1060515637/coda-6.0.8/coda-src/venus'
-[9-ERROR] ----> Error in venus
-[9-ERROR] make[1]: *** [Coda] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.coda.1169148783.14297.1060515637/coda-6.0.8/coda-src'
-[9-ERROR] ----> Error in coda-src
-[9-ERROR] make: *** [Coda] Error 1
+[9-ERROR] if /bin/sh ../libtool --mode=compile gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include   -DLWP_DEBUG -g -O2 -MT liblwp_la-fasttime.lo -MD -MP -MF ".deps/liblwp_la-fasttime.Tpo" \
+[9-ERROR] 	  -c -o liblwp_la-fasttime.lo `test -f 'fasttime.c' || echo './'`fasttime.c; \
+[9-ERROR] 	then mv -f ".deps/liblwp_la-fasttime.Tpo" ".deps/liblwp_la-fasttime.Plo"; \
+[9-ERROR] 	else rm -f ".deps/liblwp_la-fasttime.Tpo"; exit 1; \
+[9-ERROR] 	fi
+[9-ERROR] mkdir .libs
+[9-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -DLWP_DEBUG -g -O2 -MT liblwp_la-fasttime.lo -MD -MP -MF .deps/liblwp_la-fasttime.Tpo -c fasttime.c  -fPIC -DPIC -o .libs/liblwp_la-fasttime.o
+[9-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -DLWP_DEBUG -g -O2 -MT liblwp_la-fasttime.lo -MD -MP -MF .deps/liblwp_la-fasttime.Tpo -c fasttime.c -o liblwp_la-fasttime.o >/dev/null 2>&1
+[9-ERROR] if /bin/sh ../libtool --mode=compile gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include   -DLWP_DEBUG -g -O2 -MT liblwp_la-iomgr.lo -MD -MP -MF ".deps/liblwp_la-iomgr.Tpo" \
+[9-ERROR] 	  -c -o liblwp_la-iomgr.lo `test -f 'iomgr.c' || echo './'`iomgr.c; \
+[9-ERROR] 	then mv -f ".deps/liblwp_la-iomgr.Tpo" ".deps/liblwp_la-iomgr.Plo"; \
+[9-ERROR] 	else rm -f ".deps/liblwp_la-iomgr.Tpo"; exit 1; \
+[9-ERROR] 	fi
+[9-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -DLWP_DEBUG -g -O2 -MT liblwp_la-iomgr.lo -MD -MP -MF .deps/liblwp_la-iomgr.Tpo -c iomgr.c  -fPIC -DPIC -o .libs/liblwp_la-iomgr.o
+[9-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -DLWP_DEBUG -g -O2 -MT liblwp_la-iomgr.lo -MD -MP -MF .deps/liblwp_la-iomgr.Tpo -c iomgr.c -o liblwp_la-iomgr.o >/dev/null 2>&1
+[9-ERROR] if /bin/sh ../libtool --mode=compile gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include   -DLWP_DEBUG -g -O2 -MT liblwp_la-lock.lo -MD -MP -MF ".deps/liblwp_la-lock.Tpo" \
+[9-ERROR] 	  -c -o liblwp_la-lock.lo `test -f 'lock.c' || echo './'`lock.c; \
+[9-ERROR] 	then mv -f ".deps/liblwp_la-lock.Tpo" ".deps/liblwp_la-lock.Plo"; \
+[9-ERROR] 	else rm -f ".deps/liblwp_la-lock.Tpo"; exit 1; \
+[9-ERROR] 	fi
+[9-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -DLWP_DEBUG -g -O2 -MT liblwp_la-lock.lo -MD -MP -MF .deps/liblwp_la-lock.Tpo -c lock.c  -fPIC -DPIC -o .libs/liblwp_la-lock.o
+[9-ERROR] lock.c: In function 'Lock_Obtain':
+[9-ERROR] lock.c:111: warning: incompatible implicit declaration of built-in function 'abort'
+[9-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -DLWP_DEBUG -g -O2 -MT liblwp_la-lock.lo -MD -MP -MF .deps/liblwp_la-lock.Tpo -c lock.c -o liblwp_la-lock.o >/dev/null 2>&1
+[9-ERROR] if /bin/sh ../libtool --mode=compile gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include   -DLWP_DEBUG -g -O2 -MT liblwp_la-lwp.lo -MD -MP -MF ".deps/liblwp_la-lwp.Tpo" \
+[9-ERROR] 	  -c -o liblwp_la-lwp.lo `test -f 'lwp.c' || echo './'`lwp.c; \
+[9-ERROR] 	then mv -f ".deps/liblwp_la-lwp.Tpo" ".deps/liblwp_la-lwp.Plo"; \
+[9-ERROR] 	else rm -f ".deps/liblwp_la-lwp.Tpo"; exit 1; \
+[9-ERROR] 	fi
+[9-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -DLWP_DEBUG -g -O2 -MT liblwp_la-lwp.lo -MD -MP -MF .deps/liblwp_la-lwp.Tpo -c lwp.c  -fPIC -DPIC -o .libs/liblwp_la-lwp.o
+[9-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -DLWP_DEBUG -g -O2 -MT liblwp_la-lwp.lo -MD -MP -MF .deps/liblwp_la-lwp.Tpo -c lwp.c -o liblwp_la-lwp.o >/dev/null 2>&1
+[9-ERROR] if /bin/sh ../libtool --mode=compile gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include   -DLWP_DEBUG -g -O2 -MT liblwp_la-timer.lo -MD -MP -MF ".deps/liblwp_la-timer.Tpo" \
+[9-ERROR] 	  -c -o liblwp_la-timer.lo `test -f 'timer.c' || echo './'`timer.c; \
+[9-ERROR] 	then mv -f ".deps/liblwp_la-timer.Tpo" ".deps/liblwp_la-timer.Plo"; \
+[9-ERROR] 	else rm -f ".deps/liblwp_la-timer.Tpo"; exit 1; \
+[9-ERROR] 	fi
+[9-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -DLWP_DEBUG -g -O2 -MT liblwp_la-timer.lo -MD -MP -MF .deps/liblwp_la-timer.Tpo -c timer.c  -fPIC -DPIC -o .libs/liblwp_la-timer.o
+[9-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -DLWP_DEBUG -g -O2 -MT liblwp_la-timer.lo -MD -MP -MF .deps/liblwp_la-timer.Tpo -c timer.c -o liblwp_la-timer.o >/dev/null 2>&1
+[9-ERROR] /bin/sh ../libtool --mode=compile gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include    -g -O2 -DPIC -fPIC -c process.S
+[9-ERROR]  gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -g -O2 -DPIC -fPIC -c process.S  -fPIC -DPIC -o .libs/process.o
+[9-ERROR] process.S:413:28: error: linux/linkage.h: No such file or directory
+[9-ERROR] process.S: Assembler messages:
+[9-ERROR] process.S:442: Error: invalid character '(' in mnemonic
+[9-ERROR] process.S:466: Error: invalid character '(' in mnemonic
+[9-ERROR] make[2]: *** [process.lo] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.coda.1181971796.29158.2938899655/lwp-1.12/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.coda.1181971796.29158.2938899655/lwp-1.12'
+[9-ERROR] make: *** [all] Error 2
 [9-ERROR] --- BUILD ERROR ---
 

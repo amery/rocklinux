@@ -20,125 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168677725 Sat Jan 13 09:42:05 2007 (5) ERROR
-[TIMESTAMP] 1168886199 Mon Jan 15 19:36:39 2007 (9) ERROR
-[TIMESTAMP] 1168951667 Tue Jan 16 13:47:47 2007 (5) ERROR
-[TIMESTAMP] 1168981281 Tue Jan 16 22:01:21 2007 (9) ERROR
-[TIMESTAMP] 1169121976 Thu Jan 18 13:06:16 2007 (5) ERROR
-[TIMESTAMP] 1169151479 Thu Jan 18 21:17:59 2007 (9) ERROR
+[TIMESTAMP] 1181124385 Wed Jun  6 12:06:25 2007 (5) ERROR
+[TIMESTAMP] 1181601286 Tue Jun 12 00:34:46 2007 (9) ERROR
+[TIMESTAMP] 1181828144 Thu Jun 14 15:35:44 2007 (5) ERROR
+[TIMESTAMP] 1181911698 Fri Jun 15 14:48:18 2007 (9) ERROR
+[TIMESTAMP] 1181952470 Sat Jun 16 02:07:50 2007 (5) ERROR
+[TIMESTAMP] 1181974224 Sat Jun 16 08:10:24 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-wormux.err 9-wormux.err
 
-[BUILDTIME] 1585 (5) ERROR
-[BUILDTIME] 10036 (9) ERROR
-[BUILDTIME] 10063 (5) ERROR
-[BUILDTIME] 10100 (9) ERROR
-[BUILDTIME] 10083 (5) ERROR
-[BUILDTIME] 10053 (9) ERROR
+[BUILDTIME] 2239 (5) ERROR
+[BUILDTIME] 2724 (9) ERROR
+[BUILDTIME] 2743 (5) ERROR
+[BUILDTIME] 2803 (9) ERROR
+[BUILDTIME] 2679 (5) ERROR
+[BUILDTIME] 2698 (9) ERROR
 
 
-[5-ERROR] 	then mv -f ".deps/dynamite.Tpo" ".deps/dynamite.Po"; else rm -f ".deps/dynamite.Tpo"; exit 1; fi
-[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT gnu.o -MD -MP -MF ".deps/gnu.Tpo" -c -o gnu.o `test -f 'weapon/gnu.cpp' || echo './'`weapon/gnu.cpp; \
-[5-ERROR] 	then mv -f ".deps/gnu.Tpo" ".deps/gnu.Po"; else rm -f ".deps/gnu.Tpo"; exit 1; fi
-[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT grenade.o -MD -MP -MF ".deps/grenade.Tpo" -c -o grenade.o `test -f 'weapon/grenade.cpp' || echo './'`weapon/grenade.cpp; \
-[5-ERROR] 	then mv -f ".deps/grenade.Tpo" ".deps/grenade.Po"; else rm -f ".deps/grenade.Tpo"; exit 1; fi
-[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT gun.o -MD -MP -MF ".deps/gun.Tpo" -c -o gun.o `test -f 'weapon/gun.cpp' || echo './'`weapon/gun.cpp; \
-[5-ERROR] 	then mv -f ".deps/gun.Tpo" ".deps/gun.Po"; else rm -f ".deps/gun.Tpo"; exit 1; fi
-[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT mine.o -MD -MP -MF ".deps/mine.Tpo" -c -o mine.o `test -f 'weapon/mine.cpp' || echo './'`weapon/mine.cpp; \
-[5-ERROR] 	then mv -f ".deps/mine.Tpo" ".deps/mine.Po"; else rm -f ".deps/mine.Tpo"; exit 1; fi
-[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT skip_turn.o -MD -MP -MF ".deps/skip_turn.Tpo" -c -o skip_turn.o `test -f 'weapon/skip_turn.cpp' || echo './'`weapon/skip_turn.cpp; \
-[5-ERROR] 	then mv -f ".deps/skip_turn.Tpo" ".deps/skip_turn.Po"; else rm -f ".deps/skip_turn.Tpo"; exit 1; fi
-[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT suicide.o -MD -MP -MF ".deps/suicide.Tpo" -c -o suicide.o `test -f 'weapon/suicide.cpp' || echo './'`weapon/suicide.cpp; \
-[5-ERROR] 	then mv -f ".deps/suicide.Tpo" ".deps/suicide.Po"; else rm -f ".deps/suicide.Tpo"; exit 1; fi
-[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT teleportation.o -MD -MP -MF ".deps/teleportation.Tpo" -c -o teleportation.o `test -f 'weapon/teleportation.cpp' || echo './'`weapon/teleportation.cpp; \
-[5-ERROR] 	then mv -f ".deps/teleportation.Tpo" ".deps/teleportation.Po"; else rm -f ".deps/teleportation.Tpo"; exit 1; fi
-[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT holly_grenade.o -MD -MP -MF ".deps/holly_grenade.Tpo" -c -o holly_grenade.o `test -f 'weapon/holly_grenade.cpp' || echo './'`weapon/holly_grenade.cpp; \
-[5-ERROR] 	then mv -f ".deps/holly_grenade.Tpo" ".deps/holly_grenade.Po"; else rm -f ".deps/holly_grenade.Tpo"; exit 1; fi
-[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT airhammer.o -MD -MP -MF ".deps/airhammer.Tpo" -c -o airhammer.o `test -f 'weapon/airhammer.cpp' || echo './'`weapon/airhammer.cpp; \
-[5-ERROR] 	then mv -f ".deps/airhammer.Tpo" ".deps/airhammer.Po"; else rm -f ".deps/airhammer.Tpo"; exit 1; fi
-[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT uzi.o -MD -MP -MF ".deps/uzi.Tpo" -c -o uzi.o `test -f 'weapon/uzi.cpp' || echo './'`weapon/uzi.cpp; \
-[5-ERROR] 	then mv -f ".deps/uzi.Tpo" ".deps/uzi.Po"; else rm -f ".deps/uzi.Tpo"; exit 1; fi
-[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT jetpack.o -MD -MP -MF ".deps/jetpack.Tpo" -c -o jetpack.o `test -f 'weapon/jetpack.cpp' || echo './'`weapon/jetpack.cpp; \
-[5-ERROR] 	then mv -f ".deps/jetpack.Tpo" ".deps/jetpack.Po"; else rm -f ".deps/jetpack.Tpo"; exit 1; fi
-[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT lowgrav.o -MD -MP -MF ".deps/lowgrav.Tpo" -c -o lowgrav.o `test -f 'weapon/lowgrav.cpp' || echo './'`weapon/lowgrav.cpp; \
-[5-ERROR] 	then mv -f ".deps/lowgrav.Tpo" ".deps/lowgrav.Po"; else rm -f ".deps/lowgrav.Tpo"; exit 1; fi
-[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT ninja_rope.o -MD -MP -MF ".deps/ninja_rope.Tpo" -c -o ninja_rope.o `test -f 'weapon/ninja_rope.cpp' || echo './'`weapon/ninja_rope.cpp; \
-[5-ERROR] 	then mv -f ".deps/ninja_rope.Tpo" ".deps/ninja_rope.Po"; else rm -f ".deps/ninja_rope.Tpo"; exit 1; fi
-[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT parachute.o -MD -MP -MF ".deps/parachute.Tpo" -c -o parachute.o `test -f 'weapon/parachute.cpp' || echo './'`weapon/parachute.cpp; \
-[5-ERROR] 	then mv -f ".deps/parachute.Tpo" ".deps/parachute.Po"; else rm -f ".deps/parachute.Tpo"; exit 1; fi
-[5-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT supertux.o -MD -MP -MF ".deps/supertux.Tpo" -c -o supertux.o `test -f 'weapon/supertux.cpp' || echo './'`weapon/supertux.cpp; \
-[5-ERROR] 	then mv -f ".deps/supertux.Tpo" ".deps/supertux.Po"; else rm -f ".deps/supertux.Tpo"; exit 1; fi
-[5-ERROR] g++-40 -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include     -o wormux  constant.o global.o action.o action_handler.o main.o config.o game_mode.o game.o game_loop.o fps.o video.o text.o effects.o button.o button_text.o check_box.o label.o list_box.o spin_button.o box.o widget.o null_widget.o string_tools.o xml_document.o i18n.o error.o file_tools.o math_tools.o resource_manager.o stats.o random.o debug.o jukebox.o font.o sprite.o weapon_menu.o main_menu.o menu.o infos_menu.o options_menu.o game_menu.o time.o progress_bar.o question.o interface.o cursor.o game_msg.o mouse.o keyboard.o physical_obj.o physics.o bonus_box.o objects_list.o particle.o map.o maps_list.o sky.o tile.o water.o wind.o camera.o ground.o character.o move.o skin.o team.o team_energy.o teams_list.o weapon.o weapon_cfg.o weapons_list.o weapon_tools.o crosshair.o air_attack.o auto_bazooka.o baseball.o bazooka.o cluster_bomb.o dynamite.o gnu.o grenade.o gun.o mine.o skip_turn.o suicide.o teleportation.o holly_grenade.o airhammer.o uzi.o jetpack.o lowgrav.o ninja_rope.o parachute.o supertux.o  -lSDL_gfx -lSDL_ttf -lSDL_mixer -lSDL_image  -L/usr/lib -Wl,-rpath,/usr/lib -lSDL -lpthread -lSDL_image -lSDL_mixer -lSDL_ttf -lSDL_gfx -L/opt/gnome2/lib -lxml++-2.6 -lxml2 -lz -lm -lglibmm-2.4 -lgobject-2.0 -lsigc-2.0 -lglib-2.0  
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/../../../../i386-unknown-linux-gnu/bin/ld: warning: libgmodule-2.0.so.0, needed by /opt/gnome2/lib/libglibmm-2.4.so, not found (try using -rpath or -rpath-link)
-[5-ERROR] /opt/gnome2/lib/libglibmm-2.4.so: undefined reference to `g_module_open'
-[5-ERROR] /opt/gnome2/lib/libglibmm-2.4.so: undefined reference to `g_module_error'
-[5-ERROR] /opt/gnome2/lib/libglibmm-2.4.so: undefined reference to `g_module_close'
-[5-ERROR] /opt/gnome2/lib/libglibmm-2.4.so: undefined reference to `g_module_make_resident'
-[5-ERROR] /opt/gnome2/lib/libglibmm-2.4.so: undefined reference to `g_module_symbol'
-[5-ERROR] /opt/gnome2/lib/libglibmm-2.4.so: undefined reference to `g_module_build_path'
-[5-ERROR] /opt/gnome2/lib/libglibmm-2.4.so: undefined reference to `g_module_supported'
-[5-ERROR] /opt/gnome2/lib/libglibmm-2.4.so: undefined reference to `g_module_name'
-[5-ERROR] collect2: ld returned 1 exit status
-[5-ERROR] make[3]: *** [wormux] Error 1
-[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.wormux.1169121873.7711.2270576875/wormux-0.7beta3/src'
+[5-ERROR] config.status: creating Makefile
+[5-ERROR] config.status: creating data/Makefile
+[5-ERROR] config.status: creating src/Makefile
+[5-ERROR] config.status: creating po/Makefile
+[5-ERROR] config.status: creating src/config.h
+[5-ERROR] config.status: executing default-1 commands
+[5-ERROR] config.status: executing depfiles commands
+[5-ERROR] config.status: executing default-2 commands
+[5-ERROR] 
+[5-ERROR] 
+[5-ERROR] Configuration complete
+[5-ERROR] 
+[5-ERROR] * Game data will be installed into PREFIX/games/wormux
+[5-ERROR] * Game locale will be installed into PREFIX/locale
+[5-ERROR] 
+[5-ERROR] Execute make to compile then execute make install to install...
+[5-ERROR] 
+[5-ERROR] 
+[5-ERROR] Making all in data
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.wormux.1181952442.16956.1627887995/wormux-0.7beta3/data'
+[5-ERROR] make[1]: Nothing to be done for `all'.
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.wormux.1181952442.16956.1627887995/wormux-0.7beta3/data'
+[5-ERROR] Making all in src
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.wormux.1181952442.16956.1627887995/wormux-0.7beta3/src'
+[5-ERROR] make  all-recursive
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.wormux.1181952442.16956.1627887995/wormux-0.7beta3/src'
+[5-ERROR] Making all in .
+[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.wormux.1181952442.16956.1627887995/wormux-0.7beta3/src'
+[5-ERROR] if g++-42 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT constant.o -MD -MP -MF ".deps/constant.Tpo" -c -o constant.o `test -f 'include/constant.cpp' || echo './'`include/constant.cpp; \
+[5-ERROR] 	then mv -f ".deps/constant.Tpo" ".deps/constant.Po"; else rm -f ".deps/constant.Tpo"; exit 1; fi
+[5-ERROR] if g++-42 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT global.o -MD -MP -MF ".deps/global.Tpo" -c -o global.o `test -f 'include/global.cpp' || echo './'`include/global.cpp; \
+[5-ERROR] 	then mv -f ".deps/global.Tpo" ".deps/global.Po"; else rm -f ".deps/global.Tpo"; exit 1; fi
+[5-ERROR] if g++-42 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT action.o -MD -MP -MF ".deps/action.Tpo" -c -o action.o `test -f 'include/action.cpp' || echo './'`include/action.cpp; \
+[5-ERROR] 	then mv -f ".deps/action.Tpo" ".deps/action.Po"; else rm -f ".deps/action.Tpo"; exit 1; fi
+[5-ERROR] if g++-42 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT action_handler.o -MD -MP -MF ".deps/action_handler.Tpo" -c -o action_handler.o `test -f 'include/action_handler.cpp' || echo './'`include/action_handler.cpp; \
+[5-ERROR] 	then mv -f ".deps/action_handler.Tpo" ".deps/action_handler.Po"; else rm -f ".deps/action_handler.Tpo"; exit 1; fi
+[5-ERROR] In file included from include/../game/../team/skin.h:36,
+[5-ERROR]                  from include/../game/../team/character.h:27,
+[5-ERROR]                  from include/../game/game_loop.h:26,
+[5-ERROR]                  from include/action_handler.cpp:42:
+[5-ERROR] include/../game/../team/../tool/resource_manager.h:47: error: extra qualification 'Profile::' on member 'Profile'
+[5-ERROR] include/../game/../team/../tool/resource_manager.h:48: error: extra qualification 'Profile::' on member 'Profile'
+[5-ERROR] make[3]: *** [action_handler.o] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.wormux.1181952442.16956.1627887995/wormux-0.7beta3/src'
 [5-ERROR] make[2]: *** [all-recursive] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.wormux.1169121873.7711.2270576875/wormux-0.7beta3/src'
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.wormux.1181952442.16956.1627887995/wormux-0.7beta3/src'
 [5-ERROR] make[1]: *** [all] Error 2
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.wormux.1169121873.7711.2270576875/wormux-0.7beta3/src'
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.wormux.1181952442.16956.1627887995/wormux-0.7beta3/src'
 [5-ERROR] make: *** [all-recursive] Error 1
 [5-ERROR] --- BUILD ERROR ---
 
-[9-ERROR] 	then mv -f ".deps/dynamite.Tpo" ".deps/dynamite.Po"; else rm -f ".deps/dynamite.Tpo"; exit 1; fi
-[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT gnu.o -MD -MP -MF ".deps/gnu.Tpo" -c -o gnu.o `test -f 'weapon/gnu.cpp' || echo './'`weapon/gnu.cpp; \
-[9-ERROR] 	then mv -f ".deps/gnu.Tpo" ".deps/gnu.Po"; else rm -f ".deps/gnu.Tpo"; exit 1; fi
-[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT grenade.o -MD -MP -MF ".deps/grenade.Tpo" -c -o grenade.o `test -f 'weapon/grenade.cpp' || echo './'`weapon/grenade.cpp; \
-[9-ERROR] 	then mv -f ".deps/grenade.Tpo" ".deps/grenade.Po"; else rm -f ".deps/grenade.Tpo"; exit 1; fi
-[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT gun.o -MD -MP -MF ".deps/gun.Tpo" -c -o gun.o `test -f 'weapon/gun.cpp' || echo './'`weapon/gun.cpp; \
-[9-ERROR] 	then mv -f ".deps/gun.Tpo" ".deps/gun.Po"; else rm -f ".deps/gun.Tpo"; exit 1; fi
-[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT mine.o -MD -MP -MF ".deps/mine.Tpo" -c -o mine.o `test -f 'weapon/mine.cpp' || echo './'`weapon/mine.cpp; \
-[9-ERROR] 	then mv -f ".deps/mine.Tpo" ".deps/mine.Po"; else rm -f ".deps/mine.Tpo"; exit 1; fi
-[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT skip_turn.o -MD -MP -MF ".deps/skip_turn.Tpo" -c -o skip_turn.o `test -f 'weapon/skip_turn.cpp' || echo './'`weapon/skip_turn.cpp; \
-[9-ERROR] 	then mv -f ".deps/skip_turn.Tpo" ".deps/skip_turn.Po"; else rm -f ".deps/skip_turn.Tpo"; exit 1; fi
-[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT suicide.o -MD -MP -MF ".deps/suicide.Tpo" -c -o suicide.o `test -f 'weapon/suicide.cpp' || echo './'`weapon/suicide.cpp; \
-[9-ERROR] 	then mv -f ".deps/suicide.Tpo" ".deps/suicide.Po"; else rm -f ".deps/suicide.Tpo"; exit 1; fi
-[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT teleportation.o -MD -MP -MF ".deps/teleportation.Tpo" -c -o teleportation.o `test -f 'weapon/teleportation.cpp' || echo './'`weapon/teleportation.cpp; \
-[9-ERROR] 	then mv -f ".deps/teleportation.Tpo" ".deps/teleportation.Po"; else rm -f ".deps/teleportation.Tpo"; exit 1; fi
-[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT holly_grenade.o -MD -MP -MF ".deps/holly_grenade.Tpo" -c -o holly_grenade.o `test -f 'weapon/holly_grenade.cpp' || echo './'`weapon/holly_grenade.cpp; \
-[9-ERROR] 	then mv -f ".deps/holly_grenade.Tpo" ".deps/holly_grenade.Po"; else rm -f ".deps/holly_grenade.Tpo"; exit 1; fi
-[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT airhammer.o -MD -MP -MF ".deps/airhammer.Tpo" -c -o airhammer.o `test -f 'weapon/airhammer.cpp' || echo './'`weapon/airhammer.cpp; \
-[9-ERROR] 	then mv -f ".deps/airhammer.Tpo" ".deps/airhammer.Po"; else rm -f ".deps/airhammer.Tpo"; exit 1; fi
-[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT uzi.o -MD -MP -MF ".deps/uzi.Tpo" -c -o uzi.o `test -f 'weapon/uzi.cpp' || echo './'`weapon/uzi.cpp; \
-[9-ERROR] 	then mv -f ".deps/uzi.Tpo" ".deps/uzi.Po"; else rm -f ".deps/uzi.Tpo"; exit 1; fi
-[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT jetpack.o -MD -MP -MF ".deps/jetpack.Tpo" -c -o jetpack.o `test -f 'weapon/jetpack.cpp' || echo './'`weapon/jetpack.cpp; \
-[9-ERROR] 	then mv -f ".deps/jetpack.Tpo" ".deps/jetpack.Po"; else rm -f ".deps/jetpack.Tpo"; exit 1; fi
-[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT lowgrav.o -MD -MP -MF ".deps/lowgrav.Tpo" -c -o lowgrav.o `test -f 'weapon/lowgrav.cpp' || echo './'`weapon/lowgrav.cpp; \
-[9-ERROR] 	then mv -f ".deps/lowgrav.Tpo" ".deps/lowgrav.Po"; else rm -f ".deps/lowgrav.Tpo"; exit 1; fi
-[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT ninja_rope.o -MD -MP -MF ".deps/ninja_rope.Tpo" -c -o ninja_rope.o `test -f 'weapon/ninja_rope.cpp' || echo './'`weapon/ninja_rope.cpp; \
-[9-ERROR] 	then mv -f ".deps/ninja_rope.Tpo" ".deps/ninja_rope.Po"; else rm -f ".deps/ninja_rope.Tpo"; exit 1; fi
-[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT parachute.o -MD -MP -MF ".deps/parachute.Tpo" -c -o parachute.o `test -f 'weapon/parachute.cpp' || echo './'`weapon/parachute.cpp; \
-[9-ERROR] 	then mv -f ".deps/parachute.Tpo" ".deps/parachute.Po"; else rm -f ".deps/parachute.Tpo"; exit 1; fi
-[9-ERROR] if g++-40 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT supertux.o -MD -MP -MF ".deps/supertux.Tpo" -c -o supertux.o `test -f 'weapon/supertux.cpp' || echo './'`weapon/supertux.cpp; \
-[9-ERROR] 	then mv -f ".deps/supertux.Tpo" ".deps/supertux.Po"; else rm -f ".deps/supertux.Tpo"; exit 1; fi
-[9-ERROR] g++-40 -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include     -o wormux  constant.o global.o action.o action_handler.o main.o config.o game_mode.o game.o game_loop.o fps.o video.o text.o effects.o button.o button_text.o check_box.o label.o list_box.o spin_button.o box.o widget.o null_widget.o string_tools.o xml_document.o i18n.o error.o file_tools.o math_tools.o resource_manager.o stats.o random.o debug.o jukebox.o font.o sprite.o weapon_menu.o main_menu.o menu.o infos_menu.o options_menu.o game_menu.o time.o progress_bar.o question.o interface.o cursor.o game_msg.o mouse.o keyboard.o physical_obj.o physics.o bonus_box.o objects_list.o particle.o map.o maps_list.o sky.o tile.o water.o wind.o camera.o ground.o character.o move.o skin.o team.o team_energy.o teams_list.o weapon.o weapon_cfg.o weapons_list.o weapon_tools.o crosshair.o air_attack.o auto_bazooka.o baseball.o bazooka.o cluster_bomb.o dynamite.o gnu.o grenade.o gun.o mine.o skip_turn.o suicide.o teleportation.o holly_grenade.o airhammer.o uzi.o jetpack.o lowgrav.o ninja_rope.o parachute.o supertux.o  -lSDL_gfx -lSDL_ttf -lSDL_mixer -lSDL_image  -L/usr/lib -Wl,-rpath,/usr/lib -lSDL -lpthread -lSDL_image -lSDL_mixer -lSDL_ttf -lSDL_gfx -L/opt/gnome2/lib -lxml++-2.6 -lxml2 -lz -lm -lglibmm-2.4 -lgobject-2.0 -lsigc-2.0 -lglib-2.0  
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/../../../../i386-unknown-linux-gnu/bin/ld: warning: libgmodule-2.0.so.0, needed by /opt/gnome2/lib/libglibmm-2.4.so, not found (try using -rpath or -rpath-link)
-[9-ERROR] /opt/gnome2/lib/libglibmm-2.4.so: undefined reference to `g_module_open'
-[9-ERROR] /opt/gnome2/lib/libglibmm-2.4.so: undefined reference to `g_module_error'
-[9-ERROR] /opt/gnome2/lib/libglibmm-2.4.so: undefined reference to `g_module_close'
-[9-ERROR] /opt/gnome2/lib/libglibmm-2.4.so: undefined reference to `g_module_make_resident'
-[9-ERROR] /opt/gnome2/lib/libglibmm-2.4.so: undefined reference to `g_module_symbol'
-[9-ERROR] /opt/gnome2/lib/libglibmm-2.4.so: undefined reference to `g_module_build_path'
-[9-ERROR] /opt/gnome2/lib/libglibmm-2.4.so: undefined reference to `g_module_supported'
-[9-ERROR] /opt/gnome2/lib/libglibmm-2.4.so: undefined reference to `g_module_name'
-[9-ERROR] collect2: ld returned 1 exit status
-[9-ERROR] make[3]: *** [wormux] Error 1
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.wormux.1169151376.22916.3186828470/wormux-0.7beta3/src'
+[9-ERROR] config.status: creating Makefile
+[9-ERROR] config.status: creating data/Makefile
+[9-ERROR] config.status: creating src/Makefile
+[9-ERROR] config.status: creating po/Makefile
+[9-ERROR] config.status: creating src/config.h
+[9-ERROR] config.status: executing default-1 commands
+[9-ERROR] config.status: executing depfiles commands
+[9-ERROR] config.status: executing default-2 commands
+[9-ERROR] 
+[9-ERROR] 
+[9-ERROR] Configuration complete
+[9-ERROR] 
+[9-ERROR] * Game data will be installed into PREFIX/games/wormux
+[9-ERROR] * Game locale will be installed into PREFIX/locale
+[9-ERROR] 
+[9-ERROR] Execute make to compile then execute make install to install...
+[9-ERROR] 
+[9-ERROR] 
+[9-ERROR] Making all in data
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.wormux.1181974194.14489.4149625545/wormux-0.7beta3/data'
+[9-ERROR] make[1]: Nothing to be done for `all'.
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.wormux.1181974194.14489.4149625545/wormux-0.7beta3/data'
+[9-ERROR] Making all in src
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.wormux.1181974194.14489.4149625545/wormux-0.7beta3/src'
+[9-ERROR] make  all-recursive
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.wormux.1181974194.14489.4149625545/wormux-0.7beta3/src'
+[9-ERROR] Making all in .
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.wormux.1181974194.14489.4149625545/wormux-0.7beta3/src'
+[9-ERROR] if g++-42 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT constant.o -MD -MP -MF ".deps/constant.Tpo" -c -o constant.o `test -f 'include/constant.cpp' || echo './'`include/constant.cpp; \
+[9-ERROR] 	then mv -f ".deps/constant.Tpo" ".deps/constant.Po"; else rm -f ".deps/constant.Tpo"; exit 1; fi
+[9-ERROR] if g++-42 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT global.o -MD -MP -MF ".deps/global.Tpo" -c -o global.o `test -f 'include/global.cpp' || echo './'`include/global.cpp; \
+[9-ERROR] 	then mv -f ".deps/global.Tpo" ".deps/global.Po"; else rm -f ".deps/global.Tpo"; exit 1; fi
+[9-ERROR] if g++-42 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT action.o -MD -MP -MF ".deps/action.Tpo" -c -o action.o `test -f 'include/action.cpp' || echo './'`include/action.cpp; \
+[9-ERROR] 	then mv -f ".deps/action.Tpo" ".deps/action.Po"; else rm -f ".deps/action.Tpo"; exit 1; fi
+[9-ERROR] if g++-42 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DINSTALL_DATADIR=\"/usr/share/games/wormux\" -DINSTALL_LOCALEDIR=\"/usr/share/locale\" -g -O2 -Wall -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/libxml2 -I/usr/include/sigc++-2.0 -I/usr/lib/sigc++-2.0/include -I/opt/gnome2/include/libxml++-2.6 -I/opt/gnome2/include/glibmm-2.4 -I/opt/gnome2/lib/glibmm-2.4/include -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include   -MT action_handler.o -MD -MP -MF ".deps/action_handler.Tpo" -c -o action_handler.o `test -f 'include/action_handler.cpp' || echo './'`include/action_handler.cpp; \
+[9-ERROR] 	then mv -f ".deps/action_handler.Tpo" ".deps/action_handler.Po"; else rm -f ".deps/action_handler.Tpo"; exit 1; fi
+[9-ERROR] In file included from include/../game/../team/skin.h:36,
+[9-ERROR]                  from include/../game/../team/character.h:27,
+[9-ERROR]                  from include/../game/game_loop.h:26,
+[9-ERROR]                  from include/action_handler.cpp:42:
+[9-ERROR] include/../game/../team/../tool/resource_manager.h:47: error: extra qualification 'Profile::' on member 'Profile'
+[9-ERROR] include/../game/../team/../tool/resource_manager.h:48: error: extra qualification 'Profile::' on member 'Profile'
+[9-ERROR] make[3]: *** [action_handler.o] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.wormux.1181974194.14489.4149625545/wormux-0.7beta3/src'
 [9-ERROR] make[2]: *** [all-recursive] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.wormux.1169151376.22916.3186828470/wormux-0.7beta3/src'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.wormux.1181974194.14489.4149625545/wormux-0.7beta3/src'
 [9-ERROR] make[1]: *** [all] Error 2
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.wormux.1169151376.22916.3186828470/wormux-0.7beta3/src'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.wormux.1181974194.14489.4149625545/wormux-0.7beta3/src'
 [9-ERROR] make: *** [all-recursive] Error 1
 [9-ERROR] --- BUILD ERROR ---
 

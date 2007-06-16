@@ -20,33 +20,29 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168544107 Thu Jan 11 20:35:07 2007 (5) ERROR
-[TIMESTAMP] 1168738624 Sun Jan 14 02:37:04 2007 (9) ERROR
-[TIMESTAMP] 1168938670 Tue Jan 16 10:11:10 2007 (5) ERROR
-[TIMESTAMP] 1168958785 Tue Jan 16 15:46:25 2007 (9) ERROR
-[TIMESTAMP] 1169082044 Thu Jan 18 02:00:44 2007 (5) ERROR
-[TIMESTAMP] 1169129079 Thu Jan 18 15:04:39 2007 (9) ERROR
+[TIMESTAMP] 1180928003 Mon Jun  4 05:33:23 2007 (5) ERROR
+[TIMESTAMP] 1181311710 Fri Jun  8 16:08:30 2007 (9) ERROR
+[TIMESTAMP] 1181801391 Thu Jun 14 08:09:51 2007 (5) ERROR
+[TIMESTAMP] 1181854918 Thu Jun 14 23:01:58 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-xfig.err 9-xfig.err
 
-[BUILDTIME] 10084 (5) ERROR
-[BUILDTIME] 11465 (9) ERROR
-[BUILDTIME] 11589 (5) ERROR
-[BUILDTIME] 11593 (9) ERROR
-[BUILDTIME] 11641 (5) ERROR
-[BUILDTIME] 11552 (9) ERROR
-[SIZE] 6.38 MB, 1531 files
+[BUILDTIME] 12355 (5) ERROR
+[BUILDTIME] 14049 (9) ERROR
+[BUILDTIME] 14166 (5) ERROR
+[BUILDTIME] 14082 (9) ERROR
+[SIZE] 6.37 MB, 1529 files
 
 [DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
-[DEP] coreutils cvm findutils gawk gcc40 gcc40:dev gccmakedep glibc23
-[DEP] glibc23:dev grep imake inputproto:dev kterm libice libice:dev libjpeg
-[DEP] libjpeg:dev libpng libpng:dev libsm libsm:dev libx11 libx11:dev
-[DEP] libxau libxaw libxaw:dev libxdmcp libxext libxi libxmu libxmu:dev
-[DEP] libxp libxpm libxpm:dev libxt libxt:dev linux-libc-headers:dev make
-[DEP] mktemp patch rrdtool sed sysfiles tar xaw3d:dev xdu xorg-cf-files
+[DEP] coreutils cvm findutils gawk gcc42 gcc42:dev gccmakedep glibc26
+[DEP] glibc26:dev grep imake inputproto:dev kterm libice libice:dev libjpeg
+[DEP] libjpeg:dev libpng:dev libsm libsm:dev libx11 libx11:dev libxau
+[DEP] libxaw libxaw:dev libxcb libxdmcp libxext libxi libxmu libxmu:dev
+[DEP] libxp libxpm libxpm:dev libxt libxt:dev linux26-headers:dev ltrace
+[DEP] make mktemp patch sed sysfiles tar xaw3d:dev xdu xmame xorg-cf-files
 [DEP] xorg-docs xorg-server xproto:dev xterm zlib zlib:dev
 
 [PROVIDES] xfig
@@ -79,7 +75,7 @@
 [5-ERROR] Creating file list and doing final adaptions ... 
 [5-ERROR] Processing /lib corrections ...
 [5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 1918 files for this package.
+[5-ERROR] Found 1916 files for this package.
 [5-ERROR] Applying package split: 40 xfig:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
 [5-ERROR] Applying package split: 42 xfig:dev /pkgconfig/
 [5-ERROR] Applying package split: 60 xfig:doc /share/doc/
@@ -130,7 +126,7 @@
 [9-ERROR] Creating file list and doing final adaptions ... 
 [9-ERROR] Processing /lib corrections ...
 [9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 1918 files for this package.
+[9-ERROR] Found 1916 files for this package.
 [9-ERROR] Applying package split: 40 xfig:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
 [9-ERROR] Applying package split: 42 xfig:dev /pkgconfig/
 [9-ERROR] Applying package split: 60 xfig:doc /share/doc/

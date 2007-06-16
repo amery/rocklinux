@@ -20,125 +20,134 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168630681 Fri Jan 12 20:38:01 2007 (5) ERROR
-[TIMESTAMP] 1168835128 Mon Jan 15 05:25:28 2007 (9) ERROR
-[TIMESTAMP] 1168947856 Tue Jan 16 12:44:16 2007 (5) ERROR
-[TIMESTAMP] 1168974867 Tue Jan 16 20:14:27 2007 (9) ERROR
-[TIMESTAMP] 1169091269 Thu Jan 18 04:34:29 2007 (5) ERROR
-[TIMESTAMP] 1169145157 Thu Jan 18 19:32:37 2007 (9) ERROR
+[TIMESTAMP] 1181056345 Tue Jun  5 17:12:25 2007 (5) ERROR
+[TIMESTAMP] 1181523193 Mon Jun 11 02:53:13 2007 (9) ERROR
+[TIMESTAMP] 1181821898 Thu Jun 14 13:51:38 2007 (5) ERROR
+[TIMESTAMP] 1181891464 Fri Jun 15 09:11:04 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-xpdf.err 9-xpdf.err
 
-[BUILDTIME] 6756 (5) ERROR
-[BUILDTIME] 6881 (9) ERROR
-[BUILDTIME] 6898 (5) ERROR
-[BUILDTIME] 6898 (9) ERROR
-[BUILDTIME] 6905 (5) ERROR
-[BUILDTIME] 6900 (9) ERROR
+[BUILDTIME] 15011 (5) ERROR
+[BUILDTIME] 14782 (9) ERROR
+[BUILDTIME] 14881 (5) ERROR
+[BUILDTIME] 14879 (9) ERROR
+[SIZE] 10.27 MB, 35 files
 
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm diffutils findutils freetype freetype:dev gawk
+[DEP] gcc42 gcc42:dev glibc26 glibc26:dev grep imake libice libice:dev
+[DEP] libsm libsm:dev libx11 libx11:dev libxau libxau:dev libxaw
+[DEP] libxaw:dev libxcb libxcb:dev libxdmcp libxdmcp:dev libxext
+[DEP] libxext:dev libxmu libxmu:dev libxp libxpm libxpm:dev libxt
+[DEP] libxt:dev linux26-headers:dev ltrace make mktemp net-tools poppler
+[DEP] printproto:dev sed sysfiles tar tetex twoftpd ucspi-unix util-linux
+[DEP] xmame xorg-cf-files xproto:dev zlib
 
-[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.xpdf.1169091198.27522.905555977/xpdf-3.01/goo'
-[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I. -c GHash.cc
-[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I. -c GList.cc
-[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I. -c GString.cc
-[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I. -c gmempp.cc
-[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I. -c gfile.cc
-[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I. -c FixedPoint.cc
-[5-ERROR] gcc-40 -I/usr/include/freetype2 -DHAVE_CONFIG_H -I.. -I.  -I/usr/include/freetype2  -c -o gmem.o gmem.c
-[5-ERROR] gcc-40 -I/usr/include/freetype2 -DHAVE_CONFIG_H -I.. -I.  -I/usr/include/freetype2  -c -o parseargs.o parseargs.c
-[5-ERROR] rm -f libGoo.a
-[5-ERROR] ar rc libGoo.a GHash.o GList.o GString.o gmempp.o gfile.o FixedPoint.o gmem.o parseargs.o
-[5-ERROR] ranlib libGoo.a
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.xpdf.1169091198.27522.905555977/xpdf-3.01/goo'
-[5-ERROR] cd fofi; make
-[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.xpdf.1169091198.27522.905555977/xpdf-3.01/fofi'
-[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I. -c FoFiBase.cc
-[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I. -c FoFiEncodings.cc
-[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I. -c FoFiTrueType.cc
-[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I. -c FoFiType1.cc
-[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I. -c FoFiType1C.cc
-[5-ERROR] rm -f libfofi.a
-[5-ERROR] ar rc libfofi.a FoFiBase.o FoFiEncodings.o FoFiTrueType.o FoFiType1.o FoFiType1C.o
-[5-ERROR] ranlib libfofi.a
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.xpdf.1169091198.27522.905555977/xpdf-3.01/fofi'
-[5-ERROR] cd splash; make
-[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.xpdf.1169091198.27522.905555977/xpdf-3.01/splash'
-[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I./../fofi -I.  -I/usr/include/freetype2 -c Splash.cc
-[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I./../fofi -I.  -I/usr/include/freetype2 -c SplashBitmap.cc
-[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I./../fofi -I.  -I/usr/include/freetype2 -c SplashClip.cc
-[5-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I./../fofi -I.  -I/usr/include/freetype2 -c SplashFTFont.cc
-[5-ERROR] SplashFTFont.cc:17:10: error: #include expects "FILENAME" or <FILENAME>
-[5-ERROR] SplashFTFont.cc: In constructor 'SplashFTFont::SplashFTFont(SplashFTFontFile*, SplashCoord*)':
-[5-ERROR] SplashFTFont.cc:46: error: 'FT_New_Size' was not declared in this scope
-[5-ERROR] SplashFTFont.cc: In member function 'virtual SplashPath* SplashFTFont::getGlyphPath(int)':
-[5-ERROR] SplashFTFont.cc:219: error: invalid conversion from 'int (*)(FT_Vector*, void*)' to 'int (*)(const FT_Vector*, void*)'
-[5-ERROR] SplashFTFont.cc:219: error: invalid conversion from 'int (*)(FT_Vector*, void*)' to 'int (*)(const FT_Vector*, void*)'
-[5-ERROR] SplashFTFont.cc:219: error: invalid conversion from 'int (*)(FT_Vector*, FT_Vector*, void*)' to 'int (*)(const FT_Vector*, const FT_Vector*, void*)'
-[5-ERROR] SplashFTFont.cc:219: error: invalid conversion from 'int (*)(FT_Vector*, FT_Vector*, FT_Vector*, void*)' to 'int (*)(const FT_Vector*, const FT_Vector*, const FT_Vector*, void*)'
-[5-ERROR] SplashFTFont.cc:224: error: 'FT_Glyph' was not declared in this scope
-[5-ERROR] SplashFTFont.cc:224: error: expected `;' before 'glyph'
-[5-ERROR] SplashFTFont.cc:238: error: 'glyph' was not declared in this scope
-[5-ERROR] SplashFTFont.cc:238: error: 'FT_Get_Glyph' was not declared in this scope
-[5-ERROR] SplashFTFont.cc:243: error: 'FT_OutlineGlyph' was not declared in this scope
-[5-ERROR] SplashFTFont.cc:243: error: expected `)' before 'glyph'
-[5-ERROR] SplashFTFont.cc:248: error: 'glyph' was not declared in this scope
-[5-ERROR] SplashFTFont.cc:248: error: 'FT_Done_Glyph' was not declared in this scope
-[5-ERROR] make[1]: *** [SplashFTFont.o] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.xpdf.1169091198.27522.905555977/xpdf-3.01/splash'
-[5-ERROR] make: *** [all] Error 2
+[PROVIDES] libt1.a libt1.so libt1x.a libt1x.so pdffonts pdfimages pdfinfo
+[PROVIDES] pdftoppm pdftops pdftotext type1afm xglyph xpdf
+
+[5-ERROR] /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c xpdf/pdfimages /usr/bin/pdfimages
+[5-ERROR] mkdir -p /usr/share/man/man1
+[5-ERROR] /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./doc/xpdf.1 /usr/share/man/man1/xpdf.1
+[5-ERROR] /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./doc/pdftops.1 /usr/share/man/man1/pdftops.1
+[5-ERROR] /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./doc/pdftotext.1 /usr/share/man/man1/pdftotext.1
+[5-ERROR] /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./doc/pdfinfo.1 /usr/share/man/man1/pdfinfo.1
+[5-ERROR] /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./doc/pdffonts.1 /usr/share/man/man1/pdffonts.1
+[5-ERROR] /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./doc/pdftoppm.1 /usr/share/man/man1/pdftoppm.1
+[5-ERROR] /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./doc/pdfimages.1 /usr/share/man/man1/pdfimages.1
+[5-ERROR] mkdir -p /usr/share/man/man5
+[5-ERROR] /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./doc/xpdfrc.5 /usr/share/man/man5/xpdfrc.5
+[5-ERROR] mkdir -p /etc
+[5-ERROR] # not overwriting the existing /etc/xpdfrc
+[5-ERROR] Trying to copy the default documentation ...
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing /lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Found 133 files for this package.
+[5-ERROR] Applying package split: 40 xpdf:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[5-ERROR] Applying package split: 42 xpdf:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 xpdf:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <xpdf> Creating flist file ...
+[5-ERROR] <xpdf> Creating package dependencies file ...
+[5-ERROR] <xpdf> Creating package description ...
+[5-ERROR] <xpdf> Creating md5sum and cksum files ...
+[5-ERROR] <xpdf:dev> Creating flist file ...
+[5-ERROR] <xpdf:dev> Creating package dependencies file ...
+[5-ERROR] <xpdf:dev> Creating package description ...
+[5-ERROR] <xpdf:dev> Creating md5sum and cksum files ...
+[5-ERROR] <xpdf:doc> Creating flist file ...
+[5-ERROR] <xpdf:doc> Creating package dependencies file ...
+[5-ERROR] <xpdf:doc> Creating package description ...
+[5-ERROR] <xpdf:doc> Creating md5sum and cksum files ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Found shared files with other packages:
+[5-ERROR] usr/bin/pdffonts: poppler xpdf
+[5-ERROR] usr/bin/pdfimages: poppler xpdf
+[5-ERROR] usr/bin/pdfinfo: poppler xpdf
+[5-ERROR] usr/bin/pdftoppm: poppler xpdf
+[5-ERROR] usr/bin/pdftops: poppler xpdf
+[5-ERROR] usr/bin/pdftotext: poppler xpdf
+[5-ERROR] usr/share/man/man1/pdffonts.1: poppler xpdf
+[5-ERROR] usr/share/man/man1/pdfimages.1: poppler xpdf
+[5-ERROR] usr/share/man/man1/pdfinfo.1: poppler xpdf
+[5-ERROR] usr/share/man/man1/pdftoppm.1: poppler xpdf
+[5-ERROR] usr/share/man/man1/pdftops.1: poppler xpdf
+[5-ERROR] usr/share/man/man1/pdftotext.1: poppler xpdf
+[5-ERROR] --- BUILD ERROR ---
 [5-ERROR] --- BUILD ERROR ---
 
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.xpdf.1169145075.19795.729073658/xpdf-3.01/goo'
-[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I. -c GHash.cc
-[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I. -c GList.cc
-[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I. -c GString.cc
-[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I. -c gmempp.cc
-[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I. -c gfile.cc
-[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I. -c FixedPoint.cc
-[9-ERROR] gcc-40 -I/usr/include/freetype2 -DHAVE_CONFIG_H -I.. -I.  -I/usr/include/freetype2  -c -o gmem.o gmem.c
-[9-ERROR] gcc-40 -I/usr/include/freetype2 -DHAVE_CONFIG_H -I.. -I.  -I/usr/include/freetype2  -c -o parseargs.o parseargs.c
-[9-ERROR] rm -f libGoo.a
-[9-ERROR] ar rc libGoo.a GHash.o GList.o GString.o gmempp.o gfile.o FixedPoint.o gmem.o parseargs.o
-[9-ERROR] ranlib libGoo.a
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.xpdf.1169145075.19795.729073658/xpdf-3.01/goo'
-[9-ERROR] cd fofi; make
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.xpdf.1169145075.19795.729073658/xpdf-3.01/fofi'
-[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I. -c FoFiBase.cc
-[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I. -c FoFiEncodings.cc
-[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I. -c FoFiTrueType.cc
-[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I. -c FoFiType1.cc
-[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I. -c FoFiType1C.cc
-[9-ERROR] rm -f libfofi.a
-[9-ERROR] ar rc libfofi.a FoFiBase.o FoFiEncodings.o FoFiTrueType.o FoFiType1.o FoFiType1C.o
-[9-ERROR] ranlib libfofi.a
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.xpdf.1169145075.19795.729073658/xpdf-3.01/fofi'
-[9-ERROR] cd splash; make
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.xpdf.1169145075.19795.729073658/xpdf-3.01/splash'
-[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I./../fofi -I.  -I/usr/include/freetype2 -c Splash.cc
-[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I./../fofi -I.  -I/usr/include/freetype2 -c SplashBitmap.cc
-[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I./../fofi -I.  -I/usr/include/freetype2 -c SplashClip.cc
-[9-ERROR] g++-40 -g -O2 -DHAVE_CONFIG_H -I.. -I./../goo -I./../fofi -I.  -I/usr/include/freetype2 -c SplashFTFont.cc
-[9-ERROR] SplashFTFont.cc:17:10: error: #include expects "FILENAME" or <FILENAME>
-[9-ERROR] SplashFTFont.cc: In constructor 'SplashFTFont::SplashFTFont(SplashFTFontFile*, SplashCoord*)':
-[9-ERROR] SplashFTFont.cc:46: error: 'FT_New_Size' was not declared in this scope
-[9-ERROR] SplashFTFont.cc: In member function 'virtual SplashPath* SplashFTFont::getGlyphPath(int)':
-[9-ERROR] SplashFTFont.cc:219: error: invalid conversion from 'int (*)(FT_Vector*, void*)' to 'int (*)(const FT_Vector*, void*)'
-[9-ERROR] SplashFTFont.cc:219: error: invalid conversion from 'int (*)(FT_Vector*, void*)' to 'int (*)(const FT_Vector*, void*)'
-[9-ERROR] SplashFTFont.cc:219: error: invalid conversion from 'int (*)(FT_Vector*, FT_Vector*, void*)' to 'int (*)(const FT_Vector*, const FT_Vector*, void*)'
-[9-ERROR] SplashFTFont.cc:219: error: invalid conversion from 'int (*)(FT_Vector*, FT_Vector*, FT_Vector*, void*)' to 'int (*)(const FT_Vector*, const FT_Vector*, const FT_Vector*, void*)'
-[9-ERROR] SplashFTFont.cc:224: error: 'FT_Glyph' was not declared in this scope
-[9-ERROR] SplashFTFont.cc:224: error: expected `;' before 'glyph'
-[9-ERROR] SplashFTFont.cc:238: error: 'glyph' was not declared in this scope
-[9-ERROR] SplashFTFont.cc:238: error: 'FT_Get_Glyph' was not declared in this scope
-[9-ERROR] SplashFTFont.cc:243: error: 'FT_OutlineGlyph' was not declared in this scope
-[9-ERROR] SplashFTFont.cc:243: error: expected `)' before 'glyph'
-[9-ERROR] SplashFTFont.cc:248: error: 'glyph' was not declared in this scope
-[9-ERROR] SplashFTFont.cc:248: error: 'FT_Done_Glyph' was not declared in this scope
-[9-ERROR] make[1]: *** [SplashFTFont.o] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.xpdf.1169145075.19795.729073658/xpdf-3.01/splash'
-[9-ERROR] make: *** [all] Error 2
+[9-ERROR] /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c xpdf/pdfimages /usr/bin/pdfimages
+[9-ERROR] mkdir -p /usr/share/man/man1
+[9-ERROR] /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./doc/xpdf.1 /usr/share/man/man1/xpdf.1
+[9-ERROR] /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./doc/pdftops.1 /usr/share/man/man1/pdftops.1
+[9-ERROR] /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./doc/pdftotext.1 /usr/share/man/man1/pdftotext.1
+[9-ERROR] /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./doc/pdfinfo.1 /usr/share/man/man1/pdfinfo.1
+[9-ERROR] /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./doc/pdffonts.1 /usr/share/man/man1/pdffonts.1
+[9-ERROR] /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./doc/pdftoppm.1 /usr/share/man/man1/pdftoppm.1
+[9-ERROR] /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./doc/pdfimages.1 /usr/share/man/man1/pdfimages.1
+[9-ERROR] mkdir -p /usr/share/man/man5
+[9-ERROR] /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./doc/xpdfrc.5 /usr/share/man/man5/xpdfrc.5
+[9-ERROR] mkdir -p /etc
+[9-ERROR] # not overwriting the existing /etc/xpdfrc
+[9-ERROR] Trying to copy the default documentation ...
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing /lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 133 files for this package.
+[9-ERROR] Applying package split: 40 xpdf:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[9-ERROR] Applying package split: 42 xpdf:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 xpdf:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <xpdf> Creating flist file ...
+[9-ERROR] <xpdf> Creating package dependencies file ...
+[9-ERROR] <xpdf> Creating package description ...
+[9-ERROR] <xpdf> Creating md5sum and cksum files ...
+[9-ERROR] <xpdf:dev> Creating flist file ...
+[9-ERROR] <xpdf:dev> Creating package dependencies file ...
+[9-ERROR] <xpdf:dev> Creating package description ...
+[9-ERROR] <xpdf:dev> Creating md5sum and cksum files ...
+[9-ERROR] <xpdf:doc> Creating flist file ...
+[9-ERROR] <xpdf:doc> Creating package dependencies file ...
+[9-ERROR] <xpdf:doc> Creating package description ...
+[9-ERROR] <xpdf:doc> Creating md5sum and cksum files ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] usr/bin/pdffonts: poppler xpdf
+[9-ERROR] usr/bin/pdfimages: poppler xpdf
+[9-ERROR] usr/bin/pdfinfo: poppler xpdf
+[9-ERROR] usr/bin/pdftoppm: poppler xpdf
+[9-ERROR] usr/bin/pdftops: poppler xpdf
+[9-ERROR] usr/bin/pdftotext: poppler xpdf
+[9-ERROR] usr/share/man/man1/pdffonts.1: poppler xpdf
+[9-ERROR] usr/share/man/man1/pdfimages.1: poppler xpdf
+[9-ERROR] usr/share/man/man1/pdfinfo.1: poppler xpdf
+[9-ERROR] usr/share/man/man1/pdftoppm.1: poppler xpdf
+[9-ERROR] usr/share/man/man1/pdftops.1: poppler xpdf
+[9-ERROR] usr/share/man/man1/pdftotext.1: poppler xpdf
+[9-ERROR] --- BUILD ERROR ---
 [9-ERROR] --- BUILD ERROR ---
 

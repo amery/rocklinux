@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168706999 Sat Jan 13 17:49:59 2007 (5)
-[TIMESTAMP] 1168916855 Tue Jan 16 04:07:35 2007 (9)
+[TIMESTAMP] 1181242371 Thu Jun  7 20:52:51 2007 (5)
+[TIMESTAMP] 1181792952 Thu Jun 14 05:49:12 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-tsocks.log 9-tsocks.log
 
-[BUILDTIME] 1613 (5)
-[BUILDTIME] 1666 (9)
-[SIZE] 0.05 MB, 11 files
+[BUILDTIME] 2688 (5)
+[BUILDTIME] 2647 (9)
+[SIZE] 0.06 MB, 13 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
-[DEP] gcc40 gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev
-[DEP] make mktemp net-tools netpbm rrdtool sed sysfiles tar
+[DEP] gawk gcc42 gcc42:dev glibc26 glibc26:dev grep linux26-headers:dev
+[DEP] ltrace make mktemp net-tools sed sysfiles tar twoftpd ucspi-unix
+[DEP] xmame
 
-[PROVIDES] libtsocks.so
+[PROVIDES] libtsocks.so tsocks
 

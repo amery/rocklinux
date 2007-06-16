@@ -20,32 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168583684 Fri Jan 12 07:34:44 2007 (5)
-[TIMESTAMP] 1168784743 Sun Jan 14 15:25:43 2007 (9)
+[TIMESTAMP] 1180978501 Mon Jun  4 19:35:01 2007 (5) ERROR
+[TIMESTAMP] 1181436138 Sun Jun 10 02:42:18 2007 (9) ERROR
+[TIMESTAMP] 1181807220 Thu Jun 14 09:47:00 2007 (5) ERROR
+[TIMESTAMP] 1181865470 Fri Jun 15 01:57:50 2007 (9) ERROR
+[TIMESTAMP] 1181944150 Fri Jun 15 23:49:10 2007 (5) ERROR
+[TIMESTAMP] 1181965076 Sat Jun 16 05:37:56 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-gpac.log 9-gpac.log
+[LOGS] 5-gpac.err 9-gpac.err
 
-[BUILDTIME] 11329 (5)
-[BUILDTIME] 11913 (9)
-[SIZE] 3.55 MB, 37 files
+[BUILDTIME] 10784 (5) ERROR
+[BUILDTIME] 11293 (9) ERROR
+[BUILDTIME] 10986 (5) ERROR
+[BUILDTIME] 10767 (9) ERROR
+[BUILDTIME] 10855 (5) ERROR
+[BUILDTIME] 10672 (9) ERROR
 
-[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
-[DEP] coreutils cvm faad2 faad2:dev findutils freetype freetype:dev gawk
-[DEP] gcc40 gcc40:dev glibc23 glibc23:dev grep libice libjpeg libjpeg:dev
-[DEP] libpng libpng:dev libsdl libsdl:dev libsm libtheora libtheora:dev
-[DEP] libtiff libx11 libx11:dev libxau libxdmcp libxext libxinerama
-[DEP] libxml2 libxml2:dev libxt libxt:dev libxxf86vm linux-libc-headers:dev
-[DEP] mad mad:dev make mesalib mesalib:dev mktemp nas netpbm ogg-vorbis
-[DEP] ogg-vorbis:dev openssl openssl:dev patch rrdtool sed spidermonkey
-[DEP] sysfiles tar twoftpd ucspi-unix wxwidgets wxwidgets:dev xextproto:dev
-[DEP] xproto:dev xvid:dev zlib zlib:dev
 
-[PROVIDES] MP42Avi MP4Box MP4Client aac_in.so bifs_dec.so ctx_load.so
-[PROVIDES] dummy_in.so ft_font.so img_in.so isom_in.so libgpac-0.4.0.so
-[PROVIDES] libgpac.so mp3_in.so odf_dec.so ogg_xiph.so oss_audio.so
-[PROVIDES] raw_out.so render2d.so render3d.so rtp_in.so sdl_out.so
-[PROVIDES] soft_raster.so svg_loader.so timedtext.so x11_out.so xvid_dec.so
+[5-ERROR] main.c:812: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[5-ERROR] main.c:812: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[5-ERROR] main.c:812: warning: pointer targets in passing argument 1 of '__builtin_strcmp' differ in signedness
+[5-ERROR] main.c:812: warning: pointer targets in passing argument 2 of '__builtin_strcmp' differ in signedness
+[5-ERROR] main.c:812: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[5-ERROR] main.c:812: warning: pointer targets in passing argument 1 of '__builtin_strcmp' differ in signedness
+[5-ERROR] main.c:812: warning: pointer targets in passing argument 2 of '__builtin_strcmp' differ in signedness
+[5-ERROR] main.c:812: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[5-ERROR] main.c:812: warning: pointer targets in passing argument 1 of '__builtin_strcmp' differ in signedness
+[5-ERROR] main.c:812: warning: pointer targets in passing argument 2 of '__builtin_strcmp' differ in signedness
+[5-ERROR] main.c:812: warning: pointer targets in passing argument 1 of '__builtin_strcmp' differ in signedness
+[5-ERROR] main.c:812: warning: pointer targets in passing argument 2 of '__builtin_strcmp' differ in signedness
+[5-ERROR] main.c: In function 'generate_table':
+[5-ERROR] main.c:886: warning: too many arguments for format
+[5-ERROR] main.c:899: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[5-ERROR] main.c:899: warning: pointer targets in passing argument 1 of '__builtin_strcmp' differ in signedness
+[5-ERROR] main.c:899: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[5-ERROR] main.c:899: warning: pointer targets in passing argument 1 of '__builtin_strcmp' differ in signedness
+[5-ERROR] main.c:899: warning: pointer targets in passing argument 1 of '__builtin_strcmp' differ in signedness
+[5-ERROR] main.c:899: warning: pointer targets in passing argument 1 of '__builtin_strcmp' differ in signedness
+[5-ERROR] main.c: In function 'main':
+[5-ERROR] main.c:944: warning: pointer targets in passing argument 2 of 'xmlXPathRegisterNs' differ in signedness
+[5-ERROR] main.c:944: warning: pointer targets in passing argument 3 of 'xmlXPathRegisterNs' differ in signedness
+[5-ERROR] main.c:945: warning: pointer targets in passing argument 2 of 'xmlXPathRegisterNs' differ in signedness
+[5-ERROR] main.c:945: warning: pointer targets in passing argument 3 of 'xmlXPathRegisterNs' differ in signedness
+[5-ERROR] main.c:946: warning: pointer targets in passing argument 2 of 'xmlXPathRegisterNs' differ in signedness
+[5-ERROR] main.c:946: warning: pointer targets in passing argument 3 of 'xmlXPathRegisterNs' differ in signedness
+[5-ERROR] gcc-42 -Wl,--warn-common -g -o SVGGen main.o ../../../src/utils/list.o -L/usr/lib -lxml2 -lz -lm -lm
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.gpac.1181944034.25542.3784586592/gpac/applications/generators/SVG'
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.gpac.1181944034.25542.3784586592/gpac/applications/generators'
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.gpac.1181944034.25542.3784586592/gpac/applications/osmozilla'
+[5-ERROR] g++-42 -O3 -fno-strict-aliasing -Wall -I/ROCK/src.gpac.1181944034.25542.3784586592/gpac/include -I/ROCK/src.gpac.1181944034.25542.3784586592/gpac/extra_lib/include/gecko-sdk -I/ROCK/src.gpac.1181944034.25542.3784586592/gpac/extra_lib/include/gecko-sdk/plugin/include -I/ROCK/src.gpac.1181944034.25542.3784586592/gpac/extra_lib/include/gecko-sdk/nspr/include -I/ROCK/src.gpac.1181944034.25542.3784586592/gpac/extra_lib/include/gecko-sdk/java/include -I/ROCK/src.gpac.1181944034.25542.3784586592/gpac/extra_lib/include/gecko-sdk/xpcom/include  -DXP_UNIX -DMOZ_X11 -DNPBASIC_EXPORTS -DMOZILLA_STRICT_API -DXPCOM_GLUE -c -o osmozilla.o osmozilla.cpp 
+[5-ERROR] osmozilla.cpp: In function 'char* NPP_GetMIMEDescription()':
+[5-ERROR] osmozilla.cpp:96: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] osmozilla.cpp: In function 'NPError NS_PluginGetValue(NPPVariable, void*)':
+[5-ERROR] osmozilla.cpp:133: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] osmozilla.cpp:136: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] osmozilla.cpp: In member function 'virtual NPBool nsOsmozillaInstance::init(NPWindow*)':
+[5-ERROR] osmozilla.cpp:228: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] g++-42 -O3 -fno-strict-aliasing -Wall -I/ROCK/src.gpac.1181944034.25542.3784586592/gpac/include -I/ROCK/src.gpac.1181944034.25542.3784586592/gpac/extra_lib/include/gecko-sdk -I/ROCK/src.gpac.1181944034.25542.3784586592/gpac/extra_lib/include/gecko-sdk/plugin/include -I/ROCK/src.gpac.1181944034.25542.3784586592/gpac/extra_lib/include/gecko-sdk/nspr/include -I/ROCK/src.gpac.1181944034.25542.3784586592/gpac/extra_lib/include/gecko-sdk/java/include -I/ROCK/src.gpac.1181944034.25542.3784586592/gpac/extra_lib/include/gecko-sdk/xpcom/include  -DXP_UNIX -DMOZ_X11 -DNPBASIC_EXPORTS -DMOZILLA_STRICT_API -DXPCOM_GLUE -c -o npp_gate.o npp_gate.cpp 
+[5-ERROR] g++-42 -O3 -fno-strict-aliasing -Wall -I/ROCK/src.gpac.1181944034.25542.3784586592/gpac/include -I/ROCK/src.gpac.1181944034.25542.3784586592/gpac/extra_lib/include/gecko-sdk -I/ROCK/src.gpac.1181944034.25542.3784586592/gpac/extra_lib/include/gecko-sdk/plugin/include -I/ROCK/src.gpac.1181944034.25542.3784586592/gpac/extra_lib/include/gecko-sdk/nspr/include -I/ROCK/src.gpac.1181944034.25542.3784586592/gpac/extra_lib/include/gecko-sdk/java/include -I/ROCK/src.gpac.1181944034.25542.3784586592/gpac/extra_lib/include/gecko-sdk/xpcom/include  -DXP_UNIX -DMOZ_X11 -DNPBASIC_EXPORTS -DMOZILLA_STRICT_API -DXPCOM_GLUE -c -o np_entry.o np_entry.cpp 
+[5-ERROR] g++-42 -O3 -fno-strict-aliasing -Wall -I/ROCK/src.gpac.1181944034.25542.3784586592/gpac/include -I/ROCK/src.gpac.1181944034.25542.3784586592/gpac/extra_lib/include/gecko-sdk -I/ROCK/src.gpac.1181944034.25542.3784586592/gpac/extra_lib/include/gecko-sdk/plugin/include -I/ROCK/src.gpac.1181944034.25542.3784586592/gpac/extra_lib/include/gecko-sdk/nspr/include -I/ROCK/src.gpac.1181944034.25542.3784586592/gpac/extra_lib/include/gecko-sdk/java/include -I/ROCK/src.gpac.1181944034.25542.3784586592/gpac/extra_lib/include/gecko-sdk/xpcom/include  -DXP_UNIX -DMOZ_X11 -DNPBASIC_EXPORTS -DMOZILLA_STRICT_API -DXPCOM_GLUE -c -o npn_gate.o npn_gate.cpp 
+[5-ERROR] g++-42 -shared -Wl,--warn-common osmozilla.o npp_gate.o np_entry.o npn_gate.o -L../../bin/gcc -lgpac -o ../../bin/gcc/nposmozilla.so 
+[5-ERROR] collect2: ld terminated with signal 11 [Segmentation fault], core dumped
+[5-ERROR] make[2]: *** [nposmozilla.so] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.gpac.1181944034.25542.3784586592/gpac/applications/osmozilla'
+[5-ERROR] make[1]: *** [apps] Error 2
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.gpac.1181944034.25542.3784586592/gpac/applications'
+[5-ERROR] make: *** [apps] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] main.c:812: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[9-ERROR] main.c:812: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[9-ERROR] main.c:812: warning: pointer targets in passing argument 1 of '__builtin_strcmp' differ in signedness
+[9-ERROR] main.c:812: warning: pointer targets in passing argument 2 of '__builtin_strcmp' differ in signedness
+[9-ERROR] main.c:812: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[9-ERROR] main.c:812: warning: pointer targets in passing argument 1 of '__builtin_strcmp' differ in signedness
+[9-ERROR] main.c:812: warning: pointer targets in passing argument 2 of '__builtin_strcmp' differ in signedness
+[9-ERROR] main.c:812: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[9-ERROR] main.c:812: warning: pointer targets in passing argument 1 of '__builtin_strcmp' differ in signedness
+[9-ERROR] main.c:812: warning: pointer targets in passing argument 2 of '__builtin_strcmp' differ in signedness
+[9-ERROR] main.c:812: warning: pointer targets in passing argument 1 of '__builtin_strcmp' differ in signedness
+[9-ERROR] main.c:812: warning: pointer targets in passing argument 2 of '__builtin_strcmp' differ in signedness
+[9-ERROR] main.c: In function 'generate_table':
+[9-ERROR] main.c:886: warning: too many arguments for format
+[9-ERROR] main.c:899: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[9-ERROR] main.c:899: warning: pointer targets in passing argument 1 of '__builtin_strcmp' differ in signedness
+[9-ERROR] main.c:899: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+[9-ERROR] main.c:899: warning: pointer targets in passing argument 1 of '__builtin_strcmp' differ in signedness
+[9-ERROR] main.c:899: warning: pointer targets in passing argument 1 of '__builtin_strcmp' differ in signedness
+[9-ERROR] main.c:899: warning: pointer targets in passing argument 1 of '__builtin_strcmp' differ in signedness
+[9-ERROR] main.c: In function 'main':
+[9-ERROR] main.c:944: warning: pointer targets in passing argument 2 of 'xmlXPathRegisterNs' differ in signedness
+[9-ERROR] main.c:944: warning: pointer targets in passing argument 3 of 'xmlXPathRegisterNs' differ in signedness
+[9-ERROR] main.c:945: warning: pointer targets in passing argument 2 of 'xmlXPathRegisterNs' differ in signedness
+[9-ERROR] main.c:945: warning: pointer targets in passing argument 3 of 'xmlXPathRegisterNs' differ in signedness
+[9-ERROR] main.c:946: warning: pointer targets in passing argument 2 of 'xmlXPathRegisterNs' differ in signedness
+[9-ERROR] main.c:946: warning: pointer targets in passing argument 3 of 'xmlXPathRegisterNs' differ in signedness
+[9-ERROR] gcc-42 -Wl,--warn-common -g -o SVGGen main.o ../../../src/utils/list.o -L/usr/lib -lxml2 -lz -lm -lm
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.gpac.1181964970.17769.3307008318/gpac/applications/generators/SVG'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.gpac.1181964970.17769.3307008318/gpac/applications/generators'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.gpac.1181964970.17769.3307008318/gpac/applications/osmozilla'
+[9-ERROR] g++-42 -O3 -fno-strict-aliasing -Wall -I/ROCK/src.gpac.1181964970.17769.3307008318/gpac/include -I/ROCK/src.gpac.1181964970.17769.3307008318/gpac/extra_lib/include/gecko-sdk -I/ROCK/src.gpac.1181964970.17769.3307008318/gpac/extra_lib/include/gecko-sdk/plugin/include -I/ROCK/src.gpac.1181964970.17769.3307008318/gpac/extra_lib/include/gecko-sdk/nspr/include -I/ROCK/src.gpac.1181964970.17769.3307008318/gpac/extra_lib/include/gecko-sdk/java/include -I/ROCK/src.gpac.1181964970.17769.3307008318/gpac/extra_lib/include/gecko-sdk/xpcom/include  -DXP_UNIX -DMOZ_X11 -DNPBASIC_EXPORTS -DMOZILLA_STRICT_API -DXPCOM_GLUE -c -o osmozilla.o osmozilla.cpp 
+[9-ERROR] osmozilla.cpp: In function 'char* NPP_GetMIMEDescription()':
+[9-ERROR] osmozilla.cpp:96: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] osmozilla.cpp: In function 'NPError NS_PluginGetValue(NPPVariable, void*)':
+[9-ERROR] osmozilla.cpp:133: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] osmozilla.cpp:136: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] osmozilla.cpp: In member function 'virtual NPBool nsOsmozillaInstance::init(NPWindow*)':
+[9-ERROR] osmozilla.cpp:228: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] g++-42 -O3 -fno-strict-aliasing -Wall -I/ROCK/src.gpac.1181964970.17769.3307008318/gpac/include -I/ROCK/src.gpac.1181964970.17769.3307008318/gpac/extra_lib/include/gecko-sdk -I/ROCK/src.gpac.1181964970.17769.3307008318/gpac/extra_lib/include/gecko-sdk/plugin/include -I/ROCK/src.gpac.1181964970.17769.3307008318/gpac/extra_lib/include/gecko-sdk/nspr/include -I/ROCK/src.gpac.1181964970.17769.3307008318/gpac/extra_lib/include/gecko-sdk/java/include -I/ROCK/src.gpac.1181964970.17769.3307008318/gpac/extra_lib/include/gecko-sdk/xpcom/include  -DXP_UNIX -DMOZ_X11 -DNPBASIC_EXPORTS -DMOZILLA_STRICT_API -DXPCOM_GLUE -c -o npp_gate.o npp_gate.cpp 
+[9-ERROR] g++-42 -O3 -fno-strict-aliasing -Wall -I/ROCK/src.gpac.1181964970.17769.3307008318/gpac/include -I/ROCK/src.gpac.1181964970.17769.3307008318/gpac/extra_lib/include/gecko-sdk -I/ROCK/src.gpac.1181964970.17769.3307008318/gpac/extra_lib/include/gecko-sdk/plugin/include -I/ROCK/src.gpac.1181964970.17769.3307008318/gpac/extra_lib/include/gecko-sdk/nspr/include -I/ROCK/src.gpac.1181964970.17769.3307008318/gpac/extra_lib/include/gecko-sdk/java/include -I/ROCK/src.gpac.1181964970.17769.3307008318/gpac/extra_lib/include/gecko-sdk/xpcom/include  -DXP_UNIX -DMOZ_X11 -DNPBASIC_EXPORTS -DMOZILLA_STRICT_API -DXPCOM_GLUE -c -o np_entry.o np_entry.cpp 
+[9-ERROR] g++-42 -O3 -fno-strict-aliasing -Wall -I/ROCK/src.gpac.1181964970.17769.3307008318/gpac/include -I/ROCK/src.gpac.1181964970.17769.3307008318/gpac/extra_lib/include/gecko-sdk -I/ROCK/src.gpac.1181964970.17769.3307008318/gpac/extra_lib/include/gecko-sdk/plugin/include -I/ROCK/src.gpac.1181964970.17769.3307008318/gpac/extra_lib/include/gecko-sdk/nspr/include -I/ROCK/src.gpac.1181964970.17769.3307008318/gpac/extra_lib/include/gecko-sdk/java/include -I/ROCK/src.gpac.1181964970.17769.3307008318/gpac/extra_lib/include/gecko-sdk/xpcom/include  -DXP_UNIX -DMOZ_X11 -DNPBASIC_EXPORTS -DMOZILLA_STRICT_API -DXPCOM_GLUE -c -o npn_gate.o npn_gate.cpp 
+[9-ERROR] g++-42 -shared -Wl,--warn-common osmozilla.o npp_gate.o np_entry.o npn_gate.o -L../../bin/gcc -lgpac -o ../../bin/gcc/nposmozilla.so 
+[9-ERROR] collect2: ld terminated with signal 11 [Segmentation fault], core dumped
+[9-ERROR] make[2]: *** [nposmozilla.so] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.gpac.1181964970.17769.3307008318/gpac/applications/osmozilla'
+[9-ERROR] make[1]: *** [apps] Error 2
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.gpac.1181964970.17769.3307008318/gpac/applications'
+[9-ERROR] make: *** [apps] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

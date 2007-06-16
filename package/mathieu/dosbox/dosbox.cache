@@ -20,26 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168680471 Sat Jan 13 10:27:51 2007 (5)
-[TIMESTAMP] 1168889317 Mon Jan 15 20:28:37 2007 (9)
+[TIMESTAMP] 1181152998 Wed Jun  6 20:03:18 2007 (5) ERROR
+[TIMESTAMP] 1181605476 Tue Jun 12 01:44:36 2007 (9) ERROR
+[TIMESTAMP] 1181829014 Thu Jun 14 15:50:14 2007 (5) ERROR
+[TIMESTAMP] 1181912414 Fri Jun 15 15:00:14 2007 (9) ERROR
+[TIMESTAMP] 1181952671 Sat Jun 16 02:11:11 2007 (5) ERROR
+[TIMESTAMP] 1181974431 Sat Jun 16 08:13:51 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-dosbox.log 9-dosbox.log
+[LOGS] 5-dosbox.err 9-dosbox.err
 
-[BUILDTIME] 8296 (5)
-[BUILDTIME] 8531 (9)
-[SIZE] 0.87 MB, 9 files
+[BUILDTIME] 5419 (5) ERROR
+[BUILDTIME] 4963 (9) ERROR
+[BUILDTIME] 4958 (5) ERROR
+[BUILDTIME] 5296 (9) ERROR
+[BUILDTIME] 4902 (5) ERROR
+[BUILDTIME] 4880 (9) ERROR
 
-[DEP] 00-dirtree alsa alsa:dev applewmproto bash2 binutils bzip2
-[DEP] coreutils cvm diffutils findutils flac gawk gcc40 gcc40:dev glibc23
-[DEP] glibc23:dev grep libice libmikmod libpng libpng:dev libsdl libsdl:dev
-[DEP] libsdl_net libsdl_net:dev libsdl_sound libsdl_sound:dev libsm
-[DEP] libx11 libxau libxdmcp libxext libxt linux-libc-headers:dev make
-[DEP] mesalib mesalib:dev mktemp nas ncurses ncurses:dev net-tools netpbm
-[DEP] ogg-vorbis rrdtool sed sysfiles tar twoftpd ucspi-unix util-linux
-[DEP] zlib zlib:dev
 
-[PROVIDES] dosbox
+[5-ERROR] debug.cpp:1151: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1152: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1153: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1154: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1155: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1156: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1157: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1158: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1159: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1160: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1166: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1167: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1168: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1169: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1174: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1175: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1177: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1178: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1179: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1181: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1182: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1184: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1185: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1187: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp: In function 'Bit32u DEBUG_CheckKeys()':
+[5-ERROR] debug.cpp:1442: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp: In function 'void DEBUG_Enable()':
+[5-ERROR] debug.cpp:1538: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp: In function 'void LogGDT()':
+[5-ERROR] debug.cpp:1561: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp: In function 'void LogLDT()':
+[5-ERROR] debug.cpp:1582: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp: In function 'void DEBUG_Init(Section*)':
+[5-ERROR] debug.cpp:1773: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1773: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1777: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp: In function 'void SaveMemory(Bitu, Bitu, Bit32s)':
+[5-ERROR] debug.cpp:1864: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1884: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp: In function 'void OutputVecTable(char*)':
+[5-ERROR] debug.cpp:1892: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debug.cpp:1900: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] make[3]: *** [debug.o] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.dosbox.1181952622.29890.1627887995/dosbox-0.63/src/debug'
+[5-ERROR] make[2]: *** [all-recursive] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.dosbox.1181952622.29890.1627887995/dosbox-0.63/src'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.dosbox.1181952622.29890.1627887995/dosbox-0.63'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] debug.cpp:1151: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1152: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1153: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1154: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1155: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1156: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1157: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1158: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1159: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1160: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1166: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1167: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1168: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1169: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1174: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1175: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1177: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1178: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1179: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1181: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1182: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1184: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1185: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1187: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp: In function 'Bit32u DEBUG_CheckKeys()':
+[9-ERROR] debug.cpp:1442: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp: In function 'void DEBUG_Enable()':
+[9-ERROR] debug.cpp:1538: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp: In function 'void LogGDT()':
+[9-ERROR] debug.cpp:1561: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp: In function 'void LogLDT()':
+[9-ERROR] debug.cpp:1582: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp: In function 'void DEBUG_Init(Section*)':
+[9-ERROR] debug.cpp:1773: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1773: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1777: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp: In function 'void SaveMemory(Bitu, Bitu, Bit32s)':
+[9-ERROR] debug.cpp:1864: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1884: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp: In function 'void OutputVecTable(char*)':
+[9-ERROR] debug.cpp:1892: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debug.cpp:1900: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] make[3]: *** [debug.o] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.dosbox.1181974382.27432.4149625545/dosbox-0.63/src/debug'
+[9-ERROR] make[2]: *** [all-recursive] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.dosbox.1181974382.27432.4149625545/dosbox-0.63/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.dosbox.1181974382.27432.4149625545/dosbox-0.63'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

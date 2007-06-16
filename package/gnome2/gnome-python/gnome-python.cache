@@ -20,32 +20,33 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168595038 Fri Jan 12 10:43:58 2007 (5)
-[TIMESTAMP] 1168796982 Sun Jan 14 18:49:42 2007 (9)
+[TIMESTAMP] 1180993950 Mon Jun  4 23:52:30 2007 (5)
+[TIMESTAMP] 1181455639 Sun Jun 10 08:07:19 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-gnome-python.log 9-gnome-python.log
 
-[BUILDTIME] 7430 (5)
-[BUILDTIME] 7880 (9)
+[BUILDTIME] 8997 (5)
+[BUILDTIME] 9493 (9)
 [SIZE] 0.87 MB, 50 files
 
 [DEP] 00-dirtree alsa:dev applewmproto atk atk:dev audiofile:dev
 [DEP] bash2 binutils bzip2 cairo cairo:dev coreutils cvm dbus-glib:dev
 [DEP] dbus:dev diffutils esound:dev expat:dev findutils fontconfig:dev
-[DEP] freetype:dev gawk gcc40 gcc40:dev gconf gconf:dev glib glib:dev
-[DEP] glibc23 glibc23:dev gnome-keyring gnome-keyring:dev gnome-vfs
+[DEP] freetype:dev gawk gcc42 gcc42:dev gconf gconf:dev glib glib:dev
+[DEP] glibc26 glibc26:dev gnome-keyring gnome-keyring:dev gnome-vfs
 [DEP] gnome-vfs:dev gnome2-dirtree grep gtk+ gtk+:dev libart_lgpl23
 [DEP] libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui libbonoboui:dev
 [DEP] libgnome libgnome:dev libgnomecanvas libgnomecanvas:dev libgnomeui
 [DEP] libgnomeui:dev libice libice:dev libjpeg:dev libpng:dev libsm
-[DEP] libsm:dev libx11 libx11:dev libxau libxau:dev libxdmcp libxdmcp:dev
-[DEP] libxml2 libxml2:dev libxrender:dev linux-libc-headers:dev make mktemp
-[DEP] net-tools orbit2 orbit2:dev pango pango:dev pkgconfig popt popt:dev
-[DEP] pygobject:dev pygtk pygtk:dev pyorbit:dev python python:dev rrdtool
-[DEP] sed sysfiles tar tcl tk util-linux zlib
+[DEP] libsm:dev libx11 libx11:dev libxau libxau:dev libxcb libxcb:dev
+[DEP] libxdmcp libxdmcp:dev libxml2 libxml2:dev libxrender:dev
+[DEP] linux26-headers:dev ltrace make mktemp net-tools orbit2 orbit2:dev
+[DEP] pango pango:dev pkgconfig popt popt:dev pygobject pygobject:dev
+[DEP] pygtk pygtk:dev pyorbit:dev python python:dev sed sysfiles tar tcl
+[DEP] tk util-linux xmame
 
 [PROVIDES] _bonobo.so _gnome.so _gnomevfs.so activation.so gconf.so
 [PROVIDES] gnomecanvas.so gnomevfsbonobo.so libpythonmethod.so ui.so

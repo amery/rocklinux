@@ -20,33 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168620978 Fri Jan 12 17:56:18 2007 (5)
-[TIMESTAMP] 1168824430 Mon Jan 15 02:27:10 2007 (9)
+[TIMESTAMP] 1181037994 Tue Jun  5 12:06:34 2007 (5) ERROR
+[TIMESTAMP] 1181501054 Sun Jun 10 20:44:14 2007 (9) ERROR
+[TIMESTAMP] 1181819812 Thu Jun 14 13:16:52 2007 (5) ERROR
+[TIMESTAMP] 1181873930 Fri Jun 15 04:18:50 2007 (9) ERROR
+[TIMESTAMP] 1181947131 Sat Jun 16 00:38:51 2007 (5) ERROR
+[TIMESTAMP] 1181967932 Sat Jun 16 06:25:32 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-lmms.log 9-lmms.log
+[LOGS] 5-lmms.err 9-lmms.err
 
-[BUILDTIME] 19191 (5)
-[BUILDTIME] 19839 (9)
-[SIZE] 9.01 MB, 435 files
+[BUILDTIME] 4062 (5) ERROR
+[BUILDTIME] 4151 (9) ERROR
+[BUILDTIME] 4061 (5) ERROR
+[BUILDTIME] 4051 (9) ERROR
+[BUILDTIME] 4134 (5) ERROR
+[BUILDTIME] 3962 (9) ERROR
 
-[DEP] 00-dirtree alsa alsa:dev applewmproto applewmproto:dev bash2
-[DEP] binutils bzip2 coreutils cvm diffutils expat findutils flac
-[DEP] flac:dev fontconfig freetype gawk gcc40 gcc40:dev glibc23
-[DEP] glibc23:dev grep imake ladspa:dev libice libice:dev libjpeg
-[DEP] libjpeg:dev libmikmod libpng libsamplerate libsamplerate:dev
-[DEP] libsdl libsdl:dev libsdl_sound libsdl_sound:dev libsm libsm:dev
-[DEP] libsndfile libsndfile:dev libx11 libx11:dev libxau libxcursor
-[DEP] libxdmcp libxext libxext:dev libxfixes libxft libxinerama libxmu
-[DEP] libxrandr libxrender libxt linux-libc-headers:dev make mesalib
-[DEP] mktemp nas net-tools netpbm ogg-vorbis ogg-vorbis:dev patch perl5
-[DEP] qt33 qt33:dev rrdtool sed sysfiles tar twoftpd ucspi-unix util-linux
-[DEP] xorg-cf-files xproto:dev zlib
 
-[PROVIDES] libaudiofileprocessor.a libaudiofileprocessor.so
-[PROVIDES] libbitinvader.a libbitinvader.so libpluckedstringsynth.a
-[PROVIDES] libpluckedstringsynth.so libtripleoscillator.a
-[PROVIDES] libtripleoscillator.so lmms
+[5-ERROR] /opt/qt33/bin/moc -o kmultitabbar-qt3.moc include/kmultitabbar-qt3.h
+[5-ERROR] /opt/qt33/bin/moc -o knob.moc include/knob.h
+[5-ERROR] /opt/qt33/bin/moc -o lcd_spinbox.moc include/lcd_spinbox.h
+[5-ERROR] /opt/qt33/bin/moc -o led_checkbox.moc include/led_checkbox.h
+[5-ERROR] /opt/qt33/bin/moc -o main_window.moc include/main_window.h
+[5-ERROR] /opt/qt33/bin/moc -o mixer.moc include/mixer.h
+[5-ERROR] /opt/qt33/bin/moc -o name_label.moc include/name_label.h
+[5-ERROR] /opt/qt33/bin/moc -o nstate_button.moc include/nstate_button.h
+[5-ERROR] /opt/qt33/bin/moc -o midi_alsa_seq.moc include/midi_alsa_seq.h
+[5-ERROR] /opt/qt33/bin/moc -o midi_tab_widget.moc include/midi_tab_widget.h
+[5-ERROR] /opt/qt33/bin/moc -o note_play_handle.moc include/note_play_handle.h
+[5-ERROR] /opt/qt33/bin/moc -o pattern.moc include/pattern.h
+[5-ERROR] /opt/qt33/bin/moc -o piano_roll.moc include/piano_roll.h
+[5-ERROR] /opt/qt33/bin/moc -o piano_widget.moc include/piano_widget.h
+[5-ERROR] /opt/qt33/bin/moc -o pixmap_button.moc include/pixmap_button.h
+[5-ERROR] /opt/qt33/bin/moc -o plugin_browser.moc include/plugin_browser.h
+[5-ERROR] /opt/qt33/bin/moc -o project_notes.moc include/project_notes.h
+[5-ERROR] /opt/qt33/bin/moc -o rubberband.moc include/rubberband.h
+[5-ERROR] /opt/qt33/bin/moc -o qxembed.moc include/qxembed.h
+[5-ERROR] /opt/qt33/bin/moc -o rename_dialog.moc include/rename_dialog.h
+[5-ERROR] /opt/qt33/bin/moc -o sample_buffer.moc include/sample_buffer.h
+[5-ERROR] /opt/qt33/bin/moc -o sample_track.moc include/sample_track.h
+[5-ERROR] /opt/qt33/bin/moc -o setup_dialog.moc include/setup_dialog.h
+[5-ERROR] /opt/qt33/bin/moc -o side_bar.moc include/side_bar.h
+[5-ERROR] /opt/qt33/bin/moc -o side_bar_widget.moc include/side_bar_widget.h
+[5-ERROR] /opt/qt33/bin/moc -o song_editor.moc include/song_editor.h
+[5-ERROR] /opt/qt33/bin/moc -o surround_area.moc include/surround_area.h
+[5-ERROR] /opt/qt33/bin/moc -o tab_bar.moc include/tab_bar.h
+[5-ERROR] /opt/qt33/bin/moc -o tab_button.moc include/tab_button.h
+[5-ERROR] /opt/qt33/bin/moc -o tab_widget.moc include/tab_widget.h
+[5-ERROR] /opt/qt33/bin/moc -o tempo_sync_knob.moc include/tempo_sync_knob.h
+[5-ERROR] /opt/qt33/bin/moc -o timeline.moc include/timeline.h
+[5-ERROR] /opt/qt33/bin/moc -o tool_button.moc include/tool_button.h
+[5-ERROR] /opt/qt33/bin/moc -o track_container.moc include/track_container.h
+[5-ERROR] /opt/qt33/bin/moc -o track.moc include/track.h
+[5-ERROR] /opt/qt33/bin/moc -o visualization_widget.moc include/visualization_widget.h
+[5-ERROR] /opt/qt33/bin/moc -o volume_knob.moc include/volume_knob.h
+[5-ERROR] make  all-recursive
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.lmms.1181947077.14714.3703618101/lmms-0.2.1'
+[5-ERROR] Making all in buildtools
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.lmms.1181947077.14714.3703618101/lmms-0.2.1/buildtools'
+[5-ERROR] if g++-42 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -floop-optimize2 -fgcse-sm  -fgcse-las -ftree-vectorize -ftree-loop-linear -funsafe-loop-optimizations -Wunsafe-loop-optimizations -DSINGLE_SOURCE_COMPILE -I/usr/local/include -MT bin2res.o -MD -MP -MF ".deps/bin2res.Tpo" -c -o bin2res.o bin2res.cpp; \
+[5-ERROR] 	then mv -f ".deps/bin2res.Tpo" ".deps/bin2res.Po"; else rm -f ".deps/bin2res.Tpo"; exit 1; fi
+[5-ERROR] cc1plus: error: unrecognized command line option "-floop-optimize2"
+[5-ERROR] make[2]: *** [bin2res.o] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.lmms.1181947077.14714.3703618101/lmms-0.2.1/buildtools'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.lmms.1181947077.14714.3703618101/lmms-0.2.1'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] /opt/qt33/bin/moc -o kmultitabbar-qt3.moc include/kmultitabbar-qt3.h
+[9-ERROR] /opt/qt33/bin/moc -o knob.moc include/knob.h
+[9-ERROR] /opt/qt33/bin/moc -o lcd_spinbox.moc include/lcd_spinbox.h
+[9-ERROR] /opt/qt33/bin/moc -o led_checkbox.moc include/led_checkbox.h
+[9-ERROR] /opt/qt33/bin/moc -o main_window.moc include/main_window.h
+[9-ERROR] /opt/qt33/bin/moc -o mixer.moc include/mixer.h
+[9-ERROR] /opt/qt33/bin/moc -o name_label.moc include/name_label.h
+[9-ERROR] /opt/qt33/bin/moc -o nstate_button.moc include/nstate_button.h
+[9-ERROR] /opt/qt33/bin/moc -o midi_alsa_seq.moc include/midi_alsa_seq.h
+[9-ERROR] /opt/qt33/bin/moc -o midi_tab_widget.moc include/midi_tab_widget.h
+[9-ERROR] /opt/qt33/bin/moc -o note_play_handle.moc include/note_play_handle.h
+[9-ERROR] /opt/qt33/bin/moc -o pattern.moc include/pattern.h
+[9-ERROR] /opt/qt33/bin/moc -o piano_roll.moc include/piano_roll.h
+[9-ERROR] /opt/qt33/bin/moc -o piano_widget.moc include/piano_widget.h
+[9-ERROR] /opt/qt33/bin/moc -o pixmap_button.moc include/pixmap_button.h
+[9-ERROR] /opt/qt33/bin/moc -o plugin_browser.moc include/plugin_browser.h
+[9-ERROR] /opt/qt33/bin/moc -o project_notes.moc include/project_notes.h
+[9-ERROR] /opt/qt33/bin/moc -o rubberband.moc include/rubberband.h
+[9-ERROR] /opt/qt33/bin/moc -o qxembed.moc include/qxembed.h
+[9-ERROR] /opt/qt33/bin/moc -o rename_dialog.moc include/rename_dialog.h
+[9-ERROR] /opt/qt33/bin/moc -o sample_buffer.moc include/sample_buffer.h
+[9-ERROR] /opt/qt33/bin/moc -o sample_track.moc include/sample_track.h
+[9-ERROR] /opt/qt33/bin/moc -o setup_dialog.moc include/setup_dialog.h
+[9-ERROR] /opt/qt33/bin/moc -o side_bar.moc include/side_bar.h
+[9-ERROR] /opt/qt33/bin/moc -o side_bar_widget.moc include/side_bar_widget.h
+[9-ERROR] /opt/qt33/bin/moc -o song_editor.moc include/song_editor.h
+[9-ERROR] /opt/qt33/bin/moc -o surround_area.moc include/surround_area.h
+[9-ERROR] /opt/qt33/bin/moc -o tab_bar.moc include/tab_bar.h
+[9-ERROR] /opt/qt33/bin/moc -o tab_button.moc include/tab_button.h
+[9-ERROR] /opt/qt33/bin/moc -o tab_widget.moc include/tab_widget.h
+[9-ERROR] /opt/qt33/bin/moc -o tempo_sync_knob.moc include/tempo_sync_knob.h
+[9-ERROR] /opt/qt33/bin/moc -o timeline.moc include/timeline.h
+[9-ERROR] /opt/qt33/bin/moc -o tool_button.moc include/tool_button.h
+[9-ERROR] /opt/qt33/bin/moc -o track_container.moc include/track_container.h
+[9-ERROR] /opt/qt33/bin/moc -o track.moc include/track.h
+[9-ERROR] /opt/qt33/bin/moc -o visualization_widget.moc include/visualization_widget.h
+[9-ERROR] /opt/qt33/bin/moc -o volume_knob.moc include/volume_knob.h
+[9-ERROR] make  all-recursive
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.lmms.1181967892.6804.3307008318/lmms-0.2.1'
+[9-ERROR] Making all in buildtools
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.lmms.1181967892.6804.3307008318/lmms-0.2.1/buildtools'
+[9-ERROR] if g++-42 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -floop-optimize2 -fgcse-sm  -fgcse-las -ftree-vectorize -ftree-loop-linear -funsafe-loop-optimizations -Wunsafe-loop-optimizations -DSINGLE_SOURCE_COMPILE -I/usr/local/include -MT bin2res.o -MD -MP -MF ".deps/bin2res.Tpo" -c -o bin2res.o bin2res.cpp; \
+[9-ERROR] 	then mv -f ".deps/bin2res.Tpo" ".deps/bin2res.Po"; else rm -f ".deps/bin2res.Tpo"; exit 1; fi
+[9-ERROR] cc1plus: error: unrecognized command line option "-floop-optimize2"
+[9-ERROR] make[2]: *** [bin2res.o] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.lmms.1181967892.6804.3307008318/lmms-0.2.1/buildtools'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.lmms.1181967892.6804.3307008318/lmms-0.2.1'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

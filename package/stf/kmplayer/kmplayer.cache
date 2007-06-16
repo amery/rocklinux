@@ -20,144 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168690884 Sat Jan 13 13:21:24 2007 (5) ERROR
-[TIMESTAMP] 1168899779 Mon Jan 15 23:22:59 2007 (9) ERROR
-[TIMESTAMP] 1168953617 Tue Jan 16 14:20:17 2007 (5) ERROR
-[TIMESTAMP] 1168983332 Tue Jan 16 22:35:32 2007 (9) ERROR
-[TIMESTAMP] 1169123949 Thu Jan 18 13:39:09 2007 (5) ERROR
-[TIMESTAMP] 1169153527 Thu Jan 18 21:52:07 2007 (9) ERROR
+[TIMESTAMP] 1181172111 Thu Jun  7 01:21:51 2007 (5) ERROR
+[TIMESTAMP] 1181618692 Tue Jun 12 05:24:52 2007 (9) ERROR
+[TIMESTAMP] 1181832086 Thu Jun 14 16:41:26 2007 (5) ERROR
+[TIMESTAMP] 1181916250 Fri Jun 15 16:04:10 2007 (9) ERROR
+[TIMESTAMP] 1181955444 Sat Jun 16 02:57:24 2007 (5) ERROR
+[TIMESTAMP] 1181977321 Sat Jun 16 09:02:01 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-kmplayer.err 9-kmplayer.err
 
-[BUILDTIME] 15901 (5) ERROR
-[BUILDTIME] 16100 (9) ERROR
-[BUILDTIME] 16205 (5) ERROR
-[BUILDTIME] 16166 (9) ERROR
-[BUILDTIME] 16210 (5) ERROR
-[BUILDTIME] 16213 (9) ERROR
-[SIZE] 2.19 MB, 72 files
+[BUILDTIME] 4169 (5) ERROR
+[BUILDTIME] 4072 (9) ERROR
+[BUILDTIME] 4117 (5) ERROR
+[BUILDTIME] 4258 (9) ERROR
+[BUILDTIME] 3987 (5) ERROR
+[BUILDTIME] 3987 (9) ERROR
 
-[DEP] 00-dirtree acl acl:dev alsa applewmproto applewmproto:dev attr
-[DEP] attr:dev bash2 binutils bzip2 coreutils cups cvm diffutils expat
-[DEP] expat:dev fam fam:dev findutils fontconfig fontconfig:dev freetype
-[DEP] freetype:dev gawk gcc40 gcc40:dev gettext glibc23 glibc23:dev
-[DEP] gnome-libs14 gnome-nettool gnome14-dirtree grep hicolor-icon-theme
-[DEP] imake kdelibs kdelibs:dev libart_lgpl23 libart_lgpl23:dev
-[DEP] libice libice:dev libidn libidn:dev libjpeg libpng libpng:dev
-[DEP] libsm libsm:dev libx11 libx11:dev libxau libxau:dev libxcursor
-[DEP] libxcursor:dev libxdmcp libxdmcp:dev libxext libxext:dev libxfixes
-[DEP] libxfixes:dev libxft libxft:dev libxinerama libxinerama:dev libxml2
-[DEP] libxmu libxmu:dev libxrandr libxrandr:dev libxrender libxrender:dev
-[DEP] libxt libxt:dev libxv libxv:dev linux-libc-headers:dev make mesalib
-[DEP] mktemp nas net-tools perl5 pkgconfig qt33 qt33:dev rrdtool sed
-[DEP] sysfiles tar util-linux videoproto:dev xextproto:dev xine-lib
-[DEP] xine-lib:dev xorg-cf-files xproto:dev zlib zlib:dev
 
-[PROVIDES] kmplayer kmplayer.so kxineplayer kxvplayer
-[PROVIDES] libkdeinit_kmplayer.so libkmplayercommon.so libkmplayerpart.so
-
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kmplayer.1169123729.28117.3694631316/kmplayer-0.9.1/po'
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kmplayer.1169123729.28117.3694631316/kmplayer-0.9.1/po'
-[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.kmplayer.1169123729.28117.3694631316/kmplayer-0.9.1'
-[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.kmplayer.1169123729.28117.3694631316/kmplayer-0.9.1'
-[5-ERROR] make[2]: Nothing to be done for `install-exec-am'.
-[5-ERROR] make[2]: Nothing to be done for `install-data-am'.
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kmplayer.1169123729.28117.3694631316/kmplayer-0.9.1'
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kmplayer.1169123729.28117.3694631316/kmplayer-0.9.1'
-[5-ERROR] Trying to copy the default documentation ...
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing /lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Checking usr/share/applications/kde/kmplayer.desktop ... 
-[5-ERROR] Adding X-ROCK-Name tag (kmplayer)
-[5-ERROR] Checking usr/share/mimelnk/application/x-kmplayer.desktop ... 
-[5-ERROR] Adding Categories tag (AudioVideo)
-[5-ERROR] Adding X-ROCK-Name tag (kmplayer)
-[5-ERROR] Adding Categories tag (AudioVideo)
-[5-ERROR] Adding X-ROCK-Name tag (kmplayer)
-[5-ERROR] Checking usr/share/mimelnk/application/x-mplayer2.desktop ... 
-[5-ERROR] Adding Categories tag (AudioVideo)
-[5-ERROR] Adding X-ROCK-Name tag (kmplayer)
-[5-ERROR] Checking usr/share/mimelnk/video/x-ms-wmp.desktop ... 
-[5-ERROR] Adding Categories tag (AudioVideo)
-[5-ERROR] Adding X-ROCK-Name tag (kmplayer)
-[5-ERROR] Checking usr/share/services/kmplayer_part.desktop ... 
-[5-ERROR] Adding Categories tag (AudioVideo)
-[5-ERROR] Adding X-ROCK-Name tag (kmplayer)
-[5-ERROR] Found 142 files for this package.
-[5-ERROR] Applying package split: 40 kmplayer:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
-[5-ERROR] Applying package split: 42 kmplayer:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 kmplayer:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <kmplayer> Creating flist file ...
-[5-ERROR] <kmplayer> Creating package dependencies file ...
-[5-ERROR] <kmplayer> Creating package description ...
-[5-ERROR] <kmplayer> Creating md5sum and cksum files ...
-[5-ERROR] <kmplayer:dev> Creating flist file ...
-[5-ERROR] <kmplayer:dev> Creating package dependencies file ...
-[5-ERROR] <kmplayer:dev> Creating package description ...
-[5-ERROR] <kmplayer:dev> Creating md5sum and cksum files ...
-[5-ERROR] <kmplayer:doc> Creating flist file ...
-[5-ERROR] <kmplayer:doc> Creating package dependencies file ...
-[5-ERROR] <kmplayer:doc> Creating package description ...
-[5-ERROR] <kmplayer:doc> Creating md5sum and cksum files ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Found shared files with other packages:
-[5-ERROR] usr/share/mimelnk/application/x-mplayer2.desktop: kdelibs kmplayer
-[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] kmplayer_part.cpp:765: warning: 'KMPlayerLiveConnectExtension::KMPlayerLiveConnectExtension(KMPlayerPart*)': visibility attribute ignored because it
+[5-ERROR] kmplayer_part.h:81: warning: conflicts with previous declaration here
+[5-ERROR] kmplayer_part.cpp:773: warning: 'virtual KMPlayerLiveConnectExtension::~KMPlayerLiveConnectExtension()': visibility attribute ignored because it
+[5-ERROR] kmplayer_part.h:82: warning: conflicts with previous declaration here
+[5-ERROR] kmplayer_part.cpp:777: warning: 'void KMPlayerLiveConnectExtension::started()': visibility attribute ignored because it
+[5-ERROR] kmplayer_part.h:102: warning: conflicts with previous declaration here
+[5-ERROR] kmplayer_part.cpp:781: warning: 'void KMPlayerLiveConnectExtension::finished()': visibility attribute ignored because it
+[5-ERROR] kmplayer_part.h:103: warning: conflicts with previous declaration here
+[5-ERROR] kmplayer_part.cpp:794: warning: 'virtual bool KMPlayerLiveConnectExtension::get(long unsigned int, const QString&, KParts::LiveConnectExtension::Type&, long unsigned int&, QString&)': visibility attribute ignored because it
+[5-ERROR] kmplayer_part.h:86: warning: conflicts with previous declaration here
+[5-ERROR] kmplayer_part.cpp:823: warning: 'virtual bool KMPlayerLiveConnectExtension::put(long unsigned int, const QString&, const QString&)': visibility attribute ignored because it
+[5-ERROR] kmplayer_part.h:87: warning: conflicts with previous declaration here
+[5-ERROR] kmplayer_part.cpp:848: warning: 'virtual bool KMPlayerLiveConnectExtension::call(long unsigned int, const QString&, const QStringList&, KParts::LiveConnectExtension::Type&, long unsigned int&, QString&)': visibility attribute ignored because it
+[5-ERROR] kmplayer_part.h:90: warning: conflicts with previous declaration here
+[5-ERROR] kmplayer_part.cpp:963: warning: 'virtual void KMPlayerLiveConnectExtension::unregister(long unsigned int)': visibility attribute ignored because it
+[5-ERROR] kmplayer_part.h:91: warning: conflicts with previous declaration here
+[5-ERROR] kmplayer_part.cpp:966: warning: 'void KMPlayerLiveConnectExtension::setSize(int, int)': visibility attribute ignored because it
+[5-ERROR] kmplayer_part.h:101: warning: conflicts with previous declaration here
+[5-ERROR] kmplayer_part.cpp:984: warning: 'KMPlayerHRefSource::KMPlayerHRefSource(KMPlayer::PartBase*)': visibility attribute ignored because it
+[5-ERROR] kmplayer_part.h:38: warning: conflicts with previous declaration here
+[5-ERROR] kmplayer_part.cpp:989: warning: 'virtual KMPlayerHRefSource::~KMPlayerHRefSource()': visibility attribute ignored because it
+[5-ERROR] kmplayer_part.h:39: warning: conflicts with previous declaration here
+[5-ERROR] kmplayer_part.cpp:993: warning: 'virtual void KMPlayerHRefSource::init()': visibility attribute ignored because it
+[5-ERROR] kmplayer_part.h:47: warning: conflicts with previous declaration here
+[5-ERROR] kmplayer_part.cpp:998: warning: 'virtual bool KMPlayerHRefSource::hasLength()': visibility attribute ignored because it
+[5-ERROR] kmplayer_part.h:41: warning: conflicts with previous declaration here
+[5-ERROR] kmplayer_part.cpp:1002: warning: 'virtual bool KMPlayerHRefSource::processOutput(const QString&)': visibility attribute ignored because it
+[5-ERROR] kmplayer_part.h:40: warning: conflicts with previous declaration here
+[5-ERROR] kmplayer_part.cpp:1007: warning: 'void KMPlayerHRefSource::setURL(const KURL&)': visibility attribute ignored because it
+[5-ERROR] kmplayer_part.h:43: warning: conflicts with previous declaration here
+[5-ERROR] kmplayer_part.cpp:1015: warning: 'virtual void KMPlayerHRefSource::play()': visibility attribute ignored because it
+[5-ERROR] kmplayer_part.h:53: warning: conflicts with previous declaration here
+[5-ERROR] kmplayer_part.cpp:1020: warning: 'virtual void KMPlayerHRefSource::activate()': visibility attribute ignored because it
+[5-ERROR] kmplayer_part.h:48: warning: conflicts with previous declaration here
+[5-ERROR] kmplayer_part.cpp:1037: warning: 'void KMPlayerHRefSource::clear()': visibility attribute ignored because it
+[5-ERROR] kmplayer_part.h:44: warning: conflicts with previous declaration here
+[5-ERROR] kmplayer_part.cpp:1041: warning: 'void KMPlayerHRefSource::grabReady(const QString&)': visibility attribute ignored because it
+[5-ERROR] kmplayer_part.h:52: warning: conflicts with previous declaration here
+[5-ERROR] kmplayer_part.cpp:1048: warning: 'void KMPlayerHRefSource::finished()': visibility attribute ignored because it
+[5-ERROR] kmplayer_part.h:50: warning: conflicts with previous declaration here
+[5-ERROR] kmplayer_part.cpp:1061: warning: 'virtual void KMPlayerHRefSource::deactivate()': visibility attribute ignored because it
+[5-ERROR] kmplayer_part.h:49: warning: conflicts with previous declaration here
+[5-ERROR] kmplayer_part.cpp:1070: warning: 'virtual QString KMPlayerHRefSource::prettyName()': visibility attribute ignored because it
+[5-ERROR] kmplayer_part.h:45: warning: conflicts with previous declaration here
+[5-ERROR] make[2]: *** [kmplayer_part.lo] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kmplayer.1181955383.6836.1627887995/kmplayer-0.9.1/src'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kmplayer.1181955383.6836.1627887995/kmplayer-0.9.1'
+[5-ERROR] make: *** [all] Error 2
 [5-ERROR] --- BUILD ERROR ---
 
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kmplayer.1169153312.18460.1197622847/kmplayer-0.9.1/po'
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kmplayer.1169153312.18460.1197622847/kmplayer-0.9.1/po'
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.kmplayer.1169153312.18460.1197622847/kmplayer-0.9.1'
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.kmplayer.1169153312.18460.1197622847/kmplayer-0.9.1'
-[9-ERROR] make[2]: Nothing to be done for `install-exec-am'.
-[9-ERROR] make[2]: Nothing to be done for `install-data-am'.
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kmplayer.1169153312.18460.1197622847/kmplayer-0.9.1'
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kmplayer.1169153312.18460.1197622847/kmplayer-0.9.1'
-[9-ERROR] Trying to copy the default documentation ...
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing /lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Checking usr/share/applications/kde/kmplayer.desktop ... 
-[9-ERROR] Adding X-ROCK-Name tag (kmplayer)
-[9-ERROR] Checking usr/share/mimelnk/application/x-kmplayer.desktop ... 
-[9-ERROR] Adding Categories tag (AudioVideo)
-[9-ERROR] Adding X-ROCK-Name tag (kmplayer)
-[9-ERROR] Adding Categories tag (AudioVideo)
-[9-ERROR] Adding X-ROCK-Name tag (kmplayer)
-[9-ERROR] Checking usr/share/mimelnk/application/x-mplayer2.desktop ... 
-[9-ERROR] Adding Categories tag (AudioVideo)
-[9-ERROR] Adding X-ROCK-Name tag (kmplayer)
-[9-ERROR] Checking usr/share/mimelnk/video/x-ms-wmp.desktop ... 
-[9-ERROR] Adding Categories tag (AudioVideo)
-[9-ERROR] Adding X-ROCK-Name tag (kmplayer)
-[9-ERROR] Checking usr/share/services/kmplayer_part.desktop ... 
-[9-ERROR] Adding Categories tag (AudioVideo)
-[9-ERROR] Adding X-ROCK-Name tag (kmplayer)
-[9-ERROR] Found 142 files for this package.
-[9-ERROR] Applying package split: 40 kmplayer:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
-[9-ERROR] Applying package split: 42 kmplayer:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 kmplayer:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <kmplayer> Creating flist file ...
-[9-ERROR] <kmplayer> Creating package dependencies file ...
-[9-ERROR] <kmplayer> Creating package description ...
-[9-ERROR] <kmplayer> Creating md5sum and cksum files ...
-[9-ERROR] <kmplayer:dev> Creating flist file ...
-[9-ERROR] <kmplayer:dev> Creating package dependencies file ...
-[9-ERROR] <kmplayer:dev> Creating package description ...
-[9-ERROR] <kmplayer:dev> Creating md5sum and cksum files ...
-[9-ERROR] <kmplayer:doc> Creating flist file ...
-[9-ERROR] <kmplayer:doc> Creating package dependencies file ...
-[9-ERROR] <kmplayer:doc> Creating package description ...
-[9-ERROR] <kmplayer:doc> Creating md5sum and cksum files ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Found shared files with other packages:
-[9-ERROR] usr/share/mimelnk/application/x-mplayer2.desktop: kdelibs kmplayer
-[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] kmplayer_part.cpp:765: warning: 'KMPlayerLiveConnectExtension::KMPlayerLiveConnectExtension(KMPlayerPart*)': visibility attribute ignored because it
+[9-ERROR] kmplayer_part.h:81: warning: conflicts with previous declaration here
+[9-ERROR] kmplayer_part.cpp:773: warning: 'virtual KMPlayerLiveConnectExtension::~KMPlayerLiveConnectExtension()': visibility attribute ignored because it
+[9-ERROR] kmplayer_part.h:82: warning: conflicts with previous declaration here
+[9-ERROR] kmplayer_part.cpp:777: warning: 'void KMPlayerLiveConnectExtension::started()': visibility attribute ignored because it
+[9-ERROR] kmplayer_part.h:102: warning: conflicts with previous declaration here
+[9-ERROR] kmplayer_part.cpp:781: warning: 'void KMPlayerLiveConnectExtension::finished()': visibility attribute ignored because it
+[9-ERROR] kmplayer_part.h:103: warning: conflicts with previous declaration here
+[9-ERROR] kmplayer_part.cpp:794: warning: 'virtual bool KMPlayerLiveConnectExtension::get(long unsigned int, const QString&, KParts::LiveConnectExtension::Type&, long unsigned int&, QString&)': visibility attribute ignored because it
+[9-ERROR] kmplayer_part.h:86: warning: conflicts with previous declaration here
+[9-ERROR] kmplayer_part.cpp:823: warning: 'virtual bool KMPlayerLiveConnectExtension::put(long unsigned int, const QString&, const QString&)': visibility attribute ignored because it
+[9-ERROR] kmplayer_part.h:87: warning: conflicts with previous declaration here
+[9-ERROR] kmplayer_part.cpp:848: warning: 'virtual bool KMPlayerLiveConnectExtension::call(long unsigned int, const QString&, const QStringList&, KParts::LiveConnectExtension::Type&, long unsigned int&, QString&)': visibility attribute ignored because it
+[9-ERROR] kmplayer_part.h:90: warning: conflicts with previous declaration here
+[9-ERROR] kmplayer_part.cpp:963: warning: 'virtual void KMPlayerLiveConnectExtension::unregister(long unsigned int)': visibility attribute ignored because it
+[9-ERROR] kmplayer_part.h:91: warning: conflicts with previous declaration here
+[9-ERROR] kmplayer_part.cpp:966: warning: 'void KMPlayerLiveConnectExtension::setSize(int, int)': visibility attribute ignored because it
+[9-ERROR] kmplayer_part.h:101: warning: conflicts with previous declaration here
+[9-ERROR] kmplayer_part.cpp:984: warning: 'KMPlayerHRefSource::KMPlayerHRefSource(KMPlayer::PartBase*)': visibility attribute ignored because it
+[9-ERROR] kmplayer_part.h:38: warning: conflicts with previous declaration here
+[9-ERROR] kmplayer_part.cpp:989: warning: 'virtual KMPlayerHRefSource::~KMPlayerHRefSource()': visibility attribute ignored because it
+[9-ERROR] kmplayer_part.h:39: warning: conflicts with previous declaration here
+[9-ERROR] kmplayer_part.cpp:993: warning: 'virtual void KMPlayerHRefSource::init()': visibility attribute ignored because it
+[9-ERROR] kmplayer_part.h:47: warning: conflicts with previous declaration here
+[9-ERROR] kmplayer_part.cpp:998: warning: 'virtual bool KMPlayerHRefSource::hasLength()': visibility attribute ignored because it
+[9-ERROR] kmplayer_part.h:41: warning: conflicts with previous declaration here
+[9-ERROR] kmplayer_part.cpp:1002: warning: 'virtual bool KMPlayerHRefSource::processOutput(const QString&)': visibility attribute ignored because it
+[9-ERROR] kmplayer_part.h:40: warning: conflicts with previous declaration here
+[9-ERROR] kmplayer_part.cpp:1007: warning: 'void KMPlayerHRefSource::setURL(const KURL&)': visibility attribute ignored because it
+[9-ERROR] kmplayer_part.h:43: warning: conflicts with previous declaration here
+[9-ERROR] kmplayer_part.cpp:1015: warning: 'virtual void KMPlayerHRefSource::play()': visibility attribute ignored because it
+[9-ERROR] kmplayer_part.h:53: warning: conflicts with previous declaration here
+[9-ERROR] kmplayer_part.cpp:1020: warning: 'virtual void KMPlayerHRefSource::activate()': visibility attribute ignored because it
+[9-ERROR] kmplayer_part.h:48: warning: conflicts with previous declaration here
+[9-ERROR] kmplayer_part.cpp:1037: warning: 'void KMPlayerHRefSource::clear()': visibility attribute ignored because it
+[9-ERROR] kmplayer_part.h:44: warning: conflicts with previous declaration here
+[9-ERROR] kmplayer_part.cpp:1041: warning: 'void KMPlayerHRefSource::grabReady(const QString&)': visibility attribute ignored because it
+[9-ERROR] kmplayer_part.h:52: warning: conflicts with previous declaration here
+[9-ERROR] kmplayer_part.cpp:1048: warning: 'void KMPlayerHRefSource::finished()': visibility attribute ignored because it
+[9-ERROR] kmplayer_part.h:50: warning: conflicts with previous declaration here
+[9-ERROR] kmplayer_part.cpp:1061: warning: 'virtual void KMPlayerHRefSource::deactivate()': visibility attribute ignored because it
+[9-ERROR] kmplayer_part.h:49: warning: conflicts with previous declaration here
+[9-ERROR] kmplayer_part.cpp:1070: warning: 'virtual QString KMPlayerHRefSource::prettyName()': visibility attribute ignored because it
+[9-ERROR] kmplayer_part.h:45: warning: conflicts with previous declaration here
+[9-ERROR] make[2]: *** [kmplayer_part.lo] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kmplayer.1181977261.13972.3474453109/kmplayer-0.9.1/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kmplayer.1181977261.13972.3474453109/kmplayer-0.9.1'
+[9-ERROR] make: *** [all] Error 2
 [9-ERROR] --- BUILD ERROR ---
 

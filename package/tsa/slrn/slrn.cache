@@ -20,26 +20,29 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168639252 Fri Jan 12 23:00:52 2007 (5) ERROR
-[TIMESTAMP] 1168845035 Mon Jan 15 08:10:35 2007 (9) ERROR
-[TIMESTAMP] 1168948827 Tue Jan 16 13:00:27 2007 (5) ERROR
-[TIMESTAMP] 1168978738 Tue Jan 16 21:18:58 2007 (9) ERROR
-[TIMESTAMP] 1169092242 Thu Jan 18 04:50:42 2007 (5) ERROR
-[TIMESTAMP] 1169149010 Thu Jan 18 20:36:50 2007 (9) ERROR
+[TIMESTAMP] 1181071080 Tue Jun  5 21:18:00 2007 (5) ERROR
+[TIMESTAMP] 1181540129 Mon Jun 11 07:35:29 2007 (9) ERROR
+[TIMESTAMP] 1181823845 Thu Jun 14 14:24:05 2007 (5) ERROR
+[TIMESTAMP] 1181904143 Fri Jun 15 12:42:23 2007 (9) ERROR
+[TIMESTAMP] 1181950391 Sat Jun 16 01:33:11 2007 (5) ERROR
+[TIMESTAMP] 1181971908 Sat Jun 16 07:31:48 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-slrn.err 9-slrn.err
 
-[BUILDTIME] 1904 (5) ERROR
-[BUILDTIME] 1934 (9) ERROR
-[BUILDTIME] 1935 (5) ERROR
-[BUILDTIME] 1943 (9) ERROR
-[BUILDTIME] 1932 (5) ERROR
-[BUILDTIME] 1941 (9) ERROR
+[BUILDTIME] 2602 (5) ERROR
+[BUILDTIME] 2562 (9) ERROR
+[BUILDTIME] 2579 (5) ERROR
+[BUILDTIME] 2529 (9) ERROR
+[BUILDTIME] 2513 (5) ERROR
+[BUILDTIME] 2515 (9) ERROR
 
 
+[5-ERROR] art.c: In function 'read_article':
+[5-ERROR] art.c:2304: error: 'SLang_Error' undeclared (first use in this function)
+[5-ERROR] art.c: In function 'check_for_current_article':
 [5-ERROR] art.c:2742: error: 'SLang_Error' undeclared (first use in this function)
 [5-ERROR] art.c: In function 'slrn_subject_strip_was':
 [5-ERROR] art.c:2772: warning: assignment makes pointer from integer without a cast
@@ -51,7 +54,6 @@
 [5-ERROR] art.c:3967: error: storage size of 'st' isn't known
 [5-ERROR] art.c:3969: error: 'SLRL_DISPLAY_BUFFER_SIZE' undeclared (first use in this function)
 [5-ERROR] art.c:3992: warning: comparison between pointer and integer
-[5-ERROR] art.c:3969: error: storage size of 'same_subject' isn't known
 [5-ERROR] art.c: In function 'save_article_to_file':
 [5-ERROR] art.c:4218: error: 'SLRL_DISPLAY_BUFFER_SIZE' undeclared (first use in this function)
 [5-ERROR] art.c:4355: error: 'SLang_Error' undeclared (first use in this function)
@@ -59,13 +61,11 @@
 [5-ERROR] art.c:4509: error: 'SLang_Error' undeclared (first use in this function)
 [5-ERROR] art.c: In function 'pipe_article':
 [5-ERROR] art.c:4573: error: 'SLRL_DISPLAY_BUFFER_SIZE' undeclared (first use in this function)
-[5-ERROR] art.c:4573: error: storage size of 'cmd' isn't known
 [5-ERROR] art.c: In function 'header_generic_search':
 [5-ERROR] art.c:4944: error: 'SLRL_DISPLAY_BUFFER_SIZE' undeclared (first use in this function)
 [5-ERROR] art.c:4945: error: storage size of 'st' isn't known
 [5-ERROR] art.c:4970: warning: comparison between pointer and integer
 [5-ERROR] art.c:4976: warning: comparison between pointer and integer
-[5-ERROR] art.c:4944: error: storage size of 'search_str' isn't known
 [5-ERROR] art.c: In function 'score_headers':
 [5-ERROR] art.c:5222: error: 'SLang_Error' undeclared (first use in this function)
 [5-ERROR] art.c: In function 'get_add_headers':
@@ -85,12 +85,15 @@
 [5-ERROR] art.c:8200: error: incompatible type for argument 1 of 'SLsmg_write_char'
 [5-ERROR] art.c:8201: error: incompatible type for argument 1 of 'SLsmg_write_char'
 [5-ERROR] make[2]: *** [art.o] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.slrn.1169092222.3377.905555977/slrn-0.9.8.1/src'
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.slrn.1181950366.18725.4161569442/slrn-0.9.8.1/src'
 [5-ERROR] make[1]: *** [all] Error 2
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.slrn.1169092222.3377.905555977/slrn-0.9.8.1/src'
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.slrn.1181950366.18725.4161569442/slrn-0.9.8.1/src'
 [5-ERROR] make: *** [all-recursive] Error 1
 [5-ERROR] --- BUILD ERROR ---
 
+[9-ERROR] art.c: In function 'read_article':
+[9-ERROR] art.c:2304: error: 'SLang_Error' undeclared (first use in this function)
+[9-ERROR] art.c: In function 'check_for_current_article':
 [9-ERROR] art.c:2742: error: 'SLang_Error' undeclared (first use in this function)
 [9-ERROR] art.c: In function 'slrn_subject_strip_was':
 [9-ERROR] art.c:2772: warning: assignment makes pointer from integer without a cast
@@ -102,7 +105,6 @@
 [9-ERROR] art.c:3967: error: storage size of 'st' isn't known
 [9-ERROR] art.c:3969: error: 'SLRL_DISPLAY_BUFFER_SIZE' undeclared (first use in this function)
 [9-ERROR] art.c:3992: warning: comparison between pointer and integer
-[9-ERROR] art.c:3969: error: storage size of 'same_subject' isn't known
 [9-ERROR] art.c: In function 'save_article_to_file':
 [9-ERROR] art.c:4218: error: 'SLRL_DISPLAY_BUFFER_SIZE' undeclared (first use in this function)
 [9-ERROR] art.c:4355: error: 'SLang_Error' undeclared (first use in this function)
@@ -110,13 +112,11 @@
 [9-ERROR] art.c:4509: error: 'SLang_Error' undeclared (first use in this function)
 [9-ERROR] art.c: In function 'pipe_article':
 [9-ERROR] art.c:4573: error: 'SLRL_DISPLAY_BUFFER_SIZE' undeclared (first use in this function)
-[9-ERROR] art.c:4573: error: storage size of 'cmd' isn't known
 [9-ERROR] art.c: In function 'header_generic_search':
 [9-ERROR] art.c:4944: error: 'SLRL_DISPLAY_BUFFER_SIZE' undeclared (first use in this function)
 [9-ERROR] art.c:4945: error: storage size of 'st' isn't known
 [9-ERROR] art.c:4970: warning: comparison between pointer and integer
 [9-ERROR] art.c:4976: warning: comparison between pointer and integer
-[9-ERROR] art.c:4944: error: storage size of 'search_str' isn't known
 [9-ERROR] art.c: In function 'score_headers':
 [9-ERROR] art.c:5222: error: 'SLang_Error' undeclared (first use in this function)
 [9-ERROR] art.c: In function 'get_add_headers':
@@ -136,9 +136,9 @@
 [9-ERROR] art.c:8200: error: incompatible type for argument 1 of 'SLsmg_write_char'
 [9-ERROR] art.c:8201: error: incompatible type for argument 1 of 'SLsmg_write_char'
 [9-ERROR] make[2]: *** [art.o] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.slrn.1169148989.27482.1060515637/slrn-0.9.8.1/src'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.slrn.1181971883.21964.2938899655/slrn-0.9.8.1/src'
 [9-ERROR] make[1]: *** [all] Error 2
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.slrn.1169148989.27482.1060515637/slrn-0.9.8.1/src'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.slrn.1181971883.21964.2938899655/slrn-0.9.8.1/src'
 [9-ERROR] make: *** [all-recursive] Error 1
 [9-ERROR] --- BUILD ERROR ---
 

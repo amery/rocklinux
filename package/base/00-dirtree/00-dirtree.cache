@@ -20,23 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168525760 Thu Jan 11 15:29:20 2007 (5)
-[TIMESTAMP] 1168710694 Sat Jan 13 18:51:34 2007 (9) ERROR
-[TIMESTAMP] 1168957455 Tue Jan 16 15:24:15 2007 (9) ERROR
-[TIMESTAMP] 1169127750 Thu Jan 18 14:42:30 2007 (9) ERROR
+[TIMESTAMP] 1180899499 Sun Jun  3 21:38:19 2007 (5)
+[TIMESTAMP] 1181252137 Thu Jun  7 23:35:37 2007 (9) ERROR
+[TIMESTAMP] 1181842283 Thu Jun 14 19:31:23 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 1-00-dirtree.log 5-00-dirtree.log 9-00-dirtree.err
 
-[BUILDTIME] 732 (5)
-[BUILDTIME] 1502 (9) ERROR
-[BUILDTIME] 1527 (9) ERROR
-[BUILDTIME] 1524 (9) ERROR
-[SIZE] 0.07 MB, 118 files
+[BUILDTIME] 1328 (5)
+[BUILDTIME] 2195 (9) ERROR
+[BUILDTIME] 2256 (9) ERROR
+[SIZE] 0.07 MB, 119 files
 
-[DEP] bash2 coreutils cvm findutils gawk gcc40 grep mktemp sed
+[DEP] bash2 coreutils cvm findutils gawk gcc42 grep ltrace mktemp sed xmame
 
 [PROVIDES] init.d
 
@@ -66,6 +64,7 @@
 [9-ERROR] Exists already: dev/zero.
 [9-ERROR] Exists already: dev/tty.
 [9-ERROR] Exists already: dev/console.
+[9-ERROR] Exists already: /dev/initctl.
 [9-ERROR] Hook preconf is still marked as dirty ...
 [9-ERROR] Hook premake is still marked as dirty ...
 [9-ERROR] Hook inmake is still marked as dirty ...
@@ -73,7 +72,7 @@
 [9-ERROR] Creating file list and doing final adaptions ... 
 [9-ERROR] Processing /lib corrections ...
 [9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 118 files for this package.
+[9-ERROR] Found 119 files for this package.
 [9-ERROR] Skipping package split:  00-dirtree:  (splitdesc_() undefined)
 [9-ERROR] Calculating package dependencies ...
 [9-ERROR] <00-dirtree> Creating flist file ...
@@ -82,12 +81,11 @@
 [9-ERROR] <00-dirtree> Creating md5sum and cksum files ...
 [9-ERROR] Making post-install adaptions.
 [9-ERROR] Found shared files with other packages:
-[9-ERROR] usr/bin: 00-dirtree cvm
+[9-ERROR] usr/bin: 00-dirtree cvm ltrace xmame
 [9-ERROR] usr/include: 00-dirtree cvm
 [9-ERROR] usr/lib: 00-dirtree cvm
-[9-ERROR] usr/share/man/man1: 00-dirtree netpbm twoftpd ucspi-unix
-[9-ERROR] usr/share/man/man3: 00-dirtree netpbm
-[9-ERROR] usr/share/man/man5: 00-dirtree netpbm
+[9-ERROR] usr/share/man/man1: 00-dirtree twoftpd ucspi-unix
+[9-ERROR] usr/share/man/man6: 00-dirtree xmame
 [9-ERROR] --- BUILD ERROR ---
 [9-ERROR] --- BUILD ERROR ---
 

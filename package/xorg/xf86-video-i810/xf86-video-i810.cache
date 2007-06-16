@@ -20,25 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168539278 Thu Jan 11 19:14:38 2007 (5)
-[TIMESTAMP] 1168732470 Sun Jan 14 00:54:30 2007 (9)
+[TIMESTAMP] 1180921290 Mon Jun  4 03:41:30 2007 (5)
+[TIMESTAMP] 1181296032 Fri Jun  8 11:47:12 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-xf86-video-i810.log 9-xf86-video-i810.log
 
-[BUILDTIME] 3750 (5)
-[BUILDTIME] 4413 (9)
-[SIZE] 0.28 MB, 11 files
+[BUILDTIME] 5504 (5)
+[BUILDTIME] 6722 (9)
+[SIZE] 0.33 MB, 11 files
 
 [DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
-[DEP] coreutils cvm diffutils findutils fontsproto:dev gawk gcc40 gcc40:dev
-[DEP] glibc23 glibc23:dev glproto:dev grep libdrm:dev libx11:dev libxv:dev
-[DEP] libxvmc:dev linux-libc-headers:dev make mesalib:dev mktemp net-tools
-[DEP] pkgconfig randrproto:dev renderproto:dev rrdtool sed sysfiles tar
+[DEP] coreutils cvm diffutils findutils fontsproto:dev gawk gcc42 gcc42:dev
+[DEP] glibc26 glibc26:dev glproto:dev grep libdrm:dev libx11:dev libxv:dev
+[DEP] libxvmc:dev linux26-headers:dev ltrace make mesalib:dev mktemp
+[DEP] net-tools pkgconfig randrproto:dev renderproto:dev sed sysfiles tar
 [DEP] util-linux util-macros videoproto:dev xextproto:dev xf86-video-apm
-[DEP] xf86driproto:dev xorg-docs xorg-server xorg-server:dev xproto:dev
+[DEP] xf86driproto:dev xineramaproto:dev xmame xorg-docs xorg-server
+[DEP] xorg-server:dev xproto:dev
 
 [PROVIDES] i810_drv.so libI810XvMC.so
 

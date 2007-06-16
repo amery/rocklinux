@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168525486 Thu Jan 11 15:24:46 2007 (3)
-[TIMESTAMP] 1168844037 Mon Jan 15 07:53:57 2007 (9)
+[TIMESTAMP] 1180899226 Sun Jun  3 21:33:46 2007 (3)
+[TIMESTAMP] 1181539020 Mon Jun 11 07:17:00 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 3-udev.log 9-udev.log
 
-[BUILDTIME] 2500 (3)
-[BUILDTIME] 3187 (9)
-[SIZE] 0.45 MB, 78 files
+[BUILDTIME] 3390 (3)
+[BUILDTIME] 4093 (9)
+[SIZE] 0.46 MB, 94 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils gawk gcc40
-[DEP] gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev make
-[DEP] mktemp patch rrdtool sed sysfiles tar
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm findutils gawk gcc42
+[DEP] gcc42:dev glibc26 glibc26:dev grep libelf linux26-headers:dev ltrace
+[DEP] m4 make mktemp patch sed sysfiles tar xmame
 
 [PROVIDES] libvolume_id.a libvolume_id.so scsi_id udevcontrol udevd
 [PROVIDES] udevinfo udevmonitor udevsettle udevtest udevtrigger

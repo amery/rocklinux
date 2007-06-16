@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168543136 Thu Jan 11 20:18:56 2007 (5)
-[TIMESTAMP] 1168737338 Sun Jan 14 02:15:38 2007 (9)
+[TIMESTAMP] 1180926800 Mon Jun  4 05:13:20 2007 (5)
+[TIMESTAMP] 1181309877 Fri Jun  8 15:37:57 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-pcsc-lite.log 9-pcsc-lite.log
 
-[BUILDTIME] 4890 (5)
-[BUILDTIME] 5636 (9)
-[SIZE] 0.19 MB, 23 files
+[BUILDTIME] 6254 (5)
+[BUILDTIME] 6978 (9)
+[SIZE] 0.18 MB, 22 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm devfsd diffutils
-[DEP] findutils flex flex:dev gawk gcc40 gcc40:dev glibc23 glibc23:dev grep
-[DEP] libusb libusb:dev linux-libc-headers:dev m4 make mktemp net-tools
-[DEP] netpbm patch rrdtool sed sysfiles tar twoftpd ucspi-unix util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
+[DEP] flex flex:dev gawk gcc42 gcc42:dev glibc26 glibc26:dev grep libusb
+[DEP] libusb:dev linux26-headers:dev ltrace m4 make mktemp net-tools
+[DEP] patch sed sysfiles tar twoftpd ucspi-unix util-linux xmame
 
 [PROVIDES] bundleTool formaticc installifd libmusclecard.a libmusclecard.so
 [PROVIDES] libpcsclite.a libpcsclite.so pcsc_demo pcscd

@@ -20,108 +20,58 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168588858 Fri Jan 12 09:00:58 2007 (5)
-[TIMESTAMP] 1168790275 Sun Jan 14 16:57:55 2007 (9) ERROR
-[TIMESTAMP] 1168966942 Tue Jan 16 18:02:22 2007 (9) ERROR
-[TIMESTAMP] 1169137229 Thu Jan 18 17:20:29 2007 (9) ERROR
+[TIMESTAMP] 1180985771 Mon Jun  4 21:36:11 2007 (5)
+[TIMESTAMP] 1181443131 Sun Jun 10 04:38:51 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-firefox.log 9-firefox.err
+[LOGS] 5-firefox.log 9-firefox.log
 
-[BUILDTIME] 251993 (5)
-[BUILDTIME] 253389 (9) ERROR
-[BUILDTIME] 253612 (9) ERROR
-[BUILDTIME] 253533 (9) ERROR
-[SIZE] 28.91 MB, 1517 files
+[BUILDTIME] 312931 (5)
+[BUILDTIME] 309316 (9)
+[SIZE] 39.24 MB, 1859 files
 
 [DEP] 00-dirtree alsa applewmproto applewmproto:dev atk atk:dev bash2
-[DEP] binutils bzip2 cairo cairo:dev coreutils cvm diffutils epiphany
-[DEP] expat findutils fontconfig fontconfig:dev freetype freetype:dev gawk
-[DEP] gcc40 gcc40:dev gconf gconf:dev glib glib:dev glibc23 glibc23:dev
+[DEP] binutils bzip2 cairo cairo:dev coreutils cvm diffutils expat
+[DEP] findutils fontconfig fontconfig:dev freetype freetype:dev gawk
+[DEP] gcc42 gcc42:dev gconf gconf:dev glib glib:dev glibc26 glibc26:dev
 [DEP] gnome-keyring gnome-vfs gnome-vfs:dev gnome2-dirtree grep gtk+
 [DEP] gtk+:dev imake kbproto:dev libart_lgpl23 libbonobo libbonobo:dev
 [DEP] libbonoboui libgnome libgnome:dev libgnomecanvas libgnomeui
-[DEP] libgnomeui:dev libice libice:dev libidl libidl:dev libjpeg
-[DEP] libjpeg:dev libpng libpng:dev libsm libsm:dev libx11 libx11:dev
-[DEP] libxau libxcursor libxdmcp libxext libxfixes libxft libxft:dev libxi
-[DEP] libxinerama libxml2 libxp libxrandr libxrender libxrender:dev libxt
-[DEP] libxt:dev linux-libc-headers:dev make mktemp net-tools orbit2 pango
-[DEP] pango:dev perl5 pkgconfig popt popt:dev renderproto:dev rrdtool
-[DEP] sed sysfiles tar xextproto:dev xineramaproto:dev xorg-cf-files
-[DEP] xproto:dev zip zlib zlib:dev
+[DEP] libgnomeui:dev libice libice:dev libidl libidl:dev libpng libsm
+[DEP] libsm:dev libx11 libx11:dev libxau libxcb libxcursor libxdmcp libxext
+[DEP] libxfixes libxft libxft:dev libxi libxinerama libxml2 libxp libxrandr
+[DEP] libxrender libxrender:dev libxt libxt:dev linux26-headers:dev
+[DEP] ltrace make mktemp net-tools orbit2 pango pango:dev perl5 pkgconfig
+[DEP] popt popt:dev renderproto:dev sed sysfiles tar xextproto:dev
+[DEP] xineramaproto:dev xmame xorg-cf-files xproto:dev zip zlib
 
-[PROVIDES] firefox firefox-config gtk2xtbin.h gtkxtbin.h
-[PROVIDES] libaccessibility.so libappcomps.so libautoconfig.so
-[PROVIDES] libbrowsercomps.so libbrowserdirprovider.so libcaps.so
-[PROVIDES] libchrome.so libcommandlines.so libcomposer.so libcookie.so
-[PROVIDES] libdocshell.so libeditor.so libembedcomponents.so
-[PROVIDES] libfileview.so libgfx_gtk.so libgfxps.so libgfxpsshar.so
-[PROVIDES] libgkgfx.so libgklayout.so libgkplugin.so libgtkembedmoz.so
-[PROVIDES] libgtkxtbin.so libhtmlpars.so libi18n.so libimgicon.so
-[PROVIDES] libimglib2.so libinspector.so libjar50.so libjsd.so
-[PROVIDES] libjsj.so libmork.so libmozfind.so libmozgnome.so libmozjs.so
-[PROVIDES] libnecko.so libnecko2.so libnkgnomevfs.so libnsappshell.so
-[PROVIDES] libnspr4.so libnss3.so libnssckbi.so libnullplugin.so
-[PROVIDES] liboji.so libpermissions.so libpipboot.so libpipnss.so
+[PROVIDES] firefox firefox-config gtk2xtbin.h gtkxtbin.h libDebugRobot.so
+[PROVIDES] libMyService.so libaccessibility.so libappcomps.so libauth.so
+[PROVIDES] libautoconfig.so libbrowsercomps.so libbrowserdirprovider.so
+[PROVIDES] libcaps.so libchrome.so libcommandlines.so libcomposer.so
+[PROVIDES] libcookie.so libdocshell.so libeditor.so libembedcomponents.so
+[PROVIDES] libfileview.so libfreebl3.so libgfx_gtk.so libgfxps.so
+[PROVIDES] libgfxpsshar.so libgkdebug.so libgkgfx.so libgklayout.so
+[PROVIDES] libgkplugin.so libgtkembedmoz.so libgtkxtbin.so
+[PROVIDES] libhtmlpars.so libi18n.so libimgicon.so libimglib2.so
+[PROVIDES] libjar50.so libjsd.so libjsj.so libmork.so libmozfind.so
+[PROVIDES] libmozgnome.so libmozjs.so libmozz.so libmyspell.so
+[PROVIDES] libnecko.so libnecko2.so libnkdatetime.so libnkfinger.so
+[PROVIDES] libnkgnomevfs.so libnpsimple.so libnsappshell.so libnspr4.so
+[PROVIDES] libnss3.so libnssckbi.so libnullplugin.so liboji.so
+[PROVIDES] libp3p.so libpermissions.so libpipboot.so libpipnss.so
 [PROVIDES] libpippki.so libplc4.so libplds4.so libpref.so librdf.so
-[PROVIDES] libremoteservice.so libsearchservice.so libsmime3.so
-[PROVIDES] libsoftokn3.so libssl3.so libsystem-pref.so libtoolkitcomps.so
-[PROVIDES] libtransformiix.so libtxmgr.so libuconv.so libucvmath.so
-[PROVIDES] libuniversalchardet.so libunixprintplugin.so libwebbrwsr.so
-[PROVIDES] libwebsrvcs.so libwidget_gtk2.so libxmlextras.so libxpcom.so
+[PROVIDES] libremoteservice.so libschemavalidation.so libsearchservice.so
+[PROVIDES] libsmime3.so libsoftokn3.so libspellchecker.so libsql.so
+[PROVIDES] libsroaming.so libssl3.so libstoragecomps.so libsystem-pref.so
+[PROVIDES] libtestdynamic.so libtoolkitcomps.so libtransformiix.so
+[PROVIDES] libtxmgr.so libuconv.so libucvmath.so libuniversalchardet.so
+[PROVIDES] libunixprintplugin.so libwallet.so libwalletviewers.so
+[PROVIDES] libwebbrwsr.so libwebsrvcs.so libwidget_gtk2.so
+[PROVIDES] libwsproxytest.so libxforms.so libxmlextras.so libxpcom.so
 [PROVIDES] libxpcom_compat.so libxpcom_compat_c.so libxpcom_core.so
-[PROVIDES] libxpconnect.so libxpinstall.so libxpistub.so
-
-[9-ERROR] /ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/config/nsinstall -t -m 755 mozilla-installer-bin //opt/firefox/lib/firefox-1.5.0.7
-[9-ERROR] /ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/config/nsinstall -R mozilla-installer mozilla-installer-bin //opt/firefox/lib/firefox-1.5.0.7/install
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/toolkit/mozapps/installer/unix/wizard'
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/toolkit/mozapps/installer/unix'
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/toolkit/mozapps/installer'
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/embedding/browser/gtk'
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/embedding/browser/gtk/src'
-[9-ERROR] ../../../../config/static-rules.mk:8: FINAL_LINK_COMP_NAMES = ../../../../config/final-link-comp-names
-[9-ERROR] ../../../../config/static-rules.mk:9: FINAL_LINK_COMPS = ../../../../config/final-link-comps
-[9-ERROR] /ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/config/nsinstall -t -m 644 gtkmozembed.h gtkmozembed_internal.h /opt/firefox/include/firefox-1.5.0.7/gtkembedmoz
-[9-ERROR] /ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/config/nsinstall -t -m 755 libgtkembedmoz.so  //opt/firefox/lib/firefox-1.5.0.7
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/embedding/browser/gtk/src'
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/embedding/browser/gtk/tests'
-[9-ERROR] /ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/config/nsinstall -t -m 755 TestGtkEmbed //opt/firefox/lib/firefox-1.5.0.7
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/embedding/browser/gtk/tests'
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.firefox.1169134563.20440.428350364/mozilla/embedding/browser/gtk'
-[9-ERROR] Run the component registration ...
-[9-ERROR] /opt/firefox/lib/firefox-1.5.0.7 /ROCK/src.firefox.1169134563.20440.428350364/mozilla
-[9-ERROR] /ROCK/src.firefox.1169134563.20440.428350364/mozilla
-[9-ERROR] Hook preconf is still marked as dirty ...
-[9-ERROR] Hook premake is still marked as dirty ...
-[9-ERROR] Hook inmake is still marked as dirty ...
-[9-ERROR] Hook postmake is still marked as dirty ...
-[9-ERROR] Install desktop file '/ROCK/package/x11/firefox/firefox.desktop': Trying to copy the default documentation ...
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing /lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Checking usr/share/applications/firefox.desktop ... 
-[9-ERROR] Found 3619 files for this package.
-[9-ERROR] Applying package split: 40 firefox:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
-[9-ERROR] Applying package split: 42 firefox:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 firefox:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <firefox> Creating flist file ...
-[9-ERROR] <firefox> Creating package dependencies file ...
-[9-ERROR] <firefox> Creating package description ...
-[9-ERROR] <firefox> Creating md5sum and cksum files ...
-[9-ERROR] <firefox:dev> Creating flist file ...
-[9-ERROR] <firefox:dev> Creating package dependencies file ...
-[9-ERROR] <firefox:dev> Creating package description ...
-[9-ERROR] <firefox:dev> Creating md5sum and cksum files ...
-[9-ERROR] <firefox:doc> Creating flist file ...
-[9-ERROR] <firefox:doc> Creating package dependencies file ...
-[9-ERROR] <firefox:doc> Creating package description ...
-[9-ERROR] <firefox:doc> Creating md5sum and cksum files ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Found shared files with other packages:
-[9-ERROR] opt/firefox/lib/firefox-1.5.0.7/components/xpti.dat: epiphany firefox
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] --- BUILD ERROR ---
+[PROVIDES] libxpcomsample.so libxpconnect.so libxpctest.so libxpinstall.so
+[PROVIDES] libxpistub.so
 

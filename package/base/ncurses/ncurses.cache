@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168523588 Thu Jan 11 14:53:08 2007 (3)
-[TIMESTAMP] 1168719546 Sat Jan 13 21:19:06 2007 (9)
+[TIMESTAMP] 1180895579 Sun Jun  3 20:32:59 2007 (3)
+[TIMESTAMP] 1181268703 Fri Jun  8 04:11:43 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 3-ncurses.log 9-ncurses.log
 
-[BUILDTIME] 35793 (3)
-[BUILDTIME] 50166 (9)
-[SIZE] 5.23 MB, 2255 files
+[BUILDTIME] 43966 (3)
+[BUILDTIME] 60644 (9)
+[SIZE] 5.26 MB, 2256 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils
-[DEP] findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev grep libtool
-[DEP] linux-libc-headers:dev make mktemp net-tools netpbm patch rrdtool
-[DEP] sed sysfiles tar twoftpd ucspi-unix util-linux
+[DEP] findutils gawk gcc42 gcc42:dev glibc26 glibc26:dev grep libtool
+[DEP] linux26-headers:dev make mktemp net-tools sed sysfiles tar twoftpd
+[DEP] ucspi-unix util-linux xmame
 
 [PROVIDES] captoinfo clear infocmp infotocap libcurses.a libcurses.so
 [PROVIDES] libcursesw.so libform.a libform.so libform_g.a libformw.a
@@ -44,6 +44,6 @@
 [PROVIDES] libncurses++.so libncurses++w.a libncurses++w.so libncurses.a
 [PROVIDES] libncurses.so libncurses_g.a libncursesw.a libncursesw.so
 [PROVIDES] libncursesw_g.a libpanel.a libpanel.so libpanel_g.a libpanelw.a
-[PROVIDES] libpanelw.so libpanelw_g.a libtermcap.a libtermcap.so reset
-[PROVIDES] tack tic toe tput tset
+[PROVIDES] libpanelw.so libpanelw_g.a libtermcap.a libtermcap.so
+[PROVIDES] ncurses5-config ncursesw5-config reset tack tic toe tput tset
 

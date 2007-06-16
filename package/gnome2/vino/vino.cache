@@ -20,33 +20,27 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168591091 Fri Jan 12 09:38:11 2007 (5) ERROR
-[TIMESTAMP] 1168793032 Sun Jan 14 17:43:52 2007 (9) ERROR
-[TIMESTAMP] 1168942032 Tue Jan 16 11:07:12 2007 (5) ERROR
-[TIMESTAMP] 1168967607 Tue Jan 16 18:13:27 2007 (9) ERROR
-[TIMESTAMP] 1169085424 Thu Jan 18 02:57:04 2007 (5) ERROR
-[TIMESTAMP] 1169137896 Thu Jan 18 17:31:36 2007 (9) ERROR
+[TIMESTAMP] 1180988709 Mon Jun  4 22:25:09 2007 (5)
+[TIMESTAMP] 1181450500 Sun Jun 10 06:41:40 2007 (9) ERROR
+[TIMESTAMP] 1181866516 Fri Jun 15 02:15:16 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-vino.err 9-vino.err
+[LOGS] 5-vino.log 9-vino.err
 
-[BUILDTIME] 6095 (5) ERROR
-[BUILDTIME] 7737 (9) ERROR
-[BUILDTIME] 7752 (5) ERROR
-[BUILDTIME] 7715 (9) ERROR
-[BUILDTIME] 7769 (5) ERROR
-[BUILDTIME] 7734 (9) ERROR
-[SIZE] 35.46 MB, 82 files
+[BUILDTIME] 7309 (5)
+[BUILDTIME] 9101 (9) ERROR
+[BUILDTIME] 8911 (9) ERROR
+[SIZE] 35.15 MB, 84 files
 
 [DEP] 00-dirtree alsa alsa:dev applewmproto applewmproto:dev atk atk:dev
 [DEP] audiofile audiofile:dev bash2 binutils bzip2 cairo cairo:dev
 [DEP] coreutils cpan-xml-parser cups cvm damageproto:dev dbus dbus-glib
 [DEP] dbus-glib:dev dbus:dev diffutils esound esound:dev evolution-webcal
 [DEP] expat expat:dev findutils fixesproto:dev fontconfig fontconfig:dev
-[DEP] freetype freetype:dev gawk gcc40 gcc40:dev gconf gconf:dev gettext
-[DEP] glib glib:dev glibc23 glibc23:dev gnome-keyring gnome-keyring:dev
+[DEP] freetype freetype:dev gawk gcc42 gcc42:dev gconf gconf:dev gettext
+[DEP] glib glib:dev glibc26 glibc26:dev gnome-keyring gnome-keyring:dev
 [DEP] gnome-vfs gnome-vfs:dev gnome2-dirtree gnutls gnutls:dev grep gtk+
 [DEP] gtk+:dev hicolor-icon-theme imake inputproto:dev libart_lgpl23
 [DEP] libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui libbonoboui:dev
@@ -54,93 +48,42 @@
 [DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev
 [DEP] libgpg-error libgpg-error:dev libice libice:dev libjpeg libjpeg:dev
 [DEP] libpng libpng:dev libsm libsm:dev libx11 libx11:dev libxau libxau:dev
-[DEP] libxcursor libxdamage libxdamage:dev libxdmcp libxdmcp:dev libxext
-[DEP] libxext:dev libxfixes libxfixes:dev libxi libxinerama libxml2
-[DEP] libxml2:dev libxrandr libxrender libxrender:dev libxt libxtst
-[DEP] libxtst:dev liferea linux-libc-headers:dev make mktemp net-tools
-[DEP] openssl orbit2 orbit2:dev pango pango:dev perl5 pkgconfig popt
-[DEP] popt:dev rrdtool sed sysfiles tar util-linux xextproto:dev
-[DEP] xorg-cf-files xproto:dev zapping zlib zlib:dev
+[DEP] libxcb libxcb:dev libxcursor libxdamage libxdamage:dev libxdmcp
+[DEP] libxdmcp:dev libxext libxext:dev libxfixes libxfixes:dev libxi
+[DEP] libxinerama libxml2 libxml2:dev libxrandr libxrender libxrender:dev
+[DEP] libxt libxtst libxtst:dev linux26-headers:dev ltrace make mktemp
+[DEP] net-tools openssl orbit2 orbit2:dev pango pango:dev perl5 pkgconfig
+[DEP] popt popt:dev sed sysfiles tar util-linux xextproto:dev xmame
+[DEP] xorg-cf-files xproto:dev zlib zlib:dev
 
 [PROVIDES] vino-preferences
 
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-cy.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-da.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-de.xml: evolution-webcal vino zapping
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-el.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-en_CA.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-en_GB.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-es.xml: evolution-webcal vino zapping
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-et.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-eu.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-fa.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-fi.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-fr.xml: evolution-webcal vino zapping
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-gl.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-gu.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-hi.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-hu.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-id.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-it.xml: evolution-webcal vino zapping
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-ja.xml: evolution-webcal vino zapping
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-ko.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-lt.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-mk.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-ms.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-nb.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-ne.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-nl.xml: evolution-webcal vino zapping
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-or.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-pa.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-pl.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-pt.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-pt_BR.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-ro.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-ru.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-sk.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-sq.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-sr.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-sr@Latn.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-sv.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-ta.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-th.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-tr.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-ug.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-uk.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-vi.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-xh.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-zh_CN.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-zh_TW.xml: evolution-webcal vino
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree.xml: evolution-webcal liferea vino zapping
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] --- BUILD ERROR ---
-
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-cy.xml: evolution-webcal vino
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-da.xml: evolution-webcal vino
-[9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-de.xml: evolution-webcal vino zapping
+[9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-de.xml: evolution-webcal vino
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-el.xml: evolution-webcal vino
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-en_CA.xml: evolution-webcal vino
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-en_GB.xml: evolution-webcal vino
-[9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-es.xml: evolution-webcal vino zapping
+[9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-es.xml: evolution-webcal vino
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-et.xml: evolution-webcal vino
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-eu.xml: evolution-webcal vino
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-fa.xml: evolution-webcal vino
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-fi.xml: evolution-webcal vino
-[9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-fr.xml: evolution-webcal vino zapping
+[9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-fr.xml: evolution-webcal vino
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-gl.xml: evolution-webcal vino
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-gu.xml: evolution-webcal vino
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-hi.xml: evolution-webcal vino
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-hu.xml: evolution-webcal vino
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-id.xml: evolution-webcal vino
-[9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-it.xml: evolution-webcal vino zapping
-[9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-ja.xml: evolution-webcal vino zapping
+[9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-it.xml: evolution-webcal vino
+[9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-ja.xml: evolution-webcal vino
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-ko.xml: evolution-webcal vino
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-lt.xml: evolution-webcal vino
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-mk.xml: evolution-webcal vino
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-ms.xml: evolution-webcal vino
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-nb.xml: evolution-webcal vino
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-ne.xml: evolution-webcal vino
-[9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-nl.xml: evolution-webcal vino zapping
+[9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-nl.xml: evolution-webcal vino
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-or.xml: evolution-webcal vino
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-pa.xml: evolution-webcal vino
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-pl.xml: evolution-webcal vino
@@ -162,7 +105,7 @@
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-xh.xml: evolution-webcal vino
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-zh_CN.xml: evolution-webcal vino
 [9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree-zh_TW.xml: evolution-webcal vino
-[9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree.xml: evolution-webcal liferea vino zapping
+[9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree.xml: evolution-webcal vino
 [9-ERROR] --- BUILD ERROR ---
 [9-ERROR] --- BUILD ERROR ---
 

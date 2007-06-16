@@ -20,84 +20,74 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168527945 Thu Jan 11 16:05:45 2007 (5)
-[TIMESTAMP] 1168713029 Sat Jan 13 19:30:29 2007 (9)
+[TIMESTAMP] 1180902861 Sun Jun  3 22:34:21 2007 (5)
+[TIMESTAMP] 1181255593 Fri Jun  8 00:33:13 2007 (9) ERROR
+[TIMESTAMP] 1181849926 Thu Jun 14 21:38:46 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-linux26.log 9-linux26.log
+[LOGS] 5-linux26.log 9-linux26.err
 
-[BUILDTIME] 212990 (5)
-[BUILDTIME] 219542 (9)
-[SIZE] 36.36 MB, 1522 files
+[BUILDTIME] 298471 (5)
+[BUILDTIME] 307966 (9) ERROR
+[BUILDTIME] 356357 (9) ERROR
+[SIZE] 38.80 MB, 1720 files
 
-[DEP] 00-dirtree abiword aide alien allegro alsa alsaplayer
-[DEP] amarok amule apache applewmproto arts aspell auctex autofs
-[DEP] bash2 binutils blueglass bonobo10 bzip2 cinepaint clanlib07
-[DEP] control-center coreutils courier-authlib cpan-class-accessor-fast
-[DEP] cpan-class-methodmaker cpan-clone cpan-compress-zlib
-[DEP] cpan-data-hierarchy cpan-date-manip cpan-dbd-mysql
-[DEP] cpan-dbd-pg cpan-dbi cpan-device-ericsson-accessorymenu
-[DEP] cpan-device-modem cpan-device-serialport cpan-digest-nilsimsa
-[DEP] cpan-digest-sha1 cpan-event cpan-filesys-diskfree cpan-getopt-mixed
-[DEP] cpan-html-linkextractor cpan-html-parser cpan-html-tableextract
-[DEP] cpan-html-tagset cpan-html-tree cpan-http-cache-transparent
-[DEP] cpan-http-dav cpan-lingua-en-numbers-ordinate cpan-lingua-preferred
-[DEP] cpan-locale-messages cpan-lwp cpan-mail-sender cpan-mp3-info
-[DEP] cpan-net-dns cpan-net-snmp cpan-nmap-scanner cpan-perlio-gzip
-[DEP] cpan-perlio-via-dynamic cpan-pod-escapes cpan-pod-simple
-[DEP] cpan-regexp-shellish cpan-soap-lite cpan-svk cpan-svn-mirror
-[DEP] cpan-svn-simple cpan-term-progressbar cpan-term-readkey
-[DEP] cpan-time-ctime cpan-tk cpan-tk-tablematrix cpan-unicode-string
-[DEP] cpan-uri cpan-www-mechanize cpan-xml-libxml cpan-xml-libxml-common
-[DEP] cpan-xml-namespacesupport cpan-xml-nodefilter cpan-xml-parser
-[DEP] cpan-xml-sax cpan-xml-simple cpan-xml-twig cpan-xml-writer cpan-yaml
-[DEP] ctwm cudd cups cvm cyrus-sasl2 darkglass dbmail dbus dbus-python
-[DEP] dbus:dev devfsd devhelp device-mapper diffutils dillo directfb dpkg
-[DEP] duplicity dvdrip e2fsprogs enchant encodings epiphany ethereal
-[DEP] ettercap evolution evolution-data-server expect file findutils
-[DEP] firefox flightgear-base fnlib font-adobe-100dpi font-adobe-75dpi
-[DEP] font-adobe-utopia-type1 font-alias font-bh-ttf font-bitstream-speedo
-[DEP] font-misc-ethiopic font-util freefonts frozen-bubble fuse gail gaim
-[DEP] galan gawk gcc40 gcc40:dev gcl gconf gconf110 gconfmm gdk-pixbuf10
-[DEP] gettext gimp-print42 git glib glib12 glibc23 glibc23:dev glibmm gnet
-[DEP] gnet1 gnome-blog gnome-libs14 gnome-menus gnome-pilot gnome-python
-[DEP] gnome-spell gnome-vfs gnome-vfsmm gnome14-dirtree gnome2-dirtree
-[DEP] gnopernicus gnupg2 gnuplotpy gnupod gpac graphviz grep grepmail
-[DEP] groff grub gstreamer gthumb gtk+ gtk-engines10 gtk-perl10 gtk-sharp
-[DEP] gtkhtml gtkmm gtkmm12 gutenprint gv gzip hal heartbeat hercules
-[DEP] hotplug httrack hylafax imagemagick imlib2 iproute2 iptables irssi
-[DEP] isdn4k-utils itcl iverilog jpilot kahakai kdebase kdebluetooth
-[DEP] kdelibs kdemultimedia kino ksimus-boolean lablgtk ladspa lbxproxy
-[DEP] lftp libbonobo libdockapp libelf libesmtp libgda libglademm
-[DEP] libgnomecanvas libgnomecanvasmm libgnomemm libgnomeprint libgnomeui
-[DEP] libgnomeuimm libgphoto libgsf libicu libmcrypt libmrproject libowfat
-[DEP] librsvg libsdl_perl libsigc++ libsigc++1 libsigc++12 libx11 libxslt
-[DEP] licq liferea lighttpd linux-libc-headers:dev lmms lynx m2crypto m4
-[DEP] magicpoint mailscanner make maverik maxima mc memprof mercurial
-[DEP] metatheme mew mixmagic mktemp mod_ruby module-init-tools mono
-[DEP] mono-doc mozilla mpeg4ip mplayerplug-in mrproject mrtg mysql41
-[DEP] mythtv ncurses nessus nx-x11 nxcomp ocaml ogg-vorbis openct
-[DEP] openh323 openhbci openldap openssl orbit2 orbitcpp pam pam_ldap
-[DEP] pango patch pathological pcmciautils pegasus perl5 perl5:dev
-[DEP] perltidy php5 pil polypaudio postgresql ppp proxymngr psyco pwlib
-[DEP] py2play pycairo pycrypto pygame pygobject pygtk pynumarray pyogg
-[DEP] pyopenal pyrex pyslsk pytables python python-ldap python-xlib pyxml
-[DEP] pyzor qt33 qt40 quake2 quilt razor redhat-artwork rexml rhythmbox
-[DEP] rockinitrd rpm rrdtool rstart rsynth rtsp ruby rubygem-actionmailer
-[DEP] rubygem-actionpack rubygem-actionwebservice rubygem-activerecord
-[DEP] rubygem-activesupport rubygem-rails rubygem-rake rubygem-rubyzip
-[DEP] rubygems samba sane-backends scientificpy scons secpanel sed
-[DEP] shorewall sim-im slang smake snmpsession sodipodi spamassassin
-[DEP] spiralsynthmodular spl sqlite3 squeak ssleay-perlmod streamtuner
-[DEP] subversion subversion:server sweep swi-prolog sword sysfiles syslinux
-[DEP] syslinux:dev sysstat tar tcl tetex tetex:dev thunderbird tk torcs
-[DEP] transfig tuxcursor twm udev uml_utilities util-linux util-macros
-[DEP] valgrind vino vte w32codec wakeonlan windowmaker wine wxpython
-[DEP] wxwidgets wxwidgets:dev x11perf xcdroast xchat xdm xedit xemacs
-[DEP] xemacs-packages xemacs:dev xf86-input-acecad xf86-video-apm xfce4
-[DEP] xfig xfs xine-lib xinit xmms xorg-cf-files xorg-server ypserv
-[DEP] zapping zopeinterface zsh
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils
+[DEP] findutils gawk gcc42 gcc42:dev git glibc26 glibc26:dev grep gzip
+[DEP] linux26-headers:dev ltrace m4 make mktemp module-init-tools ncurses
+[DEP] patch perl5 sed sysfiles tar xmame
 
+
+[9-ERROR]   INSTALL sound/pci/snd-via82xx.ko
+[9-ERROR]   INSTALL sound/pci/trident/snd-trident-synth.ko
+[9-ERROR]   INSTALL sound/pci/trident/snd-trident.ko
+[9-ERROR]   INSTALL sound/pci/vx222/snd-vx222.ko
+[9-ERROR]   INSTALL sound/pci/ymfpci/snd-ymfpci.ko
+[9-ERROR]   INSTALL sound/pcmcia/pdaudiocf/snd-pdaudiocf.ko
+[9-ERROR]   INSTALL sound/pcmcia/vx/snd-vxpocket.ko
+[9-ERROR]   INSTALL sound/soc/snd-soc-core.ko
+[9-ERROR]   INSTALL sound/sound_firmware.ko
+[9-ERROR]   INSTALL sound/soundcore.ko
+[9-ERROR]   INSTALL sound/synth/emux/snd-emux-synth.ko
+[9-ERROR]   INSTALL sound/synth/snd-util-mem.ko
+[9-ERROR]   INSTALL sound/usb/snd-usb-audio.ko
+[9-ERROR]   INSTALL sound/usb/snd-usb-lib.ko
+[9-ERROR]   INSTALL sound/usb/usx2y/snd-usb-usx2y.ko
+[9-ERROR] if [ -r System.map -a -x /bin/true ]; then /bin/true -ae -F System.map  2.6.21.3-rock; fi
+[9-ERROR] Running 'depmod -a -q -F /boot/System.map 2.6.21.3-rock' ..
+[9-ERROR] Hook preconf is still marked as dirty ...
+[9-ERROR] Hook premake is still marked as dirty ...
+[9-ERROR] Hook inmake is still marked as dirty ...
+[9-ERROR] Hook postmake is still marked as dirty ...
+[9-ERROR] rmdir: removing directory, /usr/share/doc/linux26
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing /lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Found 1714 files for this package.
+[9-ERROR] Applying package split: 40 linux26:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[9-ERROR] Applying package split: 42 linux26:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 linux26:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] Deleting dependencies, pattern:  -e ".*: net-tools(:.*|)$" ...
+[9-ERROR] <linux26> Creating flist file ...
+[9-ERROR] <linux26> Creating package dependencies file ...
+[9-ERROR] <linux26> Creating package description ...
+[9-ERROR] <linux26> Creating md5sum and cksum files ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] lib/modules/2.6.21.3-rock/modules.alias: acerhk linux26
+[9-ERROR] lib/modules/2.6.21.3-rock/modules.ccwmap: acerhk linux26
+[9-ERROR] lib/modules/2.6.21.3-rock/modules.dep: acerhk linux26
+[9-ERROR] lib/modules/2.6.21.3-rock/modules.ieee1394map: acerhk linux26
+[9-ERROR] lib/modules/2.6.21.3-rock/modules.inputmap: acerhk linux26
+[9-ERROR] lib/modules/2.6.21.3-rock/modules.isapnpmap: acerhk linux26
+[9-ERROR] lib/modules/2.6.21.3-rock/modules.ofmap: acerhk linux26
+[9-ERROR] lib/modules/2.6.21.3-rock/modules.pcimap: acerhk linux26
+[9-ERROR] lib/modules/2.6.21.3-rock/modules.seriomap: acerhk linux26
+[9-ERROR] lib/modules/2.6.21.3-rock/modules.symbols: acerhk linux26
+[9-ERROR] lib/modules/2.6.21.3-rock/modules.usbmap: acerhk linux26
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] --- BUILD ERROR ---
 

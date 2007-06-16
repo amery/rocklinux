@@ -20,33 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168691142 Sat Jan 13 13:25:42 2007 (5) ERROR
-[TIMESTAMP] 1168900048 Mon Jan 15 23:27:28 2007 (9) ERROR
-[TIMESTAMP] 1168953680 Tue Jan 16 14:21:20 2007 (5) ERROR
-[TIMESTAMP] 1168983405 Tue Jan 16 22:36:45 2007 (9) ERROR
-[TIMESTAMP] 1169124013 Thu Jan 18 13:40:13 2007 (5) ERROR
-[TIMESTAMP] 1169153599 Thu Jan 18 21:53:19 2007 (9) ERROR
+[TIMESTAMP] 1181172512 Thu Jun  7 01:28:32 2007 (5) ERROR
+[TIMESTAMP] 1181619130 Tue Jun 12 05:32:10 2007 (9) ERROR
+[TIMESTAMP] 1181832227 Thu Jun 14 16:43:47 2007 (5) ERROR
+[TIMESTAMP] 1181916495 Fri Jun 15 16:08:15 2007 (9) ERROR
+[TIMESTAMP] 1181955531 Sat Jun 16 02:58:51 2007 (5) ERROR
+[TIMESTAMP] 1181977409 Sat Jun 16 09:03:29 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-ginac.err 9-ginac.err
 
-[BUILDTIME] 2562 (5) ERROR
-[BUILDTIME] 2595 (9) ERROR
-[BUILDTIME] 2599 (5) ERROR
-[BUILDTIME] 2605 (9) ERROR
-[BUILDTIME] 2611 (5) ERROR
-[BUILDTIME] 2604 (9) ERROR
+[BUILDTIME] 3362 (5) ERROR
+[BUILDTIME] 3265 (9) ERROR
+[BUILDTIME] 3342 (5) ERROR
+[BUILDTIME] 3161 (9) ERROR
+[BUILDTIME] 3231 (5) ERROR
+[BUILDTIME] 3234 (9) ERROR
 
 
-[5-ERROR] config.status: creating GiNaC.spec
-[5-ERROR] config.status: creating ginac-config
-[5-ERROR] config.status: creating ginac-config.1
-[5-ERROR] config.status: creating ginac.pc
-[5-ERROR] config.status: creating ginac/Makefile
-[5-ERROR] config.status: creating ginac/version.h
-[5-ERROR] config.status: creating check/Makefile
 [5-ERROR] config.status: creating ginsh/Makefile
 [5-ERROR] config.status: creating ginsh/ginsh.1
 [5-ERROR] config.status: creating tools/Makefile
@@ -59,24 +52,31 @@
 [5-ERROR] config.status: executing default commands
 [5-ERROR] Configuration of GiNaC 1.2.1 done. Now type "make".
 [5-ERROR] make  all-recursive
-[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.ginac.1169123986.1978.3694631316/GiNaC-1.2.1'
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.ginac.1181955499.30525.1627887995/GiNaC-1.2.1'
 [5-ERROR] Making all in ginac
-[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.ginac.1169123986.1978.3694631316/GiNaC-1.2.1/ginac'
-[5-ERROR] if /bin/sh ../libtool --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -MT add.lo -MD -MP -MF ".deps/add.Tpo" \
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.ginac.1181955499.30525.1627887995/GiNaC-1.2.1/ginac'
+[5-ERROR] if /bin/sh ../libtool --mode=compile g++-42 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -MT add.lo -MD -MP -MF ".deps/add.Tpo" \
 [5-ERROR] 	  -c -o add.lo `test -f 'add.cpp' || echo './'`add.cpp; \
 [5-ERROR] 	then mv -f ".deps/add.Tpo" ".deps/add.Plo"; \
 [5-ERROR] 	else rm -f ".deps/add.Tpo"; exit 1; \
 [5-ERROR] 	fi
 [5-ERROR] mkdir .libs
-[5-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I.. -g -O2 -MT add.lo -MD -MP -MF .deps/add.Tpo -c add.cpp  -fPIC -DPIC -o .libs/add.o
+[5-ERROR]  g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -g -O2 -MT add.lo -MD -MP -MF .deps/add.Tpo -c add.cpp  -fPIC -DPIC -o .libs/add.o
+[5-ERROR] In file included from basic.h:36,
+[5-ERROR]                  from ex.h:31,
+[5-ERROR]                  from expair.h:26,
+[5-ERROR]                  from expairseq.h:32,
+[5-ERROR]                  from add.h:26,
+[5-ERROR]                  from add.cpp:26:
+[5-ERROR] registrar.h:39: error: type/value mismatch at argument 1 in template parameter list for 'template<template<class> class<template-parameter-1-1> > struct GiNaC::container'
+[5-ERROR] registrar.h:39: error:   expected a template of type 'template<class> class<template-parameter-1-1>', got 'template<class _Tp, class _Alloc> class std::list'
+[5-ERROR] registrar.h:39: error: invalid type in declaration before ';' token
 [5-ERROR] add.cpp:35: error: no matching function for call to 'GiNaC::registered_class_options::print_func(void (GiNaC::add::*)(const GiNaC::print_context&, unsigned int)const)'
-[5-ERROR] registrar.h:73: note: candidates are: GiNaC::registered_class_options& GiNaC::registered_class_options::print_func(const GiNaC::print_functor&) [with Ctx = GiNaC::print_context]
 [5-ERROR] add.cpp:35: error: request for member 'print_func' in '&GiNaC::add::do_print_latex', which is of non-class type 'void (GiNaC::add::*)(const GiNaC::print_latex&, unsigned int)const'
 [5-ERROR] add.cpp:35: error: request for member 'print_func' in '&GiNaC::add::do_print_csrc', which is of non-class type 'void (GiNaC::add::*)(const GiNaC::print_csrc&, unsigned int)const'
 [5-ERROR] add.cpp:35: error: request for member 'print_func' in '&GiNaC::expairseq::do_print_tree', which is of non-class type 'void (GiNaC::expairseq::*)(const GiNaC::print_tree&, unsigned int)const'
 [5-ERROR] add.cpp:35: error: expected primary-expression before '(' token
 [5-ERROR] add.cpp:35: error: no matching function for call to 'GiNaC::registered_class_options::print_func(void (GiNaC::add::*)(const GiNaC::print_context&, unsigned int)const)'
-[5-ERROR] registrar.h:73: note: candidates are: GiNaC::registered_class_options& GiNaC::registered_class_options::print_func(const GiNaC::print_functor&) [with Ctx = GiNaC::print_context]
 [5-ERROR] add.cpp:35: error: expected primary-expression before '>' token
 [5-ERROR] add.cpp:35: error: request for member 'print_func' in '&GiNaC::add::do_print_latex', which is of non-class type 'void (GiNaC::add::*)(const GiNaC::print_latex&, unsigned int)const'
 [5-ERROR] add.cpp:35: error: expected primary-expression before '>' token
@@ -85,19 +85,12 @@
 [5-ERROR] add.cpp:35: error: request for member 'print_func' in '&GiNaC::expairseq::do_print_tree', which is of non-class type 'void (GiNaC::expairseq::*)(const GiNaC::print_tree&, unsigned int)const'
 [5-ERROR] add.cpp:35: error: expected primary-expression before '>' token
 [5-ERROR] make[2]: *** [add.lo] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ginac.1169123986.1978.3694631316/GiNaC-1.2.1/ginac'
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ginac.1181955499.30525.1627887995/GiNaC-1.2.1/ginac'
 [5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.ginac.1169123986.1978.3694631316/GiNaC-1.2.1'
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.ginac.1181955499.30525.1627887995/GiNaC-1.2.1'
 [5-ERROR] make: *** [all] Error 2
 [5-ERROR] --- BUILD ERROR ---
 
-[9-ERROR] config.status: creating GiNaC.spec
-[9-ERROR] config.status: creating ginac-config
-[9-ERROR] config.status: creating ginac-config.1
-[9-ERROR] config.status: creating ginac.pc
-[9-ERROR] config.status: creating ginac/Makefile
-[9-ERROR] config.status: creating ginac/version.h
-[9-ERROR] config.status: creating check/Makefile
 [9-ERROR] config.status: creating ginsh/Makefile
 [9-ERROR] config.status: creating ginsh/ginsh.1
 [9-ERROR] config.status: creating tools/Makefile
@@ -110,24 +103,31 @@
 [9-ERROR] config.status: executing default commands
 [9-ERROR] Configuration of GiNaC 1.2.1 done. Now type "make".
 [9-ERROR] make  all-recursive
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.ginac.1169153572.24788.3951810427/GiNaC-1.2.1'
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.ginac.1181977376.5260.3474453109/GiNaC-1.2.1'
 [9-ERROR] Making all in ginac
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.ginac.1169153572.24788.3951810427/GiNaC-1.2.1/ginac'
-[9-ERROR] if /bin/sh ../libtool --mode=compile g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -MT add.lo -MD -MP -MF ".deps/add.Tpo" \
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.ginac.1181977376.5260.3474453109/GiNaC-1.2.1/ginac'
+[9-ERROR] if /bin/sh ../libtool --mode=compile g++-42 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -MT add.lo -MD -MP -MF ".deps/add.Tpo" \
 [9-ERROR] 	  -c -o add.lo `test -f 'add.cpp' || echo './'`add.cpp; \
 [9-ERROR] 	then mv -f ".deps/add.Tpo" ".deps/add.Plo"; \
 [9-ERROR] 	else rm -f ".deps/add.Tpo"; exit 1; \
 [9-ERROR] 	fi
 [9-ERROR] mkdir .libs
-[9-ERROR]  g++-40 -DHAVE_CONFIG_H -I. -I. -I.. -g -O2 -MT add.lo -MD -MP -MF .deps/add.Tpo -c add.cpp  -fPIC -DPIC -o .libs/add.o
+[9-ERROR]  g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -g -O2 -MT add.lo -MD -MP -MF .deps/add.Tpo -c add.cpp  -fPIC -DPIC -o .libs/add.o
+[9-ERROR] In file included from basic.h:36,
+[9-ERROR]                  from ex.h:31,
+[9-ERROR]                  from expair.h:26,
+[9-ERROR]                  from expairseq.h:32,
+[9-ERROR]                  from add.h:26,
+[9-ERROR]                  from add.cpp:26:
+[9-ERROR] registrar.h:39: error: type/value mismatch at argument 1 in template parameter list for 'template<template<class> class<template-parameter-1-1> > struct GiNaC::container'
+[9-ERROR] registrar.h:39: error:   expected a template of type 'template<class> class<template-parameter-1-1>', got 'template<class _Tp, class _Alloc> class std::list'
+[9-ERROR] registrar.h:39: error: invalid type in declaration before ';' token
 [9-ERROR] add.cpp:35: error: no matching function for call to 'GiNaC::registered_class_options::print_func(void (GiNaC::add::*)(const GiNaC::print_context&, unsigned int)const)'
-[9-ERROR] registrar.h:73: note: candidates are: GiNaC::registered_class_options& GiNaC::registered_class_options::print_func(const GiNaC::print_functor&) [with Ctx = GiNaC::print_context]
 [9-ERROR] add.cpp:35: error: request for member 'print_func' in '&GiNaC::add::do_print_latex', which is of non-class type 'void (GiNaC::add::*)(const GiNaC::print_latex&, unsigned int)const'
 [9-ERROR] add.cpp:35: error: request for member 'print_func' in '&GiNaC::add::do_print_csrc', which is of non-class type 'void (GiNaC::add::*)(const GiNaC::print_csrc&, unsigned int)const'
 [9-ERROR] add.cpp:35: error: request for member 'print_func' in '&GiNaC::expairseq::do_print_tree', which is of non-class type 'void (GiNaC::expairseq::*)(const GiNaC::print_tree&, unsigned int)const'
 [9-ERROR] add.cpp:35: error: expected primary-expression before '(' token
 [9-ERROR] add.cpp:35: error: no matching function for call to 'GiNaC::registered_class_options::print_func(void (GiNaC::add::*)(const GiNaC::print_context&, unsigned int)const)'
-[9-ERROR] registrar.h:73: note: candidates are: GiNaC::registered_class_options& GiNaC::registered_class_options::print_func(const GiNaC::print_functor&) [with Ctx = GiNaC::print_context]
 [9-ERROR] add.cpp:35: error: expected primary-expression before '>' token
 [9-ERROR] add.cpp:35: error: request for member 'print_func' in '&GiNaC::add::do_print_latex', which is of non-class type 'void (GiNaC::add::*)(const GiNaC::print_latex&, unsigned int)const'
 [9-ERROR] add.cpp:35: error: expected primary-expression before '>' token
@@ -136,9 +136,9 @@
 [9-ERROR] add.cpp:35: error: request for member 'print_func' in '&GiNaC::expairseq::do_print_tree', which is of non-class type 'void (GiNaC::expairseq::*)(const GiNaC::print_tree&, unsigned int)const'
 [9-ERROR] add.cpp:35: error: expected primary-expression before '>' token
 [9-ERROR] make[2]: *** [add.lo] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ginac.1169153572.24788.3951810427/GiNaC-1.2.1/ginac'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ginac.1181977376.5260.3474453109/GiNaC-1.2.1/ginac'
 [9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.ginac.1169153572.24788.3951810427/GiNaC-1.2.1'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.ginac.1181977376.5260.3474453109/GiNaC-1.2.1'
 [9-ERROR] make: *** [all] Error 2
 [9-ERROR] --- BUILD ERROR ---
 

@@ -20,25 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168534634 Thu Jan 11 17:57:14 2007 (5)
-[TIMESTAMP] 1168726522 Sat Jan 13 23:15:22 2007 (9)
+[TIMESTAMP] 1180914639 Mon Jun  4 01:50:39 2007 (5)
+[TIMESTAMP] 1181281020 Fri Jun  8 07:37:00 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-libx11.log 9-libx11.log
 
-[BUILDTIME] 35984 (5)
-[BUILDTIME] 38707 (9)
-[SIZE] 2.61 MB, 245 files
+[BUILDTIME] 44033 (5)
+[BUILDTIME] 47046 (9)
+[SIZE] 2.64 MB, 248 files
 
-[DEP] 00-dirtree applewmproto applewmproto:dev bash2 bigreqsproto:dev
-[DEP] binutils bzip2 coreutils cvm diffutils findutils gawk gcc40
-[DEP] gcc40:dev glibc23 glibc23:dev grep inputproto:dev kbproto:dev libxau
-[DEP] libxau:dev libxdmcp libxdmcp:dev linux-libc-headers:dev make mktemp
-[DEP] net-tools pkgconfig rrdtool sed sysfiles tar util-linux util-macros
-[DEP] xcmiscproto:dev xf86bigfontproto:dev xorg-docs xorg-sgml-doctools
-[DEP] xproto:dev xtrans:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm diffutils findutils gawk gcc42 gcc42:dev glibc26
+[DEP] glibc26:dev grep inputproto:dev kbproto:dev libxau libxau:dev
+[DEP] libxcb libxcb:dev libxdmcp:dev linux26-headers:dev ltrace make
+[DEP] mktemp net-tools pkgconfig sed sysfiles tar util-linux util-macros
+[DEP] xf86bigfontproto:dev xmame xorg-docs xproto:dev xtrans:dev
 
-[PROVIDES] libX11.a libX11.so
+[PROVIDES] libX11-xcb.a libX11-xcb.so libX11.a libX11.so
 

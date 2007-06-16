@@ -20,125 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168649958 Sat Jan 13 01:59:18 2007 (5) ERROR
-[TIMESTAMP] 1168856558 Mon Jan 15 11:22:38 2007 (9) ERROR
-[TIMESTAMP] 1168949596 Tue Jan 16 13:13:16 2007 (5) ERROR
-[TIMESTAMP] 1168979539 Tue Jan 16 21:32:19 2007 (9) ERROR
-[TIMESTAMP] 1169093076 Thu Jan 18 05:04:36 2007 (5) ERROR
-[TIMESTAMP] 1169149752 Thu Jan 18 20:49:12 2007 (9) ERROR
+[TIMESTAMP] 1181086171 Wed Jun  6 01:29:31 2007 (5)
+[TIMESTAMP] 1181560384 Mon Jun 11 13:13:04 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-bincimap.err 9-bincimap.err
+[LOGS] 5-bincimap.log 9-bincimap.log
 
-[BUILDTIME] 2313 (5) ERROR
-[BUILDTIME] 2375 (9) ERROR
-[BUILDTIME] 2381 (5) ERROR
-[BUILDTIME] 2396 (9) ERROR
-[BUILDTIME] 2424 (5) ERROR
-[BUILDTIME] 2381 (9) ERROR
+[BUILDTIME] 13183 (5)
+[BUILDTIME] 13459 (9)
+[SIZE] 0.85 MB, 47 files
 
+[DEP] 00-dirtree autoconf bash2 binutils bzip2 coreutils cvm
+[DEP] diffutils findutils gawk gcc42 gcc42:dev glibc26 glibc26:dev grep
+[DEP] linux26-headers:dev ltrace make mktemp net-tools openssl openssl:dev
+[DEP] perl5 sed sysfiles tar texinfo util-linux xmame
 
-[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.bincimap.1169093038.10897.563344256/bincimap-1.2.10final/contrib/authenticators'
-[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.bincimap.1169093038.10897.563344256/bincimap-1.2.10final/contrib'
-[5-ERROR] make[3]: Nothing to be done for `all-am'.
-[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.bincimap.1169093038.10897.563344256/bincimap-1.2.10final/contrib'
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.bincimap.1169093038.10897.563344256/bincimap-1.2.10final/contrib'
-[5-ERROR] Making all in doc
-[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.bincimap.1169093038.10897.563344256/bincimap-1.2.10final/doc'
-[5-ERROR] Making all in manual
-[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.bincimap.1169093038.10897.563344256/bincimap-1.2.10final/doc/manual'
-[5-ERROR] make[3]: Nothing to be done for `all'.
-[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.bincimap.1169093038.10897.563344256/bincimap-1.2.10final/doc/manual'
-[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.bincimap.1169093038.10897.563344256/bincimap-1.2.10final/doc'
-[5-ERROR] make[3]: Nothing to be done for `all-am'.
-[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.bincimap.1169093038.10897.563344256/bincimap-1.2.10final/doc'
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.bincimap.1169093038.10897.563344256/bincimap-1.2.10final/doc'
-[5-ERROR] Making all in man
-[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.bincimap.1169093038.10897.563344256/bincimap-1.2.10final/man'
-[5-ERROR] make[2]: Nothing to be done for `all'.
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.bincimap.1169093038.10897.563344256/bincimap-1.2.10final/man'
-[5-ERROR] Making all in service
-[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.bincimap.1169093038.10897.563344256/bincimap-1.2.10final/service'
-[5-ERROR] Making all in log
-[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.bincimap.1169093038.10897.563344256/bincimap-1.2.10final/service/log'
-[5-ERROR] make[3]: Nothing to be done for `all'.
-[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.bincimap.1169093038.10897.563344256/bincimap-1.2.10final/service/log'
-[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.bincimap.1169093038.10897.563344256/bincimap-1.2.10final/service'
-[5-ERROR] make[3]: Nothing to be done for `all-am'.
-[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.bincimap.1169093038.10897.563344256/bincimap-1.2.10final/service'
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.bincimap.1169093038.10897.563344256/bincimap-1.2.10final/service'
-[5-ERROR] Making all in src
-[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.bincimap.1169093038.10897.563344256/bincimap-1.2.10final/src'
-[5-ERROR] g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -fno-exceptions -O2 -I. -c address.cc
-[5-ERROR] g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -fno-exceptions -O2 -I. -c argparser.cc
-[5-ERROR] g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -fno-exceptions -O2 -I. -c authenticate.cc
-[5-ERROR] g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -fno-exceptions -O2 -I. -c base64.cc
-[5-ERROR] g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -fno-exceptions -O2 -I. -c bincimapd.cc
-[5-ERROR] g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -fno-exceptions -O2 -I. -c broker.cc
-[5-ERROR] g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -fno-exceptions -O2 -I. -c convert.cc
-[5-ERROR] g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -fno-exceptions -O2 -I. -c depot.cc
-[5-ERROR] g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -fno-exceptions -O2 -I. -c imapparser.cc
-[5-ERROR] g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -fno-exceptions -O2 -I. -c io.cc
-[5-ERROR] g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -fno-exceptions -O2 -I. -c mailbox.cc
-[5-ERROR] g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -fno-exceptions -O2 -I. -c maildir.cc
-[5-ERROR] pendingupdates.h:127: error: explicit qualification in declaration of `bool Binc::pendingUpdates(Binc::Mailbox*, int, bool, bool, bool, bool)'
-[5-ERROR] make[2]: *** [maildir.o] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.bincimap.1169093038.10897.563344256/bincimap-1.2.10final/src'
-[5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.bincimap.1169093038.10897.563344256/bincimap-1.2.10final'
-[5-ERROR] make: *** [all-recursive-am] Error 2
-[5-ERROR] --- BUILD ERROR ---
-
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.bincimap.1169149720.2536.453632617/bincimap-1.2.10final/contrib/authenticators'
-[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.bincimap.1169149720.2536.453632617/bincimap-1.2.10final/contrib'
-[9-ERROR] make[3]: Nothing to be done for `all-am'.
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.bincimap.1169149720.2536.453632617/bincimap-1.2.10final/contrib'
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.bincimap.1169149720.2536.453632617/bincimap-1.2.10final/contrib'
-[9-ERROR] Making all in doc
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.bincimap.1169149720.2536.453632617/bincimap-1.2.10final/doc'
-[9-ERROR] Making all in manual
-[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.bincimap.1169149720.2536.453632617/bincimap-1.2.10final/doc/manual'
-[9-ERROR] make[3]: Nothing to be done for `all'.
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.bincimap.1169149720.2536.453632617/bincimap-1.2.10final/doc/manual'
-[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.bincimap.1169149720.2536.453632617/bincimap-1.2.10final/doc'
-[9-ERROR] make[3]: Nothing to be done for `all-am'.
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.bincimap.1169149720.2536.453632617/bincimap-1.2.10final/doc'
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.bincimap.1169149720.2536.453632617/bincimap-1.2.10final/doc'
-[9-ERROR] Making all in man
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.bincimap.1169149720.2536.453632617/bincimap-1.2.10final/man'
-[9-ERROR] make[2]: Nothing to be done for `all'.
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.bincimap.1169149720.2536.453632617/bincimap-1.2.10final/man'
-[9-ERROR] Making all in service
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.bincimap.1169149720.2536.453632617/bincimap-1.2.10final/service'
-[9-ERROR] Making all in log
-[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.bincimap.1169149720.2536.453632617/bincimap-1.2.10final/service/log'
-[9-ERROR] make[3]: Nothing to be done for `all'.
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.bincimap.1169149720.2536.453632617/bincimap-1.2.10final/service/log'
-[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.bincimap.1169149720.2536.453632617/bincimap-1.2.10final/service'
-[9-ERROR] make[3]: Nothing to be done for `all-am'.
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.bincimap.1169149720.2536.453632617/bincimap-1.2.10final/service'
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.bincimap.1169149720.2536.453632617/bincimap-1.2.10final/service'
-[9-ERROR] Making all in src
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.bincimap.1169149720.2536.453632617/bincimap-1.2.10final/src'
-[9-ERROR] g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -fno-exceptions -O2 -I. -c address.cc
-[9-ERROR] g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -fno-exceptions -O2 -I. -c argparser.cc
-[9-ERROR] g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -fno-exceptions -O2 -I. -c authenticate.cc
-[9-ERROR] g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -fno-exceptions -O2 -I. -c base64.cc
-[9-ERROR] g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -fno-exceptions -O2 -I. -c bincimapd.cc
-[9-ERROR] g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -fno-exceptions -O2 -I. -c broker.cc
-[9-ERROR] g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -fno-exceptions -O2 -I. -c convert.cc
-[9-ERROR] g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -fno-exceptions -O2 -I. -c depot.cc
-[9-ERROR] g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -fno-exceptions -O2 -I. -c imapparser.cc
-[9-ERROR] g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -fno-exceptions -O2 -I. -c io.cc
-[9-ERROR] g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -fno-exceptions -O2 -I. -c mailbox.cc
-[9-ERROR] g++-40 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -Wall -fno-exceptions -O2 -I. -c maildir.cc
-[9-ERROR] pendingupdates.h:127: error: explicit qualification in declaration of `bool Binc::pendingUpdates(Binc::Mailbox*, int, bool, bool, bool, bool)'
-[9-ERROR] make[2]: *** [maildir.o] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.bincimap.1169149720.2536.453632617/bincimap-1.2.10final/src'
-[9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.bincimap.1169149720.2536.453632617/bincimap-1.2.10final'
-[9-ERROR] make: *** [all-recursive-am] Error 2
-[9-ERROR] --- BUILD ERROR ---
+[PROVIDES] bincimap-up bincimapd
 

@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168558840 Fri Jan 12 00:40:40 2007 (5)
-[TIMESTAMP] 1168755126 Sun Jan 14 07:12:06 2007 (9)
+[TIMESTAMP] 1180947225 Mon Jun  4 10:53:45 2007 (5)
+[TIMESTAMP] 1181335814 Fri Jun  8 22:50:14 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-libraw1394.log 9-libraw1394.log
 
-[BUILDTIME] 2797 (5)
-[BUILDTIME] 3397 (9)
-[SIZE] 0.07 MB, 16 files
+[BUILDTIME] 3665 (5)
+[BUILDTIME] 4472 (9)
+[SIZE] 0.06 MB, 16 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
-[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev
-[DEP] make mktemp net-tools netpbm rrdtool sed sysfiles tar twoftpd
-[DEP] ucspi-unix util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils
+[DEP] findutils gawk gcc42 gcc42:dev glibc26 glibc26:dev grep libelf
+[DEP] linux26-headers:dev ltrace make mktemp net-tools sed sysfiles tar
+[DEP] twoftpd ucspi-unix util-linux xmame
 
 [PROVIDES] dumpiso libraw1394.a libraw1394.so sendiso testlibraw
 

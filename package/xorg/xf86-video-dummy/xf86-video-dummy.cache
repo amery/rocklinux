@@ -20,24 +20,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168539128 Thu Jan 11 19:12:08 2007 (5)
-[TIMESTAMP] 1168732287 Sun Jan 14 00:51:27 2007 (9)
+[TIMESTAMP] 1180921089 Mon Jun  4 03:38:09 2007 (5)
+[TIMESTAMP] 1181294908 Fri Jun  8 11:28:28 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-xf86-video-dummy.log 9-xf86-video-dummy.log
 
-[BUILDTIME] 2151 (5)
-[BUILDTIME] 2797 (9)
+[BUILDTIME] 2939 (5)
+[BUILDTIME] 3761 (9)
 [SIZE] 0.03 MB, 7 files
 
 [DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
-[DEP] coreutils cvm diffutils findutils fontsproto:dev gawk gcc40 gcc40:dev
-[DEP] glibc23 glibc23:dev grep linux-libc-headers:dev make mktemp net-tools
-[DEP] pkgconfig randrproto:dev renderproto:dev rrdtool sed sysfiles tar
-[DEP] util-linux util-macros videoproto:dev xf86-video-apm xf86dgaproto:dev
-[DEP] xorg-server xorg-server:dev xproto:dev
+[DEP] coreutils cvm diffutils findutils fontsproto:dev gawk gcc42
+[DEP] gcc42:dev glibc26 glibc26:dev grep linux26-headers:dev ltrace
+[DEP] make mktemp net-tools pkgconfig randrproto:dev renderproto:dev sed
+[DEP] sysfiles tar util-linux util-macros videoproto:dev xf86-video-apm
+[DEP] xf86dgaproto:dev xmame xorg-server xorg-server:dev xproto:dev
 
 [PROVIDES] dummy_drv.so
 

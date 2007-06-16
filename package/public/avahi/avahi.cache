@@ -20,125 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168637166 Fri Jan 12 22:26:06 2007 (5) ERROR
-[TIMESTAMP] 1168842505 Mon Jan 15 07:28:25 2007 (9) ERROR
-[TIMESTAMP] 1168948573 Tue Jan 16 12:56:13 2007 (5) ERROR
-[TIMESTAMP] 1168978483 Tue Jan 16 21:14:43 2007 (9) ERROR
-[TIMESTAMP] 1169091990 Thu Jan 18 04:46:30 2007 (5) ERROR
-[TIMESTAMP] 1169148756 Thu Jan 18 20:32:36 2007 (9) ERROR
+[TIMESTAMP] 1181068732 Tue Jun  5 20:38:52 2007 (5) ERROR
+[TIMESTAMP] 1181536204 Mon Jun 11 06:30:04 2007 (9) ERROR
+[TIMESTAMP] 1181823368 Thu Jun 14 14:16:08 2007 (5) ERROR
+[TIMESTAMP] 1181903603 Fri Jun 15 12:33:23 2007 (9) ERROR
+[TIMESTAMP] 1181950114 Sat Jun 16 01:28:34 2007 (5) ERROR
+[TIMESTAMP] 1181971563 Sat Jun 16 07:26:03 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-avahi.err 9-avahi.err
 
-[BUILDTIME] 2845 (5) ERROR
-[BUILDTIME] 2926 (9) ERROR
-[BUILDTIME] 2934 (5) ERROR
-[BUILDTIME] 2913 (9) ERROR
-[BUILDTIME] 2951 (5) ERROR
-[BUILDTIME] 2937 (9) ERROR
+[BUILDTIME] 3872 (5) ERROR
+[BUILDTIME] 9940 (9) ERROR
+[BUILDTIME] 9869 (5) ERROR
+[BUILDTIME] 9627 (9) ERROR
+[BUILDTIME] 9684 (5) ERROR
+[BUILDTIME] 9686 (9) ERROR
 
 
-[5-ERROR] checking for setreuid... yes
-[5-ERROR] checking for setresgid... yes
-[5-ERROR] checking for setregid... yes
-[5-ERROR] checking for strcasecmp... yes
-[5-ERROR] checking for gettimeofday... yes
-[5-ERROR] checking for putenv... yes
-[5-ERROR] checking for strncasecmp... yes
-[5-ERROR] checking for strlcpy... no
-[5-ERROR] checking for gethostbyname... yes
-[5-ERROR] checking for seteuid... yes
-[5-ERROR] checking for setegid... yes
-[5-ERROR] checking for setproctitle... no
-[5-ERROR] checking for getprogname... no
-[5-ERROR] checking for uid_t in sys/types.h... yes
-[5-ERROR] checking for unistd.h... (cached) yes
-[5-ERROR] checking for working chown... yes
-[5-ERROR] checking whether lstat dereferences a symlink specified with a trailing slash... yes
-[5-ERROR] checking whether stat accepts an empty string... no
-[5-ERROR] checking for mode_t... yes
-[5-ERROR] checking for pid_t... yes
-[5-ERROR] checking whether environ is declared... yes
-[5-ERROR] checking sys/capability.h usability... yes
-[5-ERROR] checking sys/capability.h presence... yes
-[5-ERROR] checking for sys/capability.h... yes
-[5-ERROR] checking sys/prctl.h usability... yes
-[5-ERROR] checking sys/prctl.h presence... yes
-[5-ERROR] checking for sys/prctl.h... yes
-[5-ERROR] checking for chroot... yes
-[5-ERROR] checking for dlopen in -ldl... yes
-[5-ERROR] checking for dlfcn.h... (cached) yes
-[5-ERROR] checking for pkg-config... yes
-[5-ERROR] checking for i386-unknown-linux-gnu-pkg-config... no
-[5-ERROR] checking for pkg-config... /usr/bin/pkg-config
-[5-ERROR] checking pkg-config is at least version 0.9.0... yes
-[5-ERROR] checking for GLIB20... yes
-[5-ERROR] checking for QT3... yes
-[5-ERROR] checking for "/opt/qt33/bin/moc-qt3"... no
-[5-ERROR] checking for "/opt/qt33/bin/moc"... yes
-[5-ERROR] checking for QT4... configure: error: Package requirements ( QtCore >= 4.0.0 ) were not met:
-[5-ERROR] 
-[5-ERROR] No package 'QtCore' found
-[5-ERROR] 
-[5-ERROR] Consider adjusting the PKG_CONFIG_PATH environment variable if you
-[5-ERROR] installed software in a non-standard prefix.
-[5-ERROR] 
-[5-ERROR] Alternatively, you may set the environment variables QT4_CFLAGS
-[5-ERROR] and QT4_LIBS to avoid the need to call pkg-config.
-[5-ERROR] See the pkg-config man page for more details.
-[5-ERROR] 
+[5-ERROR]                  from static-services.c:41:
+[5-ERROR] ../avahi-common/defs.h:292: warning: comma at end of enumerator list
+[5-ERROR] ../avahi-common/defs.h:297: warning: comma at end of enumerator list
+[5-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I..    -I.. '-DDEBUG_TRAP=__asm__("int $3")' -DAVAHI_DAEMON_RUNTIME_DIR=\"/var/run/avahi-daemon/\" -DAVAHI_SOCKET=\"/var/run/avahi-daemon/socket\" -DAVAHI_SERVICE_DIR=\"/etc/avahi/services\" -DAVAHI_CONFIG_FILE=\"/etc/avahi/avahi-daemon.conf\" -DAVAHI_HOSTS_FILE=\"/etc/avahi/hosts\" -DAVAHI_DBUS_INTROSPECTION_DIR=\"/usr/share/avahi/introspection\" -DAVAHI_CONFIG_DIR=\"/etc/avahi\" -D_REENTRANT   -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include   -DDBUS_VERSION_MAJOR=1 -DDBUS_VERSION_MINOR=0 -DDBUS_VERSION_MICRO=2 -DDBUS_API_SUBJECT_TO_CHANGE -g -O2 -Wall -W -Wextra -pedantic -pipe -Wformat -Wold-style-definition -Wdeclaration-after-statement -Wfloat-equal -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-noreturn -Wshadow -Wendif-labels -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wwrite-strings -Winline -MT avahi_daemon-static-hosts.o -MD -MP -MF ".deps/avahi_daemon-static-hosts.Tpo" -c -o avahi_daemon-static-hosts.o `test -f 'static-hosts.c' || echo './'`static-hosts.c; \
+[5-ERROR] 	then mv -f ".deps/avahi_daemon-static-hosts.Tpo" ".deps/avahi_daemon-static-hosts.Po"; else rm -f ".deps/avahi_daemon-static-hosts.Tpo"; exit 1; fi
+[5-ERROR] In file included from ../avahi-core/core.h:32,
+[5-ERROR]                  from ../avahi-core/publish.h:35,
+[5-ERROR]                  from static-hosts.c:34:
+[5-ERROR] ../avahi-common/defs.h:292: warning: comma at end of enumerator list
+[5-ERROR] ../avahi-common/defs.h:297: warning: comma at end of enumerator list
+[5-ERROR] static-hosts.c: In function 'static_hosts_add_to_server':
+[5-ERROR] static-hosts.c:113: warning: 'err' may be used uninitialized in this function
+[5-ERROR] static-hosts.c:113: note: 'err' was declared here
+[5-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I..    -I.. '-DDEBUG_TRAP=__asm__("int $3")' -DAVAHI_DAEMON_RUNTIME_DIR=\"/var/run/avahi-daemon/\" -DAVAHI_SOCKET=\"/var/run/avahi-daemon/socket\" -DAVAHI_SERVICE_DIR=\"/etc/avahi/services\" -DAVAHI_CONFIG_FILE=\"/etc/avahi/avahi-daemon.conf\" -DAVAHI_HOSTS_FILE=\"/etc/avahi/hosts\" -DAVAHI_DBUS_INTROSPECTION_DIR=\"/usr/share/avahi/introspection\" -DAVAHI_CONFIG_DIR=\"/etc/avahi\" -D_REENTRANT   -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include   -DDBUS_VERSION_MAJOR=1 -DDBUS_VERSION_MINOR=0 -DDBUS_VERSION_MICRO=2 -DDBUS_API_SUBJECT_TO_CHANGE -g -O2 -Wall -W -Wextra -pedantic -pipe -Wformat -Wold-style-definition -Wdeclaration-after-statement -Wfloat-equal -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-noreturn -Wshadow -Wendif-labels -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wwrite-strings -Winline -MT avahi_daemon-ini-file-parser.o -MD -MP -MF ".deps/avahi_daemon-ini-file-parser.Tpo" -c -o avahi_daemon-ini-file-parser.o `test -f 'ini-file-parser.c' || echo './'`ini-file-parser.c; \
+[5-ERROR] 	then mv -f ".deps/avahi_daemon-ini-file-parser.Tpo" ".deps/avahi_daemon-ini-file-parser.Po"; else rm -f ".deps/avahi_daemon-ini-file-parser.Tpo"; exit 1; fi
+[5-ERROR] ini-file-parser.c: In function 'avahi_split_csv':
+[5-ERROR] ini-file-parser.c:163: warning: implicit declaration of function 'isblank'
+[5-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I..    -I.. '-DDEBUG_TRAP=__asm__("int $3")' -DAVAHI_DAEMON_RUNTIME_DIR=\"/var/run/avahi-daemon/\" -DAVAHI_SOCKET=\"/var/run/avahi-daemon/socket\" -DAVAHI_SERVICE_DIR=\"/etc/avahi/services\" -DAVAHI_CONFIG_FILE=\"/etc/avahi/avahi-daemon.conf\" -DAVAHI_HOSTS_FILE=\"/etc/avahi/hosts\" -DAVAHI_DBUS_INTROSPECTION_DIR=\"/usr/share/avahi/introspection\" -DAVAHI_CONFIG_DIR=\"/etc/avahi\" -D_REENTRANT   -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include   -DDBUS_VERSION_MAJOR=1 -DDBUS_VERSION_MINOR=0 -DDBUS_VERSION_MICRO=2 -DDBUS_API_SUBJECT_TO_CHANGE -g -O2 -Wall -W -Wextra -pedantic -pipe -Wformat -Wold-style-definition -Wdeclaration-after-statement -Wfloat-equal -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-noreturn -Wshadow -Wendif-labels -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wwrite-strings -Winline -MT avahi_daemon-setproctitle.o -MD -MP -MF ".deps/avahi_daemon-setproctitle.Tpo" -c -o avahi_daemon-setproctitle.o `test -f 'setproctitle.c' || echo './'`setproctitle.c; \
+[5-ERROR] 	then mv -f ".deps/avahi_daemon-setproctitle.Tpo" ".deps/avahi_daemon-setproctitle.Po"; else rm -f ".deps/avahi_daemon-setproctitle.Tpo"; exit 1; fi
+[5-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I..    -I.. '-DDEBUG_TRAP=__asm__("int $3")' -DAVAHI_DAEMON_RUNTIME_DIR=\"/var/run/avahi-daemon/\" -DAVAHI_SOCKET=\"/var/run/avahi-daemon/socket\" -DAVAHI_SERVICE_DIR=\"/etc/avahi/services\" -DAVAHI_CONFIG_FILE=\"/etc/avahi/avahi-daemon.conf\" -DAVAHI_HOSTS_FILE=\"/etc/avahi/hosts\" -DAVAHI_DBUS_INTROSPECTION_DIR=\"/usr/share/avahi/introspection\" -DAVAHI_CONFIG_DIR=\"/etc/avahi\" -D_REENTRANT   -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include   -DDBUS_VERSION_MAJOR=1 -DDBUS_VERSION_MINOR=0 -DDBUS_VERSION_MICRO=2 -DDBUS_API_SUBJECT_TO_CHANGE -g -O2 -Wall -W -Wextra -pedantic -pipe -Wformat -Wold-style-definition -Wdeclaration-after-statement -Wfloat-equal -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-noreturn -Wshadow -Wendif-labels -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wwrite-strings -Winline -MT avahi_daemon-check-nss.o -MD -MP -MF ".deps/avahi_daemon-check-nss.Tpo" -c -o avahi_daemon-check-nss.o `test -f '../avahi-client/check-nss.c' || echo './'`../avahi-client/check-nss.c; \
+[5-ERROR] 	then mv -f ".deps/avahi_daemon-check-nss.Tpo" ".deps/avahi_daemon-check-nss.Po"; else rm -f ".deps/avahi_daemon-check-nss.Tpo"; exit 1; fi
+[5-ERROR] In file included from ../avahi-client/client.h:30,
+[5-ERROR]                  from ../avahi-client/check-nss.c:31:
+[5-ERROR] ../avahi-common/defs.h:292: warning: comma at end of enumerator list
+[5-ERROR] ../avahi-common/defs.h:297: warning: comma at end of enumerator list
+[5-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I..    -I.. '-DDEBUG_TRAP=__asm__("int $3")' -DAVAHI_DAEMON_RUNTIME_DIR=\"/var/run/avahi-daemon/\" -DAVAHI_SOCKET=\"/var/run/avahi-daemon/socket\" -DAVAHI_SERVICE_DIR=\"/etc/avahi/services\" -DAVAHI_CONFIG_FILE=\"/etc/avahi/avahi-daemon.conf\" -DAVAHI_HOSTS_FILE=\"/etc/avahi/hosts\" -DAVAHI_DBUS_INTROSPECTION_DIR=\"/usr/share/avahi/introspection\" -DAVAHI_CONFIG_DIR=\"/etc/avahi\" -D_REENTRANT   -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include   -DDBUS_VERSION_MAJOR=1 -DDBUS_VERSION_MINOR=0 -DDBUS_VERSION_MICRO=2 -DDBUS_API_SUBJECT_TO_CHANGE -g -O2 -Wall -W -Wextra -pedantic -pipe -Wformat -Wold-style-definition -Wdeclaration-after-statement -Wfloat-equal -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-noreturn -Wshadow -Wendif-labels -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wwrite-strings -Winline -MT avahi_daemon-chroot.o -MD -MP -MF ".deps/avahi_daemon-chroot.Tpo" -c -o avahi_daemon-chroot.o `test -f 'chroot.c' || echo './'`chroot.c; \
+[5-ERROR] 	then mv -f ".deps/avahi_daemon-chroot.Tpo" ".deps/avahi_daemon-chroot.Po"; else rm -f ".deps/avahi_daemon-chroot.Tpo"; exit 1; fi
+[5-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I..    -I.. '-DDEBUG_TRAP=__asm__("int $3")' -DAVAHI_DAEMON_RUNTIME_DIR=\"/var/run/avahi-daemon/\" -DAVAHI_SOCKET=\"/var/run/avahi-daemon/socket\" -DAVAHI_SERVICE_DIR=\"/etc/avahi/services\" -DAVAHI_CONFIG_FILE=\"/etc/avahi/avahi-daemon.conf\" -DAVAHI_HOSTS_FILE=\"/etc/avahi/hosts\" -DAVAHI_DBUS_INTROSPECTION_DIR=\"/usr/share/avahi/introspection\" -DAVAHI_CONFIG_DIR=\"/etc/avahi\" -D_REENTRANT   -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include   -DDBUS_VERSION_MAJOR=1 -DDBUS_VERSION_MINOR=0 -DDBUS_VERSION_MICRO=2 -DDBUS_API_SUBJECT_TO_CHANGE -g -O2 -Wall -W -Wextra -pedantic -pipe -Wformat -Wold-style-definition -Wdeclaration-after-statement -Wfloat-equal -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-noreturn -Wshadow -Wendif-labels -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wwrite-strings -Winline -MT avahi_daemon-caps.o -MD -MP -MF ".deps/avahi_daemon-caps.Tpo" -c -o avahi_daemon-caps.o `test -f 'caps.c' || echo './'`caps.c; \
+[5-ERROR] 	then mv -f ".deps/avahi_daemon-caps.Tpo" ".deps/avahi_daemon-caps.Po"; else rm -f ".deps/avahi_daemon-caps.Tpo"; exit 1; fi
+[5-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I..    -I.. '-DDEBUG_TRAP=__asm__("int $3")' -DAVAHI_DAEMON_RUNTIME_DIR=\"/var/run/avahi-daemon/\" -DAVAHI_SOCKET=\"/var/run/avahi-daemon/socket\" -DAVAHI_SERVICE_DIR=\"/etc/avahi/services\" -DAVAHI_CONFIG_FILE=\"/etc/avahi/avahi-daemon.conf\" -DAVAHI_HOSTS_FILE=\"/etc/avahi/hosts\" -DAVAHI_DBUS_INTROSPECTION_DIR=\"/usr/share/avahi/introspection\" -DAVAHI_CONFIG_DIR=\"/etc/avahi\" -D_REENTRANT   -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include   -DDBUS_VERSION_MAJOR=1 -DDBUS_VERSION_MINOR=0 -DDBUS_VERSION_MICRO=2 -DDBUS_API_SUBJECT_TO_CHANGE -g -O2 -Wall -W -Wextra -pedantic -pipe -Wformat -Wold-style-definition -Wdeclaration-after-statement -Wfloat-equal -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-noreturn -Wshadow -Wendif-labels -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wwrite-strings -Winline -MT avahi_daemon-dbus-protocol.o -MD -MP -MF ".deps/avahi_daemon-dbus-protocol.Tpo" -c -o avahi_daemon-dbus-protocol.o `test -f 'dbus-protocol.c' || echo './'`dbus-protocol.c; \
+[5-ERROR] 	then mv -f ".deps/avahi_daemon-dbus-protocol.Tpo" ".deps/avahi_daemon-dbus-protocol.Po"; else rm -f ".deps/avahi_daemon-dbus-protocol.Tpo"; exit 1; fi
+[5-ERROR] In file included from /usr/include/dbus-1.0/dbus/dbus.h:29,
+[5-ERROR]                  from dbus-protocol.c:41:
+[5-ERROR] /usr/include/dbus-1.0/dbus/dbus-arch-deps.h:36: warning: ISO C90 does not support 'long long'
+[5-ERROR] /usr/include/dbus-1.0/dbus/dbus-arch-deps.h:37: warning: ISO C90 does not support 'long long'
+[5-ERROR] In file included from ../avahi-core/core.h:32,
+[5-ERROR]                  from dbus-protocol.c:53:
+[5-ERROR] ../avahi-common/defs.h:292: warning: comma at end of enumerator list
+[5-ERROR] ../avahi-common/defs.h:297: warning: comma at end of enumerator list
+[5-ERROR] dbus-protocol.c: In function 'dbus_connect':
+[5-ERROR] dbus-protocol.c:1073: error: 'DBUS_NAME_FLAG_PROHIBIT_REPLACEMENT' undeclared (first use in this function)
+[5-ERROR] dbus-protocol.c:1073: error: (Each undeclared identifier is reported only once
+[5-ERROR] dbus-protocol.c:1073: error: for each function it appears in.)
+[5-ERROR] dbus-protocol.c:1085: warning: cast discards qualifiers from pointer target type
+[5-ERROR] make[2]: *** [avahi_daemon-dbus-protocol.o] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.avahi.1181950017.10213.4161569442/avahi-0.6.14/avahi-daemon'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.avahi.1181950017.10213.4161569442/avahi-0.6.14'
+[5-ERROR] make: *** [all] Error 2
 [5-ERROR] --- BUILD ERROR ---
 
-[9-ERROR] checking for setreuid... yes
-[9-ERROR] checking for setresgid... yes
-[9-ERROR] checking for setregid... yes
-[9-ERROR] checking for strcasecmp... yes
-[9-ERROR] checking for gettimeofday... yes
-[9-ERROR] checking for putenv... yes
-[9-ERROR] checking for strncasecmp... yes
-[9-ERROR] checking for strlcpy... no
-[9-ERROR] checking for gethostbyname... yes
-[9-ERROR] checking for seteuid... yes
-[9-ERROR] checking for setegid... yes
-[9-ERROR] checking for setproctitle... no
-[9-ERROR] checking for getprogname... no
-[9-ERROR] checking for uid_t in sys/types.h... yes
-[9-ERROR] checking for unistd.h... (cached) yes
-[9-ERROR] checking for working chown... yes
-[9-ERROR] checking whether lstat dereferences a symlink specified with a trailing slash... yes
-[9-ERROR] checking whether stat accepts an empty string... no
-[9-ERROR] checking for mode_t... yes
-[9-ERROR] checking for pid_t... yes
-[9-ERROR] checking whether environ is declared... yes
-[9-ERROR] checking sys/capability.h usability... yes
-[9-ERROR] checking sys/capability.h presence... yes
-[9-ERROR] checking for sys/capability.h... yes
-[9-ERROR] checking sys/prctl.h usability... yes
-[9-ERROR] checking sys/prctl.h presence... yes
-[9-ERROR] checking for sys/prctl.h... yes
-[9-ERROR] checking for chroot... yes
-[9-ERROR] checking for dlopen in -ldl... yes
-[9-ERROR] checking for dlfcn.h... (cached) yes
-[9-ERROR] checking for pkg-config... yes
-[9-ERROR] checking for i386-unknown-linux-gnu-pkg-config... no
-[9-ERROR] checking for pkg-config... /usr/bin/pkg-config
-[9-ERROR] checking pkg-config is at least version 0.9.0... yes
-[9-ERROR] checking for GLIB20... yes
-[9-ERROR] checking for QT3... yes
-[9-ERROR] checking for "/opt/qt33/bin/moc-qt3"... no
-[9-ERROR] checking for "/opt/qt33/bin/moc"... yes
-[9-ERROR] checking for QT4... configure: error: Package requirements ( QtCore >= 4.0.0 ) were not met:
-[9-ERROR] 
-[9-ERROR] No package 'QtCore' found
-[9-ERROR] 
-[9-ERROR] Consider adjusting the PKG_CONFIG_PATH environment variable if you
-[9-ERROR] installed software in a non-standard prefix.
-[9-ERROR] 
-[9-ERROR] Alternatively, you may set the environment variables QT4_CFLAGS
-[9-ERROR] and QT4_LIBS to avoid the need to call pkg-config.
-[9-ERROR] See the pkg-config man page for more details.
-[9-ERROR] 
+[9-ERROR]                  from static-services.c:41:
+[9-ERROR] ../avahi-common/defs.h:292: warning: comma at end of enumerator list
+[9-ERROR] ../avahi-common/defs.h:297: warning: comma at end of enumerator list
+[9-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I..    -I.. '-DDEBUG_TRAP=__asm__("int $3")' -DAVAHI_DAEMON_RUNTIME_DIR=\"/var/run/avahi-daemon/\" -DAVAHI_SOCKET=\"/var/run/avahi-daemon/socket\" -DAVAHI_SERVICE_DIR=\"/etc/avahi/services\" -DAVAHI_CONFIG_FILE=\"/etc/avahi/avahi-daemon.conf\" -DAVAHI_HOSTS_FILE=\"/etc/avahi/hosts\" -DAVAHI_DBUS_INTROSPECTION_DIR=\"/usr/share/avahi/introspection\" -DAVAHI_CONFIG_DIR=\"/etc/avahi\" -D_REENTRANT   -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include   -DDBUS_VERSION_MAJOR=1 -DDBUS_VERSION_MINOR=0 -DDBUS_VERSION_MICRO=2 -DDBUS_API_SUBJECT_TO_CHANGE -g -O2 -Wall -W -Wextra -pedantic -pipe -Wformat -Wold-style-definition -Wdeclaration-after-statement -Wfloat-equal -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-noreturn -Wshadow -Wendif-labels -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wwrite-strings -Winline -MT avahi_daemon-static-hosts.o -MD -MP -MF ".deps/avahi_daemon-static-hosts.Tpo" -c -o avahi_daemon-static-hosts.o `test -f 'static-hosts.c' || echo './'`static-hosts.c; \
+[9-ERROR] 	then mv -f ".deps/avahi_daemon-static-hosts.Tpo" ".deps/avahi_daemon-static-hosts.Po"; else rm -f ".deps/avahi_daemon-static-hosts.Tpo"; exit 1; fi
+[9-ERROR] In file included from ../avahi-core/core.h:32,
+[9-ERROR]                  from ../avahi-core/publish.h:35,
+[9-ERROR]                  from static-hosts.c:34:
+[9-ERROR] ../avahi-common/defs.h:292: warning: comma at end of enumerator list
+[9-ERROR] ../avahi-common/defs.h:297: warning: comma at end of enumerator list
+[9-ERROR] static-hosts.c: In function 'static_hosts_add_to_server':
+[9-ERROR] static-hosts.c:113: warning: 'err' may be used uninitialized in this function
+[9-ERROR] static-hosts.c:113: note: 'err' was declared here
+[9-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I..    -I.. '-DDEBUG_TRAP=__asm__("int $3")' -DAVAHI_DAEMON_RUNTIME_DIR=\"/var/run/avahi-daemon/\" -DAVAHI_SOCKET=\"/var/run/avahi-daemon/socket\" -DAVAHI_SERVICE_DIR=\"/etc/avahi/services\" -DAVAHI_CONFIG_FILE=\"/etc/avahi/avahi-daemon.conf\" -DAVAHI_HOSTS_FILE=\"/etc/avahi/hosts\" -DAVAHI_DBUS_INTROSPECTION_DIR=\"/usr/share/avahi/introspection\" -DAVAHI_CONFIG_DIR=\"/etc/avahi\" -D_REENTRANT   -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include   -DDBUS_VERSION_MAJOR=1 -DDBUS_VERSION_MINOR=0 -DDBUS_VERSION_MICRO=2 -DDBUS_API_SUBJECT_TO_CHANGE -g -O2 -Wall -W -Wextra -pedantic -pipe -Wformat -Wold-style-definition -Wdeclaration-after-statement -Wfloat-equal -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-noreturn -Wshadow -Wendif-labels -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wwrite-strings -Winline -MT avahi_daemon-ini-file-parser.o -MD -MP -MF ".deps/avahi_daemon-ini-file-parser.Tpo" -c -o avahi_daemon-ini-file-parser.o `test -f 'ini-file-parser.c' || echo './'`ini-file-parser.c; \
+[9-ERROR] 	then mv -f ".deps/avahi_daemon-ini-file-parser.Tpo" ".deps/avahi_daemon-ini-file-parser.Po"; else rm -f ".deps/avahi_daemon-ini-file-parser.Tpo"; exit 1; fi
+[9-ERROR] ini-file-parser.c: In function 'avahi_split_csv':
+[9-ERROR] ini-file-parser.c:163: warning: implicit declaration of function 'isblank'
+[9-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I..    -I.. '-DDEBUG_TRAP=__asm__("int $3")' -DAVAHI_DAEMON_RUNTIME_DIR=\"/var/run/avahi-daemon/\" -DAVAHI_SOCKET=\"/var/run/avahi-daemon/socket\" -DAVAHI_SERVICE_DIR=\"/etc/avahi/services\" -DAVAHI_CONFIG_FILE=\"/etc/avahi/avahi-daemon.conf\" -DAVAHI_HOSTS_FILE=\"/etc/avahi/hosts\" -DAVAHI_DBUS_INTROSPECTION_DIR=\"/usr/share/avahi/introspection\" -DAVAHI_CONFIG_DIR=\"/etc/avahi\" -D_REENTRANT   -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include   -DDBUS_VERSION_MAJOR=1 -DDBUS_VERSION_MINOR=0 -DDBUS_VERSION_MICRO=2 -DDBUS_API_SUBJECT_TO_CHANGE -g -O2 -Wall -W -Wextra -pedantic -pipe -Wformat -Wold-style-definition -Wdeclaration-after-statement -Wfloat-equal -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-noreturn -Wshadow -Wendif-labels -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wwrite-strings -Winline -MT avahi_daemon-setproctitle.o -MD -MP -MF ".deps/avahi_daemon-setproctitle.Tpo" -c -o avahi_daemon-setproctitle.o `test -f 'setproctitle.c' || echo './'`setproctitle.c; \
+[9-ERROR] 	then mv -f ".deps/avahi_daemon-setproctitle.Tpo" ".deps/avahi_daemon-setproctitle.Po"; else rm -f ".deps/avahi_daemon-setproctitle.Tpo"; exit 1; fi
+[9-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I..    -I.. '-DDEBUG_TRAP=__asm__("int $3")' -DAVAHI_DAEMON_RUNTIME_DIR=\"/var/run/avahi-daemon/\" -DAVAHI_SOCKET=\"/var/run/avahi-daemon/socket\" -DAVAHI_SERVICE_DIR=\"/etc/avahi/services\" -DAVAHI_CONFIG_FILE=\"/etc/avahi/avahi-daemon.conf\" -DAVAHI_HOSTS_FILE=\"/etc/avahi/hosts\" -DAVAHI_DBUS_INTROSPECTION_DIR=\"/usr/share/avahi/introspection\" -DAVAHI_CONFIG_DIR=\"/etc/avahi\" -D_REENTRANT   -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include   -DDBUS_VERSION_MAJOR=1 -DDBUS_VERSION_MINOR=0 -DDBUS_VERSION_MICRO=2 -DDBUS_API_SUBJECT_TO_CHANGE -g -O2 -Wall -W -Wextra -pedantic -pipe -Wformat -Wold-style-definition -Wdeclaration-after-statement -Wfloat-equal -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-noreturn -Wshadow -Wendif-labels -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wwrite-strings -Winline -MT avahi_daemon-check-nss.o -MD -MP -MF ".deps/avahi_daemon-check-nss.Tpo" -c -o avahi_daemon-check-nss.o `test -f '../avahi-client/check-nss.c' || echo './'`../avahi-client/check-nss.c; \
+[9-ERROR] 	then mv -f ".deps/avahi_daemon-check-nss.Tpo" ".deps/avahi_daemon-check-nss.Po"; else rm -f ".deps/avahi_daemon-check-nss.Tpo"; exit 1; fi
+[9-ERROR] In file included from ../avahi-client/client.h:30,
+[9-ERROR]                  from ../avahi-client/check-nss.c:31:
+[9-ERROR] ../avahi-common/defs.h:292: warning: comma at end of enumerator list
+[9-ERROR] ../avahi-common/defs.h:297: warning: comma at end of enumerator list
+[9-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I..    -I.. '-DDEBUG_TRAP=__asm__("int $3")' -DAVAHI_DAEMON_RUNTIME_DIR=\"/var/run/avahi-daemon/\" -DAVAHI_SOCKET=\"/var/run/avahi-daemon/socket\" -DAVAHI_SERVICE_DIR=\"/etc/avahi/services\" -DAVAHI_CONFIG_FILE=\"/etc/avahi/avahi-daemon.conf\" -DAVAHI_HOSTS_FILE=\"/etc/avahi/hosts\" -DAVAHI_DBUS_INTROSPECTION_DIR=\"/usr/share/avahi/introspection\" -DAVAHI_CONFIG_DIR=\"/etc/avahi\" -D_REENTRANT   -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include   -DDBUS_VERSION_MAJOR=1 -DDBUS_VERSION_MINOR=0 -DDBUS_VERSION_MICRO=2 -DDBUS_API_SUBJECT_TO_CHANGE -g -O2 -Wall -W -Wextra -pedantic -pipe -Wformat -Wold-style-definition -Wdeclaration-after-statement -Wfloat-equal -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-noreturn -Wshadow -Wendif-labels -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wwrite-strings -Winline -MT avahi_daemon-chroot.o -MD -MP -MF ".deps/avahi_daemon-chroot.Tpo" -c -o avahi_daemon-chroot.o `test -f 'chroot.c' || echo './'`chroot.c; \
+[9-ERROR] 	then mv -f ".deps/avahi_daemon-chroot.Tpo" ".deps/avahi_daemon-chroot.Po"; else rm -f ".deps/avahi_daemon-chroot.Tpo"; exit 1; fi
+[9-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I..    -I.. '-DDEBUG_TRAP=__asm__("int $3")' -DAVAHI_DAEMON_RUNTIME_DIR=\"/var/run/avahi-daemon/\" -DAVAHI_SOCKET=\"/var/run/avahi-daemon/socket\" -DAVAHI_SERVICE_DIR=\"/etc/avahi/services\" -DAVAHI_CONFIG_FILE=\"/etc/avahi/avahi-daemon.conf\" -DAVAHI_HOSTS_FILE=\"/etc/avahi/hosts\" -DAVAHI_DBUS_INTROSPECTION_DIR=\"/usr/share/avahi/introspection\" -DAVAHI_CONFIG_DIR=\"/etc/avahi\" -D_REENTRANT   -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include   -DDBUS_VERSION_MAJOR=1 -DDBUS_VERSION_MINOR=0 -DDBUS_VERSION_MICRO=2 -DDBUS_API_SUBJECT_TO_CHANGE -g -O2 -Wall -W -Wextra -pedantic -pipe -Wformat -Wold-style-definition -Wdeclaration-after-statement -Wfloat-equal -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-noreturn -Wshadow -Wendif-labels -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wwrite-strings -Winline -MT avahi_daemon-caps.o -MD -MP -MF ".deps/avahi_daemon-caps.Tpo" -c -o avahi_daemon-caps.o `test -f 'caps.c' || echo './'`caps.c; \
+[9-ERROR] 	then mv -f ".deps/avahi_daemon-caps.Tpo" ".deps/avahi_daemon-caps.Po"; else rm -f ".deps/avahi_daemon-caps.Tpo"; exit 1; fi
+[9-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I..    -I.. '-DDEBUG_TRAP=__asm__("int $3")' -DAVAHI_DAEMON_RUNTIME_DIR=\"/var/run/avahi-daemon/\" -DAVAHI_SOCKET=\"/var/run/avahi-daemon/socket\" -DAVAHI_SERVICE_DIR=\"/etc/avahi/services\" -DAVAHI_CONFIG_FILE=\"/etc/avahi/avahi-daemon.conf\" -DAVAHI_HOSTS_FILE=\"/etc/avahi/hosts\" -DAVAHI_DBUS_INTROSPECTION_DIR=\"/usr/share/avahi/introspection\" -DAVAHI_CONFIG_DIR=\"/etc/avahi\" -D_REENTRANT   -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include   -DDBUS_VERSION_MAJOR=1 -DDBUS_VERSION_MINOR=0 -DDBUS_VERSION_MICRO=2 -DDBUS_API_SUBJECT_TO_CHANGE -g -O2 -Wall -W -Wextra -pedantic -pipe -Wformat -Wold-style-definition -Wdeclaration-after-statement -Wfloat-equal -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-noreturn -Wshadow -Wendif-labels -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wwrite-strings -Winline -MT avahi_daemon-dbus-protocol.o -MD -MP -MF ".deps/avahi_daemon-dbus-protocol.Tpo" -c -o avahi_daemon-dbus-protocol.o `test -f 'dbus-protocol.c' || echo './'`dbus-protocol.c; \
+[9-ERROR] 	then mv -f ".deps/avahi_daemon-dbus-protocol.Tpo" ".deps/avahi_daemon-dbus-protocol.Po"; else rm -f ".deps/avahi_daemon-dbus-protocol.Tpo"; exit 1; fi
+[9-ERROR] In file included from /usr/include/dbus-1.0/dbus/dbus.h:29,
+[9-ERROR]                  from dbus-protocol.c:41:
+[9-ERROR] /usr/include/dbus-1.0/dbus/dbus-arch-deps.h:36: warning: ISO C90 does not support 'long long'
+[9-ERROR] /usr/include/dbus-1.0/dbus/dbus-arch-deps.h:37: warning: ISO C90 does not support 'long long'
+[9-ERROR] In file included from ../avahi-core/core.h:32,
+[9-ERROR]                  from dbus-protocol.c:53:
+[9-ERROR] ../avahi-common/defs.h:292: warning: comma at end of enumerator list
+[9-ERROR] ../avahi-common/defs.h:297: warning: comma at end of enumerator list
+[9-ERROR] dbus-protocol.c: In function 'dbus_connect':
+[9-ERROR] dbus-protocol.c:1073: error: 'DBUS_NAME_FLAG_PROHIBIT_REPLACEMENT' undeclared (first use in this function)
+[9-ERROR] dbus-protocol.c:1073: error: (Each undeclared identifier is reported only once
+[9-ERROR] dbus-protocol.c:1073: error: for each function it appears in.)
+[9-ERROR] dbus-protocol.c:1085: warning: cast discards qualifiers from pointer target type
+[9-ERROR] make[2]: *** [avahi_daemon-dbus-protocol.o] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.avahi.1181971466.969.2938899655/avahi-0.6.14/avahi-daemon'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.avahi.1181971466.969.2938899655/avahi-0.6.14'
+[9-ERROR] make: *** [all] Error 2
 [9-ERROR] --- BUILD ERROR ---
 

@@ -20,25 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168539333 Thu Jan 11 19:15:33 2007 (5)
-[TIMESTAMP] 1168732540 Sun Jan 14 00:55:40 2007 (9)
+[TIMESTAMP] 1180921364 Mon Jun  4 03:42:44 2007 (5)
+[TIMESTAMP] 1181296524 Fri Jun  8 11:55:24 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-xf86-video-mga.log 9-xf86-video-mga.log
 
-[BUILDTIME] 3225 (5)
-[BUILDTIME] 3878 (9)
-[SIZE] 0.16 MB, 9 files
+[BUILDTIME] 4408 (5)
+[BUILDTIME] 5514 (9)
+[SIZE] 0.16 MB, 8 files
 
 [DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
-[DEP] coreutils cvm diffutils findutils fontsproto:dev gawk gcc40
-[DEP] gcc40:dev glibc23 glibc23:dev glproto:dev grep libdrm:dev
-[DEP] libxt linux-libc-headers:dev make mesalib:dev mktemp net-tools
-[DEP] pkgconfig randrproto:dev renderproto:dev rrdtool sed sysfiles tar
-[DEP] util-linux util-macros videoproto:dev xextproto:dev xf86-video-apm
-[DEP] xf86driproto:dev xorg-docs xorg-server xorg-server:dev xproto:dev
+[DEP] coreutils cvm diffutils findutils fontsproto:dev gawk gcc42 gcc42:dev
+[DEP] glibc26 glibc26:dev glproto:dev grep libdrm:dev linux26-headers:dev
+[DEP] ltrace make mesalib:dev mktemp net-tools pkgconfig randrproto:dev
+[DEP] renderproto:dev sed sysfiles tar util-linux util-macros
+[DEP] videoproto:dev xextproto:dev xf86-video-apm xf86driproto:dev xmame
+[DEP] xorg-docs xorg-server xorg-server:dev xproto:dev
 
-[PROVIDES] mga_drv.so stormdwg
+[PROVIDES] mga_drv.so
 

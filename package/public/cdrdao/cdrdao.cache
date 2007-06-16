@@ -20,36 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168637705 Fri Jan 12 22:35:05 2007 (5)
-[TIMESTAMP] 1168843073 Mon Jan 15 07:37:53 2007 (9)
+[TIMESTAMP] 1181069325 Tue Jun  5 20:48:45 2007 (5) ERROR
+[TIMESTAMP] 1181537643 Mon Jun 11 06:54:03 2007 (9) ERROR
+[TIMESTAMP] 1181823550 Thu Jun 14 14:19:10 2007 (5) ERROR
+[TIMESTAMP] 1181903820 Fri Jun 15 12:37:00 2007 (9) ERROR
+[TIMESTAMP] 1181950284 Sat Jun 16 01:31:24 2007 (5) ERROR
+[TIMESTAMP] 1181971732 Sat Jun 16 07:28:52 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-cdrdao.log 9-cdrdao.log
+[LOGS] 5-cdrdao.err 9-cdrdao.err
 
-[BUILDTIME] 25631 (5)
-[BUILDTIME] 26120 (9)
-[SIZE] 2.35 MB, 27 files
+[BUILDTIME] 19148 (5) ERROR
+[BUILDTIME] 18993 (9) ERROR
+[BUILDTIME] 16592 (5) ERROR
+[BUILDTIME] 16876 (9) ERROR
+[BUILDTIME] 16274 (5) ERROR
+[BUILDTIME] 16275 (9) ERROR
 
-[DEP] 00-dirtree acl acl:dev alsa applewmproto atk atk:dev attr attr:dev
-[DEP] audiofile bash2 binutils bzip2 cairo cairo:dev cairomm cairomm:dev
-[DEP] coreutils cvm dbus dbus-glib diffutils esound expat findutils
-[DEP] fontconfig freetype gawk gcc40 gcc40:dev gconf gconf:dev gconfmm
-[DEP] gconfmm:dev glib glib:dev glibc23 glibc23:dev glibmm glibmm:dev
-[DEP] gnome-keyring gnome-libs14 gnome-vfs gnome-vfs:dev gnome-vfsmm
-[DEP] gnome-vfsmm:dev gnome14-dirtree gnome2-dirtree grep gtk+ gtk+:dev
-[DEP] gtkmm gtkmm:dev lame lame:dev libart_lgpl23 libart_lgpl23:dev
-[DEP] libbonobo libbonobo:dev libbonoboui libbonoboui:dev libglade
-[DEP] libglademm libglademm:dev libgnome libgnome:dev libgnomecanvas
-[DEP] libgnomecanvas:dev libgnomecanvasmm libgnomecanvasmm:dev
-[DEP] libgnomemm libgnomemm:dev libgnomeui libgnomeui:dev libgnomeuimm
-[DEP] libgnomeuimm:dev libice libjpeg libpng libsigc++ libsigc++:dev libsm
-[DEP] libx11 libxau libxcursor libxdmcp libxext libxfixes libxi libxinerama
-[DEP] libxml2 libxrandr libxrender linux-libc-headers:dev mad mad:dev make
-[DEP] mktemp net-tools netpbm ogg-vorbis ogg-vorbis:dev openssl orbit2
-[DEP] pango pango:dev pkgconfig popt popt:dev rrdtool sed shared-mime-info
-[DEP] sysfiles tar tsclient twoftpd ucspi-unix util-linux zapping zlib
 
-[PROVIDES] cdrdao cue2toc gcdmaster toc2cddb toc2cue toc2mp3
+[5-ERROR] CdDevice.cc:693: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:698: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:701: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:704: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:708: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:709: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:713: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:714: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:718: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:723: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:730: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:736: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:742: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc: In member function 'int CdDevice::blank(Gtk::Window*, int, int, int, int)':
+[5-ERROR] CdDevice.cc:816: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:818: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:823: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:825: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:828: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:830: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:834: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:839: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:842: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:844: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:849: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc: In static member function 'static const char* CdDevice::status2string(CdDevice::Status)':
+[5-ERROR] CdDevice.cc:945: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:948: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:951: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:954: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:957: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:960: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:963: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:966: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:969: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc: In static member function 'static const char* CdDevice::deviceType2string(CdDevice::DeviceType)':
+[5-ERROR] CdDevice.cc:982: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:986: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:990: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc: In static member function 'static void CdDevice::scan()':
+[5-ERROR] CdDevice.cc:1234: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] CdDevice.cc:1243: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] make[3]: *** [CdDevice.o] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.cdrdao.1181950116.4572.4161569442/cdrdao-1.2.1/xdao'
+[5-ERROR] make[2]: *** [all-recursive] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.cdrdao.1181950116.4572.4161569442/cdrdao-1.2.1/xdao'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.cdrdao.1181950116.4572.4161569442/cdrdao-1.2.1'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] CdDevice.cc:693: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:698: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:701: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:704: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:708: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:709: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:713: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:714: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:718: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:723: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:730: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:736: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:742: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc: In member function 'int CdDevice::blank(Gtk::Window*, int, int, int, int)':
+[9-ERROR] CdDevice.cc:816: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:818: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:823: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:825: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:828: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:830: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:834: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:839: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:842: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:844: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:849: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc: In static member function 'static const char* CdDevice::status2string(CdDevice::Status)':
+[9-ERROR] CdDevice.cc:945: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:948: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:951: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:954: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:957: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:960: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:963: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:966: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:969: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc: In static member function 'static const char* CdDevice::deviceType2string(CdDevice::DeviceType)':
+[9-ERROR] CdDevice.cc:982: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:986: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:990: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc: In static member function 'static void CdDevice::scan()':
+[9-ERROR] CdDevice.cc:1234: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] CdDevice.cc:1243: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] make[3]: *** [CdDevice.o] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.cdrdao.1181971563.27793.2938899655/cdrdao-1.2.1/xdao'
+[9-ERROR] make[2]: *** [all-recursive] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.cdrdao.1181971563.27793.2938899655/cdrdao-1.2.1/xdao'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.cdrdao.1181971563.27793.2938899655/cdrdao-1.2.1'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

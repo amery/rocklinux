@@ -20,26 +20,28 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168594962 Fri Jan 12 10:42:42 2007 (5)
-[TIMESTAMP] 1168796898 Sun Jan 14 18:48:18 2007 (9)
+[TIMESTAMP] 1180993800 Mon Jun  4 23:50:00 2007 (5) ERROR
+[TIMESTAMP] 1181455528 Sun Jun 10 08:05:28 2007 (9)
+[TIMESTAMP] 1181810532 Thu Jun 14 10:42:12 2007 (5)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-gucharmap.log 9-gucharmap.log
 
-[BUILDTIME] 7317 (5)
-[BUILDTIME] 7753 (9)
-[SIZE] 5.80 MB, 167 files
+[BUILDTIME] 5525 (5) ERROR
+[BUILDTIME] 9108 (9)
+[BUILDTIME] 9057 (5)
+[SIZE] 5.79 MB, 167 files
 
 [DEP] 00-dirtree alsa alsa:dev applewmproto atk atk:dev audiofile
 [DEP] audiofile:dev balsa bash2 binutils bzip2 cairo cairo:dev
 [DEP] control-center coreutils cpan-xml-parser cvm dasher dbus dbus-glib
 [DEP] dbus-glib:dev dbus:dev devhelp diffutils docbookx epiphany
 [DEP] esound esound:dev evince expat expat:dev file-roller findutils
-[DEP] fontconfig fontconfig:dev freetype freetype:dev gawk gcc40
-[DEP] gcc40:dev gconf gconf-editor gconf:dev gdm gettext glib glib:dev
-[DEP] glibc23 glibc23:dev gnome-blog gnome-cups-manager gnome-doc-utils
+[DEP] fontconfig fontconfig:dev freetype freetype:dev gawk gcc42
+[DEP] gcc42:dev gconf gconf-editor gconf:dev gdm gettext glib glib:dev
+[DEP] glibc26 glibc26:dev gnome-blog gnome-cups-manager gnome-doc-utils
 [DEP] gnome-games gnome-keyring gnome-keyring-manager gnome-keyring:dev
 [DEP] gnome-netstatus gnome-nettool gnome-panel gnome-utils gnome-vfs
 [DEP] gnome-vfs:dev gnome2-dirtree gnopernicus gossip grep gtk+ gtk+:dev
@@ -47,13 +49,13 @@
 [DEP] libbonoboui libbonoboui:dev libgnome libgnome:dev libgnomecanvas
 [DEP] libgnomecanvas:dev libgnomeui libgnomeui:dev libice libice:dev
 [DEP] libjpeg libjpeg:dev libpng libpng:dev libsm libsm:dev libx11
-[DEP] libx11:dev libxau libxau:dev libxcursor libxdmcp libxdmcp:dev
-[DEP] libxext libxfixes libxi libxinerama libxml2 libxml2:dev libxrandr
-[DEP] libxrender libxrender:dev libxslt linux-libc-headers:dev make
-[DEP] mktemp nautilus-cd-burner net-tools openssl orbit2 orbit2:dev pango
-[DEP] pango:dev perl5 pioneers pkgconfig popt popt:dev python rhythmbox
-[DEP] rrdtool scrollkeeper sed sensors-applet streamtuner sysfiles tar
-[DEP] totem util-linux yelp zapping zlib
+[DEP] libx11:dev libxau libxau:dev libxcb libxcb:dev libxcursor libxdmcp
+[DEP] libxdmcp:dev libxext libxfixes libxi libxinerama libxml2 libxml2:dev
+[DEP] libxrandr libxrender libxrender:dev libxslt linux26-headers:dev
+[DEP] ltrace make mktemp nautilus-cd-burner net-tools openssl orbit2
+[DEP] orbit2:dev pango pango:dev perl5 pioneers pkgconfig popt popt:dev
+[DEP] python rhythmbox scrollkeeper sed sensors-applet streamtuner sysfiles
+[DEP] tar totem util-linux xmame yelp zlib
 
 [PROVIDES] charmap gnome-character-map gucharmap libgucharmap.so
 

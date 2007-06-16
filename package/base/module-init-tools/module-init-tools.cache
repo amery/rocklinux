@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168525361 Thu Jan 11 15:22:41 2007 (3)
-[TIMESTAMP] 1168843330 Mon Jan 15 07:42:10 2007 (9)
+[TIMESTAMP] 1180899022 Sun Jun  3 21:30:22 2007 (3)
+[TIMESTAMP] 1181538101 Mon Jun 11 07:01:41 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 3-module-init-tools.log 9-module-init-tools.log
 
-[BUILDTIME] 1516 (3)
-[BUILDTIME] 2179 (9)
-[SIZE] 0.50 MB, 26 files
+[BUILDTIME] 2357 (3)
+[BUILDTIME] 2961 (9)
+[SIZE] 0.51 MB, 26 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
-[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev
-[DEP] linux26-source make mktemp net-tools netpbm rrdtool sed sysfiles
-[DEP] tar util-linux
+[DEP] gawk gcc42 gcc42:dev glibc26 glibc26:dev grep linux26-headers:dev
+[DEP] linux26-source ltrace make mktemp net-tools sed sysfiles tar
+[DEP] util-linux xmame
 
 [PROVIDES] depmod generate-modprobe.conf insmod insmod.static lsmod
 [PROVIDES] modinfo modprobe rmmod

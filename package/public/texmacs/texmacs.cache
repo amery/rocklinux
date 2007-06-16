@@ -20,125 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168697187 Sat Jan 13 15:06:27 2007 (5) ERROR
-[TIMESTAMP] 1168906504 Tue Jan 16 01:15:04 2007 (9) ERROR
-[TIMESTAMP] 1168954223 Tue Jan 16 14:30:23 2007 (5) ERROR
-[TIMESTAMP] 1168983953 Tue Jan 16 22:45:53 2007 (9) ERROR
-[TIMESTAMP] 1169124555 Thu Jan 18 13:49:15 2007 (5) ERROR
-[TIMESTAMP] 1169154146 Thu Jan 18 22:02:26 2007 (9) ERROR
+[TIMESTAMP] 1181202341 Thu Jun  7 09:45:41 2007 (5) ERROR
+[TIMESTAMP] 1181756283 Wed Jun 13 19:38:03 2007 (9) ERROR
+[TIMESTAMP] 1181836527 Thu Jun 14 17:55:27 2007 (5) ERROR
+[TIMESTAMP] 1181937375 Fri Jun 15 21:56:15 2007 (9) ERROR
+[TIMESTAMP] 1181958302 Sat Jun 16 03:45:02 2007 (5) ERROR
+[TIMESTAMP] 1181980206 Sat Jun 16 09:50:06 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-texmacs.err 9-texmacs.err
 
-[BUILDTIME] 1668 (5) ERROR
-[BUILDTIME] 1702 (9) ERROR
-[BUILDTIME] 1698 (5) ERROR
-[BUILDTIME] 1689 (9) ERROR
-[BUILDTIME] 1694 (5) ERROR
-[BUILDTIME] 1686 (9) ERROR
+[BUILDTIME] 2386 (5) ERROR
+[BUILDTIME] 2331 (9) ERROR
+[BUILDTIME] 2240 (5) ERROR
+[BUILDTIME] 2245 (9) ERROR
+[BUILDTIME] 2269 (5) ERROR
+[BUILDTIME] 2270 (9) ERROR
 
 
-[5-ERROR] checking for strings.h... yes
-[5-ERROR] checking for inttypes.h... yes
-[5-ERROR] checking for stdint.h... yes
-[5-ERROR] checking for unistd.h... yes
-[5-ERROR] checking iconv.h usability... yes
-[5-ERROR] checking iconv.h presence... yes
-[5-ERROR] checking for iconv.h... yes
-[5-ERROR] checking for iconv... yes
-[5-ERROR] checking ft2build.h usability... yes
-[5-ERROR] checking ft2build.h presence... yes
-[5-ERROR] checking for ft2build.h... yes
-[5-ERROR] checking for freetype... yes
-[5-ERROR] checking for gettimeofday... yes
-[5-ERROR] checking whether ... arguments behave correctly... no
-[5-ERROR] checking the size_t of guile strings... size_t
-[5-ERROR] checking if compiler supports -fno-rtti -fno-exceptions... yes
-[5-ERROR] checking if statically linking with guile works... "no"
-[5-ERROR] checking if it works with -lltdl... "no"
-[5-ERROR] checking if it works with -lltdl -ldl... "yes"
-[5-ERROR] checking build system type... i386-unknown-linux-gnu
-[5-ERROR] checking host system type... i386-unknown-linux-gnu
-[5-ERROR] final setup for an Intel/GNU-linux host
-[5-ERROR] disabling debugging
-[5-ERROR] enabling optimizations, -O3 -fexpensive-optimizations
-[5-ERROR] configure: creating ./config.status
-[5-ERROR] config.status: creating Makefile
-[5-ERROR] config.status: creating src/common.makefile
-[5-ERROR] config.status: creating src/System/tm_configure.hpp
-[5-ERROR] config.status: creating misc/admin/admin.makefile
-[5-ERROR] config.status: creating misc/doxygen/Doxyfile
-[5-ERROR] config.status: creating misc/man/texmacs.1
-[5-ERROR] config.status: creating misc/rpm/TeXmacs.spec
-[5-ERROR] config.status: creating misc/scripts/fig2ps
-[5-ERROR] config.status: creating misc/scripts/texmacs
-[5-ERROR] config.status: creating TeXmacs/examples/plugins/dynlink/Makefile
-[5-ERROR] mkdir -p src/Deps
-[5-ERROR] mkdir -p src/Objects
-[5-ERROR] mkdir -p TeXmacs/bin
-[5-ERROR] mkdir -p TeXmacs/lib
-[5-ERROR] cd src; make -f makefile link=shared
-[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.texmacs.1169124537.23156.3641098646/TeXmacs-1.0.3.11-src/src'
-[5-ERROR] g++-40 -I./System -I./System/Boot -I./System/Classes -I./System/Files -I./System/Link -I./System/Misc -I./Classes/Abstract -I./Classes/Atomic -I./Classes/Compound -I./Data/Drd -I./Data/String -I./Data/Tree -I./Data/Convert -I./Guile -I./Resource -I/ROCK/src.texmacs.1169124537.23156.3641098646/TeXmacs-1.0.3.11-src/TeXmacs/include -I/usr/include/freetype2 -Wall -Wno-return-type -O3 -fexpensive-optimizations -fno-rtti -fno-exceptions -c ./Data/String/analyze.cpp -o Objects/analyze.o 
-[5-ERROR] ./Classes/Atomic/string.hpp:29: error: 'string' has not been declared
-[5-ERROR] ./Classes/Atomic/string.hpp: In function 'int N(string)':
-[5-ERROR] ./Classes/Atomic/string.hpp:19: error: 'int string_rep::n' is private
-[5-ERROR] ./Classes/Atomic/string.hpp:48: error: within this context
+[5-ERROR] ./Data/String/analyze.cpp:440: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:440: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:440: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:442: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:442: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:442: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:442: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:442: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:442: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:442: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:442: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:442: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:442: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp: In function 'string roman_nr(int)':
+[5-ERROR] ./Data/String/analyze.cpp:446: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:447: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:448: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:449: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:450: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:451: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:452: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:453: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp: In function 'string alpha_nr(int)':
+[5-ERROR] ./Data/String/analyze.cpp:464: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:465: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp: At global scope:
+[5-ERROR] ./Data/String/analyze.cpp:479: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp: In function 'string as_hexadecimal(int)':
+[5-ERROR] ./Data/String/analyze.cpp:483: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp: In function 'string tm_encode(string)':
+[5-ERROR] ./Data/String/analyze.cpp:517: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:518: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp: In function 'string tm_decode(string)':
+[5-ERROR] ./Data/String/analyze.cpp:534: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:534: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:535: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:535: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp: In function 'string slash(string)':
+[5-ERROR] ./Data/String/analyze.cpp:579: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:589: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:592: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:595: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:598: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp: In function 'string quote(string)':
+[5-ERROR] ./Data/String/analyze.cpp:624: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./Data/String/analyze.cpp:624: warning: deprecated conversion from string constant to 'char*'
 [5-ERROR] make[1]: *** [Objects/analyze.o] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.texmacs.1169124537.23156.3641098646/TeXmacs-1.0.3.11-src/src'
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.texmacs.1181958277.16409.1414180272/TeXmacs-1.0.3.11-src/src'
 [5-ERROR] make: *** [TEXMACS] Error 2
 [5-ERROR] --- BUILD ERROR ---
 
-[9-ERROR] checking for strings.h... yes
-[9-ERROR] checking for inttypes.h... yes
-[9-ERROR] checking for stdint.h... yes
-[9-ERROR] checking for unistd.h... yes
-[9-ERROR] checking iconv.h usability... yes
-[9-ERROR] checking iconv.h presence... yes
-[9-ERROR] checking for iconv.h... yes
-[9-ERROR] checking for iconv... yes
-[9-ERROR] checking ft2build.h usability... yes
-[9-ERROR] checking ft2build.h presence... yes
-[9-ERROR] checking for ft2build.h... yes
-[9-ERROR] checking for freetype... yes
-[9-ERROR] checking for gettimeofday... yes
-[9-ERROR] checking whether ... arguments behave correctly... no
-[9-ERROR] checking the size_t of guile strings... size_t
-[9-ERROR] checking if compiler supports -fno-rtti -fno-exceptions... yes
-[9-ERROR] checking if statically linking with guile works... "no"
-[9-ERROR] checking if it works with -lltdl... "no"
-[9-ERROR] checking if it works with -lltdl -ldl... "yes"
-[9-ERROR] checking build system type... i386-unknown-linux-gnu
-[9-ERROR] checking host system type... i386-unknown-linux-gnu
-[9-ERROR] final setup for an Intel/GNU-linux host
-[9-ERROR] disabling debugging
-[9-ERROR] enabling optimizations, -O3 -fexpensive-optimizations
-[9-ERROR] configure: creating ./config.status
-[9-ERROR] config.status: creating Makefile
-[9-ERROR] config.status: creating src/common.makefile
-[9-ERROR] config.status: creating src/System/tm_configure.hpp
-[9-ERROR] config.status: creating misc/admin/admin.makefile
-[9-ERROR] config.status: creating misc/doxygen/Doxyfile
-[9-ERROR] config.status: creating misc/man/texmacs.1
-[9-ERROR] config.status: creating misc/rpm/TeXmacs.spec
-[9-ERROR] config.status: creating misc/scripts/fig2ps
-[9-ERROR] config.status: creating misc/scripts/texmacs
-[9-ERROR] config.status: creating TeXmacs/examples/plugins/dynlink/Makefile
-[9-ERROR] mkdir -p src/Deps
-[9-ERROR] mkdir -p src/Objects
-[9-ERROR] mkdir -p TeXmacs/bin
-[9-ERROR] mkdir -p TeXmacs/lib
-[9-ERROR] cd src; make -f makefile link=shared
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.texmacs.1169154128.13664.3951810427/TeXmacs-1.0.3.11-src/src'
-[9-ERROR] g++-40 -I./System -I./System/Boot -I./System/Classes -I./System/Files -I./System/Link -I./System/Misc -I./Classes/Abstract -I./Classes/Atomic -I./Classes/Compound -I./Data/Drd -I./Data/String -I./Data/Tree -I./Data/Convert -I./Guile -I./Resource -I/ROCK/src.texmacs.1169154128.13664.3951810427/TeXmacs-1.0.3.11-src/TeXmacs/include -I/usr/include/freetype2 -Wall -Wno-return-type -O3 -fexpensive-optimizations -fno-rtti -fno-exceptions -c ./Data/String/analyze.cpp -o Objects/analyze.o 
-[9-ERROR] ./Classes/Atomic/string.hpp:29: error: 'string' has not been declared
-[9-ERROR] ./Classes/Atomic/string.hpp: In function 'int N(string)':
-[9-ERROR] ./Classes/Atomic/string.hpp:19: error: 'int string_rep::n' is private
-[9-ERROR] ./Classes/Atomic/string.hpp:48: error: within this context
+[9-ERROR] ./Data/String/analyze.cpp:440: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:440: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:440: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:442: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:442: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:442: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:442: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:442: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:442: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:442: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:442: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:442: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:442: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp: In function 'string roman_nr(int)':
+[9-ERROR] ./Data/String/analyze.cpp:446: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:447: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:448: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:449: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:450: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:451: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:452: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:453: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp: In function 'string alpha_nr(int)':
+[9-ERROR] ./Data/String/analyze.cpp:464: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:465: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp: At global scope:
+[9-ERROR] ./Data/String/analyze.cpp:479: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp: In function 'string as_hexadecimal(int)':
+[9-ERROR] ./Data/String/analyze.cpp:483: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp: In function 'string tm_encode(string)':
+[9-ERROR] ./Data/String/analyze.cpp:517: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:518: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp: In function 'string tm_decode(string)':
+[9-ERROR] ./Data/String/analyze.cpp:534: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:534: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:535: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:535: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp: In function 'string slash(string)':
+[9-ERROR] ./Data/String/analyze.cpp:579: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:589: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:592: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:595: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:598: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp: In function 'string quote(string)':
+[9-ERROR] ./Data/String/analyze.cpp:624: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./Data/String/analyze.cpp:624: warning: deprecated conversion from string constant to 'char*'
 [9-ERROR] make[1]: *** [Objects/analyze.o] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.texmacs.1169154128.13664.3951810427/TeXmacs-1.0.3.11-src/src'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.texmacs.1181980182.23615.1677029054/TeXmacs-1.0.3.11-src/src'
 [9-ERROR] make: *** [TEXMACS] Error 2
 [9-ERROR] --- BUILD ERROR ---
 

@@ -20,25 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168601096 Fri Jan 12 12:24:56 2007 (5)
-[TIMESTAMP] 1168803397 Sun Jan 14 20:36:37 2007 (9)
+[TIMESTAMP] 1181002565 Tue Jun  5 02:16:05 2007 (5)
+[TIMESTAMP] 1181466584 Sun Jun 10 11:09:44 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-bluez-utils.log 9-bluez-utils.log
 
-[BUILDTIME] 4381 (5)
-[BUILDTIME] 4825 (9)
-[SIZE] 0.47 MB, 41 files
+[BUILDTIME] 5480 (5)
+[BUILDTIME] 6488 (9)
+[SIZE] 0.49 MB, 43 files
 
 [DEP] 00-dirtree alien bash2 binutils bluez-libs bluez-libs:dev bzip2
 [DEP] coreutils cvm dbus dbus-glib dbus-glib:dev dbus:dev diffutils
-[DEP] findutils flex flex:dev gawk gcc40 gcc40:dev glib glib:dev glibc23
-[DEP] glibc23:dev gnome-libs14 gnome14-dirtree gnome2-dirtree grep libusb
-[DEP] linux-libc-headers:dev m4 make mktemp net-tools netpbm pkgconfig
-[DEP] rrdtool sed sysfiles tar twoftpd ucspi-unix util-linux
+[DEP] findutils flex flex:dev gawk gcc42 gcc42:dev glib glib:dev glibc26
+[DEP] glibc26:dev gnome2-dirtree grep libusb libusb:dev linux26-headers:dev
+[DEP] ltrace m4 make mktemp net-tools pkgconfig sed sysfiles tar twoftpd
+[DEP] ucspi-unix util-linux xmame
 
 [PROVIDES] bluez-pin-agent ciptool dund hciattach hciconfig hcid hcitool
-[PROVIDES] hidd l2ping pand rfcomm sdpd sdptool
+[PROVIDES] hid2hci hidd l2ping pand rfcomm sdpd sdptool
 

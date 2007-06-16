@@ -20,38 +20,35 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168557902 Fri Jan 12 00:25:02 2007 (5) ERROR
-[TIMESTAMP] 1168754655 Sun Jan 14 07:04:15 2007 (9) ERROR
-[TIMESTAMP] 1168940613 Tue Jan 16 10:43:33 2007 (5) ERROR
-[TIMESTAMP] 1168962592 Tue Jan 16 16:49:52 2007 (9) ERROR
-[TIMESTAMP] 1169083999 Thu Jan 18 02:33:19 2007 (5) ERROR
-[TIMESTAMP] 1169132897 Thu Jan 18 16:08:17 2007 (9) ERROR
+[TIMESTAMP] 1180946034 Mon Jun  4 10:33:54 2007 (5) ERROR
+[TIMESTAMP] 1181335122 Fri Jun  8 22:38:42 2007 (9) ERROR
+[TIMESTAMP] 1181802119 Thu Jun 14 08:21:59 2007 (5) ERROR
+[TIMESTAMP] 1181856312 Thu Jun 14 23:25:12 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-ghostscript.err 9-ghostscript.err
 
-[BUILDTIME] 23486 (5) ERROR
-[BUILDTIME] 25705 (9) ERROR
-[BUILDTIME] 25817 (5) ERROR
-[BUILDTIME] 25839 (9) ERROR
-[BUILDTIME] 25846 (5) ERROR
-[BUILDTIME] 25795 (9) ERROR
-[SIZE] 26.00 MB, 601 files
+[BUILDTIME] 30288 (5) ERROR
+[BUILDTIME] 32892 (9) ERROR
+[BUILDTIME] 32469 (5) ERROR
+[BUILDTIME] 31922 (9) ERROR
+[SIZE] 26.38 MB, 613 files
 
 [DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
-[DEP] coreutils cvm diffutils esp-ghostscript findutils gawk gcc40
-[DEP] gcc40:dev glibc23 glibc23:dev glut glut:dev grep imake libice
-[DEP] libice:dev libjpeg libsdl libsm libsm:dev libx11 libx11:dev libxau
-[DEP] libxdmcp libxext libxi libxmu libxt libxt:dev linux-libc-headers:dev
-[DEP] make mesalib mesalib:dev mktemp net-tools netpbm rrdtool sed sysfiles
-[DEP] tar twoftpd ucspi-unix util-linux xorg-cf-files xproto:dev
+[DEP] coreutils cvm diffutils esp-ghostscript findutils gawk gcc42
+[DEP] gcc42:dev glibc26 glibc26:dev glut glut:dev grep imake libice
+[DEP] libice:dev libjpeg libsdl libsm libsm:dev libx11 libx11:dev
+[DEP] libxau libxcb libxdmcp libxext libxi libxmu libxt libxt:dev
+[DEP] linux26-headers:dev ltrace make mesalib mesalib:dev mktemp net-tools
+[DEP] sed sysfiles tar twoftpd ucspi-unix util-linux xmame xorg-cf-files
+[DEP] xproto:dev
 
-[PROVIDES] bdftops dumphint dvipdf eps2eps fixmswrd.pl font2c gs gsbj
-[PROVIDES] gsdj gsdj500 gslj gslp gsnd lprsetup.sh pdf2dsc pdf2ps pdfopt
-[PROVIDES] pf2afm pfbtopfa printafm ps2ascii ps2epsi ps2pdf ps2pdf12
-[PROVIDES] ps2pdf13 ps2pdf14 ps2pdfwr ps2ps pv.sh unix-lpr.sh wftopfa
+[PROVIDES] bdftops dumphint dvipdf eps2eps fixmswrd.pl font2c gs gsbj gsdj
+[PROVIDES] gsdj500 gslj gslp gsnd lprsetup.sh pdf2dsc pdf2ps pdfopt pf2afm
+[PROVIDES] pfbtopfa printafm ps2ascii ps2epsi ps2pdf ps2pdf12 ps2pdf13
+[PROVIDES] ps2pdf14 ps2pdfwr ps2ps ps2ps2 pv.sh unix-lpr.sh wftopfa
 
 [5-ERROR] usr/bin/pf2afm: esp-ghostscript ghostscript
 [5-ERROR] usr/bin/pfbtopfa: esp-ghostscript ghostscript

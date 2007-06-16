@@ -20,25 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168704674 Sat Jan 13 17:11:14 2007 (5)
-[TIMESTAMP] 1168914469 Tue Jan 16 03:27:49 2007 (9)
+[TIMESTAMP] 1181237054 Thu Jun  7 19:24:14 2007 (5)
+[TIMESTAMP] 1181787841 Thu Jun 14 04:24:01 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-libvncserver.log 9-libvncserver.log
 
-[BUILDTIME] 4475 (5)
-[BUILDTIME] 4515 (9)
-[SIZE] 0.13 MB, 8 files
+[BUILDTIME] 5744 (5)
+[BUILDTIME] 5688 (9)
+[SIZE] 0.14 MB, 8 files
 
 [DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
-[DEP] coreutils cvm diffutils findutils gawk gcc40 gcc40:dev glibc23
-[DEP] glibc23:dev grep imake kbproto:dev libice libjpeg libjpeg:dev libsdl
-[DEP] libsdl:dev libsm libx11 libx11:dev libxau libxdamage libxdmcp
+[DEP] coreutils cvm diffutils findutils gawk gcc42 gcc42:dev glibc26
+[DEP] glibc26:dev grep imake kbproto:dev libice libjpeg libjpeg:dev libsdl
+[DEP] libsdl:dev libsm libx11 libx11:dev libxau libxcb libxdamage libxdmcp
 [DEP] libxext libxfixes libxinerama libxrandr libxrender libxt libxtst
-[DEP] linux-libc-headers:dev make mktemp nas net-tools rrdtool sed sysfiles
-[DEP] tar util-linux xorg-cf-files xproto:dev zlib zlib:dev
+[DEP] linux26-headers:dev ltrace make mktemp nas net-tools sed sysfiles
+[DEP] tar util-linux xmame xorg-cf-files xproto:dev zlib zlib:dev
 
 [PROVIDES] LinuxVNC libvncclient.a libvncserver-config libvncserver.a
 

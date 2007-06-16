@@ -20,28 +20,29 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168569256 Fri Jan 12 03:34:16 2007 (5)
-[TIMESTAMP] 1168767076 Sun Jan 14 10:31:16 2007 (9)
+[TIMESTAMP] 1180960750 Mon Jun  4 14:39:10 2007 (5)
+[TIMESTAMP] 1181354568 Sat Jun  9 04:02:48 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-ettercap.log 9-ettercap.log
 
-[BUILDTIME] 11739 (5)
-[BUILDTIME] 12471 (9)
+[BUILDTIME] 14044 (5)
+[BUILDTIME] 14818 (9)
 [SIZE] 1.33 MB, 61 files
 
 [DEP] 00-dirtree applewmproto atk atk:dev bash2 binutils bzip2 cairo
 [DEP] cairo:dev coreutils cvm diffutils expat expat:dev file findutils
 [DEP] flex flex:dev fontconfig fontconfig:dev freetype freetype:dev gawk
-[DEP] gcc40 gcc40:dev glib glib:dev glibc23 glibc23:dev gnome2-dirtree
+[DEP] gcc42 gcc42:dev glib glib:dev glibc26 glibc26:dev gnome2-dirtree
 [DEP] grep gtk+ gtk+:dev libnet:dev libpcap:dev libpng libpng:dev libtool
-[DEP] libtool:dev libx11 libx11:dev libxau libxau:dev libxcursor libxdmcp
-[DEP] libxdmcp:dev libxext libxfixes libxi libxinerama libxrandr libxrender
-[DEP] libxrender:dev linux-libc-headers:dev m4 make mktemp ncurses
-[DEP] ncurses:dev net-tools netpbm openssl openssl:dev pango pango:dev pcre
-[DEP] pcre:dev pkgconfig rrdtool sed sysfiles tar util-linux zlib zlib:dev
+[DEP] libtool:dev libx11 libx11:dev libxau libxau:dev libxcb libxcb:dev
+[DEP] libxcursor libxdmcp libxdmcp:dev libxext libxfixes libxi libxinerama
+[DEP] libxrandr libxrender libxrender:dev linux26-headers:dev ltrace m4
+[DEP] make mktemp ncurses ncurses:dev net-tools openssl openssl:dev pango
+[DEP] pango:dev pcre pcre:dev pkgconfig sed sysfiles tar util-linux xmame
+[DEP] zlib zlib:dev
 
 [PROVIDES] ec_arp_cop.so ec_autoadd.so ec_chk_poison.so ec_dns_spoof.so
 [PROVIDES] ec_dos_attack.so ec_dummy.so ec_find_conn.so ec_find_ettercap.so

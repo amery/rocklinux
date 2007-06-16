@@ -20,81 +20,83 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168609996 Fri Jan 12 14:53:16 2007 (5)
-[TIMESTAMP] 1168812746 Sun Jan 14 23:12:26 2007 (9)
+[TIMESTAMP] 1181019003 Tue Jun  5 06:50:03 2007 (5)
+[TIMESTAMP] 1181482555 Sun Jun 10 15:35:55 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-kdebase.log 9-kdebase.log
 
-[BUILDTIME] 349197 (5)
-[BUILDTIME] 354346 (9)
-[SIZE] 46.96 MB, 4058 files
+[BUILDTIME] 424603 (5)
+[BUILDTIME] 443467 (9)
+[SIZE] 46.86 MB, 4046 files
 
 [DEP] 00-dirtree acl acl:dev alien alsa alsa:dev applewmproto
 [DEP] applewmproto:dev arts arts:dev attr attr:dev audiofile audiofile:dev
 [DEP] bash2 bdftopcf binutils bzip2 bzip2:dev compositeproto:dev coreutils
 [DEP] cups cvm cyrus-sasl2 cyrus-sasl2:dev damageproto:dev diffutils esound
 [DEP] esound:dev expat expat:dev fam fam:dev findutils fixesproto:dev
-[DEP] fontconfig fontconfig:dev freetype freetype:dev gawk gcc40 gcc40:dev
-[DEP] gettext glib glib:dev glibc23 glibc23:dev gnome2-dirtree grep gzip
-[DEP] hal:dev hicolor-icon-theme imake inputproto:dev kbproto:dev kdelibs
-[DEP] kdelibs:dev libart_lgpl23 libart_lgpl23:dev libice libice:dev
-[DEP] libidn libidn:dev libjpeg libjpeg:dev libpng libpng:dev libraw1394
-[DEP] libraw1394:dev libsm libsm:dev libusb libusb:dev libx11 libx11:dev
-[DEP] libxau libxau:dev libxcomposite libxcomposite:dev libxcursor
-[DEP] libxcursor:dev libxdamage libxdamage:dev libxdmcp libxdmcp:dev
-[DEP] libxext libxext:dev libxfixes libxfixes:dev libxft libxft:dev
-[DEP] libxinerama libxinerama:dev libxkbfile libxkbfile:dev libxmu
-[DEP] libxmu:dev libxrandr libxrandr:dev libxrender libxrender:dev
+[DEP] fontconfig fontconfig:dev freetype freetype:dev gawk gcc42 gcc42:dev
+[DEP] gettext glib glib:dev glibc26 glibc26:dev gnome2-dirtree grep
+[DEP] gzip hal:dev hicolor-icon-theme imake inputproto:dev kbproto:dev
+[DEP] kdelibs kdelibs:dev libart_lgpl23 libart_lgpl23:dev libcap libice
+[DEP] libice:dev libidn libidn:dev libjpeg libjpeg:dev libogg libogg:dev
+[DEP] libpng libpng:dev libraw1394 libraw1394:dev libsm libsm:dev libusb
+[DEP] libusb:dev libvorbis libvorbis:dev libx11 libx11:dev libxau
+[DEP] libxau:dev libxcb libxcb:dev libxcomposite libxcomposite:dev
+[DEP] libxcursor libxcursor:dev libxdamage libxdamage:dev libxdmcp
+[DEP] libxdmcp:dev libxext libxext:dev libxfixes libxfixes:dev libxft
+[DEP] libxft:dev libxinerama libxinerama:dev libxkbfile libxkbfile:dev
+[DEP] libxmu libxmu:dev libxrandr libxrandr:dev libxrender libxrender:dev
 [DEP] libxscrnsaver libxscrnsaver:dev libxt libxt:dev libxtst libxtst:dev
-[DEP] libxxf86misc libxxf86misc:dev linux-libc-headers:dev lm_sensors
-[DEP] lm_sensors:dev mad mad:dev magicpoint make mesalib mesalib:dev
-[DEP] mkfontdir mkfontscale mktemp nas ncurses ncurses:dev net-tools
-[DEP] nx-x11 nx-x11:dev nxcomp ogg-vorbis ogg-vorbis:dev openbox openexr
-[DEP] openexr:dev openldap openldap:dev openssl openssl:dev pam pam:dev
-[DEP] patch pcre pcre:dev perl5 pkgconfig qt33 qt33:dev randrproto:dev
-[DEP] renderproto:dev rrdtool samba samba:dev scrnsaverproto:dev sed
-[DEP] shadow sysfiles sysfsutils tar twm util-linux xdm xextproto:dev
-[DEP] xf86miscproto:dev xineramaproto:dev xorg-cf-files xproto:dev zlib
-[DEP] zlib:dev
+[DEP] libxxf86misc libxxf86misc:dev linux26-headers:dev lm_sensors
+[DEP] lm_sensors:dev ltrace mad mad:dev magicpoint make mdnsresponder
+[DEP] mdnsresponder:dev mesalib mesalib:dev mkfontdir mkfontscale mktemp
+[DEP] nas ncurses ncurses:dev net-tools nx-x11 nx-x11:dev nxcomp openbox
+[DEP] openexr openexr:dev openldap openldap:dev openssl openssl:dev
+[DEP] pam pam:dev patch pcre pcre:dev perl5 pkgconfig qt33 qt33:dev
+[DEP] randrproto:dev renderproto:dev samba samba:dev scrnsaverproto:dev
+[DEP] sed shadow sysfiles sysfsutils tar twm util-linux xdm xextproto:dev
+[DEP] xf86miscproto:dev xineramaproto:dev xmame xorg-cf-files xorg-docs
+[DEP] xproto:dev zlib zlib:dev
 
 [PROVIDES] appletproxy appletproxy.so clock_panelapplet.so
 [PROVIDES] cursorthumbnail.so djvuthumbnail.so dockbar_panelextension.so
 [PROVIDES] drkonqi exrthumbnail.so extensionproxy extensionproxy.so
 [PROVIDES] genkdmconf htmlthumbnail.so imagethumbnail.so kaccess kaccess.so
-[PROVIDES] kappfinder kapplymousetheme kasbar kasbar_panelextension.so kate
-[PROVIDES] kate.so kblankscrn.kss kbookmarkmerger kcheckpass kcheckrunning
-[PROVIDES] kcm_access.so kcm_arts.so kcm_background.so kcm_bell.so
-[PROVIDES] kcm_cgi.so kcm_clock.so kcm_colors.so kcm_componentchooser.so
-[PROVIDES] kcm_crypto.so kcm_css.so kcm_display.so kcm_energy.so
-[PROVIDES] kcm_filetypes.so kcm_fonts.so kcm_history.so kcm_icons.so
-[PROVIDES] kcm_info.so kcm_input.so kcm_ioslaveinfo.so kcm_joystick.so
-[PROVIDES] kcm_kded.so kcm_kdm.so kcm_kdnssd.so kcm_keyboard.so
-[PROVIDES] kcm_keys.so kcm_khotkeys.so kcm_khotkeys_init.so kcm_kicker.so
-[PROVIDES] kcm_kio.so kcm_knotify.so kcm_konq.so kcm_konqhtml.so
-[PROVIDES] kcm_konsole.so kcm_ksplashthemes.so kcm_kthememanager.so
-[PROVIDES] kcm_kurifilt.so kcm_kwindecoration.so kcm_kwinoptions.so
-[PROVIDES] kcm_kwinrules.so kcm_launch.so kcm_locale.so kcm_media.so
-[PROVIDES] kcm_nic.so kcm_nsplugins.so kcm_performance.so kcm_printmgr.so
-[PROVIDES] kcm_privacy.so kcm_randr.so kcm_samba.so kcm_screensaver.so
-[PROVIDES] kcm_smserver.so kcm_spellchecking.so kcm_style.so kcm_taskbar.so
-[PROVIDES] kcm_usb.so kcm_useraccount.so kcm_view1394.so kcm_xinerama.so
-[PROVIDES] kcminit kcminit.so kcminit_startup kcminit_startup.so kcontrol
-[PROVIDES] kcontrol.so kcontroledit kcontroledit.so kdcop kdebugdialog
-[PROVIDES] kded_favicons.so kded_homedirnotify.so kded_khotkeys.so
-[PROVIDES] kded_konqy_preloader.so kded_kwrited.so kded_mediamanager.so
-[PROVIDES] kded_medianotifier.so kded_remotedirnotify.so
-[PROVIDES] kded_systemdirnotify.so kdeeject kdeinstallktheme kdepasswd
-[PROVIDES] kdeprintfax kdesktop kdesktop.so kdesktop_lock kdesu kdesud
-[PROVIDES] kdialog kdm kdm_config kdm_greet kdmctl keditbookmarks
-[PROVIDES] keditbookmarks.so keditfiletype kfile_media.so kfile_trash.so
-[PROVIDES] kfind kfmclient kfmclient.so kgreet_classic.so kgreet_winbind.so
-[PROVIDES] khc_docbookdig.pl khc_htdig.pl khc_htsearch.pl khc_indexbuilder
-[PROVIDES] khc_mansearch.pl khelpcenter khelpcenter.so khotkeys khotkeys.so
-[PROVIDES] khotkeys_arts.so khotkeys_update kicker kicker-3.4-reverseLayout
-[PROVIDES] kicker.so kickermenu_find.so kickermenu_kdeprint.so
+[PROVIDES] kappfinder kapplymousetheme kasbar kasbar_panelextension.so
+[PROVIDES] kate kate.so kblankscrn.kss kbookmarkmerger kcheckpass
+[PROVIDES] kcheckrunning kcm_access.so kcm_arts.so kcm_background.so
+[PROVIDES] kcm_bell.so kcm_cgi.so kcm_clock.so kcm_colors.so
+[PROVIDES] kcm_componentchooser.so kcm_crypto.so kcm_css.so
+[PROVIDES] kcm_display.so kcm_energy.so kcm_filetypes.so kcm_fonts.so
+[PROVIDES] kcm_history.so kcm_icons.so kcm_info.so kcm_input.so
+[PROVIDES] kcm_ioslaveinfo.so kcm_joystick.so kcm_kded.so kcm_kdm.so
+[PROVIDES] kcm_kdnssd.so kcm_keyboard.so kcm_keys.so kcm_khotkeys.so
+[PROVIDES] kcm_khotkeys_init.so kcm_kicker.so kcm_kio.so kcm_knotify.so
+[PROVIDES] kcm_konq.so kcm_konqhtml.so kcm_konsole.so kcm_ksplashthemes.so
+[PROVIDES] kcm_kthememanager.so kcm_kurifilt.so kcm_kwindecoration.so
+[PROVIDES] kcm_kwinoptions.so kcm_kwinrules.so kcm_launch.so kcm_locale.so
+[PROVIDES] kcm_media.so kcm_nic.so kcm_nsplugins.so kcm_performance.so
+[PROVIDES] kcm_printmgr.so kcm_privacy.so kcm_randr.so kcm_samba.so
+[PROVIDES] kcm_screensaver.so kcm_smserver.so kcm_spellchecking.so
+[PROVIDES] kcm_style.so kcm_taskbar.so kcm_usb.so kcm_useraccount.so
+[PROVIDES] kcm_view1394.so kcm_xinerama.so kcminit kcminit.so
+[PROVIDES] kcminit_startup kcminit_startup.so kcontrol kcontrol.so
+[PROVIDES] kcontroledit kcontroledit.so kdcop kdebugdialog kded_favicons.so
+[PROVIDES] kded_homedirnotify.so kded_khotkeys.so kded_konqy_preloader.so
+[PROVIDES] kded_kwrited.so kded_mediamanager.so kded_medianotifier.so
+[PROVIDES] kded_remotedirnotify.so kded_systemdirnotify.so kdeeject
+[PROVIDES] kdeinstallktheme kdepasswd kdeprintfax kdesktop kdesktop.so
+[PROVIDES] kdesktop_lock kdesu kdesud kdialog kdm kdm_config kdm_greet
+[PROVIDES] kdmctl keditbookmarks keditbookmarks.so keditfiletype
+[PROVIDES] kfile_media.so kfile_trash.so kfind kfmclient kfmclient.so
+[PROVIDES] kgreet_classic.so kgreet_winbind.so khc_docbookdig.pl
+[PROVIDES] khc_htdig.pl khc_htsearch.pl khc_indexbuilder khc_mansearch.pl
+[PROVIDES] khelpcenter khelpcenter.so khotkeys khotkeys.so khotkeys_arts.so
+[PROVIDES] khotkeys_update kicker kicker-3.4-reverseLayout kicker.so
+[PROVIDES] kickermenu_find.so kickermenu_kate.so kickermenu_kdeprint.so
 [PROVIDES] kickermenu_konqueror.so kickermenu_konsole.so
 [PROVIDES] kickermenu_prefmenu.so kickermenu_recentdocs.so
 [PROVIDES] kickermenu_remotemenu.so kickermenu_systemmenu.so

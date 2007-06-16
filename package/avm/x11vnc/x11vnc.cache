@@ -20,27 +20,27 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168706050 Sat Jan 13 17:34:10 2007 (5)
-[TIMESTAMP] 1168915888 Tue Jan 16 03:51:28 2007 (9)
+[TIMESTAMP] 1181240444 Thu Jun  7 20:20:44 2007 (5)
+[TIMESTAMP] 1181791478 Thu Jun 14 05:24:38 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-x11vnc.log 9-x11vnc.log
 
-[BUILDTIME] 4759 (5)
-[BUILDTIME] 4815 (9)
+[BUILDTIME] 6524 (5)
+[BUILDTIME] 6539 (9)
 [SIZE] 0.82 MB, 12 files
 
 [DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
 [DEP] coreutils cvm damageproto:dev diffutils findutils fixesproto:dev
-[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep imake inputproto:dev
+[DEP] gawk gcc42 gcc42:dev glibc26 glibc26:dev grep imake inputproto:dev
 [DEP] kbproto:dev libice libjpeg libjpeg:dev libsdl libx11 libx11:dev
-[DEP] libxau libxdamage libxdamage:dev libxdmcp libxext libxfixes
+[DEP] libxau libxcb libxdamage libxdamage:dev libxdmcp libxext libxfixes
 [DEP] libxfixes:dev libxinerama libxrandr libxrandr:dev libxrender
-[DEP] libxt libxtst linux-libc-headers:dev make mktemp net-tools netpbm
-[DEP] randrproto:dev recordproto:dev rrdtool sed sysfiles tar twoftpd
-[DEP] ucspi-unix util-linux xextproto:dev xineramaproto:dev xorg-cf-files
+[DEP] libxt libxtst linux26-headers:dev ltrace make mktemp net-tools
+[DEP] randrproto:dev recordproto:dev sed sysfiles tar twoftpd ucspi-unix
+[DEP] util-linux xextproto:dev xineramaproto:dev xmame xorg-cf-files
 [DEP] xproto:dev zlib zlib:dev
 
 [PROVIDES] x11vnc

@@ -20,21 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168533826 Thu Jan 11 17:43:46 2007 (5)
-[TIMESTAMP] 1168725444 Sat Jan 13 22:57:24 2007 (9)
+[TIMESTAMP] 1180912559 Mon Jun  4 01:15:59 2007 (5)
+[TIMESTAMP] 1181278806 Fri Jun  8 07:00:06 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-libdrm.log 9-libdrm.log
 
-[BUILDTIME] 2284 (5)
-[BUILDTIME] 2981 (9)
-[SIZE] 0.04 MB, 9 files
+[BUILDTIME] 2995 (5)
+[BUILDTIME] 3896 (9)
+[SIZE] 0.05 MB, 9 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
-[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev
-[DEP] make mktemp net-tools rrdtool sed sysfiles tar util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils
+[DEP] findutils gawk gcc42 gcc42:dev glibc26 glibc26:dev grep libelf
+[DEP] linux26-headers:dev ltrace make mktemp net-tools sed sysfiles tar
+[DEP] util-linux xmame
 
-[PROVIDES] libdrm.a libdrm.so
+[PROVIDES] libdrm.so
 

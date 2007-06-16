@@ -20,28 +20,33 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168661867 Sat Jan 13 05:17:47 2007 (5)
-[TIMESTAMP] 1168868860 Mon Jan 15 14:47:40 2007 (9)
+[TIMESTAMP] 1181104643 Wed Jun  6 06:37:23 2007 (5) ERROR
+[TIMESTAMP] 1181580188 Mon Jun 11 18:43:08 2007 (9) ERROR
+[TIMESTAMP] 1181825389 Thu Jun 14 14:49:49 2007 (5) ERROR
+[TIMESTAMP] 1181907877 Fri Jun 15 13:44:37 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-ethereal.log 9-ethereal.log
+[LOGS] 5-ethereal.err 9-ethereal.err
 
-[BUILDTIME] 75460 (5)
-[BUILDTIME] 75867 (9)
-[SIZE] 26.96 MB, 159 files
+[BUILDTIME] 91642 (5) ERROR
+[BUILDTIME] 90751 (9) ERROR
+[BUILDTIME] 91181 (5) ERROR
+[BUILDTIME] 90529 (9) ERROR
+[SIZE] 26.32 MB, 159 files
 
 [DEP] 00-dirtree alsa applewmproto atk atk:dev bash2 binutils bzip2 cairo
 [DEP] cairo:dev coreutils cvm diffutils expat expat:dev findutils flex
-[DEP] flex:dev fontconfig fontconfig:dev freetype freetype:dev gawk gcc40
-[DEP] gcc40:dev glib glib:dev glibc23 glibc23:dev gnome2-dirtree grep
-[DEP] gtk+ gtk+:dev libpcap:dev libpng libpng:dev libx11 libx11:dev
-[DEP] libxau libxau:dev libxcursor libxdmcp libxdmcp:dev libxext
+[DEP] flex:dev fontconfig fontconfig:dev freetype freetype:dev gawk gcc42
+[DEP] gcc42:dev glib glib:dev glibc26 glibc26:dev gnome2-dirtree grep
+[DEP] gtk+ gtk+:dev libpcap:dev libpng libpng:dev libx11 libx11:dev libxau
+[DEP] libxau:dev libxcb libxcb:dev libxcursor libxdmcp libxdmcp:dev libxext
 [DEP] libxfixes libxi libxinerama libxrandr libxrender libxrender:dev
-[DEP] linux-libc-headers:dev m4 make mktemp net-snmp net-snmp:dev net-tools
-[DEP] netpbm pango pango:dev patch pcre pcre:dev perl5 pkgconfig python rpm
-[DEP] rrdtool sed sysfiles tar twoftpd ucspi-unix util-linux zlib zlib:dev
+[DEP] linux26-headers:dev ltrace m4 make mktemp net-snmp net-snmp:dev
+[DEP] net-tools pango pango:dev patch pcre pcre:dev perl5 pkgconfig
+[DEP] python sed sysfiles tar twoftpd ucspi-unix util-linux wireshark
+[DEP] wireshark:dev xmame zlib zlib:dev
 
 [PROVIDES] acn.so agentx.so artnet.so asn1.so capinfos ciscosm.so
 [PROVIDES] coseventcomm.so cosnaming.so dftest docsis.so editcap enttec.so
@@ -50,4 +55,106 @@
 [PROVIDES] opsi.so parlay.so pcli.so profinet.so randpkt rdm.so rlm.so
 [PROVIDES] rtnet.so rudp.so stats_tree.so tango.so tethereal text2pcap
 [PROVIDES] v5ua.so
+
+[5-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'radius/dictionary.unisphere' '/usr/share/ethereal/radius/dictionary.unisphere'
+[5-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'radius/dictionary.unix' '/usr/share/ethereal/radius/dictionary.unix'
+[5-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'radius/dictionary.usr' '/usr/share/ethereal/radius/dictionary.usr'
+[5-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'radius/dictionary.valemount' '/usr/share/ethereal/radius/dictionary.valemount'
+[5-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'radius/dictionary.versanet' '/usr/share/ethereal/radius/dictionary.versanet'
+[5-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'radius/dictionary.wispr' '/usr/share/ethereal/radius/dictionary.wispr'
+[5-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'radius/dictionary.xedia' '/usr/share/ethereal/radius/dictionary.xedia'
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.ethereal.1181824417.21235.2406100439/ethereal-0.10.14'
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ethereal.1181824417.21235.2406100439/ethereal-0.10.14'
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.ethereal.1181824417.21235.2406100439/ethereal-0.10.14'
+[5-ERROR] Install desktop file '/ROCK/package/tsa/ethereal/ethereal.desktop': Trying to copy the default documentation ...
+[5-ERROR] Creating file list and doing final adaptions ... 
+[5-ERROR] Processing /lib corrections ...
+[5-ERROR] Verifing the .la files ...
+[5-ERROR] Checking usr/share/applications/ethereal.desktop ... 
+[5-ERROR] Found 224 files for this package.
+[5-ERROR] Applying package split: 40 ethereal:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[5-ERROR] Applying package split: 42 ethereal:dev /pkgconfig/
+[5-ERROR] Applying package split: 60 ethereal:doc /share/doc/
+[5-ERROR] Calculating package dependencies ...
+[5-ERROR] <ethereal> Creating flist file ...
+[5-ERROR] <ethereal> Creating package dependencies file ...
+[5-ERROR] <ethereal> Creating package description ...
+[5-ERROR] <ethereal> Creating md5sum and cksum files ...
+[5-ERROR] <ethereal:dev> Creating flist file ...
+[5-ERROR] <ethereal:dev> Creating package dependencies file ...
+[5-ERROR] <ethereal:dev> Creating package description ...
+[5-ERROR] <ethereal:dev> Creating md5sum and cksum files ...
+[5-ERROR] <ethereal:doc> Creating flist file ...
+[5-ERROR] <ethereal:doc> Creating package dependencies file ...
+[5-ERROR] <ethereal:doc> Creating package description ...
+[5-ERROR] <ethereal:doc> Creating md5sum and cksum files ...
+[5-ERROR] Making post-install adaptions.
+[5-ERROR] Found shared files with other packages:
+[5-ERROR] usr/bin/capinfos: ethereal wireshark
+[5-ERROR] usr/bin/dftest: ethereal wireshark
+[5-ERROR] usr/bin/editcap: ethereal wireshark
+[5-ERROR] usr/bin/mergecap: ethereal wireshark
+[5-ERROR] usr/bin/randpkt: ethereal wireshark
+[5-ERROR] usr/bin/text2pcap: ethereal wireshark
+[5-ERROR] usr/lib/libwiretap.la: ethereal:dev wireshark:dev
+[5-ERROR] usr/lib/libwiretap.so: ethereal wireshark
+[5-ERROR] usr/lib/libwiretap.so.0: ethereal wireshark
+[5-ERROR] usr/lib/libwiretap.so.0.0.1: ethereal wireshark
+[5-ERROR] usr/share/man/man1/capinfos.1: ethereal wireshark
+[5-ERROR] usr/share/man/man1/editcap.1: ethereal wireshark
+[5-ERROR] usr/share/man/man1/mergecap.1: ethereal wireshark
+[5-ERROR] usr/share/man/man1/text2pcap.1: ethereal wireshark
+[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'radius/dictionary.unisphere' '/usr/share/ethereal/radius/dictionary.unisphere'
+[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'radius/dictionary.unix' '/usr/share/ethereal/radius/dictionary.unix'
+[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'radius/dictionary.usr' '/usr/share/ethereal/radius/dictionary.usr'
+[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'radius/dictionary.valemount' '/usr/share/ethereal/radius/dictionary.valemount'
+[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'radius/dictionary.versanet' '/usr/share/ethereal/radius/dictionary.versanet'
+[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'radius/dictionary.wispr' '/usr/share/ethereal/radius/dictionary.wispr'
+[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'radius/dictionary.xedia' '/usr/share/ethereal/radius/dictionary.xedia'
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.ethereal.1181906617.24582.630968217/ethereal-0.10.14'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.ethereal.1181906617.24582.630968217/ethereal-0.10.14'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.ethereal.1181906617.24582.630968217/ethereal-0.10.14'
+[9-ERROR] Install desktop file '/ROCK/package/tsa/ethereal/ethereal.desktop': Trying to copy the default documentation ...
+[9-ERROR] Creating file list and doing final adaptions ... 
+[9-ERROR] Processing /lib corrections ...
+[9-ERROR] Verifing the .la files ...
+[9-ERROR] Checking usr/share/applications/ethereal.desktop ... 
+[9-ERROR] Found 224 files for this package.
+[9-ERROR] Applying package split: 40 ethereal:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
+[9-ERROR] Applying package split: 42 ethereal:dev /pkgconfig/
+[9-ERROR] Applying package split: 60 ethereal:doc /share/doc/
+[9-ERROR] Calculating package dependencies ...
+[9-ERROR] <ethereal> Creating flist file ...
+[9-ERROR] <ethereal> Creating package dependencies file ...
+[9-ERROR] <ethereal> Creating package description ...
+[9-ERROR] <ethereal> Creating md5sum and cksum files ...
+[9-ERROR] <ethereal:dev> Creating flist file ...
+[9-ERROR] <ethereal:dev> Creating package dependencies file ...
+[9-ERROR] <ethereal:dev> Creating package description ...
+[9-ERROR] <ethereal:dev> Creating md5sum and cksum files ...
+[9-ERROR] <ethereal:doc> Creating flist file ...
+[9-ERROR] <ethereal:doc> Creating package dependencies file ...
+[9-ERROR] <ethereal:doc> Creating package description ...
+[9-ERROR] <ethereal:doc> Creating md5sum and cksum files ...
+[9-ERROR] Making post-install adaptions.
+[9-ERROR] Found shared files with other packages:
+[9-ERROR] usr/bin/capinfos: ethereal wireshark
+[9-ERROR] usr/bin/dftest: ethereal wireshark
+[9-ERROR] usr/bin/editcap: ethereal wireshark
+[9-ERROR] usr/bin/mergecap: ethereal wireshark
+[9-ERROR] usr/bin/randpkt: ethereal wireshark
+[9-ERROR] usr/bin/text2pcap: ethereal wireshark
+[9-ERROR] usr/lib/libwiretap.la: ethereal:dev wireshark:dev
+[9-ERROR] usr/lib/libwiretap.so: ethereal wireshark
+[9-ERROR] usr/lib/libwiretap.so.0: ethereal wireshark
+[9-ERROR] usr/lib/libwiretap.so.0.0.1: ethereal wireshark
+[9-ERROR] usr/share/man/man1/capinfos.1: ethereal wireshark
+[9-ERROR] usr/share/man/man1/editcap.1: ethereal wireshark
+[9-ERROR] usr/share/man/man1/mergecap.1: ethereal wireshark
+[9-ERROR] usr/share/man/man1/text2pcap.1: ethereal wireshark
+[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] --- BUILD ERROR ---
 

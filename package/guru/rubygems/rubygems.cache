@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168707425 Sat Jan 13 17:57:05 2007 (5)
-[TIMESTAMP] 1168917317 Tue Jan 16 04:15:17 2007 (9)
+[TIMESTAMP] 1181243394 Thu Jun  7 21:09:54 2007 (5)
+[TIMESTAMP] 1181793459 Thu Jun 14 05:57:39 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-rubygems.log 9-rubygems.log
 
-[BUILDTIME] 1492 (5)
-[BUILDTIME] 1516 (9)
-[SIZE] 0.28 MB, 53 files
+[BUILDTIME] 5930 (5)
+[BUILDTIME] 5782 (9)
+[SIZE] 3.19 MB, 1442 files
 
-[DEP] 00-dirtree bash2 bzip2 coreutils cvm findutils gawk gcc40 grep
-[DEP] mktemp mod_ruby rexml rrdtool ruby sed sysfiles tar
+[DEP] 00-dirtree bash2 bzip2 coreutils cvm findutils gawk gcc42 grep
+[DEP] ltrace mktemp rexml ruby sed sysfiles tar xmame
 
-[PROVIDES] gem gem_mirror gem_server gemwhich generate_yaml_index.rb
-[PROVIDES] update_rubygems
+[PROVIDES] gem gem_mirror gem_server gemlock gemri gemwhich
+[PROVIDES] index_gem_repository.rb update_rubygems
 

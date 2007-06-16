@@ -20,125 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168696848 Sat Jan 13 15:00:48 2007 (5) ERROR
-[TIMESTAMP] 1168906141 Tue Jan 16 01:09:01 2007 (9) ERROR
-[TIMESTAMP] 1168954195 Tue Jan 16 14:29:55 2007 (5) ERROR
-[TIMESTAMP] 1168983924 Tue Jan 16 22:45:24 2007 (9) ERROR
-[TIMESTAMP] 1169124528 Thu Jan 18 13:48:48 2007 (5) ERROR
-[TIMESTAMP] 1169154119 Thu Jan 18 22:01:59 2007 (9) ERROR
+[TIMESTAMP] 1181201732 Thu Jun  7 09:35:32 2007 (5) ERROR
+[TIMESTAMP] 1181755666 Wed Jun 13 19:27:46 2007 (9) ERROR
+[TIMESTAMP] 1181836442 Thu Jun 14 17:54:02 2007 (5) ERROR
+[TIMESTAMP] 1181937325 Fri Jun 15 21:55:25 2007 (9) ERROR
+[TIMESTAMP] 1181958259 Sat Jun 16 03:44:19 2007 (5) ERROR
+[TIMESTAMP] 1181980157 Sat Jun 16 09:49:17 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-gnumeric.err 9-gnumeric.err
 
-[BUILDTIME] 2790 (5) ERROR
-[BUILDTIME] 2824 (9) ERROR
-[BUILDTIME] 2861 (5) ERROR
-[BUILDTIME] 2835 (9) ERROR
-[BUILDTIME] 2835 (5) ERROR
-[BUILDTIME] 2828 (9) ERROR
+[BUILDTIME] 30067 (5) ERROR
+[BUILDTIME] 28901 (9) ERROR
+[BUILDTIME] 28963 (5) ERROR
+[BUILDTIME] 28450 (9) ERROR
+[BUILDTIME] 28557 (5) ERROR
+[BUILDTIME] 28609 (9) ERROR
 
 
-[5-ERROR] appending configuration tag "F77" to libtool
-[5-ERROR] checking if libtool supports shared libraries... yes
-[5-ERROR] checking whether to build shared libraries... yes
-[5-ERROR] checking whether to build static libraries... no
-[5-ERROR] checking for f77 option to produce PIC... -fPIC
-[5-ERROR] checking if f77 PIC flag -fPIC works... no
-[5-ERROR] checking if f77 static flag -static works... no
-[5-ERROR] checking if f77 supports -c -o file.o... no
-[5-ERROR] checking whether the f77 linker (ld) supports shared libraries... yes
-[5-ERROR] checking dynamic linker characteristics... ./configure: line 1: f77: command not found
-[5-ERROR] GNU/Linux ld.so
-[5-ERROR] checking how to hardcode library paths into programs... immediate
-[5-ERROR] checking for ANSI C header files... (cached) yes
-[5-ERROR] checking zlib.h usability... yes
-[5-ERROR] checking zlib.h presence... yes
-[5-ERROR] checking for zlib.h... yes
-[5-ERROR] checking for gzread in -lz... yes
-[5-ERROR] checking for i386-unknown-linux-gnu-pkg-config... no
-[5-ERROR] checking for pkg-config... /usr/bin/pkg-config
-[5-ERROR] checking pkg-config is at least version 0.18... yes
-[5-ERROR] checking for GTK... yes
-[5-ERROR] checking for GTK... yes
-[5-ERROR] checking for GNOME... yes
-[5-ERROR] checking for GNOME... yes
-[5-ERROR] checking for LIBSPREADSHEET... configure: error: Package requirements (
-[5-ERROR] 	libgoffice-0.3		>= 0.3.1
-[5-ERROR] 	libgsf-1		>= 1.14.2
-[5-ERROR] 	libxml-2.0		>= 2.4.12
-[5-ERROR]  
-[5-ERROR] 	libglade-2.0		>= 2.3.6
-[5-ERROR] 	libgnomeprint-2.2	>= 2.8.2
-[5-ERROR] 	libgnomeprintui-2.2	>= 2.8.2
-[5-ERROR] 	gtk+-2.0		>= 2.6.0
-[5-ERROR] 	libart-2.0		>= 2.3.11
-[5-ERROR]  
-[5-ERROR] 	libgnomeui-2.0		>= 2.0.0
-[5-ERROR] 	gconf-2.0
-[5-ERROR] 	libbonobo-2.0		>= 2.2.0
-[5-ERROR] ) were not met:
-[5-ERROR] 
-[5-ERROR] No package 'libgoffice-0.3' found
-[5-ERROR] 
-[5-ERROR] Consider adjusting the PKG_CONFIG_PATH environment variable if you
-[5-ERROR] installed software in a non-standard prefix.
-[5-ERROR] 
-[5-ERROR] Alternatively, you may set the environment variables LIBSPREADSHEET_CFLAGS
-[5-ERROR] and LIBSPREADSHEET_LIBS to avoid the need to call pkg-config.
-[5-ERROR] See the pkg-config man page for more details.
-[5-ERROR] 
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_ui_manager_remove_action_group'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `go_action_combo_stack_truncate'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gsf_output_memory_new'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_hscale_new'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gog_object_sax_push_parser'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_misc_set_alignment'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `foo_canvas_item_get_bounds'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `g_value_set_static_string'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_tree_model_iter_next'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gnome_print_config_get_int'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `datetime_serial_to_g'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gnome_client_set_current_directory'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `g_utf8_strdown'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gog_plot_new_series'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `g_idle_remove_by_data'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `g_ascii_strcasecmp'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `g_slist_nth'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_scale_set_draw_value'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_tree_selection_select_iter'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_label_get_mnemonic_keyval'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gdk_display_get_window_at_pointer'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `g_boxed_type_register_static'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `go_combo_text_add_item'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_tree_model_iter_n_children'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_paned_get_position'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gsf_xml_out_add_uint'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `g_signal_handlers_unblock_matched'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_box_pack_end'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `cairo_move_to'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_frame_set_label'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_spin_button_get_value'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `g_get_current_dir'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `g_utf8_prev_char'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gdk_rectangle_intersect'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gdk_window_show'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_icon_set_add_source'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gsf_xml_in_doc_free'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `go_action_combo_pixmaps_new'
+[5-ERROR] ./.libs/libspreadsheet.so: undefined reference to `go_gtk_dialog_add_button'
+[5-ERROR] collect2: ld returned 1 exit status
+[5-ERROR] make[4]: *** [gnumeric] Error 1
+[5-ERROR] make[4]: Leaving directory `/ROCK/loop/src.gnumeric.1181957969.4255.1463462473/gnumeric-1.7.2/src'
+[5-ERROR] make[3]: *** [all-recursive] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.gnumeric.1181957969.4255.1463462473/gnumeric-1.7.2/src'
+[5-ERROR] make[2]: *** [all] Error 2
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.gnumeric.1181957969.4255.1463462473/gnumeric-1.7.2/src'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.gnumeric.1181957969.4255.1463462473/gnumeric-1.7.2'
+[5-ERROR] make: *** [all] Error 2
 [5-ERROR] --- BUILD ERROR ---
 
-[9-ERROR] appending configuration tag "F77" to libtool
-[9-ERROR] checking if libtool supports shared libraries... yes
-[9-ERROR] checking whether to build shared libraries... yes
-[9-ERROR] checking whether to build static libraries... no
-[9-ERROR] checking for f77 option to produce PIC... -fPIC
-[9-ERROR] checking if f77 PIC flag -fPIC works... no
-[9-ERROR] checking if f77 static flag -static works... no
-[9-ERROR] checking if f77 supports -c -o file.o... no
-[9-ERROR] checking whether the f77 linker (ld) supports shared libraries... yes
-[9-ERROR] checking dynamic linker characteristics... ./configure: line 1: f77: command not found
-[9-ERROR] GNU/Linux ld.so
-[9-ERROR] checking how to hardcode library paths into programs... immediate
-[9-ERROR] checking for ANSI C header files... (cached) yes
-[9-ERROR] checking zlib.h usability... yes
-[9-ERROR] checking zlib.h presence... yes
-[9-ERROR] checking for zlib.h... yes
-[9-ERROR] checking for gzread in -lz... yes
-[9-ERROR] checking for i386-unknown-linux-gnu-pkg-config... no
-[9-ERROR] checking for pkg-config... /usr/bin/pkg-config
-[9-ERROR] checking pkg-config is at least version 0.18... yes
-[9-ERROR] checking for GTK... yes
-[9-ERROR] checking for GTK... yes
-[9-ERROR] checking for GNOME... yes
-[9-ERROR] checking for GNOME... yes
-[9-ERROR] checking for LIBSPREADSHEET... configure: error: Package requirements (
-[9-ERROR] 	libgoffice-0.3		>= 0.3.1
-[9-ERROR] 	libgsf-1		>= 1.14.2
-[9-ERROR] 	libxml-2.0		>= 2.4.12
-[9-ERROR]  
-[9-ERROR] 	libglade-2.0		>= 2.3.6
-[9-ERROR] 	libgnomeprint-2.2	>= 2.8.2
-[9-ERROR] 	libgnomeprintui-2.2	>= 2.8.2
-[9-ERROR] 	gtk+-2.0		>= 2.6.0
-[9-ERROR] 	libart-2.0		>= 2.3.11
-[9-ERROR]  
-[9-ERROR] 	libgnomeui-2.0		>= 2.0.0
-[9-ERROR] 	gconf-2.0
-[9-ERROR] 	libbonobo-2.0		>= 2.2.0
-[9-ERROR] ) were not met:
-[9-ERROR] 
-[9-ERROR] No package 'libgoffice-0.3' found
-[9-ERROR] 
-[9-ERROR] Consider adjusting the PKG_CONFIG_PATH environment variable if you
-[9-ERROR] installed software in a non-standard prefix.
-[9-ERROR] 
-[9-ERROR] Alternatively, you may set the environment variables LIBSPREADSHEET_CFLAGS
-[9-ERROR] and LIBSPREADSHEET_LIBS to avoid the need to call pkg-config.
-[9-ERROR] See the pkg-config man page for more details.
-[9-ERROR] 
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_ui_manager_remove_action_group'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `go_action_combo_stack_truncate'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gsf_output_memory_new'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_hscale_new'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gog_object_sax_push_parser'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_misc_set_alignment'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `foo_canvas_item_get_bounds'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `g_value_set_static_string'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_tree_model_iter_next'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gnome_print_config_get_int'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `datetime_serial_to_g'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gnome_client_set_current_directory'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `g_utf8_strdown'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gog_plot_new_series'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `g_idle_remove_by_data'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `g_ascii_strcasecmp'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `g_slist_nth'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_scale_set_draw_value'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_tree_selection_select_iter'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_label_get_mnemonic_keyval'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gdk_display_get_window_at_pointer'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `g_boxed_type_register_static'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `go_combo_text_add_item'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_tree_model_iter_n_children'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_paned_get_position'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gsf_xml_out_add_uint'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `g_signal_handlers_unblock_matched'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_box_pack_end'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `cairo_move_to'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_frame_set_label'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_spin_button_get_value'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `g_get_current_dir'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `g_utf8_prev_char'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gdk_rectangle_intersect'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gdk_window_show'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gtk_icon_set_add_source'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `gsf_xml_in_doc_free'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `go_action_combo_pixmaps_new'
+[9-ERROR] ./.libs/libspreadsheet.so: undefined reference to `go_gtk_dialog_add_button'
+[9-ERROR] collect2: ld returned 1 exit status
+[9-ERROR] make[4]: *** [gnumeric] Error 1
+[9-ERROR] make[4]: Leaving directory `/ROCK/loop/src.gnumeric.1181979869.11450.1677029054/gnumeric-1.7.2/src'
+[9-ERROR] make[3]: *** [all-recursive] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.gnumeric.1181979869.11450.1677029054/gnumeric-1.7.2/src'
+[9-ERROR] make[2]: *** [all] Error 2
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.gnumeric.1181979869.11450.1677029054/gnumeric-1.7.2/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.gnumeric.1181979869.11450.1677029054/gnumeric-1.7.2'
+[9-ERROR] make: *** [all] Error 2
 [9-ERROR] --- BUILD ERROR ---
 

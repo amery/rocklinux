@@ -20,28 +20,30 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168567394 Fri Jan 12 03:03:14 2007 (5)
-[TIMESTAMP] 1168764972 Sun Jan 14 09:56:12 2007 (9)
+[TIMESTAMP] 1180958296 Mon Jun  4 13:58:16 2007 (5)
+[TIMESTAMP] 1181351132 Sat Jun  9 03:05:32 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-gconf.log 9-gconf.log
 
-[BUILDTIME] 6993 (5)
-[BUILDTIME] 7545 (9)
-[SIZE] 0.73 MB, 30 files
+[BUILDTIME] 8786 (5)
+[BUILDTIME] 9453 (9)
+[SIZE] 0.74 MB, 35 files
 
 [DEP] 00-dirtree applewmproto atk atk:dev bash2 binutils bzip2 cairo
-[DEP] cairo:dev coreutils cvm diffutils expat findutils fontconfig
-[DEP] freetype gawk gcc40 gcc40:dev gettext glib glib:dev glib:doc glibc23
-[DEP] glibc23:dev gnome2-dirtree grep gtk+ gtk+:dev libpng libx11 libxau
-[DEP] libxcursor libxdmcp libxext libxfixes libxi libxinerama libxml2
-[DEP] libxml2:dev libxrandr libxrender linux-libc-headers:dev make mktemp
-[DEP] net-tools orbit2 orbit2:dev pango pango:dev perl5 pkgconfig popt
-[DEP] popt:dev rrdtool sed sysfiles tar util-linux zlib
+[DEP] cairo:dev coreutils cvm cyrus-sasl2 cyrus-sasl2:dev diffutils
+[DEP] expat findutils fontconfig freetype gawk gcc42 gcc42:dev gettext
+[DEP] glib glib:dev glib:doc glibc26 glibc26:dev gnome2-dirtree grep
+[DEP] gtk+ gtk+:dev libpng libx11 libxau libxcb libxcursor libxdmcp
+[DEP] libxext libxfixes libxi libxinerama libxml2 libxml2:dev libxrandr
+[DEP] libxrender linux26-headers:dev ltrace make mktemp net-tools
+[DEP] openldap openldap:dev openssl orbit2 orbit2:dev pango pango:dev
+[DEP] perl5 pkgconfig popt popt:dev sed sysfiles tar util-linux xmame zlib
 
 [PROVIDES] gconf-merge-tree gconftool-2 libgconf-2.a libgconf-2.so
+[PROVIDES] libgconfbackend-evoldap.a libgconfbackend-evoldap.so
 [PROVIDES] libgconfbackend-oldxml.a libgconfbackend-oldxml.so
 [PROVIDES] libgconfbackend-xml.a libgconfbackend-xml.so
 

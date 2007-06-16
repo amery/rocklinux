@@ -20,61 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168601978 Fri Jan 12 12:39:38 2007 (5)
-[TIMESTAMP] 1168804313 Sun Jan 14 20:51:53 2007 (9)
+[TIMESTAMP] 1181003349 Tue Jun  5 02:29:09 2007 (5) ERROR
+[TIMESTAMP] 1181467359 Sun Jun 10 11:22:39 2007 (9) ERROR
+[TIMESTAMP] 1181812973 Thu Jun 14 11:22:53 2007 (5) ERROR
+[TIMESTAMP] 1181868404 Fri Jun 15 02:46:44 2007 (9) ERROR
+[TIMESTAMP] 1181946055 Sat Jun 16 00:20:55 2007 (5) ERROR
+[TIMESTAMP] 1181966907 Sat Jun 16 06:08:27 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-mpeg4ip.log 9-mpeg4ip.log
+[LOGS] 5-mpeg4ip.err 9-mpeg4ip.err
 
-[BUILDTIME] 82451 (5)
-[BUILDTIME] 84220 (9)
-[SIZE] 6.35 MB, 156 files
+[BUILDTIME] 48579 (5) ERROR
+[BUILDTIME] 51115 (9) ERROR
+[BUILDTIME] 49188 (5) ERROR
+[BUILDTIME] 48939 (9) ERROR
+[BUILDTIME] 49343 (5) ERROR
+[BUILDTIME] 48254 (9) ERROR
 
-[DEP] 00-dirtree a52dec:dev alsa alsa:dev applewmproto applewmproto:dev
-[DEP] arts arts:dev atk atk:dev audiofile audiofile:dev bash2 binutils
-[DEP] bzip2 cairo cairo:dev coreutils cvm diffutils esound esound:dev
-[DEP] expat expat:dev faac faac:dev faad2 faad2:dev findutils fontconfig
-[DEP] fontconfig:dev freetype freetype:dev gawk gcc40 gcc40:dev glib
-[DEP] glib:dev glibc23 glibc23:dev gnome2-dirtree grep gtk+ gtk+:dev
-[DEP] id3lib id3lib:dev imake lame lame:dev libice libice:dev libmpeg2:dev
-[DEP] libpng libpng:dev libsdl libsdl:dev libsm libsm:dev libtool libx11
-[DEP] libx11:dev libxau libxau:dev libxcursor libxdmcp libxdmcp:dev libxext
-[DEP] libxfixes libxi libxinerama libxrandr libxrender libxrender:dev
-[DEP] libxt libxt:dev linux-libc-headers:dev mad make mktemp nas nas:dev
-[DEP] nasm net-tools netpbm ogg-vorbis ogg-vorbis:dev pango pango:dev
-[DEP] pkgconfig rrdtool sed sysfiles tar twoftpd ucspi-unix util-linux
-[DEP] x264:dev xorg-cf-files xproto:dev xvid:dev zlib
 
-[PROVIDES] a52_audio_plugin.a a52_audio_plugin.so aac_plugin.a
-[PROVIDES] aac_plugin.so avi2raw avidump celp_plugin.a celp_plugin.so
-[PROVIDES] g711_audio_plugin.a g711_audio_plugin.so gmp4player
-[PROVIDES] h261_plugin.a h261_plugin.so h261_rtp_plugin.a
-[PROVIDES] h261_rtp_plugin.so h264_parse h264_rtp_plugin.a
-[PROVIDES] h264_rtp_plugin.so href_rtp_plugin.a href_rtp_plugin.so
-[PROVIDES] href_text_plugin.a href_text_plugin.so isma_enc_rtp_plugin.a
-[PROVIDES] isma_enc_rtp_plugin.so isma_enc_video_rtp_plugin.a
-[PROVIDES] isma_enc_video_rtp_plugin.so isma_rtp_plugin.a
-[PROVIDES] isma_rtp_plugin.so latm_rtp_plugin.a latm_rtp_plugin.so
-[PROVIDES] lboxcrop libh264util.a libh264util.so libhttp.a libhttp.so
-[PROVIDES] libismacryp.a libismacryp.so libmp4.a libmp4.so libmp4av.a
-[PROVIDES] libmp4av.so libmp4util.a libmp4util.so libmp4v2.a libmp4v2.so
-[PROVIDES] libmpeg4ipSDL.a libmpeg4ipSDL.so libmpeg4ip_celp.a
-[PROVIDES] libmpeg4ip_celp.so libmpeg4ip_celpbs.a libmpeg4ip_celpbs.so
-[PROVIDES] libmpeg4ip_faad.a libmpeg4ip_faad.so libmpeg4ip_fposrec.a
-[PROVIDES] libmpeg4ip_fposrec.so libmpeg4ip_gnu.a libmpeg4ip_gnu.so
-[PROVIDES] libmpeg4ip_mpeg4_iso.a libmpeg4ip_mpeg4_iso.so
-[PROVIDES] libmsg_queue.a libmsg_queue.so libsdp.a libsdp.so
-[PROVIDES] libsrtpif.a libsrtpif.so mp3_plugin.a mp3_plugin.so mp4art
-[PROVIDES] mp4creator mp4dump mp4extract mp4info mp4live mp4player
-[PROVIDES] mp4tags mp4trackdump mp4videoinfo mpeg2dec_video_plugin.a
-[PROVIDES] mpeg2dec_video_plugin.so mpeg2video_parse mpeg4_iso_plugin.a
-[PROVIDES] mpeg4_iso_plugin.so mpeg4ip-config mpeg4vol mpeg_ps_extract
-[PROVIDES] mpeg_ps_info plaintext_text_plugin.a plaintext_text_plugin.so
-[PROVIDES] raw_audio_plugin.a raw_audio_plugin.so raw_video_plugin.a
-[PROVIDES] raw_video_plugin.so rfc2429_rtp_plugin.a rfc2429_rtp_plugin.so
-[PROVIDES] rfc3267_plugin.a rfc3267_plugin.so rgb2yuv sdl_pcm_play
-[PROVIDES] wav_plugin.a wav_plugin.so xvid10_plugin.a xvid10_plugin.so
-[PROVIDES] yuvdump
+[5-ERROR] ./../include/vlc.hpp:400: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./../include/vlc.hpp:400: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR]  g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I./../include -D__TRACE_AND_STATS_ -D__DOUBLE_PRECISION_ -D_REENTRANT -DNOCONTROLS -fexceptions -Wall -Werror -D_OBSS_ -Wall -Wmissing-prototypes -Wno-char-subscripts -Woverloaded-virtual -Wno-unknown-pragmas -Wno-deprecated -Wformat=2 -g -O2 -DMPEG4IP -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -MT tools_entropy_huffman.lo -MD -MP -MF .deps/tools_entropy_huffman.Tpo -c tools_entropy_huffman.cpp -o tools_entropy_huffman.o >/dev/null 2>&1
+[5-ERROR] if /bin/sh ../libtool --tag=CXX --mode=compile g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I./../include   -D__TRACE_AND_STATS_ -D__DOUBLE_PRECISION_ -D_REENTRANT -DNOCONTROLS -fexceptions -Wall -Werror -D_OBSS_ -Wall -Wmissing-prototypes -Wno-char-subscripts -Woverloaded-virtual -Wno-unknown-pragmas -Wno-deprecated -Wformat=2 -g -O2 -DMPEG4IP -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -MT tools_sadct_sadct.lo -MD -MP -MF ".deps/tools_sadct_sadct.Tpo" -c -o tools_sadct_sadct.lo tools_sadct_sadct.cpp; \
+[5-ERROR] 	then mv -f ".deps/tools_sadct_sadct.Tpo" ".deps/tools_sadct_sadct.Plo"; else rm -f ".deps/tools_sadct_sadct.Tpo"; exit 1; fi
+[5-ERROR]  g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I./../include -D__TRACE_AND_STATS_ -D__DOUBLE_PRECISION_ -D_REENTRANT -DNOCONTROLS -fexceptions -Wall -Werror -D_OBSS_ -Wall -Wmissing-prototypes -Wno-char-subscripts -Woverloaded-virtual -Wno-unknown-pragmas -Wno-deprecated -Wformat=2 -g -O2 -DMPEG4IP -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -MT tools_sadct_sadct.lo -MD -MP -MF .deps/tools_sadct_sadct.Tpo -c tools_sadct_sadct.cpp  -fPIC -DPIC -o .libs/tools_sadct_sadct.o
+[5-ERROR] cc1plus: warning: command line option "-Wmissing-prototypes" is valid for Ada/C/ObjC but not for C++
+[5-ERROR]  g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I./../include -D__TRACE_AND_STATS_ -D__DOUBLE_PRECISION_ -D_REENTRANT -DNOCONTROLS -fexceptions -Wall -Werror -D_OBSS_ -Wall -Wmissing-prototypes -Wno-char-subscripts -Woverloaded-virtual -Wno-unknown-pragmas -Wno-deprecated -Wformat=2 -g -O2 -DMPEG4IP -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -MT tools_sadct_sadct.lo -MD -MP -MF .deps/tools_sadct_sadct.Tpo -c tools_sadct_sadct.cpp -o tools_sadct_sadct.o >/dev/null 2>&1
+[5-ERROR] if /bin/sh ../libtool --tag=CXX --mode=compile g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I./../include   -D__TRACE_AND_STATS_ -D__DOUBLE_PRECISION_ -D_REENTRANT -DNOCONTROLS -fexceptions -Wall -Werror -D_OBSS_ -Wall -Wmissing-prototypes -Wno-char-subscripts -Woverloaded-virtual -Wno-unknown-pragmas -Wno-deprecated -Wformat=2 -g -O2 -DMPEG4IP -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -MT type_basic.lo -MD -MP -MF ".deps/type_basic.Tpo" -c -o type_basic.lo type_basic.cpp; \
+[5-ERROR] 	then mv -f ".deps/type_basic.Tpo" ".deps/type_basic.Plo"; else rm -f ".deps/type_basic.Tpo"; exit 1; fi
+[5-ERROR]  g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I./../include -D__TRACE_AND_STATS_ -D__DOUBLE_PRECISION_ -D_REENTRANT -DNOCONTROLS -fexceptions -Wall -Werror -D_OBSS_ -Wall -Wmissing-prototypes -Wno-char-subscripts -Woverloaded-virtual -Wno-unknown-pragmas -Wno-deprecated -Wformat=2 -g -O2 -DMPEG4IP -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -MT type_basic.lo -MD -MP -MF .deps/type_basic.Tpo -c type_basic.cpp  -fPIC -DPIC -o .libs/type_basic.o
+[5-ERROR] cc1plus: warning: command line option "-Wmissing-prototypes" is valid for Ada/C/ObjC but not for C++
+[5-ERROR] type_basic.cpp:320: error: '<anonymous>' has incomplete type
+[5-ERROR] type_basic.cpp:320: error: invalid use of 'Void'
+[5-ERROR] type_basic.cpp:320: error: prototype for 'Void CMotionVector::setToZero(<type error>)' does not match any in class 'CMotionVector'
+[5-ERROR] ./../include/basic.hpp:441: error: candidate is: Void CMotionVector::setToZero()
+[5-ERROR] type_basic.cpp:326: error: '<anonymous>' has incomplete type
+[5-ERROR] type_basic.cpp:326: error: invalid use of 'Void'
+[5-ERROR] type_basic.cpp:326: error: prototype for 'Void CMotionVector::scaleup(<type error>)' does not match any in class 'CMotionVector'
+[5-ERROR] ./../include/basic.hpp:450: error: candidate is: Void CMotionVector::scaleup()
+[5-ERROR] make[6]: *** [type_basic.lo] Error 1
+[5-ERROR] make[6]: Leaving directory `/ROCK/loop/src.mpeg4ip.1181945561.1833.202647550/mpeg4ip-1.5.0.1/common/video/iso-mpeg4/src'
+[5-ERROR] make[5]: *** [all-recursive] Error 1
+[5-ERROR] make[5]: Leaving directory `/ROCK/loop/src.mpeg4ip.1181945561.1833.202647550/mpeg4ip-1.5.0.1/common/video/iso-mpeg4'
+[5-ERROR] make[4]: *** [all] Error 2
+[5-ERROR] make[4]: Leaving directory `/ROCK/loop/src.mpeg4ip.1181945561.1833.202647550/mpeg4ip-1.5.0.1/common/video/iso-mpeg4'
+[5-ERROR] make[3]: *** [all-recursive] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.mpeg4ip.1181945561.1833.202647550/mpeg4ip-1.5.0.1/common/video'
+[5-ERROR] make[2]: *** [all-recursive] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.mpeg4ip.1181945561.1833.202647550/mpeg4ip-1.5.0.1/common'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.mpeg4ip.1181945561.1833.202647550/mpeg4ip-1.5.0.1'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] ./../include/vlc.hpp:400: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./../include/vlc.hpp:400: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ./../include/vlc.hpp:409: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR]  g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I./../include -D__TRACE_AND_STATS_ -D__DOUBLE_PRECISION_ -D_REENTRANT -DNOCONTROLS -fexceptions -Wall -Werror -D_OBSS_ -Wall -Wmissing-prototypes -Wno-char-subscripts -Woverloaded-virtual -Wno-unknown-pragmas -Wno-deprecated -Wformat=2 -g -O2 -DMPEG4IP -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -MT tools_entropy_huffman.lo -MD -MP -MF .deps/tools_entropy_huffman.Tpo -c tools_entropy_huffman.cpp -o tools_entropy_huffman.o >/dev/null 2>&1
+[9-ERROR] if /bin/sh ../libtool --tag=CXX --mode=compile g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I./../include   -D__TRACE_AND_STATS_ -D__DOUBLE_PRECISION_ -D_REENTRANT -DNOCONTROLS -fexceptions -Wall -Werror -D_OBSS_ -Wall -Wmissing-prototypes -Wno-char-subscripts -Woverloaded-virtual -Wno-unknown-pragmas -Wno-deprecated -Wformat=2 -g -O2 -DMPEG4IP -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -MT tools_sadct_sadct.lo -MD -MP -MF ".deps/tools_sadct_sadct.Tpo" -c -o tools_sadct_sadct.lo tools_sadct_sadct.cpp; \
+[9-ERROR] 	then mv -f ".deps/tools_sadct_sadct.Tpo" ".deps/tools_sadct_sadct.Plo"; else rm -f ".deps/tools_sadct_sadct.Tpo"; exit 1; fi
+[9-ERROR]  g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I./../include -D__TRACE_AND_STATS_ -D__DOUBLE_PRECISION_ -D_REENTRANT -DNOCONTROLS -fexceptions -Wall -Werror -D_OBSS_ -Wall -Wmissing-prototypes -Wno-char-subscripts -Woverloaded-virtual -Wno-unknown-pragmas -Wno-deprecated -Wformat=2 -g -O2 -DMPEG4IP -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -MT tools_sadct_sadct.lo -MD -MP -MF .deps/tools_sadct_sadct.Tpo -c tools_sadct_sadct.cpp  -fPIC -DPIC -o .libs/tools_sadct_sadct.o
+[9-ERROR] cc1plus: warning: command line option "-Wmissing-prototypes" is valid for Ada/C/ObjC but not for C++
+[9-ERROR]  g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I./../include -D__TRACE_AND_STATS_ -D__DOUBLE_PRECISION_ -D_REENTRANT -DNOCONTROLS -fexceptions -Wall -Werror -D_OBSS_ -Wall -Wmissing-prototypes -Wno-char-subscripts -Woverloaded-virtual -Wno-unknown-pragmas -Wno-deprecated -Wformat=2 -g -O2 -DMPEG4IP -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -MT tools_sadct_sadct.lo -MD -MP -MF .deps/tools_sadct_sadct.Tpo -c tools_sadct_sadct.cpp -o tools_sadct_sadct.o >/dev/null 2>&1
+[9-ERROR] if /bin/sh ../libtool --tag=CXX --mode=compile g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I./../include   -D__TRACE_AND_STATS_ -D__DOUBLE_PRECISION_ -D_REENTRANT -DNOCONTROLS -fexceptions -Wall -Werror -D_OBSS_ -Wall -Wmissing-prototypes -Wno-char-subscripts -Woverloaded-virtual -Wno-unknown-pragmas -Wno-deprecated -Wformat=2 -g -O2 -DMPEG4IP -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -MT type_basic.lo -MD -MP -MF ".deps/type_basic.Tpo" -c -o type_basic.lo type_basic.cpp; \
+[9-ERROR] 	then mv -f ".deps/type_basic.Tpo" ".deps/type_basic.Plo"; else rm -f ".deps/type_basic.Tpo"; exit 1; fi
+[9-ERROR]  g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I./../include -D__TRACE_AND_STATS_ -D__DOUBLE_PRECISION_ -D_REENTRANT -DNOCONTROLS -fexceptions -Wall -Werror -D_OBSS_ -Wall -Wmissing-prototypes -Wno-char-subscripts -Woverloaded-virtual -Wno-unknown-pragmas -Wno-deprecated -Wformat=2 -g -O2 -DMPEG4IP -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -MT type_basic.lo -MD -MP -MF .deps/type_basic.Tpo -c type_basic.cpp  -fPIC -DPIC -o .libs/type_basic.o
+[9-ERROR] cc1plus: warning: command line option "-Wmissing-prototypes" is valid for Ada/C/ObjC but not for C++
+[9-ERROR] type_basic.cpp:320: error: '<anonymous>' has incomplete type
+[9-ERROR] type_basic.cpp:320: error: invalid use of 'Void'
+[9-ERROR] type_basic.cpp:320: error: prototype for 'Void CMotionVector::setToZero(<type error>)' does not match any in class 'CMotionVector'
+[9-ERROR] ./../include/basic.hpp:441: error: candidate is: Void CMotionVector::setToZero()
+[9-ERROR] type_basic.cpp:326: error: '<anonymous>' has incomplete type
+[9-ERROR] type_basic.cpp:326: error: invalid use of 'Void'
+[9-ERROR] type_basic.cpp:326: error: prototype for 'Void CMotionVector::scaleup(<type error>)' does not match any in class 'CMotionVector'
+[9-ERROR] ./../include/basic.hpp:450: error: candidate is: Void CMotionVector::scaleup()
+[9-ERROR] make[6]: *** [type_basic.lo] Error 1
+[9-ERROR] make[6]: Leaving directory `/ROCK/loop/src.mpeg4ip.1181966429.26474.3307008318/mpeg4ip-1.5.0.1/common/video/iso-mpeg4/src'
+[9-ERROR] make[5]: *** [all-recursive] Error 1
+[9-ERROR] make[5]: Leaving directory `/ROCK/loop/src.mpeg4ip.1181966429.26474.3307008318/mpeg4ip-1.5.0.1/common/video/iso-mpeg4'
+[9-ERROR] make[4]: *** [all] Error 2
+[9-ERROR] make[4]: Leaving directory `/ROCK/loop/src.mpeg4ip.1181966429.26474.3307008318/mpeg4ip-1.5.0.1/common/video/iso-mpeg4'
+[9-ERROR] make[3]: *** [all-recursive] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.mpeg4ip.1181966429.26474.3307008318/mpeg4ip-1.5.0.1/common/video'
+[9-ERROR] make[2]: *** [all-recursive] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.mpeg4ip.1181966429.26474.3307008318/mpeg4ip-1.5.0.1/common'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.mpeg4ip.1181966429.26474.3307008318/mpeg4ip-1.5.0.1'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

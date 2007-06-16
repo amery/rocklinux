@@ -20,125 +20,59 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168708655 Sat Jan 13 18:17:35 2007 (5) ERROR
-[TIMESTAMP] 1168919191 Tue Jan 16 04:46:31 2007 (9) ERROR
-[TIMESTAMP] 1168957118 Tue Jan 16 15:18:38 2007 (5) ERROR
-[TIMESTAMP] 1168986372 Tue Jan 16 23:26:12 2007 (9) ERROR
-[TIMESTAMP] 1169127433 Thu Jan 18 14:37:13 2007 (5) ERROR
-[TIMESTAMP] 1169156558 Thu Jan 18 22:42:38 2007 (9) ERROR
+[TIMESTAMP] 1181248106 Thu Jun  7 22:28:26 2007 (5)
+[TIMESTAMP] 1181797036 Thu Jun 14 06:57:16 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-asterisk.err 9-asterisk.err
+[LOGS] 5-asterisk.log 9-asterisk.log
 
-[BUILDTIME] 12032 (5) ERROR
-[BUILDTIME] 12041 (9) ERROR
-[BUILDTIME] 12084 (5) ERROR
-[BUILDTIME] 12065 (9) ERROR
-[BUILDTIME] 12059 (5) ERROR
-[BUILDTIME] 12102 (9) ERROR
+[BUILDTIME] 19829 (5)
+[BUILDTIME] 18908 (9)
+[SIZE] 11.48 MB, 596 files
 
+[DEP] 00-dirtree alien alsa alsa:dev bash2 binutils bzip2 coreutils curl
+[DEP] curl:dev cvm diffutils findutils freetds freetds:dev gawk gcc42
+[DEP] gcc42:dev glibc26 glibc26:dev grep libogg libogg:dev libvorbis
+[DEP] libvorbis:dev linux26-headers:dev ltrace make mktemp ncurses
+[DEP] ncurses:dev net-tools openssl openssl:dev patch popt popt:dev sed
+[DEP] speex speex:dev sqlite sqlite:dev sysfiles tar xmame zlib zlib:dev
 
-[5-ERROR] gcc-40 -shared -Xlinker -x -o format_pcm_alaw.so  format_pcm_alaw.o 
-[5-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer  -fPIC   -c -o format_h263.o format_h263.c
-[5-ERROR] gcc-40 -shared -Xlinker -x -o format_h263.so  format_h263.o 
-[5-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer  -fPIC   -c -o format_g726.o format_g726.c
-[5-ERROR] gcc-40 -shared -Xlinker -x -o format_g726.so  format_g726.o 
-[5-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer  -fPIC   -c -o format_ilbc.o format_ilbc.c
-[5-ERROR] gcc-40 -shared -Xlinker -x -o format_ilbc.so  format_ilbc.o 
-[5-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer  -fPIC   -c -o format_sln.o format_sln.c
-[5-ERROR] gcc-40 -shared -Xlinker -x -o format_sln.so  format_sln.o 
-[5-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer  -fPIC   -c -o format_au.o format_au.c
-[5-ERROR] gcc-40 -shared -Xlinker -x -o format_au.so  format_au.o 
-[5-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer  -fPIC   -c -o format_jpeg.o format_jpeg.c
-[5-ERROR] gcc-40 -shared -Xlinker -x -o format_jpeg.so  format_jpeg.o 
-[5-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer  -fPIC   -c -o format_g723.o format_g723.c
-[5-ERROR] gcc-40 -shared -Xlinker -x -o format_g723.so  format_g723.o 
-[5-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer  -fPIC   -c -o format_ogg_vorbis.o format_ogg_vorbis.c
-[5-ERROR] gcc-40 -shared -Xlinker -x -o format_ogg_vorbis.so  format_ogg_vorbis.o  -logg -lvorbis -lvorbisenc -lm
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.asterisk.1169127309.6639.3282125563/asterisk-1.2.4/formats'
-[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.asterisk.1169127309.6639.3282125563/asterisk-1.2.4/agi'
-[5-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer     -c -o eagi-test.o eagi-test.c
-[5-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer   -o eagi-test eagi-test.o 
-[5-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer     -c -o eagi-sphinx-test.o eagi-sphinx-test.c
-[5-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer   -o eagi-sphinx-test eagi-sphinx-test.o  
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.asterisk.1169127309.6639.3282125563/asterisk-1.2.4/agi'
-[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.asterisk.1169127309.6639.3282125563/asterisk-1.2.4/cdr'
-[5-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer  -fPIC -DFREETDS_PRE_0_62   -c -o cdr_csv.o cdr_csv.c
-[5-ERROR] gcc-40 -shared -Xlinker -x -o cdr_csv.so  cdr_csv.o 
-[5-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer  -fPIC -DFREETDS_PRE_0_62   -c -o cdr_manager.o cdr_manager.c
-[5-ERROR] gcc-40 -shared -Xlinker -x -o cdr_manager.so  cdr_manager.o 
-[5-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer  -fPIC -DFREETDS_PRE_0_62   -c -o cdr_custom.o cdr_custom.c
-[5-ERROR] gcc-40 -shared -Xlinker -x -o cdr_custom.so  cdr_custom.o 
-[5-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer  -fPIC -DFREETDS_PRE_0_62   -c -o cdr_tds.o cdr_tds.c
-[5-ERROR] cdr_tds.c:82:2: warning: #warning "You have older TDS, you should upgrade!"
-[5-ERROR] cdr_tds.c: In function 'tds_log':
-[5-ERROR] cdr_tds.c:208: error: too many arguments to function 'tds_process_simple_query'
-[5-ERROR] cdr_tds.c: In function 'mssql_connect':
-[5-ERROR] cdr_tds.c:326: error: 'TDSCONNECTINFO' undeclared (first use in this function)
-[5-ERROR] cdr_tds.c:326: error: (Each undeclared identifier is reported only once
-[5-ERROR] cdr_tds.c:326: error: for each function it appears in.)
-[5-ERROR] cdr_tds.c:326: error: 'connection' undeclared (first use in this function)
-[5-ERROR] cdr_tds.c:349: error: too few arguments to function 'tds_alloc_context'
-[5-ERROR] cdr_tds.c:375: warning: implicit declaration of function 'tds_free_connect'
-[5-ERROR] cdr_tds.c:389: error: 'result_type' undeclared (first use in this function)
-[5-ERROR] cdr_tds.c:389: error: too many arguments to function 'tds_process_simple_query'
-[5-ERROR] cdr_tds.c: In function 'tds_load_module':
-[5-ERROR] cdr_tds.c:429: warning: unused variable 'result_type'
-[5-ERROR] make[1]: *** [cdr_tds.o] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.asterisk.1169127309.6639.3282125563/asterisk-1.2.4/cdr'
-[5-ERROR] make: *** [subdirs] Error 1
-[5-ERROR] --- BUILD ERROR ---
-
-[9-ERROR] gcc-40 -shared -Xlinker -x -o format_pcm_alaw.so  format_pcm_alaw.o 
-[9-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer  -fPIC   -c -o format_h263.o format_h263.c
-[9-ERROR] gcc-40 -shared -Xlinker -x -o format_h263.so  format_h263.o 
-[9-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer  -fPIC   -c -o format_g726.o format_g726.c
-[9-ERROR] gcc-40 -shared -Xlinker -x -o format_g726.so  format_g726.o 
-[9-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer  -fPIC   -c -o format_ilbc.o format_ilbc.c
-[9-ERROR] gcc-40 -shared -Xlinker -x -o format_ilbc.so  format_ilbc.o 
-[9-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer  -fPIC   -c -o format_sln.o format_sln.c
-[9-ERROR] gcc-40 -shared -Xlinker -x -o format_sln.so  format_sln.o 
-[9-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer  -fPIC   -c -o format_au.o format_au.c
-[9-ERROR] gcc-40 -shared -Xlinker -x -o format_au.so  format_au.o 
-[9-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer  -fPIC   -c -o format_jpeg.o format_jpeg.c
-[9-ERROR] gcc-40 -shared -Xlinker -x -o format_jpeg.so  format_jpeg.o 
-[9-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer  -fPIC   -c -o format_g723.o format_g723.c
-[9-ERROR] gcc-40 -shared -Xlinker -x -o format_g723.so  format_g723.o 
-[9-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer  -fPIC   -c -o format_ogg_vorbis.o format_ogg_vorbis.c
-[9-ERROR] gcc-40 -shared -Xlinker -x -o format_ogg_vorbis.so  format_ogg_vorbis.o  -logg -lvorbis -lvorbisenc -lm
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.asterisk.1169156435.30658.670780609/asterisk-1.2.4/formats'
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.asterisk.1169156435.30658.670780609/asterisk-1.2.4/agi'
-[9-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer     -c -o eagi-test.o eagi-test.c
-[9-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer   -o eagi-test eagi-test.o 
-[9-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer     -c -o eagi-sphinx-test.o eagi-sphinx-test.c
-[9-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer   -o eagi-sphinx-test eagi-sphinx-test.o  
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.asterisk.1169156435.30658.670780609/asterisk-1.2.4/agi'
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.asterisk.1169156435.30658.670780609/asterisk-1.2.4/cdr'
-[9-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer  -fPIC -DFREETDS_PRE_0_62   -c -o cdr_csv.o cdr_csv.c
-[9-ERROR] gcc-40 -shared -Xlinker -x -o cdr_csv.so  cdr_csv.o 
-[9-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer  -fPIC -DFREETDS_PRE_0_62   -c -o cdr_manager.o cdr_manager.c
-[9-ERROR] gcc-40 -shared -Xlinker -x -o cdr_manager.so  cdr_manager.o 
-[9-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer  -fPIC -DFREETDS_PRE_0_62   -c -o cdr_custom.o cdr_custom.c
-[9-ERROR] gcc-40 -shared -Xlinker -x -o cdr_custom.so  cdr_custom.o 
-[9-ERROR] gcc-40  -pipe  -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -g3  -Iinclude -I../include -D_REENTRANT -D_GNU_SOURCE  -O6 -march=i686         -fomit-frame-pointer  -fPIC -DFREETDS_PRE_0_62   -c -o cdr_tds.o cdr_tds.c
-[9-ERROR] cdr_tds.c:82:2: warning: #warning "You have older TDS, you should upgrade!"
-[9-ERROR] cdr_tds.c: In function 'tds_log':
-[9-ERROR] cdr_tds.c:208: error: too many arguments to function 'tds_process_simple_query'
-[9-ERROR] cdr_tds.c: In function 'mssql_connect':
-[9-ERROR] cdr_tds.c:326: error: 'TDSCONNECTINFO' undeclared (first use in this function)
-[9-ERROR] cdr_tds.c:326: error: (Each undeclared identifier is reported only once
-[9-ERROR] cdr_tds.c:326: error: for each function it appears in.)
-[9-ERROR] cdr_tds.c:326: error: 'connection' undeclared (first use in this function)
-[9-ERROR] cdr_tds.c:349: error: too few arguments to function 'tds_alloc_context'
-[9-ERROR] cdr_tds.c:375: warning: implicit declaration of function 'tds_free_connect'
-[9-ERROR] cdr_tds.c:389: error: 'result_type' undeclared (first use in this function)
-[9-ERROR] cdr_tds.c:389: error: too many arguments to function 'tds_process_simple_query'
-[9-ERROR] cdr_tds.c: In function 'tds_load_module':
-[9-ERROR] cdr_tds.c:429: warning: unused variable 'result_type'
-[9-ERROR] make[1]: *** [cdr_tds.o] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.asterisk.1169156435.30658.670780609/asterisk-1.2.4/cdr'
-[9-ERROR] make: *** [subdirs] Error 1
-[9-ERROR] --- BUILD ERROR ---
+[PROVIDES] agi-test.agi app_adsiprog.so app_alarmreceiver.so
+[PROVIDES] app_authenticate.so app_cdr.so app_chanisavail.so
+[PROVIDES] app_chanspy.so app_controlplayback.so app_curl.so app_cut.so
+[PROVIDES] app_db.so app_dial.so app_dictate.so app_directed_pickup.so
+[PROVIDES] app_directory.so app_disa.so app_dumpchan.so app_echo.so
+[PROVIDES] app_enumlookup.so app_eval.so app_exec.so app_externalivr.so
+[PROVIDES] app_festival.so app_forkcdr.so app_getcpeid.so app_groupcount.so
+[PROVIDES] app_hasnewvoicemail.so app_ices.so app_image.so
+[PROVIDES] app_lookupblacklist.so app_lookupcidname.so app_macro.so
+[PROVIDES] app_math.so app_md5.so app_milliwatt.so app_mixmonitor.so
+[PROVIDES] app_mp3.so app_nbscat.so app_parkandannounce.so
+[PROVIDES] app_playback.so app_privacy.so app_queue.so app_random.so
+[PROVIDES] app_read.so app_readfile.so app_realtime.so app_record.so
+[PROVIDES] app_sayunixtime.so app_senddtmf.so app_sendtext.so
+[PROVIDES] app_setcallerid.so app_setcdruserfield.so app_setcidname.so
+[PROVIDES] app_setcidnum.so app_setrdnis.so app_settransfercapability.so
+[PROVIDES] app_sms.so app_softhangup.so app_stack.so app_system.so
+[PROVIDES] app_talkdetect.so app_test.so app_transfer.so app_txtcidname.so
+[PROVIDES] app_url.so app_userevent.so app_verbose.so app_voicemail.so
+[PROVIDES] app_waitforring.so app_waitforsilence.so app_while.so
+[PROVIDES] app_zapateller.so asterisk astgenkey autosupport cdr_csv.so
+[PROVIDES] cdr_custom.so cdr_manager.so cdr_sqlite.so cdr_tds.so
+[PROVIDES] chan_agent.so chan_alsa.so chan_features.so chan_iax2.so
+[PROVIDES] chan_local.so chan_mgcp.so chan_oss.so chan_phone.so chan_sip.so
+[PROVIDES] chan_skinny.so codec_a_mu.so codec_adpcm.so codec_alaw.so
+[PROVIDES] codec_g726.so codec_gsm.so codec_ilbc.so codec_lpc10.so
+[PROVIDES] codec_speex.so codec_ulaw.so eagi-sphinx-test eagi-test
+[PROVIDES] format_au.so format_g723.so format_g726.so format_g729.so
+[PROVIDES] format_gsm.so format_h263.so format_ilbc.so format_jpeg.so
+[PROVIDES] format_ogg_vorbis.so format_pcm.so format_pcm_alaw.so
+[PROVIDES] format_sln.so format_vox.so format_wav.so format_wav_gsm.so
+[PROVIDES] func_callerid.so func_enum.so func_uri.so pbx_ael.so
+[PROVIDES] pbx_config.so pbx_dundi.so pbx_functions.so pbx_loopback.so
+[PROVIDES] pbx_realtime.so pbx_spool.so rasterisk res_adsi.so res_agi.so
+[PROVIDES] res_crypto.so res_features.so res_indications.so res_monitor.so
+[PROVIDES] res_musiconhold.so safe_asterisk smsq stereorize streamplayer
 

@@ -20,25 +20,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168669970 Sat Jan 13 07:32:50 2007 (5) ERROR
-[TIMESTAMP] 1168877951 Mon Jan 15 17:19:11 2007 (9) ERROR
-[TIMESTAMP] 1168951081 Tue Jan 16 13:38:01 2007 (5) ERROR
-[TIMESTAMP] 1168980481 Tue Jan 16 21:48:01 2007 (9) ERROR
-[TIMESTAMP] 1169121382 Thu Jan 18 12:56:22 2007 (5) ERROR
-[TIMESTAMP] 1169150682 Thu Jan 18 21:04:42 2007 (9) ERROR
+[TIMESTAMP] 1181116754 Wed Jun  6 09:59:14 2007 (5) ERROR
+[TIMESTAMP] 1181592971 Mon Jun 11 22:16:11 2007 (9)
+[TIMESTAMP] 1181826653 Thu Jun 14 15:10:53 2007 (5)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-epiphany.err 9-epiphany.err
+[LOGS] 5-epiphany.log 9-epiphany.log
 
-[BUILDTIME] 41622 (5) ERROR
-[BUILDTIME] 41980 (9) ERROR
-[BUILDTIME] 42067 (5) ERROR
-[BUILDTIME] 42032 (9) ERROR
-[BUILDTIME] 42028 (5) ERROR
-[BUILDTIME] 42028 (9) ERROR
-[SIZE] 10.28 MB, 230 files
+[BUILDTIME] 21818 (5) ERROR
+[BUILDTIME] 42964 (9)
+[BUILDTIME] 42649 (5)
+[SIZE] 10.18 MB, 229 files
 
 [DEP] 00-dirtree alsa alsa:dev applewmproto applewmproto:dev atk
 [DEP] atk:dev audiofile audiofile:dev balsa bash2 binutils bzip2 cairo
@@ -46,127 +40,24 @@
 [DEP] dbus-glib dbus-glib:dev dbus:dev devhelp diffutils docbookx esound
 [DEP] esound:dev evince evolution-webcal expat expat:dev file-roller
 [DEP] findutils firefox firefox:dev fontconfig fontconfig:dev freetype
-[DEP] freetype:dev gawk gcc40 gcc40:dev gconf gconf-editor gconf:dev
-[DEP] gdm gettext glib glib:dev glib:doc glibc23 glibc23:dev gnome-blog
+[DEP] freetype:dev gawk gcc42 gcc42:dev gconf gconf-editor gconf:dev
+[DEP] gdm gettext glib glib:dev glib:doc glibc26 glibc26:dev gnome-blog
 [DEP] gnome-cups-manager gnome-desktop gnome-desktop:dev gnome-doc-utils
 [DEP] gnome-games gnome-keyring gnome-keyring-manager gnome-keyring:dev
 [DEP] gnome-netstatus gnome-panel gnome-utils gnome-vfs gnome-vfs:dev
 [DEP] gnome2-dirtree gnopernicus gossip grep gtk+ gtk+:dev gucharmap
 [DEP] libart_lgpl23 libart_lgpl23:dev libbonobo libbonobo:dev libbonoboui
 [DEP] libbonoboui:dev libglade libglade:dev libgnome libgnome:dev
-[DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev
-[DEP] libice libice:dev libjpeg libjpeg:dev libpng libpng:dev libsm
-[DEP] libsm:dev libx11 libx11:dev libxau libxau:dev libxcursor libxdmcp
-[DEP] libxdmcp:dev libxext libxfixes libxi libxinerama libxml2 libxml2:dev
-[DEP] libxrandr libxrender libxrender:dev libxslt libxslt:dev liferea
-[DEP] linux-libc-headers:dev make mktemp mplayerplug-in nautilus-cd-burner
-[DEP] net-tools openssl orbit2 orbit2:dev pango pango:dev perl5 pkgconfig
-[DEP] popt popt:dev pygobject:dev pygtk pygtk:dev python python:dev
-[DEP] rhythmbox rrdtool sed startup-notification startup-notification:dev
-[DEP] sysfiles tar tcl tk totem util-linux vino xproto:dev yelp zapping
-[DEP] zlib
+[DEP] libgnomecanvas libgnomecanvas:dev libgnomeui libgnomeui:dev libice
+[DEP] libice:dev libjpeg libjpeg:dev libpng libpng:dev libsm libsm:dev
+[DEP] libx11 libx11:dev libxau libxau:dev libxcb libxcb:dev libxcursor
+[DEP] libxdmcp libxdmcp:dev libxext libxfixes libxi libxinerama libxml2
+[DEP] libxml2:dev libxrandr libxrender libxrender:dev libxslt libxslt:dev
+[DEP] linux26-headers:dev ltrace make mktemp nautilus-cd-burner net-tools
+[DEP] openssl orbit2 orbit2:dev pango pango:dev perl5 pkgconfig popt
+[DEP] popt:dev pygobject:dev pygtk pygtk:dev python python:dev rhythmbox
+[DEP] sed startup-notification startup-notification:dev sysfiles tar tcl
+[DEP] tk totem util-linux vino xmame xproto:dev yelp zlib
 
 [PROVIDES] epiphany libdesktopfileplugin.so
-
-[5-ERROR] -- Installing ./html/up.png
-[5-ERROR] -- Installing ./html/index.sgml
-[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.epiphany.1169120914.26687.1486741501/epiphany-2.16.0/doc/reference'
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.epiphany.1169120914.26687.1486741501/epiphany-2.16.0/doc/reference'
-[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.epiphany.1169120914.26687.1486741501/epiphany-2.16.0/doc'
-[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.epiphany.1169120914.26687.1486741501/epiphany-2.16.0/doc'
-[5-ERROR] make[3]: Nothing to be done for `install-exec-am'.
-[5-ERROR] test -z "/opt/gnome2/share/man/man1" || mkdir -p -- "/opt/gnome2/share/man/man1"
-[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './epiphany.1' '/opt/gnome2/share/man/man1/epiphany.1'
-[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.epiphany.1169120914.26687.1486741501/epiphany-2.16.0/doc'
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.epiphany.1169120914.26687.1486741501/epiphany-2.16.0/doc'
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.epiphany.1169120914.26687.1486741501/epiphany-2.16.0/doc'
-[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.epiphany.1169120914.26687.1486741501/epiphany-2.16.0'
-[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.epiphany.1169120914.26687.1486741501/epiphany-2.16.0'
-[5-ERROR] make[2]: Nothing to be done for `install-exec-am'.
-[5-ERROR] make[2]: Nothing to be done for `install-data-am'.
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.epiphany.1169120914.26687.1486741501/epiphany-2.16.0'
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.epiphany.1169120914.26687.1486741501/epiphany-2.16.0'
-[5-ERROR] Install desktop file '/ROCK/package/gnome2/epiphany/epiphany.desktop': Trying to copy the default documentation ...
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing /lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Checking opt/gnome2/share/applications/bme.desktop ... 
-[5-ERROR] Adding X-ROCK-Name tag (epiphany)
-[5-ERROR] Checking opt/gnome2/share/applications/epiphany.desktop ... 
-[5-ERROR] Adding X-ROCK-Name tag (epiphany)
-[5-ERROR] Checking usr/share/applications/epiphany.desktop ... 
-[5-ERROR] Found 372 files for this package.
-[5-ERROR] Applying package split: 40 epiphany:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
-[5-ERROR] Applying package split: 42 epiphany:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 epiphany:doc /share/doc/
-[5-ERROR] Applying package split: 61 epiphany:doc /share/gtk-doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <epiphany> Creating flist file ...
-[5-ERROR] <epiphany> Creating package dependencies file ...
-[5-ERROR] <epiphany> Creating package description ...
-[5-ERROR] <epiphany> Creating md5sum and cksum files ...
-[5-ERROR] <epiphany:dev> Creating flist file ...
-[5-ERROR] <epiphany:dev> Creating package dependencies file ...
-[5-ERROR] <epiphany:dev> Creating package description ...
-[5-ERROR] <epiphany:dev> Creating md5sum and cksum files ...
-[5-ERROR] <epiphany:doc> Creating flist file ...
-[5-ERROR] <epiphany:doc> Creating package dependencies file ...
-[5-ERROR] <epiphany:doc> Creating package description ...
-[5-ERROR] <epiphany:doc> Creating md5sum and cksum files ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Found shared files with other packages:
-[5-ERROR] opt/firefox/lib/firefox-1.5.0.7/components/xpti.dat: epiphany firefox
-[5-ERROR] --- BUILD ERROR ---
-[5-ERROR] --- BUILD ERROR ---
-
-[9-ERROR] -- Installing ./html/up.png
-[9-ERROR] -- Installing ./html/index.sgml
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.epiphany.1169150235.17294.3084940077/epiphany-2.16.0/doc/reference'
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.epiphany.1169150235.17294.3084940077/epiphany-2.16.0/doc/reference'
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.epiphany.1169150235.17294.3084940077/epiphany-2.16.0/doc'
-[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.epiphany.1169150235.17294.3084940077/epiphany-2.16.0/doc'
-[9-ERROR] make[3]: Nothing to be done for `install-exec-am'.
-[9-ERROR] test -z "/opt/gnome2/share/man/man1" || mkdir -p -- "/opt/gnome2/share/man/man1"
-[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './epiphany.1' '/opt/gnome2/share/man/man1/epiphany.1'
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.epiphany.1169150235.17294.3084940077/epiphany-2.16.0/doc'
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.epiphany.1169150235.17294.3084940077/epiphany-2.16.0/doc'
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.epiphany.1169150235.17294.3084940077/epiphany-2.16.0/doc'
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.epiphany.1169150235.17294.3084940077/epiphany-2.16.0'
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.epiphany.1169150235.17294.3084940077/epiphany-2.16.0'
-[9-ERROR] make[2]: Nothing to be done for `install-exec-am'.
-[9-ERROR] make[2]: Nothing to be done for `install-data-am'.
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.epiphany.1169150235.17294.3084940077/epiphany-2.16.0'
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.epiphany.1169150235.17294.3084940077/epiphany-2.16.0'
-[9-ERROR] Install desktop file '/ROCK/package/gnome2/epiphany/epiphany.desktop': Trying to copy the default documentation ...
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing /lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Checking opt/gnome2/share/applications/bme.desktop ... 
-[9-ERROR] Adding X-ROCK-Name tag (epiphany)
-[9-ERROR] Checking opt/gnome2/share/applications/epiphany.desktop ... 
-[9-ERROR] Adding X-ROCK-Name tag (epiphany)
-[9-ERROR] Checking usr/share/applications/epiphany.desktop ... 
-[9-ERROR] Found 372 files for this package.
-[9-ERROR] Applying package split: 40 epiphany:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
-[9-ERROR] Applying package split: 42 epiphany:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 epiphany:doc /share/doc/
-[9-ERROR] Applying package split: 61 epiphany:doc /share/gtk-doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <epiphany> Creating flist file ...
-[9-ERROR] <epiphany> Creating package dependencies file ...
-[9-ERROR] <epiphany> Creating package description ...
-[9-ERROR] <epiphany> Creating md5sum and cksum files ...
-[9-ERROR] <epiphany:dev> Creating flist file ...
-[9-ERROR] <epiphany:dev> Creating package dependencies file ...
-[9-ERROR] <epiphany:dev> Creating package description ...
-[9-ERROR] <epiphany:dev> Creating md5sum and cksum files ...
-[9-ERROR] <epiphany:doc> Creating flist file ...
-[9-ERROR] <epiphany:doc> Creating package dependencies file ...
-[9-ERROR] <epiphany:doc> Creating package description ...
-[9-ERROR] <epiphany:doc> Creating md5sum and cksum files ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Found shared files with other packages:
-[9-ERROR] opt/firefox/lib/firefox-1.5.0.7/components/xpti.dat: epiphany firefox
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] --- BUILD ERROR ---
 

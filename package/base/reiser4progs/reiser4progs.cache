@@ -20,22 +20,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168634093 Fri Jan 12 21:34:53 2007 (5)
-[TIMESTAMP] 1168839242 Mon Jan 15 06:34:02 2007 (9)
+[TIMESTAMP] 1181061622 Tue Jun  5 18:40:22 2007 (5)
+[TIMESTAMP] 1181528592 Mon Jun 11 04:23:12 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-reiser4progs.log 9-reiser4progs.log
 
-[BUILDTIME] 23395 (5)
-[BUILDTIME] 24074 (9)
-[SIZE] 0.57 MB, 37 files
+[BUILDTIME] 28025 (5)
+[BUILDTIME] 28110 (9)
+[SIZE] 0.58 MB, 37 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils e2fsprogs
-[DEP] e2fsprogs:dev findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev
-[DEP] grep linux-libc-headers:dev make mktemp ncurses ncurses:dev net-tools
-[DEP] readline readline:dev rrdtool sed sysfiles tar util-linux
+[DEP] e2fsprogs:dev findutils gawk gcc42 gcc42:dev gettext glibc26
+[DEP] glibc26:dev grep linux26-headers:dev ltrace make mktemp ncurses
+[DEP] ncurses:dev net-tools readline readline:dev sed sysfiles tar
+[DEP] util-linux xmame
 
 [PROVIDES] debugfs.reiser4 fsck.reiser4 libaal-minimal.a libaal-minimal.so
 [PROVIDES] libaal.a libaal.so libreiser4-minimal.a libreiser4-minimal.so

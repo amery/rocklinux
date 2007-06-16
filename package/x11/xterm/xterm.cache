@@ -20,55 +20,53 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168540884 Thu Jan 11 19:41:24 2007 (5)
-[TIMESTAMP] 1168734600 Sun Jan 14 01:30:00 2007 (9) ERROR
-[TIMESTAMP] 1168958336 Tue Jan 16 15:38:56 2007 (9) ERROR
-[TIMESTAMP] 1169128632 Thu Jan 18 14:57:12 2007 (9) ERROR
+[TIMESTAMP] 1180923414 Mon Jun  4 04:16:54 2007 (5)
+[TIMESTAMP] 1181304950 Fri Jun  8 14:15:50 2007 (9) ERROR
+[TIMESTAMP] 1181851475 Thu Jun 14 22:04:35 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-xterm.log 9-xterm.err
 
-[BUILDTIME] 2969 (5)
-[BUILDTIME] 3700 (9) ERROR
-[BUILDTIME] 3740 (9) ERROR
-[BUILDTIME] 3734 (9) ERROR
-[SIZE] 0.40 MB, 15 files
+[BUILDTIME] 4299 (5)
+[BUILDTIME] 5255 (9) ERROR
+[BUILDTIME] 10516 (9) ERROR
+[SIZE] 0.41 MB, 15 files
 
 [DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
 [DEP] coreutils cvm diffutils expat findutils fontconfig fontconfig:dev
-[DEP] freetype freetype:dev gawk gcc40 gcc40:dev glibc23 glibc23:dev
-[DEP] grep imake kbproto:dev libelf libice libice:dev libsm libsm:dev
-[DEP] libx11 libx11:dev libxau libxaw libxaw:dev libxdmcp libxext libxft
+[DEP] freetype freetype:dev gawk gcc42 gcc42:dev glibc26 glibc26:dev grep
+[DEP] imake kbproto:dev libelf libice libice:dev libsm libsm:dev libx11
+[DEP] libx11:dev libxau libxaw libxaw:dev libxcb libxdmcp libxext libxft
 [DEP] libxft:dev libxkbfile:dev libxmu libxmu:dev libxp libxpm libxrender
-[DEP] libxrender:dev libxt libxt:dev linux-libc-headers:dev make mktemp
-[DEP] ncurses ncurses:dev net-tools netpbm patch pkgconfig renderproto:dev
-[DEP] rrdtool sed sysfiles tar twoftpd ucspi-unix util-linux xfig
-[DEP] xorg-cf-files xorg-server xproto:dev zlib
+[DEP] libxrender:dev libxt libxt:dev linux26-headers:dev ltrace make mktemp
+[DEP] ncurses ncurses:dev net-tools patch pkgconfig renderproto:dev sed
+[DEP] sysfiles tar twoftpd ucspi-unix util-linux xfig xmame xorg-cf-files
+[DEP] xorg-server xproto:dev zlib
 
 [PROVIDES] resize uxterm xterm
 
+[9-ERROR] testing if -lSM is needed
+[9-ERROR] testing if -lICE is needed
 [9-ERROR] testing if -lX11 is needed
 [9-ERROR] testing if -ltermcap is needed
-[9-ERROR] /bin/sh ./sinstall.sh  "/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c" xterm  /usr/bin/xterm /usr/bin/`echo xterm|    sed 's,x,x,'`
+[9-ERROR] /bin/sh ./sinstall.sh  "/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c" xterm  /usr/bin/xterm /usr/bin/`echo xterm|    sed 's,x,x,'`
 [9-ERROR] checking for presumed installation-mode
 [9-ERROR] ... if "/usr/bin/xterm" is null, try the ls -g option
 [9-ERROR] ... if "/usr/bin/xterm" is null, we do not look for group
-[9-ERROR] ... if we have date in proper columns (Jan 16 15:38), "" is null
+[9-ERROR] ... if we have date in proper columns (Jun 8 14:14), "" is null
 [9-ERROR] ... derived user "root", group "root" of previously-installed xterm
 [9-ERROR] ... see if mode "-rwxr-xr-x" has s-bit set
 [9-ERROR] ... installing xterm as user "root", group "root"
-[9-ERROR] /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 755   xterm /usr/bin/xterm
-[9-ERROR] /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m  755 resize /usr/bin/`echo resize|   sed 's,x,x,'`
+[9-ERROR] /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 755   xterm /usr/bin/xterm
+[9-ERROR] /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m  755 resize /usr/bin/`echo resize|   sed 's,x,x,'`
 [9-ERROR] ... installing /usr/bin/uxterm
-[9-ERROR] make: [install] Error 1 (ignored)
-[9-ERROR] make: [install] Error 1 (ignored)
-[9-ERROR] make: [install] Error 1 (ignored)
-[9-ERROR] /bin/sh ./minstall.sh "/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644" ./xterm.man    /usr/share/man/man1/`echo xterm|    sed 's,x,x,'`.1
-[9-ERROR] /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./xterm.man /usr/share/man/man1/xterm.1
-[9-ERROR] /bin/sh ./minstall.sh "/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644" ./resize.man   /usr/share/man/man1/`echo resize|   sed 's,x,x,'`.1
-[9-ERROR] /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./resize.man /usr/share/man/man1/resize.1
+[9-ERROR] /bin/sh ./minstall.sh "/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644" ./xterm.man    /usr/share/man/man1/`echo xterm|    sed 's,x,x,'`.1  '/usr/lib/X11/app-defaults'
+[9-ERROR] /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./xterm.man /usr/share/man/man1/xterm.1
+[9-ERROR] /bin/sh ./minstall.sh "/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644" ./resize.man   /usr/share/man/man1/`echo resize|   sed 's,x,x,'`.1 '/usr/lib/X11/app-defaults'
+[9-ERROR] /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./resize.man /usr/share/man/man1/resize.1
+[9-ERROR] /bin/sh ./mkdirs.sh '/usr/lib/X11/app-defaults'
 [9-ERROR] installing /usr/lib/X11/app-defaults/XTerm
 [9-ERROR] installing /usr/lib/X11/app-defaults/XTerm-color
 [9-ERROR] installing /usr/lib/X11/app-defaults/UXTerm

@@ -39,22 +39,125 @@
 [COPY] file for details.
 [COPY] 
 
-[TIMESTAMP] 1168564506 Fri Jan 12 02:15:06 2007 (5)
-[TIMESTAMP] 1168761767 Sun Jan 14 09:02:47 2007 (9)
+[TIMESTAMP] 1180954956 Mon Jun  4 13:02:36 2007 (5) ERROR
+[TIMESTAMP] 1181346797 Sat Jun  9 01:53:17 2007 (9) ERROR
+[TIMESTAMP] 1181802825 Thu Jun 14 08:33:45 2007 (5) ERROR
+[TIMESTAMP] 1181857054 Thu Jun 14 23:37:34 2007 (9) ERROR
+[TIMESTAMP] 1181940574 Fri Jun 15 22:49:34 2007 (5) ERROR
+[TIMESTAMP] 1181961132 Sat Jun 16 04:32:12 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-srm.log 9-srm.log
+[LOGS] 5-srm.err 9-srm.err
 
-[BUILDTIME] 1616 (5)
-[BUILDTIME] 2072 (9)
-[SIZE] 0.03 MB, 8 files
+[BUILDTIME] 1854 (5) ERROR
+[BUILDTIME] 1917 (9) ERROR
+[BUILDTIME] 1892 (5) ERROR
+[BUILDTIME] 1862 (9) ERROR
+[BUILDTIME] 1841 (5) ERROR
+[BUILDTIME] 1810 (9) ERROR
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
-[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev
-[DEP] make mktemp net-tools netpbm rrdtool sed sysfiles tar twoftpd
-[DEP] ucspi-unix util-linux
 
-[PROVIDES] srm
+[5-ERROR] 	gcc-42 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -c `test -f 'snprintf.c' || echo './'`snprintf.c
+[5-ERROR] source='getopt1.c' object='getopt1.o' libtool=no \
+[5-ERROR] 	depfile='.deps/getopt1.Po' tmpdepfile='.deps/getopt1.TPo' \
+[5-ERROR] 	depmode=gcc3 /bin/sh ../depcomp \
+[5-ERROR] 	gcc-42 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -c `test -f 'getopt1.c' || echo './'`getopt1.c
+[5-ERROR] source='getopt.c' object='getopt.o' libtool=no \
+[5-ERROR] 	depfile='.deps/getopt.Po' tmpdepfile='.deps/getopt.TPo' \
+[5-ERROR] 	depmode=gcc3 /bin/sh ../depcomp \
+[5-ERROR] 	gcc-42 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -c `test -f 'getopt.c' || echo './'`getopt.c
+[5-ERROR] rm -f libsrm.a
+[5-ERROR] ar cru libsrm.a snprintf.o getopt1.o getopt.o 
+[5-ERROR] ranlib libsrm.a
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.srm.1181940556.4225.4079832494/srm-1.2.8/lib'
+[5-ERROR] Making all in src
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.srm.1181940556.4225.4079832494/srm-1.2.8/src'
+[5-ERROR] source='error.c' object='error.o' libtool=no \
+[5-ERROR] 	depfile='.deps/error.Po' tmpdepfile='.deps/error.TPo' \
+[5-ERROR] 	depmode=gcc3 /bin/sh ../depcomp \
+[5-ERROR] 	gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../lib    -g -O2 -c `test -f 'error.c' || echo './'`error.c
+[5-ERROR] source='main.c' object='main.o' libtool=no \
+[5-ERROR] 	depfile='.deps/main.Po' tmpdepfile='.deps/main.TPo' \
+[5-ERROR] 	depmode=gcc3 /bin/sh ../depcomp \
+[5-ERROR] 	gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../lib    -g -O2 -c `test -f 'main.c' || echo './'`main.c
+[5-ERROR] source='random.c' object='random.o' libtool=no \
+[5-ERROR] 	depfile='.deps/random.Po' tmpdepfile='.deps/random.TPo' \
+[5-ERROR] 	depmode=gcc3 /bin/sh ../depcomp \
+[5-ERROR] 	gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../lib    -g -O2 -c `test -f 'random.c' || echo './'`random.c
+[5-ERROR] source='rename_unlink.c' object='rename_unlink.o' libtool=no \
+[5-ERROR] 	depfile='.deps/rename_unlink.Po' tmpdepfile='.deps/rename_unlink.TPo' \
+[5-ERROR] 	depmode=gcc3 /bin/sh ../depcomp \
+[5-ERROR] 	gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../lib    -g -O2 -c `test -f 'rename_unlink.c' || echo './'`rename_unlink.c
+[5-ERROR] source='sunlink.c' object='sunlink.o' libtool=no \
+[5-ERROR] 	depfile='.deps/sunlink.Po' tmpdepfile='.deps/sunlink.TPo' \
+[5-ERROR] 	depmode=gcc3 /bin/sh ../depcomp \
+[5-ERROR] 	gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../lib    -g -O2 -c `test -f 'sunlink.c' || echo './'`sunlink.c
+[5-ERROR] sunlink.c: In function 'sunlink':
+[5-ERROR] sunlink.c:117: error: 'FS_IOC_GETFLAGS' undeclared (first use in this function)
+[5-ERROR] sunlink.c:117: error: (Each undeclared identifier is reported only once
+[5-ERROR] sunlink.c:117: error: for each function it appears in.)
+[5-ERROR] sunlink.c:122: error: 'FS_UNRM_FL' undeclared (first use in this function)
+[5-ERROR] sunlink.c:122: error: 'FS_IMMUTABLE_FL' undeclared (first use in this function)
+[5-ERROR] sunlink.c:123: error: 'FS_APPEND_FL' undeclared (first use in this function)
+[5-ERROR] sunlink.c:196: error: 'FS_IOC_SETFLAGS' undeclared (first use in this function)
+[5-ERROR] sunlink.c:196: error: 'FS_SECRM_FL' undeclared (first use in this function)
+[5-ERROR] make[2]: *** [sunlink.o] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.srm.1181940556.4225.4079832494/srm-1.2.8/src'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.srm.1181940556.4225.4079832494/srm-1.2.8'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] 	gcc-42 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -c `test -f 'snprintf.c' || echo './'`snprintf.c
+[9-ERROR] source='getopt1.c' object='getopt1.o' libtool=no \
+[9-ERROR] 	depfile='.deps/getopt1.Po' tmpdepfile='.deps/getopt1.TPo' \
+[9-ERROR] 	depmode=gcc3 /bin/sh ../depcomp \
+[9-ERROR] 	gcc-42 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -c `test -f 'getopt1.c' || echo './'`getopt1.c
+[9-ERROR] source='getopt.c' object='getopt.o' libtool=no \
+[9-ERROR] 	depfile='.deps/getopt.Po' tmpdepfile='.deps/getopt.TPo' \
+[9-ERROR] 	depmode=gcc3 /bin/sh ../depcomp \
+[9-ERROR] 	gcc-42 -DHAVE_CONFIG_H -I. -I. -I..     -g -O2 -c `test -f 'getopt.c' || echo './'`getopt.c
+[9-ERROR] rm -f libsrm.a
+[9-ERROR] ar cru libsrm.a snprintf.o getopt1.o getopt.o 
+[9-ERROR] ranlib libsrm.a
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.srm.1181961114.27111.1693669501/srm-1.2.8/lib'
+[9-ERROR] Making all in src
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.srm.1181961114.27111.1693669501/srm-1.2.8/src'
+[9-ERROR] source='error.c' object='error.o' libtool=no \
+[9-ERROR] 	depfile='.deps/error.Po' tmpdepfile='.deps/error.TPo' \
+[9-ERROR] 	depmode=gcc3 /bin/sh ../depcomp \
+[9-ERROR] 	gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../lib    -g -O2 -c `test -f 'error.c' || echo './'`error.c
+[9-ERROR] source='main.c' object='main.o' libtool=no \
+[9-ERROR] 	depfile='.deps/main.Po' tmpdepfile='.deps/main.TPo' \
+[9-ERROR] 	depmode=gcc3 /bin/sh ../depcomp \
+[9-ERROR] 	gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../lib    -g -O2 -c `test -f 'main.c' || echo './'`main.c
+[9-ERROR] source='random.c' object='random.o' libtool=no \
+[9-ERROR] 	depfile='.deps/random.Po' tmpdepfile='.deps/random.TPo' \
+[9-ERROR] 	depmode=gcc3 /bin/sh ../depcomp \
+[9-ERROR] 	gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../lib    -g -O2 -c `test -f 'random.c' || echo './'`random.c
+[9-ERROR] source='rename_unlink.c' object='rename_unlink.o' libtool=no \
+[9-ERROR] 	depfile='.deps/rename_unlink.Po' tmpdepfile='.deps/rename_unlink.TPo' \
+[9-ERROR] 	depmode=gcc3 /bin/sh ../depcomp \
+[9-ERROR] 	gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../lib    -g -O2 -c `test -f 'rename_unlink.c' || echo './'`rename_unlink.c
+[9-ERROR] source='sunlink.c' object='sunlink.o' libtool=no \
+[9-ERROR] 	depfile='.deps/sunlink.Po' tmpdepfile='.deps/sunlink.TPo' \
+[9-ERROR] 	depmode=gcc3 /bin/sh ../depcomp \
+[9-ERROR] 	gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../lib    -g -O2 -c `test -f 'sunlink.c' || echo './'`sunlink.c
+[9-ERROR] sunlink.c: In function 'sunlink':
+[9-ERROR] sunlink.c:117: error: 'FS_IOC_GETFLAGS' undeclared (first use in this function)
+[9-ERROR] sunlink.c:117: error: (Each undeclared identifier is reported only once
+[9-ERROR] sunlink.c:117: error: for each function it appears in.)
+[9-ERROR] sunlink.c:122: error: 'FS_UNRM_FL' undeclared (first use in this function)
+[9-ERROR] sunlink.c:122: error: 'FS_IMMUTABLE_FL' undeclared (first use in this function)
+[9-ERROR] sunlink.c:123: error: 'FS_APPEND_FL' undeclared (first use in this function)
+[9-ERROR] sunlink.c:196: error: 'FS_IOC_SETFLAGS' undeclared (first use in this function)
+[9-ERROR] sunlink.c:196: error: 'FS_SECRM_FL' undeclared (first use in this function)
+[9-ERROR] make[2]: *** [sunlink.o] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.srm.1181961114.27111.1693669501/srm-1.2.8/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.srm.1181961114.27111.1693669501/srm-1.2.8'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

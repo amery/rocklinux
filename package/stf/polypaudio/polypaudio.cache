@@ -20,27 +20,28 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168583977 Fri Jan 12 07:39:37 2007 (5)
-[TIMESTAMP] 1168785059 Sun Jan 14 15:30:59 2007 (9)
+[TIMESTAMP] 1180978960 Mon Jun  4 19:42:40 2007 (5)
+[TIMESTAMP] 1181436549 Sun Jun 10 02:49:09 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-polypaudio.log 9-polypaudio.log
 
-[BUILDTIME] 19720 (5)
-[BUILDTIME] 20462 (9)
-[SIZE] 0.83 MB, 90 files
+[BUILDTIME] 21932 (5)
+[BUILDTIME] 24312 (9)
+[SIZE] 0.82 MB, 90 files
 
 [DEP] 00-dirtree alsa alsa:dev applewmproto applewmproto:dev bash2 binutils
-[DEP] bzip2 coreutils cvm diffutils findutils flac gawk gcc40 gcc40:dev
-[DEP] glib glib12 glib12:dev glib:dev glibc23 glibc23:dev gnome14-dirtree
-[DEP] gnome2-dirtree grep imake kbproto:dev libcap libcap:dev libice
-[DEP] libice:dev libsamplerate libsamplerate:dev libsm libsm:dev
+[DEP] bzip2 coreutils cvm diffutils findutils flac gawk gcc42 gcc42:dev
+[DEP] glib glib12 glib12:dev glib:dev glibc26 glibc26:dev gnome14-dirtree
+[DEP] gnome2-dirtree grep imake kbproto:dev libcap libcap:dev libelf
+[DEP] libice libice:dev libsamplerate libsamplerate:dev libsm libsm:dev
 [DEP] libsndfile libsndfile:dev libtool libtool:dev libx11 libx11:dev
-[DEP] libxau libxau:dev libxdmcp libxdmcp:dev libxt linux-libc-headers:dev
-[DEP] lynx make mktemp net-tools patch pkgconfig rrdtool sed sysfiles
-[DEP] tar tcp_wrappers:dev util-linux xorg-cf-files xproto:dev
+[DEP] libxau libxau:dev libxcb libxcb:dev libxdmcp libxdmcp:dev libxt
+[DEP] linux26-headers:dev ltrace lynx make mktemp net-tools patch pkgconfig
+[DEP] sed sysfiles tar tcp_wrappers:dev util-linux xmame xorg-cf-files
+[DEP] xproto:dev
 
 [PROVIDES] esdcompat.sh libalsa-util.a libalsa-util.so libauthkey-prop.a
 [PROVIDES] libauthkey-prop.so libauthkey.a libauthkey.so libcli.a

@@ -20,26 +20,30 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168640360 Fri Jan 12 23:19:20 2007 (5) ERROR
-[TIMESTAMP] 1168846218 Mon Jan 15 08:30:18 2007 (9) ERROR
-[TIMESTAMP] 1168948849 Tue Jan 16 13:00:49 2007 (5) ERROR
-[TIMESTAMP] 1168978760 Tue Jan 16 21:19:20 2007 (9) ERROR
-[TIMESTAMP] 1169092265 Thu Jan 18 04:51:05 2007 (5) ERROR
-[TIMESTAMP] 1169149033 Thu Jan 18 20:37:13 2007 (9) ERROR
+[TIMESTAMP] 1181072496 Tue Jun  5 21:41:36 2007 (5) ERROR
+[TIMESTAMP] 1181541732 Mon Jun 11 08:02:12 2007 (9) ERROR
+[TIMESTAMP] 1181823872 Thu Jun 14 14:24:32 2007 (5) ERROR
+[TIMESTAMP] 1181904181 Fri Jun 15 12:43:01 2007 (9) ERROR
+[TIMESTAMP] 1181950416 Sat Jun 16 01:33:36 2007 (5) ERROR
+[TIMESTAMP] 1181971933 Sat Jun 16 07:32:13 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-euler.err 9-euler.err
 
-[BUILDTIME] 2021 (5) ERROR
-[BUILDTIME] 2069 (9) ERROR
-[BUILDTIME] 2083 (5) ERROR
-[BUILDTIME] 2084 (9) ERROR
-[BUILDTIME] 2096 (5) ERROR
-[BUILDTIME] 2086 (9) ERROR
+[BUILDTIME] 2553 (5) ERROR
+[BUILDTIME] 2542 (9) ERROR
+[BUILDTIME] 2569 (5) ERROR
+[BUILDTIME] 2520 (9) ERROR
+[BUILDTIME] 2507 (5) ERROR
+[BUILDTIME] 2504 (9) ERROR
 
 
+[5-ERROR] checking if libtool supports shared libraries... yes
+[5-ERROR] checking whether to build shared libraries... yes
+[5-ERROR] checking whether to build static libraries... yes
+[5-ERROR] checking for f77 option to produce PIC... -fPIC
 [5-ERROR] checking if f77 PIC flag -fPIC works... no
 [5-ERROR] checking if f77 supports -c -o file.o... no
 [5-ERROR] checking whether the f77 linker (ld) supports shared libraries... yes
@@ -49,7 +53,7 @@
 [5-ERROR] checking whether stripping libraries is possible... yes
 [5-ERROR] checking for pkg-config... /usr/bin/pkg-config
 [5-ERROR] checking for gtk+-2.0 >= 2.6.0... yes
-[5-ERROR] checking GTK_CFLAGS... -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include  
+[5-ERROR] checking GTK_CFLAGS... -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/X11R7/include -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include  
 [5-ERROR] checking GTK_LIBS... -L/opt/gnome2/lib -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lm -lpangocairo-1.0 -lpangoft2-1.0 -lcairo -lpango-1.0 -lgobject-2.0 -lgmodule-2.0 -ldl -lglib-2.0  
 [5-ERROR] configure: creating ./config.status
 [5-ERROR] config.status: creating Makefile
@@ -65,32 +69,32 @@
 [5-ERROR] config.status: creating config.h
 [5-ERROR] config.status: executing depfiles commands
 [5-ERROR] make  all-recursive
-[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.euler.1169092243.10728.905555977/euler-1.61.0'
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.euler.1181950391.28097.4161569442/euler-1.61.0'
 [5-ERROR] Making all in src
-[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.euler.1169092243.10728.905555977/euler-1.61.0/src'
-[5-ERROR] if gcc-40 -DINSTALL_DIR=\"/usr\" -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include     -Wall -O3  -MT main.o -MD -MP -MF ".deps/main.Tpo" -c -o main.o main.c; \
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.euler.1181950391.28097.4161569442/euler-1.61.0/src'
+[5-ERROR] if gcc-42 -DINSTALL_DIR=\"/usr\" -DHAVE_CONFIG_H -I. -I. -I.. -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/X11R7/include -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include     -Wall -O3  -MT main.o -MD -MP -MF ".deps/main.Tpo" -c -o main.o main.c; \
 [5-ERROR] 	then mv -f ".deps/main.Tpo" ".deps/main.Po"; else rm -f ".deps/main.Tpo"; exit 1; fi
+[5-ERROR] main.c: In function 'myclock':
+[5-ERROR] main.c:442: error: 'CLK_TCK' undeclared (first use in this function)
+[5-ERROR] main.c:442: error: (Each undeclared identifier is reported only once
+[5-ERROR] main.c:442: error: for each function it appears in.)
 [5-ERROR] main.c: In function 'file_select':
 [5-ERROR] main.c:1152: warning: not enough variable arguments to fit a sentinel
 [5-ERROR] main.c: In function 'drag_drop':
 [5-ERROR] main.c:2168: warning: pointer targets in assignment differ in signedness
 [5-ERROR] main.c: In function 'drag_data_received':
 [5-ERROR] main.c:2224: warning: pointer targets in passing argument 1 of 'uri_list_to_gslist' differ in signedness
-[5-ERROR] if gcc-40 -DINSTALL_DIR=\"/usr\" -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include     -Wall -O3  -MT binary.o -MD -MP -MF ".deps/binary.Tpo" -c -o binary.o binary.c; \
-[5-ERROR] 	then mv -f ".deps/binary.Tpo" ".deps/binary.Po"; else rm -f ".deps/binary.Tpo"; exit 1; fi
-[5-ERROR] if gcc-40 -DINSTALL_DIR=\"/usr\" -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include     -Wall -O3  -MT builtin.o -MD -MP -MF ".deps/builtin.Tpo" -c -o builtin.o builtin.c; \
-[5-ERROR] 	then mv -f ".deps/builtin.Tpo" ".deps/builtin.Po"; else rm -f ".deps/builtin.Tpo"; exit 1; fi
-[5-ERROR] if gcc-40 -DINSTALL_DIR=\"/usr\" -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include     -Wall -O3  -MT command.o -MD -MP -MF ".deps/command.Tpo" -c -o command.o command.c; \
-[5-ERROR] 	then mv -f ".deps/command.Tpo" ".deps/command.Po"; else rm -f ".deps/command.Tpo"; exit 1; fi
-[5-ERROR] command.c:735: error: static declaration of 'command_count' follows non-static declaration
-[5-ERROR] command.c:238: error: previous declaration of 'command_count' was here
-[5-ERROR] make[2]: *** [command.o] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.euler.1169092243.10728.905555977/euler-1.61.0/src'
+[5-ERROR] make[2]: *** [main.o] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.euler.1181950391.28097.4161569442/euler-1.61.0/src'
 [5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.euler.1169092243.10728.905555977/euler-1.61.0'
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.euler.1181950391.28097.4161569442/euler-1.61.0'
 [5-ERROR] make: *** [all] Error 2
 [5-ERROR] --- BUILD ERROR ---
 
+[9-ERROR] checking if libtool supports shared libraries... yes
+[9-ERROR] checking whether to build shared libraries... yes
+[9-ERROR] checking whether to build static libraries... yes
+[9-ERROR] checking for f77 option to produce PIC... -fPIC
 [9-ERROR] checking if f77 PIC flag -fPIC works... no
 [9-ERROR] checking if f77 supports -c -o file.o... no
 [9-ERROR] checking whether the f77 linker (ld) supports shared libraries... yes
@@ -100,7 +104,7 @@
 [9-ERROR] checking whether stripping libraries is possible... yes
 [9-ERROR] checking for pkg-config... /usr/bin/pkg-config
 [9-ERROR] checking for gtk+-2.0 >= 2.6.0... yes
-[9-ERROR] checking GTK_CFLAGS... -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include  
+[9-ERROR] checking GTK_CFLAGS... -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/X11R7/include -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include  
 [9-ERROR] checking GTK_LIBS... -L/opt/gnome2/lib -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lm -lpangocairo-1.0 -lpangoft2-1.0 -lcairo -lpango-1.0 -lgobject-2.0 -lgmodule-2.0 -ldl -lglib-2.0  
 [9-ERROR] configure: creating ./config.status
 [9-ERROR] config.status: creating Makefile
@@ -116,29 +120,25 @@
 [9-ERROR] config.status: creating config.h
 [9-ERROR] config.status: executing depfiles commands
 [9-ERROR] make  all-recursive
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.euler.1169149011.2373.1060515637/euler-1.61.0'
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.euler.1181971908.31334.2938899655/euler-1.61.0'
 [9-ERROR] Making all in src
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.euler.1169149011.2373.1060515637/euler-1.61.0/src'
-[9-ERROR] if gcc-40 -DINSTALL_DIR=\"/usr\" -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include     -Wall -O3  -MT main.o -MD -MP -MF ".deps/main.Tpo" -c -o main.o main.c; \
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.euler.1181971908.31334.2938899655/euler-1.61.0/src'
+[9-ERROR] if gcc-42 -DINSTALL_DIR=\"/usr\" -DHAVE_CONFIG_H -I. -I. -I.. -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/X11R7/include -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include     -Wall -O3  -MT main.o -MD -MP -MF ".deps/main.Tpo" -c -o main.o main.c; \
 [9-ERROR] 	then mv -f ".deps/main.Tpo" ".deps/main.Po"; else rm -f ".deps/main.Tpo"; exit 1; fi
+[9-ERROR] main.c: In function 'myclock':
+[9-ERROR] main.c:442: error: 'CLK_TCK' undeclared (first use in this function)
+[9-ERROR] main.c:442: error: (Each undeclared identifier is reported only once
+[9-ERROR] main.c:442: error: for each function it appears in.)
 [9-ERROR] main.c: In function 'file_select':
 [9-ERROR] main.c:1152: warning: not enough variable arguments to fit a sentinel
 [9-ERROR] main.c: In function 'drag_drop':
 [9-ERROR] main.c:2168: warning: pointer targets in assignment differ in signedness
 [9-ERROR] main.c: In function 'drag_data_received':
 [9-ERROR] main.c:2224: warning: pointer targets in passing argument 1 of 'uri_list_to_gslist' differ in signedness
-[9-ERROR] if gcc-40 -DINSTALL_DIR=\"/usr\" -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include     -Wall -O3  -MT binary.o -MD -MP -MF ".deps/binary.Tpo" -c -o binary.o binary.c; \
-[9-ERROR] 	then mv -f ".deps/binary.Tpo" ".deps/binary.Po"; else rm -f ".deps/binary.Tpo"; exit 1; fi
-[9-ERROR] if gcc-40 -DINSTALL_DIR=\"/usr\" -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include     -Wall -O3  -MT builtin.o -MD -MP -MF ".deps/builtin.Tpo" -c -o builtin.o builtin.c; \
-[9-ERROR] 	then mv -f ".deps/builtin.Tpo" ".deps/builtin.Po"; else rm -f ".deps/builtin.Tpo"; exit 1; fi
-[9-ERROR] if gcc-40 -DINSTALL_DIR=\"/usr\" -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/gnome2/include/gtk-2.0 -I/opt/gnome2/lib/gtk-2.0/include -I/opt/gnome2/include/atk-1.0 -I/opt/gnome2/include/cairo -I/opt/gnome2/include/pango-1.0 -I/usr/include/freetype2 -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include     -Wall -O3  -MT command.o -MD -MP -MF ".deps/command.Tpo" -c -o command.o command.c; \
-[9-ERROR] 	then mv -f ".deps/command.Tpo" ".deps/command.Po"; else rm -f ".deps/command.Tpo"; exit 1; fi
-[9-ERROR] command.c:735: error: static declaration of 'command_count' follows non-static declaration
-[9-ERROR] command.c:238: error: previous declaration of 'command_count' was here
-[9-ERROR] make[2]: *** [command.o] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.euler.1169149011.2373.1060515637/euler-1.61.0/src'
+[9-ERROR] make[2]: *** [main.o] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.euler.1181971908.31334.2938899655/euler-1.61.0/src'
 [9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.euler.1169149011.2373.1060515637/euler-1.61.0'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.euler.1181971908.31334.2938899655/euler-1.61.0'
 [9-ERROR] make: *** [all] Error 2
 [9-ERROR] --- BUILD ERROR ---
 

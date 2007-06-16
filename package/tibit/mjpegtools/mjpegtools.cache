@@ -20,43 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168593347 Fri Jan 12 10:15:47 2007 (5)
-[TIMESTAMP] 1168795133 Sun Jan 14 18:18:53 2007 (9)
+[TIMESTAMP] 1180991579 Mon Jun  4 23:12:59 2007 (5) ERROR
+[TIMESTAMP] 1181453204 Sun Jun 10 07:26:44 2007 (9) ERROR
+[TIMESTAMP] 1181810092 Thu Jun 14 10:34:52 2007 (5) ERROR
+[TIMESTAMP] 1181867060 Fri Jun 15 02:24:20 2007 (9) ERROR
+[TIMESTAMP] 1181944830 Sat Jun 16 00:00:30 2007 (5) ERROR
+[TIMESTAMP] 1181965736 Sat Jun 16 05:48:56 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-mjpegtools.log 9-mjpegtools.log
+[LOGS] 5-mjpegtools.err 9-mjpegtools.err
 
-[BUILDTIME] 15970 (5)
-[BUILDTIME] 16620 (9)
-[SIZE] 1.76 MB, 113 files
+[BUILDTIME] 16536 (5) ERROR
+[BUILDTIME] 16651 (9) ERROR
+[BUILDTIME] 16601 (5) ERROR
+[BUILDTIME] 16234 (9) ERROR
+[BUILDTIME] 16474 (5) ERROR
+[BUILDTIME] 16107 (9) ERROR
 
-[DEP] 00-dirtree applewmproto applewmproto:dev atk atk:dev bash2 binutils
-[DEP] bzip2 cairo cairo:dev coreutils cvm diffutils expat expat:dev
-[DEP] findutils fontconfig fontconfig:dev freetype freetype:dev gawk
-[DEP] gcc40 gcc40:dev glib glib:dev glibc23 glibc23:dev gnome-libs14
-[DEP] gnome14-dirtree gnome2-dirtree grep gtk+ gtk+:dev imake libdv
-[DEP] libdv:dev libice libice:dev libjpeg libjpeg:dev libpng libpng:dev
-[DEP] libsdl libsdl:dev libsm libsm:dev libx11 libx11:dev libxau libxau:dev
-[DEP] libxcursor libxdmcp libxdmcp:dev libxext libxfixes libxi libxinerama
-[DEP] libxrandr libxrender libxrender:dev libxt libxt:dev libxxf86dga
-[DEP] linux-libc-headers:dev make mktemp nas net-tools netpbm pango
-[DEP] pango:dev pkgconfig rrdtool sed sysfiles tar twoftpd ucspi-unix
-[DEP] util-linux xorg-cf-files xproto:dev zlib zlib:dev
 
-[PROVIDES] anytovcd.sh glav jpeg2yuv lav2avi.sh lav2mpeg lav2wav lav2yuv
-[PROVIDES] lavaddwav lavinfo lavpipe lavplay lavrec lavtrans lavvideo
-[PROVIDES] liblavfile.a liblavfile.so liblavjpeg.a liblavjpeg.so
-[PROVIDES] liblavplay.a liblavplay.so liblavrec.a liblavrec.so
-[PROVIDES] libmjpegutils.a libmjpegutils.so libmpeg2encpp.a
-[PROVIDES] libmpeg2encpp.so libmplex2.a libmplex2.so matteblend.flt
-[PROVIDES] mjpeg_simd_helper mp2enc mpeg2enc mpegtranscode mplex
-[PROVIDES] multiblend.flt pgmtoy4m png2yuv pnmtoy4m ppmtoy4m testrec
-[PROVIDES] transist.flt y4mblack y4mcolorbars y4mdenoise y4mhist
-[PROVIDES] y4minterlace y4mshift y4mspatialfilter y4mstabilizer y4mtopnm
-[PROVIDES] y4mtoppm y4mtoyuv y4munsharp ypipe yuv2lav yuv4mpeg yuvcorrect
-[PROVIDES] yuvcorrect_tune yuvdeinterlace yuvdenoise yuvfps yuvinactive
-[PROVIDES] yuvkineco yuvmedianfilter yuvplay yuvscaler yuvycsnoise
-[PROVIDES] yuyvtoy4m
+[5-ERROR] Making all in y4mdenoise
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.mjpegtools.1181944665.21836.1717651510/mjpegtools-1.8.0/y4mdenoise'
+[5-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I/usr/include -I../utils   -DNDEBUG -finline-functions -fno-PIC -march=i386 -mcpu=i386 -g -O2 -pthread -Wall -Wunused -MT main.o -MD -MP -MF ".deps/main.Tpo" -c -o main.o main.c; \
+[5-ERROR] 	then mv -f ".deps/main.Tpo" ".deps/main.Po"; else rm -f ".deps/main.Tpo"; exit 1; fi
+[5-ERROR] if g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I/usr/include -I../utils   -DNDEBUG -finline-functions -fno-PIC -march=i386 -mcpu=i386 -g -O2 -pthread  -MT newdenoise.o -MD -MP -MF ".deps/newdenoise.Tpo" -c -o newdenoise.o newdenoise.cc; \
+[5-ERROR] 	then mv -f ".deps/newdenoise.Tpo" ".deps/newdenoise.Po"; else rm -f ".deps/newdenoise.Tpo"; exit 1; fi
+[5-ERROR] /bin/sh ../libtool --tag=CXX --mode=link g++-42 -DNDEBUG -finline-functions -fno-PIC -march=i386 -mcpu=i386 -g -O2 -pthread    -o y4mdenoise  main.o newdenoise.o ../utils/libmjpegutils.la  -lm 
+[5-ERROR] mkdir .libs
+[5-ERROR] g++-42 -DNDEBUG -finline-functions -fno-PIC -march=i386 -mcpu=i386 -g -O2 -pthread -o .libs/y4mdenoise main.o newdenoise.o  ../utils/.libs/libmjpegutils.so -lm
+[5-ERROR] creating y4mdenoise
+[5-ERROR] if g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I/usr/include -I../utils   -DNDEBUG -finline-functions -fno-PIC -march=i386 -mcpu=i386 -g -O2 -pthread  -MT regiontest.o -MD -MP -MF ".deps/regiontest.Tpo" -c -o regiontest.o regiontest.cc; \
+[5-ERROR] 	then mv -f ".deps/regiontest.Tpo" ".deps/regiontest.Po"; else rm -f ".deps/regiontest.Tpo"; exit 1; fi
+[5-ERROR] In file included from SetRegion2D.hh:12,
+[5-ERROR]                  from regiontest.cc:3:
+[5-ERROR] Region2D.hh: In member function 'void Region2D<INDEX, SIZE>::Move(REGION&)':
+[5-ERROR] Region2D.hh:155: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[5-ERROR] Region2D.hh:155: error: (if you use '-fpermissive', G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+[5-ERROR] Region2D.hh: In constructor 'Region2D<INDEX, SIZE>::Region2D(Status_t&, const REGION&)':
+[5-ERROR] Region2D.hh:356: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[5-ERROR] Region2D.hh: In member function 'void Region2D<INDEX, SIZE>::Assign(Status_t&, const REGION&)':
+[5-ERROR] Region2D.hh:380: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[5-ERROR] Region2D.hh: In member function 'void Region2D<INDEX, SIZE>::UnionDebug(Status_t&, INDEX, INDEX, INDEX, REGION_TEMP&)':
+[5-ERROR] Region2D.hh:419: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[5-ERROR] Region2D.hh:480: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[5-ERROR] Region2D.hh: In member function 'void Region2D<INDEX, SIZE>::Union(Status_t&, const REGION&)':
+[5-ERROR] Region2D.hh:497: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[5-ERROR] Region2D.hh: In member function 'void Region2D<INDEX, SIZE>::UnionDebug(Status_t&, REGION_O&, REGION_TEMP&)':
+[5-ERROR] Region2D.hh:530: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[5-ERROR] Region2D.hh:596: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[5-ERROR] Region2D.hh: In member function 'void Region2D<INDEX, SIZE>::Subtract(Status_t&, const REGION&)':
+[5-ERROR] Region2D.hh:614: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[5-ERROR] Region2D.hh: In member function 'void Region2D<INDEX, SIZE>::SubtractDebug(Status_t&, REGION_O&, REGION_TEMP&)':
+[5-ERROR] Region2D.hh:648: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[5-ERROR] Region2D.hh:717: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[5-ERROR] Region2D.hh: In member function 'void Region2D<INDEX, SIZE>::FloodFill(Status_t&, CONTROL&, bool)':
+[5-ERROR] Region2D.hh:735: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[5-ERROR] Region2D.hh: In member function 'void Region2D<INDEX, SIZE>::MakeBorder(Status_t&, const REGION&)':
+[5-ERROR] Region2D.hh:888: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[5-ERROR] Region2D.hh: In member function 'void Region2D<INDEX, SIZE>::UnionSurroundingExtents(Status_t&, INDEX, INDEX, INDEX)':
+[5-ERROR] Region2D.hh:922: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[5-ERROR] Region2D.hh: In constructor 'Region2D<INDEX, SIZE>::FloodFillControl<REGION>::FloodFillControl(Status_t&)':
+[5-ERROR] Region2D.hh:978: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[5-ERROR] Region2D.hh: In member function 'void Region2D<INDEX, SIZE>::FloodFillControl<REGION>::Init(Status_t&)':
+[5-ERROR] Region2D.hh:996: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[5-ERROR] make[2]: *** [regiontest.o] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.mjpegtools.1181944665.21836.1717651510/mjpegtools-1.8.0/y4mdenoise'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.mjpegtools.1181944665.21836.1717651510/mjpegtools-1.8.0'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] Making all in y4mdenoise
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.mjpegtools.1181965577.14043.3307008318/mjpegtools-1.8.0/y4mdenoise'
+[9-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I/usr/include -I../utils   -DNDEBUG -finline-functions -fno-PIC -march=i386 -mcpu=i386 -g -O2 -pthread -Wall -Wunused -MT main.o -MD -MP -MF ".deps/main.Tpo" -c -o main.o main.c; \
+[9-ERROR] 	then mv -f ".deps/main.Tpo" ".deps/main.Po"; else rm -f ".deps/main.Tpo"; exit 1; fi
+[9-ERROR] if g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I/usr/include -I../utils   -DNDEBUG -finline-functions -fno-PIC -march=i386 -mcpu=i386 -g -O2 -pthread  -MT newdenoise.o -MD -MP -MF ".deps/newdenoise.Tpo" -c -o newdenoise.o newdenoise.cc; \
+[9-ERROR] 	then mv -f ".deps/newdenoise.Tpo" ".deps/newdenoise.Po"; else rm -f ".deps/newdenoise.Tpo"; exit 1; fi
+[9-ERROR] /bin/sh ../libtool --tag=CXX --mode=link g++-42 -DNDEBUG -finline-functions -fno-PIC -march=i386 -mcpu=i386 -g -O2 -pthread    -o y4mdenoise  main.o newdenoise.o ../utils/libmjpegutils.la  -lm 
+[9-ERROR] mkdir .libs
+[9-ERROR] g++-42 -DNDEBUG -finline-functions -fno-PIC -march=i386 -mcpu=i386 -g -O2 -pthread -o .libs/y4mdenoise main.o newdenoise.o  ../utils/.libs/libmjpegutils.so -lm
+[9-ERROR] creating y4mdenoise
+[9-ERROR] if g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I/usr/include -I../utils   -DNDEBUG -finline-functions -fno-PIC -march=i386 -mcpu=i386 -g -O2 -pthread  -MT regiontest.o -MD -MP -MF ".deps/regiontest.Tpo" -c -o regiontest.o regiontest.cc; \
+[9-ERROR] 	then mv -f ".deps/regiontest.Tpo" ".deps/regiontest.Po"; else rm -f ".deps/regiontest.Tpo"; exit 1; fi
+[9-ERROR] In file included from SetRegion2D.hh:12,
+[9-ERROR]                  from regiontest.cc:3:
+[9-ERROR] Region2D.hh: In member function 'void Region2D<INDEX, SIZE>::Move(REGION&)':
+[9-ERROR] Region2D.hh:155: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[9-ERROR] Region2D.hh:155: error: (if you use '-fpermissive', G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+[9-ERROR] Region2D.hh: In constructor 'Region2D<INDEX, SIZE>::Region2D(Status_t&, const REGION&)':
+[9-ERROR] Region2D.hh:356: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[9-ERROR] Region2D.hh: In member function 'void Region2D<INDEX, SIZE>::Assign(Status_t&, const REGION&)':
+[9-ERROR] Region2D.hh:380: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[9-ERROR] Region2D.hh: In member function 'void Region2D<INDEX, SIZE>::UnionDebug(Status_t&, INDEX, INDEX, INDEX, REGION_TEMP&)':
+[9-ERROR] Region2D.hh:419: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[9-ERROR] Region2D.hh:480: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[9-ERROR] Region2D.hh: In member function 'void Region2D<INDEX, SIZE>::Union(Status_t&, const REGION&)':
+[9-ERROR] Region2D.hh:497: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[9-ERROR] Region2D.hh: In member function 'void Region2D<INDEX, SIZE>::UnionDebug(Status_t&, REGION_O&, REGION_TEMP&)':
+[9-ERROR] Region2D.hh:530: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[9-ERROR] Region2D.hh:596: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[9-ERROR] Region2D.hh: In member function 'void Region2D<INDEX, SIZE>::Subtract(Status_t&, const REGION&)':
+[9-ERROR] Region2D.hh:614: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[9-ERROR] Region2D.hh: In member function 'void Region2D<INDEX, SIZE>::SubtractDebug(Status_t&, REGION_O&, REGION_TEMP&)':
+[9-ERROR] Region2D.hh:648: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[9-ERROR] Region2D.hh:717: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[9-ERROR] Region2D.hh: In member function 'void Region2D<INDEX, SIZE>::FloodFill(Status_t&, CONTROL&, bool)':
+[9-ERROR] Region2D.hh:735: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[9-ERROR] Region2D.hh: In member function 'void Region2D<INDEX, SIZE>::MakeBorder(Status_t&, const REGION&)':
+[9-ERROR] Region2D.hh:888: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[9-ERROR] Region2D.hh: In member function 'void Region2D<INDEX, SIZE>::UnionSurroundingExtents(Status_t&, INDEX, INDEX, INDEX)':
+[9-ERROR] Region2D.hh:922: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[9-ERROR] Region2D.hh: In constructor 'Region2D<INDEX, SIZE>::FloodFillControl<REGION>::FloodFillControl(Status_t&)':
+[9-ERROR] Region2D.hh:978: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[9-ERROR] Region2D.hh: In member function 'void Region2D<INDEX, SIZE>::FloodFillControl<REGION>::Init(Status_t&)':
+[9-ERROR] Region2D.hh:996: error: there are no arguments to 'assert' that depend on a template parameter, so a declaration of 'assert' must be available
+[9-ERROR] make[2]: *** [regiontest.o] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.mjpegtools.1181965577.14043.3307008318/mjpegtools-1.8.0/y4mdenoise'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.mjpegtools.1181965577.14043.3307008318/mjpegtools-1.8.0'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

@@ -20,26 +20,28 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168600727 Fri Jan 12 12:18:47 2007 (5) ERROR
-[TIMESTAMP] 1168802985 Sun Jan 14 20:29:45 2007 (9) ERROR
-[TIMESTAMP] 1168943076 Tue Jan 16 11:24:36 2007 (5) ERROR
-[TIMESTAMP] 1168968671 Tue Jan 16 18:31:11 2007 (9) ERROR
-[TIMESTAMP] 1169086472 Thu Jan 18 03:14:32 2007 (5) ERROR
-[TIMESTAMP] 1169138961 Thu Jan 18 17:49:21 2007 (9) ERROR
+[TIMESTAMP] 1181001890 Tue Jun  5 02:04:50 2007 (5) ERROR
+[TIMESTAMP] 1181465694 Sun Jun 10 10:54:54 2007 (9) ERROR
+[TIMESTAMP] 1181811376 Thu Jun 14 10:56:16 2007 (5) ERROR
+[TIMESTAMP] 1181867694 Fri Jun 15 02:34:54 2007 (9) ERROR
+[TIMESTAMP] 1181945469 Sat Jun 16 00:11:09 2007 (5) ERROR
+[TIMESTAMP] 1181966340 Sat Jun 16 05:59:00 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-cfengine.err 9-cfengine.err
 
-[BUILDTIME] 2581 (5) ERROR
-[BUILDTIME] 2641 (9) ERROR
-[BUILDTIME] 2643 (5) ERROR
-[BUILDTIME] 2658 (9) ERROR
-[BUILDTIME] 2663 (5) ERROR
-[BUILDTIME] 2649 (9) ERROR
+[BUILDTIME] 3329 (5) ERROR
+[BUILDTIME] 3499 (9) ERROR
+[BUILDTIME] 3208 (5) ERROR
+[BUILDTIME] 3425 (9) ERROR
+[BUILDTIME] 3426 (5) ERROR
+[BUILDTIME] 3348 (9) ERROR
 
 
+[5-ERROR] config.status: creating doc/Makefile
+[5-ERROR] config.status: creating src/cflex.l
 [5-ERROR] config.status: creating contrib/vicf
 [5-ERROR] config.status: creating src/conf.h
 [5-ERROR] config.status: executing depfiles commands
@@ -55,42 +57,42 @@
 [5-ERROR] configure: WARNING: =====================================================
 [5-ERROR] DONE: Configuration done. Run make/gmake to build cfengine.
 [5-ERROR] Making all in pub
-[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.cfengine.1169086444.31005.505546733/cfengine-2.1.13/pub'
-[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I../src -I/usr/include -I/usr/include  -pthread  -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT getopt.o -MD -MP -MF ".deps/getopt.Tpo" -c -o getopt.o getopt.c; \
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.cfengine.1181945434.1164.202647550/cfengine-2.1.13/pub'
+[5-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I../src -I/usr/include -I/usr/include  -pthread  -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT getopt.o -MD -MP -MF ".deps/getopt.Tpo" -c -o getopt.o getopt.c; \
 [5-ERROR] 	then mv -f ".deps/getopt.Tpo" ".deps/getopt.Po"; else rm -f ".deps/getopt.Tpo"; exit 1; fi
-[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I../src -I/usr/include -I/usr/include  -pthread  -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT getopt1.o -MD -MP -MF ".deps/getopt1.Tpo" -c -o getopt1.o getopt1.c; \
+[5-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I../src -I/usr/include -I/usr/include  -pthread  -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT getopt1.o -MD -MP -MF ".deps/getopt1.Tpo" -c -o getopt1.o getopt1.c; \
 [5-ERROR] 	then mv -f ".deps/getopt1.Tpo" ".deps/getopt1.Po"; else rm -f ".deps/getopt1.Tpo"; exit 1; fi
-[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I../src -I/usr/include -I/usr/include  -pthread  -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT full-write.o -MD -MP -MF ".deps/full-write.Tpo" -c -o full-write.o full-write.c; \
+[5-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I../src -I/usr/include -I/usr/include  -pthread  -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT full-write.o -MD -MP -MF ".deps/full-write.Tpo" -c -o full-write.o full-write.c; \
 [5-ERROR] 	then mv -f ".deps/full-write.Tpo" ".deps/full-write.Po"; else rm -f ".deps/full-write.Tpo"; exit 1; fi
-[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I../src -I/usr/include -I/usr/include  -pthread  -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT regex.o -MD -MP -MF ".deps/regex.Tpo" -c -o regex.o regex.c; \
+[5-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I../src -I/usr/include -I/usr/include  -pthread  -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT regex.o -MD -MP -MF ".deps/regex.Tpo" -c -o regex.o regex.c; \
 [5-ERROR] 	then mv -f ".deps/regex.Tpo" ".deps/regex.Po"; else rm -f ".deps/regex.Tpo"; exit 1; fi
-[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I../src -I/usr/include -I/usr/include  -pthread  -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT getloadavg.o -MD -MP -MF ".deps/getloadavg.Tpo" -c -o getloadavg.o getloadavg.c; \
+[5-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I../src -I/usr/include -I/usr/include  -pthread  -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT getloadavg.o -MD -MP -MF ".deps/getloadavg.Tpo" -c -o getloadavg.o getloadavg.c; \
 [5-ERROR] 	then mv -f ".deps/getloadavg.Tpo" ".deps/getloadavg.Po"; else rm -f ".deps/getloadavg.Tpo"; exit 1; fi
-[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I../src -I/usr/include -I/usr/include  -pthread  -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT snprintf.o -MD -MP -MF ".deps/snprintf.Tpo" -c -o snprintf.o snprintf.c; \
+[5-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I../src -I/usr/include -I/usr/include  -pthread  -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT snprintf.o -MD -MP -MF ".deps/snprintf.Tpo" -c -o snprintf.o snprintf.c; \
 [5-ERROR] 	then mv -f ".deps/snprintf.Tpo" ".deps/snprintf.Po"; else rm -f ".deps/snprintf.Tpo"; exit 1; fi
 [5-ERROR] rm -f libpub.a
 [5-ERROR] ar cru libpub.a getopt.o getopt1.o full-write.o regex.o getloadavg.o snprintf.o 
 [5-ERROR] ranlib libpub.a
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.cfengine.1169086444.31005.505546733/cfengine-2.1.13/pub'
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.cfengine.1181945434.1164.202647550/cfengine-2.1.13/pub'
 [5-ERROR] Making all in src
-[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.cfengine.1169086444.31005.505546733/cfengine-2.1.13/src'
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.cfengine.1181945434.1164.202647550/cfengine-2.1.13/src'
 [5-ERROR] make  all-am
-[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.cfengine.1169086444.31005.505546733/cfengine-2.1.13/src'
-[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -I/usr/include -I/usr/include  -pthread  -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT cfagent.o -MD -MP -MF ".deps/cfagent.Tpo" -c -o cfagent.o cfagent.c; \
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.cfengine.1181945434.1164.202647550/cfengine-2.1.13/src'
+[5-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I. -I/usr/include -I/usr/include  -pthread  -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT cfagent.o -MD -MP -MF ".deps/cfagent.Tpo" -c -o cfagent.o cfagent.c; \
 [5-ERROR] 	then mv -f ".deps/cfagent.Tpo" ".deps/cfagent.Po"; else rm -f ".deps/cfagent.Tpo"; exit 1; fi
-[5-ERROR] cfagent.c: In function 'Initialize':
-[5-ERROR] cfagent.c:302: warning: pointer targets in passing argument 1 of 'ElfHash' differ in signedness
-[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -I/usr/include -I/usr/include  -pthread  -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT init.o -MD -MP -MF ".deps/init.Tpo" -c -o init.o init.c; \
+[5-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I. -I/usr/include -I/usr/include  -pthread  -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT init.o -MD -MP -MF ".deps/init.Tpo" -c -o init.o init.c; \
 [5-ERROR] 	then mv -f ".deps/init.Tpo" ".deps/init.Po"; else rm -f ".deps/init.Tpo"; exit 1; fi
 [5-ERROR] In file included from init.c:33:
 [5-ERROR] cf.extern.h:73: error: array type has incomplete element type
 [5-ERROR] make[2]: *** [init.o] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.cfengine.1169086444.31005.505546733/cfengine-2.1.13/src'
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.cfengine.1181945434.1164.202647550/cfengine-2.1.13/src'
 [5-ERROR] make[1]: *** [all] Error 2
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.cfengine.1169086444.31005.505546733/cfengine-2.1.13/src'
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.cfengine.1181945434.1164.202647550/cfengine-2.1.13/src'
 [5-ERROR] make: *** [all-recursive] Error 1
 [5-ERROR] --- BUILD ERROR ---
 
+[9-ERROR] config.status: creating doc/Makefile
+[9-ERROR] config.status: creating src/cflex.l
 [9-ERROR] config.status: creating contrib/vicf
 [9-ERROR] config.status: creating src/conf.h
 [9-ERROR] config.status: executing depfiles commands
@@ -106,39 +108,37 @@
 [9-ERROR] configure: WARNING: =====================================================
 [9-ERROR] DONE: Configuration done. Run make/gmake to build cfengine.
 [9-ERROR] Making all in pub
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.cfengine.1169138933.12963.2177560645/cfengine-2.1.13/pub'
-[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I../src -I/usr/include -I/usr/include  -pthread  -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT getopt.o -MD -MP -MF ".deps/getopt.Tpo" -c -o getopt.o getopt.c; \
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.cfengine.1181966306.25808.3307008318/cfengine-2.1.13/pub'
+[9-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I../src -I/usr/include -I/usr/include  -pthread  -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT getopt.o -MD -MP -MF ".deps/getopt.Tpo" -c -o getopt.o getopt.c; \
 [9-ERROR] 	then mv -f ".deps/getopt.Tpo" ".deps/getopt.Po"; else rm -f ".deps/getopt.Tpo"; exit 1; fi
-[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I../src -I/usr/include -I/usr/include  -pthread  -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT getopt1.o -MD -MP -MF ".deps/getopt1.Tpo" -c -o getopt1.o getopt1.c; \
+[9-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I../src -I/usr/include -I/usr/include  -pthread  -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT getopt1.o -MD -MP -MF ".deps/getopt1.Tpo" -c -o getopt1.o getopt1.c; \
 [9-ERROR] 	then mv -f ".deps/getopt1.Tpo" ".deps/getopt1.Po"; else rm -f ".deps/getopt1.Tpo"; exit 1; fi
-[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I../src -I/usr/include -I/usr/include  -pthread  -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT full-write.o -MD -MP -MF ".deps/full-write.Tpo" -c -o full-write.o full-write.c; \
+[9-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I../src -I/usr/include -I/usr/include  -pthread  -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT full-write.o -MD -MP -MF ".deps/full-write.Tpo" -c -o full-write.o full-write.c; \
 [9-ERROR] 	then mv -f ".deps/full-write.Tpo" ".deps/full-write.Po"; else rm -f ".deps/full-write.Tpo"; exit 1; fi
-[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I../src -I/usr/include -I/usr/include  -pthread  -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT regex.o -MD -MP -MF ".deps/regex.Tpo" -c -o regex.o regex.c; \
+[9-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I../src -I/usr/include -I/usr/include  -pthread  -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT regex.o -MD -MP -MF ".deps/regex.Tpo" -c -o regex.o regex.c; \
 [9-ERROR] 	then mv -f ".deps/regex.Tpo" ".deps/regex.Po"; else rm -f ".deps/regex.Tpo"; exit 1; fi
-[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I../src -I/usr/include -I/usr/include  -pthread  -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT getloadavg.o -MD -MP -MF ".deps/getloadavg.Tpo" -c -o getloadavg.o getloadavg.c; \
+[9-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I../src -I/usr/include -I/usr/include  -pthread  -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT getloadavg.o -MD -MP -MF ".deps/getloadavg.Tpo" -c -o getloadavg.o getloadavg.c; \
 [9-ERROR] 	then mv -f ".deps/getloadavg.Tpo" ".deps/getloadavg.Po"; else rm -f ".deps/getloadavg.Tpo"; exit 1; fi
-[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I../src -I/usr/include -I/usr/include  -pthread  -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT snprintf.o -MD -MP -MF ".deps/snprintf.Tpo" -c -o snprintf.o snprintf.c; \
+[9-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I../src -I/usr/include -I/usr/include  -pthread  -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT snprintf.o -MD -MP -MF ".deps/snprintf.Tpo" -c -o snprintf.o snprintf.c; \
 [9-ERROR] 	then mv -f ".deps/snprintf.Tpo" ".deps/snprintf.Po"; else rm -f ".deps/snprintf.Tpo"; exit 1; fi
 [9-ERROR] rm -f libpub.a
 [9-ERROR] ar cru libpub.a getopt.o getopt1.o full-write.o regex.o getloadavg.o snprintf.o 
 [9-ERROR] ranlib libpub.a
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.cfengine.1169138933.12963.2177560645/cfengine-2.1.13/pub'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.cfengine.1181966306.25808.3307008318/cfengine-2.1.13/pub'
 [9-ERROR] Making all in src
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.cfengine.1169138933.12963.2177560645/cfengine-2.1.13/src'
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.cfengine.1181966306.25808.3307008318/cfengine-2.1.13/src'
 [9-ERROR] make  all-am
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.cfengine.1169138933.12963.2177560645/cfengine-2.1.13/src'
-[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -I/usr/include -I/usr/include  -pthread  -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT cfagent.o -MD -MP -MF ".deps/cfagent.Tpo" -c -o cfagent.o cfagent.c; \
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.cfengine.1181966306.25808.3307008318/cfengine-2.1.13/src'
+[9-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I. -I/usr/include -I/usr/include  -pthread  -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT cfagent.o -MD -MP -MF ".deps/cfagent.Tpo" -c -o cfagent.o cfagent.c; \
 [9-ERROR] 	then mv -f ".deps/cfagent.Tpo" ".deps/cfagent.Po"; else rm -f ".deps/cfagent.Tpo"; exit 1; fi
-[9-ERROR] cfagent.c: In function 'Initialize':
-[9-ERROR] cfagent.c:302: warning: pointer targets in passing argument 1 of 'ElfHash' differ in signedness
-[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -I/usr/include -I/usr/include  -pthread  -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT init.o -MD -MP -MF ".deps/init.Tpo" -c -o init.o init.c; \
+[9-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I. -I/usr/include -I/usr/include  -pthread  -g -O2 -Wreturn-type -Wmissing-prototypes -Wuninitialized -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64   -pthread -g -O2 -I/usr/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -MT init.o -MD -MP -MF ".deps/init.Tpo" -c -o init.o init.c; \
 [9-ERROR] 	then mv -f ".deps/init.Tpo" ".deps/init.Po"; else rm -f ".deps/init.Tpo"; exit 1; fi
 [9-ERROR] In file included from init.c:33:
 [9-ERROR] cf.extern.h:73: error: array type has incomplete element type
 [9-ERROR] make[2]: *** [init.o] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.cfengine.1169138933.12963.2177560645/cfengine-2.1.13/src'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.cfengine.1181966306.25808.3307008318/cfengine-2.1.13/src'
 [9-ERROR] make[1]: *** [all] Error 2
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.cfengine.1169138933.12963.2177560645/cfengine-2.1.13/src'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.cfengine.1181966306.25808.3307008318/cfengine-2.1.13/src'
 [9-ERROR] make: *** [all-recursive] Error 1
 [9-ERROR] --- BUILD ERROR ---
 

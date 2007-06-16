@@ -20,125 +20,83 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168684008 Sat Jan 13 11:26:48 2007 (5) ERROR
-[TIMESTAMP] 1168893000 Mon Jan 15 21:30:00 2007 (9) ERROR
-[TIMESTAMP] 1168952378 Tue Jan 16 13:59:38 2007 (5) ERROR
-[TIMESTAMP] 1168982069 Tue Jan 16 22:14:29 2007 (9) ERROR
-[TIMESTAMP] 1169122695 Thu Jan 18 13:18:15 2007 (5) ERROR
-[TIMESTAMP] 1169152273 Thu Jan 18 21:31:13 2007 (9) ERROR
+[TIMESTAMP] 1181160682 Wed Jun  6 22:11:22 2007 (5) ERROR
+[TIMESTAMP] 1181610397 Tue Jun 12 03:06:37 2007 (9) ERROR
+[TIMESTAMP] 1181829336 Thu Jun 14 15:55:36 2007 (5) ERROR
+[TIMESTAMP] 1181913107 Fri Jun 15 15:11:47 2007 (9) ERROR
+[TIMESTAMP] 1181952986 Sat Jun 16 02:16:26 2007 (5) ERROR
+[TIMESTAMP] 1181974833 Sat Jun 16 08:20:33 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-deva.err 9-deva.err
 
-[BUILDTIME] 1230 (5) ERROR
-[BUILDTIME] 1218 (9) ERROR
-[BUILDTIME] 1248 (5) ERROR
-[BUILDTIME] 1244 (9) ERROR
-[BUILDTIME] 1250 (5) ERROR
-[BUILDTIME] 1255 (9) ERROR
+[BUILDTIME] 1132 (5) ERROR
+[BUILDTIME] 1170 (9) ERROR
+[BUILDTIME] 1176 (5) ERROR
+[BUILDTIME] 1154 (9) ERROR
+[BUILDTIME] 1139 (5) ERROR
+[BUILDTIME] 1149 (9) ERROR
 
 
-[5-ERROR] g++ -Wno-deprecated -I/ROCK/src.deva.1169122682.18325.2270576875/Deva/incl -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math -DTRC=0 -c DEVA_stats.cxx
-[5-ERROR] g++ -Wno-deprecated -I/ROCK/src.deva.1169122682.18325.2270576875/Deva/incl -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math -DTRC=0 -c DEVA_lock.cxx
-[5-ERROR] g++ -Wno-deprecated -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math -shared -o /ROCK/src.deva.1169122682.18325.2270576875/Deva/lib/libdeva_kernel.so DEVA_threadList.o DEVA_traceString.o DEVA_tracer.o DEVA_utils.o DEVA_stats.o DEVA_lock.o -ldl
-[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.deva.1169122682.18325.2270576875/Deva/src/kernel'
-[5-ERROR] cd comms; make
-[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.deva.1169122682.18325.2270576875/Deva/src/comms'
-[5-ERROR] g++ -Wno-deprecated -I../../incl -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math -c DEVA_nameEntry.cxx
-[5-ERROR] ../../incl/comms/DEVA_connectionEntry.hxx:23: error: expected ',' or '...' before '&' token
-[5-ERROR] ../../incl/comms/DEVA_connectionEntry.hxx:23: error: ISO C++ forbids declaration of 'DEVA_connectionEntry' with no type
-[5-ERROR] DEVA_nameEntry.cxx: In function 'std::ostream& operator<<(std::ostream&, const DEVA_nameEntry&)':
-[5-ERROR] DEVA_nameEntry.cxx:75: error: ambiguous overload for 'operator<<' in 'std::operator<< [with _CharT = char, _Traits = std::char_traits<char>](((std::basic_ostream<char, std::char_traits<char> >&)(+ std::operator<< [with _Traits = std::char_traits<char>](((std::basic_ostream<char, std::char_traits<char> >&)(+ std::operator<< [with _Traits = std::char_traits<char>](((std::basic_ostream<char, std::char_traits<char> >&)(+ std::operator<< [with _CharT = char, _Traits = std::char_traits<char>](((std::basic_ostream<char, std::char_traits<char> >&)(+ std::operator<< [with _Traits = std::char_traits<char>](((std::basic_ostream<char, std::char_traits<char> >&)(+ os)), ((const char*)"name= ")))), std::setw(10)))), ((const char*)ne->DEVA_nameEntry::name)))), ((const char*)"   pid= ")))), std::setw(4)) << ne->DEVA_nameEntry::pid'
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:67: note: candidates are: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>& (*)(std::basic_ostream<_CharT, _Traits>&)) [with _CharT = char, _Traits = std::char_traits<char>] <near match>
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:78: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ios<_CharT, _Traits>& (*)(std::basic_ios<_CharT, _Traits>&)) [with _CharT = char, _Traits = std::char_traits<char>] <near match>
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:90: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char, _Traits = std::char_traits<char>] <near match>
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:125: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char, _Traits = std::char_traits<char>]
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:159: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:102: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char, _Traits = std::char_traits<char>]
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:176: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char, _Traits = std::char_traits<char>]
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:187: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:191: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char, _Traits = std::char_traits<char>]
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:202: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:183: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char, _Traits = std::char_traits<char>]
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:218: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:242: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char, _Traits = std::char_traits<char>]
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:217: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char, _Traits = std::char_traits<char>]
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:265: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char, _Traits = std::char_traits<char>]
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:288: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char, _Traits = std::char_traits<char>] <near match>
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:311: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_streambuf<_CharT, _Traits>*) [with _CharT = char, _Traits = std::char_traits<char>] <near match>
-[5-ERROR] ../../incl/kernel/DEVA_lock.hxx:15: note:                 std::ostream& operator<<(std::ostream&, const DEVA_lock&) <near match>
-[5-ERROR] ../../incl/kernel/DEVA_stats.hxx:13: note:                 std::ostream& operator<<(std::ostream&, const DEVA_statsHistogramEntry&) <near match>
-[5-ERROR] ../../incl/kernel/DEVA_stats.hxx:47: note:                 std::ostream& operator<<(std::ostream&, const DEVA_statsInt&)
-[5-ERROR] DEVA_nameEntry.cxx:71: note:                 std::ostream& operator<<(std::ostream&, const DEVA_nameEntry&) <near match>
-[5-ERROR] ../../incl/comms/DEVA_name.hxx:16: note:                 std::ostream& operator<<(std::ostream&, const DEVA_name&) <near match>
-[5-ERROR] ../../incl/comms/DEVA_connectionEntry.hxx:23: note:                 std::ostream& operator<<(std::ostream&, int)
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:502: note:                 std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*) [with _Traits = std::char_traits<char>] <near match>
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:497: note:                 std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*) [with _Traits = std::char_traits<char>] <near match>
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:616: note:                 std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*) [with _Traits = std::char_traits<char>] <near match>
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:571: note:                 std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*) [with _CharT = char, _Traits = std::char_traits<char>] <near match>
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:463: note:                 std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char) [with _Traits = std::char_traits<char>]
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:458: note:                 std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char) [with _Traits = std::char_traits<char>]
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:509: note:                 std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char) [with _Traits = std::char_traits<char>]
-[5-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:447: note:                 std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char) [with _CharT = char, _Traits = std::char_traits<char>]
-[5-ERROR] make[3]: *** [DEVA_nameEntry.o] Error 1
-[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.deva.1169122682.18325.2270576875/Deva/src/comms'
-[5-ERROR] make[2]: *** [all] Error 2
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.deva.1169122682.18325.2270576875/Deva/src'
-[5-ERROR] make[1]: *** [libs] Error 2
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.deva.1169122682.18325.2270576875/Deva'
-[5-ERROR] make: *** [plat] Error 2
+[5-ERROR] Command Wrapper Debug: running 'gcc-42 --version' ..
+[5-ERROR] gcc-42 is /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/gcc-42
+[5-ERROR] Old Command: gcc-42 --version
+[5-ERROR] ENVPREFIX = 'CMD'
+[5-ERROR] APPEND_PO = ''
+[5-ERROR] OTHERS = ''
+[5-ERROR] INSERT = '-O1 -pipe -march=i486'
+[5-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
+[5-ERROR] APPEND = '-s'
+[5-ERROR] FILTER = ''
+[5-ERROR] Old PATH: /ROCK/src.deva.1181952976.23417.1627887995/wrappers:/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper:/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/Croquet-SDK/bin:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clanlib07/bin:/opt/clanlib07/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql41/bin:/opt/mysql50/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt42/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[5-ERROR] New PATH: /ROCK/src.deva.1181952976.23417.1627887995/wrappers:/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/Croquet-SDK/bin:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clanlib07/bin:/opt/clanlib07/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql41/bin:/opt/mysql50/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt42/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[5-ERROR] Insert: -O1
+[5-ERROR] Insert: -pipe
+[5-ERROR] Insert: -march=i486
+[5-ERROR] Copy:   --version
+[5-ERROR] Append: -s
+[5-ERROR] New Command: gcc-42 -O1 -pipe -march=i486 --version -s
+[5-ERROR] gcc-42 (GCC) 4.2.0
+[5-ERROR] Copyright (C) 2007 Free Software Foundation, Inc.
+[5-ERROR] This is free software; see the source for copying conditions.  There is NO
+[5-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[5-ERROR] 
+[5-ERROR] [ writing debug log to /ROCK/src.deva.1181952976.23417.1627887995/cmd_wrapper.log ]
+[5-ERROR] Running main build function 'build_this_package' ...
+[5-ERROR] Creating /usr/<..> if required ...
+[5-ERROR] ./scripts/Build-Pkg: line 29: rpm2cpio: command not found
+[5-ERROR] cpio: premature end of archive
 [5-ERROR] --- BUILD ERROR ---
 
-[9-ERROR] g++ -Wno-deprecated -I/ROCK/src.deva.1169152260.8630.1667074915/Deva/incl -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math -DTRC=0 -c DEVA_stats.cxx
-[9-ERROR] g++ -Wno-deprecated -I/ROCK/src.deva.1169152260.8630.1667074915/Deva/incl -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math -DTRC=0 -c DEVA_lock.cxx
-[9-ERROR] g++ -Wno-deprecated -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math -shared -o /ROCK/src.deva.1169152260.8630.1667074915/Deva/lib/libdeva_kernel.so DEVA_threadList.o DEVA_traceString.o DEVA_tracer.o DEVA_utils.o DEVA_stats.o DEVA_lock.o -ldl
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.deva.1169152260.8630.1667074915/Deva/src/kernel'
-[9-ERROR] cd comms; make
-[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.deva.1169152260.8630.1667074915/Deva/src/comms'
-[9-ERROR] g++ -Wno-deprecated -I../../incl -DDEVA_LINUX -D_REENTRANT -Wall -O2 -finline-functions -fomit-frame-pointer -funroll-loops -ffast-math -c DEVA_nameEntry.cxx
-[9-ERROR] ../../incl/comms/DEVA_connectionEntry.hxx:23: error: expected ',' or '...' before '&' token
-[9-ERROR] ../../incl/comms/DEVA_connectionEntry.hxx:23: error: ISO C++ forbids declaration of 'DEVA_connectionEntry' with no type
-[9-ERROR] DEVA_nameEntry.cxx: In function 'std::ostream& operator<<(std::ostream&, const DEVA_nameEntry&)':
-[9-ERROR] DEVA_nameEntry.cxx:75: error: ambiguous overload for 'operator<<' in 'std::operator<< [with _CharT = char, _Traits = std::char_traits<char>](((std::basic_ostream<char, std::char_traits<char> >&)(+ std::operator<< [with _Traits = std::char_traits<char>](((std::basic_ostream<char, std::char_traits<char> >&)(+ std::operator<< [with _Traits = std::char_traits<char>](((std::basic_ostream<char, std::char_traits<char> >&)(+ std::operator<< [with _CharT = char, _Traits = std::char_traits<char>](((std::basic_ostream<char, std::char_traits<char> >&)(+ std::operator<< [with _Traits = std::char_traits<char>](((std::basic_ostream<char, std::char_traits<char> >&)(+ os)), ((const char*)"name= ")))), std::setw(10)))), ((const char*)ne->DEVA_nameEntry::name)))), ((const char*)"   pid= ")))), std::setw(4)) << ne->DEVA_nameEntry::pid'
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:67: note: candidates are: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>& (*)(std::basic_ostream<_CharT, _Traits>&)) [with _CharT = char, _Traits = std::char_traits<char>] <near match>
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:78: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ios<_CharT, _Traits>& (*)(std::basic_ios<_CharT, _Traits>&)) [with _CharT = char, _Traits = std::char_traits<char>] <near match>
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:90: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char, _Traits = std::char_traits<char>] <near match>
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:125: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char, _Traits = std::char_traits<char>]
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:159: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:102: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char, _Traits = std::char_traits<char>]
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:176: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char, _Traits = std::char_traits<char>]
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:187: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:191: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char, _Traits = std::char_traits<char>]
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:202: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:183: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char, _Traits = std::char_traits<char>]
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:218: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:242: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char, _Traits = std::char_traits<char>]
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:217: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char, _Traits = std::char_traits<char>]
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:265: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char, _Traits = std::char_traits<char>]
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:288: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char, _Traits = std::char_traits<char>] <near match>
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:311: note:                 std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_streambuf<_CharT, _Traits>*) [with _CharT = char, _Traits = std::char_traits<char>] <near match>
-[9-ERROR] ../../incl/kernel/DEVA_lock.hxx:15: note:                 std::ostream& operator<<(std::ostream&, const DEVA_lock&) <near match>
-[9-ERROR] ../../incl/kernel/DEVA_stats.hxx:13: note:                 std::ostream& operator<<(std::ostream&, const DEVA_statsHistogramEntry&) <near match>
-[9-ERROR] ../../incl/kernel/DEVA_stats.hxx:47: note:                 std::ostream& operator<<(std::ostream&, const DEVA_statsInt&)
-[9-ERROR] DEVA_nameEntry.cxx:71: note:                 std::ostream& operator<<(std::ostream&, const DEVA_nameEntry&) <near match>
-[9-ERROR] ../../incl/comms/DEVA_name.hxx:16: note:                 std::ostream& operator<<(std::ostream&, const DEVA_name&) <near match>
-[9-ERROR] ../../incl/comms/DEVA_connectionEntry.hxx:23: note:                 std::ostream& operator<<(std::ostream&, int)
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:502: note:                 std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*) [with _Traits = std::char_traits<char>] <near match>
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:497: note:                 std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*) [with _Traits = std::char_traits<char>] <near match>
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:616: note:                 std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*) [with _Traits = std::char_traits<char>] <near match>
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:571: note:                 std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*) [with _CharT = char, _Traits = std::char_traits<char>] <near match>
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:463: note:                 std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char) [with _Traits = std::char_traits<char>]
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:458: note:                 std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char) [with _Traits = std::char_traits<char>]
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/bits/ostream.tcc:509: note:                 std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char) [with _Traits = std::char_traits<char>]
-[9-ERROR] /usr/lib/gcc/i386-unknown-linux-gnu/4.0.3/include/c++/ostream:447: note:                 std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char) [with _CharT = char, _Traits = std::char_traits<char>]
-[9-ERROR] make[3]: *** [DEVA_nameEntry.o] Error 1
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.deva.1169152260.8630.1667074915/Deva/src/comms'
-[9-ERROR] make[2]: *** [all] Error 2
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.deva.1169152260.8630.1667074915/Deva/src'
-[9-ERROR] make[1]: *** [libs] Error 2
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.deva.1169152260.8630.1667074915/Deva'
-[9-ERROR] make: *** [plat] Error 2
+[9-ERROR] Command Wrapper Debug: running 'gcc-42 --version' ..
+[9-ERROR] gcc-42 is /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/gcc-42
+[9-ERROR] Old Command: gcc-42 --version
+[9-ERROR] ENVPREFIX = 'CMD'
+[9-ERROR] APPEND_PO = ''
+[9-ERROR] OTHERS = ''
+[9-ERROR] INSERT = '-O1 -pipe -march=i486'
+[9-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
+[9-ERROR] APPEND = '-s'
+[9-ERROR] FILTER = ''
+[9-ERROR] Old PATH: /ROCK/src.deva.1181974822.30495.4149625545/wrappers:/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper:/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/Croquet-SDK/bin:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clanlib07/bin:/opt/clanlib07/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql41/bin:/opt/mysql50/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt42/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[9-ERROR] New PATH: /ROCK/src.deva.1181974822.30495.4149625545/wrappers:/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/Croquet-SDK/bin:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clanlib07/bin:/opt/clanlib07/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql41/bin:/opt/mysql50/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt42/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[9-ERROR] Insert: -O1
+[9-ERROR] Insert: -pipe
+[9-ERROR] Insert: -march=i486
+[9-ERROR] Copy:   --version
+[9-ERROR] Append: -s
+[9-ERROR] New Command: gcc-42 -O1 -pipe -march=i486 --version -s
+[9-ERROR] gcc-42 (GCC) 4.2.0
+[9-ERROR] Copyright (C) 2007 Free Software Foundation, Inc.
+[9-ERROR] This is free software; see the source for copying conditions.  There is NO
+[9-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[9-ERROR] 
+[9-ERROR] [ writing debug log to /ROCK/src.deva.1181974822.30495.4149625545/cmd_wrapper.log ]
+[9-ERROR] Running main build function 'build_this_package' ...
+[9-ERROR] Creating /usr/<..> if required ...
+[9-ERROR] ./scripts/Build-Pkg: line 29: rpm2cpio: command not found
+[9-ERROR] cpio: premature end of archive
 [9-ERROR] --- BUILD ERROR ---
 

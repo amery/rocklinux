@@ -20,97 +20,20 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168545297 Thu Jan 11 20:54:57 2007 (5) ERROR
-[TIMESTAMP] 1168740164 Sun Jan 14 03:02:44 2007 (9) ERROR
-[TIMESTAMP] 1168938678 Tue Jan 16 10:11:18 2007 (5) ERROR
-[TIMESTAMP] 1168958794 Tue Jan 16 15:46:34 2007 (9) ERROR
-[TIMESTAMP] 1169082053 Thu Jan 18 02:00:53 2007 (5) ERROR
-[TIMESTAMP] 1169129090 Thu Jan 18 15:04:50 2007 (9) ERROR
+[TIMESTAMP] 1180929591 Mon Jun  4 05:59:51 2007 (5)
+[TIMESTAMP] 1181313950 Fri Jun  8 16:45:50 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-cheapskatefonts.err 9-cheapskatefonts.err
+[LOGS] 5-cheapskatefonts.log 9-cheapskatefonts.log
 
-[BUILDTIME] 646 (5) ERROR
-[BUILDTIME] 730 (9) ERROR
-[BUILDTIME] 723 (5) ERROR
-[BUILDTIME] 721 (9) ERROR
-[BUILDTIME] 711 (5) ERROR
-[BUILDTIME] 715 (9) ERROR
+[BUILDTIME] 1588 (5)
+[BUILDTIME] 2302 (9)
+[SIZE] 1.09 MB, 26 files
 
+[DEP] 00-dirtree applewmproto bash2 bzip2 coreutils cvm findutils
+[DEP] font-bh-ttf font-util gawk gcc42 grep libx11 ltrace mktemp sed
+[DEP] sysfiles tar unzip xmame
 
-[5-ERROR] Command Wrapper Debug: running 'gcc-40 --version' ..
-[5-ERROR] gcc-40 is /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/gcc-40
-[5-ERROR] Old Command: gcc-40 --version
-[5-ERROR] ENVPREFIX = 'CMD'
-[5-ERROR] APPEND_PO = ''
-[5-ERROR] OTHERS = ''
-[5-ERROR] INSERT = '-O1 -pipe'
-[5-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
-[5-ERROR] APPEND = '-s'
-[5-ERROR] FILTER = ''
-[5-ERROR] Old PATH: /ROCK/src.cheapskatefonts.1169082045.32039.2923668759/wrappers:/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper:/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
-[5-ERROR] New PATH: /ROCK/src.cheapskatefonts.1169082045.32039.2923668759/wrappers:/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
-[5-ERROR] Insert: -O1
-[5-ERROR] Insert: -pipe
-[5-ERROR] Copy:   --version
-[5-ERROR] Append: -s
-[5-ERROR] New Command: gcc-40 -O1 -pipe --version -s
-[5-ERROR] gcc-40 (GCC) 4.0.3
-[5-ERROR] Copyright (C) 2006 Free Software Foundation, Inc.
-[5-ERROR] This is free software; see the source for copying conditions.  There is NO
-[5-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-[5-ERROR] 
-[5-ERROR] [ writing debug log to /ROCK/src.cheapskatefonts.1169082045.32039.2923668759/cmd_wrapper.log ]
-[5-ERROR] Running main build function 'build_this_package' ...
-[5-ERROR] Creating /usr/<..> if required ...
-[5-ERROR] Archive:  /ROCK/src.cheapskatefonts.1169082045.32039.2923668759/archdir/Domestic_Manners.zip
-[5-ERROR]   inflating: license.txt             
-[5-ERROR]   inflating: domestic_manners.ttf    
-[5-ERROR] Hook preconf is still marked as dirty ...
-[5-ERROR] Hook premake is still marked as dirty ...
-[5-ERROR] Hook inmake is still marked as dirty ...
-[5-ERROR] Hook postmake is still marked as dirty ...
-[5-ERROR] Trying to copy the default documentation ...
-[5-ERROR] Creating /usr/<..> if required ...
-[5-ERROR] cp: target `/usr/X11/lib/X11/fonts/TrueType' is not a directory
-[5-ERROR] --- BUILD ERROR ---
-
-[9-ERROR] Command Wrapper Debug: running 'gcc-40 --version' ..
-[9-ERROR] gcc-40 is /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/gcc-40
-[9-ERROR] Old Command: gcc-40 --version
-[9-ERROR] ENVPREFIX = 'CMD'
-[9-ERROR] APPEND_PO = ''
-[9-ERROR] OTHERS = ''
-[9-ERROR] INSERT = '-O1 -pipe'
-[9-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
-[9-ERROR] APPEND = '-s'
-[9-ERROR] FILTER = ''
-[9-ERROR] Old PATH: /ROCK/src.cheapskatefonts.1169129082.18324.3231913534/wrappers:/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper:/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
-[9-ERROR] New PATH: /ROCK/src.cheapskatefonts.1169129082.18324.3231913534/wrappers:/ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/bincimap/sbin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/firefox/bin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql/bin:/opt/mythtv/bin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/openldap/bin:/opt/openldap/sbin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt40/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
-[9-ERROR] Insert: -O1
-[9-ERROR] Insert: -pipe
-[9-ERROR] Copy:   --version
-[9-ERROR] Append: -s
-[9-ERROR] New Command: gcc-40 -O1 -pipe --version -s
-[9-ERROR] gcc-40 (GCC) 4.0.3
-[9-ERROR] Copyright (C) 2006 Free Software Foundation, Inc.
-[9-ERROR] This is free software; see the source for copying conditions.  There is NO
-[9-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-[9-ERROR] 
-[9-ERROR] [ writing debug log to /ROCK/src.cheapskatefonts.1169129082.18324.3231913534/cmd_wrapper.log ]
-[9-ERROR] Running main build function 'build_this_package' ...
-[9-ERROR] Creating /usr/<..> if required ...
-[9-ERROR] Archive:  /ROCK/src.cheapskatefonts.1169129082.18324.3231913534/archdir/Domestic_Manners.zip
-[9-ERROR]   inflating: license.txt             
-[9-ERROR]   inflating: domestic_manners.ttf    
-[9-ERROR] Hook preconf is still marked as dirty ...
-[9-ERROR] Hook premake is still marked as dirty ...
-[9-ERROR] Hook inmake is still marked as dirty ...
-[9-ERROR] Hook postmake is still marked as dirty ...
-[9-ERROR] Trying to copy the default documentation ...
-[9-ERROR] Creating /usr/<..> if required ...
-[9-ERROR] cp: target `/usr/X11/lib/X11/fonts/TrueType' is not a directory
-[9-ERROR] --- BUILD ERROR ---
 

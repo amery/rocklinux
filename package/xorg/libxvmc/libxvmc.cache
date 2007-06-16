@@ -20,55 +20,54 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168535827 Thu Jan 11 18:17:07 2007 (5)
-[TIMESTAMP] 1168728034 Sat Jan 13 23:40:34 2007 (9) ERROR
-[TIMESTAMP] 1168958284 Tue Jan 16 15:38:04 2007 (9) ERROR
-[TIMESTAMP] 1169128581 Thu Jan 18 14:56:21 2007 (9) ERROR
+[TIMESTAMP] 1180916509 Mon Jun  4 02:21:49 2007 (5)
+[TIMESTAMP] 1181283026 Fri Jun  8 08:10:26 2007 (9) ERROR
+[TIMESTAMP] 1181850740 Thu Jun 14 21:52:20 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-libxvmc.log 9-libxvmc.err
 
-[BUILDTIME] 2350 (5)
-[BUILDTIME] 3107 (9) ERROR
-[BUILDTIME] 3095 (9) ERROR
-[BUILDTIME] 3097 (9) ERROR
+[BUILDTIME] 3279 (5)
+[BUILDTIME] 4199 (9) ERROR
+[BUILDTIME] 4163 (9) ERROR
 [SIZE] 0.04 MB, 12 files
 
 [DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
-[DEP] coreutils cvm diffutils findutils gawk gcc40 gcc40:dev glibc23
-[DEP] glibc23:dev grep libx11 libx11:dev libxau:dev libxdmcp:dev libxext
-[DEP] libxext:dev libxv libxv:dev linux-libc-headers:dev make mktemp
-[DEP] net-tools pkgconfig rrdtool sed sysfiles tar util-linux util-macros
-[DEP] videoproto:dev xextproto:dev xproto:dev xvmc-wrapper xvmc-wrapper:dev
+[DEP] coreutils cvm diffutils findutils gawk gcc42 gcc42:dev glibc26
+[DEP] glibc26:dev grep libx11 libx11:dev libxau:dev libxcb:dev libxdmcp:dev
+[DEP] libxext libxext:dev libxv libxv:dev linux26-headers:dev ltrace make
+[DEP] mktemp net-tools pkgconfig sed sysfiles tar util-linux util-macros
+[DEP] videoproto:dev xextproto:dev xmame xproto:dev xvmc-wrapper
+[DEP] xvmc-wrapper:dev
 
 [PROVIDES] libXvMC.a libXvMC.so libXvMCW.a libXvMCW.so
 
-[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'XvMClib.h' '/usr/X11R7/include/X11/extensions/XvMClib.h'
-[9-ERROR] make[4]: Leaving directory `/ROCK/loop/src.libxvmc.1169128548.17199.3231913534/libXvMC-X11R7.1-1.0.2/include/X11/extensions'
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.libxvmc.1169128548.17199.3231913534/libXvMC-X11R7.1-1.0.2/include/X11/extensions'
-[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.libxvmc.1169128548.17199.3231913534/libXvMC-X11R7.1-1.0.2/include/X11'
-[9-ERROR] make[4]: Entering directory `/ROCK/loop/src.libxvmc.1169128548.17199.3231913534/libXvMC-X11R7.1-1.0.2/include/X11'
+[9-ERROR] make[4]: Leaving directory `/ROCK/loop/src.libxvmc.1181850689.20027.946717046/libXvMC-X11R7.2-1.0.4/include/X11/extensions'
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.libxvmc.1181850689.20027.946717046/libXvMC-X11R7.2-1.0.4/include/X11/extensions'
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.libxvmc.1181850689.20027.946717046/libXvMC-X11R7.2-1.0.4/include/X11'
+[9-ERROR] make[4]: Entering directory `/ROCK/loop/src.libxvmc.1181850689.20027.946717046/libXvMC-X11R7.2-1.0.4/include/X11'
 [9-ERROR] make[4]: Nothing to be done for `install-exec-am'.
 [9-ERROR] make[4]: Nothing to be done for `install-data-am'.
-[9-ERROR] make[4]: Leaving directory `/ROCK/loop/src.libxvmc.1169128548.17199.3231913534/libXvMC-X11R7.1-1.0.2/include/X11'
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.libxvmc.1169128548.17199.3231913534/libXvMC-X11R7.1-1.0.2/include/X11'
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.libxvmc.1169128548.17199.3231913534/libXvMC-X11R7.1-1.0.2/include/X11'
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.libxvmc.1169128548.17199.3231913534/libXvMC-X11R7.1-1.0.2/include'
-[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.libxvmc.1169128548.17199.3231913534/libXvMC-X11R7.1-1.0.2/include'
+[9-ERROR] make[4]: Leaving directory `/ROCK/loop/src.libxvmc.1181850689.20027.946717046/libXvMC-X11R7.2-1.0.4/include/X11'
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.libxvmc.1181850689.20027.946717046/libXvMC-X11R7.2-1.0.4/include/X11'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.libxvmc.1181850689.20027.946717046/libXvMC-X11R7.2-1.0.4/include/X11'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.libxvmc.1181850689.20027.946717046/libXvMC-X11R7.2-1.0.4/include'
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.libxvmc.1181850689.20027.946717046/libXvMC-X11R7.2-1.0.4/include'
 [9-ERROR] make[3]: Nothing to be done for `install-exec-am'.
 [9-ERROR] make[3]: Nothing to be done for `install-data-am'.
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.libxvmc.1169128548.17199.3231913534/libXvMC-X11R7.1-1.0.2/include'
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.libxvmc.1169128548.17199.3231913534/libXvMC-X11R7.1-1.0.2/include'
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.libxvmc.1169128548.17199.3231913534/libXvMC-X11R7.1-1.0.2/include'
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.libxvmc.1169128548.17199.3231913534/libXvMC-X11R7.1-1.0.2'
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.libxvmc.1169128548.17199.3231913534/libXvMC-X11R7.1-1.0.2'
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.libxvmc.1181850689.20027.946717046/libXvMC-X11R7.2-1.0.4/include'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.libxvmc.1181850689.20027.946717046/libXvMC-X11R7.2-1.0.4/include'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.libxvmc.1181850689.20027.946717046/libXvMC-X11R7.2-1.0.4/include'
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.libxvmc.1181850689.20027.946717046/libXvMC-X11R7.2-1.0.4'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.libxvmc.1181850689.20027.946717046/libXvMC-X11R7.2-1.0.4'
 [9-ERROR] make[2]: Nothing to be done for `install-exec-am'.
 [9-ERROR] test -z "/usr/X11R7/lib/pkgconfig" || mkdir -p -- "/usr/X11R7/lib/pkgconfig"
-[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'xvmc.pc' '/usr/X11R7/lib/pkgconfig/xvmc.pc'
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.libxvmc.1169128548.17199.3231913534/libXvMC-X11R7.1-1.0.2'
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.libxvmc.1169128548.17199.3231913534/libXvMC-X11R7.1-1.0.2'
+[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 'xvmc.pc' '/usr/X11R7/lib/pkgconfig/xvmc.pc'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.libxvmc.1181850689.20027.946717046/libXvMC-X11R7.2-1.0.4'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.libxvmc.1181850689.20027.946717046/libXvMC-X11R7.2-1.0.4'
+[9-ERROR] rmdir: removing directory, /usr/X11R7/share/doc/libxvmc
 [9-ERROR] Creating file list and doing final adaptions ... 
 [9-ERROR] Processing /lib corrections ...
 [9-ERROR] Verifing the .la files ...

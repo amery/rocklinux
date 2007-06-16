@@ -20,26 +20,29 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168692519 Sat Jan 13 13:48:39 2007 (5) ERROR
-[TIMESTAMP] 1168901512 Mon Jan 15 23:51:52 2007 (9) ERROR
-[TIMESTAMP] 1168953793 Tue Jan 16 14:23:13 2007 (5) ERROR
-[TIMESTAMP] 1168983520 Tue Jan 16 22:38:40 2007 (9) ERROR
-[TIMESTAMP] 1169124126 Thu Jan 18 13:42:06 2007 (5) ERROR
-[TIMESTAMP] 1169153713 Thu Jan 18 21:55:13 2007 (9) ERROR
+[TIMESTAMP] 1181174034 Thu Jun  7 01:53:54 2007 (5) ERROR
+[TIMESTAMP] 1181620684 Tue Jun 12 05:58:04 2007 (9) ERROR
+[TIMESTAMP] 1181832593 Thu Jun 14 16:49:53 2007 (5) ERROR
+[TIMESTAMP] 1181917034 Fri Jun 15 16:17:14 2007 (9) ERROR
+[TIMESTAMP] 1181955801 Sat Jun 16 03:03:21 2007 (5) ERROR
+[TIMESTAMP] 1181977679 Sat Jun 16 09:07:59 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-btscanner.err 9-btscanner.err
 
-[BUILDTIME] 1966 (5) ERROR
-[BUILDTIME] 1946 (9) ERROR
-[BUILDTIME] 2004 (5) ERROR
-[BUILDTIME] 1950 (9) ERROR
-[BUILDTIME] 1954 (5) ERROR
-[BUILDTIME] 1992 (9) ERROR
+[BUILDTIME] 2567 (5) ERROR
+[BUILDTIME] 2488 (9) ERROR
+[BUILDTIME] 2416 (5) ERROR
+[BUILDTIME] 2472 (9) ERROR
+[BUILDTIME] 2438 (5) ERROR
+[BUILDTIME] 2433 (9) ERROR
 
 
+[5-ERROR] checking sys/socket.h usability... yes
+[5-ERROR] checking sys/socket.h presence... yes
+[5-ERROR] checking for sys/socket.h... yes
 [5-ERROR] checking for unistd.h... (cached) yes
 [5-ERROR] checking fcntl.h usability... yes
 [5-ERROR] checking fcntl.h presence... yes
@@ -58,7 +61,7 @@
 [5-ERROR] checking for bluetooth/sdp.h... yes
 [5-ERROR] checking for an ANSI C-conforming const... yes
 [5-ERROR] checking for size_t... yes
-[5-ERROR] checking whether gcc-40 needs -traditional... no
+[5-ERROR] checking whether gcc-42 needs -traditional... no
 [5-ERROR] checking for stdlib.h... (cached) yes
 [5-ERROR] checking for GNU libc compatible malloc... yes
 [5-ERROR] checking return type of signal handlers... void
@@ -78,19 +81,22 @@
 [5-ERROR] config.status: creating Makefile
 [5-ERROR] config.status: creating config.h
 [5-ERROR] config.status: executing depfiles commands
-[5-ERROR] cd . && /bin/sh /ROCK/src.btscanner.1169124104.6734.3694631316/btscanner-2.1/missing --run autoheader
-[5-ERROR] rm -f stamp-h1
-[5-ERROR] touch config.h.in
 [5-ERROR] make  all-am
-[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.btscanner.1169124104.6734.3694631316/btscanner-2.1'
-[5-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -I.  -I/usr/include/libxml2  -g -O2 -I/usr/include/libxml2 -Wall -pthread -Wshadow -Wbad-function-cast   -Wformat -Wimplicit-function-dec -Wparentheses -Wsign-compare   -Wstrict-prototypes -Wtrigraphs -Wundef -Wuninitialized   -W -Wunused -Wformat-security -Wmissing-braces -Wbad-function-cast   -Wcast-qual -falign-functions -falign-labels -falign-loops  -pedantic -fstrict-aliasing -D_GNU_SOURCE -std=c99 -DCFG_FILE=\"/etc/btscanner.xml\" -DCFG_DTD=\"file:///etc/btscanner.dtd\" -MT main.o -MD -MP -MF ".deps/main.Tpo" -c -o main.o main.c; \
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.btscanner.1181955775.9204.3584933667/btscanner-2.1'
+[5-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I. -I.  -I/usr/include/libxml2  -g -O2 -I/usr/include/libxml2 -Wall -pthread -Wshadow -Wbad-function-cast   -Wformat -Wimplicit-function-dec -Wparentheses -Wsign-compare   -Wstrict-prototypes -Wtrigraphs -Wundef -Wuninitialized   -W -Wunused -Wformat-security -Wmissing-braces -Wbad-function-cast   -Wcast-qual -falign-functions -falign-labels -falign-loops  -pedantic -fstrict-aliasing -D_GNU_SOURCE -std=c99 -DCFG_FILE=\"/etc/btscanner.xml\" -DCFG_DTD=\"file:///etc/btscanner.dtd\" -MT main.o -MD -MP -MF ".deps/main.Tpo" -c -o main.o main.c; \
 [5-ERROR] 	then mv -f ".deps/main.Tpo" ".deps/main.Po"; else rm -f ".deps/main.Tpo"; exit 1; fi
 [5-ERROR] cc1: error: unrecognized command line option "-Wimplicit-function-dec"
 [5-ERROR] make[1]: *** [main.o] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.btscanner.1169124104.6734.3694631316/btscanner-2.1'
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.btscanner.1181955775.9204.3584933667/btscanner-2.1'
 [5-ERROR] make: *** [all] Error 2
 [5-ERROR] --- BUILD ERROR ---
 
+[9-ERROR] checking sys/socket.h usability... yes
+[9-ERROR] checking sys/socket.h presence... yes
+[9-ERROR] checking for sys/socket.h... yes
+[9-ERROR] checking for unistd.h... (cached) yes
+[9-ERROR] checking fcntl.h usability... yes
+[9-ERROR] checking fcntl.h presence... yes
 [9-ERROR] checking for fcntl.h... yes
 [9-ERROR] checking stdarg.h usability... yes
 [9-ERROR] checking stdarg.h presence... yes
@@ -106,7 +112,7 @@
 [9-ERROR] checking for bluetooth/sdp.h... yes
 [9-ERROR] checking for an ANSI C-conforming const... yes
 [9-ERROR] checking for size_t... yes
-[9-ERROR] checking whether gcc-40 needs -traditional... no
+[9-ERROR] checking whether gcc-42 needs -traditional... no
 [9-ERROR] checking for stdlib.h... (cached) yes
 [9-ERROR] checking for GNU libc compatible malloc... yes
 [9-ERROR] checking return type of signal handlers... void
@@ -126,19 +132,13 @@
 [9-ERROR] config.status: creating Makefile
 [9-ERROR] config.status: creating config.h
 [9-ERROR] config.status: executing depfiles commands
-[9-ERROR] cd . && /bin/sh /ROCK/src.btscanner.1169153691.29530.3951810427/btscanner-2.1/missing --run autoheader
-[9-ERROR] rm -f stamp-h1
-[9-ERROR] touch config.h.in
-[9-ERROR] cd . && /bin/sh ./config.status config.h
-[9-ERROR] config.status: creating config.h
-[9-ERROR] config.status: config.h is unchanged
 [9-ERROR] make  all-am
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.btscanner.1169153691.29530.3951810427/btscanner-2.1'
-[9-ERROR] if gcc-40 -DHAVE_CONFIG_H -I. -I. -I. -I.  -I/usr/include/libxml2  -g -O2 -I/usr/include/libxml2 -Wall -pthread -Wshadow -Wbad-function-cast   -Wformat -Wimplicit-function-dec -Wparentheses -Wsign-compare   -Wstrict-prototypes -Wtrigraphs -Wundef -Wuninitialized   -W -Wunused -Wformat-security -Wmissing-braces -Wbad-function-cast   -Wcast-qual -falign-functions -falign-labels -falign-loops  -pedantic -fstrict-aliasing -D_GNU_SOURCE -std=c99 -DCFG_FILE=\"/etc/btscanner.xml\" -DCFG_DTD=\"file:///etc/btscanner.dtd\" -MT main.o -MD -MP -MF ".deps/main.Tpo" -c -o main.o main.c; \
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.btscanner.1181977653.16364.3474453109/btscanner-2.1'
+[9-ERROR] if gcc-42 -DHAVE_CONFIG_H -I. -I. -I. -I.  -I/usr/include/libxml2  -g -O2 -I/usr/include/libxml2 -Wall -pthread -Wshadow -Wbad-function-cast   -Wformat -Wimplicit-function-dec -Wparentheses -Wsign-compare   -Wstrict-prototypes -Wtrigraphs -Wundef -Wuninitialized   -W -Wunused -Wformat-security -Wmissing-braces -Wbad-function-cast   -Wcast-qual -falign-functions -falign-labels -falign-loops  -pedantic -fstrict-aliasing -D_GNU_SOURCE -std=c99 -DCFG_FILE=\"/etc/btscanner.xml\" -DCFG_DTD=\"file:///etc/btscanner.dtd\" -MT main.o -MD -MP -MF ".deps/main.Tpo" -c -o main.o main.c; \
 [9-ERROR] 	then mv -f ".deps/main.Tpo" ".deps/main.Po"; else rm -f ".deps/main.Tpo"; exit 1; fi
 [9-ERROR] cc1: error: unrecognized command line option "-Wimplicit-function-dec"
 [9-ERROR] make[1]: *** [main.o] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.btscanner.1169153691.29530.3951810427/btscanner-2.1'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.btscanner.1181977653.16364.3474453109/btscanner-2.1'
 [9-ERROR] make: *** [all] Error 2
 [9-ERROR] --- BUILD ERROR ---
 

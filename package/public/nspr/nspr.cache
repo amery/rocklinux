@@ -20,31 +20,33 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168583569 Fri Jan 12 07:32:49 2007 (5)
-[TIMESTAMP] 1168784606 Sun Jan 14 15:23:26 2007 (9)
+[TIMESTAMP] 1180978360 Mon Jun  4 19:32:40 2007 (5)
+[TIMESTAMP] 1181435988 Sun Jun 10 02:39:48 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-nspr.log 9-nspr.log
 
-[BUILDTIME] 15280 (5)
-[BUILDTIME] 24020 (9)
-[SIZE] 8.34 MB, 52 files
+[BUILDTIME] 18784 (5)
+[BUILDTIME] 20920 (9)
+[SIZE] 9.19 MB, 60 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
-[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev
-[DEP] make mktemp mozilla net-tools perl5 rrdtool sed sysfiles tar
+[DEP] gawk gcc42 gcc42:dev glibc26 glibc26:dev grep linux26-headers:dev
+[DEP] ltrace make mktemp net-tools perl5 sed sysfiles tar xmame
 
 [PROVIDES] addbuiltin atob bltest btoa certcgi certutil checkcert client
 [PROVIDES] cmsutil crlutil crmftest dbtest derdump digest example fipstest
 [PROVIDES] libasn1.a libcertdb.a libcerthi.a libcrmf.a libcryptohi.a
-[PROVIDES] libdbm.a libfreebl.a libfreebl3.so libjar.a libnspr4.a libnss.a
-[PROVIDES] libnssb.a libnssckbi.so libnssckfw.a libnssdev.a libnsspki.a
-[PROVIDES] libpk11wrap.a libpkcs12.a libpkcs7.a libplc4.a libplds4.a
-[PROVIDES] libsectool.a libsecutil.a libsmime.a libsoftokn.a libssl-nss.a
-[PROVIDES] libzlib.a makepqg mangle minigzip modutil ocspclnt oidcalc
-[PROVIDES] p7content p7env p7sign p7verify pk12util pp rsaperf sdrtest
-[PROVIDES] selfserv server shlibsign signtool signver smime ssltap strsclnt
-[PROVIDES] symkeyutil tstclnt vfychain vfyserv
+[PROVIDES] libdbm.a libfreebl.a libfreebl3.so libjar.a libnspr4.a
+[PROVIDES] libnspr4.so libnss.a libnss3.so libnssb.a libnssckbi.so
+[PROVIDES] libnssckfw.a libnssdev.a libnsspki.a libpk11wrap.a libpkcs12.a
+[PROVIDES] libpkcs7.a libplc4.a libplc4.so libplds4.a libplds4.so
+[PROVIDES] libsectool.a libsecutil.a libsmime.a libsmime3.so libsoftokn.a
+[PROVIDES] libsoftokn3.so libssl-nss.a libssl3.so libzlib.a makepqg mangle
+[PROVIDES] minigzip modutil nspr-config ocspclnt oidcalc p7content p7env
+[PROVIDES] p7sign p7verify pk12util pp rsaperf sdrtest selfserv server
+[PROVIDES] shlibsign signtool signver smime ssltap strsclnt symkeyutil
+[PROVIDES] tstclnt vfychain vfyserv
 

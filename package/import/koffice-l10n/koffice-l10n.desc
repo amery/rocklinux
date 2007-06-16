@@ -172,3 +172,7 @@
 [I] KOffice translations for the "zh_TW" locale.
 [D] 2205673042 koffice-l10n-zh_TW-1.6.1.tar.bz2 ftp://ftp.kde.org/pub/kde/stable/koffice-1.6.1/src/koffice-l10n/
 #endif
+
+[CD] <COPY> rm $confdir/*.cache
+[CD] <COPY> cp $cachedir/*.cache $confdir/
+

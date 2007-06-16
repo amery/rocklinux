@@ -20,81 +20,95 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168708042 Sat Jan 13 18:07:22 2007 (5) ERROR
-[TIMESTAMP] 1168918530 Tue Jan 16 04:35:30 2007 (9)
-[TIMESTAMP] 1168956967 Tue Jan 16 15:16:07 2007 (5) ERROR
-[TIMESTAMP] 1169127279 Thu Jan 18 14:34:39 2007 (5) ERROR
+[TIMESTAMP] 1181246988 Thu Jun  7 22:09:48 2007 (5) ERROR
+[TIMESTAMP] 1181796107 Thu Jun 14 06:41:47 2007 (9) ERROR
+[TIMESTAMP] 1181841181 Thu Jun 14 19:13:01 2007 (5) ERROR
+[TIMESTAMP] 1181934479 Fri Jun 15 21:07:59 2007 (9) ERROR
+[TIMESTAMP] 1181959779 Sat Jun 16 04:09:39 2007 (5) ERROR
+[TIMESTAMP] 1181981775 Sat Jun 16 10:16:15 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-pyqt.err 9-pyqt.log
+[LOGS] 5-pyqt.err 9-pyqt.err
 
-[BUILDTIME] 724 (5) ERROR
-[BUILDTIME] 51769 (9)
-[BUILDTIME] 51826 (5) ERROR
-[BUILDTIME] 51936 (5) ERROR
-[SIZE] 8.70 MB, 255 files
+[BUILDTIME] 1198 (5) ERROR
+[BUILDTIME] 1230 (9) ERROR
+[BUILDTIME] 1235 (5) ERROR
+[BUILDTIME] 1223 (9) ERROR
+[BUILDTIME] 1200 (5) ERROR
+[BUILDTIME] 1209 (9) ERROR
 
-[DEP] 00-dirtree applewmproto bash2 binutils bzip2 coreutils cvm
-[DEP] expat findutils fontconfig freetype gawk gcc40 gcc40:dev glibc23
-[DEP] glibc23:dev grep libice libpng libsm libx11 libxau libxcursor
-[DEP] libxdmcp libxext libxfixes libxft libxinerama libxmu libxrandr
-[DEP] libxrender libxt linux-libc-headers:dev make mesalib mesalib:dev
-[DEP] mktemp nas python python:dev qt33 qt33:dev rrdtool sed sip sip:dev
-[DEP] sysfiles tar zlib
 
-[PROVIDES] pylupdate pyuic qt.so qtcanvas.so qtgl.so qtnetwork.so qtsql.so
-[PROVIDES] qttable.so qtui.so qtxml.so
-
-[5-ERROR] cp -f ../sip/qtsql/qsqlquery.sip /usr/share/sip/qtsql/qsqlquery.sip
-[5-ERROR] cp -f ../sip/qtsql/qtsqlmod.sip /usr/share/sip/qtsql/qtsqlmod.sip
-[5-ERROR] cp -f ../sip/qtsql/qdataview.sip /usr/share/sip/qtsql/qdataview.sip
-[5-ERROR] cp -f ../sip/qtsql/qsqlerror.sip /usr/share/sip/qtsql/qsqlerror.sip
-[5-ERROR] cp -f ../sip/qtsql/qsqleditorfactory.sip /usr/share/sip/qtsql/qsqleditorfactory.sip
-[5-ERROR] cp -f ../sip/qtsql/qsqlfield.sip /usr/share/sip/qtsql/qsqlfield.sip
-[5-ERROR] cp -f ../sip/qtsql/copying.sip /usr/share/sip/qtsql/copying.sip
-[5-ERROR] cp -f ../sip/qtsql/qsqlcursor.sip /usr/share/sip/qtsql/qsqlcursor.sip
-[5-ERROR] cp -f ../sip/qtsql/qsqlrecord.sip /usr/share/sip/qtsql/qsqlrecord.sip
-[5-ERROR] cp -f ../sip/qtsql/qdatatable.sip /usr/share/sip/qtsql/qdatatable.sip
-[5-ERROR] cp -f ../sip/qtsql/qsqlselectcursor.sip /usr/share/sip/qtsql/qsqlselectcursor.sip
-[5-ERROR] cp -f ../sip/qtsql/qsql.sip /usr/share/sip/qtsql/qsql.sip
-[5-ERROR] cp -f ../sip/qtsql/qsqlpropertymap.sip /usr/share/sip/qtsql/qsqlpropertymap.sip
-[5-ERROR] cp -f ../sip/qtsql/qsqlform.sip /usr/share/sip/qtsql/qsqlform.sip
-[5-ERROR] cp -f ../sip/qtsql/qsqldriver.sip /usr/share/sip/qtsql/qsqldriver.sip
-[5-ERROR] cp -f ../sip/qtsql/qsqlindex.sip /usr/share/sip/qtsql/qsqlindex.sip
-[5-ERROR] cp -f ../sip/qtsql/qeditorfactory.sip /usr/share/sip/qtsql/qeditorfactory.sip
-[5-ERROR] cp -f ../sip/qtsql/qsqlresult.sip /usr/share/sip/qtsql/qsqlresult.sip
-[5-ERROR] cp -f ../sip/qtsql/qsqldatabase.sip /usr/share/sip/qtsql/qsqldatabase.sip
-[5-ERROR] cp -f ../sip/qtsql/qdatabrowser.sip /usr/share/sip/qtsql/qdatabrowser.sip
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.pyqt.1169126713.28104.1783924417/PyQt-x11-gpl-3.16/qtsql'
-[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.pyqt.1169126713.28104.1783924417/PyQt-x11-gpl-3.16/pyuic3'
-[5-ERROR] cp -f pyuic /usr/bin/pyuic
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.pyqt.1169126713.28104.1783924417/PyQt-x11-gpl-3.16/pyuic3'
-[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.pyqt.1169126713.28104.1783924417/PyQt-x11-gpl-3.16/pylupdate3'
-[5-ERROR] cp -f pylupdate /usr/bin/pylupdate
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.pyqt.1169126713.28104.1783924417/PyQt-x11-gpl-3.16/pylupdate3'
-[5-ERROR] cp -f pyqtconfig.py /usr/lib/python2.4/site-packages/pyqtconfig.py
-[5-ERROR] Trying to copy the default documentation ...
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing /lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 259 files for this package.
-[5-ERROR] Applying package split: 40 pyqt:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
-[5-ERROR] Applying package split: 42 pyqt:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 pyqt:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <pyqt> Creating flist file ...
-[5-ERROR] <pyqt> Creating package dependencies file ...
-[5-ERROR] <pyqt> Creating package description ...
-[5-ERROR] <pyqt> Creating md5sum and cksum files ...
-[5-ERROR] <pyqt:doc> Creating flist file ...
-[5-ERROR] <pyqt:doc> Creating package dependencies file ...
-[5-ERROR] <pyqt:doc> Creating package description ...
-[5-ERROR] <pyqt:doc> Creating md5sum and cksum files ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Found shared files with other packages:
-[5-ERROR] usr/lib/python2.4/site-packages/sipconfig.pyc: pyqt python
+[5-ERROR] Command Wrapper Debug: running 'gcc-42 --version' ..
+[5-ERROR] gcc-42 is /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/gcc-42
+[5-ERROR] Old Command: gcc-42 --version
+[5-ERROR] ENVPREFIX = 'CMD'
+[5-ERROR] APPEND_PO = ''
+[5-ERROR] OTHERS = ''
+[5-ERROR] INSERT = '-O1 -pipe -march=i486'
+[5-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
+[5-ERROR] APPEND = '-s'
+[5-ERROR] FILTER = ''
+[5-ERROR] Old PATH: /ROCK/src.pyqt.1181959767.24448.2768833622/wrappers:/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper:/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/Croquet-SDK/bin:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clanlib07/bin:/opt/clanlib07/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql41/bin:/opt/mysql50/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt42/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[5-ERROR] New PATH: /ROCK/src.pyqt.1181959767.24448.2768833622/wrappers:/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/Croquet-SDK/bin:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clanlib07/bin:/opt/clanlib07/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql41/bin:/opt/mysql50/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt42/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[5-ERROR] Insert: -O1
+[5-ERROR] Insert: -pipe
+[5-ERROR] Insert: -march=i486
+[5-ERROR] Copy:   --version
+[5-ERROR] Append: -s
+[5-ERROR] New Command: gcc-42 -O1 -pipe -march=i486 --version -s
+[5-ERROR] gcc-42 (GCC) 4.2.0
+[5-ERROR] Copyright (C) 2007 Free Software Foundation, Inc.
+[5-ERROR] This is free software; see the source for copying conditions.  There is NO
+[5-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[5-ERROR] 
+[5-ERROR] [ writing debug log to /ROCK/src.pyqt.1181959767.24448.2768833622/cmd_wrapper.log ]
+[5-ERROR] Running main build function 'build_this_package' ...
+[5-ERROR] Extracting PyQt-x11-gpl-3.16.tar.bz2 (tar -v --use-compress-program=bzip2 -xf) ... 
+[5-ERROR] Fixing ownership and permissions ...
+[5-ERROR] Removing CVS and .svn directories ...
+[5-ERROR] Changeing into /ROCK/src.pyqt.1181959767.24448.2768833622/PyQt-x11-gpl-3.16 ...
+[5-ERROR] Creating /usr/<..> if required ...
+[5-ERROR] Traceback (most recent call last):
+[5-ERROR]   File "configure.py", line 31, in <module>
+[5-ERROR]     import sipconfig
+[5-ERROR] ImportError: No module named sipconfig
 [5-ERROR] --- BUILD ERROR ---
-[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] Command Wrapper Debug: running 'gcc-42 --version' ..
+[9-ERROR] gcc-42 is /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/gcc-42
+[9-ERROR] Old Command: gcc-42 --version
+[9-ERROR] ENVPREFIX = 'CMD'
+[9-ERROR] APPEND_PO = ''
+[9-ERROR] OTHERS = ''
+[9-ERROR] INSERT = '-O1 -pipe -march=i486'
+[9-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
+[9-ERROR] APPEND = '-s'
+[9-ERROR] FILTER = ''
+[9-ERROR] Old PATH: /ROCK/src.pyqt.1181981763.11141.3034343504/wrappers:/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper:/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/Croquet-SDK/bin:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clanlib07/bin:/opt/clanlib07/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql41/bin:/opt/mysql50/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt42/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[9-ERROR] New PATH: /ROCK/src.pyqt.1181981763.11141.3034343504/wrappers:/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/Croquet-SDK/bin:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clanlib07/bin:/opt/clanlib07/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql41/bin:/opt/mysql50/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt42/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[9-ERROR] Insert: -O1
+[9-ERROR] Insert: -pipe
+[9-ERROR] Insert: -march=i486
+[9-ERROR] Copy:   --version
+[9-ERROR] Append: -s
+[9-ERROR] New Command: gcc-42 -O1 -pipe -march=i486 --version -s
+[9-ERROR] gcc-42 (GCC) 4.2.0
+[9-ERROR] Copyright (C) 2007 Free Software Foundation, Inc.
+[9-ERROR] This is free software; see the source for copying conditions.  There is NO
+[9-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[9-ERROR] 
+[9-ERROR] [ writing debug log to /ROCK/src.pyqt.1181981763.11141.3034343504/cmd_wrapper.log ]
+[9-ERROR] Running main build function 'build_this_package' ...
+[9-ERROR] Extracting PyQt-x11-gpl-3.16.tar.bz2 (tar -v --use-compress-program=bzip2 -xf) ... 
+[9-ERROR] Fixing ownership and permissions ...
+[9-ERROR] Removing CVS and .svn directories ...
+[9-ERROR] Changeing into /ROCK/src.pyqt.1181981763.11141.3034343504/PyQt-x11-gpl-3.16 ...
+[9-ERROR] Creating /usr/<..> if required ...
+[9-ERROR] Traceback (most recent call last):
+[9-ERROR]   File "configure.py", line 31, in <module>
+[9-ERROR]     import sipconfig
+[9-ERROR] ImportError: No module named sipconfig
+[9-ERROR] --- BUILD ERROR ---
 

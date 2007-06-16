@@ -20,63 +20,63 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168692402 Sat Jan 13 13:46:42 2007 (5) ERROR
-[TIMESTAMP] 1168901389 Mon Jan 15 23:49:49 2007 (9) ERROR
-[TIMESTAMP] 1168953739 Tue Jan 16 14:22:19 2007 (5) ERROR
-[TIMESTAMP] 1168983465 Tue Jan 16 22:37:45 2007 (9) ERROR
-[TIMESTAMP] 1169124072 Thu Jan 18 13:41:12 2007 (5) ERROR
-[TIMESTAMP] 1169153659 Thu Jan 18 21:54:19 2007 (9) ERROR
+[TIMESTAMP] 1181173885 Thu Jun  7 01:51:25 2007 (5) ERROR
+[TIMESTAMP] 1181620532 Tue Jun 12 05:55:32 2007 (9) ERROR
+[TIMESTAMP] 1181832511 Thu Jun 14 16:48:31 2007 (5) ERROR
+[TIMESTAMP] 1181916964 Fri Jun 15 16:16:04 2007 (9) ERROR
+[TIMESTAMP] 1181955740 Sat Jun 16 03:02:20 2007 (5) ERROR
+[TIMESTAMP] 1181977618 Sat Jun 16 09:06:58 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-tpctl.err 9-tpctl.err
 
-[BUILDTIME] 885 (5) ERROR
-[BUILDTIME] 905 (9) ERROR
-[BUILDTIME] 894 (5) ERROR
-[BUILDTIME] 903 (9) ERROR
-[BUILDTIME] 903 (5) ERROR
-[BUILDTIME] 912 (9) ERROR
+[BUILDTIME] 1515 (5) ERROR
+[BUILDTIME] 1445 (9) ERROR
+[BUILDTIME] 1394 (5) ERROR
+[BUILDTIME] 1458 (9) ERROR
+[BUILDTIME] 1436 (5) ERROR
+[BUILDTIME] 1448 (9) ERROR
 
 
-[5-ERROR] ntpctl.c:541: error: dereferencing pointer to incomplete type
-[5-ERROR] ntpctl.c:544: error: dereferencing pointer to incomplete type
-[5-ERROR] ntpctl.c:547: error: dereferencing pointer to incomplete type
-[5-ERROR] ntpctl.c:549: error: dereferencing pointer to incomplete type
-[5-ERROR] ntpctl.c:579: error: dereferencing pointer to incomplete type
-[5-ERROR] ntpctl.c:580: error: dereferencing pointer to incomplete type
-[5-ERROR] ntpctl.c:581: error: dereferencing pointer to incomplete type
-[5-ERROR] ntpctl.c:582: error: dereferencing pointer to incomplete type
-[5-ERROR] ntpctl.c: In function 'pm_resume_hardware':
-[5-ERROR] ntpctl.c:599: error: dereferencing pointer to incomplete type
-[5-ERROR] ntpctl.c:600: error: dereferencing pointer to incomplete type
-[5-ERROR] ntpctl.c: In function 'pm_resume_lid':
-[5-ERROR] ntpctl.c:617: error: dereferencing pointer to incomplete type
-[5-ERROR] ntpctl.c:618: error: dereferencing pointer to incomplete type
-[5-ERROR] ntpctl.c: In function 'pm_resume_RTC':
-[5-ERROR] ntpctl.c:644: error: dereferencing pointer to incomplete type
-[5-ERROR] ntpctl.c:645: error: dereferencing pointer to incomplete type
+[5-ERROR] ntpctl.c:644: error: 'struct menuinfo' has no member named 'name'
+[5-ERROR] ntpctl.c:645: error: 'struct menuinfo' has no member named 'help'
 [5-ERROR] ntpctl.c: In function 'pm_resume_serial_RI':
-[5-ERROR] ntpctl.c:665: error: dereferencing pointer to incomplete type
-[5-ERROR] ntpctl.c:666: error: dereferencing pointer to incomplete type
+[5-ERROR] ntpctl.c:665: error: 'struct menuinfo' has no member named 'name'
+[5-ERROR] ntpctl.c:666: error: 'struct menuinfo' has no member named 'help'
 [5-ERROR] ntpctl.c: In function 'cleanup':
+[5-ERROR] ntpctl.c:710: error: 'configmenu' undeclared (first use in this function)
 [5-ERROR] ntpctl.c:710: warning: implicit declaration of function 'free_menu'
+[5-ERROR] ntpctl.c:712: error: 'struct menuinfo' has no member named 'item'
 [5-ERROR] ntpctl.c:714: warning: implicit declaration of function 'free_item'
+[5-ERROR] ntpctl.c:714: error: 'struct menuinfo' has no member named 'item'
 [5-ERROR] ntpctl.c: In function 'handle_sig_winch':
 [5-ERROR] ntpctl.c:747: warning: implicit declaration of function 'unpost_menu'
+[5-ERROR] ntpctl.c:747: error: 'configmenu' undeclared (first use in this function)
 [5-ERROR] ntpctl.c:761: warning: implicit declaration of function 'set_menu_win'
 [5-ERROR] ntpctl.c:762: warning: implicit declaration of function 'set_menu_spacing'
 [5-ERROR] ntpctl.c:764: warning: implicit declaration of function 'set_menu_format'
 [5-ERROR] ntpctl.c:766: warning: implicit declaration of function 'post_menu'
 [5-ERROR] ntpctl.c:766: error: 'E_OK' undeclared (first use in this function)
 [5-ERROR] ntpctl.c: In function 'startup':
+[5-ERROR] ntpctl.c:804: error: 'struct menuinfo' has no member named 'item'
+[5-ERROR] ntpctl.c:804: error: 'configmenuitems' undeclared (first use in this function)
+[5-ERROR] ntpctl.c:805: error: 'struct menuinfo' has no member named 'name'
+[5-ERROR] ntpctl.c:806: error: 'struct menuinfo' has no member named 'desc'
+[5-ERROR] ntpctl.c:807: error: 'struct menuinfo' has no member named 'func'
+[5-ERROR] ntpctl.c:808: error: 'struct menuinfo' has no member named 'help'
+[5-ERROR] ntpctl.c:849: error: 'struct menuinfo' has no member named 'func'
+[5-ERROR] ntpctl.c:855: error: 'struct menuinfo' has no member named 'item'
 [5-ERROR] ntpctl.c:856: warning: implicit declaration of function 'new_item'
-[5-ERROR] ntpctl.c:856: warning: assignment makes pointer from integer without a cast
+[5-ERROR] ntpctl.c:856: error: 'struct menuinfo' has no member named 'name'
+[5-ERROR] ntpctl.c:856: error: 'struct menuinfo' has no member named 'desc'
+[5-ERROR] ntpctl.c:865: error: 'configmenu' undeclared (first use in this function)
 [5-ERROR] ntpctl.c:865: warning: implicit declaration of function 'new_menu'
-[5-ERROR] ntpctl.c:865: warning: assignment makes pointer from integer without a cast
 [5-ERROR] ntpctl.c:882: error: 'E_OK' undeclared (first use in this function)
 [5-ERROR] ntpctl.c: In function 'main':
+[5-ERROR] ntpctl.c:949: warning: implicit declaration of function 'handle_action'
+[5-ERROR] ntpctl.c:951: error: 'configmenu' undeclared (first use in this function)
 [5-ERROR] ntpctl.c:951: error: 'E_OK' undeclared (first use in this function)
 [5-ERROR] ntpctl.c:980: warning: implicit declaration of function 'menu_driver'
 [5-ERROR] ntpctl.c:980: error: 'REQ_DOWN_ITEM' undeclared (first use in this function)
@@ -87,47 +87,47 @@
 [5-ERROR] ntpctl.c:993: error: 'REQ_SCR_UPAGE' undeclared (first use in this function)
 [5-ERROR] ntpctl.c:994: error: 'REQ_FIRST_ITEM' undeclared (first use in this function)
 [5-ERROR] make[1]: *** [ntpctl.o] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.tpctl.1169124063.27053.3694631316/tpctl-4.17/ntpctl'
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.tpctl.1181955724.25371.961172356/tpctl-4.17/ntpctl'
 [5-ERROR] make: *** [all] Error 2
 [5-ERROR] --- BUILD ERROR ---
 
-[9-ERROR] ntpctl.c:541: error: dereferencing pointer to incomplete type
-[9-ERROR] ntpctl.c:544: error: dereferencing pointer to incomplete type
-[9-ERROR] ntpctl.c:547: error: dereferencing pointer to incomplete type
-[9-ERROR] ntpctl.c:549: error: dereferencing pointer to incomplete type
-[9-ERROR] ntpctl.c:579: error: dereferencing pointer to incomplete type
-[9-ERROR] ntpctl.c:580: error: dereferencing pointer to incomplete type
-[9-ERROR] ntpctl.c:581: error: dereferencing pointer to incomplete type
-[9-ERROR] ntpctl.c:582: error: dereferencing pointer to incomplete type
-[9-ERROR] ntpctl.c: In function 'pm_resume_hardware':
-[9-ERROR] ntpctl.c:599: error: dereferencing pointer to incomplete type
-[9-ERROR] ntpctl.c:600: error: dereferencing pointer to incomplete type
-[9-ERROR] ntpctl.c: In function 'pm_resume_lid':
-[9-ERROR] ntpctl.c:617: error: dereferencing pointer to incomplete type
-[9-ERROR] ntpctl.c:618: error: dereferencing pointer to incomplete type
-[9-ERROR] ntpctl.c: In function 'pm_resume_RTC':
-[9-ERROR] ntpctl.c:644: error: dereferencing pointer to incomplete type
-[9-ERROR] ntpctl.c:645: error: dereferencing pointer to incomplete type
+[9-ERROR] ntpctl.c:644: error: 'struct menuinfo' has no member named 'name'
+[9-ERROR] ntpctl.c:645: error: 'struct menuinfo' has no member named 'help'
 [9-ERROR] ntpctl.c: In function 'pm_resume_serial_RI':
-[9-ERROR] ntpctl.c:665: error: dereferencing pointer to incomplete type
-[9-ERROR] ntpctl.c:666: error: dereferencing pointer to incomplete type
+[9-ERROR] ntpctl.c:665: error: 'struct menuinfo' has no member named 'name'
+[9-ERROR] ntpctl.c:666: error: 'struct menuinfo' has no member named 'help'
 [9-ERROR] ntpctl.c: In function 'cleanup':
+[9-ERROR] ntpctl.c:710: error: 'configmenu' undeclared (first use in this function)
 [9-ERROR] ntpctl.c:710: warning: implicit declaration of function 'free_menu'
+[9-ERROR] ntpctl.c:712: error: 'struct menuinfo' has no member named 'item'
 [9-ERROR] ntpctl.c:714: warning: implicit declaration of function 'free_item'
+[9-ERROR] ntpctl.c:714: error: 'struct menuinfo' has no member named 'item'
 [9-ERROR] ntpctl.c: In function 'handle_sig_winch':
 [9-ERROR] ntpctl.c:747: warning: implicit declaration of function 'unpost_menu'
+[9-ERROR] ntpctl.c:747: error: 'configmenu' undeclared (first use in this function)
 [9-ERROR] ntpctl.c:761: warning: implicit declaration of function 'set_menu_win'
 [9-ERROR] ntpctl.c:762: warning: implicit declaration of function 'set_menu_spacing'
 [9-ERROR] ntpctl.c:764: warning: implicit declaration of function 'set_menu_format'
 [9-ERROR] ntpctl.c:766: warning: implicit declaration of function 'post_menu'
 [9-ERROR] ntpctl.c:766: error: 'E_OK' undeclared (first use in this function)
 [9-ERROR] ntpctl.c: In function 'startup':
+[9-ERROR] ntpctl.c:804: error: 'struct menuinfo' has no member named 'item'
+[9-ERROR] ntpctl.c:804: error: 'configmenuitems' undeclared (first use in this function)
+[9-ERROR] ntpctl.c:805: error: 'struct menuinfo' has no member named 'name'
+[9-ERROR] ntpctl.c:806: error: 'struct menuinfo' has no member named 'desc'
+[9-ERROR] ntpctl.c:807: error: 'struct menuinfo' has no member named 'func'
+[9-ERROR] ntpctl.c:808: error: 'struct menuinfo' has no member named 'help'
+[9-ERROR] ntpctl.c:849: error: 'struct menuinfo' has no member named 'func'
+[9-ERROR] ntpctl.c:855: error: 'struct menuinfo' has no member named 'item'
 [9-ERROR] ntpctl.c:856: warning: implicit declaration of function 'new_item'
-[9-ERROR] ntpctl.c:856: warning: assignment makes pointer from integer without a cast
+[9-ERROR] ntpctl.c:856: error: 'struct menuinfo' has no member named 'name'
+[9-ERROR] ntpctl.c:856: error: 'struct menuinfo' has no member named 'desc'
+[9-ERROR] ntpctl.c:865: error: 'configmenu' undeclared (first use in this function)
 [9-ERROR] ntpctl.c:865: warning: implicit declaration of function 'new_menu'
-[9-ERROR] ntpctl.c:865: warning: assignment makes pointer from integer without a cast
 [9-ERROR] ntpctl.c:882: error: 'E_OK' undeclared (first use in this function)
 [9-ERROR] ntpctl.c: In function 'main':
+[9-ERROR] ntpctl.c:949: warning: implicit declaration of function 'handle_action'
+[9-ERROR] ntpctl.c:951: error: 'configmenu' undeclared (first use in this function)
 [9-ERROR] ntpctl.c:951: error: 'E_OK' undeclared (first use in this function)
 [9-ERROR] ntpctl.c:980: warning: implicit declaration of function 'menu_driver'
 [9-ERROR] ntpctl.c:980: error: 'REQ_DOWN_ITEM' undeclared (first use in this function)
@@ -138,7 +138,7 @@
 [9-ERROR] ntpctl.c:993: error: 'REQ_SCR_UPAGE' undeclared (first use in this function)
 [9-ERROR] ntpctl.c:994: error: 'REQ_FIRST_ITEM' undeclared (first use in this function)
 [9-ERROR] make[1]: *** [ntpctl.o] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.tpctl.1169153650.17408.3951810427/tpctl-4.17/ntpctl'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.tpctl.1181977602.32527.3474453109/tpctl-4.17/ntpctl'
 [9-ERROR] make: *** [all] Error 2
 [9-ERROR] --- BUILD ERROR ---
 

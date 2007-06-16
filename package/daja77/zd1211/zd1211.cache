@@ -20,125 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168669383 Sat Jan 13 07:23:03 2007 (5) ERROR
-[TIMESTAMP] 1168877349 Mon Jan 15 17:09:09 2007 (9) ERROR
-[TIMESTAMP] 1168950612 Tue Jan 16 13:30:12 2007 (5) ERROR
-[TIMESTAMP] 1168980028 Tue Jan 16 21:40:28 2007 (9) ERROR
-[TIMESTAMP] 1169120913 Thu Jan 18 12:48:33 2007 (5) ERROR
-[TIMESTAMP] 1169150234 Thu Jan 18 20:57:14 2007 (9) ERROR
+[TIMESTAMP] 1181116260 Wed Jun  6 09:51:00 2007 (5) ERROR
+[TIMESTAMP] 1181592214 Mon Jun 11 22:03:34 2007 (9) ERROR
+[TIMESTAMP] 1181826120 Thu Jun 14 15:02:00 2007 (5) ERROR
+[TIMESTAMP] 1181908722 Fri Jun 15 13:58:42 2007 (9) ERROR
+[TIMESTAMP] 1181951470 Sat Jun 16 01:51:10 2007 (5) ERROR
+[TIMESTAMP] 1181973009 Sat Jun 16 07:50:09 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-zd1211.err 9-zd1211.err
 
-[BUILDTIME] 1739 (5) ERROR
-[BUILDTIME] 1768 (9) ERROR
-[BUILDTIME] 1775 (5) ERROR
-[BUILDTIME] 1757 (9) ERROR
-[BUILDTIME] 1771 (5) ERROR
-[BUILDTIME] 1747 (9) ERROR
+[BUILDTIME] 1421 (5) ERROR
+[BUILDTIME] 1414 (9) ERROR
+[BUILDTIME] 1428 (5) ERROR
+[BUILDTIME] 1352 (9) ERROR
+[BUILDTIME] 1394 (5) ERROR
+[BUILDTIME] 1404 (9) ERROR
 
 
+[5-ERROR] INSERT = '-O1 -pipe -march=i486'
+[5-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
+[5-ERROR] APPEND = '-s'
+[5-ERROR] FILTER = ''
+[5-ERROR] Old PATH: /ROCK/src.zd1211.1181951455.18437.4161569442/wrappers:/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper:/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/Croquet-SDK/bin:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clanlib07/bin:/opt/clanlib07/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql41/bin:/opt/mysql50/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt42/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[5-ERROR] New PATH: /ROCK/src.zd1211.1181951455.18437.4161569442/wrappers:/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/Croquet-SDK/bin:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clanlib07/bin:/opt/clanlib07/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql41/bin:/opt/mysql50/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt42/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[5-ERROR] Insert: -O1
+[5-ERROR] Insert: -pipe
+[5-ERROR] Insert: -march=i486
+[5-ERROR] Copy:   --version
+[5-ERROR] Append: -s
+[5-ERROR] New Command: gcc-42 -O1 -pipe -march=i486 --version -s
+[5-ERROR] gcc-42 (GCC) 4.2.0
+[5-ERROR] Copyright (C) 2007 Free Software Foundation, Inc.
+[5-ERROR] This is free software; see the source for copying conditions.  There is NO
+[5-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[5-ERROR] 
+[5-ERROR] [ writing debug log to /ROCK/src.zd1211.1181951455.18437.4161569442/cmd_wrapper.log ]
+[5-ERROR] Running main build function 'build_this_package' ...
+[5-ERROR] Extracting sf_zd1211_20050822_src.tar.bz2 (tar -v --use-compress-program=bzip2 -xf) ... 
+[5-ERROR] Fixing ownership and permissions ...
+[5-ERROR] Removing CVS and .svn directories ...
+[5-ERROR] Changeing into /ROCK/src.zd1211.1181951455.18437.4161569442/zd1211 ...
+[5-ERROR] Apply patch /ROCK/package/daja77/zd1211/zd1211-makefile.patch ...
+[5-ERROR] patching file Makefile
+[5-ERROR] Creating /usr/<..> if required ...
+[5-ERROR] cat /ROCK/loop/src.zd1211.1181951455.18437.4161569442/zd1211/src/zddevlist | awk -f /ROCK/loop/src.zd1211.1181951455.18437.4161569442/zd1211/src/zddevlist.awk > /ROCK/loop/src.zd1211.1181951455.18437.4161569442/zd1211/src/zddevlist.h
+[5-ERROR] mkdir -p /ROCK/loop/src.zd1211.1181951455.18437.4161569442/zd1211/src/modules-2.6.21.3-rock
+[5-ERROR] (cd /ROCK/loop/src.zd1211.1181951455.18437.4161569442/zd1211/src/modules-2.6.21.3-rock; \
+[5-ERROR] 	  ln -sf /ROCK/loop/src.zd1211.1181951455.18437.4161569442/zd1211/src/Makefile; \
+[5-ERROR] 	  for i in /ROCK/loop/src.zd1211.1181951455.18437.4161569442/zd1211/src/*.c /ROCK/loop/src.zd1211.1181951455.18437.4161569442/zd1211/src/*.h; \
+[5-ERROR] 	  do \
 [5-ERROR] 	  ln -sf ${i}; \
 [5-ERROR] 	  done; \
 [5-ERROR] 	)
-[5-ERROR] make V=0 -C /usr/src/linux SUBDIRS=/ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock modules
-[5-ERROR] make[1]: Entering directory `/usr/src/linux-2.6.17.7-rock'
+[5-ERROR] make V=0 -C /usr/src/linux SUBDIRS=/ROCK/loop/src.zd1211.1181951455.18437.4161569442/zd1211/src/modules-2.6.21.3-rock modules
+[5-ERROR] make[1]: Entering directory `/usr/src/linux-2.6.21.3-rock'
 [5-ERROR] 
-[5-ERROR]   WARNING: Symbol version dump /usr/src/linux-2.6.17.7-rock/Module.symvers
+[5-ERROR]   WARNING: Symbol version dump /usr/src/linux-2.6.21.3-rock/Module.symvers
 [5-ERROR]            is missing; modules will have no dependencies and modversions.
 [5-ERROR] 
-[5-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zd1205.o
-[5-ERROR] In file included from /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zd1205.c:37:
-[5-ERROR] /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdinlinef.h: In function 'Cfg_CtrlSetting':
-[5-ERROR] /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdinlinef.h:307: warning: 'LenInUs' may be used uninitialized in this function
-[5-ERROR] /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdinlinef.h:308: warning: 'NextLenInUs' may be used uninitialized in this function
-[5-ERROR] /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zd1205.c: In function 'zd1205_ioctl':
-[5-ERROR] /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zd1205.c:4438: warning: implicit declaration of function 'verify_area'
-[5-ERROR] /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zd1205.c: In function 'zdcb_setup_next_send':
-[5-ERROR] /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdinlinef.h:307: warning: 'LenInUs' may be used uninitialized in this function
-[5-ERROR] /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdinlinef.h:308: warning: 'NextLenInUs' may be used uninitialized in this function
-[5-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdasocsvc.o
-[5-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdauthreq.o
-[5-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdauthrsp.o
-[5-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdmmrx.o
-[5-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdshared.o
-[5-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdhci.o
-[5-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdglobal.o
-[5-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdencrypt.o
-[5-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdpmfilter.o
-[5-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdpsmon.o
-[5-ERROR] /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdpsmon.c: In function 'RxInfoIndicate':
-[5-ERROR] /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdpsmon.c:351: warning: 'asoc' may be used uninitialized in this function
-[5-ERROR] /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdpsmon.c:350: warning: 'oldPsm' may be used uninitialized in this function
-[5-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdsynch.o
-[5-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdbuf.o
-[5-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdhw.o
-[5-ERROR] /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdhw.c: In function 'HW_Set_AL2230_RF_Chips':
-[5-ERROR] /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdhw.c:630: warning: 'tmpvalue' is used uninitialized in this function
-[5-ERROR] /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdhw.c: In function 'HW_RadioOnOff':
-[5-ERROR] /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdhw.c:1372: warning: 'tmpvalue' is used uninitialized in this function
-[5-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zddebug.o
-[5-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdtkipseed.o
-[5-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdmic.o
-[5-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdusb.o
-[5-ERROR] /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdusb.c:273: error: unknown field 'owner' specified in initializer
-[5-ERROR] /ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdusb.c:273: warning: initialization from incompatible pointer type
-[5-ERROR] make[2]: *** [/ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock/zdusb.o] Error 1
-[5-ERROR] make[1]: *** [_module_/ROCK/loop/src.zd1211.1169120893.22452.1486741501/zd1211/src/modules-2.6.17.7-rock] Error 2
-[5-ERROR] make[1]: Leaving directory `/usr/src/linux-2.6.17.7-rock'
+[5-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1181951455.18437.4161569442/zd1211/src/modules-2.6.21.3-rock/zd1205.o
+[5-ERROR] /ROCK/loop/src.zd1211.1181951455.18437.4161569442/zd1211/src/modules-2.6.21.3-rock/zd1205.c:28:26: error: linux/config.h: No such file or directory
+[5-ERROR] /ROCK/loop/src.zd1211.1181951455.18437.4161569442/zd1211/src/modules-2.6.21.3-rock/zd1205.c: In function 'zd1205_ioctl':
+[5-ERROR] /ROCK/loop/src.zd1211.1181951455.18437.4161569442/zd1211/src/modules-2.6.21.3-rock/zd1205.c:4438: warning: implicit declaration of function 'verify_area'
+[5-ERROR] make[2]: *** [/ROCK/loop/src.zd1211.1181951455.18437.4161569442/zd1211/src/modules-2.6.21.3-rock/zd1205.o] Error 1
+[5-ERROR] make[1]: *** [_module_/ROCK/loop/src.zd1211.1181951455.18437.4161569442/zd1211/src/modules-2.6.21.3-rock] Error 2
+[5-ERROR] make[1]: Leaving directory `/usr/src/linux-2.6.21.3-rock'
 [5-ERROR] make: *** [all] Error 2
 [5-ERROR] --- BUILD ERROR ---
 
+[9-ERROR] INSERT = '-O1 -pipe -march=i486'
+[9-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
+[9-ERROR] APPEND = '-s'
+[9-ERROR] FILTER = ''
+[9-ERROR] Old PATH: /ROCK/src.zd1211.1181972994.21743.2938899655/wrappers:/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper:/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/Croquet-SDK/bin:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clanlib07/bin:/opt/clanlib07/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql41/bin:/opt/mysql50/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt42/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[9-ERROR] New PATH: /ROCK/src.zd1211.1181972994.21743.2938899655/wrappers:/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/Croquet-SDK/bin:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clanlib07/bin:/opt/clanlib07/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql41/bin:/opt/mysql50/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt42/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[9-ERROR] Insert: -O1
+[9-ERROR] Insert: -pipe
+[9-ERROR] Insert: -march=i486
+[9-ERROR] Copy:   --version
+[9-ERROR] Append: -s
+[9-ERROR] New Command: gcc-42 -O1 -pipe -march=i486 --version -s
+[9-ERROR] gcc-42 (GCC) 4.2.0
+[9-ERROR] Copyright (C) 2007 Free Software Foundation, Inc.
+[9-ERROR] This is free software; see the source for copying conditions.  There is NO
+[9-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[9-ERROR] 
+[9-ERROR] [ writing debug log to /ROCK/src.zd1211.1181972994.21743.2938899655/cmd_wrapper.log ]
+[9-ERROR] Running main build function 'build_this_package' ...
+[9-ERROR] Extracting sf_zd1211_20050822_src.tar.bz2 (tar -v --use-compress-program=bzip2 -xf) ... 
+[9-ERROR] Fixing ownership and permissions ...
+[9-ERROR] Removing CVS and .svn directories ...
+[9-ERROR] Changeing into /ROCK/src.zd1211.1181972994.21743.2938899655/zd1211 ...
+[9-ERROR] Apply patch /ROCK/package/daja77/zd1211/zd1211-makefile.patch ...
+[9-ERROR] patching file Makefile
+[9-ERROR] Creating /usr/<..> if required ...
+[9-ERROR] cat /ROCK/loop/src.zd1211.1181972994.21743.2938899655/zd1211/src/zddevlist | awk -f /ROCK/loop/src.zd1211.1181972994.21743.2938899655/zd1211/src/zddevlist.awk > /ROCK/loop/src.zd1211.1181972994.21743.2938899655/zd1211/src/zddevlist.h
+[9-ERROR] mkdir -p /ROCK/loop/src.zd1211.1181972994.21743.2938899655/zd1211/src/modules-2.6.21.3-rock
+[9-ERROR] (cd /ROCK/loop/src.zd1211.1181972994.21743.2938899655/zd1211/src/modules-2.6.21.3-rock; \
+[9-ERROR] 	  ln -sf /ROCK/loop/src.zd1211.1181972994.21743.2938899655/zd1211/src/Makefile; \
+[9-ERROR] 	  for i in /ROCK/loop/src.zd1211.1181972994.21743.2938899655/zd1211/src/*.c /ROCK/loop/src.zd1211.1181972994.21743.2938899655/zd1211/src/*.h; \
+[9-ERROR] 	  do \
 [9-ERROR] 	  ln -sf ${i}; \
 [9-ERROR] 	  done; \
 [9-ERROR] 	)
-[9-ERROR] make V=0 -C /usr/src/linux SUBDIRS=/ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock modules
-[9-ERROR] make[1]: Entering directory `/usr/src/linux-2.6.17.7-rock'
+[9-ERROR] make V=0 -C /usr/src/linux SUBDIRS=/ROCK/loop/src.zd1211.1181972994.21743.2938899655/zd1211/src/modules-2.6.21.3-rock modules
+[9-ERROR] make[1]: Entering directory `/usr/src/linux-2.6.21.3-rock'
 [9-ERROR] 
-[9-ERROR]   WARNING: Symbol version dump /usr/src/linux-2.6.17.7-rock/Module.symvers
+[9-ERROR]   WARNING: Symbol version dump /usr/src/linux-2.6.21.3-rock/Module.symvers
 [9-ERROR]            is missing; modules will have no dependencies and modversions.
 [9-ERROR] 
-[9-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zd1205.o
-[9-ERROR] In file included from /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zd1205.c:37:
-[9-ERROR] /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdinlinef.h: In function 'Cfg_CtrlSetting':
-[9-ERROR] /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdinlinef.h:307: warning: 'LenInUs' may be used uninitialized in this function
-[9-ERROR] /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdinlinef.h:308: warning: 'NextLenInUs' may be used uninitialized in this function
-[9-ERROR] /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zd1205.c: In function 'zd1205_ioctl':
-[9-ERROR] /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zd1205.c:4438: warning: implicit declaration of function 'verify_area'
-[9-ERROR] /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zd1205.c: In function 'zdcb_setup_next_send':
-[9-ERROR] /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdinlinef.h:307: warning: 'LenInUs' may be used uninitialized in this function
-[9-ERROR] /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdinlinef.h:308: warning: 'NextLenInUs' may be used uninitialized in this function
-[9-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdasocsvc.o
-[9-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdauthreq.o
-[9-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdauthrsp.o
-[9-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdmmrx.o
-[9-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdshared.o
-[9-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdhci.o
-[9-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdglobal.o
-[9-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdencrypt.o
-[9-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdpmfilter.o
-[9-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdpsmon.o
-[9-ERROR] /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdpsmon.c: In function 'RxInfoIndicate':
-[9-ERROR] /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdpsmon.c:351: warning: 'asoc' may be used uninitialized in this function
-[9-ERROR] /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdpsmon.c:350: warning: 'oldPsm' may be used uninitialized in this function
-[9-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdsynch.o
-[9-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdbuf.o
-[9-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdhw.o
-[9-ERROR] /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdhw.c: In function 'HW_Set_AL2230_RF_Chips':
-[9-ERROR] /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdhw.c:630: warning: 'tmpvalue' is used uninitialized in this function
-[9-ERROR] /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdhw.c: In function 'HW_RadioOnOff':
-[9-ERROR] /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdhw.c:1372: warning: 'tmpvalue' is used uninitialized in this function
-[9-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zddebug.o
-[9-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdtkipseed.o
-[9-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdmic.o
-[9-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdusb.o
-[9-ERROR] /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdusb.c:273: error: unknown field 'owner' specified in initializer
-[9-ERROR] /ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdusb.c:273: warning: initialization from incompatible pointer type
-[9-ERROR] make[2]: *** [/ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock/zdusb.o] Error 1
-[9-ERROR] make[1]: *** [_module_/ROCK/loop/src.zd1211.1169150214.13057.3084940077/zd1211/src/modules-2.6.17.7-rock] Error 2
-[9-ERROR] make[1]: Leaving directory `/usr/src/linux-2.6.17.7-rock'
+[9-ERROR]   CC [M]  /ROCK/loop/src.zd1211.1181972994.21743.2938899655/zd1211/src/modules-2.6.21.3-rock/zd1205.o
+[9-ERROR] /ROCK/loop/src.zd1211.1181972994.21743.2938899655/zd1211/src/modules-2.6.21.3-rock/zd1205.c:28:26: error: linux/config.h: No such file or directory
+[9-ERROR] /ROCK/loop/src.zd1211.1181972994.21743.2938899655/zd1211/src/modules-2.6.21.3-rock/zd1205.c: In function 'zd1205_ioctl':
+[9-ERROR] /ROCK/loop/src.zd1211.1181972994.21743.2938899655/zd1211/src/modules-2.6.21.3-rock/zd1205.c:4438: warning: implicit declaration of function 'verify_area'
+[9-ERROR] make[2]: *** [/ROCK/loop/src.zd1211.1181972994.21743.2938899655/zd1211/src/modules-2.6.21.3-rock/zd1205.o] Error 1
+[9-ERROR] make[1]: *** [_module_/ROCK/loop/src.zd1211.1181972994.21743.2938899655/zd1211/src/modules-2.6.21.3-rock] Error 2
+[9-ERROR] make[1]: Leaving directory `/usr/src/linux-2.6.21.3-rock'
 [9-ERROR] make: *** [all] Error 2
 [9-ERROR] --- BUILD ERROR ---
 

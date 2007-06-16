@@ -20,48 +20,46 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168557430 Fri Jan 12 00:17:10 2007 (5)
-[TIMESTAMP] 1168754116 Sun Jan 14 06:55:16 2007 (9) ERROR
-[TIMESTAMP] 1168962047 Tue Jan 16 16:40:47 2007 (9) ERROR
-[TIMESTAMP] 1169132349 Thu Jan 18 15:59:09 2007 (9) ERROR
+[TIMESTAMP] 1180945417 Mon Jun  4 10:23:37 2007 (5)
+[TIMESTAMP] 1181334287 Fri Jun  8 22:24:47 2007 (9) ERROR
+[TIMESTAMP] 1181855470 Thu Jun 14 23:11:10 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-gimp-print42.log 9-gimp-print42.err
 
-[BUILDTIME] 17841 (5)
-[BUILDTIME] 20400 (9) ERROR
-[BUILDTIME] 20651 (9) ERROR
-[BUILDTIME] 20656 (9) ERROR
-[SIZE] 36.77 MB, 4391 files
+[BUILDTIME] 20494 (5)
+[BUILDTIME] 23684 (9) ERROR
+[BUILDTIME] 22939 (9) ERROR
+[SIZE] 36.14 MB, 4391 files
 
 [DEP] 00-dirtree autoconf automake19 bash2 binutils bison bzip2 coreutils
-[DEP] cups cups:dev cvm diffutils findutils flex flex:dev gawk gcc40
-[DEP] gcc40:dev gettext glibc23 glibc23:dev gnutls gnutls:dev grep
+[DEP] cups cups:dev cvm diffutils findutils flex flex:dev gawk gcc42
+[DEP] gcc42:dev gettext glibc26 glibc26:dev gnutls gnutls:dev grep
 [DEP] gutenprint libgcrypt libgcrypt:dev libgpg-error libgpg-error:dev
 [DEP] libjpeg libjpeg:dev libpng libpng:dev libtiff libtiff:dev
-[DEP] linux-libc-headers:dev m4 make mktemp ncurses ncurses:dev net-tools
-[DEP] netpbm openssl perl5 readline readline:dev rrdtool sed sysfiles
-[DEP] tar texinfo twoftpd ucspi-unix zlib zlib:dev
+[DEP] linux26-headers:dev ltrace m4 make mktemp ncurses ncurses:dev
+[DEP] net-tools openssl perl5 readline readline:dev sed sysfiles tar
+[DEP] texinfo twoftpd ucspi-unix xmame zlib zlib:dev
 
 [PROVIDES] cups-calibrate escputil gimpprint-config libgimpprint.a
 [PROVIDES] libgimpprint.so
 
 [9-ERROR] 	    if test -f $file ; then \
-[9-ERROR] 	      /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 $file /usr/share/gimp-print/doc/manual-html ; \
+[9-ERROR] 	      /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 $file /usr/share/gimp-print/doc/manual-html ; \
 [9-ERROR] 	    fi ; \
 [9-ERROR] 	  done ; \
 [9-ERROR] 	fi
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.gimp-print42.1169132086.5830.2458881330/gimp-print-4.2.7/doc'
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.gimp-print42.1169132086.5830.2458881330/gimp-print-4.2.7/doc'
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.gimp-print42.1169132086.5830.2458881330/gimp-print-4.2.7/doc'
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.gimp-print42.1169132086.5830.2458881330/gimp-print-4.2.7'
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.gimp-print42.1169132086.5830.2458881330/gimp-print-4.2.7'
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.gimp-print42.1181855153.3573.3392342756/gimp-print-4.2.7/doc'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.gimp-print42.1181855153.3573.3392342756/gimp-print-4.2.7/doc'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.gimp-print42.1181855153.3573.3392342756/gimp-print-4.2.7/doc'
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.gimp-print42.1181855153.3573.3392342756/gimp-print-4.2.7'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.gimp-print42.1181855153.3573.3392342756/gimp-print-4.2.7'
 [9-ERROR] make[2]: Nothing to be done for `install-exec-am'.
 [9-ERROR] make[2]: Nothing to be done for `install-data-am'.
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.gimp-print42.1169132086.5830.2458881330/gimp-print-4.2.7'
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.gimp-print42.1169132086.5830.2458881330/gimp-print-4.2.7'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.gimp-print42.1181855153.3573.3392342756/gimp-print-4.2.7'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.gimp-print42.1181855153.3573.3392342756/gimp-print-4.2.7'
 [9-ERROR] Trying to copy the default documentation ...
 [9-ERROR] Creating file list and doing final adaptions ... 
 [9-ERROR] Processing /lib corrections ...

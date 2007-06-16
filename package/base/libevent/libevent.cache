@@ -20,21 +20,21 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168638804 Fri Jan 12 22:53:24 2007 (5)
-[TIMESTAMP] 1168844545 Mon Jan 15 08:02:25 2007 (9)
+[TIMESTAMP] 1181070665 Tue Jun  5 21:11:05 2007 (5)
+[TIMESTAMP] 1181539691 Mon Jun 11 07:28:11 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-libevent.log 9-libevent.log
 
-[BUILDTIME] 3472 (5)
-[BUILDTIME] 3734 (9)
-[SIZE] 0.04 MB, 9 files
+[BUILDTIME] 5367 (5)
+[BUILDTIME] 5576 (9)
+[SIZE] 0.13 MB, 10 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
-[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev
-[DEP] make mktemp net-tools netpbm rrdtool sed sysfiles tar util-linux
+[DEP] gawk gcc42 gcc42:dev glibc26 glibc26:dev grep linux26-headers:dev
+[DEP] ltrace make mktemp net-tools sed sysfiles tar util-linux xmame
 
-[PROVIDES] libevent.a libevent.so
+[PROVIDES] event_rpcgen.py libevent.a libevent.so
 

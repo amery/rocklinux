@@ -20,27 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168707585 Sat Jan 13 17:59:45 2007 (5)
-[TIMESTAMP] 1168917478 Tue Jan 16 04:17:58 2007 (9)
+[TIMESTAMP] 1181243720 Thu Jun  7 21:15:20 2007 (5)
+[TIMESTAMP] 1181793631 Thu Jun 14 06:00:31 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-xmlsec.log 9-xmlsec.log
 
-[BUILDTIME] 11915 (5)
-[BUILDTIME] 11953 (9)
-[SIZE] 0.76 MB, 23 files
+[BUILDTIME] 12194 (5)
+[BUILDTIME] 11669 (9)
+[SIZE] 0.60 MB, 20 files
 
 [DEP] 00-dirtree bash2 binutils binutils:dev bzip2 coreutils cvm diffutils
-[DEP] findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev gnome-libs14
-[DEP] gnome14-dirtree gnutls gnutls:dev grep libgcrypt libgcrypt:dev
+[DEP] findutils gawk gcc42 gcc42:dev glibc26 glibc26:dev gnome-libs14
+[DEP] gnome14-dirtree gnutls gnutls:dev grep libelf libgcrypt libgcrypt:dev
 [DEP] libgpg-error libgpg-error:dev libxml2 libxml2:dev libxslt libxslt:dev
-[DEP] linux-libc-headers:dev make mktemp mozilla mozilla:dev net-tools
-[DEP] netpbm openssl openssl:dev pkgconfig rrdtool sed sysfiles tar
-[DEP] twoftpd ucspi-unix util-linux zlib
+[DEP] linux26-headers:dev ltrace make mktemp net-tools openssl openssl:dev
+[DEP] pkgconfig sed sysfiles tar twoftpd ucspi-unix util-linux xmame zlib
 
-[PROVIDES] libxmlsec1-gnutls.a libxmlsec1-gnutls.so libxmlsec1-nss.a
-[PROVIDES] libxmlsec1-nss.so libxmlsec1-openssl.a libxmlsec1-openssl.so
-[PROVIDES] libxmlsec1.a libxmlsec1.so xmlsec1 xmlsec1-config
+[PROVIDES] libxmlsec1-gnutls.a libxmlsec1-gnutls.so libxmlsec1-openssl.a
+[PROVIDES] libxmlsec1-openssl.so libxmlsec1.a libxmlsec1.so xmlsec1
+[PROVIDES] xmlsec1-config
 

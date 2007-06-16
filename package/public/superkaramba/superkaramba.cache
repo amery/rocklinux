@@ -20,144 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168616835 Fri Jan 12 16:47:15 2007 (5) ERROR
-[TIMESTAMP] 1168819835 Mon Jan 15 01:10:35 2007 (9) ERROR
-[TIMESTAMP] 1168946554 Tue Jan 16 12:22:34 2007 (5) ERROR
-[TIMESTAMP] 1168973144 Tue Jan 16 19:45:44 2007 (9) ERROR
-[TIMESTAMP] 1169089965 Thu Jan 18 04:12:45 2007 (5) ERROR
-[TIMESTAMP] 1169143426 Thu Jan 18 19:03:46 2007 (9) ERROR
+[TIMESTAMP] 1181031258 Tue Jun  5 10:14:18 2007 (5) ERROR
+[TIMESTAMP] 1181494299 Sun Jun 10 18:51:39 2007 (9) ERROR
+[TIMESTAMP] 1181818498 Thu Jun 14 12:54:58 2007 (5) ERROR
+[TIMESTAMP] 1181872770 Fri Jun 15 03:59:30 2007 (9) ERROR
+[TIMESTAMP] 1181946291 Sat Jun 16 00:24:51 2007 (5) ERROR
+[TIMESTAMP] 1181967141 Sat Jun 16 06:12:21 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-superkaramba.err 9-superkaramba.err
 
-[BUILDTIME] 15869 (5) ERROR
-[BUILDTIME] 16393 (9) ERROR
-[BUILDTIME] 16450 (5) ERROR
-[BUILDTIME] 16443 (9) ERROR
-[BUILDTIME] 16469 (5) ERROR
-[BUILDTIME] 16431 (9) ERROR
-[SIZE] 0.65 MB, 9 files
+[BUILDTIME] 7709 (5) ERROR
+[BUILDTIME] 7921 (9) ERROR
+[BUILDTIME] 7740 (5) ERROR
+[BUILDTIME] 7717 (9) ERROR
+[BUILDTIME] 7753 (5) ERROR
+[BUILDTIME] 7598 (9) ERROR
 
-[DEP] 00-dirtree acl acl:dev applewmproto applewmproto:dev attr attr:dev
-[DEP] autoconf automake17 bash2 binutils bzip2 coreutils cvm diffutils
-[DEP] expat expat:dev fam fam:dev file findutils fontconfig fontconfig:dev
-[DEP] freetype freetype:dev gawk gcc40 gcc40:dev gettext glib12 glib12:dev
-[DEP] glibc23 glibc23:dev gnome14-dirtree grep gtk+12 gtk+12:dev imake
-[DEP] kdebase kdelibs kdelibs:dev kdeutils libart_lgpl23 libart_lgpl23:dev
-[DEP] libice libice:dev libidn libidn:dev libjpeg libpng libpng:dev
-[DEP] libsm libsm:dev libx11 libx11:dev libxau libxau:dev libxcursor
-[DEP] libxcursor:dev libxdmcp libxdmcp:dev libxext libxext:dev libxfixes
-[DEP] libxfixes:dev libxft libxft:dev libxi libxi:dev libxinerama
-[DEP] libxinerama:dev libxml2 libxmu libxmu:dev libxpm libxpm:dev
-[DEP] libxrandr libxrandr:dev libxrender libxrender:dev libxt libxt:dev
-[DEP] linux-libc-headers:dev m4 make mesalib mktemp nas net-tools patch
-[DEP] perl5 python python:dev qt33 qt33:dev rrdtool sed sysfiles tar
-[DEP] tcl tk util-linux xineramaproto:dev xmms xmms:dev xorg-cf-files
-[DEP] xproto:dev zlib zlib:dev
 
-[PROVIDES] superkaramba
-
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.superkaramba.1169089792.8807.1258219122/superkaramba-0.35/doc'
-[5-ERROR] Making install in po
-[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.superkaramba.1169089792.8807.1258219122/superkaramba-0.35/po'
-[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.superkaramba.1169089792.8807.1258219122/superkaramba-0.35/po'
-[5-ERROR] make[2]: Nothing to be done for `install-exec-am'.
-[5-ERROR] make[2]: Nothing to be done for `install-data-am'.
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.superkaramba.1169089792.8807.1258219122/superkaramba-0.35/po'
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.superkaramba.1169089792.8807.1258219122/superkaramba-0.35/po'
-[5-ERROR] Making install in src
-[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.superkaramba.1169089792.8807.1258219122/superkaramba-0.35/src'
-[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.superkaramba.1169089792.8807.1258219122/superkaramba-0.35/src'
-[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.superkaramba.1169089792.8807.1258219122/superkaramba-0.35/src'
-[5-ERROR] /bin/sh ../admin/mkinstalldirs /usr/bin
-[5-ERROR]   /bin/sh ../libtool --silent --mode=install /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p  superkaramba /usr/bin/superkaramba
-[5-ERROR] /bin/sh ../admin/mkinstalldirs /usr/share/applnk/Utilities
-[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 karamba.desktop /usr/share/applnk/Utilities/karamba.desktop
-[5-ERROR] /bin/sh ../admin/mkinstalldirs /usr/share/apps/superkaramba
-[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 karambaui.rc /usr/share/apps/superkaramba/karambaui.rc
-[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.superkaramba.1169089792.8807.1258219122/superkaramba-0.35/src'
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.superkaramba.1169089792.8807.1258219122/superkaramba-0.35/src'
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.superkaramba.1169089792.8807.1258219122/superkaramba-0.35/src'
-[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.superkaramba.1169089792.8807.1258219122/superkaramba-0.35'
-[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.superkaramba.1169089792.8807.1258219122/superkaramba-0.35'
-[5-ERROR] make[2]: Nothing to be done for `install-exec-am'.
-[5-ERROR] make[2]: Nothing to be done for `install-data-am'.
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.superkaramba.1169089792.8807.1258219122/superkaramba-0.35'
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.superkaramba.1169089792.8807.1258219122/superkaramba-0.35'
-[5-ERROR] Trying to copy the default documentation ...
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing /lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Found 32 files for this package.
-[5-ERROR] Applying package split: 40 superkaramba:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
-[5-ERROR] Applying package split: 42 superkaramba:dev /pkgconfig/
-[5-ERROR] Applying package split: 45 superkaramba /.*\.la$
-[5-ERROR] Applying package split: 60 superkaramba:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <superkaramba> Creating flist file ...
-[5-ERROR] <superkaramba> Creating package dependencies file ...
-[5-ERROR] <superkaramba> Creating package description ...
-[5-ERROR] <superkaramba> Creating md5sum and cksum files ...
-[5-ERROR] <superkaramba:doc> Creating flist file ...
-[5-ERROR] <superkaramba:doc> Creating package dependencies file ...
-[5-ERROR] <superkaramba:doc> Creating package description ...
-[5-ERROR] <superkaramba:doc> Creating md5sum and cksum files ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Found shared files with other packages:
-[5-ERROR] usr/bin/superkaramba: kdeutils superkaramba
-[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] cd .. && perl admin/am_edit po/Makefile.in
+[5-ERROR] cd .. && /bin/sh ./config.status po/Makefile 
+[5-ERROR] config.status: creating po/Makefile
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.superkaramba.1181946182.10474.4092432155/superkaramba-0.35/po'
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.superkaramba.1181946182.10474.4092432155/superkaramba-0.35/po'
+[5-ERROR] make[2]: Nothing to be done for `all'.
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.superkaramba.1181946182.10474.4092432155/superkaramba-0.35/po'
+[5-ERROR] Making all in src
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.superkaramba.1181946182.10474.4092432155/superkaramba-0.35/src'
+[5-ERROR] cd .. && \
+[5-ERROR] 	  /bin/sh /ROCK/src.superkaramba.1181946182.10474.4092432155/superkaramba-0.35/admin/missing --run automake-1.7 --gnu  src/Makefile
+[5-ERROR] cd .. && perl admin/am_edit src/Makefile.in
+[5-ERROR] cd .. && /bin/sh ./config.status src/Makefile depfiles
+[5-ERROR] config.status: creating src/Makefile
+[5-ERROR] config.status: executing depfiles commands
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.superkaramba.1181946182.10474.4092432155/superkaramba-0.35/src'
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.superkaramba.1181946182.10474.4092432155/superkaramba-0.35/src'
+[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.superkaramba.1181946182.10474.4092432155/superkaramba-0.35/src'
+[5-ERROR] /usr/bin/dcopidl ./dcopinterface.h > dcopinterface.kidl || ( rm -f dcopinterface.kidl ; /bin/false )
+[5-ERROR] /usr/bin/dcopidl2cpp --c++-suffix cpp --no-signals --no-skel dcopinterface.kidl
+[5-ERROR] if g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/qt33/include -I/usr/X11R7/include  -I/usr/include/xmms -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -pedantic -W -Wpointer-arith -Wmissing-prototypes -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -DNDEBUG -DNO_DEBUG -O2 -fno-exceptions -fno-check-new  -MT main.o -MD -MP -MF ".deps/main.Tpo" \
+[5-ERROR] 	  -c -o main.o `test -f 'main.cpp' || echo './'`main.cpp; \
+[5-ERROR] 	then mv -f ".deps/main.Tpo" ".deps/main.Po"; \
+[5-ERROR] 	else rm -f ".deps/main.Tpo"; exit 1; \
+[5-ERROR] 	fi
+[5-ERROR] cc1plus: warning: command line option "-Wmissing-prototypes" is valid for Ada/C/ObjC but not for C++
+[5-ERROR] In file included from main.cpp:5:
+[5-ERROR] ./karambaapp.h:14:20: error: Python.h: No such file or directory
+[5-ERROR] In file included from main.cpp:19:
+[5-ERROR] karamba.h:8:20: error: Python.h: No such file or directory
+[5-ERROR] In file included from main.cpp:22:
+[5-ERROR] karamba_python.h:44: error: ISO C++ forbids declaration of 'PyObject' with no type
+[5-ERROR] karamba_python.h:44: error: expected ';' before '*' token
+[5-ERROR] karamba_python.h:45: error: ISO C++ forbids declaration of 'PyObject' with no type
+[5-ERROR] karamba_python.h:45: error: expected ';' before '*' token
+[5-ERROR] karamba_python.h:46: error: ISO C++ forbids declaration of 'PyThreadState' with no type
+[5-ERROR] karamba_python.h:46: error: expected ';' before '*' token
+[5-ERROR] karamba_python.h:48: error: 'PyThreadState' has not been declared
+[5-ERROR] karamba_python.h:49: error: ISO C++ forbids declaration of 'PyObject' with no type
+[5-ERROR] karamba_python.h:49: error: expected ';' before '*' token
+[5-ERROR] karamba_python.h:50: error: 'PyThreadState' has not been declared
+[5-ERROR] karamba_python.h:51: error: 'PyObject' has not been declared
+[5-ERROR] make[3]: *** [main.o] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.superkaramba.1181946182.10474.4092432155/superkaramba-0.35/src'
+[5-ERROR] make[2]: *** [all-recursive] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.superkaramba.1181946182.10474.4092432155/superkaramba-0.35/src'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.superkaramba.1181946182.10474.4092432155/superkaramba-0.35'
+[5-ERROR] make: *** [all] Error 2
 [5-ERROR] --- BUILD ERROR ---
 
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.superkaramba.1169143256.14967.1299579301/superkaramba-0.35/doc'
-[9-ERROR] Making install in po
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.superkaramba.1169143256.14967.1299579301/superkaramba-0.35/po'
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.superkaramba.1169143256.14967.1299579301/superkaramba-0.35/po'
-[9-ERROR] make[2]: Nothing to be done for `install-exec-am'.
-[9-ERROR] make[2]: Nothing to be done for `install-data-am'.
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.superkaramba.1169143256.14967.1299579301/superkaramba-0.35/po'
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.superkaramba.1169143256.14967.1299579301/superkaramba-0.35/po'
-[9-ERROR] Making install in src
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.superkaramba.1169143256.14967.1299579301/superkaramba-0.35/src'
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.superkaramba.1169143256.14967.1299579301/superkaramba-0.35/src'
-[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.superkaramba.1169143256.14967.1299579301/superkaramba-0.35/src'
-[9-ERROR] /bin/sh ../admin/mkinstalldirs /usr/bin
-[9-ERROR]   /bin/sh ../libtool --silent --mode=install /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p  superkaramba /usr/bin/superkaramba
-[9-ERROR] /bin/sh ../admin/mkinstalldirs /usr/share/applnk/Utilities
-[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 karamba.desktop /usr/share/applnk/Utilities/karamba.desktop
-[9-ERROR] /bin/sh ../admin/mkinstalldirs /usr/share/apps/superkaramba
-[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 karambaui.rc /usr/share/apps/superkaramba/karambaui.rc
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.superkaramba.1169143256.14967.1299579301/superkaramba-0.35/src'
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.superkaramba.1169143256.14967.1299579301/superkaramba-0.35/src'
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.superkaramba.1169143256.14967.1299579301/superkaramba-0.35/src'
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.superkaramba.1169143256.14967.1299579301/superkaramba-0.35'
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.superkaramba.1169143256.14967.1299579301/superkaramba-0.35'
-[9-ERROR] make[2]: Nothing to be done for `install-exec-am'.
-[9-ERROR] make[2]: Nothing to be done for `install-data-am'.
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.superkaramba.1169143256.14967.1299579301/superkaramba-0.35'
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.superkaramba.1169143256.14967.1299579301/superkaramba-0.35'
-[9-ERROR] Trying to copy the default documentation ...
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing /lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 32 files for this package.
-[9-ERROR] Applying package split: 40 superkaramba:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
-[9-ERROR] Applying package split: 42 superkaramba:dev /pkgconfig/
-[9-ERROR] Applying package split: 45 superkaramba /.*\.la$
-[9-ERROR] Applying package split: 60 superkaramba:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <superkaramba> Creating flist file ...
-[9-ERROR] <superkaramba> Creating package dependencies file ...
-[9-ERROR] <superkaramba> Creating package description ...
-[9-ERROR] <superkaramba> Creating md5sum and cksum files ...
-[9-ERROR] <superkaramba:doc> Creating flist file ...
-[9-ERROR] <superkaramba:doc> Creating package dependencies file ...
-[9-ERROR] <superkaramba:doc> Creating package description ...
-[9-ERROR] <superkaramba:doc> Creating md5sum and cksum files ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Found shared files with other packages:
-[9-ERROR] usr/bin/superkaramba: kdeutils superkaramba
-[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] cd .. && perl admin/am_edit po/Makefile.in
+[9-ERROR] cd .. && /bin/sh ./config.status po/Makefile 
+[9-ERROR] config.status: creating po/Makefile
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.superkaramba.1181967036.2555.3307008318/superkaramba-0.35/po'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.superkaramba.1181967036.2555.3307008318/superkaramba-0.35/po'
+[9-ERROR] make[2]: Nothing to be done for `all'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.superkaramba.1181967036.2555.3307008318/superkaramba-0.35/po'
+[9-ERROR] Making all in src
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.superkaramba.1181967036.2555.3307008318/superkaramba-0.35/src'
+[9-ERROR] cd .. && \
+[9-ERROR] 	  /bin/sh /ROCK/src.superkaramba.1181967036.2555.3307008318/superkaramba-0.35/admin/missing --run automake-1.7 --gnu  src/Makefile
+[9-ERROR] cd .. && perl admin/am_edit src/Makefile.in
+[9-ERROR] cd .. && /bin/sh ./config.status src/Makefile depfiles
+[9-ERROR] config.status: creating src/Makefile
+[9-ERROR] config.status: executing depfiles commands
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.superkaramba.1181967036.2555.3307008318/superkaramba-0.35/src'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.superkaramba.1181967036.2555.3307008318/superkaramba-0.35/src'
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.superkaramba.1181967036.2555.3307008318/superkaramba-0.35/src'
+[9-ERROR] /usr/bin/dcopidl ./dcopinterface.h > dcopinterface.kidl || ( rm -f dcopinterface.kidl ; /bin/false )
+[9-ERROR] /usr/bin/dcopidl2cpp --c++-suffix cpp --no-signals --no-skel dcopinterface.kidl
+[9-ERROR] if g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I/opt/qt33/include -I/usr/X11R7/include  -I/usr/include/xmms -I/opt/gnome/include/gtk-1.2 -I/opt/gnome/include/glib-1.2 -I/opt/gnome/lib/glib/include -I/usr/X11R7/include   -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wnon-virtual-dtor -Wno-long-long -Wundef -pedantic -W -Wpointer-arith -Wmissing-prototypes -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -DNDEBUG -DNO_DEBUG -O2 -fno-exceptions -fno-check-new  -MT main.o -MD -MP -MF ".deps/main.Tpo" \
+[9-ERROR] 	  -c -o main.o `test -f 'main.cpp' || echo './'`main.cpp; \
+[9-ERROR] 	then mv -f ".deps/main.Tpo" ".deps/main.Po"; \
+[9-ERROR] 	else rm -f ".deps/main.Tpo"; exit 1; \
+[9-ERROR] 	fi
+[9-ERROR] cc1plus: warning: command line option "-Wmissing-prototypes" is valid for Ada/C/ObjC but not for C++
+[9-ERROR] In file included from main.cpp:5:
+[9-ERROR] ./karambaapp.h:14:20: error: Python.h: No such file or directory
+[9-ERROR] In file included from main.cpp:19:
+[9-ERROR] karamba.h:8:20: error: Python.h: No such file or directory
+[9-ERROR] In file included from main.cpp:22:
+[9-ERROR] karamba_python.h:44: error: ISO C++ forbids declaration of 'PyObject' with no type
+[9-ERROR] karamba_python.h:44: error: expected ';' before '*' token
+[9-ERROR] karamba_python.h:45: error: ISO C++ forbids declaration of 'PyObject' with no type
+[9-ERROR] karamba_python.h:45: error: expected ';' before '*' token
+[9-ERROR] karamba_python.h:46: error: ISO C++ forbids declaration of 'PyThreadState' with no type
+[9-ERROR] karamba_python.h:46: error: expected ';' before '*' token
+[9-ERROR] karamba_python.h:48: error: 'PyThreadState' has not been declared
+[9-ERROR] karamba_python.h:49: error: ISO C++ forbids declaration of 'PyObject' with no type
+[9-ERROR] karamba_python.h:49: error: expected ';' before '*' token
+[9-ERROR] karamba_python.h:50: error: 'PyThreadState' has not been declared
+[9-ERROR] karamba_python.h:51: error: 'PyObject' has not been declared
+[9-ERROR] make[3]: *** [main.o] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.superkaramba.1181967036.2555.3307008318/superkaramba-0.35/src'
+[9-ERROR] make[2]: *** [all-recursive] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.superkaramba.1181967036.2555.3307008318/superkaramba-0.35/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.superkaramba.1181967036.2555.3307008318/superkaramba-0.35'
+[9-ERROR] make: *** [all] Error 2
 [9-ERROR] --- BUILD ERROR ---
 

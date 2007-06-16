@@ -20,37 +20,37 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168625683 Fri Jan 12 19:14:43 2007 (5) ERROR
-[TIMESTAMP] 1168829641 Mon Jan 15 03:54:01 2007 (9) ERROR
-[TIMESTAMP] 1168947665 Tue Jan 16 12:41:05 2007 (5) ERROR
-[TIMESTAMP] 1168974654 Tue Jan 16 20:10:54 2007 (9) ERROR
-[TIMESTAMP] 1169091079 Thu Jan 18 04:31:19 2007 (5) ERROR
-[TIMESTAMP] 1169144944 Thu Jan 18 19:29:04 2007 (9) ERROR
+[TIMESTAMP] 1181045443 Tue Jun  5 14:10:43 2007 (5) ERROR
+[TIMESTAMP] 1181512989 Mon Jun 11 00:03:09 2007 (9) ERROR
+[TIMESTAMP] 1181821438 Thu Jun 14 13:43:58 2007 (5) ERROR
+[TIMESTAMP] 1181875931 Fri Jun 15 04:52:11 2007 (9) ERROR
+[TIMESTAMP] 1181948532 Sat Jun 16 01:02:12 2007 (5) ERROR
+[TIMESTAMP] 1181969146 Sat Jun 16 06:45:46 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-nvrec.err 9-nvrec.err
 
-[BUILDTIME] 2005 (5) ERROR
-[BUILDTIME] 2042 (9) ERROR
-[BUILDTIME] 2038 (5) ERROR
-[BUILDTIME] 2025 (9) ERROR
-[BUILDTIME] 2039 (5) ERROR
-[BUILDTIME] 2031 (9) ERROR
+[BUILDTIME] 2691 (5) ERROR
+[BUILDTIME] 2771 (9) ERROR
+[BUILDTIME] 2781 (5) ERROR
+[BUILDTIME] 2747 (9) ERROR
+[BUILDTIME] 2695 (5) ERROR
+[BUILDTIME] 2718 (9) ERROR
 
 
 [5-ERROR] 	then mv -f ".deps/RTjpegN.Tpo" ".deps/RTjpegN.Po"; else rm -f ".deps/RTjpegN.Tpo"; exit 1; fi
 [5-ERROR] RTjpegN.c:34:2: warning: #warning Compiling MMX only code!
 [5-ERROR] RTjpegN.c: In function 'RTjpeg_b2s':
-[5-ERROR] RTjpegN.c:165: error: invalid lvalue in assignment
-[5-ERROR] RTjpegN.c:174: error: invalid lvalue in assignment
-[5-ERROR] RTjpegN.c:203: error: invalid lvalue in assignment
-[5-ERROR] RTjpegN.c:215: error: invalid lvalue in assignment
-[5-ERROR] RTjpegN.c:232: error: invalid lvalue in assignment
-[5-ERROR] RTjpegN.c:253: error: invalid lvalue in assignment
-[5-ERROR] RTjpegN.c:263: error: invalid lvalue in assignment
-[5-ERROR] RTjpegN.c:270: error: invalid lvalue in assignment
+[5-ERROR] RTjpegN.c:165: error: lvalue required as left operand of assignment
+[5-ERROR] RTjpegN.c:174: error: lvalue required as left operand of assignment
+[5-ERROR] RTjpegN.c:203: error: lvalue required as left operand of assignment
+[5-ERROR] RTjpegN.c:215: error: lvalue required as left operand of assignment
+[5-ERROR] RTjpegN.c:232: error: lvalue required as left operand of assignment
+[5-ERROR] RTjpegN.c:253: error: lvalue required as left operand of assignment
+[5-ERROR] RTjpegN.c:263: error: lvalue required as left operand of assignment
+[5-ERROR] RTjpegN.c:270: error: lvalue required as left operand of assignment
 [5-ERROR] RTjpegN.c: In function 'RTjpeg_compressYUV420':
 [5-ERROR] RTjpegN.c:2864: warning: pointer targets in initialization differ in signedness
 [5-ERROR] RTjpegN.c:2865: warning: pointer targets in initialization differ in signedness
@@ -85,23 +85,23 @@
 [5-ERROR] RTjpegN.c:3352: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
 [5-ERROR] RTjpegN.c:3361: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
 [5-ERROR] make[2]: *** [RTjpegN.o] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.nvrec.1169091057.20398.905555977/nvrec-20030316/nuv'
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.nvrec.1181948502.18072.883075602/nvrec-20030316/nuv'
 [5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.nvrec.1169091057.20398.905555977/nvrec-20030316'
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.nvrec.1181948502.18072.883075602/nvrec-20030316'
 [5-ERROR] make: *** [all] Error 2
 [5-ERROR] --- BUILD ERROR ---
 
 [9-ERROR] 	then mv -f ".deps/RTjpegN.Tpo" ".deps/RTjpegN.Po"; else rm -f ".deps/RTjpegN.Tpo"; exit 1; fi
 [9-ERROR] RTjpegN.c:34:2: warning: #warning Compiling MMX only code!
 [9-ERROR] RTjpegN.c: In function 'RTjpeg_b2s':
-[9-ERROR] RTjpegN.c:165: error: invalid lvalue in assignment
-[9-ERROR] RTjpegN.c:174: error: invalid lvalue in assignment
-[9-ERROR] RTjpegN.c:203: error: invalid lvalue in assignment
-[9-ERROR] RTjpegN.c:215: error: invalid lvalue in assignment
-[9-ERROR] RTjpegN.c:232: error: invalid lvalue in assignment
-[9-ERROR] RTjpegN.c:253: error: invalid lvalue in assignment
-[9-ERROR] RTjpegN.c:263: error: invalid lvalue in assignment
-[9-ERROR] RTjpegN.c:270: error: invalid lvalue in assignment
+[9-ERROR] RTjpegN.c:165: error: lvalue required as left operand of assignment
+[9-ERROR] RTjpegN.c:174: error: lvalue required as left operand of assignment
+[9-ERROR] RTjpegN.c:203: error: lvalue required as left operand of assignment
+[9-ERROR] RTjpegN.c:215: error: lvalue required as left operand of assignment
+[9-ERROR] RTjpegN.c:232: error: lvalue required as left operand of assignment
+[9-ERROR] RTjpegN.c:253: error: lvalue required as left operand of assignment
+[9-ERROR] RTjpegN.c:263: error: lvalue required as left operand of assignment
+[9-ERROR] RTjpegN.c:270: error: lvalue required as left operand of assignment
 [9-ERROR] RTjpegN.c: In function 'RTjpeg_compressYUV420':
 [9-ERROR] RTjpegN.c:2864: warning: pointer targets in initialization differ in signedness
 [9-ERROR] RTjpegN.c:2865: warning: pointer targets in initialization differ in signedness
@@ -136,9 +136,9 @@
 [9-ERROR] RTjpegN.c:3352: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
 [9-ERROR] RTjpegN.c:3361: warning: pointer targets in passing argument 1 of 'RTjpeg_dctY' differ in signedness
 [9-ERROR] make[2]: *** [RTjpegN.o] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.nvrec.1169144921.12668.2090540225/nvrec-20030316/nuv'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.nvrec.1181969117.10030.833437043/nvrec-20030316/nuv'
 [9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.nvrec.1169144921.12668.2090540225/nvrec-20030316'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.nvrec.1181969117.10030.833437043/nvrec-20030316'
 [9-ERROR] make: *** [all] Error 2
 [9-ERROR] --- BUILD ERROR ---
 

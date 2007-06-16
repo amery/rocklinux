@@ -20,30 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168663283 Sat Jan 13 05:41:23 2007 (5) ERROR
-[TIMESTAMP] 1168871028 Mon Jan 15 15:23:48 2007 (9) ERROR
-[TIMESTAMP] 1168950444 Tue Jan 16 13:27:24 2007 (5) ERROR
-[TIMESTAMP] 1168979858 Tue Jan 16 21:37:38 2007 (9) ERROR
-[TIMESTAMP] 1169120737 Thu Jan 18 12:45:37 2007 (5) ERROR
-[TIMESTAMP] 1169150067 Thu Jan 18 20:54:27 2007 (9) ERROR
+[TIMESTAMP] 1181106876 Wed Jun  6 07:14:36 2007 (5) ERROR
+[TIMESTAMP] 1181582706 Mon Jun 11 19:25:06 2007 (9) ERROR
+[TIMESTAMP] 1181825809 Thu Jun 14 14:56:49 2007 (5) ERROR
+[TIMESTAMP] 1181908367 Fri Jun 15 13:52:47 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-ucspi-unix.err 9-ucspi-unix.err
 
-[BUILDTIME] 1355 (5) ERROR
-[BUILDTIME] 1597 (9) ERROR
-[BUILDTIME] 1630 (5) ERROR
-[BUILDTIME] 1594 (9) ERROR
-[BUILDTIME] 1736 (5) ERROR
-[BUILDTIME] 1618 (9) ERROR
+[BUILDTIME] 2051 (5) ERROR
+[BUILDTIME] 2263 (9) ERROR
+[BUILDTIME] 2337 (5) ERROR
+[BUILDTIME] 2224 (9) ERROR
 [SIZE] 0.04 MB, 13 files
 
 [DEP] 00-dirtree bash2 bglibs bglibs:dev binutils bzip2 coreutils
-[DEP] cvm findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev grep
-[DEP] linux-libc-headers:dev make mktemp netpbm patch rrdtool sed sysfiles
-[DEP] tar twoftpd
+[DEP] cvm findutils gawk gcc42 gcc42:dev glibc26 glibc26:dev grep
+[DEP] linux26-headers:dev ltrace make mktemp patch sed sysfiles tar
+[DEP] twoftpd xmame
 
 [PROVIDES] .  unixcat unixclient unixserver
 
@@ -94,7 +90,7 @@
 [5-ERROR] Making post-install adaptions.
 [5-ERROR] Found shared files with other packages:
 [5-ERROR] usr/bin/.: coreutils procps twoftpd ucspi-unix
-[5-ERROR] usr/share/man/man1: 00-dirtree netpbm twoftpd ucspi-unix
+[5-ERROR] usr/share/man/man1: 00-dirtree twoftpd ucspi-unix
 [5-ERROR] --- BUILD ERROR ---
 [5-ERROR] --- BUILD ERROR ---
 
@@ -145,7 +141,7 @@
 [9-ERROR] Making post-install adaptions.
 [9-ERROR] Found shared files with other packages:
 [9-ERROR] usr/bin/.: coreutils procps twoftpd ucspi-unix
-[9-ERROR] usr/share/man/man1: 00-dirtree netpbm twoftpd ucspi-unix
+[9-ERROR] usr/share/man/man1: 00-dirtree twoftpd ucspi-unix
 [9-ERROR] --- BUILD ERROR ---
 [9-ERROR] --- BUILD ERROR ---
 

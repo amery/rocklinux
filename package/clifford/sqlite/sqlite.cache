@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168561654 Fri Jan 12 01:27:34 2007 (5)
-[TIMESTAMP] 1168758367 Sun Jan 14 08:06:07 2007 (9)
+[TIMESTAMP] 1180950969 Mon Jun  4 11:56:09 2007 (5)
+[TIMESTAMP] 1181340756 Sat Jun  9 00:12:36 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-sqlite.log 9-sqlite.log
 
-[BUILDTIME] 4844 (5)
-[BUILDTIME] 5418 (9)
+[BUILDTIME] 6301 (5)
+[BUILDTIME] 7088 (9)
 [SIZE] 0.33 MB, 10 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
-[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev
-[DEP] make mktemp ncurses ncurses:dev net-tools readline readline:dev
-[DEP] rrdtool sed sysfiles tar tcl tcl:dev util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils
+[DEP] findutils gawk gcc42 gcc42:dev glibc26 glibc26:dev grep libelf
+[DEP] linux26-headers:dev ltrace make mktemp ncurses ncurses:dev net-tools
+[DEP] readline readline:dev sed sysfiles tar tcl tcl:dev util-linux xmame
 
 [PROVIDES] libsqlite.a libsqlite.so sqlite
 

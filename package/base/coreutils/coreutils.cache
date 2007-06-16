@@ -20,29 +20,30 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168524430 Thu Jan 11 15:07:10 2007 (3)
-[TIMESTAMP] 1168722780 Sat Jan 13 22:13:00 2007 (9)
+[TIMESTAMP] 1180896920 Sun Jun  3 20:55:20 2007 (3)
+[TIMESTAMP] 1181275168 Fri Jun  8 05:59:28 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 1-coreutils.log 3-coreutils.log 9-coreutils.log
 
-[BUILDTIME] 22244 (3)
-[BUILDTIME] 23689 (9)
-[SIZE] 3.82 MB, 188 files
+[BUILDTIME] 18040 (3)
+[BUILDTIME] 19167 (9)
+[SIZE] 3.91 MB, 200 files
 
-[DEP] 00-dirtree acl:dev autoconf automake19 bash2 binutils bzip2 cvm
-[DEP] diffutils findutils gawk gcc40 gcc40:dev gettext glibc23 glibc23:dev
-[DEP] grep linux-libc-headers:dev m4 make mktemp net-tools netpbm patch
-[DEP] perl5 rrdtool sed sysfiles tar texinfo twoftpd ucspi-unix util-linux
+[DEP] 00-dirtree acl acl:dev attr bash2 binutils bzip2 cvm diffutils
+[DEP] findutils gawk gcc42 gcc42:dev gettext glibc26 glibc26:dev grep
+[DEP] gzip linux26-headers:dev ltrace make mktemp net-tools patch perl5
+[DEP] sed sysfiles tar texinfo twoftpd ucspi-unix util-linux xmame
 
-[PROVIDES] [ basename cat chgrp chmod chown chroot cksum comm cp csplit
-[PROVIDES] cut date dd df dir dircolors dirname du echo env expand expr
-[PROVIDES] factor false fmt fold ginstall head hostid id install join
-[PROVIDES] link ln logname ls md5sum mkdir mkfifo mknod mv nice nl nohup
-[PROVIDES] od paste pathchk pinky pr printenv printf ptx pwd readlink rm
-[PROVIDES] rmdir seq sha1sum shred shuffle sleep sort split stat stty sum
+[PROVIDES] [ base64 basename cat chgrp chmod chown chroot cksum comm cp
+[PROVIDES] csplit cut date dd df dir dircolors dirname du echo env expand
+[PROVIDES] expr factor false fmt fold ginstall head hostid id install
+[PROVIDES] join link ln logname ls md5sum mkdir mkfifo mknod mv nice
+[PROVIDES] nl nohup od paste pathchk pinky pr printenv printf ptx pwd
+[PROVIDES] readlink rm rmdir seq sha1sum sha224sum sha256sum sha384sum
+[PROVIDES] sha512sum shred shuf shuffle sleep sort split stat stty sum
 [PROVIDES] sync tac tail tee test touch tr true tsort tty uname unexpand
 [PROVIDES] uniq unlink users vdir wc who whoami yes
 

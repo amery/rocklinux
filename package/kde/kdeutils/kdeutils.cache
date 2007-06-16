@@ -20,39 +20,35 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168610938 Fri Jan 12 15:08:58 2007 (5)
-[TIMESTAMP] 1168813766 Sun Jan 14 23:29:26 2007 (9) ERROR
-[TIMESTAMP] 1168972917 Tue Jan 16 19:41:57 2007 (9) ERROR
-[TIMESTAMP] 1169143198 Thu Jan 18 18:59:58 2007 (9) ERROR
+[TIMESTAMP] 1181021214 Tue Jun  5 07:26:54 2007 (5)
+[TIMESTAMP] 1181485079 Sun Jun 10 16:17:59 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-kdeutils.log 9-kdeutils.err
+[LOGS] 5-kdeutils.log 9-kdeutils.log
 
-[BUILDTIME] 85580 (5)
-[BUILDTIME] 87224 (9) ERROR
-[BUILDTIME] 87504 (9) ERROR
-[BUILDTIME] 87374 (9) ERROR
-[SIZE] 8.08 MB, 479 files
+[BUILDTIME] 109654 (5)
+[BUILDTIME] 110344 (9)
+[SIZE] 8.06 MB, 478 files
 
 [DEP] 00-dirtree acl acl:dev alsa applewmproto applewmproto:dev attr
-[DEP] attr:dev bash2 binutils bzip2 coreutils cups cvm diffutils expat
-[DEP] expat:dev fam fam:dev findutils fontconfig fontconfig:dev freetype
-[DEP] freetype:dev gawk gcc40 gcc40:dev gettext glib12 glib12:dev glibc23
-[DEP] glibc23:dev gmp gmp:dev gnome14-dirtree grep gtk+12 gtk+12:dev
-[DEP] hicolor-icon-theme imake inputproto:dev kdebase kdebase:doc kdelibs
-[DEP] kdelibs:dev libart_lgpl23 libart_lgpl23:dev libice libice:dev
-[DEP] libidn libidn:dev libjpeg libpng libpng:dev libsm libsm:dev libx11
-[DEP] libx11:dev libxau libxau:dev libxcursor libxcursor:dev libxdmcp
-[DEP] libxdmcp:dev libxext libxext:dev libxfixes libxfixes:dev libxft
-[DEP] libxft:dev libxi libxi:dev libxinerama libxinerama:dev libxmu
-[DEP] libxmu:dev libxrandr libxrandr:dev libxrender libxrender:dev libxt
-[DEP] libxt:dev libxtst libxtst:dev linux-libc-headers:dev make mesalib
-[DEP] mktemp nas net-snmp net-snmp:dev net-tools openssl perl5 python
-[DEP] python:dev qt33 qt33:dev rrdtool sed superkaramba sysfiles tar tcl
-[DEP] tk util-linux xextproto:dev xmms xmms:dev xorg-cf-files xproto:dev
-[DEP] zlib zlib:dev
+[DEP] attr:dev bash2 binutils bzip2 coreutils cups cvm diffutils
+[DEP] expat expat:dev fam fam:dev findutils fontconfig fontconfig:dev
+[DEP] freetype freetype:dev gawk gcc42 gcc42:dev gettext glib12
+[DEP] glib12:dev glibc26 glibc26:dev gmp gmp:dev gnome14-dirtree grep
+[DEP] gtk+12 gtk+12:dev hicolor-icon-theme imake inputproto:dev kdebase
+[DEP] kdebase:doc kdelibs kdelibs:dev libart_lgpl23 libart_lgpl23:dev
+[DEP] libice libice:dev libidn libidn:dev libjpeg libpng libpng:dev
+[DEP] libsm libsm:dev libx11 libx11:dev libxau libxau:dev libxcb
+[DEP] libxcb:dev libxcursor libxcursor:dev libxdmcp libxdmcp:dev libxext
+[DEP] libxext:dev libxfixes libxfixes:dev libxft libxft:dev libxi
+[DEP] libxi:dev libxinerama libxinerama:dev libxmu libxmu:dev libxrandr
+[DEP] libxrandr:dev libxrender libxrender:dev libxt libxt:dev libxtst
+[DEP] libxtst:dev linux26-headers:dev ltrace make mesalib mktemp nas
+[DEP] net-snmp net-snmp:dev net-tools openssl perl5 python python:dev
+[DEP] qt33 qt33:dev sed sysfiles tar tcl tk util-linux xextproto:dev
+[DEP] xmame xmms xmms:dev xorg-cf-files xproto:dev zlib zlib:dev
 
 [PROVIDES] ark ark.so irkick irkick.so kcalc kcalc.so kcharselect
 [PROVIDES] kcharselect_panelapplet.so kcm_kcmlirc.so kcm_kdf.so
@@ -68,55 +64,4 @@
 [PROVIDES] libkdeinit_kedit.so libkhexedit2part.so libkhexeditcommon.so
 [PROVIDES] libkmilo.so libkregexpeditorcommon.so libkregexpeditorgui.so
 [PROVIDES] libksimcore.so superkaramba
-
-[9-ERROR] /bin/sh ../../admin/mkinstalldirs /usr/share/icons/crystalsvg/32x32/mimetypes
-[9-ERROR] /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 ./cr32-mime-superkaramba_theme.png /usr/share/icons/crystalsvg/32x32/mimetypes/superkaramba_theme.png
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5/superkaramba/icons'
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5/superkaramba/icons'
-[9-ERROR] Making install in mimetypes
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5/superkaramba/mimetypes'
-[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5/superkaramba/mimetypes'
-[9-ERROR] make[3]: Nothing to be done for `install-exec-am'.
-[9-ERROR] test -z "/usr/share/mimelnk/application" || mkdir -p -- "/usr/share/mimelnk/application"
-[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 'x-superkaramba.desktop' '/usr/share/mimelnk/application/x-superkaramba.desktop'
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5/superkaramba/mimetypes'
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5/superkaramba/mimetypes'
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5/superkaramba'
-[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5/superkaramba'
-[9-ERROR] make[3]: Nothing to be done for `install-exec-am'.
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5/superkaramba'
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5/superkaramba'
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5/superkaramba'
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5'
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5'
-[9-ERROR] make[2]: Nothing to be done for `install-exec-am'.
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5'
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kdeutils.1169142276.8132.2306410303/kdeutils-3.5.5'
-[9-ERROR] Trying to copy the default documentation ...
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing /lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 753 files for this package.
-[9-ERROR] Applying package split: 40 kdeutils:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
-[9-ERROR] Applying package split: 42 kdeutils:dev /pkgconfig/
-[9-ERROR] Applying package split: 45 kdeutils /.*\.la$
-[9-ERROR] Applying package split: 60 kdeutils:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <kdeutils> Creating flist file ...
-[9-ERROR] <kdeutils> Creating package dependencies file ...
-[9-ERROR] <kdeutils> Creating package description ...
-[9-ERROR] <kdeutils> Creating md5sum and cksum files ...
-[9-ERROR] <kdeutils:dev> Creating flist file ...
-[9-ERROR] <kdeutils:dev> Creating package dependencies file ...
-[9-ERROR] <kdeutils:dev> Creating package description ...
-[9-ERROR] <kdeutils:dev> Creating md5sum and cksum files ...
-[9-ERROR] <kdeutils:doc> Creating flist file ...
-[9-ERROR] <kdeutils:doc> Creating package dependencies file ...
-[9-ERROR] <kdeutils:doc> Creating package description ...
-[9-ERROR] <kdeutils:doc> Creating md5sum and cksum files ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Found shared files with other packages:
-[9-ERROR] usr/bin/superkaramba: kdeutils superkaramba
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] --- BUILD ERROR ---
 

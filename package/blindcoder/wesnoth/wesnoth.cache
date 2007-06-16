@@ -20,125 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168683554 Sat Jan 13 11:19:14 2007 (5) ERROR
-[TIMESTAMP] 1168892503 Mon Jan 15 21:21:43 2007 (9) ERROR
-[TIMESTAMP] 1168952121 Tue Jan 16 13:55:21 2007 (5) ERROR
-[TIMESTAMP] 1168981739 Tue Jan 16 22:08:59 2007 (9) ERROR
-[TIMESTAMP] 1169122434 Thu Jan 18 13:13:54 2007 (5) ERROR
-[TIMESTAMP] 1169151940 Thu Jan 18 21:25:40 2007 (9) ERROR
+[TIMESTAMP] 1181159110 Wed Jun  6 21:45:10 2007 (5)
+[TIMESTAMP] 1181609676 Tue Jun 12 02:54:36 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-wesnoth.err 9-wesnoth.err
+[LOGS] 5-wesnoth.log 9-wesnoth.log
 
-[BUILDTIME] 31113 (5) ERROR
-[BUILDTIME] 31301 (9) ERROR
-[BUILDTIME] 31324 (5) ERROR
-[BUILDTIME] 31318 (9) ERROR
-[BUILDTIME] 31336 (5) ERROR
-[BUILDTIME] 31331 (9) ERROR
+[BUILDTIME] 81728 (5)
+[BUILDTIME] 80287 (9)
+[SIZE] 76.57 MB, 5600 files
 
+[DEP] 00-dirtree alsa applewmproto applewmproto:dev bash2 binutils
+[DEP] bzip2 coreutils cvm diffutils findutils freetype freetype:dev
+[DEP] fribidi fribidi:dev gawk gcc42 gcc42:dev gettext glibc26 glibc26:dev
+[DEP] gnome-libs14 gnome14-dirtree gnome2-dirtree grep imake kdelibs libice
+[DEP] libpng libpng:dev libsdl libsdl:dev libsdl_image libsdl_image:dev
+[DEP] libsdl_mixer libsdl_mixer:dev libsdl_net libsdl_net:dev libsm
+[DEP] libx11 libx11:dev libxau libxcb libxdmcp libxt linux26-headers:dev
+[DEP] ltrace make mktemp nas net-tools sed sysfiles tar util-linux xmame
+[DEP] xorg-cf-files xproto:dev zlib zlib:dev
 
-[5-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT serialization/tokenizer.o -MD -MP -MF "$depbase.Tpo" -c -o serialization/tokenizer.o serialization/tokenizer.cpp; \
-[5-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[5-ERROR] depbase=`echo widgets/button.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[5-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT widgets/button.o -MD -MP -MF "$depbase.Tpo" -c -o widgets/button.o widgets/button.cpp; \
-[5-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[5-ERROR] depbase=`echo widgets/combo.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[5-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT widgets/combo.o -MD -MP -MF "$depbase.Tpo" -c -o widgets/combo.o widgets/combo.cpp; \
-[5-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[5-ERROR] depbase=`echo widgets/label.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[5-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT widgets/label.o -MD -MP -MF "$depbase.Tpo" -c -o widgets/label.o widgets/label.cpp; \
-[5-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[5-ERROR] depbase=`echo widgets/menu.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[5-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT widgets/menu.o -MD -MP -MF "$depbase.Tpo" -c -o widgets/menu.o widgets/menu.cpp; \
-[5-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[5-ERROR] depbase=`echo widgets/progressbar.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[5-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT widgets/progressbar.o -MD -MP -MF "$depbase.Tpo" -c -o widgets/progressbar.o widgets/progressbar.cpp; \
-[5-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[5-ERROR] depbase=`echo widgets/scrollarea.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[5-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT widgets/scrollarea.o -MD -MP -MF "$depbase.Tpo" -c -o widgets/scrollarea.o widgets/scrollarea.cpp; \
-[5-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[5-ERROR] depbase=`echo widgets/scrollbar.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[5-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT widgets/scrollbar.o -MD -MP -MF "$depbase.Tpo" -c -o widgets/scrollbar.o widgets/scrollbar.cpp; \
-[5-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[5-ERROR] depbase=`echo widgets/scrollpane.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[5-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT widgets/scrollpane.o -MD -MP -MF "$depbase.Tpo" -c -o widgets/scrollpane.o widgets/scrollpane.cpp; \
-[5-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[5-ERROR] depbase=`echo widgets/slider.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[5-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT widgets/slider.o -MD -MP -MF "$depbase.Tpo" -c -o widgets/slider.o widgets/slider.cpp; \
-[5-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[5-ERROR] depbase=`echo widgets/textbox.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[5-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT widgets/textbox.o -MD -MP -MF "$depbase.Tpo" -c -o widgets/textbox.o widgets/textbox.cpp; \
-[5-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[5-ERROR] depbase=`echo widgets/widget.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[5-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT widgets/widget.o -MD -MP -MF "$depbase.Tpo" -c -o widgets/widget.o widgets/widget.cpp; \
-[5-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[5-ERROR] depbase=`echo zipios++/xcoll.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[5-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT zipios++/xcoll.o -MD -MP -MF "$depbase.Tpo" -c -o zipios++/xcoll.o zipios++/xcoll.cpp; \
-[5-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[5-ERROR] depbase=`echo sdl_ttf/SDL_ttf.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[5-ERROR] 	if gcc-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -g -O2 -D_X11  -I/usr/X11R7/include  -MT sdl_ttf/SDL_ttf.o -MD -MP -MF "$depbase.Tpo" -c -o sdl_ttf/SDL_ttf.o sdl_ttf/SDL_ttf.c; \
-[5-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[5-ERROR] sdl_ttf/SDL_ttf.c:51:38: error: freetype/internal/ftobjs.h: No such file or directory
-[5-ERROR] sdl_ttf/SDL_ttf.c: In function 'TTF_OpenFontIndexRW':
-[5-ERROR] sdl_ttf/SDL_ttf.c:285: error: dereferencing pointer to incomplete type
-[5-ERROR] make[2]: *** [sdl_ttf/SDL_ttf.o] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.wesnoth.1169122119.11025.2270576875/wesnoth-1.0.2/src'
-[5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.wesnoth.1169122119.11025.2270576875/wesnoth-1.0.2'
-[5-ERROR] make: *** [all] Error 2
-[5-ERROR] --- BUILD ERROR ---
-
-[9-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT serialization/tokenizer.o -MD -MP -MF "$depbase.Tpo" -c -o serialization/tokenizer.o serialization/tokenizer.cpp; \
-[9-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[9-ERROR] depbase=`echo widgets/button.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[9-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT widgets/button.o -MD -MP -MF "$depbase.Tpo" -c -o widgets/button.o widgets/button.cpp; \
-[9-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[9-ERROR] depbase=`echo widgets/combo.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[9-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT widgets/combo.o -MD -MP -MF "$depbase.Tpo" -c -o widgets/combo.o widgets/combo.cpp; \
-[9-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[9-ERROR] depbase=`echo widgets/label.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[9-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT widgets/label.o -MD -MP -MF "$depbase.Tpo" -c -o widgets/label.o widgets/label.cpp; \
-[9-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[9-ERROR] depbase=`echo widgets/menu.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[9-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT widgets/menu.o -MD -MP -MF "$depbase.Tpo" -c -o widgets/menu.o widgets/menu.cpp; \
-[9-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[9-ERROR] depbase=`echo widgets/progressbar.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[9-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT widgets/progressbar.o -MD -MP -MF "$depbase.Tpo" -c -o widgets/progressbar.o widgets/progressbar.cpp; \
-[9-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[9-ERROR] depbase=`echo widgets/scrollarea.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[9-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT widgets/scrollarea.o -MD -MP -MF "$depbase.Tpo" -c -o widgets/scrollarea.o widgets/scrollarea.cpp; \
-[9-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[9-ERROR] depbase=`echo widgets/scrollbar.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[9-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT widgets/scrollbar.o -MD -MP -MF "$depbase.Tpo" -c -o widgets/scrollbar.o widgets/scrollbar.cpp; \
-[9-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[9-ERROR] depbase=`echo widgets/scrollpane.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[9-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT widgets/scrollpane.o -MD -MP -MF "$depbase.Tpo" -c -o widgets/scrollpane.o widgets/scrollpane.cpp; \
-[9-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[9-ERROR] depbase=`echo widgets/slider.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[9-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT widgets/slider.o -MD -MP -MF "$depbase.Tpo" -c -o widgets/slider.o widgets/slider.cpp; \
-[9-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[9-ERROR] depbase=`echo widgets/textbox.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[9-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT widgets/textbox.o -MD -MP -MF "$depbase.Tpo" -c -o widgets/textbox.o widgets/textbox.cpp; \
-[9-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[9-ERROR] depbase=`echo widgets/widget.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[9-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT widgets/widget.o -MD -MP -MF "$depbase.Tpo" -c -o widgets/widget.o widgets/widget.cpp; \
-[9-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[9-ERROR] depbase=`echo zipios++/xcoll.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[9-ERROR] 	if g++-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -DFIFODIR=\"/var/run/wesnothd\" -g -O2 -D_X11  -I/usr/X11R7/include  -MT zipios++/xcoll.o -MD -MP -MF "$depbase.Tpo" -c -o zipios++/xcoll.o zipios++/xcoll.cpp; \
-[9-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[9-ERROR] depbase=`echo sdl_ttf/SDL_ttf.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`; \
-[9-ERROR] 	if gcc-40 -DHAVE_CONFIG_H -I. -I. -I..   -I/usr/X11R7/include  -I/usr/include/freetype2 -I ./sdl_ttf -I../intl -I../intl -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -DWESNOTH_PATH=\"/usr/share/wesnoth\" -DLOCALEDIR=\"translations\" -DHAS_RELATIVE_LOCALEDIR=1 -g -O2 -D_X11  -I/usr/X11R7/include  -MT sdl_ttf/SDL_ttf.o -MD -MP -MF "$depbase.Tpo" -c -o sdl_ttf/SDL_ttf.o sdl_ttf/SDL_ttf.c; \
-[9-ERROR] 	then mv -f "$depbase.Tpo" "$depbase.Po"; else rm -f "$depbase.Tpo"; exit 1; fi
-[9-ERROR] sdl_ttf/SDL_ttf.c:51:38: error: freetype/internal/ftobjs.h: No such file or directory
-[9-ERROR] sdl_ttf/SDL_ttf.c: In function 'TTF_OpenFontIndexRW':
-[9-ERROR] sdl_ttf/SDL_ttf.c:285: error: dereferencing pointer to incomplete type
-[9-ERROR] make[2]: *** [sdl_ttf/SDL_ttf.o] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.wesnoth.1169151626.26249.189379654/wesnoth-1.0.2/src'
-[9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.wesnoth.1169151626.26249.189379654/wesnoth-1.0.2'
-[9-ERROR] make: *** [all] Error 2
-[9-ERROR] --- BUILD ERROR ---
 

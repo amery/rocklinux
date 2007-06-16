@@ -20,31 +20,31 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168559250 Fri Jan 12 00:47:30 2007 (5)
-[TIMESTAMP] 1168755579 Sun Jan 14 07:19:39 2007 (9)
+[TIMESTAMP] 1180947887 Mon Jun  4 11:04:47 2007 (5)
+[TIMESTAMP] 1181336654 Fri Jun  8 23:04:14 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-net-snmp.log 9-net-snmp.log
 
-[BUILDTIME] 25800 (5)
-[BUILDTIME] 26943 (9)
-[SIZE] 3.50 MB, 243 files
+[BUILDTIME] 48699 (5)
+[BUILDTIME] 50751 (9)
+[SIZE] 5.99 MB, 300 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils
-[DEP] findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev grep
-[DEP] libelf:dev linux-libc-headers:dev make mktemp net-tools netpbm
-[DEP] openssl openssl:dev patch perl5 procps rrdtool sed sysfiles tar
-[DEP] tcp_wrappers:dev twoftpd ucspi-unix util-linux
+[DEP] findutils gawk gcc42 gcc42:dev glibc26 glibc26:dev grep libelf:dev
+[DEP] linux26-headers:dev ltrace make mktemp net-tools openssl openssl:dev
+[DEP] patch pciutils:dev perl5 perl5:dev procps sed ssleay-perlmod sysfiles
+[DEP] tar tcp_wrappers:dev twoftpd ucspi-unix util-linux xmame
 
+[PROVIDES] ASN.so OID.so SNMP.so TrapReceiver.so agent.so default_store.so
 [PROVIDES] encode_keychange fixproc ipf-mod.pl libnetsnmp.a libnetsnmp.so
 [PROVIDES] libnetsnmpagent.a libnetsnmpagent.so libnetsnmphelpers.a
 [PROVIDES] libnetsnmphelpers.so libnetsnmpmibs.a libnetsnmpmibs.so
 [PROVIDES] libnetsnmptrapd.a libnetsnmptrapd.so mib2c mib2c-update
 [PROVIDES] net-snmp-config snmpbulkget snmpbulkwalk snmpcheck snmpconf
 [PROVIDES] snmpd snmpdelta snmpdf snmpget snmpgetnext snmpinform
-[PROVIDES] snmpnetstat snmpnetstat53 snmpset snmpstatus snmptable snmptest
-[PROVIDES] snmptranslate snmptrap snmptrapd snmpusm snmpvacm snmpwalk
-[PROVIDES] tkmib traptoemail
+[PROVIDES] snmpnetstat snmpset snmpstatus snmptable snmptest snmptranslate
+[PROVIDES] snmptrap snmptrapd snmpusm snmpvacm snmpwalk tkmib traptoemail
 

@@ -20,125 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168567264 Fri Jan 12 03:01:04 2007 (5) ERROR
-[TIMESTAMP] 1168764814 Sun Jan 14 09:53:34 2007 (9) ERROR
-[TIMESTAMP] 1168941834 Tue Jan 16 11:03:54 2007 (5) ERROR
-[TIMESTAMP] 1168963865 Tue Jan 16 17:11:05 2007 (9) ERROR
-[TIMESTAMP] 1169085224 Thu Jan 18 02:53:44 2007 (5) ERROR
-[TIMESTAMP] 1169134159 Thu Jan 18 16:29:19 2007 (9) ERROR
+[TIMESTAMP] 1180958143 Mon Jun  4 13:55:43 2007 (5) ERROR
+[TIMESTAMP] 1181350865 Sat Jun  9 03:01:05 2007 (9) ERROR
+[TIMESTAMP] 1181803860 Thu Jun 14 08:51:00 2007 (5) ERROR
+[TIMESTAMP] 1181858025 Thu Jun 14 23:53:45 2007 (9) ERROR
+[TIMESTAMP] 1181941536 Fri Jun 15 23:05:36 2007 (5) ERROR
+[TIMESTAMP] 1181962066 Sat Jun 16 04:47:46 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-enlightenment.err 9-enlightenment.err
 
-[BUILDTIME] 5473 (5) ERROR
-[BUILDTIME] 5598 (9) ERROR
-[BUILDTIME] 5596 (5) ERROR
-[BUILDTIME] 5594 (9) ERROR
-[BUILDTIME] 5579 (5) ERROR
-[BUILDTIME] 5592 (9) ERROR
+[BUILDTIME] 6123 (5) ERROR
+[BUILDTIME] 6245 (9) ERROR
+[BUILDTIME] 6309 (5) ERROR
+[BUILDTIME] 6101 (9) ERROR
+[BUILDTIME] 6148 (5) ERROR
+[BUILDTIME] 5992 (9) ERROR
 
 
-[5-ERROR] e_main.c:536: warning: assignment makes pointer from integer without a cast
-[5-ERROR] e_main.c:539: warning: assignment makes pointer from integer without a cast
-[5-ERROR] e_main.c:555: error: dereferencing pointer to incomplete type
-[5-ERROR] e_main.c: In function 'e_main_idler_before_add':
-[5-ERROR] e_main.c:603: warning: assignment makes pointer from integer without a cast
-[5-ERROR] e_main.c: In function '_e_main_screens_init':
-[5-ERROR] e_main.c:736: error: 'Ecore_X_Window' undeclared (first use in this function)
 [5-ERROR] e_main.c:736: error: 'roots' undeclared (first use in this function)
-[5-ERROR] e_main.c:779: error: dereferencing pointer to incomplete type
+[5-ERROR] e_main.c:763: warning: assignment makes pointer from integer without a cast
+[5-ERROR] e_main.c:779: error: 'E_Container' has no member named 'bg_win'
 [5-ERROR] e_main.c: In function '_e_main_path_init':
-[5-ERROR] e_main.c:827: error: dereferencing pointer to incomplete type
-[5-ERROR] e_main.c:839: error: dereferencing pointer to incomplete type
-[5-ERROR] e_main.c:851: error: dereferencing pointer to incomplete type
-[5-ERROR] e_main.c:863: error: dereferencing pointer to incomplete type
-[5-ERROR] e_main.c:875: error: dereferencing pointer to incomplete type
-[5-ERROR] e_main.c:887: error: dereferencing pointer to incomplete type
-[5-ERROR] e_main.c:905: error: dereferencing pointer to incomplete type
-[5-ERROR] e_main.c:915: error: dereferencing pointer to incomplete type
+[5-ERROR] e_main.c:827: error: 'E_Config' has no member named 'path_append_data'
+[5-ERROR] e_main.c:827: error: too many arguments to function 'e_path_user_path_set'
+[5-ERROR] e_main.c:839: error: 'E_Config' has no member named 'path_append_images'
+[5-ERROR] e_main.c:839: error: too many arguments to function 'e_path_user_path_set'
+[5-ERROR] e_main.c:851: error: 'E_Config' has no member named 'path_append_fonts'
+[5-ERROR] e_main.c:851: error: too many arguments to function 'e_path_user_path_set'
+[5-ERROR] e_main.c:863: error: 'E_Config' has no member named 'path_append_themes'
+[5-ERROR] e_main.c:863: error: too many arguments to function 'e_path_user_path_set'
+[5-ERROR] e_main.c:875: error: 'E_Config' has no member named 'path_append_icons'
+[5-ERROR] e_main.c:875: error: too many arguments to function 'e_path_user_path_set'
+[5-ERROR] e_main.c:887: error: 'E_Config' has no member named 'path_append_init'
+[5-ERROR] e_main.c:887: error: too many arguments to function 'e_path_user_path_set'
+[5-ERROR] e_main.c:905: error: 'E_Config' has no member named 'path_append_modules'
+[5-ERROR] e_main.c:905: error: too many arguments to function 'e_path_user_path_set'
+[5-ERROR] e_main.c:915: error: 'E_Config' has no member named 'path_append_backgrounds'
+[5-ERROR] e_main.c:915: error: too many arguments to function 'e_path_user_path_set'
 [5-ERROR] e_main.c: In function '_e_main_cb_idler_before':
 [5-ERROR] e_main.c:1020: error: 'Evas_List' undeclared (first use in this function)
 [5-ERROR] e_main.c:1020: error: 'l' undeclared (first use in this function)
 [5-ERROR] e_main.c:1020: error: 'pl' undeclared (first use in this function)
-[5-ERROR] e_main.c:1048: warning: assignment makes pointer from integer without a cast
+[5-ERROR] e_main.c:1028: error: '_e_main_idler_before_list' undeclared (first use in this function)
 [5-ERROR] e_main.c: In function '_e_main_desk_save':
 [5-ERROR] e_main.c:1075: error: 'Evas_List' undeclared (first use in this function)
 [5-ERROR] e_main.c:1075: error: 'ml' undeclared (first use in this function)
 [5-ERROR] e_main.c:1082: error: 'cl' undeclared (first use in this function)
-[5-ERROR] e_main.c:1086: error: dereferencing pointer to incomplete type
+[5-ERROR] e_main.c:1086: error: 'E_Manager' has no member named 'containers'
 [5-ERROR] e_main.c:1089: error: 'zl' undeclared (first use in this function)
-[5-ERROR] e_main.c:1093: error: dereferencing pointer to incomplete type
-[5-ERROR] e_main.c:1099: error: dereferencing pointer to incomplete type
-[5-ERROR] e_main.c:1099: error: dereferencing pointer to incomplete type
-[5-ERROR] e_main.c:1099: error: dereferencing pointer to incomplete type
-[5-ERROR] e_main.c:1100: error: dereferencing pointer to incomplete type
-[5-ERROR] e_main.c:1100: error: dereferencing pointer to incomplete type
+[5-ERROR] e_main.c:1093: error: 'E_Container' has no member named 'zones'
+[5-ERROR] e_main.c:1099: error: 'E_Manager' has no member named 'num'
+[5-ERROR] e_main.c:1099: error: 'E_Container' has no member named 'num'
+[5-ERROR] e_main.c:1100: error: 'E_Zone' has no member named 'desk_x_current'
+[5-ERROR] e_main.c:1100: error: 'E_Zone' has no member named 'desk_y_current'
 [5-ERROR] e_main.c: In function '_e_main_desk_restore':
 [5-ERROR] e_main.c:1110: error: 'Evas_List' undeclared (first use in this function)
 [5-ERROR] e_main.c:1110: error: 'zl' undeclared (first use in this function)
-[5-ERROR] e_main.c:1114: error: dereferencing pointer to incomplete type
-[5-ERROR] e_main.c:1122: error: dereferencing pointer to incomplete type
-[5-ERROR] e_main.c:1122: error: dereferencing pointer to incomplete type
-[5-ERROR] e_main.c:1122: error: dereferencing pointer to incomplete type
+[5-ERROR] e_main.c:1114: error: 'E_Container' has no member named 'zones'
+[5-ERROR] e_main.c:1122: error: 'E_Manager' has no member named 'num'
+[5-ERROR] e_main.c:1122: error: 'E_Container' has no member named 'num'
 [5-ERROR] make[3]: *** [e_main.o] Error 1
-[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.enlightenment.1169085167.3587.3583069520/enlightenment-2005-09-11/src/bin'
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.enlightenment.1181941469.20460.3900905642/enlightenment-2005-09-11/src/bin'
 [5-ERROR] make[2]: *** [all-recursive] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.enlightenment.1169085167.3587.3583069520/enlightenment-2005-09-11/src'
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.enlightenment.1181941469.20460.3900905642/enlightenment-2005-09-11/src'
 [5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.enlightenment.1169085167.3587.3583069520/enlightenment-2005-09-11'
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.enlightenment.1181941469.20460.3900905642/enlightenment-2005-09-11'
 [5-ERROR] make: *** [all] Error 2
 [5-ERROR] --- BUILD ERROR ---
 
-[9-ERROR] e_main.c:536: warning: assignment makes pointer from integer without a cast
-[9-ERROR] e_main.c:539: warning: assignment makes pointer from integer without a cast
-[9-ERROR] e_main.c:555: error: dereferencing pointer to incomplete type
-[9-ERROR] e_main.c: In function 'e_main_idler_before_add':
-[9-ERROR] e_main.c:603: warning: assignment makes pointer from integer without a cast
-[9-ERROR] e_main.c: In function '_e_main_screens_init':
-[9-ERROR] e_main.c:736: error: 'Ecore_X_Window' undeclared (first use in this function)
 [9-ERROR] e_main.c:736: error: 'roots' undeclared (first use in this function)
-[9-ERROR] e_main.c:779: error: dereferencing pointer to incomplete type
+[9-ERROR] e_main.c:763: warning: assignment makes pointer from integer without a cast
+[9-ERROR] e_main.c:779: error: 'E_Container' has no member named 'bg_win'
 [9-ERROR] e_main.c: In function '_e_main_path_init':
-[9-ERROR] e_main.c:827: error: dereferencing pointer to incomplete type
-[9-ERROR] e_main.c:839: error: dereferencing pointer to incomplete type
-[9-ERROR] e_main.c:851: error: dereferencing pointer to incomplete type
-[9-ERROR] e_main.c:863: error: dereferencing pointer to incomplete type
-[9-ERROR] e_main.c:875: error: dereferencing pointer to incomplete type
-[9-ERROR] e_main.c:887: error: dereferencing pointer to incomplete type
-[9-ERROR] e_main.c:905: error: dereferencing pointer to incomplete type
-[9-ERROR] e_main.c:915: error: dereferencing pointer to incomplete type
+[9-ERROR] e_main.c:827: error: 'E_Config' has no member named 'path_append_data'
+[9-ERROR] e_main.c:827: error: too many arguments to function 'e_path_user_path_set'
+[9-ERROR] e_main.c:839: error: 'E_Config' has no member named 'path_append_images'
+[9-ERROR] e_main.c:839: error: too many arguments to function 'e_path_user_path_set'
+[9-ERROR] e_main.c:851: error: 'E_Config' has no member named 'path_append_fonts'
+[9-ERROR] e_main.c:851: error: too many arguments to function 'e_path_user_path_set'
+[9-ERROR] e_main.c:863: error: 'E_Config' has no member named 'path_append_themes'
+[9-ERROR] e_main.c:863: error: too many arguments to function 'e_path_user_path_set'
+[9-ERROR] e_main.c:875: error: 'E_Config' has no member named 'path_append_icons'
+[9-ERROR] e_main.c:875: error: too many arguments to function 'e_path_user_path_set'
+[9-ERROR] e_main.c:887: error: 'E_Config' has no member named 'path_append_init'
+[9-ERROR] e_main.c:887: error: too many arguments to function 'e_path_user_path_set'
+[9-ERROR] e_main.c:905: error: 'E_Config' has no member named 'path_append_modules'
+[9-ERROR] e_main.c:905: error: too many arguments to function 'e_path_user_path_set'
+[9-ERROR] e_main.c:915: error: 'E_Config' has no member named 'path_append_backgrounds'
+[9-ERROR] e_main.c:915: error: too many arguments to function 'e_path_user_path_set'
 [9-ERROR] e_main.c: In function '_e_main_cb_idler_before':
 [9-ERROR] e_main.c:1020: error: 'Evas_List' undeclared (first use in this function)
 [9-ERROR] e_main.c:1020: error: 'l' undeclared (first use in this function)
 [9-ERROR] e_main.c:1020: error: 'pl' undeclared (first use in this function)
-[9-ERROR] e_main.c:1048: warning: assignment makes pointer from integer without a cast
+[9-ERROR] e_main.c:1028: error: '_e_main_idler_before_list' undeclared (first use in this function)
 [9-ERROR] e_main.c: In function '_e_main_desk_save':
 [9-ERROR] e_main.c:1075: error: 'Evas_List' undeclared (first use in this function)
 [9-ERROR] e_main.c:1075: error: 'ml' undeclared (first use in this function)
 [9-ERROR] e_main.c:1082: error: 'cl' undeclared (first use in this function)
-[9-ERROR] e_main.c:1086: error: dereferencing pointer to incomplete type
+[9-ERROR] e_main.c:1086: error: 'E_Manager' has no member named 'containers'
 [9-ERROR] e_main.c:1089: error: 'zl' undeclared (first use in this function)
-[9-ERROR] e_main.c:1093: error: dereferencing pointer to incomplete type
-[9-ERROR] e_main.c:1099: error: dereferencing pointer to incomplete type
-[9-ERROR] e_main.c:1099: error: dereferencing pointer to incomplete type
-[9-ERROR] e_main.c:1099: error: dereferencing pointer to incomplete type
-[9-ERROR] e_main.c:1100: error: dereferencing pointer to incomplete type
-[9-ERROR] e_main.c:1100: error: dereferencing pointer to incomplete type
+[9-ERROR] e_main.c:1093: error: 'E_Container' has no member named 'zones'
+[9-ERROR] e_main.c:1099: error: 'E_Manager' has no member named 'num'
+[9-ERROR] e_main.c:1099: error: 'E_Container' has no member named 'num'
+[9-ERROR] e_main.c:1100: error: 'E_Zone' has no member named 'desk_x_current'
+[9-ERROR] e_main.c:1100: error: 'E_Zone' has no member named 'desk_y_current'
 [9-ERROR] e_main.c: In function '_e_main_desk_restore':
 [9-ERROR] e_main.c:1110: error: 'Evas_List' undeclared (first use in this function)
 [9-ERROR] e_main.c:1110: error: 'zl' undeclared (first use in this function)
-[9-ERROR] e_main.c:1114: error: dereferencing pointer to incomplete type
-[9-ERROR] e_main.c:1122: error: dereferencing pointer to incomplete type
-[9-ERROR] e_main.c:1122: error: dereferencing pointer to incomplete type
-[9-ERROR] e_main.c:1122: error: dereferencing pointer to incomplete type
+[9-ERROR] e_main.c:1114: error: 'E_Container' has no member named 'zones'
+[9-ERROR] e_main.c:1122: error: 'E_Manager' has no member named 'num'
+[9-ERROR] e_main.c:1122: error: 'E_Container' has no member named 'num'
 [9-ERROR] make[3]: *** [e_main.o] Error 1
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.enlightenment.1169134102.31894.1124259346/enlightenment-2005-09-11/src/bin'
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.enlightenment.1181962005.10896.1874910178/enlightenment-2005-09-11/src/bin'
 [9-ERROR] make[2]: *** [all-recursive] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.enlightenment.1169134102.31894.1124259346/enlightenment-2005-09-11/src'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.enlightenment.1181962005.10896.1874910178/enlightenment-2005-09-11/src'
 [9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.enlightenment.1169134102.31894.1124259346/enlightenment-2005-09-11'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.enlightenment.1181962005.10896.1874910178/enlightenment-2005-09-11'
 [9-ERROR] make: *** [all] Error 2
 [9-ERROR] --- BUILD ERROR ---
 

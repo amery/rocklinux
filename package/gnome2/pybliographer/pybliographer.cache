@@ -20,28 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168625520 Fri Jan 12 19:12:00 2007 (5)
-[TIMESTAMP] 1168829463 Mon Jan 15 03:51:03 2007 (9)
+[TIMESTAMP] 1181045180 Tue Jun  5 14:06:20 2007 (5) ERROR
+[TIMESTAMP] 1181512701 Sun Jun 10 23:58:21 2007 (9) ERROR
+[TIMESTAMP] 1181821408 Thu Jun 14 13:43:28 2007 (5) ERROR
+[TIMESTAMP] 1181875897 Fri Jun 15 04:51:37 2007 (9) ERROR
+[TIMESTAMP] 1181948502 Sat Jun 16 01:01:42 2007 (5) ERROR
+[TIMESTAMP] 1181969117 Sat Jun 16 06:45:17 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-pybliographer.log 9-pybliographer.log
+[LOGS] 5-pybliographer.err 9-pybliographer.err
 
-[BUILDTIME] 2461 (5)
-[BUILDTIME] 2805 (9)
-[SIZE] 2.11 MB, 267 files
+[BUILDTIME] 1483 (5) ERROR
+[BUILDTIME] 1514 (9) ERROR
+[BUILDTIME] 1512 (5) ERROR
+[BUILDTIME] 1513 (9) ERROR
+[BUILDTIME] 1479 (5) ERROR
+[BUILDTIME] 1478 (9) ERROR
 
-[DEP] 00-dirtree applewmproto bash2 binutils bzip2 control-center
-[DEP] coreutils cvm diffutils docbookx findutils gawk gcc40 gcc40:dev
-[DEP] gettext glib glib:dev glibc23 glibc23:dev gnome-blog gnome-doc-utils
-[DEP] gnome-nettool gnome-python gnome-vfs gnome-vfs-extras gnome2-dirtree
-[DEP] gnopernicus grep gtkam libx11 linux-libc-headers:dev make mktemp
-[DEP] nautilus-cd-burner net-tools pango patch pioneers pkgconfig pycairo
-[DEP] pygobject pygtk pyorbit python python:dev recode recode:dev rrdtool
-[DEP] scrollkeeper sed sensors-applet streamtuner sysfiles tar util-linux
-[DEP] zapping
 
-[PROVIDES] _bibtex.so _recode.so pybcheck pybcompact pybconvert pybformat
-[PROVIDES] pybliographer pybliographic pybtex pybtext
+[5-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
+[5-ERROR] APPEND = '-s'
+[5-ERROR] FILTER = ''
+[5-ERROR] Old PATH: /ROCK/src.pybliographer.1181948487.12084.2480246551/wrappers:/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper:/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/Croquet-SDK/bin:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clanlib07/bin:/opt/clanlib07/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql41/bin:/opt/mysql50/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt42/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[5-ERROR] New PATH: /ROCK/src.pybliographer.1181948487.12084.2480246551/wrappers:/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/Croquet-SDK/bin:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clanlib07/bin:/opt/clanlib07/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql41/bin:/opt/mysql50/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt42/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[5-ERROR] Insert: -O1
+[5-ERROR] Insert: -pipe
+[5-ERROR] Insert: -march=i486
+[5-ERROR] Copy:   --version
+[5-ERROR] Append: -s
+[5-ERROR] New Command: gcc-42 -O1 -pipe -march=i486 --version -s
+[5-ERROR] gcc-42 (GCC) 4.2.0
+[5-ERROR] Copyright (C) 2007 Free Software Foundation, Inc.
+[5-ERROR] This is free software; see the source for copying conditions.  There is NO
+[5-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[5-ERROR] 
+[5-ERROR] [ writing debug log to /ROCK/src.pybliographer.1181948487.12084.2480246551/cmd_wrapper.log ]
+[5-ERROR] Running main build function 'build_this_package' ...
+[5-ERROR] Extracting python-bibtex-1.2.2.tar.bz2 (tar -v --use-compress-program=bzip2 -xf) ... 
+[5-ERROR] Fixing ownership and permissions ...
+[5-ERROR] Removing CVS and .svn directories ...
+[5-ERROR] Changeing into /ROCK/src.pybliographer.1181948487.12084.2480246551/python-bibtex-1.2.2 ...
+[5-ERROR] Creating /opt/gnome2/<..> if required ...
+[5-ERROR] running build
+[5-ERROR] running build_ext
+[5-ERROR] building '_bibtex' extension
+[5-ERROR] creating build
+[5-ERROR] creating build/temp.linux-i686-2.5
+[5-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -DG_LOG_DOMAIN="BibTeX" -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c accents.c -o build/temp.linux-i686-2.5/accents.o
+[5-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -DG_LOG_DOMAIN="BibTeX" -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c author.c -o build/temp.linux-i686-2.5/author.o
+[5-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -DG_LOG_DOMAIN="BibTeX" -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c bibparse.c -o build/temp.linux-i686-2.5/bibparse.o
+[5-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -DG_LOG_DOMAIN="BibTeX" -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c biblex.c -o build/temp.linux-i686-2.5/biblex.o
+[5-ERROR] lex.bibtex_parser_.c:1165: warning: 'yyunput' defined but not used
+[5-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -DG_LOG_DOMAIN="BibTeX" -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c bibtex.c -o build/temp.linux-i686-2.5/bibtex.o
+[5-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -DG_LOG_DOMAIN="BibTeX" -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c bibtexmodule.c -o build/temp.linux-i686-2.5/bibtexmodule.o
+[5-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -DG_LOG_DOMAIN="BibTeX" -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c entry.c -o build/temp.linux-i686-2.5/entry.o
+[5-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -DG_LOG_DOMAIN="BibTeX" -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c field.c -o build/temp.linux-i686-2.5/field.o
+[5-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -DG_LOG_DOMAIN="BibTeX" -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c reverse.c -o build/temp.linux-i686-2.5/reverse.o
+[5-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -DG_LOG_DOMAIN="BibTeX" -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c source.c -o build/temp.linux-i686-2.5/source.o
+[5-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -DG_LOG_DOMAIN="BibTeX" -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c stringutils.c -o build/temp.linux-i686-2.5/stringutils.o
+[5-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -DG_LOG_DOMAIN="BibTeX" -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c struct.c -o build/temp.linux-i686-2.5/struct.o
+[5-ERROR] creating build/lib.linux-i686-2.5
+[5-ERROR] gcc-42 -pthread -shared build/temp.linux-i686-2.5/accents.o build/temp.linux-i686-2.5/author.o build/temp.linux-i686-2.5/bibparse.o build/temp.linux-i686-2.5/biblex.o build/temp.linux-i686-2.5/bibtex.o build/temp.linux-i686-2.5/bibtexmodule.o build/temp.linux-i686-2.5/entry.o build/temp.linux-i686-2.5/field.o build/temp.linux-i686-2.5/reverse.o build/temp.linux-i686-2.5/source.o build/temp.linux-i686-2.5/stringutils.o build/temp.linux-i686-2.5/struct.o -L/opt/gnome2/lib -L/usr/lib -lglib-2.0 -lrecode -lpython2.5 -o build/lib.linux-i686-2.5/_bibtex.so
+[5-ERROR] building '_recode' extension
+[5-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c recodemodule.c -o build/temp.linux-i686-2.5/recodemodule.o
+[5-ERROR] gcc-42 -pthread -shared build/temp.linux-i686-2.5/recodemodule.o -L/usr/lib -lrecode -lpython2.5 -o build/lib.linux-i686-2.5/_recode.so
+[5-ERROR] running install
+[5-ERROR] running check
+[5-ERROR] ./scripts/Build-Pkg: line 1: 17952 Aborted                 (core dumped) python setup.py build install --prefix /opt/gnome2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] REMOVE = '-march=* -mcpu=* -O -O[0-9s] -g* -I/usr/local/include -I/usr/include'
+[9-ERROR] APPEND = '-s'
+[9-ERROR] FILTER = ''
+[9-ERROR] Old PATH: /ROCK/src.pybliographer.1181969102.4040.833437043/wrappers:/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper:/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/Croquet-SDK/bin:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clanlib07/bin:/opt/clanlib07/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql41/bin:/opt/mysql50/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt42/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[9-ERROR] New PATH: /ROCK/src.pybliographer.1181969102.4040.833437043/wrappers:/ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/bin:/usr/lib/teTeX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/usr/X11/sbin:/usr/games:/opt/Croquet-SDK/bin:/opt/MailScanner/bin:/opt/Maxima/bin:/opt/anomy-mailtools/bin:/opt/apache/bin:/opt/apache/sbin:/opt/bincimap/bin:/opt/cbrowser/bin:/opt/clanlib06/bin:/opt/clanlib06/sbin:/opt/clanlib07/bin:/opt/clanlib07/sbin:/opt/clip/bin:/opt/clip/sbin:/opt/coda/bin:/opt/coda/sbin:/opt/dcc/bin:/opt/e16/bin:/opt/e16/sbin:/opt/e17/bin:/opt/e17/sbin:/opt/gnome/bin:/opt/gnome/sbin:/opt/gnome2/bin:/opt/gnome2/sbin:/opt/mono/bin:/opt/mono/sbin:/opt/mysql41/bin:/opt/mysql50/bin:/opt/mythtv/bin:/opt/mythtv/sbin:/opt/nagios/bin:/opt/nagios/sbin:/opt/nx/bin:/opt/pegasus/bin:/opt/postgresql/bin:/opt/qcad/bin:/opt/qt33/bin:/opt/qt42/bin:/opt/root/bin:/opt/root/sbin:/opt/samba/bin:/opt/samba/sbin:/opt/schily/bin:/opt/snort/bin:/opt/squid/bin:/opt/squid/sbin:/opt/thunderbird/bin:/opt/tomcat/bin:/opt/tomcat/sbin:/opt/unrealircd/bin:/opt/validator/bin:/opt/wwwoffle/bin:/opt/wwwoffle/sbin:/opt/xfce4/bin:/opt/xfce4/sbin:/opt/xjdic/bin:/usr/bin
+[9-ERROR] Insert: -O1
+[9-ERROR] Insert: -pipe
+[9-ERROR] Insert: -march=i486
+[9-ERROR] Copy:   --version
+[9-ERROR] Append: -s
+[9-ERROR] New Command: gcc-42 -O1 -pipe -march=i486 --version -s
+[9-ERROR] gcc-42 (GCC) 4.2.0
+[9-ERROR] Copyright (C) 2007 Free Software Foundation, Inc.
+[9-ERROR] This is free software; see the source for copying conditions.  There is NO
+[9-ERROR] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[9-ERROR] 
+[9-ERROR] [ writing debug log to /ROCK/src.pybliographer.1181969102.4040.833437043/cmd_wrapper.log ]
+[9-ERROR] Running main build function 'build_this_package' ...
+[9-ERROR] Extracting python-bibtex-1.2.2.tar.bz2 (tar -v --use-compress-program=bzip2 -xf) ... 
+[9-ERROR] Fixing ownership and permissions ...
+[9-ERROR] Removing CVS and .svn directories ...
+[9-ERROR] Changeing into /ROCK/src.pybliographer.1181969102.4040.833437043/python-bibtex-1.2.2 ...
+[9-ERROR] Creating /opt/gnome2/<..> if required ...
+[9-ERROR] running build
+[9-ERROR] running build_ext
+[9-ERROR] building '_bibtex' extension
+[9-ERROR] creating build
+[9-ERROR] creating build/temp.linux-i686-2.5
+[9-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -DG_LOG_DOMAIN="BibTeX" -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c accents.c -o build/temp.linux-i686-2.5/accents.o
+[9-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -DG_LOG_DOMAIN="BibTeX" -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c author.c -o build/temp.linux-i686-2.5/author.o
+[9-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -DG_LOG_DOMAIN="BibTeX" -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c bibparse.c -o build/temp.linux-i686-2.5/bibparse.o
+[9-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -DG_LOG_DOMAIN="BibTeX" -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c biblex.c -o build/temp.linux-i686-2.5/biblex.o
+[9-ERROR] lex.bibtex_parser_.c:1165: warning: 'yyunput' defined but not used
+[9-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -DG_LOG_DOMAIN="BibTeX" -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c bibtex.c -o build/temp.linux-i686-2.5/bibtex.o
+[9-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -DG_LOG_DOMAIN="BibTeX" -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c bibtexmodule.c -o build/temp.linux-i686-2.5/bibtexmodule.o
+[9-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -DG_LOG_DOMAIN="BibTeX" -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c entry.c -o build/temp.linux-i686-2.5/entry.o
+[9-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -DG_LOG_DOMAIN="BibTeX" -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c field.c -o build/temp.linux-i686-2.5/field.o
+[9-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -DG_LOG_DOMAIN="BibTeX" -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c reverse.c -o build/temp.linux-i686-2.5/reverse.o
+[9-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -DG_LOG_DOMAIN="BibTeX" -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c source.c -o build/temp.linux-i686-2.5/source.o
+[9-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -DG_LOG_DOMAIN="BibTeX" -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c stringutils.c -o build/temp.linux-i686-2.5/stringutils.o
+[9-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -DG_LOG_DOMAIN="BibTeX" -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c struct.c -o build/temp.linux-i686-2.5/struct.o
+[9-ERROR] creating build/lib.linux-i686-2.5
+[9-ERROR] gcc-42 -pthread -shared build/temp.linux-i686-2.5/accents.o build/temp.linux-i686-2.5/author.o build/temp.linux-i686-2.5/bibparse.o build/temp.linux-i686-2.5/biblex.o build/temp.linux-i686-2.5/bibtex.o build/temp.linux-i686-2.5/bibtexmodule.o build/temp.linux-i686-2.5/entry.o build/temp.linux-i686-2.5/field.o build/temp.linux-i686-2.5/reverse.o build/temp.linux-i686-2.5/source.o build/temp.linux-i686-2.5/stringutils.o build/temp.linux-i686-2.5/struct.o -L/opt/gnome2/lib -L/usr/lib -lglib-2.0 -lrecode -lpython2.5 -o build/lib.linux-i686-2.5/_bibtex.so
+[9-ERROR] building '_recode' extension
+[9-ERROR] gcc-42 -fno-strict-aliasing -DNDEBUG -g -O3 -Wall -Wstrict-prototypes -fPIC -I/opt/gnome2/include/glib-2.0 -I/opt/gnome2/lib/glib-2.0/include -I/usr/include/python2.5 -c recodemodule.c -o build/temp.linux-i686-2.5/recodemodule.o
+[9-ERROR] gcc-42 -pthread -shared build/temp.linux-i686-2.5/recodemodule.o -L/usr/lib -lrecode -lpython2.5 -o build/lib.linux-i686-2.5/_recode.so
+[9-ERROR] running install
+[9-ERROR] running check
+[9-ERROR] ./scripts/Build-Pkg: line 1:  9908 Aborted                 (core dumped) python setup.py build install --prefix /opt/gnome2
+[9-ERROR] --- BUILD ERROR ---
 

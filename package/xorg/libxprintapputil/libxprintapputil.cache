@@ -20,25 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168535663 Thu Jan 11 18:14:23 2007 (5)
-[TIMESTAMP] 1168727819 Sat Jan 13 23:36:59 2007 (9)
+[TIMESTAMP] 1180916289 Mon Jun  4 02:18:09 2007 (5)
+[TIMESTAMP] 1181282739 Fri Jun  8 08:05:39 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-libxprintapputil.log 9-libxprintapputil.log
 
-[BUILDTIME] 2034 (5)
-[BUILDTIME] 2697 (9)
+[BUILDTIME] 2796 (5)
+[BUILDTIME] 3599 (9)
 [SIZE] 0.03 MB, 9 files
 
-[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils
-[DEP] bzip2 coreutils cvm diffutils findutils gawk gcc40 gcc40:dev
-[DEP] glibc23 glibc23:dev grep libice libice:dev libsm libsm:dev
-[DEP] libx11 libx11:dev libxau libxau:dev libxdmcp:dev libxext:dev
-[DEP] libxp libxp:dev libxprintutil libxprintutil:dev libxt libxt:dev
-[DEP] linux-libc-headers:dev make mktemp net-tools pkgconfig printproto:dev
-[DEP] rrdtool sed sysfiles tar util-linux util-macros xproto:dev
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm diffutils findutils gawk gcc42 gcc42:dev glibc26
+[DEP] glibc26:dev grep libice libice:dev libsm libsm:dev libx11 libx11:dev
+[DEP] libxau libxau:dev libxcb:dev libxdmcp:dev libxext:dev libxp libxp:dev
+[DEP] libxprintutil libxprintutil:dev libxt libxt:dev linux26-headers:dev
+[DEP] ltrace make mktemp net-tools pkgconfig printproto:dev sed sysfiles
+[DEP] tar util-linux util-macros xmame xproto:dev
 
 [PROVIDES] libXprintAppUtil.a libXprintAppUtil.so
 

@@ -40,3 +40,7 @@
 [D] 3061048105 freedict-database-20050726.xml !http://www.freedict.org/freedict-database.xml 
 
 #include package/import/freedict/hosted_freedict.desc
+
+[CD] <COPY> rm $confdir/*.cache
+[CD] <COPY> cp $cachedir/*.cache $confdir/
+

@@ -20,24 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168568931 Fri Jan 12 03:28:51 2007 (5)
-[TIMESTAMP] 1168766663 Sun Jan 14 10:24:23 2007 (9)
+[TIMESTAMP] 1180960334 Mon Jun  4 14:32:14 2007 (5)
+[TIMESTAMP] 1181353980 Sat Jun  9 03:53:00 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-hal.log 9-hal.log
 
-[BUILDTIME] 8959 (5)
-[BUILDTIME] 9604 (9)
-[SIZE] 0.86 MB, 138 files
+[BUILDTIME] 10975 (5)
+[BUILDTIME] 11832 (9)
+[SIZE] 1.40 MB, 194 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils cpan-xml-parser
-[DEP] cvm dbus dbus-glib dbus-glib:dev dbus:dev diffutils doxygen
-[DEP] expat expat:dev findutils gawk gcc40 gcc40:dev gettext glib
-[DEP] glib:dev glibc23 glibc23:dev gnome2-dirtree grep libusb libusb:dev
-[DEP] linux-libc-headers:dev m4 make mktemp net-tools patch perl5 pkgconfig
-[DEP] python rrdtool sed sysfiles tar udev util-linux
+[DEP] 00-dirtree bash2 binutils bzip2 coreutils cpan-xml-parser cvm
+[DEP] dbus dbus-glib dbus-glib:dev dbus:dev diffutils expat expat:dev
+[DEP] findutils gawk gcc42 gcc42:dev gettext glib glib:dev glibc26
+[DEP] glibc26:dev gnome-libs14 gnome14-dirtree gnome2-dirtree grep libelf
+[DEP] libusb libusb:dev libxml2 linux26-headers:dev ltrace m4 make mktemp
+[DEP] net-tools patch pciutils:dev perl5 pkgconfig policykit policykit:dev
+[DEP] python sed sysfiles tar udev udev:dev util-linux xmame
 
 [PROVIDES] hal-device hal-device-manager hal-find-by-capability
 [PROVIDES] hal-find-by-property hal-get-property hal-set-property hald

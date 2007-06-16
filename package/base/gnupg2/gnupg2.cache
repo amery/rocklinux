@@ -20,27 +20,28 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168597613 Fri Jan 12 11:26:53 2007 (5)
-[TIMESTAMP] 1168799648 Sun Jan 14 19:34:08 2007 (9)
+[TIMESTAMP] 1180997042 Tue Jun  5 00:44:02 2007 (5)
+[TIMESTAMP] 1181458591 Sun Jun 10 08:56:31 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-gnupg2.log 9-gnupg2.log
 
-[BUILDTIME] 10905 (5)
-[BUILDTIME] 11350 (9)
-[SIZE] 3.04 MB, 52 files
+[BUILDTIME] 14013 (5)
+[BUILDTIME] 14524 (9)
+[SIZE] 3.25 MB, 55 files
 
-[DEP] 00-dirtree bash2 binutils bison bzip2 bzip2:dev coreutils curl
-[DEP] curl:dev cvm diffutils findutils gawk gcc40 gcc40:dev gettext glibc23
-[DEP] glibc23:dev grep libassuan libassuan:dev libgcrypt libgcrypt:dev
-[DEP] libgpg-error libgpg-error:dev libidn libksba libksba:dev libusb
-[DEP] libusb:dev linux-libc-headers:dev make mktemp ncurses net-tools
-[DEP] netpbm openssl patch pth pth:dev readline readline:dev rrdtool sed
-[DEP] sysfiles tar texinfo twoftpd ucspi-unix util-linux zlib zlib:dev
+[DEP] 00-dirtree bash2 binutils bison bzip2 bzip2:dev coreutils
+[DEP] curl curl:dev cvm cyrus-sasl2 diffutils findutils gawk gcc42
+[DEP] gcc42:dev gettext glibc26 glibc26:dev grep libassuan libassuan:dev
+[DEP] libgcrypt libgcrypt:dev libgpg-error libgpg-error:dev libidn libksba
+[DEP] libksba:dev libusb libusb:dev linux26-headers:dev ltrace make mktemp
+[DEP] ncurses net-tools openldap openldap:dev openssl patch pth pth:dev
+[DEP] readline readline:dev sed sysfiles tar texinfo twoftpd ucspi-unix
+[DEP] util-linux xmame zlib zlib:dev
 
-[PROVIDES] addgnupghome gpg-agent gpg-connect-agent gpg2 gpgconf gpgkey2ssh
-[PROVIDES] gpgparsemail gpgsm gpgsm-gencert.sh gpgv2 kbxutil scdaemon
-[PROVIDES] watchgnupg
+[PROVIDES] addgnupghome applygnupgdefaults gpg-agent gpg-connect-agent
+[PROVIDES] gpg2 gpgconf gpgkey2ssh gpgparsemail gpgsm gpgsm-gencert.sh
+[PROVIDES] gpgv2 kbxutil scdaemon watchgnupg
 

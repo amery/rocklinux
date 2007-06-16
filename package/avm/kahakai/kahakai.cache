@@ -20,30 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168680157 Sat Jan 13 10:22:37 2007 (5)
-[TIMESTAMP] 1168888968 Mon Jan 15 20:22:48 2007 (9)
+[TIMESTAMP] 1181152040 Wed Jun  6 19:47:20 2007 (5) ERROR
+[TIMESTAMP] 1181605027 Tue Jun 12 01:37:07 2007 (9) ERROR
+[TIMESTAMP] 1181828964 Thu Jun 14 15:49:24 2007 (5) ERROR
+[TIMESTAMP] 1181912298 Fri Jun 15 14:58:18 2007 (9) ERROR
+[TIMESTAMP] 1181952618 Sat Jun 16 02:10:18 2007 (5) ERROR
+[TIMESTAMP] 1181974379 Sat Jun 16 08:12:59 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-kahakai.log 9-kahakai.log
+[LOGS] 5-kahakai.err 9-kahakai.err
 
-[BUILDTIME] 17044 (5)
-[BUILDTIME] 17327 (9)
-[SIZE] 3.52 MB, 42 files
+[BUILDTIME] 4946 (5) ERROR
+[BUILDTIME] 4949 (9) ERROR
+[BUILDTIME] 4992 (5) ERROR
+[BUILDTIME] 5027 (9) ERROR
+[BUILDTIME] 4848 (5) ERROR
+[BUILDTIME] 4860 (9) ERROR
 
-[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils boost:dev
-[DEP] bzip2 coreutils cvm diffutils expat expat:dev findutils fontconfig
-[DEP] fontconfig:dev freetype freetype:dev gawk gcc40 gcc40:dev
-[DEP] glibc23 glibc23:dev grep imake imlib2 imlib2:dev libice libsm
-[DEP] libx11 libx11:dev libxau libxau:dev libxdmcp libxdmcp:dev libxext
-[DEP] libxext:dev libxft libxft:dev libxinerama libxinerama:dev libxrandr
-[DEP] libxrandr:dev libxrender libxrender:dev libxt linux-libc-headers:dev
-[DEP] make mktemp net-tools netpbm patch perl5 pkgconfig python python:dev
-[DEP] randrproto:dev renderproto:dev rrdtool sed swig sysfiles tar tcl tk
-[DEP] twm twoftpd ucspi-unix util-linux xextproto:dev xineramaproto:dev
-[DEP] xorg-cf-files xproto:dev zlib
 
-[PROVIDES] hsetroot kahakai libkahakai_swig_python.a
-[PROVIDES] libkahakai_swig_python.so
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[5-ERROR] rm -f .dummy.cpp
+[5-ERROR] if /bin/sh ../libtool --mode=compile g++-42 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2 -I/usr/X11R7/include -I/opt/e17/include -I/usr/include/python2.5/ -I../src -DDEFAULTSTYLE=\"/usr/share/kahakai/styles/Default.style\" -DDEFAULTMENU=\"/usr/share/kahakai/menu\" -DDEFAULTACTION=\"/usr/share/kahakai/actions/action\" -DDEFAULTRCFILE=\"/usr/share/kahakai/config\" -DDEFAULTSCRIPTDIR=\"/usr/share/kahakai/scripts\" -DPKGDATADIR=\"/usr/share/kahakai\" -DDEFAULTSCRIPTCONFIG=\"/usr/share/kahakai/home_userconfig.py\" -DPKGLIBDIR=\"/usr/lib/kahakai\" -DGDB_COMMANDS_FILE='"/usr/share/kahakai/cmd.gdb"'  -g -O0 -ffast-math -pipe -Wall -pthread -MT swig_wrapper_python.lo -MD -MP -MF ".deps/swig_wrapper_python.Tpo" -c -o swig_wrapper_python.lo swig_wrapper_python.cc; \
+[5-ERROR] 	then mv -f ".deps/swig_wrapper_python.Tpo" ".deps/swig_wrapper_python.Plo"; else rm -f ".deps/swig_wrapper_python.Tpo"; exit 1; fi
+[5-ERROR] mkdir .libs
+[5-ERROR]  g++-42 -DHAVE_CONFIG_H -I. -I. -I. -I/usr/include/freetype2 -I/usr/X11R7/include -I/opt/e17/include -I/usr/include/python2.5/ -I../src -DDEFAULTSTYLE=\"/usr/share/kahakai/styles/Default.style\" -DDEFAULTMENU=\"/usr/share/kahakai/menu\" -DDEFAULTACTION=\"/usr/share/kahakai/actions/action\" -DDEFAULTRCFILE=\"/usr/share/kahakai/config\" -DDEFAULTSCRIPTDIR=\"/usr/share/kahakai/scripts\" -DPKGDATADIR=\"/usr/share/kahakai\" -DDEFAULTSCRIPTCONFIG=\"/usr/share/kahakai/home_userconfig.py\" -DPKGLIBDIR=\"/usr/lib/kahakai\" -DGDB_COMMANDS_FILE=\"/usr/share/kahakai/cmd.gdb\" -g -O0 -ffast-math -pipe -Wall -pthread -MT swig_wrapper_python.lo -MD -MP -MF .deps/swig_wrapper_python.Tpo -c swig_wrapper_python.cc  -fPIC -DPIC -o .libs/swig_wrapper_python.o
+[5-ERROR] swig_wrapper_python.cc: In function 'int SWIG_Python_ConvertPtr(PyObject*, void**, swig_type_info*, int)':
+[5-ERROR] swig_wrapper_python.cc:1231: error: invalid conversion from 'const char*' to 'char*'
+[5-ERROR] swig_wrapper_python.cc: In function 'void SWIG_Python_FixMethods(PyMethodDef*, swig_const_info*, swig_type_info**, swig_type_info**)':
+[5-ERROR] swig_wrapper_python.cc:56569: error: invalid conversion from 'const char*' to 'char*'
+[5-ERROR] make[2]: *** [swig_wrapper_python.lo] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kahakai.1181952567.17091.1627887995/kahakai-0.6.2/src'
+[5-ERROR] make[1]: *** [all] Error 2
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kahakai.1181952567.17091.1627887995/kahakai-0.6.2/src'
+[5-ERROR] make: *** [all-recursive] Error 1
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] Menu.hh:23: Warning(315): Nothing known about 'boost::shared_ptr'.
+[9-ERROR] rm -f .dummy.cpp
+[9-ERROR] if /bin/sh ../libtool --mode=compile g++-42 -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2 -I/usr/X11R7/include -I/opt/e17/include -I/usr/include/python2.5/ -I../src -DDEFAULTSTYLE=\"/usr/share/kahakai/styles/Default.style\" -DDEFAULTMENU=\"/usr/share/kahakai/menu\" -DDEFAULTACTION=\"/usr/share/kahakai/actions/action\" -DDEFAULTRCFILE=\"/usr/share/kahakai/config\" -DDEFAULTSCRIPTDIR=\"/usr/share/kahakai/scripts\" -DPKGDATADIR=\"/usr/share/kahakai\" -DDEFAULTSCRIPTCONFIG=\"/usr/share/kahakai/home_userconfig.py\" -DPKGLIBDIR=\"/usr/lib/kahakai\" -DGDB_COMMANDS_FILE='"/usr/share/kahakai/cmd.gdb"'  -g -O0 -ffast-math -pipe -Wall -pthread -MT swig_wrapper_python.lo -MD -MP -MF ".deps/swig_wrapper_python.Tpo" -c -o swig_wrapper_python.lo swig_wrapper_python.cc; \
+[9-ERROR] 	then mv -f ".deps/swig_wrapper_python.Tpo" ".deps/swig_wrapper_python.Plo"; else rm -f ".deps/swig_wrapper_python.Tpo"; exit 1; fi
+[9-ERROR] mkdir .libs
+[9-ERROR]  g++-42 -DHAVE_CONFIG_H -I. -I. -I. -I/usr/include/freetype2 -I/usr/X11R7/include -I/opt/e17/include -I/usr/include/python2.5/ -I../src -DDEFAULTSTYLE=\"/usr/share/kahakai/styles/Default.style\" -DDEFAULTMENU=\"/usr/share/kahakai/menu\" -DDEFAULTACTION=\"/usr/share/kahakai/actions/action\" -DDEFAULTRCFILE=\"/usr/share/kahakai/config\" -DDEFAULTSCRIPTDIR=\"/usr/share/kahakai/scripts\" -DPKGDATADIR=\"/usr/share/kahakai\" -DDEFAULTSCRIPTCONFIG=\"/usr/share/kahakai/home_userconfig.py\" -DPKGLIBDIR=\"/usr/lib/kahakai\" -DGDB_COMMANDS_FILE=\"/usr/share/kahakai/cmd.gdb\" -g -O0 -ffast-math -pipe -Wall -pthread -MT swig_wrapper_python.lo -MD -MP -MF .deps/swig_wrapper_python.Tpo -c swig_wrapper_python.cc  -fPIC -DPIC -o .libs/swig_wrapper_python.o
+[9-ERROR] swig_wrapper_python.cc: In function 'int SWIG_Python_ConvertPtr(PyObject*, void**, swig_type_info*, int)':
+[9-ERROR] swig_wrapper_python.cc:1231: error: invalid conversion from 'const char*' to 'char*'
+[9-ERROR] swig_wrapper_python.cc: In function 'void SWIG_Python_FixMethods(PyMethodDef*, swig_const_info*, swig_type_info**, swig_type_info**)':
+[9-ERROR] swig_wrapper_python.cc:56569: error: invalid conversion from 'const char*' to 'char*'
+[9-ERROR] make[2]: *** [swig_wrapper_python.lo] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kahakai.1181974329.14632.4149625545/kahakai-0.6.2/src'
+[9-ERROR] make[1]: *** [all] Error 2
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kahakai.1181974329.14632.4149625545/kahakai-0.6.2/src'
+[9-ERROR] make: *** [all-recursive] Error 1
+[9-ERROR] --- BUILD ERROR ---
 

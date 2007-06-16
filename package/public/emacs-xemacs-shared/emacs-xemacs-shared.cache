@@ -20,27 +20,28 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168562361 Fri Jan 12 01:39:21 2007 (5)
-[TIMESTAMP] 1168759156 Sun Jan 14 08:19:16 2007 (9)
+[TIMESTAMP] 1180951889 Mon Jun  4 12:11:29 2007 (5)
+[TIMESTAMP] 1181342055 Sat Jun  9 00:34:15 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-emacs-xemacs-shared.log 9-emacs-xemacs-shared.log
 
-[BUILDTIME] 4707 (5)
-[BUILDTIME] 5349 (9)
+[BUILDTIME] 6361 (5)
+[BUILDTIME] 7172 (9)
 [SIZE] 0.11 MB, 13 files
 
-[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils
-[DEP] bzip2 coreutils cvm diffutils findutils gawk gcc40 gcc40:dev
-[DEP] glibc23 glibc23:dev grep imake libelf:dev libice libice:dev
-[DEP] libjpeg libjpeg:dev libpng libpng:dev libsm libsm:dev libtiff
+[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
+[DEP] coreutils cvm cyrus-sasl2 diffutils findutils gawk gcc42
+[DEP] gcc42:dev glibc26 glibc26:dev grep imake libelf:dev libice
+[DEP] libice:dev libjpeg libjpeg:dev libpng:dev libsm libsm:dev libtiff
 [DEP] libtiff:dev libx11 libx11:dev libxau libxau:dev libxaw libxaw:dev
-[DEP] libxdmcp libxext libxmu libxp libxpm libxpm:dev libxt libxt:dev
-[DEP] linux-libc-headers:dev make mktemp nas nas:dev ncurses ncurses:dev
-[DEP] net-tools patch printproto:dev rrdtool sed sysfiles tar xextproto:dev
-[DEP] xorg-cf-files xproto:dev zlib zlib:dev
+[DEP] libxcb libxdmcp libxext libxmu libxp libxpm libxpm:dev libxt
+[DEP] libxt:dev linux26-headers:dev ltrace make mktemp nas nas:dev
+[DEP] ncurses ncurses:dev net-tools openldap openldap:dev openssl patch
+[DEP] printproto:dev sed sysfiles tar xextproto:dev xmame xorg-cf-files
+[DEP] xproto:dev zlib zlib:dev
 
 [PROVIDES] b2m ellcc gnuattach gnuclient gnudoit ootags rcs-checkin
 

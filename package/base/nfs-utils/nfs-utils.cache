@@ -20,24 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168638873 Fri Jan 12 22:54:33 2007 (5)
-[TIMESTAMP] 1168844622 Mon Jan 15 08:03:42 2007 (9)
+[TIMESTAMP] 1181070779 Tue Jun  5 21:12:59 2007 (5)
+[TIMESTAMP] 1181539810 Mon Jun 11 07:30:10 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-nfs-utils.log 9-nfs-utils.log
 
-[BUILDTIME] 4075 (5)
-[BUILDTIME] 4352 (9)
-[SIZE] 0.31 MB, 49 files
+[BUILDTIME] 7539 (5)
+[BUILDTIME] 7850 (9)
+[SIZE] 0.39 MB, 50 files
 
 [DEP] 00-dirtree alien bash2 binutils bzip2 coreutils cvm cyrus-sasl2
-[DEP] diffutils findutils gawk gcc40 gcc40:dev glibc23 glibc23:dev
-[DEP] grep libevent libevent:dev libnfsidmap libnfsidmap:dev
-[DEP] linux-libc-headers:dev m4 make mktemp net-tools netpbm openldap
-[DEP] openssl patch rrdtool sed sysfiles tar tcp_wrappers:dev
+[DEP] diffutils e2fsprogs e2fsprogs:dev findutils gawk gcc42 gcc42:dev
+[DEP] glibc26 glibc26:dev grep libevent libevent:dev libnfsidmap
+[DEP] libnfsidmap:dev linux26-headers:dev ltrace m4 make mktemp net-tools
+[DEP] openldap openldap:dev openssl sed sysfiles tar tcp_wrappers:dev
+[DEP] util-linux xmame
 
-[PROVIDES] exportfs nfsstat nhfsgraph nhfsnums nhfsrun nhfsstone rpc.idmapd
-[PROVIDES] rpc.lockd rpc.mountd rpc.nfsd rpc.statd showmount
+[PROVIDES] exportfs mount.nfs mount.nfs4 nfsstat rpc.idmapd rpc.mountd
+[PROVIDES] rpc.nfsd rpc.statd rpcdebug showmount sm-notify start-statd
+[PROVIDES] umount.nfs umount.nfs4
 

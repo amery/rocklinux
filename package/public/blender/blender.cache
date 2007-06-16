@@ -20,27 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168662032 Sat Jan 13 05:20:32 2007 (5) ERROR
-[TIMESTAMP] 1168869581 Mon Jan 15 14:59:41 2007 (9)
-[TIMESTAMP] 1168950249 Tue Jan 16 13:24:09 2007 (5)
+[TIMESTAMP] 1181104755 Wed Jun  6 06:39:15 2007 (5) ERROR
+[TIMESTAMP] 1181580335 Mon Jun 11 18:45:35 2007 (9) ERROR
+[TIMESTAMP] 1181825460 Thu Jun 14 14:51:00 2007 (5) ERROR
+[TIMESTAMP] 1181907976 Fri Jun 15 13:46:16 2007 (9) ERROR
+[TIMESTAMP] 1181950944 Sat Jun 16 01:42:24 2007 (5) ERROR
+[TIMESTAMP] 1181972470 Sat Jun 16 07:41:10 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-blender.log 9-blender.log
+[LOGS] 5-blender.err 9-blender.err
 
-[BUILDTIME] 2526 (5) ERROR
-[BUILDTIME] 53398 (9)
-[BUILDTIME] 53249 (5)
-[SIZE] 11.49 MB, 219 files
+[BUILDTIME] 3211 (5) ERROR
+[BUILDTIME] 3197 (9) ERROR
+[BUILDTIME] 3212 (5) ERROR
+[BUILDTIME] 3208 (9) ERROR
+[BUILDTIME] 3143 (5) ERROR
+[BUILDTIME] 3144 (9) ERROR
 
-[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
-[DEP] coreutils cvm findutils freetype freetype:dev gawk gcc40 gcc40:dev
-[DEP] gettext glibc23 glibc23:dev grep libcdaudio:dev libice libjpeg
-[DEP] libjpeg:dev libpng libpng:dev libsdl libsdl:dev libsm libtiff:dev
-[DEP] libx11 libx11:dev libxau libxdmcp libxext libxi libxi:dev libxt
-[DEP] linux-libc-headers:dev mesalib mesalib:dev mktemp nas openal
-[DEP] openal:dev openexr openexr:dev pth:dev python python:dev rrdtool
-[DEP] scons sed sysfiles tar tcl tk xproto:dev zlib zlib:dev
 
+[5-ERROR]                  from intern/SoundSystem/SND_SoundObject.h:40,
+[5-ERROR]                  from intern/SoundSystem/SND_WaveCache.h:46,
+[5-ERROR]                  from intern/SoundSystem/intern/SND_WaveCache.cpp:45:
+[5-ERROR] intern/moto/include/MT_Quaternion.h: In member function 'void MT_Quaternion::setRotation(const MT_Vector3&, MT_Scalar)':
+[5-ERROR] intern/moto/include/MT_Quaternion.h:71: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] intern/moto/include/MT_Quaternion.h:71: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] In file included from intern/SoundSystem/SND_Object.h:41,
+[5-ERROR]                  from intern/SoundSystem/SND_SoundObject.h:40,
+[5-ERROR]                  from intern/SoundSystem/SND_WaveCache.h:46,
+[5-ERROR]                  from intern/SoundSystem/intern/SND_WaveCache.cpp:45:
+[5-ERROR] intern/moto/include/MT_Matrix3x3.h: In member function 'void MT_Matrix3x3::setRotation(const MT_Quaternion&)':
+[5-ERROR] intern/moto/include/MT_Matrix3x3.h:114: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] intern/moto/include/MT_Matrix3x3.h:114: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] [94mCompiling[0m ==> '[92mSND_WaveSlot.cpp'[0m
+[5-ERROR] [94mCompiling[0m ==> '[92mSND_OpenALDevice.cpp'[0m
+[5-ERROR] In file included from intern/moto/include/MT_Matrix3x3.h:52,
+[5-ERROR]                  from intern/SoundSystem/SND_Object.h:41,
+[5-ERROR]                  from intern/SoundSystem/SND_SoundObject.h:40,
+[5-ERROR]                  from intern/SoundSystem/SND_IAudioDevice.h:35,
+[5-ERROR]                  from intern/SoundSystem/intern/SND_AudioDevice.h:35,
+[5-ERROR]                  from intern/SoundSystem/openal/SND_OpenALDevice.h:35,
+[5-ERROR]                  from intern/SoundSystem/openal/SND_OpenALDevice.cpp:38:
+[5-ERROR] intern/moto/include/MT_Quaternion.h: In member function 'void MT_Quaternion::setRotation(const MT_Vector3&, MT_Scalar)':
+[5-ERROR] intern/moto/include/MT_Quaternion.h:71: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] intern/moto/include/MT_Quaternion.h:71: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] In file included from intern/SoundSystem/SND_Object.h:41,
+[5-ERROR]                  from intern/SoundSystem/SND_SoundObject.h:40,
+[5-ERROR]                  from intern/SoundSystem/SND_IAudioDevice.h:35,
+[5-ERROR]                  from intern/SoundSystem/intern/SND_AudioDevice.h:35,
+[5-ERROR]                  from intern/SoundSystem/openal/SND_OpenALDevice.h:35,
+[5-ERROR]                  from intern/SoundSystem/openal/SND_OpenALDevice.cpp:38:
+[5-ERROR] intern/moto/include/MT_Matrix3x3.h: In member function 'void MT_Matrix3x3::setRotation(const MT_Quaternion&)':
+[5-ERROR] intern/moto/include/MT_Matrix3x3.h:114: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] intern/moto/include/MT_Matrix3x3.h:114: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] In file included from intern/SoundSystem/openal/SND_OpenALDevice.cpp:47:
+[5-ERROR] /usr/include/AL/alc.h: At global scope:
+[5-ERROR] /usr/include/AL/alc.h:190: error: '<anonymous>' has incomplete type
+[5-ERROR] /usr/include/AL/alc.h:190: error: invalid use of 'ALCvoid'
+[5-ERROR] /usr/include/AL/alc.h:251: error: '<anonymous>' has incomplete type
+[5-ERROR] /usr/include/AL/alc.h:251: error: invalid use of 'ALCvoid'
+[5-ERROR] intern/SoundSystem/openal/SND_OpenALDevice.cpp: In member function 'virtual SND_WaveSlot* SND_OpenALDevice::LoadSample(const STR_String&, void*, int)':
+[5-ERROR] intern/SoundSystem/openal/SND_OpenALDevice.cpp:433: warning: 'alutLoadWAVMemory' is deprecated (declared at /usr/include/AL/alut.h:114)
+[5-ERROR] intern/SoundSystem/openal/SND_OpenALDevice.cpp:433: warning: 'alutLoadWAVMemory' is deprecated (declared at /usr/include/AL/alut.h:114)
+[5-ERROR] intern/SoundSystem/openal/SND_OpenALDevice.cpp:448: warning: 'alutLoadWAVFile' is deprecated (declared at /usr/include/AL/alut.h:113)
+[5-ERROR] intern/SoundSystem/openal/SND_OpenALDevice.cpp:448: warning: 'alutLoadWAVFile' is deprecated (declared at /usr/include/AL/alut.h:113)
+[5-ERROR] intern/SoundSystem/openal/SND_OpenALDevice.cpp:476: warning: 'alutUnloadWAV' is deprecated (declared at /usr/include/AL/alut.h:116)
+[5-ERROR] intern/SoundSystem/openal/SND_OpenALDevice.cpp:476: warning: 'alutUnloadWAV' is deprecated (declared at /usr/include/AL/alut.h:116)
+[5-ERROR] scons: *** [/ROCK/loop/src.blender.1181950906.3258.4161569442/build/linux2/intern/SoundSystem/openal/SND_OpenALDevice.o] Error 1
+[5-ERROR] scons: building terminated because of errors.
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR]                  from intern/SoundSystem/SND_SoundObject.h:40,
+[9-ERROR]                  from intern/SoundSystem/SND_WaveCache.h:46,
+[9-ERROR]                  from intern/SoundSystem/intern/SND_WaveCache.cpp:45:
+[9-ERROR] intern/moto/include/MT_Quaternion.h: In member function 'void MT_Quaternion::setRotation(const MT_Vector3&, MT_Scalar)':
+[9-ERROR] intern/moto/include/MT_Quaternion.h:71: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] intern/moto/include/MT_Quaternion.h:71: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] In file included from intern/SoundSystem/SND_Object.h:41,
+[9-ERROR]                  from intern/SoundSystem/SND_SoundObject.h:40,
+[9-ERROR]                  from intern/SoundSystem/SND_WaveCache.h:46,
+[9-ERROR]                  from intern/SoundSystem/intern/SND_WaveCache.cpp:45:
+[9-ERROR] intern/moto/include/MT_Matrix3x3.h: In member function 'void MT_Matrix3x3::setRotation(const MT_Quaternion&)':
+[9-ERROR] intern/moto/include/MT_Matrix3x3.h:114: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] intern/moto/include/MT_Matrix3x3.h:114: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] [94mCompiling[0m ==> '[92mSND_WaveSlot.cpp'[0m
+[9-ERROR] [94mCompiling[0m ==> '[92mSND_OpenALDevice.cpp'[0m
+[9-ERROR] In file included from intern/moto/include/MT_Matrix3x3.h:52,
+[9-ERROR]                  from intern/SoundSystem/SND_Object.h:41,
+[9-ERROR]                  from intern/SoundSystem/SND_SoundObject.h:40,
+[9-ERROR]                  from intern/SoundSystem/SND_IAudioDevice.h:35,
+[9-ERROR]                  from intern/SoundSystem/intern/SND_AudioDevice.h:35,
+[9-ERROR]                  from intern/SoundSystem/openal/SND_OpenALDevice.h:35,
+[9-ERROR]                  from intern/SoundSystem/openal/SND_OpenALDevice.cpp:38:
+[9-ERROR] intern/moto/include/MT_Quaternion.h: In member function 'void MT_Quaternion::setRotation(const MT_Vector3&, MT_Scalar)':
+[9-ERROR] intern/moto/include/MT_Quaternion.h:71: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] intern/moto/include/MT_Quaternion.h:71: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] In file included from intern/SoundSystem/SND_Object.h:41,
+[9-ERROR]                  from intern/SoundSystem/SND_SoundObject.h:40,
+[9-ERROR]                  from intern/SoundSystem/SND_IAudioDevice.h:35,
+[9-ERROR]                  from intern/SoundSystem/intern/SND_AudioDevice.h:35,
+[9-ERROR]                  from intern/SoundSystem/openal/SND_OpenALDevice.h:35,
+[9-ERROR]                  from intern/SoundSystem/openal/SND_OpenALDevice.cpp:38:
+[9-ERROR] intern/moto/include/MT_Matrix3x3.h: In member function 'void MT_Matrix3x3::setRotation(const MT_Quaternion&)':
+[9-ERROR] intern/moto/include/MT_Matrix3x3.h:114: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] intern/moto/include/MT_Matrix3x3.h:114: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] In file included from intern/SoundSystem/openal/SND_OpenALDevice.cpp:47:
+[9-ERROR] /usr/include/AL/alc.h: At global scope:
+[9-ERROR] /usr/include/AL/alc.h:190: error: '<anonymous>' has incomplete type
+[9-ERROR] /usr/include/AL/alc.h:190: error: invalid use of 'ALCvoid'
+[9-ERROR] /usr/include/AL/alc.h:251: error: '<anonymous>' has incomplete type
+[9-ERROR] /usr/include/AL/alc.h:251: error: invalid use of 'ALCvoid'
+[9-ERROR] intern/SoundSystem/openal/SND_OpenALDevice.cpp: In member function 'virtual SND_WaveSlot* SND_OpenALDevice::LoadSample(const STR_String&, void*, int)':
+[9-ERROR] intern/SoundSystem/openal/SND_OpenALDevice.cpp:433: warning: 'alutLoadWAVMemory' is deprecated (declared at /usr/include/AL/alut.h:114)
+[9-ERROR] intern/SoundSystem/openal/SND_OpenALDevice.cpp:433: warning: 'alutLoadWAVMemory' is deprecated (declared at /usr/include/AL/alut.h:114)
+[9-ERROR] intern/SoundSystem/openal/SND_OpenALDevice.cpp:448: warning: 'alutLoadWAVFile' is deprecated (declared at /usr/include/AL/alut.h:113)
+[9-ERROR] intern/SoundSystem/openal/SND_OpenALDevice.cpp:448: warning: 'alutLoadWAVFile' is deprecated (declared at /usr/include/AL/alut.h:113)
+[9-ERROR] intern/SoundSystem/openal/SND_OpenALDevice.cpp:476: warning: 'alutUnloadWAV' is deprecated (declared at /usr/include/AL/alut.h:116)
+[9-ERROR] intern/SoundSystem/openal/SND_OpenALDevice.cpp:476: warning: 'alutUnloadWAV' is deprecated (declared at /usr/include/AL/alut.h:116)
+[9-ERROR] scons: *** [/ROCK/loop/src.blender.1181972434.6588.2938899655/build/linux2/intern/SoundSystem/openal/SND_OpenALDevice.o] Error 1
+[9-ERROR] scons: building terminated because of errors.
+[9-ERROR] --- BUILD ERROR ---
 

@@ -20,31 +20,29 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168543918 Thu Jan 11 20:31:58 2007 (5)
-[TIMESTAMP] 1168738396 Sun Jan 14 02:33:16 2007 (9) ERROR
-[TIMESTAMP] 1168958662 Tue Jan 16 15:44:22 2007 (9) ERROR
-[TIMESTAMP] 1169128956 Thu Jan 18 15:02:36 2007 (9) ERROR
+[TIMESTAMP] 1180927762 Mon Jun  4 05:29:22 2007 (5)
+[TIMESTAMP] 1181311398 Fri Jun  8 16:03:18 2007 (9) ERROR
+[TIMESTAMP] 1181854608 Thu Jun 14 22:56:48 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-isdn4k-utils.log 9-isdn4k-utils.err
 
-[BUILDTIME] 16222 (5)
-[BUILDTIME] 17359 (9) ERROR
-[BUILDTIME] 17425 (9) ERROR
-[BUILDTIME] 17377 (9) ERROR
+[BUILDTIME] 19763 (5)
+[BUILDTIME] 20933 (9) ERROR
+[BUILDTIME] 41720 (9) ERROR
 [SIZE] 2.40 MB, 126 files
 
 [DEP] 00-dirtree applewmproto applewmproto:dev autoconf automake19
-[DEP] bash2 binutils bzip2 coreutils cvm diffutils findutils gawk gcc40
-[DEP] gcc40:dev glibc23 glibc23:dev grep imake libice libice:dev libsm
-[DEP] libsm:dev libtool libx11 libx11:dev libxau libxaw libxaw:dev
+[DEP] bash2 binutils bzip2 coreutils cvm diffutils findutils gawk gcc42
+[DEP] gcc42:dev glibc26 glibc26:dev grep imake libice libice:dev libsm
+[DEP] libsm:dev libtool libx11 libx11:dev libxau libxaw libxaw:dev libxcb
 [DEP] libxdmcp libxext libxmu libxmu:dev libxp libxpm libxt libxt:dev
-[DEP] linux-libc-headers:dev m4 make mktemp ncurses ncurses:dev net-tools
-[DEP] netpbm patch perl5 procps rrdtool sed sysfiles tar tcl tcl:dev
-[DEP] texinfo twoftpd ucspi-unix util-linux xbitmaps:dev xextproto:dev
-[DEP] xfig xorg-cf-files xorg-docs xorg-server xproto:dev xterm
+[DEP] linux26-headers:dev ltrace m4 make mktemp ncurses ncurses:dev
+[DEP] net-tools patch perl5 procps sed sysfiles tar tcl tcl:dev texinfo
+[DEP] twoftpd ucspi-unix util-linux xbitmaps:dev xextproto:dev xfig xmame
+[DEP] xorg-cf-files xorg-docs xorg-server xproto:dev xterm
 
 [PROVIDES] autovbox avmcapictrl capifax capifaxrcvd capiinfo capiinit
 [PROVIDES] hisaxctrl icnctrl imon imontty ipppd ipppstats iprofd
@@ -55,25 +53,25 @@
 [PROVIDES] xisdnload xmonisdn
 
 [9-ERROR] test -z "/sbin" || mkdir -p -- "/sbin"
-[9-ERROR]   /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c 'rcapid' '/sbin/rcapid'
+[9-ERROR]   /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c 'rcapid' '/sbin/rcapid'
 [9-ERROR] make[2]: Nothing to be done for `install-data-am'.
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.isdn4k-utils.1169128741.3916.3231913534/isdn4k-utils/rcapid'
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.isdn4k-utils.1169128741.3916.3231913534/isdn4k-utils/rcapid'
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.isdn4k-utils.1169128741.3916.3231913534/isdn4k-utils/capifax'
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.isdn4k-utils.1169128741.3916.3231913534/isdn4k-utils/capifax'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.isdn4k-utils.1181852734.548.2873269155/isdn4k-utils/rcapid'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.isdn4k-utils.1181852734.548.2873269155/isdn4k-utils/rcapid'
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.isdn4k-utils.1181852734.548.2873269155/isdn4k-utils/capifax'
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.isdn4k-utils.1181852734.548.2873269155/isdn4k-utils/capifax'
 [9-ERROR] test -z "/usr/bin" || mkdir -p -- "/usr/bin"
-[9-ERROR]   /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c 'capifax' '/usr/bin/capifax'
-[9-ERROR]   /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c 'capifaxrcvd' '/usr/bin/capifaxrcvd'
+[9-ERROR]   /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c 'capifax' '/usr/bin/capifax'
+[9-ERROR]   /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c 'capifaxrcvd' '/usr/bin/capifaxrcvd'
 [9-ERROR] make[2]: Nothing to be done for `install-data-am'.
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.isdn4k-utils.1169128741.3916.3231913534/isdn4k-utils/capifax'
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.isdn4k-utils.1169128741.3916.3231913534/isdn4k-utils/capifax'
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.isdn4k-utils.1169128741.3916.3231913534/isdn4k-utils/doc'
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.isdn4k-utils.1169128741.3916.3231913534/isdn4k-utils/doc'
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.isdn4k-utils.1169128741.3916.3231913534/isdn4k-utils/FAQ'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.isdn4k-utils.1181852734.548.2873269155/isdn4k-utils/capifax'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.isdn4k-utils.1181852734.548.2873269155/isdn4k-utils/capifax'
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.isdn4k-utils.1181852734.548.2873269155/isdn4k-utils/doc'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.isdn4k-utils.1181852734.548.2873269155/isdn4k-utils/doc'
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.isdn4k-utils.1181852734.548.2873269155/isdn4k-utils/FAQ'
 [9-ERROR] 
 [9-ERROR] WARNING: package disabled because of config-error
 [9-ERROR] 
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.isdn4k-utils.1169128741.3916.3231913534/isdn4k-utils/FAQ'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.isdn4k-utils.1181852734.548.2873269155/isdn4k-utils/FAQ'
 [9-ERROR] Hook preconf is still marked as dirty ...
 [9-ERROR] Hook premake is still marked as dirty ...
 [9-ERROR] Hook inmake is still marked as dirty ...

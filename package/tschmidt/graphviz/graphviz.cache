@@ -20,44 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168619450 Fri Jan 12 17:30:50 2007 (5)
-[TIMESTAMP] 1168822664 Mon Jan 15 01:57:44 2007 (9)
+[TIMESTAMP] 1181035535 Tue Jun  5 11:25:35 2007 (5) ERROR
+[TIMESTAMP] 1181498528 Sun Jun 10 20:02:08 2007 (9) ERROR
+[TIMESTAMP] 1181819237 Thu Jun 14 13:07:17 2007 (5) ERROR
+[TIMESTAMP] 1181873822 Fri Jun 15 04:17:02 2007 (9) ERROR
+[TIMESTAMP] 1181947034 Sat Jun 16 00:37:14 2007 (5) ERROR
+[TIMESTAMP] 1181967849 Sat Jun 16 06:24:09 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-graphviz.log 9-graphviz.log
+[LOGS] 5-graphviz.err 9-graphviz.err
 
-[BUILDTIME] 46155 (5)
-[BUILDTIME] 47115 (9)
-[SIZE] 7.86 MB, 422 files
+[BUILDTIME] 46327 (5) ERROR
+[BUILDTIME] 46634 (9) ERROR
+[BUILDTIME] 44262 (5) ERROR
+[BUILDTIME] 43841 (9) ERROR
+[BUILDTIME] 44422 (5) ERROR
+[BUILDTIME] 43452 (9) ERROR
 
-[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bison
-[DEP] bzip2 coreutils cvm diffutils expat expat:dev findutils flex
-[DEP] flex:dev freetype freetype:dev gawk gcc40 gcc40:dev glibc23
-[DEP] glibc23:dev grep guile guile:dev imake libgd libice libice:dev
-[DEP] libjpeg libjpeg:dev libpng libpng:dev libsm libsm:dev libtool
-[DEP] libtool:dev libx11 libx11:dev libxau libxau:dev libxaw libxaw:dev
-[DEP] libxdmcp libxdmcp:dev libxext libxext:dev libxmu libxmu:dev libxp
-[DEP] libxpm libxpm:dev libxt libxt:dev linux-libc-headers:dev m4 make
-[DEP] mktemp net-tools netpbm nx-x11 nx-x11:dev nxcomp ocaml patch perl5
-[DEP] perl5:dev php5:dev pkgconfig python python:dev rrdtool ruby sed swig
-[DEP] sysfiles tar tcl tcl:dev tk tk:dev twoftpd ucspi-unix util-linux
-[DEP] xorg-cf-files xproto:dev zlib zlib:dev
 
-[PROVIDES] _gv.so acyclic bcomps ccomps circo dijkstra dot dot2gxl
-[PROVIDES] dot_static dotty fdp gc gv.so gvcolor gvpack gvpr gxl2dot
-[PROVIDES] lefty libagraph.a libagraph.so libcdt.a libcdt.so libexpr.a
-[PROVIDES] libexpr.so libgdtclft.a libgdtclft.so libgraph.a libgraph.so
-[PROVIDES] libgv_guile.a libgv_guile.so libgv_ocaml.a libgv_ocaml.so
-[PROVIDES] libgv_perl.a libgv_perl.so libgv_php.a libgv_php.so
-[PROVIDES] libgv_python.a libgv_python.so libgv_ruby.a libgv_ruby.so
-[PROVIDES] libgv_sharp.a libgv_sharp.so libgv_tcl.a libgv_tcl.so libgvc.a
-[PROVIDES] libgvc.so libgvc_builtins.a libgvc_builtins.so libgvgd.a
-[PROVIDES] libgvgd.so libgvplugin_dot_layout.a libgvplugin_dot_layout.so
-[PROVIDES] libgvplugin_neato_layout.a libgvplugin_neato_layout.so
-[PROVIDES] libgvplugin_usershape_gd.a libgvplugin_usershape_gd.so libpack.a
-[PROVIDES] libpack.so libpathplan.a libpathplan.so libtcldot.a libtcldot.so
-[PROVIDES] libtclplan.a libtclplan.so libtkspline.a libtkspline.so lneato
-[PROVIDES] neato nop prune sccmap tred twopi unflatten
+[5-ERROR] gv_php.cpp:4509: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] gv_php.cpp:4515: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] gv_php.cpp: In function 'void _wrap_rm__SWIG_0(int, zval*, zval**, zval*, int)':
+[5-ERROR] gv_php.cpp:4608: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] gv_php.cpp: In function 'void _wrap_rm__SWIG_1(int, zval*, zval**, zval*, int)':
+[5-ERROR] gv_php.cpp:4632: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] gv_php.cpp: In function 'void _wrap_rm__SWIG_2(int, zval*, zval**, zval*, int)':
+[5-ERROR] gv_php.cpp:4656: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] gv_php.cpp: In function 'void _wrap_layout(int, zval*, zval**, zval*, int)':
+[5-ERROR] gv_php.cpp:4727: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] gv_php.cpp: In function 'void _wrap_render__SWIG_0(int, zval*, zval**, zval*, int)':
+[5-ERROR] gv_php.cpp:4757: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] gv_php.cpp: In function 'void _wrap_render__SWIG_1(int, zval*, zval**, zval*, int)':
+[5-ERROR] gv_php.cpp:4782: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] gv_php.cpp: In function 'void _wrap_render__SWIG_2(int, zval*, zval**, zval*, int)':
+[5-ERROR] gv_php.cpp:4814: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] gv_php.cpp: In function 'void _wrap_render__SWIG_3(int, zval*, zval**, zval*, int)':
+[5-ERROR] gv_php.cpp:4852: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] gv_php.cpp:4864: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] gv_php.cpp: In function 'void _wrap_render__SWIG_4(int, zval*, zval**, zval*, int)':
+[5-ERROR] gv_php.cpp:4892: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] gv_php.cpp:4917: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR]  g++-42 -DHAVE_CONFIG_H -I. -I. -I../.. -I../.. -I../../lib/gvc -I../../lib/common -I../../lib/graph -I../../lib/cdt -I../../lib/pathplan -I/usr/lib/perl5/5.8.8/i386-unknown-linux-gnu/CORE -I/usr/lib/ocaml -I/usr/include/php -I/usr/include/php/main -I/usr/include/php/Zend -I/usr/include/php/TSRM -I/usr/include/python2.5 -I/usr/lib/ruby/1.8/i386-linux -g -O2 -MT gv_php.lo -MD -MP -MF .deps/gv_php.Tpo -c gv_php.cpp -o gv_php.o >/dev/null 2>&1
+[5-ERROR] /bin/sh ../../libtool --tag=CXX --mode=link g++-42  -g -O2   -o libgv_php.la -rpath /usr/lib/graphviz/php -module gv.lo gv_php.lo  ../../lib/gvc/libgvc.la  -lc
+[5-ERROR] libtool: link: warning: `/usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/../../..//libjpeg.la' seems to be moved
+[5-ERROR] libtool: link: warning: `/usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/../../..//libpng.la' seems to be moved
+[5-ERROR] libtool: link: warning: `/usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/../../..//libexpat.la' seems to be moved
+[5-ERROR] libtool: link: warning: `/usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/../../..//libltdl.la' seems to be moved
+[5-ERROR] g++-42 -shared -nostdlib /usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/../../../../i386-unknown-linux-gnu/lib/crti.o /usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/crtbeginS.o  .libs/gv.o .libs/gv_php.o  -Wl,--rpath -Wl,/ROCK/src.graphviz.1181946581.11189.2100808302/graphviz-2.8/lib/gvc/.libs -Wl,--rpath -Wl,/usr/lib/gcc/i386-unknown-linux-gnu/4.2.0 -Wl,--rpath -Wl,/usr/lib/graphviz -Wl,--rpath -Wl,/usr/lib/gcc/i386-unknown-linux-gnu/4.2.0 ../../lib/gvc/.libs/libgvc.so -L/ROCK/src.graphviz.1181946581.11189.2100808302/graphviz-2.8/lib/graph/.libs -L/ROCK/src.graphviz.1181946581.11189.2100808302/graphviz-2.8/lib/cdt/.libs -L/ROCK/src.graphviz.1181946581.11189.2100808302/graphviz-2.8/lib/pathplan/.libs -L/ROCK/src.graphviz.1181946581.11189.2100808302/graphviz-2.8/lib/gd/.libs -L/opt/nx/lib -L/usr/lib -L/usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/../../../ -L/usr/lib/gcc/i386-unknown-linux-gnu/4.2.0 -L/usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/../../../../i386-unknown-linux-gnu/lib -L/usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/../../.. /usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/libstdc++.so -L/ROCK/src.gcc42.1181261114.21990.3661474854/gcc-4.2.0/objdir/i386-unknown-linux-gnu/libstdc++-v3/src -L/ROCK/src.gcc42.1181261114.21990.3661474854/gcc-4.2.0/objdir/i386-unknown-linux-gnu/libstdc++-v3/src/.libs -L/ROCK/src.gcc42.1181261114.21990.3661474854/gcc-4.2.0/objdir/./gcc -L/usr/i386-unknown-linux-gnu/bin -L/usr/i386-unknown-linux-gnu/lib -lm -lc -lgcc_s /usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/crtfastmath.o /usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/crtendS.o /usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/../../../../i386-unknown-linux-gnu/lib/crtn.o  -Wl,-soname -Wl,libgv_php.so.0 -o .libs/libgv_php.so.0.0.0
+[5-ERROR] (cd .libs && rm -f libgv_php.so.0 && ln -s libgv_php.so.0.0.0 libgv_php.so.0)
+[5-ERROR] (cd .libs && rm -f libgv_php.so && ln -s libgv_php.so.0.0.0 libgv_php.so)
+[5-ERROR] ar cru .libs/libgv_php.a  gv.o gv_php.o
+[5-ERROR] ranlib .libs/libgv_php.a
+[5-ERROR] creating libgv_php.la
+[5-ERROR] (cd .libs && rm -f libgv_php.la && ln -s ../libgv_php.la libgv_php.la)
+[5-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-42 -DHAVE_CONFIG_H -I. -I. -I../..  -I../.. -I../../lib/gvc -I../../lib/common -I../../lib/graph -I../../lib/cdt -I../../lib/pathplan -I/usr/lib/perl5/5.8.8/i386-unknown-linux-gnu/CORE -I/usr/lib/ocaml -I/usr/include/php -I/usr/include/php/main -I/usr/include/php/Zend -I/usr/include/php/TSRM -I/usr/include/python2.5 -I/usr/lib/ruby/1.8/i386-linux     -g -O2 -MT gv_python.lo -MD -MP -MF ".deps/gv_python.Tpo" -c -o gv_python.lo gv_python.cpp; \
+[5-ERROR] 	then mv -f ".deps/gv_python.Tpo" ".deps/gv_python.Plo"; else rm -f ".deps/gv_python.Tpo"; exit 1; fi
+[5-ERROR]  g++-42 -DHAVE_CONFIG_H -I. -I. -I../.. -I../.. -I../../lib/gvc -I../../lib/common -I../../lib/graph -I../../lib/cdt -I../../lib/pathplan -I/usr/lib/perl5/5.8.8/i386-unknown-linux-gnu/CORE -I/usr/lib/ocaml -I/usr/include/php -I/usr/include/php/main -I/usr/include/php/Zend -I/usr/include/php/TSRM -I/usr/include/python2.5 -I/usr/lib/ruby/1.8/i386-linux -g -O2 -MT gv_python.lo -MD -MP -MF .deps/gv_python.Tpo -c gv_python.cpp  -fPIC -DPIC -o .libs/gv_python.o
+[5-ERROR] gv_python.cpp: In function 'int SWIG_Python_ConvertPtr(PyObject*, void**, swig_type_info*, int)':
+[5-ERROR] gv_python.cpp:1231: error: invalid conversion from 'const char*' to 'char*'
+[5-ERROR] gv_python.cpp: In function 'void SWIG_Python_FixMethods(PyMethodDef*, swig_const_info*, swig_type_info**, swig_type_info**)':
+[5-ERROR] gv_python.cpp:5501: error: invalid conversion from 'const char*' to 'char*'
+[5-ERROR] make[3]: *** [gv_python.lo] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.graphviz.1181946581.11189.2100808302/graphviz-2.8/tclpkg/gv'
+[5-ERROR] make[2]: *** [all-recursive] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.graphviz.1181946581.11189.2100808302/graphviz-2.8/tclpkg'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.graphviz.1181946581.11189.2100808302/graphviz-2.8'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] gv_php.cpp:4509: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] gv_php.cpp:4515: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] gv_php.cpp: In function 'void _wrap_rm__SWIG_0(int, zval*, zval**, zval*, int)':
+[9-ERROR] gv_php.cpp:4608: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] gv_php.cpp: In function 'void _wrap_rm__SWIG_1(int, zval*, zval**, zval*, int)':
+[9-ERROR] gv_php.cpp:4632: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] gv_php.cpp: In function 'void _wrap_rm__SWIG_2(int, zval*, zval**, zval*, int)':
+[9-ERROR] gv_php.cpp:4656: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] gv_php.cpp: In function 'void _wrap_layout(int, zval*, zval**, zval*, int)':
+[9-ERROR] gv_php.cpp:4727: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] gv_php.cpp: In function 'void _wrap_render__SWIG_0(int, zval*, zval**, zval*, int)':
+[9-ERROR] gv_php.cpp:4757: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] gv_php.cpp: In function 'void _wrap_render__SWIG_1(int, zval*, zval**, zval*, int)':
+[9-ERROR] gv_php.cpp:4782: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] gv_php.cpp: In function 'void _wrap_render__SWIG_2(int, zval*, zval**, zval*, int)':
+[9-ERROR] gv_php.cpp:4814: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] gv_php.cpp: In function 'void _wrap_render__SWIG_3(int, zval*, zval**, zval*, int)':
+[9-ERROR] gv_php.cpp:4852: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] gv_php.cpp:4864: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] gv_php.cpp: In function 'void _wrap_render__SWIG_4(int, zval*, zval**, zval*, int)':
+[9-ERROR] gv_php.cpp:4892: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] gv_php.cpp:4917: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR]  g++-42 -DHAVE_CONFIG_H -I. -I. -I../.. -I../.. -I../../lib/gvc -I../../lib/common -I../../lib/graph -I../../lib/cdt -I../../lib/pathplan -I/usr/lib/perl5/5.8.8/i386-unknown-linux-gnu/CORE -I/usr/lib/ocaml -I/usr/include/php -I/usr/include/php/main -I/usr/include/php/Zend -I/usr/include/php/TSRM -I/usr/include/python2.5 -I/usr/lib/ruby/1.8/i386-linux -g -O2 -MT gv_php.lo -MD -MP -MF .deps/gv_php.Tpo -c gv_php.cpp -o gv_php.o >/dev/null 2>&1
+[9-ERROR] /bin/sh ../../libtool --tag=CXX --mode=link g++-42  -g -O2   -o libgv_php.la -rpath /usr/lib/graphviz/php -module gv.lo gv_php.lo  ../../lib/gvc/libgvc.la  -lc
+[9-ERROR] libtool: link: warning: `/usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/../../..//libjpeg.la' seems to be moved
+[9-ERROR] libtool: link: warning: `/usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/../../..//libpng.la' seems to be moved
+[9-ERROR] libtool: link: warning: `/usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/../../..//libexpat.la' seems to be moved
+[9-ERROR] libtool: link: warning: `/usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/../../..//libltdl.la' seems to be moved
+[9-ERROR] g++-42 -shared -nostdlib /usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/../../../../i386-unknown-linux-gnu/lib/crti.o /usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/crtbeginS.o  .libs/gv.o .libs/gv_php.o  -Wl,--rpath -Wl,/ROCK/src.graphviz.1181967420.3261.3307008318/graphviz-2.8/lib/gvc/.libs -Wl,--rpath -Wl,/usr/lib/gcc/i386-unknown-linux-gnu/4.2.0 -Wl,--rpath -Wl,/usr/lib/graphviz -Wl,--rpath -Wl,/usr/lib/gcc/i386-unknown-linux-gnu/4.2.0 ../../lib/gvc/.libs/libgvc.so -L/ROCK/src.graphviz.1181967420.3261.3307008318/graphviz-2.8/lib/graph/.libs -L/ROCK/src.graphviz.1181967420.3261.3307008318/graphviz-2.8/lib/cdt/.libs -L/ROCK/src.graphviz.1181967420.3261.3307008318/graphviz-2.8/lib/pathplan/.libs -L/ROCK/src.graphviz.1181967420.3261.3307008318/graphviz-2.8/lib/gd/.libs -L/opt/nx/lib -L/usr/lib -L/usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/../../../ -L/usr/lib/gcc/i386-unknown-linux-gnu/4.2.0 -L/usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/../../../../i386-unknown-linux-gnu/lib -L/usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/../../.. /usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/libstdc++.so -L/ROCK/src.gcc42.1181261114.21990.3661474854/gcc-4.2.0/objdir/i386-unknown-linux-gnu/libstdc++-v3/src -L/ROCK/src.gcc42.1181261114.21990.3661474854/gcc-4.2.0/objdir/i386-unknown-linux-gnu/libstdc++-v3/src/.libs -L/ROCK/src.gcc42.1181261114.21990.3661474854/gcc-4.2.0/objdir/./gcc -L/usr/i386-unknown-linux-gnu/bin -L/usr/i386-unknown-linux-gnu/lib -lm -lc -lgcc_s /usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/crtfastmath.o /usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/crtendS.o /usr/lib/gcc/i386-unknown-linux-gnu/4.2.0/../../../../i386-unknown-linux-gnu/lib/crtn.o  -Wl,-soname -Wl,libgv_php.so.0 -o .libs/libgv_php.so.0.0.0
+[9-ERROR] (cd .libs && rm -f libgv_php.so.0 && ln -s libgv_php.so.0.0.0 libgv_php.so.0)
+[9-ERROR] (cd .libs && rm -f libgv_php.so && ln -s libgv_php.so.0.0.0 libgv_php.so)
+[9-ERROR] ar cru .libs/libgv_php.a  gv.o gv_php.o
+[9-ERROR] ranlib .libs/libgv_php.a
+[9-ERROR] creating libgv_php.la
+[9-ERROR] (cd .libs && rm -f libgv_php.la && ln -s ../libgv_php.la libgv_php.la)
+[9-ERROR] if /bin/sh ../../libtool --tag=CXX --mode=compile g++-42 -DHAVE_CONFIG_H -I. -I. -I../..  -I../.. -I../../lib/gvc -I../../lib/common -I../../lib/graph -I../../lib/cdt -I../../lib/pathplan -I/usr/lib/perl5/5.8.8/i386-unknown-linux-gnu/CORE -I/usr/lib/ocaml -I/usr/include/php -I/usr/include/php/main -I/usr/include/php/Zend -I/usr/include/php/TSRM -I/usr/include/python2.5 -I/usr/lib/ruby/1.8/i386-linux     -g -O2 -MT gv_python.lo -MD -MP -MF ".deps/gv_python.Tpo" -c -o gv_python.lo gv_python.cpp; \
+[9-ERROR] 	then mv -f ".deps/gv_python.Tpo" ".deps/gv_python.Plo"; else rm -f ".deps/gv_python.Tpo"; exit 1; fi
+[9-ERROR]  g++-42 -DHAVE_CONFIG_H -I. -I. -I../.. -I../.. -I../../lib/gvc -I../../lib/common -I../../lib/graph -I../../lib/cdt -I../../lib/pathplan -I/usr/lib/perl5/5.8.8/i386-unknown-linux-gnu/CORE -I/usr/lib/ocaml -I/usr/include/php -I/usr/include/php/main -I/usr/include/php/Zend -I/usr/include/php/TSRM -I/usr/include/python2.5 -I/usr/lib/ruby/1.8/i386-linux -g -O2 -MT gv_python.lo -MD -MP -MF .deps/gv_python.Tpo -c gv_python.cpp  -fPIC -DPIC -o .libs/gv_python.o
+[9-ERROR] gv_python.cpp: In function 'int SWIG_Python_ConvertPtr(PyObject*, void**, swig_type_info*, int)':
+[9-ERROR] gv_python.cpp:1231: error: invalid conversion from 'const char*' to 'char*'
+[9-ERROR] gv_python.cpp: In function 'void SWIG_Python_FixMethods(PyMethodDef*, swig_const_info*, swig_type_info**, swig_type_info**)':
+[9-ERROR] gv_python.cpp:5501: error: invalid conversion from 'const char*' to 'char*'
+[9-ERROR] make[3]: *** [gv_python.lo] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.graphviz.1181967420.3261.3307008318/graphviz-2.8/tclpkg/gv'
+[9-ERROR] make[2]: *** [all-recursive] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.graphviz.1181967420.3261.3307008318/graphviz-2.8/tclpkg'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.graphviz.1181967420.3261.3307008318/graphviz-2.8'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

@@ -20,24 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168532872 Thu Jan 11 17:27:52 2007 (5)
-[TIMESTAMP] 1168724280 Sat Jan 13 22:38:00 2007 (9)
+[TIMESTAMP] 1180910990 Mon Jun  4 00:49:50 2007 (5)
+[TIMESTAMP] 1181277229 Fri Jun  8 06:33:49 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-slang.log 9-slang.log
 
-[BUILDTIME] 6983 (5)
-[BUILDTIME] 7728 (9)
-[SIZE] 0.84 MB, 72 files
+[BUILDTIME] 9546 (5)
+[BUILDTIME] 10386 (9)
+[SIZE] 0.98 MB, 79 files
 
-[DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
-[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep libpng libpng:dev
-[DEP] linux-libc-headers:dev make mktemp net-tools netpbm pcre pcre:dev
-[DEP] rrdtool sed sysfiles tar twoftpd ucspi-unix util-linux zlib:dev
+[DEP] 00-dirtree applewmproto bash2 binutils bzip2 coreutils cvm diffutils
+[DEP] findutils gawk gcc42 gcc42:dev glibc26 glibc26:dev grep imake libice
+[DEP] libpng:dev libx11 libxau libxcb libxdmcp libxt linux26-headers:dev
+[DEP] ltrace make mktemp net-tools pcre pcre:dev sed sysfiles tar twoftpd
+[DEP] ucspi-unix util-linux xmame xorg-cf-files zlib:dev
 
 [PROVIDES] fcntl-module.so libslang.a libslang.so pcre-module.so
 [PROVIDES] png-module.so select-module.so slsh slsmg-module.so
-[PROVIDES] termios-module.so varray-module.so
+[PROVIDES] socket-module.so termios-module.so varray-module.so
 

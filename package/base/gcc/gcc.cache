@@ -20,112 +20,111 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168522851 Thu Jan 11 14:40:51 2007 (2)
-[TIMESTAMP] 1168718772 Sat Jan 13 21:06:12 2007 (9)
+[TIMESTAMP] 1180894459 Sun Jun  3 20:14:19 2007 (2)
+[TIMESTAMP] 1181266925 Fri Jun  8 03:42:05 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 0-gcc40.log 1-gcc40.log 2-gcc40.log 9-gcc40.log
+[LOGS] 0-gcc42.log 1-gcc42.log 2-gcc42.log 9-gcc42.log
 
-[BUILDTIME] 229752 (2)
-[BUILDTIME] 230548 (9)
-[SIZE] 86.22 MB, 124 files
+[BUILDTIME] 518542 (2)
+[BUILDTIME] 518363 (9)
+[SIZE] 109.56 MB, 147 files
 
 [DEP] 00-dirtree a2ps:dev a52dec:dev aalib:dev acl:dev allegro:dev
-[DEP] alsa-driver-26:dev alsa:dev alsaplayer:dev apmd:dev applewmproto
-[DEP] applewmproto:dev arts:dev aspell:dev attr:dev audiofile:dev
-[DEP] autogen:dev autotrace:dev bash2 bdb33:dev bdb40:dev bdb41:dev
-[DEP] bdb42:dev bdb44:dev bigreqsproto:dev bind:dev binutils binutils:dev
-[DEP] bison blackbox:dev bluez-libs:dev boehm-gc:dev bomberclone:dev
-[DEP] boost:dev bzip2 bzip2:dev cairomm:dev cdparanoia:dev cdrdao:dev
-[DEP] cgilib:dev clamav:dev cln:dev commonc++:dev compositeproto:dev
-[DEP] coreutils courier-authlib:dev cracklib:dev crm114:dev cudd:dev
-[DEP] cups:dev curl:dev cvm cvm:dev cyrus-sasl2:dev damageproto:dev
-[DEP] dante:dev dbus-glib:dev dbus:dev device-mapper:dev dhcp:dev
-[DEP] dialog:dev dictd:dev diffutils digikam:dev directfb:dev
-[DEP] divx4linux:dev dmalloc:dev dmapi:dev dmxproto:dev e2fsprogs:dev
-[DEP] eruby:dev esound:dev evieext:dev expat:dev expect:dev ezv24:dev
-[DEP] faac:dev faad2:dev fam:dev fann:dev fftw3:dev file:dev
-[DEP] findutils fixesproto:dev flac:dev flex:dev flite:dev fltk:dev
+[DEP] alsa:dev alsaplayer:dev apmd:dev applewmproto applewmproto:dev
+[DEP] arts:dev aspell:dev asterisk:dev attr:dev audiofile:dev autogen:dev
+[DEP] autotrace:dev bash2 bdb33:dev bdb40:dev bdb41:dev bdb42:dev bdb44:dev
+[DEP] bigreqsproto:dev bind:dev binutils binutils:dev bison blackbox:dev
+[DEP] bluez-libs:dev boehm-gc:dev bomberclone:dev boost:dev bzip2
+[DEP] bzip2:dev cairomm:dev cdparanoia:dev cgilib:dev clamav:dev cln:dev
+[DEP] commonc++:dev compositeproto:dev coreutils courier-authlib:dev
+[DEP] cracklib:dev crm114:dev cryptsetup-luks:dev cudd:dev cups:dev
+[DEP] curl:dev cvm cvm:dev cyrus-sasl2:dev damageproto:dev dante:dev
+[DEP] dbus-glib:dev dbus:dev device-mapper:dev dhcp:dev dialog:dev
+[DEP] dictd:dev diffutils digikam:dev directfb:dev divx4linux:dev
+[DEP] dmalloc:dev dmapi:dev dmxproto:dev e2fsprogs:dev eruby:dev
+[DEP] esound:dev evieext:dev expat:dev expect:dev ezv24:dev
+[DEP] faac:dev faad2:dev fam:dev fann:dev file:dev findutils
+[DEP] firefox:dev fixesproto:dev flac:dev flex:dev flite:dev fltk:dev
 [DEP] fontcacheproto:dev fontconfig:dev fontsproto:dev freetds:dev
-[DEP] freetype1:dev freetype:dev fuse:dev fwbuilder:dev g-wrap:dev
-[DEP] gaim:dev gawk gdbm:dev gettext gettext:dev gimp-print42:dev gle:dev
-[DEP] glibc23 glibc23:dev glide3:dev glut:dev gmp gmp:dev gnokii:dev
-[DEP] gnutls:dev gocr:dev gpac:dev gpgme:dev graphviz:dev grep gsl:dev
-[DEP] gsm:dev gsmlib:dev guile:dev gutenprint:dev hal:dev hdf5:dev
-[DEP] heartbeat:dev hesiod:dev httrack:dev id3lib:dev imagemagick:dev
+[DEP] freetype1:dev freetype:dev fuse:dev g-wrap:dev gaim:dev gawk
+[DEP] gdbm:dev gettext gettext:dev gimp-print42:dev gle:dev glibc26
+[DEP] glibc26:dev glide3:dev glitz:dev glut:dev gmp gmp:dev gnokii:dev
+[DEP] gnutls:dev gocr:dev gpgme:dev graphicsmagick:dev grep gsl:dev
+[DEP] gsm:dev guile:dev gutenprint:dev hal:dev hdf5:dev heartbeat:dev
+[DEP] hesiod:dev httrack:dev hwinfo:dev id3lib:dev imagemagick:dev
 [DEP] inputproto:dev irssi:dev isdn4k-utils:dev itcl:dev iverilog:dev
 [DEP] jasper:dev jikes:dev k3b:dev k9copy:dev kaffeine:dev kbproto:dev
 [DEP] kdeaccessibility:dev kdebase:dev kdebluetooth:dev kdeedu:dev
 [DEP] kdegames:dev kdegraphics:dev kdelibs:dev kdemultimedia:dev
 [DEP] kdenetwork:dev kdepim:dev kdesdk:dev kdetoys:dev kdeutils:dev
-[DEP] kdevelop:dev kdewebdev:dev kino:dev koffice:dev ksimus:dev ladspa:dev
-[DEP] lame:dev lcms:dev libart_lgpl23:dev libassuan:dev libavc1394:dev
-[DEP] libcaca:dev libcap:dev libcdaudio:dev libcddb:dev libcdio:dev
-[DEP] libcdk:dev libchipcard:dev libcss:dev libdaemon:dev libdockapp:dev
-[DEP] libdrm:dev libdv:dev libdvbpsi:dev libdvdcss:dev libdvdnav:dev
-[DEP] libdvdplay:dev libdvdread:dev libebml:dev libelf:dev libevent:dev
-[DEP] libexif:dev libfame:dev libfontenc:dev libfs:dev libgcrypt:dev
-[DEP] libgd:dev libgli:dev libgpg-error:dev libgphoto:dev libgpod:dev
-[DEP] libice:dev libicu:dev libidn:dev libiec61883:dev libjpeg:dev
-[DEP] libkexif:dev libkipi:dev libksba:dev libkxl:dev liblockfile:dev
-[DEP] liblrdf:dev libmatroska:dev libmcrypt:dev libmhash:dev libmikmod:dev
-[DEP] libmng:dev libmpeg2:dev libmpeg:dev libmusicbrainz:dev libnet:dev
-[DEP] libnfsidmap:dev libnids:dev liboil:dev libol:dev liboldx:dev
-[DEP] libosip2:dev libosip:dev libowfat:dev libpano12:dev libpcap:dev
-[DEP] libpng:dev libraw1394:dev librep:dev librsync:dev libsamplerate:dev
-[DEP] libsdl:dev libsdl_console:dev libsdl_gfx:dev libsdl_image:dev
-[DEP] libsdl_mixer:dev libsdl_net:dev libsdl_sound:dev libsdl_ttf:dev
-[DEP] libsdlmm:dev libshout:dev libsigc++12:dev libsigc++1:dev
-[DEP] libsigc++:dev libsm:dev libsndfile:dev libstroke:dev libtheora:dev
-[DEP] libtiff:dev libtommath:dev libtool:dev libungif:dev libunicode:dev
-[DEP] libusb:dev libvncserver:dev libwbxml2:dev libx11:dev libxau:dev
-[DEP] libxaw:dev libxcomposite:dev libxcursor:dev libxdamage:dev
+[DEP] kdevelop:dev kdewebdev:dev koffice:dev ksimus:dev lame:dev lcms:dev
+[DEP] libao:dev libart_lgpl23:dev libassuan:dev libavc1394:dev libcaca:dev
+[DEP] libcap:dev libcdaudio:dev libcddb:dev libcdio:dev libcdk:dev
+[DEP] libchipcard:dev libcss:dev libdaemon:dev libdockapp:dev libdrm:dev
+[DEP] libdv:dev libdvbpsi:dev libdvdcss:dev libdvdnav:dev libdvdplay:dev
+[DEP] libdvdread:dev libebml:dev libelf:dev libevent:dev libexif:dev
+[DEP] libfame:dev libfontenc:dev libfs:dev libgcrypt:dev libgd:dev
+[DEP] libgpg-error:dev libgphoto:dev libgpod:dev libice:dev libicu:dev
+[DEP] libidn:dev libiec61883:dev libjpeg:dev libkexif:dev libkipi:dev
+[DEP] libksba:dev libkxl:dev liblockfile:dev libmatroska:dev libmcrypt:dev
+[DEP] libmhash:dev libmikmod:dev libmng:dev libmpeg2:dev libmpeg:dev
+[DEP] libmspack:dev libmusicbrainz:dev libnet:dev libnfsidmap:dev
+[DEP] libnids:dev libogg:dev liboil:dev libol:dev liboldx:dev libosip2:dev
+[DEP] libosip:dev libowfat:dev libpano12:dev libpcap:dev libpng:dev
+[DEP] libraw1394:dev librep:dev librsync:dev libsamplerate:dev libsdl:dev
+[DEP] libsdl_console:dev libsdl_gfx:dev libsdl_image:dev libsdl_mixer:dev
+[DEP] libsdl_net:dev libsdl_sound:dev libsdl_ttf:dev libsdlmm:dev
+[DEP] libshout:dev libsigc++12:dev libsigc++1:dev libsigc++:dev libsm:dev
+[DEP] libsndfile:dev libstroke:dev libtheora:dev libtiff:dev libtommath:dev
+[DEP] libtool:dev libungif:dev libunicode:dev libusb:dev libvisual:dev
+[DEP] libvncserver:dev libvorbis:dev libwbxml2:dev libx11:dev libxau:dev
+[DEP] libxaw:dev libxcb:dev libxcomposite:dev libxcursor:dev libxdamage:dev
 [DEP] libxdmcp:dev libxevie:dev libxfixes:dev libxfont:dev libxft:dev
 [DEP] libxkbfile:dev libxkbui:dev libxml++1:dev libxml2:dev libxml:dev
 [DEP] libxmu:dev libxpm:dev libxprintapputil:dev libxprintutil:dev
 [DEP] libxrandr:dev libxrender:dev libxres:dev libxslt:dev libxt:dev
-[DEP] libxv:dev libxvmc:dev libzvbi:dev licq:dev linux-libc-headers:dev
-[DEP] lirc:dev lm_sensors:dev log4cpp:dev lzo:dev mad:dev make mesalib:dev
-[DEP] metakit:dev minisip:dev mjpegtools:dev mktemp modplug-xmms:dev
-[DEP] mozilla:dev mpeg4ip:dev mpfr:dev ncurses:dev neon:dev nessus:dev
-[DEP] net-snmp:dev net-tools netpbm netpbm:dev nettle:dev nspr:dev
-[DEP] ntfsprogs:dev nusmv:dev ogg-vorbis:dev opal:dev openal:dev
-[DEP] openbox:dev openct:dev openexr:dev openh323:dev openhbci:dev
-[DEP] openjade:dev openobex:dev openslp:dev openssl:dev pam:dev paragui:dev
-[DEP] parted:dev patch pcre:dev pcsc-lite:dev perl5 php5:dev pilot-link:dev
-[DEP] pine:dev plib:dev polypaudio:dev poppler:dev popt:dev portaudio:dev
-[DEP] ppp:dev printproto:dev pth:dev pwlib:dev pycairo:dev pygame:dev
-[DEP] pynumarray:dev pyogg:dev python:dev qca:dev quagga:dev quota:dev
+[DEP] libxv:dev libxvmc:dev libzvbi:dev licq:dev linux26-headers:dev
+[DEP] lm_sensors:dev log4cpp:dev lzo:dev mad:dev make mdnsresponder:dev
+[DEP] mesalib:dev metakit:dev minisip:dev mktemp modplug-xmms:dev
+[DEP] mpfr:dev ncurses:dev neon:dev nessus:dev net-snmp:dev net-tools
+[DEP] netpbm:dev nettle:dev nspr:dev ntfs-3g:dev ntfsprogs:dev nusmv:dev
+[DEP] openal:dev openbox:dev openexr:dev openh323:dev openhbci:dev
+[DEP] openldap:dev openobex:dev openslp:dev openssl:dev pam:dev
+[DEP] parted:dev patch pciutils:dev pcre:dev pcsc-lite:dev perl5 php5:dev
+[DEP] pilot-link:dev pine:dev policykit:dev polypaudio:dev poppler:dev
+[DEP] popt:dev portaudio:dev ppp:dev printproto:dev pth:dev pwlib:dev
+[DEP] pycairo:dev pynumarray:dev pyogg:dev python:dev qca:dev quagga:dev
 [DEP] randrproto:dev raptor:dev readline:dev recode:dev recordproto:dev
-[DEP] reiser4progs:dev renderproto:dev resourceproto:dev rpm:dev
-[DEP] rrdtool rrdtool:dev rte:dev sane-backends:dev scientificpy:dev
-[DEP] scrnsaverproto:dev sed senken:dev simgear:dev sip:dev slang:dev
-[DEP] smb4k:dev smpeg:dev spandsp:dev speex:dev spidermonkey:dev spl:dev
+[DEP] reiser4progs:dev renderproto:dev resourceproto:dev rrdtool:dev
+[DEP] rte:dev sane-backends:dev scientificpy:dev scrnsaverproto:dev sed
+[DEP] senken:dev slang:dev smb4k:dev spandsp:dev speex:dev spidermonkey:dev
 [DEP] sqlite3:dev sqlite:dev streamtuner:dev subversion:dev sweep:dev
 [DEP] swi-prolog:dev sword:dev sysfiles sysfsutils:dev sysvinit:dev
 [DEP] taglib:dev tar tcl:dev tcp_wrappers:dev tdb:dev texinfo tidy:dev
 [DEP] tk:dev towitoko:dev trapproto:dev tunepimp:dev twoftpd ucl:dev
-[DEP] ucspi-unix udev:dev util-linux util-macros:dev uudeview:dev
-[DEP] valgrind:dev vcdimager:dev videoproto:dev windowmaker:dev
-[DEP] windowswmproto:dev wine:dev wireless-tools:dev wvstreams:dev
-[DEP] wxpython:dev wxwidgets:dev x264:dev xaw3d:dev xbitmaps:dev
-[DEP] xcmiscproto:dev xdelta:dev xextproto:dev xf86bigfontproto:dev
-[DEP] xf86dgaproto:dev xf86driproto:dev xf86miscproto:dev xf86rushproto:dev
-[DEP] xf86vidmodeproto:dev xfsprogs:dev xine-lib:dev xineramaproto:dev
-[DEP] xmlsec:dev xmms:dev xorg-server:dev xosd:dev xproto:dev
+[DEP] ucspi-unix udev:dev util-linux uudeview:dev vcdimager:dev
+[DEP] videoproto:dev windowmaker:dev windowswmproto:dev wine:dev
+[DEP] wireless-tools:dev wv2:dev wxwidgets:dev x264:dev xaw3d:dev
+[DEP] xbitmaps:dev xcmiscproto:dev xdelta:dev xextproto:dev
+[DEP] xf86bigfontproto:dev xf86dgaproto:dev xf86driproto:dev
+[DEP] xf86miscproto:dev xf86rushproto:dev xf86vidmodeproto:dev
+[DEP] xfsprogs:dev xine-lib:dev xineramaproto:dev xmame xmlsec:dev
+[DEP] xmms:dev xorg-server:dev xosd:dev xpdf:dev xproto:dev
 [DEP] xproxymanagementprotocol:dev xtrans:dev xvid:dev xvmc-wrapper:dev
 [DEP] zlib:dev
 
-[PROVIDES] c++ c++-40 cc cpp cpp-40 g++ g++-40 g++-autopch gcc gcc-40
-[PROVIDES] gcov gcov-40 gfortran gfortran-40 i386-unknown-linux-gnu-c++
-[PROVIDES] i386-unknown-linux-gnu-c++-40 i386-unknown-linux-gnu-g++
-[PROVIDES] i386-unknown-linux-gnu-g++-40 i386-unknown-linux-gnu-gcc
-[PROVIDES] i386-unknown-linux-gnu-gcc-40 i386-unknown-linux-gnu-gfortran
-[PROVIDES] i386-unknown-linux-gnu-gfortran-40 kcc kcc-40 libgcc.a
+[PROVIDES] c++ c++-42 cc cpp cpp-42 g++ g++-42 g++-autopch gcc gcc-42
+[PROVIDES] gcov gcov-42 gfortran gfortran-42 i386-unknown-linux-gnu-c++
+[PROVIDES] i386-unknown-linux-gnu-c++-42 i386-unknown-linux-gnu-g++
+[PROVIDES] i386-unknown-linux-gnu-g++-42 i386-unknown-linux-gnu-gcc
+[PROVIDES] i386-unknown-linux-gnu-gcc-42 i386-unknown-linux-gnu-gfortran
+[PROVIDES] i386-unknown-linux-gnu-gfortran-42 kcc kcc-42 libgcc.a
 [PROVIDES] libgcc_eh.a libgcc_s.so libgcov.a libgfortran.a libgfortran.so
-[PROVIDES] libgfortranbegin.a libmudflap.a libmudflap.so libmudflapth.a
-[PROVIDES] libmudflapth.so libobjc.a libobjc.so libstdc++.a libstdc++.so
-[PROVIDES] libsupc++.a
+[PROVIDES] libgfortranbegin.a libgomp.a libgomp.so libmudflap.a
+[PROVIDES] libmudflap.so libmudflapth.a libmudflapth.so libobjc.a
+[PROVIDES] libobjc.so libssp.a libssp.so libssp_nonshared.a libstdc++.a
+[PROVIDES] libstdc++.so libsupc++.a
 

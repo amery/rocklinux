@@ -20,24 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168696110 Sat Jan 13 14:48:30 2007 (5)
-[TIMESTAMP] 1168905370 Tue Jan 16 00:56:10 2007 (9)
+[TIMESTAMP] 1181199589 Thu Jun  7 08:59:49 2007 (5) ERROR
+[TIMESTAMP] 1181754103 Wed Jun 13 19:01:43 2007 (9) ERROR
+[TIMESTAMP] 1181835288 Thu Jun 14 17:34:48 2007 (5) ERROR
+[TIMESTAMP] 1181936588 Fri Jun 15 21:43:08 2007 (9) ERROR
+[TIMESTAMP] 1181957701 Sat Jun 16 03:35:01 2007 (5) ERROR
+[TIMESTAMP] 1181979591 Sat Jun 16 09:39:51 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-visualboyadvance.log 9-visualboyadvance.log
+[LOGS] 5-visualboyadvance.err 9-visualboyadvance.err
 
-[BUILDTIME] 7773 (5)
-[BUILDTIME] 7856 (9)
-[SIZE] 1.00 MB, 8 files
+[BUILDTIME] 16063 (5) ERROR
+[BUILDTIME] 206175 (9) ERROR
+[BUILDTIME] 5740 (5) ERROR
+[BUILDTIME] 5396 (9) ERROR
+[BUILDTIME] 5491 (5) ERROR
+[BUILDTIME] 5470 (9) ERROR
 
-[DEP] 00-dirtree applewmproto bash2 binutils bzip2 coreutils cvm diffutils
-[DEP] findutils flex flex:dev gawk gcc40 gcc40:dev glibc23 glibc23:dev
-[DEP] grep imake libice libpng libpng:dev libsdl libsdl:dev libsm libx11
-[DEP] libxau libxdmcp libxt linux-libc-headers:dev m4 make mktemp nas nasm
-[DEP] net-tools patch rrdtool sed sysfiles tar util-linux xorg-cf-files
-[DEP] zlib zlib:dev
 
-[PROVIDES] VisualBoyAdvance
+[5-ERROR] debugger.cpp:1127: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debugger.cpp: In function 'void debuggerEditByte(int, char**)':
+[5-ERROR] debugger.cpp:1240: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debugger.cpp: In function 'void debuggerEditHalfWord(int, char**)':
+[5-ERROR] debugger.cpp:1256: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debugger.cpp: In function 'void debuggerEdit(int, char**)':
+[5-ERROR] debugger.cpp:1272: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debugger.cpp: In function 'void debuggerMemoryByte(int, char**)':
+[5-ERROR] debugger.cpp:1310: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debugger.cpp: In function 'void debuggerMemoryHalfWord(int, char**)':
+[5-ERROR] debugger.cpp:1346: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] debugger.cpp: In function 'void debuggerMemory(int, char**)':
+[5-ERROR] debugger.cpp:1385: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] if g++-42 -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"VisualBoyAdvance\" -DVERSION=\"1.7.2\" -DYYTEXT_POINTER=1 -DHAVE_LIBZ=1 -DHAVE_LIBPNG=1 -DHAVE_LIBPTHREAD=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_MALLOC_H=1 -DHAVE_STRINGS_H=1 -DHAVE_UNISTD_H=1 -DHAVE_ARPA_INET_H=1 -DHAVE_NETINET_IN_H=1  -I. -I.  -I../../src -DSDL -DSYSCONFDIR=\"/etc\"  -fno-exceptions -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -g -O2 -DPROFILING -DMMX -DDEV_VERSION -MT 2xSaI.o -MD -MP -MF ".deps/2xSaI.Tpo" \
+[5-ERROR] 	  -c -o 2xSaI.o `test -f '../2xSaI.cpp' || echo './'`../2xSaI.cpp; \
+[5-ERROR] 	then mv -f ".deps/2xSaI.Tpo" ".deps/2xSaI.Po"; \
+[5-ERROR] 	else rm -f ".deps/2xSaI.Tpo"; exit 1; \
+[5-ERROR] 	fi
+[5-ERROR] if g++-42 -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"VisualBoyAdvance\" -DVERSION=\"1.7.2\" -DYYTEXT_POINTER=1 -DHAVE_LIBZ=1 -DHAVE_LIBPNG=1 -DHAVE_LIBPTHREAD=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_MALLOC_H=1 -DHAVE_STRINGS_H=1 -DHAVE_UNISTD_H=1 -DHAVE_ARPA_INET_H=1 -DHAVE_NETINET_IN_H=1  -I. -I.  -I../../src -DSDL -DSYSCONFDIR=\"/etc\"  -fno-exceptions -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -g -O2 -DPROFILING -DMMX -DDEV_VERSION -MT Cheats.o -MD -MP -MF ".deps/Cheats.Tpo" \
+[5-ERROR] 	  -c -o Cheats.o `test -f '../Cheats.cpp' || echo './'`../Cheats.cpp; \
+[5-ERROR] 	then mv -f ".deps/Cheats.Tpo" ".deps/Cheats.Po"; \
+[5-ERROR] 	else rm -f ".deps/Cheats.Tpo"; exit 1; \
+[5-ERROR] 	fi
+[5-ERROR] if g++-42 -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"VisualBoyAdvance\" -DVERSION=\"1.7.2\" -DYYTEXT_POINTER=1 -DHAVE_LIBZ=1 -DHAVE_LIBPNG=1 -DHAVE_LIBPTHREAD=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_MALLOC_H=1 -DHAVE_STRINGS_H=1 -DHAVE_UNISTD_H=1 -DHAVE_ARPA_INET_H=1 -DHAVE_NETINET_IN_H=1  -I. -I.  -I../../src -DSDL -DSYSCONFDIR=\"/etc\"  -fno-exceptions -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -g -O2 -DPROFILING -DMMX -DDEV_VERSION -MT EEprom.o -MD -MP -MF ".deps/EEprom.Tpo" \
+[5-ERROR] 	  -c -o EEprom.o `test -f '../EEprom.cpp' || echo './'`../EEprom.cpp; \
+[5-ERROR] 	then mv -f ".deps/EEprom.Tpo" ".deps/EEprom.Po"; \
+[5-ERROR] 	else rm -f ".deps/EEprom.Tpo"; exit 1; \
+[5-ERROR] 	fi
+[5-ERROR] if g++-42 -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"VisualBoyAdvance\" -DVERSION=\"1.7.2\" -DYYTEXT_POINTER=1 -DHAVE_LIBZ=1 -DHAVE_LIBPNG=1 -DHAVE_LIBPTHREAD=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_MALLOC_H=1 -DHAVE_STRINGS_H=1 -DHAVE_UNISTD_H=1 -DHAVE_ARPA_INET_H=1 -DHAVE_NETINET_IN_H=1  -I. -I.  -I../../src -DSDL -DSYSCONFDIR=\"/etc\"  -fno-exceptions -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -g -O2 -DPROFILING -DMMX -DDEV_VERSION -MT Flash.o -MD -MP -MF ".deps/Flash.Tpo" \
+[5-ERROR] 	  -c -o Flash.o `test -f '../Flash.cpp' || echo './'`../Flash.cpp; \
+[5-ERROR] 	then mv -f ".deps/Flash.Tpo" ".deps/Flash.Po"; \
+[5-ERROR] 	else rm -f ".deps/Flash.Tpo"; exit 1; \
+[5-ERROR] 	fi
+[5-ERROR] if g++-42 -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"VisualBoyAdvance\" -DVERSION=\"1.7.2\" -DYYTEXT_POINTER=1 -DHAVE_LIBZ=1 -DHAVE_LIBPNG=1 -DHAVE_LIBPTHREAD=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_MALLOC_H=1 -DHAVE_STRINGS_H=1 -DHAVE_UNISTD_H=1 -DHAVE_ARPA_INET_H=1 -DHAVE_NETINET_IN_H=1  -I. -I.  -I../../src -DSDL -DSYSCONFDIR=\"/etc\"  -fno-exceptions -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -g -O2 -DPROFILING -DMMX -DDEV_VERSION -MT GBA.o -MD -MP -MF ".deps/GBA.Tpo" \
+[5-ERROR] 	  -c -o GBA.o `test -f '../GBA.cpp' || echo './'`../GBA.cpp; \
+[5-ERROR] 	then mv -f ".deps/GBA.Tpo" ".deps/GBA.Po"; \
+[5-ERROR] 	else rm -f ".deps/GBA.Tpo"; exit 1; \
+[5-ERROR] 	fi
+[5-ERROR] ../GBA.cpp: In function 'bool CPUWriteMemState(char*, int)':
+[5-ERROR] ../GBA.cpp:677: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] ../GBA.cpp: In function 'bool CPUReadMemState(char*, int)':
+[5-ERROR] ../GBA.cpp:820: warning: deprecated conversion from string constant to 'char*'
+[5-ERROR] 
+[5-ERROR] cc1plus: out of memory allocating 4064 bytes after a total of 148320256 bytes
+[5-ERROR] make[2]: *** [GBA.o] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.visualboyadvance.1181957646.12546.1463462473/VisualBoyAdvance-1.7.2/src/sdl'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.visualboyadvance.1181957646.12546.1463462473/VisualBoyAdvance-1.7.2/src'
+[5-ERROR] make: *** [all-recursive] Error 1
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] debugger.cpp:1127: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debugger.cpp: In function 'void debuggerEditByte(int, char**)':
+[9-ERROR] debugger.cpp:1240: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debugger.cpp: In function 'void debuggerEditHalfWord(int, char**)':
+[9-ERROR] debugger.cpp:1256: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debugger.cpp: In function 'void debuggerEdit(int, char**)':
+[9-ERROR] debugger.cpp:1272: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debugger.cpp: In function 'void debuggerMemoryByte(int, char**)':
+[9-ERROR] debugger.cpp:1310: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debugger.cpp: In function 'void debuggerMemoryHalfWord(int, char**)':
+[9-ERROR] debugger.cpp:1346: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] debugger.cpp: In function 'void debuggerMemory(int, char**)':
+[9-ERROR] debugger.cpp:1385: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] if g++-42 -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"VisualBoyAdvance\" -DVERSION=\"1.7.2\" -DYYTEXT_POINTER=1 -DHAVE_LIBZ=1 -DHAVE_LIBPNG=1 -DHAVE_LIBPTHREAD=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_MALLOC_H=1 -DHAVE_STRINGS_H=1 -DHAVE_UNISTD_H=1 -DHAVE_ARPA_INET_H=1 -DHAVE_NETINET_IN_H=1  -I. -I.  -I../../src -DSDL -DSYSCONFDIR=\"/etc\"  -fno-exceptions -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -g -O2 -DPROFILING -DMMX -DDEV_VERSION -MT 2xSaI.o -MD -MP -MF ".deps/2xSaI.Tpo" \
+[9-ERROR] 	  -c -o 2xSaI.o `test -f '../2xSaI.cpp' || echo './'`../2xSaI.cpp; \
+[9-ERROR] 	then mv -f ".deps/2xSaI.Tpo" ".deps/2xSaI.Po"; \
+[9-ERROR] 	else rm -f ".deps/2xSaI.Tpo"; exit 1; \
+[9-ERROR] 	fi
+[9-ERROR] if g++-42 -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"VisualBoyAdvance\" -DVERSION=\"1.7.2\" -DYYTEXT_POINTER=1 -DHAVE_LIBZ=1 -DHAVE_LIBPNG=1 -DHAVE_LIBPTHREAD=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_MALLOC_H=1 -DHAVE_STRINGS_H=1 -DHAVE_UNISTD_H=1 -DHAVE_ARPA_INET_H=1 -DHAVE_NETINET_IN_H=1  -I. -I.  -I../../src -DSDL -DSYSCONFDIR=\"/etc\"  -fno-exceptions -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -g -O2 -DPROFILING -DMMX -DDEV_VERSION -MT Cheats.o -MD -MP -MF ".deps/Cheats.Tpo" \
+[9-ERROR] 	  -c -o Cheats.o `test -f '../Cheats.cpp' || echo './'`../Cheats.cpp; \
+[9-ERROR] 	then mv -f ".deps/Cheats.Tpo" ".deps/Cheats.Po"; \
+[9-ERROR] 	else rm -f ".deps/Cheats.Tpo"; exit 1; \
+[9-ERROR] 	fi
+[9-ERROR] if g++-42 -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"VisualBoyAdvance\" -DVERSION=\"1.7.2\" -DYYTEXT_POINTER=1 -DHAVE_LIBZ=1 -DHAVE_LIBPNG=1 -DHAVE_LIBPTHREAD=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_MALLOC_H=1 -DHAVE_STRINGS_H=1 -DHAVE_UNISTD_H=1 -DHAVE_ARPA_INET_H=1 -DHAVE_NETINET_IN_H=1  -I. -I.  -I../../src -DSDL -DSYSCONFDIR=\"/etc\"  -fno-exceptions -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -g -O2 -DPROFILING -DMMX -DDEV_VERSION -MT EEprom.o -MD -MP -MF ".deps/EEprom.Tpo" \
+[9-ERROR] 	  -c -o EEprom.o `test -f '../EEprom.cpp' || echo './'`../EEprom.cpp; \
+[9-ERROR] 	then mv -f ".deps/EEprom.Tpo" ".deps/EEprom.Po"; \
+[9-ERROR] 	else rm -f ".deps/EEprom.Tpo"; exit 1; \
+[9-ERROR] 	fi
+[9-ERROR] if g++-42 -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"VisualBoyAdvance\" -DVERSION=\"1.7.2\" -DYYTEXT_POINTER=1 -DHAVE_LIBZ=1 -DHAVE_LIBPNG=1 -DHAVE_LIBPTHREAD=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_MALLOC_H=1 -DHAVE_STRINGS_H=1 -DHAVE_UNISTD_H=1 -DHAVE_ARPA_INET_H=1 -DHAVE_NETINET_IN_H=1  -I. -I.  -I../../src -DSDL -DSYSCONFDIR=\"/etc\"  -fno-exceptions -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -g -O2 -DPROFILING -DMMX -DDEV_VERSION -MT Flash.o -MD -MP -MF ".deps/Flash.Tpo" \
+[9-ERROR] 	  -c -o Flash.o `test -f '../Flash.cpp' || echo './'`../Flash.cpp; \
+[9-ERROR] 	then mv -f ".deps/Flash.Tpo" ".deps/Flash.Po"; \
+[9-ERROR] 	else rm -f ".deps/Flash.Tpo"; exit 1; \
+[9-ERROR] 	fi
+[9-ERROR] if g++-42 -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"VisualBoyAdvance\" -DVERSION=\"1.7.2\" -DYYTEXT_POINTER=1 -DHAVE_LIBZ=1 -DHAVE_LIBPNG=1 -DHAVE_LIBPTHREAD=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_MALLOC_H=1 -DHAVE_STRINGS_H=1 -DHAVE_UNISTD_H=1 -DHAVE_ARPA_INET_H=1 -DHAVE_NETINET_IN_H=1  -I. -I.  -I../../src -DSDL -DSYSCONFDIR=\"/etc\"  -fno-exceptions -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT -g -O2 -DPROFILING -DMMX -DDEV_VERSION -MT GBA.o -MD -MP -MF ".deps/GBA.Tpo" \
+[9-ERROR] 	  -c -o GBA.o `test -f '../GBA.cpp' || echo './'`../GBA.cpp; \
+[9-ERROR] 	then mv -f ".deps/GBA.Tpo" ".deps/GBA.Po"; \
+[9-ERROR] 	else rm -f ".deps/GBA.Tpo"; exit 1; \
+[9-ERROR] 	fi
+[9-ERROR] ../GBA.cpp: In function 'bool CPUWriteMemState(char*, int)':
+[9-ERROR] ../GBA.cpp:677: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] ../GBA.cpp: In function 'bool CPUReadMemState(char*, int)':
+[9-ERROR] ../GBA.cpp:820: warning: deprecated conversion from string constant to 'char*'
+[9-ERROR] 
+[9-ERROR] cc1plus: out of memory allocating 4064 bytes after a total of 148320256 bytes
+[9-ERROR] make[2]: *** [GBA.o] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.visualboyadvance.1181979536.19729.3474453109/VisualBoyAdvance-1.7.2/src/sdl'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.visualboyadvance.1181979536.19729.3474453109/VisualBoyAdvance-1.7.2/src'
+[9-ERROR] make: *** [all-recursive] Error 1
+[9-ERROR] --- BUILD ERROR ---
 

@@ -20,23 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168558863 Fri Jan 12 00:41:03 2007 (5)
-[TIMESTAMP] 1168755159 Sun Jan 14 07:12:39 2007 (9)
+[TIMESTAMP] 1180949991 Mon Jun  4 11:39:51 2007 (5)
+[TIMESTAMP] 1181339422 Fri Jun  8 23:50:22 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-xdialog.log 9-xdialog.log
 
-[BUILDTIME] 2125 (5)
-[BUILDTIME] 2695 (9)
-[SIZE] 0.11 MB, 13 files
+[BUILDTIME] 3097 (5)
+[BUILDTIME] 3794 (9)
+[SIZE] 0.10 MB, 13 files
 
-[DEP] 00-dirtree applewmproto bash2 binutils bzip2 coreutils cvm diffutils
-[DEP] findutils gawk gcc40 gcc40:dev gettext glib12 glib12:dev glibc23
-[DEP] glibc23:dev gnome14-dirtree grep gtk+12 gtk+12:dev libx11 libxau
-[DEP] libxdmcp libxext libxi linux-libc-headers:dev make mktemp net-tools
-[DEP] netpbm rrdtool sed sysfiles tar twoftpd ucspi-unix util-linux
+[DEP] 00-dirtree applewmproto atk atk:dev bash2 binutils bzip2 cairo
+[DEP] cairo:dev coreutils cvm diffutils expat findutils fontconfig freetype
+[DEP] gawk gcc42 gcc42:dev gettext glib glib:dev glibc26 glibc26:dev
+[DEP] gnome2-dirtree grep gtk+ gtk+:dev libpng libx11 libxau libxcb
+[DEP] libxcursor libxdmcp libxext libxfixes libxi libxinerama libxrandr
+[DEP] libxrender linux26-headers:dev ltrace make mktemp net-tools pango
+[DEP] pango:dev pkgconfig sed sysfiles tar twoftpd ucspi-unix util-linux
+[DEP] xmame zlib
 
 [PROVIDES] Xdialog
 

@@ -20,36 +20,33 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168534076 Thu Jan 11 17:47:56 2007 (5)
-[TIMESTAMP] 1168725837 Sat Jan 13 23:03:57 2007 (9) ERROR
-[TIMESTAMP] 1168958247 Tue Jan 16 15:37:27 2007 (9) ERROR
-[TIMESTAMP] 1169128543 Thu Jan 18 14:55:43 2007 (9) ERROR
+[TIMESTAMP] 1180913066 Mon Jun  4 01:24:26 2007 (5)
+[TIMESTAMP] 1181279372 Fri Jun  8 07:09:32 2007 (9) ERROR
+[TIMESTAMP] 1181850687 Thu Jun 14 21:51:27 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-videoproto.log 9-videoproto.err
 
-[BUILDTIME] 911 (5)
-[BUILDTIME] 1516 (9) ERROR
-[BUILDTIME] 1534 (9) ERROR
-[BUILDTIME] 1546 (9) ERROR
+[BUILDTIME] 1438 (5)
+[BUILDTIME] 2270 (9) ERROR
+[BUILDTIME] 2292 (9) ERROR
 
 
-[9-ERROR] Extracting videoproto-X11R7.0-2.2.2.tar.bz2 (--use-compress-program=bzip2 -xf) ... 
-[9-ERROR] Fixing ownership and permissions ...
-[9-ERROR] Removing CVS and .svn directories ...
-[9-ERROR] Changeing into /ROCK/src.videoproto.1169128525.12414.3231913534/videoproto-X11R7.0-2.2.2 ...
 [9-ERROR] Creating /usr/X11R7/<..> if required ...
+[9-ERROR] mkdir: created directory `/usr/X11R7/share/doc/videoproto'
 [9-ERROR] Autodetection for option impossible:  --disable-debug passed thru.
-[9-ERROR] Removing unsupported '--with-mysql-lib=/opt/mysql/lib/mysql' from configure option string.
-[9-ERROR] Removing unsupported '--with-mysql-include=/opt/mysql/include/mysql' from configure option string.
+[9-ERROR] Removing unsupported '--with-mysql-lib=/opt/mysql41/lib/mysql' from configure option string.
+[9-ERROR] Removing unsupported '--with-mysql-include=/opt/mysql41/include/mysql' from configure option string.
+[9-ERROR] Removing unsupported '--with-mysql-lib=/opt/mysql50/lib/mysql' from configure option string.
+[9-ERROR] Removing unsupported '--with-mysql-include=/opt/mysql50/include/mysql' from configure option string.
 [9-ERROR] Removing unsupported '--with-libpam' from configure option string.
 [9-ERROR] Removing unsupported '--with-pam' from configure option string.
 [9-ERROR] Autodetection for option impossible:  --enable-libpam passed thru.
 [9-ERROR] Autodetection for option impossible:  --enable-pam passed thru.
 [9-ERROR] Running  bash ./configure --prefix=/usr/X11R7 --bindir=/usr/X11R7/bin --sbindir=/usr/X11R7/sbin --libdir=/usr/X11R7/lib --datadir=/usr/X11R7/share --includedir=/usr/X11R7/include --infodir=/usr/X11R7/share/info --mandir=/usr/X11R7/share/man --sysconfdir=/etc --localstatedir=/var --disable-debug --enable-libpam --enable-pam --build=i386-unknown-linux-gnu --host=i386-unknown-linux-gnu
-[9-ERROR] checking for a BSD-compatible install... /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c
+[9-ERROR] checking for a BSD-compatible install... /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c
 [9-ERROR] checking whether build environment is sane... yes
 [9-ERROR] checking for gawk... gawk
 [9-ERROR] checking whether make sets $(MAKE)... yes
@@ -57,17 +54,18 @@
 [9-ERROR] config.status: creating Makefile
 [9-ERROR] config.status: creating videoproto.pc
 [9-ERROR] make: Nothing to be done for `all'.
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.videoproto.1169128525.12414.3231913534/videoproto-X11R7.0-2.2.2'
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.videoproto.1181850656.13197.946717046/videoproto-X11R7.0-2.2.2'
 [9-ERROR] make[1]: Nothing to be done for `install-exec-am'.
 [9-ERROR] /bin/sh ./mkinstalldirs /usr/X11R7/lib/pkgconfig
-[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 videoproto.pc /usr/X11R7/lib/pkgconfig/videoproto.pc
+[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 videoproto.pc /usr/X11R7/lib/pkgconfig/videoproto.pc
 [9-ERROR] /bin/sh ./mkinstalldirs /usr/X11R7/include/X11/extensions
-[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 vldXvMC.h /usr/X11R7/include/X11/extensions/vldXvMC.h
-[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 Xv.h /usr/X11R7/include/X11/extensions/Xv.h
-[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 XvMC.h /usr/X11R7/include/X11/extensions/XvMC.h
-[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 XvMCproto.h /usr/X11R7/include/X11/extensions/XvMCproto.h
-[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 Xvproto.h /usr/X11R7/include/X11/extensions/Xvproto.h
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.videoproto.1169128525.12414.3231913534/videoproto-X11R7.0-2.2.2'
+[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 vldXvMC.h /usr/X11R7/include/X11/extensions/vldXvMC.h
+[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 Xv.h /usr/X11R7/include/X11/extensions/Xv.h
+[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 XvMC.h /usr/X11R7/include/X11/extensions/XvMC.h
+[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 XvMCproto.h /usr/X11R7/include/X11/extensions/XvMCproto.h
+[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 Xvproto.h /usr/X11R7/include/X11/extensions/Xvproto.h
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.videoproto.1181850656.13197.946717046/videoproto-X11R7.0-2.2.2'
+[9-ERROR] rmdir: removing directory, /usr/X11R7/share/doc/videoproto
 [9-ERROR] Creating file list and doing final adaptions ... 
 [9-ERROR] Processing /lib corrections ...
 [9-ERROR] Verifing the .la files ...

@@ -20,28 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168569049 Fri Jan 12 03:30:49 2007 (5)
-[TIMESTAMP] 1168766829 Sun Jan 14 10:27:09 2007 (9) ERROR
-[TIMESTAMP] 1168963967 Tue Jan 16 17:12:47 2007 (9) ERROR
-[TIMESTAMP] 1169134252 Thu Jan 18 16:30:52 2007 (9) ERROR
+[TIMESTAMP] 1180960480 Mon Jun  4 14:34:40 2007 (5)
+[TIMESTAMP] 1181354212 Sat Jun  9 03:56:52 2007 (9) ERROR
+[TIMESTAMP] 1181858495 Fri Jun 15 00:01:35 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-scrollkeeper.log 9-scrollkeeper.err
 
-[BUILDTIME] 4541 (5)
-[BUILDTIME] 7644 (9) ERROR
-[BUILDTIME] 8219 (9) ERROR
-[BUILDTIME] 8244 (9) ERROR
-[SIZE] 3.58 MB, 495 files
+[BUILDTIME] 5605 (5)
+[BUILDTIME] 7998 (9) ERROR
+[BUILDTIME] 14030 (9) ERROR
+[SIZE] 3.54 MB, 491 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 coreutils cpan-xml-parser cvm
-[DEP] diffutils docbookx findutils gawk gcc40 gcc40:dev gettext glibc23
-[DEP] glibc23:dev gnome-doc-utils gnome-nettool gnome2-dirtree grep gtkam
-[DEP] libxml2 libxml2:dev libxslt libxslt:dev linux-libc-headers:dev make
-[DEP] mktemp net-tools pango perl5 pioneers rrdtool sed sensors-applet
-[DEP] streamtuner sysfiles tar util-linux zapping zlib
+[DEP] diffutils docbookx findutils gawk gcc42 gcc42:dev gettext glibc26
+[DEP] glibc26:dev gnome-doc-utils gnome-nettool gnome2-dirtree grep gtkam
+[DEP] libxml2 libxml2:dev libxslt libxslt:dev linux26-headers:dev ltrace
+[DEP] make mktemp net-tools pango perl5 pioneers sed sensors-applet
+[DEP] streamtuner sysfiles tar util-linux xmame zlib
 
 [PROVIDES] libscrollkeeper.a libscrollkeeper.so scrollkeeper-config
 [PROVIDES] scrollkeeper-extract scrollkeeper-gen-seriesid
@@ -53,50 +51,50 @@
 [PROVIDES] scrollkeeper-rebuilddb scrollkeeper-uninstall
 [PROVIDES] scrollkeeper-update
 
-[9-ERROR] <scrollkeeper> Creating package dependencies file ...
-[9-ERROR] <scrollkeeper> Creating package description ...
-[9-ERROR] <scrollkeeper> Creating md5sum and cksum files ...
-[9-ERROR] <scrollkeeper:dev> Creating flist file ...
-[9-ERROR] <scrollkeeper:dev> Creating package dependencies file ...
-[9-ERROR] <scrollkeeper:dev> Creating package description ...
-[9-ERROR] <scrollkeeper:dev> Creating md5sum and cksum files ...
-[9-ERROR] <scrollkeeper:doc> Creating flist file ...
-[9-ERROR] <scrollkeeper:doc> Creating package dependencies file ...
-[9-ERROR] <scrollkeeper:doc> Creating package description ...
-[9-ERROR] <scrollkeeper:doc> Creating md5sum and cksum files ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Found shared files with other packages:
-[9-ERROR] var/opt/gnome2/lib/scrollkeeper/C/scrollkeeper_cl.xml: gnome-nettool scrollkeeper sensors-applet
-[9-ERROR] var/opt/gnome2/lib/scrollkeeper/C/scrollkeeper_extended_cl.xml: gnome-nettool scrollkeeper sensors-applet
-[9-ERROR] var/opt/gnome2/lib/scrollkeeper/cs/scrollkeeper_cl.xml: gnome-nettool scrollkeeper
-[9-ERROR] var/opt/gnome2/lib/scrollkeeper/cs/scrollkeeper_extended_cl.xml: gnome-nettool scrollkeeper
-[9-ERROR] var/opt/gnome2/lib/scrollkeeper/da/scrollkeeper_cl.xml: gnome-nettool scrollkeeper
-[9-ERROR] var/opt/gnome2/lib/scrollkeeper/da/scrollkeeper_extended_cl.xml: gnome-nettool scrollkeeper
-[9-ERROR] var/opt/gnome2/lib/scrollkeeper/de/scrollkeeper_cl.xml: gnome-nettool scrollkeeper
-[9-ERROR] var/opt/gnome2/lib/scrollkeeper/de/scrollkeeper_extended_cl.xml: gnome-nettool scrollkeeper
-[9-ERROR] var/opt/gnome2/lib/scrollkeeper/el/scrollkeeper_cl.xml: scrollkeeper sensors-applet
-[9-ERROR] var/opt/gnome2/lib/scrollkeeper/el/scrollkeeper_extended_cl.xml: scrollkeeper sensors-applet
-[9-ERROR] var/opt/gnome2/lib/scrollkeeper/es/scrollkeeper_cl.xml: gnome-nettool scrollkeeper sensors-applet
-[9-ERROR] var/opt/gnome2/lib/scrollkeeper/es/scrollkeeper_extended_cl.xml: gnome-nettool scrollkeeper sensors-applet
-[9-ERROR] var/opt/gnome2/lib/scrollkeeper/fr/scrollkeeper_cl.xml: gnome-nettool scrollkeeper sensors-applet
-[9-ERROR] var/opt/gnome2/lib/scrollkeeper/fr/scrollkeeper_extended_cl.xml: gnome-nettool scrollkeeper sensors-applet
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/180: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/181: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/182: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/188: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/189: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/190: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/191: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/192: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/193: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/194: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/198: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/199: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/200: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/201: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/202: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/203: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/204: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/206: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/207: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/208: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/209: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/210: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/211: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/212: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/213: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/214: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/index/215: gnome-nettool scrollkeeper
 [9-ERROR] var/opt/gnome2/lib/scrollkeeper/it/scrollkeeper_cl.xml: gnome-nettool scrollkeeper
 [9-ERROR] var/opt/gnome2/lib/scrollkeeper/it/scrollkeeper_extended_cl.xml: gnome-nettool scrollkeeper
-[9-ERROR] var/opt/gnome2/lib/scrollkeeper/ja/scrollkeeper_cl.xml: gnome-nettool scrollkeeper sensors-applet
-[9-ERROR] var/opt/gnome2/lib/scrollkeeper/ja/scrollkeeper_extended_cl.xml: gnome-nettool scrollkeeper sensors-applet
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/ja/scrollkeeper_cl.xml: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/ja/scrollkeeper_extended_cl.xml: gnome-nettool scrollkeeper
 [9-ERROR] var/opt/gnome2/lib/scrollkeeper/ko/scrollkeeper_cl.xml: gnome-nettool scrollkeeper
 [9-ERROR] var/opt/gnome2/lib/scrollkeeper/ko/scrollkeeper_extended_cl.xml: gnome-nettool scrollkeeper
 [9-ERROR] var/opt/gnome2/lib/scrollkeeper/nl/scrollkeeper_cl.xml: scrollkeeper sensors-applet
 [9-ERROR] var/opt/gnome2/lib/scrollkeeper/nl/scrollkeeper_extended_cl.xml: scrollkeeper sensors-applet
 [9-ERROR] var/opt/gnome2/lib/scrollkeeper/ro/scrollkeeper_cl.xml: gnome-nettool scrollkeeper
 [9-ERROR] var/opt/gnome2/lib/scrollkeeper/ro/scrollkeeper_extended_cl.xml: gnome-nettool scrollkeeper
-[9-ERROR] var/opt/gnome2/lib/scrollkeeper/ru/scrollkeeper_cl.xml: gnome-nettool scrollkeeper sensors-applet
-[9-ERROR] var/opt/gnome2/lib/scrollkeeper/ru/scrollkeeper_extended_cl.xml: gnome-nettool scrollkeeper sensors-applet
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/ru/scrollkeeper_cl.xml: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/ru/scrollkeeper_extended_cl.xml: gnome-nettool scrollkeeper
 [9-ERROR] var/opt/gnome2/lib/scrollkeeper/scrollkeeper_docs: gnome-nettool scrollkeeper sensors-applet
-[9-ERROR] var/opt/gnome2/lib/scrollkeeper/sv/scrollkeeper_cl.xml: gnome-nettool scrollkeeper sensors-applet
-[9-ERROR] var/opt/gnome2/lib/scrollkeeper/sv/scrollkeeper_extended_cl.xml: gnome-nettool scrollkeeper sensors-applet
-[9-ERROR] var/opt/gnome2/lib/scrollkeeper/uk/scrollkeeper_cl.xml: gnome-nettool scrollkeeper sensors-applet
-[9-ERROR] var/opt/gnome2/lib/scrollkeeper/uk/scrollkeeper_extended_cl.xml: gnome-nettool scrollkeeper sensors-applet
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/sv/scrollkeeper_cl.xml: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/sv/scrollkeeper_extended_cl.xml: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/uk/scrollkeeper_cl.xml: gnome-nettool scrollkeeper
+[9-ERROR] var/opt/gnome2/lib/scrollkeeper/uk/scrollkeeper_extended_cl.xml: gnome-nettool scrollkeeper
 [9-ERROR] var/opt/gnome2/lib/scrollkeeper/zh_CN/scrollkeeper_cl.xml: gnome-nettool scrollkeeper
 [9-ERROR] var/opt/gnome2/lib/scrollkeeper/zh_CN/scrollkeeper_extended_cl.xml: gnome-nettool scrollkeeper
 [9-ERROR] var/opt/gnome2/lib/scrollkeeper/zh_TW/scrollkeeper_cl.xml: gnome-nettool scrollkeeper

@@ -20,31 +20,32 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168567991 Fri Jan 12 03:13:11 2007 (5)
-[TIMESTAMP] 1168765613 Sun Jan 14 10:06:53 2007 (9)
+[TIMESTAMP] 1180959022 Mon Jun  4 14:10:22 2007 (5)
+[TIMESTAMP] 1181352133 Sat Jun  9 03:22:13 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-courier-authlib.log 9-courier-authlib.log
 
-[BUILDTIME] 24586 (5)
-[BUILDTIME] 25877 (9)
-[SIZE] 0.34 MB, 66 files
+[BUILDTIME] 28813 (5)
+[BUILDTIME] 30774 (9)
+[SIZE] 0.35 MB, 70 files
 
-[DEP] 00-dirtree bash2 bdb44 binutils bzip2 coreutils cvm diffutils
-[DEP] findutils gawk gcc40 gcc40:dev gdbm gdbm:dev glibc23 glibc23:dev
-[DEP] grep libtool libtool:dev linux-libc-headers:dev m4 make mktemp
-[DEP] mysql41 mysql41:dev mysql50 mysql50:dev net-tools netpbm openssl
-[DEP] pam pam:dev perl5 postgresql postgresql:dev procps rrdtool sed
-[DEP] shadow sysfiles tar twoftpd ucspi-unix util-linux zlib
+[DEP] 00-dirtree bash2 bdb44 binutils bzip2 coreutils cvm cyrus-sasl2
+[DEP] cyrus-sasl2:dev diffutils findutils gawk gcc42 gcc42:dev
+[DEP] gdbm gdbm:dev glibc26 glibc26:dev grep libtool libtool:dev
+[DEP] linux26-headers:dev ltrace m4 make mktemp mysql41 mysql41:dev
+[DEP] net-tools openldap openldap:dev openssl pam pam:dev perl5 postgresql
+[DEP] postgresql:dev procps sed shadow sysfiles tar twoftpd ucspi-unix
+[DEP] util-linux xmame zlib
 
 [PROVIDES] authdaemond authenumerate authpasswd authtest courierauthconfig
-[PROVIDES] courierlogger libauthcustom.a libauthcustom.so libauthmysql.a
-[PROVIDES] libauthmysql.so libauthpam.a libauthpam.so libauthpgsql.a
-[PROVIDES] libauthpgsql.so libauthpipe.a libauthpipe.so libauthuserdb.a
-[PROVIDES] libauthuserdb.so libcourierauth.a libcourierauth.so
-[PROVIDES] libcourierauthcommon.a libcourierauthcommon.so
+[PROVIDES] courierlogger libauthcustom.a libauthcustom.so libauthldap.a
+[PROVIDES] libauthldap.so libauthmysql.a libauthmysql.so libauthpam.a
+[PROVIDES] libauthpam.so libauthpgsql.a libauthpgsql.so libauthpipe.a
+[PROVIDES] libauthpipe.so libauthuserdb.a libauthuserdb.so libcourierauth.a
+[PROVIDES] libcourierauth.so libcourierauthcommon.a libcourierauthcommon.so
 [PROVIDES] libcourierauthsasl.a libcourierauthsasl.so
 [PROVIDES] libcourierauthsaslclient.a libcourierauthsaslclient.so
 [PROVIDES] makeuserdb pw2userdb userdb userdb-test-cram-md5 userdbpw

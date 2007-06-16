@@ -20,22 +20,22 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168706067 Sat Jan 13 17:34:27 2007 (5)
-[TIMESTAMP] 1168915906 Tue Jan 16 03:51:46 2007 (9)
+[TIMESTAMP] 1181240483 Thu Jun  7 20:21:23 2007 (5)
+[TIMESTAMP] 1181791503 Thu Jun 14 05:25:03 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-pcmciautils.log 9-pcmciautils.log
 
-[BUILDTIME] 1655 (5)
-[BUILDTIME] 1682 (9)
+[BUILDTIME] 2378 (5)
+[BUILDTIME] 2431 (9)
 [SIZE] 0.06 MB, 15 files
 
 [DEP] 00-dirtree bash2 binutils bison bzip2 coreutils cvm findutils flex
-[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev
-[DEP] m4 make mktemp rrdtool sed sysfiles sysfsutils sysfsutils:dev
-[DEP] tar udev
+[DEP] gawk gcc42 gcc42:dev glibc26 glibc26:dev grep linux26-headers:dev
+[DEP] ltrace m4 make mktemp patch sed sysfiles sysfsutils sysfsutils:dev
+[DEP] tar udev xmame
 
 [PROVIDES] lspcmcia pccardctl pcmcia-check-broken-cis pcmcia-socket-startup
 

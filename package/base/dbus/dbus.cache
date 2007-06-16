@@ -20,26 +20,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168568639 Fri Jan 12 03:23:59 2007 (5)
-[TIMESTAMP] 1168766339 Sun Jan 14 10:18:59 2007 (9)
+[TIMESTAMP] 1180959888 Mon Jun  4 14:24:48 2007 (5)
+[TIMESTAMP] 1181353391 Sat Jun  9 03:43:11 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-dbus.log 9-dbus.log
 
-[BUILDTIME] 7505 (5)
-[BUILDTIME] 8094 (9)
-[SIZE] 0.53 MB, 37 files
+[BUILDTIME] 10010 (5)
+[BUILDTIME] 10824 (9)
+[SIZE] 0.57 MB, 40 files
 
-[DEP] 00-dirtree applewmproto applewmproto:dev bash2 binutils bzip2
-[DEP] coreutils cvm diffutils expat expat:dev findutils gawk gcc40
-[DEP] gcc40:dev glibc23 glibc23:dev grep imake libice libice:dev libsm
-[DEP] libsm:dev libx11 libx11:dev libxau libxau:dev libxdmcp libxdmcp:dev
-[DEP] libxt linux-libc-headers:dev m4 make mktemp net-tools netpbm
-[DEP] pkgconfig rrdtool sed sysfiles tar twoftpd ucspi-unix util-linux
-[DEP] xorg-cf-files xproto:dev
+[DEP] 00-dirtree alien applewmproto applewmproto:dev bash2 binutils
+[DEP] bzip2 coreutils cvm diffutils expat expat:dev findutils gawk
+[DEP] gcc42 gcc42:dev glibc26 glibc26:dev grep imake libelf libice
+[DEP] libice:dev libsm libsm:dev libx11 libx11:dev libxau libxau:dev
+[DEP] libxcb libxcb:dev libxdmcp libxdmcp:dev libxt linux26-headers:dev
+[DEP] ltrace m4 make mktemp net-tools pkgconfig sed sysfiles tar twoftpd
+[DEP] ucspi-unix util-linux xmame xorg-cf-files xproto:dev
 
 [PROVIDES] dbus-cleanup-sockets dbus-daemon dbus-launch dbus-monitor
-[PROVIDES] dbus-send libdbus-1.a libdbus-1.so
+[PROVIDES] dbus-send dbus-uuidgen libdbus-1.a libdbus-1.so
 

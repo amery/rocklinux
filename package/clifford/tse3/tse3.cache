@@ -20,46 +20,46 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168689711 Sat Jan 13 13:01:51 2007 (5) ERROR
-[TIMESTAMP] 1168898575 Mon Jan 15 23:02:55 2007 (9) ERROR
-[TIMESTAMP] 1168953297 Tue Jan 16 14:14:57 2007 (5) ERROR
-[TIMESTAMP] 1168983002 Tue Jan 16 22:30:02 2007 (9) ERROR
-[TIMESTAMP] 1169123626 Thu Jan 18 13:33:46 2007 (5) ERROR
-[TIMESTAMP] 1169153205 Thu Jan 18 21:46:45 2007 (9) ERROR
+[TIMESTAMP] 1181170720 Thu Jun  7 00:58:40 2007 (5) ERROR
+[TIMESTAMP] 1181616543 Tue Jun 12 04:49:03 2007 (9) ERROR
+[TIMESTAMP] 1181831858 Thu Jun 14 16:37:38 2007 (5) ERROR
+[TIMESTAMP] 1181915936 Fri Jun 15 15:58:56 2007 (9) ERROR
+[TIMESTAMP] 1181955253 Sat Jun 16 02:54:13 2007 (5) ERROR
+[TIMESTAMP] 1181977127 Sat Jun 16 08:58:47 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-tse3.err 9-tse3.err
 
-[BUILDTIME] 3889 (5) ERROR
-[BUILDTIME] 3929 (9) ERROR
-[BUILDTIME] 3972 (5) ERROR
-[BUILDTIME] 3963 (9) ERROR
-[BUILDTIME] 3935 (5) ERROR
-[BUILDTIME] 3983 (9) ERROR
+[BUILDTIME] 5038 (5) ERROR
+[BUILDTIME] 4938 (9) ERROR
+[BUILDTIME] 5014 (5) ERROR
+[BUILDTIME] 5040 (9) ERROR
+[BUILDTIME] 4843 (5) ERROR
+[BUILDTIME] 4843 (9) ERROR
 
 
-[5-ERROR] ../../../src/tse3/listen/Phrase.h:33: warning: 'class TSE3::PhraseListener' has virtual functions but non-virtual destructor
-[5-ERROR] if /bin/sh ../../../libtool --tag=CXX --mode=compile g++-40 -D_SYS_SYSMACROS_H=IGNORE -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src    -g -O2 -W -Wall -ansi -pedantic -MT Phrase.lo -MD -MP -MF ".deps/Phrase.Tpo" -c -o Phrase.lo Phrase.cpp; \
+[5-ERROR] 	then mv -f ".deps/Song.Tpo" ".deps/Song.Plo"; else rm -f ".deps/Song.Tpo"; exit 1; fi
+[5-ERROR]  g++-42 -D_SYS_SYSMACROS_H=IGNORE -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src -g -O2 -W -Wall -ansi -pedantic -MT Song.lo -MD -MP -MF .deps/Song.Tpo -c Song.cpp  -fPIC -DPIC -o .libs/Song.o
+[5-ERROR] if /bin/sh ../../../libtool --tag=CXX --mode=compile g++-42 -D_SYS_SYSMACROS_H=IGNORE -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src    -g -O2 -W -Wall -ansi -pedantic -MT Track.lo -MD -MP -MF ".deps/Track.Tpo" -c -o Track.lo Track.cpp; \
+[5-ERROR] 	then mv -f ".deps/Track.Tpo" ".deps/Track.Plo"; else rm -f ".deps/Track.Tpo"; exit 1; fi
+[5-ERROR]  g++-42 -D_SYS_SYSMACROS_H=IGNORE -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src -g -O2 -W -Wall -ansi -pedantic -MT Track.lo -MD -MP -MF .deps/Track.Tpo -c Track.cpp  -fPIC -DPIC -o .libs/Track.o
+[5-ERROR] if /bin/sh ../../../libtool --tag=CXX --mode=compile g++-42 -D_SYS_SYSMACROS_H=IGNORE -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src    -g -O2 -W -Wall -ansi -pedantic -MT Part.lo -MD -MP -MF ".deps/Part.Tpo" -c -o Part.lo Part.cpp; \
+[5-ERROR] 	then mv -f ".deps/Part.Tpo" ".deps/Part.Plo"; else rm -f ".deps/Part.Tpo"; exit 1; fi
+[5-ERROR]  g++-42 -D_SYS_SYSMACROS_H=IGNORE -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src -g -O2 -W -Wall -ansi -pedantic -MT Part.lo -MD -MP -MF .deps/Part.Tpo -c Part.cpp  -fPIC -DPIC -o .libs/Part.o
+[5-ERROR] if /bin/sh ../../../libtool --tag=CXX --mode=compile g++-42 -D_SYS_SYSMACROS_H=IGNORE -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src    -g -O2 -W -Wall -ansi -pedantic -MT Phrase.lo -MD -MP -MF ".deps/Phrase.Tpo" -c -o Phrase.lo Phrase.cpp; \
 [5-ERROR] 	then mv -f ".deps/Phrase.Tpo" ".deps/Phrase.Plo"; else rm -f ".deps/Phrase.Tpo"; exit 1; fi
-[5-ERROR]  g++-40 -D_SYS_SYSMACROS_H=IGNORE -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src -g -O2 -W -Wall -ansi -pedantic -MT Phrase.lo -MD -MP -MF .deps/Phrase.Tpo -c Phrase.cpp  -fPIC -DPIC -o .libs/Phrase.o
-[5-ERROR] ../../../src/tse3/listen/Phrase.h:33: warning: 'class TSE3::PhraseListener' has virtual functions but non-virtual destructor
-[5-ERROR] ../../../src/tse3/listen/DisplayParams.h:33: warning: 'class TSE3::DisplayParamsListener' has virtual functions but non-virtual destructor
-[5-ERROR] ../../../src/tse3/listen/DisplayParams.h:48: warning: 'class TSE3::PresetColoursListener' has virtual functions but non-virtual destructor
+[5-ERROR]  g++-42 -D_SYS_SYSMACROS_H=IGNORE -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src -g -O2 -W -Wall -ansi -pedantic -MT Phrase.lo -MD -MP -MF .deps/Phrase.Tpo -c Phrase.cpp  -fPIC -DPIC -o .libs/Phrase.o
+[5-ERROR] In file included from Phrase.cpp:17:
 [5-ERROR] ../../../src/tse3/cmd/Phrase.h:116: error: 'TSE3::PhraseEdit' has not been declared
-[5-ERROR] ../../../src/tse3/cmd/Phrase.h:141: error: using-declaration for non-member at class scope
+[5-ERROR] ../../../src/tse3/cmd/Phrase.h:141: error: ISO C++ forbids declaration of 'PhraseEdit' with no type
+[5-ERROR] ../../../src/tse3/cmd/Phrase.h:141: error: invalid use of '::'
 [5-ERROR] ../../../src/tse3/cmd/Phrase.h:141: error: expected ';' before '*' token
 [5-ERROR] ../../../src/tse3/cmd/Phrase.h:243: error: 'TSE3::PhraseEdit' has not been declared
-[5-ERROR] ../../../src/tse3/cmd/Phrase.h:273: error: using-declaration for non-member at class scope
+[5-ERROR] ../../../src/tse3/cmd/Phrase.h:273: error: ISO C++ forbids declaration of 'PhraseEdit' with no type
+[5-ERROR] ../../../src/tse3/cmd/Phrase.h:273: error: invalid use of '::'
 [5-ERROR] ../../../src/tse3/cmd/Phrase.h:273: error: expected ';' before '*' token
-[5-ERROR] ../../../src/tse3/listen/Song.h:37: warning: 'class TSE3::SongListener' has virtual functions but non-virtual destructor
-[5-ERROR] ../../../src/tse3/listen/Track.h:33: warning: 'class TSE3::TrackListener' has virtual functions but non-virtual destructor
-[5-ERROR] ../../../src/tse3/listen/Part.h:35: warning: 'class TSE3::PartListener' has virtual functions but non-virtual destructor
-[5-ERROR] ../../../src/tse3/listen/MidiFilter.h:32: warning: 'class TSE3::MidiFilterListener' has virtual functions but non-virtual destructor
-[5-ERROR] ../../../src/tse3/listen/MidiParams.h:32: warning: 'class TSE3::MidiParamsListener' has virtual functions but non-virtual destructor
-[5-ERROR] ../../../src/tse3/listen/PhraseEdit.h:36: warning: 'class TSE3::PhraseEditListener' has virtual functions but non-virtual destructor
-[5-ERROR] ../../../src/tse3/listen/PhraseList.h:33: warning: 'class TSE3::PhraseListListener' has virtual functions but non-virtual destructor
 [5-ERROR] Phrase.cpp:79: error: prototype for 'TSE3::Cmd::Phrase_Create::Phrase_Create(TSE3::PhraseList*, TSE3::PhraseEdit*, const std::string&)' does not match any in class 'TSE3::Cmd::Phrase_Create'
 [5-ERROR] ../../../src/tse3/cmd/Phrase.h:102: error: candidates are: TSE3::Cmd::Phrase_Create::Phrase_Create(const TSE3::Cmd::Phrase_Create&)
 [5-ERROR] ../../../src/tse3/cmd/Phrase.h:117: error:                 TSE3::Cmd::Phrase_Create::Phrase_Create(TSE3::PhraseList*, int*, const std::string&)
@@ -81,36 +81,36 @@
 [5-ERROR] Phrase.cpp: In member function 'virtual void TSE3::Cmd::Phrase_Replace::undoImpl()':
 [5-ERROR] Phrase.cpp:274: error: 'phraseEdit' was not declared in this scope
 [5-ERROR] make[4]: *** [Phrase.lo] Error 1
-[5-ERROR] make[4]: Leaving directory `/ROCK/loop/src.tse3.1169123585.30970.3694631316/tse3-0.3.1/src/tse3/cmd'
+[5-ERROR] make[4]: Leaving directory `/ROCK/loop/src.tse3.1181955204.3523.1627887995/tse3-0.3.1/src/tse3/cmd'
 [5-ERROR] make[3]: *** [all-recursive] Error 1
-[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.tse3.1169123585.30970.3694631316/tse3-0.3.1/src/tse3'
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.tse3.1181955204.3523.1627887995/tse3-0.3.1/src/tse3'
 [5-ERROR] make[2]: *** [all-recursive] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.tse3.1169123585.30970.3694631316/tse3-0.3.1/src'
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.tse3.1181955204.3523.1627887995/tse3-0.3.1/src'
 [5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.tse3.1169123585.30970.3694631316/tse3-0.3.1'
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.tse3.1181955204.3523.1627887995/tse3-0.3.1'
 [5-ERROR] make: *** [all] Error 2
 [5-ERROR] --- BUILD ERROR ---
 
-[9-ERROR] ../../../src/tse3/listen/Phrase.h:33: warning: 'class TSE3::PhraseListener' has virtual functions but non-virtual destructor
-[9-ERROR] if /bin/sh ../../../libtool --tag=CXX --mode=compile g++-40 -D_SYS_SYSMACROS_H=IGNORE -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src    -g -O2 -W -Wall -ansi -pedantic -MT Phrase.lo -MD -MP -MF ".deps/Phrase.Tpo" -c -o Phrase.lo Phrase.cpp; \
+[9-ERROR] 	then mv -f ".deps/Song.Tpo" ".deps/Song.Plo"; else rm -f ".deps/Song.Tpo"; exit 1; fi
+[9-ERROR]  g++-42 -D_SYS_SYSMACROS_H=IGNORE -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src -g -O2 -W -Wall -ansi -pedantic -MT Song.lo -MD -MP -MF .deps/Song.Tpo -c Song.cpp  -fPIC -DPIC -o .libs/Song.o
+[9-ERROR] if /bin/sh ../../../libtool --tag=CXX --mode=compile g++-42 -D_SYS_SYSMACROS_H=IGNORE -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src    -g -O2 -W -Wall -ansi -pedantic -MT Track.lo -MD -MP -MF ".deps/Track.Tpo" -c -o Track.lo Track.cpp; \
+[9-ERROR] 	then mv -f ".deps/Track.Tpo" ".deps/Track.Plo"; else rm -f ".deps/Track.Tpo"; exit 1; fi
+[9-ERROR]  g++-42 -D_SYS_SYSMACROS_H=IGNORE -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src -g -O2 -W -Wall -ansi -pedantic -MT Track.lo -MD -MP -MF .deps/Track.Tpo -c Track.cpp  -fPIC -DPIC -o .libs/Track.o
+[9-ERROR] if /bin/sh ../../../libtool --tag=CXX --mode=compile g++-42 -D_SYS_SYSMACROS_H=IGNORE -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src    -g -O2 -W -Wall -ansi -pedantic -MT Part.lo -MD -MP -MF ".deps/Part.Tpo" -c -o Part.lo Part.cpp; \
+[9-ERROR] 	then mv -f ".deps/Part.Tpo" ".deps/Part.Plo"; else rm -f ".deps/Part.Tpo"; exit 1; fi
+[9-ERROR]  g++-42 -D_SYS_SYSMACROS_H=IGNORE -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src -g -O2 -W -Wall -ansi -pedantic -MT Part.lo -MD -MP -MF .deps/Part.Tpo -c Part.cpp  -fPIC -DPIC -o .libs/Part.o
+[9-ERROR] if /bin/sh ../../../libtool --tag=CXX --mode=compile g++-42 -D_SYS_SYSMACROS_H=IGNORE -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src    -g -O2 -W -Wall -ansi -pedantic -MT Phrase.lo -MD -MP -MF ".deps/Phrase.Tpo" -c -o Phrase.lo Phrase.cpp; \
 [9-ERROR] 	then mv -f ".deps/Phrase.Tpo" ".deps/Phrase.Plo"; else rm -f ".deps/Phrase.Tpo"; exit 1; fi
-[9-ERROR]  g++-40 -D_SYS_SYSMACROS_H=IGNORE -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src -g -O2 -W -Wall -ansi -pedantic -MT Phrase.lo -MD -MP -MF .deps/Phrase.Tpo -c Phrase.cpp  -fPIC -DPIC -o .libs/Phrase.o
-[9-ERROR] ../../../src/tse3/listen/Phrase.h:33: warning: 'class TSE3::PhraseListener' has virtual functions but non-virtual destructor
-[9-ERROR] ../../../src/tse3/listen/DisplayParams.h:33: warning: 'class TSE3::DisplayParamsListener' has virtual functions but non-virtual destructor
-[9-ERROR] ../../../src/tse3/listen/DisplayParams.h:48: warning: 'class TSE3::PresetColoursListener' has virtual functions but non-virtual destructor
+[9-ERROR]  g++-42 -D_SYS_SYSMACROS_H=IGNORE -DHAVE_CONFIG_H -I. -I. -I../../.. -I../../../src -g -O2 -W -Wall -ansi -pedantic -MT Phrase.lo -MD -MP -MF .deps/Phrase.Tpo -c Phrase.cpp  -fPIC -DPIC -o .libs/Phrase.o
+[9-ERROR] In file included from Phrase.cpp:17:
 [9-ERROR] ../../../src/tse3/cmd/Phrase.h:116: error: 'TSE3::PhraseEdit' has not been declared
-[9-ERROR] ../../../src/tse3/cmd/Phrase.h:141: error: using-declaration for non-member at class scope
+[9-ERROR] ../../../src/tse3/cmd/Phrase.h:141: error: ISO C++ forbids declaration of 'PhraseEdit' with no type
+[9-ERROR] ../../../src/tse3/cmd/Phrase.h:141: error: invalid use of '::'
 [9-ERROR] ../../../src/tse3/cmd/Phrase.h:141: error: expected ';' before '*' token
 [9-ERROR] ../../../src/tse3/cmd/Phrase.h:243: error: 'TSE3::PhraseEdit' has not been declared
-[9-ERROR] ../../../src/tse3/cmd/Phrase.h:273: error: using-declaration for non-member at class scope
+[9-ERROR] ../../../src/tse3/cmd/Phrase.h:273: error: ISO C++ forbids declaration of 'PhraseEdit' with no type
+[9-ERROR] ../../../src/tse3/cmd/Phrase.h:273: error: invalid use of '::'
 [9-ERROR] ../../../src/tse3/cmd/Phrase.h:273: error: expected ';' before '*' token
-[9-ERROR] ../../../src/tse3/listen/Song.h:37: warning: 'class TSE3::SongListener' has virtual functions but non-virtual destructor
-[9-ERROR] ../../../src/tse3/listen/Track.h:33: warning: 'class TSE3::TrackListener' has virtual functions but non-virtual destructor
-[9-ERROR] ../../../src/tse3/listen/Part.h:35: warning: 'class TSE3::PartListener' has virtual functions but non-virtual destructor
-[9-ERROR] ../../../src/tse3/listen/MidiFilter.h:32: warning: 'class TSE3::MidiFilterListener' has virtual functions but non-virtual destructor
-[9-ERROR] ../../../src/tse3/listen/MidiParams.h:32: warning: 'class TSE3::MidiParamsListener' has virtual functions but non-virtual destructor
-[9-ERROR] ../../../src/tse3/listen/PhraseEdit.h:36: warning: 'class TSE3::PhraseEditListener' has virtual functions but non-virtual destructor
-[9-ERROR] ../../../src/tse3/listen/PhraseList.h:33: warning: 'class TSE3::PhraseListListener' has virtual functions but non-virtual destructor
 [9-ERROR] Phrase.cpp:79: error: prototype for 'TSE3::Cmd::Phrase_Create::Phrase_Create(TSE3::PhraseList*, TSE3::PhraseEdit*, const std::string&)' does not match any in class 'TSE3::Cmd::Phrase_Create'
 [9-ERROR] ../../../src/tse3/cmd/Phrase.h:102: error: candidates are: TSE3::Cmd::Phrase_Create::Phrase_Create(const TSE3::Cmd::Phrase_Create&)
 [9-ERROR] ../../../src/tse3/cmd/Phrase.h:117: error:                 TSE3::Cmd::Phrase_Create::Phrase_Create(TSE3::PhraseList*, int*, const std::string&)
@@ -132,13 +132,13 @@
 [9-ERROR] Phrase.cpp: In member function 'virtual void TSE3::Cmd::Phrase_Replace::undoImpl()':
 [9-ERROR] Phrase.cpp:274: error: 'phraseEdit' was not declared in this scope
 [9-ERROR] make[4]: *** [Phrase.lo] Error 1
-[9-ERROR] make[4]: Leaving directory `/ROCK/loop/src.tse3.1169153164.21311.1197622847/tse3-0.3.1/src/tse3/cmd'
+[9-ERROR] make[4]: Leaving directory `/ROCK/loop/src.tse3.1181977079.10661.3474453109/tse3-0.3.1/src/tse3/cmd'
 [9-ERROR] make[3]: *** [all-recursive] Error 1
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.tse3.1169153164.21311.1197622847/tse3-0.3.1/src/tse3'
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.tse3.1181977079.10661.3474453109/tse3-0.3.1/src/tse3'
 [9-ERROR] make[2]: *** [all-recursive] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.tse3.1169153164.21311.1197622847/tse3-0.3.1/src'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.tse3.1181977079.10661.3474453109/tse3-0.3.1/src'
 [9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.tse3.1169153164.21311.1197622847/tse3-0.3.1'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.tse3.1181977079.10661.3474453109/tse3-0.3.1'
 [9-ERROR] make: *** [all] Error 2
 [9-ERROR] --- BUILD ERROR ---
 

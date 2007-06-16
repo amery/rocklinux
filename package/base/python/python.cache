@@ -20,38 +20,40 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168546412 Thu Jan 11 21:13:32 2007 (5)
-[TIMESTAMP] 1168741460 Sun Jan 14 03:24:20 2007 (9)
+[TIMESTAMP] 1180931073 Mon Jun  4 06:24:33 2007 (5)
+[TIMESTAMP] 1181316056 Fri Jun  8 17:20:56 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-python.log 9-python.log
 
-[BUILDTIME] 16897 (5)
-[BUILDTIME] 19383 (9)
-[SIZE] 42.65 MB, 3830 files
+[BUILDTIME] 24235 (5)
+[BUILDTIME] 26895 (9)
+[SIZE] 45.17 MB, 3917 files
 
 [DEP] 00-dirtree applewmproto applewmproto:dev bash2 bdb33:dev bdb40:dev
 [DEP] bdb41:dev bdb42:dev bdb44 bdb44:dev binutils bluez-libs:dev bzip2
-[DEP] bzip2:dev coreutils cvm diffutils findutils gawk gcc40 gcc40:dev
-[DEP] gdbm gdbm:dev glibc23 glibc23:dev grep libx11 libx11:dev libxau
-[DEP] libxdmcp linux-libc-headers:dev make mktemp ncurses ncurses:dev
-[DEP] net-tools netpbm openssl openssl:dev patch readline readline:dev
-[DEP] rrdtool sed sysfiles tar tcl tcl:dev tk tk:dev twoftpd ucspi-unix
-[DEP] util-linux xproto:dev zlib zlib:dev
+[DEP] bzip2:dev coreutils cvm diffutils findutils gawk gcc42 gcc42:dev
+[DEP] gdbm gdbm:dev glibc26 glibc26:dev grep libx11 libx11:dev libxau
+[DEP] libxcb libxdmcp linux26-headers:dev ltrace make mktemp ncurses
+[DEP] ncurses:dev net-tools openssl openssl:dev patch readline readline:dev
+[DEP] sed sqlite3 sqlite3:dev subversion:server sysfiles tar tcl tcl:dev tk
+[DEP] tk:dev twoftpd ucspi-unix util-linux xmame xproto:dev zlib zlib:dev
 
 [PROVIDES] _bisect.so _bsddb.so _codecs_cn.so _codecs_hk.so
 [PROVIDES] _codecs_iso2022.so _codecs_jp.so _codecs_kr.so _codecs_tw.so
-[PROVIDES] _csv.so _curses.so _curses_panel.so _heapq.so _hotshot.so
-[PROVIDES] _locale.so _multibytecodec.so _random.so _socket.so _ssl.so
-[PROVIDES] _testcapi.so _weakref.so array.so audioop.so binascii.so bz2.so
-[PROVIDES] cPickle.so cStringIO.so cmath.so collections.so cryptmodule.so
-[PROVIDES] datetime.so dbm_failed.so dl.so fcntl.so gdbmmodule.so grp.so
-[PROVIDES] idle imageop.so itertools.so libpython2.4.a libpython2.4.so
-[PROVIDES] linuxaudiodev.so math.so md5.so mmap.so nis.so operator.so
-[PROVIDES] ossaudiodev.so parser.so pydoc pyexpat.so python python2.4
-[PROVIDES] readline.so regex.so resource.so rgbimg.so select.so sha.so
-[PROVIDES] smtpd.py strop.so struct.so syslogmodule.so termios.so time.so
-[PROVIDES] timing.so unicodedata.so xxsubtype.so zlibmodule.so
+[PROVIDES] _csv.so _ctypes.so _ctypes_test.so _curses.so _elementtree.so
+[PROVIDES] _functools.so _hashlib.so _heapq.so _hotshot.so _locale.so
+[PROVIDES] _lsprof.so _multibytecodec.so _random.so _socket.so
+[PROVIDES] _sqlite3.so _ssl.so _struct.so _testcapi.so _weakref.so array.so
+[PROVIDES] audioop.so binascii.so bz2.so cPickle.so cStringIO.so cmath.so
+[PROVIDES] collections.so cryptmodule.so datetime.so dbm_failed.so dl.so
+[PROVIDES] fcntl.so gdbmmodule.so grp.so idle imageop.so itertools.so
+[PROVIDES] libpython2.5.a libpython2.5.so linuxaudiodev.so math.so
+[PROVIDES] mmap.so nis.so operator.so ossaudiodev.so parser.so pydoc
+[PROVIDES] pyexpat.so python python-config python2.5 python2.5-config
+[PROVIDES] readline.so resource.so rgbimg.so select.so smtpd.py spwd.so
+[PROVIDES] strop.so syslogmodule.so termios.so time.so unicodedata.so
+[PROVIDES] xxsubtype.so zlibmodule.so
 

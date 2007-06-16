@@ -20,24 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168551575 Thu Jan 11 22:39:35 2007 (5)
-[TIMESTAMP] 1168747699 Sun Jan 14 05:08:19 2007 (9)
+[TIMESTAMP] 1180936819 Mon Jun  4 08:00:19 2007 (5) ERROR
+[TIMESTAMP] 1181324656 Fri Jun  8 19:44:16 2007 (9) ERROR
+[TIMESTAMP] 1181801618 Thu Jun 14 08:13:38 2007 (5) ERROR
+[TIMESTAMP] 1181855151 Thu Jun 14 23:05:51 2007 (9) ERROR
+[TIMESTAMP] 1181939866 Fri Jun 15 22:37:46 2007 (5) ERROR
+[TIMESTAMP] 1181960445 Sat Jun 16 04:20:45 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-openjade.log 9-openjade.log
+[LOGS] 5-openjade.err 9-openjade.err
 
-[BUILDTIME] 36045 (5)
-[BUILDTIME] 37858 (9)
-[SIZE] 5.35 MB, 57 files
+[BUILDTIME] 4328 (5) ERROR
+[BUILDTIME] 4370 (9) ERROR
+[BUILDTIME] 4467 (5) ERROR
+[BUILDTIME] 4373 (9) ERROR
+[BUILDTIME] 4426 (5) ERROR
+[BUILDTIME] 4286 (9) ERROR
 
-[DEP] 00-dirtree autoconf automake19 bash2 binutils bison bzip2 coreutils
-[DEP] cvm diffutils findutils gawk gcc40 gcc40:dev gettext glibc23
-[DEP] glibc23:dev grep linux-libc-headers:dev make mktemp net-tools patch
-[DEP] perl5 rrdtool sed sysfiles tar texinfo util-linux
 
-[PROVIDES] libogrove.a libogrove.so libosp.a libosp.so libospgrove.a
-[PROVIDES] libospgrove.so libostyle.a libostyle.so onsgmls openjade
-[PROVIDES] osgmlnorm ospam ospcat ospent osx
+[5-ERROR] config.status: creating po/Makefile.in
+[5-ERROR] config.status: creating config.h
+[5-ERROR] config.status: executing depfiles commands
+[5-ERROR] config.status: executing default-1 commands
+[5-ERROR] config.status: creating po/POTFILES
+[5-ERROR] config.status: creating po/Makefile
+[5-ERROR] make  all-recursive
+[5-ERROR] make[1]: Entering directory `/ROCK/loop/src.openjade.1181939817.4148.3488772265/OpenSP-1.5.2pre1'
+[5-ERROR] Making all in pubtext
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.openjade.1181939817.4148.3488772265/OpenSP-1.5.2pre1/pubtext'
+[5-ERROR] make[2]: Nothing to be done for `all'.
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.openjade.1181939817.4148.3488772265/OpenSP-1.5.2pre1/pubtext'
+[5-ERROR] Making all in unicode
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.openjade.1181939817.4148.3488772265/OpenSP-1.5.2pre1/unicode'
+[5-ERROR] make[2]: Nothing to be done for `all'.
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.openjade.1181939817.4148.3488772265/OpenSP-1.5.2pre1/unicode'
+[5-ERROR] Making all in doc
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.openjade.1181939817.4148.3488772265/OpenSP-1.5.2pre1/doc'
+[5-ERROR] make[2]: Nothing to be done for `all'.
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.openjade.1181939817.4148.3488772265/OpenSP-1.5.2pre1/doc'
+[5-ERROR] Making all in include
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.openjade.1181939817.4148.3488772265/OpenSP-1.5.2pre1/include'
+[5-ERROR] make[2]: Nothing to be done for `all'.
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.openjade.1181939817.4148.3488772265/OpenSP-1.5.2pre1/include'
+[5-ERROR] Making all in generic
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.openjade.1181939817.4148.3488772265/OpenSP-1.5.2pre1/generic'
+[5-ERROR] make[2]: Nothing to be done for `all'.
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.openjade.1181939817.4148.3488772265/OpenSP-1.5.2pre1/generic'
+[5-ERROR] Making all in lib
+[5-ERROR] make[2]: Entering directory `/ROCK/loop/src.openjade.1181939817.4148.3488772265/OpenSP-1.5.2pre1/lib'
+[5-ERROR] make  all-am
+[5-ERROR] make[3]: Entering directory `/ROCK/loop/src.openjade.1181939817.4148.3488772265/OpenSP-1.5.2pre1/lib'
+[5-ERROR] if /bin/sh ../libtool --tag=CXX --mode=compile g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../generic    -g -O2 -MT Allocator.lo -MD -MP -MF ".deps/Allocator.Tpo" -c -o Allocator.lo Allocator.cxx; \
+[5-ERROR] 	then mv -f ".deps/Allocator.Tpo" ".deps/Allocator.Plo"; else rm -f ".deps/Allocator.Tpo"; exit 1; fi
+[5-ERROR] mkdir .libs
+[5-ERROR]  g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../generic -g -O2 -MT Allocator.lo -MD -MP -MF .deps/Allocator.Tpo -c Allocator.cxx  -fPIC -DPIC -o .libs/Allocator.o
+[5-ERROR]  g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../generic -g -O2 -MT Allocator.lo -MD -MP -MF .deps/Allocator.Tpo -c Allocator.cxx -o Allocator.o >/dev/null 2>&1
+[5-ERROR] if /bin/sh ../libtool --tag=CXX --mode=compile g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../generic    -g -O2 -MT ArcEngine.lo -MD -MP -MF ".deps/ArcEngine.Tpo" -c -o ArcEngine.lo ArcEngine.cxx; \
+[5-ERROR] 	then mv -f ".deps/ArcEngine.Tpo" ".deps/ArcEngine.Plo"; else rm -f ".deps/ArcEngine.Tpo"; exit 1; fi
+[5-ERROR]  g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../generic -g -O2 -MT ArcEngine.lo -MD -MP -MF .deps/ArcEngine.Tpo -c ArcEngine.cxx  -fPIC -DPIC -o .libs/ArcEngine.o
+[5-ERROR] In file included from ArcEngine.cxx:20:
+[5-ERROR] ../include/InternalInputSource.h:37: error: extra qualification 'OpenSP::InternalInputSource::' on member 'asInternalInputSource'
+[5-ERROR] make[3]: *** [ArcEngine.lo] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.openjade.1181939817.4148.3488772265/OpenSP-1.5.2pre1/lib'
+[5-ERROR] make[2]: *** [all] Error 2
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.openjade.1181939817.4148.3488772265/OpenSP-1.5.2pre1/lib'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.openjade.1181939817.4148.3488772265/OpenSP-1.5.2pre1'
+[5-ERROR] make: *** [all] Error 2
+[5-ERROR] --- BUILD ERROR ---
+
+[9-ERROR] config.status: creating po/Makefile.in
+[9-ERROR] config.status: creating config.h
+[9-ERROR] config.status: executing depfiles commands
+[9-ERROR] config.status: executing default-1 commands
+[9-ERROR] config.status: creating po/POTFILES
+[9-ERROR] config.status: creating po/Makefile
+[9-ERROR] make  all-recursive
+[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.openjade.1181960402.21130.2768833622/OpenSP-1.5.2pre1'
+[9-ERROR] Making all in pubtext
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.openjade.1181960402.21130.2768833622/OpenSP-1.5.2pre1/pubtext'
+[9-ERROR] make[2]: Nothing to be done for `all'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.openjade.1181960402.21130.2768833622/OpenSP-1.5.2pre1/pubtext'
+[9-ERROR] Making all in unicode
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.openjade.1181960402.21130.2768833622/OpenSP-1.5.2pre1/unicode'
+[9-ERROR] make[2]: Nothing to be done for `all'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.openjade.1181960402.21130.2768833622/OpenSP-1.5.2pre1/unicode'
+[9-ERROR] Making all in doc
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.openjade.1181960402.21130.2768833622/OpenSP-1.5.2pre1/doc'
+[9-ERROR] make[2]: Nothing to be done for `all'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.openjade.1181960402.21130.2768833622/OpenSP-1.5.2pre1/doc'
+[9-ERROR] Making all in include
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.openjade.1181960402.21130.2768833622/OpenSP-1.5.2pre1/include'
+[9-ERROR] make[2]: Nothing to be done for `all'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.openjade.1181960402.21130.2768833622/OpenSP-1.5.2pre1/include'
+[9-ERROR] Making all in generic
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.openjade.1181960402.21130.2768833622/OpenSP-1.5.2pre1/generic'
+[9-ERROR] make[2]: Nothing to be done for `all'.
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.openjade.1181960402.21130.2768833622/OpenSP-1.5.2pre1/generic'
+[9-ERROR] Making all in lib
+[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.openjade.1181960402.21130.2768833622/OpenSP-1.5.2pre1/lib'
+[9-ERROR] make  all-am
+[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.openjade.1181960402.21130.2768833622/OpenSP-1.5.2pre1/lib'
+[9-ERROR] if /bin/sh ../libtool --tag=CXX --mode=compile g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../generic    -g -O2 -MT Allocator.lo -MD -MP -MF ".deps/Allocator.Tpo" -c -o Allocator.lo Allocator.cxx; \
+[9-ERROR] 	then mv -f ".deps/Allocator.Tpo" ".deps/Allocator.Plo"; else rm -f ".deps/Allocator.Tpo"; exit 1; fi
+[9-ERROR] mkdir .libs
+[9-ERROR]  g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../generic -g -O2 -MT Allocator.lo -MD -MP -MF .deps/Allocator.Tpo -c Allocator.cxx  -fPIC -DPIC -o .libs/Allocator.o
+[9-ERROR]  g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../generic -g -O2 -MT Allocator.lo -MD -MP -MF .deps/Allocator.Tpo -c Allocator.cxx -o Allocator.o >/dev/null 2>&1
+[9-ERROR] if /bin/sh ../libtool --tag=CXX --mode=compile g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../generic    -g -O2 -MT ArcEngine.lo -MD -MP -MF ".deps/ArcEngine.Tpo" -c -o ArcEngine.lo ArcEngine.cxx; \
+[9-ERROR] 	then mv -f ".deps/ArcEngine.Tpo" ".deps/ArcEngine.Plo"; else rm -f ".deps/ArcEngine.Tpo"; exit 1; fi
+[9-ERROR]  g++-42 -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../generic -g -O2 -MT ArcEngine.lo -MD -MP -MF .deps/ArcEngine.Tpo -c ArcEngine.cxx  -fPIC -DPIC -o .libs/ArcEngine.o
+[9-ERROR] In file included from ArcEngine.cxx:20:
+[9-ERROR] ../include/InternalInputSource.h:37: error: extra qualification 'OpenSP::InternalInputSource::' on member 'asInternalInputSource'
+[9-ERROR] make[3]: *** [ArcEngine.lo] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.openjade.1181960402.21130.2768833622/OpenSP-1.5.2pre1/lib'
+[9-ERROR] make[2]: *** [all] Error 2
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.openjade.1181960402.21130.2768833622/OpenSP-1.5.2pre1/lib'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.openjade.1181960402.21130.2768833622/OpenSP-1.5.2pre1'
+[9-ERROR] make: *** [all] Error 2
+[9-ERROR] --- BUILD ERROR ---
 

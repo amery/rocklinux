@@ -20,29 +20,25 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168663252 Sat Jan 13 05:40:52 2007 (5) ERROR
-[TIMESTAMP] 1168870992 Mon Jan 15 15:23:12 2007 (9) ERROR
-[TIMESTAMP] 1168950408 Tue Jan 16 13:26:48 2007 (5) ERROR
-[TIMESTAMP] 1168979808 Tue Jan 16 21:36:48 2007 (9) ERROR
-[TIMESTAMP] 1169093543 Thu Jan 18 05:12:23 2007 (5) ERROR
-[TIMESTAMP] 1169150018 Thu Jan 18 20:53:38 2007 (9) ERROR
+[TIMESTAMP] 1181106832 Wed Jun  6 07:13:52 2007 (5) ERROR
+[TIMESTAMP] 1181582657 Mon Jun 11 19:24:17 2007 (9) ERROR
+[TIMESTAMP] 1181825760 Thu Jun 14 14:56:00 2007 (5) ERROR
+[TIMESTAMP] 1181908291 Fri Jun 15 13:51:31 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-cvm.err 9-cvm.err
 
-[BUILDTIME] 1911 (5) ERROR
-[BUILDTIME] 2139 (9) ERROR
-[BUILDTIME] 2146 (5) ERROR
-[BUILDTIME] 2213 (9) ERROR
-[BUILDTIME] 2333 (5) ERROR
-[BUILDTIME] 2195 (9) ERROR
-[SIZE] 0.17 MB, 18 files
+[BUILDTIME] 2671 (5) ERROR
+[BUILDTIME] 2914 (9) ERROR
+[BUILDTIME] 2974 (5) ERROR
+[BUILDTIME] 2903 (9) ERROR
+[SIZE] 0.16 MB, 18 files
 
 [DEP] 00-dirtree bash2 bglibs bglibs:dev binutils bzip2 coreutils findutils
-[DEP] gawk gcc40 gcc40:dev glibc23 glibc23:dev grep linux-libc-headers:dev
-[DEP] make mktemp rrdtool sed shadow sysfiles tar
+[DEP] gawk gcc42 gcc42:dev glibc26 glibc26:dev grep linux26-headers:dev
+[DEP] ltrace make mktemp sed shadow sysfiles tar xmame
 
 [PROVIDES] cvm-benchclient cvm-checkpassword cvm-pwfile cvm-qmail
 [PROVIDES] cvm-testclient cvm-unix cvm-vmailmgr cvm-vmailmgr-local
@@ -94,7 +90,7 @@
 [5-ERROR] <cvm:doc> Creating md5sum and cksum files ...
 [5-ERROR] Making post-install adaptions.
 [5-ERROR] Found shared files with other packages:
-[5-ERROR] usr/bin: 00-dirtree cvm
+[5-ERROR] usr/bin: 00-dirtree cvm ltrace xmame
 [5-ERROR] usr/include: 00-dirtree cvm
 [5-ERROR] usr/lib: 00-dirtree cvm
 [5-ERROR] --- BUILD ERROR ---
@@ -145,7 +141,7 @@
 [9-ERROR] <cvm:doc> Creating md5sum and cksum files ...
 [9-ERROR] Making post-install adaptions.
 [9-ERROR] Found shared files with other packages:
-[9-ERROR] usr/bin: 00-dirtree cvm
+[9-ERROR] usr/bin: 00-dirtree cvm ltrace xmame
 [9-ERROR] usr/include: 00-dirtree cvm
 [9-ERROR] usr/lib: 00-dirtree cvm
 [9-ERROR] --- BUILD ERROR ---

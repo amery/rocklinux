@@ -20,42 +20,43 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168660080 Sat Jan 13 04:48:00 2007 (5)
-[TIMESTAMP] 1168866992 Mon Jan 15 14:16:32 2007 (9)
+[TIMESTAMP] 1181101137 Wed Jun  6 05:38:57 2007 (5)
+[TIMESTAMP] 1181576446 Mon Jun 11 17:40:46 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-koffice.log 9-koffice.log
 
-[BUILDTIME] 867919 (5)
-[BUILDTIME] 873067 (9)
-[SIZE] 62.48 MB, 4394 files
+[BUILDTIME] 1091565 (5)
+[BUILDTIME] 1059488 (9)
+[SIZE] 69.03 MB, 4405 files
 
 [DEP] 00-dirtree acl acl:dev alsa alsa:dev applewmproto applewmproto:dev
 [DEP] arts arts:dev attr attr:dev audiofile audiofile:dev bash2 binutils
 [DEP] bzip2 bzip2:dev cairo cairo:dev coreutils cups cvm diffutils
 [DEP] encodings esound esound:dev expat expat:dev fam fam:dev findutils
-[DEP] font-util fontconfig fontconfig:dev freetype freetype:dev gawk gcc40
-[DEP] gcc40:dev gettext glib glib:dev glibc23 glibc23:dev gnome-libs14
-[DEP] gnome14-dirtree gnome2-dirtree grep hicolor-icon-theme imagemagick
-[DEP] imagemagick:dev imake inputproto:dev kdebase kdegames kdelibs
-[DEP] kdelibs:dev kdesdk:dev kdeutils koffice-l10n-de lcms lcms:dev
-[DEP] libart_lgpl23 libart_lgpl23:dev libexif libexif:dev libgsf libgsf:dev
-[DEP] libice libice:dev libidn libidn:dev libjpeg libjpeg:dev libpng
-[DEP] libpng:dev libsm libsm:dev libtiff libtiff:dev libx11 libx11:dev
-[DEP] libxau libxau:dev libxcursor libxcursor:dev libxdmcp libxdmcp:dev
-[DEP] libxext libxext:dev libxfixes libxfixes:dev libxft libxft:dev libxi
-[DEP] libxi:dev libxinerama libxinerama:dev libxml2 libxml2:dev libxmu
-[DEP] libxmu:dev libxrandr libxrandr:dev libxrender libxrender:dev libxslt
-[DEP] libxslt:dev libxt libxt:dev linux-libc-headers:dev mad mad:dev make
-[DEP] mesalib mesalib:dev mkfontdir mkfontscale mktemp mysql41 mysql41:dev
-[DEP] mysql50 mysql50:dev nas ncurses net-tools nx-x11 nx-x11:dev nxcomp
-[DEP] ogg-vorbis ogg-vorbis:dev openexr openexr:dev openssl pcre pcre:dev
-[DEP] perl5 pkgconfig poppler poppler:dev postgresql python python:dev
-[DEP] qt33 qt33:dev readline readline:dev rrdtool ruby sed sysfiles tar
-[DEP] tcl tk util-linux wv2 wv2:dev xextproto:dev xorg-cf-files xproto:dev
-[DEP] zlib zlib:dev
+[DEP] font-util fontconfig fontconfig:dev freetype freetype:dev gawk gcc42
+[DEP] gcc42:dev gettext glib glib:dev glibc26 glibc26:dev gnome-libs14
+[DEP] gnome14-dirtree gnome2-dirtree graphicsmagick graphicsmagick:dev
+[DEP] grep hicolor-icon-theme imagemagick imagemagick:dev imake
+[DEP] inputproto:dev jasper:dev kdebase kdegames kdelibs kdelibs:dev
+[DEP] kdesdk:dev kdeutils koffice-l10n-de lcms lcms:dev libart_lgpl23
+[DEP] libart_lgpl23:dev libexif libexif:dev libgsf libgsf:dev libice
+[DEP] libice:dev libidn libidn:dev libjpeg libjpeg:dev libogg libogg:dev
+[DEP] libpng libpng:dev libsm libsm:dev libtiff libtiff:dev libvorbis
+[DEP] libvorbis:dev libx11 libx11:dev libxau libxau:dev libxcb libxcb:dev
+[DEP] libxcursor libxcursor:dev libxdmcp libxdmcp:dev libxext libxext:dev
+[DEP] libxfixes libxfixes:dev libxft libxft:dev libxi libxi:dev libxinerama
+[DEP] libxinerama:dev libxml2 libxml2:dev libxmu libxmu:dev libxrandr
+[DEP] libxrandr:dev libxrender libxrender:dev libxslt libxslt:dev libxt
+[DEP] libxt:dev linux26-headers:dev ltrace mad mad:dev make mesalib
+[DEP] mesalib:dev mkfontdir mkfontscale mktemp mysql41 mysql41:dev nas
+[DEP] ncurses net-tools nx-x11 nx-x11:dev nxcomp openexr openexr:dev
+[DEP] openssl pcre pcre:dev perl5 pkgconfig poppler poppler:dev postgresql
+[DEP] python python:dev qt33 qt33:dev readline readline:dev ruby sed
+[DEP] sysfiles tar tcl tk util-linux wv2 wv2:dev xextproto:dev xmame
+[DEP] xorg-cf-files xproto:dev zlib zlib:dev
 
 [PROVIDES] clipartthumbnail.so karbon karbon.so karbon_defaulttools.so
 [PROVIDES] karbon_flattenpathplugin.so karbon_imagetoolplugin.so
@@ -86,7 +87,7 @@
 [PROVIDES] kritafiltersgallery.so kritagrayplugin.so kritahistogram.so
 [PROVIDES] kritahistogramdocker.so kritaimageenhancement.so
 [PROVIDES] kritaimagesize.so kritalenscorrectionfilter.so
-[PROVIDES] kritamodifyselection.so kritanoisefilter.so
+[PROVIDES] kritalevelfilter.so kritamodifyselection.so kritanoisefilter.so
 [PROVIDES] kritaoilpaintfilter.so kritapixelizefilter.so
 [PROVIDES] kritaraindropsfilter.so kritarandompickfilter.so
 [PROVIDES] kritargbplugin.so kritarotateimage.so kritaroundcornersfilter.so
@@ -146,9 +147,10 @@
 [PROVIDES] libkprkword.so libkrita_cmyk_u16.so libkrita_gray_u16.so
 [PROVIDES] libkrita_lms_f32.so libkrita_openexr_export.so
 [PROVIDES] libkrita_openexr_import.so libkrita_raw_import.so
-[PROVIDES] libkrita_rgb_f16half.so libkrita_rgb_f32.so libkrita_rgb_u16.so
-[PROVIDES] libkrita_ycbcr_u16.so libkrita_ycbcr_u8.so libkritacolor.so
-[PROVIDES] libkritacommon.so libkritagrayscale.so libkritaimage.so
+[PROVIDES] libkrita_rgb_f16half.so libkrita_rgb_f32.so
+[PROVIDES] libkrita_rgb_u16.so libkrita_ycbcr_u16.so libkrita_ycbcr_u8.so
+[PROVIDES] libkritacolor.so libkritacommon.so libkritagmagickexport.so
+[PROVIDES] libkritagmagickimport.so libkritagrayscale.so libkritaimage.so
 [PROVIDES] libkritajpegexport.so libkritajpegimport.so libkritapart.so
 [PROVIDES] libkritapdfimport.so libkritapngexport.so libkritapngimport.so
 [PROVIDES] libkritargb.so libkritascripting.so libkritatiffexport.so

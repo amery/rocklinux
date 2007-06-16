@@ -20,125 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168677704 Sat Jan 13 09:41:44 2007 (5) ERROR
-[TIMESTAMP] 1168886088 Mon Jan 15 19:34:48 2007 (9) ERROR
-[TIMESTAMP] 1168951559 Tue Jan 16 13:45:59 2007 (5) ERROR
-[TIMESTAMP] 1168981176 Tue Jan 16 21:59:36 2007 (9) ERROR
-[TIMESTAMP] 1169121873 Thu Jan 18 13:04:33 2007 (5) ERROR
-[TIMESTAMP] 1169151372 Thu Jan 18 21:16:12 2007 (9) ERROR
+[TIMESTAMP] 1181124356 Wed Jun  6 12:05:56 2007 (5) ERROR
+[TIMESTAMP] 1181601248 Tue Jun 12 00:34:08 2007 (9) ERROR
+[TIMESTAMP] 1181828115 Thu Jun 14 15:35:15 2007 (5) ERROR
+[TIMESTAMP] 1181911623 Fri Jun 15 14:47:03 2007 (9) ERROR
+[TIMESTAMP] 1181952441 Sat Jun 16 02:07:21 2007 (5) ERROR
+[TIMESTAMP] 1181974190 Sat Jun 16 08:09:50 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-soya.err 9-soya.err
 
-[BUILDTIME] 6940 (5) ERROR
-[BUILDTIME] 7002 (9) ERROR
-[BUILDTIME] 7014 (5) ERROR
-[BUILDTIME] 7002 (9) ERROR
-[BUILDTIME] 7014 (5) ERROR
-[BUILDTIME] 7028 (9) ERROR
+[BUILDTIME] 8452 (5) ERROR
+[BUILDTIME] 8325 (9) ERROR
+[BUILDTIME] 8281 (5) ERROR
+[BUILDTIME] 8556 (9) ERROR
+[BUILDTIME] 8172 (5) ERROR
+[BUILDTIME] 8177 (9) ERROR
 
 
-[5-ERROR] _soya.c:70273: error: wrong type argument to decrement
-[5-ERROR] _soya.c:70273: error: dereferencing pointer to incomplete type
-[5-ERROR] _soya.c:70273: error: request for member '_glyphs' in something not a structure or union
-[5-ERROR] _soya.c:70273: error: 'struct PyMemberDef' has no member named 'ob_type'
-[5-ERROR] _soya.c:70273: error: 'struct PyMemberDef' has no member named 'tp_dealloc'
-[5-ERROR] _soya.c:70273: error: dereferencing pointer to incomplete type
-[5-ERROR] _soya.c:70273: error: request for member '_glyphs' in something not a structure or union
-[5-ERROR] _soya.c:70273: error: called object '*(&<erroneous-expression>)' is not a function
-[5-ERROR] _soya.c:70274: error: dereferencing pointer to incomplete type
-[5-ERROR] _soya.c:70274: error: request for member '_glyphs' in something not a structure or union
+[5-ERROR] _soya.c:63870: error: 'struct __pyx_obj_5_soya__Image' has no member named '_filename'
+[5-ERROR] _soya.c:63870: error: 'struct __pyx_obj_5_soya__Image' has no member named '_filename'
+[5-ERROR] _soya.c:63870: error: 'struct __pyx_obj_5_soya__Image' has no member named '_filename'
+[5-ERROR] _soya.c:63871: error: 'struct __pyx_obj_5_soya__Image' has no member named '_filename'
 [5-ERROR] _soya.c: At top level:
-[5-ERROR] _soya.c:70299: error: invalid use of undefined type 'struct __pyx_obj_5_soya_Font'
-[5-ERROR] _soya.c:70300: error: invalid use of undefined type 'struct __pyx_obj_5_soya_Font'
-[5-ERROR] _soya.c:70301: error: invalid use of undefined type 'struct __pyx_obj_5_soya_Font'
-[5-ERROR] _soya.c:70382: error: invalid application of 'sizeof' to incomplete type 'struct __pyx_obj_5_soya_Font' 
-[5-ERROR] _soya.c: In function '__pyx_tp_new_5_soya__PythonMaterial':
-[5-ERROR] _soya.c:72011: error: request for member '__pyx_base' in something not a structure or union
-[5-ERROR] _soya.c:72011: error: request for member '__pyx_vtab' in something not a structure or union
+[5-ERROR] _soya.c:63898: error: 'struct __pyx_obj_5_soya__Image' has no member named '_filename'
+[5-ERROR] _soya.c: In function '__pyx_tp_new_5_soya__Material':
+[5-ERROR] _soya.c:64029: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[5-ERROR] _soya.c: In function '__pyx_tp_dealloc_5_soya__Material':
+[5-ERROR] _soya.c:64045: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[5-ERROR] _soya.c:64045: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[5-ERROR] _soya.c:64045: error: 'struct PyMemberDef' has no member named 'ob_refcnt'
+[5-ERROR] _soya.c:64045: error: lvalue required as decrement operand
+[5-ERROR] _soya.c:64045: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[5-ERROR] _soya.c:64045: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[5-ERROR] _soya.c: In function '__pyx_tp_traverse_5_soya__Material':
+[5-ERROR] _soya.c:64056: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[5-ERROR] _soya.c:64057: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[5-ERROR] _soya.c: In function '__pyx_tp_clear_5_soya__Material':
+[5-ERROR] _soya.c:64067: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[5-ERROR] _soya.c:64067: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[5-ERROR] _soya.c:64067: error: 'struct PyMemberDef' has no member named 'ob_refcnt'
+[5-ERROR] _soya.c:64067: error: lvalue required as decrement operand
+[5-ERROR] _soya.c:64067: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[5-ERROR] _soya.c:64067: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[5-ERROR] _soya.c:64068: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[5-ERROR] _soya.c: At top level:
+[5-ERROR] _soya.c:64211: error: 'struct __pyx_obj_5_soya__Material' has no member named '_id'
+[5-ERROR] _soya.c:64211: error: initializer element is not constant
+[5-ERROR] _soya.c:64211: error: (near initialization for '__pyx_members_5_soya__Material[0].offset')
+[5-ERROR] _soya.c:64212: error: 'struct __pyx_obj_5_soya__Material' has no member named 'shininess'
+[5-ERROR] _soya.c:64212: error: initializer element is not constant
+[5-ERROR] _soya.c:64212: error: (near initialization for '__pyx_members_5_soya__Material[1].offset')
+[5-ERROR] _soya.c:64213: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[5-ERROR] _soya.c:64213: error: initializer element is not constant
+[5-ERROR] _soya.c:64213: error: (near initialization for '__pyx_members_5_soya__Material[2].offset')
+[5-ERROR] _soya.c:70300: error: 'struct __pyx_obj_5_soya_Font' has no member named '_current_height'
+[5-ERROR] _soya.c:70300: error: initializer element is not constant
+[5-ERROR] _soya.c:70300: error: (near initialization for '__pyx_members_5_soya_Font[1].offset')
+[5-ERROR] _soya.c:70301: error: 'struct __pyx_obj_5_soya_Font' has no member named '_pixels_height'
+[5-ERROR] _soya.c:70301: error: initializer element is not constant
+[5-ERROR] _soya.c:70301: error: (near initialization for '__pyx_members_5_soya_Font[2].offset')
 [5-ERROR] _soya.c: In function 'init_soya':
-[5-ERROR] _soya.c:74258: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Image'
-[5-ERROR] _soya.c:74259: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Image'
-[5-ERROR] _soya.c:74259: error: request for member '__getcstate__' in something not a structure or union
-[5-ERROR] _soya.c:74260: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Image'
-[5-ERROR] _soya.c:74260: error: request for member '__setcstate__' in something not a structure or union
-[5-ERROR] _soya.c:74261: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Image'
-[5-ERROR] _soya.c:74262: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Image'
-[5-ERROR] _soya.c:74263: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Image'
-[5-ERROR] _soya.c:74556: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[5-ERROR] _soya.c:74557: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[5-ERROR] _soya.c:74557: error: request for member '_render' in something not a structure or union
-[5-ERROR] _soya.c:74558: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[5-ERROR] _soya.c:74558: error: request for member '_shadow' in something not a structure or union
-[5-ERROR] _soya.c:74559: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[5-ERROR] _soya.c:74560: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[5-ERROR] _soya.c:74560: error: '__pyx_f_5_soya_11_Cal3dShape__set_face_neighborhood' undeclared (first use in this function)
-[5-ERROR] _soya.c:74561: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[5-ERROR] _soya.c:74562: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[5-ERROR] _soya.c:74563: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[5-ERROR] _soya.c:74564: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[5-ERROR] _soya.c:74565: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[5-ERROR] _soya.c:74566: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[5-ERROR] _soya.c:74567: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[5-ERROR] _soya.c:74568: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[5-ERROR] _soya.c:74569: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
+[5-ERROR] _soya.c:74262: error: 'struct __pyx_vtabstruct_5_soya__Image' has no member named 'typ'
+[5-ERROR] _soya.c:74262: error: '__pyx_f_5_soya_6_Image_typ' undeclared (first use in this function)
+[5-ERROR] _soya.c:74263: error: 'struct __pyx_vtabstruct_5_soya__Image' has no member named 'internal_format'
+[5-ERROR] _soya.c:74263: error: '__pyx_f_5_soya_6_Image_internal_format' undeclared (first use in this function)
 [5-ERROR] _soya.c:75388: error: 'glColor4fv' undeclared (first use in this function)
-[5-ERROR] _soya.c: At top level:
-[5-ERROR] _soya.c:75703: error: conflicting types for '__Pyx_WriteUnraisable'
-[5-ERROR] _soya.c:56121: error: previous declaration of '__Pyx_WriteUnraisable' was here
-[5-ERROR] error: command 'gcc-40' failed with exit status 1
+[5-ERROR] error: command 'gcc-42' failed with exit status 1
 [5-ERROR] --- BUILD ERROR ---
 
-[9-ERROR] _soya.c:70273: error: wrong type argument to decrement
-[9-ERROR] _soya.c:70273: error: dereferencing pointer to incomplete type
-[9-ERROR] _soya.c:70273: error: request for member '_glyphs' in something not a structure or union
-[9-ERROR] _soya.c:70273: error: 'struct PyMemberDef' has no member named 'ob_type'
-[9-ERROR] _soya.c:70273: error: 'struct PyMemberDef' has no member named 'tp_dealloc'
-[9-ERROR] _soya.c:70273: error: dereferencing pointer to incomplete type
-[9-ERROR] _soya.c:70273: error: request for member '_glyphs' in something not a structure or union
-[9-ERROR] _soya.c:70273: error: called object '*(&<erroneous-expression>)' is not a function
-[9-ERROR] _soya.c:70274: error: dereferencing pointer to incomplete type
-[9-ERROR] _soya.c:70274: error: request for member '_glyphs' in something not a structure or union
+[9-ERROR] _soya.c:63870: error: 'struct __pyx_obj_5_soya__Image' has no member named '_filename'
+[9-ERROR] _soya.c:63870: error: 'struct __pyx_obj_5_soya__Image' has no member named '_filename'
+[9-ERROR] _soya.c:63870: error: 'struct __pyx_obj_5_soya__Image' has no member named '_filename'
+[9-ERROR] _soya.c:63871: error: 'struct __pyx_obj_5_soya__Image' has no member named '_filename'
 [9-ERROR] _soya.c: At top level:
-[9-ERROR] _soya.c:70299: error: invalid use of undefined type 'struct __pyx_obj_5_soya_Font'
-[9-ERROR] _soya.c:70300: error: invalid use of undefined type 'struct __pyx_obj_5_soya_Font'
-[9-ERROR] _soya.c:70301: error: invalid use of undefined type 'struct __pyx_obj_5_soya_Font'
-[9-ERROR] _soya.c:70382: error: invalid application of 'sizeof' to incomplete type 'struct __pyx_obj_5_soya_Font' 
-[9-ERROR] _soya.c: In function '__pyx_tp_new_5_soya__PythonMaterial':
-[9-ERROR] _soya.c:72011: error: request for member '__pyx_base' in something not a structure or union
-[9-ERROR] _soya.c:72011: error: request for member '__pyx_vtab' in something not a structure or union
+[9-ERROR] _soya.c:63898: error: 'struct __pyx_obj_5_soya__Image' has no member named '_filename'
+[9-ERROR] _soya.c: In function '__pyx_tp_new_5_soya__Material':
+[9-ERROR] _soya.c:64029: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[9-ERROR] _soya.c: In function '__pyx_tp_dealloc_5_soya__Material':
+[9-ERROR] _soya.c:64045: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[9-ERROR] _soya.c:64045: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[9-ERROR] _soya.c:64045: error: 'struct PyMemberDef' has no member named 'ob_refcnt'
+[9-ERROR] _soya.c:64045: error: lvalue required as decrement operand
+[9-ERROR] _soya.c:64045: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[9-ERROR] _soya.c:64045: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[9-ERROR] _soya.c: In function '__pyx_tp_traverse_5_soya__Material':
+[9-ERROR] _soya.c:64056: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[9-ERROR] _soya.c:64057: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[9-ERROR] _soya.c: In function '__pyx_tp_clear_5_soya__Material':
+[9-ERROR] _soya.c:64067: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[9-ERROR] _soya.c:64067: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[9-ERROR] _soya.c:64067: error: 'struct PyMemberDef' has no member named 'ob_refcnt'
+[9-ERROR] _soya.c:64067: error: lvalue required as decrement operand
+[9-ERROR] _soya.c:64067: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[9-ERROR] _soya.c:64067: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[9-ERROR] _soya.c:64068: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[9-ERROR] _soya.c: At top level:
+[9-ERROR] _soya.c:64211: error: 'struct __pyx_obj_5_soya__Material' has no member named '_id'
+[9-ERROR] _soya.c:64211: error: initializer element is not constant
+[9-ERROR] _soya.c:64211: error: (near initialization for '__pyx_members_5_soya__Material[0].offset')
+[9-ERROR] _soya.c:64212: error: 'struct __pyx_obj_5_soya__Material' has no member named 'shininess'
+[9-ERROR] _soya.c:64212: error: initializer element is not constant
+[9-ERROR] _soya.c:64212: error: (near initialization for '__pyx_members_5_soya__Material[1].offset')
+[9-ERROR] _soya.c:64213: error: 'struct __pyx_obj_5_soya__Material' has no member named '_filename'
+[9-ERROR] _soya.c:64213: error: initializer element is not constant
+[9-ERROR] _soya.c:64213: error: (near initialization for '__pyx_members_5_soya__Material[2].offset')
+[9-ERROR] _soya.c:70300: error: 'struct __pyx_obj_5_soya_Font' has no member named '_current_height'
+[9-ERROR] _soya.c:70300: error: initializer element is not constant
+[9-ERROR] _soya.c:70300: error: (near initialization for '__pyx_members_5_soya_Font[1].offset')
+[9-ERROR] _soya.c:70301: error: 'struct __pyx_obj_5_soya_Font' has no member named '_pixels_height'
+[9-ERROR] _soya.c:70301: error: initializer element is not constant
+[9-ERROR] _soya.c:70301: error: (near initialization for '__pyx_members_5_soya_Font[2].offset')
 [9-ERROR] _soya.c: In function 'init_soya':
-[9-ERROR] _soya.c:74258: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Image'
-[9-ERROR] _soya.c:74259: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Image'
-[9-ERROR] _soya.c:74259: error: request for member '__getcstate__' in something not a structure or union
-[9-ERROR] _soya.c:74260: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Image'
-[9-ERROR] _soya.c:74260: error: request for member '__setcstate__' in something not a structure or union
-[9-ERROR] _soya.c:74261: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Image'
-[9-ERROR] _soya.c:74262: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Image'
-[9-ERROR] _soya.c:74263: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Image'
-[9-ERROR] _soya.c:74556: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[9-ERROR] _soya.c:74557: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[9-ERROR] _soya.c:74557: error: request for member '_render' in something not a structure or union
-[9-ERROR] _soya.c:74558: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[9-ERROR] _soya.c:74558: error: request for member '_shadow' in something not a structure or union
-[9-ERROR] _soya.c:74559: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[9-ERROR] _soya.c:74560: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[9-ERROR] _soya.c:74560: error: '__pyx_f_5_soya_11_Cal3dShape__set_face_neighborhood' undeclared (first use in this function)
-[9-ERROR] _soya.c:74561: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[9-ERROR] _soya.c:74562: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[9-ERROR] _soya.c:74563: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[9-ERROR] _soya.c:74564: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[9-ERROR] _soya.c:74565: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[9-ERROR] _soya.c:74566: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[9-ERROR] _soya.c:74567: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[9-ERROR] _soya.c:74568: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
-[9-ERROR] _soya.c:74569: error: invalid use of undefined type 'struct __pyx_vtabstruct_5_soya__Cal3dShape'
+[9-ERROR] _soya.c:74262: error: 'struct __pyx_vtabstruct_5_soya__Image' has no member named 'typ'
+[9-ERROR] _soya.c:74262: error: '__pyx_f_5_soya_6_Image_typ' undeclared (first use in this function)
+[9-ERROR] _soya.c:74263: error: 'struct __pyx_vtabstruct_5_soya__Image' has no member named 'internal_format'
+[9-ERROR] _soya.c:74263: error: '__pyx_f_5_soya_6_Image_internal_format' undeclared (first use in this function)
 [9-ERROR] _soya.c:75388: error: 'glColor4fv' undeclared (first use in this function)
-[9-ERROR] _soya.c: At top level:
-[9-ERROR] _soya.c:75703: error: conflicting types for '__Pyx_WriteUnraisable'
-[9-ERROR] _soya.c:56121: error: previous declaration of '__Pyx_WriteUnraisable' was here
-[9-ERROR] error: command 'gcc-40' failed with exit status 1
+[9-ERROR] error: command 'gcc-42' failed with exit status 1
 [9-ERROR] --- BUILD ERROR ---
 

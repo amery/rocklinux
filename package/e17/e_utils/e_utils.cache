@@ -20,50 +20,50 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168696659 Sat Jan 13 14:57:39 2007 (5) ERROR
-[TIMESTAMP] 1168905946 Tue Jan 16 01:05:46 2007 (9) ERROR
-[TIMESTAMP] 1168954041 Tue Jan 16 14:27:21 2007 (5) ERROR
-[TIMESTAMP] 1168983769 Tue Jan 16 22:42:49 2007 (9) ERROR
-[TIMESTAMP] 1169124374 Thu Jan 18 13:46:14 2007 (5) ERROR
-[TIMESTAMP] 1169153963 Thu Jan 18 21:59:23 2007 (9) ERROR
+[TIMESTAMP] 1181200335 Thu Jun  7 09:12:15 2007 (5) ERROR
+[TIMESTAMP] 1181754698 Wed Jun 13 19:11:38 2007 (9) ERROR
+[TIMESTAMP] 1181835457 Thu Jun 14 17:37:37 2007 (5) ERROR
+[TIMESTAMP] 1181936681 Fri Jun 15 21:44:41 2007 (9) ERROR
+[TIMESTAMP] 1181957781 Sat Jun 16 03:36:21 2007 (5) ERROR
+[TIMESTAMP] 1181979680 Sat Jun 16 09:41:20 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-e_utils.err 9-e_utils.err
 
-[BUILDTIME] 3258 (5) ERROR
-[BUILDTIME] 3248 (9) ERROR
-[BUILDTIME] 3284 (5) ERROR
-[BUILDTIME] 3289 (9) ERROR
-[BUILDTIME] 3290 (5) ERROR
-[BUILDTIME] 3301 (9) ERROR
+[BUILDTIME] 3848 (5) ERROR
+[BUILDTIME] 3769 (9) ERROR
+[BUILDTIME] 3596 (5) ERROR
+[BUILDTIME] 3664 (9) ERROR
+[BUILDTIME] 3697 (5) ERROR
+[BUILDTIME] 3710 (9) ERROR
 
 
-[5-ERROR] eapp_edit_main.c:305: error: 'EWL_CALLBACK_VALUE_CHANGED' undeclared (first use in this function)
+[5-ERROR] eapp_edit_main.c:152: error: expected ')' before '*' token
+[5-ERROR] eapp_edit_main.c: In function 'eapp_ui_init':
+[5-ERROR] eapp_edit_main.c:160: error: 'Ewl_Widget' undeclared (first use in this function)
+[5-ERROR] eapp_edit_main.c:160: error: (Each undeclared identifier is reported only once
+[5-ERROR] eapp_edit_main.c:160: error: for each function it appears in.)
+[5-ERROR] eapp_edit_main.c:160: error: 'win' undeclared (first use in this function)
+[5-ERROR] eapp_edit_main.c:160: error: 'vbox' undeclared (first use in this function)
+[5-ERROR] eapp_edit_main.c:160: error: 'hbox' undeclared (first use in this function)
+[5-ERROR] eapp_edit_main.c:160: error: 'tree' undeclared (first use in this function)
+[5-ERROR] eapp_edit_main.c:160: error: 'o' undeclared (first use in this function)
+[5-ERROR] eapp_edit_main.c:171: error: 'EWL_CALLBACK_DELETE_WINDOW' undeclared (first use in this function)
+[5-ERROR] eapp_edit_main.c:171: error: 'eapp_cb_quit' undeclared (first use in this function)
+[5-ERROR] eapp_edit_main.c:180: error: 'FALSE' undeclared (first use in this function)
+[5-ERROR] eapp_edit_main.c:193: error: 'EWL_FLAG_FILL_NONE' undeclared (first use in this function)
+[5-ERROR] eapp_edit_main.c:194: error: 'EWL_FLAG_ALIGN_CENTER' undeclared (first use in this function)
+[5-ERROR] eapp_edit_main.c:200: error: 'EWL_FLAG_FILL_SHRINK' undeclared (first use in this function)
+[5-ERROR] eapp_edit_main.c:204: error: 'EWL_CALLBACK_CLICKED' undeclared (first use in this function)
+[5-ERROR] eapp_edit_main.c:204: error: 'eapp_cb_save' undeclared (first use in this function)
 [5-ERROR] eapp_edit_main.c: At top level:
-[5-ERROR] eapp_edit_main.c:314: error: syntax error before '*' token
-[5-ERROR] eapp_edit_main.c: In function 'eapp_cb_fd_hide':
-[5-ERROR] eapp_edit_main.c:316: error: 'w' undeclared (first use in this function)
-[5-ERROR] eapp_edit_main.c: At top level:
-[5-ERROR] eapp_edit_main.c:320: error: syntax error before '*' token
-[5-ERROR] eapp_edit_main.c: In function 'eapp_cb_fd_changed':
-[5-ERROR] eapp_edit_main.c:323: error: 'Ewl_Widget' undeclared (first use in this function)
-[5-ERROR] eapp_edit_main.c:323: error: 'o' undeclared (first use in this function)
-[5-ERROR] eapp_edit_main.c:325: error: 'ev' undeclared (first use in this function)
-[5-ERROR] eapp_edit_main.c:328: error: 'EWL_RESPONSE_OPEN' undeclared (first use in this function)
-[5-ERROR] eapp_edit_main.c:332: error: 'w' undeclared (first use in this function)
-[5-ERROR] eapp_edit_main.c:332: warning: assignment makes pointer from integer without a cast
-[5-ERROR] eapp_edit_main.c:340: error: 'EWL_RESPONSE_CANCEL' undeclared (first use in this function)
-[5-ERROR] eapp_edit_main.c: At top level:
-[5-ERROR] eapp_edit_main.c:350: error: syntax error before '*' token
-[5-ERROR] eapp_edit_main.c: In function 'eapp_cb_save':
-[5-ERROR] eapp_edit_main.c:356: error: 'w' undeclared (first use in this function)
-[5-ERROR] eapp_edit_main.c:356: warning: assignment makes pointer from integer without a cast
-[5-ERROR] eapp_edit_main.c:357: warning: assignment makes pointer from integer without a cast
-[5-ERROR] eapp_edit_main.c:371: error: 'Ewl_Widget' undeclared (first use in this function)
-[5-ERROR] eapp_edit_main.c:371: error: 'o' undeclared (first use in this function)
-[5-ERROR] eapp_edit_main.c:385: warning: assignment makes pointer from integer without a cast
+[5-ERROR] eapp_edit_main.c:218: error: expected ')' before '*' token
+[5-ERROR] eapp_edit_main.c:287: error: expected ')' before '*' token
+[5-ERROR] eapp_edit_main.c:314: error: expected ')' before '*' token
+[5-ERROR] eapp_edit_main.c:320: error: expected ')' before '*' token
+[5-ERROR] eapp_edit_main.c:350: error: expected ')' before '*' token
 [5-ERROR] eapp_edit_main.c: In function 'eapp_engrave_write':
 [5-ERROR] eapp_edit_main.c:449: error: 'Engrave_File' undeclared (first use in this function)
 [5-ERROR] eapp_edit_main.c:449: error: 'eet' undeclared (first use in this function)
@@ -81,40 +81,40 @@
 [5-ERROR] eapp_edit_main.c:472: error: 'ENGRAVE_IMAGE_TYPE_COMP' undeclared (first use in this function)
 [5-ERROR] eapp_edit_main.c:480: error: 'ENGRAVE_PART_TYPE_IMAGE' undeclared (first use in this function)
 [5-ERROR] make[4]: *** [eapp_edit_main.o] Error 1
-[5-ERROR] make[4]: Leaving directory `/ROCK/loop/src.e_utils.1169124340.4699.3641098646/e_utils-2005-09-11/src/bin/eapp_edit'
+[5-ERROR] make[4]: Leaving directory `/ROCK/loop/src.e_utils.1181957741.31248.1463462473/e_utils-2005-09-11/src/bin/eapp_edit'
 [5-ERROR] make[3]: *** [all-recursive] Error 1
-[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.e_utils.1169124340.4699.3641098646/e_utils-2005-09-11/src/bin'
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.e_utils.1181957741.31248.1463462473/e_utils-2005-09-11/src/bin'
 [5-ERROR] make[2]: *** [all-recursive] Error 1
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.e_utils.1169124340.4699.3641098646/e_utils-2005-09-11/src'
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.e_utils.1181957741.31248.1463462473/e_utils-2005-09-11/src'
 [5-ERROR] make[1]: *** [all-recursive] Error 1
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.e_utils.1169124340.4699.3641098646/e_utils-2005-09-11'
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.e_utils.1181957741.31248.1463462473/e_utils-2005-09-11'
 [5-ERROR] make: *** [all] Error 2
 [5-ERROR] --- BUILD ERROR ---
 
-[9-ERROR] eapp_edit_main.c:305: error: 'EWL_CALLBACK_VALUE_CHANGED' undeclared (first use in this function)
+[9-ERROR] eapp_edit_main.c:152: error: expected ')' before '*' token
+[9-ERROR] eapp_edit_main.c: In function 'eapp_ui_init':
+[9-ERROR] eapp_edit_main.c:160: error: 'Ewl_Widget' undeclared (first use in this function)
+[9-ERROR] eapp_edit_main.c:160: error: (Each undeclared identifier is reported only once
+[9-ERROR] eapp_edit_main.c:160: error: for each function it appears in.)
+[9-ERROR] eapp_edit_main.c:160: error: 'win' undeclared (first use in this function)
+[9-ERROR] eapp_edit_main.c:160: error: 'vbox' undeclared (first use in this function)
+[9-ERROR] eapp_edit_main.c:160: error: 'hbox' undeclared (first use in this function)
+[9-ERROR] eapp_edit_main.c:160: error: 'tree' undeclared (first use in this function)
+[9-ERROR] eapp_edit_main.c:160: error: 'o' undeclared (first use in this function)
+[9-ERROR] eapp_edit_main.c:171: error: 'EWL_CALLBACK_DELETE_WINDOW' undeclared (first use in this function)
+[9-ERROR] eapp_edit_main.c:171: error: 'eapp_cb_quit' undeclared (first use in this function)
+[9-ERROR] eapp_edit_main.c:180: error: 'FALSE' undeclared (first use in this function)
+[9-ERROR] eapp_edit_main.c:193: error: 'EWL_FLAG_FILL_NONE' undeclared (first use in this function)
+[9-ERROR] eapp_edit_main.c:194: error: 'EWL_FLAG_ALIGN_CENTER' undeclared (first use in this function)
+[9-ERROR] eapp_edit_main.c:200: error: 'EWL_FLAG_FILL_SHRINK' undeclared (first use in this function)
+[9-ERROR] eapp_edit_main.c:204: error: 'EWL_CALLBACK_CLICKED' undeclared (first use in this function)
+[9-ERROR] eapp_edit_main.c:204: error: 'eapp_cb_save' undeclared (first use in this function)
 [9-ERROR] eapp_edit_main.c: At top level:
-[9-ERROR] eapp_edit_main.c:314: error: syntax error before '*' token
-[9-ERROR] eapp_edit_main.c: In function 'eapp_cb_fd_hide':
-[9-ERROR] eapp_edit_main.c:316: error: 'w' undeclared (first use in this function)
-[9-ERROR] eapp_edit_main.c: At top level:
-[9-ERROR] eapp_edit_main.c:320: error: syntax error before '*' token
-[9-ERROR] eapp_edit_main.c: In function 'eapp_cb_fd_changed':
-[9-ERROR] eapp_edit_main.c:323: error: 'Ewl_Widget' undeclared (first use in this function)
-[9-ERROR] eapp_edit_main.c:323: error: 'o' undeclared (first use in this function)
-[9-ERROR] eapp_edit_main.c:325: error: 'ev' undeclared (first use in this function)
-[9-ERROR] eapp_edit_main.c:328: error: 'EWL_RESPONSE_OPEN' undeclared (first use in this function)
-[9-ERROR] eapp_edit_main.c:332: error: 'w' undeclared (first use in this function)
-[9-ERROR] eapp_edit_main.c:332: warning: assignment makes pointer from integer without a cast
-[9-ERROR] eapp_edit_main.c:340: error: 'EWL_RESPONSE_CANCEL' undeclared (first use in this function)
-[9-ERROR] eapp_edit_main.c: At top level:
-[9-ERROR] eapp_edit_main.c:350: error: syntax error before '*' token
-[9-ERROR] eapp_edit_main.c: In function 'eapp_cb_save':
-[9-ERROR] eapp_edit_main.c:356: error: 'w' undeclared (first use in this function)
-[9-ERROR] eapp_edit_main.c:356: warning: assignment makes pointer from integer without a cast
-[9-ERROR] eapp_edit_main.c:357: warning: assignment makes pointer from integer without a cast
-[9-ERROR] eapp_edit_main.c:371: error: 'Ewl_Widget' undeclared (first use in this function)
-[9-ERROR] eapp_edit_main.c:371: error: 'o' undeclared (first use in this function)
-[9-ERROR] eapp_edit_main.c:385: warning: assignment makes pointer from integer without a cast
+[9-ERROR] eapp_edit_main.c:218: error: expected ')' before '*' token
+[9-ERROR] eapp_edit_main.c:287: error: expected ')' before '*' token
+[9-ERROR] eapp_edit_main.c:314: error: expected ')' before '*' token
+[9-ERROR] eapp_edit_main.c:320: error: expected ')' before '*' token
+[9-ERROR] eapp_edit_main.c:350: error: expected ')' before '*' token
 [9-ERROR] eapp_edit_main.c: In function 'eapp_engrave_write':
 [9-ERROR] eapp_edit_main.c:449: error: 'Engrave_File' undeclared (first use in this function)
 [9-ERROR] eapp_edit_main.c:449: error: 'eet' undeclared (first use in this function)
@@ -132,13 +132,13 @@
 [9-ERROR] eapp_edit_main.c:472: error: 'ENGRAVE_IMAGE_TYPE_COMP' undeclared (first use in this function)
 [9-ERROR] eapp_edit_main.c:480: error: 'ENGRAVE_PART_TYPE_IMAGE' undeclared (first use in this function)
 [9-ERROR] make[4]: *** [eapp_edit_main.o] Error 1
-[9-ERROR] make[4]: Leaving directory `/ROCK/loop/src.e_utils.1169153929.27627.3951810427/e_utils-2005-09-11/src/bin/eapp_edit'
+[9-ERROR] make[4]: Leaving directory `/ROCK/loop/src.e_utils.1181979640.6032.3474453109/e_utils-2005-09-11/src/bin/eapp_edit'
 [9-ERROR] make[3]: *** [all-recursive] Error 1
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.e_utils.1169153929.27627.3951810427/e_utils-2005-09-11/src/bin'
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.e_utils.1181979640.6032.3474453109/e_utils-2005-09-11/src/bin'
 [9-ERROR] make[2]: *** [all-recursive] Error 1
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.e_utils.1169153929.27627.3951810427/e_utils-2005-09-11/src'
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.e_utils.1181979640.6032.3474453109/e_utils-2005-09-11/src'
 [9-ERROR] make[1]: *** [all-recursive] Error 1
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.e_utils.1169153929.27627.3951810427/e_utils-2005-09-11'
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.e_utils.1181979640.6032.3474453109/e_utils-2005-09-11'
 [9-ERROR] make: *** [all] Error 2
 [9-ERROR] --- BUILD ERROR ---
 

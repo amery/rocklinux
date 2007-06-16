@@ -20,142 +20,125 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[TIMESTAMP] 1168590018 Fri Jan 12 09:20:18 2007 (5) ERROR
-[TIMESTAMP] 1168791616 Sun Jan 14 17:20:16 2007 (9) ERROR
-[TIMESTAMP] 1168941949 Tue Jan 16 11:05:49 2007 (5) ERROR
-[TIMESTAMP] 1168967042 Tue Jan 16 18:04:02 2007 (9) ERROR
-[TIMESTAMP] 1169085342 Thu Jan 18 02:55:42 2007 (5) ERROR
-[TIMESTAMP] 1169137331 Thu Jan 18 17:22:11 2007 (9) ERROR
+[TIMESTAMP] 1180987277 Mon Jun  4 22:01:17 2007 (5) ERROR
+[TIMESTAMP] 1181447737 Sun Jun 10 05:55:37 2007 (9) ERROR
+[TIMESTAMP] 1181808058 Thu Jun 14 10:00:58 2007 (5) ERROR
+[TIMESTAMP] 1181865629 Fri Jun 15 02:00:29 2007 (9) ERROR
+[TIMESTAMP] 1181944310 Fri Jun 15 23:51:50 2007 (5) ERROR
+[TIMESTAMP] 1181965227 Sat Jun 16 05:40:27 2007 (9) ERROR
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
 [LOGS] 5-liferea.err 9-liferea.err
 
-[BUILDTIME] 7025 (5) ERROR
-[BUILDTIME] 7509 (9) ERROR
-[BUILDTIME] 7546 (5) ERROR
-[BUILDTIME] 7550 (9) ERROR
-[BUILDTIME] 7559 (5) ERROR
-[BUILDTIME] 7559 (9) ERROR
-[SIZE] 3.95 MB, 61 files
+[BUILDTIME] 3890 (5) ERROR
+[BUILDTIME] 3994 (9) ERROR
+[BUILDTIME] 3921 (5) ERROR
+[BUILDTIME] 3833 (9) ERROR
+[BUILDTIME] 3854 (5) ERROR
+[BUILDTIME] 3765 (9) ERROR
 
-[DEP] 00-dirtree alsa applewmproto applewmproto:dev atk atk:dev bash2
-[DEP] binutils bzip2 cairo cairo:dev coreutils cvm dbus dbus-glib
-[DEP] dbus-glib:dev dbus:dev diffutils evolution-webcal expat expat:dev
-[DEP] findutils fontconfig fontconfig:dev freetype freetype:dev gail:dev
-[DEP] gawk gcc40 gcc40:dev gconf gconf:dev gettext glib glib:dev glibc23
-[DEP] glibc23:dev gnome2-dirtree grep gtk+ gtk+:dev imake libart_lgpl23:dev
-[DEP] libgnomecanvas:dev libgtkhtml libgtkhtml:dev libice libice:dev
-[DEP] libpng libpng:dev libsm libsm:dev libx11 libx11:dev libxau libxau:dev
-[DEP] libxcursor libxdmcp libxdmcp:dev libxext libxfixes libxi libxinerama
-[DEP] libxml2 libxml2:dev libxrandr libxrender libxrender:dev libxt
-[DEP] linux-libc-headers:dev make mktemp mozilla mozilla:dev net-tools
-[DEP] netpbm orbit2 orbit2:dev pango pango:dev pkgconfig rrdtool sed
-[DEP] sysfiles tar twoftpd ucspi-unix util-linux vino xorg-cf-files
-[DEP] xproto:dev zapping zlib zlib:dev
 
-[PROVIDES] liblihtmlg.so liblihtmlm.so liferea liferea-bin
-
-[5-ERROR] Attached schema `/schemas/apps/liferea/timeformatmode' to key `/apps/liferea/timeformatmode'
-[5-ERROR] Installed schema `/schemas/apps/liferea/timeformatmode' for locale `C'
-[5-ERROR] Attached schema `/schemas/apps/liferea/trayicon' to key `/apps/liferea/trayicon'
-[5-ERROR] Installed schema `/schemas/apps/liferea/trayicon' for locale `C'
-[5-ERROR] Attached schema `/schemas/apps/liferea/update-thread-concurrency' to key `/apps/liferea/update-thread-concurrency'
-[5-ERROR] Installed schema `/schemas/apps/liferea/update-thread-concurrency' for locale `C'
-[5-ERROR] if test -d ./css; then \
-[5-ERROR] 	  /bin/sh ./mkinstalldirs /usr/share/liferea/css; \
-[5-ERROR]           /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./css/liferea.css /usr/share/liferea/css; \
-[5-ERROR]           /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./css/liferea2.css /usr/share/liferea/css; \
-[5-ERROR]           /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./css/adblock.css /usr/share/liferea/css; \
-[5-ERROR] 	fi
-[5-ERROR] if test -d ./dtd; then \
-[5-ERROR] 	  /bin/sh ./mkinstalldirs /usr/share/liferea/dtd; \
-[5-ERROR]           /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./dtd/html.ent /usr/share/liferea/dtd; \
-[5-ERROR] 	fi
-[5-ERROR] /bin/sh ./mkinstalldirs /usr/share/man/man1
-[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./liferea.1 /usr/share/man/man1/liferea.1
-[5-ERROR] /bin/sh ./mkinstalldirs /etc/gconf/schemas
-[5-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 liferea.schemas /etc/gconf/schemas/liferea.schemas
-[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.liferea.1169085256.26365.3583069520/liferea-0.9.7b'
-[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.liferea.1169085256.26365.3583069520/liferea-0.9.7b'
-[5-ERROR] Trying to copy the default documentation ...
-[5-ERROR] Creating file list and doing final adaptions ... 
-[5-ERROR] Processing /lib corrections ...
-[5-ERROR] Verifing the .la files ...
-[5-ERROR] Checking usr/share/applications/liferea.desktop ... 
-[5-ERROR] Adding X-ROCK-Name tag (liferea)
-[5-ERROR] Found 75 files for this package.
-[5-ERROR] Applying package split: 40 liferea:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
-[5-ERROR] Applying package split: 42 liferea:dev /pkgconfig/
-[5-ERROR] Applying package split: 60 liferea:doc /share/doc/
-[5-ERROR] Calculating package dependencies ...
-[5-ERROR] <liferea> Creating flist file ...
-[5-ERROR] <liferea> Creating package dependencies file ...
-[5-ERROR] <liferea> Creating package description ...
-[5-ERROR] <liferea> Creating md5sum and cksum files ...
-[5-ERROR] <liferea:dev> Creating flist file ...
-[5-ERROR] <liferea:dev> Creating package dependencies file ...
-[5-ERROR] <liferea:dev> Creating package description ...
-[5-ERROR] <liferea:dev> Creating md5sum and cksum files ...
-[5-ERROR] <liferea:doc> Creating flist file ...
-[5-ERROR] <liferea:doc> Creating package dependencies file ...
-[5-ERROR] <liferea:doc> Creating package description ...
-[5-ERROR] <liferea:doc> Creating md5sum and cksum files ...
-[5-ERROR] Making post-install adaptions.
-[5-ERROR] Found shared files with other packages:
-[5-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree.xml: evolution-webcal liferea vino zapping
-[5-ERROR] --- BUILD ERROR ---
+[5-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h:1658: error: new declaration 'const nsDependentSubstring_external Substring(const PRUnichar*, const PRUnichar*)'
+[5-ERROR] /usr/include/firefox-2.0.0.3/string/nsTDependentSubstring.h:115: error: ambiguates old declaration 'const nsDependentSubstring Substring(const PRUnichar*, const PRUnichar*)'
+[5-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h: In function 'const nsDependentSubstring_external StringHead(const nsAString&, PRUint32)':
+[5-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h:1672: error: new declaration 'const nsDependentSubstring_external StringHead(const nsAString&, PRUint32)'
+[5-ERROR] /usr/include/firefox-2.0.0.3/string/nsTDependentSubstring.h:123: error: ambiguates old declaration 'const nsDependentSubstring StringHead(const nsAString&, PRUint32)'
+[5-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h: In function 'const nsDependentSubstring_external StringTail(const nsAString&, PRUint32)':
+[5-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h:1679: error: new declaration 'const nsDependentSubstring_external StringTail(const nsAString&, PRUint32)'
+[5-ERROR] /usr/include/firefox-2.0.0.3/string/nsTDependentSubstring.h:139: error: ambiguates old declaration 'const nsDependentSubstring StringTail(const nsAString&, PRUint32)'
+[5-ERROR] /usr/include/firefox-2.0.0.3/string/nsTAString.h: In copy constructor 'nsCStringContainer::nsCStringContainer(const nsCStringContainer&)':
+[5-ERROR] /usr/include/firefox-2.0.0.3/string/nsTAString.h:598: error: 'nsACString::nsACString(const nsACString&)' is private
+[5-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h:1086: error: within this context
+[5-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h: In copy constructor 'nsDependentCSubstring_external::nsDependentCSubstring_external(const nsDependentCSubstring_external&)':
+[5-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h:1578: note: synthesized method 'nsCStringContainer::nsCStringContainer(const nsCStringContainer&)' first required here 
+[5-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h: In function 'const nsDependentCSubstring_external Substring(const nsACString&, PRUint32)':
+[5-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h:1689: note: synthesized method 'nsDependentCSubstring_external::nsDependentCSubstring_external(const nsDependentCSubstring_external&)' first required here 
+[5-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h: In function 'const nsDependentCSubstring_external Substring(const nsACString&, PRUint32, PRUint32)':
+[5-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h:1694: error: new declaration 'const nsDependentCSubstring_external Substring(const nsACString&, PRUint32, PRUint32)'
+[5-ERROR] /usr/include/firefox-2.0.0.3/string/nsTDependentSubstring.h:93: error: ambiguates old declaration 'const nsDependentCSubstring Substring(const nsACString&, PRUint32, PRUint32)'
+[5-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h: In function 'const nsDependentCSubstring_external Substring(const char*, const char*)':
+[5-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h:1701: error: new declaration 'const nsDependentCSubstring_external Substring(const char*, const char*)'
+[5-ERROR] /usr/include/firefox-2.0.0.3/string/nsTDependentSubstring.h:115: error: ambiguates old declaration 'const nsDependentCSubstring Substring(const char*, const char*)'
+[5-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h: In function 'const nsDependentCSubstring_external StringHead(const nsACString&, PRUint32)':
+[5-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h:1715: error: new declaration 'const nsDependentCSubstring_external StringHead(const nsACString&, PRUint32)'
+[5-ERROR] /usr/include/firefox-2.0.0.3/string/nsTDependentSubstring.h:123: error: ambiguates old declaration 'const nsDependentCSubstring StringHead(const nsACString&, PRUint32)'
+[5-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h: In function 'const nsDependentCSubstring_external StringTail(const nsACString&, PRUint32)':
+[5-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h:1722: error: new declaration 'const nsDependentCSubstring_external StringTail(const nsACString&, PRUint32)'
+[5-ERROR] /usr/include/firefox-2.0.0.3/string/nsTDependentSubstring.h:139: error: ambiguates old declaration 'const nsDependentCSubstring StringTail(const nsACString&, PRUint32)'
+[5-ERROR] In file included from mozilla.cpp:34:
+[5-ERROR] /usr/include/firefox-2.0.0.3/content/nsIDocument.h: In member function 'const nsAFlatString& nsIDocument::GetDocumentTitle() const':
+[5-ERROR] /usr/include/firefox-2.0.0.3/content/nsIDocument.h:141: error: invalid initialization of reference of type 'const nsAFlatString&' from expression of type 'const nsString_external'
+[5-ERROR] /usr/include/firefox-2.0.0.3/content/nsIDocument.h: In member function 'const nsAFlatCString& nsIDocument::GetDocumentCharacterSet() const':
+[5-ERROR] /usr/include/firefox-2.0.0.3/content/nsIDocument.h:202: error: invalid initialization of reference of type 'const nsAFlatCString&' from expression of type 'const nsCString_external'
+[5-ERROR] mozilla.cpp: In function 'gint mozilla_key_press_cb(GtkWidget*, void*)':
+[5-ERROR] mozilla.cpp:72: warning: deprecated conversion from string constant to 'gchar*'
+[5-ERROR] mozilla.cpp: In function 'gboolean mozilla_save_prefs()':
+[5-ERROR] mozilla.cpp:170: error: 'do_GetService' was not declared in this scope
+[5-ERROR] mozilla.cpp: In function 'gboolean mozilla_preference_set(const char*, const char*)':
+[5-ERROR] mozilla.cpp:191: error: 'do_GetService' was not declared in this scope
+[5-ERROR] mozilla.cpp: In function 'gboolean mozilla_preference_set_boolean(const char*, gboolean)':
+[5-ERROR] mozilla.cpp:214: error: 'do_GetService' was not declared in this scope
+[5-ERROR] mozilla.cpp: In function 'gboolean mozilla_preference_set_int(const char*, int)':
+[5-ERROR] mozilla.cpp:237: error: 'do_GetService' was not declared in this scope
+[5-ERROR] make[3]: *** [liblihtmlm_la-mozilla.lo] Error 1
+[5-ERROR] make[3]: Leaving directory `/ROCK/loop/src.liferea.1181944269.20092.3784586592/liferea-0.9.7b/src/mozilla'
+[5-ERROR] make[2]: *** [all-recursive] Error 1
+[5-ERROR] make[2]: Leaving directory `/ROCK/loop/src.liferea.1181944269.20092.3784586592/liferea-0.9.7b/src'
+[5-ERROR] make[1]: *** [all-recursive] Error 1
+[5-ERROR] make[1]: Leaving directory `/ROCK/loop/src.liferea.1181944269.20092.3784586592/liferea-0.9.7b'
+[5-ERROR] make: *** [all] Error 2
 [5-ERROR] --- BUILD ERROR ---
 
-[9-ERROR] Attached schema `/schemas/apps/liferea/timeformatmode' to key `/apps/liferea/timeformatmode'
-[9-ERROR] Installed schema `/schemas/apps/liferea/timeformatmode' for locale `C'
-[9-ERROR] Attached schema `/schemas/apps/liferea/trayicon' to key `/apps/liferea/trayicon'
-[9-ERROR] Installed schema `/schemas/apps/liferea/trayicon' for locale `C'
-[9-ERROR] Attached schema `/schemas/apps/liferea/update-thread-concurrency' to key `/apps/liferea/update-thread-concurrency'
-[9-ERROR] Installed schema `/schemas/apps/liferea/update-thread-concurrency' for locale `C'
-[9-ERROR] if test -d ./css; then \
-[9-ERROR] 	  /bin/sh ./mkinstalldirs /usr/share/liferea/css; \
-[9-ERROR]           /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./css/liferea.css /usr/share/liferea/css; \
-[9-ERROR]           /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./css/liferea2.css /usr/share/liferea/css; \
-[9-ERROR]           /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./css/adblock.css /usr/share/liferea/css; \
-[9-ERROR] 	fi
-[9-ERROR] if test -d ./dtd; then \
-[9-ERROR] 	  /bin/sh ./mkinstalldirs /usr/share/liferea/dtd; \
-[9-ERROR]           /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./dtd/html.ent /usr/share/liferea/dtd; \
-[9-ERROR] 	fi
-[9-ERROR] /bin/sh ./mkinstalldirs /usr/share/man/man1
-[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 ./liferea.1 /usr/share/man/man1/liferea.1
-[9-ERROR] /bin/sh ./mkinstalldirs /etc/gconf/schemas
-[9-ERROR]  /ROCK/build/ref0111-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 liferea.schemas /etc/gconf/schemas/liferea.schemas
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.liferea.1169137244.12833.2177560645/liferea-0.9.7b'
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.liferea.1169137244.12833.2177560645/liferea-0.9.7b'
-[9-ERROR] Trying to copy the default documentation ...
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing /lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Checking usr/share/applications/liferea.desktop ... 
-[9-ERROR] Adding X-ROCK-Name tag (liferea)
-[9-ERROR] Found 75 files for this package.
-[9-ERROR] Applying package split: 40 liferea:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
-[9-ERROR] Applying package split: 42 liferea:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 liferea:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <liferea> Creating flist file ...
-[9-ERROR] <liferea> Creating package dependencies file ...
-[9-ERROR] <liferea> Creating package description ...
-[9-ERROR] <liferea> Creating md5sum and cksum files ...
-[9-ERROR] <liferea:dev> Creating flist file ...
-[9-ERROR] <liferea:dev> Creating package dependencies file ...
-[9-ERROR] <liferea:dev> Creating package description ...
-[9-ERROR] <liferea:dev> Creating md5sum and cksum files ...
-[9-ERROR] <liferea:doc> Creating flist file ...
-[9-ERROR] <liferea:doc> Creating package dependencies file ...
-[9-ERROR] <liferea:doc> Creating package description ...
-[9-ERROR] <liferea:doc> Creating md5sum and cksum files ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Found shared files with other packages:
-[9-ERROR] etc/opt/gnome2/gconf/gconf.xml.defaults/%gconf-tree.xml: evolution-webcal liferea vino zapping
-[9-ERROR] --- BUILD ERROR ---
+[9-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h:1658: error: new declaration 'const nsDependentSubstring_external Substring(const PRUnichar*, const PRUnichar*)'
+[9-ERROR] /usr/include/firefox-2.0.0.3/string/nsTDependentSubstring.h:115: error: ambiguates old declaration 'const nsDependentSubstring Substring(const PRUnichar*, const PRUnichar*)'
+[9-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h: In function 'const nsDependentSubstring_external StringHead(const nsAString&, PRUint32)':
+[9-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h:1672: error: new declaration 'const nsDependentSubstring_external StringHead(const nsAString&, PRUint32)'
+[9-ERROR] /usr/include/firefox-2.0.0.3/string/nsTDependentSubstring.h:123: error: ambiguates old declaration 'const nsDependentSubstring StringHead(const nsAString&, PRUint32)'
+[9-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h: In function 'const nsDependentSubstring_external StringTail(const nsAString&, PRUint32)':
+[9-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h:1679: error: new declaration 'const nsDependentSubstring_external StringTail(const nsAString&, PRUint32)'
+[9-ERROR] /usr/include/firefox-2.0.0.3/string/nsTDependentSubstring.h:139: error: ambiguates old declaration 'const nsDependentSubstring StringTail(const nsAString&, PRUint32)'
+[9-ERROR] /usr/include/firefox-2.0.0.3/string/nsTAString.h: In copy constructor 'nsCStringContainer::nsCStringContainer(const nsCStringContainer&)':
+[9-ERROR] /usr/include/firefox-2.0.0.3/string/nsTAString.h:598: error: 'nsACString::nsACString(const nsACString&)' is private
+[9-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h:1086: error: within this context
+[9-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h: In copy constructor 'nsDependentCSubstring_external::nsDependentCSubstring_external(const nsDependentCSubstring_external&)':
+[9-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h:1578: note: synthesized method 'nsCStringContainer::nsCStringContainer(const nsCStringContainer&)' first required here 
+[9-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h: In function 'const nsDependentCSubstring_external Substring(const nsACString&, PRUint32)':
+[9-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h:1689: note: synthesized method 'nsDependentCSubstring_external::nsDependentCSubstring_external(const nsDependentCSubstring_external&)' first required here 
+[9-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h: In function 'const nsDependentCSubstring_external Substring(const nsACString&, PRUint32, PRUint32)':
+[9-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h:1694: error: new declaration 'const nsDependentCSubstring_external Substring(const nsACString&, PRUint32, PRUint32)'
+[9-ERROR] /usr/include/firefox-2.0.0.3/string/nsTDependentSubstring.h:93: error: ambiguates old declaration 'const nsDependentCSubstring Substring(const nsACString&, PRUint32, PRUint32)'
+[9-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h: In function 'const nsDependentCSubstring_external Substring(const char*, const char*)':
+[9-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h:1701: error: new declaration 'const nsDependentCSubstring_external Substring(const char*, const char*)'
+[9-ERROR] /usr/include/firefox-2.0.0.3/string/nsTDependentSubstring.h:115: error: ambiguates old declaration 'const nsDependentCSubstring Substring(const char*, const char*)'
+[9-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h: In function 'const nsDependentCSubstring_external StringHead(const nsACString&, PRUint32)':
+[9-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h:1715: error: new declaration 'const nsDependentCSubstring_external StringHead(const nsACString&, PRUint32)'
+[9-ERROR] /usr/include/firefox-2.0.0.3/string/nsTDependentSubstring.h:123: error: ambiguates old declaration 'const nsDependentCSubstring StringHead(const nsACString&, PRUint32)'
+[9-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h: In function 'const nsDependentCSubstring_external StringTail(const nsACString&, PRUint32)':
+[9-ERROR] /usr/include/firefox-2.0.0.3/nsStringAPI.h:1722: error: new declaration 'const nsDependentCSubstring_external StringTail(const nsACString&, PRUint32)'
+[9-ERROR] /usr/include/firefox-2.0.0.3/string/nsTDependentSubstring.h:139: error: ambiguates old declaration 'const nsDependentCSubstring StringTail(const nsACString&, PRUint32)'
+[9-ERROR] In file included from mozilla.cpp:34:
+[9-ERROR] /usr/include/firefox-2.0.0.3/content/nsIDocument.h: In member function 'const nsAFlatString& nsIDocument::GetDocumentTitle() const':
+[9-ERROR] /usr/include/firefox-2.0.0.3/content/nsIDocument.h:141: error: invalid initialization of reference of type 'const nsAFlatString&' from expression of type 'const nsString_external'
+[9-ERROR] /usr/include/firefox-2.0.0.3/content/nsIDocument.h: In member function 'const nsAFlatCString& nsIDocument::GetDocumentCharacterSet() const':
+[9-ERROR] /usr/include/firefox-2.0.0.3/content/nsIDocument.h:202: error: invalid initialization of reference of type 'const nsAFlatCString&' from expression of type 'const nsCString_external'
+[9-ERROR] mozilla.cpp: In function 'gint mozilla_key_press_cb(GtkWidget*, void*)':
+[9-ERROR] mozilla.cpp:72: warning: deprecated conversion from string constant to 'gchar*'
+[9-ERROR] mozilla.cpp: In function 'gboolean mozilla_save_prefs()':
+[9-ERROR] mozilla.cpp:170: error: 'do_GetService' was not declared in this scope
+[9-ERROR] mozilla.cpp: In function 'gboolean mozilla_preference_set(const char*, const char*)':
+[9-ERROR] mozilla.cpp:191: error: 'do_GetService' was not declared in this scope
+[9-ERROR] mozilla.cpp: In function 'gboolean mozilla_preference_set_boolean(const char*, gboolean)':
+[9-ERROR] mozilla.cpp:214: error: 'do_GetService' was not declared in this scope
+[9-ERROR] mozilla.cpp: In function 'gboolean mozilla_preference_set_int(const char*, int)':
+[9-ERROR] mozilla.cpp:237: error: 'do_GetService' was not declared in this scope
+[9-ERROR] make[3]: *** [liblihtmlm_la-mozilla.lo] Error 1
+[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.liferea.1181965189.12318.3307008318/liferea-0.9.7b/src/mozilla'
+[9-ERROR] make[2]: *** [all-recursive] Error 1
+[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.liferea.1181965189.12318.3307008318/liferea-0.9.7b/src'
+[9-ERROR] make[1]: *** [all-recursive] Error 1
+[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.liferea.1181965189.12318.3307008318/liferea-0.9.7b'
+[9-ERROR] make: *** [all] Error 2
 [9-ERROR] --- BUILD ERROR ---
 

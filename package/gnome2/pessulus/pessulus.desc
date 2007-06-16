@@ -6,7 +6,7 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/gnome2/startup-notification/startup-notification.desc
+[COPY] ROCK Linux: rock-src/package/gnome2/glib/glib.desc
 [COPY] ROCK Linux is Copyright (C) 1998 - 2006 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
@@ -21,22 +21,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[I] A startup notification library for GNOME
+[I] pessulus is a lockdown editor for GNOME, written in python
 
-[T] A startup notification library for GNOME.
+[T] pessulus enables administrators to set mandatory settings in GConf.
+[T] The users can not change these settings.
+[T] 
+[T] Use of pessulus can be useful on computers that are open to use by
+[T] everyone, e.g. in an internet cafe.
 
-[U] http://www.gnome.org
+[A] Vincent Untz <vuntz@gnome.org>
+[M] The ROCK Linux Project
 
-[A] The GNOME Project <gnome-devel-list@gnome.org>
-[M] Juergen Sawinski <jsaw@rocklinux.org>
-[M] Susanne Klaus <vadja@gmx.de>
+[C] extra/development
 
-[C] extra/tool extra/desktop/gnome
+[L] GPL
+[S] Stable
+[V] 2.16.2
+[P] X -?---5---9 200.000
 
-[L] LGPL
-[S] Beta
-[V] 0.8
-[P] X -?---5---9 173.600
-
-[D] 4162398990 startup-notification-0.8.tar.bz2 http://ftp.gnome.org/pub/GNOME/desktop/2.16/2.16.0/sources/
+[D] 140300001 pessulus-2.16.2.tar.bz2 http://ftp.gnome.org/pub/GNOME/admin/2.19/2.19.2/sources/
 

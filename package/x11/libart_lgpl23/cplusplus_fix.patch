@@ -1,0 +1,21 @@
+--- ./art_misc.h	2007-06-07 09:48:05.000000000 +0200
++++ ./art_misc.h	2007-06-07 09:49:07.000000000 +0200
+@@ -34,10 +34,18 @@
+ #include <libart_lgpl/art_config.h>
+ #endif
+ 
++#ifdef __cplusplus
++extern "C" {
++#endif
++
+ void *art_alloc(size_t size);
+ void art_free(void *ptr);
+ void *art_realloc(void *ptr, size_t size);
+ 
++#ifdef __cplusplus
++}
++#endif
++
+ /* These aren't, strictly speaking, configuration macros, but they're
+    damn handy to have around, and may be worth playing with for
+    debugging. */

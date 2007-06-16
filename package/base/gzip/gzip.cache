@@ -21,17 +21,15 @@
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
 [TIMESTAMP] 1180906406 Sun Jun  3 23:33:26 2007 (5)
-[TIMESTAMP] 1181260120 Fri Jun  8 01:48:40 2007 (9) ERROR
-[TIMESTAMP] 1181849999 Thu Jun 14 21:39:59 2007 (9) ERROR
+[TIMESTAMP] 1181260120 Fri Jun  8 01:48:40 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 1-gzip.log 5-gzip.log 9-gzip.err
+[LOGS] 1-gzip.log 5-gzip.log 9-gzip.log
 
 [BUILDTIME] 3101 (5)
-[BUILDTIME] 3890 (9) ERROR
-[BUILDTIME] 4001 (9) ERROR
+[BUILDTIME] 3890 (9)
 [SIZE] 0.25 MB, 32 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils findutils
@@ -41,55 +39,4 @@
 
 [PROVIDES] gunzip gzexe gzip uncompress zcat zcmp zdiff zegrep zfgrep
 [PROVIDES] zforce zgrep zless zmore znew
-
-[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c 'zfgrep' '/usr/bin/zfgrep'
-[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c 'zforce' '/usr/bin/zforce'
-[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c 'zgrep' '/usr/bin/zgrep'
-[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c 'zless' '/usr/bin/zless'
-[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c 'zmore' '/usr/bin/zmore'
-[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c 'znew' '/usr/bin/znew'
-[9-ERROR] make  install-exec-hook
-[9-ERROR] make[3]: Entering directory `/ROCK/loop/src.gzip.1181849946.625.2216913573/gzip-1.3.11'
-[9-ERROR] + cd /usr/bin
-[9-ERROR] + rm -f uncompress
-[9-ERROR] + cd /usr/bin
-[9-ERROR] + rm -f uncompress
-[9-ERROR] + ln gunzip uncompress
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.gzip.1181849946.625.2216913573/gzip-1.3.11'
-[9-ERROR] test -z "/usr/share/man/man1" || /bin/mkdir -p "/usr/share/man/man1"
-[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './gunzip.1' '/usr/share/man/man1/gunzip.1'
-[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './gzexe.1' '/usr/share/man/man1/gzexe.1'
-[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './gzip.1' '/usr/share/man/man1/gzip.1'
-[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './zcat.1' '/usr/share/man/man1/zcat.1'
-[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './zcmp.1' '/usr/share/man/man1/zcmp.1'
-[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './zdiff.1' '/usr/share/man/man1/zdiff.1'
-[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './zforce.1' '/usr/share/man/man1/zforce.1'
-[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './zgrep.1' '/usr/share/man/man1/zgrep.1'
-[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './zless.1' '/usr/share/man/man1/zless.1'
-[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './zmore.1' '/usr/share/man/man1/zmore.1'
-[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -m 644 './znew.1' '/usr/share/man/man1/znew.1'
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.gzip.1181849946.625.2216913573/gzip-1.3.11'
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.gzip.1181849946.625.2216913573/gzip-1.3.11'
-[9-ERROR] Trying to copy the default documentation ...
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing /lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 40 files for this package.
-[9-ERROR] Applying package split: 40 gzip:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
-[9-ERROR] Applying package split: 42 gzip:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 gzip:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <gzip> Creating flist file ...
-[9-ERROR] <gzip> Creating package dependencies file ...
-[9-ERROR] <gzip> Creating package description ...
-[9-ERROR] <gzip> Creating md5sum and cksum files ...
-[9-ERROR] <gzip:doc> Creating flist file ...
-[9-ERROR] <gzip:doc> Creating package dependencies file ...
-[9-ERROR] <gzip:doc> Creating package description ...
-[9-ERROR] <gzip:doc> Creating md5sum and cksum files ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Found shared files with other packages:
-[9-ERROR] usr/bin/uncompress: gzip ncompress
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] --- BUILD ERROR ---
 

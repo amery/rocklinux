@@ -21,17 +21,15 @@
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
 [TIMESTAMP] 1181068433 Tue Jun  5 20:33:53 2007 (5)
-[TIMESTAMP] 1181535701 Mon Jun 11 06:21:41 2007 (9) ERROR
-[TIMESTAMP] 1181900185 Fri Jun 15 11:36:25 2007 (9) ERROR
+[TIMESTAMP] 1181535701 Mon Jun 11 06:21:41 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-kdenetwork.log 9-kdenetwork.err
+[LOGS] 5-kdenetwork.log 9-kdenetwork.log
 
 [BUILDTIME] 437601 (5)
-[BUILDTIME] 429936 (9) ERROR
-[BUILDTIME] 421085 (9) ERROR
+[BUILDTIME] 429936 (9)
 [SIZE] 25.23 MB, 1689 files
 
 [DEP] 00-dirtree acl acl:dev alsa alsa:dev applewmproto applewmproto:dev
@@ -93,55 +91,4 @@
 [PROVIDES] libkopete_videodevice.so libkrichtexteditpart.so libkwireless.so
 [PROVIDES] librss.so lisa mail.local reslisa rssclient rssservice
 [PROVIDES] winpopup-install.sh winpopup-send.sh
-
-[9-ERROR] test -z "/usr/share/apps/kconf_update" || mkdir -p -- "/usr/share/apps/kconf_update"
-[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p 'knt-0.1-0.2.pl' '/usr/share/apps/kconf_update/knt-0.1-0.2.pl'
-[9-ERROR] test -z "/usr/share/applications/kde" || mkdir -p -- "/usr/share/applications/kde"
-[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 'knewsticker-standalone.desktop' '/usr/share/applications/kde/knewsticker-standalone.desktop'
-[9-ERROR] make[3]: Leaving directory `/ROCK/loop/src.kdenetwork.1181893002.7333.564106515/kdenetwork-3.5.6/knewsticker'
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdenetwork.1181893002.7333.564106515/kdenetwork-3.5.6/knewsticker'
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kdenetwork.1181893002.7333.564106515/kdenetwork-3.5.6/knewsticker'
-[9-ERROR] Making install in dcoprss
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.kdenetwork.1181893002.7333.564106515/kdenetwork-3.5.6/dcoprss'
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.kdenetwork.1181893002.7333.564106515/kdenetwork-3.5.6/dcoprss'
-[9-ERROR] test -z "/usr/bin" || mkdir -p -- "/usr/bin"
-[9-ERROR]   /bin/sh ../libtool --silent --mode=install /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p  'rssservice' '/usr/bin/rssservice'
-[9-ERROR]   /bin/sh ../libtool --silent --mode=install /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p  'rssclient' '/usr/bin/rssclient'
-[9-ERROR]   /bin/sh ../libtool --silent --mode=install /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p  'feedbrowser' '/usr/bin/feedbrowser'
-[9-ERROR] test -z "/usr/share/services" || mkdir -p -- "/usr/share/services"
-[9-ERROR]  /ROCK/build/ref0603-TRUNK-x86-reference/ROCK/tools.chroot/wrapper/install -c -p -m 644 'rssservice.desktop' '/usr/share/services/rssservice.desktop'
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdenetwork.1181893002.7333.564106515/kdenetwork-3.5.6/dcoprss'
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kdenetwork.1181893002.7333.564106515/kdenetwork-3.5.6/dcoprss'
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.kdenetwork.1181893002.7333.564106515/kdenetwork-3.5.6'
-[9-ERROR] make[2]: Entering directory `/ROCK/loop/src.kdenetwork.1181893002.7333.564106515/kdenetwork-3.5.6'
-[9-ERROR] make[2]: Nothing to be done for `install-exec-am'.
-[9-ERROR] make[2]: Leaving directory `/ROCK/loop/src.kdenetwork.1181893002.7333.564106515/kdenetwork-3.5.6'
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.kdenetwork.1181893002.7333.564106515/kdenetwork-3.5.6'
-[9-ERROR] Trying to copy the default documentation ...
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing /lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 2057 files for this package.
-[9-ERROR] Applying package split: 40 kdenetwork:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
-[9-ERROR] Applying package split: 42 kdenetwork:dev /pkgconfig/
-[9-ERROR] Applying package split: 45 kdenetwork /.*\.la$
-[9-ERROR] Applying package split: 60 kdenetwork:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] <kdenetwork> Creating flist file ...
-[9-ERROR] <kdenetwork> Creating package dependencies file ...
-[9-ERROR] <kdenetwork> Creating package description ...
-[9-ERROR] <kdenetwork> Creating md5sum and cksum files ...
-[9-ERROR] <kdenetwork:dev> Creating flist file ...
-[9-ERROR] <kdenetwork:dev> Creating package dependencies file ...
-[9-ERROR] <kdenetwork:dev> Creating package description ...
-[9-ERROR] <kdenetwork:dev> Creating md5sum and cksum files ...
-[9-ERROR] <kdenetwork:doc> Creating flist file ...
-[9-ERROR] <kdenetwork:doc> Creating package dependencies file ...
-[9-ERROR] <kdenetwork:doc> Creating package description ...
-[9-ERROR] <kdenetwork:doc> Creating md5sum and cksum files ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Found shared files with other packages:
-[9-ERROR] usr/share/mimelnk/application/x-icq.desktop: kdenetwork sim-im
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] --- BUILD ERROR ---
 

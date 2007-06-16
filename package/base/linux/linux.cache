@@ -21,73 +21,19 @@
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
 [TIMESTAMP] 1180902861 Sun Jun  3 22:34:21 2007 (5)
-[TIMESTAMP] 1181255593 Fri Jun  8 00:33:13 2007 (9) ERROR
-[TIMESTAMP] 1181849926 Thu Jun 14 21:38:46 2007 (9) ERROR
+[TIMESTAMP] 1181255593 Fri Jun  8 00:33:13 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
 
-[LOGS] 5-linux26.log 9-linux26.err
+[LOGS] 5-linux26.log 9-linux26.log
 
 [BUILDTIME] 298471 (5)
-[BUILDTIME] 307966 (9) ERROR
-[BUILDTIME] 356357 (9) ERROR
+[BUILDTIME] 307966 (9)
 [SIZE] 38.80 MB, 1720 files
 
 [DEP] 00-dirtree bash2 binutils bzip2 coreutils cvm diffutils
 [DEP] findutils gawk gcc42 gcc42:dev git glibc26 glibc26:dev grep gzip
 [DEP] linux26-headers:dev ltrace m4 make mktemp module-init-tools ncurses
 [DEP] patch perl5 sed sysfiles tar xmame
-
-
-[9-ERROR]   INSTALL sound/pci/snd-via82xx.ko
-[9-ERROR]   INSTALL sound/pci/trident/snd-trident-synth.ko
-[9-ERROR]   INSTALL sound/pci/trident/snd-trident.ko
-[9-ERROR]   INSTALL sound/pci/vx222/snd-vx222.ko
-[9-ERROR]   INSTALL sound/pci/ymfpci/snd-ymfpci.ko
-[9-ERROR]   INSTALL sound/pcmcia/pdaudiocf/snd-pdaudiocf.ko
-[9-ERROR]   INSTALL sound/pcmcia/vx/snd-vxpocket.ko
-[9-ERROR]   INSTALL sound/soc/snd-soc-core.ko
-[9-ERROR]   INSTALL sound/sound_firmware.ko
-[9-ERROR]   INSTALL sound/soundcore.ko
-[9-ERROR]   INSTALL sound/synth/emux/snd-emux-synth.ko
-[9-ERROR]   INSTALL sound/synth/snd-util-mem.ko
-[9-ERROR]   INSTALL sound/usb/snd-usb-audio.ko
-[9-ERROR]   INSTALL sound/usb/snd-usb-lib.ko
-[9-ERROR]   INSTALL sound/usb/usx2y/snd-usb-usx2y.ko
-[9-ERROR] if [ -r System.map -a -x /bin/true ]; then /bin/true -ae -F System.map  2.6.21.3-rock; fi
-[9-ERROR] Running 'depmod -a -q -F /boot/System.map 2.6.21.3-rock' ..
-[9-ERROR] Hook preconf is still marked as dirty ...
-[9-ERROR] Hook premake is still marked as dirty ...
-[9-ERROR] Hook inmake is still marked as dirty ...
-[9-ERROR] Hook postmake is still marked as dirty ...
-[9-ERROR] rmdir: removing directory, /usr/share/doc/linux26
-[9-ERROR] Creating file list and doing final adaptions ... 
-[9-ERROR] Processing /lib corrections ...
-[9-ERROR] Verifing the .la files ...
-[9-ERROR] Found 1714 files for this package.
-[9-ERROR] Applying package split: 40 linux26:dev (/lib/.*\.(la|a|o)$|/include/|/man[23]/)
-[9-ERROR] Applying package split: 42 linux26:dev /pkgconfig/
-[9-ERROR] Applying package split: 60 linux26:doc /share/doc/
-[9-ERROR] Calculating package dependencies ...
-[9-ERROR] Deleting dependencies, pattern:  -e ".*: net-tools(:.*|)$" ...
-[9-ERROR] <linux26> Creating flist file ...
-[9-ERROR] <linux26> Creating package dependencies file ...
-[9-ERROR] <linux26> Creating package description ...
-[9-ERROR] <linux26> Creating md5sum and cksum files ...
-[9-ERROR] Making post-install adaptions.
-[9-ERROR] Found shared files with other packages:
-[9-ERROR] lib/modules/2.6.21.3-rock/modules.alias: acerhk linux26
-[9-ERROR] lib/modules/2.6.21.3-rock/modules.ccwmap: acerhk linux26
-[9-ERROR] lib/modules/2.6.21.3-rock/modules.dep: acerhk linux26
-[9-ERROR] lib/modules/2.6.21.3-rock/modules.ieee1394map: acerhk linux26
-[9-ERROR] lib/modules/2.6.21.3-rock/modules.inputmap: acerhk linux26
-[9-ERROR] lib/modules/2.6.21.3-rock/modules.isapnpmap: acerhk linux26
-[9-ERROR] lib/modules/2.6.21.3-rock/modules.ofmap: acerhk linux26
-[9-ERROR] lib/modules/2.6.21.3-rock/modules.pcimap: acerhk linux26
-[9-ERROR] lib/modules/2.6.21.3-rock/modules.seriomap: acerhk linux26
-[9-ERROR] lib/modules/2.6.21.3-rock/modules.symbols: acerhk linux26
-[9-ERROR] lib/modules/2.6.21.3-rock/modules.usbmap: acerhk linux26
-[9-ERROR] --- BUILD ERROR ---
-[9-ERROR] --- BUILD ERROR ---
 

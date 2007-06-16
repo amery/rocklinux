@@ -21,9 +21,7 @@
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
 [TIMESTAMP] 1181070966 Tue Jun  5 21:16:06 2007 (5)
-[TIMESTAMP] 1181540001 Mon Jun 11 07:33:21 2007 (9) ERROR
-[TIMESTAMP] 1181904075 Fri Jun 15 12:41:15 2007 (9) ERROR
-[TIMESTAMP] 1181971861 Sat Jun 16 07:31:01 2007 (9) ERROR
+[TIMESTAMP] 1181540001 Mon Jun 11 07:33:21 2007 (9)
 
 [CONFIG-ID] TRUNK-x86-reference
 [ROCKVER] TRUNK
@@ -31,9 +29,7 @@
 [LOGS] 5-iproute2.log 9-iproute2.err
 
 [BUILDTIME] 4733 (5)
-[BUILDTIME] 3808 (9) ERROR
-[BUILDTIME] 3800 (9) ERROR
-[BUILDTIME] 3729 (9) ERROR
+[BUILDTIME] 3808 (9)
 [SIZE] 0.75 MB, 55 files
 
 [DEP] 00-dirtree bash2 bdb44 bdb44:dev binutils bison bzip2 coreutils
@@ -42,55 +38,4 @@
 
 [PROVIDES] arpd ctstat dumpnetcfg genl ifcfg ifstat ip ipnm2nwbc lnstat
 [PROVIDES] nstat q_netem.so routef routel rtacct rtmon rtpr rtstat ss tc
-
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.iproute2.1181971824.7686.2938899655/iproute-2.6.20-070313/netem'
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.iproute2.1181971824.7686.2938899655/iproute-2.6.20-070313/genl'
-[9-ERROR] make[1]: Nothing to be done for `all'.
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.iproute2.1181971824.7686.2938899655/iproute-2.6.20-070313/genl'
-[9-ERROR] install -m 0755 -d /sbin
-[9-ERROR] install -m 0755 -d /etc/iproute2
-[9-ERROR] install -m 0755 -d /usr/share/doc/iproute2/examples
-[9-ERROR] install -m 0755 -d /usr/share/doc/iproute2/examples/diffserv
-[9-ERROR] install -m 0644 README.iproute2+tc examples/README.cbq examples/SYN-DoS.rate.limit examples/cbq.init-v0.7.3 examples/cbqinit.eth1 examples/dhcp-client-script \
-[9-ERROR] 		/usr/share/doc/iproute2/examples
-[9-ERROR] install -m 0644 examples/diffserv/Edge1 examples/diffserv/Edge2 examples/diffserv/Edge31-ca-u32 examples/diffserv/Edge31-cb-chains examples/diffserv/Edge32-ca-u32 examples/diffserv/Edge32-cb-chains examples/diffserv/Edge32-cb-u32 examples/diffserv/README examples/diffserv/afcbq examples/diffserv/ef-prio examples/diffserv/efcbq examples/diffserv/regression-testing \
-[9-ERROR] 		/usr/share/doc/iproute2/examples/diffserv
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.iproute2.1181971824.7686.2938899655/iproute-2.6.20-070313/lib'
-[9-ERROR] make[1]: Nothing to be done for `install'.
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.iproute2.1181971824.7686.2938899655/iproute-2.6.20-070313/lib'
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.iproute2.1181971824.7686.2938899655/iproute-2.6.20-070313/ip'
-[9-ERROR] install -m 0755 -s ip rtmon /sbin
-[9-ERROR] install -m 0755 ifcfg rtpr routel routef /sbin
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.iproute2.1181971824.7686.2938899655/iproute-2.6.20-070313/ip'
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.iproute2.1181971824.7686.2938899655/iproute-2.6.20-070313/tc'
-[9-ERROR] mkdir -p /usr/lib/tc
-[9-ERROR] install -m 0755 -s tc /sbin
-[9-ERROR] for i in  q_netem.so; \
-[9-ERROR] 	do install -m 755 -s $i /usr/lib/tc; \
-[9-ERROR] 	done
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.iproute2.1181971824.7686.2938899655/iproute-2.6.20-070313/tc'
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.iproute2.1181971824.7686.2938899655/iproute-2.6.20-070313/misc'
-[9-ERROR] install -m 0755 -s ss nstat ifstat rtacct arpd lnstat /sbin
-[9-ERROR] ln -sf lnstat /sbin/rtstat
-[9-ERROR] ln -sf lnstat /sbin/ctstat
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.iproute2.1181971824.7686.2938899655/iproute-2.6.20-070313/misc'
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.iproute2.1181971824.7686.2938899655/iproute-2.6.20-070313/netem'
-[9-ERROR] mkdir -p /usr/lib/tc
-[9-ERROR] for i in normal.dist pareto.dist paretonormal.dist experimental.dist; \
-[9-ERROR] 	do install -m 755 $i /usr/lib/tc; \
-[9-ERROR] 	done
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.iproute2.1181971824.7686.2938899655/iproute-2.6.20-070313/netem'
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.iproute2.1181971824.7686.2938899655/iproute-2.6.20-070313/genl'
-[9-ERROR] install -m 0755 genl /sbin
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.iproute2.1181971824.7686.2938899655/iproute-2.6.20-070313/genl'
-[9-ERROR] make[1]: Entering directory `/ROCK/loop/src.iproute2.1181971824.7686.2938899655/iproute-2.6.20-070313/doc'
-[9-ERROR] install -m 0644 SNAPSHOT.tex api-ip6-flowlabels.tex ip-cref.tex ip-tunnels.tex preamble.tex /usr/share/doc/iproute2
-[9-ERROR] install -m 0644 arpd.sgml nstat.sgml rtstat.sgml ss.sgml /usr/share/doc/iproute2
-[9-ERROR] make[1]: Leaving directory `/ROCK/loop/src.iproute2.1181971824.7686.2938899655/iproute-2.6.20-070313/doc'
-[9-ERROR] install -m 0644 etc/iproute2/ematch_map etc/iproute2/rt_dsfield etc/iproute2/rt_protos etc/iproute2/rt_realms etc/iproute2/rt_scopes etc/iproute2/rt_tables /etc/iproute2
-[9-ERROR] install -m 0755 -d /usr/share/man/man8
-[9-ERROR] install -m 0644 man/man8/ip.8 man/man8/lnstat.8 man/man8/rtmon.8 man/man8/ss.8 man/man8/tc-bfifo.8 man/man8/tc-cbq-details.8 man/man8/tc-cbq.8 man/man8/tc-htb.8 man/man8/tc-pfifo_fast.8 man/man8/tc-prio.8 man/man8/tc-red.8 man/man8/tc-sfq.8 man/man8/tc-tbf.8 man/man8/tc.8 /usr/share/man/man8
-[9-ERROR] install: cannot create regular file `/usr/share/man/man8/tc-bfifo.8': File exists
-[9-ERROR] make: *** [install] Error 1
-[9-ERROR] --- BUILD ERROR ---
 

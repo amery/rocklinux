@@ -4,7 +4,7 @@ kernel=`uname -r`
 targetdir=`mktemp -d`
 empty=0
 
-rootdir=""
+rootdir="/"
 cross_compile=""
 initrdfs="cramfs"
 block_size=""
@@ -100,7 +100,6 @@ add_module_to_initrd() {
 echo "Creating ${initrd_img} ..."
 mkdir -p ${targetdir}/etc/conf
 mkdir -p ${targetdir}/lib/modules/${kernel}
-cp ${rootdir}/lib/modules/${kernel}/modules.dep ${targetdir}/lib/modules/${kernel}
 if [ "${empty}" = 0 ] ; then
 	grep '^modprobe ' ${rootdir}/etc/conf/kernel | grep -v 'no-initrd' | \
 		sed 's,[ 	]#.*,,' | \
@@ -114,6 +113,7 @@ if [ "${empty}" = 0 ] ; then
 			add_module_to_initrd "${b}" "${c}"
 		done
 fi
+depmod -b ${rootdir} -v ${kernel}
 
 mkdir -p ${targetdir}/{dev,root,tmp,proc,sys}
 mknod ${targetdir}/dev/ram0	b 1 0

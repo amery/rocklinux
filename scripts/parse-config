@@ -158,3 +158,8 @@ if [ $stagelevel -le 1 -a "$ROCKCFG_PSEUDONATIVE" = 1 ]; then
 	export BUILDCC="$BUILDCC -static" BUILDLD="$BUILDLD -static"
 fi
 
+if [ -f /etc/ROCK-PROFILE ]; then
+	# this is the right place for e.g. build process ulimits
+	. /etc/ROCK-PROFILE
+fi
+

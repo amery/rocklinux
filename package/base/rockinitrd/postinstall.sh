@@ -1,5 +1,7 @@
+
 if any_installed "boot/initrd.img" ; then
-	echo "Re-Creating initrd..."
-	/sbin/mkinitrd
+	kver=`find /boot/initrd.img -printf '%l\n' | sed 's,.*initrd-,,; s,\.img$,,;'`
+	echo "Re-Creating initrd ($kver) ..."
+	/sbin/mkinitrd $kver
 fi
 

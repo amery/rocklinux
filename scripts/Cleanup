@@ -147,6 +147,7 @@ bash scripts/xfind.sh Documentation/. architecture/. misc/. \
            -o -name TRANS.TBL -o -name '*.cksum-err' -o -name x		\
 	   -o -name '*[.-]old' -o -name a.out -o -name '*~'		\
 	   -o -name '*.incomplete' -o -name '*.ckext-err' \)		\
+	! -name grml-x							\
 	-printf 'WARNING: Found %p\n'					\
   \) -o \(								\
 	\( \( ! -type l ! -perm 755 ! -perm 644 \) -o			\

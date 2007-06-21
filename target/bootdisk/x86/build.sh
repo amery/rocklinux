@@ -10,6 +10,11 @@ cd $disksdir
 
 echo_header "Creating lilo config and cleaning boot directory:"
 cp $base/target/$target/x86/lilo-* boot/
+for x in boot/*; do
+	[ -L $x -a -f $x ] || continue
+	cp -L $x $x.data; mv $x.data $x
+	echo "dereferenced \`$x'"
+done
 rm -rfv boot/*-rock boot/grub boot/System.map boot/kconfig boot/*.24**
 
 echo_header "Creating floppy disk images:"

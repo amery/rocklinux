@@ -1067,12 +1067,13 @@ exec 202>&1
 			splitdesc_${spkg#*:}
 		fi
 
-		echo "Calculating run-time package dependencies from ELF files..."
+		echo "<$spkg> Calculating run-time package dependencies from ELF files..."
 		grep "^$spkg: " "$builddir/flist.split" | while read dummy x ; do
 			x="/$x"
 
-			# Symbolic links (to ELF files) are ignored.
-			[ -L "$x" ] && continue
+			# Symbolic links (to ELF files) and non-regular files
+			# are ignored.
+			[ -L "$x" -o ! -f "$x" ] && continue
 
 			# Strip most values from ELF dynamic and version
 			# sections as they don't contain useful info.
@@ -1101,7 +1102,7 @@ exec 202>&1
 
 		for x in {provides,requires,conflicts} ; do
 			if [ -f "$builddir/$x.tmp" ] ; then
-				echo "Creating var/adm/$x/$spkg"
+				echo "<$spkg> Creating var/adm/$x/$spkg"
 				sort -u "$builddir/$x.tmp" > var/adm/$x/$spkg
 			else
 				rm -f var/adm/$x/$spkg

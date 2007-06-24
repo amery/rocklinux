@@ -1,0 +1,455 @@
+Stefan Fiedler:
+	Add support for automated run-time dependency checks (partial).
+	Implementation in rocket.sh is missing.
+
+diff -dur mine-0.25/create.c mine-0.25-rt-deps/create.c
+--- mine-0.25/create.c	2005-03-23 09:51:06.000000000 +0100
++++ mine-0.25-rt-deps/create.c	2006-12-21 23:42:58.000000000 +0100
+@@ -94,6 +94,7 @@
+ 	exit(1);
+ }
+ 
++/* All subtrees are optional. */
+ char * varadm_subtrees[] =
+ {
+ 	"packages",
+@@ -102,6 +103,9 @@
+ 	"cksums",
+ 	"dependencies",
+ 	"descs",
++	"provides",
++	"requires",
++	"conflicts",
+ 	NULL
+ };
+ 
+@@ -128,7 +132,8 @@
+ 	for (i=0; varadm_subtrees[i]; i++) {
+ 		snprintf(filename, 1024, "%s/%s/%s", varadm,
+ 		                   varadm_subtrees[i], package);
+-		gem_create_addfile(&c, varadm_subtrees[i], filename);
++		if (!access(filename, R_OK))
++			gem_create_addfile(&c, varadm_subtrees[i], filename);
+ 	}
+ 
+ 	snprintf(filename, 1024, "%s/descs/%s", varadm, package);
+diff -dur mine-0.25/gasgui.h mine-0.25-rt-deps/gasgui.h
+--- mine-0.25/gasgui.h	2005-03-23 09:51:06.000000000 +0100
++++ mine-0.25-rt-deps/gasgui.h	2006-12-22 00:26:34.000000000 +0100
+@@ -25,6 +25,9 @@
+ 
+ struct dependency {
+ 	char *name;
++	char *version;
++	/* The enumeration denotes no op, <, <=, >, >=, =, or @ (string compare). */
++	enum { null, lt, le, gt, ge, eq, at } cmp_op;
+ 	struct package *pkg;
+ 	struct dependency *next;
+ };
+@@ -36,7 +39,7 @@
+ 	int action; /* -1=remove, 0=nothing, 2=install */
+ 	int *size; /* filesystem_count + 1 elements */
+ 	struct package *next;
+-	struct dependency *deps;
++	struct dependency *provides, *requires, *conflicts;
+ };
+ 
+ struct directory_entry {
+diff -dur mine-0.25/mkpdb.c mine-0.25-rt-deps/mkpdb.c
+--- mine-0.25/mkpdb.c	2005-03-23 09:51:06.000000000 +0100
++++ mine-0.25-rt-deps/mkpdb.c	2006-12-21 09:13:02.000000000 +0100
+@@ -72,6 +72,15 @@
+ 	if ( dump_field(&c, "descs") == -1 ) goto error;
+ 	if ( dump_field(&c, "dependencies") == -1 ) goto error;
+ 	if ( dump_field(&c, "cksums") == -1 ) goto error;
++	if ( dump_field(&c, "provides") == -1) {
++		putchar('\027'); putchar('\n');
++	}
++	if ( dump_field(&c, "requires") == -1) {
++		putchar('\027'); putchar('\n');
++	}
++	if ( dump_field(&c, "conflicts") == -1) {
++		putchar('\027'); putchar('\n');
++	}
+ 
+ 	putchar('\004');
+ 	putchar('\n');
+diff -dur mine-0.25/readdb.c mine-0.25-rt-deps/readdb.c
+--- mine-0.25/readdb.c	2005-10-04 18:35:32.000000000 +0200
++++ mine-0.25-rt-deps/readdb.c	2006-12-22 00:19:41.000000000 +0100
+@@ -40,7 +40,6 @@
+ int filesystem_count;
+ 
+ struct memdb_t files_on_disks;
+-struct memdb_t pkg_addr_hash;
+ 
+ struct directory *
+ get_create_directory(struct directory * base, char *name)
+@@ -137,9 +136,6 @@
+ 	if ( last_p ) last_p->next = p;
+ 	(last_p=p)->next = NULL;
+ 
+-	snprintf(line, 1024, "%p", p);
+-	memdb_put(&pkg_addr_hash, packagename, line);
+-
+ 	d = get_create_directory(rootdir, "all");
+ 	e = calloc(1, sizeof(struct directory_entry));
+ 	e->next = d->list; d->list = e; e->content.pkg = p;
+@@ -191,30 +187,6 @@
+ 	}
+ 	if ( !dbf ) fclose(f);
+ 
+-	/* read package dependencies */
+-	if ( !dbf ) {
+-		snprintf(filename, PATH_MAX, "%s/%s/info/dependencies/%s",
+-			sourcedir, config, packagename);
+-		f = fopen(filename, "r");
+-		if ( f == NULL ) {
+-			fprintf(stderr, "Can't open %s: %s\n",
+-				filename, strerror(errno));
+-			return -1;
+-		}
+-	}
+-
+-	while ( fgets(line, 1024, f) != NULL && strcmp(line,"\027\n") ) {
+-		if ( (t = strchr(line, '\n')) != NULL ) *t=0;
+-		if ( (t = strchr(line, ' ')) == NULL ) continue;
+-		t++;
+-
+-		if ( !strcmp(t, packagename) ) continue;
+-		dep = calloc(1, sizeof(struct dependency));
+-		dep->name = malloc(strlen(t)+1); strcpy(dep->name, t);
+-		dep->next = p->deps; p->deps = dep;
+-	}
+-	if ( !dbf ) fclose(f);
+-
+ 	snprintf(line, 1024, "%s/pkgs/%s-%s.gem", config, p->name, p->version);
+ 	if ( memdb_get(&files_on_disks, line) ) {
+ 		p->disk_number = atoi(memdb_search_result);
+@@ -253,6 +225,11 @@
+ 		fclose(f);
+ 	}
+ 
++	/* Skip var/adm/dependencies section. */
++	if ( dbf ) {
++		while ( fgets(line, 1024, dbf) != NULL && strcmp(line,"\027\n") );
++	}
++
+ 	if ( !dbf ) {
+ 		snprintf(filename, PATH_MAX, "%s/%s/info/cksums/%s",
+ 			sourcedir, config, packagename);
+@@ -288,6 +265,92 @@
+ 		if ( !dbf ) fclose(f);
+ 	}
+ 
++	/* Read run-time dependencies sections. */
++	if ( !dbf ) {
++		snprintf(filename, PATH_MAX, "%s/%s/info/provides/%s",
++			sourcedir, config, packagename);
++		f = fopen(filename, "r");
++	} else {
++		f = dbf;
++	}
++	if ( f != NULL )
++		while ( fgets(line, 1024, f) != NULL && strcmp(line,"\027\n") ) {
++			t=strtok(line, " \n"); if ( t == NULL ) continue;
++
++			dep = calloc(1, sizeof(struct dependency));
++			dep->name = malloc(strlen(t)+1); strcpy(dep->name, t);
++			t=strtok(NULL, " \n"); if ( t != NULL ) {
++				dep->version = malloc(strlen(t)+1);
++				strcpy(dep->version, t);
++			};
++			dep->next = p->provides; p->provides = dep;
++		}
++	if ( !dbf ) fclose(f);
++
++	if ( !dbf ) {
++		snprintf(filename, PATH_MAX, "%s/%s/info/requires/%s",
++			sourcedir, config, packagename);
++		f = fopen(filename, "r");
++	} else {
++		f = dbf;
++	}
++	if ( f != NULL )
++		while ( fgets(line, 1024, f) != NULL && strcmp(line,"\027\n") ) {
++			t=strtok(line, " \n"); if ( t == NULL ) continue;
++
++			dep = calloc(1, sizeof(struct dependency));
++			dep->name = malloc(strlen(t)+1); strcpy(dep->name, t);
++			t=strtok(NULL, " \n"); if ( t != NULL ) {
++				if (strlen(t) == 1)
++					switch (t[0]) {
++						case '<': dep->cmp_op=lt; break;
++						case '>': dep->cmp_op=gt; break;
++						case '=': dep->cmp_op=eq; break;
++						case '@': dep->cmp_op=at; break;
++					}
++				else if (!strcmp(t, "<=")) dep->cmp_op=le;
++				else if (!strcmp(t, ">=")) dep->cmp_op=ge;
++			};
++			t=strtok(NULL, " \n"); if ( t != NULL ) {
++				dep->version = malloc(strlen(t)+1);
++				strcpy(dep->version, t);
++			};
++			dep->next = p->requires; p->requires = dep;
++		}
++	if ( !dbf ) fclose(f);
++
++	if ( !dbf ) {
++		snprintf(filename, PATH_MAX, "%s/%s/info/conflicts/%s",
++			sourcedir, config, packagename);
++		f = fopen(filename, "r");
++	} else {
++		f = dbf;
++	}
++	if ( f != NULL )
++		while ( fgets(line, 1024, f) != NULL && strcmp(line,"\027\n") ) {
++			t=strtok(line, " \n"); if ( t == NULL ) continue;
++
++			dep = calloc(1, sizeof(struct dependency));
++			dep->name = malloc(strlen(t)+1); strcpy(dep->name, t);
++			t=strtok(NULL, " \n"); if ( t != NULL ) {
++				if (strlen(t) == 1)
++					switch (t[0]) {
++						case '<': dep->cmp_op=lt; break;
++						case '>': dep->cmp_op=gt; break;
++						case '=': dep->cmp_op=eq; break;
++						case '@': dep->cmp_op=at; break;
++					}
++				else if (!strcmp(t, "<=")) dep->cmp_op=le;
++				else if (!strcmp(t, ">=")) dep->cmp_op=ge;
++			};
++			t=strtok(NULL, " \n"); if ( t != NULL ) {
++				dep->version = malloc(strlen(t)+1);
++				strcpy(dep->version, t);
++			};
++			dep->next = p->conflicts; p->conflicts = dep;
++		}
++	if ( !dbf ) fclose(f);
++
+ 	/* seek until EOF mark for this package */
+ 	if ( dbf ) {
+ 		while ( fgets(line, 1024, f) != NULL && strcmp(line,"\004\n") ) continue;
+@@ -396,6 +459,52 @@
+ 	fclose(f);
+ }
+ 
++/*
++	Match provided and required dependencies.
++	Returns true if a provided dependency prov matches a required
++	 dependency req.
++	Matching dependencies always have the same name. If the comparation
++	 operator cmp_op is null, equal names are sufficient for a match.
++	For other cmp_op values, the return value depends on a comparison
++	 between the versions of prov and req:
++		@ (at) compares if versions are equal strings;
++		other values compare the order of versions in major.minor
++			format (e.g. 0.7.9 < 0.7.10).
++*/
++int match_dependency(struct dependency *req, struct dependency *prov)
++{
++	int result=0;
++	char * part1, *part2;
++
++	if (strcmp(req->name, prov->name)) return 0;
++	if (req->cmp_op == null) return 1;
++	if (req->cmp_op == at) return !strcmp(req->version, prov->version);
++
++	part1=strtok(prov->version, ".");
++	part2=strtok(req->version, ".");
++
++	while (part1 != NULL || part2 != NULL)
++	{
++		int i1 = (part1 == NULL) ? 0 : atoi(part1);
++		int i2 = (part2 == NULL) ? 0 : atoi(part2);
++		if (i1 < i2) { result=-1 ; break ; }
++		else if (i1 > i2) { result=1 ; break ; }
++		part1=strtok(req->version, ".");
++		part2=strtok(prov->version, ".");
++	}
++	switch (req->cmp_op) {
++		case lt: return result==-1;
++		case gt: return result==1;
++		case eq: return result==0;
++		case le: return result==0 || result==-1;
++		case ge: return result==0 || result==1;
++		case null:
++		case at: ;
++	}
++
++	return 0;
++}
++
+ int read_packages()
+ {
+ 	struct dirent **namelist;
+@@ -407,7 +516,6 @@
+ 	int i;
+ 
+ 	memdb_init(&files_on_disks);
+-	memdb_init(&pkg_addr_hash);
+ 	get_filesystem_info();
+ 
+ 	printf("Reading package database. Please wait...\n");
+@@ -460,7 +568,7 @@
+ 			return -1;
+ 		} else {
+ 			/* read packages in reversed order so the linked list is
+-			 * ordered well (new entries are insterted at the begin) */
++			 * ordered well (new entries are inserted at the begin) */
+ 			while (i--) {
+ 				if ( namelist[i]->d_name[0] != '.' &&
+ 				     strcmp(namelist[i]->d_name, "TRANS.TBL") )
+@@ -479,25 +587,32 @@
+ 	for (d = directories; d != NULL; d = d->next) sort_directory(d);
+ 
+ 	for (p = packages; p != NULL; p = p->next) {
+-	  /* fill the dependenies with references to the individual packges */
+-	  for (next_dep = &(p->deps); *next_dep != NULL;) {
+-		char* pkg_ptr_str = memdb_get(&pkg_addr_hash, (*next_dep)->name);
+-		if (pkg_ptr_str)
+-			sscanf(pkg_ptr_str, "%p", &(*next_dep)->pkg);
+-		if ((*next_dep)->pkg) {
+-			next_dep = &((*next_dep)->next);
+-		} else {
+-			/* drop dependency since it is not in db - this can happend
+-			   if multiple builds are run with modified packages */
+-			struct dependency *tbd_dep = *next_dep;
+-			*next_dep = tbd_dep->next;
+-			free (tbd_dep->name);
+-			free (tbd_dep);
++	    /* Fill the dependencies with references to the individual packages. */
++	    for (next_dep = &(p->requires); *next_dep != NULL;) {
++		struct package *prov;
++		for (prov = packages; prov != NULL; prov = prov->next) {
++		    struct dependency *next_prov;
++		    for (next_prov = prov->provides; next_prov != NULL; next_prov = next_prov->next) {
++			if (match_dependency(*next_dep, next_prov))
++			{
++			    (*next_dep)->pkg=prov;
++			    next_dep=&((*next_dep)->next);
++			    goto dep_matched;
++			}
++		    }
+ 		}
+-	  }
++		/* drop dependency since it is not in db - this can happen
++		if multiple builds are run with modified packages */
++		struct dependency *tbd_dep = *next_dep;
++		*next_dep = tbd_dep->next;
++		free (tbd_dep->name);
++		free (tbd_dep);
++
++		dep_matched: ;
++	    }
+ 	}
++
+ 	memdb_free(&files_on_disks);
+-	memdb_init(&pkg_addr_hash);
+ 	return 0;
+ }
+ 
+diff -dur mine-0.25/rocket.sh mine-0.25-rt-deps/rocket.sh
+--- mine-0.25/rocket.sh	2006-07-15 01:42:48.000000000 +0200
++++ mine-0.25-rt-deps/rocket.sh	2006-12-22 00:23:08.000000000 +0100
+@@ -32,7 +32,6 @@
+ 	update .............. update the package cache
+ 	upgrade ............. update all packages to newest version
+ 	install <pkg> ....... install/update package
+-	inst-nodeps <pkg> ... install without dependencies
+ 	remove <pkg> ........ remove package
+ 	
+ 	search <regex> ...... search package descriptions for this regex
+@@ -118,6 +117,9 @@
+ 		close("/var/adm/rocket/descs/" pkg);
+ 		close("/var/adm/rocket/dependencies/" pkg);
+ 		close("/var/adm/rocket/cksums/" pkg);
++		close("/var/adm/rocket/provides/" pkg);
++		close("/var/adm/rocket/requires/" pkg);
++		close("/var/adm/rocket/conflicts/" pkg);
+ 		print pkg " '"$1"'/" pkg "-" ver ".gem" \
+ 			>> "/var/adm/rocket/locations.tmp";
+ 	}
+@@ -133,7 +135,9 @@
+ 	if (match($2, "^'$4'$") == 0)
+ 		print > "/var/adm/rocket/dependencies/" pkg;
+ }
+-chunk == 3 && !ignore { print > "/var/adm/rocket/cksums/" pkg; }
++chunk == 4 && !ignore { print > "/var/adm/rocket/provides/" pkg; }
++chunk == 5 && !ignore { print > "/var/adm/rocket/requires/" pkg; }
++chunk == 6 && !ignore { print > "/var/adm/rocket/conflicts/" pkg; }
+ 
+ chunk == 1 && $1 == "[V]" { ver = $2 "-" $3; }
+ 
+@@ -220,7 +224,9 @@
+ 
+     update)
+ 	rm -rf /var/adm/rocket/{descs,dependencies,cksums}
++	rm -rf /var/adm/rocket/{provides,requires,conflicts}
+ 	mkdir -p /var/adm/rocket/{descs,dependencies,cksums,dbs}
++	mkdir -p /var/adm/rocket/{provides,requires,conflicts}
+ 	touch /var/adm/rocket/locations.tmp
+ 	gen_a_list() {
+ 		grep '^[ 	]*'$1'[ 	]\+' /etc/rocket.conf | \
+@@ -360,8 +366,10 @@
+ 
+     install)
+ 	shift
+-	if [ $nodeps = 0 ]
++	if [ $nodeps = 1 ]
+ 	then
++		deps=""
++	else
+ 		deps=$( echo $( echo "$*" | tr ' ' '\n' |
+ gawk '
+ 
+@@ -405,8 +413,6 @@
+ }
+ 
+ '; ); )
+-	else
+-		deps=""
+ 	fi
+ 
+ 	if [ -n "$deps" ]; then
+diff -dur mine-0.25/selector.c mine-0.25-rt-deps/selector.c
+--- mine-0.25/selector.c	2005-12-27 20:21:48.000000000 +0100
++++ mine-0.25-rt-deps/selector.c	2006-12-22 00:25:35.000000000 +0100
+@@ -110,7 +110,6 @@
+ 	assert_ptr(listitems, "dialog_menu");
+ 
+ 	for (i = 0; i < item_no; ++i) {
+-
+ 		listitems[i].name = ItemName(i);
+ 		listitems[i].text = ItemText(i);
+ 		listitems[i].help = (dialog_vars.item_help) ? ItemHelp(i) : "";
+@@ -130,7 +129,7 @@
+ {
+ 	struct dependency *dep;
+ 
+-	for (dep = p->deps; dep != NULL; dep = dep->next)
++	for (dep = p->requires; dep != NULL; dep = dep->next)
+ 	  if ( (dep->pkg->is_installed && dep->pkg->action < 0) ||
+ 	     (!dep->pkg->is_installed && !dep->pkg->action) ) {
+ 		if ( dep->pkg->is_dependency ) {
+@@ -402,8 +401,8 @@
+ "You can navigate through the menu by using either the arrow keys\n"
+ "or +/-/btab/tab (for up, down, left, right).\n"
+ "\n"
+-"Furthermore you can entry directories (de/select packages respect-\n"
+-"ively) by pressing the return-key while the button focus is on the\n"
++"Furthermore you can enter directories (de/select packages respect-\n"
++"ively) by pressing the return key while the button focus is on the\n"
+ "`Select' button.\n"
+ "\n"
+ "There are also a few extra commands for additional information and\n"
+@@ -574,7 +573,7 @@
+ 	int rc, pkgcount;
+ 	char *main_item;
+ 
+-	/* Create enought space for the items[] and entries[] arrays */
++	/* Create enough space for the items[] and entries[] arrays */
+ 	items = malloc( (directory_entry_count+20) * sizeof(char*) * 2 );
+ 	entries = malloc( (directory_entry_count+20) * sizeof(void*) );
+ 	main_item = malloc(10);

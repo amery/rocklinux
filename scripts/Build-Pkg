@@ -1104,6 +1104,7 @@ exec 202>&1
 			if [ -f "$builddir/$x.tmp" ] ; then
 				echo "<$spkg> Creating var/adm/$x/$spkg"
 				sort -u "$builddir/$x.tmp" > var/adm/$x/$spkg
+				rm -f "$builddir/$x.tmp"
 			else
 				rm -f var/adm/$x/$spkg
 			fi

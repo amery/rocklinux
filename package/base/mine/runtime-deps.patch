@@ -1,10 +1,10 @@
 Stefan Fiedler:
-	Add support for automated run-time dependency checks (partial).
-	Implementation in rocket.sh is missing.
+       Add support for automated run-time dependency checks (partial).
+       Implementation in rocket.sh is missing.
 
-diff -dur mine-0.25/create.c mine-0.25-rt-deps/create.c
+diff -dur mine-0.25/create.c mine-0.25-p/create.c
 --- mine-0.25/create.c	2005-03-23 09:51:06.000000000 +0100
-+++ mine-0.25-rt-deps/create.c	2006-12-21 23:42:58.000000000 +0100
++++ mine-0.25-p/create.c	2006-12-29 19:12:05.000000000 +0100
 @@ -94,6 +94,7 @@
  	exit(1);
  }
@@ -33,9 +33,9 @@ diff -dur mine-0.25/create.c mine-0.25-rt-deps/create.c
  	}
  
  	snprintf(filename, 1024, "%s/descs/%s", varadm, package);
-diff -dur mine-0.25/gasgui.h mine-0.25-rt-deps/gasgui.h
+diff -dur mine-0.25/gasgui.h mine-0.25-p/gasgui.h
 --- mine-0.25/gasgui.h	2005-03-23 09:51:06.000000000 +0100
-+++ mine-0.25-rt-deps/gasgui.h	2006-12-22 00:26:34.000000000 +0100
++++ mine-0.25-p/gasgui.h	2006-12-29 19:12:05.000000000 +0100
 @@ -25,6 +25,9 @@
  
  struct dependency {
@@ -55,9 +55,9 @@ diff -dur mine-0.25/gasgui.h mine-0.25-rt-deps/gasgui.h
  };
  
  struct directory_entry {
-diff -dur mine-0.25/mkpdb.c mine-0.25-rt-deps/mkpdb.c
+diff -dur mine-0.25/mkpdb.c mine-0.25-p/mkpdb.c
 --- mine-0.25/mkpdb.c	2005-03-23 09:51:06.000000000 +0100
-+++ mine-0.25-rt-deps/mkpdb.c	2006-12-21 09:13:02.000000000 +0100
++++ mine-0.25-p/mkpdb.c	2006-12-29 19:12:05.000000000 +0100
 @@ -72,6 +72,15 @@
  	if ( dump_field(&c, "descs") == -1 ) goto error;
  	if ( dump_field(&c, "dependencies") == -1 ) goto error;
@@ -74,9 +74,9 @@ diff -dur mine-0.25/mkpdb.c mine-0.25-rt-deps/mkpdb.c
  
  	putchar('\004');
  	putchar('\n');
-diff -dur mine-0.25/readdb.c mine-0.25-rt-deps/readdb.c
+diff -dur mine-0.25/readdb.c mine-0.25-p/readdb.c
 --- mine-0.25/readdb.c	2005-10-04 18:35:32.000000000 +0200
-+++ mine-0.25-rt-deps/readdb.c	2006-12-22 00:19:41.000000000 +0100
++++ mine-0.25-p/readdb.c	2006-12-29 20:27:16.000000000 +0100
 @@ -40,7 +40,6 @@
  int filesystem_count;
  
@@ -231,7 +231,7 @@ diff -dur mine-0.25/readdb.c mine-0.25-rt-deps/readdb.c
  	/* seek until EOF mark for this package */
  	if ( dbf ) {
  		while ( fgets(line, 1024, f) != NULL && strcmp(line,"\004\n") ) continue;
-@@ -396,6 +459,52 @@
+@@ -396,6 +459,54 @@
  	fclose(f);
  }
  
@@ -254,10 +254,11 @@ diff -dur mine-0.25/readdb.c mine-0.25-rt-deps/readdb.c
 +
 +	if (strcmp(req->name, prov->name)) return 0;
 +	if (req->cmp_op == null) return 1;
-+	if (req->cmp_op == at) return !strcmp(req->version, prov->version);
++	if (req->cmp_op == at) return (prov->version != NULL) && !strcmp(req->version, prov->version);
 +
-+	part1=strtok(prov->version, ".");
-+	part2=strtok(req->version, ".");
++	char *saveptr1, *saveptr2;
++	part1=strtok_r(prov->version, ".", &saveptr1);
++	part2=strtok_r(req->version, ".", &saveptr2);
 +
 +	while (part1 != NULL || part2 != NULL)
 +	{
@@ -265,8 +266,9 @@ diff -dur mine-0.25/readdb.c mine-0.25-rt-deps/readdb.c
 +		int i2 = (part2 == NULL) ? 0 : atoi(part2);
 +		if (i1 < i2) { result=-1 ; break ; }
 +		else if (i1 > i2) { result=1 ; break ; }
-+		part1=strtok(req->version, ".");
-+		part2=strtok(prov->version, ".");
++		if (part1 != NULL) part1=strtok_r(NULL, ".", &saveptr1);
++		if (part2 != NULL) part2=strtok_r(NULL, ".", &saveptr2);
++		
 +	}
 +	switch (req->cmp_op) {
 +		case lt: return result==-1;
@@ -284,7 +286,7 @@ diff -dur mine-0.25/readdb.c mine-0.25-rt-deps/readdb.c
  int read_packages()
  {
  	struct dirent **namelist;
-@@ -407,7 +516,6 @@
+@@ -407,7 +518,6 @@
  	int i;
  
  	memdb_init(&files_on_disks);
@@ -292,7 +294,7 @@ diff -dur mine-0.25/readdb.c mine-0.25-rt-deps/readdb.c
  	get_filesystem_info();
  
  	printf("Reading package database. Please wait...\n");
-@@ -460,7 +568,7 @@
+@@ -460,7 +570,7 @@
  			return -1;
  		} else {
  			/* read packages in reversed order so the linked list is
@@ -301,7 +303,7 @@ diff -dur mine-0.25/readdb.c mine-0.25-rt-deps/readdb.c
  			while (i--) {
  				if ( namelist[i]->d_name[0] != '.' &&
  				     strcmp(namelist[i]->d_name, "TRANS.TBL") )
-@@ -479,25 +587,32 @@
+@@ -479,25 +589,33 @@
  	for (d = directories; d != NULL; d = d->next) sort_directory(d);
  
  	for (p = packages; p != NULL; p = p->next) {
@@ -334,6 +336,7 @@ diff -dur mine-0.25/readdb.c mine-0.25-rt-deps/readdb.c
 +		    }
  		}
 -	  }
++
 +		/* drop dependency since it is not in db - this can happen
 +		if multiple builds are run with modified packages */
 +		struct dependency *tbd_dep = *next_dep;
@@ -350,9 +353,9 @@ diff -dur mine-0.25/readdb.c mine-0.25-rt-deps/readdb.c
  	return 0;
  }
  
-diff -dur mine-0.25/rocket.sh mine-0.25-rt-deps/rocket.sh
+diff -dur mine-0.25/rocket.sh mine-0.25-p/rocket.sh
 --- mine-0.25/rocket.sh	2006-07-15 01:42:48.000000000 +0200
-+++ mine-0.25-rt-deps/rocket.sh	2006-12-22 00:23:08.000000000 +0100
++++ mine-0.25-p/rocket.sh	2006-12-29 19:12:05.000000000 +0100
 @@ -32,7 +32,6 @@
  	update .............. update the package cache
  	upgrade ............. update all packages to newest version
@@ -413,9 +416,9 @@ diff -dur mine-0.25/rocket.sh mine-0.25-rt-deps/rocket.sh
  	fi
  
  	if [ -n "$deps" ]; then
-diff -dur mine-0.25/selector.c mine-0.25-rt-deps/selector.c
+diff -dur mine-0.25/selector.c mine-0.25-p/selector.c
 --- mine-0.25/selector.c	2005-12-27 20:21:48.000000000 +0100
-+++ mine-0.25-rt-deps/selector.c	2006-12-22 00:25:35.000000000 +0100
++++ mine-0.25-p/selector.c	2006-12-29 19:12:05.000000000 +0100
 @@ -110,7 +110,6 @@
  	assert_ptr(listitems, "dialog_menu");
  

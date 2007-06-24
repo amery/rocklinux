@@ -5,11 +5,15 @@ rm -rf $disksdir/initrd
 mkdir -p $disksdir/initrd/{dev,proc,sys,tmp,scsi,net,bin,etc,lib}
 cd $disksdir/initrd; ln -s bin sbin; ln -s . usr
 
+rock_targetdir="$base/target/$target/"
+rock_target="$target"
+
 # make mount not complain
 touch etc/fstab
 
-rock_targetdir="$base/target/$target/"
-rock_target="$target"
+# supress udev uig/gid warnings
+cp -a $base/build/$ROCKCFG_ID/etc/{passwd,group} etc/
+cp -a $base/build/$ROCKCFG_ID/lib/libnss_files[-.]* lib/
 
 rootdir="$disksdir/2nd_stage"
 targetdir="$disksdir/initrd"

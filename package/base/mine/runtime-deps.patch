@@ -474,3 +474,183 @@ diff -dur mine-0.25/selector.c mine-0.25-p/selector.c
  	items = malloc( (directory_entry_count+20) * sizeof(char*) * 2 );
  	entries = malloc( (directory_entry_count+20) * sizeof(void*) );
  	main_item = malloc(10);
+--- mine-0.25/rocket.sh	2007-05-17 23:14:19.000000000 +0200
++++ mine-0.25/rocket	2007-05-17 23:13:02.000000000 +0200
+@@ -1,5 +1,7 @@
+ #!/bin/bash
+ 
++export LC_ALL=C
++
+ help()
+ {
+ 	cat << EOT
+@@ -60,6 +62,8 @@
+ 	esac
+ done
+ 
++var_adm_dir="$root/var/adm/"
++
+ upd_archive() {
+ 	filename="$( echo "$2" | tr "/:" __; )"
+ 	refetch=0
+@@ -153,6 +157,71 @@
+ 	fi
+ }
+ 
++# resolve_dep <library> <comparation-operator> <version> <pkg-set>
++#
++# return all packages in <pkg_set> that provide <library> meeting <version> requirement.
++# <comparation-operator> is one of <, >, <=, >=, =, or @.
++#
++resolve_dep ()
++{
++	local library="$1" cmp_op="$2" version="$3" var_adm_dir="$4" pkg_set="$5"
++	local pkg lib ver
++
++	if [ -z "$cmp_op" -o "$cmp_op" == "@" ] ; then
++		cd $var_adm_dir/provides
++		grep -m1 -e "^$library${version:+ }$version\( \|$\)" $pkg_set 2>/dev/null |
++		sed -e"s,\(.*\):\(.*\),\1," | tr "\n" " "
++	else
++		while read pkg lib ver ; do
++			version_compare "$ver" "$version" "$cmp_op" || continue
++			echo -n "$pkg "
++		done < <( cd $var_adm_dir/provides ; grep "^$library " $pkg_set 2>/dev/null | sed -e"s,\(.*\):\(.*\),\1 \2," )
++	fi
++}
++
++# get_requires <pkg1> ... <pkgN>
++#
++# get shared library requirements of the given packages
++#
++get_requires ()
++{
++	( cd $var_adm_dir/rocket/requires ; cat $* 2>/dev/null | sort -u )
++}
++
++version_compare() {
++	local ver1="$1" ver2="$2" cmp_op="$3" result=0
++	local part1 part2 delim1 delim2
++
++	if [ "$cmp_op" == "@" ] ; then
++		[ "$ver1" == "$ver2" ] && return 0 || return 1
++	fi
++
++	while [ "$ver1" -o "$ver2" ] ; do
++		part1="${ver1%%[^0-9]*}" ; ver1="${ver1#$part1}"
++		part2="${ver2%%[^0-9]*}" ; ver2="${ver2#$part2}"
++		delim1="${ver1%%[0-9]*}" ; ver1="${ver1#$delim1}"
++		delim2="${ver2%%[0-9]*}" ; ver2="${ver2#$delim2}"
++
++		# 1.2.0 == 1.2
++		[ ! "$part1" ] && part1=0
++		[ ! "$part2" ] && part2=0
++
++		if [ "$part1" -lt "$part2" ] ; then
++			result=2 ; break
++		elif [ "$part1" -gt "$part2" ] ; then
++			result=1 ; break
++		fi
++	done
++
++	case $cmp_op in
++		"=") [ "$result" == 0 ] ;;
++		">") [ "$result" == 1 ] ;;
++		"<") [ "$result" == 2 ] ;;
++		">=") [ "$result" == 1 -o $result == 0 ] ;;
++		"<=") [ "$result" == 2 -o $result == 0 ] ;;
++	esac ; return $?
++}
++
+ case "$1" in
+ 
+     updsrc)
+@@ -370,49 +439,52 @@
+ 	then
+ 		deps=""
+ 	else
+-		deps=$( echo $( echo "$*" | tr ' ' '\n' |
+-gawk '
++		# for each required library of each selected pkg:
++		# 1) check if the library is in the installed or selected pkg set:
++		# 1a) if yes, the dependency is resolved.
++		# 2) If no, check if the library is in the installable set:
++		# 2a) if there is one pkg providing this library, add that pkg to the selected set.
++		# 2b) if there is more than one pkg providing this library, ask the user which ones to install.
++		# 3) If the library isn't in any set, issue a warning. The dependency is not resolved.
+ 
+-function get_deps(p,
+-		depsfn) {
+-	if (A[p]) return;
+-	A[p] = 1;
++		INSTALLED_PKGS="$( cd $var_adm_dir/descs ; ls )"
++		SELECTED_PKGS="$*"
++		INSTALLABLE_PKGS="$( cd $var_adm_dir/rocket/descs ; ls )"
++		ADDED_PKGS=""
+ 
+-	depsfn = "/var/adm/rocket/dependencies/" p;
++		# Initialize the shared library dependency queue.
++		# Each library in this queue is checked for open dependencies.
++		dep_queue="$( mktemp -t dep_queue.XXXXXX )"
++		dep_checked="$( mktemp -t dep_checked.XXXXXX )"
++		get_requires $SELECTED_PKGS > $dep_queue
++		echo > $dep_checked
+ 
+-	while ((getline < depsfn) > 0) {
+-		if (!D[$2]) {
+-			D[$2] = 1;
+-			get_deps($2);
+-		}
+-	}
++		while read lib cmp ver ; do
++			# Skip if we already checked this library.
++			[[ "`grep -m 1 -c "^$lib${cmp:+ }$cmp${ver:+ }$ver$" $dep_checked`" -gt 0 ]] && continue
++			echo "$lib${cmp:+ }$cmp${ver:+ }$ver" >> $dep_checked
+ 
+-	close(depsfn);
+-}
++			deps="`resolve_dep "$lib" "$cmp" "$ver" "$var_adm_dir" "$INSTALLED_PKGS"`"
++			if  [ -z "$deps" ] ; then
++				deps="`resolve_dep "$lib" "$cmp" "$ver" "$var_adm_dir/rocket" "$SELECTED_PKGS $ADDED_PKGS"`"
++			fi
++			if  [ -z "$deps" ] ; then
++				deps="`resolve_dep "$lib" "$cmp" "$ver" "$var_adm_dir/rocket" "$INSTALLABLE_PKGS"`"
+ 
+-{
+-	P[$1] = 1;
+-	get_deps($1);
+-}
++				[ -z "$deps" ] && continue
+ 
+-END {
+-	for (d in D) {
+-		if (!P[d]) {
+-			pkgfn = "/var/adm/packages/" d;
+-			if ((getline < pkgfn) > 0)
+-				close(pkgfn);
+-			else {
+-				descfn = "/var/adm/rocket/descs/" d;
+-				if ((getline < descfn) > 0) {
+-					close(descfn);
+-					print d;
+-				}
+-			}
+-		}
+-	}
+-}
++				# adding pkg to selected set
++				# user input required here; for now the first pkg is selected
++				ADDED_PKGS="$ADDED_PKGS ${deps%% *}"
+ 
+-'; ); )
++				# adding requirements of pkg to dependency queue
++				get_requires $deps >> $dep_queue
++			fi
++#			echo "$lib (\"$cmp\" \"$ver\")... ${deps:-NO PROVIDER FOUND}"
++		done < $dep_queue
++		rm -f $dep_queue $dep_checked
++
++		deps="$ADDED_PKGS"
+ 	fi
+ 
+ 	if [ -n "$deps" ]; then

@@ -34,7 +34,7 @@ echo_status "Selecting info files ..."
 rm -rf build/${ROCKCFG_ID}/ROCK/info_sel
 mkdir -p build/${ROCKCFG_ID}/ROCK/info_sel
 cp -rl build/${ROCKCFG_ID}/var/adm/`
-	`{cksums,dependencies,descs,flists,md5sums,packages} \
+	`{cksums,dependencies,descs,flists,md5sums,packages,provides,requires,conflicts} \
 	build/${ROCKCFG_ID}/ROCK/info_sel/.
 
 grep -hr '^Package Name and Version:' \
@@ -62,6 +62,9 @@ DISK1	$admdir/descs/					${ROCKCFG_SHORTID}/info/descs/
 DISK1	$admdir/flists/					${ROCKCFG_SHORTID}/info/flists/
 DISK1	$admdir/md5sums/				${ROCKCFG_SHORTID}/info/md5sums/
 DISK1	$admdir/packages/				${ROCKCFG_SHORTID}/info/packages/
+DISK1	$admdir/provides/				${ROCKCFG_SHORTID}/info/provides/
+DISK1	$admdir/requires/				${ROCKCFG_SHORTID}/info/requires/
+DISK1	$admdir/conflicts/				${ROCKCFG_SHORTID}/info/conflicts/
 EVERY	build/${ROCKCFG_ID}/ROCK/pkgs_sel/packages.db	${ROCKCFG_SHORTID}/pkgs/packages.db
 SPLIT	build/${ROCKCFG_ID}/ROCK/pkgs_sel/		${ROCKCFG_SHORTID}/pkgs/
 EOT

@@ -95,6 +95,24 @@ diff -dur mine-0.25/readdb.c mine-0.25-p/readdb.c
  	d = get_create_directory(rootdir, "all");
  	e = calloc(1, sizeof(struct directory_entry));
  	e->next = d->list; d->list = e; e->content.pkg = p;
+@@ -165,10 +165,13 @@
+ 			p->version = malloc(line_length-3);
+ 			sscanf(line+4, "%s", p->version);
+ #else
+-			p->version = strdup(line+4);
+-			for (i=0; p->version[i]; i++)
+-				if (p->version[i] == ' ')
+-					p->version[i] = '-';
++			char *ver, *extraver;
++			ver = strtok(line+4, " ");
++			extraver = strtok(NULL, " ");
++			if (ver == NULL) ver = "0000";
++			if (extraver == NULL) extraver = "0";
++			sprintf(line,"%s-%s", ver, extraver);
++			p->version = strdup(line);
+ #endif
+ 			continue;
+ 		}
 @@ -191,30 +187,6 @@
  	}
  	if ( !dbf ) fclose(f);

@@ -396,6 +396,7 @@ fi
 
 mkdir -p $root/var/adm/{logs,flists,cksums,md5sums,packages,dependencies}
 mkdir -p $root/var/adm/{dep-debug,parse-config,cache,descs,rock-debug}
+mkdir -p $root/var/adm/{provides,requires,conflicts}
 [ "$root" ] && chmod 700 $root
 
 rm -f $root/var/adm/logs/$stagelevel-$xpkg.{out,log,err}
@@ -960,7 +961,7 @@ exec 202>&1
 
 	if [ "$ROCKCFG_FLIST" = "flwrapper" -o \
 	     "$ROCKCFG_FLIST" = "strace" ] && [ $stagelevel -gt 1 ] ; then
-		echo "Calculating package dependencies ..."
+		echo "Calculating build-time package dependencies ..."
 
 		! egrep -v "^($flistrfilter)\$" "$builddir"/fl_wrapper.[rw]log |
 		sort -u | fl_wrparse -D -s -r "$xroot/" -p '' | \
@@ -1028,6 +1029,37 @@ exec 202>&1
 		mv "$builddir/dependencies.txt.new" "$builddir/dependencies.txt"
 	fi
 
+	echo "Calculating run-time package dependencies from pkg-config files..."
+	grep "\.pc$" "$builddir/flist.split" | while read dummy x ; do
+		x="/$x"
+
+		# Only three tags are of interest here. Version: is mandatory.
+ 		version="`grep -e"^Version:" $x | cut -f2- -d' '`"
+		[ "$version" ] || continue
+
+		# Set the variables defined in the .pc file.
+		eval $( sed 's,^\([a-zA-Z0-9_]*\)=\(.*\),\1="\2",p ; d' $x )
+
+		echo "`basename ${x%.pc}` $version" >> $builddir/provides.tmp
+		for tag in Requires Conflicts ; do
+			case "$tag" in
+				"Requires")	tmpfile="$builddir/requires.tmp" ;;
+				"Conflicts")	tmpfile="$builddir/conflicts.tmp" ;;
+			esac
+			# Set positional parameters to the tag values.
+			set $( sed -e"/^$tag: / { s,^$tag: ,, ; s/,/ /g ; p } ; d" $x ) ""
+
+			while [ "$1" ] ; do
+				eval echo -n "$1"
+				case "$2" in
+					"<"|">"|"<="|">="|"=")
+						echo " $2 $3" ; shift 2 ;;
+					*) 	echo ;;
+				esac ; shift
+			done >> $tmpfile
+		done
+	done
+
 	for spkg in $( sed 's,: .*,,' < "$builddir/flist.split" | sort -u )
 	do
 	  (
@@ -1035,14 +1067,54 @@ exec 202>&1
 			splitdesc_${spkg#*:}
 		fi
 
+		echo "Calculating run-time package dependencies from ELF files..."
+		grep "^$spkg: " "$builddir/flist.split" | while read dummy x ; do
+			x="/$x"
+
+			# Symbolic links (to ELF files) are ignored.
+			[ -L "$x" ] && continue
+
+			# Strip most values from ELF dynamic and version
+			# sections as they don't contain useful info.
+			readelf -dV $x 2>/dev/null | sed -e '
+			/^Version definition section /,/^Version needs section / {
+				s,.* Flags: BASE .* Name: \(.*\),provides \1,p
+			}
+			/^Version needs section /,$ {
+				s,.* File: \([^ ]*\) .*,requires \1,p
+			}
+			# in dynamic section
+			s,.* (SONAME) .* Library soname: \[\(.*\)\]$,provides \1,p
+			s,.* (NEEDED) .* Shared library: \[\(.*\)\]$,requires \1,p
+			# in version sections
+			s,.* Name: \([^ ]*\).*,\1,p ; d
+			' | while read a b ; do
+				case "$a" in
+					"provides"|"requires")
+						pref="$b" ; tmpfile="$builddir/$a.tmp"
+						[ "$a" == provides ] && cmp_op=" " || cmp_op=" @ "
+						echo "$pref" >> $tmpfile ;;
+					*)	echo "$pref${cmp_op}$a" >> $tmpfile ;;
+				esac
+			done
+		done
+
+		for x in {provides,requires,conflicts} ; do
+			if [ -f "$builddir/$x.tmp" ] ; then
+				echo "Creating var/adm/$x/$spkg"
+				sort -u "$builddir/$x.tmp" > var/adm/$x/$spkg
+			else
+				rm -f var/adm/$x/$spkg
+			fi
+		done
+
 		echo "<$spkg> Creating flist file ..."
 		{
 			grep "^$spkg: " "$builddir/flist.split"
-			[ -s "var/adm/parse-config/$spkg" ] && \
-				echo "$spkg: var/adm/parse-config/$spkg"
-			for x in var/adm/flists/$spkg var/adm/md5sums/$spkg \
-				 var/adm/cksums/$spkg var/adm/packages/$spkg \
-				 var/adm/descs/$spkg var/adm/dependencies/$spkg ; do
+			for x in var/adm/{parse-config,provides,requires,conflicts}/$spkg ; do
+				[ -s "$x" ] && echo "$spkg: $x"
+			done
+			for x in var/adm/{flists,md5sums,cksums,packages,descs,dependencies}/$spkg ; do
 					touch $x ; echo "$spkg: $x"
 			done
 		} | sort -u > var/adm/flists/$spkg

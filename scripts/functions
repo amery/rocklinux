@@ -569,14 +569,10 @@ create_package_db() {
 			( echo -e "$pkg"
 			  echo -e "\027"
 
-			  cat $admdir/descs/$pkg
-			  echo -e "\027"
-
-			  cat $admdir/dependencies/$pkg
-			  echo -e "\027"
-
-			  cat $admdir/cksums/$pkg
-			  echo -e "\027"
+			  for admfile in {descs,dependencies,cksums,provides,requires,conflicts} ; do
+			  	[ -e $admdir/$admfile/$pkg ] && cat $admdir/$admfile/$pkg
+			  	echo -e "\027"
+			  done
 
 			  echo -e "\004"
 			) >> $outdir/packages.db.tmp

@@ -1,0 +1,25 @@
+#!/bin/sh
+
+targetdir="`pwd`"
+
+find . -mindepth 1 -printf "%y %P %#m %U %G %l\n" \
+| while read type name filemod uid gid slink ; do
+	case "$type" in
+	b|c)
+		majorminor="$( file $name | sed -e "s,.*(\([0-9]*\)/\([0-9]*\))$,\1 \2," )"
+		echo "nod /$name $filemod $uid $gid $type $majorminor"
+		;;
+	d)
+		echo "dir /$name $filemod $uid $gid"
+		;;
+	f)
+		echo "file /$name $targetdir/$name $filemod $uid $gid"
+		;;
+	l)
+		echo "slink /$name $slink $filemod $uid $gid"
+		;;
+	p)
+		echo "pipe /$name $filemod $uid $gid"
+		;;
+	esac
+done

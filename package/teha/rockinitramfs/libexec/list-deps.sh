@@ -12,7 +12,7 @@ do
 	readelf -d $x 2>/dev/null | grep "(NEEDED)" |
 		sed -e"s,.*Shared library: \[\(.*\)\],\1," |
 		while read library ; do
-			find $libdirs -maxdepth 1 -name "$library" |
+			find $libdirs -maxdepth 1 -name "$library" | head -n 1 |
 			sed -e "s,^$rootdir,,g"
 		done
 done

@@ -1,0 +1,10 @@
+--- ./Makerules	2007-06-28 16:51:02.000000000 +0200
++++ ./Makerules	2007-06-28 16:55:36.000000000 +0200
+@@ -993,6 +993,7 @@
+ 	      ' AS_NEEDED (' $(slibdir)/$(rtld-installed-name) ') )' \
+ 	) > $@.new
+ 	mv -f $@.new $@
++	[ -z "$$ROCK_FIXUP_CROSS_LIBC_SO" ] || $$ROCK_FIXUP_CROSS_LIBC_SO
+ 
+ endif
+ 

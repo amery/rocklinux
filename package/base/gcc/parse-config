@@ -53,7 +53,7 @@ for x in CC CXX F77 ; do
 		case "$x-$stagelevel" in
 		    CC-*)
 			z="${archprefix}gcc ${archprefix}gcc-${y#gcc}" ;;
-		    CXX-[2-9])
+		    CXX-[1-9])
 			z="${archprefix}g++ ${archprefix}g++-${y#gcc}" ;;
 		    F77-[2-9])
 			z="${archprefix}g77 ${archprefix}g77-${y#gcc}" ;;
@@ -152,6 +152,12 @@ fi
 #
 if [ $stagelevel -eq 1 ]; then
 	var_insert GCC_WRAPPER_INSERT " " "--specs=specs.cross"
+	if [ "$ROCKCFG_CROSSBUILD" = 1 ]; then
+		for x in $root/usr/include/c++/*; do
+			var_insert CXX_WRAPPER_INSERT " " "-I$x"
+			var_insert CXX_WRAPPER_INSERT " " "-I$x/$arch_target"
+		done
+	fi
 fi
 
 # Use our chroot specs file for pseudonative

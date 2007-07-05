@@ -8,7 +8,7 @@
  #include <sys/types.h>
  
  #include <errno.h>
-@@ -26,27 +27,12 @@
+@@ -26,27 +27,16 @@
  #else
  #include <linux/unistd.h>	/* for __NR__llseek */
  
@@ -29,7 +29,11 @@
  		    unsigned int origin) {
 -	errno = ENOSYS;
 -	return -1;
++#ifdef __NR__llseek
 +	return syscall(__NR__llseek, fd, oh, ol, result, origin);
++#else
++	return result = lseek64(fd, (oh<<32) | ol, origin);
++#endif
  }
  
 -#endif
@@ -47,7 +51,7 @@
  #include <sys/utsname.h>
  #include <linux/unistd.h>	/* _syscall */
  #include "nls.h"
-@@ -177,9 +178,11 @@
+@@ -177,9 +178,15 @@
  #endif
  
  #ifndef use_lseek
@@ -57,7 +61,11 @@
 +static int _llseek (unsigned int fd, unsigned long oh,
 +                    unsigned long ol, long long *result,
 +                    unsigned int origin) {
++#ifdef __NR__llseek
 +	return syscall(__NR__llseek, fd, oh, ol, result, origin);
++#else
++	return result = lseek64(fd, (oh<<32) | ol, origin);
++#endif
 +}
  #endif
  

@@ -1,0 +1,12 @@
+--- ./fixincludes/mkheaders.in.orig	2007-06-29 11:02:37.000000000 +0200
++++ ./fixincludes/mkheaders.in	2007-06-29 11:04:35.000000000 +0200
+@@ -62,7 +62,8 @@
+   isysroot=$1
+   shift
+ else
+-  isysroot=
++  isysroot=${prefix%/usr}
++  isysroot=${isysroot%/ROCK/tools.cross/*}
+ fi
+ 
+ # Directory in which to put host dependent programs and libraries

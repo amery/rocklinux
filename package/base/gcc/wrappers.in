@@ -42,6 +42,7 @@ gcc_build_wrapper() {
 }
 
 gcc_build_wrapper CC ${arch_target}-cc ${arch_target}-gcc{-2,-32,-33,-34,-40,-41,-42,}
+gcc_build_wrapper CXX ${arch_target}-{g++,c++}{-2,-32,-33,-34,-40,-41,-42,}
 gcc_build_wrapper KCC ${arch_target}-kcc{-2,-32,-33,-34,-40,-41,-42,}
 
 if [ $stagelevel -gt 1 -o "$ROCKCFG_USE_CROSSCC" = 0 ]; then

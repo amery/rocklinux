@@ -58,7 +58,7 @@ menu_begin MENU_DEFAULTS 'Package Defaults'
 		default='none'; list=' '
 		while read pkg ver ; do
 			default=${default:-$pkg}
-			[ $pkg = lprng ] && default=$pkg
+			[ $pkg = cups ] && default=$pkg
 			list="$list $pkg Use_${pkg}_($ver)_as_standard_print_system"
 		done < <(grep " PRINTER " $swpdir/packages | cut -f5,6 -d' ')
 		list="$list none Do_not_configure_a_default_print_system"
@@ -76,7 +76,7 @@ menu_begin MENU_DEFAULTS 'Package Defaults'
 		default='none'; list=' '
 		while read pkg ver ; do
 			default=${default:-$pkg}
-			[ $pkg = sendmail ] && default=sendmail
+			[ $pkg = postfix ] && default=$pkg
 			list="$list $pkg Use_${pkg}_($ver)_as_standard_MTA"
 		done < <(grep " MTA " $swpdir/packages | cut -f5,6 -d' ')
 		list="$list none Do_not_configure_a_default_MTA"

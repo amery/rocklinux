@@ -13,7 +13,7 @@ mkdir -p build/${ROCKCFG_ID}/ROCK/pkgs_sel
 (cd build/${ROCKCFG_ID}/ROCK/pkgs/;
 	ls | xargs ln --target-directory="../pkgs_sel";)
 
-if [ "$ROCKCFG_TARGET_CRYSTAL_REMOVEDOCS" = 1 ]; then
+if [ "$ROCKCFG_TARGET_CRYSTAL_INCLUDEDOCS" != 1 ]; then
 	# :doc packages are nice but in most cases never used
 	(
 		cd build/${ROCKCFG_ID}/ROCK/pkgs_sel/

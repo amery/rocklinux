@@ -20,8 +20,7 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-if pkgcheck linux=linux24 X || pkgcheck linux=linux26 X || \
-	pkgcheck linux=linux24-source X || pkgcheck linux=linux26-source X
+if pkgcheck "linux=.*" X
 then
   menu_begin MENU_PKG_LINUX 'Linux Kernel Options'
 
@@ -99,11 +98,11 @@ then
 		comment 'The kernel config is stored in:'
 		comment "config/$config/linux.cfg"
 		editfile ROCKCFG_PKG_LINUX_CUSTCONFIG_FILE \
-			config/$config.$swpid/linux.cfg \
+			$swpdir/linux.cfg \
 			'Linux kernel build config settings'
 	    block_end
 	else
-		rm -f config/$config.$swpid/linux.cfg
+		rm -f $swpdir/linux.cfg
 	fi
 
   menu_end

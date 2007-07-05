@@ -20,9 +20,6 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-if pkgcheck bash X
-then
-	pkgfork bash bash2
-	pkgfork bash bash3
-	pkgremove bash
-fi
+pkgfork bash bash2
+pkgfork bash bash3
+pkgremove bash

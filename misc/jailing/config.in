@@ -28,18 +28,18 @@ menu_begin MENU_JAILING 'Chroot-Jailing Options'
 		text 'Base directory for jail' ROCKCFG_BASEJAIL jail
 		if pkgcheck libsafe X ; then
 			bool 'Install and enable libsafe in jails' \
-					ROCKCFG_JAILING_LIBSAFE 1
+				ROCKCFG_JAILING_LIBSAFE 1
 		fi
 		comment "-- Packages --"
 		for y in `grep '^X.* JAIL ' \
-				config/$config.$swpid/packages | cut -d' ' -f5`
+			config/$config.$swpid/packages | cut -d' ' -f5`
 		do
 			bool "Enable jailing in package $y" \
-						ROCKCFG_JAILING_$y 1
-			if eval "[ \"\${ROCKCFG_JAILING_$y}\" = 1 ]" ; then
+				ROCKCFG_JAILING_${y#*=} 1
+			if eval "[ \"\$ROCKCFG_JAILING_${y#*=}\" = 1 ]" ; then
 				block_begin 2
-				text "$y jail directory" ROCKCFG_JAILDIR_$y \
-						"$ROCKCFG_BASEJAIL/$y"
+				text "$y jail directory" ROCKCFG_JAILDIR_${y#*=} \
+					"$ROCKCFG_BASEJAIL/${y#*=}"
 				block_end
 			fi
 		done

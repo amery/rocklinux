@@ -20,9 +20,6 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-if pkgcheck cpan X
-then
-	. package/import/cpan/hosted_cpan.cfg
-	pkgremove cpan
-fi
+. package/import/cpan/hosted_cpan.cfg
+pkgremove cpan
 

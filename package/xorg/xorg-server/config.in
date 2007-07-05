@@ -23,39 +23,7 @@
 if pkgcheck xfree86 X || pkgcheck xorg-server X
 then
   menu_begin MENU_PKG_XORG 'X.Org / XFree86 Options'
-
-	if pkgcheck xfree86 X && pkgcheck xorg-server X
-	then
-		bool 'Build X.Org (instead of Xfree86)' \
-			ROCKCFG_PKG_XORG_BUILD 1
-
-		if [ $ROCKCFG_PKG_XORG_BUILD = 1 ] ; then
-			pkgremove xfree86
-		else
-			pkgremove xorg
-		fi
-	else
-		if pkgcheck xfree86 X; then
-			comment 'Using XFree86 (xorg already disabled)'
-		fi
-		if pkgcheck xorg X; then
-			comment 'Using X.Org (xfree86 already disabled)'
-		fi
-	fi
-
 	bool 'Enable Xinerama support globally' \
 		ROCKCFG_PKG_XORG_XINERAMA 1
   menu_end
 fi
-
-if ! pkgcheck xfree86 X; then
-	pkgremove xfree86
-	pkgremove xfree86-cyrillic-fonts
-	pkgremove xfree86-doc
-fi
-
-if ! pkgcheck xorg-server X; then
-	pkgremove libdrm
-	pkgremove fontconfig
-fi
-

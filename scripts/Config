@@ -38,11 +38,11 @@ do_config_cycle=0
 delete_mode=0
 oldconfig=''
 nobashmod=''
-profile=""
+profile=''
 
 while [ "$1" ] ; do
         case "$1" in
-	    -cycle)	do_config_cycle=1 ; shift ;;
+# 	    -cycle)	do_config_cycle=1 ; shift ;;
 	    -delete)	delete_mode=1     ; shift ;;
 	    -profile)	profile='-profile'        ; shift ;;
 	    -oldconfig)	oldconfig='-oldconfig'    ; shift ;;
@@ -80,42 +80,22 @@ if [ $delete_mode = 1 ] ; then
 fi
 
 # hook for third-party targets that need to insert additional packages before config runs, for example.
-for precnf in target/*/preconfig.sh ; do
-	[ -f $precnf ] && . $precnf 
-done
+# for precnf in target/*/preconfig.sh ; do
+# 	[ -f $precnf ] && . $precnf 
+# done
 
-if [ $do_config_cycle = 0 ]
-then
-	export swpid=swp$$
-	rm -f config.{data,dialog,out,help}{,.*}.$swpid
-	rm -f config.pcache.*.$swpid
-	rm -f rockdialog.scrltmp # src/rockdialog.bin
-	mkdir -p src
+swpid=swp$$
+swpdir="config/$config.$swpid"
 
-	if [ -z "$oldconfig" -a ! -f src/rockdialog.bin ] ; then
-		echo "Creating rockdialog tool."
-		command="gcc misc/rockdialog/*.c `
-			`-Imisc/rockdialog -lncurses -o src/rockdialog.bin"
-		echo "$command" ; eval "$command.$swpid"
-		mv src/rockdialog.bin.$swpid src/rockdialog.bin
-	fi
+rm -f rockdialog.scrltmp # src/rockdialog.bin
+mkdir -p src
 
-	arch=none
-	if expr "`uname -m`" : "x86_64"  > /dev/null ; then arch=x86     ; fi
-	if expr "`uname -m`" : "i.86"    > /dev/null ; then arch=x86     ; fi
-	if expr "`uname -m`" : "alpha"   > /dev/null ; then arch=alpha   ; fi
-	if expr "`uname -m`" : "ppc"     > /dev/null ; then arch=powerpc ; fi
-	if expr "`uname -m`" : "powerpc" > /dev/null ; then arch=powerpc ; fi
-	if expr "`uname -m`" : "sparc"   > /dev/null ; then arch=sparc   ; fi
-	if expr "`uname -m`" : "mips"    > /dev/null ; then arch=mips    ; fi
-
-	export ROCKCFG_ARCH="$arch" ; export ROCKCFG_EXPERT=0
-	export ROCKCFG_ID="$rockver"
-
-	echo "Running ROCK Linux $rockver configuration ..."
-	while "$0" -cfg $config $oldconfig $profile $nobashmod -cycle ; do : ; done
-
-	exit 0
+if [ -z "$oldconfig" -a ! -f src/rockdialog.bin ] ; then
+	echo "Creating rockdialog tool."
+	command="gcc misc/rockdialog/*.c `
+		`-Imisc/rockdialog -lncurses -o src/rockdialog.bin"
+	eval "$command.$swpid"
+	mv src/rockdialog.bin{.$swpid,}
 fi
 
 if [ -z "$nobashmod" ]; then
@@ -151,151 +131,209 @@ else
 fi
 
 bprof main start
+
+echo "Running ROCK Linux $rockver configuration ..."
+if [ ! -e config/$config ] ; then
+	mkdir config/$config
+	echo "Creating new configuration $config ..."
+	$0 -oldconfig $profile $nobashmod -cfg $config
+fi
+
 . scripts/config.func
+
+mkdir -p config/$config
+touch config/$config/{config{,_usr},packages}
+
+rm -rf $swpdir
+cp -r config/$config $swpdir
+
+. $swpdir/config
+. $swpdir/config_usr
 
 current=""
 menu_this=0 ; menu_current=0 ; menu_counter=0
 menu_stack=x
 
-mkdir -p config/$config
-touch config/$config/{config,packages}
-
-rm -rf config/$config.$swpid
-cp -r config/$config{,.$swpid}
-
-rm -f config.{dialog,data,help}{,.*}.$swpid
-touch config.{dialog,data,help}.$swpid
-bprof main stop
-
-if [ -f config/$config.$swpid/config_usr ]; then
-	nousrconfig=0
-	. ./config/$config.$swpid/config_usr
-else
-	nousrconfig=1
-fi
-
-bprof main start
 spacer="" ; expert=0 ; tabspace="5" ; tabspace_list=""
 commentnr=0 ; editfilenr=0
 
-cmd="$ROCKCFG_ARCH"
-[ "$ROCKCFG_DISABLE_BROKEN" = 1 ] && cmd="${cmd}-nobroken"
-if [ -f config.pcache.$cmd.$swpid ] ; then
-	cat config.pcache.$cmd.$swpid > config/$config.$swpid/packages
-else
-	eval "./scripts/Create-PkgList $cmd" | tee config.pcache.data.$swpid \
-		> config/$config.$swpid/packages
-fi
-bprof main stop
-
-echo -e "#\n# ROCK Linux $rockver Config File\n#\n" \
-	> config/$config.$swpid/config
-echo -e "#\n# ROCK Linux $rockver User Config File\n#" \
-	> config/$config.$swpid/config_usr
-
-pkgin
-bprof rockconfig start
-. scripts/config.in
-bprof rockconfig stop
-pkgout
-
-bprof main start
-rm -f config/$config.$swpid/*.tmp
-
-for x in ${!ROCKCFGUSR_*}; do
-	echo "${x}=\"${!x}\""
-done >> config/$config.$swpid/config_usr
-
-configtitle="$(printf ' %-50s %6s active packages ]' \
-	"ROCK Linux $rockver Configuration - $config" \
-	"[ $(echo `grep '^X' config/$config.$swpid/packages | wc -l`)" )"
-bprof main stop
-
-do_dialog_cycle=1
-while [ "$do_dialog_cycle" = 1 ] ; do
-
-if [ -z "$oldconfig" ] ; then
-    bprof rockdialog start
-    eval "./src/rockdialog.bin --title 'Build Config' \
-	--backtitle '$configtitle' \
-	--menu 'Arrow keys navigate the menu.  Press <Enter> to activate menu items.  Highlighted letters are hotkeys.' \
-	$(( $lines - 4 )) $(( $columns - 5 )) $(( $lines - 12 )) \
-	'$current' `tr '\n' ' ' < config.dialog.$menu_current.$swpid`" 2> config.out.$swpid
-    returncode=$? ; item="`cat config.out.$swpid`"
-    bprof rockdialog stop
-else
-    returncode=1
-fi
-
-
-bprof main start
-[ "$returncode" = 1 -a "$menu_current" -ne 0 ] && returncode="menu-back"
-
-writeback() {
-	sort -k1,1r -k3,3 config/$config.$swpid/packages \
-		> config/$config.$swpid/packages.sorted
-	mv -f config/$config.$swpid/packages{.sorted,}
-
-	for x in $( ls config/$config.$swpid ); do
-		cp config/$config.$swpid/{$x,__tmp}
-		mv config/$config{.$swpid/__tmp,/$x}
+include ()
+{
+	local x
+	for x in $@ ; do
+		[ -f "$x" ] && . "./$x"
 	done
-	for x in $( ls config/$config ); do
-		[ -e config/$config.$swpid/$x ] || rm -f config/$config/$x
-	done
-	rm -rf config/$config.$swpid
 }
 
-exit_code=0
-case "$returncode" in
-	0|6)
-		command="`grep "^$item	" config.data.$menu_current.$swpid | cut -f2-`"
-		if [[ "$command" != menu_current=* ]] ; then
-			do_dialog_cycle=0
-			{ echo -e "\n# Remember menu position:\ncurrent='$item'"
-			echo -e "\n# Remember sub-menu:\nmenu_current='$menu_current'"
-			echo -e "\n# Execute this config command:\n$command"
-			} >> config/$config.$swpid/config_usr
+arch=none
+if expr "`uname -m`" : "x86_64"  > /dev/null ; then arch=x86     ; fi
+if expr "`uname -m`" : "i.86"    > /dev/null ; then arch=x86     ; fi
+if expr "`uname -m`" : "alpha"   > /dev/null ; then arch=alpha   ; fi
+if expr "`uname -m`" : "ppc"     > /dev/null ; then arch=powerpc ; fi
+if expr "`uname -m`" : "powerpc" > /dev/null ; then arch=powerpc ; fi
+if expr "`uname -m`" : "sparc"   > /dev/null ; then arch=sparc   ; fi
+if expr "`uname -m`" : "mips"    > /dev/null ; then arch=mips    ; fi
+
+export CFGTEMP_ARCH="$arch"
+export CFGTEMP_ID="$rockver"
+export ROCKCFG_EXPERT=0
+
+include "architecture/*/preconfig.in"
+include "misc/*/preconfig.in"
+include "target/*/preconfig.in"
+
+old_pkg_cmd=""
+do_config_cycle=1
+recreate_packages=1
+while [ "$do_config_cycle" == 1 ] ; do
+	pkg_cmd="$ROCKCFG_ARCH"
+	[ "$ROCKCFG_DISABLE_BROKEN" = 1 ] && pkg_cmd="${pkg_cmd}-nobroken"
+
+	if [ "$old_pkg_cmd" != "$pkg_cmd" ] ; then
+		recreate_packages=1
+	fi
+	if [ "$recreate_packages" == 1 ] ; then
+		recreate_packages=0
+		if [ -f $swpdir/config.pcache.$pkg_cmd ] ; then
+			cp -a $swpdir/config.pcache.$pkg_cmd $swpdir/packages
+			pkgin
 		else
-			eval "$command"
+			eval "./scripts/Create-PkgList $pkg_cmd" \
+				> $swpdir/packages
+			pkgin
+			if [ ! -e "$swpdir/preconfig.in.tmp" ] ; then
+				cat package/*/*/preconfig.in | grep -v "^#" \
+					> "$swpdir/preconfig.in.tmp"
+			fi
+			include "$swpdir/preconfig.in.tmp"
+			pkgout
+			cp -a $swpdir/packages $swpdir/config.pcache.$pkg_cmd
 		fi
-		;;
-	menu-back)
-		command="`grep "^MENU_BACK	" config.data.$menu_current.$swpid | cut -f2-`"
-		eval "$command"
-		;;
-	1|255)
-		do_dialog_cycle=0
-		rm -f config.{data,dialog,out,help}{,.*}.$swpid
-		rm -f config.pcache.*.$swpid
-		rm -f rockdialog.scrltmp # src/rockdialog.bin
-		echo "New config written to config/$config/*."
-		echo "Cleaning up. Configuration finished."
-		exit_code=1 ;;
-	2)
-		item=$(echo $item | cut -f1 -d' ')  # dialog(1) bug?
-		current="$item"
+		old_pkg_cmd="$pkg_cmd"
+	else
+		cp -a $swpdir/config.pcache.$pkg_cmd $swpdir/packages
+		pkgin
+	fi
 
-		get_help $item > config.dialog.$swpid
+	rm -f $swpdir/config.{dialog,data,help}{,.*}
+	
+	config_cycle
+	
+	bprof main stop
+	bprof rockconfig start
 
-		bprof main stop
-		./src/rockdialog.bin --title 'ROCK Linux Config - Help' \
-			--backtitle "ROCK Linux $rockver Configuration" \
-			--textbox config.dialog.$swpid \
-			$(( $lines - 4 )) $(( $columns - 5 ))
-		bprof main start
-		;;
-	*)
-		do_dialog_cycle=0
-		echo "unknown returncode: $returncode"
-		exit_code=1 ;;
-esac
+	. scripts/config.in
 
+	if [ ! -e "$swpdir/postconfig.in.tmp" ] ; then
+		{
+		ls misc/*/postconfig{,-*}.in 2>/dev/null \
+			| LC_ALL=C sort -k3,3 -t"/" | tr '\n' ' ' | xargs cat
+		cat package/*/*/postconfig.in
+		} | grep -v "^#" > "$swpdir/postconfig.in.tmp"
+	fi
+	include "$swpdir/postconfig.in.tmp"
+	include architecture/$ROCKCFG_ARCH/postconfig.in
+	include target/$ROCKCFG_TARGET/postconfig.in
+
+	bprof rockconfig stop
+	bprof main start
+	
+	configtitle="$(printf ' %-50s %6s active packages ]' \
+		"ROCK Linux $rockver Configuration - $config" \
+		"[ $(echo `grep '^X' $swpdir/packages | wc -l`)" )"
+	
+	do_dialog_cycle=1
+	while [ "$do_dialog_cycle" = 1 ] ; do
+		if [ -z "$oldconfig" ] ; then
+			bprof main stop
+			bprof rockdialog start
+			eval "./src/rockdialog.bin --title 'Build Config' \
+				--backtitle '$configtitle' \
+				--menu 'Arrow keys navigate the menu.  Press <Enter> to activate menu items.  Highlighted letters are hotkeys.' \
+				$(( $lines - 4 )) $(( $columns - 5 )) $(( $lines - 12 )) \
+				'$current' `tr '\n' ' ' \
+				< $swpdir/config.dialog.$menu_current`" \
+				2> $swpdir/config.out
+			returncode=$? ; item="`cat $swpdir/config.out`"
+			bprof rockdialog stop
+			bprof main start
+		else
+			returncode=1
+		fi
+		
+		[ "$returncode" = 1 -a "$menu_current" -ne 0 ] && returncode="menu-back"
+		
+		case "$returncode" in
+		0|6)
+			command="`grep "^$item	" \
+				$swpdir/config.data.$menu_current | cut -f2-`"
+			if [[ "$command" != menu_current=* ]] ; then
+				[ -n "$command" ] && do_dialog_cycle=0
+				current="$item"
+			fi
+			eval "$command"
+			;;
+		menu-back)
+			command="`grep "^MENU_BACK	" \
+				$swpdir/config.data.$menu_current | cut -f2-`"
+			eval "$command"
+			;;
+		1|255)
+			do_dialog_cycle=0
+			do_config_cycle=0
+			rm -f $swpdir/config.{data,dialog,out,help}{,.*}
+			rm -f $swpdir/config.pcache.*
+			rm -f rockdialog.scrltmp # src/rockdialog.bin
+			echo "New config written to config/$config/*."
+			echo "Cleaning up. Configuration finished."
+			;;
+		2)
+			item=$(echo $item | cut -f1 -d' ')  # dialog(1) bug?
+			current="$item"
+	
+			get_help $item > $swpdir/config.dialog
+	
+			bprof main stop
+			./src/rockdialog.bin --title 'ROCK Linux Config - Help' \
+				--backtitle "ROCK Linux $rockver Configuration" \
+				--textbox $swpdir/config.dialog \
+				$(( $lines - 4 )) $(( $columns - 5 ))
+			bprof main start
+			;;
+		*)
+			do_dialog_cycle=0
+			do_config_cycle=0
+			echo "unknown returncode: $returncode"
+			;;
+		esac
+	done
+	bprof main stop
+	bprof_print
 done
+pkgout
 
-writeback
+rm -f $swpdir/*.tmp
 
-bprof main stop
-bprof_print
+echo -e "#\n# ROCK Linux $rockver Config File\n#\n" \
+	> $swpdir/config
+echo -e "#\n# ROCK Linux $rockver User Config File\n#" \
+	> $swpdir/config_usr
 
-exit $exit_code
+for x in ${!ROCKCFG_*}; do
+	echo "export ${x}='${!x}'"
+done >> $swpdir/config
+for x in ${!ROCKCFGUSR_*}; do
+	echo "${x}='${!x}'"
+done >> $swpdir/config_usr
+
+sort -k1,1r -k3,3 $swpdir/packages > $swpdir/packages.sorted
+mv -f $swpdir/packages{.sorted,}
+
+for x in $( ls $swpdir/ ); do
+	cp $swpdir/{$x,__tmp}
+	mv $swpdir/__tmp config/$config/$x
+done
+for x in $( ls config/$config ); do
+	[ -e $swpdir/$x ] || rm -f config/$config/$x
+done
+rm -rf $swpdir

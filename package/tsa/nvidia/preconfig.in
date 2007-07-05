@@ -20,9 +20,6 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-if pkgcheck nvidia X
-then
-        pkgfork nvidia nvidia
-        pkgfork nvidia nvidia-legacy
-        pkgremove nvidia
-fi
+pkgfork nvidia nvidia
+pkgfork nvidia nvidia-legacy
+pkgremove nvidia

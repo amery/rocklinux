@@ -20,9 +20,6 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-if pkgcheck vnc X
-then
-        pkgfork vnc vnc-xfree86
-        pkgfork vnc vnc-xorg
-        pkgremove vnc
-fi
+pkgfork vnc vnc-xfree86
+pkgfork vnc vnc-xorg
+pkgremove vnc

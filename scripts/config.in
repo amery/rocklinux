@@ -70,36 +70,35 @@
 # Config Presets: ROCKCFGSET_*
 #
 
-CFGTEMP_ARCHLIST=""
-CFGTEMP_TARGETLIST=""
-
-include ()
-{
-	local x
-	for x in $@ ; do
-		[ -f "$x" ] && . "./$x"
-	done
-}
-
-include "architecture/*/preconfig.in"
-
 comment_id '- Architecture, CPU and Optimization' COMMENT_ARCHCPUOPT
+
 block_begin 7
-	choice ROCKCFG_ARCH $ROCKCFG_ARCH $CFGTEMP_ARCHLIST
-	ROCKCFG_ID="$ROCKCFG_ID-$ROCKCFG_ARCH"
+	choice ROCKCFG_ARCH $CFGTEMP_ARCH $CFGTEMP_ARCHLIST
 
 	if [ -f architecture/$ROCKCFG_ARCH/config.in ]
 	then . architecture/$ROCKCFG_ARCH/config.in ; fi
+	    expert_begin
+		choice ROCKCFG_OPT size \
+			smart	'Smart optimisation using a profile database'	\
+			bizarre	'Inverse smart optimisation (this is bizarre)'	\
+			speed	'Hard optimise for speed (often pretty slow)'	\
+			size	'Hard optimise for size (recommended)'		\
+			lazy	'Lazy optimisation (for debugging binaries)'	\
+			test	'Only optimize toolchain (for fast builds)'
+	
+		bool 'Build and use a (pseudo-)cross compiler' ROCKCFG_USE_CROSSCC 1
+	    expert_end
 	bool 'This is a cross-build between architectures' ROCKCFG_CROSSBUILD 0
 	if [ "$ROCKCFG_CROSSBUILD" = 1 ] ; then
 	    block_begin
-		bool 'Test-build the packages which are not known to cross build' ROCKCFG_CROSS_TESTALL 0
+		bool 'Test-build the packages which are not known to cross build' \
+			ROCKCFG_CROSS_TESTALL 0
 		if [ $ROCKCFG_CROSS_TESTALL = 1 ]; then
 			comment '-- WARNING: Test-building packages which are not known to cross build'
 			comment '-- might cause damage on your build system if it is not read-only. So'
 			comment '-- only run this if your /{bin,lib,usr,..} is somehow write-protected.'
 		fi
-		ROCKCFG_ID="$ROCKCFG_ID-cross" ; ROCKCFGSET_USE_CROSSCC=1
+		ROCKCFGSET_USE_CROSSCC=1
 		const ROCKCFG_PSEUDONATIVE 0
 	    block_end
 	else
@@ -108,57 +107,40 @@ block_begin 7
 			comment '-- WARNING: Doing pseudo native builds is a tricky thing.'
 			comment '-- Better write the documentation first...  ;-)'
 
-			text 'IP of native host for command forwarding' ROCKCFG_PSEUDONATIVE_NATIVEHOST ''
-			text 'NFSROOT to be mounted on native host' ROCKCFG_PSEUDONATIVE_NFSROOT "$HOSTNAME:$PWD"
+			text 'IP of native host for command forwarding' \
+				ROCKCFG_PSEUDONATIVE_NATIVEHOST ''
+			text 'NFSROOT to be mounted on native host' \
+				ROCKCFG_PSEUDONATIVE_NFSROOT "$HOSTNAME:$PWD"
 
-			ROCKCFG_ID="$ROCKCFG_ID-pseudonative" ; ROCKCFGSET_USE_CROSSCC=1
+			ROCKCFGSET_USE_CROSSCC=1
 		fi
 	fi
 block_end
-
-include "misc/*/preconfig.in"
-include "target/*/preconfig.in"
-include "package/*/*/preconfig.in"
-
-if [ "$ROCKCFG_CROSSBUILD" = 1 ] ; then
-	pkgfilter sed -e 's,^\(. ..\)[^ ]*,\1--------, ;'
-	if [ $ROCKCFG_CROSS_TESTALL = 1 ]; then
-		pkgfilter sed -e 's,^\(. .\)?,\11, ;'
-	else
-		pkgfilter sed -e 's,^\(. .\)?,\1-, ;'
-	fi
-	pkgfilter sed -e 's,^\(. .\)X,\11, ; s,^\(. \)X,\1-, ;'
-else
-	pkgfilter sed -e 's,^\(. .\)[?X],\1-, ;'
-	if [ "$ROCKCFG_PSEUDONATIVE" = 1 ] ; then
-		pkgfilter sed -e 's,^\(. \)X,\10, ;'
-	else
-		pkgfilter sed -e 's,^\(. \)X,\1-, ;'
-	fi
-fi
 
 comment ' '
 comment_id '- Target Distribution' COMMENT_TARGET
 
 block_begin 7
 	choice ROCKCFG_TARGET crystal $CFGTEMP_TARGETLIST
-	ROCKCFG_ID="$ROCKCFG_ID-$ROCKCFG_TARGET"
 
 	include target/$ROCKCFG_TARGET/config.in
 
 	text 'Linguas (translations)' ROCKCFG_LINGUAS 'de es fr it ru'
+	bool 'Show expert-only and experimental options' ROCKCFG_EXPERT 0
+	bool 'Abbreviate ROCK Config ID with checksum' ROCKCFG_IDCKSUM 0
 block_end
-
-echo "## BUILDENV_SETTINGS_BEGIN" >> config/$config.$swpid/config
 
 comment ' '
 comment_id '- Build System Configuration' COMMENT_BUILD_SYS_CONF
 block_begin 3
+	bool 'Run Paranoia Checks in Build-Target and Build-Pkg' \
+						ROCKCFG_PARANOIA_CHECK 1
+	bool 'Make rebuild stage (stage 9)' ROCKCFG_DO_REBUILD_STAGE 1
 	bool 'Make a parallel (cluster) build' ROCKCFG_PARALLEL 0
 	if [ "$ROCKCFG_PARALLEL" = 1 ] ; then
 	    block_begin 10
 		ROCKCFG_PARALLEL_MAX="`echo $ROCKCFG_PARALLEL_MAX |
-							sed 's,[^0-9],,g'`"
+			sed 's,[^0-9],,g'`"
 		text 'Maximum size of job queue' ROCKCFG_PARALLEL_MAX 10
 		text 'Command for adding jobs' ROCKCFG_PARALLEL_ADDJOB ''
 	    block_end
@@ -166,7 +148,6 @@ block_begin 3
 		bool 'Abort when a package-build fails' \
 						ROCKCFG_ABORT_ON_ERROR 0
 	fi
-
 	bool 'Retry building broken packages' ROCKCFG_RETRY_BROKEN 0
 	bool 'Disable packages which are marked as broken' \
 						ROCKCFG_DISABLE_BROKEN 0
@@ -175,7 +156,6 @@ block_begin 3
 	bool 'Always clean up src dirs (even on pkg fail)' \
 						ROCKCFG_ALWAYS_CLEAN 0
 	bool 'Create debug information (xtrace) for builds' ROCKCFG_XTRACE 0
-
 	bool 'Use tmpfs for building packages' ROCKCFG_SRC_TMPFS 0
 	if [ "$ROCKCFG_SRC_TMPFS" = 1 ] ; then
 	    block_begin
@@ -184,67 +164,66 @@ block_begin 3
 		text 'tmpfs mount options' ROCKCFG_SRC_TMPFS_OPT \
 		                           'size=1024M,nr_inodes=100k'
 		bool 'Write tmpfs log to var/adm/rock-debug/tmpfslog.txt' \
-					ROCKCFG_SRC_TMPFS_LOG 0
+						ROCKCFG_SRC_TMPFS_LOG 0
 	    block_end
 	fi
+    expert_begin
+	bool 'Automatic documentation creation' ROCKCFG_CREATE_DOCS 1
 
-	bool 'Send emails on special events' ROCKCFG_SENDMAIL 0
-	if [ "$ROCKCFG_SENDMAIL" = 1 ] ; then
-	    block_begin
-		text 'Sendmail program' ROCKCFG_SENDMAIL_BIN 'sendmail'
-		text 'Recipient address' ROCKCFG_SENDMAIL_TO 'root'
-	    block_end
+	bool 'Create cache files after packages have been built' \
+						ROCKCFG_CREATE_CACHE 1
+	if [ $ROCKCFG_CROSSBUILD != 1 ]; then
+		bool 'Run a check/test for packages with support' ROCKCFG_DO_CHECK 0
 	fi
-	bool 'HTTP GET request on special events' ROCKCFG_HTTP 0
-	if [ "$ROCKCFG_HTTP" = 1 ] ; then
-	    block_begin
-		text 'Website' ROCKCFG_HTTP_SITE 'http://pallas.crash-override.net/cgi-bin/rocklogbot?package=PACKAGE&config=CONFIG&status=STATUS&stage=STAGE'
-	    block_end
+	comment ' '
+	comment_id '- Flist detection technique' COMMENT_FLIST
+	choice ROCKCFG_FLIST flwrapper \
+		flwrapper 'Use the flist wrapper library for flist creation' \
+		strace    'Use strace to get the file list'                  \
+		find      'Use find on timestamp-file for flist creation'
+	if [ "$ROCKCFG_FLIST" = strace ]; then
+		pkgenable strace
 	fi
+    expert_end
 block_end
 
 include "misc/*/noexpertconfig.in"
 
-echo "## BUILDENV_SETTINGS_END" >> config/$config.$swpid/config
-
-comment ' '
-block_begin 3
-	bool 'Show expert-only and experimental options' ROCKCFG_EXPERT 0
-block_end
-
-if [ $ROCKCFG_EXPERT == 1 ] ; then 
-	ROCKCFG_ID="$ROCKCFG_ID-expert"
-else
-	ROCKCFG_ID="$ROCKCFG_ID-noexpert"
-fi
-
 expert_begin
-
-    comment ' '
-    comment '- Binary package format'
-    block_begin 3
-    	bool 'Create Checksums for installed files' ROCKCFG_CREATE_CKSUM 1
+comment ' '
+comment '- Binary package format'
+block_begin 3
+	bool 'Create Checksums for installed files' ROCKCFG_CREATE_CKSUM 1
 	bool 'Create *.tar.bz2 binary packages' ROCKCFG_CREATE_TARBZ2 0
 	bool 'Create *.gem binary packages' ROCKCFG_CREATE_GEM 1
 	bool 'Append version number to package files' ROCKCFG_PKGFILE_VER 1
-    block_end
+block_end
 
-    comment ' '
-    comment '- Package splitting'
-    block_begin 3
+comment ' '
+comment '- Package splitting'
+block_begin 3
 	bool 'Create extra *:doc packages' ROCKCFG_SPLIT_DOC 1
 	bool 'Create extra *:dev packages' ROCKCFG_SPLIT_DEV 1
-    block_end
+block_end
 
-    comment ' '
-    include "$(ls misc/*/config{,-*}.in 2>/dev/null \
-	| LC_ALL=C sort -k3,3 -t"/" | tr '\n' ' ')"
-    include "$(ls package/*/*/config{,-*}.in 2>/dev/null \
-	| LC_ALL=C sort -k4,4 -t"/" | tr '\n' ' ')"
+comment ' '
+comment '- Compiler Options'
+block_begin 3
+	bool 'Create binaries with debug symbols' ROCKCFG_DEBUG 0
+	bool 'Create statically linked binaries' ROCKCFG_STATIC 0
+	bool 'Enable C compiler multilib support' ROCKCFG_MULTILIB 0
+	bool 'Disable exceptions and rtti in C++' ROCKCFG_LIMITCXX 0
+	bool 'Use automatically precompiled C++ headers (EXPERIMENTAL)' ROCKCFG_AUTOPCH 0
+	bool 'Disable National Language Support' ROCKCFG_DISABLE_NLS 0
+	if [ "$ROCKCFG_DISABLE_NLS" = 1 ] ; then
+		pkgremove gettext
+	fi
+	text 'Additional compiler flags' ROCKCFG_C_FLAGS ""
+block_end
 
-    comment ' '
-    comment '- Additional GNU Configure Options'
-    block_begin 5
+comment ' '
+comment '- Additional GNU Configure Options'
+block_begin 3
 	editfile ROCKCFG_CONFOPT_FILE config/$config.$swpid/confopt \
 	                              'GNU Configure Options'
 	if [ -f config/$config.$swpid/confopt ] ; then
@@ -257,94 +236,56 @@ expert_begin
 		if [ "${option#--with-}" = "$option" -a \
 			"${option#--without-}" = "$option" ]
 		then
-			comment '----     Warning! The custom options may
-break packages!'
+			comment '----     Warning! The custom options may break packages!'
 			break
 		fi
 	done
-    block_end
+block_end
 
-    comment ' '
-    text 'Additional compiler flags' ROCKCFG_C_FLAGS ""
 
-    comment ' '
-    comment_id '- Flist detection technique' COMMENT_FLIST
-    block_begin 5
-	choice ROCKCFG_FLIST flwrapper \
-		flwrapper 'Use the flist wrapper library for flist creation' \
-		strace    'Use strace to get the file list'                  \
-		find      'Use find on timestamp-file for flist creation'
-	if [ "$ROCKCFG_FLIST" = strace ]; then
-		pkgenable strace
-	fi
-    block_end
-
-    comment ' '
-    comment '- Various Options'
-    block_begin 5
-	bool 'Build and use a (pseudo-)cross compiler' ROCKCFG_USE_CROSSCC 1
-	bool 'Make rebuild stage (stage 9)' ROCKCFG_DO_REBUILD_STAGE 1
-
-	if [ $ROCKCFG_CROSSBUILD != 1 ]; then
-		bool 'Run a check/test for packages with support' ROCKCFG_DO_CHECK 0
-	fi
-
-	if [ $ROCKCFG_USE_CROSSCC != 1 ]; then
-		pkgfilter sed -e 's,^\([XO] \)0,\1-, ;'
-	fi
-
-	if [ $ROCKCFG_DO_REBUILD_STAGE != 1 ]; then
-		pkgfilter sed -e 's,^\([XO] [^ ]*\)9 ,\1- , ;'
-	fi
-
-	choice ROCKCFG_OPT size \
-		smart	'Smart optimisation using a profile database'	\
-		bizarre	'Inverse smart optimisation (this is bizarre)'	\
-		speed	'Hard optimise for speed (often pretty slow)'	\
-		size	'Hard optimise for size (recommended)'		\
-		lazy	'Lazy optimisation (for debugging binaries)'	\
-		test	'Only optimize toolchain (for fast builds)'
-
-	bool 'Create binaries with debug symbols' ROCKCFG_DEBUG 0
-	bool 'Create statically linked binaries' ROCKCFG_STATIC 0
-
-	bool 'Disable exceptions and rtti in C++' ROCKCFG_LIMITCXX 0
-	bool 'Enable C compiler multilib support' ROCKCFG_MULTILIB 0
-
-	bool 'Use automatically precompiled C++ headers' ROCKCFG_AUTOPCH 0
-
-	bool 'Disable National Language Support' ROCKCFG_DISABLE_NLS 0
-	if [ "$ROCKCFG_DISABLE_NLS" = 1 ] ; then
-		pkgremove gettext
-	fi
-
-	bool 'Automatic documentation creation' ROCKCFG_CREATE_DOCS 1
-
-	bool 'Create cache files after packages have been built' \
-						ROCKCFG_CREATE_CACHE 1
-
-	bool 'Run Paranoia Checks in Build-Target and Build-Pkg' \
-						ROCKCFG_PARANOIA_CHECK 1
-
-	bool 'Abbreviate ROCK Config ID with checksum' ROCKCFG_IDCKSUM 0
-    block_end
+if [ ! -e "$swpdir/config.in.tmp" ] ; then
+	ls package/*/*/config{,-*}.in ./misc/*/config{,-*}.in | \
+		LC_ALL=C sort -k4,4 -t"/" | tr '\n' ' ' | xargs cat | \
+		grep -v "^#" > "$swpdir/config.in.tmp"
+fi
+include "$swpdir/config.in.tmp"
 expert_end
 
-include "package/*/*/postconfig.in"
-include "misc/*/postconfig.in"
-include architecture/$ROCKCFG_ARCH/postconfig.in
-include target/$ROCKCFG_TARGET/postconfig.in
-
+filterscript=""
 if [ "$ROCKCFG_CROSSBUILD" = 1 ] ; then
-	pkgfilter sed -e 's,^\(. ..\)[^ ]*,\1--------, ;'
+	var_append filterscript ' ' 's,^\(. ..\)[^ ]*,\1--------, ;'
+	if [ $ROCKCFG_CROSS_TESTALL = 1 ]; then
+		var_append filterscript ' ' 's,^\(. .\)?,\11, ;'
+	else
+		var_append filterscript ' ' 's,^\(. .\)?,\1-, ;'
+	fi
+	var_append filterscript ' ' 's,^\(. .\)X,\11, ; s,^\(. \)X,\1-, ;'
+else
+	var_append filterscript ' ' 's,^\(. .\)[?X],\1-, ;'
+	if [ "$ROCKCFG_PSEUDONATIVE" = 1 ] ; then
+		var_append filterscript ' ' 's,^\(. \)X,\10, ;'
+	else
+		var_append filterscript ' ' 's,^\(. \)X,\1-, ;'
+	fi
 fi
 
-pkgfilter sed -e '/^[XO] --* / d ;'
+if [ $ROCKCFG_USE_CROSSCC != 1 ]; then
+	var_append filterscript ' ' 's,^\([XO] \)0,\1-, ;'
+fi
 
-[ "$ROCKCFG_EXPERT" = 1 ] ||
-	ROCKCFG_ID="`echo $ROCKCFG_ID | sed 's,-noexpert.*,,'`"
+if [ $ROCKCFG_DO_REBUILD_STAGE != 1 ]; then
+	var_append filterscript ' ' 's,^\([XO] [^ ]*\)9 ,\1- , ;'
+fi
 
-[ "$ROCKCFG_IDCKSUM" = 1 ] &&
+var_append filterscript ' ' '/^[XO] --* / d ;'
+
+pkgfilter sed -e "$filterscript"
+
+ROCKCFG_ID="$CFGTEMP_ID-$ROCKCFG_ARCH-$ROCKCFG_TARGET"
+[ "$ROCKCFG_CROSSBUILD" = 1 ] && ROCKCFG_ID="$ROCKCFG_ID-cross"
+[ "$ROCKCFG_PSEUDONATIVE" = 1 ] && ROCKCFG_ID="$ROCKCFG_ID-pseudonative"
+[ $ROCKCFG_EXPERT == 1 ] && ROCKCFG_ID="$ROCKCFG_ID-expert"
+[ "$ROCKCFG_IDCKSUM" = 1 ] && \
 	ROCKCFG_ID="`echo $ROCKCFG_ID | cksum | cut -f1 -d' '`"  
 
 const ROCKCFG_SHORTID "$ROCKCFG_ID"

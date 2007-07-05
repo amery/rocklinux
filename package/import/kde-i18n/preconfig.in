@@ -20,8 +20,5 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-if pkgcheck kde-i18n X
-then
-	. package/import/kde-i18n/hosted.cfg
-	pkgremove kde-i18n
-fi
+. package/import/kde-i18n/hosted.cfg
+pkgremove kde-i18n

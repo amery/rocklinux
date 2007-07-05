@@ -20,8 +20,5 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-if pkgcheck koffice-l10n X
-then
-	. package/import/koffice-l10n/hosted.cfg
-	pkgremove koffice-l10n
-fi
+. package/import/koffice-l10n/hosted.cfg
+pkgremove koffice-l10n

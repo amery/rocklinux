@@ -20,10 +20,6 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-if pkgcheck clanlib X
-then
-	pkgfork clanlib clanlib06
-	pkgfork clanlib clanlib07
-	pkgremove clanlib
-fi
-
+pkgfork clanlib clanlib06
+pkgfork clanlib clanlib07
+pkgremove clanlib

@@ -23,6 +23,20 @@
 comment ' '
 comment '- Build Output (terminal and others) Configuration'
 block_begin 3
+	bool 'Send emails on special events' ROCKCFG_SENDMAIL 0
+	if [ "$ROCKCFG_SENDMAIL" = 1 ] ; then
+	    block_begin
+		text 'Sendmail program' ROCKCFG_SENDMAIL_BIN 'sendmail'
+		text 'Recipient address' ROCKCFG_SENDMAIL_TO 'root'
+	    block_end
+	fi
+	bool 'HTTP GET request on special events' ROCKCFG_HTTP 0
+	if [ "$ROCKCFG_HTTP" = 1 ] ; then
+	    block_begin
+		text 'Website' ROCKCFG_HTTP_SITE 'http://pallas.crash-override.net/cgi-bin/rocklogbot?package=PACKAGE&config=CONFIG&status=STATUS&stage=STAGE'
+	    block_end
+	fi
+
 	bool 'Use ANSI colors for terminal output' \
 		ROCKCFG_OUTPUT_TERM_COLOR 1
 	bool 'Print Build-Output to terminal when building' \

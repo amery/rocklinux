@@ -1,0 +1,46 @@
+diff -Naur minit-0.10-orig/Makefile minit-0.10/Makefile
+--- minit-0.10-orig/Makefile	2005-04-08 19:24:04.000000000 +0200
++++ minit-0.10/Makefile	2007-07-01 02:08:17.033046634 +0200
+@@ -3,10 +3,10 @@
+ 
+ #CFLAGS=-pipe -march=i386 -fomit-frame-pointer -Os -I../dietlibc/include
+ CC=gcc
+-CFLAGS=-Wall -W -pipe -fomit-frame-pointer -Os
++CFLAGS=-Wall -W -pipe -fomit-frame-pointer -Os -I/opt/libowfat/include
+ CROSS=
+ #CROSS=arm-linux-
+-LDFLAGS=-s
++LDFLAGS=-L/opt/libowfat/lib -s
+ MANDIR=/usr/man
+ 
+ path = $(subst :, ,$(PATH))
+@@ -46,7 +46,7 @@
+ serdo: serdo.o
+ 
+ shutdown: shutdown.o split.o openreadclose.o opendevconsole.o
+-	$(DIET) $(CROSS)$(CC) $(LDFLAGS) -o shutdown $^
++	$(DIET) $(CROSS)$(CC) $(LDFLAGS) -o shutdown $^ $(LDLIBS)
+ 
+ %.o: %.c
+ 	$(DIET) $(CROSS)$(CC) $(CFLAGS) -c $<
+@@ -65,7 +65,7 @@
+ 	$(DIET) $(CROSS)$(CC) $(CFLAGS) -o $@ $^
+ 
+ hard-reboot: hard-reboot.c
+-	$(DIET) $(CROSS)$(CC) $(CFLAGS) -o $@ $^
++	$(DIET) $(CROSS)$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS) $(LDLIBS)
+ 
+ write_proc: write_proc.c
+ 	$(DIET) $(CROSS)$(CC) $(CFLAGS) -o $@ $^
+diff -Naur minit-0.10-orig/serdo.c minit-0.10/serdo.c
+--- minit-0.10-orig/serdo.c	2005-02-26 18:00:22.000000000 +0100
++++ minit-0.10/serdo.c	2007-07-01 02:08:32.343277582 +0200
+@@ -7,6 +7,8 @@
+ #include <str.h>
+ #include <byte.h>
+ 
++extern char **environ;
++
+ #define MAXENV 256
+ char* envp[MAXENV+2];
+ int envc;

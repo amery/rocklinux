@@ -22,5 +22,15 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-for x ; do [ -f $x.orig ] || cp -v $x $x.orig ; done
-$EDITOR "$@"
+for x; do
+	if [ "${x#-}" != "$x" ]; then
+		continue
+	fi
+	if [ ! -f $x.orig ]; then
+		touch $x
+		cp -v $x $x.orig
+	fi
+done
+
+${EDITOR:-vi} "$@"
+

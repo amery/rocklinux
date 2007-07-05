@@ -22,8 +22,10 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-list="`find $* -name '*.orig'`"
-
-for x in $list
-do diff -ud $x `echo $x | sed 's,\.orig$,,'`
+for x in $( { find "$@" -name '*.orig' -type f; find "$@" -maxdepth 0 -type f; } | sed 's,\.orig$,,' | sort -u; )
+do
+	if [ -f "$x" -a -f "$x.orig" ]; then
+		diff -ud "$x.orig" "$x"
+	fi
 done
+

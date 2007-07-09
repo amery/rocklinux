@@ -134,7 +134,7 @@ bprof main start
 
 echo "Running ROCK Linux $rockver configuration ..."
 if [ ! -e config/$config ] ; then
-	mkdir config/$config
+	mkdir -p config/$config
 	echo "Creating new configuration $config ..."
 	$0 -oldconfig $profile $nobashmod -cfg $config
 fi

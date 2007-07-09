@@ -19,9 +19,11 @@ usage() {
 		mkinitramfs -r $k_ver -m $mod_origin -o $outfile
 
 	Options:
-		-r	Specify kernel version to use for modules dir
-		-m	Specify directory where to search for kernel modules
-		-o	Specify location of output file
+		-r          Specify kernel version to use for modules dir
+		-m          Specify directory where to search for kernel modules
+		-o          Specify location of output file
+		-p VAR=val  Pass some variable definition to the build.d scripts
+		-O          output file list to given location
 
 		--root-dir
 		--build-dir
@@ -43,6 +45,10 @@ do
 			;;
 		-m)
 			mod_origin=$2
+			shift
+			;;
+		-O)
+			listoutfile=$2
 			shift
 			;;
 		-o)
@@ -96,6 +102,7 @@ export LIBEXEC=${BASE}/libexec
 [ "${filesdir:0:1}" = "/" ] || filesdir="$rootdir/$filesdir"
 
 [ ${outfile:0:1} = "/" ] || outfile="`pwd`/$outfile"
+[ ${listoutfile:0:1} = "/" ] || listoutfile="`pwd`/$listoutfile"
 [ ${mod_origin:0:1} = "/" ] || mod_origin="`pwd`/$mod_origin"
 
 
@@ -134,6 +141,8 @@ fi
 
 # create and compress cpio archive
 ${LIBEXEC}/${cross_compile}gen_init_cpio ${TMPDIR}/list | gzip -9 > $outfile
+
+[ -n "$listoutfile" ] && cp -v ${TMPDIR}/list "$listoutfile"
 
 if [ -n "$verbose" ]
 then

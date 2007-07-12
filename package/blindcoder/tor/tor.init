@@ -36,4 +36,8 @@ main_begin
 		check(`kill -15 $( cat ~tor/tor.pid )')
 	block_end
 
+	block_begin(reload, `Reloading the onion router')
+		check(`kill -HUP $( cat ~tor/tor.pid )')
+	block_end
+
 main_end

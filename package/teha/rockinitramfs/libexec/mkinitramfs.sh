@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # create initramfs image by using gen_cpio_init
-# (we do not need root privileges for this!)
+# (no need for root privileges)
 #
 # see ./build.d/ to see how the content is created!
 
@@ -13,21 +13,39 @@ usage() {
 	cat <<-EOF
 	mkinitramfs - create initramfs image by using gen_cpio_init
 
+	typical use:
 	mkinitramfs [ -r KERNEL_VERSION ] [ -m MODULES_DIR ] [ -o OUTPUT_FILE ]
 
 	If no options are given the following defaults apply:
 		mkinitramfs -r $k_ver -m $mod_origin -o $outfile
 
 	Options:
-		-r          Specify kernel version to use for modules dir
-		-m          Specify directory where to search for kernel modules
-		-o          Specify location of output file
-		-p VAR=val  Pass some variable definition to the build.d scripts
-		-O          output file list to given location
+		-r                 Specify kernel version to use for modules dir
 
-		--root-dir
-		--build-dir
-		--files-dir
+		-m                 Specify directory where to search for kernel modules
+
+		-o                 Specify location of output file
+
+		-p VAR=val         Pass some variable definition to the build.d scripts
+
+		-O                 output file list to given location
+
+		--build-dir        alternate directory for /lib/rock_initramfs/build.d/
+		                   providing pluggable build components (scripts)
+
+		--files-dir        alternate directory for /lib/rock_initramfs/files/
+		                   providing a location for files needed by
+		                   build.d-scripts
+
+		--root-dir         prefix for all directory locations
+		                   (e.g. /lib/modules, --files-dir, --build-dir)
+		
+		--gen_init_cpio    alternate binary for gen_init_cpio
+		                   (usefull when default binary was cross compiled)
+
+		--add-gen-line     additional line to be passed to gen_init_cpio
+		                   (usefull for small changes without modifying
+						    the whole build.d/-directory)
 
 	EOF
 }
@@ -73,6 +91,10 @@ do
 			;;
 		--add-gen-line)
 			additional_gen_lines="$additional_gen_lines;$2"
+			shift
+			;;
+		--gen_init_cpio)
+			gen_init_cpio="$2"
 			shift
 			;;
 		*)
@@ -140,7 +162,11 @@ then
 fi
 
 # create and compress cpio archive
-${LIBEXEC}/${cross_compile}gen_init_cpio ${TMPDIR}/list | gzip -9 > $outfile
+if [ -z "$gen_init_cpio" ] ; then
+	${LIBEXEC}/gen_init_cpio ${TMPDIR}/list | gzip -9 > $outfile
+else
+	${gen_init_cpio} ${TMPDIR}/list | gzip -9 > $outfile
+fi
 
 [ -n "$listoutfile" ] && cp -v ${TMPDIR}/list "$listoutfile"
 

@@ -1,21 +1,23 @@
 diff -Naur minit-0.10-orig/Makefile minit-0.10/Makefile
 --- minit-0.10-orig/Makefile	2005-04-08 19:24:04.000000000 +0200
-+++ minit-0.10/Makefile	2007-07-01 02:08:17.033046634 +0200
-@@ -3,10 +3,10 @@
++++ minit-0.10/Makefile	2007-07-12 04:06:35.679742211 +0200
+@@ -34,7 +34,7 @@
  
- #CFLAGS=-pipe -march=i386 -fomit-frame-pointer -Os -I../dietlibc/include
- CC=gcc
--CFLAGS=-Wall -W -pipe -fomit-frame-pointer -Os
-+CFLAGS=-Wall -W -pipe -fomit-frame-pointer -Os -I/opt/libowfat/include
- CROSS=
- #CROSS=arm-linux-
--LDFLAGS=-s
-+LDFLAGS=-L/opt/libowfat/lib -s
- MANDIR=/usr/man
+ LDLIBS=-lowfat
  
- path = $(subst :, ,$(PATH))
-@@ -46,7 +46,7 @@
+-libowfat_path = $(strip $(foreach dir,../libowfat*,$(wildcard $(dir)/textcode.h)))
++libowfat_path = .
+ ifneq ($(libowfat_path),)
+ CFLAGS+=$(foreach fnord,$(libowfat_path),-I$(dir $(fnord)))
+ LDFLAGS+=$(foreach fnord,$(libowfat_path),-L$(dir $(fnord)))
+@@ -44,9 +44,13 @@
+ msvc: msvc.o
+ minit-update: minit-update.o split.o openreadclose.o
  serdo: serdo.o
++hard-reboot: hard-reboot.o
++write_proc: write_proc.o
++killall5: killall5.o
++pidfilehack: pidfilehack.o
  
  shutdown: shutdown.o split.o openreadclose.o opendevconsole.o
 -	$(DIET) $(CROSS)$(CC) $(LDFLAGS) -o shutdown $^
@@ -23,18 +25,28 @@ diff -Naur minit-0.10-orig/Makefile minit-0.10/Makefile
  
  %.o: %.c
  	$(DIET) $(CROSS)$(CC) $(CFLAGS) -c $<
-@@ -65,7 +65,7 @@
- 	$(DIET) $(CROSS)$(CC) $(CFLAGS) -o $@ $^
+@@ -61,18 +65,6 @@
+ test: test.c
+ 	gcc -nostdlib -o $@ $^ -I../dietlibc/include ../dietlibc/start.o ../dietlibc/dietlibc.a
  
- hard-reboot: hard-reboot.c
+-pidfilehack: pidfilehack.c
 -	$(DIET) $(CROSS)$(CC) $(CFLAGS) -o $@ $^
-+	$(DIET) $(CROSS)$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS) $(LDLIBS)
- 
- write_proc: write_proc.c
- 	$(DIET) $(CROSS)$(CC) $(CFLAGS) -o $@ $^
+-
+-hard-reboot: hard-reboot.c
+-	$(DIET) $(CROSS)$(CC) $(CFLAGS) -o $@ $^
+-
+-write_proc: write_proc.c
+-	$(DIET) $(CROSS)$(CC) $(CFLAGS) -o $@ $^
+-
+-killall5: killall5.c
+-	$(DIET) $(CROSS)$(CC) $(CFLAGS) -o $@ $^
+-
+ install-files:
+ 	install -d $(DESTDIR)/etc/minit $(DESTDIR)/sbin $(DESTDIR)/bin $(DESTDIR)$(MANDIR)/man8
+ 	install minit pidfilehack $(DESTDIR)/sbin
 diff -Naur minit-0.10-orig/serdo.c minit-0.10/serdo.c
 --- minit-0.10-orig/serdo.c	2005-02-26 18:00:22.000000000 +0100
-+++ minit-0.10/serdo.c	2007-07-01 02:08:32.343277582 +0200
++++ minit-0.10/serdo.c	2007-07-12 03:58:30.292420270 +0200
 @@ -7,6 +7,8 @@
  #include <str.h>
  #include <byte.h>
@@ -44,3 +56,14 @@ diff -Naur minit-0.10-orig/serdo.c minit-0.10/serdo.c
  #define MAXENV 256
  char* envp[MAXENV+2];
  int envc;
+diff -Naur minit-0.10-orig/shutdown.c minit-0.10/shutdown.c
+--- minit-0.10-orig/shutdown.c	2004-01-29 15:40:45.000000000 +0100
++++ minit-0.10/shutdown.c	2007-07-12 03:57:10.051209844 +0200
+@@ -26,6 +26,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <sys/wait.h>
++#include <string.h>
+ 
+ #include "str.h"
+ 

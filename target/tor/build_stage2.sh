@@ -46,9 +46,14 @@ elif [ "${ROCKCFG_TARGET_TOR_SIZE}" == "files" ] ; then
 	done < $base/target/tor/needed_files
 fi
 #
-echo_status "Saving boot/* - we do not need this on the 2nd stage ..."
-rm -rf ../boot ; mkdir ../boot
-mv boot/* ../boot/
+if [ "${ROCKCFG_TARGET_TOR_SIZE}" != "ultimate" ] ; then
+	echo_status "Saving boot/* - we do not need this on the 2nd stage ..."
+	rm -rf ../boot ; mkdir ../boot
+	mv boot/* ../boot/
+else
+	mkdir ../boot
+	cp -r boot/* ../boot/
+fi
 #
 echo_status "Remove the stuff we do not need ..."
 rm -rf usr/src var/adm
@@ -77,6 +82,37 @@ cp -f $base/target/$target/fixedfiles/xorg.conf etc/X11/xorg.conf
 echo_status "Creating home directories and users..."
 mkdir -p home/{rocker,root}
 chown 1000:100 home/rocker
+#
+if [ -d usr/lib/firefox-* ] ; then
+	echo_status "Adding Firefox Plugins..."
+	read v ffversion < <( grep '^.V. ' $base/package/x11/firefox/firefox.desc )
+	grep xpi $base/target/$target/download.txt | cut -f2 -d' ' | while read xpi ; do
+		echo "- $xpi"
+		tmp="$(mktemp -d)"
+		cd $tmp
+		unzip $base/download/mirror/${xpi:0:1}/${xpi}
+		sed -e "s,<em:maxVersion>.*</em:maxVersion>,<em:maxVersion>${ffversion}</em:maxVersion>,g" -i install.rdf
+		sed -e "s,em:maxVersion=\".*\",em:maxVersion=\"${ffversion}\",g" -i install.rdf
+		read id < <( grep "em:id" install.rdf | head -n 1 | sed 's,^.*\({.*}\).*$,\1,g' )
+		cd -
+		mv $tmp "usr/lib/firefox-$ffversion/extensions/${id}"
+		find usr/lib/firefox-$ffversion/extensions/${id} -type d -exec chmod 0755 {} \;
+		find usr/lib/firefox-$ffversion/extensions/${id} ! -type d -exec chmod 0644 {} \;
+	done
+
+	echo_status "Setting FireFox defaults..."
+	#pref("network.proxy.http", "localhost");
+	tmp="$(mktemp)"
+	grep pref $base/target/$target/fixedfiles/firefox.js | while read line ; do
+		item="${line#pref(\"}"
+		item="${item%%\",*}"
+		grep -v "\"${item}\"" usr/lib/firefox-$ffversion/defaults/pref/firefox.js > $tmp
+		echo "${line}" >> $tmp
+		cat $tmp > usr/lib/firefox-$ffversion/defaults/pref/firefox.js
+	done
+	rm -f $tmp
+	cp $base/target/$target/fixedfiles/bookmarks.html usr/lib/firefox-$ffversion/defaults/profile/bookmarks.html
+fi
 
 sed -i -e 's,root:.*,root::0:0:root:/home/root:/bin/bash,' etc/passwd
 sed -i -e 's,root:.*,root:$1$9KtEb9vt$IDoD/c7IG5EpCwxvBudgA:13300::::::,' etc/shadow
@@ -92,10 +128,11 @@ echo_status "activating shadowfs through /etc/ld.so.preload"
 echo "/usr/lib/libcowfs.so" > etc/ld.so.preload
 #
 echo_status "adding a few additional files"
-cp -v $base/download/mirror/t/tor_aliases_v4 etc/profile.d
+cp -v $base/download/mirror/t/tor_aliases_v5 etc/profile.d
 echo ROCKate > etc/HOSTNAME
 
 echo "export WINDOWMANAGER=\"/usr/bin/icewm-session\"" > etc/profile.d/windowmanager
+echo "if [ \"\${TERM}\" == \"xterm\" ] ; then export TERM=\"xterm-color\" ; fi" > etc/profile.d/xterm-color
 echo "export XDM=\"/usr/X11R7/bin/xdm\"" > etc/conf/xdm
 echo "#!/bin/bash" > sbin/startx_on_boot
 echo "su - rocker -c \". /etc/profile; /usr/X11R7/bin/startx\"" >> sbin/startx_on_boot
@@ -132,6 +169,7 @@ if [ "${ROCKCFG_TARGET_TOR_SIZE}" == "files" ] ; then
 	files="`find bin sbin usr/bin usr/sbin usr/X11/bin -type f -print0 | xargs -0 file | grep ELF | cut -f1 -d:`"
 	$base/build/$ROCKCFG_ID/usr/bin/upx2 --brute $files < /proc/$$/fd/0 > /proc/$$/fd/1 2> /proc/$$/fd/2 || true
 fi
+touch etc/$( tr [:lower:] [:upper:] <<< "${ROCKCFG_TARGET_TOR_SIZE}" )
 
 echo_status "Creating 2nd_stage.img.z image... (this takes some time)... "
 cd .. ; mksquashfs 2nd_stage 2nd_stage.img.z -noappend > /dev/null 2>&1

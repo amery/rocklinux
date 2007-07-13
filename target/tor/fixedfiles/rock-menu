@@ -24,7 +24,7 @@ process_desktop(){
 	fi
 	mkdir -p "${dir}/${Categories}"
 	if [ "${Terminal}" == "true" -o "${Terminal}" == "1" ] ; then
-		Exec="xterm -e '${Exec}'"
+		Exec="xterm -bg black -fg grey -e '${Exec}'"
 	fi
 	echo "prog \"${Name}\" \"${Icon:-${Name}}\" ${Exec}" > "${dir}/${Categories}/${Name}"
 	unset Exec Name Icon Terminal Categories X_ROCK_Name

@@ -23,6 +23,124 @@
 #
 # ROCKate network setup
 
+rockate_add_bootmenu() {
+	read VERSION < /etc/ROCKATE_VERSION
+	disk="${1}"
+	installon="${2}"
+	mount ${disk} /mnt/generic
+	path=/
+	[ -d /mnt/generic/boot ] && path=/boot
+	read menulst < <( find /mnt/generic$path -name menu.lst | head -n 1)
+	read devicemap < <( find /mnt/generic$path -name device.map | head -n 1)
+	read physical < <( readlink -f ${installon} )
+	physical=${physical%[0-9]}
+	if ! grep -q ${physical} ${devicemap} ; then
+		for x in /dev /proc /sys /tmp ; do
+			mount --bind $x /mnt/generic$x
+		done
+		chroot /mnt/generic stone -text grub create_device_map
+		for x in /dev /proc /sys /tmp ; do
+			umount /mnt/generic$x
+		done
+	fi
+	read grubdevice linuxdevice < <( grep ${physical} ${devicemap} )
+	if [ -z "${grubdevice}" ] ; then
+		echo "WTF?"
+		return
+	fi
+	cat >> ${menulst} <<-EOF
+
+title  ROCKate ${VERSION} 1024
+kernel ${grubdevice%)},$(( ${installon##*part} - 1 )))/boot/vmlinuz root=/dev/ram init=/linuxrc video=vesa:ywrap,mtrr vga=0x317 rw
+initrd ${grubdevice%)},$(( ${installon##*part} - 1 )))/boot/initrd.img
+
+title  ROCKate ${VERSION} 1280
+kernel ${grubdevice%)},$(( ${installon##*part} - 1 )))/boot/vmlinuz root=/dev/ram init=/linuxrc video=vesa:ywrap,mtrr vga=0x31A rw
+initrd ${grubdevice%)},$(( ${installon##*part} - 1 )))/boot/initrd.img
+
+title  ROCKate ${VERSION} 800
+kernel ${grubdevice%)},$(( ${installon##*part} - 1 )))/boot/vmlinuz root=/dev/ram init=/linuxrc video=vesa:ywrap,mtrr vga=0x314 rw
+initrd ${grubdevice%)},$(( ${installon##*part} - 1 )))/boot/initrd.img
+
+title  ROCKate ${VERSION} 640
+kernel ${grubdevice%)},$(( ${installon##*part} - 1 )))/boot/vmlinuz root=/dev/ram init=/linuxrc video=vesa:ywrap,mtrr vga=0x311 rw
+initrd ${grubdevice%)},$(( ${installon##*part} - 1 )))/boot/initrd.img
+
+title  ROCKate ${VERSION} Text only
+kernel ${grubdevice%)},$(( ${installon##*part} - 1 )))/boot/vmlinuz root=/dev/ram init=/linuxrc vga=0 rw 3
+initrd ${grubdevice%)},$(( ${installon##*part} - 1 )))/boot/initrd.img
+	EOF
+	umount /mnt/generic
+}
+rockate_install_on() {
+	disk="${1}"
+	mount ${disk} /mnt/generic || return
+	cp -arv /mnt/cowfs_ro/* /mnt/generic/
+	find /mnt/cowfs_rw/ -type f | while read file ; do
+		target="${file#/mnt/cowfs_rw/}"
+		mkdir -p /mnt/generic/$( dirname ${target} )
+		cp -v ${file} /mnt/generic/${target}
+	done
+	touch /mnt/generic/etc/HDINSTALL
+	for x in /dev /proc /sys /tmp ; do
+		mount --bind $x /mnt/generic$x
+	done
+
+	echo -n > /mnt/generic/etc/ld.so.preload
+	tmp="$(mktemp)"
+	grep -v ' / ' /mnt/generic/etc/fstab > $tmp
+	echo "${disk} / auto defaults 0 0" >> $tmp
+	mv $tmp /mnt/generic/etc/fstab
+	chmod 0644 /mnt/generic/etc/fstab
+	chown rocker.users /mnt/generic/home/rocker -R
+	chroot /mnt/generic mkinitrd
+
+	for x in /dev /proc /sys /tmp ; do
+		umount /mnt/generic$x
+	done
+	umount /mnt/generic
+}
+
+rockate_install() {
+	unset bootparts menu
+	mkdir -p /mnt/generic
+	for disk in /dev/disk/by-id/* ; do
+		mount ${disk} /mnt/generic >/dev/null 2>&1 || continue
+		if [ -f /mnt/generic/menu.lst -o -f /mnt/generic/boot/menu.lst -o \
+		     -f /mnt/generic/boot/grub/menu.lst -o -f /mnt/generic/grub/menu.lst ] ; then
+		     bootparts="${bootparts} ${disk}"
+		fi
+		menu="${menu} 'Install on ${disk##*/} (contains: $( ls -d /mnt/generic/* 2>/dev/null | sed -e 's,^/mnt/generic/,,g' | sed -e 's/^\(.{,80}\).*$/\1/g' ))' 'installon=${disk}; rockate_install_on ${disk}'"
+		umount /mnt/generic >/dev/null 2>&1
+	done
+	eval gui_menu FOO "'ROCKate installation'" ${menu} || return
+
+	unset menu
+	if [ -n "${bootparts}" ] ; then
+		for x in ${bootparts} ; do
+			mount $x /mnt/generic
+			menu="${menu} 'Add ROCKate to $x (contains:"
+			while read y title ; do
+				menu="${menu} ${title}"
+			done < <( grep -i title $( find /mnt/generic -name menu.lst ) )
+			umount /mnt/generic
+			menu="${menu})' 'rockate_add_bootmenu ${x} ${installon}'"
+		done
+
+		eval gui_menu FOO "'ROCKate installation'" ${menu} || return
+	else
+		mount $disk /mnt/generic
+		for x in /dev /proc /sys /tmp ; do
+			mount --bind $x /mnt/generic$x
+		done
+		chroot /mnt/generic stone -text grub grub_setup
+		for x in /dev /proc /sys /tmp ; do
+			umount /mnt/generic$x
+		done
+		umount $disk
+	fi
+}
+
 rockate_configure() {
 	local device="${1}"
 	read inet ip rest < <( ip addr show ${device} | grep 'inet ' )
@@ -60,6 +178,11 @@ rockate_update(){
 		tar xf /tmp/update.tar.bz2
 		cd -
 		rm -f /tmp/update.tar.bz2
+		if [ -f /tmp/postupdate.sh ] ; then
+			chmod +x /tmp/postupdate.sh
+			/tmp/postupdate.sh
+			rm -f /tmp/postupdate.sh
+		fi
 	done < ${tmp}
 	rm -f ${tmp}
 }
@@ -129,7 +252,7 @@ main() {
 			read inet ip rest < <( ip addr show ${name} | grep 'inet ' )
 			menu="${menu} 'Device ${name} (${mac})' ''"
 			menu="${menu} ' IP Address: ${ip}' ''"
-			menu="${menu} ' Configure via dhcp' 'dhclient ${name}'"
+			menu="${menu} ' Configure via dhcp' 'dhclient -v ${name}'"
 			menu="${menu} ' Configure manually' 'rockate_configure ${name}'"
 		done < <( ifconfig -a | grep HWaddr )	# we only want 'real' interfaces
 		menu="${menu} '' ''"
@@ -137,10 +260,18 @@ main() {
 		menu="${menu} 'Default Route: ${gw} (via ${dev})' 'rockate_defaultroute ${gw}'"
 		menu="${menu} '' ''"
 		menu="${menu} 'Setup transparent Tor proxy (use after network setup)' 'rockate_transparent_tor'"
-		menu="${menu} 'The following option can be used to update the ROCKate environment at' ''"
-		menu="${menu} 'runtime if an update file has been provided. These changes will be' ''"
-		menu="${menu} 'gone after reboot, so please use only if you really want to.' ''"
+		if [ ! -e /etc/HDINSTALL ] ; then
+			menu="${menu} 'The following option can be used to update the ROCKate environment at' ''"
+			menu="${menu} 'runtime if an update file has been provided. These changes will be' ''"
+			menu="${menu} 'gone after reboot, so please use only if you really want to.' ''"
+		fi
 		menu="${menu} 'Update ROCKate' 'rockate_update'"
+		if [ -f /etc/ULTIMATE -a ! -e /etc/HDINSTALL ] ; then
+			menu="${menu} '' ''"
+			menu="${menu} 'Install ROCKate to disk' 'rockate_install'"
+			menu="${menu} 'See http://xsanr2oqmett7ovm.onion/wiki/show/PostInstall for steps' ''"
+			menu="${menu} 'to do after installation!' ''"
+		fi
 		eval gui_menu FOO "'ROCKate Configuration'" ${menu}
 	do : ; done
 }

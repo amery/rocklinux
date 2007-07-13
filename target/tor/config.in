@@ -69,9 +69,9 @@ echo "pkgfilter sed '" > config/$config.$swpid/predefined-pkgsel.parsed
 . ./misc/pkgsel/macros
 REMOVE xphelloworld >> config/$config.$swpid/predefined-pkgsel.parsed
 REMOVE pcmcia-cs >> config/$config.$swpid/predefined-pkgsel.parsed
-for x in icewm imlib glib12 tor privoxy dillo gtk+12 xterm irssi xdialog ; do
-	ADD $x >> config/$config.$swpid/predefined-pkgsel.parsed
-done
+while read package ; do
+	ADD $package >> config/$config.$swpid/predefined-pkgsel.parsed
+done < target/tor/packages
 . ./misc/pkgsel/minimal+xorg.in >> config/$config.$swpid/predefined-pkgsel.parsed
 # end the sed string
 echo "'"  >> config/$config.$swpid/predefined-pkgsel.parsed
@@ -90,3 +90,7 @@ pkgenable udev
 pkgenable disktype
 pkgenable ucl
 pkgenable upx2
+pkgenable libxslt
+pkgenable libxml2
+pkgenable cpan-xml-parser
+pkgdisable mesademos

@@ -1,16 +1,22 @@
 diff -Naur minit-0.10-orig/Makefile minit-0.10/Makefile
 --- minit-0.10-orig/Makefile	2005-04-08 19:24:04.000000000 +0200
-+++ minit-0.10/Makefile	2007-07-12 04:06:35.679742211 +0200
-@@ -34,7 +34,7 @@
++++ minit-0.10/Makefile	2007-07-14 01:43:48.000000000 +0200
+@@ -34,19 +34,24 @@
  
  LDLIBS=-lowfat
  
 -libowfat_path = $(strip $(foreach dir,../libowfat*,$(wildcard $(dir)/textcode.h)))
-+libowfat_path = .
- ifneq ($(libowfat_path),)
- CFLAGS+=$(foreach fnord,$(libowfat_path),-I$(dir $(fnord)))
- LDFLAGS+=$(foreach fnord,$(libowfat_path),-L$(dir $(fnord)))
-@@ -44,9 +44,13 @@
+-ifneq ($(libowfat_path),)
+-CFLAGS+=$(foreach fnord,$(libowfat_path),-I$(dir $(fnord)))
+-LDFLAGS+=$(foreach fnord,$(libowfat_path),-L$(dir $(fnord)))
++ifneq ($(libowfat_inc),)
++CFLAGS+=-I$(libowfat_inc)
++endif
++ifneq ($(libowfat_lib),)
++LDFLAGS+=-L$(libowfat_lib)
+ endif
+ 
+ minit: minit.o split.o openreadclose.o opendevconsole.o
  msvc: msvc.o
  minit-update: minit-update.o split.o openreadclose.o
  serdo: serdo.o
@@ -25,7 +31,7 @@ diff -Naur minit-0.10-orig/Makefile minit-0.10/Makefile
  
  %.o: %.c
  	$(DIET) $(CROSS)$(CC) $(CFLAGS) -c $<
-@@ -61,18 +65,6 @@
+@@ -61,18 +66,6 @@
  test: test.c
  	gcc -nostdlib -o $@ $^ -I../dietlibc/include ../dietlibc/start.o ../dietlibc/dietlibc.a
  
@@ -44,26 +50,3 @@ diff -Naur minit-0.10-orig/Makefile minit-0.10/Makefile
  install-files:
  	install -d $(DESTDIR)/etc/minit $(DESTDIR)/sbin $(DESTDIR)/bin $(DESTDIR)$(MANDIR)/man8
  	install minit pidfilehack $(DESTDIR)/sbin
-diff -Naur minit-0.10-orig/serdo.c minit-0.10/serdo.c
---- minit-0.10-orig/serdo.c	2005-02-26 18:00:22.000000000 +0100
-+++ minit-0.10/serdo.c	2007-07-12 03:58:30.292420270 +0200
-@@ -7,6 +7,8 @@
- #include <str.h>
- #include <byte.h>
- 
-+extern char **environ;
-+
- #define MAXENV 256
- char* envp[MAXENV+2];
- int envc;
-diff -Naur minit-0.10-orig/shutdown.c minit-0.10/shutdown.c
---- minit-0.10-orig/shutdown.c	2004-01-29 15:40:45.000000000 +0100
-+++ minit-0.10/shutdown.c	2007-07-12 03:57:10.051209844 +0200
-@@ -26,6 +26,7 @@
- #include <stdio.h>
- #include <stdlib.h>
- #include <sys/wait.h>
-+#include <string.h>
- 
- #include "str.h"
- 

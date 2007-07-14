@@ -37,8 +37,9 @@ usage() {
 		                   providing a location for files needed by
 		                   build.d-scripts
 
-		--root-dir         prefix for all directory locations
-		                   (e.g. /lib/modules, --files-dir, --build-dir)
+		--root-dir         prefix for some directory locations
+		                   (/lib/modules, /lib/rock_initramfs
+		                    and --files-dir, --build-dir if relative)
 		
 		--gen_init_cpio    alternate binary for gen_init_cpio
 		                   (usefull when default binary was cross compiled)
@@ -108,6 +109,7 @@ done
 
 [ -z "$mod_origin" ] && mod_origin=$rootdir/lib/modules/$k_ver
 [ -z "$outfile" ] && outfile=$rootdir/boot/initramfs-$k_ver.cpio.gz
+[ -z "$listoutfile" ] && listoutfile=$rootdir/boot/initramfs-$k_ver.cpio.lst
 
 if [ "$usage" = "1" ]
 then

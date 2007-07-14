@@ -30,5 +30,5 @@ fi
 echo "going real..."
 if [ -x /real-root/sbin/init ]
 then
-	exec /bin/run_init /real-root /sbin/init
+	exec /sbin/run_init /real-root /sbin/init
 fi

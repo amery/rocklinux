@@ -22,59 +22,77 @@
 
 pkgfilter sed '
 
-# Select some packages explicitly (base)
-/ dialog /	{ p; d; };	/ bc /		{ p; d; };
-/ dump /	{ p; d; };	/ cpio /	{ p; d; };
-/ ed /		{ p; d; };	/ lrzsz /	{ p; d; };
-/ minicom /	{ p; d; };	/ disktype /	{ p; d; };
-/ netkit-base /	{ p; d; };	/ netkit-telnet / { p; d; };
-/ net-tools /   { p; d; };	/ sysvinit /    { p; d; };
-/ pciutils /	{ p; d; };	/ portmap /	{ p; d; };
-/ reiserfsprogs / { p; d; };	/ rsync /	{ p; d; };
-/ setserial /	{ p; d; };	/ tcpdump /	{ p; d; };
-/ libpcap /	{ p; d; };	/ tcp_wrappers / { p; d; };
-/ iptables /	{ p; d; };	/ jfsutils /	{ p; d; };
-/ bonnie++ /	{ p; d; };	/ xfsprogs /	{ p; d; };
-/ kbd /		{ p; d; };	/ eject /	{ p; d; };
-/ popt /	{ p; d; };
-/ mdadm /       { p; d; };      / ntfsprogs /   { P; d; };
-/ ddrescue /    { p; d; };
-/ iproute2 /	{ p; d; };	/ wget /	{ p; d; };
-				/ udev /	{ p; d; };
-/ gmp /		{ p; d; };	/ rockinitrd /	{ p; d; };
-/ linux=linux26 /	{ p; d; };
-/ linux=linux26-source /	{ p; d; };
+# Explicitly select packages (base)
+/ 00-dirtree /		{ p ; d ; } ;	/ acl /			{ p ; d ; } ;
+/ attr /		{ p ; d ; } ;	/ autoconf /		{ p ; d ; } ;
+/ automake=automake19 /	{ p ; d ; } ;	/ bc /			{ p ; d ; } ;
+/ binutils /		{ p ; d ; } ;	/ bison /		{ p ; d ; } ;
+/ bonnie++ /		{ p ; d ; } ;	/ bzip2 /		{ p ; d ; } ;
+/ coreutils /		{ p ; d ; } ;	/ cpio /		{ p ; d ; } ;
+/ cron /		{ p ; d ; } ;
+/ device-mapper /	{ p ; d ; } ;	/ dialog /		{ p ; d ; } ;
+/ diffutils /		{ p ; d ; } ;	/ disktype /		{ p ; d ; } ;
+/ dosfstools /		{ p ; d ; } ;	/ dump /		{ p ; d ; } ;
+/ e2fsprogs /		{ p ; d ; } ;	/ ed /			{ p ; d ; } ;
+/ eject /		{ p ; d ; } ;	/ etcnet /		{ p ; d ; } ;
+/ file /		{ p ; d ; } ;	/ findutils /		{ p ; d ; } ;
+/ flex /		{ p ; d ; } ;	/ gawk /		{ p ; d ; } ;
+/ gcc /			{ p ; d ; } ;
+/ genromfs /		{ p ; d ; } ;	/ glibc /		{ p ; d ; } ;
+/ gmp /			{ p ; d ; } ;	/ grep /		{ p ; d ; } ;
+/ groff /		{ p ; d ; } ;	/ gzip /		{ p ; d ; } ;
+/ hdparm /		{ p ; d ; } ;	/ hfsutils /		{ p ; d ; } ;
+/ iproute2 /		{ p ; d ; } ;	/ iptables /		{ p ; d ; } ;
+/ jfsutils /		{ p ; d ; } ;	/ kbd /			{ p ; d ; } ;
+/ less /		{ p ; d ; } ;	/ libelf /		{ p ; d ; } ;
+/ libpcap /		{ p ; d ; } ;	/ libtool /		{ p ; d ; } ;
+/ linux /		{ p ; d ; } ;	/ lrzsz /		{ p ; d ; } ;
+/ ltrace /		{ p ; d ; } ;	/ lvm2 /		{ p ; d ; } ;
+/ m4 /			{ p ; d ; } ;	/ make /		{ p ; d ; } ;
+/ man /			{ p ; d ; } ;	/ mdadm /		{ p ; d ; } ;
+/ mine /		{ p ; d ; } ;	/ minicom /		{ p ; d ; } ;
+/ mktemp /		{ p ; d ; } ;	/ module-init-tools /	{ p ; d ; } ;
+/ mpfr /		{ p ; d ; } ;	/ ncurses /		{ p ; d ; } ;
+/ netkit-base /		{ p ; d ; } ;	/ netkit-telnet /	{ p ; d ; } ;
+/ net-tools /		{ p ; d ; } ;	/ ntfsprogs /		{ p ; d ; } ;
+/ nvi /			{ p ; d ; } ;	/ parted /		{ p ; d ; } ;
+/ patch /		{ p ; d ; } ;	/ pciutils /		{ p ; d ; } ;
+/ perl5 /		{ p ; d ; } ;	/ popt /		{ p ; d ; } ;
+/ portmap /		{ p ; d ; } ;
+/ procps /		{ p ; d ; } ;	/ psmisc /		{ p ; d ; } ;
+/ readline /		{ p ; d ; } ;	/ reiserfsprogs /	{ p ; d ; } ;
+/ rockinitrd /		{ p ; d ; } ;	/ rsync /		{ p ; d ; } ;
+/ sed /			{ p ; d ; } ;	/ setserial /		{ p ; d ; } ;
+/ shadow /		{ p ; d ; } ;	/ stone /		{ p ; d ; } ;
+/ strace /		{ p ; d ; } ;	/ sysfiles /		{ p ; d ; } ;
+/ sysklogd /		{ p ; d ; } ;	/ sysvinit /		{ p ; d ; } ;
+/ tar /			{ p ; d ; } ;	/ tcpdump /		{ p ; d ; } ;
+/ tcp_wrappers /	{ p ; d ; } ;	/ texinfo /		{ p ; d ; } ;
+/ time /		{ p ; d ; } ;	/ udev /		{ p ; d ; } ;
+/ uml_utilities /	{ p ; d ; } ;	/ util-linux /		{ p ; d ; } ;
+/ wget /		{ p ; d ; } ;	/ xfsprogs /		{ p ; d ; } ;
+/ zlib /		{ p ; d ; } ;
 
+# (public)
+/ ddrescue /		{ p ; d ; } ;
 
-# Select some non-base packages
-/ etcnet /	{ s/^O /X /; p; d; };
 
 # Select some packages explicitly (architectures)
-/ bin86 /	{ p; d; };	/ cpuburn /	{ p; d; };
-/ grub /	{ p; d; };	/ lilo /	{ p; d; };
-/ memtest86 /	{ p; d; };	/ aboot /	{ p; d; };
-/ silo /	{ p; d; };	/ nasm /	{ p; d; };
-/ yaboot /	{ p; d; };	/ aboot /	{ p; d; };
-/ mac-fdisk /	{ p; d; };	/ pdisk /       { p; d; };
-/ linux24benh/  { p; d; };	/ syslinux /	{ p; d; };
-/ elftoaout /   { p; d; };	/ hfsutils /    { p; d; };
-/ pdisk /       { p; d; };
+# (alpha)
+/ aboot /		{ p ; d ; } ;
+# (powerpc)
+/ yaboot /		{ p ; d ; } ;
+/ mac-fdisk /		{ p ; d ; } ;	/ pdisk /		{ p ; d ; } ;
+# (sparc)
+/ elftoaout /		{ p ; d ; } ;	/ silo /		{ p ; d ; } ;
+# (x86)
+/ bin86 /		{ p ; d ; } ;	/ cpuburn /		{ p ; d ; } ;
+/ grub /		{ p ; d ; } ;	/ lilo /		{ p ; d ; } ;
+/ memtest86 /		{ p ; d ; } ;	/ nasm /		{ p ; d ; } ;
+/ syslinux /		{ p ; d ; } ;
 
-# Disable packages which are not in base or not build in stages 0-4
-/ base / !  { s/^X /O /; p; d; };		/^. -----/ { s/^X /O /; p; d; };
-
-# Disable even more packages we do not need
-/ automake=automake17 /	{ s/^X /O /; p; d; };	/ automake=automake18/	{ s/^X /O /; p; d; };
-/ gcc2 /	{ s/^X /O /; p; d; };	/ joe /		{ s/^X /O /; p; d; };
-/ gdbm /	{ s/^X /O /; p; d; };	/ pam /         { s/^X /O /; p; d; };
-/ prelink /	{ s/^X /O /; p; d; };	/ ccache /	{ s/^X /O /; p; d; };
-/ cracklib /	{ s/^X /O /; p; d; };	/ hotplug /	{ s/^X /O /; p; d; };
-/ bash=bash3 /	{ s/^X /O /; p; d; };	/ pdksh /	{ s/^X /O /; p; d; };
-/ dietlibc /	{ s/^X /O /; p; d; };	/ rocknet /	{ s/^X /O /; p; d; };
-/ devfsd /	{ s/^X /O /; p; d; };	/ rockplug /	{ s/^X /O /; p; d; };
-/ netkit-ftp /	{ s/^X /O /; p; d; };	/ netkit-tftp /	{ s/^X /O /; p; d; };
-/ unzip /	{ s/^X /O /; p; d; };	/ zip /		{ s/^X /O /; p; d; };
-/ modutils /	{ s/^X /O /; p; d; };
+# Disable the rest
+	s/^X /^O / ; p ; d ;
 '
 
 ROCKCFGSET_CREATE_TARBZ2=1
@@ -87,7 +105,13 @@ ROCKCFGSET_PKG_GCC33_NO_JAVA=1
 ROCKCFGSET_PKG_GCC34_NO_JAVA=1
 ROCKCFGSET_PKG_GCC40_NO_JAVA=1
 ROCKCFGSET_PKG_GCC41_NO_JAVA=1
+ROCKCFGSET_PKG_GCC42_NO_JAVA=1
 ROCKCFGSET_PKG_BASH_PROGCOMP=0
+
+ROCKCFGSET_PKG_BDB_DEFAULT=none
+
+ROCKCFGSET_DEFAULT_MTA=none
+ROCKCFGSET_DEFAULT_PRINTER=none
 
 ROCKCFGSET_DO_REBUILD_STAGE=0
 ROCKCFGSET_CREATE_DOCS=0

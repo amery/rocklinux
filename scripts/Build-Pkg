@@ -899,12 +899,12 @@ exec 202>&1
 		if [ "$stagelevel" -le 1 ]
 		then
 			xbase="$( cd $xroot/ 2> /dev/null ; pwd -P )"
-			if egrep -qv "[	 ]($base|$xbase|$builddir|/tmp|/usr/tmp|/var/tmp|/var/backups|/proc|/dev)(/|$)" \
-						$builddir/fl_wrapper.wlog
+			if cat $builddir/fl_wrapper.wlog | sed 's,//*,/,g' | \
+				egrep -qv "[	 ]($base|$xbase|$builddir|/tmp|/usr/tmp|/var/tmp|/var/backups|/proc|/dev)(/|$)"
 			then
 				x="Created file outside basedir: "
-				egrep -v "[ 	]($base|$xbase|$builddir|/tmp|/usr/tmp|/var/tmp|/proc|/dev)(/|$)" \
-					$builddir/fl_wrapper.wlog | \
+				cat $builddir/fl_wrapper.wlog | sed 's,//*,/,g' | \
+					egrep -v "[ 	]($base|$xbase|$builddir|/tmp|/usr/tmp|/var/tmp|/proc|/dev)(/|$)" | \
 					cut -f2- | sort -u | sed "s,^,$x,"
 				echo "base #1: $base"
 				echo "base #2: $xbase"

@@ -36,7 +36,7 @@ then
 	echo "Copy more config files."
 	cp -v $confdir/powerpc/mapping .
 	#
-	datadir="build/${ROCKCFG_ID}/ROCK/$target"
+	datadir="build/${ROCKCFG_ID}/ROCK/target"
 	cat > $xroot/ROCK/isofs_arch.txt <<- EOT
 		BOOT	-hfs -part -map $datadir/mapping -hfs-volid "ROCK_Linux_CD"
 		BOOTx	-hfs-bless boot -sysid PPC -l -L -r -T -chrp-boot

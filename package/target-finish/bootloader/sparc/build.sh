@@ -8,20 +8,26 @@ echo "Creating silo setup:"
 #
 echo "Extracting silo boot loader images."
 mkdir -p boot
-tar $taropt $base/build/${ROCKCFG_ID}/ROCK/pkgs/silo.tar.bz2 \
-    boot/second.b -O > boot/second.b
+pkg_ver="$( grep " silo " $base/config/$config/packages | cut -f6 -d" " )"
+pkg_extraver="$( grep " silo " $base/config/$config/packages | cut -f7 -d" " )"
+eval x=$build_rock/pkgs/silo$pkg_suffix
+echo $x ver $pkg_ver extraver $pkg_extraver
+if [[ "$pkg_suffix" == *gem ]] ; then
+	mine -k pkg_tarbz2 $x > $tmpdir/silo.tar.bz2
+	x=$tmpdir/silo.tar.bz2
+fi
+tar -O $taropt $x boot/second.b > boot/second.b
 #
 echo "Creating silo config file."
 cp -v $confdir/sparc/{silo.conf,boot.msg,help1.txt} \
   boot
 #
 echo "Moving image (initrd) to boot directory."
-mv -v initrd.gz boot/
+mv -v $ROCKCFG_PKG_1ST_STAGE_INITRD.gz boot/
 #
 buildroot="build/${ROCKCFG_ID}"
-datadir="build/${ROCKCFG_ID}/ROCK/$target"
+datadir="build/${ROCKCFG_ID}/ROCK/target"
 cat > $xroot/ROCK/isofs_arch.txt <<- EOT
 	BOOT	-G $buildroot/boot/isofs.b -B ...
 	DISK1	$datadir/boot/ boot/
 EOT
-

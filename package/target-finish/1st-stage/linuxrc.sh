@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export PATH="/bin:/usr/bin:/sbin:/usr/sbin"
+
 STAGE_2_BIG_IMAGE="2nd_stage.tar.gz"
 STAGE_2_SMALL_IMAGE="2nd_stage_small.tar.gz"
 STAGE_2_COMPRESS_ARG="--use-compress-program=gzip"

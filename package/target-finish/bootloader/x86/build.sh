@@ -9,6 +9,7 @@ mdlbl_ver="`sed -n 's,.*mdlbl-\(.*\).tar.*,\1,p' \
 cd $disksdir
 
 echo "Creating lilo config and cleaning boot directory:"
+rm -rf boot/ ; mkdir -p boot/
 cp $confdir/x86/lilo-* boot/
 rm -rfv boot/{grub,System.map*,kconfig*}
 
@@ -41,7 +42,7 @@ then
 	echo "Creating isolinux setup:"
 	#
 	echo "Extracting isolinux boot loader."
-	mkdir -p isolinux
+	rm -rf isolinux ; mkdir -p isolinux
 	tar -O $taropt $base/download/mirror/s/syslinux-$syslinux_ver.tar.bz2 \
 	    syslinux-$syslinux_ver/isolinux.bin > isolinux/isolinux.bin
 	#
@@ -50,13 +51,14 @@ then
 	cp $confdir/x86/help?.txt isolinux/
 	#
 	echo "Copy images to isolinux directory."
-	[ -e boot/memtest86.bin ] && cp boot/memtest86.bin isolinux/memtest86 || true
-	cp initrd.gz boot/vmlinuz isolinux/
+	[ -e $rootdir/boot/memtest86.bin ] && \
+		cp $rootdir/boot/memtest86.bin isolinux/memtest86 || true
+	cp $ROCKCFG_PKG_1ST_STAGE_INITRD.gz $rootdir/boot/vmlinuz isolinux/
 	#
-	cat > $xroot/ROCK/isofs_arch.txt <<- EOT
+	cat > $build_rock/isofs_arch.txt <<- EOT
 		BOOT	-b isolinux/isolinux.bin -c isolinux/boot.catalog
 		BOOTx	-no-emul-boot -boot-load-size 4 -boot-info-table
-		DISK1	build/${ROCKCFG_ID}/ROCK/target/isolinux/ isolinux/
+		DISK1	$disksdir/isolinux/ isolinux/
 	EOT
 fi
 

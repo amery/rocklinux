@@ -1,6 +1,7 @@
 #!/bin/sh
 
-export PATH="/sbin:/bin:/usr/sbin:/usr/bin"
+export PATH="/bin:/usr/bin:/sbin:/usr/sbin"
+
 if type -p gzip > /dev/null ; then
 	umount -d /old_root ; rmdir /old_root
 else
@@ -66,6 +67,7 @@ if [ -z "$autoboot" ]; then
 else
 	cat <<- EOT > /sbin/login-shell
 		#!/bin/bash
+
 		cd
 		case "\$( tty )" in
 		  /dev/vc/1)
@@ -87,4 +89,3 @@ done
 
 exec < /dev/null > /dev/null 2>&1
 while : ; do sleep 1 ; done
-

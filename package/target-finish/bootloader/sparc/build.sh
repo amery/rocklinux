@@ -1,8 +1,8 @@
 
 cd $disksdir
 
-echo "Cleaning boot directory:"
-rm -rfv boot/*-rock boot/System.map boot/kconfig* boot/initrd*img boot/*.b
+# echo "Cleaning boot directory:"
+# rm -rfv boot/*-rock boot/System.map boot/kconfig* boot/initrd*img boot/*.b
 
 echo "Creating silo setup:"
 #
@@ -19,15 +19,12 @@ fi
 tar -O $taropt $x boot/second.b > boot/second.b
 #
 echo "Creating silo config file."
-cp -v $confdir/sparc/{silo.conf,boot.msg,help1.txt} \
-  boot
+cp -v $confdir/sparc/{silo.conf,boot.msg,help1.txt} boot/
 #
-echo "Moving image (initrd) to boot directory."
-mv -v $ROCKCFG_PKG_1ST_STAGE_INITRD.gz boot/
+echo "Copying images to boot directory."
+cp -p $ROCKCFG_PKG_1ST_STAGE_INITRD.gz $rootdir/boot/{vmlinuz32,image} boot/ || true
 #
-buildroot="build/${ROCKCFG_ID}"
-datadir="build/${ROCKCFG_ID}/ROCK/target"
-cat > $xroot/ROCK/isofs_arch.txt <<- EOT
-	BOOT	-G $buildroot/boot/isofs.b -B ...
-	DISK1	$datadir/boot/ boot/
+cat > $build_rock/isofs_arch.txt <<- EOT
+	BOOT	-G $rootdir/boot/isofs.b -B ...
+	DISK1	$disksdir/boot/ boot/
 EOT

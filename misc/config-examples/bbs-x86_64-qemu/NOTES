@@ -1,0 +1,35 @@
+Introduction
+------------
+
+This configuration offers a cross-build of (a subset of) the build-bootstrap
+package selection for the x86_64 architecture as emulated by qemu-system-x86_64.
+It includes support for all the hardware emulated by qemu, a working udev,
+kernel and userland support for TCP/IP networking, and more.
+
+With qemu and the resulting build you can at least:
+- boot the kernel and first stage initrd,
+- execute a shell from the initrd,
+- load the second stage from a CD-ROM,
+- and install packages from the CD on a hard disk.
+
+The packages included should be sufficient for native builds on the targeted
+platform.
+
+Quick Start
+-----------
+
+- Boot from CD with VGA text console:
+    qemu-system-x86_64 -cdrom bbs-x86_64-qemu_cd1.iso -hda /srv/qemu.hda \
+	-boot d
+
+Hints And Known Bugs
+--------------------
+
+- To use the cdrom image in qemu, create it after the build has finished:
+    ./scripts/Create-ISO bbs-x86_64-qemu bbs-x86_64-qemu
+
+- To use a hard disk in qemu, create it with e.g.:
+    qemu-img create /srv/qemu.hda 2048M
+
+- Package installation with stone does not work yet; use mine directly to
+  install packages.

@@ -55,7 +55,7 @@ struct package {
 	char *name;
 	char *alias;
 	char *version;
-	char *prefix;
+	char *extraversion;
 	/* flags must end with a space character
 		(for easily searching for flags). */
 	char *flags;
@@ -77,7 +77,7 @@ int read_pkg_list(const char *file) {
 		free(pkg->name);
 		free(pkg->alias);
 		free(pkg->version);
-		free(pkg->prefix);
+		free(pkg->extraversion);
 		free(pkg->flags);
 		pkg = (pkg_tmp=pkg)->next;
 		free(pkg_tmp);
@@ -120,7 +120,7 @@ int read_pkg_list(const char *file) {
 		pkg_tmp->version = strdup(tok);
 
 		tok = strtok(0, " ");
-		pkg_tmp->prefix = strdup(tok);
+		pkg_tmp->extraversion = strdup(tok);
 
 		tok = strtok(0, "\n");
 		tok[strlen(tok)-1] = 0;
@@ -149,7 +149,7 @@ int write_pkg_list(const char *file) {
 		fprintf(f, " %s %s %s", pkg->prio, pkg->repository, pkg->name);
 		if (strcmp(pkg->name, pkg->alias))
 			fprintf(f, "=%s", pkg->alias);
-		fprintf(f, " %s %s %s0\n", pkg->version, pkg->prefix, pkg->flags);
+		fprintf(f, " %s %s %s0\n", pkg->version, pkg->extraversion, pkg->flags);
 		pkg = pkg->next;
 	}
 
@@ -193,7 +193,7 @@ char * create_pkg_line(struct package *pkg)
 	if (strcmp(pkg->name, pkg->alias))
 		offset += snprintf(line+offset, 1024-offset, "=%s", pkg->alias);
 	offset += snprintf(line+offset, 1024-offset, " %s %s %s0\n",
-		pkg->version, pkg->prefix, pkg->flags);
+		pkg->version, pkg->extraversion, pkg->flags);
 
 	return line;
 }
@@ -260,7 +260,7 @@ int pkgswitch(int mode, char **args)
 				free(pkg->name);
 				free(pkg->alias);
 				free(pkg->version);
-				free(pkg->prefix);
+				free(pkg->extraversion);
 				free(pkg->flags);
 				pkg = (pkg_tmp=pkg)->next;
 				free(pkg_tmp);
@@ -295,7 +295,7 @@ int pkgfork(char *pkgname, char *xpkg, char** opt)
 	fork->name = strdup(pkgname);
 	fork->alias = strdup(xpkg);
 	fork->version = strdup(pkg->version);
-	fork->prefix = strdup(pkg->prefix);
+	fork->extraversion = strdup(pkg->extraversion);
 	fork->flags = strdup(pkg->flags);
 
 	fork->next = pkg->next;
@@ -322,10 +322,11 @@ int pkgfork(char *pkgname, char *xpkg, char** opt)
 			fork->version = strdup(opt[i+1]);
 		}
 
-		else if (!strcmp(opt[i], "prefix"))
+		else if (!strcmp(opt[i], "extraversion"))
 		{
-			free(fork->prefix);
-			fork->prefix = strdup(opt[+1]);
+			free(fork->extraversion);
+			fork->extraversion = (strlen(opt[i+1]) == 0) ?
+				strdup("0") : strdup(opt[i+1]);
 		}
 
 		else if (!strcmp(opt[i], "flag"))

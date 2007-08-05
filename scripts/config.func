@@ -130,10 +130,10 @@ then
 				version)
 					script="$script \$6=\"$2\";"
 					;;
-				prefix)
+				extraversion)
 					script="$script \$7=\"$2\";"
 					;;
-					flag)
+				flag)
 					script="$script sub(\" 0\$\", \" $2 0\");"
 					;;
 				unflag)

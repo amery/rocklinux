@@ -54,7 +54,7 @@ function print_package() {
 	}
 	if ( ! disable ) {
 		print defset, stages, pri, pkgtree,
-		      package, ver, "/" categories flags, 0;
+		      package, ver, extraver categories flags, 0;
 	}
 }
 
@@ -72,7 +72,7 @@ FNR == 1 {
 	ignore = (a[3] ".desc" != a[4]);
 	defset="X"; pri="999.999";
 	stages="----------";
-	ver="0000"; categories=""
+	ver="0000"; extraver=0; categories=""
 	ver_dup=0; flags=""
 }
 
@@ -83,7 +83,11 @@ FNR == 1 {
 
 /^\[(V|VER|VERSION)\]/ {
 	split($0, a, /[ \t]+/);
-	if ( ver_dup == 0 ) ver=a[2];
+	if ( ver_dup == 0 ) {
+		ver=a[2]
+		if ( a[3] == "" ) extraver=0
+		else extraver=a[3]
+	}
 	ver_dup = 1;
 }
 

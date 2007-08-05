@@ -8,10 +8,8 @@ mdlbl_ver="`sed -n 's,.*mdlbl-\(.*\).tar.*,\1,p' \
 
 cd $disksdir
 
-echo "Creating lilo config and cleaning boot directory:"
-rm -rf boot/ ; mkdir -p boot/
+echo "Creating lilo config:"
 cp $confdir/x86/lilo-* boot/
-rm -rfv boot/{grub,System.map*,kconfig*}
 
 echo "Creating floppy disk images:"
 cp $confdir/x86/makeimages.sh .
@@ -47,18 +45,16 @@ then
 	    syslinux-$syslinux_ver/isolinux.bin > isolinux/isolinux.bin
 	#
 	echo "Creating isolinux config file."
-	cp $confdir/x86/isolinux.cfg isolinux/
-	cp $confdir/x86/help?.txt isolinux/
+	cp $confdir/x86/{isolinux.cfg,help?.txt} isolinux/
 	#
 	echo "Copy images to isolinux directory."
 	[ -e $rootdir/boot/memtest86.bin ] && \
 		cp $rootdir/boot/memtest86.bin isolinux/memtest86 || true
-	cp $ROCKCFG_PKG_1ST_STAGE_INITRD.gz $rootdir/boot/vmlinuz isolinux/
+	cp $ROCKCFG_PKG_1ST_STAGE_INITRD.gz $rootdir/boot/vmlinuz* isolinux/
 	#
 	cat > $build_rock/isofs_arch.txt <<- EOT
-		BOOT	-b isolinux/isolinux.bin -c isolinux/boot.catalog
+		BOOT	-b boot/isolinux/isolinux.bin -c boot/isolinux/boot.catalog
 		BOOTx	-no-emul-boot -boot-load-size 4 -boot-info-table
-		DISK1	$disksdir/isolinux/ isolinux/
+		DISK1	$disksdir/isolinux/ boot/isolinux/
 	EOT
 fi
-

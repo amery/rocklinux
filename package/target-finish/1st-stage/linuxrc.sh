@@ -326,7 +326,7 @@ EOF
 		return 1
 	fi
 
-	echo "Extracting 2nd stage filesystem to ram ..."
+	echo "Extracting 2nd stage filesystem to RAM ..."
 	if ! tar ${STAGE_2_COMPRESS_ARG} -C /mnt_root -xf /mnt_source/${filename} ; then
 		echo "Can't extract /mnt/source/${filename}"
 		return 1
@@ -411,10 +411,8 @@ emit_udev_events() { # {{{
 input=1
 [ -z "${autoboot}" ] && autoboot=0
 
-# mount / / -o remount,rw  || echo "Can't remount / read-/writeable"
-# mount / / -o remount,rw  || echo "Can't remount / read-/writeable (for mount log)"
-mount -t tmpfs tmpfs /tmp -o ${TMPFS_OPTIONS} || echo "Can't mount a tmpfs on /tmp"
-mount -t proc proc /proc  || echo "Can't mount proc on /proc!"
+mount / / -o remount,rw -n || echo "Can't remount / read-/writeable"
+mount / / -o remount,rw  || echo "Can't remount / read-/writeable (for mount log)"
 mount -t tmpfs tmpfs /tmp -o ${TMPFS_OPTIONS} || echo "Can't mount a tmpfs on /tmp"
 mount -t proc proc /proc  || echo "Can't mount proc on /proc!"
 

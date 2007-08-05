@@ -151,15 +151,8 @@ touch config/$config/{config{,_usr},packages}
 rm -rf $swpdir
 cp -r config/$config $swpdir
 
-. $swpdir/config
-. $swpdir/config_usr
-
 current=""
-menu_this=0 ; menu_current=0 ; menu_counter=0
-menu_stack=x
-
-spacer="" ; expert=0 ; tabspace="5" ; tabspace_list=""
-commentnr=0 ; editfilenr=0
+menu_this=0 ; menu_current=0 ; menu_stack=x
 
 include ()
 {
@@ -182,6 +175,9 @@ export CFGTEMP_ARCH="$arch"
 export CFGTEMP_ID="$rockver"
 export ROCKCFG_EXPERT=0
 
+. $swpdir/config
+. $swpdir/config_usr
+
 include "architecture/*/preconfig.in"
 include "misc/*/preconfig.in"
 include "target/*/preconfig.in"
@@ -191,15 +187,16 @@ do_config_cycle=1
 recreate_packages=1
 while [ "$do_config_cycle" == 1 ] ; do
 	pkg_cmd="$ROCKCFG_ARCH"
-	[ "$ROCKCFG_DISABLE_BROKEN" = 1 ] && pkg_cmd="${pkg_cmd}-nobroken"
+	[ "$ROCKCFG_DISABLE_BROKEN" = 1 ] && pkg_cmd="${pkg_cmd} -nobroken"
+	pkg_cache="$swpdir/config.pcache.${pkg_cmd// }"
 
 	if [ "$old_pkg_cmd" != "$pkg_cmd" ] ; then
 		recreate_packages=1
 	fi
 	if [ "$recreate_packages" == 1 ] ; then
 		recreate_packages=0
-		if [ -f $swpdir/config.pcache.$pkg_cmd ] ; then
-			cp -a $swpdir/config.pcache.$pkg_cmd $swpdir/packages
+		if [ -f "$pkg_cache" ] ; then
+			cp -a "$pkg_cache" "$swpdir/packages"
 			pkgin
 		else
 			eval "./scripts/Create-PkgList $pkg_cmd" \
@@ -211,11 +208,11 @@ while [ "$do_config_cycle" == 1 ] ; do
 			fi
 			include "$swpdir/preconfig.in.tmp"
 			pkgout
-			cp -a $swpdir/packages $swpdir/config.pcache.$pkg_cmd
+			cp -a "$swpdir/packages" "$pkg_cache"
 		fi
 		old_pkg_cmd="$pkg_cmd"
 	else
-		cp -a $swpdir/config.pcache.$pkg_cmd $swpdir/packages
+		cp -a "$pkg_cache" "$swpdir/packages"
 		pkgin
 	fi
 

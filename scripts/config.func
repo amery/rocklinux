@@ -483,8 +483,9 @@ block_end() {
 
 # has to be called at the beginning of each config cycle
 config_cycle() {
-	expert=0;
-	menu_counter=0;
+	expert=0
+	menu_counter=0 ; commentnr=0 ; editfilenr=0
+	spacer="" ; tabspace="5" ; tabspace_list=""
 }
 
 expert_begin() {

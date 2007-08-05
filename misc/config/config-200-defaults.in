@@ -2,13 +2,34 @@
 
 comment ' '
 menu_begin MENU_DEFAULTS 'Package Defaults'
+	comment 'Default Linux headers'
+	block_begin 3
+		choice ROCKCFG_PKG_LINUX_DEFAULT_HEADERS linux26-headers \
+						$CFGTEMP_LINUX_HEADERS
+	block_end
+
+	if [ "$ROCKCFG_PKG_LINUX_DEFAULT_HEADERS" == linux24-headers ] ; then
+		pkgenable linux24-headers
+		pkgremove linux26-headers
+		pkgremove linux-libc-headers
+	elif [ "$ROCKCFG_PKG_LINUX_DEFAULT_HEADERS" == linux26-headers ] ; then
+		pkgremove linux24-headers
+		pkgenable linux26-headers
+		pkgremove linux-libc-headers
+	elif [ "$ROCKCFG_PKG_LINUX_DEFAULT_HEADERS" == linux-libc-headers ] ; then
+		pkgremove linux24-headers
+		pkgremove linux26-headers
+		pkgenable linux-libc-headers
+	fi
+
+	comment ' '
 	comment "Default compilers"
 	block_begin 3
 		choice ROCKCFG_DEFAULT_CC gcc42 $CFGTEMP_DEFAULT_CC
 		choice ROCKCFG_DEFAULT_KCC gcc42 $CFGTEMP_DEFAULT_KCC
-		choice ROCKCFG_DEFAULT_CXX gcc42 $CFGTEMP_DEFAULT_CXX
-		choice ROCKCFG_DEFAULT_F77 gcc42 $CFGTEMP_DEFAULT_F77
-		choice ROCKCFG_DEFAULT_F95 gcc42 $CFGTEMP_DEFAULT_F95
+		choice ROCKCFG_DEFAULT_CXX gcc42 $CFGTEMP_DEFAULT_CXX 'none' 'No_default_C++_compiler'
+		choice ROCKCFG_DEFAULT_F77 gcc42 $CFGTEMP_DEFAULT_F77 'none' 'No_default_Fortran_77_compiler'
+		choice ROCKCFG_DEFAULT_F95 gcc42 $CFGTEMP_DEFAULT_F95 'none' 'No_default_Fortran_95_compiler'
 	
 		pkgenable $ROCKCFG_DEFAULT_CC
 		pkgenable $ROCKCFG_DEFAULT_KCC
@@ -17,13 +38,18 @@ menu_begin MENU_DEFAULTS 'Package Defaults'
 		pkgenable $ROCKCFG_DEFAULT_F95
 	block_end
 
-	# build non-default CCs in stages 5 and 9
-	# and dedicated C++ and Fortran77 compilers in stages 2 and 9
+	# Build non-default CCs in stages 5 and 9
+	# and dedicated C++ and Fortran77 compilers in stages 2 and 9.
+	# Also remove CORE flag from non-default compilers.
 	k=""; for x in $CFGTEMP_DEFAULT_CC $CFGTEMP_DEFAULT_CXX $CFGTEMP_DEFAULT_F77 ; do
 		if [ "$ROCKCFG_DEFAULT_CC" != "$x" ] ; then
 			if [[ "$ROCKCFG_DEFAULT_CXX" != "$x" && \
-			      "$ROCKCFG_DEFAULT_F77" != "$x" ]]; then
-				k="$k /[ =]$x /   s/^\(.\) [0-9-]*/\1 -----5---9/;";
+			       "$ROCKCFG_DEFAULT_F77" != "$x" ]]; then
+				k="$k /[ =]$x / s/^\(.\) [0-9-]*/\1 -----5---9/;"
+				if [[ "$ROCKCFG_DEFAULT_KCC" != "$x" && \
+				       "$ROCKCFG_DEFAULT_F95" != "$x" ]] ; then
+					k="$k /[ =]$x / s/\(.*\) CORE \(.*\)/\1 \2/;"
+				fi
 			else
 				k="$k /[ =]$x /   s/^\(.\) [0-9-]*/\1 --2------9/;"
 			fi

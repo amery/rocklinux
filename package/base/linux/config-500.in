@@ -20,7 +20,7 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-if pkgcheck "linux=.*" X
+if pkgcheck "linux=.*" .
 then
   menu_begin MENU_PKG_LINUX 'Linux Kernel Options'
 
@@ -29,6 +29,8 @@ then
 
 	if [ "$ROCKCFG_PKG_LINUX_SRC24" = 0 ]; then
 		pkgdisable linux=linux24-source
+	else
+		pkgenable linux=linux24-source
 	fi
 
 	bool 'Place linux26 sources in /usr/src' \
@@ -36,6 +38,8 @@ then
 
 	if [ "$ROCKCFG_PKG_LINUX_SRC26" = 0 ]; then
 		pkgdisable linux=linux26-source
+	else
+		pkgenable linux=linux26-source
 	fi
 
 	bool 'Build and install a linux24 kernel' \
@@ -43,6 +47,8 @@ then
 
 	if [ "$ROCKCFG_PKG_LINUX_IMG24" = 0 ]; then
 		pkgdisable linux=linux24
+	else
+		pkgenable linux=linux24
 	fi
 
 	bool 'Build and install a linux26 kernel' \
@@ -50,6 +56,8 @@ then
 
 	if [ "$ROCKCFG_PKG_LINUX_IMG26" = 0 ]; then
 		pkgdisable linux=linux26
+	else
+		pkgenable linux=linux26
 	fi
 
 	case "$ROCKCFG_PKG_LINUX_IMG24$ROCKCFG_PKG_LINUX_IMG26" in
@@ -68,10 +76,6 @@ then
 			linux26 'Use linux kernel 2.6.x as default kernel'
 		;;
 	esac
-
-	choice ROCKCFG_PKG_LINUX_DEFAULT_HEADERS linux26 \
-		linux26 'Use Linux 2.6 headers as system headers' \
-		linux-libc 'Use linux-libc-headers package as system headers'
 
 	choice ROCKCFG_PKG_LINUX_CONFIG_STYLE modules \
 		none 'Do not perform any automatic kernel configuration' \

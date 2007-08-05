@@ -1,6 +1,6 @@
 #!/bin/bash	
 for x in gcc2 gcc32 gcc33 gcc34 gcc40 gcc41 gcc42 ; do
-	pkgfork gcc $x status O
+	pkgfork gcc $x
 	CFGTEMP_DEFAULT_CC="$x Use_${x}_as_default_C_compiler $CFGTEMP_DEFAULT_CC"
 	CFGTEMP_DEFAULT_KCC="$x Use_${x}_as_default_kernel_compiler $CFGTEMP_DEFAULT_KCC"
 	CFGTEMP_DEFAULT_CXX="$x Use_${x}_as_default_C++_compiler $CFGTEMP_DEFAULT_CXX"

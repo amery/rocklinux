@@ -171,16 +171,10 @@ if expr "`uname -m`" : "powerpc" > /dev/null ; then arch=powerpc ; fi
 if expr "`uname -m`" : "sparc"   > /dev/null ; then arch=sparc   ; fi
 if expr "`uname -m`" : "mips"    > /dev/null ; then arch=mips    ; fi
 
-export CFGTEMP_ARCH="$arch"
-export CFGTEMP_ID="$rockver"
 export ROCKCFG_EXPERT=0
 
 . $swpdir/config
 . $swpdir/config_usr
-
-include "architecture/*/preconfig.in"
-include "misc/*/preconfig.in"
-include "target/*/preconfig.in"
 
 old_pkg_cmd=""
 do_config_cycle=1
@@ -201,21 +195,14 @@ while [ "$do_config_cycle" == 1 ] ; do
 		else
 			eval "./scripts/Create-PkgList $pkg_cmd" \
 				> $swpdir/packages
-			pkgin
-			if [ ! -e "$swpdir/preconfig.in.tmp" ] ; then
-				cat package/*/*/preconfig.in | grep -v "^#" \
-					> "$swpdir/preconfig.in.tmp"
-			fi
-			include "$swpdir/preconfig.in.tmp"
-			pkgout
 			cp -a "$swpdir/packages" "$pkg_cache"
 		fi
 		old_pkg_cmd="$pkg_cmd"
 	else
 		cp -a "$pkg_cache" "$swpdir/packages"
-		pkgin
 	fi
 
+	pkgin
 	rm -f $swpdir/config.{dialog,data,help}{,.*}
 	
 	config_cycle
@@ -225,20 +212,10 @@ while [ "$do_config_cycle" == 1 ] ; do
 
 	. scripts/config.in
 
-	if [ ! -e "$swpdir/postconfig.in.tmp" ] ; then
-		{
-		ls misc/*/postconfig{,-*}.in 2>/dev/null \
-			| LC_ALL=C sort -k3,3 -t"/" | tr '\n' ' ' | xargs cat
-		cat package/*/*/postconfig.in
-		} | grep -v "^#" > "$swpdir/postconfig.in.tmp"
-	fi
-	include "$swpdir/postconfig.in.tmp"
-	include architecture/$ROCKCFG_ARCH/postconfig.in
-	include target/$ROCKCFG_TARGET/postconfig.in
-
 	bprof rockconfig stop
 	bprof main start
-	
+
+	pkgout
 	configtitle="$(printf ' %-50s %6s active packages ]' \
 		"ROCK Linux $rockver Configuration - $config" \
 		"[ $(echo `grep '^X' $swpdir/packages | wc -l`)" )"

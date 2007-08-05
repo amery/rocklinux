@@ -139,6 +139,10 @@ if [ ! -e config/$config ] ; then
 	$0 -oldconfig $profile $nobashmod -cfg $config
 fi
 
+# From scripts/parse-config
+base=$(pwd -P)
+
+. scripts/functions
 . scripts/config.func
 
 mkdir -p config/$config

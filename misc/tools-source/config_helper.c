@@ -357,19 +357,20 @@ int pkgfork(char *pkgname, char *xpkg, char** opt)
 			}
 		}
 	}
+
 	return 0;
 }
 
 int cfghlp_builtin(WORD_LIST *list)
 {
-	char *args[10];
+	char *args[50];
 	int i;
 
-	for (i=0; i<9 && list; i++) {
+	for (i=0; i<50 && list; i++) {
 		args[i] = list->word->word;
 		list = list->next;
 	}
-	for (; i<10; i++) {
+	for (; i<50; i++) {
 		args[i] = "";
 	}
 

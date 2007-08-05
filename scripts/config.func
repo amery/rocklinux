@@ -114,8 +114,17 @@ then
 	#	unflag		CORE
 	#
 	pkgfork() {
-		local script="\$5==\"$1\" {print;\$5=\"$1=$2\";"
-		shift; shift;
+		local pkg=$1 xpkg=$2 script ; shift 2
+
+		parse_desc package/*/$pkg/$pkg.desc P V
+
+		extraver=$( echo $desc_V 0 | cut -f2 -d" " )
+
+		script="\$5==\"$pkg\" {print; \$1=\"${desc_P%% *}\"; \
+			\$2=\"$( echo $desc_P | cut -f2 -d" ")\"; \
+			\$3=\"${desc_P##* }\"; \$5=\"$pkg=$xpkg\"; \
+			\$6=\"${desc_V%% *}\"; \$7=\"$extraver\";"
+
 		while [ -n "$1" ]; do
 			case "$1" in
 				status)
@@ -177,8 +186,16 @@ else
 		return $ret
 	}
 	pkgfork() {
+		local pkg=$1 xpkg=$2 extraver ; shift 2
+
 		bprof pkgfork start
-		cfghlp pkgfork "$@"
+		parse_desc package/*/$pkg/$pkg.desc P V
+
+		extraver=$( echo $desc_V 0 | cut -f2 -d" " )
+
+		cfghlp pkgfork $pkg $xpkg status ${desc_P%% *} priority ${desc_P##* } \
+			stages $( echo $desc_P | cut -f2 -d" ") \
+			version ${desc_V%% *} extraversion $extraver $@
 		bprof pkgfork stop
 	}
 fi

@@ -36,7 +36,7 @@ slink /lib/udev/devices/stderr /proc/self/fd/2 755 0 0
 EOF
 
 (
-	cd $rootdir
+	cd ${rootdir}/
 	find etc/udev/rules.d -maxdepth 1 -type f | while read x
 	do
 		echo "file $x $rootdir/$x 644 0 0"

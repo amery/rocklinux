@@ -90,6 +90,10 @@ do
 			filesdir="$2"
 			shift
 			;;
+		--libexec-dir)
+			libexecdir="$2"
+			shift
+			;;
 		--add-gen-line)
 			additional_gen_lines="$additional_gen_lines;$2"
 			shift
@@ -118,17 +122,19 @@ then
 fi
 
 export BASE=$rootdir/lib/rock_initramfs
-export LIBEXEC=${BASE}/libexec
 
-[ -z "$builddir" ] && builddir="$BASE/build.d"
-[ -z "$filesdir" ] && filesdir="$BASE/files"
-[ "${builddir:0:1}" = "/" ] || builddir="$rootdir/$builddir"
-[ "${filesdir:0:1}" = "/" ] || filesdir="$rootdir/$filesdir"
+[ -z "$builddir" ]   && builddir="$BASE/build.d"
+[ -z "$filesdir" ]   && filesdir="$BASE/files"
+[ -z "$libexecdir" ] && libexecdir="$BASE/libexec"
+[ "${builddir:0:1}" = "/" ]   || builddir="$rootdir/$builddir"
+[ "${filesdir:0:1}" = "/" ]   || filesdir="$rootdir/$filesdir"
+[ "${libexecdir:0:1}" = "/" ] || libexecdir="$rootdir/$libexecdir"
 
 [ ${outfile:0:1} = "/" ] || outfile="`pwd`/$outfile"
 [ ${listoutfile:0:1} = "/" ] || listoutfile="`pwd`/$listoutfile"
 [ ${mod_origin:0:1} = "/" ] || mod_origin="`pwd`/$mod_origin"
 
+[ -z "$rootdir" ] && rootdir=/
 
 cat << EOF
 kernel version: $k_ver
@@ -138,6 +144,7 @@ output file: $outfile
 root dir: $rootdir
 build dir: $builddir
 files dir: $filesdir
+libexec dir: $libexecdir
 EOF
 
 export rootdir
@@ -152,7 +159,7 @@ export TMPDIR="/tmp/irfs-`date +%s`.$$"
 mkdir -pv $TMPDIR
 
 # compile our list of cpio-content
-${LIBEXEC}/build-list.sh > ${TMPDIR}/list
+${libexecdir}/build-list.sh > ${TMPDIR}/list
 echo "$additional_gen_lines" | tr ';' '\n' >> ${TMPDIR}/list
 
 if [ -n "$verbose" ]
@@ -165,7 +172,7 @@ fi
 
 # create and compress cpio archive
 if [ -z "$gen_init_cpio" ] ; then
-	${LIBEXEC}/gen_init_cpio ${TMPDIR}/list | gzip -9 > $outfile
+	${libexecdir}/gen_init_cpio ${TMPDIR}/list | gzip -9 > $outfile
 else
 	${gen_init_cpio} ${TMPDIR}/list | gzip -9 > $outfile
 fi

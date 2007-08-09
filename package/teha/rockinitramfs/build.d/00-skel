@@ -25,6 +25,9 @@ dir /bin 0755 0 0
 dir /sbin 0755 0 0
 dir /etc 0755 0 0
 dir /lib 0755 0 0
+dir /lib64 0755 0 0
+dir /usr 0755 0 0
+slink /usr/lib64 /lib64 0755 0 0
 dir /media 0755 0 0
 dir /mnt 0755 0 0
 dir /proc 0755 0 0

@@ -159,6 +159,7 @@ export TMPDIR="/tmp/irfs-`date +%s`.$$"
 mkdir -pv $TMPDIR
 
 # compile our list of cpio-content
+. ${libexecdir}/functions
 ${libexecdir}/build-list.sh > ${TMPDIR}/list
 echo "$additional_gen_lines" | tr ';' '\n' >> ${TMPDIR}/list
 

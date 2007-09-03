@@ -242,6 +242,10 @@ set_confopt() {
 	else
 		confopt="$confopt --build=\$arch_build --host=\$arch_target"
 	fi
+
+	cmakedefs="-DCMAKE_INSTALL_PREFIX=/${prefix}"
+	cmakedefs="$cmakedefs -DCMAKE_MAN_DIR=${mandir#/${prefix}}"
+	cmakedefs="$cmakedefs -DCMAKE_DOC_DIR=${docdir#/${prefix}}"
 }
 
 #
@@ -740,7 +744,10 @@ build_this_package() {
 			#
 			hook_eval preconf
 			#
-			if [ $runconf = 1 ]; then 
+			if [ $runcmake = 1 -a -f $cmakesrcdir/CMakeLists.txt -a -n "$( type -p cmake )" ]
+			then
+				cmake $cmakesrcdir $cmakedefs
+			elif [ $runconf = 1 ]; then 
 			  if [ -n "$( type -p $configscript )" -o $autogen = 1 ]
 			  then
 				eval_config_command $( eval echo $confopt )

@@ -91,6 +91,10 @@ configscript .. script file name of the GNU autoconf configure script
 configexec .... command for executing $configscript (default=bash)
 pyconfopt ..... options for 'setup.py' - Python setup scripts
 
+runcmake ...... set to '0' if you want to skip running 'cmake .'
+cmakesrcdir ... set to path of srcdir when requesting an out-of-source build
+cmakedefs ..... options passed to cmake
+
 runxmkmf ...... set to '0' if you want to skip running 'xmkmf'
 runmkpl ....... set to '0' if you want to skip running 'perl Makefile.PL'
 runpysetup .... set to '0' if you want to skip running 'python setup.py'

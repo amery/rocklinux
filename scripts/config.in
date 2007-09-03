@@ -263,6 +263,29 @@ fi
 include "$swpdir/config.in.tmp"
 expert_end
 
+[ "$ROCKCFG_CROSSBUILD" = 1 ] && ROCKCFG_ID="$ROCKCFG_ID-cross"
+[ "$ROCKCFG_PSEUDONATIVE" = 1 ] && ROCKCFG_ID="$ROCKCFG_ID-pseudonative"
+ROCKCFG_ID="$ROCKCFG_ID-$ROCKCFG_TARGET"
+[ $ROCKCFG_EXPERT == 1 ] && ROCKCFG_ID="$ROCKCFG_ID-expert"
+[ "$ROCKCFG_IDCKSUM" = 1 ] && \
+	ROCKCFG_ID="`echo $ROCKCFG_ID | cksum | cut -f1 -d' '`"  
+
+const ROCKCFG_SHORTID "$ROCKCFG_ID"
+
+ROCKCFG_ID="$config-$ROCKCFG_ID"
+const ROCKCFG_ID "$ROCKCFG_ID"
+
+if [ ! -e "$swpdir/postconfig.in.tmp" ] ; then
+	{
+	ls misc/*/postconfig{,-*}.in 2>/dev/null \
+		| LC_ALL=C sort -k3,3 -t"/"
+	ls package/*/*/postconfig.in
+	} | xargs grep -h -v "^#" 2> /dev/null > "$swpdir/postconfig.in.tmp"
+fi
+include "$swpdir/postconfig.in.tmp"
+include architecture/$ROCKCFG_ARCH/postconfig.in
+include target/$ROCKCFG_TARGET/postconfig.in
+
 filterscript=""
 if [ "$ROCKCFG_CROSSBUILD" = 1 ] ; then
 	var_append filterscript ' ' 's,^\(. ..\)[^ ]*,\1--------, ;'
@@ -292,26 +315,3 @@ fi
 var_append filterscript ' ' '/^[XO] --* / d ;'
 
 pkgfilter sed -e "$filterscript"
-
-[ "$ROCKCFG_CROSSBUILD" = 1 ] && ROCKCFG_ID="$ROCKCFG_ID-cross"
-[ "$ROCKCFG_PSEUDONATIVE" = 1 ] && ROCKCFG_ID="$ROCKCFG_ID-pseudonative"
-ROCKCFG_ID="$ROCKCFG_ID-$ROCKCFG_TARGET"
-[ $ROCKCFG_EXPERT == 1 ] && ROCKCFG_ID="$ROCKCFG_ID-expert"
-[ "$ROCKCFG_IDCKSUM" = 1 ] && \
-	ROCKCFG_ID="`echo $ROCKCFG_ID | cksum | cut -f1 -d' '`"  
-
-const ROCKCFG_SHORTID "$ROCKCFG_ID"
-
-ROCKCFG_ID="$config-$ROCKCFG_ID"
-const ROCKCFG_ID "$ROCKCFG_ID"
-
-if [ ! -e "$swpdir/postconfig.in.tmp" ] ; then
-	{
-	ls misc/*/postconfig{,-*}.in 2>/dev/null \
-		| LC_ALL=C sort -k3,3 -t"/"
-	ls package/*/*/postconfig.in
-	} | xargs grep -h -v "^#" 2> /dev/null > "$swpdir/postconfig.in.tmp"
-fi
-include "$swpdir/postconfig.in.tmp"
-include architecture/$ROCKCFG_ARCH/postconfig.in
-include target/$ROCKCFG_TARGET/postconfig.in

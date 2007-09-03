@@ -71,6 +71,8 @@
 		CONFIG_INPUT_JOYSTICK=y
 		CONFIG_CPU_FREQ=y
 		CONFIG_HIGHMEM4G=y
+		CONFIG_PARPORT_PC_FIFO=y
+		CONFIG_PARPORT_1284=y
 
 		include(`kernel-common.conf')
 		include(`kernel-scsi.conf')

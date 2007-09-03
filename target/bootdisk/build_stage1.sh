@@ -205,7 +205,7 @@ ext2fs|ext3fs)
 	losetup "${tmpdev}" ${initrd_img}
 
 	echo_status "Writing initrd image file."
-	mkfs.${initrdfs:0:4} -b ${block_size} -m 0 -N 360 -q ${tmpdev} &> /dev/null
+	mkfs.${initrdfs:0:4} -b ${block_size} -m 0 -q ${tmpdev} &> /dev/null
 	mount -t ${initrdfs:0:4} ${tmpdev} ${tmpdir}
 	rmdir ${tmpdir}/lost+found/
 	cp -a ${targetdir}/* ${tmpdir}

@@ -56,15 +56,17 @@
 #endif
 
 #if xpkg == glibc25.*
-[V] 2.5
-[D] 3501909437 glibc-2.5.tar.bz2 http://ftp.gnu.org/gnu/glibc/
+[V] 2.5.1
+[D] 594994693 glibc-2.5.1.tar.bz2 http://ftp.gnu.org/gnu/glibc/
 [D] 4254948014 glibc-ports-2.5.tar.bz2 http://ftp.gnu.org/gnu/glibc/
+[D] 3516243427 glibc-libidn-2.5.1.tar.gz http://ftp.gnu.org/gnu/glibc/
 #endif
 
 #if xpkg == glibc26.*
-[V] 2.6
-[D] 3511308126 glibc-2.6.tar.bz2 http://ftp.gnu.org/gnu/glibc/
-[D] 2841039313 glibc-ports-2.6.tar.bz2 http://ftp.gnu.org/gnu/glibc/
+[V] 2.6.1
+[D] 1182942173 glibc-2.6.1.tar.bz2 http://ftp.gnu.org/gnu/glibc/
+[D] 125264941 glibc-ports-2.6.1.tar.bz2 http://ftp.gnu.org/gnu/glibc/
+[D] 1906445728 glibc-libidn-2.6.1.tar.gz http://ftp.gnu.org/gnu/glibc/
 #endif
 
 [CD] <COPY> cp $cachedir/glibc2[2356].cache $confdir/$pkg.cache

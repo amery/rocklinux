@@ -65,7 +65,9 @@ sed -i -e "s,^STAGE_2_BIG_IMAGE=\"2nd_stage.tar.gz\"$,STAGE_2_BIG_IMAGE=\"${ROCK
        -e "s,^STAGE_2_SMALL_IMAGE=\"2nd_stage_small.tar.gz\"$,STAGE_2_SMALL_IMAGE=\"${ROCKCFG_SHORTID}/2nd_stage_small.tar.gz\"," \
        sbin/init
 
-libdirs="${rootdir}/lib `sed -e"s,^\(.*\),${rootdir}\1," ${rootdir}/etc/ld.so.conf | tr '\n' ' '`"
+libdirs="${rootdir}/$multilib ${rootdir}/usr/$multilib \
+	`sed -r -e'/^[ 	]*(#|$)/ d' -e"s,^(.*),${rootdir}\1," -e"s,/lib(/|$),/$multilib\1,p" \
+		${rootdir}/etc/ld.so.conf | uniq | tr '\n' ' '`"
 
 needed_libs() {
 	local x="${1}" library

@@ -193,34 +193,36 @@ export ROCK_XPKG=$xpkg
 # Set permissions and ownership of $buildir; $base/build might have different ones.
 mkdir -p "$builddir"; chmod 700 "$builddir" ; chown 0:0 "$builddir"
 
-pushd "$xroot/" >/dev/null || exit 1
-
-realconf=$(cd $base/config; pwd -P)
-realdown=$(cd $base/download; pwd -P)
-realbase=$(dirname $(cd $base/scripts; pwd -P))
-
-if [ ! -e ROCK/loop/scripts ]; then
-	mkdir -p ROCK/{loop,config,download}
-	mount --bind $realbase $PWD/ROCK/loop
-	mount --bind $realconf $PWD/ROCK/config
-	mount --bind $realdown $PWD/ROCK/download
+if [ "$xroot" ] ; then
+	pushd "$xroot/" >/dev/null || exit 1
+	
+	realconf=$(cd $base/config; pwd -P)
+	realdown=$(cd $base/download; pwd -P)
+	realbase=$(dirname $(cd $base/scripts; pwd -P))
+	
+	if [ ! -e ROCK/loop/scripts ]; then
+		mkdir -p ROCK/{loop,config,download}
+		mount --bind $realbase $PWD/ROCK/loop
+		mount --bind $realconf $PWD/ROCK/config
+		mount --bind $realdown $PWD/ROCK/download
+	fi
+	
+	for x in Documentation architecture misc package scripts target; do
+		if [ ! -e ROCK/$x ]; then ln -s "loop/$x" "ROCK/$x"; fi
+	done
+	
+	if [ ! -e "ROCK/build/$ROCKCFG_ID" ]; then
+		mkdir -p "ROCK/build"
+		ln -snf ../.. "ROCK/build/$ROCKCFG_ID"
+	fi
+	
+	# If build is a symlink to somewhere else (NFS share for clusterbuild
+	# usually) we do _not_ want to extract our stuff there.
+	# Network latency!
+	ln -sf loop/src.$xpkg.$id ROCK/src.$xpkg.$id
+	
+	popd >/dev/null
 fi
-
-for x in Documentation architecture misc package scripts target; do
-	if [ ! -e ROCK/$x ]; then ln -s "loop/$x" "ROCK/$x"; fi
-done
-
-if [ ! -e "ROCK/build/$ROCKCFG_ID" ]; then
-	mkdir -p "ROCK/build"
-	ln -snf ../.. "ROCK/build/$ROCKCFG_ID"
-fi
-
-# If build is a symlink to somewhere else (NFS share for clusterbuild
-# usually) we do _not_ want to extract our stuff there.
-# Network latency!
-ln -sf loop/src.$xpkg.$id ROCK/src.$xpkg.$id
-
-popd >/dev/null
 
 if [ "$chroot" = 1 ] ; then
 

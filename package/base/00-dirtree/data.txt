@@ -43,7 +43,6 @@ m etc/profile.d
 m etc/stone.d
 m etc/skel
 m home
-m lib
 m lib/modules
 m media
 m mnt
@@ -58,7 +57,6 @@ m usr
 m usr/bin
 m usr/games
 m usr/include
-m usr/lib
 m usr/local
 m usr/local/bin
 m usr/local/etc
@@ -128,9 +126,6 @@ l usr/tmp ../var/tmp
 l usr/var ../var
 l var/spool/mail ../mail
 l var/state/pkgtool ../adm
-
-l64 lib64 lib
-l64 usr/lib64 lib
 
 chmod 0700 root
 chmod ugo=rwxt tmp

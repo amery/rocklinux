@@ -97,8 +97,6 @@ block_begin 7
 			size	'Hard optimise for size (recommended)'		\
 			lazy	'Lazy optimisation (for debugging binaries)'	\
 			test	'Only optimize toolchain (for fast builds)'
-	
-		bool 'Build and use a (pseudo-)cross compiler' ROCKCFG_USE_CROSSCC 1
 	    expert_end
 	bool 'This is a cross-build between architectures' ROCKCFG_CROSSBUILD 0
 	if [ "$ROCKCFG_CROSSBUILD" = 1 ] ; then
@@ -110,7 +108,6 @@ block_begin 7
 			comment '-- might cause damage on your build system if it is not read-only. So'
 			comment '-- only run this if your /{bin,lib,usr,..} is somehow write-protected.'
 		fi
-		ROCKCFGSET_USE_CROSSCC=1
 		const ROCKCFG_PSEUDONATIVE 0
 	    block_end
 	else
@@ -123,8 +120,6 @@ block_begin 7
 				ROCKCFG_PSEUDONATIVE_NATIVEHOST ''
 			text 'NFSROOT to be mounted on native host' \
 				ROCKCFG_PSEUDONATIVE_NFSROOT "$HOSTNAME:$PWD"
-
-			ROCKCFGSET_USE_CROSSCC=1
 		fi
 	fi
 block_end
@@ -288,26 +283,25 @@ include target/$ROCKCFG_TARGET/postconfig.in
 
 filterscript=""
 if [ "$ROCKCFG_CROSSBUILD" = 1 ] ; then
-	var_append filterscript ' ' 's,^\(. ..\)[^ ]*,\1--------, ;'
+	var_append filterscript ' ' 's,^\(. ...\)[^ ]*,\1-------, ;'
+	var_append filterscript ' ' 's,^\(. .\)?,\1-, ;'
 	if [ $ROCKCFG_CROSS_TESTALL = 1 ]; then
-		var_append filterscript ' ' 's,^\(. .\)?,\11, ;'
+		var_append filterscript ' ' 's,^\(. ..\)?,\12, ;'
 	else
-		var_append filterscript ' ' 's,^\(. .\)?,\1-, ;'
+		var_append filterscript ' ' 's,^\(. ..\)?,\1-, ;'
 	fi
-	var_append filterscript ' ' 's,^\(. .\)X,\11, ; s,^\(. \)X,\1-, ;'
+	var_append filterscript ' ' 's,^\(. .\)X,\11, ; s,^\(. \)X,\1-, ; s,^\(. ..\)X,\12, ;'
 else
-	var_append filterscript ' ' 's,^\(. .\)[?X],\1-, ;'
+	var_append filterscript ' ' 's,^\(. .\)[?X],\1-, ; s,^\(. ..\)[?X],\1-, ;'
 	if [ "$ROCKCFG_PSEUDONATIVE" = 1 ] ; then
 		var_append filterscript ' ' 's,^\(. \)X,\10, ;'
 	else
 		var_append filterscript ' ' 's,^\(. \)X,\1-, ;'
 	fi
 fi
-
-if [ $ROCKCFG_USE_CROSSCC != 1 ]; then
-	var_append filterscript ' ' 's,^\([XO] \)0,\1-, ;'
+if [ "$ROCKCFG_MULTILIB" = 1 ] ; then
+	var_append filterscript ' ' '/ MULTILIB / { h ; s,\(\( [^ ]*\)\{3\}\) \([^ ]*\),\1 \3=\3-32bit, ; G } ;'
 fi
-
 if [ $ROCKCFG_DO_REBUILD_STAGE != 1 ]; then
 	var_append filterscript ' ' 's,^\([XO] [^ ]*\)9 ,\1- , ;'
 fi

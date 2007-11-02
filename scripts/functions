@@ -179,68 +179,78 @@ column_clean_tab() {
 # Re-run it in the package .conf file if you modify $prefix
 #
 set_confopt() {
-	confopt="--prefix=$root/$prefix"
-
-	bindir="$root/$prefix/bin"
-	confopt="$confopt --bindir=\$bindir"
-
-	sbindir="$root/$prefix/sbin"
-	confopt="$confopt --sbindir=\$sbindir"
-
-	libdir="$root/$prefix/lib"
-	confopt="$confopt --libdir=\$libdir"
+	confopt="--prefix=$instroot/$prefix"
+	
+	bindir="$instroot/$prefix/bin"
+	sbindir="$instroot/$prefix/sbin"
 
 	if [ -z "$prefix" ]; then
-		datadir="$root/usr/share"
-		includedir="$root/usr/include"
+		datadir="$instroot/usr/share"
+		includedir="$instroot/usr/include"
 
-		docdir="$root/usr/share/doc/$xpkg"
-		infodir="$root/usr/share/info"
-		mandir="$root/usr/share/man"
+		docdir="$instroot/usr/share/doc/$xpkg"
+		infodir="$instroot/usr/share/info"
+		mandir="$instroot/usr/share/man"
+
 	else
-		datadir="$root/$prefix/share"
-		includedir="$root/$prefix/include"
+		datadir="$instroot/$prefix/share"
+		includedir="$instroot/$prefix/include"
 
-		docdir="$root/$prefix/share/doc/$xpkg"
-		infodir="$root/$prefix/share/info"
-		mandir="$root/$prefix/share/man"
+		docdir="$instroot/$prefix/share/doc/$xpkg"
+		infodir="$instroot/$prefix/share/info"
+		mandir="$instroot/$prefix/share/man"
 	fi
-	confopt="$confopt --datadir=\$datadir"
-	confopt="$confopt --includedir=\$includedir"
-
-	confopt="$confopt --infodir=\$infodir"
-	confopt="$confopt --mandir=\$mandir"
 
 	if [ "${prefix#opt/}" != "$prefix" ] ; then
-		sysconfdir="$root/etc/$prefix"
-		localstatedir="$root/var/$prefix"
+		sysconfdir="$instroot/etc/$prefix"
+		localstatedir="$instroot/var/$prefix"
 	elif [ "${prefix#usr}" != "$prefix"  ] ; then
-		sysconfdir="$root/etc"
-		localstatedir="$root/var"
+		sysconfdir="$instroot/etc"
+		localstatedir="$instroot/var"
 	else
-		sysconfdir="$root/$prefix/etc"
-		localstatedir="$root/$prefix/var"
+		sysconfdir="$instroot/$prefix/etc"
+		localstatedir="$instroot/$prefix/var"
 	fi
-	confopt="$confopt --sysconfdir=\$sysconfdir"
-	confopt="$confopt --localstatedir=\$localstatedir"
+
+	libdir="$root/$prefix/$multilib"
+
+	var_append confopt ' ' '--bindir=$bindir'
+	var_append confopt ' ' '--sbindir=$sbindir'
+
+	var_append confopt ' ' '--datadir=$datadir'
+	var_append confopt ' ' '--includedir=$includedir'
+
+	var_append confopt ' ' '--infodir=$infodir'
+	var_append confopt ' ' '--mandir=$mandir'
+
+	var_append confopt ' ' '--sysconfdir=$sysconfdir'
+	var_append confopt ' ' '--localstatedir=$localstatedir'
+
+	var_append confopt ' ' '--libdir=$libdir'
 
 	if [ "$ROCKCFG_CONFIGURE_OPTS" ] ; then
-		confopt="$confopt $ROCKCFG_CONFIGURE_OPTS"
+		var_append confopt ' ' "$ROCKCFG_CONFIGURE_OPTS"
 	fi
 
 	if [ "$ROCKCFG_DEBUG" = 0 ] ; then
-		confopt="$confopt --disable-debug"
+		var_append confopt ' ' '--disable-debug'
 	fi
 
 	if [ "$stagelevel" -le 1 -o "$ROCKCFG_DISABLE_NLS" = 1 ] ; then
 		confopt="${confopt//--enable-nls/} --disable-nls"
 	fi
 
-	confopt="$confopt \$extraconfopt"
+	var_append confopt ' ' '$extraconfopt'
+
 	if [ "$stagelevel" -eq 0 ]; then
-		confopt="$confopt --target=\$arch_target --host=\$arch_build"
+		var_append confopt ' ' "--host=$arch_build --target=$arch_target"
 	else
-		confopt="$confopt --build=\$arch_build --host=\$arch_target"
+		var_append confopt ' ' "--build=$arch_build"
+		if [[ "$ROCKCFG_MULTILIB" = 1 && "$xpkg" = *-32bit ]] ; then
+			var_append confopt ' ' "--host=$arch_target32"
+		else
+			var_append confopt ' ' "--host=$arch_target"
+		fi
 	fi
 
 	cmakedefs="-DCMAKE_INSTALL_PREFIX=/${prefix}"
@@ -279,7 +289,7 @@ function eval_config_command() {
 			autoconf
 		fi
 	fi
-	if [ $stagelevel -le 1 ] ; then
+	if [ $stagelevel -le 2 ] ; then
 		create_config_cache >> config.cache
 		grep -q '.--cache-file=' $configscript &&
 			set -- "$@" "--cache-file=config.cache"
@@ -455,7 +465,7 @@ create_config_cache() {
 	[ $arch_sizeof_char_p -eq $arch_sizeof_long_long ] && pt="long long"
 	[ -n "$pt" ] && echo "db_cv_alignp_t=\"unsigned $pt\""
 
-	echo "ac_cv_prog_CC=$CC"
+	echo "ac_cv_prog_CC='$CC'"
 }
 
 # Abort build before actual build starts
@@ -528,11 +538,7 @@ dump_env() {
 pkginstalled() {
 	local pattern="$1" ; pattern="${pattern//+/\\+}"
 
-	if [ $stagelevel = 0 ] ; then
-		ls "$base/build/$ROCKCFG_ID/ROCK/$toolsdir/var/adm/flists" | egrep -q "^($pattern)$"
-	else
-		ls $root/var/adm/flists | egrep -q "^($pattern)$"
-	fi
+	ls $root/var/adm/flists | egrep -q "^($pattern)$"
 }
 
 # Register a window-manager
@@ -727,14 +733,6 @@ build_this_package() {
 					rmemptydir="$x $rmemptydir"
 				fi
 			done
-			if [ ! -e $root/$prefix/man ]; then
-				ln -s ${mandir#$root} $root/$prefix/man
-				rmemptydir="$rmemptydir $root/$prefix/man"
-			fi
-			if [ ! -e $root/$prefix/info ]; then
-				ln -s ${infodir#$root} $root/$prefix/info
-				rmemptydir="$rmemptydir $root/$prefix/info"
-			fi
 		fi
 		
 		if [ ".$custmain" = "." ]

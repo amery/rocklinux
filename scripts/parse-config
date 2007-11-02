@@ -1,3 +1,4 @@
+#!/bin/bash
 #
 # --- ROCK-COPYRIGHT-NOTE-BEGIN ---
 # 
@@ -32,6 +33,7 @@ crossnative=native           ; stagelevel=${stagelevel:-1} ; arch=any
 arch_sizeof_long_long=undef  ; arch_sizeof_int=undef  ; arch_machine=undef
 arch_sizeof_char_p=undef     ; arch_sizeof_long=undef ; arch_bigendian=undef
 arch_sizeof_short=undef      ; arch_target=any-unknown-linux
+arch_target32=               ; arch_target64=
 
 if [ -f config/$config/config ]
 then
@@ -60,19 +62,38 @@ if [ -f "architecture/$arch/archtest.out" ]
 if [ -f "architecture/$arch/archtest.sh" ]
 	then . "architecture/$arch/archtest.sh" ; fi
 
+if [ "$stagelevel" -ge 3 ]
+then
+	if [ -f $base/build/$ROCKCFG_ID/ROCK/$toolsdir/lib/parse-config-fixarch ]
+	then . $base/build/$ROCKCFG_ID/ROCK/$toolsdir/lib/parse-config-fixarch ; fi
+
+	arch_build="$arch_target" ; archprefix=""
+else
+	arch_build="`uname -m`-nocross-linux-gnu"
+
+	if [ -f $base/build/$ROCKCFG_ID/ROCK/$toolsdir/lib/parse-config-fixarch ]
+	then . $base/build/$ROCKCFG_ID/ROCK/$toolsdir/lib/parse-config-fixarch ; fi
+
+	if [ $stagelevel -eq 2 ]; then
+		archprefix="${arch_target}-"
+	fi
+fi
+
 base=$(pwd -P)
 
 if [ "$ROCK_THIS_IS_CHROOT" = 1 ]
 then
 	toolsdir=tools.chroot
 else
-	if [ $stagelevel -le 1 -a "$ROCKCFG_USE_CROSSCC" = 1 ]
+	if [ "$ROCKCFG_CROSSBUILD" == 1 ]
 	then
 		toolsdir=tools.cross
 	else
 		toolsdir=tools.native
 	fi
 fi
+
+[ $stagelevel -ge 3 ] && . /etc/profile
 
 new_path=""
 for x in ${PATH//:/ }; do
@@ -84,16 +105,36 @@ done
 export PATH="${new_path#:}"
 unset new_path
 
-if [ $stagelevel -le 1 -a "$ROCKCFG_USE_CROSSCC" = 1 ] ; then
-	export PATH="$base/build/$ROCKCFG_ID/ROCK/$toolsdir/crosscc:$PATH"
+if [ $stagelevel -le 2 ] ; then
+	export LFS="$base/build/$ROCKCFG_ID"
+else
+	export LFS=""
 fi
+export CLFS="$LFS"
+
+if [ "$ROCKCFG_CROSSBUILD" == 0 ] ; then
+	tools=ROCK/tools.native
+else
+	tools=ROCK/tools.cross
+fi
+cross_tools="$tools"
+
+if [ $stagelevel -le 2 ] ; then
+	export PATH="$LFS/$tools/bin:/bin:/usr/bin:/sbin:/usr/sbin"
+fi
+export CLFS_HOST="$arch_build"
+export CLFS_TARGET="$arch_target" CLFS_TARGET32="$arch_target32"
 
 export PATH="$base/build/$ROCKCFG_ID/ROCK/$toolsdir/bin:$PATH"
 export PATH="$base/build/$ROCKCFG_ID/ROCK/$toolsdir/wrapper:$PATH"
-unset LANG ${!LC_*}; export LC_ALL=C; umask 022
 
-export BUILDCC="cc"   BUILD_CC="cc"   HOSTCC="cc"   HOST_CC="cc"
-export BUILDCXX="c++" BUILD_CXX="c++" HOSTCXX="c++" HOST_CXX="c++"
+export LC_ALL=C; umask 022
+
+# export BUILDCC="cc"   BUILD_CC="cc"   HOSTCC="cc"   HOST_CC="cc"
+# export BUILDCXX="c++" BUILD_CXX="c++" HOSTCXX="c++" HOST_CXX="c++"
+export BUILDCC="gcc"   BUILD_CC="gcc"   HOSTCC="gcc"   HOST_CC="gcc"
+export BUILDCXX="g++" BUILD_CXX="g++" HOSTCXX="g++" HOST_CXX="g++"
+export BUILD32="-m32" BUILD64="-m64"
 
 if [ "$ROCKCFG_LINGUAS" == "all" ] ; then
 	unset LINGUAS
@@ -103,13 +144,9 @@ else
 	export LINGUAS="$ROCKCFG_LINGUAS"
 fi
 
-unset CPP ARFLAGS ASFLAGS CFLAGS CXXFLAGS CPPFLAGS FFLAGS LDFLAGS
-unset LD_LIBRARY_PATH LD_PRELOAD FLWRAPPER C_INCLUDE_PATH CONFIG_SITE
-unset DISPLAY BASH_ENV CDPATH GLOBIGNORE IFS MAIL MAILPATH
-unset POSIXLY_CORRECT PROMPT_COMMAND TIMEFORMAT TMOUT
-
 IFS=$' \t\n'
 set +o posix
+set +h
 
 export STRIP_WRAPPER_MYPATH="$base/build/$ROCKCFG_ID/ROCK/$toolsdir/wrapper"
 export STRIP_WRAPPER_NOLOOP=0
@@ -126,27 +163,8 @@ export CMD_WRAPPER_NOLOOP=0 ; unset CMD_WRAPPER_OTHERS_TMP
 if [ -f $base/build/$ROCKCFG_ID/ROCK/$toolsdir/lib/wrapper-config ]
 then . $base/build/$ROCKCFG_ID/ROCK/$toolsdir/lib/wrapper-config ; fi
 
-if [ "$stagelevel" -gt 1 -o "$ROCKCFG_USE_CROSSCC" = 0 ]
-then
-	if [ -f $base/build/$ROCKCFG_ID/ROCK/$toolsdir/lib/parse-config-fixarch ]
-	then . $base/build/$ROCKCFG_ID/ROCK/$toolsdir/lib/parse-config-fixarch ; fi
-
-	arch_build="$arch_target" ; archprefix=""
-else
-	arch_build="`uname -m`-nocross-linux-gnu"
-
-	if [ -f $base/build/$ROCKCFG_ID/ROCK/$toolsdir/lib/parse-config-fixarch ]
-	then . $base/build/$ROCKCFG_ID/ROCK/$toolsdir/lib/parse-config-fixarch ; fi
-
-	if [ $stagelevel -eq 1 ]; then
-		archprefix="${arch_target}-"
-		if [ ! -f "$base/build/$ROCKCFG_ID/ROCK/$toolsdir/`
-					`crosscc/${archprefix}gcc" ]
-		then archprefix="Cross_CC_not_built_so_far_" ; fi
-	fi
-fi
-
-export CC="${archprefix}cc"	CXX="${archprefix}c++"
+# export CC="${archprefix}cc"	CXX="${archprefix}c++"
+export CC="${archprefix}gcc"	CXX="${archprefix}g++"
 export AS="${archprefix}as"	STRIP="${archprefix}strip"
 export LD="${archprefix}ld"	GASP="${archprefix}gasp"
 export AR="${archprefix}ar"	RANLIB="${archprefix}ranlib"
@@ -154,7 +172,7 @@ export NM="${archprefix}nm"	KCC="${archprefix}kcc"
 export F77="${archprefix}f77"	MAKE="make"
 export AWK="gawk"		SED="sed"
 
-if [ $stagelevel -le 1 -a "$ROCKCFG_PSEUDONATIVE" = 1 ]; then
+if [ $stagelevel -le 2 -a "$ROCKCFG_PSEUDONATIVE" = 1 ]; then
 	export BUILDCC="$BUILDCC -static" BUILDLD="$BUILDLD -static"
 fi
 
@@ -162,4 +180,3 @@ if [ -f /etc/ROCK-PROFILE ]; then
 	# this is the right place for e.g. build process ulimits
 	. /etc/ROCK-PROFILE
 fi
-

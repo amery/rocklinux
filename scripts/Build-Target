@@ -29,7 +29,7 @@
 #   for distribution. 
 # 
 #   This script is the ROCK work-horse. It builds in a chroot environment
-#   (stage 2..9) and goes through a number of build stages:
+#   (stage 3..9) and goes through a number of build stages:
 #
 
 config=default
@@ -332,7 +332,7 @@ pkgloop_package() {
 	pkg_laststage=$(echo "$pkg_stages" | sed "s,-,,g; s,.*\(.\),\1,")
 
 	cmd_root="-root auto"
-	[ $stagelevel -gt 1 ] && cmd_root="$cmd_root -chroot"
+	[ $stagelevel -ge 3 ] && cmd_root="$cmd_root -chroot"
 
 	cmd_buildpkg="./scripts/Build-Pkg -$stagelevel -cfg $config -nopostinst"
 	cmd_buildpkg="$cmd_buildpkg $cmd_root $pkg_basename=$pkg_name"
@@ -464,6 +464,8 @@ build_target_exit() {
 	umount -d -f -l $build_rock/{loop,config,download} 2> /dev/null
 	umount -d -f    $build_root/proc 2> /dev/null
 	umount -d -f -l $build_root/proc 2> /dev/null
+	umount -d -f    $build_root/dev 2> /dev/null
+	umount -d -f -l $build_root/dev 2> /dev/null
 
 	echo_status "READY."
 	echo

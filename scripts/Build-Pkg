@@ -146,14 +146,12 @@ export ROCK_CHECK_SYSTEM_OK=1
 if [ -z "$root" -a $stagelevel -le 1 ] || \
    [ -z "$root" -a $chroot -eq 1 ] || \
    [ "$root" = auto ]; then
-		if [ $stagelevel -gt 0 ]; then root="build/$ROCKCFG_ID"
-		else root="build/$ROCKCFG_ID/ROCK/$toolsdir"; fi
+	root="build/$ROCKCFG_ID"
 fi
 
 [ "$pkgdir" -a "${pkgdir#/}" = "$pkgdir" ] && pkgdir="$base/$pkgdir"
 [ "$root" -a "${root#/}" = "$root" ] && root="$base/$root"
-prefix=${prefix%/} ; prefix=${prefix#/} ; root=${root%/}
-xroot="$root" ; [ $stagelevel -gt 1 ] && root=""
+root=${root%/} ; xroot="$root" ; [ $stagelevel -ge 3 ] && root=""
 
 if [ -z "$id" ] ; then
 	id=`get_unique`
@@ -180,6 +178,11 @@ builddir="$base/src.$xpkg.$id"
 
 # get real pkg name for mapped packages
 . build/$ROCKCFG_ID/ROCK/$toolsdir/lib/pkgmapper
+
+if [ $stagelevel -le 1 ] ; then
+	prefix="$tools"
+fi
+prefix=${prefix%/} ; prefix=${prefix#/}
 
 # set desktop file name
 desktopfiles="$( echo ${base}/package/*/${pkg} )/*.desktop"
@@ -285,6 +288,11 @@ if [ "$chroot" = 1 ] ; then
 
 	if [ ! -f proc/mounts ]; then
 		mount -t proc proc $PWD/proc
+	fi
+	# A /dev with working PTYs is essential for make check in
+	# binutils and gcc.
+	if ! grep "$( pwd -P )/dev" /etc/mtab ; then
+		mount --rbind /dev $PWD/dev
 	fi
 
 	for x in Documentation architecture misc package scripts target; do
@@ -403,16 +411,20 @@ mkdir -p $root/var/adm/{provides,requires,conflicts}
 rm -f $root/var/adm/logs/$stagelevel-$xpkg.{out,log,err}
 
 if [ $this_is_the_2nd_run = 0 ] ; then
-	[ $stagelevel -gt 1 ] && . /etc/profile
 	options="-this_is_the_2nd_run $options $pkg=$xpkg"
-	if [ "$ROCKCFG_CREATE_CACHE" = 1 -a $stagelevel -gt 1 ] ; then
+	if [ "$ROCKCFG_CREATE_CACHE" = 1 -a $stagelevel -ge 3 ] ; then
 
 		mkdir -p $root/var/adm/cache
 		touch $root/var/adm/cache/$xpkg
 		rm -f $root/var/adm/cache/$xpkg.tm
 
 		/usr/bin/time -o "$root/var/adm/cache/$xpkg.tm" \
-		              -f 'buildtime=$(qcalc %U + %S)' $0 $options
+		    -f 'buildtime=$(qcalc %U + %S)' \
+		    env -i HOME=$HOME TERM=$TERM PS1='\u:\w\$ ' PATH="$PATH" \
+		    TZ="$TZ" ROCK_BUILD_TARGET=$ROCK_BUILD_TARGET \
+		    build_root="$build_root" build_rock="$build_rock" \
+		    build_logs="$build_logs" build_pkgs="$build_pkgs" \
+		    ROCK_THIS_IS_CHROOT="$ROCK_THIS_IS_CHROOT" $0 $options
 		returncode=$?
 		[ ! -e "$root/var/adm/cache/$xpkg.tm" ] && exit $returncode
 
@@ -478,7 +490,11 @@ if [ $this_is_the_2nd_run = 0 ] ; then
 
 		exit $returncode
 	else
-		exec $0 $options
+		exec env -i HOME=$HOME TERM=$TERM PS1='\u:\w\$ ' PATH="$PATH" \
+		    TZ="$TZ" ROCK_BUILD_TARGET=$ROCK_BUILD_TARGET \
+		    build_root="$build_root" build_rock="$build_rock" \
+		    build_logs="$build_logs" build_pkgs="$build_pkgs" \
+		    ROCK_THIS_IS_CHROOT="$ROCK_THIS_IS_CHROOT" $0 $options
 	fi
 fi
 
@@ -487,7 +503,25 @@ fi
 # ----  Setting Build Variables
 #
 
-flistroot="bin boot etc lib sbin usr var opt"
+dummydir="$builddir/rootdummy"
+mkdir -p "$dummydir"
+
+if [[ "$xpkg" = *-32bit ]] ; then
+	instroot="$dummydir"
+	libs_only=1
+else
+	instroot="$root"
+	libs_only=0
+fi
+
+#
+if [[ "$ROCKCFG_MULTILIB" = 0 || "$xpkg" = *-32bit ]] ; then
+	multilib="lib"
+else
+	multilib="lib64"
+fi
+
+flistroot="bin boot etc $multilib sbin usr var opt"
 flistrfilter="ldconfig\..*:	.*|.*:	/var/adm/.*"
 flistdel="var/adm/.*|var/tmp/.*|var/lock/.*|var/run/.*|etc/ld.so.cache|usr/tmp/.*|.*\\.old"
 
@@ -495,7 +529,7 @@ pkgsplits=""
 if [ "$ROCKCFG_SPLIT_DEV" != 0 ]; then
 	# this doesn't affect files in /lib, just /.../lib
 	# so there needn't be an exception for linux kernel modules
-	splitreg 40 dev '(/lib/.*\.(la|a|o)$|/include/|/man[23]/)'
+	splitreg 40 dev "(/(lib|$multilib)/.*\.(la|a|o)\$|/include/|/man[23]/)"
 	splitdesc_dev() { desc_I="$desc_I (development files)"; }
 fi
 if [ "$ROCKCFG_SPLIT_DOC" != 0 ]; then
@@ -504,25 +538,24 @@ if [ "$ROCKCFG_SPLIT_DOC" != 0 ]; then
 	splitdesc_doc() { desc_I="$desc_I (documentation)"; }
 fi
 
-if [ $stagelevel -le 1 ]
-then
-	makeopt='CC="$CC" CXX="$CXX" CC_FOR_BUILD="$BUILDCC"'
-	makeopt="$makeopt"' BUILDCC="$BUILDCC" BUILD_CC="$BUILD_CC"'
-	makeopt="$makeopt"' HOSTCC="$HOSTCC"   HOST_CC="$HOST_CC"'
-	makeopt="$makeopt"' STRIP="$STRIP" AR="$AR" LD="$LD"'
-	makeopt="$makeopt"' RANLIB="$RANLIB" NM="$NM"'
+makeopt='CC="$CC" CXX="$CXX"'
+if [ $stagelevel -le 2 ] ; then
+	var_append makeopt ' ' 'CC_FOR_BUILD="$BUILDCC"'
+	var_append makeopt ' ' 'BUILDCC="$BUILDCC" BUILD_CC="$BUILD_CC"'
+	var_append makeopt ' ' 'HOSTCC="$HOSTCC"   HOST_CC="$HOST_CC"'
+	var_append makeopt ' ' 'STRIP="$STRIP" AR="$AR" LD="$LD"'
+	var_append makeopt ' ' 'RANLIB="$RANLIB" NM="$NM"'
+fi
 
-	makeinstopt="$makeopt"' prefix=$root/$prefix install'
+var_append makeinstopt ' ' "$makeopt prefix=\$instroot/\$prefix install"
+var_append makeopt ' ' 'prefix=/$prefix'
 
-	for x in prefix bindir sbindir libdir datadir \
-	         infodir mandir sysconfdir localstatedir \
-	         includedir
-	do
-		makeopt="$makeopt $x=\${$x/${root//\//\\/}/}"
-	done
-else
-	makeopt='prefix=/$prefix CC="$CC" CXX="$CXX"'
-	makeinstopt='prefix=/$prefix CC="$CC" CXX="$CXX" install'
+for x in bindir sbindir datadir includedir \
+    infodir mandir sysconfdir localstatedir ; do
+	var_append makeopt ' ' "$x=\${$x#\$instroot}"
+done
+
+if [ $stagelevel -ge 3 ] ; then
 	flistdel="$flistdel|`echo $base | sed s,^/,,`/.*"
 fi
 
@@ -590,29 +623,34 @@ patchfiles="`ls $confdir/*.patch $confdir/*.patch.$arch \
              $targetdir/xpkg_$xpkg.patch $targetdir/xpkg_$xpkg.patch.$arch \
              2>/dev/null | tr '\n' ' '`"
 
-if [ $stagelevel -le 1 ]; then
+if [ $stagelevel -le 2 ]; then
 	patchfiles="`ls $patchfiles $confdir/*.patch.cross \
 	             $confdir/*.patch.cross.$arch 2>/dev/null | tr '\n' ' '`"
 fi
-if [ $stagelevel -eq 0 ]; then
-	flistroot="$flistroot include share doc info man"
-	flistroot="$flistroot crosscc wrapper $arch_target"
+
+if [ $stagelevel -le 1 -o "$ROCKCFG_CROSSBUILD" = 0 -a $stagelevel -eq 2 ] ; then
 	createdocs=0
 fi
-
 if [ -f $confdir/$pkg.cache ]; then
 	if ! egrep -q '^\[PROVIDES].*\.(so|a)( |$)' $confdir/$pkg.cache; then
 		forcefpic="0"
 	fi
 fi
+if [ $stagelevel -le 1 ] ; then
+	var_append flistroot " " "$tools"
+	flistdel="$flistdel|$tools/info/(dir|standards.info)"
+else
+	flistdel="$flistdel|$tools(/.*|)"
+fi
 
-if [ $stagelevel -gt 1 ]; then
+if [ $stagelevel -ge 3 ]; then
 	for pc_file in $xroot/var/adm/parse-config/* ; do
 		if [ -s "$pc_file" -a "${pc_file##*/}" != "$xpkg" ]
 		then . "$pc_file" ; fi
 	done
 	unset pc_file
 fi
+
 . $base/build/$ROCKCFG_ID/ROCK/$toolsdir/lib/parse-config
 
 set_confopt
@@ -771,6 +809,13 @@ exec 202>&1
 {
     (
 	set -e
+	set +h
+
+	echo "Build-Pkg exec $PATH"
+	
+	echo -e "\n--- ENVIRONMENT Variables ---"
+	set | grep "^[^ ]*="
+	echo -e "--- ENVIRONMENT Variables ---\n"
 
 	if [ $xtrace -eq 1 -o $ROCKCFG_XTRACE -eq 1 ] ;	then
 		PS4=$'=[$FUNCNAME:$LINENO (last \\\$?=$?)> '
@@ -837,7 +882,7 @@ exec 202>&1
 	cat > "$builddir/debug_x.sh" <<- EOT
 		#!/bin/bash
 		export PROMPT_COMMAND='. debug.buildenv; cd .; unset PROMPT_COMMAND'
-		cd "$builddir"; exec bash 200>> build.pid
+		cd "$builddir" ; exec env -i bash --init-file debug.buildenv 200>> build.pid
 	EOT
 	#
 	if [ "$ROCK_THIS_IS_CHROOT" != 1 ]; then
@@ -898,9 +943,10 @@ exec 202>&1
 	fi
 	if [ "$ROCKCFG_FLIST" = "flwrapper" -o \
 	     "$ROCKCFG_FLIST" = "strace" ] ; then
-		if [ "$stagelevel" -le 1 ]
+		if [ "$stagelevel" -le 2 ]
 		then
 			xbase="$( cd $xroot/ 2> /dev/null ; pwd -P )"
+
 			if cat $builddir/fl_wrapper.wlog | sed 's,//*,/,g' | \
 				egrep -qv "[	 ]($base|$xbase|$builddir|/tmp|/usr/tmp|/var/tmp|/var/backups|/proc|/dev)(/|$)"
 			then
@@ -962,7 +1008,7 @@ exec 202>&1
 	splitapply $xpkg "$builddir/flist.split"
 
 	if [ "$ROCKCFG_FLIST" = "flwrapper" -o \
-	     "$ROCKCFG_FLIST" = "strace" ] && [ $stagelevel -gt 1 ] ; then
+	     "$ROCKCFG_FLIST" = "strace" ] && [ $stagelevel -ge 3 ] ; then
 		echo "Calculating build-time package dependencies ..."
 
 		! egrep -v "^($flistrfilter)\$" "$builddir"/fl_wrapper.[rw]log |
@@ -1203,14 +1249,14 @@ EOT
 			done < "$builddir/files.lst"
 		fi
 
-		if [ $stagelevel -ge 2 -a $nopostinst = 0 -a -d /var/adm/postinstall ]; then
+		if [ $stagelevel -ge 3 -a $nopostinst = 0 -a -d /var/adm/postinstall ]; then
 			cp var/adm/flists/$spkg "$(mktemp var/adm/postinstall/${spkg}-install.XXXXXX)"
 		fi
 	  )
 	done
 
 	echo "Making post-install adaptions."
-	if [ $stagelevel -ge 2 -a -f /sbin/ldconfig ] ; then ldconfig ; fi
+	if [ $stagelevel -ge 3 -a -f /sbin/ldconfig ] ; then ldconfig ; fi
 
 	if [ "$ROCKCFG_PARANOIA_CHECK" = 1 ] ; then
 		found_errors=0

@@ -53,18 +53,6 @@ mkdir -p build/$ROCKCFG_ID/ROCK/$toolsdir/bin
 mkdir -p build/$ROCKCFG_ID/ROCK/$toolsdir/wrapper
 mkdir -p build/$ROCKCFG_ID/ROCK/$toolsdir/lib
 
-if [ $toolsdir = tools.cross ]; then
-	mkdir -p build/$ROCKCFG_ID/ROCK/$toolsdir/{var/adm,etc,share,include}
-	[ -L build/$ROCKCFG_ID/ROCK/$toolsdir/usr ] ||
-		ln -s . build/$ROCKCFG_ID/ROCK/$toolsdir/usr
-	[ -L build/$ROCKCFG_ID/ROCK/$toolsdir/sbin ] ||
-		ln -s bin build/$ROCKCFG_ID/ROCK/$toolsdir/sbin
-	[ -L build/$ROCKCFG_ID/ROCK/$toolsdir/var/adm/logs ] ||
-		ln -s ../../../../var/adm/logs \
-		      build/$ROCKCFG_ID/ROCK/$toolsdir/var/adm/logs
-	mkdir -p build/$ROCKCFG_ID/var/adm/logs
-fi
-
 x="$( bash scripts/xfind.sh config/$config/. package/. scripts/. \
 	misc/. architecture/. target/. ! -name '*.cache' \
 	-newer build/$ROCKCFG_ID/ROCK/$toolsdir/.lastupdate \

@@ -323,12 +323,6 @@ ROCKCFG_FLIST
   or modify files while the build is running. This should only be used
   if no other system for creating the file list can be used.
 
-ROCKCFG_USE_CROSSCC
-  This option controls whether to use a pseudo-cross compiler even
-  for native (non-cross) builds. This is needed when the host and
-  target gcc or glibc differ in the ABI.
-  THIS IS STRONGLY RECOMMENDED!
-
 ROCKCFG_DO_REBUILD_STAGE
   This options controls whether to rebuild all packages in the final
   rebuild stage.

@@ -846,11 +846,11 @@ exec 202>&1
 
 	# Create PID file
 	#
-	# The builtin-variable '$$' is not this pid because this proc
+	# The builtin variable '$$' is not this pid because this proc
 	# is just a sub-proc of $$. That's why the $builddir/strace.tmp
 	# hack is required to get the right pid to trace.
 	#
-	# We also conntect filedescriptor 3 with the pid file. So the command
+	# We also connect file descriptor 3 with the pid file. So the command
 	# 'fuser' can be used to create a list of all processes which are part
 	# of this build process.
 	#
@@ -1032,7 +1032,7 @@ exec 202>&1
 
 	echo "Calculating run-time package dependencies from pkg-config files..."
 	grep "\.pc$" "$builddir/flist.split" | while read dummy x ; do
-		x="/$x"
+		x="$root/$x"
 
 		# Only three tags are of interest here. Version: is mandatory.
  		version="`grep -e"^Version:" $x | cut -f2- -d' '`"
@@ -1070,7 +1070,7 @@ exec 202>&1
 
 		echo "<$spkg> Calculating run-time package dependencies from ELF files..."
 		grep "^$spkg: " "$builddir/flist.split" | while read dummy x ; do
-			x="/$x"
+			x="$root/$x"
 
 			# Symbolic links (to ELF files) and non-regular files
 			# are ignored.

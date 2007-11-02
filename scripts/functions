@@ -252,7 +252,7 @@ set_confopt() {
 # eval_config_command $( eval echo $confopt )
 #
 function eval_config_command() {
-	local config_command
+	local config_command x sub_scripts
 
 	for x in /usr/share/automake/*
 	do
@@ -357,7 +357,7 @@ postflist_libs() {
 #
 parse_desc() {
 	local descfilename=$1 ; shift
-	local parser="$( which descparser )" tag tagdata
+	local parser="$( type -p descparser )" tag tagdata
 
 	[ -z "${parser}" ] && parser="$base/src/descparser"
 	if [ ! -x "${parser}" ] ; then
@@ -776,12 +776,15 @@ build_this_package() {
 				#		
 				hook_eval premake
 				if [ "$makeopt"     ]
-				then eval "$MAKE $makeopt"; fi
+				then
+					eval echo "Running: $MAKE ${makeopt//\"/\\\"}"
+					eval "$MAKE $makeopt"; fi
 				hook_eval inmake
 				if [ "$makeinstopt" ]
-				then eval "$MAKE $makeinstopt"; fi
+				then
+					eval echo "Running: $MAKE ${makeinstopt//\"/\\\"}"
+					eval "$MAKE $makeinstopt"; fi
 				hook_eval postmake
-
 			fi
 		else
 			eval "$custmain"

@@ -82,14 +82,6 @@ if [ ! -L /dev/fd/0 ] ; then
 	found_error=1
 fi
 
-if [ -z "`type -p curl`" ] ; then
-	echo
-	echo "System Check: Program 'curl' not found!"
-	echo "The curl utility is needed for Downloading the package"
-	echo "source tars. Install the latest curl version."
-	found_error=1
-fi
-
 if [ -z "`type -p bzip2`" ] ; then
 	echo
 	echo "System Check: Program 'bzip2' not found!"

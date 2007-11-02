@@ -178,6 +178,8 @@ if [ ! -f build/$ROCKCFG_ID/ROCK/$toolsdir/.lastupdate ] ; then
 				echo -n "${z}\$${y}_WRAPPER_FILTER"; z="|"
 			done ; echo '"'
 
+			echo '[ -z "$CMD_WRAPPER_MYPATH" ] && export CMD_WRAPPER_MYPATH="$( dirname "`type -p $0`"; )"'
+
 			echo -n 'exec cmd_wrapper $( basename $0 ) "$@"'
 			eval "outputfilter=\"\$${y}_WRAPPER_OUTPUTFILTER\""
 			[ -n "${outputfilter}" ] && echo -n " | ${outputfilter}"

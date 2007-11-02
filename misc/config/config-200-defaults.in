@@ -27,9 +27,12 @@ menu_begin MENU_DEFAULTS 'Package Defaults'
 	block_begin 3
 		choice ROCKCFG_DEFAULT_CC gcc42 $CFGTEMP_DEFAULT_CC
 		choice ROCKCFG_DEFAULT_KCC gcc42 $CFGTEMP_DEFAULT_KCC
-		choice ROCKCFG_DEFAULT_CXX gcc42 $CFGTEMP_DEFAULT_CXX 'none' 'No_default_C++_compiler'
-		choice ROCKCFG_DEFAULT_F77 gcc42 $CFGTEMP_DEFAULT_F77 'none' 'No_default_Fortran_77_compiler'
-		choice ROCKCFG_DEFAULT_F95 gcc42 $CFGTEMP_DEFAULT_F95 'none' 'No_default_Fortran_95_compiler'
+		choice ROCKCFG_DEFAULT_CXX gcc42 $CFGTEMP_DEFAULT_CXX \
+		    'none'  'No_default_C++_compiler'
+		choice ROCKCFG_DEFAULT_F77 gcc42 $CFGTEMP_DEFAULT_F77 \
+		    'none'  'No_default_Fortran_77_compiler'
+		choice ROCKCFG_DEFAULT_F95 gcc42 $CFGTEMP_DEFAULT_F95 \
+		    'none'  'No_default_Fortran_95_compiler'
 	
 		pkgenable $ROCKCFG_DEFAULT_CC
 		pkgenable $ROCKCFG_DEFAULT_KCC
@@ -39,7 +42,7 @@ menu_begin MENU_DEFAULTS 'Package Defaults'
 	block_end
 
 	# Build non-default CCs in stages 5 and 9
-	# and dedicated C++ and Fortran77 compilers in stages 2 and 9.
+	# and dedicated C++ and Fortran77 compilers in stages 4 and 9.
 	# Also remove CORE flag from non-default compilers.
 	k=""; for x in $CFGTEMP_DEFAULT_CC $CFGTEMP_DEFAULT_CXX $CFGTEMP_DEFAULT_F77 ; do
 		if [ "$ROCKCFG_DEFAULT_CC" != "$x" ] ; then
@@ -51,7 +54,7 @@ menu_begin MENU_DEFAULTS 'Package Defaults'
 					k="$k /[ =]$x / s/\(.*\) CORE \(.*\)/\1 \2/;"
 				fi
 			else
-				k="$k /[ =]$x /   s/^\(.\) [0-9-]*/\1 --2------9/;"
+				k="$k /[ =]$x /   s/^\(.\) [0-9-]*/\1 ----4----9/;"
 			fi
 		fi
 	done

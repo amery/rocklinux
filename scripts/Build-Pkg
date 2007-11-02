@@ -424,7 +424,11 @@ if [ $this_is_the_2nd_run = 0 ] ; then
 		    TZ="$TZ" ROCK_BUILD_TARGET=$ROCK_BUILD_TARGET \
 		    build_root="$build_root" build_rock="$build_rock" \
 		    build_logs="$build_logs" build_pkgs="$build_pkgs" \
-		    ROCK_THIS_IS_CHROOT="$ROCK_THIS_IS_CHROOT" $0 $options
+		    ROCK_THIS_IS_CHROOT="$ROCK_THIS_IS_CHROOT" \
+		    FLWRAPPER_WLOG="$FLWRAPPER_WLOG" FLWRAPPER_RLOG="$FLWRAPPER_RLOG" \
+		    FLWRAPPER_BASEPID="$FLWRAPPER_BASEPID" FLWRAPPER="$FLWRAPPER" \
+		    LD_PRELOAD="${LD_PRELOAD}" \
+		    $0 $options
 		returncode=$?
 		[ ! -e "$root/var/adm/cache/$xpkg.tm" ] && exit $returncode
 
@@ -494,7 +498,11 @@ if [ $this_is_the_2nd_run = 0 ] ; then
 		    TZ="$TZ" ROCK_BUILD_TARGET=$ROCK_BUILD_TARGET \
 		    build_root="$build_root" build_rock="$build_rock" \
 		    build_logs="$build_logs" build_pkgs="$build_pkgs" \
-		    ROCK_THIS_IS_CHROOT="$ROCK_THIS_IS_CHROOT" $0 $options
+		    ROCK_THIS_IS_CHROOT="$ROCK_THIS_IS_CHROOT" \
+		    FLWRAPPER_WLOG="$FLWRAPPER_WLOG" FLWRAPPER_RLOG="$FLWRAPPER_RLOG" \
+		    FLWRAPPER_BASEPID="$FLWRAPPER_BASEPID" FLWRAPPER="$FLWRAPPER" \
+		    LD_PRELOAD="${LD_PRELOAD}" \
+		    $0 $options
 	fi
 fi
 

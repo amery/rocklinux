@@ -1,10 +1,15 @@
+#!/bin/bash
 
 if [ $ROCKCFG_ARM_OPT != generic ] ; then
 	var_append GCC3_WRAPPER_INSERT " " \
+		"-mcpu=$ROCKCFG_ARM_OPT"
+	var_append GCC4_WRAPPER_INSERT " " \
 		"-mcpu=$ROCKCFG_ARM_OPT"
 fi
 
 if [ $ROCKCFG_ARM_OPT_ARCH != generic ] ; then
 	var_append GCC3_WRAPPER_INSERT " " \
+		"-march=$ROCKCFG_ARM_OPT_ARCH"
+	var_append GCC4_WRAPPER_INSERT " " \
 		"-march=$ROCKCFG_ARM_OPT_ARCH"
 fi

@@ -558,10 +558,12 @@ fi
 var_append makeinstopt ' ' "$makeopt prefix=\$instroot/\$prefix install"
 var_append makeopt ' ' 'prefix=/$prefix'
 
-for x in bindir sbindir datadir includedir \
-    infodir mandir sysconfdir localstatedir ; do
-	var_append makeopt ' ' "$x=\${$x#\$instroot}"
-done
+if [ $stagelevel -le 2 ] ; then
+	for x in bindir sbindir datadir includedir \
+	    infodir mandir sysconfdir localstatedir ; do
+		var_append makeopt ' ' "$x=\${$x#\$instroot}"
+	done
+fi
 
 if [ $stagelevel -ge 3 ] ; then
 	flistdel="$flistdel|`echo $base | sed s,^/,,`/.*"

@@ -20,7 +20,7 @@
 # file for details.
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
-if [ $stagelevel -ge 2 -o $stagelevel -eq 1 -a $pkg = glibc ]
+if [ $stagelevel -ge 2 -o $stagelevel -eq 1 -a $pkg != gcc ]
 then
 
 # set CC, CXX and F77 environment variables
@@ -46,10 +46,10 @@ for x in CC CXX F77 ; do
 done
 unset x y z
 
-if [ "$ROCKCFG_MULTILIB" = 1 -a $stagelevel -ge 1 ] ; then
+if [ $stagelevel -ge 1 ] ; then
 	if [[ "$xpkg" = *-32bit ]] ; then
 		export CC="${CC} ${BUILD32}" CXX="${CXX} ${BUILD32}"
-	else
+	elif [ "$ROCKCFG_MULTILIB" = 1 ] ; then
 		export CC="${CC} ${BUILD64}" CXX="${CXX} ${BUILD64}"
 	fi
 fi

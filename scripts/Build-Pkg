@@ -523,7 +523,7 @@ else
 fi
 
 #
-if [[ "$ROCKCFG_MULTILIB" = 0 || "$xpkg" = *-32bit ]] ; then
+if [[ -z "$arch_target32" || "$xpkg" = *-32bit ]] ; then
 	multilib="lib"
 else
 	multilib="lib64"

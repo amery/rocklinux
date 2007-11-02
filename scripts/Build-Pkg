@@ -143,7 +143,7 @@ export ROCK_CHECK_SYSTEM_OK=1
 . ./scripts/functions
 . ./scripts/parse-config
 
-if [ -z "$root" -a $stagelevel -le 1 ] || \
+if [ -z "$root" -a $stagelevel -le 2 ] || \
    [ -z "$root" -a $chroot -eq 1 ] || \
    [ "$root" = auto ]; then
 	root="build/$ROCKCFG_ID"
@@ -192,6 +192,35 @@ export ROCK_XPKG=$xpkg
 
 # Set permissions and ownership of $buildir; $base/build might have different ones.
 mkdir -p "$builddir"; chmod 700 "$builddir" ; chown 0:0 "$builddir"
+
+pushd "$xroot/" >/dev/null || exit 1
+
+realconf=$(cd $base/config; pwd -P)
+realdown=$(cd $base/download; pwd -P)
+realbase=$(dirname $(cd $base/scripts; pwd -P))
+
+if [ ! -e ROCK/loop/scripts ]; then
+	mkdir -p ROCK/{loop,config,download}
+	mount --bind $realbase $PWD/ROCK/loop
+	mount --bind $realconf $PWD/ROCK/config
+	mount --bind $realdown $PWD/ROCK/download
+fi
+
+for x in Documentation architecture misc package scripts target; do
+	if [ ! -e ROCK/$x ]; then ln -s "loop/$x" "ROCK/$x"; fi
+done
+
+if [ ! -e "ROCK/build/$ROCKCFG_ID" ]; then
+	mkdir -p "ROCK/build"
+	ln -snf ../.. "ROCK/build/$ROCKCFG_ID"
+fi
+
+# If build is a symlink to somewhere else (NFS share for clusterbuild
+# usually) we do _not_ want to extract our stuff there.
+# Network latency!
+ln -sf loop/src.$xpkg.$id ROCK/src.$xpkg.$id
+
+popd >/dev/null
 
 if [ "$chroot" = 1 ] ; then
 
@@ -275,17 +304,6 @@ if [ "$chroot" = 1 ] ; then
 		rm -f ${xroot#/}; ln -s / ${xroot#/}
 	fi
 
-	realconf=$(cd $base/config; pwd -P)
-	realdown=$(cd $base/download; pwd -P)
-	realbase=$(dirname $(cd $base/scripts; pwd -P))
-
-	if [ ! -e ROCK/loop/scripts ]; then
-		mkdir -p ROCK/{loop,config,download}
-		mount --bind $realbase $PWD/ROCK/loop
-		mount --bind $realconf $PWD/ROCK/config
-		mount --bind $realdown $PWD/ROCK/download
-	fi
-
 	if [ ! -f proc/mounts ]; then
 		mount -t proc proc $PWD/proc
 	fi
@@ -294,20 +312,6 @@ if [ "$chroot" = 1 ] ; then
 	if ! grep -q "$( pwd -P )/dev" /etc/mtab ; then
 		mount --rbind /dev $PWD/dev
 	fi
-
-	for x in Documentation architecture misc package scripts target; do
-		if [ ! -e ROCK/$x ]; then ln -s "loop/$x" "ROCK/$x"; fi
-	done
-
-	if [ ! -e "ROCK/build/$ROCKCFG_ID" ]; then
-		mkdir -p "ROCK/build"
-		ln -snf ../.. "ROCK/build/$ROCKCFG_ID"
-	fi
-
-	# If build is a symlink to somewhere else (NFS share for clusterbuild
-	# usually) we do _not_ want to extract our stuff there.
-	# Network latency!
-	ln -s loop/src.$xpkg.$id ROCK/src.$xpkg.$id
 
 	cat > "$builddir/chroot.sh" <<- EOT
 		#!/bin/bash
@@ -511,7 +515,12 @@ fi
 # ----  Setting Build Variables
 #
 
-dummydir="$builddir/rootdummy"
+if [ -z "$root" ] ; then
+	dummydir="$builddir/rootdummy"
+else
+	dummydir="${root}/ROCK/${builddir#$base/}/rootdummy"
+fi
+
 mkdir -p "$dummydir"
 
 if [[ "$xpkg" = *-32bit ]] ; then
@@ -529,7 +538,7 @@ else
 	multilib="lib64"
 fi
 
-flistroot="bin boot etc $multilib sbin usr var opt"
+flistroot="bin boot etc lib $multilib sbin usr var opt"
 flistrfilter="ldconfig\..*:	.*|.*:	/var/adm/.*"
 flistdel="var/adm/.*|var/tmp/.*|var/lock/.*|var/run/.*|etc/ld.so.cache|usr/tmp/.*|.*\\.old"
 
@@ -555,15 +564,8 @@ if [ $stagelevel -le 2 ] ; then
 	var_append makeopt ' ' 'RANLIB="$RANLIB" NM="$NM"'
 fi
 
-var_append makeinstopt ' ' "$makeopt prefix=\$instroot/\$prefix install"
-var_append makeopt ' ' 'prefix=/$prefix'
-
-if [ $stagelevel -le 2 ] ; then
-	for x in bindir sbindir datadir includedir \
-	    infodir mandir sysconfdir localstatedir ; do
-		var_append makeopt ' ' "$x=\${$x#\$instroot}"
-	done
-fi
+makeinstopt="$makeopt install"
+[ "$root" ] && var_append makeinstopt ' ' 'DESTDIR=$root'
 
 if [ $stagelevel -ge 3 ] ; then
 	flistdel="$flistdel|`echo $base | sed s,^/,,`/.*"
@@ -891,7 +893,17 @@ exec 202>&1
 	#
 	cat > "$builddir/debug_x.sh" <<- EOT
 		#!/bin/bash
-		export PROMPT_COMMAND='. debug.buildenv; cd .; unset PROMPT_COMMAND'
+		# export PROMPT_COMMAND='. debug.buildenv; cd .; unset PROMPT_COMMAND'
+		cd "$root"
+		if [ ! -e $PWD/ROCK/loop/scripts ]; then
+			mount --bind $realbase $PWD/ROCK/loop
+			mount --bind $realconf $PWD/ROCK/config
+			mount --bind $realdown $PWD/ROCK/download
+		fi
+		if [ ! -e $PWD/ROCK/src.$xpkg.$id ]; then
+			ln -s loop/src.$xpkg.$id $PWD/ROCK/src.$xpkg.$id
+		fi
+
 		cd "$builddir" ; exec env -i bash --init-file debug.buildenv 200>> build.pid
 	EOT
 	#
@@ -957,13 +969,14 @@ exec 202>&1
 		then
 			xbase="$( cd $xroot/ 2> /dev/null ; pwd -P )"
 
+			egrepexp="[	 ]($base|$xbase|$builddir|/tmp|/usr/lib/(conftest|cf)[0-9]*|/usr/tmp|/var/tmp|/var/backups|/proc|/dev)(/|$)"
 			if cat $builddir/fl_wrapper.wlog | sed 's,//*,/,g' | \
-				egrep -qv "[	 ]($base|$xbase|$builddir|/tmp|/usr/tmp|/var/tmp|/var/backups|/proc|/dev)(/|$)"
+				egrep -qv "$egrepexp"
 			then
 				x="Created file outside basedir: "
 				cat $builddir/fl_wrapper.wlog | sed 's,//*,/,g' | \
-					egrep -v "[ 	]($base|$xbase|$builddir|/tmp|/usr/tmp|/var/tmp|/proc|/dev)(/|$)" | \
-					cut -f2- | sort -u | sed "s,^,$x,"
+					egrep -v "$egrepexp" | cut -f2- | \
+					sort -u | sed "s,^,$x,"
 				echo "base #1: $base"
 				echo "base #2: $xbase"
 				abort

@@ -179,7 +179,7 @@ column_clean_tab() {
 # Re-run it in the package .conf file if you modify $prefix
 #
 set_confopt() {
-	confopt="--prefix=$instroot/$prefix"
+	confopt="--prefix=${instroot#$root}/$prefix"
 	
 	bindir="$instroot/$prefix/bin"
 	sbindir="$instroot/$prefix/sbin"
@@ -214,19 +214,19 @@ set_confopt() {
 
 	libdir="$root/$prefix/$multilib"
 
-	var_append confopt ' ' '--bindir=$bindir'
-	var_append confopt ' ' '--sbindir=$sbindir'
+	var_append confopt ' ' '--bindir=${bindir#$root}'
+	var_append confopt ' ' '--sbindir=${sbindir#$root}'
 
-	var_append confopt ' ' '--datadir=$datadir'
-	var_append confopt ' ' '--includedir=$includedir'
+	var_append confopt ' ' '--datadir=${datadir#$root}'
+	var_append confopt ' ' '--includedir=${includedir#$root}'
 
-	var_append confopt ' ' '--infodir=$infodir'
-	var_append confopt ' ' '--mandir=$mandir'
+	var_append confopt ' ' '--infodir=${infodir#$root}'
+	var_append confopt ' ' '--mandir=${mandir#$root}'
 
-	var_append confopt ' ' '--sysconfdir=$sysconfdir'
-	var_append confopt ' ' '--localstatedir=$localstatedir'
+	var_append confopt ' ' '--sysconfdir=${sysconfdir#$root}'
+	var_append confopt ' ' '--localstatedir=${localstatedir#$root}'
 
-	var_append confopt ' ' '--libdir=$libdir'
+	var_append confopt ' ' '--libdir=${libdir#$root}'
 
 	if [ "$ROCKCFG_CONFIGURE_OPTS" ] ; then
 		var_append confopt ' ' "$ROCKCFG_CONFIGURE_OPTS"
@@ -240,6 +240,7 @@ set_confopt() {
 		confopt="${confopt//--enable-nls/} --disable-nls"
 	fi
 
+	var_append confopt ' ' '--with-gnu-ld'
 	var_append confopt ' ' '$extraconfopt'
 
 	if [ "$stagelevel" -eq 0 ]; then

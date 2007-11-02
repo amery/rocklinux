@@ -1,15 +1,5 @@
 
 /*
-	TODO:
-	get rid of the compiler warnings:
-
-fl_wrapper.c: In function '_Exit':
-fl_wrapper.c:1100: warning: 'noreturn' function does return
-fl_wrapper.c: In function '_exit':
-fl_wrapper.c:1075: warning: 'noreturn' function does return
-fl_wrapper.c: In function 'exit':
-fl_wrapper.c:1050: warning: 'noreturn' function does return
-
 	maybe TODO:
 	wrape clone(); catch termination of child process created with clone()
 */

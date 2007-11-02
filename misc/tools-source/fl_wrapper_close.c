@@ -122,7 +122,8 @@ int fork()
 	if ( rc == 0) copy_fds(caller_pid, getpid());
 #  endif
 
-#  if DEBUG == 1
+#  if FD_TRACKER == 1
+#    if DEBUG == 1
 	struct pid_reg *pid = pid_head;
 	while (pid)
 	{
@@ -137,14 +138,14 @@ int fork()
 		}
 		pid = pid->next;
 	}
+#    endif
 #  endif
-
 	errno=old_errno;
 	return rc;
 }
 
 extern void exit(int status) __attribute__ ((noreturn));
-void (*orig_exit)(int status) = 0;
+void (*orig_exit)(int status) __attribute__ ((noreturn)) = 0;
 
 void exit(int status)
 {
@@ -160,11 +161,13 @@ void exit(int status)
 	struct pid_reg *pid = *find_pid(getpid());
 	if (pid)
 	{
-		struct fd_reg **fd_iter = &pid->fd_head;
-		while (*fd_iter)
+		struct fd_reg *fd_iter = pid->fd_head;
+		while (fd_iter)
 		{
-			handle_file_access_after("exit", (*fd_iter)->filename, &(*fd_iter)->status);
-			deregister_fd((*fd_iter)->fd);
+			struct fd_reg *new_fd_iter=fd_iter->next;
+			handle_file_access_after("exit", fd_iter->filename, &fd_iter->status);
+			deregister_fd(fd_iter->fd);
+			fd_iter=new_fd_iter;
 		}
 	}
 #  endif
@@ -174,7 +177,7 @@ void exit(int status)
 }
 
 extern void _exit(int status) __attribute__ ((noreturn));
-void (*orig__exit)(int status) = 0;
+void (*orig__exit)(int status) __attribute__ ((noreturn)) = 0;
 
 void _exit(int status)
 {
@@ -190,11 +193,13 @@ void _exit(int status)
 	struct pid_reg *pid = *find_pid(getpid());
 	if (pid)
 	{
-		struct fd_reg **fd_iter = &pid->fd_head;
-		while (*fd_iter)
+		struct fd_reg *fd_iter = pid->fd_head;
+		while (fd_iter)
 		{
-			handle_file_access_after("_exit", (*fd_iter)->filename, &(*fd_iter)->status);
-			deregister_fd((*fd_iter)->fd);
+			struct fd_reg *new_fd_iter=fd_iter->next;
+			handle_file_access_after("_exit", fd_iter->filename, &fd_iter->status);
+			deregister_fd(fd_iter->fd);
+			fd_iter=new_fd_iter;
 		}
 	}
 #  endif
@@ -204,7 +209,7 @@ void _exit(int status)
 }
 
 extern void _Exit(int status) __attribute__ ((noreturn));
-void (*orig__Exit)(int status) = 0;
+void (*orig__Exit)(int status) __attribute__ ((noreturn)) = 0;
 
 void _Exit(int status)
 {
@@ -220,11 +225,13 @@ void _Exit(int status)
 	struct pid_reg *pid = *find_pid(getpid());
 	if (pid)
 	{
-		struct fd_reg **fd_iter = &pid->fd_head;
-		while (*fd_iter)
+		struct fd_reg *fd_iter = pid->fd_head;
+		while (fd_iter)
 		{
-			handle_file_access_after("_Exit", (*fd_iter)->filename, &(*fd_iter)->status);
-			deregister_fd((*fd_iter)->fd);
+			struct fd_reg *new_fd_iter=fd_iter->next;
+			handle_file_access_after("_Exit", fd_iter->filename, &fd_iter->status);
+			deregister_fd(fd_iter->fd);
+			fd_iter=new_fd_iter;
 		}
 	}
 #  endif

@@ -37,7 +37,7 @@
 
 /* Headers and prototypes */
 
-#define DEBUG 0
+#define DEBUG 1
 #define DLOPEN_LIBC 1
 #define FD_TRACKER 1
 
@@ -93,16 +93,6 @@ int debug = 0;
 
 
 /*
-	TODO:
-	get rid of the compiler warnings:
-
-fl_wrapper.c: In function '_Exit':
-fl_wrapper.c:1100: warning: 'noreturn' function does return
-fl_wrapper.c: In function '_exit':
-fl_wrapper.c:1075: warning: 'noreturn' function does return
-fl_wrapper.c: In function 'exit':
-fl_wrapper.c:1050: warning: 'noreturn' function does return
-
 	maybe TODO:
 	wrape clone(); catch termination of child process created with clone()
 */
@@ -1203,7 +1193,8 @@ int fork()
 	if ( rc == 0) copy_fds(caller_pid, getpid());
 #  endif
 
-#  if DEBUG == 1
+#  if FD_TRACKER == 1
+#    if DEBUG == 1
 	struct pid_reg *pid = pid_head;
 	while (pid)
 	{
@@ -1218,14 +1209,14 @@ int fork()
 		}
 		pid = pid->next;
 	}
+#    endif
 #  endif
-
 	errno=old_errno;
 	return rc;
 }
 
 extern void exit(int status) __attribute__ ((noreturn));
-void (*orig_exit)(int status) = 0;
+void (*orig_exit)(int status) __attribute__ ((noreturn)) = 0;
 
 void exit(int status)
 {
@@ -1241,11 +1232,13 @@ void exit(int status)
 	struct pid_reg *pid = *find_pid(getpid());
 	if (pid)
 	{
-		struct fd_reg **fd_iter = &pid->fd_head;
-		while (*fd_iter)
+		struct fd_reg *fd_iter = pid->fd_head;
+		while (fd_iter)
 		{
-			handle_file_access_after("exit", (*fd_iter)->filename, &(*fd_iter)->status);
-			deregister_fd((*fd_iter)->fd);
+			struct fd_reg *new_fd_iter=fd_iter->next;
+			handle_file_access_after("exit", fd_iter->filename, &fd_iter->status);
+			deregister_fd(fd_iter->fd);
+			fd_iter=new_fd_iter;
 		}
 	}
 #  endif
@@ -1255,7 +1248,7 @@ void exit(int status)
 }
 
 extern void _exit(int status) __attribute__ ((noreturn));
-void (*orig__exit)(int status) = 0;
+void (*orig__exit)(int status) __attribute__ ((noreturn)) = 0;
 
 void _exit(int status)
 {
@@ -1271,11 +1264,13 @@ void _exit(int status)
 	struct pid_reg *pid = *find_pid(getpid());
 	if (pid)
 	{
-		struct fd_reg **fd_iter = &pid->fd_head;
-		while (*fd_iter)
+		struct fd_reg *fd_iter = pid->fd_head;
+		while (fd_iter)
 		{
-			handle_file_access_after("_exit", (*fd_iter)->filename, &(*fd_iter)->status);
-			deregister_fd((*fd_iter)->fd);
+			struct fd_reg *new_fd_iter=fd_iter->next;
+			handle_file_access_after("_exit", fd_iter->filename, &fd_iter->status);
+			deregister_fd(fd_iter->fd);
+			fd_iter=new_fd_iter;
 		}
 	}
 #  endif
@@ -1285,7 +1280,7 @@ void _exit(int status)
 }
 
 extern void _Exit(int status) __attribute__ ((noreturn));
-void (*orig__Exit)(int status) = 0;
+void (*orig__Exit)(int status) __attribute__ ((noreturn)) = 0;
 
 void _Exit(int status)
 {
@@ -1301,11 +1296,13 @@ void _Exit(int status)
 	struct pid_reg *pid = *find_pid(getpid());
 	if (pid)
 	{
-		struct fd_reg **fd_iter = &pid->fd_head;
-		while (*fd_iter)
+		struct fd_reg *fd_iter = pid->fd_head;
+		while (fd_iter)
 		{
-			handle_file_access_after("_Exit", (*fd_iter)->filename, &(*fd_iter)->status);
-			deregister_fd((*fd_iter)->fd);
+			struct fd_reg *new_fd_iter=fd_iter->next;
+			handle_file_access_after("_Exit", fd_iter->filename, &fd_iter->status);
+			deregister_fd(fd_iter->fd);
+			fd_iter=new_fd_iter;
 		}
 	}
 #  endif
@@ -1503,6 +1500,8 @@ int utimes(const char* f, struct timeval* t)
 	return rc;
 }
 
+extern int fcntl(int fd, int cmd, ...);
+
 extern int execv(const char* f, char* const a[]);
 int (*orig_execv)(const char* f, char* const a[]) = 0;
 
@@ -1513,6 +1512,7 @@ int execv(const char* f, char* const a[])
 
 	handle_file_access_after("execv", f, 0);
 	if (!orig_execv) orig_execv = get_dl_symbol("execv");
+	if (!orig_fcntl) orig_fcntl = get_dl_symbol("fcntl");
 
 #  if FD_TRACKER == 1
 	struct pid_reg *pid = *find_pid(getpid());
@@ -1522,7 +1522,7 @@ int execv(const char* f, char* const a[])
 		fd_iter = &pid->fd_head;
 		while (*fd_iter != 0)
 		{
-			(*fd_iter)->closed = fcntl((*fd_iter)->fd, F_GETFD) & FD_CLOEXEC;
+			(*fd_iter)->closed = orig_fcntl((*fd_iter)->fd, F_GETFD) & FD_CLOEXEC;
 			fd_iter = &(*fd_iter)->next;
 		}
 		pid->executed = 1;
@@ -1555,6 +1555,8 @@ int execv(const char* f, char* const a[])
 	return rc;
 }
 
+extern int fcntl(int fd, int cmd, ...);
+
 extern int execve(const char* f, char* const a[], char* const e[]);
 int (*orig_execve)(const char* f, char* const a[], char* const e[]) = 0;
 
@@ -1565,6 +1567,7 @@ int execve(const char* f, char* const a[], char* const e[])
 
 	handle_file_access_after("execve", f, 0);
 	if (!orig_execve) orig_execve = get_dl_symbol("execve");
+	if (!orig_fcntl) orig_fcntl = get_dl_symbol("fcntl");
 
 #  if FD_TRACKER == 1
 	struct pid_reg *pid = *find_pid(getpid());
@@ -1574,7 +1577,7 @@ int execve(const char* f, char* const a[], char* const e[])
 		fd_iter = &pid->fd_head;
 		while (*fd_iter != 0)
 		{
-			(*fd_iter)->closed = fcntl((*fd_iter)->fd, F_GETFD) & FD_CLOEXEC;
+			(*fd_iter)->closed = orig_fcntl((*fd_iter)->fd, F_GETFD) & FD_CLOEXEC;
 			fd_iter = &(*fd_iter)->next;
 		}
 		pid->executed = 1;
@@ -1642,19 +1645,24 @@ static void * get_dl_symbol(char * symname)
         return rc;
 }
 
+extern int open(const char* f, int a, ...);
+
 static int pid2ppid(int pid)
 {
 	char buffer[100];
 	int fd, rc, ppid = 0;
 
+	if (!orig_open) orig_open = get_dl_symbol("open");
+	if (!orig_close) orig_close = get_dl_symbol("close");
+
 	sprintf(buffer, "/proc/%d/stat", pid);
-	if ( (fd = open(buffer, O_RDONLY, 0)) < 0 ) return 0;
+	if ( (fd = orig_open(buffer, O_RDONLY, 0)) < 0 ) return 0;
 	if ( (rc = read(fd, buffer, 99)) > 0) {
 		buffer[rc] = 0;
 		/* format: 27910 (bash) S 27315 ... */
 		sscanf(buffer, "%*[^ ] %*[^ ] %*[^ ] %d", &ppid);
 	}
-	close(fd);
+	orig_close(fd);
 
 	return ppid;
 }
@@ -1669,14 +1677,14 @@ static char *getpname(int pid)
 	int i, fd, rc;
 
 	sprintf(buffer, "/proc/%d/cmdline", pid);
-	if ( (fd = open(buffer, O_RDONLY, 0)) < 0 ) return "unkown";
+	if ( (fd = orig_open(buffer, O_RDONLY, 0)) < 0 ) return "unkown";
 	if ( (rc = read(fd, buffer, 512)) > 0) {
 		buffer[rc--] = 0;
 		for (i=0; i<rc; i++)
 			if (buffer[i] == 0 && buffer[i+1] != '-')
 				{ arg = buffer+i+1; break; }
 	}
-	close(fd);
+	orig_close(fd);
 
 	b = basename(buffer);
 	snprintf(p, 512, "%s", b);
@@ -1748,12 +1756,13 @@ void __attribute__ ((destructor)) fl_wrapper_finish()
 #  if DEBUG == 1
 	if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: fl_wrapper_finish()\n", getpid());
 #  endif
+#  if FD_TRACKER == 1
 	struct pid_reg **pid = find_pid(getpid());
 	if (*pid)
 	{
-#  if DEBUG == 1
+#    if DEBUG == 1
 		if (debug) fprintf(stderr, "fl_wrapper.so debug [%d]: PID still registered!\n", getpid());
-#  endif
+#    endif
 		struct fd_reg **fd = &(*pid)->fd_head;
 		while (*fd)
 		{
@@ -1762,6 +1771,7 @@ void __attribute__ ((destructor)) fl_wrapper_finish()
 		}
 		remove_pid(pid);
 	}
+#  endif
 }
 
 static void handle_file_access_before(const char * func, const char * file,

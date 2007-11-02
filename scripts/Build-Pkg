@@ -187,7 +187,8 @@ desktopfiles="$( echo ${base}/package/*/${pkg} )/*.desktop"
 export ROCK_PKG=$pkg
 export ROCK_XPKG=$xpkg
 
-mkdir -p "$builddir"; chmod 700 "$builddir"
+# Set permissions and ownership of $buildir; $base/build might have different ones.
+mkdir -p "$builddir"; chmod 700 "$builddir" ; chown 0:0 "$builddir"
 
 if [ "$chroot" = 1 ] ; then
 

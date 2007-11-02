@@ -91,9 +91,12 @@ fi
 export ROCK_BUILD_TARGET=1
 
 build_root="$base/build/$ROCKCFG_ID"
+# Set permissions and ownership of $build_root; $base/build might have different ones.
+mkdir -p "${build_root}" ; chmod 700 "${build_root}" ; chown 0:0 "${build_root}"
+
 build_rock="$base/build/$ROCKCFG_ID/ROCK"
 build_logs="$build_rock/logs" ; mkdir -p "${build_logs}"
-build_pkgs="$build_rock/pkgs" ; mkdir -p "${build_root}"
+build_pkgs="$build_rock/pkgs" ; mkdir -p "${build_pkgs}"
 
 if [ "$ROCKCFG_PARANOIA_CHECK" = 1 ] ; then
 	./scripts/Check-System -paranoia || exit 1

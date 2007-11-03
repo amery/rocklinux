@@ -66,3 +66,20 @@ safe_groupadd() {
 	fi
 }
 
+# Usage: uid_by_name name
+#
+#	Outputs the uid of name on the target system or nothing
+#	if not found.
+#
+uid_by_name() {
+	echo "$( grep "^$1:" $root/etc/passwd | cut -f3 -d: )"
+}
+
+# Usage: gid_by_name name
+#
+#	Outputs the gid of name on the target system or nothing
+#	if not found.
+#
+gid_by_name() {
+	echo "$( grep "^$1:" $root/etc/group | cut -f3 -d: )"
+}

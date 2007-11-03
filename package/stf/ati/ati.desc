@@ -21,7 +21,7 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[I] ATI Proprietary Linux x86 Display Drivers for XFREE86 / X. Org
+[I] ATI Proprietary Linux x86 Display Drivers for XFree86 / X.Org
 
 [T] The ATI Proprietary Linux driver provides hardware acceleration for 3D 
 [T] graphics and video playback. It also includes support for dual displays 
@@ -30,6 +30,13 @@
 [T] AGP or PCI Express graphics products, as well as FireGL 8700 and later 
 [T] products.
 
+#if xpkg == ati-legacy*
+[T] Note - This is the last driver version to support the following products:
+[T]  Radeon 8500/9000/9100/9200/9250 
+[T]  ATI Mobility Radeon 9000/9100/9200 
+[T]  Radeon IGP 9000/9100/9200
+#endif
+
 [U] https://support.ati.com/ics/support/KBAnswer.asp?questionID=3380
 [U] http://www.ati.com/products/catalyst/linux.html
 
@@ -37,6 +44,7 @@
 [M] Stefan Fiedler <stefan.fiedler@students.jku.at>
 
 [C] base/kernel base/x11
+[R] +x86
 
 [L] Commercial
 [S] Stable
@@ -44,12 +52,22 @@
 [P] O --?--5---9 277.600
 
 #if xpkg == ati-x86
-[I] ATI Proprietary Linux x86 Display Drivers for XFREE86 / X. Org
-[V] 8.23.7
-[D] 2137003870 ati-driver-installer-8.23.7-i386.run https://a248.e.akamai.net/f/674/9206/0/www2.ati.com/drivers/linux/ NODIST
+[I] ATI Proprietary Linux x86 Display Drivers for XFree86 / X.Org
+[V] 8.40.4
+[D] 307568672 ati-driver-installer-8.40.4-x86.x86_64.run https://a248.e.akamai.net/f/674/9206/0/www2.ati.com/drivers/linux/ NODIST
 #endif
 #if xpkg == ati-x86-64
-[I] ATI Proprietary Linux x86_64 Display Drivers for XFREE86 / X. Org
-[V] 8.23.7
-[D] 1104610983 ati-driver-installer-8.23.7-x86_64.run https://a248.e.akamai.net/f/674/9206/0/www2.ati.com/drivers/linux/64bit/ NODIST
+[I] ATI Proprietary Linux x86_64 Display Drivers for XFree86 / X.Org
+[V] 8.40.4
+[D] 307568672 ati-driver-installer-8.40.4-x86.x86_64.run https://a248.e.akamai.net/f/674/9206/0/www2.ati.com/drivers/linux/64bit/ NODIST
+#endif
+#if xpkg == ati-legacy-x86
+[I] ATI Proprietary Linux x86 Display Drivers for XFree86 / X.Org
+[V] 8.28.8
+[D] 3257509918 ati-driver-installer-8.28.8.run https://a248.e.akamai.net/f/674/9206/0/www2.ati.com/drivers/linux/ NODIST
+#endif
+#if xpkg == ati-legacy-x86-64
+[I] ATI Proprietary Linux x86_64 Display Drivers for XFree86 / X.Org
+[V] 8.28.8
+[D] 3257509918 ati-driver-installer-8.28.8.run https://a248.e.akamai.net/f/674/9206/0/www2.ati.com/drivers/linux/64bit/ NODIST
 #endif

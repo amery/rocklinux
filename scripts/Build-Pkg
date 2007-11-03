@@ -1296,7 +1296,8 @@ EOT
 				fi
 				echo "$file:" $( cd $root/var/adm/flists
 						 grep -l " $file\$" * )
-			done < <( cat $root/var/adm/flists/* | sed "s,^$xpkg:[^ ]*,.," | \
+			done < <( find $root/var/adm/flists/ -maxdepth 1 -type f | \
+				  xargs -n100 sed "s,^$xpkg:[^ ]*,.," | \
 				  sort -k2 | uniq -d -f1 | grep '^\. ' )
 		fi
 

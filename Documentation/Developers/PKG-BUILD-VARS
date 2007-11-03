@@ -16,7 +16,9 @@ id ............ unique ID for this Build-Pkg invocation
 arch .......... architecture (subdir name in architecture)
 target ........ target distribution (subdir name in targets)
 stagelevel .... stagelevel (0-1 = crossbuild, 2-8 = native, 9 = rebuild)
+crossnative ... has the value 'cross' or 'native'
 
+archprefix .... prefix for binutils and compiler binaries (for cross-building)
 arch_sizeof_long_long .... arch setting from architecture/*/archtest.out
 arch_sizeof_int .......... arch setting from architecture/*/archtest.out
 arch_machine ............. arch setting from architecture/*/archtest.out
@@ -30,19 +32,19 @@ arch_build ............... like 'arch_target' - but for the build host
 archdir ....... directory containing the package tar files (download/..)
 confdir ....... directory containing the package build config (package/..)
 targetdir ..... directory containing the target config (target/...)
-builddir ...... directory in which the package is build (src.$id)
-base .......... ROCK Linux sources base directory
 
-root .......... root directory (usually '/')
-xroot ......... real root (/R.work/build/... when in chroot mode)
-prefix ........ install prefix (usually '/usr' or '/opt/...')
-prefix_auto ... '1' = you may auto-detect a better value for $prefix in *.conf
+builddir ...... directory in which the package is build (src.$id)
+base .......... ROCK Linux sources base directory (/usr/src/rock-src)
+xroot ......... real root ($base/build/...)
+root .......... root directory (equals $xroot, empty in chroot mode)
 
 build_logs .... Big build log file ...... (Build-Target only)
-build_pkgs .... Packagefiles go here .... (Build-Target only)
+build_pkgs .... Package files go here .... (Build-Target only)
 build_root .... Chroot dir name ......... (Build-Target only)
 build_rock .... ROCK build system data .. (Build-Target only)
 
+prefix_auto ... '1' = you may auto-detect a better value for $prefix in *.conf
+prefix ........ install prefix (usually '/usr' or '/opt/...')
 bindir ........ where the binaries (programs) should be installed
 sbindir ....... where the system binaries should be installed
 libdir ........ where the library files should be installed
@@ -55,62 +57,25 @@ infodir ....... where the info files should be installed
 includedir .... where the header files should be installed
 
 autoextract ... '0' = skip automatic untar
-autopatch ..... '0' = skip automatic patching
-chownsrcdir ... '0' = don't make a chown to root after extracting the $srctar
-desktopfiles .. filenames of the desktop files to install ($confdir/*.desktop)
-		set to an empty string to deactivate desktop file installation
-desktopauto ... '0' = disable automatic changes to .desktop files
-nocvsinsrcdir . '0' = don't remove CVS and .svn directories in $srcdir
 srctar ........ filename of source tar file ('auto' = autodetect)
 srcdir ........ directory in source tar file ('auto' = autodetect)
 xsrctar ....... filename of source tar file after 'auto' has been processed
 xsrcdir ....... directory in source tar file after 'auto' has been processed
 taropt ........ tar options for extracting
 
+autopatch ..... '0' = skip automatic patching
+patchfiles .... list of patchfiles found in $confdir
+patchopt ...... options passed to the patch program
+
+chownsrcdir ... '0' = don't make a chown to root after extracting the $srctar
+nocvsinsrcdir . '0' = don't remove CVS and .svn directories in $srcdir
 createprefix .. '0' = skip creation for directory skeleton for $prefix
 createdocs .... '0' = skip automatic copying of documentation files
 autoso2a ...... '1' = automatically create *.a files for all *.so files
 forcefpic ..... set to '0' to disable the force -fPIC mechanism
-custmain ...... command to execute instead of 'configure, make, make install'
-mainfunction .. alternate main function instead of build_this_package()
-
-prepare ....... command to execute before main build-block
-prepatch ...... command to execute before automatic patching
-patchfiles .... list of patchfiles found in $confdir
-postpatch ..... command to execute after automatic patching
-patchopt ...... options passed to the patch program
-
-preconf ....... command to execute before running configure
-runconf ....... set to '0' if you want to skip running configure
-autogen ....... set to '1' if you want to run the autogen script
-automakever ... automake version prefix (e.g. "-1.7") for $autogen
-confopt ....... options for GNU autoconf './configure'
-extraconfopt .. options which should be appended to $confopt by set_confopt()
-configprefix .. variable declarations only for GNU autoconf './configure'
-configscript .. script file name of the GNU autoconf configure script
-configexec .... command for executing $configscript (default=bash)
-pyconfopt ..... options for 'setup.py' - Python setup scripts
-
-runcmake ...... set to '0' if you want to skip running 'cmake .'
-cmakesrcdir ... set to path of srcdir when requesting an out-of-source build
-cmakedefs ..... options passed to cmake
-
-runxmkmf ...... set to '0' if you want to skip running 'xmkmf'
-runmkpl ....... set to '0' if you want to skip running 'perl Makefile.PL'
-runpysetup .... set to '0' if you want to skip running 'python setup.py'
-
-premake ....... command to execute before running 'make'
-makeopt ....... options for 'make' (default = ' ')
-inmake ........ command to execute between 'make' and 'make install'
-makeinstopt ... options for 'make install' (default = 'install')
-postmake ...... command to execute after running 'make install'
-
-postflist ..... command to execute after creating the flist
-postinstall ... command to execute after finishing all the standard stuff
-finish ........ command to execute after everything else outside build-block
-
-crossnative ... has the value 'cross' or 'native'
-archprefix .... prefix for binutils and compiler binaries (for cross-building)
+desktopfiles .. filenames of the desktop files to install ($confdir/*.desktop)
+		set to an empty string to deactivate desktop file installation
+desktopauto ... '0' = disable automatic changes to .desktop files
 
 flistdel ...... regex describing files which shouldn't go to package db
 flistrfilter .. regex describing which lines to ignore in flist rlog
@@ -119,6 +84,46 @@ flistroot ..... list of top-level directories which should be used for flist
 check_shared ...... Check for files which are shared with other packages
 check_usrlocal .... Check for files which are installed in usr/local
 check_badfiles .... Check for files which are registered 'bad files'
+
+
+autogen ....... set to '1' if you want to run the autogen script
+automakever ... automake version prefix (e.g. "-1.7") for $autogen
+
+runconf ....... set to '0' if you want to skip running configure
+confopt ....... options for GNU autoconf './configure'
+extraconfopt .. options which should be appended to $confopt by set_confopt()
+configprefix .. variable declarations only for GNU autoconf './configure'
+configscript .. script file name of the GNU autoconf configure script
+configexec .... command for executing $configscript (default=bash)
+
+runcmake ...... set to '0' if you want to skip running 'cmake .'
+cmakesrcdir ... set to path of srcdir when requesting an out-of-source build
+cmakedefs ..... options passed to cmake
+
+runxmkmf ...... set to '0' if you want to skip running 'xmkmf'
+runmkpl ....... set to '0' if you want to skip running 'perl Makefile.PL'
+
+runpysetup .... set to '0' if you want to skip running 'python setup.py'
+pyconfopt ..... options for 'setup.py' - Python setup scripts
+
+makeopt ....... options for 'make' (default = ' ')
+makeinstopt ... options for 'make install' (default = 'install')
+
+
+custmain ...... command to execute instead of 'configure, make, make install'
+mainfunction .. alternate main function instead of build_this_package()
+
+prepare ....... command to execute before main build-block
+prepatch ...... command to execute before automatic patching
+postpatch ..... command to execute after automatic patching
+preconf ....... command to execute before running configure
+premake ....... command to execute before running 'make'
+inmake ........ command to execute between 'make' and 'make install'
+postmake ...... command to execute after running 'make install'
+postflist ..... command to execute after creating the flist
+postinstall ... command to execute after finishing all the standard stuff
+finish ........ command to execute after everything else outside build-block
+
 
 BUILDCC ....... C compiler for helper apps (usually that's just 'cc')
 BUILD_CC ...... C compiler for helper apps (must be the same as $BUILDCC)
@@ -145,4 +150,3 @@ STRIP_WRAPPER_* ... configuration for strip wrapper
 ROCK_BUILD_TARGET ... set to '1' in Build-Target
 
 ROCKCFG_* ........... configuration from 'Config' file
-

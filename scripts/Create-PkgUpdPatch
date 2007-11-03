@@ -56,18 +56,18 @@ while read x ; do
 	if [ "${x//=/}" != "${x}" ] ; then
 		pkg="${x%%=*}"
 		xpkg="${x#*=}"
-		newver="${xpkg##*-}"
+		newver="${xpkg#*_}"
 		xpkg="${xpkg%-*}"
 	else
-		pkg="${x%-*}"
+		pkg="${x%%_*}"
 		xpkg="${pkg}"
-		newver="${x##*-}"
+		newver="${x#*_}"
 	fi
 
 	for var in pkg xpkg newver ; do
 		if [ -z "$( eval echo \$${var} )" ] ; then
 			echo "ERROR: Please specify package and version in this format:" >&2
-			echo "ERROR:    package-version     package=xpackage-version" >&2
+			echo "ERROR:    package_version     package=xpackage_version" >&2
 			echo "ERROR: You entered: $x" >&2
 			continue 2
 		fi

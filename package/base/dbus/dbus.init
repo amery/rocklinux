@@ -5,6 +5,7 @@ main_begin
 
     block_begin(start, `Setting up D-Bus.')
 	check(`mkdir -p /var/run/dbus')
+	check(`D_prefix/bin/dbus-uuidgen --ensure')
 	check(`D_prefix/bin/dbus-daemon --system')
     block_end
 

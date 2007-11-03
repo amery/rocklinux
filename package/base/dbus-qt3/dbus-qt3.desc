@@ -6,8 +6,8 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/avm/dbus/dbus.desc
-[COPY] ROCK Linux is Copyright (C) 1998 - 2006 Clifford Wolf
+[COPY] ROCK Linux: rock-src/package/public/dbus-qt3/dbus-qt3.desc
+[COPY] ROCK Linux is Copyright (C) 1998 - 2007 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
 [COPY] it under the terms of the GNU General Public License as published by
@@ -21,30 +21,23 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[I] message bus system - glib bindings
+[I] Qt3 bindings for dbus
 
-[T] D-BUS is a message bus system, a simple way for applications to talk to
-[T] one another.
-[T] 
-[T] D-BUS supplies both a system daemon (for events such as "new hardware
-[T] device added" or "printer queue changed") and a per-user-login-session
-[T] daemon (for general IPC needs among user applications). Also, the message
-[T] bus is built on top of a general one-to-one message passing framework,
-[T] which can be used by any two apps to communicate directly (without going
-[T] through the message bus daemon).
+[T] Qt3 bindings for dbus.
 
-[U] http://freedesktop.org/wiki/Software_2fdbus
+[U] http://freedesktop.org/wiki/Software/DBusBindings
+[U] http://wiki.linuxfromscratch.org/blfs/wiki/dbus-qt3
 
-[A] Various Authors
-[M] Stefan Fiedler <stefan.fiedler at students.jku.at>
+[A] Stephan Kulow <coolo at kde.org> { maintainer }
+[M] The ROCK Linux Project
 
 [C] extra/configuration
 [F] CORE
 
 [L] GPL
-[S] Beta
-[V] 0.74
-[P] X -----5---9 171.500
+[S] Stable
+[V] 0.62
+[P] X -----5---9 171.600
 
-[D] 3209514572 dbus-glib-0.74.tar.gz http://dbus.freedesktop.org/releases/dbus-glib/
+[D] 1471883642 dbus-qt3-0.62.tar.bz2 http://anduin.linuxfromscratch.org/files/BLFS/sources/
 

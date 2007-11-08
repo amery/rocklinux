@@ -897,15 +897,16 @@ exec 202>&1
 		#!/bin/bash
 		# export PROMPT_COMMAND='. debug.buildenv; cd .; unset PROMPT_COMMAND'
 		cd "$root"
-		if [ ! -e $PWD/ROCK/loop/scripts ]; then
-			mount --bind $realbase $PWD/ROCK/loop
-			mount --bind $realconf $PWD/ROCK/config
-			mount --bind $realdown $PWD/ROCK/download
+		if [ -e $PWD/ROCK ]; then
+			if [ ! -e $PWD/ROCK/loop/scripts ]; then
+				mount --bind $realbase $PWD/ROCK/loop
+				mount --bind $realconf $PWD/ROCK/config
+				mount --bind $realdown $PWD/ROCK/download
+			fi
+			if [ ! -e $PWD/ROCK/src.$xpkg.$id ]; then
+				ln -s loop/src.$xpkg.$id $PWD/ROCK/src.$xpkg.$id
+			fi
 		fi
-		if [ ! -e $PWD/ROCK/src.$xpkg.$id ]; then
-			ln -s loop/src.$xpkg.$id $PWD/ROCK/src.$xpkg.$id
-		fi
-
 		cd "$builddir" ; exec env -i bash --init-file debug.buildenv 200>> build.pid
 	EOT
 	#

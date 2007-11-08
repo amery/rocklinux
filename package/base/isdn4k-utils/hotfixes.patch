@@ -79,3 +79,13 @@
  NCURSES_HAVE    = @HAVE_NCURSES_PACK@
  
  TCL_LIBS	= @LINK_TCL_LIBS@
+--- ./capi20/capi20.h.orig	2007-11-05 11:44:50.000000000 +0100
++++ ./capi20/capi20.h	2007-11-05 11:46:23.000000000 +0100
+@@ -21,6 +21,7 @@
+ #define __CAPI20_H__
+ 
+ #include <sys/time.h>
++#include <sys/types.h>
+ 
+ #ifdef __cplusplus
+ extern "C" {

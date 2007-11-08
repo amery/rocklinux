@@ -1,0 +1,10 @@
+--- libcdio-0.77/lib/driver/gnu_linux.c.orig	2007-11-05 11:48:20.000000000 +0100
++++ libcdio-0.77/lib/driver/gnu_linux.c	2007-11-05 11:49:35.000000000 +0100
+@@ -30,6 +30,7 @@
+ static const char _rcsid[] = "$Id: gnu_linux.c,v 1.20 2006/03/18 00:53:20 rocky Exp $";
+ 
+ #include <string.h>
++#include <limits.h>
+ 
+ #include <cdio/sector.h>
+ #include <cdio/util.h>

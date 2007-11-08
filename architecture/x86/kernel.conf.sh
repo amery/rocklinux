@@ -10,8 +10,7 @@
 
 	if [ "$ROCKCFG_X86_BITS" = 32 ] ; then
 		linux_arch="M486"
-		for x in "i386		M386"		\
-			 "i486		M486"		\
+		for x in "i486		M486"		\
 			 "via-c3	MCYRIXIII"	\
 			 "via-c3-2	MVIAC3_2"	\
 			 "pentium	M586"		\

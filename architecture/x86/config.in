@@ -29,7 +29,6 @@ choice ROCKCFG_X86_BITS 32 \
 if [ "$ROCKCFG_X86_BITS" = 32 ] ; then
   choice ROCKCFG_X86_OPT generic   \
 	generic		"No special optimisation"		\
-	i386		"Optimised for Intel 386"		\
 	i486		"Optimised for Intel 486"		\
 	via-c3		"Optimised for VIA CyrixIII/VIA-C3"	\
 	via-c3-improved "Improved  for VIA CyrixIII/VIA-C3"     \

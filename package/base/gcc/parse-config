@@ -120,35 +120,43 @@ if [ "$ROCKCFG_OPT" != default ] ; then
 	var_insert GCC_WRAPPER_REMOVE " " "-O -O[0-9s]"
 fi
 
-case "$ROCKCFG_OPT" in
-	smart)
-        	var_insert GCC_WRAPPER_INSERT " " "-SPEED-O2 -SIZE-Os -pipe"
-		var_insert GCC_WRAPPER_FILTER "|" "gawk -f $base/misc/tools-source/smartwr.awk $base/scripts/smart_db.txt -"
+case "$pkg" in
+	glibc*)
+		# do not mess with glibc -O options other than this
+		var_insert GCC_WRAPPER_INSERT " " "-O2 -pipe"
 		;;
-	bizarre)
-        	var_insert GCC_WRAPPER_INSERT " " "-SPEED-Os -SIZE-O2 -pipe"
-		var_insert GCC_WRAPPER_FILTER "|" "gawk -f $base/misc/tools-source/smartwr.awk $base/scripts/smart_db.txt -"
-		;;
-	speed)
-        	var_insert GCC_WRAPPER_INSERT " " "-O2 -pipe"
-		;;
-	size)
-        	var_insert GCC_WRAPPER_INSERT " " "-Os -pipe"
-		;;
-	lazy)
-        	var_insert GCC_WRAPPER_INSERT " " "-O1 -pipe"
-		;;
-	test)
-		case "$pkg" in
-			gcc*|glibc*|binutils*|make|bzip2|gzip|coreutils|bash*|gawk|sed)
+	*)
+		case "$ROCKCFG_OPT" in
+			smart)
+				var_insert GCC_WRAPPER_INSERT " " "-SPEED-O2 -SIZE-Os -pipe"
+				var_insert GCC_WRAPPER_FILTER "|" "gawk -f $base/misc/tools-source/smartwr.awk $base/scripts/smart_db.txt -"
+				;;
+			bizarre)
+				var_insert GCC_WRAPPER_INSERT " " "-SPEED-Os -SIZE-O2 -pipe"
+				var_insert GCC_WRAPPER_FILTER "|" "gawk -f $base/misc/tools-source/smartwr.awk $base/scripts/smart_db.txt -"
+				;;
+			speed)
+				var_insert GCC_WRAPPER_INSERT " " "-O2 -pipe"
+				;;
+			size)
 				var_insert GCC_WRAPPER_INSERT " " "-Os -pipe"
 				;;
-			*)
+			lazy)
 				var_insert GCC_WRAPPER_INSERT " " "-O1 -pipe"
 				;;
+			test)
+				case "$pkg" in
+					gcc*|binutils*|make|bzip2|gzip|coreutils|bash*|gawk|sed)
+						var_insert GCC_WRAPPER_INSERT " " "-Os -pipe"
+						;;
+					*)
+						var_insert GCC_WRAPPER_INSERT " " "-O1 -pipe"
+						;;
+				esac
+				;;
+			default)
+				;;
 		esac
-		;;
-	default)
 		;;
 esac
 

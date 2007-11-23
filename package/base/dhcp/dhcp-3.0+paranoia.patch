@@ -62,9 +62,9 @@ last modified 12/10/2001
 
 --- dhcp-3.0/server/dhcpd.c	Thu Jun 21 22:12:58 2001
 +++ dhcp-3.0+paranoia/server/dhcpd.c	Wed Oct 17 08:23:00 2001
-@@ -47,6 +47,16 @@
- #include <omapip/omapip_p.h>
- #include <syslog.h>
+@@ -46,6 +46,16 @@
+ #include <sys/types.h>
+ #include <signal.h>
  
 +#if defined (PARANOIA)
 +#  include <sys/types.h>
@@ -76,10 +76,10 @@ last modified 12/10/2001
 +#  undef group
 +#endif /* PARANOIA */
 +
- static void usage PROTO ((void));
+ static void usage(void);
  
  struct iaddr server_identifier;
-@@ -193,6 +203,22 @@
+@@ -192,6 +202,22 @@
  	omapi_object_dereference (&listener, MDL);
  }
  
@@ -102,7 +102,7 @@ last modified 12/10/2001
  #ifndef UNIT_TEST
  int 
  main(int argc, char **argv) {
-@@ -226,6 +252,14 @@
+@@ -222,6 +248,14 @@
  	char *traceinfile = (char *)0;
  	char *traceoutfile = (char *)0;
  #endif
@@ -117,7 +117,7 @@ last modified 12/10/2001
  
          /* Make sure that file descriptors 0 (stdin), 1, (stdout), and
             2 (stderr) are open. To do this, we assume that when we
-@@ -286,6 +320,20 @@
+@@ -282,6 +316,20 @@
  			if (++i == argc)
  				usage ();
  			server = argv [i];
@@ -138,7 +138,7 @@ last modified 12/10/2001
  		} else if (!strcmp (argv [i], "-cf")) {
  			if (++i == argc)
  				usage ();
-@@ -403,6 +451,44 @@
+@@ -412,6 +460,44 @@
  					     trace_seed_stop, MDL);
  #endif
  
@@ -183,7 +183,7 @@ last modified 12/10/2001
  	/* Default to the DHCP/BOOTP port. */
  	if (!local_port)
  	{
-@@ -537,6 +623,10 @@
+@@ -550,6 +636,10 @@
  
  	postconf_initialization (quiet);
  
@@ -194,7 +194,7 @@ last modified 12/10/2001
          /* test option should cause an early exit */
   	if (cftest && !lftest) 
   		exit(0);
-@@ -607,6 +697,22 @@
+@@ -627,6 +717,22 @@
  			exit (0);
  	}
  
@@ -217,14 +217,14 @@ last modified 12/10/2001
  	/* Read previous pid file. */
  	if ((i = open (path_dhcpd_pid, O_RDONLY)) >= 0) {
  		status = read (i, pbuf, (sizeof pbuf) - 1);
-@@ -962,6 +1068,10 @@
+@@ -976,6 +1082,10 @@
  
- 	log_fatal ("Usage: dhcpd [-p <UDP port #>] [-d] [-f]%s%s%s%s",
- 		   "\n             [-cf config-file] [-lf lease-file]",
+ 	log_fatal("Usage: dhcpd [-p <UDP port #>] [-f] [-d] [-q] [-t|-T]\n"
+ 		  "             [-4|-6] [-cf config-file] [-lf lease-file]\n"
 +#if defined (PARANOIA)
 +		   /* meld into the following string */
 +		   "\n             [-user user] [-group group] [-chroot dir]"
 +#endif /* PARANOIA */
  #if defined (TRACING)
- 		   "\n		   [-tf trace-output-file]",
- 		   "\n		   [-play trace-input-file]",
+ 		  "             [-tf trace-output-file]\n"
+ 		  "             [-play trace-input-file]\n"

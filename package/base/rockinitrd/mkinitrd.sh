@@ -113,7 +113,7 @@ if [ "${empty}" = 0 ] ; then
 			add_module_to_initrd "${b}" "${c}"
 		done
 fi
-depmod -b ${rootdir} -v ${kernel}
+depmod -b ${targetdir} ${kernel}
 
 mkdir -p ${targetdir}/{dev,root,tmp,proc,sys}
 mknod ${targetdir}/dev/ram0	b 1 0

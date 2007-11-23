@@ -1,0 +1,3 @@
+if pkginstalled shared-mime-info ; then 
+	var_append extraconfopt ' ' '--disable-update-mimedb'
+fi

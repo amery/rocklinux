@@ -72,6 +72,8 @@
 
 unset ${!CFGTEMP_*}
 
+bprof rockconfig_preconfig start
+
 if [ ! -e "$swpdir/preconfig.in.tmp" ] ; then
 	grep -h -v "^#" architecture/*/preconfig.in \
 		misc/*/preconfig.in \
@@ -80,6 +82,9 @@ if [ ! -e "$swpdir/preconfig.in.tmp" ] ; then
 	2> /dev/null > "$swpdir/preconfig.in.tmp"
 fi
 include "$swpdir/preconfig.in.tmp"
+
+bprof rockconfig_preconfig stop
+bprof rockconfig_arch start
 
 comment_id '- Architecture, CPU and Optimization' COMMENT_ARCHCPUOPT
 
@@ -124,6 +129,9 @@ block_begin 7
 	fi
 block_end
 
+bprof rockconfig_arch stop
+bprof rockconfig_target start
+
 comment ' '
 comment_id '- Target Distribution' COMMENT_TARGET
 
@@ -136,6 +144,9 @@ block_begin 7
 	bool 'Show expert-only and experimental options' ROCKCFG_EXPERT 0
 	bool 'Abbreviate ROCK Config ID with checksum' ROCKCFG_IDCKSUM 0
 block_end
+
+bprof rockconfig_target stop
+bprof rockconfig_buildsys start
 
 comment ' '
 comment_id '- Build System Configuration' COMMENT_BUILD_SYS_CONF
@@ -194,7 +205,13 @@ block_begin 3
     expert_end
 block_end
 
+bprof rockconfig_buildsys stop
+bprof rockconfig_noexpert start
+
 include "misc/*/noexpertconfig.in"
+
+bprof rockconfig_noexpert stop
+bprof rockconfig_expert start
 
 expert_begin
 comment ' '
@@ -258,6 +275,9 @@ fi
 include "$swpdir/config.in.tmp"
 expert_end
 
+bprof rockconfig_expert stop
+bprof rockconfig_postconfig start
+
 [ "$ROCKCFG_CROSSBUILD" = 1 ] && ROCKCFG_ID="$ROCKCFG_ID-cross"
 [ "$ROCKCFG_PSEUDONATIVE" = 1 ] && ROCKCFG_ID="$ROCKCFG_ID-pseudonative"
 ROCKCFG_ID="$ROCKCFG_ID-$ROCKCFG_TARGET"
@@ -309,3 +329,6 @@ fi
 var_append filterscript ' ' '/^[XO] --* / d ;'
 
 pkgfilter sed -e "$filterscript"
+
+bprof rockconfig_postconfig stop
+

@@ -276,7 +276,6 @@ int pkgswitch(int mode, char **args)
 
 int pkgfork(char *pkgname, char *xpkg, char** opt)
 {
-
 	struct package *fork, *pkg;
 	int i, k;
 

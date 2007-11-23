@@ -189,6 +189,8 @@ else
 		local pkg=$1 xpkg=$2 extraver ; shift 2
 
 		bprof pkgfork start
+
+		# >50% of the Config time is spent in this line!
 		parse_desc package/*/$pkg/$pkg.desc P V
 
 		extraver=$( echo $desc_V 0 | cut -f2 -d" " )

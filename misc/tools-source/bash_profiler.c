@@ -59,7 +59,8 @@ struct bprofent;
 
 struct bprofent {
 	char *id;
-	int count;
+	int recursive;
+	int count, running;
 	long long tv_sum, tv_start;
 	struct bprofent *next;
 };
@@ -81,8 +82,13 @@ int bprof_builtin(WORD_LIST *list)
 
 	if ( !strcmp(mode, "print") && !strcmp(name, "all") ) {
 		while ( this ) {
-			printf("%7d %7Ld %10.3f %s\n", this->count, this->tv_sum,
+			printf("%7d %7Ld %10.3f %s", this->count, this->tv_sum,
 					(float)this->tv_sum/this->count, this->id);
+			if (this->running)
+				printf(" (active)");
+			if (this->recursive)
+				printf(" (recursive)");
+			printf("\n");
 			this = this->next;
 		}
 		return 0;
@@ -101,13 +107,23 @@ int bprof_builtin(WORD_LIST *list)
 	}
 
 	if ( !strcmp(mode, "start") ) {
-		this->tv_start = mytime();
+		if (this->running++ == 0)
+			this->tv_start = mytime();
+		if (this->running > 1)
+			this->recursive = 1;
 	} else if ( !strcmp(mode, "stop") ) {
-		this->tv_sum += mytime() - this->tv_start;
-		this->count++;
+		if (--this->running == 0) {
+			this->tv_sum += mytime() - this->tv_start;
+			this->count++;
+		}
 	} else if ( !strcmp(mode, "print") ) {
-		printf("%7d %7Ld %10.3f %s\n", this->count, this->tv_sum,
+		printf("%7d %7Ld %10.3f %s", this->count, this->tv_sum,
 				(float)this->tv_sum/this->count, this->id);
+		if (this->running)
+			printf(" (active)");
+		if (this->recursive)
+			printf(" (recursive)");
+		printf("\n");
 	}
 
 	return 0;

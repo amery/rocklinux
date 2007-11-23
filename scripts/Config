@@ -114,19 +114,10 @@ else
 		echo "Building src/bash_profiler.so."
 		gcc -shared -fPIC -Wall -o src/bash_profiler.so misc/tools-source/bash_profiler.c || exit 1
 	fi
+	rm -f config.profile
 	enable -f src/bash_profiler.so bprof || exit 1
 	bprof_print() {
-		bprof all print >> config.profile
-		awk '
-			$4 == "profiled" { next; }
-			$4 != "main" { count["profiled"]+=$1; time["profiled"]+=$2; }
-			{ count[$4]+=$1; time[$4]+=$2; }
-			END {
-				for (id in count)
-					printf "%7d %7Ld %10.3f %s\n", count[id], time[id], time[id]/count[id], id;
-			}
-		' < config.profile | sort -n -k2 > config.profile.new
-		mv config.profile{.new,}
+		{ echo "--- `date` ---"; bprof all print | sort -k2; } >> config.profile
 	}
 fi
 
@@ -286,8 +277,10 @@ while [ "$do_config_cycle" == 1 ] ; do
 		esac
 	done
 	bprof main stop
-	bprof_print
 done
+
+bprof finish start
+
 pkgout
 
 rm -f $swpdir/*.tmp
@@ -315,3 +308,7 @@ for x in $( ls config/$config ); do
 	[ -e $swpdir/$x ] || rm -f config/$config/$x
 done
 rm -rf $swpdir
+
+bprof finish stop
+bprof_print
+

@@ -133,7 +133,7 @@ echo "/sbin/fsck /sbin/fsck" >>/etc/conf/initrd/initrd_fsck
 echo "done"
 
 libdirs=""
-for N in ${rootdir}/lib `sed -e"s,^\(.*\),${rootdir}\1," ${rootdir}/etc/ld.so.conf | tr '\n' ' '` ; do
+for N in ${rootdir}/lib `sed -e"\,^/, ! d; s,^\(.*\),${rootdir}\1," ${rootdir}/etc/ld.so.conf | tr '\n' ' '` ; do
 	[ -d "$N" ] && libdirs="$libdirs $N"
 done
 
@@ -143,7 +143,7 @@ needed_libs() {
 	${cross_compile}readelf -d ${x} 2>/dev/null | grep "(NEEDED)" |
 		sed -e"s,.*Shared library: \[\(.*\)\],\1," |
 		while read library ; do
-			find ${libdirs} -name "${library}" 2>/dev/null |
+			find ${libdirs} -maxdepth 1 -name "${library}" 2>/dev/null |
 			sed -e "s,^${rootdir},,g" | tr '\n' ' '
 		done
 }
@@ -178,7 +178,7 @@ for x in ${rootdir}/etc/conf/initrd/initrd_* ; do
 			file -L ${f} | grep -q ELF || continue
 			libs="${libs} `needed_libs ${f}`"
 		done < <( find "${file}" )
-	done < ${x}
+	done < <( grep '^[^#]' ${x} )
 done
 echo "done"
 

@@ -33,7 +33,10 @@ qemu-system-arm -kernel build/bbs-arm-qemu-TRUNK-arm-EL-arm926ejs-cross-generic-
 Hints And Known Bugs
 --------------------
 
-- To use the cdrom image in qemu, create it after the build has finished:
+- The kernel and initrd image can also be found in the boot/ directory of the
+  CD-ROM image.
+
+- To use the CD-ROM image in qemu, create it after the build has finished:
 	./scripts/Create-ISO bbs-arm-qemu bbs-arm-qemu
 
 - To use a hard disk in qemu, create it with e.g.:
@@ -48,5 +51,3 @@ Hints And Known Bugs
 - For an unknown reason, find is broken in this build (but works in e.g. sparc
   and x86_64 cross-builds). Use oldfind instead.
 
-- Package installation with stone does not work yet; use mine directly to
-   install packages.

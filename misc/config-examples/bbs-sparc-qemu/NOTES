@@ -10,7 +10,7 @@ With qemu and the resulting build you can at least:
 - boot the kernel and first stage initrd,
 - execute a shell from the initrd,
 - load the second stage from a CD-ROM,
-- and install packages from the CD on a hard disk.
+- and install packages from the CD on a hard disk using the stone installer.
 
 The packages included should be sufficient for native builds on the targeted
 platform.
@@ -47,12 +47,11 @@ Hints And Known Bugs
 
 - the SCSI support in kernel is not compiled as a module because udev can't
   load it automatically, and loading it and creating the /dev entries manually,
-  the SCSI devices don't work.
+  the SCSI devices don't work. Furthermore, if partitioning a previously empty
+  hard disk, the new partitions won't show up until after a reboot.
 
 - the size of the uncompressed kernel image (/boot/image) is limited to 2,5 MB
   when booting with silo.
 
 - strace does not (cross-)build for sparc yet.
 
-- Package installation with stone does not work yet; use mine directly to
-  install packages.

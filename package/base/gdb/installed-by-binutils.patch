@@ -22,9 +22,9 @@ the binutils package supplies them.
 
   - Clifford Wold & Rene Rebe
 
---- ./bfd/Makefile.in.orig	Fri Aug 30 10:11:44 2002
-+++ ./bfd/Makefile.in	Sat Jan 18 20:08:01 2003
-@@ -252,7 +252,7 @@
+--- ./bfd/Makefile.in.orig	2007-11-09 13:44:14.000000000 +0000
++++ ./bfd/Makefile.in	2007-11-09 13:44:20.000000000 +0000
+@@ -273,7 +273,7 @@
  INCDIR = $(srcdir)/../include
  CSEARCH = -I. -I$(srcdir) -I$(INCDIR)
  MKDEP = gcc -MM
@@ -33,7 +33,7 @@ the binutils package supplies them.
  bfddocdir = doc
  bfdlib_LTLIBRARIES = libbfd.la
  AM_CFLAGS = $(WARN_CFLAGS)
-@@ -1172,7 +1172,7 @@
+@@ -1208,7 +1208,7 @@
  	for dir in "$(DESTDIR)$(bfdlibdir)"; do \
  	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
  	done
@@ -42,10 +42,10 @@ the binutils package supplies them.
  install-exec: install-exec-recursive
  install-data: install-data-recursive
  uninstall: uninstall-recursive
---- ./etc/Makefile.in.orig	Sat Jan 26 22:35:45 2002
-+++ ./etc/Makefile.in	Sat Jan 18 19:59:43 2003
-@@ -52,7 +52,7 @@
- DVIFILES = standards.dvi configure.dvi
+--- ./etc/Makefile.in.orig	2007-11-09 13:44:14.000000000 +0000
++++ ./etc/Makefile.in	2007-11-09 13:44:20.000000000 +0000
+@@ -64,7 +64,7 @@
+ HTMLFILES = standards.html configure.html
  
  all: info
 -install: install-info
@@ -53,18 +53,18 @@ the binutils package supplies them.
  
  uninstall:
  
---- ./opcodes/Makefile.in.orig	Wed Aug 28 12:38:50 2002
-+++ ./opcodes/Makefile.in	Sat Jan 18 20:09:32 2003
-@@ -231,7 +231,7 @@
- target_os = @target_os@
+--- ./opcodes/Makefile.in.orig	2007-11-09 13:44:14.000000000 +0000
++++ ./opcodes/Makefile.in	2007-11-09 13:44:57.000000000 +0000
+@@ -241,7 +241,7 @@
  target_vendor = @target_vendor@
  AUTOMAKE_OPTIONS = 1.9 cygnus
+ ACLOCAL_AMFLAGS = -I .. -I ../config -I ../bfd
 -SUBDIRS = po
 +SUBDIRS =
  INCDIR = $(srcdir)/../include
  BFDDIR = $(srcdir)/../bfd
  MKDEP = gcc -MM
-@@ -822,7 +822,7 @@
+@@ -876,7 +876,7 @@
  	for dir in "$(DESTDIR)$(bfdlibdir)"; do \
  	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
  	done
@@ -73,9 +73,9 @@ the binutils package supplies them.
  install-exec: install-exec-recursive
  install-data: install-data-recursive
  uninstall: uninstall-recursive
---- ./libiberty/Makefile.in.orig	2003-10-21 22:45:19.000000000 +0200
-+++ ./libiberty/Makefile.in	2003-10-21 22:46:00.000000000 +0200
-@@ -267,7 +267,8 @@
+--- ./libiberty/Makefile.in.orig	2007-11-09 13:44:14.000000000 +0000
++++ ./libiberty/Makefile.in	2007-11-09 13:44:20.000000000 +0000
+@@ -344,7 +344,8 @@
  @MAINT@	echo stamp > stamp-functions
  
  INSTALL_DEST = @INSTALL_DEST@
@@ -83,5 +83,5 @@ the binutils package supplies them.
 +install:
 +#install: install_to_$(INSTALL_DEST) install-subdir
  
- install_to_libdir: all
- 	${mkinstalldirs} $(DESTDIR)$(libdir)$(MULTISUBDIR)
+ # This is tricky.  Even though CC in the Makefile contains
+ # multilib-specific flags, it's overridden by FLAGS_TO_PASS from the

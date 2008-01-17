@@ -151,7 +151,7 @@ needed_libs() {
 echo -n "Copying other files ... "
 for x in ${rootdir}/etc/conf/initrd/initrd_* ; do
 	[ -f ${x} ] || continue
-	while read file target ; do
+	while read file target cpopt; do
 		file="${rootdir}/${file}"
 		if [ ! -e ${file} ] ; then
 			echo "${file} is requested by ${x} but doesn't exist!" >&2
@@ -169,11 +169,7 @@ for x in ${rootdir}/etc/conf/initrd/initrd_* ; do
 				mkdir -p ${tfile%/*}
 			fi
 
-# 			if [ -b ${f} -o -c ${f} -o -p ${f} -o -L ${f} ] ; then
-				cp -a ${f} ${tfile}
-# 			else
-# 				cp ${f} ${tfile}
-# 			fi
+			cp ${cpopt:--a} ${f} ${tfile}
 
 			file -L ${f} | grep -q ELF || continue
 			libs="${libs} `needed_libs ${f}`"

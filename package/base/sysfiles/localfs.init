@@ -28,16 +28,31 @@
 
 main_begin
     block_begin(start, `Checking file systems.')
-	fsck -A -C -a ; fsckrc=$?
-	if   [ $(( $fsckrc & ~3 )) != 0 ] ; then
-		echo " **"
-		echo " ** Filesystem check failed (returncode=$fsckrc)."
-		echo " ** Please repair the broken disk(s) manually."
-		echo " **"
+	if ! mount / -o remount,ro ; then
+		fsck_root=-R
+	fi
+	fsck -A -C -a $fsck_root ; fsckrc=$?
+	if [ "$fsckrc" != 0 ] ; then
+		echo "'fsck -A -C -a $fsck_root' returned the following:"
+		[ $(( $fsckrc & 1 )) != 0 ] && echo "file system errors corrected"
+		[ $(( $fsckrc & 2 )) != 0 ] && echo "system should be rebooted"
+		[ $(( $fsckrc & 4 )) != 0 ] && echo "file system errors left uncorrected"
+		[ $(( $fsckrc & 8 )) != 0 ] && echo "operational error"
+		[ $(( $fsckrc & 16 )) != 0 ] && echo "usage or syntax error"
+		[ $(( $fsckrc & 32 )) != 0 ] && echo "fsck canceled by user request"
+		[ $(( $fsckrc & 128 )) != 0 ] && echo "shared library error"
+	fi
+	echo
+	if   [ $(( $fsckrc & 4 )) != 0 ] ; then
+		echo " Please repair the broken disk(s) manually."
+		if [ $(( $fsckrc & 2 )) != 0 ] ; then
+			echo "When you exit the shell, the system will reboot as recommended by fsck."
+		else
+			echo "Afterwards, exit the shell to continue booting or reboot the system if needed."
+		fi
 		sulogin -t 600 /dev/console
-		umount -adrv ; /sbin/reboot -d -f
-		while true ; do sleep 1 ; done
-	elif [ $(( $fsckrc &  2 )) != 0 ] ; then
+	fi
+	if [ $(( $fsckrc &  2 )) != 0 ] ; then
 		for x in 10 9 8 7 6 5 4 3 2 ; do
 			echo -en "\rSystem reboot in $x seconds ... "
 			sleep 1

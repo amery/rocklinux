@@ -361,6 +361,25 @@ is_static() {
 	return 0
 }
 
+# Create a checksum patch for a package or target if requested
+#
+create_cksumpatch () {
+	local repo="$1" pkg="$2"
+
+	if [ $cksumpatch = 1 ] ; then
+		if [ "$pkg" ] ; then
+			# patch for a package
+			./scripts/Create-CkSumPatch $pkg | patch -p0
+		else
+			# patch for a target download
+			for x in target/$repo/{,*/}download.txt ; do
+				[ -f "$x" ] && echo "$x"
+			done | xargs ./scripts/Create-CkSumPatch $x \
+			| patch -p0
+		fi
+	fi
+}
+
 # download_file local-filename download-location cksum repo pkg
 #
 # This function decides if download directly or from a mirror,
@@ -368,7 +387,6 @@ is_static() {
 # Calls download_file_now to do the actual download.
 #
 download_file() {
-
 	# Init
 	#
 	local gzfile="$1" location="$2" cksum="$3" repo="$4" pkg="$5"
@@ -381,7 +399,10 @@ download_file() {
 
 	# Check if it's already there
 	#
-	[ -s "$bzfile" -a $checkonly != 1 ] && return 0
+	if [ -s "$bzfile" -a $checkonly != 1 ] ; then
+		create_cksumpatch $repo $pkg
+		return 0
+	fi
 
 	# Make locking
 	#
@@ -410,11 +431,9 @@ download_file() {
 		fi
 
 	elif [ -s "$gzfile" ] ; then
-
 		echo ; echo "Already downloaded $gzfile ..."
 
 	else
-
 		echo ; echo "Downloading $gzfile ..."
 
 		# Existing *.cksum-err
@@ -552,6 +571,10 @@ download_file() {
 		echo "cksum-test (raw): $gzfile"
 		cksum_chk "$gzfile" $cksum "$gzfile"
 	fi
+
+	# Calculate missing checksums if requested
+	#
+	create_cksumpatch $repo $pkg
 
 	# Free Lock and finish
 	#
@@ -992,10 +1015,6 @@ packages() {
 				"$url" "$cksum" "$repo" "$pkg"
 			done < <(descparser $forkedpkg package/$repo/$pkg/$pkg.desc |
 				grep '^\[D\] ')
-
-			if [ $cksumpatch = 1 ]; then
-				./scripts/Create-CkSumPatch $pkg | patch -p0
-			fi
 			;;
 		esac
 	done

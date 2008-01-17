@@ -21,14 +21,18 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[I] Mesa
+[T] Mesa is an open-source implementation of the OpenGL specification - a system
+[T] for rendering interactive 3D graphics.
+[T] A variety of device drivers allows Mesa to be used in many different
+[T] environments ranging from software emulation to complete hardware
+[T] acceleration for modern GPUs.
+[T] Mesa ties into several other open-source projects: the Direct Rendering
+[T] Infrastructure and X.org to provide OpenGL support to users of X on Linux,
+[T] FreeBSD and other operating systems.
 
-[T] TODO
+[U] http://mesa3d.sourceforge.net
 
-[U] http://www.x.org
-
-[A] TODO
-[A] TODO
+[A] Brian Paul { original author }
 [M] The ROCK Linux Project
 
 [C] base/x11
@@ -37,9 +41,20 @@
 [L] OpenSource
 [S] Stable
 # Keep in sync with the xorg-server package.
-[V] 6.5.2
+[V] 7.0.2
 [P] X -----5---9 120.400
 
-[D] 3520516574 MesaLib-6.5.2.tar.bz2 ftp://ftp.gwdg.de/pub/x11/x.org/pub/X11R7.2/src/extras/
-[D] 3978233672 MesaDemos-6.5.2.tar.bz2 ftp://ftp.gwdg.de/pub/x11/x.org/pub/X11R7.2/src/extras/
+#if xpkg == mesalib
+[I] The Mesa 3D graphics library
+[D] 1731567489 MesaLib-7.0.2.tar.bz2 http://dl.sourceforge.net/mesa3d/
+#endif
 
+#if xpkg == mesademos
+[I] demos for the Mesa 3D graphics library
+[D] 2378135167 MesaDemos-7.0.2.tar.bz2 http://dl.sourceforge.net/mesa3d/
+#endif
+
+#if xpkg == mesaglut
+[I] GL utility toolkit for the Mesa 3D graphics library
+[D] 3111933804 MesaGLUT-7.0.2.tar.bz2 http://dl.sourceforge.net/mesa3d/
+#endif

@@ -10,7 +10,8 @@ module_list=""
 
 while read N
 do
-	N="${N%?}"
+	echo "N: $N"
+	N="${N%/}"
 	[ "$N" == "update" ] && continue
 	[ "$N" == "deprecated" ] && continue
 	[ "$N" == "everything" ] && continue
@@ -19,7 +20,8 @@ do
 
 	while read P
 	do 
-		P="${P%?}"
+		echo "P: $P"
+		P="${P%/}"
 		[[ "$P" = *bz2 ]] || continue
 
 		pname="`echo $P | tr '[A-Z]' '[a-z]'`"

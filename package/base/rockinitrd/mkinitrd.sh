@@ -152,6 +152,9 @@ echo -n "Copying other files ... "
 for x in ${rootdir}/etc/conf/initrd/initrd_* ; do
 	[ -f ${x} ] || continue
 	while read file target cpopt; do
+		if [ -z "$file" -o "$file" = "#" ]; then
+			continue
+		fi
 		file="${rootdir}/${file}"
 		if [ ! -e ${file} ] ; then
 			echo "${file} is requested by ${x} but doesn't exist!" >&2

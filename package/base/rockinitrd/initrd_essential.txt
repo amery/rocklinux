@@ -1,4 +1,7 @@
+
+# The '-L' is passed as option to cp and lets cp follow symlinks
 /bin/bash		/bin/bash -L
+
 /bin/sh			/bin/sh
 /bin/ls			/bin/ls
 /sbin/pivot_root	/sbin/pivot_root
@@ -10,3 +13,4 @@
 /etc/fstab		/etc/fstab
 /bin/mkdir		/bin/mkdir
 /bin/rmdir		/bin/rmdir
+

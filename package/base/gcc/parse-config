@@ -36,7 +36,7 @@ for x in CC CXX F77 ; do
 		    CXX)
 			z="${archprefix}g++ ${archprefix}g++-${y#gcc}" ;;
 		    F77)
-			z="${archprefix}g77 ${archprefix}g77-${y#gcc}" ;;
+			z="${archprefix}gfortran ${archprefix}g77 ${archprefix}gfortran-${y#gcc} ${archprefix}g77-${y#gcc}" ;;
 		esac
 		export $x=${x}_not_available_in_stage_${stagelevel}
 		for y in $z ; do

@@ -6,7 +6,7 @@ SUBSYSTEM=="block",				GROUP="disk"
 
 # IDE devices
 BUS=="ide", KERNEL=="hd[a-z]", ATTR{removable}=="1", \
-  PROGRAM="/bin/cat /proc/ide/%k/media", RESULT=="cdrom*",	GROUP="cdrom"
+  PROGRAM="/bin/cat /proc/ide/%k/media", RESULT=="cdrom*",	GROUP="cdrom",	MODE="0660"
 # BUS=="ide", KERNEL=="ht[0-9]*",					GROUP="tape"
 # BUS=="ide", KERNEL=="nht[0-9]*",				GROUP="tape"
 

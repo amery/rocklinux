@@ -76,6 +76,10 @@ pkgfilter sed '
 # (public)
 / ddrescue /		{ p ; d ; } ;
 
+# (target-finish)
+/ 1st-stage /	{ s/^O /X / ; p ; d ; } ;	/ 2nd-stage /	{ s/^O /X / ; p ; d ; } ;
+/ bootloader /	{ s/^O /X / ; p ; d ; } ;	/ packagedb /	{ s/^O /X / ; p ; d ; } ;
+/ isofs /	{ s/^O /X / ; p ; d ; } ;
 
 # Select some packages explicitly (architectures)
 # (alpha)
@@ -92,7 +96,7 @@ pkgfilter sed '
 / syslinux /		{ p ; d ; } ;
 
 # Disable the rest
-	s/^X /^O / ; p ; d ;
+	s/^X /O / ; p ; d ;
 '
 
 ROCKCFGSET_CREATE_TARBZ2=1

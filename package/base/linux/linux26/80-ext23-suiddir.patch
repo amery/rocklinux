@@ -134,12 +134,3 @@
  config JBD
  # CONFIG_JBD could be its own option (even modular), but until there are
  # other users than ext3, we will simply make it be the same as CONFIG_EXT3_FS
-@@ -1289,8 +1347,6 @@
- 	  It's currently broken, so for now:
- 	  answer N.
- 
--
--
- config SYSV_FS
- 	tristate "System V/Xenix/V7/Coherent file system support"
- 	help

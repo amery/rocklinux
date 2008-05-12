@@ -33,6 +33,15 @@ diff -dur linux-2.6.17-orig/scripts/kconfig/conf.c linux-2.6.17/scripts/kconfig/
  		case ask_all:
  			fflush(stdout);
  			fgets(line, 128, stdin);
+@@ -504,7 +515,7 @@
+ 	bindtextdomain(PACKAGE, LOCALEDIR);
+ 	textdomain(PACKAGE);
+ 
+-	while ((opt = getopt(ac, av, "osdD:nmyrh")) != -1) {
++	while ((opt = getopt(ac, av, "osdD:nmMyrh")) != -1) {
+ 		switch (opt) {
+ 		case 'o':
+ 			input_mode = ask_new;
 @@ -523,6 +534,9 @@
  		case 'm':
  			input_mode = set_mod;

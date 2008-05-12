@@ -1,0 +1,40 @@
+--- ./include/ip6tables.h.orig	2008-05-05 12:09:24.000000000 +0200
++++ ./include/ip6tables.h	2008-05-05 12:21:22.000000000 +0200
+@@ -1,6 +1,7 @@
+ #ifndef _IP6TABLES_USER_H
+ #define _IP6TABLES_USER_H
+ 
++#include <linux/types.h>
+ #include "iptables_common.h"
+ #include "libiptc/libip6tc.h"
+ 
+--- ./include/iptables.h.orig	2008-05-05 12:09:17.000000000 +0200
++++ ./include/iptables.h	2008-05-05 12:21:26.000000000 +0200
+@@ -1,6 +1,7 @@
+ #ifndef _IPTABLES_USER_H
+ #define _IPTABLES_USER_H
+ 
++#include <linux/types.h>
+ #include "iptables_common.h"
+ #include "libiptc/libiptc.h"
+ 
+--- ./include/libiptc/libip6tc.h.orig	2008-05-05 12:24:18.000000000 +0200
++++ ./include/libiptc/libip6tc.h	2008-05-05 12:24:24.000000000 +0200
+@@ -2,6 +2,7 @@
+ #define _LIBIP6TC_H
+ /* Library which manipulates firewall rules. Version 0.2. */
+ 
++#include <linux/types.h>
+ #include <libiptc/ipt_kernel_headers.h>
+ #include <linux/netfilter_ipv6/ip6_tables.h>
+ 
+--- ./include/libiptc/libiptc.h.orig	2008-05-05 12:16:08.000000000 +0200
++++ ./include/libiptc/libiptc.h	2008-05-05 12:20:51.000000000 +0200
+@@ -2,6 +2,7 @@
+ #define _LIBIPTC_H
+ /* Library which manipulates filtering rules. */
+ 
++#include <linux/types.h>
+ #include <libiptc/ipt_kernel_headers.h>
+ #include <linux/netfilter_ipv4/ip_tables.h>
+ 

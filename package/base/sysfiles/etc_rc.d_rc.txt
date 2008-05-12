@@ -17,7 +17,7 @@ prevdir=/etc/rc.d/rc$PREVLEVEL.d
 #
 if ! [ $PREVLEVEL = S -o $PREVLEVEL = N ]
 then
-	echo "RC: Leave runlevel $PREVLEVEL ..."
+	echo "rc: Leave runlevel $PREVLEVEL ..."
 	for i in $prevdir/K*; do
 		test -x "$i" || continue
 		x="`echo "$i" | sed "s,$prevdir/K..,$curdir/S??,"`"
@@ -39,6 +39,11 @@ then
 		[ "`echo $x`" = "$x" ] || continue
 		/sbin/rc --nobtee $i start
 	done
+fi
+
+if [ $PREVLEVEL = N ]; then
+	echo "rc: Running /etc/rc.d/rc.local script ..."
+	bash /etc/rc.d/rc.local
 fi
 
 echo "rc: The system is now in runlevel $RUNLEVEL."

@@ -1,0 +1,38 @@
+#!/bin/sh
+
+# root_env="/real-root"
+# init="/init"
+# 
+# mkdir -pv "$root_env"
+# if mount -v -t aufs aufs "$root_env" -o br:/=rw ; then
+# 
+# 	# having a world writeable top directory in an aufs branch
+# 	# may be a security issue
+# 	chmod 0700 "$root_env"
+# 
+# 	mount --move /proc "$root_env"/proc
+# 	mount --move /sys "$root_env"/sys
+# 	# remove left-over lines from /etc/mtab
+# 	# umount /proc /sys 2>/dev/null
+# 
+# 	cd "$root_env"
+# 	# /etc/mtab and "$root_env"/etc/mtab are the same file
+# 	sed -i -e "s,/*$root_env/*,/,g" etc/mtab
+# 
+# 	exec chroot . sh -c "exec $init" <dev/console >dev/console 2>&1
+# fi
+
+mkdir -p /mnt/{media,image,overlay}
+mount /dev/cdrom /mnt/media -o ro
+mount /mnt/media/*/2nd_stage-livecd.img /mnt/image -o loop
+mount /mnt/media/*/2nd_stage-overlay.img /mnt/overlay -o loop
+mount -t tmpfs tmpfs /real-root
+# Files from branches listed first in the mount option hide files with the same
+# name in later branches. The first branch listed must be writeable or the whole
+# directory that aufs is mounted on becomes read-only.
+mount -t aufs aufs /real-root -o br:/real-root=rw:/mnt/overlay=ro:/mnt/image=ro
+
+mkdir -p /real-root/mnt/{media,image,overlay}
+mount --move /mnt/media /real-root/mnt/media
+mount --move /mnt/image /real-root/mnt/image
+mount --move /mnt/image /real-root/mnt/overlay

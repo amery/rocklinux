@@ -1,10 +1,6 @@
 
 use_isolinux=1
-syslinux_ver="`sed -n 's,.*syslinux-\(.*\).tar.*,\1,p' \
-               $base/target/bootdisk/download.txt`"
 use_mdlbl=1
-mdlbl_ver="`sed -n 's,.*mdlbl-\(.*\).tar.*,\1,p' \
-            $base/target/bootdisk/download.txt`"
 
 cd $disksdir
 

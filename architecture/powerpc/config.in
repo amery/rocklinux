@@ -28,7 +28,7 @@ choice ROCKCFG_POWERPC_ISA powerpc \
 	powerpc		"Utilise the PowerPC ISA"			\
 	powerpc64	"Utilise the PowerPC64 ISA"
 
-choice ROCKCFG_POWERPC_OPT generic \
+choice ROCKCFG_POWERPC_OPT common \
 	common		"No special optimisation"			\
 	rios		"Optimised for rios"				\
 	rios1		"Optimised for rios1"				\
@@ -70,6 +70,6 @@ if [ $ROCKCFG_POWERPC_ISA != common ] ; then
 	ROCKCFG_ID="$ROCKCFG_ID-$ROCKCFG_POWERPC_ISA"
 fi
 
-if [ $ROCKCFG_POWERPC_OPT != generic ] ; then
+if [ $ROCKCFG_POWERPC_OPT != common ] ; then
 	ROCKCFG_ID="$ROCKCFG_ID-$ROCKCFG_POWERPC_OPT"
 fi

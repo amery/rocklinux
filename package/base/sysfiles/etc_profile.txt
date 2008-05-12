@@ -22,7 +22,7 @@
 
 # determine the effective user id
 # note that bash defines EUID as a read-only variable for this purpose
-_EUID="$( id -u )"
+_EUID="$( /usr/bin/id -u )"
 
 # set the PATH-variable
 export PATH=""

@@ -48,13 +48,13 @@ then
 	cp $confdir/x86/{isolinux.cfg,help?.txt} isolinux/
 	#
 	echo "Copy images to isolinux directory."
-	[ -e $rootdir/boot/memtest86.bin ] && \
-		cp $rootdir/boot/memtest86.bin isolinux/memtest86 || true
-	cp $ROCKCFG_PKG_1ST_STAGE_INITRD.gz $rootdir/boot/vmlinuz* isolinux/
+	[ -e $root/boot/memtest86.bin ] && \
+		cp $root/boot/memtest86.bin isolinux/memtest86 || true
+	cp $ROCKCFG_PKG_1ST_STAGE_INITRD.gz $root/boot/vmlinuz* isolinux/
 	#
-	cat > $build_rock/isofs_arch.txt <<- EOT
+	cat > $root/ROCK/isofs_arch.txt <<- EOT
 		BOOT	-b boot/isolinux/isolinux.bin -c boot/isolinux/boot.catalog
 		BOOTx	-no-emul-boot -boot-load-size 4 -boot-info-table
-		DISK1	$disksdir/isolinux/ boot/isolinux/
+		DISK1	$datadir/isolinux/ boot/isolinux/
 	EOT
 fi

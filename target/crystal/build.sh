@@ -55,7 +55,7 @@ admdir="build/${ROCKCFG_ID}/ROCK/info_sel"
 create_package_db $admdir build/${ROCKCFG_ID}/ROCK/pkgs_sel
 
 echo_status "Creating isofs.txt file .."
-cat << EOT > build/${ROCKCFG_ID}/ROCK/isofs.txt
+cat << EOT > build/${ROCKCFG_ID}/ROCK/isofs_crystal-pkgsel.txt
 DISK1	$admdir/cksums/					${ROCKCFG_SHORTID}/info/cksums/
 DISK1	$admdir/dependencies/				${ROCKCFG_SHORTID}/info/dependencies/
 DISK1	$admdir/descs/					${ROCKCFG_SHORTID}/info/descs/
@@ -69,3 +69,4 @@ EVERY	build/${ROCKCFG_ID}/ROCK/pkgs_sel/packages.db	${ROCKCFG_SHORTID}/pkgs/pack
 SPLIT	build/${ROCKCFG_ID}/ROCK/pkgs_sel/		${ROCKCFG_SHORTID}/pkgs/
 EOT
 
+cat build/${ROCKCFG_ID}/ROCK/isofs_*.txt > build/${ROCKCFG_ID}/ROCK/isofs.txt

@@ -9,7 +9,8 @@ STAGE_2_SMALL_IMAGE="2nd_stage_small.tar.gz"
 STAGE_2_COMPRESS_ARG="--use-compress-program=gzip -m"
 
 #640kB, err, 64 MB should be enought for the tmpfs ;-)
-TMPFS_OPTIONS="size=67108864"
+# 80 MB is better...
+TMPFS_OPTIONS="size=83886060"
 
 mod_load_info () { # {{{
 	read os host version rest < <( uname -a )

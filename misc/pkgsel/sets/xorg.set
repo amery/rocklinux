@@ -28,13 +28,14 @@
 / libungif /                    { p; d; };
 / linux-drm /                   { p; d; };
 / vlock /                       { p; d; };
+/ pixman /			{ p; d; };
 / xorg /			{ p; d; };
 / zsh/                          { p; d; };
 / fontconfig /			{ p; d; };
 / netkit-rsh /			{ p; d; };
 / libdrm /			{ p; d; };
 
-# Some architecture-specifc-packages with missing deps
+# Some architecture-specific-packages with missing deps
 / macosd /                      { s/^X /O / ; p; d; };
 / apmd /			{ s/^X /O / ; p; d; };
 

@@ -16,6 +16,9 @@ while : ; do
 # 		mount --move  /dev /real-root/dev
 # 		mount --move  /proc /real-root/proc
 # 		mount --move /sys /real-root/sys
+		umount -l /dev
+		umount -l /proc
+		umount -l /sys
 
 		mkdir -p /real-root/branch/irfs
 		mount --bind / /real-root/branch/irfs

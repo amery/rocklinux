@@ -21,21 +21,13 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-
-#. target/livecd/default.pkgsel
-
 ROCKCFGSET_CREATE_TARBZ2=1
 ROCKCFGSET_CREATE_GEM=0
-ROCKCFGSET_PKGFILE_VER=0
-
-ROCKCFGSET_PKG_BASH_PROGCOMP=0
+ROCKCFGSET_PKGFILE_VER=1
 
 ROCKCFGSET_DO_REBUILD_STAGE=0
-ROCKCFGSET_CREATE_DOCS=0
-ROCKCFGSET_OPTSIZE=1
-ROCKCFGSET_LIMITCXX=0
 
-ROCKCFGSET_PKG_LINUX_USE26MODTOOLS=1
+ROCKCFGSET_PKG_INITRAMFS_CONFIG='initramfs-livecd'
 
 # default package selection for this target...
 # begin the sed string
@@ -53,19 +45,44 @@ pkgdisable gcc34
 pkgdisable gcc40
 pkgdisable gcc41
 
+pkgdisable ncompress
+pkgdisable xphelloworld
+pkgdisable xsm
+pkgdisable xpdf
+
 # pkgenable pseudonative-daemon
 pkgenable tcp_wrappers
 pkgenable portmap
-# pkgenable pcmcia-cs
-# pkgenable hotplug
 pkgenable udev
 pkgenable disktype
-
+#
+pkgenable dbus
+pkgenable dbus-glib
+pkgenable dbus-qt3
+pkgenable hal
+	pkgenable hal-info
+	pkgenable usbutils
+pkgenable grml-x
+	pkgenable hwinfo
+pkgenable zisofs-tools
+#
 pkgenable fuse
 pkgenable aufs
 pkgenable rockinitramfs
 pkgenable cpio
+#
+pkgenable autoconf213
+pkgenable pycairo
+pkgenable pygtk
+pkgenable pygobject
+pkgenable gnupg2
+pkgenable libgpg-error
+pkgenable libgcrypt
+pkgenable libksba
+pkgenable libassuan
+pkgenable libpth
 
+# target-finish packages
 pkgenable initramfs
 pkgenable 2nd-stage-livecd
 pkgenable bootloader

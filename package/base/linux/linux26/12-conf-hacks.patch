@@ -62,17 +62,17 @@ diff -dur linux-2.6.17-orig/scripts/kconfig/Makefile linux-2.6.17/scripts/kconfi
 +PHONY += randconfig allyesconfig allnoconfig allmodconfig no2modconfig defconfig
  
  randconfig: $(obj)/conf
- 	$< -r arch/$(ARCH)/Kconfig
+ 	$< -r $(Kconfig)
 @@ -56,6 +56,9 @@
  allmodconfig: $(obj)/conf
- 	$< -m arch/$(ARCH)/Kconfig
+ 	$< -m $(Kconfig)
  
 +no2modconfig: scripts/kconfig/conf
-+	$< -M arch/$(ARCH)/Kconfig
++	$< -M $(Kconfig)
 +
  defconfig: $(obj)/conf
  ifeq ($(KBUILD_DEFCONFIG),)
- 	$< -d arch/$(ARCH)/Kconfig
+ 	$< -d $(Kconfig)
 @@ -77,6 +80,7 @@
  	@echo  '  randconfig	  - New config with random answer to all options'
  	@echo  '  defconfig	  - New config with default answer to all options'

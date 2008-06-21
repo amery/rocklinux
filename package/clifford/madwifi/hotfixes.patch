@@ -1,6 +1,6 @@
---- ./Makefile.orig	2007-03-07 09:39:40.000000000 +0100
-+++ ./Makefile	2007-12-01 08:29:11.000000000 +0100
-@@ -86,16 +86,9 @@
+--- ./Makefile.orig	2008-05-17 14:37:27.000000000 +0200
++++ ./Makefile	2008-05-17 14:37:43.000000000 +0200
+@@ -84,10 +84,6 @@
  install: install-modules install-tools
  
  install-modules:
@@ -8,17 +8,11 @@
 -	@# might cause make to abort the build
 -	sh scripts/find-madwifi-modules.sh $(KERNELRELEASE) $(DESTDIR)
 -
- 	for i in $(DIRS_MODULES); do \
+ 	for i in $(obj-y); do \
  		$(MAKE) -C $$i install || exit 1; \
  	done
--ifeq ($(DESTDIR),)
--	(export KMODPATH=$(KMODPATH); /sbin/depmod -ae $(KERNELRELEASE))
--endif
- 
- install-tools:
- 	$(MAKE) -C $(TOOLS) install || exit 1
 --- ./Makefile.inc.orig	2007-01-18 09:26:23.000000000 +0100
-+++ ./Makefile.inc	2007-12-01 08:23:38.000000000 +0100
++++ ./Makefile.inc	2008-05-17 13:33:45.000000000 +0200
 @@ -60,7 +60,7 @@
  # running kernel was compiled.  Note that the configuration and the
  # version of the kernel tree might have changed since then.
@@ -28,8 +22,8 @@
  # sanity check: does KERNELPATH exist?
  ifeq ($(shell cd $(KERNELPATH) && pwd),)
  $(error $(KERNELPATH) is missing, please set KERNELPATH)
---- ./tools/Makefile.orig	2007-02-07 04:18:49.000000000 +0100
-+++ ./tools/Makefile	2007-12-01 08:23:38.000000000 +0100
+--- ./tools/Makefile.orig	2007-11-13 10:24:57.000000000 +0100
++++ ./tools/Makefile	2008-05-17 13:33:45.000000000 +0200
 @@ -34,8 +34,8 @@
  STRIP ?= $(USER_CROSS_COMPILE)strip
  CC = $(USER_CROSS_COMPILE)gcc

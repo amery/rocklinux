@@ -8,3 +8,13 @@
  
  #include <cdio/sector.h>
  #include <cdio/util.h>
+--- ./include/cdio++/iso9660.hpp.orig	2008-06-10 19:16:08.000000000 +0200
++++ ./include/cdio++/iso9660.hpp	2008-06-10 19:16:17.000000000 +0200
+@@ -30,6 +30,7 @@
+ #include <cdio/iso9660.h>
+ #include <cdio++/cdio.hpp>
+ #include <string.h>
++#include <stdlib.h>
+ #include <vector>		// vector class library
+ using namespace std;
+ 

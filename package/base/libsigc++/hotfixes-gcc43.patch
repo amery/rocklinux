@@ -1,0 +1,9 @@
+--- ./tests/test_copy_invalid_slot.cc.orig	2008-06-10 19:42:02.000000000 +0200
++++ ./tests/test_copy_invalid_slot.cc	2008-06-10 19:42:23.000000000 +0200
+@@ -1,4 +1,6 @@
+ #include <iostream>
++#include <stdlib.h>
++#include <string.h>
+ #include <sigc++/sigc++.h>
+ 
+ void Foo(sigc::trackable &t) {}

@@ -53,9 +53,16 @@ if pkgcheck "gcc=.*" X ; then
 		fi
 		include "package/*/*/subconfig-gcc{$pkg_gcc_version}.in"
 
-		if [[ $gcc_version -ge 34 ]] ; then
-			bool 'Do profiled bootstrap' \
-			    ROCKCFG_PKG_GCC${gcc_version}_PROFILED 1
+		if [[ $gcc_version -ge 40 ]] ; then
+			bool 'Bootstrap the C compiler' \
+			    ROCKCFG_PKG_GCC${gcc_version}_BOOTSTRAP 1
+		fi
+		x="ROCKCFG_PKG_GCC${gcc_version}_BOOTSTRAP"
+		if [ "${!x}" != 0 ] ; then
+			if [[ $gcc_version -ge 34 ]] ; then
+				bool 'Do profiled bootstrap' \
+				    ROCKCFG_PKG_GCC${gcc_version}_PROFILED 1
+			fi
 		fi
 	    fi
 	done

@@ -87,3 +87,27 @@ ROCKCFG_PKG_GCC41_NO_JAVA
 ROCKCFG_PKG_GCC41_PROFILED
   Enables profiling during GCC bootstrap and so yields an optimised
   compiler. Build speedup might be 5-10%.
+
+ROCKCFG_PKG_GCC40_BOOTSTRAP
+  Enables bootstrapping the GCC compiler in native builds. GCC builds itself 3
+  times, using the previously built compiler for the 2nd and 3rd build. This
+  is a good way to check if the GCC you build actually works, at the cost of
+  increased build time.
+
+ROCKCFG_PKG_GCC41_BOOTSTRAP
+  Enables bootstrapping the GCC compiler in native builds. GCC builds itself 3
+  times, using the previously built compiler for the 2nd and 3rd build. This
+  is a good way to check if the GCC you build actually works, at the cost of
+  increased build time.
+
+ROCKCFG_PKG_GCC42_BOOTSTRAP
+  Enables bootstrapping the GCC compiler in native builds. GCC builds itself 3
+  times, using the previously built compiler for the 2nd and 3rd build. This
+  is a good way to check if the GCC you build actually works, at the cost of
+  increased build time.
+
+ROCKCFG_PKG_GCC43_BOOTSTRAP
+  Enables bootstrapping the GCC compiler in native builds. GCC builds itself 3
+  times, using the previously built compiler for the 2nd and 3rd build. This
+  is a good way to check if the GCC you build actually works, at the cost of
+  increased build time.

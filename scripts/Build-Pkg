@@ -475,8 +475,14 @@ if [ $this_is_the_2nd_run = 0 ] ; then
 			fi
 			echo
 
+			x="$root/var/adm/cache/$xpkg"
+			if [ -f "$x" ]; then
+				grep -e"\[DEP-[0-9]\]" "$x"
+			fi
 			x="$root/var/adm/dependencies/$xpkg"
 			if [ "$pkg" != "rock-debug" -a -f $x ]; then
+				cut -f2- -d' ' "$x" | \
+					fmt -70 | sed "s,^,[DEP-$stagelevel] ,"
 				cut -f2- -d' ' "$x" | \
 					fmt -70 | sed 's,^,[DEP] ,'
 				echo

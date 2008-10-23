@@ -54,6 +54,9 @@ if [ $stagelevel -ge 1 ] ; then
 	fi
 fi
 
+# Append all custom options so the gcc -V option always comes first.
+# The order of most other options doesn't matter; notable exceptions
+# are -L and -l (library).
 var_append GCC_WRAPPER_APPEND " " "$ROCKCFG_C_FLAGS"
 
 # Passing -I/usr{/local/}include creates a warning in gcc3 which is confusing
@@ -65,7 +68,7 @@ var_insert GCC3_WRAPPER_REMOVE " " "-I/usr/local/include"
 # Compile (i.e. link) all bins statically
 #
 if [ "$ROCKCFG_STATIC" = 1 ]; then
-	var_insert GCC_WRAPPER_INSERT " " "-static"
+	var_insert GCC_WRAPPER_APPEND " " "-static"
 fi
 
 # Use the GCC 4.x stack protector
@@ -74,7 +77,7 @@ if [ $pkg != glibc23 -a $pkg != glibc22 -a \
      $pkg != grub  -a $pkg != dietlibc -a $pkg != glibc ]
 then
 	if [ "$ROCKCFG_PKG_GCC_STACKPRO" = 1 ] ; then
-		var_append GCC4_WRAPPER_INSERT " " "-fstack-protector"
+		var_append GCC4_WRAPPER_APPEND " " "-fstack-protector"
 	fi
 fi
 
@@ -97,7 +100,7 @@ fi
 if [[ $ROCKCFG_DEFAULT_KCC = gcc* ]] ; then
 	if [ "$ROCKCFG_OPT" = "size" ] ; then
 		var_insert KCC_WRAPPER_REMOVE " " "-O -O[0-9]"
-		var_insert KCC_WRAPPER_INSERT " " "-Os"
+		var_insert KCC_WRAPPER_APPEND " " "-Os"
 	fi
 fi
 
@@ -123,34 +126,34 @@ fi
 case "$pkg" in
 	glibc*)
 		# do not mess with glibc -O options other than this
-		var_insert GCC_WRAPPER_INSERT " " "-O2 -pipe"
+		var_insert GCC_WRAPPER_APPEND " " "-O2 -pipe"
 		;;
 	*)
 		case "$ROCKCFG_OPT" in
 			smart)
-				var_insert GCC_WRAPPER_INSERT " " "-SPEED-O2 -SIZE-Os -pipe"
+				var_insert GCC_WRAPPER_APPEND " " "-SPEED-O2 -SIZE-Os -pipe"
 				var_insert GCC_WRAPPER_FILTER "|" "gawk -f $base/misc/tools-source/smartwr.awk $base/scripts/smart_db.txt -"
 				;;
 			bizarre)
-				var_insert GCC_WRAPPER_INSERT " " "-SPEED-Os -SIZE-O2 -pipe"
+				var_insert GCC_WRAPPER_APPEND " " "-SPEED-Os -SIZE-O2 -pipe"
 				var_insert GCC_WRAPPER_FILTER "|" "gawk -f $base/misc/tools-source/smartwr.awk $base/scripts/smart_db.txt -"
 				;;
 			speed)
-				var_insert GCC_WRAPPER_INSERT " " "-O2 -pipe"
+				var_insert GCC_WRAPPER_APPEND " " "-O2 -pipe"
 				;;
 			size)
-				var_insert GCC_WRAPPER_INSERT " " "-Os -pipe"
+				var_insert GCC_WRAPPER_APPEND " " "-Os -pipe"
 				;;
 			lazy)
-				var_insert GCC_WRAPPER_INSERT " " "-O1 -pipe"
+				var_insert GCC_WRAPPER_APPEND " " "-O1 -pipe"
 				;;
 			test)
 				case "$pkg" in
 					gcc*|binutils*|make|bzip2|gzip|coreutils|bash*|gawk|sed)
-						var_insert GCC_WRAPPER_INSERT " " "-Os -pipe"
+						var_insert GCC_WRAPPER_APPEND " " "-Os -pipe"
 						;;
 					*)
-						var_insert GCC_WRAPPER_INSERT " " "-O1 -pipe"
+						var_insert GCC_WRAPPER_APPEND " " "-O1 -pipe"
 						;;
 				esac
 				;;
@@ -177,7 +180,7 @@ fi
 gcc_force_fpic_handler() {
 	if [ "$forcefpic" = 1 ]; then
 		# echo_status "Enabling force -fPIC mechanism for gcc."
-		var_insert GCC_WRAPPER_INSERT " " "-fPIC"
+		var_insert GCC_WRAPPER_APPEND " " "-fPIC"
 	fi
 }
 hook_add prepare 7 'gcc_force_fpic_handler'

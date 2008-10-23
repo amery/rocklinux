@@ -25,7 +25,7 @@
 main() {
 	renice $newpriority -p $1 | sed "s,^,$2,"
 	# for y in `ps -e -o ppid,pid | grep "^ *$1 " | sed "s,^ *$1 ,,"`
-	for y in `cut -f1,4 -d' ' /proc/*/stat | grep " $1\$" | cut -f1 -d' '`
+	for y in `cut -f1,4 -d' ' /proc/[0-9]*/stat | grep " $1\$" | cut -f1 -d' '`
 	do main $y "$2  " ; done
 }
 

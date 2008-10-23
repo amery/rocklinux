@@ -89,6 +89,11 @@ gui_menu() {
 	cmd="$cmd --menu '${title//$x/$x\\$x$x}'"
 	cmd="$cmd $(( $y_text + $y_menu +  6 )) $gui_dialog_s70 $y_menu"
 
+	# Add item to empty menu, dialog issues an error about missing arguments otherwise.
+	if [ $# -eq 0 ] ; then
+		cmd="$cmd '-' 'This menu is empty.'"
+	fi
+
 	while [ $# -gt 0 ] ; do
 		y="${2#\*}"
 		if [ -z "$default" -a "$y" != "$2" ] ; then

@@ -53,6 +53,20 @@ fi
 
 . misc/output/parse-config
 
+base=$(pwd -P)
+
+if [ "$ROCK_THIS_IS_CHROOT" = 1 ]
+then
+	toolsdir=tools.chroot
+else
+	if [ "$ROCKCFG_CROSSBUILD" == 1 ]
+	then
+		toolsdir=tools.cross
+	else
+		toolsdir=tools.native
+	fi
+fi
+
 [ "$ROCKCFG_CROSSBUILD" = 1 ] && crossnative=cross
 arch="${ROCKCFG_ARCH:-none}" ; target="${ROCKCFG_TARGET:-none}"
 
@@ -76,20 +90,6 @@ else
 
 	if [ $stagelevel -eq 2 ]; then
 		archprefix="${arch_target}-"
-	fi
-fi
-
-base=$(pwd -P)
-
-if [ "$ROCK_THIS_IS_CHROOT" = 1 ]
-then
-	toolsdir=tools.chroot
-else
-	if [ "$ROCKCFG_CROSSBUILD" == 1 ]
-	then
-		toolsdir=tools.cross
-	else
-		toolsdir=tools.native
 	fi
 fi
 

@@ -142,12 +142,14 @@ main_setup_filesystems_add_part(){
 	local disk="${1}"
 	local size="${2}"
 	local tmp="$(mktemp)"
-	disktype "${disk}" > "${tmp}"
-	if [ -z "${size}" ] ; then 
-		read a b c d e g h < <( grep ^Block\ device "${tmp}" )
-		size="${g#(}"
+
+	if [ -z "${size}" ] ; then
+		size="$( blockdev --getsize64 ${disk} )"
 	fi
+
+ 	disktype "${disk}" > "${tmp}"
 	read fstype rest < <( grep " file system" "${tmp}" )
+
 	grep -q "^Linux swap" "${tmp}" && fstype="Swap"
 	grep -q 'RAID set UUID' "${tmp}" && fstype="RAID"
 	fstype="${fstype:-Unknown}"
@@ -189,31 +191,30 @@ main_setup_filesystems() {
 	for disk in /dev/disk/by-id/* ; do
 		type="${disk##*/}"
 		type="${type%%-*}"
-		if [ "${type}" == "ata" -o "${type}" == "usb" ] ; then
+		if [ "${type}" == "ata" -o "${type}" == "usb" -o "${type}" == "sata" -o "${type}" == "scsi" ] ; then
 			tmp="$(mktemp)"
 			disktype "${disk}" > "${tmp}"
-			[ -f "${tmp}" ] || smartctl -d ata -i "${disk}" > "${tmp}"
-			if [ "${type}" == "ata" ] ; then
-				read a b model < <( grep ^Device\ Model "${tmp}" )
-				read a b serial < <( grep ^Serial\ Number "${tmp}" )
-				type="ATA"
+			if [ "${type}" == "ata" -o "${type}" == "sata" -o "${type}" == "scsi" ] ; then
+				hdparm -i "${disk}" >> "${tmp}"
+				model="$(sed -e"s:Model=*\(.*\), FwRev.*:\1:p ; d" < ${tmp})"
+				serial="$(sed -e"s:.*SerialNo=*\(.*\):\1:p ; d" < ${tmp})"
 			elif [ "${type}" == "usb" ] ; then
 				model="USB Device"
 				serial="${disk%-*}"
 				serial="${serial##*-}"
-				type="USB"
 			else
 				type="UNKNOWN"
 				unset model serial
 			fi
+			type=$( echo $type | tr '[:lower:]' '[:upper:]')
+
 			if [ "${disk%-part*}" != "${disk}" ]  ; then
 				# is a partition
 				main_setup_filesystems_add_part "${disk}" ""
 			else
 				# is a disk
 				if [ -z "${size}" ] ; then 
-					read a b c d e g h < <( grep ^Block\ device "${tmp}" )
-					size="${g#(}"
+					size=$( blockdev --getsize64 ${disk} )
 				fi
 				DISKS="${DISKS} '${type} Disk (${model:-Unknown Model} - ${serial:-Unknown Serial Number} - $(( ${size} / 1024 / 1024 )) MB)' 'main_edit_disk ${disk}'"
 			fi

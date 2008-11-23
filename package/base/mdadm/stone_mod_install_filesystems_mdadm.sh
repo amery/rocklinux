@@ -76,7 +76,11 @@ mdadm_setup_software_raid_new(){ # {{{
 	gui_yesno "Really create /dev/md/${x} from disks ${selected}? All data on the disks will be deleted!"
 	rval=${?}
 	if [ ${rval} -eq 0 ] ; then
-		mdadm -C /dev/md/${x} -l ${level} -n $( wc -w <<< "${selected}" ) --auto=yes --symlink=yes $( for x in ${selected} ; do find /dev -name $x ; done )
+		mdadm -C /dev/md/${x} -l ${level} -n $( wc -w <<< "${selected}" ) \
+		    --auto=yes --symlink=yes $(
+			for x in ${selected} ; do 
+				find /dev -name ${x} -type b
+			done )
 		echo "Remember to recreate /etc/mdadm.conf!"
 		read -p "Press enter to continue"
 	fi
@@ -142,8 +146,7 @@ mdadm_disk_detector(){
 			grep -q "^Linux swap" "${tmp3}" && fstype="Swap"
 			fstype="${fstype:-Unknown}"
 
-			read a b c d e g h < <( grep ^Block\ device "${tmp3}" )
-			size="${g#(}"
+			size="$(blockdev --getsize64 ${md})"
 			rm -f "${tmp3}"
 		fi
 		rm -f "${tmp2}"
@@ -172,7 +175,7 @@ mdadm_disk_detector(){
 		else
 			export DISKS="${DISKS} '  Mounted on ${mountpoint}'"
 		fi
-		export DISKS="${DISKS} 'main_mount_partition \"${disk}\" \"${mountpoint:-nowhere}\" \"${fstype}\"'"
+		export DISKS="${DISKS} 'main_mount_partition \"${md}\" \"${mountpoint:-nowhere}\" \"${fstype}\"'"
 	done < "${tmp}"
 
 	rm -f "${tmp}"

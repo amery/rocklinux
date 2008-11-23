@@ -1,5 +1,5 @@
 stone_mod_install_installer(){
-	for x in $( cd ${confdir} ; echo stone_mod_install*.sh ) ; do
+	for x in $( cd ${confdir} ; echo stone_mod_*.sh ) ; do
 		[ -e "${confdir}/${x}" ] || continue
 		cp -v ${confdir}/${x} ${root}/etc/stone.d/${x#stone_}
 	done

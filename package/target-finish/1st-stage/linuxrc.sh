@@ -121,7 +121,7 @@ EOF
 	echo "[ ${url} ]"
 	export ROCK_INSTALL_SOURCE_URL=${baseurl}
 
-	if ! mkdir /mnt_root ; then
+	if ! mkdir -p /mnt_root ; then
 		echo "Can't create /mnt_root"
 		return 1
 	fi
@@ -131,10 +131,16 @@ EOF
 		return 1
 	fi
 
-	wget -O - ${url} | tar ${STAGE_2_COMPRESS_ARG} -C /mnt_root -xf -
-
-	echo "finished ... now booting 2nd stage"
-	doboot
+	if ! wget -O - ${url} | tar ${STAGE_2_COMPRESS_ARG} -C /mnt_root -xf - ; then
+		echo "Downloading and extracting image to /mnt_root failed"
+	else
+		echo "finished ... now booting 2nd stage"
+	
+		if ! doboot ; then
+			echo "Booting 2nd stage failed"
+		fi
+	fi
+	umount /mnt_root
 } # }}}
 load_modules() { # {{{
 # this starts the module loading shell

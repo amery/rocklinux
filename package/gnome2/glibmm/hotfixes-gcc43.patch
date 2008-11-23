@@ -1,5 +1,50 @@
---- ./glib/glibmm/object.cc.orig	2008-06-11 00:02:59.000000000 +0200
-+++ ./glib/glibmm/object.cc	2008-06-11 00:03:07.000000000 +0200
+diff -dur glibmm-2.14.1/glib/glibmm/convert.cc src.glibmm.1224434129.9075.1379606037/glibmm-2.14.1/glib/glibmm/convert.cc
+--- glibmm-2.14.1/glib/glibmm/convert.cc	2007-08-13 12:51:08.000000000 +0200
++++ src.glibmm.1224434129.9075.1379606037/glibmm-2.14.1/glib/glibmm/convert.cc	2008-10-19 18:39:21.000000000 +0200
+@@ -27,6 +27,7 @@
+ #include <glib/gconvert.h>
+ #include <glib/gmessages.h>
+ #include <glib/gunicode.h>
++#include <glib/gtestutils.h>
+ #include <glibmm/utility.h>
+ 
+ 
+diff -dur glibmm-2.14.1/glib/glibmm/date.cc src.glibmm.1224434129.9075.1379606037/glibmm-2.14.1/glib/glibmm/date.cc
+--- glibmm-2.14.1/glib/glibmm/date.cc	2007-08-13 12:51:09.000000000 +0200
++++ src.glibmm.1224434129.9075.1379606037/glibmm-2.14.1/glib/glibmm/date.cc	2008-10-19 18:39:39.000000000 +0200
+@@ -26,6 +26,7 @@
+ 
+ #include <glib/gmem.h>
+ #include <glib/gmessages.h>
++#include <glib/gtestutils.h>
+ 
+ #include <ctime>
+ #include <algorithm>
+diff -dur glibmm-2.14.1/glib/glibmm/error.cc src.glibmm.1224434129.9075.1379606037/glibmm-2.14.1/glib/glibmm/error.cc
+--- glibmm-2.14.1/glib/glibmm/error.cc	2007-08-13 12:50:35.000000000 +0200
++++ src.glibmm.1224434129.9075.1379606037/glibmm-2.14.1/glib/glibmm/error.cc	2008-10-19 18:40:26.000000000 +0200
+@@ -22,6 +22,7 @@
+ 
+ #include <glib/gerror.h>
+ #include <glib/gmessages.h>
++#include <glib/gtestutils.h>
+ 
+ #include <map>
+ #include <glibmmconfig.h>
+diff -dur glibmm-2.14.1/glib/glibmm/exception.cc src.glibmm.1224434129.9075.1379606037/glibmm-2.14.1/glib/glibmm/exception.cc
+--- glibmm-2.14.1/glib/glibmm/exception.cc	2007-08-13 12:50:35.000000000 +0200
++++ src.glibmm.1224434129.9075.1379606037/glibmm-2.14.1/glib/glibmm/exception.cc	2008-10-19 18:40:47.000000000 +0200
+@@ -22,6 +22,7 @@
+ 
+ #include <glib/gmessages.h>
+ #include <glibmm/exception.h>
++#include <glib/gtestutils.h>
+ 
+ 
+ namespace Glib
+diff -dur glibmm-2.14.1/glib/glibmm/object.cc src.glibmm.1224434129.9075.1379606037/glibmm-2.14.1/glib/glibmm/object.cc
+--- glibmm-2.14.1/glib/glibmm/object.cc	2007-08-13 12:50:35.000000000 +0200
++++ src.glibmm.1224434129.9075.1379606037/glibmm-2.14.1/glib/glibmm/object.cc	2008-10-19 18:35:45.000000000 +0200
 @@ -27,6 +27,7 @@
  #include <gobject/gvaluecollector.h>
  

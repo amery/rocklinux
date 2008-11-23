@@ -5,7 +5,7 @@ update_mime_db() {
 
 	for dir in $@ ; do
 		if [ -d $dir -a -d $dir/packages ] ; then
-			update-mime-db -V $dir
+			update-mime-database -V $dir
 		fi
 	done
 }

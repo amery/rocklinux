@@ -983,7 +983,7 @@ all() {
     for each in target/*/download.txt target/*/*/download.txt; do
 	target="`echo $each | cut -f2 -d/`"
 
-	parse_download < <(cat $each)
+	parse_download < <(sed 's,^,DDD ,' < $each)
     done
 }
 

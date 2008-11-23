@@ -23,5 +23,13 @@
 #
 # [INSTALLER] 10 mdadm ROCK Linux Operation System Installer V2 - e2fsprogs partitioning module
 
-MKFS_PROGRAMS="${MKFS_PROGRAMS} 'Create an Ext2 Filesystem' 'mkfs.ext2 PART'
-				'Create an Ext3 Filesystem' 'mkfs.ext3 PART'"
+# Use an inode size of 128 bytes (-I 128) for now since grub does not find files on
+# file systems created with the new default value 256. Instead grub would print
+# an error when installing the bootloader:
+#	Checking if "/boot/grub/stage1" exists... no
+#	Checking if "/grub/stage1" exists... no
+#
+#	Error 15: File not found
+
+MKFS_PROGRAMS="${MKFS_PROGRAMS} 'Create an Ext2 Filesystem' 'mkfs.ext2 -I 128 PART'
+				'Create an Ext3 Filesystem' 'mkfs.ext3 -I 128 PART'"

@@ -51,13 +51,18 @@ dnl
 		fi
 	fi
 dnl
-    block_split(`Setting hostname to $(cat /etc/HOSTNAME).')
+    if [ -f "/etc/HOSTNAME" ] ; then
+	hostname="$(cat /etc/HOSTNAME)"
+    else
+	hostname="localhost"
+    fi
+    block_split(`Setting hostname to $hostname.')
 	check(`hostname "$(cat /etc/HOSTNAME)"')
 dnl
     block_split(`Setting up loopback networking.')
 	check(`ip link set lo up')
 	ip addr add 127.0.0.1/8 dev lo
-	ip route add 127/8 dev lo
+	ip route add 127.0.0.0/8 dev lo
 dnl
     block_split(`Setting overflow UID and GID kernel parameters.')
 	check(`sysctl -w kernel.overflowuid=$(grep ^nobody: /etc/passwd | cut -f 3 -d:) > /dev/null')

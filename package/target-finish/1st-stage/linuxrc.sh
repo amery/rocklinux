@@ -405,8 +405,8 @@ checkisomd5() { # {{{
 } # }}}
 
 emit_udev_events() { # {{{
-	/sbin/udevtrigger
-	/sbin/udevsettle
+	/sbin/udevadm trigger
+	/sbin/udevadm settle
 } # }}}
 
 input=1

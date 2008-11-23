@@ -36,8 +36,8 @@ initrd_mount() { # {{{
 } # }}}
 
 emit_udev_events() { # {{{
-	/sbin/udevtrigger
-	/sbin/udevsettle
+	/sbin/udevadm trigger
+	/sbin/udevadm settle
 } # }}}
 
 PATH="/sbin:/usr/sbin:/bin/:/usr/bin"

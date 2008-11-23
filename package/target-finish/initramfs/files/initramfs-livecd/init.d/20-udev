@@ -4,8 +4,8 @@ if ! test -e /dev/.udev ; then
 fi
 
 udevd --daemon
-udevtrigger
-udevsettle
+udevadm trigger
+udevadm settle
 
 mkdir -p /dev/pts
 mkdir -p /dev/shm

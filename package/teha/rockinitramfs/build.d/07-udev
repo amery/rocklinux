@@ -2,11 +2,7 @@
 
 BINLIST="
 sbin/udevd
-sbin/udevcontrol
-sbin/udevsettle
-sbin/udevtrigger
-usr/bin/udevinfo
-usr/bin/udevtest
+sbin/udevadm
 "
 
 for x in $BINLIST
@@ -20,6 +16,7 @@ dir /etc/udev/rules.d 0755 0 0
 file /etc/udev/udev.conf $rootdir/etc/udev/udev.conf 644 0 0
 
 dir /lib/udev 0755 0 0
+dir /lib/udev/rules.d 0755 0 0
 dir /lib/udev/devices 0755 0 0
 dir /lib/udev/devices/bus 0755 0 0
 dir /lib/udev/devices/bus/usb 0755 0 0
@@ -37,7 +34,7 @@ EOF
 
 (
 	cd ${rootdir}/
-	find etc/udev/rules.d -maxdepth 1 -type f | while read x
+	find {etc,lib}/udev/rules.d -maxdepth 1 -type f | while read x
 	do
 		echo "file $x $rootdir/$x 644 0 0"
 	done

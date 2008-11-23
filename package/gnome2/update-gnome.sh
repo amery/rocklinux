@@ -1,10 +1,12 @@
 #!/bin/sh
-
 #
 # Usage: update-gnome.sh [-n] gnome-version
 # 
 #   -n prints the package that will be updated with their new versions
 #      without making any changes
+#
+# Example:
+# bash package/gnome2/update-gnome.sh -n 2.24.1
 #
 
 dry=0

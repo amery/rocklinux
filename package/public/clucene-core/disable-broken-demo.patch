@@ -1,0 +1,11 @@
+--- clucene-core-0.9.21/CMakeLists.txt-orig	2008-08-22 16:40:55.000000000 +0200
++++ clucene-core-0.9.21/CMakeLists.txt	2008-10-18 17:15:25.000000000 +0200
+@@ -17,7 +17,7 @@
+ INCLUDE_DIRECTORIES( ${clucene_SOURCE_DIR}/src )
+ INCLUDE_DIRECTORIES( ${clucene_BINARY_DIR}/src )
+ 
+-SUBDIRS (src/CLucene test src/demo)
++SUBDIRS (src/CLucene test)
+ 
+ OPTION(ENABLE_DEBUG
+   "enable debug support"

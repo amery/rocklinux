@@ -4,10 +4,18 @@ echo "$0: $*"
 PATH="/bin:/usr/bin:/sbin:/usr/sbin"
 export PATH
 
+[ -z "$autoboot" ] && autoboot=0
+
+if [ "$autoboot" -eq 0 ] ; then
+	echo "Interactive stage 1, spawning /bin/bash. Exit to continue booting..."
+	/bin/bash
+fi
+
 for x in /init.d/*
 do
 	. $x
 done
+
 while : ; do
 	echo "going real..."
 	if [ -x /real-root/sbin/init ] ; then

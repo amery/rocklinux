@@ -22,29 +22,24 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 #
-# Desc: System bootup and shutdown
-# Runlevel: 80 rc5
+# Desc: Network Device Auto-Configuration
+# Runlevel: 13 rcX rc3 rc4 rc5
 #
 
 [ "$1" = stop ] && exit 0
 
-grml_x_create_xorg_conf()
-{
-		local XDM="/usr/X11/bin/xdm"
-		[ -f /etc/conf/xdm ] && . /etc/conf/xdm
-		check(`grml-x -force -nostart $XDM')
-}
-
 main_begin
-    block_begin(start, `Creating X server configuration with grml-x.')
-	if [ -f "/etc/conf/X11/xorg.conf" ] ; then
-		echo "/etc/conf/X11/xorg.conf already exists, doing nothing ..."
-	else
-		grml_x_create_xorg_conf
-	fi
-    block_end
+    block_begin(start, `Adding eth network interfaces to etcnet configuration.')
+	ifaces="$( ip link show | sed -e"s,^[0-9]: \([^:]*\).*,\1,p ; d" )"
+	for x in $ifaces ; do
+		[ -e "/etc/net/ifaces/$x/options" ] && continue
 
-    block_begin(restart, `Re-creating X server configuration with grml-x.')
-	grml_x_create_xorg_conf
+		case $x in
+		eth*)
+			mkdir -p /etc/net/ifaces/$x
+			touch /etc/net/ifaces/$x/options
+			;;
+		esac
+	done
     block_end
 main_end

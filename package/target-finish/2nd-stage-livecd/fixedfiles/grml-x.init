@@ -37,8 +37,8 @@ grml_x_create_xorg_conf()
 
 main_begin
     block_begin(start, `Creating X server configuration with grml-x.')
-	if [ -f "/etc/conf/X11/xorg.conf" ] ; then
-		echo "/etc/conf/X11/xorg.conf already exists, doing nothing ..."
+	if [ -f "/etc/X11/xorg.conf" ] ; then
+		echo "/etc/X11/xorg.conf already exists, doing nothing ..."
 	else
 		grml_x_create_xorg_conf
 	fi

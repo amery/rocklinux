@@ -48,13 +48,6 @@ main_begin
 		exec > /dev/console 2>&1 < /dev/console
 		echo "Mounted /dev (udev) from udev init script."
 	fi
-    block_split(`Setting /dev/root.')
-	if [ ! -e /dev/root ] ; then
-		(
-			eval $( udevadm info --export --export-prefix="ROOT_" --device-id-of-file=/ )
-			mknod /dev/root b $ROOT_MAJOR $ROOT_MINOR
-		)
-	fi
     block_end
 
     block_begin(stop, `Stopping udevd.')

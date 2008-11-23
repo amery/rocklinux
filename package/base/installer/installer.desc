@@ -6,7 +6,7 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/blindcoder/cryptsetup-luks/cryptsetup-luks.desc
+[COPY] ROCK Linux: rock-src/package/base/installer/installer.desc
 [COPY] ROCK Linux is Copyright (C) 1998 - 2006 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
@@ -21,30 +21,19 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[I] Linux Unified Key Setup - Tool to encrypt filesystems
+[I] ROCK Linux Operation System Installer
 
-[T] LUKS is the upcoming standard for Linux hard disk encryption. By
-[T] providing a standard on-disk-format, it does not only facilitate
-[T] compatibility among distributions, but also provide secure management of
-[T] multiple user passwords. In contrast to existing solution, LUKS stores
-[T] all setup necessary setup information in the partition header, enabling
-[T] the user to transport or migrate his data seamlessly.
-[T] 
-[T] While LUKS is a standard on-disk format, there is also a reference
-[T] implementation. LUKS for dm-crypt is implemented in an enhanced version
-[T] of cryptsetup.
+[T] This is the ROCK Linux Operation System Installer V2
 
-[U] http://luks.endorphin.org/
+[U] http://www.rocklinux.org/wiki/Abstract_New_Installer
 
-[A] Clemens Fruhwirth <dm-crypt@saout.de>
-[M] Benjamin Schieder <blindcoder@scavenger.homeip.net>
+[A] Benjamin Schieder <blindcoder@rocklinux.org>
+[M] Benjamin Schieder <blindcoder@rocklinux.org>
 
-[C] extra/security
-[F] CORE
+[C] base/system
 
 [L] GPL
-[S] Stable
-[V] 1.0.4
-[P] X -----5---9 800.000
+[S] Alpha
+[V] 001
+[P] X -----5---9 100.000
 
-[D] 475393035 cryptsetup-luks-1.0.4.tar.bz2 http://luks.endorphin.org/source/

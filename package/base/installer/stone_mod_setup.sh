@@ -31,7 +31,7 @@ proc /proc proc defaults 0 0
 devpts /dev/pts devpts defaults 0 0
 tmpfs /dev/shm tmpfs defaults 0 0
 sysfs /sys sysfs defaults 0 0
-usbfs /proc/bus/usb usbfs defaults 0 0
+/dev/bus/usb /proc/bus/usb bind bind 0 0
 #tmpfs /tmp tmpfs defaults 0 0
 EOT
 
@@ -74,12 +74,6 @@ EOT
 	rm -f $tmp1 $tmp2
 }
 
-set_hostname() {
-	gui_input "Set a hostname (without domain part)" "localhost" hn
-	echo "$hn" > /etc/HOSTNAME
-	hostname "$hn"
-}
-
 set_rootpw() {
 	if [ "$SETUPG" = dialog ] ; then
 		tmp1="`mktemp`" ; tmp2="`mktemp`" ; rc=0
@@ -108,7 +102,6 @@ main() {
 
 	make_fstab
 	$STONE general set_keymap
-	set_hostname
 	while ! set_rootpw; do :; done
 	$STONE general set_tmarea
 	$STONE general set_dtime

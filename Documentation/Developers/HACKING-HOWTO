@@ -408,10 +408,10 @@ package update patches (after evaluating the output of the
 ./scripts/Check-PkgVersion script). E.g.:
 
 	./scripts/Create-PkgUpdPatch | patch -p1 << EOT
-		automake-1.6.1, bin86-0.16.3, bison-1.35, curl-7.9.6,
-		diffutils-2.8.1, dump-0.4b28, ifhp-3.5.7, net-snmp-4.2.4,
-		ntp-4.1.1, pciutils-2.1.10, sendmail.8.12.3, silo-1.2.5,
-		tree-1.4b2, util-linux-2.11q, whois_4.5.25
+		automake~1.6.1, bin86~0.16.3, bison~1.35, curl~7.9.6,
+		diffutils~2.8.1, dump~0.4b28, ifhp~3.5.7, net-snmp~4.2.4,
+		ntp~4.1.1, pciutils~2.1.10, sendmail~8.12.3, silo~1.2.5,
+		tree~1.4b2, util-linux~2.11q, whois~4.5.25
 	EOT
 
 2.4.10. ./scripts/Create-ErrList

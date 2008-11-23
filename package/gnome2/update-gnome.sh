@@ -25,6 +25,11 @@ urldesktop="$baseurl/desktop/$major/$major.$rev/sources/"
 urldevtools="$baseurl/devtools/$major/$major.$rev/sources/"
 urlplatform="$baseurl/platform/$major/$major.$rev/sources/"
 
+V() {
+	echo "+ $*" >&2
+	"$@"
+}
+
 create_pkg() {
 	echo "$pkg ($pkgver) is not a rock package yet"
 	echo "creating $pkg package"
@@ -39,7 +44,7 @@ create_pkg() {
 }
 
 for url in $urladmin $urlbindings $urldesktop $urldevtools $urlplatform ; do
-	wget -q -O - $url | \
+	V wget -q -O - $url | \
 	sed -n '/id="body"/,/\/div/{/tar.bz2/p}' | \
 	sed -r 's/^.*href="([^"]*).tar.bz2".*$/\1/' | \
 	tr 'A-Z' 'a-z' | \
@@ -51,7 +56,7 @@ for url in $urladmin $urlbindings $urldesktop $urldevtools $urlplatform ; do
 			if [ $dry = 1 ] ; then
 				echo $pkg-$pkgver
 			else
-				./scripts/Create-PkgUpdPatch $pkg-$pkgver | \
+				V ./scripts/Create-PkgUpdPatch $pkg~$pkgver | \
 				patch -p0
 			fi
 # 		else
@@ -70,13 +75,13 @@ while IFS=":" read pkg download; do
 	read dtag cksum file durl < <(echo $download)
 	durl="${durl%/}" ; durl="${durl%/*}"
 
-	wget -q -O - $durl | \
+	V wget -q -O - $durl | \
 	sed -n -e 's,.*href="\([0-9.].*\)".*,\1,gp' | \
 	tail -n1 | \
 	while read newmajor ; do
 		url="$durl/$newmajor"
 
-		wget -q -O - $url | \
+		V wget -q -O - $url | \
 		sed -n -e"s,.*\(LATEST-IS-[^<]*\).*,\1,gp" | \
 		while read newver; do
 			pkgver="${newver#LATEST-IS-}"
@@ -85,7 +90,7 @@ while IFS=":" read pkg download; do
 				if [ $dry = 1 ] ; then
 					echo $pkg-$pkgver
 				else
-					./scripts/Create-PkgUpdPatch $pkg-$pkgver | \
+					V ./scripts/Create-PkgUpdPatch $pkg~$pkgver | \
 					patch -p0
 				fi
 # 			else

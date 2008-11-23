@@ -6,8 +6,8 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/daja77/gnokii/gnokii.desc
-[COPY] ROCK Linux is Copyright (C) 1998 - 2006 Clifford Wolf
+[COPY] ROCK Linux: rock-src/package/public/opensync/opensync.desc
+[COPY] ROCK Linux is Copyright (C) 1998 - 2008 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
 [COPY] it under the terms of the GNU General Public License as published by
@@ -21,23 +21,26 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[I] gnokii provides tools and a user space driver for use with Nokia phones under Linux.
+[I] a synchronization framework
 
-[T] With gnokii you can do such things as make data calls, update your address book, 
-[T] change calendar entires, send and receive SMS messages and load ring tones depending
-[T] on the phone you have.
+[T] OpenSync is a synchronization framework that is platform and distribution
+[T] independent. It consists of a powerful sync-engine and several plugins
+[T] that can be used to connect to devices. 
+[T]
+[T] OpenSync is very flexible and capable of synchronizing any type of data,
+[T] including contacts, calendar, tasks, notes and files.
 
-[U] http://www.gnokii.org
+[U] http://www.opensync.org
 
-[A] Pavel Janik <Pavel.Janik@suse.cz>
-[A] Hugh Blemings <hugh@blemings.org>
-[M] Daniel Jahre <rock@lospalmos.net>
+[A] TODO: Author
+[M] The ROCK Linux Project
 
-[C] extra/network
+[C] extra/development
 
-[L] GPL
-[S] Stable
-[V] 0.6.26
-[P] X --?--5---9 195.800
+[L] LGPL
+[S] Beta
+[V] 0.34
+[P] X -----5---9 200.000
 
-[D] 468461917 gnokii-0.6.26.tar.bz2 http://www.gnokii.org/download/gnokii/0.6.x/
+[D] 410589875 libopensync-0.34.tar.bz2 http://www.opensync.org/download/releases/0.34/
+

@@ -1,5 +1,9 @@
 
-use_isolinux=1
+if pkginstalled syslinux ; then
+	use_isolinux=1
+else
+	use_isolinux=0
+fi
 use_mdlbl=1
 
 cd $disksdir
@@ -33,12 +37,13 @@ chmod +x makeimages.sh
 
 if [ $use_isolinux -eq 1 ]
 then
+	syslinux_ver="$( grep " syslinux " $base/config/$config/packages | cut -f6 -d" " )"
+
 	echo "Creating isolinux setup:"
 	#
 	echo "Extracting isolinux boot loader."
 	rm -rf isolinux ; mkdir -p isolinux
-	tar -O $taropt $base/download/mirror/s/syslinux-$syslinux_ver.tar.bz2 \
-	    syslinux-$syslinux_ver/isolinux.bin > isolinux/isolinux.bin
+	cp -a $root/usr/share/syslinux/isolinux.bin isolinux/isolinux.bin
 	#
 	echo "Creating isolinux config file."
 	cp $confdir/x86/{isolinux.cfg,help?.txt} isolinux/

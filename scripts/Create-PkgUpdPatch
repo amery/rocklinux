@@ -28,8 +28,8 @@ if [ "$1" != "${1#-}" ] ; then
 $0:
 Automatically create package-update patches.
 
-Input format (e.g.): automake-1.5, bind-9.2.0rc3, binutils-2.11.90.0.31,
-                     gettext-0.10.40, gnome-applets-1.4.0.4
+Input format (e.g.): automake~1.5, bind~9.2.0rc3, binutils~2.11.90.0.31,
+                     gnome-applets~1.4.0.4, linux=linux26~2.6.26.5
 
 Output format: unified diff for the .desc files
 
@@ -56,24 +56,28 @@ while read x ; do
 	if [ "${x//=/}" != "${x}" ] ; then
 		pkg="${x%%=*}"
 		xpkg="${x#*=}"
-		newver="${xpkg#*_}"
-		xpkg="${xpkg%-*}"
+		newver="${xpkg#*~}"
+		xpkg="${xpkg%~*}"
 	else
-		pkg="${x%%_*}"
+		pkg="${x%%~*}"
 		xpkg="${pkg}"
-		newver="${x#*_}"
+		newver="${x#*~}"
+	fi
+
+	if [ "$newver" == "$pkg" ]; then
+		newver=""
 	fi
 
 	for var in pkg xpkg newver ; do
 		if [ -z "$( eval echo \$${var} )" ] ; then
 			echo "ERROR: Please specify package and version in this format:" >&2
-			echo "ERROR:    package_version     package=xpackage_version" >&2
+			echo "ERROR:    package~version     package=xpackage~version" >&2
 			echo "ERROR: You entered: $x" >&2
 			continue 2
 		fi
 	done
 
-	echo "[ ${pkg}=${xpkg}-${newver} ]" >&2
+	echo "[ ${pkg}=${xpkg}~${newver} ]" >&2
 	for dir in package/*/* ; do
 		if [ "${dir##*/}" == "$pkg" ] ; then
 			if [ -n "${pkgdir}" ] ; then

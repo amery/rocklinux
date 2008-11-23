@@ -380,6 +380,18 @@ create_cksumpatch () {
 	fi
 }
 
+# Parse a [D] line from standard input and call download_file
+#
+parse_download() {
+	while read tag cksum file url_flags ; do
+		# flags are all upper-case, and always at the end
+		url="$( echo $url_flags | sed -re"s, ([A-Z ]+)$,," )"
+		flags="${url_flags#$url}"
+		download_file "`source_file cksum $file url $flags`" \
+			"$url" "$cksum" "$repo" "$pkg"
+	done
+}
+
 # download_file local-filename download-location cksum repo pkg
 #
 # This function decides if download directly or from a mirror,
@@ -523,7 +535,7 @@ download_file() {
 				if ! is_static $repo $pkg "$gzfile" "$location"; then
 					rm -f "$lkfile" ; trap INT ; return 1
 				fi
-				download_file_now $location $gzfile $bzfile
+				download_file_now "$location" $gzfile $bzfile
 			else
 				gzfile="$bzfile"
 			fi
@@ -532,7 +544,7 @@ download_file() {
 			if ! is_static $repo $pkg "$gzfile" "$location"; then
 				rm -f "$lkfile" ; trap INT ; return 1
 			fi
-			download_file_now $location $gzfile $bzfile
+			download_file_now "$location" $gzfile $bzfile
 		    fi
 		fi
 
@@ -638,41 +650,15 @@ download_file_now() {
 			rev="-r ${rev}"
 		fi
 		url="${url%::*}"
-		
-		old=${PWD}
-		tmp="`mktemp`"
-		rm -rf ${tmp}
-		dir=${bzfile%.tar.bz2}
-		dir="`basename ${dir}`"
-		mkdir -p ${tmp}
-		cd ${tmp}
-		echo SVN ${username} ${password} ${rev} ${mode}://${url}
-		{ echo svn export ${username} ${password} ${rev} ${mode}://${url} ${dir}
-		  if ! svn export ${username} ${password} ${rev} ${mode}://${url} ${dir}
-		  then touch .svn_error ; fi
-		} &> .svn_output &
-		while fuser .svn_output &> /dev/null ; do
-			echo -ne `nice du -sh 2> /dev/null | cut -f1` 'downloaded from' \
-				'SVN archive so far...\r'
-			sleep 3
-		done
-		echo `du -sh 2> /dev/null | cut -f1` 'downloaded from' \
-			'SVN archive (download finished).'
-		if [ ! -f .svn_error ] ; then
-			rm -f .svn_output
-			tar --owner root --group root \
-			    --use-compress-program=bzip2 \
-			    -cf ${dir}.tar.bz2 ${dir}
-			mv ${dir}.tar.bz2 ${old}/${bzfile}
-			cd ${old} ; rm -rf ${tmp}
-		else
-			cat .svn_output
-			cd $old ; rm -rf $tmp
-			echo ERROR: SVN export ${username} ${password} ${mode}://${url} ${dir} \
-			            returned an error.
-			echo "0 $gzfile $urlorig" >> src/Download-Errors
-		fi
+
+		local newurl="svn export ${username} ${password} ${rev} ${mode}://${url}"
+# 		echo "INFO: $xpkg could use the download url \"$newurl\""
+# 		echo "INFO: instead of \"$urlorig\"."
+
+		download_file_now "$newurl" "$gzfile" "$bzfile"
+		return
 	elif [[ $url = cvs://* ]] ; then
+		urlorig="$url"
 
 		# cvs://mode:[login[:password]@]server[:port]:/path::module!revision/
 		# btw, at least current cvs supports password at CVSROOT.
@@ -685,6 +671,7 @@ download_file_now() {
 		module="${loc##*::}"; loc="${loc%%::*}"
 		revision="${module#*!}"; module="${module%%!*}"
 		[[ $loc != *@* ]] && loc="anonymous@$loc"
+		[ $mode = pserver ] && loc=":pserver:$loc"
 
 		# everything after the first 'bang' (!) is analysed here
 		# someday we could add more cvs options.
@@ -693,48 +680,84 @@ download_file_now() {
 		dat="$( echo $revision | \
 			sed -n -e 's,\([0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}\),-D \1,p' )"
 
-		cvsdir="src/down.cvsdir.`echo $bzfile | tr / -`"
-		saved_pwd=$PWD ; mkdir -p $cvsdir ; cd $cvsdir
+		local newurl="cvs -z9 -Q -d $loc checkout $dat -P $module"
+# 		echo "INFO: $xpkg could use the download url \"$newurl\""
+# 		echo "INFO: instead of \"$urlorig\"."
 
-		echo CVS $mode $loc $dat $module
-		{ [ $mode = ssh ] && export CVS_RSH=ssh
-		  [ $mode = pserver ] && loc=":pserver:$loc"
-		  # sometimes cvs wants to read ~/.cvspass just for fun ..
-		  touch $HOME/.cvspass
-		  # for ssh we need some way to quitely accept the key ...
-		  echo cvs -z9 -Q -d $loc checkout $dat -P $module
-		  if ! cvs -z9 -Q -d $loc checkout $dat -P $module
-		  then touch .cvs_error ; fi
-		} &> .cvs_output &
+		download_file_now "$newurl" "$gzfile" "$bzfile"
+		return
+	elif [[ "$location" == "git "* || "$location" == "svn "* || \
+		"$location" == "cvs "* ]]
+	then
+		# Each program must support as an argument the directory
+		# to which files should be downloaded. This argument is
+		# automatically added here and must no be part of the location.
+		local program=${location%% *}
+		local extra_arguments=${location#$program}
+		local program_arguments=${extra_arguments%%;*}
+		extra_arguments=${extra_arguments#$program_arguments}
+		extra_arguments=${extra_arguments#;}
 
-		while fuser .cvs_output &> /dev/null ; do
-			echo -ne `nice du -sh 2> /dev/null | cut -f1` 'downloaded from' \
-				'CVS archive so far...\r'
+		if ! type -p $program >/dev/null ; then
+			echo "ERROR: $program needed. Install $program, then retry."
+			return 1
+		fi
+
+		local dir="`basename ${bzfile%.tar.bz2}`"
+		local old=${PWD}
+		local tmp="`mktemp -d`"
+		cd ${tmp}
+
+		{
+			case $program in
+			git|svn)
+				program_arguments="$program_arguments $dir" ;;
+			cvs)
+				# for cvs the -d option has to be added before the module
+				# and after the checkout/co/get command
+				program_arguments="$( echo $program_arguments | \
+				sed -re"s, (checkout|co|get) , \1 -d $dir ," )" ;;
+			esac
+
+			echo "executing: $program $program_arguments ($extra_arguments)"
+			if ! $program $program_arguments ; then
+				touch .rcs_error
+			elif [ "$extra_arguments" ] ; then
+				cd $dir
+				while [ "$extra_arguments" ] ; do
+					program_arguments=${extra_arguments%%;*}
+					extra_arguments=${extra_arguments#$program_arguments}
+					extra_arguments=${extra_arguments#;}
+
+					echo "executing: $program $program_arguments"
+					if ! $program $program_arguments ; then
+						touch .rcs_error
+						break
+					fi
+				done
+				cd -
+			fi
+		} &> .rcs_output &
+
+		while fuser .rcs_output &> /dev/null ; do
+			echo -ne `nice du -sh 2> /dev/null | cut -f1` \
+				"downloaded from $program repository so far...\r"
 			sleep 3
 		done
 		echo `du -sh 2> /dev/null | cut -f1` 'downloaded from' \
-			'CVS archive (download finished).'
+			"$program repository (download finished)."
 
-		if [ ! -f .cvs_error ] ; then
-			cd `dirname $module`
-			dir="`echo "$bzfile" | sed s/\.tar\.bz2$//`"
-			dir="`basename $dir`"
-
-			mv `basename $module` $dir
-
+		if [ ! -f .rcs_error ] ; then
 			tar --owner root --group root \
 			    --use-compress-program=bzip2 \
-			    -cf $dir.tar.bz2 $dir
-			mv $dir.tar.bz2 $saved_pwd/$bzfile
-
-			cd $saved_pwd ; rm -rf $cvsdir
+			    -cf ${dir}.tar.bz2 ${dir}
+			mv ${dir}.tar.bz2 ${old}/${bzfile}
 		else
-			cat .cvs_output
-			cd $saved_pwd ; rm -rf $cvsdir
-			echo ERROR: CVS $dat $loc $module \
-			            returned an error.
-			echo "0 $gzfile $url" >> src/Download-Errors
+			cat .rcs_output
+			echo "ERROR: $program $program_arguments returned an error."
+			echo "0 $gzfile $urlorig" >> $old/src/Download-Errors
 		fi
+		cd $old ; rm -rf $tmp
 	else
 		if [ -s "$gzfile.incomplete" ] ; then
 		    echo "INFO: Trying to resume previous download .." 1>&2
@@ -931,9 +954,7 @@ required() {
 
 	if [ "$on" = "X" ] ; then
 	    descparser "xpkg=$forkedpkg" "package/$repo/$pkg/$pkg.desc" | grep '^\[D\] ' > src/down.$$.lst
-	    while read tag cksum file url flags ; do
-		download_file "`source_file cksum $file url $flags`" "$url" "$cksum" "$repo" "$pkg"
-	    done < src/down.$$.lst ; rm -f src/down.$$.lst
+	    parse_download < src/down.$$.lst ; rm -f src/down.$$.lst
 	fi
     done < config/$config/packages
 
@@ -944,9 +965,7 @@ required() {
 						cut -f2 -d= | tr -d "'"`
     for targetdl in target/$target/{,$arch/}download.txt ; do
         if [ -f $targetdl ] ; then
-            while read cksum file url flags ; do
-                download_file "`source_file cksum $file url $flags`" "$url" "$cksum" "$target"
-            done < $targetdl
+            parse_download < $targetdl
         fi
     done
 }
@@ -958,17 +977,13 @@ all() {
 	pkg="`echo $each | cut -f3 -d/`"
 	repo="`echo $each | cut -f2 -d/`"
 
-	while read tag cksum file url flags ; do
-	    download_file "`source_file cksum $file url $flags`" "$url" "$cksum" "$repo" "$pkg"
-	done < <(descparser package/$repo/$pkg/$pkg.desc | grep '^\[D\] ')
+	parse_download < <(descparser package/$repo/$pkg/$pkg.desc | grep '^\[D\] ')
     done
     
     for each in target/*/download.txt target/*/*/download.txt; do
 	target="`echo $each | cut -f2 -d/`"
 
-	while read cksum file url flags ; do
-	    download_file "`source_file cksum $file url $flags`" "$url" "$cksum" "$target"
-	done < <(cat $each)
+	parse_download < <(cat $each)
     done
 }
 
@@ -990,10 +1005,7 @@ packages() {
 
 			target="`echo $arg | cut -f2 -d/`"
 
-			while read cksum file url flags ; do
-			    download_file "`source_file cksum $file url $flags`" \
-				"$url" "$cksum" "$target"
-			done < <(cat $arg)
+			parse_download < <(cat $arg)
 			;;
 		*)
 			if [ ! "${arg%.desc}" = "$arg" ]; then
@@ -1010,11 +1022,8 @@ packages() {
 			pkg="`echo $descfile | cut -f3 -d/`"
 			repo="`echo $descfile | cut -f2 -d/`"
 			
-			while read tag cksum file url flags ; do
-			    download_file "`source_file cksum $file url $flags`" \
-				"$url" "$cksum" "$repo" "$pkg"
-			done < <(descparser $forkedpkg package/$repo/$pkg/$pkg.desc |
-				grep '^\[D\] ')
+			parse_download < <(descparser $forkedpkg \
+				package/$repo/$pkg/$pkg.desc | grep '^\[D\] ')
 			;;
 		esac
 	done

@@ -2,7 +2,8 @@ Introduction
 ------------
 
 This configuration offers a cross-build of (a subset of) the build-bootstrap
-package selection for the x86_64 architecture as emulated by qemu-system-x86_64.
+package selection for the mips architecture (Malta machines with a 24Kf CPU)
+as emulated by qemu-system-mips.
 It includes support for all the hardware emulated by qemu, a working udev,
 kernel and userland support for TCP/IP networking, and more.
 
@@ -10,7 +11,7 @@ With qemu and the resulting build you can at least:
 - boot the kernel and first stage initrd,
 - execute a shell from the initrd,
 - mount NFS file systems,
-- load the second stage from a CD-ROM or HTTP server,
+- load the second stage from a CD-ROM or a HTTP server,
 - and install packages from the CD on a hard disc.
 
 The packages included should be sufficient for native builds on the targeted
@@ -19,25 +20,34 @@ platform.
 Quick Start
 -----------
 
-- Boot from CD with VGA text console:
-    qemu-system-x86_64 -cdrom bbs-x86_64-qemu_cd1.iso -hda /srv/qemu.hda \
-	-boot d
+- Direct boot with serial console:
+   qemu-system-mips -cdrom bbs-mips-malta-qemu_cd1.iso -hda /srv/qemu.hda \
+	-kernel build/bbs-mips-malta-qemu-TRUNK-mips-32-EB-mips32-cross-generic-expert/boot/vmlinux \
+	-initrd build/bbs-mips-malta-qemu-TRUNK-mips-32-EB-mips32-cross-generic-expert/ROCK/target-finish/initrd.img \
+	-append "console=ttyS0 root=/dev/ram0 rw" -nographic -M malta
 
 Hints And Known Bugs
 --------------------
 
-- To use the cdrom image in qemu, create it after the build has finished:
-    ./scripts/Create-ISO bbs-x86_64-qemu bbs-x86_64-qemu
+- To use the CD image in qemu, create it after the build has finished:
+    ./scripts/Create-ISO bbs-mips-malta-qemu bbs-mips-malta-qemu
 
 - To use a hard disk in qemu, create it with e.g.:
     qemu-img create /srv/qemu.hda 2048M
+
+- The kernel and initrd image can also be found in the boot/ directory of the
+  CD-ROM image.
+
+- When using a console on the serial port, be sure to enter 'ttyS0' as the
+  terminal device in boot stage 2, or you won't get to see the command line.
+  Enter 'tts/0' to also set the baud rate of the serial port.
 
 - To access HTTP or NFS servers in qemu, add the following options:
     -net nic -net tap
 
    You need root privileges for this, or have your system administrator set it
-   up for you. When qemu starts it will create a network interface (tap0) and
-   add an IP address/netmask (172.20.0.1/16) to it:
+   up for you. When qemu starts it will create a network interface (tap0) on the
+   host system and add an IP address/netmask (172.20.0.1/16) to it:
 
    host:/# ip addr show dev tap0
 	19: tap0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN qlen 500

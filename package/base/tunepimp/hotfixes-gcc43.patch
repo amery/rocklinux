@@ -60,3 +60,23 @@
  #include <time.h>
  #include <ctype.h>
  #include <musicbrainz/mb_c.h>
+--- libtunepimp-0.4.2/plugins/wma/wma.cpp	2006-01-22 13:13:15.000000000 +0100
++++ src.tunepimp.1224363650.27988.1997736646/lt/plugins/wma/wma.cpp	2008-10-19 00:16:17.000000000 +0200
+@@ -27,6 +27,7 @@
+ 
+ #include <string.h>
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <wmafile.h>
+ #include "metadata.h"
+ #include "plugin.h"
+--- libtunepimp-0.4.2/plugins/wma/wmafile.cpp	2006-01-21 21:30:24.000000000 +0100
++++ src.tunepimp.1224363650.27988.1997736646/lt/plugins/wma/wmafile.cpp	2008-10-19 00:18:05.000000000 +0200
+@@ -23,6 +23,7 @@
+ #include <wmafile.h>
+ #include <wmatag.h>
+ #include <wmaproperties.h>
++#include <string.h>
+ 
+ using namespace TagLib;
+ 

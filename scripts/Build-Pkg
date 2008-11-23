@@ -845,8 +845,6 @@ exec 202>&1
 	trap 'echo "Got SIGINT (Crtl-C). Aborting build." ; exit 1' INT
 	exec < /dev/null
 
-	hook_eval prepare
-
 	mkdir -p "$builddir/archdir"
 
 	# Download archives files and link to them in $archdir.
@@ -868,6 +866,8 @@ exec 202>&1
 		fi
 		ln -vs $x "$builddir/archdir/"
 	done < <( echo "$desc_D" | column_clean )
+
+	hook_eval prepare
 
 	echo_status "Building. Writing output to" \
 	            "\$root/var/adm/logs/$stagelevel-$xpkg.out" >&202

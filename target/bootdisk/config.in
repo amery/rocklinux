@@ -29,7 +29,7 @@ pkgfilter sed '
 / binutils /		{ p ; d ; } ;	/ bison /		{ p ; d ; } ;
 / bonnie++ /		{ p ; d ; } ;	/ bzip2 /		{ p ; d ; } ;
 / coreutils /		{ p ; d ; } ;	/ cpio /		{ p ; d ; } ;
-/ cron /		{ p ; d ; } ;
+/ cron /		{ p ; d ; } ;	/ cryptsetup-luks /	{ p ; d ; } ;
 / device-mapper /	{ p ; d ; } ;	/ dialog /		{ p ; d ; } ;
 / diffutils /		{ p ; d ; } ;	/ disktype /		{ p ; d ; } ;
 / dosfstools /		{ p ; d ; } ;	/ dump /		{ p ; d ; } ;
@@ -42,12 +42,14 @@ pkgfilter sed '
 / gmp /			{ p ; d ; } ;	/ grep /		{ p ; d ; } ;
 / groff /		{ p ; d ; } ;	/ gzip /		{ p ; d ; } ;
 / hdparm /		{ p ; d ; } ;	/ hfsutils /		{ p ; d ; } ;
+/ installer /		{ p ; d ; } ;
 / iproute2 /		{ p ; d ; } ;	/ iptables /		{ p ; d ; } ;
 / jfsutils /		{ p ; d ; } ;	/ kbd /			{ p ; d ; } ;
 / less /		{ p ; d ; } ;	/ libelf /		{ p ; d ; } ;
 / libpcap /		{ p ; d ; } ;	/ libtool /		{ p ; d ; } ;
 / linux /		{ p ; d ; } ;	/ lrzsz /		{ p ; d ; } ;
 / ltrace /		{ p ; d ; } ;	/ lvm2 /		{ p ; d ; } ;
+/ lzo /			{ p ; d ; } ;
 / m4 /			{ p ; d ; } ;	/ make /		{ p ; d ; } ;
 / man /			{ p ; d ; } ;	/ mdadm /		{ p ; d ; } ;
 / mine /		{ p ; d ; } ;	/ minicom /		{ p ; d ; } ;
@@ -63,7 +65,8 @@ pkgfilter sed '
 / readline /		{ p ; d ; } ;	/ reiserfsprogs /	{ p ; d ; } ;
 / rockinitrd /		{ p ; d ; } ;	/ rsync /		{ p ; d ; } ;
 / sed /			{ p ; d ; } ;	/ setserial /		{ p ; d ; } ;
-/ shadow /		{ p ; d ; } ;	/ stone /		{ p ; d ; } ;
+/ shadow /		{ p ; d ; } ;	/ smartmontools /	{ p ; d ; } ;
+/ stone /		{ p ; d ; } ;
 / strace /		{ p ; d ; } ;	/ sysfiles /		{ p ; d ; } ;
 / sysklogd /		{ p ; d ; } ;	/ sysvinit /		{ p ; d ; } ;
 / tar /			{ p ; d ; } ;	/ tcpdump /		{ p ; d ; } ;

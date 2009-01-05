@@ -109,7 +109,11 @@ for x in build/* ; do
 			umount -d -f    "$x/$y" > /dev/null 2>&1
 			umount -d -f -l "$x/$y" > /dev/null 2>&1
 			if [ $umount = 0 ]; then
-				rmdir  "$x/$y" > /dev/null 2>&1
+				if [ "$y" = "dev" ]; then
+					rm -rf  "$x/$y" > /dev/null 2>&1
+				else
+					rmdir  "$x/$y" > /dev/null 2>&1
+				fi
 				if [ -d "$x/$y" ] ; then
 					echo "Found $y in $x: Not removing!"
 					delme=0

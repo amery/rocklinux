@@ -6,8 +6,8 @@
 [COPY] the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 [COPY] the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 [COPY] 
-[COPY] ROCK Linux: rock-src/package/public/libnl/libnl.desc
-[COPY] ROCK Linux is Copyright (C) 1998 - 2008 Clifford Wolf
+[COPY] ROCK Linux: rock-src/package/base/iw/iw.desc
+[COPY] ROCK Linux is Copyright (C) 1998 - 2006 Clifford Wolf
 [COPY] 
 [COPY] This program is free software; you can redistribute it and/or modify
 [COPY] it under the terms of the GNU General Public License as published by
@@ -21,23 +21,24 @@
 [COPY] 
 [COPY] --- ROCK-COPYRIGHT-NOTE-END ---
 
-[I] netlink library
+[I] show / manipulate wireless devices and their configuration
 
-[T] libnl is a library for applications dealing with netlink sockets. The
-[T] library provides an interface for raw netlink messaging and various
-[T] netlink family specific interfaces.
+[T] iw is a new nl80211 based CLI configuration utility for wireless devices.
+[T] Currently you can only use this utility to configure devices which use a
+[T] mac80211 driver as these are the new drivers being written - only because
+[T] most new wireless devices being sold are now SoftMAC. 
 
-[U] http://people.suug.ch/~tgr/libnl/
+[A] Johannes Berg <johannes@sipsolutions.net>
+[M] Clifford Wolf <clifford@clifford.at>
 
-[A] TODO: Author
-[M] The ROCK Linux Project
-
-[C] extra/development extra/network
+[C] base/system
+[F] DIETLIBC
 [F] CORE
 
-[L] LGPL
+[L] GPL
 [S] Stable
-[V] 1.1
-[P] X -----5---9 180.600
+[V] 0.9.9
+[P] X --X--5---9 180.601
 
-[D] 0 libnl-1.1.tar.gz http://people.suug.ch/~tgr/libnl/files/
+[D] 461439197 iw-0.9.9.tar.bz2 http://wireless.kernel.org/download/iw/
+

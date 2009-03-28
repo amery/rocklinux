@@ -1,7 +1,6 @@
-diff -dur linux-2.6.17-orig/scripts/kconfig/conf.c linux-2.6.17/scripts/kconfig/conf.c
---- linux-2.6.17-orig/scripts/kconfig/conf.c	2006-06-18 03:49:35.000000000 +0200
-+++ linux-2.6.17/scripts/kconfig/conf.c	2006-07-27 22:13:38.000000000 +0200
-@@ -21,6 +21,7 @@
+--- ./scripts/kconfig/conf.c
++++ ./scripts/kconfig/conf.c
+@@ -22,6 +22,7 @@
  	ask_all,
  	ask_new,
  	ask_silent,
@@ -9,23 +8,22 @@ diff -dur linux-2.6.17-orig/scripts/kconfig/conf.c linux-2.6.17/scripts/kconfig/
  	set_default,
  	set_yes,
  	set_mod,
-@@ -92,6 +93,15 @@
- 			return;
- 		}
- 		break;
-+       case ask_no2mod:
-+               if (type == S_TRISTATE &&
-+                   sym_get_tristate_value(sym) == no) {
-+                       fprintf(stderr, "Setting %s to 'm'.\n", sym->name);
-+                       line[0] = 'm';
-+                       line[1] = '\n';
-+                       line[2] = 0;
-+                       break;
-+               }
+@@ -92,6 +93,14 @@
+ 	}
+ 
+ 	switch (input_mode) {
++	case ask_no2mod:
++		if (type == S_TRISTATE && sym_get_tristate_value(sym) == no) {
++			fprintf(stderr, "Setting %s to 'm'.\n", sym->name);
++			line[0] = 'm';
++			line[1] = '\n';
++			line[2] = 0;
++			break;
++		}
  	case ask_new:
  	case ask_silent:
  		if (sym_has_value(sym)) {
-@@ -354,6 +364,7 @@
+@@ -301,6 +310,7 @@
  				break;
  			}
  			check_stdin();
@@ -33,7 +31,7 @@ diff -dur linux-2.6.17-orig/scripts/kconfig/conf.c linux-2.6.17/scripts/kconfig/
  		case ask_all:
  			fflush(stdout);
  			fgets(line, 128, stdin);
-@@ -504,7 +515,7 @@
+@@ -438,7 +448,7 @@
  	bindtextdomain(PACKAGE, LOCALEDIR);
  	textdomain(PACKAGE);
  
@@ -41,8 +39,8 @@ diff -dur linux-2.6.17-orig/scripts/kconfig/conf.c linux-2.6.17/scripts/kconfig/
 +	while ((opt = getopt(ac, av, "osdD:nmMyrh")) != -1) {
  		switch (opt) {
  		case 'o':
- 			input_mode = ask_new;
-@@ -523,6 +534,9 @@
+ 			input_mode = ask_silent;
+@@ -460,6 +470,9 @@
  		case 'm':
  			input_mode = set_mod;
  			break;
@@ -52,17 +50,24 @@ diff -dur linux-2.6.17-orig/scripts/kconfig/conf.c linux-2.6.17/scripts/kconfig/
  		case 'y':
  			input_mode = set_yes;
  			break;
-@@ -565,6 +579,7 @@
- 		}
+@@ -510,6 +523,7 @@
+ 	case ask_silent:
  	case ask_all:
  	case ask_new:
 +	case ask_no2mod:
  		conf_read(NULL);
  		break;
  	case set_no:
-diff -dur linux-2.6.17-orig/scripts/kconfig/Makefile linux-2.6.17/scripts/kconfig/Makefile
---- linux-2.6.17-orig/scripts/kconfig/Makefile	2006-06-18 03:49:35.000000000 +0200
-+++ linux-2.6.17/scripts/kconfig/Makefile	2006-07-27 22:15:10.000000000 +0200
+@@ -572,6 +586,7 @@
+ 		input_mode = ask_silent;
+ 		/* fall through */
+ 	case ask_silent:
++	case ask_no2mod:
+ 		/* Update until a loop caused no more changes */
+ 		do {
+ 			conf_cnt = 0;
+--- ./scripts/kconfig/Makefile
++++ ./scripts/kconfig/Makefile
 @@ -42,7 +42,7 @@
  	$(Q)rm -f arch/um/Kconfig_arch
  	$(Q)rm -f scripts/kconfig/linux_*.pot scripts/kconfig/config.pot

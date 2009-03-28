@@ -1,0 +1,37 @@
+--- ./shared-core/Makefile.am.orig	2009-03-25 09:01:44.000000000 +0100
++++ ./shared-core/Makefile.am	2009-03-25 09:07:27.000000000 +0100
+@@ -24,15 +24,6 @@
+ 
+ klibdrmincludedir = ${includedir}/drm
+ klibdrminclude_HEADERS = \
+-                         drm.h \
+-                         drm_sarea.h \
+-                         i915_drm.h \
+                          mach64_drm.h \
+-                         mga_drm.h \
+-                         r128_drm.h \
+-                         radeon_drm.h \
+-                         savage_drm.h \
+-                         sis_drm.h \
+-                         via_drm.h \
+                          r300_reg.h \
+                          via_3d_reg.h
+--- ./shared-core/Makefile.in.orig	2009-03-25 09:01:56.000000000 +0100
++++ ./shared-core/Makefile.in	2009-03-25 09:08:03.000000000 +0100
+@@ -183,16 +183,7 @@
+ target_alias = @target_alias@
+ klibdrmincludedir = ${includedir}/drm
+ klibdrminclude_HEADERS = \
+-                         drm.h \
+-                         drm_sarea.h \
+-                         i915_drm.h \
+                          mach64_drm.h \
+-                         mga_drm.h \
+-                         r128_drm.h \
+-                         radeon_drm.h \
+-                         savage_drm.h \
+-                         sis_drm.h \
+-                         via_drm.h \
+                          r300_reg.h \
+                          via_3d_reg.h
+ 

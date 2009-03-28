@@ -6,7 +6,7 @@
 # the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 # 
 # ROCK Linux: rock-src/package/base/tcp_wrappers/config.patch
-# ROCK Linux is Copyright (C) 1998 - 2006 Clifford Wolf
+# ROCK Linux is Copyright (C) 1998 - 2009 Clifford Wolf
 # 
 # This patch file is dual-licensed. It is available under the license the
 # patched project is licensed under, as long as it is an OpenSource license
@@ -17,8 +17,8 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
---- ./Makefile.orig	Fri Mar 21 19:27:21 1997
-+++ ./Makefile	Fri Apr 23 11:02:43 1999
+--- ./Makefile.orig	2009-03-08 13:59:57.000000000 +0000
++++ ./Makefile	2009-03-08 14:34:23.000000000 +0000
 @@ -44,7 +44,7 @@
  #REAL_DAEMON_DIR=/usr/etc
  #
@@ -28,15 +28,26 @@
  #
  # BSD 4.4
  #REAL_DAEMON_DIR=/usr/libexec
-@@ -144,7 +144,7 @@
+@@ -143,8 +143,8 @@
+ 
  linux:
  	@make REAL_DAEMON_DIR=$(REAL_DAEMON_DIR) STYLE=$(STYLE) \
- 	LIBS= RANLIB=ranlib ARFLAGS=rv AUX_OBJ=setenv.o \
+-	LIBS= RANLIB=ranlib ARFLAGS=rv AUX_OBJ=setenv.o \
 -	NETGROUP= TLI= EXTRA_CFLAGS="-DBROKEN_SO_LINGER" all
++	LIBS= RANLIB=$(RANLIB) ARFLAGS=rv AUX_OBJ= \
 +	NETGROUP= TLI= EXTRA_CFLAGS="-DSYS_ERRLIST_DEFINED -DBROKEN_SO_LINGER" all
  
  # This is good for many SYSV+BSD hybrids with NIS, probably also for HP-UX 7.x.
  hpux hpux8 hpux9 hpux10:
+@@ -391,7 +391,7 @@
+ # the ones provided with this source distribution. The environ.c module
+ # implements setenv(), getenv(), and putenv().
+ 
+-AUX_OBJ= setenv.o
++#AUX_OBJ= setenv.o
+ #AUX_OBJ= environ.o
+ #AUX_OBJ= environ.o strcasecmp.o
+ 
 @@ -491,7 +491,7 @@
  # Uncomment the next definition to turn on the language extensions
  # (examples: allow, deny, banners, twist and spawn).

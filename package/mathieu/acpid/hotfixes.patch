@@ -1,0 +1,22 @@
+--- ./acpid.c.orig	2009-07-02 13:25:47.000000000 +0200
++++ ./acpid.c	2009-07-02 13:25:56.000000000 +0200
+@@ -19,6 +19,8 @@
+  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+  */
+ 
++#define _GNU_SOURCE
++
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <fcntl.h>
+--- ./ud_socket.c.orig	2009-07-02 13:26:48.000000000 +0200
++++ ./ud_socket.c	2009-07-02 13:26:20.000000000 +0200
+@@ -3,6 +3,8 @@
+  * A few  routines for handling UNIX domain sockets
+  */
+ 
++#define _GNU_SOURCE
++
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <unistd.h>

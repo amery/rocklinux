@@ -1,0 +1,10 @@
+--- ./lib/ec_hw.c.orig	2009-06-30 11:23:48.000000000 +0200
++++ ./lib/ec_hw.c	2009-06-30 11:24:57.000000000 +0200
+@@ -16,6 +16,7 @@
+ 
+ #if HAVE_HWEC
+ 
++#include <stdlib.h>
+ #include <net/if_arp.h>
+ #include "net-support.h"
+ 

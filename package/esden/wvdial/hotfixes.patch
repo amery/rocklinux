@@ -1,0 +1,21 @@
+--- ./Makefile.orig	2007-07-19 21:22:26.000000000 +0000
++++ ./Makefile	2009-09-02 00:57:38.000000000 +0000
+@@ -1,7 +1,7 @@
+ 
+-prefix=/usr/local
++prefix=/usr
+ WVSTREAMS_INC=
+-WVSTREAMS_LIB=
++WVSTREAMS_LIB=.
+ WVSTREAMS_BIN=$(prefix)/bin
+ WVSTREAMS_SRC=.
+ 
+@@ -30,7 +30,7 @@
+ wvdial.a: wvdialer.o wvmodemscan.o wvpapchap.o wvdialbrain.o \
+ 	wvdialmon.o
+ 
+-wvdial: LDFLAGS+=-luniconf
++wvdial: LIBS+=-luniconf
+ 
+ wvdial wvdialconf papchaptest pppmon: wvdial.a
+ 

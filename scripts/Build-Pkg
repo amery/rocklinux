@@ -192,7 +192,8 @@ builddir="$base/src.$xpkg.$id"
 # Set permissions and ownership of $buildir; $base/build might have different ones.
 mkdir -p "$builddir"; chmod 700 "$builddir" ; chown 0:0 "$builddir"
 
-if [ "$chroot" = 1 ] ; then
+# Set up the $root/ROCK directory even if not chrooting, it is needed for e.g. dummydir.
+if [ "$root" -a "$this_is_the_2nd_run" = 0 ] ; then
 	pushd "$xroot/" >/dev/null || exit 1
 	
 	realconf=$(cd $base/config; pwd -P)
@@ -202,6 +203,8 @@ if [ "$chroot" = 1 ] ; then
 	if [ ! -e ROCK/loop/scripts ]; then
 		mkdir -p ROCK/{loop,config,download}
 		mount --bind $realbase $PWD/ROCK/loop
+		# bind mount config and download too so they can be symlinks to
+		# directories outside of $base.
 		mount --bind $realconf $PWD/ROCK/config
 		mount --bind $realdown $PWD/ROCK/download
 	fi
@@ -221,7 +224,9 @@ if [ "$chroot" = 1 ] ; then
 	ln -sf loop/src.$xpkg.$id ROCK/src.$xpkg.$id
 	
 	popd >/dev/null
+fi
 
+if [ "$chroot" = 1 ] ; then
 	cd "$xroot" || exit 1
 
 	x_mknod() {
@@ -549,7 +554,9 @@ rm -f $root/var/adm/logs/$stagelevel-$xpkg.{out,log,err}
 if [ -z "$root" ] ; then
 	dummydir="$builddir/rootdummy"
 else
-	dummydir="${root}/ROCK/${builddir#$base/}/rootdummy"
+	# dummydir must be a subdirectory of $root so that the DESTDIR make
+	# option works without change.
+	dummydir="${root}/ROCK/src.$xpkg.$id/rootdummy"
 fi
 
 mkdir -p "$dummydir"

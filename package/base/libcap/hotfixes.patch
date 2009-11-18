@@ -1,0 +1,10 @@
+--- ./progs/capsh.c.orig	2009-11-16 11:28:46.000000000 +0000
++++ ./progs/capsh.c	2009-11-16 11:29:26.000000000 +0000
+@@ -9,6 +9,7 @@
+  * capability manipulations work as expected (or not).
+  */
+ 
++#include <asm/types.h>
+ #include <stdio.h>
+ #include <string.h>
+ #include <stdlib.h>

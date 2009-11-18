@@ -6,7 +6,7 @@
 # the ROCK-COPYRIGHT-NOTE-END tag. Otherwise it might get removed by
 # the ./scripts/Create-CopyPatch script. Do not edit this copyright text!
 # 
-# ROCK Linux: rock-src/package/kasc/simgear/simgear.desc
+# ROCK Linux: rock-src/package/kasc/plib/plib.desc
 # ROCK Linux is Copyright (C) 1998 - 2006 Clifford Wolf
 # 
 # This program is free software; you can redistribute it and/or modify
@@ -21,27 +21,29 @@
 # 
 # --- ROCK-COPYRIGHT-NOTE-END ---
 
-[I] library for quickly assembling 3d simulations, games, and visualization applications
+[I] OpenSceneGraph
 
-[T] SimGear is a set of open-source libraries designed to be used as 
-[T] building blocks for quickly assembling 3d simulations, games, and 
-[T] visualization applications.
-[T] 
-[T] SimGear is a relatively new project, and while quite a bit of code 
-[T] has been written in conjunction with the FlightGear project, the 
-[T] final interface and arrangements are still evolving.
+[T] The OpenSceneGraph is an open source high performance 3D graphics toolkit,
+[T] used by application developers in fields such as visual simulation, games,
+[T] virtual reality, scientific visualization and modelling. Written entirely in
+[T] Standard C++ and OpenGL it runs on all Windows platforms, OSX, GNU/Linux,
+[T] IRIX, Solaris, HP-Ux, AIX and FreeBSD operating systems. The OpenSceneGraph
+[T] is now well established as the world leading scene graph technology, used
+[T] widely in the vis-sim, space, scientific, oil-gas, games and virtual reality
+[T] industries.
 
-[U] http://www.simgear.org/
+[U] http://www.openscenegraph.org/
 
-[A] Curtis Olsen
+[A] Robert Osfield
 [M] Kai Schwenzfeier <niteblade@gmx.net>
 
-[C] extra/scientific
+[C] extra/game
+#[C] extra/game/development
 
 [L] GPL
 [S] Stable
-[V] 1.9.1
-[P] X --?--5---9 250.500
+[V] 2.8.1
+[P] X --?--5---9 245.600
 
-[D] 3731394795 SimGear-1.9.1.tar.gz ftp://ftp.simgear.org/pub/simgear/Source/
+[D] 4126964161 OpenSceneGraph-2.8.1.zip http://www.openscenegraph.org/downloads/stable_releases/OpenSceneGraph-2.8.1/source/
 

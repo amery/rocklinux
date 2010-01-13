@@ -1,0 +1,10 @@
+--- ./net.c.orig	2010-01-04 09:38:30.000000000 +0000
++++ ./net.c	2010-01-04 09:38:57.000000000 +0000
+@@ -53,6 +53,7 @@
+ #include <net/if.h>
+ #if defined(LINUX)
+ #include <asm/types.h>
++#include <linux/netlink.h>
+ #if defined(__GLIBC__) && (__GLIBC__ >= 2) && (__GLIBC__ + __GLIBC_MINOR__ >= 3)
+ #  include <netipx/ipx.h>
+ #else
